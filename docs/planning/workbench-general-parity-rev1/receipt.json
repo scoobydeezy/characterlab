@@ -1,0 +1,1602 @@
+{
+  "status": "PASS BOUNDED GENERAL ATTENTION INSTRUMENT PARITY",
+  "sources": [
+    {
+      "path": "src/workbench/generalAdapter.ts",
+      "sha256": "8913695d015b5f6e9c3164dfe7f5085d00cffcb698d06cd1b23028fde8f2ef77"
+    },
+    {
+      "path": "src/workbench/associationProjection.ts",
+      "sha256": "07fcd4b576a0476beefb8d995bd53a2ff7ead47a0fe3bde92ecf459fa3eb8d2f"
+    },
+    {
+      "path": "src/workbench/nativeTimeline.ts",
+      "sha256": "ceed75f534e8158a2172ac962cab89aa9ffa5fcbaaf71e0d62347fd01a9c6775"
+    },
+    {
+      "path": "scripts/check-workbench-general.mjs",
+      "sha256": "97ee8002b9bc08c259e553605768d91727e58ee39788ae14f802d3f0acfeddf6"
+    }
+  ],
+  "results": [
+    {
+      "recipe": "baseline",
+      "seed": 0,
+      "prefixes": [
+        {
+          "prefix": 0,
+          "clock": "0",
+          "saveHash": "ead73025b3ede38d9099bbe65a16bdc086a965c1c3a974ddb4d81071b5d73bea",
+          "stateHash": "4192989e1f94dedd1c426da49ea8f6b71801615306de2ada79fc3d2c2c4136c5",
+          "nodes": 0,
+          "graph": {
+            "version": "association-inspection/0.1",
+            "scale": "100",
+            "updatedAt": "0",
+            "nodes": [],
+            "weights": []
+          }
+        },
+        {
+          "prefix": 1,
+          "clock": "1",
+          "saveHash": "8feabdcc5b0bdb059bf837bc8441642a6252685d24cdbaf610d9f5e2d148de54",
+          "stateHash": "622e1efff3661256133dcb2d69addc85a5d27944e077c1d2687dc8317a7705cd",
+          "nodes": 0,
+          "graph": {
+            "version": "association-inspection/0.1",
+            "scale": "100",
+            "updatedAt": "0",
+            "nodes": [],
+            "weights": []
+          }
+        },
+        {
+          "prefix": 2,
+          "clock": "2",
+          "saveHash": "e7369255d3b12405dac896433f03db69a84fefb57c233c7ae08c924178c1bc7f",
+          "stateHash": "622e1efff3661256133dcb2d69addc85a5d27944e077c1d2687dc8317a7705cd",
+          "nodes": 0,
+          "graph": {
+            "version": "association-inspection/0.1",
+            "scale": "100",
+            "updatedAt": "0",
+            "nodes": [],
+            "weights": []
+          }
+        },
+        {
+          "prefix": 3,
+          "clock": "3",
+          "saveHash": "70c5758f51b4c7057b61be6bd7a62cc2de8ce44de89204f13bb65fa7474c3fb3",
+          "stateHash": "c969a5c1d0fd95913d5f9b2d54d817f7fbd692ba128062a5aa0a1f4d2e90f282",
+          "nodes": 3,
+          "graph": {
+            "version": "association-inspection/0.1",
+            "scale": "100",
+            "updatedAt": "3",
+            "nodes": [
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010200",
+                "label": "Concept 1",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"0\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010201",
+                "label": "Concept 2",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"1\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010202",
+                "label": "Concept 3",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"2\"\n}"
+              }
+            ],
+            "weights": [
+              [
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "5",
+                  "exact": "1/20",
+                  "display": 0.05
+                },
+                {
+                  "units": "2",
+                  "exact": "1/50",
+                  "display": 0.02
+                }
+              ],
+              [
+                {
+                  "units": "5",
+                  "exact": "1/20",
+                  "display": 0.05
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "2",
+                  "exact": "1/50",
+                  "display": 0.02
+                }
+              ],
+              [
+                {
+                  "units": "2",
+                  "exact": "1/50",
+                  "display": 0.02
+                },
+                {
+                  "units": "2",
+                  "exact": "1/50",
+                  "display": 0.02
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "prefix": 4,
+          "clock": "4",
+          "saveHash": "033912212bcc5a1ca2998e1c70a695a73e4082904b6ca7d92c82f77b85b1a013",
+          "stateHash": "db299855c936e54a168bcb6a2ec6d091ada1b5a17659ff37e5646afb746ff264",
+          "nodes": 3,
+          "graph": {
+            "version": "association-inspection/0.1",
+            "scale": "100",
+            "updatedAt": "4",
+            "nodes": [
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010200",
+                "label": "Concept 1",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"0\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010201",
+                "label": "Concept 2",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"1\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010202",
+                "label": "Concept 3",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"2\"\n}"
+              }
+            ],
+            "weights": [
+              [
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "10",
+                  "exact": "1/10",
+                  "display": 0.1
+                },
+                {
+                  "units": "4",
+                  "exact": "1/25",
+                  "display": 0.04
+                }
+              ],
+              [
+                {
+                  "units": "10",
+                  "exact": "1/10",
+                  "display": 0.1
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "4",
+                  "exact": "1/25",
+                  "display": 0.04
+                }
+              ],
+              [
+                {
+                  "units": "4",
+                  "exact": "1/25",
+                  "display": 0.04
+                },
+                {
+                  "units": "4",
+                  "exact": "1/25",
+                  "display": 0.04
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "prefix": 5,
+          "clock": "5",
+          "saveHash": "ccbed1a72c940c9bc31cf10d7459781b109ee4603ad435d7e4dbb0acd9de1e68",
+          "stateHash": "e37cbc43a387c1aba518ad4e657fd405037142224492457a1166788dbd84e107",
+          "nodes": 3,
+          "graph": {
+            "version": "association-inspection/0.1",
+            "scale": "100",
+            "updatedAt": "5",
+            "nodes": [
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010200",
+                "label": "Concept 1",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"0\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010201",
+                "label": "Concept 2",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"1\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010202",
+                "label": "Concept 3",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"2\"\n}"
+              }
+            ],
+            "weights": [
+              [
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "15",
+                  "exact": "3/20",
+                  "display": 0.15
+                },
+                {
+                  "units": "6",
+                  "exact": "3/50",
+                  "display": 0.06
+                }
+              ],
+              [
+                {
+                  "units": "15",
+                  "exact": "3/20",
+                  "display": 0.15
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "6",
+                  "exact": "3/50",
+                  "display": 0.06
+                }
+              ],
+              [
+                {
+                  "units": "6",
+                  "exact": "3/50",
+                  "display": 0.06
+                },
+                {
+                  "units": "6",
+                  "exact": "3/50",
+                  "display": 0.06
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "prefix": 6,
+          "clock": "6",
+          "saveHash": "597f1561305e5c28a5e181c31938425d5af73e40a64ec3f723e3adb3668e28af",
+          "stateHash": "52ab94b2046911f36ba8c3b5425b081559c86407d6737f2f584f74eec6473bb9",
+          "nodes": 3,
+          "graph": {
+            "version": "association-inspection/0.1",
+            "scale": "100",
+            "updatedAt": "6",
+            "nodes": [
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010200",
+                "label": "Concept 1",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"0\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010201",
+                "label": "Concept 2",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"1\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010202",
+                "label": "Concept 3",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"2\"\n}"
+              }
+            ],
+            "weights": [
+              [
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "20",
+                  "exact": "1/5",
+                  "display": 0.2
+                },
+                {
+                  "units": "8",
+                  "exact": "2/25",
+                  "display": 0.08
+                }
+              ],
+              [
+                {
+                  "units": "20",
+                  "exact": "1/5",
+                  "display": 0.2
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "8",
+                  "exact": "2/25",
+                  "display": 0.08
+                }
+              ],
+              [
+                {
+                  "units": "8",
+                  "exact": "2/25",
+                  "display": 0.08
+                },
+                {
+                  "units": "8",
+                  "exact": "2/25",
+                  "display": 0.08
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "prefix": 7,
+          "clock": "7",
+          "saveHash": "90744ac431c53da1226adfa997ef1685f144ca4a1e43ccdf86ee879065ca113d",
+          "stateHash": "f449fd3b8c4bd8979c11506e87fd11be2594ffa2ccd70587e24f5bedc9553727",
+          "nodes": 3,
+          "graph": {
+            "version": "association-inspection/0.1",
+            "scale": "100",
+            "updatedAt": "6",
+            "nodes": [
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010200",
+                "label": "Concept 1",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"0\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010201",
+                "label": "Concept 2",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"1\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010202",
+                "label": "Concept 3",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"2\"\n}"
+              }
+            ],
+            "weights": [
+              [
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "20",
+                  "exact": "1/5",
+                  "display": 0.2
+                },
+                {
+                  "units": "8",
+                  "exact": "2/25",
+                  "display": 0.08
+                }
+              ],
+              [
+                {
+                  "units": "20",
+                  "exact": "1/5",
+                  "display": 0.2
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "8",
+                  "exact": "2/25",
+                  "display": 0.08
+                }
+              ],
+              [
+                {
+                  "units": "8",
+                  "exact": "2/25",
+                  "display": 0.08
+                },
+                {
+                  "units": "8",
+                  "exact": "2/25",
+                  "display": 0.08
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "prefix": 8,
+          "clock": "8",
+          "saveHash": "9e84b30eab05611f96ce72bd84e4162fbbeab26a84d179ca0a4a226843c1aedc",
+          "stateHash": "64176d866faac062b9630f7924901512ae46b5bb8de16b37d7113f7636aaaf74",
+          "nodes": 3,
+          "graph": {
+            "version": "association-inspection/0.1",
+            "scale": "100",
+            "updatedAt": "6",
+            "nodes": [
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010200",
+                "label": "Concept 1",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"0\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010201",
+                "label": "Concept 2",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"1\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010202",
+                "label": "Concept 3",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"2\"\n}"
+              }
+            ],
+            "weights": [
+              [
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "20",
+                  "exact": "1/5",
+                  "display": 0.2
+                },
+                {
+                  "units": "8",
+                  "exact": "2/25",
+                  "display": 0.08
+                }
+              ],
+              [
+                {
+                  "units": "20",
+                  "exact": "1/5",
+                  "display": 0.2
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "8",
+                  "exact": "2/25",
+                  "display": 0.08
+                }
+              ],
+              [
+                {
+                  "units": "8",
+                  "exact": "2/25",
+                  "display": 0.08
+                },
+                {
+                  "units": "8",
+                  "exact": "2/25",
+                  "display": 0.08
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "prefix": 9,
+          "clock": "9",
+          "saveHash": "3d9777638dfe71dabecdce091ad4dccd2fd37aa5d5ab272897fc61097be96199",
+          "stateHash": "59c9346588658da3943b10bab87ade9e1fb98ec69206ba767c30c9d8039b4d80",
+          "nodes": 3,
+          "graph": {
+            "version": "association-inspection/0.1",
+            "scale": "100",
+            "updatedAt": "6",
+            "nodes": [
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010200",
+                "label": "Concept 1",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"0\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010201",
+                "label": "Concept 2",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"1\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010202",
+                "label": "Concept 3",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"2\"\n}"
+              }
+            ],
+            "weights": [
+              [
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "20",
+                  "exact": "1/5",
+                  "display": 0.2
+                },
+                {
+                  "units": "8",
+                  "exact": "2/25",
+                  "display": 0.08
+                }
+              ],
+              [
+                {
+                  "units": "20",
+                  "exact": "1/5",
+                  "display": 0.2
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "8",
+                  "exact": "2/25",
+                  "display": 0.08
+                }
+              ],
+              [
+                {
+                  "units": "8",
+                  "exact": "2/25",
+                  "display": 0.08
+                },
+                {
+                  "units": "8",
+                  "exact": "2/25",
+                  "display": 0.08
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "prefix": 10,
+          "clock": "10",
+          "saveHash": "65d828a5183a49183237b5fdc7a9631856da6aa253b77321b05145c27aeb3b2c",
+          "stateHash": "2bc048ffc7ea99889ce18a34db9a37f927bf5d6984a03c3b483f8459f2a5058c",
+          "nodes": 3,
+          "graph": {
+            "version": "association-inspection/0.1",
+            "scale": "100",
+            "updatedAt": "6",
+            "nodes": [
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010200",
+                "label": "Concept 1",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"0\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010201",
+                "label": "Concept 2",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"1\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010202",
+                "label": "Concept 3",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"2\"\n}"
+              }
+            ],
+            "weights": [
+              [
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "20",
+                  "exact": "1/5",
+                  "display": 0.2
+                },
+                {
+                  "units": "8",
+                  "exact": "2/25",
+                  "display": 0.08
+                }
+              ],
+              [
+                {
+                  "units": "20",
+                  "exact": "1/5",
+                  "display": 0.2
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "8",
+                  "exact": "2/25",
+                  "display": 0.08
+                }
+              ],
+              [
+                {
+                  "units": "8",
+                  "exact": "2/25",
+                  "display": 0.08
+                },
+                {
+                  "units": "8",
+                  "exact": "2/25",
+                  "display": 0.08
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "prefix": 11,
+          "clock": "21",
+          "saveHash": "b0f4816222fa97c842e467d934ba28d70d40c51cbfaa315c23b699b0af35ca6a",
+          "stateHash": "a9c67b517e9ab4a52e064831abd5b9b104e181ed62df64be88c36118d83204e8",
+          "nodes": 3,
+          "graph": {
+            "version": "association-inspection/0.1",
+            "scale": "100",
+            "updatedAt": "6",
+            "nodes": [
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010200",
+                "label": "Concept 1",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"0\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010201",
+                "label": "Concept 2",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"1\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010202",
+                "label": "Concept 3",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"2\"\n}"
+              }
+            ],
+            "weights": [
+              [
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "20",
+                  "exact": "1/5",
+                  "display": 0.2
+                },
+                {
+                  "units": "8",
+                  "exact": "2/25",
+                  "display": 0.08
+                }
+              ],
+              [
+                {
+                  "units": "20",
+                  "exact": "1/5",
+                  "display": 0.2
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "8",
+                  "exact": "2/25",
+                  "display": 0.08
+                }
+              ],
+              [
+                {
+                  "units": "8",
+                  "exact": "2/25",
+                  "display": 0.08
+                },
+                {
+                  "units": "8",
+                  "exact": "2/25",
+                  "display": 0.08
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                }
+              ]
+            ]
+          }
+        }
+      ],
+      "events": 153
+    },
+    {
+      "recipe": "association-decay",
+      "seed": 0,
+      "prefixes": [
+        {
+          "prefix": 0,
+          "clock": "0",
+          "saveHash": "e8630c9d4d4e191ea6cc82851249bfae7fb863d648524696250094020f337d3c",
+          "stateHash": "4192989e1f94dedd1c426da49ea8f6b71801615306de2ada79fc3d2c2c4136c5",
+          "nodes": 0,
+          "graph": {
+            "version": "association-inspection/0.1",
+            "scale": "100",
+            "updatedAt": "0",
+            "nodes": [],
+            "weights": []
+          }
+        },
+        {
+          "prefix": 1,
+          "clock": "1",
+          "saveHash": "614526f7b344f0a5427da22628b59c63e8880d32817e8fcabc66dfd8369d7882",
+          "stateHash": "622e1efff3661256133dcb2d69addc85a5d27944e077c1d2687dc8317a7705cd",
+          "nodes": 0,
+          "graph": {
+            "version": "association-inspection/0.1",
+            "scale": "100",
+            "updatedAt": "0",
+            "nodes": [],
+            "weights": []
+          }
+        },
+        {
+          "prefix": 2,
+          "clock": "2",
+          "saveHash": "6f7c172b8992dff07a3b09e13a43dba03d0dce836dc66b5d96a959b60f4f9a5c",
+          "stateHash": "622e1efff3661256133dcb2d69addc85a5d27944e077c1d2687dc8317a7705cd",
+          "nodes": 0,
+          "graph": {
+            "version": "association-inspection/0.1",
+            "scale": "100",
+            "updatedAt": "0",
+            "nodes": [],
+            "weights": []
+          }
+        },
+        {
+          "prefix": 3,
+          "clock": "3",
+          "saveHash": "af63929df1682a127a2b64852f683795f56d8bf2bfba312913cc58130293a4a6",
+          "stateHash": "c969a5c1d0fd95913d5f9b2d54d817f7fbd692ba128062a5aa0a1f4d2e90f282",
+          "nodes": 3,
+          "graph": {
+            "version": "association-inspection/0.1",
+            "scale": "100",
+            "updatedAt": "3",
+            "nodes": [
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010200",
+                "label": "Concept 1",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"0\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010201",
+                "label": "Concept 2",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"1\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010202",
+                "label": "Concept 3",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"2\"\n}"
+              }
+            ],
+            "weights": [
+              [
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "5",
+                  "exact": "1/20",
+                  "display": 0.05
+                },
+                {
+                  "units": "2",
+                  "exact": "1/50",
+                  "display": 0.02
+                }
+              ],
+              [
+                {
+                  "units": "5",
+                  "exact": "1/20",
+                  "display": 0.05
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "2",
+                  "exact": "1/50",
+                  "display": 0.02
+                }
+              ],
+              [
+                {
+                  "units": "2",
+                  "exact": "1/50",
+                  "display": 0.02
+                },
+                {
+                  "units": "2",
+                  "exact": "1/50",
+                  "display": 0.02
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "prefix": 4,
+          "clock": "4",
+          "saveHash": "8a2b6983a0d13eb4e8001ffa6100ec15c18cc90ae704c7059bf0284336d4cfee",
+          "stateHash": "4788d855d462a76faac6df7070bc2f7c0cfc0ce8faaced536e2ce8f7ed6a6011",
+          "nodes": 3,
+          "graph": {
+            "version": "association-inspection/0.1",
+            "scale": "100",
+            "updatedAt": "4",
+            "nodes": [
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010200",
+                "label": "Concept 1",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"0\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010201",
+                "label": "Concept 2",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"1\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010202",
+                "label": "Concept 3",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"2\"\n}"
+              }
+            ],
+            "weights": [
+              [
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "7",
+                  "exact": "7/100",
+                  "display": 0.07
+                },
+                {
+                  "units": "3",
+                  "exact": "3/100",
+                  "display": 0.03
+                }
+              ],
+              [
+                {
+                  "units": "7",
+                  "exact": "7/100",
+                  "display": 0.07
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "3",
+                  "exact": "3/100",
+                  "display": 0.03
+                }
+              ],
+              [
+                {
+                  "units": "3",
+                  "exact": "3/100",
+                  "display": 0.03
+                },
+                {
+                  "units": "3",
+                  "exact": "3/100",
+                  "display": 0.03
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "prefix": 5,
+          "clock": "5",
+          "saveHash": "bd1dc98ef25826a8153da9d89d47427ec735197a95badf8817526ed4f557b1b6",
+          "stateHash": "b4ccbff34dedf9b813463f97420b8ee80a2752b544615953fa12d72494152bfe",
+          "nodes": 3,
+          "graph": {
+            "version": "association-inspection/0.1",
+            "scale": "100",
+            "updatedAt": "5",
+            "nodes": [
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010200",
+                "label": "Concept 1",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"0\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010201",
+                "label": "Concept 2",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"1\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010202",
+                "label": "Concept 3",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"2\"\n}"
+              }
+            ],
+            "weights": [
+              [
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "8",
+                  "exact": "2/25",
+                  "display": 0.08
+                },
+                {
+                  "units": "4",
+                  "exact": "1/25",
+                  "display": 0.04
+                }
+              ],
+              [
+                {
+                  "units": "8",
+                  "exact": "2/25",
+                  "display": 0.08
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "3",
+                  "exact": "3/100",
+                  "display": 0.03
+                }
+              ],
+              [
+                {
+                  "units": "4",
+                  "exact": "1/25",
+                  "display": 0.04
+                },
+                {
+                  "units": "3",
+                  "exact": "3/100",
+                  "display": 0.03
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "prefix": 6,
+          "clock": "6",
+          "saveHash": "01788796d01e7efbb93626ea999b0f66859a8f5f81a21320665bb364d2334e55",
+          "stateHash": "4e9d70f954d9bf13827b2862dd64237cfde3446803defcc76b7766ad49845be9",
+          "nodes": 3,
+          "graph": {
+            "version": "association-inspection/0.1",
+            "scale": "100",
+            "updatedAt": "6",
+            "nodes": [
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010200",
+                "label": "Concept 1",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"0\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010201",
+                "label": "Concept 2",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"1\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010202",
+                "label": "Concept 3",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"2\"\n}"
+              }
+            ],
+            "weights": [
+              [
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "9",
+                  "exact": "9/100",
+                  "display": 0.09
+                },
+                {
+                  "units": "4",
+                  "exact": "1/25",
+                  "display": 0.04
+                }
+              ],
+              [
+                {
+                  "units": "9",
+                  "exact": "9/100",
+                  "display": 0.09
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "3",
+                  "exact": "3/100",
+                  "display": 0.03
+                }
+              ],
+              [
+                {
+                  "units": "4",
+                  "exact": "1/25",
+                  "display": 0.04
+                },
+                {
+                  "units": "3",
+                  "exact": "3/100",
+                  "display": 0.03
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "prefix": 7,
+          "clock": "7",
+          "saveHash": "f617d94ede33147668213f87dea154cabc7beb99f922c5563009be2fab57b6e4",
+          "stateHash": "9b73d42d6f4dba37bbd2bcb11993f778d978882f31d87d8c4affe7a8eb6c2761",
+          "nodes": 3,
+          "graph": {
+            "version": "association-inspection/0.1",
+            "scale": "100",
+            "updatedAt": "6",
+            "nodes": [
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010200",
+                "label": "Concept 1",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"0\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010201",
+                "label": "Concept 2",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"1\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010202",
+                "label": "Concept 3",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"2\"\n}"
+              }
+            ],
+            "weights": [
+              [
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "9",
+                  "exact": "9/100",
+                  "display": 0.09
+                },
+                {
+                  "units": "4",
+                  "exact": "1/25",
+                  "display": 0.04
+                }
+              ],
+              [
+                {
+                  "units": "9",
+                  "exact": "9/100",
+                  "display": 0.09
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "3",
+                  "exact": "3/100",
+                  "display": 0.03
+                }
+              ],
+              [
+                {
+                  "units": "4",
+                  "exact": "1/25",
+                  "display": 0.04
+                },
+                {
+                  "units": "3",
+                  "exact": "3/100",
+                  "display": 0.03
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "prefix": 8,
+          "clock": "8",
+          "saveHash": "1574462f7c3fe4f31e85c33cbe8238c1b5406333009c5533c693c135ae3eb6d9",
+          "stateHash": "6d0ec82acdb0fbfd38ccff7eb12cc53b6f724d62e315d9184a497f3522450d6b",
+          "nodes": 3,
+          "graph": {
+            "version": "association-inspection/0.1",
+            "scale": "100",
+            "updatedAt": "6",
+            "nodes": [
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010200",
+                "label": "Concept 1",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"0\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010201",
+                "label": "Concept 2",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"1\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010202",
+                "label": "Concept 3",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"2\"\n}"
+              }
+            ],
+            "weights": [
+              [
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "9",
+                  "exact": "9/100",
+                  "display": 0.09
+                },
+                {
+                  "units": "4",
+                  "exact": "1/25",
+                  "display": 0.04
+                }
+              ],
+              [
+                {
+                  "units": "9",
+                  "exact": "9/100",
+                  "display": 0.09
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "3",
+                  "exact": "3/100",
+                  "display": 0.03
+                }
+              ],
+              [
+                {
+                  "units": "4",
+                  "exact": "1/25",
+                  "display": 0.04
+                },
+                {
+                  "units": "3",
+                  "exact": "3/100",
+                  "display": 0.03
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "prefix": 9,
+          "clock": "9",
+          "saveHash": "2af105cdc9080a465404f6aaa764e0b375118112b57d8d5df5da9c31959db558",
+          "stateHash": "004f69ba03f1b6a0fde27e20412772ef25886cf5ad47bcc2b2f25f732f084bf2",
+          "nodes": 3,
+          "graph": {
+            "version": "association-inspection/0.1",
+            "scale": "100",
+            "updatedAt": "6",
+            "nodes": [
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010200",
+                "label": "Concept 1",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"0\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010201",
+                "label": "Concept 2",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"1\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010202",
+                "label": "Concept 3",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"2\"\n}"
+              }
+            ],
+            "weights": [
+              [
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "9",
+                  "exact": "9/100",
+                  "display": 0.09
+                },
+                {
+                  "units": "4",
+                  "exact": "1/25",
+                  "display": 0.04
+                }
+              ],
+              [
+                {
+                  "units": "9",
+                  "exact": "9/100",
+                  "display": 0.09
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "3",
+                  "exact": "3/100",
+                  "display": 0.03
+                }
+              ],
+              [
+                {
+                  "units": "4",
+                  "exact": "1/25",
+                  "display": 0.04
+                },
+                {
+                  "units": "3",
+                  "exact": "3/100",
+                  "display": 0.03
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "prefix": 10,
+          "clock": "10",
+          "saveHash": "60e679a58afd66101be44d5c45e57a32224df6d57f5b9364d3491b79d70b8bbd",
+          "stateHash": "3fcb6d8af8b7912700376114b09bc036ca85a231b9e540438a034c4807d2b4dc",
+          "nodes": 3,
+          "graph": {
+            "version": "association-inspection/0.1",
+            "scale": "100",
+            "updatedAt": "6",
+            "nodes": [
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010200",
+                "label": "Concept 1",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"0\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010201",
+                "label": "Concept 2",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"1\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010202",
+                "label": "Concept 3",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"2\"\n}"
+              }
+            ],
+            "weights": [
+              [
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "9",
+                  "exact": "9/100",
+                  "display": 0.09
+                },
+                {
+                  "units": "4",
+                  "exact": "1/25",
+                  "display": 0.04
+                }
+              ],
+              [
+                {
+                  "units": "9",
+                  "exact": "9/100",
+                  "display": 0.09
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "3",
+                  "exact": "3/100",
+                  "display": 0.03
+                }
+              ],
+              [
+                {
+                  "units": "4",
+                  "exact": "1/25",
+                  "display": 0.04
+                },
+                {
+                  "units": "3",
+                  "exact": "3/100",
+                  "display": 0.03
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "prefix": 11,
+          "clock": "21",
+          "saveHash": "9980be1a6275c0aa82721908265e8873a1670443b45c35ab06466a8498aca495",
+          "stateHash": "1266700c92ebabc6ad1348b6f6172eb3228073dcfa0c9609ec5d5f9eb93cf433",
+          "nodes": 3,
+          "graph": {
+            "version": "association-inspection/0.1",
+            "scale": "100",
+            "updatedAt": "6",
+            "nodes": [
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010200",
+                "label": "Concept 1",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"0\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010201",
+                "label": "Concept 2",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"1\"\n}"
+              },
+              {
+                "id": "0ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010202",
+                "label": "Concept 3",
+                "exact": "{\n  \"record\": \"PerceptualReferentId#212/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/general-attention-subject\"\n  },\n  \"ObserverTrackSequence [2]\": \"2\"\n}"
+              }
+            ],
+            "weights": [
+              [
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "9",
+                  "exact": "9/100",
+                  "display": 0.09
+                },
+                {
+                  "units": "4",
+                  "exact": "1/25",
+                  "display": 0.04
+                }
+              ],
+              [
+                {
+                  "units": "9",
+                  "exact": "9/100",
+                  "display": 0.09
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                },
+                {
+                  "units": "3",
+                  "exact": "3/100",
+                  "display": 0.03
+                }
+              ],
+              [
+                {
+                  "units": "4",
+                  "exact": "1/25",
+                  "display": 0.04
+                },
+                {
+                  "units": "3",
+                  "exact": "3/100",
+                  "display": 0.03
+                },
+                {
+                  "units": "0",
+                  "exact": "0/1",
+                  "display": 0
+                }
+              ]
+            ]
+          }
+        }
+      ],
+      "events": 153
+    }
+  ],
+  "limitations": [
+    "Two exact frozen recipes at seed0 only; other recipe UI choices remain unqualified.",
+    "Diagnostic association matrix/row projection, not a personality embedding or general causal claim.",
+    "Full corpus, language and entry acceptance remain open."
+  ]
+}

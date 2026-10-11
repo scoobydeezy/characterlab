@@ -7,7 +7,11 @@ OBSERVABILITY_WORKBENCH_BRIEF.md, SHA256
 
 ## Implemented first slice
 
-Latest continuation: shared capability declarations, retained experiment sessions
+Latest continuation: native General-attention association heatmap, directed graph and
+selected three-axis inspection are described in OBSERVABILITY_WORKBENCH_GENERAL_PROGRESS.md.
+Two frozen recipes/24 exact prefixes pass; full workbench acceptance remains open.
+
+Prior continuation: shared capability declarations, retained experiment sessions
 and worker-backed bounded batch execution are described in
 OBSERVABILITY_WORKBENCH_BATCH_PROGRESS.md. Full workbench acceptance remains open.
 

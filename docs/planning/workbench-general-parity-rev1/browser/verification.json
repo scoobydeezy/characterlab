@@ -1,0 +1,28 @@
+{
+  "status": "PASS BOUNDED BROWSER INSPECTION",
+  "recipe": "baseline",
+  "prefix": 3,
+  "hashes": "modelHash\n38c13209db2a9d3fbdb5fcf01c4963ad5c678937f355bdab35be85e1cd2be503\nrunHash\na00cd7426819dfaa27d92312c32cb0b6ec928eab8dfb9b6fec1a6a12097fe269\nstateHash\nc969a5c1d0fd95913d5f9b2d54d817f7fbd692ba128062a5aa0a1f4d2e90f282\nsaveHash\n70c5758f51b4c7057b61be6bd7a62cc2de8ce44de89204f13bb65fa7474c3fb3\n\nRead/change instrumentation does not establish causal necessity. Specialized inspection is diagnostic only.",
+  "desktop": {
+    "client": 1425,
+    "scroll": 1425
+  },
+  "mobile": {
+    "client": 375,
+    "scroll": 375
+  },
+  "checks": [
+    "Worker advances 0 through 3 without control timeout",
+    "Actual exact graph extracted from rendered pre",
+    "Heatmap, directed graph, selected three-axis projection visible",
+    "Rotation 35 to36; repeated target warning verified",
+    "Native hashes unchanged after display interactions"
+  ],
+  "limitations": [
+    "Keyboard activation used; pointer-only workflow unqualified",
+    "Native download not tested; checkpoint is session-local",
+    "Main-thread development step3 completed but Input.dispatchKeyEvent timed out before worker change",
+    "Desktop viewport captures clipped lower plot; full-page capture verifies geometry",
+    "Development server browser; production build checked separately"
+  ]
+}

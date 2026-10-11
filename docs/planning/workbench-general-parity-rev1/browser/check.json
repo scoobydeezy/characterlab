@@ -1,0 +1,68 @@
+{
+  "status": "PASS EXACT BROWSER GRAPH AND PREFIX IDENTITY",
+  "recipe": "baseline",
+  "prefix": 3,
+  "sources": [
+    {
+      "path": "src/workbench/generalAdapter.ts",
+      "sha256": "8913695d015b5f6e9c3164dfe7f5085d00cffcb698d06cd1b23028fde8f2ef77"
+    },
+    {
+      "path": "src/workbench/associationProjection.ts",
+      "sha256": "07fcd4b576a0476beefb8d995bd53a2ff7ead47a0fe3bde92ecf459fa3eb8d2f"
+    },
+    {
+      "path": "src/workbench/nativeTimeline.ts",
+      "sha256": "ceed75f534e8158a2172ac962cab89aa9ffa5fcbaaf71e0d62347fd01a9c6775"
+    },
+    {
+      "path": "scripts/check-workbench-general.mjs",
+      "sha256": "97ee8002b9bc08c259e553605768d91727e58ee39788ae14f802d3f0acfeddf6"
+    },
+    {
+      "path": "src/workbench/GeneralWorkbench.tsx",
+      "sha256": "518f98892a338646349442a2a1e220babc9b9d96f655a01427ee149fba5e25e9"
+    },
+    {
+      "path": "src/workbench/AssociationInspector.tsx",
+      "sha256": "287eb5caecdab7bb0092ac81bef8c9b5ca98fde35ddfaedbb7da52ce4108d806"
+    },
+    {
+      "path": "src/workbench/generalWorker.ts",
+      "sha256": "a2910f8901a23a275e265cec8e0a0693bd60a4259101c7fd1db06c2746b2246d"
+    },
+    {
+      "path": "src/workbench/generalWorkerClient.ts",
+      "sha256": "12d2c7b9d2f9e22ddbc737f219ca9141f75947281a00fc31caba2dde3a78ab63"
+    },
+    {
+      "path": "src/workbench/WorkbenchApp.tsx",
+      "sha256": "47d2337389d50d45a32b32824e6710e5c7b3fce9fac12f6b0f23fb3ff929c57b"
+    },
+    {
+      "path": "scripts/check-workbench-general-browser.mjs",
+      "sha256": "a1ffa45a3806daef877c52ffd0890b3b1182504ba2101bfaf9e1649f8b9ffddd"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "receipt.json",
+      "sha256": "eb4878f73d62551daaadd8c27620c0e53dc05a7a771daec5a8a3cc295db2602f"
+    },
+    {
+      "path": "browser/verification.json",
+      "sha256": "fb95d4f4b7b044e7d4ae6916ee5f1eb27b9507601232a15b2b93b3c2430b5477"
+    },
+    {
+      "path": "browser/prefix3-graph.json",
+      "sha256": "7a1944c9f696fd220f983a176e2bb3c9bf5ffea76ceacd1224809cdd189baa40"
+    }
+  ],
+  "limitations": [
+    "Keyboard activation used; pointer-only workflow unqualified",
+    "Native download not tested; checkpoint is session-local",
+    "Main-thread development step3 completed but Input.dispatchKeyEvent timed out before worker change",
+    "Desktop viewport captures clipped lower plot; full-page capture verifies geometry",
+    "Development server browser; production build checked separately"
+  ]
+}
