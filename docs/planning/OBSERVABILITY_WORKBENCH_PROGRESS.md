@@ -7,7 +7,10 @@ OBSERVABILITY_WORKBENCH_BRIEF.md, SHA256
 
 ## Implemented first slice
 
-Latest continuation: the EPI adapter passes all72 retained public programs/240 prefixes;
+Latest continuation: EPI browser views, matched safe/violating pair reports and replay
+are described in OBSERVABILITY_WORKBENCH_EPI_UI_PROGRESS.md; full entry remains open.
+
+Prior continuation: the EPI adapter passes all72 retained public programs/240 prefixes;
 see OBSERVABILITY_WORKBENCH_EPI_PROGRESS.md. EPI UI and language qualification remain due.
 
 Prior continuation: named-run participation aggregation preserves per-model identity,

@@ -1,0 +1,62 @@
+{
+  "status": "PASS BOUNDED EPI BROWSER COMPARISONS",
+  "sources": [
+    {
+      "path": "src/workbench/epiAdapter.ts",
+      "sha256": "d50e5ed3760efdac8b3d3ed2cbe7617bd22d20e86f9e761ad746ce2640c0ece7"
+    },
+    {
+      "path": "src/workbench/epiWorker.ts",
+      "sha256": "a8e40d37251399e70ca255534684749e2d0895db9da1b8ef454465574a20d8b3"
+    },
+    {
+      "path": "src/workbench/epiWorkerClient.ts",
+      "sha256": "26029c6f8892c06f5cbd267992b3ed1f3a150abd846f413768410dc97ecdd357"
+    },
+    {
+      "path": "src/workbench/epiComparison.ts",
+      "sha256": "8e99ed48a07107dc78c998b065b4e0539fc5c435b9f761ae969656bd49ad1ecf"
+    },
+    {
+      "path": "src/workbench/EpiWorkbench.tsx",
+      "sha256": "87c50bf533e9b45bb227222499d5f5ee344865b046bde8cbfe02e123bea485cf"
+    },
+    {
+      "path": "src/workbench/experimentRegistry.ts",
+      "sha256": "7eb0b4bea20e34646d5c0ab21dd99105e4b3e51c2627843297c306d1b7254d68"
+    },
+    {
+      "path": "src/workbench/WorkbenchApp.tsx",
+      "sha256": "9bddfa76c318221d74874d9bbf628d819aba35c2041948a74a2e1ad3b84751f4"
+    },
+    {
+      "path": "scripts/check-workbench-epi-browser.mjs",
+      "sha256": "d68fad3d0d4a4a28fea0e482780099017c0aa57c1328eae2d170babd88168e63"
+    }
+  ],
+  "results": [
+    {
+      "file": "safe-comparison.json",
+      "sha256": "f47e3f4124231e023bf6c91e09ccfab2ec66da220581e772882cdfdec29ed76d",
+      "programs": [
+        "1/1/establishedA",
+        "1/1/establishedB"
+      ],
+      "prefix": 3,
+      "lawful": true,
+      "characterOutputsEqual": true
+    },
+    {
+      "file": "violating-comparison.json",
+      "sha256": "3ae9854054f694f4cd107efa1994af88b97742d548108ef513c19aeb7a6ac3a2",
+      "programs": [
+        "2/1/establishedA",
+        "2/1/establishedB"
+      ],
+      "prefix": 3,
+      "lawful": false,
+      "characterOutputsEqual": false
+    }
+  ],
+  "scope": "Two established pairs, exact numeric profile; full72-program native adapter receipt remains separate. No narrative renderer or all-program browser claim."
+}
