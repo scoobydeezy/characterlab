@@ -42,7 +42,9 @@ Prior: OBSERVABILITY_WORKBENCH_EPI_PROGRESS.md; EPI72 programs/240 prefixes PASS
 safe character projection and violating controls retained; EPI browser integration next.
 Prior: OBSERVABILITY_WORKBENCH_EPI_UI_PROGRESS.md; worker-backed browser inspection,
 safe/violating pair exports and exact checkpoint replay; language/full entry still open.
-Latest: OBSERVABILITY_WORKBENCH_EPI_LANGUAGE_PROGRESS.md;30 encoding descriptions,
+Prior: OBSERVABILITY_WORKBENCH_EPI_LANGUAGE_PROGRESS.md;30 encoding descriptions,
 72-program/240-prefix invariance audit PASS; complete narrative/corpus/entry still open.
+Latest: OBSERVABILITY_WORKBENCH_LEARN_PROGRESS.md;39 frozen LEARN programs/580
+prefixes PASS. Researcher adapter only; browser/language/batch integration next.
 Campaign4 entry remains gated by the full workbench plan; no reduction work has started.
 Counters1529/0; no owner ruling.
