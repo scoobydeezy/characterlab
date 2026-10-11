@@ -1,0 +1,68 @@
+{
+  "status": "PASS BOUNDED BELIEF BROWSER CONTRASTS AND REPLAY",
+  "sources": [
+    {
+      "path": "src/workbench/BeliefWorkbench.tsx",
+      "sha256": "e18ec60c9e237d93c553c848951a05bda483274f6b14230a3c19c5c663a56484"
+    },
+    {
+      "path": "src/workbench/beliefWorker.ts",
+      "sha256": "00f895732807bc7b36a6b656e46aad0d38125c8fc85fd11c023018a1df3a4d0e"
+    },
+    {
+      "path": "src/workbench/beliefWorkerClient.ts",
+      "sha256": "da57f05952713929fcab42e8bcec20e1e427065cd8018ae789349c7890b79339"
+    },
+    {
+      "path": "src/workbench/beliefAdapter.ts",
+      "sha256": "55dceabcc6dd59ef17a88b5d421a2544f6a7fdb22cfea8cd2e11f6e224d69dc3"
+    },
+    {
+      "path": "src/workbench/beliefComparison.ts",
+      "sha256": "9ae85b3573bd334a7082c0fc65abb6b967e46bb28f42411b753a6a62278494b1"
+    },
+    {
+      "path": "src/workbench/experimentRegistry.ts",
+      "sha256": "6e33a74375e31eb7fbd557a40111b32716234870fa701619054e848508524cee"
+    },
+    {
+      "path": "src/workbench/WorkbenchApp.tsx",
+      "sha256": "492c76b17a4ee3f881bb2d2f80416538fb13231365a11773785d08e75858cbe9"
+    },
+    {
+      "path": "scripts/check-workbench-belief-browser.mjs",
+      "sha256": "8e0daec25461fd24b409895f7919a355c35cb1b41c567ddf163bd4f87d59df64"
+    }
+  ],
+  "reference": {
+    "path": "docs/planning/workbench-belief-comparisons-rev1/comparisons.json",
+    "sha256": "67b6acbb46b30cae2947d0d5dd2f07f3e4a8df84dd370653be90dcfb2cee58bf"
+  },
+  "artifacts": [
+    {
+      "path": "hidden.json",
+      "sha256": "a783f86dc166c6549501a08c8cb46cbb585367204aafc858ea8ce7536ce2056a"
+    },
+    {
+      "path": "display.json",
+      "sha256": "d7d65cad1570af46b9bdeeb13f109532cb6a59ebbcd4ddfa33704de046583800"
+    },
+    {
+      "path": "goal.json",
+      "sha256": "c59f30a1f04ba9865c36c1195a2e18b92896a0a4d8dfb687712ad213d167da00"
+    },
+    {
+      "path": "law.json",
+      "sha256": "25e5fe3620045cc1c938367f7146cc2073e48b2c81373cc8e790161102822f34"
+    },
+    {
+      "path": "checkpoint.json",
+      "sha256": "1daf5bdc9999eb9b004e85d2913ae75b4193fb866abfb36f6a9f1a0297740b29"
+    },
+    {
+      "path": "restored-final.json",
+      "sha256": "78a35022d87509e84505790bf5d2de1c6c16ba744deae85d9a1dd02d7f422aee"
+    }
+  ],
+  "scope": "One complete browser contrast from each hidden/display/goal/law family; entire exports match retained native comparisons. Exact prefix1-to-terminal checkpoint continuation. No all48-program browser or language claim."
+}

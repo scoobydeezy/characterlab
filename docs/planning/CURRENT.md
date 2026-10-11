@@ -54,7 +54,9 @@ Prior: OBSERVABILITY_WORKBENCH_BATCH_V2_PROGRESS.md; four cohorts351 programs/
 1795 native prefixes PASS; EPI/LEARN111 browser programs/820 prefixes PASS.
 Prior: OBSERVABILITY_WORKBENCH_BELIEF_PROGRESS.md;48 programs/381 exact historical
 prefixes PASS. BELIEF browser/language/batch integration next.
-Latest: OBSERVABILITY_WORKBENCH_BELIEF_COMPARISONS_PROGRESS.md;14 contrasts/
+Prior: OBSERVABILITY_WORKBENCH_BELIEF_COMPARISONS_PROGRESS.md;14 contrasts/
 18 programs/207 prefixes PASS. Explicit input/model controls ready for browser integration.
+Latest: OBSERVABILITY_WORKBENCH_BELIEF_UI_PROGRESS.md; four browser control families
+and complete checkpoint replay PASS. BELIEF language/batch and broader corpus due.
 Campaign4 entry remains gated by the full workbench plan; no reduction work has started.
 Counters1529/0; no owner ruling.
