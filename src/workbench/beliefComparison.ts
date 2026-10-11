@@ -16,7 +16,7 @@ export function compareBelief(id:string,a:BeliefSnapshot,b:BeliefSnapshot){
  if(contrast.kind==='input'&&a.modelHash!==b.modelHash)throw Error('Input contrast requires one model');
  if(contrast.kind==='model'&&(a.modelHash===b.modelHash||originals[0].orderedInputs!==originals[1].orderedInputs))throw Error('Model contrast requires distinct models and identical originals');
  const aligned=a.prefix===b.prefix&&a.clock===b.clock;
- return {version:'belief-contrast-inspection/0.1',contrast:structuredClone(contrast),aligned,
+ return {version:'belief-contrast-inspection/0.2',contrast:structuredClone(contrast),aligned,
   alignment:'Same committed prefix and instant; unequal horizons yield unavailable comparisons. Internal event ancestry remains run-specific.',
   randomPolicy:'Original seed7 is fixed. These public models draw no RNG; no stochastic coupling is inferred.',
   originals:structuredClone(originals),initialState:plan.initialState,runSeed:plan.runSeed,

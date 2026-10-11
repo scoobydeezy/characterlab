@@ -1,0 +1,37 @@
+{
+  "status": "PASS BOUNDED BELIEF EVALUATION LANGUAGE AUDIT",
+  "sources": [
+    {
+      "path": "src/workbench/beliefAdapter.ts",
+      "sha256": "7dac4808fc9b41ceaeb1b25cd05013040411004a685e2464db6a13475360dc65"
+    },
+    {
+      "path": "src/workbench/beliefExplanations.ts",
+      "sha256": "2b891ac6dd27dd4681cb3e3ea17d571e74acc2ab66001b47f85102798d533db8"
+    },
+    {
+      "path": "src/workbench/BeliefWorkbench.tsx",
+      "sha256": "aea8c4d9252cabab3c4b8d97971a630a932db941504c3d26cdce6c9bfad4ae64"
+    },
+    {
+      "path": "src/workbench/beliefComparison.ts",
+      "sha256": "3f520935a8c584f354484c89f2efc8e58e9189d06c9786f12eced25685d04409"
+    },
+    {
+      "path": "src/workbench/experimentRegistry.ts",
+      "sha256": "dad7b78035b79c16d8deefcabe701c6436233d2bb4968e18e0fc296a35348383"
+    },
+    {
+      "path": "scripts/check-workbench-belief-language.mjs",
+      "sha256": "62e5430837de20c0616010d6b1297ea5e324a6c88c86c94e6c2d937f72f52d16"
+    }
+  ],
+  "reference": {
+    "path": "docs/planning/workbench-belief-parity-rev1/receipt.json",
+    "sha256": "f960488028776c5a353076fed081c6a70c5b57be85302dd8f01d6304d73a054a"
+  },
+  "programs": 48,
+  "prefixes": 381,
+  "descriptions": 933,
+  "scope": "Learning742 and appraisal743 only, closed admitted output roster. All hidden-world descriptions equal; goal changes leave learning descriptions equal. No current-state reconstruction, invented appraisal timestamp, calibrated-confidence or full decision narrative claim."
+}

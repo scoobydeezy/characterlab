@@ -8,6 +8,7 @@ import {beliefRecipe,BELIEF_VERSION} from '../campaign3/beliefModel';
 import {prepareBeliefModel,createBeliefRun,restoreBeliefRun} from '../campaign3/beliefFactory';
 import {digest,exactText,exactKey,fromHex,equalBytes} from './canonical';
 import {nativeTimeline} from './nativeTimeline';
+import {explainBelief,type BeliefExplanation} from './beliefExplanations';
 
 export const BELIEF_PROGRAMS = plan.runs.map(row=>({id:row.name,law:row.law,goal:row.goal,caseName:row.caseName}));
 const registry=new RecordSchemaRegistry(beliefSupportedSchemas());
@@ -21,7 +22,7 @@ export class BeliefWorkbenchRun {
   #run:Run; #program:string; #prefix=0; #busy=false;
   #view!: {program:string;seamVersion:string;projection:string;prefix:number;complete:boolean;clock:string;
     modelHash:string;runHash:string;stateHash:string;saveHash:string;outputsHash:string;
-    admittedOutputs:string;fields:{path:string;root:string;exact:string}[];timeline:ReturnType<typeof nativeTimeline>};
+    admittedOutputs:string;explanations:BeliefExplanation[];fields:{path:string;root:string;exact:string}[];timeline:ReturnType<typeof nativeTimeline>};
   private constructor(run:Run,program:string){this.#run=run;this.#program=program;}
   static async create(program='misleading-law-1') {
     const row=plan.runs.find(r=>r.name===program);if(!row)throw Error('Unknown frozen BELIEF program');
@@ -45,6 +46,6 @@ export class BeliefWorkbenchRun {
     const row=plan.runs.find(r=>r.name===this.#program)!,s=this.#run.snapshot(),save=this.#run.save();
     this.#view={program:this.#program,seamVersion:BELIEF_VERSION,projection:'Native admitted outputs; state and timeline are researcher diagnostics',prefix:this.#prefix,complete:items(f(rec(decode(save),132n),7n),'list').length===0,clock:String(s.clock),
       modelHash:await digest(fromHex(retained.results.find(r=>r.name===this.#program)!.modelIdentity)),runHash:await digest(this.#run.runIdentity()),stateHash:await digest(s.state),saveHash:await digest(save),outputsHash:await digest(s.outputs),
-      admittedOutputs:exactText(decode(s.outputs)),fields:restoreAuthoritativeState(decode(s.state)).entries().map(e=>({path:exactKey(statePathValue(e.path)),root:String(e.path.rootStateTypeId),exact:exactText(e.value)})),timeline:nativeTimeline(items(decode(s.trace),'list'))};
+      explanations:explainBelief(items(decode(s.outputs),'list'),row.law),admittedOutputs:exactText(decode(s.outputs)),fields:restoreAuthoritativeState(decode(s.state)).entries().map(e=>({path:exactKey(statePathValue(e.path)),root:String(e.path.rootStateTypeId),exact:exactText(e.value)})),timeline:nativeTimeline(items(decode(s.trace),'list'))};
   }
 }

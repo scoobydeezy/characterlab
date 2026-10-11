@@ -1,5 +1,5 @@
 /** Versioned diagnostic capabilities; none of these objects is simulation authority. */
-export const EXPERIMENT_REGISTRY_VERSION = 'workbench-experiments/0.8';
+export const EXPERIMENT_REGISTRY_VERSION = 'workbench-experiments/0.9';
 export type ExperimentId = 'values' | 'reason' | 'general' | 'epi' | 'learn' | 'belief';
 export type BatchExperimentId = Exclude<ExperimentId, 'general' | 'belief'>;
 export interface InspectionCapabilities {
@@ -17,7 +17,7 @@ export interface ExperimentDescriptor {
 const noIntervention = {supported: false as const, reason: 'The public contract admits original inputs on a fresh run; it exposes no runtime intervention ingress.'};
 const checkpoint = {supported: true as const, authentication: 'Exact public save, original inputs, model, seed and complete prefix.'};
 export const EXPERIMENTS: readonly ExperimentDescriptor[] = [
-  {id:'belief',label:'BELIEF · displayed evidence',seamVersion:'belief-public/0.1-candidate',corpusScope:'PHEN-BELIEF-001;48 frozen programs',capabilities:{committedStep:{supported:true,boundary:'One complete native instant.'},checkpoint,runtimeIntervention:noIntervention,graph:{supported:false,reason:'Scalar belief leaves; no native graph.'},matrix:{supported:false,reason:'No native matrix.'},explanation:{supported:false,scope:'Native admitted outputs only',qualification:'Narrative renderer pending.'}}},
+  {id:'belief',label:'BELIEF · displayed evidence',seamVersion:'belief-public/0.1-candidate',corpusScope:'PHEN-BELIEF-001;48 frozen programs',capabilities:{committedStep:{supported:true,boundary:'One complete native instant.'},checkpoint,runtimeIntervention:noIntervention,graph:{supported:false,reason:'Scalar belief leaves; no native graph.'},matrix:{supported:false,reason:'No native matrix.'},explanation:{supported:true,scope:'Recorded BELIEF learning/appraisal descriptions',qualification:'belief-evaluation-explanation/0.1; full decision narrative remains open.'}}},
   {id:'learn',label:'LEARN · censored evidence',seamVersion:'learn-public/0.1-candidate',corpusScope:'PHEN-LEARN-001; 39 frozen public programs',capabilities:{committedStep:{supported:true,boundary:'One complete native instant.'},checkpoint,runtimeIntervention:noIntervention,graph:{supported:false,reason:'Scalar belief leaves; no native graph.'},matrix:{supported:false,reason:'No native matrix representation.'},explanation:{supported:true,scope:'Recorded LEARN application descriptions only',qualification:'learn-application-explanation/0.1; closed evidence projection. Full narrative remains unqualified.'}}},
   {id: 'values', label: 'Values integration', seamVersion: 'values-integration-public/0.1-candidate', corpusScope: 'Values integrated qualification successor', capabilities: {
     committedStep: {supported: true, boundary: 'One whole instant, including all 13 native stages.'}, checkpoint, runtimeIntervention: noIntervention,
