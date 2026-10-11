@@ -524,3 +524,8 @@ Records1509..1519/schema1 allocated before implementation by VALUES_PUBLIC_ALLOC
 
 
 Values native closure (2026-10-04): VER-C3-VALUES-PUBLIC-001 qualifies the bounded admission; records1509..1519 unchanged. Counters1519/0.
+
+## Values integrated native successor — 2026-10-11
+Records1520..1529/schema1 permanently allocated by VALUES_INTEGRATION_PUBLIC_ALLOCATION_TABLE.json under values-integration-public/0.1-candidate. Four disjoint writers, existing1516/1517 Value roots preserved; Refold omits1517. No namespace allocation. Counters1529/10; qualification remains OPEN.
+
+Values integrated native closure: VER-C3-VALUES-INTEGRATION-001; records1520..1529 unchanged; counters1529/0.

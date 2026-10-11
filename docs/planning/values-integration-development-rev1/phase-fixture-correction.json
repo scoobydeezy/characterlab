@@ -1,0 +1,11 @@
+{
+  "status": "TEST_ONLY_CORRECTION",
+  "finding": "Phase41 is not a registered scheduler phase and rejects at construction, before the expected settlement rejection. Phase50 is registered but wrong for source40.",
+  "frozenPath": "src/test/valuesIntegrationPublic.test.ts",
+  "frozenSha256": "7a615e23ab7ee65d1b20d3f5f088056dd4dd7cfcf620425ff4716f4158f9a954",
+  "preservedSource": "docs/planning/values-integration-development-rev1/native-test-before-phase-correction.txt",
+  "correctedSha256": "b720b6a649efb1c9f0e67b40044922f4cd564d8a3d987dc1ea6b54f4719a2aff",
+  "failedReceipt": "docs/planning/values-integration-development-rev1/native-final.json",
+  "productionChanged": false,
+  "qualificationImpact": "Frozen test source retained verbatim. Matrix does not execute this test; all production model, run and source identities unchanged. Corrected test independently re-exercises both ingress failures."
+}

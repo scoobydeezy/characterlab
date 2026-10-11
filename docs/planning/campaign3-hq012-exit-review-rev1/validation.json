@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "commands": [
+    {
+      "command": "npm run check:research",
+      "exitCode": 0,
+      "result": "4163 reports; 1 active, 19 conditional, 2 closed, 0 unowned obligations; 102 Campaign3 verdicts"
+    },
+    {
+      "command": "node scripts/check-research-obligations.mjs --self-test",
+      "exitCode": 0,
+      "result": "All 10 bookkeeping fault checks passed; terminal exit observed"
+    },
+    {
+      "command": "python -X utf8 scripts/check-hq012-exit-review.py",
+      "exitCode": 0,
+      "result": "184 bound files; exact preservation of 21 members, 15 families, 132 clauses; 4412 delta paths accounted; 3 active implementation gates; new artifacts below 50000000 bytes"
+    },
+    {
+      "command": "git diff --check -- . :(exclude)docs/planning/CAMPAIGN3_LOG.md",
+      "exitCode": 0,
+      "result": "No whitespace errors; LF/CRLF notices only"
+    }
+  ],
+  "limits": "Audit validation, not fresh behavioral execution. The original BODY current-source hash rejection is preserved in the separate check receipt and resolved only by the historical-source check plus separately scoped wrapper evidence. Campaign3 remains NOT EXIT-READY."
+}

@@ -1350,3 +1350,22 @@ NOT EXIT-READY. Counters1508/0;corpus0.29.0/21;wrappers54/57 unchanged. RO019 AC
 RO021 historical reconciliation unsatisfied;RO022 CLOSED. No owner ruling.
 Start CAMPAIGN3_AFFECT_REGULATORY_QUALIFICATION.md;next
 CAMPAIGN3_EXIT_RECONCILIATION_READINESS.md.
+
+
+## Bounded integrated Values closure — 2026-10-11
+VER-C3-VALUES-INTEGRATION-001 qualifies physical/admitted-evidence separation,
+actual goal fulfillment/retirement preserving Value and later Value-relative appraisal.
+5 models/125 runs/625 native prefixes/6500 stages;47 affected/328 reference tests/build.
+Four Value laws and NoValueAppraisal remain; Stored/Refold and overlap equalities survive.
+No natural category, general affect, age-weighted Value or lifetime law is implied.
+Counters1529/0;109 verdicts;56/59 wrappers;132 bounded clauses/corpus0.29.0/21 unchanged.
+Next the explicit final disposition in docs/planning/CAMPAIGN3_VALUES_EXIT_REFRESH.md.
+Dedicated inspection UI belongs between Campaigns3 and4; no reduction ranking starts here.
+
+
+## Campaign3 bounded exit disposition — 2026-10-11
+CAMPAIGN3_VALUES_EXIT_REFRESH.md and campaign3-values-exit-refresh-rev1/validation.json
+record bounded exit acceptance after final source freshness and the three Values gates.
+All21 corpus scopes/15 families/132 bounded clauses and18 conditional debts remain.
+109 verdicts;1529/0;56/59 publication inventory. No law or comparator retired.
+Dedicated inspection UI is next between Campaigns3 and4; reduction ranking is separate.

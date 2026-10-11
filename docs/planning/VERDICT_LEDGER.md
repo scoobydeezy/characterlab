@@ -3335,3 +3335,20 @@ VALUES_WRAPPER_EXTENSION_REV1.json. RO-C3-010/019/020/021;RO022 publication rema
 Counters1519/0;108 verdicts; no clause promotion. AuditREV111 remains prior106-verdict
 snapshot;corpus0.29.0/21 unchanged. Campaign3 NOT EXIT-READY. Next historicalHQ-004
 option-list/additive-scoring review and final reconciliation. No owner ruling.
+
+
+## `VER-C3-VALUES-INTEGRATION-001` — physical evidence, goal lifecycle and appraisal (2026-10-11)
+
+QUALIFIED BOUNDED NATIVE / LOCAL DISPOSITION. values-integration-public/0.1-candidate.
+5 profiles/125 runs/625 original Save132 prefixes;500 advancing/125 terminal;
+6500 native stages/500 exact component rows;47 affected/328 reference tests/build.
+Independent world/evidence, actual goal fulfillment/retirement with retained Value,
+and later read-only Value-relative appraisal discharge the three HQ012 Values gates.
+Stored/Refold25 pairs equal; four learning laws and NoValueAppraisal retained.
+Eight baseline seeds/profile;17 interventions at seed0/profile. No general affect,
+category learning, age-weighted Values or storage-necessity claim. Preserve phase41
+test failure/corrected50 and startup access failure; frozen model/run bytes unchanged.
+56 producers/59 factories checked; earlier scopes unchanged. Counters1529/0;
+109 named verdicts; no clause promotion. Evidence: CAMPAIGN3_VALUES_INTEGRATION_QUALIFICATION.md,
+values-integration-matrix-rev1/closure.json, VALUES_INTEGRATION_WRAPPER_EXTENSION_REV1.json.
+RO-C3-010/019/020/021/022. Final exit disposition is a separate refreshed review.

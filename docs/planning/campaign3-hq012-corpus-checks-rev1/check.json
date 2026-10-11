@@ -1,0 +1,82 @@
+{
+  "status": "FAIL",
+  "commands": [
+    {
+      "command": [
+        "node",
+        "scripts/check-epi-closure.mjs"
+      ],
+      "checkerSha256": "27f8d313ba5931d6f7a569afab1683fd7164447d6b437cf4111acf2cc9d03d79",
+      "exitCode": 0,
+      "stdout": "PASS: EPI closure integrity:6 models/72 runs/240 prefixes; 49+328 tests.\n",
+      "stderr": "",
+      "scope": "Fresh receipt/source integrity check; preserved experiments and test counts are not fresh execution."
+    },
+    {
+      "command": [
+        "node",
+        "scripts/check-learn-closure.mjs"
+      ],
+      "checkerSha256": "0f045e78b4dbaa92978bb9a4e88bbef5d1f5f9578a1275de8c7e7f0588f17ad2",
+      "exitCode": 0,
+      "stdout": "PASS: LEARN closure integrity:6 models,39 runs,580 prefix continuations; 44+328 tests\n",
+      "stderr": "",
+      "scope": "Fresh receipt/source integrity check; preserved experiments and test counts are not fresh execution."
+    },
+    {
+      "command": [
+        "node",
+        "scripts/check-reason-closure.mjs"
+      ],
+      "checkerSha256": "1258bd83e72d2822f502e17b8221051282ddd439162c952604ebf288b872d63a",
+      "exitCode": 0,
+      "stdout": "PASS REASON closure integrity:5 models/115 runs/350 continuations; 67+328 tests.\n",
+      "stderr": "",
+      "scope": "Fresh receipt/source integrity check; preserved experiments and test counts are not fresh execution."
+    },
+    {
+      "command": [
+        "node",
+        "scripts/check-decision-closure.mjs"
+      ],
+      "checkerSha256": "7d12794d54670854d720dd344ea12e1109880f296f8012634e7ac286a97d2a53",
+      "exitCode": 0,
+      "stdout": "PASS DECISION closure integrity:6 models/174 runs/360 continuations;72+328 tests.\n",
+      "stderr": "",
+      "scope": "Fresh receipt/source integrity check; preserved experiments and test counts are not fresh execution."
+    },
+    {
+      "command": [
+        "node",
+        "scripts/check-commit-closure.mjs"
+      ],
+      "checkerSha256": "b53788cbbcc75cf7bb5a52505b04aaa2c217e7ca4b820613d588420a934e5516",
+      "exitCode": 0,
+      "stdout": "PASS COMMIT closure integrity:4 models/10 runs/70 continuations; 144+328 tests.\n",
+      "stderr": "",
+      "scope": "Fresh receipt/source integrity check; preserved experiments and test counts are not fresh execution."
+    },
+    {
+      "command": [
+        "node",
+        "scripts/check-bio-closure.mjs"
+      ],
+      "checkerSha256": "5bfb917a27fcdbd163af9e54fe4d0c4a1674c483d20344eadf29fcddc3a6e390",
+      "exitCode": 0,
+      "stdout": "PASS BIO:6 component candidates/13 runs/260 exact component prefixes; 56+328 tests.\n",
+      "stderr": "",
+      "scope": "Fresh receipt/source integrity check; preserved experiments and test counts are not fresh execution."
+    },
+    {
+      "command": [
+        "node",
+        "scripts/check-body-ownership-closure.mjs"
+      ],
+      "checkerSha256": "ab624496513ba66870e435321d3a35ba6d91358278d627b6824718a9ede9e952",
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: src/campaign3/embodiedRuntime.ts\n+ actual - expected\n\n+ '617be10d59927fb8f49fbdd4fc18fc23caa043c21e63c228224922ede1121313'\n- 'd8103b0b9d9a6e16e00ba1d1c05ca4ed803deb8cbb2075fe8de974d713307fbe'\n\n    at file:///C:/Users/scoob/Documents/GitHub/characterlab/scripts/check-body-ownership-closure.mjs:3:69\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: '617be10d59927fb8f49fbdd4fc18fc23caa043c21e63c228224922ede1121313',\n  expected: 'd8103b0b9d9a6e16e00ba1d1c05ca4ed803deb8cbb2075fe8de974d713307fbe',\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.20.0\n",
+      "scope": "Fresh receipt/source integrity check; preserved experiments and test counts are not fresh execution."
+    }
+  ]
+}

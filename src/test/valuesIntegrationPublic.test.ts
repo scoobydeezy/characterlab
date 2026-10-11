@@ -1,0 +1,53 @@
+import {it,expect} from 'vitest';
+import {canonicalEncode as enc,list,record,unsigned as u} from '../substrate/canonicalEncoding';
+import {dataRecord as rec,dataField as f,dataKey as key} from '../campaign2/canonicalData';
+import {applyStatePatch} from '../substrate/state';
+import {integrationRecipe,integrationInitial,integrationOrdered,compileIntegrationModel,compileIntegrationInputs,path,sid,stages,eventId} from '../campaign3/valuesIntegrationPublicModel';
+import {prepareIntegrationModel,createIntegrationPublicRun,restoreIntegrationPublicRun,integrationRows} from '../campaign3/valuesIntegrationPublicFactory';
+import {createIntegrationPublicRuntime} from '../campaign3/valuesIntegrationPublicRuntime';
+import {parseValuesIntegrationSave} from '../campaign3/valuesIntegrationPublicCodecs';
+import {VALUE_LAWS,type ValueLaw} from '../campaign3/valuesComponent';
+import {createValuesIntegration,type IntegrationFrame} from '../campaign3/valuesIntegration';
+const frame=(instant:number):IntegrationFrame=>({instant,opportunity:instant!==1,linked:true,need:0,direction:1,mode:'ValuesOnly',command:instant===1?'Adopt':'None',world:{permitted:true,outcome:1},observation:{visible:true,category:true,display:'Actual',goalVisible:true,goalDisplay:'Actual',forecast:1}});
+const frames=()=>[1,2,3,4].map(frame);
+const input=(xs=frames())=>({initialState:integrationInitial(),orderedInputs:integrationOrdered(xs),runSeed:new Uint8Array(32)});
+async function native(law:ValueLaw='Accumulated',xs=frames()){const model=await compileIntegrationModel(integrationRecipe(law)),i=input(xs),compiled=await compileIntegrationInputs(model,i.initialState,i.orderedInputs,i.runSeed);return {model,compiled,runtime:createIntegrationPublicRuntime(model,compiled)};}
+it('altered original phase and unadmitted child events reject before publication',async()=>{
+ for(const alteration of ['phase','child'] as const){const model=await compileIntegrationModel(integrationRecipe('Accumulated')),i=input(),compiled=await compileIntegrationInputs(model,i.initialState,i.orderedInputs,i.runSeed);
+  compiled.events[0]={...compiled.events[0],...(alteration==='phase'?{phase:50n}:{eventTypeId:eventId('appraisal'),phase:50n})};
+  const runtime=createIntegrationPublicRuntime(model,compiled);await expect(runtime.settle()).rejects.toThrow();expect(runtime.snapshot().outputs).toHaveLength(0);
+ }
+},600000);
+it('fixed admitted evidence gives identical native character rows despite failed physical execution',async()=>{
+ const xs=frames();xs.forEach(x=>{x.observation.display='Positive';x.observation.goalDisplay='Present';});const ys=structuredClone(xs);ys.forEach(x=>{x.world.permitted=false;x.world.outcome=-1;});
+ const a=await native('Accumulated',xs),b=await native('Accumulated',ys);while(await a.runtime.settle())await b.runtime.settle();
+ expect(integrationRows(a.runtime.snapshot().outputs)).toEqual(integrationRows(b.runtime.snapshot().outputs));expect(key(a.runtime.snapshot().state.read(path(1522)).value!)).not.toBe(key(b.runtime.snapshot().state.read(path(1522)).value!));
+},600000);
+it('all native stages reproduce component rows with separate Refold ownership',async()=>{
+ for(const law of VALUE_LAWS){const xs=frames(),n=await native(law,xs),c=createValuesIntegration({law,appraisal:'ValueRelative',seed:0},xs);
+  for(const x of xs){await c.step();await n.runtime.settle();expect(integrationRows(n.runtime.snapshot().outputs)).toEqual(c.observerView().rows);}
+  const traces=n.runtime.snapshot().trace.map(v=>rec(v,160n));expect(traces.length).toBe(xs.length*13);expect(traces.slice(0,13).map(t=>f(rec(f(t,4n),130n),3n))).toEqual(stages.map(([,phase])=>u(phase)));
+  expect(n.compiled.state.read(path(1517)).presence).toBe(law!=='Refold');
+ }
+},600000);
+it('public Save132 restores every original prefix and one successor',async()=>{
+ const source=integrationRecipe('Accumulated'),i=input(),run=await createIntegrationPublicRun(await prepareIntegrationModel(source),i);
+ for(let prefix=0;prefix<=frames().length;prefix++){const saved=run.save();expect(parseValuesIntegrationSave(saved).schema.typeId).toBe(132n);const restored=await restoreIntegrationPublicRun(source,{initialState:i.initialState,orderedInputs:i.orderedInputs,save:saved});expect(restored.save()).toEqual(saved);expect(await restored.settleNextInstant()).toBe(await run.settleNextInstant());expect(restored.save()).toEqual(run.save());}
+},600000);
+it('wrong authority and altered registry/input/initial seed reject',async()=>{
+ const n=await native();for(const root of [1516,1517,1522,1523,1524]){const p=path(root),prior=n.compiled.state.read(p).value!;expect(()=>applyStatePatch(n.compiled.state,{operations:[{kind:'set',path:p,expected:{presence:true,value:prior},newValue:prior}]},sid(1025,'authority/values-integration/choice'),n.model.authority)).toThrow();}
+ await expect(prepareIntegrationModel({...integrationRecipe('Accumulated'),registry:enc(list([]))})).rejects.toThrow();await expect(createIntegrationPublicRun(await prepareIntegrationModel(integrationRecipe('Accumulated')),{...input(),runSeed:Uint8Array.from({length:32},(_,i)=>i)})).rejects.toThrow();const xs=frames();xs[0].instant=2;expect(()=>integrationOrdered(xs)).toThrow('ORDER');expect(()=>integrationOrdered([{...frames()[0],truth:1} as any])).toThrow('FIELDS');
+},600000);
+it('forged save and changed original reject even when source shape remains valid',async()=>{
+ const source=integrationRecipe('Accumulated'),i=input(),run=await createIntegrationPublicRun(await prepareIntegrationModel(source),i);await run.settleNextInstant();const saved=parseValuesIntegrationSave(run.save()),fields=new Map(saved.fields);fields.set(11n,list([]));await expect(restoreIntegrationPublicRun(source,{initialState:i.initialState,orderedInputs:i.orderedInputs,save:enc(record(saved.schema,fields))})).rejects.toThrow();const xs=frames();xs[0].world.outcome=-1;await expect(restoreIntegrationPublicRun(source,{initialState:i.initialState,orderedInputs:integrationOrdered(xs),save:run.save()})).rejects.toThrow();
+},600000);
+for(const stage of [...stages.map(([n])=>n),'commit'])it('native rollback retains state, queue and RNG at '+stage,async()=>{
+ const n=await native();await n.runtime.settle();const before=n.runtime.snapshot(),project=(s:typeof before)=>({...s,status:undefined,state:enc(s.state.canonicalValue())});let reached=false;
+ await expect(n.runtime.settleForConformance({onBoundary(b,e){if(stage==='commit'?b==='before-commit':b==='after-trace-validation'&&e&&key(e.eventTypeId)===key(eventId(stage))){reached=true;throw Error('injected');}}})).rejects.toThrow();expect(reached).toBe(true);expect(n.runtime.snapshot().status).toBe('Failed');expect(project(n.runtime.snapshot())).toEqual(project(before));
+},600000);
+it('public publication rejects in-flight reads/concurrent settlement and preserves caller ownership',async()=>{
+ const source=integrationRecipe('Accumulated'),i=input(),run=await createIntegrationPublicRun(await prepareIntegrationModel(source),i);i.orderedInputs.fill(0);source.parameters.fill(0);const pending=run.settleNextInstant();expect(()=>run.save()).toThrow();expect(()=>run.rows()).toThrow();expect(()=>run.characterProjection()).toThrow();await expect(run.settleNextInstant()).rejects.toThrow();await pending;expect(run.rows()[0].before.mean).toBeNull();const bytes=run.snapshot().state;bytes.fill(0);expect(run.snapshot().state).not.toEqual(bytes);
+},600000);
+it('runtime publication covers the commit microtask through RNG publication',async()=>{
+ const n=await native(),seen:string[]=[];const pending=n.runtime.settleForConformance({onBoundary(b){if(b==='before-commit')queueMicrotask(()=>{for(const get of [()=>n.runtime.save(),()=>n.runtime.snapshot()])try{get();seen.push('accepted');}catch(e){seen.push(String(e));}});}});await expect(n.runtime.settle()).rejects.toThrow('not quiescent');await pending;expect(seen).toHaveLength(2);expect(seen.every(s=>s.includes('not quiescent'))).toBe(true);
+},600000);

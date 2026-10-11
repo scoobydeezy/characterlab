@@ -1,0 +1,2412 @@
+{
+  "status": "BOUNDED CAMPAIGN3 EXIT ACCEPTED; VALIDATION REQUIRED",
+  "disposition": "LOCAL DISPOSITION; no law selection, reduction or owner ruling",
+  "inventory": {
+    "path": "docs/planning/campaign3-values-exit-refresh-rev1/inventory.json",
+    "sha256": "d5067e9bdeb9650a455886f8942d96fc15a1eaa7d21ab1e0548d1b4908682f3a"
+  },
+  "priorReview": {
+    "path": "docs/planning/campaign3-hq012-exit-review-rev1/review.json",
+    "sha256": "48e458910408d4e0f10b21237febadde8f61783d3f315fcbdd5d01178a7f4344"
+  },
+  "historyHandoff": {
+    "path": "docs/planning/campaign3-history-hq011-handoff-rev1/review.json",
+    "sha256": "1655265d3689ed25b35d47c47526091aa14b8e114cbc9c5704589419defc76d0"
+  },
+  "corpus": {
+    "path": "docs/planning/campaign3-hq012-exit-review-rev1/corpus.json",
+    "sha256": "c26664366c55afb84d1ed4dab74f134eb2d9673f305c8b7d7487234d78cef801"
+  },
+  "families": {
+    "path": "docs/planning/campaign3-hq012-exit-review-rev1/families.json",
+    "sha256": "87bbc3632286feea77bc09c12c9fe13397c8b34183a4f205ff26b741379084cb"
+  },
+  "values": {
+    "path": "docs/planning/values-integration-matrix-rev1/closure.json",
+    "sha256": "56e32db7d61edbf381cbd449a78067bcbbe058e4efab03e6b3c8cead5caf517e"
+  },
+  "gates": [
+    {
+      "id": "HQ012-VALUES-OUTCOME",
+      "status": "CLOSED BOUNDED",
+      "evidence": {
+        "path": "docs/planning/CAMPAIGN3_VALUES_INTEGRATION_QUALIFICATION.md",
+        "sha256": "99151666e0ffa7838755a78971aee3d64bf632aa88936aedfe0ca093e531c42d"
+      }
+    },
+    {
+      "id": "HQ012-VALUES-GOAL",
+      "status": "CLOSED BOUNDED",
+      "evidence": {
+        "path": "docs/planning/CAMPAIGN3_VALUES_INTEGRATION_QUALIFICATION.md",
+        "sha256": "99151666e0ffa7838755a78971aee3d64bf632aa88936aedfe0ca093e531c42d"
+      }
+    },
+    {
+      "id": "HQ012-VALUES-APPRAISAL",
+      "status": "CLOSED BOUNDED",
+      "evidence": {
+        "path": "docs/planning/CAMPAIGN3_VALUES_INTEGRATION_QUALIFICATION.md",
+        "sha256": "99151666e0ffa7838755a78971aee3d64bf632aa88936aedfe0ca093e531c42d"
+      }
+    }
+  ],
+  "deltaDispositions": [
+    {
+      "source": {
+        "path": "AGENTS.md",
+        "sha256": "e9db1d28c09a02ebe3787309af6c41341d3a779d9cc6c161446f78e6d291ea76",
+        "bytes": 404982,
+        "change": "CHANGED"
+      },
+      "disposition": "Current routing replaces prior routing only; original route retained in prior-sources.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "CharacterLab — Reference Architecture Build & Research Campaign Plan.md",
+        "sha256": "bd0d73c96d3b6c99d3e6fdadc59eed483fc6afe20cbdef3491113ac1c3c30f6e",
+        "bytes": 92063,
+        "change": "CHANGED"
+      },
+      "disposition": "Append-only accepted Values checkpoint/exit routing; corpus requirements unchanged.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/formal/CANONICAL_RECORD_REGISTRY.md",
+        "sha256": "0b262de39ce6d10f5560c45a48f4ecf085163ab0d868479e547dc86c282377a4",
+        "bytes": 42362,
+        "change": "CHANGED"
+      },
+      "disposition": "Ten successor records; exact prior mixed-line-ending snapshot retained. Textual prefix unchanged; CRLF normalization is not byte equality.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/formal/VALUES_INTEGRATION_COMPONENT_CONTRACT.md",
+        "sha256": "11ec794d1a0afd339c5141ea9cc052ad761f3d10e8fcd0a7632fe14d62c92b13",
+        "bytes": 4498,
+        "change": "ADDED"
+      },
+      "disposition": "Conservative prospective integration semantics; controlled reports/category, four laws and appraisal comparator retained.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/formal/VALUES_INTEGRATION_PUBLIC_ALLOCATION_TABLE.json",
+        "sha256": "a8978ea1a2b5a4a9a75290963e06057e4f008f07630a0739a7626a6994e83250",
+        "bytes": 2852,
+        "change": "ADDED"
+      },
+      "disposition": "1520..1529 allocation binds accepted contract; old types unchanged.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/formal/VALUES_INTEGRATION_PUBLIC_CONTRACT.md",
+        "sha256": "a139377d5908b6c11f3a40614c9a5443539e6068637c792f9903a8bf094571e0",
+        "bytes": 2981,
+        "change": "ADDED"
+      },
+      "disposition": "Native ownership/order/replay obligations; thirteen stages, no hidden truth read by cognition.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/campaign3-hq012-corpus-checks-rev1/archive-check.json",
+        "sha256": "4e532c5eb4f13b41aa88ee536e26636b3ce74e100e7e69cd49d8d29d84d8677e",
+        "bytes": 504,
+        "change": "ADDED"
+      },
+      "disposition": "Prior HQ012 review bundle generated after its own inventory; accepted by its bound validation and exact corpus/family/three-gate report. Not a new psychological result.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/campaign3-hq012-corpus-checks-rev1/body-history-check.json",
+        "sha256": "67a09f47a0de0acd41b38e5f32d154c0660be40e1e7f24e0deb81dd567d8f333",
+        "bytes": 414,
+        "change": "ADDED"
+      },
+      "disposition": "Prior HQ012 review bundle generated after its own inventory; accepted by its bound validation and exact corpus/family/three-gate report. Not a new psychological result.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/campaign3-hq012-corpus-checks-rev1/check.json",
+        "sha256": "f58113ef0b05175d5843d7aa803f6dc129732e4d555bb2f5c7bf6e63e66058fa",
+        "bytes": 4034,
+        "change": "ADDED"
+      },
+      "disposition": "Prior HQ012 review bundle generated after its own inventory; accepted by its bound validation and exact corpus/family/three-gate report. Not a new psychological result.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/campaign3-hq012-exit-review-rev1/corpus.json",
+        "sha256": "c26664366c55afb84d1ed4dab74f134eb2d9673f305c8b7d7487234d78cef801",
+        "bytes": 220101,
+        "change": "ADDED"
+      },
+      "disposition": "Prior HQ012 review bundle generated after its own inventory; accepted by its bound validation and exact corpus/family/three-gate report. Not a new psychological result.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/campaign3-hq012-exit-review-rev1/families.json",
+        "sha256": "87bbc3632286feea77bc09c12c9fe13397c8b34183a4f205ff26b741379084cb",
+        "bytes": 269116,
+        "change": "ADDED"
+      },
+      "disposition": "Prior HQ012 review bundle generated after its own inventory; accepted by its bound validation and exact corpus/family/three-gate report. Not a new psychological result.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/campaign3-hq012-exit-review-rev1/freshness-disposition.json",
+        "sha256": "a66032e415f7705c43b9d076cdcece2b655678543cf76ed22f82fda2abaca789",
+        "bytes": 2602,
+        "change": "ADDED"
+      },
+      "disposition": "Prior HQ012 review bundle generated after its own inventory; accepted by its bound validation and exact corpus/family/three-gate report. Not a new psychological result.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/campaign3-hq012-exit-review-rev1/open-gates.json",
+        "sha256": "56dcd3150410bed4fd78b3070d5d4f820fb3b85a7d6c0bc95d092ca161538fe1",
+        "bytes": 7438,
+        "change": "ADDED"
+      },
+      "disposition": "Prior HQ012 review bundle generated after its own inventory; accepted by its bound validation and exact corpus/family/three-gate report. Not a new psychological result.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/campaign3-hq012-exit-review-rev1/registration.json",
+        "sha256": "fadfdd14b9ab9a1ff835f7941066f644f1386e751fb11498c008c3bbf3b4e861",
+        "bytes": 2809,
+        "change": "ADDED"
+      },
+      "disposition": "Prior HQ012 review bundle generated after its own inventory; accepted by its bound validation and exact corpus/family/three-gate report. Not a new psychological result.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/campaign3-hq012-exit-review-rev1/review.json",
+        "sha256": "48e458910408d4e0f10b21237febadde8f61783d3f315fcbdd5d01178a7f4344",
+        "bytes": 2940,
+        "change": "ADDED"
+      },
+      "disposition": "Prior HQ012 review bundle generated after its own inventory; accepted by its bound validation and exact corpus/family/three-gate report. Not a new psychological result.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/campaign3-hq012-exit-review-rev1/routing-before/AGENTS.md",
+        "sha256": "6cb46b07e9291aa3382fc3414cb940c12267a08b8f4adddb31265dc9f0c27134",
+        "bytes": 397452,
+        "change": "ADDED"
+      },
+      "disposition": "Prior HQ012 review bundle generated after its own inventory; accepted by its bound validation and exact corpus/family/three-gate report. Not a new psychological result.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/campaign3-hq012-exit-review-rev1/routing-before/CAMPAIGN3_LOG.md",
+        "sha256": "796f2cd7ef4e51c0836336c839946ad00584cbda9d42fd4228e14c896c910588",
+        "bytes": 1142615,
+        "change": "ADDED"
+      },
+      "disposition": "Prior HQ012 review bundle generated after its own inventory; accepted by its bound validation and exact corpus/family/three-gate report. Not a new psychological result.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/campaign3-hq012-exit-review-rev1/routing-before/CURRENT.md",
+        "sha256": "dc58dae0959100cb34903e21c0edf1b01a84366d75d934779191fe85444f38e9",
+        "bytes": 1398,
+        "change": "ADDED"
+      },
+      "disposition": "Prior HQ012 review bundle generated after its own inventory; accepted by its bound validation and exact corpus/family/three-gate report. Not a new psychological result.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/campaign3-hq012-exit-review-rev1/routing-before/RESEARCH_OBLIGATIONS.json",
+        "sha256": "70572d11ccd6d72f67a209b23174391802ad974d34a8fd2d6f531672e50a8be4",
+        "bytes": 3346075,
+        "change": "ADDED"
+      },
+      "disposition": "Prior HQ012 review bundle generated after its own inventory; accepted by its bound validation and exact corpus/family/three-gate report. Not a new psychological result.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/campaign3-hq012-exit-review-rev1/validation.json",
+        "sha256": "1d5e11fe3c17b7620884d24e11265030ac8ff8f939e122f9a282b6fb6dbfee4c",
+        "bytes": 1176,
+        "change": "ADDED"
+      },
+      "disposition": "Prior HQ012 review bundle generated after its own inventory; accepted by its bound validation and exact corpus/family/three-gate report. Not a new psychological result.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/campaign3-hq012-freshness-rev1/delta.json",
+        "sha256": "702ccb22d9c0aac30b86f70c39516ebbf48ac513fdabd3094665f67a051c91ff",
+        "bytes": 1160853,
+        "change": "ADDED"
+      },
+      "disposition": "Prior HQ012 review bundle generated after its own inventory; accepted by its bound validation and exact corpus/family/three-gate report. Not a new psychological result.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/campaign3-hq012-freshness-rev1/inventory.json",
+        "sha256": "cfe2072a9ff813d19676915fd3dc52fd5fc24d8da76f64fc27330e8e12bcf751",
+        "bytes": 5066173,
+        "change": "ADDED"
+      },
+      "disposition": "Prior HQ012 review bundle generated after its own inventory; accepted by its bound validation and exact corpus/family/three-gate report. Not a new psychological result.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/campaign3-hq012-freshness-rev1/review.json",
+        "sha256": "fa97d1633f978875e0970c8dfa9cbbcb51c6eab7b5e21a692a49ef2880b08bd0",
+        "bytes": 3105275,
+        "change": "ADDED"
+      },
+      "disposition": "Prior HQ012 review bundle generated after its own inventory; accepted by its bound validation and exact corpus/family/three-gate report. Not a new psychological result.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/CAMPAIGN3_HQ012_EXIT_REVIEW.md",
+        "sha256": "f997c464effacd43bcf4c5c4e1c1c92730306683628cb1227fd166bedf62c3ad",
+        "bytes": 4102,
+        "change": "ADDED"
+      },
+      "disposition": "Prior review remains NOT EXIT-READY at that checkpoint; three gaps discharged only by new successor.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/CAMPAIGN3_LOG.md",
+        "sha256": "6586393dc6e7eb553b48cf89fbe0bc39d5d5596c3872b3ece7d2b0d7e9db5f1d",
+        "bytes": 1145642,
+        "change": "CHANGED"
+      },
+      "disposition": "Append-only current-index chronology; no new experimental authority.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/CAMPAIGN3_VALUES_EXIT_REFRESH.md",
+        "sha256": "72f9c2b4aa8fe4dd137c1cc5089740564828586cf35d41fb82dc488befbbe5ee",
+        "bytes": 3443,
+        "change": "ADDED"
+      },
+      "disposition": "Explicit bounded final disposition, conditional research debt and historical restrictions retained.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/CAMPAIGN3_VALUES_INTEGRATION_QUALIFICATION.md",
+        "sha256": "99151666e0ffa7838755a78971aee3d64bf632aa88936aedfe0ca093e531c42d",
+        "bytes": 5735,
+        "change": "ADDED"
+      },
+      "disposition": "New bounded scientific qualification; outcome/evidence, lifecycle and appraisal findings linked to010/019/020/021/022.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/CURRENT.md",
+        "sha256": "6b898fd14babdecc01bceec38ad6c6916571f29af8d18e1e6150cb0a9a60a1c5",
+        "bytes": 1561,
+        "change": "CHANGED"
+      },
+      "disposition": "Current one-page exit projection; previous exact bytes appended to CAMPAIGN3_LOG.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/RESEARCH_OBLIGATIONS.json",
+        "sha256": "693eb5f0f4929269a24048a3ec5ede82e76bfd80708b57ffbe933b9e2fb7cd69",
+        "bytes": 3513574,
+        "change": "CHANGED"
+      },
+      "disposition": "Reciprocal registration of new evidence and bounded closure of019/021;18 conditional debts retained.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-development-rev1/affected-corrected.json",
+        "sha256": "bee9dab9ebc71af449760753e59839a86297a365915d66fa5526cd305d22f921",
+        "bytes": 14653,
+        "change": "ADDED"
+      },
+      "disposition": "Development/test evidence: preserve startup access failure, phase41 fixture rejection and exact corrected50 successor; no model identity or failed receipt rewritten.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-development-rev1/native-final.json",
+        "sha256": "6eeccf27fd3380cabcdf61594940e5e0cccf4ec540d05337bd750a08facfd446",
+        "bytes": 15025,
+        "change": "ADDED"
+      },
+      "disposition": "Development/test evidence: preserve startup access failure, phase41 fixture rejection and exact corrected50 successor; no model identity or failed receipt rewritten.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-development-rev1/native-first.json",
+        "sha256": "ff56f5c6161628334468d46136783c202ef46f0c55db8644b4e4ae81e8b4a506",
+        "bytes": 5609,
+        "change": "ADDED"
+      },
+      "disposition": "Development/test evidence: preserve startup access failure, phase41 fixture rejection and exact corrected50 successor; no model identity or failed receipt rewritten.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-development-rev1/phase-fixture-correction.json",
+        "sha256": "4cc4ae2ed547ecbb7279e9b3fd6bc8d3fe02ef6e906f59ed96c21f806b0c93d7",
+        "bytes": 921,
+        "change": "ADDED"
+      },
+      "disposition": "Development/test evidence: preserve startup access failure, phase41 fixture rejection and exact corrected50 successor; no model identity or failed receipt rewritten.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-development-rev1/reference.json",
+        "sha256": "dcebf39a7c18615735204587bd39380a529cb5814b710562c362d52fc2142b64",
+        "bytes": 152938,
+        "change": "ADDED"
+      },
+      "disposition": "Development/test evidence: preserve startup access failure, phase41 fixture rejection and exact corrected50 successor; no model identity or failed receipt rewritten.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-development-rev1/startup-failure.json",
+        "sha256": "7875fa1e25d947f15d9df36df9f41ca05942c1c91d10b2180ea5b41155a3c1f7",
+        "bytes": 480,
+        "change": "ADDED"
+      },
+      "disposition": "Development/test evidence: preserve startup access failure, phase41 fixture rejection and exact corrected50 successor; no model identity or failed receipt rewritten.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-development-rev1/tests-retry.json",
+        "sha256": "4dc10a23d49a668f629fc4649878608072ff9829d6ddbbbb8eb7bdb62961bb13",
+        "bytes": 4711,
+        "change": "ADDED"
+      },
+      "disposition": "Development/test evidence: preserve startup access failure, phase41 fixture rejection and exact corrected50 successor; no model identity or failed receipt rewritten.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/closure.json",
+        "sha256": "56e32db7d61edbf381cbd449a78067bcbbe058e4efab03e6b3c8cead5caf517e",
+        "bytes": 23948,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/plan.json",
+        "sha256": "8eeea39b56871b98c8ae19541a8f736ad1b93010ad8f47bc29de685b15b39e7c",
+        "bytes": 455709,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-0.json",
+        "sha256": "2fa4f814e9a2cdc5f48d5c6b9729cc06229fb0f7cc0f5f4428bf8b39c5395b73",
+        "bytes": 58262,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-1.json",
+        "sha256": "8eb24e7c877dd29b9ce876a308ac15504e9813c56babf6123cf4333d85775d6a",
+        "bytes": 58262,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-10.json",
+        "sha256": "7cf4020e777d209ce0d69ca7d63a26c9a7f1cbf41e6dd9f61b9c35e452568550",
+        "bytes": 58277,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-100.json",
+        "sha256": "e888689d8c672875d4d693684d488d53e1957049d4cd77c84c8cbadf2f15b3fe",
+        "bytes": 58267,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-101.json",
+        "sha256": "14f23b5f66c6607833a7b13a8dec520fbe565c9c9a85c92880a7ee6775776e3f",
+        "bytes": 58267,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-102.json",
+        "sha256": "0c7c50a6ded7c2f7cf8b5d183149d12cee52b56eb9c31ac3da84834d7f7c44fb",
+        "bytes": 58267,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-103.json",
+        "sha256": "3acb72a99a0d7ae796c724720adcef6c80f5e5153fe9ced41379270c21a636e5",
+        "bytes": 58267,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-104.json",
+        "sha256": "2a5edd42dec0fce6a266bd8b4947f82287e609f547559d655de696fc61971605",
+        "bytes": 58267,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-105.json",
+        "sha256": "3d92fb999a88ec83daa1798342b7f5c5bcd6bcc890d709810d8081dfffe652ea",
+        "bytes": 58267,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-106.json",
+        "sha256": "2f37bc6a8b28f572b47836a44de4d699eff9909ed71e518a00aeb4265e308490",
+        "bytes": 58267,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-107.json",
+        "sha256": "6f59f6cf37274cda0e4a2f4f9c1d8b22226987727f9c44da7df0bca86bbf469f",
+        "bytes": 58267,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-108.json",
+        "sha256": "dbaae33df08d5e72c17745721a9ac779192a56c218af5dd4ba24038b9ef2a4bf",
+        "bytes": 31882,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-109.json",
+        "sha256": "f5659982c34cb632e8d537d95d5fd3d342bc4d65a11cd18bb7a74c78e3b06d45",
+        "bytes": 58279,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-11.json",
+        "sha256": "32825079dc343a7d05ecae35777cf04e17d42e8c138e7a2a7598dbe7958149cf",
+        "bytes": 58284,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-110.json",
+        "sha256": "2ac11c5bf0f328e7fbc158a3d3be7f22e0d4911ec06f79aed3d3b91e954dabfd",
+        "bytes": 58281,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-111.json",
+        "sha256": "173658b1f88c4e0a051fe2fcfb89ab3847cf35f84d5ef121153147b47da0a67f",
+        "bytes": 58288,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-112.json",
+        "sha256": "ba7444c974ba654d0a6607b522a30aa22186a678e70e0506f72c38cf5630b75e",
+        "bytes": 32012,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-113.json",
+        "sha256": "ff0cfabe51617da5e7f06782769bbd9bfbbe8c9e8126ebda9bf2d6e90fefcf87",
+        "bytes": 32016,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-114.json",
+        "sha256": "f12fa596af8cb7512813e3f9352cebfd071d7602e0ad78142eefa179ebd1c4b3",
+        "bytes": 6356,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-115.json",
+        "sha256": "08d88bd6523396cfd79a5f6d8d33163d42a7613ab457971112858adae8438ff2",
+        "bytes": 63403,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-116.json",
+        "sha256": "ddba3c25db59f8567717d17bffdb20c6aa90bb87c3a31df156c5a8f55baebef6",
+        "bytes": 85775,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-117.json",
+        "sha256": "0f697eb6db8d38a95c9e3da939738c3efb102594489172b6b0faa15732ee6e53",
+        "bytes": 40953,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-118.json",
+        "sha256": "3a69ecad9d329e0f086ed8c90fd7f6bfc5deb08a0e0611ca979c4065e80b53c2",
+        "bytes": 56434,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-119.json",
+        "sha256": "e9ea8530729b5c2861ab1a7e6b2e51ebe85e75c5a63aba9855992410fe979bd8",
+        "bytes": 58269,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-12.json",
+        "sha256": "d7a42fb699786cdf3d0d6a8245cfbd3d2dffc9d504bad65ff69eb28819b403a4",
+        "bytes": 32008,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-120.json",
+        "sha256": "8e7f0f750dfdb7c0ebad7a0b920b5f36036421184896b112a4010b93e10bbb8e",
+        "bytes": 58300,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-121.json",
+        "sha256": "80bfdf6cf08433f3f0b653ea387175c3ff39ea34c5b8349c3d75cd4256ba88b7",
+        "bytes": 58273,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-122.json",
+        "sha256": "517a03fd8ca920d55ed0656a83b938b39444507f0516d5af1f185806d07e08b7",
+        "bytes": 58275,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-123.json",
+        "sha256": "f39e456d3521e0ebf8f3480c3f721aa48f8a299716ba1a7bb13bbcaef12a6d68",
+        "bytes": 58269,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-124.json",
+        "sha256": "6ae4e4e3cc8a63b4cfb004005c5a234ea6f974587a9e4235cdfde7e1f7daa056",
+        "bytes": 58265,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-13.json",
+        "sha256": "1a845bec6a60bff73894ffbee11a523e1a2f01bdc6d0f82df401c3fb2d37a6f7",
+        "bytes": 32012,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-14.json",
+        "sha256": "91a2f927e5bef83ab2d2319c6f971b1a0873371688d8cb097b5b1a0e0fc09081",
+        "bytes": 6352,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-15.json",
+        "sha256": "e9aedb9c77ec87835ce8fc486c825e7ce20c8bfb047f305cecb8ec50bf8a7733",
+        "bytes": 63401,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-16.json",
+        "sha256": "57473f201353eeafcdbea3b8c7805085ef977ea24d814397b4592914d6172322",
+        "bytes": 85771,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-17.json",
+        "sha256": "5308209af75730dc24b7f47824af65dcbb80380a63cf027796b0792ba84e353a",
+        "bytes": 40949,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-18.json",
+        "sha256": "74712ee5d816fbeeb45389fe03a74dc5a984e1e23d53b9ef8d4b3d541fd12fd7",
+        "bytes": 56430,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-19.json",
+        "sha256": "22833eed148d4c1073d25aec6559cf4e8ac7f6bbea9fd30c3f7fb00aa8a3fc5a",
+        "bytes": 58265,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-2.json",
+        "sha256": "819efc79ad0eef1ee62e02213732529137cbce599adbe2d0ecad6becfc8fa8e4",
+        "bytes": 58262,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-20.json",
+        "sha256": "b2c4bdb2182c902ad29f57df7bae28953a3f9638dc2af1351618e7193586d379",
+        "bytes": 58296,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-21.json",
+        "sha256": "a8408f811eed9936f7cf66e3a44994ab250e0ac3a449284a050a88e73392819b",
+        "bytes": 58269,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-22.json",
+        "sha256": "5f9260e1ba438adfdce6990090b631da319129681a5a0d0358ebc3419c9bf806",
+        "bytes": 58272,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-23.json",
+        "sha256": "c1445290c89429e73b64afb6c67a2ee13995d2eda749de0ee973be76e253ee51",
+        "bytes": 58265,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-24.json",
+        "sha256": "d3e04710af0308aa99755c1d4bd31957ac9953ae4122f72819f39547500468aa",
+        "bytes": 58261,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-25.json",
+        "sha256": "02e545109d465f27b769cc8b7f3365f5e4e8542b0b0cde14ad1de5544dc0de00",
+        "bytes": 58258,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-26.json",
+        "sha256": "a1b45c519c203b75e395fa116dcbeb4124a2cdb6b9ced29eab0153db06fd9b10",
+        "bytes": 58258,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-27.json",
+        "sha256": "2af96b40dc79777f31ab08976ec79fe0c2034a77e31d44fc0c5f1acbbca5fe05",
+        "bytes": 58258,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-28.json",
+        "sha256": "aab2e3839650ae2df942d7593155dfd7a887db91f5ec184d67c8e9c2f47d0052",
+        "bytes": 58258,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-29.json",
+        "sha256": "4d27468470e0aafd61b38f6dc4de396383999c9650ee423e0d00570c2ede1016",
+        "bytes": 58258,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-3.json",
+        "sha256": "bc014658a30ab78079c52b66e5b31f991dc9384046831688c9942be36b2a6e90",
+        "bytes": 58262,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-30.json",
+        "sha256": "7261de643913a3dfb766eae432c4869271e915766b192aca4279e6c9607b5f64",
+        "bytes": 58258,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-31.json",
+        "sha256": "f43c968d7c7640745fc19ea63c3958928d48e156eb42c290102ce01e2972ea32",
+        "bytes": 58258,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-32.json",
+        "sha256": "deb2696cfb837a4d7e800b0922d99d3f963f5cfee6616db2d6f7283da7224f6c",
+        "bytes": 58258,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-33.json",
+        "sha256": "2b0e8de53b792c189a05f185a108bbd31a813a5c4679b19bcbfeefffbba1b8f2",
+        "bytes": 31873,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-34.json",
+        "sha256": "2f420615722509059a7bf60517bd00fd9fdc62004fe9fef30df91d759c08ee7e",
+        "bytes": 58270,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-35.json",
+        "sha256": "82844841edd3c3ebeafa20ceac337d8b20b0eab68985afcf80b1913ef9f84af0",
+        "bytes": 58272,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-36.json",
+        "sha256": "8bd097d66af5664e0020e3e6991f6152c15cf145a576329249b91feabc007b81",
+        "bytes": 58279,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-37.json",
+        "sha256": "33a7d0e00211d681f281e92842d6b298ddf6ca85cea7509e2c64f80d96ce3932",
+        "bytes": 32003,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-38.json",
+        "sha256": "9510bdf21fe4153f1497c2dfddb04d3c2e44b1c457a596a1714d68dbb7b58dc0",
+        "bytes": 32007,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-39.json",
+        "sha256": "9cc4c526a3aad8befa36e9b5ea7e392368d3fc67e46211dc15a9420e77a61ae1",
+        "bytes": 6347,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-4.json",
+        "sha256": "0c306d2c02f76e49a6449139ce30814a61b5e739638e3eb39e3270f8806b9bfe",
+        "bytes": 58262,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-40.json",
+        "sha256": "a92ff595dca038d09af2b6cfbb916e66c5ba5b3b992ee3db68e49def28775e7a",
+        "bytes": 63396,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-41.json",
+        "sha256": "52837e6e2ea6142f18052529e60c22dfe1084226a16ae2c4b6bceefc27d6dffa",
+        "bytes": 85766,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-42.json",
+        "sha256": "e5d1c04f7b727ab05187a49599cef8f34fc1e05c8744dfa626f08c7a7857c277",
+        "bytes": 40944,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-43.json",
+        "sha256": "2c316fcd9972ed81dd7d21e8e9fb8f3239e159c4f2c430bc1492e9b6761a91b0",
+        "bytes": 56425,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-44.json",
+        "sha256": "b0883d6a724204d848007f02fe483aa3f347a317c4f2204231b90287b153ca94",
+        "bytes": 58260,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-45.json",
+        "sha256": "cac43a29c7bedc4bad8f06ae3030ef22d7eb926c6efd55eccb492757bd0b347f",
+        "bytes": 58291,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-46.json",
+        "sha256": "10b0e00f7acf6ac5c950199441e5646f92c09f03e4e3bcf4860a1b0c359d67c7",
+        "bytes": 58264,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-47.json",
+        "sha256": "a78058ac97c8da7fba3bac22fb50c7952e770b9f09eaf7fe9c848a8b4dc213d2",
+        "bytes": 58267,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-48.json",
+        "sha256": "bd7b0b1f5423c4565b7976f497a744570fcc240002c643441812e730630d5de2",
+        "bytes": 58260,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-49.json",
+        "sha256": "16bece427d9bade6b6e4f043b39906cea38b22e71d2c6aa9dfd51e16f43a369a",
+        "bytes": 58256,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-5.json",
+        "sha256": "a5a06fef9ccc1fd684d26caff56f4f448541ed15731bc4c52fc445d5fda2f991",
+        "bytes": 58262,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-50.json",
+        "sha256": "52768e4c81ff4c53756689a4bba2f0ab87a2ce7f2ffe3d11158d448eec324485",
+        "bytes": 58258,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-51.json",
+        "sha256": "c8ed3f3b8fe8f0ac6405cadd6696e2e8cd3912826109707a61631fbafbda00aa",
+        "bytes": 58258,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-52.json",
+        "sha256": "716847ab382e804abb32e35976fd70545e475cf307069e4aca3678258b61f22b",
+        "bytes": 58258,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-53.json",
+        "sha256": "ebc2d0fe46d744fed0eeb1ca25937629183cd03077754880eb2ffc0cc3b74e4e",
+        "bytes": 58258,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-54.json",
+        "sha256": "fc3532ef18e37eee2f61d106b031c7bb41db2704a8a3bb2e475c032d153b8cad",
+        "bytes": 58258,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-55.json",
+        "sha256": "827d55c4680b6d3731ef0dee8b55d4bfd9632255dd86d49081cc49fdb05ee0b0",
+        "bytes": 58258,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-56.json",
+        "sha256": "5248f07ab530b35710cdcc9dd83c4b66f9db1ca3da6a46244d62cb261697d362",
+        "bytes": 58258,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-57.json",
+        "sha256": "69b8dbc23e9e953ddeee0e231fcaa9a1e116b14ba5c893229ebe06918e272867",
+        "bytes": 58258,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-58.json",
+        "sha256": "f1e9624cb78fcc799c230202c966eb21025b2dc6719f6406357604b60b8fc49b",
+        "bytes": 31873,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-59.json",
+        "sha256": "0c6a27b42379653d707df82199bc453e59b95e7693ad6fee780894d5e1927417",
+        "bytes": 58270,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-6.json",
+        "sha256": "17750cbcdaa126c99cf9b4fc1b1fdf1b036d6284a7f4c5c676c8acb3843fda1f",
+        "bytes": 58262,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-60.json",
+        "sha256": "1e640fe5e67dbbf0d2fff2bc3bff2434c68aac8091ccf513a259c2929710d5de",
+        "bytes": 58272,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-61.json",
+        "sha256": "a37da2ebd17f2dbb923e69dd54df3bc06d12a9c65e321eba9420c9609cbebd76",
+        "bytes": 58279,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-62.json",
+        "sha256": "14d77c4504b0644172b0e21d062ea2d767878114997594b08c2c0bd1566712b3",
+        "bytes": 32003,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-63.json",
+        "sha256": "1fc1a8e81da6929b96f13cb933e86db2fba4aefc7e2d5662e0e3de43c3bb2388",
+        "bytes": 32007,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-64.json",
+        "sha256": "fb875e466f579c6b7aa0e8c34cbf80c4206198ef33724273e97a29c0fc336892",
+        "bytes": 6347,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-65.json",
+        "sha256": "29e4bfaab89b9fc61349103cf71a65fbf3b09d7254e54d9fe40556b3a48ac0c4",
+        "bytes": 63396,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-66.json",
+        "sha256": "f833482ce8fc4b18e8a80e5ae33d56b014b20765044948ffdbdc447f5b07514f",
+        "bytes": 85766,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-67.json",
+        "sha256": "fb10279c438de0a57676217ae27cedbb8620dcf41ebc39af11538214733a33f7",
+        "bytes": 40944,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-68.json",
+        "sha256": "3801b416339543946f86ac3435879e87c11fe3a586d796509b509f62d3a12da5",
+        "bytes": 56425,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-69.json",
+        "sha256": "03943a7831ab7fea8c607bd21a036a60b61b82bc01bf92421b0c36a01ac83656",
+        "bytes": 58262,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-7.json",
+        "sha256": "0f1918da2e4f6ca1dad9b579584f16588a15da86e9f9c88a7ad24f9b53f28e18",
+        "bytes": 58262,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-70.json",
+        "sha256": "ff1e456ea493c29440cb944141db692293ea00b42b12b94cf12ec5dc401ea79e",
+        "bytes": 58291,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-71.json",
+        "sha256": "c39edc1cd80e76598ec821e30da8e9e679da55ea06777bc7b640c1a3c9a536ec",
+        "bytes": 58264,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-72.json",
+        "sha256": "89d65c260c5581c1ce56d6a689682748d9070e3f12827a04b98821327b5d8311",
+        "bytes": 58267,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-73.json",
+        "sha256": "8878c05afed6589423c365a5deb35fee26334475f8fac05803dc659931f14e73",
+        "bytes": 58260,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-74.json",
+        "sha256": "8775b90eb79321fa915f31622910127ec63cc680952222adf7e45ea0265a75af",
+        "bytes": 58256,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-75.json",
+        "sha256": "df53ec2ea4a05ed2388423f164f6daf5aab3bc3173c66392f238af041d4e8202",
+        "bytes": 32012,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-76.json",
+        "sha256": "012ae7cc12b5fc2803f48cd1cc943629c297ed0d177b3a72605a29e219762d84",
+        "bytes": 32012,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-77.json",
+        "sha256": "c10adc588622d2d520eda8dc4d96227475dcedc20e1bb3b1e18a2d5c8977c282",
+        "bytes": 32012,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-78.json",
+        "sha256": "278b9de4ed477e775c922beea91d53773338241c0bb858b467358f0ec49d2421",
+        "bytes": 32012,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-79.json",
+        "sha256": "e0c3108d0ea016cce56a84bd42b7025c5a8a675bfae0af7020e77e1f79527b61",
+        "bytes": 32012,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-8.json",
+        "sha256": "778ac93f4a16511cf48e32ea21fcbe8e892f48bc0062b5b28a5bbbf7ad96b8d2",
+        "bytes": 31877,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-80.json",
+        "sha256": "2512e997b9e7d27b4436fd1d551ea324c1ff0450a842dd8290f6e761a543911c",
+        "bytes": 32012,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-81.json",
+        "sha256": "f192419db105cd77b7655ac283edbb882469fdaa551ea07f28e09fd451f41c8c",
+        "bytes": 32012,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-82.json",
+        "sha256": "86b351a454b8af68aea34f526ab8c37c811736fda427c8e3cfea2d358d0d6c2b",
+        "bytes": 32012,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-83.json",
+        "sha256": "75be3fd229273d01610d476bcb6d7bbe780be73545e0da367a770f314df2125a",
+        "bytes": 31882,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-84.json",
+        "sha256": "80ffedee2099b28d742ec2f6649bc883629f9f0fb2422f9fb49ff29b4bff5a18",
+        "bytes": 32024,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-85.json",
+        "sha256": "2aa0dc0a0c65c3baa3a290eb429fcf4950586f467206a8b9e211b8f49e34b685",
+        "bytes": 32024,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-86.json",
+        "sha256": "ff46f39ff8dc216d44c6c71ecaeaacc2c714e901d2a41b12ca1a620be2454c8d",
+        "bytes": 32032,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-87.json",
+        "sha256": "0d676907faf43cc5c2a00d8afe4ab74de41b50df7167111ebfba8117dae3b060",
+        "bytes": 32012,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-88.json",
+        "sha256": "740ab26d5085390a2c79f050cf60b62093d3ad36fb2ac1729be63c5ca777267d",
+        "bytes": 32016,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-89.json",
+        "sha256": "ff1fa2f93a9cc9c64695a764f0f8e009fb1ab2a9d12ca62bb6e26e9a34cc9b9e",
+        "bytes": 6356,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-9.json",
+        "sha256": "ea1df398a6f4dbb9e4f9a3cbfec2b7cf4e19eb122dcd30d6d3cdffdab0727bc6",
+        "bytes": 58274,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-90.json",
+        "sha256": "20a9fac93b5746f8a9f6ada3e88942443e9f86728df11b99f188b7d3dce38361",
+        "bytes": 58272,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-91.json",
+        "sha256": "dfd96a74c8888dd013c96a02bee0a96bb4bf6438666ddf29ffddd7a6abb40c7a",
+        "bytes": 58251,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-92.json",
+        "sha256": "7242fbcb4595fb7c3d210d7f8252d7ec90ab838fa9ae4ac055a698c9b397852e",
+        "bytes": 27828,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-93.json",
+        "sha256": "5ccaa46dc377b591d5869fd18349570c6d8a213e0bf0e586acb6878ced56f13f",
+        "bytes": 40954,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-94.json",
+        "sha256": "e49223497a28f74afbbfb08d6c6026f0829de8ee2cfbaafaf2fc09fc354933f0",
+        "bytes": 32013,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-95.json",
+        "sha256": "907ddda995ea151253c727e998bf705d272207ee5a1a3f898d191270cfa1fbdc",
+        "bytes": 32045,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-96.json",
+        "sha256": "835ca218bb93e8a21fc83caa38176259fa740c774d16584285361d28f9b7cae1",
+        "bytes": 32018,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-97.json",
+        "sha256": "cdf316a0081ff8e849f567955b2e545d1a10696749e75ccbc08d659ef1be3452",
+        "bytes": 32020,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-98.json",
+        "sha256": "19bbb3a3c1db682272b15486f3a78408673f9e8328169659dee9ddf74503aa30",
+        "bytes": 58269,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/values-integration-matrix-rev1/run-99.json",
+        "sha256": "b70f0f2be822197bd78f3e1a5aac30d905fe90c6d612e8f89645de94106c53b0",
+        "bytes": 58265,
+        "change": "ADDED"
+      },
+      "disposition": "Frozen exact model/run/source plan, full native replay result or independently checked comparison closure. All125 identities retained; per-run world is a component diagnostic.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/VALUES_INTEGRATED_CLOSURE_WORK_ORDER.md",
+        "sha256": "eb73f82140d2fdb545022293a3c3e4ba0a105d17ea8b149e43f287f20b2cd246",
+        "bytes": 4096,
+        "change": "ADDED"
+      },
+      "disposition": "Prospective work order now discharged in its declared bounded scope.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/VALUES_INTEGRATION_WRAPPER_EXTENSION_REV1.json",
+        "sha256": "8e6d5be96c04b32f93981c7201946764003860f98094e561404ab52515cc3978",
+        "bytes": 1464,
+        "change": "ADDED"
+      },
+      "disposition": "Current56/59 inventory with earlier audit scopes preserved.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/VERDICT_LEDGER.md",
+        "sha256": "8c3ecf2db46e6c6e28042774cf79e5f4373da65dd57d3586064ff78b32a63531",
+        "bytes": 242174,
+        "change": "CHANGED"
+      },
+      "disposition": "One new bounded Values integration verdict; original108-verdict byte prefix preserved.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    }
+  ],
+  "pending": [],
+  "sourceLimit": "208 unavailable versions/74 exit subset retain per-claim limits; legacy log successor follows owner decision. No unavailable identity supports a new exact-source claim.",
+  "retainedComparators": [
+    "Accumulated",
+    "Refold",
+    "Latest",
+    "NoConsolidation",
+    "NoValueAppraisal",
+    "NeedOnly",
+    "ValuesOnly",
+    "Joint"
+  ],
+  "scientificReview": "Separation of admitted evidence from actual consequences is behaviorally tested, not inferred from field rejection. Fulfillment and withdrawal have owned terminal identities. Value appraisal does not become a reason or own goals. Refold equality and Need overlap constrain necessity claims; binary forecasts/category/age/generalization remain unqualified. Earlier exact corpus and15-family dispositions are unchanged.",
+  "counts": {
+    "corpus": 21,
+    "families": 15,
+    "clauses": 132,
+    "verdicts": 109,
+    "campaign3Verdicts": 103,
+    "producers": 56,
+    "factories": 59,
+    "active": 0,
+    "conditional": 18,
+    "closed": 4,
+    "unowned": 0,
+    "highestAllocated": 1529,
+    "sinceVerdict": 0
+  },
+  "checker": {
+    "path": "scripts/check-values-exit-refresh.py",
+    "sha256": "535c68454caefe6b41f23164623dd79499bc27f5ff6d49ec4f3ca87581489614"
+  }
+}

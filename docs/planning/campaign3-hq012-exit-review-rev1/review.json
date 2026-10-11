@@ -1,0 +1,64 @@
+{
+  "status": "HQ012 EXIT REVIEW COMPLETE; CAMPAIGN3 NOT EXIT-READY",
+  "disposition": "LOCAL DISPOSITION; continue existing Values integration under RO019. No architectural ruling.",
+  "gates": [
+    {
+      "path": "docs/planning/campaign3-hq012-exit-review-rev1/freshness-disposition.json",
+      "sha256": "a66032e415f7705c43b9d076cdcece2b655678543cf76ed22f82fda2abaca789"
+    },
+    {
+      "path": "docs/planning/campaign3-hq012-exit-review-rev1/corpus.json",
+      "sha256": "c26664366c55afb84d1ed4dab74f134eb2d9673f305c8b7d7487234d78cef801"
+    },
+    {
+      "path": "docs/planning/campaign3-hq012-exit-review-rev1/families.json",
+      "sha256": "87bbc3632286feea77bc09c12c9fe13397c8b34183a4f205ff26b741379084cb"
+    },
+    {
+      "path": "docs/planning/campaign3-hq012-exit-review-rev1/open-gates.json",
+      "sha256": "56dcd3150410bed4fd78b3070d5d4f820fb3b85a7d6c0bc95d092ca161538fe1"
+    }
+  ],
+  "historicalHandoff": {
+    "path": "docs/planning/campaign3-history-hq011-handoff-rev1/review.json",
+    "sha256": "1655265d3689ed25b35d47c47526091aa14b8e114cbc9c5704589419defc76d0"
+  },
+  "freshChecks": [
+    {
+      "path": "docs/planning/campaign3-hq012-corpus-checks-rev1/check.json",
+      "sha256": "f58113ef0b05175d5843d7aa803f6dc129732e4d555bb2f5c7bf6e63e66058fa"
+    },
+    {
+      "path": "docs/planning/campaign3-hq012-corpus-checks-rev1/body-history-check.json",
+      "sha256": "67a09f47a0de0acd41b38e5f32d154c0660be40e1e7f24e0deb81dd567d8f333"
+    },
+    {
+      "path": "docs/planning/campaign3-hq012-corpus-checks-rev1/archive-check.json",
+      "sha256": "4e532c5eb4f13b41aa88ee536e26636b3ce74e100e7e69cd49d8d29d84d8677e"
+    }
+  ],
+  "wrapper": {
+    "command": "node scripts/check-values-wrapper-extension.mjs",
+    "exitCode": 0,
+    "producers": 55,
+    "factories": 58,
+    "scope": "Fresh inventory and preserved closure checks; not fresh behavioral replay.",
+    "evidence": {
+      "path": "docs/planning/VALUES_WRAPPER_EXTENSION_REV1.json",
+      "sha256": "cdb7a87ad3b581bfcfe5938cec73a6f4d32c9a50a5f074f499f548624decd706"
+    },
+    "checker": {
+      "path": "scripts/check-values-wrapper-extension.mjs",
+      "sha256": "2bd14a27a142d0607f80dceb58fdd3f7c3410c26e37f87ab977abb04ce25ddfa"
+    }
+  },
+  "biologicalComparison": "No new BIO native gate: accepted Campaign Plan explicitly qualifies the composed comparison. Public RNG-profile admission remains outside that claim.",
+  "sourceLimits": "208 unavailable historical targets, including74 exit-inventory versions, retain HQ011 per-claim restrictions. The legacy log is not a gate. No missing identity was used as source-exact proof.",
+  "finalAcceptance": "WITHHELD pending the named Values integration gates and subsequent freshness/exit refresh. RO019 ACTIVE, RO021 UNSATISFIED, RO022 CLOSED in55/58 scope.",
+  "counters": {
+    "highestAllocated": 1519,
+    "sinceLastVerdictOrCorpus": 0
+  },
+  "newVerdicts": 0,
+  "newBehavioralRuns": 0
+}
