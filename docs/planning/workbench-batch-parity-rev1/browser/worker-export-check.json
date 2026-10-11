@@ -1,0 +1,51 @@
+{
+  "status": "PASS COMPLETE BROWSER WORKER EXPORT",
+  "sources": [
+    {
+      "path": "src/workbench/batchSession.ts",
+      "sha256": "36f3688ed144d8c7e6939eafaae52191f9b40e5aa72a5d296a99b3f10a7dcbc0"
+    },
+    {
+      "path": "src/workbench/experimentRegistry.ts",
+      "sha256": "e62d6177b87be981a6f56b595a3cfc498071455a858dae658da3a817ef0ea91a"
+    },
+    {
+      "path": "src/workbench/batchWorkerProtocol.ts",
+      "sha256": "eaaf928e843c2aae0f52ae55d12135399034ff1ed95d8e64375d5adc5e73a002"
+    },
+    {
+      "path": "src/workbench/batchWorker.ts",
+      "sha256": "854e6e0e283d9f3c380fd3c9142ce9bd5f2fbd41b89d38a80b4a54782aa2fd12"
+    },
+    {
+      "path": "src/workbench/batchWorkerClient.ts",
+      "sha256": "e97155c4a23dfd71a83bff0b4b2028d120b403dab046dc2c24477d71adcb87b5"
+    },
+    {
+      "path": "src/workbench/BatchWorkbench.tsx",
+      "sha256": "fe8c11aee9a2d0ed985057ed4a5d2a2e418bb2e51207593b4d4cc1b56d82561c"
+    },
+    {
+      "path": "src/workbench/WorkbenchApp.tsx",
+      "sha256": "b617027f33bc3beb4d925ee4e3a6d477d646654f755b762fb561ed987749f6d3"
+    },
+    {
+      "path": "vite.config.ts",
+      "sha256": "d7854e7b8549970adca4ae7fefe2d18ee7cfec5fe9441962912b9e5255728290"
+    },
+    {
+      "path": "scripts/check-workbench-batch-export.mjs",
+      "sha256": "ab0629b8da627682401ca05222ebe8d00d6f2e16f802b8194a0705883a5cf3fb"
+    }
+  ],
+  "referenceSha256": "78541b9411af466d0cd8bd94ba219fa70a1a4c13808f4a801031613a66897c09",
+  "browserPath": "docs/planning/workbench-batch-parity-rev1/browser/worker-summary-export.json",
+  "browserSha256": "e98e2e126abaec161c6977989320f6974ba3b4bf3d487fbd823c29184f3409cb",
+  "programs": 240,
+  "prefixes": 975,
+  "comparison": "Deep equality of the entire browser-produced report with the independently executed native batch report, including inputs, profiles, exact prefix identities and limits.",
+  "limitations": [
+    "Available Values/REASON cohorts only; other corpus adapters remain open.",
+    "Browser control responsiveness and responsive layout are recorded separately."
+  ]
+}

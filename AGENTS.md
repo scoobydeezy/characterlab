@@ -55,7 +55,8 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 **Current routing (2026-10-11):** Observability Workbench IN PROGRESS, owner-authorized.
 Start docs/planning/OBSERVABILITY_WORKBENCH_PLAN.md and OBSERVABILITY_WORKBENCH_PROGRESS.md.
 Six-mode local UI; Values parity125/625 and joined REASON inspection implemented.
-Start OBSERVABILITY_WORKBENCH_REASON_PROGRESS.md for the latest verification/scope.
+Start OBSERVABILITY_WORKBENCH_BATCH_PROGRESS.md for shared sessions, worker batch
+execution and current verification/scope; native shared batch240/975 PASS.
 Full corpus coverage, language qualification, specialized views and final entry remain due.
 Campaign3 bounded acceptance and all18 conditional obligations/source restrictions survive.
 No Campaign4 reduction, law selection or mechanism retirement. No owner ruling pending.

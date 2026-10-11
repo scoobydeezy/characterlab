@@ -1,0 +1,196 @@
+{
+  "version": "workbench-batch-export/0.1",
+  "registryVersion": "workbench-experiments/0.1",
+  "catalogVersion": "workbench-batch-catalog/0.1",
+  "catalogSources": [
+    {
+      "path": "docs/planning/values-integration-matrix-rev1/plan.json",
+      "sha256": "8eeea39b56871b98c8ae19541a8f736ad1b93010ad8f47bc29de685b15b39e7c"
+    },
+    {
+      "path": "docs/planning/workbench-values-parity-rev1/receipt.json",
+      "sha256": "635825f480277232da89cb36a1a7f10f8ff9d4599df50ea08bb44990dea4c2d1"
+    },
+    {
+      "path": "docs/planning/REASON_PUBLIC_EXPERIMENT_PLAN_REV3.json",
+      "sha256": "9c174cf009a9490612f849834da0dd5900096ae5f4d1515e4fd93ec99f5a7aa1"
+    },
+    {
+      "path": "docs/planning/workbench-reason-parity-rev2/receipt.json",
+      "sha256": "ec850ca930c927add3f9464540ee66f1a53800b18e7b55e5693ffea6fef58e49"
+    },
+    {
+      "path": "src/workbench/valuesFixtures.json",
+      "sha256": "d88ae60082a9cf2dbb76c4581987c0574f1874fb1fe6280cc66f58e1dd6cbf36"
+    },
+    {
+      "path": "src/workbench/reasonFixtures.json",
+      "sha256": "9ae947053d1255d61afe928a96a5b0152778239b3d76163598b468eb35824301"
+    }
+  ],
+  "resourceLimits": {
+    "jobs": 240,
+    "prefixesPerJob": 17,
+    "simultaneousRuns": 1
+  },
+  "comparisonPolicy": "Each prefix is compared only with its own exact frozen program/model/seed. No cross-model semantic equivalence or causal necessity is inferred.",
+  "scope": "Two admitted public seams; full corpus and language acceptance remain open.",
+  "originals": {
+    "values": [],
+    "reason": [
+      {
+        "name": "collective",
+        "orderedInputs": "07020a930701060101030202010201030102000401070206020106020105010106010600010a93070106010103040201020203010204040107020602010602010501010601060001"
+      }
+    ]
+  },
+  "experiments": [
+    {
+      "id": "reason",
+      "label": "Joined reasoning",
+      "seamVersion": "reason-public/0.3-candidate",
+      "corpusScope": "PHEN-REASON-001, bounded joined-source qualification",
+      "capabilities": {
+        "committedStep": {
+          "supported": true,
+          "boundary": "One whole training or probe instant; probes do not draw decisions."
+        },
+        "checkpoint": {
+          "supported": true,
+          "authentication": "Exact public save, original inputs, model, seed and complete prefix."
+        },
+        "runtimeIntervention": {
+          "supported": false,
+          "reason": "The public contract admits original inputs on a fresh run; it exposes no runtime intervention ingress."
+        },
+        "graph": {
+          "supported": false,
+          "reason": "Source provenance is available, but this profile has no memory or belief graph."
+        },
+        "matrix": {
+          "supported": false,
+          "reason": "This profile has no embedding or matrix representation."
+        },
+        "explanation": {
+          "supported": true,
+          "scope": "Recorded source roles, overlap, grouping and rejection",
+          "qualification": "Native parity verified; complete language audit remains open."
+        }
+      }
+    }
+  ],
+  "snapshot": {
+    "version": "workbench-batch/0.1",
+    "status": "complete",
+    "current": 2,
+    "results": [
+      {
+        "job": {
+          "id": "reason/1/collective",
+          "experimentId": "reason",
+          "name": "collective",
+          "seed": 7,
+          "law": 1,
+          "expectedSaveHashes": [
+            "9d0d0b7bccfec57cc44408fe64cbeeb76ecb0cc1a26456b0e53e6432c261ac97",
+            "a88ea401c31abf9869cc8cde05b56ce4036db832b59f4b018690bfd0bdb75e8c",
+            "c107ea58f92d62c11795f77312fd8eedd6bbeebb2d1a6fc1a2168140c32265b9"
+          ]
+        },
+        "status": "complete",
+        "prefixes": [
+          {
+            "prefix": 0,
+            "total": 2,
+            "complete": false,
+            "clock": "0",
+            "modelHash": "b279cd5c2f3b368ef20ab0ff5190e8b05b479b16c509e7df14bdc7f6cfc2dde2",
+            "runHash": "e8e1136b560ba24a37a38ca01577ab0fd2463fdf4c5d208bbe457f5a9d0b9ade",
+            "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+            "saveHash": "9d0d0b7bccfec57cc44408fe64cbeeb76ecb0cc1a26456b0e53e6432c261ac97",
+            "expectedSaveHash": "9d0d0b7bccfec57cc44408fe64cbeeb76ecb0cc1a26456b0e53e6432c261ac97",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 1,
+            "total": 2,
+            "complete": false,
+            "clock": "1",
+            "modelHash": "b279cd5c2f3b368ef20ab0ff5190e8b05b479b16c509e7df14bdc7f6cfc2dde2",
+            "runHash": "e8e1136b560ba24a37a38ca01577ab0fd2463fdf4c5d208bbe457f5a9d0b9ade",
+            "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f",
+            "saveHash": "a88ea401c31abf9869cc8cde05b56ce4036db832b59f4b018690bfd0bdb75e8c",
+            "expectedSaveHash": "a88ea401c31abf9869cc8cde05b56ce4036db832b59f4b018690bfd0bdb75e8c",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 2,
+            "total": 2,
+            "complete": true,
+            "clock": "2",
+            "modelHash": "b279cd5c2f3b368ef20ab0ff5190e8b05b479b16c509e7df14bdc7f6cfc2dde2",
+            "runHash": "e8e1136b560ba24a37a38ca01577ab0fd2463fdf4c5d208bbe457f5a9d0b9ade",
+            "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f",
+            "saveHash": "c107ea58f92d62c11795f77312fd8eedd6bbeebb2d1a6fc1a2168140c32265b9",
+            "expectedSaveHash": "c107ea58f92d62c11795f77312fd8eedd6bbeebb2d1a6fc1a2168140c32265b9",
+            "matchesFrozenSave": true
+          }
+        ]
+      },
+      {
+        "job": {
+          "id": "reason/3/collective",
+          "experimentId": "reason",
+          "name": "collective",
+          "seed": 7,
+          "law": 3,
+          "expectedSaveHashes": [
+            "c1753b3b0d55edbf3b4da46cc51376b6c1cee11c6112164d878dfbaec2933776",
+            "b6a2ef5399a3c10a4b6a28fabeff58781d33e10ba5a6a20aba31ebed81cfd06a",
+            "9193b14442f7319b939b5d5acbea0a7b9e03fdfa080bf6a675685ecfbe52882b"
+          ]
+        },
+        "status": "complete",
+        "prefixes": [
+          {
+            "prefix": 0,
+            "total": 2,
+            "complete": false,
+            "clock": "0",
+            "modelHash": "04874a8795907152267d945a530c0fe561d71cdd7db0925ffbd2e30020261599",
+            "runHash": "19e74691d2bc52651cb0e26c181c3e45a185e518883dda19d1589f8956ed2e60",
+            "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+            "saveHash": "c1753b3b0d55edbf3b4da46cc51376b6c1cee11c6112164d878dfbaec2933776",
+            "expectedSaveHash": "c1753b3b0d55edbf3b4da46cc51376b6c1cee11c6112164d878dfbaec2933776",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 1,
+            "total": 2,
+            "complete": false,
+            "clock": "1",
+            "modelHash": "04874a8795907152267d945a530c0fe561d71cdd7db0925ffbd2e30020261599",
+            "runHash": "19e74691d2bc52651cb0e26c181c3e45a185e518883dda19d1589f8956ed2e60",
+            "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f",
+            "saveHash": "b6a2ef5399a3c10a4b6a28fabeff58781d33e10ba5a6a20aba31ebed81cfd06a",
+            "expectedSaveHash": "b6a2ef5399a3c10a4b6a28fabeff58781d33e10ba5a6a20aba31ebed81cfd06a",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 2,
+            "total": 2,
+            "complete": true,
+            "clock": "2",
+            "modelHash": "04874a8795907152267d945a530c0fe561d71cdd7db0925ffbd2e30020261599",
+            "runHash": "19e74691d2bc52651cb0e26c181c3e45a185e518883dda19d1589f8956ed2e60",
+            "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f",
+            "saveHash": "9193b14442f7319b939b5d5acbea0a7b9e03fdfa080bf6a675685ecfbe52882b",
+            "expectedSaveHash": "9193b14442f7319b939b5d5acbea0a7b9e03fdfa080bf6a675685ecfbe52882b",
+            "matchesFrozenSave": true
+          }
+        ]
+      }
+    ],
+    "retention": "Exact profile/program references and every prefix hash are retained. Raw traces are omitted explicitly from this summary; inspect or replay the original program through its adapter."
+  }
+}

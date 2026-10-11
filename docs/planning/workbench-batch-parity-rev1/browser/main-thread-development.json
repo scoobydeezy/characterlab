@@ -1,0 +1,26 @@
+{
+  "status": "DEVELOPMENT OBSERVATION; WORKER FOLLOW-UP REQUIRED",
+  "smallBatch": {
+    "programs": 2,
+    "prefixes": 6,
+    "export": "summary-export.json"
+  },
+  "sessionSwitch": {
+    "valuesPrefix": 1,
+    "hashesPreserved": true
+  },
+  "largeBatch": {
+    "programs": 240,
+    "initialSwitchPausePrefixes": 1,
+    "playwrightPauseErrors": [
+      "Timed out running CDP command Page.createIsolatedWorld",
+      "CDP operation exceeded its deadline before command dispatch"
+    ],
+    "accessibleKeyboardPause": {
+      "completedPrograms": 15,
+      "retainedPrefixes": 76,
+      "status": "paused"
+    }
+  },
+  "disposition": "Keep the native batch engine; move browser execution to a dedicated worker and reverify controls."
+}

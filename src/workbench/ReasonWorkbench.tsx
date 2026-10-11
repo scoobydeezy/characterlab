@@ -7,9 +7,10 @@ function Witnesses({rows}: {rows: ReasonWitness[]}) {
   return <div className="table-scroll"><table><thead><tr><th>Source / role</th><th>Sign</th><th>Magnitude</th><th>Overlap</th><th>Effective</th></tr></thead>
     <tbody>{rows.map((w, i) => <tr key={i}><td>{w.description}<small>{w.role}</small><details><summary>Recorded source</summary><Exact text={w.provenance}/></details></td><td>{w.sign}</td><td>{w.magnitude}</td><td>{w.overlap}</td><td>{w.effective}</td></tr>)}</tbody></table></div>;
 }
-export function ReasonWorkbench() {
+export function ReasonWorkbench({active = true}: {active?: boolean}) {
   const runs = useRef<Partial<Record<'A' | 'B', ReasonWorkbenchRun>>>({});
   const lock = useRef(false), stop = useRef(false);
+  useEffect(() => {if (!active) stop.current = true;}, [active]);
   const [views, setViews] = useState<Partial<Record<'A' | 'B', ReasonSnapshot>>>({});
   const [mode, setMode] = useState<typeof modes[number]>('Experiment'), [branch, setBranch] = useState<'A' | 'B'>('A');
   const [busy, setBusy] = useState(false), [error, setError] = useState('');

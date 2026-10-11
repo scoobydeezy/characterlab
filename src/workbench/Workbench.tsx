@@ -32,9 +32,10 @@ function Trend({a, b}: {a?: ValuesSnapshot; b?: ValuesSnapshot}) {
   </div>;
 }
 
-export function Workbench() {
+export function Workbench({active = true}: {active?: boolean}) {
   const runs = useRef<Partial<Record<Branch, ValuesWorkbenchRun>>>({});
   const stop = useRef(false), command = useRef(false);
+  useEffect(() => {if (!active) stop.current = true;}, [active]);
   const [snapshots, setSnapshots] = useState<Partial<Record<Branch, ValuesSnapshot>>>({});
   const [mode, setMode] = useState<Mode>('Experiment'), [branch, setBranch] = useState<Branch>('A');
   const [busy, setBusy] = useState(false), [error, setError] = useState(''), [notice, setNotice] = useState('');

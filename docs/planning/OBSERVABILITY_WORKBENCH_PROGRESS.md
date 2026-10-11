@@ -7,7 +7,11 @@ OBSERVABILITY_WORKBENCH_BRIEF.md, SHA256
 
 ## Implemented first slice
 
-Latest continuation: joined REASON inspection now runs through the unchanged
+Latest continuation: shared capability declarations, retained experiment sessions
+and worker-backed bounded batch execution are described in
+OBSERVABILITY_WORKBENCH_BATCH_PROGRESS.md. Full workbench acceptance remains open.
+
+Prior continuation: joined REASON inspection now runs through the unchanged
 `reason-public/0.3-candidate` factory. See OBSERVABILITY_WORKBENCH_REASON_PROGRESS.md
 for its exact scope, development corrections and verification. The Values receipt
 remains unchanged. Full workbench acceptance is still open.
