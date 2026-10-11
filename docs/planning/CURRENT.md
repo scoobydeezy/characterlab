@@ -50,7 +50,9 @@ Prior: OBSERVABILITY_WORKBENCH_LEARN_UI_PROGRESS.md; worker-backed inspection,
 declared hidden-potential pair and complete browser replay PASS; language/batch due.
 Prior: OBSERVABILITY_WORKBENCH_LEARN_LANGUAGE_PROGRESS.md;467 descriptions,
 39 programs/580 prefixes PASS; full narrative/corpus/batch/entry work remains.
-Latest: OBSERVABILITY_WORKBENCH_BATCH_V2_PROGRESS.md; four cohorts351 programs/
+Prior: OBSERVABILITY_WORKBENCH_BATCH_V2_PROGRESS.md; four cohorts351 programs/
 1795 native prefixes PASS; EPI/LEARN111 browser programs/820 prefixes PASS.
+Latest: OBSERVABILITY_WORKBENCH_BELIEF_PROGRESS.md;48 programs/381 exact historical
+prefixes PASS. BELIEF browser/language/batch integration next.
 Campaign4 entry remains gated by the full workbench plan; no reduction work has started.
 Counters1529/0; no owner ruling.
