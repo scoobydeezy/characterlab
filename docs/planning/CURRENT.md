@@ -72,3 +72,7 @@ OBSERVABILITY_WORKBENCH_AFFECT_LANGUAGE_PROGRESS.md:3037 descriptions/1436 prefi
 PASS, with bounded browser evaluation history checks. Full workbench remains open.
 Campaign4 entry remains gated by the full workbench plan; no reduction work has started.
 Counters1529/0; no owner ruling.
+
+COMMIT admitted-report language: OBSERVABILITY_WORKBENCH_COMMIT_LANGUAGE_PROGRESS.md.
+All10 programs/70 prefixes/140 observer projections/57 descriptions PASS; bounded
+observer-report scope only. DECISION language and integrated workbench entry remain due.

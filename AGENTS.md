@@ -58,7 +58,9 @@ Native COMMIT10 programs/70 prefixes and DECISION174/360 PASS; bounded browser
 observer/control and decision replay evidence PASS. Nine COMMIT and259 DECISION
 comparisons declared; exact observer identity and admitted report content stay distinct.
 Shared six-seam batch504 roles/3612 prefixes PASS. Eight-seam batch688/4042 now
-enrolled; full qualification RUNNING. Registry0.14; DECISION/COMMIT language remains due.
+enrolled; full qualification RUNNING. Registry0.14; DECISION language remains due.
+COMMIT bounded report language PASS70 prefixes/140 observer projections/57 descriptions;
+start OBSERVABILITY_WORKBENCH_COMMIT_LANGUAGE_PROGRESS.md for scope and browser receipt.
 AFFECT3037 descriptions/1436 prefixes PASS;91 main programs and14 supplementary roles.
 Prior BELIEF48/381, LEARN39/580, EPI72/240, REASON115/350 and Values125/625 retained.
 General attention graph/matrix remains two recipes/24 prefixes, not full MEM coverage.

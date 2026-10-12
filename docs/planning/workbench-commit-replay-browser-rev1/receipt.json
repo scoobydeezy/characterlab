@@ -1,0 +1,104 @@
+{
+  "status": "PASS BOUNDED COMMIT BROWSER CHECKPOINT CONTINUATION",
+  "sources": [
+    {
+      "path": "src/workbench/CommitWorkbench.tsx",
+      "sha256": "c3fce840c83697924eceddcd6e77badd7869e90d4c85dbafed73d54d36533b82"
+    },
+    {
+      "path": "src/workbench/commitAdapter.ts",
+      "sha256": "694af137d4d2ebdbff7f97772d88155ff7997e3856f9a36787f585024edd8f4e"
+    },
+    {
+      "path": "src/workbench/commitWorker.ts",
+      "sha256": "b24aaaf4f202f9b39d6ede5765149f7f0fd20c8bdc2b19132e57cf8b3d8d5fcb"
+    },
+    {
+      "path": "src/workbench/commitWorkerClient.ts",
+      "sha256": "2cf9a22c0633ba5a14e2aeb5b88c1d64cfd5a939a7df2e0a8bc8d3836ce4ef8a"
+    },
+    {
+      "path": "scripts/check-workbench-commit-replay-browser.mjs",
+      "sha256": "5759bd2b824661b152f60645d11bd2b274b1d28d4767c05d1fc304add8b5404b"
+    },
+    {
+      "path": "docs/planning/workbench-commit-parity-rev1/receipt.json",
+      "sha256": "f0c007a78c3d8f49cc69d532e83be56710b7b0d50be60279c70055b025c0c8d2"
+    },
+    {
+      "path": "docs/planning/workbench-commit-language-browser-rev1/observer-a.json",
+      "sha256": "37172ca510ab34f857149027b6c585604f7df07d02609cb53aa8ab640e488114"
+    },
+    {
+      "path": "docs/planning/workbench-commit-replay-browser-rev1/captured.json",
+      "sha256": "6d398fd75889ed20f2aa44b132baa07c176c8cd53f56b1acb231afa08c3f1a90"
+    },
+    {
+      "path": "docs/planning/workbench-commit-replay-browser-rev1/before-restore.json",
+      "sha256": "d89f3e5503976e220ac3dc7dde39b2a36e50deba7eb15093208cb3d65a7824aa"
+    },
+    {
+      "path": "docs/planning/workbench-commit-replay-browser-rev1/restored.json",
+      "sha256": "6d398fd75889ed20f2aa44b132baa07c176c8cd53f56b1acb231afa08c3f1a90"
+    },
+    {
+      "path": "docs/planning/workbench-commit-replay-browser-rev1/continued.json",
+      "sha256": "d89f3e5503976e220ac3dc7dde39b2a36e50deba7eb15093208cb3d65a7824aa"
+    },
+    {
+      "path": "docs/planning/workbench-commit-replay-browser-rev1/continued.png",
+      "sha256": "f9f82522b42c834a2c809945f0d50c32216d7288d7cc39fcbc3da9203861c006"
+    }
+  ],
+  "captures": [
+    {
+      "name": "captured",
+      "checkpoint": "Captured 1/main, prefix 1. Restoring authenticates original program, complete prefix and save bytes.",
+      "hashes": {
+        "modelHash": "0f3501fd8558d34a840917c72b9cc65a60932e470288d58548a9abd2b65fbb03",
+        "outputsHash": "dc64ab46f24322d735480e43f2796ca86fcb0723c9aeedc63632deaef69aed91",
+        "runHash": "6d9dd9e39eaed7d25c24ce2d19779418f22554cf8618482f98ef58c2bcd43f12",
+        "saveHash": "cb25d3f17474159bf3450eee8e02f1e4e640bbf404322ce3c3dfcb398b6d5899",
+        "stateHash": "0dd9d51f562c7dec8a765fc27434b981954ebaa5cfca9a0521b7c6460b73f23c"
+      },
+      "status": "Prefix 1 · instant 1 · Ready"
+    },
+    {
+      "name": "before-restore",
+      "checkpoint": "Captured 1/main, prefix 1. Restoring authenticates original program, complete prefix and save bytes.",
+      "hashes": {
+        "modelHash": "0f3501fd8558d34a840917c72b9cc65a60932e470288d58548a9abd2b65fbb03",
+        "outputsHash": "d6b0ff8d822def506222c1c41b66fff12c50f44f1c37a914724fa3e6c9c114fa",
+        "runHash": "6d9dd9e39eaed7d25c24ce2d19779418f22554cf8618482f98ef58c2bcd43f12",
+        "saveHash": "e108cb05a12bf1c36e021217f63ab3b2b6dd72a416fea4113ab0109aff26a82e",
+        "stateHash": "761446ed9f06e90a9ee7d84b20ddc030ad1b614727b8ffb93db1fd1cc5e24beb"
+      },
+      "status": "Prefix 6 · instant 6 · Complete"
+    },
+    {
+      "name": "restored",
+      "checkpoint": "Captured 1/main, prefix 1. Restoring authenticates original program, complete prefix and save bytes.",
+      "hashes": {
+        "modelHash": "0f3501fd8558d34a840917c72b9cc65a60932e470288d58548a9abd2b65fbb03",
+        "outputsHash": "dc64ab46f24322d735480e43f2796ca86fcb0723c9aeedc63632deaef69aed91",
+        "runHash": "6d9dd9e39eaed7d25c24ce2d19779418f22554cf8618482f98ef58c2bcd43f12",
+        "saveHash": "cb25d3f17474159bf3450eee8e02f1e4e640bbf404322ce3c3dfcb398b6d5899",
+        "stateHash": "0dd9d51f562c7dec8a765fc27434b981954ebaa5cfca9a0521b7c6460b73f23c"
+      },
+      "status": "Prefix 1 · instant 1 · Ready"
+    },
+    {
+      "name": "continued",
+      "checkpoint": "Captured 1/main, prefix 1. Restoring authenticates original program, complete prefix and save bytes.",
+      "hashes": {
+        "modelHash": "0f3501fd8558d34a840917c72b9cc65a60932e470288d58548a9abd2b65fbb03",
+        "outputsHash": "d6b0ff8d822def506222c1c41b66fff12c50f44f1c37a914724fa3e6c9c114fa",
+        "runHash": "6d9dd9e39eaed7d25c24ce2d19779418f22554cf8618482f98ef58c2bcd43f12",
+        "saveHash": "e108cb05a12bf1c36e021217f63ab3b2b6dd72a416fea4113ab0109aff26a82e",
+        "stateHash": "761446ed9f06e90a9ee7d84b20ddc030ad1b614727b8ffb93db1fd1cc5e24beb"
+      },
+      "status": "Prefix 6 · instant 6 · Complete"
+    }
+  ],
+  "scope": "Main program learned prefix1 capture, completion6, restore1 and continuation6 match frozen native prefix state/output/save hashes and model/run identities. No file import or full download transport claim; other COMMIT programs remain outside this browser replay claim."
+}
