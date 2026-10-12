@@ -57,6 +57,8 @@ Start docs/planning/OBSERVABILITY_WORKBENCH_PLAN.md and OBSERVABILITY_WORKBENCH_
 Six-mode local UI; Values parity125/625 and joined REASON inspection implemented.
 Start OBSERVABILITY_WORKBENCH_BATCH_V3_PROGRESS.md: six seams/504 roles enrolled;
 full3612-prefix qualification RUNNING; no acceptance before its receipt.
+Also OBSERVABILITY_WORKBENCH_DECISION_PROGRESS.md: adapter/tests/build PASS;
+174-program/360-prefix parity RUNNING; worker/UI/comparison/batch remain due.
 Prior OBSERVABILITY_WORKBENCH_AFFECT_LANGUAGE_PROGRESS.md:3037 descriptions/
 105 roles/1436 prefixes and bounded evaluation UI/browser PASS.
 Prior OBSERVABILITY_WORKBENCH_AFFECT_SUPPLEMENTS_PROGRESS.md:14 roles/200 prefixes PASS;

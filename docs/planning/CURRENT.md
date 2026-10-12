@@ -62,6 +62,8 @@ Prior: OBSERVABILITY_WORKBENCH_BELIEF_LANGUAGE_PROGRESS.md;933 descriptions/
 48 programs/381 prefixes PASS. Full narrative/corpus/batch/entry gates remain.
 Latest: OBSERVABILITY_WORKBENCH_BATCH_V3_PROGRESS.md;504 roles enrolled across six
 seams; full3612-prefix qualification RUNNING, acceptance pending its receipt.
+Also: OBSERVABILITY_WORKBENCH_DECISION_PROGRESS.md; new native adapter/tests/build
+PASS;174-program/360-prefix parity RUNNING; worker/UI/comparison/batch remain due.
 Prior: OBSERVABILITY_WORKBENCH_AFFECT_LANGUAGE_PROGRESS.md;3037 descriptions/
 105 roles/1436 prefixes and bounded evaluation UI/browser PASS.
 Prior: OBSERVABILITY_WORKBENCH_AFFECT_SUPPLEMENTS_PROGRESS.md;14 roles/200 prefixes
