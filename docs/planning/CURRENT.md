@@ -66,6 +66,8 @@ Also: OBSERVABILITY_WORKBENCH_DECISION_PROGRESS.md; new native adapter/tests/bui
 PASS;174-program/360-prefix parity RUNNING; worker/UI/comparison/batch remain due.
 Continuation: OBSERVABILITY_WORKBENCH_DECISION_UI_PROGRESS.md; worker/six-mode UI
 and259 declared comparisons implemented; bounded browser and full parity separate.
+Also: OBSERVABILITY_WORKBENCH_COMMIT_PROGRESS.md; observer-separated adapter/tests/
+build PASS;10-program/70-prefix parity RUNNING; worker/UI/language/batch remain.
 Prior: OBSERVABILITY_WORKBENCH_AFFECT_LANGUAGE_PROGRESS.md;3037 descriptions/
 105 roles/1436 prefixes and bounded evaluation UI/browser PASS.
 Prior: OBSERVABILITY_WORKBENCH_AFFECT_SUPPLEMENTS_PROGRESS.md;14 roles/200 prefixes
