@@ -53,35 +53,16 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 ## Active direction
 
 **Current routing (2026-10-11):** Observability Workbench IN PROGRESS, owner-authorized.
-Start docs/planning/OBSERVABILITY_WORKBENCH_PLAN.md and OBSERVABILITY_WORKBENCH_PROGRESS.md.
-Six-mode local UI; Values parity125/625 and joined REASON inspection implemented.
-Start OBSERVABILITY_WORKBENCH_BATCH_V3_PROGRESS.md: six seams/504 roles enrolled;
-full3612-prefix qualification RUNNING; no acceptance before its receipt.
-Also OBSERVABILITY_WORKBENCH_DECISION_PROGRESS.md: adapter/tests/build PASS;
-174-program/360-prefix parity RUNNING; worker/UI/comparison/batch remain due.
-Continuation OBSERVABILITY_WORKBENCH_DECISION_UI_PROGRESS.md: worker/six-mode UI,
-259 declared comparisons implemented; bounded browser receipt and full parity separate.
-Also OBSERVABILITY_WORKBENCH_COMMIT_PROGRESS.md: observer-separated adapter/tests/
-build PASS;10-program/70-prefix parity RUNNING; worker/UI/language/batch remain.
-Prior OBSERVABILITY_WORKBENCH_AFFECT_LANGUAGE_PROGRESS.md:3037 descriptions/
-105 roles/1436 prefixes and bounded evaluation UI/browser PASS.
-Prior OBSERVABILITY_WORKBENCH_AFFECT_SUPPLEMENTS_PROGRESS.md:14 roles/200 prefixes PASS;
-eight controls and bounded browser timing PASS. Prior AFFECT adapter/UI implemented;
-main91 programs/1236 prefixes PASS; broader controls/language/batch open.
-Prior OBSERVABILITY_WORKBENCH_BELIEF_LANGUAGE_PROGRESS.md:933 descriptions/
-48 programs/381 prefixes PASS; full narrative/corpus/batch/entry remain.
-Prior BELIEF14 contrasts/
-18 programs/207 prefixes PASS. Prior BELIEF adapter48/381 PASS.
-BELIEF batch and broader corpus next. Prior shared batch351/1795 PASS.
-EPI/LEARN111 browser programs/820 prefixes PASS; broader corpus coverage remains.
-Prior LEARN language:467 application descriptions,
-39 programs/580 prefixes PASS; full narrative/corpus/batch/entry gates remain.
-Prior LEARN adapter39 programs/580 prefixes PASS.
-LEARN bounded browser pair/replay retained; batch and broader coverage next.
-Prior OBSERVABILITY_WORKBENCH_EPI_LANGUAGE_PROGRESS.md:30 encoding descriptions,
-72-program/240-prefix invariance PASS. Full narrative/corpus/entry gates remain open.
-OBSERVABILITY_WORKBENCH_BATCH_PROGRESS.md retains shared batch240/975 PASS.
-Full corpus coverage, language qualification, specialized views and final entry remain due.
+Start docs/planning/OBSERVABILITY_WORKBENCH_PLAN.md and OBSERVABILITY_WORKBENCH_COMMIT_UI_PROGRESS.md.
+Native COMMIT10 programs/70 prefixes and DECISION174/360 PASS; bounded browser
+observer/control and decision replay evidence PASS. Nine COMMIT and259 DECISION
+comparisons declared; exact observer identity and admitted report content stay distinct.
+Shared six-seam batch504 roles/3612 prefixes PASS; registry0.13 consolidates inspection
+routes. DECISION/COMMIT batch enrollment and natural-language qualification remain due.
+AFFECT3037 descriptions/1436 prefixes PASS;91 main programs and14 supplementary roles.
+Prior BELIEF48/381, LEARN39/580, EPI72/240, REASON115/350 and Values125/625 retained.
+General attention graph/matrix remains two recipes/24 prefixes, not full MEM coverage.
+Full corpus, specialized views, language, architecture and integrated entry remain due.
 Campaign3 bounded acceptance and all18 conditional obligations/source restrictions survive.
 No Campaign4 reduction, law selection or mechanism retirement. No owner ruling pending.
 

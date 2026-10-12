@@ -27,19 +27,18 @@ Verification completed:
   whose full research outputs differ.
 - Application TypeScript/build and reference boundary PASS.
 
-The complete174-program/360-prefix parity writer
-`scripts/check-workbench-decision.mjs` is RUNNING. It compares every initial and
-committed prefix with separate native execution, including state, output, complete
-timeline, character projection and save. Terminal hashes must match the historical
-DECISION_PUBLIC_EXPERIMENT_REV1 receipt. Acceptance requires the immutable
-`workbench-decision-parity-rev1/receipt.json`; no full parity acceptance yet.
-Do not modify bound sources or restart the live writer over immutable outputs.
+Complete native parity PASS: `workbench-decision-parity-rev1/receipt.json` binds
+174 programs/360 initial and committed prefixes. State, output, complete timeline,
+character projection and save agree with separate native execution. Terminal hashes
+match the historical DECISION_PUBLIC_EXPERIMENT_REV1 receipt. Bound source hashes
+were rechecked after completion.
 
 Shared batch0.3 qualification is also still running; see
 OBSERVABILITY_WORKBENCH_BATCH_V3_PROGRESS.md. DECISION is not enrolled in that
-source-bound six-seam batch, registry or browser UI yet. Next complete the receipts,
-then implement worker/browser routing, declared comparison controls and browser
-checkpoint continuation before marking this corpus member UI-qualified.
+source-bound six-seam batch yet. Worker/browser routing,259 declared comparisons
+and bounded browser checkpoint continuation now pass in the scope recorded by
+OBSERVABILITY_WORKBENCH_DECISION_UI_PROGRESS.md. Language and wider browser
+coverage remain open.
 
 LOCAL DISPOSITION: retain all six models and the original intent/expression/
 execution/evidence/history distinctions. No native math, ownership or scientific

@@ -50,11 +50,7 @@ it now derives bytes from canonicalEncode(set([])), with decoded shape tested.
 A browser restore observation timed out while the worker remained live; the same
 run subsequently returned prefix1 and completed replay. It was not restarted.
 
-The source-bound shared504-role batch audit and DECISION174-program parity audit
-are still running. DECISION is temporarily a direct app selector route while the
-registry's bytes are bound by the batch audit. After that receipt, register its
-capabilities centrally, remove the temporary route duplication and refresh the
-now-qualified AFFECT language status. DECISION batch enrollment remains due.
+Shared504-role/3612-prefix batch and DECISION174-program/360-prefix parity audits now PASS. Registry0.13 consolidates DECISION/COMMIT inspection capabilities and refreshes qualified AFFECT language status after the batch writer finished. DECISION batch enrollment remains due.
 
 Evidence restore/research checks PASS:0 active/18 conditional/4 closed/0 unowned.
 LOCAL DISPOSITION: retain all native laws and observer boundaries, with no scientific

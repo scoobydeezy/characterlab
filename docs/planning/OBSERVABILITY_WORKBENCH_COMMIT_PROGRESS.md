@@ -30,17 +30,16 @@ Verification completed:
 - TypeScript/build/reference boundary PASS.
 - Evidence restore/research checks PASS:0 active/18 conditional/4 closed/0 unowned.
 
-Complete parity qualification is RUNNING in `scripts/check-workbench-commit.mjs`.
-It requires all10 frozen programs/70 initial and committed prefixes to match
-separate native state, outputs, complete timeline, both observer projections and
-whole saves. Terminal hashes must match COMMIT_PUBLIC_EXPERIMENT_REV1.json.
-Acceptance requires `workbench-commit-parity-rev1/receipt.json`; no full parity
-acceptance yet. Do not change the bound sources or restart over immutable output
-while the existing writer is running.
+Complete native parity PASS: `workbench-commit-parity-rev1/receipt.json` binds
+all10 frozen programs/70 initial and committed prefixes against separate native
+state, outputs, complete timeline, both observer projections and whole saves.
+Terminal hashes match COMMIT_PUBLIC_EXPERIMENT_REV1.json. Bound source hashes
+were rechecked after completion.
 
-The shared504-role batch and DECISION174-program audits remain separate running
-work. COMMIT worker/UI, declared controls, observer selection, browser replay,
-language and batch enrollment are next work; no UI qualification is claimed here.
+The shared504-role batch audit remains separate work. DECISION native parity also
+passes. COMMIT worker/UI and declared controls now exist; observer selection and
+bounded comparison browser evidence are recorded in OBSERVABILITY_WORKBENCH_COMMIT_UI_PROGRESS.md.
+Browser checkpoint replay, language and batch enrollment remain due.
 LOCAL DISPOSITION: no lifecycle law selected, identity approximation introduced,
 observer boundary weakened or native ownership changed. RO-C3-014/020 and all18
 conditional obligations remain. Full corpus and integrated Campaign4 entry remain

@@ -60,18 +60,13 @@ Prior: OBSERVABILITY_WORKBENCH_BELIEF_UI_PROGRESS.md; four browser control famil
 and complete checkpoint replay PASS. BELIEF language/batch and broader corpus due.
 Prior: OBSERVABILITY_WORKBENCH_BELIEF_LANGUAGE_PROGRESS.md;933 descriptions/
 48 programs/381 prefixes PASS. Full narrative/corpus/batch/entry gates remain.
-Latest: OBSERVABILITY_WORKBENCH_BATCH_V3_PROGRESS.md;504 roles enrolled across six
-seams; full3612-prefix qualification RUNNING, acceptance pending its receipt.
-Also: OBSERVABILITY_WORKBENCH_DECISION_PROGRESS.md; new native adapter/tests/build
-PASS;174-program/360-prefix parity RUNNING; worker/UI/comparison/batch remain due.
-Continuation: OBSERVABILITY_WORKBENCH_DECISION_UI_PROGRESS.md; worker/six-mode UI
-and259 declared comparisons implemented; bounded browser and full parity separate.
-Also: OBSERVABILITY_WORKBENCH_COMMIT_PROGRESS.md; observer-separated adapter/tests/
-build PASS;10-program/70-prefix parity RUNNING; worker/UI/language/batch remain.
-Prior: OBSERVABILITY_WORKBENCH_AFFECT_LANGUAGE_PROGRESS.md;3037 descriptions/
-105 roles/1436 prefixes and bounded evaluation UI/browser PASS.
-Prior: OBSERVABILITY_WORKBENCH_AFFECT_SUPPLEMENTS_PROGRESS.md;14 roles/200 prefixes
-and bounded browser timing PASS; eight declared controls available;
-main91 programs/1236 prefixes PASS; broader controls/language/batch open.
+Latest: OBSERVABILITY_WORKBENCH_COMMIT_UI_PROGRESS.md; COMMIT10/70 native parity,
+observer selection/private lifecycle browser and four tests PASS. DECISION174/360
+native parity, bounded browser replay and259 exact contrast declarations PASS.
+OBSERVABILITY_WORKBENCH_BATCH_V3_PROGRESS.md:504 execution roles/3612 native prefixes
+PASS across six seams. Registry0.13 consolidates DECISION/COMMIT inspection metadata;
+their batch enrollment and natural-language renderers remain due.
+OBSERVABILITY_WORKBENCH_AFFECT_LANGUAGE_PROGRESS.md:3037 descriptions/1436 prefixes
+PASS, with bounded browser evaluation history checks. Full workbench remains open.
 Campaign4 entry remains gated by the full workbench plan; no reduction work has started.
 Counters1529/0; no owner ruling.

@@ -1,0 +1,60 @@
+{
+  "status": "PASS BOUNDED COMMIT OBSERVER SELECTION AND PRIVATE LIFECYCLE BROWSER",
+  "sources": [
+    {
+      "path": "src/workbench/commitAdapter.ts",
+      "sha256": "694af137d4d2ebdbff7f97772d88155ff7997e3856f9a36787f585024edd8f4e"
+    },
+    {
+      "path": "src/workbench/commitWorker.ts",
+      "sha256": "b24aaaf4f202f9b39d6ede5765149f7f0fd20c8bdc2b19132e57cf8b3d8d5fcb"
+    },
+    {
+      "path": "src/workbench/commitWorkerClient.ts",
+      "sha256": "2cf9a22c0633ba5a14e2aeb5b88c1d64cfd5a939a7df2e0a8bc8d3836ce4ef8a"
+    },
+    {
+      "path": "src/workbench/CommitWorkbench.tsx",
+      "sha256": "b885599997d52d7cd2ed9f0a431746c4361a28976d2ea1621ea6ab8a4f3fdd14"
+    },
+    {
+      "path": "src/workbench/commitComparison.ts",
+      "sha256": "b0b23dffd988a8c13647b75c54ba344de9be302d9410caca32ff49adaf32ef24"
+    },
+    {
+      "path": "src/workbench/WorkbenchApp.tsx",
+      "sha256": "416319190398ab0c39d78059ee670fefb3a4ff4707ba68220783e9a52cc96cce"
+    },
+    {
+      "path": "scripts/check-workbench-commit-browser.mjs",
+      "sha256": "f8ce014ed71fb0845d00ebfa55fa2c548e49553949dc58549ba069e831c23029"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "docs/planning/workbench-commit-browser-rev1/observer-a.json",
+      "sha256": "27dd485de9bb75c3012d4292cbd6bbb0c15c7c0a44f2cc5489ec3a7f48887720"
+    },
+    {
+      "path": "docs/planning/workbench-commit-browser-rev1/observer-b.json",
+      "sha256": "d13fd13254b34bb61ef7367fb6b39d9a0af2ad4d17e2e336c96abb86d07659f9"
+    },
+    {
+      "path": "docs/planning/workbench-commit-browser-rev1/observer-a-v2.json",
+      "sha256": "c45f77f6f6985d61e2959f0ae57e1a1d01fb2a8003f32cb646d53a47eaf10f2a"
+    },
+    {
+      "path": "docs/planning/workbench-commit-browser-rev1/observer-b-v2.json",
+      "sha256": "19a3b8ceabc44b555a000b54ed99a696ed78a55323d8fab53b7088e315d26945"
+    },
+    {
+      "path": "docs/planning/workbench-commit-browser-rev1/comparison.json",
+      "sha256": "e0fd5f7586f217f6a7ce1ae16c830721a862e6ccb25b3fcb96cd97854113d159"
+    },
+    {
+      "path": "docs/planning/workbench-commit-browser-rev1/comparison.png",
+      "sha256": "c2d985625dbcd1204b58838dbfe1dcdcf6e8546cf8789ca309831aaf2302b57d"
+    }
+  ],
+  "scope": "Native observer A/B exact projection and five run hashes match at main prefix3. Complete private/absent comparison JSON equals native-backed result at6, with both observer projections equal and private state different. Early captures retained with a mislabelled selector field; corrected v2 captures drive assertions. No broader browser, checkpoint-file import, download transport or narrative claim."
+}

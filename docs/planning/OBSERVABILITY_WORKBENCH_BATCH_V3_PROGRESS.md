@@ -30,12 +30,7 @@ Verification:
   receipt verification is recorded separately under workbench-batch-browser-rev3.
 - Evidence restore/research checks PASS:0 active/18 conditional/4 closed/0 unowned.
 
-Full504-role shared-batch qualification is RUNNING in
-`scripts/check-workbench-batch-v3.mjs`; acceptance requires its immutable
-`workbench-batch-parity-rev3/receipt.json`. Existing351/1795 batch qualification and
-individual BELIEF/AFFECT native qualifications remain bounded prior evidence.
-Do not change bound source files or restart over partial immutable output while
-the qualification process runs. Browser scope is3 roles, not all504.
+Full504-role shared-batch qualification PASS in workbench-batch-parity-rev3/receipt.json: all3612 prefixes match their exact frozen saves, all jobs complete and selected original input/profile exports pass. Source hashes were rechecked before registry consolidation. Browser scope remains3 roles/37 prefixes, not all504. Registry0.13 subsequently adds DECISION/COMMIT inspection metadata and refreshes AFFECT language status; native batch factory routes and catalog remain unchanged. Focused tests/build verify the metadata consolidation.
 
 Development observations: the catalog generator initially assumed a zero BELIEF
 seed; its assertion rejected that assumption before output. It now derives and

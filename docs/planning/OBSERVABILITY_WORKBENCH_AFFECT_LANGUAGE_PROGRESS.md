@@ -15,9 +15,7 @@ Automatic-mode score placeholders are not presented as rolled results. Selection
 does not establish execution success or an observed consequence.
 
 Comparison0.3 names the renderer and retains descriptions in full snapshots.
-Registry0.12 advertises the bounded explanation scope; its pending-audit wording
-predates the completed receipt below and will be refreshed after the source-bound
-shared batch qualification finishes.
+Registry0.13 advertises the completed bounded explanation audit after shared batch qualification finished.
 No native mathematics, authority, input calendar or save format changes.
 
 Verification completed:
