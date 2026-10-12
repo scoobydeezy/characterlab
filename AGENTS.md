@@ -55,8 +55,10 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 **Current routing (2026-10-11):** Observability Workbench IN PROGRESS, owner-authorized.
 Start docs/planning/OBSERVABILITY_WORKBENCH_PLAN.md and OBSERVABILITY_WORKBENCH_PROGRESS.md.
 Six-mode local UI; Values parity125/625 and joined REASON inspection implemented.
-Start OBSERVABILITY_WORKBENCH_AFFECT_LANGUAGE_PROGRESS.md: evaluation UI/browser PASS;
-105-role/1436-prefix language audit RUNNING; immutable partial output is not acceptance.
+Start OBSERVABILITY_WORKBENCH_BATCH_V3_PROGRESS.md: six seams/504 roles enrolled;
+full3612-prefix qualification RUNNING; no acceptance before its receipt.
+Prior OBSERVABILITY_WORKBENCH_AFFECT_LANGUAGE_PROGRESS.md:3037 descriptions/
+105 roles/1436 prefixes and bounded evaluation UI/browser PASS.
 Prior OBSERVABILITY_WORKBENCH_AFFECT_SUPPLEMENTS_PROGRESS.md:14 roles/200 prefixes PASS;
 eight controls and bounded browser timing PASS. Prior AFFECT adapter/UI implemented;
 main91 programs/1236 prefixes PASS; broader controls/language/batch open.

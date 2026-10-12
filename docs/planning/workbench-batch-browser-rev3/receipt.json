@@ -1,0 +1,65 @@
+{
+  "status": "PASS BOUNDED THREE-ROLE BROWSER BATCH",
+  "sources": [
+    {
+      "path": "src/workbench/BatchWorkbench.tsx",
+      "sha256": "fbb100eb606eeb20d7ebf38167eeb73d876b98839791497783f5cf921b4e6b97"
+    },
+    {
+      "path": "src/workbench/batchSession.ts",
+      "sha256": "d0738cba5959312ca66c7b1c3184228cbb1552fa5350dfd7ef20ee781c2a33a6"
+    },
+    {
+      "path": "src/workbench/batchWorker.ts",
+      "sha256": "854e6e0e283d9f3c380fd3c9142ce9bd5f2fbd41b89d38a80b4a54782aa2fd12"
+    },
+    {
+      "path": "src/workbench/batchWorkerClient.ts",
+      "sha256": "e97155c4a23dfd71a83bff0b4b2028d120b403dab046dc2c24477d71adcb87b5"
+    },
+    {
+      "path": "src/workbench/batchCatalogV3.json",
+      "sha256": "0b96c576c09934d5e8d97e97208eca866efc0a485abe4d500134ea6f11a6a32d"
+    },
+    {
+      "path": "src/workbench/experimentRegistry.ts",
+      "sha256": "f7fc3e9474d55f4d81778fad35428fe844c64cd01123d11c1adc381471bce929"
+    },
+    {
+      "path": "src/workbench/PreparedExport.tsx",
+      "sha256": "4cf14eca7746d3260ce84c7d28532a6e795f4728889080f1cb2115531ed93e19"
+    },
+    {
+      "path": "scripts/check-workbench-batch-v3-browser.mjs",
+      "sha256": "c1cfd626c70697f57bb1e3c2a8db78027d397247023a2e8fa5e2d4d71472eb28"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "docs/planning/workbench-batch-browser-rev3/preview.txt",
+      "sha256": "39ae5e6da6244711b34628f209abf5b74c58569d97ec8d57f4d788f89d05bf94"
+    },
+    {
+      "path": "docs/planning/workbench-batch-browser-rev3/dom.json",
+      "sha256": "6314c38b2f1dc6681af5f75eb4084279ad06c6b46ef6180a2a0ad05b55c8c8a8"
+    },
+    {
+      "path": "docs/planning/workbench-batch-browser-rev3/prefix-code-elements.json",
+      "sha256": "3e9291e696bf4bd940377fd8aa53c12282023e57e141c3bb3b27729c6dff25fd"
+    },
+    {
+      "path": "docs/planning/workbench-batch-browser-rev3/complete.png",
+      "sha256": "be5e8ad6268892100a5ec291017feb1cd18efb4bb523500efe7aa44970250795"
+    },
+    {
+      "path": "docs/planning/workbench-batch-browser-rev3/development-verifier-before-code-elements.mjs",
+      "sha256": "3e63e3872b68ec4b65c60b967f9e06f68038373671e60a773037ab9189f434cc"
+    }
+  ],
+  "roles": 3,
+  "prefixes": 37,
+  "expectedReportSha256": "7b94f4d16e77cf5f0124114c584a881aeeb3f6a3d5ae76a59b1577ab6cf66bdf",
+  "expectedReportBytes": 64671,
+  "previewCharacters": 64000,
+  "scope": "All37 displayed save/expected hashes match independent native-backed execution; first64000 export characters match exactly. Full download transport timed out and remains unverified. No all504-role browser or full export transport claim."
+}

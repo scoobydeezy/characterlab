@@ -1,7 +1,7 @@
 /** Versioned diagnostic capabilities; none of these objects is simulation authority. */
 export const EXPERIMENT_REGISTRY_VERSION = 'workbench-experiments/0.12';
 export type ExperimentId = 'values' | 'reason' | 'general' | 'epi' | 'learn' | 'belief' | 'affect';
-export type BatchExperimentId = Exclude<ExperimentId, 'general' | 'belief' | 'affect'>;
+export type BatchExperimentId = Exclude<ExperimentId, 'general'>;
 export interface InspectionCapabilities {
   committedStep: {supported: true; boundary: string};
   checkpoint: {supported: true; authentication: string};
@@ -52,6 +52,13 @@ export interface BatchJob {
 }
 /** The common transport intentionally exposes no mutable runtime or private evaluator. */
 export async function createBatchRun(job: BatchJob): Promise<InspectableBatchRun> {
+  if(job.experimentId==='belief'||job.experimentId==='affect'){
+    const {default:catalog}=await import('./batchCatalogV3.json');
+    const frozen=catalog.jobs.find(j=>j.id===job.id);
+    if(!frozen||(['experimentId','name','seed','law','appraisal','numeric','expectedSaveHashes'] as const).some(k=>JSON.stringify((frozen as BatchJob)[k])!==JSON.stringify(job[k])))throw Error('Batch job differs from frozen BELIEF/AFFECT declaration');
+    const run=job.experimentId==='belief'?await (await import('./beliefAdapter')).BeliefWorkbenchRun.create(job.name):await (await import('./affectSession')).createAffectInspection(job.name);
+    return {advance:()=>run.advance(),view:()=>{const {prefix,complete,clock,modelHash,runHash,stateHash,saveHash}=run.snapshot();return {prefix,total:frozen.expectedSaveHashes.length-1,complete,clock,modelHash,runHash,stateHash,saveHash};}};
+  }
   if(job.experimentId==='epi'||job.experimentId==='learn'){
     if(job.seed!==(job.experimentId==='epi'?19:0)||![1,2].includes(job.numeric!)||job.appraisal!==undefined)throw Error('Invalid frozen batch profile');
     const {canonicalDecode,RecordSchemaRegistry}=await import('../substrate/canonicalEncoding'),{fromHex}=await import('./canonical');

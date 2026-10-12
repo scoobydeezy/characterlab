@@ -1,0 +1,1158 @@
+{
+  "version": "workbench-batch-export/0.3",
+  "registryVersion": "workbench-experiments/0.12",
+  "catalogVersion": "workbench-batch-catalog/0.3",
+  "catalogSources": [
+    {
+      "path": "src/workbench/batchCatalogV2.json",
+      "sha256": "e60db547f390ac2d8f24abe478c15c58fd6998acf752e10f243a9addd5119d5a"
+    },
+    {
+      "path": "src/workbench/batchCatalog.json",
+      "sha256": "49c72acde85d1e54fc1f4af9399628430ca6cf394c3da82571fc53d75ca25e37"
+    },
+    {
+      "path": "docs/planning/values-integration-matrix-rev1/plan.json",
+      "sha256": "8eeea39b56871b98c8ae19541a8f736ad1b93010ad8f47bc29de685b15b39e7c"
+    },
+    {
+      "path": "docs/planning/workbench-values-parity-rev1/receipt.json",
+      "sha256": "635825f480277232da89cb36a1a7f10f8ff9d4599df50ea08bb44990dea4c2d1"
+    },
+    {
+      "path": "docs/planning/REASON_PUBLIC_EXPERIMENT_PLAN_REV3.json",
+      "sha256": "9c174cf009a9490612f849834da0dd5900096ae5f4d1515e4fd93ec99f5a7aa1"
+    },
+    {
+      "path": "docs/planning/workbench-reason-parity-rev2/receipt.json",
+      "sha256": "ec850ca930c927add3f9464540ee66f1a53800b18e7b55e5693ffea6fef58e49"
+    },
+    {
+      "path": "src/workbench/valuesFixtures.json",
+      "sha256": "d88ae60082a9cf2dbb76c4581987c0574f1874fb1fe6280cc66f58e1dd6cbf36"
+    },
+    {
+      "path": "src/workbench/reasonFixtures.json",
+      "sha256": "9ae947053d1255d61afe928a96a5b0152778239b3d76163598b468eb35824301"
+    },
+    {
+      "path": "docs/planning/EPI_PUBLIC_EXPERIMENT_PLAN_REV1.json",
+      "sha256": "68b23645b42d7b37deb436e77d21b6a24c2d50651923e93142ceac9099b0ee34"
+    },
+    {
+      "path": "docs/planning/workbench-epi-parity-rev1/receipt.json",
+      "sha256": "b34abfd0f3724efc480bd6e9585b7413b7512e8bc2b75757a03b56faea831504"
+    },
+    {
+      "path": "docs/planning/LEARN_PUBLIC_EXPERIMENT_PLAN_REV1.json",
+      "sha256": "6a2244bc23b83a9c53ae9e65baaab250545bdbb3506cf410159eee0565f6cf5d"
+    },
+    {
+      "path": "docs/planning/workbench-learn-parity-rev1/receipt.json",
+      "sha256": "7b25b0deee291c2fe4c456625971197afa705d5b740ddbb95bd02773199abbcf"
+    },
+    {
+      "path": "docs/planning/BELIEF_EXPERIMENT_PLAN_REV1.json",
+      "sha256": "32aa1927f68c2030a6274f2b02f26bf6e3efdd4e3b7d4a5afa22e554fbbe7d8f"
+    },
+    {
+      "path": "docs/planning/workbench-belief-parity-rev1/receipt.json",
+      "sha256": "f960488028776c5a353076fed081c6a70c5b57be85302dd8f01d6304d73a054a"
+    },
+    {
+      "path": "docs/planning/AFFECT_PUBLIC_EXPERIMENT_PLAN_REV1.json",
+      "sha256": "519ce7ac58c0e01c17706ca89c14509323af1a1e2eafa00ff29e579659b2da89"
+    },
+    {
+      "path": "docs/planning/workbench-affect-parity-rev1/receipt.json",
+      "sha256": "12eb49a5aef60eb7ab84826f1fefebc013ba36076465daa98a78b45a928fa47d"
+    },
+    {
+      "path": "src/workbench/affectSupplementFixtures.json",
+      "sha256": "10ad14cca63165f4baf9625c400fad5c3b22e4a3d294e0cb47ab67837f8cc777"
+    },
+    {
+      "path": "docs/planning/workbench-affect-supplements-rev1/receipt.json",
+      "sha256": "9d768172c67a24e5413e6f3d8ecd32c1577db24c7f97fc6cb8162186facac85e"
+    },
+    {
+      "path": "src/workbench/affectFixtures.json",
+      "sha256": "047aaf397de040c7ca208ff3a43d9fdd847820badcbae4c84101bc637dd6b926"
+    }
+  ],
+  "resourceLimits": {
+    "jobs": 504,
+    "prefixesPerJob": 33,
+    "simultaneousRuns": 1
+  },
+  "comparisonPolicy": "Each prefix is compared only with its own exact frozen program/model/seed. No cross-model semantic equivalence or causal necessity is inferred.",
+  "scope": "Six admitted public seams; supplementary AFFECT rows are execution roles, not additional unique main programs. Full corpus and language acceptance remain open.",
+  "originals": {
+    "belief": {
+      "initialState": "0900",
+      "runSeed": "0707070707070707070707070707070707070707070707070707070707070707",
+      "modelFreeze": "docs/planning/campaign3-belief-model-rev1/FREEZE.json",
+      "modelFreezeSha256": "29472b3dad9c126948e7db504950ad4071b61cb99128aa00ea8f2f2d30259c10",
+      "runs": [
+        {
+          "name": "misleading-law-1",
+          "caseName": "misleading",
+          "law": 1,
+          "goal": -1,
+          "orderedInputs": "07090ae005010201010302020107010adf05010701010b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d650201010301000401010501010601010701010ae005010201010304020107010adf05010701010b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d650201010301000401010501010601010701010ae005010201010306020107010adf05010701010b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d650201010301000401010501010601010701010ae005010201010308020107010adf05010701010b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d650201010301000401010501010601010701010ae00501020101030a020107010adf05010701010b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d650201010301000401010501010601010701010ae00501020101030c020107010adf05010701010b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d650201010301000401010501010601010701010ae00501020101030e020107010adf05010701010b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d650201010301000401010501010601010701010ae005010201010310020107010adf05010701010b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d650201010301000401010501010601010701010ae00501020101031202010700"
+        }
+      ]
+    },
+    "affect": {
+      "runs": [
+        {
+          "name": "baseline",
+          "model": "candidate-2-feedback-false",
+          "seed": 0,
+          "orderedInputs": "070b0aed0501020101030202010aec0501100101020002010201030101040101050101060102010701010801010901010a01010b01000c0102010d01010e010600010f01060201100102020aed0501020101030402010aec0501100101020002010202030101040101050101060102010701010801010901010a01010b01000c0102010d01010e010600010f01060201100102020aed0501020101030602010aec0501100101020002010203030101040101050101060102010701010801010901010a01010b01000c0102010d01010e010600010f01060201100102020aed0501020101030802010aec0501100101020102010201030101040101050101060102010701010801010901010a01010b01000c0102010d01010e010600010f01060201100102020aed0501020101030a02010aec0501100101020102010202030101040101050101060102010701010801010901010a01010b01000c0102010d01010e010600010f01060201100102020aed0501020101030c02010aec0501100101020102010203030101040101050101060102010701010801010901010a01010b01000c0102010d01010e010600010f01060201100102020aed0501020101030e02010aec0501100101020102010201030101040101050101060102020701010801010901010a01000b01000c0102010d01010e010600010f01060201100102020aed0501020101031002010aec0501100101020102010202030101040101050101060102020701010801010901010a01000b01000c0102010d01010e010600010f01060201100102020aed0501020101031202010aec0501100101020102010203030101040101050101060102020701010801010901010a01000b01000c0102010d01010e010600010f01060201100102020aed0501020101031402000aed050102010103160200"
+        }
+      ],
+      "supplementaryRuns": [
+        {
+          "id": "interior/candidate-3-feedback-true",
+          "name": "candidate-3-feedback-true",
+          "model": "candidate-3-feedback-true",
+          "seed": 0,
+          "orderedInputs": "070e0aed0501020101030202010aec0501100101020002010201030101040101050101060102010701010801010901010a01010b01000c0102010d01010e010600010f01060201100102020aed0501020101030402010aec0501100101020002010202030101040101050101060102010701010801010901010a01010b01000c0102010d01010e010600010f01060201100102020aed0501020101030602010aec0501100101020002010203030101040101050101060102010701010801010901010a01010b01000c0102010d01010e010600010f01060201100102020aed0501020101030802010aec0501100101020002010201030101040101050101060102010701010801010901010a01000b01000c0102010d01010e010600010f01060201100102020aed0501020101030a02010aec0501100101020002010202030101040101050101060102010701010801010901010a01000b01000c0102010d01010e010600010f01060201100102020aed0501020101030c02010aec0501100101020002010203030101040101050101060102010701010801010901010a01000b01000c0102010d01010e010600010f01060201100102020aed0501020101030e02010aec0501100101020102010201030101040101050101060102010701010801010901010a01010b01000c0102010d01010e010600010f01060201100102020aed0501020101031002010aec0501100101020102010202030101040101050101060102010701010801010901010a01010b01000c0102010d01010e010600010f01060201100102020aed0501020101031202010aec0501100101020102010203030101040101050101060102010701010801010901010a01010b01000c0102010d01010e010600010f01060201100102020aed0501020101031402010aec0501100101020102010201030101040101050101060102020701010801010901010a01010b01000c0102010d01010e010600010f01060201100102020aed0501020101031602010aec0501100101020102010202030101040101050101060102020701010801010901010a01010b01000c0102010d01010e010600010f01060201100102020aed0501020101031802010aec0501100101020102010203030101040101050101060102020701010801010901010a01010b01000c0102010d01010e010600010f01060201100102020aed0501020101031a02000aed0501020101031c0200",
+          "runIdentity": "0a68010401010a6701060101051b6166666563742d7075626c69632f302e312d63616e64696461746502010a6401020101051b6166666563742d7075626c69632f302e312d63616e6469646174650201042033fced05512bd07caca4e91213b9eb4d7b0c9f42dc19592a06e7641429a0f0c403010a6501020101051b6166666563742d7075626c69632f302e312d63616e646964617465020104205ac118febf80a43dd136297eb3cf469a3367e41b7db98407fc0612df2581809e040105236166666563742d65786163742d726174696f6e616c2f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101051b6166666563742d7075626c69632f302e312d63616e6469646174650201042087c85c32b78b7f3d3f1388530d487b7b85a79bea85fc01e223d6cbe2bb626b5a02010420b7b1f740647434110e3e2bd2d581679cca5eb68484e944b3466458db2d61a859030104207749a2fddfe3d08e6197b9a0936a796f84c78600322ed7279eb86f3ee3f6b5d9040104200000000000000000000000000000000000000000000000000000000000000000"
+        }
+      ],
+      "models": [
+        {
+          "name": "candidate-2-feedback-false",
+          "settings": {
+            "candidate": 2,
+            "controlLaw": 1,
+            "learningLaw": 1,
+            "feedback": false,
+            "severity": 1,
+            "obligation": 1,
+            "safety": 1,
+            "execution": true
+          },
+          "modelIdentity": "0a6701060101051b6166666563742d7075626c69632f302e312d63616e64696461746502010a6401020101051b6166666563742d7075626c69632f302e312d63616e6469646174650201042033fced05512bd07caca4e91213b9eb4d7b0c9f42dc19592a06e7641429a0f0c403010a6501020101051b6166666563742d7075626c69632f302e312d63616e64696461746502010420e9cf4b714f13a732bc702231bcbe3d66be0ffc8451c312f807a1c540faa878fd040105236166666563742d65786163742d726174696f6e616c2f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101051b6166666563742d7075626c69632f302e312d63616e6469646174650201042087c85c32b78b7f3d3f1388530d487b7b85a79bea85fc01e223d6cbe2bb626b5a",
+          "initialState": "09020a9701010201010a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f73616665747902010af402010301010201020003000a9701010201010a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e02010af40201030101020102000300"
+        },
+        {
+          "name": "candidate-3-feedback-true",
+          "settings": {
+            "candidate": 3,
+            "controlLaw": 1,
+            "learningLaw": 1,
+            "feedback": true,
+            "severity": 1,
+            "obligation": 1,
+            "safety": 1,
+            "execution": true
+          },
+          "modelIdentity": "0a6701060101051b6166666563742d7075626c69632f302e312d63616e64696461746502010a6401020101051b6166666563742d7075626c69632f302e312d63616e6469646174650201042033fced05512bd07caca4e91213b9eb4d7b0c9f42dc19592a06e7641429a0f0c403010a6501020101051b6166666563742d7075626c69632f302e312d63616e646964617465020104205ac118febf80a43dd136297eb3cf469a3367e41b7db98407fc0612df2581809e040105236166666563742d65786163742d726174696f6e616c2f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101051b6166666563742d7075626c69632f302e312d63616e6469646174650201042087c85c32b78b7f3d3f1388530d487b7b85a79bea85fc01e223d6cbe2bb626b5a",
+          "initialState": "09020a9701010201010a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f73616665747902010af402010301010201020003000a9701010201010a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e02010af40201030101020102000300"
+        }
+      ],
+      "references": [
+        {
+          "path": "docs/planning/AFFECT_PUBLIC_EXPERIMENT_PLAN_REV1.json",
+          "sha256": "519ce7ac58c0e01c17706ca89c14509323af1a1e2eafa00ff29e579659b2da89"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/FREEZE.json",
+          "sha256": "43475f8a7ab42137a1be57f1e56f01cbbe0e3aa414d82559cd81177afa1d8889"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-1-feedback-false/parameters.cenc.hex",
+          "sha256": "089acf552bfc1116a53dd567bda2206efbe2eb23665717c143879855a8f92ab4"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-1-feedback-false/content.cenc.hex",
+          "sha256": "4f009d69fc1df42a380d45e8eb9e0b73f067defea58808f8ca7d193f057f4807"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-1-feedback-false/registry.cenc.hex",
+          "sha256": "aec819a3b87f365705855113d93e50802fa3b8fa0f9d7d484812d29eeea1b320"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-1-feedback-false/model-identity.cenc.hex",
+          "sha256": "fc3876f598e59ddd8da375fcf8f4fd08d7b13d4661b09d8bc915778a379baeaa"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-1-feedback-false/initial-state.cenc.hex",
+          "sha256": "02e69e0e1daa778a0598c2bb38f167eba8eb6e4ce651267e3f0ddef1296bfdbb"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-1-feedback-true/parameters.cenc.hex",
+          "sha256": "e5d3aed640c99f11579e22a252617e8d560d25dda145746d6e8a03c06054715f"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-1-feedback-true/content.cenc.hex",
+          "sha256": "4f009d69fc1df42a380d45e8eb9e0b73f067defea58808f8ca7d193f057f4807"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-1-feedback-true/registry.cenc.hex",
+          "sha256": "aec819a3b87f365705855113d93e50802fa3b8fa0f9d7d484812d29eeea1b320"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-1-feedback-true/model-identity.cenc.hex",
+          "sha256": "fc38a996746e092cf94b09ffc93497d1d4b6e556e99fa5ae8fcdb8fe76857456"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-1-feedback-true/initial-state.cenc.hex",
+          "sha256": "02e69e0e1daa778a0598c2bb38f167eba8eb6e4ce651267e3f0ddef1296bfdbb"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-2-feedback-false/parameters.cenc.hex",
+          "sha256": "0d382f15d64824745aac035708109e3f2d7f504ebdb6cd63dbe4f78a4bc244d9"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-2-feedback-false/content.cenc.hex",
+          "sha256": "4f009d69fc1df42a380d45e8eb9e0b73f067defea58808f8ca7d193f057f4807"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-2-feedback-false/registry.cenc.hex",
+          "sha256": "aec819a3b87f365705855113d93e50802fa3b8fa0f9d7d484812d29eeea1b320"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-2-feedback-false/model-identity.cenc.hex",
+          "sha256": "3e01ec5d891686c86f7b7cd189a3e2c9b3dfbbd53514e40a85dbebdab58dc1d3"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-2-feedback-false/initial-state.cenc.hex",
+          "sha256": "02e69e0e1daa778a0598c2bb38f167eba8eb6e4ce651267e3f0ddef1296bfdbb"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-2-feedback-true/parameters.cenc.hex",
+          "sha256": "7b4592861c11856fe2ae4bdc94d7fb4d85f2301a07f6861341c148bd4db4cd15"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-2-feedback-true/content.cenc.hex",
+          "sha256": "4f009d69fc1df42a380d45e8eb9e0b73f067defea58808f8ca7d193f057f4807"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-2-feedback-true/registry.cenc.hex",
+          "sha256": "aec819a3b87f365705855113d93e50802fa3b8fa0f9d7d484812d29eeea1b320"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-2-feedback-true/model-identity.cenc.hex",
+          "sha256": "a45fb004ce92225d39012abb75044d55a9684e4fba5768fe95a66adc83400844"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-2-feedback-true/initial-state.cenc.hex",
+          "sha256": "02e69e0e1daa778a0598c2bb38f167eba8eb6e4ce651267e3f0ddef1296bfdbb"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-3-feedback-false/parameters.cenc.hex",
+          "sha256": "09101572f62803ce0a42be8976bbc2495d875278f9ad97bfb27ecfb0e9f9b769"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-3-feedback-false/content.cenc.hex",
+          "sha256": "4f009d69fc1df42a380d45e8eb9e0b73f067defea58808f8ca7d193f057f4807"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-3-feedback-false/registry.cenc.hex",
+          "sha256": "aec819a3b87f365705855113d93e50802fa3b8fa0f9d7d484812d29eeea1b320"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-3-feedback-false/model-identity.cenc.hex",
+          "sha256": "617063061450779b64e78cb3b3159b1da5189c71e052788d26b0c0d5b897708d"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-3-feedback-false/initial-state.cenc.hex",
+          "sha256": "02e69e0e1daa778a0598c2bb38f167eba8eb6e4ce651267e3f0ddef1296bfdbb"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-3-feedback-true/parameters.cenc.hex",
+          "sha256": "fe9f6eaa87a78043290799d6fe985b02aadc6621ed83d1ce0d285157e7ffefe7"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-3-feedback-true/content.cenc.hex",
+          "sha256": "4f009d69fc1df42a380d45e8eb9e0b73f067defea58808f8ca7d193f057f4807"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-3-feedback-true/registry.cenc.hex",
+          "sha256": "aec819a3b87f365705855113d93e50802fa3b8fa0f9d7d484812d29eeea1b320"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-3-feedback-true/model-identity.cenc.hex",
+          "sha256": "d12e7f55e178fc5c5ef791821bf1247f7164766465e6a45e2c37b5668ab5f5f3"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-3-feedback-true/initial-state.cenc.hex",
+          "sha256": "02e69e0e1daa778a0598c2bb38f167eba8eb6e4ce651267e3f0ddef1296bfdbb"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/severity-0/parameters.cenc.hex",
+          "sha256": "8121fa59e67c05ef466b781969fd49a04ac0147a9f471483f84e345fc54bd60e"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/severity-0/content.cenc.hex",
+          "sha256": "4f009d69fc1df42a380d45e8eb9e0b73f067defea58808f8ca7d193f057f4807"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/severity-0/registry.cenc.hex",
+          "sha256": "aec819a3b87f365705855113d93e50802fa3b8fa0f9d7d484812d29eeea1b320"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/severity-0/model-identity.cenc.hex",
+          "sha256": "1ac96bebd3112c38c27b1a1ddc05081be8362baddef5087e2195e80af9ef4d77"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/severity-0/initial-state.cenc.hex",
+          "sha256": "02e69e0e1daa778a0598c2bb38f167eba8eb6e4ce651267e3f0ddef1296bfdbb"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/severity-0.5/parameters.cenc.hex",
+          "sha256": "a626a22db7d10a8b1448ee948727d2716b4643652526fb52e79ad0180f5b283f"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/severity-0.5/content.cenc.hex",
+          "sha256": "4f009d69fc1df42a380d45e8eb9e0b73f067defea58808f8ca7d193f057f4807"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/severity-0.5/registry.cenc.hex",
+          "sha256": "aec819a3b87f365705855113d93e50802fa3b8fa0f9d7d484812d29eeea1b320"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/severity-0.5/model-identity.cenc.hex",
+          "sha256": "ad3ef61efadf25df939e8274dc8f63720ed2609e153ac893beefaa38cd22f2ca"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/severity-0.5/initial-state.cenc.hex",
+          "sha256": "02e69e0e1daa778a0598c2bb38f167eba8eb6e4ce651267e3f0ddef1296bfdbb"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/obligation-0/parameters.cenc.hex",
+          "sha256": "c476c8e05bdca766d17d3d1a381a4c0e484e3c164b8fe77f65d409b72e0a5a25"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/obligation-0/content.cenc.hex",
+          "sha256": "4f009d69fc1df42a380d45e8eb9e0b73f067defea58808f8ca7d193f057f4807"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/obligation-0/registry.cenc.hex",
+          "sha256": "aec819a3b87f365705855113d93e50802fa3b8fa0f9d7d484812d29eeea1b320"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/obligation-0/model-identity.cenc.hex",
+          "sha256": "0b2ecf934bf3746a1381ac529efb90ed16615ef67996d27195615016b9ae5b37"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/obligation-0/initial-state.cenc.hex",
+          "sha256": "02e69e0e1daa778a0598c2bb38f167eba8eb6e4ce651267e3f0ddef1296bfdbb"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/obligation-0.1/parameters.cenc.hex",
+          "sha256": "45a9dcf1c3241d1dad6f85145565823c20c28a69989e33d1cdb25568bc9e219e"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/obligation-0.1/content.cenc.hex",
+          "sha256": "4f009d69fc1df42a380d45e8eb9e0b73f067defea58808f8ca7d193f057f4807"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/obligation-0.1/registry.cenc.hex",
+          "sha256": "aec819a3b87f365705855113d93e50802fa3b8fa0f9d7d484812d29eeea1b320"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/obligation-0.1/model-identity.cenc.hex",
+          "sha256": "4546dd1a7d1233aacf0803d9ae21b3c8525f4235fd35fe34438e441ee335ef8f"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/obligation-0.1/initial-state.cenc.hex",
+          "sha256": "02e69e0e1daa778a0598c2bb38f167eba8eb6e4ce651267e3f0ddef1296bfdbb"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/obligation-10/parameters.cenc.hex",
+          "sha256": "bfe5d77530ff2cdb39cccbe7853f27561596f8782c87cb46ba4e6ad9cebedc15"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/obligation-10/content.cenc.hex",
+          "sha256": "4f009d69fc1df42a380d45e8eb9e0b73f067defea58808f8ca7d193f057f4807"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/obligation-10/registry.cenc.hex",
+          "sha256": "aec819a3b87f365705855113d93e50802fa3b8fa0f9d7d484812d29eeea1b320"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/obligation-10/model-identity.cenc.hex",
+          "sha256": "29ac42fc1709a5ea6ecb36bfdc0dd077885b7248a06b5a524f3b79adacf32e0a"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/obligation-10/initial-state.cenc.hex",
+          "sha256": "02e69e0e1daa778a0598c2bb38f167eba8eb6e4ce651267e3f0ddef1296bfdbb"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/learning-2/parameters.cenc.hex",
+          "sha256": "9a2106653614666204f9363ddfcf8b4abbded019f00947e6133829cb5948b686"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/learning-2/content.cenc.hex",
+          "sha256": "4f009d69fc1df42a380d45e8eb9e0b73f067defea58808f8ca7d193f057f4807"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/learning-2/registry.cenc.hex",
+          "sha256": "aec819a3b87f365705855113d93e50802fa3b8fa0f9d7d484812d29eeea1b320"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/learning-2/model-identity.cenc.hex",
+          "sha256": "b9177437c41aa4f014c1232bb47ee2fde7e5f8d0c12e695256416ff96c195185"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/learning-2/initial-state.cenc.hex",
+          "sha256": "02e69e0e1daa778a0598c2bb38f167eba8eb6e4ce651267e3f0ddef1296bfdbb"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/learning-3/parameters.cenc.hex",
+          "sha256": "7a343ca7a2d8aabad0815ccab101d2ec4989c428f83149de36092261950703f5"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/learning-3/content.cenc.hex",
+          "sha256": "4f009d69fc1df42a380d45e8eb9e0b73f067defea58808f8ca7d193f057f4807"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/learning-3/registry.cenc.hex",
+          "sha256": "aec819a3b87f365705855113d93e50802fa3b8fa0f9d7d484812d29eeea1b320"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/learning-3/model-identity.cenc.hex",
+          "sha256": "eda48a66135d943ef4ea8a4e185167e6775b386548d2fa240d002eb991514fcc"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/learning-3/initial-state.cenc.hex",
+          "sha256": "02e69e0e1daa778a0598c2bb38f167eba8eb6e4ce651267e3f0ddef1296bfdbb"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/absolute-control/parameters.cenc.hex",
+          "sha256": "e4575095c66393a8d87798204aca3073426bc51e6dd75367fc205169a104e95e"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/absolute-control/content.cenc.hex",
+          "sha256": "4f009d69fc1df42a380d45e8eb9e0b73f067defea58808f8ca7d193f057f4807"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/absolute-control/registry.cenc.hex",
+          "sha256": "aec819a3b87f365705855113d93e50802fa3b8fa0f9d7d484812d29eeea1b320"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/absolute-control/model-identity.cenc.hex",
+          "sha256": "f3c9907f414e6418b5be38ddd00b0b7fb5571daabb99b13899c99fbbbfff5478"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/absolute-control/initial-state.cenc.hex",
+          "sha256": "02e69e0e1daa778a0598c2bb38f167eba8eb6e4ce651267e3f0ddef1296bfdbb"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/no-safety-base/parameters.cenc.hex",
+          "sha256": "3a00f681bc554894f86e1f4e5da5f55ae20af22ab95398178a85ccb28d265310"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/no-safety-base/content.cenc.hex",
+          "sha256": "4f009d69fc1df42a380d45e8eb9e0b73f067defea58808f8ca7d193f057f4807"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/no-safety-base/registry.cenc.hex",
+          "sha256": "aec819a3b87f365705855113d93e50802fa3b8fa0f9d7d484812d29eeea1b320"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/no-safety-base/model-identity.cenc.hex",
+          "sha256": "620c2d0f78ca975d83d9399d279efce57ff6b629092d5f6741e8c81677c6d487"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/no-safety-base/initial-state.cenc.hex",
+          "sha256": "02e69e0e1daa778a0598c2bb38f167eba8eb6e4ce651267e3f0ddef1296bfdbb"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/blocked-execution/parameters.cenc.hex",
+          "sha256": "6ce4edc9f5bdf5757e7b0381ccb59772f518838f1b51a7694e53d82f3dbedd3c"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/blocked-execution/content.cenc.hex",
+          "sha256": "4f009d69fc1df42a380d45e8eb9e0b73f067defea58808f8ca7d193f057f4807"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/blocked-execution/registry.cenc.hex",
+          "sha256": "aec819a3b87f365705855113d93e50802fa3b8fa0f9d7d484812d29eeea1b320"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/blocked-execution/model-identity.cenc.hex",
+          "sha256": "d17acc68bbea1fdb258e2c076836504496b95f90447139e7ef6cf185b2d8294d"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/blocked-execution/initial-state.cenc.hex",
+          "sha256": "02e69e0e1daa778a0598c2bb38f167eba8eb6e4ce651267e3f0ddef1296bfdbb"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-1-severity-half/parameters.cenc.hex",
+          "sha256": "f80e7e0b33ea958157cd172d1be48dcfa514763530ee8c0618ff311805846fb1"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-1-severity-half/content.cenc.hex",
+          "sha256": "4f009d69fc1df42a380d45e8eb9e0b73f067defea58808f8ca7d193f057f4807"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-1-severity-half/registry.cenc.hex",
+          "sha256": "aec819a3b87f365705855113d93e50802fa3b8fa0f9d7d484812d29eeea1b320"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-1-severity-half/model-identity.cenc.hex",
+          "sha256": "6a7a9c2064842d96b4f11915de139140b1e1619fea94b88021857307f32462a1"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-1-severity-half/initial-state.cenc.hex",
+          "sha256": "02e69e0e1daa778a0598c2bb38f167eba8eb6e4ce651267e3f0ddef1296bfdbb"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-3-severity-half/parameters.cenc.hex",
+          "sha256": "e16cd2d6384db28b6910d975396f0f2e3d37eafc9d66833eeb15c8c0a6568c61"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-3-severity-half/content.cenc.hex",
+          "sha256": "4f009d69fc1df42a380d45e8eb9e0b73f067defea58808f8ca7d193f057f4807"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-3-severity-half/registry.cenc.hex",
+          "sha256": "aec819a3b87f365705855113d93e50802fa3b8fa0f9d7d484812d29eeea1b320"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-3-severity-half/model-identity.cenc.hex",
+          "sha256": "384f5a121a5cd49bc01bfa29c8447365de1f9ca396c4903f99bc699ef8d9942e"
+        },
+        {
+          "path": "docs/planning/campaign3-affect-model-rev1/candidate-3-severity-half/initial-state.cenc.hex",
+          "sha256": "02e69e0e1daa778a0598c2bb38f167eba8eb6e4ce651267e3f0ddef1296bfdbb"
+        },
+        {
+          "path": "docs/planning/AFFECT_PUBLIC_EXPERIMENT_REV1_PART0.json",
+          "sha256": "85e42b5c148ddc453d7bc3ce0c865623ba505de0d6e9edcb4196c8ec44096272"
+        },
+        {
+          "path": "docs/planning/AFFECT_PUBLIC_EXPERIMENT_REV1_PART1.json",
+          "sha256": "42194859c877ddaed52540654eb14078934c7700fa068f6008147a0b56608fb4"
+        },
+        {
+          "path": "docs/planning/AFFECT_PUBLIC_EXPERIMENT_REV1_PART2.json",
+          "sha256": "f2eb8f52f3a30d470cfaec84bac39ff3686519cf7323ca15be7f32ed097103f6"
+        },
+        {
+          "path": "docs/planning/AFFECT_PUBLIC_EXPERIMENT_REV1_PART3.json",
+          "sha256": "e449f8f64f9f8136017ced977c1140735bade7802e273d6bb7ab89272c4ed467"
+        },
+        {
+          "path": "docs/planning/AFFECT_PREFIX_CONTRAST_PLAN_REV1.json",
+          "sha256": "dc26ea13634e0fe6f91809abe07560484ea077310eea409eb75812c2d823ca4d"
+        },
+        {
+          "path": "docs/planning/AFFECT_INTERIOR_FEEDBACK_PLAN_REV1.json",
+          "sha256": "e0b2a3d708a18403f7af25151dc3cffe9f961370f2a2dc892e0b662f981e321d"
+        },
+        {
+          "path": "docs/planning/AFFECT_PREFIX_CONTRASTS_REV1.json",
+          "sha256": "3af8d86252a119dc5ad73f0842690f314ba30f42461692938b8043df5344117e"
+        },
+        {
+          "path": "docs/planning/AFFECT_INTERIOR_FEEDBACK_REV1.json",
+          "sha256": "f17e1176e8648b4cbdf694492ac90127924b3ff5af6e9931d283b14eb653f060"
+        },
+        {
+          "path": "src/workbench/affectFixtures.json",
+          "sha256": "047aaf397de040c7ca208ff3a43d9fdd847820badcbae4c84101bc637dd6b926"
+        }
+      ],
+      "identityScope": "Run identities reconstructed from exact frozen original inputs and public model; historical supplementary receipts did not record run identities."
+    },
+    "epi": [],
+    "learn": [],
+    "values": [],
+    "reason": []
+  },
+  "experiments": [
+    {
+      "id": "affect",
+      "label": "AFFECT · appraisal and choice",
+      "seamVersion": "affect-public/0.1-candidate",
+      "corpusScope": "PHEN-AFFECT-001;91 main programs and14 supplementary execution roles",
+      "capabilities": {
+        "committedStep": {
+          "supported": true,
+          "boundary": "One complete native instant."
+        },
+        "checkpoint": {
+          "supported": true,
+          "authentication": "Exact public save, original inputs, model, seed and complete prefix."
+        },
+        "runtimeIntervention": {
+          "supported": false,
+          "reason": "The public contract admits original inputs on a fresh run; it exposes no runtime intervention ingress."
+        },
+        "graph": {
+          "supported": false,
+          "reason": "No native graph in this bounded profile."
+        },
+        "matrix": {
+          "supported": false,
+          "reason": "No native matrix."
+        },
+        "explanation": {
+          "supported": true,
+          "scope": "Recorded AFFECT learning, appraisal and decision evaluations",
+          "qualification": "affect-evaluation-explanation/0.1; corpus language audit in progress. No full character narrative claim."
+        }
+      }
+    },
+    {
+      "id": "belief",
+      "label": "BELIEF · displayed evidence",
+      "seamVersion": "belief-public/0.1-candidate",
+      "corpusScope": "PHEN-BELIEF-001;48 frozen programs",
+      "capabilities": {
+        "committedStep": {
+          "supported": true,
+          "boundary": "One complete native instant."
+        },
+        "checkpoint": {
+          "supported": true,
+          "authentication": "Exact public save, original inputs, model, seed and complete prefix."
+        },
+        "runtimeIntervention": {
+          "supported": false,
+          "reason": "The public contract admits original inputs on a fresh run; it exposes no runtime intervention ingress."
+        },
+        "graph": {
+          "supported": false,
+          "reason": "Scalar belief leaves; no native graph."
+        },
+        "matrix": {
+          "supported": false,
+          "reason": "No native matrix."
+        },
+        "explanation": {
+          "supported": true,
+          "scope": "Recorded BELIEF learning/appraisal descriptions",
+          "qualification": "belief-evaluation-explanation/0.1; full decision narrative remains open."
+        }
+      }
+    }
+  ],
+  "snapshot": {
+    "version": "workbench-batch/0.3",
+    "status": "complete",
+    "current": 3,
+    "results": [
+      {
+        "job": {
+          "id": "belief/misleading-law-1",
+          "experimentId": "belief",
+          "name": "misleading-law-1",
+          "law": 1,
+          "appraisal": "-1",
+          "seed": 7,
+          "expectedSaveHashes": [
+            "4cc0c9f3804a96d8f7167f49316d6695b1fa8f1bcc19cffbae980c8ce5b388f2",
+            "0652664488ec1dd9bcbbddb64ba6051ccf0adddf4d7ae5c91c1ea1f50776e29f",
+            "dcdc2d9b9cdf9343dc255857870292905f9a2bfaf4213754157cd871b746e952",
+            "77f22d287245f30ce6f0fdeb211ec02ffa308797051722702de7af6ca2f7e8d6",
+            "a289c2dfebb61c9178a30c3fc5238ebd0221204cd26b0bdd62bf9d4d9122c6e3",
+            "87bfe9439069dda176ed757485f40fe7567438baac380c8d2ac22f1c3975cdb1",
+            "563c46f1d531ff33c0468bb77e94ec703ef450f9ad0b235059fd9ece9ba3e2ca",
+            "7d817163215e58d06bfa5acbda9a6273b42f9d480c0e613da7e302b8bb0268de",
+            "f29f72807ce6f750d31c71080ac4e718f56a8ace0d1d56b5fd51c6cf952f9606",
+            "99efcb836c7bd2ec2ba64ec0232696acf7efc8ae3bce65ff0ccf9384b2024886"
+          ]
+        },
+        "status": "complete",
+        "prefixes": [
+          {
+            "prefix": 0,
+            "total": 9,
+            "complete": false,
+            "clock": "0",
+            "modelHash": "0ffb0232189e0147964d8fd8ad7d731a2aa1f65af6d0cb31748f904d9bbf55e6",
+            "runHash": "363516aa394383d8acda80f7b036efefef7bddefd990e267f99ac4f0b4e5c218",
+            "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+            "saveHash": "4cc0c9f3804a96d8f7167f49316d6695b1fa8f1bcc19cffbae980c8ce5b388f2",
+            "expectedSaveHash": "4cc0c9f3804a96d8f7167f49316d6695b1fa8f1bcc19cffbae980c8ce5b388f2",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 1,
+            "total": 9,
+            "complete": false,
+            "clock": "1",
+            "modelHash": "0ffb0232189e0147964d8fd8ad7d731a2aa1f65af6d0cb31748f904d9bbf55e6",
+            "runHash": "363516aa394383d8acda80f7b036efefef7bddefd990e267f99ac4f0b4e5c218",
+            "stateHash": "437266ff9701bd7def167338e1253087ce1638747c0afb90ea89697d4801bc65",
+            "saveHash": "0652664488ec1dd9bcbbddb64ba6051ccf0adddf4d7ae5c91c1ea1f50776e29f",
+            "expectedSaveHash": "0652664488ec1dd9bcbbddb64ba6051ccf0adddf4d7ae5c91c1ea1f50776e29f",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 2,
+            "total": 9,
+            "complete": false,
+            "clock": "2",
+            "modelHash": "0ffb0232189e0147964d8fd8ad7d731a2aa1f65af6d0cb31748f904d9bbf55e6",
+            "runHash": "363516aa394383d8acda80f7b036efefef7bddefd990e267f99ac4f0b4e5c218",
+            "stateHash": "95b00bb1be89d3efed5535ba04a2647ddc89a217386864139c5431601c4512ad",
+            "saveHash": "dcdc2d9b9cdf9343dc255857870292905f9a2bfaf4213754157cd871b746e952",
+            "expectedSaveHash": "dcdc2d9b9cdf9343dc255857870292905f9a2bfaf4213754157cd871b746e952",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 3,
+            "total": 9,
+            "complete": false,
+            "clock": "3",
+            "modelHash": "0ffb0232189e0147964d8fd8ad7d731a2aa1f65af6d0cb31748f904d9bbf55e6",
+            "runHash": "363516aa394383d8acda80f7b036efefef7bddefd990e267f99ac4f0b4e5c218",
+            "stateHash": "96497b50ef12471ba329321e54fc419ee079956b4ce2672065e2d275ab0c5abf",
+            "saveHash": "77f22d287245f30ce6f0fdeb211ec02ffa308797051722702de7af6ca2f7e8d6",
+            "expectedSaveHash": "77f22d287245f30ce6f0fdeb211ec02ffa308797051722702de7af6ca2f7e8d6",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 4,
+            "total": 9,
+            "complete": false,
+            "clock": "4",
+            "modelHash": "0ffb0232189e0147964d8fd8ad7d731a2aa1f65af6d0cb31748f904d9bbf55e6",
+            "runHash": "363516aa394383d8acda80f7b036efefef7bddefd990e267f99ac4f0b4e5c218",
+            "stateHash": "bf9d4a0cee51197a8b2842c040abacfdf8958b99c41a94debcbc49bb731f62dd",
+            "saveHash": "a289c2dfebb61c9178a30c3fc5238ebd0221204cd26b0bdd62bf9d4d9122c6e3",
+            "expectedSaveHash": "a289c2dfebb61c9178a30c3fc5238ebd0221204cd26b0bdd62bf9d4d9122c6e3",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 5,
+            "total": 9,
+            "complete": false,
+            "clock": "5",
+            "modelHash": "0ffb0232189e0147964d8fd8ad7d731a2aa1f65af6d0cb31748f904d9bbf55e6",
+            "runHash": "363516aa394383d8acda80f7b036efefef7bddefd990e267f99ac4f0b4e5c218",
+            "stateHash": "1d9c005f6079dbc92e7e19bc314963d9b1ccc24b684db6285e4896f65505abf1",
+            "saveHash": "87bfe9439069dda176ed757485f40fe7567438baac380c8d2ac22f1c3975cdb1",
+            "expectedSaveHash": "87bfe9439069dda176ed757485f40fe7567438baac380c8d2ac22f1c3975cdb1",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 6,
+            "total": 9,
+            "complete": false,
+            "clock": "6",
+            "modelHash": "0ffb0232189e0147964d8fd8ad7d731a2aa1f65af6d0cb31748f904d9bbf55e6",
+            "runHash": "363516aa394383d8acda80f7b036efefef7bddefd990e267f99ac4f0b4e5c218",
+            "stateHash": "87cf62d51ed6466125720fe599aaa393c97854362fe8fb5f884c596604ffa0d1",
+            "saveHash": "563c46f1d531ff33c0468bb77e94ec703ef450f9ad0b235059fd9ece9ba3e2ca",
+            "expectedSaveHash": "563c46f1d531ff33c0468bb77e94ec703ef450f9ad0b235059fd9ece9ba3e2ca",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 7,
+            "total": 9,
+            "complete": false,
+            "clock": "7",
+            "modelHash": "0ffb0232189e0147964d8fd8ad7d731a2aa1f65af6d0cb31748f904d9bbf55e6",
+            "runHash": "363516aa394383d8acda80f7b036efefef7bddefd990e267f99ac4f0b4e5c218",
+            "stateHash": "038c085e2c3bd224b926c6dc288b7399778c23493f2d06ce54de53bdc9cbb065",
+            "saveHash": "7d817163215e58d06bfa5acbda9a6273b42f9d480c0e613da7e302b8bb0268de",
+            "expectedSaveHash": "7d817163215e58d06bfa5acbda9a6273b42f9d480c0e613da7e302b8bb0268de",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 8,
+            "total": 9,
+            "complete": false,
+            "clock": "8",
+            "modelHash": "0ffb0232189e0147964d8fd8ad7d731a2aa1f65af6d0cb31748f904d9bbf55e6",
+            "runHash": "363516aa394383d8acda80f7b036efefef7bddefd990e267f99ac4f0b4e5c218",
+            "stateHash": "b914699e5323ec22e194813f7cb04c095f95c1e82c1a3b2cf0c9d3fcc79be306",
+            "saveHash": "f29f72807ce6f750d31c71080ac4e718f56a8ace0d1d56b5fd51c6cf952f9606",
+            "expectedSaveHash": "f29f72807ce6f750d31c71080ac4e718f56a8ace0d1d56b5fd51c6cf952f9606",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 9,
+            "total": 9,
+            "complete": true,
+            "clock": "9",
+            "modelHash": "0ffb0232189e0147964d8fd8ad7d731a2aa1f65af6d0cb31748f904d9bbf55e6",
+            "runHash": "363516aa394383d8acda80f7b036efefef7bddefd990e267f99ac4f0b4e5c218",
+            "stateHash": "b914699e5323ec22e194813f7cb04c095f95c1e82c1a3b2cf0c9d3fcc79be306",
+            "saveHash": "99efcb836c7bd2ec2ba64ec0232696acf7efc8ae3bce65ff0ccf9384b2024886",
+            "expectedSaveHash": "99efcb836c7bd2ec2ba64ec0232696acf7efc8ae3bce65ff0ccf9384b2024886",
+            "matchesFrozenSave": true
+          }
+        ]
+      },
+      {
+        "job": {
+          "id": "affect/baseline",
+          "experimentId": "affect",
+          "name": "baseline",
+          "law": "candidate-2-feedback-false",
+          "seed": 0,
+          "expectedSaveHashes": [
+            "b5cdc5820f4a7e4e89ef8a8236b1f31644635641c3492a43113fc1ded7231d6b",
+            "33871d056fedd6368785368d0951f502c8bcb268d0aad66b9a8c44fe2e963bbc",
+            "5513499bb30d07282f21fd6d9adb808dd4e0b0d6403b3aa712c400dc91022284",
+            "4aa8e1028a9668d4dff14ea24674f89e37ae1a7453a6aaba97536f96224cb0d5",
+            "bfa361de4873a6bca9d27c401404d8e05f9f1d7f52ea760cc00c2ff9ee58ba43",
+            "1d5875c95399c78d5dabc7f25b847cfda06ad35911f437c1e8655ec3c0d5711e",
+            "a700f0d3101a2a0155b4b0b46339e066b2391f2dc031414f0406d520237e89f1",
+            "3830b8e2f12e83092a204ba0cf1d175cf49cdeae7a46a2b25d2816ae2ceea120",
+            "bf995a635acfe90dca4ba64c93cd71db60d82dd1a4c2bbfb89307ee1c718a882",
+            "0c46d94ac54f5c1a1641f85ae086880df9a301ac9650e70c490824b8e9e6712d",
+            "fda85d1b1ff1703f0cfd4b9cc3f992155d14da31ef8496b48fe231a2d4b987f6",
+            "c47e3e643b0786406fbf2fc47a76692c9a21fdb4591edc4690b9ad6a02e352c0"
+          ]
+        },
+        "status": "complete",
+        "prefixes": [
+          {
+            "prefix": 0,
+            "total": 11,
+            "complete": false,
+            "clock": "0",
+            "modelHash": "8605e8a55e85c58296326b8b4a3b2fbd9d0b9b2999c85d6288cd77a733e8b900",
+            "runHash": "983d81147c356cab0ae1b5051d5f011df15e30391f09504196899aebbc0cd9d8",
+            "stateHash": "b7b1f740647434110e3e2bd2d581679cca5eb68484e944b3466458db2d61a859",
+            "saveHash": "b5cdc5820f4a7e4e89ef8a8236b1f31644635641c3492a43113fc1ded7231d6b",
+            "expectedSaveHash": "b5cdc5820f4a7e4e89ef8a8236b1f31644635641c3492a43113fc1ded7231d6b",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 1,
+            "total": 11,
+            "complete": false,
+            "clock": "1",
+            "modelHash": "8605e8a55e85c58296326b8b4a3b2fbd9d0b9b2999c85d6288cd77a733e8b900",
+            "runHash": "983d81147c356cab0ae1b5051d5f011df15e30391f09504196899aebbc0cd9d8",
+            "stateHash": "b7b1f740647434110e3e2bd2d581679cca5eb68484e944b3466458db2d61a859",
+            "saveHash": "33871d056fedd6368785368d0951f502c8bcb268d0aad66b9a8c44fe2e963bbc",
+            "expectedSaveHash": "33871d056fedd6368785368d0951f502c8bcb268d0aad66b9a8c44fe2e963bbc",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 2,
+            "total": 11,
+            "complete": false,
+            "clock": "2",
+            "modelHash": "8605e8a55e85c58296326b8b4a3b2fbd9d0b9b2999c85d6288cd77a733e8b900",
+            "runHash": "983d81147c356cab0ae1b5051d5f011df15e30391f09504196899aebbc0cd9d8",
+            "stateHash": "b7b1f740647434110e3e2bd2d581679cca5eb68484e944b3466458db2d61a859",
+            "saveHash": "5513499bb30d07282f21fd6d9adb808dd4e0b0d6403b3aa712c400dc91022284",
+            "expectedSaveHash": "5513499bb30d07282f21fd6d9adb808dd4e0b0d6403b3aa712c400dc91022284",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 3,
+            "total": 11,
+            "complete": false,
+            "clock": "3",
+            "modelHash": "8605e8a55e85c58296326b8b4a3b2fbd9d0b9b2999c85d6288cd77a733e8b900",
+            "runHash": "983d81147c356cab0ae1b5051d5f011df15e30391f09504196899aebbc0cd9d8",
+            "stateHash": "5067ef87c19b7054f36077a50afa3e75b2f76f4ec7574b0dbc5428569ff38ba1",
+            "saveHash": "4aa8e1028a9668d4dff14ea24674f89e37ae1a7453a6aaba97536f96224cb0d5",
+            "expectedSaveHash": "4aa8e1028a9668d4dff14ea24674f89e37ae1a7453a6aaba97536f96224cb0d5",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 4,
+            "total": 11,
+            "complete": false,
+            "clock": "4",
+            "modelHash": "8605e8a55e85c58296326b8b4a3b2fbd9d0b9b2999c85d6288cd77a733e8b900",
+            "runHash": "983d81147c356cab0ae1b5051d5f011df15e30391f09504196899aebbc0cd9d8",
+            "stateHash": "5067ef87c19b7054f36077a50afa3e75b2f76f4ec7574b0dbc5428569ff38ba1",
+            "saveHash": "bfa361de4873a6bca9d27c401404d8e05f9f1d7f52ea760cc00c2ff9ee58ba43",
+            "expectedSaveHash": "bfa361de4873a6bca9d27c401404d8e05f9f1d7f52ea760cc00c2ff9ee58ba43",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 5,
+            "total": 11,
+            "complete": false,
+            "clock": "5",
+            "modelHash": "8605e8a55e85c58296326b8b4a3b2fbd9d0b9b2999c85d6288cd77a733e8b900",
+            "runHash": "983d81147c356cab0ae1b5051d5f011df15e30391f09504196899aebbc0cd9d8",
+            "stateHash": "5067ef87c19b7054f36077a50afa3e75b2f76f4ec7574b0dbc5428569ff38ba1",
+            "saveHash": "1d5875c95399c78d5dabc7f25b847cfda06ad35911f437c1e8655ec3c0d5711e",
+            "expectedSaveHash": "1d5875c95399c78d5dabc7f25b847cfda06ad35911f437c1e8655ec3c0d5711e",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 6,
+            "total": 11,
+            "complete": false,
+            "clock": "6",
+            "modelHash": "8605e8a55e85c58296326b8b4a3b2fbd9d0b9b2999c85d6288cd77a733e8b900",
+            "runHash": "983d81147c356cab0ae1b5051d5f011df15e30391f09504196899aebbc0cd9d8",
+            "stateHash": "50635ce2cef5ee9af37421e382919fc2a19a7db2ff06d46078c794bc52b15136",
+            "saveHash": "a700f0d3101a2a0155b4b0b46339e066b2391f2dc031414f0406d520237e89f1",
+            "expectedSaveHash": "a700f0d3101a2a0155b4b0b46339e066b2391f2dc031414f0406d520237e89f1",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 7,
+            "total": 11,
+            "complete": false,
+            "clock": "7",
+            "modelHash": "8605e8a55e85c58296326b8b4a3b2fbd9d0b9b2999c85d6288cd77a733e8b900",
+            "runHash": "983d81147c356cab0ae1b5051d5f011df15e30391f09504196899aebbc0cd9d8",
+            "stateHash": "50635ce2cef5ee9af37421e382919fc2a19a7db2ff06d46078c794bc52b15136",
+            "saveHash": "3830b8e2f12e83092a204ba0cf1d175cf49cdeae7a46a2b25d2816ae2ceea120",
+            "expectedSaveHash": "3830b8e2f12e83092a204ba0cf1d175cf49cdeae7a46a2b25d2816ae2ceea120",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 8,
+            "total": 11,
+            "complete": false,
+            "clock": "8",
+            "modelHash": "8605e8a55e85c58296326b8b4a3b2fbd9d0b9b2999c85d6288cd77a733e8b900",
+            "runHash": "983d81147c356cab0ae1b5051d5f011df15e30391f09504196899aebbc0cd9d8",
+            "stateHash": "50635ce2cef5ee9af37421e382919fc2a19a7db2ff06d46078c794bc52b15136",
+            "saveHash": "bf995a635acfe90dca4ba64c93cd71db60d82dd1a4c2bbfb89307ee1c718a882",
+            "expectedSaveHash": "bf995a635acfe90dca4ba64c93cd71db60d82dd1a4c2bbfb89307ee1c718a882",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 9,
+            "total": 11,
+            "complete": false,
+            "clock": "9",
+            "modelHash": "8605e8a55e85c58296326b8b4a3b2fbd9d0b9b2999c85d6288cd77a733e8b900",
+            "runHash": "983d81147c356cab0ae1b5051d5f011df15e30391f09504196899aebbc0cd9d8",
+            "stateHash": "08396979556b09bc103fa6c271ee3344aa417b442848ecbc9f9c01fe752524fc",
+            "saveHash": "0c46d94ac54f5c1a1641f85ae086880df9a301ac9650e70c490824b8e9e6712d",
+            "expectedSaveHash": "0c46d94ac54f5c1a1641f85ae086880df9a301ac9650e70c490824b8e9e6712d",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 10,
+            "total": 11,
+            "complete": false,
+            "clock": "10",
+            "modelHash": "8605e8a55e85c58296326b8b4a3b2fbd9d0b9b2999c85d6288cd77a733e8b900",
+            "runHash": "983d81147c356cab0ae1b5051d5f011df15e30391f09504196899aebbc0cd9d8",
+            "stateHash": "08396979556b09bc103fa6c271ee3344aa417b442848ecbc9f9c01fe752524fc",
+            "saveHash": "fda85d1b1ff1703f0cfd4b9cc3f992155d14da31ef8496b48fe231a2d4b987f6",
+            "expectedSaveHash": "fda85d1b1ff1703f0cfd4b9cc3f992155d14da31ef8496b48fe231a2d4b987f6",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 11,
+            "total": 11,
+            "complete": true,
+            "clock": "11",
+            "modelHash": "8605e8a55e85c58296326b8b4a3b2fbd9d0b9b2999c85d6288cd77a733e8b900",
+            "runHash": "983d81147c356cab0ae1b5051d5f011df15e30391f09504196899aebbc0cd9d8",
+            "stateHash": "08396979556b09bc103fa6c271ee3344aa417b442848ecbc9f9c01fe752524fc",
+            "saveHash": "c47e3e643b0786406fbf2fc47a76692c9a21fdb4591edc4690b9ad6a02e352c0",
+            "expectedSaveHash": "c47e3e643b0786406fbf2fc47a76692c9a21fdb4591edc4690b9ad6a02e352c0",
+            "matchesFrozenSave": true
+          }
+        ]
+      },
+      {
+        "job": {
+          "id": "affect/interior/candidate-3-feedback-true",
+          "experimentId": "affect",
+          "name": "interior/candidate-3-feedback-true",
+          "law": "candidate-3-feedback-true",
+          "seed": 0,
+          "expectedSaveHashes": [
+            "44ac95d3f740f4ae5519b8fc459925cde60709d5605d611a04f5c91263334f93",
+            "04e84c99f6f286ae96785c1db04f0e908c3b31cddc3ab6f98f925e53f4ad5605",
+            "ab6279b4a72ce469c4e50e6e47ac6d6405dd753572b16e06eeddc7a477953305",
+            "9c29fa8a60c517327ee24c324dd6c2a6759f22db336efe58b322ed4c4e186774",
+            "47c7bcfecb98f00d0d1a0c62a886cc98a165b27ed8c4c58f307cf91b5325367a",
+            "7131b8f556942db7727c23909d3e8a05c4f5e127a6184941b400600d2f776f53",
+            "5b4011c1a033de5956146d9504bc88d317f7b237e2912115405e8231ba1767f3",
+            "3f4cc2045296987f309fd33efe8a8656c9c082716c289d63686af2c68c6a2867",
+            "a2965122f277c2f4da1f07a94b9fdcdc84cccbc07448b945ee2803767d0dbb0f",
+            "9171b8cfbbe7d944c74a4532cc9a9ff7167bdd3c120304c976dd04d08b05c64f",
+            "687f876184d0b86958abfde5cc663959a3c74edd32ab5c601832f3c4dbef33a5",
+            "6b3bc2d3ee48cb72f6d58ddfd1f580317fd61082c2a11acc10a409f252deb3dc",
+            "9aca90c32277aefb7548fde14f79a2aee224571b4f5017d1f828306e1666049f",
+            "6e6ae64474c1baa003420fd32982fc512600a5204c1fb129b2c6312df8bbc0ef",
+            "1e51b90a36ba5bb1b9132dd985e5d8c8ec119c21bb543f4f6be754dec2b2476d"
+          ]
+        },
+        "status": "complete",
+        "prefixes": [
+          {
+            "prefix": 0,
+            "total": 14,
+            "complete": false,
+            "clock": "0",
+            "modelHash": "917aa6791f5ab1779be88df638fe3b4f32d66acb670e346bb94a51488e3d4e40",
+            "runHash": "4ba23c6b0aec24de73fd1c3866b0626aababd6ecb4e9550a85703b474646a447",
+            "stateHash": "b7b1f740647434110e3e2bd2d581679cca5eb68484e944b3466458db2d61a859",
+            "saveHash": "44ac95d3f740f4ae5519b8fc459925cde60709d5605d611a04f5c91263334f93",
+            "expectedSaveHash": "44ac95d3f740f4ae5519b8fc459925cde60709d5605d611a04f5c91263334f93",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 1,
+            "total": 14,
+            "complete": false,
+            "clock": "1",
+            "modelHash": "917aa6791f5ab1779be88df638fe3b4f32d66acb670e346bb94a51488e3d4e40",
+            "runHash": "4ba23c6b0aec24de73fd1c3866b0626aababd6ecb4e9550a85703b474646a447",
+            "stateHash": "b7b1f740647434110e3e2bd2d581679cca5eb68484e944b3466458db2d61a859",
+            "saveHash": "04e84c99f6f286ae96785c1db04f0e908c3b31cddc3ab6f98f925e53f4ad5605",
+            "expectedSaveHash": "04e84c99f6f286ae96785c1db04f0e908c3b31cddc3ab6f98f925e53f4ad5605",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 2,
+            "total": 14,
+            "complete": false,
+            "clock": "2",
+            "modelHash": "917aa6791f5ab1779be88df638fe3b4f32d66acb670e346bb94a51488e3d4e40",
+            "runHash": "4ba23c6b0aec24de73fd1c3866b0626aababd6ecb4e9550a85703b474646a447",
+            "stateHash": "b7b1f740647434110e3e2bd2d581679cca5eb68484e944b3466458db2d61a859",
+            "saveHash": "ab6279b4a72ce469c4e50e6e47ac6d6405dd753572b16e06eeddc7a477953305",
+            "expectedSaveHash": "ab6279b4a72ce469c4e50e6e47ac6d6405dd753572b16e06eeddc7a477953305",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 3,
+            "total": 14,
+            "complete": false,
+            "clock": "3",
+            "modelHash": "917aa6791f5ab1779be88df638fe3b4f32d66acb670e346bb94a51488e3d4e40",
+            "runHash": "4ba23c6b0aec24de73fd1c3866b0626aababd6ecb4e9550a85703b474646a447",
+            "stateHash": "5067ef87c19b7054f36077a50afa3e75b2f76f4ec7574b0dbc5428569ff38ba1",
+            "saveHash": "9c29fa8a60c517327ee24c324dd6c2a6759f22db336efe58b322ed4c4e186774",
+            "expectedSaveHash": "9c29fa8a60c517327ee24c324dd6c2a6759f22db336efe58b322ed4c4e186774",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 4,
+            "total": 14,
+            "complete": false,
+            "clock": "4",
+            "modelHash": "917aa6791f5ab1779be88df638fe3b4f32d66acb670e346bb94a51488e3d4e40",
+            "runHash": "4ba23c6b0aec24de73fd1c3866b0626aababd6ecb4e9550a85703b474646a447",
+            "stateHash": "5067ef87c19b7054f36077a50afa3e75b2f76f4ec7574b0dbc5428569ff38ba1",
+            "saveHash": "47c7bcfecb98f00d0d1a0c62a886cc98a165b27ed8c4c58f307cf91b5325367a",
+            "expectedSaveHash": "47c7bcfecb98f00d0d1a0c62a886cc98a165b27ed8c4c58f307cf91b5325367a",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 5,
+            "total": 14,
+            "complete": false,
+            "clock": "5",
+            "modelHash": "917aa6791f5ab1779be88df638fe3b4f32d66acb670e346bb94a51488e3d4e40",
+            "runHash": "4ba23c6b0aec24de73fd1c3866b0626aababd6ecb4e9550a85703b474646a447",
+            "stateHash": "5067ef87c19b7054f36077a50afa3e75b2f76f4ec7574b0dbc5428569ff38ba1",
+            "saveHash": "7131b8f556942db7727c23909d3e8a05c4f5e127a6184941b400600d2f776f53",
+            "expectedSaveHash": "7131b8f556942db7727c23909d3e8a05c4f5e127a6184941b400600d2f776f53",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 6,
+            "total": 14,
+            "complete": false,
+            "clock": "6",
+            "modelHash": "917aa6791f5ab1779be88df638fe3b4f32d66acb670e346bb94a51488e3d4e40",
+            "runHash": "4ba23c6b0aec24de73fd1c3866b0626aababd6ecb4e9550a85703b474646a447",
+            "stateHash": "a6d17d84848ce3a757bb8cddaba9241ef73047b3b7345359fa40d9bd8e76a801",
+            "saveHash": "5b4011c1a033de5956146d9504bc88d317f7b237e2912115405e8231ba1767f3",
+            "expectedSaveHash": "5b4011c1a033de5956146d9504bc88d317f7b237e2912115405e8231ba1767f3",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 7,
+            "total": 14,
+            "complete": false,
+            "clock": "7",
+            "modelHash": "917aa6791f5ab1779be88df638fe3b4f32d66acb670e346bb94a51488e3d4e40",
+            "runHash": "4ba23c6b0aec24de73fd1c3866b0626aababd6ecb4e9550a85703b474646a447",
+            "stateHash": "a6d17d84848ce3a757bb8cddaba9241ef73047b3b7345359fa40d9bd8e76a801",
+            "saveHash": "3f4cc2045296987f309fd33efe8a8656c9c082716c289d63686af2c68c6a2867",
+            "expectedSaveHash": "3f4cc2045296987f309fd33efe8a8656c9c082716c289d63686af2c68c6a2867",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 8,
+            "total": 14,
+            "complete": false,
+            "clock": "8",
+            "modelHash": "917aa6791f5ab1779be88df638fe3b4f32d66acb670e346bb94a51488e3d4e40",
+            "runHash": "4ba23c6b0aec24de73fd1c3866b0626aababd6ecb4e9550a85703b474646a447",
+            "stateHash": "a6d17d84848ce3a757bb8cddaba9241ef73047b3b7345359fa40d9bd8e76a801",
+            "saveHash": "a2965122f277c2f4da1f07a94b9fdcdc84cccbc07448b945ee2803767d0dbb0f",
+            "expectedSaveHash": "a2965122f277c2f4da1f07a94b9fdcdc84cccbc07448b945ee2803767d0dbb0f",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 9,
+            "total": 14,
+            "complete": false,
+            "clock": "9",
+            "modelHash": "917aa6791f5ab1779be88df638fe3b4f32d66acb670e346bb94a51488e3d4e40",
+            "runHash": "4ba23c6b0aec24de73fd1c3866b0626aababd6ecb4e9550a85703b474646a447",
+            "stateHash": "52923f622d5bab0e24538117b1756df687221211c92190c056d8e9c171623875",
+            "saveHash": "9171b8cfbbe7d944c74a4532cc9a9ff7167bdd3c120304c976dd04d08b05c64f",
+            "expectedSaveHash": "9171b8cfbbe7d944c74a4532cc9a9ff7167bdd3c120304c976dd04d08b05c64f",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 10,
+            "total": 14,
+            "complete": false,
+            "clock": "10",
+            "modelHash": "917aa6791f5ab1779be88df638fe3b4f32d66acb670e346bb94a51488e3d4e40",
+            "runHash": "4ba23c6b0aec24de73fd1c3866b0626aababd6ecb4e9550a85703b474646a447",
+            "stateHash": "52923f622d5bab0e24538117b1756df687221211c92190c056d8e9c171623875",
+            "saveHash": "687f876184d0b86958abfde5cc663959a3c74edd32ab5c601832f3c4dbef33a5",
+            "expectedSaveHash": "687f876184d0b86958abfde5cc663959a3c74edd32ab5c601832f3c4dbef33a5",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 11,
+            "total": 14,
+            "complete": false,
+            "clock": "11",
+            "modelHash": "917aa6791f5ab1779be88df638fe3b4f32d66acb670e346bb94a51488e3d4e40",
+            "runHash": "4ba23c6b0aec24de73fd1c3866b0626aababd6ecb4e9550a85703b474646a447",
+            "stateHash": "52923f622d5bab0e24538117b1756df687221211c92190c056d8e9c171623875",
+            "saveHash": "6b3bc2d3ee48cb72f6d58ddfd1f580317fd61082c2a11acc10a409f252deb3dc",
+            "expectedSaveHash": "6b3bc2d3ee48cb72f6d58ddfd1f580317fd61082c2a11acc10a409f252deb3dc",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 12,
+            "total": 14,
+            "complete": false,
+            "clock": "12",
+            "modelHash": "917aa6791f5ab1779be88df638fe3b4f32d66acb670e346bb94a51488e3d4e40",
+            "runHash": "4ba23c6b0aec24de73fd1c3866b0626aababd6ecb4e9550a85703b474646a447",
+            "stateHash": "04f174cc0753163312955be3da343267118fbcf28155ff99d9316b721f706856",
+            "saveHash": "9aca90c32277aefb7548fde14f79a2aee224571b4f5017d1f828306e1666049f",
+            "expectedSaveHash": "9aca90c32277aefb7548fde14f79a2aee224571b4f5017d1f828306e1666049f",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 13,
+            "total": 14,
+            "complete": false,
+            "clock": "13",
+            "modelHash": "917aa6791f5ab1779be88df638fe3b4f32d66acb670e346bb94a51488e3d4e40",
+            "runHash": "4ba23c6b0aec24de73fd1c3866b0626aababd6ecb4e9550a85703b474646a447",
+            "stateHash": "04f174cc0753163312955be3da343267118fbcf28155ff99d9316b721f706856",
+            "saveHash": "6e6ae64474c1baa003420fd32982fc512600a5204c1fb129b2c6312df8bbc0ef",
+            "expectedSaveHash": "6e6ae64474c1baa003420fd32982fc512600a5204c1fb129b2c6312df8bbc0ef",
+            "matchesFrozenSave": true
+          },
+          {
+            "prefix": 14,
+            "total": 14,
+            "complete": true,
+            "clock": "14",
+            "modelHash": "917aa6791f5ab1779be88df638fe3b4f32d66acb670e346bb94a514

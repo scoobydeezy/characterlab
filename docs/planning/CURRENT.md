@@ -60,8 +60,10 @@ Prior: OBSERVABILITY_WORKBENCH_BELIEF_UI_PROGRESS.md; four browser control famil
 and complete checkpoint replay PASS. BELIEF language/batch and broader corpus due.
 Prior: OBSERVABILITY_WORKBENCH_BELIEF_LANGUAGE_PROGRESS.md;933 descriptions/
 48 programs/381 prefixes PASS. Full narrative/corpus/batch/entry gates remain.
-Latest: OBSERVABILITY_WORKBENCH_AFFECT_LANGUAGE_PROGRESS.md; evaluation UI/browser PASS;
-105-role/1436-prefix corpus language audit RUNNING, acceptance pending its receipt.
+Latest: OBSERVABILITY_WORKBENCH_BATCH_V3_PROGRESS.md;504 roles enrolled across six
+seams; full3612-prefix qualification RUNNING, acceptance pending its receipt.
+Prior: OBSERVABILITY_WORKBENCH_AFFECT_LANGUAGE_PROGRESS.md;3037 descriptions/
+105 roles/1436 prefixes and bounded evaluation UI/browser PASS.
 Prior: OBSERVABILITY_WORKBENCH_AFFECT_SUPPLEMENTS_PROGRESS.md;14 roles/200 prefixes
 and bounded browser timing PASS; eight declared controls available;
 main91 programs/1236 prefixes PASS; broader controls/language/batch open.

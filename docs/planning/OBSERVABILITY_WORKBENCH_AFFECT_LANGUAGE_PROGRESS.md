@@ -15,7 +15,9 @@ Automatic-mode score placeholders are not presented as rolled results. Selection
 does not establish execution success or an observed consequence.
 
 Comparison0.3 names the renderer and retains descriptions in full snapshots.
-Registry0.12 advertises the bounded explanation scope with the corpus audit pending.
+Registry0.12 advertises the bounded explanation scope; its pending-audit wording
+predates the completed receipt below and will be refreshed after the source-bound
+shared batch qualification finishes.
 No native mathematics, authority, input calendar or save format changes.
 
 Verification completed:
@@ -31,16 +33,14 @@ Verification completed:
 - Evidence restore and research checks pass:0 active/18 conditional/4 closed/
   0 unowned;103 C3 verdicts/4317 reports. No research verdict was amended.
 
-Full language audit remains RUNNING, not accepted. The immutable writer
-`scripts/check-workbench-affect-language.mjs` covers91 main programs and14
-supplementary execution roles,1436 prefixes. Each prefix is compared against the
-prior qualified native save/state/output hashes. It also checks historical
-description stability, exact evaluation provenance, hidden-world and physical
-execution controls, severity/relief learning invariance, timing windows and all
-three interior-feedback contrasts. Partial rendered files in
-`workbench-affect-language-rev1/` are development output until receipt.json exists
-and reports PASS. Do not restart over those immutable files or change bound source
-bytes while the writer is running.
+Full bounded language audit PASS: `workbench-affect-language-rev1/receipt.json`
+binds91 main programs and14 supplementary execution roles,1436 prefixes and3037
+descriptions. Every prefix matches the prior qualified native save/state/output
+hashes. Historical description stability, exact evaluation provenance, hidden-world
+and physical execution controls, severity/relief learning invariance, timing windows
+and all three interior-feedback contrasts pass. The105 rendered artifacts and
+source snapshots are immutable. This qualifies the named evaluation renderer;
+it does not qualify a full character narrative.
 
 Development observations: the initial feedback-disabled wording differed from the
 enabled profile before any feedback record existed; the renderer now uses the
@@ -51,7 +51,8 @@ while the existing server ran; native verification and process completion passed
 
 LOCAL DISPOSITION: explanations report the bounded recorded evaluations; no general
 emotion law, causal necessity, scalar equivalence or full character narrative is
-qualified. Next finish the running audit and record its result, then continue
-BELIEF/AFFECT batch enrollment, wider comparisons and the remaining corpus.
+qualified. BELIEF/AFFECT shared batch enrollment is now implemented and undergoing
+full qualification; see OBSERVABILITY_WORKBENCH_BATCH_V3_PROGRESS.md. Continue
+wider comparisons and the remaining corpus after that receipt.
 Full narrative, export transport, specialized views, architecture participation
 and integrated Campaign4 entry remain required by the accepted plan.
