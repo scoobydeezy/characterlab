@@ -1,7 +1,7 @@
 /** Versioned diagnostic capabilities; none of these objects is simulation authority. */
-export const EXPERIMENT_REGISTRY_VERSION = 'workbench-experiments/0.13';
+export const EXPERIMENT_REGISTRY_VERSION = 'workbench-experiments/0.14';
 export type ExperimentId = 'values' | 'reason' | 'general' | 'epi' | 'learn' | 'belief' | 'affect' | 'decision' | 'commit';
-export type BatchExperimentId = Exclude<ExperimentId, 'general' | 'decision' | 'commit'>;
+export type BatchExperimentId = Exclude<ExperimentId, 'general'>;
 export interface InspectionCapabilities {
   committedStep: {supported: true; boundary: string};
   checkpoint: {supported: true; authentication: string};
@@ -54,11 +54,11 @@ export interface BatchJob {
 }
 /** The common transport intentionally exposes no mutable runtime or private evaluator. */
 export async function createBatchRun(job: BatchJob): Promise<InspectableBatchRun> {
-  if(job.experimentId==='belief'||job.experimentId==='affect'){
-    const {default:catalog}=await import('./batchCatalogV3.json');
+  if(job.experimentId==='belief'||job.experimentId==='affect'||job.experimentId==='decision'||job.experimentId==='commit'){
+    const {default:catalog}=await import('./batchCatalogV4.json');
     const frozen=catalog.jobs.find(j=>j.id===job.id);
-    if(!frozen||(['experimentId','name','seed','law','appraisal','numeric','expectedSaveHashes'] as const).some(k=>JSON.stringify((frozen as BatchJob)[k])!==JSON.stringify(job[k])))throw Error('Batch job differs from frozen BELIEF/AFFECT declaration');
-    const run=job.experimentId==='belief'?await (await import('./beliefAdapter')).BeliefWorkbenchRun.create(job.name):await (await import('./affectSession')).createAffectInspection(job.name);
+    if(!frozen||(['experimentId','name','seed','law','appraisal','numeric','expectedSaveHashes'] as const).some(k=>JSON.stringify((frozen as BatchJob)[k])!==JSON.stringify(job[k])))throw Error('Batch job differs from frozen program declaration');
+    const run=job.experimentId==='decision'?await (await import('./decisionAdapter')).DecisionWorkbenchRun.create(job.name):job.experimentId==='commit'?await (await import('./commitAdapter')).CommitWorkbenchRun.create(job.name):job.experimentId==='belief'?await (await import('./beliefAdapter')).BeliefWorkbenchRun.create(job.name):await (await import('./affectSession')).createAffectInspection(job.name);
     return {advance:()=>run.advance(),view:()=>{const {prefix,complete,clock,modelHash,runHash,stateHash,saveHash}=run.snapshot();return {prefix,total:frozen.expectedSaveHashes.length-1,complete,clock,modelHash,runHash,stateHash,saveHash};}};
   }
   if(job.experimentId==='epi'||job.experimentId==='learn'){

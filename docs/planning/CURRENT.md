@@ -60,12 +60,14 @@ Prior: OBSERVABILITY_WORKBENCH_BELIEF_UI_PROGRESS.md; four browser control famil
 and complete checkpoint replay PASS. BELIEF language/batch and broader corpus due.
 Prior: OBSERVABILITY_WORKBENCH_BELIEF_LANGUAGE_PROGRESS.md;933 descriptions/
 48 programs/381 prefixes PASS. Full narrative/corpus/batch/entry gates remain.
-Latest: OBSERVABILITY_WORKBENCH_COMMIT_UI_PROGRESS.md; COMMIT10/70 native parity,
+Latest: OBSERVABILITY_WORKBENCH_BATCH_V4_PROGRESS.md; eight seams/688 execution
+roles enrolled,4042-prefix qualification RUNNING.13 tests/build PASS; full acceptance pending.
+Prior: OBSERVABILITY_WORKBENCH_COMMIT_UI_PROGRESS.md; COMMIT10/70 native parity,
 observer selection/private lifecycle browser and four tests PASS. DECISION174/360
 native parity, bounded browser replay and259 exact contrast declarations PASS.
 OBSERVABILITY_WORKBENCH_BATCH_V3_PROGRESS.md:504 execution roles/3612 native prefixes
 PASS across six seams. Registry0.13 consolidates DECISION/COMMIT inspection metadata;
-their batch enrollment and natural-language renderers remain due.
+their batch enrollment is now under full qualification; natural-language renderers remain due.
 OBSERVABILITY_WORKBENCH_AFFECT_LANGUAGE_PROGRESS.md:3037 descriptions/1436 prefixes
 PASS, with bounded browser evaluation history checks. Full workbench remains open.
 Campaign4 entry remains gated by the full workbench plan; no reduction work has started.

@@ -1,0 +1,61 @@
+{
+  "status": "PASS COMPLETE COMMIT COHORT BROWSER BATCH",
+  "sources": [
+    {
+      "path": "src/workbench/BatchWorkbench.tsx",
+      "sha256": "899099afb5ec5130e777def711cdb2b84f1ff32f304c2befa6c0f771eeb738f1"
+    },
+    {
+      "path": "src/workbench/batchSession.ts",
+      "sha256": "119f0bf555addad8bb8492d8785b095d6da96c0041b035f797b4c40cedbd0f6a"
+    },
+    {
+      "path": "src/workbench/batchWorker.ts",
+      "sha256": "854e6e0e283d9f3c380fd3c9142ce9bd5f2fbd41b89d38a80b4a54782aa2fd12"
+    },
+    {
+      "path": "src/workbench/batchWorkerClient.ts",
+      "sha256": "e97155c4a23dfd71a83bff0b4b2028d120b403dab046dc2c24477d71adcb87b5"
+    },
+    {
+      "path": "src/workbench/batchCatalogV4.json",
+      "sha256": "569b14b61aacac300ce23b71d0a7c84d62bf70ec42f3554c86ba30b83aa4818c"
+    },
+    {
+      "path": "src/workbench/experimentRegistry.ts",
+      "sha256": "da14f0e31c9017c835159c93885e6bbaf131f2a6234ab2ab11a2b1f750fa92fb"
+    },
+    {
+      "path": "src/workbench/PreparedExport.tsx",
+      "sha256": "4cf14eca7746d3260ce84c7d28532a6e795f4728889080f1cb2115531ed93e19"
+    },
+    {
+      "path": "scripts/check-workbench-batch-v4-browser.mjs",
+      "sha256": "a76d4de29543aed9acc4114b04d6e0a909ede63819bd93ac4f4b499de5912b5f"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "docs/planning/workbench-batch-browser-rev4/preview.txt",
+      "sha256": "ba06b9523ba3ffee312062a263ea68f810bb00122b2ec7cfb6aefd2e20e06694"
+    },
+    {
+      "path": "docs/planning/workbench-batch-browser-rev4/dom.json",
+      "sha256": "39e96a63fef10962f732f0170cdd5cc5687715b230c2c43942d897db4e2887e5"
+    },
+    {
+      "path": "docs/planning/workbench-batch-browser-rev4/prefix-code-elements.json",
+      "sha256": "cc2fd7a56bcd40715f7a6b75425de56be7a6f166e00081ccfb65147e797143d7"
+    },
+    {
+      "path": "docs/planning/workbench-batch-browser-rev4/complete.png",
+      "sha256": "b59f37b2493982994032a02d55d75f78e5d9f7f05969bab7b7eda5bffc80a66c"
+    }
+  ],
+  "roles": 10,
+  "prefixes": 70,
+  "expectedReportSha256": "d344d6414107038f9691fb65deaf9cb4e6acce291aab40d1911910f3e27fab33",
+  "expectedReportBytes": 104041,
+  "previewCharacters": 64000,
+  "scope": "All70 displayed save/expected hashes match independent native-backed execution; first64000 export characters match exactly. Full download transport remains unverified following prior browser transport timeouts. No all688-role browser or full export transport claim."
+}
