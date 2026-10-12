@@ -3,6 +3,7 @@ import timing from '../../docs/planning/AFFECT_PREFIX_CONTRAST_PLAN_REV1.json';
 import supplements from './affectSupplementFixtures.json';
 import fixtures from './affectFixtures.json';
 import type {AffectSnapshot} from './affectAdapter';
+import {AFFECT_RENDERER} from './affectExplanations';
 export const AFFECT_OPTIONS=[...plan.runs.map(r=>r.name),...supplements.runs.map(r=>r.id)];
 export interface AffectContrast {id:string;label:string;a:string;b:string;kind:'input'|'model';equalThrough:number|null;firstFactorDifference:number|null;changed:string;}
 export const AFFECT_CONTRASTS:AffectContrast[]=[{id:'hidden-world',label:'Hidden physical world',a:'baseline',b:'hidden',kind:'input',equalThrough:null,firstFactorDifference:null,changed:'Physical truth changes while admitted evidence is fixed.'},
@@ -18,7 +19,7 @@ export function compareAffect(a:AffectSnapshot,b:AffectSnapshot){
  if(contrast.kind==='input'&&a.modelHash!==b.modelHash)throw Error('AFFECT declared input pair requires one model');
  if(contrast.kind==='model'&&(a.modelHash===b.modelHash||originals[0].orderedInputs!==originals[1].orderedInputs))throw Error('AFFECT declared model pair requires distinct models and identical original inputs');
  const aligned=a.prefix===b.prefix&&a.clock===b.clock;
- return {version:'affect-pair-inspection/0.2',aligned,contrast:structuredClone(contrast),policy:'Declared frozen original programs and seeds. Native addressed draws are retained; shared seed alone does not establish general stochastic coupling. Equal-prefix and first-factor-difference claims refer to the named retained contrast, not arbitrary event ancestry.',
+ return {version:'affect-pair-inspection/0.3',renderer:AFFECT_RENDERER,aligned,contrast:structuredClone(contrast),policy:'Declared frozen original programs and seeds. Native addressed draws are retained; shared seed alone does not establish general stochastic coupling. Equal-prefix and first-factor-difference claims refer to the named retained contrast, not arbitrary event ancestry.',
   programs:[a.program,b.program],originals:structuredClone(originals),models:originals.map(r=>structuredClone(fixtures.models.find(m=>m.name===r.model)!)),
   outputsEqual:aligned?a.outputsHash===b.outputsHash:null,stateEqual:aligned?a.stateHash===b.stateHash:null,exactSaveEqual:aligned?a.saveHash===b.saveHash:null,
   scope:'Bounded AFFECT programs only. Researcher traces are not character knowledge. Candidate coordinates are derived outputs, not stored emotion state or a universal affect law.',a:structuredClone(a),b:structuredClone(b)};

@@ -8,6 +8,7 @@ import {affectRecipe,AFFECT_VERSION} from '../campaign3/affectModel';
 import {prepareAffectModel,createAffectRun,restoreAffectRun} from '../campaign3/affectFactory';
 import {digest,exactText,exactKey,fromHex,equalBytes} from './canonical';
 import {nativeTimeline} from './nativeTimeline';
+import {explainAffect,type AffectExplanation} from './affectExplanations';
 
 export const AFFECT_SUPPLEMENT_PROGRAMS=plan.runs.map(r=>({id:r.id,model:r.model,seed:r.seed}));
 const registry=new RecordSchemaRegistry(affectSupportedSchemas());
@@ -24,7 +25,7 @@ export class AffectSupplementRun {
   #run:Run;#program:string;#prefix=0;#busy=false;
   #view!: {program:string;seamVersion:string;projection:string;prefix:number;complete:boolean;clock:string;
     modelHash:string;runHash:string;stateHash:string;saveHash:string;outputsHash:string;
-    admittedOutputs:string;fields:{path:string;root:string;exact:string}[];timeline:ReturnType<typeof nativeTimeline>};
+    admittedOutputs:string;explanations:AffectExplanation[];fields:{path:string;root:string;exact:string}[];timeline:ReturnType<typeof nativeTimeline>};
   private constructor(run:Run,program:string){this.#run=run;this.#program=program;}
   static async create(program='timing/feedback/a'){
     const o=original(program),run=await createAffectRun(await prepareAffectModel(o.source),{initialState:o.initialState,orderedInputs:o.orderedInputs,runSeed:new Uint8Array(32).fill(o.row.seed)});
@@ -46,6 +47,6 @@ export class AffectSupplementRun {
     const o=original(this.#program),s=this.#run.snapshot(),save=this.#run.save();
     this.#view={program:this.#program,seamVersion:AFFECT_VERSION,projection:'Native admitted outputs; state and timeline are researcher diagnostics',prefix:this.#prefix,complete:items(f(rec(decode(save),132n),7n),'list').length===0,clock:String(s.clock),
       modelHash:await digest(fromHex(o.model.modelIdentity)),runHash:await digest(this.#run.runIdentity()),stateHash:await digest(s.state),saveHash:await digest(save),outputsHash:await digest(s.outputs),
-      admittedOutputs:exactText(decode(s.outputs)),fields:restoreAuthoritativeState(decode(s.state)).entries().map(e=>({path:exactKey(statePathValue(e.path)),root:String(e.path.rootStateTypeId),exact:exactText(e.value)})),timeline:nativeTimeline(items(decode(s.trace),'list'))};
+      admittedOutputs:exactText(decode(s.outputs)),explanations:explainAffect(items(decode(s.outputs),'list'),o.model.settings),fields:restoreAuthoritativeState(decode(s.state)).entries().map(e=>({path:exactKey(statePathValue(e.path)),root:String(e.path.rootStateTypeId),exact:exactText(e.value)})),timeline:nativeTimeline(items(decode(s.trace),'list'))};
   }
 }
