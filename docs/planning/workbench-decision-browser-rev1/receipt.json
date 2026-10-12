@@ -1,0 +1,60 @@
+{
+  "status": "PASS BOUNDED DECISION BROWSER REPLAY AND INVISIBLE EXECUTION CONTRAST",
+  "sources": [
+    {
+      "path": "src/workbench/decisionAdapter.ts",
+      "sha256": "a687f97b4ef901dd35c8dc403a0adb7bfa80e77abc54b5c6838b4beaca247c5b"
+    },
+    {
+      "path": "src/workbench/decisionWorker.ts",
+      "sha256": "c5f17aa4af7abf148f06b8ff773577b714787cf33cd13f19331ea819b367161b"
+    },
+    {
+      "path": "src/workbench/decisionWorkerClient.ts",
+      "sha256": "1c6a74d8484d1017e2442800182e5b6bc8a1ca5bf196efaa3ae7e439862bfcd0"
+    },
+    {
+      "path": "src/workbench/DecisionWorkbench.tsx",
+      "sha256": "2d7a1f64744acf130244f327fbe729ca6b2267138327b356e92cec9db1a97f55"
+    },
+    {
+      "path": "src/workbench/decisionComparison.ts",
+      "sha256": "522195ade6d11b543957c77c9f48acabf1efa6fd335215f7d29b52572276870d"
+    },
+    {
+      "path": "src/workbench/WorkbenchApp.tsx",
+      "sha256": "d77d2599e6ad27d6115e7cdb32d713dabdc4c81c2722065a12bb0e68850f896a"
+    },
+    {
+      "path": "scripts/check-workbench-decision-browser.mjs",
+      "sha256": "b2ca38f724d5ae4b101e321ca18bbd4e2a1877a4c8abb4581d380d6ca775ebf8"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "docs/planning/workbench-decision-browser-rev1/prefix1.json",
+      "sha256": "4e4f2bbafa06574060aa670585cac9cf26fa8bb9d8b6bff0633a73c246bff694"
+    },
+    {
+      "path": "docs/planning/workbench-decision-browser-rev1/prefix3.json",
+      "sha256": "652d2f88f8a68d5c71de094a566e2d2149925dda27e370708923ce1c5f0f06d5"
+    },
+    {
+      "path": "docs/planning/workbench-decision-browser-rev1/restored1.json",
+      "sha256": "4e4f2bbafa06574060aa670585cac9cf26fa8bb9d8b6bff0633a73c246bff694"
+    },
+    {
+      "path": "docs/planning/workbench-decision-browser-rev1/replayed3.json",
+      "sha256": "652d2f88f8a68d5c71de094a566e2d2149925dda27e370708923ce1c5f0f06d5"
+    },
+    {
+      "path": "docs/planning/workbench-decision-browser-rev1/comparison.json",
+      "sha256": "773c76ece8ea39efac1cf5740a6e7dfb1135ae823734790df04151b534a75799"
+    },
+    {
+      "path": "docs/planning/workbench-decision-browser-rev1/comparison.png",
+      "sha256": "4a0e4c0ee2781e007cf3ae8a56364a5a526054d2d4e84bfb204e165cf34cfabe"
+    }
+  ],
+  "scope": "Continued-history prefix1 checkpoint restored after completion and replayed to3, with all five hashes matching independent native-backed execution. Complete comparison JSON for one invisible consequence contrast matches exactly. Other258 declarations, full corpus UI, natural-language explanations, checkpoint file import and full download transport remain outside this browser claim."
+}
