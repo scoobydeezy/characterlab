@@ -23,6 +23,18 @@ different research outputs, while unequal horizons and reversed pairs reject or
 withhold results appropriately. The previous two adapter replay tests remain.
 Final TypeScript/build/reference-boundary PASS after routing.
 
+`workbench-decision-contrasts-rev1/receipt.json` additionally verifies all259
+declarations against decoded original Record932 fields. Each input pair changes
+exactly one field in its first input: permission3, regime2, hidden scalar5 or
+current visibility6. Every model pair retains identical input bytes and frozen
+content/registry bytes. All24 frozen model image file hashes are checked. Exact
+historical run identities, original inputs and models are joined for every pair;
+hidden output/state/character equality, invisible character/history equality with
+different research outputs, execution intent/expression equality and baseline
+low/high identical draws/choice with different presentation modes all pass.
+This is declaration and historical-evidence verification, not a new259-pair native
+run or browser qualification. Current native parity remains a separate gate.
+
 Browser evidence is under `workbench-decision-browser-rev1/`. Captures cover
 continued-history prefix1, completion3, restore1 and replay3, plus the complete
 5962-character invisible-consequence comparison export and inspected screenshot.
