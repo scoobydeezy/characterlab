@@ -1,0 +1,7 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+const sha=b=>createHash('sha256').update(b).digest('hex'),read=p=>JSON.parse(fs.readFileSync(p));
+const main='docs/planning/SKILL_PUBLIC_EXPERIMENT_PLAN_REV1.json',freezePath='docs/planning/campaign3-skill-model-rev1/FREEZE.json',freeze=read(freezePath),sources=[main,freezePath].map(path=>({path,sha256:sha(fs.readFileSync(path))}));
+const models=freeze.models.map(m=>{const data={};for(const file of m.files){assert.equal(sha(fs.readFileSync(file.path)),file.sha256);sources.push(file);const name=file.path.split('/').at(-1).replace('.cenc.hex','');data[name]=fs.readFileSync(file.path,'utf8').trim();assert(/^[0-9a-f]+$/.test(data[name]));}return {name:m.name,settings:m.settings,modelIdentity:m.modelIdentity,parameters:data.parameters,content:data.content,registry:data.registry,initialState:data['initial-state']};});
+const programs=read(main).runs.map(r=>({...r,cohort:'main'}));assert.equal(programs.length,52);assert.equal(new Set(programs.map(r=>r.name)).size,52);assert(programs.every(p=>models.some(m=>m.name===p.model)));
+assert.equal(models.length,27);assert(programs.every(p=>p.seed===0));
+fs.writeFileSync('src/workbench/skillCatalog.json',JSON.stringify({version:'workbench-skill-catalog/0.1',sources,models,programs},null,2)+'\n');console.log(`SKILL catalog ${models.length} models/${programs.length} programs`);

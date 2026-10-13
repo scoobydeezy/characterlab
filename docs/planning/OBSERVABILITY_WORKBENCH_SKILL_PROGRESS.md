@@ -29,3 +29,21 @@ not amend a Campaign3 verdict or discharge any of18 conditional obligations.
 
 Build/TypeScript/reference boundary and restored research checks PASS. Native audit
 has passed its first5 programs; full receipt remains pending.
+
+Full native qualification COMPLETE: workbench-skill-parity-rev1/receipt.json records
+PASS52 programs/279 prefixes. Current source, frozen model and original plan hashes
+verified after successful writer exit. Direct native state/output/trace/save and
+historical prefix saves agree throughout the frozen cohort. Full trace includes
+addressed draws; no new RNG or probabilistic execution claim.
+
+85 declared comparisons added:70 one-setting model pairs on the shared calendar
+and15 named physical/evidence/practice/impairment/learning/threshold controls. Each
+model pair preserves the exact input calendar and seed; changed initial competence
+explicitly carries both initial states. Same-model input comparisons retain original
+calendars and describe changed factors. Blocked-engagement is explicitly compound
+(permission plus displayed success), not mislabeled a single-factor intervention.
+Truth-side outcomes remain in researcher output equality; no cognitive equality is
+inferred from whole-output divergence. Unequal prefix/clock yields null equalities.
+Two comparison tests PASS: all85 declared correspondences, plus native hidden-
+competence initial-state distinction, misaligned-prefix handling and reversed-pair
+rejection. UI, observer-safe projection, language and browser integration remain due.

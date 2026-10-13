@@ -97,3 +97,6 @@ Twelve focused batch tests/build/research checks pass; browser/full entry remain
 Latest: OBSERVABILITY_WORKBENCH_SKILL_PROGRESS.md; native SKILL adapter52 programs/27
 models implemented;279-prefix parity audit running. WORK browser batch78/624 PASS.
 Full nine-seam batch audit remains running; broader workbench acceptance still open.
+
+SKILL native qualification now PASS52/279 with85 declared comparisons; see its
+progress file and frozen receipt. Character projection/UI/language remain due.
