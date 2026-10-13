@@ -1,0 +1,248 @@
+{
+  "status": "PASS BOUNDED COGNITIVE DET ADAPTER PARITY",
+  "sources": [
+    {
+      "path": "src/workbench/detAdapter.ts",
+      "sha256": "218ec942aaa95b0d98b7f728ca102511d89d12cf7bf88badbb26d283adc8c6af"
+    },
+    {
+      "path": "src/workbench/detCatalog.json",
+      "sha256": "ae75ff0f1a5fe9217fefba1c37e0f5f76fbceb77d1369285ea28283681fffe2d"
+    },
+    {
+      "path": "src/workbench/canonical.ts",
+      "sha256": "f80f4a8353ea7604432d5ffcf0d4628f8b7bf13b82a06b4807445e9a9ba97bde"
+    },
+    {
+      "path": "src/workbench/nativeTimeline.ts",
+      "sha256": "ceed75f534e8158a2172ac962cab89aa9ffa5fcbaaf71e0d62347fd01a9c6775"
+    },
+    {
+      "path": "src/test/workbenchDet.test.ts",
+      "sha256": "89b1db7a69511f2ce61d50004c4e86750b5cb70b7513e0501c8d73383eb79611"
+    },
+    {
+      "path": "scripts/build-workbench-det-catalog.mjs",
+      "sha256": "97626496df3a25f224c88b376e1b1f762cbe6bf7ea1102eb261dfcdf037e892e"
+    },
+    {
+      "path": "scripts/check-workbench-det.mjs",
+      "sha256": "7ef7042502c5ba624b01ddf1178a0c13b7229fcac6058bf13f74905f710a3853"
+    },
+    {
+      "path": "src/campaign2/cognitiveFactory.ts",
+      "sha256": "c225bb56d2857262a2c1b6c0c1c251128b6d0ce459f5d618755b1864b7969380"
+    }
+  ],
+  "originals": [
+    {
+      "path": "src/test/campaign2CognitiveFactory.test.ts",
+      "sha256": "50add6f2f9076fee1329bd1be395cfb8e75601f752938af8d5368975016f2b70"
+    },
+    {
+      "path": "src/test/phenDeterminism.test.ts",
+      "sha256": "42f11ff813b8f9a4480781391b7b4227fcc324c07444da0ca1c254d179c041e0"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN2_COGNITIVE_PERSISTENCE_QUALIFICATION.md",
+      "sha256": "61131f0119005b6801a7e679d69a006355b5f65711b7cea0cbe9276fe5aff994"
+    },
+    {
+      "path": "docs/planning/COGNITIVE_QUALIFICATION_EVIDENCE_REV1.json",
+      "sha256": "578613ed1ffcc845eb2019709569f0ac986011bfae729eb6d1a1ba5bfad11f85"
+    },
+    {
+      "path": "docs/planning/campaign2-task-cognitive-model/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign2-task-cognitive-model/registry.cenc.hex",
+      "sha256": "f9dc919d8a28afd347a4e9129f321428825966a42de1f5c3f3cea26203b2cbe9"
+    },
+    {
+      "path": "docs/planning/campaign2-task-cognitive-model/parameters.cenc.hex",
+      "sha256": "8939c257703b80d1a4515a21c8d709c1dabffe12ee3f49499366e419915f685c"
+    },
+    {
+      "path": "src/campaign2/taskModelReview.ts",
+      "sha256": "7c451327dc192e79c762fc550b7684891f7ba92cb1ed093c262a1a0c92905bf4"
+    }
+  ],
+  "programs": 2,
+  "prefixes": 18,
+  "results": [
+    {
+      "program": "baseline",
+      "checks": [
+        {
+          "prefix": 0,
+          "clock": "0",
+          "saveHash": "77d04e5b81f34d24d820916a16b975e0157fbde8201b016af46778779dd97d1b",
+          "stateHash": "71609fb6cd5431151f2c7cd1a37021dc94a6fd7514afa3cfbec46ab0a3e70293",
+          "outputsHash": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "traceHash": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "draws": 0
+        },
+        {
+          "prefix": 1,
+          "clock": "1",
+          "saveHash": "05b804ab401b93f1e73ba3b03392410d31537f6cb9cccc38459c9df09a20437e",
+          "stateHash": "68db4acdaf565a7ad257eea0b10ff19ba2f71bba63a27636e7ea2435b1a9c8b4",
+          "outputsHash": "65080a7c29335128aa94c2cd7e415dcfd3a6b611bb57154fd8de79df6c418962",
+          "traceHash": "4920068449493de7969222e42521f6d93ba0121a4b6bdb335ec579e6c71aa169",
+          "draws": 0
+        },
+        {
+          "prefix": 2,
+          "clock": "2",
+          "saveHash": "d6b5ec895f7845f8b505e2bee0f3552ea33bb26cb0890e3490a71e56001389a6",
+          "stateHash": "7042e07a0d7158fa7806e1dd531884fae7df8175543e8f9ee74b6ce80e4f28e6",
+          "outputsHash": "c400dcb298a72dba6d99d7b5fd986dcbe03db5032cca38b326855601298c7bbe",
+          "traceHash": "e46def7bc23e38a8a605f179485327005765c713bd79763dc7ce7fb618a46d3c",
+          "draws": 2
+        },
+        {
+          "prefix": 3,
+          "clock": "3",
+          "saveHash": "a972fc21b94bb1ce21d61efd4193980fe07c50f8c6dc8a3afa8aa48a88a67381",
+          "stateHash": "3804f8a1ee4518c420d14fa1e3f659b3712ded3f38a4f7f83d6047210351645f",
+          "outputsHash": "2982a5ba0c2881d234dd208936ac6f8635cd96025e8a10467df1b3f47553bd3d",
+          "traceHash": "4fe7914309d1ba102d1f89a13125ff56a6931a93ee01c3059c61f3724512f5e8",
+          "draws": 4
+        },
+        {
+          "prefix": 4,
+          "clock": "4",
+          "saveHash": "aa7333ced501bd7b3bfc7e618ef42dcc6162d82bf305538626018d5eeee2c3e7",
+          "stateHash": "cacb822db573f061a98447e7e9a33a8eceec6c2b9fca9a858f026b14e403e21a",
+          "outputsHash": "fe5e96d546b434abffcd3e0598606208da37e77e981584b48ee416d6677a4859",
+          "traceHash": "8c080e88e3cd1ecc083e11d3edc66af858e70d35524a7a76b84287765a14f841",
+          "draws": 6
+        },
+        {
+          "prefix": 5,
+          "clock": "5",
+          "saveHash": "e097c3d8af137833e97ca4d02793e8b43eb90f38a98987732b827dfd7301479f",
+          "stateHash": "56dc3d0e111ff9ee1e66859ee8e41e135399e4caa792f99d06b461b177d62099",
+          "outputsHash": "3e2eda01ecec00772f9716a4ecefa62e4c26144ff0885b803b45de698af53063",
+          "traceHash": "b84610883866defd96f0c606a4f1c6185f3ca7aafa1c3836dbf2b70a2f09b7fb",
+          "draws": 6
+        },
+        {
+          "prefix": 6,
+          "clock": "6",
+          "saveHash": "bd55d7ad5aab1c0ddd47d6ea0054a0984ac7469970b0239bf4f4c9f72da0a4e9",
+          "stateHash": "c7f4351463d6617b53f2951d5c295bcb5fc4670aa3860e3c64828f2cc11771c4",
+          "outputsHash": "c3695c114a6b3f0279a1a750f7f688d5a096d8787fbc9f538a6bd8bc783301c4",
+          "traceHash": "e5917197e3eb040a4543e048ba467a98b431933df9a5480d813a1c3fbfba1e07",
+          "draws": 9
+        },
+        {
+          "prefix": 7,
+          "clock": "10",
+          "saveHash": "76ae88df9d23f90c07d22bace93e6ca9357f9edda79a3239f34a62e16cea56f0",
+          "stateHash": "48ee0d393bd1b40480bf41b3e7807a72cfa2ba10817240fb384088abfff3d3c8",
+          "outputsHash": "c3695c114a6b3f0279a1a750f7f688d5a096d8787fbc9f538a6bd8bc783301c4",
+          "traceHash": "0678c9e531354305e2dd02328c0cba02676acfe9b73b29eb9398932d79ba5b9d",
+          "draws": 9
+        },
+        {
+          "prefix": 8,
+          "clock": "11",
+          "saveHash": "c85c9f2d8a8741d4675b7696a17b9da109c094bf51a1dbb78a1977d759dd9bac",
+          "stateHash": "64e4847b483fdaeb8c23e2c82e4c20d75e7ad0f6a12e66d94ddb268df4032818",
+          "outputsHash": "c3695c114a6b3f0279a1a750f7f688d5a096d8787fbc9f538a6bd8bc783301c4",
+          "traceHash": "62bb81c3e8e0b6d4ef574e249a710c833c7d6fee8805bb636e2941cd7b0ff7b3",
+          "draws": 9
+        }
+      ]
+    },
+    {
+      "program": "equal-criteria",
+      "checks": [
+        {
+          "prefix": 0,
+          "clock": "0",
+          "saveHash": "22c65d821d7480f7eeb8c787350b62c75869a468f2054f0b93f93e2278933e0e",
+          "stateHash": "71609fb6cd5431151f2c7cd1a37021dc94a6fd7514afa3cfbec46ab0a3e70293",
+          "outputsHash": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "traceHash": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "draws": 0
+        },
+        {
+          "prefix": 1,
+          "clock": "1",
+          "saveHash": "fd0f76bb622ab9ad4d06950d3c7122b88c2441b31f5585c6d88e1e597cdc88bc",
+          "stateHash": "68db4acdaf565a7ad257eea0b10ff19ba2f71bba63a27636e7ea2435b1a9c8b4",
+          "outputsHash": "65080a7c29335128aa94c2cd7e415dcfd3a6b611bb57154fd8de79df6c418962",
+          "traceHash": "3e9d0cec7ff914dbe11dd192cc35746df349c1cb0a3f7562cfc10c190c59d2c8",
+          "draws": 0
+        },
+        {
+          "prefix": 2,
+          "clock": "2",
+          "saveHash": "7ac3f74877450e641d5b39055a9ab0e424bbe1d4e92d1eec8f2481b3583b4366",
+          "stateHash": "309ffb6a842e58af7e110824029afd25aa5fea318a282ebdb605601ef9456a2a",
+          "outputsHash": "7a409a9f15cecc606b1d53e222a8b6cb77b76a09f3027ecfdda7c5fff1bf29ad",
+          "traceHash": "1d6f766b1f8fb8bb5cf1785d4d749b2130df1e46a1fa59bd5b83d994b0feced9",
+          "draws": 2
+        },
+        {
+          "prefix": 3,
+          "clock": "3",
+          "saveHash": "e8c7d8e3040658d3c8a77815a1d8aa87a8376632e37831a0913879017491bf51",
+          "stateHash": "29d814b0a186b1e7bd1c5761569d3c62aaae5544a783507a665ec60e09c228e2",
+          "outputsHash": "6de0945c61db31e2a43f9042d11709d383ce0212d87751d8c3391a735ce98098",
+          "traceHash": "105ee2aa9246e5032b5606e466d40016c53dac294c81090a49af9cb4655ee86a",
+          "draws": 4
+        },
+        {
+          "prefix": 4,
+          "clock": "4",
+          "saveHash": "288fe4dc3b9554e40f2ca127ad73ff1825584fbc22beaa381042dcb12deeb79e",
+          "stateHash": "00025370c5d3c87c232adec1cff356797c6c3f65b8ffe1a57220776836bb1a84",
+          "outputsHash": "bf4c83b62ecd60b14566aeab65875efbf407b31a67863074ea1a6596a28ea013",
+          "traceHash": "24734f810fd269332fa0d77618edb2b898c2cf4da069a7d742cfb1979189cce4",
+          "draws": 6
+        },
+        {
+          "prefix": 5,
+          "clock": "5",
+          "saveHash": "25d585620556a8e278a235bddca80148d3bf7eac1e7a69dad6935b04862c635a",
+          "stateHash": "d0da262c1bcbb8b7aa1336d323ade0afb31df86c521f750ced6ee8ef67804f4b",
+          "outputsHash": "49eedc7952407d7623001540ce7ab81ef6153162b6300cebdd309951e571aded",
+          "traceHash": "0236114e8e97ead65cac084a5f7b353ac2a0467bf8ae9e632f29a0fa68f97ba9",
+          "draws": 6
+        },
+        {
+          "prefix": 6,
+          "clock": "6",
+          "saveHash": "f367cf9c126dd8b2ab841a11fb27e8e5119f393c04886fb749403392240253db",
+          "stateHash": "d0da262c1bcbb8b7aa1336d323ade0afb31df86c521f750ced6ee8ef67804f4b",
+          "outputsHash": "739dbe7f8c694c7e11eb78dfdadaf011a615d0bf0040e71f0e3f39dd318ef4cd",
+          "traceHash": "3f88a9c7f572c3a23a031fa5de3720c140e48e2468352e10c1a034bac8cec9e3",
+          "draws": 6
+        },
+        {
+          "prefix": 7,
+          "clock": "10",
+          "saveHash": "b39e6f653f25bd1d01c628684b5a6c82001169e9f8c08289e26cb1715818bec9",
+          "stateHash": "ddc1f577e2c76e4e25258ae7d73cb9b63b20aca63ab503f5ae3a36d3fcb0a33d",
+          "outputsHash": "739dbe7f8c694c7e11eb78dfdadaf011a615d0bf0040e71f0e3f39dd318ef4cd",
+          "traceHash": "c9b42acf618389a7b244574ab4aa6cc5928002d3c3530a1d418c9adfafe89427",
+          "draws": 6
+        },
+        {
+          "prefix": 8,
+          "clock": "11",
+          "saveHash": "52b881d76053b3b0a4a41b4c4b6193e6bda298a9d166a954f33a0ff5ac9daacf",
+          "stateHash": "1a4f27ef06c03e5510785e78790176b2aff320f65831163b58f8fac38686f7f6",
+          "outputsHash": "739dbe7f8c694c7e11eb78dfdadaf011a615d0bf0040e71f0e3f39dd318ef4cd",
+          "traceHash": "59c492833949960bd9dc0ff94a006387fa229a3d946b7375748d1f2d34486e88",
+          "draws": 6
+        }
+      ]
+    }
+  ],
+  "scope": "Original baseline/equal-criteria cognitive persistence successor programs. Every prefix matches independent public execution state/output/trace/save and authenticated full-prefix restore. Genuine pre-save draws exist even with absent identity contribution in equal-criteria. Does not replace original synthetic PHEN-DET substrate witness or failure/capacity controls; no external RNG coupling, language, UI or full corpus qualification claim."
+}

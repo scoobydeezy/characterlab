@@ -36,3 +36,31 @@ Remaining required coverage includes the original substrate witness, capacity an
 atomic failure/rollback controls, substituted saved sections/provenance, six-mode
 worker/UI, replay comparison presentation, browser checks and full entry qualification.
 No new research verdict or change to any of the18 conditional obligations.
+
+Native parity COMPLETE: session15287 exit0;2 programs/18 prefixes PASS independent
+native state/output/trace/save and authenticated restore at every prefix. Each
+program has8 committed instants, including scheduled events beyond the six original
+inputs. Current/frozen receipt source and original fixture hashes verified. Receipt:
+workbench-det-parity-rev1/receipt.json. This supersedes the earlier running status.
+
+Read-only DET comparison distinguishes same-program replay from the declared
+baseline→equal-criteria model change. It preserves originals, model bytes, seeds,
+whole checkpoints and exact committed draw records. Every Save132 section is compared
+at aligned complete prefixes; unaligned equality is null. Shared seeds do not imply
+external coupling or equal natural addresses. Focused comparison test PASS for
+restored equality, changed models, unaligned prefixes and zero identity contribution
+despite actual draws. Terminal report audit20559 is running; do not edit its bound
+sources while live. No historical trace or psychological record was rewritten.
+
+Worker/client prepared, not registered. Native worker test PASS for real draw
+delivery, authenticated replay comparison, bad-digest rejection and unchanged active
+checkpoint. Initial worker import typo failed before execution and is preserved in
+workbench-det-worker-rev1/development-failure; corrected module imports pass. Six-mode
+UI and browser qualification remain due.
+
+Terminal comparison audit COMPLETE: session20559 exit0;3 reports PASS (two exact
+same-program replays and one baseline/equal-criteria contrast). Each terminal save
+independently restores through the public factory, and every reported draw's canonical
+bytes match the actual native trace. All report and current/frozen/original source
+hashes verified. Receipt: workbench-det-comparison-rev1/receipt.json. Type-check and
+research integrity PASS;18 conditional obligations retained.

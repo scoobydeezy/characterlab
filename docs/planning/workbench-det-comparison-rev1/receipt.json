@@ -1,0 +1,109 @@
+{
+  "status": "PASS BOUNDED DET TERMINAL REPLAY COMPARISON",
+  "sources": [
+    {
+      "path": "src/workbench/detComparison.ts",
+      "sha256": "b6bae21c511aec062acc77837a40a2681eb866da915bc18441a2705620c3c694"
+    },
+    {
+      "path": "src/workbench/detAdapter.ts",
+      "sha256": "218ec942aaa95b0d98b7f728ca102511d89d12cf7bf88badbb26d283adc8c6af"
+    },
+    {
+      "path": "src/workbench/detCatalog.json",
+      "sha256": "ae75ff0f1a5fe9217fefba1c37e0f5f76fbceb77d1369285ea28283681fffe2d"
+    },
+    {
+      "path": "src/workbench/canonical.ts",
+      "sha256": "f80f4a8353ea7604432d5ffcf0d4628f8b7bf13b82a06b4807445e9a9ba97bde"
+    },
+    {
+      "path": "src/workbench/nativeTimeline.ts",
+      "sha256": "ceed75f534e8158a2172ac962cab89aa9ffa5fcbaaf71e0d62347fd01a9c6775"
+    },
+    {
+      "path": "src/test/workbenchDetComparison.test.ts",
+      "sha256": "49ae4b989d6663110a4f39332e57ca1b0a2aaf348ff500d355d110f9d4fa2d0c"
+    },
+    {
+      "path": "scripts/check-workbench-det-comparison.mjs",
+      "sha256": "8293e2adc5b561c07901fbc01743239eabce134278733a36f4900ac598c7e10b"
+    }
+  ],
+  "originals": [
+    {
+      "path": "src/test/campaign2CognitiveFactory.test.ts",
+      "sha256": "50add6f2f9076fee1329bd1be395cfb8e75601f752938af8d5368975016f2b70"
+    },
+    {
+      "path": "src/test/phenDeterminism.test.ts",
+      "sha256": "42f11ff813b8f9a4480781391b7b4227fcc324c07444da0ca1c254d179c041e0"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN2_COGNITIVE_PERSISTENCE_QUALIFICATION.md",
+      "sha256": "61131f0119005b6801a7e679d69a006355b5f65711b7cea0cbe9276fe5aff994"
+    },
+    {
+      "path": "docs/planning/COGNITIVE_QUALIFICATION_EVIDENCE_REV1.json",
+      "sha256": "578613ed1ffcc845eb2019709569f0ac986011bfae729eb6d1a1ba5bfad11f85"
+    },
+    {
+      "path": "docs/planning/campaign2-task-cognitive-model/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign2-task-cognitive-model/registry.cenc.hex",
+      "sha256": "f9dc919d8a28afd347a4e9129f321428825966a42de1f5c3f3cea26203b2cbe9"
+    },
+    {
+      "path": "docs/planning/campaign2-task-cognitive-model/parameters.cenc.hex",
+      "sha256": "8939c257703b80d1a4515a21c8d709c1dabffe12ee3f49499366e419915f685c"
+    },
+    {
+      "path": "src/campaign2/taskModelReview.ts",
+      "sha256": "7c451327dc192e79c762fc550b7684891f7ba92cb1ed093c262a1a0c92905bf4"
+    }
+  ],
+  "reports": [
+    {
+      "name": "baseline-replay",
+      "path": "docs/planning/workbench-det-comparison-rev1/baseline-replay.json",
+      "sha256": "1a9153d7518eacc0f35d79017afdd44fc6c457bea46067bdcafbeb057407e62f",
+      "prefixes": [
+        8,
+        8
+      ],
+      "drawCounts": [
+        9,
+        9
+      ]
+    },
+    {
+      "name": "equal-criteria-replay",
+      "path": "docs/planning/workbench-det-comparison-rev1/equal-criteria-replay.json",
+      "sha256": "6b0e315db82c89b6f4032058c4a6d61571d32809206804c0987337587c6a3279",
+      "prefixes": [
+        8,
+        8
+      ],
+      "drawCounts": [
+        6,
+        6
+      ]
+    },
+    {
+      "name": "baseline-equal-criteria",
+      "path": "docs/planning/workbench-det-comparison-rev1/baseline-equal-criteria.json",
+      "sha256": "c05597c0b6b33dd20d16e72739b505671b34ac6532512097489bbb7231b5191a",
+      "prefixes": [
+        8,
+        8
+      ],
+      "drawCounts": [
+        9,
+        6
+      ]
+    }
+  ],
+  "scope": "Two terminal same-program replays and one declared baseline/equal-criteria model contrast. Each original terminal save independently restored by public factory; report draw bytes exactly match committed native trace. Full saved sections equal for replay. No external coupling, synthetic substrate, failure/capacity, UI or corpus acceptance claim."
+}
