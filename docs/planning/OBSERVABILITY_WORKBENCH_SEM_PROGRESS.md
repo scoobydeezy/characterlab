@@ -320,3 +320,21 @@ Research retains18 conditional obligations; no new Campaign3 verdict/amendment.
 Next: worker/UI and browser verification of these classification distinctions;
 remaining recognition continuity/allocator/emission and broader SEM corpus gates
 must still be reconciled before overall Campaign4 entry acceptance.
+
+Classification Compare UI COMPLETE (2026-10-13): the worker runs the original
+component controls without changing the active integrated run. The panel separates
+true, false and No record, displays three rejection guards and ten emission targets,
+and exposes the complete exact report and prepared export.
+
+Two actual-worker tests PASS across all four integrated prefixes (classification
+and measurement suites); production build PASS388 modules. The complete42645-character
+browser report, three tables and six unchanged active hashes match fresh native
+execution and corrected classification rev2 evidence. Screenshot inspected.
+Audit58622 COMPLETE exit0; receipt workbench-sem-classification-ui-rev1/receipt.json.
+Nine current/frozen source hashes and three capture hashes independently verified.
+Evidence restore and research check PASS;18 conditional obligations remain.
+No full download or new Campaign3 verdict/qualification amendment is claimed.
+
+Next: remaining recognition continuity/allocator/emission witnesses and full SEM
+corpus reconciliation, followed by remaining corpus adapters. Overall Campaign4
+entry acceptance remains open.
