@@ -1,0 +1,11 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import{createHash}from'node:crypto';
+const path='src/test/sem001JIntegratedGate.test.ts',bytes=fs.readFileSync(path),s=bytes.toString('utf8');
+const take=(a,b)=>{const start=s.indexOf(a),end=s.indexOf(b,start);assert(start>=0&&end>start);return s.slice(start,end);};
+const imports=s.slice(0,s.indexOf('const FORMAL_DOCS')).replace("import { describe, expect, it } from 'vitest';",'').replaceAll("'./fixtures/","'../test/fixtures/");
+const code=take('const codeOf =','// ---------------------------------------------------------------------------').replace("if (typeof code === 'string') return code;","if (typeof code === 'string') { recordFailure(code, error); return code; }");
+const first=take("  it('refuses a symbolic occurrence", "  it('leaves authoritative bytes");
+const shortcut=take("  it('refuses each integrated shortcut", "  it('aborts the complete integrated instant");
+const start=shortcut.indexOf('    const allocator'),firstComment=shortcut.indexOf('    // 1.');const setup=shortcut.slice(start,firstComment);
+const parts=[...shortcut.matchAll(/^    \/\/ (\d+)\. (.*)$/gm)];assert.equal(parts.length,10);
+const cases=parts.map((m,i)=>{const end=i+1<parts.length?parts[i+1].index:shortcut.lastIndexOf('  });');return `it(${JSON.stringify('Shortcut '+m[1]+': '+m[2])},()=>{\n${shortcut.slice(m.index,end)}\n});\n`;}).join('');
+fs.writeFileSync('src/workbench/semShortcutFixture.ts', '// Generated original SEM-001J refusal and structural witnesses, separately recorded.\n'+imports+`\nimport {chainFor} from './semIntegratedFixture';\nimport {createNegativeRecorder} from './semNegativeRecorder';\nexport function executeSemShortcuts(){\nconst recorder=createNegativeRecorder(), {it,recordFailure,finish}=recorder;\nconst expect=(actual:unknown)=>({...recorder.expect(actual),toBeGreaterThan:(minimum:number)=>{if(typeof actual!=='number')throw Error('Numeric comparison required');recorder.expect({actual,minimum,greater:actual>minimum}).toEqual({actual,minimum,greater:true});}});\n`+code+first+setup+cases+`\nreturn finish();\n}\nexport const originalSource={path:'${path}',sha256:'${createHash('sha256').update(bytes).digest('hex')}'} as const;\n`,{flag:'wx'});

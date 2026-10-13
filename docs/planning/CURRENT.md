@@ -1,5 +1,11 @@
 # Current research entry point
 
+**Latest workbench2026-10-13:** SEM integrated shortcuts qualified in
+workbench-sem-shortcuts-rev1:12 cases/26 recorded assertions/12 caught failures.
+Original two occurrence/version cases plus ten shortcut sections retained. Structural
+witnesses remain distinct from rejection boundaries. Next combine integrated chain/
+shortcut worker/UI parity, then seven-leaf authority and acceptance reconciliation.
+
 **Latest workbench2026-10-13:** Integrated SEM-001J diagnostic foundation qualified
 in workbench-sem-integrated-rev2. Three canonical observer chains, poisoned-label
 invariance and whole-instant rollback;14 tests/build PASS. Rev1 type failure retained.

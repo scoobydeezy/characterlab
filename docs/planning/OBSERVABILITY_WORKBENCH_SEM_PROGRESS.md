@@ -972,3 +972,26 @@ Ten source snapshots and full diagnostic report frozen in workbench-sem-integrat
 rev1 is insufficient and superseded. Evidence restore/research PASS,18 conditional
 obligations unchanged. Remaining integrated shortcut refusals, phenomenon joins,
 worker/UI/browser parity, seven-leaf authority and acceptance remain required.
+
+## Integrated shortcut witnesses (2026-10-13)
+
+The two original occurrence/version cases and ten numbered SEM-001J shortcut sections
+now execute as12 separately recorded cases. All26 assertions retain actual/expected
+operands;12 caught codeOf failures retain exact codes/messages. Symbolic ordinal
+constructor throwing remains a recorded toThrow witness, separately from codeOf counts.
+The original positive numeric comparison is recorded with actual/minimum/greater values.
+Every original section body and both original case bodies are source-transform audited.
+The codeOf instrumentation keeps both recording and return inside its string-code guard.
+
+Structural referent/role multiplicity, distinct experiences and ancestry-string absence
+are not promoted to executed refusals. Hidden-truth linkage rejection is not a new
+causal intervention. Legacy-version rejection alone is not the full typed-ID proof;
+the three chains and poisoned-label controls in integrated-rev2 remain complementary.
+Whole-instant rollback also remains in that retained receipt. No document glob readers
+enter the runtime adapter. No full execution-input/trace or whole SEM claim is made.
+
+Original13 tests plus1 adapter test PASS. Production build30394 COMPLETE exit0,
+402 modules; existing chunk-size warning retained. Audit68496 COMPLETE exit0,
+nine frozen sources in workbench-sem-shortcuts-rev1. Evidence restore/research PASS,
+all18 conditional obligations unchanged. Next integrated/shortcut worker/UI/browser
+parity, authority and acceptance reconciliation. Overall workbench entry remains open.
