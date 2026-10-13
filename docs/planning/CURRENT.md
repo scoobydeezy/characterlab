@@ -1,16 +1,12 @@
 # Current research entry point
 
-**Latest workbench2026-10-13:** SEM integrated shortcuts qualified in
-workbench-sem-shortcuts-rev1:12 cases/26 recorded assertions/12 caught failures.
-Original two occurrence/version cases plus ten shortcut sections retained. Structural
-witnesses remain distinct from rejection boundaries. Next combine integrated chain/
-shortcut worker/UI parity, then seven-leaf authority and acceptance reconciliation.
-
-**Latest workbench2026-10-13:** Integrated SEM-001J diagnostic foundation qualified
-in workbench-sem-integrated-rev2. Three canonical observer chains, poisoned-label
-invariance and whole-instant rollback;14 tests/build PASS. Rev1 type failure retained.
-Next complete integrated shortcut/phenomenon evidence and worker/UI parity, then
-seven-leaf authority and acceptance reconciliation. Full goal remains open.
+**Latest workbench2026-10-13:** Integrated chain/shortcut worker and browser parity
+qualified in workbench-sem-integrated-ui-rev1:3 chains/256 identity bindings,
+4 rollback rows,12 shortcut cases/26 assertions/12 caught failures. All4 worker
+prefixes preserved; browser prefix1 full761,862-character report equals native evidence.
+Foundations integrated-rev2 and shortcuts-rev1 retained, including superseded type
+failure. Next seven-leaf authority, remaining phenomenon joins and acceptance
+reconciliation. Full workbench goal and Campaign4 entry remain open.
 
 **Workbench update2026-10-13:** CV-SEM-012 renderer diagnostic foundation qualified;
 three viewpoints with presentation/allocation/correction controls,6 focused tests and

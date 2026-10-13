@@ -995,3 +995,22 @@ Original13 tests plus1 adapter test PASS. Production build30394 COMPLETE exit0,
 nine frozen sources in workbench-sem-shortcuts-rev1. Evidence restore/research PASS,
 all18 conditional obligations unchanged. Next integrated/shortcut worker/UI/browser
 parity, authority and acceptance reconciliation. Overall workbench entry remains open.
+
+## Integrated chain and shortcut browser parity (2026-10-13)
+
+Compare exposes a combined report from the retained integrated-rev2 and shortcuts-rev1
+foundations:3 observer chains/256 identity bindings,4 committed rollback fields and12
+shortcut witnesses. Canonical record types and field/payload checks remain explicit;
+failed fixture status is shown separately from preserved committed data. Short case
+labels avoid incomplete source-comment sentences; exact original names remain in export.
+Researcher truth, structural comparison and coded refusal scopes are visible.
+
+Three focused tests PASS; combined worker matches both frozen reports and preserves
+the active checkpoint at all4 prefixes. Browser prefix1 full761,862-character report
+captured in50,000-character chunks;3 tables and scopes equal fresh native execution.
+All6 active hashes unchanged. Two screenshots inspected. Audit47107 COMPLETE exit0,
+11 frozen sources/4 captured artifacts in workbench-sem-integrated-ui-rev1.
+Final build41813 COMPLETE exit0 after label refinement (403 modules; existing chunk
+warning). Evidence restore/research PASS,18 conditional obligations unchanged. Prepared
+exact report is exposed; full download remains unqualified. Next seven-leaf authority,
+remaining phenomenon joins and acceptance reconciliation. Full goal remains open.

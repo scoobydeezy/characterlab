@@ -15,6 +15,7 @@ import {runSemClassificationBoundaryControls} from './semClassificationBoundaryC
 import {runSemEventClassificationControls} from './semEventClassificationControls';
 import {runSemNegativeControls} from './semNegativeControls';
 import {runSemRendererControls} from './semRendererControls';
+import {runSemIntegratedSuite} from './semIntegratedSuite';
 import {runSemPersistenceControls} from './semPersistenceControls';
 import {runSemCodecControls} from './semCodecControls';
 import {runSemSchemaControls} from './semSchemaControls';
@@ -31,6 +32,7 @@ self.addEventListener('message',async(event:MessageEvent<{id:number;operation:st
  else if(q.operation==='controls'){const before=JSON.stringify(run.checkpoint());result=await runSemControlSuite();if(JSON.stringify(run.checkpoint())!==before)throw Error('SEM component controls changed active run');}
  else if(q.operation==='recognition'){const before=JSON.stringify(run.checkpoint());result=await runSemRecognitionControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Recognition controls changed active run');}
  else if(q.operation==='checkpoint')result=run.checkpoint();
+ else if(q.operation==='integrated'){const before=JSON.stringify(run.checkpoint());result=await runSemIntegratedSuite();if(JSON.stringify(run.checkpoint())!==before)throw Error('Integrated controls changed active run');}
  else if(q.operation==='renderer'){const before=JSON.stringify(run.checkpoint());result=await runSemRendererControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Renderer controls changed active run');}
  else if(q.operation==='negativeLedger'){const before=JSON.stringify(run.checkpoint());result=await runSemNegativeControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Negative ledger changed active run');}
  else if(q.operation==='persistence'){const before=JSON.stringify(run.checkpoint());result=await runSemPersistenceControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Persistence controls changed active run');}
