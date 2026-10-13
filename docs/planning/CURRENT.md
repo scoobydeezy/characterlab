@@ -169,3 +169,6 @@ actual seam identity and narration suppressed. Three tests PASS; full audit sess
 
 RELATIONSHIP24 revision pairs implemented; native matched acquisition witness tests
 and type-check PASS. All-pair/browser qualification remains due; failed test preserved.
+
+RELATIONSHIP legacy parity now PASS24/256, preserving original failed outcome. Full24
+revision-report audit RUNNING session43931. Shared841-role audit remains live33242.

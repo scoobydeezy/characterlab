@@ -99,3 +99,15 @@ to corrected effective0 (analytical25/72). The historical failure is not reclass
 
 All24 revision choices are connected to the prepared component, with full report export;
 type-check PASS. Full all-pair execution audit and browser qualification remain due.
+
+Legacy native parity COMPLETE: session72422 exit0, all24 failed0.1 programs/256
+prefixes PASS exact native/historical state, outputs, trace, saves and both views.
+Receipt workbench-relationship-legacy-parity-rev1/receipt.json and all current/frozen
+source bindings verified. This is fidelity to the failed cohort, not behavioral success.
+
+Full24-pair revision report audit RUNNING session43931 via
+check-workbench-relationship-revision-comparison.mjs. It executes48 terminal runs,
+checks both observer histories against native historical analytical/effective contact
+probabilities, modes, chosen option and draw count, and writes per-pair reports below
+the artifact size limit. Do not restart the live writer or alter its bound sources.
+Shared batch audit session33242 is also still running (last observed640/841).
