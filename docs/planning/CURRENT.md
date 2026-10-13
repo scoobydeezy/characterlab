@@ -37,7 +37,10 @@ Measurement and whole-instant rollback witnesses now pass worker/UI/browser pari
 Classification3 requests/3 guards/10 emission targets/2 observer field sets now
 qualified and now pass worker/UI/browser parity. Recognition mapping, continuity,
 authority, allocator/rollback and emission component witnesses now pass worker/UI/
-browser parity. Next: full SEM corpus reconciliation and remaining coverage gaps.
+browser parity. Full SEM census now preserves100 vectors/31 negatives/10 gates/
+6 supplemental sections; native24 files/221 tests PASS. See workbench-sem-coverage-rev1.
+Workbench qualification remains incomplete. Next: continuant lifecycle controls,
+then remaining phase/state/provenance and integrated semantic coverage gaps.
 Full corpus coverage and Campaign4 entry acceptance stay open.
 Joined REASON continuation: OBSERVABILITY_WORKBENCH_REASON_PROGRESS.md;115 native
 programs/350 prefixes pass; Values125/625 retained. Full workbench acceptance remains open.

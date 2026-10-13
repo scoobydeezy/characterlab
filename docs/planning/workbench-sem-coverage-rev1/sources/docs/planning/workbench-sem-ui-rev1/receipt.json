@@ -1,0 +1,64 @@
+{
+  "status": "PASS BOUNDED SEM BROWSER CONTINUATION",
+  "sources": [
+    {
+      "path": "src/workbench/semAdapter.ts",
+      "sha256": "86eba962cbdff90d19d464f0d00e6c71ea9d9dbf1658648534720301a7bb2280"
+    },
+    {
+      "path": "src/workbench/semReplay.ts",
+      "sha256": "d6218827fa4cd28188b43d3fe98620519f8893cab083e2eed8a728cb845ae385"
+    },
+    {
+      "path": "src/workbench/semWorker.ts",
+      "sha256": "77b29516b4fb55168a9419588c4d69f6c613293f3d82d60bd87305b6b1dc5092"
+    },
+    {
+      "path": "src/workbench/semWorkerClient.ts",
+      "sha256": "b3c6849a3c8910100c15457d7200a6d7b1a4479ded18576adf7db03b6d58d64e"
+    },
+    {
+      "path": "src/workbench/SemWorkbench.tsx",
+      "sha256": "27ec0c917a8d11a90e086821e2d444364ca27d05a6e6e73711d158bdced82973"
+    },
+    {
+      "path": "src/workbench/inspectionRegistry.ts",
+      "sha256": "f2d7deec03f4733167763353b54a93e70cbeeac36892303177e65b81d1334dcd"
+    },
+    {
+      "path": "src/workbench/WorkbenchApp.tsx",
+      "sha256": "6e8321dab23c34b50bb8b5ad3070a20e7dec6475e7fb7a463fa5da2ca20b8614"
+    },
+    {
+      "path": "src/test/workbenchSemWorker.test.ts",
+      "sha256": "518f2a29d141df6d2d6ed43bee3aa8d176e2ba0ce23b8995655a2270cdd5594d"
+    },
+    {
+      "path": "scripts/check-workbench-sem-ui.mjs",
+      "sha256": "d99baf54239b14b8aa3c0cd33bc3946705acf8e72974e4dde4977cd390b028e6"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "docs/planning/workbench-sem-ui-rev1/prefix2.json",
+      "sha256": "71d5b95022578f7aaed4a1c2104ca0f18e62d86e0149d0a03cb9dc5b93be817d"
+    },
+    {
+      "path": "docs/planning/workbench-sem-ui-rev1/prefix3.json",
+      "sha256": "161c41aa6c53c0e3553be109b99387c4ef4016b28ecff4bd4ef39645f54571b0"
+    },
+    {
+      "path": "docs/planning/workbench-sem-ui-rev1/replay-prefix2.json",
+      "sha256": "ee5c4ce3180bad99a62e3b5aa4b9f16a1dc651d8699b7358f4af3caf5725fcb0"
+    },
+    {
+      "path": "docs/planning/workbench-sem-ui-rev1/replay.png",
+      "sha256": "26484ed24c9ef29cca65b0ed91d7278e7256aeb5d539dd276aa7251d2e6e158b"
+    },
+    {
+      "path": "docs/planning/workbench-sem-ui-rev1/restored-prefix2.json",
+      "sha256": "db27d749bc326051fea5d71c7262ef4883dec27565df40963da9fe9592fd546f"
+    }
+  ],
+  "scope": "Browser prefix2 capture, prefix3 completion, restore to2 and replay verification: all six hashes and displayed equality rows match fresh native execution. Screenshot inspected. No full export transport, other modes, character language, causal controls or full SEM/workbench acceptance claim."
+}

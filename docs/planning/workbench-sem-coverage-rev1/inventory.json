@@ -1,0 +1,2852 @@
+{
+  "version": "workbench-sem-coverage/0.1",
+  "status": "INCOMPLETE WORKBENCH COVERAGE; REQUIREMENT INVENTORY",
+  "sources": [
+    {
+      "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+      "sha256": "59bdd5fef46866d1b65c1f4bcf8c96031cfefd972b482423b27a75d81e0962f0"
+    },
+    {
+      "path": "src/test/campaign2TransitionAdmission.test.ts",
+      "sha256": "2790894d5ec049466a197dcceaef30c87f4669251a1cbe09694efc2a4c3f88d8"
+    },
+    {
+      "path": "src/test/eventBindings.test.ts",
+      "sha256": "e46846a30c7dcd5633a367c06830bdeadd193ffa95641d4b124defda9c6411dc"
+    },
+    {
+      "path": "src/test/evidenceProvenance.test.ts",
+      "sha256": "8dff86b2d1064dc7e58095f36b2086c405b858f99651729cbc62c38c87be326e"
+    },
+    {
+      "path": "src/test/perceptualClassification.test.ts",
+      "sha256": "1024a2c2dd9ae71d4a8d29df207acc85545f6805ab382bee9d2ee2127388e0fe"
+    },
+    {
+      "path": "src/test/perceptualContinuantFiles.test.ts",
+      "sha256": "ddad0b5322eac57e06a619b1d3020943bd602c75e88385b34669c500cfe4f0b9"
+    },
+    {
+      "path": "src/test/perceptualEventClassification.test.ts",
+      "sha256": "96233df0e9939ccc29236f4e0156eaffab393b72efaf9e88af00567d3e25eee2"
+    },
+    {
+      "path": "src/test/perceptualEventFiles.test.ts",
+      "sha256": "0be1e74225ea6cc58665efdb98839fdbcc4b988eb10ebfee6374a66084860ba4"
+    },
+    {
+      "path": "src/test/phenSem001Binding.test.ts",
+      "sha256": "6554fb808f33eefcdafe493e0236fb1e50f377db8b1544ce83570e562766687d"
+    },
+    {
+      "path": "src/test/phenSem001Causal.test.ts",
+      "sha256": "9bd5fa8367ea901fe1ed7752289b20a8f67b1c62c5d6cce66812443d9909dcb7"
+    },
+    {
+      "path": "src/test/phenSem001Classification.test.ts",
+      "sha256": "a24acd229d67543848094d2736d6b3c6e649d26b279d49a3a9ce2689e07a4f78"
+    },
+    {
+      "path": "src/test/phenSem001Integration.test.ts",
+      "sha256": "2458cb471d54f51573e5260764250f63543af33d49e0a7abbbc352e4d18bba69"
+    },
+    {
+      "path": "src/test/phenSem001Measurement.test.ts",
+      "sha256": "e2b8b10a96b094b5e615c2fec59973ecb4b28a824f118b8d40c141a404c928ef"
+    },
+    {
+      "path": "src/test/phenSem001Rendering.test.ts",
+      "sha256": "338a990bc0e2c9653d6cdf8f93202966b422021a8814bd6f1eb70d7c76e4d39e"
+    },
+    {
+      "path": "src/test/recognition.test.ts",
+      "sha256": "5ddd3e87bd70b8fc3993ed2dfb99d1f1ccf55c2b0fb4e4f561150f476ecad69c"
+    },
+    {
+      "path": "src/test/sem001AcceptanceGate.test.ts",
+      "sha256": "7c5f7227c934037f4f6f72b5e54ff234eab39c76ae5c468bba7f941dd635883a"
+    },
+    {
+      "path": "src/test/sem001JIntegratedGate.test.ts",
+      "sha256": "15c5859489270bd197a28801c3bcebccdb68559f37075f7328f96f6d64c3bb2f"
+    },
+    {
+      "path": "src/test/semanticCodecs.test.ts",
+      "sha256": "97426fb2c6b0b2d691d614a96bcf3e6ce820559949c357ec9591cd2b27e15d6b"
+    },
+    {
+      "path": "src/test/semanticNegativeControls.test.ts",
+      "sha256": "104953a670dec1a4c4e78c15c8ee67ab7fb8e2d0a1bb1323e19084bff865cf1c"
+    },
+    {
+      "path": "src/test/semanticOccurrenceIdentity.test.ts",
+      "sha256": "dcd613e4530a3449b6f163ecc62474f1e8fa42c14698f73c0937019b554f761e"
+    },
+    {
+      "path": "src/test/semanticPhaseOrdering.test.ts",
+      "sha256": "6920ca1518c608f0882794053358b9d0b9df881ffcccaef0754c57d6daab26d5"
+    },
+    {
+      "path": "src/test/semanticRecognitionState.test.ts",
+      "sha256": "fe0f60c7c2d855737af9653f4934753536859e9761bc404f425872aebe7ef03b"
+    },
+    {
+      "path": "src/test/semanticSchemaRegistry.test.ts",
+      "sha256": "2e61e2afd88e0546d4e5e6d7c7301b765f04a2354be0b99229740cfe1207baf9"
+    },
+    {
+      "path": "src/test/semanticStateAuthority.test.ts",
+      "sha256": "cbb75ce4054a2a8e4d782b741592db50f5629b571c4d2dadf9bf6c564d7d9274"
+    },
+    {
+      "path": "src/test/semanticStatePersistence.test.ts",
+      "sha256": "ae25e3cb864b1ca31797467a8f2a7f6332c6213f40d8d2f0b233188abe6e730d"
+    },
+    {
+      "path": "docs/planning/workbench-sem-parity-rev1/receipt.json",
+      "sha256": "547f0e59b5de4517e30f53f0cb57d966e5e375112c4937761953f631389a8b44"
+    },
+    {
+      "path": "docs/planning/workbench-sem-ui-rev1/receipt.json",
+      "sha256": "5f84207cbb6d222e88d23981f6fc3e8d0c8ce84f59b67b67b5e85d7827b39904"
+    },
+    {
+      "path": "docs/planning/workbench-sem-language-rev1/receipt.json",
+      "sha256": "4360656cbc184a32e01eac89178cb32566f2a22ca3da8c914132eb96cadafaf5"
+    },
+    {
+      "path": "docs/planning/workbench-sem-character-ui-rev1/receipt.json",
+      "sha256": "22dc201960e4917b1eaaef1a06965dfa0aff80b2865f3abd61be20698e6f1296"
+    },
+    {
+      "path": "docs/planning/workbench-sem-controls-ui-rev1/receipt.json",
+      "sha256": "c4419ff6c5e472eb765c5b1129f395fbc17af7e68778b7024b1516142dfef50f"
+    },
+    {
+      "path": "docs/planning/workbench-sem-recognition-ui-rev1/receipt.json",
+      "sha256": "32a1fbcd2b823fd0e4ee42cf7260b592b8cea3641e14869a57445c648c8b8fbd"
+    },
+    {
+      "path": "docs/planning/workbench-sem-knowledge-ui-rev1/receipt.json",
+      "sha256": "8d0f3fd630bc4dfe0796738e2d906e6b98bae44284929871d185e774f39f9c6a"
+    },
+    {
+      "path": "docs/planning/workbench-sem-measurement-ui-rev1/receipt.json",
+      "sha256": "d0be56df49b266b111267a2b2a2d7a8c4388f4ae31acbb952d3ed5794bda879a"
+    },
+    {
+      "path": "docs/planning/workbench-sem-classification-ui-rev1/receipt.json",
+      "sha256": "5e444b0cd03ba85e54597513b42a3565aa8e48f680c8b92517540366d7e5464d"
+    },
+    {
+      "path": "docs/planning/workbench-sem-recognition-boundaries-ui-rev1/receipt.json",
+      "sha256": "05304872fd0486c6b9fa7c52a35ae4b6adb2d7a0960a68087bc2b261e55bd215"
+    },
+    {
+      "path": "scripts/check-workbench-sem-coverage.mjs",
+      "sha256": "6069adcca49a8d78cd949c291974d1730ef6fca5fec1b4030e3bcaf640196933"
+    }
+  ],
+  "vectors": [
+    {
+      "id": "CV-SEM-001",
+      "family": "integrated-phenomenon",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 11,
+        "exact": "| `CV-SEM-001` | Two world events containing identical referents in different `EventRoleId` bindings produce structurally distinct truth bindings and permitted perceived bindings. | `PASS` — canonical and Actor/Companion-swapped events name the same referents, differ structurally on the truth side, and remain perceptually isomorphic to an observer who cannot see which referent moved |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/phenSem001Binding.test.ts",
+          "line": 27,
+          "exact": "  it('CV-SEM-001 keeps role changes structurally visible on both sides', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-002",
+      "family": "integrated-phenomenon",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 12,
+        "exact": "| `CV-SEM-002` | One referent simultaneously occupying several event roles retains every binding occurrence; no referent-keyed deduplication occurs. | `PASS` — truth-side multi-role retention plus both perceived-side directions: one continuant in two roles and two continuants in one repeatable role each keep distinct occurrences, so referent-keyed, role-keyed, and event-only collapse all fail |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/phenSem001Binding.test.ts",
+          "line": 57,
+          "exact": "  it('CV-SEM-002 retains every binding occurrence for a referent in several roles', () => {"
+        },
+        {
+          "path": "src/test/phenSem001Binding.test.ts",
+          "line": 75,
+          "exact": "  it('CV-SEM-002 retains both occurrences when one perceived continuant holds two roles', () => {"
+        },
+        {
+          "path": "src/test/phenSem001Binding.test.ts",
+          "line": 101,
+          "exact": "  it('CV-SEM-002 retains both occurrences when one perceived role holds two continuants', () => {"
+        }
+      ],
+      "workbenchStatus": "PARTIAL SCOPED EVIDENCE; FULL VECTOR NOT YET QUALIFIED",
+      "relatedReceipts": [
+        "docs/planning/workbench-sem-controls-ui-rev1/receipt.json"
+      ],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-003",
+      "family": "integrated-phenomenon",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 13,
+        "exact": "| `CV-SEM-003` | Visibility is binding-specific. Mina, Darius, and Glen receive exactly their declared permitted binding sets from the same event. | `PASS` — three mutually non-subsuming permitted sets from one truth event, the action carried as the event-file rather than a continuant binding, and each observer unperturbed by the others sharing one run-scoped allocator |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/phenSem001Binding.test.ts",
+          "line": 125,
+          "exact": "  it('CV-SEM-003 gives each observer exactly their declared permitted binding set', () => {"
+        },
+        {
+          "path": "src/test/phenSem001Binding.test.ts",
+          "line": 154,
+          "exact": "  it('CV-SEM-003 represents the action as the event-file, never as a continuant binding', () => {"
+        },
+        {
+          "path": "src/test/phenSem001Binding.test.ts",
+          "line": 263,
+          "exact": "  it('CV-SEM-003 leaves each observer unperturbed by the others sharing one allocator', () => {"
+        }
+      ],
+      "workbenchStatus": "PARTIAL SCOPED EVIDENCE; FULL VECTOR NOT YET QUALIFIED",
+      "relatedReceipts": [
+        "docs/planning/workbench-sem-parity-rev1/receipt.json"
+      ],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-004",
+      "family": "integrated-phenomenon",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 14,
+        "exact": "| `CV-SEM-004` | A visible but unrecognized entity yields a `PerceptualReferentId` and no truth-side `SemanticReferentId`. | `PASS` — unfamiliar evaluation emits no resolution or truth identity |"
+      },
+      "nativeSourceLocations": [],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-005",
+      "family": "integrated-phenomenon",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 15,
+        "exact": "| `CV-SEM-005` | Correct recognition and categorical misrecognition attach different resolutions to equal perceptual evidence without changing that evidence. | `PASS` — observer-owned cue intervention over immutable experience |"
+      },
+      "nativeSourceLocations": [],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-006",
+      "family": "integrated-phenomenon",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 16,
+        "exact": "| `CV-SEM-006` | Later correction appends a replacement or withdrawal resolution; the original experience, evaluation, and contemporaneous resolution remain byte-identical. | `PASS` — append-only replacement/withdrawal chain |"
+      },
+      "nativeSourceLocations": [],
+      "workbenchStatus": "PARTIAL SCOPED EVIDENCE; FULL VECTOR NOT YET QUALIFIED",
+      "relatedReceipts": [
+        "docs/planning/workbench-sem-parity-rev1/receipt.json"
+      ],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-007",
+      "family": "integrated-phenomenon",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 17,
+        "exact": "| `CV-SEM-007` | Truth binding IDs and truth referent IDs are structurally absent from character evidence. Stable opaque-handle equality cannot reveal that two hidden sources are equal. | `PASS` — the projection boundary returns exactly `{perceptualReferentId, eventRoleEvidence}` with a role drawn from the closed accepted vocabulary; two observers of one hidden referent share no continuant handle, and their coinciding ordinals carry no meaning |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/phenSem001Binding.test.ts",
+          "line": 169,
+          "exact": "  it('CV-SEM-007 keeps truth binding and referent identities out of character evidence', () => {"
+        },
+        {
+          "path": "src/test/phenSem001Binding.test.ts",
+          "line": 198,
+          "exact": "  it('CV-SEM-007 lets nothing but role evidence cross the projection boundary', () => {"
+        },
+        {
+          "path": "src/test/phenSem001Binding.test.ts",
+          "line": 231,
+          "exact": "  it('CV-SEM-007 denies cross-observer handle equality for one hidden referent', () => {"
+        }
+      ],
+      "workbenchStatus": "PARTIAL SCOPED EVIDENCE; FULL VECTOR NOT YET QUALIFIED",
+      "relatedReceipts": [
+        "docs/planning/workbench-sem-language-rev1/receipt.json"
+      ],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-008",
+      "family": "integrated-phenomenon",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 18,
+        "exact": "| `CV-SEM-008` | `EventRoleId` and `CausalRoleId` remain independently present and typed; deriving a causal role cannot erase or mutate event-role evidence. | `PASS` — derivation emits separate records and leaves the binding byte-identical; proven on the discriminating `Companion→Participant` and `Location→Location` mappings rather than only the identity-looking `Actor→Actor` pairing |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/phenSem001Causal.test.ts",
+          "line": 41,
+          "exact": "  it('CV-SEM-008 keeps event-role and causal-role evidence independently present and typed', () => {"
+        },
+        {
+          "path": "src/test/phenSem001Causal.test.ts",
+          "line": 68,
+          "exact": "  it('CV-SEM-008 derives through the mapping rather than copying the event role', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-009",
+      "family": "integrated-phenomenon",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 19,
+        "exact": "| `CV-SEM-009` | Character-relative causal-role evidence changes only when permitted observations change, never when only hidden truth-side causal structure changes. | `PASS` — exchanging the truth Actor and Companion referents leaves the observer's causal evidence byte-identical, while coarsening his permitted role observation changes it from `Actor` to `Participant` |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/phenSem001Causal.test.ts",
+          "line": 99,
+          "exact": "  it('CV-SEM-009 responds to permitted observation changes, not hidden truth changes', () => {"
+        },
+        {
+          "path": "src/test/phenSem001Causal.test.ts",
+          "line": 126,
+          "exact": "  it('CV-SEM-009 derives causal roles only from admitted observer-side evidence', () => {"
+        }
+      ],
+      "workbenchStatus": "PARTIAL SCOPED EVIDENCE; FULL VECTOR NOT YET QUALIFIED",
+      "relatedReceipts": [
+        "docs/planning/workbench-sem-controls-ui-rev1/receipt.json"
+      ],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-010",
+      "family": "integrated-phenomenon",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 20,
+        "exact": "| `CV-SEM-010` | Every perceived binding has complete omniscient trace ancestry to one truth binding and observation operation, while the character projection cannot traverse that ancestry. | `PASS` — exactly one edge per perceived binding, naming the truth binding it actually descends from and explaining its role evidence; two observers of one hidden referent share no character-side handle while the trace side knows the referent is the same |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/phenSem001Causal.test.ts",
+          "line": 143,
+          "exact": "  it('CV-SEM-010 records complete omniscient ancestry the character cannot traverse', () => {"
+        },
+        {
+          "path": "src/test/phenSem001Causal.test.ts",
+          "line": 196,
+          "exact": "  it('CV-SEM-010 keeps the two provenance graphs separate per observer', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-011",
+      "family": "integrated-phenomenon",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 21,
+        "exact": "| `CV-SEM-011` | Scalar measurement evidence is referenced as supporting evidence and is neither required for every binding nor treated as referent identity or role evidence. | `PASS` — a real `observation/0.1-candidate` bounded measurement is minted in the frozen `ObservationId` namespace 1115 and cited by a perceived binding; the join runs from the binding's own citation, the measurement's interval/precision/truth record reach no character record, and the canonical projection carries no measurement at all |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/phenSem001Measurement.test.ts",
+          "line": 76,
+          "exact": "  it('CV-SEM-011 cites a real bounded measurement as supporting evidence', () => {"
+        },
+        {
+          "path": "src/test/phenSem001Measurement.test.ts",
+          "line": 139,
+          "exact": "  it('CV-SEM-011 does not require measurement support on every binding', () => {"
+        },
+        {
+          "path": "src/test/sem001AcceptanceGate.test.ts",
+          "line": 290,
+          "exact": "    const row = VECTORS.match(/^\\|\\s*`CV-SEM-011`\\s*\\|(.*)\\|(.*)\\|\\s*$/m);"
+        }
+      ],
+      "workbenchStatus": "PARTIAL SCOPED EVIDENCE; FULL VECTOR NOT YET QUALIFIED",
+      "relatedReceipts": [
+        "docs/planning/workbench-sem-measurement-ui-rev1/receipt.json"
+      ],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-012",
+      "family": "integrated-phenomenon",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 22,
+        "exact": "| `CV-SEM-012` | Deterministic omniscient, contemporaneous-character, and current-reinterpretation renderers consume typed records; changing presentation metadata changes no authoritative record. | `PASS` — three viewpoints render from the same immutable experience, differing only in permitted read scope; record-derived lines are byte-identical across two presentations while the display surface responds to both, and every authoritative record is unchanged after rendering; only the omniscient viewpoint reaches truth binding or referent identity, with character-side referent identities held to closed catalog membership; the contemporaneous and current accounts differ exactly by one appended corrective resolution over an unmodified experience |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/phenSem001Rendering.test.ts",
+          "line": 123,
+          "exact": "  it('CV-SEM-012 renders the three viewpoints deterministically from typed records', () => {"
+        },
+        {
+          "path": "src/test/phenSem001Rendering.test.ts",
+          "line": 150,
+          "exact": "  it('CV-SEM-012 derives record lines from every typed record family it claims to consume', () => {"
+        },
+        {
+          "path": "src/test/phenSem001Rendering.test.ts",
+          "line": 184,
+          "exact": "  it('CV-SEM-012 changes no authoritative record when presentation metadata changes', () => {"
+        },
+        {
+          "path": "src/test/phenSem001Rendering.test.ts",
+          "line": 219,
+          "exact": "  it('CV-SEM-012 lets only the omniscient viewpoint reach truth identities', () => {"
+        },
+        {
+          "path": "src/test/phenSem001Rendering.test.ts",
+          "line": 273,
+          "exact": "  it('CV-SEM-012 separates the contemporaneous account from the current reinterpretation', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-013",
+      "family": "continuant-lifecycle",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 23,
+        "exact": "| `CV-SEM-013` | Perceptual-referent allocation is independently monotonic per observer, persists across save/load, never reuses an ordinal, and is invariant to other observers' allocations. | `PASS` — executable observer-scoped allocator, structural restore, retirement-without-reuse, and interleaving controls |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/perceptualContinuantFiles.test.ts",
+          "line": 92,
+          "exact": "  it('CV-SEM-013 allocates observer-scoped ordinals monotonically and never reuses one', () => {"
+        },
+        {
+          "path": "src/test/perceptualContinuantFiles.test.ts",
+          "line": 117,
+          "exact": "  it('CV-SEM-013 persists allocator state across a structural save/load boundary', () => {"
+        },
+        {
+          "path": "src/test/perceptualContinuantFiles.test.ts",
+          "line": 135,
+          "exact": "  it('CV-SEM-013 keeps allocation independent per observer under interleaving', () => {"
+        },
+        {
+          "path": "src/test/sem001AcceptanceGate.test.ts",
+          "line": 168,
+          "exact": "      'CV-SEM-013': 'allocator, save/load, no reuse, inter-observer independence',"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-014",
+      "family": "integrated-phenomenon",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 24,
+        "exact": "| `CV-SEM-014` | Invalid registry IDs, multiplicity, hidden references, forged perceptual IDs, illegal causal derivation, or noncanonical order abort the complete instant with no committed state, allocation, trace, or output. | `PASS` — a handler that allocates occurrence ordinals, compiles bindings, and contributes trace and outputs before failing settlement leaves state, allocators, committed trace, and outputs exactly as they were |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/phenSem001Measurement.test.ts",
+          "line": 165,
+          "exact": "  it('CV-SEM-014 restores state, allocators, trace, and outputs after an illegal binding', () => {"
+        }
+      ],
+      "workbenchStatus": "PARTIAL SCOPED EVIDENCE; FULL VECTOR NOT YET QUALIFIED",
+      "relatedReceipts": [
+        "docs/planning/workbench-sem-measurement-ui-rev1/receipt.json"
+      ],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-015",
+      "family": "integrated-phenomenon",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 25,
+        "exact": "| `CV-SEM-015` | Equal truth-side semantic facts with different permitted sensory evidence produce different perceptual classifications; hidden facts never copy through merely because they are registered. | `PASS` — two observers of one truth instrument classify it differently from their own permitted features, while exchanging the hidden truth referents leaves classification byte-identical |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/phenSem001Classification.test.ts",
+          "line": 75,
+          "exact": "  it('CV-SEM-015 classifies one truth object differently for two observers', () => {"
+        },
+        {
+          "path": "src/test/phenSem001Classification.test.ts",
+          "line": 106,
+          "exact": "  it('CV-SEM-015 holds classification fixed when only hidden truth changes', () => {"
+        }
+      ],
+      "workbenchStatus": "PARTIAL SCOPED EVIDENCE; FULL VECTOR NOT YET QUALIFIED",
+      "relatedReceipts": [
+        "docs/planning/workbench-sem-controls-ui-rev1/receipt.json"
+      ],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-016",
+      "family": "integrated-phenomenon",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 26,
+        "exact": "| `CV-SEM-016` | Perceptual classification, track continuity, and instance recognition are independently intervenable: each can change while the other two remain structurally fixed where the fixture permits. | `PASS` — accepted classification/track controls plus immutable-experience recognition intervention |"
+      },
+      "nativeSourceLocations": [],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-017",
+      "family": "integrated-phenomenon",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 27,
+        "exact": "| `CV-SEM-017` | Every perceptual classification uses a registered facet and exact declared value type; unknown facets, freeform tags, and wrong-typed values fail closure and roll back. Missing classification remains distinct from an explicit boolean-false assertion. | `PASS` — unknown facet, freeform feature tag, and non-boolean value each fail before emission; explicit negative evidence emits a present `false` record while absence emits none |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/phenSem001Classification.test.ts",
+          "line": 128,
+          "exact": "  it('CV-SEM-017 admits only registered facets and exact declared value types', () => {"
+        },
+        {
+          "path": "src/test/phenSem001Classification.test.ts",
+          "line": 163,
+          "exact": "  it('CV-SEM-017 keeps a missing classification distinct from an explicit false', () => {"
+        }
+      ],
+      "workbenchStatus": "PARTIAL SCOPED EVIDENCE; FULL VECTOR NOT YET QUALIFIED",
+      "relatedReceipts": [
+        "docs/planning/workbench-sem-classification-ui-rev1/receipt.json"
+      ],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-018",
+      "family": "integrated-phenomenon",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 28,
+        "exact": "| `CV-SEM-018` | Classification alone produces no appraisal, affect, motive, pressure, or Reason. The `ClassificationToPressure` shortcut fails read-domain or receiving-seam closure. | `PASS` — every psychological and world-truth emission target is refused, and emitted classification evidence carries exactly the accepted field set with no salience, valence, confidence, or weight field |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/phenSem001Classification.test.ts",
+          "line": 183,
+          "exact": "  it('CV-SEM-018 lets classification emit only into experience assembly', () => {"
+        },
+        {
+          "path": "src/test/phenSem001Classification.test.ts",
+          "line": 199,
+          "exact": "  it('CV-SEM-018 produces no appraisal-shaped field anywhere in classification evidence', () => {"
+        }
+      ],
+      "workbenchStatus": "PARTIAL SCOPED EVIDENCE; FULL VECTOR NOT YET QUALIFIED",
+      "relatedReceipts": [
+        "docs/planning/workbench-sem-classification-ui-rev1/receipt.json"
+      ],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-019",
+      "family": "continuant-lifecycle",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 29,
+        "exact": "| `CV-SEM-019` | False continuity: permitted sensory input deterministically continues one observer-relative track across two different truth entities; no truth comparison automatically corrects, ends, or replaces the track. | `PASS` — executable occlusion continue/split controls with no truth input or repair path |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/campaign2TransitionAdmission.test.ts",
+          "line": 258,
+          "exact": "    // As in CV-SEM-019, the observer continues a track across an occlusion. A"
+        },
+        {
+          "path": "src/test/perceptualContinuantFiles.test.ts",
+          "line": 156,
+          "exact": "  it('CV-SEM-019 false continuity keeps one unchanged track across two truth entities', () => {"
+        },
+        {
+          "path": "src/test/perceptualContinuantFiles.test.ts",
+          "line": 170,
+          "exact": "  it('CV-SEM-019 false discontinuity allocates two immutable tracks for one truth entity', () => {"
+        },
+        {
+          "path": "src/test/sem001AcceptanceGate.test.ts",
+          "line": 169,
+          "exact": "      'CV-SEM-019': 'false continuity',"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-020",
+      "family": "continuant-lifecycle",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 30,
+        "exact": "| `CV-SEM-020` | False discontinuity: one truth entity yields two separately allocated tracks after a declared perceptual break; later recognition may associate both tracks with the same semantic candidate without merging or rewriting either track. | `PASS` — separate track allocation plus independent equal recognition resolutions |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/sem001AcceptanceGate.test.ts",
+          "line": 170,
+          "exact": "      'CV-SEM-020': 'false discontinuity',"
+        },
+        {
+          "path": "src/test/perceptualContinuantFiles.test.ts",
+          "line": 170,
+          "exact": "  it('CV-SEM-019 false discontinuity allocates two immutable tracks for one truth entity', () => {",
+          "disposition": "Original title says CV-SEM-019; body exercises discontinuity relevant to CV-SEM-020. Recognition association is a separate portion, not proven by this title."
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-021",
+      "family": "continuant-lifecycle",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 31,
+        "exact": "| `CV-SEM-021` | `PerceptualTrackTransition` is produced solely from permitted observer-side detections and supporting observations, with exact binary `NewTrack`/`ContinuesPriorTrack`; its tracking rationale is not automatically character-accessible semantic evidence. | `PASS` — forbidden-truth-field, non-binary-continuity, missing/cross-observer support, and forged/inactive prior controls |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/perceptualContinuantFiles.test.ts",
+          "line": 192,
+          "exact": "  it('CV-SEM-021 derives transitions solely from permitted observer-side evidence', () => {"
+        },
+        {
+          "path": "src/test/perceptualContinuantFiles.test.ts",
+          "line": 226,
+          "exact": "  it('CV-SEM-021 rejects forged, cross-observer, and inactive prior continuant-files', () => {"
+        },
+        {
+          "path": "src/test/sem001AcceptanceGate.test.ts",
+          "line": 171,
+          "exact": "      'CV-SEM-021': 'binary track transition from observer-side evidence only',"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-022",
+      "family": "continuant-lifecycle",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 32,
+        "exact": "| `CV-SEM-022` | Changing only another observer's track allocations or the opaque numeric ordinals of this observer's otherwise isomorphic tracks changes no classification, similarity, salience, appraisal, recognition score, or other psychological result. | `PASS` — ordinal-shifted isomorphic run and foreign-observer interleaving compare equal under the ordinal-free continuity view |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/perceptualContinuantFiles.test.ts",
+          "line": 279,
+          "exact": "  it('CV-SEM-022 keeps track ordinals psychologically inert under renaming', () => {"
+        },
+        {
+          "path": "src/test/perceptualContinuantFiles.test.ts",
+          "line": 304,
+          "exact": "  it('CV-SEM-022 leaves this observer’s semantic view unchanged by another observer’s tracks', () => {"
+        },
+        {
+          "path": "src/test/sem001AcceptanceGate.test.ts",
+          "line": 172,
+          "exact": "      'CV-SEM-022': 'ordinal opacity',"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-023",
+      "family": "truth-binding",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 33,
+        "exact": "| `CV-SEM-023` | One truth referent bound into two roles yields two independently identified `EventBinding` occurrences; neither truth construction nor perception deduplicates them by referent. | `PASS` — executable occurrence-preservation control |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/eventBindings.test.ts",
+          "line": 84,
+          "exact": "  it('CV-SEM-023 preserves one referent in several roles as distinct occurrences', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-024",
+      "family": "truth-binding",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 34,
+        "exact": "| `CV-SEM-024` | Several truth referents bound into one repeatable role each retain a distinct binding occurrence; role-keyed storage or overwrite reports its first structural divergence. | `PASS` — executable repeatable-role control |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/eventBindings.test.ts",
+          "line": 99,
+          "exact": "  it('CV-SEM-024 preserves several referents in one repeatable role without overwrite', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-025",
+      "family": "truth-binding",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 35,
+        "exact": "| `CV-SEM-025` | Two event types apply different cardinalities and optional narrowing validators to the same global role. Effective validation is always broad-domain AND event-type narrowing, so an event type cannot widen the role domain. | `PASS` — strike/drink instrument controls |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/eventBindings.test.ts",
+          "line": 107,
+          "exact": "  it('CV-SEM-025 makes cardinality and referent-domain narrowing event-type specific and never widening', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-026",
+      "family": "truth-binding",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 36,
+        "exact": "| `CV-SEM-026` | Missing required roles, prohibited roles, underflow, overflow, noncanonical rules, unknown roles, and wrong-domain referents abort before runtime allocation advances; a later staged failure after successful binding allocation restores the accepted scheduler allocator exactly. | `PASS` — exact typed failures plus real whole-instant rollback |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/eventBindings.test.ts",
+          "line": 124,
+          "exact": "  it('CV-SEM-026 rejects invalid inputs before allocation and rolls successful allocation back on later instant failure', async () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-027",
+      "family": "truth-binding",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 37,
+        "exact": "| `CV-SEM-027` | Event-binding identity survives structural copy and exact replay, is never reused, and changes no semantic grammar when only opaque allocated values differ between an explicitly coupled isomorphic comparison. | `PASS` — replay, construction-order, and shifted-ordinal controls |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/eventBindings.test.ts",
+          "line": 171,
+          "exact": "  it('CV-SEM-027 preserves allocated occurrence identity across replay while ordinals remain semantically opaque', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-028",
+      "family": "truth-binding",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 38,
+        "exact": "| `CV-SEM-028` | The initial registry contains `Beneficiary` but no generic `Context`; `EventRoleId` and `CausalRoleId` cannot substitute, and role registry order creates no priority, salience, or causal weight. | `PASS` — registry/domain separation controls |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/eventBindings.test.ts",
+          "line": 184,
+          "exact": "  it('CV-SEM-028 keeps event roles separate from causal roles and gives registry order no weight', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-029",
+      "family": "truth-binding",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 39,
+        "exact": "| `CV-SEM-029` | Permitted role observation independently preserves, coarsens to `Participant`, leaves unresolved, or omits a visible binding. Character output contains neither truth `EventBindingId` nor truth referent identity. | `PASS` — four-way epistemic projection control |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/eventBindings.test.ts",
+          "line": 199,
+          "exact": "  it('CV-SEM-029 exposes only permitted role evidence, never truth binding identity or automatic specificity', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-030",
+      "family": "truth-binding",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 40,
+        "exact": "| `CV-SEM-030` | Version 0.1 rejects freeform binding qualifiers, duplicate `(EventRoleId, SemanticReferentId)` pairs, and redundant `Action` bindings in event types that already fix the action. | `PASS` — closure and fixed-action controls |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/eventBindings.test.ts",
+          "line": 219,
+          "exact": "  it('CV-SEM-030 rejects duplicate opaque occurrences, qualifiers, and redundant Action bindings', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-031",
+      "family": "event-files",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 41,
+        "exact": "| `CV-SEM-031` | One experience containing two simultaneous perceived event-files preserves each file's Actor/Target/Instrument grouping; an ungrouped role bag cannot reconstruct the pairs. | `PASS` — event-grouping oracle preserves both relational frames |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/perceptualEventFiles.test.ts",
+          "line": 103,
+          "exact": "  it('CV-SEM-031 preserves two simultaneous event groupings that an ungrouped role bag loses', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-032",
+      "family": "event-files",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 42,
+        "exact": "| `CV-SEM-032` | One perceived event-file persists across several distinct experiences without equating `ExperienceId` and `PerceptualEventReferentId`. | `PASS` — many-to-many envelope/occurrence identity control |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/perceptualEventFiles.test.ts",
+          "line": 121,
+          "exact": "  it('CV-SEM-032 permits one event-file to persist across distinct experiences', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-033",
+      "family": "event-files",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 43,
+        "exact": "| `CV-SEM-033` | False event continuity: two truth events remain one perceived event-file when permitted segmentation says continue; truth identity performs no automatic correction. | `PASS` — observer-side continue control |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/campaign2TransitionAdmission.test.ts",
+          "line": 266,
+          "exact": "      // CV-SEM-033/034 permit observer segmentation independent of truth grouping."
+        },
+        {
+          "path": "src/test/perceptualEventFiles.test.ts",
+          "line": 130,
+          "exact": "  it('CV-SEM-033 permits false event continuity without truth-side correction', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-034",
+      "family": "event-files",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 44,
+        "exact": "| `CV-SEM-034` | False event discontinuity: one truth event produces two perceived event-files after an observer-side end/new decision; truth identity performs no automatic merge. | `PASS` — immutable end/new control |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/perceptualEventFiles.test.ts",
+          "line": 142,
+          "exact": "  it('CV-SEM-034 permits false event discontinuity without truth-side merging', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-035",
+      "family": "event-files",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 45,
+        "exact": "| `CV-SEM-035` | Truth-event-keyed start/continue requests fail input/read closure. `CurrentEventDetectionId` and supporting evidence are observer-side and contain no truth event or action handle. | `PASS` — strict input closure rejects truth keys |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/perceptualEventFiles.test.ts",
+          "line": 158,
+          "exact": "  it('CV-SEM-035 rejects truth-keyed segmentation inputs and keeps sensory IDs observer-side', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-036",
+      "family": "event-files",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 46,
+        "exact": "| `CV-SEM-036` | A truth `Action → action.skip_rope` binding creates neither a continuant-file Action binding nor perceived action classification without a separately permitted event-classification rule. | `PASS` — `ActionAsContinuantFile` and truth-copy controls |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/perceptualEventFiles.test.ts",
+          "line": 169,
+          "exact": "  it('CV-SEM-036 forbids using a continuant-file as the Action carrier', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-037",
+      "family": "event-files",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 47,
+        "exact": "| `CV-SEM-037` | One continuant-file may participate in several concurrent event-files, and several role bindings in one event-file may reference one continuant-file without deduplication or cross-association. | `PASS` — occurrence-specific grouping control |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/perceptualEventFiles.test.ts",
+          "line": 180,
+          "exact": "  it('CV-SEM-037 preserves concurrent participation and distinct same-object role occurrences', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-038",
+      "family": "event-files",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 48,
+        "exact": "| `CV-SEM-038` | Active event-files and each observer's next-event sequence survive structural save/load and replay exactly; allocations by another observer do not perturb this observer. | `PASS` — structural replay and observer-isolation control |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/perceptualEventFiles.test.ts",
+          "line": 196,
+          "exact": "  it('CV-SEM-038 preserves event-file state across save/load and isolates observer allocators', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-039",
+      "family": "event-files",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 49,
+        "exact": "| `CV-SEM-039` | Shifting only event-file sequence values changes no role grouping, classification, salience, ordering importance, appraisal, or other psychological result. | `PASS` — ordinal-free grouping comparison |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/perceptualEventFiles.test.ts",
+          "line": 212,
+          "exact": "  it('CV-SEM-039 gives event-file ordinals no semantic or psychological magnitude', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-040",
+      "family": "event-files",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 50,
+        "exact": "| `CV-SEM-040` | A staged failure after event-file start/continue/end restores active event-file state and every observer allocator structurally exactly. | `PASS` — scheduler transaction rollback control |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/perceptualEventFiles.test.ts",
+          "line": 226,
+          "exact": "  it('CV-SEM-040 rolls event-file state and runtime allocation back after staged failure', async () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-041",
+      "family": "continuant-classification",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 51,
+        "exact": "| `CV-SEM-041` | One continuant-file can carry person-like, discrete-object-like, and interior-space-like appearance assertions without truth-kind leakage. A `PerceptualEventReferentId` cannot substitute as a continuant classification carrier. | `PASS` — independent continuant facets and carrier-type rejection |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/perceptualClassification.test.ts",
+          "line": 80,
+          "exact": "  it('CV-SEM-041 classifies continuants independently and rejects event-files as carriers', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-042",
+      "family": "continuant-classification",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 52,
+        "exact": "| `CV-SEM-042` | Equal truth facts with different permitted feature evidence classify differently; equal permitted evidence with different hidden truth is character-byte-identical. World and perceptual facet IDs remain non-substitutable regardless of matching labels or ordinals. | `PASS` — evidence-only output and namespace closure |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/perceptualClassification.test.ts",
+          "line": 98,
+          "exact": "  it('CV-SEM-042 responds only to permitted evidence and keeps truth/perceptual namespaces distinct', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-043",
+      "family": "continuant-classification",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 53,
+        "exact": "| `CV-SEM-043` | `NoAssertion` emits no classification record. `Assert(false)` emits a present boolean record; `MissingAsFalse` and an `Unknown` sentinel fail exact closure. | `PASS` — optional derivation sum-type controls |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/perceptualClassification.test.ts",
+          "line": 120,
+          "exact": "  it('CV-SEM-043 distinguishes NoAssertion, Assert(false), MissingAsFalse, and invalid Unknown', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-044",
+      "family": "continuant-classification",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 54,
+        "exact": "| `CV-SEM-044` | Missing feature evidence differs from explicit feature `false`; classification false requires traceable explicit negative feature evidence and cannot be derived from detector silence. | `PASS` — upstream missing/negative and negative-provenance controls |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/perceptualClassification.test.ts",
+          "line": 156,
+          "exact": "  it('CV-SEM-044 distinguishes missing features from explicit negative sensory evidence', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-045",
+      "family": "continuant-classification",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 55,
+        "exact": "| `CV-SEM-045` | Every emitted value is an exact boolean. Strings, numbers, symbols, category labels, and implicit coercions fail before allocation; independent kind-like facets may coexist without an exclusive-primary-kind rule. | `PASS` — exact value grammar and independent-facet controls |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/perceptualClassification.test.ts",
+          "line": 186,
+          "exact": "  it('CV-SEM-045 enforces exact booleans while independent appearance facets coexist', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-046",
+      "family": "continuant-classification",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 56,
+        "exact": "| `CV-SEM-046` | Each classification names an executable governed rule and canonical unique feature/observation support owned by the same observer/detection context. Inputs contain no truth referent, binding, facet alias, stable truth handle, prose, or LLM step. | `PASS` — provenance and forbidden-field closure |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/perceptualClassification.test.ts",
+          "line": 199,
+          "exact": "  it('CV-SEM-046 requires exact observer-side feature and observation provenance', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-047",
+      "family": "continuant-classification",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 57,
+        "exact": "| `CV-SEM-047` | One ModelIdentity has exactly one authoritative rule per perceptual facet; missing or duplicate authority fails closure, while separate competing models may register different rules for the same facet. | `PASS` — sole-authority registry control |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/perceptualClassification.test.ts",
+          "line": 220,
+          "exact": "  it('CV-SEM-047 enforces sole facet authority per model while allowing competing models', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-048",
+      "family": "continuant-classification",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 58,
+        "exact": "| `CV-SEM-048` | One experience contains at most one assertion for each `(PerceptualReferentId, PerceptualFacetId)` pair. Duplicate or conflicting opaque records fail; multiple observations consolidate before emission. | `PASS` — experience assertion uniqueness control |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/perceptualClassification.test.ts",
+          "line": 263,
+          "exact": "  it('CV-SEM-048 rejects duplicate or conflicting referent/facet assertions within one experience', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-049",
+      "family": "continuant-classification",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 59,
+        "exact": "| `CV-SEM-049` | Shifting only `ClassificationEvidenceId` ordinals changes no semantic or psychological result; save/load/replay and later staged failure preserve or restore allocation exactly. | `PASS` — ordinal-free comparison, replay, and scheduler rollback |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/perceptualClassification.test.ts",
+          "line": 277,
+          "exact": "  it('CV-SEM-049 preserves replay and ordinal opacity and rolls allocation back on failure', async () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-050",
+      "family": "continuant-classification",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 60,
+        "exact": "| `CV-SEM-050` | Classification may emit only into pre-recognition experience assembly. It cannot bypass that envelope into identity/recognition or any psychological/world write domain, and an LLM or prose classifier cannot resolve as authoritative logic. | `PASS` — emission-target and executable-rule closure |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/perceptualClassification.test.ts",
+          "line": 314,
+          "exact": "  it('CV-SEM-050 permits experience assembly and rejects recognition/psychology bypasses and prose logic', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-051",
+      "family": "event-classification",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 61,
+        "exact": "| `CV-SEM-051` | Event facets attach only to `PerceptualEventReferentId`; continuant/event facet namespaces and carriers are non-substitutable, regardless of matching labels or ordinals. | `PASS` — event-carrier and namespace closure |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/perceptualEventClassification.test.ts",
+          "line": 100,
+          "exact": "  it('CV-SEM-051 keeps event and continuant carriers and facet namespaces non-substitutable', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-052",
+      "family": "event-classification",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 62,
+        "exact": "| `CV-SEM-052` | Equal truth Action/EventType with different permitted event features classifies differently; equal permitted features with different hidden truth Action/EventType produces structurally identical character evidence. Direct truth action/type projection fails closure. | `PASS` — permitted-feature dependence and truth-action noninterference |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/perceptualEventClassification.test.ts",
+          "line": 113,
+          "exact": "  it('CV-SEM-052 depends only on permitted event features, never hidden Action or EventType identity', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-053",
+      "family": "event-classification",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 63,
+        "exact": "| `CV-SEM-053` | The rope-skipping-pattern conjunction returns true only with all three definitionally necessary explicit true features, false when any required feature is explicitly false, and `NoAssertion` when support is merely incomplete. Coarse facets remain independent; no hierarchy is implied. | `PASS` — exact three-valued conjunction and independent outputs |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/perceptualEventClassification.test.ts",
+          "line": 125,
+          "exact": "  it('CV-SEM-053 implements the exact necessary-feature conjunction without default false or hierarchy', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-054",
+      "family": "event-classification",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 64,
+        "exact": "| `CV-SEM-054` | Event-feature evidence cites one observer/event-file/detection window, canonical observations, and only observer-relative supporting continuants. A negative from another window fails scope; shared participants do not manufacture action meaning. | `PASS` — scoped provenance and cross-window-negative control |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/perceptualEventClassification.test.ts",
+          "line": 146,
+          "exact": "  it('CV-SEM-054 scopes every feature to one observer, event-file, detection window, and observer-side support', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-055",
+      "family": "event-classification",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 65,
+        "exact": "| `CV-SEM-055` | False event merge may append different classifications to one event-file and false split may classify two event-files similarly; hidden truth never merges, splits, repairs, or rewrites classification history. | `PASS` — false merge/split historical preservation |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/perceptualEventClassification.test.ts",
+          "line": 192,
+          "exact": "  it('CV-SEM-055 preserves false-merge contradictions and false-split equivalence without repair', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-056",
+      "family": "event-classification",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 66,
+        "exact": "| `CV-SEM-056` | One event-file can receive classifications in several immutable experiences, while one experience rejects duplicate/conflicting `(PerceptualEventReferentId, PerceptualEventFacetId)` assertions. | `PASS` — append-only history and per-experience uniqueness |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/perceptualEventClassification.test.ts",
+          "line": 204,
+          "exact": "  it('CV-SEM-056 appends across experiences and rejects duplicate or conflicting assertions within one', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-057",
+      "family": "event-classification",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 67,
+        "exact": "| `CV-SEM-057` | One ModelIdentity has exactly one authoritative rule per event facet; missing/duplicate authority fails, while separate competing models may register different rules. | `PASS` — sole-authority registry control |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/perceptualEventClassification.test.ts",
+          "line": 216,
+          "exact": "  it('CV-SEM-057 enforces sole facet authority per model and allows explicit competing models', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-058",
+      "family": "event-classification",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 68,
+        "exact": "| `CV-SEM-058` | Every emitted event classification names an executable rule and typed feature/continuant/observation provenance. Truth handles, prose, and LLM results fail input or resolver closure. | `PASS` — exact provenance and executable-rule closure |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/perceptualEventClassification.test.ts",
+          "line": 231,
+          "exact": "  it('CV-SEM-058 requires executable registered rules and complete typed provenance', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-059",
+      "family": "event-classification",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 69,
+        "exact": "| `CV-SEM-059` | Shifting only `EventClassificationEvidenceId` ordinals changes no semantic/psychological result; replay preserves them, and staged failure restores runtime allocation exactly. | `PASS` — ordinal opacity, replay, and scheduler rollback |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/perceptualEventClassification.test.ts",
+          "line": 246,
+          "exact": "  it('CV-SEM-059 preserves replay and ordinal opacity and rolls allocation back atomically', async () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-060",
+      "family": "event-classification",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 70,
+        "exact": "| `CV-SEM-060` | Observed action appearance is event-pattern classification, never learned action-schema identity, a continuant `Action` binding, or a direct truth action key. Output enters only pre-recognition experience assembly and cannot bypass it into recognition, causal roles, psychology, options, or world truth. | `PASS` — experience-envelope integration and output-boundary closure |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/perceptualEventClassification.test.ts",
+          "line": 268,
+          "exact": "  it('CV-SEM-060 makes action appearance an event pattern only and blocks every direct bypass', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-061",
+      "family": "recognition",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 71,
+        "exact": "| `CV-SEM-061` | A visible unfamiliar continuant-file with no uniquely supported catalog candidate emits no resolution and no truth identity. Missing, zero-candidate, explicit contradiction, and ambiguity remain traceable through immutable evaluations without storing `Unknown`. | `PASS` — evaluation/no-resolution distinction and exact no-update reasons |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/recognition.test.ts",
+          "line": 118,
+          "exact": "  it('CV-SEM-061 traces unfamiliar, contradicted, and ambiguous evaluations without fake identities', () => {"
+        }
+      ],
+      "workbenchStatus": "PARTIAL SCOPED EVIDENCE; FULL VECTOR NOT YET QUALIFIED",
+      "relatedReceipts": [
+        "docs/planning/workbench-sem-recognition-ui-rev1/receipt.json"
+      ],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-062",
+      "family": "recognition",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 72,
+        "exact": "| `CV-SEM-062` | Equal immutable perceptual evidence may yield a correct candidate, a wrong candidate, or no resolution when only permitted observer-owned recognition templates/cues differ. None mutates experience, classification, binding, or track. | `PASS` — correct/misrecognition/unresolved intervention |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/recognition.test.ts",
+          "line": 136,
+          "exact": "  it('CV-SEM-062 permits correct, wrong, or unresolved recognition over identical immutable perception', () => {"
+        }
+      ],
+      "workbenchStatus": "PARTIAL SCOPED EVIDENCE; FULL VECTOR NOT YET QUALIFIED",
+      "relatedReceipts": [
+        "docs/planning/workbench-sem-recognition-ui-rev1/receipt.json"
+      ],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-063",
+      "family": "recognition",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 73,
+        "exact": "| `CV-SEM-063` | `UniqueUncontradictedSupport` asserts only the sole qualifying candidate. Zero or several qualifiers produce `NoUpdate`; catalog order and first-candidate tie-break controls fail. Missing cues are not contradictions. | `PASS` — exact support/contradiction/ambiguity oracle |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/recognition.test.ts",
+          "line": 150,
+          "exact": "  it('CV-SEM-063 implements exact unique uncontradicted support without order-based ties', () => {"
+        }
+      ],
+      "workbenchStatus": "PARTIAL SCOPED EVIDENCE; FULL VECTOR NOT YET QUALIFIED",
+      "relatedReceipts": [
+        "docs/planning/workbench-sem-recognition-ui-rev1/receipt.json"
+      ],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-064",
+      "family": "recognition",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 74,
+        "exact": "| `CV-SEM-064` | Every candidate resolves through the observer's governed catalog. Identity claims require an observer-owned symbol→candidate mapping. Truth/event/trace injection, secret handles, and cross-observer catalogs fail; candidate-domain metadata cannot truth-filter a perceptual mistake. | `PASS` — catalog permission, mapped-claim, and no-truth-kind-filter controls |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/recognition.test.ts",
+          "line": 169,
+          "exact": "  it('CV-SEM-064 requires observer-owned catalog and symbol mapping without truth-kind filtering', () => {"
+        }
+      ],
+      "workbenchStatus": "PARTIAL SCOPED EVIDENCE; FULL VECTOR NOT YET QUALIFIED",
+      "relatedReceipts": [
+        "docs/planning/workbench-sem-recognition-boundaries-ui-rev1/receipt.json"
+      ],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-065",
+      "family": "recognition",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 75,
+        "exact": "| `CV-SEM-065` | Different-candidate evidence appends replacement; explicit contradiction without unique replacement appends withdrawal; mere cue absence and same-candidate reevaluation append no resolution but remain evaluated. History is immutable and revision chains cannot cross or branch. | `PASS` — assert/replace/withdraw/no-update lifecycle |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/recognition.test.ts",
+          "line": 194,
+          "exact": "  it('CV-SEM-065 appends replacement and withdrawal while no-cue and same-candidate evaluations preserve current resolution', () => {"
+        }
+      ],
+      "workbenchStatus": "PARTIAL SCOPED EVIDENCE; FULL VECTOR NOT YET QUALIFIED",
+      "relatedReceipts": [
+        "docs/planning/workbench-sem-recognition-ui-rev1/receipt.json"
+      ],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-066",
+      "family": "recognition",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 76,
+        "exact": "| `CV-SEM-066` | False continuity permits replacement or withdrawal on one unchanged track; false discontinuity permits the same candidate on two tracks. Recognition never splits, merges, ends, or truth-repairs either track. | `PASS` — recognition/tracking independence controls |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/recognition.test.ts",
+          "line": 222,
+          "exact": "  it('CV-SEM-066 preserves false continuity and false discontinuity under recognition changes', () => {"
+        }
+      ],
+      "workbenchStatus": "PARTIAL SCOPED EVIDENCE; FULL VECTOR NOT YET QUALIFIED",
+      "relatedReceipts": [
+        "docs/planning/workbench-sem-recognition-boundaries-ui-rev1/receipt.json"
+      ],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-067",
+      "family": "recognition",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 77,
+        "exact": "| `CV-SEM-067` | Every evaluation and resolution cites canonical typed cues scoped to its observer, track, experience/window, retained template/mapping, and observer-safe experience evidence. Generic IDs, cross-window/track reuse, truth handles, prose, and LLM output fail. | `PASS` — typed evidence and scope closure |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/recognition.test.ts",
+          "line": 236,
+          "exact": "  it('CV-SEM-067 enforces typed same-track, same-experience evidence closure', () => {"
+        }
+      ],
+      "workbenchStatus": "PARTIAL SCOPED EVIDENCE; FULL VECTOR NOT YET QUALIFIED",
+      "relatedReceipts": [
+        "docs/planning/workbench-sem-recognition-ui-rev1/receipt.json"
+      ],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-068",
+      "family": "recognition",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 78,
+        "exact": "| `CV-SEM-068` | One ModelIdentity has exactly one authoritative continuant-recognition rule; missing/duplicate authority fails, while competing models may register different rules. Instance recognition rejects event-files and learned action-schema identity. | `PASS` — sole authority and carrier/output separation |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/recognition.test.ts",
+          "line": 251,
+          "exact": "  it('CV-SEM-068 enforces sole rule authority and continuant-only recognition', () => {"
+        }
+      ],
+      "workbenchStatus": "PARTIAL SCOPED EVIDENCE; FULL VECTOR NOT YET QUALIFIED",
+      "relatedReceipts": [
+        "docs/planning/workbench-sem-recognition-boundaries-ui-rev1/receipt.json"
+      ],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-069",
+      "family": "recognition",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 79,
+        "exact": "| `CV-SEM-069` | Shifting only evaluation/resolution IDs or opaque track/candidate ordinals changes no recognition semantics or psychological result; replay preserves results, invalid history fails, and staged failure restores allocation exactly. | `PASS` — ordinal opacity, history closure, replay, and rollback |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/recognition.test.ts",
+          "line": 267,
+          "exact": "  it('CV-SEM-069 preserves semantic opacity, replay, history closure, and allocator rollback', async () => {"
+        }
+      ],
+      "workbenchStatus": "PARTIAL SCOPED EVIDENCE; FULL VECTOR NOT YET QUALIFIED",
+      "relatedReceipts": [
+        "docs/planning/workbench-sem-recognition-boundaries-ui-rev1/receipt.json"
+      ],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-070",
+      "family": "recognition",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 80,
+        "exact": "| `CV-SEM-070` | Recognition emits only immutable evaluations, append-only resolutions, and current-view projection. It cannot mutate perception or downstream cognition; same-candidate reevaluation emits no duplicate resolution. | `PASS` — emission boundary and evaluation/resolution separation |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/recognition.test.ts",
+          "line": 296,
+          "exact": "  it('CV-SEM-070 emits only append-only recognition resolution and no downstream mutation', () => {"
+        }
+      ],
+      "workbenchStatus": "PARTIAL SCOPED EVIDENCE; FULL VECTOR NOT YET QUALIFIED",
+      "relatedReceipts": [
+        "docs/planning/workbench-sem-recognition-boundaries-ui-rev1/receipt.json"
+      ],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-071",
+      "family": "evidence-provenance",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 81,
+        "exact": "| `CV-SEM-071` | Character-accessible evidence references form a closed tagged union of admitted observer-side record occurrences. `PerceptualReferentId`, `PerceptualEventReferentId`, `ExperienceId`, generic IDs, strings, and maps are scopes or identities rather than proof and cannot substitute as evidence references. | `PASS` — closed reference-union and identifier-role controls |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/evidenceProvenance.test.ts",
+          "line": 119,
+          "exact": "  it('CV-SEM-071 uses a closed evidence-reference union and keeps scopes/referents out of proof identity', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-072",
+      "family": "evidence-provenance",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 82,
+        "exact": "| `CV-SEM-072` | Admissibility requires an exact audited record-schema/producing-seam pair. Truth, trace, source, entity, hashed, encrypted, renamed, or otherwise opaque hidden handles fail structural closure; an ID type alone never makes its target safe. | `PASS` — schema/version admission and forbidden-linkage controls |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/evidenceProvenance.test.ts",
+          "line": 132,
+          "exact": "  it('CV-SEM-072 admits an exact audited schema/seam and rejects truth handles even when opaque or hashed', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-073",
+      "family": "evidence-provenance",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 83,
+        "exact": "| `CV-SEM-073` | A record becomes evidence only through the consuming transition's typed `ReadDomain` and exact same-observer, temporal/window, modality, feature-scope, and carrier constraints. Cross-observer references are prohibited in v0.1. | `PASS` — relational evidence-admissibility oracle |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/evidenceProvenance.test.ts",
+          "line": 146,
+          "exact": "  it('CV-SEM-073 makes evidence admissibility consumer-, observer-, window-, modality-, feature-, and carrier-relative', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-074",
+      "family": "evidence-provenance",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 84,
+        "exact": "| `CV-SEM-074` | Explicit equality of observer-relative continuant/event-file identities permits their declared co-reference. False discontinuity creates no hidden equality edge, and a consumer constrained to one carrier cannot read evidence attached to another. | `PASS` — permitted co-reference and false-discontinuity controls |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/evidenceProvenance.test.ts",
+          "line": 170,
+          "exact": "  it('CV-SEM-074 permits explicit perceptual co-reference but creates no hidden equality across false discontinuity', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-075",
+      "family": "evidence-provenance",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 85,
+        "exact": "| `CV-SEM-075` | Two records may expose a shared observer-safe source only by explicitly citing the same admitted record occurrence. Shared hidden ancestry creates no character link; secret-source fields fail even when equal or opaque. | `PASS` — explicit-safe-sharing versus hidden-common-source control |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/evidenceProvenance.test.ts",
+          "line": 186,
+          "exact": "  it('CV-SEM-075 exposes explicitly shared observer evidence but never shared hidden ancestry', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-076",
+      "family": "evidence-provenance",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 86,
+        "exact": "| `CV-SEM-076` | Observer-safe occurrence IDs are fresh immutable citations, not semantic grouping keys. Shifting binding/evidence ordinals changes no derived causal-role semantics, similarity, salience, temporal distance, or psychological result. | `PASS` — occurrence freshness and ordinal-opacity comparison |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/evidenceProvenance.test.ts",
+          "line": 197,
+          "exact": "  it('CV-SEM-076 makes occurrence IDs fresh and ordinal-opaque while preserving equal causal semantics', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-077",
+      "family": "evidence-provenance",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 87,
+        "exact": "| `CV-SEM-077` | Missing evidence remains absence, not explicit false or contradiction. A future exact bounded/graded feature-evidence schema can be separately admitted without a generic confidence field, truth handle, binary-global-visibility assumption, or weakening of reference closure. | `PASS` — missing/present distinction and versioned-quality extension control |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/evidenceProvenance.test.ts",
+          "line": 208,
+          "exact": "  it('CV-SEM-077 preserves missing versus explicit evidence and permits future exact quality schemas without generic confidence', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-078",
+      "family": "evidence-provenance",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 88,
+        "exact": "| `CV-SEM-078` | The evidence→perceptual interpretation→recognition→retained state→appraisal ladder is enforced by narrow `ReadDomain`s. Character runtime has no generic trace-back, source, parent, or common-ancestor API, and later interpretation cannot rewrite its source evidence. | `PASS` — consumer capability and non-back-projection controls |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/evidenceProvenance.test.ts",
+          "line": 222,
+          "exact": "  it('CV-SEM-078 enforces the evidence-to-interpretation ladder through narrow ReadDomains', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-079",
+      "family": "evidence-provenance",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 89,
+        "exact": "| `CV-SEM-079` | Character-relative causal-role evidence is an immutable derived claim about one continuant in one observer-relative event. Zero or several different roles may coexist; exact duplicate claims and recursive causal-role support are prohibited; event-role records remain unchanged. | `PASS` — governed multi-role causal derivation and sole-authority controls |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/evidenceProvenance.test.ts",
+          "line": 235,
+          "exact": "  it('CV-SEM-079 derives zero or more independent character-relative causal roles without rewriting event roles', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-080",
+      "family": "evidence-provenance",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 90,
+        "exact": "| `CV-SEM-080` | Equal permitted evidence with different hidden truth has equal character-relative provenance/causal results while omniscient ancestry remains trace-side. Replay is exact and failed commit restores allocation with no character output. | `PASS` — hidden-truth noninterference, replay, and rollback |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/evidenceProvenance.test.ts",
+          "line": 249,
+          "exact": "  it('CV-SEM-080 preserves deterministic replay, safe ancestry, and allocator rollback on failed commit', async () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-081",
+      "family": "phase-ordering",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 91,
+        "exact": "| `CV-SEM-081` | `ordering-phases/2-candidate` registers the exact current and consequence lane subphases plus phase 150 as a non-schedulable settlement sentinel. Phase gaps carry no duration or implicit permission. | `PASS` — exact registry and settlement-barrier closure |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/semanticPhaseOrdering.test.ts",
+          "line": 130,
+          "exact": "  it('CV-SEM-081 registers the exact two-lane phases and non-schedulable settlement sentinel', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-082",
+      "family": "phase-ordering",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 92,
+        "exact": "| `CV-SEM-082` | The current lane executes observation 10 → tracking/event segmentation 11 → binding/features 12 → independent classification 13 → experience freeze 14 → companion causal roles 15 → recognition-input freeze 20 → recognition evaluation 21. Truth first available at phase 10 or later cannot reopen it. | `PASS` — current-lane chain and truth-cutoff control |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/semanticPhaseOrdering.test.ts",
+          "line": 142,
+          "exact": "  it('CV-SEM-082 fixes the current lane chain and rejects truth at or after its entry cutoff', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-083",
+      "family": "phase-ordering",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 93,
+        "exact": "| `CV-SEM-083` | The consequence lane executes the corresponding 120..127 chain. It may observe phase-110 outcome truth, cannot schedule backward, and truth first available at phase 120 or later waits for a future observation opportunity. | `PASS` — consequence-lane chain, cutoff, and backward-scheduling control |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/semanticPhaseOrdering.test.ts",
+          "line": 155,
+          "exact": "  it('CV-SEM-083 fixes the consequence lane, admits phase-110 truth, and prevents reopening after phase 120', async () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-084",
+      "family": "phase-ordering",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 94,
+        "exact": "| `CV-SEM-084` | Lane admission reserves an `ExperienceId` only if character evidence will emit. Each successful reservation stages exactly one envelope; current/consequence reservations are distinct even when tracks/event-files continue. Orphans, duplicates, and failed reservations do not survive. | `PASS` — conditional reservation and bijective-envelope controls |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/semanticPhaseOrdering.test.ts",
+          "line": 175,
+          "exact": "  it('CV-SEM-084 conditionally reserves ExperienceId and forbids successful orphan or duplicate envelopes', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-085",
+      "family": "phase-ordering",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 95,
+        "exact": "| `CV-SEM-085` | Phase 14/124 freezes and stages an immutable `SemanticExperience`; it does not independently commit. Phase 15/125 causal-role evidence is a separate experience-scoped companion record and cannot reopen or mutate the envelope. | `PASS` — immutable staging and companion-record separation |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/semanticPhaseOrdering.test.ts",
+          "line": 194,
+          "exact": "  it('CV-SEM-085 freezes one immutable envelope before separate companion causal-role evidence', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-086",
+      "family": "phase-ordering",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 96,
+        "exact": "| `CV-SEM-086` | Continuant and event-pattern classifiers share phase 13/123 but are scheduled canonically by domain, observer, carrier, rule, and tie-break. Their order grants no same-phase cross-read; a true dependency requires a later phase. | `PASS` — canonical independent-classifier scheduling |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/semanticPhaseOrdering.test.ts",
+          "line": 206,
+          "exact": "  it('CV-SEM-086 canonically schedules independent same-phase classifier work without creating a read edge', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-087",
+      "family": "phase-ordering",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 97,
+        "exact": "| `CV-SEM-087` | Phase 20/126 freezes the exact recognition experience, catalog, template/mapping, cue, prior-resolution, and permitted retained-state projection consumed at 21/127. Consequence recognition may revise/withdraw current-lane recognition without rewriting phase-21 history. | `PASS` — frozen recognition input and same-instant correction |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/semanticPhaseOrdering.test.ts",
+          "line": 219,
+          "exact": "  it('CV-SEM-087 freezes recognition inputs and permits consequence correction without rewriting phase-21 history', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-088",
+      "family": "phase-ordering",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 98,
+        "exact": "| `CV-SEM-088` | Phase-130 character outcome evaluation consumes permitted expectation, consequence experience/recognition, and character state—not phase-110 authoritative outcome truth. Truth-side automatic adaptation is a separate route and cannot emit character `LearningEvidence`. | `PASS` — perceived-outcome and adaptation-route separation |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/semanticPhaseOrdering.test.ts",
+          "line": 240,
+          "exact": "  it('CV-SEM-088 keeps phase-130 perceived-outcome learning separate from truth-side automatic adaptation', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-089",
+      "family": "phase-ordering",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 99,
+        "exact": "| `CV-SEM-089` | Recognition temporally precedes phase-30 belief/person-model application, but ordering grants no read capability. Same-instant belief consumption remains wholly unresolved under `ORD-001`. | `PASS` — temporal availability versus authorization control |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/semanticPhaseOrdering.test.ts",
+          "line": 251,
+          "exact": "  it('CV-SEM-089 proves temporal availability without granting ORD-001 belief permission', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-090",
+      "family": "phase-ordering",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 100,
+        "exact": "| `CV-SEM-090` | Ordinary events cannot schedule phase 150. Scheduler quiescence precedes final trace/invariant validation and atomic commit; barrier/closure failure rolls back the complete instant, reservations, allocators, trace, and outputs. | `PASS` — settlement sentinel and transactional rollback |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/semanticPhaseOrdering.test.ts",
+          "line": 257,
+          "exact": "  it('CV-SEM-090 rejects barrier events and rolls reservations/allocators back on settlement failure', async () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-091",
+      "family": "schema-registry",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 108,
+        "exact": "| `CV-SEM-091` | Record types occupy the collision-free append-only range `210..259`, with no gap, duplicate, earlier-type reuse, or test-only ID; `WorldEventTruth` uses `WorldEventId`, not scheduler `EventId`. | `PASS` — candidate range and event-identity closure |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/semanticSchemaRegistry.test.ts",
+          "line": 12,
+          "exact": "  it('CV-SEM-091 allocates one append-only collision-free record range', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-092",
+      "family": "schema-registry",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 109,
+        "exact": "| `CV-SEM-092` | Every proposed schema has positive unique field IDs, exact required/optional flags, and persistent recognition resolution omits `RecognitionEvaluationId`. | `PASS` — candidate field closure |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/semanticSchemaRegistry.test.ts",
+          "line": 17,
+          "exact": "  it('CV-SEM-092 gives every schema positive unique fields and explicit optionality', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-093",
+      "family": "schema-registry",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 110,
+        "exact": "| `CV-SEM-093` | Semantic and occurrence namespace IDs are globally distinct; `1004` is absent, available, and contributes no allocation entry; `RegistryKindId=1023` exactly types union-definition registry entries; `UnionVariantDefinitionId=1024` identifies individual definitions; `WorldEventId=1114` and `ObservationId=1115` are occurrence families; equal underlying ordinals in different occurrence types remain unequal identities. | `PASS` — permanent category and namespace closure |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/semanticSchemaRegistry.test.ts",
+          "line": 24,
+          "exact": "  it('CV-SEM-093 separates every typed namespace even when ordinals match', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-094",
+      "family": "schema-registry",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 111,
+        "exact": "| `CV-SEM-094` | Every finite candidate registry is duplicate-free; Campaign 0 causal values remain unchanged under their first typed namespace allocation (`CausalRoleId=1019`); nested authored/runtime referent origins with equal local payloads encode differently. | `PASS` — candidate vocabulary and referent-origin closure |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/semanticSchemaRegistry.test.ts",
+          "line": 38,
+          "exact": "  it('CV-SEM-094 closes finite registries without renumbering causal roles', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-095",
+      "family": "schema-registry",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 112,
+        "exact": "| `CV-SEM-095` | Every union tag has exactly one canonical required/forbidden payload contract; all optional payload fields are accounted for; illegal layouts fail before emission; declaration reordering preserves the complete registry manifest while a matrix change changes its digest. | `PASS` — candidate union and manifest closure |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/semanticSchemaRegistry.test.ts",
+          "line": 50,
+          "exact": "  it('CV-SEM-095 governs each tagged union and commits its matrix into manifest identity', async () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-096",
+      "family": "codec-state-knowledge",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 118,
+        "exact": "| `CV-SEM-096` | Canonical runtime codecs enforce the accepted type/field/tag registry, reject unknown versions and illegal union layouts before allocation/emission, and round-trip byte-identically. | `PASS` — named-field construction over the frozen allocation, unadmitted contract-version and unregistered schema-version rejection, pre-construction union-layout validation across all eight union types, byte-identical round trip, and order-independent state-root encoding |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/semanticCodecs.test.ts",
+          "line": 65,
+          "exact": "  it('CV-SEM-096 enforces the accepted type and field registry', () => {"
+        },
+        {
+          "path": "src/test/semanticCodecs.test.ts",
+          "line": 84,
+          "exact": "  it('CV-SEM-096 rejects unadmitted contract versions before emission', () => {"
+        },
+        {
+          "path": "src/test/semanticCodecs.test.ts",
+          "line": 100,
+          "exact": "  it('CV-SEM-096 refuses to decode a record schema version the registry does not admit', () => {"
+        },
+        {
+          "path": "src/test/semanticCodecs.test.ts",
+          "line": 114,
+          "exact": "  it('CV-SEM-096 validates every union tag/payload contract before the record is built', () => {"
+        },
+        {
+          "path": "src/test/semanticCodecs.test.ts",
+          "line": 130,
+          "exact": "  it('CV-SEM-096 enforces multi-field and mutually exclusive union payloads', () => {"
+        },
+        {
+          "path": "src/test/semanticCodecs.test.ts",
+          "line": 156,
+          "exact": "  it('CV-SEM-096 gives CharacterEvidenceRef exactly one payload field per reference kind', () => {"
+        },
+        {
+          "path": "src/test/semanticCodecs.test.ts",
+          "line": 177,
+          "exact": "  it('CV-SEM-096 round-trips every lifecycle record byte-identically', () => {"
+        },
+        {
+          "path": "src/test/semanticCodecs.test.ts",
+          "line": 207,
+          "exact": "  it('CV-SEM-096 encodes state roots independently of map and set construction order', () => {"
+        },
+        {
+          "path": "src/test/semanticCodecs.test.ts",
+          "line": 243,
+          "exact": "  it('CV-SEM-096 keeps equal ordinals in different occurrence namespaces distinct', () => {"
+        },
+        {
+          "path": "src/test/semanticCodecs.test.ts",
+          "line": 258,
+          "exact": "  it('CV-SEM-096 keeps observer ownership inside the canonical identity value', () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-097",
+      "family": "codec-state-knowledge",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 119,
+        "exact": "| `CV-SEM-097` | Semantic state roots, observer-scoped file counters, occurrence allocators, trace, and outputs save/load and replay byte-identically; failure rolls all of them back atomically. | `PASS` — types 241/242 encode and restore through the accepted allocation; a save/load boundary mid-history re-saves byte-identically to the uninterrupted run, and a staged failure restores state, both observer counters, allocators, committed trace, and outputs together |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/semanticStatePersistence.test.ts",
+          "line": 182,
+          "exact": "  it('CV-SEM-097 saves, loads, and replays semantic state roots byte-identically', async () => {"
+        },
+        {
+          "path": "src/test/semanticStatePersistence.test.ts",
+          "line": 243,
+          "exact": "  it('CV-SEM-097 rolls state, allocators, trace, and outputs back together on staged failure', async () => {"
+        }
+      ],
+      "workbenchStatus": "PARTIAL SCOPED EVIDENCE; FULL VECTOR NOT YET QUALIFIED",
+      "relatedReceipts": [
+        "docs/planning/workbench-sem-parity-rev1/receipt.json"
+      ],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-098",
+      "family": "codec-state-knowledge",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 120,
+        "exact": "| `CV-SEM-098` | Extra detections for another observer may perturb raw global ordinals but change no tracking, classification, recognition, salience, similarity, or other semantics for this observer, for both continuant and event detection identities. | `PASS` — interleaved foreign detections move the shared run-scoped runtime allocator while this observer's continuant tracking, event-file grouping, ordinal-free continuity view, and both observer-scoped counters compare equal |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/sem001AcceptanceGate.test.ts",
+          "line": 173,
+          "exact": "      'CV-SEM-098': 'inter-observer independence under interleaving',"
+        },
+        {
+          "path": "src/test/semanticStatePersistence.test.ts",
+          "line": 270,
+          "exact": "  it('CV-SEM-098 lets another observer perturb global ordinals without changing this observer', async () => {"
+        }
+      ],
+      "workbenchStatus": "NO DEDICATED WORKBENCH QUALIFICATION",
+      "relatedReceipts": [],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-099",
+      "family": "codec-state-knowledge",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 121,
+        "exact": "| `CV-SEM-099` | Replacing active symbol-mapping occurrence A with B leaves A and historical cues immutable; only later admissible evaluations may cite B. `RecognitionKnowledgeState` permits at most one active mapping per `(ObserverId, PerceivedIdentitySymbolId)`. | `PASS` — allocated `ObserverSymbolCandidateMappingId` replaces the derived key; one-active-mapping guard, exact-occurrence claim admission, retired-occurrence rejection, and byte-stable historical cue encoding |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/semanticRecognitionState.test.ts",
+          "line": 137,
+          "exact": "  it('CV-SEM-099 permits at most one active mapping per (ObserverId, PerceivedIdentitySymbolId)', () => {"
+        },
+        {
+          "path": "src/test/semanticRecognitionState.test.ts",
+          "line": 157,
+          "exact": "  it('CV-SEM-099 replaces mapping A with B without remapping or mutating A', () => {"
+        },
+        {
+          "path": "src/test/semanticRecognitionState.test.ts",
+          "line": 198,
+          "exact": "  it('CV-SEM-099 carries an allocated mapping occurrence rather than a derived key', () => {"
+        }
+      ],
+      "workbenchStatus": "PARTIAL SCOPED EVIDENCE; FULL VECTOR NOT YET QUALIFIED",
+      "relatedReceipts": [
+        "docs/planning/workbench-sem-knowledge-ui-rev1/receipt.json"
+      ],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    },
+    {
+      "id": "CV-SEM-100",
+      "family": "codec-state-knowledge",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 122,
+        "exact": "| `CV-SEM-100` | `RecognitionKnowledgeState` permits at most one active catalog entry per `(ObserverId, CandidateSemanticReferentId)` and rejects two individually canonical entries with different templates as ambiguous state. | `PASS` — each entry admissible alone, the pair rejected as ambiguous rather than merged into one template set |"
+      },
+      "nativeSourceLocations": [
+        {
+          "path": "src/test/semanticRecognitionState.test.ts",
+          "line": 217,
+          "exact": "  it('CV-SEM-100 permits at most one active catalog entry per (ObserverId, CandidateSemanticReferentId)', () => {"
+        }
+      ],
+      "workbenchStatus": "PARTIAL SCOPED EVIDENCE; FULL VECTOR NOT YET QUALIFIED",
+      "relatedReceipts": [
+        "docs/planning/workbench-sem-knowledge-ui-rev1/receipt.json"
+      ],
+      "remaining": "Inspect the complete original vector and controls, expose required evidence/comparators, and qualify matching UI scope. Passing the original native suite is regression evidence, not workbench completion."
+    }
+  ],
+  "negativeControls": [
+    {
+      "id": "SEM-NEG-01",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 300,
+        "exact": "- `TruthIdentityCopy`;"
+      },
+      "nativeLedger": "src/test/semanticNegativeControls.test.ts",
+      "workbenchStatus": "NAMED CONTROL NOT YET INDIVIDUALLY QUALIFIED IN WORKBENCH",
+      "remaining": "Retain exact closure failure or structural-absence proof and first divergence; selected similar component guards do not discharge this named ledger item."
+    },
+    {
+      "id": "SEM-NEG-02",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 301,
+        "exact": "- `ReferentKeyedBinding`;"
+      },
+      "nativeLedger": "src/test/semanticNegativeControls.test.ts",
+      "workbenchStatus": "NAMED CONTROL NOT YET INDIVIDUALLY QUALIFIED IN WORKBENCH",
+      "remaining": "Retain exact closure failure or structural-absence proof and first divergence; selected similar component guards do not discharge this named ledger item."
+    },
+    {
+      "id": "SEM-NEG-03",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 302,
+        "exact": "- `SlotWideVisibility`;"
+      },
+      "nativeLedger": "src/test/semanticNegativeControls.test.ts",
+      "workbenchStatus": "NAMED CONTROL NOT YET INDIVIDUALLY QUALIFIED IN WORKBENCH",
+      "remaining": "Retain exact closure failure or structural-absence proof and first divergence; selected similar component guards do not discharge this named ledger item."
+    },
+    {
+      "id": "SEM-NEG-04",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 303,
+        "exact": "- `EventRoleEqualsCausalRole`;"
+      },
+      "nativeLedger": "src/test/semanticNegativeControls.test.ts",
+      "workbenchStatus": "NAMED CONTROL NOT YET INDIVIDUALLY QUALIFIED IN WORKBENCH",
+      "remaining": "Retain exact closure failure or structural-absence proof and first divergence; selected similar component guards do not discharge this named ledger item."
+    },
+    {
+      "id": "SEM-NEG-05",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 304,
+        "exact": "- hidden-truth causal-role derivation;"
+      },
+      "nativeLedger": "src/test/semanticNegativeControls.test.ts",
+      "workbenchStatus": "NAMED CONTROL NOT YET INDIVIDUALLY QUALIFIED IN WORKBENCH",
+      "remaining": "Retain exact closure failure or structural-absence proof and first divergence; selected similar component guards do not discharge this named ledger item."
+    },
+    {
+      "id": "SEM-NEG-06",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 305,
+        "exact": "- `OpaqueButLinkableTruthHandle`;"
+      },
+      "nativeLedger": "src/test/semanticNegativeControls.test.ts",
+      "workbenchStatus": "NAMED CONTROL NOT YET INDIVIDUALLY QUALIFIED IN WORKBENCH",
+      "remaining": "Retain exact closure failure or structural-absence proof and first divergence; selected similar component guards do not discharge this named ledger item."
+    },
+    {
+      "id": "SEM-NEG-07",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 306,
+        "exact": "- `RecognitionRewrite`;"
+      },
+      "nativeLedger": "src/test/semanticNegativeControls.test.ts",
+      "workbenchStatus": "NAMED CONTROL NOT YET INDIVIDUALLY QUALIFIED IN WORKBENCH",
+      "remaining": "Retain exact closure failure or structural-absence proof and first divergence; selected similar component guards do not discharge this named ledger item."
+    },
+    {
+      "id": "SEM-NEG-08",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 307,
+        "exact": "- `TruthFacetCopy`;"
+      },
+      "nativeLedger": "src/test/semanticNegativeControls.test.ts",
+      "workbenchStatus": "NAMED CONTROL NOT YET INDIVIDUALLY QUALIFIED IN WORKBENCH",
+      "remaining": "Retain exact closure failure or structural-absence proof and first divergence; selected similar component guards do not discharge this named ledger item."
+    },
+    {
+      "id": "SEM-NEG-09",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 308,
+        "exact": "- `FreeformTagBag`;"
+      },
+      "nativeLedger": "src/test/semanticNegativeControls.test.ts",
+      "workbenchStatus": "NAMED CONTROL NOT YET INDIVIDUALLY QUALIFIED IN WORKBENCH",
+      "remaining": "Retain exact closure failure or structural-absence proof and first divergence; selected similar component guards do not discharge this named ledger item."
+    },
+    {
+      "id": "SEM-NEG-10",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 309,
+        "exact": "- `ClassificationToPressure`;"
+      },
+      "nativeLedger": "src/test/semanticNegativeControls.test.ts",
+      "workbenchStatus": "NAMED CONTROL NOT YET INDIVIDUALLY QUALIFIED IN WORKBENCH",
+      "remaining": "Retain exact closure failure or structural-absence proof and first divergence; selected similar component guards do not discharge this named ledger item."
+    },
+    {
+      "id": "SEM-NEG-11",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 310,
+        "exact": "- `TruthCorrectedTracking`;"
+      },
+      "nativeLedger": "src/test/semanticNegativeControls.test.ts",
+      "workbenchStatus": "NAMED CONTROL NOT YET INDIVIDUALLY QUALIFIED IN WORKBENCH",
+      "remaining": "Retain exact closure failure or structural-absence proof and first divergence; selected similar component guards do not discharge this named ledger item."
+    },
+    {
+      "id": "SEM-NEG-12",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 311,
+        "exact": "- `GlobalTrackAllocator`;"
+      },
+      "nativeLedger": "src/test/semanticNegativeControls.test.ts",
+      "workbenchStatus": "NAMED CONTROL NOT YET INDIVIDUALLY QUALIFIED IN WORKBENCH",
+      "remaining": "Retain exact closure failure or structural-absence proof and first divergence; selected similar component guards do not discharge this named ledger item."
+    },
+    {
+      "id": "SEM-NEG-13",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 312,
+        "exact": "- `TrackOrdinalPsychology`;"
+      },
+      "nativeLedger": "src/test/semanticNegativeControls.test.ts",
+      "workbenchStatus": "NAMED CONTROL NOT YET INDIVIDUALLY QUALIFIED IN WORKBENCH",
+      "remaining": "Retain exact closure failure or structural-absence proof and first divergence; selected similar component guards do not discharge this named ledger item."
+    },
+    {
+      "id": "SEM-NEG-14",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 313,
+        "exact": "- `RoleKeyedBinding`;"
+      },
+      "nativeLedger": "src/test/semanticNegativeControls.test.ts",
+      "workbenchStatus": "NAMED CONTROL NOT YET INDIVIDUALLY QUALIFIED IN WORKBENCH",
+      "remaining": "Retain exact closure failure or structural-absence proof and first divergence; selected similar component guards do not discharge this named ledger item."
+    },
+    {
+      "id": "SEM-NEG-15",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 314,
+        "exact": "- `GlobalRoleCardinality`;"
+      },
+      "nativeLedger": "src/test/semanticNegativeControls.test.ts",
+      "workbenchStatus": "NAMED CONTROL NOT YET INDIVIDUALLY QUALIFIED IN WORKBENCH",
+      "remaining": "Retain exact closure failure or structural-absence proof and first divergence; selected similar component guards do not discharge this named ledger item."
+    },
+    {
+      "id": "SEM-NEG-16",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 315,
+        "exact": "- `BindingOrdinalPsychology`;"
+      },
+      "nativeLedger": "src/test/semanticNegativeControls.test.ts",
+      "workbenchStatus": "NAMED CONTROL NOT YET INDIVIDUALLY QUALIFIED IN WORKBENCH",
+      "remaining": "Retain exact closure failure or structural-absence proof and first divergence; selected similar component guards do not discharge this named ledger item."
+    },
+    {
+      "id": "SEM-NEG-17",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 316,
+        "exact": "- `RoleOrdinalPriority`;"
+      },
+      "nativeLedger": "src/test/semanticNegativeControls.test.ts",
+      "workbenchStatus": "NAMED CONTROL NOT YET INDIVIDUALLY QUALIFIED IN WORKBENCH",
+      "remaining": "Retain exact closure failure or structural-absence proof and first divergence; selected similar component guards do not discharge this named ledger item."
+    },
+    {
+      "id": "SEM-NEG-18",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 317,
+        "exact": "- `DuplicateOpaqueOccurrence`;"
+      },
+      "nativeLedger": "src/test/semanticNegativeControls.test.ts",
+      "workbenchStatus": "NAMED CONTROL NOT YET INDIVIDUALLY QUALIFIED IN WORKBENCH",
+      "remaining": "Retain exact closure failure or structural-absence proof and first divergence; selected similar component guards do not discharge this named ledger item."
+    },
+    {
+      "id": "SEM-NEG-19",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 318,
+        "exact": "- `FreeformBindingQualifier`;"
+      },
+      "nativeLedger": "src/test/semanticNegativeControls.test.ts",
+      "workbenchStatus": "NAMED CONTROL NOT YET INDIVIDUALLY QUALIFIED IN WORKBENCH",
+      "remaining": "Retain exact closure failure or structural-absence proof and first divergence; selected similar component guards do not discharge this named ledger item."
+    },
+    {
+      "id": "SEM-NEG-20",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 319,
+        "exact": "- `VisibleBindingRevealsTruthRole`;"
+      },
+      "nativeLedger": "src/test/semanticNegativeControls.test.ts",
+      "workbenchStatus": "NAMED CONTROL NOT YET INDIVIDUALLY QUALIFIED IN WORKBENCH",
+      "remaining": "Retain exact closure failure or structural-absence proof and first divergence; selected similar component guards do not discharge this named ledger item."
+    },
+    {
+      "id": "SEM-NEG-21",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 320,
+        "exact": "- `SharedTruthPerceptualFacetId`;"
+      },
+      "nativeLedger": "src/test/semanticNegativeControls.test.ts",
+      "workbenchStatus": "NAMED CONTROL NOT YET INDIVIDUALLY QUALIFIED IN WORKBENCH",
+      "remaining": "Retain exact closure failure or structural-absence proof and first divergence; selected similar component guards do not discharge this named ledger item."
+    },
+    {
+      "id": "SEM-NEG-22",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 321,
+        "exact": "- `WrongTypedFacetValue`;"
+      },
+      "nativeLedger": "src/test/semanticNegativeControls.test.ts",
+      "workbenchStatus": "NAMED CONTROL NOT YET INDIVIDUALLY QUALIFIED IN WORKBENCH",
+      "remaining": "Retain exact closure failure or structural-absence proof and first divergence; selected similar component guards do not discharge this named ledger item."
+    },
+    {
+      "id": "SEM-NEG-23",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 322,
+        "exact": "- `CategoryStringValue`;"
+      },
+      "nativeLedger": "src/test/semanticNegativeControls.test.ts",
+      "workbenchStatus": "NAMED CONTROL NOT YET INDIVIDUALLY QUALIFIED IN WORKBENCH",
+      "remaining": "Retain exact closure failure or structural-absence proof and first divergence; selected similar component guards do not discharge this named ledger item."
+    },
+    {
+      "id": "SEM-NEG-24",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 323,
+        "exact": "- `MissingAsFalse`;"
+      },
+      "nativeLedger": "src/test/semanticNegativeControls.test.ts",
+      "workbenchStatus": "NAMED CONTROL NOT YET INDIVIDUALLY QUALIFIED IN WORKBENCH",
+      "remaining": "Retain exact closure failure or structural-absence proof and first divergence; selected similar component guards do not discharge this named ledger item."
+    },
+    {
+      "id": "SEM-NEG-25",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 324,
+        "exact": "- `UnknownSentinel`;"
+      },
+      "nativeLedger": "src/test/semanticNegativeControls.test.ts",
+      "workbenchStatus": "NAMED CONTROL NOT YET INDIVIDUALLY QUALIFIED IN WORKBENCH",
+      "remaining": "Retain exact closure failure or structural-absence proof and first divergence; selected similar component guards do not discharge this named ledger item."
+    },
+    {
+      "id": "SEM-NEG-26",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 325,
+        "exact": "- `ExclusivePrimaryKind`;"
+      },
+      "nativeLedger": "src/test/semanticNegativeControls.test.ts",
+      "workbenchStatus": "NAMED CONTROL NOT YET INDIVIDUALLY QUALIFIED IN WORKBENCH",
+      "remaining": "Retain exact closure failure or structural-absence proof and first divergence; selected similar component guards do not discharge this named ledger item."
+    },
+    {
+      "id": "SEM-NEG-27",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 326,
+        "exact": "- `DuplicateFacetAssertion`;"
+      },
+      "nativeLedger": "src/test/semanticNegativeControls.test.ts",
+      "workbenchStatus": "NAMED CONTROL NOT YET INDIVIDUALLY QUALIFIED IN WORKBENCH",
+      "remaining": "Retain exact closure failure or structural-absence proof and first divergence; selected similar component guards do not discharge this named ledger item."
+    },
+    {
+      "id": "SEM-NEG-28",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 327,
+        "exact": "- `ClassificationOrdinalPsychology`;"
+      },
+      "nativeLedger": "src/test/semanticNegativeControls.test.ts",
+      "workbenchStatus": "NAMED CONTROL NOT YET INDIVIDUALLY QUALIFIED IN WORKBENCH",
+      "remaining": "Retain exact closure failure or structural-absence proof and first divergence; selected similar component guards do not discharge this named ledger item."
+    },
+    {
+      "id": "SEM-NEG-29",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 328,
+        "exact": "- `RecognitionFromClassificationIdentity`;"
+      },
+      "nativeLedger": "src/test/semanticNegativeControls.test.ts",
+      "workbenchStatus": "NAMED CONTROL NOT YET INDIVIDUALLY QUALIFIED IN WORKBENCH",
+      "remaining": "Retain exact closure failure or structural-absence proof and first divergence; selected similar component guards do not discharge this named ledger item."
+    },
+    {
+      "id": "SEM-NEG-30",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 329,
+        "exact": "- `LLMClassifier`;"
+      },
+      "nativeLedger": "src/test/semanticNegativeControls.test.ts",
+      "workbenchStatus": "NAMED CONTROL NOT YET INDIVIDUALLY QUALIFIED IN WORKBENCH",
+      "remaining": "Retain exact closure failure or structural-absence proof and first divergence; selected similar component guards do not discharge this named ledger item."
+    },
+    {
+      "id": "SEM-NEG-31",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 330,
+        "exact": "- `AuthoritativeProse`."
+      },
+      "nativeLedger": "src/test/semanticNegativeControls.test.ts",
+      "workbenchStatus": "NAMED CONTROL NOT YET INDIVIDUALLY QUALIFIED IN WORKBENCH",
+      "remaining": "Retain exact closure failure or structural-absence proof and first divergence; selected similar component guards do not discharge this named ledger item."
+    }
+  ],
+  "acceptance": [
+    {
+      "id": "SEM-GATE-1",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 353,
+        "exact": "1. every vector is `PASS`;"
+      },
+      "nativeGate": "src/test/sem001AcceptanceGate.test.ts",
+      "workbenchStatus": "OPEN RECONCILIATION",
+      "remaining": "Preserve accepted native scope; establish the corresponding workbench inspection evidence without broadening the original gate."
+    },
+    {
+      "id": "SEM-GATE-2",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 354,
+        "exact": "2. permanent record/enum IDs, governed role definitions, and the finite typed semantic-facet definitions used by the fixture are registered;"
+      },
+      "nativeGate": "src/test/sem001AcceptanceGate.test.ts",
+      "workbenchStatus": "OPEN RECONCILIATION",
+      "remaining": "Preserve accepted native scope; establish the corresponding workbench inspection evidence without broadening the original gate."
+    },
+    {
+      "id": "SEM-GATE-3",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 355,
+        "exact": "3. the accepted `SEM-001A` observer-scoped allocator, continuant-file lifecycle, binary track transition, and non-correction rules pass false-continuity, false-discontinuity, save/load, replay, inter-observer independence, and ordinal-opacity controls;"
+      },
+      "nativeGate": "src/test/sem001AcceptanceGate.test.ts",
+      "workbenchStatus": "OPEN RECONCILIATION",
+      "remaining": "Preserve accepted native scope; establish the corresponding workbench inspection evidence without broadening the original gate."
+    },
+    {
+      "id": "SEM-GATE-4",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 356,
+        "exact": "4. the event, observation, experience, and recognition phases are registered;"
+      },
+      "nativeGate": "src/test/sem001AcceptanceGate.test.ts",
+      "workbenchStatus": "OPEN RECONCILIATION",
+      "remaining": "Preserve accepted native scope; establish the corresponding workbench inspection evidence without broadening the original gate."
+    },
+    {
+      "id": "SEM-GATE-5",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 357,
+        "exact": "5. character evidence contains no unobserved truth identity, unobserved truth classification, or linkable secret handle;"
+      },
+      "nativeGate": "src/test/sem001AcceptanceGate.test.ts",
+      "workbenchStatus": "OPEN RECONCILIATION",
+      "remaining": "Preserve accepted native scope; establish the corresponding workbench inspection evidence without broadening the original gate."
+    },
+    {
+      "id": "SEM-GATE-6",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 358,
+        "exact": "6. the complete multi-observer fixture passes through immediate consumers and save/load replay;"
+      },
+      "nativeGate": "src/test/sem001AcceptanceGate.test.ts",
+      "workbenchStatus": "OPEN RECONCILIATION",
+      "remaining": "Preserve accepted native scope; establish the corresponding workbench inspection evidence without broadening the original gate."
+    },
+    {
+      "id": "SEM-GATE-7",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 359,
+        "exact": "7. all negative controls report exact first divergence or closure failure — discharged by the ledger above, thirty-one for thirty-one; and"
+      },
+      "nativeGate": "src/test/sem001AcceptanceGate.test.ts",
+      "workbenchStatus": "OPEN RECONCILIATION",
+      "remaining": "Preserve accepted native scope; establish the corresponding workbench inspection evidence without broadening the original gate."
+    },
+    {
+      "id": "SEM-GATE-8",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 360,
+        "exact": "8. classification cannot directly enter psychological-pressure seams;"
+      },
+      "nativeGate": "src/test/sem001AcceptanceGate.test.ts",
+      "workbenchStatus": "OPEN RECONCILIATION",
+      "remaining": "Preserve accepted native scope; establish the corresponding workbench inspection evidence without broadening the original gate."
+    },
+    {
+      "id": "SEM-GATE-9",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 361,
+        "exact": "9. full ontology inheritance and affordance closure remain explicitly deferred to `ONT-001`; and"
+      },
+      "nativeGate": "src/test/sem001AcceptanceGate.test.ts",
+      "workbenchStatus": "OPEN RECONCILIATION",
+      "remaining": "Preserve accepted native scope; establish the corresponding workbench inspection evidence without broadening the original gate."
+    },
+    {
+      "id": "SEM-GATE-10",
+      "requirement": {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "line": 362,
+        "exact": "10. the observation verdict and campaign ledgers record the accepted scope without broadening `MATH-006`."
+      },
+      "nativeGate": "src/test/sem001AcceptanceGate.test.ts",
+      "workbenchStatus": "OPEN RECONCILIATION",
+      "remaining": "Preserve accepted native scope; establish the corresponding workbench inspection evidence without broadening the original gate."
+    }
+  ],
+  "supplements": [
+    {
+      "id": "Mutation authority.",
+      "exact": "**Mutation authority.** The numeric registry additionally requires exactly one registered mutation\nauthority per writable leaf of state roots 241–244. `semanticStateAuthority.ts` registers all seven\nleaves: each of the four roots decomposes into `mapKey` families addressed by that collection's own\naccepted uniqueness key — the observer for both next-sequence counters, the type-212/213 identity\nrecord for both active-file sets, the accepted `(ObserverId, CandidateSemanticReferentId)` and\n`(ObserverId, PerceivedIdentitySymbolId)` tuples for recognition knowledge, and the declared\noccurrence identity for resolution records. No new addressing concept is introduced and no ordinal\nis used as a position. Removal permission follows the accepted lifecycle: observer counters and\nresolution history are never removable, while active-file membership and the two recognition\ncollections are, because retirement and replacement are accepted. The perception seam owns both\nfile states, the recognition-knowledge authority owns recognition knowledge, and the recognition seam owns\nthe resolution log; the registry constructor itself proves non-overlap and full coverage.\n\n",
+      "nativeSource": "src/test/semanticStateAuthority.test.ts",
+      "workbenchStatus": "OPEN SCOPE RECONCILIATION"
+    },
+    {
+      "id": "Membership representation.",
+      "exact": "**Membership representation.** `mapKey → true` is the mutation-addressing projection of an accepted\ncanonical set, not a conversion of the active-file collections into map-valued domain state.\nCanonical persistence still encodes both as `cenc/1` sets; the marker exists only to give the\n`StatePath` patch model an exact writable leaf value. The equivalence of the two views is\nexecutable: same members, same canonical identities, preserved across the persistence boundary and\nacross retirement.\n\n",
+      "nativeSource": "src/test/semanticStateAuthority.test.ts",
+      "workbenchStatus": "OPEN SCOPE RECONCILIATION"
+    },
+    {
+      "id": "Integrated canonical migration",
+      "exact": "## Carried condition on `SEM-001J`\n\n`SEM-001I.3` acceptance does not permit the integrated gate to run the symbolic oracle and then\nserialize its result canonically. `SEM-001J` must migrate the remaining `SEM-001B..H` in-memory\noccurrence boundaries onto the accepted typed IDs and the codec/state machinery, and must exercise\nthe path end to end:\n\n```text\ncanonical truth occurrence IDs\n  → canonical observation/detection IDs\n  → canonical track/event identities\n  → canonical evidence occurrences\n  → canonical experience\n  → canonical recognition evaluation/resolution\n  → canonical state mutation\n  → save/load/replay\n```\n\nNo authoritative result in `PHEN-SEM-001` may depend on a symbolic string occurrence ID.\n\n**Migration status (`SEM-001J` step one).** Every accepted occurrence family now carries an\nallocated ordinal at the in-memory boundary, not a symbolic string: `ExperienceId`,\n`ObservationId`, `DetectionOccurrenceId`, `EventDetectionOccurrenceId`, `FeatureObservationId`,\n`EventFeatureObservationId`, `RecognitionCueEvidenceId`, and the three supporting-ID collections.\n`admitObservationLane` returns the allocated `ExperienceId` itself rather than re-wrapping it as\ntext, and `PerceivedRoleProjection` carries the type-212 continuant-file identity rather than a\nsymbolic handle. Governed model identities — `EventTypeId`, `SemanticReferentId`,\n`RecognitionTemplateId`, rule and validator IDs — keep text payloads: they are not occurrence\nidentities and principle 10 does not reach them. `src/test/semanticOccurrenceIdentity.test.ts`\nguards the boundary, including that supporting ordinals are ordered numerically rather than\nlexicographically over their decimal digits. Remaining for the gate: the integrated multi-observer\n`PHEN-SEM-001` fixture and its negative controls.\n\n",
+      "nativeSource": "src/test/sem001JIntegratedGate.test.ts",
+      "workbenchStatus": "OPEN SCOPE RECONCILIATION"
+    },
+    {
+      "id": "Mandatory fixture",
+      "exact": "## Mandatory `PHEN-SEM-001` fixture\n\nTruth event:\n\n```text\nMina skipped rope with Glen in the Library using the Lead Pipe.\n```\n\nThe fixture uses separately identified bindings for action, actor, companion, location, and instrument. Observer projections are:\n\n```text\nMina:    action-like referent + companion-like person + place + instrument\nDarius:  actor-like person + action-like referent + place; no Glen binding; no instrument\nGlen:    actor-like person + action-like referent + place + instrument\n```\n\nThe character projections use perceptual referents, not the truth identities named in this explanatory table. Their permitted classification evidence also differs: one observer receives person-like but no identity evidence, one receives interior-space-like but not the truth location identity, and one receives discrete-object-like/metallic evidence without the truth object identity. At least one observer begins unfamiliar, one produces a correct recognition hypothesis, and one produces a misrecognition later corrected.\n\nThe fixture independently varies:\n\n```text\nclassification: discrete-object-like / metallic / unresolved\ntracking: same continuous perceived instance / interrupted new instance\nrecognition: unresolved / correct candidate / incorrect candidate / corrected candidate\n```\n\nNo one axis is inferred merely from another.\n\nThe tracking fixture includes both adversarial mismatches:\n\n```text\nfalse continuity:     truth Glen → occlusion → Darius; observer track/17 → continues → track/17\nfalse discontinuity:  truth Glen → brief loss → Glen; observer track/17 ends; track/23 begins\n```\n\nIn the second case, later recognition may attach `person.glen` to both tracks, but neither track is merged or rewritten. Track allocation is observer-scoped; interleaving another observer's `NewTrack` transitions cannot change this observer's assigned sequence.\n\n",
+      "nativeSource": "src/test/phenSem001Integration.test.ts",
+      "workbenchStatus": "OPEN SCOPE RECONCILIATION"
+    },
+    {
+      "id": "Integrated evidence join",
+      "exact": "## `SEM-001J` integrated evidence\n\nThe parent gate does not close by aggregate. Thirteen vectors were still pending when the gate\nopened; each names below the integrated `SEM-001J` evidence that closed it, so a reader can see\nwhich test discharged which parent obligation. Every other row was already closed by its own\nsubdecision and remains so. At acceptance there are zero pending `CV-SEM` rows.\n\n| Vector | Integrated evidence that closed it |\n|---|---|\n| `CV-SEM-001` | `phenSem001Binding.test.ts` — canonical and role-swapped truth events are structurally distinct and perceptually isomorphic to an observer who cannot see which referent moved; the integrated run in `phenSem001Run.ts` carries both truth bindings and the resulting perceived bindings in one canonical chain |\n| `CV-SEM-002` | `phenSem001Binding.test.ts` multi-role and repeated-role controls, re-proved integrally: `semanticEvidenceCodecs` encodes each binding occurrence as its own type-224 record, so a referent-keyed collapse changes the committed bytes |\n| `CV-SEM-003` | `phenSem001Integration.test.ts` — three observers with non-subsuming permitted sets run in one scheduler over one shared runtime allocator, each unperturbed by the others |\n| `CV-SEM-007` | `phenSem001Binding.test.ts` — the observer's own continuant-file is the referent identity end to end; the integrated chain carries only type-212 identities in that position |\n| `CV-SEM-008` | `phenSem001Causal.test.ts` plus the integrated chain, where event-role evidence (type 223) and causal-role evidence (type 240) are separate canonical records that cannot overwrite one another |\n| `CV-SEM-009` | `phenSem001Causal.test.ts` — causal evidence responds to permitted observation and not to hidden truth; the integrated run derives it inside the same instant as the projection that feeds it |\n| `CV-SEM-010` | `phenSem001Causal.test.ts` — complete omniscient ancestry beside a projection that cannot traverse it; `sem001AcceptanceGate.test.ts` item 5 re-checks the separation over the whole fixture |\n| `CV-SEM-011` | `phenSem001Measurement.test.ts` — a real `observation/0.1-candidate` bounded measurement cited as supporting evidence through the frozen `ObservationId` namespace 1115 |\n| `CV-SEM-012` | `phenSem001Rendering.test.ts` — three viewpoint renderers over one immutable experience; `phenSem001Integration.test.ts` runs all three inside the scheduler and commits their record-derived output |\n| `CV-SEM-014` | `phenSem001Measurement.test.ts` whole-instant abort, with `phenSem001Integration.test.ts` proving the same transaction boundary under the complete fixture |\n| `CV-SEM-015` | `phenSem001Classification.test.ts` — equal truth with different permitted evidence classifies differently; equal evidence with different hidden truth is byte-identical |\n| `CV-SEM-017` | `phenSem001Classification.test.ts` and `semanticNegativeControls.test.ts` — registered facets and exact declared types, with missing distinct from explicit false |\n| `CV-SEM-018` | `phenSem001Classification.test.ts` and `sem001AcceptanceGate.test.ts` item 8 — classification emits only into experience assembly |\n\n",
+      "nativeSource": "src/test/sem001JIntegratedGate.test.ts",
+      "workbenchStatus": "OPEN SCOPE RECONCILIATION"
+    },
+    {
+      "id": "Registration versus admission",
+      "exact": "## Registered is not admitted\n\nCampaign 0 registered ten causal-role values. `SEM-001`'s causal-role domain admits nine of them:\n`Context` (value 9) stays registered and unadmitted, and `Incidental` keeps value 10 rather than\nsliding into the gap. That is not an inconsistency to be tidied, and it is not a new mechanism. It\nrecords a distinction the architecture already relies on:\n\n> A registered semantic value is not thereby a value admitted by a given seam, read-domain, or\n> domain contract. Registration fixes a permanent number and meaning; admission is decided by the\n> exact receiving rule. A later implementation may not infer that \"registered\" means \"legal\n> everywhere\".\n\nThe same distinction governs seam-contract versions, facet definitions, evidence reference classes,\nand role vocabularies. Where a registry is broader than what a seam admits, the seam's own contract\nis the authority, and the unadmitted value must remain registered at its permanent number so that\nadmitting it later renumbers nothing.\n\n",
+      "nativeSource": "src/test/semanticCodecs.test.ts",
+      "workbenchStatus": "OPEN SCOPE RECONCILIATION"
+    }
+  ],
+  "receipts": [
+    {
+      "id": "integrated",
+      "path": "docs/planning/workbench-sem-parity-rev1/receipt.json",
+      "sha256": "547f0e59b5de4517e30f53f0cb57d966e5e375112c4937761953f631389a8b44",
+      "recordedStatus": "PASS ACCEPTED SEM INTEGRATED HARNESS PARITY"
+    },
+    {
+      "id": "integrated-browser",
+      "path": "docs/planning/workbench-sem-ui-rev1/receipt.json",
+      "sha256": "5f84207cbb6d222e88d23981f6fc3e8d0c8ce84f59b67b67b5e85d7827b39904",
+      "recordedStatus": "PASS BOUNDED SEM BROWSER CONTINUATION"
+    },
+    {
+      "id": "character",
+      "path": "docs/planning/workbench-sem-language-rev1/receipt.json",
+      "sha256": "4360656cbc184a32e01eac89178cb32566f2a22ca3da8c914132eb96cadafaf5",
+      "recordedStatus": "PASS BOUNDED SEM PRE-RECOGNITION LANGUAGE"
+    },
+    {
+      "id": "character-browser",
+      "path": "docs/planning/workbench-sem-character-ui-rev1/receipt.json",
+      "sha256": "22dc201960e4917b1eaaef1a06965dfa0aff80b2865f3abd61be20698e6f1296",
+      "recordedStatus": "PASS SEM CHARACTER BROWSER/NATIVE PARITY"
+    },
+    {
+      "id": "semantic",
+      "path": "docs/planning/workbench-sem-controls-ui-rev1/receipt.json",
+      "sha256": "c4419ff6c5e472eb765c5b1129f395fbc17af7e68778b7024b1516142dfef50f",
+      "recordedStatus": "PASS SEM COMPONENT BROWSER/NATIVE PARITY"
+    },
+    {
+      "id": "recognition",
+      "path": "docs/planning/workbench-sem-recognition-ui-rev1/receipt.json",
+      "sha256": "32a1fbcd2b823fd0e4ee42cf7260b592b8cea3641e14869a57445c648c8b8fbd",
+      "recordedStatus": "PASS RECOGNITION CONTROL BROWSER/NATIVE PARITY"
+    },
+    {
+      "id": "knowledge",
+      "path": "docs/planning/workbench-sem-knowledge-ui-rev1/receipt.json",
+      "sha256": "8d0f3fd630bc4dfe0796738e2d906e6b98bae44284929871d185e774f39f9c6a",
+      "recordedStatus": "PASS KNOWLEDGE-STATE BROWSER/NATIVE PARITY"
+    },
+    {
+      "id": "measurement",
+      "path": "docs/planning/workbench-sem-measurement-ui-rev1/receipt.json",
+      "sha256": "d0be56df49b266b111267a2b2a2d7a8c4388f4ae31acbb952d3ed5794bda879a",
+      "recordedStatus": "PASS MEASUREMENT/ROLLBACK BROWSER NATIVE PARITY"
+    },
+    {
+      "id": "classification",
+      "path": "docs/planning/workbench-sem-classification-ui-rev1/receipt.json",
+      "sha256": "5e444b0cd03ba85e54597513b42a3565aa8e48f680c8b92517540366d7e5464d",
+      "recordedStatus": "PASS CLASSIFICATION BROWSER/NATIVE PARITY"
+    },
+    {
+      "id": "recognition-boundaries",
+      "path": "docs/planning/workbench-sem-recognition-boundaries-ui-rev1/receipt.json",
+      "sha256": "05304872fd0486c6b9fa7c52a35ae4b6adb2d7a0960a68087bc2b261e55bd215",
+      "recordedStatus": "PASS RECOGNITION BOUNDARY BROWSER/NATIVE PARITY"
+    }
+  ],
+  "next": [
+    "Continuant lifecycle: CV013/019-022, exact per-observer counters, retirement/no-reuse, independent tracking versus recognition.",
+    "Truth bindings/event files/classifiers and provenance: original controls with admitted component versions.",
+    "Phase/codec/state/identity/authority and integrated negative controls; all31 named failures/absence witnesses.",
+    "Renderer scopes and all10 acceptance conditions; comprehensive SEM browser and architecture participation qualification."
+  ],
+  "limits": "Source text matches locate evidence, not prove it. Existing receipts are partial pointers only. No vector is marked complete by inventory or passing native tests. Original Campaign3 acceptance and18 conditional obligations are unchanged."
+}

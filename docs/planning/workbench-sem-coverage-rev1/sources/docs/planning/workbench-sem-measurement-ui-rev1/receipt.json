@@ -1,0 +1,58 @@
+{
+  "status": "PASS MEASUREMENT/ROLLBACK BROWSER NATIVE PARITY",
+  "sources": [
+    {
+      "path": "src/workbench/SemWorkbench.tsx",
+      "sha256": "c85c97b43a7912a9d474af02c0d41ce630695ca9b0b21e08648535ccaa90fe04"
+    },
+    {
+      "path": "src/workbench/SemMeasurementPanel.tsx",
+      "sha256": "ae9d75114cf34d5ab449c2bd4e90a4f0ff694c6ad416b76619da9bcfa88534a1"
+    },
+    {
+      "path": "src/workbench/semMeasurementControls.ts",
+      "sha256": "52da9289b87ed22a0bdb22e38715726b9c40d6744b90dc2c4c027efd85888a66"
+    },
+    {
+      "path": "src/workbench/semMeasurementFixture.ts",
+      "sha256": "d110a849be526f04eac31854319fef20415cf6055614d692f3d9f2b8f44bba3e"
+    },
+    {
+      "path": "src/workbench/semWorker.ts",
+      "sha256": "d897b2c8c0563d32bc45a061e2085b79f541b33eadfaa22070df2d096421feeb"
+    },
+    {
+      "path": "src/workbench/semWorkerClient.ts",
+      "sha256": "c50558fcfc1bc6ff460d4e517183a5203839729c4f255bbac32807ea87241800"
+    },
+    {
+      "path": "src/test/workbenchSemMeasurementWorker.test.ts",
+      "sha256": "85e20575a6c7c40c715b6ac6c592af13fb6bc1afce53467cba3e01013bcf89a4"
+    },
+    {
+      "path": "scripts/check-workbench-sem-measurement-ui.mjs",
+      "sha256": "6b84087776542b62ace5df081e8ce22e49e38dcea60e581edb5b0283873148e0"
+    },
+    {
+      "path": "docs/planning/workbench-sem-measurement-rev1/receipt.json",
+      "sha256": "41a40c3ba2939f0a7450d2f495c022ff8d78ee326283eb174ea2626e11da8c43"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "report.json",
+      "sha256": "c97a7049787030fbe109ce9aed97c558ae1844f7e49bf0051f881191b6c7ba68"
+    },
+    {
+      "path": "ui.json",
+      "sha256": "8a166166be92e5f896fecf145c406360f5aa98425ab863deea014e129b123fdc"
+    },
+    {
+      "path": "measurement.png",
+      "sha256": "f6eb767b1a8b5f6ef3c8273f6898a77affe853366ec92cc556576a9229634643"
+    }
+  ],
+  "reportCharacters": 14171,
+  "activePrefix": 1,
+  "scope": "Complete report, measurement cells, rollback equality cells and failure/status prose equal native execution and original qualification. Six active-run hashes unchanged; worker tests preserve all4 prefixes. Screenshot inspected. Isolated failure is not active-run intervention or successful continuation. No full download, remaining-control or Campaign4 entry acceptance claim."
+}

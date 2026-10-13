@@ -384,3 +384,25 @@ full download or full SEM acceptance claim. Coverage inventory updated to the
 qualified scope. Next reconcile the complete SEM corpus gates, including remaining
 causal/event/continuant, phase/identity/state and integrated negative controls.
 Overall Campaign4 entry acceptance remains open.
+
+Full SEM requirement census COMPLETE (2026-10-13), implementation qualification
+INCOMPLETE. workbench-sem-coverage-rev1/inventory.json retains exact formal rows:
+100 vectors,31 negative controls,10 acceptance conditions and6 supplemental sections.
+Source locations are retrieval aids, not proofs.23 vectors have explicit partial
+receipt pointers; zero are declared fully qualified by this census. Ten prior
+workbench receipt identities are retained. Full native regression:24 files/221 tests
+PASS, including the original acceptance/negative/integrated gates. The receipt
+preserves exact test JSON/output and source hashes; no runtime semantics changed.
+
+Four vectors004/005/006/016 lack literal source-name matches. The companion
+cross-reference-review.json records related recognition/classification/tracking
+proofs and missing joined scope. The original false-discontinuity title says019;
+its body is related to020 and remains verbatim. Native acceptance is preserved,
+not reopened or equated with workbench acceptance. Evidence restore and research
+check PASS;18 conditional obligations unchanged.
+
+Next concrete implementation: original continuant-file lifecycle controls013/
+019-022, preserving per-observer counters, retirement/no-reuse, structural restore,
+interleaving and ordinal-opacity. Detection-label allocation must reset in the
+same declared fixture order for each repeatable control execution. Then join
+tracking/recognition/classification axes and finish remaining SEM families.
