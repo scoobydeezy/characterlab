@@ -17,3 +17,10 @@ Full841/5236 audit RUNNING in session33242 via check-workbench-batch-v6.mjs. Pol
 existing handle; do not restart or change bound source while it runs. Only the completed
 receipt proves full batch parity. Browser cohort qualification remains separate and due.
 All18 conditional obligations remain; no new Campaign3 verdict or reduction.
+
+Corrected production build now PASS (314 modules). Browser SKILL52/279 and HABIT23/291
+cohorts completed, including empty HABIT. All1140 displayed save/expected hash elements
+match their frozen native receipts. Captures and screenshots are retained under
+workbench-batch-browser-rev6; screenshots inspected. Independent fresh execution and
+prepared preview verification is RUNNING in session33267. Its receipt is required before
+claiming complete browser report verification. Full download transport remains unverified.
