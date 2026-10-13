@@ -1,0 +1,156 @@
+{
+  "status": "PASS ORIGINAL MEASUREMENT SUPPORT AND SETTLEMENT ROLLBACK",
+  "sources": [
+    {
+      "path": "src/workbench/semMeasurementControls.ts",
+      "sha256": "52da9289b87ed22a0bdb22e38715726b9c40d6744b90dc2c4c027efd85888a66"
+    },
+    {
+      "path": "src/workbench/semMeasurementFixture.ts",
+      "sha256": "d110a849be526f04eac31854319fef20415cf6055614d692f3d9f2b8f44bba3e"
+    },
+    {
+      "path": "src/workbench/semRecognitionControls.ts",
+      "sha256": "2332abf09942678ada601acf037534f26fa9b4e8f4cd0ab3201a4aaa373773bd"
+    },
+    {
+      "path": "src/workbench/canonical.ts",
+      "sha256": "f80f4a8353ea7604432d5ffcf0d4628f8b7bf13b82a06b4807445e9a9ba97bde"
+    },
+    {
+      "path": "src/test/workbenchSemMeasurementControls.test.ts",
+      "sha256": "969bc491c8086a18733016b7c5061183dde785fd2ac05e8358acc95bf807804e"
+    },
+    {
+      "path": "src/test/phenSem001Measurement.test.ts",
+      "sha256": "e2b8b10a96b094b5e615c2fec59973ecb4b28a824f118b8d40c141a404c928ef"
+    },
+    {
+      "path": "src/test/fixtures/phenSem001.ts",
+      "sha256": "09dde6788290292c23d6e129288d1e4c14b1e324b892cac9c90364cd16dbb5cf"
+    },
+    {
+      "path": "src/observation/observation.ts",
+      "sha256": "ade1a3984b58de457024b707c23b8f1c2e04f3378a42b3b64528e2e21bbab2be"
+    },
+    {
+      "path": "src/semanticBinding/perceptualEventFiles.ts",
+      "sha256": "df179fdcca89872ba75acd46f0fefa31fcddeb07dc2478d3efd2304686ead740"
+    },
+    {
+      "path": "src/semanticBinding/perceptualContinuantFiles.ts",
+      "sha256": "5ab014ec50f03d8d265fd8d6f37e68041e7d943c3521bd2d7708f76e8469562d"
+    },
+    {
+      "path": "src/semanticBinding/semanticEvidenceCodecs.ts",
+      "sha256": "7dfad248c12d525e940a6f038c2affd5d8d336a31d365c507a85761bb819c4d6"
+    },
+    {
+      "path": "src/substrate/scheduler.ts",
+      "sha256": "d82c1e44cc25064eeb635e9773793d84d18efabd24860bde2f25ca011f86ad32"
+    },
+    {
+      "path": "scripts/build-workbench-sem-measurement-fixture.mjs",
+      "sha256": "8556c8f0c6e7626d2adda528ad4d93552f47a24af3fedf73672799c305a6897f"
+    },
+    {
+      "path": "scripts/check-workbench-sem-measurement.mjs",
+      "sha256": "c7cc689362698989bd697f80c1482a20d3ace6812399b17080810fb0de6bfcb3"
+    }
+  ],
+  "report": {
+    "version": "sem-measurement-rollback-controls/0.1",
+    "source": {
+      "path": "src/test/phenSem001Measurement.test.ts",
+      "sha256": "e2b8b10a96b094b5e615c2fec59973ecb4b28a824f118b8d40c141a404c928ef"
+    },
+    "measurement": {
+      "vector": "CV-SEM-011",
+      "observation": {
+        "canonicalHex": "0acb01010b01010bdb0802bc3702010be807050e6368617261637465722f6d696e6103010b91cb0105187375626a6563742f68656c642d6f626a6563742d6c6f616404010b92cb01051d6368616e6e656c2f696e737472756d656e742d6d6173732d64656c74610501031406010acc010104010101020106020a030101040106020a070102010801060401090107010acd01010301010b97cb01050b616374696f6e2f6c69667402010201030102010a0107010b96cb01051c74727574682f6566666563742f696e737472756d656e742d6c6f61640b0105196f62736572766174696f6e2f302e312d63616e646964617465",
+        "sha256": "2f91e8e2afcadfe437a1e0f11729aaf0f4998a649d8d36757ddcbe6ad2933cc9",
+        "exact": "{\n  \"record\": \"PresentObservation#203/1\",\n  \"ObservationId [1]\": {\n    \"namespace\": \"1115\",\n    \"identity\": \"7100\"\n  },\n  \"ObserverId [2]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"character/mina\"\n  },\n  \"SubjectId [3]\": {\n    \"namespace\": \"26001\",\n    \"identity\": \"subject/held-object-load\"\n  },\n  \"ObservationChannelId [4]\": {\n    \"namespace\": \"26002\",\n    \"identity\": \"channel/instrument-mass-delta\"\n  },\n  \"OccurredAt [5]\": \"10\",\n  \"MeasurementInterval [6]\": {\n    \"record\": \"MeasurementInterval#204/1\",\n    \"LowerPresence [1]\": true,\n    \"Lower [2]\": \"1/10\",\n    \"UpperPresence [3]\": true,\n    \"Upper [4]\": \"1/10\"\n  },\n  \"EvidenceKindId [7]\": \"1\",\n  \"Precision [8]\": \"2/1\",\n  \"PerceivedConceptTokens [9]\": [\n    {\n      \"record\": \"PerceivedConceptToken#205/1\",\n      \"ConceptId [1]\": {\n        \"namespace\": \"26007\",\n        \"identity\": \"action/lift\"\n      },\n      \"CausalRoleId [2]\": \"1\",\n      \"VisibleProvenanceSlotId [3]\": \"1\"\n    }\n  ],\n  \"SafeSourceReferences [10]\": [\n    {\n      \"namespace\": \"26006\",\n      \"identity\": \"truth/effect/instrument-load\"\n    }\n  ],\n  \"TransformationVersion [11]\": \"observation/0.1-candidate\"\n}"
+      },
+      "binding": {
+        "canonicalHex": "0ae001010801010bcf08026402010be807050e6368617261637465722f6d696e6103010ad501010201010be807050e6368617261637465722f6d696e610201020004010ad401010201010be807050e6368617261637465722f6d696e610201020005010adf0101020101020102010beb0705156576656e742d726f6c652f696e737472756d656e74060109010ad801010201010be807050e6368617261637465722f6d696e6102010bdb0802bc370701020a0801052773656d616e7469632d62696e64696e672f302e312d63616e6469646174652353454d2d30303143",
+        "sha256": "26dcb229ed4c59318c1bf88b3cc9ac07d2b04f76e75394d1df15ca77a5c1b204",
+        "exact": "{\n  \"record\": \"PerceivedBindingEvidence#224/1\",\n  \"PerceivedBindingId [1]\": {\n    \"namespace\": \"1103\",\n    \"identity\": \"100\"\n  },\n  \"ObserverId [2]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"character/mina\"\n  },\n  \"PerceptualEventReferentId [3]\": {\n    \"record\": \"PerceptualEventReferentId#213/1\",\n    \"ObserverId [1]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"character/mina\"\n    },\n    \"ObserverEventSequence [2]\": \"0\"\n  },\n  \"PerceptualReferentId [4]\": {\n    \"record\": \"PerceptualReferentId#212/1\",\n    \"ObserverId [1]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"character/mina\"\n    },\n    \"ObserverTrackSequence [2]\": \"0\"\n  },\n  \"EventRoleEvidence [5]\": {\n    \"record\": \"EventRoleEvidence#223/1\",\n    \"VariantTag [1]\": \"1\",\n    \"EventRoleId [2]\": {\n      \"namespace\": \"1003\",\n      \"identity\": \"event-role/instrument\"\n    }\n  },\n  \"SupportingObservationIds [6]\": [\n    {\n      \"record\": \"SupportingObservationId#216/1\",\n      \"ObserverId [1]\": {\n        \"namespace\": \"1000\",\n        \"identity\": \"character/mina\"\n      },\n      \"ObservationId [2]\": {\n        \"namespace\": \"1115\",\n        \"identity\": \"7100\"\n      }\n    }\n  ],\n  \"OccurredAt [7]\": \"10\",\n  \"TransformationVersion [8]\": \"semantic-binding/0.1-candidate#SEM-001C\"\n}"
+      },
+      "citedObservationHex": "0bdb0802bc37",
+      "actualObservationHex": "0bdb0802bc37",
+      "citationMatches": true,
+      "namespace": "1115",
+      "track": "0",
+      "supportOrdinal": "7100",
+      "role": {
+        "kind": "exact",
+        "eventRoleId": "event-role/instrument"
+      },
+      "lower": "1/10",
+      "ordinaryBindings": {
+        "canonicalHex": "07030ae001010801010bcf0802932702010be807050e6368617261637465722f6d696e6103010ad501010201010be807050e6368617261637465722f6d696e610201020004010ad401010201010be807050e6368617261637465722f6d696e610201020005010adf0101020101020102010beb0705146576656e742d726f6c652f636f6d70616e696f6e060109010ad801010201010be807050e6368617261637465722f6d696e6102010bdb08028c270701020a0801052773656d616e7469632d62696e64696e672f302e312d63616e6469646174652353454d2d303031430ae001010801010bcf0802942702010be807050e6368617261637465722f6d696e6103010ad501010201010be807050e6368617261637465722f6d696e610201020004010ad401010201010be807050e6368617261637465722f6d696e610201020205010adf0101020101020102010beb0705156576656e742d726f6c652f696e737472756d656e74060109010ad801010201010be807050e6368617261637465722f6d696e6102010bdb080292270701020a0801052773656d616e7469632d62696e64696e672f302e312d63616e6469646174652353454d2d303031430ae001010801010bcf0802952702010be807050e6368617261637465722f6d696e6103010ad501010201010be807050e6368617261637465722f6d696e610201020004010ad401010201010be807050e6368617261637465722f6d696e610201020105010adf0101020101020102010beb0705136576656e742d726f6c652f6c6f636174696f6e060109010ad801010201010be807050e6368617261637465722f6d696e6102010bdb08028f270701020a0801052773656d616e7469632d62696e64696e672f302e312d63616e6469646174652353454d2d30303143",
+        "sha256": "07444a3293b3876b4b2e77b866cca5f3a99579138f7fcc0761a3ac552f527aea",
+        "exact": "[\n  {\n    \"record\": \"PerceivedBindingEvidence#224/1\",\n    \"PerceivedBindingId [1]\": {\n      \"namespace\": \"1103\",\n      \"identity\": \"5011\"\n    },\n    \"ObserverId [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"character/mina\"\n    },\n    \"PerceptualEventReferentId [3]\": {\n      \"record\": \"PerceptualEventReferentId#213/1\",\n      \"ObserverId [1]\": {\n        \"namespace\": \"1000\",\n        \"identity\": \"character/mina\"\n      },\n      \"ObserverEventSequence [2]\": \"0\"\n    },\n    \"PerceptualReferentId [4]\": {\n      \"record\": \"PerceptualReferentId#212/1\",\n      \"ObserverId [1]\": {\n        \"namespace\": \"1000\",\n        \"identity\": \"character/mina\"\n      },\n      \"ObserverTrackSequence [2]\": \"0\"\n    },\n    \"EventRoleEvidence [5]\": {\n      \"record\": \"EventRoleEvidence#223/1\",\n      \"VariantTag [1]\": \"1\",\n      \"EventRoleId [2]\": {\n        \"namespace\": \"1003\",\n        \"identity\": \"event-role/companion\"\n      }\n    },\n    \"SupportingObservationIds [6]\": [\n      {\n        \"record\": \"SupportingObservationId#216/1\",\n        \"ObserverId [1]\": {\n          \"namespace\": \"1000\",\n          \"identity\": \"character/mina\"\n        },\n        \"ObservationId [2]\": {\n          \"namespace\": \"1115\",\n          \"identity\": \"5004\"\n        }\n      }\n    ],\n    \"OccurredAt [7]\": \"10\",\n    \"TransformationVersion [8]\": \"semantic-binding/0.1-candidate#SEM-001C\"\n  },\n  {\n    \"record\": \"PerceivedBindingEvidence#224/1\",\n    \"PerceivedBindingId [1]\": {\n      \"namespace\": \"1103\",\n      \"identity\": \"5012\"\n    },\n    \"ObserverId [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"character/mina\"\n    },\n    \"PerceptualEventReferentId [3]\": {\n      \"record\": \"PerceptualEventReferentId#213/1\",\n      \"ObserverId [1]\": {\n        \"namespace\": \"1000\",\n        \"identity\": \"character/mina\"\n      },\n      \"ObserverEventSequence [2]\": \"0\"\n    },\n    \"PerceptualReferentId [4]\": {\n      \"record\": \"PerceptualReferentId#212/1\",\n      \"ObserverId [1]\": {\n        \"namespace\": \"1000\",\n        \"identity\": \"character/mina\"\n      },\n      \"ObserverTrackSequence [2]\": \"2\"\n    },\n    \"EventRoleEvidence [5]\": {\n      \"record\": \"EventRoleEvidence#223/1\",\n      \"VariantTag [1]\": \"1\",\n      \"EventRoleId [2]\": {\n        \"namespace\": \"1003\",\n        \"identity\": \"event-role/instrument\"\n      }\n    },\n    \"SupportingObservationIds [6]\": [\n      {\n        \"record\": \"SupportingObservationId#216/1\",\n        \"ObserverId [1]\": {\n          \"namespace\": \"1000\",\n          \"identity\": \"character/mina\"\n        },\n        \"ObservationId [2]\": {\n          \"namespace\": \"1115\",\n          \"identity\": \"5010\"\n        }\n      }\n    ],\n    \"OccurredAt [7]\": \"10\",\n    \"TransformationVersion [8]\": \"semantic-binding/0.1-candidate#SEM-001C\"\n  },\n  {\n    \"record\": \"PerceivedBindingEvidence#224/1\",\n    \"PerceivedBindingId [1]\": {\n      \"namespace\": \"1103\",\n      \"identity\": \"5013\"\n    },\n    \"ObserverId [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"character/mina\"\n    },\n    \"PerceptualEventReferentId [3]\": {\n      \"record\": \"PerceptualEventReferentId#213/1\",\n      \"ObserverId [1]\": {\n        \"namespace\": \"1000\",\n        \"identity\": \"character/mina\"\n      },\n      \"ObserverEventSequence [2]\": \"0\"\n    },\n    \"PerceptualReferentId [4]\": {\n      \"record\": \"PerceptualReferentId#212/1\",\n      \"ObserverId [1]\": {\n        \"namespace\": \"1000\",\n        \"identity\": \"character/mina\"\n      },\n      \"ObserverTrackSequence [2]\": \"1\"\n    },\n    \"EventRoleEvidence [5]\": {\n      \"record\": \"EventRoleEvidence#223/1\",\n      \"VariantTag [1]\": \"1\",\n      \"EventRoleId [2]\": {\n        \"namespace\": \"1003\",\n        \"identity\": \"event-role/location\"\n      }\n    },\n    \"SupportingObservationIds [6]\": [\n      {\n        \"record\": \"SupportingObservationId#216/1\",\n        \"ObserverId [1]\": {\n          \"namespace\": \"1000\",\n          \"identity\": \"character/mina\"\n        },\n        \"ObservationId [2]\": {\n          \"namespace\": \"1115\",\n          \"identity\": \"5007\"\n        }\n      }\n    ],\n    \"OccurredAt [7]\": \"10\",\n    \"TransformationVersion [8]\": \"semantic-binding/0.1-candidate#SEM-001C\"\n  }\n]"
+      },
+      "ordinaryCount": 3,
+      "ordinarySupportKeys": [
+        "observationId",
+        "observerId"
+      ]
+    },
+    "rollback": {
+      "vector": "CV-SEM-014",
+      "failure": "injected semantic-binding commit failure",
+      "before": {
+        "state": {
+          "canonicalHex": "0702070001",
+          "sha256": "a89527dec6c711941f40eee333bc2c67625bf10d1b2bc3f042aebf2fd353b702",
+          "exact": "[\n  [],\n  true\n]"
+        },
+        "allocators": "{\n  \"nextRuntimeId\": {\n    \"$bigint\": \"700\"\n  },\n  \"nextEventId\": {\n    \"$bigint\": \"1\"\n  },\n  \"nextEventSequence\": {\n    \"$bigint\": \"1\"\n  }\n}",
+        "trace": {
+          "canonicalHex": "0700",
+          "sha256": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "exact": "[]"
+        },
+        "outputs": {
+          "canonicalHex": "0700",
+          "sha256": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "exact": "[]"
+        },
+        "clock": "0",
+        "status": "Active",
+        "queue": "[\n  {\n    \"eventId\": {\n      \"$bigint\": \"0\"\n    },\n    \"dueAt\": {\n      \"$bigint\": \"1\"\n    },\n    \"phase\": {\n      \"$bigint\": \"10\"\n    },\n    \"eventSequence\": {\n      \"$bigint\": \"0\"\n    },\n    \"eventTypeId\": {\n      \"kind\": \"typedIdentifier\",\n      \"namespaceId\": {\n        \"$bigint\": \"34000\"\n      },\n      \"payload\": {\n        \"kind\": \"text\",\n        \"value\": \"event/phen-sem-001-bind\"\n      }\n    },\n    \"payload\": {\n      \"kind\": \"list\",\n      \"items\": []\n    },\n    \"dependencies\": {\n      \"kind\": \"list\",\n      \"items\": []\n    },\n    \"causalParentEventIds\": []\n  }\n]"
+      },
+      "after": {
+        "state": {
+          "canonicalHex": "0702070001",
+          "sha256": "a89527dec6c711941f40eee333bc2c67625bf10d1b2bc3f042aebf2fd353b702",
+          "exact": "[\n  [],\n  true\n]"
+        },
+        "allocators": "{\n  \"nextRuntimeId\": {\n    \"$bigint\": \"700\"\n  },\n  \"nextEventId\": {\n    \"$bigint\": \"1\"\n  },\n  \"nextEventSequence\": {\n    \"$bigint\": \"1\"\n  }\n}",
+        "trace": {
+          "canonicalHex": "0700",
+          "sha256": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "exact": "[]"
+        },
+        "outputs": {
+          "canonicalHex": "0700",
+          "sha256": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "exact": "[]"
+        },
+        "clock": "0",
+        "status": "Failed",
+        "queue": "[\n  {\n    \"eventId\": {\n      \"$bigint\": \"0\"\n    },\n    \"dueAt\": {\n      \"$bigint\": \"1\"\n    },\n    \"phase\": {\n      \"$bigint\": \"10\"\n    },\n    \"eventSequence\": {\n      \"$bigint\": \"0\"\n    },\n    \"eventTypeId\": {\n      \"kind\": \"typedIdentifier\",\n      \"namespaceId\": {\n        \"$bigint\": \"34000\"\n      },\n      \"payload\": {\n        \"kind\": \"text\",\n        \"value\": \"event/phen-sem-001-bind\"\n      }\n    },\n    \"payload\": {\n      \"kind\": \"list\",\n      \"items\": []\n    },\n    \"dependencies\": {\n      \"kind\": \"list\",\n      \"items\": []\n    },\n    \"causalParentEventIds\": []\n  }\n]"
+      },
+      "preserved": {
+        "state": true,
+        "allocators": true,
+        "trace": true,
+        "outputs": true
+      }
+    },
+    "scope": "Original bounded measurement support and isolated scheduler settlement-failure witnesses. Binding cites the actual measurement occurrence without copying interval or truth into role evidence. Failed scheduler status is preserved explicitly; this is not active-run rollback or successful continuation. No broader measurement/SEM acceptance claim."
+  },
+  "scope": "Original measured binding, ordinary observation support and isolated scheduler failure setups retained. Actual citation join, point1/10, exact evidence hashes, four preserved surfaces and Failed scheduler status verified. No successful continuation, full native-save, active integrated intervention or full SEM acceptance claim."
+}

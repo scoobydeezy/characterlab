@@ -278,3 +278,23 @@ PASS; focused rerun verifies exact1/10 display; type-check PASS. Research preser
 Next: worker/UI inspection and browser parity for these measurement/rollback
 reports, followed by remaining semantic and broader corpus gaps. Full Campaign4
 entry acceptance remains open.
+
+Measurement/rollback Compare UI COMPLETE (2026-10-13): the worker command runs
+the isolated original witnesses without changing the active integrated run. The
+panel shows exact1/10 measurement, namespace1115/citation7100, actual citation match,
+observer-local track and ordinary-binding count. Settlement failure displays its
+real error and Active-to-Failed status separately from four preserved data surfaces.
+Full exact evidence and prepared export are available.
+
+Two actual-worker tests PASS at all four integrated prefixes (measurement plus
+knowledge suites); build PASS387 modules. Browser at prefix1 captured the complete
+14171-character report. Report, table cells and failure/status prose equal fresh
+native execution and prior qualified evidence; all six active hashes unchanged.
+Screenshot inspected. Audit82552 COMPLETE exit0; receipt:
+workbench-sem-measurement-ui-rev1/receipt.json. Research retains18 conditional
+obligations. No full download, active intervention or successful-failed-run
+continuation claim.
+
+Next: classification-negative distinctions and emission boundaries, recognition
+continuity/allocator witnesses, then reconcile full SEM corpus coverage and advance
+remaining corpus adapters. Overall Campaign4 entry acceptance remains open.
