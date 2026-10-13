@@ -110,3 +110,6 @@ batch audit to finish without source drift. Browser qualification remains due.
 
 HABIT native adapter foundation implemented:23 programs/12 models, historical291-
 prefix audit running. See OBSERVABILITY_WORKBENCH_HABIT_PROGRESS.md; UI/language due.
+
+HABIT original-cohort parity now PASS23 programs/291 prefixes;40 declared contrasts.
+UI/language and successor coverage remain due. Full batch audit still live.
