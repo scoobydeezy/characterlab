@@ -85,3 +85,7 @@ Latest WORK adapter: OBSERVABILITY_WORKBENCH_WORK_PROGRESS.md. Native78 programs
 prefixes PASS after preserved seed-encoding correction. Six-mode worker route and119
 contrasts implemented; five focused tests/build/research checks PASS. Character
 projection, language, shared batch enrollment and broader browser work remain due.
+
+WORK language: OBSERVABILITY_WORKBENCH_WORK_LANGUAGE_PROGRESS.md. Projection/language
+PASS78 programs/624 prefixes/5152 descriptions;256 violating-control prefixes explicitly
+suppress narration. Native historical hashes unchanged. Registry0.17; broader entry due.

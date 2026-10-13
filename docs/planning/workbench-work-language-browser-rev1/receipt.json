@@ -1,0 +1,50 @@
+{
+  "status": "PASS BOUNDED WORK LANGUAGE BROWSER",
+  "sources": [
+    {
+      "path": "src/workbench/workCharacter.ts",
+      "sha256": "7db17b6ee42487069e7bf2c4e4e52b000948c39e037e1b4d5458f5aad907ba77"
+    },
+    {
+      "path": "src/workbench/workAdapter.ts",
+      "sha256": "7341d3da9c3874c1828989b1f4252d1476c29116ac8ab8d32f5fb0fcd2e8346f"
+    },
+    {
+      "path": "src/workbench/WorkWorkbench.tsx",
+      "sha256": "3163c2206b2ac349f9cb8708efe6a66f088d13e4e466cb23afe4f7e5226e7610"
+    },
+    {
+      "path": "scripts/check-workbench-work-language-browser.mjs",
+      "sha256": "9af25d8464abb528db7d3c8157cb057cf1ffc11166b190d104d1aa3c809d598f"
+    },
+    {
+      "path": "docs/planning/workbench-work-language-browser-rev1/normal.json",
+      "sha256": "af8e51a110afea95fa258465e8305a49b172c88d4939055b22e8c42689c210b8"
+    },
+    {
+      "path": "docs/planning/workbench-work-language-browser-rev1/control.json",
+      "sha256": "13fb5af855774a555639450a2f1221279661c903fd0b3df8455fb176c10a19fb"
+    },
+    {
+      "path": "docs/planning/workbench-work-language-browser-rev1/normal.png",
+      "sha256": "34a50984a783b3a76f76c5a8ab11ca91e83c3e6e8b1e3ed4d75be26c4e030b09"
+    }
+  ],
+  "results": [
+    {
+      "program": "c1-k1-s1",
+      "prefix": 2,
+      "entries": 8,
+      "suppressed": false,
+      "saveHash": "614f0bc68800ad771956253d7b98af3a5b5e595c514fb98f7702022bec1d2fec"
+    },
+    {
+      "program": "c5-k1-s0",
+      "prefix": 1,
+      "entries": 0,
+      "suppressed": true,
+      "saveHash": "0eef147ce321ae61466616aa3fc54ca0e2435d29f40ef27577f7fd990b4b6cb5"
+    }
+  ],
+  "scope": "StoredSet at prefix2 and AvailabilityEqualsAccess control at prefix1. Every displayed description, safe provenance body, scope/notice and five hashes match native-backed adapter execution. Violating-control cards suppressed. Wider browser language/replay and integrated entry remain open."
+}

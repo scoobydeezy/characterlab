@@ -55,13 +55,14 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 **Current routing (2026-10-13):** Observability Workbench IN PROGRESS, owner-authorized.
 Start docs/planning/OBSERVABILITY_WORKBENCH_PLAN.md and OBSERVABILITY_WORKBENCH_WORK_PROGRESS.md.
 WORK native78 programs/624 prefixes PASS; six-mode worker UI/119 declared contrasts.
-Character projection/language, batch and broader WORK browser qualification remain due.
+WORK character projection/language PASS5152 descriptions/624 prefixes;256 control prefixes
+suppress narration. Batch and broader WORK browser qualification remain due.
 Byte0-only WORK seed correction and failed revision retained; five focused tests PASS.
 Native COMMIT10 programs/70 prefixes and DECISION174/360 PASS; bounded browser
 observer/control and decision replay evidence PASS. Nine COMMIT and259 DECISION
 comparisons declared; exact observer identity and admitted report content stay distinct.
 Shared six-seam batch504 roles/3612 prefixes PASS. Eight-seam batch688/4042 now
-qualified PASS. Registry0.16; DECISION language PASS798 descriptions/360 prefixes.
+qualified PASS. Registry0.17; DECISION language PASS798 descriptions/360 prefixes.
 Start OBSERVABILITY_WORKBENCH_DECISION_LANGUAGE_PROGRESS.md; bounded browser language PASS.
 COMMIT bounded report language PASS70 prefixes/140 observer projections/57 descriptions;
 start OBSERVABILITY_WORKBENCH_COMMIT_LANGUAGE_PROGRESS.md for scope and browser receipt.
