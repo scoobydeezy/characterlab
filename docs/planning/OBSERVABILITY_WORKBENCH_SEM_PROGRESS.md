@@ -42,3 +42,23 @@ native state/output/trace/save and authenticated native restore/continuation.
 Current and frozen source hashes verified, including original fixture sources.
 Receipt: workbench-sem-parity-rev1/receipt.json. This supersedes running status
 above; all broader controls and UI work remain open.
+
+SEM registered through inspectionRegistry0.2 with a worker-backed six-mode view.
+Original factory/harness distinctions remain explicit. Character language and
+read/write participation are visibly unavailable; historical omniscient output is
+researcher-only. Timeline selection preserves raw committed entries and distinguishes
+record occurrence time from scheduler time. Checkpoint capture/restore and exact
+replay report expose all six native commitments and the diagnostic fixture source.
+
+Native worker test PASS replay report parity/read immutability at all4 prefixes;
+batch admission test PASS excludes SEM. Production build PASS383 modules. Browser
+executed prefix2 capture, prefix3 completion, restore to2 and replay verification;
+all6 equality rows true. Screenshot inspected. Browser/native audit1026 running via
+check-workbench-sem-ui.mjs. Other modes, full export transport, language and accepted
+negative/causal/classification/recognition/failure controls remain due.
+
+Browser/native continuation audit COMPLETE:1026 exit0. All captured prefix2,
+terminal prefix3, restored prefix2 hashes and replay table values match fresh native
+execution. Current/frozen source and browser capture hashes verified. Receipt:
+workbench-sem-ui-rev1/receipt.json. This supersedes running status; all remaining
+scope limits above apply. Research checks retain18 conditional obligations.

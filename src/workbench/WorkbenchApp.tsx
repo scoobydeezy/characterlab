@@ -20,6 +20,7 @@ const Relationship = lazy(() => import('./RelationshipWorkbench').then(m => ({de
 const Multisource = lazy(() => import('./MultisourceWorkbench').then(m => ({default:m.MultisourceWorkbench})));
 const Adapt = lazy(() => import('./AdaptWorkbench').then(m => ({default:m.AdaptWorkbench})));
 const Det = lazy(() => import('./DetWorkbench').then(m => ({default:m.DetWorkbench})));
+const Sem = lazy(() => import('./SemWorkbench').then(m => ({default:m.SemWorkbench})));
 export function WorkbenchApp() {
   const [experiment, setExperiment] = useState<ExperimentId | 'batch'>('values');
   const [visited, setVisited] = useState<Set<string>>(() => new Set(['values']));
@@ -42,5 +43,6 @@ export function WorkbenchApp() {
     {visited.has('multisource') && <div hidden={experiment !== 'multisource'}><Suspense fallback={<p role="status">Loading MULTISOURCE…</p>}><Multisource active={experiment === 'multisource'}/></Suspense></div>}
     {visited.has('adapt') && <div hidden={experiment !== 'adapt'}><Suspense fallback={<p role="status">Loading ADAPT…</p>}><Adapt active={experiment === 'adapt'}/></Suspense></div>}
     {visited.has('det') && <div hidden={experiment !== 'det'}><Suspense fallback={<p role="status">Loading DET…</p>}><Det active={experiment === 'det'}/></Suspense></div>}
+    {visited.has('sem') && <div hidden={experiment !== 'sem'}><Suspense fallback={<p role="status">Loading SEM…</p>}><Sem active={experiment === 'sem'}/></Suspense></div>}
   </>;
 }
