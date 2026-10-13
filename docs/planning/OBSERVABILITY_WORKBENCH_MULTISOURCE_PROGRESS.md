@@ -78,3 +78,6 @@ read immutability, prior-entry stability and hidden21/29 equality all pass. Curr
 frozen source hashes and original evidence verified. Type-check also PASS after
 worker projection integration. Full task-reason/choice/expression narrative remains
 open; this receipt qualifies source assessment descriptions only.
+
+Prepared UI header correction: removed a copied SKILL law description and replaced
+it with the five actual MULTISOURCE candidates. No native or audit-bound source changed.

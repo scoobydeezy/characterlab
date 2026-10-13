@@ -225,3 +225,7 @@ RUNNING. MULTISOURCE50025 and batch54486 remain live.
 
 Latest: ADAPT comparison audit COMPLETE4 aligned prefixes PASS exact historical
 dependency/ancestry joins; source hashes/type-check verified. Goal remains in progress.
+
+Latest: ADAPT worker/six-mode component PREPARED; three worker tests PASS, including
+native authenticated comparison and rejection without active-run mutation. Registration
+and browser checks remain due while batch54486 binds the registry.

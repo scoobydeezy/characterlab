@@ -48,3 +48,12 @@ Comparison audit COMPLETE:90346 exit0;4 aligned prefix reports PASS exact histor
 probe/path/read/diff and observation-chain identity joins. All current/frozen source
 hashes verified; final type-check PASS. The failure remains preserved and has no
 effect on native semantics. Broader ADAPT controls, character explanation and UI due.
+
+Six-mode worker component PREPARED, not registered. It exposes the two accepted
+programs, native stepping/pause, exact checkpoint restore/export, trace timeline,
+researcher participation and accepted parent comparison. Comparison executes against
+an authenticated second checkpoint inside the worker and preserves the active run.
+Three worker tests PASS, including actual native comparison, forged digest rejection
+and unchanged active checkpoint. Character descriptions remain explicitly unavailable
+until qualified. Shared registry remains bound to live batch54486; registration and
+browser checks remain due.
