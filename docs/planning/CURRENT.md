@@ -100,3 +100,6 @@ Full nine-seam batch audit remains running; broader workbench acceptance still o
 
 SKILL native qualification now PASS52/279 with85 declared comparisons; see its
 progress file and frozen receipt. Character projection/UI/language remain due.
+
+SKILL character projection implemented with focused tests PASS; full52/279 language
+audit running. Start OBSERVABILITY_WORKBENCH_SKILL_LANGUAGE_PROGRESS.md. UI remains due.
