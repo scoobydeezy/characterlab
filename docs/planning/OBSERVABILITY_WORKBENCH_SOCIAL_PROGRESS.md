@@ -50,3 +50,16 @@ workbench-social-language-rev1/receipt.json; current/frozen source hashes verifi
 This qualifies bounded record descriptions, not full social narrative or explanation
 of every update factor. SOCIAL six-mode UI, browser qualification and batch enrollment
 remain required. Earlier raw-view/comparison receipts retain their original source bytes.
+
+Six-mode SOCIAL component and dedicated worker/client are now prepared. Character mode
+selects Observer A/B explicitly and separates current belief from admitted historical
+observations/probes. Experiment captures/restores/exports exact checkpoints; Compare
+runs declared pairs and shows exact equality per observer, with separately labelled
+reverse-order equivalence. Reasoning retains researcher-only raw outputs; Timeline and
+Architecture inspect committed events and participation. Worker transport tests2/2 and
+TypeScript pass. Research check preserves18 conditional obligations.
+
+Route registration and browser qualification remain due. Shared experimentRegistry.ts
+is bound by the still-live841-role audit (session33242), so it has not been modified.
+No claim is made that the prepared component is reachable through the app yet. Resume
+registration after that source-bound audit terminates and its evidence is inspected.

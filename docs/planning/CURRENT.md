@@ -148,3 +148,6 @@ and reverse-only occurrence normalization remain separate. UI/language still due
 SOCIAL observer descriptions PASS855/127 prefixes,70 violating observer-prefixes
 suppressed; native hashes and observer privacy invariants retained. Six focused tests
 and type-check PASS. See OBSERVABILITY_WORKBENCH_SOCIAL_PROGRESS.md; UI remains due.
+
+SOCIAL six-mode component/worker prepared;2 transport tests and type-check PASS.
+Registration/browser checks wait for bound batch registry audit session33242 to finish.
