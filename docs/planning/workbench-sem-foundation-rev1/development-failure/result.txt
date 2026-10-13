@@ -1,0 +1,2 @@
+2026-10-13 first native SEM parity test: 1 failed at restored.snapshot deep equality, prefix2. Native save/state/output/trace hash checks passed first. Investigating detached text rendering order before claiming replay parity.
+Diagnostic rerun isolated differing property traceEntries only; hashes still agree. Corrective action: canonical encode/decode trace values before rendering their detached text.
