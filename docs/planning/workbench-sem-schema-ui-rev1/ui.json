@@ -1,0 +1,111 @@
+{
+  "before": [
+    "10d25895b963d1ead80a93b3e7a78edb623acdfe583d909bdec9acd08958423f",
+    "e58e1e733cb83839da20e511ecc75694ddfcda0efc72e0473fcf7ac9d56a047a",
+    "dfffbded9de472db36551698b0bd4faa8aa610b7a40b6453ccc771decb49e0a9",
+    "2283e9df2c39718bc7adf7ade184b6d7dcd9c84233e43b8875b29a0e95ec4882",
+    "da28d480ca0e6854a08a4cf443e1a00d677459f109935b7c93f24af0d6300f9f",
+    "34a5ae7eedd66b2e05678cac2eb442e91f58e8b592e13b103e8e6a8165a12a43"
+  ],
+  "after": {
+    "hashes": [
+      "10d25895b963d1ead80a93b3e7a78edb623acdfe583d909bdec9acd08958423f",
+      "e58e1e733cb83839da20e511ecc75694ddfcda0efc72e0473fcf7ac9d56a047a",
+      "dfffbded9de472db36551698b0bd4faa8aa610b7a40b6453ccc771decb49e0a9",
+      "2283e9df2c39718bc7adf7ade184b6d7dcd9c84233e43b8875b29a0e95ec4882",
+      "da28d480ca0e6854a08a4cf443e1a00d677459f109935b7c93f24af0d6300f9f",
+      "34a5ae7eedd66b2e05678cac2eb442e91f58e8b592e13b103e8e6a8165a12a43"
+    ],
+    "paragraphs": [
+      "Inspect assigned record fields, namespace separation, tagged unions and canonical manifest comparisons.",
+      "semantic-schema-allocation/0.1-candidate#SEM-001I.2. The active integrated run is unchanged.",
+      "Changing a manifest identity does not admit the changed entries. These checks cover registry declarations and compilation; lifecycle codecs and save/load need separate evidence.",
+      "Original CV-SEM-091..095 registry recipes. Registry declarations, union validation and manifest compilation only; no lifecycle codec or state-persistence qualification. Changed manifests demonstrate identity sensitivity, not semantic admission of the changed entries. Original authored/runtime origin namespaces20/21 retained. Diagnostic JSON and exact canonical manifest bytes are researcher evidence, not character evidence."
+    ],
+    "status": "Prefix 1 · instant 1 · Ready",
+    "tables": [
+      [
+        [
+          "schemas",
+          "50"
+        ],
+        [
+          "variants",
+          "26"
+        ],
+        [
+          "typedNamespaces",
+          "24"
+        ],
+        [
+          "occurrenceNamespaces",
+          "16"
+        ],
+        [
+          "canonicalOrderEqual",
+          "true"
+        ],
+        [
+          "digestOrderEqual",
+          "true"
+        ],
+        [
+          "matrixChangesIdentity",
+          "true"
+        ],
+        [
+          "kindChangesIdentity",
+          "true"
+        ]
+      ],
+      [
+        [
+          "record-allocation",
+          "CV-SEM-091"
+        ],
+        [
+          "field-contracts",
+          "CV-SEM-092"
+        ],
+        [
+          "typed-namespaces",
+          "CV-SEM-093"
+        ],
+        [
+          "finite-registries-and-origin",
+          "CV-SEM-094"
+        ],
+        [
+          "union-matrix",
+          "CV-SEM-095"
+        ],
+        [
+          "manifest-identity",
+          "CV-SEM-095"
+        ]
+      ],
+      [
+        [
+          "unknown-registry-kind",
+          "CV-SEM-093",
+          "unknown semantic registry kind"
+        ],
+        [
+          "missing-required",
+          "CV-SEM-095",
+          "missing required union payload field 2"
+        ],
+        [
+          "forbidden-payload",
+          "CV-SEM-095",
+          "forbidden union payload field 3"
+        ],
+        [
+          "unknown-variant",
+          "CV-SEM-095",
+          "unknown union variant 230/99"
+        ]
+      ]
+    ]
+  }
+}

@@ -752,3 +752,18 @@ Evidence root workbench-sem-schema-rev1. Research restore/check PASS,18 conditio
 obligations unchanged; no runtime contract or Campaign3 verdict changes.
 Next schema worker/UI/browser parity, codec096, persistence097/098 and state099/100.
 Production build48892 COMPLETE exit0,397 modules; typecheck and boundary checks pass, existing chunk-size warning retained.
+
+## Schema worker and browser parity (2026-10-13)
+
+Compare now exposes Schema registry and manifest identity with8 summary checks,
+6 original cases,4 guard messages and the full exact report. Registry/codec/persistence
+scope distinction and changed-identity-versus-admission limit are visible.
+Worker schemas operation matches qualified component report and preserves the exact
+checkpoint at each of4 original prefixes. Focused2 tests PASS. Production build2482
+COMPLETE exit0,398 modules, existing chunk-size warning retained.
+Browser prefix1 full441,628-character report captured in50,000-character chunks;
+3 tables and all6 active hashes captured. Screenshot inspected. Evidence root
+workbench-sem-schema-ui-rev1. No full download/native persistence/full SEM claim.
+Evidence restore/research24109 COMPLETE exit0,18 conditional obligations unchanged.
+Next codec096, persistence097/098 and remaining state099/100 plus integrated coverage.
+Audit33018 COMPLETE exit0: full browser report,3 tables, scope text and6 hashes equal fresh native execution and prior qualified report. Eight current/frozen sources and3 capture identities verified.
