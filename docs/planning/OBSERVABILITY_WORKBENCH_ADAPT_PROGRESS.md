@@ -57,3 +57,21 @@ Three worker tests PASS, including actual native comparison, forged digest rejec
 and unchanged active checkpoint. Character descriptions remain explicitly unavailable
 until qualified. Shared registry remains bound to live batch54486; registration and
 browser checks remain due.
+
+Bounded measurement language COMPLETE: check-workbench-adapt-language.mjs exit0;
+2 programs/8 prefixes/6 descriptions PASS (counts include repeated retained entries).
+Every save matches the qualified native parity receipt, every authenticated restore
+has the identical projection, reads preserve checkpoint bytes, and prior entries
+remain unchanged. Before the probe both projections are empty despite unequal
+physical adaptation. Recall explicitly preserves observation instant4 and does not
+claim a new measurement. Selected provenance is a versioned diagnostic tuple, not
+a native record with deleted fields. Wrong observer and extra-evidence shapes are
+rejected in focused tests. Receipt: workbench-adapt-language-rev1/receipt.json.
+
+LOCAL DISPOSITION: describe only admitted carriage337 and recalled352 evidence;
+exclude physical adaptation, exposure attribution and researcher traces. The prepared
+worker and Character view now consume adaptInspection; three worker tests PASS,
+including native measurement delivery and checkpoint-preserving comparison. This
+supersedes the earlier unavailable-language status only for this bounded pair.
+Registration, browser checks, broader controls and complete workbench qualification
+remain due. No research verdict or obligation changes.

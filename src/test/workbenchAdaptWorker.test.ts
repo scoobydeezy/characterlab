@@ -10,7 +10,7 @@ it('authenticates comparison checkpoints in the native worker without replacing 
  vi.stubGlobal('self',{addEventListener:(_name:string,fn:typeof handle)=>{handle=fn;},postMessage:(r:typeof replies[number])=>replies.push(r)});
  await import('../workbench/adaptWorker');const {AdaptWorkbenchRun}=await import('../workbench/adaptAdapter');const other=await AdaptWorkbenchRun.create('count-1');for(let i=0;i<2;i++)await other.advance();
  let id=0;const send=async(operation:string,data:object={})=>{await handle({data:{id:++id,operation,...data}} as MessageEvent);return replies.at(-1)!;};
- await send('create',{program:'count-0'});await send('advance');await send('advance');const before=(await send('checkpoint')).result;
+ const created=await send('create',{program:'count-0'});expect(created.result).toMatchObject({character:{entries:[]}});await send('advance');const measured=await send('advance');expect(measured.result).toMatchObject({snapshot:{character:{entries:[{kind:'Admitted measurement',observedAt:'4'}]}}});const before=(await send('checkpoint')).result;
  const good=await send('compare',{checkpoint:other.checkpoint()});expect(good.error).toBeUndefined();expect(good.result).toMatchObject({aligned:true});expect((good.result as {reveal:unknown}).reveal).not.toBeNull();
  const bad=await send('compare',{checkpoint:{...other.checkpoint(),saveHash:'0'.repeat(64)}});expect(bad.error).toContain('digest');expect((await send('checkpoint')).result).toEqual(before);
 },600000);
