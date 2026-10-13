@@ -279,6 +279,32 @@ Next: worker/UI inspection and browser parity for these measurement/rollback
 reports, followed by remaining semantic and broader corpus gaps. Full Campaign4
 entry acceptance remains open.
 
+Recognition boundary controls qualified (2026-10-13): CV-SEM-064/066/068/069/070
+now have inspectable, replayable component reports using the retained original
+recognition helpers/version. Mapping4200 permits the original DiscreteObject-domain
+candidate; absent mapping and injected truth reject. Recognition replacement retains
+track17, while separate track23 can assert the same candidate. Four authority/carrier
+guards and the permitted alternative derivation remain distinct.
+
+Allocator starts4/900 yield resolution IDs5/901 with equal semantic recognition;
+exact replay and branched-history rejection are preserved. Original isolated
+scheduler failure allocates evaluation50, then rolls back state/allocators/trace/
+outputs while changing Active to Failed. This is not successful continuation or an
+intervention in the active integrated run. One emission target is allowed, twelve
+reject; repeated recognition emits no replacement resolution.
+
+Original10 tests plus the new control test PASS; typecheck22994 PASS. Audit56413
+failed because its checker joined the wrong resolution field name; checker and
+diagnostic retained under workbench-sem-recognition-boundaries-rev1/development-failure.
+The corrected join uses candidateSemanticReferentId. Runtime controls unchanged.
+Audit95513 COMPLETE exit0:18 exact diagnostic hashes, full report replay and11
+current/frozen source hashes PASS. Receipt:
+workbench-sem-recognition-boundaries-rev1/receipt.json. Evidence restore and research
+checks PASS;18 conditional obligations retained. No new Campaign3 verdict/amendment.
+
+Next: worker/UI/browser integration of these boundary reports and full SEM corpus
+reconciliation. Component source coverage alone does not establish Campaign4 entry.
+
 Measurement/rollback Compare UI COMPLETE (2026-10-13): the worker command runs
 the isolated original witnesses without changing the active integrated run. The
 panel shows exact1/10 measurement, namespace1115/citation7100, actual citation match,
@@ -338,3 +364,6 @@ No full download or new Campaign3 verdict/qualification amendment is claimed.
 Next: remaining recognition continuity/allocator/emission witnesses and full SEM
 corpus reconciliation, followed by remaining corpus adapters. Overall Campaign4
 entry acceptance remains open.
+
+Recognition boundary follow-up: production build35623 COMPLETE exit0 (388 modules); boundary check PASS. Component qualification is complete; worker/UI/browser integration remains next.
+Frozen checker retains its trailing blank line: two exact-path whitespace exceptions preserve the audited current/source hashes.
