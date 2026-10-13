@@ -42,3 +42,8 @@ timed out after15000ms; download-attempt.json preserves the observation, and ful
 transport remains unverified. Screenshot inspected: completion, limits and preview
 truncation are readable. Native full audit session65026 separately passed180 roles
 at this checkpoint; it is still running. Do not restart either live process.
+
+Browser independent verification COMPLETE: workbench-batch-browser-rev5/receipt.json
+PASS78 programs/624 prefixes and exact bounded preview. All source/input hashes
+verified after terminal exit0. Full download transport remains unverified; the
+full766-role native audit is a separate live process, not discharged by this receipt.

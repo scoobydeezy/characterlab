@@ -93,3 +93,7 @@ suppress narration. Native historical hashes unchanged. Registry0.17; broader en
 Latest: OBSERVABILITY_WORKBENCH_BATCH_V5_PROGRESS.md; WORK enrolled in shared batch.
 766 roles/4666 expected prefixes; native full audit RUNNING, no PASS claim yet.
 Twelve focused batch tests/build/research checks pass; browser/full entry remain due.
+
+Latest: OBSERVABILITY_WORKBENCH_SKILL_PROGRESS.md; native SKILL adapter52 programs/27
+models implemented;279-prefix parity audit running. WORK browser batch78/624 PASS.
+Full nine-seam batch audit remains running; broader workbench acceptance still open.
