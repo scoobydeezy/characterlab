@@ -41,3 +41,24 @@ Equality requires the same committed prefix and instant; replenishment adds an i
 Two focused tests and type-check PASS. Full96-pair/62-native-program comparison audit
 RUNNING session74592 via check-workbench-multisource-comparison.mjs. Preserve bound
 sources. This does not establish language, UI or full workbench acceptance.
+
+Independent assessment character projection implemented (projection0.1/renderer0.1).
+It copies only closed718 assessment records in a versioned diagnostic tuple. Source
+ancestry supplies observer/time without copying observed samples, selection audit,
+physical reserve state, random draws or outcomes. Each included461 sample must belong
+to the selected observer evidence. Unavailable assessment and known zero stay distinct;
+shared samples are not described as independent sources. Earlier entries remain fixed.
+Two native tests and type-check PASS: hidden21/29 equality/read immutability/history
+stability, unavailable-versus-zero and wrong-observer rejection. This renderer covers
+source assessments only; full task reasons, choice and expression remain required.
+Full62-program/all-prefix language audit RUNNING session52437 via
+check-workbench-multisource-language.mjs. Preserve bound sources. Adapter/UI integration
+is deferred until existing parity/comparison writers release their bound adapter.
+
+Comparison qualification COMPLETE: session74592 exit0. All96 contrast reports/62
+native terminal programs PASS, with retained historical saves checked. Matched
+DescriptionDice first raw records equal while outputs diverge; hidden-bin outputs
+equal while state differs; replenishment terminal prefixes explicitly unaligned.
+All96 report hashes and current/frozen source bindings verified. Receipt:
+workbench-multisource-comparison-rev1/receipt.json. Native parity and language audits
+remain running; this comparison receipt does not qualify character explanations.

@@ -1,0 +1,613 @@
+{
+  "status": "PASS96 MULTISOURCE COMPARISONS",
+  "sources": [
+    {
+      "path": "src/workbench/multisourceAdapter.ts",
+      "sha256": "2b5698c1a5251c811659e1aee7de6daaa846c9089ded5a977af5e728a735e6de"
+    },
+    {
+      "path": "src/workbench/multisourceCatalog.json",
+      "sha256": "68a58427718b416943a07b3abb7a37c13c2682ad671490241c6ba7bdc143c539"
+    },
+    {
+      "path": "src/workbench/multisourceComparison.ts",
+      "sha256": "8ce57bb2df36e46f7dcd64b03bdb8811dfcb1387899a4725c08c44d84b6aab27"
+    },
+    {
+      "path": "src/test/workbenchMultisourceComparison.test.ts",
+      "sha256": "4abfa6a8db2c14f1f2c9f93963a5170a164db36caf3e01a6a89067a993c2d4b2"
+    },
+    {
+      "path": "scripts/check-workbench-multisource-comparison.mjs",
+      "sha256": "8d9031e9cb56d8aa17276925e3146483ceca4583144b2b6413760e28b00ee812"
+    },
+    {
+      "path": "docs/planning/MULTISOURCE_PUBLIC_EXPERIMENT_REV1.json",
+      "sha256": "38f01db99ed56867a71e7245e765bf82a4cb38a9118e914f7a0a87a20b66753a"
+    },
+    {
+      "path": "docs/planning/MULTISOURCE_PUBLIC_INTERVENTIONS_REV1.json",
+      "sha256": "ddebf1e8432c64ab1b18f5a6fb9539a4abfe82c20314c68c6e0096319ea8df14"
+    }
+  ],
+  "checks": [
+    {
+      "id": "law/shared--GroundPairwise",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/001.json",
+      "sha256": "b60931b6c522adc28e9c3518f6f5c3c403c3a42881bf451b764a39400be15b72",
+      "aligned": true
+    },
+    {
+      "id": "law/shared--GroundUncovered",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/002.json",
+      "sha256": "e07ac31c4c842fa75055c48aa97424de41aefd3ba05c96ea978cb793a49ea465",
+      "aligned": true
+    },
+    {
+      "id": "law/shared--FamilyNormalized",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/003.json",
+      "sha256": "c48422af0277d3a9112f450c2f2b4e91bedc7b7f8fa002a3a0ae17567af3c852",
+      "aligned": true
+    },
+    {
+      "id": "law/independent--GroundPairwise",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/004.json",
+      "sha256": "08e7fbf62b07596c717524232a4d93422edf4456411849b0f9420b200fe8cfa0",
+      "aligned": true
+    },
+    {
+      "id": "law/independent--GroundUncovered",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/005.json",
+      "sha256": "cc6ee4c9eb3ae4a73dc768dfb81d537ff0602ddb35f27962ff72a75bdef8d98b",
+      "aligned": true
+    },
+    {
+      "id": "law/independent--FamilyNormalized",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/006.json",
+      "sha256": "9ed52587f577b0a8d75629dba98e52d903a2d4506f0b1039558e07b1fc40bfa1",
+      "aligned": true
+    },
+    {
+      "id": "law/orphan--GroundPairwise",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/007.json",
+      "sha256": "5dce03dd72d161ee7784ee38a8faa2310342d4a3a52154f00383f955228c9eb0",
+      "aligned": true
+    },
+    {
+      "id": "law/orphan--GroundUncovered",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/008.json",
+      "sha256": "144462071c834fba2509d3e2e064914b78a860bceff8a39c7cf756489b2ec53b",
+      "aligned": true
+    },
+    {
+      "id": "law/orphan--FamilyNormalized",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/009.json",
+      "sha256": "64c03dc11c6857a4b28700982f65082988dbf86c87e3ef6ce816902d51a0e82e",
+      "aligned": true
+    },
+    {
+      "id": "law/orphan-removed--GroundPairwise",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/010.json",
+      "sha256": "2be167ceec72ec3f56044d9b6929fd8e2e25a75e3fa61218f48f869a78066cd6",
+      "aligned": true
+    },
+    {
+      "id": "law/orphan-removed--GroundUncovered",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/011.json",
+      "sha256": "ae5a151b0f5ca0e74a35bf556ed10cd16f622db47e566dcf3e0623931267b300",
+      "aligned": true
+    },
+    {
+      "id": "law/orphan-removed--FamilyNormalized",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/012.json",
+      "sha256": "b6da8e6967be349f24dc2318ee7002d177b491250a5587eddbbb88767460a6aa",
+      "aligned": true
+    },
+    {
+      "id": "law/orphan-removed--DescriptionDice",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/013.json",
+      "sha256": "d5f2e68efd1a7c6cf91fba9c7aeb7586f7767fb1ccea97b360c9a84354982c43",
+      "aligned": true
+    },
+    {
+      "id": "law/duplicate--GroundPairwise",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/014.json",
+      "sha256": "51f99245e5a57657e8368252cb499c34a0a2e60b752012e07ca1862a7b423d3b",
+      "aligned": true
+    },
+    {
+      "id": "law/duplicate--GroundUncovered",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/015.json",
+      "sha256": "da7bc153154aabba911b1c5ee2f29cabd33f4ad320d84255f37ae8a4d38d662a",
+      "aligned": true
+    },
+    {
+      "id": "law/duplicate--FamilyNormalized",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/016.json",
+      "sha256": "5d30625024462c85a702c5b42ea6a15a3e882f0435fa8be3b46b5b2c13de515a",
+      "aligned": true
+    },
+    {
+      "id": "law/duplicate--DescriptionDice",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/017.json",
+      "sha256": "c1a65f80b72a78afbbd50ca9c3a220d7b579c15e92ce5b5db582c82a53ce5817",
+      "aligned": true
+    },
+    {
+      "id": "law/aggregate--GroundPairwise",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/018.json",
+      "sha256": "258f17428eaefbddca99dad2932a94bbe46aec6d809d2e7b556d9dc0c38f2bdf",
+      "aligned": true
+    },
+    {
+      "id": "law/aggregate--GroundUncovered",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/019.json",
+      "sha256": "024e7b6b633b0c67fd19032d3557f1d81a5daeb83e727f6ddd00f0beb7a84f9f",
+      "aligned": true
+    },
+    {
+      "id": "law/aggregate--FamilyNormalized",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/020.json",
+      "sha256": "51f1744368b49a4a5fe5e45837b42150116b28dddff1373e25d7ce5f7dd986ca",
+      "aligned": true
+    },
+    {
+      "id": "law/aggregate--DescriptionDice",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/021.json",
+      "sha256": "ccd036747b991cf7c2ab780050a96d58987590c18524b58db9e0dee08fb40e4f",
+      "aligned": true
+    },
+    {
+      "id": "law/negative--GroundPairwise",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/022.json",
+      "sha256": "ea7fbe42766a5fa3fddc83539d3cf1c26688560ac30f73b1041b7f0a04634f9c",
+      "aligned": true
+    },
+    {
+      "id": "law/negative--GroundUncovered",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/023.json",
+      "sha256": "b7cbfa2d05cdf7fb6711f731bb49a5879e77b164808a108457d8841584895ca4",
+      "aligned": true
+    },
+    {
+      "id": "law/negative--FamilyNormalized",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/024.json",
+      "sha256": "234e0f94a84bec195d50b656b7234b1d58f13e5cc16ecf93514fc62a334d2ddb",
+      "aligned": true
+    },
+    {
+      "id": "law/unavailable--GroundPairwise",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/025.json",
+      "sha256": "f40729672d8cded1864fa8fe862d488e782f6f8362381f24b32647dc15053f9f",
+      "aligned": true
+    },
+    {
+      "id": "law/unavailable--GroundUncovered",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/026.json",
+      "sha256": "e8e2ddb82b3605625fbe6d04a943ee1ba1aa362324a60a0e389e0576ed11f5d3",
+      "aligned": true
+    },
+    {
+      "id": "law/unavailable--FamilyNormalized",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/027.json",
+      "sha256": "a8c7c6df7985dbc5fef5ed302f90e17b23014cec037b066e37c72802fa985077",
+      "aligned": true
+    },
+    {
+      "id": "law/known-zero--GroundPairwise",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/028.json",
+      "sha256": "ef065423f755296547e144f5bf47f3fb7b2e5d9b135e455b72de79ebcf5b92dd",
+      "aligned": true
+    },
+    {
+      "id": "law/known-zero--GroundUncovered",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/029.json",
+      "sha256": "dedca2f8c48971d258dd72de64decb9abcadfe954c3d410e9f446c59dad3ea50",
+      "aligned": true
+    },
+    {
+      "id": "law/known-zero--FamilyNormalized",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/030.json",
+      "sha256": "344a6674111da2ca4911d95856659a39046369237465cc3907c5f0198b8f2481",
+      "aligned": true
+    },
+    {
+      "id": "law/capacity-zero--GroundPairwise",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/031.json",
+      "sha256": "973c8206405fa2e1625dab2f1b74da07506557a3381d8e98802b2ec0c523eaa2",
+      "aligned": true
+    },
+    {
+      "id": "law/capacity-zero--GroundUncovered",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/032.json",
+      "sha256": "4c62af661153fe4bb1cacce25335ce360a8fa888e961ff17f0b3728dd813565f",
+      "aligned": true
+    },
+    {
+      "id": "law/capacity-zero--FamilyNormalized",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/033.json",
+      "sha256": "51e8234bbf36a9094f9711426880299c35e626faa967d1f1dfb919f1dedb8605",
+      "aligned": true
+    },
+    {
+      "id": "law/no-task--GroundPairwise",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/034.json",
+      "sha256": "1505a03fde0e3f6b81a2b8512f22dd15ae0bce2abe1cc1868dfa0cf5b593ba1a",
+      "aligned": true
+    },
+    {
+      "id": "law/no-task--GroundUncovered",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/035.json",
+      "sha256": "810c0b8937864acb796da15821706f3fd9bc4e0f0005c21f6d5c076960d1d09d",
+      "aligned": true
+    },
+    {
+      "id": "law/no-task--FamilyNormalized",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/036.json",
+      "sha256": "fb8ba37f352fed7d7fadf39e20c356432a3284964c15531c6e0309f63f316081",
+      "aligned": true
+    },
+    {
+      "id": "law/no-body--GroundPairwise",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/037.json",
+      "sha256": "9554c7b1acf060d8cefbbda0cf3d3ac43c1586ea06928cb6af2a8ac7e991fa65",
+      "aligned": true
+    },
+    {
+      "id": "law/no-body--GroundUncovered",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/038.json",
+      "sha256": "45061df4f5c132fdff0d80c51518f62322c399558e54d04d5ee9bb4972340add",
+      "aligned": true
+    },
+    {
+      "id": "law/no-body--FamilyNormalized",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/039.json",
+      "sha256": "6c5a1929c99bad556e50ecf8a7384cd9ede9b5a47fab0bc8de5c4c51eb9c082d",
+      "aligned": true
+    },
+    {
+      "id": "law/execution-blocked--GroundPairwise",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/040.json",
+      "sha256": "77f620fd4ff417c61ad8bb4ddb26777730cbf7d8f8a7facce1615963af052dcb",
+      "aligned": true
+    },
+    {
+      "id": "law/execution-blocked--GroundUncovered",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/041.json",
+      "sha256": "44372adfa152cee68e1faa6bc1d7d8877c24d2c99d07d5ab68340e5af11b93f8",
+      "aligned": true
+    },
+    {
+      "id": "law/execution-blocked--FamilyNormalized",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/042.json",
+      "sha256": "67494d1628e38a9c6400ff81dd840dd91de504f34c4d0c6ffb2fc87bafa85c55",
+      "aligned": true
+    },
+    {
+      "id": "source/independent/GroundAggregate",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/043.json",
+      "sha256": "df1ca7a023c99cfe55c029999e830663acbe0d5a7a5909204cabc37cee2b7886",
+      "aligned": true
+    },
+    {
+      "id": "source/independent/GroundPairwise",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/044.json",
+      "sha256": "a1ea2f95f50361fbcb3a2b8733390bcc3e3542295ad1c8ef581a309a22e33f12",
+      "aligned": true
+    },
+    {
+      "id": "source/independent/GroundUncovered",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/045.json",
+      "sha256": "e7968edcecc73186e6b1ed7116ff5691070d3a54a31df7db1f7937ce2dbed7e5",
+      "aligned": true
+    },
+    {
+      "id": "source/independent/FamilyNormalized",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/046.json",
+      "sha256": "b54b0795a5cd9493759bdd016841dc088b0c39e2334319e1435ad270c3c8e8c5",
+      "aligned": true
+    },
+    {
+      "id": "source/orphan/GroundAggregate",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/047.json",
+      "sha256": "a693d6bcfcb55fb11cbf1445af6ccab5d9faca66e5b3f7e19c69bbfb6946b14b",
+      "aligned": true
+    },
+    {
+      "id": "source/orphan/GroundPairwise",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/048.json",
+      "sha256": "0434c09e8c3682f388abc13cf065b0355c253586d01bde76e745f194e6ede944",
+      "aligned": true
+    },
+    {
+      "id": "source/orphan/GroundUncovered",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/049.json",
+      "sha256": "96518a07542cc189cf76ff18b3549ae9254220b0e0046fd4774f215913c94f67",
+      "aligned": true
+    },
+    {
+      "id": "source/orphan/FamilyNormalized",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/050.json",
+      "sha256": "5cfa2cb9a78f6b89ae0a82b053f94bb74f5a6756a8e090f236d892227f05bdb4",
+      "aligned": true
+    },
+    {
+      "id": "source/orphan-removed/GroundAggregate",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/051.json",
+      "sha256": "9a8b261c691363c456642b640fa27129c6c9b5d28a3786a8d7c2ae4f94dd2f7f",
+      "aligned": true
+    },
+    {
+      "id": "source/orphan-removed/GroundPairwise",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/052.json",
+      "sha256": "bbf5d64c8fc66bc554218e7499b97f704cd3aea491944cc9b0af0e8d42bf4e04",
+      "aligned": true
+    },
+    {
+      "id": "source/orphan-removed/GroundUncovered",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/053.json",
+      "sha256": "d0a13565a637f96e58932a96bbc7589c6f8a3a7f08470771580ffcf231631ed3",
+      "aligned": true
+    },
+    {
+      "id": "source/orphan-removed/FamilyNormalized",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/054.json",
+      "sha256": "245b98a528f7fca0621910d65ded8b3d047f8e1070604f415d01f91279abf0ea",
+      "aligned": true
+    },
+    {
+      "id": "source/duplicate/GroundAggregate",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/055.json",
+      "sha256": "1f82828f29752f91711db872a75a483640aee93e5588a02c6d7d0abaf5d0d8ed",
+      "aligned": true
+    },
+    {
+      "id": "source/duplicate/GroundPairwise",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/056.json",
+      "sha256": "214485eb473b013d66dfeeff45eb8ee061dcb4b9e2bcf5deb724239d59f5a344",
+      "aligned": true
+    },
+    {
+      "id": "source/duplicate/GroundUncovered",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/057.json",
+      "sha256": "81a81d89eb513c03f01b6c84a87fb7c092bd6c1da2e151a67be1dd8df929cebf",
+      "aligned": true
+    },
+    {
+      "id": "source/duplicate/FamilyNormalized",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/058.json",
+      "sha256": "2b2bb63becf86e91f240321366d3a76d5cef66afff203275e8fd8e0e8030d687",
+      "aligned": true
+    },
+    {
+      "id": "source/aggregate/GroundAggregate",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/059.json",
+      "sha256": "d8698fa7d19a38016148025c4ad3ca18018e2e94e5220a640fe3b16ddbe7db05",
+      "aligned": true
+    },
+    {
+      "id": "source/aggregate/GroundPairwise",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/060.json",
+      "sha256": "090ed51d1bdecae955a3e3853cd2d0cda7b690e1026ca54e681f743a150d56aa",
+      "aligned": true
+    },
+    {
+      "id": "source/aggregate/GroundUncovered",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/061.json",
+      "sha256": "67285ec1d8afb81439d995785a2925767163b3c0d16a164ec3f5d4675e9bac4f",
+      "aligned": true
+    },
+    {
+      "id": "source/aggregate/FamilyNormalized",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/062.json",
+      "sha256": "1944c0d76f2ae3165afde1c78e7dd1cf4dc25d0e2df28acf91fdc300f901a9cb",
+      "aligned": true
+    },
+    {
+      "id": "source/negative/GroundAggregate",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/063.json",
+      "sha256": "2cd2713634dd233257b6019867c5555a182b7a77908a6287c59c0ffd0ed4abcf",
+      "aligned": true
+    },
+    {
+      "id": "source/negative/GroundPairwise",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/064.json",
+      "sha256": "ef505c292af7f3119070de03fb38f7aadc6375a666d6defc97d766f55c636baa",
+      "aligned": true
+    },
+    {
+      "id": "source/negative/GroundUncovered",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/065.json",
+      "sha256": "9c7f9548b18074a6918177fb15f913320d417482d62d91c96864e06a273baba5",
+      "aligned": true
+    },
+    {
+      "id": "source/negative/FamilyNormalized",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/066.json",
+      "sha256": "48f7597233a1b5ad4aeba0c1f5c7c3041af8ed31417752978cbfb0f8db31a6f8",
+      "aligned": true
+    },
+    {
+      "id": "source/unavailable/GroundAggregate",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/067.json",
+      "sha256": "4fe25bd683e8fa807139f4aa26c58ee234b0e68265817443a027dc01ef915d82",
+      "aligned": true
+    },
+    {
+      "id": "source/unavailable/GroundPairwise",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/068.json",
+      "sha256": "7cc2a3959b876fd524829f77dece593e597fac64a4c50e45c3a42187be3b4e8e",
+      "aligned": true
+    },
+    {
+      "id": "source/unavailable/GroundUncovered",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/069.json",
+      "sha256": "7743d122b185b710ce4c93be6cce23ac630e3d76a8bb4e6d87601e326b7940e0",
+      "aligned": true
+    },
+    {
+      "id": "source/unavailable/FamilyNormalized",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/070.json",
+      "sha256": "23433b075fcb8c2af7d0d535db58bf7ca3238e2ba862be4e35594c5d90db62c3",
+      "aligned": true
+    },
+    {
+      "id": "source/known-zero/GroundAggregate",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/071.json",
+      "sha256": "a1a97a0f47f851e125c317bfc8a76dd7d0727b88132f6365017d722226b452fc",
+      "aligned": true
+    },
+    {
+      "id": "source/known-zero/GroundPairwise",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/072.json",
+      "sha256": "b012eebbf6f41b285b7e5045f733ab94f6cf519a84d448c36b89d78c60757bf3",
+      "aligned": true
+    },
+    {
+      "id": "source/known-zero/GroundUncovered",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/073.json",
+      "sha256": "102e3790dfe88cda97308c382defe1a59a21bce471d8a2debe00c7dc7dc084b3",
+      "aligned": true
+    },
+    {
+      "id": "source/known-zero/FamilyNormalized",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/074.json",
+      "sha256": "ac909758eb23a5fce10edfc2ea39795e2d45bff8752ec2af1ac7af486902ed42",
+      "aligned": true
+    },
+    {
+      "id": "source/capacity-zero/GroundAggregate",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/075.json",
+      "sha256": "e8e363bd1e8bc48af280f6c7afbaae7bb691ef5cf18037adb66b11703133aa41",
+      "aligned": true
+    },
+    {
+      "id": "source/capacity-zero/GroundPairwise",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/076.json",
+      "sha256": "983948c1ef353848d6bc98f2cbe13b45fd6addfb7c650e0d8056ca22fe7626dd",
+      "aligned": true
+    },
+    {
+      "id": "source/capacity-zero/GroundUncovered",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/077.json",
+      "sha256": "b4e861bac775eafe048bad105bb26057577fe5264e2467ed1c033e5e015f8ec9",
+      "aligned": true
+    },
+    {
+      "id": "source/capacity-zero/FamilyNormalized",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/078.json",
+      "sha256": "360cef32d71885c963e599c8b1d41b26223b7ba2c5c56f22c4e7fc610c7672f1",
+      "aligned": true
+    },
+    {
+      "id": "source/no-task/GroundAggregate",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/079.json",
+      "sha256": "1b64800a29753a8e7f78e3f6accf1b2b33030e26ccc1ccfa00ed0e37c4a74b35",
+      "aligned": true
+    },
+    {
+      "id": "source/no-task/GroundPairwise",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/080.json",
+      "sha256": "43e89a47e30be2e22e04799fd0e1deae134202c109b3fde3147785f0018dad65",
+      "aligned": true
+    },
+    {
+      "id": "source/no-task/GroundUncovered",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/081.json",
+      "sha256": "2c1266722c31f11562ddec5d51c677c16dc513e108d22d4aa2ff77d90f465982",
+      "aligned": true
+    },
+    {
+      "id": "source/no-task/FamilyNormalized",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/082.json",
+      "sha256": "f48595bcde14583bc4d66227486707c86a97c63494c073efcb9e24df0a25a5a6",
+      "aligned": true
+    },
+    {
+      "id": "source/no-body/GroundAggregate",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/083.json",
+      "sha256": "2b768bcf9d9fe8202100024b43cfdf022f2682f45ec27c48689f90a40f920892",
+      "aligned": true
+    },
+    {
+      "id": "source/no-body/GroundPairwise",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/084.json",
+      "sha256": "ca106485a8e751c502d25ac7b34abbaa804bc9d4123851e4be039e27dc3dc38a",
+      "aligned": true
+    },
+    {
+      "id": "source/no-body/GroundUncovered",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/085.json",
+      "sha256": "3c80d03e7435078020246929a7685687457d01f09d82db88a0c5f63e4510d367",
+      "aligned": true
+    },
+    {
+      "id": "source/no-body/FamilyNormalized",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/086.json",
+      "sha256": "21f1a30996f740319f92d7023af019810c451fd25f1a514802c9039024429c3e",
+      "aligned": true
+    },
+    {
+      "id": "source/execution-blocked/GroundAggregate",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/087.json",
+      "sha256": "e81126e19b26fd1980099f646820f2cdbd792b9133e3808621609288f3c695f9",
+      "aligned": true
+    },
+    {
+      "id": "source/execution-blocked/GroundPairwise",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/088.json",
+      "sha256": "f53e0366984ca1eb84bc93b3d48ef2e37a419d5766775b319bf9a85aeaf88887",
+      "aligned": true
+    },
+    {
+      "id": "source/execution-blocked/GroundUncovered",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/089.json",
+      "sha256": "281b40f6bdd0775668f3a75964242b4baef5c0ca3956904b8c3386a54bcf5aa9",
+      "aligned": true
+    },
+    {
+      "id": "source/execution-blocked/FamilyNormalized",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/090.json",
+      "sha256": "1c43312c5f759eaf24b1c959bd4a13c9c9eea98e4b520b899da7a52ec90916e0",
+      "aligned": true
+    },
+    {
+      "id": "matched-dice/duplicate",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/091.json",
+      "sha256": "08e56c104b0c03e91249d67c5fc001593e9eaec937faea50d7652ae4b1cfdd1e",
+      "aligned": true
+    },
+    {
+      "id": "adoption/duplicate",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/092.json",
+      "sha256": "39b19e7809ba2749ab962dca7549900d8a6fad6d18ca4ca4b1c38cde90d33748",
+      "aligned": true
+    },
+    {
+      "id": "matched-dice/aggregate",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/093.json",
+      "sha256": "94a40fd0220139361fd0eb6bb6ba0cae4dfbab0d632b097bc7ac966a767a698c",
+      "aligned": true
+    },
+    {
+      "id": "adoption/aggregate",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/094.json",
+      "sha256": "6600d07fdf9090dae7ca941c505889e4f14015f56ccedb02bb40a14299656308",
+      "aligned": true
+    },
+    {
+      "id": "hidden-reserve",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/095.json",
+      "sha256": "9bb20a5c94b1edc55b7bb738f62c84dd30880748444ab875f4f4d1523de26330",
+      "aligned": true
+    },
+    {
+      "id": "replenishment",
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/096.json",
+      "sha256": "d0e84ce8fa1230915c2ef80415c4b387ffdc1662d6ee65ed3bc0d328f595c1ba",
+      "aligned": false
+    }
+  ],
+  "programs": 62,
+  "scope": "All62 native terminal saves match retained historical receipts. Hidden-bin equality, matched first raw-record equality with divergent receiving outputs, and explicit replenishment misalignment checked. No character language, browser, or general equivalence claim."
+}
