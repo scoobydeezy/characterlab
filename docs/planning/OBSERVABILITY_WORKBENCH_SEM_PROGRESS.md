@@ -657,3 +657,18 @@ unchanged, no new Campaign3 verdict/amendment or native Save132 claim.
 LOCAL DISPOSITION: retain original fixture version, admission scopes and claim limits;
 no architectural ruling needed. Next provenance worker/Compare UI/browser parity,
 then remaining phase/state and integrated census gaps. Overall Campaign4 entry open.
+
+Provenance Compare UI COMPLETE (2026-10-13). Worker tests preserve all4 active
+prefixes and deliver the qualified report; provenance and event-pattern suites PASS.
+Build38588 COMPLETE exit0 (396 modules/reference boundaries). Browser prefix1 full
+83509-character report,9 comparison checks/12 cases/17 guards/3 API boundaries/
+4 preservation rows and scope/failure text equal fresh native execution and retained
+qualification. Present-reference, future-schema and same-observer reuse limits stay
+visible. All6 active hashes unchanged; screenshot inspected. Audit7569 COMPLETE
+exit0; receipt workbench-sem-provenance-ui-rev1/receipt.json. Nine current/frozen
+sources and three capture hashes independently verified. Evidence restore/research
+PASS;18 conditional obligations unchanged. No new Campaign3 verdict/amendment or
+full download/SEM acceptance claim. Next original semanticPhaseOrdering.test.ts
+081-090 controls: phase lanes/cutoffs, reservation/envelope integrity, independent
+classifier work, recognition snapshots, learning/adaptation separation and rollback.
+Remaining state and integrated census gaps and Campaign4 entry remain open.
