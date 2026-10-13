@@ -511,3 +511,18 @@ independently verified. Receipt workbench-sem-binding-rev1/receipt.json.
 Evidence restore/research PASS;18 conditional obligations unchanged. No new
 Campaign3 verdict/amendment. Next worker/UI/browser integration, then event-file
 controls031-040 and remaining census gaps. Overall Campaign4 entry stays open.
+
+Truth-binding Compare UI COMPLETE (2026-10-13). Worker tests preserve all4 active
+prefixes and deliver the qualified report; two suites PASS (binding and axes).
+Build59818 COMPLETE exit0,392 modules; reference boundaries/research checks PASS.
+Browser prefix1 full85443-character report,8 compilation rows/4 permitted projections/
+12 guards/8 replay-preservation checks and settlement/scope paragraphs match fresh
+native execution and qualified component evidence. Unresolved evidence stays present;
+omitted evidence explicitly has no projection. Researcher truth scope stays visible.
+All6 active hashes unchanged; screenshot inspected. Audit19168 COMPLETE exit0;
+receipt workbench-sem-binding-ui-rev1/receipt.json. Nine current/frozen sources and
+three capture hashes independently verified. All18 conditional obligations retained;
+no new Campaign3 verdict/amendment, full download or full SEM acceptance claim.
+Next event-file031-040 controls, preserving original detection/observation label
+allocation order with per-execution fixture state, then remaining census gaps.
+Overall Campaign4 entry acceptance remains open.

@@ -1,0 +1,641 @@
+{
+  "status": "PASS ORIGINAL EVENT BINDING CONTROLS",
+  "sources": [
+    {
+      "path": "src/workbench/semBindingControls.ts",
+      "sha256": "0200cb549dfcb7bb97ca78715cdfb61d416f974f5ed27fb78a3a1f224619a4cc"
+    },
+    {
+      "path": "src/workbench/semBindingFixture.ts",
+      "sha256": "93e2d034219a349768c11ffc7b7642ab6f24ad9d6ee3a10394af4aa0e01be69e"
+    },
+    {
+      "path": "src/workbench/semContinuantControls.ts",
+      "sha256": "8161d8005c30d6ad382a9d3f909f4dcd7d3c99cccc8a85ec241247953e6b9fa7"
+    },
+    {
+      "path": "src/workbench/canonical.ts",
+      "sha256": "f80f4a8353ea7604432d5ffcf0d4628f8b7bf13b82a06b4807445e9a9ba97bde"
+    },
+    {
+      "path": "src/test/eventBindings.test.ts",
+      "sha256": "e46846a30c7dcd5633a367c06830bdeadd193ffa95641d4b124defda9c6411dc"
+    },
+    {
+      "path": "src/test/fixtures/referentOrigin.ts",
+      "sha256": "c2ab6b8bf6b9dfe9bf5bd9daa4ee8faa8bf2e007076fa3cf109cb07af459de29"
+    },
+    {
+      "path": "src/semanticBinding/eventBindings.ts",
+      "sha256": "71dacd5b681f0ae8fcfb04b5f3fcff51edaa923e8cbfad7d308a223ae085bbcb"
+    },
+    {
+      "path": "src/substrate/scheduler.ts",
+      "sha256": "d82c1e44cc25064eeb635e9773793d84d18efabd24860bde2f25ca011f86ad32"
+    },
+    {
+      "path": "src/test/workbenchSemBindingControls.test.ts",
+      "sha256": "3f440fee6f6b1df48b4f5ab8cb13999dce540f2613b51d1b25914360d99ea48e"
+    },
+    {
+      "path": "scripts/build-workbench-sem-binding-fixture.mjs",
+      "sha256": "11e97b4aaa528f992c7f186dc3c57d010b2ff0f3382370d6499b57dab00cb619"
+    },
+    {
+      "path": "scripts/check-workbench-sem-binding.mjs",
+      "sha256": "5b10cf7a2787699e922a3768babffca89b4c9d0f1aba66f8f3b1e08db8dcf964"
+    }
+  ],
+  "diagnostics": 25,
+  "report": {
+    "version": "sem-binding-controls/0.1",
+    "source": {
+      "path": "src/test/eventBindings.test.ts",
+      "sha256": "e46846a30c7dcd5633a367c06830bdeadd193ffa95641d4b124defda9c6411dc"
+    },
+    "contract": "event-type-bindings/0.1-candidate",
+    "cases": [
+      {
+        "id": "multi-role",
+        "vector": "CV-SEM-023",
+        "start": "40",
+        "next": "42",
+        "bindings": [
+          {
+            "id": "40",
+            "role": "event-role/actor",
+            "referent": "0bea070b8d080b14050b706572736f6e2e676c656e"
+          },
+          {
+            "id": "41",
+            "role": "event-role/companion",
+            "referent": "0bea070b8d080b14050b706572736f6e2e676c656e"
+          }
+        ],
+        "grammar": [
+          "event-role/actor=0bea070b8d080b14050b706572736f6e2e676c656e",
+          "event-role/companion=0bea070b8d080b14050b706572736f6e2e676c656e"
+        ],
+        "evidence": {
+          "encoding": "event-binding-component-diagnostic-json/0.1",
+          "exact": "{\n  \"input\": {\n    \"schema\": {\n      \"eventTypeId\": \"event-type/multi-role-control\",\n      \"roleCardinalityRules\": [\n        {\n          \"eventRoleId\": \"event-role/actor\",\n          \"minOccurrences\": 1,\n          \"maxOccurrences\": {\n            \"kind\": \"finite\",\n            \"value\": 1\n          },\n          \"referentDomainNarrowingValidatorId\": {\n            \"$undefined\": true\n          }\n        },\n        {\n          \"eventRoleId\": \"event-role/companion\",\n          \"minOccurrences\": 1,\n          \"maxOccurrences\": {\n            \"kind\": \"finite\",\n            \"value\": 1\n          },\n          \"referentDomainNarrowingValidatorId\": {\n            \"$undefined\": true\n          }\n        }\n      ],\n      \"bindingSchemaVersion\": \"event-type-bindings/0.1-candidate\",\n      \"fixedActionReferentId\": {\n        \"$undefined\": true\n      }\n    },\n    \"requests\": [\n      {\n        \"eventRoleId\": \"event-role/companion\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n          \"domainTags\": [\n            \"entity\"\n          ]\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/actor\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n          \"domainTags\": [\n            \"entity\"\n          ]\n        }\n      }\n    ],\n    \"start\": {\n      \"$bigint\": \"40\"\n    }\n  },\n  \"result\": {\n    \"eventTypeId\": \"event-type/multi-role-control\",\n    \"bindings\": [\n      {\n        \"eventBindingId\": {\n          \"$bigint\": \"40\"\n        },\n        \"eventRoleId\": \"event-role/actor\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n          \"domainTags\": [\n            \"entity\"\n          ]\n        }\n      },\n      {\n        \"eventBindingId\": {\n          \"$bigint\": \"41\"\n        },\n        \"eventRoleId\": \"event-role/companion\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n          \"domainTags\": [\n            \"entity\"\n          ]\n        }\n      }\n    ],\n    \"nextRuntimeId\": {\n      \"$bigint\": \"42\"\n    }\n  }\n}",
+          "sha256": "ed2ec22334af25be4150cf85b6d04045c7a78d49b633357f9e31408a4dc6c725"
+        }
+      },
+      {
+        "id": "repeated-role",
+        "vector": "CV-SEM-024",
+        "start": "70",
+        "next": "76",
+        "bindings": [
+          {
+            "id": "70",
+            "role": "event-role/action",
+            "referent": "0bea070b8d080b140510616374696f6e2e736b69702d726f7065"
+          },
+          {
+            "id": "71",
+            "role": "event-role/actor",
+            "referent": "0bea070b8d080b14050b706572736f6e2e6d696e61"
+          },
+          {
+            "id": "72",
+            "role": "event-role/companion",
+            "referent": "0bea070b8d080b14050b706572736f6e2e676c656e"
+          },
+          {
+            "id": "73",
+            "role": "event-role/companion",
+            "referent": "0bea070b8d080b14050d706572736f6e2e646172697573"
+          },
+          {
+            "id": "74",
+            "role": "event-role/instrument",
+            "referent": "0bea070b8d080b1405106f626a6563742e6c6561642d70697065"
+          },
+          {
+            "id": "75",
+            "role": "event-role/location",
+            "referent": "0bea070b8d080b1405106c6f636174696f6e2e6c696272617279"
+          }
+        ],
+        "grammar": [
+          "event-role/action=0bea070b8d080b140510616374696f6e2e736b69702d726f7065",
+          "event-role/actor=0bea070b8d080b14050b706572736f6e2e6d696e61",
+          "event-role/companion=0bea070b8d080b14050b706572736f6e2e676c656e",
+          "event-role/companion=0bea070b8d080b14050d706572736f6e2e646172697573",
+          "event-role/instrument=0bea070b8d080b1405106f626a6563742e6c6561642d70697065",
+          "event-role/location=0bea070b8d080b1405106c6f636174696f6e2e6c696272617279"
+        ],
+        "evidence": {
+          "encoding": "event-binding-component-diagnostic-json/0.1",
+          "exact": "{\n  \"input\": {\n    \"schema\": {\n      \"eventTypeId\": \"event-type/action-occurrence\",\n      \"roleCardinalityRules\": [\n        {\n          \"eventRoleId\": \"event-role/action\",\n          \"minOccurrences\": 1,\n          \"maxOccurrences\": {\n            \"kind\": \"finite\",\n            \"value\": 1\n          },\n          \"referentDomainNarrowingValidatorId\": {\n            \"$undefined\": true\n          }\n        },\n        {\n          \"eventRoleId\": \"event-role/actor\",\n          \"minOccurrences\": 1,\n          \"maxOccurrences\": {\n            \"kind\": \"finite\",\n            \"value\": 1\n          },\n          \"referentDomainNarrowingValidatorId\": {\n            \"$undefined\": true\n          }\n        },\n        {\n          \"eventRoleId\": \"event-role/companion\",\n          \"minOccurrences\": 1,\n          \"maxOccurrences\": {\n            \"kind\": \"unbounded\"\n          },\n          \"referentDomainNarrowingValidatorId\": {\n            \"$undefined\": true\n          }\n        },\n        {\n          \"eventRoleId\": \"event-role/instrument\",\n          \"minOccurrences\": 1,\n          \"maxOccurrences\": {\n            \"kind\": \"finite\",\n            \"value\": 1\n          },\n          \"referentDomainNarrowingValidatorId\": {\n            \"$undefined\": true\n          }\n        },\n        {\n          \"eventRoleId\": \"event-role/location\",\n          \"minOccurrences\": 1,\n          \"maxOccurrences\": {\n            \"kind\": \"finite\",\n            \"value\": 1\n          },\n          \"referentDomainNarrowingValidatorId\": {\n            \"$undefined\": true\n          }\n        }\n      ],\n      \"bindingSchemaVersion\": \"event-type-bindings/0.1-candidate\",\n      \"fixedActionReferentId\": {\n        \"$undefined\": true\n      }\n    },\n    \"requests\": [\n      {\n        \"eventRoleId\": \"event-role/action\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b140510616374696f6e2e736b69702d726f7065\",\n          \"domainTags\": [\n            \"action\"\n          ]\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/actor\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e6d696e61\",\n          \"domainTags\": [\n            \"entity\"\n          ]\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/companion\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n          \"domainTags\": [\n            \"entity\"\n          ]\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/companion\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b14050d706572736f6e2e646172697573\",\n          \"domainTags\": [\n            \"entity\"\n          ]\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/instrument\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b1405106f626a6563742e6c6561642d70697065\",\n          \"domainTags\": [\n            \"entity\",\n            \"striking-capable\",\n            \"usable-entity\"\n          ]\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/location\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b1405106c6f636174696f6e2e6c696272617279\",\n          \"domainTags\": [\n            \"location\"\n          ]\n        }\n      }\n    ],\n    \"start\": {\n      \"$bigint\": \"70\"\n    }\n  },\n  \"result\": {\n    \"eventTypeId\": \"event-type/action-occurrence\",\n    \"bindings\": [\n      {\n        \"eventBindingId\": {\n          \"$bigint\": \"70\"\n        },\n        \"eventRoleId\": \"event-role/action\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b140510616374696f6e2e736b69702d726f7065\",\n          \"domainTags\": [\n            \"action\"\n          ]\n        }\n      },\n      {\n        \"eventBindingId\": {\n          \"$bigint\": \"71\"\n        },\n        \"eventRoleId\": \"event-role/actor\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e6d696e61\",\n          \"domainTags\": [\n            \"entity\"\n          ]\n        }\n      },\n      {\n        \"eventBindingId\": {\n          \"$bigint\": \"72\"\n        },\n        \"eventRoleId\": \"event-role/companion\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n          \"domainTags\": [\n            \"entity\"\n          ]\n        }\n      },\n      {\n        \"eventBindingId\": {\n          \"$bigint\": \"73\"\n        },\n        \"eventRoleId\": \"event-role/companion\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b14050d706572736f6e2e646172697573\",\n          \"domainTags\": [\n            \"entity\"\n          ]\n        }\n      },\n      {\n        \"eventBindingId\": {\n          \"$bigint\": \"74\"\n        },\n        \"eventRoleId\": \"event-role/instrument\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b1405106f626a6563742e6c6561642d70697065\",\n          \"domainTags\": [\n            \"entity\",\n            \"striking-capable\",\n            \"usable-entity\"\n          ]\n        }\n      },\n      {\n        \"eventBindingId\": {\n          \"$bigint\": \"75\"\n        },\n        \"eventRoleId\": \"event-role/location\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b1405106c6f636174696f6e2e6c696272617279\",\n          \"domainTags\": [\n            \"location\"\n          ]\n        }\n      }\n    ],\n    \"nextRuntimeId\": {\n      \"$bigint\": \"76\"\n    }\n  }\n}",
+          "sha256": "66e3e17e3a8ac03d2eaa63a3f7a0b078fe5f4f2861acfd542a7d234a43bf48a5"
+        }
+      },
+      {
+        "id": "strike-pipe",
+        "vector": "CV-SEM-025",
+        "start": "0",
+        "next": "1",
+        "bindings": [
+          {
+            "id": "0",
+            "role": "event-role/instrument",
+            "referent": "0bea070b8d080b1405106f626a6563742e6c6561642d70697065"
+          }
+        ],
+        "grammar": [
+          "event-role/instrument=0bea070b8d080b1405106f626a6563742e6c6561642d70697065"
+        ],
+        "evidence": {
+          "encoding": "event-binding-component-diagnostic-json/0.1",
+          "exact": "{\n  \"input\": {\n    \"schema\": {\n      \"eventTypeId\": \"event-type/strike\",\n      \"roleCardinalityRules\": [\n        {\n          \"eventRoleId\": \"event-role/instrument\",\n          \"minOccurrences\": 1,\n          \"maxOccurrences\": {\n            \"kind\": \"finite\",\n            \"value\": 1\n          },\n          \"referentDomainNarrowingValidatorId\": \"domain/striking-capable\"\n        }\n      ],\n      \"bindingSchemaVersion\": \"event-type-bindings/0.1-candidate\",\n      \"fixedActionReferentId\": {\n        \"$undefined\": true\n      }\n    },\n    \"requests\": [\n      {\n        \"eventRoleId\": \"event-role/instrument\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b1405106f626a6563742e6c6561642d70697065\",\n          \"domainTags\": [\n            \"entity\",\n            \"striking-capable\",\n            \"usable-entity\"\n          ]\n        }\n      }\n    ],\n    \"start\": {\n      \"$bigint\": \"0\"\n    }\n  },\n  \"result\": {\n    \"eventTypeId\": \"event-type/strike\",\n    \"bindings\": [\n      {\n        \"eventBindingId\": {\n          \"$bigint\": \"0\"\n        },\n        \"eventRoleId\": \"event-role/instrument\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b1405106f626a6563742e6c6561642d70697065\",\n          \"domainTags\": [\n            \"entity\",\n            \"striking-capable\",\n            \"usable-entity\"\n          ]\n        }\n      }\n    ],\n    \"nextRuntimeId\": {\n      \"$bigint\": \"1\"\n    }\n  }\n}",
+          "sha256": "66d7815db40928617056fed9a124710aa25c13e8d291a6af9742df65384b123d"
+        }
+      },
+      {
+        "id": "drink-cup",
+        "vector": "CV-SEM-025",
+        "start": "0",
+        "next": "1",
+        "bindings": [
+          {
+            "id": "0",
+            "role": "event-role/instrument",
+            "referent": "0bea070b8d080b14050a6f626a6563742e637570"
+          }
+        ],
+        "grammar": [
+          "event-role/instrument=0bea070b8d080b14050a6f626a6563742e637570"
+        ],
+        "evidence": {
+          "encoding": "event-binding-component-diagnostic-json/0.1",
+          "exact": "{\n  \"input\": {\n    \"schema\": {\n      \"eventTypeId\": \"event-type/drink\",\n      \"roleCardinalityRules\": [\n        {\n          \"eventRoleId\": \"event-role/instrument\",\n          \"minOccurrences\": 1,\n          \"maxOccurrences\": {\n            \"kind\": \"finite\",\n            \"value\": 2\n          },\n          \"referentDomainNarrowingValidatorId\": \"domain/drink-container\"\n        }\n      ],\n      \"bindingSchemaVersion\": \"event-type-bindings/0.1-candidate\",\n      \"fixedActionReferentId\": {\n        \"$undefined\": true\n      }\n    },\n    \"requests\": [\n      {\n        \"eventRoleId\": \"event-role/instrument\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b14050a6f626a6563742e637570\",\n          \"domainTags\": [\n            \"drink-container\",\n            \"entity\",\n            \"usable-entity\"\n          ]\n        }\n      }\n    ],\n    \"start\": {\n      \"$bigint\": \"0\"\n    }\n  },\n  \"result\": {\n    \"eventTypeId\": \"event-type/drink\",\n    \"bindings\": [\n      {\n        \"eventBindingId\": {\n          \"$bigint\": \"0\"\n        },\n        \"eventRoleId\": \"event-role/instrument\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b14050a6f626a6563742e637570\",\n          \"domainTags\": [\n            \"drink-container\",\n            \"entity\",\n            \"usable-entity\"\n          ]\n        }\n      }\n    ],\n    \"nextRuntimeId\": {\n      \"$bigint\": \"1\"\n    }\n  }\n}",
+          "sha256": "4a1e14acafb07808b803e761d56340bb5dde4d4e5c8df948af52b5b29cb502b5"
+        }
+      },
+      {
+        "id": "baseline",
+        "vector": "CV-SEM-027",
+        "start": "100",
+        "next": "105",
+        "bindings": [
+          {
+            "id": "100",
+            "role": "event-role/action",
+            "referent": "0bea070b8d080b140510616374696f6e2e736b69702d726f7065"
+          },
+          {
+            "id": "101",
+            "role": "event-role/actor",
+            "referent": "0bea070b8d080b14050b706572736f6e2e6d696e61"
+          },
+          {
+            "id": "102",
+            "role": "event-role/companion",
+            "referent": "0bea070b8d080b14050b706572736f6e2e676c656e"
+          },
+          {
+            "id": "103",
+            "role": "event-role/instrument",
+            "referent": "0bea070b8d080b1405106f626a6563742e6c6561642d70697065"
+          },
+          {
+            "id": "104",
+            "role": "event-role/location",
+            "referent": "0bea070b8d080b1405106c6f636174696f6e2e6c696272617279"
+          }
+        ],
+        "grammar": [
+          "event-role/action=0bea070b8d080b140510616374696f6e2e736b69702d726f7065",
+          "event-role/actor=0bea070b8d080b14050b706572736f6e2e6d696e61",
+          "event-role/companion=0bea070b8d080b14050b706572736f6e2e676c656e",
+          "event-role/instrument=0bea070b8d080b1405106f626a6563742e6c6561642d70697065",
+          "event-role/location=0bea070b8d080b1405106c6f636174696f6e2e6c696272617279"
+        ],
+        "evidence": {
+          "encoding": "event-binding-component-diagnostic-json/0.1",
+          "exact": "{\n  \"input\": {\n    \"schema\": {\n      \"eventTypeId\": \"event-type/action-occurrence\",\n      \"roleCardinalityRules\": [\n        {\n          \"eventRoleId\": \"event-role/action\",\n          \"minOccurrences\": 1,\n          \"maxOccurrences\": {\n            \"kind\": \"finite\",\n            \"value\": 1\n          },\n          \"referentDomainNarrowingValidatorId\": {\n            \"$undefined\": true\n          }\n        },\n        {\n          \"eventRoleId\": \"event-role/actor\",\n          \"minOccurrences\": 1,\n          \"maxOccurrences\": {\n            \"kind\": \"finite\",\n            \"value\": 1\n          },\n          \"referentDomainNarrowingValidatorId\": {\n            \"$undefined\": true\n          }\n        },\n        {\n          \"eventRoleId\": \"event-role/companion\",\n          \"minOccurrences\": 1,\n          \"maxOccurrences\": {\n            \"kind\": \"unbounded\"\n          },\n          \"referentDomainNarrowingValidatorId\": {\n            \"$undefined\": true\n          }\n        },\n        {\n          \"eventRoleId\": \"event-role/instrument\",\n          \"minOccurrences\": 1,\n          \"maxOccurrences\": {\n            \"kind\": \"finite\",\n            \"value\": 1\n          },\n          \"referentDomainNarrowingValidatorId\": {\n            \"$undefined\": true\n          }\n        },\n        {\n          \"eventRoleId\": \"event-role/location\",\n          \"minOccurrences\": 1,\n          \"maxOccurrences\": {\n            \"kind\": \"finite\",\n            \"value\": 1\n          },\n          \"referentDomainNarrowingValidatorId\": {\n            \"$undefined\": true\n          }\n        }\n      ],\n      \"bindingSchemaVersion\": \"event-type-bindings/0.1-candidate\",\n      \"fixedActionReferentId\": {\n        \"$undefined\": true\n      }\n    },\n    \"requests\": [\n      {\n        \"eventRoleId\": \"event-role/action\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b140510616374696f6e2e736b69702d726f7065\",\n          \"domainTags\": [\n            \"action\"\n          ]\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/actor\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e6d696e61\",\n          \"domainTags\": [\n            \"entity\"\n          ]\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/companion\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n          \"domainTags\": [\n            \"entity\"\n          ]\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/instrument\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b1405106f626a6563742e6c6561642d70697065\",\n          \"domainTags\": [\n            \"entity\",\n            \"striking-capable\",\n            \"usable-entity\"\n          ]\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/location\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b1405106c6f636174696f6e2e6c696272617279\",\n          \"domainTags\": [\n            \"location\"\n          ]\n        }\n      }\n    ],\n    \"start\": {\n      \"$bigint\": \"100\"\n    }\n  },\n  \"result\": {\n    \"eventTypeId\": \"event-type/action-occurrence\",\n    \"bindings\": [\n      {\n        \"eventBindingId\": {\n          \"$bigint\": \"100\"\n        },\n        \"eventRoleId\": \"event-role/action\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b140510616374696f6e2e736b69702d726f7065\",\n          \"domainTags\": [\n            \"action\"\n          ]\n        }\n      },\n      {\n        \"eventBindingId\": {\n          \"$bigint\": \"101\"\n        },\n        \"eventRoleId\": \"event-role/actor\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e6d696e61\",\n          \"domainTags\": [\n            \"entity\"\n          ]\n        }\n      },\n      {\n        \"eventBindingId\": {\n          \"$bigint\": \"102\"\n        },\n        \"eventRoleId\": \"event-role/companion\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n          \"domainTags\": [\n            \"entity\"\n          ]\n        }\n      },\n      {\n        \"eventBindingId\": {\n          \"$bigint\": \"103\"\n        },\n        \"eventRoleId\": \"event-role/instrument\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b1405106f626a6563742e6c6561642d70697065\",\n          \"domainTags\": [\n            \"entity\",\n            \"striking-capable\",\n            \"usable-entity\"\n          ]\n        }\n      },\n      {\n        \"eventBindingId\": {\n          \"$bigint\": \"104\"\n        },\n        \"eventRoleId\": \"event-role/location\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b1405106c6f636174696f6e2e6c696272617279\",\n          \"domainTags\": [\n            \"location\"\n          ]\n        }\n      }\n    ],\n    \"nextRuntimeId\": {\n      \"$bigint\": \"105\"\n    }\n  }\n}",
+          "sha256": "95f2ae2203bfdf6189d961e11b22e3319a9c9747e13569d00f3774d51b816329"
+        }
+      },
+      {
+        "id": "reordered",
+        "vector": "CV-SEM-027",
+        "start": "100",
+        "next": "105",
+        "bindings": [
+          {
+            "id": "100",
+            "role": "event-role/action",
+            "referent": "0bea070b8d080b140510616374696f6e2e736b69702d726f7065"
+          },
+          {
+            "id": "101",
+            "role": "event-role/actor",
+            "referent": "0bea070b8d080b14050b706572736f6e2e6d696e61"
+          },
+          {
+            "id": "102",
+            "role": "event-role/companion",
+            "referent": "0bea070b8d080b14050b706572736f6e2e676c656e"
+          },
+          {
+            "id": "103",
+            "role": "event-role/instrument",
+            "referent": "0bea070b8d080b1405106f626a6563742e6c6561642d70697065"
+          },
+          {
+            "id": "104",
+            "role": "event-role/location",
+            "referent": "0bea070b8d080b1405106c6f636174696f6e2e6c696272617279"
+          }
+        ],
+        "grammar": [
+          "event-role/action=0bea070b8d080b140510616374696f6e2e736b69702d726f7065",
+          "event-role/actor=0bea070b8d080b14050b706572736f6e2e6d696e61",
+          "event-role/companion=0bea070b8d080b14050b706572736f6e2e676c656e",
+          "event-role/instrument=0bea070b8d080b1405106f626a6563742e6c6561642d70697065",
+          "event-role/location=0bea070b8d080b1405106c6f636174696f6e2e6c696272617279"
+        ],
+        "evidence": {
+          "encoding": "event-binding-component-diagnostic-json/0.1",
+          "exact": "{\n  \"input\": {\n    \"schema\": {\n      \"eventTypeId\": \"event-type/action-occurrence\",\n      \"roleCardinalityRules\": [\n        {\n          \"eventRoleId\": \"event-role/action\",\n          \"minOccurrences\": 1,\n          \"maxOccurrences\": {\n            \"kind\": \"finite\",\n            \"value\": 1\n          },\n          \"referentDomainNarrowingValidatorId\": {\n            \"$undefined\": true\n          }\n        },\n        {\n          \"eventRoleId\": \"event-role/actor\",\n          \"minOccurrences\": 1,\n          \"maxOccurrences\": {\n            \"kind\": \"finite\",\n            \"value\": 1\n          },\n          \"referentDomainNarrowingValidatorId\": {\n            \"$undefined\": true\n          }\n        },\n        {\n          \"eventRoleId\": \"event-role/companion\",\n          \"minOccurrences\": 1,\n          \"maxOccurrences\": {\n            \"kind\": \"unbounded\"\n          },\n          \"referentDomainNarrowingValidatorId\": {\n            \"$undefined\": true\n          }\n        },\n        {\n          \"eventRoleId\": \"event-role/instrument\",\n          \"minOccurrences\": 1,\n          \"maxOccurrences\": {\n            \"kind\": \"finite\",\n            \"value\": 1\n          },\n          \"referentDomainNarrowingValidatorId\": {\n            \"$undefined\": true\n          }\n        },\n        {\n          \"eventRoleId\": \"event-role/location\",\n          \"minOccurrences\": 1,\n          \"maxOccurrences\": {\n            \"kind\": \"finite\",\n            \"value\": 1\n          },\n          \"referentDomainNarrowingValidatorId\": {\n            \"$undefined\": true\n          }\n        }\n      ],\n      \"bindingSchemaVersion\": \"event-type-bindings/0.1-candidate\",\n      \"fixedActionReferentId\": {\n        \"$undefined\": true\n      }\n    },\n    \"requests\": [\n      {\n        \"eventRoleId\": \"event-role/location\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b1405106c6f636174696f6e2e6c696272617279\",\n          \"domainTags\": [\n            \"location\"\n          ]\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/instrument\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b1405106f626a6563742e6c6561642d70697065\",\n          \"domainTags\": [\n            \"entity\",\n            \"striking-capable\",\n            \"usable-entity\"\n          ]\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/companion\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n          \"domainTags\": [\n            \"entity\"\n          ]\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/actor\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e6d696e61\",\n          \"domainTags\": [\n            \"entity\"\n          ]\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/action\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b140510616374696f6e2e736b69702d726f7065\",\n          \"domainTags\": [\n            \"action\"\n          ]\n        }\n      }\n    ],\n    \"start\": {\n      \"$bigint\": \"100\"\n    }\n  },\n  \"result\": {\n    \"eventTypeId\": \"event-type/action-occurrence\",\n    \"bindings\": [\n      {\n        \"eventBindingId\": {\n          \"$bigint\": \"100\"\n        },\n        \"eventRoleId\": \"event-role/action\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b140510616374696f6e2e736b69702d726f7065\",\n          \"domainTags\": [\n            \"action\"\n          ]\n        }\n      },\n      {\n        \"eventBindingId\": {\n          \"$bigint\": \"101\"\n        },\n        \"eventRoleId\": \"event-role/actor\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e6d696e61\",\n          \"domainTags\": [\n            \"entity\"\n          ]\n        }\n      },\n      {\n        \"eventBindingId\": {\n          \"$bigint\": \"102\"\n        },\n        \"eventRoleId\": \"event-role/companion\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n          \"domainTags\": [\n            \"entity\"\n          ]\n        }\n      },\n      {\n        \"eventBindingId\": {\n          \"$bigint\": \"103\"\n        },\n        \"eventRoleId\": \"event-role/instrument\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b1405106f626a6563742e6c6561642d70697065\",\n          \"domainTags\": [\n            \"entity\",\n            \"striking-capable\",\n            \"usable-entity\"\n          ]\n        }\n      },\n      {\n        \"eventBindingId\": {\n          \"$bigint\": \"104\"\n        },\n        \"eventRoleId\": \"event-role/location\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b1405106c6f636174696f6e2e6c696272617279\",\n          \"domainTags\": [\n            \"location\"\n          ]\n        }\n      }\n    ],\n    \"nextRuntimeId\": {\n      \"$bigint\": \"105\"\n    }\n  }\n}",
+          "sha256": "8270ffdb4c0a858a918f38067734c15d004eee65a5abd6b3caffabab2630c9e1"
+        }
+      },
+      {
+        "id": "shifted",
+        "vector": "CV-SEM-027",
+        "start": "900",
+        "next": "905",
+        "bindings": [
+          {
+            "id": "900",
+            "role": "event-role/action",
+            "referent": "0bea070b8d080b140510616374696f6e2e736b69702d726f7065"
+          },
+          {
+            "id": "901",
+            "role": "event-role/actor",
+            "referent": "0bea070b8d080b14050b706572736f6e2e6d696e61"
+          },
+          {
+            "id": "902",
+            "role": "event-role/companion",
+            "referent": "0bea070b8d080b14050b706572736f6e2e676c656e"
+          },
+          {
+            "id": "903",
+            "role": "event-role/instrument",
+            "referent": "0bea070b8d080b1405106f626a6563742e6c6561642d70697065"
+          },
+          {
+            "id": "904",
+            "role": "event-role/location",
+            "referent": "0bea070b8d080b1405106c6f636174696f6e2e6c696272617279"
+          }
+        ],
+        "grammar": [
+          "event-role/action=0bea070b8d080b140510616374696f6e2e736b69702d726f7065",
+          "event-role/actor=0bea070b8d080b14050b706572736f6e2e6d696e61",
+          "event-role/companion=0bea070b8d080b14050b706572736f6e2e676c656e",
+          "event-role/instrument=0bea070b8d080b1405106f626a6563742e6c6561642d70697065",
+          "event-role/location=0bea070b8d080b1405106c6f636174696f6e2e6c696272617279"
+        ],
+        "evidence": {
+          "encoding": "event-binding-component-diagnostic-json/0.1",
+          "exact": "{\n  \"input\": {\n    \"schema\": {\n      \"eventTypeId\": \"event-type/action-occurrence\",\n      \"roleCardinalityRules\": [\n        {\n          \"eventRoleId\": \"event-role/action\",\n          \"minOccurrences\": 1,\n          \"maxOccurrences\": {\n            \"kind\": \"finite\",\n            \"value\": 1\n          },\n          \"referentDomainNarrowingValidatorId\": {\n            \"$undefined\": true\n          }\n        },\n        {\n          \"eventRoleId\": \"event-role/actor\",\n          \"minOccurrences\": 1,\n          \"maxOccurrences\": {\n            \"kind\": \"finite\",\n            \"value\": 1\n          },\n          \"referentDomainNarrowingValidatorId\": {\n            \"$undefined\": true\n          }\n        },\n        {\n          \"eventRoleId\": \"event-role/companion\",\n          \"minOccurrences\": 1,\n          \"maxOccurrences\": {\n            \"kind\": \"unbounded\"\n          },\n          \"referentDomainNarrowingValidatorId\": {\n            \"$undefined\": true\n          }\n        },\n        {\n          \"eventRoleId\": \"event-role/instrument\",\n          \"minOccurrences\": 1,\n          \"maxOccurrences\": {\n            \"kind\": \"finite\",\n            \"value\": 1\n          },\n          \"referentDomainNarrowingValidatorId\": {\n            \"$undefined\": true\n          }\n        },\n        {\n          \"eventRoleId\": \"event-role/location\",\n          \"minOccurrences\": 1,\n          \"maxOccurrences\": {\n            \"kind\": \"finite\",\n            \"value\": 1\n          },\n          \"referentDomainNarrowingValidatorId\": {\n            \"$undefined\": true\n          }\n        }\n      ],\n      \"bindingSchemaVersion\": \"event-type-bindings/0.1-candidate\",\n      \"fixedActionReferentId\": {\n        \"$undefined\": true\n      }\n    },\n    \"requests\": [\n      {\n        \"eventRoleId\": \"event-role/action\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b140510616374696f6e2e736b69702d726f7065\",\n          \"domainTags\": [\n            \"action\"\n          ]\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/actor\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e6d696e61\",\n          \"domainTags\": [\n            \"entity\"\n          ]\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/companion\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n          \"domainTags\": [\n            \"entity\"\n          ]\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/instrument\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b1405106f626a6563742e6c6561642d70697065\",\n          \"domainTags\": [\n            \"entity\",\n            \"striking-capable\",\n            \"usable-entity\"\n          ]\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/location\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b1405106c6f636174696f6e2e6c696272617279\",\n          \"domainTags\": [\n            \"location\"\n          ]\n        }\n      }\n    ],\n    \"start\": {\n      \"$bigint\": \"900\"\n    }\n  },\n  \"result\": {\n    \"eventTypeId\": \"event-type/action-occurrence\",\n    \"bindings\": [\n      {\n        \"eventBindingId\": {\n          \"$bigint\": \"900\"\n        },\n        \"eventRoleId\": \"event-role/action\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b140510616374696f6e2e736b69702d726f7065\",\n          \"domainTags\": [\n            \"action\"\n          ]\n        }\n      },\n      {\n        \"eventBindingId\": {\n          \"$bigint\": \"901\"\n        },\n        \"eventRoleId\": \"event-role/actor\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e6d696e61\",\n          \"domainTags\": [\n            \"entity\"\n          ]\n        }\n      },\n      {\n        \"eventBindingId\": {\n          \"$bigint\": \"902\"\n        },\n        \"eventRoleId\": \"event-role/companion\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n          \"domainTags\": [\n            \"entity\"\n          ]\n        }\n      },\n      {\n        \"eventBindingId\": {\n          \"$bigint\": \"903\"\n        },\n        \"eventRoleId\": \"event-role/instrument\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b1405106f626a6563742e6c6561642d70697065\",\n          \"domainTags\": [\n            \"entity\",\n            \"striking-capable\",\n            \"usable-entity\"\n          ]\n        }\n      },\n      {\n        \"eventBindingId\": {\n          \"$bigint\": \"904\"\n        },\n        \"eventRoleId\": \"event-role/location\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b1405106c6f636174696f6e2e6c696272617279\",\n          \"domainTags\": [\n            \"location\"\n          ]\n        }\n      }\n    ],\n    \"nextRuntimeId\": {\n      \"$bigint\": \"905\"\n    }\n  }\n}",
+          "sha256": "46edef7e90240306ec6cd7678fcdb74a1c3e53e7b1e1a28ee78beb31a7aa76c9"
+        }
+      },
+      {
+        "id": "fixed-action",
+        "vector": "CV-SEM-030",
+        "start": "0",
+        "next": "1",
+        "bindings": [
+          {
+            "id": "0",
+            "role": "event-role/actor",
+            "referent": "0bea070b8d080b14050b706572736f6e2e6d696e61"
+          }
+        ],
+        "grammar": [
+          "event-role/actor=0bea070b8d080b14050b706572736f6e2e6d696e61"
+        ],
+        "evidence": {
+          "encoding": "event-binding-component-diagnostic-json/0.1",
+          "exact": "{\n  \"input\": {\n    \"schema\": {\n      \"eventTypeId\": \"event-type/skip-rope-fixed\",\n      \"roleCardinalityRules\": [\n        {\n          \"eventRoleId\": \"event-role/actor\",\n          \"minOccurrences\": 1,\n          \"maxOccurrences\": {\n            \"kind\": \"finite\",\n            \"value\": 1\n          },\n          \"referentDomainNarrowingValidatorId\": {\n            \"$undefined\": true\n          }\n        }\n      ],\n      \"bindingSchemaVersion\": \"event-type-bindings/0.1-candidate\",\n      \"fixedActionReferentId\": \"0bea070b8d080b140510616374696f6e2e736b69702d726f7065\"\n    },\n    \"requests\": [\n      {\n        \"eventRoleId\": \"event-role/actor\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e6d696e61\",\n          \"domainTags\": [\n            \"entity\"\n          ]\n        }\n      }\n    ],\n    \"start\": {\n      \"$bigint\": \"0\"\n    }\n  },\n  \"result\": {\n    \"eventTypeId\": \"event-type/skip-rope-fixed\",\n    \"bindings\": [\n      {\n        \"eventBindingId\": {\n          \"$bigint\": \"0\"\n        },\n        \"eventRoleId\": \"event-role/actor\",\n        \"semanticReferent\": {\n          \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e6d696e61\",\n          \"domainTags\": [\n            \"entity\"\n          ]\n        }\n      }\n    ],\n    \"nextRuntimeId\": {\n      \"$bigint\": \"1\"\n    }\n  }\n}",
+          "sha256": "a10729e93af9b7fb4a77dcd499a5d1c82481afcf907ae6d63657b3f042a114ac"
+        }
+      }
+    ],
+    "negatives": [
+      {
+        "id": "drink-pipe",
+        "vector": "CV-SEM-025",
+        "start": "0",
+        "failure": {
+          "code": "REFERENT_DOMAIN_VIOLATION",
+          "message": "0bea070b8d080b1405106f626a6563742e6c6561642d70697065 violates event-type narrowing for event-role/instrument"
+        },
+        "evidence": {
+          "encoding": "event-binding-component-diagnostic-json/0.1",
+          "exact": "{\n  \"schema\": {\n    \"eventTypeId\": \"event-type/drink\",\n    \"roleCardinalityRules\": [\n      {\n        \"eventRoleId\": \"event-role/instrument\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 2\n        },\n        \"referentDomainNarrowingValidatorId\": \"domain/drink-container\"\n      }\n    ],\n    \"bindingSchemaVersion\": \"event-type-bindings/0.1-candidate\",\n    \"fixedActionReferentId\": {\n      \"$undefined\": true\n    }\n  },\n  \"requests\": [\n    {\n      \"eventRoleId\": \"event-role/instrument\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b1405106f626a6563742e6c6561642d70697065\",\n        \"domainTags\": [\n          \"entity\",\n          \"striking-capable\",\n          \"usable-entity\"\n        ]\n      }\n    }\n  ],\n  \"start\": {\n    \"$bigint\": \"0\"\n  }\n}",
+          "sha256": "6505450ace6a3ba33703424e812a66ddd6afe3cfc8f3df0d57214ec22376eaac"
+        }
+      },
+      {
+        "id": "narrowing-cannot-widen",
+        "vector": "CV-SEM-025",
+        "start": "0",
+        "failure": {
+          "code": "REFERENT_DOMAIN_VIOLATION",
+          "message": "0bea070b8d080b1405186f626a6563742e6465636f7261746976652d68616d6d6572 violates broad domain for event-role/instrument"
+        },
+        "evidence": {
+          "encoding": "event-binding-component-diagnostic-json/0.1",
+          "exact": "{\n  \"schema\": {\n    \"eventTypeId\": \"event-type/strike\",\n    \"roleCardinalityRules\": [\n      {\n        \"eventRoleId\": \"event-role/instrument\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": \"domain/striking-capable\"\n      }\n    ],\n    \"bindingSchemaVersion\": \"event-type-bindings/0.1-candidate\",\n    \"fixedActionReferentId\": {\n      \"$undefined\": true\n    }\n  },\n  \"requests\": [\n    {\n      \"eventRoleId\": \"event-role/instrument\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b1405186f626a6563742e6465636f7261746976652d68616d6d6572\",\n        \"domainTags\": [\n          \"entity\",\n          \"striking-capable\"\n        ]\n      }\n    }\n  ],\n  \"start\": {\n    \"$bigint\": \"0\"\n  }\n}",
+          "sha256": "147e8194f679ec06cd493d57de8e62b718f08b566ff75a9e889d7c3ae5d0a0b9"
+        }
+      },
+      {
+        "id": "missing-companion",
+        "vector": "CV-SEM-026",
+        "start": "90",
+        "failure": {
+          "code": "ROLE_CARDINALITY_VIOLATION",
+          "message": "event-role/companion count 0 violates declared cardinality"
+        },
+        "evidence": {
+          "encoding": "event-binding-component-diagnostic-json/0.1",
+          "exact": "{\n  \"schema\": {\n    \"eventTypeId\": \"event-type/action-occurrence\",\n    \"roleCardinalityRules\": [\n      {\n        \"eventRoleId\": \"event-role/action\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/actor\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/companion\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"unbounded\"\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/instrument\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/location\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      }\n    ],\n    \"bindingSchemaVersion\": \"event-type-bindings/0.1-candidate\",\n    \"fixedActionReferentId\": {\n      \"$undefined\": true\n    }\n  },\n  \"requests\": [\n    {\n      \"eventRoleId\": \"event-role/action\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b140510616374696f6e2e736b69702d726f7065\",\n        \"domainTags\": [\n          \"action\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/actor\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e6d696e61\",\n        \"domainTags\": [\n          \"entity\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/instrument\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b1405106f626a6563742e6c6561642d70697065\",\n        \"domainTags\": [\n          \"entity\",\n          \"striking-capable\",\n          \"usable-entity\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/location\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b1405106c6f636174696f6e2e6c696272617279\",\n        \"domainTags\": [\n          \"location\"\n        ]\n      }\n    }\n  ],\n  \"start\": {\n    \"$bigint\": \"90\"\n  }\n}",
+          "sha256": "41bc5e1c1c2b0383bbba6824ae4248170eb88a5668ebf7199386ddd61f6ad96d"
+        }
+      },
+      {
+        "id": "instrument-overflow",
+        "vector": "CV-SEM-026",
+        "start": "90",
+        "failure": {
+          "code": "ROLE_CARDINALITY_VIOLATION",
+          "message": "event-role/instrument count 2 violates declared cardinality"
+        },
+        "evidence": {
+          "encoding": "event-binding-component-diagnostic-json/0.1",
+          "exact": "{\n  \"schema\": {\n    \"eventTypeId\": \"event-type/action-occurrence\",\n    \"roleCardinalityRules\": [\n      {\n        \"eventRoleId\": \"event-role/action\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/actor\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/companion\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"unbounded\"\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/instrument\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/location\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      }\n    ],\n    \"bindingSchemaVersion\": \"event-type-bindings/0.1-candidate\",\n    \"fixedActionReferentId\": {\n      \"$undefined\": true\n    }\n  },\n  \"requests\": [\n    {\n      \"eventRoleId\": \"event-role/action\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b140510616374696f6e2e736b69702d726f7065\",\n        \"domainTags\": [\n          \"action\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/actor\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e6d696e61\",\n        \"domainTags\": [\n          \"entity\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/companion\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n        \"domainTags\": [\n          \"entity\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/instrument\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b1405106f626a6563742e6c6561642d70697065\",\n        \"domainTags\": [\n          \"entity\",\n          \"striking-capable\",\n          \"usable-entity\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/location\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b1405106c6f636174696f6e2e6c696272617279\",\n        \"domainTags\": [\n          \"location\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/instrument\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b14050a6f626a6563742e637570\",\n        \"domainTags\": [\n          \"drink-container\",\n          \"entity\",\n          \"usable-entity\"\n        ]\n      }\n    }\n  ],\n  \"start\": {\n    \"$bigint\": \"90\"\n  }\n}",
+          "sha256": "f7e69e9b3154568b0f294f4dd1b744d98a715ffa8c7c83692fea8a445204cb49"
+        }
+      },
+      {
+        "id": "prohibited-beneficiary",
+        "vector": "CV-SEM-026",
+        "start": "90",
+        "failure": {
+          "code": "ROLE_CARDINALITY_VIOLATION",
+          "message": "event-role/beneficiary is prohibited by event-type/action-occurrence"
+        },
+        "evidence": {
+          "encoding": "event-binding-component-diagnostic-json/0.1",
+          "exact": "{\n  \"schema\": {\n    \"eventTypeId\": \"event-type/action-occurrence\",\n    \"roleCardinalityRules\": [\n      {\n        \"eventRoleId\": \"event-role/action\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/actor\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/companion\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"unbounded\"\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/instrument\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/location\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      }\n    ],\n    \"bindingSchemaVersion\": \"event-type-bindings/0.1-candidate\",\n    \"fixedActionReferentId\": {\n      \"$undefined\": true\n    }\n  },\n  \"requests\": [\n    {\n      \"eventRoleId\": \"event-role/action\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b140510616374696f6e2e736b69702d726f7065\",\n        \"domainTags\": [\n          \"action\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/actor\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e6d696e61\",\n        \"domainTags\": [\n          \"entity\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/companion\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n        \"domainTags\": [\n          \"entity\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/instrument\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b1405106f626a6563742e6c6561642d70697065\",\n        \"domainTags\": [\n          \"entity\",\n          \"striking-capable\",\n          \"usable-entity\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/location\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b1405106c6f636174696f6e2e6c696272617279\",\n        \"domainTags\": [\n          \"location\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/beneficiary\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n        \"domainTags\": [\n          \"entity\"\n        ]\n      }\n    }\n  ],\n  \"start\": {\n    \"$bigint\": \"90\"\n  }\n}",
+          "sha256": "d311ea5336f1cfc70a4ed2acaa73f27593b70e1835675f782cdb40b35e0c3af1"
+        }
+      },
+      {
+        "id": "wrong-domain",
+        "vector": "CV-SEM-026",
+        "start": "90",
+        "failure": {
+          "code": "REFERENT_DOMAIN_VIOLATION",
+          "message": "0bea070b8d080b14050c776561746865722e7261696e violates broad domain for event-role/instrument"
+        },
+        "evidence": {
+          "encoding": "event-binding-component-diagnostic-json/0.1",
+          "exact": "{\n  \"schema\": {\n    \"eventTypeId\": \"event-type/action-occurrence\",\n    \"roleCardinalityRules\": [\n      {\n        \"eventRoleId\": \"event-role/action\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/actor\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/companion\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"unbounded\"\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/instrument\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/location\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      }\n    ],\n    \"bindingSchemaVersion\": \"event-type-bindings/0.1-candidate\",\n    \"fixedActionReferentId\": {\n      \"$undefined\": true\n    }\n  },\n  \"requests\": [\n    {\n      \"eventRoleId\": \"event-role/action\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b140510616374696f6e2e736b69702d726f7065\",\n        \"domainTags\": [\n          \"action\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/actor\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e6d696e61\",\n        \"domainTags\": [\n          \"entity\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/companion\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n        \"domainTags\": [\n          \"entity\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/instrument\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b14050c776561746865722e7261696e\",\n        \"domainTags\": [\n          \"weather\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/location\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b1405106c6f636174696f6e2e6c696272617279\",\n        \"domainTags\": [\n          \"location\"\n        ]\n      }\n    }\n  ],\n  \"start\": {\n    \"$bigint\": \"90\"\n  }\n}",
+          "sha256": "2af88b6e49991067b693d00b21e67d51a66d00bc8800112ef45b4da8c72eb146"
+        }
+      },
+      {
+        "id": "reversed-rules",
+        "vector": "CV-SEM-026",
+        "start": "90",
+        "failure": {
+          "code": "INVALID_EVENT_TYPE_SCHEMA",
+          "message": "role cardinality rules must be strictly canonical"
+        },
+        "evidence": {
+          "encoding": "event-binding-component-diagnostic-json/0.1",
+          "exact": "{\n  \"schema\": {\n    \"eventTypeId\": \"event-type/action-occurrence\",\n    \"roleCardinalityRules\": [\n      {\n        \"eventRoleId\": \"event-role/location\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/instrument\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/companion\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"unbounded\"\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/actor\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/action\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      }\n    ],\n    \"bindingSchemaVersion\": \"event-type-bindings/0.1-candidate\",\n    \"fixedActionReferentId\": {\n      \"$undefined\": true\n    }\n  },\n  \"requests\": [\n    {\n      \"eventRoleId\": \"event-role/action\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b140510616374696f6e2e736b69702d726f7065\",\n        \"domainTags\": [\n          \"action\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/actor\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e6d696e61\",\n        \"domainTags\": [\n          \"entity\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/companion\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n        \"domainTags\": [\n          \"entity\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/instrument\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b1405106f626a6563742e6c6561642d70697065\",\n        \"domainTags\": [\n          \"entity\",\n          \"striking-capable\",\n          \"usable-entity\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/location\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b1405106c6f636174696f6e2e6c696272617279\",\n        \"domainTags\": [\n          \"location\"\n        ]\n      }\n    }\n  ],\n  \"start\": {\n    \"$bigint\": \"90\"\n  }\n}",
+          "sha256": "321899f897f0a2d0e8c70bf6cff8a40a15a1b23fd17ba3587439bc5bac334b91"
+        }
+      },
+      {
+        "id": "unknown-role",
+        "vector": "CV-SEM-026",
+        "start": "90",
+        "failure": {
+          "code": "UNKNOWN_EVENT_ROLE",
+          "message": "unknown event role event-role/context"
+        },
+        "evidence": {
+          "encoding": "event-binding-component-diagnostic-json/0.1",
+          "exact": "{\n  \"schema\": {\n    \"eventTypeId\": \"event-type/action-occurrence\",\n    \"roleCardinalityRules\": [\n      {\n        \"eventRoleId\": \"event-role/action\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/actor\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/companion\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"unbounded\"\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/instrument\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/location\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      }\n    ],\n    \"bindingSchemaVersion\": \"event-type-bindings/0.1-candidate\",\n    \"fixedActionReferentId\": {\n      \"$undefined\": true\n    }\n  },\n  \"requests\": [\n    {\n      \"eventRoleId\": \"event-role/action\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b140510616374696f6e2e736b69702d726f7065\",\n        \"domainTags\": [\n          \"action\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/actor\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e6d696e61\",\n        \"domainTags\": [\n          \"entity\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/companion\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n        \"domainTags\": [\n          \"entity\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/instrument\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b1405106f626a6563742e6c6561642d70697065\",\n        \"domainTags\": [\n          \"entity\",\n          \"striking-capable\",\n          \"usable-entity\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/location\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b1405106c6f636174696f6e2e6c696272617279\",\n        \"domainTags\": [\n          \"location\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/context\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n        \"domainTags\": [\n          \"entity\"\n        ]\n      }\n    }\n  ],\n  \"start\": {\n    \"$bigint\": \"90\"\n  }\n}",
+          "sha256": "69838d3a300f3e8a1b20451bdd86beb7a08eb051d8fd2845f98f32f24ff05283"
+        }
+      },
+      {
+        "id": "numeric-role",
+        "vector": "CV-SEM-028",
+        "start": "0",
+        "failure": {
+          "code": "UNKNOWN_EVENT_ROLE",
+          "message": "unknown event role 5"
+        },
+        "evidence": {
+          "encoding": "event-binding-component-diagnostic-json/0.1",
+          "exact": "{\n  \"schema\": {\n    \"eventTypeId\": \"event-type/action-occurrence\",\n    \"roleCardinalityRules\": [\n      {\n        \"eventRoleId\": \"event-role/action\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/actor\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/companion\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"unbounded\"\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/instrument\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/location\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      }\n    ],\n    \"bindingSchemaVersion\": \"event-type-bindings/0.1-candidate\",\n    \"fixedActionReferentId\": {\n      \"$undefined\": true\n    }\n  },\n  \"requests\": [\n    {\n      \"eventRoleId\": \"event-role/actor\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e6d696e61\",\n        \"domainTags\": [\n          \"entity\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/companion\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n        \"domainTags\": [\n          \"entity\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/instrument\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b1405106f626a6563742e6c6561642d70697065\",\n        \"domainTags\": [\n          \"entity\",\n          \"striking-capable\",\n          \"usable-entity\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/location\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b1405106c6f636174696f6e2e6c696272617279\",\n        \"domainTags\": [\n          \"location\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": 5,\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b140510616374696f6e2e736b69702d726f7065\",\n        \"domainTags\": [\n          \"action\"\n        ]\n      }\n    }\n  ],\n  \"start\": {\n    \"$bigint\": \"0\"\n  }\n}",
+          "sha256": "75856b0108545444c1777d52ba9d45028af81597ea8a01e3fd913450eb05b38f"
+        }
+      },
+      {
+        "id": "duplicate-pair",
+        "vector": "CV-SEM-030",
+        "start": "0",
+        "failure": {
+          "code": "DUPLICATE_BINDING_PAIR",
+          "message": "duplicate binding pair event-role/companion\u00000bea070b8d080b14050b706572736f6e2e676c656e"
+        },
+        "evidence": {
+          "encoding": "event-binding-component-diagnostic-json/0.1",
+          "exact": "{\n  \"schema\": {\n    \"eventTypeId\": \"event-type/action-occurrence\",\n    \"roleCardinalityRules\": [\n      {\n        \"eventRoleId\": \"event-role/action\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/actor\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/companion\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"unbounded\"\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/instrument\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/location\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      }\n    ],\n    \"bindingSchemaVersion\": \"event-type-bindings/0.1-candidate\",\n    \"fixedActionReferentId\": {\n      \"$undefined\": true\n    }\n  },\n  \"requests\": [\n    {\n      \"eventRoleId\": \"event-role/action\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b140510616374696f6e2e736b69702d726f7065\",\n        \"domainTags\": [\n          \"action\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/actor\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e6d696e61\",\n        \"domainTags\": [\n          \"entity\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/companion\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n        \"domainTags\": [\n          \"entity\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/instrument\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b1405106f626a6563742e6c6561642d70697065\",\n        \"domainTags\": [\n          \"entity\",\n          \"striking-capable\",\n          \"usable-entity\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/location\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b1405106c6f636174696f6e2e6c696272617279\",\n        \"domainTags\": [\n          \"location\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/companion\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n        \"domainTags\": [\n          \"entity\"\n        ]\n      }\n    }\n  ],\n  \"start\": {\n    \"$bigint\": \"0\"\n  }\n}",
+          "sha256": "9e073d714c92a8eb45c71e36baade6c56b74470302acbcb572bc50e05df8a264"
+        }
+      },
+      {
+        "id": "qualifiers",
+        "vector": "CV-SEM-030",
+        "start": "0",
+        "failure": {
+          "code": "FORBIDDEN_BINDING_FIELD",
+          "message": "binding request 4 contains forbidden field qualifiers"
+        },
+        "evidence": {
+          "encoding": "event-binding-component-diagnostic-json/0.1",
+          "exact": "{\n  \"schema\": {\n    \"eventTypeId\": \"event-type/action-occurrence\",\n    \"roleCardinalityRules\": [\n      {\n        \"eventRoleId\": \"event-role/action\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/actor\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/companion\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"unbounded\"\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/instrument\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      },\n      {\n        \"eventRoleId\": \"event-role/location\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      }\n    ],\n    \"bindingSchemaVersion\": \"event-type-bindings/0.1-candidate\",\n    \"fixedActionReferentId\": {\n      \"$undefined\": true\n    }\n  },\n  \"requests\": [\n    {\n      \"eventRoleId\": \"event-role/action\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b140510616374696f6e2e736b69702d726f7065\",\n        \"domainTags\": [\n          \"action\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/actor\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e6d696e61\",\n        \"domainTags\": [\n          \"entity\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/instrument\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b1405106f626a6563742e6c6561642d70697065\",\n        \"domainTags\": [\n          \"entity\",\n          \"striking-capable\",\n          \"usable-entity\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/location\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b1405106c6f636174696f6e2e6c696272617279\",\n        \"domainTags\": [\n          \"location\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/companion\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n        \"domainTags\": [\n          \"entity\"\n        ]\n      },\n      \"qualifiers\": [\n        \"nearby\"\n      ]\n    }\n  ],\n  \"start\": {\n    \"$bigint\": \"0\"\n  }\n}",
+          "sha256": "82e378893482841aca659cfc990a6347f41f8aa61ab283d2f84ade6923c15f6d"
+        }
+      },
+      {
+        "id": "redundant-action",
+        "vector": "CV-SEM-030",
+        "start": "0",
+        "failure": {
+          "code": "ROLE_CARDINALITY_VIOLATION",
+          "message": "event-role/action is prohibited by event-type/skip-rope-fixed"
+        },
+        "evidence": {
+          "encoding": "event-binding-component-diagnostic-json/0.1",
+          "exact": "{\n  \"schema\": {\n    \"eventTypeId\": \"event-type/skip-rope-fixed\",\n    \"roleCardinalityRules\": [\n      {\n        \"eventRoleId\": \"event-role/actor\",\n        \"minOccurrences\": 1,\n        \"maxOccurrences\": {\n          \"kind\": \"finite\",\n          \"value\": 1\n        },\n        \"referentDomainNarrowingValidatorId\": {\n          \"$undefined\": true\n        }\n      }\n    ],\n    \"bindingSchemaVersion\": \"event-type-bindings/0.1-candidate\",\n    \"fixedActionReferentId\": \"0bea070b8d080b140510616374696f6e2e736b69702d726f7065\"\n  },\n  \"requests\": [\n    {\n      \"eventRoleId\": \"event-role/actor\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e6d696e61\",\n        \"domainTags\": [\n          \"entity\"\n        ]\n      }\n    },\n    {\n      \"eventRoleId\": \"event-role/action\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b140510616374696f6e2e736b69702d726f7065\",\n        \"domainTags\": [\n          \"action\"\n        ]\n      }\n    }\n  ],\n  \"start\": {\n    \"$bigint\": \"0\"\n  }\n}",
+          "sha256": "e018aba5ebbbaadee52419b7f0e6200b2e0868f6f629cd5b7eea410047ae3483"
+        }
+      }
+    ],
+    "rollback": {
+      "vector": "CV-SEM-026",
+      "failure": "injected post-allocation state failure",
+      "materialized": {
+        "encoding": "event-binding-component-diagnostic-json/0.1",
+        "exact": "{\n  \"eventTypeId\": \"event-type/action-occurrence\",\n  \"bindings\": [\n    {\n      \"eventBindingId\": {\n        \"$bigint\": \"90\"\n      },\n      \"eventRoleId\": \"event-role/action\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b140510616374696f6e2e736b69702d726f7065\",\n        \"domainTags\": [\n          \"action\"\n        ]\n      }\n    },\n    {\n      \"eventBindingId\": {\n        \"$bigint\": \"91\"\n      },\n      \"eventRoleId\": \"event-role/actor\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e6d696e61\",\n        \"domainTags\": [\n          \"entity\"\n        ]\n      }\n    },\n    {\n      \"eventBindingId\": {\n        \"$bigint\": \"92\"\n      },\n      \"eventRoleId\": \"event-role/companion\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n        \"domainTags\": [\n          \"entity\"\n        ]\n      }\n    },\n    {\n      \"eventBindingId\": {\n        \"$bigint\": \"93\"\n      },\n      \"eventRoleId\": \"event-role/instrument\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b1405106f626a6563742e6c6561642d70697065\",\n        \"domainTags\": [\n          \"entity\",\n          \"striking-capable\",\n          \"usable-entity\"\n        ]\n      }\n    },\n    {\n      \"eventBindingId\": {\n        \"$bigint\": \"94\"\n      },\n      \"eventRoleId\": \"event-role/location\",\n      \"semanticReferent\": {\n        \"semanticReferentId\": \"0bea070b8d080b1405106c6f636174696f6e2e6c696272617279\",\n        \"domainTags\": [\n          \"location\"\n        ]\n      }\n    }\n  ]\n}",
+        "sha256": "c19e4e2e6531f72f07065d1548b30d5e39089f7b0d9617202ac42d9377003b14"
+      },
+      "firstAllocated": "90",
+      "before": {
+        "state": "{\n  \"valid\": true\n}",
+        "allocators": "{\n  \"nextRuntimeId\": {\n    \"$bigint\": \"90\"\n  },\n  \"nextEventId\": {\n    \"$bigint\": \"1\"\n  },\n  \"nextEventSequence\": {\n    \"$bigint\": \"1\"\n  }\n}",
+        "trace": "[]",
+        "outputs": "[]",
+        "status": "Active",
+        "clock": "0",
+        "queue": "[\n  {\n    \"eventId\": {\n      \"$bigint\": \"0\"\n    },\n    \"dueAt\": {\n      \"$bigint\": \"1\"\n    },\n    \"phase\": {\n      \"$bigint\": \"10\"\n    },\n    \"eventSequence\": {\n      \"$bigint\": \"0\"\n    },\n    \"eventTypeId\": {\n      \"kind\": \"typedIdentifier\",\n      \"namespaceId\": {\n        \"$bigint\": \"26000\"\n      },\n      \"payload\": {\n        \"kind\": \"text\",\n        \"value\": \"event/sem-001b-rollback\"\n      }\n    },\n    \"payload\": {\n      \"kind\": \"list\",\n      \"items\": []\n    },\n    \"dependencies\": {\n      \"kind\": \"list\",\n      \"items\": []\n    },\n    \"causalParentEventIds\": []\n  }\n]"
+      },
+      "after": {
+        "state": "{\n  \"valid\": true\n}",
+        "allocators": "{\n  \"nextRuntimeId\": {\n    \"$bigint\": \"90\"\n  },\n  \"nextEventId\": {\n    \"$bigint\": \"1\"\n  },\n  \"nextEventSequence\": {\n    \"$bigint\": \"1\"\n  }\n}",
+        "trace": "[]",
+        "outputs": "[]",
+        "status": "Failed",
+        "clock": "0",
+        "queue": "[\n  {\n    \"eventId\": {\n      \"$bigint\": \"0\"\n    },\n    \"dueAt\": {\n      \"$bigint\": \"1\"\n    },\n    \"phase\": {\n      \"$bigint\": \"10\"\n    },\n    \"eventSequence\": {\n      \"$bigint\": \"0\"\n    },\n    \"eventTypeId\": {\n      \"kind\": \"typedIdentifier\",\n      \"namespaceId\": {\n        \"$bigint\": \"26000\"\n      },\n      \"payload\": {\n        \"kind\": \"text\",\n        \"value\": \"event/sem-001b-rollback\"\n      }\n    },\n    \"payload\": {\n      \"kind\": \"list\",\n      \"items\": []\n    },\n    \"dependencies\": {\n      \"kind\": \"list\",\n      \"items\": []\n    },\n    \"causalParentEventIds\": []\n  }\n]"
+      },
+      "preserved": {
+        "state": true,
+        "allocators": true,
+        "trace": true,
+        "outputs": true
+      }
+    },
+    "replay": {
+      "structuralCopyEqual": true,
+      "reorderedEqual": true,
+      "shiftedGrammarEqual": true,
+      "shiftedIdsDiffer": true
+    },
+    "registry": {
+      "vector": "CV-SEM-028",
+      "roles": [
+        "event-role/action",
+        "event-role/actor",
+        "event-role/affected-entity",
+        "event-role/beneficiary",
+        "event-role/companion",
+        "event-role/instrument",
+        "event-role/location",
+        "event-role/participant",
+        "event-role/recipient",
+        "event-role/target"
+      ],
+      "grammar": [
+        "event-role/action=0bea070b8d080b140510616374696f6e2e736b69702d726f7065",
+        "event-role/actor=0bea070b8d080b14050b706572736f6e2e6d696e61",
+        "event-role/companion=0bea070b8d080b14050b706572736f6e2e676c656e",
+        "event-role/instrument=0bea070b8d080b1405106f626a6563742e6c6561642d70697065",
+        "event-role/location=0bea070b8d080b1405106c6f636174696f6e2e6c696272617279"
+      ]
+    },
+    "projection": [
+      {
+        "kind": "preserve",
+        "present": true,
+        "role": {
+          "kind": "exact",
+          "eventRoleId": "event-role/companion"
+        },
+        "observer": "character/mina",
+        "track": "17",
+        "fields": [
+          "eventRoleEvidence",
+          "perceptualReferentId"
+        ],
+        "evidence": {
+          "encoding": "event-binding-component-diagnostic-json/0.1",
+          "exact": "{\n  \"companion\": {\n    \"eventBindingId\": {\n      \"$bigint\": \"202\"\n    },\n    \"eventRoleId\": \"event-role/companion\",\n    \"semanticReferent\": {\n      \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n      \"domainTags\": [\n        \"entity\"\n      ]\n    }\n  },\n  \"track\": {\n    \"observerId\": \"character/mina\",\n    \"observerTrackSequence\": {\n      \"$bigint\": \"17\"\n    }\n  },\n  \"result\": {\n    \"perceptualReferentId\": {\n      \"observerId\": \"character/mina\",\n      \"observerTrackSequence\": {\n        \"$bigint\": \"17\"\n      }\n    },\n    \"eventRoleEvidence\": {\n      \"kind\": \"exact\",\n      \"eventRoleId\": \"event-role/companion\"\n    }\n  }\n}",
+          "sha256": "4ff24613426281e02d5a094ffcff31b4cef285b5e5fe8dd8bbe40c7bc4868740"
+        }
+      },
+      {
+        "kind": "coarsen-to-participant",
+        "present": true,
+        "role": {
+          "kind": "exact",
+          "eventRoleId": "event-role/participant"
+        },
+        "observer": "character/mina",
+        "track": "17",
+        "fields": [
+          "eventRoleEvidence",
+          "perceptualReferentId"
+        ],
+        "evidence": {
+          "encoding": "event-binding-component-diagnostic-json/0.1",
+          "exact": "{\n  \"companion\": {\n    \"eventBindingId\": {\n      \"$bigint\": \"202\"\n    },\n    \"eventRoleId\": \"event-role/companion\",\n    \"semanticReferent\": {\n      \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n      \"domainTags\": [\n        \"entity\"\n      ]\n    }\n  },\n  \"track\": {\n    \"observerId\": \"character/mina\",\n    \"observerTrackSequence\": {\n      \"$bigint\": \"17\"\n    }\n  },\n  \"result\": {\n    \"perceptualReferentId\": {\n      \"observerId\": \"character/mina\",\n      \"observerTrackSequence\": {\n        \"$bigint\": \"17\"\n      }\n    },\n    \"eventRoleEvidence\": {\n      \"kind\": \"exact\",\n      \"eventRoleId\": \"event-role/participant\"\n    }\n  }\n}",
+          "sha256": "32e98d315fcd2c93b23ffb43fe53793bf0e7605717f07957bb236d5b255c40bc"
+        }
+      },
+      {
+        "kind": "unresolved",
+        "present": true,
+        "role": {
+          "kind": "unresolved"
+        },
+        "observer": "character/mina",
+        "track": "17",
+        "fields": [
+          "eventRoleEvidence",
+          "perceptualReferentId"
+        ],
+        "evidence": {
+          "encoding": "event-binding-component-diagnostic-json/0.1",
+          "exact": "{\n  \"companion\": {\n    \"eventBindingId\": {\n      \"$bigint\": \"202\"\n    },\n    \"eventRoleId\": \"event-role/companion\",\n    \"semanticReferent\": {\n      \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n      \"domainTags\": [\n        \"entity\"\n      ]\n    }\n  },\n  \"track\": {\n    \"observerId\": \"character/mina\",\n    \"observerTrackSequence\": {\n      \"$bigint\": \"17\"\n    }\n  },\n  \"result\": {\n    \"perceptualReferentId\": {\n      \"observerId\": \"character/mina\",\n      \"observerTrackSequence\": {\n        \"$bigint\": \"17\"\n      }\n    },\n    \"eventRoleEvidence\": {\n      \"kind\": \"unresolved\"\n    }\n  }\n}",
+          "sha256": "5e4984cfc9c3c90529be1a85065034f03a12dac74142b694e7b3e2487e624172"
+        }
+      },
+      {
+        "kind": "omit",
+        "present": false,
+        "role": null,
+        "observer": null,
+        "track": null,
+        "fields": [],
+        "evidence": {
+          "encoding": "event-binding-component-diagnostic-json/0.1",
+          "exact": "{\n  \"companion\": {\n    \"eventBindingId\": {\n      \"$bigint\": \"202\"\n    },\n    \"eventRoleId\": \"event-role/companion\",\n    \"semanticReferent\": {\n      \"semanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n      \"domainTags\": [\n        \"entity\"\n      ]\n    }\n  },\n  \"track\": {\n    \"observerId\": \"character/mina\",\n    \"observerTrackSequence\": {\n      \"$bigint\": \"17\"\n    }\n  },\n  \"result\": {\n    \"$undefined\": true\n  }\n}",
+          "sha256": "eedcdb59a88fdb269e85f854ce539e036cd759154e11fce7089fbd8b3d605d80"
+        }
+      }
+    ],
+    "scope": "Original CV-SEM-023..030 component recipes. Diagnostic JSON preserves original schema versions and bigint values; no re-versioned canonical SEM or native Save132 claim. Truth bindings and provenance are researcher-only; four permitted projections retain separate preserve/coarsen/unresolved/omit outcomes. Failed isolated settlement changes status despite preserved committed data. No active-run intervention, UI or full SEM acceptance claim."
+  },
+  "scope": "CV023-030 original component recipes:8 compilation cases,12 actual rejection guards,4 role projections and isolated failed settlement.25 diagnostic hashes, complete replay and source-helper binding verified. Original schema preserved; no UI, native Save132 or full SEM acceptance claim."
+}

@@ -44,8 +44,8 @@ now qualified:10 scenarios/7 guards/17 exact diagnostics, including worker/UI/br
 parity. Declared three-axis component matrix now qualified:24 cases/72 pairs/
 120 canonical records, now with worker/UI/browser parity and3 verified filters.
 Truth-binding component controls now qualified:8 cases/12 guards/4 projections/
-25 diagnostics. Next worker/UI/browser integration, then event-file controls and
-remaining phase/state/provenance and integrated coverage gaps.
+25 diagnostics, now with worker/UI/browser parity. Next event-file controls031-040
+and remaining phase/state/provenance and integrated coverage gaps.
 Full corpus coverage and Campaign4 entry acceptance stay open.
 Joined REASON continuation: OBSERVABILITY_WORKBENCH_REASON_PROGRESS.md;115 native
 programs/350 prefixes pass; Values125/625 retained. Full workbench acceptance remains open.
