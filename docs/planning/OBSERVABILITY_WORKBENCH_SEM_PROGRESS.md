@@ -298,3 +298,25 @@ continuation claim.
 Next: classification-negative distinctions and emission boundaries, recognition
 continuity/allocator witnesses, then reconcile full SEM corpus coverage and advance
 remaining corpus adapters. Overall Campaign4 entry acceptance remains open.
+
+Classification-negative/emission controls qualified (2026-10-13): original
+phenSem001Classification.test.ts helper bodies are extracted without test hooks.
+CV-SEM-017 retains metallic true, explicit false and missing-metallic requests,
+plus unknown-facet, unknown-feature and wrong-value-type rejection guards.
+CV-SEM-018 retains the one allowed experience-assembly target and all nine forbidden
+targets. Original Mina/Glen classification field sets are retained and checked
+against the exact accepted fields and all named psychological-field exclusions.
+Missing metallic evidence is no record, not a false record; canonical bytes stay
+distinct and all component reports replay exactly.
+
+Seven tests PASS across original and workbench suites. Initial runtime audit82361
+passed, but type-check94717 failed on a widened observer-array string type. Original
+sources and diagnostic remain in workbench-sem-classification-rev1. Corrected
+literal tuple changes no runtime recipe. Audit73320 and type-check66639 COMPLETE
+exit0; current receipt workbench-sem-classification-rev2/receipt.json. Three requests,
+three guards, ten emission targets and two observer field-set witnesses qualified.
+Research retains18 conditional obligations; no new Campaign3 verdict/amendment.
+
+Next: worker/UI and browser verification of these classification distinctions;
+remaining recognition continuity/allocator/emission and broader SEM corpus gates
+must still be reconciled before overall Campaign4 entry acceptance.

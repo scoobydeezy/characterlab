@@ -1,0 +1,324 @@
+{
+  "status": "PASS ORIGINAL CLASSIFICATION NEGATIVE/EMISSION CONTROLS",
+  "sources": [
+    {
+      "path": "src/workbench/semClassificationControls.ts",
+      "sha256": "d7523c1b124b5e93e30fbcdfd8a58845286d50ffa768877e4b5d46ccc0c7932e"
+    },
+    {
+      "path": "src/workbench/semClassificationFixture.ts",
+      "sha256": "bfd0aad67b719222eeb1eef269ba8ae8d4f0a870c4abf8e71216ba7bf72f7493"
+    },
+    {
+      "path": "src/workbench/semRecognitionControls.ts",
+      "sha256": "2332abf09942678ada601acf037534f26fa9b4e8f4cd0ab3201a4aaa373773bd"
+    },
+    {
+      "path": "src/workbench/canonical.ts",
+      "sha256": "f80f4a8353ea7604432d5ffcf0d4628f8b7bf13b82a06b4807445e9a9ba97bde"
+    },
+    {
+      "path": "src/test/workbenchSemClassificationControls.test.ts",
+      "sha256": "f51add59d58b5a1c4c7988eedced6a1d88c39caf6cacd37c2e9d390cbcd3feab"
+    },
+    {
+      "path": "src/test/phenSem001Classification.test.ts",
+      "sha256": "a24acd229d67543848094d2736d6b3c6e649d26b279d49a3a9ce2689e07a4f78"
+    },
+    {
+      "path": "src/test/fixtures/phenSem001.ts",
+      "sha256": "09dde6788290292c23d6e129288d1e4c14b1e324b892cac9c90364cd16dbb5cf"
+    },
+    {
+      "path": "src/semanticBinding/perceptualClassification.ts",
+      "sha256": "c394c1975ec4c3ad32aaa34830fa4b6121da052339ab03fb40344a9b1a5b6996"
+    },
+    {
+      "path": "src/semanticBinding/semanticEvidenceCodecs.ts",
+      "sha256": "7dfad248c12d525e940a6f038c2affd5d8d336a31d365c507a85761bb819c4d6"
+    },
+    {
+      "path": "scripts/build-workbench-sem-classification-fixture.mjs",
+      "sha256": "57f9f607507bc8427ec34c97cb0440dc4b83325396ef438d2e7e8a7294efa8ec"
+    },
+    {
+      "path": "scripts/check-workbench-sem-classification.mjs",
+      "sha256": "f87bfc412a050dc8c55380510cde099c0bf6780f5db57af99c3d679a0a526a36"
+    }
+  ],
+  "report": {
+    "version": "sem-classification-controls/0.1",
+    "contract": "semantic-binding/0.1-candidate#SEM-001D",
+    "source": {
+      "path": "src/test/phenSem001Classification.test.ts",
+      "sha256": "a24acd229d67543848094d2736d6b3c6e649d26b279d49a3a9ce2689e07a4f78"
+    },
+    "cases": [
+      {
+        "id": "metallic-true",
+        "request": "{\n  \"experienceId\": {\n    \"$bigint\": \"1\"\n  },\n  \"observerId\": \"character/mina\",\n  \"perceptualReferentId\": {\n    \"observerId\": \"character/mina\",\n    \"observerTrackSequence\": {\n      \"$bigint\": \"4\"\n    }\n  },\n  \"currentDetectionId\": {\n    \"observerId\": \"character/mina\",\n    \"detectionOccurrenceId\": {\n      \"$bigint\": \"900\"\n    }\n  },\n  \"featureObservations\": [\n    {\n      \"featureObservationId\": {\n        \"$bigint\": \"1\"\n      },\n      \"observerId\": \"character/mina\",\n      \"currentDetectionId\": {\n        \"observerId\": \"character/mina\",\n        \"detectionOccurrenceId\": {\n          \"$bigint\": \"900\"\n        }\n      },\n      \"perceptualReferentId\": {\n        \"observerId\": \"character/mina\",\n        \"observerTrackSequence\": {\n          \"$bigint\": \"4\"\n        }\n      },\n      \"perceptualFeatureId\": \"perceptual-feature/observed-metallic-surface\",\n      \"booleanValue\": true,\n      \"observationChannelId\": \"observation-channel/controlled-visual\",\n      \"supportingObservationIds\": [\n        {\n          \"observerId\": \"character/mina\",\n          \"observationId\": {\n            \"$bigint\": \"5001\"\n          }\n        }\n      ],\n      \"occurredAt\": {\n        \"$bigint\": \"20\"\n      },\n      \"transformationVersion\": \"semantic-binding/0.1-candidate#SEM-001D\"\n    }\n  ],\n  \"occurredAt\": {\n    \"$bigint\": \"20\"\n  },\n  \"transformationVersion\": \"semantic-binding/0.1-candidate#SEM-001D\"\n}",
+        "facets": [
+          {
+            "facet": "perceptual-facet/appears-metallic",
+            "value": true
+          }
+        ],
+        "canonicalHex": "07010ae101010b01010bd008020002010bd208020103010be807050e6368617261637465722f6d696e6104010ad401010201010be807050e6368617261637465722f6d696e610201020405010bf30705217065726365707475616c2d66616365742f617070656172732d6d6574616c6c696306010107010bf4070524636c617373696669636174696f6e2d72756c652f6d6574616c6c69632d73757266616365080109010bcd080201090109010ad801010201010be807050e6368617261637465722f6d696e6102010bdb080289270a0102140b01052773656d616e7469632d62696e64696e672f302e312d63616e6469646174652353454d2d30303144",
+        "sha256": "e066b1ab7b8412c7ed02a969df6ae09e1550473cf98ff440708a5837175effc8",
+        "exact": "[\n  {\n    \"record\": \"PerceptualClassificationEvidence#225/1\",\n    \"ClassificationEvidenceId [1]\": {\n      \"namespace\": \"1104\",\n      \"identity\": \"0\"\n    },\n    \"ExperienceId [2]\": {\n      \"namespace\": \"1106\",\n      \"identity\": \"1\"\n    },\n    \"ObserverId [3]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"character/mina\"\n    },\n    \"PerceptualReferentId [4]\": {\n      \"record\": \"PerceptualReferentId#212/1\",\n      \"ObserverId [1]\": {\n        \"namespace\": \"1000\",\n        \"identity\": \"character/mina\"\n      },\n      \"ObserverTrackSequence [2]\": \"4\"\n    },\n    \"PerceptualFacetId [5]\": {\n      \"namespace\": \"1011\",\n      \"identity\": \"perceptual-facet/appears-metallic\"\n    },\n    \"TypedPerceivedValue [6]\": true,\n    \"ClassificationRuleId [7]\": {\n      \"namespace\": \"1012\",\n      \"identity\": \"classification-rule/metallic-surface\"\n    },\n    \"SupportingFeatureObservationIds [8]\": [\n      {\n        \"namespace\": \"1101\",\n        \"identity\": \"1\"\n      }\n    ],\n    \"SupportingObservationIds [9]\": [\n      {\n        \"record\": \"SupportingObservationId#216/1\",\n        \"ObserverId [1]\": {\n          \"namespace\": \"1000\",\n          \"identity\": \"character/mina\"\n        },\n        \"ObservationId [2]\": {\n          \"namespace\": \"1115\",\n          \"identity\": \"5001\"\n        }\n      }\n    ],\n    \"OccurredAt [10]\": \"20\",\n    \"TransformationVersion [11]\": \"semantic-binding/0.1-candidate#SEM-001D\"\n  }\n]"
+      },
+      {
+        "id": "metallic-false",
+        "request": "{\n  \"experienceId\": {\n    \"$bigint\": \"1\"\n  },\n  \"observerId\": \"character/mina\",\n  \"perceptualReferentId\": {\n    \"observerId\": \"character/mina\",\n    \"observerTrackSequence\": {\n      \"$bigint\": \"4\"\n    }\n  },\n  \"currentDetectionId\": {\n    \"observerId\": \"character/mina\",\n    \"detectionOccurrenceId\": {\n      \"$bigint\": \"900\"\n    }\n  },\n  \"featureObservations\": [\n    {\n      \"featureObservationId\": {\n        \"$bigint\": \"1\"\n      },\n      \"observerId\": \"character/mina\",\n      \"currentDetectionId\": {\n        \"observerId\": \"character/mina\",\n        \"detectionOccurrenceId\": {\n          \"$bigint\": \"900\"\n        }\n      },\n      \"perceptualReferentId\": {\n        \"observerId\": \"character/mina\",\n        \"observerTrackSequence\": {\n          \"$bigint\": \"4\"\n        }\n      },\n      \"perceptualFeatureId\": \"perceptual-feature/observed-metallic-surface\",\n      \"booleanValue\": false,\n      \"observationChannelId\": \"observation-channel/controlled-visual\",\n      \"supportingObservationIds\": [\n        {\n          \"observerId\": \"character/mina\",\n          \"observationId\": {\n            \"$bigint\": \"5001\"\n          }\n        }\n      ],\n      \"occurredAt\": {\n        \"$bigint\": \"20\"\n      },\n      \"transformationVersion\": \"semantic-binding/0.1-candidate#SEM-001D\"\n    }\n  ],\n  \"occurredAt\": {\n    \"$bigint\": \"20\"\n  },\n  \"transformationVersion\": \"semantic-binding/0.1-candidate#SEM-001D\"\n}",
+        "facets": [
+          {
+            "facet": "perceptual-facet/appears-metallic",
+            "value": false
+          }
+        ],
+        "canonicalHex": "07010ae101010b01010bd008020002010bd208020103010be807050e6368617261637465722f6d696e6104010ad401010201010be807050e6368617261637465722f6d696e610201020405010bf30705217065726365707475616c2d66616365742f617070656172732d6d6574616c6c696306010007010bf4070524636c617373696669636174696f6e2d72756c652f6d6574616c6c69632d73757266616365080109010bcd080201090109010ad801010201010be807050e6368617261637465722f6d696e6102010bdb080289270a0102140b01052773656d616e7469632d62696e64696e672f302e312d63616e6469646174652353454d2d30303144",
+        "sha256": "c020a93b44553d7bf5568c7bbdd3cad60809797becc34f93b4bb67710c3ff75a",
+        "exact": "[\n  {\n    \"record\": \"PerceptualClassificationEvidence#225/1\",\n    \"ClassificationEvidenceId [1]\": {\n      \"namespace\": \"1104\",\n      \"identity\": \"0\"\n    },\n    \"ExperienceId [2]\": {\n      \"namespace\": \"1106\",\n      \"identity\": \"1\"\n    },\n    \"ObserverId [3]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"character/mina\"\n    },\n    \"PerceptualReferentId [4]\": {\n      \"record\": \"PerceptualReferentId#212/1\",\n      \"ObserverId [1]\": {\n        \"namespace\": \"1000\",\n        \"identity\": \"character/mina\"\n      },\n      \"ObserverTrackSequence [2]\": \"4\"\n    },\n    \"PerceptualFacetId [5]\": {\n      \"namespace\": \"1011\",\n      \"identity\": \"perceptual-facet/appears-metallic\"\n    },\n    \"TypedPerceivedValue [6]\": false,\n    \"ClassificationRuleId [7]\": {\n      \"namespace\": \"1012\",\n      \"identity\": \"classification-rule/metallic-surface\"\n    },\n    \"SupportingFeatureObservationIds [8]\": [\n      {\n        \"namespace\": \"1101\",\n        \"identity\": \"1\"\n      }\n    ],\n    \"SupportingObservationIds [9]\": [\n      {\n        \"record\": \"SupportingObservationId#216/1\",\n        \"ObserverId [1]\": {\n          \"namespace\": \"1000\",\n          \"identity\": \"character/mina\"\n        },\n        \"ObservationId [2]\": {\n          \"namespace\": \"1115\",\n          \"identity\": \"5001\"\n        }\n      }\n    ],\n    \"OccurredAt [10]\": \"20\",\n    \"TransformationVersion [11]\": \"semantic-binding/0.1-candidate#SEM-001D\"\n  }\n]"
+      },
+      {
+        "id": "metallic-missing",
+        "request": "{\n  \"experienceId\": {\n    \"$bigint\": \"1\"\n  },\n  \"observerId\": \"character/mina\",\n  \"perceptualReferentId\": {\n    \"observerId\": \"character/mina\",\n    \"observerTrackSequence\": {\n      \"$bigint\": \"4\"\n    }\n  },\n  \"currentDetectionId\": {\n    \"observerId\": \"character/mina\",\n    \"detectionOccurrenceId\": {\n      \"$bigint\": \"900\"\n    }\n  },\n  \"featureObservations\": [\n    {\n      \"featureObservationId\": {\n        \"$bigint\": \"1\"\n      },\n      \"observerId\": \"character/mina\",\n      \"currentDetectionId\": {\n        \"observerId\": \"character/mina\",\n        \"detectionOccurrenceId\": {\n          \"$bigint\": \"900\"\n        }\n      },\n      \"perceptualReferentId\": {\n        \"observerId\": \"character/mina\",\n        \"observerTrackSequence\": {\n          \"$bigint\": \"4\"\n        }\n      },\n      \"perceptualFeatureId\": \"perceptual-feature/observed-person-form\",\n      \"booleanValue\": true,\n      \"observationChannelId\": \"observation-channel/controlled-visual\",\n      \"supportingObservationIds\": [\n        {\n          \"observerId\": \"character/mina\",\n          \"observationId\": {\n            \"$bigint\": \"5001\"\n          }\n        }\n      ],\n      \"occurredAt\": {\n        \"$bigint\": \"20\"\n      },\n      \"transformationVersion\": \"semantic-binding/0.1-candidate#SEM-001D\"\n    }\n  ],\n  \"occurredAt\": {\n    \"$bigint\": \"20\"\n  },\n  \"transformationVersion\": \"semantic-binding/0.1-candidate#SEM-001D\"\n}",
+        "facets": [
+          {
+            "facet": "perceptual-facet/appears-person-like",
+            "value": true
+          }
+        ],
+        "canonicalHex": "07010ae101010b01010bd008020002010bd208020103010be807050e6368617261637465722f6d696e6104010ad401010201010be807050e6368617261637465722f6d696e610201020405010bf30705247065726365707475616c2d66616365742f617070656172732d706572736f6e2d6c696b6506010107010bf407051f636c617373696669636174696f6e2d72756c652f706572736f6e2d666f726d080109010bcd080201090109010ad801010201010be807050e6368617261637465722f6d696e6102010bdb080289270a0102140b01052773656d616e7469632d62696e64696e672f302e312d63616e6469646174652353454d2d30303144",
+        "sha256": "17b162f7c497fd7c9925e682b726ef1a60096aab6bd7685669a3fa46d8c469d6",
+        "exact": "[\n  {\n    \"record\": \"PerceptualClassificationEvidence#225/1\",\n    \"ClassificationEvidenceId [1]\": {\n      \"namespace\": \"1104\",\n      \"identity\": \"0\"\n    },\n    \"ExperienceId [2]\": {\n      \"namespace\": \"1106\",\n      \"identity\": \"1\"\n    },\n    \"ObserverId [3]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"character/mina\"\n    },\n    \"PerceptualReferentId [4]\": {\n      \"record\": \"PerceptualReferentId#212/1\",\n      \"ObserverId [1]\": {\n        \"namespace\": \"1000\",\n        \"identity\": \"character/mina\"\n      },\n      \"ObserverTrackSequence [2]\": \"4\"\n    },\n    \"PerceptualFacetId [5]\": {\n      \"namespace\": \"1011\",\n      \"identity\": \"perceptual-facet/appears-person-like\"\n    },\n    \"TypedPerceivedValue [6]\": true,\n    \"ClassificationRuleId [7]\": {\n      \"namespace\": \"1012\",\n      \"identity\": \"classification-rule/person-form\"\n    },\n    \"SupportingFeatureObservationIds [8]\": [\n      {\n        \"namespace\": \"1101\",\n        \"identity\": \"1\"\n      }\n    ],\n    \"SupportingObservationIds [9]\": [\n      {\n        \"record\": \"SupportingObservationId#216/1\",\n        \"ObserverId [1]\": {\n          \"namespace\": \"1000\",\n          \"identity\": \"character/mina\"\n        },\n        \"ObservationId [2]\": {\n          \"namespace\": \"1115\",\n          \"identity\": \"5001\"\n        }\n      }\n    ],\n    \"OccurredAt [10]\": \"20\",\n    \"TransformationVersion [11]\": \"semantic-binding/0.1-candidate#SEM-001D\"\n  }\n]"
+      }
+    ],
+    "negatives": [
+      {
+        "id": "unknown-facet",
+        "failure": {
+          "code": "UNKNOWN_FACET",
+          "message": "unknown perceptual facet perceptual-facet/appears-friendly"
+        }
+      },
+      {
+        "id": "unknown-feature",
+        "failure": {
+          "code": "UNKNOWN_FEATURE",
+          "message": "unknown feature perceptual-feature/looks-friendly"
+        }
+      },
+      {
+        "id": "wrong-value-type",
+        "failure": {
+          "code": "INVALID_FEATURE_OBSERVATION",
+          "message": "feature value must be an exact boolean"
+        }
+      }
+    ],
+    "emissions": [
+      {
+        "target": "semantic-experience-assembly",
+        "accepted": true,
+        "failure": null
+      },
+      {
+        "target": "recognition-hypothesis",
+        "accepted": false,
+        "failure": {
+          "code": "FORBIDDEN_EMISSION_TARGET",
+          "message": "classification cannot emit directly to recognition-hypothesis"
+        }
+      },
+      {
+        "target": "appraisal",
+        "accepted": false,
+        "failure": {
+          "code": "FORBIDDEN_EMISSION_TARGET",
+          "message": "classification cannot emit directly to appraisal"
+        }
+      },
+      {
+        "target": "affect",
+        "accepted": false,
+        "failure": {
+          "code": "FORBIDDEN_EMISSION_TARGET",
+          "message": "classification cannot emit directly to affect"
+        }
+      },
+      {
+        "target": "motive",
+        "accepted": false,
+        "failure": {
+          "code": "FORBIDDEN_EMISSION_TARGET",
+          "message": "classification cannot emit directly to motive"
+        }
+      },
+      {
+        "target": "pressure",
+        "accepted": false,
+        "failure": {
+          "code": "FORBIDDEN_EMISSION_TARGET",
+          "message": "classification cannot emit directly to pressure"
+        }
+      },
+      {
+        "target": "reason",
+        "accepted": false,
+        "failure": {
+          "code": "FORBIDDEN_EMISSION_TARGET",
+          "message": "classification cannot emit directly to reason"
+        }
+      },
+      {
+        "target": "identity",
+        "accepted": false,
+        "failure": {
+          "code": "FORBIDDEN_EMISSION_TARGET",
+          "message": "classification cannot emit directly to identity"
+        }
+      },
+      {
+        "target": "relationship",
+        "accepted": false,
+        "failure": {
+          "code": "FORBIDDEN_EMISSION_TARGET",
+          "message": "classification cannot emit directly to relationship"
+        }
+      },
+      {
+        "target": "world-truth",
+        "accepted": false,
+        "failure": {
+          "code": "FORBIDDEN_EMISSION_TARGET",
+          "message": "classification cannot emit directly to world-truth"
+        }
+      }
+    ],
+    "shapes": [
+      {
+        "observer": "character/mina",
+        "fieldSets": [
+          [
+            "classificationEvidenceId",
+            "classificationRuleId",
+            "experienceId",
+            "observerId",
+            "occurredAt",
+            "perceptualFacetId",
+            "perceptualReferentId",
+            "supportingFeatureObservationIds",
+            "supportingObservationIds",
+            "transformationVersion",
+            "typedPerceivedValue"
+          ],
+          [
+            "classificationEvidenceId",
+            "classificationRuleId",
+            "experienceId",
+            "observerId",
+            "occurredAt",
+            "perceptualFacetId",
+            "perceptualReferentId",
+            "supportingFeatureObservationIds",
+            "supportingObservationIds",
+            "transformationVersion",
+            "typedPerceivedValue"
+          ],
+          [
+            "classificationEvidenceId",
+            "classificationRuleId",
+            "experienceId",
+            "observerId",
+            "occurredAt",
+            "perceptualFacetId",
+            "perceptualReferentId",
+            "supportingFeatureObservationIds",
+            "supportingObservationIds",
+            "transformationVersion",
+            "typedPerceivedValue"
+          ],
+          [
+            "classificationEvidenceId",
+            "classificationRuleId",
+            "experienceId",
+            "observerId",
+            "occurredAt",
+            "perceptualFacetId",
+            "perceptualReferentId",
+            "supportingFeatureObservationIds",
+            "supportingObservationIds",
+            "transformationVersion",
+            "typedPerceivedValue"
+          ]
+        ],
+        "diagnostic": "[\n  {\n    \"classificationEvidenceId\": {\n      \"$bigint\": \"5015\"\n    },\n    \"experienceId\": {\n      \"$bigint\": \"1\"\n    },\n    \"observerId\": \"character/mina\",\n    \"perceptualReferentId\": {\n      \"observerId\": \"character/mina\",\n      \"observerTrackSequence\": {\n        \"$bigint\": \"0\"\n      }\n    },\n    \"perceptualFacetId\": \"perceptual-facet/appears-person-like\",\n    \"typedPerceivedValue\": true,\n    \"classificationRuleId\": \"classification-rule/person-form\",\n    \"supportingFeatureObservationIds\": [\n      {\n        \"$bigint\": \"5013\"\n      }\n    ],\n    \"supportingObservationIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observationId\": {\n          \"$bigint\": \"5014\"\n        }\n      }\n    ],\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"transformationVersion\": \"semantic-binding/0.1-candidate#SEM-001D\"\n  },\n  {\n    \"classificationEvidenceId\": {\n      \"$bigint\": \"5019\"\n    },\n    \"experienceId\": {\n      \"$bigint\": \"1\"\n    },\n    \"observerId\": \"character/mina\",\n    \"perceptualReferentId\": {\n      \"observerId\": \"character/mina\",\n      \"observerTrackSequence\": {\n        \"$bigint\": \"1\"\n      }\n    },\n    \"perceptualFacetId\": \"perceptual-facet/appears-interior-space-like\",\n    \"typedPerceivedValue\": true,\n    \"classificationRuleId\": \"classification-rule/enclosure-form\",\n    \"supportingFeatureObservationIds\": [\n      {\n        \"$bigint\": \"5017\"\n      }\n    ],\n    \"supportingObservationIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observationId\": {\n          \"$bigint\": \"5018\"\n        }\n      }\n    ],\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"transformationVersion\": \"semantic-binding/0.1-candidate#SEM-001D\"\n  },\n  {\n    \"classificationEvidenceId\": {\n      \"$bigint\": \"5025\"\n    },\n    \"experienceId\": {\n      \"$bigint\": \"1\"\n    },\n    \"observerId\": \"character/mina\",\n    \"perceptualReferentId\": {\n      \"observerId\": \"character/mina\",\n      \"observerTrackSequence\": {\n        \"$bigint\": \"2\"\n      }\n    },\n    \"perceptualFacetId\": \"perceptual-facet/appears-discrete-object-like\",\n    \"typedPerceivedValue\": true,\n    \"classificationRuleId\": \"classification-rule/discrete-object-form\",\n    \"supportingFeatureObservationIds\": [\n      {\n        \"$bigint\": \"5021\"\n      }\n    ],\n    \"supportingObservationIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observationId\": {\n          \"$bigint\": \"5022\"\n        }\n      }\n    ],\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"transformationVersion\": \"semantic-binding/0.1-candidate#SEM-001D\"\n  },\n  {\n    \"classificationEvidenceId\": {\n      \"$bigint\": \"5026\"\n    },\n    \"experienceId\": {\n      \"$bigint\": \"1\"\n    },\n    \"observerId\": \"character/mina\",\n    \"perceptualReferentId\": {\n      \"observerId\": \"character/mina\",\n      \"observerTrackSequence\": {\n        \"$bigint\": \"2\"\n      }\n    },\n    \"perceptualFacetId\": \"perceptual-facet/appears-metallic\",\n    \"typedPerceivedValue\": true,\n    \"classificationRuleId\": \"classification-rule/metallic-surface\",\n    \"supportingFeatureObservationIds\": [\n      {\n        \"$bigint\": \"5023\"\n      }\n    ],\n    \"supportingObservationIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observationId\": {\n          \"$bigint\": \"5024\"\n        }\n      }\n    ],\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"transformationVersion\": \"semantic-binding/0.1-candidate#SEM-001D\"\n  }\n]",
+        "canonicalHex": "07040ae101010b01010bd00802972702010bd208020103010be807050e6368617261637465722f6d696e6104010ad401010201010be807050e6368617261637465722f6d696e610201020005010bf30705247065726365707475616c2d66616365742f617070656172732d706572736f6e2d6c696b6506010107010bf407051f636c617373696669636174696f6e2d72756c652f706572736f6e2d666f726d080109010bcd08029527090109010ad801010201010be807050e6368617261637465722f6d696e6102010bdb080296270a01020a0b01052773656d616e7469632d62696e64696e672f302e312d63616e6469646174652353454d2d303031440ae101010b01010bd008029b2702010bd208020103010be807050e6368617261637465722f6d696e6104010ad401010201010be807050e6368617261637465722f6d696e610201020105010bf307052c7065726365707475616c2d66616365742f617070656172732d696e746572696f722d73706163652d6c696b6506010107010bf4070522636c617373696669636174696f6e2d72756c652f656e636c6f737572652d666f726d080109010bcd08029927090109010ad801010201010be807050e6368617261637465722f6d696e6102010bdb08029a270a01020a0b01052773656d616e7469632d62696e64696e672f302e312d63616e6469646174652353454d2d303031440ae101010b01010bd00802a12702010bd208020103010be807050e6368617261637465722f6d696e6104010ad401010201010be807050e6368617261637465722f6d696e610201020205010bf307052d7065726365707475616c2d66616365742f617070656172732d64697363726574652d6f626a6563742d6c696b6506010107010bf4070528636c617373696669636174696f6e2d72756c652f64697363726574652d6f626a6563742d666f726d080109010bcd08029d27090109010ad801010201010be807050e6368617261637465722f6d696e6102010bdb08029e270a01020a0b01052773656d616e7469632d62696e64696e672f302e312d63616e6469646174652353454d2d303031440ae101010b01010bd00802a22702010bd208020103010be807050e6368617261637465722f6d696e6104010ad401010201010be807050e6368617261637465722f6d696e610201020205010bf30705217065726365707475616c2d66616365742f617070656172732d6d6574616c6c696306010107010bf4070524636c617373696669636174696f6e2d72756c652f6d6574616c6c69632d73757266616365080109010bcd08029f27090109010ad801010201010be807050e6368617261637465722f6d696e6102010bdb0802a0270a01020a0b01052773656d616e7469632d62696e64696e672f302e312d63616e6469646174652353454d2d30303144",
+        "exact": "[\n  {\n    \"record\": \"PerceptualClassificationEvidence#225/1\",\n    \"ClassificationEvidenceId [1]\": {\n      \"namespace\": \"1104\",\n      \"identity\": \"5015\"\n    },\n    \"ExperienceId [2]\": {\n      \"namespace\": \"1106\",\n      \"identity\": \"1\"\n    },\n    \"ObserverId [3]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"character/mina\"\n    },\n    \"PerceptualReferentId [4]\": {\n      \"record\": \"PerceptualReferentId#212/1\",\n      \"ObserverId [1]\": {\n        \"namespace\": \"1000\",\n        \"identity\": \"character/mina\"\n      },\n      \"ObserverTrackSequence [2]\": \"0\"\n    },\n    \"PerceptualFacetId [5]\": {\n      \"namespace\": \"1011\",\n      \"identity\": \"perceptual-facet/appears-person-like\"\n    },\n    \"TypedPerceivedValue [6]\": true,\n    \"ClassificationRuleId [7]\": {\n      \"namespace\": \"1012\",\n      \"identity\": \"classification-rule/person-form\"\n    },\n    \"SupportingFeatureObservationIds [8]\": [\n      {\n        \"namespace\": \"1101\",\n        \"identity\": \"5013\"\n      }\n    ],\n    \"SupportingObservationIds [9]\": [\n      {\n        \"record\": \"SupportingObservationId#216/1\",\n        \"ObserverId [1]\": {\n          \"namespace\": \"1000\",\n          \"identity\": \"character/mina\"\n        },\n        \"ObservationId [2]\": {\n          \"namespace\": \"1115\",\n          \"identity\": \"5014\"\n        }\n      }\n    ],\n    \"OccurredAt [10]\": \"10\",\n    \"TransformationVersion [11]\": \"semantic-binding/0.1-candidate#SEM-001D\"\n  },\n  {\n    \"record\": \"PerceptualClassificationEvidence#225/1\",\n    \"ClassificationEvidenceId [1]\": {\n      \"namespace\": \"1104\",\n      \"identity\": \"5019\"\n    },\n    \"ExperienceId [2]\": {\n      \"namespace\": \"1106\",\n      \"identity\": \"1\"\n    },\n    \"ObserverId [3]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"character/mina\"\n    },\n    \"PerceptualReferentId [4]\": {\n      \"record\": \"PerceptualReferentId#212/1\",\n      \"ObserverId [1]\": {\n        \"namespace\": \"1000\",\n        \"identity\": \"character/mina\"\n      },\n      \"ObserverTrackSequence [2]\": \"1\"\n    },\n    \"PerceptualFacetId [5]\": {\n      \"namespace\": \"1011\",\n      \"identity\": \"perceptual-facet/appears-interior-space-like\"\n    },\n    \"TypedPerceivedValue [6]\": true,\n    \"ClassificationRuleId [7]\": {\n      \"namespace\": \"1012\",\n      \"identity\": \"classification-rule/enclosure-form\"\n    },\n    \"SupportingFeatureObservationIds [8]\": [\n      {\n        \"namespace\": \"1101\",\n        \"identity\": \"5017\"\n      }\n    ],\n    \"SupportingObservationIds [9]\": [\n      {\n        \"record\": \"SupportingObservationId#216/1\",\n        \"ObserverId [1]\": {\n          \"namespace\": \"1000\",\n          \"identity\": \"character/mina\"\n        },\n        \"ObservationId [2]\": {\n          \"namespace\": \"1115\",\n          \"identity\": \"5018\"\n        }\n      }\n    ],\n    \"OccurredAt [10]\": \"10\",\n    \"TransformationVersion [11]\": \"semantic-binding/0.1-candidate#SEM-001D\"\n  },\n  {\n    \"record\": \"PerceptualClassificationEvidence#225/1\",\n    \"ClassificationEvidenceId [1]\": {\n      \"namespace\": \"1104\",\n      \"identity\": \"5025\"\n    },\n    \"ExperienceId [2]\": {\n      \"namespace\": \"1106\",\n      \"identity\": \"1\"\n    },\n    \"ObserverId [3]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"character/mina\"\n    },\n    \"PerceptualReferentId [4]\": {\n      \"record\": \"PerceptualReferentId#212/1\",\n      \"ObserverId [1]\": {\n        \"namespace\": \"1000\",\n        \"identity\": \"character/mina\"\n      },\n      \"ObserverTrackSequence [2]\": \"2\"\n    },\n    \"PerceptualFacetId [5]\": {\n      \"namespace\": \"1011\",\n      \"identity\": \"perceptual-facet/appears-discrete-object-like\"\n    },\n    \"TypedPerceivedValue [6]\": true,\n    \"ClassificationRuleId [7]\": {\n      \"namespace\": \"1012\",\n      \"identity\": \"classification-rule/discrete-object-form\"\n    },\n    \"SupportingFeatureObservationIds [8]\": [\n      {\n        \"namespace\": \"1101\",\n        \"identity\": \"5021\"\n      }\n    ],\n    \"SupportingObservationIds [9]\": [\n      {\n        \"record\": \"SupportingObservationId#216/1\",\n        \"ObserverId [1]\": {\n          \"namespace\": \"1000\",\n          \"identity\": \"character/mina\"\n        },\n        \"ObservationId [2]\": {\n          \"namespace\": \"1115\",\n          \"identity\": \"5022\"\n        }\n      }\n    ],\n    \"OccurredAt [10]\": \"10\",\n    \"TransformationVersion [11]\": \"semantic-binding/0.1-candidate#SEM-001D\"\n  },\n  {\n    \"record\": \"PerceptualClassificationEvidence#225/1\",\n    \"ClassificationEvidenceId [1]\": {\n      \"namespace\": \"1104\",\n      \"identity\": \"5026\"\n    },\n    \"ExperienceId [2]\": {\n      \"namespace\": \"1106\",\n      \"identity\": \"1\"\n    },\n    \"ObserverId [3]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"character/mina\"\n    },\n    \"PerceptualReferentId [4]\": {\n      \"record\": \"PerceptualReferentId#212/1\",\n      \"ObserverId [1]\": {\n        \"namespace\": \"1000\",\n        \"identity\": \"character/mina\"\n      },\n      \"ObserverTrackSequence [2]\": \"2\"\n    },\n    \"PerceptualFacetId [5]\": {\n      \"namespace\": \"1011\",\n      \"identity\": \"perceptual-facet/appears-metallic\"\n    },\n    \"TypedPerceivedValue [6]\": true,\n    \"ClassificationRuleId [7]\": {\n      \"namespace\": \"1012\",\n      \"identity\": \"classification-rule/metallic-surface\"\n    },\n    \"SupportingFeatureObservationIds [8]\": [\n      {\n        \"namespace\": \"1101\",\n        \"identity\": \"5023\"\n      }\n    ],\n    \"SupportingObservationIds [9]\": [\n      {\n        \"record\": \"SupportingObservationId#216/1\",\n        \"ObserverId [1]\": {\n          \"namespace\": \"1000\",\n          \"identity\": \"character/mina\"\n        },\n        \"ObservationId [2]\": {\n          \"namespace\": \"1115\",\n          \"identity\": \"5024\"\n        }\n      }\n    ],\n    \"OccurredAt [10]\": \"10\",\n    \"TransformationVersion [11]\": \"semantic-binding/0.1-candidate#SEM-001D\"\n  }\n]"
+      },
+      {
+        "observer": "character/glen",
+        "fieldSets": [
+          [
+            "classificationEvidenceId",
+            "classificationRuleId",
+            "experienceId",
+            "observerId",
+            "occurredAt",
+            "perceptualFacetId",
+            "perceptualReferentId",
+            "supportingFeatureObservationIds",
+            "supportingObservationIds",
+            "transformationVersion",
+            "typedPerceivedValue"
+          ],
+          [
+            "classificationEvidenceId",
+            "classificationRuleId",
+            "experienceId",
+            "observerId",
+            "occurredAt",
+            "perceptualFacetId",
+            "perceptualReferentId",
+            "supportingFeatureObservationIds",
+            "supportingObservationIds",
+            "transformationVersion",
+            "typedPerceivedValue"
+          ],
+          [
+            "classificationEvidenceId",
+            "classificationRuleId",
+            "experienceId",
+            "observerId",
+            "occurredAt",
+            "perceptualFacetId",
+            "perceptualReferentId",
+            "supportingFeatureObservationIds",
+            "supportingObservationIds",
+            "transformationVersion",
+            "typedPerceivedValue"
+          ],
+          [
+            "classificationEvidenceId",
+            "classificationRuleId",
+            "experienceId",
+            "observerId",
+            "occurredAt",
+            "perceptualFacetId",
+            "perceptualReferentId",
+            "supportingFeatureObservationIds",
+            "supportingObservationIds",
+            "transformationVersion",
+            "typedPerceivedValue"
+          ]
+        ],
+        "diagnostic": "[\n  {\n    \"classificationEvidenceId\": {\n      \"$bigint\": \"5060\"\n    },\n    \"experienceId\": {\n      \"$bigint\": \"3\"\n    },\n    \"observerId\": \"character/glen\",\n    \"perceptualReferentId\": {\n      \"observerId\": \"character/glen\",\n      \"observerTrackSequence\": {\n        \"$bigint\": \"0\"\n      }\n    },\n    \"perceptualFacetId\": \"perceptual-facet/appears-person-like\",\n    \"typedPerceivedValue\": true,\n    \"classificationRuleId\": \"classification-rule/person-form\",\n    \"supportingFeatureObservationIds\": [\n      {\n        \"$bigint\": \"5058\"\n      }\n    ],\n    \"supportingObservationIds\": [\n      {\n        \"observerId\": \"character/glen\",\n        \"observationId\": {\n          \"$bigint\": \"5059\"\n        }\n      }\n    ],\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"transformationVersion\": \"semantic-binding/0.1-candidate#SEM-001D\"\n  },\n  {\n    \"classificationEvidenceId\": {\n      \"$bigint\": \"5064\"\n    },\n    \"experienceId\": {\n      \"$bigint\": \"3\"\n    },\n    \"observerId\": \"character/glen\",\n    \"perceptualReferentId\": {\n      \"observerId\": \"character/glen\",\n      \"observerTrackSequence\": {\n        \"$bigint\": \"1\"\n      }\n    },\n    \"perceptualFacetId\": \"perceptual-facet/appears-interior-space-like\",\n    \"typedPerceivedValue\": true,\n    \"classificationRuleId\": \"classification-rule/enclosure-form\",\n    \"supportingFeatureObservationIds\": [\n      {\n        \"$bigint\": \"5062\"\n      }\n    ],\n    \"supportingObservationIds\": [\n      {\n        \"observerId\": \"character/glen\",\n        \"observationId\": {\n          \"$bigint\": \"5063\"\n        }\n      }\n    ],\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"transformationVersion\": \"semantic-binding/0.1-candidate#SEM-001D\"\n  },\n  {\n    \"classificationEvidenceId\": {\n      \"$bigint\": \"5070\"\n    },\n    \"experienceId\": {\n      \"$bigint\": \"3\"\n    },\n    \"observerId\": \"character/glen\",\n    \"perceptualReferentId\": {\n      \"observerId\": \"character/glen\",\n      \"observerTrackSequence\": {\n        \"$bigint\": \"2\"\n      }\n    },\n    \"perceptualFacetId\": \"perceptual-facet/appears-discrete-object-like\",\n    \"typedPerceivedValue\": true,\n    \"classificationRuleId\": \"classification-rule/discrete-object-form\",\n    \"supportingFeatureObservationIds\": [\n      {\n        \"$bigint\": \"5066\"\n      }\n    ],\n    \"supportingObservationIds\": [\n      {\n        \"observerId\": \"character/glen\",\n        \"observationId\": {\n          \"$bigint\": \"5067\"\n        }\n      }\n    ],\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"transformationVersion\": \"semantic-binding/0.1-candidate#SEM-001D\"\n  },\n  {\n    \"classificationEvidenceId\": {\n      \"$bigint\": \"5071\"\n    },\n    \"experienceId\": {\n      \"$bigint\": \"3\"\n    },\n    \"observerId\": \"character/glen\",\n    \"perceptualReferentId\": {\n      \"observerId\": \"character/glen\",\n      \"observerTrackSequence\": {\n        \"$bigint\": \"2\"\n      }\n    },\n    \"perceptualFacetId\": \"perceptual-facet/appears-elongated\",\n    \"typedPerceivedValue\": true,\n    \"classificationRuleId\": \"classification-rule/elongated-form\",\n    \"supportingFeatureObservationIds\": [\n      {\n        \"$bigint\": \"5068\"\n      }\n    ],\n    \"supportingObservationIds\": [\n      {\n        \"observerId\": \"character/glen\",\n        \"observationId\": {\n          \"$bigint\": \"5069\"\n        }\n      }\n    ],\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"transformationVersion\": \"semantic-binding/0.1-candidate#SEM-001D\"\n  }\n]",
+        "canonicalHex": "07040ae101010b01010bd00802c42702010bd208020303010be807050e6368617261637465722f676c656e04010ad401010201010be807050e6368617261637465722f676c656e0201020005010bf30705247065726365707475616c2d66616365742f617070656172732d706572736f6e2d6c696b6506010107010bf407051f636c617373696669636174696f6e2d72756c652f706572736f6e2d666f726d080109010bcd0802c227090109010ad801010201010be807050e6368617261637465722f676c656e02010bdb0802c3270a01020a0b01052773656d616e7469632d62696e64696e672f302e312d63616e6469646174652353454d2d303031440ae101010b01010bd00802c82702010bd208020303010be807050e6368617261637465722f676c656e04010ad401010201010be807050e6368617261637465722f676c656e0201020105010bf307052c7065726365707475616c2d66616365742f617070656172732d696e746572696f722d73706163652d6c696b6506010107010bf4070522636c617373696669636174696f6e2d72756c652f656e636c6f737572652d666f726d080109010bcd0802c627090109010ad801010201010be807050e6368617261637465722f676c656e02010bdb0802c7270a01020a0b01052773656d616e7469632d62696e64696e672f302e312d63616e6469646174652353454d2d303031440ae101010b01010bd00802ce2702010bd208020303010be807050e6368617261637465722f676c656e04010ad401010201010be807050e6368617261637465722f676c656e0201020205010bf307052d7065726365707475616c2d66616365742f617070656172732d64697363726574652d6f626a6563742d6c696b6506010107010bf4070528636c617373696669636174696f6e2d72756c652f64697363726574652d6f626a6563742d666f726d080109010bcd0802ca27090109010ad801010201010be807050e6368617261637465722f676c656e02010bdb0802cb270a01020a0b01052773656d616e7469632d62696e64696e672f302e312d63616e6469646174652353454d2d303031440ae101010b01010bd00802cf2702010bd208020303010be807050e6368617261637465722f676c656e04010ad401010201010be807050e6368617261637465722f676c656e0201020205010bf30705227065726365707475616c2d66616365742f617070656172732d656c6f6e676174656406010107010bf4070522636c617373696669636174696f6e2d72756c652f656c6f6e67617465642d666f726d080109010bcd0802cc27090109010ad801010201010be807050e6368617261637465722f676c656e02010bdb0802cd270a01020a0b01052773656d616e7469632d62696e64696e672f302e312d63616e6469646174652353454d2d30303144",
+        "exact": "[\n  {\n    \"record\": \"PerceptualClassificationEvidence#225/1\",\n    \"ClassificationEvidenceId [1]\": {\n      \"namespace\": \"1104\",\n      \"identity\": \"5060\"\n    },\n    \"ExperienceId [2]\": {\n      \"namespace\": \"1106\",\n      \"identity\": \"3\"\n    },\n    \"ObserverId [3]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"character/glen\"\n    },\n    \"PerceptualReferentId [4]\": {\n      \"record\": \"PerceptualReferentId#212/1\",\n      \"ObserverId [1]\": {\n        \"namespace\": \"1000\",\n        \"identity\": \"character/glen\"\n      },\n      \"ObserverTrackSequence [2]\": \"0\"\n    },\n    \"PerceptualFacetId [5]\": {\n      \"namespace\": \"1011\",\n      \"identity\": \"perceptual-facet/appears-person-like\"\n    },\n    \"TypedPerceivedValue [6]\": true,\n    \"ClassificationRuleId [7]\": {\n      \"namespace\": \"1012\",\n      \"identity\": \"classification-rule/person-form\"\n    },\n    \"SupportingFeatureObservationIds [8]\": [\n      {\n        \"namespace\": \"1101\",\n        \"identity\": \"5058\"\n      }\n    ],\n    \"SupportingObservationIds [9]\": [\n      {\n        \"record\": \"SupportingObservationId#216/1\",\n        \"ObserverId [1]\": {\n          \"namespace\": \"1000\",\n          \"identity\": \"character/glen\"\n        },\n        \"ObservationId [2]\": {\n          \"namespace\": \"1115\",\n          \"identity\": \"5059\"\n        }\n      }\n    ],\n    \"OccurredAt [10]\": \"10\",\n    \"TransformationVersion [11]\": \"semantic-binding/0.1-candidate#SEM-001D\"\n  },\n  {\n    \"record\": \"PerceptualClassificationEvidence#225/1\",\n    \"ClassificationEvidenceId [1]\": {\n      \"namespace\": \"1104\",\n      \"identity\": \"5064\"\n    },\n    \"ExperienceId [2]\": {\n      \"namespace\": \"1106\",\n      \"identity\": \"3\"\n    },\n    \"ObserverId [3]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"character/glen\"\n    },\n    \"PerceptualReferentId [4]\": {\n      \"record\": \"PerceptualReferentId#212/1\",\n      \"ObserverId [1]\": {\n        \"namespace\": \"1000\",\n        \"identity\": \"character/glen\"\n      },\n      \"ObserverTrackSequence [2]\": \"1\"\n    },\n    \"PerceptualFacetId [5]\": {\n      \"namespace\": \"1011\",\n      \"identity\": \"perceptual-facet/appears-interior-space-like\"\n    },\n    \"TypedPerceivedValue [6]\": true,\n    \"ClassificationRuleId [7]\": {\n      \"namespace\": \"1012\",\n      \"identity\": \"classification-rule/enclosure-form\"\n    },\n    \"SupportingFeatureObservationIds [8]\": [\n      {\n        \"namespace\": \"1101\",\n        \"identity\": \"5062\"\n      }\n    ],\n    \"SupportingObservationIds [9]\": [\n      {\n        \"record\": \"SupportingObservationId#216/1\",\n        \"ObserverId [1]\": {\n          \"namespace\": \"1000\",\n          \"identity\": \"character/glen\"\n        },\n        \"ObservationId [2]\": {\n          \"namespace\": \"1115\",\n          \"identity\": \"5063\"\n        }\n      }\n    ],\n    \"OccurredAt [10]\": \"10\",\n    \"TransformationVersion [11]\": \"semantic-binding/0.1-candidate#SEM-001D\"\n  },\n  {\n    \"record\": \"PerceptualClassificationEvidence#225/1\",\n    \"ClassificationEvidenceId [1]\": {\n      \"namespace\": \"1104\",\n      \"identity\": \"5070\"\n    },\n    \"ExperienceId [2]\": {\n      \"namespace\": \"1106\",\n      \"identity\": \"3\"\n    },\n    \"ObserverId [3]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"character/glen\"\n    },\n    \"PerceptualReferentId [4]\": {\n      \"record\": \"PerceptualReferentId#212/1\",\n      \"ObserverId [1]\": {\n        \"namespace\": \"1000\",\n        \"identity\": \"character/glen\"\n      },\n      \"ObserverTrackSequence [2]\": \"2\"\n    },\n    \"PerceptualFacetId [5]\": {\n      \"namespace\": \"1011\",\n      \"identity\": \"perceptual-facet/appears-discrete-object-like\"\n    },\n    \"TypedPerceivedValue [6]\": true,\n    \"ClassificationRuleId [7]\": {\n      \"namespace\": \"1012\",\n      \"identity\": \"classification-rule/discrete-object-form\"\n    },\n    \"SupportingFeatureObservationIds [8]\": [\n      {\n        \"namespace\": \"1101\",\n        \"identity\": \"5066\"\n      }\n    ],\n    \"SupportingObservationIds [9]\": [\n      {\n        \"record\": \"SupportingObservationId#216/1\",\n        \"ObserverId [1]\": {\n          \"namespace\": \"1000\",\n          \"identity\": \"character/glen\"\n        },\n        \"ObservationId [2]\": {\n          \"namespace\": \"1115\",\n          \"identity\": \"5067\"\n        }\n      }\n    ],\n    \"OccurredAt [10]\": \"10\",\n    \"TransformationVersion [11]\": \"semantic-binding/0.1-candidate#SEM-001D\"\n  },\n  {\n    \"record\": \"PerceptualClassificationEvidence#225/1\",\n    \"ClassificationEvidenceId [1]\": {\n      \"namespace\": \"1104\",\n      \"identity\": \"5071\"\n    },\n    \"ExperienceId [2]\": {\n      \"namespace\": \"1106\",\n      \"identity\": \"3\"\n    },\n    \"ObserverId [3]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"character/glen\"\n    },\n    \"PerceptualReferentId [4]\": {\n      \"record\": \"PerceptualReferentId#212/1\",\n      \"ObserverId [1]\": {\n        \"namespace\": \"1000\",\n        \"identity\": \"character/glen\"\n      },\n      \"ObserverTrackSequence [2]\": \"2\"\n    },\n    \"PerceptualFacetId [5]\": {\n      \"namespace\": \"1011\",\n      \"identity\": \"perceptual-facet/appears-elongated\"\n    },\n    \"TypedPerceivedValue [6]\": true,\n    \"ClassificationRuleId [7]\": {\n      \"namespace\": \"1012\",\n      \"identity\": \"classification-rule/elongated-form\"\n    },\n    \"SupportingFeatureObservationIds [8]\": [\n      {\n        \"namespace\": \"1101\",\n        \"identity\": \"5068\"\n      }\n    ],\n    \"SupportingObservationIds [9]\": [\n      {\n        \"record\": \"SupportingObservationId#216/1\",\n        \"ObserverId [1]\": {\n          \"namespace\": \"1000\",\n          \"identity\": \"character/glen\"\n        },\n        \"ObservationId [2]\": {\n          \"namespace\": \"1115\",\n          \"identity\": \"5069\"\n        }\n      }\n    ],\n    \"OccurredAt [10]\": \"10\",\n    \"TransformationVersion [11]\": \"semantic-binding/0.1-candidate#SEM-001D\"\n  }\n]"
+      }
+    ],
+    "scope": "Original CV-SEM-017/018 component witnesses: Boolean true/false versus missing metallic classification, registered-domain/type rejection, emission boundaries and Mina/Glen field sets. Missing is not false. No recognition, appraisal, pressure, scheduler intervention or full SEM acceptance claim."
+  },
+  "scope": "Three original classification requests, three rejection guards, one allowed/nine forbidden emission targets and two observer field-set witnesses. Exact replay/canonical evidence hashes and source-helper binding verified. No UI, downstream psychological classification, scheduler or full SEM acceptance claim."
+}
