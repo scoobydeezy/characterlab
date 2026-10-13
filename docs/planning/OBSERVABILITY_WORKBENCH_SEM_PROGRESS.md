@@ -767,3 +767,24 @@ workbench-sem-schema-ui-rev1. No full download/native persistence/full SEM claim
 Evidence restore/research24109 COMPLETE exit0,18 conditional obligations unchanged.
 Next codec096, persistence097/098 and remaining state099/100 plus integrated coverage.
 Audit33018 COMPLETE exit0: full browser report,3 tables, scope text and6 hashes equal fresh native execution and prior qualified report. Eight current/frozen sources and3 capture identities verified.
+
+## Codec foundation (2026-10-13)
+
+Original CV-SEM-096 recipes adapted with exact source-prefix helpers and source hash.
+Twenty-three cases,23 guards,46 exact diagnostics,33 encoded/decode/re-encoded byte
+round trips. Seven listed lifecycle values, optional prior-track field difference,
+map/set construction order, actual allocator-produced state, event state, occurrence
+namespaces and observer identity distinctions retained. All original malformed schema,
+version, field, union and ordinal recipes retained, including schema212/version2 rejection.
+Original layout tests intentionally pass mismatched/generic field payloads: EventBindingId
+in role field, ExperienceId in evidence reference/symbol fields, unsigned event carrier.
+These witness layout validation, not payload-domain admission; no silent correction.
+Seven lifecycle values are not all semantic records and codec round trips are not native
+save/load. Researcher evidence only; no UI/full SEM claim.
+Eleven focused tests PASS, JSON retained; typecheck38133 COMPLETE exit0. Production
+build77112 COMPLETE exit0,398 modules, existing chunk-size warning retained. Evidence
+restore/research PASS,18 conditional obligations unchanged. Initial audit36384 failed
+checker-only namespace assertions (EventBindingId1113 versus actual1100; ExperienceId
+expectation1110 corrected to1106); failed checker preserved, runtime controls unchanged.
+Next codec worker/UI/browser parity, native persistence097/098 and state099/100.
+Corrected audit91832 COMPLETE exit0. All46 diagnostic digests,33 independently decoded/re-encoded canonical values and exact original helper prefix PASS. Ten current/frozen source identities verified.
