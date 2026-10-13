@@ -2,6 +2,7 @@ import type {SemInspectionSnapshot as SemSnapshot} from './semInspection';
 import type {verifySemReplay} from './semReplay';
 import type {runSemControlSuite} from './semControlSuite';
 import type {runSemRecognitionControls} from './semRecognitionControls';
+import type {runSemKnowledgeControls} from './semKnowledgeControls';
 import type {SemCheckpoint} from './semAdapter';
 export class SemWorkerClient {
   #worker = new Worker(new URL('./semWorker.ts', import.meta.url), {type: 'module'});
@@ -27,5 +28,6 @@ export class SemWorkerClient {
   controls() {return this.#call<Awaited<ReturnType<typeof runSemControlSuite>>>('controls');}
   recognition() {return this.#call<Awaited<ReturnType<typeof runSemRecognitionControls>>>('recognition');}
   checkpoint() {return this.#call<SemCheckpoint>('checkpoint');}
+  knowledge() {return this.#call<Awaited<ReturnType<typeof runSemKnowledgeControls>>>('knowledge');}
   dispose(error = new Error('Sem worker disposed')) {if (this.#disposed) return; this.#disposed = true; this.#worker.terminate(); for (const request of this.#pending.values()) request.reject(error); this.#pending.clear();}
 }

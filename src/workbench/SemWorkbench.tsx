@@ -6,6 +6,7 @@ import type {verifySemReplay} from './semReplay';
 import {PreparedExport} from './PreparedExport';
 import {SemControlPanel} from './SemControlPanel';
 import {SemRecognitionPanel} from './SemRecognitionPanel';
+import {SemKnowledgePanel} from './SemKnowledgePanel';
 const modes=['Character','Experiment','Reasoning','Timeline','Compare','Architecture'] as const;
 export function SemWorkbench({active=true}:{active?:boolean}){
  const run=useRef<SemWorkerClient>(),lock=useRef(false),stop=useRef(false);
@@ -26,6 +27,7 @@ export function SemWorkbench({active=true}:{active?:boolean}){
  {mode==='Compare'&&<section className="card"><h2>Exact prefix replay</h2><button disabled={busy||!view} onClick={()=>void execute(async()=>{setReplay(await run.current!.verify());})}>Verify SEM replay</button>{replay&&<><p>Prefix {replay.prefix} · instant {replay.clock} · projection equal: {String(replay.projectionEqual)}</p><table><thead><tr><th>Native commitment</th><th>Equal</th></tr></thead><tbody>{replay.fields.map(f=><tr key={f.name}><td>{f.name}</td><td>{String(f.equal)}</td></tr>)}</tbody></table><button onClick={()=>setText(JSON.stringify(replay,null,2))}>Export SEM replay</button></>}<p>The component controls below have a separate execution boundary. Exact prefix replay does not establish causal necessity.</p></section>}
  {mode==='Compare'&&<SemControlPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
  {mode==='Compare'&&<SemRecognitionPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
+ {mode==='Compare'&&<SemKnowledgePanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
  {mode==='Architecture'&&<section className="card"><h2>Retained semantic state</h2><p>Native continuant and event-file roots are shown below. A read/write participation report is unavailable for this historical trace format; no missing instrumentation is treated as inactivity.</p><pre className="exact">{view?.researchState}</pre></section>}
  {text&&<><PreparedExport text={text} label="Prepared SEM export" filename="characterlab-sem.json"/><button onClick={()=>setText('')}>Close SEM export</button></>}
  <footer>{view&&(['modelHash','runHash','stateHash','saveHash','outputsHash','traceHash'] as const).map(k=><div className="hash" key={k}><span>{k}</span><code>{view[k]}</code></div>)}</footer></div></main>;

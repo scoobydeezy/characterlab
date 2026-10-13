@@ -234,3 +234,22 @@ Campaign3 verdict or qualification amendment.
 Next: worker/UI integration and browser verification for these knowledge-state
 reports, then remaining continuity/rollback/emission/classification/measurement
 witnesses and corpus gaps. Overall Campaign4 entry acceptance remains open.
+
+Knowledge-state Compare UI COMPLETE (2026-10-13): the worker exposes original
+knowledge-state reports without changing the integrated run. The panel distinguishes
+request acceptance/evaluation/guard, retained mapping/reference bytes, distinct
+occurrence IDs and absence of an evaluation pointer on the resolution. Full
+diagnostic evidence and prepared export are available; original scope caveats remain.
+
+Two actual-worker tests PASS across all four integrated prefixes for knowledge
+and recognition suites. Build PASS386 modules. Browser executed all nine requests
+at prefix1: complete50053-character report and every table cell match fresh native
+execution and the qualified receipt; all six active-run hashes unchanged. Screenshot
+inspected. Audit3920 COMPLETE exit0; receipt:
+workbench-sem-knowledge-ui-rev1/receipt.json. Research retains18 conditional
+obligations. No full download transport, stronger persistence or entry claim.
+
+Next: remaining semantic witnesses, starting with original bounded measurement
+support and whole-instant illegal-binding rollback in phenSem001Measurement.test.ts
+(CV-SEM-011/014), alongside outstanding recognition continuity/emission and
+classification-negative distinctions. Full corpus and Campaign4 entry remain open.
