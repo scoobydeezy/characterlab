@@ -209,3 +209,28 @@ Next: recognition knowledge-state CV-SEM-099/100 and self-sufficient resolution
 state in semanticRecognitionState.test.ts, followed by other outstanding semantic
 witnesses and corpus coverage. Character-mode recognition language remains separate
 from this researcher-only component report.
+
+Recognition knowledge-state controls qualified (2026-10-13): semKnowledgeFixture
+extracts original semanticRecognitionState.test.ts helper bodies without test hooks;
+the generated module names the original source hash. Nine original requests retain
+CV-SEM-099 active-A/inactive-B, active-B/retired-A, duplicate-symbol and near-miss
+occurrence cases, plus CV-SEM-100 individually admissible face/gait entries and
+their inadmissible duplicate-candidate combination. Four accepted/five rejected.
+Exact rejection codes and duplicate-state guard messages are retained.
+
+Mapping A and its original encoded cue reference remain unchanged after evaluating
+replacement B; the distinct4300 occurrence and original round-trip witness survive.
+The original codec witness uses a typed ExperienceId as its perceived-symbol payload;
+it is retained verbatim and explicitly is not new symbol-validation evidence.
+SEM-001I.1's actual narrow witness remains evaluation0/resolution1 with no evaluation
+pointer on the resolution. No stronger save/load or persistence claim is inferred.
+
+Audit19345 COMPLETE exit0: nine requests, replay, diagnostic hashes, source binding
+and original invariants PASS. Receipt workbench-sem-knowledge-rev1/receipt.json.
+Six tests PASS (five original knowledge-state tests plus workbench control test),
+type-check PASS and research check preserves18 conditional obligations. No new
+Campaign3 verdict or qualification amendment.
+
+Next: worker/UI integration and browser verification for these knowledge-state
+reports, then remaining continuity/rollback/emission/classification/measurement
+witnesses and corpus gaps. Overall Campaign4 entry acceptance remains open.
