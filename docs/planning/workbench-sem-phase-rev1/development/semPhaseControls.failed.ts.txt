@@ -1,0 +1,52 @@
+import * as f from './semPhaseFixture';
+import * as p from '../semanticBinding/phaseOrdering';
+import {ORDERING_PHASES,ORDERING_PHASE_REGISTRY_VERSION,SETTLEMENT_BARRIER_PHASE,SCHEDULABLE_ORDERING_PHASES,type EventHandler} from '../substrate/scheduler';
+import {list,text,typedIdentifier} from '../substrate/canonicalEncoding';
+import {simInstant} from '../substrate/time';
+import {authoredReferentKey} from '../test/fixtures/referentOrigin';
+import {evaluateContinuantRecognition,type PermittedRecognitionCueEvidence} from '../semanticBinding/recognition';
+import {continuantDiagnostic as diagnostic} from './semContinuantControls';
+import {digest} from './canonical';
+
+export async function runSemPhaseControls(){
+ const evidence=async(value:unknown)=>{const exact=diagnostic(value);return {encoding:'phase-component-diagnostic-json/0.1',exact,sha256:await digest(new TextEncoder().encode(exact))};};
+ const cases:{id:string;vector:string;evidence:Awaited<ReturnType<typeof evidence>>}[]=[];
+ const record=async(id:string,vector:string,value:unknown)=>{cases.push({id,vector,evidence:await evidence(value)});};
+ const negatives:{id:string;vector:string;code:string;message:string;evidence:Awaited<ReturnType<typeof evidence>>}[]=[];
+ const reject=async(id:string,vector:string,input:unknown,run:()=>unknown|Promise<unknown>)=>{let code:string|undefined,message='';try{await run();}catch(e){code=(e as {code?:string}).code;message=e instanceof Error?e.message:String(e);}if(!code)throw Error('Expected coded rejection: '+id);negatives.push({id,vector,code,message,evidence:await evidence(input)});};
+ await record('phase-registry','CV-SEM-081',{contract:p.SEMANTIC_PHASE_CONTRACT_VERSION,registry:ORDERING_PHASE_REGISTRY_VERSION,phases:ORDERING_PHASES,barrier:SETTLEMENT_BARRIER_PHASE,schedulable:SCHEDULABLE_ORDERING_PHASES});
+ for(const [lane,vector,truth] of [['Current','CV-SEM-082',0n],['Consequence','CV-SEM-083',110n]] as const){p.assertTruthAvailableAtLaneEntry(lane,truth);await record(lane.toLowerCase()+'-lane',vector,{lane,definition:p.OBSERVATION_LANES[lane],acceptedTruthPhase:truth});await reject(lane.toLowerCase()+'-late-truth',vector,{lane,phase:p.OBSERVATION_LANES[lane].phases.Observation},()=>p.assertTruthAvailableAtLaneEntry(lane,p.OBSERVATION_LANES[lane].phases.Observation));}
+ await reject('premature-recognition','CV-SEM-082',{lane:'Current',operation:'RecognitionEvaluation',phase:20n},()=>p.assertLaneOperationPhase('Current','RecognitionEvaluation',20n));
+ const root=typedIdentifier(33001n,text('event/consequence-root')),child=typedIdentifier(33001n,text('event/backward-observation'));
+ const event=(eventTypeId:ReturnType<typeof typedIdentifier>,phase:bigint)=>({dueAt:simInstant(1n),phase,eventTypeId,payload:list([]),dependencies:list([])});
+ const visited:bigint[]=[];
+ const backward=f.phaseScheduler(new Map([
+  [f.key(root),(({state})=>{visited.push(110n);return {nextState:state,emittedEvents:[event(child,120n)],traceContributions:[],outputs:[]};}) as EventHandler<f.PhaseState>],
+  [f.key(child),(({state})=>{visited.push(120n);return {nextState:state,emittedEvents:[event(root,20n)],traceContributions:[],outputs:[]};}) as EventHandler<f.PhaseState>],
+ ]));backward.schedule(event(root,110n));
+ await reject('backward-scheduling','CV-SEM-083',{initial:event(root,110n),emissions:[event(child,120n),event(root,20n)]},()=>backward.settleNextInstant());await record('executed-backward-chain','CV-SEM-083',{visited,status:backward.getStatus()});
+ let next=40n,calls=0;const allocate=()=>{calls++;return next++;};
+ const empty=p.admitObservationLane({observerId:f.observerId,lane:'Current',dueAt:100n,emitsCharacterAccessibleEvidence:false},allocate),emptyCalls=calls;
+ const current=p.admitObservationLane({observerId:f.observerId,lane:'Current',dueAt:100n,emitsCharacterAccessibleEvidence:true},allocate).reservation!,consequence=p.admitObservationLane({observerId:f.observerId,lane:'Consequence',dueAt:100n,emitsCharacterAccessibleEvidence:true},allocate).reservation!;
+ const currentStage=f.stage(current,1n),consequenceStage=f.stage(consequence,2n);p.validateSuccessfulExperienceSettlement([current,consequence],[currentStage,consequenceStage]);
+ await record('conditional-reservations','CV-SEM-084',{empty,emptyCalls,calls,current,consequence,currentStage,consequenceStage});
+ await reject('orphan-envelope','CV-SEM-084',{reservations:[current],staged:[]},()=>p.validateSuccessfulExperienceSettlement([current],[]));await reject('duplicate-envelope','CV-SEM-084',{reservations:[current],staged:[currentStage,currentStage]},()=>p.validateSuccessfulExperienceSettlement([current],[currentStage,currentStage]));
+ const staged=f.stage(f.reserve('Current',50n)),snapshot=structuredClone(staged.experience);p.assertLaneOperationPhase('Current','CausalRole',15n);const companion=Object.freeze({experienceId:staged.experience.experienceId,causalRoleId:'causal-role/actor',stagedAtPhase:15n});
+ await record('immutable-envelope','CV-SEM-085',{before:snapshot,after:staged.experience,frozen:Object.isFrozen(staged.experience),companion,containsCausalRoleEvidence:Object.hasOwn(staged.experience,'causalRoleEvidence'),companionOrigin:'literal fixture, not causal derivation'});
+ const work:p.ClassificationWorkItem[]=[{classificationDomain:'EventPattern',observerId:f.observerId,carrierCanonicalKey:'event/4',ruleId:'rule/repetition',canonicalTieBreak:'1'},{classificationDomain:'Continuant',observerId:f.observerId,carrierCanonicalKey:'track/17',ruleId:'rule/person',canonicalTieBreak:'1'}],canonical=p.canonicalizeClassificationWork(work);p.assertCanonicalClassificationWork(canonical);
+ await record('classification-order','CV-SEM-086',{work,canonical,currentPhase:13n,consequencePhase:123n});await reject('noncanonical-work','CV-SEM-086',work,()=>p.assertCanonicalClassificationWork(work));
+ const firstStage=f.stage(f.reserve('Current',60n),1n),mutable=f.recognitionRequest(firstStage.experience,authoredReferentKey('person.glen')),frozen=p.freezeRecognitionInput('Current',firstStage,mutable,20n);(mutable.cueEvidence as PermittedRecognitionCueEvidence[]).splice(0,1);
+ const first=evaluateContinuantRecognition(f.recognitionModel(),frozen.request,100n),firstBefore=structuredClone(first.resolutionRecord!),laterStage=f.stage(f.reserve('Consequence',61n),2n),later=p.freezeRecognitionInput('Consequence',laterStage,f.recognitionRequest(laterStage.experience,authoredReferentKey('person.darius'),[first.resolutionRecord!]),126n),correction=evaluateContinuantRecognition(f.recognitionModel(),later.request,102n);
+ await record('frozen-recognition-correction','CV-SEM-087',{mutable,frozen,first,firstBefore,later,correction});
+ const reads=['intent-expectation','consequence-semantic-experience','consequence-recognition','permitted-character-state'] as const;for(const read of reads)p.assertOutcomeEvaluationRead(read);p.assertAutomaticAdaptationOutput('adaptation-state');
+ await record('outcome-adaptation-boundary','CV-SEM-088',{acceptedReads:reads,acceptedOutput:'adaptation-state'});await reject('truth-outcome-read','CV-SEM-088','authoritative-world-outcome',()=>p.assertOutcomeEvaluationRead('authoritative-world-outcome'));await reject('adaptation-learning-output','CV-SEM-088','character-learning-evidence',()=>p.assertAutomaticAdaptationOutput('character-learning-evidence'));
+ await record('temporal-availability','CV-SEM-089',{currentRecognition:p.SemanticBindingPhase.CurrentRecognitionEvaluation,belief:p.SemanticBindingPhase.BeliefAndPersonModel,consequenceRecognition:p.SemanticBindingPhase.ConsequenceRecognitionEvaluation,outcome:p.SemanticBindingPhase.OutcomeEvaluationAndLearningEvidence,contract:p.SEMANTIC_PHASE_CONTRACT_VERSION});
+ const eventType=typedIdentifier(33002n,text('event/reservation-failure')),barrier=f.phaseScheduler(new Map());await reject('barrier-event','CV-SEM-090',event(eventType,SETTLEMENT_BARRIER_PHASE),()=>barrier.schedule(event(eventType,SETTLEMENT_BARRIER_PHASE)));
+ let attempted:p.ExperienceReservation|undefined,validationFailureCode:string|undefined;
+ const handler:EventHandler<f.PhaseState>=({state,allocateRuntimeId})=>{attempted=p.admitObservationLane({observerId:f.observerId,lane:'Current',dueAt:1n,emitsCharacterAccessibleEvidence:true},allocateRuntimeId).reservation!;try{p.validateSuccessfulExperienceSettlement([attempted],[]);}catch(e){validationFailureCode=(e as {code?:string}).code;throw e;}return {nextState:state,emittedEvents:[],traceContributions:[],outputs:[]};};
+ const subject=f.phaseScheduler(new Map([[f.key(eventType),handler]]),70n);subject.schedule(event(eventType,10n));
+ const capture=()=>{const s=subject.exportQuiescentSnapshot();return {state:diagnostic(s.state),allocators:diagnostic(s.allocators),trace:diagnostic(s.committedTrace),outputs:diagnostic(s.outputs),status:s.status,clock:String(s.clock),queue:diagnostic(s.queue)};},before=capture();let failure='',failureCode='';try{await subject.settleNextInstant();}catch(e){failure=e instanceof Error?e.message:String(e);failureCode=(e as {code:string}).code;}
+ if(attempted?.experienceId!==70n||validationFailureCode!=='ORPHAN_EXPERIENCE_RESERVATION'||failureCode!=='TRANSITION_FAILURE'||failure!=='successful instant contains a reservation without exactly one experience envelope')throw Error('Corrected orphan failure cause not reached');
+ const after=capture(),rollback={vector:'CV-SEM-090',failure,failureCode,validationFailureCode,attempted:await evidence(attempted),before,after,preserved:{state:before.state===after.state,allocators:before.allocators===after.allocators,trace:before.trace===after.trace,outputs:before.outputs===after.outputs},correctionReceipt:'docs/planning/workbench-sem-phase-rollback-correction-rev1/receipt.json'};
+ return {version:'sem-phase-controls/0.1',contract:p.SEMANTIC_PHASE_CONTRACT_VERSION,fixtureVersion:f.version,source:f.originalSource,cases,negatives,rollback,scope:'Original CV-SEM-081..090 recipes using the corrected090 failure cause. Phase declarations and helper admission checks are distinct from executed backward scheduling and orphan rollback. Companion causal role is a literal; classification ordering does not instrument scheduler execution or read edges. Recognition correction executes the original component. Temporal availability grants no ORD-001 belief permission. Failed settlement changes status while preserving committed data. No native Save132, UI or full SEM qualification claim.'};
+}

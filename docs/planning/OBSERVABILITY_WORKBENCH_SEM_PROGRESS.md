@@ -694,3 +694,26 @@ SEM test witness, not a Campaign3 verdict or runtime semantic contract. Prior ge
 due; use corrected source and preserve the historical false-positive distinction.
 Next081-090 controls, then worker/UI/browser parity and remaining state/integrated
 coverage. Overall Campaign4 entry remains open.
+
+## Phase-ordering foundation (2026-10-13)
+
+Original CV-SEM-081..090 recipes adapted from corrected semanticPhaseOrdering.test.ts;
+prefix and scheduler helper tail verified against the exact original. Contract
+semantic-binding/0.1-candidate#SEM-001H and fixture/sem-001h preserved.
+Ten cases, ten coded guards, one orphan rollback,21 exact diagnostics. Phase registry,
+lane cutoffs, conditional40/41 reservations, immutable50 envelope, classifier ordering,
+frozen60/61 recognition inputs with100/102 correction, outcome/adaptation boundaries,
+and temporal availability retained. Actual backward scheduler executes110 then120 and
+rejects emitted20. Corrected orphan allocates70, reaches ORPHAN_EXPERIENCE_RESERVATION,
+and wraps its exact message as TRANSITION_FAILURE; committed state,allocators,trace,
+outputs equal while status Active becomes Failed. Prior correction receipt joined.
+Literal companion is not executed causal derivation; classification ordering helper
+is not scheduler/read-edge instrumentation; temporal availability grants no ORD-001
+permission. No UI/native Save132/full SEM claim.
+Focused12 tests PASS; typecheck17631 COMPLETE exit0; audit75817 COMPLETE exit0.
+Initial nonexistent getStatus accessor and count11-versus10 assertion failures retained
+in development/ with source/report; corrected before qualification. Independent audit
+checks21 diagnostic digests, repeatability, original helpers and exact failure causes.
+Evidence restored; research PASS with18 conditional obligations unchanged. Runtime
+semantics and Campaign3 verdicts unchanged. Next worker/UI/browser parity.
+Production build22309 COMPLETE exit0,396 modules; existing chunk-size warning retained.
