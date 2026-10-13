@@ -125,3 +125,7 @@ prose/provenance equal fresh native execution. SOCIAL state/observer survives
 switching to RELATIONSHIP and back. Screenshots inspected; receipt and source/input
 hashes verified in workbench-social-relationship-ui-rev1. Full browser replay,
 comparisons, all modes, controls and batch enrollment remain due.
+
+Batch enrollment implemented in revision7; focused native/export tests PASS.
+Full915-role/5875-prefix audit running in session54486, with browser cohort checks
+still due. See OBSERVABILITY_WORKBENCH_BATCH_V7_PROGRESS.md.

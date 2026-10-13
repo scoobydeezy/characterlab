@@ -1,0 +1,9 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+const sha=b=>createHash('sha256').update(b).digest('hex'),sources=[];
+function read(path){const bytes=fs.readFileSync(path);sources.push({path,sha256:sha(bytes)});return JSON.parse(bytes);}
+const old=read('src/workbench/batchCatalogV6.json'),jobs=[...old.jobs];sources.push(...old.sources);
+for(const name of ['social','relationship','relationshipLegacy']){const catalog=read('src/workbench/'+name+'Catalog.json'),parity=read('docs/planning/workbench-'+(name==='relationshipLegacy'?'relationship-legacy':name)+'-parity-rev1/receipt.json');sources.push(...catalog.sources);for(const row of catalog.programs){const r=parity.results.find(r=>r.id===row.name);assert(r);assert.equal(r.model,row.model);assert.equal(row.seed,0);jobs.push({id:(name==='relationshipLegacy'?'relationship':name)+'/'+row.name,experimentId:name==='relationshipLegacy'?'relationship':name,name:row.name,law:row.model,seed:row.seed,expectedSaveHashes:r.prefixes.map(p=>p.saveHash)});}}
+assert.equal(jobs.length,915);assert.equal(new Set(jobs.map(j=>j.id)).size,915);assert.equal(jobs.reduce((n,j)=>n+j.expectedSaveHashes.length,0),5875);assert.deepEqual(jobs.slice(0,841),old.jobs);
+for(const s of sources)assert.equal(sha(fs.readFileSync(s.path)),s.sha256,s.path);
+const output=JSON.stringify({version:'workbench-batch-catalog/0.7',sources,retention:old.retention,scope:'Thirteen public seams; previous841 roles plus26 SOCIAL and48 RELATIONSHIP corrected/legacy programs. Legacy failures remain failures; full corpus remains open.',jobs},null,2)+'\n',path='src/workbench/batchCatalogV7.json';
+if(process.argv.includes('--check'))assert.equal(fs.readFileSync(path,'utf8'),output);else fs.writeFileSync(path,output,{flag:'wx'});console.log('PASS915 roles/5875 prefixes; previous841 unchanged');

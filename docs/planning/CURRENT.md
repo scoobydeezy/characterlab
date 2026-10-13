@@ -186,3 +186,8 @@ Latest: SOCIAL/RELATIONSHIP UI registered (registry0.21). Build PASS339 modules;
 both observers at first prefix match native hashes/prose/provenance in the browser,
 with SOCIAL session retention. Full browser replay/comparison/all-mode checks due.
 MULTISOURCE parity audit session50025 remains running; do not restart.
+
+Latest: batch0.7/catalog0.7/registry0.22 enroll SOCIAL and corrected/legacy
+RELATIONSHIP:915 roles/5875 prefixes, previous841 unchanged. Ten focused tests and
+build PASS. Full audit session54486 RUNNING; preserve bound sources. Start
+OBSERVABILITY_WORKBENCH_BATCH_V7_PROGRESS.md. MULTISOURCE session50025 remains live.
