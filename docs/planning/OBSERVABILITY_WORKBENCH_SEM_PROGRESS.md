@@ -585,3 +585,17 @@ obligations unchanged. No new Campaign3 verdict/amendment or native Save132 clai
 LOCAL DISPOSITION: retain original component contract and bounded evidence; no
 architectural ruling needed. Next worker/Compare UI/browser parity for this family,
 then remaining phase/state/provenance and integrated census gaps. Campaign4 entry open.
+
+Classification boundary Compare UI COMPLETE (2026-10-13). Worker tests preserve
+all4 active prefixes and return the qualified report; classification boundary and
+event-file suites PASS. Build73597 COMPLETE exit0 (394 modules/reference boundaries).
+Browser prefix1 full82603-character report,7 comparison checks/13 cases/11 guards/
+6 emission targets/4 preservation rows and scope/failure text match fresh native
+execution and retained component qualification. Identical-input and model-identity
+limits remain visible. All6 active hashes unchanged; screenshot inspected.
+Audit42826 COMPLETE exit0; receipt workbench-sem-classification-boundary-ui-rev1/
+receipt.json. Nine current/frozen sources and three capture hashes independently
+verified. Evidence restore/research PASS;18 conditional obligations unchanged.
+No new Campaign3 verdict/amendment or full download/SEM acceptance claim.
+Next original perceptualEventClassification.test.ts051-060 event-pattern controls,
+then remaining phase/state/provenance and integrated census gaps. Campaign4 entry open.
