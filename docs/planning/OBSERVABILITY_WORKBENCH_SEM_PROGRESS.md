@@ -106,3 +106,29 @@ Next SEM work: inspect and expose the original binding/classification/causal and
 recognition controls with their actual component or integrated boundary, retaining
 whole-instant abort and measurement witnesses. Do not relabel a component control
 as a scheduled full-run experiment. Broader corpus and Campaign4 entry remain due.
+
+Original component controls added (2026-10-13): semControls.ts reproduces seven
+recipes from phenSem001Binding/Causal/Classification tests. Darius preserved,
+hidden-swap and coarsened controls retain CV-SEM-009; Glen canonical/hidden-swap
+retain CV-SEM-015; Mina multiple-role/repeated-role retain both CV-SEM-002
+multiplicity directions. Original allocator5000, experience1, evidence time10 and
+causal allocation9000 remain explicit. These are component reports, with no
+native RunIdentity, scheduler checkpoint, integrated intervention or trace claim.
+
+Three controlled comparisons retain exact truth, experience, classification and
+causal bytes. Hidden swaps change truth while keeping observer evidence equal;
+permitted coarsening changes experience/causal evidence with unchanged truth and
+classification. Causal null means consumer not invoked. Both multiplicity
+witnesses retain their distinct occurrence IDs and track/event relationships.
+All report evidence hashes are verified against their canonical bytes.
+
+Audit82594 COMPLETE exit0: seven recipes/three comparisons PASS exact replay and
+declared invariants; receipt workbench-sem-controls-rev1/receipt.json includes
+reports and frozen sources. Type-check PASS;24 tests PASS across the workbench
+and original binding/classification/causal suites. Research check retains18
+conditional obligations. No new Campaign3 verdict or qualification amendment.
+
+Next: expose these qualified component reports in the SEM worker/Compare UI and
+verify browser/native equality. Continue missing classification-negative,
+recognition, measurement and atomic-abort controls; none are discharged by this
+bounded addition. Complete corpus and Campaign4 entry qualification remain open.

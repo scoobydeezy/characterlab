@@ -28,8 +28,9 @@ authorized by the owner on 2026-10-11 after review of OBSERVABILITY_WORKBENCH_BR
 Start OBSERVABILITY_WORKBENCH_PROGRESS.md for implementation, verification and next work.
 Current workbench handoff (2026-10-13): OBSERVABILITY_WORKBENCH_SEM_PROGRESS.md.
 SEM native/browser continuation and bounded pre-recognition Character UI are qualified;
-four prefixes/twelve observer views pass browser/native parity. Retained semantic
-controls are next. Full corpus coverage and Campaign4 entry acceptance stay open.
+four prefixes/twelve observer views pass browser/native parity. Seven retained
+semantic component recipes/three comparisons are qualified; Compare UI integration
+is next. Full corpus coverage and Campaign4 entry acceptance stay open.
 Joined REASON continuation: OBSERVABILITY_WORKBENCH_REASON_PROGRESS.md;115 native
 programs/350 prefixes pass; Values125/625 retained. Full workbench acceptance remains open.
 Prior: OBSERVABILITY_WORKBENCH_BATCH_PROGRESS.md; shared sessions/capabilities and
