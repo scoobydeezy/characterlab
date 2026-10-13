@@ -547,3 +547,18 @@ unchanged, no new Campaign3 verdict/amendment. LOCAL DISPOSITION: retain origina
 component version and diagnostic encoding; no semantic contract amendment needed.
 Next event-file worker/Compare UI/browser parity, then remaining phase/state/
 provenance and integrated census gaps. Overall Campaign4 entry remains open.
+
+Event-file Compare UI COMPLETE (2026-10-13). Worker tests preserve all4 active
+prefixes and return the qualified report; event-file and binding suites PASS.
+Build50921 COMPLETE exit0 (393 modules); reference boundaries/research checks PASS.
+Browser prefix1 full48152-character report,14 distinction rows/9 cases/2 guards/
+4 preservation checks/21 allocations and scope/failure paragraphs equal fresh
+native execution and retained component qualification. All6 active hashes remain
+unchanged. Screenshot inspected; audit93062 COMPLETE exit0. Receipt
+workbench-sem-event-file-ui-rev1/receipt.json; nine current/frozen source identities
+and three capture hashes independently verified. All18 conditional obligations
+retained; no new Campaign3 verdict/amendment or full download/SEM acceptance claim.
+Next original perceptualClassification.test.ts041-050 boundary controls: permitted
+provenance, missing/false evidence, facet authority, duplicates, rollback and emission
+restrictions. Existing017/018 panel does not discharge this whole family. Remaining
+phase/state/provenance and integrated census gaps and Campaign4 entry stay open.

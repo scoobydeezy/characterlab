@@ -1,0 +1,292 @@
+{
+  "status": "PASS ORIGINAL EVENT-FILE CONTROLS",
+  "sources": [
+    {
+      "path": "src/workbench/semEventFileControls.ts",
+      "sha256": "e8a87f2761f0ce8cd83a6fb8ffbb7c2a758acf420431bbfe73e7ac50af10fefe"
+    },
+    {
+      "path": "src/workbench/semEventFileFixture.ts",
+      "sha256": "1f7ef64bfdf83feae1ef1c9745a533688102bc3bf84aa9c15a8134e41a5da067"
+    },
+    {
+      "path": "src/workbench/semContinuantControls.ts",
+      "sha256": "8161d8005c30d6ad382a9d3f909f4dcd7d3c99cccc8a85ec241247953e6b9fa7"
+    },
+    {
+      "path": "src/workbench/canonical.ts",
+      "sha256": "f80f4a8353ea7604432d5ffcf0d4628f8b7bf13b82a06b4807445e9a9ba97bde"
+    },
+    {
+      "path": "src/semanticBinding/perceptualEventFiles.ts",
+      "sha256": "df179fdcca89872ba75acd46f0fefa31fcddeb07dc2478d3efd2304686ead740"
+    },
+    {
+      "path": "src/test/perceptualEventFiles.test.ts",
+      "sha256": "0be1e74225ea6cc58665efdb98839fdbcc4b988eb10ebfee6374a66084860ba4"
+    },
+    {
+      "path": "src/test/workbenchSemEventFileControls.test.ts",
+      "sha256": "677858263308cb53b51d693a5d259814f9a16beb6208d3f14a5593e270446af3"
+    },
+    {
+      "path": "scripts/build-workbench-sem-event-file-fixture.mjs",
+      "sha256": "88ffec6b5655dfc41a3f52dd939d70034b90704d8a9fc7463646ca1fe3626e73"
+    },
+    {
+      "path": "scripts/check-workbench-sem-event-file.mjs",
+      "sha256": "e46a3d93ece97bfde6663228deb5677fbd64f2238d0e7373580420706845a562"
+    }
+  ],
+  "report": {
+    "version": "sem-event-file-controls/0.1",
+    "contract": "perceptual-event-files/0.1-candidate",
+    "source": {
+      "path": "src/test/perceptualEventFiles.test.ts",
+      "sha256": "0be1e74225ea6cc58665efdb98839fdbcc4b988eb10ebfee6374a66084860ba4"
+    },
+    "cases": [
+      {
+        "id": "simultaneous-groupings",
+        "vector": "CV-SEM-031",
+        "evidence": {
+          "encoding": "event-file-component-diagnostic-json/0.1",
+          "exact": "{\n  \"experience\": {\n    \"experienceId\": {\n      \"$bigint\": \"8605\"\n    },\n    \"observerId\": \"character/mina\",\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"perceptualEventReferentIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"0\"\n        }\n      },\n      {\n        \"observerId\": \"character/mina\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"1\"\n        }\n      }\n    ],\n    \"perceivedBindings\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"perceptualEventReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"0\"\n          }\n        },\n        \"perceptualReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerTrackSequence\": {\n            \"$bigint\": \"0\"\n          }\n        },\n        \"eventRoleEvidence\": {\n          \"kind\": \"exact\",\n          \"eventRoleId\": \"event-role/actor\"\n        },\n        \"supportingObservationIds\": [\n          {\n            \"observerId\": \"character/mina\",\n            \"observationId\": {\n              \"$bigint\": \"0\"\n            }\n          }\n        ],\n        \"occurredAt\": {\n          \"$bigint\": \"10\"\n        },\n        \"transformationVersion\": \"perceptual-event-files/0.1-candidate\",\n        \"perceivedBindingId\": {\n          \"$bigint\": \"0\"\n        }\n      },\n      {\n        \"observerId\": \"character/mina\",\n        \"perceptualEventReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"0\"\n          }\n        },\n        \"perceptualReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerTrackSequence\": {\n            \"$bigint\": \"2\"\n          }\n        },\n        \"eventRoleEvidence\": {\n          \"kind\": \"exact\",\n          \"eventRoleId\": \"event-role/instrument\"\n        },\n        \"supportingObservationIds\": [\n          {\n            \"observerId\": \"character/mina\",\n            \"observationId\": {\n              \"$bigint\": \"0\"\n            }\n          }\n        ],\n        \"occurredAt\": {\n          \"$bigint\": \"10\"\n        },\n        \"transformationVersion\": \"perceptual-event-files/0.1-candidate\",\n        \"perceivedBindingId\": {\n          \"$bigint\": \"1\"\n        }\n      },\n      {\n        \"observerId\": \"character/mina\",\n        \"perceptualEventReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"0\"\n          }\n        },\n        \"perceptualReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerTrackSequence\": {\n            \"$bigint\": \"1\"\n          }\n        },\n        \"eventRoleEvidence\": {\n          \"kind\": \"exact\",\n          \"eventRoleId\": \"event-role/target\"\n        },\n        \"supportingObservationIds\": [\n          {\n            \"observerId\": \"character/mina\",\n            \"observationId\": {\n              \"$bigint\": \"0\"\n            }\n          }\n        ],\n        \"occurredAt\": {\n          \"$bigint\": \"10\"\n        },\n        \"transformationVersion\": \"perceptual-event-files/0.1-candidate\",\n        \"perceivedBindingId\": {\n          \"$bigint\": \"2\"\n        }\n      },\n      {\n        \"observerId\": \"character/mina\",\n        \"perceptualEventReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"1\"\n          }\n        },\n        \"perceptualReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerTrackSequence\": {\n            \"$bigint\": \"3\"\n          }\n        },\n        \"eventRoleEvidence\": {\n          \"kind\": \"exact\",\n          \"eventRoleId\": \"event-role/actor\"\n        },\n        \"supportingObservationIds\": [\n          {\n            \"observerId\": \"character/mina\",\n            \"observationId\": {\n              \"$bigint\": \"0\"\n            }\n          }\n        ],\n        \"occurredAt\": {\n          \"$bigint\": \"10\"\n        },\n        \"transformationVersion\": \"perceptual-event-files/0.1-candidate\",\n        \"perceivedBindingId\": {\n          \"$bigint\": \"3\"\n        }\n      },\n      {\n        \"observerId\": \"character/mina\",\n        \"perceptualEventReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"1\"\n          }\n        },\n        \"perceptualReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerTrackSequence\": {\n            \"$bigint\": \"4\"\n          }\n        },\n        \"eventRoleEvidence\": {\n          \"kind\": \"exact\",\n          \"eventRoleId\": \"event-role/target\"\n        },\n        \"supportingObservationIds\": [\n          {\n            \"observerId\": \"character/mina\",\n            \"observationId\": {\n              \"$bigint\": \"0\"\n            }\n          }\n        ],\n        \"occurredAt\": {\n          \"$bigint\": \"10\"\n        },\n        \"transformationVersion\": \"perceptual-event-files/0.1-candidate\",\n        \"perceivedBindingId\": {\n          \"$bigint\": \"4\"\n        }\n      }\n    ],\n    \"perceptualClassifications\": [],\n    \"perceptualEventClassifications\": [],\n    \"supportingObservationIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observationId\": {\n          \"$bigint\": \"1\"\n        }\n      }\n    ],\n    \"transformationVersion\": \"perceptual-event-files/0.1-candidate\"\n  },\n  \"grouping\": [\n    [\n      \"exact:event-role/actor=continuant-file:0\",\n      \"exact:event-role/instrument=continuant-file:2\",\n      \"exact:event-role/target=continuant-file:1\"\n    ],\n    [\n      \"exact:event-role/actor=continuant-file:3\",\n      \"exact:event-role/target=continuant-file:4\"\n    ]\n  ]\n}",
+          "sha256": "ebeae33434b4497af178733f950e54aa521eaf7b340ca5513cbe076854cc5948"
+        }
+      },
+      {
+        "id": "persistent-event",
+        "vector": "CV-SEM-032",
+        "evidence": {
+          "encoding": "event-file-component-diagnostic-json/0.1",
+          "exact": "{\n  \"early\": {\n    \"experienceId\": {\n      \"$bigint\": \"8600\"\n    },\n    \"observerId\": \"character/mina\",\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"perceptualEventReferentIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"7\"\n        }\n      }\n    ],\n    \"perceivedBindings\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"perceptualEventReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"7\"\n          }\n        },\n        \"perceptualReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerTrackSequence\": {\n            \"$bigint\": \"0\"\n          }\n        },\n        \"eventRoleEvidence\": {\n          \"kind\": \"exact\",\n          \"eventRoleId\": \"event-role/actor\"\n        },\n        \"supportingObservationIds\": [\n          {\n            \"observerId\": \"character/mina\",\n            \"observationId\": {\n              \"$bigint\": \"0\"\n            }\n          }\n        ],\n        \"occurredAt\": {\n          \"$bigint\": \"10\"\n        },\n        \"transformationVersion\": \"perceptual-event-files/0.1-candidate\",\n        \"perceivedBindingId\": {\n          \"$bigint\": \"0\"\n        }\n      }\n    ],\n    \"perceptualClassifications\": [],\n    \"perceptualEventClassifications\": [],\n    \"supportingObservationIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observationId\": {\n          \"$bigint\": \"1\"\n        }\n      }\n    ],\n    \"transformationVersion\": \"perceptual-event-files/0.1-candidate\"\n  },\n  \"late\": {\n    \"experienceId\": {\n      \"$bigint\": \"8602\"\n    },\n    \"observerId\": \"character/mina\",\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"perceptualEventReferentIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"7\"\n        }\n      }\n    ],\n    \"perceivedBindings\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"perceptualEventReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"7\"\n          }\n        },\n        \"perceptualReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerTrackSequence\": {\n            \"$bigint\": \"1\"\n          }\n        },\n        \"eventRoleEvidence\": {\n          \"kind\": \"exact\",\n          \"eventRoleId\": \"event-role/target\"\n        },\n        \"supportingObservationIds\": [\n          {\n            \"observerId\": \"character/mina\",\n            \"observationId\": {\n              \"$bigint\": \"0\"\n            }\n          }\n        ],\n        \"occurredAt\": {\n          \"$bigint\": \"10\"\n        },\n        \"transformationVersion\": \"perceptual-event-files/0.1-candidate\",\n        \"perceivedBindingId\": {\n          \"$bigint\": \"10\"\n        }\n      }\n    ],\n    \"perceptualClassifications\": [],\n    \"perceptualEventClassifications\": [],\n    \"supportingObservationIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observationId\": {\n          \"$bigint\": \"1\"\n        }\n      }\n    ],\n    \"transformationVersion\": \"perceptual-event-files/0.1-candidate\"\n  }\n}",
+          "sha256": "93ba29020ef7e6b226487fb909e66c9513aa44c98ef709a7056dd04deedda467"
+        }
+      },
+      {
+        "id": "false-continuity",
+        "vector": "CV-SEM-033",
+        "evidence": {
+          "encoding": "event-file-component-diagnostic-json/0.1",
+          "exact": "{\n  \"started\": {\n    \"state\": {\n      \"nextEventSequenceByObserver\": {\n        \"$map\": [\n          [\n            \"character/mina\",\n            {\n              \"$bigint\": \"1\"\n            }\n          ]\n        ]\n      },\n      \"activeEventFiles\": [\n        {\n          \"observerId\": \"character/mina\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"0\"\n          }\n        }\n      ]\n    },\n    \"transition\": {\n      \"observerId\": \"character/mina\",\n      \"priorPerceptualEventReferentId\": {\n        \"$undefined\": true\n      },\n      \"currentEventDetectionId\": {\n        \"observerId\": \"character/mina\",\n        \"eventDetectionOccurrenceId\": {\n          \"$bigint\": \"2\"\n        }\n      },\n      \"continuityKind\": \"NewEventFile\",\n      \"supportingObservationIds\": [\n        {\n          \"observerId\": \"character/mina\",\n          \"observationId\": {\n            \"$bigint\": \"3\"\n          }\n        }\n      ],\n      \"occurredAt\": {\n        \"$bigint\": \"10\"\n      },\n      \"transformationVersion\": \"perceptual-event-files/0.1-candidate\",\n      \"perceptualEventReferentId\": {\n        \"observerId\": \"character/mina\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"0\"\n        }\n      }\n    }\n  },\n  \"continued\": {\n    \"state\": {\n      \"nextEventSequenceByObserver\": {\n        \"$map\": [\n          [\n            \"character/mina\",\n            {\n              \"$bigint\": \"1\"\n            }\n          ]\n        ]\n      },\n      \"activeEventFiles\": [\n        {\n          \"observerId\": \"character/mina\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"0\"\n          }\n        }\n      ]\n    },\n    \"transition\": {\n      \"observerId\": \"character/mina\",\n      \"priorPerceptualEventReferentId\": {\n        \"observerId\": \"character/mina\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"0\"\n        }\n      },\n      \"currentEventDetectionId\": {\n        \"observerId\": \"character/mina\",\n        \"eventDetectionOccurrenceId\": {\n          \"$bigint\": \"4\"\n        }\n      },\n      \"continuityKind\": \"ContinuesPriorEventFile\",\n      \"supportingObservationIds\": [\n        {\n          \"observerId\": \"character/mina\",\n          \"observationId\": {\n            \"$bigint\": \"5\"\n          }\n        }\n      ],\n      \"occurredAt\": {\n        \"$bigint\": \"10\"\n      },\n      \"transformationVersion\": \"perceptual-event-files/0.1-candidate\",\n      \"perceptualEventReferentId\": {\n        \"observerId\": \"character/mina\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"0\"\n        }\n      }\n    }\n  }\n}",
+          "sha256": "3783b5312ee10aec5e86a2ec924d46dd83906207015d05ba67f01c4800a12a9f"
+        }
+      },
+      {
+        "id": "false-discontinuity",
+        "vector": "CV-SEM-034",
+        "evidence": {
+          "encoding": "event-file-component-diagnostic-json/0.1",
+          "exact": "{\n  \"started\": {\n    \"state\": {\n      \"nextEventSequenceByObserver\": {\n        \"$map\": [\n          [\n            \"character/mina\",\n            {\n              \"$bigint\": \"1\"\n            }\n          ]\n        ]\n      },\n      \"activeEventFiles\": [\n        {\n          \"observerId\": \"character/mina\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"0\"\n          }\n        }\n      ]\n    },\n    \"transition\": {\n      \"observerId\": \"character/mina\",\n      \"priorPerceptualEventReferentId\": {\n        \"$undefined\": true\n      },\n      \"currentEventDetectionId\": {\n        \"observerId\": \"character/mina\",\n        \"eventDetectionOccurrenceId\": {\n          \"$bigint\": \"6\"\n        }\n      },\n      \"continuityKind\": \"NewEventFile\",\n      \"supportingObservationIds\": [\n        {\n          \"observerId\": \"character/mina\",\n          \"observationId\": {\n            \"$bigint\": \"7\"\n          }\n        }\n      ],\n      \"occurredAt\": {\n        \"$bigint\": \"10\"\n      },\n      \"transformationVersion\": \"perceptual-event-files/0.1-candidate\",\n      \"perceptualEventReferentId\": {\n        \"observerId\": \"character/mina\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"0\"\n        }\n      }\n    }\n  },\n  \"endRequest\": {\n    \"observerId\": \"character/mina\",\n    \"perceptualEventReferentId\": {\n      \"observerId\": \"character/mina\",\n      \"observerEventSequence\": {\n        \"$bigint\": \"0\"\n      }\n    },\n    \"supportingObservationIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observationId\": {\n          \"$bigint\": \"8\"\n        }\n      }\n    ],\n    \"occurredAt\": {\n      \"$bigint\": \"11\"\n    },\n    \"transformationVersion\": \"perceptual-event-files/0.1-candidate\"\n  },\n  \"ended\": {\n    \"state\": {\n      \"nextEventSequenceByObserver\": {\n        \"$map\": [\n          [\n            \"character/mina\",\n            {\n              \"$bigint\": \"1\"\n            }\n          ]\n        ]\n      },\n      \"activeEventFiles\": []\n    },\n    \"eventEnd\": {\n      \"observerId\": \"character/mina\",\n      \"perceptualEventReferentId\": {\n        \"observerId\": \"character/mina\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"0\"\n        }\n      },\n      \"supportingObservationIds\": [\n        {\n          \"observerId\": \"character/mina\",\n          \"observationId\": {\n            \"$bigint\": \"8\"\n          }\n        }\n      ],\n      \"occurredAt\": {\n        \"$bigint\": \"11\"\n      },\n      \"transformationVersion\": \"perceptual-event-files/0.1-candidate\"\n    }\n  },\n  \"restarted\": {\n    \"state\": {\n      \"nextEventSequenceByObserver\": {\n        \"$map\": [\n          [\n            \"character/mina\",\n            {\n              \"$bigint\": \"2\"\n            }\n          ]\n        ]\n      },\n      \"activeEventFiles\": [\n        {\n          \"observerId\": \"character/mina\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"1\"\n          }\n        }\n      ]\n    },\n    \"transition\": {\n      \"observerId\": \"character/mina\",\n      \"priorPerceptualEventReferentId\": {\n        \"$undefined\": true\n      },\n      \"currentEventDetectionId\": {\n        \"observerId\": \"character/mina\",\n        \"eventDetectionOccurrenceId\": {\n          \"$bigint\": \"9\"\n        }\n      },\n      \"continuityKind\": \"NewEventFile\",\n      \"supportingObservationIds\": [\n        {\n          \"observerId\": \"character/mina\",\n          \"observationId\": {\n            \"$bigint\": \"10\"\n          }\n        }\n      ],\n      \"occurredAt\": {\n        \"$bigint\": \"10\"\n      },\n      \"transformationVersion\": \"perceptual-event-files/0.1-candidate\",\n      \"perceptualEventReferentId\": {\n        \"observerId\": \"character/mina\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"1\"\n        }\n      }\n    }\n  }\n}",
+          "sha256": "81d510cce3b869ef0d276cd5bb76ecc3c1f54c28340b436b7fb6955091b08b7f"
+        }
+      },
+      {
+        "id": "observer-side-detection",
+        "vector": "CV-SEM-035",
+        "evidence": {
+          "encoding": "event-file-component-diagnostic-json/0.1",
+          "exact": "{\n  \"state\": {\n    \"nextEventSequenceByObserver\": {\n      \"$map\": [\n        [\n          \"character/mina\",\n          {\n            \"$bigint\": \"1\"\n          }\n        ]\n      ]\n    },\n    \"activeEventFiles\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"0\"\n        }\n      }\n    ]\n  },\n  \"transition\": {\n    \"observerId\": \"character/mina\",\n    \"priorPerceptualEventReferentId\": {\n      \"$undefined\": true\n    },\n    \"currentEventDetectionId\": {\n      \"observerId\": \"character/mina\",\n      \"eventDetectionOccurrenceId\": {\n        \"$bigint\": \"11\"\n      }\n    },\n    \"continuityKind\": \"NewEventFile\",\n    \"supportingObservationIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observationId\": {\n          \"$bigint\": \"12\"\n        }\n      }\n    ],\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"transformationVersion\": \"perceptual-event-files/0.1-candidate\",\n    \"perceptualEventReferentId\": {\n      \"observerId\": \"character/mina\",\n      \"observerEventSequence\": {\n        \"$bigint\": \"0\"\n      }\n    }\n  }\n}",
+          "sha256": "38c30c94053e1e3b82cd197eb094ccc0e47e09052afa9e598cc46ab11871c44f"
+        }
+      },
+      {
+        "id": "event-action-carrier",
+        "vector": "CV-SEM-036",
+        "evidence": {
+          "encoding": "event-file-component-diagnostic-json/0.1",
+          "exact": "{\n  \"experienceId\": {\n    \"$bigint\": \"8606\"\n  },\n  \"observerId\": \"character/mina\",\n  \"occurredAt\": {\n    \"$bigint\": \"10\"\n  },\n  \"perceptualEventReferentIds\": [\n    {\n      \"observerId\": \"character/mina\",\n      \"observerEventSequence\": {\n        \"$bigint\": \"0\"\n      }\n    }\n  ],\n  \"perceivedBindings\": [\n    {\n      \"observerId\": \"character/mina\",\n      \"perceptualEventReferentId\": {\n        \"observerId\": \"character/mina\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"0\"\n        }\n      },\n      \"perceptualReferentId\": {\n        \"observerId\": \"character/mina\",\n        \"observerTrackSequence\": {\n          \"$bigint\": \"0\"\n        }\n      },\n      \"eventRoleEvidence\": {\n        \"kind\": \"exact\",\n        \"eventRoleId\": \"event-role/actor\"\n      },\n      \"supportingObservationIds\": [\n        {\n          \"observerId\": \"character/mina\",\n          \"observationId\": {\n            \"$bigint\": \"0\"\n          }\n        }\n      ],\n      \"occurredAt\": {\n        \"$bigint\": \"10\"\n      },\n      \"transformationVersion\": \"perceptual-event-files/0.1-candidate\",\n      \"perceivedBindingId\": {\n        \"$bigint\": \"0\"\n      }\n    }\n  ],\n  \"perceptualClassifications\": [],\n  \"perceptualEventClassifications\": [],\n  \"supportingObservationIds\": [\n    {\n      \"observerId\": \"character/mina\",\n      \"observationId\": {\n        \"$bigint\": \"1\"\n      }\n    }\n  ],\n  \"transformationVersion\": \"perceptual-event-files/0.1-candidate\"\n}",
+          "sha256": "93adc7a16d6446e22abeb54dad3cb4818c64d7a42c594e213fcfbe9d394de699"
+        }
+      },
+      {
+        "id": "concurrent-participation",
+        "vector": "CV-SEM-037",
+        "evidence": {
+          "encoding": "event-file-component-diagnostic-json/0.1",
+          "exact": "{\n  \"experience\": {\n    \"experienceId\": {\n      \"$bigint\": \"8604\"\n    },\n    \"observerId\": \"character/mina\",\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"perceptualEventReferentIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"0\"\n        }\n      },\n      {\n        \"observerId\": \"character/mina\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"1\"\n        }\n      }\n    ],\n    \"perceivedBindings\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"perceptualEventReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"0\"\n          }\n        },\n        \"perceptualReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerTrackSequence\": {\n            \"$bigint\": \"4\"\n          }\n        },\n        \"eventRoleEvidence\": {\n          \"kind\": \"exact\",\n          \"eventRoleId\": \"event-role/actor\"\n        },\n        \"supportingObservationIds\": [\n          {\n            \"observerId\": \"character/mina\",\n            \"observationId\": {\n              \"$bigint\": \"0\"\n            }\n          }\n        ],\n        \"occurredAt\": {\n          \"$bigint\": \"10\"\n        },\n        \"transformationVersion\": \"perceptual-event-files/0.1-candidate\",\n        \"perceivedBindingId\": {\n          \"$bigint\": \"0\"\n        }\n      },\n      {\n        \"observerId\": \"character/mina\",\n        \"perceptualEventReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"0\"\n          }\n        },\n        \"perceptualReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerTrackSequence\": {\n            \"$bigint\": \"4\"\n          }\n        },\n        \"eventRoleEvidence\": {\n          \"kind\": \"exact\",\n          \"eventRoleId\": \"event-role/target\"\n        },\n        \"supportingObservationIds\": [\n          {\n            \"observerId\": \"character/mina\",\n            \"observationId\": {\n              \"$bigint\": \"0\"\n            }\n          }\n        ],\n        \"occurredAt\": {\n          \"$bigint\": \"10\"\n        },\n        \"transformationVersion\": \"perceptual-event-files/0.1-candidate\",\n        \"perceivedBindingId\": {\n          \"$bigint\": \"1\"\n        }\n      },\n      {\n        \"observerId\": \"character/mina\",\n        \"perceptualEventReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"1\"\n          }\n        },\n        \"perceptualReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerTrackSequence\": {\n            \"$bigint\": \"4\"\n          }\n        },\n        \"eventRoleEvidence\": {\n          \"kind\": \"exact\",\n          \"eventRoleId\": \"event-role/participant\"\n        },\n        \"supportingObservationIds\": [\n          {\n            \"observerId\": \"character/mina\",\n            \"observationId\": {\n              \"$bigint\": \"0\"\n            }\n          }\n        ],\n        \"occurredAt\": {\n          \"$bigint\": \"10\"\n        },\n        \"transformationVersion\": \"perceptual-event-files/0.1-candidate\",\n        \"perceivedBindingId\": {\n          \"$bigint\": \"2\"\n        }\n      }\n    ],\n    \"perceptualClassifications\": [],\n    \"perceptualEventClassifications\": [],\n    \"supportingObservationIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observationId\": {\n          \"$bigint\": \"1\"\n        }\n      }\n    ],\n    \"transformationVersion\": \"perceptual-event-files/0.1-candidate\"\n  },\n  \"grouping\": [\n    [\n      \"exact:event-role/actor=continuant-file:4\",\n      \"exact:event-role/target=continuant-file:4\"\n    ],\n    [\n      \"exact:event-role/participant=continuant-file:4\"\n    ]\n  ]\n}",
+          "sha256": "163b7d30074a678b8460b90caa456d62d7ca3318de783a116a00ad2f6fdbc63f"
+        }
+      },
+      {
+        "id": "structural-restore",
+        "vector": "CV-SEM-038",
+        "evidence": {
+          "encoding": "event-file-component-diagnostic-json/0.1",
+          "exact": "{\n  \"minaFirst\": {\n    \"state\": {\n      \"nextEventSequenceByObserver\": {\n        \"$map\": [\n          [\n            \"character/mina\",\n            {\n              \"$bigint\": \"1\"\n            }\n          ]\n        ]\n      },\n      \"activeEventFiles\": [\n        {\n          \"observerId\": \"character/mina\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"0\"\n          }\n        }\n      ]\n    },\n    \"transition\": {\n      \"observerId\": \"character/mina\",\n      \"priorPerceptualEventReferentId\": {\n        \"$undefined\": true\n      },\n      \"currentEventDetectionId\": {\n        \"observerId\": \"character/mina\",\n        \"eventDetectionOccurrenceId\": {\n          \"$bigint\": \"13\"\n        }\n      },\n      \"continuityKind\": \"NewEventFile\",\n      \"supportingObservationIds\": [\n        {\n          \"observerId\": \"character/mina\",\n          \"observationId\": {\n            \"$bigint\": \"14\"\n          }\n        }\n      ],\n      \"occurredAt\": {\n        \"$bigint\": \"10\"\n      },\n      \"transformationVersion\": \"perceptual-event-files/0.1-candidate\",\n      \"perceptualEventReferentId\": {\n        \"observerId\": \"character/mina\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"0\"\n        }\n      }\n    }\n  },\n  \"dariusFirst\": {\n    \"state\": {\n      \"nextEventSequenceByObserver\": {\n        \"$map\": [\n          [\n            \"character/darius\",\n            {\n              \"$bigint\": \"1\"\n            }\n          ],\n          [\n            \"character/mina\",\n            {\n              \"$bigint\": \"1\"\n            }\n          ]\n        ]\n      },\n      \"activeEventFiles\": [\n        {\n          \"observerId\": \"character/darius\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"0\"\n          }\n        },\n        {\n          \"observerId\": \"character/mina\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"0\"\n          }\n        }\n      ]\n    },\n    \"transition\": {\n      \"observerId\": \"character/darius\",\n      \"priorPerceptualEventReferentId\": {\n        \"$undefined\": true\n      },\n      \"currentEventDetectionId\": {\n        \"observerId\": \"character/darius\",\n        \"eventDetectionOccurrenceId\": {\n          \"$bigint\": \"15\"\n        }\n      },\n      \"continuityKind\": \"NewEventFile\",\n      \"supportingObservationIds\": [\n        {\n          \"observerId\": \"character/darius\",\n          \"observationId\": {\n            \"$bigint\": \"16\"\n          }\n        }\n      ],\n      \"occurredAt\": {\n        \"$bigint\": \"10\"\n      },\n      \"transformationVersion\": \"perceptual-event-files/0.1-candidate\",\n      \"perceptualEventReferentId\": {\n        \"observerId\": \"character/darius\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"0\"\n        }\n      }\n    }\n  },\n  \"restored\": {\n    \"nextEventSequenceByObserver\": {\n      \"$map\": [\n        [\n          \"character/darius\",\n          {\n            \"$bigint\": \"1\"\n          }\n        ],\n        [\n          \"character/mina\",\n          {\n            \"$bigint\": \"1\"\n          }\n        ]\n      ]\n    },\n    \"activeEventFiles\": [\n      {\n        \"observerId\": \"character/darius\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"0\"\n        }\n      },\n      {\n        \"observerId\": \"character/mina\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"0\"\n        }\n      }\n    ]\n  },\n  \"minaSecond\": {\n    \"state\": {\n      \"nextEventSequenceByObserver\": {\n        \"$map\": [\n          [\n            \"character/darius\",\n            {\n              \"$bigint\": \"1\"\n            }\n          ],\n          [\n            \"character/mina\",\n            {\n              \"$bigint\": \"2\"\n            }\n          ]\n        ]\n      },\n      \"activeEventFiles\": [\n        {\n          \"observerId\": \"character/darius\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"0\"\n          }\n        },\n        {\n          \"observerId\": \"character/mina\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"0\"\n          }\n        },\n        {\n          \"observerId\": \"character/mina\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"1\"\n          }\n        }\n      ]\n    },\n    \"transition\": {\n      \"observerId\": \"character/mina\",\n      \"priorPerceptualEventReferentId\": {\n        \"$undefined\": true\n      },\n      \"currentEventDetectionId\": {\n        \"observerId\": \"character/mina\",\n        \"eventDetectionOccurrenceId\": {\n          \"$bigint\": \"17\"\n        }\n      },\n      \"continuityKind\": \"NewEventFile\",\n      \"supportingObservationIds\": [\n        {\n          \"observerId\": \"character/mina\",\n          \"observationId\": {\n            \"$bigint\": \"18\"\n          }\n        }\n      ],\n      \"occurredAt\": {\n        \"$bigint\": \"10\"\n      },\n      \"transformationVersion\": \"perceptual-event-files/0.1-candidate\",\n      \"perceptualEventReferentId\": {\n        \"observerId\": \"character/mina\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"1\"\n        }\n      }\n    }\n  },\n  \"replay\": {\n    \"state\": {\n      \"nextEventSequenceByObserver\": {\n        \"$map\": [\n          [\n            \"character/darius\",\n            {\n              \"$bigint\": \"1\"\n            }\n          ],\n          [\n            \"character/mina\",\n            {\n              \"$bigint\": \"2\"\n            }\n          ]\n        ]\n      },\n      \"activeEventFiles\": [\n        {\n          \"observerId\": \"character/darius\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"0\"\n          }\n        },\n        {\n          \"observerId\": \"character/mina\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"0\"\n          }\n        },\n        {\n          \"observerId\": \"character/mina\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"1\"\n          }\n        }\n      ]\n    },\n    \"transition\": {\n      \"observerId\": \"character/mina\",\n      \"priorPerceptualEventReferentId\": {\n        \"$undefined\": true\n      },\n      \"currentEventDetectionId\": {\n        \"observerId\": \"character/mina\",\n        \"eventDetectionOccurrenceId\": {\n          \"$bigint\": \"17\"\n        }\n      },\n      \"continuityKind\": \"NewEventFile\",\n      \"supportingObservationIds\": [\n        {\n          \"observerId\": \"character/mina\",\n          \"observationId\": {\n            \"$bigint\": \"18\"\n          }\n        }\n      ],\n      \"occurredAt\": {\n        \"$bigint\": \"10\"\n      },\n      \"transformationVersion\": \"perceptual-event-files/0.1-candidate\",\n      \"perceptualEventReferentId\": {\n        \"observerId\": \"character/mina\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"1\"\n        }\n      }\n    }\n  }\n}",
+          "sha256": "f2862319fb6dc56eed1c6c07b7b00f4a2f28dde886ee084218504bea9644ef13"
+        }
+      },
+      {
+        "id": "ordinal-shift",
+        "vector": "CV-SEM-039",
+        "evidence": {
+          "encoding": "event-file-component-diagnostic-json/0.1",
+          "exact": "{\n  \"low\": {\n    \"experienceId\": {\n      \"$bigint\": \"8603\"\n    },\n    \"observerId\": \"character/mina\",\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"perceptualEventReferentIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"0\"\n        }\n      },\n      {\n        \"observerId\": \"character/mina\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"1\"\n        }\n      }\n    ],\n    \"perceivedBindings\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"perceptualEventReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"0\"\n          }\n        },\n        \"perceptualReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerTrackSequence\": {\n            \"$bigint\": \"2\"\n          }\n        },\n        \"eventRoleEvidence\": {\n          \"kind\": \"exact\",\n          \"eventRoleId\": \"event-role/actor\"\n        },\n        \"supportingObservationIds\": [\n          {\n            \"observerId\": \"character/mina\",\n            \"observationId\": {\n              \"$bigint\": \"0\"\n            }\n          }\n        ],\n        \"occurredAt\": {\n          \"$bigint\": \"10\"\n        },\n        \"transformationVersion\": \"perceptual-event-files/0.1-candidate\",\n        \"perceivedBindingId\": {\n          \"$bigint\": \"0\"\n        }\n      },\n      {\n        \"observerId\": \"character/mina\",\n        \"perceptualEventReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"1\"\n          }\n        },\n        \"perceptualReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerTrackSequence\": {\n            \"$bigint\": \"3\"\n          }\n        },\n        \"eventRoleEvidence\": {\n          \"kind\": \"exact\",\n          \"eventRoleId\": \"event-role/target\"\n        },\n        \"supportingObservationIds\": [\n          {\n            \"observerId\": \"character/mina\",\n            \"observationId\": {\n              \"$bigint\": \"0\"\n            }\n          }\n        ],\n        \"occurredAt\": {\n          \"$bigint\": \"10\"\n        },\n        \"transformationVersion\": \"perceptual-event-files/0.1-candidate\",\n        \"perceivedBindingId\": {\n          \"$bigint\": \"1\"\n        }\n      }\n    ],\n    \"perceptualClassifications\": [],\n    \"perceptualEventClassifications\": [],\n    \"supportingObservationIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observationId\": {\n          \"$bigint\": \"1\"\n        }\n      }\n    ],\n    \"transformationVersion\": \"perceptual-event-files/0.1-candidate\"\n  },\n  \"shifted\": {\n    \"experienceId\": {\n      \"$bigint\": \"8601\"\n    },\n    \"observerId\": \"character/mina\",\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"perceptualEventReferentIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"700\"\n        }\n      },\n      {\n        \"observerId\": \"character/mina\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"900\"\n        }\n      }\n    ],\n    \"perceivedBindings\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"perceptualEventReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"700\"\n          }\n        },\n        \"perceptualReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerTrackSequence\": {\n            \"$bigint\": \"2\"\n          }\n        },\n        \"eventRoleEvidence\": {\n          \"kind\": \"exact\",\n          \"eventRoleId\": \"event-role/actor\"\n        },\n        \"supportingObservationIds\": [\n          {\n            \"observerId\": \"character/mina\",\n            \"observationId\": {\n              \"$bigint\": \"0\"\n            }\n          }\n        ],\n        \"occurredAt\": {\n          \"$bigint\": \"10\"\n        },\n        \"transformationVersion\": \"perceptual-event-files/0.1-candidate\",\n        \"perceivedBindingId\": {\n          \"$bigint\": \"50\"\n        }\n      },\n      {\n        \"observerId\": \"character/mina\",\n        \"perceptualEventReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"900\"\n          }\n        },\n        \"perceptualReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerTrackSequence\": {\n            \"$bigint\": \"3\"\n          }\n        },\n        \"eventRoleEvidence\": {\n          \"kind\": \"exact\",\n          \"eventRoleId\": \"event-role/target\"\n        },\n        \"supportingObservationIds\": [\n          {\n            \"observerId\": \"character/mina\",\n            \"observationId\": {\n              \"$bigint\": \"0\"\n            }\n          }\n        ],\n        \"occurredAt\": {\n          \"$bigint\": \"10\"\n        },\n        \"transformationVersion\": \"perceptual-event-files/0.1-candidate\",\n        \"perceivedBindingId\": {\n          \"$bigint\": \"51\"\n        }\n      }\n    ],\n    \"perceptualClassifications\": [],\n    \"perceptualEventClassifications\": [],\n    \"supportingObservationIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observationId\": {\n          \"$bigint\": \"1\"\n        }\n      }\n    ],\n    \"transformationVersion\": \"perceptual-event-files/0.1-candidate\"\n  },\n  \"lowGrouping\": [\n    [\n      \"exact:event-role/actor=continuant-file:2\"\n    ],\n    [\n      \"exact:event-role/target=continuant-file:3\"\n    ]\n  ],\n  \"shiftedGrouping\": [\n    [\n      \"exact:event-role/actor=continuant-file:2\"\n    ],\n    [\n      \"exact:event-role/target=continuant-file:3\"\n    ]\n  ]\n}",
+          "sha256": "e7931c0a1aadbe08e5e4e12a9140d251658c46cd34f05168f97d28c937541748"
+        }
+      }
+    ],
+    "negatives": [
+      {
+        "id": "truth-keyed-segmentation",
+        "vector": "CV-SEM-035",
+        "code": "FORBIDDEN_TRUTH_FIELD",
+        "evidence": {
+          "encoding": "event-file-component-diagnostic-json/0.1",
+          "exact": "{\n  \"state\": {\n    \"nextEventSequenceByObserver\": {\n      \"$map\": []\n    },\n    \"activeEventFiles\": []\n  },\n  \"request\": {\n    \"observerId\": \"character/mina\",\n    \"priorPerceptualEventReferentId\": {\n      \"$undefined\": true\n    },\n    \"currentEventDetectionId\": {\n      \"observerId\": \"character/mina\",\n      \"eventDetectionOccurrenceId\": {\n        \"$bigint\": \"11\"\n      }\n    },\n    \"continuityKind\": \"NewEventFile\",\n    \"supportingObservationIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observationId\": {\n          \"$bigint\": \"12\"\n        }\n      }\n    ],\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"transformationVersion\": \"perceptual-event-files/0.1-candidate\",\n    \"truthEventId\": \"truth/event-42\"\n  }\n}",
+          "sha256": "9414cfb5ecf28d5ac6404f2da319d34c7e2ac7184868d07d51a24d9292fa1eed"
+        }
+      },
+      {
+        "id": "action-as-continuant",
+        "vector": "CV-SEM-036",
+        "code": "ACTION_AS_CONTINUANT_FILE",
+        "evidence": {
+          "encoding": "event-file-component-diagnostic-json/0.1",
+          "exact": "[\n  {\n    \"observerId\": \"character/mina\",\n    \"perceptualEventReferentId\": {\n      \"observerId\": \"character/mina\",\n      \"observerEventSequence\": {\n        \"$bigint\": \"0\"\n      }\n    },\n    \"perceptualReferentId\": {\n      \"observerId\": \"character/mina\",\n      \"observerTrackSequence\": {\n        \"$bigint\": \"0\"\n      }\n    },\n    \"eventRoleEvidence\": {\n      \"kind\": \"exact\",\n      \"eventRoleId\": \"event-role/action\"\n    },\n    \"supportingObservationIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observationId\": {\n          \"$bigint\": \"0\"\n        }\n      }\n    ],\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"transformationVersion\": \"perceptual-event-files/0.1-candidate\"\n  }\n]",
+          "sha256": "bb2e5702bc3a87319b8b9230c5889f4051a8eb05d3be7e204b842de6c48ca674"
+        }
+      }
+    ],
+    "rollback": {
+      "vector": "CV-SEM-040",
+      "failure": "injected event-file commit failure",
+      "allocated": "20",
+      "staged": {
+        "encoding": "event-file-component-diagnostic-json/0.1",
+        "exact": "{\n  \"state\": {\n    \"nextEventSequenceByObserver\": {\n      \"$map\": [\n        [\n          \"character/mina\",\n          {\n            \"$bigint\": \"1\"\n          }\n        ]\n      ]\n    },\n    \"activeEventFiles\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"0\"\n        }\n      }\n    ]\n  },\n  \"transition\": {\n    \"observerId\": \"character/mina\",\n    \"priorPerceptualEventReferentId\": {\n      \"$undefined\": true\n    },\n    \"currentEventDetectionId\": {\n      \"observerId\": \"character/mina\",\n      \"eventDetectionOccurrenceId\": {\n        \"$bigint\": \"19\"\n      }\n    },\n    \"continuityKind\": \"NewEventFile\",\n    \"supportingObservationIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observationId\": {\n          \"$bigint\": \"20\"\n        }\n      }\n    ],\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"transformationVersion\": \"perceptual-event-files/0.1-candidate\",\n    \"perceptualEventReferentId\": {\n      \"observerId\": \"character/mina\",\n      \"observerEventSequence\": {\n        \"$bigint\": \"0\"\n      }\n    }\n  }\n}",
+        "sha256": "ca0b89b8de1b735087e61cdca25863bab70bed7862b5ad78ebef52138c615c3d"
+      },
+      "before": {
+        "state": "{\n  \"valid\": true,\n  \"eventFiles\": {\n    \"nextEventSequenceByObserver\": {\n      \"$map\": []\n    },\n    \"activeEventFiles\": []\n  }\n}",
+        "allocators": "{\n  \"nextRuntimeId\": {\n    \"$bigint\": \"20\"\n  },\n  \"nextEventId\": {\n    \"$bigint\": \"1\"\n  },\n  \"nextEventSequence\": {\n    \"$bigint\": \"1\"\n  }\n}",
+        "trace": "[]",
+        "outputs": "[]",
+        "status": "Active",
+        "clock": "0",
+        "queue": "[\n  {\n    \"eventId\": {\n      \"$bigint\": \"0\"\n    },\n    \"dueAt\": {\n      \"$bigint\": \"1\"\n    },\n    \"phase\": {\n      \"$bigint\": \"10\"\n    },\n    \"eventSequence\": {\n      \"$bigint\": \"0\"\n    },\n    \"eventTypeId\": {\n      \"kind\": \"typedIdentifier\",\n      \"namespaceId\": {\n        \"$bigint\": \"31000\"\n      },\n      \"payload\": {\n        \"kind\": \"text\",\n        \"value\": \"event/sem-001c-rollback\"\n      }\n    },\n    \"payload\": {\n      \"kind\": \"list\",\n      \"items\": []\n    },\n    \"dependencies\": {\n      \"kind\": \"list\",\n      \"items\": []\n    },\n    \"causalParentEventIds\": []\n  }\n]"
+      },
+      "after": {
+        "state": "{\n  \"valid\": true,\n  \"eventFiles\": {\n    \"nextEventSequenceByObserver\": {\n      \"$map\": []\n    },\n    \"activeEventFiles\": []\n  }\n}",
+        "allocators": "{\n  \"nextRuntimeId\": {\n    \"$bigint\": \"20\"\n  },\n  \"nextEventId\": {\n    \"$bigint\": \"1\"\n  },\n  \"nextEventSequence\": {\n    \"$bigint\": \"1\"\n  }\n}",
+        "trace": "[]",
+        "outputs": "[]",
+        "status": "Failed",
+        "clock": "0",
+        "queue": "[\n  {\n    \"eventId\": {\n      \"$bigint\": \"0\"\n    },\n    \"dueAt\": {\n      \"$bigint\": \"1\"\n    },\n    \"phase\": {\n      \"$bigint\": \"10\"\n    },\n    \"eventSequence\": {\n      \"$bigint\": \"0\"\n    },\n    \"eventTypeId\": {\n      \"kind\": \"typedIdentifier\",\n      \"namespaceId\": {\n        \"$bigint\": \"31000\"\n      },\n      \"payload\": {\n        \"kind\": \"text\",\n        \"value\": \"event/sem-001c-rollback\"\n      }\n    },\n    \"payload\": {\n      \"kind\": \"list\",\n      \"items\": []\n    },\n    \"dependencies\": {\n      \"kind\": \"list\",\n      \"items\": []\n    },\n    \"causalParentEventIds\": []\n  }\n]"
+      },
+      "preserved": {
+        "state": true,
+        "allocators": true,
+        "trace": true,
+        "outputs": true
+      }
+    },
+    "occurrenceOrdinals": [
+      {
+        "label": "observation/binding",
+        "ordinal": "0"
+      },
+      {
+        "label": "observation/experience",
+        "ordinal": "1"
+      },
+      {
+        "label": "glimpse-a",
+        "ordinal": "2"
+      },
+      {
+        "label": "observation/glimpse-a",
+        "ordinal": "3"
+      },
+      {
+        "label": "glimpse-b",
+        "ordinal": "4"
+      },
+      {
+        "label": "observation/glimpse-b",
+        "ordinal": "5"
+      },
+      {
+        "label": "before-loss",
+        "ordinal": "6"
+      },
+      {
+        "label": "observation/before-loss",
+        "ordinal": "7"
+      },
+      {
+        "label": "observation/loss",
+        "ordinal": "8"
+      },
+      {
+        "label": "after-loss",
+        "ordinal": "9"
+      },
+      {
+        "label": "observation/after-loss",
+        "ordinal": "10"
+      },
+      {
+        "label": "visible-motion",
+        "ordinal": "11"
+      },
+      {
+        "label": "observation/visible-motion",
+        "ordinal": "12"
+      },
+      {
+        "label": "mina-first",
+        "ordinal": "13"
+      },
+      {
+        "label": "observation/mina-first",
+        "ordinal": "14"
+      },
+      {
+        "label": "darius-first",
+        "ordinal": "15"
+      },
+      {
+        "label": "observation/darius-first",
+        "ordinal": "16"
+      },
+      {
+        "label": "mina-second",
+        "ordinal": "17"
+      },
+      {
+        "label": "observation/mina-second",
+        "ordinal": "18"
+      },
+      {
+        "label": "staged",
+        "ordinal": "19"
+      },
+      {
+        "label": "observation/staged",
+        "ordinal": "20"
+      }
+    ],
+    "summary": {
+      "simultaneousGroups": 2,
+      "simultaneousBindings": 5,
+      "distinctExperiences": true,
+      "persistentEvent": true,
+      "continuedEvent": true,
+      "restartedSequence": "1",
+      "concurrentGroups": 2,
+      "concurrentBindings": 3,
+      "restoredStateEqual": true,
+      "restoredContinuationEqual": true,
+      "minaSecondSequence": "1",
+      "dariusFirstSequence": "0",
+      "shiftedGroupingEqual": true,
+      "shiftedIdsDiffer": true
+    },
+    "scope": "Original CV-SEM-031..040 component recipes and label allocation order. Exact diagnostic JSON preserves original version, Maps, bigint and absence. False continuity/discontinuity are fixture interpretations, not observer truth knowledge. Structural copy is not native Save132 persistence. Failed isolated settlement preserves committed data while status changes. No active-run intervention or full SEM qualification claim."
+  },
+  "scope": "Original031-040 recipes: nine scenarios, two guards, one failed settlement and12 exact diagnostics. Helper bodies and21 occurrence allocations retained; complete repeatability verified. Structural clone is not native Save132 persistence. UI and full SEM qualification remain due."
+}

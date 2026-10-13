@@ -10,6 +10,7 @@ import {runSemRecognitionBoundaryControls} from './semRecognitionBoundaryControl
 import {runSemContinuantControls} from './semContinuantControls';
 import {runSemAxesControls} from './semAxesControls';
 import {runSemBindingControls} from './semBindingControls';
+import {runSemEventFileControls} from './semEventFileControls';
 let run:SemWorkbenchRun|undefined;
 self.addEventListener('message',async(event:MessageEvent<{id:number;operation:string;checkpoint?:SemCheckpoint}>)=>{
  const q=event.data;try{let result:unknown;
@@ -21,6 +22,7 @@ self.addEventListener('message',async(event:MessageEvent<{id:number;operation:st
  else if(q.operation==='controls'){const before=JSON.stringify(run.checkpoint());result=await runSemControlSuite();if(JSON.stringify(run.checkpoint())!==before)throw Error('SEM component controls changed active run');}
  else if(q.operation==='recognition'){const before=JSON.stringify(run.checkpoint());result=await runSemRecognitionControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Recognition controls changed active run');}
  else if(q.operation==='checkpoint')result=run.checkpoint();
+ else if(q.operation==='eventFiles'){const before=JSON.stringify(run.checkpoint());result=await runSemEventFileControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Event-file controls changed active run');}
  else if(q.operation==='bindings'){const before=JSON.stringify(run.checkpoint());result=await runSemBindingControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Binding controls changed active run');}
  else if(q.operation==='axes'){const before=JSON.stringify(run.checkpoint());result=await runSemAxesControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Axis controls changed active run');}
  else if(q.operation==='continuant'){const before=JSON.stringify(run.checkpoint());result=await runSemContinuantControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Continuant controls changed active run');}
