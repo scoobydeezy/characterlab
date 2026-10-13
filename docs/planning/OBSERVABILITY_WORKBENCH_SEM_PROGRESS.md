@@ -562,3 +562,26 @@ Next original perceptualClassification.test.ts041-050 boundary controls: permitt
 provenance, missing/false evidence, facet authority, duplicates, rollback and emission
 restrictions. Existing017/018 panel does not discharge this whole family. Remaining
 phase/state/provenance and integrated census gaps and Campaign4 entry stay open.
+
+Classification boundary component controls COMPLETE (2026-10-13). Original
+perceptualClassification.test.ts041-050 recipes preserve13 cases/11 guards/
+6 emission targets/one isolated rollback with25 exact diagnostics. Original helper
+prefix retained verbatim except import routing/removal of test framework import.
+NoAssertion, explicit false, missing-as-false rejection, invalid Unknown, negative
+support, coexisting booleans, exact observer provenance, facet authority, conflicting
+assertions, ordinal opacity and emission restrictions remain distinct.
+Original hiddenTruthVariant repeats identical permitted input; no paired world-truth
+intervention claimed. Alternative authority preserves model/rule identity comparison;
+no behavioral divergence inferred. Derivation functions are preserved in frozen source
+with explicit result/recipe descriptions; JSON does not claim to serialize functions.
+Isolated scheduler allocates classification50 before injected validation failure;
+state/allocator/trace/output equalities and Active-to-Failed status are separate.
+Original10 tests plus workbench repeatability/distinction test PASS (11 total).
+Typecheck73492 and build51056 COMPLETE exit0 (393 modules/reference boundaries).
+Audit78951 COMPLETE exit0; receipt
+workbench-sem-classification-boundary-rev1/receipt.json. Nine current/frozen source
+identities independently verified. Evidence restore/research PASS;18 conditional
+obligations unchanged. No new Campaign3 verdict/amendment or native Save132 claim.
+LOCAL DISPOSITION: retain original component contract and bounded evidence; no
+architectural ruling needed. Next worker/Compare UI/browser parity for this family,
+then remaining phase/state/provenance and integrated census gaps. Campaign4 entry open.
