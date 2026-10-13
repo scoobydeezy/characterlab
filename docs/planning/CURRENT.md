@@ -4,7 +4,9 @@
 three viewpoints with presentation/allocation/correction controls,6 focused tests and
 build PASS. See OBSERVABILITY_WORKBENCH_SEM_PROGRESS.md and
 workbench-sem-renderer-rev1/receipt.json. Gate machinery only, no accepted renderer seam.
-Next worker/UI/browser parity, then integrated phenomenon and authority/acceptance.
+Worker/UI/browser parity now qualified: all4 worker prefixes and browser prefix1;
+plain/narrative views and full167,440-character report match native evidence.
+Next integrated phenomenon and authority/acceptance reconciliation.
 The overall workbench goal and Campaign4 entry gate remain open.
 
 **Updated2026-10-11. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**

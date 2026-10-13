@@ -927,3 +927,22 @@ Production build72386 COMPLETE exit0 (401 modules; existing chunk-size warning).
 Evidence restore and research checks PASS; all18 conditional obligations unchanged.
 Worker/UI/browser parity is next, followed by integrated phenomenon and authority/
 acceptance reconciliation. This foundation does not establish full SEM or Campaign4 entry.
+
+## CV-SEM-012 worker and browser comparison (2026-10-13)
+
+Compare now exposes Three viewpoints of one experience. All three original viewpoints
+show plain or narrative display lines and separate record-derived lines. Three rows
+compare repeat, shifted allocation, presentation and correction-absent results. Explicit
+researcher-only scope distinguishes omniscient ancestry and later reinterpretation from
+evidence available at the original instant. No accepted renderer seam is inferred.
+
+Worker renderer operation matches the frozen foundation report and preserves checkpoints
+at all4 prefixes;2 focused tests PASS. Browser prefix1 full167,440-character report,
+all plain/narrative display and record lines and3 comparison rows equal fresh native
+execution. All6 active hashes remain unchanged before/after rendering and switching
+presentation. Screenshot inspected; exact report available, full download not qualified.
+Audit90335 COMPLETE exit0; evidence root workbench-sem-renderer-ui-rev1 contains9 frozen
+source identities and3 captured artifact identities. Production build3843 COMPLETE exit0,
+402 modules; existing chunk-size warning retained. Evidence restore/research PASS with18
+conditional obligations unchanged. Next integrated phenomenon and authority/acceptance
+reconciliation; all broader workbench/Campaign4 requirements remain open.

@@ -13,6 +13,7 @@ import type {runSemEventFileControls} from './semEventFileControls';
 import type {runSemClassificationBoundaryControls} from './semClassificationBoundaryControls';
 import type {runSemEventClassificationControls} from './semEventClassificationControls';
 import type {runSemNegativeControls} from './semNegativeControls';
+import type {runSemRendererControls} from './semRendererControls';
 import type {runSemPersistenceControls} from './semPersistenceControls';
 import type {runSemCodecControls} from './semCodecControls';
 import type {runSemSchemaControls} from './semSchemaControls';
@@ -43,6 +44,7 @@ export class SemWorkerClient {
   controls() {return this.#call<Awaited<ReturnType<typeof runSemControlSuite>>>('controls');}
   recognition() {return this.#call<Awaited<ReturnType<typeof runSemRecognitionControls>>>('recognition');}
   checkpoint() {return this.#call<SemCheckpoint>('checkpoint');}
+  renderer() {return this.#call<Awaited<ReturnType<typeof runSemRendererControls>>>('renderer');}
   negativeLedger() {return this.#call<Awaited<ReturnType<typeof runSemNegativeControls>>>('negativeLedger');}
   persistence() {return this.#call<Awaited<ReturnType<typeof runSemPersistenceControls>>>('persistence');}
   codecs() {return this.#call<Awaited<ReturnType<typeof runSemCodecControls>>>('codecs');}
