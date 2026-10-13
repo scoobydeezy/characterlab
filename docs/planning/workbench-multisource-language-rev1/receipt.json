@@ -1,0 +1,3189 @@
+{
+  "status": "PASS BOUNDED MULTISOURCE ASSESSMENT LANGUAGE",
+  "sources": [
+    {
+      "path": "src/workbench/multisourceCharacter.ts",
+      "sha256": "dc8feabcbe5e2b6e279aed10349994241b0288b3d322612137c0997aa2214e16"
+    },
+    {
+      "path": "src/workbench/multisourceCatalog.json",
+      "sha256": "68a58427718b416943a07b3abb7a37c13c2682ad671490241c6ba7bdc143c539"
+    },
+    {
+      "path": "src/workbench/canonical.ts",
+      "sha256": "f80f4a8353ea7604432d5ffcf0d4628f8b7bf13b82a06b4807445e9a9ba97bde"
+    },
+    {
+      "path": "src/test/workbenchMultisourceCharacter.test.ts",
+      "sha256": "aed84cdc4c24885759b1e46c5d1cd93b47cdd1e47c7154897645a5e4ad07d4d8"
+    },
+    {
+      "path": "src/campaign3/multisourceSourceStages.ts",
+      "sha256": "eec7c785fad8499ca5071a362187843b13fea13334256ab7aa2aeb4cb2d32b44"
+    },
+    {
+      "path": "scripts/check-workbench-multisource-language.mjs",
+      "sha256": "890b5f4be60048111ddc54a28399ce5b7897ef122e465c7a518a4696c636ccfa"
+    },
+    {
+      "path": "docs/planning/MULTISOURCE_PUBLIC_EXPERIMENT_REV1.json",
+      "sha256": "38f01db99ed56867a71e7245e765bf82a4cb38a9118e914f7a0a87a20b66753a"
+    },
+    {
+      "path": "docs/planning/MULTISOURCE_PUBLIC_INTERVENTIONS_REV1.json",
+      "sha256": "ddebf1e8432c64ab1b18f5a6fb9539a4abfe82c20314c68c6e0096319ea8df14"
+    }
+  ],
+  "originals": [
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/FREEZE.json",
+      "sha256": "e5adf1481487dcb7eabe620b049064df4281a8eb10c100e85c4a0f9aec33427f"
+    },
+    {
+      "path": "docs/planning/MULTISOURCE_PUBLIC_EXPERIMENT_REV1.json",
+      "sha256": "38f01db99ed56867a71e7245e765bf82a4cb38a9118e914f7a0a87a20b66753a"
+    },
+    {
+      "path": "docs/planning/MULTISOURCE_PUBLIC_INTERVENTIONS_REV1.json",
+      "sha256": "ddebf1e8432c64ab1b18f5a6fb9539a4abfe82c20314c68c6e0096319ea8df14"
+    },
+    {
+      "path": "scripts/qualify-multisource-public.mjs",
+      "sha256": "17bcbd69a630170ea677983fcba69d0dcd5cf101f443dfbbae2a9b683ba7b381"
+    },
+    {
+      "path": "scripts/qualify-multisource-interventions.mjs",
+      "sha256": "3555fac4cf64d1cb7f6cafef1a961001f80cc75268d32cc7572b29b38b5e4bf5"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundAggregate/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundAggregate/registry.cenc.hex",
+      "sha256": "5f8cf7cc6b111e313d0373be4b7f183d9db23c77f415dfcd7427ba1c5d12fa9f"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundAggregate/parameters.cenc.hex",
+      "sha256": "96251e7ddbac13c3edbc84d6ea1491b601e18d9ce87aa43de32b8864b50a59ed"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundAggregate/model-identity.cenc.hex",
+      "sha256": "5f109e2d15adf48c3f9c40575c18a05afee4d9349d8fb3162196fcf1f9c99f60"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundAggregate/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundAggregate/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundPairwise/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundPairwise/registry.cenc.hex",
+      "sha256": "e4868958cf19afeadc0bbc8026a630ad8b9fa30d819f0b30122b8705408acd09"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundPairwise/parameters.cenc.hex",
+      "sha256": "e2f80d91009ecd830c8c335081612bcd2a1312dd041c91b41c200b80854e4fe7"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundPairwise/model-identity.cenc.hex",
+      "sha256": "efab884856029c5e2ba035bd4f6af5f5d80a6d90a4081ca3b66a8f4e8f0df7c9"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundPairwise/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundPairwise/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundUncovered/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundUncovered/registry.cenc.hex",
+      "sha256": "a395b8457a10717787f596de0b7b1c546a91b710693dd553e6c370487d842e3e"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundUncovered/parameters.cenc.hex",
+      "sha256": "1bf36c8d8afe94bcbec621eb30d2f4c068cddfe84cdb86b9dc04271d2216b822"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundUncovered/model-identity.cenc.hex",
+      "sha256": "16184de254e46f90aaf49d41f9fc2074c4e65c66d4b70a1d6431329024f2ee32"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundUncovered/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundUncovered/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/shared--FamilyNormalized/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/shared--FamilyNormalized/registry.cenc.hex",
+      "sha256": "57a8fed863f45e7ed997acf17af280ea0da381ab7541f75fa8e887f9b89417d1"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/shared--FamilyNormalized/parameters.cenc.hex",
+      "sha256": "44da5323a56e0244654a94cdcdfac9fb27345beceb0f9b5307774be7018a4555"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/shared--FamilyNormalized/model-identity.cenc.hex",
+      "sha256": "c6454f95696bf992a24657da72e73343eca0e3dfd9bdd0bef73a11e6391dd53f"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/shared--FamilyNormalized/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/shared--FamilyNormalized/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundAggregate/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundAggregate/registry.cenc.hex",
+      "sha256": "5d6ffa73afd2710cb5c4e1912a5b5709146c4cb1f2d055b2894a668ca48cfa92"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundAggregate/parameters.cenc.hex",
+      "sha256": "523e55a226663c59daa66c69a97c11505c06b487d1f3bf053ab547f73db4443e"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundAggregate/model-identity.cenc.hex",
+      "sha256": "10590d126c0f02e18e4660319937e53dca76f78b76a5aa9cb9bd52e4307ed401"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundAggregate/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundAggregate/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundPairwise/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundPairwise/registry.cenc.hex",
+      "sha256": "a8d90d8a704e948dd8ae58cad7a069bce739c9c146e310fb061026f1569fba12"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundPairwise/parameters.cenc.hex",
+      "sha256": "cddb420c6068feeccaaff636b37a47ef7387b62053d4815f42a0fb7c8afc9b08"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundPairwise/model-identity.cenc.hex",
+      "sha256": "8377a978608ddb945fbc039e41cd2266fe30e9bb120550bebfc134c5ee10bcaa"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundPairwise/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundPairwise/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundUncovered/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundUncovered/registry.cenc.hex",
+      "sha256": "bdb822658345a0222cf5672bcbbff2ca5a03f7f0c17d8cc214c2ba968d33eb15"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundUncovered/parameters.cenc.hex",
+      "sha256": "158ca03e10dbf3ae4ee9629d88e561544c23b1f824eff15f34655f220e35bdef"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundUncovered/model-identity.cenc.hex",
+      "sha256": "f2ee37633ff6d4490ba2c2f62da140c11ce277104b0e7d8354917fff76a7adca"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundUncovered/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundUncovered/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/independent--FamilyNormalized/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/independent--FamilyNormalized/registry.cenc.hex",
+      "sha256": "307058c7ba8c8a0ca0eb204f74444545b975df4f551beac79e61fb6b75118eb8"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/independent--FamilyNormalized/parameters.cenc.hex",
+      "sha256": "0fa1777abbc550545bca02db22f629fbfc52b3d86066fc00a501b1a70276c6cf"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/independent--FamilyNormalized/model-identity.cenc.hex",
+      "sha256": "542394aad1c45d44579b774fc91d801e252044570f422b410532c99ebf073ed1"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/independent--FamilyNormalized/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/independent--FamilyNormalized/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundAggregate/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundAggregate/registry.cenc.hex",
+      "sha256": "5bd78a5a5d62f21a280778d3c30e49ce6e38a93586e65261b617dd55409d28df"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundAggregate/parameters.cenc.hex",
+      "sha256": "069784fcc655a6997826b1b8885b57d0ba75524cc54a3beb976bae86c501d1a8"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundAggregate/model-identity.cenc.hex",
+      "sha256": "08bcdbb6cbd18aa0aed337d3dd3bc259c2fc8051a9ebc63fa754416a2abae371"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundAggregate/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundAggregate/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundPairwise/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundPairwise/registry.cenc.hex",
+      "sha256": "b4b7cceeda533e5183bced506194393ffda65136dc7efc993671b49dbbe58a5d"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundPairwise/parameters.cenc.hex",
+      "sha256": "de556798258e7f2ee13bb853b50546beb8d81d99431f8ab0a790d78c1927f297"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundPairwise/model-identity.cenc.hex",
+      "sha256": "6674313564478c03d6344cf9736107db45dadd3931618a04c779f351e268e8c7"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundPairwise/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundPairwise/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundUncovered/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundUncovered/registry.cenc.hex",
+      "sha256": "8a21172b34078af5880848dbbe370eecb82790b5e954dc7c4c62d1cd48434d40"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundUncovered/parameters.cenc.hex",
+      "sha256": "2e96f394612a6ef9929b3e5ec0841834cf1004b043ef4473caf02812735266d0"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundUncovered/model-identity.cenc.hex",
+      "sha256": "4c7d3ddc069f68941ea6c568b9ef4b819ea6d5db8345cd4e0bfb1f3ca3e98db3"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundUncovered/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundUncovered/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan--FamilyNormalized/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan--FamilyNormalized/registry.cenc.hex",
+      "sha256": "350b5361b638dda98877d44beab9ed3bb4ac5dafe425de7aa6801685376f0a06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan--FamilyNormalized/parameters.cenc.hex",
+      "sha256": "703dcccb1889ed4deeef5f2441823d4a631421b6af71371438b5575c6765b439"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan--FamilyNormalized/model-identity.cenc.hex",
+      "sha256": "7be87988bc92f0ede41e5f372474c4f612d3cb1cf29185ed2b1d5d8fda6cb3a9"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan--FamilyNormalized/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan--FamilyNormalized/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundAggregate/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundAggregate/registry.cenc.hex",
+      "sha256": "5915d9cfa8546a0432addb5599c6a54aba0dd70f45697b7825cea20a0efb1e2e"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundAggregate/parameters.cenc.hex",
+      "sha256": "b8296a391237c8e8b5c14d1e69b1cc6c465941939281dc4e81f8386ff2c25d60"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundAggregate/model-identity.cenc.hex",
+      "sha256": "6c8da1a87e83e12f31bb80613b92ce89e7322a5f9b76c911e22896b97eac15f9"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundAggregate/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundAggregate/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundPairwise/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundPairwise/registry.cenc.hex",
+      "sha256": "efe6ac8390e23091e055e6dcc087c3420c2f511c381b8e01a6b62952351d7d3f"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundPairwise/parameters.cenc.hex",
+      "sha256": "52a79aff8259185b16480c5f8573a5c479b10e88b93adb3666e41b7520081cfb"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundPairwise/model-identity.cenc.hex",
+      "sha256": "4cccdb35c57c0474e16f897222baf6aba5ecd67d3196ccc5acaf75c6c0866eb0"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundPairwise/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundPairwise/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundUncovered/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundUncovered/registry.cenc.hex",
+      "sha256": "5f4902e5d1ad0a8006d3b94dd87e7e8a676e67f0d2d053c3d82cc3e4940058da"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundUncovered/parameters.cenc.hex",
+      "sha256": "2418238ae019cdcf98ba1b8bfc4d4bc30c9a1cab4747c5c5f8d8043415535536"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundUncovered/model-identity.cenc.hex",
+      "sha256": "f5326752a16971e053821a1686907846f9f50ec69eee4b8a3f9deeb3820317ce"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundUncovered/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundUncovered/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--FamilyNormalized/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--FamilyNormalized/registry.cenc.hex",
+      "sha256": "1efba257c8b44d91f4d6cb2c26c70d620164a231aacf64a977f2d303b9fd871e"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--FamilyNormalized/parameters.cenc.hex",
+      "sha256": "437be031fb258e7f85f1f36f3102cbfddc42fb464d2eaa66e1c1df3391bbf27c"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--FamilyNormalized/model-identity.cenc.hex",
+      "sha256": "4ca530904857884796dd42cf29c6b5822316cfbda95db90e99b93a0545d40ee9"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--FamilyNormalized/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--FamilyNormalized/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--DescriptionDice/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--DescriptionDice/registry.cenc.hex",
+      "sha256": "4c229ed74690658750635d50494806a0c455c89cb4ebca3f35460e18b99a2d08"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--DescriptionDice/parameters.cenc.hex",
+      "sha256": "f518bbdf99c841e4e3e7165992637ec14e9f5c28ca3094ae47a62e5cc0b2dd16"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--DescriptionDice/model-identity.cenc.hex",
+      "sha256": "c9865143c1647776f809852ff8dd95aa8ed53c3d62b1a072c8d39c74d6607066"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--DescriptionDice/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--DescriptionDice/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundAggregate/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundAggregate/registry.cenc.hex",
+      "sha256": "d6288769fa56bb3c2fe5f63912b15e2f05e6baf6a1b5b132cdd87315ac5caaab"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundAggregate/parameters.cenc.hex",
+      "sha256": "292d2e5c31d73e4c46e65a7fc11d4521153284c6705557410a15adc20bd725da"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundAggregate/model-identity.cenc.hex",
+      "sha256": "3e9a356753357af544f9d17beb8860af8da4a05919dddff5caf35e873e806cec"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundAggregate/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundAggregate/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundPairwise/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundPairwise/registry.cenc.hex",
+      "sha256": "ff0e945b220ab153d14f778da282a8777edc252d3c0f8772972c24cda828fb4f"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundPairwise/parameters.cenc.hex",
+      "sha256": "9522d323a7817cd7f50d8a754831a19b5bdd08a5d9656e0611c90ee9c2d5c5c4"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundPairwise/model-identity.cenc.hex",
+      "sha256": "67a7681e4df921b7200a3413da3392c73ef59cc0b657d555786b5d3c0d121b4f"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundPairwise/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundPairwise/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundUncovered/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundUncovered/registry.cenc.hex",
+      "sha256": "f780c6c867699e37a1cdf918c8f68a2d052bcd8397260e9082647ec28deda7f2"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundUncovered/parameters.cenc.hex",
+      "sha256": "a4417fae152f916f4bbfcde7a646300c439f8ad3f66728992f49f71175eda2c0"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundUncovered/model-identity.cenc.hex",
+      "sha256": "4d5e30794d9a156ecb1a3036396511ea52fd27cba0eaff0bba41c9bda94e2453"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundUncovered/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundUncovered/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--FamilyNormalized/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--FamilyNormalized/registry.cenc.hex",
+      "sha256": "ed365ff4c126c345eb15c73440534f3ec14f9a2bf70975f92588339f81f7e5b5"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--FamilyNormalized/parameters.cenc.hex",
+      "sha256": "21c22a5375c5a0551ed07435ac5c0d8e5c75c86085723ea01417e90654cc15fb"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--FamilyNormalized/model-identity.cenc.hex",
+      "sha256": "278e25edfd7f95589ded933a04e2ad4770342d608662dded0385fb6a935b017e"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--FamilyNormalized/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--FamilyNormalized/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--DescriptionDice/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--DescriptionDice/registry.cenc.hex",
+      "sha256": "a8147300d676495abae082898aadb52d1b6de2cf654c0653652f48e1f3b59a80"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--DescriptionDice/parameters.cenc.hex",
+      "sha256": "6058152cdf510efd3579b675e3368e1a7ed10c02204c5bf9e4a0b9ff590823f5"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--DescriptionDice/model-identity.cenc.hex",
+      "sha256": "9cc720da22ed1b949488443664558bc3cfc0bd40f87ef18cf3ba54e1a0e38e87"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--DescriptionDice/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--DescriptionDice/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundAggregate/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundAggregate/registry.cenc.hex",
+      "sha256": "5b2ebd08136a5a0f3809cd57d19d881fa68866c1d1a529c17b3c812d8f7b588e"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundAggregate/parameters.cenc.hex",
+      "sha256": "1d70abe7c58865c20e2dd4f9a508fb38b047f84797751b631b291fdb6405cf03"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundAggregate/model-identity.cenc.hex",
+      "sha256": "f2c1d5afe0b90b7f00627c862a7dc1b7e857026740687f5cc7b094535836528f"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundAggregate/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundAggregate/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundPairwise/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundPairwise/registry.cenc.hex",
+      "sha256": "e162b6af15e96c4f314739fcfff281be00e1a3640df6bf0d3bc5727afb2ac650"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundPairwise/parameters.cenc.hex",
+      "sha256": "0fb05e09d48a7aae479c1aad0b194d15fb72577ec1844b1ad757ed2168f9b8e9"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundPairwise/model-identity.cenc.hex",
+      "sha256": "476de3a9d0c5a6ec3c4887ce65edfad638858a620f116645e70fa71ee46d520f"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundPairwise/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundPairwise/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundUncovered/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundUncovered/registry.cenc.hex",
+      "sha256": "ac6a97911b664fa5e3d4cd1812ff4f9bbe5faa86bf2f1a9b16198b7bbae88b5e"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundUncovered/parameters.cenc.hex",
+      "sha256": "56adb421d121456e85613f3a7890ddf8507760d99fad624041c1ac10bd5216db"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundUncovered/model-identity.cenc.hex",
+      "sha256": "1f3f7ffca1ddd2bd5daf48dcb887ce225962a30cfb35d9d6b4d68a56321945bf"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundUncovered/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundUncovered/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--FamilyNormalized/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--FamilyNormalized/registry.cenc.hex",
+      "sha256": "4dd19fa40bc164d7e28365e33ec33d93ad9d81b7f51b8f13908404bb2aa51860"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--FamilyNormalized/parameters.cenc.hex",
+      "sha256": "064dbb7dd0032b75dc3c002de1dd5fd1e17ba44fb2b9fc6e35e7a8433d233302"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--FamilyNormalized/model-identity.cenc.hex",
+      "sha256": "e22d573884892f235c18782127553e136f5d5078c4bbb77aea7e6ee33e5f7302"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--FamilyNormalized/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--FamilyNormalized/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--DescriptionDice/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--DescriptionDice/registry.cenc.hex",
+      "sha256": "23ad16becd2662a974ec9af596e209724d0cbddfa8ec7c7172329d65527633c5"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--DescriptionDice/parameters.cenc.hex",
+      "sha256": "6f510d6386a36d0d65b3a09a7e23dca92ca42c7deee85310781e3a5ba22b29e1"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--DescriptionDice/model-identity.cenc.hex",
+      "sha256": "4280857688a2cec4fa6da20f3008890a23a9febe94bcb8f16f798764ea89d7f6"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--DescriptionDice/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--DescriptionDice/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundAggregate/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundAggregate/registry.cenc.hex",
+      "sha256": "21b763f99d7358e7d780eaddea1126ae441a287f674b3cb5944d4c7b298c83bc"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundAggregate/parameters.cenc.hex",
+      "sha256": "a2ada7cc00c184691d518cc1ff27053e57cb5e4b8177ddbc92b4601e18648c4c"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundAggregate/model-identity.cenc.hex",
+      "sha256": "2695c4699c805dcfd4b5b117853cf0c86e7d75c9173661baad0c1937b448d5f1"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundAggregate/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundAggregate/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundPairwise/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundPairwise/registry.cenc.hex",
+      "sha256": "56c8cbf5dff2c75a7d668cc2ade1483a65dee720b13d9cc130e63f152cda8c3f"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundPairwise/parameters.cenc.hex",
+      "sha256": "fb425e39f7d4adb9bbe2c535910846381efdcaa751fb6001ce71bfb48c29445a"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundPairwise/model-identity.cenc.hex",
+      "sha256": "b420e1202da9c1c6de83e45415996f2d66ad04b6d71701cdaa623fe5415b99e7"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundPairwise/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundPairwise/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundUncovered/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundUncovered/registry.cenc.hex",
+      "sha256": "192b0bc5c6bb25a0db5e6ab68cb855a575f9f011e02d7461b850d27b58f546c9"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundUncovered/parameters.cenc.hex",
+      "sha256": "58f8f942942ecc4ae86ace5fd3001a980f59d9796db47d05becf9888e732b666"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundUncovered/model-identity.cenc.hex",
+      "sha256": "101b4b5d9b0cc574c7071116bcb4cdd1b7e2ca0e765dcc0f067a05ec6fe9dd22"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundUncovered/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundUncovered/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/negative--FamilyNormalized/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/negative--FamilyNormalized/registry.cenc.hex",
+      "sha256": "0e4df83562bc81957b26290a1da22a11fcefca22e55bcfcbf7dc52c73f8a9367"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/negative--FamilyNormalized/parameters.cenc.hex",
+      "sha256": "2df332fbea71a9d310ef7025891e2889a458052d3473adf7309c41945e507f93"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/negative--FamilyNormalized/model-identity.cenc.hex",
+      "sha256": "442a408a5afb1296f2bf13f4dcd15609ebb995d40d70394e686a2007ffe8be5f"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/negative--FamilyNormalized/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/negative--FamilyNormalized/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundAggregate/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundAggregate/registry.cenc.hex",
+      "sha256": "743826bb4a8bd581c1e103dab9d48340d4083a28823b2b2af7e18e4c61cce9c3"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundAggregate/parameters.cenc.hex",
+      "sha256": "4a7ca63ac979f2559632efb7c0ac7e45d8857e409655ba9b598b817d4709489a"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundAggregate/model-identity.cenc.hex",
+      "sha256": "b3df18d2a94933ec3c2f7437534c32ffff7947b8686f79cea702d1be43c5ad02"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundAggregate/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundAggregate/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundPairwise/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundPairwise/registry.cenc.hex",
+      "sha256": "0a6d66cd4287d5a21879db38bf6ad317038913e97bbfa3b5cb99b6d01dfb35e7"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundPairwise/parameters.cenc.hex",
+      "sha256": "04209b23ec1157783b1b4b42298d858fbc68551a86bba0e68d2a1a8abd073391"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundPairwise/model-identity.cenc.hex",
+      "sha256": "3c5b02c7adf1fc2ff48e3187f8685a5c561a8e54464dc5731988568e3c802448"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundPairwise/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundPairwise/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundUncovered/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundUncovered/registry.cenc.hex",
+      "sha256": "dee30ac7cc43b4d7882b2b37a029d5cf8b3c6e1e27b8ded73651e48be7016146"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundUncovered/parameters.cenc.hex",
+      "sha256": "66c7c37890b6c28c603a0670380c9ba0f9c322d195c8424ac17bba18404ad8f2"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundUncovered/model-identity.cenc.hex",
+      "sha256": "3f693c3c0d79426e76f8e4ab2f144f3b2d5ac56406c90bb28e67d9d3d297a0b1"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundUncovered/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundUncovered/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--FamilyNormalized/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--FamilyNormalized/registry.cenc.hex",
+      "sha256": "2d10c1d02a31903dd1924e26117c8ddc6cb0e3b9bbeede66ae92f3597bd68095"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--FamilyNormalized/parameters.cenc.hex",
+      "sha256": "5a8cd1da2c7c1a0c59950f3b825d71f86aab27aeb9bef3647ae2bcd690b5e81c"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--FamilyNormalized/model-identity.cenc.hex",
+      "sha256": "f03ec4252563348862dc4d4bc8576f0128e7c971b30033809b46b0ebc6d2bbd3"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--FamilyNormalized/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--FamilyNormalized/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundAggregate/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundAggregate/registry.cenc.hex",
+      "sha256": "5f8cf7cc6b111e313d0373be4b7f183d9db23c77f415dfcd7427ba1c5d12fa9f"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundAggregate/parameters.cenc.hex",
+      "sha256": "96251e7ddbac13c3edbc84d6ea1491b601e18d9ce87aa43de32b8864b50a59ed"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundAggregate/model-identity.cenc.hex",
+      "sha256": "5f109e2d15adf48c3f9c40575c18a05afee4d9349d8fb3162196fcf1f9c99f60"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundAggregate/initial-state.cenc.hex",
+      "sha256": "40f846e46ac7c847580034b157bf8f3eb8fa1f4b5fe370df691c10b0a7e2da1c"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundAggregate/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundPairwise/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundPairwise/registry.cenc.hex",
+      "sha256": "e4868958cf19afeadc0bbc8026a630ad8b9fa30d819f0b30122b8705408acd09"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundPairwise/parameters.cenc.hex",
+      "sha256": "e2f80d91009ecd830c8c335081612bcd2a1312dd041c91b41c200b80854e4fe7"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundPairwise/model-identity.cenc.hex",
+      "sha256": "efab884856029c5e2ba035bd4f6af5f5d80a6d90a4081ca3b66a8f4e8f0df7c9"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundPairwise/initial-state.cenc.hex",
+      "sha256": "40f846e46ac7c847580034b157bf8f3eb8fa1f4b5fe370df691c10b0a7e2da1c"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundPairwise/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundUncovered/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundUncovered/registry.cenc.hex",
+      "sha256": "a395b8457a10717787f596de0b7b1c546a91b710693dd553e6c370487d842e3e"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundUncovered/parameters.cenc.hex",
+      "sha256": "1bf36c8d8afe94bcbec621eb30d2f4c068cddfe84cdb86b9dc04271d2216b822"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundUncovered/model-identity.cenc.hex",
+      "sha256": "16184de254e46f90aaf49d41f9fc2074c4e65c66d4b70a1d6431329024f2ee32"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundUncovered/initial-state.cenc.hex",
+      "sha256": "40f846e46ac7c847580034b157bf8f3eb8fa1f4b5fe370df691c10b0a7e2da1c"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundUncovered/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--FamilyNormalized/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--FamilyNormalized/registry.cenc.hex",
+      "sha256": "57a8fed863f45e7ed997acf17af280ea0da381ab7541f75fa8e887f9b89417d1"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--FamilyNormalized/parameters.cenc.hex",
+      "sha256": "44da5323a56e0244654a94cdcdfac9fb27345beceb0f9b5307774be7018a4555"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--FamilyNormalized/model-identity.cenc.hex",
+      "sha256": "c6454f95696bf992a24657da72e73343eca0e3dfd9bdd0bef73a11e6391dd53f"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--FamilyNormalized/initial-state.cenc.hex",
+      "sha256": "40f846e46ac7c847580034b157bf8f3eb8fa1f4b5fe370df691c10b0a7e2da1c"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--FamilyNormalized/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundAggregate/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundAggregate/registry.cenc.hex",
+      "sha256": "efde25f01222dc77cfb210ebaa21aaff620d9f9a083abd61a1e942340e6af8b5"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundAggregate/parameters.cenc.hex",
+      "sha256": "72f4764b6f0dfb25f01974cd25744d1b7f3d702b1da36a3bdd23851a68d1a5eb"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundAggregate/model-identity.cenc.hex",
+      "sha256": "5ecf7ee5576be7bffa834b9dc1db2e2490d3c3f41d0af0bd73093c560300ff70"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundAggregate/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundAggregate/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundPairwise/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundPairwise/registry.cenc.hex",
+      "sha256": "da0f76e3b2e49d2fe178f91b5b37fd07947553d56386ca3f7da35d68bc0fd6d7"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundPairwise/parameters.cenc.hex",
+      "sha256": "ccde1334aade6aecc740f8700b5c50ccfa8506807dc8004fe0cd8e869d8f7ea8"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundPairwise/model-identity.cenc.hex",
+      "sha256": "56dda48775cc76cda073a662284b2b221adc6b3a6b947ef17535cb31ffae9408"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundPairwise/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundPairwise/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundUncovered/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundUncovered/registry.cenc.hex",
+      "sha256": "552ade98ef9e04f8b6b6f7cf1cedb40a6089be117f9e605936cc2fc0a019df3d"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundUncovered/parameters.cenc.hex",
+      "sha256": "7380620e011eb3ab51fff07259a7e7ca231666b23f163b73ef1578910c9c39e5"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundUncovered/model-identity.cenc.hex",
+      "sha256": "ba02026c9c72b346599d2d4a276b12201ca946a42d03bfc723f1a31dac0a1c7e"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundUncovered/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundUncovered/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--FamilyNormalized/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--FamilyNormalized/registry.cenc.hex",
+      "sha256": "a29da549370ef2c30b6787996e93578ae5c5d85d4f45000d75a8e0c0c3e2b6ec"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--FamilyNormalized/parameters.cenc.hex",
+      "sha256": "2ecea3363038e2fe22bf786fc3af7a36fd2401e24a1360e633df82e16b8452d9"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--FamilyNormalized/model-identity.cenc.hex",
+      "sha256": "523fc1d373d36c89e8e349d5b988348e9e622eb538d96c44ebeb3a71fdc0ad0f"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--FamilyNormalized/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--FamilyNormalized/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundAggregate/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundAggregate/registry.cenc.hex",
+      "sha256": "5f8cf7cc6b111e313d0373be4b7f183d9db23c77f415dfcd7427ba1c5d12fa9f"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundAggregate/parameters.cenc.hex",
+      "sha256": "96251e7ddbac13c3edbc84d6ea1491b601e18d9ce87aa43de32b8864b50a59ed"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundAggregate/model-identity.cenc.hex",
+      "sha256": "5f109e2d15adf48c3f9c40575c18a05afee4d9349d8fb3162196fcf1f9c99f60"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundAggregate/initial-state.cenc.hex",
+      "sha256": "8a498cf29b28c9ea58cc12d789b9a906d5dc164c3a95d53a22c1804944ecd1e8"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundAggregate/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundPairwise/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundPairwise/registry.cenc.hex",
+      "sha256": "e4868958cf19afeadc0bbc8026a630ad8b9fa30d819f0b30122b8705408acd09"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundPairwise/parameters.cenc.hex",
+      "sha256": "e2f80d91009ecd830c8c335081612bcd2a1312dd041c91b41c200b80854e4fe7"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundPairwise/model-identity.cenc.hex",
+      "sha256": "efab884856029c5e2ba035bd4f6af5f5d80a6d90a4081ca3b66a8f4e8f0df7c9"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundPairwise/initial-state.cenc.hex",
+      "sha256": "8a498cf29b28c9ea58cc12d789b9a906d5dc164c3a95d53a22c1804944ecd1e8"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundPairwise/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundUncovered/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundUncovered/registry.cenc.hex",
+      "sha256": "a395b8457a10717787f596de0b7b1c546a91b710693dd553e6c370487d842e3e"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundUncovered/parameters.cenc.hex",
+      "sha256": "1bf36c8d8afe94bcbec621eb30d2f4c068cddfe84cdb86b9dc04271d2216b822"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundUncovered/model-identity.cenc.hex",
+      "sha256": "16184de254e46f90aaf49d41f9fc2074c4e65c66d4b70a1d6431329024f2ee32"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundUncovered/initial-state.cenc.hex",
+      "sha256": "8a498cf29b28c9ea58cc12d789b9a906d5dc164c3a95d53a22c1804944ecd1e8"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundUncovered/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-task--FamilyNormalized/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-task--FamilyNormalized/registry.cenc.hex",
+      "sha256": "57a8fed863f45e7ed997acf17af280ea0da381ab7541f75fa8e887f9b89417d1"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-task--FamilyNormalized/parameters.cenc.hex",
+      "sha256": "44da5323a56e0244654a94cdcdfac9fb27345beceb0f9b5307774be7018a4555"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-task--FamilyNormalized/model-identity.cenc.hex",
+      "sha256": "c6454f95696bf992a24657da72e73343eca0e3dfd9bdd0bef73a11e6391dd53f"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-task--FamilyNormalized/initial-state.cenc.hex",
+      "sha256": "8a498cf29b28c9ea58cc12d789b9a906d5dc164c3a95d53a22c1804944ecd1e8"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-task--FamilyNormalized/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundAggregate/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundAggregate/registry.cenc.hex",
+      "sha256": "5f8cf7cc6b111e313d0373be4b7f183d9db23c77f415dfcd7427ba1c5d12fa9f"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundAggregate/parameters.cenc.hex",
+      "sha256": "96251e7ddbac13c3edbc84d6ea1491b601e18d9ce87aa43de32b8864b50a59ed"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundAggregate/model-identity.cenc.hex",
+      "sha256": "5f109e2d15adf48c3f9c40575c18a05afee4d9349d8fb3162196fcf1f9c99f60"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundAggregate/initial-state.cenc.hex",
+      "sha256": "5acc84498e2e767e7d42d727400f4e4554d30241596118846dae1c464808c969"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundAggregate/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundPairwise/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundPairwise/registry.cenc.hex",
+      "sha256": "e4868958cf19afeadc0bbc8026a630ad8b9fa30d819f0b30122b8705408acd09"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundPairwise/parameters.cenc.hex",
+      "sha256": "e2f80d91009ecd830c8c335081612bcd2a1312dd041c91b41c200b80854e4fe7"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundPairwise/model-identity.cenc.hex",
+      "sha256": "efab884856029c5e2ba035bd4f6af5f5d80a6d90a4081ca3b66a8f4e8f0df7c9"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundPairwise/initial-state.cenc.hex",
+      "sha256": "5acc84498e2e767e7d42d727400f4e4554d30241596118846dae1c464808c969"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundPairwise/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundUncovered/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundUncovered/registry.cenc.hex",
+      "sha256": "a395b8457a10717787f596de0b7b1c546a91b710693dd553e6c370487d842e3e"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundUncovered/parameters.cenc.hex",
+      "sha256": "1bf36c8d8afe94bcbec621eb30d2f4c068cddfe84cdb86b9dc04271d2216b822"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundUncovered/model-identity.cenc.hex",
+      "sha256": "16184de254e46f90aaf49d41f9fc2074c4e65c66d4b70a1d6431329024f2ee32"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundUncovered/initial-state.cenc.hex",
+      "sha256": "5acc84498e2e767e7d42d727400f4e4554d30241596118846dae1c464808c969"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundUncovered/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-body--FamilyNormalized/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-body--FamilyNormalized/registry.cenc.hex",
+      "sha256": "57a8fed863f45e7ed997acf17af280ea0da381ab7541f75fa8e887f9b89417d1"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-body--FamilyNormalized/parameters.cenc.hex",
+      "sha256": "44da5323a56e0244654a94cdcdfac9fb27345beceb0f9b5307774be7018a4555"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-body--FamilyNormalized/model-identity.cenc.hex",
+      "sha256": "c6454f95696bf992a24657da72e73343eca0e3dfd9bdd0bef73a11e6391dd53f"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-body--FamilyNormalized/initial-state.cenc.hex",
+      "sha256": "5acc84498e2e767e7d42d727400f4e4554d30241596118846dae1c464808c969"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/no-body--FamilyNormalized/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundAggregate/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundAggregate/registry.cenc.hex",
+      "sha256": "53d839e77015d8411ae66e242d9f5d9b9b16e274f766ff357dc7833107ffddab"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundAggregate/parameters.cenc.hex",
+      "sha256": "a4035824c9d7c6a467f99c1d42d9f34ea32746cd69f5a962ce391a79c4ff0a1a"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundAggregate/model-identity.cenc.hex",
+      "sha256": "2ed673621c67f551510d4fe0bfb0c20986e7ad44ad2204d6ea4c05932c6bfb10"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundAggregate/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundAggregate/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundPairwise/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundPairwise/registry.cenc.hex",
+      "sha256": "7d367abc4ff2c6e05faf31a06afcb2c5db6d20429a9c41d8430f53c5a31b5a08"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundPairwise/parameters.cenc.hex",
+      "sha256": "88f34ddf48c196c3751d3f4dc5b6c93c5ed9b0c7e8f9210e9219c550d5ce285e"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundPairwise/model-identity.cenc.hex",
+      "sha256": "08978a6006b8510fde815d002e07371d7d714d3a10c0d89b88b87a84b53e8125"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundPairwise/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundPairwise/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundUncovered/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundUncovered/registry.cenc.hex",
+      "sha256": "ddcc4b59a618319e92fa1c47d905cc21e1aa4f151d37125e9bc515c32e51e64b"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundUncovered/parameters.cenc.hex",
+      "sha256": "7f6fb004b437ff1a885f8312a8172856f132b830f110eed07dee406300465ae8"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundUncovered/model-identity.cenc.hex",
+      "sha256": "c255da978bed056c0830fce433c319aff47407a3fa04ae260f283ce522be104c"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundUncovered/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundUncovered/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--FamilyNormalized/content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--FamilyNormalized/registry.cenc.hex",
+      "sha256": "4f3abf8eb9a75054d529be6ef4c44151fac59d88f2088199a221d41f96badff3"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--FamilyNormalized/parameters.cenc.hex",
+      "sha256": "164403fd0d91e9271ddce1ee553ca2b5fc04b8daab20ae09a7988ecd8c222dd3"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--FamilyNormalized/model-identity.cenc.hex",
+      "sha256": "18cabc0e14f452c85a250c20ff4a3f9e27d02b6c1edfd4bb2bd022351c2b61c1"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--FamilyNormalized/initial-state.cenc.hex",
+      "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+    },
+    {
+      "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--FamilyNormalized/ordered-inputs.cenc.hex",
+      "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+    }
+  ],
+  "programs": 62,
+  "prefixes": 249,
+  "descriptions": 632,
+  "results": [
+    {
+      "program": "shared--GroundAggregate",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "3f98d3474f5e573cc74c26dc842febb1746e28408c14b0a8764ce53765a2856e",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "df1cd1e3b6cc7dd684b4d8a81c2878cd07182a4e8ea3f1cca366fe9391238bcf",
+          "descriptions": 2,
+          "projectionHash": "e8cc1302490355da3e6b54e6327c25f867e9457edfb974c71ceef1be38e32e91"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "fc010658f18561fd2a0c4917f83dfa5d8b58fb51514afb65e713e0fb4aea3aef",
+          "descriptions": 4,
+          "projectionHash": "696e50e420e930b157749704a0ad8c27bd121042173fb5980139587691b69872"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "4554f4d2fcf867faea337e158fc5d8eb077eec6783ca8310e0eb9c510acba95f",
+          "descriptions": 4,
+          "projectionHash": "696e50e420e930b157749704a0ad8c27bd121042173fb5980139587691b69872"
+        }
+      ]
+    },
+    {
+      "program": "shared--GroundPairwise",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "b47b74ac3b3aaab00afb9bcd2f57d536cd1c881d0606494bb66dbfc35fbec8fc",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "eff0d47a1c362e7de83b9bb1e7b9a70c796bc02a6a43809c831f457faf23d9e4",
+          "descriptions": 2,
+          "projectionHash": "e8cc1302490355da3e6b54e6327c25f867e9457edfb974c71ceef1be38e32e91"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "3427b16da23ac674cc48777dfc2748f93e41b625a0e438e66e301c9b76854e34",
+          "descriptions": 4,
+          "projectionHash": "696e50e420e930b157749704a0ad8c27bd121042173fb5980139587691b69872"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "b9358ff29f98d83a844bc7e56b095367d34dbbae093ec2692f907eb2f71d0334",
+          "descriptions": 4,
+          "projectionHash": "696e50e420e930b157749704a0ad8c27bd121042173fb5980139587691b69872"
+        }
+      ]
+    },
+    {
+      "program": "shared--GroundUncovered",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "7221f4b6d66f4a8dec556f73573efae20c7ef2e36b4f0f0fc9e177b1c2d3bb8c",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "1c9cc94256efec3a6a4138b88739ab445bdf84e67eae8d6835da2e1dbf303ba1",
+          "descriptions": 2,
+          "projectionHash": "e8cc1302490355da3e6b54e6327c25f867e9457edfb974c71ceef1be38e32e91"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "d24377008ff80c07bb641b5a995ae9317f281aca8e704bdf076594db12982216",
+          "descriptions": 4,
+          "projectionHash": "696e50e420e930b157749704a0ad8c27bd121042173fb5980139587691b69872"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "c7145801c619c2429a9bcba81d4bbba7cc3b9d46068a80894af29454bec3f6bc",
+          "descriptions": 4,
+          "projectionHash": "696e50e420e930b157749704a0ad8c27bd121042173fb5980139587691b69872"
+        }
+      ]
+    },
+    {
+      "program": "shared--FamilyNormalized",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "7e5abf731aa014d88041cc22f144f58c08864b843fd6825dfd90461a8af18ed6",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "746943f7b38936cb3a86aa4d8981d4a06dacbf686a082a3f2346ee2ccbce2ea4",
+          "descriptions": 2,
+          "projectionHash": "e8cc1302490355da3e6b54e6327c25f867e9457edfb974c71ceef1be38e32e91"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "cb4f75e2715664c5c5d8bb40b6d7b0bdbe5b5ab33cf8390289ad67a228472340",
+          "descriptions": 4,
+          "projectionHash": "696e50e420e930b157749704a0ad8c27bd121042173fb5980139587691b69872"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "cd8553c3afd6ab09f0ab9592319c1b7b419ed7cac22695ff35546353d140c906",
+          "descriptions": 4,
+          "projectionHash": "696e50e420e930b157749704a0ad8c27bd121042173fb5980139587691b69872"
+        }
+      ]
+    },
+    {
+      "program": "independent--GroundAggregate",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "e3c0762176cf165546990bdc6eab8f4feb5bc25d9c24a04b025c1aee09d7adb5",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "e2d0a408cec8e298237f2b2055a65206e7515b78c637b21eac11ef48182e895a",
+          "descriptions": 2,
+          "projectionHash": "7e6fdaae9cc558486c6bec945087b7685708ed1d11b9db6233d6cdcc47458f18"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "01efdca5429f8b0d260249d957c15f172b2ec2c29893dbdb8808aa5260356253",
+          "descriptions": 4,
+          "projectionHash": "217fdfd2f02350b61e0eb9930694e978137e4073f8235fd484b22f43d9967888"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "c589ff227e4ff75cafd95e01b60217fb07e4c5e8d051e31ed93e0d27890bbc3e",
+          "descriptions": 4,
+          "projectionHash": "217fdfd2f02350b61e0eb9930694e978137e4073f8235fd484b22f43d9967888"
+        }
+      ]
+    },
+    {
+      "program": "independent--GroundPairwise",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "f59e363a9697022b03548f02a2c32624a409f1b1b520813dbb366db6988fcbb3",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "f79fbf66974105de838f0d60835c4d95e6b1d0d5b5aa8527976327b7153eb7cf",
+          "descriptions": 2,
+          "projectionHash": "7e6fdaae9cc558486c6bec945087b7685708ed1d11b9db6233d6cdcc47458f18"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "066019fd064e91517dcf80278a6da058db50dc95c19a8e80d998515314976342",
+          "descriptions": 4,
+          "projectionHash": "217fdfd2f02350b61e0eb9930694e978137e4073f8235fd484b22f43d9967888"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "f7a4a51a1ecb7a25636067df52b0724cf3e6d6aa4890d7307ed1c180200c51ca",
+          "descriptions": 4,
+          "projectionHash": "217fdfd2f02350b61e0eb9930694e978137e4073f8235fd484b22f43d9967888"
+        }
+      ]
+    },
+    {
+      "program": "independent--GroundUncovered",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "8df57a29000fc0b9e9bff8dad4f0f2e3f9a5311851446e63c2116a69ba3afb39",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "46dbb62f632c02fce3a033e8bedec2983e4b7fd747466f1ecb2932da3fd94d93",
+          "descriptions": 2,
+          "projectionHash": "7e6fdaae9cc558486c6bec945087b7685708ed1d11b9db6233d6cdcc47458f18"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "e51a577110ca27f4b39bbdb060c1b5a75654e84d54c8a3f9746bde48573883d4",
+          "descriptions": 4,
+          "projectionHash": "217fdfd2f02350b61e0eb9930694e978137e4073f8235fd484b22f43d9967888"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "7f349276a8cfa04cc436d486603f0f46cf9e32965bcd5bb59ea8282c584f4dd3",
+          "descriptions": 4,
+          "projectionHash": "217fdfd2f02350b61e0eb9930694e978137e4073f8235fd484b22f43d9967888"
+        }
+      ]
+    },
+    {
+      "program": "independent--FamilyNormalized",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "e5c32f00794fe65babed7775386d2a5f17279bf85d8dad9042a62b3cf0f7928d",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "a4bdb65b7e58590875ae2f58269fd2c42068011266b002aa3523884642c82f05",
+          "descriptions": 2,
+          "projectionHash": "7e6fdaae9cc558486c6bec945087b7685708ed1d11b9db6233d6cdcc47458f18"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "8cb514867a6debb3622f541b1720901e74ff0ea5f55dae97ecc851409301cc0b",
+          "descriptions": 4,
+          "projectionHash": "217fdfd2f02350b61e0eb9930694e978137e4073f8235fd484b22f43d9967888"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "fc2608472b5aaa48a9d8af123a825a341db14a1b3590e10e3f259a510760011a",
+          "descriptions": 4,
+          "projectionHash": "217fdfd2f02350b61e0eb9930694e978137e4073f8235fd484b22f43d9967888"
+        }
+      ]
+    },
+    {
+      "program": "orphan--GroundAggregate",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "b844b1d141febf5570e837fb895e4c6cff5425c8555dcb57d424a82156c6ff3e",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "f779803ce79971c7355566b4ac91174e81aefb8dad6a7453745b5f686541ccd6",
+          "descriptions": 2,
+          "projectionHash": "e8cc1302490355da3e6b54e6327c25f867e9457edfb974c71ceef1be38e32e91"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "68230c7fda4c8c11517dfb57fc2bfafbf7439c08f86dfa32b40151f0f7f22607",
+          "descriptions": 4,
+          "projectionHash": "696e50e420e930b157749704a0ad8c27bd121042173fb5980139587691b69872"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "de0db11217af3a9b337862d0f87b404061ab256905a2d29c6ba8c17003dfdfde",
+          "descriptions": 4,
+          "projectionHash": "696e50e420e930b157749704a0ad8c27bd121042173fb5980139587691b69872"
+        }
+      ]
+    },
+    {
+      "program": "orphan--GroundPairwise",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "41084733ab76f618ba4d843f6ba940df72000abc4e6614a58753c42c0efd3d85",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "899d3be0307de7a0a3b7994eeef9ab97c3f0370935e9574ba11a4c6bd2c92a70",
+          "descriptions": 2,
+          "projectionHash": "e8cc1302490355da3e6b54e6327c25f867e9457edfb974c71ceef1be38e32e91"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "17bb4129382e5927ae0d035dc3974be9490878ba32cd301f92c0438772f393d6",
+          "descriptions": 4,
+          "projectionHash": "696e50e420e930b157749704a0ad8c27bd121042173fb5980139587691b69872"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "857a9e406254ced9ffc0aaacf50e756232d846983d5b40fc79ac7ba4effe8703",
+          "descriptions": 4,
+          "projectionHash": "696e50e420e930b157749704a0ad8c27bd121042173fb5980139587691b69872"
+        }
+      ]
+    },
+    {
+      "program": "orphan--GroundUncovered",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "234a4752bfe719133a4b4270f01e93ee68fd7516ba4321a3c6cfe97ca62e94c6",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "f9e9f6f36904a75fd807215269c0d9913635e0d77c5a4f559a7339137473c058",
+          "descriptions": 2,
+          "projectionHash": "e8cc1302490355da3e6b54e6327c25f867e9457edfb974c71ceef1be38e32e91"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "32671bb7b9fdf7bf968be802d8bb70f4ac989e02a2443788f54ce47c9535d3b8",
+          "descriptions": 4,
+          "projectionHash": "696e50e420e930b157749704a0ad8c27bd121042173fb5980139587691b69872"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "f1e363ae95661a160eef73cb8ef702a7575b188f5743452293642c6272eb3897",
+          "descriptions": 4,
+          "projectionHash": "696e50e420e930b157749704a0ad8c27bd121042173fb5980139587691b69872"
+        }
+      ]
+    },
+    {
+      "program": "orphan--FamilyNormalized",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "625e0ae6b062f9e46855d08c4dcb4d53d3cfa07e7f985651714ad47480225515",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "7dfd38931a866d4bdb88bbd390ff798b45443b190d2353d315ced37fb476f65c",
+          "descriptions": 2,
+          "projectionHash": "e8cc1302490355da3e6b54e6327c25f867e9457edfb974c71ceef1be38e32e91"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "5f4e1a73222b7cdb9ac2e42aa2173973a912ee2490e1a6df6471aa5f9394b10f",
+          "descriptions": 4,
+          "projectionHash": "696e50e420e930b157749704a0ad8c27bd121042173fb5980139587691b69872"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "4f4e5b7d6871c2877813b909218ba4120e119ec6485eca39842ef04f1836ff16",
+          "descriptions": 4,
+          "projectionHash": "696e50e420e930b157749704a0ad8c27bd121042173fb5980139587691b69872"
+        }
+      ]
+    },
+    {
+      "program": "orphan-removed--GroundAggregate",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "5c76a3a3248557c1dbe42421ecae09cadb6ddc38d97c1632226723f2ede9a35c",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "95c13dc576e10a09e0b32a85449d7e685ed3350e7e9903f794de0ea7288e5d01",
+          "descriptions": 1,
+          "projectionHash": "d904f6526de6e9a339f689a2f581c20ea47fc6b07197ed85f29d2ae4e2559e77"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "9205f299a3123ff29f2c62dde27cf6f98f7a4f7d6cf7886be7d396e8419b0d5d",
+          "descriptions": 2,
+          "projectionHash": "9271cd522ba542bb0bde8f775506814626e4607b17d598ce636d8ac701933156"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "638334afd360e442e6346965b766515d94c22c3d0310f23578ac9e6bbe9537cb",
+          "descriptions": 2,
+          "projectionHash": "9271cd522ba542bb0bde8f775506814626e4607b17d598ce636d8ac701933156"
+        }
+      ]
+    },
+    {
+      "program": "orphan-removed--GroundPairwise",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "60ea26053c4bfa3dc87752e541df6e4ccbc3e2eb6fd92aaf74d5f34c41531fd8",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "bd2899c5d192c7ac4a415710acf58dfe826471bb6113da88f1d2fb7908155310",
+          "descriptions": 1,
+          "projectionHash": "d904f6526de6e9a339f689a2f581c20ea47fc6b07197ed85f29d2ae4e2559e77"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "8f119ae47f30f82d040b7bfb0112c3333798991f4b2e39a6c67ebf4e2948c733",
+          "descriptions": 2,
+          "projectionHash": "9271cd522ba542bb0bde8f775506814626e4607b17d598ce636d8ac701933156"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "892dcef84390c67d071cf210b17f54895b877eb453835b19add1bfba3a1632cd",
+          "descriptions": 2,
+          "projectionHash": "9271cd522ba542bb0bde8f775506814626e4607b17d598ce636d8ac701933156"
+        }
+      ]
+    },
+    {
+      "program": "orphan-removed--GroundUncovered",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "9237f59da4407d3d86569f5fcabbdc4d6f371a8f71132c8bf28a508ead29ca56",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "7b17233febe79bcf59d132a6845e12fbe7d86ae48b7d41a95845fb6fa7e5e065",
+          "descriptions": 1,
+          "projectionHash": "d904f6526de6e9a339f689a2f581c20ea47fc6b07197ed85f29d2ae4e2559e77"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "17072168c3a7e6fbeb5528aabc40364ff6e9bca604d7472adbdd290778569a5b",
+          "descriptions": 2,
+          "projectionHash": "9271cd522ba542bb0bde8f775506814626e4607b17d598ce636d8ac701933156"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "63a5e1050df8119dc623cbbfce036f49962af43147ff37883356b25be10fd07f",
+          "descriptions": 2,
+          "projectionHash": "9271cd522ba542bb0bde8f775506814626e4607b17d598ce636d8ac701933156"
+        }
+      ]
+    },
+    {
+      "program": "orphan-removed--FamilyNormalized",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "0ec6e387444d2153f9961c67cc6173bff1adaf45dcea1ec0150a20bed149aa54",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "bb546ab57927a75edeb47e91b800579c65c9411e7d9d722c33a049ef354bd119",
+          "descriptions": 1,
+          "projectionHash": "d904f6526de6e9a339f689a2f581c20ea47fc6b07197ed85f29d2ae4e2559e77"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "ddee5b0c46460e2c1741ac65cebd7b2f13078006e347a1cfbd487bb1f0e80a84",
+          "descriptions": 2,
+          "projectionHash": "9271cd522ba542bb0bde8f775506814626e4607b17d598ce636d8ac701933156"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "a75916e78d4f3d3f427c35595c342c4b7053cce8949df36d23784e0aae4984a7",
+          "descriptions": 2,
+          "projectionHash": "9271cd522ba542bb0bde8f775506814626e4607b17d598ce636d8ac701933156"
+        }
+      ]
+    },
+    {
+      "program": "orphan-removed--DescriptionDice",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "490857cc136d820f5385f381d959183fdf026381391070082c07282919b874b2",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "2183a7dbf9bcf75eddf20e4a012d48e009052f2bf5c9440144fd9760f81c7be6",
+          "descriptions": 1,
+          "projectionHash": "d904f6526de6e9a339f689a2f581c20ea47fc6b07197ed85f29d2ae4e2559e77"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "67542ce5ae197e7417379a92044963e798fcacea320e7bad785cc97de2c15d00",
+          "descriptions": 2,
+          "projectionHash": "9271cd522ba542bb0bde8f775506814626e4607b17d598ce636d8ac701933156"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "28e70eff580ada83dddbdc64f912719be725a3150de3c1967cd7119a6b89fada",
+          "descriptions": 2,
+          "projectionHash": "9271cd522ba542bb0bde8f775506814626e4607b17d598ce636d8ac701933156"
+        }
+      ]
+    },
+    {
+      "program": "duplicate--GroundAggregate",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "291dd94031021fd2f903914363548f00121baf4e55061f5272ec7a4247c3b256",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "377b07c7fc7e49db8f326b8b9496ed5aed4acc0bb18e882280c76b9d83496368",
+          "descriptions": 3,
+          "projectionHash": "6af01c77054a29e861dd1e12227c8cf49058806b897822584c5df9b8d3832ab2"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "a54a6a59ba37d58820f0cf75277d9d42aa41c0cb3e2fdcbfade08acb40b3f5e5",
+          "descriptions": 6,
+          "projectionHash": "74477b7c560174d2eee51c09bff3c8fd10e7bf4f8ff14540e26ab2e3bd059741"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "d2e8591f6048cfa6702af20b283579e534d41318885c1fe96cd8c7f27009f610",
+          "descriptions": 6,
+          "projectionHash": "74477b7c560174d2eee51c09bff3c8fd10e7bf4f8ff14540e26ab2e3bd059741"
+        }
+      ]
+    },
+    {
+      "program": "duplicate--GroundPairwise",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "7358ea2299addeb0beff0e063823fb3f99c84a205a55a8da29aae665c75cc7f7",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "e885fb699dc99ab91fb2e7b2ca204c063b568d52827be044b8c66cb629696e81",
+          "descriptions": 3,
+          "projectionHash": "6af01c77054a29e861dd1e12227c8cf49058806b897822584c5df9b8d3832ab2"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "79dee6dc55364d8fbcf68fa9b56f1656a47060f06686818d2d38bc7b48260cbc",
+          "descriptions": 6,
+          "projectionHash": "74477b7c560174d2eee51c09bff3c8fd10e7bf4f8ff14540e26ab2e3bd059741"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "03acaa53bc2892f8d1c9d5053710e08f2b0c1edafce9e3c1d2e7bcb148afc751",
+          "descriptions": 6,
+          "projectionHash": "74477b7c560174d2eee51c09bff3c8fd10e7bf4f8ff14540e26ab2e3bd059741"
+        }
+      ]
+    },
+    {
+      "program": "duplicate--GroundUncovered",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "e08cb4cefc6433f8672b15595658838d628c798d081a4743739d9c54fa988fd1",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "e53db39688dcffa20c8a3b051397d6d622773c8b24aec1331ba8932e898b992e",
+          "descriptions": 3,
+          "projectionHash": "6af01c77054a29e861dd1e12227c8cf49058806b897822584c5df9b8d3832ab2"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "e53847009cc3e8c2f724e23b540c7e35f2a59ced26eacd447db1e941db9bea4e",
+          "descriptions": 6,
+          "projectionHash": "74477b7c560174d2eee51c09bff3c8fd10e7bf4f8ff14540e26ab2e3bd059741"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "bc0900ea11207ca7d62fa172b2dff17f9e08d91a766912eb27d3ad55c10d64a0",
+          "descriptions": 6,
+          "projectionHash": "74477b7c560174d2eee51c09bff3c8fd10e7bf4f8ff14540e26ab2e3bd059741"
+        }
+      ]
+    },
+    {
+      "program": "duplicate--FamilyNormalized",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "eb67c68ddff52978fa8408abce5b2add68a7c071a11b1aa195d900aae25160b7",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "593bb315d0f8b02309ce955fdd50e8818159dbf88569b66bfe253243be40a1a1",
+          "descriptions": 3,
+          "projectionHash": "6af01c77054a29e861dd1e12227c8cf49058806b897822584c5df9b8d3832ab2"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "1c91665110188ea47661e2a7fbe1bd49fc60f101d2986d294d5d23219c262564",
+          "descriptions": 6,
+          "projectionHash": "74477b7c560174d2eee51c09bff3c8fd10e7bf4f8ff14540e26ab2e3bd059741"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "d2e72977044db433def46044fc3cc2ef3ec788ef37081291a968e3c9dfae65eb",
+          "descriptions": 6,
+          "projectionHash": "74477b7c560174d2eee51c09bff3c8fd10e7bf4f8ff14540e26ab2e3bd059741"
+        }
+      ]
+    },
+    {
+      "program": "duplicate--DescriptionDice",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "1b21dc750e618c797e22d4227c32ae9f58116b2c63feb89ebcff94fe746a492c",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "fc80e3aea28ae5c127a1da7d84433a5b94a21224724b2c0cf1720aef32df0936",
+          "descriptions": 2,
+          "projectionHash": "35c2743bebfd7e1a6fa991023227ed816033f8c850aec78fac757ac27905e70e"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "8e1becf85f1a8695f62e95ffd3b1fe91bb7896a1053a49a57917c3cbfb34c721",
+          "descriptions": 4,
+          "projectionHash": "f0140163d62083067cfa695a5a6c11d2020f4ef2048e2675b13343ae3d647c29"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "8393a28fa9a7f6572a7431943ca9ad1924250dddcd567c4299cf7c627d35c3aa",
+          "descriptions": 4,
+          "projectionHash": "f0140163d62083067cfa695a5a6c11d2020f4ef2048e2675b13343ae3d647c29"
+        }
+      ]
+    },
+    {
+      "program": "aggregate--GroundAggregate",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "13b65d554304393f30da49910878cecc1702d2dcc4ab14eee85360696874653b",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "166ebebbf9384bb97c4b284781c870ac292a840a2e78f91ce57d1e03f57285fb",
+          "descriptions": 4,
+          "projectionHash": "02f509f08593ce44aab3a03465bc8830f9b8302b1768ed425db08ff055aed7c4"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "95c83c022aa64c6f99e1a0c7a2e2c4038c376145274d08b60c7a4e2993656466",
+          "descriptions": 8,
+          "projectionHash": "cd92464e8966d76e1927bb0e521ca6e27c006a30b76636a4b18cb98b43e5ab2b"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "d227b7c322b2891c5f23e643f517875d71ada13472ff58ac488db14a17fb0c8c",
+          "descriptions": 8,
+          "projectionHash": "cd92464e8966d76e1927bb0e521ca6e27c006a30b76636a4b18cb98b43e5ab2b"
+        }
+      ]
+    },
+    {
+      "program": "aggregate--GroundPairwise",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "efa2fe7cf80cfb0a14728d525957ef777d7c649841f908b416116fc5ea6a785f",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "eee0f645db4d320adc086e8eca69ad061096dfe9edcb2dca338f1c7826b927d1",
+          "descriptions": 4,
+          "projectionHash": "02f509f08593ce44aab3a03465bc8830f9b8302b1768ed425db08ff055aed7c4"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "3fb7a83ea3b4b720688d6497abfce40b81b1b2656f694d81a52076899b4105e7",
+          "descriptions": 8,
+          "projectionHash": "cd92464e8966d76e1927bb0e521ca6e27c006a30b76636a4b18cb98b43e5ab2b"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "7611a4f7a786ed12c86c66d923e0e6a7899eae9a2ec0e93ee5729aed056f1ecb",
+          "descriptions": 8,
+          "projectionHash": "cd92464e8966d76e1927bb0e521ca6e27c006a30b76636a4b18cb98b43e5ab2b"
+        }
+      ]
+    },
+    {
+      "program": "aggregate--GroundUncovered",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "190fdab5b02f17adfdd78fa3a02fe263e121d1227633a765ab0f4351d1f2e5ec",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "aaf8394e9555ea84ce78ed4724a33188ae9ca2b4d8dd956676e41c7b645b4003",
+          "descriptions": 4,
+          "projectionHash": "02f509f08593ce44aab3a03465bc8830f9b8302b1768ed425db08ff055aed7c4"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "a71560230dbe23dca129d13b7315663e3529aabb70c25ac459903245579de59a",
+          "descriptions": 8,
+          "projectionHash": "cd92464e8966d76e1927bb0e521ca6e27c006a30b76636a4b18cb98b43e5ab2b"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "5f86a8e620ecdcdd1687ade864fb899be1e8f8a6b881699aa0eac33adb267ba0",
+          "descriptions": 8,
+          "projectionHash": "cd92464e8966d76e1927bb0e521ca6e27c006a30b76636a4b18cb98b43e5ab2b"
+        }
+      ]
+    },
+    {
+      "program": "aggregate--FamilyNormalized",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "532ccdafb69e754489b04241f671c82b0051958cf129bff1d844b63b10068255",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "d6f8cd51055be0f899c8dfd3566f2f551bf67e9d7ff544e945638b110eed5e4e",
+          "descriptions": 4,
+          "projectionHash": "02f509f08593ce44aab3a03465bc8830f9b8302b1768ed425db08ff055aed7c4"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "67883137abe7777b517893752aaab91d2c379357a8cd68b23aaccbb7f8263518",
+          "descriptions": 8,
+          "projectionHash": "cd92464e8966d76e1927bb0e521ca6e27c006a30b76636a4b18cb98b43e5ab2b"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "3b80594ee746ed7a9eb8d729b575e092a6e9a033bddb9f119c2c4bae67e844e2",
+          "descriptions": 8,
+          "projectionHash": "cd92464e8966d76e1927bb0e521ca6e27c006a30b76636a4b18cb98b43e5ab2b"
+        }
+      ]
+    },
+    {
+      "program": "aggregate--DescriptionDice",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "486096fe48545af22cc4da03fbbcabab803cb21ec4820421358f8cc4f46cc140",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "dcfe7f49b0aa9829a7e1563b7cab6a4e96a95c01fbbdf9d9c0f9c6dc64559ea0",
+          "descriptions": 3,
+          "projectionHash": "e2101f15862973a02b9cd652c54f908e00b19574cde2feaa2be4eaa807270284"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "2a5c7f502919359c929e62d6a089477d156981b1f48c1bc833f08bf01701e515",
+          "descriptions": 6,
+          "projectionHash": "1646f6e3c9f58dd6c59af8d3463034ad6f73087f9fcbe3f890610602543a660a"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "15e845638568358fe5c36d6059d3b8696ac107df7a1ca483a3b693283008f65f",
+          "descriptions": 6,
+          "projectionHash": "1646f6e3c9f58dd6c59af8d3463034ad6f73087f9fcbe3f890610602543a660a"
+        }
+      ]
+    },
+    {
+      "program": "negative--GroundAggregate",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "3a040ad14d611d5ec55c552155c2278dced717a13bf48ebca40cbf804096f849",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "d506148b4738cf215f0d3d6b2afe100bb03aecb8949278f14b2c39f2b1005d44",
+          "descriptions": 2,
+          "projectionHash": "c879c09374f4c536b997cf63c60be10d5ce1045bee90a828e8fa7ec4a8e19c5a"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "727dcdd1093a38462b32d5a110b4f5778af488d24f90f64e397be80dafc7d83a",
+          "descriptions": 4,
+          "projectionHash": "74d49358dcdf01b6e81c07ec49a673497846c9e001b628021339b8c1a87aef55"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "cba46c61d92c304c047918ed55c6958c727ed3ee5e60326a0576378dcc93305f",
+          "descriptions": 4,
+          "projectionHash": "74d49358dcdf01b6e81c07ec49a673497846c9e001b628021339b8c1a87aef55"
+        }
+      ]
+    },
+    {
+      "program": "negative--GroundPairwise",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "399393d31cdd95dd79358ef2c0b2f06de5897bacc8af9e78034cea8cdf36533f",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "1eff203e5e1392ab987962cd485d9507ff95c136fe87c1765f7aff06ed4001cc",
+          "descriptions": 2,
+          "projectionHash": "c879c09374f4c536b997cf63c60be10d5ce1045bee90a828e8fa7ec4a8e19c5a"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "a7839e115e85e9fcad869703c27143be1d5ba3b233cfd385a1fca266317776fe",
+          "descriptions": 4,
+          "projectionHash": "74d49358dcdf01b6e81c07ec49a673497846c9e001b628021339b8c1a87aef55"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "8a932df16082f1479bdf471531a956a9494bc81c1b6126273df4afced9011301",
+          "descriptions": 4,
+          "projectionHash": "74d49358dcdf01b6e81c07ec49a673497846c9e001b628021339b8c1a87aef55"
+        }
+      ]
+    },
+    {
+      "program": "negative--GroundUncovered",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "596d9e16468ad1724f1276da9741ba0b9b1051a5e0000f81d7a4ec6af82b1268",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "4162729094cfb0cb177921d0f70d4d673d614f212b80f9bf4fcc71b83c0deca3",
+          "descriptions": 2,
+          "projectionHash": "c879c09374f4c536b997cf63c60be10d5ce1045bee90a828e8fa7ec4a8e19c5a"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "5c3eaf73be6ec7ef66f5ca9b54058d152c2b761b87b50b72f41b206b398d3b98",
+          "descriptions": 4,
+          "projectionHash": "74d49358dcdf01b6e81c07ec49a673497846c9e001b628021339b8c1a87aef55"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "037b68dce4d04051a13aaef22c21de58697f5846b704a72039b97dcba54500f4",
+          "descriptions": 4,
+          "projectionHash": "74d49358dcdf01b6e81c07ec49a673497846c9e001b628021339b8c1a87aef55"
+        }
+      ]
+    },
+    {
+      "program": "negative--FamilyNormalized",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "643e389d850d7863d828a434a0dd2cfab4d4d004d0d10601ff8c4ba5493979b4",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "2defead10a1ec062dfe07fcfb703b43bcb01554025b6d6ad8a74c8825b08b9cb",
+          "descriptions": 2,
+          "projectionHash": "c879c09374f4c536b997cf63c60be10d5ce1045bee90a828e8fa7ec4a8e19c5a"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "79cd04fcb6c262d445597d0055e584a38f7c5cd14d5e2d05054eb36f89eb8ff0",
+          "descriptions": 4,
+          "projectionHash": "74d49358dcdf01b6e81c07ec49a673497846c9e001b628021339b8c1a87aef55"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "a034c33e1a38cd826ba5adb7f6c3c6304e10d8231c797cad3a0de8f04e242112",
+          "descriptions": 4,
+          "projectionHash": "74d49358dcdf01b6e81c07ec49a673497846c9e001b628021339b8c1a87aef55"
+        }
+      ]
+    },
+    {
+      "program": "unavailable--GroundAggregate",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "d66bfbace56bc56fef2b5c8b871122ca88f22252392638093d23da2d0b49f81f",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "884d694eb016eddd1a8531ef49470d6636c959f229a63ece02fc32d4adac8d93",
+          "descriptions": 2,
+          "projectionHash": "57e1abdd99e4850c0115db6463940182bd1a15592c560c11c7df6633a6bcdd71"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "d3b8478de96ae80187ad02503105da2db9d3a1d6b44693db77325dfbca294f41",
+          "descriptions": 4,
+          "projectionHash": "71c9ae2e36c3c57624ceb024713953bffcec9bc0ffe9ceddc0d9a0cf1ab451db"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "c5ada7e11aeab3b1aa13b594526e0428f6280491d8ad21a53f38e7f80b8805fc",
+          "descriptions": 4,
+          "projectionHash": "71c9ae2e36c3c57624ceb024713953bffcec9bc0ffe9ceddc0d9a0cf1ab451db"
+        }
+      ]
+    },
+    {
+      "program": "unavailable--GroundPairwise",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "c6d590b34dfe78ed4445e2656686e8c481588f8d463ccf2c5ddca88613f88812",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "54f18ec83099a99867039e0b0a2f590e5580e240b2e468b02486bbbeed88a3a0",
+          "descriptions": 2,
+          "projectionHash": "57e1abdd99e4850c0115db6463940182bd1a15592c560c11c7df6633a6bcdd71"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "e85db9a24edd6c4436fc3f293c796724e383fec7e5df291eb8c0bd80e4a8dd00",
+          "descriptions": 4,
+          "projectionHash": "71c9ae2e36c3c57624ceb024713953bffcec9bc0ffe9ceddc0d9a0cf1ab451db"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "f7d77eeae4a5b9bca6834f2524c7af9178aefb5fcf1dd609572709faab9070cc",
+          "descriptions": 4,
+          "projectionHash": "71c9ae2e36c3c57624ceb024713953bffcec9bc0ffe9ceddc0d9a0cf1ab451db"
+        }
+      ]
+    },
+    {
+      "program": "unavailable--GroundUncovered",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "92b9fddd356e41dfa226f0861e6e14fae86cd4e4611528300a884359fe0f84c6",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "f2c85fa379226a62105ebfc40b47a6f33e31f2b202eb69d5a0e8353294657572",
+          "descriptions": 2,
+          "projectionHash": "57e1abdd99e4850c0115db6463940182bd1a15592c560c11c7df6633a6bcdd71"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "30fa749e6b51b59f5b1b8508e89d0359d19a62c390ed1957ea380b138a73fe08",
+          "descriptions": 4,
+          "projectionHash": "71c9ae2e36c3c57624ceb024713953bffcec9bc0ffe9ceddc0d9a0cf1ab451db"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "18ebbb1384cec3ebf577d6b32e880e1086bac84a908fd16668ccefd1e24b57d0",
+          "descriptions": 4,
+          "projectionHash": "71c9ae2e36c3c57624ceb024713953bffcec9bc0ffe9ceddc0d9a0cf1ab451db"
+        }
+      ]
+    },
+    {
+      "program": "unavailable--FamilyNormalized",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "39e843e4cae5d115693b98692491ac15664f1f58f6b359513d3bdf2b968a1405",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "f5608b84ace79f15aa43d6600aa6015e9e48c01d8ee36a0a2e72b6a4da7227fb",
+          "descriptions": 2,
+          "projectionHash": "57e1abdd99e4850c0115db6463940182bd1a15592c560c11c7df6633a6bcdd71"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "96cc4df6f059b52120e581de5a1e45a7a8cb632b141695f661bdc4f3203d47e5",
+          "descriptions": 4,
+          "projectionHash": "71c9ae2e36c3c57624ceb024713953bffcec9bc0ffe9ceddc0d9a0cf1ab451db"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "083d89851185cee6bca5c3d5aec911ede9c74ba20033f1614bc9d88dd6195767",
+          "descriptions": 4,
+          "projectionHash": "71c9ae2e36c3c57624ceb024713953bffcec9bc0ffe9ceddc0d9a0cf1ab451db"
+        }
+      ]
+    },
+    {
+      "program": "known-zero--GroundAggregate",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "4b78d8c1ca415aee985525cc23760d2601f86907089b2fdeaa816a5aae3c4dad",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "a58e0ba06d1e1036d18f1b2ea6933c9f1188fb080e47cde8df6bb3d0722a9b3a",
+          "descriptions": 2,
+          "projectionHash": "4c978954cbe49860814ead08a6bc2ae2b01ef3d2cba08673253b760eecb96335"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "c7f5e9ecb2660f286008210932c5d09d16dd6d4c2e4b9f7075bc45879e922c1a",
+          "descriptions": 4,
+          "projectionHash": "8e1a50e69ea881e071ed3a93a91eb6a1be91815ae6f674490c2aaebf296ebebf"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "2c710e2b4478a0b77dcfa94eb83615a4a6e2ac0761fe9bb919de02f1d9b7f81a",
+          "descriptions": 4,
+          "projectionHash": "8e1a50e69ea881e071ed3a93a91eb6a1be91815ae6f674490c2aaebf296ebebf"
+        }
+      ]
+    },
+    {
+      "program": "known-zero--GroundPairwise",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "b312c435427b866f82f6a8f535d0c96aed7723dad40ad6369584dcb6c17d1d84",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "99f0c001f689a2a6158a86e9394697f61e5866b5e53f440d5d5c9bfb22ac5c4b",
+          "descriptions": 2,
+          "projectionHash": "4c978954cbe49860814ead08a6bc2ae2b01ef3d2cba08673253b760eecb96335"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "270878ed67857887ed99b1f10a410556bab1fb797237587f7153ff2426a21004",
+          "descriptions": 4,
+          "projectionHash": "8e1a50e69ea881e071ed3a93a91eb6a1be91815ae6f674490c2aaebf296ebebf"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "77802903dcda4fd2d3ab88ec709461821a3263e823a1c83b8ca9c6828627dcab",
+          "descriptions": 4,
+          "projectionHash": "8e1a50e69ea881e071ed3a93a91eb6a1be91815ae6f674490c2aaebf296ebebf"
+        }
+      ]
+    },
+    {
+      "program": "known-zero--GroundUncovered",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "81af790f96733ca078700b6324eb22ddeb1fca209fc2dc00b507c2142c8ca80f",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "9b19185de88c1aa7db8d2fb13603ba5f03827e3a1f16df6e4c999ba161120a75",
+          "descriptions": 2,
+          "projectionHash": "4c978954cbe49860814ead08a6bc2ae2b01ef3d2cba08673253b760eecb96335"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "85d8e03f8adfd52723e456ed9b174526dfdd14b790590a624c5625ad092008d1",
+          "descriptions": 4,
+          "projectionHash": "8e1a50e69ea881e071ed3a93a91eb6a1be91815ae6f674490c2aaebf296ebebf"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "1e12a2cc1e57ed0a4e5ae2837eca0d0923d9f31697e62e1483df8195650c45c8",
+          "descriptions": 4,
+          "projectionHash": "8e1a50e69ea881e071ed3a93a91eb6a1be91815ae6f674490c2aaebf296ebebf"
+        }
+      ]
+    },
+    {
+      "program": "known-zero--FamilyNormalized",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "b4bff477c4af49b32053e25c47fe35ecc4609b742383767f2c8b5d160cbe2a36",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "c5b1cf00800eae2b5d0cd26e88807e532771320b1a96012138fa29ac54238367",
+          "descriptions": 2,
+          "projectionHash": "4c978954cbe49860814ead08a6bc2ae2b01ef3d2cba08673253b760eecb96335"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "dc8ada0f590487e8a1a8e402feae00602501b4070947db9eb7abf1b93a74362c",
+          "descriptions": 4,
+          "projectionHash": "8e1a50e69ea881e071ed3a93a91eb6a1be91815ae6f674490c2aaebf296ebebf"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "05441c9e706f7f6a786ead3f099c8f7b603255843e003ae4eee8d92a41d070e8",
+          "descriptions": 4,
+          "projectionHash": "8e1a50e69ea881e071ed3a93a91eb6a1be91815ae6f674490c2aaebf296ebebf"
+        }
+      ]
+    },
+    {
+      "program": "capacity-zero--GroundAggregate",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "2827fd99061cbcf8aaed16187287dc260e5ed809ba2e381947e09374ff0deb23",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "b6a9fa6c8645533ae8df8811bdcf90b058f201abb79292047fa73274d858d6fe",
+          "descriptions": 2,
+          "projectionHash": "59948416f5da8957efa3b6026c6be6ef23959ef119017f561c3cd6754084ec78"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "9aaab21f5c7586a2a5d2fb88197975995e59807d15fb28734dfd7eb63323d247",
+          "descriptions": 4,
+          "projectionHash": "87be53169322ac5d2221330006137dfa0045e37133052d9b7c72ec03486aea5a"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "7ec170a4ce3989987f91b8c3a6519d7c2465ce0d3d416a62b7a51c9de89f6411",
+          "descriptions": 4,
+          "projectionHash": "87be53169322ac5d2221330006137dfa0045e37133052d9b7c72ec03486aea5a"
+        }
+      ]
+    },
+    {
+      "program": "capacity-zero--GroundPairwise",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "a89374692c676897409b8016a71113001dede381d2722739b8c044525944f194",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "9c872c2c698052ba7ebbda8e415370fc0aefa8de79d9f1dee35094caf35a4eaa",
+          "descriptions": 2,
+          "projectionHash": "59948416f5da8957efa3b6026c6be6ef23959ef119017f561c3cd6754084ec78"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "f51e7b15ce65b12e22d93c115db712506665da2ad40945c87bde83e0a8d0c5c2",
+          "descriptions": 4,
+          "projectionHash": "87be53169322ac5d2221330006137dfa0045e37133052d9b7c72ec03486aea5a"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "03cc6ddc45d77e082aad4088a1bc228d8bbbe6b7aea2c87f6f43892ed5e8ffb4",
+          "descriptions": 4,
+          "projectionHash": "87be53169322ac5d2221330006137dfa0045e37133052d9b7c72ec03486aea5a"
+        }
+      ]
+    },
+    {
+      "program": "capacity-zero--GroundUncovered",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "b6912f5fa01ef71c2d977d7d2bf01e0858a66f44af96e46dddff58cbe7f5e9e9",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "87d458ec01e46eefafbe3d1a3bbc29b9a511dd8c6d9ce073730780ba91d0759a",
+          "descriptions": 2,
+          "projectionHash": "59948416f5da8957efa3b6026c6be6ef23959ef119017f561c3cd6754084ec78"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "ab0a30b00fc2b79cb664847769a2d0896c47562716338716bf95b29480fb9395",
+          "descriptions": 4,
+          "projectionHash": "87be53169322ac5d2221330006137dfa0045e37133052d9b7c72ec03486aea5a"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "ee1fae00aef0a53e9c0e188b6945f053662301e288e01dbcca331d1340043597",
+          "descriptions": 4,
+          "projectionHash": "87be53169322ac5d2221330006137dfa0045e37133052d9b7c72ec03486aea5a"
+        }
+      ]
+    },
+    {
+      "program": "capacity-zero--FamilyNormalized",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "25af37bcace4456c3b293e1cae65d7688d4e7a3ce109ea53f6a394bbd01e80be",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "e088082d9da0379507904a348e4b75a26f3b7ac83f61eb62f4459b0aab25190c",
+          "descriptions": 2,
+          "projectionHash": "59948416f5da8957efa3b6026c6be6ef23959ef119017f561c3cd6754084ec78"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "5f0132a0066ac6816a287819f46bc675c342c27a27b13131dc4789d0996c5cd3",
+          "descriptions": 4,
+          "projectionHash": "87be53169322ac5d2221330006137dfa0045e37133052d9b7c72ec03486aea5a"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "bf01d0e453368533ea1419fd6d06b7950de648bd5a0c3c6a13cd210a592cac0e",
+          "descriptions": 4,
+          "projectionHash": "87be53169322ac5d2221330006137dfa0045e37133052d9b7c72ec03486aea5a"
+        }
+      ]
+    },
+    {
+      "program": "no-task--GroundAggregate",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "a6da72fcbfaf2cc87601d2913d388e98bc3db70a75fcf9fe56687ce4e65a7164",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "1007415b28570b4940528ab7814ac8ac4187f07d615c91e166091fee3f083e1f",
+          "descriptions": 1,
+          "projectionHash": "d904f6526de6e9a339f689a2f581c20ea47fc6b07197ed85f29d2ae4e2559e77"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "7df35dee8b53acf41799954af924e968e0c2d7b0cfff45c8f04ab2befe67a352",
+          "descriptions": 2,
+          "projectionHash": "9271cd522ba542bb0bde8f775506814626e4607b17d598ce636d8ac701933156"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "c559286a4266a90f5ab5a9d618b742ae6700bff119035078f44421711af09b8b",
+          "descriptions": 2,
+          "projectionHash": "9271cd522ba542bb0bde8f775506814626e4607b17d598ce636d8ac701933156"
+        }
+      ]
+    },
+    {
+      "program": "no-task--GroundPairwise",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "1b830a08f23a4a58fcb6f65853ee4720a6337b62463cacdee6523148e7c9be1f",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "d4ffd69c14f584c9604c0ea916996eccb997e5b93a5dd418613fa34cdad54fe3",
+          "descriptions": 1,
+          "projectionHash": "d904f6526de6e9a339f689a2f581c20ea47fc6b07197ed85f29d2ae4e2559e77"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "aaa3825347a35f1684a9ebf0d3cfb99c5e72150541f7cf547a5e4fda17faaaca",
+          "descriptions": 2,
+          "projectionHash": "9271cd522ba542bb0bde8f775506814626e4607b17d598ce636d8ac701933156"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "874f2714f1be7ede00db2b414119ab61392d0534b2b6d6a72f7cd765967aaf56",
+          "descriptions": 2,
+          "projectionHash": "9271cd522ba542bb0bde8f775506814626e4607b17d598ce636d8ac701933156"
+        }
+      ]
+    },
+    {
+      "program": "no-task--GroundUncovered",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "7bb65a73c3ab3e4788101bfd116af5f746220931e7ffe48e26b35267105e81c7",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "b32659ba5325b08ed36e63080b9a3b2ee524b29001b000872d11bdc090e7566d",
+          "descriptions": 1,
+          "projectionHash": "d904f6526de6e9a339f689a2f581c20ea47fc6b07197ed85f29d2ae4e2559e77"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "42594706892f6a6ac8187783a7f05cede91754fc8eaaca00fa5c954372771172",
+          "descriptions": 2,
+          "projectionHash": "9271cd522ba542bb0bde8f775506814626e4607b17d598ce636d8ac701933156"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "8301b82a8a555423c5126f8b8a2cc2e55255f1113cfa23b2b8a1c3187df52442",
+          "descriptions": 2,
+          "projectionHash": "9271cd522ba542bb0bde8f775506814626e4607b17d598ce636d8ac701933156"
+        }
+      ]
+    },
+    {
+      "program": "no-task--FamilyNormalized",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "8be692e73409c7540cc7a5db12008bf1e31f29a76116290c8f8a7398d4991719",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "501c268904324fc3e1313ce3f2079051067c73d92f28eeeccaf16f7bf229a382",
+          "descriptions": 1,
+          "projectionHash": "d904f6526de6e9a339f689a2f581c20ea47fc6b07197ed85f29d2ae4e2559e77"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "2f4f4ec60afb8f6959d7b6a71e84eb0c98fa7eb1ac5ce2b7e2d8c4e38e422360",
+          "descriptions": 2,
+          "projectionHash": "9271cd522ba542bb0bde8f775506814626e4607b17d598ce636d8ac701933156"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "a364f8771fa13e3339729fcf1a6f7c40cc1c31174c8c4f00891b754fdd7c131f",
+          "descriptions": 2,
+          "projectionHash": "9271cd522ba542bb0bde8f775506814626e4607b17d598ce636d8ac701933156"
+        }
+      ]
+    },
+    {
+      "program": "no-body--GroundAggregate",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "890254660d613b4a204b69d658a0d5fa617325cf6c9eb9105735cc53910a6e98",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "295530310cf7abf445771bd002c2bafdf14e71a86c264884cccbcfcf15630110",
+          "descriptions": 1,
+          "projectionHash": "7419a83e33395b586da06fc9ed7985b657c341f2286b7e2e59e8b06c5435fa74"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "750a5329e0b023cee90d563899fd850be2d614cacad3493482cb6df351c20807",
+          "descriptions": 2,
+          "projectionHash": "8c69d4ff2d0ef50f8595be9f7d3f2da9af1c9e4aae1b7bc4b970de7f4b018def"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "a5f99c205f0d1d21ee9912ef941a5a5a71739a7af0ec7fadd60e68979882a8f0",
+          "descriptions": 2,
+          "projectionHash": "8c69d4ff2d0ef50f8595be9f7d3f2da9af1c9e4aae1b7bc4b970de7f4b018def"
+        }
+      ]
+    },
+    {
+      "program": "no-body--GroundPairwise",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "5f7e948ec8da9cac0a38973f3423acf5c8143578a1d23319aa159424d66ad14e",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "e000c68b0fdb662aeea74185fa4b3d58fb52d3caf28d984dbe36e0e781f9c666",
+          "descriptions": 1,
+          "projectionHash": "7419a83e33395b586da06fc9ed7985b657c341f2286b7e2e59e8b06c5435fa74"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "a96ba13824c21fb7ff603e07efc18f069240de251926c1239343612d72905c5f",
+          "descriptions": 2,
+          "projectionHash": "8c69d4ff2d0ef50f8595be9f7d3f2da9af1c9e4aae1b7bc4b970de7f4b018def"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "61a2e897b7559149615d6478a60c095cc8576ca45a9a0ecdf87a5f5492873c74",
+          "descriptions": 2,
+          "projectionHash": "8c69d4ff2d0ef50f8595be9f7d3f2da9af1c9e4aae1b7bc4b970de7f4b018def"
+        }
+      ]
+    },
+    {
+      "program": "no-body--GroundUncovered",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "3fb1e83a38533232532e98c0a71e6222aa7635543f975dcf7426d2453a303e6f",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "3bbe5e018acc5a1ce53c74fa403b974ba47e9ea19ad317ca035304eb624d58e3",
+          "descriptions": 1,
+          "projectionHash": "7419a83e33395b586da06fc9ed7985b657c341f2286b7e2e59e8b06c5435fa74"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "103253f5439ad1382032dda65b45bc149cdddff2760438e07e17f63c27655fbb",
+          "descriptions": 2,
+          "projectionHash": "8c69d4ff2d0ef50f8595be9f7d3f2da9af1c9e4aae1b7bc4b970de7f4b018def"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "5fee5657e24ef019e9ec649bd11caa8862ed365e56e8b474f5353c5e99a8c3f2",
+          "descriptions": 2,
+          "projectionHash": "8c69d4ff2d0ef50f8595be9f7d3f2da9af1c9e4aae1b7bc4b970de7f4b018def"
+        }
+      ]
+    },
+    {
+      "program": "no-body--FamilyNormalized",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "dc31b00f0fc9ab864df071bfb1b0dc06ca154f156238eb602d96b32e98894fc1",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "0f061c34a12f42d09b9a9f07c079dcafc7ca5e56b8a82f997e834b88f1c16646",
+          "descriptions": 1,
+          "projectionHash": "7419a83e33395b586da06fc9ed7985b657c341f2286b7e2e59e8b06c5435fa74"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "7526a510eb7f73bfcfa7b1073252200dd6d0b56ffaf27db5a56d67239aefa9c9",
+          "descriptions": 2,
+          "projectionHash": "8c69d4ff2d0ef50f8595be9f7d3f2da9af1c9e4aae1b7bc4b970de7f4b018def"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "12ccdf3d53101802a0c7fb91a4c0881d1f25b7b3f202a7afcd64110c973a6f02",
+          "descriptions": 2,
+          "projectionHash": "8c69d4ff2d0ef50f8595be9f7d3f2da9af1c9e4aae1b7bc4b970de7f4b018def"
+        }
+      ]
+    },
+    {
+      "program": "execution-blocked--GroundAggregate",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "3b67fa6bcf41cf080d93e6494039d564cc394d8ad566fca132b632cc8a4152b5",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "466edf992abfab427f97fe550bfd752944da0dea06b12319467274159e102f2d",
+          "descriptions": 2,
+          "projectionHash": "e8cc1302490355da3e6b54e6327c25f867e9457edfb974c71ceef1be38e32e91"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "99c47ca9de735e06199c01da73b4fa6a84cae81bcbca783995b9dc8adaacca63",
+          "descriptions": 4,
+          "projectionHash": "696e50e420e930b157749704a0ad8c27bd121042173fb5980139587691b69872"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "99fd2fa8430d8f151f542fd63e793fb846c9085ec07abbb6fa9c3c7df547d210",
+          "descriptions": 4,
+          "projectionHash": "696e50e420e930b157749704a0ad8c27bd121042173fb5980139587691b69872"
+        }
+      ]
+    },
+    {
+      "program": "execution-blocked--GroundPairwise",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "6aefc13b7e11d3c2e54f79ae452dc000291b5bc87bf542ea81ffd109cca5ad47",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "3eb436ede211ec7751b847c11a86e60f37e97885c4c25c05ddba0ff8b5728d35",
+          "descriptions": 2,
+          "projectionHash": "e8cc1302490355da3e6b54e6327c25f867e9457edfb974c71ceef1be38e32e91"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "f0aaf6bd2e62a69c641963f316239a39ddf3b7e05265abf2bdf1280bffdab2b9",
+          "descriptions": 4,
+          "projectionHash": "696e50e420e930b157749704a0ad8c27bd121042173fb5980139587691b69872"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "eb09842ded8d0042f50477b5fbf22695eda7f1f10f5dc467f4a53b0e71fe968d",
+          "descriptions": 4,
+          "projectionHash": "696e50e420e930b157749704a0ad8c27bd121042173fb5980139587691b69872"
+        }
+      ]
+    },
+    {
+      "program": "execution-blocked--GroundUncovered",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "e525baefff2ea96647063a9e73cc9bbc8a627cfdd0836ab6a855896b7eae165d",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "094b0716f9fa4e425c0076c514f977c255e65a6d0c63dc423976563578b050ce",
+          "descriptions": 2,
+          "projectionHash": "e8cc1302490355da3e6b54e6327c25f867e9457edfb974c71ceef1be38e32e91"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "109e374a433d67d1f4b1bf0c2c91df2b0438fae1fc6db7f15026fdeac4ce3459",
+          "descriptions": 4,
+          "projectionHash": "696e50e420e930b157749704a0ad8c27bd121042173fb5980139587691b69872"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "99dc8fa4552f63ca5969f1ebaf1bf00b3115f9ec7ffa77898a86b1a4f43fbbcc",
+          "descriptions": 4,
+          "projectionHash": "696e50e420e930b157749704a0ad8c27bd121042173fb5980139587691b69872"
+        }
+      ]
+    },
+    {
+      "program": "execution-blocked--FamilyNormalized",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "e6503a0d9db12a71bfceb2bc7b4a189c38d9f7687f80519cce3a139b7396806b",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "fa6da63792b37e12f4b5be870978df67b21d9df8a3b69635f497e47a2e7806cf",
+          "descriptions": 2,
+          "projectionHash": "e8cc1302490355da3e6b54e6327c25f867e9457edfb974c71ceef1be38e32e91"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "7c200c3fc6117fa9a4fed778c6667194dc8dced73a3e723450c889b569ab1912",
+          "descriptions": 4,
+          "projectionHash": "696e50e420e930b157749704a0ad8c27bd121042173fb5980139587691b69872"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "9162fb61c49034ea68ccec9b3c3435827d9dcfb727252e43cd47784d5617516d",
+          "descriptions": 4,
+          "projectionHash": "696e50e420e930b157749704a0ad8c27bd121042173fb5980139587691b69872"
+        }
+      ]
+    },
+    {
+      "program": "duplicate-matched-aggregate",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "8e8271038ded1e99f319a22d4f3d2aaacd387fb33d6ccde3abd6f9f3965eb883",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "0c7a1215de8551236f1f552df4a095f4d26f22c9897785468d15657a8e860742",
+          "descriptions": 2,
+          "projectionHash": "35c2743bebfd7e1a6fa991023227ed816033f8c850aec78fac757ac27905e70e"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "5fdc2cd7147c41dedd459d3c939b294e6ca4a00cbb696fed2b8a47900de4c154",
+          "descriptions": 4,
+          "projectionHash": "f0140163d62083067cfa695a5a6c11d2020f4ef2048e2675b13343ae3d647c29"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "440a5aadfecd8dc648d2479fcece759a04337adf879eaeb15a87f82bad9a1c3d",
+          "descriptions": 4,
+          "projectionHash": "f0140163d62083067cfa695a5a6c11d2020f4ef2048e2675b13343ae3d647c29"
+        }
+      ]
+    },
+    {
+      "program": "duplicate-matched-description-dice",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "414cf01b635c3ab9addd88b1837c90073b7964b4b298230fcbb09d8160066149",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "fc2a75ab4723dd2d019949f3617830eef4a3ca74b7b95853fd85d0e4be9bd6d7",
+          "descriptions": 2,
+          "projectionHash": "35c2743bebfd7e1a6fa991023227ed816033f8c850aec78fac757ac27905e70e"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "ffb0e7995e421606b08b9705158e1c017183fdbb8f658ad138f8a2a49ad37b37",
+          "descriptions": 4,
+          "projectionHash": "f0140163d62083067cfa695a5a6c11d2020f4ef2048e2675b13343ae3d647c29"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "fc2254f2bfd813e9305ae8156f1f22156ae1738ff35f10cec063153ec0798971",
+          "descriptions": 4,
+          "projectionHash": "f0140163d62083067cfa695a5a6c11d2020f4ef2048e2675b13343ae3d647c29"
+        }
+      ]
+    },
+    {
+      "program": "aggregate-matched-aggregate",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "97728248cd022e44bfddd979c145ec800603a18220f7089978c73342206a2c74",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "1aa37c60dc1415d55cd8772498bdcf8f7c6ede9c99ae36bd05c79caaffcbfa82",
+          "descriptions": 3,
+          "projectionHash": "e2101f15862973a02b9cd652c54f908e00b19574cde2feaa2be4eaa807270284"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "7270fb47d874719df224245f7e1396fcbb2b4632673a0e9e193f4a3ce6348ec8",
+          "descriptions": 6,
+          "projectionHash": "1646f6e3c9f58dd6c59af8d3463034ad6f73087f9fcbe3f890610602543a660a"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "d2c6d0b4abab6a616a811f0c6cbf98c74586e06a4d9861de6fa2b7f18d62001a",
+          "descriptions": 6,
+          "projectionHash": "1646f6e3c9f58dd6c59af8d3463034ad6f73087f9fcbe3f890610602543a660a"
+        }
+      ]
+    },
+    {
+      "program": "aggregate-matched-description-dice",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "1854796ae1bdd9589e64ad74964a4daaf4ffba76f6b49568f772588a0e71884d",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "e5a019f68ecfa063fd30be50b132326cf1f5fdb98ecf01e3f9d65e462940f916",
+          "descriptions": 3,
+          "projectionHash": "e2101f15862973a02b9cd652c54f908e00b19574cde2feaa2be4eaa807270284"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "c9650d19699090346fe51624e86b09755f720c8161951da779734c92ab21f613",
+          "descriptions": 6,
+          "projectionHash": "1646f6e3c9f58dd6c59af8d3463034ad6f73087f9fcbe3f890610602543a660a"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "badb2175d7af32cfbd1cc7d3ec6e12a2abe7b0cbf50dd8da6bffc3680f1599c5",
+          "descriptions": 6,
+          "projectionHash": "1646f6e3c9f58dd6c59af8d3463034ad6f73087f9fcbe3f890610602543a660a"
+        }
+      ]
+    },
+    {
+      "program": "hidden-21",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "9f43c7f24e3b3235cf73f4f63cc8370185926e6d3a49ad32fc3482d86bbd866f",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "2e956723360f4678d275bbf49be7cdf190a365e4552f9b148c56f9ff60b9b27f",
+          "descriptions": 2,
+          "projectionHash": "e8cc1302490355da3e6b54e6327c25f867e9457edfb974c71ceef1be38e32e91"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "4e17f4afa178ed1879c0097f87b7bf132cc98387c1756348907bcc7e06de4ea3",
+          "descriptions": 4,
+          "projectionHash": "696e50e420e930b157749704a0ad8c27bd121042173fb5980139587691b69872"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "904675acea345955acbcf6ef8a88aa714653601be51da3f34884b5db8a7b4603",
+          "descriptions": 4,
+          "projectionHash": "696e50e420e930b157749704a0ad8c27bd121042173fb5980139587691b69872"
+        }
+      ]
+    },
+    {
+      "program": "hidden-29",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "1a29d9da99ec5ba89cdda4173540fbab0055235539a5ebc5dc2239cb6b3d9c02",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "101514658b7b3920b12c541fb54646acfa72153e0d32469618b0fbe4119fc38b",
+          "descriptions": 2,
+          "projectionHash": "e8cc1302490355da3e6b54e6327c25f867e9457edfb974c71ceef1be38e32e91"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "371d5ec041a5f257570718f06935602b994fb60876ecd3904a3f50b0e3ca094a",
+          "descriptions": 4,
+          "projectionHash": "696e50e420e930b157749704a0ad8c27bd121042173fb5980139587691b69872"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "46a7f7e327f079e3f3d6f11a887d2c9bdefe699d7c07cd7c9890698af6bb841d",
+          "descriptions": 4,
+          "projectionHash": "696e50e420e930b157749704a0ad8c27bd121042173fb5980139587691b69872"
+        }
+      ]
+    },
+    {
+      "program": "independent-B-replenishment",
+      "checks": [
+        {
+          "prefix": 0,
+          "saveHash": "5987284c6872a46f0d559d9808b1f7d8c9101cd088b7a536b9628dbabe72eee4",
+          "descriptions": 0,
+          "projectionHash": "a4bc6de98f9e01a4287c894d69af687b6300c62fe0f3ef8dbd17f5bf61452d94"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "8738f0b41644b2811cb2e49ac4178988ca707fa75f5862a6601b9bce16dac254",
+          "descriptions": 2,
+          "projectionHash": "7e6fdaae9cc558486c6bec945087b7685708ed1d11b9db6233d6cdcc47458f18"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "2b98a167e353fa51e3ae8efc710b882cb130b3596c2d40a4479409f32f7dc33f",
+          "descriptions": 2,
+          "projectionHash": "7e6fdaae9cc558486c6bec945087b7685708ed1d11b9db6233d6cdcc47458f18"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "c856c7ec7e2bf15336060cc1b9c58c8df926c9a808c37f56f3bcbfd22f5a21ab",
+          "descriptions": 4,
+          "projectionHash": "97be428d935b3f7f5e499108a5c25198c0d1fe443f7609f439b1f8af2313b405"
+        },
+        {
+          "prefix": 4,
+          "saveHash": "33dba0cb05d2250fe3dda1f19926d83a4046e728199c86f2f9b52e46f9b39c00",
+          "descriptions": 4,
+          "projectionHash": "97be428d935b3f7f5e499108a5c25198c0d1fe443f7609f439b1f8af2313b405"
+        }
+      ]
+    }
+  ],
+  "scope": "Every prefix of62 frozen programs. Each copied sample must be selected evidence for the same observer; projection accepts only the closed assessment record family. Native saves unchanged, historical main prefix/intervention terminal saves match, past entries stable, hidden21/29 projections equal. Description count includes repeated retained entries. No full reason/choice/expression narrative, UI or corpus acceptance claim."
+}

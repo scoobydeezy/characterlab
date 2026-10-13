@@ -203,3 +203,11 @@ writers:50025 native parity,74592 comparisons,54486 batch. Preserve bound source
 Latest: MULTISOURCE comparison audit COMPLETE (74592 exit0),96 reports/62 native
 programs PASS, all report/source hashes verified. Native parity50025, language52437
 and batch54486 remain running.
+
+Latest: MULTISOURCE six-mode component/worker PREPARED; separate checkpoint-output
+projection wrapper preserves audit-bound adapter. Three focused tests PASS. Registry
+registration/browser qualification remain due; batch54486 still binds registry.
+
+Latest: MULTISOURCE assessment language COMPLETE62 programs/249 prefixes/632
+descriptions PASS; source/original hashes verified. Worker/UI type-check PASS.
+Native parity50025 and batch54486 remain live; registration/browser work due.
