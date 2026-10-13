@@ -154,3 +154,6 @@ Registration/browser checks wait for bound batch registry audit session33242 to 
 
 RELATIONSHIP corrected0.2 adapter prepared:11 models/24 originals;2 focused tests PASS.
 Full256-prefix audit RUNNING session19572; start OBSERVABILITY_WORKBENCH_RELATIONSHIP_PROGRESS.md.
+
+RELATIONSHIP33 contrasts declared; focused tests/type-check PASS. Full comparison
+audit RUNNING session82726, with exact/occurrence-normalized observer outcomes separate.

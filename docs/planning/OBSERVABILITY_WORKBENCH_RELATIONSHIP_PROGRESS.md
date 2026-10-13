@@ -22,3 +22,18 @@ LOCAL DISPOSITION: use corrected0.2 semantics; the failed0.1 cohort is preserved
 the native factory and historical evidence, not relabelled as corrected. Its inspection
 mapping remains due. Controlled comparisons, character projection/language, six-mode
 UI, browser qualification and batch enrollment remain required.
+
+33 corrected-cohort contrasts now declared: single-setting model comparisons on
+identical original inputs, named acquisition/access/explanation/rupture/contact pairs,
+fixed-display physical differences, hidden-source violating-reader controls, and
+explicit empty/maximum calendar comparisons. Exports retain full originals, models,
+initial states and zero seed. Two focused tests and type-check PASS.
+
+Exact observer equality remains separate from reverse-order semantic equivalence.
+Only namespace1156 occurrences are normalized, matching the native qualifier; random
+addresses/draws and all other content remain unchanged. Ordered pairs and observer
+identity alignment are enforced; unequal committed positions report unavailable.
+
+All-program terminal comparison audit RUNNING in session82726 via
+check-workbench-relationship-comparison.mjs; no full comparison PASS claim yet.
+Native parity audit session19572 and shared batch audit session33242 also remain live.
