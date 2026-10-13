@@ -1,0 +1,240 @@
+{
+  "before": [
+    "10d25895b963d1ead80a93b3e7a78edb623acdfe583d909bdec9acd08958423f",
+    "e58e1e733cb83839da20e511ecc75694ddfcda0efc72e0473fcf7ac9d56a047a",
+    "dfffbded9de472db36551698b0bd4faa8aa610b7a40b6453ccc771decb49e0a9",
+    "2283e9df2c39718bc7adf7ade184b6d7dcd9c84233e43b8875b29a0e95ec4882",
+    "da28d480ca0e6854a08a4cf443e1a00d677459f109935b7c93f24af0d6300f9f",
+    "34a5ae7eedd66b2e05678cac2eb442e91f58e8b592e13b103e8e6a8165a12a43"
+  ],
+  "after": {
+    "hashes": [
+      "10d25895b963d1ead80a93b3e7a78edb623acdfe583d909bdec9acd08958423f",
+      "e58e1e733cb83839da20e511ecc75694ddfcda0efc72e0473fcf7ac9d56a047a",
+      "dfffbded9de472db36551698b0bd4faa8aa610b7a40b6453ccc771decb49e0a9",
+      "2283e9df2c39718bc7adf7ade184b6d7dcd9c84233e43b8875b29a0e95ec4882",
+      "da28d480ca0e6854a08a4cf443e1a00d677459f109935b7c93f24af0d6300f9f",
+      "34a5ae7eedd66b2e05678cac2eb442e91f58e8b592e13b103e8e6a8165a12a43"
+    ],
+    "paragraphs": [
+      "Inspect exact round-trip bytes, rejected layouts and versions, and observer and occurrence identity differences.",
+      "semantic-binding/0.1-candidate#SEM-001I.3. The active integrated run is unchanged.",
+      "The original union-layout fixtures include placeholder payload types. Passing a field-layout check does not admit those payload domains. Codec round-trips do not establish native save/load.",
+      "Original semanticCodecs.test.ts recipes. Seven listed lifecycle values and the declared state roots round-trip; this is not every semantic record or native save/load. Original union-layout fixtures intentionally use generic or mismatched payload namespaces (including ExperienceId for reference fields): passing layout checks does not establish payload-domain admission. Observer and occurrence comparisons retain their original ordinals. Researcher diagnostic evidence only; no full SEM qualification."
+    ],
+    "status": "Prefix 1 · instant 1 · Ready",
+    "tables": [
+      [
+        [
+          "admitted-schema",
+          "CV-SEM-096"
+        ],
+        [
+          "admitted-transition",
+          "CV-SEM-096"
+        ],
+        [
+          "admitted-schema-decode",
+          "CV-SEM-096"
+        ],
+        [
+          "exact-role-layout",
+          "CV-SEM-096"
+        ],
+        [
+          "unresolved-role-layout",
+          "CV-SEM-096"
+        ],
+        [
+          "symbol-and-mapping-layout",
+          "CV-SEM-096"
+        ],
+        [
+          "combined-carrier-layout",
+          "CV-SEM-096"
+        ],
+        [
+          "finite-layout",
+          "CV-SEM-096"
+        ],
+        [
+          "reference-layout-ObservationId",
+          "CV-SEM-096"
+        ],
+        [
+          "reference-layout-FeatureObservationId",
+          "CV-SEM-096"
+        ],
+        [
+          "reference-layout-EventFeatureObservationId",
+          "CV-SEM-096"
+        ],
+        [
+          "reference-layout-PerceivedBindingId",
+          "CV-SEM-096"
+        ],
+        [
+          "reference-layout-ClassificationEvidenceId",
+          "CV-SEM-096"
+        ],
+        [
+          "reference-layout-EventClassificationEvidenceId",
+          "CV-SEM-096"
+        ],
+        [
+          "reference-layout-RecognitionCueEvidenceId",
+          "CV-SEM-096"
+        ],
+        [
+          "reference-layout-RecognitionResolutionId",
+          "CV-SEM-096"
+        ],
+        [
+          "reference-layout-CausalRoleEvidenceId",
+          "CV-SEM-096"
+        ],
+        [
+          "lifecycle-round-trips",
+          "CV-SEM-096"
+        ],
+        [
+          "state-construction-order",
+          "CV-SEM-096"
+        ],
+        [
+          "allocator-produced-state",
+          "CV-SEM-096"
+        ],
+        [
+          "event-state-round-trip",
+          "CV-SEM-096"
+        ],
+        [
+          "occurrence-namespaces",
+          "CV-SEM-096"
+        ],
+        [
+          "observer-ownership",
+          "CV-SEM-096"
+        ]
+      ],
+      [
+        [
+          "unknown-schema",
+          "UNKNOWN_SEMANTIC_SCHEMA",
+          "no accepted semantic schema named PerceptualTrackGuess"
+        ],
+        [
+          "unknown-field",
+          "UNKNOWN_SEMANTIC_FIELD",
+          "PerceptualReferentId has no accepted field named TrackConfidence"
+        ],
+        [
+          "missing-field",
+          "MISSING_REQUIRED_FIELD",
+          "PerceptualReferentId requires field ObserverTrackSequence"
+        ],
+        [
+          "unadmitted-transition",
+          "UNADMITTED_CONTRACT_VERSION",
+          "contract version semantic-binding/0.2-speculative is not an admitted seam contract"
+        ],
+        [
+          "unadmitted-end",
+          "UNADMITTED_CONTRACT_VERSION",
+          "contract version semantic-binding/9.9-candidate#SEM-999Z is not an admitted seam contract"
+        ],
+        [
+          "unregistered-schema-version",
+          "Decoder exception",
+          "unknown record schema 212/2"
+        ],
+        [
+          "unresolved-with-role",
+          "ILLEGAL_UNION_LAYOUT",
+          "forbidden union payload field 2"
+        ],
+        [
+          "exact-without-role",
+          "ILLEGAL_UNION_LAYOUT",
+          "missing required union payload field 2"
+        ],
+        [
+          "unknown-role-tag",
+          "ILLEGAL_UNION_LAYOUT",
+          "unknown union variant 223/3"
+        ],
+        [
+          "missing-mapping",
+          "ILLEGAL_UNION_LAYOUT",
+          "missing required union payload field 4"
+        ],
+        [
+          "extra-carrier",
+          "ILLEGAL_UNION_LAYOUT",
+          "forbidden union payload field 3"
+        ],
+        [
+          "unbounded-with-value",
+          "ILLEGAL_UNION_LAYOUT",
+          "forbidden union payload field 2"
+        ],
+        [
+          "wrong-reference-layout-ObservationId",
+          "ILLEGAL_UNION_LAYOUT",
+          "missing required union payload field 2"
+        ],
+        [
+          "wrong-reference-layout-FeatureObservationId",
+          "ILLEGAL_UNION_LAYOUT",
+          "missing required union payload field 3"
+        ],
+        [
+          "wrong-reference-layout-EventFeatureObservationId",
+          "ILLEGAL_UNION_LAYOUT",
+          "missing required union payload field 4"
+        ],
+        [
+          "wrong-reference-layout-PerceivedBindingId",
+          "ILLEGAL_UNION_LAYOUT",
+          "missing required union payload field 5"
+        ],
+        [
+          "wrong-reference-layout-ClassificationEvidenceId",
+          "ILLEGAL_UNION_LAYOUT",
+          "missing required union payload field 6"
+        ],
+        [
+          "wrong-reference-layout-EventClassificationEvidenceId",
+          "ILLEGAL_UNION_LAYOUT",
+          "missing required union payload field 7"
+        ],
+        [
+          "wrong-reference-layout-RecognitionCueEvidenceId",
+          "ILLEGAL_UNION_LAYOUT",
+          "missing required union payload field 8"
+        ],
+        [
+          "wrong-reference-layout-RecognitionResolutionId",
+          "ILLEGAL_UNION_LAYOUT",
+          "missing required union payload field 9"
+        ],
+        [
+          "wrong-reference-layout-CausalRoleEvidenceId",
+          "ILLEGAL_UNION_LAYOUT",
+          "missing required union payload field 10"
+        ],
+        [
+          "unknown-namespace",
+          "UNKNOWN_SEMANTIC_NAMESPACE",
+          "no accepted occurrence namespace named NotAnOccurrence"
+        ],
+        [
+          "negative-ordinal",
+          "INVALID_OCCURRENCE_ORDINAL",
+          "occurrence ordinals must be nonnegative"
+        ]
+      ]
+    ]
+  }
+}

@@ -788,3 +788,18 @@ checker-only namespace assertions (EventBindingId1113 versus actual1100; Experie
 expectation1110 corrected to1106); failed checker preserved, runtime controls unchanged.
 Next codec worker/UI/browser parity, native persistence097/098 and state099/100.
 Corrected audit91832 COMPLETE exit0. All46 diagnostic digests,33 independently decoded/re-encoded canonical values and exact original helper prefix PASS. Ten current/frozen source identities verified.
+
+## Codec worker and browser parity (2026-10-13)
+
+Compare now exposes Canonical codecs and identity boundaries:23 cases and23 rejected
+inputs with exact guard codes/messages. Generic decoder exception remains distinct
+from SemanticCodecError. Original layout-placeholder limitation and codec-versus-save/load
+scope are visible. Worker codecs operation matches qualified report at all4 original
+prefixes and preserves checkpoints. Focused2 tests PASS. Production build47775 COMPLETE
+exit0,399 modules, existing chunk-size warning retained.
+Browser prefix1 full268,040-character report captured in50,000-character chunks with
+both23-row tables, scope paragraphs and6 unchanged active hashes. Screenshot inspected.
+Evidence root workbench-sem-codec-ui-rev1. No full download/native persistence/full SEM
+claim. Evidence restore/research PASS,18 conditional obligations unchanged. Next native
+persistence097/098 and remaining state099/100 plus integrated coverage gaps.
+Audit5616 COMPLETE exit0: full browser report, both tables, scope text and6 hashes equal fresh native execution and qualified foundation report. Nine current/frozen sources and3 capture identities verified.
