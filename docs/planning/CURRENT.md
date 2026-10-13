@@ -151,3 +151,6 @@ and type-check PASS. See OBSERVABILITY_WORKBENCH_SOCIAL_PROGRESS.md; UI remains 
 
 SOCIAL six-mode component/worker prepared;2 transport tests and type-check PASS.
 Registration/browser checks wait for bound batch registry audit session33242 to finish.
+
+RELATIONSHIP corrected0.2 adapter prepared:11 models/24 originals;2 focused tests PASS.
+Full256-prefix audit RUNNING session19572; start OBSERVABILITY_WORKBENCH_RELATIONSHIP_PROGRESS.md.
