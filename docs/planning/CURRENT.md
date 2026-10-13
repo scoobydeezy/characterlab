@@ -43,8 +43,9 @@ Workbench qualification remains incomplete. Continuant lifecycle component contr
 now qualified:10 scenarios/7 guards/17 exact diagnostics, including worker/UI/browser
 parity. Declared three-axis component matrix now qualified:24 cases/72 pairs/
 120 canonical records, now with worker/UI/browser parity and3 verified filters.
-Next truth-binding/event-file controls, then remaining phase/state/provenance
-and integrated coverage gaps.
+Truth-binding component controls now qualified:8 cases/12 guards/4 projections/
+25 diagnostics. Next worker/UI/browser integration, then event-file controls and
+remaining phase/state/provenance and integrated coverage gaps.
 Full corpus coverage and Campaign4 entry acceptance stay open.
 Joined REASON continuation: OBSERVABILITY_WORKBENCH_REASON_PROGRESS.md;115 native
 programs/350 prefixes pass; Values125/625 retained. Full workbench acceptance remains open.

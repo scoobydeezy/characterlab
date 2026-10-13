@@ -488,3 +488,26 @@ No full download, scheduler persistence, general independence law, new Campaign3
 verdict/amendment or full SEM/Campaign4 acceptance claim.
 Next original truth-binding/event-file controls023-040, then remaining semantic
 families and integrated gates retained in the census.
+
+Original truth-binding controls qualified (2026-10-13): CV023-030 helpers from
+src/test/eventBindings.test.ts retained verbatim, including trailing helper functions.
+Eight compilation cases preserve multi-role/repeated-role occurrences, event-specific
+narrowing/cardinality, exact replay/reordering, ordinal opacity and fixed-action
+closure. Twelve rejection cases retain actual codes/messages and complete requests.
+Four role projections preserve/coarsen/unresolved/omit remain distinct; character
+projection has only eventRoleEvidence and perceptualReferentId. Researcher evidence
+retains truth separately. Original schema version stays diagnostic, not re-versioned.
+
+The isolated original scheduler materializes first binding90 before injected failure.
+State/allocator/trace/output stay equal, status changes Active to Failed. No active-run
+rollback or successful continuation claim. Nine runtime tests PASS. Typecheck99068
+failed on two implicit report-array types and an intentional invalid-role cast.
+Diagnostic and source-at-diagnosis preserved under development-failure with its
+capture limitation stated. Explicit types/cast corrected; runtime recipes unchanged.
+Build24508 COMPLETE exit0 (391 modules), including TypeScript/reference boundaries.
+Audit12133 COMPLETE exit0:8 cases/12 guards/4 projections/25 diagnostic hashes,
+complete replay and original helper binding PASS. Eleven current/frozen sources
+independently verified. Receipt workbench-sem-binding-rev1/receipt.json.
+Evidence restore/research PASS;18 conditional obligations unchanged. No new
+Campaign3 verdict/amendment. Next worker/UI/browser integration, then event-file
+controls031-040 and remaining census gaps. Overall Campaign4 entry stays open.

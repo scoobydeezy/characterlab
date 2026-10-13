@@ -1,0 +1,5 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import{createHash}from'node:crypto';
+const source='src/test/eventBindings.test.ts',body=fs.readFileSync(source,'utf8'),end=body.indexOf("describe('SEM-001B"),tail=body.indexOf('function compareText(');assert(end>0&&tail>end);
+const prefix=body.slice(0,end).replace("import { describe, expect, it } from 'vitest';",'').replace("from './fixtures/referentOrigin'","from '../test/fixtures/referentOrigin'"),helpers=body.slice(tail);assert(!prefix.includes('expect('));
+fs.writeFileSync('src/workbench/semBindingFixture.ts',`// Original eventBindings.test.ts helper bodies retained verbatim, without test hooks.\n${prefix}\n${helpers}\nexport {referent,action,mina,glen,darius,library,pipe,cup,rule,schema,fixtureSchema,request,fixture,narrowingValidators,minaTrack17};\nexport const originalSource={path:'${source}',sha256:'${createHash('sha256').update(fs.readFileSync(source)).digest('hex')}'} as const;\n`,{flag:'wx'});
+console.log('PASS original binding helper extraction');
