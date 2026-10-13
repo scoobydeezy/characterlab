@@ -1,5 +1,11 @@
 # Current research entry point
 
+**Latest workbench2026-10-13:** Integrated SEM-001J diagnostic foundation qualified
+in workbench-sem-integrated-rev2. Three canonical observer chains, poisoned-label
+invariance and whole-instant rollback;14 tests/build PASS. Rev1 type failure retained.
+Next complete integrated shortcut/phenomenon evidence and worker/UI parity, then
+seven-leaf authority and acceptance reconciliation. Full goal remains open.
+
 **Workbench update2026-10-13:** CV-SEM-012 renderer diagnostic foundation qualified;
 three viewpoints with presentation/allocation/correction controls,6 focused tests and
 build PASS. See OBSERVABILITY_WORKBENCH_SEM_PROGRESS.md and

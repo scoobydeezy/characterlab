@@ -946,3 +946,29 @@ source identities and3 captured artifact identities. Production build3843 COMPLE
 402 modules; existing chunk-size warning retained. Evidence restore/research PASS with18
 conditional obligations unchanged. Next integrated phenomenon and authority/acceptance
 reconciliation; all broader workbench/Campaign4 requirements remain open.
+
+## Integrated chain foundation (2026-10-13)
+
+LOCAL DISPOSITION: reuse exact executable SEM-001J chain, identity traversal and
+record-type helpers; exclude all formal-document glob/ledger readers from the adapter.
+The native acceptance suite distinguishes ledger consistency from executed proof;
+neither test-file presence nor a PASS string is treated as workbench qualification.
+
+Three canonical chains retain Mina94/Darius69/Glen93 typed identity bindings, each
+with13 distinct record types. Field namespace/allocated occurrence payload checks
+pass. Glen's original13 stages are present; state roots241/242 are not mislabelled
+as stages in this chain. Original poisoned-label control changes only scaffolding
+names with permitted feature evidence held fixed, and preserves exact canonical bytes.
+Whole-instant failure runs the original integrated handler through causal roles,
+recognition and renderer output before native state validation rejects settlement.
+Committed state/allocators/trace/outputs remain identical; failed status is retained.
+No read/write participation trace or general symbolic-independence claim is inferred.
+
+Original13 integrated-gate tests plus1 adapter test PASS. Build76163 caught widened
+string-array typing after rev1 audit passed; failed revision and diagnosis retained.
+Rev2 uses a closed observer tuple, with no execution change. Corrected build54099
+COMPLETE exit0 (402 modules; existing chunk-size warning), audit15368 COMPLETE exit0.
+Ten source snapshots and full diagnostic report frozen in workbench-sem-integrated-rev2;
+rev1 is insufficient and superseded. Evidence restore/research PASS,18 conditional
+obligations unchanged. Remaining integrated shortcut refusals, phenomenon joins,
+worker/UI/browser parity, seven-leaf authority and acceptance remain required.
