@@ -56,7 +56,8 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 Start docs/planning/OBSERVABILITY_WORKBENCH_PLAN.md and OBSERVABILITY_WORKBENCH_WORK_PROGRESS.md.
 WORK native78 programs/624 prefixes PASS; six-mode worker UI/119 declared contrasts.
 WORK character projection/language PASS5152 descriptions/624 prefixes;256 control prefixes
-suppress narration. Batch and broader WORK browser qualification remain due.
+suppress narration. Nine-seam batch766/4666 qualification RUNNING; see
+OBSERVABILITY_WORKBENCH_BATCH_V5_PROGRESS.md. Broader browser qualification remains due.
 Byte0-only WORK seed correction and failed revision retained; five focused tests PASS.
 Native COMMIT10 programs/70 prefixes and DECISION174/360 PASS; bounded browser
 observer/control and decision replay evidence PASS. Nine COMMIT and259 DECISION

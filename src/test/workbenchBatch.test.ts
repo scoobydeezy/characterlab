@@ -1,5 +1,5 @@
 import {describe, expect, it} from 'vitest';
-import {BatchSession} from '../workbench/batchSession';
+import {BatchSession, BATCH_LIMITS} from '../workbench/batchSession';
 import type {BatchJob, BatchRunView, InspectableBatchRun} from '../workbench/experimentRegistry';
 import catalog from '../workbench/batchCatalog.json';
 const hashes = ['a', 'b', 'c'].map(x => x.repeat(64));
@@ -39,7 +39,7 @@ describe('Bounded workbench batch sessions', () => {
   it('rejects resource overflow and duplicate jobs before execution', () => {
     expect(() => new BatchSession([])).toThrow();
     expect(() => new BatchSession([job(), job()])).toThrow();
-    expect(() => new BatchSession(Array.from({length: 689}, (_, i) => ({...job(), id: String(i)})))).toThrow();
+    expect(() => new BatchSession(Array.from({length: BATCH_LIMITS.jobs + 1}, (_, i) => ({...job(), id: String(i)})))).toThrow();
     expect(() => new BatchSession([{...job(), expectedSaveHashes: Array(34).fill(hashes[0])}])).toThrow();
   });
   it('rejects early termination and terminal mutation without a passing receipt', async () => {

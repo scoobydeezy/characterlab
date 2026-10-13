@@ -89,3 +89,7 @@ projection, language, shared batch enrollment and broader browser work remain du
 WORK language: OBSERVABILITY_WORKBENCH_WORK_LANGUAGE_PROGRESS.md. Projection/language
 PASS78 programs/624 prefixes/5152 descriptions;256 violating-control prefixes explicitly
 suppress narration. Native historical hashes unchanged. Registry0.17; broader entry due.
+
+Latest: OBSERVABILITY_WORKBENCH_BATCH_V5_PROGRESS.md; WORK enrolled in shared batch.
+766 roles/4666 expected prefixes; native full audit RUNNING, no PASS claim yet.
+Twelve focused batch tests/build/research checks pass; browser/full entry remain due.
