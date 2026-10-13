@@ -124,3 +124,7 @@ SKILL and HABIT six-mode routes registered in registry0.19; first-prefix browser
 captures saved, independent verification pending. Shared batch factory unchanged.
 Start OBSERVABILITY_WORKBENCH_SKILL_HABIT_UI_PROGRESS.md. HABIT language PASS9688
 descriptions/291 prefixes with65 control prefixes suppressed. Full entry remains open.
+
+SKILL/HABIT browser replay PASS:1→6→1→6 and4→12→4→12 match frozen native hashes.
+See OBSERVABILITY_WORKBENCH_SKILL_HABIT_REPLAY_PROGRESS.md. File import/download,
+comparison/control browser cohorts and broader entry requirements remain open.

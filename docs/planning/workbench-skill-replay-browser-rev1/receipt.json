@@ -1,0 +1,104 @@
+{
+  "status": "PASS BOUNDED SKILL BROWSER CHECKPOINT CONTINUATION",
+  "sources": [
+    {
+      "path": "src/workbench/SkillWorkbench.tsx",
+      "sha256": "b6e8ce51a04d26989ece95567ee5b0019fca5a26d41dd12d880503206b2ab1c9"
+    },
+    {
+      "path": "src/workbench/skillAdapter.ts",
+      "sha256": "d16a8d2b8b5b1d98dbe7a17ac8ca81515b73a980367dca4f088f67de08293c8f"
+    },
+    {
+      "path": "src/workbench/skillWorker.ts",
+      "sha256": "cff2a787957883a7630f714907f963a5740f46f530d6de0c97552a64434483d5"
+    },
+    {
+      "path": "src/workbench/skillWorkerClient.ts",
+      "sha256": "6ca2eb25796ddd529f86bed7e48366c36683bac2fc9fe85e9b62dd75f95e14b7"
+    },
+    {
+      "path": "scripts/check-workbench-skill-replay-browser.mjs",
+      "sha256": "f15a8e751637e622b94ff38233485619133d872c2ddfccdd49ea6d53bc3f0810"
+    },
+    {
+      "path": "docs/planning/workbench-skill-parity-rev1/receipt.json",
+      "sha256": "c5ded826277de1633df6a5578a74c79504417eb2d449a9e8483c9b4037082cc4"
+    },
+    {
+      "path": "docs/planning/workbench-skill-habit-ui-rev1/skill.json",
+      "sha256": "ae5c2400ec4c3332ed1e0b84ae96709d58df0132192fdc9c36204e725f9c3132"
+    },
+    {
+      "path": "docs/planning/workbench-skill-replay-browser-rev1/captured.json",
+      "sha256": "35cbf0575ce28334c564261c14116e081d312ef32b270c7aaa7f84629312329f"
+    },
+    {
+      "path": "docs/planning/workbench-skill-replay-browser-rev1/before-restore.json",
+      "sha256": "ee4a2fdd8e67d832116741ced67273fc7a433685eccdbabcab8b50980e4e5ac3"
+    },
+    {
+      "path": "docs/planning/workbench-skill-replay-browser-rev1/restored.json",
+      "sha256": "35cbf0575ce28334c564261c14116e081d312ef32b270c7aaa7f84629312329f"
+    },
+    {
+      "path": "docs/planning/workbench-skill-replay-browser-rev1/continued.json",
+      "sha256": "ee4a2fdd8e67d832116741ced67273fc7a433685eccdbabcab8b50980e4e5ac3"
+    },
+    {
+      "path": "docs/planning/workbench-skill-replay-browser-rev1/continued.png",
+      "sha256": "e49db1bcd5573dbb9d2d04cacf86eee8d9e61faf761f7410451d951968636aac"
+    }
+  ],
+  "captures": [
+    {
+      "name": "captured",
+      "checkpoint": "Captured k0-p1-e1, prefix 1. Restoring authenticates original program, complete prefix and save bytes.",
+      "hashes": {
+        "modelHash": "5f7ee24df4958490a2868662cf555f811c867ec1c5c78565c94518971cd85399",
+        "outputsHash": "207ac12d07ac8e2e3b885a525a7c2031f8df85e5776276f8b1d5cac4be833907",
+        "runHash": "b95b6df308eedf52dde3d2fc311d86280826bac55afe986e1c575da776bcbbdd",
+        "saveHash": "eac1d257278d45ee5a286153ddefcc4b11554d2574e954f9e794958986717972",
+        "stateHash": "5c438935d31ba5b71499596b57f3101c69e9e33345c1d21cc878b57698a2e122"
+      },
+      "status": "Prefix 1 · instant 1 · Ready"
+    },
+    {
+      "name": "before-restore",
+      "checkpoint": "Captured k0-p1-e1, prefix 1. Restoring authenticates original program, complete prefix and save bytes.",
+      "hashes": {
+        "modelHash": "5f7ee24df4958490a2868662cf555f811c867ec1c5c78565c94518971cd85399",
+        "outputsHash": "143864b6ab6d74e1538196f5f5479e74ade7ac816d3c97dac260890dd8c8fab0",
+        "runHash": "b95b6df308eedf52dde3d2fc311d86280826bac55afe986e1c575da776bcbbdd",
+        "saveHash": "f3e7742aa1372c680e0a19c67091013e88132429fe7f249d1adda0d183584887",
+        "stateHash": "7e2ab28300469cfac4329be384ac5c58f975c3643ffa9c95b58797686cb28019"
+      },
+      "status": "Prefix 6 · instant 6 · Complete"
+    },
+    {
+      "name": "restored",
+      "checkpoint": "Captured k0-p1-e1, prefix 1. Restoring authenticates original program, complete prefix and save bytes.",
+      "hashes": {
+        "modelHash": "5f7ee24df4958490a2868662cf555f811c867ec1c5c78565c94518971cd85399",
+        "outputsHash": "207ac12d07ac8e2e3b885a525a7c2031f8df85e5776276f8b1d5cac4be833907",
+        "runHash": "b95b6df308eedf52dde3d2fc311d86280826bac55afe986e1c575da776bcbbdd",
+        "saveHash": "eac1d257278d45ee5a286153ddefcc4b11554d2574e954f9e794958986717972",
+        "stateHash": "5c438935d31ba5b71499596b57f3101c69e9e33345c1d21cc878b57698a2e122"
+      },
+      "status": "Prefix 1 · instant 1 · Ready"
+    },
+    {
+      "name": "continued",
+      "checkpoint": "Captured k0-p1-e1, prefix 1. Restoring authenticates original program, complete prefix and save bytes.",
+      "hashes": {
+        "modelHash": "5f7ee24df4958490a2868662cf555f811c867ec1c5c78565c94518971cd85399",
+        "outputsHash": "143864b6ab6d74e1538196f5f5479e74ade7ac816d3c97dac260890dd8c8fab0",
+        "runHash": "b95b6df308eedf52dde3d2fc311d86280826bac55afe986e1c575da776bcbbdd",
+        "saveHash": "f3e7742aa1372c680e0a19c67091013e88132429fe7f249d1adda0d183584887",
+        "stateHash": "7e2ab28300469cfac4329be384ac5c58f975c3643ffa9c95b58797686cb28019"
+      },
+      "status": "Prefix 6 · instant 6 · Complete"
+    }
+  ],
+  "scope": "Main program learned prefix1 capture, completion6, restore1 and continuation6 match frozen native prefix state/output/save hashes and model/run identities. No file import or full download transport claim; other SKILL programs remain outside this browser replay claim."
+}
