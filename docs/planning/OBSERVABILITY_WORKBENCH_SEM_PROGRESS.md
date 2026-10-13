@@ -87,3 +87,22 @@ verify browser text/provenance against the native receipt, then address retained
 semantic controls and recognition/causal explanation gaps. Existing Character UI
 still declares projection unavailable until that integration is verified. Full
 workbench and Campaign4 entry acceptance remain open.
+
+Character UI integration COMPLETE (2026-10-13): the worker now supplies the
+qualified inspection projection on create, advance and restore. Character mode
+selects Mina/Darius/Glen and exposes each selected observer's exact experience227
+beneath its description. Recognition and causal-role limits remain visible.
+Native semantics and the research-only trace/output views are unchanged.
+
+Three focused tests PASS, including actual worker output against native inspection
+at all four prefixes; production build PASS383 modules. Browser selected all12
+observer/prefix combinations and expanded available evidence. Audit51233 COMPLETE
+exit0: every displayed human/exact entry, notice, scope and all six native hashes
+match fresh native execution and the preceding language receipt. Screenshot
+inspected. Receipt: workbench-sem-character-ui-rev1/receipt.json. Research check
+retains18 conditional obligations. This supersedes the UI-unavailable status above.
+
+Next SEM work: inspect and expose the original binding/classification/causal and
+recognition controls with their actual component or integrated boundary, retaining
+whole-instant abort and measurement witnesses. Do not relabel a component control
+as a scheduled full-run experiment. Broader corpus and Campaign4 entry remain due.

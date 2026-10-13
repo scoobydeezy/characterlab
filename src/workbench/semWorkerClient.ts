@@ -1,4 +1,4 @@
-import type {SemSnapshot} from './semAdapter';
+import type {SemInspectionSnapshot as SemSnapshot} from './semInspection';
 import type {verifySemReplay} from './semReplay';
 import type {SemCheckpoint} from './semAdapter';
 export class SemWorkerClient {
