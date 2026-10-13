@@ -803,3 +803,24 @@ Evidence root workbench-sem-codec-ui-rev1. No full download/native persistence/f
 claim. Evidence restore/research PASS,18 conditional obligations unchanged. Next native
 persistence097/098 and remaining state099/100 plus integrated coverage gaps.
 Audit5616 COMPLETE exit0: full browser report, both tables, scope text and6 hashes equal fresh native execution and qualified foundation report. Nine current/frozen sources and3 capture identities verified.
+
+## Native persistence foundation (2026-10-13)
+
+Original semanticStatePersistence CV-SEM-097/098 recipes retained with exact prefix
+and tail helper bodies inside a fresh per-invocation occurrence-label factory. Original
+seed11, runtime allocator500, semantic state241/242, detection handler and identities.
+Actual native midpoint save/load/re-save is byte-identical; restored continuation is
+byte-identical to uninterrupted two-instant execution. Independently loaded both captured
+native saves and re-saved them, checking Mina counters1/2 in both state families.
+Injected invalid-state commit failure records materialized transition/trace/output before
+rejection; committed state/allocators/trace/outputs preserved, Active becomes Failed.
+Direct-transition observer interleaving retains Mina shared-counter draws500/501 versus
+501/503 with identical Mina file summaries and transition semantic views. This original
+comparison does not execute a multi-observer scheduler and does not prove general
+observer independence. Ten original detection/event labels in original test order.
+Three exact diagnostic records. No UI/full SEM claim.
+Four focused tests PASS, JSON retained. Audit17855 COMPLETE exit0; helper identity,
+repeatability, diagnostic digests and independent native reload PASS. Evidence restored,
+research PASS,18 conditional obligations unchanged. Next persistence worker/UI/browser
+parity, remaining state099/100 and integrated SEM coverage.
+Production build5069 COMPLETE exit0,399 modules; typecheck/boundary checks pass, existing chunk-size warning retained. Ten current/frozen source identities independently verified.
