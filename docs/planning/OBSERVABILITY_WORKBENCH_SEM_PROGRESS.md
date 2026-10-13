@@ -446,3 +446,29 @@ capture hashes independently verified. Evidence restore and research check PASS;
 new Campaign3 verdict/amendment or full SEM acceptance is claimed.
 Next joined tracking/classification/recognition comparisons and remaining SEM
 families identified by the complete census. Overall Campaign4 entry stays open.
+
+Declared three-axis component comparison qualified (2026-10-13). This is a NEW
+bounded composition of accepted APIs, not an unchanged historical recipe.24 cases:
+3 appearance conditions (discrete/metallic/no assertion),2 tracking choices
+(continue versus retire/reacquire),4 recognition histories (unresolved/Glen/Darius/
+prior Darius followed by Glen). Every case shares initial observation10, optional
+retirement20 and final observation30. Catalog candidates are explicitly seeded
+observer knowledge, never copied from truth. Retirement and recognition use
+separately declared occurrence ranges; no scheduler or native Save132 claim.
+
+Seventy-two one-axis pairs:24 appearance/12 tracking/36 recognition. Full canonical
+truth, initial/final experience, file state and resolution history retained alongside
+exact requests/evaluations. Comparison policy separately reports raw experience and
+semantic views. Recognition semantic comparison excludes carrier/revision addresses
+only under the declared cross-track alignment; originals retain those addresses.
+Same-track correction appends a revision; new-track correct recognition appends an
+independent assertion and preserves the old wrong assertion. No cross-track rewrite.
+
+Focused24-case/72-pair test PASS; typecheck37974 COMPLETE exit0. Audit25336 COMPLETE
+exit0:120 canonical round trips/hashes, complete replay and correction-history joins
+PASS.14 current/frozen source hashes independently verified. Receipt:
+workbench-sem-axes-rev1/receipt.json. Evidence restore and research check PASS;
+18 conditional obligations unchanged; no new Campaign3 verdict/amendment.
+Next worker/UI/browser qualification of this declared matrix. General independence,
+full CV016 and overall Campaign4 entry acceptance remain unclaimed.
+Production build66731 COMPLETE exit0 (390 modules), reference boundary PASS. UI enrollment remains next.
