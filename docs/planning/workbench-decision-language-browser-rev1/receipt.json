@@ -1,0 +1,48 @@
+{
+  "status": "PASS BOUNDED DECISION LANGUAGE BROWSER",
+  "sources": [
+    {
+      "path": "src/workbench/decisionExplanations.ts",
+      "sha256": "b34b4b0535dc97a1d2ef8ccfa00ef9478c49107c77e0a898d599d34e95f7c5ba"
+    },
+    {
+      "path": "src/workbench/DecisionWorkbench.tsx",
+      "sha256": "609cf18bab9c585817b8502fc331acb1f431587c858f5f47a4a35ff5ed2b9f3f"
+    },
+    {
+      "path": "src/workbench/decisionAdapter.ts",
+      "sha256": "a687f97b4ef901dd35c8dc403a0adb7bfa80e77abc54b5c6838b4beaca247c5b"
+    },
+    {
+      "path": "scripts/check-workbench-decision-language-browser.mjs",
+      "sha256": "31642b8831a71143aa5a538763bd809342af562438cc3d245a73542b225b8dec"
+    },
+    {
+      "path": "docs/planning/workbench-decision-language-browser-rev1/denied.json",
+      "sha256": "c43477860c7b607a81c565abe112193b23cc78d632d817ca37675fbdc4427086"
+    },
+    {
+      "path": "docs/planning/workbench-decision-language-browser-rev1/blocked.json",
+      "sha256": "330ae4bbcfb57584f103c08e8b2c91db63bbc0be0336a643584f9bd824a2e871"
+    },
+    {
+      "path": "docs/planning/workbench-decision-language-browser-rev1/blocked.png",
+      "sha256": "dcd63e6aa9a70228c69d9006586a856f675dcdb56a30f74557ab483f919e261f"
+    }
+  ],
+  "results": [
+    {
+      "id": "1/denied",
+      "cards": 3,
+      "saveHash": "56b5e531a72bff8e858fe70c1fff401d023bdc3716506c7000e2acb893dfa020",
+      "characterHash": "a1cf2cb54b751fc633b489cf2870bd3b63873378951160c1d39b8f22aebf7ac0"
+    },
+    {
+      "id": "1/r3-s0-blocked",
+      "cards": 4,
+      "saveHash": "a3605ae500940f56720115a93b8980405db78481fa128e2506359abafe91a2f0",
+      "characterHash": "15cedbb2ba98a42a6f37bca356f08555ef15cf69be9c9cbd10f386f4ebd9e58c"
+    }
+  ],
+  "scope": "Missing current evidence and high-conflict blocked execution at prefix1. All rendered paragraphs, factors, exact report bodies, complete character projection and five displayed hashes match native execution. Other profiles and wider browser language coverage remain due."
+}

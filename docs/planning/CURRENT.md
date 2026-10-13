@@ -61,13 +61,13 @@ and complete checkpoint replay PASS. BELIEF language/batch and broader corpus du
 Prior: OBSERVABILITY_WORKBENCH_BELIEF_LANGUAGE_PROGRESS.md;933 descriptions/
 48 programs/381 prefixes PASS. Full narrative/corpus/batch/entry gates remain.
 Latest: OBSERVABILITY_WORKBENCH_BATCH_V4_PROGRESS.md; eight seams/688 execution
-roles enrolled,4042-prefix qualification RUNNING.13 tests/build PASS; full acceptance pending.
+roles/4042 exact frozen prefixes PASS.13 tests/build PASS; full workbench acceptance pending.
 Prior: OBSERVABILITY_WORKBENCH_COMMIT_UI_PROGRESS.md; COMMIT10/70 native parity,
 observer selection/private lifecycle browser and four tests PASS. DECISION174/360
 native parity, bounded browser replay and259 exact contrast declarations PASS.
 OBSERVABILITY_WORKBENCH_BATCH_V3_PROGRESS.md:504 execution roles/3612 native prefixes
 PASS across six seams. Registry0.13 consolidates DECISION/COMMIT inspection metadata;
-their batch enrollment is now under full qualification; natural-language renderers remain due.
+their batch enrollment and bounded natural-language renderers now pass; full narrative remains due.
 OBSERVABILITY_WORKBENCH_AFFECT_LANGUAGE_PROGRESS.md:3037 descriptions/1436 prefixes
 PASS, with bounded browser evaluation history checks. Full workbench remains open.
 Campaign4 entry remains gated by the full workbench plan; no reduction work has started.
@@ -75,4 +75,8 @@ Counters1529/0; no owner ruling.
 
 COMMIT admitted-report language: OBSERVABILITY_WORKBENCH_COMMIT_LANGUAGE_PROGRESS.md.
 All10 programs/70 prefixes/140 observer projections/57 descriptions PASS; bounded
-observer-report scope only. DECISION language and integrated workbench entry remain due.
+observer-report scope only. Integrated workbench entry remains due.
+
+DECISION language implementation and qualification: OBSERVABILITY_WORKBENCH_DECISION_LANGUAGE_PROGRESS.md.
+Full174-program/360-prefix language audit PASS798 descriptions; two browser cases PASS.
+The688-role shared batch audit also completed PASS. Source snapshots remain frozen.

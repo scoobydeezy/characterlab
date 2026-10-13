@@ -1,0 +1,32 @@
+{
+  "status": "PASS EXACT QUALIFICATION METADATA REFRESH",
+  "bindings": [
+    {
+      "path": "docs/planning/workbench-batch-parity-rev4/receipt.json",
+      "sha256": "251e553a992529235f499005cd02945532f24752f1f55837bc2de3aa0d6e2670"
+    },
+    {
+      "path": "docs/planning/workbench-decision-language-rev1/receipt.json",
+      "sha256": "061663bd050df08ba52b97fe347745c6e488449d424c8546a2eff5973d4ba067"
+    },
+    {
+      "path": "docs/planning/workbench-decision-language-browser-rev1/receipt.json",
+      "sha256": "27d922977b095f38653d47ad2e6c71385157399e1487f25cf644ed055b47c590"
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/workbench/experimentRegistry.ts",
+      "sha256": "e455a49fcbb9f06d09e1fba2ad16d0d3a03fab30b8363fcf221b91be714b0ca2"
+    },
+    {
+      "path": "src/test/workbenchDecisionExplanations.test.ts",
+      "sha256": "a610ef244dec83ce682821d5acbea7aae4c83dbdc666479897594604c53cae66"
+    },
+    {
+      "path": "scripts/check-workbench-qualification-refresh.mjs",
+      "sha256": "704a5087faf6c2fa7ecdc62f10b70e43609260c35241e734b12bc6c08a9264f5"
+    }
+  ],
+  "scope": "Frozen source identities retained. Registry delta is exactly version0.15 and two explanation capability descriptions. Shared batch interfaces/factory bytes unchanged. DECISION test delta is exactly an explicit native-execution timeout. Existing execution receipts are not rerun or broadened."
+}

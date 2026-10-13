@@ -24,12 +24,13 @@ Verification:
 - TypeScript/build/reference boundary PASS.
 - Evidence restore/research checks PASS:0 active/18 conditional/4 closed/0 unowned.
 
-Full688-role qualification is RUNNING in scripts/check-workbench-batch-v4.mjs.
-Acceptance requires workbench-batch-parity-rev4/receipt.json, with all4042 exact
-frozen saves and complete original export checks. Prior shared504/3612 and individual
-DECISION174/360 and COMMIT10/70 qualifications remain retained evidence, not an
-automatic declaration that this changed shared route passed. Do not mutate its
-bound sources or restart the live writer over immutable output.
+Full688-role qualification PASS: workbench-batch-parity-rev4/receipt.json records
+688 execution roles/4042 exact frozen prefixes and complete original export checks.
+The writer completed successfully; all16 current and frozen source hashes were
+verified on2026-10-13 before the metadata-only registry refresh. Prior504/3612 and
+individual qualifications remain retained. Registry0.15 changes only the version
+and COMMIT/DECISION explanation metadata; its batch factory bytes are unchanged.
+workbench-qualification-refresh-rev1 binds and checks those exact deltas.
 
 The complete10-program COMMIT browser cohort independently passes under
 workbench-batch-browser-rev4. Its bounded preview and all70 displayed prefix hashes
