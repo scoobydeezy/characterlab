@@ -472,3 +472,19 @@ workbench-sem-axes-rev1/receipt.json. Evidence restore and research check PASS;
 Next worker/UI/browser qualification of this declared matrix. General independence,
 full CV016 and overall Campaign4 entry acceptance remain unclaimed.
 Production build66731 COMPLETE exit0 (390 modules), reference boundary PASS. UI enrollment remains next.
+
+Three-axis Compare UI COMPLETE (2026-10-13). Worker execution matches the qualified
+component receipt and preserves all4 active prefixes; two worker tests PASS (axes
+and continuant). Build71479 COMPLETE exit0,391 modules; boundaries/research PASS.
+Browser prefix1 complete802074-character report,24 case rows,72 comparison rows,
+all alignment/scope text and three filtered tables match fresh native execution.
+Filters retain24 appearance/12 tracking/36 recognition-history rows. Full originals
+and correction scopes remain visible; both wide tables support keyboard horizontal
+scrolling. This is bounded usability evidence, not a full accessibility audit.
+All6 active hashes unchanged. Screenshots inspected. Audit65836 COMPLETE exit0;
+receipt workbench-sem-axes-ui-rev1/receipt.json. Eight current/frozen sources and6
+capture hashes independently verified. All18 conditional obligations retained.
+No full download, scheduler persistence, general independence law, new Campaign3
+verdict/amendment or full SEM/Campaign4 acceptance claim.
+Next original truth-binding/event-file controls023-040, then remaining semantic
+families and integrated gates retained in the census.
