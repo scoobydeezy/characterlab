@@ -637,3 +637,23 @@ evidenceProvenance.test.ts071-080 controls: closed references, admission scope,
 co-reference/shared evidence, ordinal opacity, missing evidence, ReadDomains,
 causal-role independence and safe ancestry/rollback. Remaining phase/state and
 integrated census gaps and overall Campaign4 entry remain open.
+
+Provenance component controls COMPLETE (2026-10-13). Original evidenceProvenance
+071-080 recipes preserve12 cases/17 guards/3 absent truth APIs/one isolated rollback
+with30 exact diagnostics. Original helper prefix retained except test import removal.
+Closed references, admitted schemas, observer/window/modality/carrier scopes,
+co-reference and false discontinuity, same-observer shared evidence, ordinal opacity,
+narrow ReadDomains and independent causal roles remain separate. Observer IDs retain
+the original observer/ namespace. The077 explicitFalse variable names a present
+reference with no false payload; bounded-interval schema admission supplies no interval
+value. These are stated limits, not upgraded evidence-quality qualification.
+Original isolated failure allocates causal-role evidence80; state/allocator/trace/
+output stay equal while Active becomes Failed. Original10 tests plus workbench test
+PASS (11 total); typecheck37867 and build93909 COMPLETE exit0 (395 modules/reference
+boundaries). Audit46399 COMPLETE exit0; receipt
+workbench-sem-provenance-rev1/receipt.json. Nine current/frozen source identities
+independently verified. Evidence restore/research PASS;18 conditional obligations
+unchanged, no new Campaign3 verdict/amendment or native Save132 claim.
+LOCAL DISPOSITION: retain original fixture version, admission scopes and claim limits;
+no architectural ruling needed. Next provenance worker/Compare UI/browser parity,
+then remaining phase/state and integrated census gaps. Overall Campaign4 entry open.
