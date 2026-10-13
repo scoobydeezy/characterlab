@@ -839,3 +839,26 @@ no full file download/full SEM claim. Evidence root workbench-sem-persistence-ui
 Evidence restore/research PASS,18 conditional obligations unchanged. Next state099/100
 and integrated SEM coverage gaps; overall Campaign4 entry remains open.
 Audit1113 COMPLETE exit0: full browser report,3 tables, scope text and6 hashes equal fresh native execution and qualified foundation. Nine current/frozen sources and3 captures verified. Existing semKnowledgeControls already targets099/100 and self-sufficient resolution; next reconcile that evidence and all newer increments into SEM coverage before adding duplicate controls.
+
+## SEM coverage reconciliation rev2 (2026-10-13)
+
+Frozen rev1 preserved. New workbench-sem-coverage-rev2 joins11 newer UI receipts for
+continuant,axes,binding,event files,classifiers,provenance,phase,schema,codec,persistence.
+Every joined receipt frozen source and capture digest checked. Existing knowledge099/100
+control/fixture/panel current identities equal its qualified receipt: no duplicate panel
+needed. Its nine cases already retain active/retired mapping occurrences, immutable
+replacement, duplicate symbol/catalog rejection and resolution without evaluation pointer.
+Full recognition-root persistence remains a separate scope.
+All100 exact formal requirements retained, with94 scoped pointers versus23 in rev1.
+Zero full-vector completion claims; all31 named negatives,10 acceptance gates and6
+supplements remain individually open until matching inspection evidence is reviewed.
+Current native25 files/222 tests PASS, including corrected phase090 and its cause
+regression; current18 worker tests PASS against qualified reports at original prefixes.
+Audit82092 COMPLETE exit0, with JSON/output reports and source snapshots retained.
+Prior generic090 PASS does not establish orphan cause; correction receipt explicitly joined.
+Next31 named negative-control witnesses with exact first closure/structural-absence proof,
+then integrated001/004/005/008/010/012 renderer/phenomenon joins, seven-leaf authority,
+canonical membership/occurrence migration and all10 gates. Broad semantic/psychological
+claims are not inferred from bounded component comparisons. No runtime/UI change this
+turn; no production rebuild needed after prior passing persistence UI build. Research
+restore/check PASS;18 conditional obligations unchanged. Campaign4 entry remains open.

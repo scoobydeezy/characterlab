@@ -1,0 +1,58 @@
+{
+  "status": "PASS PERSISTENCE BROWSER/NATIVE PARITY",
+  "sources": [
+    {
+      "path": "src/workbench/SemWorkbench.tsx",
+      "sha256": "83ad9c4198e048d72d73c0c27846903e057ba5162b1ed8a561d177252cb767a9"
+    },
+    {
+      "path": "src/workbench/SemPersistencePanel.tsx",
+      "sha256": "a13f64a4262d271f5b7e00846efb9e13b50ea2309b50dad01677c58a7e17936b"
+    },
+    {
+      "path": "src/workbench/semPersistenceControls.ts",
+      "sha256": "3ca3dde20b426988aa69c86b59d16b41ddc55aeab2c4f65d4b05b1180e4ec735"
+    },
+    {
+      "path": "src/workbench/semPersistenceFixture.ts",
+      "sha256": "e09a385eb98860b40b65b17c9977f0339469d68f786ba7e469b8bf0c63e106ec"
+    },
+    {
+      "path": "src/workbench/semWorker.ts",
+      "sha256": "9b2022e06ed99650acff43aae1df2ff8acf6da048470e4aba623e0e3ac84b964"
+    },
+    {
+      "path": "src/workbench/semWorkerClient.ts",
+      "sha256": "e064399836b5dda5fb0f961ad23b6a863e9b05a1fab41ae6f119fa52f40f220e"
+    },
+    {
+      "path": "src/test/workbenchSemPersistenceWorker.test.ts",
+      "sha256": "f2baba705114b592ef3c56b5863eb10344b900e2c5ee90faa22d3cb040ee33f6"
+    },
+    {
+      "path": "scripts/check-workbench-sem-persistence-ui.mjs",
+      "sha256": "a36c683fe63ae63bfecd0204a02f830d10b468e6513df493a587dcdf384943bc"
+    },
+    {
+      "path": "docs/planning/workbench-sem-persistence-rev1/receipt.json",
+      "sha256": "9496ff2babe4c09b1a638461f964383ecb270ccb8f3513717b742dc05a12e5c1"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "report.json",
+      "sha256": "1ffb8437410b75e2932c8d0253cafc51c2b552e0ed4f0b58824e3439e46d9c78"
+    },
+    {
+      "path": "ui.json",
+      "sha256": "e44c5ae98c129288514b416125169a9f8018e9aa9be7b12214b81d7d17075cc3"
+    },
+    {
+      "path": "persistence.png",
+      "sha256": "40e84fa9ec28ad00e177c5349ed040a378ed55716a93aa2f43363827f5055ba0"
+    }
+  ],
+  "reportCharacters": 118465,
+  "activePrefix": 1,
+  "scope": "Complete browser report captured in bounded chunks;2 native save comparisons/4 rollback/3 isolation rows equal fresh native execution and qualified component evidence. Six active hashes unchanged. Worker tests preserve four prefixes. Screenshot inspected. Component native persistence is qualified; no full file download or full SEM/Campaign4 claim."
+}

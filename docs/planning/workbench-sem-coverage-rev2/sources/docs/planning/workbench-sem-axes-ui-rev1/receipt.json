@@ -1,0 +1,66 @@
+{
+  "status": "PASS THREE-AXIS BROWSER/NATIVE PARITY",
+  "sources": [
+    {
+      "path": "src/workbench/SemWorkbench.tsx",
+      "sha256": "99d5a43ddde0f3b336ad3029201bdaf72570348b535517ff4c0ff1fd437dec65"
+    },
+    {
+      "path": "src/workbench/SemAxesPanel.tsx",
+      "sha256": "59f478685985db92183979f1284045b02e75252869063fe3c6baef3f71d6ebed"
+    },
+    {
+      "path": "src/workbench/semAxesControls.ts",
+      "sha256": "ef666526acd892f8be196067478372f0a25ee90c0eb6f82367392b51c2d49d6e"
+    },
+    {
+      "path": "src/workbench/semWorker.ts",
+      "sha256": "57f2bf8503c778bab34daae9ba637604dcd6ff42d92594981692d0e3134e54fb"
+    },
+    {
+      "path": "src/workbench/semWorkerClient.ts",
+      "sha256": "8fccde9f30a7a316a758651ef8ff740b539eeb2a1c298680d8c27e259d706867"
+    },
+    {
+      "path": "src/test/workbenchSemAxesWorker.test.ts",
+      "sha256": "d64d6ec38686ceb2cf2ee0bd5704776bd00bde84d00dcc665c28ab001c594499"
+    },
+    {
+      "path": "scripts/check-workbench-sem-axes-ui.mjs",
+      "sha256": "867b6484c431b9c20a26042eac1f750c8b5d29c648a17d7744a830bdb867bdb6"
+    },
+    {
+      "path": "docs/planning/workbench-sem-axes-rev1/receipt.json",
+      "sha256": "b9111cda7b8bdc94b31de0ff735f76a08526d7c00860f6f2ef48a72e7383ed6f"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "report.json",
+      "sha256": "0ee7f7c35095ee4fccd8cd900a85e4b9f7d7cae9e950d94da98b82a8c421c09f"
+    },
+    {
+      "path": "ui.json",
+      "sha256": "daa5cdc178be1021674fc6becfe52e11e1017b9f149bc1f3be8d48b1658bb8b4"
+    },
+    {
+      "path": "axes.png",
+      "sha256": "97b654a7d10c584429ba3032e3818d8183256a0590e1229ded6b5e315213f924"
+    },
+    {
+      "path": "axes-full.png",
+      "sha256": "5e83769dc038401915f7955762e886e4d4736aaec78756f9e00fa7030c103ae5"
+    },
+    {
+      "path": "scroll.json",
+      "sha256": "b7c589e67d55df484abed024ba29baad838fdc30b99ed6cce7f0357ff3d43992"
+    },
+    {
+      "path": "axes-scrolled.png",
+      "sha256": "7c3095d9ef24f48670afbd27a7fdb9ef2ccb48368f0bb3e8c742257de8f01df6"
+    }
+  ],
+  "reportCharacters": 802074,
+  "activePrefix": 1,
+  "scope": "Complete browser report,24 cases,72 comparisons and all three filtered tables equal native execution and qualified component evidence. Six active hashes unchanged. Worker tests cover four prefixes; both table scroll areas respond to keyboard navigation. Screenshots inspected. No full download, broad accessibility/resource audit, scheduler persistence or full SEM/Campaign4 claim."
+}
