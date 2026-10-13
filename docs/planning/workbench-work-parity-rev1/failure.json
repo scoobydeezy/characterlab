@@ -1,0 +1,26 @@
+{
+  "actual": "1a6db618b05de028b088418b4aada436e71d28fdd01dbe8ca11b7b9ca330ba2e",
+  "status": "FAIL HISTORICAL SEED ENCODING",
+  "program": "draw-1-1",
+  "sources": [
+    {
+      "path": "src/workbench/workAdapter.ts",
+      "sha256": "9b0ab88e02e7519b17caee31a5c556dd60053c19ef775fe8af3a8dea5a57c563"
+    },
+    {
+      "path": "src/workbench/workCatalog.json",
+      "sha256": "00acb08e21dc5e00884326ef6ae252bda3ece68e519376ffb33001b6a5bcf688"
+    },
+    {
+      "path": "src/test/workbenchWork.test.ts",
+      "sha256": "f3a142f0ae75ce985bea32406d15a756258af4aa36f2d47cf567a41a59c036dd"
+    },
+    {
+      "path": "scripts/check-workbench-work.mjs",
+      "sha256": "440f4e7e487aadf0b29e7977793a94cef641515ddc09e81b4bee0a862bfb792b"
+    }
+  ],
+  "prefix": 0,
+  "cause": "Repeated seed bytes differ from original byte0-only encoding. Direct native equality alone did not detect it; frozen historical save did.",
+  "expected": "4251f687bd74a837b566d1767dd4970dddd88e4884734b448041c0631b151c8a"
+}

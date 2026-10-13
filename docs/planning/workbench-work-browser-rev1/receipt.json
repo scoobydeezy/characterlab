@@ -1,0 +1,43 @@
+{
+  "status": "PASS BOUNDED WORK BROWSER COMPARISON",
+  "sources": [
+    {
+      "path": "src/workbench/WorkWorkbench.tsx",
+      "sha256": "9e5c3cb0aba29fb6b4bf58c7c6ca4c1697f77fc67b8e6e51afcd90d2fba3c6ba"
+    },
+    {
+      "path": "src/workbench/workAdapter.ts",
+      "sha256": "c3148e9647fe17a8b01e0fd4a2bc4f7f0315f9bd43c90870e9c9c9b0ba09512e"
+    },
+    {
+      "path": "src/workbench/workComparison.ts",
+      "sha256": "6e9356d4886a963a5a4281a59acb2b820298f967ec9e6c8d68a370b4cde75ad0"
+    },
+    {
+      "path": "src/workbench/workWorker.ts",
+      "sha256": "0e4704510ebce8544ba8f61fcf78bd249c8be585e680cd5076d301c6ee316e99"
+    },
+    {
+      "path": "src/workbench/workWorkerClient.ts",
+      "sha256": "2044adc27d6878b1179450d184412993cb3a309d085b56036fe70497cae13564"
+    },
+    {
+      "path": "scripts/check-workbench-work-browser.mjs",
+      "sha256": "3561ba5144d35d628f94bd190cf954b95dc3c006ab447d1a10877cf51a7dd8eb"
+    },
+    {
+      "path": "docs/planning/workbench-work-browser-rev1/comparison.json",
+      "sha256": "4396ef3fff197a0754ab7942fadb612c1bfe15092d335e319610d8d7abe66bfc"
+    },
+    {
+      "path": "docs/planning/workbench-work-browser-rev1/comparison.png",
+      "sha256": "3dbbf69cf91a5a6fc68dd4f1bcd7175f23d0fb4ca6255f3a974e46bae00875f6"
+    }
+  ],
+  "programs": [
+    "c1-k1-s1",
+    "c2-k1-s1"
+  ],
+  "prefix": 7,
+  "scope": "StoredSet/IndexedReplay capacity1 support-on comparison. Complete native-backed report, original inputs and five displayed hashes verified. Other comparisons, browser checkpoint replay and character projection remain due."
+}

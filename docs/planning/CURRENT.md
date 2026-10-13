@@ -80,3 +80,8 @@ observer-report scope only. Integrated workbench entry remains due.
 DECISION language implementation and qualification: OBSERVABILITY_WORKBENCH_DECISION_LANGUAGE_PROGRESS.md.
 Full174-program/360-prefix language audit PASS798 descriptions; two browser cases PASS.
 The688-role shared batch audit also completed PASS. Source snapshots remain frozen.
+
+Latest WORK adapter: OBSERVABILITY_WORKBENCH_WORK_PROGRESS.md. Native78 programs/624
+prefixes PASS after preserved seed-encoding correction. Six-mode worker route and119
+contrasts implemented; five focused tests/build/research checks PASS. Character
+projection, language, shared batch enrollment and broader browser work remain due.

@@ -11,6 +11,7 @@ const Belief = lazy(() => import('./BeliefWorkbench').then(m => ({default: m.Bel
 const Affect = lazy(() => import('./AffectWorkbench').then(m => ({default: m.AffectWorkbench})));
 const Decision = lazy(() => import('./DecisionWorkbench').then(m => ({default: m.DecisionWorkbench})));
 const Commit = lazy(() => import('./CommitWorkbench').then(m => ({default: m.CommitWorkbench})));
+const Work = lazy(() => import('./WorkWorkbench').then(m => ({default: m.WorkWorkbench})));
 const General = lazy(() => import('./GeneralWorkbench').then(m => ({default: m.GeneralWorkbench})));
 export function WorkbenchApp() {
   const [experiment, setExperiment] = useState<ExperimentId | 'batch'>('values');
@@ -26,5 +27,6 @@ export function WorkbenchApp() {
     {visited.has('affect') && <div hidden={experiment !== 'affect'}><Suspense fallback={<p role="status">Loading AFFECT…</p>}><Affect active={experiment === 'affect'}/></Suspense></div>}
     {visited.has('decision') && <div hidden={experiment !== 'decision'}><Suspense fallback={<p role="status">Loading DECISION…</p>}><Decision active={experiment === 'decision'}/></Suspense></div>}
     {visited.has('commit') && <div hidden={experiment !== 'commit'}><Suspense fallback={<p role="status">Loading COMMIT…</p>}><Commit active={experiment === 'commit'}/></Suspense></div>}
+    {visited.has('work') && <div hidden={experiment !== 'work'}><Suspense fallback={<p role="status">Loading WORK…</p>}><Work active={experiment === 'work'}/></Suspense></div>}
   </>;
 }
