@@ -157,3 +157,6 @@ Full256-prefix audit RUNNING session19572; start OBSERVABILITY_WORKBENCH_RELATIO
 
 RELATIONSHIP33 contrasts declared; focused tests/type-check PASS. Full comparison
 audit RUNNING session82726, with exact/occurrence-normalized observer outcomes separate.
+
+RELATIONSHIP native24/256 and33 comparisons now PASS. Observer descriptions integrated;
+six focused tests/type-check PASS, full language audit RUNNING session54277. UI due.

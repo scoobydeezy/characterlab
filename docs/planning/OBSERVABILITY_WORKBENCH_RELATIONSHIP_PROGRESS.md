@@ -37,3 +37,23 @@ identity alignment are enforced; unequal committed positions report unavailable.
 All-program terminal comparison audit RUNNING in session82726 via
 check-workbench-relationship-comparison.mjs; no full comparison PASS claim yet.
 Native parity audit session19572 and shared batch audit session33242 also remain live.
+
+Native audit COMPLETE: session19572 exit0, all24 corrected programs/256 prefixes
+PASS exact native/historical state, output, trace, save and both observer views.
+Comparison audit COMPLETE: session82726 exit0, all33 contrasts PASS retained native
+terminal exact and reverse-order semantic outcomes. Their receipts and frozen sources
+are retained under workbench-relationship-parity-rev1 and -comparison-rev1. Native
+bindings verified before the projection addition below; comparison frozen bindings
+verified with the adapter's subsequent projection change explicitly accounted.
+
+relationship-character-projection/0.1 and relationship-character-explanation/0.1 are
+implemented and attached to observer snapshots. They describe own admitted interaction,
+appraisal-time cooperation/rupture/contact factors, a separate current journal/person
+claim and prospective selected response. Response projection omits mechanical draws
+and does not claim enacted interaction. Candidates4/5 suppress character narration.
+Six focused tests and type-check PASS after integration. No law selected.
+
+Full native observer-description audit RUNNING session54277. It checks all256 prefixes,
+source-record joins, unchanged saves, prior-entry stability, hidden-world/nonrecipient
+invariance and DerivedHistory/StoredSummary equality. It is not complete yet. Full
+factor-by-factor response prose, failed0.1 mapping, UI/browser and batch remain due.
