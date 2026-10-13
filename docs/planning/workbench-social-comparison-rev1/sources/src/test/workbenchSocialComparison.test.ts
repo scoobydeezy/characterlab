@@ -1,0 +1,13 @@
+import {expect,it} from 'vitest';
+import {SocialWorkbenchRun} from '../workbench/socialAdapter';
+import {SOCIAL_CONTRASTS,compareSocial,socialFanoutView} from '../workbench/socialComparison';
+import catalog from '../workbench/socialCatalog.json';
+import history from '../../docs/planning/SOCIAL_PUBLIC_EXPERIMENT_REV1.json';
+it('checks all declared SOCIAL pairs against retained exact and fan-out semantic outcomes',async()=>{
+ const states=new Map();for(const p of catalog.programs){const r=await SocialWorkbenchRun.create(p.name);while(await r.advance()){}states.set(p.name,r.snapshot());}
+ for(const c of SOCIAL_CONTRASTS){const a=states.get(c.a),b=states.get(c.b),r=compareSocial(c.id,a,b),ha=history.results.find(x=>x.name===c.a)!,hb=history.results.find(x=>x.name===c.b)!;if(r.aligned){expect(r.observers.map(o=>o.exactEqual)).toEqual(ha.views.map((v,i)=>v===hb.views[i]));if(r.changedSettings[0]==='reverse')expect(r.observers.map(o=>o.fanoutSemanticEqual)).toEqual(ha.semanticViews.map((v,i)=>v===hb.semanticViews[i]));else expect(r.observers.map(o=>o.fanoutSemanticEqual)).toEqual([null,null]);}else expect(r.observers.every(o=>o.exactEqual===null&&o.fanoutSemanticEqual===null)).toBe(true);await expect(async()=>compareSocial(c.id,b,a)).rejects.toThrow('ordered pair');}
+ const denied=compareSocial('input/denied',states.get('private-1-law-1-reverse-0'),states.get('denied'));expect(denied.observers.map(o=>o.exactEqual)).toEqual([false,true]);const dup=compareSocial('duplicate-counting',states.get('duplicate'),states.get('duplicate-control'));expect(dup.observers[0].exactEqual).toBe(false);expect(SOCIAL_CONTRASTS.length).toBeGreaterThan(30);
+},600000);
+it('normalizes only occurrences, preserves claim differences and rejects observer mismatch',async()=>{
+ const a=await SocialWorkbenchRun.create('private-0-law-1-reverse-0'),b=await SocialWorkbenchRun.create('private-0-law-1-reverse-1');await a.advance();await b.advance();const c=SOCIAL_CONTRASTS.find(c=>c.a===a.snapshot().program&&c.b===b.snapshot().program)!;expect(compareSocial(c.id,a.snapshot(),b.snapshot()).observers.every(o=>o.fanoutSemanticEqual)).toBe(true);const x=JSON.parse(a.snapshot().observerViews[0].exact);x['Observations [3]'][0]['Claim [9]']=!x['Observations [3]'][0]['Claim [9]'];expect(socialFanoutView(JSON.stringify(x))).not.toEqual(socialFanoutView(a.snapshot().observerViews[0].exact));const wrong=b.snapshot();wrong.observerViews.reverse();expect(()=>compareSocial(c.id,a.snapshot(),wrong)).toThrow('observer alignment');await b.advance();expect(compareSocial(c.id,a.snapshot(),b.snapshot()).observers.every(o=>o.exactEqual===null)).toBe(true);
+},600000);

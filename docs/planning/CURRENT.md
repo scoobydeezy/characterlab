@@ -141,3 +141,6 @@ SKILL/HABIT full original browser cohorts now independently PASS75 roles/570 pre
 exact bounded previews checked, full download transport remains unverified.
 SOCIAL native adapter PASS26 programs/18 models/127 prefixes and both observer views.
 Start OBSERVABILITY_WORKBENCH_SOCIAL_PROGRESS.md; UI/language/comparisons remain due.
+
+SOCIAL comparisons now PASS47 declared contrasts/26 originals; exact observer equality
+and reverse-only occurrence normalization remain separate. UI/language still due.

@@ -18,3 +18,16 @@ LOCAL DISPOSITION: retain separate observer identities and exact views; do not i
 shared knowledge or target intention from delivery. No new Campaign3 verdict or law
 selection; all18 conditional obligations survive. Six-mode UI, controlled comparisons,
 observer-safe language, browser qualification and batch enrollment remain required.
+
+Controlled comparison milestone:47 declared contrasts across all26 originals PASS
+terminal native outcomes. Model pairs change exactly one declared setting on identical
+inputs; private-commitment comparisons retain distinct original initial states. Input
+comparisons retain one model. Both full originals and models are exported.
+
+Exact per-observer equality is separate from reverse-order semantic equivalence. Only
+reverse comparisons normalize occurrence IDs in observation/probe histories, matching
+the accepted native qualifier; claims, belief/support and observer identities survive.
+Misaligned committed positions return unavailable comparisons. Two focused tests PASS
+all retained outcomes, claim-change sensitivity, ordered-pair/observer rejection and
+misalignment. Type-check PASS. Receipt: workbench-social-comparison-rev1/receipt.json;
+all current and frozen source bindings verified. No browser or narration claim.
