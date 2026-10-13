@@ -119,3 +119,8 @@ language audit running. See OBSERVABILITY_WORKBENCH_HABIT_LANGUAGE_PROGRESS.md.
 
 Shared nine-seam batch qualification COMPLETE:766 roles/4666 frozen prefixes PASS;
 source hashes verified. Registry freeze released; register prepared SKILL UI next.
+
+SKILL and HABIT six-mode routes registered in registry0.19; first-prefix browser
+captures saved, independent verification pending. Shared batch factory unchanged.
+Start OBSERVABILITY_WORKBENCH_SKILL_HABIT_UI_PROGRESS.md. HABIT language PASS9688
+descriptions/291 prefixes with65 control prefixes suppressed. Full entry remains open.

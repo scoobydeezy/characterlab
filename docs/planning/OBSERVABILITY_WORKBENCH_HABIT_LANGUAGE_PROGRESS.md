@@ -29,3 +29,7 @@ Separately the shared batch audit65026 reached720/766 roles and remains running.
 SKILL UI registration waits for its final source-bound receipt, then browser work can
 continue. No Campaign3 verdict changed; all18 conditional obligations remain retained.
 Build/TypeScript/reference boundary and restored research checks PASS. Shared batch subsequently reached740/766; full qualification still pending.
+
+Full language audit COMPLETE: workbench-habit-language-rev1/receipt.json PASS23
+programs/291 prefixes/9688 descriptions/65 suppressed control prefixes. Source
+hashes verified after exit0. Description counts include repeated prefix history.
