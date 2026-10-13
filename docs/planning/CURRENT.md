@@ -128,3 +128,7 @@ descriptions/291 prefixes with65 control prefixes suppressed. Full entry remains
 SKILL/HABIT browser replay PASS:1→6→1→6 and4→12→4→12 match frozen native hashes.
 See OBSERVABILITY_WORKBENCH_SKILL_HABIT_REPLAY_PROGRESS.md. File import/download,
 comparison/control browser cohorts and broader entry requirements remain open.
+
+SKILL hidden-competence and HABIT DerivedHistory/StoredSummary browser comparisons
+PASS complete report/native equality. See OBSERVABILITY_WORKBENCH_SKILL_HABIT_COMPARISON_PROGRESS.md.
+Two declared pairs only; broader comparison cohorts and full entry remain open.

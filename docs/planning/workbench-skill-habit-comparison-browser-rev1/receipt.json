@@ -1,0 +1,90 @@
+{
+  "status": "PASS BOUNDED SKILL AND HABIT BROWSER COMPARISONS",
+  "sources": [
+    {
+      "path": "scripts/check-workbench-skill-habit-comparison-browser.mjs",
+      "sha256": "d35f916f8e2c90ccc9b68003187ddbdaa345fe1d21ade873e2cfd380c86d98d5"
+    },
+    {
+      "path": "src/workbench/SkillWorkbench.tsx",
+      "sha256": "b6e8ce51a04d26989ece95567ee5b0019fca5a26d41dd12d880503206b2ab1c9"
+    },
+    {
+      "path": "src/workbench/skillAdapter.ts",
+      "sha256": "d16a8d2b8b5b1d98dbe7a17ac8ca81515b73a980367dca4f088f67de08293c8f"
+    },
+    {
+      "path": "src/workbench/skillComparison.ts",
+      "sha256": "5a9d0f6ba677a4c2b59115c3b6cd88243ac0a90d0fcce384a9b939735b42ce0d"
+    },
+    {
+      "path": "src/workbench/skillWorker.ts",
+      "sha256": "cff2a787957883a7630f714907f963a5740f46f530d6de0c97552a64434483d5"
+    },
+    {
+      "path": "src/workbench/skillWorkerClient.ts",
+      "sha256": "6ca2eb25796ddd529f86bed7e48366c36683bac2fc9fe85e9b62dd75f95e14b7"
+    },
+    {
+      "path": "docs/planning/workbench-skill-habit-comparison-browser-rev1/skill.json",
+      "sha256": "1f0f026f7a78bdd65a4acf76c7f5dc4231f0b5dabaea8b1605bd248c7f097693"
+    },
+    {
+      "path": "docs/planning/workbench-skill-habit-comparison-browser-rev1/skill.png",
+      "sha256": "604efa83fa18e68a632ddcbfe08510381744bbedd04dc4094c32ef07195ff55e"
+    },
+    {
+      "path": "src/workbench/HabitWorkbench.tsx",
+      "sha256": "7ca5bede82be651d4a9e771e92650a14be5e9e3dce6f95135b86fa5860f76dde"
+    },
+    {
+      "path": "src/workbench/habitAdapter.ts",
+      "sha256": "53232d52a4568a0dc8e7152e67f05da5325743e188db430513b200d6af394022"
+    },
+    {
+      "path": "src/workbench/habitComparison.ts",
+      "sha256": "11e57ebd199a80a4317e5c8ce66ff3b071142afb5c9a4b16d56dbe8071bee9d2"
+    },
+    {
+      "path": "src/workbench/habitWorker.ts",
+      "sha256": "01a95bd1a28a85d562a1e0f0361f9c9e0c92de27b0afbf7877e25c33887b9a24"
+    },
+    {
+      "path": "src/workbench/habitWorkerClient.ts",
+      "sha256": "6bc1ddd124930bbcfd322094e9528d03ca27e86c35051d63523c3de8dfc60ca8"
+    },
+    {
+      "path": "docs/planning/workbench-skill-habit-comparison-browser-rev1/habit.json",
+      "sha256": "68c42921d3f1d9e4f6a7a28608fab1b27c746982e430d7de8e218c6e73b4e6ff"
+    },
+    {
+      "path": "docs/planning/workbench-skill-habit-comparison-browser-rev1/habit.png",
+      "sha256": "2092207eca6c4bfa56dd1c1e8d7131a5d289b7060f5e41676066828a91e04455"
+    }
+  ],
+  "checks": [
+    {
+      "name": "skill",
+      "id": "hidden-competence",
+      "programs": [
+        "physical-0",
+        "physical-1"
+      ],
+      "prefix": 2,
+      "reportHash": "6ebe26a9ced4af35c0151daeb008340729a24a838b2636ee1f416ee15ead6d33",
+      "characterEqual": true
+    },
+    {
+      "name": "habit",
+      "id": "model/candidate-1-law-1/candidate-2-law-1",
+      "programs": [
+        "candidate-1-law-1",
+        "candidate-2-law-1"
+      ],
+      "prefix": 12,
+      "reportHash": "06979aa74f8945bdf25bd7b464a01bc7d0b14f33ac813cfa73c3c25f4e00f370",
+      "characterEqual": true
+    }
+  ],
+  "scope": "Two declared pairs only. Complete browser reports, originals, summaries and five native hashes match independent native-backed execution. No file download, all-comparison browser cohort or full corpus claim."
+}
