@@ -70,3 +70,15 @@ provenance, checkpoints, declared comparisons and participation inspection. Tran
 tests2/2 and TypeScript PASS. Route registration/browser checks remain due until the
 shared batch audit session33242 releases its exact registry source binding. The new
 component is not yet reachable through the main app selector. All18 obligations remain.
+
+Retained failed0.1 cohort now has an explicit legacy catalog:11 models/24 programs
+under legacy/ names, distinct from all corrected identities. The adapter selects the
+declared original initial state, inputs and zero seed, reports actual0.1 seam version
+and rejects checkpoints relabelled as corrected programs. Historical narration is
+suppressed pending separate qualification; the UI draft displays actual seam version.
+Corrected33-comparison definitions remain scoped to0.2 only.
+
+Three focused legacy/comparison tests PASS. Full legacy24/256 exact-native/historical
+audit RUNNING session72422 via check-workbench-relationship-legacy.mjs. This verifies
+inspection fidelity, not the failed psychological claim. Original failure remains
+unchanged. Read the existing process before changing its bound adapter source.

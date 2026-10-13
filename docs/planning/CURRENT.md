@@ -163,3 +163,6 @@ six focused tests/type-check PASS, full language audit RUNNING session54277. UI 
 
 RELATIONSHIP language now PASS6794 descriptions/256 prefixes/88 suppressed observer-
 prefixes. Six-mode UI/worker prepared; transport/type-check PASS. Registry/browser due.
+
+RELATIONSHIP legacy0.1 originals now separately exposed (24 programs/11 models), with
+actual seam identity and narration suppressed. Three tests PASS; full audit session72422.

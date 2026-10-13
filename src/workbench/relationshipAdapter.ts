@@ -1,4 +1,6 @@
 import catalog from './relationshipCatalog.json';
+import legacy from './relationshipLegacyCatalog.json';
+const programs=[...catalog.programs,...legacy.programs],models=[...catalog.models,...legacy.models];
 import {canonicalEncode,canonicalDecode,RecordSchemaRegistry} from '../substrate/canonicalEncoding';
 import {restoreAuthoritativeState,statePathValue} from '../substrate/state';
 import {dataItems as items,dataRecord as rec,dataField as f} from '../campaign2/canonicalData';
@@ -8,12 +10,12 @@ import {prepareRelationshipModel,createRelationshipRun,restoreRelationshipRun} f
 import {digest,exactText,exactKey,fromHex,equalBytes} from './canonical';
 import {projectRelationshipCharacter} from './relationshipCharacter';
 import {nativeTimeline} from './nativeTimeline';
-export const RELATIONSHIP_PROGRAMS=catalog.programs.map(r=>({id:r.name,model:r.model,seed:r.seed,cohort:r.cohort}));
+export const RELATIONSHIP_PROGRAMS=programs.map(r=>({id:r.name,model:r.model,seed:r.seed,cohort:r.cohort}));
 const schema=new RecordSchemaRegistry(relationshipSupportedSchemas());
 // Public execution validates semantic bytes; this diagnostic read performs structural decoding.
 const decode=(b:Uint8Array)=>canonicalDecode(b,schema);
-function original(id:string){const row=catalog.programs.find(r=>r.name===id);if(!row)throw Error('Unknown frozen RELATIONSHIP program');if(row.seed!==0)throw Error('RELATIONSHIP frozen seed must be zero');return row;}
-function model(name:string){const m=catalog.models.find(m=>m.name===name);if(!m)throw Error('Unknown RELATIONSHIP model');return m;}
+function original(id:string){const row=programs.find(r=>r.name===id);if(!row)throw Error('Unknown frozen RELATIONSHIP program');if(row.seed!==0)throw Error('RELATIONSHIP frozen seed must be zero');return row;}
+function model(name:string){const m=models.find(m=>m.name===name);if(!m)throw Error('Unknown RELATIONSHIP model');return m;}
 function source(name:string){const m=model(name);return {parameters:fromHex(m.parameters),content:fromHex(m.content),registry:fromHex(m.registry)};}
 type Run=Awaited<ReturnType<typeof createRelationshipRun>>;
 export interface RelationshipCheckpoint {version:'relationship-workbench/0.1';program:string;prefix:number;saveHex:string;saveHash:string;}
@@ -35,7 +37,7 @@ export class RelationshipWorkbenchRun {
   const row=original(c.program),run=await restoreRelationshipRun(source(row.model),{initialState:fromHex(model(row.model).initialState),orderedInputs:fromHex(row.orderedInputs),save}),a=new RelationshipWorkbenchRun(run,c.program);a.#prefix=c.prefix;await a.#refresh();return a;
  }
  async #refresh(){const row=original(this.#program),m=model(row.model),s=this.#run.snapshot(),save=this.#run.save();
-  this.#view={program:this.#program,seamVersion:RELATIONSHIP_VERSION,projection:'Native observer diagnostics remain separate from admitted character projection; violating controls suppress narration.',prefix:this.#prefix,complete:items(f(rec(decode(save),132n),7n),'list').length===0,clock:String(s.clock),modelHash:await digest(fromHex(m.modelIdentity)),runHash:await digest(this.#run.runIdentity()),stateHash:await digest(s.state),saveHash:await digest(save),outputsHash:await digest(s.outputs),researchOutputs:exactText(decode(s.outputs)),observerViews:await Promise.all(OBSERVERS.map(async o=>{const bytes=this.#run.observerView(canonicalEncode(o));return {observer:exactKey(o),exact:exactText(decode(bytes)),hash:await digest(bytes),character:projectRelationshipCharacter(decode(bytes),m.settings.candidate)};})),fields:restoreAuthoritativeState(decode(s.state)).entries().map(e=>({path:exactKey(statePathValue(e.path)),root:String(e.path.rootStateTypeId),exact:exactText(e.value)})),timeline:nativeTimeline(items(decode(s.trace),'list'))};
+  this.#view={program:this.#program,seamVersion:m.settings.revision===1?'relationship-public/0.1-candidate':RELATIONSHIP_VERSION,projection:'Native observer diagnostics remain separate from admitted character projection; violating controls suppress narration.',prefix:this.#prefix,complete:items(f(rec(decode(save),132n),7n),'list').length===0,clock:String(s.clock),modelHash:await digest(fromHex(m.modelIdentity)),runHash:await digest(this.#run.runIdentity()),stateHash:await digest(s.state),saveHash:await digest(save),outputsHash:await digest(s.outputs),researchOutputs:exactText(decode(s.outputs)),observerViews:await Promise.all(OBSERVERS.map(async o=>{const bytes=this.#run.observerView(canonicalEncode(o));return {observer:exactKey(o),exact:exactText(decode(bytes)),hash:await digest(bytes),character:m.settings.revision===1?{...projectRelationshipCharacter(decode(bytes),5),notice:'Historical failed0.1 cohort: character descriptions are not qualified.'}:projectRelationshipCharacter(decode(bytes),m.settings.candidate)};})),fields:restoreAuthoritativeState(decode(s.state)).entries().map(e=>({path:exactKey(statePathValue(e.path)),root:String(e.path.rootStateTypeId),exact:exactText(e.value)})),timeline:nativeTimeline(items(decode(s.trace),'list'))};
  }
 }
 const exactHex=(b:Uint8Array)=>Array.from(b,v=>v.toString(16).padStart(2,'0')).join('');
