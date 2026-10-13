@@ -526,3 +526,24 @@ no new Campaign3 verdict/amendment, full download or full SEM acceptance claim.
 Next event-file031-040 controls, preserving original detection/observation label
 allocation order with per-execution fixture state, then remaining census gaps.
 Overall Campaign4 entry acceptance remains open.
+
+Event-file component controls COMPLETE (2026-10-13). Original031-040 recipes retain
+nine scenarios/two guards/one isolated rollback with12 exact diagnostics. Original
+helper bodies extracted verbatim into a factory with a fresh occurrence-label map;
+all21 allocations retain original execution order. Two simultaneous event groups,
+cross-experience event identity, false continuity/discontinuity, observer-local
+detections, Action-carrier rejection, concurrent role occurrences, structural copy,
+observer allocator isolation and ordinal-shift grouping all inspected.
+Original staged failure allocates runtime20 and an event file before validation
+rejects; state/allocator/trace/output remain equal, Active changes to Failed.
+Structural copy is not native Save132 persistence; false continuity/discontinuity
+are fixture interpretations, not observer knowledge of truth. No active intervention.
+Original10 tests plus workbench repeatability/distinction test PASS (11 total).
+Typecheck32805 COMPLETE exit0; build19153 COMPLETE exit0 (392 modules), including
+reference boundaries. Audit47540 COMPLETE exit0; receipt
+workbench-sem-event-file-rev1/receipt.json. Nine current/frozen source hashes
+independently verified. Evidence restore/research PASS;18 conditional obligations
+unchanged, no new Campaign3 verdict/amendment. LOCAL DISPOSITION: retain original
+component version and diagnostic encoding; no semantic contract amendment needed.
+Next event-file worker/Compare UI/browser parity, then remaining phase/state/
+provenance and integrated census gaps. Overall Campaign4 entry remains open.

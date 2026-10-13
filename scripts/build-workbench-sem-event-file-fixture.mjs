@@ -1,0 +1,6 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import{createHash}from'node:crypto';
+const source='src/test/perceptualEventFiles.test.ts',body=fs.readFileSync(source,'utf8'),end=body.indexOf("describe('SEM-001C");assert(end>0);
+const prefix=body.slice(0,end).replace("import { describe, expect, it } from 'vitest';",'').replace("'./fixtures/referentOrigin'","'../test/fixtures/referentOrigin'"),start=prefix.indexOf('const mina =');assert(start>0);assert(!prefix.includes('expect('));
+const hash=createHash('sha256').update(fs.readFileSync(source)).digest('hex');
+fs.writeFileSync('src/workbench/semEventFileFixture.ts',`// Original helper bodies retained verbatim; each invocation owns its occurrence-label map.\n${prefix.slice(0,start)}\nexport function createEventFileFixture(){\n${prefix.slice(start)}\nreturn {mina,darius,version,observation,objectFile,eventFile,ordinalFor,transition,exact,binding,experience,occurrenceOrdinals:()=>[...OCCURRENCE_ORDINALS].map(([label,ordinal])=>({label,ordinal:String(ordinal)}))};\n}\nexport const originalSource={path:'${source}',sha256:'${hash}'} as const;\n`,{flag:'wx'});
+console.log('PASS original event-file helper factory extraction');
