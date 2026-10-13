@@ -406,3 +406,29 @@ Next concrete implementation: original continuant-file lifecycle controls013/
 interleaving and ordinal-opacity. Detection-label allocation must reset in the
 same declared fixture order for each repeatable control execution. Then join
 tracking/recognition/classification axes and finish remaining SEM families.
+
+Continuant lifecycle component controls qualified (2026-10-13): original helper
+bodies from perceptualContinuantFiles.test.ts retained verbatim inside a per-call
+factory. Each run owns its detection-label map and follows the original test order;
+labels det/1 through det/glen-b retain exact ordinals0..8. Historical component
+version is unchanged. Diagnostic JSON explicitly preserves Map entries, bigint and
+undefined; counters cannot disappear through ordinary JSON serialization.
+
+Ten scenarios preserve retirement/no-reuse, structural clone/continuation, observer
+allocation interleaving, false continuity, false discontinuity, permitted support,
+detection uniqueness, single retirement, ordinal shifts and foreign-observer tracks.
+Seven transition guards plus detection/retirement guards retain original codes.
+False-discontinuity's original title remains019, recorded as related020 scope.
+Truth commentary is not passed into observer requests. Structural clone does not
+claim native Save132 persistence, and equal recognition across split tracks remains
+a separate joined obligation.
+
+Original11 plus workbench1 tests PASS; typecheck57903 COMPLETE exit0.
+Audit37565 COMPLETE exit0:10 scenarios/7 guards/17 diagnostic hashes, original
+helper source binding, allocation order and complete repeated report PASS.
+Eight current/frozen sources independently verified. Receipt:
+workbench-sem-continuant-rev1/receipt.json. Evidence restore/research checks PASS;
+18 conditional obligations retained; no new Campaign3 verdict/amendment.
+Next worker/UI/browser qualification, then joined three-axis and remaining SEM
+corpus controls. Overall Campaign4 entry acceptance remains open.
+Production build17696 COMPLETE exit0 (389 modules), reference boundaries PASS. Component module is typechecked; browser enrollment remains next.
