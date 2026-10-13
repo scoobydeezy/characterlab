@@ -6,6 +6,7 @@ import {habitSupportedSchemas} from '../campaign3/habitCodecs';
 import {HABIT_VERSION} from '../campaign3/habitModel';
 import {prepareHabitModel,createHabitRun,restoreHabitRun} from '../campaign3/habitFactory';
 import {digest,exactText,exactKey,fromHex,equalBytes} from './canonical';
+import {projectHabitCharacter} from './habitCharacter';
 import {nativeTimeline} from './nativeTimeline';
 export const HABIT_PROGRAMS=catalog.programs.map(r=>({id:r.name,model:r.model,seed:r.seed,cohort:r.cohort}));
 const schema=new RecordSchemaRegistry(habitSupportedSchemas());
@@ -19,7 +20,7 @@ export interface HabitCheckpoint {version:'habit-workbench/0.1';program:string;p
 export type HabitSnapshot=ReturnType<HabitWorkbenchRun['snapshot']>;
 export class HabitWorkbenchRun {
  #run:Run;#program:string;#prefix=0;#busy=false;
- #view!:{program:string;seamVersion:string;projection:string;prefix:number;complete:boolean;clock:string;modelHash:string;runHash:string;stateHash:string;saveHash:string;outputsHash:string;researchOutputs:string;fields:{path:string;root:string;exact:string}[];timeline:ReturnType<typeof nativeTimeline>};
+ #view!:{program:string;seamVersion:string;projection:string;prefix:number;complete:boolean;clock:string;modelHash:string;runHash:string;stateHash:string;saveHash:string;outputsHash:string;researchOutputs:string;character:ReturnType<typeof projectHabitCharacter>;fields:{path:string;root:string;exact:string}[];timeline:ReturnType<typeof nativeTimeline>};
  private constructor(run:Run,program:string){this.#run=run;this.#program=program;}
  static async create(program='candidate-1-law-1'){
   const row=original(program),m=model(row.model),run=await createHabitRun(await prepareHabitModel(source(row.model)),{initialState:fromHex(m.initialState),orderedInputs:fromHex(row.orderedInputs),runSeed:new Uint8Array(32)});
@@ -34,7 +35,7 @@ export class HabitWorkbenchRun {
   const row=original(c.program),run=await restoreHabitRun(source(row.model),{initialState:fromHex(model(row.model).initialState),orderedInputs:fromHex(row.orderedInputs),save}),a=new HabitWorkbenchRun(run,c.program);a.#prefix=c.prefix;await a.#refresh();return a;
  }
  async #refresh(){const row=original(this.#program),m=model(row.model),s=this.#run.snapshot(),save=this.#run.save();
-  this.#view={program:this.#program,seamVersion:HABIT_VERSION,projection:'Researcher-only native records; no observer-safe character projection or narrative is qualified yet.',prefix:this.#prefix,complete:items(f(rec(decode(save),132n),7n),'list').length===0,clock:String(s.clock),modelHash:await digest(fromHex(m.modelIdentity)),runHash:await digest(this.#run.runIdentity()),stateHash:await digest(s.state),saveHash:await digest(save),outputsHash:await digest(s.outputs),researchOutputs:exactText(decode(s.outputs)),fields:restoreAuthoritativeState(decode(s.state)).entries().map(e=>({path:exactKey(statePathValue(e.path)),root:String(e.path.rootStateTypeId),exact:exactText(e.value)})),timeline:nativeTimeline(items(decode(s.trace),'list'))};
+  this.#view={program:this.#program,seamVersion:HABIT_VERSION,projection:'Character projection separates evaluation-time evidence and safe choice from researcher records.',prefix:this.#prefix,complete:items(f(rec(decode(save),132n),7n),'list').length===0,clock:String(s.clock),modelHash:await digest(fromHex(m.modelIdentity)),runHash:await digest(this.#run.runIdentity()),stateHash:await digest(s.state),saveHash:await digest(save),outputsHash:await digest(s.outputs),researchOutputs:exactText(decode(s.outputs)),character:projectHabitCharacter(items(decode(s.outputs),'list'),m.settings.candidate),fields:restoreAuthoritativeState(decode(s.state)).entries().map(e=>({path:exactKey(statePathValue(e.path)),root:String(e.path.rootStateTypeId),exact:exactText(e.value)})),timeline:nativeTimeline(items(decode(s.trace),'list'))};
  }
 }
 const exactHex=(b:Uint8Array)=>Array.from(b,v=>v.toString(16).padStart(2,'0')).join('');
