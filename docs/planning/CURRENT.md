@@ -103,3 +103,7 @@ progress file and frozen receipt. Character projection/UI/language remain due.
 
 SKILL character projection implemented with focused tests PASS; full52/279 language
 audit running. Start OBSERVABILITY_WORKBENCH_SKILL_LANGUAGE_PROGRESS.md. UI remains due.
+
+SKILL language now PASS5630 descriptions/279 prefixes,58 control prefixes suppressed.
+Six-mode component/worker prepared; route registration waits for the existing live
+batch audit to finish without source drift. Browser qualification remains due.

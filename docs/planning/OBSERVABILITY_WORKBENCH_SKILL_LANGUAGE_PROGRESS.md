@@ -30,3 +30,22 @@ invariance. No full language PASS claim until its immutable receipt is inspected
 Do not edit those audited files while the writer is running. UI/browser integration
 and wider narrative coverage remain required. The separate batch audit65026 passed
 460/766 roles and remains live; no full shared-batch PASS claim yet.
+
+Full language audit COMPLETE: workbench-skill-language-rev1/receipt.json PASS
+52 programs/279 prefixes/5630 descriptions/58 suppressed control prefixes. Current
+source hashes verified after exit0. Counts include repeated history at each prefix,
+not5630 unique events. Hidden competence, temporary impairment and all three
+practice-law projections agree; exact native historical hashes remain unchanged.
+
+Six-mode SkillWorkbench component and dedicated worker/client are prepared, with
+85 contrasts, native timeline/participation views, safe character cards, original
+checkpoint capture/restore and exports. They are NOT yet registered in the main
+selector: experimentRegistry.ts remains source-frozen under the live batch audit.
+Register the route after that audit terminates and then qualify real browser use.
+No claim of visible SKILL UI completion or browser qualification yet.
+
+Initial UI build and worker tests caught accidental Worker-to-Skiller identifiers
+and imports from mechanical adaptation. Corrected before registration. Two worker
+lifecycle tests now PASS: detached reads/concurrent command rejection and in-flight
+failure cleanup. Full build verification follows separately.
+Corrected TypeScript/build/reference boundary PASS; restored research checks preserve18 conditional obligations.
