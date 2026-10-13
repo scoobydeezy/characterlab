@@ -158,3 +158,34 @@ Next: original recognition-state controls (recognition.test.ts and
 semanticRecognitionState.test.ts), classification-negative distinctions,
 measurement and whole-instant abort witnesses. General SEM participation and
 full corpus/Campaign4 entry remain open.
+
+Recognition component controls qualified (2026-10-13): original helper bodies
+from recognition.test.ts are extracted verbatim, with only test-hook import
+removal and the relative referent-helper import adjusted. Generated helper source
+names the exact original hash. No tests or hooks run in the workbench module.
+
+Eight original CV-SEM-061/062/063 evaluations retain unfamiliar, contradicted,
+ambiguous, asserted and uniquely supported outcomes; CV-SEM-065's five steps
+retain first assertion, no-cue maintenance, same-candidate maintenance, withdrawal
+and replacement. Original experience IDs/time/allocator starts remain exact,
+including nonchronological experience ordinals. Four selected CV-SEM-063/067
+rejections retain reversed catalog, cross-track, unavailable support and stale cue
+guards. Every evaluation checks request/history immutability. No-update does not
+fabricate a resolution or erase the current one; withdrawal is a new linked record.
+
+These original witnesses use recognition/0.1-candidate, which later SEM canonical
+codecs do not admit as a transformation version. Reports therefore use explicitly
+labelled diagnostic JSON with tagged bigint/undefined values and SHA256 evidence,
+not re-versioned native SEM records. Requests, results and retained history remain
+inspectable. No truth-correctness or confidence field is inferred.
+
+Audit85593 COMPLETE exit0:8 evaluations/5 lifecycle steps/4 rejections PASS replay,
+diagnostic hashes and original-helper binding. Receipt:
+workbench-sem-recognition-rev1/receipt.json. Eleven tests PASS (original recognition
+suite plus workbench control test); type-check PASS; research retains18 conditional
+obligations. No new Campaign3 verdict or qualification amendment.
+
+Next: worker/UI presentation of these recognition controls and browser equality;
+then mapping-state CV-SEM-099, continuity, allocator rollback/emission-target,
+classification-negative and measurement witnesses still need workbench coverage.
+This increment does not discharge those controls or full Campaign4 entry.
