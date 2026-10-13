@@ -34,3 +34,17 @@ Historical exposure/formation/recollection bytes match. Current/frozen source an
 original-evidence hashes verified. Receipt workbench-adapt-parent-parity-rev1/receipt.json.
 This completes adapter fidelity for the pair, not the remaining controls or causal/UI
 qualification listed above.
+
+Accepted parent comparison implemented as a researcher report with independently
+constructed four target paths, common applicable-rule checks, four result kinds and
+exact mutation-set checks. At reveal, it checks the single D read against the earlier
+write and preserves the actual probe→observation→carriage→episode-evidence→formation
+chain. The earlier exposure and later independent probe are not joined by a fabricated
+scheduler edge. Unaligned prefixes and stages not yet reached remain explicitly null.
+Initial scalar-formatting test failure/source preserved in workbench-adapt-comparison-rev1;
+corrected test PASS. Historical join audit90346 RUNNING; full UI/control scope remains.
+
+Comparison audit COMPLETE:90346 exit0;4 aligned prefix reports PASS exact historical
+probe/path/read/diff and observation-chain identity joins. All current/frozen source
+hashes verified; final type-check PASS. The failure remains preserved and has no
+effect on native semantics. Broader ADAPT controls, character explanation and UI due.

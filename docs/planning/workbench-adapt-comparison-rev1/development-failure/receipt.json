@@ -1,0 +1,7 @@
+{
+  "status": "FAILED DEVELOPMENT TEST",
+  "test": "workbenchAdaptComparison.test.ts",
+  "error": "ADAPT comparison: one exposure settlement per run",
+  "cause": "exactText serializes scalar strings with JSON quotes; comparison expected unquoted2/140. Native execution unchanged.",
+  "correction": "Use nativeTimeline scalar for event instant and phase."
+}

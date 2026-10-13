@@ -218,3 +218,10 @@ PASS; eight-prefix parity audit9523 RUNNING. See OBSERVABILITY_WORKBENCH_ADAPT_P
 
 Latest: ADAPT parent-pair parity COMPLETE2 programs/8 prefixes PASS (9523 exit0);
 all source/original hashes verified. Broader ADAPT comparison/control/UI scope remains.
+
+Latest: ADAPT path-set/D-only dependency report implemented; corrected native test
+PASS with initial formatting failure retained. Four-prefix historical join audit90346
+RUNNING. MULTISOURCE50025 and batch54486 remain live.
+
+Latest: ADAPT comparison audit COMPLETE4 aligned prefixes PASS exact historical
+dependency/ancestry joins; source hashes/type-check verified. Goal remains in progress.
