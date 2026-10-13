@@ -1,0 +1,60 @@
+{
+  "status": "PASS SEM COMPONENT BROWSER/NATIVE PARITY",
+  "sources": [
+    {
+      "path": "src/workbench/SemWorkbench.tsx",
+      "sha256": "f4d48d653a94770286fbd452086ae5c2036b80755c1ac506bc21f8402821832e"
+    },
+    {
+      "path": "src/workbench/SemControlPanel.tsx",
+      "sha256": "b6a43aa6a37dae894d6683770d515d9cb46d987f0b724edb90baa5d4596fa4fb"
+    },
+    {
+      "path": "src/workbench/semControlSuite.ts",
+      "sha256": "3b4bd968f1f237e5c807a9d852266778520191a81062f62525b4ca5361d579e4"
+    },
+    {
+      "path": "src/workbench/semControls.ts",
+      "sha256": "f5e4d5a39440bb1124f4201fef26036dcde4019a025e29206afe574166334bec"
+    },
+    {
+      "path": "src/workbench/semWorker.ts",
+      "sha256": "6113799cd160d911c9337e57b54737d41250d89b1eca9c6c10768d12cb832286"
+    },
+    {
+      "path": "src/workbench/semWorkerClient.ts",
+      "sha256": "663a43a572700e95c5ac334c5aa20cbd33c61dd7e04cad1a9f368d6ecac64f44"
+    },
+    {
+      "path": "src/test/workbenchSemControlWorker.test.ts",
+      "sha256": "adb730bf6693bd6201c93113c97d0b51708781c9eff6a254239e00a79274d28d"
+    },
+    {
+      "path": "scripts/check-workbench-sem-controls-ui.mjs",
+      "sha256": "3d072ee21f7e48146dcdf980e3d5d50ba4e412aa93f8a2b2d9c7f735308811b2"
+    },
+    {
+      "path": "docs/planning/workbench-sem-controls-rev1/receipt.json",
+      "sha256": "d4154eb582a321f961eacea50467ec50e9bf467a3238b0605304b0fe15cc7d2e"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "report.json",
+      "sha256": "1b06dd7f9769e0407d1c08f334bd1d201b6968f0d68f99b06142b09f381cd7ad"
+    },
+    {
+      "path": "ui.json",
+      "sha256": "0b57d9c3dab3d5b165a74f11714d59284d59ada8c62e32b481f0fb0189b75315"
+    },
+    {
+      "path": "comparisons.png",
+      "sha256": "bf472800dfd1807f2cb3b70284cb7f20b27e6208f6465db10dc6a8c5b75e754f"
+    }
+  ],
+  "components": 7,
+  "comparisons": 3,
+  "reportCharacters": 316528,
+  "activePrefix": 1,
+  "scope": "Complete browser report equals fresh component execution and the qualified original-control receipt. Visible comparison/multiplicity cells equal report data. Six active-run hashes unchanged and equal native prefix1. Actual worker tests additionally preserve all4 prefixes. Screenshot inspected. Full download transport, remaining semantic controls and complete Campaign4 entry acceptance remain open."
+}

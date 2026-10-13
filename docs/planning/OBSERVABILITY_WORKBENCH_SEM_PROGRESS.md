@@ -132,3 +132,29 @@ Next: expose these qualified component reports in the SEM worker/Compare UI and
 verify browser/native equality. Continue missing classification-negative,
 recognition, measurement and atomic-abort controls; none are discharged by this
 bounded addition. Complete corpus and Campaign4 entry qualification remain open.
+
+Component Compare UI COMPLETE (2026-10-13): a worker command executes all seven
+original component recipes and three comparisons, separately from the active
+integrated run. The panel exposes equality columns, both multiplicity tables,
+the complete exact report and prepared export. Uninvoked causal evidence displays
+Not invoked. Native RunIdentity/checkpoint and component boundaries remain distinct.
+
+Two actual-worker tests PASS, including all seven reports/three comparisons
+against the frozen qualification receipt at all four integrated prefixes, with
+unchanged checkpoints. Production build PASS384 modules. Browser ran the suite
+at prefix1; all six active hashes stayed unchanged. Complete316528-character
+rendered report, comparison cells and multiplicity cells match fresh native
+execution and the original receipt. Screenshot inspected.
+
+Browser/native audit16031 COMPLETE exit0. Receipt:
+workbench-sem-controls-ui-rev1/receipt.json. Initial capture exceeded the browser
+automation single-response limit and failed JSON parsing at200011 characters;
+that capture/checker/diagnostic remain in development-failure. Reading the same
+expanded DOM report in60000-character chunks resolved capture truncation without
+changing the app or rerunning the controls. No Blob download transport claim.
+Research check preserves18 conditional obligations.
+
+Next: original recognition-state controls (recognition.test.ts and
+semanticRecognitionState.test.ts), classification-negative distinctions,
+measurement and whole-instant abort witnesses. General SEM participation and
+full corpus/Campaign4 entry remain open.

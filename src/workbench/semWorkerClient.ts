@@ -1,5 +1,6 @@
 import type {SemInspectionSnapshot as SemSnapshot} from './semInspection';
 import type {verifySemReplay} from './semReplay';
+import type {runSemControlSuite} from './semControlSuite';
 import type {SemCheckpoint} from './semAdapter';
 export class SemWorkerClient {
   #worker = new Worker(new URL('./semWorker.ts', import.meta.url), {type: 'module'});
@@ -22,6 +23,7 @@ export class SemWorkerClient {
   snapshot() {return structuredClone(this.#snapshot);}
   async advance() {const result = await this.#call<{moved: boolean; snapshot: SemSnapshot}>('advance'); this.#snapshot = result.snapshot; return result.moved;}
   verify() {return this.#call<Awaited<ReturnType<typeof verifySemReplay>>>('verify');}
+  controls() {return this.#call<Awaited<ReturnType<typeof runSemControlSuite>>>('controls');}
   checkpoint() {return this.#call<SemCheckpoint>('checkpoint');}
   dispose(error = new Error('Sem worker disposed')) {if (this.#disposed) return; this.#disposed = true; this.#worker.terminate(); for (const request of this.#pending.values()) request.reject(error); this.#pending.clear();}
 }
