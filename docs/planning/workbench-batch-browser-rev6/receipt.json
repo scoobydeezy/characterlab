@@ -1,0 +1,104 @@
+{
+  "status": "PASS SKILL AND HABIT ORIGINAL COHORT BROWSER BATCHES",
+  "sources": [
+    {
+      "path": "src/workbench/BatchWorkbench.tsx",
+      "sha256": "8bcf4a6a00406bd350bc4585a87e724f221ad580bd8995c0e544806e505978a0"
+    },
+    {
+      "path": "src/workbench/batchSession.ts",
+      "sha256": "87060cf05484d605ded3a830128d27cab4b5c241eafc0580bf0c1813e20520b0"
+    },
+    {
+      "path": "src/workbench/batchWorker.ts",
+      "sha256": "854e6e0e283d9f3c380fd3c9142ce9bd5f2fbd41b89d38a80b4a54782aa2fd12"
+    },
+    {
+      "path": "src/workbench/batchWorkerClient.ts",
+      "sha256": "e97155c4a23dfd71a83bff0b4b2028d120b403dab046dc2c24477d71adcb87b5"
+    },
+    {
+      "path": "src/workbench/batchCatalogV6.json",
+      "sha256": "735767c1d6e8c734a75083621ab107455f7b5ee7651efbc792957c86989797df"
+    },
+    {
+      "path": "src/workbench/experimentRegistry.ts",
+      "sha256": "6562cdb53867b84a49f3b611df19091192187f6dce098f13fbab3ec56ee6b8f0"
+    },
+    {
+      "path": "src/workbench/PreparedExport.tsx",
+      "sha256": "4cf14eca7746d3260ce84c7d28532a6e795f4728889080f1cb2115531ed93e19"
+    },
+    {
+      "path": "scripts/check-workbench-batch-v6-browser.mjs",
+      "sha256": "6b0bcbad353a2eda6ed74be5a07354f7db3c74aae39226844dc7dc04a0f47737"
+    },
+    {
+      "path": "src/workbench/skillAdapter.ts",
+      "sha256": "d16a8d2b8b5b1d98dbe7a17ac8ca81515b73a980367dca4f088f67de08293c8f"
+    },
+    {
+      "path": "src/workbench/skillCharacter.ts",
+      "sha256": "6a16bc7169dc4f6569eed242bcda14fb8d3d72c6f856d4e6f362074b0a4233fb"
+    },
+    {
+      "path": "src/workbench/skillCatalog.json",
+      "sha256": "002854af2cd6162b230d4e551434b3ec4e58942d18a0340b832a86eb42f3b3ff"
+    },
+    {
+      "path": "src/workbench/habitAdapter.ts",
+      "sha256": "53232d52a4568a0dc8e7152e67f05da5325743e188db430513b200d6af394022"
+    },
+    {
+      "path": "src/workbench/habitCharacter.ts",
+      "sha256": "2e4852c0be66613aaeaf678feb1b8f195f8ea9ae7681f7b6eb3deeded67c9104"
+    },
+    {
+      "path": "src/workbench/habitCatalog.json",
+      "sha256": "f873f674c8b52b47043952a3b1f5f37f4688bd91211dd1ac1124acbea639ac50"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "docs/planning/workbench-batch-browser-rev6/skill-preview.txt",
+      "sha256": "0a7a61300d354a07793509d644e68d171c0f45a6b4665dc4c3d1478848b28f0f"
+    },
+    {
+      "path": "docs/planning/workbench-batch-browser-rev6/skill-dom.json",
+      "sha256": "09648fa42e18d03c3718a0faeec7b45a985c3cab801c6338a0f3c270e6e98e63"
+    },
+    {
+      "path": "docs/planning/workbench-batch-browser-rev6/skill-complete.png",
+      "sha256": "2d3f2e456fe0e9d6d1d75cc48e8c2932216fbd18a532a2882e8d32145cb11560"
+    },
+    {
+      "path": "docs/planning/workbench-batch-browser-rev6/habit-preview.txt",
+      "sha256": "0a7a61300d354a07793509d644e68d171c0f45a6b4665dc4c3d1478848b28f0f"
+    },
+    {
+      "path": "docs/planning/workbench-batch-browser-rev6/habit-dom.json",
+      "sha256": "f67a2e48a4814d996483338041d7c8ffb9a4944b993d9e16af368e9c014668a8"
+    },
+    {
+      "path": "docs/planning/workbench-batch-browser-rev6/habit-complete.png",
+      "sha256": "114ca92478f74dbbaf55d8873093a3e3a9ad21bf06c3139de9fdc643b2c8ba62"
+    }
+  ],
+  "checks": [
+    {
+      "name": "skill",
+      "roles": 52,
+      "prefixes": 279,
+      "reportSha256": "7396ee3ee5d74f757659e97f923ed851354a26e5398304c24d57aa700552ff66",
+      "reportBytes": 590892
+    },
+    {
+      "name": "habit",
+      "roles": 23,
+      "prefixes": 291,
+      "reportSha256": "bd42a37161eb8e5a3339d290fa6fbfdf9812a8d1f16dd2f024c37d2849290b15",
+      "reportBytes": 503361
+    }
+  ],
+  "scope": "Every displayed native save/expected hash and row checked. Exact first64000-character preview and full byte count checked. Full download transport, other browser cohorts and full corpus acceptance remain unverified."
+}

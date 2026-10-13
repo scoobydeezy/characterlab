@@ -136,3 +136,8 @@ Two declared pairs only; broader comparison cohorts and full entry remain open.
 Eleven-seam batch841 roles/5236 prefixes enrolled, preserving previous766 jobs.
 SKILL52/HABIT23 originals, including empty HABIT, retained;11 focused tests PASS.
 Full audit RUNNING session33242. Start OBSERVABILITY_WORKBENCH_BATCH_V6_PROGRESS.md.
+
+SKILL/HABIT full original browser cohorts now independently PASS75 roles/570 prefixes;
+exact bounded previews checked, full download transport remains unverified.
+SOCIAL native adapter PASS26 programs/18 models/127 prefixes and both observer views.
+Start OBSERVABILITY_WORKBENCH_SOCIAL_PROGRESS.md; UI/language/comparisons remain due.

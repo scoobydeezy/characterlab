@@ -24,3 +24,8 @@ match their frozen native receipts. Captures and screenshots are retained under
 workbench-batch-browser-rev6; screenshots inspected. Independent fresh execution and
 prepared preview verification is RUNNING in session33267. Its receipt is required before
 claiming complete browser report verification. Full download transport remains unverified.
+
+Independent browser verification COMPLETE: session33267 exit0; SKILL52/279 and
+HABIT23/291 PASS every row/hash, first64000 preview characters and complete byte count.
+workbench-batch-browser-rev6/receipt.json and all source/input hashes verified. This
+does not establish full download transport. The separate841-role audit remains running.
