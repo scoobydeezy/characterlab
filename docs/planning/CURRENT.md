@@ -144,3 +144,7 @@ Start OBSERVABILITY_WORKBENCH_SOCIAL_PROGRESS.md; UI/language/comparisons remain
 
 SOCIAL comparisons now PASS47 declared contrasts/26 originals; exact observer equality
 and reverse-only occurrence normalization remain separate. UI/language still due.
+
+SOCIAL observer descriptions PASS855/127 prefixes,70 violating observer-prefixes
+suppressed; native hashes and observer privacy invariants retained. Six focused tests
+and type-check PASS. See OBSERVABILITY_WORKBENCH_SOCIAL_PROGRESS.md; UI remains due.
