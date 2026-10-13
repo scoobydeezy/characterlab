@@ -54,6 +54,9 @@ parity. Event-pattern classification051-060 component controls now qualified:
 parity. Evidence-provenance071-080 component controls now qualified:12 cases/
 17 guards/3 API boundaries/30 diagnostics, now with worker/UI/browser parity.
 Next phase-ordering081-090 controls, then remaining state and integrated coverage gaps.
+Phase090 test false-positive corrected before adaptation: old8950 assertion failed
+at actual70 before orphan validation. Exact orphan cause now verified; original
+bytes and two-arm regression preserved in workbench-sem-phase-rollback-correction-rev1.
 Full corpus coverage and Campaign4 entry acceptance stay open.
 Joined REASON continuation: OBSERVABILITY_WORKBENCH_REASON_PROGRESS.md;115 native
 programs/350 prefixes pass; Values125/625 retained. Full workbench acceptance remains open.

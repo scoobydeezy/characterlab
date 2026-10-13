@@ -1,0 +1,38 @@
+{
+  "status": "PASS PHASE090 ROLLBACK CAUSE CORRECTION",
+  "original": {
+    "path": "docs/planning/workbench-sem-phase-rollback-correction-rev1/original-semanticPhaseOrdering.test.ts.txt",
+    "sha256": "6920ca1518c608f0882794053358b9d0b9df881ffcccaef0754c57d6daab26d5"
+  },
+  "sources": [
+    {
+      "path": "src/test/semanticPhaseOrdering.test.ts",
+      "sha256": "a7d13a10c67a713e4f8c71775b8bf153a8eff37494fa3561005af20594eeed3f"
+    },
+    {
+      "path": "src/test/semanticPhaseRollbackCause.test.ts",
+      "sha256": "38b0f72f83acca6943616d7041ece0511b92ab1aee0af22b4887d655f0e248e8"
+    },
+    {
+      "path": "src/semanticBinding/phaseOrdering.ts",
+      "sha256": "dad03c3c616db20265dd2c5e1253db2fdf020b0996f266c68d726aaf9d39e0e6"
+    },
+    {
+      "path": "src/substrate/scheduler.ts",
+      "sha256": "d82c1e44cc25064eeb635e9773793d84d18efabd24860bde2f25ca011f86ad32"
+    },
+    {
+      "path": "scripts/check-workbench-sem-phase-rollback-correction.mjs",
+      "sha256": "2476369aab06abe483f7a6657f0dfbcc56d2e7a9f37b8054d86d2cae4fbca093"
+    }
+  ],
+  "tests": {
+    "path": "docs/planning/workbench-sem-phase-rollback-correction-rev1/tests.json",
+    "sha256": "0fbbb7ce9e36311177b8de33c18945a0b34a31161b8b773001332d588832f340",
+    "passed": 11,
+    "failed": 0
+  },
+  "finding": "Original phase090 scheduler starts at70 but assertion expects8950. Scheduler wraps that assertion as TRANSITION_FAILURE before orphan validation. The old generic error-code check therefore passed for the wrong cause.",
+  "correction": "Capture allocated reservation and contract rejection separately. Assert70, ORPHAN_EXPERIENCE_RESERVATION and exact wrapped message outside the handler; verify committed state and allocator preservation. Dedicated two-arm regression demonstrates the original and corrected failure paths.",
+  "scope": "Test qualification correction only. Original bytes preserved;081-089 and fixture helper tail unchanged. Runtime semantics and Campaign3 verdicts unchanged. Full phase workbench controls and UI remain due. Prior generic090 success is insufficient proof of the orphan rollback cause."
+}

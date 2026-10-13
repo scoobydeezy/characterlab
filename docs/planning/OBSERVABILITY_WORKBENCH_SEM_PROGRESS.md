@@ -672,3 +672,25 @@ full download/SEM acceptance claim. Next original semanticPhaseOrdering.test.ts
 081-090 controls: phase lanes/cutoffs, reservation/envelope integrity, independent
 classifier work, recognition snapshots, learning/adaptation separation and rollback.
 Remaining state and integrated census gaps and Campaign4 entry remain open.
+
+Phase090 qualification correction COMPLETE (2026-10-13). Pre-adaptation inspection
+found the original test expected reservation8950 from a scheduler starting at70.
+The assertion failed before validateSuccessfulExperienceSettlement, but the scheduler
+wrapped it as TRANSITION_FAILURE, satisfying the generic outer expectation. Original
+ten tests passed while this particular orphan-rollback cause was unproven.
+Exact original source preserved with SHA256
+6920ca1518c608f0882794053358b9d0b9df881ffcccaef0754c57d6daab26d5.
+Corrected test captures reservation and validation code, asserts70 and the explicit
+ORPHAN_EXPERIENCE_RESERVATION cause outside the handler, and matches the wrapped
+message. Committed state/allocators/trace/output are preserved. Dedicated two-arm
+regression reproduces the old assertion failure and the intended orphan failure;
+11 tests PASS with JSON report retained. Typecheck66485 COMPLETE exit0.
+Audit check-workbench-sem-phase-rollback-correction.mjs PASS; five current/frozen
+source identities independently verified. Runtime code,081-089 and fixture helper
+tail unchanged. No production build rerun for this test-only correction.
+Evidence restore/research PASS;18 conditional obligations remain. This corrects a
+SEM test witness, not a Campaign3 verdict or runtime semantic contract. Prior generic
+090 PASS alone must not support the orphan cause. The full phase controls are still
+due; use corrected source and preserve the historical false-positive distinction.
+Next081-090 controls, then worker/UI/browser parity and remaining state/integrated
+coverage. Overall Campaign4 entry remains open.
