@@ -1,0 +1,1 @@
+Build62235 TS2322: instrumentation replaced single-statement guarded return with two unbraced statements. Return escaped the string guard. Original native32 and recorder2 tests passed but error propagation was not preserved. Rev1 audit insufficient; superseded by rev2 with whole guard replacement and exact source-transform check.

@@ -862,3 +862,27 @@ canonical membership/occurrence migration and all10 gates. Broad semantic/psycho
 claims are not inferred from bounded component comparisons. No runtime/UI change this
 turn; no production rebuild needed after prior passing persistence UI build. Research
 restore/check PASS;18 conditional obligations unchanged. Campaign4 entry remains open.
+
+## Named negative-control ledger foundation (2026-10-13)
+
+All31 original semanticNegativeControls bodies now run through a small explicit assertion
+recorder; the native assertions and fixtures are retained, imports rerouted and codeOf
+captures its caught string code/message before returning. Original completeness body also
+executes. No unsupported matcher silently succeeds. Negative tests confirm false equality,
+containment, set equality and unexpected throw fail the recorder. Contract order retained.
+Report:323 assertions including3 completeness,31 caught failures across22 named controls,
+9 controls with structural/comparison assertions only. Exact assertion operands and failure
+messages hashed; no claim they are complete function inputs or full runtime traces.
+Original ordinal-psychology witnesses compare bounded semantic views, not uninvoked
+psychological consumers; hidden-truth causal witness checks perceived bindings/linkage,
+not a new causal derivation. Original scope limitations remain explicit.
+Rev1 passed runtime tests and its narrow audit but build62235 caught TS2322: the injected
+recordFailure statement escaped the original one-statement string guard, moving return
+outside it. Rev1 receipt is insufficient and superseded; failed source/generator/audit and
+type diagnosis retained. Rev2 wraps both statements within the guard, preserving unexpected
+error propagation. Exact source-transform audit checks all original bodies, not just names.
+Corrected34 tests PASS, JSON retained in workbench-sem-negative-rev2. Evidence restored;
+research PASS,18 conditional obligations unchanged. Next ledger worker/UI/browser parity,
+then integrated renderer/phenomenon and authority/acceptance reconciliation. No full SEM
+or Campaign4 completion claim.
+Corrected audit12391 COMPLETE exit0; production build8705 COMPLETE exit0,400 modules, existing chunk-size warning retained. Ten current/frozen source identities verified for rev2.

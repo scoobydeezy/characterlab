@@ -1,0 +1,10 @@
+import {executeNegativeLedger,originalSource} from './semNegativeFixture';
+import {NAMED_NEGATIVE_CONTROLS} from '../test/fixtures/namedNegativeControls';
+import {negativeDiagnostic} from './semNegativeRecorder';
+import {digest} from './canonical';
+export async function runSemNegativeControls(){
+ const executed=executeNegativeLedger(),cases=[];
+ for(const name of NAMED_NEGATIVE_CONTROLS){const result=executed.find(c=>c.name===name+' fails closure');if(!result)throw Error('Missing named control '+name);const exact=negativeDiagnostic(result);cases.push({name,assertionCount:result.assertions.length,closureCodes:result.failures.map(f=>f.code),evidence:{encoding:'negative-ledger-diagnostic-json/0.1',exact,sha256:await digest(new TextEncoder().encode(exact))}});}
+ const completeness=executed.find(c=>c.name==='discharges every control the acceptance gate names');if(!completeness||executed.length!==32)throw Error('Unexpected ledger inventory');
+ return {version:'sem-negative-controls/0.1',source:originalSource,cases,completeness,summary:{namedControls:cases.length,assertions:executed.reduce((sum,c)=>sum+c.assertions.length,0),closureFailures:executed.reduce((sum,c)=>sum+c.failures.length,0),controlsWithClosureFailures:cases.filter(c=>c.closureCodes.length).length,controlsWithoutClosureFailures:cases.filter(c=>!c.closureCodes.length).length},scope:'Original31 named negative-control bodies executed with recorded assertion values and exact caught closure codes/messages; three completeness assertions included. Controls without caught failures establish only their original structural/comparison witness. Recorded assertion operands are not complete runtime traces or every function input. Original ordinal-psychology tests inspect bounded semantic views, not uninvoked psychological consumers. Hidden-truth causal control checks perceived bindings and linkage rejection, not a new causal derivation. No first-divergence claim beyond the original asserted boundary, no full SEM qualification.'};
+}
