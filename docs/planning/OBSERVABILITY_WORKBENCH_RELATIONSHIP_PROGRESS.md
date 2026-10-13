@@ -82,3 +82,20 @@ Three focused legacy/comparison tests PASS. Full legacy24/256 exact-native/histo
 audit RUNNING session72422 via check-workbench-relationship-legacy.mjs. This verifies
 inspection fidelity, not the failed psychological claim. Original failure remains
 unchanged. Read the existing process before changing its bound adapter source.
+
+Cross-revision inspection implemented for24 declared old/new pairs. Full inputs,
+models and initial states remain explicit; source calendars/seeds/candidate settings
+must match, seam versions must be0.1 then0.2, and observer IDs must align. This is a
+declared version/calibration change, not ordinary single-law equivalence. Exact views
+and response records remain separate; effective Auto probability is selected1/others0,
+while non-Auto uses native analytical probabilities. No RNG identity is normalized.
+
+Two tests PASS all-pair calendar identity and the native fourth-instant acquisition
+witness across four runs, plus reversed-pair/observer/position rejection. The initial
+test incorrectly expected baseline probability to change across versions; its source
+and failure are retained in workbench-relationship-revision-comparison-rev1. Correction
+follows native evidence: both baselines are1/2; no-acquisition changes from legacy1/2
+to corrected effective0 (analytical25/72). The historical failure is not reclassified.
+
+All24 revision choices are connected to the prepared component, with full report export;
+type-check PASS. Full all-pair execution audit and browser qualification remain due.

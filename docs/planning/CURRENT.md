@@ -166,3 +166,6 @@ prefixes. Six-mode UI/worker prepared; transport/type-check PASS. Registry/brows
 
 RELATIONSHIP legacy0.1 originals now separately exposed (24 programs/11 models), with
 actual seam identity and narration suppressed. Three tests PASS; full audit session72422.
+
+RELATIONSHIP24 revision pairs implemented; native matched acquisition witness tests
+and type-check PASS. All-pair/browser qualification remains due; failed test preserved.
