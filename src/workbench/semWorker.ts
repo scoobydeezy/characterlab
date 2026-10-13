@@ -13,6 +13,7 @@ import {runSemBindingControls} from './semBindingControls';
 import {runSemEventFileControls} from './semEventFileControls';
 import {runSemClassificationBoundaryControls} from './semClassificationBoundaryControls';
 import {runSemEventClassificationControls} from './semEventClassificationControls';
+import {runSemNegativeControls} from './semNegativeControls';
 import {runSemPersistenceControls} from './semPersistenceControls';
 import {runSemCodecControls} from './semCodecControls';
 import {runSemSchemaControls} from './semSchemaControls';
@@ -29,6 +30,7 @@ self.addEventListener('message',async(event:MessageEvent<{id:number;operation:st
  else if(q.operation==='controls'){const before=JSON.stringify(run.checkpoint());result=await runSemControlSuite();if(JSON.stringify(run.checkpoint())!==before)throw Error('SEM component controls changed active run');}
  else if(q.operation==='recognition'){const before=JSON.stringify(run.checkpoint());result=await runSemRecognitionControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Recognition controls changed active run');}
  else if(q.operation==='checkpoint')result=run.checkpoint();
+ else if(q.operation==='negativeLedger'){const before=JSON.stringify(run.checkpoint());result=await runSemNegativeControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Negative ledger changed active run');}
  else if(q.operation==='persistence'){const before=JSON.stringify(run.checkpoint());result=await runSemPersistenceControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Persistence controls changed active run');}
  else if(q.operation==='codecs'){const before=JSON.stringify(run.checkpoint());result=await runSemCodecControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Codec controls changed active run');}
  else if(q.operation==='schemas'){const before=JSON.stringify(run.checkpoint());result=await runSemSchemaControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Schema controls changed active run');}

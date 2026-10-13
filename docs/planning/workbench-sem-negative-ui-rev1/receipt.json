@@ -1,0 +1,62 @@
+{
+  "status": "PASS NAMED NEGATIVE BROWSER/NATIVE PARITY",
+  "sources": [
+    {
+      "path": "src/workbench/SemWorkbench.tsx",
+      "sha256": "cd608aeee99ac147ae7a69d6a43a3ca0a5809695cb28b065141a01195f2716fe"
+    },
+    {
+      "path": "src/workbench/SemNegativePanel.tsx",
+      "sha256": "2a7431e45e635f88c847e44b07bce7a435ae9242399450635c1428a8ada4ca59"
+    },
+    {
+      "path": "src/workbench/semNegativeControls.ts",
+      "sha256": "a24572efc3f9d2ea90b9585dcf1cc97f26f1cb6f51b1bb4754a0cebffbc25b19"
+    },
+    {
+      "path": "src/workbench/semNegativeFixture.ts",
+      "sha256": "c6f298cba0a0c5c710285f70d2a464feb1e05a4cbd2790efc3a412b8caa924dc"
+    },
+    {
+      "path": "src/workbench/semNegativeRecorder.ts",
+      "sha256": "9e908244574c6fdf3a9e99a2d7fb685bba55fca784410ba2a37b1d44aaa4f5b8"
+    },
+    {
+      "path": "src/workbench/semWorker.ts",
+      "sha256": "ebf659fc843a0efb2aae895b6a4a6101d98240ebde73600e761d4e62d2782448"
+    },
+    {
+      "path": "src/workbench/semWorkerClient.ts",
+      "sha256": "91d92d3447a1a82379489828d471966fd0dfaf4a1fd7f00c36f464a0bc5ec9bd"
+    },
+    {
+      "path": "src/test/workbenchSemNegativeWorker.test.ts",
+      "sha256": "191fc7dec9abe76b3d583836b923449395062b311cb7172390fce1175f087486"
+    },
+    {
+      "path": "scripts/check-workbench-sem-negative-ui.mjs",
+      "sha256": "0105068a7e603b3d27d6162e1d3f647b62f5cc5e114bacad80417bf12fdd5449"
+    },
+    {
+      "path": "docs/planning/workbench-sem-negative-rev2/receipt.json",
+      "sha256": "728c62e4ea7d0731029e4cbd15fd8136ab2ffb5ff9474763163c0b06bf0c0b7b"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "report.json",
+      "sha256": "898e2b5415565e3e7622cc13bca7837641aa8f550c0ade1ea8b245c20911e806"
+    },
+    {
+      "path": "ui.json",
+      "sha256": "5dacb4ca77f39b975d6d88d8dd4fffad87a0a275beb16e1dbe8a13f6fbcdc5de"
+    },
+    {
+      "path": "negative.png",
+      "sha256": "e085214d4b802a9cef85a575cb03de4ae941916398894e4ccab43d76730bd17d"
+    }
+  ],
+  "reportCharacters": 162952,
+  "activePrefix": 1,
+  "scope": "Complete browser report;5 summary/31 witness rows equal fresh native execution and corrected rev2 evidence. Six active hashes unchanged. Worker tests preserve four prefixes. Screenshot inspected. Structural/comparison versus caught-failure scope visible. No full file download or full SEM/Campaign4 claim."
+}

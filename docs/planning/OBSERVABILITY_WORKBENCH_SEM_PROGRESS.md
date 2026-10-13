@@ -886,3 +886,19 @@ research PASS,18 conditional obligations unchanged. Next ledger worker/UI/browse
 then integrated renderer/phenomenon and authority/acceptance reconciliation. No full SEM
 or Campaign4 completion claim.
 Corrected audit12391 COMPLETE exit0; production build8705 COMPLETE exit0,400 modules, existing chunk-size warning retained. Ten current/frozen source identities verified for rev2.
+
+## Named negative ledger worker and browser parity (2026-10-13)
+
+Compare now exposes Named negative-control ledger:5 count rows and31 named witnesses
+in original contract order. Each lists assertion count and exact caught codes, or explicitly
+says no caught failure with structural/comparison checks. Mixed witnesses are not flattened
+into rejection-only claims. Full original323 assertion values and31 errors remain inspectable.
+Worker negativeLedger operation uses corrected foundation rev2, matches its report and
+preserves checkpoints at all4 prefixes; focused3 tests PASS. Production build17513 COMPLETE
+exit0,401 modules, existing chunk-size warning retained. Browser prefix1 complete162,952-
+character report captured in50,000-character chunks; both tables and scope paragraphs
+captured with6 unchanged hashes. Screenshot inspected. Evidence root
+workbench-sem-negative-ui-rev1. No full file download/full SEM claim. Evidence restore/
+research PASS,18 conditional obligations unchanged. Next integrated renderer/phenomenon
+joins and authority/acceptance gates; Campaign4 entry remains open.
+Audit6338 COMPLETE exit0: full browser report, both tables, scope text and6 hashes equal fresh native execution and corrected rev2 report. Ten current/frozen sources and3 capture identities verified.
