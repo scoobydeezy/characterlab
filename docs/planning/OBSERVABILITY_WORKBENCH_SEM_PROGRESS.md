@@ -432,3 +432,17 @@ workbench-sem-continuant-rev1/receipt.json. Evidence restore/research checks PAS
 Next worker/UI/browser qualification, then joined three-axis and remaining SEM
 corpus controls. Overall Campaign4 entry acceptance remains open.
 Production build17696 COMPLETE exit0 (389 modules), reference boundaries PASS. Component module is typechecked; browser enrollment remains next.
+
+Continuant lifecycle Compare UI COMPLETE (2026-10-13). Worker controls retain the
+active integrated checkpoint at all4 prefixes; two worker tests PASS (continuant
+and recognition-boundary). Build42904 COMPLETE exit0,390 modules. Browser prefix1
+full65605-character report and all13 result/10 scenario/7 rejection/9 allocation
+rows match fresh native execution and the qualified component receipt. All6 active
+hashes unchanged. Copy/continuation versus native persistence scope stays explicit.
+Full-page screenshot inspected. Audit20556 COMPLETE exit0; receipt:
+workbench-sem-continuant-ui-rev1/receipt.json. Nine current/frozen sources and3
+capture hashes independently verified. Evidence restore and research check PASS;
+18 conditional obligations preserved. Prepared export is available; no full download,
+new Campaign3 verdict/amendment or full SEM acceptance is claimed.
+Next joined tracking/classification/recognition comparisons and remaining SEM
+families identified by the complete census. Overall Campaign4 entry stays open.

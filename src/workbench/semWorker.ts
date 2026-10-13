@@ -7,6 +7,7 @@ import {runSemKnowledgeControls} from './semKnowledgeControls';
 import {runSemMeasurementControls} from './semMeasurementControls';
 import {runSemClassificationControls} from './semClassificationControls';
 import {runSemRecognitionBoundaryControls} from './semRecognitionBoundaryControls';
+import {runSemContinuantControls} from './semContinuantControls';
 let run:SemWorkbenchRun|undefined;
 self.addEventListener('message',async(event:MessageEvent<{id:number;operation:string;checkpoint?:SemCheckpoint}>)=>{
  const q=event.data;try{let result:unknown;
@@ -18,6 +19,7 @@ self.addEventListener('message',async(event:MessageEvent<{id:number;operation:st
  else if(q.operation==='controls'){const before=JSON.stringify(run.checkpoint());result=await runSemControlSuite();if(JSON.stringify(run.checkpoint())!==before)throw Error('SEM component controls changed active run');}
  else if(q.operation==='recognition'){const before=JSON.stringify(run.checkpoint());result=await runSemRecognitionControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Recognition controls changed active run');}
  else if(q.operation==='checkpoint')result=run.checkpoint();
+ else if(q.operation==='continuant'){const before=JSON.stringify(run.checkpoint());result=await runSemContinuantControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Continuant controls changed active run');}
  else if(q.operation==='recognitionBoundaries'){const before=JSON.stringify(run.checkpoint());result=await runSemRecognitionBoundaryControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Recognition boundary controls changed active run');}
  else if(q.operation==='classification'){const before=JSON.stringify(run.checkpoint());result=await runSemClassificationControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Classification controls changed active run');}
  else if(q.operation==='measurement'){const before=JSON.stringify(run.checkpoint());result=await runSemMeasurementControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Measurement controls changed active run');}

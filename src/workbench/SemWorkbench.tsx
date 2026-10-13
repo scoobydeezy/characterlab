@@ -10,6 +10,7 @@ import {SemKnowledgePanel} from './SemKnowledgePanel';
 import {SemMeasurementPanel} from './SemMeasurementPanel';
 import {SemClassificationPanel} from './SemClassificationPanel';
 import {SemRecognitionBoundaryPanel} from './SemRecognitionBoundaryPanel';
+import {SemContinuantPanel} from './SemContinuantPanel';
 const modes=['Character','Experiment','Reasoning','Timeline','Compare','Architecture'] as const;
 export function SemWorkbench({active=true}:{active?:boolean}){
  const run=useRef<SemWorkerClient>(),lock=useRef(false),stop=useRef(false);
@@ -34,6 +35,7 @@ export function SemWorkbench({active=true}:{active?:boolean}){
  {mode==='Compare'&&<SemMeasurementPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
  {mode==='Compare'&&<SemClassificationPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
  {mode==='Compare'&&<SemRecognitionBoundaryPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
+ {mode==='Compare'&&<SemContinuantPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
  {mode==='Architecture'&&<section className="card"><h2>Retained semantic state</h2><p>Native continuant and event-file roots are shown below. A read/write participation report is unavailable for this historical trace format; no missing instrumentation is treated as inactivity.</p><pre className="exact">{view?.researchState}</pre></section>}
  {text&&<><PreparedExport text={text} label="Prepared SEM export" filename="characterlab-sem.json"/><button onClick={()=>setText('')}>Close SEM export</button></>}
  <footer>{view&&(['modelHash','runHash','stateHash','saveHash','outputsHash','traceHash'] as const).map(k=><div className="hash" key={k}><span>{k}</span><code>{view[k]}</code></div>)}</footer></div></main>;
