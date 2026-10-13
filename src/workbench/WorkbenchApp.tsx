@@ -15,6 +15,8 @@ const Work = lazy(() => import('./WorkWorkbench').then(m => ({default: m.WorkWor
 const Skill = lazy(() => import('./SkillWorkbench').then(m => ({default:m.SkillWorkbench})));
 const Habit = lazy(() => import('./HabitWorkbench').then(m => ({default:m.HabitWorkbench})));
 const General = lazy(() => import('./GeneralWorkbench').then(m => ({default: m.GeneralWorkbench})));
+const Social = lazy(() => import('./SocialWorkbench').then(m => ({default:m.SocialWorkbench})));
+const Relationship = lazy(() => import('./RelationshipWorkbench').then(m => ({default:m.RelationshipWorkbench})));
 export function WorkbenchApp() {
   const [experiment, setExperiment] = useState<ExperimentId | 'batch'>('values');
   const [visited, setVisited] = useState<Set<string>>(() => new Set(['values']));
@@ -32,5 +34,7 @@ export function WorkbenchApp() {
     {visited.has('work') && <div hidden={experiment !== 'work'}><Suspense fallback={<p role="status">Loading WORK…</p>}><Work active={experiment === 'work'}/></Suspense></div>}
     {visited.has('skill') && <div hidden={experiment !== 'skill'}><Suspense fallback={<p role="status">Loading SKILL…</p>}><Skill active={experiment === 'skill'}/></Suspense></div>}
     {visited.has('habit') && <div hidden={experiment !== 'habit'}><Suspense fallback={<p role="status">Loading HABIT…</p>}><Habit active={experiment === 'habit'}/></Suspense></div>}
+    {visited.has('social') && <div hidden={experiment !== 'social'}><Suspense fallback={<p role="status">Loading SOCIAL…</p>}><Social active={experiment === 'social'}/></Suspense></div>}
+    {visited.has('relationship') && <div hidden={experiment !== 'relationship'}><Suspense fallback={<p role="status">Loading RELATIONSHIP…</p>}><Relationship active={experiment === 'relationship'}/></Suspense></div>}
   </>;
 }

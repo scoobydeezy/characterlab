@@ -117,3 +117,11 @@ executions PASS. Both observer histories match historical analytical/effective c
 probabilities, modes, chosen options and draw counts. All24 report hashes and
 current/frozen source bindings independently verified. Original failed0.1 cohort
 remains failed; no browser or general calibration claim.
+
+UI registration COMPLETE: registry0.21 and lazy app route, with six modes and
+observer selection. Production build PASS339 modules. Bounded browser check PASS:
+default first prefix, both observers, five displayed hashes and full article
+prose/provenance equal fresh native execution. SOCIAL state/observer survives
+switching to RELATIONSHIP and back. Screenshots inspected; receipt and source/input
+hashes verified in workbench-social-relationship-ui-rev1. Full browser replay,
+comparisons, all modes, controls and batch enrollment remain due.

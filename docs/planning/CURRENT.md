@@ -181,3 +181,8 @@ full parity running. See OBSERVABILITY_WORKBENCH_MULTISOURCE_PROGRESS.md.
 Latest shared batch audit COMPLETE:841 roles/5236 exact prefixes PASS, session33242
 exit0 and26 current/frozen source bindings verified. Registry freeze released.
 SOCIAL/RELATIONSHIP UI registration and wider corpus/batch qualification remain due.
+
+Latest: SOCIAL/RELATIONSHIP UI registered (registry0.21). Build PASS339 modules;
+both observers at first prefix match native hashes/prose/provenance in the browser,
+with SOCIAL session retention. Full browser replay/comparison/all-mode checks due.
+MULTISOURCE parity audit session50025 remains running; do not restart.

@@ -63,3 +63,11 @@ Route registration and browser qualification remain due. Shared experimentRegist
 is bound by the still-live841-role audit (session33242), so it has not been modified.
 No claim is made that the prepared component is reachable through the app yet. Resume
 registration after that source-bound audit terminates and its evidence is inspected.
+
+UI registration COMPLETE: registry0.21 and lazy app route, with six modes and
+observer selection. Production build PASS339 modules. Bounded browser check PASS:
+default first prefix, both observers, five displayed hashes and full article
+prose/provenance equal fresh native execution. SOCIAL state/observer survives
+switching to RELATIONSHIP and back. Screenshots inspected; receipt and source/input
+hashes verified in workbench-social-relationship-ui-rev1. Full browser replay,
+comparisons, all modes, controls and batch enrollment remain due.
