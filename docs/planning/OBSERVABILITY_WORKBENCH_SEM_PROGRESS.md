@@ -1014,3 +1014,29 @@ Final build41813 COMPLETE exit0 after label refinement (403 modules; existing ch
 warning). Evidence restore/research PASS,18 conditional obligations unchanged. Prepared
 exact report is exposed; full download remains unqualified. Next seven-leaf authority,
 remaining phenomenon joins and acceptance reconciliation. Full goal remains open.
+
+## Semantic state-authority foundation (2026-10-13)
+
+All eight original semanticStateAuthority test bodies execute in original order with
+a fresh per-invocation ordinal map:57 recorded assertions/11 caught failures. Seven
+leaves across roots241..244 and three authorities are preserved. Exact non-owner,
+unknown-owner, overlapping/uncovered paths, removal and invalid-value failures remain
+distinguished. Original canonical-set membership, codec round-trip, retirement and
+ModelIdentity comparisons are retained with full assertion operands. Six detection
+ordinals preserve original insertion order. Declared ownership is not an observed
+participation trace; changed identity alone is not changed runtime behavior, and codec
+round-trip is not scheduler save/load. No broader authority or psychology claim.
+
+Async recorder serializes original cases, retains assertion operands, uses the existing
+fail-closed equality/throw recorder and explicitly implements subset matching. Deliberate
+false subset cases after await fail. Source-transform audit checks complete original
+bodies and the braced StateContractError recording/return guard.
+
+Eight native plus two adapter/recorder tests PASS; production build6539 COMPLETE exit0,
+403 modules with existing chunk warning. Rev1 audit14340 passed but parent-seam metadata
+was too imprecise; retained revision is superseded. Rev2 imports native
+SEMANTIC_STATE_AUTHORITY_VERSION (semantic-state-authority/0.1-candidate#SEM-001I.3).
+Final type41784 and audit19009 COMPLETE exit0. Ten frozen source identities and full
+report in workbench-sem-authority-rev2. Evidence restore/research PASS;18 conditional
+obligations unchanged. Next authority worker/UI/browser parity, then remaining
+phenomenon and acceptance joins; full workbench and Campaign4 entry remain open.

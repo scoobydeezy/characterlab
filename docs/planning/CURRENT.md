@@ -1,5 +1,11 @@
 # Current research entry point
 
+**Latest workbench2026-10-13:** Semantic state-authority foundation qualified in
+workbench-sem-authority-rev2:8 cases/57 assertions/11 failures/7 writable leaves.
+Exact semantic-state-authority/0.1-candidate#SEM-001I.3 version imported from native
+module; rev1 parent-seam metadata superseded and preserved.10 tests/build/type PASS.
+Next authority worker/UI/browser parity, then remaining phenomenon/acceptance joins.
+
 **Latest workbench2026-10-13:** Integrated chain/shortcut worker and browser parity
 qualified in workbench-sem-integrated-ui-rev1:3 chains/256 identity bindings,
 4 rollback rows,12 shortcut cases/26 assertions/12 caught failures. All4 worker
