@@ -132,3 +132,7 @@ comparison/control browser cohorts and broader entry requirements remain open.
 SKILL hidden-competence and HABIT DerivedHistory/StoredSummary browser comparisons
 PASS complete report/native equality. See OBSERVABILITY_WORKBENCH_SKILL_HABIT_COMPARISON_PROGRESS.md.
 Two declared pairs only; broader comparison cohorts and full entry remain open.
+
+Eleven-seam batch841 roles/5236 prefixes enrolled, preserving previous766 jobs.
+SKILL52/HABIT23 originals, including empty HABIT, retained;11 focused tests PASS.
+Full audit RUNNING session33242. Start OBSERVABILITY_WORKBENCH_BATCH_V6_PROGRESS.md.
