@@ -107,3 +107,6 @@ audit running. Start OBSERVABILITY_WORKBENCH_SKILL_LANGUAGE_PROGRESS.md. UI rema
 SKILL language now PASS5630 descriptions/279 prefixes,58 control prefixes suppressed.
 Six-mode component/worker prepared; route registration waits for the existing live
 batch audit to finish without source drift. Browser qualification remains due.
+
+HABIT native adapter foundation implemented:23 programs/12 models, historical291-
+prefix audit running. See OBSERVABILITY_WORKBENCH_HABIT_PROGRESS.md; UI/language due.
