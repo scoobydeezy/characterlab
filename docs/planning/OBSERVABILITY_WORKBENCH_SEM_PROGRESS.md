@@ -599,3 +599,25 @@ verified. Evidence restore/research PASS;18 conditional obligations unchanged.
 No new Campaign3 verdict/amendment or full download/SEM acceptance claim.
 Next original perceptualEventClassification.test.ts051-060 event-pattern controls,
 then remaining phase/state/provenance and integrated census gaps. Campaign4 entry open.
+
+Event-pattern classification component controls COMPLETE (2026-10-13). Original
+perceptualEventClassification.test.ts051-060 recipes retain16 cases/7 guards/
+7 emission targets/one isolated rollback with24 exact diagnostics. Helper prefix
+retained verbatim except test import removal and fixture import routing. Exact
+necessary-feature conjunction keeps incomplete input absent and explicit negative
+evidence false; coarse patterns do not imply the detailed rope-skipping pattern.
+Observer support, role/pattern independence, false-merge contradictions and false-split
+equivalence retain original IDs. Original056 later record is a structural copy;
+no executed history append claimed. Truth variants repeat/change permitted inputs,
+not paired world-truth intervention. Alternative authority compares model identity,
+not behavioral divergence. Executable derivation remains in frozen source.
+Original isolated failure allocates classification50, preserves state/allocators/
+trace/outputs and changes Active to Failed. Original10 tests plus workbench test PASS
+(11 total); typecheck95560 COMPLETE exit0. Audit6415 COMPLETE exit0; receipt
+workbench-sem-event-classification-rev1/receipt.json. Ten current/frozen source
+identities independently verified. Evidence restore/research PASS;18 conditional
+obligations unchanged. No new Campaign3 verdict/amendment/native Save132 claim.
+LOCAL DISPOSITION: preserve original component recipes and explicit claim limits;
+no architectural ruling needed. Next event-pattern worker/Compare UI/browser parity,
+then remaining phase/state/provenance and integrated census gaps. Campaign4 entry open.
+Build23890 COMPLETE exit0 (394 modules/reference boundaries).
