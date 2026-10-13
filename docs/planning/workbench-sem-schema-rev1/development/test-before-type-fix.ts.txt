@@ -1,0 +1,10 @@
+import {it,expect} from 'vitest';
+import {runSemSchemaControls} from '../workbench/semSchemaControls';
+it('preserves registry identities and separates canonical ordering from semantic mutation',async()=>{
+ const r=await runSemSchemaControls();expect(await runSemSchemaControls()).toEqual(r);expect(r.cases).toHaveLength(6);expect(r.guards).toHaveLength(4);
+ const p=Object.fromEntries(r.cases.map(c=>[c.id,JSON.parse(c.evidence.exact)]));expect(p['record-allocation'].schemas.map(s=>s.typeId.$bigint)).toEqual(Array.from({length:50},(_,i)=>String(210+i)));
+ for(const s of p['field-contracts']){expect(s.fields.map(f=>f.id.$bigint)).toEqual(s.fields.map((_,i)=>String(i+1)));expect(new Set(s.fields.map(f=>f.name)).size).toBe(s.fields.length);}
+ expect(p['finite-registries-and-origin'].authoredHex).not.toBe(p['finite-registries-and-origin'].runtimeHex);expect(p['union-matrix'].variants).toHaveLength(26);
+ expect(r.summary.canonicalOrderEqual).toBe(true);expect(r.summary.digestOrderEqual).toBe(true);expect(r.summary.matrixChangesIdentity).toBe(true);expect(r.summary.kindChangesIdentity).toBe(true);
+ expect(r.guards.map(g=>g.message)).toEqual([expect.stringMatching(/unknown semantic registry kind/),expect.stringMatching(/missing required/),expect.stringMatching(/forbidden/),expect.stringMatching(/unknown/)]);
+});

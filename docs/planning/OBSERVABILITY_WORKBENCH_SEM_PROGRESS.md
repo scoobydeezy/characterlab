@@ -732,3 +732,23 @@ root workbench-sem-phase-ui-rev1 retains9 sources and3 browser captures. No file
  download/native persistence/full SEM claim. Evidence restore/research PASS,18
 conditional obligations unchanged. Next091-100 schema/codec/state controls and
 remaining integrated coverage; Campaign4 entry remains open.
+
+## Schema registry foundation (2026-10-13)
+
+Original CV-SEM-091..095 recipes now executable as researcher inspection controls.
+Contract semantic-schema-allocation/0.1-candidate#SEM-001I.2 retained. Six cases,
+four rejection controls,10 exact diagnostics,50 original schemas210..259 and26
+union variants. Exact field declarations, typed/occurrence namespaces and authored20
+versus runtime21 origin bytes preserved. All26 admitted union shapes validated;
+unknown registry kind, missing required payload, forbidden payload and unknown
+variant rejected. Four canonical manifests retain forward/reverse bytes and digests,
+changed union matrix and changed registry kind. Reorder equality and mutation
+inequality verified from canonical bytes; changed identity is not semantic admission.
+No lifecycle codec/state-persistence/UI/full SEM claim.
+Six focused tests PASS, JSON retained. Initial test-only TS7006 callback type errors
+preserved before adding an explicit diagnostic schema type. Audit4304 COMPLETE exit0:
+repeatability,10 digests, raw schema/namespace/union rows and four manifest hashes PASS.
+Evidence root workbench-sem-schema-rev1. Research restore/check PASS,18 conditional
+obligations unchanged; no runtime contract or Campaign3 verdict changes.
+Next schema worker/UI/browser parity, codec096, persistence097/098 and state099/100.
+Production build48892 COMPLETE exit0,397 modules; typecheck and boundary checks pass, existing chunk-size warning retained.
