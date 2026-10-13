@@ -88,3 +88,5 @@ scope; all prefixes match independent native state/output/trace/save and authent
 adapter restore. Current and frozen receipt source hashes verified. Receipt:
 workbench-multisource-parity-rev1/receipt.json. This supersedes earlier running status;
 registration/browser and broader language qualification remain open.
+
+UI now REGISTERED through inspectionRegistry0.1. Bounded browser/native routing receipt PASS; see OBSERVABILITY_WORKBENCH_INSPECTION_ROUTES_PROGRESS.md for exact checked prefixes, remaining browser scope and performance limits. This supersedes earlier prepared/unregistered status.

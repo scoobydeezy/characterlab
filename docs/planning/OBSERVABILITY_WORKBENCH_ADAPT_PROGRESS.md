@@ -75,3 +75,5 @@ including native measurement delivery and checkpoint-preserving comparison. This
 supersedes the earlier unavailable-language status only for this bounded pair.
 Registration, browser checks, broader controls and complete workbench qualification
 remain due. No research verdict or obligation changes.
+
+UI now REGISTERED through inspectionRegistry0.1. Bounded browser/native routing receipt PASS; see OBSERVABILITY_WORKBENCH_INSPECTION_ROUTES_PROGRESS.md for exact checked prefixes, remaining browser scope and performance limits. This supersedes earlier prepared/unregistered status.

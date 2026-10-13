@@ -76,3 +76,5 @@ tests PASS overlapping-command rejection, unrelated-reply handling, detached
 snapshots, disposal and message-decoding failure cleanup. Type-check PASS.
 Shared registry remains bound to batch54486; registration and browser qualification
 remain due. This prepared view does not discharge missing DET controls or language.
+
+UI now REGISTERED through inspectionRegistry0.1. Bounded browser/native routing receipt PASS; see OBSERVABILITY_WORKBENCH_INSPECTION_ROUTES_PROGRESS.md for exact checked prefixes, remaining browser scope and performance limits. This supersedes earlier prepared/unregistered status.

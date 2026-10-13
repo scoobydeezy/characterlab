@@ -1,7 +1,7 @@
 import {lazy, Suspense, useState} from 'react';
 import './workbench.css';
 import './experimentSelector.css';
-import {EXPERIMENTS, type ExperimentId} from './experimentRegistry';
+import {INSPECTION_EXPERIMENTS as EXPERIMENTS, type InspectionExperimentId as ExperimentId} from './inspectionRegistry';
 const Values = lazy(() => import('./Workbench').then(m => ({default: m.Workbench})));
 const Reason = lazy(() => import('./ReasonWorkbench').then(m => ({default: m.ReasonWorkbench})));
 const Batch = lazy(() => import('./BatchWorkbench').then(m => ({default: m.BatchWorkbench})));
@@ -17,6 +17,9 @@ const Habit = lazy(() => import('./HabitWorkbench').then(m => ({default:m.HabitW
 const General = lazy(() => import('./GeneralWorkbench').then(m => ({default: m.GeneralWorkbench})));
 const Social = lazy(() => import('./SocialWorkbench').then(m => ({default:m.SocialWorkbench})));
 const Relationship = lazy(() => import('./RelationshipWorkbench').then(m => ({default:m.RelationshipWorkbench})));
+const Multisource = lazy(() => import('./MultisourceWorkbench').then(m => ({default:m.MultisourceWorkbench})));
+const Adapt = lazy(() => import('./AdaptWorkbench').then(m => ({default:m.AdaptWorkbench})));
+const Det = lazy(() => import('./DetWorkbench').then(m => ({default:m.DetWorkbench})));
 export function WorkbenchApp() {
   const [experiment, setExperiment] = useState<ExperimentId | 'batch'>('values');
   const [visited, setVisited] = useState<Set<string>>(() => new Set(['values']));
@@ -36,5 +39,8 @@ export function WorkbenchApp() {
     {visited.has('habit') && <div hidden={experiment !== 'habit'}><Suspense fallback={<p role="status">Loading HABIT…</p>}><Habit active={experiment === 'habit'}/></Suspense></div>}
     {visited.has('social') && <div hidden={experiment !== 'social'}><Suspense fallback={<p role="status">Loading SOCIAL…</p>}><Social active={experiment === 'social'}/></Suspense></div>}
     {visited.has('relationship') && <div hidden={experiment !== 'relationship'}><Suspense fallback={<p role="status">Loading RELATIONSHIP…</p>}><Relationship active={experiment === 'relationship'}/></Suspense></div>}
+    {visited.has('multisource') && <div hidden={experiment !== 'multisource'}><Suspense fallback={<p role="status">Loading MULTISOURCE…</p>}><Multisource active={experiment === 'multisource'}/></Suspense></div>}
+    {visited.has('adapt') && <div hidden={experiment !== 'adapt'}><Suspense fallback={<p role="status">Loading ADAPT…</p>}><Adapt active={experiment === 'adapt'}/></Suspense></div>}
+    {visited.has('det') && <div hidden={experiment !== 'det'}><Suspense fallback={<p role="status">Loading DET…</p>}><Det active={experiment === 'det'}/></Suspense></div>}
   </>;
 }
