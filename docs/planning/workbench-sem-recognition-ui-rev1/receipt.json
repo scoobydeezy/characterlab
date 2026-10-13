@@ -1,0 +1,61 @@
+{
+  "status": "PASS RECOGNITION CONTROL BROWSER/NATIVE PARITY",
+  "sources": [
+    {
+      "path": "src/workbench/SemWorkbench.tsx",
+      "sha256": "12f0445831900c59934d1440c45ea4c4e7ffab83e70f44a67b37212b258c1bdc"
+    },
+    {
+      "path": "src/workbench/SemRecognitionPanel.tsx",
+      "sha256": "93188b54f3243ea2074855e358b377020ca22ca5ac559df18828ea29bd0d7206"
+    },
+    {
+      "path": "src/workbench/semRecognitionControls.ts",
+      "sha256": "2332abf09942678ada601acf037534f26fa9b4e8f4cd0ab3201a4aaa373773bd"
+    },
+    {
+      "path": "src/workbench/semRecognitionFixture.ts",
+      "sha256": "d22c1608e9a3b8e70f7a3013502ebcd3b0ee248391a24e0d3abf494a285e8a22"
+    },
+    {
+      "path": "src/workbench/semWorker.ts",
+      "sha256": "4e4382b7104634677d501fe639344fe83bf6964e5e6f84e56699e44e8f218481"
+    },
+    {
+      "path": "src/workbench/semWorkerClient.ts",
+      "sha256": "df017793f9fc9f1cb0e9808850bf1745df8e9af790ec6dcf2c559273c7d123de"
+    },
+    {
+      "path": "src/test/workbenchSemRecognitionWorker.test.ts",
+      "sha256": "29d2ab2cee77f8bd923ddb3a0854bb333cc18d5cd2328f26632667eccf7498e4"
+    },
+    {
+      "path": "scripts/check-workbench-sem-recognition-ui.mjs",
+      "sha256": "40dc2b097b2a70882e6154cbf3bd4bb9080a5cfde4957e41c62189efe2c1cbf7"
+    },
+    {
+      "path": "docs/planning/workbench-sem-recognition-rev1/receipt.json",
+      "sha256": "c93d08c223159e4392346b915c30ab6166b6659fef48c7fb900102a64223c591"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "report.json",
+      "sha256": "0c3d5a1aa6d5c6f6aeeb056e8628c80a64e0fe1fc8774fe6b382750732ecd12c"
+    },
+    {
+      "path": "ui.json",
+      "sha256": "25773bb6f4dd01cc48bcf0bfc9f93c1a0ce348479cf0cc7a2f3432720acaba58"
+    },
+    {
+      "path": "recognition.png",
+      "sha256": "0efab2d7344be311e787827398d504423dedc1a86a7dfa4a4e8404a9401b9287"
+    }
+  ],
+  "evaluations": 8,
+  "lifecycleSteps": 5,
+  "rejections": 4,
+  "reportCharacters": 110932,
+  "activePrefix": 1,
+  "scope": "Complete browser report equals fresh execution and original qualified component evidence. All evaluation/current-resolution/allocation and rejection cells match. Active native prefix1 hashes unchanged; actual worker tests cover checkpoint preservation at all4 prefixes. Screenshot inspected. Diagnostic component format remains distinct from later SEM record codecs; no download transport, remaining-control or full entry qualification claim."
+}

@@ -189,3 +189,23 @@ Next: worker/UI presentation of these recognition controls and browser equality;
 then mapping-state CV-SEM-099, continuity, allocator rollback/emission-target,
 classification-negative and measurement witnesses still need workbench coverage.
 This increment does not discharge those controls or full Campaign4 entry.
+
+Recognition Compare UI COMPLETE (2026-10-13): worker command exposes the original
+recognition suite in a separate panel. Independent evaluation, new-resolution
+emission, current recognition and next allocation are distinct columns; lifecycle
+and rejection guards have separate tables. Original candidate identities remain
+explicit. Exact diagnostic report and prepared export retain the original contract.
+
+Two actual-worker tests PASS, covering this suite and previous component suite at
+all four integrated prefixes with unchanged checkpoints. Build PASS385 modules.
+Browser executed recognition controls at prefix1; complete110932-character report
+captured in bounded chunks. All report fields and visible cells equal both fresh
+execution and the preceding qualified receipt; all six active hashes unchanged.
+Screenshot inspected. Audit59965 COMPLETE exit0; receipt:
+workbench-sem-recognition-ui-rev1/receipt.json. Research retains18 conditional
+obligations. No Blob download, full accessibility or complete entry claim.
+
+Next: recognition knowledge-state CV-SEM-099/100 and self-sufficient resolution
+state in semanticRecognitionState.test.ts, followed by other outstanding semantic
+witnesses and corpus coverage. Character-mode recognition language remains separate
+from this researcher-only component report.

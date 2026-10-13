@@ -31,8 +31,9 @@ SEM native/browser continuation and bounded pre-recognition Character UI are qua
 four prefixes/twelve observer views pass browser/native parity. Seven retained
 semantic component recipes/three comparisons now pass Compare UI/browser parity.
 Recognition8 evaluations/5 lifecycle steps/4 rejections are qualified at their
-original component boundary; worker/UI presentation is next. Full corpus coverage
-and Campaign4 entry acceptance stay open.
+original component boundary and now pass worker/UI/browser parity. Recognition
+knowledge-state witnesses are next. Full corpus coverage and Campaign4 entry
+acceptance stay open.
 Joined REASON continuation: OBSERVABILITY_WORKBENCH_REASON_PROGRESS.md;115 native
 programs/350 prefixes pass; Values125/625 retained. Full workbench acceptance remains open.
 Prior: OBSERVABILITY_WORKBENCH_BATCH_PROGRESS.md; shared sessions/capabilities and
