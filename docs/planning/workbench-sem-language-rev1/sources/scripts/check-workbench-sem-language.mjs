@@ -1,0 +1,16 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import{createHash}from'node:crypto';import{createServer}from'vite';
+const root='docs/planning/workbench-sem-language-rev1',sha=b=>createHash('sha256').update(b).digest('hex');assert(!fs.existsSync(root+'/receipt.json'));
+const paths=['src/workbench/semCharacter.ts','src/workbench/semInspection.ts','src/workbench/semAdapter.ts','src/workbench/semCatalog.json','src/workbench/canonical.ts','src/test/workbenchSemCharacter.test.ts','scripts/check-workbench-sem-language.mjs','docs/planning/workbench-sem-parity-rev1/receipt.json'],sources=paths.map(path=>({path,sha256:sha(fs.readFileSync(path))})),catalog=JSON.parse(fs.readFileSync(paths[3])),parity=JSON.parse(fs.readFileSync(paths[7]));
+for(const s of catalog.sources)assert.equal(sha(fs.readFileSync(s.path)),s.sha256);
+const server=await createServer({configFile:false,server:{middlewareMode:true,hmr:false},appType:'custom'});
+try{const {SemWorkbenchRun}=await server.ssrLoadModule('/src/workbench/semAdapter.ts'),{semInspection}=await server.ssrLoadModule('/src/workbench/semInspection.ts'),run=await SemWorkbenchRun.create(),results=[];let prior=[[],[],[]],descriptions=0;
+for(let prefix=0;prefix<=3;prefix++){
+ const checkpoint=run.checkpoint(),view=semInspection(run);assert.equal(view.saveHash,parity.results[prefix].saveHash);assert.deepEqual(run.checkpoint(),checkpoint);assert.deepEqual(semInspection(await SemWorkbenchRun.restore(checkpoint)),view);
+ assert.deepEqual(view.characters.map(c=>c.entries.length),[0,1,2].map(i=>i<prefix?1:0));
+ view.characters.forEach((c,i)=>{assert.equal(c.observer,catalog.schedule[i].observer);assert.deepEqual(c.entries.slice(0,prior[i].length),prior[i]);for(const e of c.entries){assert.equal(e.observedAt,'10');assert(e.human.includes('recorded time 10'));assert(!e.human.includes('person.mina'));assert(!e.human.includes('person.glen'));assert(!e.human.includes('person.darius'));}prior[i]=c.entries;descriptions+=c.entries.length;});
+ results.push({prefix,clock:view.clock,saveHash:view.saveHash,characters:view.characters});if(prefix<3)await run.advance();
+}
+assert.equal(descriptions,6);
+for(const s of [...sources,...catalog.sources]){assert.equal(sha(fs.readFileSync(s.path)),s.sha256);const target=root+'/sources/'+s.path;fs.mkdirSync(target.slice(0,target.lastIndexOf('/')),{recursive:true});fs.writeFileSync(target,fs.readFileSync(s.path),{flag:'wx'});}
+fs.writeFileSync(root+'/receipt.json',JSON.stringify({status:'PASS BOUNDED SEM PRE-RECOGNITION LANGUAGE',sources,originals:catalog.sources,programs:1,prefixes:4,observerPrefixes:12,descriptions,results,scope:'Six retained experience descriptions across twelve observer-prefix views match the four already qualified native saves. Evidence time10 remains distinct from scheduler time1/2/3. Earlier entries remain unchanged and authenticated restore preserves projection. Focused tests additionally reject nested foreign observers and truth records in classification slots; changing an unconsumed truth sibling leaves the projection unchanged. No recognition, causal-role explanation, semantic substitution experiment, browser integration or full SEM acceptance claim.'},null,2)+'\n',{flag:'wx'});console.log('PASS SEM4 prefixes/12 observer views/6 retained descriptions');
+}finally{await server.close();}

@@ -26,6 +26,10 @@ HQ011 source restrictions, all18 conditional obligations and all21 corpus scopes
 The dedicated inspection UI is now IN PROGRESS under OBSERVABILITY_WORKBENCH_PLAN.md,
 authorized by the owner on 2026-10-11 after review of OBSERVABILITY_WORKBENCH_BRIEF.md.
 Start OBSERVABILITY_WORKBENCH_PROGRESS.md for implementation, verification and next work.
+Current workbench handoff (2026-10-13): OBSERVABILITY_WORKBENCH_SEM_PROGRESS.md.
+SEM native/browser continuation and bounded pre-recognition projection are qualified;
+four prefixes/twelve observer views pass. Connect the projection to Character UI
+next. Full corpus coverage, remaining controls and Campaign4 entry acceptance stay open.
 Joined REASON continuation: OBSERVABILITY_WORKBENCH_REASON_PROGRESS.md;115 native
 programs/350 prefixes pass; Values125/625 retained. Full workbench acceptance remains open.
 Prior: OBSERVABILITY_WORKBENCH_BATCH_PROGRESS.md; shared sessions/capabilities and

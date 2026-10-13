@@ -62,3 +62,28 @@ terminal prefix3, restored prefix2 hashes and replay table values match fresh na
 execution. Current/frozen source and browser capture hashes verified. Receipt:
 workbench-sem-ui-rev1/receipt.json. This supersedes running status; all remaining
 scope limits above apply. Research checks retain18 conditional obligations.
+
+Pre-recognition projection qualified on 2026-10-13: semCharacter/semInspection
+consume only committed experience227, preserving exact observer-local tracks,
+perceived event-role variants, Boolean appearance classifications and evidence
+time10. Native scheduler time1/2/3 remains separate. Truth210, recognition236,
+causal240 and historical renderer strings are not description inputs. The full
+validated experience is retained as exact provenance; no native record is trimmed
+and relabelled. Unknown event classification content fails closed in this scope.
+
+Two focused tests PASS: all four prefixes, three observers, authenticated restore,
+read immutability, unchanged earlier entries, foreign nested observer rejection,
+truth-record injection rejection and unchanged projection under an unconsumed
+truth-sibling substitution. The latter is a projection boundary check, not a
+qualified native semantic intervention experiment. Type-check PASS.
+
+Language audit51329 COMPLETE exit0: four native-parity saves/twelve observer views/
+six retained experience descriptions PASS. Receipt and exact source copies:
+workbench-sem-language-rev1/receipt.json. Research check PASS with18 conditional
+obligations unchanged. This is no new research verdict or qualification amendment.
+
+Next: connect this bounded projection to the SEM worker and observer selector,
+verify browser text/provenance against the native receipt, then address retained
+semantic controls and recognition/causal explanation gaps. Existing Character UI
+still declares projection unavailable until that integration is verified. Full
+workbench and Campaign4 entry acceptance remain open.
