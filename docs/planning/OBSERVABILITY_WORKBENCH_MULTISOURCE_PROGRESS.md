@@ -90,3 +90,23 @@ workbench-multisource-parity-rev1/receipt.json. This supersedes earlier running 
 registration/browser and broader language qualification remain open.
 
 UI now REGISTERED through inspectionRegistry0.1. Bounded browser/native routing receipt PASS; see OBSERVABILITY_WORKBENCH_INSPECTION_ROUTES_PROGRESS.md for exact checked prefixes, remaining browser scope and performance limits. This supersedes earlier prepared/unregistered status.
+
+UI worker split COMPLETE. The main inspector imports a generated labels-only menu
+instead of native model bytes and the comparison implementation. All62 programs and
+96 contrasts remain exact. The existing compareMultisource function now runs in the
+worker against an authenticated second checkpoint; full original programs/models and
+report bytes are retained. No adapter, catalog, law or comparison function changed.
+Four focused tests PASS menu completeness, unchanged native hidden-reserve report,
+forged checkpoint rejection, unchanged active run and worker lifecycle behavior.
+Production build PASS381 modules. MULTISOURCE UI module is25,603 bytes versus the
+prior build's reported11.1MB; native worker remains11.8MB. This is not a total-transfer,
+peak-memory or latency qualification.
+
+Browser hidden-reserve comparison PASS. Complete630,563-character report read from
+the rendered exact report matches qualified native reports/095.json byte-content
+semantics exactly; outputs equal/state unequal retained. Prepared export preview is
+still64,000 characters; this check used the full exact-report DOM in chunks and does
+not qualify Blob download. One wait timed out while comparison remained Working;
+the same run subsequently completed without restart. Screenshot inspected. Receipt:
+workbench-multisource-worker-ui-rev1/receipt.json. Full browser cohort/resource scope
+and complete workbench entry qualification remain open.

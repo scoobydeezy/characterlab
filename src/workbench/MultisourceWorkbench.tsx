@@ -1,24 +1,26 @@
 import {useEffect,useRef,useState} from 'react';
 import {MultisourceWorkerClient} from './multisourceWorkerClient';
-import {MULTISOURCE_PROGRAMS,type MultisourceCheckpoint} from './multisourceAdapter';
-import {MULTISOURCE_CONTRASTS,compareMultisource} from './multisourceComparison';
+import type {MultisourceCheckpoint} from './multisourceAdapter';
+import type {compareMultisource} from './multisourceComparison';
+import menu from './multisourceMenu.json';
 import type {MultisourceInspectionSnapshot as MultisourceSnapshot} from './multisourceInspection';
 import {PreparedExport} from './PreparedExport';
 import {participationReport} from './participation';
 
 const modes=['Character','Experiment','Reasoning','Timeline','Compare','Architecture'] as const;
+const MULTISOURCE_PROGRAMS=menu.programs,MULTISOURCE_CONTRASTS=menu.contrasts;
 export function MultisourceWorkbench({active=true}:{active?:boolean}){
  const run=useRef<MultisourceWorkerClient>(),lock=useRef(false),stop=useRef(false);
- const [view,setView]=useState<MultisourceSnapshot>(),[other,setOther]=useState<MultisourceSnapshot>(),[program,setProgram]=useState('shared--GroundAggregate'),[contrast,setContrast]=useState('hidden-reserve'),[installed,setInstalled]=useState(''),[mode,setMode]=useState<typeof modes[number]>('Character');
+ const [view,setView]=useState<MultisourceSnapshot>(),[comparison,setComparison]=useState<ReturnType<typeof compareMultisource>>(),[program,setProgram]=useState('shared--GroundAggregate'),[contrast,setContrast]=useState('hidden-reserve'),[mode,setMode]=useState<typeof modes[number]>('Character');
  const [busy,setBusy]=useState(false),[error,setError]=useState(''),[checkpoint,setCheckpoint]=useState<MultisourceCheckpoint>(),[eventId,setEventId]=useState(''),[text,setText]=useState('');
  useEffect(()=>{if(!active)stop.current=true;},[active]);
  async function execute(fn:()=>Promise<void>){if(lock.current)return;lock.current=true;stop.current=false;setBusy(true);setError('');try{await fn();if(run.current)setView(run.current.snapshot());}catch(e){setError(String(e));}finally{lock.current=false;setBusy(false);}}
  useEffect(()=>{let cancelled=false;void execute(async()=>{const next=await MultisourceWorkerClient.create();if(cancelled)next.dispose();else run.current=next;});return()=>{cancelled=true;stop.current=true;run.current?.dispose();};},[]);
- const clear=()=>{setOther(undefined);setInstalled('');setEventId('');setText('');};
+ const clear=()=>{setComparison(undefined);setEventId('');setText('');};
  async function advance(all=false){await execute(async()=>{do{if(!run.current||!await run.current.advance())break;setView(run.current.snapshot());await new Promise(r=>setTimeout(r,0));}while(all&&!stop.current);});}
- async function pair(){await execute(async()=>{const c=MULTISOURCE_CONTRASTS.find(c=>c.id===contrast)!,a=await MultisourceWorkerClient.create(c.a);let b:MultisourceWorkerClient|undefined;try{b=await MultisourceWorkerClient.create(c.b);for(const r of [a,b])while(!r.snapshot().complete){if(stop.current)throw Error('Comparison paused; no partial pair installed');await r.advance();}compareMultisource(c.id,a.snapshot(),b.snapshot());run.current?.dispose();run.current=a;setProgram(c.a);setOther(b.snapshot());setInstalled(c.id);setEventId('');setText('');}catch(e){a.dispose();throw e;}finally{b?.dispose();}});}
+ async function pair(){await execute(async()=>{const c=MULTISOURCE_CONTRASTS.find(c=>c.id===contrast)!,a=await MultisourceWorkerClient.create(c.a);let b:MultisourceWorkerClient|undefined;try{b=await MultisourceWorkerClient.create(c.b);for(const r of [a,b])while(!r.snapshot().complete){if(stop.current)throw Error('Comparison paused; no partial pair installed');await r.advance();}const report=await a.compare(c.id,await b.checkpoint());run.current?.dispose();run.current=a;setProgram(c.a);setComparison(report);setEventId('');setText('');}catch(e){a.dispose();throw e;}finally{b?.dispose();}});}
 
- const event=view?.timeline.find(e=>e.id===eventId)??view?.timeline.at(-1),comparison=view&&other&&installed?compareMultisource(installed,view,other):undefined;
+ const event=view?.timeline.find(e=>e.id===eventId)??view?.timeline.at(-1);
  return <main><header className="topbar">OBSERVABILITY / MULTISOURCE</header><div className="content"><h1>Inspect shared support and competing reasons.</h1><p>{view?.program} · multisource-public/0.1-candidate</p><p>GroundAggregate, GroundPairwise, GroundUncovered, FamilyNormalized and DescriptionDice remain retained candidates. Model, initial-state and input contrasts are labelled separately.</p>{error&&<div role="alert" className="error">{error}</div>}
  <section className="card"><label>MULTISOURCE frozen program<select value={program} disabled={busy} onChange={e=>setProgram(e.target.value)}>{MULTISOURCE_PROGRAMS.map(r=><option key={r.id}>{r.id}</option>)}</select></label><div className="button-row"><button disabled={busy} onClick={()=>void execute(async()=>{const next=await MultisourceWorkerClient.create(program);run.current?.dispose();run.current=next;clear();})}>Create MULTISOURCE run</button><button disabled={busy||!!error||!view||view.complete} onClick={()=>void advance()}>Step MULTISOURCE instant</button><button disabled={busy||!!error||!view||view.complete} onClick={()=>void advance(true)}>Run MULTISOURCE program</button><button disabled={!busy} onClick={()=>{stop.current=true;}}>Pause MULTISOURCE</button></div><p role="status">Prefix {view?.prefix??0} · instant {view?.clock??'0'} · {busy?'Working':view?.complete?'Complete':'Ready'}</p><p>Original frozen inputs and seed. Fresh setup only; no runtime intervention ingress.</p></section>
  <nav aria-label="MULTISOURCE workbench modes" className="button-row">{modes.map(m=><button key={m} onClick={()=>setMode(m)}>{m}</button>)}</nav>

@@ -1,0 +1,61 @@
+{
+  "status": "PASS MULTISOURCE WORKER COMPARISON UI",
+  "sources": [
+    {
+      "path": "src/workbench/MultisourceWorkbench.tsx",
+      "sha256": "844950741da6bf0ebc4bd125612abad71678a2b945c9bdda22e8927aca8002a1"
+    },
+    {
+      "path": "src/workbench/multisourceWorker.ts",
+      "sha256": "72528b269e000b8372d28e7673d3891828064f69c3e7fd013d645a3a0b56c744"
+    },
+    {
+      "path": "src/workbench/multisourceWorkerClient.ts",
+      "sha256": "07fc45a5063e44470687d9fbd415a8b32e328892327a0a6f156eeebcf93e7ab8"
+    },
+    {
+      "path": "src/workbench/multisourceMenu.json",
+      "sha256": "b9a73ff615d7ec0b6a51d000ea4a0beb9bdb6021d8701d3355cf8dd10f5a9624"
+    },
+    {
+      "path": "src/workbench/multisourceComparison.ts",
+      "sha256": "8ce57bb2df36e46f7dcd64b03bdb8811dfcb1387899a4725c08c44d84b6aab27"
+    },
+    {
+      "path": "src/workbench/multisourceAdapter.ts",
+      "sha256": "2b5698c1a5251c811659e1aee7de6daaa846c9089ded5a977af5e728a735e6de"
+    },
+    {
+      "path": "src/test/workbenchMultisourceWorkerComparison.test.ts",
+      "sha256": "dd4e32ab5d8669f07c6c074e8652101add983aa4b2e19e65ed3fbab5a5b66c56"
+    },
+    {
+      "path": "scripts/build-workbench-multisource-menu.mjs",
+      "sha256": "e35d788f28dfcf8640d919f96ba418600e3141b6ebaca7e13ddf296de2e940d9"
+    },
+    {
+      "path": "scripts/check-workbench-multisource-worker-ui.mjs",
+      "sha256": "d4c98762de8886a2ce71e706d105deac7a7c03b14e7e8ea4fd033ff9629b0bb1"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "docs/planning/workbench-multisource-comparison-rev1/reports/095.json",
+      "sha256": "9bb20a5c94b1edc55b7bb738f62c84dd30880748444ab875f4f4d1523de26330"
+    },
+    {
+      "path": "docs/planning/workbench-multisource-worker-ui-rev1/browser-comparison.json",
+      "sha256": "9bb20a5c94b1edc55b7bb738f62c84dd30880748444ab875f4f4d1523de26330"
+    },
+    {
+      "path": "docs/planning/workbench-multisource-worker-ui-rev1/comparison.png",
+      "sha256": "e4a2cafbfaba4d91e276eed8cb51a7ec802b3c546e5b80a3b37c38031e2c73ad"
+    }
+  ],
+  "build": {
+    "asset": "dist/assets/MultisourceWorkbench-B0WUqkTy.js",
+    "bytes": 25603,
+    "sha256": "e2468e27a6d15f869995b871704cbaf6ae5ff5c061bd93d7009e81e5008da8c0"
+  },
+  "scope": "Browser hidden-reserve complete report equals the previously qualified native report exactly. The production UI module is below100kB; native model bytes remain in worker assets. Menu completeness and worker rejection/read immutability tested separately. Does not establish total transfer, peak memory, latency bound, all96 browser contrasts or full workbench acceptance."
+}

@@ -1,4 +1,5 @@
 import type {MultisourceCheckpoint} from './multisourceAdapter';
+import type {compareMultisource} from './multisourceComparison';
 import type {MultisourceInspectionSnapshot as MultisourceSnapshot} from './multisourceInspection';
 export class MultisourceWorkerClient {
   #worker = new Worker(new URL('./multisourceWorker.ts', import.meta.url), {type: 'module'});
@@ -21,5 +22,6 @@ export class MultisourceWorkerClient {
   snapshot() {return structuredClone(this.#snapshot);}
   async advance() {const result = await this.#call<{moved: boolean; snapshot: MultisourceSnapshot}>('advance'); this.#snapshot = result.snapshot; return result.moved;}
   checkpoint() {return this.#call<MultisourceCheckpoint>('checkpoint');}
+  compare(contrast:string,checkpoint:MultisourceCheckpoint) {return this.#call<ReturnType<typeof compareMultisource>>('compare',{contrast,checkpoint});}
   dispose(error = new Error('Multisource worker disposed')) {if (this.#disposed) return; this.#disposed = true; this.#worker.terminate(); for (const request of this.#pending.values()) request.reject(error); this.#pending.clear();}
 }
