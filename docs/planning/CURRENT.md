@@ -50,8 +50,9 @@ Event-file worker/UI/browser parity now qualified at all4 worker prefixes and
 browser prefix1. Classification041-050 boundary component controls now qualified:
 13 cases/11 guards/6 emission targets/25 diagnostics, now with worker/UI/browser
 parity. Event-pattern classification051-060 component controls now qualified:
-16 cases/7 guards/7 emission targets/24 diagnostics. Next event-pattern worker/UI/
-browser integration, then remaining phase/state/provenance and integrated gaps.
+16 cases/7 guards/7 emission targets/24 diagnostics, now with worker/UI/browser
+parity. Next evidence-provenance071-080 controls, then remaining phase/state and
+integrated coverage gaps.
 Full corpus coverage and Campaign4 entry acceptance stay open.
 Joined REASON continuation: OBSERVABILITY_WORKBENCH_REASON_PROGRESS.md;115 native
 programs/350 prefixes pass; Values125/625 retained. Full workbench acceptance remains open.

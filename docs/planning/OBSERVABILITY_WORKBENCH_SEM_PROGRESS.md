@@ -621,3 +621,19 @@ LOCAL DISPOSITION: preserve original component recipes and explicit claim limits
 no architectural ruling needed. Next event-pattern worker/Compare UI/browser parity,
 then remaining phase/state/provenance and integrated census gaps. Campaign4 entry open.
 Build23890 COMPLETE exit0 (394 modules/reference boundaries).
+
+Event-pattern Compare UI COMPLETE (2026-10-13). Worker tests preserve all4 active
+prefixes and return the qualified report; event-pattern and classification-boundary
+suites PASS. Build49998 COMPLETE exit0 (395 modules/reference boundaries).
+Browser prefix1 full115417-character report,10 comparison checks/16 cases/7 guards/
+7 emission targets/4 preservation rows and scope/failure text equal fresh native
+execution and retained qualification. Structural-copy and repeated-input limits
+remain visible. All6 active hashes unchanged; screenshot inspected. Audit7867
+COMPLETE exit0; receipt workbench-sem-event-classification-ui-rev1/receipt.json.
+Nine current/frozen sources and three capture hashes independently verified.
+Evidence restore/research PASS;18 conditional obligations unchanged. No new
+Campaign3 verdict/amendment or full download/SEM acceptance claim. Next original
+evidenceProvenance.test.ts071-080 controls: closed references, admission scope,
+co-reference/shared evidence, ordinal opacity, missing evidence, ReadDomains,
+causal-role independence and safe ancestry/rollback. Remaining phase/state and
+integrated census gaps and overall Campaign4 entry remain open.

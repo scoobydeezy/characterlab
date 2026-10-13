@@ -11,6 +11,7 @@ import type {runSemAxesControls} from './semAxesControls';
 import type {runSemBindingControls} from './semBindingControls';
 import type {runSemEventFileControls} from './semEventFileControls';
 import type {runSemClassificationBoundaryControls} from './semClassificationBoundaryControls';
+import type {runSemEventClassificationControls} from './semEventClassificationControls';
 import type {SemCheckpoint} from './semAdapter';
 export class SemWorkerClient {
   #worker = new Worker(new URL('./semWorker.ts', import.meta.url), {type: 'module'});
@@ -36,6 +37,7 @@ export class SemWorkerClient {
   controls() {return this.#call<Awaited<ReturnType<typeof runSemControlSuite>>>('controls');}
   recognition() {return this.#call<Awaited<ReturnType<typeof runSemRecognitionControls>>>('recognition');}
   checkpoint() {return this.#call<SemCheckpoint>('checkpoint');}
+  eventClassification() {return this.#call<Awaited<ReturnType<typeof runSemEventClassificationControls>>>('eventClassification');}
   classificationBoundaries() {return this.#call<Awaited<ReturnType<typeof runSemClassificationBoundaryControls>>>('classificationBoundaries');}
   eventFiles() {return this.#call<Awaited<ReturnType<typeof runSemEventFileControls>>>('eventFiles');}
   bindings() {return this.#call<Awaited<ReturnType<typeof runSemBindingControls>>>('bindings');}

@@ -12,6 +12,7 @@ import {runSemAxesControls} from './semAxesControls';
 import {runSemBindingControls} from './semBindingControls';
 import {runSemEventFileControls} from './semEventFileControls';
 import {runSemClassificationBoundaryControls} from './semClassificationBoundaryControls';
+import {runSemEventClassificationControls} from './semEventClassificationControls';
 let run:SemWorkbenchRun|undefined;
 self.addEventListener('message',async(event:MessageEvent<{id:number;operation:string;checkpoint?:SemCheckpoint}>)=>{
  const q=event.data;try{let result:unknown;
@@ -23,6 +24,7 @@ self.addEventListener('message',async(event:MessageEvent<{id:number;operation:st
  else if(q.operation==='controls'){const before=JSON.stringify(run.checkpoint());result=await runSemControlSuite();if(JSON.stringify(run.checkpoint())!==before)throw Error('SEM component controls changed active run');}
  else if(q.operation==='recognition'){const before=JSON.stringify(run.checkpoint());result=await runSemRecognitionControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Recognition controls changed active run');}
  else if(q.operation==='checkpoint')result=run.checkpoint();
+ else if(q.operation==='eventClassification'){const before=JSON.stringify(run.checkpoint());result=await runSemEventClassificationControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Event classification controls changed active run');}
  else if(q.operation==='classificationBoundaries'){const before=JSON.stringify(run.checkpoint());result=await runSemClassificationBoundaryControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Classification boundary controls changed active run');}
  else if(q.operation==='eventFiles'){const before=JSON.stringify(run.checkpoint());result=await runSemEventFileControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Event-file controls changed active run');}
  else if(q.operation==='bindings'){const before=JSON.stringify(run.checkpoint());result=await runSemBindingControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Binding controls changed active run');}
