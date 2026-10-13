@@ -367,3 +367,20 @@ entry acceptance remains open.
 
 Recognition boundary follow-up: production build35623 COMPLETE exit0 (388 modules); boundary check PASS. Component qualification is complete; worker/UI/browser integration remains next.
 Frozen checker retains its trailing blank line: two exact-path whitespace exceptions preserve the audited current/source hashes.
+
+Recognition boundary Compare UI COMPLETE (2026-10-13): worker command executes
+original component witnesses without changing the active integrated run. The panel
+shows11 distinctions,7 guards,13 emission targets, actual failed-settlement status,
+repeat-recognition no-update and the complete exact report/prepared export.
+Two actual-worker tests PASS across all4 prefixes (boundary and classification).
+Build73314 COMPLETE exit0,389 modules; reference boundaries and research checks PASS.
+Browser prefix1 complete59881-character report, every visible cell and relevant
+status/scope paragraph equal fresh native execution and qualified component receipt.
+All6 active hashes unchanged. Full-page screenshot inspected. Audit6409 COMPLETE
+exit0; receipt workbench-sem-recognition-boundaries-ui-rev1/receipt.json. Nine
+current/frozen source hashes and3 capture hashes independently verified.
+All18 conditional obligations preserved; no new Campaign3 verdict/amendment,
+full download or full SEM acceptance claim. Coverage inventory updated to the
+qualified scope. Next reconcile the complete SEM corpus gates, including remaining
+causal/event/continuant, phase/identity/state and integrated negative controls.
+Overall Campaign4 entry acceptance remains open.

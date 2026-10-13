@@ -5,6 +5,7 @@ import type {runSemRecognitionControls} from './semRecognitionControls';
 import type {runSemKnowledgeControls} from './semKnowledgeControls';
 import type {runSemMeasurementControls} from './semMeasurementControls';
 import type {runSemClassificationControls} from './semClassificationControls';
+import type {runSemRecognitionBoundaryControls} from './semRecognitionBoundaryControls';
 import type {SemCheckpoint} from './semAdapter';
 export class SemWorkerClient {
   #worker = new Worker(new URL('./semWorker.ts', import.meta.url), {type: 'module'});
@@ -30,6 +31,7 @@ export class SemWorkerClient {
   controls() {return this.#call<Awaited<ReturnType<typeof runSemControlSuite>>>('controls');}
   recognition() {return this.#call<Awaited<ReturnType<typeof runSemRecognitionControls>>>('recognition');}
   checkpoint() {return this.#call<SemCheckpoint>('checkpoint');}
+  recognitionBoundaries() {return this.#call<Awaited<ReturnType<typeof runSemRecognitionBoundaryControls>>>('recognitionBoundaries');}
   classification() {return this.#call<Awaited<ReturnType<typeof runSemClassificationControls>>>('classification');}
   measurement() {return this.#call<Awaited<ReturnType<typeof runSemMeasurementControls>>>('measurement');}
   knowledge() {return this.#call<Awaited<ReturnType<typeof runSemKnowledgeControls>>>('knowledge');}

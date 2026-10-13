@@ -1,0 +1,301 @@
+{
+  "version": "sem-recognition-boundary-controls/0.1",
+  "contract": "recognition/0.1-candidate",
+  "source": {
+    "path": "src/test/recognition.test.ts",
+    "sha256": "5ddd3e87bd70b8fc3993ed2dfb99d1f1ccf55c2b0fb4e4f561150f476ecad69c"
+  },
+  "mapping": {
+    "vector": "CV-SEM-064",
+    "unmapped": {
+      "encoding": "recognition-component-diagnostic-json/0.1",
+      "exact": "{\n  \"experience\": {\n    \"experienceId\": {\n      \"$bigint\": \"8601\"\n    },\n    \"observerId\": \"character/mina\",\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"perceptualEventReferentIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"4\"\n        }\n      }\n    ],\n    \"perceivedBindings\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"perceptualEventReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"4\"\n          }\n        },\n        \"perceptualReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerTrackSequence\": {\n            \"$bigint\": \"17\"\n          }\n        },\n        \"eventRoleEvidence\": {\n          \"kind\": \"exact\",\n          \"eventRoleId\": \"event-role/participant\"\n        },\n        \"supportingObservationIds\": [\n          {\n            \"observerId\": \"character/mina\",\n            \"observationId\": {\n              \"$bigint\": \"27900\"\n            }\n          }\n        ],\n        \"occurredAt\": {\n          \"$bigint\": \"10\"\n        },\n        \"transformationVersion\": \"recognition/0.1-candidate\",\n        \"perceivedBindingId\": {\n          \"$bigint\": \"40\"\n        }\n      }\n    ],\n    \"perceptualClassifications\": [],\n    \"perceptualEventClassifications\": [],\n    \"supportingObservationIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observationId\": {\n          \"$bigint\": \"27900\"\n        }\n      }\n    ],\n    \"transformationVersion\": \"recognition/0.1-candidate\"\n  },\n  \"perceptualReferentId\": {\n    \"observerId\": \"character/mina\",\n    \"observerTrackSequence\": {\n      \"$bigint\": \"17\"\n    }\n  },\n  \"candidateCatalog\": [\n    {\n      \"observerId\": \"character/mina\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n      \"candidateDomain\": \"Person\",\n      \"recognitionTemplateIds\": [\n        \"template/glen-face\"\n      ],\n      \"catalogEntryVersion\": \"recognition/0.1-candidate\"\n    },\n    {\n      \"observerId\": \"character/mina\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050d706572736f6e2e646172697573\",\n      \"candidateDomain\": \"Person\",\n      \"recognitionTemplateIds\": [\n        \"template/darius-face\"\n      ],\n      \"catalogEntryVersion\": \"recognition/0.1-candidate\"\n    }\n  ],\n  \"identitySymbolMappings\": [],\n  \"cueEvidence\": [\n    {\n      \"recognitionCueEvidenceId\": {\n        \"$bigint\": \"1\"\n      },\n      \"experienceId\": {\n        \"$bigint\": \"8601\"\n      },\n      \"observerId\": \"character/mina\",\n      \"perceptualReferentId\": {\n        \"observerId\": \"character/mina\",\n        \"observerTrackSequence\": {\n          \"$bigint\": \"17\"\n        }\n      },\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n      \"recognitionCueSource\": {\n        \"kind\": \"identity-claim-mapping\",\n        \"perceivedIdentitySymbolId\": \"perceived-symbol/GLEN\",\n        \"observerSymbolCandidateMappingId\": {\n          \"$bigint\": \"4200\"\n        }\n      },\n      \"cuePolarity\": \"SupportsCandidate\",\n      \"supportingExperienceEvidenceRefs\": [\n        {\n          \"kind\": \"perceived-binding\",\n          \"perceivedBindingId\": {\n            \"$bigint\": \"40\"\n          }\n        }\n      ],\n      \"occurredAt\": {\n        \"$bigint\": \"10\"\n      },\n      \"transformationVersion\": \"recognition/0.1-candidate\"\n    }\n  ],\n  \"priorResolutionHistory\": [],\n  \"recognitionVersion\": \"recognition/0.1-candidate\"\n}",
+      "sha256": "c91d7f2dd4e9eb0deb42484f88d4ba6b6239228899bcf9826138b1a14efb505a"
+    },
+    "missing": {
+      "code": "INVALID_SYMBOL_MAPPING",
+      "message": "identity claim lacks the exact observer-owned symbol mapping"
+    },
+    "mapped": {
+      "encoding": "recognition-component-diagnostic-json/0.1",
+      "exact": "{\n  \"experience\": {\n    \"experienceId\": {\n      \"$bigint\": \"8601\"\n    },\n    \"observerId\": \"character/mina\",\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"perceptualEventReferentIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"4\"\n        }\n      }\n    ],\n    \"perceivedBindings\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"perceptualEventReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"4\"\n          }\n        },\n        \"perceptualReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerTrackSequence\": {\n            \"$bigint\": \"17\"\n          }\n        },\n        \"eventRoleEvidence\": {\n          \"kind\": \"exact\",\n          \"eventRoleId\": \"event-role/participant\"\n        },\n        \"supportingObservationIds\": [\n          {\n            \"observerId\": \"character/mina\",\n            \"observationId\": {\n              \"$bigint\": \"27900\"\n            }\n          }\n        ],\n        \"occurredAt\": {\n          \"$bigint\": \"10\"\n        },\n        \"transformationVersion\": \"recognition/0.1-candidate\",\n        \"perceivedBindingId\": {\n          \"$bigint\": \"40\"\n        }\n      }\n    ],\n    \"perceptualClassifications\": [],\n    \"perceptualEventClassifications\": [],\n    \"supportingObservationIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observationId\": {\n          \"$bigint\": \"27900\"\n        }\n      }\n    ],\n    \"transformationVersion\": \"recognition/0.1-candidate\"\n  },\n  \"perceptualReferentId\": {\n    \"observerId\": \"character/mina\",\n    \"observerTrackSequence\": {\n      \"$bigint\": \"17\"\n    }\n  },\n  \"candidateCatalog\": [\n    {\n      \"observerId\": \"character/mina\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n      \"candidateDomain\": \"DiscreteObject\",\n      \"recognitionTemplateIds\": [\n        \"template/glen-face\"\n      ],\n      \"catalogEntryVersion\": \"recognition/0.1-candidate\"\n    },\n    {\n      \"observerId\": \"character/mina\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050d706572736f6e2e646172697573\",\n      \"candidateDomain\": \"Person\",\n      \"recognitionTemplateIds\": [\n        \"template/darius-face\"\n      ],\n      \"catalogEntryVersion\": \"recognition/0.1-candidate\"\n    }\n  ],\n  \"identitySymbolMappings\": [\n    {\n      \"observerSymbolCandidateMappingId\": {\n        \"$bigint\": \"4200\"\n      },\n      \"observerId\": \"character/mina\",\n      \"perceivedIdentitySymbolId\": \"perceived-symbol/GLEN\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n      \"mappingVersion\": \"recognition/0.1-candidate\"\n    }\n  ],\n  \"cueEvidence\": [\n    {\n      \"recognitionCueEvidenceId\": {\n        \"$bigint\": \"1\"\n      },\n      \"experienceId\": {\n        \"$bigint\": \"8601\"\n      },\n      \"observerId\": \"character/mina\",\n      \"perceptualReferentId\": {\n        \"observerId\": \"character/mina\",\n        \"observerTrackSequence\": {\n          \"$bigint\": \"17\"\n        }\n      },\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n      \"recognitionCueSource\": {\n        \"kind\": \"identity-claim-mapping\",\n        \"perceivedIdentitySymbolId\": \"perceived-symbol/GLEN\",\n        \"observerSymbolCandidateMappingId\": {\n          \"$bigint\": \"4200\"\n        }\n      },\n      \"cuePolarity\": \"SupportsCandidate\",\n      \"supportingExperienceEvidenceRefs\": [\n        {\n          \"kind\": \"perceived-binding\",\n          \"perceivedBindingId\": {\n            \"$bigint\": \"40\"\n          }\n        }\n      ],\n      \"occurredAt\": {\n        \"$bigint\": \"10\"\n      },\n      \"transformationVersion\": \"recognition/0.1-candidate\"\n    }\n  ],\n  \"priorResolutionHistory\": [],\n  \"recognitionVersion\": \"recognition/0.1-candidate\"\n}",
+      "sha256": "e6d4ae5198b7fad1766e22222b25ebcd4971080e7872863e7cea72189a2d83e8"
+    },
+    "result": {
+      "encoding": "recognition-component-diagnostic-json/0.1",
+      "exact": "{\n  \"evaluation\": {\n    \"recognitionEvaluationId\": {\n      \"$bigint\": \"0\"\n    },\n    \"experienceId\": {\n      \"$bigint\": \"8601\"\n    },\n    \"observerId\": \"character/mina\",\n    \"perceptualReferentId\": {\n      \"observerId\": \"character/mina\",\n      \"observerTrackSequence\": {\n        \"$bigint\": \"17\"\n      }\n    },\n    \"recognitionRuleId\": \"recognition-rule/unique-uncontradicted-support\",\n    \"evaluatedRecognitionCueEvidenceIds\": [\n      {\n        \"$bigint\": \"1\"\n      }\n    ],\n    \"priorRecognitionResolutionId\": {\n      \"$undefined\": true\n    },\n    \"result\": {\n      \"kind\": \"assert-unique-candidate\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\"\n    },\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"recognitionVersion\": \"recognition/0.1-candidate\"\n  },\n  \"resolutionRecord\": {\n    \"recognitionResolutionId\": {\n      \"$bigint\": \"1\"\n    },\n    \"experienceId\": {\n      \"$bigint\": \"8601\"\n    },\n    \"observerId\": \"character/mina\",\n    \"perceptualReferentId\": {\n      \"observerId\": \"character/mina\",\n      \"observerTrackSequence\": {\n        \"$bigint\": \"17\"\n      }\n    },\n    \"resolution\": {\n      \"kind\": \"asserted-candidate\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\"\n    },\n    \"recognitionRuleId\": \"recognition-rule/unique-uncontradicted-support\",\n    \"evaluatedRecognitionCueEvidenceIds\": [\n      {\n        \"$bigint\": \"1\"\n      }\n    ],\n    \"revisesRecognitionResolutionId\": {\n      \"$undefined\": true\n    },\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"recognitionVersion\": \"recognition/0.1-candidate\"\n  },\n  \"nextRuntimeId\": {\n    \"$bigint\": \"2\"\n  }\n}",
+      "sha256": "c107365f5cc99edd5bcc9d3cc56b20765624a75483e6d1f51bc5177934eb0e4e"
+    },
+    "semanticView": "asserted:0bea070b8d080b14050b706572736f6e2e676c656e",
+    "truthRequest": {
+      "encoding": "recognition-component-diagnostic-json/0.1",
+      "exact": "{\n  \"experience\": {\n    \"experienceId\": {\n      \"$bigint\": \"8601\"\n    },\n    \"observerId\": \"character/mina\",\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"perceptualEventReferentIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"4\"\n        }\n      }\n    ],\n    \"perceivedBindings\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"perceptualEventReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"4\"\n          }\n        },\n        \"perceptualReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerTrackSequence\": {\n            \"$bigint\": \"17\"\n          }\n        },\n        \"eventRoleEvidence\": {\n          \"kind\": \"exact\",\n          \"eventRoleId\": \"event-role/participant\"\n        },\n        \"supportingObservationIds\": [\n          {\n            \"observerId\": \"character/mina\",\n            \"observationId\": {\n              \"$bigint\": \"27900\"\n            }\n          }\n        ],\n        \"occurredAt\": {\n          \"$bigint\": \"10\"\n        },\n        \"transformationVersion\": \"recognition/0.1-candidate\",\n        \"perceivedBindingId\": {\n          \"$bigint\": \"40\"\n        }\n      }\n    ],\n    \"perceptualClassifications\": [],\n    \"perceptualEventClassifications\": [],\n    \"supportingObservationIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observationId\": {\n          \"$bigint\": \"27900\"\n        }\n      }\n    ],\n    \"transformationVersion\": \"recognition/0.1-candidate\"\n  },\n  \"perceptualReferentId\": {\n    \"observerId\": \"character/mina\",\n    \"observerTrackSequence\": {\n      \"$bigint\": \"17\"\n    }\n  },\n  \"candidateCatalog\": [\n    {\n      \"observerId\": \"character/mina\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n      \"candidateDomain\": \"Person\",\n      \"recognitionTemplateIds\": [\n        \"template/glen-face\"\n      ],\n      \"catalogEntryVersion\": \"recognition/0.1-candidate\",\n      \"truthEntityId\": \"0bea070b8d080b14050d706572736f6e2e646172697573\"\n    },\n    {\n      \"observerId\": \"character/mina\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050d706572736f6e2e646172697573\",\n      \"candidateDomain\": \"Person\",\n      \"recognitionTemplateIds\": [\n        \"template/darius-face\"\n      ],\n      \"catalogEntryVersion\": \"recognition/0.1-candidate\"\n    }\n  ],\n  \"identitySymbolMappings\": [],\n  \"cueEvidence\": [],\n  \"priorResolutionHistory\": [],\n  \"recognitionVersion\": \"recognition/0.1-candidate\"\n}",
+      "sha256": "eef10474e6f83e7d9671e8760df183a530c684c6a60775dc772898a83145ead1"
+    },
+    "truthGuard": {
+      "code": "FORBIDDEN_TRUTH_FIELD",
+      "message": "candidate catalog entry contains forbidden field truthEntityId"
+    }
+  },
+  "continuity": {
+    "vector": "CV-SEM-066",
+    "cases": [
+      {
+        "id": "first",
+        "request": {
+          "encoding": "recognition-component-diagnostic-json/0.1",
+          "exact": "{\n  \"experience\": {\n    \"experienceId\": {\n      \"$bigint\": \"8803\"\n    },\n    \"observerId\": \"character/mina\",\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"perceptualEventReferentIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"4\"\n        }\n      }\n    ],\n    \"perceivedBindings\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"perceptualEventReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"4\"\n          }\n        },\n        \"perceptualReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerTrackSequence\": {\n            \"$bigint\": \"17\"\n          }\n        },\n        \"eventRoleEvidence\": {\n          \"kind\": \"exact\",\n          \"eventRoleId\": \"event-role/participant\"\n        },\n        \"supportingObservationIds\": [\n          {\n            \"observerId\": \"character/mina\",\n            \"observationId\": {\n              \"$bigint\": \"27900\"\n            }\n          }\n        ],\n        \"occurredAt\": {\n          \"$bigint\": \"10\"\n        },\n        \"transformationVersion\": \"recognition/0.1-candidate\",\n        \"perceivedBindingId\": {\n          \"$bigint\": \"40\"\n        }\n      }\n    ],\n    \"perceptualClassifications\": [],\n    \"perceptualEventClassifications\": [],\n    \"supportingObservationIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observationId\": {\n          \"$bigint\": \"27900\"\n        }\n      }\n    ],\n    \"transformationVersion\": \"recognition/0.1-candidate\"\n  },\n  \"perceptualReferentId\": {\n    \"observerId\": \"character/mina\",\n    \"observerTrackSequence\": {\n      \"$bigint\": \"17\"\n    }\n  },\n  \"candidateCatalog\": [\n    {\n      \"observerId\": \"character/mina\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n      \"candidateDomain\": \"Person\",\n      \"recognitionTemplateIds\": [\n        \"template/glen-face\"\n      ],\n      \"catalogEntryVersion\": \"recognition/0.1-candidate\"\n    },\n    {\n      \"observerId\": \"character/mina\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050d706572736f6e2e646172697573\",\n      \"candidateDomain\": \"Person\",\n      \"recognitionTemplateIds\": [\n        \"template/darius-face\"\n      ],\n      \"catalogEntryVersion\": \"recognition/0.1-candidate\"\n    }\n  ],\n  \"identitySymbolMappings\": [],\n  \"cueEvidence\": [\n    {\n      \"recognitionCueEvidenceId\": {\n        \"$bigint\": \"1\"\n      },\n      \"experienceId\": {\n        \"$bigint\": \"8803\"\n      },\n      \"observerId\": \"character/mina\",\n      \"perceptualReferentId\": {\n        \"observerId\": \"character/mina\",\n        \"observerTrackSequence\": {\n          \"$bigint\": \"17\"\n        }\n      },\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n      \"recognitionCueSource\": {\n        \"kind\": \"retained-template-match\",\n        \"recognitionTemplateId\": \"template/glen-face\"\n      },\n      \"cuePolarity\": \"SupportsCandidate\",\n      \"supportingExperienceEvidenceRefs\": [\n        {\n          \"kind\": \"perceived-binding\",\n          \"perceivedBindingId\": {\n            \"$bigint\": \"40\"\n          }\n        }\n      ],\n      \"occurredAt\": {\n        \"$bigint\": \"10\"\n      },\n      \"transformationVersion\": \"recognition/0.1-candidate\"\n    }\n  ],\n  \"priorResolutionHistory\": [],\n  \"recognitionVersion\": \"recognition/0.1-candidate\"\n}",
+          "sha256": "305f4ed1807f99c46d1a5926f4c13a095c6fe7dadbb845d3833971479693f50f"
+        },
+        "result": {
+          "encoding": "recognition-component-diagnostic-json/0.1",
+          "exact": "{\n  \"evaluation\": {\n    \"recognitionEvaluationId\": {\n      \"$bigint\": \"0\"\n    },\n    \"experienceId\": {\n      \"$bigint\": \"8803\"\n    },\n    \"observerId\": \"character/mina\",\n    \"perceptualReferentId\": {\n      \"observerId\": \"character/mina\",\n      \"observerTrackSequence\": {\n        \"$bigint\": \"17\"\n      }\n    },\n    \"recognitionRuleId\": \"recognition-rule/unique-uncontradicted-support\",\n    \"evaluatedRecognitionCueEvidenceIds\": [\n      {\n        \"$bigint\": \"1\"\n      }\n    ],\n    \"priorRecognitionResolutionId\": {\n      \"$undefined\": true\n    },\n    \"result\": {\n      \"kind\": \"assert-unique-candidate\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\"\n    },\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"recognitionVersion\": \"recognition/0.1-candidate\"\n  },\n  \"resolutionRecord\": {\n    \"recognitionResolutionId\": {\n      \"$bigint\": \"1\"\n    },\n    \"experienceId\": {\n      \"$bigint\": \"8803\"\n    },\n    \"observerId\": \"character/mina\",\n    \"perceptualReferentId\": {\n      \"observerId\": \"character/mina\",\n      \"observerTrackSequence\": {\n        \"$bigint\": \"17\"\n      }\n    },\n    \"resolution\": {\n      \"kind\": \"asserted-candidate\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\"\n    },\n    \"recognitionRuleId\": \"recognition-rule/unique-uncontradicted-support\",\n    \"evaluatedRecognitionCueEvidenceIds\": [\n      {\n        \"$bigint\": \"1\"\n      }\n    ],\n    \"revisesRecognitionResolutionId\": {\n      \"$undefined\": true\n    },\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"recognitionVersion\": \"recognition/0.1-candidate\"\n  },\n  \"nextRuntimeId\": {\n    \"$bigint\": \"2\"\n  }\n}",
+          "sha256": "189aeb28321d738149b4dfb90233d0c2f70f704c8acd010f6b954e222b5598b3"
+        }
+      },
+      {
+        "id": "replacement",
+        "request": {
+          "encoding": "recognition-component-diagnostic-json/0.1",
+          "exact": "{\n  \"experience\": {\n    \"experienceId\": {\n      \"$bigint\": \"8800\"\n    },\n    \"observerId\": \"character/mina\",\n    \"occurredAt\": {\n      \"$bigint\": \"20\"\n    },\n    \"perceptualEventReferentIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"4\"\n        }\n      }\n    ],\n    \"perceivedBindings\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"perceptualEventReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"4\"\n          }\n        },\n        \"perceptualReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerTrackSequence\": {\n            \"$bigint\": \"17\"\n          }\n        },\n        \"eventRoleEvidence\": {\n          \"kind\": \"exact\",\n          \"eventRoleId\": \"event-role/participant\"\n        },\n        \"supportingObservationIds\": [\n          {\n            \"observerId\": \"character/mina\",\n            \"observationId\": {\n              \"$bigint\": \"27900\"\n            }\n          }\n        ],\n        \"occurredAt\": {\n          \"$bigint\": \"20\"\n        },\n        \"transformationVersion\": \"recognition/0.1-candidate\",\n        \"perceivedBindingId\": {\n          \"$bigint\": \"40\"\n        }\n      }\n    ],\n    \"perceptualClassifications\": [],\n    \"perceptualEventClassifications\": [],\n    \"supportingObservationIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observationId\": {\n          \"$bigint\": \"27900\"\n        }\n      }\n    ],\n    \"transformationVersion\": \"recognition/0.1-candidate\"\n  },\n  \"perceptualReferentId\": {\n    \"observerId\": \"character/mina\",\n    \"observerTrackSequence\": {\n      \"$bigint\": \"17\"\n    }\n  },\n  \"candidateCatalog\": [\n    {\n      \"observerId\": \"character/mina\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n      \"candidateDomain\": \"Person\",\n      \"recognitionTemplateIds\": [\n        \"template/glen-face\"\n      ],\n      \"catalogEntryVersion\": \"recognition/0.1-candidate\"\n    },\n    {\n      \"observerId\": \"character/mina\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050d706572736f6e2e646172697573\",\n      \"candidateDomain\": \"Person\",\n      \"recognitionTemplateIds\": [\n        \"template/darius-face\"\n      ],\n      \"catalogEntryVersion\": \"recognition/0.1-candidate\"\n    }\n  ],\n  \"identitySymbolMappings\": [],\n  \"cueEvidence\": [\n    {\n      \"recognitionCueEvidenceId\": {\n        \"$bigint\": \"1\"\n      },\n      \"experienceId\": {\n        \"$bigint\": \"8800\"\n      },\n      \"observerId\": \"character/mina\",\n      \"perceptualReferentId\": {\n        \"observerId\": \"character/mina\",\n        \"observerTrackSequence\": {\n          \"$bigint\": \"17\"\n        }\n      },\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050d706572736f6e2e646172697573\",\n      \"recognitionCueSource\": {\n        \"kind\": \"retained-template-match\",\n        \"recognitionTemplateId\": \"template/darius-face\"\n      },\n      \"cuePolarity\": \"SupportsCandidate\",\n      \"supportingExperienceEvidenceRefs\": [\n        {\n          \"kind\": \"perceived-binding\",\n          \"perceivedBindingId\": {\n            \"$bigint\": \"40\"\n          }\n        }\n      ],\n      \"occurredAt\": {\n        \"$bigint\": \"20\"\n      },\n      \"transformationVersion\": \"recognition/0.1-candidate\"\n    }\n  ],\n  \"priorResolutionHistory\": [\n    {\n      \"recognitionResolutionId\": {\n        \"$bigint\": \"1\"\n      },\n      \"experienceId\": {\n        \"$bigint\": \"8803\"\n      },\n      \"observerId\": \"character/mina\",\n      \"perceptualReferentId\": {\n        \"observerId\": \"character/mina\",\n        \"observerTrackSequence\": {\n          \"$bigint\": \"17\"\n        }\n      },\n      \"resolution\": {\n        \"kind\": \"asserted-candidate\",\n        \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\"\n      },\n      \"recognitionRuleId\": \"recognition-rule/unique-uncontradicted-support\",\n      \"evaluatedRecognitionCueEvidenceIds\": [\n        {\n          \"$bigint\": \"1\"\n        }\n      ],\n      \"revisesRecognitionResolutionId\": {\n        \"$undefined\": true\n      },\n      \"occurredAt\": {\n        \"$bigint\": \"10\"\n      },\n      \"recognitionVersion\": \"recognition/0.1-candidate\"\n    }\n  ],\n  \"recognitionVersion\": \"recognition/0.1-candidate\"\n}",
+          "sha256": "72fdacc2902bf0b25cb55e0ae8de2d4e1984530c9a1a752b7178238f48a9423f"
+        },
+        "result": {
+          "encoding": "recognition-component-diagnostic-json/0.1",
+          "exact": "{\n  \"evaluation\": {\n    \"recognitionEvaluationId\": {\n      \"$bigint\": \"2\"\n    },\n    \"experienceId\": {\n      \"$bigint\": \"8800\"\n    },\n    \"observerId\": \"character/mina\",\n    \"perceptualReferentId\": {\n      \"observerId\": \"character/mina\",\n      \"observerTrackSequence\": {\n        \"$bigint\": \"17\"\n      }\n    },\n    \"recognitionRuleId\": \"recognition-rule/unique-uncontradicted-support\",\n    \"evaluatedRecognitionCueEvidenceIds\": [\n      {\n        \"$bigint\": \"1\"\n      }\n    ],\n    \"priorRecognitionResolutionId\": {\n      \"$bigint\": \"1\"\n    },\n    \"result\": {\n      \"kind\": \"assert-unique-candidate\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050d706572736f6e2e646172697573\"\n    },\n    \"occurredAt\": {\n      \"$bigint\": \"20\"\n    },\n    \"recognitionVersion\": \"recognition/0.1-candidate\"\n  },\n  \"resolutionRecord\": {\n    \"recognitionResolutionId\": {\n      \"$bigint\": \"3\"\n    },\n    \"experienceId\": {\n      \"$bigint\": \"8800\"\n    },\n    \"observerId\": \"character/mina\",\n    \"perceptualReferentId\": {\n      \"observerId\": \"character/mina\",\n      \"observerTrackSequence\": {\n        \"$bigint\": \"17\"\n      }\n    },\n    \"resolution\": {\n      \"kind\": \"asserted-candidate\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050d706572736f6e2e646172697573\"\n    },\n    \"recognitionRuleId\": \"recognition-rule/unique-uncontradicted-support\",\n    \"evaluatedRecognitionCueEvidenceIds\": [\n      {\n        \"$bigint\": \"1\"\n      }\n    ],\n    \"revisesRecognitionResolutionId\": {\n      \"$bigint\": \"1\"\n    },\n    \"occurredAt\": {\n      \"$bigint\": \"20\"\n    },\n    \"recognitionVersion\": \"recognition/0.1-candidate\"\n  },\n  \"nextRuntimeId\": {\n    \"$bigint\": \"4\"\n  }\n}",
+          "sha256": "ab8b5a55c7ef334f2a51ede82279502c5348d25b56acc0718693d326356d1f8b"
+        }
+      },
+      {
+        "id": "split",
+        "request": {
+          "encoding": "recognition-component-diagnostic-json/0.1",
+          "exact": "{\n  \"experience\": {\n    \"experienceId\": {\n      \"$bigint\": \"8807\"\n    },\n    \"observerId\": \"character/mina\",\n    \"occurredAt\": {\n      \"$bigint\": \"30\"\n    },\n    \"perceptualEventReferentIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"4\"\n        }\n      }\n    ],\n    \"perceivedBindings\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"perceptualEventReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"4\"\n          }\n        },\n        \"perceptualReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerTrackSequence\": {\n            \"$bigint\": \"23\"\n          }\n        },\n        \"eventRoleEvidence\": {\n          \"kind\": \"exact\",\n          \"eventRoleId\": \"event-role/participant\"\n        },\n        \"supportingObservationIds\": [\n          {\n            \"observerId\": \"character/mina\",\n            \"observationId\": {\n              \"$bigint\": \"27900\"\n            }\n          }\n        ],\n        \"occurredAt\": {\n          \"$bigint\": \"30\"\n        },\n        \"transformationVersion\": \"recognition/0.1-candidate\",\n        \"perceivedBindingId\": {\n          \"$bigint\": \"40\"\n        }\n      }\n    ],\n    \"perceptualClassifications\": [],\n    \"perceptualEventClassifications\": [],\n    \"supportingObservationIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observationId\": {\n          \"$bigint\": \"27900\"\n        }\n      }\n    ],\n    \"transformationVersion\": \"recognition/0.1-candidate\"\n  },\n  \"perceptualReferentId\": {\n    \"observerId\": \"character/mina\",\n    \"observerTrackSequence\": {\n      \"$bigint\": \"23\"\n    }\n  },\n  \"candidateCatalog\": [\n    {\n      \"observerId\": \"character/mina\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n      \"candidateDomain\": \"Person\",\n      \"recognitionTemplateIds\": [\n        \"template/glen-face\"\n      ],\n      \"catalogEntryVersion\": \"recognition/0.1-candidate\"\n    },\n    {\n      \"observerId\": \"character/mina\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050d706572736f6e2e646172697573\",\n      \"candidateDomain\": \"Person\",\n      \"recognitionTemplateIds\": [\n        \"template/darius-face\"\n      ],\n      \"catalogEntryVersion\": \"recognition/0.1-candidate\"\n    }\n  ],\n  \"identitySymbolMappings\": [],\n  \"cueEvidence\": [\n    {\n      \"recognitionCueEvidenceId\": {\n        \"$bigint\": \"1\"\n      },\n      \"experienceId\": {\n        \"$bigint\": \"8807\"\n      },\n      \"observerId\": \"character/mina\",\n      \"perceptualReferentId\": {\n        \"observerId\": \"character/mina\",\n        \"observerTrackSequence\": {\n          \"$bigint\": \"23\"\n        }\n      },\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n      \"recognitionCueSource\": {\n        \"kind\": \"retained-template-match\",\n        \"recognitionTemplateId\": \"template/glen-face\"\n      },\n      \"cuePolarity\": \"SupportsCandidate\",\n      \"supportingExperienceEvidenceRefs\": [\n        {\n          \"kind\": \"perceived-binding\",\n          \"perceivedBindingId\": {\n            \"$bigint\": \"40\"\n          }\n        }\n      ],\n      \"occurredAt\": {\n        \"$bigint\": \"30\"\n      },\n      \"transformationVersion\": \"recognition/0.1-candidate\"\n    }\n  ],\n  \"priorResolutionHistory\": [],\n  \"recognitionVersion\": \"recognition/0.1-candidate\"\n}",
+          "sha256": "5bbd51772265895041130d74af266ede9504289359269e453f5e4e57cda7d465"
+        },
+        "result": {
+          "encoding": "recognition-component-diagnostic-json/0.1",
+          "exact": "{\n  \"evaluation\": {\n    \"recognitionEvaluationId\": {\n      \"$bigint\": \"4\"\n    },\n    \"experienceId\": {\n      \"$bigint\": \"8807\"\n    },\n    \"observerId\": \"character/mina\",\n    \"perceptualReferentId\": {\n      \"observerId\": \"character/mina\",\n      \"observerTrackSequence\": {\n        \"$bigint\": \"23\"\n      }\n    },\n    \"recognitionRuleId\": \"recognition-rule/unique-uncontradicted-support\",\n    \"evaluatedRecognitionCueEvidenceIds\": [\n      {\n        \"$bigint\": \"1\"\n      }\n    ],\n    \"priorRecognitionResolutionId\": {\n      \"$undefined\": true\n    },\n    \"result\": {\n      \"kind\": \"assert-unique-candidate\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\"\n    },\n    \"occurredAt\": {\n      \"$bigint\": \"30\"\n    },\n    \"recognitionVersion\": \"recognition/0.1-candidate\"\n  },\n  \"resolutionRecord\": {\n    \"recognitionResolutionId\": {\n      \"$bigint\": \"5\"\n    },\n    \"experienceId\": {\n      \"$bigint\": \"8807\"\n    },\n    \"observerId\": \"character/mina\",\n    \"perceptualReferentId\": {\n      \"observerId\": \"character/mina\",\n      \"observerTrackSequence\": {\n        \"$bigint\": \"23\"\n      }\n    },\n    \"resolution\": {\n      \"kind\": \"asserted-candidate\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\"\n    },\n    \"recognitionRuleId\": \"recognition-rule/unique-uncontradicted-support\",\n    \"evaluatedRecognitionCueEvidenceIds\": [\n      {\n        \"$bigint\": \"1\"\n      }\n    ],\n    \"revisesRecognitionResolutionId\": {\n      \"$undefined\": true\n    },\n    \"occurredAt\": {\n      \"$bigint\": \"30\"\n    },\n    \"recognitionVersion\": \"recognition/0.1-candidate\"\n  },\n  \"nextRuntimeId\": {\n    \"$bigint\": \"6\"\n  }\n}",
+          "sha256": "84f6b51dd6f202a38bfcf95972cf4acecf832c02488ebb30f7210c8f86e65b71"
+        }
+      }
+    ],
+    "sameTrackAfterReplacement": true,
+    "changedRecognition": true,
+    "splitTrack": true,
+    "sameRecognitionAcrossSplit": true
+  },
+  "authority": {
+    "vector": "CV-SEM-068",
+    "alternativeModel": "model/alternative",
+    "guards": [
+      {
+        "code": "MISSING_RECOGNITION_AUTHORITY",
+        "message": "continuant recognition requires one rule"
+      },
+      {
+        "code": "DUPLICATE_RECOGNITION_AUTHORITY",
+        "message": "continuant recognition permits one authoritative rule per model"
+      },
+      {
+        "code": "CARRIER_TYPE_MISMATCH",
+        "message": "recognition requires a continuant-file carrier"
+      },
+      {
+        "code": "UNKNOWN_DERIVATION",
+        "message": "unknown derivation llm/recognize"
+      }
+    ]
+  },
+  "allocation": {
+    "vector": "CV-SEM-069",
+    "request": {
+      "encoding": "recognition-component-diagnostic-json/0.1",
+      "exact": "{\n  \"experience\": {\n    \"experienceId\": {\n      \"$bigint\": \"8601\"\n    },\n    \"observerId\": \"character/mina\",\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"perceptualEventReferentIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"4\"\n        }\n      }\n    ],\n    \"perceivedBindings\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"perceptualEventReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"4\"\n          }\n        },\n        \"perceptualReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerTrackSequence\": {\n            \"$bigint\": \"17\"\n          }\n        },\n        \"eventRoleEvidence\": {\n          \"kind\": \"exact\",\n          \"eventRoleId\": \"event-role/participant\"\n        },\n        \"supportingObservationIds\": [\n          {\n            \"observerId\": \"character/mina\",\n            \"observationId\": {\n              \"$bigint\": \"27900\"\n            }\n          }\n        ],\n        \"occurredAt\": {\n          \"$bigint\": \"10\"\n        },\n        \"transformationVersion\": \"recognition/0.1-candidate\",\n        \"perceivedBindingId\": {\n          \"$bigint\": \"40\"\n        }\n      }\n    ],\n    \"perceptualClassifications\": [],\n    \"perceptualEventClassifications\": [],\n    \"supportingObservationIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observationId\": {\n          \"$bigint\": \"27900\"\n        }\n      }\n    ],\n    \"transformationVersion\": \"recognition/0.1-candidate\"\n  },\n  \"perceptualReferentId\": {\n    \"observerId\": \"character/mina\",\n    \"observerTrackSequence\": {\n      \"$bigint\": \"17\"\n    }\n  },\n  \"candidateCatalog\": [\n    {\n      \"observerId\": \"character/mina\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n      \"candidateDomain\": \"Person\",\n      \"recognitionTemplateIds\": [\n        \"template/glen-face\"\n      ],\n      \"catalogEntryVersion\": \"recognition/0.1-candidate\"\n    },\n    {\n      \"observerId\": \"character/mina\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050d706572736f6e2e646172697573\",\n      \"candidateDomain\": \"Person\",\n      \"recognitionTemplateIds\": [\n        \"template/darius-face\"\n      ],\n      \"catalogEntryVersion\": \"recognition/0.1-candidate\"\n    }\n  ],\n  \"identitySymbolMappings\": [],\n  \"cueEvidence\": [\n    {\n      \"recognitionCueEvidenceId\": {\n        \"$bigint\": \"1\"\n      },\n      \"experienceId\": {\n        \"$bigint\": \"8601\"\n      },\n      \"observerId\": \"character/mina\",\n      \"perceptualReferentId\": {\n        \"observerId\": \"character/mina\",\n        \"observerTrackSequence\": {\n          \"$bigint\": \"17\"\n        }\n      },\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n      \"recognitionCueSource\": {\n        \"kind\": \"retained-template-match\",\n        \"recognitionTemplateId\": \"template/glen-face\"\n      },\n      \"cuePolarity\": \"SupportsCandidate\",\n      \"supportingExperienceEvidenceRefs\": [\n        {\n          \"kind\": \"perceived-binding\",\n          \"perceivedBindingId\": {\n            \"$bigint\": \"40\"\n          }\n        }\n      ],\n      \"occurredAt\": {\n        \"$bigint\": \"10\"\n      },\n      \"transformationVersion\": \"recognition/0.1-candidate\"\n    }\n  ],\n  \"priorResolutionHistory\": [],\n  \"recognitionVersion\": \"recognition/0.1-candidate\"\n}",
+      "sha256": "23d1a03d65f5db53896f8c85d59db413b0cd304803d899061cd23d59ca833652"
+    },
+    "low": {
+      "encoding": "recognition-component-diagnostic-json/0.1",
+      "exact": "{\n  \"evaluation\": {\n    \"recognitionEvaluationId\": {\n      \"$bigint\": \"4\"\n    },\n    \"experienceId\": {\n      \"$bigint\": \"8601\"\n    },\n    \"observerId\": \"character/mina\",\n    \"perceptualReferentId\": {\n      \"observerId\": \"character/mina\",\n      \"observerTrackSequence\": {\n        \"$bigint\": \"17\"\n      }\n    },\n    \"recognitionRuleId\": \"recognition-rule/unique-uncontradicted-support\",\n    \"evaluatedRecognitionCueEvidenceIds\": [\n      {\n        \"$bigint\": \"1\"\n      }\n    ],\n    \"priorRecognitionResolutionId\": {\n      \"$undefined\": true\n    },\n    \"result\": {\n      \"kind\": \"assert-unique-candidate\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\"\n    },\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"recognitionVersion\": \"recognition/0.1-candidate\"\n  },\n  \"resolutionRecord\": {\n    \"recognitionResolutionId\": {\n      \"$bigint\": \"5\"\n    },\n    \"experienceId\": {\n      \"$bigint\": \"8601\"\n    },\n    \"observerId\": \"character/mina\",\n    \"perceptualReferentId\": {\n      \"observerId\": \"character/mina\",\n      \"observerTrackSequence\": {\n        \"$bigint\": \"17\"\n      }\n    },\n    \"resolution\": {\n      \"kind\": \"asserted-candidate\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\"\n    },\n    \"recognitionRuleId\": \"recognition-rule/unique-uncontradicted-support\",\n    \"evaluatedRecognitionCueEvidenceIds\": [\n      {\n        \"$bigint\": \"1\"\n      }\n    ],\n    \"revisesRecognitionResolutionId\": {\n      \"$undefined\": true\n    },\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"recognitionVersion\": \"recognition/0.1-candidate\"\n  },\n  \"nextRuntimeId\": {\n    \"$bigint\": \"6\"\n  }\n}",
+      "sha256": "413f2623fc63b000f16f6129c4a62a09fdd3419ff4b16a00209a5e747b1da3a4"
+    },
+    "replay": {
+      "encoding": "recognition-component-diagnostic-json/0.1",
+      "exact": "{\n  \"evaluation\": {\n    \"recognitionEvaluationId\": {\n      \"$bigint\": \"4\"\n    },\n    \"experienceId\": {\n      \"$bigint\": \"8601\"\n    },\n    \"observerId\": \"character/mina\",\n    \"perceptualReferentId\": {\n      \"observerId\": \"character/mina\",\n      \"observerTrackSequence\": {\n        \"$bigint\": \"17\"\n      }\n    },\n    \"recognitionRuleId\": \"recognition-rule/unique-uncontradicted-support\",\n    \"evaluatedRecognitionCueEvidenceIds\": [\n      {\n        \"$bigint\": \"1\"\n      }\n    ],\n    \"priorRecognitionResolutionId\": {\n      \"$undefined\": true\n    },\n    \"result\": {\n      \"kind\": \"assert-unique-candidate\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\"\n    },\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"recognitionVersion\": \"recognition/0.1-candidate\"\n  },\n  \"resolutionRecord\": {\n    \"recognitionResolutionId\": {\n      \"$bigint\": \"5\"\n    },\n    \"experienceId\": {\n      \"$bigint\": \"8601\"\n    },\n    \"observerId\": \"character/mina\",\n    \"perceptualReferentId\": {\n      \"observerId\": \"character/mina\",\n      \"observerTrackSequence\": {\n        \"$bigint\": \"17\"\n      }\n    },\n    \"resolution\": {\n      \"kind\": \"asserted-candidate\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\"\n    },\n    \"recognitionRuleId\": \"recognition-rule/unique-uncontradicted-support\",\n    \"evaluatedRecognitionCueEvidenceIds\": [\n      {\n        \"$bigint\": \"1\"\n      }\n    ],\n    \"revisesRecognitionResolutionId\": {\n      \"$undefined\": true\n    },\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"recognitionVersion\": \"recognition/0.1-candidate\"\n  },\n  \"nextRuntimeId\": {\n    \"$bigint\": \"6\"\n  }\n}",
+      "sha256": "413f2623fc63b000f16f6129c4a62a09fdd3419ff4b16a00209a5e747b1da3a4"
+    },
+    "shifted": {
+      "encoding": "recognition-component-diagnostic-json/0.1",
+      "exact": "{\n  \"evaluation\": {\n    \"recognitionEvaluationId\": {\n      \"$bigint\": \"900\"\n    },\n    \"experienceId\": {\n      \"$bigint\": \"8601\"\n    },\n    \"observerId\": \"character/mina\",\n    \"perceptualReferentId\": {\n      \"observerId\": \"character/mina\",\n      \"observerTrackSequence\": {\n        \"$bigint\": \"17\"\n      }\n    },\n    \"recognitionRuleId\": \"recognition-rule/unique-uncontradicted-support\",\n    \"evaluatedRecognitionCueEvidenceIds\": [\n      {\n        \"$bigint\": \"1\"\n      }\n    ],\n    \"priorRecognitionResolutionId\": {\n      \"$undefined\": true\n    },\n    \"result\": {\n      \"kind\": \"assert-unique-candidate\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\"\n    },\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"recognitionVersion\": \"recognition/0.1-candidate\"\n  },\n  \"resolutionRecord\": {\n    \"recognitionResolutionId\": {\n      \"$bigint\": \"901\"\n    },\n    \"experienceId\": {\n      \"$bigint\": \"8601\"\n    },\n    \"observerId\": \"character/mina\",\n    \"perceptualReferentId\": {\n      \"observerId\": \"character/mina\",\n      \"observerTrackSequence\": {\n        \"$bigint\": \"17\"\n      }\n    },\n    \"resolution\": {\n      \"kind\": \"asserted-candidate\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\"\n    },\n    \"recognitionRuleId\": \"recognition-rule/unique-uncontradicted-support\",\n    \"evaluatedRecognitionCueEvidenceIds\": [\n      {\n        \"$bigint\": \"1\"\n      }\n    ],\n    \"revisesRecognitionResolutionId\": {\n      \"$undefined\": true\n    },\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"recognitionVersion\": \"recognition/0.1-candidate\"\n  },\n  \"nextRuntimeId\": {\n    \"$bigint\": \"902\"\n  }\n}",
+      "sha256": "56cd562248fd9e7115def4f3a83108990da4ca55947c996533d47ab371be5986"
+    },
+    "exactReplay": true,
+    "sameSemanticView": true,
+    "differentResolutionId": true,
+    "branchedHistory": {
+      "encoding": "recognition-component-diagnostic-json/0.1",
+      "exact": "[\n  {\n    \"recognitionResolutionId\": {\n      \"$bigint\": \"5\"\n    },\n    \"experienceId\": {\n      \"$bigint\": \"8601\"\n    },\n    \"observerId\": \"character/mina\",\n    \"perceptualReferentId\": {\n      \"observerId\": \"character/mina\",\n      \"observerTrackSequence\": {\n        \"$bigint\": \"17\"\n      }\n    },\n    \"resolution\": {\n      \"kind\": \"asserted-candidate\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\"\n    },\n    \"recognitionRuleId\": \"recognition-rule/unique-uncontradicted-support\",\n    \"evaluatedRecognitionCueEvidenceIds\": [\n      {\n        \"$bigint\": \"1\"\n      }\n    ],\n    \"revisesRecognitionResolutionId\": {\n      \"$undefined\": true\n    },\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"recognitionVersion\": \"recognition/0.1-candidate\"\n  },\n  {\n    \"recognitionResolutionId\": {\n      \"$bigint\": \"99\"\n    },\n    \"experienceId\": {\n      \"$bigint\": \"8600\"\n    },\n    \"observerId\": \"character/mina\",\n    \"perceptualReferentId\": {\n      \"observerId\": \"character/mina\",\n      \"observerTrackSequence\": {\n        \"$bigint\": \"17\"\n      }\n    },\n    \"resolution\": {\n      \"kind\": \"asserted-candidate\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\"\n    },\n    \"recognitionRuleId\": \"recognition-rule/unique-uncontradicted-support\",\n    \"evaluatedRecognitionCueEvidenceIds\": [\n      {\n        \"$bigint\": \"1\"\n      }\n    ],\n    \"revisesRecognitionResolutionId\": {\n      \"$undefined\": true\n    },\n    \"occurredAt\": {\n      \"$bigint\": \"20\"\n    },\n    \"recognitionVersion\": \"recognition/0.1-candidate\"\n  }\n]",
+      "sha256": "39c65697c0a0da16c3e51f42d380be9d08fae4d00414bdae990b911b558e47a7"
+    },
+    "historyGuard": {
+      "code": "INVALID_RESOLUTION_HISTORY",
+      "message": "each recognition chain requires exactly one root"
+    }
+  },
+  "rollback": {
+    "vector": "CV-SEM-069",
+    "allocatedEvaluation": "50",
+    "failure": "injected recognition commit failure",
+    "before": {
+      "state": "{\n  \"valid\": true\n}",
+      "allocators": "{\n  \"nextRuntimeId\": {\n    \"$bigint\": \"50\"\n  },\n  \"nextEventId\": {\n    \"$bigint\": \"1\"\n  },\n  \"nextEventSequence\": {\n    \"$bigint\": \"1\"\n  }\n}",
+      "trace": "[]",
+      "outputs": "[]",
+      "status": "Active",
+      "clock": "0",
+      "queue": "[\n  {\n    \"eventId\": {\n      \"$bigint\": \"0\"\n    },\n    \"dueAt\": {\n      \"$bigint\": \"1\"\n    },\n    \"phase\": {\n      \"$bigint\": \"10\"\n    },\n    \"eventSequence\": {\n      \"$bigint\": \"0\"\n    },\n    \"eventTypeId\": {\n      \"kind\": \"typedIdentifier\",\n      \"namespaceId\": {\n        \"$bigint\": \"32002\"\n      },\n      \"payload\": {\n        \"kind\": \"text\",\n        \"value\": \"event/sem-001f-rollback\"\n      }\n    },\n    \"payload\": {\n      \"kind\": \"list\",\n      \"items\": []\n    },\n    \"dependencies\": {\n      \"kind\": \"list\",\n      \"items\": []\n    },\n    \"causalParentEventIds\": []\n  }\n]"
+    },
+    "after": {
+      "state": "{\n  \"valid\": true\n}",
+      "allocators": "{\n  \"nextRuntimeId\": {\n    \"$bigint\": \"50\"\n  },\n  \"nextEventId\": {\n    \"$bigint\": \"1\"\n  },\n  \"nextEventSequence\": {\n    \"$bigint\": \"1\"\n  }\n}",
+      "trace": "[]",
+      "outputs": "[]",
+      "status": "Failed",
+      "clock": "0",
+      "queue": "[\n  {\n    \"eventId\": {\n      \"$bigint\": \"0\"\n    },\n    \"dueAt\": {\n      \"$bigint\": \"1\"\n    },\n    \"phase\": {\n      \"$bigint\": \"10\"\n    },\n    \"eventSequence\": {\n      \"$bigint\": \"0\"\n    },\n    \"eventTypeId\": {\n      \"kind\": \"typedIdentifier\",\n      \"namespaceId\": {\n        \"$bigint\": \"32002\"\n      },\n      \"payload\": {\n        \"kind\": \"text\",\n        \"value\": \"event/sem-001f-rollback\"\n      }\n    },\n    \"payload\": {\n      \"kind\": \"list\",\n      \"items\": []\n    },\n    \"dependencies\": {\n      \"kind\": \"list\",\n      \"items\": []\n    },\n    \"causalParentEventIds\": []\n  }\n]"
+    },
+    "preserved": {
+      "state": true,
+      "allocators": true,
+      "trace": true,
+      "outputs": true
+    }
+  },
+  "emission": {
+    "vector": "CV-SEM-070",
+    "targets": [
+      {
+        "target": "recognition-resolution-log",
+        "accepted": true,
+        "failure": null
+      },
+      {
+        "target": "perceptual-track",
+        "accepted": false,
+        "failure": {
+          "code": "FORBIDDEN_EMISSION_TARGET",
+          "message": "recognition cannot emit directly to perceptual-track"
+        }
+      },
+      {
+        "target": "semantic-experience",
+        "accepted": false,
+        "failure": {
+          "code": "FORBIDDEN_EMISSION_TARGET",
+          "message": "recognition cannot emit directly to semantic-experience"
+        }
+      },
+      {
+        "target": "belief",
+        "accepted": false,
+        "failure": {
+          "code": "FORBIDDEN_EMISSION_TARGET",
+          "message": "recognition cannot emit directly to belief"
+        }
+      },
+      {
+        "target": "memory",
+        "accepted": false,
+        "failure": {
+          "code": "FORBIDDEN_EMISSION_TARGET",
+          "message": "recognition cannot emit directly to memory"
+        }
+      },
+      {
+        "target": "person-model",
+        "accepted": false,
+        "failure": {
+          "code": "FORBIDDEN_EMISSION_TARGET",
+          "message": "recognition cannot emit directly to person-model"
+        }
+      },
+      {
+        "target": "relationship",
+        "accepted": false,
+        "failure": {
+          "code": "FORBIDDEN_EMISSION_TARGET",
+          "message": "recognition cannot emit directly to relationship"
+        }
+      },
+      {
+        "target": "appraisal",
+        "accepted": false,
+        "failure": {
+          "code": "FORBIDDEN_EMISSION_TARGET",
+          "message": "recognition cannot emit directly to appraisal"
+        }
+      },
+      {
+        "target": "pressure",
+        "accepted": false,
+        "failure": {
+          "code": "FORBIDDEN_EMISSION_TARGET",
+          "message": "recognition cannot emit directly to pressure"
+        }
+      },
+      {
+        "target": "reason",
+        "accepted": false,
+        "failure": {
+          "code": "FORBIDDEN_EMISSION_TARGET",
+          "message": "recognition cannot emit directly to reason"
+        }
+      },
+      {
+        "target": "option",
+        "accepted": false,
+        "failure": {
+          "code": "FORBIDDEN_EMISSION_TARGET",
+          "message": "recognition cannot emit directly to option"
+        }
+      },
+      {
+        "target": "identity",
+        "accepted": false,
+        "failure": {
+          "code": "FORBIDDEN_EMISSION_TARGET",
+          "message": "recognition cannot emit directly to identity"
+        }
+      },
+      {
+        "target": "world-truth",
+        "accepted": false,
+        "failure": {
+          "code": "FORBIDDEN_EMISSION_TARGET",
+          "message": "recognition cannot emit directly to world-truth"
+        }
+      }
+    ],
+    "first": {
+      "encoding": "recognition-component-diagnostic-json/0.1",
+      "exact": "{\n  \"evaluation\": {\n    \"recognitionEvaluationId\": {\n      \"$bigint\": \"0\"\n    },\n    \"experienceId\": {\n      \"$bigint\": \"8601\"\n    },\n    \"observerId\": \"character/mina\",\n    \"perceptualReferentId\": {\n      \"observerId\": \"character/mina\",\n      \"observerTrackSequence\": {\n        \"$bigint\": \"17\"\n      }\n    },\n    \"recognitionRuleId\": \"recognition-rule/unique-uncontradicted-support\",\n    \"evaluatedRecognitionCueEvidenceIds\": [\n      {\n        \"$bigint\": \"1\"\n      }\n    ],\n    \"priorRecognitionResolutionId\": {\n      \"$undefined\": true\n    },\n    \"result\": {\n      \"kind\": \"assert-unique-candidate\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\"\n    },\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"recognitionVersion\": \"recognition/0.1-candidate\"\n  },\n  \"resolutionRecord\": {\n    \"recognitionResolutionId\": {\n      \"$bigint\": \"1\"\n    },\n    \"experienceId\": {\n      \"$bigint\": \"8601\"\n    },\n    \"observerId\": \"character/mina\",\n    \"perceptualReferentId\": {\n      \"observerId\": \"character/mina\",\n      \"observerTrackSequence\": {\n        \"$bigint\": \"17\"\n      }\n    },\n    \"resolution\": {\n      \"kind\": \"asserted-candidate\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\"\n    },\n    \"recognitionRuleId\": \"recognition-rule/unique-uncontradicted-support\",\n    \"evaluatedRecognitionCueEvidenceIds\": [\n      {\n        \"$bigint\": \"1\"\n      }\n    ],\n    \"revisesRecognitionResolutionId\": {\n      \"$undefined\": true\n    },\n    \"occurredAt\": {\n      \"$bigint\": \"10\"\n    },\n    \"recognitionVersion\": \"recognition/0.1-candidate\"\n  },\n  \"nextRuntimeId\": {\n    \"$bigint\": \"2\"\n  }\n}",
+      "sha256": "c107365f5cc99edd5bcc9d3cc56b20765624a75483e6d1f51bc5177934eb0e4e"
+    },
+    "repeatedRequest": {
+      "encoding": "recognition-component-diagnostic-json/0.1",
+      "exact": "{\n  \"experience\": {\n    \"experienceId\": {\n      \"$bigint\": \"8804\"\n    },\n    \"observerId\": \"character/mina\",\n    \"occurredAt\": {\n      \"$bigint\": \"20\"\n    },\n    \"perceptualEventReferentIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observerEventSequence\": {\n          \"$bigint\": \"4\"\n        }\n      }\n    ],\n    \"perceivedBindings\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"perceptualEventReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerEventSequence\": {\n            \"$bigint\": \"4\"\n          }\n        },\n        \"perceptualReferentId\": {\n          \"observerId\": \"character/mina\",\n          \"observerTrackSequence\": {\n            \"$bigint\": \"17\"\n          }\n        },\n        \"eventRoleEvidence\": {\n          \"kind\": \"exact\",\n          \"eventRoleId\": \"event-role/participant\"\n        },\n        \"supportingObservationIds\": [\n          {\n            \"observerId\": \"character/mina\",\n            \"observationId\": {\n              \"$bigint\": \"27900\"\n            }\n          }\n        ],\n        \"occurredAt\": {\n          \"$bigint\": \"20\"\n        },\n        \"transformationVersion\": \"recognition/0.1-candidate\",\n        \"perceivedBindingId\": {\n          \"$bigint\": \"40\"\n        }\n      }\n    ],\n    \"perceptualClassifications\": [],\n    \"perceptualEventClassifications\": [],\n    \"supportingObservationIds\": [\n      {\n        \"observerId\": \"character/mina\",\n        \"observationId\": {\n          \"$bigint\": \"27900\"\n        }\n      }\n    ],\n    \"transformationVersion\": \"recognition/0.1-candidate\"\n  },\n  \"perceptualReferentId\": {\n    \"observerId\": \"character/mina\",\n    \"observerTrackSequence\": {\n      \"$bigint\": \"17\"\n    }\n  },\n  \"candidateCatalog\": [\n    {\n      \"observerId\": \"character/mina\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n      \"candidateDomain\": \"Person\",\n      \"recognitionTemplateIds\": [\n        \"template/glen-face\"\n      ],\n      \"catalogEntryVersion\": \"recognition/0.1-candidate\"\n    },\n    {\n      \"observerId\": \"character/mina\",\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050d706572736f6e2e646172697573\",\n      \"candidateDomain\": \"Person\",\n      \"recognitionTemplateIds\": [\n        \"template/darius-face\"\n      ],\n      \"catalogEntryVersion\": \"recognition/0.1-candidate\"\n    }\n  ],\n  \"identitySymbolMappings\": [],\n  \"cueEvidence\": [\n    {\n      \"recognitionCueEvidenceId\": {\n        \"$bigint\": \"1\"\n      },\n      \"experienceId\": {\n        \"$bigint\": \"8804\"\n      },\n      \"observerId\": \"character/mina\",\n      \"perceptualReferentId\": {\n        \"observerId\": \"character/mina\",\n        \"observerTrackSequence\": {\n          \"$bigint\": \"17\"\n        }\n      },\n      \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\",\n      \"recognitionCueSource\": {\n        \"kind\": \"retained-template-match\",\n        \"recognitionTemplateId\": \"template/glen-face\"\n      },\n      \"cuePolarity\": \"SupportsCandidate\",\n      \"supportingExperienceEvidenceRefs\": [\n        {\n          \"kind\": \"perceived-binding\",\n          \"perceivedBindingId\": {\n            \"$bigint\": \"40\"\n          }\n        }\n      ],\n      \"occurredAt\": {\n        \"$bigint\": \"20\"\n      },\n      \"transformationVersion\": \"recognition/0.1-candidate\"\n    }\n  ],\n  \"priorResolutionHistory\": [\n    {\n      \"recognitionResolutionId\": {\n        \"$bigint\": \"1\"\n      },\n      \"experienceId\": {\n        \"$bigint\": \"8601\"\n      },\n      \"observerId\": \"character/mina\",\n      \"perceptualReferentId\": {\n        \"observerId\": \"character/mina\",\n        \"observerTrackSequence\": {\n          \"$bigint\": \"17\"\n        }\n      },\n      \"resolution\": {\n        \"kind\": \"asserted-candidate\",\n        \"candidateSemanticReferentId\": \"0bea070b8d080b14050b706572736f6e2e676c656e\"\n      },\n      \"recognitionRuleId\": \"recognition-rule/unique-uncontradicted-support\",\n      \"evaluatedRecognitionCueEvidenceIds\": [\n        {\n          \"$bigint\": \"1\"\n        }\n      ],\n      \"revisesRecognitionResolutionId\": {\n        \"$undefined\": true\n      },\n      \"occurredAt\": {\n        \"$bigint\": \"10\"\n      },\n      \"recognitionVersion\": \"recognition/0.1-candidate\"\n    }\n  ],\n  \"recognitionVersion\": \"recognition/0.1-candidate\"\n}",
+      "sha256": "effc04f3111edc36ae631f530fb0bf57eb1c30c8565ce65e60b42ca42f11bad2"
+    },
+    "repeated": {
+      "encoding": "recognition-component-diagnostic-json/0.1",
+      "exact": "{\n  \"evaluation\": {\n    \"recognitionEvaluationId\": {\n      \"$bigint\": \"2\"\n    },\n    \"experienceId\": {\n      \"$bigint\": \"8804\"\n    },\n    \"observerId\": \"character/mina\",\n    \"perceptualReferentId\": {\n      \"observerId\": \"character/mina\",\n      \"observerTrackSequence\": {\n        \"$bigint\": \"17\"\n      }\n    },\n    \"recognitionRuleId\": \"recognition-rule/unique-uncontradicted-support\",\n    \"evaluatedRecognitionCueEvidenceIds\": [\n      {\n        \"$bigint\": \"1\"\n      }\n    ],\n    \"priorRecognitionResolutionId\": {\n      \"$bigint\": \"1\"\n    },\n    \"result\": {\n      \"kind\": \"no-update\",\n      \"reason\": \"SameCandidateMaintained\"\n    },\n    \"occurredAt\": {\n      \"$bigint\": \"20\"\n    },\n    \"recognitionVersion\": \"recognition/0.1-candidate\"\n  },\n  \"nextRuntimeId\": {\n    \"$bigint\": \"3\"\n  }\n}",
+      "sha256": "7b012574ca8bf2ce3b855c6840ff230cbc421bac5c83a231daf35abadfbbf37a"
+    },
+    "resolutionEmitted": false,
+    "result": {
+      "kind": "no-update",
+      "reason": "SameCandidateMaintained"
+    }
+  },
+  "scope": "Original CV-SEM-064/066/068/069/070 component witnesses. Diagnostic JSON preserves the original recognition version. Isolated failed settlement preserves data but changes scheduler status; no active-run intervention, native Save132 codec, truth-correctness or full SEM acceptance claim."
+}

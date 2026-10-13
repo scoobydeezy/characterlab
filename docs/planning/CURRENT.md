@@ -36,8 +36,8 @@ knowledge-state9 requests (4 accepted/5 rejected) now pass worker/UI/browser par
 Measurement and whole-instant rollback witnesses now pass worker/UI/browser parity.
 Classification3 requests/3 guards/10 emission targets/2 observer field sets now
 qualified and now pass worker/UI/browser parity. Recognition mapping, continuity,
-authority, allocator/rollback and emission component witnesses now qualified;
-next worker/UI/browser integration, then full SEM corpus reconciliation.
+authority, allocator/rollback and emission component witnesses now pass worker/UI/
+browser parity. Next: full SEM corpus reconciliation and remaining coverage gaps.
 Full corpus coverage and Campaign4 entry acceptance stay open.
 Joined REASON continuation: OBSERVABILITY_WORKBENCH_REASON_PROGRESS.md;115 native
 programs/350 prefixes pass; Values125/625 retained. Full workbench acceptance remains open.
