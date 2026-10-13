@@ -211,3 +211,10 @@ registration/browser qualification remain due; batch54486 still binds registry.
 Latest: MULTISOURCE assessment language COMPLETE62 programs/249 prefixes/632
 descriptions PASS; source/original hashes verified. Worker/UI type-check PASS.
 Native parity50025 and batch54486 remain live; registration/browser work due.
+
+Latest: accepted ADAPT1.11.0 parent pair mapped to public memoryFactory; adapter
+and frozen originals prepared. Native historical-byte/restore test and type-check
+PASS; eight-prefix parity audit9523 RUNNING. See OBSERVABILITY_WORKBENCH_ADAPT_PROGRESS.md.
+
+Latest: ADAPT parent-pair parity COMPLETE2 programs/8 prefixes PASS (9523 exit0);
+all source/original hashes verified. Broader ADAPT comparison/control/UI scope remains.
