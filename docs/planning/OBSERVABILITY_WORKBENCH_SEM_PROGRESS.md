@@ -902,3 +902,28 @@ workbench-sem-negative-ui-rev1. No full file download/full SEM claim. Evidence r
 research PASS,18 conditional obligations unchanged. Next integrated renderer/phenomenon
 joins and authority/acceptance gates; Campaign4 entry remains open.
 Audit6338 COMPLETE exit0: full browser report, both tables, scope text and6 hashes equal fresh native execution and corrected rev2 report. Ten current/frozen sources and3 capture identities verified.
+
+## CV-SEM-012 renderer diagnostic foundation (2026-10-13)
+
+LOCAL DISPOSITION: expose the original CV-SEM-012 gate as a researcher diagnostic.
+The fixture renderer remains gate machinery without an accepted rendering contract;
+it is not promoted to the live Character renderer. Its import is confined to execution
+of that same vector. No simulation, topology, contract or Campaign3 verdict changes.
+
+Generated scenario preserves original test helpers, replacing the embedded Vitest
+track-equality assertion with an explicit fail-closed structural comparison. Original
+five tests plus one adapter test PASS. All three viewpoints retain plain/narrative,
+repeat, shifted-allocation and correction-absent outputs. Exact diagnostic includes
+original/shifted requests, original experience before correction and request before/
+after rendering. Glen's contemporaneous Darius account survives; later Mina correction
+changes current reinterpretation without rewriting the experience. Omniscient ancestry
+stays explicitly distinct from the character-scoped outputs.
+
+Audit23659 failed because its identity check assumed human-readable names inside
+canonical typed keys. Failed checker and diagnosis retained under development;
+corrected audit9093 COMPLETE exit0 compares authoredReferentKey values. Ten current
+and frozen source identities and report digest recorded in workbench-sem-renderer-rev1.
+Production build72386 COMPLETE exit0 (401 modules; existing chunk-size warning).
+Evidence restore and research checks PASS; all18 conditional obligations unchanged.
+Worker/UI/browser parity is next, followed by integrated phenomenon and authority/
+acceptance reconciliation. This foundation does not establish full SEM or Campaign4 entry.

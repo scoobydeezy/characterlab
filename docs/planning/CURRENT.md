@@ -1,5 +1,12 @@
 # Current research entry point
 
+**Workbench update2026-10-13:** CV-SEM-012 renderer diagnostic foundation qualified;
+three viewpoints with presentation/allocation/correction controls,6 focused tests and
+build PASS. See OBSERVABILITY_WORKBENCH_SEM_PROGRESS.md and
+workbench-sem-renderer-rev1/receipt.json. Gate machinery only, no accepted renderer seam.
+Next worker/UI/browser parity, then integrated phenomenon and authority/acceptance.
+The overall workbench goal and Campaign4 entry gate remain open.
+
 **Updated2026-10-11. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
 
 **Campaign3 bounded exit acceptance; see the final validation receipt.**

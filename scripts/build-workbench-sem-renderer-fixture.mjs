@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+const path='src/test/phenSem001Rendering.test.ts', bytes=fs.readFileSync(path), original=bytes.toString('utf8');
+const split=original.indexOf("describe('PHEN-SEM-001 viewpoint rendering'");
+assert(split>0);
+const assertion="expect(second.tracksByLabel.get('glen/actor')).toEqual(actorTrack);";
+let body=original.slice(0,split).replace("import { describe, expect, it } from 'vitest';",'').replaceAll("'./fixtures/","'../test/fixtures/");
+assert.equal(body.split(assertion).length,2);
+body=body.replace(assertion,"if (stringifyWithBigInts(second.tracksByLabel.get('glen/actor')) !== stringifyWithBigInts(actorTrack)) throw Error('CV-SEM-012 continuant changed');");
+fs.writeFileSync('src/workbench/semRendererFixture.ts', '// Generated CV-SEM-012 diagnostic fixture only; no accepted rendering seam.\n'+body+`\nexport {misrecognitionScenario,requestFor,identityTokens,CATALOG_IDENTITIES,NON_CATALOG_TRUTH_REFERENTS};\nexport const originalSource={path:'${path}',sha256:'${createHash('sha256').update(bytes).digest('hex')}'} as const;\n`,{flag:'wx'});
