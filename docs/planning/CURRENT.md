@@ -160,3 +160,6 @@ audit RUNNING session82726, with exact/occurrence-normalized observer outcomes s
 
 RELATIONSHIP native24/256 and33 comparisons now PASS. Observer descriptions integrated;
 six focused tests/type-check PASS, full language audit RUNNING session54277. UI due.
+
+RELATIONSHIP language now PASS6794 descriptions/256 prefixes/88 suppressed observer-
+prefixes. Six-mode UI/worker prepared; transport/type-check PASS. Registry/browser due.

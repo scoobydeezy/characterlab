@@ -57,3 +57,16 @@ Full native observer-description audit RUNNING session54277. It checks all256 pr
 source-record joins, unchanged saves, prior-entry stability, hidden-world/nonrecipient
 invariance and DerivedHistory/StoredSummary equality. It is not complete yet. Full
 factor-by-factor response prose, failed0.1 mapping, UI/browser and batch remain due.
+
+Language audit COMPLETE: session54277 exit0, all256 prefixes/6794 descriptions/88
+suppressed observer-prefixes PASS. Counts include retained entries repeated at later
+prefixes. Hidden-world/nonrecipient and DerivedHistory/StoredSummary equalities pass.
+Receipt workbench-relationship-language-rev1/receipt.json and all current/frozen source
+hashes verified. This is bounded native-view language, not full response-factor prose.
+
+Six-mode RelationshipWorkbench and dedicated worker/client prepared with explicit
+Observer A/B selection, separate current journal/person estimate, historical appraisal
+provenance, checkpoints, declared comparisons and participation inspection. Transport
+tests2/2 and TypeScript PASS. Route registration/browser checks remain due until the
+shared batch audit session33242 releases its exact registry source binding. The new
+component is not yet reachable through the main app selector. All18 obligations remain.
