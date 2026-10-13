@@ -12,6 +12,7 @@ import type {runSemBindingControls} from './semBindingControls';
 import type {runSemEventFileControls} from './semEventFileControls';
 import type {runSemClassificationBoundaryControls} from './semClassificationBoundaryControls';
 import type {runSemEventClassificationControls} from './semEventClassificationControls';
+import type {runSemPersistenceControls} from './semPersistenceControls';
 import type {runSemCodecControls} from './semCodecControls';
 import type {runSemSchemaControls} from './semSchemaControls';
 import type {runSemPhaseControls} from './semPhaseControls';
@@ -41,6 +42,7 @@ export class SemWorkerClient {
   controls() {return this.#call<Awaited<ReturnType<typeof runSemControlSuite>>>('controls');}
   recognition() {return this.#call<Awaited<ReturnType<typeof runSemRecognitionControls>>>('recognition');}
   checkpoint() {return this.#call<SemCheckpoint>('checkpoint');}
+  persistence() {return this.#call<Awaited<ReturnType<typeof runSemPersistenceControls>>>('persistence');}
   codecs() {return this.#call<Awaited<ReturnType<typeof runSemCodecControls>>>('codecs');}
   schemas() {return this.#call<Awaited<ReturnType<typeof runSemSchemaControls>>>('schemas');}
   phases() {return this.#call<Awaited<ReturnType<typeof runSemPhaseControls>>>('phases');}

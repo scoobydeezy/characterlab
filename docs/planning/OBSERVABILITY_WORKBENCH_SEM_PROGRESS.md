@@ -824,3 +824,18 @@ repeatability, diagnostic digests and independent native reload PASS. Evidence r
 research PASS,18 conditional obligations unchanged. Next persistence worker/UI/browser
 parity, remaining state099/100 and integrated SEM coverage.
 Production build5069 COMPLETE exit0,399 modules; typecheck/boundary checks pass, existing chunk-size warning retained. Ten current/frozen source identities independently verified.
+
+## Native persistence worker and browser parity (2026-10-13)
+
+Compare now exposes Native persistence and observer isolation, separating2 save/load
+comparisons,4 committed-data rollback checks and3 bounded observer-interleaving checks.
+Direct-transition versus multi-observer scheduling limit visible. Worker persistence
+operation matches qualified component report and preserves exact checkpoints at all4
+prefixes; focused2 tests PASS. Production build91826 COMPLETE exit0,400 modules;
+existing chunk-size warning retained. Browser prefix1 full118,465-character report
+captured in50,000-character chunks with3 tables, scope/failure paragraphs and6 unchanged
+hashes. Screenshot inspected. Component native persistence qualification retained;
+no full file download/full SEM claim. Evidence root workbench-sem-persistence-ui-rev1.
+Evidence restore/research PASS,18 conditional obligations unchanged. Next state099/100
+and integrated SEM coverage gaps; overall Campaign4 entry remains open.
+Audit1113 COMPLETE exit0: full browser report,3 tables, scope text and6 hashes equal fresh native execution and qualified foundation. Nine current/frozen sources and3 captures verified. Existing semKnowledgeControls already targets099/100 and self-sufficient resolution; next reconcile that evidence and all newer increments into SEM coverage before adding duplicate controls.

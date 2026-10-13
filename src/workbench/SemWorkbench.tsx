@@ -16,6 +16,7 @@ import {SemBindingPanel} from './SemBindingPanel';
 import {SemEventFilePanel} from './SemEventFilePanel';
 import {SemClassificationBoundaryPanel} from './SemClassificationBoundaryPanel';
 import {SemEventClassificationPanel} from './SemEventClassificationPanel';
+import {SemPersistencePanel} from './SemPersistencePanel';
 import {SemCodecPanel} from './SemCodecPanel';
 import {SemSchemaPanel} from './SemSchemaPanel';
 import {SemPhasePanel} from './SemPhasePanel';
@@ -50,6 +51,7 @@ export function SemWorkbench({active=true}:{active?:boolean}){
  {mode==='Compare'&&<SemEventFilePanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
  {mode==='Compare'&&<SemClassificationBoundaryPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
  {mode==='Compare'&&<SemEventClassificationPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
+ {mode==='Compare'&&<SemPersistencePanel client={run.current} busy={busy} execute={execute} onExport={setText}/>} 
  {mode==='Compare'&&<SemCodecPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>} 
  {mode==='Compare'&&<SemSchemaPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>} 
  {mode==='Compare'&&<SemPhasePanel client={run.current} busy={busy} execute={execute} onExport={setText}/>} 
