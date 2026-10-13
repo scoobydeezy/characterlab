@@ -47,3 +47,8 @@ Browser independent verification COMPLETE: workbench-batch-browser-rev5/receipt.
 PASS78 programs/624 prefixes and exact bounded preview. All source/input hashes
 verified after terminal exit0. Full download transport remains unverified; the
 full766-role native audit is a separate live process, not discharged by this receipt.
+
+Full native qualification COMPLETE: workbench-batch-parity-rev5/receipt.json PASS766
+roles/4666 exact frozen prefixes and original exports. Writer65026 exited0; all
+current and frozen source hashes verified. Registry source freeze released; SKILL
+route registration may proceed. Full corpus and integrated entry remain open.
