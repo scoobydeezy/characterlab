@@ -64,3 +64,15 @@ independently restores through the public factory, and every reported draw's can
 bytes match the actual native trace. All report and current/frozen/original source
 hashes verified. Receipt: workbench-det-comparison-rev1/receipt.json. Type-check and
 research integrity PASS;18 conditional obligations retained.
+
+Six-mode DetWorkbench component PREPARED, not registered. It supports original
+program selection, whole-instant step/run/pause, checkpoint capture/restore/export,
+committed events with exact draw records, researcher outputs and participation.
+Compare offers active-checkpoint replay verification and the declared terminal model
+contrast, with exact saved-section equality and explicit RNG coupling limitations.
+Advancing clears a stale comparison. Character descriptions remain unavailable;
+the component does not narrate draws as character knowledge. Two transport lifecycle
+tests PASS overlapping-command rejection, unrelated-reply handling, detached
+snapshots, disposal and message-decoding failure cleanup. Type-check PASS.
+Shared registry remains bound to batch54486; registration and browser qualification
+remain due. This prepared view does not discharge missing DET controls or language.
