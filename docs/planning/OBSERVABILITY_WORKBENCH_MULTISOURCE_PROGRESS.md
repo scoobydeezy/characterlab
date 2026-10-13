@@ -30,3 +30,14 @@ Comparison reports, observer-safe language, worker/UI registration, browser and
 batch coverage remain due. Shared batch841/5236 audit session33242 completed PASS;
 its26 current/frozen source bindings were verified and registry freeze released. No new research verdict, law selection or
 obligation closure: all18 conditional obligations and Campaign3 limits remain.
+
+Comparison declarations implemented:96 pairs across all62 programs. They preserve
+receiving-law, source-family, adoption, hidden physical state, matched DescriptionDice
+and independent replenishment contrasts. Initial-state controls with unchanged model
+identity are explicitly separate from model changes. DescriptionDice omission of
+Situation descriptions is disclosed; source fixtures with multiple edits are compound.
+Exact originals, source versions, seed bytes and raw722 records are retained.
+Equality requires the same committed prefix and instant; replenishment adds an instant.
+Two focused tests and type-check PASS. Full96-pair/62-native-program comparison audit
+RUNNING session74592 via check-workbench-multisource-comparison.mjs. Preserve bound
+sources. This does not establish language, UI or full workbench acceptance.

@@ -191,3 +191,7 @@ Latest: batch0.7/catalog0.7/registry0.22 enroll SOCIAL and corrected/legacy
 RELATIONSHIP:915 roles/5875 prefixes, previous841 unchanged. Ten focused tests and
 build PASS. Full audit session54486 RUNNING; preserve bound sources. Start
 OBSERVABILITY_WORKBENCH_BATCH_V7_PROGRESS.md. MULTISOURCE session50025 remains live.
+
+Latest:96 MULTISOURCE comparison declarations implemented; two focused tests and
+type-check PASS. Full comparison audit session74592 RUNNING, native parity50025
+and batch54486 also live. Do not restart writers or edit their bound source files.
