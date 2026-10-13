@@ -31,3 +31,14 @@ Still due: completion of this native audit, WORK batch browser qualification,
 remaining corpus adapters, language/source accounting, architecture participation,
 resource qualification and integrated Campaign4 entry. This is presentation and
 execution tooling, not a Campaign3 verdict amendment or reduction authorization.
+
+Browser execution COMPLETE: all78 WORK programs/624 prefixes, including a pause at
+26 complete programs/214 prefixes and resume to completion. Captures are in
+workbench-batch-browser-rev5. Its independent verifier is running as session94065;
+no browser PASS claim until receipt.json exists and is checked. Exact1248 DOM
+save/expected hash elements and64000 export preview characters are preserved.
+The rendered report declares995769 UTF-8 bytes. A fresh full-download event attempt
+timed out after15000ms; download-attempt.json preserves the observation, and full
+transport remains unverified. Screenshot inspected: completion, limits and preview
+truncation are readable. Native full audit session65026 separately passed180 roles
+at this checkpoint; it is still running. Do not restart either live process.
