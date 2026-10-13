@@ -253,3 +253,28 @@ Next: remaining semantic witnesses, starting with original bounded measurement
 support and whole-instant illegal-binding rollback in phenSem001Measurement.test.ts
 (CV-SEM-011/014), alongside outstanding recognition continuity/emission and
 classification-negative distinctions. Full corpus and Campaign4 entry remain open.
+
+Measurement/rollback witnesses qualified (2026-10-13): generated fixture retains
+the original phenSem001Measurement.test.ts measurement helpers, binding setup,
+state adapter, handler and scheduler setup verbatim without test hooks. CV-SEM-011
+joins the binding's actual supporting ordinal7100 to the real measured ObservationId
+in namespace1115; point measurement1/10 remains exact. Role and track stay distinct
+from support. Ordinary bindings retain the same support-reference shape without
+requiring scalar measurement. The measurement interval/truth is not copied into
+the binding; both exact records remain available for researcher inspection.
+
+CV-SEM-014 executes the original isolated scheduler handler and catches the actual
+injected settlement-validation failure. State, allocators, committed trace and
+outputs remain exactly equal; scheduler status changes Active to Failed and is
+explicitly recorded, alongside clock/queue diagnostics. This is not successful
+continuation or an intervention in the active integrated SEM run.
+
+Audit61558 COMPLETE exit0: measured/ordinary support, exact evidence hashes,
+original source/setup binding and four-surface rollback PASS. Receipt:
+workbench-sem-measurement-rev1/receipt.json. Original3 tests plus workbench test
+PASS; focused rerun verifies exact1/10 display; type-check PASS. Research preserves
+18 conditional obligations. No new Campaign3 verdict or qualification amendment.
+
+Next: worker/UI inspection and browser parity for these measurement/rollback
+reports, followed by remaining semantic and broader corpus gaps. Full Campaign4
+entry acceptance remains open.

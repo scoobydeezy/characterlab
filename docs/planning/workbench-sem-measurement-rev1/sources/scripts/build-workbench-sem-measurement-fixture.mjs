@@ -1,0 +1,7 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import{createHash}from'node:crypto';
+const source='src/test/phenSem001Measurement.test.ts',body=fs.readFileSync(source,'utf8'),prefix=body.slice(0,body.indexOf("describe('PHEN-SEM-001 scalar")).replace("import { describe, expect, it } from 'vitest';",'').replace("from './fixtures/phenSem001'","from '../test/fixtures/phenSem001'");
+const measured=body.slice(body.indexOf('    const observerId = MINA;'),body.indexOf('    // The measurement is cited as support'));
+const rollback=body.slice(body.indexOf('    interface FixtureState {'),body.indexOf('    const beforeState = scheduler.getState();'));
+assert(measured.includes('const binding = compiled.bindings[0]'));assert(rollback.includes('scheduler.schedule'));assert(![prefix,measured,rollback].some(s=>s.includes('expect(')||s.includes('vitest')));
+const hash=createHash('sha256').update(fs.readFileSync(source)).digest('hex');
+fs.writeFileSync('src/workbench/semMeasurementFixture.ts',`// Original helper/setup bodies from ${source}; no test hooks.\n${prefix}\nexport function measuredBinding(){\n${measured}\nreturn {observed:measurement(),binding,track};\n}\nexport function rollbackFixture(){\n${rollback}\nreturn {scheduler,adapter};\n}\nexport {measurement,channel,boundedTruth};\nexport const originalSource={path:'${source}',sha256:'${hash}'} as const;\n`,{flag:'wx'});console.log('PASS original measurement and rollback fixture extraction');
