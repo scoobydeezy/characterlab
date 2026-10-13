@@ -53,7 +53,7 @@ parity. Event-pattern classification051-060 component controls now qualified:
 16 cases/7 guards/7 emission targets/24 diagnostics, now with worker/UI/browser
 parity. Evidence-provenance071-080 component controls now qualified:12 cases/
 17 guards/3 API boundaries/30 diagnostics, now with worker/UI/browser parity.
-Phase-ordering081-090 foundation qualified:10 cases/10 guards/21 exact diagnostics; corrected orphan cause and prior correction receipt retained. Next worker/UI/browser parity, then remaining state and integrated coverage gaps.
+Phase-ordering081-090 foundation qualified:10 cases/10 guards/21 exact diagnostics; corrected orphan cause and prior correction receipt retained. Worker/UI/browser parity now qualified: all4 worker prefixes and browser prefix1. Next schema/codec/state091-100 and integrated coverage gaps.
 Phase090 test false-positive corrected before adaptation: old8950 assertion failed
 at actual70 before orphan validation. Exact orphan cause now verified; original
 bytes and two-arm regression preserved in workbench-sem-phase-rollback-correction-rev1.

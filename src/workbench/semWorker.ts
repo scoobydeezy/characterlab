@@ -13,6 +13,7 @@ import {runSemBindingControls} from './semBindingControls';
 import {runSemEventFileControls} from './semEventFileControls';
 import {runSemClassificationBoundaryControls} from './semClassificationBoundaryControls';
 import {runSemEventClassificationControls} from './semEventClassificationControls';
+import {runSemPhaseControls} from './semPhaseControls';
 import {runSemProvenanceControls} from './semProvenanceControls';
 let run:SemWorkbenchRun|undefined;
 self.addEventListener('message',async(event:MessageEvent<{id:number;operation:string;checkpoint?:SemCheckpoint}>)=>{
@@ -25,6 +26,7 @@ self.addEventListener('message',async(event:MessageEvent<{id:number;operation:st
  else if(q.operation==='controls'){const before=JSON.stringify(run.checkpoint());result=await runSemControlSuite();if(JSON.stringify(run.checkpoint())!==before)throw Error('SEM component controls changed active run');}
  else if(q.operation==='recognition'){const before=JSON.stringify(run.checkpoint());result=await runSemRecognitionControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Recognition controls changed active run');}
  else if(q.operation==='checkpoint')result=run.checkpoint();
+ else if(q.operation==='phases'){const before=JSON.stringify(run.checkpoint());result=await runSemPhaseControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Phase controls changed active run');}
  else if(q.operation==='provenance'){const before=JSON.stringify(run.checkpoint());result=await runSemProvenanceControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Provenance controls changed active run');}
  else if(q.operation==='eventClassification'){const before=JSON.stringify(run.checkpoint());result=await runSemEventClassificationControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Event classification controls changed active run');}
  else if(q.operation==='classificationBoundaries'){const before=JSON.stringify(run.checkpoint());result=await runSemClassificationBoundaryControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Classification boundary controls changed active run');}

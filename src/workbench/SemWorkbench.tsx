@@ -16,6 +16,7 @@ import {SemBindingPanel} from './SemBindingPanel';
 import {SemEventFilePanel} from './SemEventFilePanel';
 import {SemClassificationBoundaryPanel} from './SemClassificationBoundaryPanel';
 import {SemEventClassificationPanel} from './SemEventClassificationPanel';
+import {SemPhasePanel} from './SemPhasePanel';
 import {SemProvenancePanel} from './SemProvenancePanel';
 const modes=['Character','Experiment','Reasoning','Timeline','Compare','Architecture'] as const;
 export function SemWorkbench({active=true}:{active?:boolean}){
@@ -47,6 +48,7 @@ export function SemWorkbench({active=true}:{active?:boolean}){
  {mode==='Compare'&&<SemEventFilePanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
  {mode==='Compare'&&<SemClassificationBoundaryPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
  {mode==='Compare'&&<SemEventClassificationPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
+ {mode==='Compare'&&<SemPhasePanel client={run.current} busy={busy} execute={execute} onExport={setText}/>} 
  {mode==='Compare'&&<SemProvenancePanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
  {mode==='Architecture'&&<section className="card"><h2>Retained semantic state</h2><p>Native continuant and event-file roots are shown below. A read/write participation report is unavailable for this historical trace format; no missing instrumentation is treated as inactivity.</p><pre className="exact">{view?.researchState}</pre></section>}
  {text&&<><PreparedExport text={text} label="Prepared SEM export" filename="characterlab-sem.json"/><button onClick={()=>setText('')}>Close SEM export</button></>}

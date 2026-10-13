@@ -1,0 +1,153 @@
+{
+  "before": [
+    "10d25895b963d1ead80a93b3e7a78edb623acdfe583d909bdec9acd08958423f",
+    "e58e1e733cb83839da20e511ecc75694ddfcda0efc72e0473fcf7ac9d56a047a",
+    "dfffbded9de472db36551698b0bd4faa8aa610b7a40b6453ccc771decb49e0a9",
+    "2283e9df2c39718bc7adf7ade184b6d7dcd9c84233e43b8875b29a0e95ec4882",
+    "da28d480ca0e6854a08a4cf443e1a00d677459f109935b7c93f24af0d6300f9f",
+    "34a5ae7eedd66b2e05678cac2eb442e91f58e8b592e13b103e8e6a8165a12a43"
+  ],
+  "after": {
+    "hashes": [
+      "10d25895b963d1ead80a93b3e7a78edb623acdfe583d909bdec9acd08958423f",
+      "e58e1e733cb83839da20e511ecc75694ddfcda0efc72e0473fcf7ac9d56a047a",
+      "dfffbded9de472db36551698b0bd4faa8aa610b7a40b6453ccc771decb49e0a9",
+      "2283e9df2c39718bc7adf7ade184b6d7dcd9c84233e43b8875b29a0e95ec4882",
+      "da28d480ca0e6854a08a4cf443e1a00d677459f109935b7c93f24af0d6300f9f",
+      "34a5ae7eedd66b2e05678cac2eb442e91f58e8b592e13b103e8e6a8165a12a43"
+    ],
+    "paragraphs": [
+      "Inspect lane cutoffs, frozen experience and recognition, and the exact causes of rejected settlement.",
+      "semantic-binding/0.1-candidate#SEM-001H. The active integrated run is unchanged.",
+      "Phase declarations and admission checks have narrower scope than executed scheduler behavior. The companion causal role is a fixture literal; classification sorting does not demonstrate a scheduler read boundary.",
+      "TRANSITION_FAILURE: successful instant contains a reservation without exactly one experience envelope. The validator reached ORPHAN_EXPERIENCE_RESERVATION. Status: Active → Failed.",
+      "The historical test failed an allocator assertion before reaching this validator. This report uses the corrected test and retains its correction receipt: docs/planning/workbench-sem-phase-rollback-correction-rev1/receipt.json.",
+      "Original CV-SEM-081..090 recipes using the corrected090 failure cause. Phase declarations and helper admission checks are distinct from executed backward scheduling and orphan rollback. Companion causal role is a literal; classification ordering does not instrument scheduler execution or read edges. Recognition correction executes the original component. Temporal availability grants no ORD-001 belief permission. Failed settlement changes status while preserving committed data. No native Save132, UI or full SEM qualification claim."
+    ],
+    "status": "Prefix 1 · instant 1 · Ready",
+    "tables": [
+      [
+        [
+          "phase-registry",
+          "CV-SEM-081"
+        ],
+        [
+          "current-lane",
+          "CV-SEM-082"
+        ],
+        [
+          "consequence-lane",
+          "CV-SEM-083"
+        ],
+        [
+          "executed-backward-chain",
+          "CV-SEM-083"
+        ],
+        [
+          "conditional-reservations",
+          "CV-SEM-084"
+        ],
+        [
+          "immutable-envelope",
+          "CV-SEM-085"
+        ],
+        [
+          "classification-order",
+          "CV-SEM-086"
+        ],
+        [
+          "frozen-recognition-correction",
+          "CV-SEM-087"
+        ],
+        [
+          "outcome-adaptation-boundary",
+          "CV-SEM-088"
+        ],
+        [
+          "temporal-availability",
+          "CV-SEM-089"
+        ]
+      ],
+      [
+        [
+          "current-late-truth",
+          "CV-SEM-082",
+          "LATE_TRUTH_CANNOT_REOPEN_LANE",
+          "truth first available at phase 10 misses the Current lane cutoff 10"
+        ],
+        [
+          "consequence-late-truth",
+          "CV-SEM-083",
+          "LATE_TRUTH_CANNOT_REOPEN_LANE",
+          "truth first available at phase 120 misses the Consequence lane cutoff 120"
+        ],
+        [
+          "premature-recognition",
+          "CV-SEM-082",
+          "INVALID_PHASE",
+          "Current RecognitionEvaluation requires phase 21"
+        ],
+        [
+          "backward-scheduling",
+          "CV-SEM-083",
+          "CAUSAL_ORDER_VIOLATION",
+          "same-instant work cannot emit into an earlier phase"
+        ],
+        [
+          "orphan-envelope",
+          "CV-SEM-084",
+          "ORPHAN_EXPERIENCE_RESERVATION",
+          "successful instant contains a reservation without exactly one experience envelope"
+        ],
+        [
+          "duplicate-envelope",
+          "CV-SEM-084",
+          "DUPLICATE_EXPERIENCE_ENVELOPE",
+          "one ExperienceId cannot stage several envelopes"
+        ],
+        [
+          "noncanonical-work",
+          "CV-SEM-086",
+          "NONCANONICAL_CLASSIFICATION_WORK",
+          "same-phase classification work must be scheduled canonically"
+        ],
+        [
+          "truth-outcome-read",
+          "CV-SEM-088",
+          "OUTCOME_TRUTH_READ_FORBIDDEN",
+          "phase-130 character evaluation cannot read phase-110 authoritative outcome truth"
+        ],
+        [
+          "adaptation-learning-output",
+          "CV-SEM-088",
+          "ADAPTATION_AS_LEARNING_EVIDENCE",
+          "truth-side automatic adaptation cannot masquerade as character LearningEvidence"
+        ],
+        [
+          "barrier-event",
+          "CV-SEM-090",
+          "INVALID_EVENT",
+          "the settlement barrier is not a schedulable domain phase"
+        ]
+      ],
+      [
+        [
+          "state",
+          "true"
+        ],
+        [
+          "allocators",
+          "true"
+        ],
+        [
+          "trace",
+          "true"
+        ],
+        [
+          "outputs",
+          "true"
+        ]
+      ]
+    ]
+  }
+}

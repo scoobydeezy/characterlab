@@ -717,3 +717,18 @@ checks21 diagnostic digests, repeatability, original helpers and exact failure c
 Evidence restored; research PASS with18 conditional obligations unchanged. Runtime
 semantics and Campaign3 verdicts unchanged. Next worker/UI/browser parity.
 Production build22309 COMPLETE exit0,396 modules; existing chunk-size warning retained.
+
+## Phase-ordering worker and browser parity (2026-10-13)
+
+Compare now offers Observation lanes and phase ordering, with10 cases,10 guards,
+exact failure messages and4 preservation rows. Historical assertion false-positive
+and corrected validator cause are visible, alongside declaration/helper scope limits.
+Worker phases operation preserves checkpoints at all4 original prefixes and returns
+the qualified report. Focused2 tests PASS; production build70482 COMPLETE exit0,
+397 modules. Browser prefix1 exact51,260-character report captured without truncation;
+all3 tables, scope paragraphs, failure cause and6 hashes match fresh native execution
+and foundation receipt. Audit12738 COMPLETE exit0; screenshot inspected. Evidence
+root workbench-sem-phase-ui-rev1 retains9 sources and3 browser captures. No file
+ download/native persistence/full SEM claim. Evidence restore/research PASS,18
+conditional obligations unchanged. Next091-100 schema/codec/state controls and
+remaining integrated coverage; Campaign4 entry remains open.
