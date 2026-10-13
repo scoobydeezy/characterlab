@@ -111,3 +111,9 @@ checks both observer histories against native historical analytical/effective co
 probabilities, modes, chosen option and draw count, and writes per-pair reports below
 the artifact size limit. Do not restart the live writer or alter its bound sources.
 Shared batch audit session33242 is also still running (last observed640/841).
+
+Full revision audit COMPLETE: session43931 exit0; all24 pairs/48 terminal native
+executions PASS. Both observer histories match historical analytical/effective contact
+probabilities, modes, chosen options and draw counts. All24 report hashes and
+current/frozen source bindings independently verified. Original failed0.1 cohort
+remains failed; no browser or general calibration claim.

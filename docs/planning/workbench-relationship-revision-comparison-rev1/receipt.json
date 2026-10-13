@@ -1,0 +1,164 @@
+{
+  "status": "PASS ALL24 RELATIONSHIP REVISION COMPARISONS",
+  "sources": [
+    {
+      "path": "src/workbench/relationshipRevisionComparison.ts",
+      "sha256": "7ff47edda079c6e0fa167e1cc0ef54e4a2fb2f809f2edaf4ead5a6ca946e8199"
+    },
+    {
+      "path": "src/workbench/relationshipAdapter.ts",
+      "sha256": "c84254413478cb50ee6770bf5d4a056d8bb5ef52f8e9e730f2c11748eaf1c90e"
+    },
+    {
+      "path": "src/workbench/relationshipCharacter.ts",
+      "sha256": "bf2c3ecd14d6dad4cc32208d1d4f33ad801cdb1bc226d20fed1ad08e8055b5b6"
+    },
+    {
+      "path": "src/workbench/relationshipCatalog.json",
+      "sha256": "0e5d7bdbe562eb01797833f786e7d63167fa470adad44d986593c0e6aa04a16b"
+    },
+    {
+      "path": "src/workbench/relationshipLegacyCatalog.json",
+      "sha256": "eb12f82504c00d83894d93fbaa76ebe2cd1ba7b8311001f7c83eccc4668eae97"
+    },
+    {
+      "path": "src/test/workbenchRelationshipRevisionComparison.test.ts",
+      "sha256": "d2559dab0de8f5d3ed1beb6c91dd7afda6efb0be84eaec9aff906030ba72ac12"
+    },
+    {
+      "path": "scripts/check-workbench-relationship-revision-comparison.mjs",
+      "sha256": "4a635f3615331f95165a5a1c1e6abcd496fbec50cb425bf8913a6452086480dd"
+    },
+    {
+      "path": "docs/planning/RELATIONSHIP_PUBLIC_EXPERIMENT_REV2.json",
+      "sha256": "aa3ce9137aeb907d92449eda38b853c9bf3bf80b978937d1b3335a803f6adbee"
+    },
+    {
+      "path": "docs/planning/RELATIONSHIP_PUBLIC_EXPERIMENT_FAILURE_REV1.json",
+      "sha256": "cd4d5a2678efb73fcdf391716daf959b116dc2da01b04a4717dde395f9004183"
+    }
+  ],
+  "checks": [
+    {
+      "id": "revision/candidate-1-law-1-reverse-0",
+      "path": "docs/planning/workbench-relationship-revision-comparison-rev1/reports/01.json",
+      "sha256": "eab3f029636a17921f288096af7fd44e8dffa9a10fb401e55a3785be880895ea"
+    },
+    {
+      "id": "revision/candidate-1-law-1-reverse-1",
+      "path": "docs/planning/workbench-relationship-revision-comparison-rev1/reports/02.json",
+      "sha256": "7c197e895e159a8a2212814887a0d1181c66dab4b861dfe2b094c9b1c4e5026a"
+    },
+    {
+      "id": "revision/candidate-1-law-2-reverse-0",
+      "path": "docs/planning/workbench-relationship-revision-comparison-rev1/reports/03.json",
+      "sha256": "9767bf19918933dbfdd56472d615dd70afeb5356e9b445bce8a888310bb545ce"
+    },
+    {
+      "id": "revision/candidate-1-law-2-reverse-1",
+      "path": "docs/planning/workbench-relationship-revision-comparison-rev1/reports/04.json",
+      "sha256": "4232e8dafdbbb35d7aeb4d06599742865efe9c4a9c3636f5999cbabbbb05897a"
+    },
+    {
+      "id": "revision/candidate-2-law-1-reverse-0",
+      "path": "docs/planning/workbench-relationship-revision-comparison-rev1/reports/05.json",
+      "sha256": "a3af687613e9ae26c2cdd5146eb51a5dd13fb9f3dac5fb2a67d7ad45155eb052"
+    },
+    {
+      "id": "revision/candidate-2-law-1-reverse-1",
+      "path": "docs/planning/workbench-relationship-revision-comparison-rev1/reports/06.json",
+      "sha256": "51d86a3f690b02e69f442ccad04946e41e23fc692e1d5ec2a67f3a983db297e0"
+    },
+    {
+      "id": "revision/candidate-2-law-2-reverse-0",
+      "path": "docs/planning/workbench-relationship-revision-comparison-rev1/reports/07.json",
+      "sha256": "9a80cc64af8cdcaf9c6f327ca26fee7b8aaf36550d93d175d6e00f27dd5f177d"
+    },
+    {
+      "id": "revision/candidate-2-law-2-reverse-1",
+      "path": "docs/planning/workbench-relationship-revision-comparison-rev1/reports/08.json",
+      "sha256": "7e56d667699854463ac95d50bd58432558d0fda7c32bd60a888eb13cf04e9cad"
+    },
+    {
+      "id": "revision/candidate-3",
+      "path": "docs/planning/workbench-relationship-revision-comparison-rev1/reports/09.json",
+      "sha256": "e9b5dc08ea7e3593a5ecc70a020937c401010a60f0a3c5372564a3ad0c53a77b"
+    },
+    {
+      "id": "revision/candidate-4",
+      "path": "docs/planning/workbench-relationship-revision-comparison-rev1/reports/10.json",
+      "sha256": "cb8b34c9b74812c52fd1cc2e9e8f8682340ff6ca8c4d0dc8c5939719b55672f6"
+    },
+    {
+      "id": "revision/candidate-5",
+      "path": "docs/planning/workbench-relationship-revision-comparison-rev1/reports/11.json",
+      "sha256": "ebe83006f06c436c2ba81ba7a0e0f1cb88e71c5033f12d6af02cb413e3f4e7e9"
+    },
+    {
+      "id": "revision/no-shared-acquisition",
+      "path": "docs/planning/workbench-relationship-revision-comparison-rev1/reports/12.json",
+      "sha256": "895907c7ff0eea616d33f7cd235645652842cb248dd613252d1a8678d5d6b2a7"
+    },
+    {
+      "id": "revision/denied-acquisition",
+      "path": "docs/planning/workbench-relationship-revision-comparison-rev1/reports/13.json",
+      "sha256": "8b0386cadc9d0cf87e5ba64c18d8db2e4c53e32cc3aa601e1687c44f66198b23"
+    },
+    {
+      "id": "revision/no-explanation",
+      "path": "docs/planning/workbench-relationship-revision-comparison-rev1/reports/14.json",
+      "sha256": "8e69661b9a3036985017cb112cad43a01ae22d462cddffa5998231b67a97d719"
+    },
+    {
+      "id": "revision/no-rupture",
+      "path": "docs/planning/workbench-relationship-revision-comparison-rev1/reports/15.json",
+      "sha256": "f6907df15ee12ff9d9a6feea988b7ff37500d3bda217d9d05d36fa5fcea49c5e"
+    },
+    {
+      "id": "revision/contact-present",
+      "path": "docs/planning/workbench-relationship-revision-comparison-rev1/reports/16.json",
+      "sha256": "25abb22f436796bf20f54361ab7172004aba36ab3ef88b283243f7f435f4b00f"
+    },
+    {
+      "id": "revision/fixed-display-cooperation",
+      "path": "docs/planning/workbench-relationship-revision-comparison-rev1/reports/17.json",
+      "sha256": "40574820751a8669ad28aebd8a5d316078b5492e4d7b71167d2f2ecd2a63570b"
+    },
+    {
+      "id": "revision/fixed-display-breach",
+      "path": "docs/planning/workbench-relationship-revision-comparison-rev1/reports/18.json",
+      "sha256": "898b0f4b58a61ca2f3dc30e54f55dc3be534af2e49c277af2bac6799181b29e1"
+    },
+    {
+      "id": "revision/hidden-0-candidate-1-law-1-reverse-0",
+      "path": "docs/planning/workbench-relationship-revision-comparison-rev1/reports/19.json",
+      "sha256": "4f535de52c069b45c25ef6c13510f56fc9db6a78c2ff1f507b7e8b9342bd3081"
+    },
+    {
+      "id": "revision/hidden-0-candidate-5",
+      "path": "docs/planning/workbench-relationship-revision-comparison-rev1/reports/20.json",
+      "sha256": "9acf126281fd7c15434dbb58e073a6452312ef24672db8aab6379a73a8076dfd"
+    },
+    {
+      "id": "revision/hidden-2-candidate-1-law-1-reverse-0",
+      "path": "docs/planning/workbench-relationship-revision-comparison-rev1/reports/21.json",
+      "sha256": "baacfc65135e1253444dc0828027c30a05d8247b66670cc291f39885b4076d38"
+    },
+    {
+      "id": "revision/hidden-2-candidate-5",
+      "path": "docs/planning/workbench-relationship-revision-comparison-rev1/reports/22.json",
+      "sha256": "6799701474c9f9aa2e6aee9a92e0f12f698c201ae08e5fd773e6181c07a5d134"
+    },
+    {
+      "id": "revision/empty",
+      "path": "docs/planning/workbench-relationship-revision-comparison-rev1/reports/23.json",
+      "sha256": "af9272c5fafcbfddcf399a61908497b9ce152027a1d4b760af7426f5263166e1"
+    },
+    {
+      "id": "revision/maximum",
+      "path": "docs/planning/workbench-relationship-revision-comparison-rev1/reports/24.json",
+      "sha256": "f4bdd648a08d8d61b3548737e4365693c8500683c66c662e4b0429bbd315ad18"
+    }
+  ],
+  "scope": "48 exact terminal native executions; both observer histories reproduce historical analytical/effective contact probabilities, modes, chosen options and draw counts. Original behavioral failure remains failed. Reports retain all options and full native response records. No browser or general calibration claim."
+}

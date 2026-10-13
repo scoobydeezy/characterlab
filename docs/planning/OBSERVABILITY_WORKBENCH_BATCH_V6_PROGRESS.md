@@ -29,3 +29,9 @@ Independent browser verification COMPLETE: session33267 exit0; SKILL52/279 and
 HABIT23/291 PASS every row/hash, first64000 preview characters and complete byte count.
 workbench-batch-browser-rev6/receipt.json and all source/input hashes verified. This
 does not establish full download transport. The separate841-role audit remains running.
+
+Full shared audit COMPLETE: session33242 exit0;841 roles/5236 exact frozen prefixes
+PASS, including original-input export checks. All26 current/frozen source bindings
+verified against workbench-batch-parity-rev6/receipt.json. This completes the11-seam
+cohort audit; SOCIAL/RELATIONSHIP and remaining corpus enrollment are still due.
+The registry source freeze is released; prepared UI registration can now proceed.

@@ -271,11 +271,13 @@
         "docs/planning/CAMPAIGN3_MULTISOURCE_PUBLIC_QUALIFICATION.md",
         "docs/planning/VERDICT_LEDGER.md"
       ],
-      "workbenchStatus": "ENTRY POINTS LOCATED; EXACT ADAPTER/CONTRACT MAPPING REQUIRED",
-      "executableAdapter": null,
+      "workbenchStatus": "RESEARCHER ADAPTER PREPARED;62-PROGRAM NATIVE PARITY AUDIT RUNNING",
+      "executableAdapter": "src/workbench/multisourceAdapter.ts",
       "candidateSources": [
         "src/campaign3/multisourceFactory.ts"
-      ]
+      ],
+      "seamContract": "multisource-public/0.1-candidate",
+      "scope": "55 named main scenarios/43 model identities plus seven matched interventions. Two focused replay/privacy tests and type-check PASS. Full native/historical parity running; comparisons, observer-safe language, UI and batch remain due."
     },
     {
       "id": "PHEN-HABIT-001",
@@ -308,8 +310,9 @@
       ],
       "seamContract": "relationship-public/0.2-candidate",
       "receipt": "docs/planning/workbench-relationship-parity-rev1/receipt.json",
-      "scope": "Corrected0.2 and retained failed0.1:24 programs/11 models/256 prefixes each, both native observer views. Corrected cohort6794 descriptions/88 suppressed observer-prefixes; legacy narration suppressed. Full cross-revision report audit running; UI registration/browser due.",
-      "legacyReceipt": "docs/planning/workbench-relationship-legacy-parity-rev1/receipt.json"
+      "scope": "Corrected0.2 and retained failed0.1:24 programs/11 models/256 prefixes each, both native observer views. Corrected cohort6794 descriptions/88 suppressed observer-prefixes; legacy narration suppressed. All24 cross-revision reports PASS against both historical observer histories; UI registration/browser due.",
+      "legacyReceipt": "docs/planning/workbench-relationship-legacy-parity-rev1/receipt.json",
+      "revisionComparisonReceipt": "docs/planning/workbench-relationship-revision-comparison-rev1/receipt.json"
     },
     {
       "id": "PHEN-LONG-001",

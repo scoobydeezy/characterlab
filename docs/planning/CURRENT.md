@@ -172,3 +172,12 @@ and type-check PASS. All-pair/browser qualification remains due; failed test pre
 
 RELATIONSHIP legacy parity now PASS24/256, preserving original failed outcome. Full24
 revision-report audit RUNNING session43931. Shared841-role audit remains live33242.
+
+Latest: RELATIONSHIP all24 revision comparison reports PASS (48 native terminal runs),
+with both historical observer histories and source/report hashes verified. MULTISOURCE
+researcher adapter prepared:62 programs, focused replay/privacy tests/type-check PASS;
+full parity running. See OBSERVABILITY_WORKBENCH_MULTISOURCE_PROGRESS.md.
+
+Latest shared batch audit COMPLETE:841 roles/5236 exact prefixes PASS, session33242
+exit0 and26 current/frozen source bindings verified. Registry freeze released.
+SOCIAL/RELATIONSHIP UI registration and wider corpus/batch qualification remain due.
