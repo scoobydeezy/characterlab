@@ -1,0 +1,125 @@
+{
+  "before": [
+    "10d25895b963d1ead80a93b3e7a78edb623acdfe583d909bdec9acd08958423f",
+    "e58e1e733cb83839da20e511ecc75694ddfcda0efc72e0473fcf7ac9d56a047a",
+    "dfffbded9de472db36551698b0bd4faa8aa610b7a40b6453ccc771decb49e0a9",
+    "2283e9df2c39718bc7adf7ade184b6d7dcd9c84233e43b8875b29a0e95ec4882",
+    "da28d480ca0e6854a08a4cf443e1a00d677459f109935b7c93f24af0d6300f9f",
+    "34a5ae7eedd66b2e05678cac2eb442e91f58e8b592e13b103e8e6a8165a12a43"
+  ],
+  "after": {
+    "hashes": [
+      "10d25895b963d1ead80a93b3e7a78edb623acdfe583d909bdec9acd08958423f",
+      "e58e1e733cb83839da20e511ecc75694ddfcda0efc72e0473fcf7ac9d56a047a",
+      "dfffbded9de472db36551698b0bd4faa8aa610b7a40b6453ccc771decb49e0a9",
+      "2283e9df2c39718bc7adf7ade184b6d7dcd9c84233e43b8875b29a0e95ec4882",
+      "da28d480ca0e6854a08a4cf443e1a00d677459f109935b7c93f24af0d6300f9f",
+      "34a5ae7eedd66b2e05678cac2eb442e91f58e8b592e13b103e8e6a8165a12a43"
+    ],
+    "paragraphs": [
+      "Inspect declared write authority and its original executable controls. Ownership declarations do not show which paths a run actually read or wrote.",
+      "semantic-state-authority/0.1-candidate#SEM-001I.3",
+      "The active run is unchanged. These controls execute in a separate fixture with fresh occurrence allocation.",
+      "Membership markers address canonical set members. They do not turn the persisted domain set into a map. Counters and resolution history cannot be removed.",
+      "Changed model identity records a definition change; it does not alone prove different behavior. Codec round trips and native scheduler save/load are separate checks.",
+      "Original eight semantic state-authority tests execute in original order with a fresh per-invocation ordinal map. Seven writable leaves across roots241..244, exact ownership refusals, canonical-set membership projection, codec round-trip, removal/value grammar and ModelIdentity distinctions. Codec persistence is not native scheduler save/load. Model-identity differences do not alone prove changed runtime behavior. Declared authority is not an observed read/write participation trace. Assertion operands and caught errors are retained, not every execution input. No UI, full SEM or Campaign4 qualification."
+    ],
+    "reportLength": 85721,
+    "status": "Prefix 1 · instant 1 · Ready",
+    "tables": [
+      [
+        [
+          "authority/perception",
+          "241 / 1",
+          "wildcard:mapKey",
+          "unsigned-counter",
+          "false"
+        ],
+        [
+          "authority/perception",
+          "241 / 2",
+          "wildcard:mapKey",
+          "membership-marker",
+          "true"
+        ],
+        [
+          "authority/perception",
+          "242 / 1",
+          "wildcard:mapKey",
+          "unsigned-counter",
+          "false"
+        ],
+        [
+          "authority/perception",
+          "242 / 2",
+          "wildcard:mapKey",
+          "membership-marker",
+          "true"
+        ],
+        [
+          "authority/recognition-knowledge",
+          "243 / 1",
+          "wildcard:mapKey",
+          "canonical-record / 228",
+          "true"
+        ],
+        [
+          "authority/recognition-knowledge",
+          "243 / 2",
+          "wildcard:mapKey",
+          "canonical-record / 229",
+          "true"
+        ],
+        [
+          "authority/recognition-resolution",
+          "244 / 1",
+          "wildcard:mapKey",
+          "canonical-record / 236",
+          "false"
+        ]
+      ],
+      [
+        [
+          "registers exactly one owner for every writable leaf of roots 241..244",
+          "12",
+          "Positive or comparison assertions; no caught failure"
+        ],
+        [
+          "rejects a second owner for an already-owned family and an uncovered leaf",
+          "4",
+          "INVALID_PATH, OWNERSHIP_OVERLAP, UNCOVERED_WRITABLE_PATH"
+        ],
+        [
+          "projects both perceptual file states onto their registered leaves",
+          "8",
+          "Positive or comparison assertions; no caught failure"
+        ],
+        [
+          "keeps the membership leaf a mutation projection of the canonical set",
+          "12",
+          "Positive or comparison assertions; no caught failure"
+        ],
+        [
+          "admits writes only from the owning authority",
+          "3",
+          "NON_OWNING_AUTHORITY, UNKNOWN_AUTHORITY"
+        ],
+        [
+          "enforces the accepted lifecycle in removal permission and leaf values",
+          "5",
+          "REMOVE_FORBIDDEN, INVALID_VALUE, INVALID_VALUE"
+        ],
+        [
+          "carries ownership, removal, and leaf grammar into ModelIdentity",
+          "3",
+          "Positive or comparison assertions; no caught failure"
+        ],
+        [
+          "addresses recognition knowledge by its accepted uniqueness keys",
+          "10",
+          "NON_OWNING_AUTHORITY, NON_OWNING_AUTHORITY, REMOVE_FORBIDDEN"
+        ]
+      ]
+    ]
+  }
+}

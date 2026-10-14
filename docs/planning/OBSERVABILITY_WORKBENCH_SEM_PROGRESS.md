@@ -1040,3 +1040,21 @@ Final type41784 and audit19009 COMPLETE exit0. Ten frozen source identities and 
 report in workbench-sem-authority-rev2. Evidence restore/research PASS;18 conditional
 obligations unchanged. Next authority worker/UI/browser parity, then remaining
 phenomenon and acceptance joins; full workbench and Campaign4 entry remain open.
+
+## Authority Architecture panel and browser parity (2026-10-13)
+
+Architecture now separates retained native state from Semantic state ownership.
+Seven declaration rows show authority, root/field, selector, value grammar and removal
+permission. Eight executed witness rows show assertion counts and caught failure codes.
+The exact exported contract version is visible; ownership is explicitly not observed
+read/write participation. Canonical set membership, changed identity versus behavior
+and codec versus scheduler persistence limitations remain visible.
+
+Three focused tests PASS, including corrected-rev2 report equality and preserved
+checkpoints at all4 worker prefixes. Browser prefix1 full85,721-character report and
+both tables equal fresh native execution and corrected foundation. Stable-prefix
+before/after six hashes unchanged; screenshot inspected. Audit12640 COMPLETE exit0:
+10 frozen sources/3 captures in workbench-sem-authority-ui-rev1. Build88332 COMPLETE
+exit0,404 modules with existing chunk warning. Evidence restore/research PASS; all18
+conditional obligations unchanged. Full file download remains unqualified. Next
+remaining occurrence/phenomenon and acceptance joins; full goal remains open.
