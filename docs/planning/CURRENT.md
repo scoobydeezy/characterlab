@@ -1,5 +1,14 @@
 # Current research entry point
 
+**LONG worker2026-10-13:** serialized create/advance/checkpoint/restore now runs
+through longWorker/longWorkerClient. Three focused tests PASS: actual worker/direct
+native snapshot and observer parity, restore continuation, initialization overlap,
+detached committed snapshots, failed-post cleanup, disposal and startup decode failure.
+Build31457 COMPLETE exit0,421 modules; existing chunk-size warning retained.
+Evidence restore/research PASS;18 conditional obligations unchanged. Browser route
+remains next. Full LONG audit56491 and BIO audit41967 remain live; preserve frozen
+sources and do not infer completion from these focused transport checks.
+
 **LONG source adapter2026-10-13:** original29 public programs plus3 execution probes,
 15 frozen model images and exact seeds/inputs retained in longCatalog. Adapter names
 longitudinal-public/0.2-candidate and keeps closed observer bytes separate from research
