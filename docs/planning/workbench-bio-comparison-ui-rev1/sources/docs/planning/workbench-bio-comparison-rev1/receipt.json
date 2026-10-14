@@ -1,0 +1,52 @@
+{
+  "status": "PASS BOUNDED BIO COMPARISON FOUNDATION",
+  "sources": [
+    {
+      "path": "src/workbench/bioComparison.ts",
+      "sha256": "0ec9dfb7c4b4f8d0154956d097d09b23a61c43077ef48c77e1759550cb395df4"
+    },
+    {
+      "path": "src/workbench/bioAdapter.ts",
+      "sha256": "cdf47ea23beeac8852faf54548d423e325e5146fb3178811e3ae91fdacd4d2c3"
+    },
+    {
+      "path": "src/workbench/canonical.ts",
+      "sha256": "f80f4a8353ea7604432d5ffcf0d4628f8b7bf13b82a06b4807445e9a9ba97bde"
+    },
+    {
+      "path": "src/test/workbenchBioComparison.test.ts",
+      "sha256": "893651ce294024e59bb73a61d523b71f963a0c2f0107d655308964f76b40e841"
+    },
+    {
+      "path": "scripts/check-workbench-bio-comparison.mjs",
+      "sha256": "1d0c59f2ba328804aa18b1736763d96a3d7cec78413d35cfb191bb1f40b064a0"
+    },
+    {
+      "path": "docs/planning/BIO_IDENTITY_PLAN_REV1.json",
+      "sha256": "16c777b71e832099156104ea9bcae021d0eba094898107021a22b87b0599fc3c"
+    },
+    {
+      "path": "docs/planning/BIO_COMPARISON_PLAN_REV3.json",
+      "sha256": "172301d5e38cc38352e3cf4111bf59d73efeb5148252c15e6b3651ad9e4c0b98"
+    },
+    {
+      "path": "docs/planning/BIO_COMPARISON_RESULT_REV3.json",
+      "sha256": "0e683a321f19bc0034ecd903432be44422814ca7fcdca6d505bb442e05ac5770"
+    },
+    {
+      "path": "docs/formal/BIO_COMPARISON_IDENTITY_BINDING.md",
+      "sha256": "d443a46e5cb4615181de9da30f96339279e61abadde804511ed47fd668a2d00a"
+    }
+  ],
+  "report": {
+    "path": "reports.json",
+    "sha256": "124dfaebc01069dc1349af7845685d1260a767936e77b74b1e7f7ebe27e77740"
+  },
+  "counts": {
+    "declaredPairs": 19,
+    "executedCases": 5,
+    "stepsPerCase": 5,
+    "comparedPairs": 3
+  },
+  "scope": "Five original cases through shared-seed step5, exact current summaries matched to retained qualified matrix. Three detached comparisons repeat without checkpoint mutation: early-seed divergence, Refold equality and display/decision distinction. Exact routing, actual address keys, draw records and non-decision transcripts stay separate. No all19-pair/full-horizon/browser/language or Campaign4 entry qualification."
+}

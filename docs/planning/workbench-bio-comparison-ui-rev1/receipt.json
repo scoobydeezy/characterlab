@@ -1,0 +1,48 @@
+{
+  "status": "PASS BOUNDED BIO COMPARISON BROWSER",
+  "sources": [
+    {
+      "path": "src/workbench/BioComparisonPanel.tsx",
+      "sha256": "b37251353a8b956a750b772220b83f14cea6d9e35637f3c4e051501210f63c41"
+    },
+    {
+      "path": "src/workbench/BioWorkbench.tsx",
+      "sha256": "ba07052d547f51eb304128025c898c286f88bab0777f219a4f22d8b2c5558dcc"
+    },
+    {
+      "path": "src/workbench/bioComparison.ts",
+      "sha256": "0ec9dfb7c4b4f8d0154956d097d09b23a61c43077ef48c77e1759550cb395df4"
+    },
+    {
+      "path": "src/workbench/bioWorker.ts",
+      "sha256": "52d274ba9b6ef6b7e8e40bf1ae9ae9ed3d6e861f61271e9e05e0fe018539274d"
+    },
+    {
+      "path": "src/workbench/bioWorkerClient.ts",
+      "sha256": "86006e832a599f2a0133bdab901bf10e8eb683b9b814063899f6c9af325e063e"
+    },
+    {
+      "path": "scripts/check-workbench-bio-comparison-ui.mjs",
+      "sha256": "2d768a56a8bcbe662b57dee07e61383224ffb3d724dd572f5109e2826766d965"
+    },
+    {
+      "path": "docs/planning/workbench-bio-comparison-rev1/reports.json",
+      "sha256": "124dfaebc01069dc1349af7845685d1260a767936e77b74b1e7f7ebe27e77740"
+    },
+    {
+      "path": "docs/planning/workbench-bio-comparison-rev1/receipt.json",
+      "sha256": "1879f992c70f476727df11f3ccead33b9b3aa838c5d6ec21fd90ca10aef14eed"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "ui.json",
+      "sha256": "8e7938df9c22e2886dccc304b50ff6a38f12d7034e6db436cacb59f64c4c71d2"
+    },
+    {
+      "path": "comparison.png",
+      "sha256": "e666eaaa0b2b8e78a46dd7f5316ee4d4e33f1308e75bbfec4f4b265a3c17003a"
+    }
+  ],
+  "scope": "Three browser pairs at shared probe5 match qualified reports: early-seed divergence, display/decision distinction and Refold equality. Mode switch preserves report; declaration change clears report and disables stepping. Main BIO four hashes unchanged. Screenshot inspected. All19/full-horizon pairs, active-command pause switching, pair checkpoint/export, language and Campaign4 entry remain separate."
+}
