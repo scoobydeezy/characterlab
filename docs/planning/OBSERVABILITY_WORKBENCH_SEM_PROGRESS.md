@@ -1058,3 +1058,23 @@ before/after six hashes unchanged; screenshot inspected. Audit12640 COMPLETE exi
 exit0,404 modules with existing chunk warning. Evidence restore/research PASS; all18
 conditional obligations unchanged. Full file download remains unqualified. Next
 remaining occurrence/phenomenon and acceptance joins; full goal remains open.
+
+## Occurrence-identity regression foundation (2026-10-13)
+
+All six original semanticOccurrenceIdentity cases execute unchanged apart from importing
+the recorder and braced failure capture:24 assertions and6 coded failures. Cases cover
+ExperienceId4200 allocation/no-evidence no-allocation, malformed detection/support
+ordinals, emitted event-support numeric2/9/10 versus lexicographic10/2/9, singleton
+continuant-rule limitation, typed role projection and16 distinct occurrence namespaces.
+The singleton check is explicitly structural: it cannot discriminate support sorting.
+Namespace uniqueness alone does not prove every payload domain.
+
+Recorder preserves defined/undefined operands and coded exception messages, checks
+the original objectContaining code constraint and fails on missing/wrong exceptions
+or false presence assertions. Full original source bodies are transform-audited.
+Six original plus two adapter/recorder tests PASS. Build95556 COMPLETE exit0,
+404 modules with existing chunk warning. Audit77404 COMPLETE exit0; ten source
+snapshots and full report in workbench-sem-occurrence-rev1. Evidence restore/research
+PASS with all18 conditional obligations unchanged. No native persistence, full trace,
+UI or full SEM inference. Next worker/UI/browser parity and remaining phenomenon/
+acceptance joins; overall entry goal remains open.

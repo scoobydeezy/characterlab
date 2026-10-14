@@ -1,5 +1,11 @@
 # Current research entry point
 
+**Latest workbench2026-10-13:** Occurrence-identity foundation qualified in
+workbench-sem-occurrence-rev1:6 cases/24 assertions/6 caught failures. Numeric event
+support order2/9/10 distinct from string order; singleton continuant limit explicit.
+Eight tests/build PASS. Next occurrence worker/UI parity and remaining phenomenon/
+acceptance joins. Full workbench/Campaign4 entry remains open.
+
 **Latest workbench2026-10-13:** Semantic state-authority foundation qualified in
 workbench-sem-authority-rev2:8 cases/57 assertions/11 failures/7 writable leaves.
 Exact semantic-state-authority/0.1-candidate#SEM-001I.3 version imported from native
