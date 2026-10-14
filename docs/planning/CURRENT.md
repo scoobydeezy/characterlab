@@ -1,9 +1,20 @@
 # Current research entry point
 
+**BIO worker2026-10-13:** bioWorker/bioWorkerClient provide independent creation,
+component stepping, checkpoint capture and restore. Three focused tests PASS
+(session50229 COMPLETE exit0): actual worker/direct parity through shared-seed probe,
+restore/next-step equality, overlapping initialization rejection, client serialization,
+detached snapshots and pending-command disposal. Worker does not introduce scheduler
+events or new character state. Build3587 COMPLETE exit0,412 modules with existing
+chunk warning; evidence restore/research PASS,18 conditional obligations unchanged.
+UI and explanation qualification remain due.
+
 **BIO adapter2026-10-13:** bioAdapter.ts implements the accepted composed component
 boundary and identity supplement. Focused2 tests PASS; existing BIO closure PASS.
 Full13-case/260-prefix parity and every-prefix continuation audit RUNNING under
-session41967, workbench-bio-parity-rev1; no final receipt yet. Build52917 COMPLETE
+session41967 (node PID25704), workbench-bio-parity-rev1; first1/13 PASS (Earned/6,
+20 component prefixes and continuations), no final receipt yet. Quiet execution was
+confirmed live by session and process activity; no restart. Build52917 COMPLETE
 exit0,412 modules with existing chunk warning. Evidence restore/research PASS;
 18 conditional obligations unchanged. Source changes committed separately from
 unfinished audit artifacts. Inspection duplicates no character authority.
@@ -13,7 +24,7 @@ No BIO public scheduler/factory admission, UI or language claim. Goal remains ac
 **Full comparison audit2026-10-13:** command session68178 RUNNING;
 check-workbench-general-comparison-cohort.mjs captures43 unique full-calendar runs,
 then compares36 declared pairs at shared instants and joins every prefix to the
-independent native parity receipt. First7/43 captured (each12 prefixes).
+independent native parity receipt. First11/43 captured (each12 prefixes).
 Sources frozen in workbench-general-comparison-cohort-rev1; do not edit them or
 restart on quiet output. No final receipt exists yet. Poll both68178 and68884.
 Next missing BIO means earned biography components (bioComparison.ts), not biology;
@@ -39,8 +50,8 @@ legacy numeric seed/checkpoint0.1 representation retained, hex checkpoint0.2 int
 Ten focused adapter/export/worker tests and production build PASS.43-model frozen
 cohort parity audit RUNNING under command session68884 (node PID35904 at last check).
 Poll that handle; do not restart merely because output is quiet. Sources frozen in
-workbench-general-cohort-rev1; first26/43 PASS, each12 prefixes (recall-k0 has145,
-select-k0 has133, source-denied-probe has152 events; others153), no final
+workbench-general-cohort-rev1; first29/43 PASS, each12 prefixes (recall-k0 and
+denied-port have145, select-k0 has133, source-denied-probe has152 events; others153), no final
 receipt yet. Keep audited sources unchanged.
 Full memory/attention/browser/batch/language qualification remains open.
 
