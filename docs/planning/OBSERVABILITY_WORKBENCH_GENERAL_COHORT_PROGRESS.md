@@ -1,5 +1,12 @@
 # General attention frozen cohort qualification
 
+2026-10-13 completion update: command68884 COMPLETE exit0. Final receipt in
+workbench-general-cohort-rev1:43 original models/568 native prefixes/7074 events.
+Whole-save/model/run/state parity passed at every prefix. All final receipt artifact
+hashes and current source hashes separately rechecked. Earlier running notes below
+are historical checkpoints. Full comparison audit68178 remains active and freezes
+shared sources. No all-model restore, full browser, language, batch or entry claim.
+
 2026-10-13. IN PROGRESS. Required PHEN-MEM-001/full ATTN instrument coverage uses
 the accepted General Attention cohort, not merely the Campaign2 measurement-memory
 fixture. Prior two-recipe seed0 qualification remains preserved.

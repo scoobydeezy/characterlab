@@ -1,5 +1,23 @@
 # Current research entry point
 
+**GA native parity COMPLETE2026-10-13:** session68884 completed exit0. Receipt
+workbench-general-cohort-rev1 verifies43 models/568 prefixes/7074 events with exact
+original frozen seed, model/run identity and whole-save equality to direct execution.
+All artifact/current-source hashes rechecked. MEM/ATTN inventory updated within this
+scope. Comparison audit68178 remains active; do not edit its frozen shared sources.
+Language, full browser, all-model restore and batch admission remain separate.
+
+**BODY source adapter2026-10-13:** bodyAdapter/bodyCatalog expose the original16
+public EMB programs/six models; ownership components stay separate. Original BODY
+closure check reproduced the known repaired embodiedRuntime hash mismatch; catalog
+preserves both exact source identities and the accepted historical disposition.
+Two focused tests PASS; build80747 COMPLETE exit0,418 modules. Full native parity,
+every-prefix continuation and historical final state/output/trace equality audit
+COMPLETE exit0 under17720 (workbench-body-parity-rev1):16 programs/79 prefixes.
+Final source/artifact hashes independently rechecked. Five ownership components,
+observer-safe language, worker/browser and batch remain due.
+Evidence restore/research PASS;18 conditional obligations unchanged.
+
 **BIO comparison UI2026-10-13:** Compare mode uses independent paired component
 workers, retained across mode switches. Create, shared-probe5 and step controls expose
 declared change, exact decisions/standing/strength/display and full RNG correspondence.
@@ -39,8 +57,8 @@ UI and explanation qualification remain due.
 **BIO adapter2026-10-13:** bioAdapter.ts implements the accepted composed component
 boundary and identity supplement. Focused2 tests PASS; existing BIO closure PASS.
 Full13-case/260-prefix parity and every-prefix continuation audit RUNNING under
-session41967 (node PID25704), workbench-bio-parity-rev1; first4/13 PASS (Earned/6 and0,
-AuthoredTrait/6 and0;
+session41967 (node PID25704), workbench-bio-parity-rev1; first5/13 PASS (Earned/6 and0,
+AuthoredTrait/6 and0, DisplayOnly/6;
 20 component prefixes and continuations), no final receipt yet. Quiet execution was
 confirmed live by session and process activity; no restart. Build52917 COMPLETE
 exit0,412 modules with existing chunk warning. Evidence restore/research PASS;
@@ -52,9 +70,11 @@ No BIO public scheduler/factory admission, UI or language claim. Goal remains ac
 **Full comparison audit2026-10-13:** command session68178 RUNNING;
 check-workbench-general-comparison-cohort.mjs captures43 unique full-calendar runs,
 then compares36 declared pairs at shared instants and joins every prefix to the
-independent native parity receipt. First30/43 captured (each12 prefixes).
+independent native parity receipt. First33/43 captured (first30 each12 prefixes;
+three credit models each25).
 Sources frozen in workbench-general-comparison-cohort-rev1; do not edit them or
-restart on quiet output. No final receipt exists yet. Poll both68178 and68884.
+restart on quiet output. No final comparison receipt exists yet. Poll68178;
+native parity68884 has now completed successfully as recorded above.
 Next missing BIO means earned biography components (bioComparison.ts), not biology;
 BODY public EMB sources/component controls and LONG public factory remain separate.
 
@@ -76,12 +96,9 @@ The UI connection is qualified separately above; preserve ongoing cohort audited
 **Active workbench2026-10-13:** General attention exact32-byte seed support added;
 legacy numeric seed/checkpoint0.1 representation retained, hex checkpoint0.2 introduced.
 Ten focused adapter/export/worker tests and production build PASS.43-model frozen
-cohort parity audit RUNNING under command session68884 (node PID35904 at last check).
-Poll that handle; do not restart merely because output is quiet. Sources frozen in
-workbench-general-cohort-rev1; first38/43 PASS. First30 have12 prefixes (recall-k0 and
-denied-port have145, select-k0 has133, source-denied-probe has152 events; others153);
-four credit models each25 prefixes/288 events. No final
-receipt yet. Keep audited sources unchanged.
+cohort parity audit COMPLETE under command session68884. Sources and final receipt
+preserved in workbench-general-cohort-rev1:43 models/568 prefixes/7074 events.
+Shared sources are still frozen by the active full comparison audit.
 Full memory/attention/browser/batch/language qualification remains open.
 
 Exact-seed UI now qualified in workbench-general-seed-ui-rev1: draft isolation,
