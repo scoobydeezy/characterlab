@@ -16,6 +16,7 @@ import type {runSemNegativeControls} from './semNegativeControls';
 import type {runSemRendererControls} from './semRendererControls';
 import type {runSemIntegratedSuite} from './semIntegratedSuite';
 import type {runSemAuthorityControls} from './semAuthorityControls';
+import type {runSemOccurrenceControls} from './semOccurrenceControls';
 import type {runSemPersistenceControls} from './semPersistenceControls';
 import type {runSemCodecControls} from './semCodecControls';
 import type {runSemSchemaControls} from './semSchemaControls';
@@ -46,6 +47,7 @@ export class SemWorkerClient {
   controls() {return this.#call<Awaited<ReturnType<typeof runSemControlSuite>>>('controls');}
   recognition() {return this.#call<Awaited<ReturnType<typeof runSemRecognitionControls>>>('recognition');}
   checkpoint() {return this.#call<SemCheckpoint>('checkpoint');}
+  occurrence() {return this.#call<Awaited<ReturnType<typeof runSemOccurrenceControls>>>('occurrence');}
   authority() {return this.#call<Awaited<ReturnType<typeof runSemAuthorityControls>>>('authority');}
   integrated() {return this.#call<Awaited<ReturnType<typeof runSemIntegratedSuite>>>('integrated');}
   renderer() {return this.#call<Awaited<ReturnType<typeof runSemRendererControls>>>('renderer');}

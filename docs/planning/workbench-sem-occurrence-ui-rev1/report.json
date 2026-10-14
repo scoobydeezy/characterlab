@@ -1,0 +1,96 @@
+{
+  "version": "sem-occurrence-controls/0.1",
+  "source": {
+    "path": "src/test/semanticOccurrenceIdentity.test.ts",
+    "sha256": "dcd613e4530a3449b6f163ecc62474f1e8fa42c14698f73c0937019b554f761e"
+  },
+  "cases": [
+    {
+      "name": "allocates ExperienceId from the run-scoped allocator without restringifying it",
+      "assertions": 4,
+      "failures": [],
+      "evidence": {
+        "encoding": "negative-ledger-diagnostic-json/0.1",
+        "exact": "{\n  \"name\": \"allocates ExperienceId from the run-scoped allocator without restringifying it\",\n  \"assertions\": [\n    {\n      \"matcher\": \"toBe\",\n      \"negated\": false,\n      \"actual\": \"{\\n  \\\"$bigint\\\": \\\"4200\\\"\\n}\",\n      \"expected\": \"{\\n  \\\"$bigint\\\": \\\"4200\\\"\\n}\",\n      \"passed\": true\n    },\n    {\n      \"matcher\": \"toBe\",\n      \"negated\": false,\n      \"actual\": \"\\\"bigint\\\"\",\n      \"expected\": \"\\\"bigint\\\"\",\n      \"passed\": true\n    },\n    {\n      \"matcher\": \"toMatchObject\",\n      \"negated\": false,\n      \"actual\": \"{\\n  \\\"actual\\\": {\\n    \\\"$undefined\\\": true\\n  },\\n  \\\"undefined\\\": true\\n}\",\n      \"expected\": \"{\\n  \\\"undefined\\\": true\\n}\",\n      \"passed\": true\n    },\n    {\n      \"matcher\": \"toBe\",\n      \"negated\": false,\n      \"actual\": \"{\\n  \\\"$bigint\\\": \\\"4201\\\"\\n}\",\n      \"expected\": \"{\\n  \\\"$bigint\\\": \\\"4201\\\"\\n}\",\n      \"passed\": true\n    }\n  ],\n  \"failures\": []\n}",
+        "sha256": "296df7afe28b9732580424ce08ca82e0a00ef3edda4328de33b155212ee95a4f"
+      }
+    },
+    {
+      "name": "rejects malformed detection and observation occurrence ordinals",
+      "assertions": 5,
+      "failures": [
+        {
+          "code": "INVALID_TRACK_TRANSITION",
+          "message": "detectionOccurrenceId must be a nonnegative allocated occurrence"
+        },
+        {
+          "code": "INVALID_SUPPORTING_OBSERVATION",
+          "message": "observationId must be a nonnegative allocated occurrence"
+        },
+        {
+          "code": "INVALID_SUPPORTING_OBSERVATION",
+          "message": "supporting observations must be unique and strictly canonical"
+        },
+        {
+          "code": "INVALID_SUPPORTING_OBSERVATION",
+          "message": "supporting observations must be unique and strictly canonical"
+        }
+      ],
+      "evidence": {
+        "encoding": "negative-ledger-diagnostic-json/0.1",
+        "exact": "{\n  \"name\": \"rejects malformed detection and observation occurrence ordinals\",\n  \"assertions\": [\n    {\n      \"matcher\": \"toThrow\",\n      \"negated\": true,\n      \"actual\": \"{\\n  \\\"thrown\\\": false,\\n  \\\"result\\\": {\\n    \\\"state\\\": {\\n      \\\"nextTrackSequenceByObserver\\\": {\\n        \\\"$map\\\": [\\n          [\\n            \\\"character/mina\\\",\\n            {\\n              \\\"$bigint\\\": \\\"1\\\"\\n            }\\n          ]\\n        ]\\n      },\\n      \\\"activePerceptualReferentIds\\\": [\\n        {\\n          \\\"observerId\\\": \\\"character/mina\\\",\\n          \\\"observerTrackSequence\\\": {\\n            \\\"$bigint\\\": \\\"0\\\"\\n          }\\n        }\\n      ]\\n    },\\n    \\\"transition\\\": {\\n      \\\"observerId\\\": \\\"character/mina\\\",\\n      \\\"priorPerceptualReferentId\\\": {\\n        \\\"$undefined\\\": true\\n      },\\n      \\\"currentDetectionId\\\": {\\n        \\\"observerId\\\": \\\"character/mina\\\",\\n        \\\"detectionOccurrenceId\\\": {\\n          \\\"$bigint\\\": \\\"3\\\"\\n        }\\n      },\\n      \\\"continuityKind\\\": \\\"NewTrack\\\",\\n      \\\"supportingObservationIds\\\": [\\n        {\\n          \\\"observerId\\\": \\\"character/mina\\\",\\n          \\\"observationId\\\": {\\n            \\\"$bigint\\\": \\\"9\\\"\\n          }\\n        }\\n      ],\\n      \\\"occurredAt\\\": {\\n        \\\"$bigint\\\": \\\"100\\\"\\n      },\\n      \\\"transformationVersion\\\": \\\"semantic-binding/0.1-candidate#SEM-001A\\\",\\n      \\\"perceptualReferentId\\\": {\\n        \\\"observerId\\\": \\\"character/mina\\\",\\n        \\\"observerTrackSequence\\\": {\\n          \\\"$bigint\\\": \\\"0\\\"\\n        }\\n      }\\n    }\\n  }\\n}\",\n      \"expected\": \"{\\n  \\\"$undefined\\\": true\\n}\",\n      \"passed\": true\n    },\n    {\n      \"matcher\": \"toBe\",\n      \"negated\": false,\n      \"actual\": \"\\\"INVALID_TRACK_TRANSITION\\\"\",\n      \"expected\": \"\\\"INVALID_TRACK_TRANSITION\\\"\",\n      \"passed\": true\n    },\n    {\n      \"matcher\": \"toBe\",\n      \"negated\": false,\n      \"actual\": \"\\\"INVALID_SUPPORTING_OBSERVATION\\\"\",\n      \"expected\": \"\\\"INVALID_SUPPORTING_OBSERVATION\\\"\",\n      \"passed\": true\n    },\n    {\n      \"matcher\": \"toBe\",\n      \"negated\": false,\n      \"actual\": \"\\\"INVALID_SUPPORTING_OBSERVATION\\\"\",\n      \"expected\": \"\\\"INVALID_SUPPORTING_OBSERVATION\\\"\",\n      \"passed\": true\n    },\n    {\n      \"matcher\": \"toBe\",\n      \"negated\": false,\n      \"actual\": \"\\\"INVALID_SUPPORTING_OBSERVATION\\\"\",\n      \"expected\": \"\\\"INVALID_SUPPORTING_OBSERVATION\\\"\",\n      \"passed\": true\n    }\n  ],\n  \"failures\": [\n    {\n      \"code\": \"INVALID_TRACK_TRANSITION\",\n      \"message\": \"detectionOccurrenceId must be a nonnegative allocated occurrence\"\n    },\n    {\n      \"code\": \"INVALID_SUPPORTING_OBSERVATION\",\n      \"message\": \"observationId must be a nonnegative allocated occurrence\"\n    },\n    {\n      \"code\": \"INVALID_SUPPORTING_OBSERVATION\",\n      \"message\": \"supporting observations must be unique and strictly canonical\"\n    },\n    {\n      \"code\": \"INVALID_SUPPORTING_OBSERVATION\",\n      \"message\": \"supporting observations must be unique and strictly canonical\"\n    }\n  ]\n}",
+        "sha256": "41a1d450d36dbe6f42dc8b0acb114b59f4f522baa4776a68895518657d26c84f"
+      }
+    },
+    {
+      "name": "orders supporting occurrence ordinals numerically inside emitted evidence",
+      "assertions": 3,
+      "failures": [],
+      "evidence": {
+        "encoding": "negative-ledger-diagnostic-json/0.1",
+        "exact": "{\n  \"name\": \"orders supporting occurrence ordinals numerically inside emitted evidence\",\n  \"assertions\": [\n    {\n      \"matcher\": \"toMatchObject\",\n      \"negated\": false,\n      \"actual\": \"{\\n  \\\"actual\\\": {\\n    \\\"eventClassificationEvidenceId\\\": {\\n      \\\"$bigint\\\": \\\"0\\\"\\n    },\\n    \\\"experienceId\\\": {\\n      \\\"$bigint\\\": \\\"9500\\\"\\n    },\\n    \\\"observerId\\\": \\\"character/mina\\\",\\n    \\\"perceptualEventReferentId\\\": {\\n      \\\"observerId\\\": \\\"character/mina\\\",\\n      \\\"observerEventSequence\\\": {\\n        \\\"$bigint\\\": \\\"8\\\"\\n      }\\n    },\\n    \\\"perceptualEventFacetId\\\": \\\"perceptual-event-facet/appears-rope-skipping-pattern-like\\\",\\n    \\\"typedPerceivedValue\\\": true,\\n    \\\"eventClassificationRuleId\\\": \\\"event-classification-rule/rope-skipping-pattern-conjunction\\\",\\n    \\\"supportingEventFeatureObservationIds\\\": [\\n      {\\n        \\\"$bigint\\\": \\\"2\\\"\\n      },\\n      {\\n        \\\"$bigint\\\": \\\"9\\\"\\n      },\\n      {\\n        \\\"$bigint\\\": \\\"10\\\"\\n      }\\n    ],\\n    \\\"supportingPerceptualReferentIds\\\": [\\n      {\\n        \\\"observerId\\\": \\\"character/mina\\\",\\n        \\\"observerTrackSequence\\\": {\\n          \\\"$bigint\\\": \\\"4\\\"\\n        }\\n      },\\n      {\\n        \\\"observerId\\\": \\\"character/mina\\\",\\n        \\\"observerTrackSequence\\\": {\\n          \\\"$bigint\\\": \\\"7\\\"\\n        }\\n      }\\n    ],\\n    \\\"supportingObservationIds\\\": [\\n      {\\n        \\\"observerId\\\": \\\"character/mina\\\",\\n        \\\"observationId\\\": {\\n          \\\"$bigint\\\": \\\"40002\\\"\\n        }\\n      },\\n      {\\n        \\\"observerId\\\": \\\"character/mina\\\",\\n        \\\"observationId\\\": {\\n          \\\"$bigint\\\": \\\"40009\\\"\\n        }\\n      },\\n      {\\n        \\\"observerId\\\": \\\"character/mina\\\",\\n        \\\"observationId\\\": {\\n          \\\"$bigint\\\": \\\"40010\\\"\\n        }\\n      }\\n    ],\\n    \\\"occurredAt\\\": {\\n      \\\"$bigint\\\": \\\"30\\\"\\n    },\\n    \\\"transformationVersion\\\": \\\"perceptual-event-classification/0.1-candidate\\\"\\n  },\\n  \\\"defined\\\": true\\n}\",\n      \"expected\": \"{\\n  \\\"defined\\\": true\\n}\",\n      \"passed\": true\n    },\n    {\n      \"matcher\": \"toEqual\",\n      \"negated\": false,\n      \"actual\": \"[\\n  {\\n    \\\"$bigint\\\": \\\"2\\\"\\n  },\\n  {\\n    \\\"$bigint\\\": \\\"9\\\"\\n  },\\n  {\\n    \\\"$bigint\\\": \\\"10\\\"\\n  }\\n]\",\n      \"expected\": \"[\\n  {\\n    \\\"$bigint\\\": \\\"2\\\"\\n  },\\n  {\\n    \\\"$bigint\\\": \\\"9\\\"\\n  },\\n  {\\n    \\\"$bigint\\\": \\\"10\\\"\\n  }\\n]\",\n      \"passed\": true\n    },\n    {\n      \"matcher\": \"toEqual\",\n      \"negated\": true,\n      \"actual\": \"[\\n  {\\n    \\\"$bigint\\\": \\\"2\\\"\\n  },\\n  {\\n    \\\"$bigint\\\": \\\"9\\\"\\n  },\\n  {\\n    \\\"$bigint\\\": \\\"10\\\"\\n  }\\n]\",\n      \"expected\": \"[\\n  {\\n    \\\"$bigint\\\": \\\"10\\\"\\n  },\\n  {\\n    \\\"$bigint\\\": \\\"2\\\"\\n  },\\n  {\\n    \\\"$bigint\\\": \\\"9\\\"\\n  }\\n]\",\n      \"passed\": true\n    }\n  ],\n  \"failures\": []\n}",
+        "sha256": "b2c63b93c5af1677cac4993af743f55034ca86a3594065e605d61f5aea8e1d1c"
+      }
+    },
+    {
+      "name": "flags when continuant support ordering becomes observable",
+      "assertions": 6,
+      "failures": [],
+      "evidence": {
+        "encoding": "negative-ledger-diagnostic-json/0.1",
+        "exact": "{\n  \"name\": \"flags when continuant support ordering becomes observable\",\n  \"assertions\": [\n    {\n      \"matcher\": \"toHaveLength\",\n      \"negated\": false,\n      \"actual\": \"[\\n  \\\"perceptual-feature/observed-blunt-form\\\"\\n]\",\n      \"expected\": \"1\",\n      \"passed\": true\n    },\n    {\n      \"matcher\": \"toHaveLength\",\n      \"negated\": false,\n      \"actual\": \"[\\n  \\\"perceptual-feature/observed-discrete-object-form\\\"\\n]\",\n      \"expected\": \"1\",\n      \"passed\": true\n    },\n    {\n      \"matcher\": \"toHaveLength\",\n      \"negated\": false,\n      \"actual\": \"[\\n  \\\"perceptual-feature/observed-elongated-form\\\"\\n]\",\n      \"expected\": \"1\",\n      \"passed\": true\n    },\n    {\n      \"matcher\": \"toHaveLength\",\n      \"negated\": false,\n      \"actual\": \"[\\n  \\\"perceptual-feature/observed-enclosure-form\\\"\\n]\",\n      \"expected\": \"1\",\n      \"passed\": true\n    },\n    {\n      \"matcher\": \"toHaveLength\",\n      \"negated\": false,\n      \"actual\": \"[\\n  \\\"perceptual-feature/observed-metallic-surface\\\"\\n]\",\n      \"expected\": \"1\",\n      \"passed\": true\n    },\n    {\n      \"matcher\": \"toHaveLength\",\n      \"negated\": false,\n      \"actual\": \"[\\n  \\\"perceptual-feature/observed-person-form\\\"\\n]\",\n      \"expected\": \"1\",\n      \"passed\": true\n    }\n  ],\n  \"failures\": []\n}",
+        "sha256": "78e438ab838aa9f8294b54cd658fe2bd2af7c7cd8729102f0df8a72e3c3b4f99"
+      }
+    },
+    {
+      "name": "carries the typed continuant-file identity into perceived role projection",
+      "assertions": 4,
+      "failures": [
+        {
+          "code": "INVALID_REFERENT",
+          "message": "perceptualReferentId must be a well-formed observer-relative continuant-file identity"
+        },
+        {
+          "code": "INVALID_REFERENT",
+          "message": "perceptualReferentId must be a well-formed observer-relative continuant-file identity"
+        }
+      ],
+      "evidence": {
+        "encoding": "negative-ledger-diagnostic-json/0.1",
+        "exact": "{\n  \"name\": \"carries the typed continuant-file identity into perceived role projection\",\n  \"assertions\": [\n    {\n      \"matcher\": \"toEqual\",\n      \"negated\": false,\n      \"actual\": \"{\\n  \\\"observerId\\\": \\\"character/mina\\\",\\n  \\\"observerTrackSequence\\\": {\\n    \\\"$bigint\\\": \\\"17\\\"\\n  }\\n}\",\n      \"expected\": \"{\\n  \\\"observerId\\\": \\\"character/mina\\\",\\n  \\\"observerTrackSequence\\\": {\\n    \\\"$bigint\\\": \\\"17\\\"\\n  }\\n}\",\n      \"passed\": true\n    },\n    {\n      \"matcher\": \"toEqual\",\n      \"negated\": false,\n      \"actual\": \"{\\n  \\\"kind\\\": \\\"exact\\\",\\n  \\\"eventRoleId\\\": \\\"event-role/companion\\\"\\n}\",\n      \"expected\": \"{\\n  \\\"kind\\\": \\\"exact\\\",\\n  \\\"eventRoleId\\\": \\\"event-role/companion\\\"\\n}\",\n      \"passed\": true\n    },\n    {\n      \"matcher\": \"toMatchObject\",\n      \"negated\": false,\n      \"actual\": \"{\\n  \\\"code\\\": \\\"INVALID_REFERENT\\\",\\n  \\\"message\\\": \\\"perceptualReferentId must be a well-formed observer-relative continuant-file identity\\\"\\n}\",\n      \"expected\": \"{\\n  \\\"code\\\": \\\"INVALID_REFERENT\\\"\\n}\",\n      \"passed\": true\n    },\n    {\n      \"matcher\": \"toMatchObject\",\n      \"negated\": false,\n      \"actual\": \"{\\n  \\\"code\\\": \\\"INVALID_REFERENT\\\",\\n  \\\"message\\\": \\\"perceptualReferentId must be a well-formed observer-relative continuant-file identity\\\"\\n}\",\n      \"expected\": \"{\\n  \\\"code\\\": \\\"INVALID_REFERENT\\\"\\n}\",\n      \"passed\": true\n    }\n  ],\n  \"failures\": [\n    {\n      \"code\": \"INVALID_REFERENT\",\n      \"message\": \"perceptualReferentId must be a well-formed observer-relative continuant-file identity\"\n    },\n    {\n      \"code\": \"INVALID_REFERENT\",\n      \"message\": \"perceptualReferentId must be a well-formed observer-relative continuant-file identity\"\n    }\n  ]\n}",
+        "sha256": "3384b0274637d97a900b1d39e51c84a3fe346b6c1ecda2923b1a63d0f4601175"
+      }
+    },
+    {
+      "name": "keeps every occurrence namespace distinct under the accepted allocation",
+      "assertions": 2,
+      "failures": [],
+      "evidence": {
+        "encoding": "negative-ledger-diagnostic-json/0.1",
+        "exact": "{\n  \"name\": \"keeps every occurrence namespace distinct under the accepted allocation\",\n  \"assertions\": [\n    {\n      \"matcher\": \"toBe\",\n      \"negated\": false,\n      \"actual\": \"16\",\n      \"expected\": \"16\",\n      \"passed\": true\n    },\n    {\n      \"matcher\": \"toBe\",\n      \"negated\": false,\n      \"actual\": \"16\",\n      \"expected\": \"16\",\n      \"passed\": true\n    }\n  ],\n  \"failures\": []\n}",
+        "sha256": "1d3940787192267e4d9aedaa7f7d16edb8ea792e51f1983813ea993954e9496c"
+      }
+    }
+  ],
+  "scope": "Original six SEM-001J occurrence-identity regression cases: allocator reservation, malformed ordinal/support refusals, event-support numeric ordering across2/9/10, singleton continuant-rule limit, typed role projection and16 distinct namespaces. Event ordering is a discriminating emitted-evidence comparison. Continuant rules use one input each: their support ordering is unobservable here, not qualified by the singleton check. Namespace distinctness alone does not establish every payload domain. Exact assertion operands and caught errors retained; no full traces, native save/load, UI or full SEM qualification."
+}

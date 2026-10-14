@@ -1078,3 +1078,17 @@ snapshots and full report in workbench-sem-occurrence-rev1. Evidence restore/res
 PASS with all18 conditional obligations unchanged. No native persistence, full trace,
 UI or full SEM inference. Next worker/UI/browser parity and remaining phenomenon/
 acceptance joins; overall entry goal remains open.
+
+## Occurrence worker and browser parity (2026-10-13)
+
+Compare now exposes Occurrence identity and ordering: six original cases with24
+assertions and6 caught failures. The visible numeric2/9/10 versus string10/2/9
+distinction and unobservable singleton continuant-ordering limit remain explicit.
+Three focused tests PASS including all4 worker checkpoints and exact frozen-report
+parity. Browser prefix1 full15,408-character report and6 rows equal fresh native
+execution and foundation receipt; all6 active hashes unchanged. Screenshot inspected.
+Audit20074 COMPLETE exit0:10 frozen sources and3 captures in
+workbench-sem-occurrence-ui-rev1. Build45371 COMPLETE exit0,405 modules with existing
+chunk warning. Evidence restore/research PASS;18 conditional obligations unchanged.
+Prepared report is exposed; full download is not qualified. Next remaining phenomenon
+and acceptance joins. Full workbench/Campaign4 entry remains open.

@@ -3,7 +3,9 @@
 **Latest workbench2026-10-13:** Occurrence-identity foundation qualified in
 workbench-sem-occurrence-rev1:6 cases/24 assertions/6 caught failures. Numeric event
 support order2/9/10 distinct from string order; singleton continuant limit explicit.
-Eight tests/build PASS. Next occurrence worker/UI parity and remaining phenomenon/
+Eight foundation tests/build PASS. Worker/UI/browser parity now qualified in
+workbench-sem-occurrence-ui-rev1: all4 worker prefixes, browser prefix1 full15,408-
+character report and6 rows equal native evidence. Next remaining phenomenon/
 acceptance joins. Full workbench/Campaign4 entry remains open.
 
 **Latest workbench2026-10-13:** Semantic state-authority foundation qualified in

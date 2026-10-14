@@ -1,0 +1,60 @@
+{
+  "before": [
+    "10d25895b963d1ead80a93b3e7a78edb623acdfe583d909bdec9acd08958423f",
+    "e58e1e733cb83839da20e511ecc75694ddfcda0efc72e0473fcf7ac9d56a047a",
+    "dfffbded9de472db36551698b0bd4faa8aa610b7a40b6453ccc771decb49e0a9",
+    "2283e9df2c39718bc7adf7ade184b6d7dcd9c84233e43b8875b29a0e95ec4882",
+    "da28d480ca0e6854a08a4cf443e1a00d677459f109935b7c93f24af0d6300f9f",
+    "34a5ae7eedd66b2e05678cac2eb442e91f58e8b592e13b103e8e6a8165a12a43"
+  ],
+  "after": {
+    "hashes": [
+      "10d25895b963d1ead80a93b3e7a78edb623acdfe583d909bdec9acd08958423f",
+      "e58e1e733cb83839da20e511ecc75694ddfcda0efc72e0473fcf7ac9d56a047a",
+      "dfffbded9de472db36551698b0bd4faa8aa610b7a40b6453ccc771decb49e0a9",
+      "2283e9df2c39718bc7adf7ade184b6d7dcd9c84233e43b8875b29a0e95ec4882",
+      "da28d480ca0e6854a08a4cf443e1a00d677459f109935b7c93f24af0d6300f9f",
+      "34a5ae7eedd66b2e05678cac2eb442e91f58e8b592e13b103e8e6a8165a12a43"
+    ],
+    "paragraphs": [
+      "Inspect original allocation, malformed-identity, support-ordering and namespace witnesses in a separate fixture.",
+      "The active run is unchanged. Ordinals are identities, not psychological magnitudes.",
+      "The event-support witness distinguishes numeric order [2, 9, 10] from string order [10, 2, 9]. Continuant rules currently have one input each, so their support ordering is unobservable in these cases.",
+      "Original six SEM-001J occurrence-identity regression cases: allocator reservation, malformed ordinal/support refusals, event-support numeric ordering across2/9/10, singleton continuant-rule limit, typed role projection and16 distinct namespaces. Event ordering is a discriminating emitted-evidence comparison. Continuant rules use one input each: their support ordering is unobservable here, not qualified by the singleton check. Namespace distinctness alone does not establish every payload domain. Exact assertion operands and caught errors retained; no full traces, native save/load, UI or full SEM qualification."
+    ],
+    "reportLength": 15408,
+    "rows": [
+      [
+        "allocates ExperienceId from the run-scoped allocator without restringifying it",
+        "4",
+        "Positive or comparison assertions; no caught failure"
+      ],
+      [
+        "rejects malformed detection and observation occurrence ordinals",
+        "5",
+        "INVALID_TRACK_TRANSITION, INVALID_SUPPORTING_OBSERVATION, INVALID_SUPPORTING_OBSERVATION, INVALID_SUPPORTING_OBSERVATION"
+      ],
+      [
+        "orders supporting occurrence ordinals numerically inside emitted evidence",
+        "3",
+        "Positive or comparison assertions; no caught failure"
+      ],
+      [
+        "flags when continuant support ordering becomes observable",
+        "6",
+        "Positive or comparison assertions; no caught failure"
+      ],
+      [
+        "carries the typed continuant-file identity into perceived role projection",
+        "4",
+        "INVALID_REFERENT, INVALID_REFERENT"
+      ],
+      [
+        "keeps every occurrence namespace distinct under the accepted allocation",
+        "2",
+        "Positive or comparison assertions; no caught failure"
+      ]
+    ],
+    "status": "Prefix 1 · instant 1 · Ready"
+  }
+}
