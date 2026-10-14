@@ -1162,3 +1162,33 @@ and foundation parity in workbench-sem-acceptance-ui-rev1.
 Prepared export is exposed; full file download remains unqualified. Next reconcile
 remaining recognition/vector requirements and full SEM coverage, language and
 architecture participation. Full workbench/Campaign4 entry remains open.
+
+## Canonical recognition history integrity (2026-10-13)
+
+Review of CV-SEM-004/005/006 found the existing recognition panel preserves component
+diagnostic objects and the renderer comparison preserves JSON strings; neither alone
+proves unchanged canonical experience, evaluation and contemporaneous resolution bytes
+across the entire correction chain. Added a declared diagnostic experiment using the
+accepted Glen projection, observer-owned Mina/Darius catalog, native SEM-001F rule and
+preserved continuant/event-file state. Unresolved/Mina/Darius alternatives use exactly
+the same canonical experience. Five later steps assert Darius, receive no cue, maintain
+the same candidate, withdraw, then replace with Mina. Every earlier experience,
+evaluation and emitted resolution is re-encoded and compared after each later step.
+
+Types227/235/236 use native constructors; type233/234 diagnostic construction follows
+the frozen SEM-001I.2 field and union registry. No native state root, scheduler trace,
+law or save contract changed. Exact schema, result tags, no-update reasons, prior
+resolution fields, round trips, changed-time/result discrimination and invalid version/
+ordinal checks are tested. Correctness and confidence are not inferred from identities.
+This is a new experiment, not a claim that original tests performed these byte checks.
+
+Initial development selected hidden Actor role in Glen's perceived bindings and failed
+both new tests: Glen receives Participant. Failed source/diagnosis preserved under
+development/. Corrected to the original glen/actor fixture track selector, consuming
+its permitted binding, and carried file state/track mapping through later observations.
+Twelve tests PASS; focused strengthened checks PASS. Build87538 COMPLETE exit0 covered
+the initial source; corrected type check74307 COMPLETE exit0. No final UI build claim.
+Audit79380 COMPLETE exit0:12 source snapshots,21 canonical records/25 historical byte
+comparisons. Evidence restore/research PASS;18 conditional obligations unchanged.
+Next connect to the existing recognition panel and qualify worker/browser parity.
+Full SEM coverage, observer-language and architecture participation remain open.

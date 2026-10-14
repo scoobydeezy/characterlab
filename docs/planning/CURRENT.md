@@ -1,5 +1,14 @@
 # Current research entry point
 
+**Latest workbench2026-10-13:** Canonical recognition integrity experiment qualified
+in workbench-sem-recognition-integrity-rev1:3 same-experience alternatives,5 history
+steps,21 canonical records and25 historical byte comparisons. Uses accepted Glen
+projection/native recognition; detached type234 diagnostic construction, not a new
+native root or trace. Initial Actor-role lookup failed because Glen sees Participant;
+failed source retained, original track selector and file continuity restored.12 tests,
+corrected type check and research check PASS. Next connect these witnesses to the
+existing recognition panel and qualify worker/browser parity; full entry remains open.
+
 **Latest workbench2026-10-13:** Ten SEM acceptance checks, completeness and two
 original three-observer consumer/replay cases now execute with196 assertions and9
 coded emission refusals. Foundation workbench-sem-acceptance-rev1 qualified. Item6
