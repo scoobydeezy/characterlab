@@ -1131,3 +1131,34 @@ three captures in workbench-sem-phenomenon-ui-rev1. Build34895 COMPLETE exit0,
 conditional obligations unchanged. Prepared report is exposed; full file download
 remains unqualified. Next acceptance joins and full SEM coverage review; the overall
 workbench goal and Campaign4 entry gate remain open.
+
+## Acceptance checks and executed consumer replay (2026-10-13)
+
+All ten original sem001AcceptanceGate items plus its completeness case execute with
+explicit imports of the three formal documents and two referenced test sources.
+The original assertion bodies are retained; whole-repository raw discovery is replaced
+by those exact dependencies. Report dispositions distinguish ledger conditions,
+executable assertions and mere test-source references. No PASS row or source string
+is promoted into execution evidence. Original phenSem001Integration's two complete
+test bodies also execute: all three observers and immediate consumers, actual native
+save/load after observer two and continuation through the third, exact canonical save
+and trace bytes, output/counter/allocator checks, then shifted allocator origins with
+equal ordinal-free outputs. These are the item6 supplement, not the separate
+single-observer CV-SEM-097 recipe. Renderer output remains historical gate machinery.
+
+Thirteen original cases and two adapter/recorder tests PASS; an additional worker
+test preserves checkpoints and exact frozen reports at all4 prefixes. Recorder tests
+reject missing/wrong coded failures, undefined values, false predicates and mixed
+numeric domains. Foundation audit44788 COMPLETE exit0:19 sources,196 assertions,
+9 coded emission refusals in workbench-sem-acceptance-rev1. Initial build72595 and
+final connected UI build21406 COMPLETE exit0; final407 modules, existing chunk
+warning retained. Evidence restore/research PASS;18 conditional obligations unchanged.
+
+Architecture now exposes Acceptance evidence and consumer replay. Browser prefix1
+captured all1,044,816 report characters, ten disposition rows, eleven gate/completeness
+rows and two replay rows with all six active hashes unchanged. Both screenshots
+inspected. Audit4228 COMPLETE exit0:8 frozen sources/4 captures, exact browser/native
+and foundation parity in workbench-sem-acceptance-ui-rev1.
+Prepared export is exposed; full file download remains unqualified. Next reconcile
+remaining recognition/vector requirements and full SEM coverage, language and
+architecture participation. Full workbench/Campaign4 entry remains open.

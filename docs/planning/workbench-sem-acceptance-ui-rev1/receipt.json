@@ -1,0 +1,58 @@
+{
+  "status": "PASS ACCEPTANCE BROWSER/NATIVE PARITY",
+  "sources": [
+    {
+      "path": "src/workbench/SemWorkbench.tsx",
+      "sha256": "0ded62d6d9cd40f3d82ef277579a3b7c93e88654b45fa67a2d4f4caa67c89ee7"
+    },
+    {
+      "path": "src/workbench/SemAcceptancePanel.tsx",
+      "sha256": "e288aeda3e9037b77deee516c10cad71a2169f02b90fd44b9cce27c5bbaec6c6"
+    },
+    {
+      "path": "src/workbench/semAcceptanceControls.ts",
+      "sha256": "fa5fba1014c99673cc90487dbf8191344a0264c9b641b6d8cd36c1fc20d4235f"
+    },
+    {
+      "path": "src/workbench/semWorker.ts",
+      "sha256": "9853ac65b957930d57d8ef62fa7f52ea28ce750dd69a5f15862d564cbb7aa3b3"
+    },
+    {
+      "path": "src/workbench/semWorkerClient.ts",
+      "sha256": "03de29991f3b93bf0f3d0a62ddeec14dfc70ea693d8526409370ab39cbfdfc65"
+    },
+    {
+      "path": "src/test/workbenchSemAcceptanceWorker.test.ts",
+      "sha256": "28f5cd2586999f06e733b97b6bb7990dec77c1e6565aeabfcda113cdb0e2c921"
+    },
+    {
+      "path": "scripts/check-workbench-sem-acceptance-ui.mjs",
+      "sha256": "66d42b6c25ab580edc1eb311fd90af06ad27499e20c87c65c3038c72d48a1815"
+    },
+    {
+      "path": "docs/planning/workbench-sem-acceptance-rev1/receipt.json",
+      "sha256": "9bde8cb60ae3ed529eb9c7d3c1edf765bbff0ce945fdc1783c6bd45765002c9d"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "report.json",
+      "sha256": "40232ec35d9e64df1729319c864834661d3dba49a39c6005403cb1296443d102"
+    },
+    {
+      "path": "ui.json",
+      "sha256": "3a291fb4801029bbe29cb6ea7babaa8744737d34d06540e428d13e1447d49e84"
+    },
+    {
+      "path": "acceptance.png",
+      "sha256": "af850c273a8b4271894d034e00a346740c9324a729819ae01848d1445abb377f"
+    },
+    {
+      "path": "replay.png",
+      "sha256": "ea79ce08e50fc0aab4d841c30af389fb13fab0bc09379e7e2a2a4d668985bff8"
+    }
+  ],
+  "reportCharacters": 1044816,
+  "activePrefix": 1,
+  "scope": "Complete browser report, ten dispositions, eleven acceptance/completeness rows and two consumer-replay rows equal native execution and foundation. Six active hashes unchanged; worker checks cover all four prefixes. Screenshots inspected. Ledger and executable scopes distinguished. No full file download, full SEM, architecture participation or Campaign4 entry claim."
+}

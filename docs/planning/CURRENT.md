@@ -1,5 +1,15 @@
 # Current research entry point
 
+**Latest workbench2026-10-13:** Ten SEM acceptance checks, completeness and two
+original three-observer consumer/replay cases now execute with196 assertions and9
+coded emission refusals. Foundation workbench-sem-acceptance-rev1 qualified. Item6
+executes native save/load after observer two, third-observer continuation and shifted
+allocator origins; ledger/source references remain explicitly distinct from execution.
+Architecture panel exposes ten dispositions and both report groups. All4 worker
+prefixes unchanged; browser prefix1 full1,044,816-character report and10/11/2 rows
+match native execution in workbench-sem-acceptance-ui-rev1. Full SEM coverage review and integrated workbench
+qualification remain due; Campaign4 entry remains open.
+
 **Latest workbench2026-10-13:** Binding/causal phenomenon foundation qualified in
 workbench-sem-phenomenon-rev1:16 original cases/223 recorded assertions.18 tests/build
 PASS. Companion-to-Participant derivation, hidden/permitted changes and ancestry

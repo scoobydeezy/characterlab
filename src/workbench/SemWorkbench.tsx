@@ -22,6 +22,7 @@ import {SemIntegratedPanel} from './SemIntegratedPanel';
 import {SemAuthorityPanel} from './SemAuthorityPanel';
 import {SemOccurrencePanel} from './SemOccurrencePanel';
 import {SemPhenomenonPanel} from './SemPhenomenonPanel';
+import {SemAcceptancePanel} from './SemAcceptancePanel';
 import {SemPersistencePanel} from './SemPersistencePanel';
 import {SemCodecPanel} from './SemCodecPanel';
 import {SemSchemaPanel} from './SemSchemaPanel';
@@ -69,6 +70,7 @@ export function SemWorkbench({active=true}:{active?:boolean}){
  {mode==='Compare'&&<SemProvenancePanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
  {mode==='Architecture'&&<section className="card"><h2>Retained semantic state</h2><p>Native continuant and event-file roots are shown below. A read/write participation report is unavailable for this historical trace format; no missing instrumentation is treated as inactivity.</p><pre className="exact">{view?.researchState}</pre></section>}
  {mode==='Architecture'&&<SemAuthorityPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
+ {mode==='Architecture'&&<SemAcceptancePanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
  {text&&<><PreparedExport text={text} label="Prepared SEM export" filename="characterlab-sem.json"/><button onClick={()=>setText('')}>Close SEM export</button></>}
  <footer>{view&&(['modelHash','runHash','stateHash','saveHash','outputsHash','traceHash'] as const).map(k=><div className="hash" key={k}><span>{k}</span><code>{view[k]}</code></div>)}</footer></div></main>;
 }
