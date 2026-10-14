@@ -24,8 +24,8 @@ model/run identities must equal FREEZE.json. Each completed model is saved separ
 the final receipt is written only after all models and source hashes pass. This audit
 does not claim all-model restore, browser, batch, language or Campaign4 entry acceptance.
 
-Current process: command session68884, node PID35904 observed live. First13/43
-PASS:each12 prefixes/153 events. Final receipt remains absent. Do not restart based
+Current process: command session68884, node PID35904 observed live. First18/43
+PASS:each12 prefixes; recall-k0 has145 events, other first18 have153. Final receipt remains absent. Do not restart based
 on an observation timeout. Poll the same handle and preserve any failure evidence.
 Audited sources must remain unchanged until completion. Incremental audit artifacts
 remain uncommitted until completion; the tested seed-support change is committed separately.
@@ -66,3 +66,19 @@ reordered graph identities, missing cells and ambiguous slots. Build87945 COMPLE
 obligations unchanged. The first sandboxed test retry failed at Vite config access;
 the escalated focused run completed successfully. No all36 current execution, full-horizon
 causal account, browser comparison, language or Campaign4 entry qualification is claimed.
+
+## Controlled comparison browser connection
+
+GeneralComparisonPanel creates two independent workers with the original frozen seed
+and retained declaration. Steps advance each by one committed boundary and compare
+the resulting snapshots; unequal horizons and ambiguity remain visible. Creation,
+stepping and selection are serialized. Changing declaration clears the old report and
+requires creation before stepping a different pair. Errors dispose the pair and require
+recreation; component teardown disposes workers. The main graph run remains independent.
+
+workbench-general-comparison-ui-rev1 verifies browser first-pair prefixes0/1 against
+the qualified foundation reports, exact repeatability of both after recreation, stale
+report clearing/disabled step on declaration change, and unchanged main-run four hashes.
+Screenshot inspected. Build45716 COMPLETE exit0,412 modules with existing chunk warning;
+evidence restore/research PASS and18 conditional obligations unchanged. No all36 browser,
+full-horizon comparison, comparison replay/export, resource-bound or language claim.

@@ -1,0 +1,60 @@
+{
+  "status": "PASS BOUNDED GENERAL COMPARISON UI",
+  "sources": [
+    {
+      "path": "src/workbench/GeneralComparisonPanel.tsx",
+      "sha256": "251bb91f6eb973540dc791ab39d90fb96426e56202807b51e6aba6018e9d81be"
+    },
+    {
+      "path": "src/workbench/GeneralWorkbench.tsx",
+      "sha256": "9a256b39098896ff5ad584eca7702325a578a277de91a845fb7ac4739c53e607"
+    },
+    {
+      "path": "src/workbench/generalComparison.ts",
+      "sha256": "796cfa61585054964c4f9d30441dc3e54c8e01c0f1b6878349b143a4dbf07aaa"
+    },
+    {
+      "path": "src/workbench/generalComparisonCatalog.json",
+      "sha256": "39586f192eb0598cf0f43a0680da9cba7c083bcba600fa4580be77f8f724903f"
+    },
+    {
+      "path": "src/workbench/generalWorker.ts",
+      "sha256": "4a5aee250c887e04d821575eef6eb3074d313ec32bff845f09e97cbf65999c1a"
+    },
+    {
+      "path": "src/workbench/generalWorkerClient.ts",
+      "sha256": "818b383c255d4fbdaba96d5ab946b57424740cff951cb9e3a7d7378f0336ebf6"
+    },
+    {
+      "path": "src/workbench/generalAdapter.ts",
+      "sha256": "6f8db8436008012fd95787aa25a9a973a0c846c860b6bcb9ec3bb1c363637a28"
+    },
+    {
+      "path": "scripts/check-workbench-general-comparison-ui.mjs",
+      "sha256": "5d51e2d637fb1d05500d05c0c1ff88dc4d8bc6a32792e2fc4030ab40759a9acc"
+    },
+    {
+      "path": "docs/planning/workbench-general-comparison-rev1/receipt.json",
+      "sha256": "c87acabddc25358595a097a05f4baace9d5af6d257ffa4ea26d377397b4b8d85"
+    },
+    {
+      "path": "docs/planning/workbench-general-comparison-rev1/prefix-0.json",
+      "sha256": "f11b3e9549b6f87855d74f371488ea2de88f8e910139be759926c9fe88a1dce1"
+    },
+    {
+      "path": "docs/planning/workbench-general-comparison-rev1/prefix-1.json",
+      "sha256": "e010c14491a983a0d0e825652d0dab01790096af739d3600b5484b83707721c4"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "ui.json",
+      "sha256": "5bfb90f3660682636e5d62cb89f9ca0217bf2ee7e0d81ec5ca5c728e0d16f1c8"
+    },
+    {
+      "path": "comparison.png",
+      "sha256": "5863991df571d5c20a7250f6e3cbdc810226823a236465b2140fdd11ce05cb0e"
+    }
+  ],
+  "scope": "Browser-created frozen baseline/Independent1/1 pair prefixes0/1 exactly equal qualified detached reports. Recreating the pair repeats both reports. Selection clears stale records and prevents stepping an uncreated declaration. Main graph four hashes remain unchanged. Screenshot inspected. Only one pair/two prefixes; no all36 browser coverage, full-horizon comparison, comparison replay/export, language, resource limits or Campaign4 entry completion."
+}

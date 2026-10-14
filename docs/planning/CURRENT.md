@@ -1,19 +1,27 @@
 # Current research entry point
 
+**Comparison UI2026-10-13:** General attention now creates/steps separate controlled
+pairs. workbench-general-comparison-ui-rev1 proves first-pair prefixes0/1 equal the
+qualified reports, recreation repeats both, changed selection clears stale records and
+disables stepping, and the main graph four hashes stay unchanged. Build45716 COMPLETE,
+412 modules; research PASS,18 conditional obligations unchanged. All36 browser coverage,
+full-horizon comparisons, comparison replay/export and language remain open.
+
 **Comparison foundation2026-10-13:** workbench-general-comparison-rev1 joins36
 retained declarations/43 frozen model identities. Current baseline versus Independent1/1
 prefixes0/1 match completed native parity artifacts; detached comparison repeats exactly
 and leaves both checkpoints unchanged. Exact paths/concept IDs, missing versus zero,
 unequal horizons, draw rejection and ambiguous stage slots remain explicit. Three tests,
 build87945 and research check PASS. No all36 execution or comparison UI claim yet.
-Next connect controlled comparison to the general-attention UI, preserving audited sources.
+The UI connection is qualified separately above; preserve ongoing cohort audited sources.
 
 **Active workbench2026-10-13:** General attention exact32-byte seed support added;
 legacy numeric seed/checkpoint0.1 representation retained, hex checkpoint0.2 introduced.
 Ten focused adapter/export/worker tests and production build PASS.43-model frozen
 cohort parity audit RUNNING under command session68884 (node PID35904 at last check).
 Poll that handle; do not restart merely because output is quiet. Sources frozen in
-workbench-general-cohort-rev1; first13/43 PASS, each12 prefixes/153 events, no final
+workbench-general-cohort-rev1; first18/43 PASS, each12 prefixes (recall-k0 has145
+events; other first18 have153), no final
 receipt yet. Keep audited sources unchanged.
 Full memory/attention/browser/batch/language qualification remains open.
 
