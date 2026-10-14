@@ -19,24 +19,32 @@ export interface GeneralSnapshot {
   graph: AssociationProjection | null; graphPath: string | null;
   fields: {path: string; root: string; exact: string}[]; timeline: TimelineEvent[];
 }
-export interface GeneralCheckpoint {version: 'general-workbench/0.1'; recipe: string; seed: number; prefix: number; saveHex: string; saveHash: string;}
+export type GeneralSeed = number | string;
+export type GeneralCheckpoint = {recipe: string; prefix: number; saveHex: string; saveHash: string;} & ({version:'general-workbench/0.1';seed:number}|{version:'general-workbench/0.2';seed:string});
+export function generalSeedBytes(seed:GeneralSeed):Uint8Array {
+ if(typeof seed==='number'&&Number.isInteger(seed)&&seed>=0&&seed<=255)return new Uint8Array(32).fill(seed);
+ if(typeof seed==='string'&&/^[0-9a-f]{64}$/.test(seed))return fromHex(seed);
+ throw Error('General attention seed must be a byte number or64 lowercase hexadecimal digits');
+}
 export class GeneralWorkbenchRun {
-  #run: Run; #recipe: string; #seed: number; #modelHash: string; #prefix = 0; #busy = false; #snapshot!: GeneralSnapshot;
-  private constructor(run: Run, recipe: string, seed: number, modelHash: string) {this.#run = run; this.#recipe = recipe; this.#seed = seed; this.#modelHash = modelHash;}
-  static async create(recipe = 'baseline', seed = 0) {
-    if (!GENERAL_RECIPES.includes(recipe) || !Number.isInteger(seed) || seed < 0 || seed > 255) throw Error('Invalid frozen general-attention configuration');
+  #run: Run; #recipe: string; #seed: GeneralSeed; #modelHash: string; #prefix = 0; #busy = false; #snapshot!: GeneralSnapshot;
+  private constructor(run: Run, recipe: string, seed: GeneralSeed, modelHash: string) {this.#run = run; this.#recipe = recipe; this.#seed = seed; this.#modelHash = modelHash;}
+  static async create(recipe = 'baseline', seed:GeneralSeed = 0) {
+    if (!GENERAL_RECIPES.includes(recipe)) throw Error('Invalid frozen general-attention configuration');
+    const runSeed=generalSeedBytes(seed);
     const token = await prepareGeneralAttentionModel(generalAttentionModelSource(recipe));
-    const run = await createGeneralAttentionRun(token, {initialState: generalAttentionInitialState(token), orderedInputs: generalAttentionOrderedInputs(token), runSeed: new Uint8Array(32).fill(seed)});
+    const run = await createGeneralAttentionRun(token, {initialState: generalAttentionInitialState(token), orderedInputs: generalAttentionOrderedInputs(token), runSeed});
     const adapter = new GeneralWorkbenchRun(run, recipe, seed, await digest(generalAttentionModelIdentity(token))); await adapter.#refresh(); return adapter;
   }
   snapshot() {if (this.#busy) throw Error('General-attention run is advancing'); return structuredClone(this.#snapshot);}
   checkpoint(): GeneralCheckpoint {
     if (this.#busy) throw Error('General-attention run is advancing');
-    return {version: 'general-workbench/0.1', recipe: this.#recipe, seed: this.#seed, prefix: this.#prefix, saveHex: bytesToHex(this.#run.save()), saveHash: this.#snapshot.saveHash};
+    const tail={prefix:this.#prefix,saveHex:bytesToHex(this.#run.save()),saveHash:this.#snapshot.saveHash};
+    return typeof this.#seed==='number'?{version:'general-workbench/0.1',recipe:this.#recipe,seed:this.#seed,...tail}:{version:'general-workbench/0.2',recipe:this.#recipe,seed:this.#seed,...tail};
   }
   static async restore(input: GeneralCheckpoint) {
     const c = structuredClone(input);
-    if (c.version !== 'general-workbench/0.1' || !Number.isInteger(c.prefix) || c.prefix < 0 || c.prefix > 100 || typeof c.saveHex !== 'string' || c.saveHex.length > 32_000_000) throw Error('Invalid bounded general-attention checkpoint');
+    if (!c || !((c.version==='general-workbench/0.1'&&typeof c.seed==='number')||(c.version==='general-workbench/0.2'&&typeof c.seed==='string')) || !Number.isInteger(c.prefix) || c.prefix < 0 || c.prefix > 100 || typeof c.saveHex !== 'string' || c.saveHex.length > 32_000_000) throw Error('Invalid bounded general-attention checkpoint');
     const expected = await GeneralWorkbenchRun.create(c.recipe, c.seed), save = fromHex(c.saveHex);
     if (await digest(save) !== c.saveHash) throw Error('Checkpoint digest mismatch');
     for (let i = 0; i < c.prefix; i++) if (!await expected.advance()) throw Error('Checkpoint prefix exceeds original horizon');

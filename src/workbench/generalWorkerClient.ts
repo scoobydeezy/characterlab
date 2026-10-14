@@ -1,4 +1,4 @@
-import type {GeneralSnapshot, GeneralCheckpoint} from './generalAdapter';
+import type {GeneralSnapshot, GeneralCheckpoint, GeneralSeed} from './generalAdapter';
 import type {GeneralExport} from './generalExport';
 import freeze from '../../docs/planning/campaign3-general-attention-model-rev2/FREEZE.json';
 export const GENERAL_RECIPES = freeze.models.map(m => m.name);
@@ -18,7 +18,7 @@ export class GeneralWorkerClient {
     try {const id = ++this.#next; return await new Promise<T>((resolve, reject) => {this.#pending.set(id, {resolve: value => resolve(value as T), reject}); this.#worker.postMessage({id, operation, ...data});});}
     finally {this.#busy = false;}
   }
-  static async create(recipe = 'baseline') {const client = new GeneralWorkerClient(); try {client.#snapshot = await client.#call('create', {recipe}); return client;} catch (e) {client.dispose(); throw e;}}
+  static async create(recipe = 'baseline',seed?:GeneralSeed) {const client = new GeneralWorkerClient(); try {client.#snapshot = await client.#call('create', seed===undefined?{recipe}:{recipe,seed}); return client;} catch (e) {client.dispose(); throw e;}}
   static async restore(checkpoint: GeneralCheckpoint) {const client = new GeneralWorkerClient(); try {client.#snapshot = await client.#call('restore', {checkpoint}); return client;} catch (e) {client.dispose(); throw e;}}
   static async import(text: string) {const client = new GeneralWorkerClient(); try {client.#snapshot = await client.#call('import', {text}); return client;} catch (e) {client.dispose(); throw e;}}
   export() {return this.#call<GeneralExport>('export');}

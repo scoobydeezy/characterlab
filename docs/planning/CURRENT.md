@@ -1,5 +1,14 @@
 # Current research entry point
 
+**Active workbench2026-10-13:** General attention exact32-byte seed support added;
+legacy numeric seed/checkpoint0.1 representation retained, hex checkpoint0.2 introduced.
+Ten focused adapter/export/worker tests and production build PASS.43-model frozen
+cohort parity audit RUNNING under command session68884 (node PID35904 at last check).
+Poll that handle; do not restart merely because output is quiet. Sources frozen in
+workbench-general-cohort-rev1; baseline1/43 PASS12 prefixes/153 events, no final
+receipt yet. Keep audited sources unchanged.
+Full memory/attention/browser/batch/language qualification remains open.
+
 **Latest workbench2026-10-13:** SEM bounded inspection inventory reconciled in
 workbench-sem-coverage-rev3:100/100 vector pointers,31 individually joined negative
 witnesses,10 acceptance dispositions. Current native25 files/222 tests and26 worker

@@ -1,0 +1,22 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import{createHash}from'node:crypto';import{createServer}from'vite';
+const root='docs/planning/workbench-general-cohort-rev1',sha=b=>createHash('sha256').update(b).digest('hex'),freezePath='docs/planning/campaign3-general-attention-model-rev2/FREEZE.json',freeze=JSON.parse(fs.readFileSync(freezePath));assert(!fs.existsSync(root));fs.mkdirSync(root,{recursive:true});
+const paths=['src/workbench/generalAdapter.ts','src/workbench/generalWorker.ts','src/workbench/generalWorkerClient.ts','src/workbench/generalExport.ts','src/workbench/associationProjection.ts','src/workbench/nativeTimeline.ts','src/campaign3/generalFactory.ts','src/test/workbenchGeneralSeed.test.ts',freezePath,'scripts/check-workbench-general-cohort.mjs'],sources=paths.map(path=>({path,sha256:sha(fs.readFileSync(path))}));
+for(const s of sources){const target=root+'/sources/'+s.path;fs.mkdirSync(target.slice(0,target.lastIndexOf('/')),{recursive:true});fs.writeFileSync(target,fs.readFileSync(s.path),{flag:'wx'});}
+const server=await createServer({configFile:false,server:{middlewareMode:true,hmr:false},appType:'custom'});
+try{
+ const {GeneralWorkbenchRun,GENERAL_RECIPES}=await server.ssrLoadModule('/src/workbench/generalAdapter.ts'),factory=await server.ssrLoadModule('/src/campaign3/generalFactory.ts');assert.deepEqual(GENERAL_RECIPES,freeze.models.map(m=>m.name));const results=[];
+ for(const [index,entry]of freeze.models.entries()){
+  const adapter=await GeneralWorkbenchRun.create(entry.name,freeze.seed),token=await factory.prepareGeneralAttentionModel(factory.generalAttentionModelSource(entry.name));
+  const native=await factory.createGeneralAttentionRun(token,{initialState:factory.generalAttentionInitialState(token),orderedInputs:factory.generalAttentionOrderedInputs(token),runSeed:Uint8Array.from(Buffer.from(freeze.seed,'hex'))});
+  assert.equal(Buffer.from(native.runIdentity()).toString('hex'),entry.runIdentity);assert.equal(Buffer.from(factory.generalAttentionModelIdentity(token)).toString('hex'),entry.modelIdentity);
+  const prefixes=[];let terminal=false;
+  while(prefixes.length<=100){const s=adapter.snapshot(),c=adapter.checkpoint(),n=native.snapshot();assert.equal(c.version,'general-workbench/0.2');assert.equal(c.seed,freeze.seed);assert.equal(c.saveHex,Buffer.from(native.save()).toString('hex'));assert.equal(s.stateHash,sha(n.state));assert.equal(s.runHash,sha(native.runIdentity()));assert.equal(s.modelHash,sha(factory.generalAttentionModelIdentity(token)));
+   prefixes.push({prefix:s.prefix,clock:s.clock,saveHash:s.saveHash,stateHash:s.stateHash,runHash:s.runHash,modelHash:s.modelHash,traceHash:sha(n.trace),outputsHash:sha(n.outputs),events:s.timeline.length,nodes:s.graph?.nodes.length??0});
+   const a=await adapter.advance(),b=await native.settleNextInstant();assert.equal(a,b);if(!a){terminal=true;break;}
+  }
+  assert(terminal,'bounded horizon exhausted');assert(adapter.snapshot().complete);const result={recipe:entry.name,seed:freeze.seed,prefixes,events:adapter.snapshot().timeline.length};results.push(result);fs.writeFileSync(`${root}/model-${String(index).padStart(2,'0')}.json`,JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(`PASS ${index+1}/43 ${entry.name}: ${prefixes.length} prefixes, ${result.events} events`);
+ }
+ for(const s of sources)assert.equal(sha(fs.readFileSync(s.path)),s.sha256);
+ const artifacts=results.map((r,i)=>{const path=`model-${String(i).padStart(2,'0')}.json`;return{path,sha256:sha(fs.readFileSync(root+'/'+path)),recipe:r.recipe,prefixes:r.prefixes.length,events:r.events};});
+ fs.writeFileSync(root+'/receipt.json',JSON.stringify({status:'PASS FROZEN GA COHORT NATIVE INSTRUMENT PARITY',sources,artifacts,counts:{models:results.length,prefixes:results.reduce((n,r)=>n+r.prefixes.length,0),events:results.reduce((n,r)=>n+r.events,0)},seed:freeze.seed,scope:'Exact original model/run identities and original calendar at frozen seed. Every quiescent prefix save equals direct native execution, with state/output/trace hashes retained. Baseline exact-seed restore/export continuation separately tested; not all-model restore qualification. No browser, full memory/attention language, comparison, batch or Campaign4 entry acceptance. Legacy seed0 qualification remains separate; no Campaign3 semantics or obligations changed.'},null,2)+'\n',{flag:'wx'});console.log('PASS complete GA cohort');
+}finally{await server.close();}
