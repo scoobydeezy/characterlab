@@ -1,0 +1,18 @@
+import catalog from './generalComparisonCatalog.json';
+import type {GeneralSnapshot} from './generalAdapter';
+import {associationCellDifference} from './associationProjection';
+export const GENERAL_COMPARISONS=catalog.comparisons;
+export function compareGeneralSnapshots(id:string,control:GeneralSnapshot,candidate:GeneralSnapshot){
+ const spec=catalog.comparisons.find(c=>c.id===id);if(!spec)throw Error('Unknown declared General Attention comparison');
+ for(const [side,recipe]of [[control,spec.control],[candidate,spec.candidate]] as const){const expected=catalog.models.find(m=>m.recipe===recipe);if(!expected||side.recipe!==recipe||side.modelHash!==expected.modelHash||side.runHash!==expected.runHash)throw Error('Comparison requires original frozen recipe/model/run identity and exact cohort seed');}
+ const base={version:'general-comparison/0.1',spec,source:catalog.source,seed:catalog.seed,control:{recipe:control.recipe,prefix:control.prefix,clock:control.clock,saveHash:control.saveHash},candidate:{recipe:candidate.recipe,prefix:candidate.prefix,clock:candidate.clock,saveHash:candidate.saveHash},identity:{modelEqual:control.modelHash===candidate.modelHash,runEqual:control.runHash===candidate.runHash,stateEqual:control.stateHash===candidate.stateHash,saveEqual:control.saveHash===candidate.saveHash}};
+ if(control.clock!==candidate.clock)return {...base,status:'UNALIGNED_HORIZONS' as const,scope:'Different committed instants. No value or event alignment was performed.'};
+ const hasDraws=(s:GeneralSnapshot)=>s.timeline.some(e=>{const draws:unknown=JSON.parse(e.draws);return !Array.isArray(draws)||draws.length!==0;});
+ if(hasDraws(control)||hasDraws(candidate))return {...base,status:'UNQUALIFIED_RNG_CORRESPONDENCE' as const,scope:'This profile only compares observed draw-free prefixes. Shared seed is not an address-coupling proof.'};
+ const paths=[...new Set([...control.fields,...candidate.fields].map(f=>f.path))].sort();
+ const fields=paths.map(path=>{const a=control.fields.find(f=>f.path===path),b=candidate.fields.find(f=>f.path===path);return {path,before:a?.exact??null,after:b?.exact??null,changed:a?.exact!==b?.exact};});
+ const graph=control.graph&&candidate.graph?{status:'IDENTITY_ALIGNED' as const,cells:[...new Set([...control.graph.nodes,...candidate.graph.nodes].map(n=>n.id))].sort().flatMap(row=>[...new Set([...control.graph!.nodes,...candidate.graph!.nodes].map(n=>n.id))].sort().map(column=>({row,column,...associationCellDifference(control.graph!,candidate.graph!,row,column)})))}:{status:'GRAPH_UNAVAILABLE' as const,controlPresent:!!control.graph,candidatePresent:!!candidate.graph};
+ const keys=[...new Set([...control.timeline,...candidate.timeline].map(e=>JSON.stringify([e.instant,e.phase,e.stage])))].sort();
+ const events=keys.map(key=>{const select=(s:GeneralSnapshot)=>s.timeline.filter(e=>JSON.stringify([e.instant,e.phase,e.stage])===key),a=select(control),b=select(candidate);return {key,controlIds:a.map(e=>e.id),candidateIds:b.map(e=>e.id),status:a.length===1&&b.length===1?'UNIQUE_STAGE_SLOT':a.length===0||b.length===0?'MISSING_SIDE':'AMBIGUOUS_STAGE_SLOT',outputsEqual:a.length===1&&b.length===1?a[0].output===b[0].output:null};});
+ return {...base,status:'ALIGNED_COMMITTED_INSTANT' as const,fields,graph,events,scope:'Exact paths and association concept identities align at a shared committed instant. Unique stage slots compare raw diagnostic output; missing/repeated slots stay explicit and occurrence IDs are never used as cross-run matches. Raw state/output difference is not a causal-effect or psychological-necessity finding. Draw-free status is checked on both captured prefixes. No full-horizon, language or Campaign4 acceptance claim.'};
+}

@@ -24,7 +24,7 @@ model/run identities must equal FREEZE.json. Each completed model is saved separ
 the final receipt is written only after all models and source hashes pass. This audit
 does not claim all-model restore, browser, batch, language or Campaign4 entry acceptance.
 
-Current process: command session68884, node PID35904 observed live. First5/43
+Current process: command session68884, node PID35904 observed live. First13/43
 PASS:each12 prefixes/153 events. Final receipt remains absent. Do not restart based
 on an observation timeout. Poll the same handle and preserve any failure evidence.
 Audited sources must remain unchanged until completion. Incremental audit artifacts
@@ -44,3 +44,25 @@ uses completed model-00 from the still-running cohort audit, not a final cohort 
 Build36984 COMPLETE exit0,408 modules with existing chunk warning. Evidence restore
 and research PASS;18 conditional obligations unchanged. No full43-model browser,
 file download/import or all-model continuation claim.
+
+## Controlled comparison foundation
+
+workbench-general-comparison-rev1 preserves36 historical comparison declarations and
+43 original model/run identities. The generated catalog verifies original comparison
+digests and freeze identity. Current comparison requires the declared pair and frozen
+model/run hashes; differing committed instants remain unaligned. Observed draws reject
+this draw-free comparison profile rather than assuming that shared seed proves coupling.
+
+State paths and graph concept IDs align exactly; missing cells remain distinct from zero.
+Events align only by unique instant/phase/stage slots; repeated and missing slots stay
+explicit. Occurrence IDs are diagnostics, never cross-run correspondence. Raw differences
+do not establish causal effects or psychological necessity.
+
+One actual pair (baseline versus Independent1/1), prefixes0/1, matches completed native
+per-model audit artifacts. Repeating each comparison is deterministic and leaves both
+checkpoints unchanged. Three focused tests PASS, including identity/horizon/RNG guards,
+reordered graph identities, missing cells and ambiguous slots. Build87945 COMPLETE exit0,
+408 modules, existing chunk warning. Evidence restore and research PASS,18 conditional
+obligations unchanged. The first sandboxed test retry failed at Vite config access;
+the escalated focused run completed successfully. No all36 current execution, full-horizon
+causal account, browser comparison, language or Campaign4 entry qualification is claimed.

@@ -1,0 +1,78 @@
+{
+  "status": "PASS BOUNDED GENERAL COMPARISON FOUNDATION",
+  "sources": [
+    {
+      "path": "src/workbench/generalComparison.ts",
+      "sha256": "796cfa61585054964c4f9d30441dc3e54c8e01c0f1b6878349b143a4dbf07aaa"
+    },
+    {
+      "path": "src/workbench/generalComparisonCatalog.json",
+      "sha256": "39586f192eb0598cf0f43a0680da9cba7c083bcba600fa4580be77f8f724903f"
+    },
+    {
+      "path": "src/workbench/generalAdapter.ts",
+      "sha256": "6f8db8436008012fd95787aa25a9a973a0c846c860b6bcb9ec3bb1c363637a28"
+    },
+    {
+      "path": "src/workbench/associationProjection.ts",
+      "sha256": "07fcd4b576a0476beefb8d995bd53a2ff7ead47a0fe3bde92ecf459fa3eb8d2f"
+    },
+    {
+      "path": "src/workbench/nativeTimeline.ts",
+      "sha256": "ceed75f534e8158a2172ac962cab89aa9ffa5fcbaaf71e0d62347fd01a9c6775"
+    },
+    {
+      "path": "src/test/workbenchGeneralComparison.test.ts",
+      "sha256": "370dd3239968b271f781a8812177842a1e7896ccd28c015e8e5264e5b7b3333a"
+    },
+    {
+      "path": "scripts/build-workbench-general-comparisons.mjs",
+      "sha256": "adf832f9d614c638f9d062a486e3d11eb76f3282c3983de6ce15d7e718cc9f14"
+    },
+    {
+      "path": "scripts/check-workbench-general-comparison.mjs",
+      "sha256": "e955769cb2914e9a5c65208f81d61f0d41eeb04fd303dfa522f6f3d53e996d17"
+    },
+    {
+      "path": "docs/planning/general-attention-public-comparisons-rev1/RESULTS.json",
+      "sha256": "f26e1f0b738e0fc1bd27afc3c852f2a24e9df92fbdbb7521b24b0b707dfb8da2"
+    },
+    {
+      "path": "docs/planning/campaign3-general-attention-model-rev2/FREEZE.json",
+      "sha256": "27ba4b12edda9c284ef03bf4dd52744f395639429f16077dcf6a0f28c05ef8c4"
+    },
+    {
+      "path": "docs/planning/workbench-general-cohort-rev1/model-00.json",
+      "sha256": "c25f178d9402b26aba41a28463120601ab4455cfeda3e2c6aca97f7e067f558e"
+    },
+    {
+      "path": "docs/planning/workbench-general-cohort-rev1/model-01.json",
+      "sha256": "f3890b79201e39b31878b6d3edb82a5cbdc8eb35e4881db1cd5d3bd33d848e0d"
+    }
+  ],
+  "captures": [
+    {
+      "path": "prefix-0.json",
+      "sha256": "f11b3e9549b6f87855d74f371488ea2de88f8e910139be759926c9fe88a1dce1",
+      "prefix": 0,
+      "fields": 13,
+      "eventSlots": 0,
+      "graphCells": 0
+    },
+    {
+      "path": "prefix-1.json",
+      "sha256": "e010c14491a983a0d0e825652d0dab01790096af739d3600b5484b83707721c4",
+      "prefix": 1,
+      "fields": 14,
+      "eventSlots": 9,
+      "graphCells": 0
+    }
+  ],
+  "counts": {
+    "retainedDeclarations": 36,
+    "frozenModelIdentities": 43,
+    "executedPairs": 1,
+    "comparedPrefixes": 2
+  },
+  "scope": "Historical declaration/identity join and baseline versus Independent1/1 prefixes0/1 only. Each current snapshot matches its completed per-model native parity artifact; the enclosing43-model audit is still in progress. Repeated detached comparisons are identical and leave both checkpoints unchanged. Guard tests cover unequal horizons, wrong run identity, draw rejection, missing cells, identity ordering and ambiguous/missing event slots. No all36 current execution, full-horizon causal finding, browser comparison, language, RNG address coupling or Campaign4 entry acceptance."
+}

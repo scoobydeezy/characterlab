@@ -1,11 +1,19 @@
 # Current research entry point
 
+**Comparison foundation2026-10-13:** workbench-general-comparison-rev1 joins36
+retained declarations/43 frozen model identities. Current baseline versus Independent1/1
+prefixes0/1 match completed native parity artifacts; detached comparison repeats exactly
+and leaves both checkpoints unchanged. Exact paths/concept IDs, missing versus zero,
+unequal horizons, draw rejection and ambiguous stage slots remain explicit. Three tests,
+build87945 and research check PASS. No all36 execution or comparison UI claim yet.
+Next connect controlled comparison to the general-attention UI, preserving audited sources.
+
 **Active workbench2026-10-13:** General attention exact32-byte seed support added;
 legacy numeric seed/checkpoint0.1 representation retained, hex checkpoint0.2 introduced.
 Ten focused adapter/export/worker tests and production build PASS.43-model frozen
 cohort parity audit RUNNING under command session68884 (node PID35904 at last check).
 Poll that handle; do not restart merely because output is quiet. Sources frozen in
-workbench-general-cohort-rev1; first5/43 PASS, each12 prefixes/153 events, no final
+workbench-general-cohort-rev1; first13/43 PASS, each12 prefixes/153 events, no final
 receipt yet. Keep audited sources unchanged.
 Full memory/attention/browser/batch/language qualification remains open.
 
