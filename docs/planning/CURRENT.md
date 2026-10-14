@@ -6,8 +6,11 @@ steps,21 canonical records and25 historical byte comparisons. Uses accepted Glen
 projection/native recognition; detached type234 diagnostic construction, not a new
 native root or trace. Initial Actor-role lookup failed because Glen sees Participant;
 failed source retained, original track selector and file continuity restored.12 tests,
-corrected type check and research check PASS. Next connect these witnesses to the
-existing recognition panel and qualify worker/browser parity; full entry remains open.
+corrected type check and research check PASS. Connected within the existing recognition
+panel:3 alternatives/5 lifecycle rows; both original/new worker reports preserve all4
+prefixes. Browser prefix1 full231,496-character report and tables match native
+execution in workbench-sem-recognition-integrity-ui-rev1; six active hashes unchanged.
+Next full SEM evidence reconciliation and remaining corpus/entry qualification.
 
 **Latest workbench2026-10-13:** Ten SEM acceptance checks, completeness and two
 original three-observer consumer/replay cases now execute with196 assertions and9

@@ -2,6 +2,7 @@ import type {SemInspectionSnapshot as SemSnapshot} from './semInspection';
 import type {verifySemReplay} from './semReplay';
 import type {runSemControlSuite} from './semControlSuite';
 import type {runSemRecognitionControls} from './semRecognitionControls';
+import type {runSemRecognitionIntegrity} from './semRecognitionIntegrity';
 import type {runSemKnowledgeControls} from './semKnowledgeControls';
 import type {runSemMeasurementControls} from './semMeasurementControls';
 import type {runSemClassificationControls} from './semClassificationControls';
@@ -49,6 +50,7 @@ export class SemWorkerClient {
   controls() {return this.#call<Awaited<ReturnType<typeof runSemControlSuite>>>('controls');}
   recognition() {return this.#call<Awaited<ReturnType<typeof runSemRecognitionControls>>>('recognition');}
   checkpoint() {return this.#call<SemCheckpoint>('checkpoint');}
+  recognitionIntegrity() {return this.#call<Awaited<ReturnType<typeof runSemRecognitionIntegrity>>>('recognitionIntegrity');}
   acceptance() {return this.#call<Awaited<ReturnType<typeof runSemAcceptanceControls>>>('acceptance');}
   phenomenon() {return this.#call<Awaited<ReturnType<typeof runSemPhenomenonControls>>>('phenomenon');}
   occurrence() {return this.#call<Awaited<ReturnType<typeof runSemOccurrenceControls>>>('occurrence');}

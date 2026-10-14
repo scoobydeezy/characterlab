@@ -3,6 +3,7 @@ import {SemWorkbenchRun,type SemCheckpoint} from './semAdapter';
 import {verifySemReplay} from './semReplay';
 import {runSemControlSuite} from './semControlSuite';
 import {runSemRecognitionControls} from './semRecognitionControls';
+import {runSemRecognitionIntegrity} from './semRecognitionIntegrity';
 import {runSemKnowledgeControls} from './semKnowledgeControls';
 import {runSemMeasurementControls} from './semMeasurementControls';
 import {runSemClassificationControls} from './semClassificationControls';
@@ -36,6 +37,7 @@ self.addEventListener('message',async(event:MessageEvent<{id:number;operation:st
  else if(q.operation==='controls'){const before=JSON.stringify(run.checkpoint());result=await runSemControlSuite();if(JSON.stringify(run.checkpoint())!==before)throw Error('SEM component controls changed active run');}
  else if(q.operation==='recognition'){const before=JSON.stringify(run.checkpoint());result=await runSemRecognitionControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Recognition controls changed active run');}
  else if(q.operation==='checkpoint')result=run.checkpoint();
+ else if(q.operation==='recognitionIntegrity'){const before=JSON.stringify(run.checkpoint());result=await runSemRecognitionIntegrity();if(JSON.stringify(run.checkpoint())!==before)throw Error('Recognition integrity changed active run');}
  else if(q.operation==='acceptance'){const before=JSON.stringify(run.checkpoint());result=await runSemAcceptanceControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Acceptance controls changed active run');}
  else if(q.operation==='phenomenon'){const before=JSON.stringify(run.checkpoint());result=await runSemPhenomenonControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Phenomenon controls changed active run');}
  else if(q.operation==='occurrence'){const before=JSON.stringify(run.checkpoint());result=await runSemOccurrenceControls();if(JSON.stringify(run.checkpoint())!==before)throw Error('Occurrence controls changed active run');}

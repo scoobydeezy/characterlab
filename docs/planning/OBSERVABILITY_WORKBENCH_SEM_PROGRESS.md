@@ -1192,3 +1192,19 @@ Audit79380 COMPLETE exit0:12 source snapshots,21 canonical records/25 historical
 comparisons. Evidence restore/research PASS;18 conditional obligations unchanged.
 Next connect to the existing recognition panel and qualify worker/browser parity.
 Full SEM coverage, observer-language and architecture participation remain open.
+
+## Canonical recognition integrity UI (2026-10-13)
+
+Existing recognition panel now includes Canonical recognition history. Three
+alternatives show equal baseline experience bytes, and five lifecycle rows expose
+0/3/5/7/10 prior-record byte comparisons. The first row explicitly has no earlier
+records. Detached diagnostics and absence of native persistence/trace claims remain
+visible in the complete report. Original recognition report/controls remain intact.
+Two worker tests PASS: exact original and integrity reports at all4 prefixes with
+unchanged checkpoints. Build57970 COMPLETE exit0,408 modules with existing chunk
+warning. Browser prefix1 full231,496-character report and both tables captured;
+six active hashes unchanged. Screenshot inspected. Audit82184 COMPLETE exit0:
+8 frozen sources/3 captures, exact native/browser and foundation report parity in
+workbench-sem-recognition-integrity-ui-rev1. Evidence restore/research PASS;18
+conditional obligations unchanged. Full file download remains unqualified. Next
+full SEM evidence reconciliation and remaining corpus/entry qualification.
