@@ -1,5 +1,16 @@
 # Current research entry point
 
+**Latest workbench2026-10-13:** SEM bounded inspection inventory reconciled in
+workbench-sem-coverage-rev3:100/100 vector pointers,31 individually joined negative
+witnesses,10 acceptance dispositions. Current native25 files/222 tests and26 worker
+tests PASS. Pointer coverage is not full-vector or entry completion; finite recipe,
+language, ownership-versus-participation and persistence limits retained.
+Next missing PHEN-MEM-001/full ATTN coverage uses the43-model General Attention
+cohort/generalFactory, not Campaign2 measurement-memory alone. Existing generalAdapter
+qualifies only2 recipes/24 prefixes at seed0; frozen cohort uses the exact32-byte
+010203...1f20 seed. Preserve both identities and expand exact seed support before
+claiming frozen-cohort parity. BIO/BODY/LONG and integrated entry remain due.
+
 **Latest workbench2026-10-13:** Canonical recognition integrity experiment qualified
 in workbench-sem-recognition-integrity-rev1:3 same-experience alternatives,5 history
 steps,21 canonical records and25 historical byte comparisons. Uses accepted Glen

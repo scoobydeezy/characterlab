@@ -1208,3 +1208,32 @@ six active hashes unchanged. Screenshot inspected. Audit82184 COMPLETE exit0:
 workbench-sem-recognition-integrity-ui-rev1. Evidence restore/research PASS;18
 conditional obligations unchanged. Full file download remains unqualified. Next
 full SEM evidence reconciliation and remaining corpus/entry qualification.
+
+## Current bounded inspection reconciliation (2026-10-13)
+
+Coverage rev3 joins eight subsequent UI receipts: phenomenon, renderer, recognition
+integrity, integrated chains/shortcuts, occurrence, authority, acceptance and negative
+ledger. All100 vectors now have dedicated bounded inspection pointers. Each of31
+negative names joins its exact original witness/evidence hash, with caught refusals
+separate from structural/comparison witnesses. All ten acceptance items retain their
+proof-kind disposition; actual three-observer consumer replay supplements item6.
+Frozen sources and browser inputs are rehashed; formal requirement lines remain exact.
+
+Audit56894 COMPLETE exit0: current native25 files/222 tests and26 worker files/tests
+PASS. All existing SEM worker controls recheck their qualified reports against the
+current worker. No build rerun for this inventory-only change. Evidence restore and
+research checks PASS; all18 conditional obligations unchanged. No vector is labelled
+fully complete merely from these joins. The inventory explicitly retains the limits
+on JSON versus canonical bytes, diagnostic evaluation versus native roots, structural
+restore versus persistence, invoked consumers versus general psychological effects,
+and declared phases/owners versus actual runtime participation.
+
+Next implementation returns to missing required corpus coverage. PHEN-MEM-001's
+retained recency/reinforcement/decay/K/tie scope belongs to the43-model General
+Attention qualification (GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md and
+GA_CORPUS_FIXTURE_1_0_0.md). Campaign2 measurement-memory is separate evidence.
+The existing GeneralWorkbenchRun already lists43 recipes but only two seed0 programs
+have instrument parity. The frozen cohort's seed is exact bytes01..20; the adapter's
+current repeated-byte seed cannot reproduce that identity. Expand seed support and
+qualify the full cohort, preserving previous seed0 evidence and negative controls.
+SEM language/participation/full browser acceptance, BIO/BODY/LONG and entry remain due.
