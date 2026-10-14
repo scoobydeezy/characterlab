@@ -1,5 +1,10 @@
 # Current research entry point
 
+**Latest workbench2026-10-13:** Binding/causal phenomenon foundation qualified in
+workbench-sem-phenomenon-rev1:16 original cases/223 recorded assertions.18 tests/build
+PASS. Companion-to-Participant derivation, hidden/permitted changes and ancestry
+separation retained with original limits. Next worker/UI parity and acceptance joins.
+
 **Latest workbench2026-10-13:** Occurrence-identity foundation qualified in
 workbench-sem-occurrence-rev1:6 cases/24 assertions/6 caught failures. Numeric event
 support order2/9/10 distinct from string order; singleton continuant limit explicit.

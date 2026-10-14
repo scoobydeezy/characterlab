@@ -1092,3 +1092,26 @@ workbench-sem-occurrence-ui-rev1. Build45371 COMPLETE exit0,405 modules with exi
 chunk warning. Evidence restore/research PASS;18 conditional obligations unchanged.
 Prepared report is exposed; full download is not qualified. Next remaining phenomenon
 and acceptance joins. Full workbench/Campaign4 entry remains open.
+
+## Complete original binding and causal witnesses (2026-10-13)
+
+Ten original binding and six causal/ancestry test bodies now execute with223 recorded
+assertions. CV-SEM-001/002/003/007/008/009/010 evidence includes role-swapped truth
+with perceptual isomorphism, binding multiplicity, per-observer visibility and allocator
+independence, independent vocabularies, Companion-to-Participant and Location derivation,
+changed hidden truth versus permitted observation, and complete bounded ancestry checks.
+Existing seven-case controls already execute selected comparisons; this extension retains
+the complete original assertions rather than assuming those selected comparisons cover
+every phenomenon requirement. Recognition and rendering remain separately qualified.
+
+Generated fixtures preserve all original bodies verbatim except import routing and the
+Vitest binding; local recorder records actual/expected operands. Defined and numeric
+predicates have deliberate-failure controls. Original JSON/string equalities are explicitly
+not relabelled canonical-byte equalities. Fixture-relative graph separation is not general
+epistemic safety, and assertion operands are not complete function inputs or traces.
+
+Sixteen native plus two adapter/recorder tests PASS. Build68399 COMPLETE exit0,
+405 modules with existing chunk warning. Audit95896 COMPLETE exit0,11 frozen sources
+and full report in workbench-sem-phenomenon-rev1. Evidence restore/research PASS; all18
+conditional obligations unchanged. Next worker/UI/browser parity and acceptance joins;
+full SEM/workbench/Campaign4 entry remains open.
