@@ -21,6 +21,7 @@ import {SemRendererPanel} from './SemRendererPanel';
 import {SemIntegratedPanel} from './SemIntegratedPanel';
 import {SemAuthorityPanel} from './SemAuthorityPanel';
 import {SemOccurrencePanel} from './SemOccurrencePanel';
+import {SemPhenomenonPanel} from './SemPhenomenonPanel';
 import {SemPersistencePanel} from './SemPersistencePanel';
 import {SemCodecPanel} from './SemCodecPanel';
 import {SemSchemaPanel} from './SemSchemaPanel';
@@ -60,6 +61,7 @@ export function SemWorkbench({active=true}:{active?:boolean}){
  {mode==='Compare'&&<SemRendererPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
  {mode==='Compare'&&<SemIntegratedPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
  {mode==='Compare'&&<SemOccurrencePanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
+ {mode==='Compare'&&<SemPhenomenonPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
  {mode==='Compare'&&<SemPersistencePanel client={run.current} busy={busy} execute={execute} onExport={setText}/>} 
  {mode==='Compare'&&<SemCodecPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>} 
  {mode==='Compare'&&<SemSchemaPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>} 

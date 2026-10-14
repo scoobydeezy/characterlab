@@ -3,7 +3,11 @@
 **Latest workbench2026-10-13:** Binding/causal phenomenon foundation qualified in
 workbench-sem-phenomenon-rev1:16 original cases/223 recorded assertions.18 tests/build
 PASS. Companion-to-Participant derivation, hidden/permitted changes and ancestry
-separation retained with original limits. Next worker/UI parity and acceptance joins.
+separation retained with original limits. Worker/UI/browser parity now qualified in
+workbench-sem-phenomenon-ui-rev1: all4 worker prefixes, browser prefix1 full803,299-
+character report and10 binding/6 causal rows match native evidence; six active hashes
+unchanged. Three focused tests/build PASS. Next acceptance joins and remaining full
+SEM coverage review. Full workbench/Campaign4 entry remains open.
 
 **Latest workbench2026-10-13:** Occurrence-identity foundation qualified in
 workbench-sem-occurrence-rev1:6 cases/24 assertions/6 caught failures. Numeric event

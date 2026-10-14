@@ -1115,3 +1115,19 @@ Sixteen native plus two adapter/recorder tests PASS. Build68399 COMPLETE exit0,
 and full report in workbench-sem-phenomenon-rev1. Evidence restore/research PASS; all18
 conditional obligations unchanged. Next worker/UI/browser parity and acceptance joins;
 full SEM/workbench/Campaign4 entry remains open.
+
+## Binding and causal worker/browser parity (2026-10-13)
+
+Compare now exposes Binding, causal roles and ancestry:10 binding and6 causal
+witnesses with223 original assertions. Researcher truth is explicitly distinguished
+from character knowledge. Companion-to-Participant derivation, hidden versus permitted
+changes, original string-equality limits and fixture-bounded ancestry remain visible.
+Three focused tests PASS, including exact foundation parity and unchanged checkpoints
+at all4 worker prefixes. Browser prefix1 full803,299-character report and both tables
+equal fresh native execution and the foundation receipt; all six active hashes remain
+unchanged. Screenshot inspected. Audit35656 COMPLETE exit0: ten frozen sources and
+three captures in workbench-sem-phenomenon-ui-rev1. Build34895 COMPLETE exit0,
+406 modules with existing chunk warning. Evidence restore/research PASS; all18
+conditional obligations unchanged. Prepared report is exposed; full file download
+remains unqualified. Next acceptance joins and full SEM coverage review; the overall
+workbench goal and Campaign4 entry gate remain open.
