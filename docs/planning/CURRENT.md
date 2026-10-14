@@ -1,5 +1,15 @@
 # Current research entry point
 
+**BODY worker2026-10-13:** bodyWorker/bodyWorkerClient add serialized public-source
+create/step/checkpoint/restore and independent full-program ownership inspection.
+Three focused tests PASS: worker/direct source equality, restore continuation,
+ownership report equality with unchanged active checkpoint, overlapping initialization
+and advance rejection, detached snapshots, failed post cleanup and disposal.
+Ownership report spans its original complete program and must be labeled separately
+from the active prefix in the UI. It is researcher comparison, not character evidence.
+Build15559 COMPLETE exit0,418 modules. Evidence restore/research PASS;
+18 conditional obligations unchanged. Browser route next. BIO audit41967 now9/13.
+
 **GA full comparison COMPLETE2026-10-13:** session68178 COMPLETE exit0.
 workbench-general-comparison-cohort-rev1:43 models/568 prefixes,36 pairs/471 aligned
 pair-prefixes,0 missing instants. Full diagnostic captures retained losslessly with
@@ -75,8 +85,8 @@ UI and explanation qualification remain due.
 **BIO adapter2026-10-13:** bioAdapter.ts implements the accepted composed component
 boundary and identity supplement. Focused2 tests PASS; existing BIO closure PASS.
 Full13-case/260-prefix parity and every-prefix continuation audit RUNNING under
-session41967 (node PID25704), workbench-bio-parity-rev1; first7/13 PASS (Earned/6 and0,
-AuthoredTrait/6 and0, DisplayOnly/6 and0, HistoryOnly/6;
+session41967 (node PID25704), workbench-bio-parity-rev1; first8/13 PASS (Earned/6 and0,
+AuthoredTrait/6 and0, DisplayOnly/6 and0, HistoryOnly/6 and0;
 20 component prefixes and continuations), no final receipt yet. Quiet execution was
 confirmed live by session and process activity; no restart. Build52917 COMPLETE
 exit0,412 modules with existing chunk warning. Evidence restore/research PASS;
