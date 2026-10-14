@@ -1,5 +1,16 @@
 # Current research entry point
 
+**BODY browser2026-10-13:** six-mode route now exposes original source stepping,
+authenticated checkpoint capture/restore, exact native diagnostics and independent
+full-program ownership comparison. Character language remains explicitly unqualified.
+workbench-body-ui-rev1: baseline prefixes0/1 six-hash parity, restore, exact complete
+ownership report equality, active-run isolation and mode retention PASS. Screenshot
+inspected. Inspection registry0.4 keeps BODY separate from batch; guard test PASS.
+Build72559 COMPLETE exit0,421 modules; initial React unknown-value errors corrected
+with explicit text rendering. Evidence restore/research PASS,18 conditional obligations
+unchanged. All-program browser breadth, file round trips, language, participation,
+LONG coverage and Campaign4 entry acceptance remain open. BIO audit41967 at11/13.
+
 **BODY worker2026-10-13:** bodyWorker/bodyWorkerClient add serialized public-source
 create/step/checkpoint/restore and independent full-program ownership inspection.
 Three focused tests PASS: worker/direct source equality, restore continuation,
