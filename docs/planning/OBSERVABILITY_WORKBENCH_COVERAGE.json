@@ -151,11 +151,14 @@
         "docs/planning/CAMPAIGN3_BIO_QUALIFICATION.md",
         "docs/planning/VERDICT_LEDGER.md"
       ],
-      "workbenchStatus": "ENTRY POINTS LOCATED; EXACT ADAPTER/CONTRACT MAPPING REQUIRED",
-      "executableAdapter": null,
+      "workbenchStatus": "COMPONENT ADAPTER IMPLEMENTED; FOCUSED TESTS PASS; FULL13-CASE PARITY/CONTINUATION AUDIT RUNNING",
+      "executableAdapter": "src/workbench/bioAdapter.ts",
       "candidateSources": [
+        "src/campaign3/bioComparison.ts",
         "src/campaign3/longitudinalMath.ts"
-      ]
+      ],
+      "seamContract": "bio-coupled-comparison/0.2-candidate with BIO_COMPARISON_IDENTITY_BINDING.md",
+      "scope": "Original13 component cases,19-step routed-seed calendar; canonical identities reconstructed and matched. These are component checkpoints, not public Save132 or scheduler events. Full parity audit, UI and language remain pending."
     },
     {
       "id": "PHEN-COMMIT-001",
