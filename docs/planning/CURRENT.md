@@ -1,5 +1,17 @@
 # Current research entry point
 
+**LONG source adapter2026-10-13:** original29 public programs plus3 execution probes,
+15 frozen model images and exact seeds/inputs retained in longCatalog. Adapter names
+longitudinal-public/0.2-candidate and keeps closed observer bytes separate from research
+state/output/trace. Two focused tests PASS: direct native saves and observer bytes,
+restore continuation, detached reads, overlap and altered-prefix/digest rejection.
+Build94960 COMPLETE exit0,421 modules. Evidence restore/research PASS;18 conditional
+obligations unchanged. Full32-program/513-prefix historical/native/restore audit
+RUNNING under session56491 in workbench-long-parity-rev1. Do not restart a quiet
+process or edit its frozen sources. BIO audit41967 remains live at12/13. Neither has
+a final acceptance receipt yet. LONG worker/UI, explanations, component successors,
+comparisons and final Campaign4 entry acceptance remain open.
+
 **BODY browser2026-10-13:** six-mode route now exposes original source stepping,
 authenticated checkpoint capture/restore, exact native diagnostics and independent
 full-program ownership comparison. Character language remains explicitly unqualified.
