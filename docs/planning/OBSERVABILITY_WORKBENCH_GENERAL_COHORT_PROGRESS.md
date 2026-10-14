@@ -24,8 +24,8 @@ model/run identities must equal FREEZE.json. Each completed model is saved separ
 the final receipt is written only after all models and source hashes pass. This audit
 does not claim all-model restore, browser, batch, language or Campaign4 entry acceptance.
 
-Current process: command session68884, node PID35904 observed live. First18/43
-PASS:each12 prefixes; recall-k0 has145 events, other first18 have153. Final receipt remains absent. Do not restart based
+Current process: command session68884, node PID35904 observed live. First23/43
+PASS:each12 prefixes; recall-k0 has145 and select-k0 has133 events, others153. Final receipt remains absent. Do not restart based
 on an observation timeout. Poll the same handle and preserve any failure evidence.
 Audited sources must remain unchanged until completion. Incremental audit artifacts
 remain uncommitted until completion; the tested seed-support change is committed separately.
@@ -82,3 +82,31 @@ report clearing/disabled step on declaration change, and unchanged main-run four
 Screenshot inspected. Build45716 COMPLETE exit0,412 modules with existing chunk warning;
 evidence restore/research PASS and18 conditional obligations unchanged. No all36 browser,
 full-horizon comparison, comparison replay/export, resource-bound or language claim.
+
+## Full-calendar comparison audit in progress
+
+check-workbench-general-comparison-cohort.mjs is running under command session68178.
+First1/43 complete capture: baseline12 prefixes. Poll this same handle; do not restart
+on quiet output. Its sources are frozen in workbench-general-comparison-cohort-rev1.
+Both this and the native parity audit remain active; do not edit their audited sources.
+
+The audit executes every unique model once, retains full diagnostic snapshots in
+lossless gzip files with compressed and decoded hashes, and checks all36 declared
+pairs at every shared committed instant. Missing instants are explicit. Repeated
+detached reports must be identical and preserve their input snapshots. Independent
+path unions, graph identity unions and exact cell values check for silent omissions.
+Final success also requires the completed native cohort receipt and exact six-field
+prefix joins (prefix,clock,model/run/state/save hashes) for all43 models. No final
+comparison receipt or full-cohort claim is made before these checks finish. Interim
+artifacts remain uncommitted; the audit source is committed separately. Syntax check,
+evidence restore and research PASS;18 conditional obligations unchanged.
+
+Remaining corpus routing verified from current qualification documents: BIO's
+bio-coupled-comparison/0.2-candidate is a composed component experiment (six laws,
+13 cases/260 historical component continuations), not a public scheduler or the
+biological system. Its identity supplement must be preserved. BODY's16 public EMB
+source runs and five component ownership controls are likewise distinct authorities.
+LONG longitudinal-public/0.2-candidate has32 public runs/513 historical continuations
+plus named qualification successors. These historical counts guide coverage; none is
+current workbench adapter evidence. Implement their actual execution boundaries rather
+than substituting a uniform public-factory claim.

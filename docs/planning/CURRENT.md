@@ -1,5 +1,14 @@
 # Current research entry point
 
+**Full comparison audit2026-10-13:** command session68178 RUNNING;
+check-workbench-general-comparison-cohort.mjs captures43 unique full-calendar runs,
+then compares36 declared pairs at shared instants and joins every prefix to the
+independent native parity receipt. First1/43 captured (baseline12 prefixes).
+Sources frozen in workbench-general-comparison-cohort-rev1; do not edit them or
+restart on quiet output. No final receipt exists yet. Poll both68178 and68884.
+Next missing BIO means earned biography components (bioComparison.ts), not biology;
+BODY public EMB sources/component controls and LONG public factory remain separate.
+
 **Comparison UI2026-10-13:** General attention now creates/steps separate controlled
 pairs. workbench-general-comparison-ui-rev1 proves first-pair prefixes0/1 equal the
 qualified reports, recreation repeats both, changed selection clears stale records and
@@ -20,8 +29,8 @@ legacy numeric seed/checkpoint0.1 representation retained, hex checkpoint0.2 int
 Ten focused adapter/export/worker tests and production build PASS.43-model frozen
 cohort parity audit RUNNING under command session68884 (node PID35904 at last check).
 Poll that handle; do not restart merely because output is quiet. Sources frozen in
-workbench-general-cohort-rev1; first18/43 PASS, each12 prefixes (recall-k0 has145
-events; other first18 have153), no final
+workbench-general-cohort-rev1; first23/43 PASS, each12 prefixes (recall-k0 has145,
+select-k0 has133 events; other first23 have153), no final
 receipt yet. Keep audited sources unchanged.
 Full memory/attention/browser/batch/language qualification remains open.
 
