@@ -5,9 +5,14 @@ legacy numeric seed/checkpoint0.1 representation retained, hex checkpoint0.2 int
 Ten focused adapter/export/worker tests and production build PASS.43-model frozen
 cohort parity audit RUNNING under command session68884 (node PID35904 at last check).
 Poll that handle; do not restart merely because output is quiet. Sources frozen in
-workbench-general-cohort-rev1; baseline1/43 PASS12 prefixes/153 events, no final
+workbench-general-cohort-rev1; first5/43 PASS, each12 prefixes/153 events, no final
 receipt yet. Keep audited sources unchanged.
 Full memory/attention/browser/batch/language qualification remains open.
+
+Exact-seed UI now qualified in workbench-general-seed-ui-rev1: draft isolation,
+frozen baseline prefixes0/1, numeric-seed identity contrast and checkpoint restoration
+of seed/hashes. Build36984 and research checks PASS. This uses completed baseline
+evidence only and does not claim the ongoing43-model audit is complete.
 
 **Latest workbench2026-10-13:** SEM bounded inspection inventory reconciled in
 workbench-sem-coverage-rev3:100/100 vector pointers,31 individually joined negative

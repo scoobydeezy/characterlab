@@ -1,0 +1,44 @@
+{
+  "status": "PASS BOUNDED EXACT-SEED BROWSER CONTROL",
+  "sources": [
+    {
+      "path": "src/workbench/GeneralWorkbench.tsx",
+      "sha256": "d95c8c53b75dd6329d3ce6860ec94aebbc6dbc4f9a4d7a90d68c4523a584bbb1"
+    },
+    {
+      "path": "src/workbench/generalAdapter.ts",
+      "sha256": "6f8db8436008012fd95787aa25a9a973a0c846c860b6bcb9ec3bb1c363637a28"
+    },
+    {
+      "path": "src/workbench/generalWorker.ts",
+      "sha256": "4a5aee250c887e04d821575eef6eb3074d313ec32bff845f09e97cbf65999c1a"
+    },
+    {
+      "path": "src/workbench/generalWorkerClient.ts",
+      "sha256": "818b383c255d4fbdaba96d5ab946b57424740cff951cb9e3a7d7378f0336ebf6"
+    },
+    {
+      "path": "docs/planning/workbench-general-cohort-rev1/model-00.json",
+      "sha256": "c25f178d9402b26aba41a28463120601ab4455cfeda3e2c6aca97f7e067f558e"
+    },
+    {
+      "path": "docs/planning/campaign3-general-attention-model-rev2/FREEZE.json",
+      "sha256": "27ba4b12edda9c284ef03bf4dd52744f395639429f16077dcf6a0f28c05ef8c4"
+    },
+    {
+      "path": "scripts/check-workbench-general-seed-ui.mjs",
+      "sha256": "d44944c30674249ccb3f47fa1867bfcf0f73625e03ab5c18c3922d8526a34eca"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "ui.json",
+      "sha256": "994340b343ba81ad0a2049095e3c37805f080999d65810a5aa636e77295f92f9"
+    },
+    {
+      "path": "seed.png",
+      "sha256": "ea84e258a4e1b2c9a3c8d9ccb2cbcdf3c9efd381d5ed8ccb605c206676570cd7"
+    }
+  ],
+  "scope": "Draft isolation, frozen baseline prefixes0/1, numeric-seed identity contrast, and checkpoint restore to frozen seed/prefix verified through rendered UI. Completed baseline artifact from ongoing cohort audit used explicitly; no completed43-model receipt or full cohort/browser claim. Screenshot inspected. Full file import/download and all-model restore remain separate."
+}
