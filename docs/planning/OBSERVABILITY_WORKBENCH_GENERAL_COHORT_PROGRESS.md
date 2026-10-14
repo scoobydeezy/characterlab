@@ -1,5 +1,14 @@
 # General attention frozen cohort qualification
 
+2026-10-13 comparison completion: command68178 COMPLETE exit0.
+workbench-general-comparison-cohort-rev1 verifies43 models/568 full-calendar prefixes,
+36 declared pairs/471 aligned pair-prefixes and zero missing committed instants.
+Every captured model prefix matches the independent completed native audit. Lossless
+gzip captures/reports preserve compressed and decoded hashes. Repeated comparisons
+leave snapshots unchanged; exact field/cell unions and values checked. Final artifact,
+source and native-evidence hashes separately verified. Browser breadth, comparison
+persistence, language, all-model restore, batch and entry qualification remain open.
+
 2026-10-13 completion update: command68884 COMPLETE exit0. Final receipt in
 workbench-general-cohort-rev1:43 original models/568 native prefixes/7074 events.
 Whole-save/model/run/state parity passed at every prefix. All final receipt artifact

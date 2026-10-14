@@ -1,5 +1,23 @@
 # Current research entry point
 
+**GA full comparison COMPLETE2026-10-13:** session68178 COMPLETE exit0.
+workbench-general-comparison-cohort-rev1:43 models/568 prefixes,36 pairs/471 aligned
+pair-prefixes,0 missing instants. Full diagnostic captures retained losslessly with
+compressed/decoded hashes; every model prefix joined to native parity evidence.
+Repeated comparisons preserve inputs; exact path/cell unions checked. All artifact,
+source and native-evidence hashes rechecked. Browser breadth, comparison persistence,
+language, batch and Campaign4 entry remain open. No new psychological verdict.
+
+**BODY ownership COMPLETE2026-10-13:** bodyOwnership.ts invokes the unchanged
+accepted harness on independent original public programs and projects all five
+component candidates with explicit authority. workbench-body-ownership-rev1 PASS:
+16 sources/63 probes/24 effects; complete raw results equal historical matrix,
+including saved bytes, source state/output/trace and actual REG declaration. Known
+zero/Unavailable/no-ground and hidden-truth/admitted-evidence remain distinct.
+Two focused tests PASS; build78562 COMPLETE exit0,418 modules; source/artifact hashes
+rechecked; evidence restore/research PASS,18 conditional obligations unchanged.
+Worker/browser, observer-safe language and entry acceptance remain due.
+
 **GA native parity COMPLETE2026-10-13:** session68884 completed exit0. Receipt
 workbench-general-cohort-rev1 verifies43 models/568 prefixes/7074 events with exact
 original frozen seed, model/run identity and whole-save equality to direct execution.
@@ -57,8 +75,8 @@ UI and explanation qualification remain due.
 **BIO adapter2026-10-13:** bioAdapter.ts implements the accepted composed component
 boundary and identity supplement. Focused2 tests PASS; existing BIO closure PASS.
 Full13-case/260-prefix parity and every-prefix continuation audit RUNNING under
-session41967 (node PID25704), workbench-bio-parity-rev1; first5/13 PASS (Earned/6 and0,
-AuthoredTrait/6 and0, DisplayOnly/6;
+session41967 (node PID25704), workbench-bio-parity-rev1; first7/13 PASS (Earned/6 and0,
+AuthoredTrait/6 and0, DisplayOnly/6 and0, HistoryOnly/6;
 20 component prefixes and continuations), no final receipt yet. Quiet execution was
 confirmed live by session and process activity; no restart. Build52917 COMPLETE
 exit0,412 modules with existing chunk warning. Evidence restore/research PASS;
@@ -67,14 +85,12 @@ unfinished audit artifacts. Inspection duplicates no character authority.
 Do not edit its frozen sources (including canonical.ts/shared native components).
 No BIO public scheduler/factory admission, UI or language claim. Goal remains active.
 
-**Full comparison audit2026-10-13:** command session68178 RUNNING;
+**Full comparison audit2026-10-13:** command session68178 COMPLETE;
 check-workbench-general-comparison-cohort.mjs captures43 unique full-calendar runs,
 then compares36 declared pairs at shared instants and joins every prefix to the
-independent native parity receipt. First33/43 captured (first30 each12 prefixes;
-three credit models each25).
-Sources frozen in workbench-general-comparison-cohort-rev1; do not edit them or
-restart on quiet output. No final comparison receipt exists yet. Poll68178;
-native parity68884 has now completed successfully as recorded above.
+independent native parity receipt.43/43 captured and36/36 compared; final receipt
+verified as recorded above. Preserve frozen sources/artifacts. Both GA processes
+68178 and68884 are terminal successes; do not restart them.
 Next missing BIO means earned biography components (bioComparison.ts), not biology;
 BODY public EMB sources/component controls and LONG public factory remain separate.
 

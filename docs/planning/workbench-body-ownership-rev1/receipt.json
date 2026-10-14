@@ -1,0 +1,298 @@
+{
+  "status": "PASS BODY OWNERSHIP INSPECTION",
+  "sources": [
+    {
+      "path": "src/workbench/bodyOwnership.ts",
+      "sha256": "0b57860f693b0c805c82406488b5bfd12aa6760f98adf1868da66374b504db5b"
+    },
+    {
+      "path": "src/workbench/bodyCatalog.json",
+      "sha256": "7a2fa104719d2173e81641101db84c7e3d1e47540691435656f1e61d3be504ec"
+    },
+    {
+      "path": "src/workbench/canonical.ts",
+      "sha256": "f80f4a8353ea7604432d5ffcf0d4628f8b7bf13b82a06b4807445e9a9ba97bde"
+    },
+    {
+      "path": "src/test/workbenchBodyOwnership.test.ts",
+      "sha256": "512bd18640bce02e6f4a16e3356280f2d146f8d11ebbfdddb8124d6165327af6"
+    },
+    {
+      "path": "src/test/embodiedFixtures.ts",
+      "sha256": "6eec86de3a4557138b40a89a50b7d42f950ab4e4b7e1893d1e837486f91c71ce"
+    },
+    {
+      "path": "src/test/fixtures/campaign2Model.ts",
+      "sha256": "5c7f0759ad67036c3d8c8efafe200895c855110f232e2bc8fcd899386f11fa55"
+    },
+    {
+      "path": "scripts/check-workbench-body-ownership.mjs",
+      "sha256": "8dcc1eb5553c72004492e32b426a9f2f5640339cad87adcf49bf578ce7334b51"
+    },
+    {
+      "path": "docs/planning/BODY_OWNERSHIP_RESULT_REV1.json",
+      "sha256": "0cad832706f55cb81e3b201818756d2414bd60ec06fde6d4de4e5438d143b095"
+    },
+    {
+      "path": "docs/planning/BODY_OWNERSHIP_PLAN_REV1.json",
+      "sha256": "b5f41e96041f93a95c830de26485269de4ca809f09fca9268745084edf4502ca"
+    },
+    {
+      "path": "docs/planning/workbench-body-parity-rev1/receipt.json",
+      "sha256": "fde8553f05562e4a30664e1fd608249d97752474c6f93840fc8cd18730287ad5"
+    },
+    {
+      "path": "docs/formal/BODY_OWNERSHIP_COMPARISON_CONTRACT.md",
+      "sha256": "09c720cd22d0f86e1d5359c6c50a57c828ac4d8cffe3875289569841f9e5ad20"
+    },
+    {
+      "path": "src/campaign3/bodyOwnershipComparison.ts",
+      "sha256": "7a5956f2151d32e6fa32956d002e9afeda66448699902b0d5790d2968a59f5fa"
+    },
+    {
+      "path": "src/test/bodyOwnershipFixtures.ts",
+      "sha256": "d8ca382fcfb73ca29bfbb0ed14829ad8482d23c33fcc54f400f3ab7ec5ca54f3"
+    },
+    {
+      "path": "src/campaign3/embodiedFactory.ts",
+      "sha256": "94ebccdb6385bce2530a27938573ddc96be419c5050ba85eef9bf8e0a4c2cd55"
+    },
+    {
+      "path": "src/campaign3/embodiedRuntime.ts",
+      "sha256": "617be10d59927fb8f49fbdd4fc18fc23caa043c21e63c228224922ede1121313"
+    },
+    {
+      "path": "src/campaign3/embodiedMath.ts",
+      "sha256": "b7c2a25f3e9a157669962ed4c50b633eb1027edc67f00f73cd49b543156bf83d"
+    },
+    {
+      "path": "src/campaign2/regulatoryReference.ts",
+      "sha256": "a697eaa1f0cf3e539c585efcfd4a42737c75e393ee3950f52915f468f1b2c485"
+    },
+    {
+      "path": "scripts/qualify-body-ownership.mjs",
+      "sha256": "605d481f0c83c902c7d7e6460970e8e68fdca248fefa78b69483ca0695bf3189"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/FREEZE.json",
+      "sha256": "985dbf1d020c4c529b9079a8f52363a98f7c753c64ac0b40cb4ac6fbb8aec8ad"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/baseline/content.cenc.hex",
+      "sha256": "492bc5f9f495222c1d4d7f3f8ed1e06ff865f196538799721a4cb209ed799bf0"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/baseline/registry.cenc.hex",
+      "sha256": "4df190180af2c83ca12408aeff8804b24f08c37c0e01b7fbf87cbbfb3137c8cd"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/baseline/parameters.cenc.hex",
+      "sha256": "cd501947d1a22a162c98916a1bd07f83a18b90577a656b77763bf179aba485e7"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/baseline/model-identity.cenc.hex",
+      "sha256": "38324f4d793c89744da5886322247e3bc58cbaeb21c3606eee360b9872bbaed2"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/slower/content.cenc.hex",
+      "sha256": "492bc5f9f495222c1d4d7f3f8ed1e06ff865f196538799721a4cb209ed799bf0"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/slower/registry.cenc.hex",
+      "sha256": "caf0510a451ecc77829fc1a05b7ecd4a13017b4cb0f9e0e50f001703468631d6"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/slower/parameters.cenc.hex",
+      "sha256": "cd501947d1a22a162c98916a1bd07f83a18b90577a656b77763bf179aba485e7"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/slower/model-identity.cenc.hex",
+      "sha256": "d57ca6ccd89587d6c7c4f4e0a49063973da80b74b525cbb457a09bb835377d2f"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/coarser/content.cenc.hex",
+      "sha256": "492bc5f9f495222c1d4d7f3f8ed1e06ff865f196538799721a4cb209ed799bf0"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/coarser/registry.cenc.hex",
+      "sha256": "dca57963891ef703ad1ece4ed682b704a96efad03cb63beccee7d13e84030461"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/coarser/parameters.cenc.hex",
+      "sha256": "cd501947d1a22a162c98916a1bd07f83a18b90577a656b77763bf179aba485e7"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/coarser/model-identity.cenc.hex",
+      "sha256": "41536d74b9e863cc1082c81c57d7c03408f0ccbc495d80f145e7920d4e20b555"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/overflow/content.cenc.hex",
+      "sha256": "492bc5f9f495222c1d4d7f3f8ed1e06ff865f196538799721a4cb209ed799bf0"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/overflow/registry.cenc.hex",
+      "sha256": "a9900ad3bb01eccf5cd031021d3f9172ea2e0ca473423a3fa773584b6748b570"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/overflow/parameters.cenc.hex",
+      "sha256": "cd501947d1a22a162c98916a1bd07f83a18b90577a656b77763bf179aba485e7"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/overflow/model-identity.cenc.hex",
+      "sha256": "07f9177c8ba27ad14f2a0dd8ef43db47a277d72e890360e68a97bc4432075954"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/denied/content.cenc.hex",
+      "sha256": "492bc5f9f495222c1d4d7f3f8ed1e06ff865f196538799721a4cb209ed799bf0"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/denied/registry.cenc.hex",
+      "sha256": "6b1432c830ebc8a781636e87c549b44c3b0310461649c27fb007b7ad8e18c59c"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/denied/parameters.cenc.hex",
+      "sha256": "cd501947d1a22a162c98916a1bd07f83a18b90577a656b77763bf179aba485e7"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/denied/model-identity.cenc.hex",
+      "sha256": "0097a69fe1470d4c0d88f70e17987666e204b71c9da0d58de6fc5955f8b8c4e1"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/unavailable/content.cenc.hex",
+      "sha256": "492bc5f9f495222c1d4d7f3f8ed1e06ff865f196538799721a4cb209ed799bf0"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/unavailable/registry.cenc.hex",
+      "sha256": "29b7153eaa76fed62bd2ad3239d136f59f2d82709452f470e20d3acbfe3012b2"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/unavailable/parameters.cenc.hex",
+      "sha256": "cd501947d1a22a162c98916a1bd07f83a18b90577a656b77763bf179aba485e7"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/unavailable/model-identity.cenc.hex",
+      "sha256": "d9f95f9202b33f351900f83d12989363c8cdffb400b2c31c0144291f16686da6"
+    }
+  ],
+  "results": [
+    {
+      "program": "baseline",
+      "path": "program-00.json",
+      "sha256": "2f52651a79dbcbd0a5aaaea542015e1d9f2625e880f7bcaebd4867802194e65d",
+      "probes": 6,
+      "effects": 3
+    },
+    {
+      "program": "slower",
+      "path": "program-01.json",
+      "sha256": "c46e6ee438a3bd86729958d29771556686906f3995e8d78025f19598c327b947",
+      "probes": 6,
+      "effects": 3
+    },
+    {
+      "program": "coarser",
+      "path": "program-02.json",
+      "sha256": "94d81ef862a43ce19b5d8fb658b080acc16c4b4fdbb577237458edb3cdcdd1de",
+      "probes": 6,
+      "effects": 3
+    },
+    {
+      "program": "hidden89",
+      "path": "program-03.json",
+      "sha256": "ab5cd3349a5c8a6af1c6b19d5a9fb3bd621a3bf34e3467635d293bb0ddab7d8c",
+      "probes": 6,
+      "effects": 3
+    },
+    {
+      "program": "overflow",
+      "path": "program-04.json",
+      "sha256": "8874196dbb847bdcd9f9baee73491b7c0e83face104ce7dddc380165b014e894",
+      "probes": 6,
+      "effects": 3
+    },
+    {
+      "program": "denied",
+      "path": "program-05.json",
+      "sha256": "5857a9a18cdcf66e83d46a6a650ded1d160532db79c9e58308b3c048ebc6ca3e",
+      "probes": 6,
+      "effects": 3
+    },
+    {
+      "program": "unavailable",
+      "path": "program-06.json",
+      "sha256": "f551a2524a49dbdc7b8d0a3c3985f502c0a57421894f3c4463a8deac647a417e",
+      "probes": 6,
+      "effects": 3
+    },
+    {
+      "program": "kinetic-fast",
+      "path": "program-07.json",
+      "sha256": "dfeb0b97f63863aef8744bb6938144ea7b66da602d73a9bf273b0f95ba52155b",
+      "probes": 4,
+      "effects": 1
+    },
+    {
+      "program": "kinetic-slow",
+      "path": "program-08.json",
+      "sha256": "2786774fb0fb23c19be42d712e2aeb47f6e0f4a669fe4d93436d540198a36ca4",
+      "probes": 4,
+      "effects": 1
+    },
+    {
+      "program": "no-delivery",
+      "path": "program-09.json",
+      "sha256": "ad0898a0af9bd75977b9746929bc49310047c009bdc97f7748de13b2fc10f5d1",
+      "probes": 4,
+      "effects": 0
+    },
+    {
+      "program": "alias41",
+      "path": "program-10.json",
+      "sha256": "24483e0cce75a405cdc84c0f43540f42697d5d4a46632736561c724c5453a297",
+      "probes": 1,
+      "effects": 0
+    },
+    {
+      "program": "alias49",
+      "path": "program-11.json",
+      "sha256": "444c6d28de88b8f006a648638c17e88488804b6cd7be8e60997a172142adc5a0",
+      "probes": 1,
+      "effects": 0
+    },
+    {
+      "program": "fine41",
+      "path": "program-12.json",
+      "sha256": "bef6df93eb8153d0592b944f6e74904c8df64ad4765a8993f664089f6e78759d",
+      "probes": 1,
+      "effects": 0
+    },
+    {
+      "program": "depleted-refill",
+      "path": "program-13.json",
+      "sha256": "66e5a6580c26ac5a04242e2cf4a8289289e2abffd84fdb083ebe52a4c4aa4b9b",
+      "probes": 2,
+      "effects": 1
+    },
+    {
+      "program": "partitioned",
+      "path": "program-14.json",
+      "sha256": "23caeb992c6e40994dce6407616083026ca81ed527a41be78b1b38da89a970e0",
+      "probes": 3,
+      "effects": 0
+    },
+    {
+      "program": "direct",
+      "path": "program-15.json",
+      "sha256": "b08935c3f718e1b26dcd17ec2fd351f916a44537b7f14a72d2dbd10a269a779b",
+      "probes": 1,
+      "effects": 0
+    }
+  ],
+  "counts": {
+    "sourcePrograms": 16,
+    "componentCandidates": 5,
+    "probes": 63,
+    "effects": 24
+  },
+  "scope": "Actual unchanged accepted harness invoked on all16 original source programs under explicitly identified current wrapper repair. Complete raw results equal the retained qualified BODY matrix, including canonical saves, source state/output/trace, REG declaration, probes, effects and meter final state. Five typed projections preserve Known/Unavailable, diagnostic truth, evidence and authority distinctions. This is not80 public runs, production admission of controls, browser/language/continuous pressure qualification or Campaign4 entry."
+}
