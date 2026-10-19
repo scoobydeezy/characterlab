@@ -120,3 +120,43 @@ LOCAL DISPOSITION: use the already accepted sensor-mediated successor with exact
 original identities; no owner ruling is required. Research check PASS18 conditional,
 zero active/unowned,4 closed obligations. No obligation, comparator or historical
 restriction is retired. Campaign4 entry and reductions remain gated.
+
+## Observer descriptions, 2026-10-19
+
+Pure `fatigueDescription.ts` accepts only public observer bytes, never profile labels,
+current hidden execution or later reports. Ten description categories per instant
+retain exact source indices. Selected-intent provenance projects public choice and
+probabilities without mechanical draws. Unknown diagnostic grade0 is explicitly
+distinct from known rest; sensor120/experience140 affect later appraisal40. Missing
+feedback preserves experience and does not establish recovery or physiology.
+
+Tests22628 PASS2: whole-horizon main/hiddenReward/falseFatigue/falseRecovery equality,
+historical wording, missing recovery, unknown versus rested, onset/recovery lag, and
+MotorOnly visible failure versus unchanged preceding intent/cognitive impairment.
+TypeScript71378 PASS. Full audit95883 PASS20 programs/180 prefixes/7200 descriptions,
+with native commitments, deterministic nonmutation, complete eligible-record accounting,
+public evaluation operands, safe choice projection and denied/absent equality.
+Independent114 frozen/current sources and20 compressed archives/counts PASS.
+Receipt: `workbench-fatigue-language-rev1/receipt.json`.
+
+Character panel integrated; raw observer records remain separately expandable.
+Registry0.17 advertises this bounded language qualification without batch admission.
+Original adapter qualification text remains frozen; UI identifies the separate language
+qualification. Research gate PASS18 conditional/0 active/0 unowned/4 closed.
+Browser language check remains in progress; broader browser/resource/accessibility,
+batch and integrated Campaign4 entry acceptance remain open. No runtime semantics,
+research verdict, comparator or obligation changed.
+
+### Bounded language browser acceptance
+
+`workbench-fatigue-language-ui-rev1/receipt.json` PASS300 descriptions across7
+captures/3 programs: main0/4/5/restore4/repeat5, missingRecovery8 and MotorOnly
+motorChallenge4. Complete DOM wording/source indices/safe provenance equals the
+qualified language archive; six commitments equal native prefixes/original identities.
+Long provenance read in40000-character chunks. Restore wait timed out while native
+work continued; subsequent status confirmed the same restore completed, without
+restarting it. Initial label locator did not match the experiment selector; the
+observed accessible combobox succeeded. No downloads or file transfer attempted.
+Final build75869 PASS508 modules (existing large-chunk warning). Saved screenshot
+visually inspected: controls, descriptions and source disclosure display correctly.
+This closes bounded language browser work only; broader gates above remain open.

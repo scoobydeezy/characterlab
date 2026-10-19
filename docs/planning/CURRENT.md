@@ -1,5 +1,12 @@
 # Current research entry point
 
+**FATIGUE observer language2026-10-19:**7200 descriptions/180 original prefixes/20
+programs PASS; independent114 frozen source/archive checks PASS. Bounded browser
+300 descriptions/7 captures/3 programs PASS, including exact in-memory replay,
+missing recovery and MotorOnly execution. Registry0.17; final build508 modules PASS.
+Research18 conditional obligations preserved. Broader browser/batch/resource and
+integrated Campaign4 entry remain open. Start OBSERVABILITY_WORKBENCH_FATIGUE_PROGRESS.md.
+
 **FATIGUE native/browser qualification2026-10-19:** full20-program/180-prefix native
 parity and restore PASS (160 advancing/20 terminal). Independent116 source hashes,
 20 result hashes/counts and468 comparison-side native joins PASS. Bounded browser
