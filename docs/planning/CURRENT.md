@@ -1,5 +1,18 @@
 # Current research entry point
 
+**LONG observer descriptions2026-10-19:** long-observer-description/0.1 accepts only
+closed native observer bytes and exposes six exact field-linked descriptions. No
+model/seed/original input/research state/output/trace enters template selection.
+Focused native-view test PASS: determinism, observer digest, checkpoint unchanged,
+known zero, absent versus false estimate, FullHistory/Compact detail presence and
+wrong-observer rejection. No inferred forgetting history, success from competence,
+hidden truth, first-person narration or causal factor explanation.
+Build43895 COMPLETE exit0,426 modules; existing chunk-size warning retained.
+Full32-program/513-prefix/3078-description audit RUNNING under9885; no final receipt.
+LONG comparison20638 captured first of28 required programs/17 historical prefixes;
+all24 pairs remain pending. Native continuation48528 remains live. Preserve all
+frozen sources. Evidence restore/research PASS;18 conditional obligations unchanged.
+
 **LONG full comparison audit2026-10-19:** check-workbench-long-comparison-cohort.mjs
 syntax check PASS and execution RUNNING under20638. Captures each unique original
 program required by all24 declarations once, checking every historical save hash and
