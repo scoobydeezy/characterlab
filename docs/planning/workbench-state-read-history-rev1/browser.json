@@ -1,0 +1,312 @@
+{
+  "reason": {
+    "runHash": "c77b136cc17ff63f5758704fc70d0ba3da464242b6ee7b6cc16f51e87c46c000",
+    "version": "recorded-state-read-history/0.1",
+    "selected": "17",
+    "reads": [
+      {
+        "ordinal": 0,
+        "path": "0a8c010103010102ec0b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72",
+        "label": "Value evidence history",
+        "exact": "{\n  \"record\": \"ValuesHistory#1513/1\",\n  \"Receipts [1]\": []\n}",
+        "priorMutation": {
+          "event": {
+            "id": "14",
+            "instant": "1",
+            "phase": "140",
+            "stage": "consolidate"
+          },
+          "before": "{\n  \"record\": \"ValuesHistory#1513/1\",\n  \"Receipts [1]\": []\n}",
+          "after": "{\n  \"record\": \"ValuesHistory#1513/1\",\n  \"Receipts [1]\": []\n}",
+          "changed": false
+        },
+        "relation": "exact-value-match"
+      },
+      {
+        "ordinal": 1,
+        "path": "0a8c010103010102ed0b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72",
+        "label": "Stored Value projection",
+        "exact": "{\n  \"record\": \"ValuesProjection#1514/1\",\n  \"Data [1]\": [\n    [\n      \"mean\",\n      []\n    ],\n    [\n      \"count\",\n      \"0\"\n    ],\n    [\n      \"weight\",\n      \"0/1\"\n    ],\n    [\n      \"preference\",\n      \"0/1\"\n    ]\n  ]\n}",
+        "priorMutation": {
+          "event": {
+            "id": "14",
+            "instant": "1",
+            "phase": "140",
+            "stage": "consolidate"
+          },
+          "before": "{\n  \"record\": \"ValuesProjection#1514/1\",\n  \"Data [1]\": [\n    [\n      \"mean\",\n      []\n    ],\n    [\n      \"count\",\n      \"0\"\n    ],\n    [\n      \"weight\",\n      \"0/1\"\n    ],\n    [\n      \"preference\",\n      \"0/1\"\n    ]\n  ]\n}",
+          "after": "{\n  \"record\": \"ValuesProjection#1514/1\",\n  \"Data [1]\": [\n    [\n      \"mean\",\n      []\n    ],\n    [\n      \"count\",\n      \"0\"\n    ],\n    [\n      \"weight\",\n      \"0/1\"\n    ],\n    [\n      \"preference\",\n      \"0/1\"\n    ]\n  ]\n}",
+          "changed": false
+        },
+        "relation": "exact-value-match"
+      },
+      {
+        "ordinal": 2,
+        "path": "0a8c010103010102f30b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72",
+        "label": "Goal lifecycle",
+        "exact": "{\n  \"record\": \"ValuesIntegrationGoal#1523/1\",\n  \"Data [1]\": [\n    [\n      \"id\",\n      \"goal/values-duty\"\n    ],\n    [\n      \"status\",\n      \"Open\"\n    ],\n    [\n      \"adoptedAt\",\n      \"1\"\n    ],\n    [\n      \"changedAt\",\n      \"1\"\n    ]\n  ]\n}",
+        "priorMutation": {
+          "event": {
+            "id": "13",
+            "instant": "1",
+            "phase": "130",
+            "stage": "goal"
+          },
+          "before": "{\n  \"record\": \"ValuesIntegrationGoal#1523/1\",\n  \"Data [1]\": [\n    [\n      \"id\",\n      \"goal/values-duty\"\n    ],\n    [\n      \"status\",\n      \"Absent\"\n    ],\n    [\n      \"adoptedAt\",\n      []\n    ],\n    [\n      \"changedAt\",\n      []\n    ]\n  ]\n}",
+          "after": "{\n  \"record\": \"ValuesIntegrationGoal#1523/1\",\n  \"Data [1]\": [\n    [\n      \"id\",\n      \"goal/values-duty\"\n    ],\n    [\n      \"status\",\n      \"Open\"\n    ],\n    [\n      \"adoptedAt\",\n      \"1\"\n    ],\n    [\n      \"changedAt\",\n      \"1\"\n    ]\n  ]\n}",
+          "changed": true
+        },
+        "relation": "exact-value-match"
+      }
+    ],
+    "scope": "Most recent earlier mutation of the identical canonical leaf path in committed trace order. Same-event writes and later events are excluded. A match records value continuity, not psychological necessity or complete causal provenance. No prior mutation does not establish initial-state origin. Derived-source metadata, payload dependencies and omitted history are not resolved by this projection. Absence is distinct from a zero value."
+  },
+  "hashesBefore": [
+    "767999936a7f447787bf42999a7394d14a3e5d4491252c7aa8cd641e9fe6233e",
+    "c77b136cc17ff63f5758704fc70d0ba3da464242b6ee7b6cc16f51e87c46c000",
+    "0029688aa96baf662735d528e2982eb30fc8c74af9169b61202a86b4ad5afdb1",
+    "e2d7c0869905c8428ed374d32b464bb5534e188f50ad1b8604aa0f4cb6fb3f0e"
+  ],
+  "appraisal": {
+    "runHash": "c77b136cc17ff63f5758704fc70d0ba3da464242b6ee7b6cc16f51e87c46c000",
+    "version": "recorded-state-read-history/0.1",
+    "selected": "16",
+    "reads": [
+      {
+        "ordinal": 0,
+        "path": "0a8c010103010102ec0b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72",
+        "label": "Value evidence history",
+        "exact": "{\n  \"record\": \"ValuesHistory#1513/1\",\n  \"Receipts [1]\": []\n}",
+        "priorMutation": {
+          "event": {
+            "id": "14",
+            "instant": "1",
+            "phase": "140",
+            "stage": "consolidate"
+          },
+          "before": "{\n  \"record\": \"ValuesHistory#1513/1\",\n  \"Receipts [1]\": []\n}",
+          "after": "{\n  \"record\": \"ValuesHistory#1513/1\",\n  \"Receipts [1]\": []\n}",
+          "changed": false
+        },
+        "relation": "exact-value-match"
+      },
+      {
+        "ordinal": 1,
+        "path": "0a8c010103010102ed0b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72",
+        "label": "Stored Value projection",
+        "exact": "{\n  \"record\": \"ValuesProjection#1514/1\",\n  \"Data [1]\": [\n    [\n      \"mean\",\n      []\n    ],\n    [\n      \"count\",\n      \"0\"\n    ],\n    [\n      \"weight\",\n      \"0/1\"\n    ],\n    [\n      \"preference\",\n      \"0/1\"\n    ]\n  ]\n}",
+        "priorMutation": {
+          "event": {
+            "id": "14",
+            "instant": "1",
+            "phase": "140",
+            "stage": "consolidate"
+          },
+          "before": "{\n  \"record\": \"ValuesProjection#1514/1\",\n  \"Data [1]\": [\n    [\n      \"mean\",\n      []\n    ],\n    [\n      \"count\",\n      \"0\"\n    ],\n    [\n      \"weight\",\n      \"0/1\"\n    ],\n    [\n      \"preference\",\n      \"0/1\"\n    ]\n  ]\n}",
+          "after": "{\n  \"record\": \"ValuesProjection#1514/1\",\n  \"Data [1]\": [\n    [\n      \"mean\",\n      []\n    ],\n    [\n      \"count\",\n      \"0\"\n    ],\n    [\n      \"weight\",\n      \"0/1\"\n    ],\n    [\n      \"preference\",\n      \"0/1\"\n    ]\n  ]\n}",
+          "changed": false
+        },
+        "relation": "exact-value-match"
+      },
+      {
+        "ordinal": 2,
+        "path": "0a8c010103010102f30b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72",
+        "label": "Goal lifecycle",
+        "exact": "{\n  \"record\": \"ValuesIntegrationGoal#1523/1\",\n  \"Data [1]\": [\n    [\n      \"id\",\n      \"goal/values-duty\"\n    ],\n    [\n      \"status\",\n      \"Open\"\n    ],\n    [\n      \"adoptedAt\",\n      \"1\"\n    ],\n    [\n      \"changedAt\",\n      \"1\"\n    ]\n  ]\n}",
+        "priorMutation": {
+          "event": {
+            "id": "13",
+            "instant": "1",
+            "phase": "130",
+            "stage": "goal"
+          },
+          "before": "{\n  \"record\": \"ValuesIntegrationGoal#1523/1\",\n  \"Data [1]\": [\n    [\n      \"id\",\n      \"goal/values-duty\"\n    ],\n    [\n      \"status\",\n      \"Absent\"\n    ],\n    [\n      \"adoptedAt\",\n      []\n    ],\n    [\n      \"changedAt\",\n      []\n    ]\n  ]\n}",
+          "after": "{\n  \"record\": \"ValuesIntegrationGoal#1523/1\",\n  \"Data [1]\": [\n    [\n      \"id\",\n      \"goal/values-duty\"\n    ],\n    [\n      \"status\",\n      \"Open\"\n    ],\n    [\n      \"adoptedAt\",\n      \"1\"\n    ],\n    [\n      \"changedAt\",\n      \"1\"\n    ]\n  ]\n}",
+          "changed": true
+        },
+        "relation": "exact-value-match"
+      },
+      {
+        "ordinal": 3,
+        "path": "0a8c010103010102f40b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72",
+        "label": "Admitted forecast",
+        "exact": "{\n  \"record\": \"ValuesIntegrationForecast#1524/1\",\n  \"Data [1]\": \"1\"\n}",
+        "priorMutation": {
+          "event": {
+            "id": "15",
+            "instant": "1",
+            "phase": "140",
+            "stage": "forecast"
+          },
+          "before": "{\n  \"record\": \"ValuesIntegrationForecast#1524/1\",\n  \"Data [1]\": []\n}",
+          "after": "{\n  \"record\": \"ValuesIntegrationForecast#1524/1\",\n  \"Data [1]\": \"1\"\n}",
+          "changed": true
+        },
+        "relation": "exact-value-match"
+      }
+    ],
+    "scope": "Most recent earlier mutation of the identical canonical leaf path in committed trace order. Same-event writes and later events are excluded. A match records value continuity, not psychological necessity or complete causal provenance. No prior mutation does not establish initial-state origin. Derived-source metadata, payload dependencies and omitted history are not resolved by this projection. Absence is distinct from a zero value."
+  },
+  "prior": {
+    "runHash": "c77b136cc17ff63f5758704fc70d0ba3da464242b6ee7b6cc16f51e87c46c000",
+    "version": "recorded-state-read-history/0.1",
+    "selected": "15",
+    "reads": [
+      {
+        "ordinal": 0,
+        "path": "0a8c010103010102f40b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72",
+        "label": "Admitted forecast",
+        "exact": "{\n  \"record\": \"ValuesIntegrationForecast#1524/1\",\n  \"Data [1]\": []\n}",
+        "priorMutation": null,
+        "relation": "no-prior-recorded-mutation"
+      },
+      {
+        "ordinal": 1,
+        "path": "0a8c010103010102f30b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72",
+        "label": "Goal lifecycle",
+        "exact": "{\n  \"record\": \"ValuesIntegrationGoal#1523/1\",\n  \"Data [1]\": [\n    [\n      \"id\",\n      \"goal/values-duty\"\n    ],\n    [\n      \"status\",\n      \"Open\"\n    ],\n    [\n      \"adoptedAt\",\n      \"1\"\n    ],\n    [\n      \"changedAt\",\n      \"1\"\n    ]\n  ]\n}",
+        "priorMutation": {
+          "event": {
+            "id": "13",
+            "instant": "1",
+            "phase": "130",
+            "stage": "goal"
+          },
+          "before": "{\n  \"record\": \"ValuesIntegrationGoal#1523/1\",\n  \"Data [1]\": [\n    [\n      \"id\",\n      \"goal/values-duty\"\n    ],\n    [\n      \"status\",\n      \"Absent\"\n    ],\n    [\n      \"adoptedAt\",\n      []\n    ],\n    [\n      \"changedAt\",\n      []\n    ]\n  ]\n}",
+          "after": "{\n  \"record\": \"ValuesIntegrationGoal#1523/1\",\n  \"Data [1]\": [\n    [\n      \"id\",\n      \"goal/values-duty\"\n    ],\n    [\n      \"status\",\n      \"Open\"\n    ],\n    [\n      \"adoptedAt\",\n      \"1\"\n    ],\n    [\n      \"changedAt\",\n      \"1\"\n    ]\n  ]\n}",
+          "changed": true
+        },
+        "relation": "exact-value-match"
+      },
+      {
+        "ordinal": 2,
+        "path": "0a8c010103010102ec0b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72",
+        "label": "Value evidence history",
+        "exact": "{\n  \"record\": \"ValuesHistory#1513/1\",\n  \"Receipts [1]\": []\n}",
+        "priorMutation": {
+          "event": {
+            "id": "14",
+            "instant": "1",
+            "phase": "140",
+            "stage": "consolidate"
+          },
+          "before": "{\n  \"record\": \"ValuesHistory#1513/1\",\n  \"Receipts [1]\": []\n}",
+          "after": "{\n  \"record\": \"ValuesHistory#1513/1\",\n  \"Receipts [1]\": []\n}",
+          "changed": false
+        },
+        "relation": "exact-value-match"
+      },
+      {
+        "ordinal": 3,
+        "path": "0a8c010103010102ed0b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72",
+        "label": "Stored Value projection",
+        "exact": "{\n  \"record\": \"ValuesProjection#1514/1\",\n  \"Data [1]\": [\n    [\n      \"mean\",\n      []\n    ],\n    [\n      \"count\",\n      \"0\"\n    ],\n    [\n      \"weight\",\n      \"0/1\"\n    ],\n    [\n      \"preference\",\n      \"0/1\"\n    ]\n  ]\n}",
+        "priorMutation": {
+          "event": {
+            "id": "14",
+            "instant": "1",
+            "phase": "140",
+            "stage": "consolidate"
+          },
+          "before": "{\n  \"record\": \"ValuesProjection#1514/1\",\n  \"Data [1]\": [\n    [\n      \"mean\",\n      []\n    ],\n    [\n      \"count\",\n      \"0\"\n    ],\n    [\n      \"weight\",\n      \"0/1\"\n    ],\n    [\n      \"preference\",\n      \"0/1\"\n    ]\n  ]\n}",
+          "after": "{\n  \"record\": \"ValuesProjection#1514/1\",\n  \"Data [1]\": [\n    [\n      \"mean\",\n      []\n    ],\n    [\n      \"count\",\n      \"0\"\n    ],\n    [\n      \"weight\",\n      \"0/1\"\n    ],\n    [\n      \"preference\",\n      \"0/1\"\n    ]\n  ]\n}",
+          "changed": false
+        },
+        "relation": "exact-value-match"
+      }
+    ],
+    "scope": "Most recent earlier mutation of the identical canonical leaf path in committed trace order. Same-event writes and later events are excluded. A match records value continuity, not psychological necessity or complete causal provenance. No prior mutation does not establish initial-state origin. Derived-source metadata, payload dependencies and omitted history are not resolved by this projection. Absence is distinct from a zero value."
+  },
+  "hashesAfter": [
+    "767999936a7f447787bf42999a7394d14a3e5d4491252c7aa8cd641e9fe6233e",
+    "c77b136cc17ff63f5758704fc70d0ba3da464242b6ee7b6cc16f51e87c46c000",
+    "0029688aa96baf662735d528e2982eb30fc8c74af9169b61202a86b4ad5afdb1",
+    "e2d7c0869905c8428ed374d32b464bb5534e188f50ad1b8604aa0f4cb6fb3f0e"
+  ],
+  "appraisalLater": {
+    "runHash": "c77b136cc17ff63f5758704fc70d0ba3da464242b6ee7b6cc16f51e87c46c000",
+    "version": "recorded-state-read-history/0.1",
+    "selected": "16",
+    "reads": [
+      {
+        "ordinal": 0,
+        "path": "0a8c010103010102ec0b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72",
+        "label": "Value evidence history",
+        "exact": "{\n  \"record\": \"ValuesHistory#1513/1\",\n  \"Receipts [1]\": []\n}",
+        "priorMutation": {
+          "event": {
+            "id": "14",
+            "instant": "1",
+            "phase": "140",
+            "stage": "consolidate"
+          },
+          "before": "{\n  \"record\": \"ValuesHistory#1513/1\",\n  \"Receipts [1]\": []\n}",
+          "after": "{\n  \"record\": \"ValuesHistory#1513/1\",\n  \"Receipts [1]\": []\n}",
+          "changed": false
+        },
+        "relation": "exact-value-match"
+      },
+      {
+        "ordinal": 1,
+        "path": "0a8c010103010102ed0b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72",
+        "label": "Stored Value projection",
+        "exact": "{\n  \"record\": \"ValuesProjection#1514/1\",\n  \"Data [1]\": [\n    [\n      \"mean\",\n      []\n    ],\n    [\n      \"count\",\n      \"0\"\n    ],\n    [\n      \"weight\",\n      \"0/1\"\n    ],\n    [\n      \"preference\",\n      \"0/1\"\n    ]\n  ]\n}",
+        "priorMutation": {
+          "event": {
+            "id": "14",
+            "instant": "1",
+            "phase": "140",
+            "stage": "consolidate"
+          },
+          "before": "{\n  \"record\": \"ValuesProjection#1514/1\",\n  \"Data [1]\": [\n    [\n      \"mean\",\n      []\n    ],\n    [\n      \"count\",\n      \"0\"\n    ],\n    [\n      \"weight\",\n      \"0/1\"\n    ],\n    [\n      \"preference\",\n      \"0/1\"\n    ]\n  ]\n}",
+          "after": "{\n  \"record\": \"ValuesProjection#1514/1\",\n  \"Data [1]\": [\n    [\n      \"mean\",\n      []\n    ],\n    [\n      \"count\",\n      \"0\"\n    ],\n    [\n      \"weight\",\n      \"0/1\"\n    ],\n    [\n      \"preference\",\n      \"0/1\"\n    ]\n  ]\n}",
+          "changed": false
+        },
+        "relation": "exact-value-match"
+      },
+      {
+        "ordinal": 2,
+        "path": "0a8c010103010102f30b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72",
+        "label": "Goal lifecycle",
+        "exact": "{\n  \"record\": \"ValuesIntegrationGoal#1523/1\",\n  \"Data [1]\": [\n    [\n      \"id\",\n      \"goal/values-duty\"\n    ],\n    [\n      \"status\",\n      \"Open\"\n    ],\n    [\n      \"adoptedAt\",\n      \"1\"\n    ],\n    [\n      \"changedAt\",\n      \"1\"\n    ]\n  ]\n}",
+        "priorMutation": {
+          "event": {
+            "id": "13",
+            "instant": "1",
+            "phase": "130",
+            "stage": "goal"
+          },
+          "before": "{\n  \"record\": \"ValuesIntegrationGoal#1523/1\",\n  \"Data [1]\": [\n    [\n      \"id\",\n      \"goal/values-duty\"\n    ],\n    [\n      \"status\",\n      \"Absent\"\n    ],\n    [\n      \"adoptedAt\",\n      []\n    ],\n    [\n      \"changedAt\",\n      []\n    ]\n  ]\n}",
+          "after": "{\n  \"record\": \"ValuesIntegrationGoal#1523/1\",\n  \"Data [1]\": [\n    [\n      \"id\",\n      \"goal/values-duty\"\n    ],\n    [\n      \"status\",\n      \"Open\"\n    ],\n    [\n      \"adoptedAt\",\n      \"1\"\n    ],\n    [\n      \"changedAt\",\n      \"1\"\n    ]\n  ]\n}",
+          "changed": true
+        },
+        "relation": "exact-value-match"
+      },
+      {
+        "ordinal": 3,
+        "path": "0a8c010103010102f40b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72",
+        "label": "Admitted forecast",
+        "exact": "{\n  \"record\": \"ValuesIntegrationForecast#1524/1\",\n  \"Data [1]\": \"1\"\n}",
+        "priorMutation": {
+          "event": {
+            "id": "15",
+            "instant": "1",
+            "phase": "140",
+            "stage": "forecast"
+          },
+          "before": "{\n  \"record\": \"ValuesIntegrationForecast#1524/1\",\n  \"Data [1]\": []\n}",
+          "after": "{\n  \"record\": \"ValuesIntegrationForecast#1524/1\",\n  \"Data [1]\": \"1\"\n}",
+          "changed": true
+        },
+        "relation": "exact-value-match"
+      }
+    ],
+    "scope": "Most recent earlier mutation of the identical canonical leaf path in committed trace order. Same-event writes and later events are excluded. A match records value continuity, not psychological necessity or complete causal provenance. No prior mutation does not establish initial-state origin. Derived-source metadata, payload dependencies and omitted history are not resolved by this projection. Absence is distinct from a zero value."
+  },
+  "hashesLater": [
+    "767999936a7f447787bf42999a7394d14a3e5d4491252c7aa8cd641e9fe6233e",
+    "c77b136cc17ff63f5758704fc70d0ba3da464242b6ee7b6cc16f51e87c46c000",
+    "d9775b7ead2eba49bc64952cbdba1c90587f3dc69f285ca45e941443af1fcd48",
+    "723a8f23a7933a2b7d35676f8655900d65c89a99be353f5f4abf9424aa965d47"
+  ]
+}

@@ -55,7 +55,7 @@ qualification elsewhere remains scoped; this table does not reissue research ver
 | 9 Before/after diff | Native event diffs and cross-branch state differences exist. Final demonstration must select and explain a meaningful transition. |
 | 10 Resolution | Native Values reasons/choice/dice records exist. Final selected run must reach and inspect the resolution. |
 | 11 Expand factor | Values reason cards expose die calibration and exact nucleus records. Disposition now shows exact operands, all compiled reason roles, coverage and distributions, with bounded native/browser and historical checks. Complete choice attribution and character-language adequacy remain separate. |
-| 12 Reason-to-history chain | Bounded reason -> evaluation -> recorded parent/source links now pass in browser. General state-read writer provenance and full causal contribution traversal remain unproven. |
+| 12 Reason-to-history chain | Reason -> evaluation -> recorded parent/source links pass in browser. Exact read paths now link to the most recent earlier recorded mutation, with value agreement/mismatch and unresolved origins explicit. Full Values cohort and bounded browser navigation pass; derived-source metadata, payload dependencies and complete causal contribution traversal remain unproven. |
 | 13 Historical stability | First displayed Values reason and ancestry at2/4 now pass bounded browser checks. Full renderer/version/corpus obligations remain open. |
 | 14 Architecture | Searchable owned-root read/write/change/presence counts link to native Timeline events; Disposition constitution -> reasons event18 is browser/native checked. Counts do not establish necessity; complete canonical participation/factor accounting remains due. |
 | 15 Export/copy summary | Earlier Values export evidence has explicit transfer limits. Current file-transfer boundary remains unresolved; do not bypass it through DOM-to-file reconstruction of checkpoints. A concise summary and end-to-end delivery acceptance remain due. |
@@ -82,3 +82,41 @@ qualification is recorded in `workbench-disposition-slider-rev1/receipt.json`: t
 keyboard-selected draft values preserve live hashes; fresh positive creation matches
 original native model/run/save identities. This does not complete the final integrated
 demonstration. See OBSERVABILITY_WORKBENCH_DISPOSITION_PROGRESS.md.
+
+## Recorded state-read history — 2026-10-19
+
+The shared causal-history panel now includes `recorded-state-read-history/0.1` in
+Values, General and Disposition timelines. Each actual read joins the most recent
+earlier mutation of its identical canonical leaf path using committed trace order,
+not event-ID sorting. Same-event mutations and later events are excluded. Unchanged
+writes remain distinct from changes; absent values remain distinct from zero.
+Exact matches, mismatches and no-prior-recorded-mutation outcomes are explicit.
+Navigation selects the prior event without installing simulation state.
+
+LOCAL DISPOSITION: the current timeline projection omits ActualReadRecord derived
+sources/transformation metadata. These links therefore establish recorded exact-path
+value continuity only, not full writer provenance for derived values, initial-state
+origin, payload causality, psychological necessity or observer-admitted knowledge.
+No Campaign3 verdict or obligation is amended. The existing parent links remain
+separate scheduling evidence. Native projection/runtime files under live audit are
+unchanged.
+
+Three tests PASS for trace ordering, repeated reads, unchanged writes, removal,
+mismatches, missing history, same-event/future exclusion, immutable inputs, duplicate
+identity/mutation rejection and explicit10000-event/50000-record limits. Build545
+modules, import boundaries and research obligations PASS (18 conditional retained).
+
+`workbench-state-read-history-rev1/receipt.json` PASS all125 original Values programs,
+625 prefixes,16250 event observations and19000 read observations. Independent reverse
+scan matches every prior mutation and exact read relation; historical reports remain
+identical at later prefixes.13300 exact matches and5700 unresolved prior mutations;
+zero mismatches in this cohort. Counts include repeated historical observations.
+Source archives and original native references are hash-verified against the prior
+complete Values ancestry qualification; no simulation was rerun or modified.
+
+`browser-receipt.json` PASS original program0, prefixes2/4: reason17 -> appraisal16 ->
+prior forecast mutation15, keyboard activation, all four run hashes unchanged during
+navigation, exact joins to full-cohort histories, and identical appraisal history
+after later execution. An unresolved forecast origin remains visible. Shared-component
+browser coverage for General/Disposition and complete derived-source causality remain
+due. The full sixteen-step integrated demonstration is still unqualified.

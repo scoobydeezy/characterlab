@@ -1,0 +1,919 @@
+{
+  "status": "PASS FULL VALUES RETAINED STATE-READ HISTORY",
+  "programs": 125,
+  "prefixes": 625,
+  "eventObservations": 16250,
+  "readObservations": 19000,
+  "relations": {
+    "no-prior-recorded-mutation": 5700,
+    "exact-value-match": 13300
+  },
+  "parent": {
+    "path": "docs/planning/workbench-values-causal-rev2/receipt.json",
+    "sha256": "5160f4ddb7f480b48ba31204bf7a928d529282bc9cf775f0999080f3b7db9c67"
+  },
+  "sources": [
+    {
+      "path": "src/workbench/stateReadHistory.ts",
+      "sha256": "82fc3f9c2dfedeb8a5c3cb06d368f0ce1d961382c8e6c39b8c99fd0feeafb40e"
+    },
+    {
+      "path": "src/workbench/StateReadHistoryPanel.tsx",
+      "sha256": "9338bea0a3e8c0a636e94c71efdd3bc4b41357c00c0e52ef539f3d1cffd43870"
+    },
+    {
+      "path": "src/workbench/CausalHistoryPanel.tsx",
+      "sha256": "5df00ef58cd5a29b88b8a48fc062fe6da8f3f67fccbfda8fcacc9ca08e69a96f"
+    },
+    {
+      "path": "src/workbench/contracts.ts",
+      "sha256": "c0e9239cbbba5341259be2f81199cefb43f7678426d61b653249c232c7b01f73"
+    },
+    {
+      "path": "src/test/workbenchStateReadHistory.test.ts",
+      "sha256": "4b64137fc2df64404e7b9992b89e4f2fca0fa3be356364fbdf76623d2aaf9fd6"
+    },
+    {
+      "path": "scripts/check-workbench-state-read-history.mjs",
+      "sha256": "380ddf9ce66381619dfa45d7abd2914854b07ff9cc0911dcd725aaf12e1932df"
+    }
+  ],
+  "results": [
+    {
+      "index": 0,
+      "path": "run-0.json.gz",
+      "sha256": "5fc38efc1a356ef887acb5575fdd3d9a3108a56ed221c45abe44b5c3ac8f53cc",
+      "source": "docs/planning/workbench-values-causal-rev2/run-0.json.gz",
+      "sourceSha256": "0f089baca029e46b296b4ce9ba4609829727d98b3e2f2b469ea1548db81b971a"
+    },
+    {
+      "index": 1,
+      "path": "run-1.json.gz",
+      "sha256": "27d57faf80af78174f5401d4c5710fe070cb609c936b55f2af9b937cafcba8b8",
+      "source": "docs/planning/workbench-values-causal-rev2/run-1.json.gz",
+      "sourceSha256": "acbe6e7d12613cf139e1ddf37629becb7177868baded74a3933eec0a5078f6fe"
+    },
+    {
+      "index": 2,
+      "path": "run-2.json.gz",
+      "sha256": "2ab69b8f8e0ee8e94b1d4705292b310cf69af26a68d214a42c574fa223aed2f2",
+      "source": "docs/planning/workbench-values-causal-rev2/run-2.json.gz",
+      "sourceSha256": "47e2341cd28a09f3f4930c8b99e376efa09b776a9092cd93ba771b36518c3ab2"
+    },
+    {
+      "index": 3,
+      "path": "run-3.json.gz",
+      "sha256": "976259817f466bdfe0a2a154621d3f6c460be4d08a1d0658a9db8c6ac0023c52",
+      "source": "docs/planning/workbench-values-causal-rev2/run-3.json.gz",
+      "sourceSha256": "4b05d18685b1f37276af2b6b2e00c52fca82d66d5f7f88e9ed2cb2197b0531a1"
+    },
+    {
+      "index": 4,
+      "path": "run-4.json.gz",
+      "sha256": "beb6779a80d43c3e10c17fb023e31959a20631467f6171f1c43c31580a9761c4",
+      "source": "docs/planning/workbench-values-causal-rev2/run-4.json.gz",
+      "sourceSha256": "3ec8dbc2b7175235384afc0b0ef07e2655adc6219bf0b9ae73264e4c5bd1d015"
+    },
+    {
+      "index": 5,
+      "path": "run-5.json.gz",
+      "sha256": "99700d013fc3d542adb4405cb6d9d53a31753d32ef0137e8fd45b96f8d184f13",
+      "source": "docs/planning/workbench-values-causal-rev2/run-5.json.gz",
+      "sourceSha256": "59545fbd7949b6fc7f37460fe01ff9e85692d36d96065cad7997f6dae6b6cd1e"
+    },
+    {
+      "index": 6,
+      "path": "run-6.json.gz",
+      "sha256": "daf578f97f2215b45989e59ef5ef736054bcc1880fd213ea808a7b7615d9acb2",
+      "source": "docs/planning/workbench-values-causal-rev2/run-6.json.gz",
+      "sourceSha256": "32c566342b61cf931fb27e6af5cb37bf0bb8f6ca48626ee36cca42ec85d75781"
+    },
+    {
+      "index": 7,
+      "path": "run-7.json.gz",
+      "sha256": "cc65f85ab7b35b1d8c494872ac3f88cad18941692fb6000570e84d0a7111bdc0",
+      "source": "docs/planning/workbench-values-causal-rev2/run-7.json.gz",
+      "sourceSha256": "11173a141b7aabe48bac290e3ae72a84fa4b2484b0ad0b957c325029ee7d9ded"
+    },
+    {
+      "index": 8,
+      "path": "run-8.json.gz",
+      "sha256": "783b07b47d0bbae6f57a6db6ae177068084de633d0ed3195dacf70fbd90346ab",
+      "source": "docs/planning/workbench-values-causal-rev2/run-8.json.gz",
+      "sourceSha256": "36105321a895761c4f1e519067e6c9bf76135700f91a040fe1be0e663bdcfe7e"
+    },
+    {
+      "index": 9,
+      "path": "run-9.json.gz",
+      "sha256": "fa7932c6233bda5f54343a82b68b84ddc4b20dfa61f7806fe487df22bef609bd",
+      "source": "docs/planning/workbench-values-causal-rev2/run-9.json.gz",
+      "sourceSha256": "804be71a35d395b0f4efb5757304b34ca063ec2fd3051bfbb010e78c71d01cf7"
+    },
+    {
+      "index": 10,
+      "path": "run-10.json.gz",
+      "sha256": "dbf5310f39e6775d744d84aee55cd46554d2edf183e5efd9c95ef2f9cc3d4340",
+      "source": "docs/planning/workbench-values-causal-rev2/run-10.json.gz",
+      "sourceSha256": "ef5cf40408a60987b951933a19194738dbfe48c2e7ff78156cf0889a931ed845"
+    },
+    {
+      "index": 11,
+      "path": "run-11.json.gz",
+      "sha256": "9dbd491639386a1a56aea209243d6f289ee0146b876bba77c1cebe0dfb3de92a",
+      "source": "docs/planning/workbench-values-causal-rev2/run-11.json.gz",
+      "sourceSha256": "851cf415dea973cde9e84f0dc28c5ee1240ef4a3378f00ea1be398cfc9515fe3"
+    },
+    {
+      "index": 12,
+      "path": "run-12.json.gz",
+      "sha256": "c54f9e188f02f614ae965af7dbe04fb48847e0987e03e7b7cdd65b1db16f7802",
+      "source": "docs/planning/workbench-values-causal-rev2/run-12.json.gz",
+      "sourceSha256": "3fa35e2fbc2bfdda1098b6952410ea1947afc827bfd54b31789f74ed3cd5acba"
+    },
+    {
+      "index": 13,
+      "path": "run-13.json.gz",
+      "sha256": "87858a1b8d6db92a7bd94f03471ef9beb1919981405a24d7797912226af8685f",
+      "source": "docs/planning/workbench-values-causal-rev2/run-13.json.gz",
+      "sourceSha256": "b42e022becca6f7d4df854037657d31d32dfc204f87fdff265f742a9f375330c"
+    },
+    {
+      "index": 14,
+      "path": "run-14.json.gz",
+      "sha256": "00834daf0ff1d27634f5d278acef761def7aafa20cbb1c4e31e6425183e525e8",
+      "source": "docs/planning/workbench-values-causal-rev2/run-14.json.gz",
+      "sourceSha256": "e3ad7477879797a827681fb806c32c9c71eec3e1c36a69d958abd221da6ecd05"
+    },
+    {
+      "index": 15,
+      "path": "run-15.json.gz",
+      "sha256": "f5e37a46ffbebb259a197e3bbb8471ba3eeea914393f2f18f621b9f9bc304b1d",
+      "source": "docs/planning/workbench-values-causal-rev2/run-15.json.gz",
+      "sourceSha256": "159d4d7ee0d68daf08397635472632cbfb677287e60ce428eca8a0287d53390e"
+    },
+    {
+      "index": 16,
+      "path": "run-16.json.gz",
+      "sha256": "4ca7ee1f7d6f4a9e10659e83f866b0fe8f54a69dd04488f1b54be761ff121d8b",
+      "source": "docs/planning/workbench-values-causal-rev2/run-16.json.gz",
+      "sourceSha256": "218ae2622a0327a2d691fab43e461dee00df0b4e0f63ee34eb94f3c258e3178d"
+    },
+    {
+      "index": 17,
+      "path": "run-17.json.gz",
+      "sha256": "d64d2d31290db20932381f0fe682c429d0af2921014fd1775e4597a632e45799",
+      "source": "docs/planning/workbench-values-causal-rev2/run-17.json.gz",
+      "sourceSha256": "8d35a98066c82c4004f2f5696d8eba8bb14f8f9e44a29df75960251dcc353464"
+    },
+    {
+      "index": 18,
+      "path": "run-18.json.gz",
+      "sha256": "4a3d24458de90505e502962b098c52368d21be2dbdd7cac0e3fd0917e883aa6b",
+      "source": "docs/planning/workbench-values-causal-rev2/run-18.json.gz",
+      "sourceSha256": "83e201f2b2eefd3b64c2334698ddefbd54666d3e42228605fc6f68170090d9b3"
+    },
+    {
+      "index": 19,
+      "path": "run-19.json.gz",
+      "sha256": "8b24dc9d18eac71cc57dbb9682f4af80b2db712174ea2ecaf348c0ebebbaaa76",
+      "source": "docs/planning/workbench-values-causal-rev2/run-19.json.gz",
+      "sourceSha256": "f708ec6bb4879738f2795290d29ebc2ff2318216acc87bb329c8222e4bbc204f"
+    },
+    {
+      "index": 20,
+      "path": "run-20.json.gz",
+      "sha256": "e19736bc07a79f4bec126cd95485377db4f47f5c4e08aca8ac51a1230a1f8a4c",
+      "source": "docs/planning/workbench-values-causal-rev2/run-20.json.gz",
+      "sourceSha256": "53f508c551affc339d7e2e96120199667f3b13650d72c85fc3b1bc549a623fcb"
+    },
+    {
+      "index": 21,
+      "path": "run-21.json.gz",
+      "sha256": "334a6e9d6380ed0a227015005eeac63a090729eb10a81e5db8d5caa348eeb682",
+      "source": "docs/planning/workbench-values-causal-rev2/run-21.json.gz",
+      "sourceSha256": "d34884831d637abf9578458a56531128677b2ada75e844069c09e6078ef4c9df"
+    },
+    {
+      "index": 22,
+      "path": "run-22.json.gz",
+      "sha256": "9de8591b7753cffef12fab7d7a44630d8a7a1b385a53ed5a643162e36f68ce65",
+      "source": "docs/planning/workbench-values-causal-rev2/run-22.json.gz",
+      "sourceSha256": "f94438bd780c8a1f894f4017b9d9d0a0c423aeacc468926a883fe086c92622bc"
+    },
+    {
+      "index": 23,
+      "path": "run-23.json.gz",
+      "sha256": "651648a49b4129b088812abaa21a0ab4bbf0c1cf3e8a0e94dad698d3992d5de9",
+      "source": "docs/planning/workbench-values-causal-rev2/run-23.json.gz",
+      "sourceSha256": "a0b1fbc956c03cee68a27fc52fbe3cdb222b474f005d3731bc2f7b8dcbb59d65"
+    },
+    {
+      "index": 24,
+      "path": "run-24.json.gz",
+      "sha256": "29e81ef23d8458d11cead1c941a65783572cfa734065eb6d96d00008e049b43d",
+      "source": "docs/planning/workbench-values-causal-rev2/run-24.json.gz",
+      "sourceSha256": "5598ba8a608aa5ca805a065575dee608d492ddf6c64c23b2909243d151911ae5"
+    },
+    {
+      "index": 25,
+      "path": "run-25.json.gz",
+      "sha256": "84970c52baff7e4004ef73ec4d8cb2670dfeac49fb1eab8c39a1a658d1c6b44d",
+      "source": "docs/planning/workbench-values-causal-rev2/run-25.json.gz",
+      "sourceSha256": "24c577d6cda0d9eff91d469fde5dd9684484d303fe3706b6269a97f1cb69f4d8"
+    },
+    {
+      "index": 26,
+      "path": "run-26.json.gz",
+      "sha256": "29bf09d5cc66fe7194e10a36bc8951bc21080049bc14242d344eff02673e6d3e",
+      "source": "docs/planning/workbench-values-causal-rev2/run-26.json.gz",
+      "sourceSha256": "10aed737461823bb425664c1bbdf8bd561b0dd4e5f91e7e8b4f54f78f0a5aeb5"
+    },
+    {
+      "index": 27,
+      "path": "run-27.json.gz",
+      "sha256": "bfd5d430f8bc873fa4f7741217f47c469049b4f7c78550e1c2c6b50ea53fff0d",
+      "source": "docs/planning/workbench-values-causal-rev2/run-27.json.gz",
+      "sourceSha256": "c6aeca32c60b519441288a9e30a589a9d7a84b1cb816a54ef303bedb8d520fa5"
+    },
+    {
+      "index": 28,
+      "path": "run-28.json.gz",
+      "sha256": "cf31e2ce10fb604a45f8830a76b291132d7065dcdabd493927014a0527a8e57f",
+      "source": "docs/planning/workbench-values-causal-rev2/run-28.json.gz",
+      "sourceSha256": "93a3e209073499747979cfc3200110ddff06682a8bcd600808c551a410b6cae4"
+    },
+    {
+      "index": 29,
+      "path": "run-29.json.gz",
+      "sha256": "951472dc9e300534130ea8cc8efec947a1d728cf2affc5e2e049b14f06df875b",
+      "source": "docs/planning/workbench-values-causal-rev2/run-29.json.gz",
+      "sourceSha256": "6c311e67fe013cba7fef79db044d035d143dc77e0c951c60e710583c3306aa5a"
+    },
+    {
+      "index": 30,
+      "path": "run-30.json.gz",
+      "sha256": "2a6c28f20703e1a0cc85328bff253599ee4fcc0356994e0ba033f870dc91d72f",
+      "source": "docs/planning/workbench-values-causal-rev2/run-30.json.gz",
+      "sourceSha256": "cbe8414f4dcfda4b76d306963d4569735053b334a2fed32d7e1a2a3403df9676"
+    },
+    {
+      "index": 31,
+      "path": "run-31.json.gz",
+      "sha256": "9996f047dd8c5fb2d96c61597402b900dc4673a142ea0d4f9a0dda3605e9c308",
+      "source": "docs/planning/workbench-values-causal-rev2/run-31.json.gz",
+      "sourceSha256": "d27e247570179c3f3866aefdb4193678017f8b532917b830039f6b4666748528"
+    },
+    {
+      "index": 32,
+      "path": "run-32.json.gz",
+      "sha256": "56075e33247c58ad8da5359b5512acef5bec2a56b522b065f6bd21c272afc29b",
+      "source": "docs/planning/workbench-values-causal-rev2/run-32.json.gz",
+      "sourceSha256": "d831511c8acf0f7daa9fb225bbc9110bbd46adf2b9b75719a812f92d12427eec"
+    },
+    {
+      "index": 33,
+      "path": "run-33.json.gz",
+      "sha256": "05565d947385e7e6b2e53793e383ff1edae412e2adccf49cc69afac56fd1b4a8",
+      "source": "docs/planning/workbench-values-causal-rev2/run-33.json.gz",
+      "sourceSha256": "08af21156c410bfa9b7aa5b9628ebd2be9329f4ca744026d9cc3b13bf0df8909"
+    },
+    {
+      "index": 34,
+      "path": "run-34.json.gz",
+      "sha256": "e4e6e9313f487814ec48b9c247e6dcf5ed03f3118f8f7fc9444028dbf2c9eeda",
+      "source": "docs/planning/workbench-values-causal-rev2/run-34.json.gz",
+      "sourceSha256": "e121cd0a9b2e3dec897a894bd7061eac6dde9b7d0217def0875c9775f1d86b2c"
+    },
+    {
+      "index": 35,
+      "path": "run-35.json.gz",
+      "sha256": "59261c02be2f602fbd15364447212192c444ea07550c9dd5158bf6a8056f3f27",
+      "source": "docs/planning/workbench-values-causal-rev2/run-35.json.gz",
+      "sourceSha256": "3c2f8a184fb7fcc11cf0b707b6a6068b859d1d73bb071b425009cb1f2501f78e"
+    },
+    {
+      "index": 36,
+      "path": "run-36.json.gz",
+      "sha256": "9ce03a14ba88783e8c84243e7ee15d066362ee88537f3660d74d6d231d77739f",
+      "source": "docs/planning/workbench-values-causal-rev2/run-36.json.gz",
+      "sourceSha256": "8730eed332280788eaaeb18a6b8530948a23ccff9aebd443d71b930baff518e4"
+    },
+    {
+      "index": 37,
+      "path": "run-37.json.gz",
+      "sha256": "131ef93335576cfea5afa218a38c42edfc0a656c7787bfb1a8da222232fb12cd",
+      "source": "docs/planning/workbench-values-causal-rev2/run-37.json.gz",
+      "sourceSha256": "114d2cbcdd2728db1f94fe9dc813d72d99c82bac86978251df6a5882bb2178e1"
+    },
+    {
+      "index": 38,
+      "path": "run-38.json.gz",
+      "sha256": "a865193bbef237f2c18b918997ef53eee29705b1e2daee87a9f220d418274bdf",
+      "source": "docs/planning/workbench-values-causal-rev2/run-38.json.gz",
+      "sourceSha256": "24b075723b5bde4d3af9c8013a94d485ac3d610ca95aaade7de2ef755f7851f4"
+    },
+    {
+      "index": 39,
+      "path": "run-39.json.gz",
+      "sha256": "8d356c42bbdffc21bdb84f8f42e482b71f04bceb70b6a01d29c889c6c9a4175e",
+      "source": "docs/planning/workbench-values-causal-rev2/run-39.json.gz",
+      "sourceSha256": "0c4f5c7e34a4be4245339fed0ed0a6feb0722df871946561ad40615780f51172"
+    },
+    {
+      "index": 40,
+      "path": "run-40.json.gz",
+      "sha256": "c907365f3780ac658d51c7cfd019b62e6931e09a2da2a0476b293a3f133ac77c",
+      "source": "docs/planning/workbench-values-causal-rev2/run-40.json.gz",
+      "sourceSha256": "3366de4bddf70178c1864370cd9484210bd9aecf7720364dd4511e7f40403c56"
+    },
+    {
+      "index": 41,
+      "path": "run-41.json.gz",
+      "sha256": "9bf95118901646b5215d78b38fcc334ce1bc3d3ef169d6dc227d4408ef23b827",
+      "source": "docs/planning/workbench-values-causal-rev2/run-41.json.gz",
+      "sourceSha256": "1aed5bcc36ee42d122e5c0d56b13dca80349b5f381378507a8fe220339a25c88"
+    },
+    {
+      "index": 42,
+      "path": "run-42.json.gz",
+      "sha256": "84107b34a65fdd889a3204e02e73579fe345ee7099c3cab54f34674fceab9f18",
+      "source": "docs/planning/workbench-values-causal-rev2/run-42.json.gz",
+      "sourceSha256": "22a5c9bf2d454cc10c299ffcbeb0419113f11058b30803804f415f20d7cc69e7"
+    },
+    {
+      "index": 43,
+      "path": "run-43.json.gz",
+      "sha256": "041fd28d36f94659da54adfd13c83e4f105f343fc8bdc1ebab6468622607cacf",
+      "source": "docs/planning/workbench-values-causal-rev2/run-43.json.gz",
+      "sourceSha256": "b19924b3123303b540e31343d74505c3345330c690144fb0c32eef3dc6f62988"
+    },
+    {
+      "index": 44,
+      "path": "run-44.json.gz",
+      "sha256": "bcaeb391fec10769e2493d763faab9e96780916040599f0d4976cce1126e28f8",
+      "source": "docs/planning/workbench-values-causal-rev2/run-44.json.gz",
+      "sourceSha256": "59ee5a6388b88094dbd0d310eb484d903fa587f3643113921a55b7bb6af24dbb"
+    },
+    {
+      "index": 45,
+      "path": "run-45.json.gz",
+      "sha256": "460b2bfbd05ee4c6c4c07d8926a2bddfa8803b4acc28b3e05737f4119fb9fe20",
+      "source": "docs/planning/workbench-values-causal-rev2/run-45.json.gz",
+      "sourceSha256": "f58e010e05f0dff2d945348389c4a3581032b6908deab4a3123d241519c1e498"
+    },
+    {
+      "index": 46,
+      "path": "run-46.json.gz",
+      "sha256": "955764bcf115db5e0d0cbf3f69884de205e6bda15b677cb204b50298df4b7db3",
+      "source": "docs/planning/workbench-values-causal-rev2/run-46.json.gz",
+      "sourceSha256": "fa8e5301a4f18e8115dccf45344ee2bd83ce670a7f4265986830a46e7811efa9"
+    },
+    {
+      "index": 47,
+      "path": "run-47.json.gz",
+      "sha256": "5daaf07cf3225e5dc101bee7c63ab0b9d79d96075ba378ed38cf00dcc3729433",
+      "source": "docs/planning/workbench-values-causal-rev2/run-47.json.gz",
+      "sourceSha256": "517ac70425f4afc64e017dc5a3f11fb177d070ec9a25a4af697968265f584e2b"
+    },
+    {
+      "index": 48,
+      "path": "run-48.json.gz",
+      "sha256": "d5a9aa7b2da8f5bdb35d4d2c6827f92b43686e00093ed619da54386924f524f4",
+      "source": "docs/planning/workbench-values-causal-rev2/run-48.json.gz",
+      "sourceSha256": "41cc07617424c7beac08626a26589ace21149f423a4d19cb467d5aa82d648d29"
+    },
+    {
+      "index": 49,
+      "path": "run-49.json.gz",
+      "sha256": "737b2c2dbaa7c1707e3e89d8cafe9002d0c287f1f1e923cad8e802aeb927c364",
+      "source": "docs/planning/workbench-values-causal-rev2/run-49.json.gz",
+      "sourceSha256": "aaf3ad8c8b7e69ca45ffe72b4273c23bb9c67bfdc959bff3f4d2057192f516e5"
+    },
+    {
+      "index": 50,
+      "path": "run-50.json.gz",
+      "sha256": "df08f7aa76f8bf3cb6737e47cabee61e60738cee3f3e0901f4f3dc8c43a98cbd",
+      "source": "docs/planning/workbench-values-causal-rev2/run-50.json.gz",
+      "sourceSha256": "6545c1be93c338e3da842184bb7f4a541f455db8a55f67113e698801d1a4ffe3"
+    },
+    {
+      "index": 51,
+      "path": "run-51.json.gz",
+      "sha256": "2c1bd91c02a758253aed013870a5aea449817184ab62011e01c332c15241b57e",
+      "source": "docs/planning/workbench-values-causal-rev2/run-51.json.gz",
+      "sourceSha256": "ea9c383f67f4571c2efbd321131f52df9ed4bd9cc73e787bd63297e6f5cc2cd0"
+    },
+    {
+      "index": 52,
+      "path": "run-52.json.gz",
+      "sha256": "601a832e361bb9919b0b47e1c5901dae3d88e9024886255b02aead706a1b8bc4",
+      "source": "docs/planning/workbench-values-causal-rev2/run-52.json.gz",
+      "sourceSha256": "4770d96818c0a939161dba7931bbd903cabde84e0876cf5b1581f868d7ffd193"
+    },
+    {
+      "index": 53,
+      "path": "run-53.json.gz",
+      "sha256": "2c5d651c9a386ffd5cd6afd13779cb1b2302262c99189e503b62649f13da7d95",
+      "source": "docs/planning/workbench-values-causal-rev2/run-53.json.gz",
+      "sourceSha256": "771e98a15f1807a27ce1f981acc3bf6d55df6f4d5c5772d7bde9d25411576356"
+    },
+    {
+      "index": 54,
+      "path": "run-54.json.gz",
+      "sha256": "ef5b198e14ccec60c518fc10a47da6d252f389fbefbab2198a023c52d1d94e5f",
+      "source": "docs/planning/workbench-values-causal-rev2/run-54.json.gz",
+      "sourceSha256": "84db75b2436c48d8ca4b87998fd60a6b2d70ebab615e76a23181d6e3f8461352"
+    },
+    {
+      "index": 55,
+      "path": "run-55.json.gz",
+      "sha256": "8e7ea27e4c981a4597b43f21624d5f57fd79d4e53d3feee3d1ffeb1b49248806",
+      "source": "docs/planning/workbench-values-causal-rev2/run-55.json.gz",
+      "sourceSha256": "2e3e4f27ecf9af57255a91dd3b6004b3f91b0a3eca4f5b0efdd84169ff9d788a"
+    },
+    {
+      "index": 56,
+      "path": "run-56.json.gz",
+      "sha256": "945291d0319911c066b9ae353e0b9e890894bab16d30b1f6651d41cb6f996bee",
+      "source": "docs/planning/workbench-values-causal-rev2/run-56.json.gz",
+      "sourceSha256": "2eb824b3f6cf52616d61947f40a10e4bca24e9aadb18ecc0b5fd5486f064d68b"
+    },
+    {
+      "index": 57,
+      "path": "run-57.json.gz",
+      "sha256": "fd592ed01af7b9db5af8c5fea0144630115af391da976ca82b02b20f07509242",
+      "source": "docs/planning/workbench-values-causal-rev2/run-57.json.gz",
+      "sourceSha256": "dac0d7a62a5b12e3cecfa7190d2a2d4d734f84b3aa364fbe38e89848476df4d5"
+    },
+    {
+      "index": 58,
+      "path": "run-58.json.gz",
+      "sha256": "e953b6bcd85e4c032631c94b1e628f16b3ae5a29b7c14f23ae8bccee90f630ae",
+      "source": "docs/planning/workbench-values-causal-rev2/run-58.json.gz",
+      "sourceSha256": "0ca2ee8629566ca4a53104d23efb990c133c995e82adf9597fcb237b4f8123cf"
+    },
+    {
+      "index": 59,
+      "path": "run-59.json.gz",
+      "sha256": "617d12cc8a634f571fd7b222acd638c59c802971802717fcdc6c7840dd77c822",
+      "source": "docs/planning/workbench-values-causal-rev2/run-59.json.gz",
+      "sourceSha256": "77e1d9819193ba9458e00afc8bc92d388c894cd6b175a3be1d949f9f126b2c75"
+    },
+    {
+      "index": 60,
+      "path": "run-60.json.gz",
+      "sha256": "4af96df62b86c9da91be487e9658d93f40c371bd37a1fafcb4d462392d2e4ad6",
+      "source": "docs/planning/workbench-values-causal-rev2/run-60.json.gz",
+      "sourceSha256": "e16b9802c22bfb3ad9d8b2c181f71cd8c5dd3dd2683dc033ab536e91600de23d"
+    },
+    {
+      "index": 61,
+      "path": "run-61.json.gz",
+      "sha256": "c183006b29fc942af6ba50e4be0e9bfacf00ff58a389ecdacc2e8c966a37da92",
+      "source": "docs/planning/workbench-values-causal-rev2/run-61.json.gz",
+      "sourceSha256": "8d0c97daae4dc5adbef58a4ceeb4ca2510d25a97934e76d6766cae941e2d8b28"
+    },
+    {
+      "index": 62,
+      "path": "run-62.json.gz",
+      "sha256": "6f430610a1a4418fb488f83f78b2bc3ba70ef2f2310e83b6f891561b04d450a4",
+      "source": "docs/planning/workbench-values-causal-rev2/run-62.json.gz",
+      "sourceSha256": "683b8efaf2e0bea253013cc4de1e121bbf5e5afde1c5207beb30b588776d4a13"
+    },
+    {
+      "index": 63,
+      "path": "run-63.json.gz",
+      "sha256": "9b173f517a6612d36e52bfe921ca214d04732b2f0d78c5bb0a44e9eeb03eb2b8",
+      "source": "docs/planning/workbench-values-causal-rev2/run-63.json.gz",
+      "sourceSha256": "272275de8e79f69e9703f80c9e49db3fd5e643fca6ebe7652070e14953c98d66"
+    },
+    {
+      "index": 64,
+      "path": "run-64.json.gz",
+      "sha256": "706acdb7bb9adc31a41a758dc3d9c2c1d9a04fe1bb53efe5bdcd38dd0372956a",
+      "source": "docs/planning/workbench-values-causal-rev2/run-64.json.gz",
+      "sourceSha256": "e586e3e2c648c905734e6666ab03e53c7d3885f6aeaaf1a94fd84716cd4a09dc"
+    },
+    {
+      "index": 65,
+      "path": "run-65.json.gz",
+      "sha256": "c56078ac253517af8d489fd4b2bf1e36d0198269f9adafbb7675ef52655ae2aa",
+      "source": "docs/planning/workbench-values-causal-rev2/run-65.json.gz",
+      "sourceSha256": "c9ab42e5ef25c38144936a9c470421d5b733454062c27b4996555effc4cd30e9"
+    },
+    {
+      "index": 66,
+      "path": "run-66.json.gz",
+      "sha256": "289ee2c473892d1c9064d01f75639b832e2543dfb14fb8fea6f8f9bb19fa5bdb",
+      "source": "docs/planning/workbench-values-causal-rev2/run-66.json.gz",
+      "sourceSha256": "ac6c9564df184af33465b92332888c59b0a5424260540457883fd4787e1932bc"
+    },
+    {
+      "index": 67,
+      "path": "run-67.json.gz",
+      "sha256": "b628f84ae2e0060bc935bc98f7f2d6e884a426b4c1c3c6ef841c5f2b06483e64",
+      "source": "docs/planning/workbench-values-causal-rev2/run-67.json.gz",
+      "sourceSha256": "d7738ce70047d7e8fe12444e1693b5d5bc7f947dccc10d816e1a514232ff9b4b"
+    },
+    {
+      "index": 68,
+      "path": "run-68.json.gz",
+      "sha256": "46da0830d712dac284159ef3596e3937528a84c2c55487d1b37c6d2ae8fb44b7",
+      "source": "docs/planning/workbench-values-causal-rev2/run-68.json.gz",
+      "sourceSha256": "9fceb32ad347a16b3ae3636150f74bd0c382683c062518360974cb4404b2d88d"
+    },
+    {
+      "index": 69,
+      "path": "run-69.json.gz",
+      "sha256": "96864feb0f293a0cafd943902731ac2fb513f3f8fe0d5f90ec16e58ec29aadb5",
+      "source": "docs/planning/workbench-values-causal-rev2/run-69.json.gz",
+      "sourceSha256": "969d11980ea39093406d5224742f6b1e9e6ebc4451e702745844cdbd80ed2d8e"
+    },
+    {
+      "index": 70,
+      "path": "run-70.json.gz",
+      "sha256": "3b3e5fbf193f489022af6b5af3200dde7a2a4fd9af6a512ccdca472f6faf84c6",
+      "source": "docs/planning/workbench-values-causal-rev2/run-70.json.gz",
+      "sourceSha256": "ce7f504624e9a1640d290d2398405dcc9183e80347392c6ca9a7fb523caf769e"
+    },
+    {
+      "index": 71,
+      "path": "run-71.json.gz",
+      "sha256": "1eeaa08df5133432651e1a2fc701262e40644bacba6ff7309da59474661677fb",
+      "source": "docs/planning/workbench-values-causal-rev2/run-71.json.gz",
+      "sourceSha256": "b1128d03ec3b850992c823422b1082376b963d4a11fea88a45ca1d7d878d42c3"
+    },
+    {
+      "index": 72,
+      "path": "run-72.json.gz",
+      "sha256": "049bc5e0ae07c994a2919f2253d6801383f504a9d0fb4aa873b87c2f9db07977",
+      "source": "docs/planning/workbench-values-causal-rev2/run-72.json.gz",
+      "sourceSha256": "608d8dc4eafa8911667f99774a71ea027e7d72d2cc62c584522f2395d258264d"
+    },
+    {
+      "index": 73,
+      "path": "run-73.json.gz",
+      "sha256": "9e3c968b8d4eb31dc28ad3c47690598cdf372ef7c769dbe62b2b0a73efce6fdf",
+      "source": "docs/planning/workbench-values-causal-rev2/run-73.json.gz",
+      "sourceSha256": "8f103c6a264eb2abc32396f7912a33c9122e847e43810ba7a568cc33369b7ef7"
+    },
+    {
+      "index": 74,
+      "path": "run-74.json.gz",
+      "sha256": "41337536c49e85bfebe9b859d0fb7cf093e135eedb452129b8e68a9ab7dc3f88",
+      "source": "docs/planning/workbench-values-causal-rev2/run-74.json.gz",
+      "sourceSha256": "74bbc21f27dad70e6d0a24147015a0a21dcf2e7f40fc92fd99f29047b25a63c1"
+    },
+    {
+      "index": 75,
+      "path": "run-75.json.gz",
+      "sha256": "af39ab91856d3db913d8223cfc98c714089833b6cfb4405dcbb5c3b5c4f03ef3",
+      "source": "docs/planning/workbench-values-causal-rev2/run-75.json.gz",
+      "sourceSha256": "2586b7469278c13fc3cfc067c01d9364d1e18a5ff74a844a492f9d8ac4412b6c"
+    },
+    {
+      "index": 76,
+      "path": "run-76.json.gz",
+      "sha256": "e78e359d5f43b395b6e50cfcc08100a3ee5ff7b8807dc6f3cecc9e6f5a5e31cf",
+      "source": "docs/planning/workbench-values-causal-rev2/run-76.json.gz",
+      "sourceSha256": "4b465c0874742a463a3811763f8e18f442955ab9d2def4e877087e9db28b9cb8"
+    },
+    {
+      "index": 77,
+      "path": "run-77.json.gz",
+      "sha256": "18d1c32bbc6805bf945ae1fd8e6ddfa042544e70b878b227d81f0b87f7c380ca",
+      "source": "docs/planning/workbench-values-causal-rev2/run-77.json.gz",
+      "sourceSha256": "742c48d9126cd73d0d243c8f94cf575fb96028adb31542266e5293f0e76ced63"
+    },
+    {
+      "index": 78,
+      "path": "run-78.json.gz",
+      "sha256": "6fc8c96ece26b06ee5a29eeb726b0fb53db2a533c96ebf20abf9ab936b237a0a",
+      "source": "docs/planning/workbench-values-causal-rev2/run-78.json.gz",
+      "sourceSha256": "2ecae2070d2d24350de3a080aa2f5d175b909ebd30a08bd3e1a342339c6869f0"
+    },
+    {
+      "index": 79,
+      "path": "run-79.json.gz",
+      "sha256": "e7b55ce7afa73f73101514d6a5b48cff21cfd55661e84ca3ec743070a86064e2",
+      "source": "docs/planning/workbench-values-causal-rev2/run-79.json.gz",
+      "sourceSha256": "014ff2de6b7affe7f7384132318d9980823ebeb793bda47da62763de4293be07"
+    },
+    {
+      "index": 80,
+      "path": "run-80.json.gz",
+      "sha256": "961c96b075b43349b62938b91d445deacf55b93da96683190030b7d070080439",
+      "source": "docs/planning/workbench-values-causal-rev2/run-80.json.gz",
+      "sourceSha256": "82ff518bde73e983a002536d864f26b2c8d6d60b5c97e29bfd03c0d9681e486b"
+    },
+    {
+      "index": 81,
+      "path": "run-81.json.gz",
+      "sha256": "e5e228db3f663b8b2ba5290d80f8b160a53bbe192651cd1b0291de6c0e38c907",
+      "source": "docs/planning/workbench-values-causal-rev2/run-81.json.gz",
+      "sourceSha256": "eb8a99f489289ff0bd52c8a1eadd4806251c347acb50e059c216e07c1e9bb345"
+    },
+    {
+      "index": 82,
+      "path": "run-82.json.gz",
+      "sha256": "2ec132312f0bdb49f08a386894c6848ae7c3378193ea8b8ccfab1fc69ac902fe",
+      "source": "docs/planning/workbench-values-causal-rev2/run-82.json.gz",
+      "sourceSha256": "3e72a11dc210ff2e5c088901a8494dce29d7e665bd8b3454f2282673f18b610d"
+    },
+    {
+      "index": 83,
+      "path": "run-83.json.gz",
+      "sha256": "fae7ec9fad91b52c730dae5084e5c92979264c5acd79aaedb734274fecae001d",
+      "source": "docs/planning/workbench-values-causal-rev2/run-83.json.gz",
+      "sourceSha256": "56ce312decd0590451b1183e0de53e95f7eded4776da672ca34b3a27e4918db3"
+    },
+    {
+      "index": 84,
+      "path": "run-84.json.gz",
+      "sha256": "3c5a7c54f6f7d115d828c2f9705a0210d2d24306d0beb55e161a7d8a262e95cb",
+      "source": "docs/planning/workbench-values-causal-rev2/run-84.json.gz",
+      "sourceSha256": "5df73809cb76a2911ea6e64274df50f39ad51ac6a53d72ab5322c6a8ad6fd637"
+    },
+    {
+      "index": 85,
+      "path": "run-85.json.gz",
+      "sha256": "ff7f8292e22a5c5a35bd480c1861e2f2a2a38faa99ebddca9214e6682e022c94",
+      "source": "docs/planning/workbench-values-causal-rev2/run-85.json.gz",
+      "sourceSha256": "a4bfb10790bf22f5ca2245de4fd7bcb4d0ba6cc210425e738bb6415b6c22155b"
+    },
+    {
+      "index": 86,
+      "path": "run-86.json.gz",
+      "sha256": "8ffc6d03e326df8c9356aca00dbb6598f0eed77cc1e7742cd57f79d6b026a4ac",
+      "source": "docs/planning/workbench-values-causal-rev2/run-86.json.gz",
+      "sourceSha256": "759d4dbb38f20e3fce7efb7e9e7db3ddca178e23950b6580bea807f00512a3a9"
+    },
+    {
+      "index": 87,
+      "path": "run-87.json.gz",
+      "sha256": "cca5f28a2798ab4c82abde304669c7e2c6314544950a831ca07101557a317ebf",
+      "source": "docs/planning/workbench-values-causal-rev2/run-87.json.gz",
+      "sourceSha256": "28c32682f1eee62e6982f7954bf23269aff2cea33ddc7041fe1890fa3c9a1201"
+    },
+    {
+      "index": 88,
+      "path": "run-88.json.gz",
+      "sha256": "a01011beefb71b4a54f6c5e5e8c6417627d0a23c9a3bcf8f8d59d39c7a925437",
+      "source": "docs/planning/workbench-values-causal-rev2/run-88.json.gz",
+      "sourceSha256": "75f0b4979ec9584ab76fc97b14bbd1377885ddaa9dcface310b835db0f5425f5"
+    },
+    {
+      "index": 89,
+      "path": "run-89.json.gz",
+      "sha256": "57db179c668f0b321b66187793c06272622a351d976d4226d87591e2f94932db",
+      "source": "docs/planning/workbench-values-causal-rev2/run-89.json.gz",
+      "sourceSha256": "58338a548be7b52e730cc806aaeb9dffb76281f511d7dbdea35a5affbe95f9f7"
+    },
+    {
+      "index": 90,
+      "path": "run-90.json.gz",
+      "sha256": "ab3ef271108def766b17c1c44d4b87a55556df0dfc946dc696a8c360424c06d9",
+      "source": "docs/planning/workbench-values-causal-rev2/run-90.json.gz",
+      "sourceSha256": "76e7a675638e9fae83b5e6b0502c517b42883fde32e6bceeb6e5e5777b9bc089"
+    },
+    {
+      "index": 91,
+      "path": "run-91.json.gz",
+      "sha256": "f0698848aa2d299d98601c008ebfc85a435d7e00304eb73f26193f536f3aef47",
+      "source": "docs/planning/workbench-values-causal-rev2/run-91.json.gz",
+      "sourceSha256": "a98049278f7f0a555d7b24ebff41f8dbf2a75822344c54c1b6b63b3e12a94cd7"
+    },
+    {
+      "index": 92,
+      "path": "run-92.json.gz",
+      "sha256": "8600527b5f19f12f4dd17f6061bf6274e791b2ed5010e2e37e37ea313ed5dedb",
+      "source": "docs/planning/workbench-values-causal-rev2/run-92.json.gz",
+      "sourceSha256": "2b1f2d607d327acda316037c9d7cf86bfd34642b7650b21ba8ec3f48762a2ab4"
+    },
+    {
+      "index": 93,
+      "path": "run-93.json.gz",
+      "sha256": "63c5a8eaa0561377dba6140b1cc9d49d6a7f27f51263167b74fb654b1e673cda",
+      "source": "docs/planning/workbench-values-causal-rev2/run-93.json.gz",
+      "sourceSha256": "a8ae1c14c3ca9b43a6bf5b9cfa2a60a0ffb3bbca25451b6fea6bdf385a4dec6e"
+    },
+    {
+      "index": 94,
+      "path": "run-94.json.gz",
+      "sha256": "548bf4d10b1efc9c0c62b836b52bcc1aae74fd051d3cb41f3f30cad3f82de51c",
+      "source": "docs/planning/workbench-values-causal-rev2/run-94.json.gz",
+      "sourceSha256": "5081bd79e53b1d5bc73187be5dc1e90b7f55660c1f50bab84c7e5fc54522d4fd"
+    },
+    {
+      "index": 95,
+      "path": "run-95.json.gz",
+      "sha256": "e0f046ce53252b2a31cc5c262f1a56e3434a07b0fe5d8187fa43afd01f8b69b6",
+      "source": "docs/planning/workbench-values-causal-rev2/run-95.json.gz",
+      "sourceSha256": "0692b7ab2e4944c1c2825af7b3db94660ca78aba6a2cc6e0aea6605b5526651d"
+    },
+    {
+      "index": 96,
+      "path": "run-96.json.gz",
+      "sha256": "bde6248ced3cc271146070c3359d3a1a1ea17e0639cd635baf388271c2bb7415",
+      "source": "docs/planning/workbench-values-causal-rev2/run-96.json.gz",
+      "sourceSha256": "9a028809248fcb098b5c68b0e30886ab2e775d318d66a5aa4add47498b7e18f2"
+    },
+    {
+      "index": 97,
+      "path": "run-97.json.gz",
+      "sha256": "0e1edc6583e328d4050fef23a2f4a72d26c7075ac6fa188888cb5b5f53f854e4",
+      "source": "docs/planning/workbench-values-causal-rev2/run-97.json.gz",
+      "sourceSha256": "8082f510574d8ef52f4fbc09799a2ed46f3504e78248c2b1aa5a3bac5be993b8"
+    },
+    {
+      "index": 98,
+      "path": "run-98.json.gz",
+      "sha256": "d215eb0eb029b2882780f884c1079b459d4bce410667935f2e59977928484607",
+      "source": "docs/planning/workbench-values-causal-rev2/run-98.json.gz",
+      "sourceSha256": "ca38a0f78601c5823eb7a0005306c86bbbf722085f13124fd9685cd2effcba04"
+    },
+    {
+      "index": 99,
+      "path": "run-99.json.gz",
+      "sha256": "99ca4adc2484d273b6733c37dcd67d46f6d1f75fbf7d9fbfba221f8a490e979b",
+      "source": "docs/planning/workbench-values-causal-rev2/run-99.json.gz",
+      "sourceSha256": "aa38bb57ec7d0eb3d89900f343d50e97addddc12a2591a71935e772efb9502bd"
+    },
+    {
+      "index": 100,
+      "path": "run-100.json.gz",
+      "sha256": "529f22db40d1cde366e6465ad6849f994816c611f1d02fab5d11638e8ce813f7",
+      "source": "docs/planning/workbench-values-causal-rev2/run-100.json.gz",
+      "sourceSha256": "ee1680f91a0c9f1bae222ab4b75a4a1c9fcfe9ecc9ec5ebb0f0021a4e0196827"
+    },
+    {
+      "index": 101,
+      "path": "run-101.json.gz",
+      "sha256": "c30258bf2839d6240ef147fc547c24c60b04bb883ef2e38b415b93eb9d179957",
+      "source": "docs/planning/workbench-values-causal-rev2/run-101.json.gz",
+      "sourceSha256": "f6ea83563561d3381a3e3d1994b833467a0eac101778a3891ebb9a6cff072047"
+    },
+    {
+      "index": 102,
+      "path": "run-102.json.gz",
+      "sha256": "bb682a6346ff2531bfe04764d2b1705e5e4aac88f50a78313041f3daf67be8a5",
+      "source": "docs/planning/workbench-values-causal-rev2/run-102.json.gz",
+      "sourceSha256": "763e49ba9039ea1f2ccf74e61e95af4ad1fd0dc38be0f6db816982f7366184fe"
+    },
+    {
+      "index": 103,
+      "path": "run-103.json.gz",
+      "sha256": "85a5688b24ae60b07971039449a94c4667b3ff81feba13332fb14dc08d19ecbe",
+      "source": "docs/planning/workbench-values-causal-rev2/run-103.json.gz",
+      "sourceSha256": "5a1a0db7e339d1fdbac89d23fbcd18fea751fb6c3939bd4ab16467eba4e9f6ea"
+    },
+    {
+      "index": 104,
+      "path": "run-104.json.gz",
+      "sha256": "f8b6dbeab94796cdd26ac39b76b049d25452514b7be74a4d74040c92f3a33c09",
+      "source": "docs/planning/workbench-values-causal-rev2/run-104.json.gz",
+      "sourceSha256": "ddff040da9061235297d54e9e627185fc7a4893a6a2dea86dbe914d97f0e89f0"
+    },
+    {
+      "index": 105,
+      "path": "run-105.json.gz",
+      "sha256": "4a8b3324708d68b6290428b1c196b4033cfc1087811d596366b7b6f53a1aa499",
+      "source": "docs/planning/workbench-values-causal-rev2/run-105.json.gz",
+      "sourceSha256": "d4b4c321f04d72232f38923c1b1b7388fb958219cdb983c9bc44b0379801b36d"
+    },
+    {
+      "index": 106,
+      "path": "run-106.json.gz",
+      "sha256": "77eae16dd65b1c123cfe77a152d58e667f9d2adaa0e46ac451c9c7c2c0d039e4",
+      "source": "docs/planning/workbench-values-causal-rev2/run-106.json.gz",
+      "sourceSha256": "d1a87c75c6531d0604b406ef23667a9f466e59c11ebf3c5b2adbb37233dd5c89"
+    },
+    {
+      "index": 107,
+      "path": "run-107.json.gz",
+      "sha256": "19d629643261c41e5cfd12fee628f56dbc640f6d9407c61622aacf2275a2cbad",
+      "source": "docs/planning/workbench-values-causal-rev2/run-107.json.gz",
+      "sourceSha256": "d63eb8066ad1d35af735dbb6b5125ba57005e145f4886442f481edc66facdadf"
+    },
+    {
+      "index": 108,
+      "path": "run-108.json.gz",
+      "sha256": "a6ed375cc598b7af703559e69608a20b4a3b5708f907b08b9590acaffbc691b4",
+      "source": "docs/planning/workbench-values-causal-rev2/run-108.json.gz",
+      "sourceSha256": "a13b2b7532ac8f577f64232059c98415a45d670a56e3bddfde47f101484444db"
+    },
+    {
+      "index": 109,
+      "path": "run-109.json.gz",
+      "sha256": "6fada14cca990d8609cd9eb5966bc02eb380ed7a379393e1c291550c11d16f95",
+      "source": "docs/planning/workbench-values-causal-rev2/run-109.json.gz",
+      "sourceSha256": "b62862d72c2301e649db91b4a403bfeda3753a641bf3f8e26c0211084872c08f"
+    },
+    {
+      "index": 110,
+      "path": "run-110.json.gz",
+      "sha256": "a1bb03ff0872568614ca8a55f45d881f68167896ed9047f79ff565ac140548ef",
+      "source": "docs/planning/workbench-values-causal-rev2/run-110.json.gz",
+      "sourceSha256": "f7681605b77f194397c28d3f1e4f294b6cc7e03ea48cbc0ce251cb80ed71919d"
+    },
+    {
+      "index": 111,
+      "path": "run-111.json.gz",
+      "sha256": "d4153cadba8a647a14569cd17a9efbe3283ec8a985abd69542e6b9f0419e2a99",
+      "source": "docs/planning/workbench-values-causal-rev2/run-111.json.gz",
+      "sourceSha256": "6fbc8bb3c01cac7f118d7f4318ab0f299c7416db335981ddaed15b189796b0a0"
+    },
+    {
+      "index": 112,
+      "path": "run-112.json.gz",
+      "sha256": "4f981e877849f5c1b361968b7b563b621a2665f2de046bc6cf24b1dde7628bcf",
+      "source": "docs/planning/workbench-values-causal-rev2/run-112.json.gz",
+      "sourceSha256": "c33f1004833ca1420f62466659c836de6d65d140802c838d5ad6952e5be85608"
+    },
+    {
+      "index": 113,
+      "path": "run-113.json.gz",
+      "sha256": "2f67ca382accbcb28d3e49cc4e76ffe0a893bbefd8cca3222954a614f11183ef",
+      "source": "docs/planning/workbench-values-causal-rev2/run-113.json.gz",
+      "sourceSha256": "676606a334c32fb9eef3b72d6b0f4c1c0b7d16dfe333f4f3eea74f509c1e704d"
+    },
+    {
+      "index": 114,
+      "path": "run-114.json.gz",
+      "sha256": "da4ba21bf746c05751afd40c1008a98b6dd7b9bbee75159127274a5d878d60e8",
+      "source": "docs/planning/workbench-values-causal-rev2/run-114.json.gz",
+      "sourceSha256": "963a342b7fb508af41a3f0e6203b606b61e9fb29fd0f7661597018f2c0dd9058"
+    },
+    {
+      "index": 115,
+      "path": "run-115.json.gz",
+      "sha256": "750682706e7b6e7e1bf3264855a6e980151b59b1c5f6cb9499cdf2c67e79762e",
+      "source": "docs/planning/workbench-values-causal-rev2/run-115.json.gz",
+      "sourceSha256": "8b0c491a761fa4c3ee982e8b4ddd5a6f00f1660b8ea8b2113dd3e1172164e2be"
+    },
+    {
+      "index": 116,
+      "path": "run-116.json.gz",
+      "sha256": "ebc084206fdb529ee4f79f3acbdc8cf7e1978e072d8804b52e776a005b8be1e5",
+      "source": "docs/planning/workbench-values-causal-rev2/run-116.json.gz",
+      "sourceSha256": "d616674d709f6fdbaa14f95a1230fe7dbf564f29a633081fab954713fe9ed296"
+    },
+    {
+      "index": 117,
+      "path": "run-117.json.gz",
+      "sha256": "1bfdbcace7d28eda6f0473a96a2cceb38803d9539227dc83aa7fff5b2efec84a",
+      "source": "docs/planning/workbench-values-causal-rev2/run-117.json.gz",
+      "sourceSha256": "6af97596959ed07213bbe24d43c37ed846cd74565bf82065ed9ac8e34ae02468"
+    },
+    {
+      "index": 118,
+      "path": "run-118.json.gz",
+      "sha256": "063e6c95dcf900787a439da5720e53deb2098dd11620dddbd01435655a6c916a",
+      "source": "docs/planning/workbench-values-causal-rev2/run-118.json.gz",
+      "sourceSha256": "33563ad389ecea67aead196b2f7bda9816a4f25e6f17c2d9ccd66d06154a1bdc"
+    },
+    {
+      "index": 119,
+      "path": "run-119.json.gz",
+      "sha256": "3eff67943831b4e6a9e97e63fbb4992995dcce12046fa4d294284504cc962e7b",
+      "source": "docs/planning/workbench-values-causal-rev2/run-119.json.gz",
+      "sourceSha256": "b80f40f51fdee5b0a4133ff556f461193b87cf0439efcc625b47744d01c75c33"
+    },
+    {
+      "index": 120,
+      "path": "run-120.json.gz",
+      "sha256": "2abc87499f0c02c28f720d28dc59dce78502e3abba1163ae5bd1b686330c2940",
+      "source": "docs/planning/workbench-values-causal-rev2/run-120.json.gz",
+      "sourceSha256": "2aa55b7b00f4f1cc00dc7f0736972519b7da1f5c5acb089fe857e6bbda81cb4e"
+    },
+    {
+      "index": 121,
+      "path": "run-121.json.gz",
+      "sha256": "560765511eddaae50487871675ffa5b78d801dc4542c83118f1e87d30c5f8ff6",
+      "source": "docs/planning/workbench-values-causal-rev2/run-121.json.gz",
+      "sourceSha256": "ed2fe70e67b7fa718e1ebe580b679c685e9c91dca13abdb46f9c55c96e6cada9"
+    },
+    {
+      "index": 122,
+      "path": "run-122.json.gz",
+      "sha256": "11d73183f264456733f89c0e2e06e1571981d3dc61e31684dca5540e7fa9abee",
+      "source": "docs/planning/workbench-values-causal-rev2/run-122.json.gz",
+      "sourceSha256": "a86967b4f29a2e4dad498ce5713674acd2256cff774a6ab4df201aa677b41b3a"
+    },
+    {
+      "index": 123,
+      "path": "run-123.json.gz",
+      "sha256": "52e688b729a047ba2dc72915f5bb88071ccf059893c814d1c2fc5cc0ac82073d",
+      "source": "docs/planning/workbench-values-causal-rev2/run-123.json.gz",
+      "sourceSha256": "883c1f416e368b6bb48ffddfbe8cb7dc4116a7d5f98a3084ebef3a57f57f2a69"
+    },
+    {
+      "index": 124,
+      "path": "run-124.json.gz",
+      "sha256": "30425a1296daf90b257b1f5ff314eadaee0b4210645e6b010d8abac604c9b4d1",
+      "source": "docs/planning/workbench-values-causal-rev2/run-124.json.gz",
+      "sourceSha256": "777f4d5fad1761b14558e4bfb525b7e0947ed4a5b713ce4762080e244ddb6187"
+    }
+  ],
+  "scope": "All retained events at every original Values prefix; independent reverse scan, exact prior mutation/value relation, immutable inputs and historical stability. Missing mutation remains unresolved, and projection-derived sources/payload causality are not qualified. Counts repeat historical reads at later prefixes."
+}
