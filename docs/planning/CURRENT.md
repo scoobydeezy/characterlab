@@ -1,14 +1,24 @@
 # Current research entry point
 
+**LONG goal full audit2026-10-19:** check-workbench-long-goal.mjs syntax PASS,
+execution RUNNING under7474. All120 original cases/2040 prefixes required. Each
+checkpoint binds original plan/run identity, preserved archive digest, exact component
+bytes, native source hash and immediate successor; terminal state compared to original
+goal/receiver rows. Per-prefix receipts permit explicit --resume only with unchanged
+source manifest and exact expected receipt contents. No final receipt yet. Preserve
+frozen sources and do not restart a live process. Language9885 at21/32; native48528
+and comparison20638 remain live. Evidence restore/research PASS,18 conditional
+obligations unchanged. Full Workbench acceptance remains open.
+
 **LONG goal successor adapter2026-10-19:** longGoalAdapter.ts maps original120 cases
 under longitudinal-goal-component/0.1-candidate. Reconstructs canonical model/run
 identities from original artifact manifest, settings, initial component save, mode,
 inputs and seed. Native source and component receiver remain separate; component
 save hash/native source save hash both exposed, not relabeled as joined Save132.
 Focused native test PASS: exact source/receiver state/save equality, whole-prefix
-restore and next step, detached reads, overlap and bad-identity rejection. Full120-case
+restore and next step, detached reads, overlap and bad-identity rejection.
 Build30479 COMPLETE exit0,426 modules; existing chunk-size warning retained.
-coverage, worker/UI, language and broader successors remain due. Evidence restore/
+Full120-case coverage, worker/UI, language and broader successors remain due. Evidence restore/
 research PASS;18 conditional obligations unchanged. Existing LONG native audit48528
 at18/32, comparison20638 running and language9885 at11/32; preserve frozen sources.
 
