@@ -1,5 +1,16 @@
 # Current research entry point
 
+**LONG comparison browser2026-10-19:** LongComparisonPanel exposes24 declared
+contrasts via two independent workers; create, four-instant fresh probe, step, run and
+pause controls. Changing declaration clears report and requires creation before step.
+workbench-long-comparison-ui-rev1 PASS under82280: FullHistory/Compact law1 through4
+instants complete browser report equals direct adapter comparison, all seven main-run
+hashes unchanged, mode switch retains report, draft change clears and disables step.
+Screenshot inspected. Build80124 COMPLETE exit0,426 modules; evidence restore/research
+PASS with18 conditional obligations unchanged. Other23 pairs/full horizons, active
+pause behavior, pair persistence/export and language remain unqualified. Full LONG
+native audit48528 remains live; final Campaign4 entry acceptance remains open.
+
 **LONG comparison foundation2026-10-19:** longComparison.ts declares24 contrasts
 drawn from retained public qualification controls and actual execution probes.
 Reconstructs original model/run identity and seed, verifies observer digest/identity,
