@@ -74,3 +74,21 @@ TypeScript, import boundaries and research obligations checks PASS. No frozen
 adapter/runtime dependency was edited. The 15-program parity audit remains running;
 latest observed first program prefix9. Next implement the six-mode UI and qualify
 real browser worker execution and constitutional fresh-run controls.
+
+## Six-mode UI — 2026-10-19
+
+Inspection route0.20 now includes Disposition separately from batch admission.
+Character exposes the explicitly diagnostic mechanism projection; Experiment supports
+in-memory checkpoints; Reasoning shows recorded stage data with a Timeline link;
+Timeline includes recorded-parent navigation; Compare pins a detached revision and
+shows exact changed paths with both identities; Architecture reports native state
+participation. Complete paired execution, factor attribution and observer-safe
+language remain due. A three-value constitutional draft selects only the original
+Plastic models and applies on fresh creation, never on an existing run.
+
+Production build PASS (536 modules; existing large-chunk warning). Registry isolation
+test PASS; research obligations PASS. Bounded real-browser checks: original Main
+prefix1, six mode headings with unchanged hashes, draft-only invariance, positive
+constitution fresh creation, and restore of Main prefix1 with all five hashes equal.
+Browser evidence is in workbench-disposition-ui-rev1. This does not qualify all15
+programs, terminal saves, full pair comparisons, accessibility or resource bounds.
