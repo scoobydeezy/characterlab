@@ -1,0 +1,50 @@
+{
+  "status": "PASS BOUNDED LONG GOAL PAIR IN-SESSION RESTORE",
+  "sources": [
+    {
+      "path": "src/workbench/LongGoalComparisonPanel.tsx",
+      "sha256": "c25efddcc0b1e40c5aaac82ec284278a928918487c0e6406a939db10293453d0"
+    },
+    {
+      "path": "src/workbench/longGoalPairCheckpoint.ts",
+      "sha256": "cbc10a2073d6216ad8ee47cd37083946926233bdea9f936fd1cca8cb304bef0a"
+    },
+    {
+      "path": "src/workbench/longGoalWorkerClient.ts",
+      "sha256": "3b88c5d4e5193eb42a0a9fae9a3de2a079301870c8281e1e45850327e31f8005"
+    },
+    {
+      "path": "src/workbench/longGoalWorker.ts",
+      "sha256": "76a99e1e23a0b68f0442c30fc9085ee1bd655976a1ab44321e125b9ca827d228"
+    },
+    {
+      "path": "src/workbench/longGoalAdapter.ts",
+      "sha256": "aa811a96538edc76eae090a523097bc4c3b82c3fec9c06be2a773e4dcfb3ba68"
+    },
+    {
+      "path": "src/workbench/PreparedExport.tsx",
+      "sha256": "4cf14eca7746d3260ce84c7d28532a6e795f4728889080f1cb2115531ed93e19"
+    },
+    {
+      "path": "scripts/check-workbench-long-goal-persistence-ui.mjs",
+      "sha256": "063f9f3ba4b55a6b4e02bcb021fc8a88ed0d6a09642142ccaa51d2b72da9f4d1"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "ui.json",
+      "sha256": "38393417c666939e6f8ac1b9f17c5fbe417d8c15876d65dd8b8745ea20ede61c"
+    },
+    {
+      "path": "persistence.png",
+      "sha256": "0308ccc765f991362bea35ee4a7e4099eba8010d1c3d4f2d79b2e5df5e6f3522"
+    }
+  ],
+  "qualification": {
+    "path": "docs/planning/workbench-long-goal-comparison-rev1/receipt.json",
+    "sha256": "eb4b86f1264a0ae1256e9bb4050abd11193ea89f565378f2036083072339d33a",
+    "archivePath": "docs/planning/workbench-long-goal-comparison-rev1/pair-000.json.gz",
+    "archiveSha256": "74de21f65cb865390e9ed94acc8b7373945563a126dc0942dd9cb19ad85ef01d"
+  },
+  "scope": "Original seed0 FineStanding/NoFeedback maintained pair: capture0/step1/restore0/repeat1. Full reports match qualified historical prefixes0/1 and main four hashes remain unchanged. Download permission was declined; no alternate download was attempted. File roundtrip, import rejection, later checkpoints, other pairs and resource limits remain unqualified."
+}

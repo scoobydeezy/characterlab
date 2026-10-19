@@ -1,5 +1,21 @@
 # Current research entry point
 
+**LONG goal pair checkpoint UI2026-10-19:** capture, atomic two-case restore,
+prepared export and bounded local JSON import controls implemented. Replacement is
+installed only after both component restores and report projection succeed; failure
+preserves the prior pair. Full build61705 PASS434 modules; research PASS18 conditional.
+Bounded in-session browser capture0/step1/restore0/repeat1 reports match qualified
+historical prefixes0/1 exactly, with main four hashes unchanged. See
+workbench-long-goal-persistence-ui-rev1/receipt.json and persistence.png.
+Browser permission was declined for localhost download; respect that restriction:
+do not retry the download or recreate it through an alternate route without renewed
+authorization. No checkpoint file was saved through a workaround. Download, file
+roundtrip and browser import-rejection tests remain unqualified; core partial-restore
+cleanup and bad-digest rejection tests remain separately qualified. Goal scope is
+unchanged; these pending gates are not waived. Other work remains available.
+Latest live audits: native48528 at20/32, comparison20638 capture20/28, goal7474 case5
+prefix14/16. All remain running; no full-cohort acceptance claimed.
+
 **LONG goal matched comparisons2026-10-19:** historical projection audit97135
 COMPLETE exit0:120 declared pairs/all120 cases/2040 aligned prefixes. Preserved
 original save/archive/native-source hashes;18/24 fine probability differences and
