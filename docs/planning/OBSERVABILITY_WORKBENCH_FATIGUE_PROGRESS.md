@@ -50,6 +50,30 @@ is not full-cohort acceptance. Do not modify frozen source or restart a quiet li
 
 ## Next work and obligations
 
+Comparison implementation now declares26 pairs spanning all20 programs:8 identical-
+input one-setting model pairs and18 input-calendar pairs. Exact input differences
+remain visible; compound fixtures are not asserted to be single-factor interventions.
+The extra input comparisons retain denied/absent sensing, MotorOnly forced visible
+exercise, AnyFatigue mild/severe and rested external-load distinctions. Original
+model/run and observer commitments are authenticated. Unaligned prefix/clock pairs
+withhold equality and field differences. Exact original seed does not prove matched
+draws. Research state, full outputs, public observer and save identity remain separate.
+
+Three comparison tests10743 PASS; TypeScript94394 PASS. Motor challenge confirms
+identical preceding intent through4 while visible performance differs. Misleading
+fatigue at5 preserves observer AND full outputs while original save identity differs.
+Failed test18711 incorrectly expected different full outputs; its source and finding
+are retained in `workbench-fatigue-comparison-finding-rev1`. The corrected test follows
+the existing mediated runtime; no production/comparator behavior changed.
+
+Full comparison audit21420 PASS in `workbench-fatigue-comparison-rev1`:20 original
+trajectories/180 prefixes,26 pairs/234 aligned reports,zero unaligned/missing.
+Historical terminal commitments and exact state/observer/output equality oracles PASS.
+Whole-horizon denied/absent, hidden-reward and false-fatigue/false-recovery observer
+equalities PASS. Independent115 source copies/current hashes,26 compressed result
+hashes, counts and original model/run bindings PASS. The complete cross-join to the
+native full-prefix restore receipt remains due: audit97421 is separate and live.
+
 Finish native qualification, add declared comparisons and six-mode inspection,
 qualify observer-safe descriptions and browser replay, then account for batch and
 broader workbench gates. CONTROL/HABIT resistance and FATIGUE are distinct cohorts;

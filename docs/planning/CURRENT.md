@@ -1,5 +1,13 @@
 # Current research entry point
 
+**FATIGUE comparisons2026-10-19:**26 declared pairs/234 aligned reports PASS across
+all20 original trajectories/180 prefixes. Three focused tests and TypeScript PASS;
+independent115 sources/26 result hashes/counts/original identities PASS. Failed test
+expectation retained: misleading fatigue preserves full outputs as well as observer
+views; original save identity differs. Native restore audit97421 remains RUNNING;
+full native receipt/join, UI, language, browser and batch remain due. Start FATIGUE
+progress. No general fatigue law or Campaign4 entry acceptance.
+
 **FATIGUE foundation2026-10-19:** four original models/20 programs; exact catalog,
 native adapter and worker implemented. Six focused tests/TypeScript/boundaries PASS.
 Sensor lag, missing-feedback retention and MotorOnly execution/control separation
