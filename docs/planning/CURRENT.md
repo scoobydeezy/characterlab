@@ -1,5 +1,17 @@
 # Current research entry point
 
+**LONG valued-contact-loss foundation2026-10-19:** adapter and worker implemented.
+Audit93948 COMPLETE PASS480 original cases/6240 exact archived prefixes;5760
+advancing and480 terminal restores. All118 source/480 result hashes and counts
+independently verified. Five focused adapter/worker/transport tests PASS; build75873
+PASS451 modules and worker TypeScript44677 PASS. Research PASS18 conditional
+obligations. Start OBSERVABILITY_WORKBENCH_LONG_LOSS_PROGRESS.md and
+workbench-long-loss-parity-rev1/receipt.json. Six-mode UI, controlled comparisons,
+character explanations and broad acceptance remain due. This is standalone component
+replay, not native source reuse, scheduler admission or a clinical grief claim.
+Habit replay18545 and comparison41914 remain live; prior native LONG/goal audits
+remain open. No Campaign4 entry or reduction claim. Browser download denial persists.
+
 **LONG habit retained-practice language2026-10-19:** audit85213 COMPLETE PASS960
 cases/16320 prefixes/25636 record descriptions/10560 empty recall states. Actual
 recallPractice accessor only; every receiver save matches original REV2. All123
