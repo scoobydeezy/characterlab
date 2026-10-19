@@ -1,11 +1,13 @@
 # Current research entry point
 
-**Disposition adapter2026-10-19:** admitted constitution controls -1/8,0,+1/8
-identified with identical original inputs and distinct models. Closed15-program
-native adapter and large-save conversion implemented; four focused tests/TypeScript/
-boundaries PASS. Full285-prefix parity RUNNING session79989 (first program prefix3).
-Start OBSERVABILITY_WORKBENCH_DISPOSITION_PROGRESS.md. Worker/UI/registry not yet
-admitted; base-parameter demonstration remains incomplete.
+**Disposition inspection2026-10-19:** native adapter, worker, six-mode UI and30
+declared contrasts implemented. Constitution -1/8,0,+1/8 selects original fresh
+models with identical inputs. Bounded browser mode/restore and constitutional pair
+pause1/1, restore1/1, exact continuation2/2 and main-run isolation PASS; complete
+reports join fresh native execution. Full285-prefix parity RUNNING session79989
+(first program prefix16); all-contrast/full-horizon and language qualification due.
+Start OBSERVABILITY_WORKBENCH_DISPOSITION_PROGRESS.md. Batch admission and complete
+integrated entry remain open. Preserve all Campaign3 qualifications and obligations.
 
 **General six modes2026-10-19:** matrix profile reorganized into Character,
 Experiment, Reasoning, Timeline, Compare and Architecture with preserved sessions.

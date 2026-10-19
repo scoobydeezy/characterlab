@@ -139,3 +139,25 @@ This implementation has not yet received browser pair/pause/restore qualificatio
 The prior pinned-revision comparison is retained with its distinct limited scope.
 All-prefix comparison qualification and full-horizon resource checks remain due.
 Production build PASS:539 modules; existing large-chunk warning retained.
+
+## Bounded pair browser qualification — 2026-10-19
+
+`workbench-disposition-pair-browser-rev1` retains browser reports for the declared
+Plastic/Main versus Plastic/ConstitutionPositive pair. Run then pause during the
+first pair step stopped at1/1, below the18-instant terminal horizon. In-memory pair
+capture at1/1, advancement to2/2, restoration to1/1 and repeated continuation to2/2
+reproduced the complete comparison reports exactly. Switching Character/Compare
+preserved the captured pair. The independent main inspection run stayed at0 with
+all five displayed hashes unchanged.
+
+The browser evidence includes exact report bodies and a full-page screenshot.
+The checker joins each side's saves to its original native prefix receipt and
+compares all captured report bodies against fresh native execution at0/1/2. Its
+receipt.json is authoritative for completion. Original adapter dependencies are
+bound through the existing frozen native parity manifest. No file transfer was
+attempted. This is one bounded constitutional pair, not30-contrast/all-prefix,
+full-horizon resource, general accessibility or observer-language qualification.
+
+UI follow-up: replace opaque comparison IDs in the selector with descriptive
+program names and changed settings; retain IDs in the exact report. Full comparison
+coverage and remaining integrated-entry requirements stay open.

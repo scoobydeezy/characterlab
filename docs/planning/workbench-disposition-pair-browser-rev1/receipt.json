@@ -1,0 +1,69 @@
+{
+  "status": "PASS BOUNDED DISPOSITION PAIR BROWSER",
+  "sources": [
+    {
+      "path": "src/workbench/DispositionWorkbench.tsx",
+      "sha256": "b0c635014c301be31f7489120bfa0c0076a0a391599e1538102a401f61701327"
+    },
+    {
+      "path": "src/workbench/DispositionComparisonPanel.tsx",
+      "sha256": "f3414f26cfc6e9c2baab0f387ca1d0b7891bc64155b622edb00a7789cac1e617"
+    },
+    {
+      "path": "src/workbench/dispositionComparison.ts",
+      "sha256": "48c0bdfe861bf6b670bf9d924daecfb1b2f1645501513a519d6e36f826452f2b"
+    },
+    {
+      "path": "src/workbench/dispositionPairCheckpoint.ts",
+      "sha256": "a421c8f2674ae1f356f7f537e2a30c12bbebfaec28dc1a0698c9ea54f346ed37"
+    },
+    {
+      "path": "src/workbench/dispositionWorker.ts",
+      "sha256": "cfed3ee35129195ec962074d6f15701cb50e193cb7b9e23e9de34bd25d811b46"
+    },
+    {
+      "path": "src/workbench/dispositionWorkerClient.ts",
+      "sha256": "02e1bba669388cc2f594c56fb1826e155bb09825b6fecab165e90c486376b0e3"
+    },
+    {
+      "path": "src/workbench/dispositionAdapter.ts",
+      "sha256": "add908d63b219e0db78424117618e03d57bb11742ef55d74ef5c329660baef80"
+    }
+  ],
+  "nativeSources": {
+    "path": "docs/planning/workbench-disposition-parity-rev1/frozen.json",
+    "sha256": "38c2069d78d8234765fdb22ab6fa0e2ce9fa94e1543b22c1236f30a6024448d6"
+  },
+  "originals": [
+    {
+      "path": "docs/planning/DISPOSITION_PUBLIC_PLAN_REV1.json",
+      "sha256": "55f54b4c24b93f1ff0a8576ca1ab481d61402020b6b263533b9ff0f476aff927"
+    },
+    {
+      "path": "docs/planning/DISPOSITION_PUBLIC_RUN_0_REV1.json",
+      "sha256": "53c0c47521de497c402e0523cbb6cc4f5b913cb6b4eea5d220912a87c4d52d34"
+    },
+    {
+      "path": "docs/planning/DISPOSITION_PUBLIC_RUN_13_REV1.json",
+      "sha256": "efb148509ba13c18291feb32f2de42a64f76187d9a0275700063356e8d484bc0"
+    }
+  ],
+  "checker": {
+    "path": "scripts/check-workbench-disposition-pair-browser.mjs",
+    "sha256": "b61a190341a107c4fe74b4a3e18d58c42bb3a4872b636a1372caa56c585427d3"
+  },
+  "artifacts": [
+    {
+      "path": "browser.json",
+      "sha256": "cfd1e5cdf520bf02e8ca50383392ad460cce5885b285a0f6586aef38732c450e"
+    },
+    {
+      "path": "pair.png",
+      "sha256": "5e75336ac721d8c8a3184b8ea0332b8c2268f473ce6952ea5fc470c902764de5"
+    }
+  ],
+  "comparison": "model/0/13",
+  "pausePrefix": 1,
+  "continuedPrefix": 2,
+  "scope": "One constitutional pair: original prefix saves and exact fresh native comparison reports; nonterminal whole-pair pause, in-memory pair capture/restore, exact next continuation, mode persistence and main-worker isolation. No file transfer, all-contrast/full-horizon qualification, character narration, resource or general causal claim."
+}
