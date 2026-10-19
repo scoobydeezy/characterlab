@@ -1,0 +1,36 @@
+{
+  "status": "PASS BOUNDED LONG LANGUAGE BROWSER",
+  "sources": [
+    {
+      "path": "src/workbench/LongObserverDescription.tsx",
+      "sha256": "9bd2d697aab5d51fd11f12d2d6b05d6fb73f3e85eb8f7ff3e5e17d379db06054"
+    },
+    {
+      "path": "src/workbench/LongWorkbench.tsx",
+      "sha256": "de73772d927c277044301388804a7fa6b72aa94d3e7ec79103daab506298ad44"
+    },
+    {
+      "path": "src/workbench/longExplanations.ts",
+      "sha256": "3d8beb212ec3f059540c15b2173740eb24005efca34bd196b44a5496149b5b87"
+    },
+    {
+      "path": "scripts/check-workbench-long-language-ui.mjs",
+      "sha256": "f5903aa2d7b77bfa26d3d5d616243b2f67e476c571f5e4d1c5451afb1d5c75e1"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "ui.json",
+      "sha256": "badb0f302d6d112b9c3520eef7bcc51c53d2a9a89898c6edb185ec2a84d11917"
+    },
+    {
+      "path": "language.png",
+      "sha256": "c3bf9dacd28315c6580a2c0824d737f43be44aaf74331c983c58bc84bbfaa16d"
+    }
+  ],
+  "qualification": {
+    "path": "docs/planning/workbench-long-language-rev1/program-00.json",
+    "sha256": "463a8291b03ae7a494930ffb856ff4b4372236e15a9cd07451fb243fd135f5b6"
+  },
+  "scope": "Original representation-1-law-1 prefixes0/1 match qualified observer descriptions exactly. Opening Character preserves seven hashes; stepping updates description digest to current native observer. Screenshot inspected. Other programs/prefixes, rapid async races, full choice explanations and broader browser qualification remain open."
+}

@@ -1,5 +1,19 @@
 # Current research entry point
 
+**LONG observer language2026-10-19:** COMPLETE32 original programs/513 prefixes/
+3078 descriptions. workbench-long-language-rev1/receipt.json binds all source and
+result hashes, independently rechecked. Character mode now displays six field-linked
+descriptions with exact evidence, separate from the complete closed observer record.
+Bounded browser prefixes0/1 match qualified records exactly; opening Character
+preserves seven hashes, stepping refreshes the observer digest. See
+workbench-long-language-ui-rev1/receipt.json and language.png. Build74670 PASS428
+modules. Evidence restore/research PASS;18 conditional obligations unchanged.
+LOCAL DISPOSITION: diagnostic-control field descriptions are explicitly scoped;
+no first-person, full-choice, forgetting-history or causal inference is admitted.
+Native48528 remains live (18/32); comparison20638 captured6/28; goal7474 reached
+case1 prefix13/16. No final receipts for those audits. Broader browser, successor,
+architecture and Campaign4 entry qualification remain due.
+
 **LONG goal worker2026-10-19:** serialized original-case create/advance/checkpoint/
 restore through longGoalWorker/longGoalWorkerClient. Three focused tests PASS: actual
 worker/direct component and native-source snapshot parity, restored next step,
