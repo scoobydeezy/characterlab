@@ -1,0 +1,70 @@
+{
+  "status": "PASS BOUNDED FATIGUE UI",
+  "sources": [
+    {
+      "path": "src/workbench/FatigueWorkbench.tsx",
+      "sha256": "ea27386cbd61550a1268ac6128bec6d61180df3a3f1bc80468186e9ec62a441a"
+    },
+    {
+      "path": "src/workbench/FatigueComparisonPanel.tsx",
+      "sha256": "bc25b6357186e4ae7445b449e5465f36f3fe692a7f0ff17b41db42692c9df170"
+    },
+    {
+      "path": "src/workbench/fatiguePairCheckpoint.ts",
+      "sha256": "650073bf5021a7dd0a5d0dbee36df05cc5a64ad752039eb981b231a7da5910de"
+    },
+    {
+      "path": "src/workbench/fatigueWorker.ts",
+      "sha256": "f62b687983d38912a58731c0b4138fcdce3d448f8d51efeb476cc30cdf73059f"
+    },
+    {
+      "path": "src/workbench/fatigueWorkerClient.ts",
+      "sha256": "b5473e28c5625d34673bf0ab9c568cc1f0db62c37f77bb5b64ea67b2673115c5"
+    },
+    {
+      "path": "src/workbench/WorkbenchApp.tsx",
+      "sha256": "c10dac940952ac93c63bfc7123958a43313d2fc85ae481d5ba07610d07175106"
+    },
+    {
+      "path": "src/workbench/inspectionRegistry.ts",
+      "sha256": "e98d3a9f74852049024e7dd996b0d43d0c48d9c9f835b58417e876913f830e72"
+    },
+    {
+      "path": "src/workbench/participation.ts",
+      "sha256": "e3cef7cf06a9345d2bbad757921d5cbccfa3a61028b7f5eb653a908e2ed0661b"
+    },
+    {
+      "path": "src/test/workbenchFatiguePairCheckpoint.test.ts",
+      "sha256": "2a8d3d6979ac3a83f1cd32a2f3bf04c52ff014e4576f1b9df33880fc6d3232e7"
+    },
+    {
+      "path": "src/test/workbenchInspectionRegistry.test.ts",
+      "sha256": "52e90303db634c71f79240368670cc7e4ceb8cb9f3a27693114bdbc048220bce"
+    },
+    {
+      "path": "scripts/check-workbench-fatigue-ui.mjs",
+      "sha256": "6480f2179141d823f0b606e197195ddffe3f44e6554a3483156f299a3a1de874"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "browser.json",
+      "sha256": "86e3f9a827073205ef107df9117e284d45c1ef290fcf2231168b38321627dbc3"
+    },
+    {
+      "path": "fatigue.png",
+      "sha256": "166b16b5740bbb42667e90b93c3bd20da989760abd9abf460c2a17c2b66a377c"
+    }
+  ],
+  "parents": [
+    {
+      "path": "docs/planning/workbench-fatigue-parity-rev1/program-00.json",
+      "sha256": "4fdbd5f491ff39839a82805c720cdc8ababb1753dda3aec15eaee8acf2309ec0"
+    },
+    {
+      "path": "docs/planning/workbench-fatigue-comparison-rev1/receipt.json",
+      "sha256": "addcfea555dff1a276993dcc715c34fee4ef781938e308d9a58e3a3fbabcf306"
+    }
+  ],
+  "scope": "Browser main0/4/5/restore4/repeat5 exact state and six hashes; main/falseFatigue pair4/5/restore4 full reports match qualified archive; Character observer, Reasoning outputs, Timeline final event and Architecture participation at5 match direct adapter. Main survives pair execution, mode and route changes. Bounded native program00 result only; full native audit is not accepted by this receipt. No file transfer, full26 browser cohort, unequal-horizon browser, pause/resource/accessibility or character-language acceptance."
+}

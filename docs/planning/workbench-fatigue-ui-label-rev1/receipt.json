@@ -1,0 +1,28 @@
+{
+  "status": "PASS HEADING-ONLY CORRECTION",
+  "sources": [
+    {
+      "path": "src/workbench/FatigueComparisonPanel.tsx",
+      "sha256": "0ce887462721244f4ad81ad6642398f98b2fcd1bde34c8b6b6d407ad286f108b"
+    },
+    {
+      "path": "scripts/check-workbench-fatigue-ui-label.mjs",
+      "sha256": "73c87b04b9a35775a8f9118d422c2a83a8086e2f175815e2bc9b51c99a5b7c3a"
+    }
+  ],
+  "parent": {
+    "path": "docs/planning/workbench-fatigue-ui-rev1/receipt.json",
+    "sha256": "9722fa5eba962ebc051cea4f5a33d55385766968c3a22b00bfd234a44b955198"
+  },
+  "artifacts": [
+    {
+      "path": "dom.txt",
+      "sha256": "d2de6a5cca5586a9fd21f1beb16aa88333f185dcf2c36d2341595db4b07f5914"
+    },
+    {
+      "path": "fatigue.png",
+      "sha256": "e68dc86769779392839e087ec064eb09c24895539235989f4e62b36ae02f346d"
+    }
+  ],
+  "scope": "Complete current-source comparison proves only the displayed comparison heading changed since bounded UI receipt. Rebuilt browser confirms corrected heading, initialized main and pair at0. Prior bounded replay/mode evidence retained; no fresh full replay or broader coverage claim."
+}

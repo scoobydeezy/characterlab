@@ -40,7 +40,7 @@ export function FatigueComparisonPanel({active=true}:{active?:boolean}){
   finally{fresh?.forEach(c=>c.dispose());locked.current=false;if(alive.current)setBusy(false);}
  }
  const canContinue=!busy&&loaded===selected&&!complete&&!error;
- return <section className="card"><h2>Fatigueled FATIGUE comparisons</h2><p>Two independent workers preserve the main inspection run. Pause finishes the current pair step. Shorter programs stop at their own terminal boundary; unaligned results withhold equality claims.</p>
+ return <section className="card"><h2>Declared FATIGUE comparisons</h2><p>Two independent workers preserve the main inspection run. Pause finishes the current pair step. Shorter programs stop at their own terminal boundary; unaligned results withhold equality claims.</p>
  <label>FATIGUE comparison<select disabled={busy} value={selected} onChange={e=>{setSelected(e.target.value);setReport(undefined);setError('');}}>{FATIGUE_CONTRASTS.map(c=><option key={c.id} value={c.id}>{c.id}</option>)}</select></label>
  <div className="button-row"><button disabled={busy} onClick={()=>void execute('create')}>Create FATIGUE pair</button><button disabled={!canContinue} onClick={()=>void execute('step')}>Step FATIGUE pair</button><button disabled={!canContinue} onClick={()=>void execute('run')}>Run FATIGUE pair</button><button disabled={!busy} onClick={()=>{stop.current=true;}}>Pause FATIGUE pair</button></div>
  <p role="status">{busy?'Working on FATIGUE comparison':error?'Comparison failed; recreate pair':report?`FATIGUE pair ${report.a.prefix} / ${report.b.prefix} · ${report.aligned?'Aligned':'Unaligned'}`:'Create a FATIGUE pair'}</p>{error&&<p role="alert">{error}</p>}

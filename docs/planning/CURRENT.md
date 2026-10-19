@@ -1,5 +1,13 @@
 # Current research entry point
 
+**FATIGUE native/browser qualification2026-10-19:** full20-program/180-prefix native
+parity and restore PASS (160 advancing/20 terminal). Independent116 source hashes,
+20 result hashes/counts and468 comparison-side native joins PASS. Bounded browser
+main0/4/5/restore4/repeat5, falseFatigue pair4/5/restore4, modes and route PASS.
+Heading-only correction preserved/verified separately; final build14135 PASS506.
+Start FATIGUE progress. Character language, broader browser, batch and resource/
+accessibility remain due. Research18 conditional obligations retained.
+
 **FATIGUE six-mode implementation2026-10-19:** inspection route0.16 connects the
 native worker, independent comparison workers and main/paired checkpoints. Pair
 restore/successor, rejected-second cleanup and batch-exclusion tests14620 PASS.

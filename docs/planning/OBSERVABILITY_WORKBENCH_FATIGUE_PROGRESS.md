@@ -34,9 +34,9 @@ detached reads, concurrent publication guards, MotorOnly execution versus inhibi
 worker restoration and transport cleanup. TypeScript4853 and boundary check PASS.
 No UI route or browser qualification is claimed by these tests.
 
-## Full native audit running
+## Full native audit complete
 
-Session97421 runs `scripts/check-workbench-fatigue.mjs` under immutable
+Session97421 completed `scripts/check-workbench-fatigue.mjs` PASS under immutable
 `workbench-fatigue-parity-rev1`. Its116 frozen transitive source copies were independently
 checked against current source. Each adapter prefix must match independent native
 save/state/output/observer/timeline; every original prefix restore and successor must
@@ -45,10 +45,31 @@ Whole-horizon denied/absent, hidden-reward, false-fatigue and false-recovery obs
 equalities are checked only for their declared mediated candidate. MotorOnly is not
 subject to a false whole-view equality expectation across changed visible execution.
 
-Final180-prefix receipt and independent result verification remain due. Partial output
-is not full-cohort acceptance. Do not modify frozen source or restart a quiet live audit.
+Final receipt PASS20 programs/180 prefixes/160 advancing/20 terminal restores.
+Independent116 frozen/current source hashes, original bindings,20 result hashes,
+prefix continuity, successor commitments and counts PASS. Every one of468 comparison
+sides joins native clock/save/state/output/observer commitments. This is full declared
+native instrumentation qualification, not broader psychological or Campaign4 acceptance.
 
 ## Next work and obligations
+
+Bounded browser receipt `workbench-fatigue-ui-rev1/receipt.json` PASS: main0/4/5/
+restore4/repeat5 exact fields and six commitments; main/falseFatigue pair4/5/restore4
+full reports equal the comparison archive. Character observer, Reasoning outputs,
+Timeline final event and Architecture participation at5 equal direct adapter records.
+Main session survives independent pair work, mode changes and route switches. Long
+DOM fields captured in40000-character chunks. Original receipt binds completed native
+program00 only because the full audit was still running at capture time; the later
+full native receipt/join above adds that separate qualification.
+
+Visual inspection found a copied heading typo. `workbench-fatigue-ui-label-rev1`
+preserves the correction to "Declared FATIGUE comparisons", proves it is the sole
+source change from the bounded UI receipt, and verifies rebuilt browser main/pair0.
+The first guarded edit failed because its expected typo spelling differed; no source
+changed from that attempt. Build78465 still contained the old heading; final14135
+PASS506 modules and browser screenshot confirm the corrected heading. Original
+receipt/screenshot/source remain preserved. Independent original receipt11 frozen
+sources/2 artifacts/2 parents PASS. No download or file-transfer action was attempted.
 
 Six-mode UI implemented in `FatigueWorkbench` and `FatigueComparisonPanel`, exposed
 through inspection registry0.16 without batch admission. Main run and comparison
@@ -64,7 +85,8 @@ participation without asserting causal necessity or a general resource law.
 Tests14620 PASS: native pair5 restore/successor, rejected second save cleanup,
 wrong declaration and explicit batch exclusion. Build87193 PASS506 modules, including
 TypeScript and boundary check; existing large-chunk warnings remain. Research check
-PASS18 conditional obligations. UI browser qualification remains due.
+PASS18 conditional obligations. Bounded UI browser evidence is recorded above;
+broader20-program browser qualification remains due.
 
 Comparison implementation now declares26 pairs spanning all20 programs:8 identical-
 input one-setting model pairs and18 input-calendar pairs. Exact input differences
@@ -87,11 +109,10 @@ trajectories/180 prefixes,26 pairs/234 aligned reports,zero unaligned/missing.
 Historical terminal commitments and exact state/observer/output equality oracles PASS.
 Whole-horizon denied/absent, hidden-reward and false-fatigue/false-recovery observer
 equalities PASS. Independent115 source copies/current hashes,26 compressed result
-hashes, counts and original model/run bindings PASS. The complete cross-join to the
-native full-prefix restore receipt remains due: audit97421 is separate and live.
+hashes, counts and original model/run bindings PASS. The later complete cross-join to
+native full-prefix restore receipt97421 PASS468 comparison sides.
 
-Finish native qualification, add declared comparisons and six-mode inspection,
-qualify observer-safe descriptions and browser replay, then account for batch and
+Qualify observer-safe descriptions and broader browser replay, then account for batch and
 broader workbench gates. CONTROL/HABIT resistance and FATIGUE are distinct cohorts;
 dependence/substitution and other required successors remain separate work.
 
