@@ -116,3 +116,26 @@ import boundaries and research obligation checks PASS. No frozen adapter depende
 was edited. All-prefix report qualification, comparison workers/UI, pair checkpoint
 continuation and browser comparisons remain due. The original15-program parity
 audit remains running; latest observed first program prefix14.
+
+## Paired continuation and UI controls — 2026-10-19
+
+`dispositionPairCheckpoint.ts` binds both original programs to one declared contrast.
+Both restores must authenticate before the caller replaces a live pair. A failure
+in the second restore disposes the first restored branch. Validation clones the
+supplied pair before asynchronous work, so later caller mutation cannot alter the
+second restore. Unequal horizons remain explicit rather than silently aligned.
+
+Two native/ownership tests PASS: Main and ConstitutionPositive restore at prefix1
+and both reproduce their complete original prefix2 checkpoints; a forged second
+save digest cleans up the partially restored pair and leaves the originals intact.
+Wrong declarations and out-of-range prefixes reject before allocation; mutation of
+the supplied second checkpoint during a suspended first restore does not affect it.
+TypeScript, import boundaries and research obligations checks PASS.
+
+`DispositionComparisonPanel.tsx` adds independent two-worker creation, step, run,
+pause, capture and restore controls for30 contrasts. It remains mounted across mode
+changes and requests pause when hidden; the main inspection worker remains separate.
+This implementation has not yet received browser pair/pause/restore qualification.
+The prior pinned-revision comparison is retained with its distinct limited scope.
+All-prefix comparison qualification and full-horizon resource checks remain due.
+Production build PASS:539 modules; existing large-chunk warning retained.
