@@ -1,5 +1,15 @@
 # Current research entry point
 
+**LONG routine foundation2026-10-19:** adapter/worker implemented for504 original
+receivers and16 reused native sources. Five focused tests PASS, including seed0
+availability at14 without performance and resumption15; checkpoint identity/source
+binding, exact prefix replay, overlap and transport cleanup. Audit39083 RUNNING:
+8568 receiver prefixes planned, source archives/272 prior restore receipts authenticated
+before receiver work. Start OBSERVABILITY_WORKBENCH_LONG_ROUTINE_PROGRESS.md.
+Full receipt, comparisons, six-mode UI and language remain due. No reused native work
+counted as new execution; no Campaign4 entry claim. Research PASS18 conditional.
+Build58287 PASS460 modules; no routine UI exposure yet.
+
 **LONG loss owned-state language2026-10-19:** audit89776 COMPLETE PASS480 cases/
 6240 prefixes/21280 descriptions;2400 unknown-estimate prefixes. All160 matched
 evidence controls/2080 prefixes retain identical descriptions. Sources123/results480
