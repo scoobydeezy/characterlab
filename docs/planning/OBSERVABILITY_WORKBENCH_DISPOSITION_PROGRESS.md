@@ -55,3 +55,22 @@ The adapter is deliberately not yet exposed in the inspection registry. Next add
 the worker and six-mode flow, with an accurately labeled three-value constitutional
 draft control that creates original fresh comparison models. This advances the
 integrated demonstration's base-parameter requirement without inventing an ingress.
+
+## Worker foundation — 2026-10-19
+
+`dispositionWorker.ts` and `dispositionWorkerClient.ts` now expose original creation,
+committed advancement, checkpoint capture and authenticated restore. Commands are
+serialized on both sides. The client retains a detached last committed snapshot
+while busy, rejects overlapping commands, and terminates/rejects pending work on
+disposal or worker failure. Failed message posting releases the command lock.
+
+Three tests PASS: the native worker handler matches direct native initialization,
+first advancement, prefix1 checkpoint restore and exact second-prefix continuation;
+unknown initialization and concurrent initialization are rejected. Transport tests
+cover detached snapshots, overlap, failed posting, pending-command disposal, late
+reply suppression and startup message-decoding failure. The handler test uses an
+in-process worker port; actual browser worker scheduling and UI remain unqualified.
+TypeScript, import boundaries and research obligations checks PASS. No frozen
+adapter/runtime dependency was edited. The 15-program parity audit remains running;
+latest observed first program prefix9. Next implement the six-mode UI and qualify
+real browser worker execution and constitutional fresh-run controls.
