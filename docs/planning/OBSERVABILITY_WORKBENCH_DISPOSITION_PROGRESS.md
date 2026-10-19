@@ -92,3 +92,27 @@ prefix1, six mode headings with unchanged hashes, draft-only invariance, positiv
 constitution fresh creation, and restore of Main prefix1 with all five hashes equal.
 Browser evidence is in workbench-disposition-ui-rev1. This does not qualify all15
 programs, terminal saves, full pair comparisons, accessibility or resource bounds.
+
+## Declared comparison contract — 2026-10-19
+
+`dispositionComparison.ts` declares30 ordered contrasts:21 candidate-law pairs at
+constitution0, three Plastic constitutional-baseline pairs, and six original input
+controls against Plastic/Main. Model contrasts require exactly one changed profile
+setting and identical original input digests; input contrasts require identical
+original model identities. Exact decoded input differences include routed instant
+seeds, which remain distinct from the fixed zero run seed.
+
+Reports verify contract/model/run/profile identity and native committed prefix
+shape. Equal prefix and clock are required before equality or field-difference
+results are emitted. Mechanism projection equality is separate from state/save
+equality and does not mean observer knowledge equality. Reports consume trusted
+adapter snapshots; supplied fields/hashes are not a standalone save authenticator.
+
+Two focused tests PASS: all30 initial reports from15 actual native snapshots, and
+bounded first-prefix alignment/rejection checks. The three constitutional contrasts
+have different initial state but equal initial mechanism projections. Reversed
+pairs, forged run identity and inconsistent prefix metadata are rejected. TypeScript,
+import boundaries and research obligation checks PASS. No frozen adapter dependency
+was edited. All-prefix report qualification, comparison workers/UI, pair checkpoint
+continuation and browser comparisons remain due. The original15-program parity
+audit remains running; latest observed first program prefix14.
