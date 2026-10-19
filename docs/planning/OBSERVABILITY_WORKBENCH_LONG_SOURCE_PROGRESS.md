@@ -53,3 +53,21 @@ It does not discharge successor qualification, broader browser coverage, complet
 reason/factor explanations, canonical architecture, specialized views, resource and
 accessibility work, or the complete integrated Campaign4-entry experiment. Preserve
 all18 conditional research obligations and source restrictions. No owner ruling needed.
+
+## Browser boundary programs — 2026-10-19
+
+`workbench-long-boundary-ui-rev1/receipt.json` PASS empty and maximum-time programs
+in the isolated4180 production preview. Seven captured observations match all seven
+native hashes from the completed source audit. Empty starts complete at prefix0 with
+zero timeline events and restores unchanged. Maximum-time reaches prefix1/clock64,
+the admitted maximum for this fixture, with17 events. Restoring its initial checkpoint
+returns to Ready; keyboard Step reproduces completion; capturing/restoring the terminal
+checkpoint preserves completion. Run and Step are disabled at every terminal observation
+and enabled at the nonterminal observations. No alert is present.
+
+The two complete observer-description records match the qualified language outputs,
+including absent person/detail fields and present zero-valued fields; twelve descriptions
+total. Navigation preserves native identities. Screenshot inspected. This is in-memory
+checkpoint qualification, not file transfer. It adds empty/terminal/horizon browser
+coverage without claiming all-program browser, rapid command races, full reason
+explanations or integrated acceptance. Production source and live batch assets unchanged.
