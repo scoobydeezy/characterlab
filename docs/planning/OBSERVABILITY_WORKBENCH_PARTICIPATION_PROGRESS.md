@@ -50,3 +50,42 @@ unknown causal contribution explicitly. Full subsystem mapping, evaluation contr
 controlled outcome effects, corpus aggregation, broader native coverage, language audit
 and the complete six-mode integrated demonstration remain required. No owner ruling,
 reduction, law selection or mechanism retirement occurs here.
+
+## Scoped canonical correspondence — 2026-10-19
+
+`general-canonical-participation/0.1` links eight declared General state roots to
+existing §3.2 canonical boxes. GeneralEpisodeState630 and GeneralPresentationState632
+map to Episodic; GeneralAssociationState631 maps to Assoc; MaintenanceGoalState633
+maps to Prospection; tracking/context roots634/635 and perceptual file roots241/242
+map to Percept. These correspondences use exact allocation names and the fixed
+General write-scope policy/enforcement. Presentation and ordinary memory retain
+separate state paths even when displayed under the same canonical box.
+
+The original raw participation report remains unchanged. The new report decodes each
+exact path, including absent historical paths, validates supplied current root labels,
+and aggregates recorded read/mutation/change counts and unique event links by box.
+It retains unmapped rows rather than silently assigning them to a convenient box.
+Mapped empty groups do not establish inactive or redundant architecture.
+
+`workbench-general-architecture-rev1/receipt.json` PASS all43 original General models/
+568 prefixes. Independent scans verify every path, presence, count and event link:
+6148 mapped and4500 unmapped path observations. Roots268/302/362/373/581/649 remain
+explicitly unmapped. Allocation/box names and policy membership are checked; wrong
+root labels, duplicate fields and wrong profile versions reject. Snapshot immutability
+and repeated report equality pass. Frozen sources bind the authority documents.
+
+The Architecture UI now exposes four canonical boxes, exact scoped counts, declared
+root correspondence, unmapped paths and links to recorded Timeline events. Counts
+remain distinct from evaluation contribution and controlled outcome effects. No
+topology, state owner, causal edge, character knowledge or reduction law is added.
+Full subsystem mapping, other seams, complete participation and integrated acceptance
+remain required. No Campaign3 verdict or research obligation is amended.
+
+`workbench-general-architecture-ui-rev1/receipt.json` PASS frozen baseline terminal11:
+the complete displayed canonical mapping report equals the native-backed cohort
+report; keyboard activation of Associations event43 selects that recorded Timeline
+event. Model/run/state/save hashes are unchanged by navigation. Screenshot inspected.
+TypeScript, isolated554-module build, reference boundaries and research checks PASS.
+The separate port4178 preview leaves the running port4173 corpus batch unchanged.
+Other browser profiles, six unmapped root types and evaluation/behavioral contribution
+remain explicitly outside this receipt; full architecture acceptance remains open.
