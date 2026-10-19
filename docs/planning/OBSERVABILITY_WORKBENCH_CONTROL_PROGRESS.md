@@ -76,6 +76,18 @@ paired UI restore, language, or batch qualification.
 
 ## Preserved meaning and next work
 
+Bounded browser language COMPLETE: `workbench-control-language-ui-rev1/receipt.json`
+checks216 rendered entries across7 captures/3 programs against full qualified language
+reports, including exact safe provenance and all six displayed commitments. Main
+prefix0/4/5/restore4/repeat5 preserves wording and successor; RetainedEqualsMaintained
+lost prefix5 and EraseHistory main prefix4 expose the required cautions. Long DOM
+provenance is captured in40000-character chunks to avoid tool-return truncation.
+Independent4 source/2 artifact/2 parent/3 joined-archive hashes PASS. Screenshot
+visually checked. No runtime/UI edits or new build were needed; final82338 build used.
+The original language receipt remains a source-level scope statement; this new receipt
+adds only the named bounded browser cases. Broad browser, file transfer, resource/
+accessibility, batch and full causal attribution remain open. No file transfer attempted.
+
 Observer description audit25247 COMPLETE:17 programs/142 prefixes/4248 descriptions,
 receipt `workbench-control-language-rev1/receipt.json`. Pure renderer accepts only
 canonical public observer bytes, validates the closed top-level record set and exposes
@@ -127,7 +139,7 @@ actual choice and execution remain separate. Goal retirement does not imply unle
 motor failure is not cognitive resistance. SpareSlot, NoInhibition, LoadBlind,
 RetainedEqualsMaintained, EraseHistory, NoHistory, Residual and Linear all survive.
 
-Next qualify browser descriptions and broader browser replay, and separately handle FATIGUE
+Next qualify broader browser replay, and separately handle FATIGUE
 and other successors. No batch, resource/accessibility, causal necessity, broad
 psychological claim or Campaign4 entry is accepted. Evidence restore/research checks
 PASS18 conditional obligations; no obligation or historical restriction is retired.

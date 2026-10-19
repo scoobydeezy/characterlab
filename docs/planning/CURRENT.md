@@ -1,5 +1,12 @@
 # Current research entry point
 
+**CONTROL bounded browser language2026-10-19:**216 descriptions/7 captures/3 programs
+PASS full wording/provenance and six native commitments. Main0/4/5/restore4/repeat5,
+RetainedEqualsMaintained/lost5 and EraseHistory/main4 preserve effective-access and
+history-deletion cautions. See workbench-control-language-ui-rev1/receipt.json and
+CONTROL progress. Full17-program browser, batch, resource/accessibility and broader
+causal explanation gates remain open. FATIGUE/dependence successors remain separate.
+
 **CONTROL observer descriptions2026-10-19:** full17-program/142-prefix audit PASS4248
 descriptions. Observer-only renderer preserves earlier wording, excludes mechanical
 draws and private execution; hidden/absent and hidden-reward equalities PASS.
