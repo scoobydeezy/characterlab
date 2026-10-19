@@ -5,7 +5,8 @@ declared contrasts implemented. Constitution -1/8,0,+1/8 selects original fresh
 models with identical inputs. Bounded browser mode/restore and constitutional pair
 pause1/1, restore1/1, exact continuation2/2 and main-run isolation PASS; complete
 reports join fresh native execution. Full285-prefix parity RUNNING session79989
-(first program prefix16); all-contrast/full-horizon and language qualification due.
+(second program prefix5). Full570-report comparison audit RUNNING session81715;
+five-program/ten-prefix smoke PASS. All-prefix restore and language remain due.
 Start OBSERVABILITY_WORKBENCH_DISPOSITION_PROGRESS.md. Batch admission and complete
 integrated entry remain open. Preserve all Campaign3 qualifications and obligations.
 

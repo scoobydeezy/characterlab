@@ -161,3 +161,25 @@ full-horizon resource, general accessibility or observer-language qualification.
 UI follow-up: replace opaque comparison IDs in the selector with descriptive
 program names and changed settings; retain IDs in the exact report. Full comparison
 coverage and remaining integrated-entry requirements stay open.
+
+## Full comparison audit launch — 2026-10-19
+
+`scripts/check-workbench-disposition-comparisons.mjs` freezes dependencies before
+execution, verifies every native save against its original program receipt, and
+retains exact snapshots and derived reports as lossless gzip artifacts. Every
+reported field is independently joined to its source snapshots; mechanism projection
+equality is checked against exact projection text. All selected declared contrasts
+must appear at every selected prefix before a PASS receipt is written.
+
+The smoke cohort PASS: five original programs (Main, Leaky, NoEvidence and the two
+constitution controls), ten native prefixes and ten reports for five contrasts at
+prefixes0/1. Independent verification checked all20 artifact hashes and146 current/
+frozen source pairs. Research obligations PASS. The smoke receipt is
+`workbench-disposition-comparison-smoke-rev1/receipt.json`.
+
+The FULL audit is RUNNING under session81715, frozen in
+`workbench-disposition-comparison-rev1/frozen.json`. Required totals:15 programs,
+285 original prefixes and570 reports across30 contrasts. Latest observed source0
+prefix1. Do not edit its frozen dependencies or infer completion from the smoke
+receipt. Full comparison receipt, all-prefix pair restore, broader browser coverage,
+language, resource policy and integrated Campaign4 entry remain due.
