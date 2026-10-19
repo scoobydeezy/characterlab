@@ -72,3 +72,10 @@ The frozen General public facade rejects nonoriginal initial state/calendar and
 nonfrozen model identities. It supplies no character-base-parameter edit seam.
 Thus this improves step6 integration but does not discharge step3, complete language
 or the requirement for one end-to-end demonstrated experiment.
+
+2026-10-19 parameter discovery: the existing qualified Disposition native successor
+does admit a constitutional baseline {-1,0,1}/8. Its three Plastic controls share
+exact original inputs and differ in model identity. A closed original-program adapter
+and focused continuation tests now exist; complete parity is running. This supplies
+a grounded route for step3 through fresh-run model controls, but no slider/UI or final
+demonstration is accepted yet. See OBSERVABILITY_WORKBENCH_DISPOSITION_PROGRESS.md.
