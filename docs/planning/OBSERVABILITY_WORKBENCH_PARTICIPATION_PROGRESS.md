@@ -89,3 +89,33 @@ TypeScript, isolated554-module build, reference boundaries and research checks P
 The separate port4178 preview leaves the running port4173 corpus batch unchanged.
 Other browser profiles, six unmapped root types and evaluation/behavioral contribution
 remain explicitly outside this receipt; full architecture acceptance remains open.
+
+## Remaining General roots: ownership disposition — 2026-10-19
+
+LOCAL DISPOSITION: the six remaining root types are not six missing cognitive boxes.
+`workbench-general-root-dispositions-rev1/receipt.json` binds the exact allocation
+names, relevant authority documents and all43 retained architecture reports/568
+prefixes. Its census accounts for all4500 previously unmapped path observations.
+It does not modify the eight-root display or qualify additional correspondences.
+
+| Root | State | Disposition for the next implementation |
+| --- | --- | --- |
+| 268 | CharacterObserverBindingState | Identity/projection support. The immutable observer-to-character roster is not autobiographical Self or an observer-specific Person model. Keep support activity distinct. |
+| 302 | RegulatoryAdaptationState | The canonical RegAdapt box explicitly owns tolerance, sensitization and accumulated load. Add this bounded correspondence using inherited ADAPT authority rather than claiming membership in the General write-stage policy. All568 observed paths are present; this cohort records no mutations to this root. |
+| 362 | MeasurementPredictionState | A supported diagnostic-reading prediction under the sole belief/expectation authority. Resolve the explicit Expect/Beliefs display correspondence from the bounded seam before mapping it; no causal-belief, confidence or action-efficacy inference. There are524 observed prefix paths, including10 absent historical paths. |
+| 373 | TaskCommitmentState | Prospective commitment ownership supports Prospection. Preserve the concrete measurement-task lifecycle and schema successors; neither task satisfaction nor deadline failure establishes world success or a social judgment. |
+| 581 | FormationGovernanceState | Protocol metadata for formation identity and complete loss. Settlement returns it to the trusted coordinator, not a cognitive evaluator. Do not count it as retained episodic content. |
+| 649 | LocalReserveState | A world-side physical source with physical mutation authority. Keep its three reserve paths separate from admitted interoceptive evidence; do not silently label it character Phys or Intero. |
+
+The relevant contracts are frozen with the receipt. Their historical component-only
+or pre-activation statements retain their original scope; they do not override later
+public qualification or reopen Campaign3 gates. This review concerns ownership and
+epistemic boundaries only. Counts sum cumulative snapshots across prefixes and must
+not be presented as unique experiment events.
+
+Next: implement inherited-owner correspondences for302/373, explicitly settle the
+bounded362 display, and show identity/protocol/physical-source support outside the
+cognitive-box aggregation. Requalify the revised report across all43 models/568
+prefixes and in the browser with unchanged native hashes. Existing receipts remain
+immutable. No runtime semantics, topology, research verdict or obligation changes;
+no owner ruling or reduction is needed. Full architecture acceptance remains open.
