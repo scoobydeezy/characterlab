@@ -1,0 +1,40 @@
+{
+  "status": "PASS BOUNDED VALUES REASON/EVENT/PARENT NAVIGATION",
+  "sources": [
+    {
+      "path": "src/workbench/Workbench.tsx",
+      "sha256": "10c2d57d45c6bcdb2c0ee61484bef30095d8746ef848583c360c746e3766da71"
+    },
+    {
+      "path": "src/workbench/CausalHistoryPanel.tsx",
+      "sha256": "33e1eab5f37898db2ade760dd969f80d27fc367808ad7d5ef3109cea7e26aae1"
+    },
+    {
+      "path": "src/workbench/causalNavigation.ts",
+      "sha256": "b1ac6f44acd96c513091b21127d0ff4d9f9ce0111a5455557f36944be1f6d255"
+    },
+    {
+      "path": "src/workbench/valuesAdapter.ts",
+      "sha256": "ae25088cae7ba304f97f90388c2fe2057636f75d299d8b603a2a471cf2e67455"
+    }
+  ],
+  "checker": {
+    "path": "scripts/check-workbench-values-causal-ui.mjs",
+    "sha256": "b336fbf2e136fbfb09e7f04c60b6a3adc20d3918057efcfa3b8fd48f6b52d95b"
+  },
+  "artifacts": [
+    {
+      "path": "browser.json",
+      "sha256": "f174743e349e78f83f840d7a16345ac4d86d4f36e96e86188cf3d552a4baedae"
+    },
+    {
+      "path": "history.png",
+      "sha256": "8b060b5b4b5a654acbc04a6dae1da26ea64ee7af2f603d49068222016ad34199"
+    },
+    {
+      "path": "run-0.json.gz",
+      "sha256": "0f089baca029e46b296b4ce9ba4609829727d98b3e2f2b469ea1548db81b971a"
+    }
+  ],
+  "scope": "Original success program0 at completed prefix4. First reason links to17, keyboard parent navigation to appraisal16 and source1, child links return to17. Exact recorded ancestor edges/identity match native output; main commitments unchanged. Full125-program native audit remains separate and may still be running. No browser proof of full language adequacy, contribution causality or integrated Campaign4 entry."
+}

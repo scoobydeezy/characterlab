@@ -1,5 +1,12 @@
 # Current research entry point
 
+**Integrated Values history2026-10-19:** reason-to-event-to-parent/child navigation
+implemented; bounded browser chain17/16/1/16/17 and historical reason/ancestry2->4 PASS.
+Full125-program ancestry audit RUNNING (session35659;60/125 observed); final receipt
+required. Start OBSERVABILITY_WORKBENCH_INTEGRATED_PROGRESS.md for the original
+sixteen-step demonstration and explicit gaps, including base-parameter editing and
+matrix/vector integration. No Campaign4 entry acceptance.
+
 **SUBSTITUTION diagnostic filters2026-10-19:** pinned baseline, actual state-section
 filter and changed-only added. Renderer0.2 preserves missing/null and equal-count
 container differences, with both revision identities.725 original-prefix comparisons/
