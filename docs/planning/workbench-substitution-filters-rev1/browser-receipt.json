@@ -1,0 +1,34 @@
+{
+  "status": "PASS BOUNDED DIAGNOSTIC BASELINE/FILTER BROWSER",
+  "parent": {
+    "path": "docs/planning/workbench-substitution-filters-rev1/receipt.json",
+    "sha256": "9eae29cea4d4aa1ce14917322d1cf857e1a4c61fa4663e80587fd6fd09fb059a"
+  },
+  "checker": {
+    "path": "scripts/check-workbench-diagnostic-filters-ui.mjs",
+    "sha256": "62ae357ad31885999028e625a9303a498879283aa9282070bc7b8e104aba9739"
+  },
+  "artifacts": [
+    {
+      "path": "browser.json",
+      "sha256": "b19794c97c25e6b093ba768fc634b3d886befd8f5eef6a9f32dc075bb551d7bc"
+    },
+    {
+      "path": "removed-field.png",
+      "sha256": "650c236977012927fbf34a3d3233a8d4847c85da95cd9e96d5cf19677bd3b122"
+    },
+    {
+      "path": "settled-zero.json",
+      "sha256": "780f9fafb3202ca0bef769eac8e93d9f66677cbe6fb110f4986b98070b52d7ee"
+    },
+    {
+      "path": "failed-browser-checker.mjs",
+      "sha256": "45a760f6c780888ad933a4c3484895fae74657a821156c3e153ada184c6eb70c"
+    },
+    {
+      "path": "browser-finding.md",
+      "sha256": "ce33eac3ad7eed88c3e7d7bf2396124815ba8bf86699092ad166a5eccd894a25"
+    }
+  ],
+  "scope": "Initial zero capture rejected as uninitialized; separate initialized zero capture validates state/hashes while checkpoint capture is Working. Diversified0/1 pin, changed-only, row section, keyboard field selection, repin, restore0 showing removed field with no current Timeline link, clear baseline, new MeanHistory run reset. Exact state and commitments join original archived programs. Not full subsystem metadata or semantic filtering, all-program browser coverage, causal contribution, or global resource qualification."
+}

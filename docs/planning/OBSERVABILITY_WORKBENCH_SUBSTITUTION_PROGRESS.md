@@ -278,3 +278,42 @@ The shared run-loop refactor also executes successfully in this bounded step/run
 restore flow; nonterminal browser pause is still unproven. Broader subsystem rollout,
 authority/activity/changed/contributing/editable/uncertainty/historical filters,
 all-program browser search and integrated acceptance remain open. No research verdict.
+
+## Pinned baseline and structural filters
+
+2026-10-19. `diagnostic-search/0.2` adds a pinned read-only diagnostic baseline,
+state-section filter and changed-only selection. Search includes previous and current
+values. Added/removed/changed/unchanged statuses preserve missing versus null. Container
+change propagates from descendants even with equal entry counts. Both state identities
+are shown; incompatible run/model/seam baselines are not compared. New-run key resets
+the baseline; leaving this inspector ends its local baseline, explicitly described.
+Removed fields retain exact historical values but offer no current Timeline link.
+
+LOCAL DISPOSITION: sections are actual top-level state paths, not invented canonical
+subsystem ownership. Array comparison is positional, not semantic object alignment.
+Changed means structural difference, not observed read, contribution, intervention
+effect or necessity. No unsupported authority/contribution/uncertainty metadata is
+guessed. Broader semantic filters remain required work.
+
+Six focused tests PASS. `workbench-substitution-filters-rev1/receipt.json` independently
+compares full subtrees across261 self comparisons and232 adjacent prefixes in each
+direction:725 comparisons/142658 fields, all29 original programs. Section plus
+changed-only filtering and100-result limits checked at every comparison. Preserved
+full-state browser archives remain joined to original native commitments.
+
+Bounded browser receipt PASS: pin0, step1, row filter and keyboard added-field selection;
+repin1 produces zero changes; restore0 retains removed field and both identities,
+without a nonexistent Timeline link. Clearing and creating another model disable
+the previous baseline. Original state/five commitments match. Screenshot inspected.
+Production build522 modules PASS with existing chunk warning. No runtime seam,
+Campaign3 verdict, obligation disposition, global resource or integrated-entry claim.
+Long audit handles remain live; goal source reached14/120 prefix10 and habit624/960.
+
+Browser timing finding retained: the first zero-prefix observation was captured
+during initialization (empty state/no hashes) and the first verifier rejected it.
+Original browser data and failed checker remain. A separate initialized zero capture
+after enabled checkpoint capture contains complete state/five hashes (status Working
+on that read-only checkpoint operation). Corrected verifier explicitly rejects the
+initial empty observation as parity evidence and joins the supplemental zero plus
+all later captures to the original archive. No production change concealed the race.
+Research check PASS with18 conditional/0 active/0 unowned/4 closed obligations.

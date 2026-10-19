@@ -1,5 +1,5 @@
 import {expect,it} from 'vitest';
-import {DIAGNOSTIC_SEARCH_LIMITS,indexDiagnosticState,searchDiagnosticFields} from '../workbench/diagnosticSearch';
+import {DIAGNOSTIC_SEARCH_LIMITS,indexDiagnosticState,searchDiagnosticFields,compareDiagnosticIndexes,filterDiagnosticChanges} from '../workbench/diagnosticSearch';
 import {SubstitutionWorkbenchRun} from '../workbench/substitutionAdapter';
 it('preserves exact leaf values, escaped paths, null and empty containers without mutation',()=>{
  const value={'a/b':{'~key':null},empty:[],zero:0,known:false,large:'9007199254740993123',fraction:{n:'1',d:'3'}};
@@ -31,3 +31,20 @@ it('indexes every field of a committed component state and leaves continuation u
  }
  const index=indexDiagnosticState(a.snapshot().state);expect(searchDiagnosticFields(index,'/rows/7/at').matches[0].exact).toBe('8');
 },600000);
+it('distinguishes absent fields from null and marks equal-sized changed containers',()=>{
+ const before=indexDiagnosticState({group:{old:null},same:0}),after=indexDiagnosticState({group:{next:null},same:0});
+ const rows=compareDiagnosticIndexes(after,before),byPath=new Map(rows.map(r=>[r.path,r]));
+ expect(byPath.get('/group/old')?.status).toBe('removed');expect(byPath.get('/group/old')?.before?.exact).toBe('null');expect(byPath.get('/group/old')?.after).toBeUndefined();
+ expect(byPath.get('/group/next')?.status).toBe('added');expect(byPath.get('/group')?.status).toBe('changed');expect(byPath.get('')?.status).toBe('changed');expect(byPath.get('/same')?.status).toBe('unchanged');
+ expect(compareDiagnosticIndexes(before,after).find(r=>r.path==='/group/next')?.status).toBe('removed');
+ expect(filterDiagnosticChanges(compareDiagnosticIndexes(before,before),'','',true).total).toBe(0);
+});
+it('combines section, previous-value search and changed filters before limiting',()=>{
+ const before=indexDiagnosticState({a:{x:'previous',y:1},ab:{x:2}}),after=indexDiagnosticState({a:{x:'current',y:1},ab:{x:3}});
+ const rows=compareDiagnosticIndexes(after,before),result=filterDiagnosticChanges(rows,'previous','/a',true);
+ expect(result.matches.map(r=>r.path)).toEqual(['/a/x']);expect(result.matches[0].after?.exact).toBe('"current"');
+ expect(filterDiagnosticChanges(rows,'','/a',true).matches.map(r=>r.path)).toEqual(['/a','/a/x']);
+ const many=compareDiagnosticIndexes(indexDiagnosticState(Array(110).fill(1)),indexDiagnosticState(Array(110).fill(0)));
+ expect(filterDiagnosticChanges(many,'','',true)).toMatchObject({total:111,limited:true});
+ expect(()=>compareDiagnosticIndexes({fields:[],error:'incomplete'},before)).toThrow('incomplete');
+});

@@ -1,0 +1,1662 @@
+{
+  "status": "PASS FULL ORIGINAL SUBSTITUTION DIAGNOSTIC DIFF/FILTER COHORT",
+  "sources": [
+    {
+      "path": "src/workbench/diagnosticSearch.ts",
+      "sha256": "6767ff22c7c934f1978600ab0fd38a4bdfb0be6a0f905c0650b70f54990a9ea8"
+    },
+    {
+      "path": "src/workbench/DiagnosticStateInspector.tsx",
+      "sha256": "8597148b8f500184c996251df16f70ca45189acf5b95c0787ba153ba507413d6"
+    },
+    {
+      "path": "src/workbench/diagnosticInspector.css",
+      "sha256": "b99907208c04cb864ea23497ea05ffc6f618246e5795c88f8c853745ee5fec1c"
+    },
+    {
+      "path": "src/workbench/SubstitutionWorkbench.tsx",
+      "sha256": "34205bf2063105bf64924a531210dfd88513816b358e8b182883b0e5243154cb"
+    },
+    {
+      "path": "src/test/workbenchDiagnosticSearch.test.ts",
+      "sha256": "e2e0a48e5a26d39e486fcc1f5853b998f7e29de4f4ff73ac7ef81b855c33b3d9"
+    },
+    {
+      "path": "scripts/check-workbench-diagnostic-filters.mjs",
+      "sha256": "e7a20635e75622c6dc410dd4a66e69652278ff7c49b6e2abfbdc7affd3a96c97"
+    }
+  ],
+  "parent": {
+    "path": "docs/planning/workbench-substitution-browser-programs-rev1/receipt.json",
+    "sha256": "916fdb2c1f2f5429147d680ff3d8ba1304cbae83d87f4b7610e5fa4bf2a3e92c"
+  },
+  "comparisons": 725,
+  "fields": 142658,
+  "results": [
+    {
+      "program": "LatestHistory/diversified",
+      "from": 0,
+      "to": 1,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/diversified",
+      "from": 1,
+      "to": 2,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/diversified",
+      "from": 2,
+      "to": 3,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/diversified",
+      "from": 3,
+      "to": 4,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/diversified",
+      "from": 4,
+      "to": 5,
+      "forwardChanges": 40,
+      "reverseChanges": 40
+    },
+    {
+      "program": "LatestHistory/diversified",
+      "from": 5,
+      "to": 6,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/diversified",
+      "from": 6,
+      "to": 7,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/diversified",
+      "from": 7,
+      "to": 8,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "MeanHistory/diversified",
+      "from": 0,
+      "to": 1,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "MeanHistory/diversified",
+      "from": 1,
+      "to": 2,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "MeanHistory/diversified",
+      "from": 2,
+      "to": 3,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "MeanHistory/diversified",
+      "from": 3,
+      "to": 4,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "MeanHistory/diversified",
+      "from": 4,
+      "to": 5,
+      "forwardChanges": 40,
+      "reverseChanges": 40
+    },
+    {
+      "program": "MeanHistory/diversified",
+      "from": 5,
+      "to": 6,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "MeanHistory/diversified",
+      "from": 6,
+      "to": 7,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "MeanHistory/diversified",
+      "from": 7,
+      "to": 8,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "ExpectationOnly/diversified",
+      "from": 0,
+      "to": 1,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "ExpectationOnly/diversified",
+      "from": 1,
+      "to": 2,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "ExpectationOnly/diversified",
+      "from": 2,
+      "to": 3,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "ExpectationOnly/diversified",
+      "from": 3,
+      "to": 4,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "ExpectationOnly/diversified",
+      "from": 4,
+      "to": 5,
+      "forwardChanges": 40,
+      "reverseChanges": 40
+    },
+    {
+      "program": "ExpectationOnly/diversified",
+      "from": 5,
+      "to": 6,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "ExpectationOnly/diversified",
+      "from": 6,
+      "to": 7,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "ExpectationOnly/diversified",
+      "from": 7,
+      "to": 8,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "HistoryOnly/diversified",
+      "from": 0,
+      "to": 1,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "HistoryOnly/diversified",
+      "from": 1,
+      "to": 2,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "HistoryOnly/diversified",
+      "from": 2,
+      "to": 3,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "HistoryOnly/diversified",
+      "from": 3,
+      "to": 4,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "HistoryOnly/diversified",
+      "from": 4,
+      "to": 5,
+      "forwardChanges": 40,
+      "reverseChanges": 40
+    },
+    {
+      "program": "HistoryOnly/diversified",
+      "from": 5,
+      "to": 6,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "HistoryOnly/diversified",
+      "from": 6,
+      "to": 7,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "HistoryOnly/diversified",
+      "from": 7,
+      "to": 8,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "NoLearning/diversified",
+      "from": 0,
+      "to": 1,
+      "forwardChanges": 42,
+      "reverseChanges": 42
+    },
+    {
+      "program": "NoLearning/diversified",
+      "from": 1,
+      "to": 2,
+      "forwardChanges": 42,
+      "reverseChanges": 42
+    },
+    {
+      "program": "NoLearning/diversified",
+      "from": 2,
+      "to": 3,
+      "forwardChanges": 42,
+      "reverseChanges": 42
+    },
+    {
+      "program": "NoLearning/diversified",
+      "from": 3,
+      "to": 4,
+      "forwardChanges": 42,
+      "reverseChanges": 42
+    },
+    {
+      "program": "NoLearning/diversified",
+      "from": 4,
+      "to": 5,
+      "forwardChanges": 40,
+      "reverseChanges": 40
+    },
+    {
+      "program": "NoLearning/diversified",
+      "from": 5,
+      "to": 6,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "NoLearning/diversified",
+      "from": 6,
+      "to": 7,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "NoLearning/diversified",
+      "from": 7,
+      "to": 8,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/concentrated",
+      "from": 0,
+      "to": 1,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/concentrated",
+      "from": 1,
+      "to": 2,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/concentrated",
+      "from": 2,
+      "to": 3,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/concentrated",
+      "from": 3,
+      "to": 4,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/concentrated",
+      "from": 4,
+      "to": 5,
+      "forwardChanges": 40,
+      "reverseChanges": 40
+    },
+    {
+      "program": "LatestHistory/concentrated",
+      "from": 5,
+      "to": 6,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/concentrated",
+      "from": 6,
+      "to": 7,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/concentrated",
+      "from": 7,
+      "to": 8,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/knownAlternative",
+      "from": 0,
+      "to": 1,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/knownAlternative",
+      "from": 1,
+      "to": 2,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/knownAlternative",
+      "from": 2,
+      "to": 3,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/knownAlternative",
+      "from": 3,
+      "to": 4,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/knownAlternative",
+      "from": 4,
+      "to": 5,
+      "forwardChanges": 46,
+      "reverseChanges": 46
+    },
+    {
+      "program": "LatestHistory/knownAlternative",
+      "from": 5,
+      "to": 6,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/knownAlternative",
+      "from": 6,
+      "to": 7,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/knownAlternative",
+      "from": 7,
+      "to": 8,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/knownFailure",
+      "from": 0,
+      "to": 1,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/knownFailure",
+      "from": 1,
+      "to": 2,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/knownFailure",
+      "from": 2,
+      "to": 3,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/knownFailure",
+      "from": 3,
+      "to": 4,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/knownFailure",
+      "from": 4,
+      "to": 5,
+      "forwardChanges": 46,
+      "reverseChanges": 46
+    },
+    {
+      "program": "LatestHistory/knownFailure",
+      "from": 5,
+      "to": 6,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/knownFailure",
+      "from": 6,
+      "to": 7,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/knownFailure",
+      "from": 7,
+      "to": 8,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/unavailable",
+      "from": 0,
+      "to": 1,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/unavailable",
+      "from": 1,
+      "to": 2,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/unavailable",
+      "from": 2,
+      "to": 3,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/unavailable",
+      "from": 3,
+      "to": 4,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/unavailable",
+      "from": 4,
+      "to": 5,
+      "forwardChanges": 40,
+      "reverseChanges": 40
+    },
+    {
+      "program": "LatestHistory/unavailable",
+      "from": 5,
+      "to": 6,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/unavailable",
+      "from": 6,
+      "to": 7,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/unavailable",
+      "from": 7,
+      "to": 8,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/noDemand",
+      "from": 0,
+      "to": 1,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/noDemand",
+      "from": 1,
+      "to": 2,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/noDemand",
+      "from": 2,
+      "to": 3,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/noDemand",
+      "from": 3,
+      "to": 4,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/noDemand",
+      "from": 4,
+      "to": 5,
+      "forwardChanges": 40,
+      "reverseChanges": 40
+    },
+    {
+      "program": "LatestHistory/noDemand",
+      "from": 5,
+      "to": 6,
+      "forwardChanges": 40,
+      "reverseChanges": 40
+    },
+    {
+      "program": "LatestHistory/noDemand",
+      "from": 6,
+      "to": 7,
+      "forwardChanges": 40,
+      "reverseChanges": 40
+    },
+    {
+      "program": "LatestHistory/noDemand",
+      "from": 7,
+      "to": 8,
+      "forwardChanges": 40,
+      "reverseChanges": 40
+    },
+    {
+      "program": "LatestHistory/restoredA",
+      "from": 0,
+      "to": 1,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/restoredA",
+      "from": 1,
+      "to": 2,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/restoredA",
+      "from": 2,
+      "to": 3,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/restoredA",
+      "from": 3,
+      "to": 4,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/restoredA",
+      "from": 4,
+      "to": 5,
+      "forwardChanges": 40,
+      "reverseChanges": 40
+    },
+    {
+      "program": "LatestHistory/restoredA",
+      "from": 5,
+      "to": 6,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/restoredA",
+      "from": 6,
+      "to": 7,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/restoredA",
+      "from": 7,
+      "to": 8,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/correctedConcentrated",
+      "from": 0,
+      "to": 1,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/correctedConcentrated",
+      "from": 1,
+      "to": 2,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/correctedConcentrated",
+      "from": 2,
+      "to": 3,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/correctedConcentrated",
+      "from": 3,
+      "to": 4,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/correctedConcentrated",
+      "from": 4,
+      "to": 5,
+      "forwardChanges": 51,
+      "reverseChanges": 51
+    },
+    {
+      "program": "LatestHistory/correctedConcentrated",
+      "from": 5,
+      "to": 6,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/correctedConcentrated",
+      "from": 6,
+      "to": 7,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/correctedConcentrated",
+      "from": 7,
+      "to": 8,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/correctedDiversified",
+      "from": 0,
+      "to": 1,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/correctedDiversified",
+      "from": 1,
+      "to": 2,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/correctedDiversified",
+      "from": 2,
+      "to": 3,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/correctedDiversified",
+      "from": 3,
+      "to": 4,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/correctedDiversified",
+      "from": 4,
+      "to": 5,
+      "forwardChanges": 51,
+      "reverseChanges": 51
+    },
+    {
+      "program": "LatestHistory/correctedDiversified",
+      "from": 5,
+      "to": 6,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/correctedDiversified",
+      "from": 6,
+      "to": 7,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/correctedDiversified",
+      "from": 7,
+      "to": 8,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/otherCue",
+      "from": 0,
+      "to": 1,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/otherCue",
+      "from": 1,
+      "to": 2,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/otherCue",
+      "from": 2,
+      "to": 3,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/otherCue",
+      "from": 3,
+      "to": 4,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/otherCue",
+      "from": 4,
+      "to": 5,
+      "forwardChanges": 51,
+      "reverseChanges": 51
+    },
+    {
+      "program": "LatestHistory/otherCue",
+      "from": 5,
+      "to": 6,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/otherCue",
+      "from": 6,
+      "to": 7,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/otherCue",
+      "from": 7,
+      "to": 8,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/bothAvailable",
+      "from": 0,
+      "to": 1,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/bothAvailable",
+      "from": 1,
+      "to": 2,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/bothAvailable",
+      "from": 2,
+      "to": 3,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/bothAvailable",
+      "from": 3,
+      "to": 4,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/bothAvailable",
+      "from": 4,
+      "to": 5,
+      "forwardChanges": 40,
+      "reverseChanges": 40
+    },
+    {
+      "program": "LatestHistory/bothAvailable",
+      "from": 5,
+      "to": 6,
+      "forwardChanges": 57,
+      "reverseChanges": 57
+    },
+    {
+      "program": "LatestHistory/bothAvailable",
+      "from": 6,
+      "to": 7,
+      "forwardChanges": 57,
+      "reverseChanges": 57
+    },
+    {
+      "program": "LatestHistory/bothAvailable",
+      "from": 7,
+      "to": 8,
+      "forwardChanges": 58,
+      "reverseChanges": 58
+    },
+    {
+      "program": "LatestHistory/unseenTraining",
+      "from": 0,
+      "to": 1,
+      "forwardChanges": 42,
+      "reverseChanges": 42
+    },
+    {
+      "program": "LatestHistory/unseenTraining",
+      "from": 1,
+      "to": 2,
+      "forwardChanges": 42,
+      "reverseChanges": 42
+    },
+    {
+      "program": "LatestHistory/unseenTraining",
+      "from": 2,
+      "to": 3,
+      "forwardChanges": 42,
+      "reverseChanges": 42
+    },
+    {
+      "program": "LatestHistory/unseenTraining",
+      "from": 3,
+      "to": 4,
+      "forwardChanges": 42,
+      "reverseChanges": 42
+    },
+    {
+      "program": "LatestHistory/unseenTraining",
+      "from": 4,
+      "to": 5,
+      "forwardChanges": 40,
+      "reverseChanges": 40
+    },
+    {
+      "program": "LatestHistory/unseenTraining",
+      "from": 5,
+      "to": 6,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/unseenTraining",
+      "from": 6,
+      "to": 7,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/unseenTraining",
+      "from": 7,
+      "to": 8,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/falseTraining",
+      "from": 0,
+      "to": 1,
+      "forwardChanges": 52,
+      "reverseChanges": 52
+    },
+    {
+      "program": "LatestHistory/falseTraining",
+      "from": 1,
+      "to": 2,
+      "forwardChanges": 52,
+      "reverseChanges": 52
+    },
+    {
+      "program": "LatestHistory/falseTraining",
+      "from": 2,
+      "to": 3,
+      "forwardChanges": 52,
+      "reverseChanges": 52
+    },
+    {
+      "program": "LatestHistory/falseTraining",
+      "from": 3,
+      "to": 4,
+      "forwardChanges": 52,
+      "reverseChanges": 52
+    },
+    {
+      "program": "LatestHistory/falseTraining",
+      "from": 4,
+      "to": 5,
+      "forwardChanges": 40,
+      "reverseChanges": 40
+    },
+    {
+      "program": "LatestHistory/falseTraining",
+      "from": 5,
+      "to": 6,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/falseTraining",
+      "from": 6,
+      "to": 7,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/falseTraining",
+      "from": 7,
+      "to": 8,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/deniedFeedback",
+      "from": 0,
+      "to": 1,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/deniedFeedback",
+      "from": 1,
+      "to": 2,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/deniedFeedback",
+      "from": 2,
+      "to": 3,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/deniedFeedback",
+      "from": 3,
+      "to": 4,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/deniedFeedback",
+      "from": 4,
+      "to": 5,
+      "forwardChanges": 40,
+      "reverseChanges": 40
+    },
+    {
+      "program": "LatestHistory/deniedFeedback",
+      "from": 5,
+      "to": 6,
+      "forwardChanges": 42,
+      "reverseChanges": 42
+    },
+    {
+      "program": "LatestHistory/deniedFeedback",
+      "from": 6,
+      "to": 7,
+      "forwardChanges": 42,
+      "reverseChanges": 42
+    },
+    {
+      "program": "LatestHistory/deniedFeedback",
+      "from": 7,
+      "to": 8,
+      "forwardChanges": 42,
+      "reverseChanges": 42
+    },
+    {
+      "program": "LatestHistory/hiddenBlocked",
+      "from": 0,
+      "to": 1,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/hiddenBlocked",
+      "from": 1,
+      "to": 2,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/hiddenBlocked",
+      "from": 2,
+      "to": 3,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/hiddenBlocked",
+      "from": 3,
+      "to": 4,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/hiddenBlocked",
+      "from": 4,
+      "to": 5,
+      "forwardChanges": 40,
+      "reverseChanges": 40
+    },
+    {
+      "program": "LatestHistory/hiddenBlocked",
+      "from": 5,
+      "to": 6,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/hiddenBlocked",
+      "from": 6,
+      "to": 7,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/hiddenBlocked",
+      "from": 7,
+      "to": 8,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/failure",
+      "from": 0,
+      "to": 1,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/failure",
+      "from": 1,
+      "to": 2,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/failure",
+      "from": 2,
+      "to": 3,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/failure",
+      "from": 3,
+      "to": 4,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/failure",
+      "from": 4,
+      "to": 5,
+      "forwardChanges": 40,
+      "reverseChanges": 40
+    },
+    {
+      "program": "LatestHistory/failure",
+      "from": 5,
+      "to": 6,
+      "forwardChanges": 53,
+      "reverseChanges": 53
+    },
+    {
+      "program": "LatestHistory/failure",
+      "from": 6,
+      "to": 7,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/failure",
+      "from": 7,
+      "to": 8,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/falseSuccess",
+      "from": 0,
+      "to": 1,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/falseSuccess",
+      "from": 1,
+      "to": 2,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/falseSuccess",
+      "from": 2,
+      "to": 3,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/falseSuccess",
+      "from": 3,
+      "to": 4,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/falseSuccess",
+      "from": 4,
+      "to": 5,
+      "forwardChanges": 40,
+      "reverseChanges": 40
+    },
+    {
+      "program": "LatestHistory/falseSuccess",
+      "from": 5,
+      "to": 6,
+      "forwardChanges": 53,
+      "reverseChanges": 53
+    },
+    {
+      "program": "LatestHistory/falseSuccess",
+      "from": 6,
+      "to": 7,
+      "forwardChanges": 53,
+      "reverseChanges": 53
+    },
+    {
+      "program": "LatestHistory/falseSuccess",
+      "from": 7,
+      "to": 8,
+      "forwardChanges": 53,
+      "reverseChanges": 53
+    },
+    {
+      "program": "LatestHistory/trueSuccess",
+      "from": 0,
+      "to": 1,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/trueSuccess",
+      "from": 1,
+      "to": 2,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/trueSuccess",
+      "from": 2,
+      "to": 3,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/trueSuccess",
+      "from": 3,
+      "to": 4,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/trueSuccess",
+      "from": 4,
+      "to": 5,
+      "forwardChanges": 40,
+      "reverseChanges": 40
+    },
+    {
+      "program": "LatestHistory/trueSuccess",
+      "from": 5,
+      "to": 6,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/trueSuccess",
+      "from": 6,
+      "to": 7,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/trueSuccess",
+      "from": 7,
+      "to": 8,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/deniedInfo",
+      "from": 0,
+      "to": 1,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/deniedInfo",
+      "from": 1,
+      "to": 2,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/deniedInfo",
+      "from": 2,
+      "to": 3,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/deniedInfo",
+      "from": 3,
+      "to": 4,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/deniedInfo",
+      "from": 4,
+      "to": 5,
+      "forwardChanges": 40,
+      "reverseChanges": 40
+    },
+    {
+      "program": "LatestHistory/deniedInfo",
+      "from": 5,
+      "to": 6,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/deniedInfo",
+      "from": 6,
+      "to": 7,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/deniedInfo",
+      "from": 7,
+      "to": 8,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/absentInfo",
+      "from": 0,
+      "to": 1,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/absentInfo",
+      "from": 1,
+      "to": 2,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/absentInfo",
+      "from": 2,
+      "to": 3,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/absentInfo",
+      "from": 3,
+      "to": 4,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "LatestHistory/absentInfo",
+      "from": 4,
+      "to": 5,
+      "forwardChanges": 40,
+      "reverseChanges": 40
+    },
+    {
+      "program": "LatestHistory/absentInfo",
+      "from": 5,
+      "to": 6,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/absentInfo",
+      "from": 6,
+      "to": 7,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "LatestHistory/absentInfo",
+      "from": 7,
+      "to": 8,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "ExpectationOnly/concentrated",
+      "from": 0,
+      "to": 1,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "ExpectationOnly/concentrated",
+      "from": 1,
+      "to": 2,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "ExpectationOnly/concentrated",
+      "from": 2,
+      "to": 3,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "ExpectationOnly/concentrated",
+      "from": 3,
+      "to": 4,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "ExpectationOnly/concentrated",
+      "from": 4,
+      "to": 5,
+      "forwardChanges": 40,
+      "reverseChanges": 40
+    },
+    {
+      "program": "ExpectationOnly/concentrated",
+      "from": 5,
+      "to": 6,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "ExpectationOnly/concentrated",
+      "from": 6,
+      "to": 7,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "ExpectationOnly/concentrated",
+      "from": 7,
+      "to": 8,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "ExpectationOnly/correctedDiversified",
+      "from": 0,
+      "to": 1,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "ExpectationOnly/correctedDiversified",
+      "from": 1,
+      "to": 2,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "ExpectationOnly/correctedDiversified",
+      "from": 2,
+      "to": 3,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "ExpectationOnly/correctedDiversified",
+      "from": 3,
+      "to": 4,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "ExpectationOnly/correctedDiversified",
+      "from": 4,
+      "to": 5,
+      "forwardChanges": 51,
+      "reverseChanges": 51
+    },
+    {
+      "program": "ExpectationOnly/correctedDiversified",
+      "from": 5,
+      "to": 6,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "ExpectationOnly/correctedDiversified",
+      "from": 6,
+      "to": 7,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "ExpectationOnly/correctedDiversified",
+      "from": 7,
+      "to": 8,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "HistoryOnly/knownAlternative",
+      "from": 0,
+      "to": 1,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "HistoryOnly/knownAlternative",
+      "from": 1,
+      "to": 2,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "HistoryOnly/knownAlternative",
+      "from": 2,
+      "to": 3,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "HistoryOnly/knownAlternative",
+      "from": 3,
+      "to": 4,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "HistoryOnly/knownAlternative",
+      "from": 4,
+      "to": 5,
+      "forwardChanges": 46,
+      "reverseChanges": 46
+    },
+    {
+      "program": "HistoryOnly/knownAlternative",
+      "from": 5,
+      "to": 6,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "HistoryOnly/knownAlternative",
+      "from": 6,
+      "to": 7,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "HistoryOnly/knownAlternative",
+      "from": 7,
+      "to": 8,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "MeanHistory/correctedConcentrated",
+      "from": 0,
+      "to": 1,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "MeanHistory/correctedConcentrated",
+      "from": 1,
+      "to": 2,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "MeanHistory/correctedConcentrated",
+      "from": 2,
+      "to": 3,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "MeanHistory/correctedConcentrated",
+      "from": 3,
+      "to": 4,
+      "forwardChanges": 54,
+      "reverseChanges": 54
+    },
+    {
+      "program": "MeanHistory/correctedConcentrated",
+      "from": 4,
+      "to": 5,
+      "forwardChanges": 51,
+      "reverseChanges": 51
+    },
+    {
+      "program": "MeanHistory/correctedConcentrated",
+      "from": 5,
+      "to": 6,
+      "forwardChanges": 42,
+      "reverseChanges": 42
+    },
+    {
+      "program": "MeanHistory/correctedConcentrated",
+      "from": 6,
+      "to": 7,
+      "forwardChanges": 42,
+      "reverseChanges": 42
+    },
+    {
+      "program": "MeanHistory/correctedConcentrated",
+      "from": 7,
+      "to": 8,
+      "forwardChanges": 42,
+      "reverseChanges": 42
+    },
+    {
+      "program": "NoLearning/knownAlternative",
+      "from": 0,
+      "to": 1,
+      "forwardChanges": 42,
+      "reverseChanges": 42
+    },
+    {
+      "program": "NoLearning/knownAlternative",
+      "from": 1,
+      "to": 2,
+      "forwardChanges": 42,
+      "reverseChanges": 42
+    },
+    {
+      "program": "NoLearning/knownAlternative",
+      "from": 2,
+      "to": 3,
+      "forwardChanges": 42,
+      "reverseChanges": 42
+    },
+    {
+      "program": "NoLearning/knownAlternative",
+      "from": 3,
+      "to": 4,
+      "forwardChanges": 42,
+      "reverseChanges": 42
+    },
+    {
+      "program": "NoLearning/knownAlternative",
+      "from": 4,
+      "to": 5,
+      "forwardChanges": 40,
+      "reverseChanges": 40
+    },
+    {
+      "program": "NoLearning/knownAlternative",
+      "from": 5,
+      "to": 6,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "NoLearning/knownAlternative",
+      "from": 6,
+      "to": 7,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    },
+    {
+      "program": "NoLearning/knownAlternative",
+      "from": 7,
+      "to": 8,
+      "forwardChanges": 41,
+      "reverseChanges": 41
+    }
+  ],
+  "scope": "29 programs;261 self comparisons plus232 forward and232 reverse adjacent-prefix comparisons. Independent full subtree equality includes containers, additions, removals and exact original values. All top-level section changed-only results and explicit100-result limits checked. This is diagnostic structural change, not causal contribution or semantic object correspondence."
+}

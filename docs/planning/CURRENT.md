@@ -1,5 +1,12 @@
 # Current research entry point
 
+**SUBSTITUTION diagnostic filters2026-10-19:** pinned baseline, actual state-section
+filter and changed-only added. Renderer0.2 preserves missing/null and equal-count
+container differences, with both revision identities.725 original-prefix comparisons/
+142658 field comparisons PASS; bounded browser pin/restore/remove/reset PASS.
+This is structural change, not causal contribution. Full semantic filters and broader
+rollout remain open. Start OBSERVABILITY_WORKBENCH_SUBSTITUTION_PROGRESS.md.
+
 **SUBSTITUTION exact search2026-10-19:** searchable canonical paths and exact leaf
 values added in Experiment, with run/model/prefix/state identity and Timeline links.
 All29 programs/261 retained prefixes/47804 fields PASS index audit; bounded browser
