@@ -50,6 +50,22 @@ is not full-cohort acceptance. Do not modify frozen source or restart a quiet li
 
 ## Next work and obligations
 
+Six-mode UI implemented in `FatigueWorkbench` and `FatigueComparisonPanel`, exposed
+through inspection registry0.16 without batch admission. Main run and comparison
+pair own independent workers. Both restored saves authenticate before pair replacement;
+rejected restoration disposes fresh workers and preserves the installed pair. Main
+capture/restore and pair capture/restore stay in memory; file transfer is not qualified.
+Route changes request pause at committed boundaries and preserve installed sessions.
+Character mode explicitly exposes raw public observer records without claiming
+qualified descriptions. Reasoning keeps full research outputs separate; Timeline
+selects committed native events, and Architecture derives recorded read/mutation
+participation without asserting causal necessity or a general resource law.
+
+Tests14620 PASS: native pair5 restore/successor, rejected second save cleanup,
+wrong declaration and explicit batch exclusion. Build87193 PASS506 modules, including
+TypeScript and boundary check; existing large-chunk warnings remain. Research check
+PASS18 conditional obligations. UI browser qualification remains due.
+
 Comparison implementation now declares26 pairs spanning all20 programs:8 identical-
 input one-setting model pairs and18 input-calendar pairs. Exact input differences
 remain visible; compound fixtures are not asserted to be single-factor interventions.

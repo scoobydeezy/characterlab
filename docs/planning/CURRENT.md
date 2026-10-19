@@ -1,5 +1,11 @@
 # Current research entry point
 
+**FATIGUE six-mode implementation2026-10-19:** inspection route0.16 connects the
+native worker, independent comparison workers and main/paired checkpoints. Pair
+restore/successor, rejected-second cleanup and batch-exclusion tests14620 PASS.
+Character remains raw public observer records; language/browser qualification due.
+Native audit97421 remains RUNNING; comparisons26/234 PASS. Start FATIGUE progress.
+
 **FATIGUE comparisons2026-10-19:**26 declared pairs/234 aligned reports PASS across
 all20 original trajectories/180 prefixes. Three focused tests and TypeScript PASS;
 independent115 sources/26 result hashes/counts/original identities PASS. Failed test
