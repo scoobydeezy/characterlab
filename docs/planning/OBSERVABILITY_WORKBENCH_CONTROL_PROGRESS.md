@@ -76,6 +76,30 @@ paired UI restore, language, or batch qualification.
 
 ## Preserved meaning and next work
 
+Six-mode `ControlWorkbench` now integrates the qualified worker and comparisons via
+inspection registry0.14, separately from batch admission. Main and pair sessions have
+independent workers; all state replacement occurs after native authentication. Both
+pair restores authenticate before replacement; rejected second saves dispose the
+first fresh worker. Shorter horizons remain separate and unequal prefixes withhold
+comparison equality. Pause requests finish the current committed instant/pair step.
+Character mode explicitly exposes public observer records without claiming qualified
+character language. Reasoning retains full research outputs, Timeline native events,
+Architecture actual recorded reads/mutations with no causal necessity claim.
+
+Tests53645 PASS: native paired checkpoint restore/successor, rejected-second cleanup,
+wrong declaration and registry batch exclusion. Build81211 PASS490 modules with
+existing chunk-size warnings. Research check PASS18 conditional/zero active/unowned.
+
+Browser receipt `workbench-control-ui-rev2/receipt.json` PASS: main0/5/6/restore5/
+repeat6 exact state and six identity/commitment hashes; load/noLoad pair5/6/restore5
+full reports match qualified archive; Character observer, Reasoning outputs, final
+Timeline event and Architecture participation at6 match direct native adapter.
+Main state survives pair work, all six modes and route switching. Independent11
+source/2 artifact/2 parent receipt hashes PASS. REV1 failed because browser-tool
+return limits truncated two long DOM strings; its evidence and checker are preserved.
+REV2 captures complete strings in40000-character chunks. Runtime/UI unchanged by
+capture correction. No download or file-transfer action was attempted.
+
 LOCAL DISPOSITION: expose the already qualified public CONTROL witness for habit
 resistance rather than inventing a new inhibition mechanism. Acquired habit history,
 retained goal, maintained access, spare capacity, inhibition, independent reasons,
@@ -83,8 +107,7 @@ actual choice and execution remain separate. Goal retirement does not imply unle
 motor failure is not cognitive resistance. SpareSlot, NoInhibition, LoadBlind,
 RetainedEqualsMaintained, EraseHistory, NoHistory, Residual and Linear all survive.
 
-Next expose qualified controlled comparisons and six-mode UI,
-qualify observer-safe descriptions and browser replay, and separately handle FATIGUE
+Next qualify observer-safe descriptions and broader browser replay, and separately handle FATIGUE
 and other successors. No batch, resource/accessibility, causal necessity, broad
 psychological claim or Campaign4 entry is accepted. Evidence restore/research checks
 PASS18 conditional obligations; no obligation or historical restriction is retired.

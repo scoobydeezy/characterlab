@@ -1,0 +1,70 @@
+{
+  "status": "PASS BOUNDED CONTROL UI",
+  "sources": [
+    {
+      "path": "src/workbench/ControlWorkbench.tsx",
+      "sha256": "9b560a11a15811bf5d2e95f6b2366d679fa1e92631b9651e09876e39ea2aed30"
+    },
+    {
+      "path": "src/workbench/ControlComparisonPanel.tsx",
+      "sha256": "af7abdd9260767004311d03eace36e617873e7ec908b19ad3da9101b074b42e8"
+    },
+    {
+      "path": "src/workbench/controlPairCheckpoint.ts",
+      "sha256": "adf4cd605f983dc15c283808978a1b3177c987e86871347b80242d593f66c0a3"
+    },
+    {
+      "path": "src/workbench/controlWorker.ts",
+      "sha256": "2813c85384923b8bbc845a697e94dcb8a5a3ad9f275af06c9c4832a6c421062e"
+    },
+    {
+      "path": "src/workbench/controlWorkerClient.ts",
+      "sha256": "902c152e034c09be5878a07d484dc8b87cad4ec875d9885198712a6d181af51f"
+    },
+    {
+      "path": "src/workbench/WorkbenchApp.tsx",
+      "sha256": "54f549c6773783f37c92c7f8dfacb630820285e6e20feae3362f2868f7b5ad82"
+    },
+    {
+      "path": "src/workbench/inspectionRegistry.ts",
+      "sha256": "39c0debde70fe81bb74225c1f129714eba884b168bba15ee0325ee928ab524c5"
+    },
+    {
+      "path": "src/workbench/participation.ts",
+      "sha256": "e3cef7cf06a9345d2bbad757921d5cbccfa3a61028b7f5eb653a908e2ed0661b"
+    },
+    {
+      "path": "src/test/workbenchControlPairCheckpoint.test.ts",
+      "sha256": "eaea859250b23f9c21f4a02a5a54e34c66edbf32d5b6ff204a054b28fc0fb47b"
+    },
+    {
+      "path": "src/test/workbenchInspectionRegistry.test.ts",
+      "sha256": "dd42516d3793f7f2b3a4004422903640f00c41084ca15bad853e1f93e3fb9b64"
+    },
+    {
+      "path": "scripts/check-workbench-control-ui.mjs",
+      "sha256": "c404fc78b6839608760788d6995011ced144325bfaf9364a12e3b5c12d8375ff"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "browser.json",
+      "sha256": "8681f04de19356d6c4ce7425afc7274d29abbbf44afc2c072838be84f4b37d55"
+    },
+    {
+      "path": "control.png",
+      "sha256": "cfeba3c1c2b7ecbf38a9e16b4b92c5908ad83e9e87790bf67bf43453c6ec67e1"
+    }
+  ],
+  "parents": [
+    {
+      "path": "docs/planning/workbench-control-parity-rev1/receipt.json",
+      "sha256": "9f35b14297439a66b28fcd9535c4ea2bd8188397a6b78f66ece9e6d4661ec60b"
+    },
+    {
+      "path": "docs/planning/workbench-control-comparison-rev1/receipt.json",
+      "sha256": "af1b6e0d68e78e8bd534563388e8374fa6c7bb04a83627c538776a97462c05b9"
+    }
+  ],
+  "scope": "Browser main0/5/6/restore5/repeat6 exact state and six hashes; load/noLoad pair5/6/restore5 full reports match qualified archive; Character observer, Reasoning outputs, Timeline final event and Architecture participation at6 match direct adapter. Main survives pair execution, mode and route changes. No file transfer, full28 browser cohort, unequal-horizon browser, pause/resource/accessibility or character-language acceptance."
+}

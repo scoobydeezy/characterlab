@@ -1,5 +1,14 @@
 # Current research entry point
 
+**CONTROL six-mode UI2026-10-19:** route0.14 exposes native worker inspection and
+independent comparison workers, main/paired checkpoints and recorded participation.
+Two focused tests PASS; build81211 PASS490 modules. Bounded browser main0/5/6/
+restore5/repeat6, load/noLoad pair5/6/restore5 and mode/route preservation PASS.
+Full DOM records verified against native/qualified comparisons; truncated capture
+REV1 preserved, corrected chunked capture REV2 PASS. Start CONTROL progress.
+Character explanations, broad browser, file transfer, batch and resource/accessibility
+remain due; no Campaign4 entry acceptance. Research retains18 conditional obligations.
+
 **CONTROL native/comparison qualification2026-10-19:** all17 programs/142 prefixes
 PASS exact native parity and restores (125 advancing/17 terminal). All28 declared
 comparisons PASS237 aligned prefix reports;11 missing counterparts explicitly retained.
