@@ -353,6 +353,8 @@
       ],
       "workbenchStatus": "SOURCE ADAPTER IMPLEMENTED; FOCUSED PARITY PASS; FULL COHORT AUDIT RUNNING",
       "executableAdapter": "src/workbench/longAdapter.ts",
+      "comparisonReceipt": "docs/planning/workbench-long-comparison-cohort-rev1/receipt.json",
+      "comparisonScope": "All24 declared comparisons:28 current source programs/476 captured prefixes,407 aligned comparisons and2 explicitly missing schedule instants. Original save hashes and main-cohort observer hashes match; exact six-field projections and addressed draws retained. Native every-prefix restoration and broader browser coverage remain separate.",
       "languageReceipt": "docs/planning/workbench-long-language-rev1/receipt.json",
       "languageScope": "32 programs/513 prefixes/3078 current observer-field descriptions; diagnostic controls included explicitly; no full-choice or causal explanation. Bounded browser prefixes0/1: workbench-long-language-ui-rev1/receipt.json.",
       "candidateSources": [
@@ -361,6 +363,15 @@
     }
   ],
   "successors": [
+    {
+      "id": "LONG-HABIT-COMPONENT",
+      "version": "longitudinal-habit-component/0.1-candidate; habit-reuse-harness/0.2-candidate",
+      "workbenchStatus": "ADAPTER/WORKER/SIX-MODE UI IMPLEMENTED; FULL REPLAY AND COMPARISON AUDITS RUNNING; BOUNDED BROWSER EVIDENCE CAPTURED",
+      "executableAdapter": "src/workbench/longHabitAdapter.ts",
+      "progress": "docs/planning/OBSERVABILITY_WORKBENCH_LONG_HABIT_PROGRESS.md",
+      "browserEvidence": "docs/planning/workbench-long-habit-ui-rev1/ui.json",
+      "scope": "960 original receivers use8 reused native sources; no fresh native source execution or public scheduler admission.2848 single-factor comparisons declared. Bounded browser main case0 prefixes0/1 and retention pair0/96 at8/9/restore8; automated browser evidence verification pending. Observer-safe narration, broad browser qualification, files and batch admission remain open."
+    },
     {
       "id": "LONG-GOAL-COMPONENT",
       "version": "longitudinal-goal-component/0.1-candidate",

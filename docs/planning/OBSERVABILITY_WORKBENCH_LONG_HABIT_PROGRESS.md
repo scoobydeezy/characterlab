@@ -86,3 +86,35 @@ roundtrip or import qualification. The prior browser download denial remains bin
 Production build56225 PASS436 modules; final pair TypeScript check8300 PASS.
 Evidence restoration and research check PASS with18 conditional obligations.
 No new browser route or full-cohort qualification is claimed at this checkpoint.
+
+## Six-mode inspector and bounded browser evidence
+
+2026-10-19: `LongHabitWorkbench.tsx` and `LongHabitComparisonPanel.tsx` provide the
+dedicated `long-habit` route, original-case selection, worker step/run/pause,
+in-memory receiver restore,21-field comparisons and pair persistence controls.
+Character mode labels its state as research diagnostics; it does not invent
+observer-safe narration. Architecture describes declared ownership and ordering,
+not necessity. Registry0.8 separates UI availability from batch admission; the
+batch rejection test passes. Build62412 PASS449 modules.
+
+Browser evidence in `workbench-long-habit-ui-rev1/ui.json` records main case0
+prefixes0/1, restore0 and repeat1; all five displayed hashes repeat. The receiving
+retention pair0/96 at prefix8 distinguishes memory, formation governance and losses
+while history, belief, goals, availability, probabilities and actions agree.
+Pair advancement to9 and restoration to8 reproduces the complete earlier report.
+Comparison, Reasoning/Timeline/Architecture modes and switching away/back preserve
+the main prefix1 hashes. Full-page and viewport screenshots were visually inspected.
+No download or file import was performed; the earlier denial remains binding.
+
+The separate automated browser-evidence verifier93594/PID5700 is RUNNING, with
+sources frozen under the UI evidence directory. Do not claim its final receipt
+until successful termination. The full comparison audit41914/PID2680 is also
+confirmed live; receiver replay18545 has reported192/960 cases. No restart or
+edit of frozen dependencies. Broad browser, full receiver/comparison acceptance,
+observer-safe language, resource/accessibility and file qualification remain due.
+
+Separately, the original LONG comparison audit20638 completed PASS:28 source
+programs/476 prefixes,24 declared pairs/407 aligned prefixes and2 explicit missing
+schedule instants. Its25 source hashes and all52 compressed program/pair archives
+were independently rechecked. See `workbench-long-comparison-cohort-rev1/receipt.json`.
+This does not close native every-prefix restoration or any habit successor gate.

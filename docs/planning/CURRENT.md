@@ -1,5 +1,18 @@
 # Current research entry point
 
+**LONG habit UI2026-10-19:** dedicated six-mode worker inspector registered0.8;
+build62412 PASS449 modules and unqualified-batch rejection test PASS. Bounded browser
+case0 prefixes0/1/restore0/repeat1 and retention pair0/96 prefixes8/9/restore8 captured;
+mode/comparison/route work preserves main five hashes. Browser evidence verifier93594
+PID5700 RUNNING; no final receipt yet. Full comparison41914 PID2680 confirmed live;
+receiver replay18545 latest192/960. See OBSERVABILITY_WORKBENCH_LONG_HABIT_PROGRESS.md.
+Original LONG comparison20638 COMPLETE PASS:28 programs/476 prefixes;24 pairs/
+407 aligned prefixes/2 explicit missing instants. All25 source and52 archive hashes
+independently verified. See workbench-long-comparison-cohort-rev1/receipt.json.
+Habit language, full replay/comparison acceptance, broad browser/resources/files and
+Campaign4 entry remain open. Research PASS18 conditional obligations. Download denial
+remains binding; no file transfer or import qualification was performed.
+
 **LONG habit comparisons2026-10-19:**2848 single-factor pairs declared across all960
 original REV2 cases;21 separate diagnostic fields and addressed draws retained.
 Three focused comparison tests and one prefix8 pair-restore test PASS. Production
