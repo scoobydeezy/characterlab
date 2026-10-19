@@ -1,5 +1,11 @@
 # Current research entry point
 
+**SUBSTITUTION browser restore2026-10-19:**ALL29 programs/261 in-memory restores/
+232 repeated successors/29 terminal controls PASS;986 full DOM state captures join
+original component commitments. All main-prefix restore coverage now qualified.
+Pair-restoration breadth, pause/resource/accessibility, batch and integrated entry
+remain open. Start OBSERVABILITY_WORKBENCH_SUBSTITUTION_PROGRESS.md.
+
 **SUBSTITUTION browser pairs2026-10-19:**ALL41 declared pairs/369 aligned reports/
 738 exact sides PASS; full DOM comparisons equal qualified archives. Main five
 commitments unchanged throughout. All29 main programs and4176 descriptions retain

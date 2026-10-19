@@ -1,0 +1,235 @@
+{
+  "status": "PASS COMPLETE ORIGINAL SUBSTITUTION MAIN BROWSER RESTORE COHORT",
+  "sources": [
+    {
+      "path": "src/workbench/SubstitutionWorkbench.tsx",
+      "sha256": "25c143b6f3b92e13ce72b26700e2a4858493015798e0b768ad9f34b31075947c"
+    },
+    {
+      "path": "src/workbench/substitutionAdapter.ts",
+      "sha256": "126e2c0d2d98b1a19f39e019adfcd4f56ec27a819bf9fd633b92e013f71735a3"
+    },
+    {
+      "path": "src/workbench/substitutionWorker.ts",
+      "sha256": "4390226c117641a833aec69dc989514e1b17dfcd7defd3f5564967fa0568fcbb"
+    },
+    {
+      "path": "src/workbench/substitutionWorkerClient.ts",
+      "sha256": "dc2bfa439c802918b0b25f4e3c3fc45bed9c13d4a9b5277010e689834d45533b"
+    },
+    {
+      "path": "src/workbench/WorkbenchApp.tsx",
+      "sha256": "61e442273c9cbd18fb8ca9b2442e87f5e2136f7dd8d63d04699163f41b608124"
+    },
+    {
+      "path": "src/workbench/inspectionRegistry.ts",
+      "sha256": "708ffae46f797af077583470b4672096921f93cc29084ab75844a482f5d0f4a3"
+    },
+    {
+      "path": "scripts/check-workbench-substitution-browser-restore.mjs",
+      "sha256": "b6087320a85136191b667985330dd7482a33fcedc1b838ad29b121e715e53f8a"
+    }
+  ],
+  "parents": [
+    {
+      "path": "docs/planning/workbench-substitution-parity-rev1/receipt.json",
+      "sha256": "64dcdbf5fcb0f37a71ee713b52f32fbeb381a7bba71b47ac0c282c30eff5def5"
+    },
+    {
+      "path": "docs/planning/workbench-substitution-browser-programs-rev1/receipt.json",
+      "sha256": "916fdb2c1f2f5429147d680ff3d8ba1304cbae83d87f4b7610e5fa4bf2a3e92c"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "program-00.json.gz",
+      "sha256": "e51f010dee06802b0206fb5e58eee19f7c38df23629143e02de829e8998149be",
+      "program": "LatestHistory/diversified",
+      "restores": 9
+    },
+    {
+      "path": "program-01.json.gz",
+      "sha256": "f7e6ed6f650b5b320ceb868a126c6d7383ffd6ce3aef38d66ed71ca09fa5a6a6",
+      "program": "MeanHistory/diversified",
+      "restores": 9
+    },
+    {
+      "path": "program-02.json.gz",
+      "sha256": "d8c4cc4a307a03cb1b27a659b5d98b99c8ee7b7cbd4b5d86d24788c50b2a7b1a",
+      "program": "ExpectationOnly/diversified",
+      "restores": 9
+    },
+    {
+      "path": "program-03.json.gz",
+      "sha256": "8f47f886a05cb3b292d6084b0d2ee0db54b736ad272bdf1c0c6a529572bf0920",
+      "program": "HistoryOnly/diversified",
+      "restores": 9
+    },
+    {
+      "path": "program-04.json.gz",
+      "sha256": "3c438e944a2f3a27655cda384a6946efb249a2d33bcfc8b97456b06d409667d9",
+      "program": "NoLearning/diversified",
+      "restores": 9
+    },
+    {
+      "path": "program-05.json.gz",
+      "sha256": "1977299d24b8633cbe2a67c262f36c4fd71405116b26b6f195ff2c211afc0604",
+      "program": "LatestHistory/concentrated",
+      "restores": 9
+    },
+    {
+      "path": "program-06.json.gz",
+      "sha256": "363be53d9c5e6eb7d13d334e6aaba6d486fc69611ee1db9930225d29078b2125",
+      "program": "LatestHistory/knownAlternative",
+      "restores": 9
+    },
+    {
+      "path": "program-07.json.gz",
+      "sha256": "deac5ebd5fd84d94f451772b56d90075f0ed2bcce77990ef6e4687cdc78dcab9",
+      "program": "LatestHistory/knownFailure",
+      "restores": 9
+    },
+    {
+      "path": "program-08.json.gz",
+      "sha256": "c23b819911c08e457a4b6a8be51ad63570330f92a680731cbdb6e5be9292c9b3",
+      "program": "LatestHistory/unavailable",
+      "restores": 9
+    },
+    {
+      "path": "program-09.json.gz",
+      "sha256": "f6e32fa4437b32e6ffe87937b9fc9581b9aba23744ac8477f91fcb410e4fedd2",
+      "program": "LatestHistory/noDemand",
+      "restores": 9
+    },
+    {
+      "path": "program-10.json.gz",
+      "sha256": "038713b685b02d2c83906f3c5db544cf1b72f7bf22f109aeee222a681206a21d",
+      "program": "LatestHistory/restoredA",
+      "restores": 9
+    },
+    {
+      "path": "program-11.json.gz",
+      "sha256": "344debaf19de6b650cdc6e7d313061f07b858b71b0a87c5a0b241a301096b61b",
+      "program": "LatestHistory/correctedConcentrated",
+      "restores": 9
+    },
+    {
+      "path": "program-12.json.gz",
+      "sha256": "79cf469a824a5cf0a6b0a389c9e34d916798acb0328f50b4e7efd60c1055647d",
+      "program": "LatestHistory/correctedDiversified",
+      "restores": 9
+    },
+    {
+      "path": "program-13.json.gz",
+      "sha256": "f1baab3915c63416c2cac8847e204bb50b834ac8698179153f890fe24bf9fde7",
+      "program": "LatestHistory/otherCue",
+      "restores": 9
+    },
+    {
+      "path": "program-14.json.gz",
+      "sha256": "edb4a255990c0dd8405efb12ed5625ec86e74fcb21d107f2af548d9194416579",
+      "program": "LatestHistory/bothAvailable",
+      "restores": 9
+    },
+    {
+      "path": "program-15.json.gz",
+      "sha256": "1d0226d780999141f8e63c37b7abbcb269a8f849fbae5be233abde79f83065f0",
+      "program": "LatestHistory/unseenTraining",
+      "restores": 9
+    },
+    {
+      "path": "program-16.json.gz",
+      "sha256": "64fdf76af408a377ce91b7029d2ffe750623b0cd478fe46d80726b1825ab976f",
+      "program": "LatestHistory/falseTraining",
+      "restores": 9
+    },
+    {
+      "path": "program-17.json.gz",
+      "sha256": "6a6b96f7108f4f8484c099b42d50d09d2941ccff912370cd326f879ac005202c",
+      "program": "LatestHistory/deniedFeedback",
+      "restores": 9
+    },
+    {
+      "path": "program-18.json.gz",
+      "sha256": "a864238f6bc064aba505df8bd3b89fec41eb4b976ab04d83c230d8ce3713f763",
+      "program": "LatestHistory/hiddenBlocked",
+      "restores": 9
+    },
+    {
+      "path": "program-19.json.gz",
+      "sha256": "1fa80df52d2023220b649ce8a14cd473bdae353698506df2b9d828b96dbc16b1",
+      "program": "LatestHistory/failure",
+      "restores": 9
+    },
+    {
+      "path": "program-20.json.gz",
+      "sha256": "53e0d2a9338a49218df7dfcf9ced94a3924acf60e22502d076813b306bbb20b7",
+      "program": "LatestHistory/falseSuccess",
+      "restores": 9
+    },
+    {
+      "path": "program-21.json.gz",
+      "sha256": "fe6e0aadba699d62e19e481f8c285c67d8e7eeb3c30e9cb2b59d73b06d2f82ea",
+      "program": "LatestHistory/trueSuccess",
+      "restores": 9
+    },
+    {
+      "path": "program-22.json.gz",
+      "sha256": "d93e52a4ef41c04fd8aff719c4180492dc0bd28b1e77ce103d4408e47fd47ceb",
+      "program": "LatestHistory/deniedInfo",
+      "restores": 9
+    },
+    {
+      "path": "program-23.json.gz",
+      "sha256": "9fa65016db72a970c176cc3ebd28818552e48fd17476a20d03982a02950a34f0",
+      "program": "LatestHistory/absentInfo",
+      "restores": 9
+    },
+    {
+      "path": "program-24.json.gz",
+      "sha256": "93f3a4521cf922a83aa5efe7de6de97a7e0af9cc106e5256aa90b7b6cae956a5",
+      "program": "ExpectationOnly/concentrated",
+      "restores": 9
+    },
+    {
+      "path": "program-25.json.gz",
+      "sha256": "f16d4660ae47724d89108dde0abdd3d53b46b755626c2d6f68ffc6e4c0be25ed",
+      "program": "ExpectationOnly/correctedDiversified",
+      "restores": 9
+    },
+    {
+      "path": "program-26.json.gz",
+      "sha256": "8de7b4473094ebb186717d1650a12fbc01a90825d56b3e44322e21218806d0ee",
+      "program": "HistoryOnly/knownAlternative",
+      "restores": 9
+    },
+    {
+      "path": "program-27.json.gz",
+      "sha256": "1f193cef34b05bcf8b513aeacf35799c03d7b4908de466737dff43150f50e3c5",
+      "program": "MeanHistory/correctedConcentrated",
+      "restores": 9
+    },
+    {
+      "path": "program-28.json.gz",
+      "sha256": "9c926437d21b87be5d299228a3020eb2352f1ffcbf11e1848a86476350606c86",
+      "program": "NoLearning/knownAlternative",
+      "restores": 9
+    },
+    {
+      "path": "browser-index.json",
+      "sha256": "132babfc4d9986dd612a9c245e82484b9dbe13538c3b6ee1f562ee9c65c33ea5"
+    },
+    {
+      "path": "substitution-restores.png",
+      "sha256": "d20cb82f18873c6b38507efb5d34f5d76bbf11493d2393b06759bbb23beccf8b"
+    }
+  ],
+  "counts": {
+    "programs": 29,
+    "restored": 261,
+    "advancing": 232,
+    "terminal": 29,
+    "captures": 986
+  },
+  "scope": "All29 original programs restored at every browser prefix0..8 using in-memory controls. Complete state text/five commitments equal pre-restore and original component evidence;232 repeated successors equal first successors,29 terminal restores keep step/run disabled.986 complete diagnostic captures. No every-prefix pair restore, pause/resource/accessibility, file transfer, native scheduler admission or integrated entry acceptance."
+}

@@ -175,3 +175,25 @@ resource/accessibility, exhaustive causal factor accounting or integrated Campai
 entry. Earlier bounded pair restoration remains its own evidence. Language, main
 browser and comparison cohorts are separately qualified; broader workbench gates
 remain open.
+
+## Complete original main browser restoration cohort
+
+2026-10-19. `workbench-substitution-browser-restore-rev1/receipt.json` PASS ALL29
+programs/261 in-memory browser restores,232 advancing repeated successors and29
+terminal checkpoints. At each prefix, capture complete visible state/commitments,
+capture checkpoint, advance when nonterminal, restore, then repeat the successor.
+Restored state text and five commitments equal the original prefix; repeated
+successors equal first successors and the next recorded prefix. Terminal restores
+keep both Step and Run disabled.986 complete diagnostic captures independently join
+original component state/observer/model/run/save commitments.29 compressed archives
+preserve exact DOM evidence. Initial81-row incremental verification also passed.
+
+Current/frozen sources, artifact and parent hashes independently PASS. Final screenshot
+visually inspected. No production source change, download/import/file transfer,
+checkpoint reconstruction or native scheduler admission. This closes every-prefix
+main browser restoration only; every-prefix pair restore, pause/resource/accessibility,
+specialized inspections, batch and integrated Campaign4 acceptance remain open.
+
+Longer audits remain live: LONG goal reached case13 prefix15/16, habit receivers576/960,
+habit comparisons seed4 complete; LONG native24/32 last reported. Same handles retained
+and polled; no quiet process restarted or frozen dependency edited.
