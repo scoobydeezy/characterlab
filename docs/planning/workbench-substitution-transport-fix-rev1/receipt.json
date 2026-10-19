@@ -1,0 +1,20 @@
+{
+  "status": "PASS TEST-ONLY CORRECTION AND INDEPENDENT PARITY ARCHIVE CHECK",
+  "parent": {
+    "path": "docs/planning/workbench-substitution-parity-rev1/receipt.json",
+    "sha256": "64dcdbf5fcb0f37a71ee713b52f32fbeb381a7bba71b47ac0c282c30eff5def5"
+  },
+  "changedSource": {
+    "path": "src/test/workbenchSubstitutionTransport.test.ts",
+    "priorSha256": "29ec0ce83d7b02bef04e623aa08634182ba1ca9633b3c7095032b16c69ff86d6",
+    "sha256": "191a5600659ebffe39f0f8922cfcc27ac241af0bd71303860adca75778b46726"
+  },
+  "sources": 120,
+  "counts": {
+    "programs": 29,
+    "prefixes": 261,
+    "advancing": 232,
+    "terminal": 29
+  },
+  "scope": "All frozen archive hashes, all unchanged current source hashes and successor chains verified. Sole parent-source change replaces native fields mock with component physical-state mock and detachment assertion. Original failed test preserved; production adapter/runtime unchanged. Corrected transport tests PASS2."
+}

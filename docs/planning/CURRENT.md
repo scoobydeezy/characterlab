@@ -1,5 +1,12 @@
 # Current research entry point
 
+**SUBSTITUTION foundation2026-10-19:**5 models/29 original component programs/261
+prefixes PASS;232 advancing and29 terminal restores. Original identity/save/state/
+observer commitments preserved; no native scheduler admission. Worker and declared
+comparisons implemented; full comparison/UI/language/browser/batch remain due.
+Transport mock type failure preserved and corrected; final TypeScript/boundary/
+research PASS. Start OBSERVABILITY_WORKBENCH_SUBSTITUTION_PROGRESS.md.
+
 **FATIGUE observer language2026-10-19:**7200 descriptions/180 original prefixes/20
 programs PASS; independent114 frozen source/archive checks PASS. Bounded browser
 300 descriptions/7 captures/3 programs PASS, including exact in-memory replay,

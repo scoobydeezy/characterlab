@@ -1,0 +1,7 @@
+{
+  "status": "PRESERVED DEVELOPMENT TYPECHECK FAILURE",
+  "session": 73695,
+  "diagnostic": "TS2339: fields does not exist on SubstitutionSnapshot, at transport-test line10",
+  "cause": "Copied mock transport fixture retained native fields instead of component state. Runtime tests passed against the mock, but TypeScript correctly rejected the stale snapshot access.",
+  "disposition": "Wait for active frozen parity audit44313 to finish before changing its captured test source. Correct only mock fixture and detachment assertion to component state; rerun transport tests and TypeScript. Production adapter and semantics unchanged."
+}
