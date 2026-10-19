@@ -1,5 +1,14 @@
 # Current research entry point
 
+**LONG routine Character language2026-10-19:** integrated qualified renderer and
+bounded browser PASS. Case0 prefixes0/8/9/10/restore8/repeat10 and opposed case64
+prefix8 match full reports and five original commitments. Six retained records,
+negative belief, later seventh negative-outcome record and63/128 fold remain distinct;
+withdrawn practice and future-active rest stay separate. Registry0.13; build86770
+PASS476 modules; registry test and research PASS18 conditional. Start
+OBSERVABILITY_WORKBENCH_LONG_ROUTINE_PROGRESS.md. Broader browser, full-choice
+reasons, remaining successors and integrated Campaign4 acceptance remain open.
+
 **LONG routine language renderer2026-10-19:** audit85697 COMPLETE PASS504 cases/
 8568 prefixes/53634 descriptions,18354 history records.120 Derived/Stored or native
 retention controls/2040 prefixes retain identical wording. All131 source copies/504

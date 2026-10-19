@@ -1,0 +1,54 @@
+{
+  "status": "PASS BOUNDED ROUTINE OWNED-STATE BROWSER LANGUAGE",
+  "sources": [
+    {
+      "path": "src/workbench/longRoutineStateDescription.ts",
+      "sha256": "cc829fb19f1e7178c49a03cf44f96de7aa720038e9ba311e2cb0ee796aa3e519"
+    },
+    {
+      "path": "src/workbench/LongRoutineOwnedDescriptionPanel.tsx",
+      "sha256": "1d2a34e6ca0c7e0de17a2d86011992876d3576711751be5bb63f6e904c4aab8a"
+    },
+    {
+      "path": "src/workbench/LongRoutineWorkbench.tsx",
+      "sha256": "61012b043fa964b424dd346f7f7a1518e75490d327b94883c0ae7c9d09ccdf6c"
+    },
+    {
+      "path": "src/workbench/longRoutineOwnedProjection.ts",
+      "sha256": "b2c0555e24c8fa61af82b43454522aff4d2bd7d8fc63680a1f165ef3e5cd42c0"
+    },
+    {
+      "path": "src/workbench/inspectionRegistry.ts",
+      "sha256": "f605c72ac97069997a7d2e36849d1426370d4be718f625b799653b88523af815"
+    },
+    {
+      "path": "scripts/check-workbench-long-routine-language-ui.mjs",
+      "sha256": "92713deab028a4fb8b40d6678f14d7bc7a4a2a0372190f4c10f532414cef1db3"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "docs/planning/workbench-long-routine-language-rev1/case-000.json.gz",
+      "sha256": "6344e613ba53d0b2c4068182e05478705a5c038d3087a76ce9c674324ca800ce"
+    },
+    {
+      "path": "docs/planning/workbench-long-routine-language-rev1/case-064.json.gz",
+      "sha256": "e2132441f5d1cec951fa0219a4bcea152f3ff3a68040b7ed52c4caff12a18641"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "ui.json",
+      "sha256": "8a6ddd440c126152c4a2a906edf6fa7f01bfb3fddf6184e976112662d15a122d"
+    },
+    {
+      "path": "routine-language.png",
+      "sha256": "bd4bac777a2a24253837f76f91672d71c5d0082dc658b0a483ab077b11d819e5"
+    }
+  ],
+  "qualifiedReceipt": {
+    "path": "docs/planning/workbench-long-routine-language-rev1/receipt.json",
+    "sha256": "be40b61b45a80e2dd4d5f515366f587747d637f041856e93c9ef521ccb11ca86"
+  },
+  "scope": "Original case0 initial/interruption/non-enactment/negative outcome/restore/repeat and case64 opposed-goal prefix8. Exact complete reports and five hashes match qualified original records. No broad browser, file transfer, current-availability inference, evaluation-time reasons, episodic recall or native admission claim."
+}

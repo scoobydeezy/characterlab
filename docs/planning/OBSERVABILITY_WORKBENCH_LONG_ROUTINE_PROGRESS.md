@@ -156,3 +156,28 @@ Next integrate it and qualify actual browser descriptions at interruption, repla
 negative outcome and opposed-goal boundaries. The existing registry correctly keeps
 routine explanation unavailable until integration. Full-choice/evaluation-time reasons,
 broader browser/resource/accessibility and Campaign4 entry remain open.
+
+## Character language integration and bounded browser receipt
+
+2026-10-19: Character mode now renders the qualified owned-state descriptions.
+Admitted practice records have a disclosure; candidate fold values retain a separate
+derived-diagnostic heading. Exact report provenance and raw owned state remain
+available. Registry0.13 declares current-state language while leaving evaluation-time
+reasons and episodic recall unqualified.
+
+Browser receipt `workbench-long-routine-language-ui-rev1/receipt.json` PASS:
+case0 prefixes0/8/9/10/restore8/repeat10 and opposed case64 prefix8. Every complete
+report and all five displayed commitments equal qualified original records. The
+negative report retains six history records; non-enactment changes no description;
+observed negative reward adds the seventh and changes63/64 to63/128. Restore/repeat
+reproduces exact wording. Opposed mode retains withdrawn practice and newly adopted
+rest with its future activation clock9, without claiming current activation.
+All six source copies, two browser artifacts, two qualified case archives and the
+parent receipt hash independently verified. No browser file transfer performed.
+
+Registry test PASS; build86770 PASS476 modules, with existing large-chunk warnings.
+Evidence restore/research PASS18 conditional obligations. Earlier renderer and UI
+receipts remain frozen. LOCAL DISPOSITION uses current owned records without adding
+new character state or treating diagnostic history as episodic recall. Broader browser,
+full-choice reasons, remaining corpus successors, resource/accessibility, architecture
+participation qualification, batch integration and Campaign4 entry remain open.
