@@ -199,3 +199,26 @@ selection descriptions and the initial constitutional branch table. The complete
 initial report equals the prior qualified browser/native report. Research checks
 PASS. Native/comparison frozen dependencies are untouched; broad accessibility,
 full comparisons, language and integrated-entry requirements remain open.
+
+## Linked architecture inspection — 2026-10-19
+
+Disposition now uses the searchable participation inspector with activity filters,
+exact paths, event links and an in-memory report. Selecting activity opens that
+same native event in Timeline with recorded-parent navigation. The panel remains
+mounted across mode changes; changing run identity resets its selection. The shared
+inspector's prop type is narrowed to the fields it already consumes; General's
+runtime rendering is unchanged.
+
+Native test PASS for Plastic and Refold prefix1: constitution1457 is read once in
+reasons52 and never mutated; Refold lacks plastic1458; Plastic plastic reads/writes
+and execution ownership retain their distinct counts. Build PASS539 modules with
+existing chunk warning; research checks PASS.
+
+`workbench-disposition-architecture-rev1/receipt.json` records bounded browser PASS:
+Plastic Main prefix1 constitution search -> exact event18/reasons52 -> Architecture
+with retained query and unchanged five hashes. The checker independently recounts
+all participation rows from the immutable native prefix snapshot and joins its save
+to the original prefix receipt. This snapshot comes from the running comparison
+audit; its use does not claim that the full audit has completed. Canonical-box
+coverage, whole-corpus architecture, causal contributions, accessibility and complete
+integrated-entry qualification remain open.

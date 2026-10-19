@@ -1,7 +1,7 @@
 import {useMemo, useState} from 'react';
 import type {GeneralSnapshot} from './generalAdapter';
 import {participationReport} from './participation';
-export function ParticipationInspector({snapshot, onEvent}: {snapshot: GeneralSnapshot; onEvent: (id: string)=>void}) {
+export function ParticipationInspector({snapshot, onEvent}: {snapshot: Pick<GeneralSnapshot,'modelHash'|'runHash'|'saveHash'|'stateHash'|'prefix'|'timeline'|'fields'>; onEvent: (id: string)=>void}) {
   const report = useMemo(()=>participationReport({modelHash:snapshot.modelHash,runHash:snapshot.runHash,saveHash:snapshot.saveHash,stateHash:snapshot.stateHash,prefix:snapshot.prefix},snapshot.timeline,snapshot.fields),[snapshot]);
   const [query,setQuery] = useState(''), [filter,setFilter] = useState('all'), [selected,setSelected] = useState(''), [exported,setExported] = useState('');
   const rows = report.rows.filter(row => (!query || `${row.root ?? ''} ${row.path} ${row.label}`.toLowerCase().includes(query.toLowerCase())) && (filter === 'all' || (filter === 'read' && row.reads > 0) || (filter === 'changed' && row.changes > 0) || (filter === 'read-unchanged' && row.reads > 0 && row.changes === 0) || (filter === 'unrecorded' && row.events.length === 0)));
