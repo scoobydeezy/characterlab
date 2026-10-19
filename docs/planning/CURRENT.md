@@ -1,5 +1,21 @@
 # Current research entry point
 
+**LONG goal inspector2026-10-19:** separate lazy route for120 original cases,
+worker stepping/run/pause, exact goal ledger/receiving records, component timeline,
+checkpoint capture/restore/export and declared ownership view. Inspection registry
+0.6; batch exclusion test PASS. Comparison mode explicitly unavailable pending
+implementation; observer-safe component language remains open.
+Build75052 PASS431 modules. Bounded browser checker54023 PASS: case0 prefixes0/1
+full state and four hashes match direct adapter; restore0/repeat1 and route retention
+match. See workbench-long-goal-ui-rev1/receipt.json and goal.png. A development
+WebSocket port warning did not prevent checker completion (exit0).
+Evidence restore/research PASS;18 conditional obligations unchanged.
+LOCAL DISPOSITION: keep native source save and component save separate, exact
+standing and truncated receiver modifier visible, and no public scheduler claim.
+Native48528, comparison20638 and goal7474 audits remain live. Latest comparison
+capture8/28; goal case2 prefix12/16. Full native/successor qualification, comparison,
+language, broader browser and Campaign4 entry requirements remain open.
+
 **LONG observer language2026-10-19:** COMPLETE32 original programs/513 prefixes/
 3078 descriptions. workbench-long-language-rev1/receipt.json binds all source and
 result hashes, independently rechecked. Character mode now displays six field-linked

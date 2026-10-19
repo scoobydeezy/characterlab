@@ -24,6 +24,7 @@ const Sem = lazy(() => import('./SemWorkbench').then(m => ({default:m.SemWorkben
 const Bio = lazy(() => import('./BioWorkbench').then(m => ({default:m.BioWorkbench})));
 const Body = lazy(() => import('./BodyWorkbench').then(m => ({default:m.BodyWorkbench})));
 const Long = lazy(() => import('./LongWorkbench').then(m => ({default:m.LongWorkbench})));
+const LongGoal = lazy(() => import('./LongGoalWorkbench').then(m => ({default:m.LongGoalWorkbench})));
 export function WorkbenchApp() {
   const [experiment, setExperiment] = useState<ExperimentId | 'batch'>('values');
   const [visited, setVisited] = useState<Set<string>>(() => new Set(['values']));
@@ -50,5 +51,6 @@ export function WorkbenchApp() {
     {visited.has('bio') && <div hidden={experiment !== 'bio'}><Suspense fallback={<p role="status">Loading BIO…</p>}><Bio active={experiment === 'bio'}/></Suspense></div>}
     {visited.has('body') && <div hidden={experiment !== 'body'}><Suspense fallback={<p role="status">Loading BODY…</p>}><Body active={experiment === 'body'}/></Suspense></div>}
     {visited.has('long') && <div hidden={experiment !== 'long'}><Suspense fallback={<p role="status">Loading LONG…</p>}><Long active={experiment === 'long'}/></Suspense></div>}
+    {visited.has('long-goal') && <div hidden={experiment !== 'long-goal'}><Suspense fallback={<p role="status">Loading LONG goal…</p>}><LongGoal active={experiment === 'long-goal'}/></Suspense></div>}
   </>;
 }
