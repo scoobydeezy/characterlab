@@ -1,0 +1,207 @@
+{
+  "options": [
+    {
+      "label": "Plastic: baseline ↔ Leaky: baseline · candidate law",
+      "value": "model/0/1"
+    },
+    {
+      "label": "Plastic: baseline ↔ Refold: baseline · candidate law",
+      "value": "model/0/2"
+    },
+    {
+      "label": "Plastic: baseline ↔ StandingOnly: baseline · candidate law",
+      "value": "model/0/3"
+    },
+    {
+      "label": "Plastic: baseline ↔ Neither: baseline · candidate law",
+      "value": "model/0/4"
+    },
+    {
+      "label": "Plastic: baseline ↔ JointMax: baseline · candidate law",
+      "value": "model/0/5"
+    },
+    {
+      "label": "Plastic: baseline ↔ JointAdd: baseline · candidate law",
+      "value": "model/0/6"
+    },
+    {
+      "label": "Plastic: baseline ↔ Plastic: constitution +1/8 · constitutional baseline",
+      "value": "model/0/13"
+    },
+    {
+      "label": "Plastic: baseline ↔ Plastic: constitution −1/8 · constitutional baseline",
+      "value": "model/0/14"
+    },
+    {
+      "label": "Leaky: baseline ↔ Refold: baseline · candidate law",
+      "value": "model/1/2"
+    },
+    {
+      "label": "Leaky: baseline ↔ StandingOnly: baseline · candidate law",
+      "value": "model/1/3"
+    },
+    {
+      "label": "Leaky: baseline ↔ Neither: baseline · candidate law",
+      "value": "model/1/4"
+    },
+    {
+      "label": "Leaky: baseline ↔ JointMax: baseline · candidate law",
+      "value": "model/1/5"
+    },
+    {
+      "label": "Leaky: baseline ↔ JointAdd: baseline · candidate law",
+      "value": "model/1/6"
+    },
+    {
+      "label": "Refold: baseline ↔ StandingOnly: baseline · candidate law",
+      "value": "model/2/3"
+    },
+    {
+      "label": "Refold: baseline ↔ Neither: baseline · candidate law",
+      "value": "model/2/4"
+    },
+    {
+      "label": "Refold: baseline ↔ JointMax: baseline · candidate law",
+      "value": "model/2/5"
+    },
+    {
+      "label": "Refold: baseline ↔ JointAdd: baseline · candidate law",
+      "value": "model/2/6"
+    },
+    {
+      "label": "StandingOnly: baseline ↔ Neither: baseline · candidate law",
+      "value": "model/3/4"
+    },
+    {
+      "label": "StandingOnly: baseline ↔ JointMax: baseline · candidate law",
+      "value": "model/3/5"
+    },
+    {
+      "label": "StandingOnly: baseline ↔ JointAdd: baseline · candidate law",
+      "value": "model/3/6"
+    },
+    {
+      "label": "Neither: baseline ↔ JointMax: baseline · candidate law",
+      "value": "model/4/5"
+    },
+    {
+      "label": "Neither: baseline ↔ JointAdd: baseline · candidate law",
+      "value": "model/4/6"
+    },
+    {
+      "label": "JointMax: baseline ↔ JointAdd: baseline · candidate law",
+      "value": "model/5/6"
+    },
+    {
+      "label": "Plastic: constitution +1/8 ↔ Plastic: constitution −1/8 · constitutional baseline",
+      "value": "model/13/14"
+    },
+    {
+      "label": "Plastic: baseline ↔ Plastic: zero learning significance · input calendar",
+      "value": "input/NoEvidence"
+    },
+    {
+      "label": "Plastic: baseline ↔ Plastic: learning pressure 4 · input calendar",
+      "value": "input/Pressure"
+    },
+    {
+      "label": "Plastic: baseline ↔ Plastic: execution denied · input calendar",
+      "value": "input/FailedExecution"
+    },
+    {
+      "label": "Plastic: baseline ↔ Plastic: learning seed zero · input calendar",
+      "value": "input/Seed0"
+    },
+    {
+      "label": "Plastic: baseline ↔ Plastic: inactive probes · input calendar",
+      "value": "input/InactiveProbes"
+    },
+    {
+      "label": "Plastic: baseline ↔ Plastic: unchanged context · input calendar",
+      "value": "input/NoContextChange"
+    }
+  ],
+  "inputDescription": "Selected: Plastic: baseline versus Plastic: learning seed zero. Change: input calendar. The model is held fixed; exact input changes appear in the report.",
+  "modelDescription": "Selected: Plastic: baseline versus Plastic: constitution +1/8. Change: constitutional baseline. Original inputs are identical.",
+  "table": "Branch\tProgram\tPrefix\tConstitution\nA\tPlastic: baseline\t0\t0/1\nB\tPlastic: constitution +1/8\t0\t1/8",
+  "report": {
+    "version": "disposition-contrast-inspection/0.1",
+    "contrast": {
+      "id": "model/0/13",
+      "a": "Plastic/Main",
+      "b": "Plastic/ConstitutionPositive",
+      "kind": "model",
+      "changed": "constitution"
+    },
+    "changedSettings": [
+      "constitution"
+    ],
+    "aligned": true,
+    "inputHashes": [
+      "1bdd86ede92fd046b25a8db6f5e76118867a5d8f603be0a4a5412aebe68fda9f",
+      "1bdd86ede92fd046b25a8db6f5e76118867a5d8f603be0a4a5412aebe68fda9f"
+    ],
+    "inputDifferences": [],
+    "runSeed": "0000000000000000000000000000000000000000000000000000000000000000",
+    "mechanismProjectionEqual": true,
+    "stateEqual": false,
+    "saveEqual": false,
+    "fields": [
+      {
+        "path": "0a8c0101030101029c0b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72",
+        "root": "1436",
+        "a": "{\n  \"record\": \"IdentityQualificationJournal#1435/1\",\n  \"Qualifications [1]\": []\n}",
+        "b": "{\n  \"record\": \"IdentityQualificationJournal#1435/1\",\n  \"Qualifications [1]\": []\n}",
+        "equal": true
+      },
+      {
+        "path": "0a8c010103010102a10b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72",
+        "root": "1441",
+        "a": "{\n  \"record\": \"IdentityContactCount#1440/1\",\n  \"Count [1]\": \"0\"\n}",
+        "b": "{\n  \"record\": \"IdentityContactCount#1440/1\",\n  \"Count [1]\": \"0\"\n}",
+        "equal": true
+      },
+      {
+        "path": "0a8c010103010102b10b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72",
+        "root": "1457",
+        "a": "{\n  \"record\": \"ImmutableConstitution#1453/1\",\n  \"Value [1]\": \"0/1\"\n}",
+        "b": "{\n  \"record\": \"ImmutableConstitution#1453/1\",\n  \"Value [1]\": \"1/8\"\n}",
+        "equal": false
+      },
+      {
+        "path": "0a8c010103010102b20b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72",
+        "root": "1458",
+        "a": "{\n  \"record\": \"PlasticDisposition#1454/1\",\n  \"Value [1]\": \"0/1\"\n}",
+        "b": "{\n  \"record\": \"PlasticDisposition#1454/1\",\n  \"Value [1]\": \"0/1\"\n}",
+        "equal": true
+      }
+    ],
+    "a": {
+      "program": "Plastic/Main",
+      "prefix": 0,
+      "clock": "0",
+      "constitution": "0/1",
+      "law": "Plastic",
+      "modelHash": "d9358cbd32c72e00fa10b75a930af509d3b792134ef7f0acc6544516983e2240",
+      "runHash": "7df069397ab3142146a231f0bb2091cdaf34365e5bcd072a3d27d5181c19fbaf",
+      "stateHash": "e1b6ddf48e1d4b0110ddb16c336f57ad6ca0c4b5b5f06a270f6d69faf1ad68b4",
+      "saveHash": "6fba589ecc1ab27bbf123a834cf8a8ab6cec682728504819b2c26b9e33f78a44",
+      "projectionHash": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd"
+    },
+    "b": {
+      "program": "Plastic/ConstitutionPositive",
+      "prefix": 0,
+      "clock": "0",
+      "constitution": "1/8",
+      "law": "Plastic",
+      "modelHash": "87eda606000f6c8206ec1ade7c268e17473efac5331ae408add50de73a86dc0b",
+      "runHash": "e76c4b33abd8dc9d57efacfe0b1744d704dc6b8915172de56326e2ea093f9655",
+      "stateHash": "38cc1bfee6091244f17c8053fbe3dbddebbeeedcffef6e835777b5314056b33a",
+      "saveHash": "78235882598b24d10176a040cb2e44e2566b0228851f423a344acc6348ce5771",
+      "projectionHash": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd"
+    },
+    "scope": "Derived diagnostics from trusted committed adapter snapshots; not a standalone save authenticator. Mechanism projection equality is not observer knowledge equality. Constitution, plastic adaptation, effective disposition, identity standing and execution remain distinct. No general personality, qualified character narration or independent causal necessity claim.",
+    "alignment": "Equal committed native prefixes only. Unequal prefixes withhold equality and field comparison.",
+    "randomPolicy": "Original run seed is fixed; input calendars retain their routed instant seeds. Equal seeds do not establish equal addressed draws or action causes."
+  }
+}

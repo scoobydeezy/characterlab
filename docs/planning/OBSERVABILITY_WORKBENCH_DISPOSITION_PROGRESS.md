@@ -183,3 +183,19 @@ The FULL audit is RUNNING under session81715, frozen in
 prefix1. Do not edit its frozen dependencies or infer completion from the smoke
 receipt. Full comparison receipt, all-prefix pair restore, broader browser coverage,
 language, resource policy and integrated Campaign4 entry remain due.
+
+## Comparison readability — 2026-10-19
+
+The opaque-selector follow-up is closed. All30 options name both programs and the
+changed dimension (21 law,3 constitution,6 input); input controls use their actual
+fixture meaning. The selected-change paragraph distinguishes identical-input model
+comparisons from fixed-model input comparisons. A loaded-branch table shows program,
+committed prefix and exact constitution. Stable contrast IDs remain in exact reports.
+The paired report now has a distinct DOM marker from the pinned-revision report.
+
+Build PASS539 modules (existing chunk-size warning). Browser evidence in
+`workbench-disposition-labels-rev1/receipt.json` covers all30 option labels, model/input
+selection descriptions and the initial constitutional branch table. The complete
+initial report equals the prior qualified browser/native report. Research checks
+PASS. Native/comparison frozen dependencies are untouched; broad accessibility,
+full comparisons, language and integrated-entry requirements remain open.
