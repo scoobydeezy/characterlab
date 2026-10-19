@@ -246,3 +246,35 @@ effect delivery. Real browser nonterminal pause, route interruption and resource
 acceptance remain open. Prior browser captures bind earlier frozen UI revisions;
 this refactor has no fresh browser acceptance yet. No new Campaign3 verdict or
 qualification, law selection, native admission or obligation disposition.
+
+## Exact searchable research diagnostics
+
+2026-10-19. Experiment now provides path/value search, exact leaf selection and
+run/model/seam/prefix/state-hash identity. Canonical JSON pointers escape slash and
+tilde keys. Row fields link to their actual committed opportunity in Timeline.
+Research-only world and RNG scope is explicit; no character narration is inferred.
+Containers show counts and original full-state inspection remains available.
+
+LOCAL DISPOSITION: search index rejects more than10000 fields or1000000 accumulated
+path/value characters, with an explicit error and no partial index. Results show
+first100 plus the exact total; refining the query searches the entire accepted index.
+Long previews are marked and full exact leaf values remain selectable. These bound
+this diagnostic index, not authoritative runtime work or global browser memory.
+
+Four focused tests PASS: exact values/paths, explicit limits, non-JSON rejection and
+unchanged native continuation. `workbench-substitution-search-rev2/receipt.json`
+independently enumerates47804 fields across all29 original programs/261 retained
+prefixes (maximum371 fields per snapshot). Full-state captures already joined to
+native commitments are the source. Revision1 checker incorrectly assumed the
+native hash/observer archive also stored complete state; its rejection and frozen
+sources are retained in `workbench-substitution-search-rev1`, with no PASS claim.
+Production code unchanged by this checker correction.
+
+Bounded browser receipt proves diversified prefixes1/8 exact field identity,
+keyboard selection, matching Timeline row, unchanged main state/five commitments,
+visible100-result limit, and removal of a missing selected path after restore1.
+Screenshot retained and inspected. Build522 modules PASS with existing chunk warning.
+The shared run-loop refactor also executes successfully in this bounded step/run/
+restore flow; nonterminal browser pause is still unproven. Broader subsystem rollout,
+authority/activity/changed/contributing/editable/uncertainty/historical filters,
+all-program browser search and integrated acceptance remain open. No research verdict.

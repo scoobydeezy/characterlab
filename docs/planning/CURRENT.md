@@ -1,5 +1,12 @@
 # Current research entry point
 
+**SUBSTITUTION exact search2026-10-19:** searchable canonical paths and exact leaf
+values added in Experiment, with run/model/prefix/state identity and Timeline links.
+All29 programs/261 retained prefixes/47804 fields PASS index audit; bounded browser
+identity/link/restore checks PASS. Explicit result/index limits preserve exact-state
+access. Broader subsystem/filter coverage remains open. Failed checker source choice
+retained. Start OBSERVABILITY_WORKBENCH_SUBSTITUTION_PROGRESS.md.
+
 **SUBSTITUTION run control2026-10-19:** shared committed-boundary loop used by main
 and pair UI;9 focused tests PASS, including deferred-response pause/disposal and
 exact native continuation after pause. Build519 modules and research checks PASS.
