@@ -54,3 +54,12 @@ against the completed native receipt, plus the exact64000-character summary prev
 and declared full UTF-8 byte count. Do not invoke download controls or reconstruct a
 denied checkpoint file. Ordinary DOM execution diagnostics are retained as evidence;
 file-transfer acceptance remains separate. No final browser receipt exists yet.
+
+2026-10-19: attempt1 interrupted. Exact browser tab2 lookup returned not found and
+the current browser inventory contained only tabs1/3. Last observed partial progress
+was475/915 roles and3248 prefixes; this is not completion evidence. The retained
+attempt-1-interruption.json records the missing handle and explicit limits. All267
+frozen source hashes reverified unchanged. Attempt2 was prepared fresh in tab4 at
+the same4173 frozen build, with915 roles and0 prefixes, and Run / resume activated.
+No recovery or continuation from attempt1 is claimed. Preserve tab4 each turn and do
+not replace dist or its lazy assets. Final full comparison remains required.

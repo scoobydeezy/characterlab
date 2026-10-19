@@ -147,3 +147,37 @@ normal viewport after keyboard focus supplies the inspected visual evidence.
 Isolated preview4179 leaves the full batch's4173 build unchanged. Full architecture,
 remaining-root disposition UI, observer-safe language and integrated acceptance remain
 open. No successful download/file-transfer claim is made.
+
+## Complete observed-root classification for General — 2026-10-19
+
+LOCAL DISPOSITION: version general-canonical-participation/0.3 places362 under the
+existing Beliefs box, restricted to the thin predictive-belief seam's next permitted
+diagnostic reading and original evidence basis. Permanent authority/belief-expectation
+and predictionExecution enforce the inherited owner. The earlier research target
+describes the required distinction; its historical pre-acceptance status is not a new
+activation claim. This display does not duplicate362 under Expectations, merge the two
+canonical boxes, or claim causal belief, confidence, present truth or action efficacy.
+
+Three other roots receive explicit support classifications:268 identity/projection
+roster,581 formation/loss protocol metadata,649 world-side physical sources. Their
+exact paths and event links remain inspectable outside canonical-box totals. The UI
+shows each support category separately and retains an explicit unclassified category
+for future roots; no unknown row is silently assigned to a cognitive owner.
+
+`workbench-general-architecture-rev3/receipt.json` PASS43 models/568 prefixes:
+7808 mapped path observations and2840 support path observations, with zero unclassified
+observations in this bounded corpus. All14 observed root types have one classification;
+11 map to six canonical boxes and three are support roots. Independent row/event/count
+checks, support membership/disjointness, historical paths and snapshot immutability
+pass. This completes the observed-root inventory only, not full architecture coverage,
+edge participation, causal contribution, language or integrated acceptance. TypeScript,
+isolated554-module build and reference boundaries pass; prior frozen receipts survive.
+
+`workbench-general-architecture-ui-rev3/receipt.json` PASS original frozen baseline
+terminal11. Full browser report equals native-backed evidence. Prediction keyboard
+navigation selects recorded application event18. Identity/protocol/physical selections
+show1/1/3 exact paths with their respective scope text; unclassified selection displays
+the explicit empty state without asserting redundancy. Native model/run/state/save
+hashes remain equal after all selections. Screenshot inspected; separate4180 preview.
+Evidence restore and research checks PASS with18 conditional obligations unchanged.
+No Campaign3 verdict, model semantics, topology or character evidence was modified.
