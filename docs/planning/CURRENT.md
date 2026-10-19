@@ -1,5 +1,19 @@
 # Current research entry point
 
+**LONG comparison foundation2026-10-19:** longComparison.ts declares24 contrasts
+drawn from retained public qualification controls and actual execution probes.
+Reconstructs original model/run identity and seed, verifies observer digest/identity,
+aligns only shared committed clocks. Identity/skill/relationship equality is separate
+from episodes, optional person estimate and optional relationship detail. Missing is
+explicit; raw draw records retained without inferring coupling from shared seeds.
+Focused native FullHistory/Compact test PASS through4 instants: learned projections
+equal with differing detail, repeated report equality, checkpoint non-mutation,
+forged run/observer rejection and unaligned-clock handling. This is not full24-pair
+or full-horizon qualification. Comparison browser and broader checks remain due.
+Build29085 COMPLETE exit0,424 modules; existing chunk-size warning retained.
+Evidence restore/research PASS;18 conditional obligations unchanged. LONG full native
+audit48528 remains live; preserve its frozen sources.
+
 **LONG production browser2026-10-19:** workbench-long-ui-rev1 PASS under52143.
 Original representation-1-law-1 prefixes0/1 match all seven native hashes; checkpoint
 restore recovers prefix0 and repeated step recovers prefix1.17 rendered native events
