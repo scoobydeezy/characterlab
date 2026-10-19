@@ -1,0 +1,315 @@
+{
+  "status": "PASS COMPLETE DECLARED SUBSTITUTION BROWSER COMPARISON COHORT",
+  "sources": [
+    {
+      "path": "src/workbench/SubstitutionWorkbench.tsx",
+      "sha256": "25c143b6f3b92e13ce72b26700e2a4858493015798e0b768ad9f34b31075947c"
+    },
+    {
+      "path": "src/workbench/SubstitutionComparisonPanel.tsx",
+      "sha256": "9b45d7e34ccd8fdc4fe7be167fde7f9cb04d95dc9a9072ef6db88ac4353ffeb2"
+    },
+    {
+      "path": "src/workbench/substitutionPairCheckpoint.ts",
+      "sha256": "460055ab47088b25b2fabfcf6d404594843626e60e0d235cd43da84da0693a8d"
+    },
+    {
+      "path": "src/workbench/substitutionWorker.ts",
+      "sha256": "4390226c117641a833aec69dc989514e1b17dfcd7defd3f5564967fa0568fcbb"
+    },
+    {
+      "path": "src/workbench/substitutionWorkerClient.ts",
+      "sha256": "dc2bfa439c802918b0b25f4e3c3fc45bed9c13d4a9b5277010e689834d45533b"
+    },
+    {
+      "path": "src/workbench/WorkbenchApp.tsx",
+      "sha256": "61e442273c9cbd18fb8ca9b2442e87f5e2136f7dd8d63d04699163f41b608124"
+    },
+    {
+      "path": "src/workbench/inspectionRegistry.ts",
+      "sha256": "708ffae46f797af077583470b4672096921f93cc29084ab75844a482f5d0f4a3"
+    },
+    {
+      "path": "scripts/check-workbench-substitution-browser-pairs.mjs",
+      "sha256": "fdb923e45324cf2927bceb26dc9dc7335c19230bb6777f93a947a71911c3431d"
+    }
+  ],
+  "parents": [
+    {
+      "path": "docs/planning/workbench-substitution-comparison-rev1/receipt.json",
+      "sha256": "a1d92dd6f85c32762f99b5a5c3e6133b087c391b4c572c66cd485c7ac77df15e"
+    },
+    {
+      "path": "docs/planning/workbench-substitution-ui-rev1/receipt.json",
+      "sha256": "368cbe751b91b1fe6b17d18db55ec6c4c1ff20b4f34f43bcf602755719e1c37c"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "pair-00.json.gz",
+      "sha256": "1abf2ff265c392248eda372c8a90c933eed9eac725d4829efb7feb630ad16309",
+      "comparison": "model/LatestHistory/MeanHistory/diversified",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-01.json.gz",
+      "sha256": "f8ff857a8636146b03e0ea48b1cfd239aa2db57f15348e09c5b5102b50937818",
+      "comparison": "model/LatestHistory/ExpectationOnly/diversified",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-02.json.gz",
+      "sha256": "d4c570e42095ddb543a55795245a504d3e7329e66358ca2d519af983f044f376",
+      "comparison": "model/LatestHistory/HistoryOnly/diversified",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-03.json.gz",
+      "sha256": "9e43acc800b7dc96b7b088f594702f442a0e13c65b7f974ff1d1bf6dfdee0c60",
+      "comparison": "model/LatestHistory/NoLearning/diversified",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-04.json.gz",
+      "sha256": "574ec10921f7e49cbbe2ebfb638a8d090b34712a784ed459827157a24ec5a2f3",
+      "comparison": "model/MeanHistory/ExpectationOnly/diversified",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-05.json.gz",
+      "sha256": "68db76f8c7f48aa2b52029ec0ad238c8731a39bc326ce5f184dd4e472e2ac2a5",
+      "comparison": "model/MeanHistory/HistoryOnly/diversified",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-06.json.gz",
+      "sha256": "d90c8bf5dd156f20a807cfccd15a9c042e32d180bffffd84b1eb632b0d001119",
+      "comparison": "model/MeanHistory/NoLearning/diversified",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-07.json.gz",
+      "sha256": "090b6ac9607dfaf2084cc6a5e53f918ffdd7a4d1af6435bffce3c8fd5a8ee2c5",
+      "comparison": "model/ExpectationOnly/HistoryOnly/diversified",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-08.json.gz",
+      "sha256": "7d703ad1410c9f2fd48ca113ce1a5f137d048e5331ccc34f9d9a0c716bae8882",
+      "comparison": "model/ExpectationOnly/NoLearning/diversified",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-09.json.gz",
+      "sha256": "c1e3263ce24833ed0ca0def8c4420ba5a99c35a08e4b1d6db30e06c77d1aee0f",
+      "comparison": "model/HistoryOnly/NoLearning/diversified",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-10.json.gz",
+      "sha256": "dfb93177569c19ca77bcc4dd71a0c175b35b5a17c0495ac5ef70cf97d847d332",
+      "comparison": "model/LatestHistory/ExpectationOnly/concentrated",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-11.json.gz",
+      "sha256": "f1dfa028e94e8aa2670f3d4b762dabb58bb8c7774a13c74a7c98037521c0f980",
+      "comparison": "model/LatestHistory/HistoryOnly/knownAlternative",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-12.json.gz",
+      "sha256": "aa8e26c1b0438b006344f672c4dc784e1addff848bfd9e0d137403acd79f599c",
+      "comparison": "model/LatestHistory/NoLearning/knownAlternative",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-13.json.gz",
+      "sha256": "ca2ad0e9343b93171ec3114783ac8bf7a455392a11f72be84e4ddc8ad20b13f5",
+      "comparison": "model/LatestHistory/MeanHistory/correctedConcentrated",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-14.json.gz",
+      "sha256": "7540a5f1b6f5de920526e83114f22d9554bc0a3a840a4f4eeafb2fb43ec88971",
+      "comparison": "model/LatestHistory/ExpectationOnly/correctedDiversified",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-15.json.gz",
+      "sha256": "9e954fe1768ff236729d809f92364a60a2a6e4c1e1ac310fde8dd7cd32736c5c",
+      "comparison": "model/HistoryOnly/NoLearning/knownAlternative",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-16.json.gz",
+      "sha256": "c3ea36cfdcbbcbadddfd9249712da474d494be5f9cdfe5a0d60851cd67722402",
+      "comparison": "input/concentrated",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-17.json.gz",
+      "sha256": "cb41fd62bc96f9b9744bd332e84d95554264933d9e9c4c83dbf308eb59de7be0",
+      "comparison": "input/knownAlternative",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-18.json.gz",
+      "sha256": "fb3f338839d6c1fbad487824cc031522841400de7830c3e5acf1ec84903d0bbb",
+      "comparison": "input/knownFailure",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-19.json.gz",
+      "sha256": "70b539d20f7a72ee2ae8681737e1308a0be1e525d28ce0b37226f444403aa413",
+      "comparison": "input/unavailable",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-20.json.gz",
+      "sha256": "03310a34d9e83c26a77a64262114c9a450c8fda11fe1fd35e4659dc89635272a",
+      "comparison": "input/noDemand",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-21.json.gz",
+      "sha256": "11db3755087deda63af89f9a12417c7a39fc2318e94459041195a2b79a76bf0b",
+      "comparison": "input/restoredA",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-22.json.gz",
+      "sha256": "42968b95864242dd48890cae3573521c930e49bd41399be374212ec54a54b17d",
+      "comparison": "input/correctedConcentrated",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-23.json.gz",
+      "sha256": "3a42624ab7b8ec6707d9c0db1078d1b7056874381021a564156621b3c8dffb2d",
+      "comparison": "input/correctedDiversified",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-24.json.gz",
+      "sha256": "2f65d632b49b818a8004d4b053869184813f9387cc516f053ad78a417a6fd43e",
+      "comparison": "input/otherCue",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-25.json.gz",
+      "sha256": "325eca93a822d15e69f2f9107461213bfabb089ad98f5e49d80537fa563b7e66",
+      "comparison": "input/bothAvailable",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-26.json.gz",
+      "sha256": "aa6f3c64a1bfc1e7e85aff89a6ac198b2924db4bbc07b16c6a3b2d92dd86bc0e",
+      "comparison": "input/unseenTraining",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-27.json.gz",
+      "sha256": "4d558421b511d5f148200e8ade28c7a8760cc6dc6eb8779676822b9bcb5f4fa9",
+      "comparison": "input/falseTraining",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-28.json.gz",
+      "sha256": "bd12299b80b635c2cc4afd3896b7c99aea7d6324d36c7ddeae646457d0d66719",
+      "comparison": "input/deniedFeedback",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-29.json.gz",
+      "sha256": "b8cd5bc72ab15770324780ac911f2c240a3b8a4d0759be388a32849e92b77ecb",
+      "comparison": "input/hiddenBlocked",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-30.json.gz",
+      "sha256": "feb2088e13c13374402809808cd166cab541d951b8a338e7e41550f30963b82c",
+      "comparison": "input/failure",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-31.json.gz",
+      "sha256": "74022a7bedc3151f40b4321713e62ffdac9bc69a5aadd9b49de1e92b3957d254",
+      "comparison": "input/falseSuccess",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-32.json.gz",
+      "sha256": "02e4c3606963598c0c5d5a9edf778f6075ccd800649bbe0762e6e76e468a939c",
+      "comparison": "input/trueSuccess",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-33.json.gz",
+      "sha256": "c7f4ed9ab43a0262a406320ec96054115841f0c3eaeca0f562a939ba4704ceff",
+      "comparison": "input/deniedInfo",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-34.json.gz",
+      "sha256": "56ef0ec2f1fcbe437daf7857f1e6f7e41c1200f5b702a9f963e98498a341af59",
+      "comparison": "input/absentInfo",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-35.json.gz",
+      "sha256": "d8fcf890bab73b266e3b352a0cc8256915f97524410e2be3bb9f7239ac17b3b4",
+      "comparison": "privacy/denied-feedback",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-36.json.gz",
+      "sha256": "ad1c6bd1b5f52fb2218ecad99833450bf32d319182d6b9300c91f623373c432c",
+      "comparison": "privacy/false-success",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-37.json.gz",
+      "sha256": "5004deaf2a3eabb8051e9863019161afa64de8d917b615fc4300bdb315120364",
+      "comparison": "privacy/denied-information",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-38.json.gz",
+      "sha256": "bfe03e40df999fd3195af2c84bd1b070955633a51c015b2879e12f2be704b516",
+      "comparison": "history/equal-estimates",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-39.json.gz",
+      "sha256": "8bc573f48f8fde9c5e8282f4efa6a93cb97427f6515a42f0c6a0e9ff588c96c3",
+      "comparison": "history/cue",
+      "prefixes": 9
+    },
+    {
+      "path": "pair-40.json.gz",
+      "sha256": "61c1ba3482879c163021bb1431a8b04ef684838b4e2af333c73811526cfd64ec",
+      "comparison": "belief/informational-substitute",
+      "prefixes": 9
+    },
+    {
+      "path": "browser-index.json",
+      "sha256": "4ea6f218afd985828b436a578711e3ef7250d42669f6da4ed709f79c8bc3c46d"
+    },
+    {
+      "path": "main-isolation.json",
+      "sha256": "826ad8e760bc8ecc20c61e4f893f84e8a9ef7fb17be17719806a7e6c685bbe66"
+    },
+    {
+      "path": "substitution-pairs.png",
+      "sha256": "fa9f5fe75f980d6dcdc0f8b16ff8bc0c8d346c3fa67168da78690e0e97396fab"
+    }
+  ],
+  "counts": {
+    "comparisons": 41,
+    "modelPairs": 16,
+    "inputPairs": 25,
+    "alignedPrefixes": 369,
+    "joinedSides": 738
+  },
+  "scope": "All41 declared pairs created and advanced through nine browser prefixes; complete DOM comparison reports equal qualified comparison archive, including exact input/state differences and independent observer/state/save equality. Main five commitments unchanged by the full pair cohort. Bounded parent separately qualifies pair restoration. No every-prefix browser restore, unaligned UI ingress, pause/resource/accessibility, file transfer, exhaustive causal factor accounting or native admission."
+}

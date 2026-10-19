@@ -1,5 +1,11 @@
 # Current research entry point
 
+**SUBSTITUTION browser pairs2026-10-19:**ALL41 declared pairs/369 aligned reports/
+738 exact sides PASS; full DOM comparisons equal qualified archives. Main five
+commitments unchanged throughout. All29 main programs and4176 descriptions retain
+prior browser qualification. Every-prefix restore, pause/resource/accessibility,
+batch and integrated entry remain due. Start OBSERVABILITY_WORKBENCH_SUBSTITUTION_PROGRESS.md.
+
 **SUBSTITUTION language2026-10-19:**4176 descriptions/261 original prefixes/29
 programs PASS in both pure renderer and actual browser;44 restored/repeated browser
 descriptions also match.112 frozen language sources independently checked; raw

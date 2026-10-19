@@ -155,3 +155,23 @@ Registry0.19 was frozen before browser verification, so its pending-browser word
 is historical build metadata; this receipt provides the completed language coverage.
 Full pair browser, every-prefix browser restoration, pause/resource/accessibility,
 specialized inspections, batch and integrated Campaign4 entry remain open.
+
+## Complete declared browser comparison cohort
+
+2026-10-19. `workbench-substitution-browser-pairs-rev1/receipt.json` PASS ALL41
+declared pairs (16 model/25 input) across369 aligned browser reports/738 exact sides.
+Every pair was selected, created and advanced through prefixes0..8 using actual
+controls. Complete DOM reports captured in40000-character chunks equal the accepted
+comparison archive, including every input/state difference and separate observer,
+state and save equality result. Main five commitments remain identical before/after
+the entire pair cohort.41 compressed diagnostic files retain original captures.
+Current/frozen UI sources, artifacts and parent hashes independently PASS. Saved
+screenshot visually inspected. No production source change, download/file transfer,
+native admission or research verdict.
+
+This closes declared aligned browser pair coverage, including all named privacy and
+equal-estimate controls. It does not establish every-prefix browser restore, pause,
+resource/accessibility, exhaustive causal factor accounting or integrated Campaign4
+entry. Earlier bounded pair restoration remains its own evidence. Language, main
+browser and comparison cohorts are separately qualified; broader workbench gates
+remain open.
