@@ -1,5 +1,16 @@
 # Current research entry point
 
+**LONG loss six-mode UI2026-10-19:** bounded browser PASS original case0 prefixes
+0/4/5/restore4/repeat5 with exact state and three commitments. Owned Character
+projection excludes scenario profile and execution trace; narration remains due.
+HiddenLoss/NoLoss pair8/16 reports4/12/restore4/repeat12 match qualified full reports.
+Pair, mode and route work preserve main hashes. Registry0.10; corrected projection
+and registry tests PASS, build74213 PASS458 modules. Frozen browser receipt and all
+source/artifact/input hashes independently verified. Start
+OBSERVABILITY_WORKBENCH_LONG_LOSS_PROGRESS.md. No file roundtrip, broad browser,
+clinical law, native admission or Campaign4 entry claim. Habit comparison41914 has
+completed seed0:120 trajectories/356 pairs/6052 prefixes; full audit remains live.
+
 **LONG loss comparisons2026-10-19:** audit25080 COMPLETE PASS904 declared pairs/
 11752 aligned prefixes across480 current cases.160 matched-evidence controls retain
 character-side diagnostics and draws across2080 prefixes; physical execution remains

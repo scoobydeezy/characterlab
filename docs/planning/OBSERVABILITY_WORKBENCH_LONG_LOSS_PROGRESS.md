@@ -78,5 +78,38 @@ both original cases before installation and disposes a partially restored pair o
 failure. A prefix4 reported-loss/NoLoss restore preserves the next-instant likelihood
 difference1 versus0; the current pair stays unchanged. No file transfer was performed.
 Build74621 PASS451 modules; research/evidence checks PASS18 conditional obligations.
-Final pair TypeScript check14624 PASS. Six-mode UI and browser pair
-qualification remain the next implementation work.
+Final pair TypeScript check14624 PASS. Six-mode UI and browser pair qualification
+were the next implementation work; the bounded continuation below supersedes that routing.
+
+## Six-mode UI and bounded browser qualification
+
+2026-10-19: dedicated worker-backed route implements Character, Experiment,
+Reasoning, Timeline, Compare and Architecture. Registry0.10 declares the standalone
+component boundary. Character receives only actor, target, relationship history,
+availability belief and goals; profile and physical trace are excluded by a pure
+projection. Exact diagnostics are not promoted to character narration. Architecture
+labels declared ownership and ordering, without claiming causal necessity.
+
+Browser receipt `workbench-long-loss-ui-rev1/receipt.json` PASS: original case0
+prefixes0/4/5/restore4/repeat5 equal direct original component state and all three
+identity/save commitments. Prefix4 appraisal still has likelihood0; the report
+affects prefix5, likelihood1. HiddenLoss/NoLoss pair8/16 complete comparison reports
+at4/12/restore4/repeat12 equal the fully qualified pair archive. Character-side
+diagnostics remain equal while physical contact and completion differ. Comparison,
+mode changes and route return preserve the main run's three hashes. Screenshots
+retain visible authority labels. All13 source copies, three browser artifacts and
+four qualified input hashes were independently reverified.
+
+Projection and registry focused tests PASS; corrected production build74213 PASS458
+modules, with existing chunk-size warnings. The initial test's readonly assignment
+and the browser verifier's incorrect field-name lookup are retained under
+`workbench-long-loss-ui-finding-rev1`; both were development harness mistakes,
+corrected without changing component semantics. Evidence restore and research check
+PASS18 conditional obligations. LOCAL DISPOSITION: whitelist owned diagnostic state
+and label execution separately using accepted observer-boundary precedent; no owner
+ruling or new psychological verdict is required.
+
+Broad480-case browser qualification, controlled character language, resource and
+accessibility qualification, standalone file transfer and integrated Campaign4
+acceptance remain open. No browser download or import was attempted. Prior live
+native/goal/habit audits continue without dependency edits or restarts.
