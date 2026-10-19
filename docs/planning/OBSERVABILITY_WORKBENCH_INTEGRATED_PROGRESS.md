@@ -51,7 +51,7 @@ qualification elsewhere remains scoped; this table does not reissue research ver
 | 5 Run both | Values run-both controls exist; preserve model/input/RNG correspondence and declare the final pair. |
 | 6 Charts and matrix/vector | Values has an exact-backed scalar trend. It has no authored personality matrix; the final demonstration needs an appropriate matrix/vector-capable profile, not an invented matrix. |
 | 7 Semantic timeline | Committed stage/instant/event selection exists. Newly linked ancestry improves traversal. |
-| 8 First meaningful divergence | Values displays observer-row and exact-state divergence separately. Final interpretation must remain scoped to declared semantic correspondence. |
+| 8 First meaningful divergence | Values displays observer-row and exact-state divergence separately. Disposition retains every aligned pair report, separates first state/projection differences, and supports read-only historical inspection with bounded restore/continuation evidence. Final interpretation must remain scoped to declared semantic correspondence; a projection difference alone does not establish psychological significance. |
 | 9 Before/after diff | Native event diffs and cross-branch state differences exist. Final demonstration must select and explain a meaningful transition. |
 | 10 Resolution | Native Values reasons/choice/dice records exist. Final selected run must reach and inspect the resolution. |
 | 11 Expand factor | Values reason cards expose die calibration and exact nucleus records. Disposition now shows exact operands, all compiled reason roles, coverage and distributions, with bounded native/browser and historical checks. Complete choice attribution and character-language adequacy remain separate. |

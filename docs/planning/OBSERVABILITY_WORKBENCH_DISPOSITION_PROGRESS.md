@@ -323,3 +323,27 @@ Projection divergence alone is neither a chosen-action difference nor character
 knowledge, psychological significance or causal necessity. UI history capture,
 first-divergence navigation and full-contrast qualification remain due. Frozen
 native/comparison dependencies remain unchanged.
+
+## Divergence history UI — 2026-10-19
+
+The pair panel now retains a comparison at creation and after every aligned completed
+step, including Run/Pause boundaries. State and mechanism-projection divergence are
+separate, with observed/missing prefixes and explicit earliest-proof flags. A retained
+prefix selector inspects the historical exact report without moving either worker.
+Restore authenticates both saves, validates retained report consistency, then truncates
+history to the restored horizon. Fresh creation resets history; identical replay is
+idempotent and conflicting reports reject before truncation.
+
+Five focused history/retention tests PASS. Production build PASS543 modules; boundary
+and research checks PASS (18 conditional obligations remain). Browser receipt
+`workbench-disposition-history-ui-rev1/receipt.json` PASS for constitutional pair0/13
+at prefixes0/1/2: initial state difference0, first mechanism difference1, Step and
+Run/Pause retention, read-only prefix0 inspection at current2, restore to exact history
+0/1, exact repeated continuation2, and mode persistence. The checker joins complete
+reports and checkpoint hashes to the prior qualified native/browser pair evidence,
+and verifies four frozen/current source pairs. Screenshot `history.png` retained.
+
+LOCAL DISPOSITION: scoped diagnostic UI qualification only; no new Campaign3 verdict
+or obligation disposition. No claim of psychological significance, causal necessity,
+full contrast/browser coverage, live-state model fork or integrated entry acceptance.
+The full native and comparison audits continue with frozen dependencies unchanged.

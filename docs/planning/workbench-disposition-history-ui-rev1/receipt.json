@@ -1,0 +1,28 @@
+{
+  "version": "disposition-history-browser/0.1",
+  "status": "PASS",
+  "contrast": "model/0/13",
+  "prefixes": [
+    0,
+    1,
+    2
+  ],
+  "checks": [
+    "initial state versus mechanism divergence",
+    "every retained step",
+    "read-only historical inspection",
+    "restore horizon truncation",
+    "exact deterministic continuation",
+    "mode persistence"
+  ],
+  "sources": {
+    "src/workbench/DispositionComparisonPanel.tsx": "24cfe425d8148e83c137c88efab3c6ddfa803fa43663651a09fceb346a5f8117",
+    "src/workbench/dispositionDivergenceHistory.ts": "5d4e8314653a5440bb6eddf1a24c5409945561b53dc60fd292ff0862df04402b",
+    "src/workbench/dispositionReportRetention.ts": "e82385b2bf2d23061bc0ee0f7154e6744b07f445517f05433f9102dd2367d521",
+    "src/test/workbenchDispositionRetention.test.ts": "becc2933d73109d2b5d80290acadb61149f42db42cb2ab6e9b0850060763349f"
+  },
+  "artifacts": {
+    "browser.json": "6a64925a8204a8aaae65fdf7dd74f1eea5664190b8605ae97cef646f53cdd7af"
+  },
+  "scope": "One constitutional pair, three committed prefixes. Native report equality joins the prior qualified pair receipt. Full contrast coverage, integrated demonstration and causal significance remain unqualified."
+}
