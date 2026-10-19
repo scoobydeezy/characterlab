@@ -1,5 +1,11 @@
 # Current research entry point
 
+**SUBSTITUTION comparisons/UI2026-10-19:**41 declared pairs/369 aligned reports/
+41 unaligned checks PASS;738 exact joins to29-program/261-prefix component evidence.
+Six-mode inspector and independent pair replay implemented, registry0.18; pair and
+batch-exclusion tests PASS. Browser/language/batch and Campaign4 entry remain open.
+Start OBSERVABILITY_WORKBENCH_SUBSTITUTION_PROGRESS.md.
+
 **SUBSTITUTION foundation2026-10-19:**5 models/29 original component programs/261
 prefixes PASS;232 advancing and29 terminal restores. Original identity/save/state/
 observer commitments preserved; no native scheduler admission. Worker and declared

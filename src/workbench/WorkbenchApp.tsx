@@ -29,6 +29,7 @@ const LongHabit = lazy(() => import('./LongHabitWorkbench').then(m => ({default:
 const LongLoss = lazy(() => import('./LongLossWorkbench').then(m => ({default:m.LongLossWorkbench})));
 const LongRoutine = lazy(() => import('./LongRoutineWorkbench').then(m => ({default:m.LongRoutineWorkbench})));
 const Control = lazy(() => import('./ControlWorkbench').then(m => ({default:m.ControlWorkbench})));
+const Substitution = lazy(() => import('./SubstitutionWorkbench').then(m => ({default:m.SubstitutionWorkbench})));
 const Fatigue = lazy(() => import('./FatigueWorkbench').then(m => ({default:m.FatigueWorkbench})));
 export function WorkbenchApp() {
   const [experiment, setExperiment] = useState<ExperimentId | 'batch'>('values');
@@ -61,6 +62,7 @@ export function WorkbenchApp() {
     {visited.has('long-loss') && <div hidden={experiment !== 'long-loss'}><Suspense fallback={<p role="status">Loading LONG loss…</p>}><LongLoss active={experiment === 'long-loss'}/></Suspense></div>}
     {visited.has('long-routine') && <div hidden={experiment !== 'long-routine'}><Suspense fallback={<p role="status">Loading LONG routine…</p>}><LongRoutine active={experiment === 'long-routine'}/></Suspense></div>}
     {visited.has('control') && <div hidden={experiment !== 'control'}><Suspense fallback={<p role="status">Loading CONTROL…</p>}><Control active={experiment === 'control'}/></Suspense></div>}
+    {visited.has('substitution') && <div hidden={experiment !== 'substitution'}><Suspense fallback={<p role="status">Loading SUBSTITUTION…</p>}><Substitution active={experiment === 'substitution'}/></Suspense></div>}
     {visited.has('fatigue') && <div hidden={experiment !== 'fatigue'}><Suspense fallback={<p role="status">Loading FATIGUE…</p>}><Fatigue active={experiment === 'fatigue'}/></Suspense></div>}
   </>;
 }
