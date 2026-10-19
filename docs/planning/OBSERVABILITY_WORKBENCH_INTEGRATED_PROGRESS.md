@@ -47,7 +47,7 @@ qualification elsewhere remains scoped; this table does not reissue research ver
 | 1 Named experiment | Values registry/setup and original125-program parity exist. Final chosen demonstration profile still needs one consolidated receipt. |
 | 2 Starting character | Values Character mode exposes owned/derived fields and epistemic scope. Complete major character-state coverage is broader than this profile. |
 | 3 Base parameter slider | Disposition's discrete constitutional slider admits only -1/8,0,+1/8 on original Plastic models. Bounded keyboard/draft-isolation and exact fresh-model browser checks PASS. This supplies a real base-parameter control; its use within the complete integrated demonstration remains due. Values seed remains a fixture control. |
-| 4 Fork A/B | Fresh controlled A/B configuration creation exists. A fork of a selected live state is not established by that alone. |
+| 4 Fork A/B | Values live checkpoint A2 -> B2 now has bounded browser/native qualification, including independent branch advancement and repeated restore. This preserves the original input program; parameter-changing live forks and the final integrated experiment remain unqualified. |
 | 5 Run both | Values run-both controls exist; preserve model/input/RNG correspondence and declare the final pair. |
 | 6 Charts and matrix/vector | Values has an exact-backed scalar trend. It has no authored personality matrix; the final demonstration needs an appropriate matrix/vector-capable profile, not an invented matrix. |
 | 7 Semantic timeline | Committed stage/instant/event selection exists. Newly linked ancestry improves traversal. |
@@ -59,7 +59,7 @@ qualification elsewhere remains scoped; this table does not reissue research ver
 | 13 Historical stability | First displayed Values reason and ancestry at2/4 now pass bounded browser checks. Full renderer/version/corpus obligations remain open. |
 | 14 Architecture | Searchable owned-root read/write/change/presence counts link to native Timeline events; Disposition constitution -> reasons event18 is browser/native checked. Counts do not establish necessity; complete canonical participation/factor accounting remains due. |
 | 15 Export/copy summary | Earlier Values export evidence has explicit transfer limits. Current file-transfer boundary remains unresolved; do not bypass it through DOM-to-file reconstruction of checkpoints. A concise summary and end-to-end delivery acceptance remain due. |
-| 16 Restore/reproduce | Original Values prefix commitments and prior bounded restore checks exist. Final selected branch must demonstrate the exact earlier checkpoint and repeated continuation. |
+| 16 Restore/reproduce | Values original program0 now demonstrates A2 capture, B2 restore, identical continuation through4, repeat B2 restore while A4 stays unchanged, and exact repeated B4. Final integrated experiment and broader browser coverage remain due. |
 
 Full corpus/successor coverage, specialized views, resource/accessibility acceptance,
 all required filters and an integrated acceptance receipt remain required. No Campaign4
@@ -145,3 +145,25 @@ other adapters and complete causal contribution remain separate obligations.
 General export0.2 carries metadata with its version, while the actual frozen0.1
 browser export still authenticates exactly. This is in-memory compatibility evidence,
 not renewed file-transfer acceptance or final integrated qualification.
+
+## In-memory checkpoint fork — 2026-10-19
+
+`workbench-values-fork-ui-rev1/receipt.json` PASS ten browser observations joined to
+original program0 native run/state/save commitments at prefixes2/3/4. The existing
+Capture checkpoint / Restore checkpoint into B controls fork the captured A2 state.
+B advances to3 while A remains exactly2; A then reproduces3 and both reproduce4.
+Restoring B2 again leaves A4 unchanged and repeated continuation reproduces B4.
+All267 sources frozen for the running full browser batch remain unchanged.
+
+The unequal-horizon A2/B3 comparison correctly reports different current exact states,
+no difference in the two matched prefixes, and partial coverage with unexecuted tails
+excluded. After both finish, all four matched prefixes and current states agree.
+No intervention or causal effect is inferred from unequal execution horizons.
+
+LOCAL DISPOSITION: this qualifies the existing immutable-input in-memory fork in a
+bounded original Values experiment. It does not change a live model's constitution,
+qualify checkpoint file transfer, or complete the sixteen-step integrated experiment.
+No production code, served build, Campaign3 verdict or research obligation changed.
+Input dispatch timeouts during restore/run were resolved by inspecting the completed
+UI state; the actions were not repeated blindly. Native verification and screenshots
+are retained. Full browser batch and frozen native audits continue independently.

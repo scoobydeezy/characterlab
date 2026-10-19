@@ -1,0 +1,43 @@
+{
+  "status": "PASS BOUNDED VALUES IN-MEMORY CHECKPOINT FORK",
+  "seamContract": "values-integration-public/0.1-candidate",
+  "program": 0,
+  "observations": 10,
+  "prefixes": [
+    2,
+    3,
+    4
+  ],
+  "frozenSourcesVerified": 267,
+  "artifacts": [
+    {
+      "path": "docs/planning/workbench-values-fork-ui-rev1/browser.json",
+      "sha256": "343e48a4d2ac9e7ed0dd73c03106522812f964058508baa9e2d4436c08fa4863"
+    },
+    {
+      "path": "docs/planning/workbench-values-fork-ui-rev1/complete.png",
+      "sha256": "e23c085e3eaa32909ef08d11940c45216c73df8781b12edde0bf27100be3da87"
+    },
+    {
+      "path": "docs/planning/workbench-values-causal-rev2/run-0.json.gz",
+      "sha256": "0f089baca029e46b296b4ce9ba4609829727d98b3e2f2b469ea1548db81b971a"
+    },
+    {
+      "path": "docs/planning/workbench-values-causal-rev2/receipt.json",
+      "sha256": "5160f4ddb7f480b48ba31204bf7a928d529282bc9cf775f0999080f3b7db9c67"
+    },
+    {
+      "path": "docs/planning/values-integration-matrix-rev1/run-0.json",
+      "sha256": "2fa4f814e9a2cdc5f48d5c6b9729cc06229fb0f7cc0f5f4428bf8b39c5395b73"
+    },
+    {
+      "path": "docs/planning/workbench-batch-browser-rev7/freeze.json",
+      "sha256": "9e70e71a8fae3f00b78ff948e0c068d08693c75740b9716ea82726edfd6c9d63"
+    },
+    {
+      "path": "scripts/check-workbench-values-fork-ui.mjs",
+      "sha256": "6fcd8a07acbd2702e40c40fb0198bbca1727689815a3113c34434b0d5ecb444a"
+    }
+  ],
+  "scope": "Browser capture A2, restore B2, independent B3/A2, identical A3/B3 and A4/B4, repeated B2 restore while A4 remains unchanged, and repeated B4 exact continuation. Every observed run/state/save hash joins original native evidence. Current-state inequality at unequal horizons is kept separate from matched-prefix divergence. No checkpoint file transfer, parameter-changing live fork, all-program browser coverage or complete integrated demonstration claim."
+}
