@@ -1,5 +1,19 @@
 # Current research entry point
 
+**LONG habit receiver foundation2026-10-19:** adapter and worker implemented for
+all960 original REV2 cases under the accepted source-reuse protocol. Six focused
+adapter/worker/transport tests PASS; both production builds PASS436 modules.
+Research check PASS with18 conditional obligations. Full receiver qualification
+session18545/PID5328 RUNNING; first24 cases passed. This is exact component replay
+using8 reused native sources, not960 fresh native admissions. Frozen sources and
+ongoing results: workbench-long-habit-reuse-rev1. Start
+OBSERVABILITY_WORKBENCH_LONG_HABIT_PROGRESS.md. Browser UI, comparisons and language
+remain due; no capability-registry admission or Campaign4 entry claim.
+Existing audits remain live: LONG native48528 latest21/32; comparison20638 latest
+26/28 source captures; goal native7474 latest case7/120 prefix13/16. Do not edit their
+frozen dependencies or restart quiet jobs. Previous download denial remains binding;
+no file roundtrip/import claim is added.
+
 **LONG goal recorded-source language2026-10-19:** audit69567 COMPLETE exit0,
 120 cases/2040 prefixes/1920 recorded native source observations/11520 descriptions.
 The120 initial prefixes explicitly have no recorded observation; no empty-state
