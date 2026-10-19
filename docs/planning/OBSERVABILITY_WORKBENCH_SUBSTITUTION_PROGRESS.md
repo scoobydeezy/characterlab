@@ -91,3 +91,29 @@ Final build18715 PASS516 modules including boundary/TypeScript; existing large-c
 warning retained. Research PASS18 conditional/0 active/0 unowned/4 closed. No browser
 claim is made by this build. Next verify the rendered component UI and exact main/
 pair replay against the accepted archives, then implement qualified descriptions.
+
+## Browser qualification, 2026-10-19
+
+`workbench-substitution-ui-rev1/receipt.json` PASS bounded six-mode inspection:
+diversified0/5/6/restore5/repeat6 complete state/five commitments; concentrated pair
+5/6/restore5 full reports; denied-feedback pair6 equal observer/different world state.
+Character observer, Reasoning research state, Timeline final opportunity and
+Architecture record-count/boundary projection at6 equal direct component records.
+Main session survives pair work, mode changes and route switches. No synthetic
+native trace or character narration is claimed.
+
+`workbench-substitution-browser-programs-rev1/receipt.json` extends main-run browser
+coverage to ALL29 original programs/261 prefixes0..8. Every program was selected,
+created and stepped through its actual visible UI. Complete research-state DOM was
+captured in40000-character chunks; five displayed commitments and projected observer
+match original qualified component evidence at every prefix.29 compressed diagnostic
+archives retain complete captures. This is diagnostic evidence, not checkpoint file
+transfer. No download/import or denied checkpoint reconstruction was attempted.
+
+Both receipts independently verified for current/frozen source hashes, artifact and
+parent bindings. Saved screenshots visually inspected: component labels, controls,
+comparison equality distinctions and terminal state render correctly. Production
+source unchanged since build18715; this turn adds browser evidence/checkers/docs.
+Research obligations remain unchanged. Next language and remaining browser pairs,
+all-prefix restore/pause/resource/accessibility, specialized views and batch gates.
+Full main-program browser coverage does not close those independent requirements.

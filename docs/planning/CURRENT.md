@@ -1,5 +1,11 @@
 # Current research entry point
 
+**SUBSTITUTION browser2026-10-19:**all29 original programs/261 main UI prefixes
+PASS complete state/five commitments. Bounded six-mode/main restore/pair restore/
+privacy/mode-route isolation PASS. Language, all41 browser pairs, all-prefix browser
+restore, pause/resource/accessibility and batch remain open. No file transfer or
+native scheduler admission. Start OBSERVABILITY_WORKBENCH_SUBSTITUTION_PROGRESS.md.
+
 **SUBSTITUTION comparisons/UI2026-10-19:**41 declared pairs/369 aligned reports/
 41 unaligned checks PASS;738 exact joins to29-program/261-prefix component evidence.
 Six-mode inspector and independent pair replay implemented, registry0.18; pair and

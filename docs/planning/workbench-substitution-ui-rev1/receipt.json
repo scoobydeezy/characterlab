@@ -1,0 +1,72 @@
+{
+  "status": "PASS BOUNDED SUBSTITUTION COMPONENT UI",
+  "sources": [
+    {
+      "path": "src/workbench/SubstitutionWorkbench.tsx",
+      "sha256": "e597fca545ded98a0fe9426200095606ac043a056156ac5b7f4de918aa7df988"
+    },
+    {
+      "path": "src/workbench/SubstitutionComparisonPanel.tsx",
+      "sha256": "9b45d7e34ccd8fdc4fe7be167fde7f9cb04d95dc9a9072ef6db88ac4353ffeb2"
+    },
+    {
+      "path": "src/workbench/substitutionPairCheckpoint.ts",
+      "sha256": "460055ab47088b25b2fabfcf6d404594843626e60e0d235cd43da84da0693a8d"
+    },
+    {
+      "path": "src/workbench/substitutionWorker.ts",
+      "sha256": "4390226c117641a833aec69dc989514e1b17dfcd7defd3f5564967fa0568fcbb"
+    },
+    {
+      "path": "src/workbench/substitutionWorkerClient.ts",
+      "sha256": "dc2bfa439c802918b0b25f4e3c3fc45bed9c13d4a9b5277010e689834d45533b"
+    },
+    {
+      "path": "src/workbench/WorkbenchApp.tsx",
+      "sha256": "61e442273c9cbd18fb8ca9b2442e87f5e2136f7dd8d63d04699163f41b608124"
+    },
+    {
+      "path": "src/workbench/inspectionRegistry.ts",
+      "sha256": "1906104bbd7d77cec662559f6aa7e6d29b09e5c36d018062c10fc755b73558b9"
+    },
+    {
+      "path": "src/test/workbenchSubstitutionPairCheckpoint.test.ts",
+      "sha256": "9df55ee9b94d52a49f8b93813bb190da2b518c9651d5d5d11676f6453a99de9a"
+    },
+    {
+      "path": "src/test/workbenchInspectionRegistry.test.ts",
+      "sha256": "f804eebd2c79a845477bd7d7f3e15f58f3bc669f0bb7923e9eaac14c2403e286"
+    },
+    {
+      "path": "scripts/check-workbench-substitution-ui.mjs",
+      "sha256": "7ff4a7e70d4b76c5f2f8dd068636ab961554d69ca62b9f72536ccc6338880290"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "browser.json",
+      "sha256": "b7f38361e2b64fea2f5ef427592383854a34b7e91bad0a5cbff94e473282ba8e"
+    },
+    {
+      "path": "substitution.png",
+      "sha256": "147dd0a6feb0935c07982919098a87a11d6019dff02ce674352bdd1b8c7eff13"
+    }
+  ],
+  "parents": [
+    {
+      "path": "docs/planning/workbench-substitution-parity-rev1/receipt.json",
+      "sha256": "64dcdbf5fcb0f37a71ee713b52f32fbeb381a7bba71b47ac0c282c30eff5def5"
+    },
+    {
+      "path": "docs/planning/workbench-substitution-comparison-rev1/receipt.json",
+      "sha256": "a1d92dd6f85c32762f99b5a5c3e6133b087c391b4c572c66cd485c7ac77df15e"
+    }
+  ],
+  "counts": {
+    "mainCaptures": 5,
+    "pairCaptures": 4,
+    "comparisons": 2,
+    "modes": 6
+  },
+  "scope": "Browser diversified0/5/6/restore5/repeat6 full state and five commitments; concentrated pair5/6/restore5 full reports; denied-feedback pair6 observer equality with changed world state. Exact raw Character/Reasoning/Timeline/Architecture projections at6 match direct component records. Main survives independent pair work, mode changes and route switching. No download/file transfer, full29-program/41-pair browser cohort, pause/resource/accessibility, character language or native scheduler/trace admission."
+}
