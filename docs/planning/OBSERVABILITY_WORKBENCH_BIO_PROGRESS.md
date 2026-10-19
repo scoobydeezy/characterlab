@@ -88,3 +88,33 @@ checks PASS;18 conditional obligations retained. The separate temporary build/pr
 on port4174 preserves the original port4173 batch assets. Full BIO comparison session
 86117 continues with frozen sources. Broader browser coverage, language, architecture
 participation and integrated acceptance remain due.
+
+## Reason evidence history
+
+`bio-reason-history/0.1` joins each recorded qualification atom in the selected raw
+factor basis to its exact original earlier component qualification and expression.
+Current/future rows cannot supply an earlier source; missing and other-kind atoms
+remain explicit. Basis weights and qualification evidence are separate fields.
+The reader never substitutes the current archive, including RecomputedHistory's
+retrospectively rewritten archive, for original committed row provenance.
+
+The Reasoning view now offers keyboard-operable source-step navigation and exact
+qualification/expression/atom details. Selection changes inspection only.
+`workbench-bio-reason-history-ui-rev1/receipt.json` PASS Earned/6 reason2 -> source1,
+unchanged prefix2 native hashes, and identical historical reason2 after advancement
+to3 with unchanged prefix3 hashes. The screenshot was visually checked. This bounded
+receipt joins completed case00 from the full audit, not a completed cohort receipt.
+
+Full native audit `check-workbench-bio-reason-history.mjs` is RUNNING as session41987;
+case00 and case01 are complete. Its dependencies are frozen in
+`workbench-bio-reason-history-rev1/freeze.json` and must remain unchanged. It checks
+all247 selected records against independent readable native sources and compares each
+report with the same input truncated at evaluation time.39 negative checks cover
+selection, record order and qualification/expression lineage. Only its final receipt
+can establish full-cohort completion. Poll the same live handle; do not restart it
+because output is quiet. Later per-case outputs remain uncommitted until reviewed.
+
+TypeScript, isolated551-module build, boundaries and research checks PASS. Preview
+port4175 uses its own temporary output; running batch assets remain unchanged.
+This is diagnostic provenance, not character testimony, independent corroboration,
+causal necessity, canonical architecture participation or Campaign4 entry acceptance.
