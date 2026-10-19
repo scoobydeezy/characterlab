@@ -71,3 +71,36 @@ total. Navigation preserves native identities. Screenshot inspected. This is in-
 checkpoint qualification, not file transfer. It adds empty/terminal/horizon browser
 coverage without claiming all-program browser, rapid command races, full reason
 explanations or integrated acceptance. Production source and live batch assets unchanged.
+
+## Linked Timeline and state participation — 2026-10-19
+
+LONG Timeline now selects an exact retained event and exposes existing versioned
+recorded-parent and earlier-state-read history panels. Architecture adds searchable
+state participation, with per-path reads/mutations/changes and event links into the
+same Timeline selection. Installing a new run or restoring resets event selection;
+ordinary advancement retains a valid historical selection. Empty timelines show an
+explicit empty state. All committed events remain selectable; no intermediate state
+is installed by navigation. These are diagnostic traces, not character explanations.
+
+`workbench-long-navigation-rev1/receipt.json` PASS all28 native-backed comparison
+source programs/476 prefixes. Independent traversal checks64736 event instances and
+41616 reads, including parent reachability, missing parents, children, exact earlier
+mutation identity and value relation. Independent path scans check every participation
+count, current presence and event union; input snapshots remain unchanged. These are
+cumulative-prefix observations, not unique events across runs. Four source programs
+outside the comparison archive remain outside this new traversal receipt.
+
+`workbench-long-navigation-ui-rev1/receipt.json` PASS original representation-1-law-1
+prefixes2/3 on isolated production preview4181. The complete prepared participation
+report equals the qualified report. Keyboard navigation follows identity-root872
+activity into read event62, then its exact earlier mutation61 and original reason
+ancestor49. Seven native hashes remain unchanged by navigation. Event62's complete
+event, parent provenance and read history remain identical after advancement to3 and
+match original saved records. Screenshot ancestors.png inspected; the initial viewport
+capture shows lower provenance rather than the link list and is retained separately.
+
+TypeScript,554-module isolated build, reference boundaries, evidence restore and
+research checks PASS;18 conditional obligations remain. No runtime source, canonical
+ownership, causal-effect claim, character evidence or psychological verdict changed.
+Canonical-box mapping, native derived-read sources, full factor language, remaining
+program traversal coverage and full entry acceptance remain required.
