@@ -117,3 +117,41 @@ source unchanged since build18715; this turn adds browser evidence/checkers/docs
 Research obligations remain unchanged. Next language and remaining browser pairs,
 all-prefix restore/pause/resource/accessibility, specialized views and batch gates.
 Full main-program browser coverage does not close those independent requirements.
+
+## Observer descriptions, 2026-10-19
+
+Pure `substitutionDescription.ts` accepts only the original observer object. Four
+entries per opportunity preserve evaluation-time operands, decoded selection status,
+admitted receipt and retained updates. Safe provenance excludes opaque mechanical
+records, draws, physical delivery, private bits and RNG addresses. Original mechanical
+provenance remains separately inspectable. Learning samples are attributed by their
+recorded opportunity, never by later resolved belief. Unknown versus known zero,
+NoCandidates versus NoActiveReasons, information versus performed history, and
+received evidence versus retained learning are explicit. No clinical or causal
+necessity narrative is inferred.
+
+Two focused tests PASS all four whole-horizon privacy equalities, append-only wording,
+nonmutation, no-candidate/inactive-reason choices, informational substitute, NoLearning
+receipt without learning and full research-state rejection. TypeScript59969 PASS.
+`workbench-substitution-language-rev1/receipt.json` PASS4176 descriptions/261 prefixes/
+29 original programs. Every observer hash binds the accepted component archive;
+complete entry accounting and exact evaluation/choice/receipt/update operands pass.
+Independent112 current/frozen source hashes and29 compressed result archives/counts
+PASS. Character panel integrated; registry0.19 advertises bounded description scope.
+Full browser language check follows; other workbench gates remain open.
+
+### Complete original language browser cohort
+
+`workbench-substitution-language-ui-rev1/receipt.json` PASS ALL29 programs/261
+prefixes/4176 rendered descriptions, plus diversified restore5/repeat6 with44
+additional matching descriptions. Every heading, human sentence, source index and
+safe provenance record equals the qualified language archive. All five displayed
+commitments match original component prefix evidence. Raw observer records remain
+separately expandable.29 compressed diagnostic captures preserve full DOM text.
+Independent current/frozen UI sources, artifacts and parents PASS. Saved screenshot
+visually inspected; no file transfer attempted. Final build85723 PASS518 modules
+with existing large-chunk warning; research18 conditional obligations preserved.
+Registry0.19 was frozen before browser verification, so its pending-browser wording
+is historical build metadata; this receipt provides the completed language coverage.
+Full pair browser, every-prefix browser restoration, pause/resource/accessibility,
+specialized inspections, batch and integrated Campaign4 entry remain open.

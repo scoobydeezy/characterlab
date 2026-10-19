@@ -1,0 +1,320 @@
+[
+  {
+    "status": "SUBSTITUTION prefix 5 · opportunity 5 · Ready",
+    "entries": [
+      {
+        "exact": "{\n  \"at\": 1,\n  \"mode\": 1,\n  \"demand\": 1,\n  \"cue\": true,\n  \"available\": [\n    true,\n    true\n  ],\n  \"beliefBefore\": [\n    null,\n    null\n  ],\n  \"habitBefore\": [\n    \"0/1\",\n    \"0/1\"\n  ],\n  \"admitted\": [\n    true,\n    false\n  ],\n  \"values\": [\n    \"1/1\",\n    \"0/1\"\n  ]\n}",
+        "heading": "Recorded evaluation · opportunity 1",
+        "human": "At opportunity 1, admitted mode: instructed practice of A; task demand: 1; cue present: true. Current availability: A true, B true. Prior relief estimates: A unknown, B unknown; unknown differs from known zero. Acquired same-cue operands: A 0/1, B 0/1. Admitted candidates: A true, B false; option values: A 1/1, B 0/1. Candidate admission, valuation and action remain distinct; these operands do not establish that acquired history was necessary.",
+        "source": "Safe provenance · observer row 0"
+      },
+      {
+        "exact": "{\n  \"at\": 1,\n  \"resolutionStatus\": 3,\n  \"intent\": 0\n}",
+        "heading": "Recorded selection · opportunity 1",
+        "human": "At opportunity 1, Option A was selected. Selection precedes execution and admitted feedback. It does not establish physical delivery or successful relief. Mechanical draws are excluded from this description.",
+        "source": "Safe provenance · observer row 0"
+      },
+      {
+        "exact": "{\n  \"at\": 1,\n  \"intent\": 0,\n  \"receipt\": true\n}",
+        "heading": "Admitted feedback · opportunity 1",
+        "human": "At opportunity 1, the admitted action-outcome receipt reports success. A missing receipt is not an observed failure; a reported success is not proof of physical delivery. This feedback arrives after the recorded choice.",
+        "source": "Safe provenance · observer row 0"
+      },
+      {
+        "exact": "{\n  \"at\": 1,\n  \"beliefSamplesAdded\": [\n    [\n      {\n        \"at\": 1,\n        \"value\": true,\n        \"kind\": \"action\"\n      }\n    ],\n    []\n  ],\n  \"practiceRecordsAdded\": [\n    {\n      \"at\": 1,\n      \"option\": 0,\n      \"cue\": true,\n      \"success\": true\n    }\n  ],\n  \"historyBefore\": 0,\n  \"historyAfter\": 1\n}",
+        "heading": "Recorded learning · opportunity 1",
+        "human": "At opportunity 1, retained belief samples added: A 1, B 0; performed-history records added: 1. Performed history contains 0 records before and 1 after. Information samples and observed practice remain distinct. Receiving a report does not guarantee a retained update; these records can affect later evaluations, not the already-recorded choice.",
+        "source": "Safe provenance · observer row 0"
+      },
+      {
+        "exact": "{\n  \"at\": 2,\n  \"mode\": 2,\n  \"demand\": 1,\n  \"cue\": true,\n  \"available\": [\n    true,\n    true\n  ],\n  \"beliefBefore\": [\n    \"1/1\",\n    null\n  ],\n  \"habitBefore\": [\n    \"1/2\",\n    \"0/1\"\n  ],\n  \"admitted\": [\n    false,\n    true\n  ],\n  \"values\": [\n    \"1/1\",\n    \"1/1\"\n  ]\n}",
+        "heading": "Recorded evaluation · opportunity 2",
+        "human": "At opportunity 2, admitted mode: instructed practice of B; task demand: 1; cue present: true. Current availability: A true, B true. Prior relief estimates: A 1/1, B unknown; unknown differs from known zero. Acquired same-cue operands: A 1/2, B 0/1. Admitted candidates: A false, B true; option values: A 1/1, B 1/1. Candidate admission, valuation and action remain distinct; these operands do not establish that acquired history was necessary.",
+        "source": "Safe provenance · observer row 1"
+      },
+      {
+        "exact": "{\n  \"at\": 2,\n  \"resolutionStatus\": 3,\n  \"intent\": 1\n}",
+        "heading": "Recorded selection · opportunity 2",
+        "human": "At opportunity 2, Option B was selected. Selection precedes execution and admitted feedback. It does not establish physical delivery or successful relief. Mechanical draws are excluded from this description.",
+        "source": "Safe provenance · observer row 1"
+      },
+      {
+        "exact": "{\n  \"at\": 2,\n  \"intent\": 1,\n  \"receipt\": true\n}",
+        "heading": "Admitted feedback · opportunity 2",
+        "human": "At opportunity 2, the admitted action-outcome receipt reports success. A missing receipt is not an observed failure; a reported success is not proof of physical delivery. This feedback arrives after the recorded choice.",
+        "source": "Safe provenance · observer row 1"
+      },
+      {
+        "exact": "{\n  \"at\": 2,\n  \"beliefSamplesAdded\": [\n    [],\n    [\n      {\n        \"at\": 2,\n        \"value\": true,\n        \"kind\": \"action\"\n      }\n    ]\n  ],\n  \"practiceRecordsAdded\": [\n    {\n      \"at\": 2,\n      \"option\": 1,\n      \"cue\": true,\n      \"success\": true\n    }\n  ],\n  \"historyBefore\": 1,\n  \"historyAfter\": 2\n}",
+        "heading": "Recorded learning · opportunity 2",
+        "human": "At opportunity 2, retained belief samples added: A 0, B 1; performed-history records added: 1. Performed history contains 1 records before and 2 after. Information samples and observed practice remain distinct. Receiving a report does not guarantee a retained update; these records can affect later evaluations, not the already-recorded choice.",
+        "source": "Safe provenance · observer row 1"
+      },
+      {
+        "exact": "{\n  \"at\": 3,\n  \"mode\": 1,\n  \"demand\": 1,\n  \"cue\": true,\n  \"available\": [\n    true,\n    true\n  ],\n  \"beliefBefore\": [\n    \"1/1\",\n    \"1/1\"\n  ],\n  \"habitBefore\": [\n    \"1/2\",\n    \"1/2\"\n  ],\n  \"admitted\": [\n    true,\n    false\n  ],\n  \"values\": [\n    \"1/1\",\n    \"1/1\"\n  ]\n}",
+        "heading": "Recorded evaluation · opportunity 3",
+        "human": "At opportunity 3, admitted mode: instructed practice of A; task demand: 1; cue present: true. Current availability: A true, B true. Prior relief estimates: A 1/1, B 1/1; unknown differs from known zero. Acquired same-cue operands: A 1/2, B 1/2. Admitted candidates: A true, B false; option values: A 1/1, B 1/1. Candidate admission, valuation and action remain distinct; these operands do not establish that acquired history was necessary.",
+        "source": "Safe provenance · observer row 2"
+      },
+      {
+        "exact": "{\n  \"at\": 3,\n  \"resolutionStatus\": 3,\n  \"intent\": 0\n}",
+        "heading": "Recorded selection · opportunity 3",
+        "human": "At opportunity 3, Option A was selected. Selection precedes execution and admitted feedback. It does not establish physical delivery or successful relief. Mechanical draws are excluded from this description.",
+        "source": "Safe provenance · observer row 2"
+      },
+      {
+        "exact": "{\n  \"at\": 3,\n  \"intent\": 0,\n  \"receipt\": true\n}",
+        "heading": "Admitted feedback · opportunity 3",
+        "human": "At opportunity 3, the admitted action-outcome receipt reports success. A missing receipt is not an observed failure; a reported success is not proof of physical delivery. This feedback arrives after the recorded choice.",
+        "source": "Safe provenance · observer row 2"
+      },
+      {
+        "exact": "{\n  \"at\": 3,\n  \"beliefSamplesAdded\": [\n    [\n      {\n        \"at\": 3,\n        \"value\": true,\n        \"kind\": \"action\"\n      }\n    ],\n    []\n  ],\n  \"practiceRecordsAdded\": [\n    {\n      \"at\": 3,\n      \"option\": 0,\n      \"cue\": true,\n      \"success\": true\n    }\n  ],\n  \"historyBefore\": 2,\n  \"historyAfter\": 3\n}",
+        "heading": "Recorded learning · opportunity 3",
+        "human": "At opportunity 3, retained belief samples added: A 1, B 0; performed-history records added: 1. Performed history contains 2 records before and 3 after. Information samples and observed practice remain distinct. Receiving a report does not guarantee a retained update; these records can affect later evaluations, not the already-recorded choice.",
+        "source": "Safe provenance · observer row 2"
+      },
+      {
+        "exact": "{\n  \"at\": 4,\n  \"mode\": 2,\n  \"demand\": 1,\n  \"cue\": true,\n  \"available\": [\n    true,\n    true\n  ],\n  \"beliefBefore\": [\n    \"1/1\",\n    \"1/1\"\n  ],\n  \"habitBefore\": [\n    \"3/4\",\n    \"1/2\"\n  ],\n  \"admitted\": [\n    false,\n    true\n  ],\n  \"values\": [\n    \"1/1\",\n    \"1/1\"\n  ]\n}",
+        "heading": "Recorded evaluation · opportunity 4",
+        "human": "At opportunity 4, admitted mode: instructed practice of B; task demand: 1; cue present: true. Current availability: A true, B true. Prior relief estimates: A 1/1, B 1/1; unknown differs from known zero. Acquired same-cue operands: A 3/4, B 1/2. Admitted candidates: A false, B true; option values: A 1/1, B 1/1. Candidate admission, valuation and action remain distinct; these operands do not establish that acquired history was necessary.",
+        "source": "Safe provenance · observer row 3"
+      },
+      {
+        "exact": "{\n  \"at\": 4,\n  \"resolutionStatus\": 3,\n  \"intent\": 1\n}",
+        "heading": "Recorded selection · opportunity 4",
+        "human": "At opportunity 4, Option B was selected. Selection precedes execution and admitted feedback. It does not establish physical delivery or successful relief. Mechanical draws are excluded from this description.",
+        "source": "Safe provenance · observer row 3"
+      },
+      {
+        "exact": "{\n  \"at\": 4,\n  \"intent\": 1,\n  \"receipt\": true\n}",
+        "heading": "Admitted feedback · opportunity 4",
+        "human": "At opportunity 4, the admitted action-outcome receipt reports success. A missing receipt is not an observed failure; a reported success is not proof of physical delivery. This feedback arrives after the recorded choice.",
+        "source": "Safe provenance · observer row 3"
+      },
+      {
+        "exact": "{\n  \"at\": 4,\n  \"beliefSamplesAdded\": [\n    [],\n    [\n      {\n        \"at\": 4,\n        \"value\": true,\n        \"kind\": \"action\"\n      }\n    ]\n  ],\n  \"practiceRecordsAdded\": [\n    {\n      \"at\": 4,\n      \"option\": 1,\n      \"cue\": true,\n      \"success\": true\n    }\n  ],\n  \"historyBefore\": 3,\n  \"historyAfter\": 4\n}",
+        "heading": "Recorded learning · opportunity 4",
+        "human": "At opportunity 4, retained belief samples added: A 0, B 1; performed-history records added: 1. Performed history contains 3 records before and 4 after. Information samples and observed practice remain distinct. Receiving a report does not guarantee a retained update; these records can affect later evaluations, not the already-recorded choice.",
+        "source": "Safe provenance · observer row 3"
+      },
+      {
+        "exact": "{\n  \"at\": 5,\n  \"mode\": 0,\n  \"demand\": 1,\n  \"cue\": true,\n  \"available\": [\n    true,\n    true\n  ],\n  \"beliefBefore\": [\n    \"1/1\",\n    \"1/1\"\n  ],\n  \"habitBefore\": [\n    \"3/4\",\n    \"3/4\"\n  ],\n  \"admitted\": [\n    false,\n    false\n  ],\n  \"values\": [\n    \"1/1\",\n    \"1/1\"\n  ]\n}",
+        "heading": "Recorded evaluation · opportunity 5",
+        "human": "At opportunity 5, admitted mode: information only; task demand: 1; cue present: true. Current availability: A true, B true. Prior relief estimates: A 1/1, B 1/1; unknown differs from known zero. Acquired same-cue operands: A 3/4, B 3/4. Admitted candidates: A false, B false; option values: A 1/1, B 1/1. Candidate admission, valuation and action remain distinct; these operands do not establish that acquired history was necessary.",
+        "source": "Safe provenance · observer row 4"
+      },
+      {
+        "exact": "{\n  \"at\": 5,\n  \"resolutionStatus\": 1,\n  \"intent\": -1\n}",
+        "heading": "Recorded selection · opportunity 5",
+        "human": "At opportunity 5, No candidates were admitted; no intent was selected. Selection precedes execution and admitted feedback. It does not establish physical delivery or successful relief. Mechanical draws are excluded from this description.",
+        "source": "Safe provenance · observer row 4"
+      },
+      {
+        "exact": "{\n  \"at\": 5,\n  \"intent\": -1,\n  \"receipt\": null\n}",
+        "heading": "Admitted feedback · opportunity 5",
+        "human": "At opportunity 5, no action-outcome receipt was admitted. A missing receipt is not an observed failure; a reported success is not proof of physical delivery. This feedback arrives after the recorded choice.",
+        "source": "Safe provenance · observer row 4"
+      },
+      {
+        "exact": "{\n  \"at\": 5,\n  \"beliefSamplesAdded\": [\n    [],\n    []\n  ],\n  \"practiceRecordsAdded\": [],\n  \"historyBefore\": 4,\n  \"historyAfter\": 4\n}",
+        "heading": "Recorded learning · opportunity 5",
+        "human": "At opportunity 5, retained belief samples added: A 0, B 0; performed-history records added: 0. Performed history contains 4 records before and 4 after. Information samples and observed practice remain distinct. Receiving a report does not guarantee a retained update; these records can affect later evaluations, not the already-recorded choice.",
+        "source": "Safe provenance · observer row 4"
+      }
+    ],
+    "hashes": [
+      {
+        "key": "modelHash",
+        "value": "d1ca4dfd965aeee56e153a71f20afc68b69b45d59b6ad71b6455b49512852879"
+      },
+      {
+        "key": "runHash",
+        "value": "eff1c8ec46a055b12c917b28ccdca1f8b20810c4bee88974b284060c949fd321"
+      },
+      {
+        "key": "stateHash",
+        "value": "6a5a829fd64d02a0fc21f885b4a4205d35f9e907617a194624bef76292d0a842"
+      },
+      {
+        "key": "saveHash",
+        "value": "717ba823341b49c41b5703db64afb88a442a4d500cbc63e7e3f7a3f8d380d841"
+      },
+      {
+        "key": "observerHash",
+        "value": "17f7ddbc42f98344abb3417da8ef1a1e942460797f94a115a162bcd135bedf28"
+      }
+    ]
+  },
+  {
+    "status": "SUBSTITUTION prefix 6 · opportunity 6 · Ready",
+    "entries": [
+      {
+        "exact": "{\n  \"at\": 1,\n  \"mode\": 1,\n  \"demand\": 1,\n  \"cue\": true,\n  \"available\": [\n    true,\n    true\n  ],\n  \"beliefBefore\": [\n    null,\n    null\n  ],\n  \"habitBefore\": [\n    \"0/1\",\n    \"0/1\"\n  ],\n  \"admitted\": [\n    true,\n    false\n  ],\n  \"values\": [\n    \"1/1\",\n    \"0/1\"\n  ]\n}",
+        "heading": "Recorded evaluation · opportunity 1",
+        "human": "At opportunity 1, admitted mode: instructed practice of A; task demand: 1; cue present: true. Current availability: A true, B true. Prior relief estimates: A unknown, B unknown; unknown differs from known zero. Acquired same-cue operands: A 0/1, B 0/1. Admitted candidates: A true, B false; option values: A 1/1, B 0/1. Candidate admission, valuation and action remain distinct; these operands do not establish that acquired history was necessary.",
+        "source": "Safe provenance · observer row 0"
+      },
+      {
+        "exact": "{\n  \"at\": 1,\n  \"resolutionStatus\": 3,\n  \"intent\": 0\n}",
+        "heading": "Recorded selection · opportunity 1",
+        "human": "At opportunity 1, Option A was selected. Selection precedes execution and admitted feedback. It does not establish physical delivery or successful relief. Mechanical draws are excluded from this description.",
+        "source": "Safe provenance · observer row 0"
+      },
+      {
+        "exact": "{\n  \"at\": 1,\n  \"intent\": 0,\n  \"receipt\": true\n}",
+        "heading": "Admitted feedback · opportunity 1",
+        "human": "At opportunity 1, the admitted action-outcome receipt reports success. A missing receipt is not an observed failure; a reported success is not proof of physical delivery. This feedback arrives after the recorded choice.",
+        "source": "Safe provenance · observer row 0"
+      },
+      {
+        "exact": "{\n  \"at\": 1,\n  \"beliefSamplesAdded\": [\n    [\n      {\n        \"at\": 1,\n        \"value\": true,\n        \"kind\": \"action\"\n      }\n    ],\n    []\n  ],\n  \"practiceRecordsAdded\": [\n    {\n      \"at\": 1,\n      \"option\": 0,\n      \"cue\": true,\n      \"success\": true\n    }\n  ],\n  \"historyBefore\": 0,\n  \"historyAfter\": 1\n}",
+        "heading": "Recorded learning · opportunity 1",
+        "human": "At opportunity 1, retained belief samples added: A 1, B 0; performed-history records added: 1. Performed history contains 0 records before and 1 after. Information samples and observed practice remain distinct. Receiving a report does not guarantee a retained update; these records can affect later evaluations, not the already-recorded choice.",
+        "source": "Safe provenance · observer row 0"
+      },
+      {
+        "exact": "{\n  \"at\": 2,\n  \"mode\": 2,\n  \"demand\": 1,\n  \"cue\": true,\n  \"available\": [\n    true,\n    true\n  ],\n  \"beliefBefore\": [\n    \"1/1\",\n    null\n  ],\n  \"habitBefore\": [\n    \"1/2\",\n    \"0/1\"\n  ],\n  \"admitted\": [\n    false,\n    true\n  ],\n  \"values\": [\n    \"1/1\",\n    \"1/1\"\n  ]\n}",
+        "heading": "Recorded evaluation · opportunity 2",
+        "human": "At opportunity 2, admitted mode: instructed practice of B; task demand: 1; cue present: true. Current availability: A true, B true. Prior relief estimates: A 1/1, B unknown; unknown differs from known zero. Acquired same-cue operands: A 1/2, B 0/1. Admitted candidates: A false, B true; option values: A 1/1, B 1/1. Candidate admission, valuation and action remain distinct; these operands do not establish that acquired history was necessary.",
+        "source": "Safe provenance · observer row 1"
+      },
+      {
+        "exact": "{\n  \"at\": 2,\n  \"resolutionStatus\": 3,\n  \"intent\": 1\n}",
+        "heading": "Recorded selection · opportunity 2",
+        "human": "At opportunity 2, Option B was selected. Selection precedes execution and admitted feedback. It does not establish physical delivery or successful relief. Mechanical draws are excluded from this description.",
+        "source": "Safe provenance · observer row 1"
+      },
+      {
+        "exact": "{\n  \"at\": 2,\n  \"intent\": 1,\n  \"receipt\": true\n}",
+        "heading": "Admitted feedback · opportunity 2",
+        "human": "At opportunity 2, the admitted action-outcome receipt reports success. A missing receipt is not an observed failure; a reported success is not proof of physical delivery. This feedback arrives after the recorded choice.",
+        "source": "Safe provenance · observer row 1"
+      },
+      {
+        "exact": "{\n  \"at\": 2,\n  \"beliefSamplesAdded\": [\n    [],\n    [\n      {\n        \"at\": 2,\n        \"value\": true,\n        \"kind\": \"action\"\n      }\n    ]\n  ],\n  \"practiceRecordsAdded\": [\n    {\n      \"at\": 2,\n      \"option\": 1,\n      \"cue\": true,\n      \"success\": true\n    }\n  ],\n  \"historyBefore\": 1,\n  \"historyAfter\": 2\n}",
+        "heading": "Recorded learning · opportunity 2",
+        "human": "At opportunity 2, retained belief samples added: A 0, B 1; performed-history records added: 1. Performed history contains 1 records before and 2 after. Information samples and observed practice remain distinct. Receiving a report does not guarantee a retained update; these records can affect later evaluations, not the already-recorded choice.",
+        "source": "Safe provenance · observer row 1"
+      },
+      {
+        "exact": "{\n  \"at\": 3,\n  \"mode\": 1,\n  \"demand\": 1,\n  \"cue\": true,\n  \"available\": [\n    true,\n    true\n  ],\n  \"beliefBefore\": [\n    \"1/1\",\n    \"1/1\"\n  ],\n  \"habitBefore\": [\n    \"1/2\",\n    \"1/2\"\n  ],\n  \"admitted\": [\n    true,\n    false\n  ],\n  \"values\": [\n    \"1/1\",\n    \"1/1\"\n  ]\n}",
+        "heading": "Recorded evaluation · opportunity 3",
+        "human": "At opportunity 3, admitted mode: instructed practice of A; task demand: 1; cue present: true. Current availability: A true, B true. Prior relief estimates: A 1/1, B 1/1; unknown differs from known zero. Acquired same-cue operands: A 1/2, B 1/2. Admitted candidates: A true, B false; option values: A 1/1, B 1/1. Candidate admission, valuation and action remain distinct; these operands do not establish that acquired history was necessary.",
+        "source": "Safe provenance · observer row 2"
+      },
+      {
+        "exact": "{\n  \"at\": 3,\n  \"resolutionStatus\": 3,\n  \"intent\": 0\n}",
+        "heading": "Recorded selection · opportunity 3",
+        "human": "At opportunity 3, Option A was selected. Selection precedes execution and admitted feedback. It does not establish physical delivery or successful relief. Mechanical draws are excluded from this description.",
+        "source": "Safe provenance · observer row 2"
+      },
+      {
+        "exact": "{\n  \"at\": 3,\n  \"intent\": 0,\n  \"receipt\": true\n}",
+        "heading": "Admitted feedback · opportunity 3",
+        "human": "At opportunity 3, the admitted action-outcome receipt reports success. A missing receipt is not an observed failure; a reported success is not proof of physical delivery. This feedback arrives after the recorded choice.",
+        "source": "Safe provenance · observer row 2"
+      },
+      {
+        "exact": "{\n  \"at\": 3,\n  \"beliefSamplesAdded\": [\n    [\n      {\n        \"at\": 3,\n        \"value\": true,\n        \"kind\": \"action\"\n      }\n    ],\n    []\n  ],\n  \"practiceRecordsAdded\": [\n    {\n      \"at\": 3,\n      \"option\": 0,\n      \"cue\": true,\n      \"success\": true\n    }\n  ],\n  \"historyBefore\": 2,\n  \"historyAfter\": 3\n}",
+        "heading": "Recorded learning · opportunity 3",
+        "human": "At opportunity 3, retained belief samples added: A 1, B 0; performed-history records added: 1. Performed history contains 2 records before and 3 after. Information samples and observed practice remain distinct. Receiving a report does not guarantee a retained update; these records can affect later evaluations, not the already-recorded choice.",
+        "source": "Safe provenance · observer row 2"
+      },
+      {
+        "exact": "{\n  \"at\": 4,\n  \"mode\": 2,\n  \"demand\": 1,\n  \"cue\": true,\n  \"available\": [\n    true,\n    true\n  ],\n  \"beliefBefore\": [\n    \"1/1\",\n    \"1/1\"\n  ],\n  \"habitBefore\": [\n    \"3/4\",\n    \"1/2\"\n  ],\n  \"admitted\": [\n    false,\n    true\n  ],\n  \"values\": [\n    \"1/1\",\n    \"1/1\"\n  ]\n}",
+        "heading": "Recorded evaluation · opportunity 4",
+        "human": "At opportunity 4, admitted mode: instructed practice of B; task demand: 1; cue present: true. Current availability: A true, B true. Prior relief estimates: A 1/1, B 1/1; unknown differs from known zero. Acquired same-cue operands: A 3/4, B 1/2. Admitted candidates: A false, B true; option values: A 1/1, B 1/1. Candidate admission, valuation and action remain distinct; these operands do not establish that acquired history was necessary.",
+        "source": "Safe provenance · observer row 3"
+      },
+      {
+        "exact": "{\n  \"at\": 4,\n  \"resolutionStatus\": 3,\n  \"intent\": 1\n}",
+        "heading": "Recorded selection · opportunity 4",
+        "human": "At opportunity 4, Option B was selected. Selection precedes execution and admitted feedback. It does not establish physical delivery or successful relief. Mechanical draws are excluded from this description.",
+        "source": "Safe provenance · observer row 3"
+      },
+      {
+        "exact": "{\n  \"at\": 4,\n  \"intent\": 1,\n  \"receipt\": true\n}",
+        "heading": "Admitted feedback · opportunity 4",
+        "human": "At opportunity 4, the admitted action-outcome receipt reports success. A missing receipt is not an observed failure; a reported success is not proof of physical delivery. This feedback arrives after the recorded choice.",
+        "source": "Safe provenance · observer row 3"
+      },
+      {
+        "exact": "{\n  \"at\": 4,\n  \"beliefSamplesAdded\": [\n    [],\n    [\n      {\n        \"at\": 4,\n        \"value\": true,\n        \"kind\": \"action\"\n      }\n    ]\n  ],\n  \"practiceRecordsAdded\": [\n    {\n      \"at\": 4,\n      \"option\": 1,\n      \"cue\": true,\n      \"success\": true\n    }\n  ],\n  \"historyBefore\": 3,\n  \"historyAfter\": 4\n}",
+        "heading": "Recorded learning · opportunity 4",
+        "human": "At opportunity 4, retained belief samples added: A 0, B 1; performed-history records added: 1. Performed history contains 3 records before and 4 after. Information samples and observed practice remain distinct. Receiving a report does not guarantee a retained update; these records can affect later evaluations, not the already-recorded choice.",
+        "source": "Safe provenance · observer row 3"
+      },
+      {
+        "exact": "{\n  \"at\": 5,\n  \"mode\": 0,\n  \"demand\": 1,\n  \"cue\": true,\n  \"available\": [\n    true,\n    true\n  ],\n  \"beliefBefore\": [\n    \"1/1\",\n    \"1/1\"\n  ],\n  \"habitBefore\": [\n    \"3/4\",\n    \"3/4\"\n  ],\n  \"admitted\": [\n    false,\n    false\n  ],\n  \"values\": [\n    \"1/1\",\n    \"1/1\"\n  ]\n}",
+        "heading": "Recorded evaluation · opportunity 5",
+        "human": "At opportunity 5, admitted mode: information only; task demand: 1; cue present: true. Current availability: A true, B true. Prior relief estimates: A 1/1, B 1/1; unknown differs from known zero. Acquired same-cue operands: A 3/4, B 3/4. Admitted candidates: A false, B false; option values: A 1/1, B 1/1. Candidate admission, valuation and action remain distinct; these operands do not establish that acquired history was necessary.",
+        "source": "Safe provenance · observer row 4"
+      },
+      {
+        "exact": "{\n  \"at\": 5,\n  \"resolutionStatus\": 1,\n  \"intent\": -1\n}",
+        "heading": "Recorded selection · opportunity 5",
+        "human": "At opportunity 5, No candidates were admitted; no intent was selected. Selection precedes execution and admitted feedback. It does not establish physical delivery or successful relief. Mechanical draws are excluded from this description.",
+        "source": "Safe provenance · observer row 4"
+      },
+      {
+        "exact": "{\n  \"at\": 5,\n  \"intent\": -1,\n  \"receipt\": null\n}",
+        "heading": "Admitted feedback · opportunity 5",
+        "human": "At opportunity 5, no action-outcome receipt was admitted. A missing receipt is not an observed failure; a reported success is not proof of physical delivery. This feedback arrives after the recorded choice.",
+        "source": "Safe provenance · observer row 4"
+      },
+      {
+        "exact": "{\n  \"at\": 5,\n  \"beliefSamplesAdded\": [\n    [],\n    []\n  ],\n  \"practiceRecordsAdded\": [],\n  \"historyBefore\": 4,\n  \"historyAfter\": 4\n}",
+        "heading": "Recorded learning · opportunity 5",
+        "human": "At opportunity 5, retained belief samples added: A 0, B 0; performed-history records added: 0. Performed history contains 4 records before and 4 after. Information samples and observed practice remain distinct. Receiving a report does not guarantee a retained update; these records can affect later evaluations, not the already-recorded choice.",
+        "source": "Safe provenance · observer row 4"
+      },
+      {
+        "exact": "{\n  \"at\": 6,\n  \"mode\": 3,\n  \"demand\": 1,\n  \"cue\": true,\n  \"available\": [\n    false,\n    true\n  ],\n  \"beliefBefore\": [\n    \"1/1\",\n    \"1/1\"\n  ],\n  \"habitBefore\": [\n    \"3/4\",\n    \"3/4\"\n  ],\n  \"admitted\": [\n    false,\n    true\n  ],\n  \"values\": [\n    \"1/1\",\n    \"1/1\"\n  ]\n}",
+        "heading": "Recorded evaluation · opportunity 6",
+        "human": "At opportunity 6, admitted mode: free choice; task demand: 1; cue present: true. Current availability: A false, B true. Prior relief estimates: A 1/1, B 1/1; unknown differs from known zero. Acquired same-cue operands: A 3/4, B 3/4. Admitted candidates: A false, B true; option values: A 1/1, B 1/1. Candidate admission, valuation and action remain distinct; these operands do not establish that acquired history was necessary.",
+        "source": "Safe provenance · observer row 5"
+      },
+      {
+        "exact": "{\n  \"at\": 6,\n  \"resolutionStatus\": 3,\n  \"intent\": 1\n}",
+        "heading": "Recorded selection · opportunity 6",
+        "human": "At opportunity 6, Option B was selected. Selection precedes execution and admitted feedback. It does not establish physical delivery or successful relief. Mechanical draws are excluded from this description.",
+        "source": "Safe provenance · observer row 5"
+      },
+      {
+        "exact": "{\n  \"at\": 6,\n  \"intent\": 1,\n  \"receipt\": true\n}",
+        "heading": "Admitted feedback · opportunity 6",
+        "human": "At opportunity 6, the admitted action-outcome receipt reports success. A missing receipt is not an observed failure; a reported success is not proof of physical delivery. This feedback arrives after the recorded choice.",
+        "source": "Safe provenance · observer row 5"
+      },
+      {
+        "exact": "{\n  \"at\": 6,\n  \"beliefSamplesAdded\": [\n    [],\n    [\n      {\n        \"at\": 6,\n        \"value\": true,\n        \"kind\": \"action\"\n      }\n    ]\n  ],\n  \"practiceRecordsAdded\": [\n    {\n      \"at\": 6,\n      \"option\": 1,\n      \"cue\": true,\n      \"success\": true\n    }\n  ],\n  \"historyBefore\": 4,\n  \"historyAfter\": 5\n}",
+        "heading": "Recorded learning · opportunity 6",
+        "human": "At opportunity 6, retained belief samples added: A 0, B 1; performed-history records added: 1. Performed history contains 4 records before and 5 after. Information samples and observed practice remain distinct. Receiving a report does not guarantee a retained update; these records can affect later evaluations, not the already-recorded choice.",
+        "source": "Safe provenance · observer row 5"
+      }
+    ],
+    "hashes": [
+      {
+        "key": "modelHash",
+        "value": "d1ca4dfd965aeee56e153a71f20afc68b69b45d59b6ad71b6455b49512852879"
+      },
+      {
+        "key": "runHash",
+        "value": "eff1c8ec46a055b12c917b28ccdca1f8b20810c4bee88974b284060c949fd321"
+      },
+      {
+        "key": "stateHash",
+        "value": "fb5aa8795296f24568fc44d9eced3a51dd6622a895558549c1bca6ee38f6bc87"
+      },
+      {
+        "key": "saveHash",
+        "value": "13f030dd6db1cb6a24f884c706e0045f51f1791dbfdec651d05a7a27e5e22b42"
+      },
+      {
+        "key": "observerHash",
+        "value": "5b9cd189dc6a40e98379b4499c30f5b8b9d414e23b4a9380709c2aa470925686"
+      }
+    ]
+  }
+]

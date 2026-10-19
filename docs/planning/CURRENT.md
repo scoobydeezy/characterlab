@@ -1,5 +1,12 @@
 # Current research entry point
 
+**SUBSTITUTION language2026-10-19:**4176 descriptions/261 original prefixes/29
+programs PASS in both pure renderer and actual browser;44 restored/repeated browser
+descriptions also match.112 frozen language sources independently checked; raw
+mechanical provenance remains separate. Build518 modules/research PASS. Pair browser,
+resource/accessibility, batch and integrated Campaign4 entry remain open. Start
+OBSERVABILITY_WORKBENCH_SUBSTITUTION_PROGRESS.md.
+
 **SUBSTITUTION browser2026-10-19:**all29 original programs/261 main UI prefixes
 PASS complete state/five commitments. Bounded six-mode/main restore/pair restore/
 privacy/mode-route isolation PASS. Language, all41 browser pairs, all-prefix browser

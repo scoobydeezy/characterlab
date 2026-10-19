@@ -1,0 +1,227 @@
+{
+  "status": "PASS FULL ORIGINAL SUBSTITUTION BROWSER DESCRIPTION COHORT",
+  "sources": [
+    {
+      "path": "src/workbench/SubstitutionDescriptionPanel.tsx",
+      "sha256": "8ee6807c962ff3ec6bf5b0eabd031a836f7933d51a9b69e30fcecd898771a531"
+    },
+    {
+      "path": "src/workbench/SubstitutionWorkbench.tsx",
+      "sha256": "25c143b6f3b92e13ce72b26700e2a4858493015798e0b768ad9f34b31075947c"
+    },
+    {
+      "path": "src/workbench/inspectionRegistry.ts",
+      "sha256": "708ffae46f797af077583470b4672096921f93cc29084ab75844a482f5d0f4a3"
+    },
+    {
+      "path": "scripts/check-workbench-substitution-language-ui.mjs",
+      "sha256": "4502d7670398512ff7ac8ce385d8e79cd1b832803921b178ff838498eb177c08"
+    }
+  ],
+  "parents": [
+    {
+      "path": "docs/planning/workbench-substitution-language-rev1/receipt.json",
+      "sha256": "b57295651f2c723938a806e2bcc9e8022299338f2d9fefd676bfb29959e466e8"
+    },
+    {
+      "path": "docs/planning/workbench-substitution-parity-rev1/receipt.json",
+      "sha256": "64dcdbf5fcb0f37a71ee713b52f32fbeb381a7bba71b47ac0c282c30eff5def5"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "program-00.json.gz",
+      "sha256": "8279d1fbc3270665f0fb1b260e2478320efe5e12cebc982de389ba4144659fc1",
+      "program": "LatestHistory/diversified",
+      "prefixes": 9
+    },
+    {
+      "path": "program-01.json.gz",
+      "sha256": "7106573b2c37bb7a72c3d71ba30df6b6b1bf8059a4646cfbf926b96173b29758",
+      "program": "MeanHistory/diversified",
+      "prefixes": 9
+    },
+    {
+      "path": "program-02.json.gz",
+      "sha256": "71ef1bc84678270cdafdedfc18ec5d2c69646011a3362c32a9a4b6b2d7568979",
+      "program": "ExpectationOnly/diversified",
+      "prefixes": 9
+    },
+    {
+      "path": "program-03.json.gz",
+      "sha256": "08b6333195ac88ef312459f32f75502996d02a925338e5233cc81b76ac6c7a57",
+      "program": "HistoryOnly/diversified",
+      "prefixes": 9
+    },
+    {
+      "path": "program-04.json.gz",
+      "sha256": "5d392802cf8d493c87d21365301c9e1ff623b12601d7c1f211d948007d3ff468",
+      "program": "NoLearning/diversified",
+      "prefixes": 9
+    },
+    {
+      "path": "program-05.json.gz",
+      "sha256": "d782b836d2462cbe54aff931f3edbb565ae005bcaa4c07d7e8b840093c4d767f",
+      "program": "LatestHistory/concentrated",
+      "prefixes": 9
+    },
+    {
+      "path": "program-06.json.gz",
+      "sha256": "c1f07de117afb9251fe2f89a95a5210295c02a0095be3371bc0eef5f5a5cedd6",
+      "program": "LatestHistory/knownAlternative",
+      "prefixes": 9
+    },
+    {
+      "path": "program-07.json.gz",
+      "sha256": "31830478f1f4f4b7a4a42914f1788938dbb087e9d58d46b28e17b0cbc83d940c",
+      "program": "LatestHistory/knownFailure",
+      "prefixes": 9
+    },
+    {
+      "path": "program-08.json.gz",
+      "sha256": "865ae0cff4ba0a97c48465257f0eac1433b932bcc8117c7d48eee8d4a37acb4c",
+      "program": "LatestHistory/unavailable",
+      "prefixes": 9
+    },
+    {
+      "path": "program-09.json.gz",
+      "sha256": "cf3150215029dc6f38e61d422539ed4c2110236509c239ee1d49a4c35d995567",
+      "program": "LatestHistory/noDemand",
+      "prefixes": 9
+    },
+    {
+      "path": "program-10.json.gz",
+      "sha256": "6fc83bc3d2e2873ee1d5e9b0274b213209a7263756946734d65655bb1d6a91ce",
+      "program": "LatestHistory/restoredA",
+      "prefixes": 9
+    },
+    {
+      "path": "program-11.json.gz",
+      "sha256": "c252c024a7abe695985ec765914804fdcc66103938199c999d9af1f331d3426e",
+      "program": "LatestHistory/correctedConcentrated",
+      "prefixes": 9
+    },
+    {
+      "path": "program-12.json.gz",
+      "sha256": "00d778310707a5613a2a95ae515258169ddb749391dd8c5328ce53011f2aefa8",
+      "program": "LatestHistory/correctedDiversified",
+      "prefixes": 9
+    },
+    {
+      "path": "program-13.json.gz",
+      "sha256": "0fe8ba8798795cee03e36ce489d7f84b1e96112d47da1427573e0682a607bb66",
+      "program": "LatestHistory/otherCue",
+      "prefixes": 9
+    },
+    {
+      "path": "program-14.json.gz",
+      "sha256": "d885586a384277571c52fe182267f8750b06409d73118a023eb61b6dadd460c7",
+      "program": "LatestHistory/bothAvailable",
+      "prefixes": 9
+    },
+    {
+      "path": "program-15.json.gz",
+      "sha256": "c9c918497b2292e184b58f0bd987aa5423d864b575465b02d534ddf32ff49be8",
+      "program": "LatestHistory/unseenTraining",
+      "prefixes": 9
+    },
+    {
+      "path": "program-16.json.gz",
+      "sha256": "ce08761204bf819372996b7959564ab5288a320b73bdd77db2915100dc5fc3e7",
+      "program": "LatestHistory/falseTraining",
+      "prefixes": 9
+    },
+    {
+      "path": "program-17.json.gz",
+      "sha256": "5dce06b7f034242be2b9df3ef72813d046ebecc44432f1c10c0b7827841e4308",
+      "program": "LatestHistory/deniedFeedback",
+      "prefixes": 9
+    },
+    {
+      "path": "program-18.json.gz",
+      "sha256": "fad57d4328d21fe3df900714ad3261bd84e4d4f2739cc136b65880fb1d79d544",
+      "program": "LatestHistory/hiddenBlocked",
+      "prefixes": 9
+    },
+    {
+      "path": "program-19.json.gz",
+      "sha256": "5475f6fa62ba4cea634f5316852f703d0f7086be3c068e963e9f784f7f32e710",
+      "program": "LatestHistory/failure",
+      "prefixes": 9
+    },
+    {
+      "path": "program-20.json.gz",
+      "sha256": "d16a85496c14f4837a5d465219c3e6dd1192bae0931a44f50552fc6525c7cb69",
+      "program": "LatestHistory/falseSuccess",
+      "prefixes": 9
+    },
+    {
+      "path": "program-21.json.gz",
+      "sha256": "f8ad9e0fe83be0b8d4fe1879062e15326c23029e9a1d29057bec6bff8acb2b5d",
+      "program": "LatestHistory/trueSuccess",
+      "prefixes": 9
+    },
+    {
+      "path": "program-22.json.gz",
+      "sha256": "571df4bac6148056b9b75d84c9270379a6c60d9af98d17019f128fd79d1d1f4b",
+      "program": "LatestHistory/deniedInfo",
+      "prefixes": 9
+    },
+    {
+      "path": "program-23.json.gz",
+      "sha256": "2bca508c2ff3fe5d3719ab0a6db2cba01c5f07d719e50f1ec7a19936b1de27d1",
+      "program": "LatestHistory/absentInfo",
+      "prefixes": 9
+    },
+    {
+      "path": "program-24.json.gz",
+      "sha256": "7c15484245941edad6ae5b517180292cf77fed8d2ad37aa77be1f88bb04e641a",
+      "program": "ExpectationOnly/concentrated",
+      "prefixes": 9
+    },
+    {
+      "path": "program-25.json.gz",
+      "sha256": "1ce4dfad7f72047ff8735f5a3faeb2e58303d03fc2c0915c432bd9964ef46181",
+      "program": "ExpectationOnly/correctedDiversified",
+      "prefixes": 9
+    },
+    {
+      "path": "program-26.json.gz",
+      "sha256": "d4f4766df088dc7dadab2e8b4d4ade520af562492c16601b05e42d0687c10709",
+      "program": "HistoryOnly/knownAlternative",
+      "prefixes": 9
+    },
+    {
+      "path": "program-27.json.gz",
+      "sha256": "727a576e7921fa40da0b7626050e10ca6081d5d732c0ec795e7f7640b4d626bd",
+      "program": "MeanHistory/correctedConcentrated",
+      "prefixes": 9
+    },
+    {
+      "path": "program-28.json.gz",
+      "sha256": "63607056643817535d3115327a94c85667f081d4a1c489efb3624e7fdacc0bd0",
+      "program": "NoLearning/knownAlternative",
+      "prefixes": 9
+    },
+    {
+      "path": "browser-index.json",
+      "sha256": "132babfc4d9986dd612a9c245e82484b9dbe13538c3b6ee1f562ee9c65c33ea5"
+    },
+    {
+      "path": "replay.json",
+      "sha256": "e40d53494c6f425343324e3488e3dbdb7fe0ee3c4f0866d275efcc51bfc70c5a"
+    },
+    {
+      "path": "substitution-language.png",
+      "sha256": "3b6c98eeca651537c53e9faa52cf47b29fd6d4f31bf57046bdc2ecef8fd4b0ea"
+    }
+  ],
+  "counts": {
+    "programs": 29,
+    "prefixes": 261,
+    "descriptions": 4176,
+    "replayCaptures": 2,
+    "replayDescriptions": 44
+  },
+  "scope": "Every original program/prefix rendered description, provenance and five displayed commitments match qualified archives. Diversified restore5/repeat6 reproduces exact descriptions. No full causal explanation, clinical claims, all-pair browser, every-prefix browser restore, pause/resource/accessibility, file transfer or native trace admission."
+}
