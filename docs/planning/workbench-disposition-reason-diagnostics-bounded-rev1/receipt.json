@@ -1,0 +1,369 @@
+{
+  "status": "PASS BOUNDED DISPOSITION REASON DIAGNOSTICS",
+  "sources": [
+    {
+      "path": "src/workbench/dispositionReasonDiagnostics.ts",
+      "sha256": "0b84dff7e40d1551965a79724df577e5ee5a2bcfd41555e89e3dbd6c139d8b08"
+    },
+    {
+      "path": "src/workbench/contracts.ts",
+      "sha256": "c0e9239cbbba5341259be2f81199cefb43f7678426d61b653249c232c7b01f73"
+    },
+    {
+      "path": "src/test/workbenchDispositionReasonDiagnostics.test.ts",
+      "sha256": "73a3f569294d81d8f6645f2213e875a4ffe1f8d0aebacee048c4a52e1f6bb2a9"
+    },
+    {
+      "path": "docs/formal/DISPOSITION_PUBLIC_CONTRACT.md",
+      "sha256": "b8390b803763a738cd255b8303b1807151c52d42d1c8a969069717db84816268"
+    },
+    {
+      "path": "docs/formal/DISPOSITION_PUBLIC_ALLOCATION_TABLE.json",
+      "sha256": "59ee611311b56d1f3dc3e348fe623637f81a76862e9e5dd3504d456d15bce37e"
+    },
+    {
+      "path": "scripts/check-workbench-disposition-reason-diagnostics.mjs",
+      "sha256": "dafe81482d6d4cbc33e41138630c43bc7c97eb83ec00d1c2d40b8870d3dab0b4"
+    },
+    {
+      "path": "docs/planning/workbench-disposition-comparison-rev1/frozen.json",
+      "sha256": "8326aa0f77afc35b34af4814017dad176f72391776f473f09764407ea338a442"
+    },
+    {
+      "path": "docs/planning/workbench-disposition-comparison-smoke-rev1/receipt.json",
+      "sha256": "4d1571784ceb519a1a97d096a73ec6e574c6d1dc9763fce89c1d3149f45ed3ce"
+    },
+    {
+      "path": "docs/planning/DISPOSITION_PUBLIC_RUN_0_REV1.json",
+      "sha256": "53c0c47521de497c402e0523cbb6cc4f5b913cb6b4eea5d220912a87c4d52d34"
+    },
+    {
+      "path": "docs/planning/DISPOSITION_PUBLIC_RUN_1_REV1.json",
+      "sha256": "6b78ec1ab18fd52e2c98fb163a526fd531ef262b758b0554d36e98278a3eab5f"
+    },
+    {
+      "path": "docs/planning/DISPOSITION_PUBLIC_RUN_7_REV1.json",
+      "sha256": "5aef71fd3e503ed8c31712edd919261af95489e83b6becd566b2877a5abad7a1"
+    },
+    {
+      "path": "docs/planning/DISPOSITION_PUBLIC_RUN_13_REV1.json",
+      "sha256": "efb148509ba13c18291feb32f2de42a64f76187d9a0275700063356e8d484bc0"
+    },
+    {
+      "path": "docs/planning/DISPOSITION_PUBLIC_RUN_14_REV1.json",
+      "sha256": "6aa9322c5259f841041e243e35737d4ffd32715ee2f076ac81ad0e51cbe34b91"
+    }
+  ],
+  "inputs": [
+    {
+      "index": 0,
+      "prefix": 0,
+      "source": "docs/planning/workbench-disposition-comparison-rev1/snapshot-0-0.json.gz",
+      "path": "input-0-0.json.gz",
+      "sha256": "1e23b5539c05e15fbffc69f0d74a26e2b00cc83380cd1e76f727fd8aa6df445f"
+    },
+    {
+      "index": 0,
+      "prefix": 1,
+      "source": "docs/planning/workbench-disposition-comparison-rev1/snapshot-0-1.json.gz",
+      "path": "input-0-1.json.gz",
+      "sha256": "033e16e331f26434dc53c9f20091a0f7b8e93a9b1925afae326aab570cf93335"
+    },
+    {
+      "index": 0,
+      "prefix": 2,
+      "source": "docs/planning/workbench-disposition-comparison-rev1/snapshot-0-2.json.gz",
+      "path": "input-0-2.json.gz",
+      "sha256": "47ba123dc59c1f2889ec41aeb7905b079b7a40dc6cdd68acedb003cda61d8073"
+    },
+    {
+      "index": 0,
+      "prefix": 3,
+      "source": "docs/planning/workbench-disposition-comparison-rev1/snapshot-0-3.json.gz",
+      "path": "input-0-3.json.gz",
+      "sha256": "f7222a401a217359aed77fe36a58bd95878b08c444b7174de20099b3d305880f"
+    },
+    {
+      "index": 0,
+      "prefix": 4,
+      "source": "docs/planning/workbench-disposition-comparison-rev1/snapshot-0-4.json.gz",
+      "path": "input-0-4.json.gz",
+      "sha256": "2a1a404f26c4176ed401c747b378e345ea4d203703575709530349a0b21f40f0"
+    },
+    {
+      "index": 0,
+      "prefix": 5,
+      "source": "docs/planning/workbench-disposition-comparison-rev1/snapshot-0-5.json.gz",
+      "path": "input-0-5.json.gz",
+      "sha256": "98fadb8ca8397c361e225ca225efd0ed2b129c792d0e7443c1ea6aa32e514e6f"
+    },
+    {
+      "index": 0,
+      "prefix": 6,
+      "source": "docs/planning/workbench-disposition-comparison-rev1/snapshot-0-6.json.gz",
+      "path": "input-0-6.json.gz",
+      "sha256": "e3160486623c6a6948cf294ef87cdf7b19b43c30ef04fbc52e6ef4d03cc5c2c4"
+    },
+    {
+      "index": 0,
+      "prefix": 7,
+      "source": "docs/planning/workbench-disposition-comparison-rev1/snapshot-0-7.json.gz",
+      "path": "input-0-7.json.gz",
+      "sha256": "c841ae2a01fff7a4e37e2006e0340461cadd06daa0ae81d86da55f772b584d3d"
+    },
+    {
+      "index": 0,
+      "prefix": 8,
+      "source": "docs/planning/workbench-disposition-comparison-rev1/snapshot-0-8.json.gz",
+      "path": "input-0-8.json.gz",
+      "sha256": "aef4bd574f5a3acc833d9819cd5518be8c0359dd24415344f74e7ae16193811d"
+    },
+    {
+      "index": 0,
+      "prefix": 9,
+      "source": "docs/planning/workbench-disposition-comparison-rev1/snapshot-0-9.json.gz",
+      "path": "input-0-9.json.gz",
+      "sha256": "7103f562f28f162da6726af566e78dd7a60cadefc4cf6021c8145a9305065e90"
+    },
+    {
+      "index": 0,
+      "prefix": 10,
+      "source": "docs/planning/workbench-disposition-comparison-rev1/snapshot-0-10.json.gz",
+      "path": "input-0-10.json.gz",
+      "sha256": "2a96cfbb3c57af79e68ccb27066dd134eea8c27485608452e49375d0df31138d"
+    },
+    {
+      "index": 0,
+      "prefix": 11,
+      "source": "docs/planning/workbench-disposition-comparison-rev1/snapshot-0-11.json.gz",
+      "path": "input-0-11.json.gz",
+      "sha256": "5f7b0876570dffead49e70696766224b1ad42a23823d6f70b54a70e18b0bbb64"
+    },
+    {
+      "index": 0,
+      "prefix": 12,
+      "source": "docs/planning/workbench-disposition-comparison-rev1/snapshot-0-12.json.gz",
+      "path": "input-0-12.json.gz",
+      "sha256": "e7ee59615bcf226ab43418a3a73c657ecd4f3bdc29e18bcd52c11e55690ac995"
+    },
+    {
+      "index": 0,
+      "prefix": 13,
+      "source": "docs/planning/workbench-disposition-comparison-rev1/snapshot-0-13.json.gz",
+      "path": "input-0-13.json.gz",
+      "sha256": "6d2637adfbe59609f5fee7771914de200b35383d80bf08ed13da314ed25d8fdf"
+    },
+    {
+      "index": 0,
+      "prefix": 14,
+      "source": "docs/planning/workbench-disposition-comparison-rev1/snapshot-0-14.json.gz",
+      "path": "input-0-14.json.gz",
+      "sha256": "f6ec8907b70ee22472dd72d7f0c59d471e0cc7069c3e5b7286c9f791a4697eb8"
+    },
+    {
+      "index": 1,
+      "prefix": 0,
+      "source": "docs/planning/workbench-disposition-comparison-smoke-rev1/snapshot-1-0.json.gz",
+      "path": "input-1-0.json.gz",
+      "sha256": "66fe49f5cd737b0a7b020e8a1bba773f5902d3a37450fcae78fe7338566112a1"
+    },
+    {
+      "index": 1,
+      "prefix": 1,
+      "source": "docs/planning/workbench-disposition-comparison-smoke-rev1/snapshot-1-1.json.gz",
+      "path": "input-1-1.json.gz",
+      "sha256": "85424d67310ce4b47bbd17e3a0a8da684c2702fdc3b24883ca5ed55723f17cd6"
+    },
+    {
+      "index": 7,
+      "prefix": 0,
+      "source": "docs/planning/workbench-disposition-comparison-smoke-rev1/snapshot-7-0.json.gz",
+      "path": "input-7-0.json.gz",
+      "sha256": "7f281b1abe0b215f42a4a98e95fb7d21cbbb1807ed04c5f9893f39dcc4077670"
+    },
+    {
+      "index": 7,
+      "prefix": 1,
+      "source": "docs/planning/workbench-disposition-comparison-smoke-rev1/snapshot-7-1.json.gz",
+      "path": "input-7-1.json.gz",
+      "sha256": "791e1260d152db92f852400782232b6e7820cb684cfb5d8e62e714823d5d5e45"
+    },
+    {
+      "index": 13,
+      "prefix": 0,
+      "source": "docs/planning/workbench-disposition-comparison-smoke-rev1/snapshot-13-0.json.gz",
+      "path": "input-13-0.json.gz",
+      "sha256": "aab47d5b3d69b03c57363db2953b9837a9b9a38ef184e04ad72fde9d962c0221"
+    },
+    {
+      "index": 13,
+      "prefix": 1,
+      "source": "docs/planning/workbench-disposition-comparison-smoke-rev1/snapshot-13-1.json.gz",
+      "path": "input-13-1.json.gz",
+      "sha256": "7b2d4dd981fbd36c1d5931cfcc15c33ef80627c5f43abb9eeab13685faf09cca"
+    },
+    {
+      "index": 14,
+      "prefix": 0,
+      "source": "docs/planning/workbench-disposition-comparison-smoke-rev1/snapshot-14-0.json.gz",
+      "path": "input-14-0.json.gz",
+      "sha256": "6b60023a573458af4e8eead6f0ca1c6151bb750f4a3fba532036e108b7768a0d"
+    },
+    {
+      "index": 14,
+      "prefix": 1,
+      "source": "docs/planning/workbench-disposition-comparison-smoke-rev1/snapshot-14-1.json.gz",
+      "path": "input-14-1.json.gz",
+      "sha256": "fd83a324beb5143252969548ac3dd9613311836bd10040383fdee785c8c4e6f5"
+    }
+  ],
+  "results": [
+    {
+      "index": 0,
+      "prefix": 0,
+      "path": "diagnostics-0-0.json.gz",
+      "sha256": "61663fde99b3394d71653f41c19fe91269442622a4a6695f8352a70fbf5ca4c1"
+    },
+    {
+      "index": 0,
+      "prefix": 1,
+      "path": "diagnostics-0-1.json.gz",
+      "sha256": "f09474e9e6250ea70d4986ae07cc7f026876e4a3f9b4f696ee81eb9d917698c1"
+    },
+    {
+      "index": 0,
+      "prefix": 2,
+      "path": "diagnostics-0-2.json.gz",
+      "sha256": "6760e0ba194ed7248ac7d4ef47fbdbd46696464ccfb9c6424fbfe15670c7cb49"
+    },
+    {
+      "index": 0,
+      "prefix": 3,
+      "path": "diagnostics-0-3.json.gz",
+      "sha256": "3898183b23ce12a46f0acd7dd779b6dfcb4d04c80517deba4f7a469868902314"
+    },
+    {
+      "index": 0,
+      "prefix": 4,
+      "path": "diagnostics-0-4.json.gz",
+      "sha256": "4c04701ebb24ae3a8d193a4647d469dabb9fd05adca700d9346e1d62d3ba39bd"
+    },
+    {
+      "index": 0,
+      "prefix": 5,
+      "path": "diagnostics-0-5.json.gz",
+      "sha256": "d126e36b2079b3f2e539de42047db8480400adc171ead6580d766f50fc5d73c7"
+    },
+    {
+      "index": 0,
+      "prefix": 6,
+      "path": "diagnostics-0-6.json.gz",
+      "sha256": "39c0ecb699193aefadf554e4d6e8236514205001d18f5a5a178ae79227497ece"
+    },
+    {
+      "index": 0,
+      "prefix": 7,
+      "path": "diagnostics-0-7.json.gz",
+      "sha256": "29b1dd8d9932b70b9d2e6f6fed706dd46c7a9ac861613c745c32f7aa6cdc9281"
+    },
+    {
+      "index": 0,
+      "prefix": 8,
+      "path": "diagnostics-0-8.json.gz",
+      "sha256": "dd5ff0138c4f8afb167bb9e3aa99c6a693a5452d281e6ed962933c149b4a6793"
+    },
+    {
+      "index": 0,
+      "prefix": 9,
+      "path": "diagnostics-0-9.json.gz",
+      "sha256": "38aee256d580a0587a17b6e45f94ddc769f411dc9e5987a289903ba454fe826f"
+    },
+    {
+      "index": 0,
+      "prefix": 10,
+      "path": "diagnostics-0-10.json.gz",
+      "sha256": "cc630ef4fcdf798e51ae1a4f1e53b38e2ec4eed06bcb0079b1ab0342c4e0be63"
+    },
+    {
+      "index": 0,
+      "prefix": 11,
+      "path": "diagnostics-0-11.json.gz",
+      "sha256": "454b8746ba45bf7820a2afe4cccc93a755ffd082f5352f7f664ac8630009159d"
+    },
+    {
+      "index": 0,
+      "prefix": 12,
+      "path": "diagnostics-0-12.json.gz",
+      "sha256": "d518b6e5cc73276e44be69c6587c9dcdf8dd14b84caa8e65dd838afb83f2385b"
+    },
+    {
+      "index": 0,
+      "prefix": 13,
+      "path": "diagnostics-0-13.json.gz",
+      "sha256": "1561114358af786cc0f86b1f45b62bcdf7ce1e60fe8a5becc52f832e60bc1b1f"
+    },
+    {
+      "index": 0,
+      "prefix": 14,
+      "path": "diagnostics-0-14.json.gz",
+      "sha256": "fde20424116b27fb35dd521ed1f3a5afb8d968a4a67071115e7c319a04c44586"
+    },
+    {
+      "index": 1,
+      "prefix": 0,
+      "path": "diagnostics-1-0.json.gz",
+      "sha256": "61663fde99b3394d71653f41c19fe91269442622a4a6695f8352a70fbf5ca4c1"
+    },
+    {
+      "index": 1,
+      "prefix": 1,
+      "path": "diagnostics-1-1.json.gz",
+      "sha256": "f09474e9e6250ea70d4986ae07cc7f026876e4a3f9b4f696ee81eb9d917698c1"
+    },
+    {
+      "index": 7,
+      "prefix": 0,
+      "path": "diagnostics-7-0.json.gz",
+      "sha256": "61663fde99b3394d71653f41c19fe91269442622a4a6695f8352a70fbf5ca4c1"
+    },
+    {
+      "index": 7,
+      "prefix": 1,
+      "path": "diagnostics-7-1.json.gz",
+      "sha256": "f09474e9e6250ea70d4986ae07cc7f026876e4a3f9b4f696ee81eb9d917698c1"
+    },
+    {
+      "index": 13,
+      "prefix": 0,
+      "path": "diagnostics-13-0.json.gz",
+      "sha256": "61663fde99b3394d71653f41c19fe91269442622a4a6695f8352a70fbf5ca4c1"
+    },
+    {
+      "index": 13,
+      "prefix": 1,
+      "path": "diagnostics-13-1.json.gz",
+      "sha256": "81d8814161fa17313d7fa44194e78869a5b68fb8851415eef8ccbc69aaf9b650"
+    },
+    {
+      "index": 14,
+      "prefix": 0,
+      "path": "diagnostics-14-0.json.gz",
+      "sha256": "61663fde99b3394d71653f41c19fe91269442622a4a6695f8352a70fbf5ca4c1"
+    },
+    {
+      "index": 14,
+      "prefix": 1,
+      "path": "diagnostics-14-1.json.gz",
+      "sha256": "3e4db2d6a66cc475dfdb50d6dd38c6e96eb5885ac8f2d7699ac1aff562859778"
+    }
+  ],
+  "programs": 5,
+  "prefixes": 23,
+  "observations": 109,
+  "uniqueEvents": 18,
+  "emitted": 100,
+  "empty": 9,
+  "nuclei": 200,
+  "nonzeroPlastic": 40,
+  "scope": "Exact native reason operand/nucleus projections, all compiled fields and distributions, rational effective=constitution+plastic identity, and historical prefix stability within selected snapshots. Main0..14 plus four controls0..1 in bounded mode; full mode requires completed parent285-prefix/570-report audit. Diagnostic only, no observer-safe narration, independent causal necessity or complete choice explanation."
+}

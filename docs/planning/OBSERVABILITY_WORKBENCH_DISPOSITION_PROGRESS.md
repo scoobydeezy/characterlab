@@ -262,3 +262,26 @@ records; earlier event18 projection remains identical after advancement; its Tim
 link selects the exact original event without changing current prefix2 hashes.
 Both native snapshots join their original save receipts. No all-program/all-prefix,
 complete choice attribution, observer-safe narration or integrated-entry claim.
+
+## Later-prefix reason diagnostics — 2026-10-19
+
+`workbench-disposition-reason-diagnostics-bounded-rev1/receipt.json` PASS across
+Main prefixes0..14 and Leaky/NoEvidence/ConstitutionPositive/ConstitutionNegative
+prefixes0..1:23 immutable native snapshots,109 reason-event prefix observations,
+100 emitted observations,9 empty observations and200 compiled-nucleus observations.
+These counts include repeated historical views. Independent census:18 unique events,
+17 emitted and1 empty; six unique events have nonzero prior plastic contribution.
+Forty prefix observations show nonzero plastic; they are not40 independent events.
+
+The checker verifies original native save hashes, every emitted operand and compiled
+field/distribution, exact rational effective=constitution+plastic, and unchanged
+historical diagnostics across prefixes. It consumes preserved snapshots without
+rerunning or changing their native simulation. Independent validation checks46 artifact
+hashes and13 current/frozen source pairs. Research obligation checks PASS.
+
+`scripts/check-workbench-disposition-reason-diagnostics.mjs --full` is prepared but
+not launched: it requires the complete parent comparison receipt with285 prefixes
+and570 reports before creating its output root. Full reason coverage remains due;
+the bounded receipt cannot stand in for it. This diagnostic qualification adds no
+character testimony, private identity-belief representation, independent causal
+claim, psychological verdict or Campaign4 entry acceptance.
