@@ -1,5 +1,16 @@
 # Current research entry point
 
+**LONG full comparison audit2026-10-19:** check-workbench-long-comparison-cohort.mjs
+syntax check PASS and execution RUNNING under20638. Captures each unique original
+program required by all24 declarations once, checking every historical save hash and
+main-cohort observer hash, then compares immutable captures over the union of clocks.
+Checks repeated report equality, non-mutation, six field projections/presence, learned
+versus detail equality and complete raw draw retention. Missing committed clocks are
+explicit. Snapshots/reports preserved losslessly with compressed and decoded hashes.
+No final receipt yet; do not infer all-pair acceptance from launch. Native continuation
+audit48528 also remains live. Preserve both audits' frozen sources. Evidence restore/
+research PASS;18 conditional obligations unchanged. Full Workbench goal remains open.
+
 **LONG comparison browser2026-10-19:** LongComparisonPanel exposes24 declared
 contrasts via two independent workers; create, four-instant fresh probe, step, run and
 pause controls. Changing declaration clears report and requires creation before step.
