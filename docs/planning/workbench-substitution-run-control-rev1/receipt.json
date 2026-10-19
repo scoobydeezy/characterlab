@@ -1,0 +1,79 @@
+{
+  "status": "PASS BOUNDED RUN-LOOP CONTROL",
+  "sources": [
+    {
+      "path": "src/workbench/substitutionRunLoop.ts",
+      "sha256": "25237940a47508cb092179e80cf70d086c90db8be8193ebd80b7354da0dff8d2"
+    },
+    {
+      "path": "src/workbench/SubstitutionWorkbench.tsx",
+      "sha256": "82f3c511443cee1110b007f0c11e249fc595179fed7083579014761d04b3561c"
+    },
+    {
+      "path": "src/workbench/SubstitutionComparisonPanel.tsx",
+      "sha256": "8ca92549b7e9f413437369229db854ddc448b833bd1ded85e42ddddc8506c988"
+    },
+    {
+      "path": "src/workbench/substitutionAdapter.ts",
+      "sha256": "126e2c0d2d98b1a19f39e019adfcd4f56ec27a819bf9fd633b92e013f71735a3"
+    },
+    {
+      "path": "src/workbench/substitutionWorkerClient.ts",
+      "sha256": "dc2bfa439c802918b0b25f4e3c3fc45bed9c13d4a9b5277010e689834d45533b"
+    },
+    {
+      "path": "src/workbench/substitutionWorker.ts",
+      "sha256": "4390226c117641a833aec69dc989514e1b17dfcd7defd3f5564967fa0568fcbb"
+    },
+    {
+      "path": "src/workbench/substitutionPairCheckpoint.ts",
+      "sha256": "460055ab47088b25b2fabfcf6d404594843626e60e0d235cd43da84da0693a8d"
+    },
+    {
+      "path": "src/workbench/substitutionComparison.ts",
+      "sha256": "3277548e875fa066c7bca87a50b3c872b4a32ac4e06be7fbb9da0027b4dd0636"
+    },
+    {
+      "path": "src/campaign3/dependenceSubstitutes.ts",
+      "sha256": "3fbf1216aaaa5386a5a1fba6f0cc05c4ace1a7a86e8bd241cec4671f24217204"
+    },
+    {
+      "path": "src/test/workbenchSubstitutionRunLoop.test.ts",
+      "sha256": "55f975fd1b0aee785f476282200342931b93b1f22f396799fe4f89993a8c069a"
+    },
+    {
+      "path": "src/test/workbenchSubstitutionWorker.test.ts",
+      "sha256": "641dd5bf4838a065fd9e661020981534ed0327fcbdc077d0215e3ef988278764"
+    },
+    {
+      "path": "src/test/workbenchSubstitutionPairCheckpoint.test.ts",
+      "sha256": "9df55ee9b94d52a49f8b93813bb190da2b518c9651d5d5d11676f6453a99de9a"
+    },
+    {
+      "path": "scripts/check-workbench-substitution-run-control.mjs",
+      "sha256": "1332dc1aaf14506e74fe7465e3e4bfdba33d65cfad7116dde95d178f9ea15f47"
+    }
+  ],
+  "parents": [
+    {
+      "path": "docs/planning/workbench-substitution-parity-rev1/receipt.json",
+      "sha256": "64dcdbf5fcb0f37a71ee713b52f32fbeb381a7bba71b47ac0c282c30eff5def5"
+    },
+    {
+      "path": "docs/planning/workbench-substitution-usability-rev1/receipt.json",
+      "sha256": "6285c98e190a229c18cb3ef700ba75ec739a99fffb3b425c0b76b8c792e1b804"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "tests.json",
+      "sha256": "183a4997ec9107e261366b22714bb113eae2c8f368620d5dbc85e6eb6f774178"
+    }
+  ],
+  "tests": 9,
+  "scope": "Controlled deferred-worker responses test stop flags, pair completion, disposal, terminal/step limits and failure propagation. A native two-program pair paused after opportunity1 and resumed has exact terminal checkpoints equal to direct execution. Pause and route-deactivation cases exercise the common stop flag, not React effect delivery or real browser event timing. Previous terminal-only browser pause remains inconclusive. No simulation semantics, worker protocol, observer boundary or research verdict changed. UI source changed after prior browser cohorts; those remain evidence for their frozen revisions, not fresh browser acceptance of this refactor.",
+  "validation": {
+    "productionBuild": "PASS;519 modules; existing large-chunk warning",
+    "research": "PASS;18 conditional,0 active,0 unowned,4 closed"
+  }
+}

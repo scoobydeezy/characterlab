@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+const root='docs/planning/workbench-substitution-run-control-rev1';
+const sha=b=>createHash('sha256').update(b).digest('hex');
+assert(!fs.existsSync(root+'/receipt.json'));
+const tests=JSON.parse(fs.readFileSync(root+'/tests.json'));
+assert.equal(tests.success,true);assert.equal(tests.numPassedTests,9);assert.equal(tests.numFailedTests,0);
+const paths=['src/workbench/substitutionRunLoop.ts','src/workbench/SubstitutionWorkbench.tsx','src/workbench/SubstitutionComparisonPanel.tsx','src/workbench/substitutionAdapter.ts','src/workbench/substitutionWorkerClient.ts','src/workbench/substitutionWorker.ts','src/workbench/substitutionPairCheckpoint.ts','src/workbench/substitutionComparison.ts','src/campaign3/dependenceSubstitutes.ts','src/test/workbenchSubstitutionRunLoop.test.ts','src/test/workbenchSubstitutionWorker.test.ts','src/test/workbenchSubstitutionPairCheckpoint.test.ts','scripts/check-workbench-substitution-run-control.mjs'];
+const sources=paths.map(p=>{const b=fs.readFileSync(p),target=root+'/sources/'+p;fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,b,{flag:'wx'});return {path:p,sha256:sha(b)};});
+const parents=['docs/planning/workbench-substitution-parity-rev1/receipt.json','docs/planning/workbench-substitution-usability-rev1/receipt.json'].map(p=>({path:p,sha256:sha(fs.readFileSync(p))}));
+fs.writeFileSync(root+'/receipt.json',JSON.stringify({status:'PASS BOUNDED RUN-LOOP CONTROL',sources,parents,artifacts:[{path:'tests.json',sha256:sha(fs.readFileSync(root+'/tests.json'))}],tests:9,scope:'Controlled deferred-worker responses test stop flags, pair completion, disposal, terminal/step limits and failure propagation. A native two-program pair paused after opportunity1 and resumed has exact terminal checkpoints equal to direct execution. Pause and route-deactivation cases exercise the common stop flag, not React effect delivery or real browser event timing. Previous terminal-only browser pause remains inconclusive. No simulation semantics, worker protocol, observer boundary or research verdict changed. UI source changed after prior browser cohorts; those remain evidence for their frozen revisions, not fresh browser acceptance of this refactor.',validation:{productionBuild:'PASS;519 modules; existing large-chunk warning',research:'PASS;18 conditional,0 active,0 unowned,4 closed'}},null,2)+'\n',{flag:'wx'});
+console.log('PASS bounded run-loop evidence;9 tests;browser nonterminal pause remains unproven');

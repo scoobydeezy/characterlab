@@ -222,3 +222,27 @@ These finite-cohort measurements are not heap/CPU bounds or a global worker budg
 Nonterminal pause, in-flight route switch, resource policy and broader accessibility
 remain open alongside pair restoration, batch and integrated entry. No production
 source or psychological semantics changed. Source/artifact/parent hashes verified.
+
+## Controlled committed-boundary scheduling
+
+2026-10-19. LOCAL DISPOSITION: extract the existing main/pair run scheduling into
+`substitutionRunLoop.ts`, without simulation changes or artificial delays. Pause
+finishes the current opportunity, including both comparison sides. Disposal stops
+further calls and publication. Existing main boundary yielding remains; pair final
+report publication remains unchanged. Main run limit is the original eight-opportunity
+program bound. Both callers retain their locks and worker cleanup.
+
+`workbench-substitution-run-control-rev1/receipt.json`:9 focused tests PASS.
+Deferred responses permit controlled stop during an in-flight opportunity, pair
+completion and disposal. Step/terminal limits and error propagation also pass.
+A native diversified/falseTraining pair paused after opportunity1 and resumed has
+exact final checkpoints equal to direct uninterrupted execution. Worker restore and
+pair-checkpoint authentication regression tests pass. Production build519 modules
+PASS with existing large-chunk warning; research check18 conditional/0 active/
+0 unowned/4 closed PASS after evidence restore.
+
+The pause and route-deactivation tests exercise the shared stop flag, not React
+effect delivery. Real browser nonterminal pause, route interruption and resource
+acceptance remain open. Prior browser captures bind earlier frozen UI revisions;
+this refactor has no fresh browser acceptance yet. No new Campaign3 verdict or
+qualification, law selection, native admission or obligation disposition.

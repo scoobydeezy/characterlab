@@ -1,5 +1,11 @@
 # Current research entry point
 
+**SUBSTITUTION run control2026-10-19:** shared committed-boundary loop used by main
+and pair UI;9 focused tests PASS, including deferred-response pause/disposal and
+exact native continuation after pause. Build519 modules and research checks PASS.
+Tests exercise stop flags; browser nonterminal pause and React route-effect timing
+remain unproven. Start OBSERVABILITY_WORKBENCH_SUBSTITUTION_PROGRESS.md.
+
 **SUBSTITUTION usability2026-10-19:**six-mode narrow layout/keyboard checks PASS;
 normal viewport restored. Full-cohort text maxima recorded244527 state/197661
 observer/215453 comparison chars. Both Run/Pause attempts ended at8: NONTERMINAL

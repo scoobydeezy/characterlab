@@ -1,5 +1,6 @@
 import {useEffect,useRef,useState} from 'react';
 import {SubstitutionWorkerClient} from './substitutionWorkerClient';
+import {advanceSubstitutionBoundaries} from './substitutionRunLoop';
 import {SUBSTITUTION_CONTRASTS,compareSubstitution} from './substitutionComparison';
 import {captureSubstitutionPair,restoreSubstitutionPair,type SubstitutionPairCheckpoint} from './substitutionPairCheckpoint';
 type Report=Awaited<ReturnType<typeof compareSubstitution>>;
@@ -17,10 +18,8 @@ export function SubstitutionComparisonPanel({active=true}:{active?:boolean}){
     clients.current?.forEach(c=>c.dispose());clients.current=[fresh[0],fresh[1]];setLoaded(spec.id);
    }else if(!clients.current||loaded!==selected)throw Error('Create the selected SUBSTITUTION pair first');
    const pair=clients.current!;
-   for(let i=0;i<(action==='step'?1:action==='run'?8:0);i++){
-    if(stop.current||pair.every(c=>c.snapshot().complete))break;
-    for(const c of pair){if(!c.snapshot().complete)await c.advance();if(!alive.current)return;}
-   }
+   await advanceSubstitutionBoundaries({clients:pair,limit:action==='step'?1:action==='run'?8:0,stopped:()=>stop.current,alive:()=>alive.current});
+   if(!alive.current)return;
    const next=await compareSubstitution(spec.id,pair[0].snapshot(),pair[1].snapshot());
    if(alive.current){setReport(next);setComplete(pair.every(c=>c.snapshot().complete));}
   }catch(e){if(alive.current){setError(String(e));setLoaded('');}clients.current?.forEach(c=>c.dispose());clients.current=undefined;}
