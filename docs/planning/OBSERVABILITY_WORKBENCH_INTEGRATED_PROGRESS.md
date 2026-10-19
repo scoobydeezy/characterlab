@@ -32,7 +32,8 @@ prefix commitments. This is not general language adequacy.
 
 Full125-program/625-prefix native audit PASS:16250 selected-event traversals.
 The final `workbench-values-causal-rev2/receipt.json` binds all125 compressed
-program archives, original native prefix saves and frozen source identities. Revision1 source collector failed on a Vite `?raw` suffix
+program archives, original native prefix saves and frozen source identities.
+Revision1 source collector failed on a Vite `?raw` suffix
 before execution; its original checker/finding is retained. Revision2 resolves the
 physical source path without the import query. No runtime change fixed that failure.
 
