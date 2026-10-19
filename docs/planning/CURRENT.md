@@ -1,5 +1,17 @@
 # Current research entry point
 
+**LONG production browser2026-10-19:** workbench-long-ui-rev1 PASS under52143.
+Original representation-1-law-1 prefixes0/1 match all seven native hashes; checkpoint
+restore recovers prefix0 and repeated step recovers prefix1.17 rendered native events
+match preserved count; displayed closed observer text equals adapter projection.
+Production route/worker bytes and inspected screenshot retained. Current source has
+later diagnostic-label wording edits, explicitly distinguished from compiled bytes.
+Development page had module/HMR loading failures after restart; production preview
+57644 at4173 loaded successfully. Dev89915 at5173 remains available for diagnosis.
+Full LONG audit48528 still live, no final receipt yet; preserve frozen sources.
+Evidence restore/research PASS;18 conditional obligations unchanged. All-program
+browser scope, file round trips, language, comparisons, successors and entry remain due.
+
 **Recovery and LONG route2026-10-19:** previous test approval-service usage failure
 resolved on retry; inspection registry guard PASS. LONG six-mode route implemented
 with native closed observer record separate from research diagnostics; comparison,
