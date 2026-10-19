@@ -1,5 +1,12 @@
 # Current research entry point
 
+**General six modes2026-10-19:** matrix profile reorganized into Character,
+Experiment, Reasoning, Timeline, Compare and Architecture with preserved sessions.
+Bounded browser six-mode keyboard/hash checks, architecture/Reasoning event43 links,
+three-axis persistence, native prefix3 restore and independent pair isolation PASS.
+Frozen factory does not admit base-parameter edits; no slider invented. Start
+OBSERVABILITY_WORKBENCH_GENERAL_PROGRESS.md and INTEGRATED_PROGRESS for remaining gates.
+
 **Integrated Values history2026-10-19:** reason-to-event-to-parent/child navigation
 implemented; bounded browser chain17/16/1/16/17 and historical reason/ancestry2->4 PASS.
 Full125-program/625-prefix ancestry audit PASS16250 traversals; original saves

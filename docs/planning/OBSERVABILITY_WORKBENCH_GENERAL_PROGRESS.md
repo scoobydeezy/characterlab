@@ -77,3 +77,40 @@ verdict or qualification is amended; all18 conditional obligations and historica
 limits remain. Registry/batch integration, full corpus coverage, linked six-mode graph
 inspection, complete exports, controlled semantic comparisons, language audits and final
 integrated entry demonstration remain required by OBSERVABILITY_WORKBENCH_PLAN.md.
+
+## Six-mode matrix integration
+
+2026-10-19. General Attention now exposes the agreed six navigation modes, keeping
+the main worker and comparison pair mounted across mode switches. Character contains
+the association heatmap/graph/three-axis/exact views. Experiment contains save/restore
+tools, Compare the independent declared pair, Timeline committed events and recorded
+parent navigation, and Architecture the existing participation/cohort panels.
+Reasoning exposes selected-event operands/outputs/reads and exact diagnostic roots;
+it explicitly lacks a qualified player-readable renderer. State interpretation and
+runtime semantics are unchanged. Native parentlessness is labeled none recorded.
+
+Architecture activity links switch to Timeline with the exact selected event.
+Reasoning shares that selection and can return to Timeline. Matrix display settings
+and comparison state survive switches. All run controls retain their prior public
+boundary behavior; the pair panel advances only one whole pair step per command.
+
+`workbench-general-modes-rev1/receipt.json` PASS bounded baseline seed0 prefix3:
+all six keyboard-activated modes expose their intended panels and preserve four
+commitments. Matrix data equals the original native parity receipt. Architecture
+root631 links to event43 and its recorded ancestor chain; Reasoning retains43.
+Three-axis view survives switching. Step4 followed by in-memory restore3 reproduces
+original hashes. Independent declared comparison at prefix1 matches fresh native
+comparison and remains unchanged across main-run restoration and mode switches.
+Screenshot inspected. Initial restore interaction timed out while step4 was still
+busy; the same live session reached4 and was resumed without recreation or lost state.
+No file download/import or checkpoint reconstruction was attempted.
+
+Build524 modules PASS with existing chunk warning. This is navigation/instrument
+qualification, not full six-mode semantic completeness, full MEM coverage, all-recipe
+browser acceptance or full character-language/factor qualification.
+
+LOCAL DISPOSITION: the existing `generalFactory.ts` accepts only frozen model
+identities and exact original initial state/calendar. It does not provide a supported
+base-character-parameter editing surface. Do not relabel seed or projection-rotation
+controls as character traits. A suitable admitted parameterized profile and its
+formal/qualification evidence remain required for the final integrated demonstration.

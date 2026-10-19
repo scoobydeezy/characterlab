@@ -64,3 +64,11 @@ qualification elsewhere remains scoped; this table does not reissue research ver
 Full corpus/successor coverage, specialized views, resource/accessibility acceptance,
 all required filters and an integrated acceptance receipt remain required. No Campaign4
 reduction, law selection or retirement is authorized by this progress.
+
+2026-10-19 follow-up: General Attention's existing matrix/graph/three-axis views are
+now organized within six modes, with bounded cross-mode identity, linked Timeline,
+restore and independent comparison checks in `workbench-general-modes-rev1/receipt.json`.
+The frozen General public facade rejects nonoriginal initial state/calendar and
+nonfrozen model identities. It supplies no character-base-parameter edit seam.
+Thus this improves step6 integration but does not discharge step3, complete language
+or the requirement for one end-to-end demonstrated experiment.

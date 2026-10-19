@@ -1,0 +1,72 @@
+{
+  "status": "PASS BOUNDED GENERAL SIX-MODE INTEGRATION",
+  "sources": [
+    {
+      "path": "src/workbench/GeneralWorkbench.tsx",
+      "sha256": "ed4b5eb560bddc276b61ff4edcabb80309fea72a66f2d1baf1978f2172c5833e"
+    },
+    {
+      "path": "src/workbench/GeneralComparisonPanel.tsx",
+      "sha256": "251bb91f6eb973540dc791ab39d90fb96426e56202807b51e6aba6018e9d81be"
+    },
+    {
+      "path": "src/workbench/generalAdapter.ts",
+      "sha256": "6f8db8436008012fd95787aa25a9a973a0c846c860b6bcb9ec3bb1c363637a28"
+    },
+    {
+      "path": "src/workbench/generalWorkerClient.ts",
+      "sha256": "818b383c255d4fbdaba96d5ab946b57424740cff951cb9e3a7d7378f0336ebf6"
+    },
+    {
+      "path": "src/workbench/generalWorker.ts",
+      "sha256": "4a5aee250c887e04d821575eef6eb3074d313ec32bff845f09e97cbf65999c1a"
+    },
+    {
+      "path": "src/workbench/generalComparison.ts",
+      "sha256": "796cfa61585054964c4f9d30441dc3e54c8e01c0f1b6878349b143a4dbf07aaa"
+    },
+    {
+      "path": "src/workbench/generalComparisonCatalog.json",
+      "sha256": "39586f192eb0598cf0f43a0680da9cba7c083bcba600fa4580be77f8f724903f"
+    },
+    {
+      "path": "src/workbench/AssociationInspector.tsx",
+      "sha256": "287eb5caecdab7bb0092ac81bef8c9b5ca98fde35ddfaedbb7da52ce4108d806"
+    },
+    {
+      "path": "src/workbench/ParticipationInspector.tsx",
+      "sha256": "7494f95a6ba5a2b27367e0adb30229e8f3b4d662bc0773e882a363b3f3509cac"
+    },
+    {
+      "path": "src/workbench/CausalHistoryPanel.tsx",
+      "sha256": "33e1eab5f37898db2ade760dd969f80d27fc367808ad7d5ef3109cea7e26aae1"
+    },
+    {
+      "path": "src/workbench/causalNavigation.ts",
+      "sha256": "b1ac6f44acd96c513091b21127d0ff4d9f9ce0111a5455557f36944be1f6d255"
+    },
+    {
+      "path": "scripts/check-workbench-general-modes.mjs",
+      "sha256": "4dfce85c28abf87ffa80028b7ad61528ab1b0761b11129b594f0d6f2c30dac2e"
+    }
+  ],
+  "parent": {
+    "path": "docs/planning/workbench-general-parity-rev1/receipt.json",
+    "sha256": "eb4878f73d62551daaadd8c27620c0e53dc05a7a771daec5a8a3cc295db2602f"
+  },
+  "artifacts": [
+    {
+      "path": "browser.json",
+      "sha256": "857268c02af057ca55958fcc57d0e50fd37e4432fd1cae62945651942a8f756e"
+    },
+    {
+      "path": "matrix-modes.png",
+      "sha256": "4604e665fe1ab0c9fe86ee0b0023090ab8b0b2f140cc907a4ae8417338184481"
+    },
+    {
+      "path": "native.json.gz",
+      "sha256": "cbb30f9d26f2ef54753b5a6865c65141c3e843e9989339d7ff674e1286753044"
+    }
+  ],
+  "scope": "Baseline seed0 prefix3 matrix and four hashes join native originals. Six keyboard-activated modes expose their own panels, preserve hashes and three-axis selection; architecture and reasoning select Timeline event43. Advance4 then restore3 recovers original commitments; independent declared comparison pair at1 preserved across modes and main restore. Initial restore click timed out while step4 was busy; same session was inspected and resumed without restart. No new base-parameter ingress, broad language, full MEM coverage, all-recipe browser or integrated Campaign4 acceptance."
+}
