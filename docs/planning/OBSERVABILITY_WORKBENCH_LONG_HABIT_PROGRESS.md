@@ -171,3 +171,15 @@ non-inferred RNG correspondence. Receipt digest and counts preserved in verifica
 This closes the declared comparison execution audit, not fresh native source execution,
 all-prefix checkpoint replay (18545 still live), broad browser behavior, complete habit
 language or Campaign4 entry. No Campaign3 verdict/obligation changed.
+
+2026-10-19 receiver replay completion:18545 exited0. Final receipt
+workbench-long-habit-reuse-rev1/receipt.json PASS960 cases/16320 exact prefix restores,
+15360 advancing successors and960 terminal no-op continuations. Eight reused native
+sources/136 source prefixes are authenticated against accepted source archives and
+restore receipts; fresh native source executions remain0. Receiver replay does not
+establish a newly executed joined native horizon or native scheduler admission.
+Independent verification rechecked120 current/frozen source identities, every960
+result/original hash and every prefix/save/pair/successor commitment. verification.json
+records the final receipt hash and exact counts. Comparison2848/48416 and retained-
+practice language25636/16320 remain separately qualified. Broader browser, complete
+habit reason narration, batch admission and full Campaign4 entry remain required.

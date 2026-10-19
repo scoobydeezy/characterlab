@@ -34,3 +34,23 @@ frozen prefixes and original-input export checks PASS. All current/frozen bound
 source hashes verified before subsequent work. Receipt: workbench-batch-parity-rev7/
 receipt.json. MULTISOURCE parity50025 also completed separately at62/249. Neither
 receipt establishes remaining browser, language or full-corpus entry qualification.
+
+2026-10-19 full browser qualification STARTED. Dedicated in-app browser2/tab2
+(fullBatchTab) runs all915 execution roles using the existing native-qualified catalog.
+Do not reload, close, switch its inspection profile or prepare a new batch while it
+is running. Keep it with markHandoff on continuation turns. The separate inspection
+tab remains available for independent work. Freeze267 source files before execution
+in workbench-batch-browser-rev7; leave those dependencies unchanged until completion.
+Do not rebuild or replace the served dist directory while this browser worker is
+pending: later cohorts lazy-load its existing asset URLs. Independent UI builds must
+use a separate output directory and preview port, or wait for this run to finish.
+The stale841-role caption now reads BATCH_LIMITS.jobs dynamically, alongside the
+33-prefix bound. Build547 modules PASS. This corrects display only; executor limits
+and native work remain unchanged.
+
+check-workbench-batch-v7-browser.mjs prepares the source freeze and final verifier.
+Final evidence must compare all915 displayed rows and every5875 save/expected pair
+against the completed native receipt, plus the exact64000-character summary preview
+and declared full UTF-8 byte count. Do not invoke download controls or reconstruct a
+denied checkpoint file. Ordinary DOM execution diagnostics are retained as evidence;
+file-transfer acceptance remains separate. No final browser receipt exists yet.
