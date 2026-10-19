@@ -246,3 +246,19 @@ rational substitution rejection and operand/result mismatch rejection. TypeScrip
 import boundaries and research checks PASS. Renderer, complete-prefix diagnostic
 coverage and observer-safe language remain due. Active native/comparison audits are
 unchanged (latest native program2 prefix12; comparison program0 prefix12).
+
+## Recorded-factor renderer — 2026-10-19
+
+Reasoning now renders separate exact disposition operands and every recorded compiled
+reason, including role nets, relevance, dice/modifiers and expandable original keys,
+source coverage and mechanical distributions. A committed-event selector and Timeline
+link preserve event/run provenance. No-record and malformed-record states remain
+explicit; no partial interpretation is presented on validation failure.
+
+Build PASS541 modules, existing chunk warning. Research checks PASS.
+`workbench-disposition-reasons-ui-rev1/receipt.json` records bounded browser/native
+PASS for Main prefixes1/2: visible operand and compiled-role tables match native
+records; earlier event18 projection remains identical after advancement; its Timeline
+link selects the exact original event without changing current prefix2 hashes.
+Both native snapshots join their original save receipts. No all-program/all-prefix,
+complete choice attribution, observer-safe narration or integrated-entry claim.
