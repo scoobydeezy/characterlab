@@ -300,3 +300,26 @@ preserves all five active-run hashes, Leaky disables the control, and fresh posi
 creation matches the original model/run identity digests and prefix0 save. This closes
 the missing slider implementation within the declared native scope; the complete
 sixteen-step integrated demonstration, including appropriate matrix coverage, remains due.
+
+## Retained divergence history contract — 2026-10-19
+
+`dispositionDivergenceHistory.ts` distinguishes first retained state difference from
+first retained mechanism-projection difference. An earliest claim requires every
+committed prefix from0 through that difference. Missing prefixes remain explicit;
+missing observations never become equality. Reports can be supplied out of order;
+identical repeated checkpoint observations are idempotent. Mixed branch identities,
+inconsistent equality flags, conflicting revisions and unaligned reports reject.
+The256-input bound rejects rather than silently discarding retained comparisons.
+
+Three tests PASS using the already qualified browser/native constitutional reports:
+state differs at0, mechanism projection at1; both earliest claims are supported by
+complete0/1/2 history. Removing1 leaves first observed projection difference at2 but
+withholds earliest proof. Initial-only and empty histories, mutation isolation,
+duplicate replay and invalid-report rejection are checked. TypeScript, import
+boundaries and research checks PASS.
+
+This module consumes trusted comparison diagnostics, not unauthenticated saves.
+Projection divergence alone is neither a chosen-action difference nor character
+knowledge, psychological significance or causal necessity. UI history capture,
+first-divergence navigation and full-contrast qualification remain due. Frozen
+native/comparison dependencies remain unchanged.
