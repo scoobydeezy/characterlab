@@ -1,5 +1,14 @@
 # Current research entry point
 
+**CONTROL foundation2026-10-19:** catalog/adapter/worker implemented for7 original
+models/17 public runs; HABIT resistance is the same cohort, not extra cases. Contract
+0.2 and frozen executable identity0.1 remain explicit. Five focused privacy/replay/
+transaction/transport tests PASS; build70150 PASS476 modules. Audit49278 RUNNING,
+target142 exact native prefixes and restores. Start
+OBSERVABILITY_WORKBENCH_CONTROL_PROGRESS.md. Full receipt, comparisons, UI and
+language remain due; FATIGUE/dependence successors remain separate. Research PASS18
+conditional; no Campaign4 entry or law-selection claim.
+
 **LONG routine Character language2026-10-19:** integrated qualified renderer and
 bounded browser PASS. Case0 prefixes0/8/9/10/restore8/repeat10 and opposed case64
 prefix8 match full reports and five original commitments. Six retained records,
