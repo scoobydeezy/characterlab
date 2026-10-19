@@ -1,5 +1,11 @@
 # Current research entry point
 
+**SUBSTITUTION usability2026-10-19:**six-mode narrow layout/keyboard checks PASS;
+normal viewport restored. Full-cohort text maxima recorded244527 state/197661
+observer/215453 comparison chars. Both Run/Pause attempts ended at8: NONTERMINAL
+PAUSE INCONCLUSIVE, not accepted. Resource/global worker and broader accessibility
+gates remain open. Start OBSERVABILITY_WORKBENCH_SUBSTITUTION_PROGRESS.md.
+
 **SUBSTITUTION browser restore2026-10-19:**ALL29 programs/261 in-memory restores/
 232 repeated successors/29 terminal controls PASS;986 full DOM state captures join
 original component commitments. All main-prefix restore coverage now qualified.

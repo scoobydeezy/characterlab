@@ -197,3 +197,28 @@ specialized inspections, batch and integrated Campaign4 acceptance remain open.
 Longer audits remain live: LONG goal reached case13 prefix15/16, habit receivers576/960,
 habit comparisons seed4 complete; LONG native24/32 last reported. Same handles retained
 and polled; no quiet process restarted or frozen dependency edited.
+
+## Bounded usability and measured data sizes
+
+2026-10-19. `workbench-substitution-usability-rev1/receipt.json` records six-mode
+narrow viewport/keyboard checks PASS at390x844 requested viewport (375 content width).
+No page-level horizontal overflow in any mode or with one provenance disclosure open;
+visible buttons/selects remain within content width. Enter activates every mode and
+the disclosure; Tab from Character focuses Experiment with a visible outline. Normal
+viewport restored afterward. Screenshots retained and inspected. This is not full
+screen-reader, contrast or multi-breakpoint accessibility acceptance.
+
+Main bothAvailable and comparison input/bothAvailable Run/Pause attempts both finished
+at prefix8. Exact terminal state/report matches accepted evidence, but nonterminal
+interruption is INCONCLUSIVE. Preserve this outcome; do not report pause/resume or
+active-route interruption as qualified. No artificial delay or runtime change added
+to force a desired result.
+
+Measured all29 original programs/261 prefixes and41 comparisons/369 reports from
+qualified captures: maximum research-state text244527 chars, observer text197661,
+comparison text215453; eight rows maximum. Existing adapter checkpoint prefix0..8
+and32M hex bound, renderer eight-row/32M text bound and worker disposal inspected.
+These finite-cohort measurements are not heap/CPU bounds or a global worker budget.
+Nonterminal pause, in-flight route switch, resource policy and broader accessibility
+remain open alongside pair restoration, batch and integrated entry. No production
+source or psychological semantics changed. Source/artifact/parent hashes verified.

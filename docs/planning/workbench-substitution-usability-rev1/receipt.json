@@ -1,0 +1,92 @@
+{
+  "status": "PASS BOUNDED RESPONSIVE/KEYBOARD CHECKS; NONTERMINAL PAUSE INCONCLUSIVE",
+  "sources": [
+    {
+      "path": "src/workbench/SubstitutionWorkbench.tsx",
+      "sha256": "25c143b6f3b92e13ce72b26700e2a4858493015798e0b768ad9f34b31075947c"
+    },
+    {
+      "path": "src/workbench/SubstitutionComparisonPanel.tsx",
+      "sha256": "9b45d7e34ccd8fdc4fe7be167fde7f9cb04d95dc9a9072ef6db88ac4353ffeb2"
+    },
+    {
+      "path": "src/workbench/substitutionAdapter.ts",
+      "sha256": "126e2c0d2d98b1a19f39e019adfcd4f56ec27a819bf9fd633b92e013f71735a3"
+    },
+    {
+      "path": "src/workbench/substitutionDescription.ts",
+      "sha256": "9960e360e4da0732565d145b43043272e54775691eacded906ce2f01880d90bd"
+    },
+    {
+      "path": "src/workbench/substitutionWorkerClient.ts",
+      "sha256": "dc2bfa439c802918b0b25f4e3c3fc45bed9c13d4a9b5277010e689834d45533b"
+    },
+    {
+      "path": "src/workbench/workbench.css",
+      "sha256": "4f1e6a44ddeaf367135b83a0d3e904595973b3aad91257fee4cb0ed99e2943ac"
+    },
+    {
+      "path": "src/workbench/experimentSelector.css",
+      "sha256": "80b88687836b81fdeeb37eb057baac90b0cb2307598da4adbfd177e0a5d424d6"
+    },
+    {
+      "path": "scripts/check-workbench-substitution-usability.mjs",
+      "sha256": "10d073ca6c1dc857250e9530f2fc9f05c8df149c0e97a3597d32103aa34d101d"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "browser.json",
+      "sha256": "ef55d82e5dac875e7ba2d5b216819780f88776e4d043c909ea63cb03b373ca1f"
+    },
+    {
+      "path": "mobile.png",
+      "sha256": "3caa7be3e861ee39db2e05ef5658bf2a9fb945b05b72b7c162dcb7a54d9e70f5"
+    },
+    {
+      "path": "desktop.png",
+      "sha256": "013154e62de6e38c9ecd8ed7a838c0307fecd847c40ab7ea686e214ef74f72a4"
+    }
+  ],
+  "parents": [
+    {
+      "path": "docs/planning/workbench-substitution-comparison-rev1/receipt.json",
+      "sha256": "a1d92dd6f85c32762f99b5a5c3e6133b087c391b4c572c66cd485c7ac77df15e"
+    },
+    {
+      "path": "docs/planning/workbench-substitution-browser-programs-rev1/receipt.json",
+      "sha256": "916fdb2c1f2f5429147d680ff3d8ba1304cbae83d87f4b7610e5fa4bf2a3e92c"
+    }
+  ],
+  "responsive": {
+    "requestedViewport": {
+      "width": 390,
+      "height": 844
+    },
+    "contentWidth": 375,
+    "modes": 6,
+    "keyboardModeActivation": true,
+    "keyboardDisclosure": true,
+    "nextModeFocus": true,
+    "viewportReset": true
+  },
+  "measuredOriginalCohort": {
+    "programs": 29,
+    "prefixes": 261,
+    "comparisons": 41,
+    "alignedPairReports": 369,
+    "maxStateChars": 244527,
+    "maxObserverChars": 197661,
+    "maxPairChars": 215453,
+    "maxRows": 8
+  },
+  "pause": {
+    "mainPrefix": 8,
+    "pairPrefixes": [
+      8,
+      8
+    ],
+    "nonterminalInterruption": "not established"
+  },
+  "scope": "Six modes and one expanded provenance disclosure have no page-level horizontal overflow at the tested narrow viewport; buttons/selects remain within content width. Enter activates modes/disclosure, Tab advances mode focus with an outline. Original cohort text sizes measured from qualified archives, not heap/CPU/resource-policy qualification. Both pause requests completed at terminal prefixes; preserve as inconclusive for nonterminal interruption. No screen-reader, contrast, all responsive breakpoints, global worker budget or broad accessibility acceptance."
+}
