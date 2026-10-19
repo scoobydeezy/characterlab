@@ -120,3 +120,15 @@ navigation, exact joins to full-cohort histories, and identical appraisal histor
 after later execution. An unresolved forecast origin remains visible. Shared-component
 browser coverage for General/Disposition and complete derived-source causality remain
 due. The full sixteen-step integrated demonstration is still unqualified.
+
+General follow-up: `workbench-general-read-history-rev1/receipt.json` qualifies all43
+original frozen-seed models/568 prefixes for the same exact-path reader.49634 read
+observations include22601 matches,25831 unresolved origins and1202 mismatches; the
+last group is320 unique model/event/read identities at ordinary-memory root630.
+Native accessors deliver derived recall partitions from that owner. The projected
+timeline lacks per-read transformation/source metadata, so per-record derivation
+remains unresolved rather than being inferred from this source-level explanation.
+The bounded baseline browser receipt verifies navigation102 ->89, historical stability
+and unchanged native hashes through terminal11. General browser breadth and native
+derived-source enrichment remain required; Disposition reader/browser coverage remains
+due. These receipts do not complete step12 or the integrated demonstration.

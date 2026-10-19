@@ -1,5 +1,38 @@
 # General attention frozen cohort qualification
 
+## Exact-path read history qualification — 2026-10-19
+
+`workbench-general-read-history-rev1/receipt.json` PASS reader conformance for all43
+original models and568 frozen-seed prefixes. It consumes hash-verified snapshots
+from the completed General comparison cohort and verifies its native evidence hashes.
+An independent reverse scan checks every read against the most recent earlier exact-
+path mutation; inputs remain unchanged and historical reports are stable at later
+prefixes.50055 event observations/49634 read observations include repeated history.
+Relations:22601 exact matches,25831 no prior recorded mutation,1202 value mismatches.
+This is not a claim that all reads have complete causal provenance.
+
+`mismatch-census.json` preserves every mismatch with read/prior-value hashes:
+1202 observations represent320 unique model/event/read identities, all root630.
+Frozen native accessor/trace sources show that recall partitions can be delivered as
+derived reads of that owner leaf. This source-level explanation is consistent with
+the mismatches; the projected timeline omits each ActualReadRecord's derived sources
+and transformation identifier. Therefore per-record derivation remains unresolved,
+and the UI must not relabel these reads as direct stored values or native failures.
+Next provenance work must carry and qualify the native derived-source metadata.
+
+`browser-receipt.json` PASS one original baseline with frozen seed01..20 through
+terminal prefix11: earlier event43 unchanged, event102's explicit unresolved mismatch
+unchanged after continuation, keyboard navigation to prior mutation89, and all four
+native model/run/state/save hashes unchanged during inspection. Browser reports join
+the full-cohort histories exactly. The first collector encountered a hidden Values
+panel as well as General and rejected strict locator ambiguity; scoping to visible
+main fixed collection without restarting execution. Screenshot retained.
+
+Research checks PASS,18 conditional obligations unchanged. No production code changed
+in this qualification increment; the prior545-module build remains the tested build.
+LOCAL DISPOSITION: workbench diagnostic qualification only, no Campaign3 verdict,
+law selection, comparator retirement, all-model browser claim or Campaign4 acceptance.
+
 2026-10-13 comparison completion: command68178 COMPLETE exit0.
 workbench-general-comparison-cohort-rev1 verifies43 models/568 full-calendar prefixes,
 36 declared pairs/471 aligned pair-prefixes and zero missing committed instants.

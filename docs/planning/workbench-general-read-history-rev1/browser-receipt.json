@@ -1,0 +1,21 @@
+{
+  "status": "PASS BOUNDED GENERAL STATE-READ BROWSER",
+  "recipe": "baseline",
+  "seed": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20",
+  "terminalPrefix": 11,
+  "checks": [
+    "exact frozen native hash join",
+    "historical event43 unchanged after continuation",
+    "unresolved projected recall value mismatch at event102",
+    "historical mismatch unchanged after continuation",
+    "keyboard prior-mutation navigation to89",
+    "inspection leaves all four hashes unchanged"
+  ],
+  "parentReceiptSha256": "c02ae7697878810e1a6d81cd05061deaf226aaa67fb33186d569445cac89cb13",
+  "artifacts": {
+    "browser.json": "aa008a9c46803144de94133392ee992ffe58d3d8333110dd8401b15d8b23ea4c",
+    "history.png": "5e1a52b1e0768b9e58f4b5062114806d2f81b34052ff98815ccb75c89021c39b"
+  },
+  "observation": "Initial browser collector matched a hidden Values panel as well as General and rejected strict locator ambiguity. Collector was scoped to visible main; no execution restarted.",
+  "scope": "One original General recipe in browser; full43-model reader conformance is separate. Derived-source/transformation metadata remains absent, so no per-record recall derivation or complete provenance claim."
+}

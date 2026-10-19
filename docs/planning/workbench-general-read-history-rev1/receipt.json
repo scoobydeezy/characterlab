@@ -1,0 +1,389 @@
+{
+  "status": "PASS FULL FROZEN GENERAL STATE-READ HISTORY",
+  "models": 43,
+  "prefixes": 568,
+  "eventObservations": 50055,
+  "readObservations": 49634,
+  "relations": {
+    "no-prior-recorded-mutation": 25831,
+    "exact-value-match": 22601,
+    "value-mismatch": 1202
+  },
+  "parent": {
+    "path": "docs/planning/workbench-general-comparison-cohort-rev1/receipt.json",
+    "sha256": "cde3dce99afa93fcf28945e8a0fd46ad609e2b1314be383d94cd3156f888d98c"
+  },
+  "sources": [
+    {
+      "path": "src/workbench/stateReadHistory.ts",
+      "sha256": "82fc3f9c2dfedeb8a5c3cb06d368f0ce1d961382c8e6c39b8c99fd0feeafb40e"
+    },
+    {
+      "path": "src/workbench/StateReadHistoryPanel.tsx",
+      "sha256": "9338bea0a3e8c0a636e94c71efdd3bc4b41357c00c0e52ef539f3d1cffd43870"
+    },
+    {
+      "path": "src/workbench/CausalHistoryPanel.tsx",
+      "sha256": "5df00ef58cd5a29b88b8a48fc062fe6da8f3f67fccbfda8fcacc9ca08e69a96f"
+    },
+    {
+      "path": "src/workbench/GeneralWorkbench.tsx",
+      "sha256": "ed4b5eb560bddc276b61ff4edcabb80309fea72a66f2d1baf1978f2172c5833e"
+    },
+    {
+      "path": "src/workbench/contracts.ts",
+      "sha256": "c0e9239cbbba5341259be2f81199cefb43f7678426d61b653249c232c7b01f73"
+    },
+    {
+      "path": "scripts/check-workbench-general-read-history.mjs",
+      "sha256": "427bed8c38a5e4a590cedeb2923e634bfbb623e1ac63e046628b91736cac10f1"
+    }
+  ],
+  "results": [
+    {
+      "recipe": "baseline",
+      "path": "model-00.json.gz",
+      "sha256": "82bd64771faa248b008c0f28c18a7632bbca7969033aa2b28436172815623a05",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-00.json.gz",
+      "sourceSha256": "1d268b0ba379d6279311df3cc14c6bdee255536a9c75e9752e912cbe820cc7ce",
+      "prefixes": 12
+    },
+    {
+      "recipe": "budget-Independent-1/1",
+      "path": "model-01.json.gz",
+      "sha256": "5b102b8ab9bc8f06bc04845dc49f677b382b7fc23c48b4903d85c46289cc36b0",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-01.json.gz",
+      "sourceSha256": "d11207785234107b11f5acecf4a40a7e868b934f186ccaadac788d603f612446",
+      "prefixes": 12
+    },
+    {
+      "recipe": "budget-HistoricalShared-1/5",
+      "path": "model-02.json.gz",
+      "sha256": "28f54708dbdc94924139ebc0c0571b1518da28dde4aefed02906414120b7e6b1",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-02.json.gz",
+      "sourceSha256": "21be3d4e552b8f2f9cf799ed0115634b2fd43609975807196aa6ddaa1fb9dc9c",
+      "prefixes": 12
+    },
+    {
+      "recipe": "budget-HistoricalShared-1/1",
+      "path": "model-03.json.gz",
+      "sha256": "4bce0466126d7c861b8d839ddd3cc8174255e110eee86ca0c529fb0c64387da9",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-03.json.gz",
+      "sourceSha256": "b7fc684bafcc32dfcfa82f0d5cdc56d6c46003039fdaad9132c0448d2fa085b3",
+      "prefixes": 12
+    },
+    {
+      "recipe": "budget-HistoricalHybrid-1/5",
+      "path": "model-04.json.gz",
+      "sha256": "29653093306b4b1e51328b7ac9dd54b0577c15cdbf430664e184ac8da01a9dd4",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-04.json.gz",
+      "sourceSha256": "70712864721495754da4b6740e9f64e551cc4f5c8aac5d6fc57f9c48d54ca972",
+      "prefixes": 12
+    },
+    {
+      "recipe": "budget-HistoricalHybrid-1/1",
+      "path": "model-05.json.gz",
+      "sha256": "b84fa4b54fb923f69e21f77b08a074c9949f3a4b1d88665b6f10ebaca2886b0b",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-05.json.gz",
+      "sourceSha256": "bc2572e42fe943db2fb7d6208fa28fc6614f88939a30a5f385b7612ba45310b2",
+      "prefixes": 12
+    },
+    {
+      "recipe": "budget-RetiredFlat-1/5",
+      "path": "model-06.json.gz",
+      "sha256": "fcc848a156b0ec7ddf25d4e827c553f43ea8a64d15b9d9854d721d2150b8689c",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-06.json.gz",
+      "sourceSha256": "ac91cb3854e58c31d115b4f2fbc956609d809a1c60c02106d1a8b2eb68e6d765",
+      "prefixes": 12
+    },
+    {
+      "recipe": "budget-RetiredFlat-1/1",
+      "path": "model-07.json.gz",
+      "sha256": "be5a17e5606d71c1c73a696bcae8e3934ba566d50389d60b4572a3d9c09bac59",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-07.json.gz",
+      "sourceSha256": "2859621a92b9fe913b1d52d2853dc2053f1f606103418f04eb37fe75bcf8f50b",
+      "prefixes": 12
+    },
+    {
+      "recipe": "allocation-disabled",
+      "path": "model-08.json.gz",
+      "sha256": "5c44e63605e76bafd097a62cb1b912402db4d7e43df12a3d1688f3816ab1f067",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-08.json.gz",
+      "sourceSha256": "7cc7e1f8def41e30cbddf368d3ab6868f7a57019860db0c4811a7f44e121a41d",
+      "prefixes": 12
+    },
+    {
+      "recipe": "allocation-spatial",
+      "path": "model-09.json.gz",
+      "sha256": "0412ff456b8057dccd12de3f2553bb99a5fe1cba60b249cba6f3e97a348e9222",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-09.json.gz",
+      "sourceSha256": "653c7c21084344caa6b8929c126c6a966f9ea443e73d1f573a46bf2f615e20ec",
+      "prefixes": 12
+    },
+    {
+      "recipe": "feedback-encoding",
+      "path": "model-10.json.gz",
+      "sha256": "5bd02548af58fef37e382eddce342fc0bc31f923d6fb8d335b58e2bcc85ed79c",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-10.json.gz",
+      "sourceSha256": "8f5788029c929c90b38d8bae20d652a0ccb9b99fc017bd1af611bd744a9c5664",
+      "prefixes": 12
+    },
+    {
+      "recipe": "feedback-retrieval",
+      "path": "model-11.json.gz",
+      "sha256": "02e874c21f7e176ee700ebdf51dfcee33df508f888edbe6d8091038ba617afd1",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-11.json.gz",
+      "sourceSha256": "7ebdc44fb1ce0dc8a5ecb0fc10ef249b3dabb0461e037e8991521f612ad07a35",
+      "prefixes": 12
+    },
+    {
+      "recipe": "feedback-both",
+      "path": "model-12.json.gz",
+      "sha256": "11ac64b99e2bdb7be81eab5a6319b8bd1a8ab56e4629b60fea4a263b54efd0eb",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-12.json.gz",
+      "sourceSha256": "b8256f9786d5af3800d51c582bb4cf0597ab0e2560fe04ddfd8a9d12db764d82",
+      "prefixes": 12
+    },
+    {
+      "recipe": "local-access",
+      "path": "model-13.json.gz",
+      "sha256": "8d9fa2d58b255319e4f89550947c6d724c2a6a5dab47e6f00a7effa93de84061",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-13.json.gz",
+      "sourceSha256": "66fe86f64dfdf42826456c5685d25163f1573a2f02ce1a0ea7066f29891f64e7",
+      "prefixes": 12
+    },
+    {
+      "recipe": "association-decay",
+      "path": "model-14.json.gz",
+      "sha256": "9c2917b1b7fbcd8285cc66ce3baacf999c0addfee0baa6f77fce16995baf8c4f",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-14.json.gz",
+      "sourceSha256": "33bb9245dbe15209fa183cf883efe85b639bb672401cbbd8707035a5f91c79bf",
+      "prefixes": 12
+    },
+    {
+      "recipe": "presentation-no-decay",
+      "path": "model-15.json.gz",
+      "sha256": "2b5dfa126914db0e50d698a873f4d7723c8d6c0d2a1fbab405305a592f12b25c",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-15.json.gz",
+      "sourceSha256": "a730b00ac18568ce1983cff9674ece912705df32470ff4f49b0a0b6e86b4c2af",
+      "prefixes": 12
+    },
+    {
+      "recipe": "recall-k0",
+      "path": "model-16.json.gz",
+      "sha256": "0e895263f332200f665a95b4282c1b2cd995cf721805c85abbf6e9f343dfbac4",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-16.json.gz",
+      "sourceSha256": "b22f438d56b51c6d41ccb2e3fc5b9673f850d523f114458c9a52ef9838b0450f",
+      "prefixes": 12
+    },
+    {
+      "recipe": "recall-k1",
+      "path": "model-17.json.gz",
+      "sha256": "d1ce1df59ab9e391201747235e2382a446757e145aab6c5884ccfcc444a4817f",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-17.json.gz",
+      "sourceSha256": "648a8bb13cdf789e4e05ca0b083cfae26416bc869516f03ebf8f78d96348d0b9",
+      "prefixes": 12
+    },
+    {
+      "recipe": "select-k0",
+      "path": "model-18.json.gz",
+      "sha256": "9c25ed1df008d3cdbafd37c38e4f01df79ccb8edca3797c449116c88740051e4",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-18.json.gz",
+      "sourceSha256": "62a0ec665f6495dde369ec7d1be09f67090e5e0f36ff68116199da1c220a824c",
+      "prefixes": 12
+    },
+    {
+      "recipe": "select-k1",
+      "path": "model-19.json.gz",
+      "sha256": "8c9cc083989c0f604330cc5b5550142651042f4c15dd046081a3f76dc944d597",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-19.json.gz",
+      "sourceSha256": "50d9ab46df6a8e766e25a46b50956751d65afbef49d1844c4ac938e479ac45cb",
+      "prefixes": 12
+    },
+    {
+      "recipe": "select-k2",
+      "path": "model-20.json.gz",
+      "sha256": "9c158867c6ac7dd8005fd3126aa977939bf41ced60bb7f85242787168972d38b",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-20.json.gz",
+      "sourceSha256": "86c091cf3be2741667275de0aace34a7d551f2bf912cecacbe47efe630607c24",
+      "prefixes": 12
+    },
+    {
+      "recipe": "select-equal-k2",
+      "path": "model-21.json.gz",
+      "sha256": "9add065327cbcba4c25b7c3347d88915255abbf6be919916c71abf2dd3e8e7a2",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-21.json.gz",
+      "sourceSha256": "c9c15daff58d8e63e7d1daa6d23f74ba03e13333591b04dea1dfbf6befc08bf0",
+      "prefixes": 12
+    },
+    {
+      "recipe": "source-capacity1",
+      "path": "model-22.json.gz",
+      "sha256": "2fac8cec4ee97650751d6b107ebf09460d5617b960975c7b9884f8331dce4713",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-22.json.gz",
+      "sourceSha256": "e66931e949acab133318d036e95c92ca137ceec9b5695c8357010b413519ec5d",
+      "prefixes": 12
+    },
+    {
+      "recipe": "source-no-prediction-access",
+      "path": "model-23.json.gz",
+      "sha256": "cbbed7cc01367c625a23532a7c46d42c532178e4030b1eefe93883765c074aa3",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-23.json.gz",
+      "sourceSha256": "c7422b0c65024dec4fb38bad031367fffb4d254f3eb476d7130c37123f7377d9",
+      "prefixes": 12
+    },
+    {
+      "recipe": "source-no-task-access",
+      "path": "model-24.json.gz",
+      "sha256": "82d446e384b0480fad00ab0b2e2a843a3be024431b718568f9ec0f8717315cd6",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-24.json.gz",
+      "sourceSha256": "fc34c8938ad5e8092ce90fe9fc883ce5a59baa9b3347b260610714fc57aca58a",
+      "prefixes": 12
+    },
+    {
+      "recipe": "source-denied-probe",
+      "path": "model-25.json.gz",
+      "sha256": "8b9038c92d3023f7699901367f7277e00a86734d5cb68d77a6ae4492fff0ed1a",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-25.json.gz",
+      "sourceSha256": "ab18f9d5d949658ab0b8b81a09333decb5aaa2f6a7356c41964b9fb6143870e1",
+      "prefixes": 12
+    },
+    {
+      "recipe": "source-zero-concern",
+      "path": "model-26.json.gz",
+      "sha256": "24de186ae0821aee1ec426a2a1835c40ab1a41c9776db8d051279d87a84107e0",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-26.json.gz",
+      "sourceSha256": "f7899eaa72f0dff9aab67d9e9a04d3f91bd91a9ea69771122dd644a498e2b3c9",
+      "prefixes": 12
+    },
+    {
+      "recipe": "source-above-target",
+      "path": "model-27.json.gz",
+      "sha256": "651ea6e192c853987dc7dc71f6ec8f0b5cbb8b08a309bbd028a654d31fe89fc6",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-27.json.gz",
+      "sourceSha256": "45450916633f1b28176d7d05f2be9a883e152f20215eed0474a3ece3a741db3a",
+      "prefixes": 12
+    },
+    {
+      "recipe": "denied-port",
+      "path": "model-28.json.gz",
+      "sha256": "34469364ea9abf835c246a0a38b5428171d2172a81f3d37ac2c39319480862df",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-28.json.gz",
+      "sourceSha256": "26f1b6ffc75dfcffb8bc33e706bea4758732d402cf502850f0185938efcb69d5",
+      "prefixes": 12
+    },
+    {
+      "recipe": "unresolved-role",
+      "path": "model-29.json.gz",
+      "sha256": "85a1cc1518f5d8eef1243a6ca7d1e597b19e5f68acf17b54281bbed7ac7a93bb",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-29.json.gz",
+      "sourceSha256": "2a04c15eaaeeb2ece5c1c70996af13641a655f34a3be9f63d5863f4aa8038d64",
+      "prefixes": 12
+    },
+    {
+      "recipe": "credit-age-only",
+      "path": "model-30.json.gz",
+      "sha256": "5622b34f674e5c405af2a774f94dbe6907fb325be8934e19448b4cdcf0aea618",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-30.json.gz",
+      "sourceSha256": "ebf24ab04513118efaa23aa38f149a6ae66cddb0d7c3a25fe147ab1ae5b42bd3",
+      "prefixes": 25
+    },
+    {
+      "recipe": "credit-use-only",
+      "path": "model-31.json.gz",
+      "sha256": "703869e8f8c3eecd78cc6f48b29ee1a95be7f19c9bc45c66d626d1def59e8254",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-31.json.gz",
+      "sourceSha256": "2fe806676a5c57cda141d0252f073e53f0580695d56b827102c8a1e34efb98c1",
+      "prefixes": 25
+    },
+    {
+      "recipe": "credit-shared-protection",
+      "path": "model-32.json.gz",
+      "sha256": "b3b560b4c3b3a6f266ef6408ed66d3322c790e4f5902aba063e99d5d34a004c8",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-32.json.gz",
+      "sourceSha256": "283868ffd45aace9d88849c65ca73c89b916f0a1c808b5f9b92705b3c2d6a4e7",
+      "prefixes": 25
+    },
+    {
+      "recipe": "credit-significance-first",
+      "path": "model-33.json.gz",
+      "sha256": "4bc60fbb9edd1bf65cf5197e9ec935dd9338c8cfa0369fd6f988236b074bc61e",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-33.json.gz",
+      "sourceSha256": "138ea8cb052352fa1b67d377a12b851d5047f73a626a8ceeb8b138b495fad46d",
+      "prefixes": 25
+    },
+    {
+      "recipe": "source-consequence-lane",
+      "path": "model-34.json.gz",
+      "sha256": "e3bd79e0cb5d791bd94dc9f2ac031be55a980318125920ea782c9454ddabf721",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-34.json.gz",
+      "sourceSha256": "628a0e689d750f0ec168d5c00bd50df9243d463931dacae43c81d5ace4801e91",
+      "prefixes": 12
+    },
+    {
+      "recipe": "footprint-Independent-sparse",
+      "path": "model-35.json.gz",
+      "sha256": "e44932ec06dfdf07edbdcc24944e6e53fe541c3c18930632aad01f78a923be95",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-35.json.gz",
+      "sourceSha256": "0a8942170aebb4b0afb1f5f13b495f83887eea1f4b1a9c9fe124ed2aef631258",
+      "prefixes": 12
+    },
+    {
+      "recipe": "footprint-Independent-dense",
+      "path": "model-36.json.gz",
+      "sha256": "81b49707b19aa74c12a7a35c855176719dc814c0a60bde6fe0834df385ee3ba6",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-36.json.gz",
+      "sourceSha256": "fc09500445ce17121413ede6be04b3b2e27d6f21677b33d6fcd00cdc40eb2291",
+      "prefixes": 12
+    },
+    {
+      "recipe": "footprint-HistoricalShared-sparse",
+      "path": "model-37.json.gz",
+      "sha256": "3398b945ea92eb49b23a6c46e1bf589c2a24043eddddf7889ce2807fff91645e",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-37.json.gz",
+      "sourceSha256": "65e93309c56bca669337d4840ecf6ac01bffad6d1424ac7fb9d9d42db0849fcc",
+      "prefixes": 12
+    },
+    {
+      "recipe": "footprint-HistoricalShared-dense",
+      "path": "model-38.json.gz",
+      "sha256": "cfdf85e3d4233fef82fbe7bc43d6d3e6ef5e69db07a5a1ebe5b017df46eeeeca",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-38.json.gz",
+      "sourceSha256": "71d309aed77a3014039de866c238d8e0bad5be89906c40d87fc99ece945dda8b",
+      "prefixes": 12
+    },
+    {
+      "recipe": "footprint-HistoricalHybrid-sparse",
+      "path": "model-39.json.gz",
+      "sha256": "08a1798b1de4c7c01d3373f343742308a0a40811db1324cc0de0857c34eabd1c",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-39.json.gz",
+      "sourceSha256": "10ab7ea23f52c69d513e623b27dde9230fca9a13cb08f723d03a697c8cc2b03b",
+      "prefixes": 12
+    },
+    {
+      "recipe": "footprint-HistoricalHybrid-dense",
+      "path": "model-40.json.gz",
+      "sha256": "c529ee0b3e8a31affb5ded1f487d4c95b487d261d982ff343a7509a792157029",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-40.json.gz",
+      "sourceSha256": "6fdcda374726a84f0d6d55a5e995ed0cc48c1e5cff38b57ef24b595ef136848d",
+      "prefixes": 12
+    },
+    {
+      "recipe": "footprint-RetiredFlat-sparse",
+      "path": "model-41.json.gz",
+      "sha256": "1991ebd8b707edb00d1f1d20a578a989f60bfa989988b6388399ad9e637d65f6",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-41.json.gz",
+      "sourceSha256": "4dac0382b6a85acb9cbb36ec16ab70714d9c246a5c907069b854a66a61517c6f",
+      "prefixes": 12
+    },
+    {
+      "recipe": "footprint-RetiredFlat-dense",
+      "path": "model-42.json.gz",
+      "sha256": "547e2704747c3f00971836dcde9827347e237d171f0033cea9c303476ccd738c",
+      "source": "docs/planning/workbench-general-comparison-cohort-rev1/model-42.json.gz",
+      "sourceSha256": "e5bcb6093d9525f6e0aac5b90491d16328bb41dfb4e634ef8b8a80a1290ba34b",
+      "prefixes": 12
+    }
+  ],
+  "scope": "All43 original General models/568 frozen-seed prefixes from immutable native-qualified captures. Independent reverse scan verifies every retained read relation and historical stability. Missing prior mutations and derived-source metadata remain unresolved; no causal necessity or observer-language claim. Counts repeat historical reads at later prefixes."
+}
