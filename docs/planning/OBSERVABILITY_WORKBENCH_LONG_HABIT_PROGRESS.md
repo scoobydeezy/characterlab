@@ -155,3 +155,19 @@ Broader browser/resources/files, complete habit reason narration, other successo
 and Campaign4 entry remain open. All18 conditional obligations remain unchanged.
 Final metadata build97413 PASS451 modules; browser-language source/artifact hashes
 independently verified. Staged size and whitespace gates PASS.
+
+2026-10-19 comparison completion: session41914 exited0. Final receipt
+`workbench-long-habit-comparison-rev1/receipt.json` PASS960 receiver cases/16320
+prefixes and2848 declared comparisons/48416 aligned prefixes. Factor census:
+768 law,480 retention,640 relearning,480 cue and480 visibility pairs. Current receiver
+snapshots match original REV2 save and pair commitments. Derived/Stored equality and
+retention behavioral equality remain separate from memory/loss diagnostics; identical
+seed never establishes random-address correspondence.
+
+Independent verification session49141 exited0: all123 current/frozen source hashes,
+960 original input hashes and2848 lossless report archives verified; every archive
+contains17 aligned reports with original source-run/reused-save equality and explicit
+non-inferred RNG correspondence. Receipt digest and counts preserved in verification.json.
+This closes the declared comparison execution audit, not fresh native source execution,
+all-prefix checkpoint replay (18545 still live), broad browser behavior, complete habit
+language or Campaign4 entry. No Campaign3 verdict/obligation changed.
