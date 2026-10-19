@@ -1,0 +1,17 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';import {gunzipSync} from 'node:zlib';
+const root='docs/planning/workbench-bio-reasons-ui-rev1',parent='docs/planning/workbench-bio-reasons-rev1',sha=b=>createHash('sha256').update(b).digest('hex'),read=p=>JSON.parse(fs.readFileSync(p));
+const receipt=read(parent+'/receipt.json'),entry=receipt.results.find(r=>r.name==='Earned/6');
+assert.equal(sha(fs.readFileSync(parent+'/'+entry.path)),entry.sha256);
+assert.equal(sha(fs.readFileSync(entry.original)),entry.originalSha256);
+const reports=JSON.parse(gunzipSync(fs.readFileSync(parent+'/'+entry.path))),native=read(entry.original),b=read(root+'/browser.json');
+assert.deepEqual(b.first,reports[0]);assert.deepEqual(b.historical,b.first);assert.deepEqual(b.third,reports[2]);
+const hashes=prefix=>['modelHash','runHash','stateHash','saveHash'].map(k=>native.prefixes[prefix][k]);
+assert.deepEqual(b.prefix1Hashes,hashes(1));assert.deepEqual(b.prefix3Hashes,hashes(3));
+assert.deepEqual(b.afterSelectionHashes,b.prefix3Hashes);assert.deepEqual(b.afterExpansionHashes,b.prefix3Hashes);
+assert(b.openDetails.includes('Nucleus 1: d6, standing 0, situational 0'));
+const files=['src/workbench/bioReasonDiagnostics.ts','src/workbench/BioReasonDiagnosticsPanel.tsx','src/workbench/BioWorkbench.tsx','scripts/check-workbench-bio-reasons-ui.mjs'];
+const sources=files.map(path=>{const bytes=fs.readFileSync(path),target=root+'/sources/'+path;fs.mkdirSync(target.slice(0,target.lastIndexOf('/')),{recursive:true});fs.writeFileSync(target,bytes,{flag:'wx'});return {path,sha256:sha(bytes)};});
+for(const s of receipt.sources)assert.equal(sha(fs.readFileSync(s.path)),s.sha256);
+const paths=[root+'/browser.json',root+'/factors.png',parent+'/receipt.json',parent+'/'+entry.path,entry.original];
+fs.writeFileSync(root+'/receipt.json',JSON.stringify({status:'PASS BOUNDED BIO REASON FACTOR BROWSER',sources,artifacts:paths.map(path=>({path,sha256:sha(fs.readFileSync(path))})),scope:'Earned/6 reason records1/3 match full-cohort native-backed diagnostics. Record1 remains identical after advancing to3. Historical selection and keyboard expansion preserve all four native hashes. Isolated temporary production build on port4174; original batch build untouched. No all-case browser, observer language, complete causal attribution or Campaign4 entry acceptance.'},null,2)+'\n',{flag:'wx'});
+console.log('PASS BIO factor browser: native record joins, historical stability and immutable hashes');

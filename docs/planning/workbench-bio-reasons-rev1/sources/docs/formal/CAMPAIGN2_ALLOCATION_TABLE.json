@@ -1,0 +1,2680 @@
+{
+  "status": "ACCEPTED AND FROZEN",
+  "version": "campaign2-allocation/0.2-candidate",
+  "date": "2026-09-06",
+  "records": [
+    {
+      "owner": "PRJ",
+      "name": "StateKeyGrammar",
+      "typeId": 260,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "VariantTag",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 2,
+          "name": "RecordTypeId",
+          "required": false,
+          "type": "u"
+        }
+      ]
+    },
+    {
+      "owner": "PRJ",
+      "name": "StateKeyGrammarDefinition",
+      "typeId": 261,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Pattern",
+          "required": true,
+          "type": "StatePathPattern"
+        },
+        {
+          "id": 2,
+          "name": "KeyGrammar",
+          "required": true,
+          "type": "StateKeyGrammar"
+        }
+      ]
+    },
+    {
+      "owner": "PRJ",
+      "name": "ReadOnlyStateFamilyDefinition",
+      "typeId": 262,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Pattern",
+          "required": true,
+          "type": "StatePathPattern"
+        },
+        {
+          "id": 2,
+          "name": "ValueGrammar",
+          "required": true,
+          "type": "LeafValueGrammar"
+        }
+      ]
+    },
+    {
+      "owner": "PRJ",
+      "name": "CanonicalIdentityRole",
+      "typeId": 263,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "RequiredNamespace",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 2,
+          "name": "DomainValidatorId",
+          "required": false,
+          "type": "DomainValidatorId"
+        }
+      ]
+    },
+    {
+      "owner": "PRJ",
+      "name": "CanonicalRolePosition",
+      "typeId": 264,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "VariantTag",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 2,
+          "name": "RecordTypeId",
+          "required": false,
+          "type": "u"
+        },
+        {
+          "id": 3,
+          "name": "RootStateTypeId",
+          "required": false,
+          "type": "u"
+        },
+        {
+          "id": 4,
+          "name": "FieldId",
+          "required": true,
+          "type": "u"
+        }
+      ]
+    },
+    {
+      "owner": "PRJ",
+      "name": "CanonicalRoleConstraint",
+      "typeId": 265,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Position",
+          "required": true,
+          "type": "CanonicalRolePosition"
+        },
+        {
+          "id": 2,
+          "name": "Role",
+          "required": true,
+          "type": "CanonicalIdentityRole"
+        }
+      ]
+    },
+    {
+      "owner": "PRJ",
+      "name": "EventDependentProjectedFieldRequirement",
+      "typeId": 266,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "SelectorSourceFieldId",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 2,
+          "name": "TargetStatePathTemplate",
+          "required": true,
+          "type": "StatePathPattern"
+        },
+        {
+          "id": 3,
+          "name": "ProjectedFieldId",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 4,
+          "name": "OutputRole",
+          "required": true,
+          "type": "CanonicalIdentityRole"
+        },
+        {
+          "id": 5,
+          "name": "OutputAccessor",
+          "required": true,
+          "type": "ProjectionAccessorId"
+        }
+      ]
+    },
+    {
+      "owner": "IDN",
+      "name": "CharacterObserverBindingValue",
+      "typeId": 267,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "CharacterId",
+          "required": true,
+          "type": "CharacterId"
+        }
+      ]
+    },
+    {
+      "owner": "IDN",
+      "name": "CharacterObserverBindingState",
+      "typeId": 268,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Bindings",
+          "required": true,
+          "type": "map<ObserverId;CharacterObserverBindingValue>"
+        }
+      ]
+    },
+    {
+      "owner": "EVID",
+      "name": "OutcomeEvaluation",
+      "typeId": 269,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "OutcomeEvaluationId",
+          "required": true,
+          "type": "OutcomeEvaluationId"
+        },
+        {
+          "id": 2,
+          "name": "ConsequenceExperience",
+          "required": true,
+          "type": "PreRecognitionSemanticExperience"
+        },
+        {
+          "id": 3,
+          "name": "TransformationVersion",
+          "required": true,
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "owner": "EVID",
+      "name": "OutcomeLearningEvidence",
+      "typeId": 270,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "OutcomeLearningEvidenceId",
+          "required": true,
+          "type": "OutcomeLearningEvidenceId"
+        },
+        {
+          "id": 2,
+          "name": "Evaluation",
+          "required": true,
+          "type": "OutcomeEvaluation"
+        },
+        {
+          "id": 3,
+          "name": "TransformationVersion",
+          "required": true,
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "owner": "EVID",
+      "name": "TransitionDefinitionV04",
+      "typeId": 271,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "InputAdmission",
+          "required": true,
+          "type": "TransitionInputAdmissionV04"
+        },
+        {
+          "id": 2,
+          "name": "ReadDomain",
+          "required": true,
+          "type": "set<StatePathPattern>"
+        },
+        {
+          "id": 3,
+          "name": "OutputDefinitions",
+          "required": true,
+          "type": "set<TransitionOutputDefinition>"
+        },
+        {
+          "id": 4,
+          "name": "WriteCapability",
+          "required": true,
+          "type": "WriteCapabilityV04"
+        }
+      ]
+    },
+    {
+      "owner": "EVID",
+      "name": "TransitionRegistrationV04",
+      "typeId": 272,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "ExecutingSeamId",
+          "required": true,
+          "type": "SeamId"
+        },
+        {
+          "id": 2,
+          "name": "ExecutingSeamVersion",
+          "required": true,
+          "type": "text"
+        },
+        {
+          "id": 3,
+          "name": "TransitionDefinition",
+          "required": true,
+          "type": "TransitionDefinitionV04"
+        },
+        {
+          "id": 4,
+          "name": "IngressDefinition",
+          "required": true,
+          "type": "TransitionIngressDefinition"
+        }
+      ]
+    },
+    {
+      "owner": "EVID",
+      "name": "WriteCapabilityV04",
+      "typeId": 273,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "VariantTag",
+          "required": true,
+          "type": "u"
+        }
+      ]
+    },
+    {
+      "owner": "EVID",
+      "name": "TransitionInputAdmissionV04",
+      "typeId": 274,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "InputRecordSchema",
+          "required": true,
+          "type": "CanonicalRecordSchemaRef"
+        },
+        {
+          "id": 2,
+          "name": "Producer",
+          "required": true,
+          "type": "TransitionInputProducerV04"
+        },
+        {
+          "id": 3,
+          "name": "RequiredSourceRelation",
+          "required": true,
+          "type": "u"
+        }
+      ]
+    },
+    {
+      "owner": "EVID",
+      "name": "TransitionInputProducerV04",
+      "typeId": 275,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "VariantTag",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 2,
+          "name": "ProducingSeamId",
+          "required": false,
+          "type": "SeamId"
+        },
+        {
+          "id": 3,
+          "name": "ProducingSeamVersion",
+          "required": false,
+          "type": "text"
+        },
+        {
+          "id": 4,
+          "name": "Lane",
+          "required": false,
+          "type": "u"
+        },
+        {
+          "id": 5,
+          "name": "ProducingTransitionKind",
+          "required": false,
+          "type": "TransitionKindId"
+        }
+      ]
+    },
+    {
+      "owner": "EVID",
+      "name": "TransitionIngressDefinition",
+      "typeId": 276,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "ConsumerEventTypeId",
+          "required": true,
+          "type": "EventTypeId"
+        },
+        {
+          "id": 2,
+          "name": "DueAtRule",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 3,
+          "name": "ConsumerPhase",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 4,
+          "name": "PayloadRule",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 5,
+          "name": "Multiplicity",
+          "required": true,
+          "type": "u"
+        }
+      ]
+    },
+    {
+      "owner": "EVID",
+      "name": "TransitionOutputDefinition",
+      "typeId": 277,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "OutputRecordSchema",
+          "required": true,
+          "type": "CanonicalRecordSchemaRef"
+        },
+        {
+          "id": 2,
+          "name": "Multiplicity",
+          "required": true,
+          "type": "u"
+        }
+      ]
+    },
+    {
+      "owner": "EVID",
+      "name": "OccurrenceIdentityRule",
+      "typeId": 278,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "IdentityFieldId",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 2,
+          "name": "IdentityRole",
+          "required": true,
+          "type": "CanonicalIdentityRole"
+        }
+      ]
+    },
+    {
+      "owner": "EVID",
+      "name": "TransitionAdmissionRegistry",
+      "typeId": 279,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "LearningRoutes",
+          "required": true,
+          "type": "set<LearningRouteId>"
+        },
+        {
+          "id": 2,
+          "name": "TransitionRoutes",
+          "required": true,
+          "type": "map<TransitionKindId;LearningRouteId>"
+        },
+        {
+          "id": 3,
+          "name": "OccurrenceIdentities",
+          "required": true,
+          "type": "map<CanonicalRecordSchemaRef;OccurrenceIdentityRule>"
+        }
+      ]
+    },
+    {
+      "owner": "REG",
+      "name": "RegulatoryVariableDefinition",
+      "typeId": 280,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Scale",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 2,
+          "name": "Minimum",
+          "required": true,
+          "type": "i"
+        },
+        {
+          "id": 3,
+          "name": "Maximum",
+          "required": true,
+          "type": "i"
+        }
+      ]
+    },
+    {
+      "owner": "REG",
+      "name": "RegulatoryCharacterReferenceKey",
+      "typeId": 281,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "CharacterId",
+          "required": true,
+          "type": "CharacterId"
+        }
+      ]
+    },
+    {
+      "owner": "REG",
+      "name": "RegulatoryReferenceDefinition",
+      "typeId": 282,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "CharacterReferences",
+          "required": true,
+          "type": "map<RegulatoryCharacterReferenceKey;LinearAnalyticalAnchor>"
+        },
+        {
+          "id": 2,
+          "name": "Parameters",
+          "required": true,
+          "type": "map<RegulatoryReferenceParameterId;LinearRateParameters>"
+        }
+      ]
+    },
+    {
+      "owner": "REG",
+      "name": "RegulatoryVariableRegistration",
+      "typeId": 283,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "VariableDefinition",
+          "required": true,
+          "type": "RegulatoryVariableDefinition"
+        },
+        {
+          "id": 2,
+          "name": "ReferenceDefinition",
+          "required": true,
+          "type": "RegulatoryReferenceDefinition"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "Campaign2StateFamilyRegistry",
+      "typeId": 284,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Families",
+          "required": true,
+          "type": "map<Campaign2StateFamilyId;Campaign2StateFamilyDefinition>"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "Campaign2StateFamilyDefinition",
+      "typeId": 285,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Route",
+          "required": true,
+          "type": "LearningRouteId"
+        },
+        {
+          "id": 2,
+          "name": "Storage",
+          "required": true,
+          "type": "Campaign2Storage"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "Campaign2Storage",
+      "typeId": 286,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "VariantTag",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 2,
+          "name": "RootStateTypeId",
+          "required": false,
+          "type": "u"
+        },
+        {
+          "id": 3,
+          "name": "LeafFields",
+          "required": false,
+          "type": "map<LeafFamilyId;u>"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "LoadDomainDefinition",
+      "typeId": 287,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Scale",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 2,
+          "name": "Capacity",
+          "required": true,
+          "type": "LoadCapacity"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "LoadCapacity",
+      "typeId": 288,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "VariantTag",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 2,
+          "name": "Maximum",
+          "required": false,
+          "type": "u"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "ProcedureDefinition",
+      "typeId": 289,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "CompetenceScale",
+          "required": true,
+          "type": "u"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "AdaptationLeafFamilyDefinition",
+      "typeId": 290,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "DomainSource",
+          "required": true,
+          "type": "AdaptationDomainSource"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "AdaptationDomainSource",
+      "typeId": 291,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "VariantTag",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 2,
+          "name": "Scale",
+          "required": false,
+          "type": "u"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "ToleranceKey",
+      "typeId": 292,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "CharacterId",
+          "required": true,
+          "type": "CharacterId"
+        },
+        {
+          "id": 2,
+          "name": "ExposureReferentId",
+          "required": true,
+          "type": "ExposureReferentId"
+        },
+        {
+          "id": 3,
+          "name": "RegulatoryVariableId",
+          "required": true,
+          "type": "RegulatoryVariableId"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "SensitizationKey",
+      "typeId": 293,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "CharacterId",
+          "required": true,
+          "type": "CharacterId"
+        },
+        {
+          "id": 2,
+          "name": "ExposureReferentId",
+          "required": true,
+          "type": "ExposureReferentId"
+        },
+        {
+          "id": 3,
+          "name": "RegulatoryVariableId",
+          "required": true,
+          "type": "RegulatoryVariableId"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "RegulatoryAdaptationKey",
+      "typeId": 294,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "CharacterId",
+          "required": true,
+          "type": "CharacterId"
+        },
+        {
+          "id": 2,
+          "name": "RegulatoryVariableId",
+          "required": true,
+          "type": "RegulatoryVariableId"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "AccumulatedLoadKey",
+      "typeId": 295,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "CharacterId",
+          "required": true,
+          "type": "CharacterId"
+        },
+        {
+          "id": 2,
+          "name": "LoadDomainId",
+          "required": true,
+          "type": "LoadDomainId"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "ProceduralCompetenceKey",
+      "typeId": 296,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "CharacterId",
+          "required": true,
+          "type": "CharacterId"
+        },
+        {
+          "id": 2,
+          "name": "ProcedureId",
+          "required": true,
+          "type": "ProcedureId"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "ToleranceValue",
+      "typeId": 297,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Magnitude",
+          "required": true,
+          "type": "u"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "SensitizationValue",
+      "typeId": 298,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Magnitude",
+          "required": true,
+          "type": "u"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "RegulatoryAdaptationValue",
+      "typeId": 299,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Magnitude",
+          "required": true,
+          "type": "i"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "AccumulatedLoadValue",
+      "typeId": 300,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Magnitude",
+          "required": true,
+          "type": "u"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "ProceduralCompetenceValue",
+      "typeId": 301,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Magnitude",
+          "required": true,
+          "type": "u"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "RegulatoryAdaptationState",
+      "typeId": 302,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Tolerance",
+          "required": true,
+          "type": "map<ToleranceKey;ToleranceValue>"
+        },
+        {
+          "id": 2,
+          "name": "Sensitization",
+          "required": true,
+          "type": "map<SensitizationKey;SensitizationValue>"
+        },
+        {
+          "id": 3,
+          "name": "Displacements",
+          "required": true,
+          "type": "map<RegulatoryAdaptationKey;RegulatoryAdaptationValue>"
+        },
+        {
+          "id": 4,
+          "name": "Loads",
+          "required": true,
+          "type": "map<AccumulatedLoadKey;AccumulatedLoadValue>"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "ProceduralSkillState",
+      "typeId": 303,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Competence",
+          "required": true,
+          "type": "map<ProceduralCompetenceKey;ProceduralCompetenceValue>"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "AuthoredActualAdaptationFact",
+      "typeId": 304,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Fact",
+          "required": true,
+          "type": "FactUnion"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "RegulatoryExposureFact",
+      "typeId": 305,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "CharacterId",
+          "required": true,
+          "type": "CharacterId"
+        },
+        {
+          "id": 2,
+          "name": "ExposureReferentId",
+          "required": true,
+          "type": "ExposureReferentId"
+        },
+        {
+          "id": 3,
+          "name": "ActualContactCount",
+          "required": true,
+          "type": "u"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "ProceduralPracticeFact",
+      "typeId": 306,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "CharacterId",
+          "required": true,
+          "type": "CharacterId"
+        },
+        {
+          "id": 2,
+          "name": "ProcedureId",
+          "required": true,
+          "type": "ProcedureId"
+        },
+        {
+          "id": 3,
+          "name": "CompletedRepetitions",
+          "required": true,
+          "type": "u"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "AutomaticAdaptationInput",
+      "typeId": 307,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "AutomaticAdaptationInputId",
+          "required": true,
+          "type": "AutomaticAdaptationInputId"
+        },
+        {
+          "id": 2,
+          "name": "Basis",
+          "required": true,
+          "type": "FactUnion"
+        },
+        {
+          "id": 3,
+          "name": "OccurredAt",
+          "required": true,
+          "type": "i"
+        },
+        {
+          "id": 4,
+          "name": "TransformationVersion",
+          "required": true,
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "AuthoredAdaptationFactProducerDefinition",
+      "typeId": 308,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "EventTypeId",
+          "required": true,
+          "type": "EventTypeId"
+        },
+        {
+          "id": 2,
+          "name": "PayloadSchema",
+          "required": true,
+          "type": "CanonicalRecordSchemaRef"
+        },
+        {
+          "id": 3,
+          "name": "OutputSchema",
+          "required": true,
+          "type": "CanonicalRecordSchemaRef"
+        },
+        {
+          "id": 4,
+          "name": "Phase",
+          "required": true,
+          "type": "u"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "AuthoredFactConsequenceBridgeDefinition",
+      "typeId": 309,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Channels",
+          "required": true,
+          "type": "map<ObservationChannelId;ObservationChannel>"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "FixtureConsequenceObservationInput",
+      "typeId": 310,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Truth",
+          "required": true,
+          "type": "BoundedEffectTruth"
+        },
+        {
+          "id": 2,
+          "name": "Channel",
+          "required": true,
+          "type": "ObservationChannel"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "AdaptationRuleDefinition",
+      "typeId": 311,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Match",
+          "required": true,
+          "type": "AdaptationMatch"
+        },
+        {
+          "id": 2,
+          "name": "TargetStateFamilyId",
+          "required": true,
+          "type": "Campaign2StateFamilyId"
+        },
+        {
+          "id": 3,
+          "name": "TargetLeafFamilyId",
+          "required": true,
+          "type": "LeafFamilyId"
+        },
+        {
+          "id": 4,
+          "name": "KeyDerivation",
+          "required": true,
+          "type": "AdaptationKeyDerivation"
+        },
+        {
+          "id": 5,
+          "name": "Gate",
+          "required": true,
+          "type": "AdaptationGate"
+        },
+        {
+          "id": 6,
+          "name": "Step",
+          "required": true,
+          "type": "i"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "AdaptationMatch",
+      "typeId": 312,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "VariantTag",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 2,
+          "name": "ExposureReferentId",
+          "required": false,
+          "type": "ExposureReferentId"
+        },
+        {
+          "id": 3,
+          "name": "ProcedureId",
+          "required": false,
+          "type": "ProcedureId"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "AdaptationKeyDerivation",
+      "typeId": 313,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "VariantTag",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 2,
+          "name": "RegulatoryVariableId",
+          "required": false,
+          "type": "RegulatoryVariableId"
+        },
+        {
+          "id": 3,
+          "name": "LoadDomainId",
+          "required": false,
+          "type": "LoadDomainId"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "AdaptationGate",
+      "typeId": 314,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "VariantTag",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 2,
+          "name": "Source",
+          "required": false,
+          "type": "AdaptationReadTarget"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "AdaptationReadTarget",
+      "typeId": 315,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "StateFamilyId",
+          "required": true,
+          "type": "Campaign2StateFamilyId"
+        },
+        {
+          "id": 2,
+          "name": "LeafFamilyId",
+          "required": true,
+          "type": "LeafFamilyId"
+        },
+        {
+          "id": 3,
+          "name": "KeyDerivation",
+          "required": true,
+          "type": "AdaptationKeyDerivation"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "RuleResolutionContract",
+      "typeId": 316,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Rules",
+          "required": true,
+          "type": "set<AdaptationRuleId>"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "AdaptationTransitionRegistrationExtension",
+      "typeId": 317,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "AcceptedBasis",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 2,
+          "name": "RuleResolutionContract",
+          "required": true,
+          "type": "RuleResolutionContract"
+        },
+        {
+          "id": 3,
+          "name": "OutputProduction",
+          "required": true,
+          "type": "AdaptationOutputProductionDefinition"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "TransitionRegistrationV06",
+      "typeId": 318,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "ExecutingSeamId",
+          "required": true,
+          "type": "SeamId"
+        },
+        {
+          "id": 2,
+          "name": "ExecutingSeamVersion",
+          "required": true,
+          "type": "text"
+        },
+        {
+          "id": 3,
+          "name": "TransitionDefinitionV06",
+          "required": true,
+          "type": "TransitionDefinitionV06"
+        },
+        {
+          "id": 4,
+          "name": "IngressDefinition",
+          "required": true,
+          "type": "TransitionIngressDefinition"
+        },
+        {
+          "id": 5,
+          "name": "AdaptationExtension",
+          "required": true,
+          "type": "AdaptationTransitionRegistrationExtension"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "TransitionDefinitionV06",
+      "typeId": 319,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "InputAdmission",
+          "required": true,
+          "type": "TransitionInputAdmissionV06"
+        },
+        {
+          "id": 2,
+          "name": "ReadDomain",
+          "required": true,
+          "type": "set<StatePathPattern>"
+        },
+        {
+          "id": 3,
+          "name": "OutputDefinitions",
+          "required": true,
+          "type": "set<TransitionOutputDefinition>"
+        },
+        {
+          "id": 4,
+          "name": "WriteCapability",
+          "required": true,
+          "type": "WriteCapabilityV06"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "TransitionInputAdmissionV06",
+      "typeId": 320,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "InputRecordSchema",
+          "required": true,
+          "type": "CanonicalRecordSchemaRef"
+        },
+        {
+          "id": 2,
+          "name": "Producer",
+          "required": true,
+          "type": "TransitionInputProducerV06"
+        },
+        {
+          "id": 3,
+          "name": "RequiredSourceRelation",
+          "required": true,
+          "type": "u"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "TransitionInputProducerV06",
+      "typeId": 321,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "VariantTag",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 2,
+          "name": "ProducingSeamId",
+          "required": false,
+          "type": "SeamId"
+        },
+        {
+          "id": 3,
+          "name": "ProducingSeamVersion",
+          "required": false,
+          "type": "text"
+        },
+        {
+          "id": 4,
+          "name": "Lane",
+          "required": false,
+          "type": "u"
+        },
+        {
+          "id": 5,
+          "name": "ProducingTransitionKind",
+          "required": false,
+          "type": "TransitionKindId"
+        },
+        {
+          "id": 6,
+          "name": "ProducerDefinition",
+          "required": false,
+          "type": "RegistryDefinitionId"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "WriteCapabilityV06",
+      "typeId": 322,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "VariantTag",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 2,
+          "name": "MutationAuthority",
+          "required": false,
+          "type": "MutationAuthorityId"
+        },
+        {
+          "id": 3,
+          "name": "WritableFamilies",
+          "required": false,
+          "type": "set<Campaign2StateFamilyId>"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "AdaptationOutputProductionDefinition",
+      "typeId": 323,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "DispatchSchema",
+          "required": true,
+          "type": "CanonicalRecordSchemaRef"
+        },
+        {
+          "id": 2,
+          "name": "EvaluationSchema",
+          "required": true,
+          "type": "CanonicalRecordSchemaRef"
+        },
+        {
+          "id": 3,
+          "name": "Rule",
+          "required": true,
+          "type": "u"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "AdaptationDispatchRecord",
+      "typeId": 324,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "DispatchId",
+          "required": true,
+          "type": "AdaptationDispatchId"
+        },
+        {
+          "id": 2,
+          "name": "Input",
+          "required": true,
+          "type": "AutomaticAdaptationInput"
+        },
+        {
+          "id": 3,
+          "name": "ApplicableRules",
+          "required": true,
+          "type": "set<AdaptationRuleId>"
+        },
+        {
+          "id": 4,
+          "name": "TransformationVersion",
+          "required": true,
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "AdaptationEvaluationResult",
+      "typeId": 325,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "EvaluationId",
+          "required": true,
+          "type": "AdaptationEvaluationId"
+        },
+        {
+          "id": 2,
+          "name": "DispatchId",
+          "required": true,
+          "type": "AdaptationDispatchId"
+        },
+        {
+          "id": 3,
+          "name": "RuleId",
+          "required": true,
+          "type": "AdaptationRuleId"
+        },
+        {
+          "id": 4,
+          "name": "TargetPath",
+          "required": true,
+          "type": "StatePath"
+        },
+        {
+          "id": 5,
+          "name": "Prior",
+          "required": true,
+          "type": "AdaptationPrior"
+        },
+        {
+          "id": 6,
+          "name": "Result",
+          "required": true,
+          "type": "AdaptationResult"
+        },
+        {
+          "id": 7,
+          "name": "TransformationVersion",
+          "required": true,
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "AdaptationPrior",
+      "typeId": 326,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "VariantTag",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 2,
+          "name": "Value",
+          "required": false,
+          "type": "AdaptationLeafValue"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "AdaptationResult",
+      "typeId": 327,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "VariantTag",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 2,
+          "name": "Patch",
+          "required": false,
+          "type": "StatePatch"
+        }
+      ]
+    },
+    {
+      "owner": "ADAPT",
+      "name": "AdaptationSettlementDefinition",
+      "typeId": 328,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Consumers",
+          "required": true,
+          "type": "set<TransitionKindId>"
+        },
+        {
+          "id": 2,
+          "name": "PhasePolicy",
+          "required": true,
+          "type": "u"
+        }
+      ]
+    }
+  ],
+  "namespaces": [
+    {
+      "name": "LearningRouteId",
+      "namespace": 1026,
+      "owner": "EVID/shared",
+      "payload": "text"
+    },
+    {
+      "name": "RegistryDefinitionId",
+      "namespace": 1027,
+      "owner": "EVID/shared",
+      "payload": "text"
+    },
+    {
+      "name": "ProjectionAccessorId",
+      "namespace": 1028,
+      "owner": "PRJ/shared",
+      "payload": "text"
+    },
+    {
+      "name": "RegulatoryVariableId",
+      "namespace": 1029,
+      "owner": "REG",
+      "payload": "text"
+    },
+    {
+      "name": "RegulatoryReferenceParameterId",
+      "namespace": 1030,
+      "owner": "REG",
+      "payload": "text"
+    },
+    {
+      "name": "Campaign2StateFamilyId",
+      "namespace": 1031,
+      "owner": "ADAPT",
+      "payload": "text"
+    },
+    {
+      "name": "LeafFamilyId",
+      "namespace": 1032,
+      "owner": "ADAPT",
+      "payload": "text"
+    },
+    {
+      "name": "LoadDomainId",
+      "namespace": 1033,
+      "owner": "ADAPT",
+      "payload": "text"
+    },
+    {
+      "name": "ProcedureId",
+      "namespace": 1034,
+      "owner": "ADAPT",
+      "payload": "text"
+    },
+    {
+      "name": "AdaptationRuleId",
+      "namespace": 1035,
+      "owner": "ADAPT",
+      "payload": "text"
+    },
+    {
+      "name": "OutcomeEvaluationId",
+      "namespace": 1116,
+      "owner": "EVID",
+      "payload": "unsigned-runtime-ordinal"
+    },
+    {
+      "name": "OutcomeLearningEvidenceId",
+      "namespace": 1117,
+      "owner": "EVID",
+      "payload": "unsigned-runtime-ordinal"
+    },
+    {
+      "name": "AutomaticAdaptationInputId",
+      "namespace": 1118,
+      "owner": "ADAPT",
+      "payload": "unsigned-runtime-ordinal"
+    },
+    {
+      "name": "AdaptationDispatchId",
+      "namespace": 1119,
+      "owner": "ADAPT",
+      "payload": "unsigned-runtime-ordinal"
+    },
+    {
+      "name": "AdaptationEvaluationId",
+      "namespace": 1120,
+      "owner": "ADAPT",
+      "payload": "unsigned-runtime-ordinal"
+    },
+    {
+      "name": "FixtureConsequenceTruthId",
+      "namespace": 1121,
+      "owner": "ADAPT fixture",
+      "payload": "unsigned-runtime-ordinal"
+    },
+    {
+      "name": "SemanticKindId",
+      "namespace": 1004,
+      "owner": "CONTENT/shared",
+      "payload": "text"
+    },
+    {
+      "name": "SeamId",
+      "namespace": 1036,
+      "owner": "trace/transition substrate",
+      "payload": "text"
+    }
+  ],
+  "members": [
+    {
+      "namespace": 1026,
+      "name": "route/character-learning",
+      "payload": "route/character-learning",
+      "encoding": "NFC text",
+      "owner": "shared"
+    },
+    {
+      "namespace": 1026,
+      "name": "route/automatic-adaptation",
+      "payload": "route/automatic-adaptation",
+      "encoding": "NFC text",
+      "owner": "shared"
+    },
+    {
+      "namespace": 1027,
+      "name": "definition/transition-admission",
+      "payload": "definition/transition-admission",
+      "encoding": "NFC text",
+      "owner": "shared"
+    },
+    {
+      "namespace": 1027,
+      "name": "definition/campaign2-state-families",
+      "payload": "definition/campaign2-state-families",
+      "encoding": "NFC text",
+      "owner": "shared"
+    },
+    {
+      "namespace": 1027,
+      "name": "definition/authored-adaptation-facts",
+      "payload": "definition/authored-adaptation-facts",
+      "encoding": "NFC text",
+      "owner": "shared"
+    },
+    {
+      "namespace": 1027,
+      "name": "definition/authored-fact-consequence-bridge",
+      "payload": "definition/authored-fact-consequence-bridge",
+      "encoding": "NFC text",
+      "owner": "shared"
+    },
+    {
+      "namespace": 1027,
+      "name": "definition/adaptation-settlement",
+      "payload": "definition/adaptation-settlement",
+      "encoding": "NFC text",
+      "owner": "shared"
+    },
+    {
+      "namespace": 1028,
+      "name": "ResolvedCharacterSubject",
+      "payload": "ResolvedCharacterSubject",
+      "encoding": "NFC text",
+      "owner": "PRJ"
+    },
+    {
+      "namespace": 1028,
+      "name": "accessor/adaptation-target-prior",
+      "payload": "accessor/adaptation-target-prior",
+      "encoding": "NFC text",
+      "owner": "PRJ"
+    },
+    {
+      "namespace": 1028,
+      "name": "accessor/adaptation-gate-prior",
+      "payload": "accessor/adaptation-gate-prior",
+      "encoding": "NFC text",
+      "owner": "PRJ"
+    },
+    {
+      "namespace": 1031,
+      "name": "belief-expectation",
+      "payload": "belief-expectation",
+      "encoding": "NFC text",
+      "owner": "ADAPT"
+    },
+    {
+      "namespace": 1031,
+      "name": "episodic-memory",
+      "payload": "episodic-memory",
+      "encoding": "NFC text",
+      "owner": "ADAPT"
+    },
+    {
+      "namespace": 1031,
+      "name": "associations",
+      "payload": "associations",
+      "encoding": "NFC text",
+      "owner": "ADAPT"
+    },
+    {
+      "namespace": 1031,
+      "name": "values",
+      "payload": "values",
+      "encoding": "NFC text",
+      "owner": "ADAPT"
+    },
+    {
+      "namespace": 1031,
+      "name": "procedural-skill",
+      "payload": "procedural-skill",
+      "encoding": "NFC text",
+      "owner": "ADAPT"
+    },
+    {
+      "namespace": 1031,
+      "name": "habits",
+      "payload": "habits",
+      "encoding": "NFC text",
+      "owner": "ADAPT"
+    },
+    {
+      "namespace": 1031,
+      "name": "person-model",
+      "payload": "person-model",
+      "encoding": "NFC text",
+      "owner": "ADAPT"
+    },
+    {
+      "namespace": 1031,
+      "name": "relationships",
+      "payload": "relationships",
+      "encoding": "NFC text",
+      "owner": "ADAPT"
+    },
+    {
+      "namespace": 1031,
+      "name": "regulatory-adaptation",
+      "payload": "regulatory-adaptation",
+      "encoding": "NFC text",
+      "owner": "ADAPT"
+    },
+    {
+      "namespace": 1031,
+      "name": "identity-disposition",
+      "payload": "identity-disposition",
+      "encoding": "NFC text",
+      "owner": "ADAPT"
+    },
+    {
+      "namespace": 1032,
+      "name": "leaf/tolerance",
+      "payload": "leaf/tolerance",
+      "encoding": "NFC text",
+      "owner": "ADAPT"
+    },
+    {
+      "namespace": 1032,
+      "name": "leaf/sensitization",
+      "payload": "leaf/sensitization",
+      "encoding": "NFC text",
+      "owner": "ADAPT"
+    },
+    {
+      "namespace": 1032,
+      "name": "leaf/regulatory-displacement",
+      "payload": "leaf/regulatory-displacement",
+      "encoding": "NFC text",
+      "owner": "ADAPT"
+    },
+    {
+      "namespace": 1032,
+      "name": "leaf/accumulated-load",
+      "payload": "leaf/accumulated-load",
+      "encoding": "NFC text",
+      "owner": "ADAPT"
+    },
+    {
+      "namespace": 1032,
+      "name": "leaf/procedural-competence",
+      "payload": "leaf/procedural-competence",
+      "encoding": "NFC text",
+      "owner": "ADAPT"
+    },
+    {
+      "namespace": 1023,
+      "name": "registry/transition-registration",
+      "payload": "registry/transition-registration",
+      "encoding": "NFC text",
+      "owner": "governance consumers"
+    },
+    {
+      "namespace": 1023,
+      "name": "registry/transition-admission",
+      "payload": "registry/transition-admission",
+      "encoding": "NFC text",
+      "owner": "governance consumers"
+    },
+    {
+      "namespace": 1023,
+      "name": "registry/regulatory-variable",
+      "payload": "registry/regulatory-variable",
+      "encoding": "NFC text",
+      "owner": "governance consumers"
+    },
+    {
+      "namespace": 1023,
+      "name": "registry/campaign2-state-family",
+      "payload": "registry/campaign2-state-family",
+      "encoding": "NFC text",
+      "owner": "governance consumers"
+    },
+    {
+      "namespace": 1023,
+      "name": "registry/adaptation-leaf-family",
+      "payload": "registry/adaptation-leaf-family",
+      "encoding": "NFC text",
+      "owner": "governance consumers"
+    },
+    {
+      "namespace": 1023,
+      "name": "registry/load-domain",
+      "payload": "registry/load-domain",
+      "encoding": "NFC text",
+      "owner": "governance consumers"
+    },
+    {
+      "namespace": 1023,
+      "name": "registry/procedure",
+      "payload": "registry/procedure",
+      "encoding": "NFC text",
+      "owner": "governance consumers"
+    },
+    {
+      "namespace": 1023,
+      "name": "registry/adaptation-rule",
+      "payload": "registry/adaptation-rule",
+      "encoding": "NFC text",
+      "owner": "governance consumers"
+    },
+    {
+      "namespace": 1023,
+      "name": "registry/authored-adaptation-facts",
+      "payload": "registry/authored-adaptation-facts",
+      "encoding": "NFC text",
+      "owner": "governance consumers"
+    },
+    {
+      "namespace": 1023,
+      "name": "registry/authored-fact-consequence-bridge",
+      "payload": "registry/authored-fact-consequence-bridge",
+      "encoding": "NFC text",
+      "owner": "governance consumers"
+    },
+    {
+      "namespace": 1023,
+      "name": "registry/adaptation-settlement",
+      "payload": "registry/adaptation-settlement",
+      "encoding": "NFC text",
+      "owner": "governance consumers"
+    },
+    {
+      "namespace": 1025,
+      "name": "authority/regulatory-adaptation",
+      "payload": "authority/regulatory-adaptation",
+      "encoding": "NFC text",
+      "owner": "ADAPT"
+    },
+    {
+      "namespace": 1025,
+      "name": "authority/procedural-skill",
+      "payload": "authority/procedural-skill",
+      "encoding": "NFC text",
+      "owner": "ADAPT"
+    },
+    {
+      "namespace": 1021,
+      "name": "validator/character-qualification",
+      "payload": "validator/character-qualification",
+      "encoding": "NFC text",
+      "owner": "IDN"
+    },
+    {
+      "namespace": 1009,
+      "name": "OutcomeEvaluationTransition",
+      "payload": "OutcomeEvaluationTransition",
+      "encoding": "NFC text",
+      "owner": "EVID/ADAPT"
+    },
+    {
+      "namespace": 1009,
+      "name": "OutcomeLearningEvidenceTransition",
+      "payload": "OutcomeLearningEvidenceTransition",
+      "encoding": "NFC text",
+      "owner": "EVID/ADAPT"
+    },
+    {
+      "namespace": 1009,
+      "name": "transition/regulatory-adaptation",
+      "payload": "transition/regulatory-adaptation",
+      "encoding": "NFC text",
+      "owner": "EVID/ADAPT"
+    },
+    {
+      "namespace": 1009,
+      "name": "transition/procedural-adaptation",
+      "payload": "transition/procedural-adaptation",
+      "encoding": "NFC text",
+      "owner": "EVID/ADAPT"
+    },
+    {
+      "namespace": 1001,
+      "name": "event/outcome-evaluation",
+      "payload": "event/outcome-evaluation",
+      "encoding": "NFC text",
+      "owner": "EVID/ADAPT"
+    },
+    {
+      "namespace": 1001,
+      "name": "event/outcome-learning-evidence",
+      "payload": "event/outcome-learning-evidence",
+      "encoding": "NFC text",
+      "owner": "EVID/ADAPT"
+    },
+    {
+      "namespace": 1001,
+      "name": "event/authored-adaptation-fact",
+      "payload": "event/authored-adaptation-fact",
+      "encoding": "NFC text",
+      "owner": "EVID/ADAPT"
+    },
+    {
+      "namespace": 1001,
+      "name": "event/regulatory-adaptation",
+      "payload": "event/regulatory-adaptation",
+      "encoding": "NFC text",
+      "owner": "EVID/ADAPT"
+    },
+    {
+      "namespace": 1001,
+      "name": "event/procedural-adaptation",
+      "payload": "event/procedural-adaptation",
+      "encoding": "NFC text",
+      "owner": "EVID/ADAPT"
+    },
+    {
+      "namespace": 1001,
+      "name": "event/fixture-consequence-observation",
+      "payload": "event/fixture-consequence-observation",
+      "encoding": "NFC text",
+      "owner": "EVID/ADAPT"
+    },
+    {
+      "namespace": 1001,
+      "name": "event/fixture-consequence-tracking",
+      "payload": "event/fixture-consequence-tracking",
+      "encoding": "NFC text",
+      "owner": "EVID/ADAPT"
+    },
+    {
+      "namespace": 1001,
+      "name": "event/fixture-consequence-binding",
+      "payload": "event/fixture-consequence-binding",
+      "encoding": "NFC text",
+      "owner": "EVID/ADAPT"
+    },
+    {
+      "namespace": 1001,
+      "name": "event/fixture-consequence-classification",
+      "payload": "event/fixture-consequence-classification",
+      "encoding": "NFC text",
+      "owner": "EVID/ADAPT"
+    },
+    {
+      "namespace": 1001,
+      "name": "event/fixture-consequence-freeze",
+      "payload": "event/fixture-consequence-freeze",
+      "encoding": "NFC text",
+      "owner": "EVID/ADAPT"
+    },
+    {
+      "namespace": 1004,
+      "name": "semantic-kind/character",
+      "payload": "semantic-kind/character",
+      "encoding": "NFC text",
+      "owner": "CONTENT/IDN"
+    },
+    {
+      "namespace": 1036,
+      "name": "seam/event-truth-to-pre-recognition-experience",
+      "payload": "seam/event-truth-to-pre-recognition-experience",
+      "encoding": "NFC text",
+      "owner": "SEM"
+    },
+    {
+      "namespace": 1036,
+      "name": "seam/character-learning-evidence",
+      "payload": "seam/character-learning-evidence",
+      "encoding": "NFC text",
+      "owner": "EVID"
+    },
+    {
+      "namespace": 1036,
+      "name": "seam/automatic-adaptation",
+      "payload": "seam/automatic-adaptation",
+      "encoding": "NFC text",
+      "owner": "ADAPT"
+    },
+    {
+      "namespace": 1036,
+      "name": "seam/truth-to-permitted-evidence",
+      "payload": "seam/truth-to-permitted-evidence",
+      "encoding": "NFC text",
+      "owner": "observation"
+    }
+  ],
+  "unionVariants": [
+    {
+      "record": "StateKeyGrammar",
+      "typeId": 260,
+      "tag": 1,
+      "name": "IdentityKey",
+      "requiredFields": [
+        1
+      ],
+      "forbiddenFields": [
+        2
+      ]
+    },
+    {
+      "record": "StateKeyGrammar",
+      "typeId": 260,
+      "tag": 2,
+      "name": "CanonicalRecordKey",
+      "requiredFields": [
+        1,
+        2
+      ],
+      "forbiddenFields": []
+    },
+    {
+      "record": "CanonicalRolePosition",
+      "typeId": 264,
+      "tag": 1,
+      "name": "RecordField",
+      "requiredFields": [
+        1,
+        2,
+        4
+      ],
+      "forbiddenFields": [
+        3
+      ]
+    },
+    {
+      "record": "CanonicalRolePosition",
+      "typeId": 264,
+      "tag": 2,
+      "name": "StateMapKey",
+      "requiredFields": [
+        1,
+        3,
+        4
+      ],
+      "forbiddenFields": [
+        2
+      ]
+    },
+    {
+      "record": "WriteCapabilityV04",
+      "typeId": 273,
+      "tag": 1,
+      "name": "NoStateWrites",
+      "requiredFields": [
+        1
+      ],
+      "forbiddenFields": []
+    },
+    {
+      "record": "TransitionInputProducerV04",
+      "typeId": 275,
+      "tag": 1,
+      "name": "FrozenSemanticExperienceProducer",
+      "requiredFields": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "forbiddenFields": [
+        5
+      ]
+    },
+    {
+      "record": "TransitionInputProducerV04",
+      "typeId": 275,
+      "tag": 2,
+      "name": "RegisteredTransitionProducer",
+      "requiredFields": [
+        1,
+        5
+      ],
+      "forbiddenFields": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "record": "Campaign2Storage",
+      "typeId": 286,
+      "tag": 1,
+      "name": "Unmaterialized",
+      "requiredFields": [
+        1
+      ],
+      "forbiddenFields": [
+        2,
+        3
+      ]
+    },
+    {
+      "record": "Campaign2Storage",
+      "typeId": 286,
+      "tag": 2,
+      "name": "Materialized",
+      "requiredFields": [
+        1,
+        2,
+        3
+      ],
+      "forbiddenFields": []
+    },
+    {
+      "record": "LoadCapacity",
+      "typeId": 288,
+      "tag": 1,
+      "name": "Unbounded",
+      "requiredFields": [
+        1
+      ],
+      "forbiddenFields": [
+        2
+      ]
+    },
+    {
+      "record": "LoadCapacity",
+      "typeId": 288,
+      "tag": 2,
+      "name": "Bounded",
+      "requiredFields": [
+        1,
+        2
+      ],
+      "forbiddenFields": []
+    },
+    {
+      "record": "AdaptationDomainSource",
+      "typeId": 291,
+      "tag": 1,
+      "name": "LeafLocalScale",
+      "requiredFields": [
+        1,
+        2
+      ],
+      "forbiddenFields": []
+    },
+    {
+      "record": "AdaptationDomainSource",
+      "typeId": 291,
+      "tag": 2,
+      "name": "RegulatoryVariableFromKey",
+      "requiredFields": [
+        1
+      ],
+      "forbiddenFields": [
+        2
+      ]
+    },
+    {
+      "record": "AdaptationDomainSource",
+      "typeId": 291,
+      "tag": 3,
+      "name": "LoadDomainFromKey",
+      "requiredFields": [
+        1
+      ],
+      "forbiddenFields": [
+        2
+      ]
+    },
+    {
+      "record": "AdaptationDomainSource",
+      "typeId": 291,
+      "tag": 4,
+      "name": "ProcedureFromKey",
+      "requiredFields": [
+        1
+      ],
+      "forbiddenFields": [
+        2
+      ]
+    },
+    {
+      "record": "AdaptationMatch",
+      "typeId": 312,
+      "tag": 1,
+      "name": "Exposure",
+      "requiredFields": [
+        1,
+        2
+      ],
+      "forbiddenFields": [
+        3
+      ]
+    },
+    {
+      "record": "AdaptationMatch",
+      "typeId": 312,
+      "tag": 2,
+      "name": "Practice",
+      "requiredFields": [
+        1,
+        3
+      ],
+      "forbiddenFields": [
+        2
+      ]
+    },
+    {
+      "record": "AdaptationKeyDerivation",
+      "typeId": 313,
+      "tag": 1,
+      "name": "ExposureVariable",
+      "requiredFields": [
+        1,
+        2
+      ],
+      "forbiddenFields": [
+        3
+      ]
+    },
+    {
+      "record": "AdaptationKeyDerivation",
+      "typeId": 313,
+      "tag": 2,
+      "name": "RegulatoryVariable",
+      "requiredFields": [
+        1,
+        2
+      ],
+      "forbiddenFields": [
+        3
+      ]
+    },
+    {
+      "record": "AdaptationKeyDerivation",
+      "typeId": 313,
+      "tag": 3,
+      "name": "Load",
+      "requiredFields": [
+        1,
+        3
+      ],
+      "forbiddenFields": [
+        2
+      ]
+    },
+    {
+      "record": "AdaptationKeyDerivation",
+      "typeId": 313,
+      "tag": 4,
+      "name": "Procedure",
+      "requiredFields": [
+        1
+      ],
+      "forbiddenFields": [
+        2,
+        3
+      ]
+    },
+    {
+      "record": "AdaptationGate",
+      "typeId": 314,
+      "tag": 1,
+      "name": "Always",
+      "requiredFields": [
+        1
+      ],
+      "forbiddenFields": [
+        2
+      ]
+    },
+    {
+      "record": "AdaptationGate",
+      "typeId": 314,
+      "tag": 2,
+      "name": "FrozenBaseline",
+      "requiredFields": [
+        1,
+        2
+      ],
+      "forbiddenFields": []
+    },
+    {
+      "record": "TransitionInputProducerV06",
+      "typeId": 321,
+      "tag": 1,
+      "name": "FrozenSemanticExperienceProducer",
+      "requiredFields": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "forbiddenFields": [
+        5,
+        6
+      ]
+    },
+    {
+      "record": "TransitionInputProducerV06",
+      "typeId": 321,
+      "tag": 2,
+      "name": "RegisteredTransitionProducer",
+      "requiredFields": [
+        1,
+        5
+      ],
+      "forbiddenFields": [
+        2,
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "record": "TransitionInputProducerV06",
+      "typeId": 321,
+      "tag": 3,
+      "name": "AuthoredAdaptationFactProducer",
+      "requiredFields": [
+        1,
+        6
+      ],
+      "forbiddenFields": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "record": "WriteCapabilityV06",
+      "typeId": 322,
+      "tag": 1,
+      "name": "NoStateWrites",
+      "requiredFields": [
+        1
+      ],
+      "forbiddenFields": [
+        2,
+        3
+      ]
+    },
+    {
+      "record": "WriteCapabilityV06",
+      "typeId": 322,
+      "tag": 2,
+      "name": "StateWrites",
+      "requiredFields": [
+        1,
+        2,
+        3
+      ],
+      "forbiddenFields": []
+    },
+    {
+      "record": "AdaptationPrior",
+      "typeId": 326,
+      "tag": 1,
+      "name": "Absent",
+      "requiredFields": [
+        1
+      ],
+      "forbiddenFields": [
+        2
+      ]
+    },
+    {
+      "record": "AdaptationPrior",
+      "typeId": 326,
+      "tag": 2,
+      "name": "Present",
+      "requiredFields": [
+        1,
+        2
+      ],
+      "forbiddenFields": []
+    },
+    {
+      "record": "AdaptationResult",
+      "typeId": 327,
+      "tag": 1,
+      "name": "NoStateChange",
+      "requiredFields": [
+        1
+      ],
+      "forbiddenFields": [
+        2
+      ]
+    },
+    {
+      "record": "AdaptationResult",
+      "typeId": 327,
+      "tag": 2,
+      "name": "StateChange",
+      "requiredFields": [
+        1,
+        2
+      ],
+      "forbiddenFields": []
+    }
+  ],
+  "finiteValues": [
+    {
+      "position": "TransitionInputAdmissionV04.RequiredSourceRelation",
+      "name": "ExactImmediateProducerOutput",
+      "value": 1
+    },
+    {
+      "position": "TransitionInputAdmissionV06.RequiredSourceRelation",
+      "name": "ExactImmediateProducerOutput",
+      "value": 1
+    },
+    {
+      "position": "TransitionIngressDefinition.DueAtRule",
+      "name": "SameAsProducer",
+      "value": 1
+    },
+    {
+      "position": "TransitionIngressDefinition.PayloadRule",
+      "name": "ExactAdmittedSourceOutput",
+      "value": 1
+    },
+    {
+      "position": "TransitionIngressDefinition.Multiplicity",
+      "name": "ExactlyOncePerSourcePerConsumer",
+      "value": 1
+    },
+    {
+      "position": "TransitionOutputDefinition.Multiplicity",
+      "name": "ExactlyOnePerExecution",
+      "value": 1
+    },
+    {
+      "position": "AdaptationTransitionRegistrationExtension.AcceptedBasis",
+      "name": "RegulatoryExposureFact",
+      "value": 1
+    },
+    {
+      "position": "AdaptationTransitionRegistrationExtension.AcceptedBasis",
+      "name": "ProceduralPracticeFact",
+      "value": 2
+    },
+    {
+      "position": "AdaptationOutputProductionDefinition.Rule",
+      "name": "ExactlyOnePerResolvedAdaptationRule",
+      "value": 1
+    },
+    {
+      "position": "AdaptationSettlementDefinition.PhasePolicy",
+      "name": "ExclusiveAdaptation140",
+      "value": 1
+    }
+  ],
+  "unresolved": [],
+  "priorAllocation": {
+    "version": "campaign2-allocation/0.1-draft",
+    "records": "79ee7569cd960770171600aa5e0cd5cf3f2aecc9b883c5d2bffc865c87497074",
+    "namespaces": "50df8decdbe77eddb55c39848923521e894c874f33240dcd001c0b6e787177b3",
+    "members": "84cf7d34ef52e331a3828007168534c9c616480ea2038bb2aa473098e5dabcb3",
+    "unionVariants": "86f83398f8a93ec35b21246b3273ae5eb8cb783275f288c2309c001601c01730",
+    "finiteValues": "1a0b35b724629f57357870fee558cce7845fb1baa51a71ebbfc4b005440f7caf",
+    "namespaceCount": 16,
+    "memberCount": 53
+  },
+  "acceptedIdentityUses": [
+    {
+      "symbol": "semantic-kind/character",
+      "namespace": 1004,
+      "owner": "CONTENT/IDN",
+      "source": "docs/planning/IDN_001_DRAFT_RESOLUTION.md"
+    },
+    {
+      "symbol": "seam/event-truth-to-pre-recognition-experience",
+      "namespace": 1036,
+      "owner": "SEM",
+      "source": "docs/formal/EVENT_SEMANTIC_BINDING.md"
+    },
+    {
+      "symbol": "seam/character-learning-evidence",
+      "namespace": 1036,
+      "owner": "EVID",
+      "source": "docs/planning/EVID_001_DRAFT_RESOLUTION.md"
+    },
+    {
+      "symbol": "seam/automatic-adaptation",
+      "namespace": 1036,
+      "owner": "ADAPT",
+      "source": "docs/planning/ADAPT_001_RULE_INTERPRETER_DRAFT.md"
+    },
+    {
+      "symbol": "seam/truth-to-permitted-evidence",
+      "namespace": 1036,
+      "owner": "observation",
+      "source": "docs/formal/OBSERVATION_AND_EVIDENCE.md"
+    }
+  ],
+  "resolvedGaps": [
+    {
+      "id": "G1",
+      "resolution": "SemanticKindId/1004, CONTENT-owned; exact semantic-kind/character member. Existing namespace assumption corrected without changing IDN predicate."
+    },
+    {
+      "id": "G2a",
+      "resolution": "SeamId/1036, shared trace/transition substrate; no seam registry or global legacy trace narrowing."
+    },
+    {
+      "id": "G2b",
+      "resolution": "Both ADAPT V06 consumers execute seam/automatic-adaptation at adaptation-input/0.31-candidate."
+    }
+  ],
+  "acceptance": {
+    "date": "2026-09-06",
+    "basis": "Revision-2 review conditional authorization; final mechanical gates A/B passed.",
+    "immutability": "No renumbering, reuse or insertion by shifting. Future additions append.",
+    "implementationBoundary": "Canonical construction subject to remaining implementation gates; affected executable reliance requires VAL-001 closure. No runtime gate is passed by allocation."
+  }
+}

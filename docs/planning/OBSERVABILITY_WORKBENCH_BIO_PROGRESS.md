@@ -59,3 +59,32 @@ not a new psychological verdict. No law is selected, comparator retired, conditi
 obligation closed or Campaign4 entry accepted by this audit. All18 conditional
 obligations and historical source restrictions survive. The complete integrated
 demonstration and other corpus/successor obligations remain required.
+
+## Recorded reason factors
+
+`bio-reason-diagnostics/0.1` now decodes the committed component row's raw factors,
+evidence bases, recorded coverage and compiled reason nuclei. Every raw factor is
+retained and linked by exact source identity to its nucleus coverage, or explicitly
+marked without recorded coverage. Role nets, relevance, base die, standing/situational
+modifiers and exact distributions remain distinct. Context/raw/reason lineage,
+duplicate sources, nucleus membership, retained calendar and byte limits are checked.
+This reader consumes the evaluation-time row alone, never later identity history.
+
+`workbench-bio-reasons-rev1/receipt.json` PASS all13 original cases/247 records:
+808 raw factors,808 coverage entries,494 compiled nuclei, zero uncovered factors in
+this retained cohort. Every field joins the independently preserved readable native
+record; repeated reading preserves input.41 negative checks cover calendar, lineage,
+hex and size failures. This is mechanical provenance, not observer-admitted testimony
+or a complete choice/necessity explanation. No formula is selected or reevaluated.
+
+The Reasoning mode exposes expandable nuclei, exact role nets, coverage tables,
+source/basis details, all raw factors and run-bound provenance. Browser receipt
+`workbench-bio-reasons-ui-rev1/receipt.json` PASS Earned/6 records1/3, including exact
+native joins, record1 stability after advancement to3, keyboard expansion and all
+four run hashes unchanged by inspection. Screenshot visually inspected.
+
+TypeScript, isolated549-module production build, reference boundaries and research
+checks PASS;18 conditional obligations retained. The separate temporary build/preview
+on port4174 preserves the original port4173 batch assets. Full BIO comparison session
+86117 continues with frozen sources. Broader browser coverage, language, architecture
+participation and integrated acceptance remain due.
