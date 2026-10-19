@@ -1,0 +1,54 @@
+{
+  "status": "PASS BOUNDED LOSS OWNED-STATE BROWSER LANGUAGE",
+  "sources": [
+    {
+      "path": "src/workbench/longLossStateDescription.ts",
+      "sha256": "5f48affa5f35dd4f50a5c9e17bf0bf9ca0fd07c8f456ad83b59ab8127d3894a0"
+    },
+    {
+      "path": "src/workbench/LongLossOwnedDescriptionPanel.tsx",
+      "sha256": "ea5a4693b1c9a782fc9090b2f28b3a402bff146f95a2833cc21c044e48d19d76"
+    },
+    {
+      "path": "src/workbench/LongLossWorkbench.tsx",
+      "sha256": "cceb5c1c6aee721d6c257c6bc425c43736bebec3abc56201f91530629326f358"
+    },
+    {
+      "path": "src/workbench/longLossOwnedProjection.ts",
+      "sha256": "ba7a1c9352ddfb84950da1c34071f85d605dfd6bbf24d7670e546eb2277f3dc8"
+    },
+    {
+      "path": "src/workbench/inspectionRegistry.ts",
+      "sha256": "f108ce6b4091c1b6a2af932670ee40d0e7bdfa7e8f78148472e7ed58e7fe8087"
+    },
+    {
+      "path": "scripts/check-workbench-long-loss-language-ui.mjs",
+      "sha256": "c8c0bb2843ebe65c69cfbcf224b3403bcde3b4ac7828d3cef6d5757f38a3a24d"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "docs/planning/workbench-long-loss-language-rev1/case-000.json.gz",
+      "sha256": "b4562d39512e86e544c5eadac3796b038fdb9ae58831d0ee318aa8e5c4c18fcb"
+    },
+    {
+      "path": "docs/planning/workbench-long-loss-language-rev1/case-032.json.gz",
+      "sha256": "a6c5e52858c96ed97da096c6b62e43bdcc709fe553d69a034a25ec0f71ee163d"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "ui.json",
+      "sha256": "25be7ad2655914442f169c85e41454e8ec515b3c69eece5859a6f55f9d6b262a"
+    },
+    {
+      "path": "language.png",
+      "sha256": "bc6e2dac7b283c38b3a0dae133af5083192fbae098bcdd66e5bd8efa23948209"
+    }
+  ],
+  "qualifiedReceipt": {
+    "path": "docs/planning/workbench-long-loss-language-rev1/receipt.json",
+    "sha256": "68179f7c97f73fa6e8b551c40f40797a94b4533f74e183200c628befb7e6cdcb"
+  },
+  "scope": "Case0 initial, positive report, negative report, restore and repeat; case32 correction prefixes7/8. Every full report and all three hashes match qualified original records. No broad browser, file transfer, evaluation-time reasons, conscious testimony or clinical claim."
+}

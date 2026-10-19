@@ -1,5 +1,17 @@
 # Current research entry point
 
+**LONG loss owned-state language2026-10-19:** audit89776 COMPLETE PASS480 cases/
+6240 prefixes/21280 descriptions;2400 unknown-estimate prefixes. All160 matched
+evidence controls/2080 prefixes retain identical descriptions. Sources123/results480
+and counts independently verified. Character mode now describes owned history,
+report-based belief and goal lifecycle; evaluation-time reasons remain due.
+Bounded browser case0 prefixes0/3/4/restore3/repeat4 and corrected case32 prefixes7/8
+PASS exact qualified reports and three hashes. Registry0.11; build99208 PASS460
+modules; focused description/registry tests PASS. Research PASS18 conditional.
+Start OBSERVABILITY_WORKBENCH_LONG_LOSS_PROGRESS.md. Native LONG22/32, goal9/120
+prefix14, habit replay288/960 and habit comparison seed0 observed live this turn;
+none restarted. Broad browser, full-choice language and Campaign4 entry remain open.
+
 **LONG loss six-mode UI2026-10-19:** bounded browser PASS original case0 prefixes
 0/4/5/restore4/repeat5 with exact state and three commitments. Owned Character
 projection excludes scenario profile and execution trace; narration remains due.

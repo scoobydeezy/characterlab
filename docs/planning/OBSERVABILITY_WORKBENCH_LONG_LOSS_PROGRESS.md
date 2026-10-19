@@ -113,3 +113,41 @@ Broad480-case browser qualification, controlled character language, resource and
 accessibility qualification, standalone file transfer and integrated Campaign4
 acceptance remain open. No browser download or import was attempted. Prior live
 native/goal/habit audits continue without dependency edits or restarts.
+
+## Current owned-state descriptions
+
+2026-10-19: `long-loss-owned-state-description/0.1` consumes the detached owned
+projection only. It decodes admitted relationship records and the retained BELIEF
+estimate with exact supporting identities; it describes goal lifecycle records and
+their adoption/activation/expiry/change clocks. Missing estimate remains unknown.
+No scenario, trace, physical availability, action completion, historical save or
+appraisal is an input. Open status is not described as current activation. Evidence
+identities do not license reconstructed report contents or episodic recall.
+
+Audit89776 COMPLETE PASS480 original cases/6240 prefixes/21280 descriptions;
+2400 prefixes have no retained estimate. Every save matches original qualification.
+Independent oracle checks use original admitted participation clocks, report arithmetic
+for Latest/Mean/NoLearning and original goal lifecycle fields. Repeated rendering and
+physical/profile perturbations preserve output and saved state. All160 matched-evidence
+pairs retain identical reports across2080 prefixes. All123 source copies,480 compressed
+results and prefix/description totals independently reverified. Receipt:
+`workbench-long-loss-language-rev1/receipt.json`.
+
+Character mode integrates this renderer with exact provenance disclosure. Browser
+case0 prefixes0/3/4/restore3/repeat4 and corrected case32 prefixes7/8 PASS complete
+reports and all three hashes against qualified records. Empty, positive, negative,
+restored and corrected belief descriptions preserve their exact distinctions.
+Screenshot and frozen UI receipt: `workbench-long-loss-language-ui-rev1`.
+Its six source copies, two artifacts and qualified input hashes independently checked.
+
+Two focused semantic/observer-boundary tests and the registry test PASS. Build71133
+PASS458 modules before UI integration; build99208 PASS460 after integration. Existing
+large-chunk warnings remain. Evidence restore and research checks PASS18 conditional
+obligations. LOCAL DISPOSITION: current owned-state description is separately labeled
+from evaluation-time reasons and conscious testimony, following accepted authority
+boundaries. No new psychological verdict, obligation closure or law selection.
+
+Full-choice/evaluation-time language, broad browser coverage, resource/accessibility,
+batch admission and integrated Campaign4 acceptance remain open. No browser file
+transfer was performed. The prior frozen UI receipt retains its original renderer-free
+source; this version does not rewrite earlier evidence.
