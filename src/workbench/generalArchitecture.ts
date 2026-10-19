@@ -6,7 +6,7 @@ import freeze from '../../docs/planning/campaign3-general-attention-model-rev2/F
 import {fromHex} from './canonical';
 import {stateParticipation} from './participation';
 
-export const GENERAL_ARCHITECTURE_VERSION='general-canonical-participation/0.1';
+export const GENERAL_ARCHITECTURE_VERSION='general-canonical-participation/0.2';
 /** Scoped ownership correspondence, not a replacement topology or effect claim. */
 export const GENERAL_ARCHITECTURE_BINDINGS=[
  {root:'630',schema:'GeneralEpisodeState',box:'Episodic',label:'Episodic Imprints',authority:'ordinary-memory',basis:'LearningFamilies: episodic-memory'},
@@ -17,6 +17,8 @@ export const GENERAL_ARCHITECTURE_BINDINGS=[
  {root:'635',schema:'TrialPanelContextState',box:'Percept',label:'Perception / Attention',authority:'perception',basis:'Current/consequence tracking context; not world-truth admission'},
  {root:'241',schema:'PerceptualContinuantFileState',box:'Percept',label:'Perception / Attention',authority:'perception',basis:'Current/consequence tracking ExactPaths'},
  {root:'242',schema:'PerceptualEventFileState',box:'Percept',label:'Perception / Attention',authority:'perception',basis:'Current/consequence tracking ExactPaths'},
+ {root:'302',schema:'RegulatoryAdaptationState',box:'RegAdapt',label:'Regulatory Adaptation',authority:'ADAPT (inherited)',basis:'Campaign2 permanent allocation: tolerance, sensitization, displacement and accumulated load; embodied adaptation remains distinct from learned disposition'},
+ {root:'373',schema:'TaskCommitmentState',box:'Prospection',label:'Prospection / Goal Management',authority:'authority/prospective-commitments (inherited)',basis:'Concrete task commitment ownership; admitted measurement satisfaction and deadline status remain distinct from world success'},
 ] as const;
 const schemas=generalAttentionSupportedSchemas(),registry=new RecordSchemaRegistry(schemas);
 for(const binding of GENERAL_ARCHITECTURE_BINDINGS)if(!schemas.some(s=>String(s.typeId)===binding.root&&s.name===binding.schema))throw Error('General architecture allocation mismatch');
@@ -38,6 +40,6 @@ export function generalArchitectureParticipation(snapshot:GeneralSnapshot){
    currentlyPresent:paths.filter(r=>r.presentAtRevision).length,eventIds:[...new Set(paths.flatMap(r=>r.events.map(e=>e.id)))],paths:paths.map(r=>r.path)};
  });
  return {version:GENERAL_ARCHITECTURE_VERSION,identity:{recipe:snapshot.recipe,seamVersion:snapshot.seamVersion,prefix:snapshot.prefix,modelHash:snapshot.modelHash,runHash:snapshot.runHash,stateHash:snapshot.stateHash,saveHash:snapshot.saveHash},
-  authority:{architecture:'CHARACTER_ARCHITECTURE.md §3.2',allocation:'docs/formal/GENERAL_ATTENTION_CARRIER_ALLOCATION_TABLE.json',writeScope:'docs/formal/GENERAL_ATTENTION_WRITE_SCOPE_POLICY.json',enforcement:'src/campaign3/generalWriteScope.ts'},boxes,rows,unmappedPaths:rows.filter(r=>!r.binding).map(r=>r.path),
-  scope:'Eight declared state-root correspondences within the retained General profile. Counts are recorded read/mutation/change activity, not evaluation contribution, behavioral necessity or character evidence. Historical paths decode from their exact identity even when absent now. Other roots remain unmapped; no inferred zero activity for the rest of the canonical architecture. No edge, state owner or reduction law is added.'};
+  authority:{architecture:'CHARACTER_ARCHITECTURE.md §3.2',allocation:'docs/formal/GENERAL_ATTENTION_CARRIER_ALLOCATION_TABLE.json',writeScope:'docs/formal/GENERAL_ATTENTION_WRITE_SCOPE_POLICY.json',enforcement:'src/campaign3/generalWriteScope.ts',inheritedAdaptation:'docs/formal/CAMPAIGN2_PERMANENT_ALLOCATION.md',inheritedCommitment:'docs/formal/TASK_COMMITMENTS.md',commitmentSuccessors:'docs/formal/TASK_COGNITIVE_ALLOCATION_TABLE.json'},boxes,rows,unmappedPaths:rows.filter(r=>!r.binding).map(r=>r.path),
+  scope:'Ten declared state-root correspondences within the retained General profile, including inherited adaptation and prospective-commitment ownership. Counts are recorded read/mutation/change activity, not evaluation contribution, behavioral necessity or character evidence. Historical paths decode from their exact identity even when absent now. Other roots remain unmapped; no inferred zero activity for the rest of the canonical architecture. No edge, state owner or reduction law is added.'};
 }

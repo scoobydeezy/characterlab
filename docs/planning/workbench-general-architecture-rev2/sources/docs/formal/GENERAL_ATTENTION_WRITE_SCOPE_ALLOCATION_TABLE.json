@@ -1,0 +1,718 @@
+{
+  "version": "general-attention-write-scope-allocation/0.1-candidate",
+  "status": "PERMANENT AND FROZEN",
+  "records": [
+    {
+      "typeId": 705,
+      "schemaVersion": 1,
+      "name": "GeneralPathWriteCapability",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Authority",
+          "required": true,
+          "type": {
+            "kind": "ref",
+            "name": "MutationAuthorityId"
+          }
+        },
+        {
+          "id": 2,
+          "name": "Paths",
+          "required": true,
+          "type": {
+            "kind": "set",
+            "element": {
+              "kind": "ref",
+              "name": "StatePathPattern"
+            },
+            "min": 1,
+            "max": 16
+          }
+        }
+      ]
+    },
+    {
+      "typeId": 706,
+      "schemaVersion": 1,
+      "name": "GeneralStageRegistrationV02",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Stage",
+          "required": true,
+          "type": {
+            "kind": "enum",
+            "values": [
+              "world",
+              "current-sample",
+              "current-track",
+              "current-bind",
+              "current-classify",
+              "current-freeze",
+              "current-roles",
+              "current-dispatch",
+              "consequence-sample",
+              "consequence-track",
+              "consequence-bind",
+              "consequence-classify",
+              "consequence-freeze",
+              "consequence-roles",
+              "consequence-dispatch",
+              "current-visual-selection",
+              "current-visual-encoding",
+              "current-body-selection",
+              "current-visual-cue",
+              "current-body-cue",
+              "current-event-rank",
+              "current-body-rank",
+              "current-recollection",
+              "consequence-visual-selection",
+              "consequence-visual-encoding",
+              "consequence-body-selection",
+              "consequence-visual-cue",
+              "consequence-body-cue",
+              "consequence-event-rank",
+              "consequence-body-rank",
+              "consequence-recollection",
+              "visual-acquisition-evidence",
+              "body-acquisition-evidence",
+              "ordinary-memory-formation",
+              "event-association-formation",
+              "event-presentation-formation",
+              "prior-concern-workspace",
+              "prior-concern-appraisal",
+              "prior-concern-producer",
+              "encoding-concern-delivery",
+              "recall-concern-delivery",
+              "prior-concern-visual-encoding",
+              "prior-concern-event-rank",
+              "goal-command-proposal",
+              "goal-command-owner",
+              "goal-deadline-owner",
+              "goal-outcome-assessment",
+              "focal-consequence-delivery",
+              "goal-qualification-delivery",
+              "retained-attribution",
+              "attribution-use-dispatch",
+              "ordinary-memory-use",
+              "attribution-result-delivery",
+              "significance-opportunity",
+              "significance-join",
+              "ordinary-memory-significance",
+              "retention-original",
+              "retention-dispatch",
+              "ordinary-memory-retention",
+              "event-association-retention",
+              "event-presentation-cleanup",
+              "event-presentation-dispatch",
+              "event-presentation-owner",
+              "goal-baseline-cue",
+              "goal-baseline-rank",
+              "goal-baseline-recollection",
+              "local-reserve-replenishment"
+            ]
+          }
+        },
+        {
+          "id": 2,
+          "name": "Seam",
+          "required": true,
+          "type": {
+            "kind": "ref",
+            "name": "SeamId"
+          }
+        },
+        {
+          "id": 3,
+          "name": "Version",
+          "required": true,
+          "type": {
+            "kind": "ref",
+            "name": "VersionText"
+          }
+        },
+        {
+          "id": 4,
+          "name": "Event",
+          "required": true,
+          "type": {
+            "kind": "ref",
+            "name": "EventTypeId"
+          }
+        },
+        {
+          "id": 5,
+          "name": "Phase",
+          "required": true,
+          "type": {
+            "kind": "ref",
+            "name": "PhaseOrdinal"
+          }
+        },
+        {
+          "id": 6,
+          "name": "Input",
+          "required": true,
+          "type": {
+            "kind": "ref",
+            "name": "CanonicalRecordSchemaRef"
+          }
+        },
+        {
+          "id": 7,
+          "name": "Outputs",
+          "required": true,
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "GeneralOutputDeclaration"
+            },
+            "min": 0,
+            "max": 3
+          }
+        },
+        {
+          "id": 8,
+          "name": "ReadDomain",
+          "required": true,
+          "type": {
+            "kind": "set",
+            "element": {
+              "kind": "ref",
+              "name": "StatePathPattern"
+            },
+            "min": 0,
+            "max": 16
+          }
+        },
+        {
+          "id": 9,
+          "name": "WriteAuthorization",
+          "required": true,
+          "type": {
+            "kind": "union",
+            "alternatives": [
+              {
+                "kind": "ref",
+                "name": "TransitionWriteAuthorization"
+              },
+              {
+                "kind": "ref",
+                "name": "GeneralPathWriteCapability"
+              }
+            ]
+          }
+        },
+        {
+          "id": 10,
+          "name": "SubjectProjection",
+          "required": false,
+          "type": {
+            "kind": "ref",
+            "name": "SubjectProjectionRequirement"
+          }
+        },
+        {
+          "id": 11,
+          "name": "Definitions",
+          "required": true,
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "GeneralDefinitionBinding"
+            },
+            "min": 0,
+            "max": 8
+          }
+        }
+      ]
+    }
+  ],
+  "newNamespaces": [],
+  "members": [],
+  "rolePositions": [
+    {
+      "path": "GeneralPathWriteCapability.Authority",
+      "identity": "MutationAuthorityId",
+      "namespace": 1025,
+      "mode": "CanonicalRecordField",
+      "recordTypeId": 705,
+      "fieldId": 1,
+      "requiredNamespace": 1025
+    },
+    {
+      "path": "GeneralStageRegistrationV02.Seam",
+      "identity": "SeamId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1036,
+      "recordTypeId": 706,
+      "fieldId": 2,
+      "requiredNamespace": 1036
+    },
+    {
+      "path": "GeneralStageRegistrationV02.Event",
+      "identity": "EventTypeId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1001,
+      "recordTypeId": 706,
+      "fieldId": 4,
+      "requiredNamespace": 1001
+    }
+  ],
+  "recordBoundaries": [
+    {
+      "path": "GeneralPathWriteCapability.Paths[*]",
+      "record": "StatePathPattern",
+      "mode": "InheritedRecordRoles",
+      "source": "existing149"
+    },
+    {
+      "path": "GeneralStageRegistrationV02.Input",
+      "record": "CanonicalRecordSchemaRef",
+      "mode": "InheritedRecordRoles",
+      "source": "existing254"
+    },
+    {
+      "path": "GeneralStageRegistrationV02.Outputs[*]",
+      "record": "GeneralOutputDeclaration",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralStageRegistrationV02.ReadDomain[*]",
+      "record": "StatePathPattern",
+      "mode": "InheritedRecordRoles",
+      "source": "existing149"
+    },
+    {
+      "path": "GeneralStageRegistrationV02.WriteAuthorization",
+      "record": "TransitionWriteAuthorization",
+      "mode": "InheritedRecordRoles",
+      "source": "existing322"
+    },
+    {
+      "path": "GeneralStageRegistrationV02.SubjectProjection",
+      "record": "SubjectProjectionRequirement",
+      "mode": "InheritedRecordRoles",
+      "source": "existing266"
+    },
+    {
+      "path": "GeneralStageRegistrationV02.Definitions[*]",
+      "record": "GeneralDefinitionBinding",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralStageRegistrationV02.WriteAuthorization",
+      "record": "GeneralPathWriteCapability",
+      "mode": "RecurseDeclaredRecord"
+    }
+  ],
+  "fieldEnums": [
+    {
+      "recordTypeId": 706,
+      "fieldId": 1,
+      "members": [
+        {
+          "name": "world",
+          "value": 1
+        },
+        {
+          "name": "current-sample",
+          "value": 2
+        },
+        {
+          "name": "current-track",
+          "value": 3
+        },
+        {
+          "name": "current-bind",
+          "value": 4
+        },
+        {
+          "name": "current-classify",
+          "value": 5
+        },
+        {
+          "name": "current-freeze",
+          "value": 6
+        },
+        {
+          "name": "current-roles",
+          "value": 7
+        },
+        {
+          "name": "current-dispatch",
+          "value": 8
+        },
+        {
+          "name": "consequence-sample",
+          "value": 9
+        },
+        {
+          "name": "consequence-track",
+          "value": 10
+        },
+        {
+          "name": "consequence-bind",
+          "value": 11
+        },
+        {
+          "name": "consequence-classify",
+          "value": 12
+        },
+        {
+          "name": "consequence-freeze",
+          "value": 13
+        },
+        {
+          "name": "consequence-roles",
+          "value": 14
+        },
+        {
+          "name": "consequence-dispatch",
+          "value": 15
+        },
+        {
+          "name": "current-visual-selection",
+          "value": 16
+        },
+        {
+          "name": "current-visual-encoding",
+          "value": 17
+        },
+        {
+          "name": "current-body-selection",
+          "value": 18
+        },
+        {
+          "name": "current-visual-cue",
+          "value": 19
+        },
+        {
+          "name": "current-body-cue",
+          "value": 20
+        },
+        {
+          "name": "current-event-rank",
+          "value": 21
+        },
+        {
+          "name": "current-body-rank",
+          "value": 22
+        },
+        {
+          "name": "current-recollection",
+          "value": 23
+        },
+        {
+          "name": "consequence-visual-selection",
+          "value": 24
+        },
+        {
+          "name": "consequence-visual-encoding",
+          "value": 25
+        },
+        {
+          "name": "consequence-body-selection",
+          "value": 26
+        },
+        {
+          "name": "consequence-visual-cue",
+          "value": 27
+        },
+        {
+          "name": "consequence-body-cue",
+          "value": 28
+        },
+        {
+          "name": "consequence-event-rank",
+          "value": 29
+        },
+        {
+          "name": "consequence-body-rank",
+          "value": 30
+        },
+        {
+          "name": "consequence-recollection",
+          "value": 31
+        },
+        {
+          "name": "visual-acquisition-evidence",
+          "value": 32
+        },
+        {
+          "name": "body-acquisition-evidence",
+          "value": 33
+        },
+        {
+          "name": "ordinary-memory-formation",
+          "value": 34
+        },
+        {
+          "name": "event-association-formation",
+          "value": 35
+        },
+        {
+          "name": "event-presentation-formation",
+          "value": 36
+        },
+        {
+          "name": "prior-concern-workspace",
+          "value": 37
+        },
+        {
+          "name": "prior-concern-appraisal",
+          "value": 38
+        },
+        {
+          "name": "prior-concern-producer",
+          "value": 39
+        },
+        {
+          "name": "encoding-concern-delivery",
+          "value": 40
+        },
+        {
+          "name": "recall-concern-delivery",
+          "value": 41
+        },
+        {
+          "name": "prior-concern-visual-encoding",
+          "value": 42
+        },
+        {
+          "name": "prior-concern-event-rank",
+          "value": 43
+        },
+        {
+          "name": "goal-command-proposal",
+          "value": 44
+        },
+        {
+          "name": "goal-command-owner",
+          "value": 45
+        },
+        {
+          "name": "goal-deadline-owner",
+          "value": 46
+        },
+        {
+          "name": "goal-outcome-assessment",
+          "value": 47
+        },
+        {
+          "name": "focal-consequence-delivery",
+          "value": 48
+        },
+        {
+          "name": "goal-qualification-delivery",
+          "value": 49
+        },
+        {
+          "name": "retained-attribution",
+          "value": 50
+        },
+        {
+          "name": "attribution-use-dispatch",
+          "value": 51
+        },
+        {
+          "name": "ordinary-memory-use",
+          "value": 52
+        },
+        {
+          "name": "attribution-result-delivery",
+          "value": 53
+        },
+        {
+          "name": "significance-opportunity",
+          "value": 54
+        },
+        {
+          "name": "significance-join",
+          "value": 55
+        },
+        {
+          "name": "ordinary-memory-significance",
+          "value": 56
+        },
+        {
+          "name": "retention-original",
+          "value": 57
+        },
+        {
+          "name": "retention-dispatch",
+          "value": 58
+        },
+        {
+          "name": "ordinary-memory-retention",
+          "value": 59
+        },
+        {
+          "name": "event-association-retention",
+          "value": 60
+        },
+        {
+          "name": "event-presentation-cleanup",
+          "value": 61
+        },
+        {
+          "name": "event-presentation-dispatch",
+          "value": 62
+        },
+        {
+          "name": "event-presentation-owner",
+          "value": 63
+        },
+        {
+          "name": "goal-baseline-cue",
+          "value": 64
+        },
+        {
+          "name": "goal-baseline-rank",
+          "value": 65
+        },
+        {
+          "name": "goal-baseline-recollection",
+          "value": 66
+        },
+        {
+          "name": "local-reserve-replenishment",
+          "value": 67
+        }
+      ]
+    }
+  ],
+  "recordUnions": [
+    {
+      "recordTypeId": 706,
+      "fieldId": 9,
+      "members": [
+        {
+          "name": "TransitionWriteAuthorization",
+          "typeId": 322,
+          "schemaVersion": 1
+        },
+        {
+          "name": "GeneralPathWriteCapability",
+          "typeId": 705,
+          "schemaVersion": 1
+        }
+      ]
+    }
+  ],
+  "priorAllocations": [
+    {
+      "path": "docs/formal/ATTENTION_ALLOCATION_TABLE.json",
+      "sha256": "3afeaf28c4e3485bc4acdf96e544f42f3c83f2645e62859c9b4aa3f7c7812eea"
+    },
+    {
+      "path": "docs/formal/CAMPAIGN2_ALLOCATION_TABLE.json",
+      "sha256": "c7503135f1aa0daa8a260e0c159211bc89c8483c9a3ab72fd1019983708e37d8"
+    },
+    {
+      "path": "docs/formal/CONTENT_ID_ALLOCATION_TABLE.json",
+      "sha256": "f4e504a63c55437915597f22caf1df4c3d49c7e1655bf7406242b4916aa9b194"
+    },
+    {
+      "path": "docs/formal/EMBODIED_RECEIVING_ALLOCATION_TABLE.json",
+      "sha256": "c77ea031a5753e43e826dd4f5c79ce571d7d01fec49d6827a1772a7cc511b9bb"
+    },
+    {
+      "path": "docs/formal/EMBODIED_RESERVE_ALLOCATION_TABLE.json",
+      "sha256": "1194c2a442640397e117e47907b4287984e913dad62ee261bfd71c0103af15c8"
+    },
+    {
+      "path": "docs/formal/GENERAL_ATTENTION_CARRIER_ALLOCATION_TABLE.json",
+      "sha256": "9f2ca0bb2fec4b8916db40f0c22e1e814d5f403976df502172e5f46ef3944ce1"
+    },
+    {
+      "path": "docs/formal/GENERAL_ATTENTION_REGISTRY_MEMBER_ALLOCATION_TABLE.json",
+      "sha256": "6334e34ba403ca0383ecdf16bbeca3a71f970c553a62d4c24d2dd5ef94892ab6"
+    },
+    {
+      "path": "docs/formal/MEASUREMENT_EVIDENCE_CARRIAGE_ALLOCATION_TABLE.json",
+      "sha256": "9b2582aa44e6b4e7f576fd738155e4dc69d6458fedaa7746937099470faa139e"
+    },
+    {
+      "path": "docs/formal/MEASUREMENT_MEMORY_ALLOCATION_TABLE.json",
+      "sha256": "4a476c4f6a279f60af4597c3008e0e830d19b7bcbb4373838e028307ed9cc278"
+    },
+    {
+      "path": "docs/formal/MEASUREMENT_PREDICTION_ALLOCATION_TABLE.json",
+      "sha256": "648d573adeb6fc621e001e8ca5397ea0189defb172e1d760729dbe00576f2e21"
+    },
+    {
+      "path": "docs/formal/MEASUREMENT_PREDICTION_CORRECTION_ALLOCATION_TABLE.json",
+      "sha256": "c7f82429afcce5fe2ceb3e1730a2db5df44493ea3438efb6fbfbb50a7ade6443"
+    },
+    {
+      "path": "docs/formal/MEMORY_WRAPPER_ALLOCATION_TABLE.json",
+      "sha256": "cd6bb62b6b2b1bbb5759c1a397d88c14c553ba207dc1fa224e5e6d8c8c970cd7"
+    },
+    {
+      "path": "docs/formal/OBSERVATION_UNIT_ALLOCATION_TABLE.json",
+      "sha256": "e5f1aac58d479c32ff988d55fd55b5c4137e8b2d11b1e0faa111c8b859ddcf78"
+    },
+    {
+      "path": "docs/formal/ORIGIN_ALLOCATION_TABLE.json",
+      "sha256": "b8ee30bd920774e77969f92cff9ceba9e2668ba4ba9e7184f7aa366e6513f7be"
+    },
+    {
+      "path": "docs/formal/PROBE_ACCESSOR_MEMBER_ALLOCATION_TABLE.json",
+      "sha256": "48b43cd484f6bb2ecc689abc51fc88ed605cc4164774a4a8016b21403f904f5b"
+    },
+    {
+      "path": "docs/formal/REGULATORY_PROBE_ALLOCATION_TABLE.json",
+      "sha256": "746d7a25adf3729f08d66419cca44916c6a08a8e28b5ad619f839a0f63da9af5"
+    },
+    {
+      "path": "docs/formal/TASK_COGNITIVE_ALLOCATION_TABLE.json",
+      "sha256": "5f326e56d8da5591ca17795d5d5129aab091c43a52876b17fa2312374f8c516e"
+    },
+    {
+      "path": "docs/formal/TASK_COGNITIVE_PLAN_LEAF_ALLOCATION_TABLE.json",
+      "sha256": "581490f019b60073c44876b7bd946e36a039fa18a8702918ff71806432795e65"
+    },
+    {
+      "path": "docs/formal/TASK_COMMITMENT_ALLOCATION_TABLE.json",
+      "sha256": "161047465549a2fb3b665c08a019a0915311114159e51251bba707066f721f17"
+    },
+    {
+      "path": "docs/formal/TASK_COMMITMENT_CORRECTION_ALLOCATION_TABLE.json",
+      "sha256": "8d1d42da9d9fc2bb45d79a4da9268cb4934a05db58a7564d4484cd8fcf81cc07"
+    },
+    {
+      "path": "docs/formal/TRACE_SEAM_MEMBER_ALLOCATION_TABLE.json",
+      "sha256": "1910b2fbbcf9098236aa57849dfa9ae724074045556a7c362e4cd65501c213f6"
+    },
+    {
+      "path": "docs/formal/VAL_ALLOCATION_TABLE.json",
+      "sha256": "8bef1ed8a2f05de224330ffa5aff0557064f7acef3edfbaa2e6738153c3bfd39"
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/formal/GENERAL_ATTENTION_WRITE_SCOPE_SHAPE_MANIFEST.json",
+      "sha256": "12a477d0dd167a7d273bf04f101e052345e4fdbcf7f35f875dd9470b545c7fa4"
+    },
+    {
+      "path": "docs/planning/GA_REGISTRATION_WRITE_SCOPE_CORRECTION_REV1.json",
+      "sha256": "0b98bc0437fdbf1c54b43b5ea33065c6581a83c2ca2b11a70f105a6d8d7bc710"
+    },
+    {
+      "path": "docs/planning/GA_REGISTRATION_WRITE_SCOPE_REVIEW_REV1.json",
+      "sha256": "2a036eca56498faca4ddd0c0f40a9c3a84b1923f441ab94b584ac9c48cd8d5d8"
+    },
+    {
+      "path": "scripts/accept-ga-write-scope-shape.mjs",
+      "sha256": "e37de738e04f38f3f06799bf5739031932a64de77229cf12e24e7d15ec7e41c9"
+    }
+  ],
+  "acceptedReview": {
+    "path": "docs/planning/GA_WRITE_SCOPE_ALLOCATION_REVIEW_REV1.json",
+    "sha256": "64015fcc38c9ce8b4ff8618f182d59dc387253510d96ed2626f194d5ccdab844"
+  }
+}

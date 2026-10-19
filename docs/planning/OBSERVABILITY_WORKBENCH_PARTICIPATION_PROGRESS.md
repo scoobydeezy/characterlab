@@ -119,3 +119,31 @@ cognitive-box aggregation. Requalify the revised report across all43 models/568
 prefixes and in the browser with unchanged native hashes. Existing receipts remain
 immutable. No runtime semantics, topology, research verdict or obligation changes;
 no owner ruling or reduction is needed. Full architecture acceptance remains open.
+
+## Inherited-owner correspondence — 2026-10-19
+
+`general-canonical-participation/0.2` adds RegulatoryAdaptationState302 to RegAdapt
+and TaskCommitmentState373 to Prospection. Both identify inherited authority explicitly;
+neither is falsely asserted to belong to the General write-stage policy. Adaptation
+remains distinct from learned disposition; concrete commitment status remains distinct
+from world success. The original eight root mappings and raw participation UI survive.
+
+`workbench-general-architecture-rev2/receipt.json` PASS43 models/568 native-backed
+prefixes, with7284 mapped and3364 unmapped path observations. Independent scans verify
+all row counts, presence, box totals, unique event links and historical paths. Exact
+model/run/state/save identities and input snapshots remain unchanged. Four root types
+268/362/581/649 remain unmapped. Previous receipts and frozen sources are retained.
+TypeScript, isolated554-module build, reference boundary and research checks PASS.
+This is UI diagnostic qualification only; no Campaign3 verdict or obligation changes.
+
+`workbench-general-architecture-ui-rev2/receipt.json` PASS original frozen baseline
+terminal11: the full displayed report equals the native-backed corpus report.
+Keyboard links from302 select event0 regulatory-diagnostic-probe, and from373 select
+event10 task-deadline. Timeline selection and all four native hashes verify after each
+navigation. `visible-mappings.png` shows the five boxes and separate commitment row.
+The earlier viewport capture clipped the table; a section-coordinate capture rendered
+incorrectly in the screenshot backend. Both are retained as capture limitations; the
+normal viewport after keyboard focus supplies the inspected visual evidence.
+Isolated preview4179 leaves the full batch's4173 build unchanged. Full architecture,
+remaining-root disposition UI, observer-safe language and integrated acceptance remain
+open. No successful download/file-transfer claim is made.

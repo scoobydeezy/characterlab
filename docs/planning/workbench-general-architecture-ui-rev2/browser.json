@@ -1,0 +1,1916 @@
+{
+  "report": {
+    "version": "general-canonical-participation/0.2",
+    "identity": {
+      "recipe": "baseline",
+      "seamVersion": "rules/campaign3-general-attention/0.1-candidate",
+      "prefix": 11,
+      "modelHash": "38c13209db2a9d3fbdb5fcf01c4963ad5c678937f355bdab35be85e1cd2be503",
+      "runHash": "fa864707e65f6152788bed12d6b47502b5388c00883e035ab9533c6f2c0549fc",
+      "stateHash": "a9c67b517e9ab4a52e064831abd5b9b104e181ed62df64be88c36118d83204e8",
+      "saveHash": "69c924cf00950e4dd97a57d46a66c77701a8e1a45d96e6431f53a9e0ea16ad43"
+    },
+    "authority": {
+      "architecture": "CHARACTER_ARCHITECTURE.md §3.2",
+      "allocation": "docs/formal/GENERAL_ATTENTION_CARRIER_ALLOCATION_TABLE.json",
+      "writeScope": "docs/formal/GENERAL_ATTENTION_WRITE_SCOPE_POLICY.json",
+      "enforcement": "src/campaign3/generalWriteScope.ts",
+      "inheritedAdaptation": "docs/formal/CAMPAIGN2_PERMANENT_ALLOCATION.md",
+      "inheritedCommitment": "docs/formal/TASK_COMMITMENTS.md",
+      "commitmentSuccessors": "docs/formal/TASK_COGNITIVE_ALLOCATION_TABLE.json"
+    },
+    "boxes": [
+      {
+        "box": "Episodic",
+        "label": "Episodic Imprints",
+        "observedPaths": 2,
+        "reads": 24,
+        "mutations": 12,
+        "changes": 12,
+        "currentlyPresent": 2,
+        "eventIds": [
+          "41",
+          "57",
+          "73",
+          "89",
+          "102",
+          "103",
+          "117",
+          "118",
+          "132",
+          "133",
+          "147",
+          "148",
+          "44",
+          "60",
+          "76",
+          "92",
+          "107",
+          "122",
+          "137",
+          "152"
+        ],
+        "paths": [
+          "0a8c010103010102f60402010201030107010a8e01010101010bea070b8d080b8e080521636f6e74656e742f67656e6572616c2d617474656e74696f6e2f7375626a656374",
+          "0a8c010103010102f80402010201030107010a8e01010101010bea070b8d080b8e080521636f6e74656e742f67656e6572616c2d617474656e74696f6e2f7375626a656374"
+        ]
+      },
+      {
+        "box": "Assoc",
+        "label": "Associations",
+        "observedPaths": 1,
+        "reads": 8,
+        "mutations": 4,
+        "changes": 4,
+        "currentlyPresent": 1,
+        "eventIds": [
+          "43",
+          "59",
+          "75",
+          "91",
+          "103",
+          "118",
+          "133",
+          "148"
+        ],
+        "paths": [
+          "0a8c010103010102f70402010201030107010a8e01010101010bea070b8d080b8e080521636f6e74656e742f67656e6572616c2d617474656e74696f6e2f7375626a656374"
+        ]
+      },
+      {
+        "box": "Prospection",
+        "label": "Prospection / Goal Management",
+        "observedPaths": 2,
+        "reads": 2,
+        "mutations": 1,
+        "changes": 1,
+        "currentlyPresent": 2,
+        "eventIds": [
+          "1",
+          "10"
+        ],
+        "paths": [
+          "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080521636f6e74656e742f67656e6572616c2d617474656e74696f6e2f7375626a65637402010bea070b8d080b8e08051e636f6e74656e742f67656e6572616c2d617474656e74696f6e2f7461736b",
+          "0a8c010103010102f90402010201030107010a8e01010101010bea070b8d080b8e080521636f6e74656e742f67656e6572616c2d617474656e74696f6e2f7375626a656374"
+        ]
+      },
+      {
+        "box": "Percept",
+        "label": "Perception / Attention",
+        "observedPaths": 9,
+        "reads": 68,
+        "mutations": 26,
+        "changes": 26,
+        "currentlyPresent": 7,
+        "eventIds": [
+          "30",
+          "46",
+          "62",
+          "78",
+          "94",
+          "109",
+          "124",
+          "139"
+        ],
+        "paths": [
+          "0a8c010103010102f10102010201030107010a8e01010101010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a656374",
+          "0a8c010103010102f10102010202030107010a8e01010101010ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010200",
+          "0a8c010103010102f10102010202030107010a8e01010101010ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010201",
+          "0a8c010103010102f10102010202030107010a8e01010101010ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010202",
+          "0a8c010103010102f20102010201030107010a8e01010101010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a656374",
+          "0a8c010103010102f20102010202030107010a8e01010101010ad501010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010200",
+          "0a8c010103010102f20102010202030107010a8e01010101010ad501010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010201",
+          "0a8c010103010102fa0402010201030107010a8e01010101010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a656374",
+          "0a8c010103010102fb0402010201030107010a8e01010101010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a656374"
+        ]
+      },
+      {
+        "box": "RegAdapt",
+        "label": "Regulatory Adaptation",
+        "observedPaths": 1,
+        "reads": 1,
+        "mutations": 0,
+        "changes": 0,
+        "currentlyPresent": 1,
+        "eventIds": [
+          "0"
+        ],
+        "paths": [
+          "0a8c010103010102ae0202010203030107010a8e01010101010aa602010201010bea070b8d080b8e080521636f6e74656e742f67656e6572616c2d617474656e74696f6e2f7375626a65637402010b8508051b7661726961626c652f666978747572652d726567756c6174696f6e"
+        ]
+      }
+    ],
+    "rows": [
+      {
+        "path": "0a8c010103010102890502010201030107010a8e01010101010a8405010201010bea070b8d080b8e080521636f6e74656e742f67656e6572616c2d617474656e74696f6e2f7375626a65637402010b9408050f6c6f63616c2d726573657276652f41",
+        "root": "649",
+        "label": "{\n  \"record\": \"StatePath#140/1\",\n  \"RootStateTypeId [1]\": \"649\",\n  \"FieldId [2]\": \"1\",\n  \"Selectors [3]\": [\n    {\n      \"record\": \"CanonicalMapKeySelector#142/1\",\n      \"CanonicalMapKey [1]\": {\n        \"record\": \"LocalReserveKey#644/1\",\n        \"Character [1]\": {\n          \"namespace\": \"1002\",\n          \"identity\": {\n            \"namespace\": \"1037\",\n            \"identity\": {\n              \"namespace\": \"1038\",\n              \"identity\": \"content/general-attention/subject\"\n            }\n          }\n        },\n        \"Reserve [2]\": {\n          \"namespace\": \"1044\",\n          \"identity\": \"local-reserve/A\"\n        }\n      }\n    }\n  ]\n}",
+        "reads": 8,
+        "mutations": 0,
+        "changes": 0,
+        "presentAtRevision": true,
+        "events": [
+          {
+            "id": "29",
+            "instant": "3",
+            "stage": "general-attention-current-sample",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "45",
+            "instant": "4",
+            "stage": "general-attention-current-sample",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "61",
+            "instant": "5",
+            "stage": "general-attention-current-sample",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "77",
+            "instant": "6",
+            "stage": "general-attention-current-sample",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "93",
+            "instant": "7",
+            "stage": "general-attention-current-sample",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "108",
+            "instant": "8",
+            "stage": "general-attention-current-sample",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "123",
+            "instant": "9",
+            "stage": "general-attention-current-sample",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "138",
+            "instant": "10",
+            "stage": "general-attention-current-sample",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          }
+        ],
+        "binding": null
+      },
+      {
+        "path": "0a8c010103010102890502010201030107010a8e01010101010a8405010201010bea070b8d080b8e080521636f6e74656e742f67656e6572616c2d617474656e74696f6e2f7375626a65637402010b9408050f6c6f63616c2d726573657276652f42",
+        "root": "649",
+        "label": "{\n  \"record\": \"StatePath#140/1\",\n  \"RootStateTypeId [1]\": \"649\",\n  \"FieldId [2]\": \"1\",\n  \"Selectors [3]\": [\n    {\n      \"record\": \"CanonicalMapKeySelector#142/1\",\n      \"CanonicalMapKey [1]\": {\n        \"record\": \"LocalReserveKey#644/1\",\n        \"Character [1]\": {\n          \"namespace\": \"1002\",\n          \"identity\": {\n            \"namespace\": \"1037\",\n            \"identity\": {\n              \"namespace\": \"1038\",\n              \"identity\": \"content/general-attention/subject\"\n            }\n          }\n        },\n        \"Reserve [2]\": {\n          \"namespace\": \"1044\",\n          \"identity\": \"local-reserve/B\"\n        }\n      }\n    }\n  ]\n}",
+        "reads": 8,
+        "mutations": 0,
+        "changes": 0,
+        "presentAtRevision": true,
+        "events": [
+          {
+            "id": "29",
+            "instant": "3",
+            "stage": "general-attention-current-sample",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "45",
+            "instant": "4",
+            "stage": "general-attention-current-sample",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "61",
+            "instant": "5",
+            "stage": "general-attention-current-sample",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "77",
+            "instant": "6",
+            "stage": "general-attention-current-sample",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "93",
+            "instant": "7",
+            "stage": "general-attention-current-sample",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "108",
+            "instant": "8",
+            "stage": "general-attention-current-sample",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "123",
+            "instant": "9",
+            "stage": "general-attention-current-sample",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "138",
+            "instant": "10",
+            "stage": "general-attention-current-sample",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          }
+        ],
+        "binding": null
+      },
+      {
+        "path": "0a8c010103010102890502010201030107010a8e01010101010a8405010201010bea070b8d080b8e080521636f6e74656e742f67656e6572616c2d617474656e74696f6e2f7375626a65637402010b9408050f6c6f63616c2d726573657276652f43",
+        "root": "649",
+        "label": "{\n  \"record\": \"StatePath#140/1\",\n  \"RootStateTypeId [1]\": \"649\",\n  \"FieldId [2]\": \"1\",\n  \"Selectors [3]\": [\n    {\n      \"record\": \"CanonicalMapKeySelector#142/1\",\n      \"CanonicalMapKey [1]\": {\n        \"record\": \"LocalReserveKey#644/1\",\n        \"Character [1]\": {\n          \"namespace\": \"1002\",\n          \"identity\": {\n            \"namespace\": \"1037\",\n            \"identity\": {\n              \"namespace\": \"1038\",\n              \"identity\": \"content/general-attention/subject\"\n            }\n          }\n        },\n        \"Reserve [2]\": {\n          \"namespace\": \"1044\",\n          \"identity\": \"local-reserve/C\"\n        }\n      }\n    }\n  ]\n}",
+        "reads": 8,
+        "mutations": 0,
+        "changes": 0,
+        "presentAtRevision": true,
+        "events": [
+          {
+            "id": "29",
+            "instant": "3",
+            "stage": "general-attention-current-sample",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "45",
+            "instant": "4",
+            "stage": "general-attention-current-sample",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "61",
+            "instant": "5",
+            "stage": "general-attention-current-sample",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "77",
+            "instant": "6",
+            "stage": "general-attention-current-sample",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "93",
+            "instant": "7",
+            "stage": "general-attention-current-sample",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "108",
+            "instant": "8",
+            "stage": "general-attention-current-sample",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "123",
+            "instant": "9",
+            "stage": "general-attention-current-sample",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "138",
+            "instant": "10",
+            "stage": "general-attention-current-sample",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          }
+        ],
+        "binding": null
+      },
+      {
+        "path": "0a8c0101030101028c0202010201030107010a8e01010101010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a656374",
+        "root": "268",
+        "label": "{\n  \"record\": \"StatePath#140/1\",\n  \"RootStateTypeId [1]\": \"268\",\n  \"FieldId [2]\": \"1\",\n  \"Selectors [3]\": [\n    {\n      \"record\": \"CanonicalMapKeySelector#142/1\",\n      \"CanonicalMapKey [1]\": {\n        \"namespace\": \"1000\",\n        \"identity\": \"observer/general-attention-subject\"\n      }\n    }\n  ]\n}",
+        "reads": 42,
+        "mutations": 0,
+        "changes": 0,
+        "presentAtRevision": true,
+        "events": [
+          {
+            "id": "18",
+            "instant": "1",
+            "stage": "measurement-prediction-application",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "1",
+            "instant": "2",
+            "stage": "general-attention-prior-concern-workspace",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "29",
+            "instant": "3",
+            "stage": "general-attention-current-sample",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "36",
+            "instant": "3",
+            "stage": "general-attention-current-body-selection",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "37",
+            "instant": "3",
+            "stage": "general-attention-current-visual-selection",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "41",
+            "instant": "3",
+            "stage": "general-attention-ordinary-memory-formation",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "43",
+            "instant": "3",
+            "stage": "general-attention-event-association-formation",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "44",
+            "instant": "3",
+            "stage": "general-attention-event-presentation-formation",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "45",
+            "instant": "4",
+            "stage": "general-attention-current-sample",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "52",
+            "instant": "4",
+            "stage": "general-attention-current-body-selection",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "53",
+            "instant": "4",
+            "stage": "general-attention-current-visual-selection",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "57",
+            "instant": "4",
+            "stage": "general-attention-ordinary-memory-formation",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "59",
+            "instant": "4",
+            "stage": "general-attention-event-association-formation",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "60",
+            "instant": "4",
+            "stage": "general-attention-event-presentation-formation",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "61",
+            "instant": "5",
+            "stage": "general-attention-current-sample",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "68",
+            "instant": "5",
+            "stage": "general-attention-current-body-selection",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "69",
+            "instant": "5",
+            "stage": "general-attention-current-visual-selection",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "73",
+            "instant": "5",
+            "stage": "general-attention-ordinary-memory-formation",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "75",
+            "instant": "5",
+            "stage": "general-attention-event-association-formation",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "76",
+            "instant": "5",
+            "stage": "general-attention-event-presentation-formation",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "77",
+            "instant": "6",
+            "stage": "general-attention-current-sample",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "84",
+            "instant": "6",
+            "stage": "general-attention-current-body-selection",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "85",
+            "instant": "6",
+            "stage": "general-attention-current-visual-selection",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "89",
+            "instant": "6",
+            "stage": "general-attention-ordinary-memory-formation",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "91",
+            "instant": "6",
+            "stage": "general-attention-event-association-formation",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "92",
+            "instant": "6",
+            "stage": "general-attention-event-presentation-formation",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "93",
+            "instant": "7",
+            "stage": "general-attention-current-sample",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "102",
+            "instant": "7",
+            "stage": "general-attention-current-body-rank",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "103",
+            "instant": "7",
+            "stage": "general-attention-prior-concern-event-rank",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "107",
+            "instant": "7",
+            "stage": "general-attention-event-presentation-owner",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "108",
+            "instant": "8",
+            "stage": "general-attention-current-sample",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "117",
+            "instant": "8",
+            "stage": "general-attention-current-body-rank",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "118",
+            "instant": "8",
+            "stage": "general-attention-prior-concern-event-rank",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "122",
+            "instant": "8",
+            "stage": "general-attention-event-presentation-owner",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "123",
+            "instant": "9",
+            "stage": "general-attention-current-sample",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "132",
+            "instant": "9",
+            "stage": "general-attention-current-body-rank",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "133",
+            "instant": "9",
+            "stage": "general-attention-prior-concern-event-rank",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "137",
+            "instant": "9",
+            "stage": "general-attention-event-presentation-owner",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "138",
+            "instant": "10",
+            "stage": "general-attention-current-sample",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "147",
+            "instant": "10",
+            "stage": "general-attention-current-body-rank",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "148",
+            "instant": "10",
+            "stage": "general-attention-prior-concern-event-rank",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "152",
+            "instant": "10",
+            "stage": "general-attention-event-presentation-owner",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          }
+        ],
+        "binding": null
+      },
+      {
+        "path": "0a8c010103010102ae0202010203030107010a8e01010101010aa602010201010bea070b8d080b8e080521636f6e74656e742f67656e6572616c2d617474656e74696f6e2f7375626a65637402010b8508051b7661726961626c652f666978747572652d726567756c6174696f6e",
+        "root": "302",
+        "label": "{\n  \"record\": \"StatePath#140/1\",\n  \"RootStateTypeId [1]\": \"302\",\n  \"FieldId [2]\": \"3\",\n  \"Selectors [3]\": [\n    {\n      \"record\": \"CanonicalMapKeySelector#142/1\",\n      \"CanonicalMapKey [1]\": {\n        \"record\": \"RegulatoryAdaptationKey#294/1\",\n        \"CharacterId [1]\": {\n          \"namespace\": \"1002\",\n          \"identity\": {\n            \"namespace\": \"1037\",\n            \"identity\": {\n              \"namespace\": \"1038\",\n              \"identity\": \"content/general-attention/subject\"\n            }\n          }\n        },\n        \"RegulatoryVariableId [2]\": {\n          \"namespace\": \"1029\",\n          \"identity\": \"variable/fixture-regulation\"\n        }\n      }\n    }\n  ]\n}",
+        "reads": 1,
+        "mutations": 0,
+        "changes": 0,
+        "presentAtRevision": true,
+        "events": [
+          {
+            "id": "0",
+            "instant": "1",
+            "stage": "regulatory-diagnostic-probe",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          }
+        ],
+        "binding": {
+          "root": "302",
+          "schema": "RegulatoryAdaptationState",
+          "box": "RegAdapt",
+          "label": "Regulatory Adaptation",
+          "authority": "ADAPT (inherited)",
+          "basis": "Campaign2 permanent allocation: tolerance, sensitization, displacement and accumulated load; embodied adaptation remains distinct from learned disposition"
+        }
+      },
+      {
+        "path": "0a8c010103010102c5040201020103010700",
+        "root": "581",
+        "label": "0a8c010103010102c5040201020103010700",
+        "reads": 0,
+        "mutations": 0,
+        "changes": 0,
+        "presentAtRevision": true,
+        "events": [],
+        "binding": null
+      },
+      {
+        "path": "0a8c010103010102ea0202010201030107010a8e01010101010ae802010201010bea070b8d080b8e080521636f6e74656e742f67656e6572616c2d617474656e74696f6e2f7375626a65637402010b83080527646566696e6974696f6e2f67656e6572616c2d617474656e74696f6e2f70726564696374696f6e",
+        "root": "362",
+        "label": "{\n  \"record\": \"StatePath#140/1\",\n  \"RootStateTypeId [1]\": \"362\",\n  \"FieldId [2]\": \"1\",\n  \"Selectors [3]\": [\n    {\n      \"record\": \"CanonicalMapKeySelector#142/1\",\n      \"CanonicalMapKey [1]\": {\n        \"record\": \"MeasurementPredictionKey#360/1\",\n        \"CharacterId [1]\": {\n          \"namespace\": \"1002\",\n          \"identity\": {\n            \"namespace\": \"1037\",\n            \"identity\": {\n              \"namespace\": \"1038\",\n              \"identity\": \"content/general-attention/subject\"\n            }\n          }\n        },\n        \"PredictionDefinitionId [2]\": {\n          \"namespace\": \"1027\",\n          \"identity\": \"definition/general-attention/prediction\"\n        }\n      }\n    }\n  ]\n}",
+        "reads": 2,
+        "mutations": 1,
+        "changes": 1,
+        "presentAtRevision": true,
+        "events": [
+          {
+            "id": "18",
+            "instant": "1",
+            "stage": "measurement-prediction-application",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "1",
+            "instant": "2",
+            "stage": "general-attention-prior-concern-workspace",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          }
+        ],
+        "binding": null
+      },
+      {
+        "path": "0a8c010103010102f10102010201030107010a8e01010101010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a656374",
+        "root": "241",
+        "label": "{\n  \"record\": \"StatePath#140/1\",\n  \"RootStateTypeId [1]\": \"241\",\n  \"FieldId [2]\": \"1\",\n  \"Selectors [3]\": [\n    {\n      \"record\": \"CanonicalMapKeySelector#142/1\",\n      \"CanonicalMapKey [1]\": {\n        \"namespace\": \"1000\",\n        \"identity\": \"observer/general-attention-subject\"\n      }\n    }\n  ]\n}",
+        "reads": 8,
+        "mutations": 1,
+        "changes": 1,
+        "presentAtRevision": true,
+        "events": [
+          {
+            "id": "30",
+            "instant": "3",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "46",
+            "instant": "4",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "62",
+            "instant": "5",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "78",
+            "instant": "6",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "94",
+            "instant": "7",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "109",
+            "instant": "8",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "124",
+            "instant": "9",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "139",
+            "instant": "10",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          }
+        ],
+        "binding": {
+          "root": "241",
+          "schema": "PerceptualContinuantFileState",
+          "box": "Percept",
+          "label": "Perception / Attention",
+          "authority": "perception",
+          "basis": "Current/consequence tracking ExactPaths"
+        }
+      },
+      {
+        "path": "0a8c010103010102f10102010202030107010a8e01010101010ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010200",
+        "root": "241",
+        "label": "{\n  \"record\": \"StatePath#140/1\",\n  \"RootStateTypeId [1]\": \"241\",\n  \"FieldId [2]\": \"2\",\n  \"Selectors [3]\": [\n    {\n      \"record\": \"CanonicalMapKeySelector#142/1\",\n      \"CanonicalMapKey [1]\": {\n        \"record\": \"PerceptualReferentId#212/1\",\n        \"ObserverId [1]\": {\n          \"namespace\": \"1000\",\n          \"identity\": \"observer/general-attention-subject\"\n        },\n        \"ObserverTrackSequence [2]\": \"0\"\n      }\n    }\n  ]\n}",
+        "reads": 8,
+        "mutations": 1,
+        "changes": 1,
+        "presentAtRevision": true,
+        "events": [
+          {
+            "id": "30",
+            "instant": "3",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "46",
+            "instant": "4",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "62",
+            "instant": "5",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "78",
+            "instant": "6",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "94",
+            "instant": "7",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "109",
+            "instant": "8",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "124",
+            "instant": "9",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "139",
+            "instant": "10",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          }
+        ],
+        "binding": {
+          "root": "241",
+          "schema": "PerceptualContinuantFileState",
+          "box": "Percept",
+          "label": "Perception / Attention",
+          "authority": "perception",
+          "basis": "Current/consequence tracking ExactPaths"
+        }
+      },
+      {
+        "path": "0a8c010103010102f10102010202030107010a8e01010101010ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010201",
+        "root": "241",
+        "label": "{\n  \"record\": \"StatePath#140/1\",\n  \"RootStateTypeId [1]\": \"241\",\n  \"FieldId [2]\": \"2\",\n  \"Selectors [3]\": [\n    {\n      \"record\": \"CanonicalMapKeySelector#142/1\",\n      \"CanonicalMapKey [1]\": {\n        \"record\": \"PerceptualReferentId#212/1\",\n        \"ObserverId [1]\": {\n          \"namespace\": \"1000\",\n          \"identity\": \"observer/general-attention-subject\"\n        },\n        \"ObserverTrackSequence [2]\": \"1\"\n      }\n    }\n  ]\n}",
+        "reads": 8,
+        "mutations": 1,
+        "changes": 1,
+        "presentAtRevision": true,
+        "events": [
+          {
+            "id": "30",
+            "instant": "3",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "46",
+            "instant": "4",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "62",
+            "instant": "5",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "78",
+            "instant": "6",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "94",
+            "instant": "7",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "109",
+            "instant": "8",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "124",
+            "instant": "9",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "139",
+            "instant": "10",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          }
+        ],
+        "binding": {
+          "root": "241",
+          "schema": "PerceptualContinuantFileState",
+          "box": "Percept",
+          "label": "Perception / Attention",
+          "authority": "perception",
+          "basis": "Current/consequence tracking ExactPaths"
+        }
+      },
+      {
+        "path": "0a8c010103010102f10102010202030107010a8e01010101010ad401010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010202",
+        "root": "241",
+        "label": "{\n  \"record\": \"StatePath#140/1\",\n  \"RootStateTypeId [1]\": \"241\",\n  \"FieldId [2]\": \"2\",\n  \"Selectors [3]\": [\n    {\n      \"record\": \"CanonicalMapKeySelector#142/1\",\n      \"CanonicalMapKey [1]\": {\n        \"record\": \"PerceptualReferentId#212/1\",\n        \"ObserverId [1]\": {\n          \"namespace\": \"1000\",\n          \"identity\": \"observer/general-attention-subject\"\n        },\n        \"ObserverTrackSequence [2]\": \"2\"\n      }\n    }\n  ]\n}",
+        "reads": 8,
+        "mutations": 1,
+        "changes": 1,
+        "presentAtRevision": true,
+        "events": [
+          {
+            "id": "30",
+            "instant": "3",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "46",
+            "instant": "4",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "62",
+            "instant": "5",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "78",
+            "instant": "6",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "94",
+            "instant": "7",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "109",
+            "instant": "8",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "124",
+            "instant": "9",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "139",
+            "instant": "10",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          }
+        ],
+        "binding": {
+          "root": "241",
+          "schema": "PerceptualContinuantFileState",
+          "box": "Percept",
+          "label": "Perception / Attention",
+          "authority": "perception",
+          "basis": "Current/consequence tracking ExactPaths"
+        }
+      },
+      {
+        "path": "0a8c010103010102f20102010201030107010a8e01010101010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a656374",
+        "root": "242",
+        "label": "{\n  \"record\": \"StatePath#140/1\",\n  \"RootStateTypeId [1]\": \"242\",\n  \"FieldId [2]\": \"1\",\n  \"Selectors [3]\": [\n    {\n      \"record\": \"CanonicalMapKeySelector#142/1\",\n      \"CanonicalMapKey [1]\": {\n        \"namespace\": \"1000\",\n        \"identity\": \"observer/general-attention-subject\"\n      }\n    }\n  ]\n}",
+        "reads": 8,
+        "mutations": 2,
+        "changes": 2,
+        "presentAtRevision": true,
+        "events": [
+          {
+            "id": "30",
+            "instant": "3",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "46",
+            "instant": "4",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "62",
+            "instant": "5",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "78",
+            "instant": "6",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "94",
+            "instant": "7",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "109",
+            "instant": "8",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "124",
+            "instant": "9",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "139",
+            "instant": "10",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          }
+        ],
+        "binding": {
+          "root": "242",
+          "schema": "PerceptualEventFileState",
+          "box": "Percept",
+          "label": "Perception / Attention",
+          "authority": "perception",
+          "basis": "Current/consequence tracking ExactPaths"
+        }
+      },
+      {
+        "path": "0a8c010103010102f20102010202030107010a8e01010101010ad501010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010200",
+        "root": "242",
+        "label": "{\n  \"record\": \"StatePath#140/1\",\n  \"RootStateTypeId [1]\": \"242\",\n  \"FieldId [2]\": \"2\",\n  \"Selectors [3]\": [\n    {\n      \"record\": \"CanonicalMapKeySelector#142/1\",\n      \"CanonicalMapKey [1]\": {\n        \"record\": \"PerceptualEventReferentId#213/1\",\n        \"ObserverId [1]\": {\n          \"namespace\": \"1000\",\n          \"identity\": \"observer/general-attention-subject\"\n        },\n        \"ObserverEventSequence [2]\": \"0\"\n      }\n    }\n  ]\n}",
+        "reads": 8,
+        "mutations": 2,
+        "changes": 2,
+        "presentAtRevision": false,
+        "events": [
+          {
+            "id": "30",
+            "instant": "3",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "46",
+            "instant": "4",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "62",
+            "instant": "5",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "78",
+            "instant": "6",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "94",
+            "instant": "7",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "109",
+            "instant": "8",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "124",
+            "instant": "9",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "139",
+            "instant": "10",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          }
+        ],
+        "binding": {
+          "root": "242",
+          "schema": "PerceptualEventFileState",
+          "box": "Percept",
+          "label": "Perception / Attention",
+          "authority": "perception",
+          "basis": "Current/consequence tracking ExactPaths"
+        }
+      },
+      {
+        "path": "0a8c010103010102f20102010202030107010a8e01010101010ad501010201010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a65637402010201",
+        "root": "242",
+        "label": "{\n  \"record\": \"StatePath#140/1\",\n  \"RootStateTypeId [1]\": \"242\",\n  \"FieldId [2]\": \"2\",\n  \"Selectors [3]\": [\n    {\n      \"record\": \"CanonicalMapKeySelector#142/1\",\n      \"CanonicalMapKey [1]\": {\n        \"record\": \"PerceptualEventReferentId#213/1\",\n        \"ObserverId [1]\": {\n          \"namespace\": \"1000\",\n          \"identity\": \"observer/general-attention-subject\"\n        },\n        \"ObserverEventSequence [2]\": \"1\"\n      }\n    }\n  ]\n}",
+        "reads": 4,
+        "mutations": 2,
+        "changes": 2,
+        "presentAtRevision": false,
+        "events": [
+          {
+            "id": "94",
+            "instant": "7",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "109",
+            "instant": "8",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "124",
+            "instant": "9",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "139",
+            "instant": "10",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          }
+        ],
+        "binding": {
+          "root": "242",
+          "schema": "PerceptualEventFileState",
+          "box": "Percept",
+          "label": "Perception / Attention",
+          "authority": "perception",
+          "basis": "Current/consequence tracking ExactPaths"
+        }
+      },
+      {
+        "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080521636f6e74656e742f67656e6572616c2d617474656e74696f6e2f7375626a65637402010bea070b8d080b8e08051e636f6e74656e742f67656e6572616c2d617474656e74696f6e2f7461736b",
+        "root": "373",
+        "label": "{\n  \"record\": \"StatePath#140/1\",\n  \"RootStateTypeId [1]\": \"373\",\n  \"FieldId [2]\": \"1\",\n  \"Selectors [3]\": [\n    {\n      \"record\": \"CanonicalMapKeySelector#142/1\",\n      \"CanonicalMapKey [1]\": {\n        \"record\": \"TaskCommitmentKey#371/1\",\n        \"CharacterId [1]\": {\n          \"namespace\": \"1002\",\n          \"identity\": {\n            \"namespace\": \"1037\",\n            \"identity\": {\n              \"namespace\": \"1038\",\n              \"identity\": \"content/general-attention/subject\"\n            }\n          }\n        },\n        \"TaskReferent [2]\": {\n          \"namespace\": \"1002\",\n          \"identity\": {\n            \"namespace\": \"1037\",\n            \"identity\": {\n              \"namespace\": \"1038\",\n              \"identity\": \"content/general-attention/task\"\n            }\n          }\n        }\n      }\n    }\n  ]\n}",
+        "reads": 2,
+        "mutations": 1,
+        "changes": 1,
+        "presentAtRevision": true,
+        "events": [
+          {
+            "id": "1",
+            "instant": "2",
+            "stage": "general-attention-prior-concern-workspace",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "10",
+            "instant": "21",
+            "stage": "task-deadline",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          }
+        ],
+        "binding": {
+          "root": "373",
+          "schema": "TaskCommitmentState",
+          "box": "Prospection",
+          "label": "Prospection / Goal Management",
+          "authority": "authority/prospective-commitments (inherited)",
+          "basis": "Concrete task commitment ownership; admitted measurement satisfaction and deadline status remain distinct from world success"
+        }
+      },
+      {
+        "path": "0a8c010103010102f60402010201030107010a8e01010101010bea070b8d080b8e080521636f6e74656e742f67656e6572616c2d617474656e74696f6e2f7375626a656374",
+        "root": "630",
+        "label": "{\n  \"record\": \"StatePath#140/1\",\n  \"RootStateTypeId [1]\": \"630\",\n  \"FieldId [2]\": \"1\",\n  \"Selectors [3]\": [\n    {\n      \"record\": \"CanonicalMapKeySelector#142/1\",\n      \"CanonicalMapKey [1]\": {\n        \"namespace\": \"1002\",\n        \"identity\": {\n          \"namespace\": \"1037\",\n          \"identity\": {\n            \"namespace\": \"1038\",\n            \"identity\": \"content/general-attention/subject\"\n          }\n        }\n      }\n    }\n  ]\n}",
+        "reads": 12,
+        "mutations": 4,
+        "changes": 4,
+        "presentAtRevision": true,
+        "events": [
+          {
+            "id": "41",
+            "instant": "3",
+            "stage": "general-attention-ordinary-memory-formation",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "57",
+            "instant": "4",
+            "stage": "general-attention-ordinary-memory-formation",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "73",
+            "instant": "5",
+            "stage": "general-attention-ordinary-memory-formation",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "89",
+            "instant": "6",
+            "stage": "general-attention-ordinary-memory-formation",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "102",
+            "instant": "7",
+            "stage": "general-attention-current-body-rank",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "103",
+            "instant": "7",
+            "stage": "general-attention-prior-concern-event-rank",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "117",
+            "instant": "8",
+            "stage": "general-attention-current-body-rank",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "118",
+            "instant": "8",
+            "stage": "general-attention-prior-concern-event-rank",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "132",
+            "instant": "9",
+            "stage": "general-attention-current-body-rank",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "133",
+            "instant": "9",
+            "stage": "general-attention-prior-concern-event-rank",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "147",
+            "instant": "10",
+            "stage": "general-attention-current-body-rank",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "148",
+            "instant": "10",
+            "stage": "general-attention-prior-concern-event-rank",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          }
+        ],
+        "binding": {
+          "root": "630",
+          "schema": "GeneralEpisodeState",
+          "box": "Episodic",
+          "label": "Episodic Imprints",
+          "authority": "ordinary-memory",
+          "basis": "LearningFamilies: episodic-memory"
+        }
+      },
+      {
+        "path": "0a8c010103010102f70402010201030107010a8e01010101010bea070b8d080b8e080521636f6e74656e742f67656e6572616c2d617474656e74696f6e2f7375626a656374",
+        "root": "631",
+        "label": "{\n  \"record\": \"StatePath#140/1\",\n  \"RootStateTypeId [1]\": \"631\",\n  \"FieldId [2]\": \"1\",\n  \"Selectors [3]\": [\n    {\n      \"record\": \"CanonicalMapKeySelector#142/1\",\n      \"CanonicalMapKey [1]\": {\n        \"namespace\": \"1002\",\n        \"identity\": {\n          \"namespace\": \"1037\",\n          \"identity\": {\n            \"namespace\": \"1038\",\n            \"identity\": \"content/general-attention/subject\"\n          }\n        }\n      }\n    }\n  ]\n}",
+        "reads": 8,
+        "mutations": 4,
+        "changes": 4,
+        "presentAtRevision": true,
+        "events": [
+          {
+            "id": "43",
+            "instant": "3",
+            "stage": "general-attention-event-association-formation",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "59",
+            "instant": "4",
+            "stage": "general-attention-event-association-formation",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "75",
+            "instant": "5",
+            "stage": "general-attention-event-association-formation",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "91",
+            "instant": "6",
+            "stage": "general-attention-event-association-formation",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "103",
+            "instant": "7",
+            "stage": "general-attention-prior-concern-event-rank",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "118",
+            "instant": "8",
+            "stage": "general-attention-prior-concern-event-rank",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "133",
+            "instant": "9",
+            "stage": "general-attention-prior-concern-event-rank",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "148",
+            "instant": "10",
+            "stage": "general-attention-prior-concern-event-rank",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          }
+        ],
+        "binding": {
+          "root": "631",
+          "schema": "GeneralAssociationState",
+          "box": "Assoc",
+          "label": "Associations",
+          "authority": "association",
+          "basis": "LearningFamilies: associations"
+        }
+      },
+      {
+        "path": "0a8c010103010102f80402010201030107010a8e01010101010bea070b8d080b8e080521636f6e74656e742f67656e6572616c2d617474656e74696f6e2f7375626a656374",
+        "root": "632",
+        "label": "{\n  \"record\": \"StatePath#140/1\",\n  \"RootStateTypeId [1]\": \"632\",\n  \"FieldId [2]\": \"1\",\n  \"Selectors [3]\": [\n    {\n      \"record\": \"CanonicalMapKeySelector#142/1\",\n      \"CanonicalMapKey [1]\": {\n        \"namespace\": \"1002\",\n        \"identity\": {\n          \"namespace\": \"1037\",\n          \"identity\": {\n            \"namespace\": \"1038\",\n            \"identity\": \"content/general-attention/subject\"\n          }\n        }\n      }\n    }\n  ]\n}",
+        "reads": 12,
+        "mutations": 8,
+        "changes": 8,
+        "presentAtRevision": true,
+        "events": [
+          {
+            "id": "44",
+            "instant": "3",
+            "stage": "general-attention-event-presentation-formation",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "60",
+            "instant": "4",
+            "stage": "general-attention-event-presentation-formation",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "76",
+            "instant": "5",
+            "stage": "general-attention-event-presentation-formation",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "92",
+            "instant": "6",
+            "stage": "general-attention-event-presentation-formation",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "103",
+            "instant": "7",
+            "stage": "general-attention-prior-concern-event-rank",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "107",
+            "instant": "7",
+            "stage": "general-attention-event-presentation-owner",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "118",
+            "instant": "8",
+            "stage": "general-attention-prior-concern-event-rank",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "122",
+            "instant": "8",
+            "stage": "general-attention-event-presentation-owner",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "133",
+            "instant": "9",
+            "stage": "general-attention-prior-concern-event-rank",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "137",
+            "instant": "9",
+            "stage": "general-attention-event-presentation-owner",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "148",
+            "instant": "10",
+            "stage": "general-attention-prior-concern-event-rank",
+            "reads": 1,
+            "mutations": 0,
+            "changes": 0
+          },
+          {
+            "id": "152",
+            "instant": "10",
+            "stage": "general-attention-event-presentation-owner",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          }
+        ],
+        "binding": {
+          "root": "632",
+          "schema": "GeneralPresentationState",
+          "box": "Episodic",
+          "label": "Episodic Imprints",
+          "authority": "presentation",
+          "basis": "LearningFamilies: episodic-memory; presentation remains a distinct state root"
+        }
+      },
+      {
+        "path": "0a8c010103010102f90402010201030107010a8e01010101010bea070b8d080b8e080521636f6e74656e742f67656e6572616c2d617474656e74696f6e2f7375626a656374",
+        "root": "633",
+        "label": "0a8c010103010102f90402010201030107010a8e01010101010bea070b8d080b8e080521636f6e74656e742f67656e6572616c2d617474656e74696f6e2f7375626a656374",
+        "reads": 0,
+        "mutations": 0,
+        "changes": 0,
+        "presentAtRevision": true,
+        "events": [],
+        "binding": {
+          "root": "633",
+          "schema": "MaintenanceGoalState",
+          "box": "Prospection",
+          "label": "Prospection / Goal Management",
+          "authority": "goal-lifecycle",
+          "basis": "Exact goal-lifecycle write authority; bounded maintenance-goal seam"
+        }
+      },
+      {
+        "path": "0a8c010103010102fa0402010201030107010a8e01010101010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a656374",
+        "root": "634",
+        "label": "{\n  \"record\": \"StatePath#140/1\",\n  \"RootStateTypeId [1]\": \"634\",\n  \"FieldId [2]\": \"1\",\n  \"Selectors [3]\": [\n    {\n      \"record\": \"CanonicalMapKeySelector#142/1\",\n      \"CanonicalMapKey [1]\": {\n        \"namespace\": \"1000\",\n        \"identity\": \"observer/general-attention-subject\"\n      }\n    }\n  ]\n}",
+        "reads": 8,
+        "mutations": 8,
+        "changes": 8,
+        "presentAtRevision": true,
+        "events": [
+          {
+            "id": "30",
+            "instant": "3",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "46",
+            "instant": "4",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "62",
+            "instant": "5",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "78",
+            "instant": "6",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "94",
+            "instant": "7",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "109",
+            "instant": "8",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "124",
+            "instant": "9",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "139",
+            "instant": "10",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          }
+        ],
+        "binding": {
+          "root": "634",
+          "schema": "GeneralTrackingState",
+          "box": "Percept",
+          "label": "Perception / Attention",
+          "authority": "perception",
+          "basis": "Current/consequence tracking ExactPaths"
+        }
+      },
+      {
+        "path": "0a8c010103010102fb0402010201030107010a8e01010101010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a656374",
+        "root": "635",
+        "label": "{\n  \"record\": \"StatePath#140/1\",\n  \"RootStateTypeId [1]\": \"635\",\n  \"FieldId [2]\": \"1\",\n  \"Selectors [3]\": [\n    {\n      \"record\": \"CanonicalMapKeySelector#142/1\",\n      \"CanonicalMapKey [1]\": {\n        \"namespace\": \"1000\",\n        \"identity\": \"observer/general-attention-subject\"\n      }\n    }\n  ]\n}",
+        "reads": 8,
+        "mutations": 8,
+        "changes": 8,
+        "presentAtRevision": true,
+        "events": [
+          {
+            "id": "30",
+            "instant": "3",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "46",
+            "instant": "4",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "62",
+            "instant": "5",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "78",
+            "instant": "6",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "94",
+            "instant": "7",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "109",
+            "instant": "8",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "124",
+            "instant": "9",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          },
+          {
+            "id": "139",
+            "instant": "10",
+            "stage": "general-attention-current-track",
+            "reads": 1,
+            "mutations": 1,
+            "changes": 1
+          }
+        ],
+        "binding": {
+          "root": "635",
+          "schema": "TrialPanelContextState",
+          "box": "Percept",
+          "label": "Perception / Attention",
+          "authority": "perception",
+          "basis": "Current/consequence tracking context; not world-truth admission"
+        }
+      }
+    ],
+    "unmappedPaths": [
+      "0a8c010103010102890502010201030107010a8e01010101010a8405010201010bea070b8d080b8e080521636f6e74656e742f67656e6572616c2d617474656e74696f6e2f7375626a65637402010b9408050f6c6f63616c2d726573657276652f41",
+      "0a8c010103010102890502010201030107010a8e01010101010a8405010201010bea070b8d080b8e080521636f6e74656e742f67656e6572616c2d617474656e74696f6e2f7375626a65637402010b9408050f6c6f63616c2d726573657276652f42",
+      "0a8c010103010102890502010201030107010a8e01010101010a8405010201010bea070b8d080b8e080521636f6e74656e742f67656e6572616c2d617474656e74696f6e2f7375626a65637402010b9408050f6c6f63616c2d726573657276652f43",
+      "0a8c0101030101028c0202010201030107010a8e01010101010be80705226f627365727665722f67656e6572616c2d617474656e74696f6e2d7375626a656374",
+      "0a8c010103010102c5040201020103010700",
+      "0a8c010103010102ea0202010201030107010a8e01010101010ae802010201010bea070b8d080b8e080521636f6e74656e742f67656e6572616c2d617474656e74696f6e2f7375626a65637402010b83080527646566696e6974696f6e2f67656e6572616c2d617474656e74696f6e2f70726564696374696f6e"
+    ],
+    "scope": "Ten declared state-root correspondences within the retained General profile, including inherited adaptation and prospective-commitment ownership. Counts are recorded read/mutation/change activity, not evaluation contribution, behavioral necessity or character evidence. Historical paths decode from their exact identity even when absent now. Other roots remain unmapped; no inferred zero activity for the rest of the canonical architecture. No edge, state owner or reduction law is added."
+  },
+  "before": [
+    "38c13209db2a9d3fbdb5fcf01c4963ad5c678937f355bdab35be85e1cd2be503",
+    "fa864707e65f6152788bed12d6b47502b5388c00883e035ab9533c6f2c0549fc",
+    "a9c67b517e9ab4a52e064831abd5b9b104e181ed62df64be88c36118d83204e8",
+    "69c924cf00950e4dd97a57d46a66c77701a8e1a45d96e6431f53a9e0ea16ad43"
+  ],
+  "after": [
+    "38c13209db2a9d3fbdb5fcf01c4963ad5c678937f355bdab35be85e1cd2be503",
+    "fa864707e65f6152788bed12d6b47502b5388c00883e035ab9533c6f2c0549fc",
+    "a9c67b517e9ab4a52e064831abd5b9b104e181ed62df64be88c36118d83204e8",
+    "69c924cf00950e4dd97a57d46a66c77701a8e1a45d96e6431f53a9e0ea16ad43"
+  ],
+  "navigation": [
+    {
+      "root": "302",
+      "event": "0",
+      "selectedEvent": "0",
+      "timelineSelected": true,
+      "hashes": [
+        "38c13209db2a9d3fbdb5fcf01c4963ad5c678937f355bdab35be85e1cd2be503",
+        "fa864707e65f6152788bed12d6b47502b5388c00883e035ab9533c6f2c0549fc",
+        "a9c67b517e9ab4a52e064831abd5b9b104e181ed62df64be88c36118d83204e8",
+        "69c924cf00950e4dd97a57d46a66c77701a8e1a45d96e6431f53a9e0ea16ad43"
+      ]
+    },
+    {
+      "root": "373",
+      "event": "10",
+      "selectedEvent": "10",
+      "timelineSelected": true,
+      "hashes": [
+        "38c13209db2a9d3fbdb5fcf01c4963ad5c678937f355bdab35be85e1cd2be503",
+        "fa864707e65f6152788bed12d6b47502b5388c00883e035ab9533c6f2c0549fc",
+        "a9c67b517e9ab4a52e064831abd5b9b104e181ed62df64be88c36118d83204e8",
+        "69c924cf00950e4dd97a57d46a66c77701a8e1a45d96e6431f53a9e0ea16ad43"
+      ]
+    }
+  ]
+}
