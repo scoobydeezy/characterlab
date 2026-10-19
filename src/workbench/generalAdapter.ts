@@ -7,6 +7,7 @@ import {generalAttentionModelSource, prepareGeneralAttentionModel, generalAttent
 import freeze from '../../docs/planning/campaign3-general-attention-model-rev2/FREEZE.json';
 import {digest, exactText, exactKey, fromHex, equalBytes} from './canonical';
 import {nativeTimeline} from './nativeTimeline';
+import {nativeReadSources,type NativeReadSources} from './nativeReadSources';
 import {projectAssociation, type AssociationProjection} from './associationProjection';
 import type {TimelineEvent} from './contracts';
 export const GENERAL_RECIPES = freeze.models.map(m => m.name);
@@ -18,6 +19,7 @@ export interface GeneralSnapshot {
   modelHash: string; runHash: string; stateHash: string; saveHash: string;
   graph: AssociationProjection | null; graphPath: string | null;
   fields: {path: string; root: string; exact: string}[]; timeline: TimelineEvent[];
+  nativeReadMetadata?: NativeReadSources;
 }
 export type GeneralSeed = number | string;
 export type GeneralCheckpoint = {recipe: string; prefix: number; saveHex: string; saveHash: string;} & ({version:'general-workbench/0.1';seed:number}|{version:'general-workbench/0.2';seed:string});
@@ -64,10 +66,10 @@ export class GeneralWorkbenchRun {
     const snapshot = this.#run.snapshot(), save = this.#run.save(), state = restoreAuthoritativeState(decode(snapshot.state));
     const entries = state.entries(), graphs = entries.filter(e => e.path.rootStateTypeId === 631n);
     if (graphs.length > 1) throw Error('This profile requires an explicit subject selector for multiple association owners');
-    const graph = graphs[0];
+    const graph = graphs[0],trace=items(decode(snapshot.trace),'list');
     this.#snapshot = {recipe: this.#recipe, seamVersion: freeze.versions.rulesVersion, prefix: this.#prefix, clock: String(snapshot.clock), complete: items(f(rec(decode(save), 132n), 7n), 'list').length === 0,
       modelHash: this.#modelHash, runHash: await digest(this.#run.runIdentity()), stateHash: await digest(snapshot.state), saveHash: await digest(save),
       graph: graph ? projectAssociation(graph.value, generalBindingContext().graphScale) : null, graphPath: graph ? exactKey(statePathValue(graph.path)) : null,
-      fields: entries.map(e => ({path: exactKey(statePathValue(e.path)), root: String(e.path.rootStateTypeId), exact: exactText(e.value)})), timeline: nativeTimeline(items(decode(snapshot.trace), 'list'))};
+      fields: entries.map(e => ({path: exactKey(statePathValue(e.path)), root: String(e.path.rootStateTypeId), exact: exactText(e.value)})), timeline: nativeTimeline(trace),nativeReadMetadata:nativeReadSources(trace)};
   }
 }

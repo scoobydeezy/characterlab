@@ -1,0 +1,53 @@
+{
+  "status": "PASS BOUNDED GENERAL NATIVE-SOURCE BROWSER",
+  "recipe": "baseline",
+  "prefix": 11,
+  "readEvent": "102",
+  "sourceMutationEvent": "89",
+  "sources": [
+    {
+      "path": "src/workbench/GeneralWorkbench.tsx",
+      "sha256": "39feb33ab3a57562e684391139c5caedbf8d221ea06c9f01ac15de564a39f907"
+    },
+    {
+      "path": "src/workbench/NativeReadSourcesPanel.tsx",
+      "sha256": "00a225e447da6908dc65a37cd13c2c0fa1eef64dd54975dc29663bc900ffca01"
+    },
+    {
+      "path": "src/workbench/nativeReadSources.ts",
+      "sha256": "21a68367bb1ee57bcb3a3b30f157357b95f2a35f6cbd00b697619a6d55467314"
+    },
+    {
+      "path": "src/workbench/generalAdapter.ts",
+      "sha256": "744c77efd9c34d6d89d90428050f872922427d64c995e051265bc1575eb398c8"
+    },
+    {
+      "path": "src/workbench/generalExport.ts",
+      "sha256": "d5b30dd93fbd010d17b1892eea8589a460397a57e1815e8218e4a15c61b42fd4"
+    },
+    {
+      "path": "src/test/workbenchGeneralLegacySources.test.ts",
+      "sha256": "fe7549a63582972620f26d7631eb3cc15d14194409e22836d04a7c9eaec69c81"
+    },
+    {
+      "path": "scripts/check-workbench-general-native-sources-ui.mjs",
+      "sha256": "3e1a4f3ecfbcfb6e26fa6a72676185b6b687498ca0feaaa4151eb96da8d46eeb"
+    }
+  ],
+  "parent": {
+    "path": "docs/planning/workbench-general-native-sources-rev1/model-00.json.gz",
+    "sha256": "7a106ea831bbbd4cd0b1ce0270f7c4980f9486e01a7451485a0bcc3d9ca22e80",
+    "scope": "Completed baseline only; full43-model audit still running."
+  },
+  "artifacts": [
+    {
+      "path": "browser.json",
+      "sha256": "0ead835b287a1de711a5c27e7875f1c5a8c5267157a8751aa1a1dafa57fc9469"
+    },
+    {
+      "path": "sources.png",
+      "sha256": "29bbefe94f50dded15bd6881f0b34434dd47d23d5d0436c2ec8a802d0ba248b8"
+    }
+  ],
+  "scope": "Browser diagnostic joins the independently checked native saved-trace baseline report. Delivered derived recall differs from the stored source; source value matches prior mutation89. Keyboard navigation preserves four original native hashes. No transformation reevaluation, observer evidence, complete causal necessity or full-cohort browser claim."
+}

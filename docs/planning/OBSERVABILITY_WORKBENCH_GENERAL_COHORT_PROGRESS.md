@@ -1,5 +1,47 @@
 # General attention frozen cohort qualification
 
+## Native read-source enrichment — 2026-10-19
+
+`nativeReadSources.ts` now preserves native ActualReadRecord accessor identifiers,
+presence, delivered values, transformation identifiers and exact derived-source
+tuples as a separate diagnostic projection. General snapshots add nativeReadMetadata;
+the original timeline/state/graph projection remains byte-for-byte structurally
+unchanged when that property is removed. Shared nativeTimeline/contracts and the
+dependencies of the older active audits were not edited.
+
+General Timeline adds a Native read sources panel. For derived reads, delivered-value
+history and source-value history remain distinct. Source observations link to their
+most recent earlier exact-path mutation; missing history remains unresolved. This
+uses native metadata rather than guessing from a label or value mismatch. It does
+not rerun transformation mathematics or admit diagnostic knowledge to the character.
+
+Three focused tests PASS: native baseline commitments0..7, actual event102 recall
+delivery differing from its owner, its native source matching mutation89, unchanged
+checkpoint, historical stability after8, metadata alignment rejection and malformed
+decoder fixtures. The initial native test additionally compared complete original
+snapshots0..7 successfully, but build94235 rejected Node-only test imports. Its source
+and finding are retained in workbench-native-read-sources-development-rev1. The fixed
+browser-typed test uses original JSON commitments; full snapshot joins moved to the
+Node audit. No production behavior changed to address this build issue.
+
+Full audit46056 RUNNING in workbench-general-native-sources-rev1. It freezes all
+dependencies before execution, checks all43 models/568 original prefixes, compares
+every legacy snapshot field, decodes each native saved trace independently and joins
+every accessor/transformation/source tuple. Historical source reports and checkpoints
+must remain unchanged. Five models complete at this checkpoint; no final receipt yet.
+Keep its frozen sources unchanged until completion. Completed baseline evidence is
+bounded and does not stand in for the final43-model receipt.
+
+Bounded browser receipt workbench-general-native-sources-ui-rev1/receipt.json PASS:
+baseline frozen seed through terminal11, historical event102 metadata stable after
+later execution, native body-recall transformation/source identity, delivered-value
+mismatch distinct from source-value agreement, keyboard source navigation to89 and
+four original native hashes unchanged. Every displayed report joins the completed
+baseline native saved-trace audit. Screenshot and seven UI/verifier source snapshots
+retained. Six focused native/decoder/export tests and final547-module build PASS;
+research obligations PASS. Full source audit remains running, broader browser and
+other-profile enrichment remain due. No Campaign3 verdict or obligation is changed.
+
 ## Exact-path read history qualification — 2026-10-19
 
 `workbench-general-read-history-rev1/receipt.json` PASS reader conformance for all43

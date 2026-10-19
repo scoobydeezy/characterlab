@@ -51,3 +51,18 @@ No native seam, law, causal ordering, research verdict or conditional obligation
 changed. All18 conditional obligations remain. Full corpus mapping/execution, General
 batch enrollment, linked six-mode graph inspection, controlled semantic comparisons,
 language audits and integrated Campaign4 entry demonstration remain required.
+# Native source metadata compatibility — 2026-10-19
+
+General export0.2 declares native-read-sources/0.1 and includes the enriched snapshot.
+Import0.1 remains supported: reconstruct the native run, remove only the new metadata
+property, and compare the exact legacy envelope/diagnostics and original legacy scope.
+No imported diagnostic is installed as authority. New0.2 metadata is compared exactly
+against reconstructed native values; tampered accessor content rejects.
+
+Three export tests PASS, including the actual frozen browser-export.json from the
+prior qualification, exact checkpoint identity, enriched round trip, continued native
+save equality and diagnostic/input tampering. Tests operate in memory. No browser file
+download/upload or external transfer qualification is added. Production build547
+modules PASS after compatibility changes. Complete source-provenance qualification
+remains separately in progress.
+

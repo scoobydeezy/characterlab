@@ -132,3 +132,16 @@ The bounded baseline browser receipt verifies navigation102 ->89, historical sta
 and unchanged native hashes through terminal11. General browser breadth and native
 derived-source enrichment remain required; Disposition reader/browser coverage remains
 due. These receipts do not complete step12 or the integrated demonstration.
+
+Native provenance follow-up: General now carries a separate native-read-sources/0.1
+projection with exact accessors, transformation identifiers and source tuples from
+ActualReadRecord. It preserves the old timeline and other snapshot fields. Bounded
+native/browser evidence resolves the root630 distinction for baseline event102:
+delivered recall differs from stored owner, while the explicit native source matches
+prior mutation89. Metadata remains stable through terminal11; keyboard navigation
+does not alter native hashes. Full43-model enrichment audit46056 is running with
+frozen dependencies. Transformation mathematics, missing initial-source history,
+other adapters and complete causal contribution remain separate obligations.
+General export0.2 carries metadata with its version, while the actual frozen0.1
+browser export still authenticates exactly. This is in-memory compatibility evidence,
+not renewed file-transfer acceptance or final integrated qualification.
