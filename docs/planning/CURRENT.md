@@ -1,5 +1,54 @@
 # Current research entry point
 
+**LONG goal matched comparisons2026-10-19:** historical projection audit97135
+COMPLETE exit0:120 declared pairs/all120 cases/2040 aligned prefixes. Preserved
+original save/archive/native-source hashes;18/24 fine probability differences and
+14/24 action differences, coarse/zero equalities, retention and lifecycle distinctions
+retained. All frozen source and120 report-archive hashes independently rechecked.
+See workbench-long-goal-comparison-rev1/receipt.json. This is historical projection
+qualification; current native full replay7474 remains separate and running.
+Browser checker88741 COMPLETE exit0: maintained seed0 FineStanding/NoFeedback at
+prefix1 full report matches direct native projection, main four hashes unchanged,
+mode retention and draft isolation PASS. See comparison-ui-rev1 receipt under the
+workbench-long-goal prefix. Later receiving-choice/browser breadth remains open.
+Historical focused test31417 PASS after replacing Node-only fixture loading with
+Vite raw imports/canonical digest. The audit retains its exact pre-repair test bytes;
+comparison production code is unchanged. Native comparison test PASS; pair-checkpoint
+module test PASS (both identities, mismatched prefixes, partial-failure cleanup).
+Pair checkpoint UI remains due. Full build72171 PASS exit0,433 modules.
+Evidence restore/research PASS;18 conditional obligations unchanged. No Campaign4
+entry acceptance, native scheduler admission, law selection or mechanism retirement.
+
+**LONG goal comparison browser2026-10-19 IN PROGRESS:** Vite-only production
+bundle82555 PASS433 modules; full TypeScript build remains pending the frozen
+test-loader correction described below. Browser capture completed: maintained seed0
+FineStanding/NoFeedback pair atprefix1, main four hashes unchanged, report retained
+across modes, changed draft clears report and disables step. Screenshot inspected.
+workbench-long-goal-comparison-ui-rev1/ui.json and comparison.png retain the capture.
+Direct native checker88741 RUNNING, no receipt yet; do not claim native browser
+qualification before terminal success. Historical projection97135 remains live and
+has written32/120 pair archives after loading all original saves. Its frozen test
+file must remain unchanged until terminal; then replace node fs/crypto/Buffer loader
+with Vite glob/canonical digest, rerun focused test and full build. Changes remain
+uncommitted. All broader replay/browser/entry obligations remain open.
+
+**LONG goal comparisons2026-10-19 IN PROGRESS:** longGoalComparison declares120
+pairs across all120 original cases. Separate exact trajectory fields retain goal
+lifecycle, native source views, standing, receiver modifier, episodes, opportunities,
+probabilities, actions, arbitration, nuclei and addressed draws. Historical focused
+test PASS (coarse/zero/action equalities, retention, lifecycle, identity/alignment);
+current native prefixes0/1 test PASS with unchanged checkpoints.
+LongGoalComparisonPanel is wired but not yet browser-qualified. All changes remain
+uncommitted pending verification. Build98172 FAILED on Node fs/crypto/Buffer types in
+the new historical fixture test; replace its loader with Vite import.meta.glob and
+canonical digest after audit97135 ends. Audit97135 freezes that exact test, is live
+(PID4968), and is processing120 original compressed save archives (424413213 bytes).
+Do not edit its frozen sources or restart it while live. No final receipt yet.
+Prepared browser checker: check-workbench-long-goal-comparison-ui.mjs; browser
+capture is still due. Evidence restore/research PASS;18 conditional obligations.
+Native48528 reached19/32; comparison20638 captured11/28; goal7474 case3 prefix6/16.
+All remain live. No full comparison, successor or Campaign4 entry acceptance yet.
+
 **LONG goal inspector2026-10-19:** separate lazy route for120 original cases,
 worker stepping/run/pause, exact goal ledger/receiving records, component timeline,
 checkpoint capture/restore/export and declared ownership view. Inspection registry

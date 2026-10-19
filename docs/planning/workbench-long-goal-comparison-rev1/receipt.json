@@ -1,0 +1,1841 @@
+{
+  "status": "PASS HISTORICAL LONG GOAL COMPARISON PROJECTION",
+  "sources": [
+    {
+      "path": "docs/planning/LONGITUDINAL_GOAL_PLAN_REV1.json",
+      "sha256": "f3738c008fd839e04b1559d3af54e0bb8b8fe1e106bec9ae14d4090b3b5db5d2"
+    },
+    {
+      "path": "src/workbench/longGoalComparison.ts",
+      "sha256": "25209d75b7d28b9c4fa503d38e514f9ece279f1798caa9c260857276d9fc0eba"
+    },
+    {
+      "path": "src/workbench/canonical.ts",
+      "sha256": "f80f4a8353ea7604432d5ffcf0d4628f8b7bf13b82a06b4807445e9a9ba97bde"
+    },
+    {
+      "path": "src/test/workbenchLongGoalComparison.test.ts",
+      "sha256": "1b5f9d139b66d9e7423d284d0bced8421547384606274ef3d11cc7388267abd0"
+    },
+    {
+      "path": "scripts/check-workbench-long-goal-comparison.mjs",
+      "sha256": "48cb2c657210d70ad1815db0db2aad632761d615e7ef839224677d73fcd30384"
+    },
+    {
+      "path": "src/campaign3/receivingCodecs.ts",
+      "sha256": "deebaa5d28301572f72e08f6375500aedb615bce9a5672fd7cd9d43908f70e9c"
+    }
+  ],
+  "cases": [
+    {
+      "index": 0,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/000.json",
+      "sha256": "cc86c5cb04439263a23dc8e09e3c05ec0ce36638a1c5558cb7db484770e757ad",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/000.saves.gz",
+      "archiveSha256": "05f916ab19a936ee7c0764be80cef2bd77d9fe755fe4328cfe8dcd7c9a0de0ad",
+      "prefixes": 17
+    },
+    {
+      "index": 1,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/001.json",
+      "sha256": "f86c3d6a051c5dae38f8f8402f14fdaff5d27fe5783ac29e899da7728a7e5c4b",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/001.saves.gz",
+      "archiveSha256": "2afac2d396e2502396f6af4d87dfc2f6c68bd98d3cf2b38091b4cde0eb6337bd",
+      "prefixes": 17
+    },
+    {
+      "index": 2,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/002.json",
+      "sha256": "009f0f08b2f87098380902f706edfd4fdf13b3bbc0bb84c054ce30176b2d5719",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/002.saves.gz",
+      "archiveSha256": "6a0b521d5a515c159d0cad31f1a1239e0e3e3cd6bf717b46cd461c2d1f38ca8e",
+      "prefixes": 17
+    },
+    {
+      "index": 3,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/003.json",
+      "sha256": "42bcadf252c89e48dad5de2d00724bff6dde7b0620583a9dbed1f2f5f8e63646",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/003.saves.gz",
+      "archiveSha256": "db688d1fb40a12300655f5ad87570684dce412c70256b6c29eeebde494ab8ebb",
+      "prefixes": 17
+    },
+    {
+      "index": 4,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/004.json",
+      "sha256": "4be24344cd7df5e91a92b8e67b61a7c4eb8f4d303c710c7c47f82e1735c6ce08",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/004.saves.gz",
+      "archiveSha256": "2462ce0a7a9bfbf1a4bac6a949a5dd2c94eb6c76aec0adc728115a97f2a5e1af",
+      "prefixes": 17
+    },
+    {
+      "index": 5,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/005.json",
+      "sha256": "7f3e73d8815d9ac6520c8835475b02e4fe5d6b5561777f1ff12d083f41ffe167",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/005.saves.gz",
+      "archiveSha256": "e5aeee0100e2dffbf327e31b1dd834231d601c3eb5031e19aa96718d16aed10c",
+      "prefixes": 17
+    },
+    {
+      "index": 6,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/006.json",
+      "sha256": "4e115f96413924568d68d1c0f5914dbd621c3aaa1274afbe7f415d0fae6837bf",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/006.saves.gz",
+      "archiveSha256": "b03658290887afb8e75ab6771b08e33682eb931a423fbea5dbb3883a4d4f4166",
+      "prefixes": 17
+    },
+    {
+      "index": 7,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/007.json",
+      "sha256": "3535c6d09dc18fbfdf9b75a3a5730cdcb77536b56451671fc061c6999096bb18",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/007.saves.gz",
+      "archiveSha256": "587bc2ff8e74906e6312745dd52c5f14038cfc3f59672300f1ed513d041769bf",
+      "prefixes": 17
+    },
+    {
+      "index": 8,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/008.json",
+      "sha256": "efb5a51e799f9325c13626292ba23a3d67a4faf0e677ba87380086a309c9ff12",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/008.saves.gz",
+      "archiveSha256": "51c6db409c007702d330b81ed00956840194d87dc93ef71bfd64cb86ec5de287",
+      "prefixes": 17
+    },
+    {
+      "index": 9,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/009.json",
+      "sha256": "c7f8531e2b83168f9cea882d1725492c15d10ce69dcf0b5fce8037101bfd2205",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/009.saves.gz",
+      "archiveSha256": "547215e06d75ff624b7ce4286a381a76452154c63994d4bc86c4d489f1bb63b6",
+      "prefixes": 17
+    },
+    {
+      "index": 10,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/010.json",
+      "sha256": "76edd47621561ab2de44708b8e18b573a25fc5654dbb799ff2383113bcd265d0",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/010.saves.gz",
+      "archiveSha256": "465b3b67ec80a9c268ebde4519eea57fc6053ff07b6b7199d5114dffb5c495f3",
+      "prefixes": 17
+    },
+    {
+      "index": 11,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/011.json",
+      "sha256": "07753243b382b0028f28db76b6b70493dcef2926cd9ef79b99d6b36f6085b07c",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/011.saves.gz",
+      "archiveSha256": "f7da3829b4a45d278fde4f5ab641721ffd6765011dbda47c9e5340f9c271f924",
+      "prefixes": 17
+    },
+    {
+      "index": 12,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/012.json",
+      "sha256": "80c136aa19b9bbc055f3f52ae2403411c45dbc5474736156524008563cfb9c28",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/012.saves.gz",
+      "archiveSha256": "1cb24c46d277908878ac3fed84800234830089d003e94ee8ddc5d578da492950",
+      "prefixes": 17
+    },
+    {
+      "index": 13,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/013.json",
+      "sha256": "3f69ab50027af958b336d2278e63fffd266dbc2f5c1fb94d514df908239fe12c",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/013.saves.gz",
+      "archiveSha256": "b5b03444121cfb476dce647542ed68705b1a864bd8dbd1f144514cf87b7d8125",
+      "prefixes": 17
+    },
+    {
+      "index": 14,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/014.json",
+      "sha256": "ed81858e25f3f521678ec39df8c5d7d92f6b60e15a970d362a24dc871220f5bd",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/014.saves.gz",
+      "archiveSha256": "2781b2f4ed9ed6fd72b0b10b6faa867cee1d89839ba605c3db8f9539643ee70d",
+      "prefixes": 17
+    },
+    {
+      "index": 15,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/015.json",
+      "sha256": "bae28faec66ce8b6a83dd5d23be96d7985af931af7ccac68b40dd8937a69f356",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/015.saves.gz",
+      "archiveSha256": "86d8a3328ee050182b00ca7cc1e61e4f63a4a792a8429a2cff4cb610dd9e32f2",
+      "prefixes": 17
+    },
+    {
+      "index": 16,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/016.json",
+      "sha256": "6dafc1fa525730b1d409d103ac0f65afa39e1dca5b21ef0650e8197e113c5586",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/016.saves.gz",
+      "archiveSha256": "5426ca7b04ccee0b79c743b3a79e8893ee42cb96ed43789c4c4d4b01a99083cb",
+      "prefixes": 17
+    },
+    {
+      "index": 17,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/017.json",
+      "sha256": "7d179671ab36927f3aec6ea42968570af83183f55d5a79591d01cbcd31579551",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/017.saves.gz",
+      "archiveSha256": "af427fc71163452030d1c3024d9f43a16b90aa8880d0661e07d3ec98ef39f8fc",
+      "prefixes": 17
+    },
+    {
+      "index": 18,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/018.json",
+      "sha256": "4bbfc40c5496330fec662d20a3f640b701ac0298b923955b44e65469872c3765",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/018.saves.gz",
+      "archiveSha256": "f5a4bcdede7edc7ca2c3ffcb69dad969ed0bf2e9b0810a60e29ace5ef4ab03af",
+      "prefixes": 17
+    },
+    {
+      "index": 19,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/019.json",
+      "sha256": "b245682bb32165fe2b8e5bfd87fa1efe0ee05c7f12536a730645bdd2ee52995c",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/019.saves.gz",
+      "archiveSha256": "729bd43c9f9faadbee0b0a921ea9bb9b2c64696e0d48d290476413f1bf35cd0d",
+      "prefixes": 17
+    },
+    {
+      "index": 20,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/020.json",
+      "sha256": "9e25fc6a24fcf6e9e8ce3ee92097db87aa2536a679516df781099f7c85e0b3aa",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/020.saves.gz",
+      "archiveSha256": "bbff5cf971366428823b5941fb6d2deae22013334ee91fa3aabfa36dd088e90a",
+      "prefixes": 17
+    },
+    {
+      "index": 21,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/021.json",
+      "sha256": "e3da2faff28c18392751a5eeabd46490cacb536c11e57f78d5edee2703881698",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/021.saves.gz",
+      "archiveSha256": "e2ef5f1c04a51af8dd25249b73e5e216c12aa2550b3a8140a4922b9fb1db5fa2",
+      "prefixes": 17
+    },
+    {
+      "index": 22,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/022.json",
+      "sha256": "d670a425a4c37bcd383b04e724c0a9d5cbae8b9429d1202e4db6004a1f071023",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/022.saves.gz",
+      "archiveSha256": "12508d74cbd71aee283819a3f04d619460cfb4e8c9e18a673a5a0885a32b71d4",
+      "prefixes": 17
+    },
+    {
+      "index": 23,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/023.json",
+      "sha256": "49dcfd1650798a94cbb12cb412c6e40e3893473ca99a29b1b95349f8900cd42b",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/023.saves.gz",
+      "archiveSha256": "201ee8e5ab323d6cee8bf74fb666efeb04446f4d9a7ffc06e7028657b1a46ee7",
+      "prefixes": 17
+    },
+    {
+      "index": 24,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/024.json",
+      "sha256": "a12deb55e40bbe2a6fa644304ab341070bb573cd6c1c3f53725fcc0f3dbbffe4",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/024.saves.gz",
+      "archiveSha256": "3a04bc7ae94c177603f4b665627f06e595464d4d2fc75eb9ccf7fd4da2bbf78f",
+      "prefixes": 17
+    },
+    {
+      "index": 25,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/025.json",
+      "sha256": "c140e65796c50a59d0146c111092fab06e4beb0367e4fb1a5494730a9e91133f",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/025.saves.gz",
+      "archiveSha256": "f461879aab0937dd9d2057395a55c6a99052023030064becf6d9b467dbc49795",
+      "prefixes": 17
+    },
+    {
+      "index": 26,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/026.json",
+      "sha256": "4b691656516dfcba0d8295a0d2197f75e440ef55013912e0c9c4e7d749fd80dd",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/026.saves.gz",
+      "archiveSha256": "20c91f5221a9a77b125e4d154549c8dfa78f576c60802704254d14a2830253cd",
+      "prefixes": 17
+    },
+    {
+      "index": 27,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/027.json",
+      "sha256": "b596816dbdf20d7548eff604b6f1e5143aef8f4332c2b78ed0673a0942032dc0",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/027.saves.gz",
+      "archiveSha256": "e3cf1b06379b5ee1744263b6282279d316b1bf595eea5f9d329e7ddbf2c97a48",
+      "prefixes": 17
+    },
+    {
+      "index": 28,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/028.json",
+      "sha256": "a506204db7a2a9ecb856f7cbd707bbcbac1ea5aadaeee6d35555b8b243baf675",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/028.saves.gz",
+      "archiveSha256": "d4fbd8d6b80f3ab322db5e1e36c62ae1a07a8f0a58aa3017d7a8038eeff4050a",
+      "prefixes": 17
+    },
+    {
+      "index": 29,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/029.json",
+      "sha256": "b8e09db578e8fb1d27906062b8f286f06fabfeae025324cc9243afc0a2c5b065",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/029.saves.gz",
+      "archiveSha256": "7e7af65b06abe243818b645e83793c4b4504ad20acb254c42747a3d45cfe6405",
+      "prefixes": 17
+    },
+    {
+      "index": 30,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/030.json",
+      "sha256": "8b663d7922086c6d43eabea6b04ffe9a512a9599553766e8a7ab99be19e0a61d",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/030.saves.gz",
+      "archiveSha256": "e47163d629e7b71cd3e5d1e8e4126f46b2b0b07546d3131ac162de9bb0b7e8ac",
+      "prefixes": 17
+    },
+    {
+      "index": 31,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/031.json",
+      "sha256": "8c3f277819e0238bb5f87adcf6b86ab6b4a2fba944e3620ef757fc4d6aa63c8e",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/031.saves.gz",
+      "archiveSha256": "cd137a5183f72657c5ad57606d78bc2ff9f62670994b7bb509fee3e226e0b0ab",
+      "prefixes": 17
+    },
+    {
+      "index": 32,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/032.json",
+      "sha256": "2e85ceb59279f49af8b832a27a1b07f35def8dac549274c1a29d3da23cdbb82c",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/032.saves.gz",
+      "archiveSha256": "e6e50aa5672c6f856fbaf3d5dfc035c6f1f803ae1cab86ea4920a42a25bc461f",
+      "prefixes": 17
+    },
+    {
+      "index": 33,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/033.json",
+      "sha256": "6452c6f4489fff7e78c131c422cd15fe2dda50b6f1de45a8edd7553b800eeda3",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/033.saves.gz",
+      "archiveSha256": "7e0394524e4b45c779c47fbfdcc9fb35ed036eee18f78bba3097ccd4c1e41408",
+      "prefixes": 17
+    },
+    {
+      "index": 34,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/034.json",
+      "sha256": "0536d704a826002dd1212bc58663aaddf9372dcd20576587ba057058df2d1538",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/034.saves.gz",
+      "archiveSha256": "3f2c0992bf69da515415b3e51850a146a9edc2fe56c82b6d4f8b4e299ebbb79b",
+      "prefixes": 17
+    },
+    {
+      "index": 35,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/035.json",
+      "sha256": "4e00e54708e5340a2728f6eab4fff2eea7e9139d8b601eef5ac183f4d7375eab",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/035.saves.gz",
+      "archiveSha256": "b6f65259827454b897076437ca16e0c25d3a7763dec71eadec0bd2157d4e9f32",
+      "prefixes": 17
+    },
+    {
+      "index": 36,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/036.json",
+      "sha256": "06d1434c8b70f47782f9d321900a52cf5bfdf2b404a36c5a0d1e3b894214a3ff",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/036.saves.gz",
+      "archiveSha256": "ea3ffc17e849b418f78e7dd6a979d106d3d3083aedd14a85ec04f0e3dc0f377f",
+      "prefixes": 17
+    },
+    {
+      "index": 37,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/037.json",
+      "sha256": "ff71f390c640c49ad50c27acfdcd3e1e56aaa758fd4c8978f527f9bc81533084",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/037.saves.gz",
+      "archiveSha256": "bb89cbbb5b1ecb89ee0a11e417fed543867015692ad4d141aa54a5ac66437fe5",
+      "prefixes": 17
+    },
+    {
+      "index": 38,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/038.json",
+      "sha256": "ab999d117d915e44946ff04cbd617c399332396d300ee1c8f95dc0609421e3f7",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/038.saves.gz",
+      "archiveSha256": "3e87651f3fe5dbc58c793c910b9faea8ee9ddb262902a6e214a55aaeff3e6882",
+      "prefixes": 17
+    },
+    {
+      "index": 39,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/039.json",
+      "sha256": "4a21f1594d877eaaa19fd52f23f3a47308b2b11e05bb0df8807d5461d4848e36",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/039.saves.gz",
+      "archiveSha256": "049c41002d72bf7bafd05cd9169e71dc200c7346bd8aeb098d18a73af7b2d9a3",
+      "prefixes": 17
+    },
+    {
+      "index": 40,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/040.json",
+      "sha256": "a0cf47c5be5fb3ce5a954de3edd937ab4966b97170cc5a1cfca87cf2c9679daa",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/040.saves.gz",
+      "archiveSha256": "db9a0d516b7702bf33a6869a98fe97f0895810192dd1d06ca40a86038abc0ce3",
+      "prefixes": 17
+    },
+    {
+      "index": 41,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/041.json",
+      "sha256": "36cd2c14010437159d508c67ecbdb6e10cad5eaf5d54bca21574d7874a0aa76a",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/041.saves.gz",
+      "archiveSha256": "1690e87e45e2584564e74855dbe58aa3d1bdaedfd6984a481ebf15a056bfbbda",
+      "prefixes": 17
+    },
+    {
+      "index": 42,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/042.json",
+      "sha256": "276295e8c7839eafd53346d2716b530da14d0327f51ed87e46bace33b5ec604d",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/042.saves.gz",
+      "archiveSha256": "fc1a12ce604fc8b29c45b61a649ce32268c866cd472820ecc86b5f197f92138f",
+      "prefixes": 17
+    },
+    {
+      "index": 43,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/043.json",
+      "sha256": "0554cf10d9d14c81e33fb470e8f19aa896d1dc2e04b1e838666db27ba68cfe87",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/043.saves.gz",
+      "archiveSha256": "48a571edd8aacf34481ce507d7d86f4008a0b1b1a2831489b8846c2ad06cbf61",
+      "prefixes": 17
+    },
+    {
+      "index": 44,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/044.json",
+      "sha256": "ac49c3620b731e2962456e06c1d1ac372c6eaa638ecac2ad755907c91b509935",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/044.saves.gz",
+      "archiveSha256": "04f81f01c4af2e84ecc40db83f12ab3915b412696febb3d8f936b7db5db60d05",
+      "prefixes": 17
+    },
+    {
+      "index": 45,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/045.json",
+      "sha256": "559a61515d1b238bf5c694a722abdf788ca2c6a7b214eacca4279964be2559f6",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/045.saves.gz",
+      "archiveSha256": "435d59330ee493d7e2bf1ff1616a16f7e7bcc2810cc1684c871801d6cf05dcd2",
+      "prefixes": 17
+    },
+    {
+      "index": 46,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/046.json",
+      "sha256": "94e1292dce4391f381680c7e4eb97174c412db2a20d15e51a170db723f687ffe",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/046.saves.gz",
+      "archiveSha256": "e3d6b5b10c6991b187315af14e0ad82d63d473c6100bcb7635b8134259042ac6",
+      "prefixes": 17
+    },
+    {
+      "index": 47,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/047.json",
+      "sha256": "ce5df20a1d0720053673872bda233b7a6aec7c246f872a8b70283cd948ca9713",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/047.saves.gz",
+      "archiveSha256": "c0a6d8a53c0050227d7e8192a84f3459b90666c27fbedfe405c73ec6f6809ca5",
+      "prefixes": 17
+    },
+    {
+      "index": 48,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/048.json",
+      "sha256": "843b37554c9759ee94d47f530b968b731671314c84486ca31be42e0a01f729a5",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/048.saves.gz",
+      "archiveSha256": "e6e46796bdd78b8533c2de6519e734d68e09f798235ff9d7a48c90175dea84d4",
+      "prefixes": 17
+    },
+    {
+      "index": 49,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/049.json",
+      "sha256": "2bd4a25e5c0b7ca2fb5677495738b159e7ce6222b482589d0c008166beac3135",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/049.saves.gz",
+      "archiveSha256": "5243a52e42d4631279094f24b258fc61543db9e9270de7e69b8787d7bc664d0f",
+      "prefixes": 17
+    },
+    {
+      "index": 50,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/050.json",
+      "sha256": "567d0263470c476ea64bcb386f68898b14fbd68a5c531a6cc95b8d8d34e739b9",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/050.saves.gz",
+      "archiveSha256": "59cfc0a44900a1960aa4210020dcbf495828798df57ac18eab75b9aeb75aee06",
+      "prefixes": 17
+    },
+    {
+      "index": 51,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/051.json",
+      "sha256": "917ded165707d0d0463544e1b133a641c8fa75eb1d947bbedfedfb91abe0d8e0",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/051.saves.gz",
+      "archiveSha256": "3c9531818c8e640a08d18e9f7be5b54774b475f34323792cd58d8787398ea527",
+      "prefixes": 17
+    },
+    {
+      "index": 52,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/052.json",
+      "sha256": "e494077d507f44e6d47f85be1a4e6dcfe50f7f142b737b6fe23d42818b7784c8",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/052.saves.gz",
+      "archiveSha256": "d98e632c3bc76abf853db14288f02ed90053840674583377e0fccd8f9338b361",
+      "prefixes": 17
+    },
+    {
+      "index": 53,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/053.json",
+      "sha256": "a95d1e798c0732f2778277b1c13bcaee0b181c065e4e8ac4e3abe87190251414",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/053.saves.gz",
+      "archiveSha256": "157993769bea99546fbd05df21e3a611ec1b3cf7d20a148735bb1e1d6a899897",
+      "prefixes": 17
+    },
+    {
+      "index": 54,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/054.json",
+      "sha256": "fdff0fe359631c368d2d54046b8153e16879545431602790a21b984dc938c8ef",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/054.saves.gz",
+      "archiveSha256": "986ab1fc36ca9d1e73efdce7ddc26c194975c32d24cff817ebe378d5f6965cb6",
+      "prefixes": 17
+    },
+    {
+      "index": 55,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/055.json",
+      "sha256": "9a980bbd0a66bb09b6f6513a426c01c40b508526bcce0c756938c44d905f880b",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/055.saves.gz",
+      "archiveSha256": "6bd837ee304d3052a1c0d4e5b73b144f08442bdce14d5e4c0c012b94441e2288",
+      "prefixes": 17
+    },
+    {
+      "index": 56,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/056.json",
+      "sha256": "d8e3f95506907f8edbcd73c3dcd65d67a3a8a99c483ab6ae29a7454fb7185a43",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/056.saves.gz",
+      "archiveSha256": "bdb4ffe2e1f502ddc5e2af1f183bd643c5c4940032473d2587c8631300eee2eb",
+      "prefixes": 17
+    },
+    {
+      "index": 57,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/057.json",
+      "sha256": "76db04d831933df06ec61c8c1678d176e2500c5171cdcf3b0caf551f68a48d64",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/057.saves.gz",
+      "archiveSha256": "d7b28b83a441db49855a2606cbde88233f96ce008a0f4cf77d1a1b8eb7a94d96",
+      "prefixes": 17
+    },
+    {
+      "index": 58,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/058.json",
+      "sha256": "55fedf2bc3a6754cbeff721903424370a1ed7c1e3cc333463adacacd4de2001c",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/058.saves.gz",
+      "archiveSha256": "92caa01882e76eb7935e32dc0bf1ba6fc74292f74881e7db5af2bb2c52db813e",
+      "prefixes": 17
+    },
+    {
+      "index": 59,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/059.json",
+      "sha256": "964e511f21d67ea8aaa372bf25a6029d4b19216f9dd019b1ba1452aea7b4c6c5",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/059.saves.gz",
+      "archiveSha256": "0cf547ca886bffb9e569dba60f270a6ecfdb8c28cce1e204d864bad597f8b279",
+      "prefixes": 17
+    },
+    {
+      "index": 60,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/060.json",
+      "sha256": "56442a4852dc2a7bd35ac8f004752a3d096ca26a3d81d95aaca1a08ef3a15e2e",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/060.saves.gz",
+      "archiveSha256": "c740085e2f0dd582ae219d65ccd6b86b558c5034e742e7e26db3d350278c726d",
+      "prefixes": 17
+    },
+    {
+      "index": 61,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/061.json",
+      "sha256": "b71b09785f2e6ca8598d7fe4b0ee6dfc86bf0888309edc060b51781769554bf6",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/061.saves.gz",
+      "archiveSha256": "ce2a1f5028aca189fdcdd087ce1a3bd786a05fc2ab271bab4dad1df04ec08fdb",
+      "prefixes": 17
+    },
+    {
+      "index": 62,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/062.json",
+      "sha256": "0da6d6033187257c4351c8e381170cfaa8af77ca3eef6c3f9ca58613de9035c1",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/062.saves.gz",
+      "archiveSha256": "4d978121a4b10168f87ec4423ffefcb9ebca32a27dac2ce9251b5a3a67561fc4",
+      "prefixes": 17
+    },
+    {
+      "index": 63,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/063.json",
+      "sha256": "68535d674a9a3bcd1655796fc01b7848fa89734f890287465a9cead2e4491c4e",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/063.saves.gz",
+      "archiveSha256": "9f10be52f08a598cb38073d9736198fc7ca8dac8e89629b3cf6be59aee3d4c2b",
+      "prefixes": 17
+    },
+    {
+      "index": 64,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/064.json",
+      "sha256": "dff5b194a1b9b6bef31cf75b1a5f5dc40789d76fd15046ec36f0e96932c350c3",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/064.saves.gz",
+      "archiveSha256": "304da19b5f2a9be30b8249b515718b1774e94739ea2b0c52720435447a255616",
+      "prefixes": 17
+    },
+    {
+      "index": 65,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/065.json",
+      "sha256": "17b3f17b079d01c110bf834a3f7848b5fae1ca90f4cc2124191427aab117534f",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/065.saves.gz",
+      "archiveSha256": "bf5820668f168911d7b01c389f60611220a7a91a0fd178e9d41d9e95ca500ae1",
+      "prefixes": 17
+    },
+    {
+      "index": 66,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/066.json",
+      "sha256": "4bc82a871835974f167943ddbbef03db4978d63de4055481813c75f9efa441fd",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/066.saves.gz",
+      "archiveSha256": "dee06faecdc952617a06f92b73edca87126b5b785bed3f0829e630285c6ba123",
+      "prefixes": 17
+    },
+    {
+      "index": 67,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/067.json",
+      "sha256": "1d1a94106f64c8f4d27c05bbc6b3ae6601832271d162262fad1f09e5276b98e3",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/067.saves.gz",
+      "archiveSha256": "0cf7b12ab76667ccc0e6f7b13c8cfa19977ea90a23f28e52758c949250fb3e19",
+      "prefixes": 17
+    },
+    {
+      "index": 68,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/068.json",
+      "sha256": "d35275b3200fb85764259ee69b60e97d5ca7108bc7fb69ebea7e0234d3c33717",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/068.saves.gz",
+      "archiveSha256": "0384e6e9f797b558a2309ca0fd3f6f2e91a67977b04672b811ae2a9c9472ea59",
+      "prefixes": 17
+    },
+    {
+      "index": 69,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/069.json",
+      "sha256": "4984da34d57859faed7fb8c26aec4b4d1bdd46953945c3a176ef48355b80ea75",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/069.saves.gz",
+      "archiveSha256": "fb0e0fd09682d46e38e1df4a395b8e0d748b2e063c5ef302c7d1f26b6ef9b9d8",
+      "prefixes": 17
+    },
+    {
+      "index": 70,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/070.json",
+      "sha256": "ca9ceab65bc26ab5cb7bceb8776f5b994035d4d1855c51e24d2535932f71af70",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/070.saves.gz",
+      "archiveSha256": "15d59001e5118dd26607357c70c6043325e71e3bc22a3814fa401fef2de0e089",
+      "prefixes": 17
+    },
+    {
+      "index": 71,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/071.json",
+      "sha256": "dae403dbfeee308a4e0ad3b56fb8afd5f5c3ce3450180e2eaaa1c0fd68fe50bf",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/071.saves.gz",
+      "archiveSha256": "c0d545c4c3c34f86065c3a23925bbbbfd8d0393e490be8bd25eec1c04a8e2840",
+      "prefixes": 17
+    },
+    {
+      "index": 72,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/072.json",
+      "sha256": "3beea95833dabb20dcd309b6f3bd788f10f6aa07c1b1d87cabbe401d146b8bc1",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/072.saves.gz",
+      "archiveSha256": "61c3a1fdb1cdda01e22383b8c2b29dc6c10e9d36aba7ebaddf69d65f55d268e5",
+      "prefixes": 17
+    },
+    {
+      "index": 73,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/073.json",
+      "sha256": "2c2adb29e72a0ecb6ff4e67677bd4825e1f6a8ed77d3672db62ca7dc55f6359e",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/073.saves.gz",
+      "archiveSha256": "9287a1118ca991b3c7621fcd10f186b38cb50b725eb619e09215fa730e8431e1",
+      "prefixes": 17
+    },
+    {
+      "index": 74,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/074.json",
+      "sha256": "793a5c2ca2fcb8481e6f011a147043fc512abb23c89f35890c748162a3cf5b5c",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/074.saves.gz",
+      "archiveSha256": "545218a82b416abab948ecae3937a9aed780afa92810d9b1191b0b9e2fd052b2",
+      "prefixes": 17
+    },
+    {
+      "index": 75,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/075.json",
+      "sha256": "ee83d76a9201f7494c81c093113ffba1a978a2fec5928fcf8adf4cf618736cac",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/075.saves.gz",
+      "archiveSha256": "c1d47c569ec9ac8f0652b1c8c10a082d47ad9419e005d10c2af3befe772bdc5e",
+      "prefixes": 17
+    },
+    {
+      "index": 76,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/076.json",
+      "sha256": "8a2dadd50cf8a31e568264296238f0fb2e0067589ce6546563016ee108d4414b",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/076.saves.gz",
+      "archiveSha256": "cbfdb178ee9bb0618d3234ce64f4edce426171fadd158813756cb7934a8fe063",
+      "prefixes": 17
+    },
+    {
+      "index": 77,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/077.json",
+      "sha256": "d59151eb3258aaf1fef678365d752facd0cfaa3143ced42c05fcd29735cf2f82",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/077.saves.gz",
+      "archiveSha256": "81fd91854cdf4a2611baae26637f859a1f1b75fefcebb28ef887d8294719cb13",
+      "prefixes": 17
+    },
+    {
+      "index": 78,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/078.json",
+      "sha256": "56b9762a20869d2f8169b0674223ef5ebd1d05db6164ceda96ed4d49d39aec91",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/078.saves.gz",
+      "archiveSha256": "d4b6be10c467d61b0a806671ff21fc27383f1e04ff01144f20d77a4d08505ee1",
+      "prefixes": 17
+    },
+    {
+      "index": 79,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/079.json",
+      "sha256": "744fd56cee7ed83a13d3cfdc2f7d1fa147d1e0cf0255c1e2cb310da6a28d776c",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/079.saves.gz",
+      "archiveSha256": "bfe1d2b1cd2dc9fe46362de14fb7b6ab024e5453a9ab6c40deda36044e8a07b6",
+      "prefixes": 17
+    },
+    {
+      "index": 80,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/080.json",
+      "sha256": "a121dbaaebaefe079902efe566dff514b619758b93c7f96c3df8df5bb7564730",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/080.saves.gz",
+      "archiveSha256": "34acdb13b29586f81c615ada377037487420b64cd28a2afaacbfd5f6585a77b8",
+      "prefixes": 17
+    },
+    {
+      "index": 81,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/081.json",
+      "sha256": "5fe21216420162fca1129e91a683d60e9e3d4aa1b2804bec5262c92c4dad03ac",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/081.saves.gz",
+      "archiveSha256": "d5004a21f7779535f90314ea7894ed3b4cf23c7751fb5b5e3bd07e3f5e832d42",
+      "prefixes": 17
+    },
+    {
+      "index": 82,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/082.json",
+      "sha256": "4fa93462b4cb9a88ee1e3863dfb905bc19c6e6d41e4e328226e4f398b5b4b10c",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/082.saves.gz",
+      "archiveSha256": "cee38b6daa9185278bce1c441204d29ee22bab87f9fae408e59a9a58bde1c89c",
+      "prefixes": 17
+    },
+    {
+      "index": 83,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/083.json",
+      "sha256": "e9324326a36a67e4e004e96b0f5ad8b5e0796a9e42d02a44ff86ea7373e36e6a",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/083.saves.gz",
+      "archiveSha256": "c461a24a839f5af25458017f03cc57091ce1e5a12e00946f74327869178cfcbb",
+      "prefixes": 17
+    },
+    {
+      "index": 84,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/084.json",
+      "sha256": "a2d7cebce42bcfdf16e03e989311a5265005fa46084ca3ba6ac3f4bc6b7eea7a",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/084.saves.gz",
+      "archiveSha256": "f30a54cfec7cb648c1486e580d7e13473c9fe59c14265ade6a6ab2f4e1089e33",
+      "prefixes": 17
+    },
+    {
+      "index": 85,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/085.json",
+      "sha256": "4406e8f8ca466a016769f6331bcba73bd9cad45bca1b6bf613bdab95f6ae4162",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/085.saves.gz",
+      "archiveSha256": "4a29c974c8b9034e2b5e88aad43f0c7e883d98d3117f583d24dc0580a3fbc7e5",
+      "prefixes": 17
+    },
+    {
+      "index": 86,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/086.json",
+      "sha256": "9f01d9a94e388c27d0c445f3ad47622e5890a524474e9bf4f3254953714fa4b4",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/086.saves.gz",
+      "archiveSha256": "61e5b35e25557402372deaf5687866b9876271e0777c08fa583079ddecb2814a",
+      "prefixes": 17
+    },
+    {
+      "index": 87,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/087.json",
+      "sha256": "608aabfd1cc9adc8fb35d71711c9eb697d6c8870801091ffe8e5ba5e369e7c5b",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/087.saves.gz",
+      "archiveSha256": "9544f9d327682cba4e7e037f988b78c23224b52cd4431dd8e7e52bf0a58f53af",
+      "prefixes": 17
+    },
+    {
+      "index": 88,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/088.json",
+      "sha256": "c634ed0e82089574451e2896d66262756bb0c68dd2988927f783e0849d5c0de5",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/088.saves.gz",
+      "archiveSha256": "0e634315ecb28d03874d25e2f260d18f63a0be685d03c9159e4b18076a3c46b7",
+      "prefixes": 17
+    },
+    {
+      "index": 89,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/089.json",
+      "sha256": "95d05487a14849968440270577db565feac10720921cdd11e9007a5bbf0a0031",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/089.saves.gz",
+      "archiveSha256": "5f8a88005fa98a28fbff1be34e7291b8a9c4bc76b586abb49e3b8cd64e35b3c2",
+      "prefixes": 17
+    },
+    {
+      "index": 90,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/090.json",
+      "sha256": "4551eafda6d1988834f919826f997b95c8709ea057c754b59884e164f2133600",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/090.saves.gz",
+      "archiveSha256": "d8ab5931836708257f045d6671bfb3d93f6aecb9f6758d64d05d11cff9e8d796",
+      "prefixes": 17
+    },
+    {
+      "index": 91,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/091.json",
+      "sha256": "090513deef6fb4f4941433f4f9c03cbc1663eeb271f56e10f24c6383364440e2",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/091.saves.gz",
+      "archiveSha256": "de3514fef8e1e149ec71be63693ac0ace949c894834860a4598b35393791b474",
+      "prefixes": 17
+    },
+    {
+      "index": 92,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/092.json",
+      "sha256": "50b4ee1f32341b192eda9e994c83303b2cc77643a0a4fb4ee2f2aed40a23d847",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/092.saves.gz",
+      "archiveSha256": "3b5eb0cc36564c30fcc3f1ba2dd49804588c2be9d2f4c021321f7cf90081f917",
+      "prefixes": 17
+    },
+    {
+      "index": 93,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/093.json",
+      "sha256": "257a38b75b6e9641fbf7099a6939c167787f8cd55602a58201e7374f06692e04",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/093.saves.gz",
+      "archiveSha256": "c06984b4b8baca5f26271110d6c465f60f7d85805b2c69176dc9299f5ceaf8c4",
+      "prefixes": 17
+    },
+    {
+      "index": 94,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/094.json",
+      "sha256": "3b2e72b328fb4eb4b947a97e58ba142ba6a96493a7c70bc199bffde2c716743f",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/094.saves.gz",
+      "archiveSha256": "d5e4428fb7b57b2a9e42635aba624564a00696207ca3e7f52c3d88c6a328e650",
+      "prefixes": 17
+    },
+    {
+      "index": 95,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/095.json",
+      "sha256": "914cbd032cd9f3b0f33aa38d5c59db26826c3773fee53428af1ba158df65ae92",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/095.saves.gz",
+      "archiveSha256": "efdfeecaa40064c119403edae0150d448e332b72b5b45f599707af8a9512a4ef",
+      "prefixes": 17
+    },
+    {
+      "index": 96,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/096.json",
+      "sha256": "39bc60a01b71037f15e6c18f006def733bec524141e8c8305adb6b1190ab4b9b",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/096.saves.gz",
+      "archiveSha256": "76366da716567ac7181d3561ab71eefee2d748482780f2ddd9ccf16aa99241c8",
+      "prefixes": 17
+    },
+    {
+      "index": 97,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/097.json",
+      "sha256": "0c973f80e9188ff969710be1f642a02acbcad750a5e201e96edf7a5ff0d44f39",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/097.saves.gz",
+      "archiveSha256": "f9b64beb5aa8045f0557a0f3d6937d536190063c878f131af276009b700543c1",
+      "prefixes": 17
+    },
+    {
+      "index": 98,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/098.json",
+      "sha256": "c6122e92b9a568bfad50062203f6139f7e6a28a76c273b42427592dacec15f36",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/098.saves.gz",
+      "archiveSha256": "d437c12f14a675c38e8aa40994b7ec2aa11f0f4b104cbc321ecb9bdc7305c8c8",
+      "prefixes": 17
+    },
+    {
+      "index": 99,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/099.json",
+      "sha256": "8154ef2c587f71a68a4d98b3ebd8dd7ab486b7f307f573a5170208b07ae4a22c",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/099.saves.gz",
+      "archiveSha256": "e2baebe441c7cc9d298e418cfb30a00dc528e9263535054e1bbf16d8f6cf9001",
+      "prefixes": 17
+    },
+    {
+      "index": 100,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/100.json",
+      "sha256": "ec0525d9a07aef71360f8930ef83faf6455a059f9058dfe046e22f5c5437a046",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/100.saves.gz",
+      "archiveSha256": "3749fc0095926cbc6e3d4b57bf17e6a028b7b9f7256add065a84ca01ce80904c",
+      "prefixes": 17
+    },
+    {
+      "index": 101,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/101.json",
+      "sha256": "c1d3d83b756e4a85c13b90ffefb9dcda45dcf3eae0666dbdfe60564aba6fc369",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/101.saves.gz",
+      "archiveSha256": "6862d6dde985454b893798a0169e44a94044d6906d7ac5f0ae4ea6c403408bf7",
+      "prefixes": 17
+    },
+    {
+      "index": 102,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/102.json",
+      "sha256": "a949adc640ce13857356c2f938304b53d05416fd59cf8db775ab9ea0caf21054",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/102.saves.gz",
+      "archiveSha256": "4ad4a62f5e43961bf4efa5483c40c4988ff846fba74f7c1cc7fe0d65611643e1",
+      "prefixes": 17
+    },
+    {
+      "index": 103,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/103.json",
+      "sha256": "03a7317dd673c61fd84f29267372420e84141c4c2214ad5c2a5516da144646d6",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/103.saves.gz",
+      "archiveSha256": "228a2ece0d2c290bc853ce82b2c30cf507c5533f297c02ed3bdfffcf0fcbdd00",
+      "prefixes": 17
+    },
+    {
+      "index": 104,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/104.json",
+      "sha256": "e7e46d96f6b69aebcc3e29c1d8d482f9d4af07c4d6096908264495f464518d18",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/104.saves.gz",
+      "archiveSha256": "2518ff3d1ed064e636adea09618595c08af407f09a27454d823fa571a4c82ab1",
+      "prefixes": 17
+    },
+    {
+      "index": 105,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/105.json",
+      "sha256": "c0db6a160969b7e6e5c88be784abf5f2bde89c7b12200a805edb5240402ba24e",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/105.saves.gz",
+      "archiveSha256": "050a83df96e67aa9a677c62747e522c842e944b53651883be87b23d2410c2720",
+      "prefixes": 17
+    },
+    {
+      "index": 106,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/106.json",
+      "sha256": "d787627f66defb87e52139ae919ab60b3265b5f25c9a17231b485b4b677393ce",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/106.saves.gz",
+      "archiveSha256": "bf8b427221caeb55a8acf735d7ad1bfb36f81cc651a3e16fe53933acf2f06b39",
+      "prefixes": 17
+    },
+    {
+      "index": 107,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/107.json",
+      "sha256": "375512ac8ffd159d5bf549bef1ee0c2e2438ae8ded12c036465f14a21f20be28",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/107.saves.gz",
+      "archiveSha256": "529f4ee7d3363ae120606d3a048de7aaedb30d13922d37056e5f86977a0f74cc",
+      "prefixes": 17
+    },
+    {
+      "index": 108,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/108.json",
+      "sha256": "841f7afc01dc013315c44075aaeb65f42ddc9afb385b6a3b8d122b1865919c99",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/108.saves.gz",
+      "archiveSha256": "f3dd16c7d060d0fe72398ae46f20012f122c0aed14cab95915db79e43f0df4e8",
+      "prefixes": 17
+    },
+    {
+      "index": 109,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/109.json",
+      "sha256": "4603eaa655e48d63aeb9f7317082d3da2047ad1972a95f8a9ba05addd8227274",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/109.saves.gz",
+      "archiveSha256": "b146621cc9eda4b77cc7da238c951c8afae974183412cd3b135647b1934e22b9",
+      "prefixes": 17
+    },
+    {
+      "index": 110,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/110.json",
+      "sha256": "ff8bfd32a49012381f76fbf681e6fd6547c1c1893eb61451891d6fc17c5020bd",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/110.saves.gz",
+      "archiveSha256": "3c9b2a7922ef79bf3bc82bdb7c8d053080e98594c2fc5bc0abefe761ba657a71",
+      "prefixes": 17
+    },
+    {
+      "index": 111,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/111.json",
+      "sha256": "6a40c4df937611fcc59957403fd44d689da2b3d6b2c740c9c3e8814c60a47b41",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/111.saves.gz",
+      "archiveSha256": "befcc108493d3d5d8a688decf8745106f419e6ef837caab932923805a7208c2f",
+      "prefixes": 17
+    },
+    {
+      "index": 112,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/112.json",
+      "sha256": "04bb5fb81066ac8c9116170b72c730c8fbfc50bea7d280c33b9f46a840a04dfa",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/112.saves.gz",
+      "archiveSha256": "ef9887ffd7047f8aa6462eb4d356bb3c27981adcc43eeb8f1c43f8c1501e2bfc",
+      "prefixes": 17
+    },
+    {
+      "index": 113,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/113.json",
+      "sha256": "6d906dee2529d67ff90e9001145717d9e6a522939e8f4ac56718f71bd420f749",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/113.saves.gz",
+      "archiveSha256": "0d2e640687d8ccdb0cc2625968a6de2a3ed061a02d2b60b8fd1b8b1cd928fbf5",
+      "prefixes": 17
+    },
+    {
+      "index": 114,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/114.json",
+      "sha256": "2f8f8b8ac424f4e00861581928df6dfd47b7e8aaf046cd6fcc1a0b6ca9a1d8cb",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/114.saves.gz",
+      "archiveSha256": "03aa9f068871f8341dcd82ffd5bbfc42fd6d1b86fd0f2ba0b5d71f36c530012f",
+      "prefixes": 17
+    },
+    {
+      "index": 115,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/115.json",
+      "sha256": "35c62db9380f02217989189911b4cf9874a01b1c405dd9e737106144c5cdf4e0",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/115.saves.gz",
+      "archiveSha256": "a4190d710e29f9998749c6abccea8cb1a40fb9ba1c9e3b09c0aac7c3fe92b85c",
+      "prefixes": 17
+    },
+    {
+      "index": 116,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/116.json",
+      "sha256": "72999fab025b6558c92487c8add79779eedeed8a59e965c9b89a0884c15f96b3",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/116.saves.gz",
+      "archiveSha256": "bd7ff401ac5fb35d241e35b7e224724c4b76521f123b0fccfe62bc348c3fabc9",
+      "prefixes": 17
+    },
+    {
+      "index": 117,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/117.json",
+      "sha256": "2c8ccdd327b3d8f2afb5cbf09be19c92735c09a6a87448195a187be3e887eef7",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/117.saves.gz",
+      "archiveSha256": "3dfec304477ada5826196f1ac79b002b0e7b5b8e8820654266672aab0da02407",
+      "prefixes": 17
+    },
+    {
+      "index": 118,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/118.json",
+      "sha256": "2aa91ab947134784b843e2d521ec99b01fc319dc04783e415c5bfb0d8a0d48a5",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/118.saves.gz",
+      "archiveSha256": "b14f2518c210f12d5003ed5670c9c90dd67905450c27f8a677cd0e014036e90f",
+      "prefixes": 17
+    },
+    {
+      "index": 119,
+      "path": "docs/planning/longitudinal-goal-execution-rev1/119.json",
+      "sha256": "eb6cdfb8a66d4b97d6c1f741dd6add526df130f446d085ca9e447e534a9389e3",
+      "archivePath": "docs/planning/longitudinal-goal-execution-rev1/119.saves.gz",
+      "archiveSha256": "f89e9b9cef345c873e61811ab30fcd178a59c1aac1c180509d91657259ead09d",
+      "prefixes": 17
+    }
+  ],
+  "pairs": [
+    {
+      "id": "feedback:Maintained:0",
+      "path": "pair-000.json.gz",
+      "sha256": "74de21f65cb865390e9ed94acc8b7373945563a126dc0942dd9cb19ad85ef01d",
+      "decodedSha256": "23f1fce1d0dc2c88becd02d235b8056ddbb49abf2ad6bb0b05148fab92f519c3",
+      "prefixes": 17
+    },
+    {
+      "id": "coarse:Maintained:0",
+      "path": "pair-001.json.gz",
+      "sha256": "33cd843dff4d7e371c29d74b2c1b4f572539df25162c3414e7ba079233944f30",
+      "decodedSha256": "7409f81357086d1934d80f2956d64543aea29db307701785cc25f569341a3cf0",
+      "prefixes": 17
+    },
+    {
+      "id": "retention:Maintained:0",
+      "path": "pair-002.json.gz",
+      "sha256": "a8b4ba3ed9a61b1ff11f79b1ada1d333f571bd41a92b9e8e2cd9aa110ec7e7fb",
+      "decodedSha256": "3803d21afcc75f9c2e15cce1954d19ef4715cb5bc05f43b183ec398c8205bfca",
+      "prefixes": 17
+    },
+    {
+      "id": "opportunity:Maintained:0",
+      "path": "pair-003.json.gz",
+      "sha256": "1ced7589b9519afa3306495bb2fa9bd2ef40187069744b26eee20e60c3109bca",
+      "decodedSha256": "f6c3f01cd26a0c33bd092c39ee84c22f60bddab1b0d0d7a9c840dfb049382a0f",
+      "prefixes": 17
+    },
+    {
+      "id": "feedback:Withdrawn:0",
+      "path": "pair-004.json.gz",
+      "sha256": "83b0aaa7e474a1bd0617df4dc4bccf0e804619d86630c778bca23ef2cc32bdd7",
+      "decodedSha256": "1a8d00d24de50264a1de94cf3866b19ff977eb9ead350006abf7ceafb782b7bf",
+      "prefixes": 17
+    },
+    {
+      "id": "coarse:Withdrawn:0",
+      "path": "pair-005.json.gz",
+      "sha256": "701caa6e1baf83f665fea801c7ca008d32f6ab06db7a2bb73c852f30cd8fba9e",
+      "decodedSha256": "3904957dc2f4c4508778d155978b58b0cfa1275b47373d91c8e3f3fcea59a199",
+      "prefixes": 17
+    },
+    {
+      "id": "retention:Withdrawn:0",
+      "path": "pair-006.json.gz",
+      "sha256": "858606db9b05fe640e26d4df554b995e84392b2893fb58ce94280124d6265dd9",
+      "decodedSha256": "0660678298897e3100b6c49b6013e1757590a2922726580a278f5b424acf0a86",
+      "prefixes": 17
+    },
+    {
+      "id": "opportunity:Withdrawn:0",
+      "path": "pair-007.json.gz",
+      "sha256": "caada92df89e5ada4288239872f9cb00aa1c2b09e55939107dea64859f918a06",
+      "decodedSha256": "b29f6c43191b0fb3861ce2719f9a06fb512c54036aae488028189be90e0f4cf4",
+      "prefixes": 17
+    },
+    {
+      "id": "feedback:Replaced:0",
+      "path": "pair-008.json.gz",
+      "sha256": "5fc3897688431c71789ec505710e93012565735762f70b8825a1fee5c060df2b",
+      "decodedSha256": "cdf0598d3ee7aaebf24c6c617c416c67045cf225d268e6227cc0c97847e2ca63",
+      "prefixes": 17
+    },
+    {
+      "id": "coarse:Replaced:0",
+      "path": "pair-009.json.gz",
+      "sha256": "a313cf6d2c895fa3799a3b71b80858a3fdf43fc71de31b859f6227f5ddeccce9",
+      "decodedSha256": "3d14e098d07304febb5ae2fc81251e283672f5b1ceb4cde90dfdb5fcacfda2f5",
+      "prefixes": 17
+    },
+    {
+      "id": "retention:Replaced:0",
+      "path": "pair-010.json.gz",
+      "sha256": "32adc7a564a7e796dd59f8fd6dc9fd624d59c00ca5d8bc2c3a4be29a65e91951",
+      "decodedSha256": "2a0b9ad3d075b179e8a482327767db478f558b696fbcdbef4615be78ea3e723f",
+      "prefixes": 17
+    },
+    {
+      "id": "opportunity:Replaced:0",
+      "path": "pair-011.json.gz",
+      "sha256": "49440304c1f1a42cba9581c5a2271b70ddf3104ca78abed51a6b3c5d89448b91",
+      "decodedSha256": "83d0a2dbca0b1d065d0054a26f642cdde7b341ab196d3290f9177214b6d97f0a",
+      "prefixes": 17
+    },
+    {
+      "id": "lifecycle:Withdrawn:0",
+      "path": "pair-012.json.gz",
+      "sha256": "4044f139feb3063410cb1c2fe8e2e45acb3c341459591e1e4a292ef8384cd839",
+      "decodedSha256": "0b8d784fd927be921bad66241a1c7dcc59c3a79b74b0cd34a6ad8336b305d31f",
+      "prefixes": 17
+    },
+    {
+      "id": "lifecycle:Replaced:0",
+      "path": "pair-013.json.gz",
+      "sha256": "070b7a1f6a97002e5c751798b0bb37815807fdd5b86cd236886d4cf065fcab30",
+      "decodedSha256": "ae65b532e0575305d258d45284f0ac28ab6194d9b4184d9d8d8ca61fc0cdab91",
+      "prefixes": 17
+    },
+    {
+      "id": "opportunity-withdrawn:0",
+      "path": "pair-014.json.gz",
+      "sha256": "2162650c966ddc8560deea1f3d250a2029722e9bb97a142c9f55de990a3aee81",
+      "decodedSha256": "b3cd65f779165ea3fc6793df1483affb3fecd49d6637ad48fdb3ce888f9668c9",
+      "prefixes": 17
+    },
+    {
+      "id": "feedback:Maintained:1",
+      "path": "pair-015.json.gz",
+      "sha256": "383e348e8cf6b6fb87967aed5201f4fd4f71792acf8aad00464cb7f0a669cb51",
+      "decodedSha256": "ca3ac451a5aec19313ef803c01b8b08d7843e6da49d33ec47aef07f1e03d1e29",
+      "prefixes": 17
+    },
+    {
+      "id": "coarse:Maintained:1",
+      "path": "pair-016.json.gz",
+      "sha256": "b9964c37d390732ad3b9af07d5158892a93f4099757b8986f7af493be05d69d9",
+      "decodedSha256": "befa3e36826a368f2bf98291c3df54979c5272f99877ac7c6d0b15d34e8f46b8",
+      "prefixes": 17
+    },
+    {
+      "id": "retention:Maintained:1",
+      "path": "pair-017.json.gz",
+      "sha256": "25797c1ec2baee2ee81dbe940f2abb4bb62f4c39fb211fcc4c772695ee09df11",
+      "decodedSha256": "2d961a1353916d427639ee1aae9159aea1b8a19555dba61cd041e10d10bde9f4",
+      "prefixes": 17
+    },
+    {
+      "id": "opportunity:Maintained:1",
+      "path": "pair-018.json.gz",
+      "sha256": "afc85dd77e3a9a372abd27bc2a97159192f6d4f57ce805dd9b24002c48fb0a18",
+      "decodedSha256": "bbf3f28afcd73ce8a0ae0fce3c4d592dbf09bf5ff83ffbf7b0596e0cfbab51f1",
+      "prefixes": 17
+    },
+    {
+      "id": "feedback:Withdrawn:1",
+      "path": "pair-019.json.gz",
+      "sha256": "d1dc420aee3616636835ec902144625a862d44593a3e95f5e79883ea450ac41f",
+      "decodedSha256": "d58afb398d0c33f7b5a2055b55cf542b56a66a5f61fe3b20276328b8c05f4e5e",
+      "prefixes": 17
+    },
+    {
+      "id": "coarse:Withdrawn:1",
+      "path": "pair-020.json.gz",
+      "sha256": "b8bf4c7bf3d11ab534b804ce46c0243e0dd2e0138a102bb2eeeb8f02cbc69eda",
+      "decodedSha256": "2a5e636d1fe02d7e2e539a1a93bef7960ca9d5b0f635694a817061f6e536193a",
+      "prefixes": 17
+    },
+    {
+      "id": "retention:Withdrawn:1",
+      "path": "pair-021.json.gz",
+      "sha256": "31eb1a3a5eb577d353ed6370f31da48518a77d950c93626d66acbfd71529b290",
+      "decodedSha256": "6c4ce58c6bd0990e182c356672af4f82b363920dc02ebd56f2ace5adad758124",
+      "prefixes": 17
+    },
+    {
+      "id": "opportunity:Withdrawn:1",
+      "path": "pair-022.json.gz",
+      "sha256": "4384bc89acde4031bd6050e8e1e21798f164614a6a3145229c03d290f258760a",
+      "decodedSha256": "031eb438ab874e29b115f15c5bb6ad78902a2f5fdc65e4f17726013406c3af65",
+      "prefixes": 17
+    },
+    {
+      "id": "feedback:Replaced:1",
+      "path": "pair-023.json.gz",
+      "sha256": "02e4d7a4a548b5f2c38fcde882f72e575cf4c44dcb00768c0b664091a7e01821",
+      "decodedSha256": "76568748bb73e4971f778e428116738c47467e055dd232d783a1c68abfc0b04d",
+      "prefixes": 17
+    },
+    {
+      "id": "coarse:Replaced:1",
+      "path": "pair-024.json.gz",
+      "sha256": "2757f493b9c3ce527fc30ba57b973695639d7982ee39bdf480d5ff42b4989be9",
+      "decodedSha256": "fdef6152798df43b0837aca704d8fab14451132e7e8de203b5653f3b380a5271",
+      "prefixes": 17
+    },
+    {
+      "id": "retention:Replaced:1",
+      "path": "pair-025.json.gz",
+      "sha256": "a0fe873136fd5d049d646628573c3917d4467d5b01a40809c2b774a81b8ff9a4",
+      "decodedSha256": "3190515fd946dd43ec5da01d77aeaf0ca62295593e86b3dd8cd3ae00d38dc9d7",
+      "prefixes": 17
+    },
+    {
+      "id": "opportunity:Replaced:1",
+      "path": "pair-026.json.gz",
+      "sha256": "9b6a10d5c7058125ef8efb5b77ae7d7af48da96f4e794378e69eb09ce35ef426",
+      "decodedSha256": "b177888546b75b79f97c7a0713e8c5f12b4852d0a92ac578ba799e4d741a96eb",
+      "prefixes": 17
+    },
+    {
+      "id": "lifecycle:Withdrawn:1",
+      "path": "pair-027.json.gz",
+      "sha256": "51a2addf6fa9b1d1b2c9be560caa9a962083f18a503098d0268b4bc3691ae6e1",
+      "decodedSha256": "6d9ac3331edfb7c2ac1ec06cc99cc39a860264a9c54e5bf2f56984dc23f532bc",
+      "prefixes": 17
+    },
+    {
+      "id": "lifecycle:Replaced:1",
+      "path": "pair-028.json.gz",
+      "sha256": "a392a10fa88cbd00c3593b43ae4681b121ee6886df909a32a67f4a9f765f0556",
+      "decodedSha256": "3595fd5c79c8ca5512bf73ed95b0c07b7d64eaa1f4e39703fa1f9c47e78b3590",
+      "prefixes": 17
+    },
+    {
+      "id": "opportunity-withdrawn:1",
+      "path": "pair-029.json.gz",
+      "sha256": "e68d6d57ae24fa6d3aaf0aac1b00e143c4049c23b63483edf6dd6e9fd348f4b2",
+      "decodedSha256": "80cf83e4a6c2788afd1b9b08d509ce9ed555f3f7b42b32e5d5ba24656e14944b",
+      "prefixes": 17
+    },
+    {
+      "id": "feedback:Maintained:2",
+      "path": "pair-030.json.gz",
+      "sha256": "d2bfcfb5ee69649d6b13a2b4d54e677dfd12a3ee17f91d49149654d8cabe6cd8",
+      "decodedSha256": "07d39e8a7e04cfbd655249f029e6fff672c19daeee3f2f587135d9565bd621cc",
+      "prefixes": 17
+    },
+    {
+      "id": "coarse:Maintained:2",
+      "path": "pair-031.json.gz",
+      "sha256": "d666061294557e48bdd07a08cae1f5a6ab8f20fed4b882904f467383aa22ca49",
+      "decodedSha256": "9ca0cf408a300a504905109bb65b08d9a2959b7bba6ac8bee7e0d56fda053166",
+      "prefixes": 17
+    },
+    {
+      "id": "retention:Maintained:2",
+      "path": "pair-032.json.gz",
+      "sha256": "3e7c471bfdb9604929fa2cd4b29d6b8bfb450ef4df908941a70de88e71667e0f",
+      "decodedSha256": "2b4a5df430f343bd9126604e5f1f2d67d1f2cb87a772d9f63a3712fddb85c1ce",
+      "prefixes": 17
+    },
+    {
+      "id": "opportunity:Maintained:2",
+      "path": "pair-033.json.gz",
+      "sha256": "dc35a7de1c2bc79a79cbac9a25b96555384f971b72c5c0d562d9b654415e207a",
+      "decodedSha256": "c744743eabd1eae02760e5e452126b5d65a9f7928a4bb365841c4134e46cc1d4",
+      "prefixes": 17
+    },
+    {
+      "id": "feedback:Withdrawn:2",
+      "path": "pair-034.json.gz",
+      "sha256": "1a67062ea54ce7df53612393e68f04d5c234101ed88be810c11a254562cf6f79",
+      "decodedSha256": "78b556943e206660c7504c31bb095f273d12435ceeb5a6026b32cdac3032d77c",
+      "prefixes": 17
+    },
+    {
+      "id": "coarse:Withdrawn:2",
+      "path": "pair-035.json.gz",
+      "sha256": "71bf23a28edb617e4d1f8044ccc1c0fb960cf664eafb8969f9c695eb680500c6",
+      "decodedSha256": "46094be9f65c0a186b7635427f93475327c1aae17b82b431757258518153b6ac",
+      "prefixes": 17
+    },
+    {
+      "id": "retention:Withdrawn:2",
+      "path": "pair-036.json.gz",
+      "sha256": "ac12629263f9ba266ec3473df987954bf81232266de06b788976f365d97b9ea4",
+      "decodedSha256": "399fdc894fcda5cec3386605f197a36542711658ce6f8b7b4ae67489980e1bc2",
+      "prefixes": 17
+    },
+    {
+      "id": "opportunity:Withdrawn:2",
+      "path": "pair-037.json.gz",
+      "sha256": "0426fb48fac3dc3a13fddca4f659c402b147c9a5fc1903aec8816c3310704bb8",
+      "decodedSha256": "da79a66c298d95c89378a6a0753dca088511c48a194c25c308470fbd99a1a278",
+      "prefixes": 17
+    },
+    {
+      "id": "feedback:Replaced:2",
+      "path": "pair-038.json.gz",
+      "sha256": "6663f469b54b0c141e435ba28a1c14ac65498c1b557a15f9d170b904712ce40b",
+      "decodedSha256": "383b63eda2c877ed839dcbc42f09be207311d6bd42d79292713adc77747b8de0",
+      "prefixes": 17
+    },
+    {
+      "id": "coarse:Replaced:2",
+      "path": "pair-039.json.gz",
+      "sha256": "e3c8509ec5d0e742b7a1e48cc4a571ef2fba487506c7158e12947e9de30de8cb",
+      "decodedSha256": "3bba8fa545b9fc6c92763e1342701f8a989a9cbd3641f4e5db4ba4118c3b0ea9",
+      "prefixes": 17
+    },
+    {
+      "id": "retention:Replaced:2",
+      "path": "pair-040.json.gz",
+      "sha256": "7414c8c754e1958cc7cf986cfb8907d4cbad4df8667d3f5eb15bbd30a763ff59",
+      "decodedSha256": "48eee4a8d404934351265b6bbee252fc8f127bf787c829a17acbb33027f7a711",
+      "prefixes": 17
+    },
+    {
+      "id": "opportunity:Replaced:2",
+      "path": "pair-041.json.gz",
+      "sha256": "fb67a9b4a8556ae1936f38a546774d7b7ba3afc1939b1c80a0228ea4ae66f53d",
+      "decodedSha256": "cccb287db3de53a880f268671a479f7d6cc6c62d10fa935ae294891505c5e4e8",
+      "prefixes": 17
+    },
+    {
+      "id": "lifecycle:Withdrawn:2",
+      "path": "pair-042.json.gz",
+      "sha256": "7d47ab7817091b7cd4e9bc26e8fc41a251fb8cd87036677c7f5550fc1242a4df",
+      "decodedSha256": "5672ea4e9bd90b8716a05e3bd0a8167624dbb56096e85b91283eea1226f14f52",
+      "prefixes": 17
+    },
+    {
+      "id": "lifecycle:Replaced:2",
+      "path": "pair-043.json.gz",
+      "sha256": "b42ddf062bd396e20b99d17cbc34698f561823641f4eb780bf65f2e26e338033",
+      "decodedSha256": "85fac469d8dc7869820bbb9ed2f48fb436250a50a1c59f0b35f3b35d973ec502",
+      "prefixes": 17
+    },
+    {
+      "id": "opportunity-withdrawn:2",
+      "path": "pair-044.json.gz",
+      "sha256": "95978c2c82a041f1d1b2a427104e03e765bb41a200ce5886ab0152cd9777b03c",
+      "decodedSha256": "e8c87987f2083c78589533cda437cc602414931dc8d873f1323d5a7aae46355f",
+      "prefixes": 17
+    },
+    {
+      "id": "feedback:Maintained:3",
+      "path": "pair-045.json.gz",
+      "sha256": "d8a3be25906bbf393acf978fc5a4174260475a9df0381b05455d830464f30eea",
+      "decodedSha256": "3788dd2443f24b83cb524169e72ce7b334581e6b2b7afcab42775479659acb2f",
+      "prefixes": 17
+    },
+    {
+      "id": "coarse:Maintained:3",
+      "path": "pair-046.json.gz",
+      "sha256": "898d254311060f81ed1dc5eac8907c55e3ba7f0d2d2a2fdb79df9e68a82e01c0",
+      "decodedSha256": "aea8206591d5917065dc7b90f26897f17f41bf4b57cc34c521063ee3fbe640b9",
+      "prefixes": 17
+    },
+    {
+      "id": "retention:Maintained:3",
+      "path": "pair-047.json.gz",
+      "sha256": "0454e265b710b892175f361690c7e436add39b0f79cf7beeef96c8349f8623be",
+      "decodedSha256": "a405e3be2debe0f7907eec1fa23a7bbf2b42d78f09f304ad4b8059921b3e7850",
+      "prefixes": 17
+    },
+    {
+      "id": "opportunity:Maintained:3",
+      "path": "pair-048.json.gz",
+      "sha256": "d75cee6f8a9e1705b4a22f65bc191c101d7050fabdb2330b5a7d4712bb90931f",
+      "decodedSha256": "ebe3e9d90c197c662654273477744c5421f6911fe36e21f0083526d6e6405674",
+      "prefixes": 17
+    },
+    {
+      "id": "feedback:Withdrawn:3",
+      "path": "pair-049.json.gz",
+      "sha256": "b87e9e7328635f89ca9843fe137ad75036ea0bfbd4fbe92470712b1055a629fb",
+      "decodedSha256": "6bc4f3549a75ddbd9b24430c852846b4883b07c6d5aee3ec452ff0ab117f3d48",
+      "prefixes": 17
+    },
+    {
+      "id": "coarse:Withdrawn:3",
+      "path": "pair-050.json.gz",
+      "sha256": "2e65c020a0b0efb142824e98c2d15a4aba955bb4177be75e6fc82a241a047bfe",
+      "decodedSha256": "76b54bb5dfd80d2d1659ca82291ef7d910f9bf9dc001253909a08d8d8511a80a",
+      "prefixes": 17
+    },
+    {
+      "id": "retention:Withdrawn:3",
+      "path": "pair-051.json.gz",
+      "sha256": "5c3d77d691f85e1ccfef8a6495c9c9721babe055cfb7ab68b0bcbbd29d2eeaa8",
+      "decodedSha256": "561550daccedc1cd7a723e94eb213254b9580a45b42026c859996556e157a390",
+      "prefixes": 17
+    },
+    {
+      "id": "opportunity:Withdrawn:3",
+      "path": "pair-052.json.gz",
+      "sha256": "073d5169cb98c524d3687392e09a78f7405ff2e43c84a20cf03eb1d404cee564",
+      "decodedSha256": "96cb336e61c5080103259b0fbad7672f5fa8ba82c058e6aadee9d353395188e9",
+      "prefixes": 17
+    },
+    {
+      "id": "feedback:Replaced:3",
+      "path": "pair-053.json.gz",
+      "sha256": "61f1b47ea0aee36c3e1fe6d652186d5902b1e6297f85c536f01fcf3918adef02",
+      "decodedSha256": "4063c8dcc7a69fed029b495b17b5d1b36e2349a80cbc812c4b08b360d68e1a6e",
+      "prefixes": 17
+    },
+    {
+      "id": "coarse:Replaced:3",
+      "path": "pair-054.json.gz",
+      "sha256": "3358097d7f2d63591693e60c4295bba4c3933d84257c196ea0754318f849b853",
+      "decodedSha256": "58e3b8461201f72c829a630cf4d3dc10a792ea26d02db50b56ee977b911fd518",
+      "prefixes": 17
+    },
+    {
+      "id": "retention:Replaced:3",
+      "path": "pair-055.json.gz",
+      "sha256": "98150b91eaf7596c12f076483dfd2180e976415d1c885aebfe2f36d05641d67c",
+      "decodedSha256": "f4d43e23f89a9260ab13cb0d0e9a7e6806ab01550a16f7fa7e82622e3e785319",
+      "prefixes": 17
+    },
+    {
+      "id": "opportunity:Replaced:3",
+      "path": "pair-056.json.gz",
+      "sha256": "f9c24e80559fb900071be3e156bc686aed8c9bdf41106490ebd4f064b5a93b44",
+      "decodedSha256": "f6b3dfd45e578ed471b141cac2bf6330b1c07fda81d231e33d1b4bd614808a54",
+      "prefixes": 17
+    },
+    {
+      "id": "lifecycle:Withdrawn:3",
+      "path": "pair-057.json.gz",
+      "sha256": "8cf6b2b7009861e780a4f1910704733adc6815dc514f4187549217864c2a4979",
+      "decodedSha256": "6a462262c300105651ef8276738be782b3349f7cd282025a41a24c94a76e222f",
+      "prefixes": 17
+    },
+    {
+      "id": "lifecycle:Replaced:3",
+      "path": "pair-058.json.gz",
+      "sha256": "91e0ad8f48062da6a96f470653de81f3b00cd1e7d6ee7e79ef754e81e39c9dd6",
+      "decodedSha256": "4e0a53e1dde7c056f350ba8a6f7b65abcc178e99c142c9830dea736250c54340",
+      "prefixes": 17
+    },
+    {
+      "id": "opportunity-withdrawn:3",
+      "path": "pair-059.json.gz",
+      "sha256": "faee47c04d4034ee247611619c6c9c95c07fc2197143cf1d4b708945eea9d009",
+      "decodedSha256": "2bde1850e51b9d2b149d2b4cf9b33f1f874fc7cd88656660ca00d2a2c30a7544",
+      "prefixes": 17
+    },
+    {
+      "id": "feedback:Maintained:4",
+      "path": "pair-060.json.gz",
+      "sha256": "5880e7998737a3ce7f2955e3c80aa2bba768b14e938605229bc567c10cb1af6d",
+      "decodedSha256": "c9a1de6b44fce59cd8cde9abcc8ece62870ab6ac44202f794a3a586a360f50ef",
+      "prefixes": 17
+    },
+    {
+      "id": "coarse:Maintained:4",
+      "path": "pair-061.json.gz",
+      "sha256": "8417c4154162d952883ba87014b09bf7aeb8f2d2c48a001816b0e571550c3fe5",
+      "decodedSha256": "bb4216805d50426e3d5354b001ad0c508392c925ae20a19525bc8a5dd157a0cd",
+      "prefixes": 17
+    },
+    {
+      "id": "retention:Maintained:4",
+      "path": "pair-062.json.gz",
+      "sha256": "ee1f4b8e664b5a9adb002efb361cde3475d40f9f71e15872c5114f0d8e304948",
+      "decodedSha256": "5a3ebf15d33ae5ab7ccb9de5e5e969092bafa2b822550160e0d7a49eadb9c528",
+      "prefixes": 17
+    },
+    {
+      "id": "opportunity:Maintained:4",
+      "path": "pair-063.json.gz",
+      "sha256": "77df132c3150a8b6708c671866daf011563d1187633c6b284d75cfc6b56d4c8c",
+      "decodedSha256": "8bb1f56886fb746f5e8d799a2e537cc92f209e4d1090186a7bac9dbeb2767ad3",
+      "prefixes": 17
+    },
+    {
+      "id": "feedback:Withdrawn:4",
+      "path": "pair-064.json.gz",
+      "sha256": "842f9aa8d2c586f23b0c9a037eac8601a840c8e3587a0e38c425ce628ade43cf",
+      "decodedSha256": "ca8c27dc2ca417951e1adb6a4bbe9abaa23007c337fe95641fe591047c895e74",
+      "prefixes": 17
+    },
+    {
+      "id": "coarse:Withdrawn:4",
+      "path": "pair-065.json.gz",
+      "sha256": "ac8b34f45c1458550283758c152d001b7dd92f2d88e697d4afddc74cd02eae97",
+      "decodedSha256": "c2f0c803a67903e466cc9086b9d0d8e3abc5c83014f48cb3b5c127b80c5be1d1",
+      "prefixes": 17
+    },
+    {
+      "id": "retention:Withdrawn:4",
+      "path": "pair-066.json.gz",
+      "sha256": "ef808a1d43a890183d66e6f05160f9b8811665ca06c650de290f5b051b3a139b",
+      "decodedSha256": "1851ec5a8f47cce40ce6b3b0001be03ba94888bce2a2bd5b83661cfdd8ce6ce0",
+      "prefixes": 17
+    },
+    {
+      "id": "opportunity:Withdrawn:4",
+      "path": "pair-067.json.gz",
+      "sha256": "0f303f3ad167db92062ebb54e64c78b0e0a5a0404f8e2b10a941d8ba6a43b7fb",
+      "decodedSha256": "6e940718f445351384a53032458fbc7967078ff6a69a518a75e1d807dc1066b6",
+      "prefixes": 17
+    },
+    {
+      "id": "feedback:Replaced:4",
+      "path": "pair-068.json.gz",
+      "sha256": "91b1389f99241ea345a6940d1922f51476b56af0d203fdb0cf06ce0549b55a86",
+      "decodedSha256": "73f86786f7f109b7c77f51f59f3020b4fba95c28c802da6c4b8e2f989bfedc78",
+      "prefixes": 17
+    },
+    {
+      "id": "coarse:Replaced:4",
+      "path": "pair-069.json.gz",
+      "sha256": "9c5b528516754e653fdbb447953f8384b1b08befb87ae5c4ceb7abd36fef347f",
+      "decodedSha256": "5bd753529305ea00ec3e715a31733901de5efa06ec9532fdb9379a9fddeba512",
+      "prefixes": 17
+    },
+    {
+      "id": "retention:Replaced:4",
+      "path": "pair-070.json.gz",
+      "sha256": "58e8bc1dd7d4f430a49f7ef9ce3c31aff63049b99259e04e60f1f8d49f013862",
+      "decodedSha256": "23abb61bef76e37d17fd5145b0e1b1392aab7892a5c2a88fc6d47eec0d6b5eeb",
+      "prefixes": 17
+    },
+    {
+      "id": "opportunity:Replaced:4",
+      "path": "pair-071.json.gz",
+      "sha256": "104f5d894912f301dc6df15354b5e44ba0e8ba127cffbfd44f8c9e0765eeffb1",
+      "decodedSha256": "cc42eb3650f8fb46b4dd2d4c6e8f218228edb5190e2b848cc4531bbec11cfd3a",
+      "prefixes": 17
+    },
+    {
+      "id": "lifecycle:Withdrawn:4",
+      "path": "pair-072.json.gz",
+      "sha256": "a5673d3af631741e7e1a2886914ca1ba9bd597f43820f444875a22b16b3278cd",
+      "decodedSha256": "03121e1914da96f39f02a9c1aa857b984f95a289d0bf4394ec428d586cc35f28",
+      "prefixes": 17
+    },
+    {
+      "id": "lifecycle:Replaced:4",
+      "path": "pair-073.json.gz",
+      "sha256": "96005eac2e912e90aa105ed3d736899d112208da42eb07041c12362986470459",
+      "decodedSha256": "0b68ffee8ea7e8816dc24a0d70ce3bae6fd203cab9335e615828c15cfb82e52d",
+      "prefixes": 17
+    },
+    {
+      "id": "opportunity-withdrawn:4",
+      "path": "pair-074.json.gz",
+      "sha256": "4505525067f75a3a607e4f1947323e37367dc4cfeca6860e7205f6c316e8f7be",
+      "decodedSha256": "730a3de9b34cf5a84ec6cbfb127989344c2453c0134848abb478e399a3a92145",
+      "prefixes": 17
+    },
+    {
+      "id": "feedback:Maintained:5",
+      "path": "pair-075.json.gz",
+      "sha256": "a39f1b414ddf6e530cef101a26a207e1c6a839c51efb6bf5c89314f95d7171b6",
+      "decodedSha256": "078947039dc0a427f90f8a68dda6ba36a163ab0ba308949b6f8c3dd5b53f93ca",
+      "prefixes": 17
+    },
+    {
+      "id": "coarse:Maintained:5",
+      "path": "pair-076.json.gz",
+      "sha256": "818607bd2b5ad91b72aa45f6ceaf334b95d0f102b87ef1d924618ebba10aa8c7",
+      "decodedSha256": "36e695920dd6790fd668d40b14dbac7b83f73c75903795aa92e29e9ee70a6cf7",
+      "prefixes": 17
+    },
+    {
+      "id": "retention:Maintained:5",
+      "path": "pair-077.json.gz",
+      "sha256": "cea8382e4f02276099df82d23d007c99378453dc1994914a5dd3225baefe5205",
+      "decodedSha256": "705da0f3a590b405b8801cc24780717ebf31f067a4409d2e7d89940e2a2e6179",
+      "prefixes": 17
+    },
+    {
+      "id": "opportunity:Maintained:5",
+      "path": "pair-078.json.gz",
+      "sha256": "2b49d27b239f9fd3301eef941e7a9fbdbc6b3a03b9af7086be44b1e060f7aff1",
+      "decodedSha256": "2380f24054bee111ce4f4d2e5e8d91b9b9e6f08c8e198d70084768b6bd0f1ea4",
+      "prefixes": 17
+    },
+    {
+      "id": "feedback:Withdrawn:5",
+      "path": "pair-079.json.gz",
+      "sha256": "61c66197a000f87acf07ce0cfb2d9a14022b147cee31bec2621b84eb23dc7a80",
+      "decodedSha256": "78f01c393ca560fa5d40d80b1e866ca2605a5df76b9fc785e70f9373b1fcd2fc",
+      "prefixes": 17
+    },
+    {
+      "id": "coarse:Withdrawn:5",
+      "path": "pair-080.json.gz",
+      "sha256": "e5fea49b497fa1504e52aabe3258b618012fe5af1ec308abab09cacaae21ec57",
+      "decodedSha256": "ee0113fca9a6d58e0a6d7884defa0ebea3b071366d61b81866ef62fe58cf501a",
+      "prefixes": 17
+    },
+    {
+      "id": "retention:Withdrawn:5",
+      "path": "pair-081.json.gz",
+      "sha256": "02db7960c605291e5f1f89f3fe2bf745feea5a02b4c84ef5d78178a98851c350",
+      "decodedSha256": "8184a7f27894dbc6df1cf6e94249688618914cd07df11d577d3ad710f982dc0f",
+      "prefixes": 17
+    },
+    {
+      "id": "opportunity:Withdrawn:5",
+      "path": "pair-082.json.gz",
+      "sha256": "a061dee58e249b1af6f53c239d9341240f8ddabcb3485de542797d0d31dc33d9",
+      "decodedSha256": "cc49e6a42bd6a2e2ef22d09e8d8644309fc1cdcb6774e258c27a28ad47ed6ec0",
+      "prefixes": 17
+    },
+    {
+      "id": "feedback:Replaced:5",
+      "path": "pair-083.json.gz",
+      "sha256": "b787ded541d41d31c18daa0038adc72ff4b46ecc141731dd6608de825ea950e5",
+      "decodedSha256": "010a4ef163b92d510762ebd21e19ef26d17319fa4fab767c8ee34874f64275cd",
+      "prefixes": 17
+    },
+    {
+      "id": "coarse:Replaced:5",
+      "path": "pair-084.json.gz",
+      "sha256": "ecc6c25b87e1d36f938a93d7ec299631ce3201bc03bdfbde11d8905bf4a96b19",
+      "decodedSha256": "81a2e55c7f2688c6c71eeb5c038958875dcbe88032422f9572d077f2c0f7f9f8",
+      "prefixes": 17
+    },
+    {
+      "id": "retention:Replaced:5",
+      "path": "pair-085.json.gz",
+      "sha256": "5635f6d19205cb082994f19f8b880d771325ab51795bdc9aeb4c6d7bdfb9aae9",
+      "decodedSha256": "3d76dff2c07931b11486b2f1be4b24e091ac926f3481f0afd4caf001f4162936",
+      "prefixes": 17
+    },
+    {
+      "id": "opportunity:Replaced:5",
+      "path": "pair-086.json.gz",
+      "sha256": "10a0a90b22c3a595057a55b819b9cf470e3b09914387951b6253e9f27b1f7be1",
+      "decodedSha256": "284cad6dfe9845b323f39e2332b10f6b05a12798893c5ff929c95fc3cbd00b9a",
+      "prefixes": 17
+    },
+    {
+      "id": "lifecycle:Withdrawn:5",
+      "path": "pair-087.json.gz",
+      "sha256": "0311151d7908563624c563fcead9ea37d70c8510dc3fd5573105d27c0eef411e",
+      "decodedSha256": "db40fae75efd15c0d73a9133f28bc69b335388f8410d1b9ac034c21e76732d23",
+      "prefixes": 17
+    },
+    {
+      "id": "lifecycle:Replaced:5",
+      "path": "pair-088.json.gz",
+      "sha256": "daa9570f32ca38774abedeb3471f4f77b5a8fd728276d98474da23b216e47137",
+      "decodedSha256": "23f0e11f52aa141a41e4d041a3bcede08ccbef62152c8495968f7a8d3b3c4988",
+      "prefixes": 17
+    },
+    {
+      "id": "opportunity-withdrawn:5",
+      "path": "pair-089.json.gz",
+      "sha256": "9674a37a0899cad08d0913884d4d45a253fd28acd9baaf872c8afcdf0ccb24b6",
+      "decodedSha256": "2304066b60f6ccd53f7dfc7227769d63cd6793570fccf173582d8f48c584dc0f",
+      "prefixes": 17
+    },
+    {
+      "id": "feedback:Maintained:6",
+      "path": "pair-090.json.gz",
+      "sha256": "7766d84347110ec66ad83cfff91e8e5fd36ff30062bb5edfff56b6a576d7c2fe",
+      "decodedSha256": "3790bf1f875c93612f16c5834967fe42ea96e087c6cc98f547c1354848868ac1",
+      "prefixes": 17
+    },
+    {
+      "id": "coarse:Maintained:6",
+      "path": "pair-091.json.gz",
+      "sha256": "1484cdaeeee9152e46073e4a4e0d5b859b52c84dacfaeb930ba083e3376f3dc8",
+      "decodedSha256": "7416422592b8a7ebc12ffbed36f7ec3ab7c540a098a5261f48b72e86a587cfb3",
+      "prefixes": 17
+    },
+    {
+      "id": "retention:Maintained:6",
+      "path": "pair-092.json.gz",
+      "sha256": "d01759a7e910afc9bc1f641c4710e38ad2f81755fcda11eab88e746abee36543",
+      "decodedSha256": "7a101f116302f29e4f3eaeaff24eb7f2aeda7ba2abfc6b234b89e2a1d50458b7",
+      "prefixes": 17
+    },
+    {
+      "id": "opportunity:Maintained:6",
+      "path": "pair-093.json.gz",
+      "sha256": "2b32a646bc2ccaf518d891ca6aaa6d977b7c16c1bf96af1754c15e9d3a317469",
+      "decodedSha256": "b609912ba871395989fd30cd41af2dcaaac3d633f97d2b1f36942b85b240d40b",
+      "prefixes": 17
+    },
+    {
+      "id": "feedback:Withdrawn:6",
+      "path": "pair-094.json.gz",
+      "sha256": "279e112d90c275b02f162ad1b8d2b009662b302bd9215aff44ddec287625ba7f",
+      "decodedSha256": "4f9ef28012e5a63c951c0cfb82b33cdd38efa426116a038003bae9796ef7613e",
+      "prefixes": 17
+    },
+    {
+      "id": "coarse:Withdrawn:6",
+      "path": "pair-095.json.gz",
+      "sha256": "0c0f51bbd79ba4b54437b5e4b2fa735cec810382784c2f7f0238381b5cf995f9",
+      "decodedSha256": "6b7eca8b0aa3b40b4e891888b67d5f62aed4a07abba834dd7727fdd83fcced45",
+      "prefixes": 17
+    },
+    {
+      "id": "retention:Withdrawn:6",
+      "path": "pair-096.json.gz",
+      "sha256": "b7b1b8929dd778313bf5f9faa973812d5dc6c601ac4ed62162cb977fe39c5c3a",
+      "decodedSha256": "3074c1d5e242d34cfa08c338592fc131fa48fa19871939b0d88298b67911051a",
+      "prefixes": 17
+    },
+    {
+      "id": "opportunity:Withdrawn:6",
+      "path": "pair-097.json.gz",
+      "sha256": "0a8e3c97ee72f9fa208d1d6dad4d0565d4996175be29e965f7a6007bf31d30b0",
+      "decodedSha256": "3b2027d99293be8ecea89eb7790c41c8e388aebf3f71872fc698ba60ecce581a",
+      "prefixes": 17
+    },
+    {
+      "id": "feedback:Replaced:6",
+      "path": "pair-098.json.gz",
+      "sha256": "175cb4973da54647922bea98ddf57066cd4f3bbd501fd90d5a1bb7b5c6629a96",
+      "decodedSha256": "c7407c85c94c35c3971e5aa8c17ac8251df940f1aecf3083de57ba0f87948cbb",
+      "prefixes": 17
+    },
+    {
+      "id": "coarse:Replaced:6",
+      "path": "pair-099.json.gz",
+      "sha256": "bf7656911f4d5fa9873fbfbdde67c20c2252b0adffb6b9122048bf2ef128c16b",
+      "decodedSha256": "4a5f50c8ca04b67114e2cbde9d53a83c5605c4b782d4a9883f80195249d4f05a",
+      "prefixes": 17
+    },
+    {
+      "id": "retention:Replaced:6",
+      "path": "pair-100.json.gz",
+      "sha256": "3f3222113cc518dc775392731a8189c26a26c5c64b5d99d77814383011ea55eb",
+      "decodedSha256": "e1be6d8bb297227cf937e0251524210aeeab96a1d2b113dd39e9d5d08d798b4d",
+      "prefixes": 17
+    },
+    {
+      "id": "opportunity:Replaced:6",
+      "path": "pair-101.json.gz",
+      "sha256": "8e12c1c58fb4fc1a496a476959596db87f793678764d499554b776469b95d3d2",
+      "decodedSha256": "b6826acab9d2f3b5b7f789b57f2db98cd5cfe80385c9351cc879e7dcb3ad87ae",
+      "prefixes": 17
+    },
+    {
+      "id": "lifecycle:Withdrawn:6",
+      "path": "pair-102.json.gz",
+      "sha256": "69df53efe0fa245d651583f8662b46a432d45ad608129a42f4d7ba34de3d0567",
+      "decodedSha256": "0812f9900f2394f7db25d8d6bc8eca4b9ae050d20ec8eeba467c8743e3fbb13b",
+      "prefixes": 17
+    },
+    {
+      "id": "lifecycle:Replaced:6",
+      "path": "pair-103.json.gz",
+      "sha256": "384b983a7af3d514820063e76b239d0a8d611633a71c02f3b6c00bf240ae461e",
+      "decodedSha256": "27e1acb7e5bcddac566c6a9cb2cd480e17346aff91dbff0945be2c03e1ce3f4f",
+      "prefixes": 17
+    },
+    {
+      "id": "opportunity-withdrawn:6",
+      "path": "pair-104.json.gz",
+      "sha256": "37d366307134b288669d54913a4a1385ae016c5e51e063a9b203a60163ef2655",
+      "decodedSha256": "b096f929571c8c14ce54688844b4f1b168b789a94e608a1cc319c1661de800b9",
+      "prefixes": 17
+    },
+    {
+      "id": "feedback:Maintained:7",
+      "path": "pair-105.json.gz",
+      "sha256": "7be3717765c94396672058b3b6d2e46d8b29ea7d2869b5859c9481dcf97310a8",
+      "decodedSha256": "b65dc69aa22aedd59eb0f9072461550d14fe0f3b9a4c00bf1faed346aa399c37",
+      "prefixes": 17
+    },
+    {
+      "id": "coarse:Maintained:7",
+      "path": "pair-106.json.gz",
+      "sha256": "d50f85442c92321f2e5ff85742703124394d6c0ab1198200f77a01f8e15c45e9",
+      "decodedSha256": "107cf71f70fb0310a786e9b204f9b08156031dd26d254e0e7b5f9e3ec5773dbd",
+      "prefixes": 17
+    },
+    {
+      "id": "retention:Maintained:7",
+      "path": "pair-107.json.gz",
+      "sha256": "639b6c2f6e44b23891b3c3eff740b418155059c35f3fa3e720a40fb8fb1d20cc",
+      "decodedSha256": "35b0d104ec7b13bcecb5975f08aae94647f21059c0dd81eb01359f10f138b03a",
+      "prefixes": 17
+    },
+    {
+      "id": "opportunity:Maintained:7",
+      "path": "pair-108.json.gz",
+      "sha256": "89d7948900505123833d94bdce895b22b0006ba0df69f08a60766e01bc720694",
+      "decodedSha256": "1433e404bbb84f6711d7ad172072f9c78daaba7a38875d21ea8c69bb25ca7f2e",
+      "prefixes": 17
+    },
+    {
+      "id": "feedback:Withdrawn:7",
+      "path": "pair-109.json.gz",
+      "sha256": "eac555a7bebd53a225ce300ef1ad9805f9ee95c1631ad56a8b4ea54165d12f9c",
+      "decodedSha256": "0baecda9a71244f83f35b5e8f58157016cffbff5175e8e3ecbddd434e8071a01",
+      "prefixes": 17
+    },
+    {
+      "id": "coarse:Withdrawn:7",
+      "path": "pair-110.json.gz",
+      "sha256": "21744c8154ee8b1e53f8e351e154e9eb1904e5299876987db3546e91a2583fe8",
+      "decodedSha256": "011c2e448cc1ce0ae77d49d7a863a75cb4529c52006be366b0255899e41cb13e",
+      "prefixes": 17
+    },
+    {
+      "id": "retention:Withdrawn:7",
+      "path": "pair-111.json.gz",
+      "sha256": "c6d19233fc0c4e008caec1ec353546920b9c913ef3ece0f6f4d06b04579c9391",
+      "decodedSha256": "ee12971b61fc3f20d59143bd0e02da234a512df44c930d76d3d3b8558f134e15",
+      "prefixes": 17
+    },
+    {
+      "id": "opportunity:Withdrawn:7",
+      "path": "pair-112.json.gz",
+      "sha256": "5a6d874fa3356bc63018deb3b35587586eacc21eca312516f0b525d539099bfc",
+      "decodedSha256": "b9d346c5cd02f96badbe0bbd872e21c92e98adb5f3fee0e7a05ab7e18751e7a3",
+      "prefixes": 17
+    },
+    {
+      "id": "feedback:Replaced:7",
+      "path": "pair-113.json.gz",
+      "sha256": "af8d391c06e539fe1f9c2fc31c0e606e8f930894f78ea1ccdb76ece768ac9597",
+      "decodedSha256": "f6e7e5487c8b6891b1839fb87c1db2ef37953d9e11eca238e225fe1f12c21112",
+      "prefixes": 17
+    },
+    {
+      "id": "coarse:Replaced:7",
+      "path": "pair-114.json.gz",
+      "sha256": "e014198949b75387744954a6a811b0317268ebfabdd9f85c975f2f75f74c9ee8",
+      "decodedSha256": "d19f2b77979f0e5e74b3a7b4695b06b51695d061ef6197383f328f64c0e14859",
+      "prefixes": 17
+    },
+    {
+      "id": "retention:Replaced:7",
+      "path": "pair-115.json.gz",
+      "sha256": "b5756fb8dcb110522889449311c060f18849d1466a0021aaa106f3687a6a99ee",
+      "decodedSha256": "1e33f740184ecf9b81c608727696790a1fec4f17d5a2e48bf1a590ec246c2b9e",
+      "prefixes": 17
+    },
+    {
+      "id": "opportunity:Replaced:7",
+      "path": "pair-116.json.gz",
+      "sha256": "b5afa56355bac1b3876301ae3dcf97cecca691b9aaf329ef9eb21b257795efac",
+      "decodedSha256": "7fb1b32a88a2494788c6adeff8434cd2f18245ebb14fd7221be0745014fe0711",
+      "prefixes": 17
+    },
+    {
+      "id": "lifecycle:Withdrawn:7",
+      "path": "pair-117.json.gz",
+      "sha256": "f58bd757f7c9134440d2a8f59e483c9a705246eee00ddc839d7ccd2236bc7279",
+      "decodedSha256": "f717d624c5594dabb785a4b026397a935da3f65086285066ec36426e8eb67550",
+      "prefixes": 17
+    },
+    {
+      "id": "lifecycle:Replaced:7",
+      "path": "pair-118.json.gz",
+      "sha256": "9dbd73cc74a39707bb4635aa9a05e3b4a1c24a528d9044a5e9dbaa380cf1fb7a",
+      "decodedSha256": "eca93e99cd1a851a647642dde11cc471239f01e81502981bd7e3378c87f37e38",
+      "prefixes": 17
+    },
+    {
+      "id": "opportunity-withdrawn:7",
+      "path": "pair-119.json.gz",
+      "sha256": "f2583f032c496eec1d51824e1350801faa33b2b2fc3da90d4017e4c9ce30966a",
+      "decodedSha256": "a1680c1c491d64ae1fe14710c891bd2a8b8a8f9ce28c6c4382eeed7ad8f58c31",
+      "prefixes": 17
+    }
+  ],
+  "counts": {
+    "cases": 120,
+    "comparisons": 120,
+    "alignedPrefixes": 2040,
+    "probabilityDifferences": 18,
+    "actionDifferences": 14
+  },
+  "scope": "All declared pairs at every original saved prefix, authenticated to historical archive/save/native-source hashes. Preserves 18/24 fine probability and14/24 action differences, coarse equalities, retention equalities and lifecycle distinctions. This qualifies projection of preserved original saves; current native adapter replay audit, browser comparisons, pair persistence and Campaign4 entry remain separate."
+}
