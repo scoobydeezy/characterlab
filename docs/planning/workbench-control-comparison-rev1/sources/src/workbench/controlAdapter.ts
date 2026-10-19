@@ -1,0 +1,27 @@
+import catalog from './controlCatalog.json';
+import {canonicalDecode,RecordSchemaRegistry,bytesToHex} from '../substrate/canonicalEncoding';
+import {restoreAuthoritativeState,statePathValue} from '../substrate/state';
+import {dataRecord as rec,dataField as field,dataItems as items} from '../campaign2/canonicalData';
+import {controlSupportedSchemas} from '../campaign3/controlCodecs';
+import {CONTROL_VERSION} from '../campaign3/controlModel';
+import {prepareControlModel,createControlRun,restoreControlRun} from '../campaign3/controlFactory';
+import {digest,exactText,exactKey,fromHex,equalBytes} from './canonical';
+import {nativeTimeline} from './nativeTimeline';
+export const CONTROL_PROGRAMS=catalog.programs.map(p=>({id:p.id,name:p.name,candidate:p.candidate,law:p.law}));
+const schema=new RecordSchemaRegistry(controlSupportedSchemas()),decode=(b:Uint8Array)=>canonicalDecode(b,schema);
+const original=(id:string)=>{const row=catalog.programs.find(p=>p.id===id);if(!row)throw Error('Unknown frozen CONTROL program');return row;};
+const source=(id:string)=>{const row=original(id),m=catalog.models.find(m=>m.name===row.model)!;return{parameters:fromHex(m.parameters),content:fromHex(m.content),registry:fromHex(m.registry)};};
+type Run=Awaited<ReturnType<typeof createControlRun>>;
+export interface ControlCheckpoint{version:'control-workbench/0.1';program:string;prefix:number;saveHex:string;saveHash:string;}
+export type ControlSnapshot=ReturnType<ControlWorkbenchRun['snapshot']>;
+export class ControlWorkbenchRun{
+ #run:Run;#program:string;#prefix=0;#busy=false;
+ #view!:{program:string;contractVersion:string;identityVersion:string;prefix:number;complete:boolean;clock:string;modelHash:string;runHash:string;stateHash:string;saveHash:string;outputsHash:string;observerHash:string;observerHex:string;observerExact:string;researchOutputs:string;fields:{path:string;root:string;exact:string}[];timeline:ReturnType<typeof nativeTimeline>;scope:string};
+ private constructor(run:Run,program:string){this.#run=run;this.#program=program;}
+ static async create(program='1/1/main'){const row=original(program),run=await createControlRun(await prepareControlModel(source(program)),{initialState:fromHex(catalog.initialState),orderedInputs:fromHex(row.orderedInputs),runSeed:fromHex(catalog.runSeed)});if(bytesToHex(run.runIdentity())!==row.runIdentity||exactKey(field(rec(decode(run.runIdentity()),104n),1n))!==row.modelIdentity)throw Error('CONTROL original identity mismatch');const a=new ControlWorkbenchRun(run,program);await a.#refresh();return a;}
+ snapshot(){if(this.#busy)throw Error('CONTROL advancing');return structuredClone(this.#view);}
+ checkpoint():ControlCheckpoint{if(this.#busy)throw Error('CONTROL advancing');return{version:'control-workbench/0.1',program:this.#program,prefix:this.#prefix,saveHex:bytesToHex(this.#run.save()),saveHash:this.#view.saveHash};}
+ async advance(){if(this.#busy)throw Error('CONTROL command already in flight');if(this.#prefix>=16&&!this.#view.complete)throw Error('CONTROL inspection horizon exceeded');this.#busy=true;try{const moved=await this.#run.settleNextInstant();if(moved)this.#prefix++;await this.#refresh();return moved;}finally{this.#busy=false;}}
+ static async restore(input:ControlCheckpoint){const c=structuredClone(input);if(!c||c.version!=='control-workbench/0.1'||!Number.isInteger(c.prefix)||c.prefix<0||c.prefix>16||typeof c.saveHex!=='string'||c.saveHex.length>32_000_000)throw Error('Invalid CONTROL checkpoint');const bytes=fromHex(c.saveHex);if(await digest(bytes)!==c.saveHash)throw Error('CONTROL checkpoint digest mismatch');const expected=await ControlWorkbenchRun.create(c.program);for(let n=0;n<c.prefix;n++)if(!await expected.advance())throw Error('CONTROL checkpoint exceeds horizon');if(!equalBytes(expected.#run.save(),bytes))throw Error('CONTROL program/prefix mismatch');const row=original(c.program),run=await restoreControlRun(source(c.program),{initialState:fromHex(catalog.initialState),orderedInputs:fromHex(row.orderedInputs),save:bytes}),a=new ControlWorkbenchRun(run,c.program);a.#prefix=c.prefix;await a.#refresh();return a;}
+ async #refresh(){const row=original(this.#program),s=this.#run.snapshot(),save=this.#run.save(),observer=this.#run.observerView(0);this.#view={program:this.#program,contractVersion:catalog.contractVersion,identityVersion:CONTROL_VERSION,prefix:this.#prefix,complete:items(field(rec(decode(save),132n),7n),'list').length===0,clock:String(s.clock),modelHash:await digest(fromHex(row.modelIdentity)),runHash:await digest(this.#run.runIdentity()),stateHash:await digest(s.state),saveHash:await digest(save),outputsHash:await digest(s.outputs),observerHash:await digest(observer),observerHex:bytesToHex(observer),observerExact:exactText(decode(observer)),researchOutputs:exactText(decode(s.outputs)),fields:restoreAuthoritativeState(decode(s.state)).entries().map(e=>({path:exactKey(statePathValue(e.path)),root:String(e.path.rootStateTypeId),exact:exactText(e.value)})),timeline:nativeTimeline(items(decode(s.trace),'list')),scope:'Original CONTROL public run. Contract0.2 retains frozen executable identity0.1. Public observer bytes are separate from full researcher state/output/trace; no character language is qualified. Acquired history, retained goal, maintained access, inhibition, choice and execution remain distinct. Resistance reconciliation reuses this cohort; no extra distinct cases or general willpower law are claimed.'};}
+}

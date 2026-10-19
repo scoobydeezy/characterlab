@@ -1,5 +1,14 @@
 # Current research entry point
 
+**CONTROL native/comparison qualification2026-10-19:** all17 programs/142 prefixes
+PASS exact native parity and restores (125 advancing/17 terminal). All28 declared
+comparisons PASS237 aligned prefix reports;11 missing counterparts explicitly retained.
+Independent receipt hashes/counts and every comparison side joined to native-prefix
+commitments PASS. Two comparison tests and TypeScript PASS; research retains18
+conditional obligations. Start OBSERVABILITY_WORKBENCH_CONTROL_PROGRESS.md.
+Six-mode UI, character language, browser and batch admission remain due. No Campaign4
+entry acceptance or new psychological verdict.
+
 **CONTROL foundation2026-10-19:** catalog/adapter/worker implemented for7 original
 models/17 public runs; HABIT resistance is the same cohort, not extra cases. Contract
 0.2 and frozen executable identity0.1 remain explicit. Five focused privacy/replay/

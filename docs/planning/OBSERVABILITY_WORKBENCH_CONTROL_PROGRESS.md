@@ -33,9 +33,9 @@ overlap/publication; worker restoration and transport cleanup. Build70150 PASS47
 modules; existing chunk-size warnings remain. Worker additions receive a separate
 final TypeScript check9545 PASS. No CONTROL UI is bundled/exposed yet.
 
-## Full native qualification running
+## Full native qualification complete
 
-Audit49278 is live under `workbench-control-parity-rev1`. It freezes its transitive
+Audit49278 completed PASS under `workbench-control-parity-rev1`. It freezes its transitive
 source graph and authenticates catalog inputs before execution. Each adapter prefix
 must equal an independent direct native run in complete save bytes, state, outputs,
 observer bytes and trace timeline. Each checkpoint must restore exactly through the
@@ -43,9 +43,36 @@ native factory and reproduce the direct successor. Original terminal hashes and
 identities must equal RESULT_REV2. Whole-horizon hidden/absent and hidden-reward
 observer equalities remain explicit checks.
 
-Required totals are142 prefixes/125 advancing/17 terminal restores. Partial program
-results do not establish full PASS; the final receipt and independent hash/count
-verification remain due. Current source is not modified while this audit is live.
+Verified totals are142 prefixes/125 advancing/17 terminal restores. Independent
+verification checked116 frozen/current source hashes, original bindings,17 result
+hashes, contiguous prefixes, successor commitments and final counts.
+
+## Declared comparisons qualified
+
+`controlComparison.ts` declares28 ordered comparisons spanning all17 programs:
+17 identical-input one-setting model pairs and11 input-calendar pairs. Model contrasts
+change candidate or law only. Input contrasts show exact decoded field differences;
+compound changes and shortened horizons are not mislabeled single interventions.
+Original model/run identities and public observer commitments are authenticated.
+Public observer equality remains distinct from full research state/output/save equality.
+Every canonical state path is shown separately. Different prefix/clock pairs withhold
+equality and field differences; missing counterparts are explicit. Equal seeds alone
+do not assert matched random draws. This is a diagnostic consumer of qualified adapter
+snapshots, not an independent save authenticator or character narration source.
+
+Audit56719 PASS:17 trajectories/142 prefixes;28 comparisons/237 aligned reports,
+zero unaligned reports in these actual calendars and11 missing counterparts.
+Historical terminal commitments match the original result. Complete hidden/absent
+and hidden-reward observer equalities pass. Independent verification checked115
+frozen/current sources,28 gzip result hashes/counts and joined every report side to
+the separate native audit's clock/save/state/output/observer prefix commitments.
+Receipt: `workbench-control-comparison-rev1/receipt.json`.
+
+Two focused comparison tests PASS: full declared-pair coverage, public privacy versus
+research output difference, unaligned withholding, wrong pair/identity and malformed
+observer commitment rejection. TypeScript12754 and reference-boundary checks PASS.
+These checks do not establish browser comparison, full causal factor accounting,
+paired UI restore, language, or batch qualification.
 
 ## Preserved meaning and next work
 
@@ -56,7 +83,7 @@ actual choice and execution remain separate. Goal retirement does not imply unle
 motor failure is not cognitive resistance. SpareSlot, NoInhibition, LoadBlind,
 RetainedEqualsMaintained, EraseHistory, NoHistory, Residual and Linear all survive.
 
-Next finish full native qualification, add controlled comparisons and six-mode UI,
+Next expose qualified controlled comparisons and six-mode UI,
 qualify observer-safe descriptions and browser replay, and separately handle FATIGUE
 and other successors. No batch, resource/accessibility, causal necessity, broad
 psychological claim or Campaign4 entry is accepted. Evidence restore/research checks
