@@ -1,14 +1,33 @@
 import {useEffect,useRef,useState} from 'react';
 import {BioWorkerClient} from './bioWorkerClient';
 import {BIO_COMPARISONS,compareBioSnapshots} from './bioComparison';
+import {captureBioPair,restoreBioPair,type BioPairCheckpoint} from './bioPairCheckpoint';
 type Report=Awaited<ReturnType<typeof compareBioSnapshots>>;
 export function BioComparisonPanel({active=true}:{active?:boolean}){
  const clients=useRef<[BioWorkerClient,BioWorkerClient]>(),alive=useRef(true),locked=useRef(false),stop=useRef(false);
  const [selected,setSelected]=useState(BIO_COMPARISONS[0].id),[loaded,setLoaded]=useState('');
  const [report,setReport]=useState<Report>(),[busy,setBusy]=useState(false),[error,setError]=useState(''),[complete,setComplete]=useState(false);
+ const [checkpoint,setCheckpoint]=useState<BioPairCheckpoint>(),[checkpointError,setCheckpointError]=useState('');
  const spec=BIO_COMPARISONS.find(s=>s.id===selected)!;
  useEffect(()=>{alive.current=true;return()=>{alive.current=false;clients.current?.forEach(c=>c.dispose());};},[]);
  useEffect(()=>{if(!active)stop.current=true;},[active]);
+ async function checkpointAction(action:'capture'|'restore'){
+  if(locked.current)return;locked.current=true;setBusy(true);setCheckpointError('');
+  try{
+   if(action==='capture'){
+    if(!clients.current||loaded!==selected)throw Error('Create the selected BIO pair first');
+    const saved=await captureBioPair(loaded,clients.current);if(alive.current)setCheckpoint(saved);
+   }else{
+    if(!checkpoint)throw Error('No BIO pair checkpoint captured');
+    const restored=await restoreBioPair(checkpoint,c=>BioWorkerClient.restore(c));
+    if(!alive.current){restored.pair.forEach(c=>c.dispose());return;}
+    const previous=clients.current;clients.current=restored.pair;
+    setSelected(restored.comparisonId);setLoaded(restored.comparisonId);setReport(restored.report);
+    setComplete(restored.pair.every(c=>c.snapshot().complete));setError('');previous?.forEach(c=>c.dispose());
+   }
+  }catch(e){if(alive.current)setCheckpointError(String(e));}
+  finally{locked.current=false;if(alive.current)setBusy(false);}
+ }
  async function execute(action:'create'|'probe'|'step'|'run'){
   if(locked.current)return;locked.current=true;stop.current=false;setBusy(true);setError('');setReport(undefined);const fresh:BioWorkerClient[]=[];
   try{
@@ -35,6 +54,9 @@ export function BioComparisonPanel({active=true}:{active?:boolean}){
  <label>BIO comparison<select value={selected} disabled={busy} onChange={e=>{setSelected(e.target.value);setReport(undefined);setError('');}}>{BIO_COMPARISONS.map(s=><option key={s.id} value={s.id}>{s.control} → {s.candidate} ({s.kind})</option>)}</select></label><p>{spec.changed}</p>
  <div className="button-row"><button disabled={busy} onClick={()=>void execute('create')}>Create BIO pair</button><button disabled={busy} onClick={()=>void execute('probe')}>Run fresh BIO pair to shared probe</button><button disabled={busy||loaded!==selected||complete||!!error} onClick={()=>void execute('step')}>Step BIO pair</button><button disabled={busy||loaded!==selected||complete||!!error} onClick={()=>void execute('run')}>Run BIO pair to completion</button><button disabled={!busy} onClick={()=>{stop.current=true;}}>Pause BIO pair</button></div>
  <p>Pause finishes the current pair of component steps. Resume continues the same two original runs; changing the declaration requires creating a new pair.</p>
+ <div className="button-row"><button disabled={busy||loaded!==selected||!report||!!error} onClick={()=>void checkpointAction('capture')}>Capture BIO pair checkpoint</button><button disabled={busy||!checkpoint} onClick={()=>void checkpointAction('restore')}>Restore BIO pair checkpoint</button></div>
+ <p>{checkpoint?`Captured ${checkpoint.comparisonId} at aligned prefix ${checkpoint.control.prefix}.`:'No pair checkpoint captured.'} Both branches authenticate before replacing the live pair. This checkpoint remains in this session.</p>
+ {checkpointError&&<p role="alert">Pair checkpoint failed; existing pair retained: {checkpointError}</p>}
  <p role="status">{busy?`Working on BIO comparison${report?` · committed pair ${report.control.prefix} / ${report.candidate.prefix}`:''}`:error?'BIO comparison failed; recreate pair':report?`BIO pair ${report.control.prefix} / ${report.candidate.prefix} · ${report.status}`:'Create a pair to inspect its records'}</p>{error&&<p role="alert">{error}</p>}
  {report&&<><p>{report.alignment}</p><p>Same model: {String(report.identity.modelEqual)} · same run identity: {String(report.identity.runEqual)} · same saved bytes digest: {String(report.identity.saveEqual)}</p>
  {report.status==='ALIGNED_COMPONENT_PREFIX'&&<table><caption>Exact decision and history comparison (control / candidate)</caption><thead><tr><th>Step</th><th>Choice</th><th>Standing</th><th>Strength</th><th>Same display</th></tr></thead><tbody>{report.records.map(r=><tr key={r.ordinal}><td>{r.ordinal}</td><td>{r.choice.control} / {r.choice.candidate}</td><td>{r.modifiers.control.join(', ')} / {r.modifiers.candidate.join(', ')}</td><td>{r.strength.control} / {r.strength.candidate}</td><td>{String(r.displayEqual)}</td></tr>)}</tbody></table>}

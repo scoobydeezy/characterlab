@@ -144,3 +144,35 @@ unchanged. Terminal controls disable; changing declaration clears the report and
 requires new pair creation. Screenshot inspected. TypeScript, isolated551-module
 build, boundaries and research checks PASS. Broader browser pairs, pair checkpoint/
 export, language and architecture participation remain separate required work.
+
+## Reason-history cohort completed
+
+Session41987 completed: `workbench-bio-reason-history-rev1/receipt.json` PASS all247
+records across13 cases, with2108 earlier-qualification links and zero unresolved
+qualification references in this bounded cohort. Every report is unchanged when
+later records are removed.39 selection/order/lineage negative checks pass.
+`verification.json` independently checks every saved link against original readable
+records, original expression identities, eligibility/evidence fields and all hashes.
+No current archive substitutes for an earlier committed expression. This is recorded
+provenance, not broader source eligibility, independent corroboration or necessity.
+
+## Paired checkpoint implementation
+
+`bio-pair-checkpoint/0.1` captures both identity-bound workers at an aligned prefix.
+Capture rejects a changing or unaligned pair. Restore creates private replacement
+workers, authenticates each original checkpoint and the declared comparison, then
+replaces the live pair only after both succeed. Failure disposes private replacements
+and leaves the live pair intact. In-session restore reinstates the original comparison
+declaration even when draft selection has changed. No file transfer is involved.
+
+Native focused test PASS exact original1 ->2 continuation on both branches, detached
+checkpoint preservation, second-branch failure cleanup, forged digest/declaration
+rejection and unaligned capture rejection. TypeScript, isolated552-module build,
+reference boundaries and research checks PASS;18 conditional obligations unchanged.
+
+`workbench-bio-pair-replay-ui-rev1/receipt.json` PASS bounded browser capture at1/1,
+advance2/2, draft declaration change, restore1/1 with original declaration, and exact
+repeated2/2. All four full reports match the completed native comparison cohort.
+The main BIO session hashes remain unchanged. Screenshot inspected. This qualifies
+in-memory paired replay for seed:Earned at these prefixes; all-pair browser breadth,
+file transfer, observer language and Campaign4 entry remain unqualified.

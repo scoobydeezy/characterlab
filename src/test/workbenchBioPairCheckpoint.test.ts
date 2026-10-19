@@ -1,0 +1,24 @@
+import {it,expect} from 'vitest';
+import {BioWorkbenchRun} from '../workbench/bioAdapter';
+import {captureBioPair,restoreBioPair} from '../workbench/bioPairCheckpoint';
+const client=(run:BioWorkbenchRun)=>({snapshot:()=>run.snapshot(),checkpoint:()=>run.checkpoint(),dispose:()=>{}});
+it('authenticates both original branches and reproduces their next committed prefix',async()=>{
+ const a=await BioWorkbenchRun.create('Earned/6'),b=await BioWorkbenchRun.create('Earned/0');
+ await a.advance();await b.advance();
+ const checkpoint=await captureBioPair('seed:Earned',[client(a),client(b)]);
+ const restored=await restoreBioPair(checkpoint,async c=>client(await BioWorkbenchRun.restore(c)));
+ expect(restored.report.control.prefix).toBe(1);expect(restored.report.candidate.prefix).toBe(1);
+ expect(restored.pair[0].checkpoint()).toEqual(a.checkpoint());expect(restored.pair[1].checkpoint()).toEqual(b.checkpoint());
+ const aa=await BioWorkbenchRun.restore(await restored.pair[0].checkpoint()),bb=await BioWorkbenchRun.restore(await restored.pair[1].checkpoint());
+ await aa.advance();await bb.advance();await a.advance();await b.advance();
+ expect(aa.checkpoint()).toEqual(a.checkpoint());expect(bb.checkpoint()).toEqual(b.checkpoint());
+ expect(checkpoint.control.prefix).toBe(1);expect(checkpoint.candidate.prefix).toBe(1);
+ let disposals=0,calls=0;
+ await expect(restoreBioPair(checkpoint,async c=>{if(++calls===2)throw Error('second branch failed');const value=client(await BioWorkbenchRun.restore(c));return {...value,dispose:()=>{disposals++;}};})).rejects.toThrow('second branch');
+ expect(disposals).toBe(1);expect(a.snapshot().prefix).toBe(2);expect(b.snapshot().prefix).toBe(2);
+ const forged=structuredClone(checkpoint);forged.candidate.saveHash='0'.repeat(64);
+ await expect(restoreBioPair(forged,async c=>client(await BioWorkbenchRun.restore(c)))).rejects.toThrow('digest');
+ const wrong=structuredClone(checkpoint);wrong.candidate.name='Refold/0';
+ await expect(restoreBioPair(wrong,async c=>client(await BioWorkbenchRun.restore(c)))).rejects.toThrow('declaration');
+ await b.advance();await expect(captureBioPair('seed:Earned',[client(a),client(b)])).rejects.toThrow('aligned');
+},600000);

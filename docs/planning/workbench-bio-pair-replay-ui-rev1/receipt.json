@@ -1,0 +1,56 @@
+{
+  "status": "PASS BOUNDED BIO PAIRED CHECKPOINT REPLAY",
+  "sources": [
+    {
+      "path": "src/workbench/bioPairCheckpoint.ts",
+      "sha256": "9f6008431e2fe537ee522e5fba863b3fcac79e7f897141558ffbfafa7ad0adfb"
+    },
+    {
+      "path": "src/workbench/BioComparisonPanel.tsx",
+      "sha256": "4af0197c055ee810b30d8a4d3694365a6e2537f4e62e6b63bcb187c2a4737627"
+    },
+    {
+      "path": "src/workbench/bioComparison.ts",
+      "sha256": "0ec9dfb7c4b4f8d0154956d097d09b23a61c43077ef48c77e1759550cb395df4"
+    },
+    {
+      "path": "src/workbench/bioAdapter.ts",
+      "sha256": "cdf47ea23beeac8852faf54548d423e325e5146fb3178811e3ae91fdacd4d2c3"
+    },
+    {
+      "path": "src/workbench/bioWorker.ts",
+      "sha256": "52d274ba9b6ef6b7e8e40bf1ae9ae9ed3d6e861f61271e9e05e0fe018539274d"
+    },
+    {
+      "path": "src/workbench/bioWorkerClient.ts",
+      "sha256": "86006e832a599f2a0133bdab901bf10e8eb683b9b814063899f6c9af325e063e"
+    },
+    {
+      "path": "src/test/workbenchBioPairCheckpoint.test.ts",
+      "sha256": "6178e9695ad3e535dccbb2119e000be3dbe4c4657d015b42566016d8b3b81af5"
+    },
+    {
+      "path": "scripts/check-workbench-bio-pair-replay-ui.mjs",
+      "sha256": "a8dbbf80bfee964c5546c7961f76597d60fafab8307ae70d805c4e110d4d2f49"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "docs/planning/workbench-bio-pair-replay-ui-rev1/browser.json",
+      "sha256": "ac75048e5bdddc16b641ffef7c41362875bc1695a197934dfde67f5243a9f025"
+    },
+    {
+      "path": "docs/planning/workbench-bio-pair-replay-ui-rev1/replay.png",
+      "sha256": "7b48df512115edf1c964756b416af93feadcb5f38a5e0cea56c206648131143a"
+    },
+    {
+      "path": "docs/planning/workbench-bio-comparison-rev2/receipt.json",
+      "sha256": "811aacf34c56735becf5b1c564615afdeaa17ccae6eb08a4356dc0ff9776fc04"
+    },
+    {
+      "path": "docs/planning/workbench-bio-comparison-rev2/pair-00.json.gz",
+      "sha256": "74176b1e198747af47936b3f5c32c09ae774c92f213b6165d07c1ee3d3246983"
+    }
+  ],
+  "scope": "Original seed:Earned pair1 capture, pair2 advancement, draft comparison change, authenticated pair1 restore with original declaration, and repeated pair2 report. All four full reports match native comparison evidence; main run hashes unchanged. In-memory only. Native test separately checks failed second restore cleanup, forged checkpoint rejection and exact successor saves. No all-pair browser, checkpoint file transfer, language or Campaign4 entry claim."
+}
