@@ -222,3 +222,27 @@ to the original prefix receipt. This snapshot comes from the running comparison
 audit; its use does not claim that the full audit has completed. Canonical-box
 coverage, whole-corpus architecture, causal contributions, accessibility and complete
 integrated-entry qualification remain open.
+
+## Reason diagnostic reader — 2026-10-19
+
+`dispositionReasonDiagnostics.ts` reads only phase52/reasons events and the exact
+DispositionOperands1455/1 plus IdentityTaskReasons1430/1 output envelope. It requires
+the embedded resulting reasons to equal the separately published result. Constitution,
+prior plastic, identity standing, effective disposition and selected feedback remain
+separate exact rational strings. It retains compiled nucleus keys, base/standing/
+situational roles, relevance, dice/modifiers, coverage and exact score distributions.
+Empty stage output is explicitly no emitted operand record, without inferred motive.
+
+This is a diagnostic read projection, not a character-language admission or standalone
+save authenticator. Qualified journal count does not mean independent corroboration;
+mechanical distributions are not character uncertainty. Private represented identity
+belief remains outside this profile. See DISPOSITION_PUBLIC_CONTRACT.md operand
+lineage and epistemic restrictions; no canonical mathematics or producer changed.
+
+Focused native test PASS for Main and ConstitutionPositive prefix1: exact constitutional
+and learned-state separation, two compiled nuclei, original roles/distributions,
+unchanged source snapshots, empty-output handling, wrong-phase rejection, numerical
+rational substitution rejection and operand/result mismatch rejection. TypeScript,
+import boundaries and research checks PASS. Renderer, complete-prefix diagnostic
+coverage and observer-safe language remain due. Active native/comparison audits are
+unchanged (latest native program2 prefix12; comparison program0 prefix12).
