@@ -1,5 +1,14 @@
 # Current research entry point
 
+**LONG routine UI2026-10-19:** six-mode route and bounded browser PASS. Maincase0
+prefixes0/8/9/restore8/repeat9/10 equal exact state/five hashes; availability14 and
+performance15 preserved. Opposed pair0/64 at8/16/restore8 and retention pair0/96
+at16 equal qualified reports; pair/mode/route isolation PASS. Owned Character
+projection excludes profile/source/trace. Registry0.12; corrected projection and
+registry tests PASS; build37669 PASS474 modules. Initial test typing failure retained.
+Start OBSERVABILITY_WORKBENCH_LONG_ROUTINE_PROGRESS.md. Broad browser, language,
+batch and integrated entry remain due. No file transfer or Campaign4 reduction claim.
+
 **LONG routine replay/comparison2026-10-19:** audit39083 COMPLETE PASS504 cases/
 8568 receiver prefix restores,8064 advancing/504 terminal. Audit53693 COMPLETE
 PASS1224 pairs/20808 aligned reports, all504 current receiver trajectories matched

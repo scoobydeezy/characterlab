@@ -89,3 +89,35 @@ warnings. Evidence/research checks PASS18 conditional. See
 `workbench-long-routine-comparison-rev1/receipt.json` and
 `workbench-long-routine-reuse-rev1/receipt.json`. These instrument qualifications
 do not amend the bounded psychological verdict or discharge conditional obligations.
+
+## Six-mode route and bounded browser
+
+2026-10-19: dedicated routine route implemented in all six modes. Registry0.12
+declares504 component receivers with reused sources, without batch enrollment.
+Character mode whitelists actor, practice history, derived cache, reward belief and
+goal lifecycle. Profile, source provenance and execution trace cannot enter that
+projection. Character language remains unqualified. Reasoning preserves exact
+choice/nuclei/probabilities/draws; Timeline exposes committed receiver rows; Architecture
+labels declared ownership and ordering without asserting necessity.
+
+Browser receipt `workbench-long-routine-ui-rev1/receipt.json` PASS: case0 prefixes
+0/8/9/restore8/repeat9/10 match complete state and all five original commitments.
+Clock14 retains available practice without enactment; clock15 performs practice.
+Owned projection and latest choice match the authoritative receiver. Opposed pair
+0/64 reports8/16/restore8 and native-retention pair0/96 terminal16 equal fully qualified
+comparison archives. Retention yields equal receiver fields and distinct source
+identities. Pair work, Timeline/Architecture and route return preserve main hashes.
+All13 source copies, two browser artifacts and two qualified pair archives were
+independently reverified. Screenshot retained with the receipt.
+
+Projection and registry tests PASS. Build45521 identified a test-only excess-property
+typing error; failed test and disposition retained under
+`workbench-long-routine-ui-finding-rev1`. Corrected test PASS; build37669 PASS474
+modules. Existing large-chunk warnings remain. Research/evidence checks PASS18
+conditional obligations. LOCAL DISPOSITION: separate owned receiver state from
+execution and source diagnostics using existing observer-boundary precedent.
+
+Broad504-case browser coverage, character descriptions, full-choice explanations,
+resource/accessibility qualification, file roundtrip, batch integration and Campaign4
+entry acceptance remain open. No browser download/import was attempted. Existing
+native LONG, goal and habit audits were not restarted or modified.
