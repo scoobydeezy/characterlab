@@ -1,5 +1,15 @@
 # Current research entry point
 
+**LONG goal worker2026-10-19:** serialized original-case create/advance/checkpoint/
+restore through longGoalWorker/longGoalWorkerClient. Three focused tests PASS: actual
+worker/direct component and native-source snapshot parity, restored next step,
+overlapping initialization rejection, detached snapshots, failed-post cleanup,
+startup decode failure and disposal. Goal browser route remains due. Evidence restore/
+Build27908 COMPLETE exit0,426 modules.
+research PASS;18 conditional obligations unchanged. Language9885 at26/32; comparison
+20638 captured4/28 required programs; native48528 and goal7474 audits remain live.
+No full-cohort or Campaign4 entry acceptance follows from focused transport tests.
+
 **LONG goal full audit2026-10-19:** check-workbench-long-goal.mjs syntax PASS,
 execution RUNNING under7474. All120 original cases/2040 prefixes required. Each
 checkpoint binds original plan/run identity, preserved archive digest, exact component
