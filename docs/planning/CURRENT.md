@@ -1,5 +1,12 @@
 # Current research entry point
 
+**FATIGUE foundation2026-10-19:** four original models/20 programs; exact catalog,
+native adapter and worker implemented. Six focused tests/TypeScript/boundaries PASS.
+Sensor lag, missing-feedback retention and MotorOnly execution/control separation
+preserved. Full180-prefix/restore audit97421 RUNNING with116 frozen source copies.
+Start OBSERVABILITY_WORKBENCH_FATIGUE_PROGRESS.md. Full receipt, comparisons, UI,
+language and browser remain due; no physiology or general resource-law claim.
+
 **CONTROL bounded browser language2026-10-19:**216 descriptions/7 captures/3 programs
 PASS full wording/provenance and six native commitments. Main0/4/5/restore4/repeat5,
 RetainedEqualsMaintained/lost5 and EraseHistory/main4 preserve effective-access and
