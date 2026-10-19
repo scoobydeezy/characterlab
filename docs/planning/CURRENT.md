@@ -1,5 +1,23 @@
 # Current research entry point
 
+**LONG goal recorded-source language2026-10-19:** audit69567 COMPLETE exit0,
+120 cases/2040 prefixes/1920 recorded native source observations/11520 descriptions.
+The120 initial prefixes explicitly have no recorded observation; no empty-state
+inference. Observer digests, exact standing and episode counts agree with retained
+original rows. All frozen source/result hashes independently rechecked. See
+workbench-long-goal-source-language-rev1/receipt.json. This is historical source-view
+projection; native full replay7474 remains a separate audit.
+Focused historical test11671 PASS and current-native prefix1 test PASS, unchanged
+checkpoint. Browser case0 prefixes0/1 matches qualified report/save; mode switch
+preserves four hashes. See workbench-long-goal-source-language-ui-rev1/receipt.json.
+Character mode separates Native source observation from Component goal ledger.
+LOCAL DISPOSITION: only explicit sourceView bytes enter source descriptions; goal
+ledger, receiving choices, hidden world state and attainment narration remain outside
+their authority. Inspection registry0.7 declares that exact partial capability.
+Build61282 and final registry build56041 PASS436 modules. Research PASS18
+conditional obligations. Download restriction and all file-roundtrip gates survive.
+No Campaign4 entry acceptance, general language or native scheduler admission.
+
 **LONG goal pair checkpoint UI2026-10-19:** capture, atomic two-case restore,
 prepared export and bounded local JSON import controls implemented. Replacement is
 installed only after both component restores and report projection succeed; failure

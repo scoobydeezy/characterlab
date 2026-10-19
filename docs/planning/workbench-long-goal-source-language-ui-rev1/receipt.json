@@ -1,0 +1,42 @@
+{
+  "status": "PASS BOUNDED LONG GOAL SOURCE DESCRIPTION BROWSER",
+  "sources": [
+    {
+      "path": "src/workbench/LongGoalSourceDescription.tsx",
+      "sha256": "27ea510301cdceeb49d4db23c5bbde05a065a0e70c33289a3310666e22305b69"
+    },
+    {
+      "path": "src/workbench/LongGoalWorkbench.tsx",
+      "sha256": "f52d9e48216396bd5e46bbe8854322f14cd0f093d96a90e981543ae041a5ba32"
+    },
+    {
+      "path": "src/workbench/longGoalSourceObserver.ts",
+      "sha256": "8015f76493de7b563a9af0ad29ca6e3f67d5ba4f84b82ab05c2ab800b7064455"
+    },
+    {
+      "path": "src/workbench/longExplanations.ts",
+      "sha256": "3d8beb212ec3f059540c15b2173740eb24005efca34bd196b44a5496149b5b87"
+    },
+    {
+      "path": "scripts/check-workbench-long-goal-source-language-ui.mjs",
+      "sha256": "5c58ac5016826f0522253185f2f6f925e636a000dd37c31f747c505ec8e8daf2"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "ui.json",
+      "sha256": "ca50da7a086427b61cdcd89df87eff76f1a71e163032b98ae4d0332e3855bc46"
+    },
+    {
+      "path": "source.png",
+      "sha256": "1f60a5232cc9ff4cd5515491711d7b603edff5f34721892773a6cbbc1fb01c12"
+    }
+  ],
+  "qualification": {
+    "path": "docs/planning/workbench-long-goal-source-language-rev1/case-000.json",
+    "sha256": "90ecf42a700730ba3276ab32bf90476204f8adb30256b496fcdd4ef5d6cd3595",
+    "receiptPath": "docs/planning/workbench-long-goal-source-language-rev1/receipt.json",
+    "receiptSha256": "97df15560b1c6775c3d6b3d6ca1bb9f2f2650bb11d39b2586d54d8ebcb7dd658"
+  },
+  "scope": "Original case0 prefixes0/1: explicit no-recorded-observation state then exact source description matches qualified records and native component save. Character mode preserves all four initial hashes. Screenshot inspected. Broader browser coverage and goal/receiver language remain open."
+}

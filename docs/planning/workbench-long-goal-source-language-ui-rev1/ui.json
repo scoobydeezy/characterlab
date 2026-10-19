@@ -1,0 +1,93 @@
+{
+  "before": [
+    "be57e3671398a480e1d90f6323fd3daa36406634b77069568ec4520a841fcc7d",
+    "0cd709780c17ad5404672b7be1e964aa802620733c04f3f5908ebc79fa353bcf",
+    "6338e23f69e1616050bbba80cef78388205ca59d22c31b4b46dc128b028a0d41",
+    "b16ce07666d5a1d5cf077dbd716f089e34dbfd19148037b3826a2c431b356c3c"
+  ],
+  "initial": {
+    "hashes": [
+      "be57e3671398a480e1d90f6323fd3daa36406634b77069568ec4520a841fcc7d",
+      "0cd709780c17ad5404672b7be1e964aa802620733c04f3f5908ebc79fa353bcf",
+      "6338e23f69e1616050bbba80cef78388205ca59d22c31b4b46dc128b028a0d41",
+      "b16ce07666d5a1d5cf077dbd716f089e34dbfd19148037b3826a2c431b356c3c"
+    ],
+    "report": {
+      "version": "long-goal-source-description/0.1",
+      "status": "NO_RECORDED_SOURCE_OBSERVATION",
+      "prefix": 0,
+      "scope": "No source instant has committed. This is absence of a recorded view, not evidence of an empty character state."
+    }
+  },
+  "advanced": {
+    "hashes": [
+      "be57e3671398a480e1d90f6323fd3daa36406634b77069568ec4520a841fcc7d",
+      "0cd709780c17ad5404672b7be1e964aa802620733c04f3f5908ebc79fa353bcf",
+      "13b371e8fdaafc989261fe5471a9d8557246cc3e7fa70601177945c600d13cfb",
+      "7ef71eccb430ea78521570fb6c933765e019c4c36bdbfe414f12ddb060c5afdd"
+    ],
+    "report": {
+      "version": "long-goal-source-description/0.1",
+      "status": "RECORDED_NATIVE_OBSERVER",
+      "prefix": 1,
+      "sourceClock": 1,
+      "observerHex": "0af106010701010be80705156f627365727665722f6c6f6e6769747564696e616c020106f9a50cbd974303010a9006010201010600010201020004010ad30601020101020002010005010ae20601010101070006000700",
+      "description": {
+        "version": "long-observer-description/0.1",
+        "observerHash": "8710e0eaa19e5d2ffb4f9c25a5859eb27d5d419e69fe81e5e7f507efb5beb75c",
+        "rows": [
+          {
+            "id": "identity",
+            "field": "881/2",
+            "authority": "native-closed-observer",
+            "text": "Retained identity strength is -100733/1100733.",
+            "exact": "\"-100733/1100733\"",
+            "present": true
+          },
+          {
+            "id": "skill",
+            "field": "881/3",
+            "authority": "native-closed-observer",
+            "text": "Recorded competence is 0/1; recorded practice count is 0. This does not by itself establish success on a particular attempt.",
+            "exact": "{\n  \"record\": \"SkillValue#784/1\",\n  \"Competence [1]\": \"0/1\",\n  \"PracticeCount [2]\": \"0\"\n}",
+            "present": true
+          },
+          {
+            "id": "relationship",
+            "field": "881/4",
+            "authority": "native-closed-observer",
+            "text": "The retained relationship summary records 0 cooperative interactions and rupture false. This is retained evidence, not a guarantee about the other person's current state.",
+            "exact": "{\n  \"record\": \"RelationshipSummary#851/1\",\n  \"CooperationCount [1]\": \"0\",\n  \"Rupture [2]\": false\n}",
+            "present": true
+          },
+          {
+            "id": "episodes",
+            "field": "881/5",
+            "authority": "native-closed-observer",
+            "text": "The current view exposes 0 retained episodes. This count alone does not show whether earlier episodes existed or why any are absent.",
+            "exact": "{\n  \"record\": \"LongitudinalJournal#866/1\",\n  \"Entries [1]\": []\n}",
+            "present": true
+          },
+          {
+            "id": "person",
+            "field": "881/6",
+            "authority": "native-closed-observer",
+            "text": "No current person estimate is exposed. Absence is not a false estimate.",
+            "exact": null,
+            "present": false
+          },
+          {
+            "id": "detail",
+            "field": "881/7",
+            "authority": "native-closed-observer",
+            "text": "No detailed relationship journal is exposed by this view. This does not imply that the relationship summary is absent.",
+            "exact": null,
+            "present": false
+          }
+        ],
+        "scope": "Deterministic descriptions of current native observer fields only. No hidden-truth attribution, reason-factor explanation, causal reconstruction, forgetting history or general memory equivalence is inferred."
+      },
+      "scope": "Latest recorded native source observer only. Goal ledger, receiving choices, hidden world state and goal attainment are outside this description."
+    }
+  }
+}
