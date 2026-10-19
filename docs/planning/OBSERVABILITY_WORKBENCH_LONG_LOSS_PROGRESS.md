@@ -40,7 +40,7 @@ Add a dedicated six-mode UI and scoped capability declaration, keeping full rese
 snapshots separate from any character projection. Full snapshots include physical
 contact and support completion and must never be narrated as known character facts.
 
-Declare all same-seed one-factor contrasts and observation-matched controls. In
+Use the qualified same-seed one-factor contrasts and observation-matched controls. In
 particular, retain HiddenLoss/NoLoss, FalseLoss/ReportedLoss, Corrected/Recovered,
 and ReportedLoss/FailedSupport cognitive equalities despite execution differences.
 Keep actual interaction acquisition, reports, owned goals, appraisal coordinates,
@@ -53,3 +53,30 @@ Browser replay, comparisons, controlled language, architecture participation and
 broader workbench acceptance remain open. No obligation, comparator, source byte or
 accepted Campaign3 scope is retired. The earlier browser download denial remains
 binding; this work performs no browser file transfer.
+
+## Full comparison qualification
+
+2026-10-19: `longLossComparison.ts` declares904 pairs across all480 original cases:
+condition contrasts, retained law alternatives and160 matched-evidence controls.
+Every pair changes exactly one declared profile factor while preserving the seed.
+Seventeen fields distinguish relationship, belief, goals, appraisal, probabilities,
+actions, reasons and execution. Physical contact, actual participation and completion
+are explicitly execution diagnostics. Other diagnostic fields are not evidence of
+conscious awareness or a recall source. Unequal prefixes withhold field comparison;
+case/identity/clock mismatches reject. Draws are retained without inferring coupling
+from equal seeds.
+
+Audit25080 COMPLETE PASS:480 current trajectories/6240 prefixes match original save
+hashes;904 pairs/11752 aligned comparison prefixes. All160 matched-evidence pairs
+preserve character-side diagnostics and exact recorded draws across2080 prefixes.
+Repeated reports preserve both inputs. All121 source and904 compressed report hashes
+were independently reverified. See `workbench-long-loss-comparison-rev1/receipt.json`.
+This does not qualify browser presentation or character language.
+
+Two comparison tests and one pair-restoration test PASS. The pair envelope authenticates
+both original cases before installation and disposes a partially restored pair on
+failure. A prefix4 reported-loss/NoLoss restore preserves the next-instant likelihood
+difference1 versus0; the current pair stays unchanged. No file transfer was performed.
+Build74621 PASS451 modules; research/evidence checks PASS18 conditional obligations.
+Final pair TypeScript check14624 PASS. Six-mode UI and browser pair
+qualification remain the next implementation work.

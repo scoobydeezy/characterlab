@@ -1,5 +1,17 @@
 # Current research entry point
 
+**LONG loss comparisons2026-10-19:** audit25080 COMPLETE PASS904 declared pairs/
+11752 aligned prefixes across480 current cases.160 matched-evidence controls retain
+character-side diagnostics and draws across2080 prefixes; physical execution remains
+separately labeled. All121 source/904 compressed report hashes independently checked.
+Three focused comparison/pair-restore tests PASS; build74621 PASS451 modules.
+Final pair TypeScript14624 PASS.
+Research/evidence PASS18 conditional obligations. See
+OBSERVABILITY_WORKBENCH_LONG_LOSS_PROGRESS.md and
+workbench-long-loss-comparison-rev1/receipt.json. Dedicated six-mode UI, browser pair
+restore and character language remain due. No clinical law, native admission,
+Campaign4 entry or reduction claim. Prior quiet audits remain live; no restarts.
+
 **LONG valued-contact-loss foundation2026-10-19:** adapter and worker implemented.
 Audit93948 COMPLETE PASS480 original cases/6240 exact archived prefixes;5760
 advancing and480 terminal restores. All118 source/480 result hashes and counts

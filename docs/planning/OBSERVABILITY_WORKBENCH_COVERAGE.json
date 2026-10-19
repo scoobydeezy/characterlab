@@ -366,9 +366,11 @@
     {
       "id": "LONG-PERSONAL-LOSS-COMPONENT",
       "version": "longitudinal-personal-loss-component/0.1-candidate",
-      "workbenchStatus": "ADAPTER EXACT PARITY/RESTORE PASS; WORKER FOCUSED TESTS PASS; UI/COMPARISONS/LANGUAGE DUE",
+      "workbenchStatus": "ADAPTER EXACT PARITY/RESTORE AND FULL DECLARED COMPARISONS PASS; UI/LANGUAGE DUE",
       "executableAdapter": "src/workbench/longLossAdapter.ts",
       "receipt": "docs/planning/workbench-long-loss-parity-rev1/receipt.json",
+      "comparisonReceipt": "docs/planning/workbench-long-loss-comparison-rev1/receipt.json",
+      "comparisonScope": "904 pairs/11752 aligned prefixes across all480 cases;160 matched-evidence controls preserve character-side diagnostics and draws across2080 prefixes. Physical execution fields remain separate researcher diagnostics. Pair checkpoint restore focused test passes; browser remains due.",
       "progress": "docs/planning/OBSERVABILITY_WORKBENCH_LONG_LOSS_PROGRESS.md",
       "scope": "480 original standalone component cases/6240 exact archived prefixes;5760 advancing and480 terminal restores. No native source reuse or scheduler admission. Full diagnostic snapshots contain physical completion fields that are not character knowledge. No clinical grief or general recovery claim."
     },
