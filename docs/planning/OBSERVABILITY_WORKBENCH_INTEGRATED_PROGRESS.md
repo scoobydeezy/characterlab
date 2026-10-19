@@ -146,6 +146,17 @@ General export0.2 carries metadata with its version, while the actual frozen0.1
 browser export still authenticates exactly. This is in-memory compatibility evidence,
 not renewed file-transfer acceptance or final integrated qualification.
 
+Full General source enrichment follow-up: session46056 completed successfully.
+`workbench-general-native-sources-rev1/receipt.json` PASS43 models/568 prefixes,
+49634 read observations,22330 derived reads and22330 native source observations.
+Source history has7037 exact matches and15293 no-prior-recorded-mutation outcomes;
+absence remains unresolved history, not proof of an initial origin. All prior snapshot
+fields remain identical after removing the added metadata property. Every native
+accessor, transformation identifier and source tuple was checked against saved trace.
+`verification.json` independently checks all source/output hashes, original prefix
+commitments, counts and historical report stability. Transformation math, broader
+browser coverage, observer-safe language and complete causal contribution remain due.
+
 ## In-memory checkpoint fork — 2026-10-19
 
 `workbench-values-fork-ui-rev1/receipt.json` PASS ten browser observations joined to

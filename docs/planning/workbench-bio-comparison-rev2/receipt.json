@@ -1,0 +1,373 @@
+{
+  "status": "PASS FULL RETAINED BIO COMPARISON COHORT",
+  "sources": [
+    {
+      "path": "src/workbench/bioAdapter.ts",
+      "sha256": "cdf47ea23beeac8852faf54548d423e325e5146fb3178811e3ae91fdacd4d2c3"
+    },
+    {
+      "path": "src/workbench/canonical.ts",
+      "sha256": "f80f4a8353ea7604432d5ffcf0d4628f8b7bf13b82a06b4807445e9a9ba97bde"
+    },
+    {
+      "path": "src/test/workbenchBio.test.ts",
+      "sha256": "c8a847596d291718efb4c92eaa385b2863936281fc39b56f6d98f029ae9c38bc"
+    },
+    {
+      "path": "scripts/check-workbench-bio.mjs",
+      "sha256": "35bb5967dde3ca6f7004a5a99d86c2cbadb3d6a4610fb6f462dc5ea86fad3667"
+    },
+    {
+      "path": "docs/planning/BIO_COMPARISON_PLAN_REV3.json",
+      "sha256": "172301d5e38cc38352e3cf4111bf59d73efeb5148252c15e6b3651ad9e4c0b98"
+    },
+    {
+      "path": "docs/planning/BIO_IDENTITY_PLAN_REV1.json",
+      "sha256": "16c777b71e832099156104ea9bcae021d0eba094898107021a22b87b0599fc3c"
+    },
+    {
+      "path": "docs/planning/BIO_COMPARISON_RESULT_REV3.json",
+      "sha256": "0e683a321f19bc0034ecd903432be44422814ca7fcdca6d505bb442e05ac5770"
+    },
+    {
+      "path": "docs/formal/BIO_COMPARISON_CONTRACT.md",
+      "sha256": "c59b4f051429abd50a07fc47cf2f199a7c823a130e65279ec17ac1b870fad2ca"
+    },
+    {
+      "path": "src/campaign3/bioComparison.ts",
+      "sha256": "7a6dd2556eb74eb5a52250c29274b193c7df05070606a9e871796c3d133ce07a"
+    },
+    {
+      "path": "src/campaign3/longitudinalMath.ts",
+      "sha256": "bc135f1bf235ee32e0bc0bc4f17f3b51de2264c23dac9526de16e2b6d8640bf9"
+    },
+    {
+      "path": "src/campaign3/longitudinalModel.ts",
+      "sha256": "30e9fb70d40fba6a9b6e329916ab16fac173b1779928688798318c2d14dc5b70"
+    },
+    {
+      "path": "src/campaign2/cognitiveMath.ts",
+      "sha256": "3d2ced68676b4fcb2c41046ea08e9fe8fb80fc47a331fa73b8ed0ca77d1fbb77"
+    },
+    {
+      "path": "src/campaign2/cognitiveTransforms.ts",
+      "sha256": "f19a6555e80455139eecdfecf4bf809fff9bce24e4a52760c5a54d6bfcb7203f"
+    },
+    {
+      "path": "src/campaign2/cognitiveArbitration.ts",
+      "sha256": "d8d1fd7fa287d1d61164aa3e8f646f8d9169cf9b67ea0b5ebf625e0485348656"
+    },
+    {
+      "path": "src/campaign2/cognitiveChoice.ts",
+      "sha256": "a045d61d884a738cb3064683315ebb7985e33ab3fcddda6f22ae0cdd35749ba1"
+    },
+    {
+      "path": "src/substrate/random.ts",
+      "sha256": "a01aeae52c0c43f1533e35dcd01c23acb1c44b02059c909960966cdb0de24596"
+    },
+    {
+      "path": "scripts/qualify-bio-comparison.mjs",
+      "sha256": "5fc6e4b6797457bf7fc9f24faec854a7c1d4224e6afeb07d3475b00f2cc583b0"
+    },
+    {
+      "path": "docs/planning/BIO_CALIBRATION_REV2.json",
+      "sha256": "ed5c5adbd35d44e467289cef0a9376ffcb0562848899fe5a556d499061475015"
+    },
+    {
+      "path": "docs/formal/BIO_COMPARISON_IDENTITY_BINDING.md",
+      "sha256": "d443a46e5cb4615181de9da30f96339279e61abadde804511ed47fd668a2d00a"
+    },
+    {
+      "path": "scripts/bind-bio-identities.mjs",
+      "sha256": "856e48320ee8c2d752cb601e85cfd492beb4ca350e6521c6048bd0786e44d819"
+    },
+    {
+      "path": "src/workbench/bioComparison.ts",
+      "sha256": "0ec9dfb7c4b4f8d0154956d097d09b23a61c43077ef48c77e1759550cb395df4"
+    },
+    {
+      "path": "src/test/workbenchBioComparison.test.ts",
+      "sha256": "893651ce294024e59bb73a61d523b71f963a0c2f0107d655308964f76b40e841"
+    },
+    {
+      "path": "scripts/check-workbench-bio-comparison-full.mjs",
+      "sha256": "59ea47272933057623be460e55bfd61dbbe4d252f5fe70fbb85d8938f93e373e"
+    },
+    {
+      "path": "docs/planning/workbench-bio-parity-rev1/receipt.json",
+      "sha256": "73b0ad910cb31b335962a3c06c8d2e7704653e3bf3f3e9b15e46d963ecc95ab6"
+    }
+  ],
+  "cases": [
+    {
+      "name": "Earned/6",
+      "path": "case-00.json.gz",
+      "sha256": "f8859d392527ea08dbed25de754e49ded561eae5e4e4cdc322db7750487f93eb"
+    },
+    {
+      "name": "Earned/0",
+      "path": "case-01.json.gz",
+      "sha256": "281644bda41e6b324901909b8a613a1432e6b4a14e26518f536e753267b2eed3"
+    },
+    {
+      "name": "AuthoredTrait/6",
+      "path": "case-02.json.gz",
+      "sha256": "6cd92288546baff9e343b4435ef0aca231c97135525a867ec2dd9739453e7953"
+    },
+    {
+      "name": "AuthoredTrait/0",
+      "path": "case-03.json.gz",
+      "sha256": "4ee906a5af20638202b149ca7809bffe893ff0bd49a98ebe230f4f99c825defe"
+    },
+    {
+      "name": "DisplayOnly/6",
+      "path": "case-04.json.gz",
+      "sha256": "7f1ea04834504f55fde40f65f60fa0d62803265e3851a2afcb0c9b7662fe3af3"
+    },
+    {
+      "name": "DisplayOnly/0",
+      "path": "case-05.json.gz",
+      "sha256": "f8a0c769664b7ba90a1d65188e507bc888359d696ac8137e37b80d6c8200cc31"
+    },
+    {
+      "name": "HistoryOnly/6",
+      "path": "case-06.json.gz",
+      "sha256": "1d4f603b0961981d40308ad67420ac6dff3777b1cac5695de20037c93297c7b6"
+    },
+    {
+      "name": "HistoryOnly/0",
+      "path": "case-07.json.gz",
+      "sha256": "ee65344304e4fc25a0bffec825b7b511e0b252686e035c404815b8ed7308f041"
+    },
+    {
+      "name": "RecomputedHistory/6",
+      "path": "case-08.json.gz",
+      "sha256": "7c8afe1ae63db3e8ee2443ab209450e42c0c901845b51aa005e6411f38bce4f0"
+    },
+    {
+      "name": "RecomputedHistory/0",
+      "path": "case-09.json.gz",
+      "sha256": "4cafcef51f17abd793712aa0084c5cdf7f4e22b1e899f4989450baea034c287a"
+    },
+    {
+      "name": "Refold/6",
+      "path": "case-10.json.gz",
+      "sha256": "786c7c4691cce98dd47b44d565422b110b5b0b3ed69059782e3601515589b2ba"
+    },
+    {
+      "name": "Refold/0",
+      "path": "case-11.json.gz",
+      "sha256": "d677899580584fb33b71872c181b5a2d2b6d7feaa78569426db256c9b9f4363e"
+    },
+    {
+      "name": "coupled-repeat",
+      "path": "case-12.json.gz",
+      "sha256": "e5f7b11561e2108a9e8eeb048d1e38fb2c8df167a6c23e5ae87decde2492b1f3"
+    }
+  ],
+  "reports": [
+    {
+      "id": "seed:Earned",
+      "path": "pair-00.json.gz",
+      "sha256": "74176b1e198747af47936b3f5c32c09ae774c92f213b6165d07c1ee3d3246983",
+      "prefixes": 20
+    },
+    {
+      "id": "seed:AuthoredTrait",
+      "path": "pair-01.json.gz",
+      "sha256": "1d366c8296f82cc89ffe073ca17e55d0e752ae8a974b26c84442b8b34a76d9f7",
+      "prefixes": 20
+    },
+    {
+      "id": "seed:DisplayOnly",
+      "path": "pair-02.json.gz",
+      "sha256": "969200380050a088f98a545ecc3c5c7a8584632582932b0fab7c684012d350b0",
+      "prefixes": 20
+    },
+    {
+      "id": "seed:HistoryOnly",
+      "path": "pair-03.json.gz",
+      "sha256": "2dcce9bbce0ff54b87817b10728661ecc95d25e06673f04445183dc5049a4468",
+      "prefixes": 20
+    },
+    {
+      "id": "seed:RecomputedHistory",
+      "path": "pair-04.json.gz",
+      "sha256": "5413be0c0a97efde64a9429d36edcb7fa88b0384d7c5feba72609a37fedb3514",
+      "prefixes": 20
+    },
+    {
+      "id": "seed:Refold",
+      "path": "pair-05.json.gz",
+      "sha256": "ab9057373881f6fc3b38d47e91ad19928f48938c5fefa2e442c171b4dbbdbc4f",
+      "prefixes": 20
+    },
+    {
+      "id": "law:AuthoredTrait:6",
+      "path": "pair-06.json.gz",
+      "sha256": "23ec208192e584639baf5b8c52b15fa7711a2d32aadf97fe8d2116e20b314010",
+      "prefixes": 20
+    },
+    {
+      "id": "law:AuthoredTrait:0",
+      "path": "pair-07.json.gz",
+      "sha256": "144b6c6a53cbf845a7f68ea9308c43f6a80e46ac345b8047b3699cb34e0bfdd0",
+      "prefixes": 20
+    },
+    {
+      "id": "law:DisplayOnly:6",
+      "path": "pair-08.json.gz",
+      "sha256": "53050c1cf541a6a829f6d5a68c14a1b84eeee0b2b7e4aac5c68c65f4ce8c2fbf",
+      "prefixes": 20
+    },
+    {
+      "id": "law:DisplayOnly:0",
+      "path": "pair-09.json.gz",
+      "sha256": "3dfc10e5c4dfb38f1739baba4cc6f5f53fd1559c9ced98063f7aa11a27f9fe42",
+      "prefixes": 20
+    },
+    {
+      "id": "law:HistoryOnly:6",
+      "path": "pair-10.json.gz",
+      "sha256": "1d16c42522afba2cfc7253c7cdc0ea97227b83ef2544ebd1030fd0da0d1d6003",
+      "prefixes": 20
+    },
+    {
+      "id": "law:HistoryOnly:0",
+      "path": "pair-11.json.gz",
+      "sha256": "db3ec5815ee8da9dc1d1608ba510a9ef8918a246c2c56eb949a8c60ecaeba16e",
+      "prefixes": 20
+    },
+    {
+      "id": "law:RecomputedHistory:6",
+      "path": "pair-12.json.gz",
+      "sha256": "093ef96af1bdaeb6d9b7c6a5cb2a4504692a04466f53014f34661569989ad032",
+      "prefixes": 20
+    },
+    {
+      "id": "law:RecomputedHistory:0",
+      "path": "pair-13.json.gz",
+      "sha256": "ba3f9a7f80d2927d0f4a9d6bc0f1b61b9fbb269213a3fd5fbf5e0bd6afa9c644",
+      "prefixes": 20
+    },
+    {
+      "id": "law:Refold:6",
+      "path": "pair-14.json.gz",
+      "sha256": "3e2b423790be616787826eb9fe5a84ff3e3ea37d426a1bdacac2b3311e3ecc1a",
+      "prefixes": 20
+    },
+    {
+      "id": "law:Refold:0",
+      "path": "pair-15.json.gz",
+      "sha256": "9a1e96a33b44bda55f710f2748ffa609bfa3a230806e70ebfea7eb84943b86ca",
+      "prefixes": 20
+    },
+    {
+      "id": "display:6",
+      "path": "pair-16.json.gz",
+      "sha256": "c2c99afa365994c68ec9e10a49db2a24f9091a07d5a7f20445ea6f95fa0297ce",
+      "prefixes": 20
+    },
+    {
+      "id": "display:0",
+      "path": "pair-17.json.gz",
+      "sha256": "29d17595fd569a478cf9c1b500aa978e30267b7aadac6a7b57ec12fc2559a805",
+      "prefixes": 20
+    },
+    {
+      "id": "repeat",
+      "path": "pair-18.json.gz",
+      "sha256": "475f9e72cbff34742e4390a63f0a74ef553a502497a6eb7629799caa76bbdf77",
+      "prefixes": 20
+    }
+  ],
+  "nativeInputs": [
+    {
+      "name": "Earned/6",
+      "path": "case-00.json",
+      "sha256": "7e0b8f055e02888cb0d12fefee4ce3a8d9c0ca69b53655818bdd9c378671c583",
+      "prefixes": 20
+    },
+    {
+      "name": "Earned/0",
+      "path": "case-01.json",
+      "sha256": "8a7cbb62e38bc8db6a931ecfddcd5112a3d06ec069e366bd020b075c14c1edac",
+      "prefixes": 20
+    },
+    {
+      "name": "AuthoredTrait/6",
+      "path": "case-02.json",
+      "sha256": "77ce7371fb3cad00b8b92db1fb158b5f255ac1ece6878e2400599a719575add1",
+      "prefixes": 20
+    },
+    {
+      "name": "AuthoredTrait/0",
+      "path": "case-03.json",
+      "sha256": "8798653187a272fb41ab1859f2655b99c45d0f942b49619047b9db43a3595bd6",
+      "prefixes": 20
+    },
+    {
+      "name": "DisplayOnly/6",
+      "path": "case-04.json",
+      "sha256": "db9732a59cd0d1deee4e801b4e6900808d3218e1df66666931dc5f582e4a2f09",
+      "prefixes": 20
+    },
+    {
+      "name": "DisplayOnly/0",
+      "path": "case-05.json",
+      "sha256": "bcfb3f1b31d6f32e308fecd09c815c6e81065a34a90b6f614ef4ac0f7bbc6ae0",
+      "prefixes": 20
+    },
+    {
+      "name": "HistoryOnly/6",
+      "path": "case-06.json",
+      "sha256": "30f1271441ae90e2bfa9d50b833246d4ede1ba5ddf835fa6476e619dd6ed29d3",
+      "prefixes": 20
+    },
+    {
+      "name": "HistoryOnly/0",
+      "path": "case-07.json",
+      "sha256": "338a6fb2c8391cab18c34657af3804d6f26e0bdae8d31cdff85d5a490aa78dd8",
+      "prefixes": 20
+    },
+    {
+      "name": "RecomputedHistory/6",
+      "path": "case-08.json",
+      "sha256": "ca3659a54da1f2ed769a2690d95ae334c3f22171dc976a012555091569598bba",
+      "prefixes": 20
+    },
+    {
+      "name": "RecomputedHistory/0",
+      "path": "case-09.json",
+      "sha256": "f9370fae6b7f3e818397a95cf47f5fd365070a5c79fd53a50ab1208a409dbf47",
+      "prefixes": 20
+    },
+    {
+      "name": "Refold/6",
+      "path": "case-10.json",
+      "sha256": "ecaabfdb16dfd8771c6ec787384911b0e202bcd0b1b7c6fb0d95a909f1f16b5d",
+      "prefixes": 20
+    },
+    {
+      "name": "Refold/0",
+      "path": "case-11.json",
+      "sha256": "886e52f11fe37f2a57709d53c2356fea04c78dbd135d2067462489cd34b28029",
+      "prefixes": 20
+    },
+    {
+      "name": "coupled-repeat",
+      "path": "case-12.json",
+      "sha256": "62c2212145edc36f2736f4b123a62a12d4c7986ed3f15fd0e8fa8bf121254e28",
+      "prefixes": 20
+    }
+  ],
+  "counts": {
+    "cases": 13,
+    "nativePrefixes": 260,
+    "pairs": 19,
+    "alignedPrefixes": 380,
+    "recordObservations": 3610,
+    "unalignedChecks": 361
+  },
+  "scope": "All13 original composed-component runs/260 prefixes match prior native parity identities, save/state hashes and exact records. All19 declared comparisons/380 aligned prefixes verify every projected field and RNG distinction against those records, repeat deterministically without input mutation; 361 unequal horizons withhold record equality. No observer-safe language, full browser coverage, public-factory admission, causal necessity, reduction or Campaign4 entry claim."
+}

@@ -1,0 +1,12 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';import {gunzipSync} from 'node:zlib';
+const root='docs/planning/workbench-bio-pair-run-ui-rev1',parent='docs/planning/workbench-bio-comparison-rev2',sha=b=>createHash('sha256').update(b).digest('hex'),read=p=>JSON.parse(fs.readFileSync(p));
+const receipt=read(parent+'/receipt.json'),item=receipt.reports.find(r=>r.id==='seed:Earned'),bytes=fs.readFileSync(parent+'/'+item.path);assert.equal(sha(bytes),item.sha256);const reports=JSON.parse(gunzipSync(bytes)),b=read(root+'/browser.json');
+assert.equal(b.paused.control.prefix,1);assert.equal(b.modePaused.control.prefix,2);assert.equal(b.terminal.control.prefix,19);
+for(const report of [b.paused,b.modePaused,b.terminal])assert.deepEqual(report,reports[report.control.prefix]);
+assert.deepEqual(b.mainBefore,b.mainAfterPause);assert.deepEqual(b.mainBefore,b.mainAfterTerminal);
+assert.deepEqual(b.terminalControls,{run:false,step:false,pause:false});assert.deepEqual(b.draft,{run:false,step:false,reports:0});
+const paths=['src/workbench/BioComparisonPanel.tsx','src/workbench/bioComparison.ts','src/workbench/bioWorker.ts','src/workbench/bioWorkerClient.ts','scripts/check-workbench-bio-pair-run-ui.mjs'];
+const sources=paths.map(path=>{const bytes=fs.readFileSync(path),target=root+'/sources/'+path;fs.mkdirSync(target.slice(0,target.lastIndexOf('/')),{recursive:true});fs.writeFileSync(target,bytes,{flag:'wx'});return {path,sha256:sha(bytes)};});
+const artifacts=[root+'/browser.json',root+'/complete.png',parent+'/receipt.json',parent+'/'+item.path];
+fs.writeFileSync(root+'/receipt.json',JSON.stringify({status:'PASS BIO FULL-CALENDAR BROWSER PAUSE AND RESUME',sources,artifacts:artifacts.map(path=>({path,sha256:sha(fs.readFileSync(path))})),scope:'One original early-seed pair: explicit pause at1/1, resume and mode-switch pause at2/2, continuation to19/19. Every captured report matches complete native comparison evidence; independent main run remains unchanged. Terminal controls disable and new declaration clears stale evidence/disables run and step until creation. No all19 browser pairs, pair checkpoint/export, language or Campaign4 entry claim.'},null,2)+'\n',{flag:'wx'});
+console.log('PASS BIO full-calendar browser pause/resume');

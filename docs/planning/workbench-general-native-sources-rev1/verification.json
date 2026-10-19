@@ -1,0 +1,20 @@
+{
+  "status": "PASS GENERAL NATIVE SOURCE ARTIFACT VERIFICATION",
+  "checker": {
+    "path": "scripts/verify-workbench-general-native-sources.mjs",
+    "sha256": "03615dde9b9bd69099af91de1bce406108e3809da9d79c97f26e45db61c4ebcc"
+  },
+  "receiptSha256": "a85e0b748c19ecb061c4c856e7843a738654c4e683a60335bef698653a8af9a1",
+  "counts": {
+    "models": 43,
+    "prefixes": 568,
+    "reads": 49634,
+    "derived": 22330,
+    "sources": 22330
+  },
+  "relations": {
+    "no-prior-recorded-mutation": 15293,
+    "exact-value-match": 7037
+  },
+  "scope": "Every output/source hash and original prefix commitment verified; metadata/report cardinality, repeated historical reports and aggregate counts checked independently. Native tuple decoding remains established by the source-bound primary audit. No transformation-math, observer-language or complete causality claim."
+}

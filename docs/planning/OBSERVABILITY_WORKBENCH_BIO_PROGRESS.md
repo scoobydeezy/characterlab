@@ -118,3 +118,29 @@ TypeScript, isolated551-module build, boundaries and research checks PASS. Previ
 port4175 uses its own temporary output; running batch assets remain unchanged.
 This is diagnostic provenance, not character testimony, independent corroboration,
 causal necessity, canonical architecture participation or Campaign4 entry acceptance.
+
+## Full comparison cohort completed
+
+`workbench-bio-comparison-rev2/receipt.json` PASS13 native cases/260 prefixes and
+all19 declared pairs/380 aligned prefixes.3610 record observations preserve exact
+identity, choice, probability, modifier, history, display and RNG distinctions;
+361 unequal-horizon checks withhold record equality. All original native commitments
+and complete records match. Session86117 completed successfully.
+
+`verification.json` independently checks every saved comparison field against the
+captured case snapshots and original native parity records, plus all source/artifact
+hashes. No observer language, public-factory admission or broad browser claim follows.
+
+BIO Compare now offers continuous execution and explicit pause. Every visible progress
+report follows completion of both component steps; explicit pause or mode/profile
+switch waits for that aligned boundary. Resume retains the same two workers and
+original inputs. Terminal run/step controls disable, and a changed declaration still
+requires fresh pair creation. Native comparator/runtime semantics are unchanged.
+
+`workbench-bio-pair-run-ui-rev1/receipt.json` PASS original seed:Earned pair: explicit
+pause at1/1, resumed mode-switch pause at2/2, then continuation through19/19. All three
+complete captured reports match full native comparison evidence. Main-run hashes are
+unchanged. Terminal controls disable; changing declaration clears the report and
+requires new pair creation. Screenshot inspected. TypeScript, isolated551-module
+build, boundaries and research checks PASS. Broader browser pairs, pair checkpoint/
+export, language and architecture participation remain separate required work.
