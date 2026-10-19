@@ -1,5 +1,19 @@
 # Current research entry point
 
+**LONG habit retained-practice language2026-10-19:** audit85213 COMPLETE PASS960
+cases/16320 prefixes/25636 record descriptions/10560 empty recall states. Actual
+recallPractice accessor only; every receiver save matches original REV2. All123
+source/960 result hashes independently verified. Browser language case0 prefixes
+0/7/8/restore7/14 PASS against exact qualified reports and five hashes; negative16
+and positive18/19 preserved. Start OBSERVABILITY_WORKBENCH_LONG_HABIT_PROGRESS.md.
+Registry0.9; Character mode separates recalled evidence from receiving diagnostics.
+Earlier browser93594 COMPLETE PASS; source/artifact hashes verified before update.
+Test-oracle omission and Windows module-name failure retained; corrected tests and
+build22598 PASS451 modules. Full receiver18545 latest216/960 and comparison41914
+remain live; native LONG48528 and goal7474 remain live (goal case8 prefix15).
+Broader language/browser/resources/files and Campaign4 entry remain due. No download
+or import performed; denial remains binding. Research PASS18 conditional obligations.
+
 **LONG habit UI2026-10-19:** dedicated six-mode worker inspector registered0.8;
 build62412 PASS449 modules and unqualified-batch rejection test PASS. Bounded browser
 case0 prefixes0/1/restore0/repeat1 and retention pair0/96 prefixes8/9/restore8 captured;

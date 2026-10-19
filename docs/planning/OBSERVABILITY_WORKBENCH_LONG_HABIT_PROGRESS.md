@@ -118,3 +118,40 @@ programs/476 prefixes,24 declared pairs/407 aligned prefixes and2 explicit missi
 schedule instants. Its25 source hashes and all52 compressed program/pair archives
 were independently rechecked. See `workbench-long-comparison-cohort-rev1/receipt.json`.
 This does not close native every-prefix restoration or any habit successor gate.
+
+## Retained practice evidence descriptions
+
+2026-10-19: audit85213 COMPLETE PASS,960 cases/16320 receiver prefixes,
+25636 evidence-record descriptions and10560 empty recall states. The input is the
+actual `recallPractice()` accessor output, not diagnostic rows, history, governance,
+lost episodes or physical outcomes. Every executed prefix matches its original
+REV2 save hash. Exact record bytes, digests, clock, cue and admitted observed reward
+agree with frozen qualification; repeat/nonmutation checks pass. All123 source and
+960 result hashes were independently reverified. See
+`workbench-long-habit-recall-rev1/receipt.json`. This is component retained-evidence
+language, not a general recall theory or full habit-choice explanation.
+
+Two focused tests pass. The first draft test incorrectly omitted actual negative
+practice at16 in seed0; the original record showed16/18/19. The failed test and
+correction are preserved in `workbench-long-habit-recall-finding-rev1`. No production
+semantics changed. Build38350 caught a Windows case-only module-resolution collision;
+renaming the React wrapper to LongHabitRecallPanel resolved it. Build22598 PASS451
+modules. These development findings do not change psychological verdicts.
+
+Earlier browser verifier93594 COMPLETE PASS; its12 source/two artifact hashes were
+verified before language integration. Character mode now separates retained practice
+descriptions from unqualified receiving diagnostics. Registry0.9 declares this narrow
+capability. New browser language receipt PASS: case0 prefixes0/7/8/restore7/14 reports
+match the qualified language audit and all five hashes match original identities and
+commitments. Six descriptions disappear at loss and return on restore; later records
+preserve negative16 and positive18/19. See
+`workbench-long-habit-recall-ui-rev1/receipt.json` and its screenshot.
+
+The new one-shot language audit disables Vite file watching via documented
+`server.watch:null`; frozen execution needs no watcher. Earlier live audit harnesses
+were not edited or restarted. Full receiver replay18545 latest216/960, comparison
+41914 still running; native LONG48528 and goal7474 remain live (goal case8 prefix15).
+Broader browser/resources/files, complete habit reason narration, other successors
+and Campaign4 entry remain open. All18 conditional obligations remain unchanged.
+Final metadata build97413 PASS451 modules; browser-language source/artifact hashes
+independently verified. Staged size and whitespace gates PASS.

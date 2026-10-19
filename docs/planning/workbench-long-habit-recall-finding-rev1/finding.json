@@ -1,0 +1,8 @@
+{
+  "status": "DEVELOPMENT TEST EXPECTATION CORRECTED",
+  "date": "2026-10-19",
+  "test": "src/test/workbenchLongHabitRecallDescription.test.ts",
+  "failure": "Expected retained practice clocks18/19 at prefix14, but received16/18/19.",
+  "evidence": "Original longitudinal-habit-execution-rev2/000.json records actual observed practice at16 as well as18/19. Clock16 has a negative observed reward;18/19 are positive.",
+  "disposition": "Preserve the failed test and correct its oracle to include the actual stochastic free-cue action at16. No production semantics, historical record or description implementation changed. This is a test-author assumption failure, not a new psychological verdict."
+}
