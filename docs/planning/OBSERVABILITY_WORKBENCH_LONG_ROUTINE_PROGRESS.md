@@ -121,3 +121,38 @@ Broad504-case browser coverage, character descriptions, full-choice explanations
 resource/accessibility qualification, file roundtrip, batch integration and Campaign4
 entry acceptance remain open. No browser download/import was attempted. Existing
 native LONG, goal and habit audits were not restarted or modified.
+
+## Qualified current-state description renderer
+
+2026-10-19: `long-routine-owned-state-description/0.1` consumes only the owned
+projection. It decodes retained practice history into exact admitted occurrence,
+clock, cue and observed reward records; checks the maintained candidate cache against
+that history; describes the exact two cue folds, retained reward belief and goal
+lifecycle. Cache values remain derived diagnostics, never automatic availability,
+action, reward expectation or proof of performance. History records are not promoted
+to episodic recall. Goal status and activation/expiry clocks remain separate.
+
+Audit85697 COMPLETE PASS504 cases/8568 original prefixes/53634 descriptions,
+including18354 history-record descriptions. Every receiver save and pair commitment
+matches the original qualification. The audit independently reconstructs retained
+observed rows, including EraseHistory's declared clearing, and checks fold fractions
+with separate integer arithmetic. Original reward belief and lifecycle fields match.
+Repeated rendering is nonmutating; changed profile, standing and execution diagnostics
+leave output unchanged. All120 Derived/Stored or native-retention pairs preserve
+complete descriptions across2040 prefixes. All131 source copies/504 result hashes,
+original input hashes and prefix/description/history-record totals independently PASS.
+Receipt: `workbench-long-routine-language-rev1/receipt.json`.
+
+Two focused tests PASS: negative report retains six records and strength63/64;
+clock14 non-enactment leaves descriptions unchanged; clock15 observed negative reward
+adds its record and yields63/128. Opposed mode preserves withdrawn practice and newly
+adopted rest as separate lifecycle records. Invalid cache and duplicate goals reject.
+Build85424 PASS474 modules with existing large-chunk warnings. Evidence restore and
+research checks PASS18 conditional obligations. LOCAL DISPOSITION follows the accepted
+owned-state/diagnostic boundary; no new psychological verdict or law selection.
+
+The renderer is qualified independently but is not yet connected to Character mode.
+Next integrate it and qualify actual browser descriptions at interruption, replay,
+negative outcome and opposed-goal boundaries. The existing registry correctly keeps
+routine explanation unavailable until integration. Full-choice/evaluation-time reasons,
+broader browser/resource/accessibility and Campaign4 entry remain open.

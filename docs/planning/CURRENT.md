@@ -1,5 +1,14 @@
 # Current research entry point
 
+**LONG routine language renderer2026-10-19:** audit85697 COMPLETE PASS504 cases/
+8568 prefixes/53634 descriptions,18354 history records.120 Derived/Stored or native
+retention controls/2040 prefixes retain identical wording. All131 source copies/504
+results/original hashes and totals independently PASS. Two focused semantic tests
+PASS; build85424 PASS474 modules; research PASS18 conditional. Start
+OBSERVABILITY_WORKBENCH_LONG_ROUTINE_PROGRESS.md. Renderer qualification only:
+Character integration and browser language are next; registry remains accurately
+unavailable for routine explanations. No recall, full-choice, native or entry claim.
+
 **LONG routine UI2026-10-19:** six-mode route and bounded browser PASS. Maincase0
 prefixes0/8/9/restore8/repeat9/10 equal exact state/five hashes; availability14 and
 performance15 preserved. Opposed pair0/64 at8/16/restore8 and retention pair0/96
