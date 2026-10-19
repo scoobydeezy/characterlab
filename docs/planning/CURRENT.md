@@ -1,5 +1,26 @@
 # Current research entry point
 
+**Recovery and LONG route2026-10-19:** previous test approval-service usage failure
+resolved on retry; inspection registry guard PASS. LONG six-mode route implemented
+with native closed observer record separate from research diagnostics; comparison,
+readable language and architecture participation explicitly remain unqualified.
+Build21583 COMPLETE exit0,424 modules; existing chunk warning. Browser validation due.
+Evidence restore/research PASS;18 conditional obligations unchanged.
+
+**BIO full audit COMPLETE:** session41967 exited0 after13 cases/260 component prefixes
+and every continuation; final saves equal historical matrix. All source/case hashes
+independently rechecked2026-10-19. workbench-bio-parity-rev1/receipt.json is authoritative
+for this bounded component scope. No public scheduler, full browser or language claim.
+
+**LONG audit recovery:** old56491 handle missing; process inventory confirms no
+remaining audit process. Original revision1 retains17 completed program records and
+frozen sources, without a final receipt. continue-workbench-long.mjs verifies all
+frozen source bytes and rejoins all17 records to historical save/observer hashes,
+clock, program and model identity; copies unchanged records to revision2 and continues
+remaining15 original programs. Session48528 RUNNING; do not edit frozen sources or
+restart on quiet output. revision2/continuation.json records the evidence inheritance.
+Full513-prefix acceptance, browser, successors and Campaign4 entry remain open.
+
 **LONG worker2026-10-13:** serialized create/advance/checkpoint/restore now runs
 through longWorker/longWorkerClient. Three focused tests PASS: actual worker/direct
 native snapshot and observer parity, restore continuation, initialization overlap,
