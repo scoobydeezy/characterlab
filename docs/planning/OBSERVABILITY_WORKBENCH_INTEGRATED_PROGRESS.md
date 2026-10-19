@@ -46,7 +46,7 @@ qualification elsewhere remains scoped; this table does not reissue research ver
 | --- | --- |
 | 1 Named experiment | Values registry/setup and original125-program parity exist. Final chosen demonstration profile still needs one consolidated receipt. |
 | 2 Starting character | Values Character mode exposes owned/derived fields and epistemic scope. Complete major character-state coverage is broader than this profile. |
-| 3 Base parameter slider | Values exposes a seed slider, explicitly not a character trait. It does not satisfy a base-character-parameter edit. Select a supported canonical parameter/profile; do not relabel the seed or transient need. |
+| 3 Base parameter slider | Disposition's discrete constitutional slider admits only -1/8,0,+1/8 on original Plastic models. Bounded keyboard/draft-isolation and exact fresh-model browser checks PASS. This supplies a real base-parameter control; its use within the complete integrated demonstration remains due. Values seed remains a fixture control. |
 | 4 Fork A/B | Fresh controlled A/B configuration creation exists. A fork of a selected live state is not established by that alone. |
 | 5 Run both | Values run-both controls exist; preserve model/input/RNG correspondence and declare the final pair. |
 | 6 Charts and matrix/vector | Values has an exact-backed scalar trend. It has no authored personality matrix; the final demonstration needs an appropriate matrix/vector-capable profile, not an invented matrix. |
@@ -54,10 +54,10 @@ qualification elsewhere remains scoped; this table does not reissue research ver
 | 8 First meaningful divergence | Values displays observer-row and exact-state divergence separately. Final interpretation must remain scoped to declared semantic correspondence. |
 | 9 Before/after diff | Native event diffs and cross-branch state differences exist. Final demonstration must select and explain a meaningful transition. |
 | 10 Resolution | Native Values reasons/choice/dice records exist. Final selected run must reach and inspect the resolution. |
-| 11 Expand factor | Reason cards expose die calibration and exact nucleus records. Full factor/language adequacy remains separate. |
+| 11 Expand factor | Values reason cards expose die calibration and exact nucleus records. Disposition now shows exact operands, all compiled reason roles, coverage and distributions, with bounded native/browser and historical checks. Complete choice attribution and character-language adequacy remain separate. |
 | 12 Reason-to-history chain | Bounded reason -> evaluation -> recorded parent/source links now pass in browser. General state-read writer provenance and full causal contribution traversal remain unproven. |
 | 13 Historical stability | First displayed Values reason and ancestry at2/4 now pass bounded browser checks. Full renderer/version/corpus obligations remain open. |
-| 14 Architecture | Owned-root read/write/change/persistence counts exist. Counts do not establish necessity; complete participation/factor accounting remains due. |
+| 14 Architecture | Searchable owned-root read/write/change/presence counts link to native Timeline events; Disposition constitution -> reasons event18 is browser/native checked. Counts do not establish necessity; complete canonical participation/factor accounting remains due. |
 | 15 Export/copy summary | Earlier Values export evidence has explicit transfer limits. Current file-transfer boundary remains unresolved; do not bypass it through DOM-to-file reconstruction of checkpoints. A concise summary and end-to-end delivery acceptance remain due. |
 | 16 Restore/reproduce | Original Values prefix commitments and prior bounded restore checks exist. Final selected branch must demonstrate the exact earlier checkpoint and repeated continuation. |
 
@@ -77,5 +77,8 @@ or the requirement for one end-to-end demonstrated experiment.
 does admit a constitutional baseline {-1,0,1}/8. Its three Plastic controls share
 exact original inputs and differ in model identity. A closed original-program adapter
 and focused continuation tests now exist; complete parity is running. This supplies
-a grounded route for step3 through fresh-run model controls, but no slider/UI or final
-demonstration is accepted yet. See OBSERVABILITY_WORKBENCH_DISPOSITION_PROGRESS.md.
+a grounded route for step3 through fresh-run model controls. Subsequent bounded slider
+qualification is recorded in `workbench-disposition-slider-rev1/receipt.json`: three
+keyboard-selected draft values preserve live hashes; fresh positive creation matches
+original native model/run/save identities. This does not complete the final integrated
+demonstration. See OBSERVABILITY_WORKBENCH_DISPOSITION_PROGRESS.md.

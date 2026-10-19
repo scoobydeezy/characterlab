@@ -285,3 +285,18 @@ and570 reports before creating its output root. Full reason coverage remains due
 the bounded receipt cannot stand in for it. This diagnostic qualification adds no
 character testimony, private identity-belief representation, independent causal
 claim, psychological verdict or Campaign4 entry acceptance.
+
+## Admitted constitutional slider — 2026-10-19
+
+A discrete range control now selects only the three original Plastic constitutional
+models (-1/8,0,+1/8), synchronized with the draft dropdown. It is disabled for other
+programs and while commands are in flight. Selection is a draft; only explicit fresh
+creation installs the selected original model. No live constitution writer or arbitrary
+parameter ingress is introduced.
+
+Build PASS541 modules and research obligations PASS. Browser receipt
+`workbench-disposition-slider-rev1/receipt.json`: keyboard traversal of all three values
+preserves all five active-run hashes, Leaky disables the control, and fresh positive
+creation matches the original model/run identity digests and prefix0 save. This closes
+the missing slider implementation within the declared native scope; the complete
+sixteen-step integrated demonstration, including appropriate matrix coverage, remains due.
