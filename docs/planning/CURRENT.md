@@ -1,5 +1,17 @@
 # Current research entry point
 
+**LONG habit comparisons2026-10-19:**2848 single-factor pairs declared across all960
+original REV2 cases;21 separate diagnostic fields and addressed draws retained.
+Three focused comparison tests and one prefix8 pair-restore test PASS. Production
+build56225 PASS436 modules; final TypeScript8300 PASS. In-memory pair restore cleans
+up a partial failure and preserves the old pair. No browser file transfer is claimed.
+Full comparison cohort41914 RUNNING;123 frozen source hashes independently verified.
+Full receiver replay18545 RUNNING, latest144/960 cases passed. LONG comparison20638
+has captured28/28 source programs and is projecting its24 declared pairs (nine reported).
+See OBSERVABILITY_WORKBENCH_LONG_HABIT_PROGRESS.md. Browser UI, full comparison and
+replay acceptance, language and Campaign4 entry remain open. Research check PASS;
+all18 conditional obligations and the prior download restriction remain unchanged.
+
 **LONG habit receiver foundation2026-10-19:** adapter and worker implemented for
 all960 original REV2 cases under the accepted source-reuse protocol. Six focused
 adapter/worker/transport tests PASS; both production builds PASS436 modules.

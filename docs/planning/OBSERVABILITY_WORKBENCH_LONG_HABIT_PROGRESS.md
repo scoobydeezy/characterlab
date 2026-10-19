@@ -56,3 +56,33 @@ LOCAL DISPOSITION: use the accepted source-reuse protocol for this receiver adap
 do not inflate960 component runs into960 fresh native admissions. Campaign3 bounded
 acceptance, serious controls, failed REV1 oracle evidence and all18 conditional
 obligations remain unchanged. No owner ruling is needed.
+
+## Comparison and pair persistence checkpoint
+
+2026-10-19: `longHabitComparison.ts` declares2848 pairs covering all960 original
+cases. Each pair changes exactly one factor at the same seed:768 law,480 receiving
+retention,640 relearning,480 cue and480 visibility contrasts. Reports retain21
+separate state/trajectory fields, source identity, exact receiver commitments and
+addressed draws. Matching seeds do not establish RNG correspondence. Wrong case,
+identity, source provenance or clock rejects; unequal prefixes withhold fields.
+
+Three comparison tests PASS, including original case0 full-horizon controls for
+all five factors. Derived/Stored fields agree while their run identities differ;
+receiving retention changes memory/loss without changing history or performance.
+This focused evidence does not establish all2848 comparisons. The full cohort audit
+`check-workbench-long-habit-comparison.mjs` is RUNNING as session41914, with sources
+frozen in `workbench-long-habit-comparison-rev1`. It executes each current receiver,
+checks every prefix against the original REV2 commitments, then checks and preserves
+all48416 aligned reports. Source execution remains reused. Do not edit its frozen
+comparison or adapter dependencies until it terminates.
+
+`longHabitPairCheckpoint.ts` adds an in-memory pair envelope. Both original restores
+must authenticate before installation; a second-side failure disposes the newly
+restored first side. One focused test PASS at prefix8 after practice episode loss,
+including declaration/prefix rejection, exact report reproduction, detached bytes
+and preservation of the old pair on failure. This is no browser download, file
+roundtrip or import qualification. The prior browser download denial remains binding.
+
+Production build56225 PASS436 modules; final pair TypeScript check8300 PASS.
+Evidence restoration and research check PASS with18 conditional obligations.
+No new browser route or full-cohort qualification is claimed at this checkpoint.
