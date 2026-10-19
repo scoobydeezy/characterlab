@@ -1,5 +1,13 @@
 # Current research entry point
 
+**CONTROL observer descriptions2026-10-19:** full17-program/142-prefix audit PASS4248
+descriptions. Observer-only renderer preserves earlier wording, excludes mechanical
+draws and private execution; hidden/absent and hidden-reward equalities PASS.
+Effective access explicitly differs from actual maintenance; erasure is not resistance.
+Two focused tests, TypeScript and integrated492-module build PASS. Registry0.15
+exposes bounded language; browser language remains due, separately from prior raw UI
+replay receipt. Start CONTROL progress; all18 conditional obligations remain.
+
 **CONTROL six-mode UI2026-10-19:** route0.14 exposes native worker inspection and
 independent comparison workers, main/paired checkpoints and recorded participation.
 Two focused tests PASS; build81211 PASS490 modules. Bounded browser main0/5/6/

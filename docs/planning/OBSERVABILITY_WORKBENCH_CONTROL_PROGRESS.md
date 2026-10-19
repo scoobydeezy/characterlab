@@ -76,6 +76,26 @@ paired UI restore, language, or batch qualification.
 
 ## Preserved meaning and next work
 
+Observer description audit25247 COMPLETE:17 programs/142 prefixes/4248 descriptions,
+receipt `workbench-control-language-rev1/receipt.json`. Pure renderer accepts only
+canonical public observer bytes, validates the closed top-level record set and exposes
+eight record categories: evaluation, options, reasons, selected intent, admitted
+outcome evidence, history update, reward expectation and goal lifecycle. Choice
+provenance strips mechanical draws and nested decision input. Retained diagnostic
+controls remain explicit. Evaluation field3 is effective access, not proof of actual
+workspace maintenance; history deletion is not successful resistance. Goal changes
+are after the current evaluation and cannot rewrite it. No runtime code is changed.
+
+Every prefix matches the native receipt's save/observer commitments; repeat rendering
+is exact and leaves checkpoints unchanged. Complete eligible-record coverage, direct
+evaluation/choice operand checks, append-only earlier wording and whole-horizon
+hidden/absent/hidden-reward equality PASS. Independent114 frozen/current source hashes,
+17 compressed result hashes, parent hash and4248/142 count checks PASS. Two focused
+tests77309 and TypeScript51991 PASS. Description panel is integrated; build99817
+PASS492 modules; final capability-label build82338 also PASS492. Capability registry0.15 distinguishes this bounded description
+qualification from outstanding browser language and full causal explanation work.
+The earlier raw-UI receipt does not automatically qualify the new description panel.
+
 Six-mode `ControlWorkbench` now integrates the qualified worker and comparisons via
 inspection registry0.14, separately from batch admission. Main and pair sessions have
 independent workers; all state replacement occurs after native authentication. Both
@@ -107,7 +127,7 @@ actual choice and execution remain separate. Goal retirement does not imply unle
 motor failure is not cognitive resistance. SpareSlot, NoInhibition, LoadBlind,
 RetainedEqualsMaintained, EraseHistory, NoHistory, Residual and Linear all survive.
 
-Next qualify observer-safe descriptions and broader browser replay, and separately handle FATIGUE
+Next qualify browser descriptions and broader browser replay, and separately handle FATIGUE
 and other successors. No batch, resource/accessibility, causal necessity, broad
 psychological claim or Campaign4 entry is accepted. Evidence restore/research checks
 PASS18 conditional obligations; no obligation or historical restriction is retired.
