@@ -1,5 +1,15 @@
 # Current research entry point
 
+**LONG routine replay/comparison2026-10-19:** audit39083 COMPLETE PASS504 cases/
+8568 receiver prefix restores,8064 advancing/504 terminal. Audit53693 COMPLETE
+PASS1224 pairs/20808 aligned reports, all504 current receiver trajectories matched
+to original saves/composition commitments. Independent verification:126 replay source
+copies/504 results;129 comparison source copies/1224 reports/504 original inputs.
+Four comparison/pair tests PASS; build58356 PASS460 modules. Research PASS18
+conditional. Start OBSERVABILITY_WORKBENCH_LONG_ROUTINE_PROGRESS.md. Native source
+work remains reused evidence; no new native execution. Six-mode UI, browser and
+language remain next. No Campaign4 entry or reduction claim.
+
 **LONG routine foundation2026-10-19:** adapter/worker implemented for504 original
 receivers and16 reused native sources. Five focused tests PASS, including seed0
 availability at14 without performance and resumption15; checkpoint identity/source

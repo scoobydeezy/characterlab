@@ -30,18 +30,18 @@ existing large-chunk warnings remain. The routine UI is not yet bundled or expos
 
 ## Full receiver audit
 
-Session39083 RUNNING; `check-workbench-long-routine.mjs` writes immutable results under
+Session39083 COMPLETE PASS; `check-workbench-long-routine.mjs` writes immutable results under
 `workbench-long-routine-reuse-rev1`. It authenticates all16 reused source row files,
 compressed saves and272 prior restore receipts against the accepted goal matrix.
 It independently decodes the original881 views to recover standing and episode count,
 and authenticates the embedded native save at each original source prefix.
 
-The audit then checks all504 original receiver identities and8568 prefixes against
+The audit checked all504 original receiver identities and8568 prefixes against
 the routine matrix, restoring every complete prefix and checking8064 advancing and
 504 terminal successors. Full terminal state, receiver bytes/commitments and read
-immutability are separate checks. Completion requires the final receipt and an
-independent source/result hash and count verification; partial output is not PASS
-for the full matrix. No live audit dependency is edited or restarted.
+immutability are separate checks. The final receipt and independent verification of
+126 source copies/504 results,8568 prefixes/8064 advancing/504 terminal checks PASS.
+No fresh native execution is counted. No live audit dependency was edited or restarted.
 
 ## Preserved distinctions and next work
 
@@ -52,11 +52,40 @@ Derived/Stored read strategies retain their shared diagnostic cache. Negative
 performed outcomes can extinguish availability; goal withdrawal does not erase
 history. Source episode expiry is not loss of the receiver's practice journal.
 
-Next: finish and independently verify the full replay receipt, add declared
-comparisons and atomic pair restore, then integrate six modes and qualify browser
+Next: integrate six modes and qualify browser
 interaction and observer-safe descriptions. The four historical joined sentinels
 and eight joined restores remain prior corroboration; this adapter does not claim
 new joined runs or all504 native scheduler executions. Batch admission, specialized
 views, full-choice explanations, resource/accessibility and integrated Campaign4
 acceptance remain open. No law, comparator, obligation or source restriction retires.
 Evidence restore and research checks PASS18 conditional obligations.
+
+## Controlled comparison implementation
+
+`long-routine-comparison/0.1` declares1224 single-factor pairs covering every original
+case:384 law,24 native retention,336 goal-mode,240 cue and240 visibility contrasts.
+Seeds match, but equal seeds do not establish RNG correspondence; exact recorded
+draws remain in every report. Eighteen fields separate owned history/cache/belief/goals,
+standing, cues, opportunity, availability, strength, actual performance, observation,
+lifecycle, probabilities, selected action, arbitration and reason nuclei. Performance
+is explicitly an execution diagnostic. Other fields are receiver/decision diagnostics,
+not proof of conscious access or a source for episodic reconstruction.
+
+Original case, model/run identity, prefix/clock and source bindings are validated.
+Unequal prefixes withhold field comparison. Native-retention contrasts change source
+identity while retaining equal receiver fields; Derived/Stored preserves equal receiver
+fields with distinct law identity. Neither equality authorizes mechanism removal.
+Pair capture/restore requires aligned declared cases and authenticates both fresh
+receivers before installation; candidate failure disposes the first fresh receiver.
+
+Four focused comparison/pair tests PASS. Full comparison audit53693 COMPLETE PASS:
+1224 pairs/20808 aligned prefixes across all504 current receiver trajectories.
+Current receiver saves and composition commitments must match original matrix bytes'
+hashes before comparison. Repeated reports preserve inputs; all Derived/Stored and
+native-retention field equalities are checked across complete horizons. All129 source
+copies,1224 compressed report hashes,504 original input hashes and five factor counts
+were independently reverified. Build58356 PASS460 modules, with existing large-chunk
+warnings. Evidence/research checks PASS18 conditional. See
+`workbench-long-routine-comparison-rev1/receipt.json` and
+`workbench-long-routine-reuse-rev1/receipt.json`. These instrument qualifications
+do not amend the bounded psychological verdict or discharge conditional obligations.
