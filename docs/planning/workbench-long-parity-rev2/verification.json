@@ -1,0 +1,365 @@
+{
+  "status": "PASS LONG RETAINED EVIDENCE VERIFICATION",
+  "inputs": [
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/receipt.json",
+      "sha256": "9e292a12dbd28f77ded8fd881563d9a8538e4811c8d9261eccc997f08ac2e8e2"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/continuation.json",
+      "sha256": "8805f4a272aefe2868ea8c4d11a1eed102fb17c446aa4ab75ca1e67b8dfa4186"
+    },
+    {
+      "path": "scripts/verify-workbench-long-parity.mjs",
+      "sha256": "5b011b6b7466fbb49fa813b7031e1256bf330c5db9c32de5f2e6bdc4826cff42"
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/workbench/longAdapter.ts",
+      "sha256": "a3e09e1c30728d7ecf84bdc25ebae682296a3bed1c597bc69cae2936b24e818c"
+    },
+    {
+      "path": "src/workbench/longCatalog.json",
+      "sha256": "f17b2c8a4f72d9083a2c87e1174463244782127bfb436e0ac9f1510daeee875d"
+    },
+    {
+      "path": "src/workbench/canonical.ts",
+      "sha256": "f80f4a8353ea7604432d5ffcf0d4628f8b7bf13b82a06b4807445e9a9ba97bde"
+    },
+    {
+      "path": "src/workbench/nativeTimeline.ts",
+      "sha256": "ceed75f534e8158a2172ac962cab89aa9ffa5fcbaaf71e0d62347fd01a9c6775"
+    },
+    {
+      "path": "src/test/workbenchLong.test.ts",
+      "sha256": "398df74afd2099e235042ffa4ea2c26d543a68da6444f1d84b9910a5b2cc4aac"
+    },
+    {
+      "path": "scripts/build-workbench-long-catalog.mjs",
+      "sha256": "29c6e65f6bc2655f2ad4437c2c748a49affea1dd7726f3136c98e818c52a9d7f"
+    },
+    {
+      "path": "scripts/check-workbench-long.mjs",
+      "sha256": "83075c1a1445389a8cde5f9d2fc8efc33c46fb6958425b6f944f560e3ebf3629"
+    },
+    {
+      "path": "src/campaign3/longitudinalCodecs.ts",
+      "sha256": "8357930d0c34332c3959777527bb452dcaf04f35e2874bac02409da58945cb40"
+    },
+    {
+      "path": "src/campaign3/longitudinalFactory.ts",
+      "sha256": "7d1a2128b583ea0a6110f5abded1e489c34faed774a77f710d69ba10d26feb0f"
+    },
+    {
+      "path": "src/campaign3/longitudinalGoal.ts",
+      "sha256": "4165db457e89f0862481e182f6fbc8347ca6f1b562f687e9214d7b8bce6ae034"
+    },
+    {
+      "path": "src/campaign3/longitudinalGoalChoice.ts",
+      "sha256": "72c121c961bc88f1a6c2f6c0baba02f00489cbdfeee88c3328620d6891f53ce2"
+    },
+    {
+      "path": "src/campaign3/longitudinalHabit.ts",
+      "sha256": "8b122d38bce9f6684304d24103c0fc5d7d26550d751b297ed319431708de53cf"
+    },
+    {
+      "path": "src/campaign3/longitudinalHabitJoin.ts",
+      "sha256": "46ef03d179e0199b6ecc2bb884ac7f8c22ba031d27fad804d16f4c751634110c"
+    },
+    {
+      "path": "src/campaign3/longitudinalMath.ts",
+      "sha256": "bc135f1bf235ee32e0bc0bc4f17f3b51de2264c23dac9526de16e2b6d8640bf9"
+    },
+    {
+      "path": "src/campaign3/longitudinalModel.ts",
+      "sha256": "30e9fb70d40fba6a9b6e329916ab16fac173b1779928688798318c2d14dc5b70"
+    },
+    {
+      "path": "src/campaign3/longitudinalPersonalLoss.ts",
+      "sha256": "dad030f9ceac4b749f7f999b8abf2495c33f1d05257dfcadd4e4cb1b97ca0b30"
+    },
+    {
+      "path": "src/campaign3/longitudinalRoutine.ts",
+      "sha256": "41b8bee6929cf0c50e455336075a642f120a722a2719a8662457d84407ee8c21"
+    },
+    {
+      "path": "src/campaign3/longitudinalRuntime.ts",
+      "sha256": "498ccb755fe8491b6c6525063701b972e558eef56b9e559c3bda1883acd7db75"
+    },
+    {
+      "path": "docs/planning/campaign3-longitudinal-model-rev2/FREEZE.json",
+      "sha256": "5d72e471a1ec9ebfc6199029c42b29b8c9b2f052e1ce30d8e7db75890ad0e6c5"
+    },
+    {
+      "path": "docs/planning/LONGITUDINAL_PUBLIC_EXPERIMENT_PLAN_REV2.json",
+      "sha256": "3ef86715216a83ac75fb35567b9978627994560ca515b8a8254513ffc93911e5"
+    },
+    {
+      "path": "docs/planning/LONGITUDINAL_EXECUTION_PROBE_PLAN_REV1.json",
+      "sha256": "8d45fbf96fc615dee63c935e5c19ddc02a2bdffab084529a46391341cf954587"
+    },
+    {
+      "path": "docs/planning/LONGITUDINAL_PUBLIC_RUNS_REV2_PART0.json",
+      "sha256": "1fc673ffaaba20588d5bcd982a2db1a71cead0591aaddaf2e74e2e6fb490239e"
+    },
+    {
+      "path": "docs/planning/LONGITUDINAL_PUBLIC_RUNS_REV2_PART1.json",
+      "sha256": "f6cfb9647630fb1972782f87a3b1ec7bc89aee191c0c8217efcdc8446c3894c2"
+    },
+    {
+      "path": "docs/planning/LONGITUDINAL_PUBLIC_RUNS_REV2_PART2.json",
+      "sha256": "9094a87cee96fbde0d93112db8ef65521b3b4e9c001227afb2b405660d5f4c7e"
+    },
+    {
+      "path": "docs/planning/LONGITUDINAL_EXECUTION_PROBE_REV1.json",
+      "sha256": "9f158116cf9cadbcb28ce50dda82c940e76a875ecddffb3850acb2bf43a6309a"
+    },
+    {
+      "path": "docs/formal/LONGITUDINAL_PUBLIC_CONTRACT_REV2.md",
+      "sha256": "9475b6805f1a3fb549e82cfbef2dd471b2f8b54f1fce4fa3eb48d802614c58d2"
+    },
+    {
+      "path": "scripts/continue-workbench-long.mjs",
+      "sha256": "de399e42b912bd299dc6d2193f28f3ebef56c405ead059206f7dc48d6ed7cac1"
+    }
+  ],
+  "verified": [
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/program-00.json",
+      "sha256": "e66a13fd2e7d6655d453c0002d639a5783a6c25d374a39bbcbadf06e8365d47f",
+      "program": "representation-1-law-1",
+      "prefixes": 17,
+      "origin": "retained completed program"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/program-01.json",
+      "sha256": "46b44985592c0f9b1487ada0791c78222e89dd2bdccba82a945e1e771e2d5bf7",
+      "program": "representation-1-law-2",
+      "prefixes": 17,
+      "origin": "retained completed program"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/program-02.json",
+      "sha256": "75c144ffe84b684441b4ac04191ede76fd1ddb2851c5250faaf17ae04f815cac",
+      "program": "representation-2-law-1",
+      "prefixes": 17,
+      "origin": "retained completed program"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/program-03.json",
+      "sha256": "9b9f5b59536f537aedccc5e45f66bbfacc6948a9fd2a87f5e0a95f583a2b0c43",
+      "program": "representation-2-law-2",
+      "prefixes": 17,
+      "origin": "retained completed program"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/program-04.json",
+      "sha256": "fa520f8386ee90da2f81568438ff10cb95a2f5edd81e3fa1ce36829df58dbdc7",
+      "program": "representation-3-law-1",
+      "prefixes": 17,
+      "origin": "retained completed program"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/program-05.json",
+      "sha256": "eba37bc34f0438b9b0e7232fc8d409e05201ecdf891720a2a7b43150ce2be757",
+      "program": "representation-3-law-2",
+      "prefixes": 17,
+      "origin": "retained completed program"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/program-06.json",
+      "sha256": "d4130a2d2b0dbc080bb7dc526b19303162322d86693e40a74431b6ca74e798a7",
+      "program": "representation-4-law-1",
+      "prefixes": 17,
+      "origin": "retained completed program"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/program-07.json",
+      "sha256": "e0d4cf9ff6fa74c36e44813cbd01708882c20a85b2cd01b2b0e8b6fa91bd09af",
+      "program": "representation-4-law-2",
+      "prefixes": 17,
+      "origin": "retained completed program"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/program-08.json",
+      "sha256": "530f2a52b5b6a527f6b4c6a83c8780ea6f6d0e224088e4e447ff4b8f11a2ae66",
+      "program": "keep-all",
+      "prefixes": 17,
+      "origin": "retained completed program"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/program-09.json",
+      "sha256": "54f276de57d6782da9619d5bac4755674c46991e09442f51d1c3f1f3979b2259",
+      "program": "rust",
+      "prefixes": 17,
+      "origin": "retained completed program"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/program-10.json",
+      "sha256": "f94c356a5602c4dfc95216f2f3564e974c383839b1e1469990555e0220f3b1f6",
+      "program": "standing-off",
+      "prefixes": 17,
+      "origin": "retained completed program"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/program-11.json",
+      "sha256": "69845b0290b8ca7297366ad91032c4f478c3d45918fc0ce0bd2f0ba7b9f60476",
+      "program": "family-1",
+      "prefixes": 17,
+      "origin": "retained completed program"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/program-12.json",
+      "sha256": "5b3b071354a9aaab9fb6486c1e4fdbb90ac7cce40dd76f0e3bd3aed496b6b27c",
+      "program": "family-2",
+      "prefixes": 17,
+      "origin": "retained completed program"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/program-13.json",
+      "sha256": "ec9d3d126c4c511911427c470bf41db1ddd754fb1953ebf08ab89cbc401db8fa",
+      "program": "family-3",
+      "prefixes": 17,
+      "origin": "retained completed program"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/program-14.json",
+      "sha256": "d681ee0afde0c6f19760bf7c9cbec1a27b7ba5bcb816b9f34bf4c95d7b937360",
+      "program": "family-4",
+      "prefixes": 17,
+      "origin": "retained completed program"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/program-15.json",
+      "sha256": "633690febd797fc2cc7143e0ab39516eda7c408aef2effcab94d090d0921a99c",
+      "program": "no-interference",
+      "prefixes": 17,
+      "origin": "retained completed program"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/program-16.json",
+      "sha256": "c4e4dc21d3e251f1b3ddeafd2f6143d44118f4d2346a00037b8120701dfc2cb8",
+      "program": "no-relearning",
+      "prefixes": 17,
+      "origin": "retained completed program"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/program-17.json",
+      "sha256": "3627272c2094437ff43cacb122cfec731f98e3388ef42aabce12d983ebabd80f",
+      "program": "denied-social",
+      "prefixes": 17,
+      "origin": "continuation execution"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/program-18.json",
+      "sha256": "17623931ec0b5c323390ca16b945a8daf87cb5885d87b0265451e6a4e352c056",
+      "program": "witness-only",
+      "prefixes": 17,
+      "origin": "continuation execution"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/program-19.json",
+      "sha256": "cd92219f7deabb990705a8a89f27813d1c99c4f8df141ff8270b03056c24626e",
+      "program": "fixed-display-false",
+      "prefixes": 17,
+      "origin": "continuation execution"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/program-20.json",
+      "sha256": "850b633bf9e9cdd08110557bb413ad95c2fad85381f7858c4ff77b40bef57721",
+      "program": "fixed-display-true",
+      "prefixes": 17,
+      "origin": "continuation execution"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/program-21.json",
+      "sha256": "9918f18d411321d972f3d095a6ea1d5bda38e4320f47609f5ead92f2950dccc1",
+      "program": "reordered-law-1",
+      "prefixes": 17,
+      "origin": "continuation execution"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/program-22.json",
+      "sha256": "8a85dea248b01966198373f2705d616c2f44d83792ce5a94765fff885aa49163",
+      "program": "reordered-law-2",
+      "prefixes": 17,
+      "origin": "continuation execution"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/program-23.json",
+      "sha256": "db3cc443e6284de605e92fd58cd8896dee8d2ff2639dd27b0b63e28171138182",
+      "program": "short-gap",
+      "prefixes": 17,
+      "origin": "continuation execution"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/program-24.json",
+      "sha256": "ad0c29ddb86e16a2f92a7b0d6c7a7a6db085cd8f58096222dfc76cfe767aa251",
+      "program": "no-claim",
+      "prefixes": 17,
+      "origin": "continuation execution"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/program-25.json",
+      "sha256": "99cbe96ddb8d3983699401cb6d49c246edab469c0c38e11fd9781af921d04f8b",
+      "program": "seed-1",
+      "prefixes": 17,
+      "origin": "continuation execution"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/program-26.json",
+      "sha256": "b84cd83a1f9db52a5fe2e91e52e8c3af327279a359674b835d8c348debaf489d",
+      "program": "seed-2",
+      "prefixes": 17,
+      "origin": "continuation execution"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/program-27.json",
+      "sha256": "583c6ca5c4171a753f90fd3bfeea53749a955311699f40a2e155961bdca1557c",
+      "program": "empty",
+      "prefixes": 1,
+      "origin": "continuation execution"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/program-28.json",
+      "sha256": "9134dde77a5b89912dbdd4112ad1a9c144a797cf1d225b5d67d128dd8bb28f7d",
+      "program": "maximum-time",
+      "prefixes": 2,
+      "origin": "continuation execution"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/program-29.json",
+      "sha256": "71c463d6a75ac356aaf341e1fd459c681bc7e9876cd6dcc56dca1a92518a091f",
+      "program": "execution:retained",
+      "prefixes": 17,
+      "origin": "continuation execution"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/program-30.json",
+      "sha256": "4a8deb9b51799e5a69e687faefc8d10c2c8a9328cd13db85570cf38157e5103a",
+      "program": "execution:rust",
+      "prefixes": 17,
+      "origin": "continuation execution"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/program-31.json",
+      "sha256": "79e6f6201befa71e1fb4c1c3b60544f856e512e721e40d80c8706f1113c8f566",
+      "program": "execution:fresh",
+      "prefixes": 17,
+      "origin": "continuation execution"
+    }
+  ],
+  "counts": {
+    "programs": 32,
+    "prefixes": 513,
+    "publicPrograms": 29,
+    "executionProbes": 3,
+    "historicalObserverJoins": 462,
+    "inheritedPrograms": 17,
+    "inheritedPrefixes": 289,
+    "continuationPrograms": 15,
+    "continuationPrefixes": 224
+  },
+  "scope": "Independent saved-artifact verification, not a new native execution. Every source/current and frozen hash, output hash, catalog order, model identity, historical save and public observer hash checked. Per-prefix native parity and restore/next-or-terminal assertions are supplied by the inspected original/continuation writers before each program file is written; this verifier does not rerun those operations. Probe observer equality is native-only, not an unavailable historical observer-hash claim. Browser, successors, language and full Workbench acceptance remain separate."
+}
