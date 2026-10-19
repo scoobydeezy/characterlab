@@ -1,5 +1,17 @@
 # Current research entry point
 
+**LONG goal successor adapter2026-10-19:** longGoalAdapter.ts maps original120 cases
+under longitudinal-goal-component/0.1-candidate. Reconstructs canonical model/run
+identities from original artifact manifest, settings, initial component save, mode,
+inputs and seed. Native source and component receiver remain separate; component
+save hash/native source save hash both exposed, not relabeled as joined Save132.
+Focused native test PASS: exact source/receiver state/save equality, whole-prefix
+restore and next step, detached reads, overlap and bad-identity rejection. Full120-case
+Build30479 COMPLETE exit0,426 modules; existing chunk-size warning retained.
+coverage, worker/UI, language and broader successors remain due. Evidence restore/
+research PASS;18 conditional obligations unchanged. Existing LONG native audit48528
+at18/32, comparison20638 running and language9885 at11/32; preserve frozen sources.
+
 **LONG observer descriptions2026-10-19:** long-observer-description/0.1 accepts only
 closed native observer bytes and exposes six exact field-linked descriptions. No
 model/seed/original input/research state/output/trace enters template selection.
