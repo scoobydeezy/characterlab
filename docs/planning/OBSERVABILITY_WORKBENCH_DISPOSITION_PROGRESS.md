@@ -591,6 +591,22 @@ character testimony or concluding that unavailable concern means no concern.
 This is workbench qualification, not a new Campaign3 verdict or obligation closure.
 All18 conditional obligations and historical source restrictions survive.
 
+## Coverage routing reconciliation — 2026-10-20
+
+The Disposition successor entry in OBSERVABILITY_WORKBENCH_COVERAGE.json now
+references the completed original15/285 parity and30/570 comparison receipts,
+plus ten scoped factor, calibration, provenance, language, summary, chart,
+architecture, resolution and event-state receipts. Exact receipt hashes, statuses,
+counts and limitations are retained in the entry and
+`workbench-disposition-coverage-rev1/receipt.json`. All21 corpus member entries and
+all other successors remain unchanged.
+
+This corrects stale routing that still called original parity RUNNING. It does not
+rerun the experiments or automatically qualify later UI builds. Every-prefix restore,
+the new choice audit, broader browser/resource/accessibility checks, player language,
+batch admission and the integrated demonstration remain open. The1500 language
+audience/subject gaps are explicit. No Campaign3 qualification or verdict changed.
+
 ## Recorded choice comparison — 2026-10-20
 
 `dispositionChoiceComparison.ts` profile `disposition-choice-comparison/0.1`

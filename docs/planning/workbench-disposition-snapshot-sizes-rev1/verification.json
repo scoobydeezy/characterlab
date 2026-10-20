@@ -1,0 +1,20 @@
+{
+  "status": "PASS BYTE CENSUS STRUCTURE AND GZIP LENGTH CROSS-CHECK",
+  "receiptSha256": "7d3f1deb13a4ae344b41ddb4bbf1ab8e2216343da91d179a910fb4d547e73f7e",
+  "snapshots": 285,
+  "totalJsonBytes": 41218393463,
+  "largest": {
+    "program": 13,
+    "prefix": 18,
+    "path": "docs/planning/workbench-disposition-comparison-rev1/snapshot-13-18.json.gz",
+    "sha256": "27020621623efb3429d3914c98081ab0726040c7b898896c7a89c28a942f401a",
+    "compressedBytes": 17609801,
+    "jsonBytes": 482251239,
+    "jsonSha256": "e724487c85e66d3fb7c5a1f46d0649f052de911a6f52ee8df5d8508bc674cdf5"
+  },
+  "counts": {
+    "over128MiB": 118,
+    "over256MiB": 63
+  },
+  "scope": "Complete15x19 identity census; streamed byte counts agree with independent gzip ISIZE modulo2^32 and compressed file lengths. Verifier and parent bindings checked. This does not separately repeat decompression or measure heap."
+}

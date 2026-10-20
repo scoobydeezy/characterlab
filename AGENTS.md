@@ -56,7 +56,9 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 Start docs/planning/OBSERVABILITY_WORKBENCH_BATCH_V8_PROGRESS.md.
 Disposition full-horizon browser tab24 (4202) RUNNING toward18; keep it alive.
 Run/Pause prefix1 five native identities PASS. Terminal and six-mode checks remain due.
-Snapshot byte census94905 RUNNING across285 archives with streaming decompression.
+Snapshot byte census PASS285 archives:41,218,393,463 decoded bytes total;
+largest482,251,239 bytes (program13/prefix18),118 over128MiB/63 over256MiB.
+These are serialized diagnostic sizes, not heap or checkpoint-size claims.
 Start OBSERVABILITY_WORKBENCH_DISPOSITION_RESOURCE_PROGRESS.md; no heap claim.
 Disposition recorded choice comparison implemented with exact A/B decision links.
 Choice audit revision1 hit verifier string-size limit after prefix13; failure retained.

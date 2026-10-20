@@ -39,12 +39,17 @@ The choice revision1 verifier failed at prefix14 because serializing two snapsho
 into one string exceeded Node's string-size limit. That failure remains preserved;
 revision2 uses incremental hashes of every value without narrowing the corpus.
 
-Session94905 runs `scripts/check-workbench-disposition-snapshot-sizes.mjs`.
+Session94905 completed `scripts/check-workbench-disposition-snapshot-sizes.mjs`.
 It authenticates all285 original compressed archives against the comparison
 receipt, streams each full gzip decode, counts actual UTF-8 bytes and hashes the
 complete decoded stream. It never parses a whole snapshot or concatenates the
 corpus. Frozen verifier and parent-receipt bindings are in
-`workbench-disposition-snapshot-sizes-rev1`. A completed receipt is still required.
+`workbench-disposition-snapshot-sizes-rev1`. Its completed receipt covers all285
+snapshots:41,218,393,463 decoded bytes in total. The largest is482,251,239 bytes at
+program13/prefix18. There are118 snapshots over128MiB and63 over256MiB.
+`verification.json` checks the complete15x19 census, original compressed file
+lengths, independent gzip ISIZE fields modulo2^32, aggregates, source verifier
+identity and parent-receipt binding. It does not repeat decompression.
 
 Serialized diagnostic bytes are not JS string length, parsed-object memory, live
 heap, browser memory or native checkpoint bytes. The census will inform resource
@@ -52,3 +57,11 @@ work; it does not itself establish a safe browser limit or authorize truncating
 authoritative work or diagnostic history. Every original field/event is retained.
 Campaign3 semantics, all18 conditional obligations and historical-source limits
 remain unchanged.
+
+LOCAL DISPOSITION: a retained compressed evidence archive fitting Git's file-size
+rule does not imply that its decoded diagnostic snapshot fits a practical display
+or serialization budget. Keep the exact archives and all fields. The observed
+combined-string verifier failure and these measured sizes require avoiding whole-
+pair string construction in audit work. Browser rendering/retention changes must
+follow actual browser evidence and preserve exact historical inspection; the byte
+census alone does not justify a heap claim, arbitrary truncation or semantic change.
