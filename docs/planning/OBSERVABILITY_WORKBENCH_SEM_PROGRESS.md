@@ -1291,3 +1291,34 @@ description, not world truth, generic recognition theory, cue interpretation or 
 factor accounting. Withdrawal syntax has no native/browser witness in this fixture.
 Architecture participation, broader accessibility and full integrated entry remain
 open. No native mechanism, state, formal contract or Campaign3 verdict changed.
+
+## Observer causal-role language and support (2026-10-20)
+
+`sem-causal-role-language/0.1` consumes only the selected observer's type240
+causal-role record and its type227 experience. Each type237 support must resolve
+uniquely to a same-experience type224 perceived binding with identical event/track
+carriers. The exact event-role mapping, rule/version, observer ownership, occurrence
+namespaces and nonfuture support are checked. No truth, recognition or renderer
+sibling is consumed. Wording describes a recorded interpretation, not verified world
+causation, responsibility or confidence.
+
+Character mode exposes role semantics, original rule, exact supporting bindings,
+source record and keyboard-activated committed trace link. Mina's Companion and
+Glen's Participant supports both map to Participant; Darius's Actor maps to Actor.
+These distinct supports remain inspectable despite the shared role result.
+
+`workbench-sem-causal-language-rev1/receipt.json` PASS4 prefixes/12 observer views/
+3 descriptions, every-prefix exact restore and unchanged checkpoint, append-stable
+history. Two new tests cover replay/history, poisoned truth/renderer/recognition
+siblings and foreign observer, unsupported role mapping, unknown version and
+malformed basis rejection. All affected projection and26 worker suites PASS:
+29 files/32 tests. TypeScript and isolated production build589 modules PASS.
+
+`workbench-sem-causal-language-ui-rev1/receipt.json` PASS prefix0 absence, Mina1
+and all three observers3. Complete prose/semantic/source/support records and six
+native identities match. Enter opens original trace0; earlier Mina text and record
+remain unchanged at3. Screenshot inspected. Preview4206/session29276/tab30 retained;
+older qualification tabs/builds unchanged. No full accessibility or general causal
+inference qualification. Cue-level recognition and complete-choice/factor language,
+architecture participation and integrated entry remain open. No Campaign3 verdict,
+formal seam, native behavior or obligation changed.

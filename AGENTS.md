@@ -58,8 +58,11 @@ SEM coverage ledger reconciled to retained rev3:100 scoped vector pointers,
 31 negative witnesses/10 acceptance items; zero complete Workbench vectors inferred.
 See workbench-sem-ledger-rev1; language/participation/full entry remain open.
 SEM bounded recognition language now PASS4 prefixes/12 observer views/3 descriptions;
-30 affected projection/worker tests and browser provenance/history PASS. Cue-level,
-causal-role and complete factor language remain open. Retain new tab29/4205.
+30 affected projection/worker tests and browser provenance/history PASS. Recognition
+cue-level and complete factor language remain open. Retain new tab29/4205.
+SEM causal-role language now PASS4 prefixes/12 observer views/3 descriptions;
+exact perceived-binding support and rule mapping,32 tests and browser/history PASS.
+See workbench-sem-causal-language-rev1; cue-level/full-choice language remains due.
 Disposition score matrix projection PASS270 retained resolutions/416 draws/1248 cells;
 42 automatic/20 absent records preserve no-draw status. UI integration remains due;
 this is score arithmetic, not the required latent-state visualization or player language.
@@ -80,7 +83,7 @@ See OBSERVABILITY_WORKBENCH_GENERAL_PROGRESS.md; browser tab25 (4203) retained.
 Browser continuity correction: older tabs closed after missed turn-scoped marks.
 Inventory confirmed only1/25 survived. Interrupted7/6/24 do NOT establish completion.
 Replacement full BatchV8 tab26 (4185) and Disposition horizon tab27 (4202) RUNNING.
-At EVERY turn mark current workbenchLiveTabs:1,25,26,27,28,29. Do not use stale handles.
+At EVERY turn mark current workbenchLiveTabs:1,25,26,27,28,29,30. Do not use stale handles.
 Disposition horizon revision2 repeats pause1 then runs toward18; keep tab27 alive.
 Run/Pause prefix1 five native identities PASS. Terminal and six-mode checks remain due.
 Retained event-state build keyboard filter/selection/disclosure PASS with unchanged
