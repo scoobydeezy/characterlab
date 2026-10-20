@@ -3,6 +3,16 @@
 2026-10-20. IN PROGRESS. This work addresses the required runtime controls and
 resource checks. It does not replace all-program coverage or the integrated demo.
 
+Current routing supersedes the tab24 run below: missed turn-scoped handoff marking
+closed that tab before terminal acceptance. Its last observed prefix was10 Working;
+`workbench-disposition-horizon-ui-rev1/interruption.json` preserves the failure.
+The native evidence and completed pause1 receipt remain intact, but the interrupted
+run has no terminal receipt. Replacement browser2/tab27 on the same4202 build
+repeats pause1, then runs toward18. Revision2's freeze, paused observation and
+validation are in `workbench-disposition-horizon-ui-rev2`; its verifier is
+`scripts/check-workbench-disposition-horizon-ui-v2.mjs`. Final terminal/mode/history
+observations must come from this replacement run, not be stitched to tab24.
+
 ## Original Plastic/Main browser run
 
 Browser2/tab24 at127.0.0.1:4202 runs the isolated

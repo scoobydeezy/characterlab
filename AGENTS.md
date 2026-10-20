@@ -55,10 +55,18 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 **Current routing (2026-10-20):** Observability Workbench IN PROGRESS, owner-authorized.
 Start docs/planning/OBSERVABILITY_WORKBENCH_BATCH_V8_PROGRESS.md.
 General stored-state search PASS43 models/568 snapshots/10110 field observations.
+General event-state renderer PASS7074 events/7587 reads/2037 changed records;
+all568 histories stable. Bounded browser matrix43/read-only37/filter/reset/history PASS.
+Revision1's incorrect unchanged-positive assertion retained; revision2 records zero
+unchanged General mutations without asserting a general absence of redundant writes.
 Root/path/value filtering preserves all fields; bounded browser baseline3/4 exact
 selection, revision update, no-match/long-query and unchanged native hashes PASS.
 See OBSERVABILITY_WORKBENCH_GENERAL_PROGRESS.md; browser tab25 (4203) retained.
-Disposition full-horizon browser tab24 (4202) RUNNING toward18; keep it alive.
+Browser continuity correction: older tabs closed after missed turn-scoped marks.
+Inventory confirmed only1/25 survived. Interrupted7/6/24 do NOT establish completion.
+Replacement full BatchV8 tab26 (4185) and Disposition horizon tab27 (4202) RUNNING.
+At EVERY turn mark current workbenchLiveTabs:1,25,26,27,28. Do not use stale handles.
+Disposition horizon revision2 repeats pause1 then runs toward18; keep tab27 alive.
 Run/Pause prefix1 five native identities PASS. Terminal and six-mode checks remain due.
 Retained event-state build keyboard filter/selection/disclosure PASS with unchanged
 native prefix2 identities; broader accessibility and later-build qualification remain due.
@@ -118,9 +126,9 @@ path observations;34 destructive shared-slot observations kept outside box total
 Bounded browser reports and event navigation PASS; start
 docs/planning/OBSERVABILITY_WORKBENCH_LONG_SOURCE_PROGRESS.md for exact scope.
 BatchV8 admits32 LONG source programs:947 roles/6388 prefixes; old915 unchanged.
-Native audit PASS947 roles/6388 prefixes; browser2/tab7 (4185) RUNNING.
-LONG-only tab6 (4184) RUNNING; neither partial browser run establishes acceptance.
-Keep both browser tabs and frozen build/source dependencies; no completedV8 browser receipt yet.
+Native audit PASS947 roles/6388 prefixes; replacement browser2/tab26 (4185) RUNNING.
+Prior LONG-only tab6 interrupted; full947-role retry includes all32 LONG roles.
+Keep current tabs and frozen sources; no completedV8 browser receipt yet.
 Disposition restore audit28212 remains RUNNING; do not restart quiet writers.
 LONG goal recorded-factor inspector qualified120 cases/1920 rows/2496 nuclei;
 raw signals/bases remain unavailable, so full factor accounting is still due.

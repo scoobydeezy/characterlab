@@ -2,6 +2,15 @@
 
 2026-10-20. IN PROGRESS; full workbench acceptance remains open.
 
+Current browser routing supersedes tab6/7 references below: the agent missed their
+turn-scoped handoff marks and inventory confirmed they were closed before completion.
+`workbench-batch-browser-rev8/interruption-recovery.json` preserves the error and
+last observed scope. No browser PASS is inferred. Replacement browser2/tab26 runs
+all947 roles on the same frozen rev2 build at4185. Full native evidence is intact.
+The duplicate LONG-only run is not repeated separately: the complete947-role retry
+includes all32 original LONG roles. At each continuation mark every current live
+workbench tab; do not stop the loop on a stale historical handle.
+
 Registry0.23, batch0.8 and catalog0.8 add the32 qualified original LONG
 source programs, including29 public programs and3 execution probes. All915
 previous job declarations remain exactly unchanged. Total947 execution roles

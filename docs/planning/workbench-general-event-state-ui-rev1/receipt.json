@@ -1,0 +1,22 @@
+{
+  "status": "PASS BOUNDED GENERAL EVENT STATE BROWSER",
+  "qualification": {
+    "path": "docs/planning/workbench-general-event-state-rev2/receipt.json",
+    "sha256": "1373c032cea4d1f5d18d101c967a8579c9015d98acb9cdf0708fef3c8c7fe518"
+  },
+  "verifier": {
+    "path": "scripts/check-workbench-general-event-state-ui.mjs",
+    "sha256": "df633d37d78f58e621d0929709bf50082fe1f9c745384abb3c5e412c8864cb61"
+  },
+  "artifacts": [
+    {
+      "path": "browser.json",
+      "sha256": "cc770f5c19a30398fd7cd90633cb943666cf0a9806e89d40c19dc4fa5c3db1ba"
+    },
+    {
+      "path": "transition.png",
+      "sha256": "cb32563cbd0b65d604870de3d2609cf538daddf9650958608f6416738bc0b315"
+    }
+  ],
+  "scope": "Original frozen-seed baseline3 matrix formation43 and read-only selection37 match exact records. Changed-only retains the changed matrix mutation; selecting another event resets the filter. Historical43 stays exact after prefix4; four native identities match. All observed General mutations changed values, so unchanged-write hiding is not exercised by this corpus. No full accessibility or integrated-entry claim."
+}

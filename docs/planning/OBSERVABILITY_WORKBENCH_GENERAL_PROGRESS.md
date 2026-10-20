@@ -105,6 +105,38 @@ Screenshot inspected. Initial restore interaction timed out while step4 was stil
 busy; the same live session reached4 and was resumed without recreation or lost state.
 No file download/import or checkpoint reconstruction was attempted.
 
+## Read and before/after Timeline integration — 2026-10-20
+
+Timeline now uses the shared EventStatePanel for exact event-time reads and
+side-by-side before/after records. The changed-only filter resets on a different
+run/event selection. The complete native event remains available, as do the
+recorded causal history and separate accessor/transformation/source inspector.
+Delivered derived reads are not silently relabeled as stored-source values.
+
+`workbench-general-event-state-rev2/receipt.json` PASS all43 original model
+histories:7074 recorded events,7587 reads and2037 mutation records, all changed.
+Every exact displayed value and label matches its original event without mutation.
+All568 earlier prefix histories match their retained terminal event records.
+These are counts within the declared corpus, not a general assertion that native
+writes cannot preserve values or that read/change establishes causal necessity.
+
+Revision1 rendered every model but then failed an inherited Disposition-specific
+assertion requiring at least one unchanged mutation. The frozen checker and failure
+remain in event-state-rev1. Revision2 retains all exact-string, label, immutability
+and historical checks, and verifies changes plus unchanged equals total mutations
+without inventing an unchanged General example.
+
+`workbench-general-event-state-ui-rev1/receipt.json` PASS frozen-seed baseline3:
+matrix formation43 has exact before/after state, read-only selection37 has exact
+reads and no mutation, changed-only retains43's changed record, and selecting37
+resets the filter. Historical43 remains identical after prefix4; all four native
+identities match the original prefix. Screenshot inspected. Unchanged-write hiding
+is not exercised by this General corpus.
+
+TypeScript, build588 modules, reference boundary and restored research checks PASS.
+Preview15451 at4204/browser2/tab28 is retained. This is event-state inspection,
+not complete General language, browser breadth, accessibility or entry acceptance.
+
 ## Searchable complete stored state — 2026-10-20
 
 Reasoning's complete native stored-state list now supports root, canonical-path

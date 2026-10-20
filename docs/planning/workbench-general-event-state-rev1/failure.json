@@ -1,0 +1,6 @@
+{
+  "status": "FAILED CORPUS-SPECIFIC VERIFIER ASSERTION; NO PASS RECEIPT",
+  "error": "assert(unchanged>0) failed after all43 models rendered",
+  "cause": "The checker inherited Disposition fixture expectations. General retained mutation records contain no unchanged values.",
+  "correction": "Revision2 keeps every exact-value/label/immutability/history check and verifies changed plus unchanged equals total mutations. It records the observed count without inventing unchanged General examples."
+}
