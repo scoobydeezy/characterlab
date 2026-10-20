@@ -57,6 +57,8 @@ Start docs/planning/OBSERVABILITY_WORKBENCH_BATCH_V8_PROGRESS.md.
 BODY admitted-pressure language PASS16/79,190 cumulative descriptions; known zero,
 unavailable and historical samples stay distinct. Bounded browser PASS; start
 docs/planning/OBSERVABILITY_WORKBENCH_BODY_LANGUAGE_PROGRESS.md.
+BODY pressure-to-event/history/participation PASS16/79:190 joins,1225 event/613 read
+checks; bounded browser links, historical selection and fresh reset PASS.
 LONG canonical state correspondence PASS32/513: six roots/five boxes,2397 mapped
 path observations;34 destructive shared-slot observations kept outside box totals.
 Bounded browser reports and event navigation PASS; start
