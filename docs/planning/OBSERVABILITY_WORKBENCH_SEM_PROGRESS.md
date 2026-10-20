@@ -1237,3 +1237,21 @@ have instrument parity. The frozen cohort's seed is exact bytes01..20; the adapt
 current repeated-byte seed cannot reproduce that identity. Expand seed support and
 qualify the full cohort, preserving previous seed0 evidence and negative controls.
 SEM language/participation/full browser acceptance, BIO/BODY/LONG and entry remain due.
+
+## Coverage-ledger routing reconciliation (2026-10-20)
+
+The top-level coverage ledger still pointed to the earlier revision1 inventory and
+six component panels. `workbench-sem-ledger-rev1/receipt.json` now joins its SEM
+member to the retained revision3 inventory:100 scoped vector pointers,31 negative
+witnesses and10 acceptance items. All parent artifacts/frozen sources and eight
+subsequent receipt hashes were authenticated; all100 requirement lines still match
+the current formal vector document. Other corpus members and successors are unchanged.
+
+The ledger preserves all eight groups of interpretation limits verbatim. The
+25-file/222-test native and26-file/26-test worker results are explicitly dated to
+revision3, not relabelled current runs. Zero vectors are inferred fully complete.
+Next SEM work is observer-safe recognition/causal language with full factor accounting,
+architecture participation and integrated browser/export/resource/accessibility
+acceptance. Earlier MEM seed/cohort routing above is historical; the General progress
+document now records its full43-model qualification. No new Campaign3 verdict or
+obligation closure. This is evidence reconciliation, not a runtime/build change.

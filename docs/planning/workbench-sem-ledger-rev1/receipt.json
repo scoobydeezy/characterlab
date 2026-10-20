@@ -1,0 +1,34 @@
+{
+  "status": "PASS SEM COVERAGE LEDGER RECONCILIATION",
+  "ledger": "docs/planning/OBSERVABILITY_WORKBENCH_COVERAGE.json",
+  "beforeSha256": "faa936c3b86cbd4b9df2e104a2cff0a7db76f302bc042c63ca68707c0df27318",
+  "afterSha256": "49cd076565196d0eb8dbbeddea5dc5009435fae651e7230964b4a71eefd637d1",
+  "parent": {
+    "path": "docs/planning/workbench-sem-coverage-rev3/receipt.json",
+    "sha256": "e9a5ea123b7cdd36909add36222bfbb4b51f9ff889270244299ed4bc63114399"
+  },
+  "counts": {
+    "vectors": 100,
+    "vectorsWithScopedPointers": 100,
+    "namedNegativeWitnesses": 31,
+    "acceptanceItems": 10,
+    "completeWorkbenchVectors": 0
+  },
+  "retainedMembers": 21,
+  "retainedSuccessors": 9,
+  "artifacts": [
+    {
+      "path": "prior-entry.json",
+      "sha256": "ce3ae03709f2bcc1a660627eaa6b9ea77d3384cc158a1ba734e3094be6d46533"
+    },
+    {
+      "path": "entry.json",
+      "sha256": "7940dd06bf63149d1f61f31af33b163672cf09d9835c202d4c6ce221067dd012"
+    },
+    {
+      "path": "verifier.mjs",
+      "sha256": "659b485f9af577f50faa0d8cf76b78bdd7265b593b325e12bcd0f2e844738ac8"
+    }
+  ],
+  "scope": "Only SEM member routing and scoped evidence references changed. Parent artifacts and frozen sources authenticated;100 requirement lines still match current formal vectors. Other members/successors unchanged. No new runtime regression, current-browser qualification, language admission or complete-vector acceptance inferred."
+}

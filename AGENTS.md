@@ -54,6 +54,9 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 **Current routing (2026-10-20):** Observability Workbench IN PROGRESS, owner-authorized.
 Start docs/planning/OBSERVABILITY_WORKBENCH_BATCH_V8_PROGRESS.md.
+SEM coverage ledger reconciled to retained rev3:100 scoped vector pointers,
+31 negative witnesses/10 acceptance items; zero complete Workbench vectors inferred.
+See workbench-sem-ledger-rev1; language/participation/full entry remain open.
 Disposition score matrix projection PASS270 retained resolutions/416 draws/1248 cells;
 42 automatic/20 absent records preserve no-draw status. UI integration remains due;
 this is score arithmetic, not the required latent-state visualization or player language.
