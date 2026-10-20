@@ -89,7 +89,7 @@ Browser continuity correction: older tabs closed after missed turn-scoped marks.
 Inventory confirmed only1/25 survived. Interrupted7/6/24 do NOT establish completion.
 Replacement full BatchV8 tab26 (4185) RUNNING, last518/947 roles3642 prefixes.
 Disposition horizon tab27 (4202) CRASHED before terminal verification; failure retained.
-At EVERY turn mark current workbenchLiveTabs:1,25,26,27,28,29,30,31,32,33,34,35,36. Do not use stale handles.
+At EVERY turn mark current workbenchLiveTabs:1,25,26,27,28,29,30,31,32,33,34,35,36,37. Do not use stale handles.
 Disposition horizon revision2 last verified16 Working; no terminal PASS. Investigate resource use before retry.
 Run/Pause prefix1 five native identities PASS. Terminal and six-mode checks remain due.
 Retained event-state build keyboard filter/selection/disclosure PASS with unchanged
@@ -145,6 +145,11 @@ seven laws PASS, including one Plastic batch. Browser positive constitution1,
 opposing signals and evaluation-read link PASS; retain tab36/4212. Test-target
 compatibility failure preserved in canonical-provenance-rev1; rev2 TypeScript and
 two targeted tests PASS, identical runtime. No full-horizon/complete provenance claim.
+Paged task-source provenance connected: six native evaluations/three programs,
+three checkpoint restores and synthetic source-boundary tests PASS. Browser baseline1
+origin tables/exact output link/five identities PASS; tab37/4213 retained. Typecheck,
+build600, research and boundary checks PASS. Native nonzero situational/forecast
+coverage remains unavailable; no complete language or integrated-entry claim.
 Six-mode migration, comparison/provenance/player language and full entry remain due.
 Disposition recorded choice comparison implemented with exact A/B decision links.
 Choice audit revision1 hit verifier string-size limit after prefix13; failure retained.

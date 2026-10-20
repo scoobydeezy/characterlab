@@ -12,6 +12,12 @@ export function dispositionTaskSources(event:TimelineEvent,seamVersion:string){
  if(!factors.emitted)return {...header,emitted:false as const,rows:[],meanings:[]};
  const reasons=JSON.parse(event.output)[1],raw=rec(reasons['Raw [4]'],'TaskRawSignalContext#403/1'),options=rec(raw['CandidateOptions [2]'],'TaskCandidateOptions#398/1');
  if(key(options)!==key(reasons['Options [3]']))throw Error('Task-source options lineage mismatch');
+ return dispositionTaskSourcesFromOperands(event,seamVersion,factors,raw,options);
+}
+/** Shared accounting after the reader validates raw/options lineage. */
+export function dispositionTaskSourcesFromOperands(event:Pick<TimelineEvent,'id'|'instant'>,seamVersion:string,factors:Pick<ReturnType<typeof dispositionFactorSources>,'rows'>,raw:any,options:any){
+ if(seamVersion!=='disposition-public/0.1-candidate')throw Error('Unqualified task-source profile');
+ const header={version:'disposition-task-sources/0.1',seamVersion,eventId:event.id,instant:event.instant};
  const motive=rec(options['MotiveContext [2]'],'TaskMotiveContext#394/1'),concern=rec(motive['Concern [2]'],'TaskConcern#388/1'),appraisal=rec(concern['Appraisal [2]'],'TaskAppraisal#384/1'),workspace=rec(appraisal['Workspace [2]'],'TaskWorkspace#381/1'),forecast=rec(workspace['Forecast [5]'],'WorkspaceForecast#380/1');
  if(!['1','2'].includes(forecast['VariantTag [1]']))throw Error('Unknown task forecast variant');
  const evidence=forecast['VariantTag [1]']==='1'?[]:list(rec(forecast['PredictionValue [2]'],'MeasurementPrediction#361/1')['EvidenceBasis [2]']);

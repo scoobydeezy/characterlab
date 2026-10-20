@@ -660,6 +660,35 @@ coverage or resource qualification. Six-mode integration, comparison, remaining
 provenance/player language and the full entry demonstration remain open. No C3
 verdict or obligation changes; all18 conditional obligations remain.
 
+## Paged task-source provenance — 2026-10-20
+
+The `taskSources` diagnostic now joins candidate origins to task motive pressure,
+concern responses, forecast evidence and raw signal accounting through canonical
+records. The reader validates options lineage and projects the selected operands;
+it does not format the full nested workspace history. Both readers share the
+existing arithmetic and source-key matching. The reusable report renderer shows
+exact origin tables and opens the original event output through revision-bound paging.
+
+`workbench-disposition-canonical-task-sources-rev1/receipt.json` PASS two tests:
+six evaluations (baseline, Pressure and ConstitutionPositive through2), original
+reader and authenticated retained-report parity, immutable checkpoints, stale
+revision rejection and three prefix1 restores. Synthetic scalar-zero remains
+distinct from unavailable; changed source strength, wrong stage/version and absent
+output controls pass. These synthetic controls do not establish new native admissions.
+
+`workbench-disposition-paged-task-sources-ui-rev1/receipt.json` PASS baseline1:
+complete diagnostic and rendered report, two expanded origin tables, the first4096
+units of original reason18 output, and five unchanged native identities. Screenshot
+inspected; tab37/4213 retained. TypeScript/build600 modules and restored research/
+boundary checks PASS. Original replay and BatchV8 source bindings remain unchanged.
+
+LOCAL DISPOSITION: the retained source corpus has unavailable concern responses
+and no situational signals. This migration preserves that limitation; it does not
+qualify native nonzero situational responses or forecast evidence. Full-horizon
+successor checks, six-mode migration, comparison, observer-safe player language and
+the integrated entry demonstration remain open. No C3 semantics, verdicts,
+candidate laws, source restrictions or18 conditional obligations change.
+
 ## Recorded score matrix projection — 2026-10-20
 
 `dispositionScoreMatrix.ts`, `disposition-score-matrix/0.1`, prepares a detached

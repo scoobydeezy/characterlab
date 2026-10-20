@@ -11,7 +11,8 @@ import {dispositionCanonicalFactorSources} from './dispositionCanonicalFactorSou
 import {dispositionCanonicalCalibration} from './dispositionCanonicalCalibration';
 import {canonicalEventState} from './canonicalEventState';
 import {dispositionCanonicalProvenance} from './dispositionCanonicalProvenance';
-export type DispositionDiagnosticSelection={kind:'storedState'}|{kind:'architecture'}|{kind:'reasons';eventId:string}|{kind:'resolution';eventId:string}|{kind:'factorSources';eventId:string}|{kind:'calibration';eventId:string}|{kind:'eventState';eventId:string}|{kind:'provenance';eventId:string};
+import {dispositionCanonicalTaskSources} from './dispositionCanonicalTaskSources';
+export type DispositionDiagnosticSelection={kind:'storedState'}|{kind:'architecture'}|{kind:'reasons';eventId:string}|{kind:'resolution';eventId:string}|{kind:'factorSources';eventId:string}|{kind:'calibration';eventId:string}|{kind:'eventState';eventId:string}|{kind:'provenance';eventId:string}|{kind:'taskSources';eventId:string};
 /** Worker-side dispatch over one trusted native revision. This is not external save authentication. */
 export function dispositionCanonicalInspection(summary:DispositionInspectionSummary,state:CanonicalValue|(()=>CanonicalValue),trace:readonly CanonicalValue[],saveHash:string,selection:DispositionDiagnosticSelection){
  if(saveHash!==summary.saveHash)throw Error('Stale DISPOSITION diagnostic revision');
@@ -45,6 +46,10 @@ export function dispositionCanonicalInspection(summary:DispositionInspectionSumm
   case 'calibration':{
    const event=events.find(e=>e.id===selection.eventId);if(!event)throw Error('Unknown DISPOSITION calibration event');
    return {...envelope,selection:{kind:selection.kind,eventId:selection.eventId},report:dispositionCanonicalCalibration(event,event.input,event.output,event.reads,summary.seamVersion)};
+  }
+  case 'taskSources':{
+   const event=events.find(e=>e.id===selection.eventId);if(!event)throw Error('Unknown DISPOSITION task-source event');
+   return {...envelope,selection:{kind:selection.kind,eventId:selection.eventId},report:dispositionCanonicalTaskSources(event,event.output,event.reads,summary.seamVersion)};
   }
   case 'provenance':{
    const event=events.find(e=>e.id===selection.eventId);if(!event)throw Error('Unknown DISPOSITION provenance event');
