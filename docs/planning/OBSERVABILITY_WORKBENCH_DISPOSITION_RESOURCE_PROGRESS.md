@@ -199,3 +199,33 @@ inspect screenshot and write a terminal verifier receipt. Broader six-mode,
 all-program, resource/latency and factor/architecture migration remain open.
 Native paged baseline audit7413 was last observed prefix10/18; original replay28212
 program5/15 prefix12/18. Both remain independently live and source-frozen.
+
+## 2026-10-20 canonical factor and activity readers
+
+Prepared `inspectDispositionCanonicalReasons` returns the exact existing qualified
+reason-diagnostics shape directly from admitted canonical output. It retains strict
+stage/version/operand-result lineage, distinct constitution/plastic/standing/effective/
+feedback, qualification count and all compiled nuclei/coverage/distributions. It
+formats only requested result subtrees, not the complete output and history. Lineage
+still encodes canonical values for equality; no constant-memory claim is made.
+
+Prepared `canonicalActivityIndex` reads trace147/148 records and authoritative state
+paths directly. It preserves the original activity rows/counts/event links and exact
+path labels without formatting entire event inputs/outputs or read/diff payloads.
+`equalCanonicalText` compares streaming readable text, preserving the existing meaning
+of changed values: signed1, unsigned1 and text1 render equally even though their
+canonical encodings differ. This is diagnostic equality, not native state equivalence.
+
+`workbench-disposition-canonical-diagnostics-rev1` freezes sources and records PASS:
+three tests, factor parity four original programs at prefixes1/2, all activity rows
+for three programs at prefixes0/1/2, malformed lineage/type/stage and duplicate-ID
+controls,64 equality pairs, unchanged checkpoints. TypeScript/boundary checks PASS.
+These finite probes do not establish full-horizon or all-program coverage. Existing
+scope text and18 conditional obligations survive; no new psychological verdict.
+
+Original replay, batch, paged native and paged browser source sets are unchanged.
+Readers are prepared for worker-side diagnostic requests after those relevant freezes
+finish. Integrating them must preserve event/revision identities, exact factor tables,
+source links, architecture ownership distinctions and historical selections. Do not
+substitute this bounded parity result for terminal browser resource qualification.
+Paged browser last observed prefix6 Working; native paged audit prefix13 PASS.
