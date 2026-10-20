@@ -128,3 +128,43 @@ semantics. Verify parity against original archived snapshots, then full-horizon
 browser mode/content/history and actual resource behavior. Avoid changing the live
 replay adapter until its current source-bound run completes; new modules can reuse
 unchanged native code. All18 conditional obligations and source limits survive.
+
+## 2026-10-20 revision-bound paged adapter and worker
+
+LOCAL DISPOSITION: add a separate inspection route using unchanged accepted native
+factory/model/calendar/seed, while the original replay run retains its source freeze.
+`DispositionPagedRun` publishes only identity/constitution/law/prefix metadata,
+all event headers and state paths. It retains canonical state, complete trace and
+mechanism projection internally. `textPage(saveHash, selector, offset, limit)`
+selects current state, mechanism projection or any historical event's raw trace
+record/input/output/draws/quantization/reads/diffs. Stale revisions, unknown targets,
+invalid bounds and concurrent commands fail explicitly. All original events remain
+addressable; no UI projection enters native state. Native checkpoint format and
+128MB save bound remain the original contract.
+
+Bounded parity test PASS prefixes0/1/2: five native identity hashes, full headers,
+state descriptors, selected text pages and total lengths, every event's full source
+record/read/diff formatting oracle, unchanged checkpoint, restore1, detached summary
+and old event0 output after advancement. Worker command test PASS create/advance,
+page reply, stale/bounds/overlap rejection, checkpoint and restore. TypeScript and
+boundary checks PASS. A readonly trace-property type error is retained in
+workbench-disposition-paged-development-rev1; corrected declaration changes no runtime.
+
+Full baseline native qualification RUNNING: session7413,
+`scripts/check-workbench-disposition-paged.mjs`, root
+`workbench-disposition-paged-rev1`. Prefix0/1 passed at start; target19 prefixes,
+180 headers. It authenticates original archives, compares all metadata/identities,
+all paths/headers and sampled projection/state/first-last-event pages. A terminal
+receipt is required. This does not claim every page or all15 programs. Process
+memory observations include parsing the original audit archive and cannot prove
+browser memory bounds. Do not edit its frozen sources while live; UI modules not
+bound by this new freeze may be developed independently. Keep original replay28212
+and browser BatchV8 running. Poll exact handles rather than infer completion.
+
+The paged worker/client are prepared but no existing six-mode UI has been replaced.
+Next: integrate a revision-labelled paged text surface and event navigation with the
+worker, preserving historical selections; bridge required qualified factor and
+architecture reports without fetching an entire text snapshot. Then qualify browser
+full-horizon content/replay/resource behavior. Retained canonical decoding/native
+snapshot construction can still be large; this change does not prove those costs
+are solved. All Campaign3 qualifications and18 conditional obligations survive.

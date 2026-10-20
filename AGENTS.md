@@ -100,7 +100,9 @@ These are serialized diagnostic sizes, not heap or checkpoint-size claims.
 Start OBSERVABILITY_WORKBENCH_DISPOSITION_RESOURCE_PROGRESS.md; no heap claim.
 Terminal string census baseline408MB/276MB unique; largest451MB/304MB unique.
 Prepared exact canonical text paging PASS2 tests/typecheck; not wired to UI.
-Next revision-bound on-demand worker inspection; preserve live158/277 source bindings.
+Paged adapter/worker/client prepared: bounded parity0/1/2 and worker/restore tests PASS.
+Full baseline paged audit session7413 RUNNING; freeze workbench-disposition-paged-rev1.
+Do not edit its bound sources. UI integration remains due; preserve live158/277 bindings.
 Disposition recorded choice comparison implemented with exact A/B decision links.
 Choice audit revision1 hit verifier string-size limit after prefix13; failure retained.
 Corrected choice audit PASS30 contrasts/570 reports/5130 cumulative rows.
