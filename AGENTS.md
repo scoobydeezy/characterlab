@@ -54,6 +54,10 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 **Current routing (2026-10-20):** Observability Workbench IN PROGRESS, owner-authorized.
 Start docs/planning/OBSERVABILITY_WORKBENCH_BATCH_V8_PROGRESS.md.
+Disposition full-horizon browser tab24 (4202) RUNNING toward18; keep it alive.
+Run/Pause prefix1 five native identities PASS. Terminal and six-mode checks remain due.
+Snapshot byte census94905 RUNNING across285 archives with streaming decompression.
+Start OBSERVABILITY_WORKBENCH_DISPOSITION_RESOURCE_PROGRESS.md; no heap claim.
 Disposition recorded choice comparison implemented with exact A/B decision links.
 Choice audit revision1 hit verifier string-size limit after prefix13; failure retained.
 Corrected audit89511 RUNNING:30 contrasts/all19 prefixes; immutable choice-rev2 sources.
