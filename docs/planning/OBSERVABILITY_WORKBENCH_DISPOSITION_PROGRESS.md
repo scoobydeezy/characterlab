@@ -591,6 +591,29 @@ character testimony or concluding that unavailable concern means no concern.
 This is workbench qualification, not a new Campaign3 verdict or obligation closure.
 All18 conditional obligations and historical source restrictions survive.
 
+## Recorded score matrix projection — 2026-10-20
+
+`dispositionScoreMatrix.ts`, `disposition-score-matrix/0.1`, prepares a detached
+matrix of recorded reason nuclei by signed face/standing/situational components.
+Each row retains exact candidate and nucleus identities and sums to its recorded
+contribution. Event-local color coordinates are explicitly truncated to1/10000 of
+the maximum absolute component; exact integers remain authoritative. Automatic
+and absent resolutions have no sampled rows, not synthesized zero scores.
+
+`workbench-disposition-score-matrix-rev1/receipt.json` PASS all15 programs/270
+authenticated retained resolution reports,416 draws/1248 cells,42 automatic and20
+absent resolutions. Exact signed components and sums, deterministic detached
+projection and seven rejection controls pass. All observed components are nonnegative;
+negative-cell rendering is not qualified by this corpus. The parent resolution audit
+provides the original native event linkage; this is not a fresh runtime replay.
+
+LOCAL DISPOSITION: this is a decision-score matrix, not latent character state or
+a personality embedding. It does not discharge the integrated demonstration's
+character-state matrix/vector or player-language requirements. The projection is
+prepared but not yet connected to the running UI: current Disposition sources remain
+frozen for replay/horizon qualification. Next integrate after those audits release
+their source bindings, then verify actual rendering and exact event navigation.
+
 ## Event-state keyboard controls — 2026-10-20
 
 `workbench-disposition-event-state-keyboard-rev1/receipt.json` PASS on the retained
