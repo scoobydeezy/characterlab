@@ -75,6 +75,9 @@ General matrix/vector and complete integrated-demo obligations remain open.
 Disposition canonical correspondence PASS15/285:836 mapped/285 truth-side support
 path observations; three existing boxes, no new edges or necessity claim.
 Browser Plastic1/Refold0 tables and baseline→original reasons event link PASS.
+Disposition reason→decision→intent linkage PASS270 events/250 emitted resolutions:
+416 reason draws/39 ties;208 rolled/42 Auto. Browser1/2 tables, historical stability
+and exact decision19/intent20 links PASS. Mode names do not grant player disclosure.
 Disposition constitutional slider now creates the declared pair; either committed
 branch opens across Character/Reasoning/Timeline/Architecture with shared identities.
 Bounded native/browser0/1/2, both branch1 records, historical stability and independent

@@ -590,6 +590,37 @@ LOCAL DISPOSITION: qualify this version-bound dataflow inspector without grantin
 character testimony or concluding that unavailable concern means no concern.
 This is workbench qualification, not a new Campaign3 verdict or obligation closure.
 All18 conditional obligations and historical source restrictions survive.
+
+## Recorded factor-to-resolution linkage — 2026-10-20
+
+`dispositionResolution.ts` profile `disposition-resolution-inspection/0.1` follows
+the selected reasons event through actual parent links to phase60 decision and
+phase70 intent. Exact copied reasons/context and decision/resolution payloads must
+match. Nucleus keys join recorded dice to their factors; die/modifier values,
+trace membership, face and signed contribution are checked. All trace draws are
+accounted for by reason draws or the recorded tie draw. Inactive records stay empty.
+The UI opens the exact decision and intent events from the historical reason.
+
+`workbench-disposition-resolution-rev1/receipt.json` PASS15 original programs/
+270 reasons events/250 emitted resolutions:416 reason draws,39 tie records,
+208 PlayerFacingRoll and42 Auto modes. No QuietRoll instance occurs in this corpus.
+Broken parent links, modified output payload and unknown seam reject.
+This verifies recorded lineage/arithmetic; analytical probabilities and tie
+selection remain exposed original diagnostics, not newly independently recalculated.
+TypeScript/build583 modules, boundary and restored research checks PASS.
+
+LOCAL DISPOSITION: the native mode name PlayerFacingRoll does not grant an observer
+disclosure contract. Chosen intent remains distinct from execution and independent
+causal necessity. This advances connected factor/resolution inspection without
+closing player-language, matrix/vector or full integrated-entry obligations.
+No Campaign3 semantics, verdict, law or comparator disposition changes.
+
+`workbench-disposition-resolution-ui-rev1/receipt.json` PASS Plastic Main
+prefixes1/2: complete reports, every displayed draw-table cell and five native
+identities match the archived source. At prefix2, selecting historical reason18
+preserves its original report and opens exact decision19 and intent20.
+Screenshot inspected. This does not establish all-mode browser coverage or qualify
+player disclosure, probability semantics or the complete integrated demonstration.
 Observer-safe narrative, live charts/vector views, integrated summary export and
 complete §32 acceptance remain due. Native replay and BatchV8 remain in progress.
 
