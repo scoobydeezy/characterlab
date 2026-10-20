@@ -556,3 +556,29 @@ were reauthenticated before releasing their current-source hold. Worker/client/U
 integration can now proceed while preserving these completed revisions and the
 retained tab/build. The original full-snapshot replay28212 and BatchV8 browser still
 run and retain their separate source holds. No Campaign3 verdict or obligation change.
+
+## 2026-10-20 paged diagnostic worker integration
+
+The paged adapter, worker and client now expose a diagnostic command carrying an
+expected saveHash and one of seven selections: stored state, architecture, reasons,
+resolution, factor sources, calibration or event state. The adapter supplies its
+own current summary and canonical trace, so callers cannot substitute unrelated
+payloads. Existing command locks and stale-revision checks remain enforced.
+
+The adapter retains its detached encoded state snapshot for state-dependent reports.
+The dispatcher accepts a lazy state decoder: only stored-state/architecture requests
+decode it; event-based reports use the canonical trace directly. This avoids a new
+permanently retained decoded state tree, but the retained encoded bytes and transient
+decode still have resource cost. The earlier terminal browser proof does not qualify
+this successor's resource use or diagnostic operations at every horizon.
+
+Both expanded paged tests PASS: original native parity/paging/checkpoints at0/1/2,
+all seven report kinds, independent existing report comparisons, detached identity,
+lazy state loading, stale request rejection and exact restore1. Worker-handler tests
+cover all commands at1, missing/unknown selection, overlapping advancement, unchanged
+checkpoints and reports after restore. These are native/worker-handler tests; the
+actual browser worker/client and UI panels still require integration qualification.
+Only original replay and BatchV8 retain live source holds; both remain exact.
+
+TypeScript,598-module isolated build, boundary/research checks PASS. Existing large
+chunks remain. Native runtime semantics and all18 conditional obligations survive.

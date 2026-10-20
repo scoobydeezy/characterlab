@@ -134,6 +134,9 @@ Calibration report renderer PASS270 reports/500 nuclei/22500 exact table cells;
 existing inspector delegates to it. Paged worker connection remains due.
 Canonical event-state metadata PASS90 observations through2: exact paths/presence/
 readable changes, paged source indices, history and dispatcher identity. UI remains due.
+Paged adapter/worker/client now dispatch seven diagnostic kinds. Two expanded tests
+PASS native0/1/2 + worker/restore1; lazy encoded-state decode and stale/concurrent
+guards. Typecheck/build PASS. Start paged-diagnostics-rev1; next mount UI panels.
 Disposition recorded choice comparison implemented with exact A/B decision links.
 Choice audit revision1 hit verifier string-size limit after prefix13; failure retained.
 Corrected choice audit PASS30 contrasts/570 reports/5130 cumulative rows.

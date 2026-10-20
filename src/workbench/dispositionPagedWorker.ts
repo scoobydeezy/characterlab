@@ -1,7 +1,8 @@
 import {DispositionPagedRun,type DispositionTextSelector} from './dispositionPagedAdapter';
 import type {DispositionCheckpoint} from './dispositionAdapter';
+import type {DispositionDiagnosticSelection} from './dispositionCanonicalInspection';
 let run:DispositionPagedRun|undefined,busy=false;
-self.addEventListener('message',async(event:MessageEvent<{id:number;operation:string;program?:string;checkpoint?:DispositionCheckpoint;saveHash?:string;selector?:DispositionTextSelector;offset?:number;limit?:number}>)=>{
+self.addEventListener('message',async(event:MessageEvent<{id:number;operation:string;program?:string;checkpoint?:DispositionCheckpoint;saveHash?:string;selector?:DispositionTextSelector;selection?:DispositionDiagnosticSelection;offset?:number;limit?:number}>)=>{
  const q=event.data;if(busy){self.postMessage({id:q.id,error:'DISPOSITION inspection command already in flight'});return;}busy=true;
  try{
   let result:unknown;
@@ -11,6 +12,7 @@ self.addEventListener('message',async(event:MessageEvent<{id:number;operation:st
   else if(q.operation==='advance'){const moved=await run.advance();result={moved,summary:run.summary()};}
   else if(q.operation==='checkpoint')result=run.checkpoint();
   else if(q.operation==='textPage'){if(!q.selector||typeof q.saveHash!=='string')throw Error('Missing text selection');result=run.textPage(q.saveHash,q.selector,q.offset,q.limit);}
+  else if(q.operation==='diagnostic'){if(!q.selection||typeof q.saveHash!=='string')throw Error('Missing diagnostic selection');result=run.diagnostic(q.saveHash,q.selection);}
   else throw Error('Unknown DISPOSITION inspection command');
   self.postMessage({id:q.id,result});
  }catch(e){self.postMessage({id:q.id,error:e instanceof Error?e.message:String(e)});}finally{busy=false;}

@@ -12,7 +12,7 @@ import {dispositionCanonicalCalibration} from './dispositionCanonicalCalibration
 import {canonicalEventState} from './canonicalEventState';
 export type DispositionDiagnosticSelection={kind:'storedState'}|{kind:'architecture'}|{kind:'reasons';eventId:string}|{kind:'resolution';eventId:string}|{kind:'factorSources';eventId:string}|{kind:'calibration';eventId:string}|{kind:'eventState';eventId:string};
 /** Worker-side dispatch over one trusted native revision. This is not external save authentication. */
-export function dispositionCanonicalInspection(summary:DispositionInspectionSummary,state:CanonicalValue,trace:readonly CanonicalValue[],saveHash:string,selection:DispositionDiagnosticSelection){
+export function dispositionCanonicalInspection(summary:DispositionInspectionSummary,state:CanonicalValue|(()=>CanonicalValue),trace:readonly CanonicalValue[],saveHash:string,selection:DispositionDiagnosticSelection){
  if(saveHash!==summary.saveHash)throw Error('Stale DISPOSITION diagnostic revision');
  if(summary.version!=='disposition-paged-inspection/0.1'||summary.seamVersion!==VERSION||!Number.isInteger(summary.prefix)||summary.prefix<0||summary.prefix>18||summary.clock!==String(summary.prefix)||summary.complete!==(summary.prefix===18)||trace.length!==summary.prefix*10||summary.timeline.length!==trace.length)throw Error('DISPOSITION diagnostic prefix mismatch');
  const events=trace.map(value=>{
@@ -28,9 +28,10 @@ export function dispositionCanonicalInspection(summary:DispositionInspectionSumm
  }
  const identity={program:summary.program,seamVersion:summary.seamVersion,prefix:summary.prefix,modelHash:summary.modelHash,runHash:summary.runHash,stateHash:summary.stateHash,saveHash:summary.saveHash};
  const envelope={version:'disposition-canonical-inspection/0.1',identity};
+ const currentState=()=>typeof state==='function'?state():state;
  switch(selection.kind){
-  case 'storedState':return {...envelope,selection:{kind:selection.kind},report:dispositionCanonicalStoredState(summary,state)};
-  case 'architecture':return {...envelope,selection:{kind:selection.kind},report:dispositionCanonicalArchitecture(summary,state,trace)};
+  case 'storedState':return {...envelope,selection:{kind:selection.kind},report:dispositionCanonicalStoredState(summary,currentState())};
+  case 'architecture':return {...envelope,selection:{kind:selection.kind},report:dispositionCanonicalArchitecture(summary,currentState(),trace)};
   case 'reasons':{
    const event=events.find(e=>e.id===selection.eventId);if(!event)throw Error('Unknown DISPOSITION reason event');
    return {...envelope,selection:{kind:selection.kind,eventId:selection.eventId},report:inspectDispositionCanonicalReasons(event,event.output)};

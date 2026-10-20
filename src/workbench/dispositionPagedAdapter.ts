@@ -11,6 +11,7 @@ import {scalar} from './nativeTimeline';
 import {canonicalTextPage,EXACT_TEXT_PAGE_LIMIT} from './canonicalTextStream';
 import {encodeCheckpointHex,decodeCheckpointHex} from './largeCheckpointHex';
 import {DISPOSITION_MAX_SAVE_BYTES,type DispositionCheckpoint} from './dispositionAdapter';
+import {dispositionCanonicalInspection,type DispositionDiagnosticSelection} from './dispositionCanonicalInspection';
 function original(id:string){const row=plan.runs.find(r=>r.law+'/'+r.name===id);if(!row)throw Error('Unknown frozen DISPOSITION program');const c=dispositionCase(row as DispositionCase);return {row,...c,source:dispositionRecipe(c.profile),initialState:dispositionInitial(),orderedInputs:dispositionOrdered(c.profile,c.frames)};}
 function header(value:CanonicalValue){
  const row=rec(value,160n),event=rec(field(row,4n),130n);
@@ -25,6 +26,7 @@ export type DispositionInspectionSummary=ReturnType<DispositionPagedRun['summary
 export class DispositionPagedRun{
  #run:NativeRun;#program:string;#prefix=0;#busy=false;
  #trace:readonly CanonicalValue[]=[];#projection!:CanonicalValue;#state=new Map<string,CanonicalValue>();
+ #stateEncoding!:Uint8Array;
  #view!:{version:'disposition-paged-inspection/0.1';program:string;seamVersion:string;constitution:string;law:string;prefix:number;complete:boolean;clock:string;modelHash:string;runHash:string;stateHash:string;saveHash:string;projectionHash:string;fields:{root:string;path:string}[];timeline:ReturnType<typeof header>[]};
  private constructor(run:NativeRun,program:string){this.#run=run;this.#program=program;}
  static async create(program='Plastic/Main'){
@@ -35,6 +37,9 @@ export class DispositionPagedRun{
  }
  #ready(){if(this.#busy)throw Error('DISPOSITION command in flight');}
  summary(){this.#ready();return structuredClone(this.#view);}
+ diagnostic(saveHash:string,selection:DispositionDiagnosticSelection){
+  this.#ready();return dispositionCanonicalInspection(this.#view,()=>decode(this.#stateEncoding),this.#trace,saveHash,selection);
+ }
  textPage(saveHash:string,selector:DispositionTextSelector,offset=0,limit=EXACT_TEXT_PAGE_LIMIT){
   this.#ready();if(saveHash!==this.#view.saveHash)throw Error('Stale DISPOSITION inspection revision');
   let value:CanonicalValue|undefined;
@@ -60,7 +65,7 @@ export class DispositionPagedRun{
  async #refresh(){
   const o=original(this.#program),s=this.#run.snapshot(),projection=this.#run.characterProjection(),trace=items(decode(s.trace),'list'),state=restoreAuthoritativeState(decode(s.state)).entries();
   const timeline=trace.map(header);if(new Set(timeline.map(e=>e.id)).size!==timeline.length)throw Error('Duplicate DISPOSITION event');
-  this.#state=new Map(state.map(e=>[exactKey(statePathValue(e.path)),e.value]));this.#trace=trace;this.#projection=decode(projection);
+  this.#state=new Map(state.map(e=>[exactKey(statePathValue(e.path)),e.value]));this.#trace=trace;this.#projection=decode(projection);this.#stateEncoding=s.state;
   this.#view={version:'disposition-paged-inspection/0.1',program:this.#program,seamVersion:VERSION,constitution:o.profile.constitution===0?'0/1':o.profile.constitution+'/8',law:o.profile.law,prefix:this.#prefix,complete:this.#prefix===18,clock:String(s.clock??0),modelHash:await digest(this.#run.modelIdentity()),runHash:await digest(this.#run.runIdentity()),stateHash:await digest(s.state),saveHash:await digest(this.#run.save()),projectionHash:await digest(projection),fields:state.map(e=>({root:String(e.path.rootStateTypeId),path:exactKey(statePathValue(e.path))})),timeline};
  }
 }
