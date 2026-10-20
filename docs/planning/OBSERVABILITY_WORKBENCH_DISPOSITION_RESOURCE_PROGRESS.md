@@ -385,3 +385,25 @@ do not create or establish browser qualification. The actual browser capture and
 screenshot remain due; the running tab33 must stay intact. Full six-mode behavior,
 all-program coverage, terminal checkpoint restore and heap/latency bounds remain
 separate gates. No Campaign3 verdict, obligation closure or law selection.
+
+## 2026-10-20 reusable Reasoning report renderer
+
+DispositionReasonReportPanel now accepts a detached reason diagnostic, and the
+existing Reasoning panel delegates its operand/nucleus display to this renderer.
+The original event selector, researcher explanations, resolution, task sources,
+provenance, factor sources, calibration and raw event remain in the parent panel.
+This prepares the canonical worker report path without replacing its provenance
+views or implying that the complete paged migration has been connected.
+
+workbench-disposition-reason-render-rev1 PASS all109 retained bounded diagnostic
+reports (100 emitted/9 absent,200 nuclei across23 prefix snapshots). Server rendering
+preserves five exact operands, all seven nucleus terms, exact candidate keys,
+coverage and mechanical distributions, complete embedded report and scope. No-report
+and no-emission cases have no invented table. Source reports remain unchanged.
+This is the existing bounded cohort, not full15-program or browser qualification.
+All four live source sets remain exact. No new player language, character knowledge,
+runtime law or Campaign3 verdict; all18 conditional obligations remain.
+
+TypeScript and isolated597-module production build PASS; existing large-chunk
+warnings remain. Boundary/research checks PASS. No fresh browser qualification
+is inferred from server rendering or this structural extraction.

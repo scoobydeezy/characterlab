@@ -120,6 +120,8 @@ object-spread size finding retained. No latent-vector or paged UI integration cl
 Canonical diagnostic dispatcher PASS3 programs through2: save-revision/header joins,
 four original report types and historical stability; prepared for paged worker use.
 See workbench-disposition-canonical-inspection-rev1; integration remains due.
+Reason diagnostic renderer accepts detached reports: PASS109 bounded retained reports/
+200 nuclei; exact terms and source disclosures preserved. Paged connection remains due.
 Disposition recorded choice comparison implemented with exact A/B decision links.
 Choice audit revision1 hit verifier string-size limit after prefix13; failure retained.
 Corrected choice audit PASS30 contrasts/570 reports/5130 cumulative rows.
