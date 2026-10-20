@@ -131,6 +131,8 @@ Shared calibration arithmetic PASS270 frozen reports; canonical context/dispatch
 parity PASS3 programs through2. Typecheck/build PASS; paged integration remains due.
 Calibration report renderer PASS270 reports/500 nuclei/22500 exact table cells;
 existing inspector delegates to it. Paged worker connection remains due.
+Canonical event-state metadata PASS90 observations through2: exact paths/presence/
+readable changes, paged source indices, history and dispatcher identity. UI remains due.
 Disposition recorded choice comparison implemented with exact A/B decision links.
 Choice audit revision1 hit verifier string-size limit after prefix13; failure retained.
 Corrected choice audit PASS30 contrasts/570 reports/5130 cumulative rows.

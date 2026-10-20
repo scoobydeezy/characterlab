@@ -9,7 +9,8 @@ import {inspectDispositionCanonicalReasons} from './dispositionCanonicalReasons'
 import {dispositionCanonicalResolution} from './dispositionCanonicalResolution';
 import {dispositionCanonicalFactorSources} from './dispositionCanonicalFactorSources';
 import {dispositionCanonicalCalibration} from './dispositionCanonicalCalibration';
-export type DispositionDiagnosticSelection={kind:'storedState'}|{kind:'architecture'}|{kind:'reasons';eventId:string}|{kind:'resolution';eventId:string}|{kind:'factorSources';eventId:string}|{kind:'calibration';eventId:string};
+import {canonicalEventState} from './canonicalEventState';
+export type DispositionDiagnosticSelection={kind:'storedState'}|{kind:'architecture'}|{kind:'reasons';eventId:string}|{kind:'resolution';eventId:string}|{kind:'factorSources';eventId:string}|{kind:'calibration';eventId:string}|{kind:'eventState';eventId:string};
 /** Worker-side dispatch over one trusted native revision. This is not external save authentication. */
 export function dispositionCanonicalInspection(summary:DispositionInspectionSummary,state:CanonicalValue,trace:readonly CanonicalValue[],saveHash:string,selection:DispositionDiagnosticSelection){
  if(saveHash!==summary.saveHash)throw Error('Stale DISPOSITION diagnostic revision');
@@ -42,6 +43,10 @@ export function dispositionCanonicalInspection(summary:DispositionInspectionSumm
   case 'calibration':{
    const event=events.find(e=>e.id===selection.eventId);if(!event)throw Error('Unknown DISPOSITION calibration event');
    return {...envelope,selection:{kind:selection.kind,eventId:selection.eventId},report:dispositionCanonicalCalibration(event,event.input,event.output,event.reads,summary.seamVersion)};
+  }
+  case 'eventState':{
+   const index=events.findIndex(e=>e.id===selection.eventId);if(index<0)throw Error('Unknown DISPOSITION state event');
+   return {...envelope,selection:{kind:selection.kind,eventId:selection.eventId},report:canonicalEventState(trace[index])};
   }
   default:throw Error('Unknown DISPOSITION diagnostic selection');
  }

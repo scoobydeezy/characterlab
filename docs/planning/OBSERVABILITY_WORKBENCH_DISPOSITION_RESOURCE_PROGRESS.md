@@ -504,3 +504,26 @@ conditional obligations are unchanged.
 
 TypeScript,598-module isolated production build and boundary checks PASS. Existing
 large-chunk warnings remain; no bundle/heap bound is inferred.
+
+## 2026-10-20 compact canonical event-state diagnostics
+
+Prepared canonicalEventState projects each committed trace record into its exact
+event header, read paths/presence and mutation paths/before-after presence/change
+flags. Values remain in the original native reads/diffs lists; zero-based indices
+and event selectors support paging at the owning diagnostic save revision. The
+Disposition dispatcher adds eventState requests without changing the live worker.
+
+Changed preserves nativeTimeline's existing readable-text semantics through streamed
+comparison, including representation-equivalent readable values and explicit absence.
+It is not canonical byte inequality. Counts describe recorded operations at this
+event; they do not infer activity outside the instrumentation or causal necessity.
+Historical before/after inspection does not create an installable intermediate state.
+This prepares Timeline migration while preserving complete source records separately.
+
+Qualification PASS90 cumulative event observations from baseline/Refold/inactive-
+probes through2: exact original header/path/label/presence/change/count metadata,
+every referenced read and before/after value, source selectors and dispatcher save
+identity. Prior event reports and checkpoints remain unchanged. Synthetic signed/
+unsigned readable equality, presence transitions, both-absent and invalid presence
+controls pass. TypeScript/boundary/research PASS; all four live source sets unchanged.
+No full-horizon, other-seam or browser claim; no Campaign3 verdict/obligation change.
