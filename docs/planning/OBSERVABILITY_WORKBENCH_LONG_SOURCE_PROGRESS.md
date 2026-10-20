@@ -104,3 +104,27 @@ research checks PASS;18 conditional obligations remain. No runtime source, canon
 ownership, causal-effect claim, character evidence or psychological verdict changed.
 Canonical-box mapping, native derived-read sources, full factor language, remaining
 program traversal coverage and full entry acceptance remain required.
+
+## Complete original navigation coverage — 2026-10-20
+
+`workbench-long-navigation-rev2/receipt.json` closes the four-program traversal
+gap: representation-3-law-2, representation-4-law-2, empty and maximum-time.
+The continuation retains28 byte-verified prior results/476 prefixes and freshly
+executes4 programs/37 prefixes against nine native commitments. Combined coverage
+is32 original programs/513 prefixes,69377 cumulative event instances and44347 reads.
+Independent parent traversal, earlier exact-path read history, participation counts
+and snapshot-preservation checks pass. This does not repeat the native restore audit.
+
+`workbench-long-navigation-empty-ui-rev1/receipt.json` independently joins every
+saved navigation identity to its qualified native prefix and verifies the complete
+program union. The isolated4181 browser shows the empty Timeline without a stale
+event selector; run and step are disabled. Its complete Architecture participation
+report matches the qualified empty report: four present paths with zero recorded
+activity. Seven native hashes remain unchanged by navigation; no alert is present.
+The Timeline screenshot was inspected. No checkpoint file transfer is claimed.
+
+LOCAL DISPOSITION: original source traversal coverage is complete within these
+declared diagnostic contracts. All-program browser coverage, successor coverage,
+canonical ownership mapping, causal contribution and full factor language remain
+separate obligations. Campaign3 verdicts and18 conditional obligations are unchanged;
+the complete Workbench entry gate remains open.

@@ -1,0 +1,434 @@
+{
+  "status": "PASS COMPLETE ORIGINAL LONG NAVIGATION COVERAGE",
+  "sources": [
+    {
+      "path": "src/workbench/LongWorkbench.tsx",
+      "sha256": "6e066ad17509d2ba544ece1070571f03b47c329cd357d7b06f932e36eb6f7735"
+    },
+    {
+      "path": "src/workbench/CausalHistoryPanel.tsx",
+      "sha256": "5df00ef58cd5a29b88b8a48fc062fe6da8f3f67fccbfda8fcacc9ca08e69a96f"
+    },
+    {
+      "path": "src/workbench/StateReadHistoryPanel.tsx",
+      "sha256": "9338bea0a3e8c0a636e94c71efdd3bc4b41357c00c0e52ef539f3d1cffd43870"
+    },
+    {
+      "path": "src/workbench/ParticipationInspector.tsx",
+      "sha256": "ba8f38434aa0b4a8afc71b3ead72844cc4eeb05c53ba99dc809661d5158c6a58"
+    },
+    {
+      "path": "src/workbench/causalNavigation.ts",
+      "sha256": "b1ac6f44acd96c513091b21127d0ff4d9f9ce0111a5455557f36944be1f6d255"
+    },
+    {
+      "path": "src/workbench/stateReadHistory.ts",
+      "sha256": "82fc3f9c2dfedeb8a5c3cb06d368f0ce1d961382c8e6c39b8c99fd0feeafb40e"
+    },
+    {
+      "path": "src/workbench/participation.ts",
+      "sha256": "e3cef7cf06a9345d2bbad757921d5cbccfa3a61028b7f5eb653a908e2ed0661b"
+    },
+    {
+      "path": "scripts/check-workbench-long-navigation.mjs",
+      "sha256": "d4ee031f62ba8bbe46e9d6f4c538a9e2ebd5b1b2504451bb01ecbdc864b6eaa7"
+    },
+    {
+      "path": "docs/planning/workbench-long-comparison-cohort-rev1/receipt.json",
+      "sha256": "fe88387dcb37d046503cd828f8c6e141916401c45e0a56b7aa63cca7227509b3"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/evidence-join.json",
+      "sha256": "31a0d52c1767abd8db3eeffaba5372e92059c4e4b8f861204dad1e159801c476"
+    },
+    {
+      "path": "src/workbench/longAdapter.ts",
+      "sha256": "a3e09e1c30728d7ecf84bdc25ebae682296a3bed1c597bc69cae2936b24e818c"
+    },
+    {
+      "path": "src/workbench/longCatalog.json",
+      "sha256": "f17b2c8a4f72d9083a2c87e1174463244782127bfb436e0ac9f1510daeee875d"
+    },
+    {
+      "path": "src/workbench/canonical.ts",
+      "sha256": "f80f4a8353ea7604432d5ffcf0d4628f8b7bf13b82a06b4807445e9a9ba97bde"
+    },
+    {
+      "path": "src/workbench/nativeTimeline.ts",
+      "sha256": "ceed75f534e8158a2172ac962cab89aa9ffa5fcbaaf71e0d62347fd01a9c6775"
+    },
+    {
+      "path": "src/test/workbenchLong.test.ts",
+      "sha256": "398df74afd2099e235042ffa4ea2c26d543a68da6444f1d84b9910a5b2cc4aac"
+    },
+    {
+      "path": "scripts/build-workbench-long-catalog.mjs",
+      "sha256": "29c6e65f6bc2655f2ad4437c2c748a49affea1dd7726f3136c98e818c52a9d7f"
+    },
+    {
+      "path": "scripts/check-workbench-long.mjs",
+      "sha256": "83075c1a1445389a8cde5f9d2fc8efc33c46fb6958425b6f944f560e3ebf3629"
+    },
+    {
+      "path": "src/campaign3/longitudinalCodecs.ts",
+      "sha256": "8357930d0c34332c3959777527bb452dcaf04f35e2874bac02409da58945cb40"
+    },
+    {
+      "path": "src/campaign3/longitudinalFactory.ts",
+      "sha256": "7d1a2128b583ea0a6110f5abded1e489c34faed774a77f710d69ba10d26feb0f"
+    },
+    {
+      "path": "src/campaign3/longitudinalGoal.ts",
+      "sha256": "4165db457e89f0862481e182f6fbc8347ca6f1b562f687e9214d7b8bce6ae034"
+    },
+    {
+      "path": "src/campaign3/longitudinalGoalChoice.ts",
+      "sha256": "72c121c961bc88f1a6c2f6c0baba02f00489cbdfeee88c3328620d6891f53ce2"
+    },
+    {
+      "path": "src/campaign3/longitudinalHabit.ts",
+      "sha256": "8b122d38bce9f6684304d24103c0fc5d7d26550d751b297ed319431708de53cf"
+    },
+    {
+      "path": "src/campaign3/longitudinalHabitJoin.ts",
+      "sha256": "46ef03d179e0199b6ecc2bb884ac7f8c22ba031d27fad804d16f4c751634110c"
+    },
+    {
+      "path": "src/campaign3/longitudinalMath.ts",
+      "sha256": "bc135f1bf235ee32e0bc0bc4f17f3b51de2264c23dac9526de16e2b6d8640bf9"
+    },
+    {
+      "path": "src/campaign3/longitudinalModel.ts",
+      "sha256": "30e9fb70d40fba6a9b6e329916ab16fac173b1779928688798318c2d14dc5b70"
+    },
+    {
+      "path": "src/campaign3/longitudinalPersonalLoss.ts",
+      "sha256": "dad030f9ceac4b749f7f999b8abf2495c33f1d05257dfcadd4e4cb1b97ca0b30"
+    },
+    {
+      "path": "src/campaign3/longitudinalRoutine.ts",
+      "sha256": "41b8bee6929cf0c50e455336075a642f120a722a2719a8662457d84407ee8c21"
+    },
+    {
+      "path": "src/campaign3/longitudinalRuntime.ts",
+      "sha256": "498ccb755fe8491b6c6525063701b972e558eef56b9e559c3bda1883acd7db75"
+    },
+    {
+      "path": "docs/planning/campaign3-longitudinal-model-rev2/FREEZE.json",
+      "sha256": "5d72e471a1ec9ebfc6199029c42b29b8c9b2f052e1ce30d8e7db75890ad0e6c5"
+    },
+    {
+      "path": "docs/planning/LONGITUDINAL_PUBLIC_EXPERIMENT_PLAN_REV2.json",
+      "sha256": "3ef86715216a83ac75fb35567b9978627994560ca515b8a8254513ffc93911e5"
+    },
+    {
+      "path": "docs/planning/LONGITUDINAL_EXECUTION_PROBE_PLAN_REV1.json",
+      "sha256": "8d45fbf96fc615dee63c935e5c19ddc02a2bdffab084529a46391341cf954587"
+    },
+    {
+      "path": "docs/planning/LONGITUDINAL_PUBLIC_RUNS_REV2_PART0.json",
+      "sha256": "1fc673ffaaba20588d5bcd982a2db1a71cead0591aaddaf2e74e2e6fb490239e"
+    },
+    {
+      "path": "docs/planning/LONGITUDINAL_PUBLIC_RUNS_REV2_PART1.json",
+      "sha256": "f6cfb9647630fb1972782f87a3b1ec7bc89aee191c0c8217efcdc8446c3894c2"
+    },
+    {
+      "path": "docs/planning/LONGITUDINAL_PUBLIC_RUNS_REV2_PART2.json",
+      "sha256": "9094a87cee96fbde0d93112db8ef65521b3b4e9c001227afb2b405660d5f4c7e"
+    },
+    {
+      "path": "docs/planning/LONGITUDINAL_EXECUTION_PROBE_REV1.json",
+      "sha256": "9f158116cf9cadbcb28ce50dda82c940e76a875ecddffb3850acb2bf43a6309a"
+    },
+    {
+      "path": "docs/formal/LONGITUDINAL_PUBLIC_CONTRACT_REV2.md",
+      "sha256": "9475b6805f1a3fb549e82cfbef2dd471b2f8b54f1fce4fa3eb48d802614c58d2"
+    },
+    {
+      "path": "scripts/continue-workbench-long.mjs",
+      "sha256": "de399e42b912bd299dc6d2193f28f3ebef56c405ead059206f7dc48d6ed7cac1"
+    },
+    {
+      "path": "scripts/complete-workbench-long-navigation.mjs",
+      "sha256": "32f5117bdbced47adc3cf5b83bda42979a868b61ac0358c8046b13f989cdd877"
+    },
+    {
+      "path": "docs/planning/workbench-long-navigation-rev1/receipt.json",
+      "sha256": "004da845d13a8fd4787e59326da5fc690a51910cc1b9c2a2c1e82d7e956e1c28"
+    },
+    {
+      "path": "docs/planning/workbench-long-parity-rev2/receipt.json",
+      "sha256": "9e292a12dbd28f77ded8fd881563d9a8538e4811c8d9261eccc997f08ac2e8e2"
+    }
+  ],
+  "results": [
+    {
+      "program": "representation-1-law-1",
+      "path": "docs/planning/workbench-long-navigation-rev1/program-00.json",
+      "sha256": "0a749b2cbadbb79978ccf2f553511ee9747545043c7751f6e5a50cc84e662345",
+      "source": "docs/planning/workbench-long-comparison-cohort-rev1/program-00.json.gz",
+      "sourceSha256": "66c327eb9065e1eb9ed66d3838c060512cd740b3551e63e466431ec47f23c59d",
+      "inherited": true
+    },
+    {
+      "program": "representation-2-law-1",
+      "path": "docs/planning/workbench-long-navigation-rev1/program-01.json",
+      "sha256": "94871548ea6d682076f0c3598ce594d78cc300d29ef31073386348f3d8d60d7e",
+      "source": "docs/planning/workbench-long-comparison-cohort-rev1/program-01.json.gz",
+      "sourceSha256": "b1c3fc7334943b5ad00241ae6045eb0ca0e05eeb5a956be2b53d4ede6235aac0",
+      "inherited": true
+    },
+    {
+      "program": "representation-1-law-2",
+      "path": "docs/planning/workbench-long-navigation-rev1/program-02.json",
+      "sha256": "2a0a40907e3c6a147d4f97def66692ec10a396dc5c8d0d5b45f341787c5e4230",
+      "source": "docs/planning/workbench-long-comparison-cohort-rev1/program-02.json.gz",
+      "sourceSha256": "f606c72a188086c876381096a023023db219aef418527577665fd98b6f4cd09c",
+      "inherited": true
+    },
+    {
+      "program": "representation-2-law-2",
+      "path": "docs/planning/workbench-long-navigation-rev1/program-03.json",
+      "sha256": "2d740f9f8e3a7d1c7a55713c11f814e2d62e5986f50572310dbe0b19e584b414",
+      "source": "docs/planning/workbench-long-comparison-cohort-rev1/program-03.json.gz",
+      "sourceSha256": "af951d5a9398ca68d19d3569ccb8466b68deddc39ae68e2d98323b90871628c6",
+      "inherited": true
+    },
+    {
+      "program": "representation-3-law-1",
+      "path": "docs/planning/workbench-long-navigation-rev1/program-04.json",
+      "sha256": "64c75e8dbc1decb3c9dba53d76131fe8f3a41a781731e92f154b3ee8aae83b72",
+      "source": "docs/planning/workbench-long-comparison-cohort-rev1/program-04.json.gz",
+      "sourceSha256": "ebed442782e428d0088011e0faf3d2097d558509de5add952e352765da86148b",
+      "inherited": true
+    },
+    {
+      "program": "representation-4-law-1",
+      "path": "docs/planning/workbench-long-navigation-rev1/program-05.json",
+      "sha256": "a5e7aeb397effd0a9d3fff1e3f94605253034c3338612ec5279eb2d32c86461e",
+      "source": "docs/planning/workbench-long-comparison-cohort-rev1/program-05.json.gz",
+      "sourceSha256": "18b086500950e5a5a249fbe46c2c713b84701e91293d2e920fc50958d802b257",
+      "inherited": true
+    },
+    {
+      "program": "family-1",
+      "path": "docs/planning/workbench-long-navigation-rev1/program-06.json",
+      "sha256": "4d10cbda16364b79bb54e294a99aa1e666e48a913bc75b5c53b57a028eaaa1c8",
+      "source": "docs/planning/workbench-long-comparison-cohort-rev1/program-06.json.gz",
+      "sourceSha256": "b2f9da721955e211df14dd3f85466d995a123c80f2ec574eb44008e081af6119",
+      "inherited": true
+    },
+    {
+      "program": "family-2",
+      "path": "docs/planning/workbench-long-navigation-rev1/program-07.json",
+      "sha256": "eea585b668ebeeab5b9c1c6f07f237518a684f7ed7e52940bda5499ef3c7ca66",
+      "source": "docs/planning/workbench-long-comparison-cohort-rev1/program-07.json.gz",
+      "sourceSha256": "8cb91dd64df7e3fae55296e985b22428a6c9132347c49b409ee684a934c8d900",
+      "inherited": true
+    },
+    {
+      "program": "family-3",
+      "path": "docs/planning/workbench-long-navigation-rev1/program-08.json",
+      "sha256": "3cf903cde661f59b17f469829b204fbe6ee3ddfe37b81d1f2ce55d5483539a77",
+      "source": "docs/planning/workbench-long-comparison-cohort-rev1/program-08.json.gz",
+      "sourceSha256": "8fb8cc0bd7036370cd0a4d3db72d980b2dffd645923fd7e2485072e9b86c13f4",
+      "inherited": true
+    },
+    {
+      "program": "family-4",
+      "path": "docs/planning/workbench-long-navigation-rev1/program-09.json",
+      "sha256": "e45df0975c8cf95c6d132f5f03eb393eb6b2ba18947eb1c697030590311fc7bf",
+      "source": "docs/planning/workbench-long-comparison-cohort-rev1/program-09.json.gz",
+      "sourceSha256": "e59275f89106d0a60eaec8813c797008699f82a2bcfa0c81e0277254c94dfb3a",
+      "inherited": true
+    },
+    {
+      "program": "keep-all",
+      "path": "docs/planning/workbench-long-navigation-rev1/program-10.json",
+      "sha256": "7521e9afd5035b434b45ac8d51c5fa28dbea4969cfae4fdc1b09ab3fe5ed598b",
+      "source": "docs/planning/workbench-long-comparison-cohort-rev1/program-10.json.gz",
+      "sourceSha256": "fce4f30ecfcb01ed313bba556ff108d070d525146f1f6fe64e5826b506ed8d77",
+      "inherited": true
+    },
+    {
+      "program": "no-interference",
+      "path": "docs/planning/workbench-long-navigation-rev1/program-11.json",
+      "sha256": "6347e14fa835a1e11d1bfa960914657f1e89ef23d27cd80c9ff6ae0ffe26c2f9",
+      "source": "docs/planning/workbench-long-comparison-cohort-rev1/program-11.json.gz",
+      "sourceSha256": "c5612503a0f3a7e8f5261ce0a2b53b06f7b741c2063118868472a1f993730461",
+      "inherited": true
+    },
+    {
+      "program": "no-relearning",
+      "path": "docs/planning/workbench-long-navigation-rev1/program-12.json",
+      "sha256": "48e7fd3d8400146e03da33339b5dda935721597085b5f3fcf37feacfe6263802",
+      "source": "docs/planning/workbench-long-comparison-cohort-rev1/program-12.json.gz",
+      "sourceSha256": "cb683b47a1243f7089b92dac50d1fbd88e4521e1b4ac94db5e32873b15e62080",
+      "inherited": true
+    },
+    {
+      "program": "rust",
+      "path": "docs/planning/workbench-long-navigation-rev1/program-13.json",
+      "sha256": "a81b17c781116be64b29feaf414865dcdbabc9a89331d4c2b73679c44cffaf33",
+      "source": "docs/planning/workbench-long-comparison-cohort-rev1/program-13.json.gz",
+      "sourceSha256": "4a6616989fc071bd0f99cf02ae3c080aeba0e0d0390455edec9b57438ac2d839",
+      "inherited": true
+    },
+    {
+      "program": "denied-social",
+      "path": "docs/planning/workbench-long-navigation-rev1/program-14.json",
+      "sha256": "9f4601c9ee41f397a8825e5595971fee5edcf9fbd3271a689f1c843dae0ff563",
+      "source": "docs/planning/workbench-long-comparison-cohort-rev1/program-14.json.gz",
+      "sourceSha256": "ae5f3ebdee8ab2aba05bf79e74394da6670fc841150e3a9fce323da7de7d0391",
+      "inherited": true
+    },
+    {
+      "program": "witness-only",
+      "path": "docs/planning/workbench-long-navigation-rev1/program-15.json",
+      "sha256": "6cfd83264e87672cc933ed1c972f2416f11c3aa3fb43c1e3e3b6a84d76fe7d02",
+      "source": "docs/planning/workbench-long-comparison-cohort-rev1/program-15.json.gz",
+      "sourceSha256": "95d1fdb0445781ab56765773186bbe6cdc5516612e98ce1461b8b2ee285b4e19",
+      "inherited": true
+    },
+    {
+      "program": "no-claim",
+      "path": "docs/planning/workbench-long-navigation-rev1/program-16.json",
+      "sha256": "4960a8a0443b215653538517ad8884034c473ce3715ad3bdc7970ba1519d6894",
+      "source": "docs/planning/workbench-long-comparison-cohort-rev1/program-16.json.gz",
+      "sourceSha256": "2ad1625a1334f64cd9760b9cc2f79ed53532a1b144e051e105164c9d3650573d",
+      "inherited": true
+    },
+    {
+      "program": "standing-off",
+      "path": "docs/planning/workbench-long-navigation-rev1/program-17.json",
+      "sha256": "a7ed46a4eaeca580e34df81f631ffbbf7cff313ab802b9e44ca46a8ade36efbc",
+      "source": "docs/planning/workbench-long-comparison-cohort-rev1/program-17.json.gz",
+      "sourceSha256": "66d9abf2dac0dbfcd5d04be1255b1349c4a39b0a47cd70336480346967709c0a",
+      "inherited": true
+    },
+    {
+      "program": "seed-1",
+      "path": "docs/planning/workbench-long-navigation-rev1/program-18.json",
+      "sha256": "efdb5a6fa0a6cc14928e29834f19a4ba2627f8fc11e925f5c53c601e94558d9b",
+      "source": "docs/planning/workbench-long-comparison-cohort-rev1/program-18.json.gz",
+      "sourceSha256": "ae250f58810b2bd9c761f5568f1d6a4248bee249d4bdac527637405642a577b2",
+      "inherited": true
+    },
+    {
+      "program": "seed-2",
+      "path": "docs/planning/workbench-long-navigation-rev1/program-19.json",
+      "sha256": "41842386ad8e241ffdd3b4424502fd7bcb84f76ceed1c1cd368c998ec07b0124",
+      "source": "docs/planning/workbench-long-comparison-cohort-rev1/program-19.json.gz",
+      "sourceSha256": "8ebbaa6b14112f37f5ff4a80590f0edb4fd79d7110ed9b7b1450368ee5cddac4",
+      "inherited": true
+    },
+    {
+      "program": "reordered-law-1",
+      "path": "docs/planning/workbench-long-navigation-rev1/program-20.json",
+      "sha256": "fe7cee8191c6aba4f3084bac297498eaecba2ca2e1198e95120dd19dfcfd0fc7",
+      "source": "docs/planning/workbench-long-comparison-cohort-rev1/program-20.json.gz",
+      "sourceSha256": "316ab311cba8cb87bf94c10cd73a3f3f34377dc67fe7672a219d28c5a930168c",
+      "inherited": true
+    },
+    {
+      "program": "fixed-display-false",
+      "path": "docs/planning/workbench-long-navigation-rev1/program-21.json",
+      "sha256": "c9a2614fd7bbbe90255d84242012a0b0f988b2112ff6ae70800b68560fe8e6b0",
+      "source": "docs/planning/workbench-long-comparison-cohort-rev1/program-21.json.gz",
+      "sourceSha256": "ea806a597fd60ea8ade6595a236a3ef8023fbb3cb388f581364b760408161e47",
+      "inherited": true
+    },
+    {
+      "program": "fixed-display-true",
+      "path": "docs/planning/workbench-long-navigation-rev1/program-22.json",
+      "sha256": "89887f68c4a295add0bc881dcd9766fa69f1694a4592a6a09bf9eb0becae8cb3",
+      "source": "docs/planning/workbench-long-comparison-cohort-rev1/program-22.json.gz",
+      "sourceSha256": "9a0d0a210dbd8b96b1758fd6821ce6eff73f7436e5941c6a96962f7e97e35207",
+      "inherited": true
+    },
+    {
+      "program": "reordered-law-2",
+      "path": "docs/planning/workbench-long-navigation-rev1/program-23.json",
+      "sha256": "18ac2979f745a2739648d9e9aaf747dfa7fb0c526104d2541849f2cbcc880c21",
+      "source": "docs/planning/workbench-long-comparison-cohort-rev1/program-23.json.gz",
+      "sourceSha256": "b89e0a0d25b5f024b33734f01749acb06af49a01d1f42ff39a9aac858452410b",
+      "inherited": true
+    },
+    {
+      "program": "short-gap",
+      "path": "docs/planning/workbench-long-navigation-rev1/program-24.json",
+      "sha256": "5a5251441b5279c0937cfa6ce5babf0fb41846c429da7e33a4f70a3e351be787",
+      "source": "docs/planning/workbench-long-comparison-cohort-rev1/program-24.json.gz",
+      "sourceSha256": "ec6e4bd5bf76e57712799e788adf96dd3cf3d35e83d545c3058f0d7fc18f38bb",
+      "inherited": true
+    },
+    {
+      "program": "execution:retained",
+      "path": "docs/planning/workbench-long-navigation-rev1/program-25.json",
+      "sha256": "f4fddb0affff55775d41738de7625d6efc93edfe5ec2adfcdd58943260ca7f37",
+      "source": "docs/planning/workbench-long-comparison-cohort-rev1/program-25.json.gz",
+      "sourceSha256": "56f9d9d87330d2cdd4c6e5c9eede0f8386c584de042e7fc27d17a6d61635da98",
+      "inherited": true
+    },
+    {
+      "program": "execution:rust",
+      "path": "docs/planning/workbench-long-navigation-rev1/program-26.json",
+      "sha256": "2ba0c0f9d88d4a39d3afba5dfcee346679b4b4f5cf598a2e36bca1c1ba0feba8",
+      "source": "docs/planning/workbench-long-comparison-cohort-rev1/program-26.json.gz",
+      "sourceSha256": "1d90c1c5b3b507749cab07562a0123316deb0f31f3778d839414cbea57e90e24",
+      "inherited": true
+    },
+    {
+      "program": "execution:fresh",
+      "path": "docs/planning/workbench-long-navigation-rev1/program-27.json",
+      "sha256": "05695b0d1109c6e07e25a893d7e4298adc7bf1523f11a0cae1f31b5fce81277c",
+      "source": "docs/planning/workbench-long-comparison-cohort-rev1/program-27.json.gz",
+      "sourceSha256": "e15ce2fe67dbb9daa1fe385de78b53f9c1c0ffc9222b5866c40deeeca0b0b5fa",
+      "inherited": true
+    },
+    {
+      "program": "representation-3-law-2",
+      "path": "docs/planning/workbench-long-navigation-rev2/program-28.json",
+      "sha256": "985ceac556249b10035673dfef1ef78c757fbcdddd8a3298ab982b699161868d",
+      "native": "docs/planning/workbench-long-parity-rev2/program-05.json",
+      "nativeSha256": "eba37bc34f0438b9b0e7232fc8d409e05201ecdf891720a2a7b43150ce2be757",
+      "inherited": false
+    },
+    {
+      "program": "representation-4-law-2",
+      "path": "docs/planning/workbench-long-navigation-rev2/program-29.json",
+      "sha256": "f44b026fadcdc502627bd065cb7e2ccb24b25c13c931c585754abcbff9ef107e",
+      "native": "docs/planning/workbench-long-parity-rev2/program-07.json",
+      "nativeSha256": "e0d4cf9ff6fa74c36e44813cbd01708882c20a85b2cd01b2b0e8b6fa91bd09af",
+      "inherited": false
+    },
+    {
+      "program": "empty",
+      "path": "docs/planning/workbench-long-navigation-rev2/program-30.json",
+      "sha256": "2b1fd5f964dd8b1c2f9b207205db208749045f8268947677165bf9723105dfae",
+      "native": "docs/planning/workbench-long-parity-rev2/program-27.json",
+      "nativeSha256": "583c6ca5c4171a753f90fd3bfeea53749a955311699f40a2e155961bdca1557c",
+      "inherited": false
+    },
+    {
+      "program": "maximum-time",
+      "path": "docs/planning/workbench-long-navigation-rev2/program-31.json",
+      "sha256": "8d43a967623cc4b00c7ec6e524971c398fc57d00f9aa3c69b0f2c5041e2de7ca",
+      "native": "docs/planning/workbench-long-parity-rev2/program-28.json",
+      "nativeSha256": "9134dde77a5b89912dbdd4112ad1a9c144a797cf1d225b5d67d128dd8bb28f7d",
+      "inherited": false
+    }
+  ],
+  "counts": {
+    "programs": 32,
+    "prefixes": 513,
+    "events": 69377,
+    "reads": 44347,
+    "inheritedPrograms": 28,
+    "inheritedPrefixes": 476,
+    "freshPrograms": 4,
+    "freshPrefixes": 37
+  },
+  "scope": "Original32-program source only. Retains28 completed native-backed traversal audits and freshly executes four missing source programs/37 prefixes with nine native commitment joins. Every retained event/path checked for parent traversal, earlier read provenance and activity counts; diagnostic reads preserve snapshots. Empty program has no events. No repeated native restore audit, all-program browser claim, successor coverage, canonical box mapping, causal necessity or full Workbench acceptance."
+}
