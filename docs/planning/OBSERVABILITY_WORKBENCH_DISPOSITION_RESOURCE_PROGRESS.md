@@ -366,3 +366,22 @@ Returned identities contain only seven named fields. Historical reason/resolutio
 reports and checkpoints remain unchanged. TypeScript/boundaries/research PASS;
 all18 conditional obligations remain. Worker integration and full-horizon report
 qualification remain due. This is tooling work, not a Campaign3 verdict amendment.
+
+## 2026-10-20 paged terminal acceptance verifier
+
+Prepared check-workbench-disposition-paged-horizon-ui.mjs and froze its exact bytes
+plus parent, start and oracle receipt identities before terminal browser capture.
+The verifier requires baseline complete18, all five original native hashes, all180
+event option identities/labels, disabled step/run controls and no alerts. It checks
+the exact historical event19 page against original prefix1 and verifies that explicit
+reload at18 preserves that text while changing its displayed revision and enabling
+paging. Original prefix18 and prefix1 archives are authenticated against the retained
+comparison receipt. Source parents must still match their frozen identities.
+
+Self-test PASS one synthetic valid capture and12 rejecting controls (hash, revision,
+text, stale paging, missing/mislabelled event, incomplete status, enabled advance,
+error alert, wrong selection and stale post-load status). These synthetic controls
+do not create or establish browser qualification. The actual browser capture and
+screenshot remain due; the running tab33 must stay intact. Full six-mode behavior,
+all-program coverage, terminal checkpoint restore and heap/latency bounds remain
+separate gates. No Campaign3 verdict, obligation closure or law selection.

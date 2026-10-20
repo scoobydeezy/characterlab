@@ -105,6 +105,9 @@ Full baseline paged audit7413 COMPLETE PASS19 prefixes/180 headers; sampled text
 Do not edit its bound sources. Paged browser0/1/2 exact pages/history/restore PASS.
 Paged full horizon tab33/4209 RUNNING from restored1 to18; preserve handoff/build.
 See workbench-disposition-paged-horizon-ui-rev1. Six-mode migration remains due.
+Terminal browser verifier prepared and frozen; synthetic valid/12 rejecting controls
+PASS only verifies the checker. Capture beforeReload/afterReload at complete18 and
+run check-workbench-disposition-paged-horizon-ui.mjs; no terminal browser PASS yet.
 Canonical factor/activity readers prepared;3 bounded parity tests/typecheck PASS.
 See workbench-disposition-canonical-diagnostics-rev1; live source bindings unchanged.
 Architecture bridge PASS9 native comparisons +285 retained mapping reports; build/typecheck.
