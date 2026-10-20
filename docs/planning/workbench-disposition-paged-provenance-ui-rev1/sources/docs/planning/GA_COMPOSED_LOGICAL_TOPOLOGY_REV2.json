@@ -1,0 +1,1345 @@
+{
+  "version": "ga-composed-logical-topology/0.2-draft",
+  "status": "COMPOSED LOGICAL GRAPH; PUBLIC GATES OPEN",
+  "stages": [
+    {
+      "name": "world",
+      "phase": 0,
+      "input": "GeneralObservationOriginal",
+      "outputs": [
+        "WorldEventTruth"
+      ],
+      "next": [
+        "current-sample",
+        "consequence-sample"
+      ],
+      "childInput": "GeneralSamplingInput",
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "subject": "None",
+      "branch": "exactly the original lane; World iff visual requested"
+    },
+    {
+      "name": "current-sample",
+      "phase": 10,
+      "input": "GeneralSamplingInput",
+      "outputs": [
+        "CompletedRequestedSamples"
+      ],
+      "next": [
+        "current-track"
+      ],
+      "childInput": "GeneralTrackingInput",
+      "reads": [
+        "LocalReserveState via bound sampling channel and PRJ/IDN"
+      ],
+      "writes": [],
+      "route": [],
+      "subject": "ResolvedCharacterSubject for body request",
+      "branch": "actual source products"
+    },
+    {
+      "name": "current-track",
+      "phase": 11,
+      "input": "GeneralTrackingInput",
+      "outputs": [
+        "PerceptualTrackTransition",
+        "PerceptualEventTransition",
+        "PerceptualEventEnd"
+      ],
+      "next": [
+        "current-bind"
+      ],
+      "childInput": "GeneralBindingInput",
+      "reads": [
+        "PerceptualContinuantFileState",
+        "PerceptualEventFileState",
+        "GeneralTrackingState",
+        "TrialPanelContextState"
+      ],
+      "writes": [
+        "PerceptualContinuantFileState",
+        "PerceptualEventFileState",
+        "GeneralTrackingState",
+        "TrialPanelContextState"
+      ],
+      "route": [],
+      "subject": "None",
+      "branch": "actual source products"
+    },
+    {
+      "name": "current-bind",
+      "phase": 12,
+      "input": "GeneralBindingInput",
+      "outputs": [
+        "PerceivedBindingEvidence"
+      ],
+      "next": [
+        "current-classify"
+      ],
+      "childInput": "GeneralFreezeInput",
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "subject": "None",
+      "branch": "actual source products"
+    },
+    {
+      "name": "current-classify",
+      "phase": 13,
+      "input": "GeneralFreezeInput",
+      "outputs": [],
+      "next": [
+        "current-freeze"
+      ],
+      "childInput": "GeneralFreezeInput",
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "subject": "None",
+      "branch": "actual source products"
+    },
+    {
+      "name": "current-freeze",
+      "phase": 14,
+      "input": "GeneralFreezeInput",
+      "outputs": [
+        "PreRecognitionSemanticExperience"
+      ],
+      "next": [
+        "current-roles"
+      ],
+      "childInput": "GeneralUseInput",
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "subject": "None",
+      "branch": "one conditional shared reservation"
+    },
+    {
+      "name": "current-roles",
+      "phase": 15,
+      "input": "GeneralUseInput",
+      "outputs": [
+        "CausalRoleEvidence"
+      ],
+      "next": [
+        "current-dispatch"
+      ],
+      "childInput": "GeneralUseInput",
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "subject": "None",
+      "branch": "entry Claims empty; output only actual derivation"
+    },
+    {
+      "name": "current-dispatch",
+      "phase": 40,
+      "input": "GeneralUseInput",
+      "outputs": [],
+      "next": [],
+      "childInput": null,
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "subject": "None",
+      "branch": "exact admitted use plan; separately registered consumers"
+    },
+    {
+      "name": "consequence-sample",
+      "phase": 120,
+      "input": "GeneralSamplingInput",
+      "outputs": [
+        "CompletedRequestedSamples"
+      ],
+      "next": [
+        "consequence-track"
+      ],
+      "childInput": "GeneralTrackingInput",
+      "reads": [
+        "LocalReserveState via bound sampling channel and PRJ/IDN"
+      ],
+      "writes": [],
+      "route": [],
+      "subject": "ResolvedCharacterSubject for body request",
+      "branch": "actual source products"
+    },
+    {
+      "name": "consequence-track",
+      "phase": 121,
+      "input": "GeneralTrackingInput",
+      "outputs": [
+        "PerceptualTrackTransition",
+        "PerceptualEventTransition",
+        "PerceptualEventEnd"
+      ],
+      "next": [
+        "consequence-bind"
+      ],
+      "childInput": "GeneralBindingInput",
+      "reads": [
+        "PerceptualContinuantFileState",
+        "PerceptualEventFileState",
+        "GeneralTrackingState",
+        "TrialPanelContextState"
+      ],
+      "writes": [
+        "PerceptualContinuantFileState",
+        "PerceptualEventFileState",
+        "GeneralTrackingState",
+        "TrialPanelContextState"
+      ],
+      "route": [],
+      "subject": "None",
+      "branch": "actual source products"
+    },
+    {
+      "name": "consequence-bind",
+      "phase": 122,
+      "input": "GeneralBindingInput",
+      "outputs": [
+        "PerceivedBindingEvidence"
+      ],
+      "next": [
+        "consequence-classify"
+      ],
+      "childInput": "GeneralFreezeInput",
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "subject": "None",
+      "branch": "actual source products"
+    },
+    {
+      "name": "consequence-classify",
+      "phase": 123,
+      "input": "GeneralFreezeInput",
+      "outputs": [],
+      "next": [
+        "consequence-freeze"
+      ],
+      "childInput": "GeneralFreezeInput",
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "subject": "None",
+      "branch": "actual source products"
+    },
+    {
+      "name": "consequence-freeze",
+      "phase": 124,
+      "input": "GeneralFreezeInput",
+      "outputs": [
+        "PreRecognitionSemanticExperience"
+      ],
+      "next": [
+        "consequence-roles"
+      ],
+      "childInput": "GeneralUseInput",
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "subject": "None",
+      "branch": "one conditional shared reservation"
+    },
+    {
+      "name": "consequence-roles",
+      "phase": 125,
+      "input": "GeneralUseInput",
+      "outputs": [
+        "CausalRoleEvidence"
+      ],
+      "next": [
+        "consequence-dispatch"
+      ],
+      "childInput": "GeneralUseInput",
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "subject": "None",
+      "branch": "entry Claims empty; output only actual derivation"
+    },
+    {
+      "name": "consequence-dispatch",
+      "phase": 130,
+      "input": "GeneralUseInput",
+      "outputs": [],
+      "next": [],
+      "childInput": null,
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "subject": "None",
+      "branch": "exact admitted use plan; separately registered consumers"
+    },
+    {
+      "name": "current-visual-selection",
+      "phase": 40,
+      "input": "VisualSelectionInput",
+      "outputs": [
+        "AttentionSelectionAudit",
+        "ExtendedSelected"
+      ],
+      "next": [
+        "current-visual-encoding"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "One SelectionOccurrenceId/1143",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "NoReads"
+    },
+    {
+      "name": "current-visual-encoding",
+      "phase": 40,
+      "input": "EncodingJoinInput",
+      "outputs": [
+        "EncodingEvaluation",
+        "PositiveVisualCandidate"
+      ],
+      "next": [
+        "visual-acquisition-evidence"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "None",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "NoReads"
+    },
+    {
+      "name": "current-body-selection",
+      "phase": 40,
+      "input": "BodySelectionInput",
+      "outputs": [
+        "BodySelectionAudit",
+        "BodySelectedView"
+      ],
+      "next": [
+        "body-acquisition-evidence"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "One SelectionOccurrenceId/1143",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "NoReads"
+    },
+    {
+      "name": "current-visual-cue",
+      "phase": 40,
+      "input": "VisualCueInput",
+      "outputs": [
+        "CueEvidence"
+      ],
+      "next": [
+        "current-event-rank"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "None",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "NoReads"
+    },
+    {
+      "name": "current-body-cue",
+      "phase": 40,
+      "input": "BodyCueInput",
+      "outputs": [
+        "BodySignalCue"
+      ],
+      "next": [
+        "current-body-rank"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "None",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "NoReads"
+    },
+    {
+      "name": "current-event-rank",
+      "phase": 40,
+      "input": "EventRecallInput",
+      "outputs": [
+        "EventRecallResult"
+      ],
+      "next": [
+        "current-recollection"
+      ],
+      "reads": [
+        "GeneralEpisodeState",
+        "GeneralAssociationState",
+        "GeneralPresentationState"
+      ],
+      "writes": [],
+      "allocation": "None",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "AvailableCue"
+    },
+    {
+      "name": "current-body-rank",
+      "phase": 40,
+      "input": "BodyRecallInput",
+      "outputs": [
+        "BodyRecallResult"
+      ],
+      "next": [
+        "current-recollection"
+      ],
+      "reads": [
+        "GeneralEpisodeState"
+      ],
+      "writes": [],
+      "allocation": "None",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "PresentCue"
+    },
+    {
+      "name": "current-recollection",
+      "phase": 40,
+      "input": "RecollectionInput",
+      "outputs": [
+        "Recollection"
+      ],
+      "next": [],
+      "reads": [],
+      "writes": [],
+      "allocation": "One ProposedRecollectionOccurrenceId per actual winner; 0..32",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "NoReads"
+    },
+    {
+      "name": "consequence-visual-selection",
+      "phase": 130,
+      "input": "VisualSelectionInput",
+      "outputs": [
+        "AttentionSelectionAudit",
+        "ExtendedSelected"
+      ],
+      "next": [
+        "consequence-visual-encoding"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "One SelectionOccurrenceId/1143",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "NoReads"
+    },
+    {
+      "name": "consequence-visual-encoding",
+      "phase": 130,
+      "input": "EncodingJoinInput",
+      "outputs": [
+        "EncodingEvaluation",
+        "PositiveVisualCandidate"
+      ],
+      "next": [
+        "visual-acquisition-evidence"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "None",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "NoReads"
+    },
+    {
+      "name": "consequence-body-selection",
+      "phase": 130,
+      "input": "BodySelectionInput",
+      "outputs": [
+        "BodySelectionAudit",
+        "BodySelectedView"
+      ],
+      "next": [
+        "body-acquisition-evidence"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "One SelectionOccurrenceId/1143",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "NoReads"
+    },
+    {
+      "name": "consequence-visual-cue",
+      "phase": 130,
+      "input": "VisualCueInput",
+      "outputs": [
+        "CueEvidence"
+      ],
+      "next": [
+        "consequence-event-rank"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "None",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "NoReads"
+    },
+    {
+      "name": "consequence-body-cue",
+      "phase": 130,
+      "input": "BodyCueInput",
+      "outputs": [
+        "BodySignalCue"
+      ],
+      "next": [
+        "consequence-body-rank"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "None",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "NoReads"
+    },
+    {
+      "name": "consequence-event-rank",
+      "phase": 130,
+      "input": "EventRecallInput",
+      "outputs": [
+        "EventRecallResult"
+      ],
+      "next": [
+        "consequence-recollection"
+      ],
+      "reads": [
+        "GeneralEpisodeState",
+        "GeneralAssociationState",
+        "GeneralPresentationState"
+      ],
+      "writes": [],
+      "allocation": "None",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "AvailableCue"
+    },
+    {
+      "name": "consequence-body-rank",
+      "phase": 130,
+      "input": "BodyRecallInput",
+      "outputs": [
+        "BodyRecallResult"
+      ],
+      "next": [
+        "consequence-recollection"
+      ],
+      "reads": [
+        "GeneralEpisodeState"
+      ],
+      "writes": [],
+      "allocation": "None",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "PresentCue"
+    },
+    {
+      "name": "consequence-recollection",
+      "phase": 130,
+      "input": "RecollectionInput",
+      "outputs": [
+        "Recollection"
+      ],
+      "next": [],
+      "reads": [],
+      "writes": [],
+      "allocation": "One ProposedRecollectionOccurrenceId per actual winner; 0..32",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "NoReads"
+    },
+    {
+      "name": "visual-acquisition-evidence",
+      "phase": 130,
+      "input": "VisualAcquisitionEvidenceInput",
+      "outputs": [
+        "AcquisitionFormationEvidence"
+      ],
+      "next": [
+        "ordinary-memory-formation",
+        "event-association-formation",
+        "event-presentation-formation"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "One AcquisitionOccurrenceId iff positive; otherwise zero",
+      "route": [
+        "route/character-learning"
+      ],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "NoReads"
+    },
+    {
+      "name": "body-acquisition-evidence",
+      "phase": 130,
+      "input": "BodyAcquisitionEvidenceInput",
+      "outputs": [
+        "AcquisitionFormationEvidence"
+      ],
+      "next": [
+        "ordinary-memory-formation"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "One AcquisitionOccurrenceId iff positive; otherwise zero",
+      "route": [
+        "route/character-learning"
+      ],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "NoReads"
+    },
+    {
+      "name": "ordinary-memory-formation",
+      "phase": 140,
+      "input": "GeneralFormationOwnerInput",
+      "outputs": [],
+      "next": [],
+      "reads": [
+        "GeneralEpisodeState"
+      ],
+      "writes": [
+        "GeneralEpisodeState"
+      ],
+      "allocation": "None",
+      "route": [
+        "route/character-learning"
+      ],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "Always",
+      "batch": "Common B0; declared validated owner-result composition; no sibling reads",
+      "contentGate": "Either acquisition kind"
+    },
+    {
+      "name": "event-association-formation",
+      "phase": 140,
+      "input": "GeneralFormationOwnerInput",
+      "outputs": [],
+      "next": [],
+      "reads": [
+        "GeneralAssociationState"
+      ],
+      "writes": [
+        "GeneralAssociationState"
+      ],
+      "allocation": "None",
+      "route": [
+        "route/character-learning"
+      ],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "Always",
+      "batch": "Common B0; declared validated owner-result composition; no sibling reads",
+      "contentGate": "EventContinuant only"
+    },
+    {
+      "name": "event-presentation-formation",
+      "phase": 140,
+      "input": "GeneralFormationOwnerInput",
+      "outputs": [],
+      "next": [],
+      "reads": [
+        "GeneralPresentationState"
+      ],
+      "writes": [
+        "GeneralPresentationState"
+      ],
+      "allocation": "None",
+      "route": [
+        "route/character-learning"
+      ],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "Always",
+      "batch": "Common B0; declared validated owner-result composition; no sibling reads",
+      "contentGate": "EventContinuant only"
+    },
+    {
+      "name": "prior-concern-workspace",
+      "phase": 40,
+      "input": "DeliberationOpportunity/377",
+      "outputs": [
+        "TaskWorkspace/381"
+      ],
+      "allocation": "One WorkspaceOccurrenceId/1128",
+      "next": [
+        "prior-concern-appraisal"
+      ],
+      "reads": [
+        "Existing subject TaskCommitmentState",
+        "Existing subject MeasurementPredictionState"
+      ],
+      "writes": [],
+      "route": [],
+      "projection": "Required PRJ/IDN after exact event/output admission; nested CharacterId equals projected subject",
+      "readGate": "Existing workspace availability/selection law; no unselected-task read"
+    },
+    {
+      "name": "prior-concern-appraisal",
+      "phase": 50,
+      "input": "PriorConcernAppraisalInput",
+      "outputs": [
+        "TaskAppraisal/384"
+      ],
+      "allocation": "One AppraisalOccurrenceId/1129",
+      "next": [
+        "prior-concern-producer"
+      ],
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "projection": "Required PRJ/IDN after exact event/output admission; nested CharacterId equals projected subject"
+    },
+    {
+      "name": "prior-concern-producer",
+      "phase": 50,
+      "input": "PriorConcernProducerInput",
+      "outputs": [
+        "TaskConcern/388"
+      ],
+      "allocation": "One ConcernOccurrenceId/1130",
+      "next": [],
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "projection": "Required PRJ/IDN after exact event/output admission; nested CharacterId equals projected subject",
+      "future": [
+        "encoding-concern-delivery",
+        "recall-concern-delivery"
+      ],
+      "futureGate": "Only declared target consumer slots; strict later instant, at most one per kind per receiving original",
+      "projectionOutput": "Exact projectPriorConcern result from this actual TaskConcern; NoSelectedTask omits concern identity"
+    },
+    {
+      "name": "encoding-concern-delivery",
+      "phase": 15,
+      "input": "PriorConcernDeliveryInput",
+      "outputs": [
+        "FeedbackDelivery"
+      ],
+      "allocation": "None",
+      "next": [],
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "projection": "Required PRJ/IDN after exact event/output admission; nested CharacterId equals projected subject",
+      "joinReadiness": "Actual completed delivery, not allocated parent",
+      "consumer": "prior-concern-visual-encoding"
+    },
+    {
+      "name": "recall-concern-delivery",
+      "phase": 15,
+      "input": "PriorConcernDeliveryInput",
+      "outputs": [
+        "FeedbackDelivery"
+      ],
+      "allocation": "None",
+      "next": [],
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "projection": "Required PRJ/IDN after exact event/output admission; nested CharacterId equals projected subject",
+      "joinReadiness": "Actual completed delivery, not allocated parent",
+      "consumer": "prior-concern-event-rank"
+    },
+    {
+      "name": "prior-concern-visual-encoding",
+      "phase": 40,
+      "input": "PriorConcernEncodingInput",
+      "outputs": [
+        "PriorConcernEncodingEvaluation",
+        "PositiveVisualCandidate"
+      ],
+      "allocation": "None",
+      "next": [
+        "visual-acquisition-evidence"
+      ],
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "projection": "Required PRJ/IDN after exact event/output admission; nested CharacterId equals projected subject"
+    },
+    {
+      "name": "prior-concern-event-rank",
+      "phase": 40,
+      "input": "PriorConcernRecallInput",
+      "outputs": [
+        "PriorConcernRecallEvaluation"
+      ],
+      "allocation": "None",
+      "next": [
+        "current-recollection"
+      ],
+      "reads": [
+        "GeneralEpisodeState",
+        "GeneralAssociationState",
+        "GeneralPresentationState"
+      ],
+      "writes": [],
+      "route": [],
+      "projection": "Required PRJ/IDN after exact event/output admission; nested CharacterId equals projected subject",
+      "readGate": "AvailableCue"
+    },
+    {
+      "name": "goal-command-proposal",
+      "phase": 40,
+      "input": "GoalCommandInput",
+      "outputs": [],
+      "next": [
+        "goal-command-owner"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "None",
+      "projection": "Required PRJ/IDN via direct field1 after exact producer/original admission",
+      "route": [],
+      "future": [
+        "goal-deadline-owner"
+      ],
+      "futureGate": "Adopt only; exact model expiry; enqueue before140 and roll back with failed adoption"
+    },
+    {
+      "name": "goal-command-owner",
+      "phase": 140,
+      "input": "GoalCommandInput",
+      "outputs": [],
+      "next": [],
+      "reads": [
+        "MaintenanceGoalState"
+      ],
+      "writes": [
+        "MaintenanceGoalState"
+      ],
+      "allocation": "None",
+      "projection": "Required PRJ/IDN via direct field1 after exact producer/original admission",
+      "route": [],
+      "batch": "One declared owner, common B0, no sibling reads; complete operation batch before commit; no child emissions or output allocation"
+    },
+    {
+      "name": "goal-deadline-owner",
+      "phase": 140,
+      "input": "GoalDeadlineInput",
+      "outputs": [],
+      "next": [],
+      "reads": [
+        "MaintenanceGoalState"
+      ],
+      "writes": [
+        "MaintenanceGoalState"
+      ],
+      "allocation": "None",
+      "projection": "Required PRJ/IDN via direct field1 after exact producer/original admission",
+      "route": [],
+      "batch": "One declared owner, common B0, no sibling reads; complete operation batch before commit; no child emissions or output allocation",
+      "terminal": "Open expires at exact expiry; Withdrawn is unchanged; missing/already-expired/mismatched adoption rejects"
+    },
+    {
+      "name": "goal-outcome-assessment",
+      "phase": 130,
+      "input": "GoalAssessmentInput",
+      "outputs": [
+        "GoalOutcomeAssessment"
+      ],
+      "next": [],
+      "reads": [
+        "MaintenanceGoalState"
+      ],
+      "writes": [],
+      "allocation": "One GoalOutcomeAssessmentId iff consequence experience exists; otherwise zero",
+      "projection": "Required PRJ/IDN via direct field1 after exact producer/original admission",
+      "route": [],
+      "future": [
+        "focal-consequence-delivery",
+        "goal-qualification-delivery"
+      ],
+      "readGate": "ActualConsequenceExperience",
+      "outputCardinality": "0..1"
+    },
+    {
+      "name": "focal-consequence-delivery",
+      "phase": 15,
+      "input": "FocalConsequenceDelivery",
+      "outputs": [
+        "FocalConsequenceDelivery"
+      ],
+      "next": [],
+      "reads": [],
+      "writes": [],
+      "allocation": "None",
+      "projection": "Required PRJ/IDN via direct field1 after exact producer/original admission",
+      "route": []
+    },
+    {
+      "name": "goal-qualification-delivery",
+      "phase": 15,
+      "input": "GoalQualificationDeliveryInput",
+      "outputs": [
+        "GoalQualificationDelivery"
+      ],
+      "next": [],
+      "reads": [],
+      "writes": [],
+      "allocation": "None",
+      "projection": "Required PRJ/IDN via direct field1 after exact producer/original admission",
+      "route": []
+    },
+    {
+      "name": "retained-attribution",
+      "phase": 50,
+      "input": "RetainedAttributionInput",
+      "outputs": [
+        "RetainedAttributionResult"
+      ],
+      "next": [
+        "attribution-use-dispatch"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "One RetainedAttributionResultId iff focal consequence exists; otherwise zero",
+      "projection": "Required PRJ/IDN via direct field1 after exact producer/original admission",
+      "route": [],
+      "future": [
+        "attribution-result-delivery"
+      ],
+      "outputCardinality": "0..1",
+      "nextGate": "Actual result present; partial consumed set may be empty"
+    },
+    {
+      "name": "attribution-use-dispatch",
+      "phase": 130,
+      "input": "AttributionUseInput",
+      "outputs": [],
+      "next": [
+        "ordinary-memory-use"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "None",
+      "projection": "Required PRJ/IDN via direct field1 after exact producer/original admission",
+      "route": [
+        "route/character-learning"
+      ]
+    },
+    {
+      "name": "ordinary-memory-use",
+      "phase": 140,
+      "input": "AttributionUseInput",
+      "outputs": [],
+      "next": [],
+      "reads": [
+        "GeneralEpisodeState"
+      ],
+      "writes": [
+        "GeneralEpisodeState"
+      ],
+      "allocation": "None",
+      "projection": "Required PRJ/IDN via direct field1 after exact producer/original admission",
+      "route": [
+        "route/character-learning"
+      ],
+      "batch": "One declared owner, common B0, no sibling reads; complete operation batch before commit; no child emissions or output allocation"
+    },
+    {
+      "name": "attribution-result-delivery",
+      "phase": 15,
+      "input": "AttributionResultDelivery",
+      "outputs": [
+        "AttributionResultDelivery"
+      ],
+      "next": [],
+      "reads": [],
+      "writes": [],
+      "allocation": "None",
+      "projection": "Required PRJ/IDN via direct field1 after exact producer/original admission",
+      "route": []
+    },
+    {
+      "name": "significance-opportunity",
+      "phase": 0,
+      "input": "SignificanceOpportunity",
+      "outputs": [],
+      "next": [],
+      "reads": [],
+      "writes": [],
+      "allocation": "None",
+      "projection": "Required PRJ/IDN via direct field1 after exact producer/original admission",
+      "route": []
+    },
+    {
+      "name": "significance-join",
+      "phase": 130,
+      "input": "SignificanceJoinInput",
+      "outputs": [
+        "QualifiedSignificanceJoin"
+      ],
+      "next": [
+        "ordinary-memory-significance"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "None",
+      "projection": "Required PRJ/IDN via direct field1 after exact producer/original admission",
+      "route": [
+        "route/character-learning"
+      ],
+      "outputCardinality": "0..1",
+      "nextGate": "Both actual results present and qualification Qualifies and attribution Supported with one target"
+    },
+    {
+      "name": "ordinary-memory-significance",
+      "phase": 140,
+      "input": "SignificanceJoinInput",
+      "outputs": [],
+      "next": [],
+      "reads": [
+        "GeneralEpisodeState"
+      ],
+      "writes": [
+        "GeneralEpisodeState"
+      ],
+      "allocation": "None",
+      "projection": "Required PRJ/IDN via direct field1 after exact producer/original admission",
+      "route": [
+        "route/character-learning"
+      ],
+      "batch": "One declared owner, common B0, no sibling reads; complete operation batch before commit; no child emissions or output allocation"
+    },
+    {
+      "name": "retention-original",
+      "phase": 0,
+      "next": [
+        "retention-dispatch"
+      ],
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "input": "GeneralRetentionInput",
+      "outputs": [],
+      "allocation": "None",
+      "projection": "Required PRJ/IDN via direct field1 after exact original/producer admission"
+    },
+    {
+      "name": "retention-dispatch",
+      "phase": 130,
+      "next": [
+        "ordinary-memory-retention",
+        "event-association-retention",
+        "event-presentation-cleanup"
+      ],
+      "reads": [],
+      "writes": [],
+      "route": [
+        "route/character-learning"
+      ],
+      "input": "GeneralRetentionInput",
+      "outputs": [],
+      "allocation": "None",
+      "projection": "Required PRJ/IDN via direct field1 after exact original/producer admission"
+    },
+    {
+      "name": "ordinary-memory-retention",
+      "phase": 140,
+      "next": [],
+      "reads": [
+        "GeneralEpisodeState"
+      ],
+      "writes": [
+        "GeneralEpisodeState"
+      ],
+      "route": [
+        "route/character-learning"
+      ],
+      "batch": "Complete declared owner batch against B0; no sibling reads; shared validated memory result descriptor only for presentation cleanup",
+      "input": "GeneralRetentionInput",
+      "outputs": [],
+      "allocation": "None",
+      "projection": "Required PRJ/IDN via direct field1 after exact original/producer admission"
+    },
+    {
+      "name": "event-association-retention",
+      "phase": 140,
+      "next": [],
+      "reads": [
+        "GeneralAssociationState"
+      ],
+      "writes": [
+        "GeneralAssociationState"
+      ],
+      "route": [
+        "route/character-learning"
+      ],
+      "batch": "Complete declared owner batch against B0; no sibling reads; shared validated memory result descriptor only for presentation cleanup",
+      "input": "GeneralRetentionInput",
+      "outputs": [],
+      "allocation": "None",
+      "projection": "Required PRJ/IDN via direct field1 after exact original/producer admission"
+    },
+    {
+      "name": "event-presentation-cleanup",
+      "phase": 140,
+      "next": [],
+      "reads": [
+        "GeneralPresentationState"
+      ],
+      "writes": [
+        "GeneralPresentationState"
+      ],
+      "route": [
+        "route/character-learning"
+      ],
+      "batch": "Complete declared owner batch against B0; no sibling reads; shared validated memory result descriptor only for presentation cleanup",
+      "input": "GeneralRetentionInput",
+      "outputs": [],
+      "allocation": "None",
+      "projection": "Required PRJ/IDN via direct field1 after exact original/producer admission"
+    },
+    {
+      "name": "event-presentation-dispatch",
+      "phase": 130,
+      "reads": [],
+      "writes": [],
+      "next": [
+        "event-presentation-owner"
+      ],
+      "input": "PresentationInput",
+      "outputs": [],
+      "allocation": "None",
+      "route": [
+        "route/character-learning"
+      ],
+      "projection": "Required PRJ/IDN via field1 after exact parent and recollection-output membership"
+    },
+    {
+      "name": "event-presentation-owner",
+      "phase": 140,
+      "reads": [
+        "GeneralPresentationState"
+      ],
+      "writes": [
+        "GeneralPresentationState"
+      ],
+      "next": [],
+      "batch": "Common B0; actual ordinary-memory result descriptor for complete loss only; no sibling reads",
+      "input": "PresentationInput",
+      "outputs": [],
+      "allocation": "None",
+      "route": [
+        "route/character-learning"
+      ],
+      "projection": "Required PRJ/IDN via field1 after exact parent and recollection-output membership"
+    },
+    {
+      "name": "goal-baseline-cue",
+      "phase": 130,
+      "input": "BodyCueInput",
+      "outputs": [
+        "BodySignalCue"
+      ],
+      "next": [
+        "goal-baseline-rank"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "None",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "NoReads",
+      "definitionPurpose": "GoalBaselineRecall; never ordinary BodyRecall or event presentation"
+    },
+    {
+      "name": "goal-baseline-rank",
+      "phase": 130,
+      "input": "BodyRecallInput",
+      "outputs": [
+        "BodyRecallResult"
+      ],
+      "next": [
+        "goal-baseline-recollection"
+      ],
+      "reads": [
+        "GeneralEpisodeState"
+      ],
+      "writes": [],
+      "allocation": "None",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "PresentCue",
+      "definitionPurpose": "GoalBaselineRecall; never ordinary BodyRecall or event presentation"
+    },
+    {
+      "name": "goal-baseline-recollection",
+      "phase": 130,
+      "input": "RecollectionInput",
+      "outputs": [
+        "Recollection"
+      ],
+      "next": [
+        "goal-outcome-assessment"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "One ProposedRecollectionOccurrenceId per actual winner; 0..32",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "NoReads",
+      "definitionPurpose": "GoalBaselineRecall; never ordinary BodyRecall or event presentation"
+    },
+    {
+      "name": "local-reserve-replenishment",
+      "phase": 110,
+      "input": "LocalReserveReplenishment",
+      "outputs": [
+        "LocalReserveReplenishmentResult"
+      ],
+      "next": [],
+      "reads": [
+        "LocalReserveState at admitted composite key"
+      ],
+      "writes": [
+        "LocalReserveState at admitted composite key"
+      ],
+      "route": [],
+      "subject": "Authored qualified LocalReserveKey; no cognitive subject projection",
+      "allocation": "None",
+      "authority": "Exact local-reserve physical authority; never inherited implicitly"
+    }
+  ],
+  "conditionalEdges": [
+    {
+      "from": "current-dispatch",
+      "to": "current-body-selection",
+      "gate": "Exact original use BodySelection"
+    },
+    {
+      "from": "current-dispatch",
+      "to": "current-visual-selection",
+      "gate": "Exact original use VisualSelection"
+    },
+    {
+      "from": "current-dispatch",
+      "to": "current-body-cue",
+      "gate": "Exact original use BodyCue"
+    },
+    {
+      "from": "current-dispatch",
+      "to": "current-visual-cue",
+      "gate": "Exact original use VisualCue"
+    },
+    {
+      "from": "consequence-dispatch",
+      "to": "consequence-body-selection",
+      "gate": "Exact original use BodySelection"
+    },
+    {
+      "from": "consequence-dispatch",
+      "to": "consequence-visual-selection",
+      "gate": "Exact original use VisualSelection"
+    },
+    {
+      "from": "consequence-dispatch",
+      "to": "consequence-body-cue",
+      "gate": "Exact original use BodyCue"
+    },
+    {
+      "from": "consequence-dispatch",
+      "to": "consequence-visual-cue",
+      "gate": "Exact original use VisualCue"
+    },
+    {
+      "from": "consequence-dispatch",
+      "to": "goal-baseline-cue",
+      "gate": "GoalAssessment is requested"
+    },
+    {
+      "from": "current-visual-selection",
+      "to": "prior-concern-visual-encoding",
+      "gate": "Replace current-visual-encoding iff its exact earlier encoding delivery is required"
+    },
+    {
+      "from": "current-visual-cue",
+      "to": "prior-concern-event-rank",
+      "gate": "Replace current-event-rank iff its exact earlier recall delivery is required"
+    },
+    {
+      "from": "current-recollection",
+      "to": "retained-attribution",
+      "gate": "Last of actual body/event publishers; exact focal delivery already completed; one declared attribution join"
+    },
+    {
+      "from": "focal-consequence-delivery",
+      "to": "retained-attribution",
+      "gate": "Only if last required parent; exactly one join"
+    },
+    {
+      "from": "current-recollection",
+      "to": "event-presentation-dispatch",
+      "gate": "Event publication only; exact model presentation plan and nonempty actual winners"
+    },
+    {
+      "from": "consequence-recollection",
+      "to": "event-presentation-dispatch",
+      "gate": "Event publication only; exact model presentation plan and nonempty actual winners"
+    },
+    {
+      "from": "significance-opportunity",
+      "to": "significance-join",
+      "gate": "Last required actual parent; exactly one join"
+    },
+    {
+      "from": "goal-qualification-delivery",
+      "to": "significance-join",
+      "gate": "Last required actual parent; exactly one join"
+    },
+    {
+      "from": "attribution-result-delivery",
+      "to": "significance-join",
+      "gate": "Last required actual parent; exactly one join"
+    }
+  ],
+  "wholeModelWorkCeiling": null,
+  "newIdentityFamilies": [],
+  "numericAllocations": [],
+  "sources": [
+    {
+      "path": "docs/planning/GA_SOURCE_STAGE_CLOSURE_REV1.json",
+      "sha256": "fb000854da57773986ceb588d41c5188704a5fa33bb731c9eb6127cd7d45d597"
+    },
+    {
+      "path": "docs/planning/GA_ACQUISITION_RECALL_STAGE_CLOSURE_REV1.json",
+      "sha256": "7e11885d9d87b326e4b6a2c87c5fa3b5cc31faf30f7613322a2b0f557b2e6bed"
+    },
+    {
+      "path": "docs/planning/GA_PRIOR_CONCERN_STAGE_CLOSURE_REV1.json",
+      "sha256": "1c6cd16d96212a749642e465f8771759f4b92968e23691875a3c38fc28204188"
+    },
+    {
+      "path": "docs/planning/GA_GOAL_ATTRIBUTION_STAGE_CLOSURE_REV2.json",
+      "sha256": "9ad689694dced61c5904f34d128d9e9f08b9942324b208421fdffcde85c50671"
+    },
+    {
+      "path": "docs/planning/GA_RETENTION_STAGE_CLOSURE_REV1.json",
+      "sha256": "6258037052ebeaa236cd49b6b6b7f543f1f2fbbadd765225bde0a664857d21cf"
+    },
+    {
+      "path": "docs/planning/GA_EVENT_PRESENTATION_STAGE_CLOSURE_REV1.json",
+      "sha256": "bbb2ae69827b55fb4ed5e7a353b1b699fa89291255c818807807418d0390cc81"
+    },
+    {
+      "path": "docs/planning/GA_COMPOSED_LOGICAL_TOPOLOGY_REV1.md",
+      "sha256": "83e15f76d017b876ef587650deed6e4bb5e3c1f854b5ed49a114527eaa8f2e9e"
+    },
+    {
+      "path": "docs/planning/GA_LOCAL_REPLENISHMENT_STAGE_REV1.md",
+      "sha256": "186368ed23ad98964beed4d1ba04458b901343402c0015d4895ef14cb9a1c394"
+    }
+  ]
+}

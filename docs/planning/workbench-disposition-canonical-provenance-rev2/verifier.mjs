@@ -1,0 +1,11 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+const root='docs/planning/workbench-disposition-canonical-provenance-rev2',prior='docs/planning/workbench-disposition-canonical-provenance-rev1',sha=b=>createHash('sha256').update(b).digest('hex'),read=p=>JSON.parse(fs.readFileSync(p));
+const previous=read(prior+'/freeze.json'),current=read(root+'/freeze.json'),native=read(prior+'/native-result.json');
+for(const s of current.sources)assert.equal(sha(fs.readFileSync(s.path)),s.sha256,s.path);
+let runtimeSources=0;for(const s of previous.sources.filter(s=>s.path.startsWith('src/')&&!s.path.startsWith('src/test/'))){assert.equal(current.sources.find(c=>c.path===s.path)?.sha256,s.sha256,s.path);runtimeSources++;}
+assert.equal(native.tests,2);assert.equal(native.observations,23);
+const before=fs.readFileSync(prior+'/sources/src/test/workbenchDispositionCanonicalProvenance.test.ts','utf8'),after=fs.readFileSync('src/test/workbenchDispositionCanonicalProvenance.test.ts','utf8');
+assert.equal(before.replace('a complete batch and inactive outputs','a complete batch').replace("s.timeline.findLastIndex(e=>e.stage==='reasons')","s.timeline.map(e=>e.stage).lastIndexOf('reasons')"),after);
+const timelines=read('docs/planning/workbench-disposition-paged-diagnostics-ui-rev1/oracle.json').map(r=>r.summary.timeline);timelines.push([], [{stage:'reasons'},{stage:'other'},{stage:'reasons'}]);
+for(const rows of timelines)assert.equal(rows.findLastIndex(e=>e.stage==='reasons'),rows.map(e=>e.stage).lastIndexOf('reasons'));
+fs.writeFileSync(root+'/compatibility-receipt.json',JSON.stringify({status:'PASS TEST COMPATIBILITY SUCCESSOR',runtimeSourcesUnchanged:runtimeSources,changes:'Only test title and equivalent last-reasons lookup changed. All runtime sources match revision1 native PASS and browser build. First native test was not repeated; its23 observations remain attributed to revision1. Current-source targeted checkpoint/boundary tests and TypeScript are recorded separately.',nativeResultSha256:sha(fs.readFileSync(prior+'/native-result.json')),lookupCases:timelines.length},null,2)+'\n',{flag:'wx'});console.log('PASS unchanged runtime and test compatibility successor');

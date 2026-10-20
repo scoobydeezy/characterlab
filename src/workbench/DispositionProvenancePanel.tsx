@@ -2,9 +2,13 @@ import {useMemo} from 'react';
 import type {TimelineEvent} from './contracts';
 import {dispositionProvenance} from './dispositionProvenance';
 export function DispositionProvenancePanel({event,law,seamVersion}:{event:TimelineEvent;law:string;seamVersion:string}){
- const result=useMemo(()=>{try{return {report:dispositionProvenance(event,law,seamVersion)};}catch(e){return {error:String(e)};}},[event,law,seamVersion]),r=result.report;
+ const result=useMemo(()=>{try{return {report:dispositionProvenance(event,law,seamVersion)};}catch(e){return {error:String(e)};}},[event,law,seamVersion]);
+ return <DispositionProvenanceReportPanel {...result}/>;
+}
+export function DispositionProvenanceReportPanel({report,error}:{report?:ReturnType<typeof dispositionProvenance>;error?:string}){
+ const r=error?undefined:report;
  return <section aria-label="Disposition state-to-signal provenance"><h3>From recorded state to standing signals</h3>
- {result.error&&<p role="alert">{result.error}. Provenance explanation withheld.</p>}
+ {error&&<p role="alert">{error}. Provenance explanation withheld.</p>}
  {r&&!r.emitted&&<p>No standing-signal derivation was emitted at this stage.</p>}
  {r?.emitted&&<><p>{r.scope}</p><p>Selected law: {r.law}. Constitution {r.constitution.value}; plastic contribution {r.plastic}; identity standing {r.standing}. Selected acquired feedback {r.acquired}; final feedback {r.feedback}.</p>
  <p>Effective disposition = constitution + plastic = {r.effective}. Final feedback = constitution + selected acquired feedback. These quantities remain distinct.</p>

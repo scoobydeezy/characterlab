@@ -17,6 +17,12 @@ export function dispositionProvenance(event:TimelineEvent,law:string,seamVersion
  };
  const constitution=read('1457','ImmutableConstitution#1453/1'),journal=read('1436','IdentityQualificationJournal#1435/1');
  if(JSON.stringify(constitution.value)!==JSON.stringify(operands['Constitution [2]'])||JSON.stringify(journal.value)!==JSON.stringify(operands['QualifiedHistory [7]']))throw Error('Provenance read/operand mismatch');
+ return dispositionProvenanceFromOwnedReads(event,law,seamVersion,factors,operands,constitution,journal,(root,type)=>event.reads.some(r=>JSON.parse(r.label)['RootStateTypeId [1]']===root)?read(root,type):undefined);
+}
+/** Arithmetic shared by readers after they verify exact evaluation-read/operand lineage. */
+export function dispositionProvenanceFromOwnedReads(event:Pick<TimelineEvent,'id'|'instant'>,law:string,seamVersion:string,factors:Pick<ReturnType<typeof dispositionFactorSources>,'rows'>,operands:any,constitution:{path:string;value:any},journal:{path:string;value:any},read:(root:string,type:string)=>{path:string;value:any}|undefined){
+ if(!laws.includes(law)||seamVersion!=='disposition-public/0.1-candidate')throw Error('Unqualified provenance profile');
+ const header={version:'disposition-provenance/0.1',seamVersion,law,eventId:event.id,instant:event.instant};
  const entries=journal.value['Qualifications [1]'];if(!Array.isArray(entries)||entries.length>96)throw Error('Provenance history bound');
  let support=Q.of(0n),opposition=Q.of(0n),plastic=Q.of(0n),previous=0n;const occurrences=new Set<string>(),contributions:Q[]=[],history:object[]=[],batches:object[]=[];
  for(const entry of entries){
@@ -37,8 +43,8 @@ export function dispositionProvenance(event:TimelineEvent,law:string,seamVersion
  const standing=support.subtract(opposition).divide(Q.of(1n).add(support).add(opposition));
  if(!standing.equals(q(operands['Standing [4]']))||!plastic.equals(q(operands['Plastic [3]'])))throw Error('Provenance history fold mismatch');
  let plasticPath:string|null=null;
- if(law==='Refold'){if(event.reads.some(r=>JSON.parse(r.label)['RootStateTypeId [1]']==='1458'))throw Error('Refold unexpectedly reads plastic state');}
- else{const stored=read('1458','PlasticDisposition#1454/1');plasticPath=stored.path;if(!plastic.equals(q(stored.value['Value [1]'])))throw Error('Provenance stored plastic mismatch');}
+ if(law==='Refold'){if(read('1458','PlasticDisposition#1454/1'))throw Error('Refold unexpectedly reads plastic state');}
+ else{const stored=read('1458','PlasticDisposition#1454/1');if(!stored)throw Error('Provenance requires one exact owned-state read');plasticPath=stored.path;if(!plastic.equals(q(stored.value['Value [1]'])))throw Error('Provenance stored plastic mismatch');}
  const base=q(constitution.value['Value [1]']),acquired=law==='StandingOnly'?standing:law==='Neither'?Q.of(0n):law==='JointAdd'?plastic.add(standing):law==='JointMax'?(abs(plastic).compare(abs(standing))>0?plastic:standing):plastic,feedback=base.add(acquired);
  if(!base.add(plastic).equals(q(operands['Effective [5]']))||!feedback.equals(q(operands['Feedback [6]'])))throw Error('Provenance feedback law mismatch');
  const standingRows=factors.rows.filter(r=>r.role==='standing');

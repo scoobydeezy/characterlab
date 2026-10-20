@@ -1,0 +1,5 @@
+{
+  "status": "CORRECTED VERIFIER TITLE MATCH",
+  "finding": "Original verifier.mjs replacement omitted the comma-to-and change in the test title and rejected the successor. Runtime identity comparisons passed before that assertion. Original validation.json was written by the next shell statement despite the verifier failure and is not the final acceptance receipt.",
+  "correction": "verifier-v2.mjs matches the exact two test edits; compatibility-receipt.json now PASS. final-validation.json supersedes the premature validation.json."
+}

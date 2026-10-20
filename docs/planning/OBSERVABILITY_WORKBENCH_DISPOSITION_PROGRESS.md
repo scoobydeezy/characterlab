@@ -621,6 +621,45 @@ personality vector, complete provenance or player-language claim. Full entry
 remains open. This changes no Campaign3 verdict, semantics or obligation;
 all18 conditional obligations and historical source restrictions survive.
 
+## Paged owned-state provenance — 2026-10-20
+
+The paged inspector now offers `provenance`. Its canonical reader verifies present
+evaluation-time constitution/journal reads against the emitted operands, projects
+only the occurrence/time/contribution fields needed for the existing arithmetic,
+and preserves the exact report profile. The original full reader and new reader
+share the existing identity rounding, four-entry plastic batches and candidate-law
+feedback arithmetic. Nested expression/decision values stay in the paged source.
+The reusable renderer preserves the report and exposes its evaluation-read link.
+
+Native revision1 PASS two tests:23 evaluations across ten programs/seven laws,
+baseline through5 and other programs through2, including one completed Plastic
+batch, both constitution controls, original/frozen report parity and negative
+missing/presence/profile checks. A paged positive-constitution checkpoint restores
+its exact report and rejects stale revision access. The InactiveProbes program's
+early prefixes are not inactive-output evidence; a separate synthetic absent-output
+boundary test preserves absence and rejects wrong phases/versions/laws.
+
+Revision1's new test used Array.findLastIndex outside the configured TypeScript
+library. Revision2 uses map/lastIndexOf and corrects the test title. Runtime sources
+are byte-identical to the passing native run. TypeScript and two current targeted
+tests PASS; the23-observation test is explicitly retained as revision1 evidence,
+not reported as rerun. The compatibility verifier's first title replacement missed
+a punctuation change; its failure and prematurely written validation.json survive.
+Use `workbench-disposition-canonical-provenance-rev2/final-validation.json` and
+`compatibility-receipt.json` for corrected acceptance.
+
+`workbench-disposition-paged-provenance-ui-rev1/receipt.json` separately PASS:
+positive constitution prefix1, complete envelope/rendered report, exact opposing
+signals1/8 and-1/8, original evaluation-read page and five native identities.
+Screenshot inspected; isolated build600 modules PASS. Tab36/4212 retained.
+Restored research/boundary checks PASS. Both live audit source sets remain unchanged.
+
+LOCAL DISPOSITION: bounded dataflow inspection, not character self-knowledge,
+independent psychological necessity, complete task provenance, full-horizon browser
+coverage or resource qualification. Six-mode integration, comparison, remaining
+provenance/player language and the full entry demonstration remain open. No C3
+verdict or obligation changes; all18 conditional obligations remain.
+
 ## Recorded score matrix projection — 2026-10-20
 
 `dispositionScoreMatrix.ts`, `disposition-score-matrix/0.1`, prepares a detached

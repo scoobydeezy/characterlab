@@ -1,0 +1,192 @@
+{
+  "summary": {
+    "version": "disposition-paged-inspection/0.1",
+    "program": "Plastic/ConstitutionPositive",
+    "seamVersion": "disposition-public/0.1-candidate",
+    "constitution": "1/8",
+    "law": "Plastic",
+    "prefix": 1,
+    "complete": false,
+    "clock": "1",
+    "modelHash": "87eda606000f6c8206ec1ade7c268e17473efac5331ae408add50de73a86dc0b",
+    "runHash": "e76c4b33abd8dc9d57efacfe0b1744d704dc6b8915172de56326e2ea093f9655",
+    "stateHash": "4ae114e949293645425cc65c82e9e8033f0edef76a8dcd2151c186e7c2f99b03",
+    "saveHash": "1de30e3402ac2528d461ab7c2ba3de4c95090f1c481581230c473d3d88d17e9a",
+    "projectionHash": "0b436eafd721b3639852007db6cd3e4ea4063274f979390975b58350c2f5dbd9",
+    "fields": [
+      {
+        "root": "1436",
+        "path": "0a8c0101030101029c0b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72"
+      },
+      {
+        "root": "1441",
+        "path": "0a8c010103010102a10b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72"
+      },
+      {
+        "root": "1457",
+        "path": "0a8c010103010102b10b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72"
+      },
+      {
+        "root": "1458",
+        "path": "0a8c010103010102b20b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72"
+      }
+    ],
+    "timeline": [
+      {
+        "id": "0",
+        "instant": "1",
+        "phase": "40",
+        "stage": "context",
+        "parents": []
+      },
+      {
+        "id": "18",
+        "instant": "1",
+        "phase": "52",
+        "stage": "reasons",
+        "parents": [
+          "0"
+        ]
+      },
+      {
+        "id": "19",
+        "instant": "1",
+        "phase": "60",
+        "stage": "decision",
+        "parents": [
+          "18"
+        ]
+      },
+      {
+        "id": "20",
+        "instant": "1",
+        "phase": "70",
+        "stage": "intent",
+        "parents": [
+          "19"
+        ]
+      },
+      {
+        "id": "21",
+        "instant": "1",
+        "phase": "80",
+        "stage": "expression",
+        "parents": [
+          "20"
+        ]
+      },
+      {
+        "id": "22",
+        "instant": "1",
+        "phase": "100",
+        "stage": "attempt",
+        "parents": [
+          "21"
+        ]
+      },
+      {
+        "id": "24",
+        "instant": "1",
+        "phase": "110",
+        "stage": "execution",
+        "parents": [
+          "22"
+        ]
+      },
+      {
+        "id": "23",
+        "instant": "1",
+        "phase": "130",
+        "stage": "qualify",
+        "parents": [
+          "21"
+        ]
+      },
+      {
+        "id": "25",
+        "instant": "1",
+        "phase": "140",
+        "stage": "identity",
+        "parents": [
+          "23"
+        ]
+      },
+      {
+        "id": "26",
+        "instant": "1",
+        "phase": "140",
+        "stage": "adapt",
+        "parents": [
+          "25"
+        ]
+      }
+    ]
+  },
+  "envelope": {
+    "version": "disposition-canonical-inspection/0.1",
+    "identity": {
+      "program": "Plastic/ConstitutionPositive",
+      "seamVersion": "disposition-public/0.1-candidate",
+      "prefix": 1,
+      "modelHash": "87eda606000f6c8206ec1ade7c268e17473efac5331ae408add50de73a86dc0b",
+      "runHash": "e76c4b33abd8dc9d57efacfe0b1744d704dc6b8915172de56326e2ea093f9655",
+      "stateHash": "4ae114e949293645425cc65c82e9e8033f0edef76a8dcd2151c186e7c2f99b03",
+      "saveHash": "1de30e3402ac2528d461ab7c2ba3de4c95090f1c481581230c473d3d88d17e9a"
+    },
+    "selection": {
+      "kind": "provenance",
+      "eventId": "18"
+    },
+    "report": {
+      "version": "disposition-provenance/0.1",
+      "seamVersion": "disposition-public/0.1-candidate",
+      "law": "Plastic",
+      "eventId": "18",
+      "instant": "1",
+      "emitted": true,
+      "constitution": {
+        "path": "0a8c010103010102b10b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72",
+        "value": "1/8"
+      },
+      "journalPath": "0a8c0101030101029c0b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72",
+      "plasticPath": "0a8c010103010102b20b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72",
+      "history": [],
+      "batches": [],
+      "incompleteBatchEntries": 0,
+      "support": "0/1",
+      "opposition": "0/1",
+      "standing": "0/1",
+      "plastic": "0/1",
+      "effective": "1/8",
+      "acquired": "0/1",
+      "feedback": "1/8",
+      "signals": [
+        {
+          "sourceKey": "{\"record\":\"TaskRawSignalKey#401/1\",\"CandidateKey [1]\":{\"record\":\"ProceduralCandidateKey#395/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"ProtocolActionDefinitionId [2]\":{\"namespace\":\"1027\",\"identity\":\"action/longitudinal/a\"}},\"TaskCommitmentKey [2]\":{\"record\":\"TaskCommitmentKey#371/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"TaskReferent [2]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/task/a\"}}}},\"SourceRole [3]\":\"3\"}",
+          "action": "action/longitudinal/a",
+          "strength": "1/8",
+          "basis": "{\"record\":\"ReasonEvidenceBasis#400/1\",\"Weights [1]\":[]}"
+        },
+        {
+          "sourceKey": "{\"record\":\"TaskRawSignalKey#401/1\",\"CandidateKey [1]\":{\"record\":\"ProceduralCandidateKey#395/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"ProtocolActionDefinitionId [2]\":{\"namespace\":\"1027\",\"identity\":\"action/longitudinal/b\"}},\"TaskCommitmentKey [2]\":{\"record\":\"TaskCommitmentKey#371/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"TaskReferent [2]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/task/b\"}}}},\"SourceRole [3]\":\"3\"}",
+          "action": "action/longitudinal/b",
+          "strength": "-1/8",
+          "basis": "{\"record\":\"ReasonEvidenceBasis#400/1\",\"Weights [1]\":[]}"
+        }
+      ],
+      "scope": "Version-bound reconstruction of recorded owned-state reads, accepted journal contributions, identity round-to-even at1e-6, four-entry plastic batches and selected feedback law. JointMax uses identity standing on equal absolute magnitudes. Refold derives plasticity from the same journal and has no plastic-state read. Opposing standing signals have empty evidence bases. This proves this recorded dataflow, not independent psychological necessity or represented self-knowledge."
+    }
+  },
+  "page": {
+    "saveHash": "1de30e3402ac2528d461ab7c2ba3de4c95090f1c481581230c473d3d88d17e9a",
+    "selector": {
+      "kind": "event",
+      "id": "18",
+      "part": "reads"
+    },
+    "offset": 0,
+    "text": "[\n  {\n    \"record\": \"ActualReadRecord#147/1\",\n    \"AccessorId [1]\": {\n      \"namespace\": \"1028\",\n      \"identity\": \"accessor/disposition/reasons\"\n    },\n    \"Path [2]\": {\n      \"record\": \"StatePath#140/1\",\n      \"RootStateTypeId [1]\": \"1457\",\n      \"FieldId [2]\": \"1\",\n      \"Selectors [3]\": [\n        {\n          \"record\": \"CanonicalMapKeySelector#142/1\",\n          \"CanonicalMapKey [1]\": {\n            \"namespace\": \"1002\",\n            \"identity\": {\n              \"namespace\": \"1037\",\n              \"identity\": {\n                \"namespace\": \"1038\",\n                \"identity\": \"content/longitudinal/actor\"\n              }\n            }\n          }\n        }\n      ]\n    },\n    \"Presence [3]\": true,\n    \"Value [4]\": {\n      \"record\": \"ImmutableConstitution#1453/1\",\n      \"Value [1]\": \"1/8\"\n    },\n    \"DerivedSources [5]\": [],\n    \"TransformationId [6]\": false\n  },\n  {\n    \"record\": \"ActualReadRecord#147/1\",\n    \"AccessorId [1]\": {\n      \"namespace\": \"1028\",\n      \"identity\": \"accessor/disposition/reasons\"\n    },\n    \"Path [2]\": {\n      \"record\": \"StatePath#140/1\",\n      \"RootStateTypeId [1]\": \"1436\",\n      \"FieldId [2]\": \"1\",\n      \"Selectors [3]\": [\n        {\n          \"record\": \"CanonicalMapKeySelector#142/1\",\n          \"CanonicalMapKey [1]\": {\n            \"namespace\": \"1002\",\n            \"identity\": {\n              \"namespace\": \"1037\",\n              \"identity\": {\n                \"namespace\": \"1038\",\n                \"identity\": \"content/longitudinal/actor\"\n              }\n            }\n          }\n        }\n      ]\n    },\n    \"Presence [3]\": true,\n    \"Value [4]\": {\n      \"record\": \"IdentityQualificationJournal#1435/1\",\n      \"Qualifications [1]\": []\n    },\n    \"DerivedSources [5]\": [],\n    \"TransformationId [6]\": false\n  },\n  {\n    \"record\": \"ActualReadRecord#147/1\",\n    \"AccessorId [1]\": {\n      \"namespace\": \"1028\",\n      \"identity\": \"accessor/disposition/reasons\"\n    },\n    \"Path [2]\": {\n      \"record\": \"StatePath#140/1\",\n      \"RootStateTypeId [1]\": \"1458\",\n      \"FieldId [2]\": \"1\",\n      \"Selectors [3]\": [\n        {\n          \"record\": \"CanonicalMapKeySelector#142/1\",\n          \"CanonicalMapKey [1]\": {\n            \"namespace\": \"1002\",\n            \"identity\": {\n              \"namespace\": \"1037\",\n              \"identity\": {\n                \"namespace\": \"1038\",\n                \"identity\": \"content/longitudinal/actor\"\n              }\n            }\n          }\n        }\n      ]\n    },\n    \"Presence [3]\": true,\n    \"Value [4]\": {\n      \"record\": \"PlasticDisposition#1454/1\",\n      \"Value [1]\": \"0/1\"\n    },\n    \"DerivedSources [5]\": [],\n    \"TransformationId [6]\": false\n  }\n]",
+    "totalCodeUnits": 2613,
+    "nextOffset": null
+  }
+}
