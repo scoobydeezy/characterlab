@@ -54,6 +54,12 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 **Current routing (2026-10-20):** Observability Workbench IN PROGRESS, owner-authorized.
 Start docs/planning/OBSERVABILITY_WORKBENCH_BATCH_V8_PROGRESS.md.
+Disposition recorded choice comparison implemented with exact A/B decision links.
+Choice audit revision1 hit verifier string-size limit after prefix13; failure retained.
+Corrected audit89511 RUNNING:30 contrasts/all19 prefixes; immutable choice-rev2 sources.
+Browser tab23 (4202) constitutional0/1/2 and Seed0 different-choice/restore recorded;
+direct event/hash checks PASS. Final native/browser choice receipts remain due.
+Start OBSERVABILITY_WORKBENCH_DISPOSITION_PROGRESS.md; keep bound sources unchanged.
 Disposition event-time reads/before/after PASS2700 events:1854 reads,
 792 mutation records,419 changed/373 unchanged. Browser filter, selection reset
 and historical identity25 after prefix2 PASS; current native identities exact.
@@ -102,7 +108,7 @@ docs/planning/OBSERVABILITY_WORKBENCH_LONG_SOURCE_PROGRESS.md for exact scope.
 BatchV8 admits32 LONG source programs:947 roles/6388 prefixes; old915 unchanged.
 Native audit PASS947 roles/6388 prefixes; browser2/tab7 (4185) RUNNING.
 LONG-only tab6 (4184) RUNNING; neither partial browser run establishes acceptance.
-Keep both browser tabs and frozen build/source dependencies; no completedV8 receipt yet.
+Keep both browser tabs and frozen build/source dependencies; no completedV8 browser receipt yet.
 Disposition restore audit28212 remains RUNNING; do not restart quiet writers.
 LONG goal recorded-factor inspector qualified120 cases/1920 rows/2496 nuclei;
 raw signals/bases remain unavailable, so full factor accounting is still due.

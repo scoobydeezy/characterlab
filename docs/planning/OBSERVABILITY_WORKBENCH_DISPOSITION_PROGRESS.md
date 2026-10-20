@@ -591,6 +591,53 @@ character testimony or concluding that unavailable concern means no concern.
 This is workbench qualification, not a new Campaign3 verdict or obligation closure.
 All18 conditional obligations and historical source restrictions survive.
 
+## Recorded choice comparison — 2026-10-20
+
+`dispositionChoiceComparison.ts` profile `disposition-choice-comparison/0.1`
+compares actual decision candidate identities at matching native instants through
+the qualified reason/decision/intent join. Same choice, different choice, neither
+emitted, emission differs and unaligned are distinct. Complete ordered histories
+are required. The first choice/emission difference is separate from the existing
+first state and mechanism-projection differences. This does not infer successful
+execution, observer knowledge, psychological significance or causal necessity.
+
+Compare renders the choice history with links to the exact A or B decision in
+Timeline. A link installs a detached committed branch snapshot with that event
+selected; later pair execution does not silently replace it. Selecting another
+contrast hides the old report. Restore recalculates choices from the restored
+pair rather than retaining later rows.
+
+Exhaustive qualification revision2 is RUNNING in session89511 using
+`scripts/check-workbench-disposition-choice-v2.mjs`. Immutable sources and freeze are
+in `workbench-disposition-choice-rev2`. The checker targets all30 contrasts at
+all19 original prefixes:285 authenticated snapshots,570 reports and5130 cumulative
+choice rows. It independently compares original decision outputs, verifies earlier
+rows stay stable and checks reversed pairs, invalid lineage and missing instants.
+Only its completed receipt establishes the full result. Do not edit bound files
+or restart this live audit.
+
+Revision1 completed prefix13, then failed at prefix14 when its immutability check
+called JSON.stringify on both entire snapshots together, exceeding Node's maximum
+string length. Its frozen sources and failure.json remain in choice-rev1; no final
+receipt was issued. Revision2 recursively hashes every snapshot value using type
+and length framing, before and after inspection, without constructing one combined
+serialization. No field, program, contrast or prefix was removed from the check.
+
+Browser tab23 at127.0.0.1:4202 uses isolated build
+`characterlab-disposition-choice-rev1` (preview session88884). Raw evidence in
+`workbench-disposition-choice-ui-rev1/browser.json` covers constitutional comparison
+prefixes0/1/2, B decision19 at prefix1, historical A decision19 at prefix2, selection
+clearing, Seed0's different choice at instant1, and restore to captured prefix0.
+Direct checks against original snapshots PASS for displayed candidate identities,
+both linked exact events, all five branch hashes and the restored empty history.
+The screenshot was inspected. The final browser verifier deliberately waits for
+the completed exhaustive receipt; raw observations alone are not that receipt.
+
+TypeScript and production build586 modules PASS. Restored research and reference
+boundary checks PASS; all18 conditional obligations remain. The complete integrated
+demonstration, player language, matrix/vector inspection and broader resource/
+accessibility qualification remain open. This is tooling, not a Campaign3 verdict.
+
 ## Event-time state inspection — 2026-10-20
 
 Timeline now separates recorded reads from before/after mutation values.

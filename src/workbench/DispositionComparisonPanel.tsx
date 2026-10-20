@@ -7,6 +7,8 @@ import {retainDispositionReport} from './dispositionReportRetention';
 import type {DispositionSnapshot} from './dispositionAdapter';
 import {DispositionComparisonSummaryPanel} from './DispositionComparisonSummaryPanel';
 import {DispositionChartPanel} from './DispositionChartPanel';
+import {dispositionChoiceComparison} from './dispositionChoiceComparison';
+import {DispositionChoiceComparisonPanel} from './DispositionChoiceComparisonPanel';
 type Report=Awaited<ReturnType<typeof compareDisposition>>;
 function programLabel(id:string){
  const [law,name]=id.split('/');
@@ -14,12 +16,14 @@ function programLabel(id:string){
  return `${law}: ${names[name]??name}`;
 }
 const changeLabel=(c:typeof DISPOSITION_CONTRASTS[number])=>c.kind==='input'?'input calendar':c.changed==='constitution'?'constitutional baseline':'candidate law';
-export function DispositionComparisonPanel({active=true,onInspect,constitutionalDraft}:{active?:boolean;constitutionalDraft?:string;onInspect?:(snapshot:DispositionSnapshot,comparison:string,branch:'A'|'B')=>void}){
+export function DispositionComparisonPanel({active=true,onInspect,constitutionalDraft}:{active?:boolean;constitutionalDraft?:string;onInspect?:(snapshot:DispositionSnapshot,comparison:string,branch:'A'|'B',event?:string)=>void}){
  const clients=useRef<[DispositionWorkerClient,DispositionWorkerClient]>(),alive=useRef(true),locked=useRef(false),stop=useRef(false);
+ const [choices,setChoices]=useState<ReturnType<typeof dispositionChoiceComparison>>();
  const retained=useRef<Report[]>([]),[history,setHistory]=useState<Report[]>([]),[viewedPrefix,setViewedPrefix]=useState<number>();
  function remember(next:Report,mode:'append'|'reset'|'restore'='append'){
   const rows=retainDispositionReport(retained.current,next,mode);
   retained.current=rows;setHistory(rows);setViewedPrefix(undefined);setReport(next);
+  if(clients.current&&mode!=='restore')setChoices(dispositionChoiceComparison(next.contrast.id,clients.current[0].snapshot(),clients.current[1].snapshot()));
  }
  const [selected,setSelected]=useState('model/0/13'),[loaded,setLoaded]=useState(''),[report,setReport]=useState<Report>(),[busy,setBusy]=useState(false),[error,setError]=useState(''),[checkpointError,setCheckpointError]=useState(''),[checkpoint,setCheckpoint]=useState<DispositionPairCheckpoint>(),[complete,setComplete]=useState(false);
  useEffect(()=>{alive.current=true;return()=>{alive.current=false;stop.current=true;clients.current?.forEach(c=>c.dispose());};},[]);
@@ -54,15 +58,16 @@ export function DispositionComparisonPanel({active=true,onInspect,constitutional
     fresh=await restoreDispositionPair(checkpoint,c=>DispositionWorkerClient.restore(c),c=>c.dispose());
     const next=await compareDisposition(checkpoint.comparison,fresh[0].snapshot(),fresh[1].snapshot());if(!alive.current)return;
     remember(next,'restore');
+    setChoices(dispositionChoiceComparison(checkpoint.comparison,fresh[0].snapshot(),fresh[1].snapshot()));
     clients.current?.forEach(c=>c.dispose());clients.current=fresh;fresh=undefined;setSelected(checkpoint.comparison);setLoaded(checkpoint.comparison);setReport(next);setComplete(clients.current.every(c=>c.snapshot().complete));setError('');
    }
   }catch(e){if(alive.current)setCheckpointError(String(e));}
   finally{fresh?.forEach(c=>c.dispose());locked.current=false;if(alive.current)setBusy(false);}
  }
  const canContinue=!busy&&loaded===selected&&!complete&&!error;
- function inspect(branch:'A'|'B'){
+ function inspect(branch:'A'|'B',event?:string){
   if(locked.current||loaded!==selected||!clients.current||error)return;
-  onInspect?.(clients.current[branch==='A'?0:1].snapshot(),loaded,branch);
+  onInspect?.(clients.current[branch==='A'?0:1].snapshot(),loaded,branch,event);
  }
  const selectedContrast=DISPOSITION_CONTRASTS.find(c=>c.id===selected)!;
  const draftContrast=DISPOSITION_CONTRASTS.find(c=>c.kind==='model'&&c.changed==='constitution'&&c.a==='Plastic/Main'&&c.b===constitutionalDraft);
@@ -76,6 +81,7 @@ export function DispositionComparisonPanel({active=true,onInspect,constitutional
  {onInspect&&<><div className="button-row"><button disabled={busy||loaded!==selected||!report||!!error} onClick={()=>inspect('A')}>Inspect DISPOSITION branch A</button><button disabled={busy||loaded!==selected||!report||!!error} onClick={()=>inspect('B')}>Inspect DISPOSITION branch B</button></div><p>Inspect the selected committed branch in Character, Reasoning, Timeline and Architecture. Selection pauses pair advancement and preserves the independent main run.</p></>}
  <div className="button-row"><button disabled={busy||loaded!==selected||!report} onClick={()=>void checkpointAction(false)}>Capture DISPOSITION pair</button><button disabled={busy||!checkpoint} onClick={()=>void checkpointAction(true)}>Restore DISPOSITION pair</button></div><p>{checkpoint?`Captured ${programLabel(checkpoint.a.program)} / ${programLabel(checkpoint.b.program)} at prefixes ${checkpoint.a.prefix} / ${checkpoint.b.prefix}.`:'No pair checkpoint captured.'} Both native saves authenticate before replacement.</p>{checkpointError&&<p role="alert">{checkpointError}</p>}
  {report&&<><table><thead><tr><th>Branch</th><th>Program</th><th>Prefix</th><th>Constitution</th></tr></thead><tbody>{([report.a,report.b] as const).map((s,i)=><tr key={i}><td>{i===0?'A':'B'}</td><td>{programLabel(s.program)}</td><td>{s.prefix}</td><td>{s.constitution}</td></tr>)}</tbody></table><p>Mechanism projection equal: {String(report.mechanismProjectionEqual)} · State equal: {String(report.stateEqual)}</p><p>{report.randomPolicy}</p><details><summary>Exact DISPOSITION comparison</summary><pre className="exact" data-disposition-pair>{JSON.stringify(report,null,2)}</pre></details></>}
+ {choices&&report&&loaded===selected&&<DispositionChoiceComparisonPanel report={choices} onEvent={onInspect&&!busy&&!error?(branch,event)=>inspect(branch,event):undefined}/>}
  {report&&loaded===selected&&<section aria-label="DISPOSITION divergence history"><h3>Retained divergence history</h3>
  <p>Observed prefixes: {divergence.observedPrefixes.join(', ')}. Missing prefixes: {divergence.missingPrefixes.join(', ')||'none'}. Current pair prefix: {report.a.prefix}.</p>
  <p>First state difference: {divergence.firstStateDifference?.prefix??'none observed'}. First mechanism projection difference: {divergence.firstMechanismProjectionDifference?.prefix??'none observed'}.</p>
