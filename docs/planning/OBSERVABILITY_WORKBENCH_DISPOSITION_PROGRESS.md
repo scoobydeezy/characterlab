@@ -718,6 +718,42 @@ requirement remains unfinished, alongside six-mode migration, comparisons, full
 resource/coverage qualification and the integrated entry demonstration. No Campaign3
 semantics, verdicts, laws, historical restrictions or18 conditional obligations change.
 
+## Paged paired execution — 2026-10-20
+
+`dispositionComparisonContext` shares the existing original-identity, declared-pair,
+input/model-control and committed-prefix checks with both comparison paths. The
+old report retains its exact shape and serialized field order. `DispositionPagedRun`
+now compares field presence and streamed readable-text equality while locking both
+runs; exact values remain behind branch/save/path-qualified text pages. This is
+the same readable equality as the original report, not canonical byte identity.
+
+`DispositionPagedPair` owns two original native runs. It supports matched advancement,
+explicit individual-branch advancement, checkpoint/restore, branch diagnostics and
+text pages. Unequal prefixes withhold comparison fields and equalities; advancing
+both requires alignment first. Publication occurs only after requested advancement
+and comparison finish. On partial branch failure the last published pair is marked
+failed and further reads/advancement/checkpoints reject until restore or recreation.
+This policy does not claim atomic rollback. The new worker/client carry these operations.
+
+`workbench-disposition-paged-pair-rev2/test-receipt.json` PASS four tests: all30
+retained initial reports (including serialized order); six fresh matched reports
+for constitution, Refold and routed Seed0 contrasts at0/1; exact first4096 field text
+and total lengths; three pair restores; unequal-prefix restoration/alignment;
+stale/wrong-branch/concurrent rejection; injected second-branch failure and saved
+recovery. Worker-handler tests use stubbed self and restore both branches. Real
+browser/client transport remains due. Revision1 retains a missing test-mock `this`
+annotation failure; the corrected source passes TypeScript.
+
+Normal build600 modules PASS. `module-build.json` separately records an explicit
+client-entry build including the new pair worker, since the application does not
+yet mount it. Research/boundary and both live source bindings PASS. No extra native
+qualification, law selection, resource bound or semantic-divergence claim follows.
+
+LOCAL DISPOSITION: next integrate paired controls and revision-bound branch inspection
+into the paged UI, then migrate the six modes. Full-horizon successor comparisons,
+observer-safe player language and integrated entry remain due. All Campaign3 semantics,
+comparators, historical restrictions and18 conditional obligations survive.
+
 ## Recorded score matrix projection — 2026-10-20
 
 `dispositionScoreMatrix.ts`, `disposition-score-matrix/0.1`, prepares a detached

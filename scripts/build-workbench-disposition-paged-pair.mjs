@@ -1,0 +1,5 @@
+import fs from 'node:fs';import path from 'node:path';import os from 'node:os';import {createHash} from 'node:crypto';import {build} from 'vite';
+const outDir=path.join(os.tmpdir(),'characterlab-disposition-paged-pair-module-rev1'),root='docs/planning/workbench-disposition-paged-pair-rev2',sha=b=>createHash('sha256').update(b).digest('hex');
+const result=await build({configFile:false,worker:{format:'es'},build:{outDir,emptyOutDir:false,lib:{entry:'src/workbench/dispositionPagedPairWorkerClient.ts',formats:['es'],fileName:'paged-pair'},target:'es2022'}});
+const entries=fs.readdirSync(outDir,{recursive:true}).filter(p=>fs.statSync(path.join(outDir,p)).isFile()).map(p=>({path:p,sha256:sha(fs.readFileSync(path.join(outDir,p))),bytes:fs.statSync(path.join(outDir,p)).size}));
+fs.writeFileSync(root+'/module-build.json',JSON.stringify({status:'PASS STANDALONE PAIR CLIENT AND WORKER BUILD',outDir,entries,scope:'Explicit client entry includes the new worker bundle. Does not establish browser transport, UI integration or runtime memory bounds.'},null,2)+'\n',{flag:'wx'});

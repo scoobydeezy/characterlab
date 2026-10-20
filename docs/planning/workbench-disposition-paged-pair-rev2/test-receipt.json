@@ -1,0 +1,23 @@
+{
+  "status": "PASS BOUNDED PAGED PAIR AND WORKER",
+  "tests": 4,
+  "initialComparisons": 30,
+  "nativeComparisons": [
+    "model/0/13",
+    "model/0/2",
+    "input/Seed0"
+  ],
+  "prefixes": [
+    0,
+    1
+  ],
+  "matchedNativeReports": 6,
+  "testsDurationMs": {
+    "pair": 86299,
+    "worker": 29486
+  },
+  "scope": "Original full comparison reports retain exact serialized order at all30 initial controls. Six paged reports match retained metadata/equality/presence and first4096 exact field text with total lengths; three paired restores. Unequal-prefix withholding, concurrent-command rejection, stale/wrong branch rejection, injected second-branch failure and saved recovery verified. Worker handler transport tested through stubbed self; real browser/client transport and six-mode integration remain due. No full-horizon, memory-bound, meaningful-divergence or player-language claim.",
+  "failurePolicy": "After partial branch failure no mixed comparison is published. Last successful view is marked failed; further reads/advancement/checkpoints reject until fresh restore/create. Not atomic rollback.",
+  "sourceHashesUnchanged": true,
+  "liveSourceHoldsUnchanged": true
+}

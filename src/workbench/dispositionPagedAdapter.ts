@@ -12,6 +12,8 @@ import {canonicalTextPage,EXACT_TEXT_PAGE_LIMIT} from './canonicalTextStream';
 import {encodeCheckpointHex,decodeCheckpointHex} from './largeCheckpointHex';
 import {DISPOSITION_MAX_SAVE_BYTES,type DispositionCheckpoint} from './dispositionAdapter';
 import {dispositionCanonicalInspection,type DispositionDiagnosticSelection} from './dispositionCanonicalInspection';
+import {dispositionComparisonContext} from './dispositionComparison';
+import {equalCanonicalText} from './canonicalTextEquality';
 function original(id:string){const row=plan.runs.find(r=>r.law+'/'+r.name===id);if(!row)throw Error('Unknown frozen DISPOSITION program');const c=dispositionCase(row as DispositionCase);return {row,...c,source:dispositionRecipe(c.profile),initialState:dispositionInitial(),orderedInputs:dispositionOrdered(c.profile,c.frames)};}
 function header(value:CanonicalValue){
  const row=rec(value,160n),event=rec(field(row,4n),130n);
@@ -37,6 +39,16 @@ export class DispositionPagedRun{
  }
  #ready(){if(this.#busy)throw Error('DISPOSITION command in flight');}
  summary(){this.#ready();return structuredClone(this.#view);}
+ async compare(comparison:string,other:DispositionPagedRun,saveHash:string,otherSaveHash:string){
+  this.#ready();other.#ready();if(this===other)throw Error('DISPOSITION comparison requires distinct runs');
+  if(saveHash!==this.#view.saveHash||otherSaveHash!==other.#view.saveHash)throw Error('Stale DISPOSITION comparison revision');
+  this.#busy=true;other.#busy=true;
+  try{
+   const context=await dispositionComparisonContext(comparison,this.#view,other.#view),paths=[...new Set([...this.#view.fields,...other.#view.fields].map(f=>f.path))];
+   const fields=context.aligned?paths.map(path=>{const a=this.#state.get(path),b=other.#state.get(path),root=this.#view.fields.find(f=>f.path===path)?.root??other.#view.fields.find(f=>f.path===path)!.root;return {path,root,aPresent:a!==undefined,bPresent:b!==undefined,equal:a===undefined||b===undefined?a===b:equalCanonicalText(a,b),aSource:a===undefined?null:{saveHash,selector:{kind:'state' as const,path}},bSource:b===undefined?null:{saveHash:otherSaveHash,selector:{kind:'state' as const,path}}};}):[];
+   return {...context,version:'disposition-paged-contrast/0.1',fields,fieldEquality:'Exact readable-text equality and presence, matching the original comparison. Values stay in revision-bound pages; this is not canonical-byte equality or semantic/causal significance.'};
+  }finally{this.#busy=false;other.#busy=false;}
+ }
  diagnostic(saveHash:string,selection:DispositionDiagnosticSelection){
   this.#ready();return dispositionCanonicalInspection(this.#view,()=>decode(this.#stateEncoding),this.#trace,saveHash,selection);
  }

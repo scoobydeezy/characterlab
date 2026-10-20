@@ -24,7 +24,9 @@ function differences(a:unknown,b:unknown,path='$'):Array<{path:string;a:unknown;
  return [{path,a:a===undefined?{missing:true}:a,b:b===undefined?{missing:true}:b}];
 }
 async function original(id:string){const r=row(id),c=dispositionCase(r as DispositionCase),inputs=dispositionOrdered(c.profile,c.frames);if(await digest(inputs)!==r.inputsSha256)throw Error('DISPOSITION original input mismatch');return {row:r,inputs:JSON.parse(exactText(decodeDispositionPublic(inputs))),modelHash:await digest(fromHex(r.modelIdentity)),runHash:await digest(fromHex(r.runIdentity))};}
-export async function compareDisposition(id:string,a:DispositionSnapshot,b:DispositionSnapshot){
+export type DispositionComparisonIdentity=Pick<DispositionSnapshot,'program'|'seamVersion'|'modelHash'|'runHash'|'law'|'constitution'|'prefix'|'clock'|'complete'|'stateHash'|'saveHash'|'projectionHash'> & {timeline:readonly unknown[];fields:readonly {path:string;root:string}[]};
+/** Declared original identities and alignment, independent of formatted state payloads. */
+export async function dispositionComparisonContext(id:string,a:DispositionComparisonIdentity,b:DispositionComparisonIdentity){
  const contrast=DISPOSITION_CONTRASTS.find(c=>c.id===id);if(!contrast||contrast.a!==a.program||contrast.b!==b.program)throw Error('DISPOSITION requires its declared ordered pair');
  const originals=await Promise.all([original(a.program),original(b.program)]),changedSettings=settings(originals[0].row,originals[1].row);
  for(const [i,s] of [a,b].entries()){
@@ -35,11 +37,15 @@ export async function compareDisposition(id:string,a:DispositionSnapshot,b:Dispo
  }
  if(contrast.kind==='model'&&(changedSettings.length!==1||originals[0].row.inputsSha256!==originals[1].row.inputsSha256))throw Error('DISPOSITION model contrast mismatch');
  if(contrast.kind==='input'&&(changedSettings.length!==0||originals[0].row.modelIdentity!==originals[1].row.modelIdentity))throw Error('DISPOSITION input contrast mismatch');
- const aligned=a.prefix===b.prefix,paths=[...new Set([...a.fields,...b.fields].map(f=>f.path))];
- const summary=(s:DispositionSnapshot)=>({program:s.program,prefix:s.prefix,clock:s.clock,constitution:s.constitution,law:s.law,modelHash:s.modelHash,runHash:s.runHash,stateHash:s.stateHash,saveHash:s.saveHash,projectionHash:s.projectionHash});
+ const aligned=a.prefix===b.prefix;
+ const summary=(s:DispositionComparisonIdentity)=>({program:s.program,prefix:s.prefix,clock:s.clock,constitution:s.constitution,law:s.law,modelHash:s.modelHash,runHash:s.runHash,stateHash:s.stateHash,saveHash:s.saveHash,projectionHash:s.projectionHash});
  return {version:'disposition-contrast-inspection/0.1',contrast:{...contrast},changedSettings,aligned,inputHashes:originals.map(o=>o.row.inputsSha256),inputDifferences:differences(originals[0].inputs,originals[1].inputs),runSeed:'00'.repeat(32),
   mechanismProjectionEqual:aligned?a.projectionHash===b.projectionHash:null,stateEqual:aligned?a.stateHash===b.stateHash:null,saveEqual:aligned?a.saveHash===b.saveHash:null,
-  fields:aligned?paths.map(path=>{const x=a.fields.find(f=>f.path===path),y=b.fields.find(f=>f.path===path);return {path,root:x?.root??y!.root,a:x?.exact??null,b:y?.exact??null,equal:x?.exact===y?.exact};}):[],a:summary(a),b:summary(b),
+  a:summary(a),b:summary(b),
   scope:'Derived diagnostics from trusted committed adapter snapshots; not a standalone save authenticator. Mechanism projection equality is not observer knowledge equality. Constitution, plastic adaptation, effective disposition, identity standing and execution remain distinct. No general personality, qualified character narration or independent causal necessity claim.',
   alignment:'Equal committed native prefixes only. Unequal prefixes withhold equality and field comparison.',randomPolicy:'Original run seed is fixed; input calendars retain their routed instant seeds. Equal seeds do not establish equal addressed draws or action causes.'};
+}
+export async function compareDisposition(id:string,a:DispositionSnapshot,b:DispositionSnapshot){
+ const {a:left,b:right,scope,alignment,randomPolicy,...context}=await dispositionComparisonContext(id,a,b),paths=[...new Set([...a.fields,...b.fields].map(f=>f.path))];
+ return {...context,fields:context.aligned?paths.map(path=>{const x=a.fields.find(f=>f.path===path),y=b.fields.find(f=>f.path===path);return {path,root:x?.root??y!.root,a:x?.exact??null,b:y?.exact??null,equal:x?.exact===y?.exact};}):[],a:left,b:right,scope,alignment,randomPolicy};
 }

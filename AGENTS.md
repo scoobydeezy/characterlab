@@ -155,6 +155,12 @@ six native audience reports through2/restore1 and poisoned-payload withholding P
 Browser three-audience/draft/round-trip PASS; tab38/4214 retained. Entire inspector
 remains researcher-only; character/player disclosure contract and language remain due.
 Typecheck/build600, research and boundary PASS; see canonical-language-rev1.
+Paged paired execution prepared: original30 initial comparison reports unchanged;
+six native pair reports (constitution/Refold/Seed0 at0/1), exact paged fields,
+paired restore, unequal horizons and injected partial failure PASS. Four tests;
+worker handler and standalone client/worker build PASS. See paged-pair-rev2.
+Revision1 test-mock type annotation failure retained; corrected TypeScript/build PASS.
+Next mount paired controls and branch inspection in paged UI; no browser pair claim.
 Six-mode migration, comparison/provenance/player language and full entry remain due.
 Disposition recorded choice comparison implemented with exact A/B decision links.
 Choice audit revision1 hit verifier string-size limit after prefix13; failure retained.
