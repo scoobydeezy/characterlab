@@ -32,10 +32,12 @@ const Control = lazy(() => import('./ControlWorkbench').then(m => ({default:m.Co
 const Substitution = lazy(() => import('./SubstitutionWorkbench').then(m => ({default:m.SubstitutionWorkbench})));
 const Fatigue = lazy(() => import('./FatigueWorkbench').then(m => ({default:m.FatigueWorkbench})));
 const Disposition = lazy(() => import('./DispositionWorkbench').then(m => ({default:m.DispositionWorkbench})));
+const DispositionPaged = lazy(() => import('./DispositionPagedInspector').then(m => ({default:m.DispositionPagedInspector})));
 export function WorkbenchApp() {
-  const [experiment, setExperiment] = useState<ExperimentId | 'batch'>('values');
+  const [experiment, setExperiment] = useState<ExperimentId | 'batch' | 'disposition-paged'>('values');
   const [visited, setVisited] = useState<Set<string>>(() => new Set(['values']));
-  return <><div className="experiment-selector"><label>Inspection experiment<select value={experiment} onChange={e => {const next = e.target.value as typeof experiment; setExperiment(next); setVisited(prior => new Set([...prior, next]));}}>{EXPERIMENTS.map(e => <option key={e.id} value={e.id}>{e.label}</option>)}<option value="batch">Batch execution</option></select></label><p>Switching views preserves each session and requests a pause at the next committed boundary. Export checkpoints or reports before closing this tab.</p></div>
+  return <><div className="experiment-selector"><label>Inspection experiment<select value={experiment} onChange={e => {const next = e.target.value as typeof experiment; setExperiment(next); setVisited(prior => new Set([...prior, next]));}}>{EXPERIMENTS.map(e => <option key={e.id} value={e.id}>{e.label}</option>)}<option value="batch">Batch execution</option><option value="disposition-paged">DISPOSITION · paged resource qualification</option></select></label><p>Switching views preserves each session and requests a pause at the next committed boundary. Export checkpoints or reports before closing this tab.</p></div>
+    {visited.has('disposition-paged') && <div hidden={experiment !== 'disposition-paged'}><Suspense fallback={<p role="status">Loading paged inspection…</p>}><DispositionPaged active={experiment === 'disposition-paged'}/></Suspense></div>}
     {visited.has('disposition') && <div hidden={experiment !== 'disposition'}><Suspense fallback={<p role="status">Loading DISPOSITION…</p>}><Disposition active={experiment === 'disposition'}/></Suspense></div>}
     <div hidden={experiment !== 'values'}><Suspense fallback={<p role="status">Loading Values…</p>}><Values active={experiment === 'values'}/></Suspense></div>
     {visited.has('reason') && <div hidden={experiment !== 'reason'}><Suspense fallback={<p role="status">Loading REASON…</p>}><Reason active={experiment === 'reason'}/></Suspense></div>}

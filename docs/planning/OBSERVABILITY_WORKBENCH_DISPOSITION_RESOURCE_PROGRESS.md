@@ -168,3 +168,34 @@ architecture reports without fetching an entire text snapshot. Then qualify brow
 full-horizon content/replay/resource behavior. Retained canonical decoding/native
 snapshot construction can still be large; this change does not prove those costs
 are solved. All Campaign3 qualifications and18 conditional obligations survive.
+
+## 2026-10-20 paged browser integration
+
+Added `DISPOSITION · paged resource qualification` to the inspection selector. This
+explicit qualification session uses the prepared paged worker; it is not a claim
+that the required six modes have all migrated. Existing six-mode sessions remain
+available. All15 original programs are selectable for fresh creation. Controls
+support Step/Run/Pause, checkpoint capture/restore, state path and historical event
+selection, and4096-unit exact pages. Draft selection never relabels displayed text.
+Each loaded page names its exact saveHash and selector. Advance preserves that page
+and disables further requests for its stale revision; exact restore re-enables it.
+Switching experiments requests pause at the next native boundary.
+
+`workbench-disposition-paged-ui-rev1` bounded browser PASS prefixes0/1/2: initial,
+first/second/previous exact projection pages; keyboard Next; stable historical page
+through advance; exact restore1; event19 output; all five native identities match
+original authenticated archives. Screenshot inspected. TypeScript/build592 modules,
+boundary and research checks PASS. Initial router JSX closing-brace typo was fixed
+before the source freeze and build. No semantic or native-source change.
+
+Full paged browser horizon RUNNING browser2/tab33 at4209, preview session67726.
+`workbench-disposition-paged-horizon-ui-rev1` freezes parent evidence and start;
+Run starts from authenticated restored prefix1 toward18. Keep tab33 handoff-marked.
+Do not reload, replace its served build, or infer completion from elapsed time.
+When Complete, capture status, five hashes, disabled Step/Run, all180 event options,
+and the retained event19 output page with its original prefix1 revision. Then load
+historical event19 at terminal revision and verify exact text plus terminal hashes;
+inspect screenshot and write a terminal verifier receipt. Broader six-mode,
+all-program, resource/latency and factor/architecture migration remain open.
+Native paged baseline audit7413 was last observed prefix10/18; original replay28212
+program5/15 prefix12/18. Both remain independently live and source-frozen.

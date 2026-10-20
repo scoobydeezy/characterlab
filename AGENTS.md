@@ -89,7 +89,7 @@ Browser continuity correction: older tabs closed after missed turn-scoped marks.
 Inventory confirmed only1/25 survived. Interrupted7/6/24 do NOT establish completion.
 Replacement full BatchV8 tab26 (4185) RUNNING, last518/947 roles3642 prefixes.
 Disposition horizon tab27 (4202) CRASHED before terminal verification; failure retained.
-At EVERY turn mark current workbenchLiveTabs:1,25,26,27,28,29,30,31,32. Do not use stale handles.
+At EVERY turn mark current workbenchLiveTabs:1,25,26,27,28,29,30,31,32,33. Do not use stale handles.
 Disposition horizon revision2 last verified16 Working; no terminal PASS. Investigate resource use before retry.
 Run/Pause prefix1 five native identities PASS. Terminal and six-mode checks remain due.
 Retained event-state build keyboard filter/selection/disclosure PASS with unchanged
@@ -102,7 +102,9 @@ Terminal string census baseline408MB/276MB unique; largest451MB/304MB unique.
 Prepared exact canonical text paging PASS2 tests/typecheck; not wired to UI.
 Paged adapter/worker/client prepared: bounded parity0/1/2 and worker/restore tests PASS.
 Full baseline paged audit session7413 RUNNING; freeze workbench-disposition-paged-rev1.
-Do not edit its bound sources. UI integration remains due; preserve live158/277 bindings.
+Do not edit its bound sources. Paged browser0/1/2 exact pages/history/restore PASS.
+Paged full horizon tab33/4209 RUNNING from restored1 to18; preserve handoff/build.
+See workbench-disposition-paged-horizon-ui-rev1. Six-mode migration remains due.
 Disposition recorded choice comparison implemented with exact A/B decision links.
 Choice audit revision1 hit verifier string-size limit after prefix13; failure retained.
 Corrected choice audit PASS30 contrasts/570 reports/5130 cumulative rows.
