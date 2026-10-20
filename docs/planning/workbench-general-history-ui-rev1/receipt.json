@@ -1,0 +1,22 @@
+{
+  "status": "PASS BOUNDED GENERAL COMPARISON BROWSER HISTORY",
+  "qualification": {
+    "path": "docs/planning/workbench-general-history-rev1/receipt.json",
+    "sha256": "22676258d5bca14a67cece26394c31e267149b72cdd43f5cdc8b809d952068db"
+  },
+  "verifier": {
+    "path": "scripts/check-workbench-general-history-ui.mjs",
+    "sha256": "323f5ab073e302210035321b904b5f5e46e58de14aa10208a659627ac300b51d"
+  },
+  "artifacts": [
+    {
+      "path": "browser.json",
+      "sha256": "6e94339f23ace204a11f40bb49fbbc361edc780eeb0ae3b6a5dd5c0bd5fbcfa3"
+    },
+    {
+      "path": "comparison.png",
+      "sha256": "bc0b081d66df20c6ad35598789949c8da6b4c89aaeab8360dc2b39c29b561761"
+    }
+  ],
+  "scope": "Original first pair: initial0, captured1, run/pause2, historical1 unchanged, restore1 and identical continuation2, run then mode-leave pause3, mode return unchanged, selection clears stale report/disables stepping, checkpoint restores original declaration1. Four independent main-run hashes unchanged. Full displayed reports match qualified native cohort. No all-pair browser replay or download-transport claim."
+}

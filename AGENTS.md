@@ -54,6 +54,11 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 **Current routing (2026-10-20):** Observability Workbench IN PROGRESS, owner-authorized.
 Start docs/planning/OBSERVABILITY_WORKBENCH_BATCH_V8_PROGRESS.md.
+General comparison Run/Pause, retained history and paired restore now qualified:
+36 declarations/471 archived reports; one native pair checkpoints0/1/2 and bounded
+browser pause/restore/continuation/mode-leave PASS. Exact state/output differences
+are diagnostics, not meaningful-character divergence. Start
+docs/planning/OBSERVABILITY_WORKBENCH_GENERAL_PROGRESS.md for scope.
 BODY admitted-pressure language PASS16/79,190 cumulative descriptions; known zero,
 unavailable and historical samples stay distinct. Bounded browser PASS; start
 docs/planning/OBSERVABILITY_WORKBENCH_BODY_LANGUAGE_PROGRESS.md.

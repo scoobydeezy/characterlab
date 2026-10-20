@@ -114,3 +114,47 @@ identities and exact original initial state/calendar. It does not provide a supp
 base-character-parameter editing surface. Do not relabel seed or projection-rotation
 controls as character traits. A suitable admitted parameterized profile and its
 formal/qualification evidence remain required for the final integrated demonstration.
+
+## Retained comparison history and paired checkpoint controls — 2026-10-20
+
+The existing declared-pair panel now supports Run/Pause, historical report selection
+and an in-memory paired checkpoint. Pause and leaving Compare finish the current
+paired boundary. History inspection does not install prior state. Both native saves
+authenticate before replacement; restoration truncates later observations, then
+continuation must reproduce the previously captured exact report. A failed second
+restore disposes the first replacement and preserves the current pair.
+
+`general-comparison-history/0.1` separates the first exact state difference from the
+first unique-stage output difference. Missing/ambiguous event slots do not become
+output inequality. Missing earlier prefixes or unqualified earlier alignments
+withhold earliest-proof status. These remain diagnostic distinctions, without a
+claim of psychological significance or causal necessity. Comparison workers remain
+independent of the main graph run.
+
+`workbench-general-history-rev1/receipt.json` PASS: all36 declarations/471 authenticated
+frozen paired-prefix reports checked for retention, ordered history, first differences,
+sparse histories, checkpoint truncation and detached inspection. One actual native
+pair (baseline versus budget-Independent-1/1, original frozen seed) restored at
+prefixes0/1/2, with exact continuations0→1 and1→2. Corrupt second save and mismatched
+declaration/seed/prefix reject. This reuses the full qualified comparison cohort for
+history checks; it does not claim fresh all36 native replay.
+
+TypeScript, production build565 modules, reference boundary and restored research
+consistency checks PASS. All18 conditional obligations remain. No new Campaign3
+verdict or qualification, no mechanism retirement and no law selection.
+
+LOCAL DISPOSITION: extend the existing qualified comparison declarations and native
+checkpoint authentication. Retain exact differences as diagnostics. Do not call a
+state/output mismatch the brief's “first meaningful divergence” without the
+corresponding character/semantic interpretation. The single integrated16-step
+demonstration, admitted character-parameter editing, General character language and
+full factor accounting remain due.
+
+`workbench-general-history-ui-rev1/receipt.json` PASS bounded first-pair browser:
+initial0, captured1, run/pause2, earlier report1 unchanged, restore1 and identical
+continuation2, mode-leave pause3 and unchanged mode return. Declaration change
+clears stale records/disables stepping; restore returns to the captured declaration1.
+Four main graph-run commitments remain unchanged. Full displayed reports match the
+qualified frozen native cohort. Keyboard focus and screenshot inspected. No full
+36-pair browser replay, checkpoint download transport or completed integrated-entry
+claim. Isolated preview4189 preserves the separate running V8 browser builds.
