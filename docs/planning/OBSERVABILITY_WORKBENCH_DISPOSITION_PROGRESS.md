@@ -428,3 +428,42 @@ observer-safe language, live charts/vector display, full factor accounting,
 meaningful divergence, integrated summary export and remaining acceptance coverage
 are still required. No general constitutional vector is invented from the single
 task-fidelity channel. No Campaign3 verdict, law choice or obligation change.
+
+## Recorded raw factors and evidence coverage — 2026-10-20
+
+Reasoning now exposes `disposition-factor-sources/0.1`: every recorded raw signal's
+exact source key, signed strength, role and evidence basis, joined by exact key to
+its compiled nucleus coverage. Expand a source to inspect raw magnitude, overlap,
+independent fraction and effective magnitude. Arithmetic checks verify absolute
+raw strength, independent=1−overlap and effective=raw×independent. Recorded score
+distributions and evaluation-time reads are retained in the exact report. Empty
+bases remain empty; absent compiled coverage remains explicit.
+
+No parameter-to-signal or state-to-signal causal attribution is manufactured from
+numerical equality. The recorded standing role is distinct from identity standing
+as an architectural concept. Constitution, plasticity and selected feedback stay
+separate operands. The existing compiled-nucleus inspector and reason-to-Timeline
+navigation remain available.
+
+`workbench-disposition-factors-rev1/receipt.json` PASS all15 original programs/
+285 authenticated archived snapshots:270 unique reasons events,250 emitted factor
+records,750 raw signals and750 exact coverage joins.20 events emit no factor record.
+All recorded source keys, strengths, bases, coverage terms, score distributions and
+reads match their native-backed snapshots. Every earlier event and report remains
+identical in each later prefix. Input records remain unchanged. Altered discount
+arithmetic and wrong-stage inputs reject. Counts are unique events, not cumulative
+repetitions across prefixes. No new full native execution is claimed by this audit.
+
+`workbench-disposition-factors-ui-rev1/receipt.json` PASS bounded positive-constitution
+browser: full event18 report matches the corpus, expanded standing source displays
+1/8 raw,0 overlap,1 independent and1/8 effective. Selection remains exact through
+actual advancement1→2, while state/save commitments change; Timeline retains event18
+at instant1. Five identity fields match archived native-backed snapshots. Screenshot
+inspected. TypeScript, build567 modules, reference boundary and restored research
+checks PASS. Frozen sources and both verifiers are retained.
+
+LOCAL DISPOSITION: expose actual recorded raw evidence and compiled coverage rather
+than infer unavailable operands. This advances factor accounting but does not close
+full quantization/calibration explanation, observer-safe reason language,
+parameter-to-signal provenance, general causal contribution or §32 entry acceptance.
+All18 conditional obligations and Campaign3 source restrictions remain unchanged.
