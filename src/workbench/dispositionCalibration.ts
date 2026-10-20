@@ -8,12 +8,18 @@ const text=(x:Q)=>`${x.numerator}/${x.denominator}`,abs=(x:Q)=>Q.of(x.numerator<
 export function dispositionCalibration(event:TimelineEvent,seamVersion:string){
  if(seamVersion!=='disposition-public/0.1-candidate')throw Error('Unqualified disposition calibration version');
  const factors=dispositionFactorSources(event);
+ if(!factors.emitted)return dispositionCalibrationFromFactors(event,seamVersion,factors,false);
+ const input=JSON.parse(event.input),reasons=JSON.parse(event.output)[1],context=input[0];
+ if(!Array.isArray(input)||input.length!==3||input[1]!==true||context?.record!=='IdentitySafeContext#1429/1'||typeof context['Learning [6]']!=='boolean'||JSON.stringify(context)!==JSON.stringify(reasons['Context [2]']))throw Error('Calibration context lineage mismatch');
+ return dispositionCalibrationFromFactors(event,seamVersion,factors,context['Learning [6]']);
+}
+/** Shared reconstruction after each reader has checked its own recorded context lineage. */
+export function dispositionCalibrationFromFactors(event:Pick<TimelineEvent,'id'|'instant'>,seamVersion:string,factors:Pick<ReturnType<typeof dispositionFactorSources>,'emitted'|'rows'|'nuclei'>,learning:boolean){
+ if(seamVersion!=='disposition-public/0.1-candidate')throw Error('Unqualified disposition calibration version');
  const header={version:'disposition-calibration-inspection/0.1',seamVersion,eventId:event.id,instant:event.instant,
   source:'dispositionPublicMath.dispositionReasons + cognitiveMath.compileReasonNuclei; disposition-adaptation/0.1-candidate; reason-dice/0.1-candidate'};
  if(!factors.emitted)return {...header,emitted:false as const,nuclei:[]};
- const input=JSON.parse(event.input),reasons=JSON.parse(event.output)[1],context=input[0];
- if(!Array.isArray(input)||input.length!==3||input[1]!==true||context?.record!=='IdentitySafeContext#1429/1'||typeof context['Learning [6]']!=='boolean'||JSON.stringify(context)!==JSON.stringify(reasons['Context [2]']))throw Error('Calibration context lineage mismatch');
- const learning=context['Learning [6]'],unit=Q.of(1n,learning?1n:16n),cutoffs=['1/10','1/5','3/5','4/5','9/10'],dies=[4,6,8,10,12];
+ const unit=Q.of(1n,learning?1n:16n),cutoffs=['1/10','1/5','3/5','4/5','9/10'],dies=[4,6,8,10,12];
  const nuclei=factors.nuclei.map(n=>{
   const roles=(['base','standing','situational'] as const).map(role=>{
    const contributions=factors.rows.filter(r=>r.role===role).flatMap(r=>r.coverage.filter(c=>c.nucleus===n.index).map(c=>({sourceKey:r.key,signedEffective:text(q(c.effective).multiply(Q.of(q(r.strength).numerator<0n?-1n:1n)))})));

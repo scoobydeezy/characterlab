@@ -8,7 +8,8 @@ import {dispositionCanonicalArchitecture} from './dispositionCanonicalArchitectu
 import {inspectDispositionCanonicalReasons} from './dispositionCanonicalReasons';
 import {dispositionCanonicalResolution} from './dispositionCanonicalResolution';
 import {dispositionCanonicalFactorSources} from './dispositionCanonicalFactorSources';
-export type DispositionDiagnosticSelection={kind:'storedState'}|{kind:'architecture'}|{kind:'reasons';eventId:string}|{kind:'resolution';eventId:string}|{kind:'factorSources';eventId:string};
+import {dispositionCanonicalCalibration} from './dispositionCanonicalCalibration';
+export type DispositionDiagnosticSelection={kind:'storedState'}|{kind:'architecture'}|{kind:'reasons';eventId:string}|{kind:'resolution';eventId:string}|{kind:'factorSources';eventId:string}|{kind:'calibration';eventId:string};
 /** Worker-side dispatch over one trusted native revision. This is not external save authentication. */
 export function dispositionCanonicalInspection(summary:DispositionInspectionSummary,state:CanonicalValue,trace:readonly CanonicalValue[],saveHash:string,selection:DispositionDiagnosticSelection){
  if(saveHash!==summary.saveHash)throw Error('Stale DISPOSITION diagnostic revision');
@@ -17,7 +18,7 @@ export function dispositionCanonicalInspection(summary:DispositionInspectionSumm
   const row=rec(value,160n),event=rec(f(row,4n),130n);
   const named=(name:string)=>{const field=event.schema.fields.find(f=>f.name===name);if(!field)throw Error('Missing canonical diagnostic header');return f(event,field.id);};
   const type=named('EventTypeId');if(typeof type==='boolean'||type.kind!=='typedIdentifier')throw Error('Invalid diagnostic event type');
-  return {id:scalar(named('EventId')),instant:scalar(named('DueAt')),phase:scalar(named('Phase')),stage:scalar(type.payload).split('/').at(-1)!,parents:items(named('CausalParentEventIds'),'list').map(scalar),output:f(row,13n),draws:f(row,14n),reads:f(row,11n)};
+  return {id:scalar(named('EventId')),instant:scalar(named('DueAt')),phase:scalar(named('Phase')),stage:scalar(type.payload).split('/').at(-1)!,parents:items(named('CausalParentEventIds'),'list').map(scalar),input:f(row,12n),output:f(row,13n),draws:f(row,14n),reads:f(row,11n)};
  });
  if(new Set(events.map(e=>e.id)).size!==events.length)throw Error('Duplicate canonical diagnostic event');
  for(const [i,e]of events.entries()){
@@ -37,6 +38,10 @@ export function dispositionCanonicalInspection(summary:DispositionInspectionSumm
   case 'factorSources':{
    const event=events.find(e=>e.id===selection.eventId);if(!event)throw Error('Unknown DISPOSITION factor event');
    return {...envelope,selection:{kind:selection.kind,eventId:selection.eventId},report:dispositionCanonicalFactorSources(event,event.output,event.reads)};
+  }
+  case 'calibration':{
+   const event=events.find(e=>e.id===selection.eventId);if(!event)throw Error('Unknown DISPOSITION calibration event');
+   return {...envelope,selection:{kind:selection.kind,eventId:selection.eventId},report:dispositionCanonicalCalibration(event,event.input,event.output,event.reads,summary.seamVersion)};
   }
   default:throw Error('Unknown DISPOSITION diagnostic selection');
  }

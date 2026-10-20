@@ -459,3 +459,29 @@ TypeScript and boundary checks PASS. The component is prepared for the paged wor
 integration and is not yet mounted in that UI. Full-horizon factor qualification,
 character-language disclosure and complete linked provenance remain separate work.
 No Campaign3 verdict or conditional-obligation change.
+
+## 2026-10-20 canonical calibration linkage
+
+Extracted dispositionCalibrationFromFactors preserves the existing diagnostic
+calculation of signed role totals, bounded nets, relevance, die bands, context-based
+modifier units, truncation/capping, polarity and exact score masses. The existing
+formatted-event reader checks its original context join before calling this helper.
+The new dispositionCanonicalCalibration checks the native input envelope and exact
+context equality before using the same helper with canonical factor accounting.
+The revision dispatcher exposes this as a calibration selection.
+
+This remains source-bound diagnostic reconstruction beneath the accepted contracts,
+not a newly recorded runtime quantization event or a change to calibration laws.
+The canonical factor path uses read references, so calibration does not need full
+formatted evaluation read values. Native data and exact raw records remain the
+sources; this report does not grant character knowledge or player disclosure.
+The live paged worker/UI connection remains due.
+
+Qualification PASS: shared arithmetic matches all270 authenticated frozen calibration
+reports from15 programs, using independently retained factors and the recorded
+learning flags. Separately, fresh baseline/Refold/inactive-probes through2 match the
+frozen results through both readers and dispatcher; changed input context and wrong
+version reject, checkpoints unchanged. The270-report test does not prove fresh
+canonical context lineage across all horizons. TypeScript and597-module isolated
+build PASS with existing large-chunk warnings; boundary/research PASS. All four
+live source sets remain unchanged. No Campaign3 verdict or obligation change.
