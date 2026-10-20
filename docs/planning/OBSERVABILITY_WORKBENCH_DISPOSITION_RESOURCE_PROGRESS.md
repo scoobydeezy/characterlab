@@ -527,3 +527,32 @@ identity. Prior event reports and checkpoints remain unchanged. Synthetic signed
 unsigned readable equality, presence transitions, both-absent and invalid presence
 controls pass. TypeScript/boundary/research PASS; all four live source sets unchanged.
 No full-horizon, other-seam or browser claim; no Campaign3 verdict/obligation change.
+
+## 2026-10-20 paged baseline browser terminal qualification
+
+The retained paged browser tab33 reached Complete18 with180 event headers after
+continuing restored prefix1. workbench-disposition-paged-horizon-ui-rev1/receipt.json
+now records PASS under check-workbench-disposition-paged-horizon-ui-v2.mjs. All five
+terminal identities match authenticated original prefix18. The retained event19
+output page still exactly matches original prefix1 with its historical revision and
+paging disabled. Explicit keyboard reload at18 preserves that text, labels it with
+the terminal save revision and enables further paging. Advance controls are disabled;
+no alerts were observed. Full-page screenshot inspected.
+
+Capture limitation preserved: exact getByLabel did not resolve the event select, so
+beforeReload.events is the actual empty observation. A corrected role-based query
+captured all180 option values/labels after reload. Verifier v1 is not satisfied and
+is retained unchanged. Verifier v2 requires the complete post-reload list and exact
+unchanged terminal identities on both sides; it does not backfill the missing first
+list or claim complete pre-reload option capture. Synthetic verifier controls pass.
+
+This qualifies the bounded paged baseline browser continuation and terminal view,
+not all-program behavior, all six modes, terminal checkpoint restore, every text
+page, or a heap/latency bound. The earlier full-snapshot browser crash remains valid
+failure evidence; the new route does not establish a causal memory benchmark.
+
+Frozen source copies for native paged qualification146 files and browser UI4 files
+were reauthenticated before releasing their current-source hold. Worker/client/UI
+integration can now proceed while preserving these completed revisions and the
+retained tab/build. The original full-snapshot replay28212 and BatchV8 browser still
+run and retain their separate source holds. No Campaign3 verdict or obligation change.

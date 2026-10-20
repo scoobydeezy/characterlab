@@ -102,12 +102,13 @@ Terminal string census baseline408MB/276MB unique; largest451MB/304MB unique.
 Prepared exact canonical text paging PASS2 tests/typecheck; not wired to UI.
 Paged adapter/worker/client prepared: bounded parity0/1/2 and worker/restore tests PASS.
 Full baseline paged audit7413 COMPLETE PASS19 prefixes/180 headers; sampled text only.
-Do not edit its bound sources. Paged browser0/1/2 exact pages/history/restore PASS.
-Paged full horizon tab33/4209 RUNNING from restored1 to18; preserve handoff/build.
+Paged browser0/1/2 exact pages/history/restore PASS; full baseline terminal18 now PASS.
+Tab33/4209 retained: five original hashes/180 options/history/reload verified by v2.
 See workbench-disposition-paged-horizon-ui-rev1. Six-mode migration remains due.
-Terminal browser verifier prepared and frozen; synthetic valid/12 rejecting controls
-PASS only verifies the checker. Capture beforeReload/afterReload at complete18 and
-run check-workbench-disposition-paged-horizon-ui.mjs; no terminal browser PASS yet.
+Terminal verifier v1 remains unsatisfied due to an empty pre-reload option query.
+v2 verifies180 post-reload options and both terminal hash sets; capture gap retained.
+Paged native/UI frozen copies verified. Their current-source hold is released for
+worker integration; original replay28212 and BatchV8 remain live and source-bound.
 Canonical factor/activity readers prepared;3 bounded parity tests/typecheck PASS.
 See workbench-disposition-canonical-diagnostics-rev1; live source bindings unchanged.
 Architecture bridge PASS9 native comparisons +285 retained mapping reports; build/typecheck.

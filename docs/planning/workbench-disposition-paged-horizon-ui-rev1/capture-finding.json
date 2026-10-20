@@ -1,0 +1,5 @@
+{
+  "status": "CAPTURE LIMITATION; VERIFIER V1 NOT SATISFIED",
+  "finding": "Exact getByLabel Paged event did not resolve the select; its descendant option capture returned zero. A read-only getByRole combobox query captured all180 native option values/labels after reload.",
+  "disposition": "Preserve browser.json beforeReload.events as the actual empty capture. Verifier v2 requires the complete afterReload event list and unchanged terminal identities on both sides; historical page, revision and controls remain verified before and after. No claim of complete pre-reload option capture."
+}
