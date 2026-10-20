@@ -591,6 +591,31 @@ character testimony or concluding that unavailable concern means no concern.
 This is workbench qualification, not a new Campaign3 verdict or obligation closure.
 All18 conditional obligations and historical source restrictions survive.
 
+## Event-time state inspection — 2026-10-20
+
+Timeline now separates recorded reads from before/after mutation values.
+Unchanged writes remain visible by default; a changed-only filter preserves the
+original record numbering and resets when selecting a different event. Exact raw
+events remain available in a disclosure. Absence remains distinct from zero.
+Reads and value continuity do not establish causal necessity.
+
+`workbench-disposition-event-state-rev1/receipt.json` verifies all2700 original
+events across15 programs:1854 reads,792 mutation records,419 changed and373
+unchanged. Server-rendered exact strings match every archived event without
+changing the event. This is renderer qualification, not interactive browser scope.
+
+`workbench-disposition-event-state-ui-rev1/receipt.json` separately verifies
+Plastic/Main prefix1 events26,25,18,24: unchanged adaptation, changed identity,
+read-only reasons and changed execution. Filtering hides the unchanged write;
+selection clears the filter. Historical identity25 stays exact after prefix2,
+whose five native identities match the archive. Both screenshots were inspected;
+transition.png shows the exact execution count before0 and after1. That counter
+is truth-side support, not character knowledge.
+
+TypeScript, production build584 modules, boundary and restored research checks
+PASS. Full accessibility/resource coverage and the integrated entry demonstration
+remain due. No Campaign3 verdict, obligation disposition or seam semantics changed.
+
 ## Recorded factor-to-resolution linkage — 2026-10-20
 
 `dispositionResolution.ts` profile `disposition-resolution-inspection/0.1` follows

@@ -1,0 +1,26 @@
+{
+  "status": "PASS BOUNDED EVENT STATE BROWSER",
+  "qualification": {
+    "path": "docs/planning/workbench-disposition-event-state-rev1/receipt.json",
+    "sha256": "81160aded21a29b4102588960c5574f791ba53dbf0099dd79795b2ff8807fd0a"
+  },
+  "verifier": {
+    "path": "scripts/check-workbench-disposition-event-state-ui.mjs",
+    "sha256": "f539efd4c17bf309e09c6a1aa5ee9446ff860936c80a13f6f5d36ab58dd15631"
+  },
+  "artifacts": [
+    {
+      "path": "browser.json",
+      "sha256": "12b28835ee9e4a36a53b6e0e591edd190f436cbc78d3470a239ea6ad48cfe152"
+    },
+    {
+      "path": "event-state.png",
+      "sha256": "1659e6e162cd695b9ed4c7d312795ce0a0ab986b9c5ab3979467cc6932ee5e72"
+    },
+    {
+      "path": "transition.png",
+      "sha256": "b8452cfa716fe4087249d7674c64e1ffa4d1dd01b4a73639e7e18d5880519174"
+    }
+  ],
+  "scope": "Plastic Main prefix1 unchanged adaptation, changed identity/execution and read-only reasons records preserve exact strings/counts. Changed-only hides unchanged writes and selection resets its filter. Historical identity25 remains exact after prefix2; native snapshot identities match. No complete accessibility or full-entry claim."
+}

@@ -54,6 +54,9 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 **Current routing (2026-10-20):** Observability Workbench IN PROGRESS, owner-authorized.
 Start docs/planning/OBSERVABILITY_WORKBENCH_BATCH_V8_PROGRESS.md.
+Disposition event-time reads/before/after PASS2700 events:1854 reads,
+792 mutation records,419 changed/373 unchanged. Browser filter, selection reset
+and historical identity25 after prefix2 PASS; current native identities exact.
 Disposition raw factor sources/coverage PASS15 programs/285 archived snapshots:
 270 reason events,250 emitted records,750 source joins; historical stability and
 bounded browser factor table/Timeline link PASS. Calibration reconstruction now
@@ -97,7 +100,8 @@ path observations;34 destructive shared-slot observations kept outside box total
 Bounded browser reports and event navigation PASS; start
 docs/planning/OBSERVABILITY_WORKBENCH_LONG_SOURCE_PROGRESS.md for exact scope.
 BatchV8 admits32 LONG source programs:947 roles/6388 prefixes; old915 unchanged.
-Native audit92941 and browser2/tab7 (4185) RUNNING; LONG-only tab6 (4184) RUNNING.
+Native audit PASS947 roles/6388 prefixes; browser2/tab7 (4185) RUNNING.
+LONG-only tab6 (4184) RUNNING; neither partial browser run establishes acceptance.
 Keep both browser tabs and frozen build/source dependencies; no completedV8 receipt yet.
 Disposition restore audit28212 remains RUNNING; do not restart quiet writers.
 LONG goal recorded-factor inspector qualified120 cases/1920 rows/2496 nuclei;

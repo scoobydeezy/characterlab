@@ -26,12 +26,14 @@ name, law, numeric, appraisal and expected-hash declarations are rejected.
 TypeScript PASS; production build PASS558 modules. Reference boundary and
 research checks PASS after evidence restoration, retaining18 conditional obligations.
 
-Full native batch qualification is RUNNING in session92941 using
-`scripts/check-workbench-batch-v8.mjs`. The immutable pre-execution manifest and
-source copies are in `workbench-batch-parity-rev8`. Only a completed receipt
-establishes all947 roles/6388 prefixes, old exported-original equality, and the
-six-field LONG prefix join to its independently qualified native evidence.
-Do not change those bound dependencies or restart the writer while it is live.
+Full native batch qualification completed PASS using
+`scripts/check-workbench-batch-v8.mjs`. The immutable pre-execution manifest,
+source copies and completed receipt are in `workbench-batch-parity-rev8`.
+The receipt establishes all947 roles/6388 prefixes, old exported-original
+equality, and the six-field LONG prefix join to its independently qualified
+native evidence. A separate final read verified every current source hash,
+all947 complete statuses and all6388 exact expected-save commitments.
+This native result does not qualify browser execution or component successors.
 
 Browser build is isolated at127.0.0.1:4184, served from the temporary
 characterlab-batch-v8-rev1 directory (preview session4165). The browser source
