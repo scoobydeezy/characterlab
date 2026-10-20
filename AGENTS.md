@@ -68,9 +68,9 @@ These are serialized diagnostic sizes, not heap or checkpoint-size claims.
 Start OBSERVABILITY_WORKBENCH_DISPOSITION_RESOURCE_PROGRESS.md; no heap claim.
 Disposition recorded choice comparison implemented with exact A/B decision links.
 Choice audit revision1 hit verifier string-size limit after prefix13; failure retained.
-Corrected audit89511 RUNNING:30 contrasts/all19 prefixes; immutable choice-rev2 sources.
-Browser tab23 (4202) constitutional0/1/2 and Seed0 different-choice/restore recorded;
-direct event/hash checks PASS. Final native/browser choice receipts remain due.
+Corrected choice audit PASS30 contrasts/570 reports/5130 cumulative rows.
+Browser tab23 (4202) constitutional0/1/2, branch decision links, Seed0 different-choice
+and restore PASS. Complete receipts retained; broader browser coverage remains due.
 Start OBSERVABILITY_WORKBENCH_DISPOSITION_PROGRESS.md; keep bound sources unchanged.
 Disposition event-time reads/before/after PASS2700 events:1854 reads,
 792 mutation records,419 changed/373 unchanged. Browser filter, selection reset

@@ -638,14 +638,17 @@ selected; later pair execution does not silently replace it. Selecting another
 contrast hides the old report. Restore recalculates choices from the restored
 pair rather than retaining later rows.
 
-Exhaustive qualification revision2 is RUNNING in session89511 using
+Exhaustive qualification revision2 completed PASS in session89511 using
 `scripts/check-workbench-disposition-choice-v2.mjs`. Immutable sources and freeze are
-in `workbench-disposition-choice-rev2`. The checker targets all30 contrasts at
+in `workbench-disposition-choice-rev2`. The completed receipt covers all30 contrasts at
 all19 original prefixes:285 authenticated snapshots,570 reports and5130 cumulative
 choice rows. It independently compares original decision outputs, verifies earlier
 rows stay stable and checks reversed pairs, invalid lineage and missing instants.
-Only its completed receipt establishes the full result. Do not edit bound files
-or restart this live audit.
+The5130 cumulative rows contain4561 same-choice,143 different-choice,36 emission-
+different and390 neither-emitted observations. Repeated earlier instants across
+prefixes are not independent behavioral events. Final source and report hashes,
+570 distinct contrast/prefix identities and5130 total rows were independently
+rechecked. The original failed revision remains preserved.
 
 Revision1 completed prefix13, then failed at prefix14 when its immutability check
 called JSON.stringify on both entire snapshots together, exceeding Node's maximum
@@ -661,8 +664,10 @@ prefixes0/1/2, B decision19 at prefix1, historical A decision19 at prefix2, sele
 clearing, Seed0's different choice at instant1, and restore to captured prefix0.
 Direct checks against original snapshots PASS for displayed candidate identities,
 both linked exact events, all five branch hashes and the restored empty history.
-The screenshot was inspected. The final browser verifier deliberately waits for
-the completed exhaustive receipt; raw observations alone are not that receipt.
+The screenshot was inspected. The final browser verifier now PASS against the
+completed exhaustive receipt: all captured reports match, both decision links
+expose their exact original event and five branch identities, and restoring prefix0
+clears later choice rows. Only these declared browser cases are qualified.
 
 TypeScript and production build586 modules PASS. Restored research and reference
 boundary checks PASS; all18 conditional obligations remain. The complete integrated
