@@ -98,6 +98,9 @@ Snapshot byte census PASS285 archives:41,218,393,463 decoded bytes total;
 largest482,251,239 bytes (program13/prefix18),118 over128MiB/63 over256MiB.
 These are serialized diagnostic sizes, not heap or checkpoint-size claims.
 Start OBSERVABILITY_WORKBENCH_DISPOSITION_RESOURCE_PROGRESS.md; no heap claim.
+Terminal string census baseline408MB/276MB unique; largest451MB/304MB unique.
+Prepared exact canonical text paging PASS2 tests/typecheck; not wired to UI.
+Next revision-bound on-demand worker inspection; preserve live158/277 source bindings.
 Disposition recorded choice comparison implemented with exact A/B decision links.
 Choice audit revision1 hit verifier string-size limit after prefix13; failure retained.
 Corrected choice audit PASS30 contrasts/570 reports/5130 cumulative rows.

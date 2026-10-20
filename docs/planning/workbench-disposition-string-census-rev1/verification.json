@@ -1,0 +1,47 @@
+{
+  "status": "PASS CENSUS CONSISTENCY AND LIVE SOURCE PRESERVATION",
+  "sources": [
+    {
+      "path": "scripts/check-workbench-disposition-string-census-verify.mjs",
+      "sha256": "1144207e98db934a7045a71f70b3d3fab6f2cde7fb503a0b4242008bfc75a972"
+    },
+    {
+      "path": "src/workbench/dispositionAdapter.ts",
+      "sha256": "add908d63b219e0db78424117618e03d57bb11742ef55d74ef5c329660baef80"
+    },
+    {
+      "path": "src/workbench/dispositionWorker.ts",
+      "sha256": "cfed3ee35129195ec962074d6f15701cb50e193cb7b9e23e9de34bd25d811b46"
+    },
+    {
+      "path": "src/workbench/dispositionWorkerClient.ts",
+      "sha256": "02e1bba669388cc2f594c56fb1826e155bb09825b6fecab165e90c486376b0e3"
+    },
+    {
+      "path": "src/workbench/DispositionWorkbench.tsx",
+      "sha256": "d8412761526516edca91de8cc257b0b886fd79f9fe9a796a08b2b52f0556d026"
+    },
+    {
+      "path": "src/workbench/canonicalTextStream.ts",
+      "sha256": "40a3bde77f2b001b6e7f9a957db3be5c4cd8c70e3175bf5025525df22e04e6fb"
+    },
+    {
+      "path": "src/test/workbenchCanonicalTextStream.test.ts",
+      "sha256": "907a59422e12a096f8897a98dae2e9f65da8a9f227862ed27d51adc4f3f52a7b"
+    }
+  ],
+  "live": [
+    {
+      "path": "docs/planning/workbench-disposition-replay-rev1/manifest.json",
+      "sources": 158,
+      "sha256": "e0ebd9e47ae57d5f2c287dee8b446c3b9df65c1140cc5d872051fc3e5936def1"
+    },
+    {
+      "path": "docs/planning/workbench-batch-parity-rev8/manifest.json",
+      "sources": 277,
+      "sha256": "5425eefeee5ea4096e209aba984a010f0054a359d5c706bafcfe0d55705ba059"
+    }
+  ],
+  "receiptSha256": "a6b0c408e57dc65787570295975adce0dfab0675c034902bb293dd2b2f15ee3c",
+  "scope": "Independent aggregate and authenticated gzip-byte-census joins; frozen current copy/serialization call sites and prepared text pager. Tests and typechecking recorded separately. No browser fix or memory guarantee claimed."
+}

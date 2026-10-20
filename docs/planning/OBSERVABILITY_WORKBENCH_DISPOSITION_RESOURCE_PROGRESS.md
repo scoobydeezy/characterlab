@@ -82,3 +82,49 @@ See workbench-disposition-horizon-ui-rev2/browser-crash.json. Preserve pause1 an
 failed attempt; investigate resource behavior before another full-horizon attempt.
 Native replay continues independently, now program5/15 prefix0 after program4
 terminal18 PASS. The cause of the browser crash is not established by byte census.
+
+## 2026-10-20 terminal text census and paging foundation
+
+LOCAL DISPOSITION: full-horizon browser acceptance is still unproved after the
+revision2 page crash. Do not restart the same run merely to obtain a green result.
+`workbench-disposition-string-census-rev1` authenticates original baseline and
+largest-snapshot terminal archives against the prior receipt and byte census.
+Each contains all180 original events. Exact UTF-8 string-value content:
+
+| Terminal program | Total string bytes | Unique string bytes | Repeated bytes |
+| --- | ---: | ---: | ---: |
+| Plastic/Main | 408126835 | 275532773 | 132594062 |
+| Plastic/ConstitutionPositive | 451393527 | 304186754 | 147206773 |
+
+Baseline mechanismProjection alone is118980230 bytes; timeline output123503828,
+reads71646468, input42580901. Object keys/envelope overhead are excluded. These
+are content sizes, not allocated heap, physical string sharing, or a crash-cause
+finding. Exact deduplication alone still leaves hundreds of MB of unique text.
+The verification receipt freezes current adapter/worker/client/UI call sites and
+confirms unchanged158 native replay and277 batch sources.
+
+Prepared `canonicalTextStream.ts` emits the existing exactText JSON format directly
+from canonical values without building the intermediate readable tree. Its pager
+returns at most65536 UTF-16 code units and explicit offset/total/next offset; every
+character remains addressable. It rejects invalid/out-of-range requests. Joining
+pages preserves exact text, including split surrogate pairs; offsets are code units,
+not bytes or Unicode character counts. Per-page traversal still visits the whole
+value to measure total length. Large primitive strings still use JSON.stringify.
+No constant-memory or browser resource guarantee is asserted.
+
+Two tests PASS: all canonical types/escaping/empty containers/record order, one-unit
+through65536-unit page boundaries; actual admitted Disposition prefix1 saved state
+and full historical trace equal existing exactText and do not alter checkpoint.
+TypeScript and boundary check PASS. Pager is prepared, not wired into the browser.
+
+Next resource implementation: a separate compact inspection adapter/worker route,
+using the same native factory and run identities, should return revision identity,
+event headers and path descriptors at each committed prefix. Fetch selected exact
+records/text pages on demand and bind requests to saveHash so advancement cannot
+silently substitute a new revision. Preserve every event and native save; retaining
+history in the worker is not permission to truncate it. Existing comparison/factor
+projections must receive their required exact selected records and retain qualified
+semantics. Verify parity against original archived snapshots, then full-horizon
+browser mode/content/history and actual resource behavior. Avoid changing the live
+replay adapter until its current source-bound run completes; new modules can reuse
+unchanged native code. All18 conditional obligations and source limits survive.
