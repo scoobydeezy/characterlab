@@ -75,3 +75,10 @@ combined-string verifier failure and these measured sizes require avoiding whole
 pair string construction in audit work. Browser rendering/retention changes must
 follow actual browser evidence and preserve exact historical inspection; the byte
 census alone does not justify a heap claim, arbitrary truncation or semantic change.
+
+2026-10-20 browser resource update: horizon revision2 tab27 returned the browser's
+This page crashed page for4202. Last verified prefix16 Working; no terminal PASS.
+See workbench-disposition-horizon-ui-rev2/browser-crash.json. Preserve pause1 and
+failed attempt; investigate resource behavior before another full-horizon attempt.
+Native replay continues independently, now program5/15 prefix0 after program4
+terminal18 PASS. The cause of the browser crash is not established by byte census.

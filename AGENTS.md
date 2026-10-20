@@ -63,6 +63,8 @@ cue-level and complete factor language remain open. Retain new tab29/4205.
 SEM causal-role language now PASS4 prefixes/12 observer views/3 descriptions;
 exact perceived-binding support and rule mapping,32 tests and browser/history PASS.
 See workbench-sem-causal-language-rev1; cue-level/full-choice language remains due.
+SEM registered-state search PASS4 prefixes/17 terminal leaves;36 tests and browser0/1/3
+exact search/filter/history PASS. See workbench-sem-recorded-state-rev1; tab32/4208.
 SEM committed state transitions PASS4 prefixes/2 roots/6 root transitions; browser0/1/3
 exact before/after and history PASS. Read/write counts remain unavailable, not zero.
 Type-inference failure retained in rev1; explicit-type rev2 and build PASS.
@@ -85,9 +87,10 @@ selection, revision update, no-match/long-query and unchanged native hashes PASS
 See OBSERVABILITY_WORKBENCH_GENERAL_PROGRESS.md; browser tab25 (4203) retained.
 Browser continuity correction: older tabs closed after missed turn-scoped marks.
 Inventory confirmed only1/25 survived. Interrupted7/6/24 do NOT establish completion.
-Replacement full BatchV8 tab26 (4185) and Disposition horizon tab27 (4202) RUNNING.
-At EVERY turn mark current workbenchLiveTabs:1,25,26,27,28,29,30,31. Do not use stale handles.
-Disposition horizon revision2 repeats pause1 then runs toward18; keep tab27 alive.
+Replacement full BatchV8 tab26 (4185) RUNNING, last518/947 roles3642 prefixes.
+Disposition horizon tab27 (4202) CRASHED before terminal verification; failure retained.
+At EVERY turn mark current workbenchLiveTabs:1,25,26,27,28,29,30,31,32. Do not use stale handles.
+Disposition horizon revision2 last verified16 Working; no terminal PASS. Investigate resource use before retry.
 Run/Pause prefix1 five native identities PASS. Terminal and six-mode checks remain due.
 Retained event-state build keyboard filter/selection/disclosure PASS with unchanged
 native prefix2 identities; broader accessibility and later-build qualification remain due.

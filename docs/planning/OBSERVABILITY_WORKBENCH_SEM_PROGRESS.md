@@ -1349,3 +1349,25 @@ after3. Screenshot of keyboard-opened transition inspected. Preview session77230
 tab31 retained. Boundary/research checks PASS; live158/318/277-source audit sets
 remain unchanged. Broader architecture participation, missing instrumentation,
 accessibility and integrated Campaign4 entry remain open. All18 obligations survive.
+
+## 2026-10-20 registered-state search
+
+LOCAL DISPOSITION: expose accepted `perceptualStateEntries` for stored roots241/242
+in Architecture mode. Counters and active-file membership are exact registered leaves;
+the harness validation flag stays separate. No recognition or causal output becomes
+an invented stored root243/244. Implements semantic-binding/0.1-candidate SEM-001J.
+
+Native `workbench-sem-recorded-state-rev1` PASS all4 prefixes, exact restore and
+unchanged saves; terminal17 leaves (eight continuants, three events, six counters).
+36 tests/31 files including26 actual worker suites PASS. TypeScript and isolated
+590-module build PASS; existing large-chunk warning remains. Browser
+`workbench-sem-recorded-state-ui-rev1` PASS prefixes0/1/3 paths and revisions,
+keyboard selection, exact-path/root/no-match filtering, six unchanged hashes, and
+selected Mina counter stability across the other observers. Screenshot inspected.
+
+Development failures retained: the independent test first treated a counter map as
+a list, then expected18 rather than17 leaves. Corrected raw map/set census agrees
+with every accepted path projection. No native state or mechanism was changed.
+No new Campaign3 verdict or obligation disposition; all18 conditional obligations
+and source restrictions survive. Full corpus, language, accessibility/resource and
+single integrated entry acceptance remain open. Browser32/4208 retained.

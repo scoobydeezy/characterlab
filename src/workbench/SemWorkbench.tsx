@@ -1,3 +1,4 @@
+import {RecordedStateInspector} from './RecordedStateInspector';
 import {SemCausalLanguagePanel} from './SemCausalLanguagePanel';
 import {SemStateTransitionsPanel} from './SemStateTransitionsPanel';
 import type {SemInspectionSnapshot as SemSnapshot} from './semInspection';
@@ -71,6 +72,7 @@ export function SemWorkbench({active=true}:{active?:boolean}){
  {mode==='Compare'&&<SemSchemaPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>} 
  {mode==='Compare'&&<SemPhasePanel client={run.current} busy={busy} execute={execute} onExport={setText}/>} 
  {mode==='Compare'&&<SemProvenancePanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
+ {mode==='Architecture'&&view&&<><p>{view.recordedState.scope}</p><RecordedStateInspector key={view.runHash} fields={view.recordedState.fields} prefix={view.prefix} saveHash={view.saveHash}/></>}
  {mode==='Architecture'&&<SemStateTransitionsPanel report={view?.stateTransitions} onEntry={index=>{setEntry(index);setMode('Timeline');}}/>}
  {mode==='Architecture'&&<section className="card"><h2>Retained semantic state</h2><p>Native continuant and event-file roots are shown below. Individual read/write counts remain unavailable for this historical trace format; committed snapshot changes above do not supply that missing instrumentation.</p><pre className="exact">{view?.researchState}</pre></section>}
  {mode==='Architecture'&&<SemAuthorityPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
