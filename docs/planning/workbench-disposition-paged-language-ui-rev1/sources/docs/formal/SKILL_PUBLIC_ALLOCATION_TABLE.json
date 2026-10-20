@@ -1,0 +1,708 @@
+{
+  "version": "skill-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "namespace": 1153,
+  "records": [
+    {
+      "typeId": 782,
+      "name": "SkillProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "InitialCompetence",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "PracticeLaw",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "ExecutionLaw",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "PermanentImpairment",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "BeliefLaw",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 783,
+      "name": "SkillOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Impairment",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Difficulty",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Permitted",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Practice",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Visible",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Report",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 784,
+      "name": "SkillValue",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Competence",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "PracticeCount",
+          "type": "u",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 785,
+      "name": "SkillState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Skills",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:784"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 786,
+      "name": "SkillBeliefValue",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Mean",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Count",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Support",
+          "type": {
+            "set": "id:1153",
+            "min": 0,
+            "max": 8
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 787,
+      "name": "SkillBeliefState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Beliefs",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:786"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 788,
+      "name": "SkillAppraisal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1153",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Belief",
+          "type": "ref:786",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 789,
+      "name": "SkillRaw",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1153",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Appraisal",
+          "type": "ref:788",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Signals",
+          "type": {
+            "list": "ref:402",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 790,
+      "name": "SkillReasons",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1153",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Raw",
+          "type": "ref:789",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Nuclei",
+          "type": {
+            "list": "ref:407",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 791,
+      "name": "SkillDecision",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1153",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Reasons",
+          "type": "ref:790",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Probabilities",
+          "type": {
+            "list": "ref:421",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Chosen",
+          "type": "ref:395",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 792,
+      "name": "SkillIntent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1153",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Decision",
+          "type": "ref:791",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 793,
+      "name": "SkillExpression",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1153",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Intent",
+          "type": "ref:792",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Alignments",
+          "type": {
+            "list": "signedUnitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 794,
+      "name": "SkillPlan",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1153",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Expression",
+          "type": "ref:793",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Action",
+          "type": "id:1027",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 795,
+      "name": "SkillAttempt",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1153",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Plan",
+          "type": "ref:794",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 796,
+      "name": "SkillOutcome",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1153",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Attempt",
+          "type": "ref:795",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Competence",
+          "type": "ref:784",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Impairment",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Difficulty",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Engaged",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Succeeded",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Practice",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "Effective",
+          "type": "unitQ",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 797,
+      "name": "SkillObservation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1153",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "ObservedOpportunity",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "ReportedSuccess",
+          "type": "bool",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 798,
+      "name": "SkillPractice",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1153",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Attempt",
+          "type": "id:1153",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Engaged",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Practice",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Impairment",
+          "type": "unitQ",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 799,
+      "name": "SkillAdaptation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1153",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Practice",
+          "type": "ref:798",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Prior",
+          "type": "ref:784",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Next",
+          "type": "ref:784",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Applied",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 800,
+      "name": "SkillLearning",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1153",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observation",
+          "type": "ref:797",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Applied",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Prior",
+          "type": "ref:786",
+          "required": false
+        },
+        {
+          "id": 5,
+          "name": "Next",
+          "type": "ref:786",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 801,
+      "name": "SkillContent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Character",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Task",
+          "type": "ref:371",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Option",
+          "type": "ref:395",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Dice",
+          "type": "ref:437",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 802,
+      "name": "SkillStage",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Event",
+          "type": "id:1001",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reads",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Writes",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Authority",
+          "type": "id:1025",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "unions": []
+}

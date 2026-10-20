@@ -1,13 +1,22 @@
 import type {TimelineEvent} from './contracts';
 import {dispositionFactorSources} from './dispositionFactorSources';
 export const DISPOSITION_LANGUAGE_VERSION='disposition-factor-language/0.2';
-type Audience='researcher'|'character'|'player';
+export type DispositionLanguageAudience='researcher'|'character'|'player';
+type Audience=DispositionLanguageAudience;
 /** Researcher language consumes recorded factors only; no character disclosure contract exists. */
 export function explainDispositionFactors(event:TimelineEvent,seamVersion:string,audience:Audience){
  if(seamVersion!=='disposition-public/0.1-candidate')throw Error('Unqualified disposition language seam');
  if(!['researcher','character','player'].includes(audience))throw Error('Unknown disposition language audience');
  if(audience!=='researcher')return {version:DISPOSITION_LANGUAGE_VERSION,seamVersion,audience,emitted:false as const,rows:[],issues:[],scope:'Explanation unavailable: no qualified disclosure contract exists for this audience.'};
  const factors=dispositionFactorSources(event);
+ return explainDispositionFactorSources(event,seamVersion,audience,factors);
+}
+/** Renderer shared by native readers; withheld audiences never receive source identities. */
+export function explainDispositionFactorSources(event:Pick<TimelineEvent,'id'|'instant'>,seamVersion:string,audience:Audience,factors?:Pick<ReturnType<typeof dispositionFactorSources>,'emitted'|'rows'>){
+ if(seamVersion!=='disposition-public/0.1-candidate')throw Error('Unqualified disposition language seam');
+ if(!['researcher','character','player'].includes(audience))throw Error('Unknown disposition language audience');
+ if(audience!=='researcher')return {version:DISPOSITION_LANGUAGE_VERSION,seamVersion,audience,emitted:false as const,rows:[],issues:[],scope:'Explanation unavailable: no qualified disclosure contract exists for this audience.'};
+ if(!factors)throw Error('Recorded disposition factors required');
  const header={version:DISPOSITION_LANGUAGE_VERSION,seamVersion,audience,eventId:event.id,instant:event.instant};
  if(!factors.emitted)return {...header,emitted:false as const,rows:[],issues:[],scope:'No reason record emitted. No motive or choice inferred.'};
  const rows=factors.rows.map(source=>{

@@ -689,6 +689,35 @@ successor checks, six-mode migration, comparison, observer-safe player language 
 the integrated entry demonstration remain open. No C3 semantics, verdicts,
 candidate laws, source restrictions or18 conditional obligations change.
 
+## Paged explanation audit — 2026-10-20
+
+The paged `language` diagnostic now renders the existing
+`disposition-factor-language/0.2` profile from canonical evaluation-time factors.
+The original reader and canonical reader share one renderer. Audience is explicit
+in the requested selection and displayed report; draft changes do not relabel a
+loaded report. The entire inspector and its identity envelope remain researcher
+diagnostics. Selecting a restricted audience does not make the inspector a player UI.
+
+`workbench-disposition-canonical-language-rev1/receipt.json` PASS three tests:
+270 retained reports/750 researcher descriptions reproduced from independently
+retained factors; six fresh native audience reports at positive constitution1/2;
+unchanged checkpoint, stale revision rejection and restore1 equality. Poisoned
+payload controls verify that character/player reports inspect no payload and reveal
+no source identity. Unknown seam/audience reject; absent reasons stay absent.
+
+`workbench-disposition-paged-language-ui-rev1/receipt.json` PASS positive
+constitution1: all three complete envelopes/reports, exact rendered text and five
+native identities; draft audience retention and unchanged researcher round trip.
+Screenshot inspected; tab38/4214 retained. TypeScript/build600 modules, restored
+research and boundary checks PASS; both live audit source sets remain unchanged.
+
+LOCAL DISPOSITION: this migrates the existing explanation audit and preserves its
+open findings. It supplies no new disclosure contract, player-readable subject
+names, semantic strength bands or subjective certainty. The full player-language
+requirement remains unfinished, alongside six-mode migration, comparisons, full
+resource/coverage qualification and the integrated entry demonstration. No Campaign3
+semantics, verdicts, laws, historical restrictions or18 conditional obligations change.
+
 ## Recorded score matrix projection — 2026-10-20
 
 `dispositionScoreMatrix.ts`, `disposition-score-matrix/0.1`, prepares a detached

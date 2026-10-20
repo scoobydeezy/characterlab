@@ -1,0 +1,21 @@
+import plan from '../../docs/planning/DECISION_PUBLIC_EXPERIMENT_PLAN_REV1.json';
+import {canonicalEncode,bytesToHex,set} from '../substrate/canonicalEncoding';
+import type {DecisionSnapshot} from './decisionAdapter';
+export interface DecisionContrast {id:string;label:string;kind:'input'|'model';changed:string;a:string;b:string;}
+export const DECISION_CONTRASTS:DecisionContrast[]=[];
+for(const law of [1,2,3,4,5,6]){
+ for(const regime of [1,2,3])for(const seed of [0,1,2,3])DECISION_CONTRASTS.push({id:`execution/${law}/${regime}/${seed}`,label:`Execution permission · law${law}, regime${regime}, seed${seed}`,kind:'input',changed:'World execution permission only; admitted consequence may differ after the attempt.',a:`${law}/r${regime}-s${seed}-allowed`,b:`${law}/r${regime}-s${seed}-blocked`});
+ for(const seed of [0,1,2,3])DECISION_CONTRASTS.push({id:`significance/${law}/${seed}`,label:`Low/high significance · law${law}, seed${seed}`,kind:'input',changed:'Contextual reason mass changes between the two balanced unresolved regimes; equal probability does not imply equal meaning or presentation.',a:`${law}/r2-s${seed}-allowed`,b:`${law}/r3-s${seed}-allowed`});
+ for(const [name,a,b,changed] of [['hidden','r3-s0-allowed','hidden','Inert hidden scalar only; admitted current evidence is fixed.'],['invisible','invisibleAllowed','invisibleBlocked','Execution permission only with consequence visibility absent.'],['current','r3-s0-allowed','denied','Current visibility only; absent observations are not observed zero.']])DECISION_CONTRASTS.push({id:`${name}/${law}`,label:`${name} · law${law}`,kind:'input',changed,a:`${law}/${a}`,b:`${law}/${b}`});
+}
+for(const law of [2,3,4,5,6])for(const name of plan.runs.filter(r=>r.law===1).map(r=>r.name))DECISION_CONTRASTS.push({id:`law/${law}/${name}`,label:`Baseline / law${law} · ${name}`,kind:'model',changed:'Frozen law selector only; original input calendar and seed are identical. All five comparators are retained.',a:`1/${name}`,b:`${law}/${name}`});
+export function compareDecision(id:string,a:DecisionSnapshot,b:DecisionSnapshot){
+ const c=DECISION_CONTRASTS.find(c=>c.id===id);if(!c||a.program!==c.a||b.program!==c.b)throw Error('DECISION comparison requires its declared ordered pair');
+ if(a.seamVersion!=='decision-public/0.1-candidate'||b.seamVersion!==a.seamVersion)throw Error('DECISION seam mismatch');
+ const originals=[a,b].map(s=>plan.runs.find(r=>`${r.law}/${r.name}`===s.program)!);if(originals[0].seed!==originals[1].seed)throw Error('DECISION seed mismatch');
+ if(c.kind==='input'&&a.modelHash!==b.modelHash)throw Error('Input contrast requires one model');if(c.kind==='model'&&(a.modelHash===b.modelHash||originals[0].orderedInputs!==originals[1].orderedInputs))throw Error('Model contrast requires distinct models and identical inputs');
+ const aligned=a.prefix===b.prefix&&a.clock===b.clock,summary=(s:DecisionSnapshot)=>({program:s.program,prefix:s.prefix,clock:s.clock,complete:s.complete,modelHash:s.modelHash,runHash:s.runHash,stateHash:s.stateHash,saveHash:s.saveHash,outputsHash:s.outputsHash,characterHash:s.characterHash});
+ return {version:'decision-contrast-inspection/0.1',contrast:structuredClone(c),aligned,originals:structuredClone(originals),initialState:bytesToHex(canonicalEncode(set([]))),
+  alignment:'Equal committed prefix and instant only; unequal horizons withhold result comparisons. Internal event ancestry remains run-specific.',randomPolicy:'Exact frozen repeated-byte seeds. Native addressed draws are retained by replay; shared seed alone does not establish general stochastic coupling.',
+  modelIdentityEqual:a.modelHash===b.modelHash,runIdentityEqual:a.runHash===b.runHash,characterEqual:aligned?a.characterHash===b.characterHash:null,researchOutputsEqual:aligned?a.outputsHash===b.outputsHash:null,historyStateEqual:aligned?a.stateHash===b.stateHash:null,exactSaveEqual:aligned?a.saveHash===b.saveHash:null,a:summary(a),b:summary(b),scope:'Exact bounded native projections and history bytes only. Full trace bodies are omitted from this summary; replay the original programs to inspect them. Character view excludes world outcomes, player presentation and random transcripts. No universal decision law or causal necessity claim.'};
+}

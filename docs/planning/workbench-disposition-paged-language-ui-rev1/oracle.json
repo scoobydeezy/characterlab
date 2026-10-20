@@ -1,0 +1,433 @@
+{
+  "summary": {
+    "version": "disposition-paged-inspection/0.1",
+    "program": "Plastic/ConstitutionPositive",
+    "seamVersion": "disposition-public/0.1-candidate",
+    "constitution": "1/8",
+    "law": "Plastic",
+    "prefix": 1,
+    "complete": false,
+    "clock": "1",
+    "modelHash": "87eda606000f6c8206ec1ade7c268e17473efac5331ae408add50de73a86dc0b",
+    "runHash": "e76c4b33abd8dc9d57efacfe0b1744d704dc6b8915172de56326e2ea093f9655",
+    "stateHash": "4ae114e949293645425cc65c82e9e8033f0edef76a8dcd2151c186e7c2f99b03",
+    "saveHash": "1de30e3402ac2528d461ab7c2ba3de4c95090f1c481581230c473d3d88d17e9a",
+    "projectionHash": "0b436eafd721b3639852007db6cd3e4ea4063274f979390975b58350c2f5dbd9",
+    "fields": [
+      {
+        "root": "1436",
+        "path": "0a8c0101030101029c0b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72"
+      },
+      {
+        "root": "1441",
+        "path": "0a8c010103010102a10b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72"
+      },
+      {
+        "root": "1457",
+        "path": "0a8c010103010102b10b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72"
+      },
+      {
+        "root": "1458",
+        "path": "0a8c010103010102b20b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72"
+      }
+    ],
+    "timeline": [
+      {
+        "id": "0",
+        "instant": "1",
+        "phase": "40",
+        "stage": "context",
+        "parents": []
+      },
+      {
+        "id": "18",
+        "instant": "1",
+        "phase": "52",
+        "stage": "reasons",
+        "parents": [
+          "0"
+        ]
+      },
+      {
+        "id": "19",
+        "instant": "1",
+        "phase": "60",
+        "stage": "decision",
+        "parents": [
+          "18"
+        ]
+      },
+      {
+        "id": "20",
+        "instant": "1",
+        "phase": "70",
+        "stage": "intent",
+        "parents": [
+          "19"
+        ]
+      },
+      {
+        "id": "21",
+        "instant": "1",
+        "phase": "80",
+        "stage": "expression",
+        "parents": [
+          "20"
+        ]
+      },
+      {
+        "id": "22",
+        "instant": "1",
+        "phase": "100",
+        "stage": "attempt",
+        "parents": [
+          "21"
+        ]
+      },
+      {
+        "id": "24",
+        "instant": "1",
+        "phase": "110",
+        "stage": "execution",
+        "parents": [
+          "22"
+        ]
+      },
+      {
+        "id": "23",
+        "instant": "1",
+        "phase": "130",
+        "stage": "qualify",
+        "parents": [
+          "21"
+        ]
+      },
+      {
+        "id": "25",
+        "instant": "1",
+        "phase": "140",
+        "stage": "identity",
+        "parents": [
+          "23"
+        ]
+      },
+      {
+        "id": "26",
+        "instant": "1",
+        "phase": "140",
+        "stage": "adapt",
+        "parents": [
+          "25"
+        ]
+      }
+    ]
+  },
+  "reports": [
+    {
+      "version": "disposition-canonical-inspection/0.1",
+      "identity": {
+        "program": "Plastic/ConstitutionPositive",
+        "seamVersion": "disposition-public/0.1-candidate",
+        "prefix": 1,
+        "modelHash": "87eda606000f6c8206ec1ade7c268e17473efac5331ae408add50de73a86dc0b",
+        "runHash": "e76c4b33abd8dc9d57efacfe0b1744d704dc6b8915172de56326e2ea093f9655",
+        "stateHash": "4ae114e949293645425cc65c82e9e8033f0edef76a8dcd2151c186e7c2f99b03",
+        "saveHash": "1de30e3402ac2528d461ab7c2ba3de4c95090f1c481581230c473d3d88d17e9a"
+      },
+      "selection": {
+        "kind": "language",
+        "eventId": "18",
+        "audience": "researcher"
+      },
+      "report": {
+        "version": "disposition-factor-language/0.2",
+        "seamVersion": "disposition-public/0.1-candidate",
+        "audience": "researcher",
+        "eventId": "18",
+        "instant": "1",
+        "emitted": true,
+        "rows": [
+          {
+            "sourceKey": "{\"record\":\"TaskRawSignalKey#401/1\",\"CandidateKey [1]\":{\"record\":\"ProceduralCandidateKey#395/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"ProtocolActionDefinitionId [2]\":{\"namespace\":\"1027\",\"identity\":\"action/longitudinal/a\"}},\"TaskCommitmentKey [2]\":{\"record\":\"TaskCommitmentKey#371/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"TaskReferent [2]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/task/a\"}}}},\"SourceRole [3]\":\"1\"}",
+            "semantic": {
+              "concept": "task.motive_pressure",
+              "candidate": "{\"record\":\"ProceduralCandidateKey#395/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"ProtocolActionDefinitionId [2]\":{\"namespace\":\"1027\",\"identity\":\"action/longitudinal/a\"}}",
+              "task": "{\"record\":\"TaskCommitmentKey#371/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"TaskReferent [2]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/task/a\"}}}}",
+              "polarity": "supporting",
+              "exactStrength": "1/1",
+              "strengthBand": "unqualified",
+              "certaintyBand": "unavailable",
+              "qualifiers": [
+                "recorded factor",
+                "not subjective uncertainty",
+                "not complete choice explanation"
+              ]
+            },
+            "text": "Task motive pressure supports this task option (1/1).",
+            "coverage": [
+              {
+                "nucleus": 1,
+                "raw": "1/1",
+                "overlap": "0/1",
+                "independent": "1/1",
+                "effective": "1/1"
+              }
+            ],
+            "mechanical": {
+              "eventId": "18",
+              "sourceKey": "{\"record\":\"TaskRawSignalKey#401/1\",\"CandidateKey [1]\":{\"record\":\"ProceduralCandidateKey#395/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"ProtocolActionDefinitionId [2]\":{\"namespace\":\"1027\",\"identity\":\"action/longitudinal/a\"}},\"TaskCommitmentKey [2]\":{\"record\":\"TaskCommitmentKey#371/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"TaskReferent [2]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/task/a\"}}}},\"SourceRole [3]\":\"1\"}",
+              "basis": "{\"record\":\"ReasonEvidenceBasis#400/1\",\"Weights [1]\":[]}"
+            },
+            "issues": [
+              {
+                "code": "NO HUMAN REASON",
+                "scope": "character/player",
+                "detail": "No qualified disclosure contract maps this recorded factor to character or player knowledge."
+              },
+              {
+                "code": "OPAQUE",
+                "scope": "subject",
+                "detail": "Task and candidate retain exact identities; no qualified player-facing subject name is available."
+              }
+            ]
+          },
+          {
+            "sourceKey": "{\"record\":\"TaskRawSignalKey#401/1\",\"CandidateKey [1]\":{\"record\":\"ProceduralCandidateKey#395/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"ProtocolActionDefinitionId [2]\":{\"namespace\":\"1027\",\"identity\":\"action/longitudinal/a\"}},\"TaskCommitmentKey [2]\":{\"record\":\"TaskCommitmentKey#371/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"TaskReferent [2]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/task/a\"}}}},\"SourceRole [3]\":\"3\"}",
+            "semantic": {
+              "concept": "task.disposition_feedback",
+              "candidate": "{\"record\":\"ProceduralCandidateKey#395/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"ProtocolActionDefinitionId [2]\":{\"namespace\":\"1027\",\"identity\":\"action/longitudinal/a\"}}",
+              "task": "{\"record\":\"TaskCommitmentKey#371/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"TaskReferent [2]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/task/a\"}}}}",
+              "polarity": "supporting",
+              "exactStrength": "1/8",
+              "strengthBand": "unqualified",
+              "certaintyBand": "unavailable",
+              "qualifiers": [
+                "recorded factor",
+                "not subjective uncertainty",
+                "not complete choice explanation"
+              ]
+            },
+            "text": "Disposition feedback supports this task option (1/8).",
+            "coverage": [
+              {
+                "nucleus": 1,
+                "raw": "1/8",
+                "overlap": "0/1",
+                "independent": "1/1",
+                "effective": "1/8"
+              }
+            ],
+            "mechanical": {
+              "eventId": "18",
+              "sourceKey": "{\"record\":\"TaskRawSignalKey#401/1\",\"CandidateKey [1]\":{\"record\":\"ProceduralCandidateKey#395/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"ProtocolActionDefinitionId [2]\":{\"namespace\":\"1027\",\"identity\":\"action/longitudinal/a\"}},\"TaskCommitmentKey [2]\":{\"record\":\"TaskCommitmentKey#371/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"TaskReferent [2]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/task/a\"}}}},\"SourceRole [3]\":\"3\"}",
+              "basis": "{\"record\":\"ReasonEvidenceBasis#400/1\",\"Weights [1]\":[]}"
+            },
+            "issues": [
+              {
+                "code": "NO HUMAN REASON",
+                "scope": "character/player",
+                "detail": "No qualified disclosure contract maps this recorded factor to character or player knowledge."
+              },
+              {
+                "code": "OPAQUE",
+                "scope": "subject",
+                "detail": "Task and candidate retain exact identities; no qualified player-facing subject name is available."
+              }
+            ]
+          },
+          {
+            "sourceKey": "{\"record\":\"TaskRawSignalKey#401/1\",\"CandidateKey [1]\":{\"record\":\"ProceduralCandidateKey#395/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"ProtocolActionDefinitionId [2]\":{\"namespace\":\"1027\",\"identity\":\"action/longitudinal/b\"}},\"TaskCommitmentKey [2]\":{\"record\":\"TaskCommitmentKey#371/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"TaskReferent [2]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/task/b\"}}}},\"SourceRole [3]\":\"1\"}",
+            "semantic": {
+              "concept": "task.motive_pressure",
+              "candidate": "{\"record\":\"ProceduralCandidateKey#395/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"ProtocolActionDefinitionId [2]\":{\"namespace\":\"1027\",\"identity\":\"action/longitudinal/b\"}}",
+              "task": "{\"record\":\"TaskCommitmentKey#371/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"TaskReferent [2]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/task/b\"}}}}",
+              "polarity": "supporting",
+              "exactStrength": "1/2",
+              "strengthBand": "unqualified",
+              "certaintyBand": "unavailable",
+              "qualifiers": [
+                "recorded factor",
+                "not subjective uncertainty",
+                "not complete choice explanation"
+              ]
+            },
+            "text": "Task motive pressure supports this task option (1/2).",
+            "coverage": [
+              {
+                "nucleus": 2,
+                "raw": "1/2",
+                "overlap": "0/1",
+                "independent": "1/1",
+                "effective": "1/2"
+              }
+            ],
+            "mechanical": {
+              "eventId": "18",
+              "sourceKey": "{\"record\":\"TaskRawSignalKey#401/1\",\"CandidateKey [1]\":{\"record\":\"ProceduralCandidateKey#395/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"ProtocolActionDefinitionId [2]\":{\"namespace\":\"1027\",\"identity\":\"action/longitudinal/b\"}},\"TaskCommitmentKey [2]\":{\"record\":\"TaskCommitmentKey#371/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"TaskReferent [2]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/task/b\"}}}},\"SourceRole [3]\":\"1\"}",
+              "basis": "{\"record\":\"ReasonEvidenceBasis#400/1\",\"Weights [1]\":[]}"
+            },
+            "issues": [
+              {
+                "code": "NO HUMAN REASON",
+                "scope": "character/player",
+                "detail": "No qualified disclosure contract maps this recorded factor to character or player knowledge."
+              },
+              {
+                "code": "OPAQUE",
+                "scope": "subject",
+                "detail": "Task and candidate retain exact identities; no qualified player-facing subject name is available."
+              }
+            ]
+          },
+          {
+            "sourceKey": "{\"record\":\"TaskRawSignalKey#401/1\",\"CandidateKey [1]\":{\"record\":\"ProceduralCandidateKey#395/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"ProtocolActionDefinitionId [2]\":{\"namespace\":\"1027\",\"identity\":\"action/longitudinal/b\"}},\"TaskCommitmentKey [2]\":{\"record\":\"TaskCommitmentKey#371/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"TaskReferent [2]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/task/b\"}}}},\"SourceRole [3]\":\"3\"}",
+            "semantic": {
+              "concept": "task.disposition_feedback",
+              "candidate": "{\"record\":\"ProceduralCandidateKey#395/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"ProtocolActionDefinitionId [2]\":{\"namespace\":\"1027\",\"identity\":\"action/longitudinal/b\"}}",
+              "task": "{\"record\":\"TaskCommitmentKey#371/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"TaskReferent [2]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/task/b\"}}}}",
+              "polarity": "opposing",
+              "exactStrength": "-1/8",
+              "strengthBand": "unqualified",
+              "certaintyBand": "unavailable",
+              "qualifiers": [
+                "recorded factor",
+                "not subjective uncertainty",
+                "not complete choice explanation"
+              ]
+            },
+            "text": "Disposition feedback opposes this task option (-1/8).",
+            "coverage": [
+              {
+                "nucleus": 2,
+                "raw": "1/8",
+                "overlap": "0/1",
+                "independent": "1/1",
+                "effective": "1/8"
+              }
+            ],
+            "mechanical": {
+              "eventId": "18",
+              "sourceKey": "{\"record\":\"TaskRawSignalKey#401/1\",\"CandidateKey [1]\":{\"record\":\"ProceduralCandidateKey#395/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"ProtocolActionDefinitionId [2]\":{\"namespace\":\"1027\",\"identity\":\"action/longitudinal/b\"}},\"TaskCommitmentKey [2]\":{\"record\":\"TaskCommitmentKey#371/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"TaskReferent [2]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/task/b\"}}}},\"SourceRole [3]\":\"3\"}",
+              "basis": "{\"record\":\"ReasonEvidenceBasis#400/1\",\"Weights [1]\":[]}"
+            },
+            "issues": [
+              {
+                "code": "NO HUMAN REASON",
+                "scope": "character/player",
+                "detail": "No qualified disclosure contract maps this recorded factor to character or player knowledge."
+              },
+              {
+                "code": "OPAQUE",
+                "scope": "subject",
+                "detail": "Task and candidate retain exact identities; no qualified player-facing subject name is available."
+              }
+            ]
+          }
+        ],
+        "issues": [
+          {
+            "code": "NO HUMAN REASON",
+            "scope": "character/player",
+            "detail": "No qualified disclosure contract maps this recorded factor to character or player knowledge.",
+            "sourceKey": "{\"record\":\"TaskRawSignalKey#401/1\",\"CandidateKey [1]\":{\"record\":\"ProceduralCandidateKey#395/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"ProtocolActionDefinitionId [2]\":{\"namespace\":\"1027\",\"identity\":\"action/longitudinal/a\"}},\"TaskCommitmentKey [2]\":{\"record\":\"TaskCommitmentKey#371/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"TaskReferent [2]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/task/a\"}}}},\"SourceRole [3]\":\"1\"}"
+          },
+          {
+            "code": "OPAQUE",
+            "scope": "subject",
+            "detail": "Task and candidate retain exact identities; no qualified player-facing subject name is available.",
+            "sourceKey": "{\"record\":\"TaskRawSignalKey#401/1\",\"CandidateKey [1]\":{\"record\":\"ProceduralCandidateKey#395/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"ProtocolActionDefinitionId [2]\":{\"namespace\":\"1027\",\"identity\":\"action/longitudinal/a\"}},\"TaskCommitmentKey [2]\":{\"record\":\"TaskCommitmentKey#371/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"TaskReferent [2]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/task/a\"}}}},\"SourceRole [3]\":\"1\"}"
+          },
+          {
+            "code": "NO HUMAN REASON",
+            "scope": "character/player",
+            "detail": "No qualified disclosure contract maps this recorded factor to character or player knowledge.",
+            "sourceKey": "{\"record\":\"TaskRawSignalKey#401/1\",\"CandidateKey [1]\":{\"record\":\"ProceduralCandidateKey#395/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"ProtocolActionDefinitionId [2]\":{\"namespace\":\"1027\",\"identity\":\"action/longitudinal/a\"}},\"TaskCommitmentKey [2]\":{\"record\":\"TaskCommitmentKey#371/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"TaskReferent [2]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/task/a\"}}}},\"SourceRole [3]\":\"3\"}"
+          },
+          {
+            "code": "OPAQUE",
+            "scope": "subject",
+            "detail": "Task and candidate retain exact identities; no qualified player-facing subject name is available.",
+            "sourceKey": "{\"record\":\"TaskRawSignalKey#401/1\",\"CandidateKey [1]\":{\"record\":\"ProceduralCandidateKey#395/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"ProtocolActionDefinitionId [2]\":{\"namespace\":\"1027\",\"identity\":\"action/longitudinal/a\"}},\"TaskCommitmentKey [2]\":{\"record\":\"TaskCommitmentKey#371/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"TaskReferent [2]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/task/a\"}}}},\"SourceRole [3]\":\"3\"}"
+          },
+          {
+            "code": "NO HUMAN REASON",
+            "scope": "character/player",
+            "detail": "No qualified disclosure contract maps this recorded factor to character or player knowledge.",
+            "sourceKey": "{\"record\":\"TaskRawSignalKey#401/1\",\"CandidateKey [1]\":{\"record\":\"ProceduralCandidateKey#395/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"ProtocolActionDefinitionId [2]\":{\"namespace\":\"1027\",\"identity\":\"action/longitudinal/b\"}},\"TaskCommitmentKey [2]\":{\"record\":\"TaskCommitmentKey#371/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"TaskReferent [2]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/task/b\"}}}},\"SourceRole [3]\":\"1\"}"
+          },
+          {
+            "code": "OPAQUE",
+            "scope": "subject",
+            "detail": "Task and candidate retain exact identities; no qualified player-facing subject name is available.",
+            "sourceKey": "{\"record\":\"TaskRawSignalKey#401/1\",\"CandidateKey [1]\":{\"record\":\"ProceduralCandidateKey#395/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"ProtocolActionDefinitionId [2]\":{\"namespace\":\"1027\",\"identity\":\"action/longitudinal/b\"}},\"TaskCommitmentKey [2]\":{\"record\":\"TaskCommitmentKey#371/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"TaskReferent [2]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/task/b\"}}}},\"SourceRole [3]\":\"1\"}"
+          },
+          {
+            "code": "NO HUMAN REASON",
+            "scope": "character/player",
+            "detail": "No qualified disclosure contract maps this recorded factor to character or player knowledge.",
+            "sourceKey": "{\"record\":\"TaskRawSignalKey#401/1\",\"CandidateKey [1]\":{\"record\":\"ProceduralCandidateKey#395/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"ProtocolActionDefinitionId [2]\":{\"namespace\":\"1027\",\"identity\":\"action/longitudinal/b\"}},\"TaskCommitmentKey [2]\":{\"record\":\"TaskCommitmentKey#371/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"TaskReferent [2]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/task/b\"}}}},\"SourceRole [3]\":\"3\"}"
+          },
+          {
+            "code": "OPAQUE",
+            "scope": "subject",
+            "detail": "Task and candidate retain exact identities; no qualified player-facing subject name is available.",
+            "sourceKey": "{\"record\":\"TaskRawSignalKey#401/1\",\"CandidateKey [1]\":{\"record\":\"ProceduralCandidateKey#395/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"ProtocolActionDefinitionId [2]\":{\"namespace\":\"1027\",\"identity\":\"action/longitudinal/b\"}},\"TaskCommitmentKey [2]\":{\"record\":\"TaskCommitmentKey#371/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"TaskReferent [2]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/task/b\"}}}},\"SourceRole [3]\":\"3\"}"
+          }
+        ],
+        "scope": "Researcher descriptions of recorded task factors. Semantic subject identity and exact strength are retained; strength bands and subjective certainty are not invented. Character/player text is withheld pending a qualified disclosure contract. This report exposes language gaps and does not establish player-language completion."
+      }
+    },
+    {
+      "version": "disposition-canonical-inspection/0.1",
+      "identity": {
+        "program": "Plastic/ConstitutionPositive",
+        "seamVersion": "disposition-public/0.1-candidate",
+        "prefix": 1,
+        "modelHash": "87eda606000f6c8206ec1ade7c268e17473efac5331ae408add50de73a86dc0b",
+        "runHash": "e76c4b33abd8dc9d57efacfe0b1744d704dc6b8915172de56326e2ea093f9655",
+        "stateHash": "4ae114e949293645425cc65c82e9e8033f0edef76a8dcd2151c186e7c2f99b03",
+        "saveHash": "1de30e3402ac2528d461ab7c2ba3de4c95090f1c481581230c473d3d88d17e9a"
+      },
+      "selection": {
+        "kind": "language",
+        "eventId": "18",
+        "audience": "character"
+      },
+      "report": {
+        "version": "disposition-factor-language/0.2",
+        "seamVersion": "disposition-public/0.1-candidate",
+        "audience": "character",
+        "emitted": false,
+        "rows": [],
+        "issues": [],
+        "scope": "Explanation unavailable: no qualified disclosure contract exists for this audience."
+      }
+    },
+    {
+      "version": "disposition-canonical-inspection/0.1",
+      "identity": {
+        "program": "Plastic/ConstitutionPositive",
+        "seamVersion": "disposition-public/0.1-candidate",
+        "prefix": 1,
+        "modelHash": "87eda606000f6c8206ec1ade7c268e17473efac5331ae408add50de73a86dc0b",
+        "runHash": "e76c4b33abd8dc9d57efacfe0b1744d704dc6b8915172de56326e2ea093f9655",
+        "stateHash": "4ae114e949293645425cc65c82e9e8033f0edef76a8dcd2151c186e7c2f99b03",
+        "saveHash": "1de30e3402ac2528d461ab7c2ba3de4c95090f1c481581230c473d3d88d17e9a"
+      },
+      "selection": {
+        "kind": "language",
+        "eventId": "18",
+        "audience": "player"
+      },
+      "report": {
+        "version": "disposition-factor-language/0.2",
+        "seamVersion": "disposition-public/0.1-candidate",
+        "audience": "player",
+        "emitted": false,
+        "rows": [],
+        "issues": [],
+        "scope": "Explanation unavailable: no qualified disclosure contract exists for this audience."
+      }
+    }
+  ]
+}

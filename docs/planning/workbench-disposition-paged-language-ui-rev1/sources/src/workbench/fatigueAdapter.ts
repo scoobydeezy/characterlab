@@ -1,0 +1,27 @@
+import catalog from './fatigueCatalog.json';
+import {canonicalDecode,RecordSchemaRegistry,bytesToHex} from '../substrate/canonicalEncoding';
+import {restoreAuthoritativeState,statePathValue} from '../substrate/state';
+import {dataRecord as rec,dataField as field,dataItems as items} from '../campaign2/canonicalData';
+import {fatigueSupportedSchemas} from '../campaign3/fatigueCodecs';
+import {FATIGUE_VERSION} from '../campaign3/fatigueModel';
+import {prepareFatigueModel,createFatigueRun,restoreFatigueRun} from '../campaign3/fatigueFactory';
+import {digest,exactText,exactKey,fromHex,equalBytes} from './canonical';
+import {nativeTimeline} from './nativeTimeline';
+export const FATIGUE_PROGRAMS=catalog.programs.map(p=>({id:p.id,name:p.name,candidate:p.candidate,law:p.law}));
+const schema=new RecordSchemaRegistry(fatigueSupportedSchemas()),decode=(b:Uint8Array)=>canonicalDecode(b,schema);
+const original=(id:string)=>{const row=catalog.programs.find(p=>p.id===id);if(!row)throw Error('Unknown frozen FATIGUE program');return row;};
+const source=(id:string)=>{const row=original(id),m=catalog.models.find(m=>m.name===row.model)!;return{parameters:fromHex(m.parameters),content:fromHex(m.content),registry:fromHex(m.registry)};};
+type Run=Awaited<ReturnType<typeof createFatigueRun>>;
+export interface FatigueCheckpoint{version:'fatigue-workbench/0.1';program:string;prefix:number;saveHex:string;saveHash:string;}
+export type FatigueSnapshot=ReturnType<FatigueWorkbenchRun['snapshot']>;
+export class FatigueWorkbenchRun{
+ #run:Run;#program:string;#prefix=0;#busy=false;
+ #view!:{program:string;contractVersion:string;identityVersion:string;prefix:number;complete:boolean;clock:string;modelHash:string;runHash:string;stateHash:string;saveHash:string;outputsHash:string;observerHash:string;observerHex:string;observerExact:string;researchOutputs:string;fields:{path:string;root:string;exact:string}[];timeline:ReturnType<typeof nativeTimeline>;scope:string};
+ private constructor(run:Run,program:string){this.#run=run;this.#program=program;}
+ static async create(program='1/1/main'){const row=original(program),run=await createFatigueRun(await prepareFatigueModel(source(program)),{initialState:fromHex(catalog.initialState),orderedInputs:fromHex(row.orderedInputs),runSeed:fromHex(catalog.runSeed)});if(bytesToHex(run.runIdentity())!==row.runIdentity||exactKey(field(rec(decode(run.runIdentity()),104n),1n))!==row.modelIdentity)throw Error('FATIGUE original identity mismatch');const a=new FatigueWorkbenchRun(run,program);await a.#refresh();return a;}
+ snapshot(){if(this.#busy)throw Error('FATIGUE advancing');return structuredClone(this.#view);}
+ checkpoint():FatigueCheckpoint{if(this.#busy)throw Error('FATIGUE advancing');return{version:'fatigue-workbench/0.1',program:this.#program,prefix:this.#prefix,saveHex:bytesToHex(this.#run.save()),saveHash:this.#view.saveHash};}
+ async advance(){if(this.#busy)throw Error('FATIGUE command already in flight');if(this.#prefix>=16&&!this.#view.complete)throw Error('FATIGUE inspection horizon exceeded');this.#busy=true;try{const moved=await this.#run.settleNextInstant();if(moved)this.#prefix++;await this.#refresh();return moved;}finally{this.#busy=false;}}
+ static async restore(input:FatigueCheckpoint){const c=structuredClone(input);if(!c||c.version!=='fatigue-workbench/0.1'||!Number.isInteger(c.prefix)||c.prefix<0||c.prefix>16||typeof c.saveHex!=='string'||c.saveHex.length>32_000_000)throw Error('Invalid FATIGUE checkpoint');const bytes=fromHex(c.saveHex);if(await digest(bytes)!==c.saveHash)throw Error('FATIGUE checkpoint digest mismatch');const expected=await FatigueWorkbenchRun.create(c.program);for(let n=0;n<c.prefix;n++)if(!await expected.advance())throw Error('FATIGUE checkpoint exceeds horizon');if(!equalBytes(expected.#run.save(),bytes))throw Error('FATIGUE program/prefix mismatch');const row=original(c.program),run=await restoreFatigueRun(source(c.program),{initialState:fromHex(catalog.initialState),orderedInputs:fromHex(row.orderedInputs),save:bytes}),a=new FatigueWorkbenchRun(run,c.program);a.#prefix=c.prefix;await a.#refresh();return a;}
+ async #refresh(){const row=original(this.#program),s=this.#run.snapshot(),save=this.#run.save(),observer=this.#run.observerView(0);this.#view={program:this.#program,contractVersion:catalog.contractVersion,identityVersion:FATIGUE_VERSION,prefix:this.#prefix,complete:items(field(rec(decode(save),132n),7n),'list').length===0,clock:String(s.clock),modelHash:await digest(fromHex(row.modelIdentity)),runHash:await digest(this.#run.runIdentity()),stateHash:await digest(s.state),saveHash:await digest(save),outputsHash:await digest(s.outputs),observerHash:await digest(observer),observerHex:bytesToHex(observer),observerExact:exactText(decode(observer)),researchOutputs:exactText(decode(s.outputs)),fields:restoreAuthoritativeState(decode(s.state)).entries().map(e=>({path:exactKey(statePathValue(e.path)),root:String(e.path.rootStateTypeId),exact:exactText(e.value)})),timeline:nativeTimeline(items(decode(s.trace),'list')),scope:'Original FATIGUE public run. Sensor evidence, retained experience, workspace occupancy, control effectiveness, intent and physical execution remain distinct. Public observer bytes are separate from full researcher state/output/trace; no character language is qualified. Missing evidence does not establish recovery. MotorOnly execution effects are not cognitive truth reads. No endogenous fatigue or general resource law is claimed.'};}
+}
