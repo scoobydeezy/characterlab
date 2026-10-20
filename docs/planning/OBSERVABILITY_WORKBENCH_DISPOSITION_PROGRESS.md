@@ -560,3 +560,35 @@ feedback stays1/8 under Plastic. The pending batch remains explicit. Five footer
 identities match native-backed archives. Historical report1 remains unchanged at2
 and links to event18 with its exact original owned-read paths. Screenshot inspected.
 This does not establish all-law browser coverage or observer-language qualification.
+
+## Task motive and situational sources — 2026-10-20
+
+`dispositionTaskSources.ts` implements inspection profile
+`disposition-task-sources/0.1` beneath `disposition-public/0.1-candidate`.
+Exact candidate-origin/task-key joins connect motive pressure and concern responses
+to raw source identities, signed strengths and evidence bases. Non-identity semantic
+pressure is checked independently as bounded base+situational total, excluding
+standing feedback. Unknown versions, ambiguous origins, mismatched values and extra
+signals reject. Missing/unavailable responses remain distinct from scalar zero,
+even though this emitter produces no situational signal for all three cases.
+
+`workbench-disposition-task-sources-rev1/receipt.json` PASS all15 original terminal
+snapshots:270 unique reasons events,250 emitted records and500 task-source rows.
+All500 base signals match; all500 recorded responses are unavailable and no
+situational signal occurs. A synthetic reader-only scalar-zero control is reported
+distinctly without adding a native program. Nonzero response/available-forecast
+native qualification remains outside this receipt. No source record is mutated.
+
+`workbench-disposition-task-sources-ui-rev1/receipt.json` PASS positive-constitution
+prefixes1/2: complete reports, every visible emitter-table cell and five footer
+identities match native-backed archives. Historical report1 remains exact after
+advancement and matches original event18. Screenshot inspected. The display keeps
+response intensity unavailable beside the situational emitter operand0/1.
+TypeScript, build573 modules, boundary and restored research checks PASS.
+
+LOCAL DISPOSITION: qualify this version-bound dataflow inspector without granting
+character testimony or concluding that unavailable concern means no concern.
+This is workbench qualification, not a new Campaign3 verdict or obligation closure.
+All18 conditional obligations and historical source restrictions survive.
+Observer-safe narrative, live charts/vector views, integrated summary export and
+complete §32 acceptance remain due. Native replay and BatchV8 remain in progress.

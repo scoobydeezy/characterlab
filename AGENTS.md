@@ -60,7 +60,9 @@ bounded browser factor table/Timeline link PASS. Calibration reconstruction now
 PASS500 nuclei/84 nonzero/24 capped modifiers; learning1/probe5 browser tables PASS.
 Owned-state→standing provenance PASS all15 programs/seven laws/270 events;
 bounded browser journal/identity/plastic distinctions and historical link PASS.
-Task-motive/situational provenance, observer language and full integrated entry remain due.
+Task-source provenance PASS15 programs/270 events/500 rows; bounded browser1/2
+tables and historical report PASS. All500 responses unavailable; zero situational
+signals is not evidence of scalar-zero concern. Observer language/full entry remain due.
 Disposition constitutional slider now creates the declared pair; either committed
 branch opens across Character/Reasoning/Timeline/Architecture with shared identities.
 Bounded native/browser0/1/2, both branch1 records, historical stability and independent
