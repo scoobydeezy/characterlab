@@ -54,6 +54,10 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 **Current routing (2026-10-20):** Observability Workbench IN PROGRESS, owner-authorized.
 Start docs/planning/OBSERVABILITY_WORKBENCH_BATCH_V8_PROGRESS.md.
+Disposition constitutional slider now creates the declared pair; either committed
+branch opens across Character/Reasoning/Timeline/Architecture with shared identities.
+Bounded native/browser0/1/2, both branch1 records, historical stability and independent
+main-run isolation PASS. See OBSERVABILITY_WORKBENCH_DISPOSITION_PROGRESS.md.
 General comparison Run/Pause, retained history and paired restore now qualified:
 36 declarations/471 archived reports; one native pair checkpoints0/1/2 and bounded
 browser pause/restore/continuation/mode-leave PASS. Exact state/output differences

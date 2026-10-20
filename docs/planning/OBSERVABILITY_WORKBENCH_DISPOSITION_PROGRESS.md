@@ -389,3 +389,42 @@ matches the corresponding retained source snapshot. State, save and mechanism
 projection equalities are checked separately. Each contrast covers exactly0..18
 without duplicates. The first memory-limited verifier remains preserved.
 This closes the saved-evidence join only; the separate replay audit28212 remains live.
+
+## Comparison branches across inspection modes — 2026-10-20
+
+The constitutional draft slider now feeds a fresh declared A/B comparison:
+Plastic/Main versus the original positive or negative constitution model. This uses
+identical original inputs and initial state; it does not mutate an immutable
+constitution inside an existing native save. The default zero draft has no changed
+constitution pair and leaves this creation button unavailable.
+
+Each committed pair branch can now be selected for Character, Reasoning, Timeline
+and Architecture. The selected detached snapshot supplies all four modes and footer
+identities. Selection pauses advancement and preserves the independent main run.
+Main-run controls are disabled during branch inspection, and single-run checkpoint
+controls are replaced by guidance to the pair controls. Returning to the independent
+run restores its own view and controls. Pair advancement does not silently replace
+the selected historical snapshot. Architecture's prepared report resets on exact
+revision changes, preventing reuse of an earlier revision's prepared report.
+
+`workbench-disposition-branch-ui-rev1/receipt.json` PASS bounded integration:
+slider+1/8 selects original contrast model/0/13; fresh native comparison reports
+at0/1/2 exactly match the browser. Both prefix1 branches' complete mechanism
+projections, reason diagnostics, original event18 and participation reports match
+their respective fresh native snapshots. Saves also join original public receipts.
+The later pair reaches2 while the selected branch and reason remain at1 unchanged.
+Five independent main-run commitments remain unchanged on return; controls reenable.
+The screenshot was inspected. One early inspection click timed out because the
+pair step was still busy; the same workers committed normally and no restart occurred.
+
+TypeScript, isolated production build565 modules, boundary and restored research
+checks PASS. Frozen sources include the verifier; no live replay or V8 dependencies
+were changed. Preview4190 is separate from all running audit builds.
+
+LOCAL DISPOSITION: connect existing declared comparisons to the existing inspection
+views using exact committed identities. This closes the disconnected-branch UI gap
+for the exercised constitutional experiment. It is not a complete §32 demonstration:
+observer-safe language, live charts/vector display, full factor accounting,
+meaningful divergence, integrated summary export and remaining acceptance coverage
+are still required. No general constitutional vector is invented from the single
+task-fidelity channel. No Campaign3 verdict, law choice or obligation change.
