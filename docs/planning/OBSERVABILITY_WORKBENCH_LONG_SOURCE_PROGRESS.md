@@ -143,3 +143,24 @@ All bound current/frozen sources match. This successor evidence is separate from
 the32-program LONG public source receipt: component goal saves and joined steps
 are not public native scheduler events or Save132. Browser, observer-safe narration,
 full comparison coverage and the integrated entry demonstration remain due.
+
+## LONG goal historical inspection — 2026-10-20
+
+The goal component Timeline and Reasoning now share a committed-prefix selector
+and keyboard-operable links. Reasoning can inspect any retained receiving decision,
+including its exact probabilities, nuclei and draws; Timeline exposes the matching
+source row and goal ledgers before/after receiving. Explicit selection persists
+while the run advances. Fresh creation and restoration clear that selection so it
+cannot leak across runs. No historical selection changes the current simulation.
+
+`workbench-long-goal-navigation-ui-rev1/receipt.json` PASS on isolated production
+preview4182. Original case0 row1 remains exactly equal at current prefixes2/3/16;
+keyboard links preserve four native/component hashes. Historical prefix9 at current16
+contains three nuclei and three draws and matches the complete original receiving
+choice and source row. Fresh creation resets to the original prefix0 hashes and
+an empty Timeline without a selector. All browser records join the qualified120-case
+receipt and exact historical case0 source. Screenshot history.png inspected.
+
+TypeScript,554-module production build, boundary and research checks PASS.
+This is bounded history navigation, not full factor decoding, observer-safe goal
+narration, all-case browser coverage or native scheduler integration.

@@ -1,0 +1,223 @@
+{
+  "version": "disposition-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "date": "2026-09-27",
+  "namespace": 1155,
+  "contractSha256": "b8390b803763a738cd255b8303b1807151c52d42d1c8a969069717db84816268",
+  "records": [
+    {
+      "typeId": 1451,
+      "name": "DispositionProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Law",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Constitution",
+          "type": "signedUnitQ",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1452,
+      "name": "DispositionOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Context",
+          "type": "ref:1429",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Active",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Seed",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Permitted",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1453,
+      "name": "ImmutableConstitution",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Value",
+          "type": "signedUnitQ",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1454,
+      "name": "PlasticDisposition",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Value",
+          "type": "signedUnitQ",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1455,
+      "name": "DispositionOperands",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Constitution",
+          "type": "ref:1453",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Plastic",
+          "type": "signedUnitQ",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Standing",
+          "type": "signedUnitQ",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Effective",
+          "type": "signedUnitQ",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Feedback",
+          "type": "q",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "QualifiedHistory",
+          "type": "ref:1435",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Reasons",
+          "type": "ref:1430",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1456,
+      "name": "DispositionUpdate",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "History",
+          "type": "ref:1435",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Before",
+          "type": "signedUnitQ",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "After",
+          "type": "signedUnitQ",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1457,
+      "name": "ConstitutionRoot",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Actors",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:1453"
+            ],
+            "min": 1,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1458,
+      "name": "PlasticRoot",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Actors",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:1454"
+            ],
+            "min": 1,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    }
+  ]
+}

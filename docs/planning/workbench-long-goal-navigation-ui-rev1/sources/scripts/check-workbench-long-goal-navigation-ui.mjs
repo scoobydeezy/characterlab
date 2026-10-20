@@ -1,0 +1,23 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+const root='docs/planning/workbench-long-goal-navigation-ui-rev1',parent='docs/planning/workbench-long-goal-parity-rev1/receipt.json';
+const read=p=>JSON.parse(fs.readFileSync(p)),sha=b=>createHash('sha256').update(b).digest('hex');
+const receipt=read(parent),entry=receipt.cases.find(c=>c.index===0),bytes=fs.readFileSync(entry.historicalPath),old=JSON.parse(bytes),plan=read('docs/planning/LONGITUDINAL_GOAL_PLAN_REV1.json'),b=read(root+'/browser.json');
+assert.equal(sha(bytes),entry.historicalSha256);
+const hashes=prefix=>[sha(Buffer.from(plan.runs[0].modelIdentity,'hex')),entry.runHash,old.prefixHashes[prefix],old.nativeHashes[prefix]];
+assert.equal(b.empty,'No composition row has committed.');
+assert.deepEqual(b.before,hashes(2));assert.deepEqual(b.afterLink,b.before);
+assert.deepEqual(b.row,old.state.rows[0]);assert.deepEqual(b.choice,b.row.choice);
+assert.equal(b.retained.selection,'1');assert.deepEqual(b.retained.row,b.row);assert.deepEqual(b.retained.hashes,hashes(3));
+assert.equal(b.terminal.selection,'1');assert.deepEqual(b.terminal.row,b.row);assert.deepEqual(b.terminal.hashes,hashes(16));
+assert.equal(b.decision.selection,'9');assert.deepEqual(b.decision.row,old.state.rows[8]);assert.deepEqual(b.decision.choice,b.decision.row.choice);
+assert(b.decision.choice.nuclei.length>0);assert.deepEqual(b.decision.hashes,hashes(16));
+assert.equal(b.reset.empty,'No composition row has committed.');assert.equal(b.reset.selectors,0);assert.deepEqual(b.reset.hashes,hashes(0));assert.deepEqual(b.alerts,[]);
+const paths=['src/workbench/LongGoalWorkbench.tsx','src/workbench/longGoalWorker.ts','src/workbench/longGoalWorkerClient.ts','src/workbench/longGoalAdapter.ts','scripts/check-workbench-long-goal-navigation-ui.mjs',parent,entry.historicalPath];
+const sources=paths.map(path=>{
+ const bytes=fs.readFileSync(path),target=root+'/sources/'+path;
+ fs.mkdirSync(target.slice(0,target.lastIndexOf('/')),{recursive:true});fs.writeFileSync(target,bytes,{flag:'wx'});return {path,sha256:sha(bytes)};
+});
+fs.writeFileSync(root+'/receipt.json',JSON.stringify({status:'PASS BOUNDED LONG GOAL HISTORICAL NAVIGATION',sources,artifacts:['browser.json','history.png'].map(path=>({path,sha256:sha(fs.readFileSync(root+'/'+path))})),scope:'Original case0: keyboard Timeline/Reasoning links preserve four original hashes; selected row1 survives current prefixes2/3/16 unchanged. Historical row9 and full receiving choice equal original records while current prefix stays16. Fresh run resets historical selection to empty. No all-case browser, complete factor decoding, native scheduler integration or observer narration claim.'},null,2)+'\n',{flag:'wx'});
+console.log('PASS LONG goal historical navigation / continued history / fresh reset');

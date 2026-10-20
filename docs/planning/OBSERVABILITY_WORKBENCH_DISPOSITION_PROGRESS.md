@@ -347,3 +347,45 @@ LOCAL DISPOSITION: scoped diagnostic UI qualification only; no new Campaign3 ver
 or obligation disposition. No claim of psychological significance, causal necessity,
 full contrast/browser coverage, live-state model fork or integrated entry acceptance.
 The full native and comparison audits continue with frozen dependencies unchanged.
+
+## Full execution receipts completed; independent join pending — 2026-10-20
+
+Native session79989 and comparison session81715 completed with exit0.
+`workbench-disposition-parity-rev1/receipt.json` records15 programs/285 prefixes;
+`workbench-disposition-comparison-rev1/receipt.json` records30 contrasts/570
+aligned reports over those prefixes. These are completed original execution
+receipts, not all-prefix adapter restoration or complete entry qualification.
+
+The independent saved-evidence verifier initially exhausted its8192MiB heap by
+retaining decoded snapshots and reports together. The exact failed script and
+resource-limit disposition remain in verification-attempt-1.mjs/json beside the
+comparison receipt. No successful verification receipt was produced by that attempt.
+The corrected `scripts/verify-workbench-disposition-evidence.mjs` keeps snapshot
+identities/file references and decodes one comparison with its two source snapshots
+at a time, preserving all285 prefix joins and570 field-by-field comparisons.
+Session55378 is running; inspect that handle before any restart. Do not claim the
+independent join complete until verification.json exists and its process succeeds.
+
+Remaining replay work includes adapter checkpoint restoration/continuation at every
+original prefix, beyond the existing bounded browser and focused test receipts.
+Mechanism projection remains distinct from admitted observer knowledge. No new
+Campaign3 verdict, model law selection or obligation disposition is introduced.
+
+All-prefix adapter replay STARTED in session28212 using
+`scripts/check-workbench-disposition-replay.mjs`; frozen inputs/dependencies and
+per-prefix results live in workbench-disposition-replay-rev1. The first original
+program has passed checkpoints0 through6. Each checkpoint verifies identical
+restored save and complete snapshot, detached snapshot behavior, and the original
+successor; terminal checks require unchanged complete state. Final coverage requires
+15 programs/285 checkpoints/270 advances/15 terminal no-ops. Do not restart a live
+handle or infer completion from partial files. Native/runtime dependencies remain
+unchanged; the LONG goal historical-navigation UI is independent.
+
+Independent join COMPLETE: session55378 exit0 and comparison-rev1/verification.json
+PASS15 programs/285 native-backed snapshots/30 contrasts/570 complete reports.
+All current/frozen source pairs and archived artifact hashes match. Each comparison
+side joins its original program/prefix commitments; every field value and equality
+matches the corresponding retained source snapshot. State, save and mechanism
+projection equalities are checked separately. Each contrast covers exactly0..18
+without duplicates. The first memory-limited verifier remains preserved.
+This closes the saved-evidence join only; the separate replay audit28212 remains live.
