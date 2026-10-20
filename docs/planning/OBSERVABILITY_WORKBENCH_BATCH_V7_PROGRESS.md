@@ -63,3 +63,18 @@ frozen source hashes reverified unchanged. Attempt2 was prepared fresh in tab4 a
 the same4173 frozen build, with915 roles and0 prefixes, and Run / resume activated.
 No recovery or continuation from attempt1 is claimed. Preserve tab4 each turn and do
 not replace dist or its lazy assets. Final full comparison remains required.
+
+2026-10-20: attempt2 COMPLETE and independently qualified. Browser tab4 reports
+915/915 roles and5875 prefixes. `workbench-batch-browser-rev7/receipt.json` PASS:
+all915 ordered row identities/status/check counts and11750 displayed actual/expected
+hashes equal the native receipt. The64000-character prepared preview and declared
+6890710 UTF-8 bytes match the complete native report. The267 current/frozen source
+pairs remain exact. Screenshot complete.png inspected. Attempt1 remains retained
+as interrupted; this is a fresh complete attempt, not recovered partial execution.
+
+The diagnostic API caps returned arrays, so the full hash list was read in bounded
+1000-item slices after confirming11750 DOM nodes; the final verifier checks the
+entire list. No download control was invoked and file transport remains unqualified.
+The live batch source/build freeze can now be released for subsequent development.
+Full successor admission, observer-safe explanations, architecture participation and
+the integrated Campaign4 entry demonstration remain required.

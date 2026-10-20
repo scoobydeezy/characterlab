@@ -128,3 +128,18 @@ declared diagnostic contracts. All-program browser coverage, successor coverage,
 canonical ownership mapping, causal contribution and full factor language remain
 separate obligations. Campaign3 verdicts and18 conditional obligations are unchanged;
 the complete Workbench entry gate remains open.
+
+## Separate LONG goal successor restore audit — 2026-10-20
+
+`workbench-long-goal-parity-rev1/receipt.json` PASS120 original component cases/
+2040 checkpoints. Runtime restoration authenticates each complete original save,
+checks the native-source save hash and detached snapshot behavior, then verifies
+1920 immediate continuations and120 terminal no-ops. Terminal component state
+equals the historical goal/receiver rows. Session7474 completed with exit0.
+
+`verification.json` independently checks all2040 artifact hashes and exact record
+contents against120 original plan identities, source archives and successor hashes.
+All bound current/frozen sources match. This successor evidence is separate from
+the32-program LONG public source receipt: component goal saves and joined steps
+are not public native scheduler events or Save132. Browser, observer-safe narration,
+full comparison coverage and the integrated entry demonstration remain due.

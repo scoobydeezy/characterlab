@@ -1,0 +1,20 @@
+{
+  "status": "PASS INDEPENDENT LONG GOAL EVIDENCE JOIN",
+  "counts": {
+    "cases": 120,
+    "prefixes": 2040,
+    "advancing": 1920,
+    "terminal": 120
+  },
+  "artifacts": [
+    {
+      "path": "docs/planning/workbench-long-goal-parity-rev1/receipt.json",
+      "sha256": "54f24da8d5a7ce54adc04f2b28e0e447c6ca106184a375538912c6863b8f221b"
+    },
+    {
+      "path": "scripts/verify-workbench-long-goal-evidence.mjs",
+      "sha256": "c166604163794e3a6ca83b84320062741f2d265b30492db63b4acff809269596"
+    }
+  ],
+  "scope": "Verifies all2040 saved checkpoint/continuation records against120 original case identities and exact archive bindings; current/frozen sources match. The completed runtime audit separately proves restoration, detached snapshots and terminal state equality. This join does not repeat runtime execution or establish browser, narration, successor universality or Campaign4 entry."
+}
