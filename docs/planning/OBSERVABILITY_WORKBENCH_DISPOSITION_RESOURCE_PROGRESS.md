@@ -229,3 +229,32 @@ finish. Integrating them must preserve event/revision identities, exact factor t
 source links, architecture ownership distinctions and historical selections. Do not
 substitute this bounded parity result for terminal browser resource qualification.
 Paged browser last observed prefix6 Working; native paged audit prefix13 PASS.
+
+## 2026-10-20 architecture report bridge
+
+Extracted the existing box correspondence into `dispositionArchitectureFromActivity`.
+The full-snapshot path delegates to this mapping; `dispositionCanonicalArchitecture`
+feeds it the direct canonical activity index. The existing three character-state
+boxes, truth-side execution support, event links, counts, scope and identity fields
+remain identical. Canonical state/trace and identity must come from the same trusted
+worker revision; this helper does not authenticate unrelated caller data.
+
+The architecture inspector now delegates its report markup and selected-box controls
+to `DispositionArchitectureReportPanel`, so a worker-computed report can be rendered
+without a complete diagnostic snapshot. Live paged adapter/worker/UI sources were
+not changed. Connecting this report to the paged worker remains due.
+
+`workbench-disposition-canonical-architecture-bridge-rev1` PASS two tests: nine native
+comparisons (baseline/Refold/inactive-probes, prefixes0/1/2) against independently
+retained authenticated reports, and shared-mapping replay of all285 reports across
+15 programs from their authenticated activity rows. The latter verifies box mapping,
+not a fresh canonical activity census over all285 native prefixes. Checkpoints remain
+unchanged. TypeScript, isolated593-module build, boundary and research checks PASS.
+Initial wrong receipt-field lookup and test Node-typing failure are retained in the
+development folder. Dynamic Node loading remains test-only. No native semantic or
+research obligation change; all18 conditional obligations survive.
+
+Four live qualification source sets remain exact. Paged browser tab33 last observed
+prefix10 Working; native paged audit7413 prefix15 PASS. Neither is terminal evidence.
+Full six-mode migration, complete factor/source coverage and browser resource scope
+remain open. The original architecture ownership and zero-activity cautions persist.

@@ -11,7 +11,11 @@ export const DISPOSITION_ARCHITECTURE_BINDINGS=[
 export function dispositionArchitecture(snapshot:DispositionSnapshot){
  if(snapshot.seamVersion!=='disposition-public/0.1-candidate')throw Error('Unqualified disposition architecture seam');
  const participation=participationReport({modelHash:snapshot.modelHash,runHash:snapshot.runHash,stateHash:snapshot.stateHash,saveHash:snapshot.saveHash,prefix:snapshot.prefix},snapshot.timeline,snapshot.fields);
- if(participation.rows.length>100||snapshot.timeline.length>180)throw Error('Disposition participation bound');
+ return dispositionArchitectureFromActivity(snapshot,participation);
+}
+export function dispositionArchitectureFromActivity(snapshot:Pick<DispositionSnapshot,'program'|'seamVersion'|'modelHash'|'runHash'|'stateHash'|'saveHash'|'prefix'>,participation:{rows:ReturnType<typeof participationReport>['rows'];events:number}){
+ if(snapshot.seamVersion!=='disposition-public/0.1-candidate')throw Error('Unqualified disposition architecture seam');
+ if(participation.rows.length>100||participation.events>180)throw Error('Disposition participation bound');
  const rows=participation.rows.map(r=>{
   const root=String(restoreStatePath(decodeDispositionPublic(fromHex(r.path))).rootStateTypeId);
   if(r.root!==null&&r.root!==root)throw Error('Disposition root/path mismatch');
@@ -22,6 +26,6 @@ export function dispositionArchitecture(snapshot:DispositionSnapshot){
   const paths=rows.filter(r=>r.binding?.box===b.box);
   return {...b,paths:paths.map(r=>r.path),present:paths.filter(r=>r.presentAtRevision).length,reads:paths.reduce((n,r)=>n+r.reads,0),mutations:paths.reduce((n,r)=>n+r.mutations,0),changes:paths.reduce((n,r)=>n+r.changes,0),eventIds:[...new Set(paths.flatMap(r=>r.events.map(e=>e.id)))]};
  });
- return {version:'disposition-canonical-participation/0.1',identity:{program:snapshot.program,seamVersion:snapshot.seamVersion,...participation.identity},authority:{architecture:'CHARACTER_ARCHITECTURE.md §3.2, §6, §15',contract:'docs/formal/DISPOSITION_PUBLIC_CONTRACT.md',ownership:'src/campaign3/dispositionPublicModel.ts'},boxes,rows,unclassifiedPaths:rows.filter(r=>!r.binding&&!r.support).map(r=>r.path),
+ return {version:'disposition-canonical-participation/0.1',identity:{program:snapshot.program,seamVersion:snapshot.seamVersion,modelHash:snapshot.modelHash,runHash:snapshot.runHash,stateHash:snapshot.stateHash,saveHash:snapshot.saveHash,prefix:snapshot.prefix},authority:{architecture:'CHARACTER_ARCHITECTURE.md §3.2, §6, §15',contract:'docs/formal/DISPOSITION_PUBLIC_CONTRACT.md',ownership:'src/campaign3/dispositionPublicModel.ts'},boxes,rows,unclassifiedPaths:rows.filter(r=>!r.binding&&!r.support).map(r=>r.path),
  scope:'Scoped state correspondence to three existing canonical boxes; no new edges or topology. Truth-side execution remains separate. Derived effective disposition and Refold computation are not stored-state boxes here. Reads, structural mutations and changed values remain distinct from evaluation contributions or causal necessity. Zero recorded activity does not justify retirement. Trusted adapter diagnostics only, not standalone authentication or character self-knowledge.'};
 }

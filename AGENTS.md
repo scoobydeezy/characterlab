@@ -107,6 +107,8 @@ Paged full horizon tab33/4209 RUNNING from restored1 to18; preserve handoff/buil
 See workbench-disposition-paged-horizon-ui-rev1. Six-mode migration remains due.
 Canonical factor/activity readers prepared;3 bounded parity tests/typecheck PASS.
 See workbench-disposition-canonical-diagnostics-rev1; live source bindings unchanged.
+Architecture bridge PASS9 native comparisons +285 retained mapping reports; build/typecheck.
+Reusable report renderer prepared; paged worker integration remains due.
 Disposition recorded choice comparison implemented with exact A/B decision links.
 Choice audit revision1 hit verifier string-size limit after prefix13; failure retained.
 Corrected choice audit PASS30 contrasts/570 reports/5130 cumulative rows.

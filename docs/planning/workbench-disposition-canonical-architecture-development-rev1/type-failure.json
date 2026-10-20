@@ -1,0 +1,1 @@
+{"status":"TYPECHECK FAILED","cause":"Static node:fs/zlib/crypto test imports require Node typings absent from browser-focused project.","correction":"Dynamically load Node builtins in the test harness only; no production type configuration or native code changed."}
