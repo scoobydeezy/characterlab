@@ -691,3 +691,34 @@ coordinates and accessible point titles match the archived native comparisons.
 Selected-pair changes clear the old chart. Refold B shows “No stored leaf” and
 has no plastic point. Screenshots inspected. This is bounded chart rendering
 evidence; it does not establish the entire run's browser resource behavior.
+
+## Canonical state correspondence — 2026-10-20
+
+`dispositionArchitecture.ts` profile `disposition-canonical-participation/0.1`
+adds scoped correspondence to the existing `Psych0`, `Disp` and `IdentityEvidence`
+boxes in CHARACTER_ARCHITECTURE.md. Root1457 is the candidate immutable task-fidelity
+baseline, not a proven irreducible dimension;1458 is learned plastic contribution;
+1436 is qualified expression evidence, not private represented identity belief.
+Root1441 remains truth-side execution support outside character-box totals.
+Derived effective disposition and Refold computation are not invented stored roots.
+No canonical edges or topology change.
+
+`workbench-disposition-canonical-architecture-rev1/receipt.json` PASS all15 programs/
+285 native-backed prefixes:836 mapped path observations and285 execution-support
+observations. Paths are decoded, root declarations cross-checked, and every actual
+read/mutation/change/event count independently recounted. Constitution has no
+mutations; Refold has no plastic leaf. Unknown seam and false root/path negatives
+reject. These cumulative path observations are not independent causal effects.
+
+The earlier exact-path-navigation receipt and its original checker remain intact.
+`workbench-disposition-canonical-ui-rev1/receipt.json` separately verifies Plastic
+prefix1 and Refold prefix0: complete reports, table cells and five native identities
+match; the baseline box opens original reasons event18 and returns unchanged.
+Screenshot inspected. TypeScript/build581 modules, boundary and restored research
+checks PASS.
+
+LOCAL DISPOSITION: state ownership correspondence is not necessity, self-knowledge
+or complete architecture coverage. The canonical diagram's irreducibility condition
+is not discharged by showing this candidate baseline. Full integrated-entry,
+matrix/vector, player-language and broader resource/accessibility work remains due.
+All18 conditional obligations and historical source restrictions survive.

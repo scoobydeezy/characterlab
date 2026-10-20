@@ -72,6 +72,9 @@ prefix1 button/keyboard clipboard exact. Initial empty clipboard read retained.
 Disposition live stored-state charts PASS570 reports/1140 branches;114 absent
 Refold plastic leaves stay absent. Browser constitutional0/1 and Refold0 PASS.
 General matrix/vector and complete integrated-demo obligations remain open.
+Disposition canonical correspondence PASS15/285:836 mapped/285 truth-side support
+path observations; three existing boxes, no new edges or necessity claim.
+Browser Plastic1/Refold0 tables and baseline→original reasons event link PASS.
 Disposition constitutional slider now creates the declared pair; either committed
 branch opens across Character/Reasoning/Timeline/Architecture with shared identities.
 Bounded native/browser0/1/2, both branch1 records, historical stability and independent
