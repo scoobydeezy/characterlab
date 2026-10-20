@@ -191,3 +191,44 @@ case0 reports, covering empty and three-nucleus states. Prefix9 is inspected at
 current16; keyboard expansion of its coverage table preserves all four hashes.
 Screenshot factors.png inspected. TypeScript,556-module build, boundary and research
 checks PASS. The all-prefix Disposition replay audit remains separate and live.
+
+## Canonical state correspondence
+
+2026-10-20. `long-canonical-participation/0.1` adds six explicit state-root
+correspondences to five existing canonical boxes in Architecture mode. Episodic
+root867 remains distinct from relationship summary868 and FullHistory detail873.
+Person claim870 maps to Person, procedural competence871 to Skill, and qualified
+biography contributions872 to IdentityEvidence. The latter does not establish
+a general consolidated self-concept.
+
+LOCAL DISPOSITION: destructive shared-slot875 is a named diagnostic comparator,
+excluded from canonical-box totals. Its single owner overwrites learned families;
+displaying it under three canonical boxes would misrepresent the accepted contract.
+No causal edges or psychological owners are added. Unknown roots remain explicit.
+Activity means recorded reads/mutations/changes, not evaluation contribution,
+causal necessity or authorization to retire a mechanism.
+
+`workbench-long-architecture-rev1/receipt.json` PASS32 programs/513 prefixes:
+2397 mapped path observations,34 shared-slot observations,0 unclassified.
+The checker joins the exact qualified navigation reports to native identities and
+save hashes, checks every count/event union/presence flag, verifies actual model
+write authority against each declared root, and preserves all input reports.
+Duplicate paths, inconsistent root/path and wrong profile reject. Frozen source
+copies include the canonical map, accepted LONG contract and executable owners.
+This reuses independently qualified all-prefix navigation evidence; it does not
+claim another fresh execution of the source programs.
+
+The UI provides box selection, comparator disclosure, exact correspondence reports
+and links to the same run's committed event history. TypeScript and560-module build
+PASS; reference boundary and restored-evidence research checks PASS. Bounded browser
+qualification completed separately at127.0.0.1:4186. BatchV8 and Disposition
+replay bound dependencies were reverified unchanged. All18 conditional obligations
+and Campaign3 bounded acceptance remain intact.
+
+`workbench-long-architecture-ui-rev1/receipt.json` PASS bounded browser qualification:
+destructive representation4 at prefix0 and maximum-time at prefix1 exactly match
+the full qualified correspondence reports. Keyboard disclosure preserves all seven
+native hashes, as does following Episodic Imprints to memory event15 at clock64.
+The absent person path remains visible as two recorded reads with zero current
+presence. architecture.png inspected. Full browser coverage of every program and
+causal edges remain separate; this receipt qualifies these two original prefixes.
