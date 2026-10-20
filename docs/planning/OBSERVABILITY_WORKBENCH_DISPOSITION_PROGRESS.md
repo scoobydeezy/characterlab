@@ -592,3 +592,42 @@ This is workbench qualification, not a new Campaign3 verdict or obligation closu
 All18 conditional obligations and historical source restrictions survive.
 Observer-safe narrative, live charts/vector views, integrated summary export and
 complete §32 acceptance remain due. Native replay and BatchV8 remain in progress.
+
+## Deterministic factor language and explicit gaps — 2026-10-20
+
+`dispositionExplanations.ts` profile `disposition-factor-language/0.2` renders
+researcher-visible descriptions for task motive pressure, disposition feedback and
+situational response. Structured semantics retain the exact task/candidate, polarity
+and strength. Subjective certainty and strength bands remain explicitly unqualified.
+The Reasoning panel traverses each description to semantic meaning and recorded
+source identity, evidence basis and coverage. It displays a player-language gap notice.
+
+Revision1 is REJECTED for disclosure adequacy: its null-text assertion still allowed
+semantic/source records to cross into character/player results. Its frozen source,
+checker and receipt remain under `workbench-disposition-language-rev1`; `review.json`
+records why the original PASS is insufficient. Revision2 returns a constant empty
+projection for either unsupported audience before reading event contents, including
+event identity. Invalid/unrelated event data cannot change that restricted result.
+
+`workbench-disposition-language-rev2/receipt.json` PASS the corrected bounded audit:
+15 original programs,270 events,750 researcher descriptions,48 distinct semantic
+records and1500 suppressed audience-factor observations. Equivalent semantic records
+render consistently; no within-event sentence collisions or redundancy were found.
+The audit retains1500 open NO HUMAN REASON/OPAQUE findings (two per factor occurrence,
+not1500 unique research obligations). Source fields and exact strengths join the
+authenticated original snapshots. Input/read perturbations check excluded data only;
+they are not native observer controls or new experiment admissions.
+
+TypeScript and build575 modules PASS. Boundary and restored research checks passed
+for this work; all18 conditional obligations and Campaign3 restrictions remain.
+LOCAL DISPOSITION: this is researcher explanation and language-gap instrumentation,
+not completed player narration. A qualified observer disclosure/subject vocabulary,
+semantic strength calibration, full language audit criteria, live views, summary
+export and complete §32 acceptance remain due. No law or comparator is retired.
+
+`workbench-disposition-language-ui-rev2/receipt.json` PASS positive-constitution
+browser prefixes1/2: full researcher reports, displayed sentences and gap notice,
+and all five native snapshot identities. After advancement, historical event18
+retains its original explanation; the first factor expands to the exact semantic,
+source and coverage objects. Screenshot inspected. This bounded browser receipt
+does not close any player-language finding or the integrated-entry requirement.

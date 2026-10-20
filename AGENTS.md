@@ -62,7 +62,10 @@ Owned-state→standing provenance PASS all15 programs/seven laws/270 events;
 bounded browser journal/identity/plastic distinctions and historical link PASS.
 Task-source provenance PASS15 programs/270 events/500 rows; bounded browser1/2
 tables and historical report PASS. All500 responses unavailable; zero situational
-signals is not evidence of scalar-zero concern. Observer language/full entry remain due.
+signals is not evidence of scalar-zero concern. Researcher factor language profile0.2
+PASS750 descriptions/48 semantics;1500 player-language/subject gaps remain explicit.
+Revision1 disclosure rejected and retained; revision2 suppresses all unsupported
+audience records before reading the event. Player language/full entry remain due.
 Disposition constitutional slider now creates the declared pair; either committed
 branch opens across Character/Reasoning/Timeline/Architecture with shared identities.
 Bounded native/browser0/1/2, both branch1 records, historical stability and independent
