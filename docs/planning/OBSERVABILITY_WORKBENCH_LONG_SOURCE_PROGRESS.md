@@ -164,3 +164,30 @@ receipt and exact historical case0 source. Screenshot history.png inspected.
 TypeScript,554-module production build, boundary and research checks PASS.
 This is bounded history navigation, not full factor decoding, observer-safe goal
 narration, all-case browser coverage or native scheduler integration.
+
+## Recorded LONG goal receiving factors — 2026-10-20
+
+The historical Reasoning view now decodes retained compiled nuclei into separate
+role nets, relevance, base dice, standing/situational modifiers, exact mechanical
+distributions and per-source coverage operands. The exact receiving choice remains
+available in a disclosure. The reader implements long-goal-reason-diagnostics/0.1
+under longitudinal-goal-component/0.1-candidate and does not change component saves.
+
+`workbench-long-goal-reasons-rev1/receipt.json` PASS120 original cases/1920 rows,
+2496 nuclei/3648 coverage entries and960 empty rows. Every displayed operand is
+compared with the exact original canonical record; complete input strings remain
+unchanged. Duplicate nuclei, malformed canonical records and over-limit input reject.
+Sources and original case hashes are bound before/through qualification.
+
+LOCAL DISPOSITION: these records do not retain the original raw signal strengths
+or basis records. The inspector does not synthesize those missing records from
+later history or treat coverage operands as complete factor accounting. Full
+evaluation-time factor provenance remains open. Mechanical distributions do not
+represent character uncertainty, and this is not observer-safe goal narration.
+
+`workbench-long-goal-reasons-ui-rev1/receipt.json` PASS on production preview4183.
+Complete diagnostic records at selected prefixes1/9 equal the qualified original
+case0 reports, covering empty and three-nucleus states. Prefix9 is inspected at
+current16; keyboard expansion of its coverage table preserves all four hashes.
+Screenshot factors.png inspected. TypeScript,556-module build, boundary and research
+checks PASS. The all-prefix Disposition replay audit remains separate and live.
