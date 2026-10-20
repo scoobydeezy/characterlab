@@ -125,6 +125,8 @@ Reason diagnostic renderer accepts detached reports: PASS109 bounded retained re
 Canonical factor sources0.2 PASS9 reason observations + dispatcher regression;
 exact signal/coverage terms and paged read references. Set/map corrections retained
 in rev1/2; accepted rev3. Worker/UI connection and full-horizon scope remain due.
+Paged factor renderer prepared: native baseline1 exact rows/references and source
+revision callback PASS; historical callback guarded, no browser integration claim.
 Disposition recorded choice comparison implemented with exact A/B decision links.
 Choice audit revision1 hit verifier string-size limit after prefix13; failure retained.
 Corrected choice audit PASS30 contrasts/570 reports/5130 cumulative rows.

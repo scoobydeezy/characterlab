@@ -1,0 +1,158 @@
+{
+  "version": "disposition-canonical-inspection/0.1",
+  "identity": {
+    "program": "Plastic/Main",
+    "seamVersion": "disposition-public/0.1-candidate",
+    "prefix": 1,
+    "modelHash": "d9358cbd32c72e00fa10b75a930af509d3b792134ef7f0acc6544516983e2240",
+    "runHash": "7df069397ab3142146a231f0bb2091cdaf34365e5bcd072a3d27d5181c19fbaf",
+    "stateHash": "386f3c1e87a0402c3446baf947f1820dcc5aa15460ac057dce5f8f8d4d6e57d2",
+    "saveHash": "031f45d9d9846cabbc02acc3b68b152357a1551463144e295410b688b1e21302"
+  },
+  "selection": {
+    "kind": "factorSources",
+    "eventId": "18"
+  },
+  "report": {
+    "version": "disposition-factor-sources/0.2",
+    "eventId": "18",
+    "emitted": true,
+    "rows": [
+      {
+        "key": "{\"record\":\"TaskRawSignalKey#401/1\",\"CandidateKey [1]\":{\"record\":\"ProceduralCandidateKey#395/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"ProtocolActionDefinitionId [2]\":{\"namespace\":\"1027\",\"identity\":\"action/longitudinal/a\"}},\"TaskCommitmentKey [2]\":{\"record\":\"TaskCommitmentKey#371/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"TaskReferent [2]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/task/a\"}}}},\"SourceRole [3]\":\"1\"}",
+        "role": "base",
+        "strength": "1/1",
+        "basis": "{\"record\":\"ReasonEvidenceBasis#400/1\",\"Weights [1]\":[]}",
+        "coverage": [
+          {
+            "nucleus": 1,
+            "raw": "1/1",
+            "overlap": "0/1",
+            "independent": "1/1",
+            "effective": "1/1"
+          }
+        ]
+      },
+      {
+        "key": "{\"record\":\"TaskRawSignalKey#401/1\",\"CandidateKey [1]\":{\"record\":\"ProceduralCandidateKey#395/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"ProtocolActionDefinitionId [2]\":{\"namespace\":\"1027\",\"identity\":\"action/longitudinal/b\"}},\"TaskCommitmentKey [2]\":{\"record\":\"TaskCommitmentKey#371/1\",\"CharacterId [1]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/actor\"}}},\"TaskReferent [2]\":{\"namespace\":\"1002\",\"identity\":{\"namespace\":\"1037\",\"identity\":{\"namespace\":\"1038\",\"identity\":\"content/longitudinal/task/b\"}}}},\"SourceRole [3]\":\"1\"}",
+        "role": "base",
+        "strength": "1/2",
+        "basis": "{\"record\":\"ReasonEvidenceBasis#400/1\",\"Weights [1]\":[]}",
+        "coverage": [
+          {
+            "nucleus": 2,
+            "raw": "1/2",
+            "overlap": "0/1",
+            "independent": "1/1",
+            "effective": "1/2"
+          }
+        ]
+      }
+    ],
+    "nuclei": [
+      {
+        "index": 1,
+        "key": "{\n  \"record\": \"ReasonNucleusKey#404/1\",\n  \"CandidateKey [1]\": {\n    \"record\": \"ProceduralCandidateKey#395/1\",\n    \"CharacterId [1]\": {\n      \"namespace\": \"1002\",\n      \"identity\": {\n        \"namespace\": \"1037\",\n        \"identity\": {\n          \"namespace\": \"1038\",\n          \"identity\": \"content/longitudinal/actor\"\n        }\n      }\n    },\n    \"ProtocolActionDefinitionId [2]\": {\n      \"namespace\": \"1027\",\n      \"identity\": \"action/longitudinal/a\"\n    }\n  },\n  \"MotiveChannel [2]\": {\n    \"namespace\": \"1040\",\n    \"identity\": \"Commitment\"\n  },\n  \"TaskReferent [3]\": {\n    \"namespace\": \"1002\",\n    \"identity\": {\n      \"namespace\": \"1037\",\n      \"identity\": {\n        \"namespace\": \"1038\",\n        \"identity\": \"content/longitudinal/task/a\"\n      }\n    }\n  },\n  \"Direction [4]\": \"1\"\n}",
+        "baseNet": "1/2",
+        "standingNet": "0/1",
+        "situationalNet": "0/1",
+        "relevance": "1/2",
+        "baseDie": "6",
+        "standingModifier": "0",
+        "situationalModifier": "0",
+        "distribution": {
+          "record": "ExactScoreDistribution#424/1",
+          "Masses [1]": [
+            [
+              "1",
+              "1/6"
+            ],
+            [
+              "2",
+              "1/6"
+            ],
+            [
+              "3",
+              "1/6"
+            ],
+            [
+              "4",
+              "1/6"
+            ],
+            [
+              "5",
+              "1/6"
+            ],
+            [
+              "6",
+              "1/6"
+            ]
+          ]
+        }
+      },
+      {
+        "index": 2,
+        "key": "{\n  \"record\": \"ReasonNucleusKey#404/1\",\n  \"CandidateKey [1]\": {\n    \"record\": \"ProceduralCandidateKey#395/1\",\n    \"CharacterId [1]\": {\n      \"namespace\": \"1002\",\n      \"identity\": {\n        \"namespace\": \"1037\",\n        \"identity\": {\n          \"namespace\": \"1038\",\n          \"identity\": \"content/longitudinal/actor\"\n        }\n      }\n    },\n    \"ProtocolActionDefinitionId [2]\": {\n      \"namespace\": \"1027\",\n      \"identity\": \"action/longitudinal/b\"\n    }\n  },\n  \"MotiveChannel [2]\": {\n    \"namespace\": \"1040\",\n    \"identity\": \"Commitment\"\n  },\n  \"TaskReferent [3]\": {\n    \"namespace\": \"1002\",\n    \"identity\": {\n      \"namespace\": \"1037\",\n      \"identity\": {\n        \"namespace\": \"1038\",\n        \"identity\": \"content/longitudinal/task/b\"\n      }\n    }\n  },\n  \"Direction [4]\": \"1\"\n}",
+        "baseNet": "1/3",
+        "standingNet": "0/1",
+        "situationalNet": "0/1",
+        "relevance": "1/3",
+        "baseDie": "6",
+        "standingModifier": "0",
+        "situationalModifier": "0",
+        "distribution": {
+          "record": "ExactScoreDistribution#424/1",
+          "Masses [1]": [
+            [
+              "1",
+              "1/6"
+            ],
+            [
+              "2",
+              "1/6"
+            ],
+            [
+              "3",
+              "1/6"
+            ],
+            [
+              "4",
+              "1/6"
+            ],
+            [
+              "5",
+              "1/6"
+            ],
+            [
+              "6",
+              "1/6"
+            ]
+          ]
+        }
+      }
+    ],
+    "readSources": [
+      {
+        "index": 0,
+        "path": "0a8c010103010102b10b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72",
+        "presence": true
+      },
+      {
+        "index": 1,
+        "path": "0a8c0101030101029c0b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72",
+        "presence": true
+      },
+      {
+        "index": 2,
+        "path": "0a8c010103010102b20b02010201030107010a8e01010101010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f72",
+        "presence": true
+      }
+    ],
+    "readSelection": {
+      "kind": "event",
+      "id": "18",
+      "part": "reads"
+    },
+    "scope": "Exact raw sources joined to recorded coverage by source key. Empty evidence basis is preserved, not corroboration. Sources without coverage remain explicit; they may be zero or belong to an inactive nucleus. Evaluation-time reads are listed by canonical path, presence and zero-based trace-list index; exact values remain in the paged reads record for this event at the owning save revision. No source-to-state causal join is inferred from numerical equality. Recorded die and modifiers are mechanical, not subjective uncertainty."
+  }
+}

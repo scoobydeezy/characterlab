@@ -439,3 +439,23 @@ read value. Invalid presence, duplicate source key and raw-context mismatch reje
 synthetic absence and unchanged checkpoints pass. Existing dispatcher history tests
 also pass. TypeScript/boundary/research PASS; all four live source sets unchanged.
 All18 conditional obligations remain. Full-horizon and paged UI connection are due.
+
+## 2026-10-20 paged factor-source report renderer
+
+Prepared DispositionCanonicalFactorSourcesPanel accepts the version0.2 factor report
+with its owning program/run/prefix/save revision and requested event. It shows the
+exact source identities, bases, overlap accounting and native read references.
+The read action passes that source saveHash and the exact event reads selector.
+A historical report remains visible unchanged, with paging disabled and guarded
+until its checkpoint is restored or a current report is requested. Identity/version
+mismatch or explicit source error withholds the factor interpretation.
+
+workbench-disposition-paged-factor-render-rev1 PASS native baseline1, joined to the
+original public save hash: exact coverage/read-reference table, complete embedded
+report, source callback arguments and unchanged checkpoint. Synthetic stale/error/
+mismatch/absent/undefined cases preserve the stated behavior; stale direct callback
+invocation is guarded. These are function/server-render checks, not browser clicks.
+TypeScript and boundary checks PASS. The component is prepared for the paged worker
+integration and is not yet mounted in that UI. Full-horizon factor qualification,
+character-language disclosure and complete linked provenance remain separate work.
+No Campaign3 verdict or conditional-obligation change.
