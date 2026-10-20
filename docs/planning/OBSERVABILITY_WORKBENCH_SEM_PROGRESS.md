@@ -1255,3 +1255,39 @@ architecture participation and integrated browser/export/resource/accessibility
 acceptance. Earlier MEM seed/cohort routing above is historical; the General progress
 document now records its full43-model qualification. No new Campaign3 verdict or
 obligation closure. This is evidence reconciliation, not a runtime/build change.
+
+## Bounded observer recognition language (2026-10-20)
+
+`sem-recognition-language/0.1` reads only the selected observer's accepted type236
+recognition record and joined type227 experience. Observer, experience and track
+joins are checked; canonical schema/version, candidate identity and occurrence
+namespaces remain exact. Fixed authored Mina/Darius/Glen labels name the candidate
+the observer recognized, never the hidden world's verified identity. The sentence
+explicitly distinguishes recorded recognition from confirmation. Confidence is
+not supplied. Exact cue/revision identities are links, not newly interpreted evidence.
+
+Character mode now exposes this separate recognition section, structured semantics,
+exact record and a keyboard-activatable link to its committed trace entry. Earlier
+pre-recognition descriptions remain unchanged. No record is not a no-recognition
+claim. Causal-role and cue-level explanations remain visibly unqualified.
+
+`workbench-sem-recognition-language-rev1/receipt.json` PASS4 original prefixes/
+12 observer views/3 descriptions, every-prefix restore and unchanged checkpoint,
+append-stable history. Two new tests cover original replay/history and poison truth/
+renderer/causal siblings plus foreign observer, invalid experience, foreign track
+and unknown version rejection. Together with prior projection and all26 actual
+worker tests:28 files/30 tests PASS. TypeScript and isolated production build588
+modules PASS; the existing chunk warning remains. Initial sandbox test launch could
+not read Vite configuration; the permitted retry executed the tests successfully.
+
+`workbench-sem-recognition-language-ui-rev1/receipt.json` PASS prefix0 absence,
+Mina1 and all three observers3: exact prose, semantic provenance, source records and
+six native identities. Enter opens the exact original trace entry; Mina's earlier
+record/prose remain identical after later observers. Screenshot inspected. Isolated
+preview4205/session77383/tab29 is retained. No old qualification tab was reloaded.
+
+LOCAL DISPOSITION: the three asserted-candidate records admit bounded recognition
+description, not world truth, generic recognition theory, cue interpretation or full
+factor accounting. Withdrawal syntax has no native/browser witness in this fixture.
+Architecture participation, broader accessibility and full integrated entry remain
+open. No native mechanism, state, formal contract or Campaign3 verdict changed.
