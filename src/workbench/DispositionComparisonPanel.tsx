@@ -6,6 +6,7 @@ import {dispositionDivergenceHistory} from './dispositionDivergenceHistory';
 import {retainDispositionReport} from './dispositionReportRetention';
 import type {DispositionSnapshot} from './dispositionAdapter';
 import {DispositionComparisonSummaryPanel} from './DispositionComparisonSummaryPanel';
+import {DispositionChartPanel} from './DispositionChartPanel';
 type Report=Awaited<ReturnType<typeof compareDisposition>>;
 function programLabel(id:string){
  const [law,name]=id.split('/');
@@ -84,6 +85,6 @@ export function DispositionComparisonPanel({active=true,onInspect,constitutional
  <p>Historical inspection does not move either branch. Restoring a checkpoint discards observations beyond its prefix.</p>
  {historical&&<details open><summary>Historical comparison at prefix {historical.a.prefix}</summary><pre className="exact" data-disposition-historical>{JSON.stringify(historical,null,2)}</pre></details>}
  <details><summary>Exact divergence history</summary><pre className="exact" data-disposition-divergence>{JSON.stringify(divergence,null,2)}</pre></details></section>}
- {report&&loaded===selected&&!error&&<DispositionComparisonSummaryPanel current={report} history={history} busy={busy}/>}
+ {report&&loaded===selected&&!error&&<><DispositionChartPanel reports={history}/><DispositionComparisonSummaryPanel current={report} history={history} busy={busy}/></>}
  <p>30 declared contrasts; initial reports and bounded native continuation tested. One constitutional pair has bounded browser pause, restore and continuation evidence. Full-prefix comparison, broader browser coverage and causal factor accounting remain unqualified.</p></section>;
 }

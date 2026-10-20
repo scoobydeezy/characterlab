@@ -664,3 +664,30 @@ bounded transport evidence. It is neither a save nor a standalone authenticator.
 Exact divergence is not psychological significance. Full-horizon browser resource
 qualification, remaining live views/player language and complete integrated
 demonstration remain due. Campaign3 semantics and all18 conditional obligations survive.
+
+## Live stored-state comparison charts — 2026-10-20
+
+`dispositionChart.ts` profile `disposition-stored-state-chart/0.1` derives chart
+points from retained committed comparison fields. Separate plots show immutable
+constitution and stored plastic contribution for both branches; an exact-fraction
+table and source/path/save-identity report accompany them. Fixed axes cover
+prefix0..18 and value−1..1. Plot coordinates are floating diagnostics only.
+Refold's absent plastic leaf stays absent, not zero or a synthesized stored value.
+Missing prefixes break connecting lines. Candidate selection removes stale charts.
+
+`workbench-disposition-chart-rev1/receipt.json` PASS all30 contrasts/570 report
+rows/1140 branch observations, including114 missing Refold plastic leaves.
+Exact native field fractions, paths and save identities match. Deterministic copies,
+sparse-prefix reporting and malformed-record rejection checks pass.
+TypeScript/build579 modules, reference boundary and restored research checks PASS.
+LOCAL DISPOSITION: these are two stored scalar series, not a general personality
+vector, identity standing or a completed matrix visualization. The full §32
+demonstration and its matrix/vector and player-language requirements remain open.
+No Campaign3 semantics, obligations or comparator dispositions change.
+
+`workbench-disposition-chart-ui-rev1/receipt.json` PASS positive-constitution
+pair0/1 and Refold pair0. Complete source reports, exact table cells, plotted
+coordinates and accessible point titles match the archived native comparisons.
+Selected-pair changes clear the old chart. Refold B shows “No stored leaf” and
+has no plastic point. Screenshots inspected. This is bounded chart rendering
+evidence; it does not establish the entire run's browser resource behavior.
