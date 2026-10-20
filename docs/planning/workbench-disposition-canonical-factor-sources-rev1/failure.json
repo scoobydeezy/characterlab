@@ -1,0 +1,7 @@
+{
+  "status": "DEVELOPMENT FAILURE",
+  "test": "requires list",
+  "cause": "Canonical ReasonEvidenceBasis400/1 Weights is a map. The former readable JSON projected it as an array of pairs.",
+  "typecheck": "TS2345: nested replace helper returned CanonicalValue where a record was required.",
+  "correction": "Read the native map entries and explicitly type the record replacement helper. Only successor freeze and rerun can establish acceptance."
+}

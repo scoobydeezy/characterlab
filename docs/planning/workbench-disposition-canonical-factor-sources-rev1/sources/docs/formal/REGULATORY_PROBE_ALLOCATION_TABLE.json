@@ -1,0 +1,592 @@
+{
+  "version": "regulatory-probe-allocation/0.1-candidate",
+  "status": "PERMANENT AND FROZEN",
+  "authority": "docs/formal/REGULATORY_DIAGNOSTIC_PROBE.md",
+  "semanticVersion": "regulatory-diagnostic-probe/0.1-candidate",
+  "preservedSources": [
+    {
+      "path": "docs/formal/CAMPAIGN2_ALLOCATION_AUDIT.json",
+      "sha256": "d6623f6aee7a18ffc3d67f2a1f481090f9a0685def82b95c7856ba98fca885b4"
+    },
+    {
+      "path": "docs/formal/CAMPAIGN2_ALLOCATION_TABLE.json",
+      "sha256": "c7503135f1aa0daa8a260e0c159211bc89c8483c9a3ab72fd1019983708e37d8"
+    },
+    {
+      "path": "docs/formal/CAMPAIGN2_BOUNDED_RULES_02.md",
+      "sha256": "fb9f8421c59f2fec37ad1ed923ef47aa28eebfe3d81836424fa48fd0de4f553e"
+    },
+    {
+      "path": "docs/formal/CAMPAIGN2_PERMANENT_ALLOCATION.md",
+      "sha256": "02d59271c7bbf0c4b12079a450dcc268ff49be4ac144c08f283b9331c747a060"
+    },
+    {
+      "path": "docs/formal/CAMPAIGN2_TRACE_BINDING.md",
+      "sha256": "3407d5fd5f0bfe614b1e3f8a0359caa109a0f91553162c6f659f0eed6588ff0d"
+    },
+    {
+      "path": "docs/formal/CANONICAL_RECORD_REGISTRY.md",
+      "sha256": "6f95e9f59ce3a66e4acd6de9cdc1b1a77e4893ca537a6286577d54717ea82474"
+    },
+    {
+      "path": "docs/formal/CONTENT_ID_ALLOCATION_AUDIT.json",
+      "sha256": "21b2775c1f2059754214df0625ca102504293467d54cf881ee03ad5c4971e150"
+    },
+    {
+      "path": "docs/formal/CONTENT_ID_ALLOCATION_TABLE.json",
+      "sha256": "f4e504a63c55437915597f22caf1df4c3d49c7e1655bf7406242b4916aa9b194"
+    },
+    {
+      "path": "docs/formal/CONTENT_ID_PERMANENT_ALLOCATION.md",
+      "sha256": "14b6379ea181b4a366cf01e1fe9fc962898ad172045d07b7ee28e80d9b2e7438"
+    },
+    {
+      "path": "docs/formal/EVENT_SEMANTIC_NUMERIC_REGISTRY.md",
+      "sha256": "f350070cc455f02ba72e6a2cb32e4185d60de20e236b89ce51406706a5bdfd08"
+    },
+    {
+      "path": "docs/formal/OBSERVATION_UNIT_ALLOCATION_AUDIT.json",
+      "sha256": "f2c39a53dd6afd6ea90c847628660078c4649d2a1d6151a196b080c1733148b9"
+    },
+    {
+      "path": "docs/formal/OBSERVATION_UNIT_ALLOCATION_TABLE.json",
+      "sha256": "e5f1aac58d479c32ff988d55fd55b5c4137e8b2d11b1e0faa111c8b859ddcf78"
+    },
+    {
+      "path": "docs/formal/OBSERVATION_UNIT_PERMANENT_ALLOCATION.md",
+      "sha256": "f33ace63ef3441d864d2c287af46e60b1340a1d4fa2920ec4546af86206beff0"
+    },
+    {
+      "path": "docs/formal/ORIGIN_ALLOCATION_AUDIT.json",
+      "sha256": "0d2f50834257478989224d6d7d4fd8da3d1d6bb5330c48422c0053b84b2db0e8"
+    },
+    {
+      "path": "docs/formal/ORIGIN_ALLOCATION_TABLE.json",
+      "sha256": "b8ee30bd920774e77969f92cff9ceba9e2668ba4ba9e7184f7aa366e6513f7be"
+    },
+    {
+      "path": "docs/formal/ORIGIN_PERMANENT_ALLOCATION.md",
+      "sha256": "72da288a8f49bf9d4df8519669c8b20afd465a749fbe2de415bf32239e3ba47b"
+    },
+    {
+      "path": "docs/formal/STATE_MODEL.md",
+      "sha256": "a9a8f65da1bc8064b269f4464eb33a2eeb95366afa87e4dcd45130821a5a1ff6"
+    },
+    {
+      "path": "docs/formal/TRACE_SEAM_MEMBER_ALLOCATION.md",
+      "sha256": "856b8a45c9596be49d598e1cbc28d1fd97adb065e0fd5f115fce3e6e32a331b4"
+    },
+    {
+      "path": "docs/formal/TRACE_SEAM_MEMBER_ALLOCATION_AUDIT.json",
+      "sha256": "55b6e457390af8f821a4316cb42e9a51c0df9050dc71ec0a1788771a6f491b02"
+    },
+    {
+      "path": "docs/formal/TRACE_SEAM_MEMBER_ALLOCATION_TABLE.json",
+      "sha256": "1910b2fbbcf9098236aa57849dfa9ae724074045556a7c362e4cd65501c213f6"
+    },
+    {
+      "path": "docs/formal/VAL_ALLOCATION_AUDIT.json",
+      "sha256": "bbdb48df9d3ac441cbf01d6d50a4cb438fcc90f4db89ed47d2bddbc08b7676d3"
+    },
+    {
+      "path": "docs/formal/VAL_ALLOCATION_TABLE.json",
+      "sha256": "8bef1ed8a2f05de224330ffa5aff0557064f7acef3edfbaa2e6738153c3bfd39"
+    },
+    {
+      "path": "docs/formal/VAL_PERMANENT_ALLOCATION.md",
+      "sha256": "6765a456a1223a99be9adabfe42ff15de86097d5eabc4e15b70203053866d5fd"
+    }
+  ],
+  "records": [
+    {
+      "name": "RegulatoryProbeDefinition",
+      "typeId": 331,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "CharacterId",
+          "type": "CharacterId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "RegulatoryVariableId",
+          "type": "RegulatoryVariableId",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Channel",
+          "type": "DiagnosticProbeChannel",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Available",
+          "type": "Boolean",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "ObserverPermitted",
+          "type": "Boolean",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "DiagnosticProbeChannel",
+      "typeId": 332,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "ObservationChannelId",
+          "type": "ObservationChannelId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "ObserverId",
+          "type": "ObserverId",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "SubjectId",
+          "type": "CharacterId",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "ModalityId",
+          "type": "ModalityId",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "UnitId",
+          "type": "ObservationUnitId",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "RegulatoryProbeOpportunity",
+      "typeId": 333,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "ProbeDefinitionId",
+          "type": "RegistryDefinitionId",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "RegulatoryProbeTruth",
+      "typeId": 334,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "RegulatoryProbeTruthId",
+          "type": "RegulatoryProbeTruthId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "ProbeDefinitionId",
+          "type": "RegistryDefinitionId",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "OccurredAt",
+          "type": "SignedSimInstant",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "EffectiveValue",
+          "type": "SignedInteger",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "RegulatoryProbeCarrier",
+      "typeId": 335,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "VariantTag",
+          "type": "UnsignedInteger",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Truth",
+          "type": "RegulatoryProbeTruth",
+          "required": false
+        },
+        {
+          "id": 3,
+          "name": "ProbeDefinitionId",
+          "type": "RegistryDefinitionId",
+          "required": false
+        },
+        {
+          "id": 4,
+          "name": "Support",
+          "type": "SupportingObservationId",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "namespaces": [
+    {
+      "namespace": 1123,
+      "name": "RegulatoryProbeTruthId",
+      "scope": "run-scoped occurrence",
+      "payload": "unsigned-runtime-ordinal"
+    }
+  ],
+  "members": [
+    {
+      "namespace": 1027,
+      "payload": "definition/regulatory-diagnostic-probe"
+    },
+    {
+      "namespace": 1023,
+      "payload": "registry/regulatory-diagnostic-probe"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/regulatory-diagnostic-probe"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/regulatory-diagnostic-probe-observation"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/regulatory-diagnostic-probe-tracking"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/regulatory-diagnostic-probe-binding"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/regulatory-diagnostic-probe-classification"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/regulatory-diagnostic-probe-freeze"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/regulatory-diagnostic-probe-evaluation-padding"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/regulatory-diagnostic-probe-evidence-padding"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/regulatory-diagnostic-probe"
+    },
+    {
+      "namespace": 1039,
+      "payload": "unit/diagnostic-regulatory-level"
+    }
+  ],
+  "roles": [
+    {
+      "recordTypeId": 331,
+      "fieldId": 1,
+      "requiredNamespace": 1002,
+      "domainValidatorId": "validator/character-qualification"
+    },
+    {
+      "recordTypeId": 331,
+      "fieldId": 2,
+      "requiredNamespace": 1029
+    },
+    {
+      "recordTypeId": 332,
+      "fieldId": 1,
+      "requiredNamespace": 1005
+    },
+    {
+      "recordTypeId": 332,
+      "fieldId": 2,
+      "requiredNamespace": 1000
+    },
+    {
+      "recordTypeId": 332,
+      "fieldId": 3,
+      "requiredNamespace": 1002,
+      "domainValidatorId": "validator/character-qualification"
+    },
+    {
+      "recordTypeId": 332,
+      "fieldId": 4,
+      "requiredNamespace": 1006
+    },
+    {
+      "recordTypeId": 332,
+      "fieldId": 5,
+      "requiredNamespace": 1039
+    },
+    {
+      "recordTypeId": 333,
+      "fieldId": 1,
+      "requiredNamespace": 1027
+    },
+    {
+      "recordTypeId": 334,
+      "fieldId": 1,
+      "requiredNamespace": 1123
+    },
+    {
+      "recordTypeId": 334,
+      "fieldId": 2,
+      "requiredNamespace": 1027
+    },
+    {
+      "recordTypeId": 335,
+      "fieldId": 3,
+      "requiredNamespace": 1027
+    }
+  ],
+  "unionVariants": [
+    {
+      "recordTypeId": 335,
+      "tag": 1,
+      "name": "Suppressed",
+      "requiredFields": [
+        1
+      ],
+      "forbiddenFields": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "recordTypeId": 335,
+      "tag": 2,
+      "name": "Observing",
+      "requiredFields": [
+        1,
+        2,
+        3
+      ],
+      "forbiddenFields": [
+        4
+      ]
+    },
+    {
+      "recordTypeId": 335,
+      "tag": 3,
+      "name": "Supporting",
+      "requiredFields": [
+        1,
+        4
+      ],
+      "forbiddenFields": [
+        2,
+        3
+      ]
+    }
+  ],
+  "occurrenceDefinitions": [
+    {
+      "recordTypeId": 334,
+      "identityFieldId": 1,
+      "namespace": 1123,
+      "allocator": "existing shared run runtime ordinal"
+    }
+  ],
+  "stateRoots": [],
+  "saveFields": [],
+  "unionVariantEntries": [
+    {
+      "stableId": {
+        "namespace": 1024,
+        "payload": {
+          "kind": "list",
+          "items": [
+            {
+              "kind": "unsigned",
+              "value": 335
+            },
+            {
+              "kind": "unsigned",
+              "value": 1
+            }
+          ]
+        }
+      },
+      "registryKind": {
+        "namespace": 1023,
+        "payload": "registry/union-variant-definition"
+      },
+      "definitionVersion": "union-variant/1",
+      "definition": {
+        "recordTypeId": 259,
+        "schemaVersion": 1,
+        "fields": [
+          {
+            "id": 1,
+            "kind": "unsigned",
+            "value": 335
+          },
+          {
+            "id": 2,
+            "kind": "unsigned",
+            "value": 1
+          },
+          {
+            "id": 3,
+            "kind": "set",
+            "elementKind": "unsigned",
+            "values": [
+              1
+            ]
+          },
+          {
+            "id": 4,
+            "kind": "set",
+            "elementKind": "unsigned",
+            "values": [
+              2,
+              3,
+              4
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stableId": {
+        "namespace": 1024,
+        "payload": {
+          "kind": "list",
+          "items": [
+            {
+              "kind": "unsigned",
+              "value": 335
+            },
+            {
+              "kind": "unsigned",
+              "value": 2
+            }
+          ]
+        }
+      },
+      "registryKind": {
+        "namespace": 1023,
+        "payload": "registry/union-variant-definition"
+      },
+      "definitionVersion": "union-variant/1",
+      "definition": {
+        "recordTypeId": 259,
+        "schemaVersion": 1,
+        "fields": [
+          {
+            "id": 1,
+            "kind": "unsigned",
+            "value": 335
+          },
+          {
+            "id": 2,
+            "kind": "unsigned",
+            "value": 2
+          },
+          {
+            "id": 3,
+            "kind": "set",
+            "elementKind": "unsigned",
+            "values": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "id": 4,
+            "kind": "set",
+            "elementKind": "unsigned",
+            "values": [
+              4
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stableId": {
+        "namespace": 1024,
+        "payload": {
+          "kind": "list",
+          "items": [
+            {
+              "kind": "unsigned",
+              "value": 335
+            },
+            {
+              "kind": "unsigned",
+              "value": 3
+            }
+          ]
+        }
+      },
+      "registryKind": {
+        "namespace": 1023,
+        "payload": "registry/union-variant-definition"
+      },
+      "definitionVersion": "union-variant/1",
+      "definition": {
+        "recordTypeId": 259,
+        "schemaVersion": 1,
+        "fields": [
+          {
+            "id": 1,
+            "kind": "unsigned",
+            "value": 335
+          },
+          {
+            "id": 2,
+            "kind": "unsigned",
+            "value": 3
+          },
+          {
+            "id": 3,
+            "kind": "set",
+            "elementKind": "unsigned",
+            "values": [
+              1,
+              4
+            ]
+          },
+          {
+            "id": 4,
+            "kind": "set",
+            "elementKind": "unsigned",
+            "values": [
+              2,
+              3
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

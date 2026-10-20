@@ -407,3 +407,35 @@ runtime law or Campaign3 verdict; all18 conditional obligations remain.
 TypeScript and isolated597-module production build PASS; existing large-chunk
 warnings remain. Boundary/research checks PASS. No fresh browser qualification
 is inferred from server rendering or this structural extraction.
+
+## 2026-10-20 canonical factor sources and paged read references
+
+Prepared dispositionCanonicalFactorSources reads admitted canonical raw signals,
+evidence bases and nucleus coverage directly. Source keys, signed strengths, basis,
+coverage arithmetic, compiled terms and distributions retain their exact existing
+factor-report meaning. The canonical dispatcher adds a factorSources selection and
+binds the returned report and read selection to its existing save-revision envelope.
+
+The new report is explicitly disposition-factor-sources/0.2. Evaluation read values
+are not embedded in this compact report: readSources lists each native trace-list
+index, canonical path and presence; readSelection names the original event reads
+record for paging at the envelope saveHash. These are references, not missing values
+or a source-to-state causal attribution. The original0.1 report remains unchanged.
+This prepares integration; the current paged worker and UI do not yet expose it.
+
+Revision1 failed because the reader inferred canonical collection kinds from the
+old readable JSON arrays; its test helper also failed TypeScript record narrowing.
+Revision2 fixed map-shaped evidence weights and the helper, but inspection of the
+complete failure stack found set-shaped raw signals too. Both original revisions
+and the findings are retained; neither has an accepted qualification receipt.
+Revision3 handles the actual native set/map declarations and tests duplicate source
+keys using distinct signal values, preserving canonical set uniqueness itself.
+No native law, evidence basis or state ownership was changed.
+
+Revision3 acceptance: both canonical-factor and dispatcher tests PASS, baseline/
+Refold/inactive-probes through2. Nine cumulative reason observations preserve exact
+raw rows/bases/coverage/nuclei; every read reference agrees with the original exact
+read value. Invalid presence, duplicate source key and raw-context mismatch reject;
+synthetic absence and unchanged checkpoints pass. Existing dispatcher history tests
+also pass. TypeScript/boundary/research PASS; all four live source sets unchanged.
+All18 conditional obligations remain. Full-horizon and paged UI connection are due.
