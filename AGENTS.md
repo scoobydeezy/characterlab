@@ -57,6 +57,9 @@ Start docs/planning/OBSERVABILITY_WORKBENCH_BATCH_V8_PROGRESS.md.
 Disposition score matrix projection PASS270 retained resolutions/416 draws/1248 cells;
 42 automatic/20 absent records preserve no-draw status. UI integration remains due;
 this is score arithmetic, not the required latent-state visualization or player language.
+Score matrix panel prepared; server rendering PASS270 reports/1248 cells/416 totals.
+Renderer verifier rev1 attribute-assumption failure retained; corrected rev2 PASS.
+Mounting/browser qualification waits for bound horizon sources; no live source changed.
 General stored-state search PASS43 models/568 snapshots/10110 field observations.
 General event-state renderer PASS7074 events/7587 reads/2037 changed records;
 all568 histories stable. Bounded browser matrix43/read-only37/filter/reset/history PASS.

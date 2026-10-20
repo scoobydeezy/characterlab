@@ -1,0 +1,47 @@
+{
+  "status": "PASS DISPOSITION SCORE MATRIX SERVER RENDER",
+  "sources": [
+    {
+      "path": "src/workbench/DispositionScoreMatrixPanel.tsx",
+      "sha256": "d0e2014e188e37e1c2a041339290bbd7ee997c2e62a9239680d0db8bd06eec28"
+    },
+    {
+      "path": "src/workbench/dispositionScoreMatrix.ts",
+      "sha256": "2cebbbf22b3f0964084abd2602cf5024962dc571681193ae8433a067fac7fadb"
+    },
+    {
+      "path": "scripts/check-workbench-disposition-score-matrix-render-v2.mjs",
+      "sha256": "9531152b73387ae888ff8afb349404982a4f643526e05e9c1923e8e7dd18191a"
+    },
+    {
+      "path": "docs/planning/workbench-disposition-score-matrix-rev1/receipt.json",
+      "sha256": "284f5d4621e51411d181d7bf074b8a06f9f44e88919ebf287091ec67e1c349a9"
+    },
+    {
+      "path": "docs/planning/workbench-disposition-resolution-rev1/receipt.json",
+      "sha256": "ecec525620cc6480bbd317c103cea13d85bc07c1aa90119bdc338bd86ae1d840"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "3d2c334ad3b6deed69df679c30d93acbcf2b852379591dc8e8234babb5acea4c"
+    }
+  ],
+  "counts": {
+    "events": 270,
+    "cells": 1248,
+    "totals": 416,
+    "automatic": 42,
+    "absent": 20
+  },
+  "artifacts": [
+    {
+      "path": "sample.html",
+      "sha256": "502ce9033b98aa321e2beb127ed6df762cc2eedaa497d4987b2b086418ddbb52"
+    },
+    {
+      "path": "synthetic-opposing.html",
+      "sha256": "6dec399f63e252ceeeafba8a3f0452c77ebd2d2d3b44d0c55ab3a2d9d0ce67dd"
+    }
+  ],
+  "scope": "Exact table cells, sums, accessible labels, event-link labels and embedded projection verified against all270 authenticated retained resolutions. Automatic/absent records have no sampled table. A separately synthetic opposing row checks negative color/sign; a synthetic arithmetic mismatch withholds all matrix content. No real-browser layout, keyboard/click navigation, live UI integration or full-entry claim."
+}

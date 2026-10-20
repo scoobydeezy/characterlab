@@ -614,6 +614,22 @@ prepared but not yet connected to the running UI: current Disposition sources re
 frozen for replay/horizon qualification. Next integrate after those audits release
 their source bindings, then verify actual rendering and exact event navigation.
 
+`DispositionScoreMatrixPanel.tsx` is now prepared for that integration. It renders
+an exact numeric table with signed color cells, row totals, accessible cell labels,
+candidate/nucleus disclosures and reason/decision navigation controls. Automatic
+and absent resolutions display their distinct status without a sampled table.
+Renderer exceptions withhold the matrix and expose an alert.
+
+`workbench-disposition-score-matrix-render-rev1` preserves a verifier failure:
+the check expected an empty bare data attribute, but React renders `true`.
+The unchanged renderer passes corrected revision2 against all270 authenticated
+resolutions,1248 cells and416 totals. A separately synthetic opposing row verifies
+negative color/sign; it is not an added native witness. A synthetic arithmetic
+mismatch verifies content withholding. Source bindings for all three live audits
+(158 replay,318 horizon,277 batch sources) remain exact. TypeScript PASS.
+This is server-render qualification only. The component is not yet mounted in the
+Workbench; real-browser layout, keyboard/navigation and live integration remain due.
+
 ## Event-state keyboard controls — 2026-10-20
 
 `workbench-disposition-event-state-keyboard-rev1/receipt.json` PASS on the retained
