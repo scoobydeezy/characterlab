@@ -136,7 +136,11 @@ Canonical event-state metadata PASS90 observations through2: exact paths/presenc
 readable changes, paged source indices, history and dispatcher identity. UI remains due.
 Paged adapter/worker/client now dispatch seven diagnostic kinds. Two expanded tests
 PASS native0/1/2 + worker/restore1; lazy encoded-state decode and stale/concurrent
-guards. Typecheck/build PASS. Start paged-diagnostics-rev1; next mount UI panels.
+guards. Typecheck/build PASS. Start paged-diagnostics-rev1.
+Paged diagnostics UI mounted: browser PASS seven kinds/eight reports, three exact
+source pages, prefix1->2 historical guard and restore1. See paged-diagnostics-ui-rev1;
+tab35/4211 retained. Capture scope/timing corrections preserved. Build600 PASS.
+Six-mode migration, comparison/provenance/player language and full entry remain due.
 Disposition recorded choice comparison implemented with exact A/B decision links.
 Choice audit revision1 hit verifier string-size limit after prefix13; failure retained.
 Corrected choice audit PASS30 contrasts/570 reports/5130 cumulative rows.

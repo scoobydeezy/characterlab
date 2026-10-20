@@ -591,6 +591,36 @@ character testimony or concluding that unavailable concern means no concern.
 This is workbench qualification, not a new Campaign3 verdict or obligation closure.
 All18 conditional obligations and historical source restrictions survive.
 
+## Paged diagnostic browser integration — 2026-10-20
+
+`DispositionPagedDiagnostics` mounts seven canonical report kinds through the
+paged worker/client: stored state, architecture, reasons, resolution, factor
+sources, calibration and event state. Draft controls remain distinct from the
+displayed envelope. Every displayed report retains its program, prefix and save
+revision. Advancing preserves the historical report and disables source/event
+links until its checkpoint is restored or a current report is loaded.
+
+`workbench-disposition-paged-diagnostics-ui-rev1/receipt.json` PASS eight reports
+covering all seven kinds at baseline1, three exact paged sources (constitution,
+reason18 reads and identity25 diffs), resolution19 event navigation, five native
+identities, advance2 historical retention and restore1 link reactivation. Native
+oracle0/1/2 agrees with the original run save hashes. Screenshot inspected.
+TypeScript and build600 modules PASS; restored research and boundary checks PASS.
+
+Capture correction: the initial broad footer selector also included four hashes
+from a hidden Values session. `capture-attempt-1.json` preserves those arrays;
+accepted report/page arrays retain their first five paged-inspector entries,
+cross-checked against the inspector-scoped footer and native oracle. The initial
+history capture occurred during advance; it proves no committed transition.
+The accepted history was repeated after visibly reaching prefix2 Ready, then
+restored to prefix1 Ready. No failed runtime result was relabelled as a pass.
+
+LOCAL DISPOSITION: bounded browser transport/navigation qualification only.
+No all-program/full-horizon successor, heap bound, six-mode completion, latent
+personality vector, complete provenance or player-language claim. Full entry
+remains open. This changes no Campaign3 verdict, semantics or obligation;
+all18 conditional obligations and historical source restrictions survive.
+
 ## Recorded score matrix projection — 2026-10-20
 
 `dispositionScoreMatrix.ts`, `disposition-score-matrix/0.1`, prepares a detached
