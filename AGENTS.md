@@ -66,6 +66,9 @@ signals is not evidence of scalar-zero concern. Researcher factor language profi
 PASS750 descriptions/48 semantics;1500 player-language/subject gaps remain explicit.
 Revision1 disclosure rejected and retained; revision2 suppresses all unsupported
 audience records before reading the event. Player language/full entry remain due.
+Disposition summary profile0.2 PASS30 contrasts/570 reports; full current values,
+explicit compact history and stale-prefix rejection. Browser preparation0/1 PASS;
+prefix1 button/keyboard clipboard exact. Initial empty clipboard read retained.
 Disposition constitutional slider now creates the declared pair; either committed
 branch opens across Character/Reasoning/Timeline/Architecture with shared identities.
 Bounded native/browser0/1/2, both branch1 records, historical stability and independent

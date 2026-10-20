@@ -631,3 +631,36 @@ and all five native snapshot identities. After advancement, historical event18
 retains its original explanation; the first factor expands to the exact semantic,
 source and coverage objects. Screenshot inspected. This bounded browser receipt
 does not close any player-language finding or the integrated-entry requirement.
+
+## Comparison summary and copy surface — 2026-10-20
+
+`dispositionComparisonSummary.ts` profile `disposition-comparison-summary/0.2`
+prepares a deterministic readable overview plus exact JSON. It includes the declared
+contrast/input changes, both branch identities, full current comparison values and
+retained divergence evidence. Historical rows preserve branch identities, equality
+results and changed paths; full historical field values are explicitly not included.
+Missing prefixes remain missing. A current prefix older than history, mixed lineage,
+conflicting same-prefix reports or inconsistent equality commitments reject.
+
+Revision1 repeated full values at every prefix and failed its8-million-character
+limit. Its frozen source and failure are retained in `workbench-disposition-summary-rev1`.
+Revision2 avoids that repetition without silently truncating. Its receipt PASS all30
+contrasts/570 archived reports; maximum5,884,475 characters. Exact embedded JSON,
+deterministic output, detached copies, sparse history and rejection controls pass.
+
+The Compare panel provides Prepare/Copy controls and selectable read-only text.
+Advancement clears a prepared report; changing the selected pair removes it. Copy
+completion messages are guarded against a different committed report becoming current.
+`workbench-disposition-summary-ui-rev2/receipt.json` verifies original positive-
+constitution pair prefixes0/1 against the archived reports. At1, both copy-button
+and keyboard-copy clipboard contents exactly match the472,490-character summary.
+At0, the initial clipboard observation was empty despite successful write status;
+that observation is retained and uniform transport reliability is not claimed.
+Both stale-text invalidation checks pass; screenshot inspected.
+
+TypeScript/build577 modules, boundary and restored research checks PASS.
+LOCAL DISPOSITION: this advances §32's comparison-summary copy requirement with
+bounded transport evidence. It is neither a save nor a standalone authenticator.
+Exact divergence is not psychological significance. Full-horizon browser resource
+qualification, remaining live views/player language and complete integrated
+demonstration remain due. Campaign3 semantics and all18 conditional obligations survive.
