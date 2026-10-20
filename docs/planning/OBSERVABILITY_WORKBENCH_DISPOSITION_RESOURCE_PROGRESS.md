@@ -485,3 +485,22 @@ version reject, checkpoints unchanged. The270-report test does not prove fresh
 canonical context lineage across all horizons. TypeScript and597-module isolated
 build PASS with existing large-chunk warnings; boundary/research PASS. All four
 live source sets remain unchanged. No Campaign3 verdict or obligation change.
+
+## 2026-10-20 reusable calibration report renderer
+
+DispositionCalibrationReportPanel accepts the detached calibration report; the
+existing event-based inspector delegates to it. This preserves the tables linking
+signed totals to bounded nets, scaled/truncated/capped modifiers, die bands and
+exact score masses. Error status withholds the report; absent or undefined reports
+do not invent tables. The source and context labels remain explicit.
+
+workbench-disposition-calibration-render-rev1 PASS all270 authenticated retained
+reports:250 emitted,500 nuclei,70 non-learning reports and22500 exact table cells.
+Full embedded reports and inputs remain unchanged. Error override, absent and
+undefined cases pass. This server-render qualification does not establish browser
+interaction, general calibration laws, player disclosure or completed paged worker
+integration. All four live source sets remain exact; native semantics and all18
+conditional obligations are unchanged.
+
+TypeScript,598-module isolated production build and boundary checks PASS. Existing
+large-chunk warnings remain; no bundle/heap bound is inferred.
