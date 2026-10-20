@@ -258,3 +258,27 @@ Four live qualification source sets remain exact. Paged browser tab33 last obser
 prefix10 Working; native paged audit7413 prefix15 PASS. Neither is terminal evidence.
 Full six-mode migration, complete factor/source coverage and browser resource scope
 remain open. The original architecture ownership and zero-activity cautions persist.
+
+## 2026-10-20 canonical resolution linkage
+
+Prepared `dispositionCanonicalResolution` consumes exact canonical reason/decision/
+intent outputs, draw records and committed event headers. It preserves the original
+resolution report's shape and scope, parent/phase/time lineage, reason-context and
+chosen-intent joins, nucleus calibration, face/contribution arithmetic, complete draw
+and tie accounting, analytical probabilities, mode and chosen candidate. It uses
+streaming readable equality for joins and serializes only result fields, without
+formatting/reparsing each complete native output. The canonical factor reader still
+encodes its exact operand-result comparison; no heap bound is inferred.
+
+`workbench-disposition-canonical-resolution-rev1` bounded parity PASS: original
+baseline/Refold/inactive-probes at prefixes1/2, every retained reasons event, exact
+original resolution and score-matrix equality, malformed profile/duplicate reason/
+parent lineage and applicable missing-draw controls, unchanged checkpoints.
+TypeScript and boundary checks PASS. No full-horizon/all-program mode coverage,
+player disclosure, independent causal necessity or browser performance claim.
+
+This prepares the remaining decision-link report for worker-side execution while
+all four live source sets stay unchanged. Worker integration must bind the minimal
+canonical event envelope to one exact saveHash and continue to expose full source
+records through paging; it must not replace provenance with only this summary.
+Original semantics and all18 conditional obligations remain intact.
