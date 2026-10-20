@@ -71,9 +71,9 @@ Type-inference failure retained in rev1; explicit-type rev2 and build PASS.
 Disposition score matrix projection PASS270 retained resolutions/416 draws/1248 cells;
 42 automatic/20 absent records preserve no-draw status. UI integration remains due;
 this is score arithmetic, not the required latent-state visualization or player language.
-Score matrix panel prepared; server rendering PASS270 reports/1248 cells/416 totals.
+Score matrix integrated in Reasoning: server PASS270 reports/1248 cells/416 totals.
 Renderer verifier rev1 attribute-assumption failure retained; corrected rev2 PASS.
-Mounting/browser qualification waits for bound horizon sources; no live source changed.
+Browser baseline1 matrix/decision19/reason18 links and identity PASS; tab34/4210.
 General stored-state search PASS43 models/568 snapshots/10110 field observations.
 General event-state renderer PASS7074 events/7587 reads/2037 changed records;
 all568 histories stable. Bounded browser matrix43/read-only37/filter/reset/history PASS.
@@ -89,7 +89,7 @@ Browser continuity correction: older tabs closed after missed turn-scoped marks.
 Inventory confirmed only1/25 survived. Interrupted7/6/24 do NOT establish completion.
 Replacement full BatchV8 tab26 (4185) RUNNING, last518/947 roles3642 prefixes.
 Disposition horizon tab27 (4202) CRASHED before terminal verification; failure retained.
-At EVERY turn mark current workbenchLiveTabs:1,25,26,27,28,29,30,31,32,33. Do not use stale handles.
+At EVERY turn mark current workbenchLiveTabs:1,25,26,27,28,29,30,31,32,33,34. Do not use stale handles.
 Disposition horizon revision2 last verified16 Working; no terminal PASS. Investigate resource use before retry.
 Run/Pause prefix1 five native identities PASS. Terminal and six-mode checks remain due.
 Retained event-state build keyboard filter/selection/disclosure PASS with unchanged
@@ -101,7 +101,7 @@ Start OBSERVABILITY_WORKBENCH_DISPOSITION_RESOURCE_PROGRESS.md; no heap claim.
 Terminal string census baseline408MB/276MB unique; largest451MB/304MB unique.
 Prepared exact canonical text paging PASS2 tests/typecheck; not wired to UI.
 Paged adapter/worker/client prepared: bounded parity0/1/2 and worker/restore tests PASS.
-Full baseline paged audit session7413 RUNNING; freeze workbench-disposition-paged-rev1.
+Full baseline paged audit7413 COMPLETE PASS19 prefixes/180 headers; sampled text only.
 Do not edit its bound sources. Paged browser0/1/2 exact pages/history/restore PASS.
 Paged full horizon tab33/4209 RUNNING from restored1 to18; preserve handoff/build.
 See workbench-disposition-paged-horizon-ui-rev1. Six-mode migration remains due.

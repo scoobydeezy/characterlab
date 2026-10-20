@@ -282,3 +282,34 @@ all four live source sets stay unchanged. Worker integration must bind the minim
 canonical event envelope to one exact saveHash and continue to expose full source
 records through paging; it must not replace provenance with only this summary.
 Original semantics and all18 conditional obligations remain intact.
+
+## 2026-10-20 resolution renderer and score matrix integration
+
+`DispositionResolutionReportPanel` now accepts a qualified report directly. The
+existing Reasoning resolution inspector delegates to it and includes the prepared
+score matrix. Original resolution, tie and chosen-candidate details remain intact;
+matrices show exact signed face/standing/situational components and recorded totals.
+This is score arithmetic, not the required latent-state vector/matrix or complete
+choice explanation. Automatic and absent resolutions retain no-draw availability.
+
+`workbench-disposition-resolution-render-rev1` PASS all270 authenticated resolutions,
+1248 cells/416 totals/42 Auto/20 absent, exact embedded resolution and matrix,
+accessible cell labels, synthetic opposing-color and malformed-arithmetic controls.
+`workbench-disposition-score-matrix-ui-rev1` browser PASS baseline1: six cells/two
+totals and exact reports, keyboard matrix→decision19 and matrix→reason18 links,
+exact native events, unchanged five identities and unchanged matrix on return.
+Expanded candidate/nucleus screenshot inspected. TypeScript,596-module isolated
+build, boundary/research/index size checks PASS. Retain tab34/4210, preview37685.
+The pre-existing resolution-ui-rev1 evidence was detected and preserved untouched;
+new browser evidence uses the distinct score-matrix-ui-rev1 directory.
+
+Native paged baseline audit7413 completed with terminal receipt PASS19 prefixes/
+180 headers, all identities/state descriptors and sampled text. verification.json
+independently joins every prefix saveHash to original public run0 and checks counts,
+summary lengths and file hashes. Terminal summary is14850 JSON bytes; payload text
+remains available separately. This is not a heap bound or every-page proof. The
+esbuild cancellation printed during Vite server cleanup followed completed checks,
+written terminal receipt and process exit0; no qualification failure was inferred.
+Paged browser tab33 remains independently running and source-bound. Do not change
+its adapter/worker/client/UI sources before terminal capture and verification.
+All18 conditional obligations and source restrictions remain unchanged.

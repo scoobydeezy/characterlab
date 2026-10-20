@@ -1,0 +1,55 @@
+{
+  "status": "PASS INTEGRATED RESOLUTION AND SCORE MATRIX SERVER RENDER",
+  "sources": [
+    {
+      "path": "src/workbench/DispositionResolutionPanel.tsx",
+      "sha256": "d828b912f0c36c471301d0f912fcaadc9c5e14dfdcf54064774a5b3195dc9265"
+    },
+    {
+      "path": "src/workbench/DispositionResolutionReportPanel.tsx",
+      "sha256": "cffff2ca1185af866bfb49c4078f5c07d2a677b8baf3387f5f5d3fac4ef8c886"
+    },
+    {
+      "path": "src/workbench/DispositionScoreMatrixPanel.tsx",
+      "sha256": "d0e2014e188e37e1c2a041339290bbd7ee997c2e62a9239680d0db8bd06eec28"
+    },
+    {
+      "path": "src/workbench/dispositionScoreMatrix.ts",
+      "sha256": "2cebbbf22b3f0964084abd2602cf5024962dc571681193ae8433a067fac7fadb"
+    },
+    {
+      "path": "scripts/check-workbench-disposition-resolution-render.mjs",
+      "sha256": "23d08d288f27f0e5a0e5ad4d317cb00cb4d241f97a1f12e184ec361d6c1d2f55"
+    },
+    {
+      "path": "docs/planning/workbench-disposition-score-matrix-rev1/receipt.json",
+      "sha256": "284f5d4621e51411d181d7bf074b8a06f9f44e88919ebf287091ec67e1c349a9"
+    },
+    {
+      "path": "docs/planning/workbench-disposition-resolution-rev1/receipt.json",
+      "sha256": "ecec525620cc6480bbd317c103cea13d85bc07c1aa90119bdc338bd86ae1d840"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "3d2c334ad3b6deed69df679c30d93acbcf2b852379591dc8e8234babb5acea4c"
+    }
+  ],
+  "counts": {
+    "events": 270,
+    "cells": 1248,
+    "totals": 416,
+    "automatic": 42,
+    "absent": 20
+  },
+  "artifacts": [
+    {
+      "path": "sample.html",
+      "sha256": "ea34850a599467bc99813ce52b934590c9ea4e410efd71e4ff59cbe0cedc4c95"
+    },
+    {
+      "path": "synthetic-opposing.html",
+      "sha256": "b8fc4be5a9688f6f120bfc854cc6c0228ad82a824a7250ba55e32bb38465c14b"
+    }
+  ],
+  "scope": "Exact table cells, sums, accessible labels, event-link labels and embedded projection verified against all270 authenticated retained resolutions. Automatic/absent records have no sampled table. A separately synthetic opposing row checks negative color/sign; a synthetic arithmetic mismatch withholds all matrix content. All original resolution reports are preserved in the combined panel. No real-browser layout, keyboard/click navigation or full-entry claim."
+}
