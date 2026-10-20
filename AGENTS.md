@@ -58,7 +58,9 @@ Disposition raw factor sources/coverage PASS15 programs/285 archived snapshots:
 270 reason events,250 emitted records,750 source joins; historical stability and
 bounded browser factor table/Timeline link PASS. Calibration reconstruction now
 PASS500 nuclei/84 nonzero/24 capped modifiers; learning1/probe5 browser tables PASS.
-Parameter-to-signal provenance, observer language and full integrated entry remain due.
+Owned-state→standing provenance PASS all15 programs/seven laws/270 events;
+bounded browser journal/identity/plastic distinctions and historical link PASS.
+Task-motive/situational provenance, observer language and full integrated entry remain due.
 Disposition constitutional slider now creates the declared pair; either committed
 branch opens across Character/Reasoning/Timeline/Architecture with shared identities.
 Bounded native/browser0/1/2, both branch1 records, historical stability and independent

@@ -514,3 +514,49 @@ the parameter/state-to-raw-signal derivation, and observer-safe semantic/player 
 language remains due. Live charts/vector inspection, comparison summary export and
 the full integrated §32 demonstration are not closed by these mechanics tables.
 No Campaign3 verdict, law selection or obligation disposition changes.
+
+## Owned-state to standing-signal provenance — 2026-10-20
+
+`disposition-provenance/0.1` explicitly joins the reasons event's owned reads:
+constitution1457, qualified journal1436 and plastic1458 (absent for Refold).
+Read records must match the emitted operands. Accepted journal contributions
+reconstruct support/opposition with round-to-even at1e-6 and strength
+(support−opposition)/(1+support+opposition). Complete groups of four contributions
+reconstruct the declared plastic candidate; incomplete groups remain pending.
+
+Stored candidates must match their plastic read. Refold derives Step plasticity
+from the journal and rejects a claimed plastic-state read. Acquired feedback keeps
+all seven laws distinct: identity standing for StandingOnly, zero for Neither,
+sum for JointAdd, larger absolute operand with identity winning ties for JointMax,
+and plastic for Plastic/Leaky/Refold. Final feedback adds immutable constitution;
+effective disposition separately remains constitution+plastic. Explicit native
+candidate identities bind the opposing standing strengths, with empty evidence bases.
+No numeric-equality heuristic substitutes for these version-bound source joins.
+
+`workbench-disposition-provenance-rev1/receipt.json` PASS all15 original programs/
+seven laws/270 reasons events/250 emitted records.250 standing signals,1338 accepted
+journal-entry observations and276 complete-batch observations match native-backed
+records; the latter two counts repeat history across evaluations.17 active Refold
+events have no plastic-state read. Missing-owned-read, unknown-law and changed-feedback
+negatives reject. Source records remain unchanged. Terminal snapshots contain every
+unique event; previous factor qualification establishes their285-snapshot stability.
+This is archived-source qualification, not a new full native execution.
+
+TypeScript, build571 modules, reference boundary and restored research checks PASS.
+The formal contract, runtime read routing, candidate formulas and diagnostic renderer
+are frozen with the verifier. No live native replay or batch dependencies were edited.
+
+LOCAL DISPOSITION: qualify the explicit recorded state-to-standing-signal derivation,
+without granting represented self-knowledge or independent psychological necessity.
+Task-motive/base and situational-source provenance, observer-safe narrative, live
+charts/vector views, integrated summary export and complete §32 acceptance remain due.
+All18 conditional obligations and Campaign3 source restrictions survive.
+
+`workbench-disposition-provenance-ui-rev1/receipt.json` PASS positive-constitution
+browser prefixes1/2: full reports, opposing signal tables and owned-read identities
+match the corpus; the first accepted contribution's exact rounding is displayed.
+One accepted entry produces standing111111/1111111 while plastic stays0 and final
+feedback stays1/8 under Plastic. The pending batch remains explicit. Five footer
+identities match native-backed archives. Historical report1 remains unchanged at2
+and links to event18 with its exact original owned-read paths. Screenshot inspected.
+This does not establish all-law browser coverage or observer-language qualification.
