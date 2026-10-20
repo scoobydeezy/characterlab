@@ -111,6 +111,9 @@ Architecture bridge PASS9 native comparisons +285 retained mapping reports; buil
 Reusable report renderer prepared; paged worker integration remains due.
 Canonical resolution/score parity PASS3 programs through2; direct decision-link reader
 prepared in workbench-disposition-canonical-resolution-rev1. Full scope remains due.
+Canonical stored-state reader rev2 PASS9 programs/18 prefix0/1 observations;
+exact chart values/paths, Refold absence and compact explicit identity. Revision1's
+object-spread size finding retained. No latent-vector or paged UI integration claim.
 Disposition recorded choice comparison implemented with exact A/B decision links.
 Choice audit revision1 hit verifier string-size limit after prefix13; failure retained.
 Corrected choice audit PASS30 contrasts/570 reports/5130 cumulative rows.

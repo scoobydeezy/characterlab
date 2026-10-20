@@ -313,3 +313,29 @@ written terminal receipt and process exit0; no qualification failure was inferre
 Paged browser tab33 remains independently running and source-bound. Do not change
 its adapter/worker/client/UI sources before terminal capture and verification.
 All18 conditional obligations and source restrictions remain unchanged.
+
+## 2026-10-20 canonical stored-state preparation
+
+Prepared dispositionCanonicalStoredState reads the accepted constitution1457/1453
+and plastic1458/1454 leaves directly from canonical state. Exact fractions, native
+paths, diagnostic plot coordinates and Refold absence retain the existing chart
+semantics. It explicitly copies six identity fields; the owning worker must bind
+them to the same native revision. It is not a standalone save authenticator.
+These two stored scalars do not satisfy the general latent-state vector requirement
+or establish effective disposition, identity standing or character self-knowledge.
+
+Source inspection of revision1 found that spreading a TypeScript-narrowed identity
+would still copy the full runtime snapshot. That revision and finding are retained.
+Revision2 explicitly selects identity fields and checks the returned key set and
+bounded JSON length. The first parity run is not acceptance of corrected source;
+its successor test result governs revision2. No full-state reader or live paged
+worker source has changed. State restoration may still clone canonical values; no
+constant-memory or heap claim follows from the smaller diagnostic result.
+
+Revision2 acceptance: test PASS nine programs/eighteen prefix0/1 observations,
+including all seven laws and both constitutional signs; sixteen original comparison
+chart branch matches, exact snapshot field fractions/paths, invalid law/identity/
+ownership controls, unchanged checkpoints, six identity keys and <4096 JSON code
+units per result. TypeScript/boundary/research PASS;18 conditional obligations remain.
+All four live source sets remain exact. This is tooling work, not a Campaign3 verdict
+amendment. Full-horizon parity and paged worker/UI integration remain due.
