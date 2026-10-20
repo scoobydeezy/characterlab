@@ -114,6 +114,9 @@ prepared in workbench-disposition-canonical-resolution-rev1. Full scope remains 
 Canonical stored-state reader rev2 PASS9 programs/18 prefix0/1 observations;
 exact chart values/paths, Refold absence and compact explicit identity. Revision1's
 object-spread size finding retained. No latent-vector or paged UI integration claim.
+Canonical diagnostic dispatcher PASS3 programs through2: save-revision/header joins,
+four original report types and historical stability; prepared for paged worker use.
+See workbench-disposition-canonical-inspection-rev1; integration remains due.
 Disposition recorded choice comparison implemented with exact A/B decision links.
 Choice audit revision1 hit verifier string-size limit after prefix13; failure retained.
 Corrected choice audit PASS30 contrasts/570 reports/5130 cumulative rows.

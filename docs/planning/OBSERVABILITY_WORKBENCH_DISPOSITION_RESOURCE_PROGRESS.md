@@ -339,3 +339,30 @@ ownership controls, unchanged checkpoints, six identity keys and <4096 JSON code
 units per result. TypeScript/boundary/research PASS;18 conditional obligations remain.
 All four live source sets remain exact. This is tooling work, not a Campaign3 verdict
 amendment. Full-horizon parity and paged worker/UI integration remain due.
+
+## 2026-10-20 canonical inspection dispatch
+
+Prepared dispositionCanonicalInspection provides one worker-side request boundary
+for stored-state, Architecture, reasons and resolution reports. Requests carry the
+expected saveHash. Prefix/clock/completion/count checks and exact native header joins
+precede dispatch; stale requests and mismatched event labels are rejected. Canonical
+event headers, outputs and draws are read directly from the native trace. Returned
+metadata explicitly selects seven identity fields and preserves the requested event.
+Raw source paging remains separately required; compact reports do not replace it.
+
+This function consumes trusted native state/trace and is not an external checkpoint
+authenticator. Comparing caller-supplied hashes does not prove supplied state bytes.
+It prepares the worker integration without changing any of the four live source
+sets. The paged worker, client and six-mode UI still need to call it after the live
+horizon qualification completes. No runtime law or character disclosure is added.
+A development typecheck found a wrong test import name; corrected source is frozen
+under workbench-disposition-canonical-inspection-rev1 and the error is retained in
+workbench-disposition-canonical-inspection-development-rev1.
+
+Corrected dispatcher qualification PASS baseline/Refold/inactive-probes at0/1/2:
+four report types match their existing readers; stale revision, malformed prefix,
+unknown event, mismatched canonical header and wrong-stage selections reject.
+Returned identities contain only seven named fields. Historical reason/resolution
+reports and checkpoints remain unchanged. TypeScript/boundaries/research PASS;
+all18 conditional obligations remain. Worker integration and full-horizon report
+qualification remain due. This is tooling work, not a Campaign3 verdict amendment.
