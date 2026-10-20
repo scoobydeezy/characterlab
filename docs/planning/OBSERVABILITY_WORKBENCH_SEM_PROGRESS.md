@@ -1322,3 +1322,30 @@ older qualification tabs/builds unchanged. No full accessibility or general caus
 inference qualification. Cue-level recognition and complete-choice/factor language,
 architecture participation and integrated entry remain open. No Campaign3 verdict,
 formal seam, native behavior or obligation changed.
+
+## Committed perceptual-state participation (2026-10-20)
+
+`sem-committed-state-transitions/0.1` joins accepted initial roots241/242 through
+each exact committed post-step trace snapshot to the current authoritative save.
+Architecture mode shows original before/after values, changed-boundary counts,
+declared authority/perception ownership and the canonical Percept correspondence.
+It links each transition to its committed trace entry. Individual reads/writes stay
+null/unavailable; equal snapshots cannot establish no writes. Recognition outputs
+are not invented roots243/244. No topology or causal-necessity claim changes.
+
+Native revision1 passed execution checks but TypeScript rejected the inferred events
+array (TS7034/TS7005/TS7006). Frozen source/runtime receipt and typecheck failure are
+retained. Revision2 adds explicit types only and passes typecheck, native audit and
+isolated production build590 modules. Native audit covers4 prefixes/2 roots/6 unique
+transitions, every-prefix restore and historical stability. Two new tests check all
+original adjacent states and malformed/mismatched state/trace controls; a separately
+synthetic repeated snapshot preserves unavailable write counts. Affected language,
+state and26 worker suites PASS30 files/34 tests before the type-only correction.
+
+`workbench-sem-state-transitions-ui-rev1/receipt.json` PASS corrected build4207:
+full reports0/1/3, all six terminal before/after pairs, ownership/count table and six
+native identities match. Enter follows exact trace0; historical entry1 remains stable
+after3. Screenshot of keyboard-opened transition inspected. Preview session77230/
+tab31 retained. Boundary/research checks PASS; live158/318/277-source audit sets
+remain unchanged. Broader architecture participation, missing instrumentation,
+accessibility and integrated Campaign4 entry remain open. All18 obligations survive.

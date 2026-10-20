@@ -1,4 +1,5 @@
 import {SemCausalLanguagePanel} from './SemCausalLanguagePanel';
+import {SemStateTransitionsPanel} from './SemStateTransitionsPanel';
 import type {SemInspectionSnapshot as SemSnapshot} from './semInspection';
 import {useEffect,useRef,useState} from 'react';
 import {SemWorkerClient} from './semWorkerClient';
@@ -70,7 +71,8 @@ export function SemWorkbench({active=true}:{active?:boolean}){
  {mode==='Compare'&&<SemSchemaPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>} 
  {mode==='Compare'&&<SemPhasePanel client={run.current} busy={busy} execute={execute} onExport={setText}/>} 
  {mode==='Compare'&&<SemProvenancePanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
- {mode==='Architecture'&&<section className="card"><h2>Retained semantic state</h2><p>Native continuant and event-file roots are shown below. A read/write participation report is unavailable for this historical trace format; no missing instrumentation is treated as inactivity.</p><pre className="exact">{view?.researchState}</pre></section>}
+ {mode==='Architecture'&&<SemStateTransitionsPanel report={view?.stateTransitions} onEntry={index=>{setEntry(index);setMode('Timeline');}}/>}
+ {mode==='Architecture'&&<section className="card"><h2>Retained semantic state</h2><p>Native continuant and event-file roots are shown below. Individual read/write counts remain unavailable for this historical trace format; committed snapshot changes above do not supply that missing instrumentation.</p><pre className="exact">{view?.researchState}</pre></section>}
  {mode==='Architecture'&&<SemAuthorityPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
  {mode==='Architecture'&&<SemAcceptancePanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
  {text&&<><PreparedExport text={text} label="Prepared SEM export" filename="characterlab-sem.json"/><button onClick={()=>setText('')}>Close SEM export</button></>}

@@ -1,0 +1,540 @@
+{
+  "sources": [
+    {
+      "path": "CHARACTER_ARCHITECTURE.md",
+      "sha256": "a5165b3e49c9d73c7bdfc72a9e1e5d2cf91ae1e3a0b25252f056a6f31855e19e"
+    },
+    {
+      "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+      "sha256": "59bdd5fef46866d1b65c1f4bcf8c96031cfefd972b482423b27a75d81e0962f0"
+    },
+    {
+      "path": "docs/formal/EVENT_SEMANTIC_NUMERIC_REGISTRY.md",
+      "sha256": "f350070cc455f02ba72e6a2cb32e4185d60de20e236b89ce51406706a5bdfd08"
+    },
+    {
+      "path": "docs/formal/OPEN_DECISIONS.md",
+      "sha256": "2a9aa6bb116df1016327de6f9a399ffbe8245fa2574641d4bfcd04ba199f1c66"
+    },
+    {
+      "path": "scripts/check-workbench-sem-state-transitions-v2.mjs",
+      "sha256": "74dadf3cf2debf7411737d3d0b90da4e547529f619e42f781a9f62da98408a69"
+    },
+    {
+      "path": "src/campaign2/canonicalData.ts",
+      "sha256": "427b0a0b50003a8ead4cde2f2965ff3c57fde99e4ec9a5366627868e40f0903b"
+    },
+    {
+      "path": "src/observation/observation.ts",
+      "sha256": "ade1a3984b58de457024b707c23b8f1c2e04f3378a42b3b64528e2e21bbab2be"
+    },
+    {
+      "path": "src/semanticBinding/eventBindings.ts",
+      "sha256": "71dacd5b681f0ae8fcfb04b5f3fcff51edaa923e8cbfad7d308a223ae085bbcb"
+    },
+    {
+      "path": "src/semanticBinding/evidenceProvenance.ts",
+      "sha256": "dce698ec019e2ec24ca04d371c3821206285e28a4f1c4ae5156bdca84a8170b2"
+    },
+    {
+      "path": "src/semanticBinding/perceptualClassification.ts",
+      "sha256": "c394c1975ec4c3ad32aaa34830fa4b6121da052339ab03fb40344a9b1a5b6996"
+    },
+    {
+      "path": "src/semanticBinding/perceptualContinuantFiles.ts",
+      "sha256": "5ab014ec50f03d8d265fd8d6f37e68041e7d943c3521bd2d7708f76e8469562d"
+    },
+    {
+      "path": "src/semanticBinding/perceptualEventClassification.ts",
+      "sha256": "e9a53826ba375e2b6f877111f56771df14b3c4f08bc8192bcc7874842642824f"
+    },
+    {
+      "path": "src/semanticBinding/perceptualEventFiles.ts",
+      "sha256": "df179fdcca89872ba75acd46f0fefa31fcddeb07dc2478d3efd2304686ead740"
+    },
+    {
+      "path": "src/semanticBinding/phaseOrdering.ts",
+      "sha256": "dad03c3c616db20265dd2c5e1253db2fdf020b0996f266c68d726aaf9d39e0e6"
+    },
+    {
+      "path": "src/semanticBinding/recognition.ts",
+      "sha256": "4795c92c2db14f225f9f6c16cefb139263435d86ed3e3ab233a2e98fb7a409c6"
+    },
+    {
+      "path": "src/semanticBinding/semanticCodecs.ts",
+      "sha256": "fdb12714fcb19a98bb0c070cde6b688fe12d55fa35877ee054436ced55ca421f"
+    },
+    {
+      "path": "src/semanticBinding/semanticEvidenceCodecs.ts",
+      "sha256": "7dfad248c12d525e940a6f038c2affd5d8d336a31d365c507a85761bb819c4d6"
+    },
+    {
+      "path": "src/semanticBinding/semanticSchemaRegistry.ts",
+      "sha256": "5d4c5943e0f6eea5ef3c40a0a1c35930c9cf9856ddfd4f91cab4deed310689dd"
+    },
+    {
+      "path": "src/semanticBinding/semanticStateAuthority.ts",
+      "sha256": "7f56e249dd363f526c6e88ff2da33f4c8d566067ef8be39c8e2f5cd2e19736c0"
+    },
+    {
+      "path": "src/substrate/canonicalEncoding.ts",
+      "sha256": "38be0e954e9bc658f7bc199775b98326f4afdf1a77f7d05771d6728fd5368aa6"
+    },
+    {
+      "path": "src/substrate/contentDefinitionId.ts",
+      "sha256": "a8584be7ea476cae0ac82b9bb309763614fc42449e74a7d921f0ddcf4783af99"
+    },
+    {
+      "path": "src/substrate/contentManifest.ts",
+      "sha256": "078a8e031e985439c970e9ca7d95904753a79eff3c471bba0f746d59cd0467bb"
+    },
+    {
+      "path": "src/substrate/crypto.ts",
+      "sha256": "a1ab34b3f5a76e000ff2770dce03902001a5677fb2b609bd8049df4632515016"
+    },
+    {
+      "path": "src/substrate/exactMath.ts",
+      "sha256": "49791bf7a51ca1bb4012eb343bb4e5e27d8c3ec16e0d19d9db818505ab1b5c51"
+    },
+    {
+      "path": "src/substrate/identity.ts",
+      "sha256": "8e7c27aa4c95b35b8f100ffc7553991b0e893d1f82c0c4d0c9e7fe276430216a"
+    },
+    {
+      "path": "src/substrate/mutationAuthority.ts",
+      "sha256": "b93b30d42ec225a3a4c52a788accc5f3b2eaa0973b34f08c06325bf6a2266175"
+    },
+    {
+      "path": "src/substrate/persistence.ts",
+      "sha256": "41c1bebcc31aa28a0c194202e74fbacc75a302221ee8ee77a04a80fc682c727f"
+    },
+    {
+      "path": "src/substrate/referentOrigin.ts",
+      "sha256": "260794908cc17aa7f81c5d3aa07b89d3cf723282cfa7d2d52c5819828d4f87a7"
+    },
+    {
+      "path": "src/substrate/scheduler.ts",
+      "sha256": "d82c1e44cc25064eeb635e9773793d84d18efabd24860bde2f25ca011f86ad32"
+    },
+    {
+      "path": "src/substrate/state.ts",
+      "sha256": "2df06663411d9f7d79527b8a2575f7ae14ef260eef979c6c444a16ab3fbb9761"
+    },
+    {
+      "path": "src/substrate/time.ts",
+      "sha256": "f6f72f54c559ec61e05b0f76108bc8828629db73933188281cfa2f1281627ecb"
+    },
+    {
+      "path": "src/test/fixtures/namedNegativeControls.ts",
+      "sha256": "7096311a99151e419816c6839e2f818ef67233d1fedf060a65a92d72cd84215d"
+    },
+    {
+      "path": "src/test/fixtures/phenSem001.ts",
+      "sha256": "09dde6788290292c23d6e129288d1e4c14b1e324b892cac9c90364cd16dbb5cf"
+    },
+    {
+      "path": "src/test/fixtures/phenSem001Renderer.ts",
+      "sha256": "a8013da66c7285229c76a39b4ef625657c8963adb360b44f07529760b604bfdb"
+    },
+    {
+      "path": "src/test/fixtures/phenSem001Run.ts",
+      "sha256": "a56703c6b4b9e94d9acfc0949150e4a17c8c285c537c412387c5d951b1d76dd3"
+    },
+    {
+      "path": "src/test/fixtures/referentOrigin.ts",
+      "sha256": "c2ab6b8bf6b9dfe9bf5bd9daa4ee8faa8bf2e007076fa3cf109cb07af459de29"
+    },
+    {
+      "path": "src/test/phenSem001Integration.test.ts",
+      "sha256": "2458cb471d54f51573e5260764250f63543af33d49e0a7abbbc352e4d18bba69"
+    },
+    {
+      "path": "src/test/semanticNegativeControls.test.ts",
+      "sha256": "104953a670dec1a4c4e78c15c8ee67ab7fb8e2d0a1bb1323e19084bff865cf1c"
+    },
+    {
+      "path": "src/test/workbenchSemStateTransitions.test.ts",
+      "sha256": "877c015e54692a500104524301139256187cd019a9357922a62e6145e416d35a"
+    },
+    {
+      "path": "src/workbench/PreparedExport.tsx",
+      "sha256": "4cf14eca7746d3260ce84c7d28532a6e795f4728889080f1cb2115531ed93e19"
+    },
+    {
+      "path": "src/workbench/SemAcceptancePanel.tsx",
+      "sha256": "e288aeda3e9037b77deee516c10cad71a2169f02b90fd44b9cce27c5bbaec6c6"
+    },
+    {
+      "path": "src/workbench/SemAuthorityPanel.tsx",
+      "sha256": "206c36acf38dfcffd58d936acbd92b92a924f44c990f99e1a0683c255bc9efcb"
+    },
+    {
+      "path": "src/workbench/SemAxesPanel.tsx",
+      "sha256": "59f478685985db92183979f1284045b02e75252869063fe3c6baef3f71d6ebed"
+    },
+    {
+      "path": "src/workbench/SemBindingPanel.tsx",
+      "sha256": "f161a88a62c0e86c42163b914301098771ae3d8c569340ebd1c97ab60cad15d8"
+    },
+    {
+      "path": "src/workbench/SemCausalLanguagePanel.tsx",
+      "sha256": "4ba1d300a131011866e034940c948a4d3f5e935bac7055e193567b649d3c2b62"
+    },
+    {
+      "path": "src/workbench/SemClassificationBoundaryPanel.tsx",
+      "sha256": "d9b183e6662e6c1ca8e0bacc60e251b0f7b5625213e0a9dc2ef73952431777fb"
+    },
+    {
+      "path": "src/workbench/SemClassificationPanel.tsx",
+      "sha256": "ad91184ec56e12ffe1ca34a6851bd95e90fa01aad71cf59232eff0be2f45c1a9"
+    },
+    {
+      "path": "src/workbench/SemCodecPanel.tsx",
+      "sha256": "004a14f505e73852b1517c0d7f0e8d11a49500a531c9f49beb3f112d0a66d89a"
+    },
+    {
+      "path": "src/workbench/SemContinuantPanel.tsx",
+      "sha256": "753a45f8c9f7eca09339458d4313e9b4bfba9fe9bc8c582ee30b403584ac05e5"
+    },
+    {
+      "path": "src/workbench/SemControlPanel.tsx",
+      "sha256": "b6a43aa6a37dae894d6683770d515d9cb46d987f0b724edb90baa5d4596fa4fb"
+    },
+    {
+      "path": "src/workbench/SemEventClassificationPanel.tsx",
+      "sha256": "1910ddfda2b96670643894093fee225beb2b5b050b506824ce6e0a9ba8d14b49"
+    },
+    {
+      "path": "src/workbench/SemEventFilePanel.tsx",
+      "sha256": "440632fb726f94891835c19f8601d8ba532a11f294b916009d6caa0afee572b0"
+    },
+    {
+      "path": "src/workbench/SemIntegratedPanel.tsx",
+      "sha256": "95c195760ab2acc16153703e7c87505d4ee8ae10ebb182d0bf1371aac8681694"
+    },
+    {
+      "path": "src/workbench/SemKnowledgePanel.tsx",
+      "sha256": "00cca47c8439bf46d9adf03fb1db67c071f41dadd1a63b01438693576b4a5ef9"
+    },
+    {
+      "path": "src/workbench/SemMeasurementPanel.tsx",
+      "sha256": "ae9d75114cf34d5ab449c2bd4e90a4f0ff694c6ad416b76619da9bcfa88534a1"
+    },
+    {
+      "path": "src/workbench/SemNegativePanel.tsx",
+      "sha256": "2a7431e45e635f88c847e44b07bce7a435ae9242399450635c1428a8ada4ca59"
+    },
+    {
+      "path": "src/workbench/SemOccurrencePanel.tsx",
+      "sha256": "63453eb8fc4d7f97bb8cf7b807c0db13055fc0f9f73202315b8b4f26870bd7ea"
+    },
+    {
+      "path": "src/workbench/SemPersistencePanel.tsx",
+      "sha256": "a13f64a4262d271f5b7e00846efb9e13b50ea2309b50dad01677c58a7e17936b"
+    },
+    {
+      "path": "src/workbench/SemPhasePanel.tsx",
+      "sha256": "e7be529925bceb08ccdab760b71cb65c2b51db1b21b87f5462998fed4ae19f3f"
+    },
+    {
+      "path": "src/workbench/SemPhenomenonPanel.tsx",
+      "sha256": "f302c1a61da6e56c8594e57155e1cfd97e7bc526a482f1b0e2226096dc1f8a25"
+    },
+    {
+      "path": "src/workbench/SemProvenancePanel.tsx",
+      "sha256": "f5e2045ec929aa7deb8c10bfea06725b8e09e80a415989f59b85b5700c7321d1"
+    },
+    {
+      "path": "src/workbench/SemRecognitionBoundaryPanel.tsx",
+      "sha256": "8b7efd68cc27a70a6e6798ea4d6502d8064a62e41fbe4f365103f969e63d0e7d"
+    },
+    {
+      "path": "src/workbench/SemRecognitionIntegrityView.tsx",
+      "sha256": "d0c52159cf7fde8e961cc7ad9746b36885da80fbb639e42a4ad200a5b6b0c017"
+    },
+    {
+      "path": "src/workbench/SemRecognitionPanel.tsx",
+      "sha256": "8a3adf8c30c35c91a42f455ec75b42a7e776e1329d53471551503fdb46f0fa1d"
+    },
+    {
+      "path": "src/workbench/SemRendererPanel.tsx",
+      "sha256": "f6a619177663ca9ad2d6ba741b983755786e53f3c46e6cc06623d6992f82bd17"
+    },
+    {
+      "path": "src/workbench/SemSchemaPanel.tsx",
+      "sha256": "8a4a7269239374bf7e9000b9e5448936e13074262c83b39951f3eff4578701ec"
+    },
+    {
+      "path": "src/workbench/SemStateTransitionsPanel.tsx",
+      "sha256": "ada4d50938d989b5a5548fb25af2d8dc456a2fd3977cb933f315b4dc74766885"
+    },
+    {
+      "path": "src/workbench/SemWorkbench.tsx",
+      "sha256": "88a05a1d81a5ccab7f6572eb1e6c63250806a224e3a4eab489ed81c7d8b693eb"
+    },
+    {
+      "path": "src/workbench/canonical.ts",
+      "sha256": "f80f4a8353ea7604432d5ffcf0d4628f8b7bf13b82a06b4807445e9a9ba97bde"
+    },
+    {
+      "path": "src/workbench/semAcceptanceControls.ts",
+      "sha256": "fa5fba1014c99673cc90487dbf8191344a0264c9b641b6d8cd36c1fc20d4235f"
+    },
+    {
+      "path": "src/workbench/semAcceptanceFixture.ts",
+      "sha256": "f023451afed0ded1bdef835bef7df1709855cf5022fbea69635a5613636f61ce"
+    },
+    {
+      "path": "src/workbench/semAcceptanceRecorder.ts",
+      "sha256": "04c45d255612ad72f864cbbafb41d52d81e992e759561cd7b38775da95d7fbb5"
+    },
+    {
+      "path": "src/workbench/semAdapter.ts",
+      "sha256": "86eba962cbdff90d19d464f0d00e6c71ea9d9dbf1658648534720301a7bb2280"
+    },
+    {
+      "path": "src/workbench/semAuthorityControls.ts",
+      "sha256": "44e1717e6409740605b5f23f08e4048948c5e9a2b97f1d1318e14a3be395b7d3"
+    },
+    {
+      "path": "src/workbench/semAuthorityFixture.ts",
+      "sha256": "818dbdb01e7dc815bf78e6b7062d62e3235a73893b2a81d0d36e3914aed3b251"
+    },
+    {
+      "path": "src/workbench/semAuthorityRecorder.ts",
+      "sha256": "792c3b91e873ebe5af1879d27328c0a4da997eef8843009d6661da9310ba7a99"
+    },
+    {
+      "path": "src/workbench/semAxesControls.ts",
+      "sha256": "ef666526acd892f8be196067478372f0a25ee90c0eb6f82367392b51c2d49d6e"
+    },
+    {
+      "path": "src/workbench/semBindingControls.ts",
+      "sha256": "0200cb549dfcb7bb97ca78715cdfb61d416f974f5ed27fb78a3a1f224619a4cc"
+    },
+    {
+      "path": "src/workbench/semBindingFixture.ts",
+      "sha256": "93e2d034219a349768c11ffc7b7642ab6f24ad9d6ee3a10394af4aa0e01be69e"
+    },
+    {
+      "path": "src/workbench/semCatalog.json",
+      "sha256": "ef9261056197022d3626d898a911bb8edf19e5e2623dbd7e997f2acc73701abf"
+    },
+    {
+      "path": "src/workbench/semCausalLanguage.ts",
+      "sha256": "8fd761404a39584bebaa0d25ddd5b99f4635c645cfad88f5b98136fbb5104948"
+    },
+    {
+      "path": "src/workbench/semCharacter.ts",
+      "sha256": "38456d8942be570882f067300f35a1f4d693c245658b000eb3085669fe72aca4"
+    },
+    {
+      "path": "src/workbench/semClassificationBoundaryControls.ts",
+      "sha256": "c0d0c73d2e465a398f8ea5f77a94411d449c482bb9f23d6e7fe31f40d57c3145"
+    },
+    {
+      "path": "src/workbench/semClassificationBoundaryFixture.ts",
+      "sha256": "7daf3b2b6f5ba83e227ac59f9533a2159fc7f84f9869087094532bb5aa6e5c99"
+    },
+    {
+      "path": "src/workbench/semClassificationControls.ts",
+      "sha256": "fc15a03c771c250ec046af1a887022f82ac711c48c98dab109d3db3b80477a01"
+    },
+    {
+      "path": "src/workbench/semClassificationFixture.ts",
+      "sha256": "bfd0aad67b719222eeb1eef269ba8ae8d4f0a870c4abf8e71216ba7bf72f7493"
+    },
+    {
+      "path": "src/workbench/semCodecControls.ts",
+      "sha256": "ab36aa1fe2bc36543a289a2468c14519c7e702b6e5292e38e58b59fcca77846b"
+    },
+    {
+      "path": "src/workbench/semCodecFixture.ts",
+      "sha256": "c515266c5833631239519bed68b24580bcffddd41232e36c1535ab0604a1e148"
+    },
+    {
+      "path": "src/workbench/semConsumerReplayFixture.ts",
+      "sha256": "0616594826fcf21a8e38957e004c6fa198c2ea1e4b39bf9ea49e701826b4ef1b"
+    },
+    {
+      "path": "src/workbench/semContinuantControls.ts",
+      "sha256": "8161d8005c30d6ad382a9d3f909f4dcd7d3c99cccc8a85ec241247953e6b9fa7"
+    },
+    {
+      "path": "src/workbench/semContinuantFixture.ts",
+      "sha256": "1a3b0db5c7e7a77ff544d781567216c1d0c1bf42c4fa8c29709c8e67a19993c9"
+    },
+    {
+      "path": "src/workbench/semControlSuite.ts",
+      "sha256": "3b4bd968f1f237e5c807a9d852266778520191a81062f62525b4ca5361d579e4"
+    },
+    {
+      "path": "src/workbench/semControls.ts",
+      "sha256": "f5e4d5a39440bb1124f4201fef26036dcde4019a025e29206afe574166334bec"
+    },
+    {
+      "path": "src/workbench/semEventClassificationControls.ts",
+      "sha256": "cd644985a84e78f09828993a709e2dbed430706d3e51ceb319fd344e2a55217b"
+    },
+    {
+      "path": "src/workbench/semEventClassificationFixture.ts",
+      "sha256": "cfbf75087ca096bcde59038dd63e57faa526c673b9cbdadd8d1ab4842d8a74ab"
+    },
+    {
+      "path": "src/workbench/semEventFileControls.ts",
+      "sha256": "e8a87f2761f0ce8cd83a6fb8ffbb7c2a758acf420431bbfe73e7ac50af10fefe"
+    },
+    {
+      "path": "src/workbench/semEventFileFixture.ts",
+      "sha256": "1f7ef64bfdf83feae1ef1c9745a533688102bc3bf84aa9c15a8134e41a5da067"
+    },
+    {
+      "path": "src/workbench/semInspection.ts",
+      "sha256": "c2023b873d1cd62267c1f4cda8cbc8b5694ed816a4b69f34b31b010d08bd5db3"
+    },
+    {
+      "path": "src/workbench/semIntegratedControls.ts",
+      "sha256": "5983161fe149afa5387794341f2222fe31e6d1fc29ecf68947d6cb451221124c"
+    },
+    {
+      "path": "src/workbench/semIntegratedFixture.ts",
+      "sha256": "7b151a71c51fb89062ae89f3a27af85308e01cd126595cc066e5ff640bf45687"
+    },
+    {
+      "path": "src/workbench/semIntegratedSuite.ts",
+      "sha256": "737c7cba002d3fbb7fee75c4bbae3572fba2a295da3fa6fb4b46bddf36de2ebf"
+    },
+    {
+      "path": "src/workbench/semKnowledgeControls.ts",
+      "sha256": "3d78a8d0e3a82e310486a93be6a999cdead74c0dc30118a86118062a7e410b6b"
+    },
+    {
+      "path": "src/workbench/semKnowledgeFixture.ts",
+      "sha256": "f30eaaf48266c04cf24e51998510c614f3bd8e8abc9d13daac6cfd7f61f62099"
+    },
+    {
+      "path": "src/workbench/semMeasurementControls.ts",
+      "sha256": "52da9289b87ed22a0bdb22e38715726b9c40d6744b90dc2c4c027efd85888a66"
+    },
+    {
+      "path": "src/workbench/semMeasurementFixture.ts",
+      "sha256": "d110a849be526f04eac31854319fef20415cf6055614d692f3d9f2b8f44bba3e"
+    },
+    {
+      "path": "src/workbench/semNegativeControls.ts",
+      "sha256": "a24572efc3f9d2ea90b9585dcf1cc97f26f1cb6f51b1bb4754a0cebffbc25b19"
+    },
+    {
+      "path": "src/workbench/semNegativeFixture.ts",
+      "sha256": "c6f298cba0a0c5c710285f70d2a464feb1e05a4cbd2790efc3a412b8caa924dc"
+    },
+    {
+      "path": "src/workbench/semNegativeRecorder.ts",
+      "sha256": "9e908244574c6fdf3a9e99a2d7fb685bba55fca784410ba2a37b1d44aaa4f5b8"
+    },
+    {
+      "path": "src/workbench/semOccurrenceControls.ts",
+      "sha256": "17930db71a38ccbc7afe83a70809b1d818b7ee138fa3a91a3e82e4325a6f2fce"
+    },
+    {
+      "path": "src/workbench/semOccurrenceFixture.ts",
+      "sha256": "5839c9f9661b37568c4412c2925347fda498c8dcd29124cb471a29075b111648"
+    },
+    {
+      "path": "src/workbench/semOccurrenceRecorder.ts",
+      "sha256": "5681e46c0d27ffb6f631b880ebf762d2d33461e8a9e0a57d1cc5b83afa0600af"
+    },
+    {
+      "path": "src/workbench/semPersistenceControls.ts",
+      "sha256": "3ca3dde20b426988aa69c86b59d16b41ddc55aeab2c4f65d4b05b1180e4ec735"
+    },
+    {
+      "path": "src/workbench/semPersistenceFixture.ts",
+      "sha256": "e09a385eb98860b40b65b17c9977f0339469d68f786ba7e469b8bf0c63e106ec"
+    },
+    {
+      "path": "src/workbench/semPhaseControls.ts",
+      "sha256": "58ba803cf03dead75392a8d46460d6fc56c6c28ae4b585a729cb31fdeeccbd2e"
+    },
+    {
+      "path": "src/workbench/semPhaseFixture.ts",
+      "sha256": "66bc99b58ca161ea9f855ed7e6e2375e109d0d907b749a2f790e8fb53dbc6f5e"
+    },
+    {
+      "path": "src/workbench/semPhenomenonBindingFixture.ts",
+      "sha256": "ba339494c80466f4c7e7d7b8e82b081ec20998f1aca6ebba3119ad5a6053cfac"
+    },
+    {
+      "path": "src/workbench/semPhenomenonCausalFixture.ts",
+      "sha256": "a73dfd4237e8c03496d4c0ffdf6fe063545c975f074bbc7cfa8fe92f71e5f491"
+    },
+    {
+      "path": "src/workbench/semPhenomenonControls.ts",
+      "sha256": "e1184d1223f05d2889a8e3d808733effdd54bc13f87b9d7e8687baaec1ef483e"
+    },
+    {
+      "path": "src/workbench/semPhenomenonRecorder.ts",
+      "sha256": "452c7f8fb9aa398a024c8974ba6e3ff9557b9c31f5feb234d14e2bc48f41f662"
+    },
+    {
+      "path": "src/workbench/semProvenanceControls.ts",
+      "sha256": "3d3a4531079727b9553b48f5f0a4c949e1373ecf147974a7714c2d317d13a9cc"
+    },
+    {
+      "path": "src/workbench/semProvenanceFixture.ts",
+      "sha256": "d727159d5235b5b21d241aabec6f3da3a6b7530f0585b1c075d7d40d81ad1ab5"
+    },
+    {
+      "path": "src/workbench/semRecognitionBoundaryControls.ts",
+      "sha256": "35673ed0308a8502f025fa2f66bf055dec055078347f59a3e8f04302ece32013"
+    },
+    {
+      "path": "src/workbench/semRecognitionControls.ts",
+      "sha256": "2332abf09942678ada601acf037534f26fa9b4e8f4cd0ab3201a4aaa373773bd"
+    },
+    {
+      "path": "src/workbench/semRecognitionFixture.ts",
+      "sha256": "d22c1608e9a3b8e70f7a3013502ebcd3b0ee248391a24e0d3abf494a285e8a22"
+    },
+    {
+      "path": "src/workbench/semRecognitionIntegrity.ts",
+      "sha256": "87487d62726f3e337f6428ed0fc9588a7650535872a13bda6fba601afeb267e3"
+    },
+    {
+      "path": "src/workbench/semRecognitionLanguage.ts",
+      "sha256": "3ec7e43572908046a49006ca4c1f9897a6dd45e4adabb5211da858b1f2bf1858"
+    },
+    {
+      "path": "src/workbench/semRendererControls.ts",
+      "sha256": "6ca86eb793d0ca2f514abe58319186c21172ce89918be7e34dd99ee942773ebf"
+    },
+    {
+      "path": "src/workbench/semRendererFixture.ts",
+      "sha256": "39c5f91a1efa780d7bceae6a6d2a29bbaff00282f3adcff662e6b0149a832f16"
+    },
+    {
+      "path": "src/workbench/semReplay.ts",
+      "sha256": "d6218827fa4cd28188b43d3fe98620519f8893cab083e2eed8a728cb845ae385"
+    },
+    {
+      "path": "src/workbench/semSchemaControls.ts",
+      "sha256": "49247d47d746610c74a1021532e474c6d89958a19784478ada7132e232982de2"
+    },
+    {
+      "path": "src/workbench/semShortcutControls.ts",
+      "sha256": "ae9958ced6d47fb8f9b1b8374bad056acaec1ebf55a7e7ac7ecea7a1a2c0297c"
+    },
+    {
+      "path": "src/workbench/semShortcutFixture.ts",
+      "sha256": "029a6ba6ccf71ea38c2e02a313c2df6ed9543b6d158fe5e4bfded8f07f476abf"
+    },
+    {
+      "path": "src/workbench/semStateTransitions.ts",
+      "sha256": "7a1b6be8b4fd8b7deb6669f4d25ddbca960c32e7e2f341d2f7216f6f32cd4b05"
+    },
+    {
+      "path": "src/workbench/semWorkerClient.ts",
+      "sha256": "0501b55a9ecd9542451aa394faf39fb2b34c5a247d2d08c573879aca6a5483f2"
+    }
+  ]
+}

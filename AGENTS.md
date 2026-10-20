@@ -63,6 +63,9 @@ cue-level and complete factor language remain open. Retain new tab29/4205.
 SEM causal-role language now PASS4 prefixes/12 observer views/3 descriptions;
 exact perceived-binding support and rule mapping,32 tests and browser/history PASS.
 See workbench-sem-causal-language-rev1; cue-level/full-choice language remains due.
+SEM committed state transitions PASS4 prefixes/2 roots/6 root transitions; browser0/1/3
+exact before/after and history PASS. Read/write counts remain unavailable, not zero.
+Type-inference failure retained in rev1; explicit-type rev2 and build PASS.
 Disposition score matrix projection PASS270 retained resolutions/416 draws/1248 cells;
 42 automatic/20 absent records preserve no-draw status. UI integration remains due;
 this is score arithmetic, not the required latent-state visualization or player language.
@@ -83,7 +86,7 @@ See OBSERVABILITY_WORKBENCH_GENERAL_PROGRESS.md; browser tab25 (4203) retained.
 Browser continuity correction: older tabs closed after missed turn-scoped marks.
 Inventory confirmed only1/25 survived. Interrupted7/6/24 do NOT establish completion.
 Replacement full BatchV8 tab26 (4185) and Disposition horizon tab27 (4202) RUNNING.
-At EVERY turn mark current workbenchLiveTabs:1,25,26,27,28,29,30. Do not use stale handles.
+At EVERY turn mark current workbenchLiveTabs:1,25,26,27,28,29,30,31. Do not use stale handles.
 Disposition horizon revision2 repeats pause1 then runs toward18; keep tab27 alive.
 Run/Pause prefix1 five native identities PASS. Terminal and six-mode checks remain due.
 Retained event-state build keyboard filter/selection/disclosure PASS with unchanged
