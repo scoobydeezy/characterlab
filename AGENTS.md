@@ -56,6 +56,8 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 Start docs/planning/OBSERVABILITY_WORKBENCH_BATCH_V8_PROGRESS.md.
 Disposition full-horizon browser tab24 (4202) RUNNING toward18; keep it alive.
 Run/Pause prefix1 five native identities PASS. Terminal and six-mode checks remain due.
+Retained event-state build keyboard filter/selection/disclosure PASS with unchanged
+native prefix2 identities; broader accessibility and later-build qualification remain due.
 Snapshot byte census PASS285 archives:41,218,393,463 decoded bytes total;
 largest482,251,239 bytes (program13/prefix18),118 over128MiB/63 over256MiB.
 These are serialized diagnostic sizes, not heap or checkpoint-size claims.

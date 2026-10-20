@@ -1,0 +1,29 @@
+{
+  "status": "PASS BOUNDED EVENT STATE KEYBOARD CONTROLS",
+  "parents": [
+    {
+      "path": "docs/planning/workbench-disposition-event-state-rev1/receipt.json",
+      "sha256": "81160aded21a29b4102588960c5574f791ba53dbf0099dd79795b2ff8807fd0a"
+    },
+    {
+      "path": "docs/planning/workbench-disposition-event-state-ui-rev1/receipt.json",
+      "sha256": "1dbebeb90bdcf5fae49227da494e40393a2dff5023398ec0571d8b991a6ce2bd"
+    }
+  ],
+  "verifier": {
+    "path": "scripts/check-workbench-disposition-event-state-keyboard.mjs",
+    "sha256": "d4d534365ed465ed164ad0361d050b9d802e65e91f9bee83bcf403694b0cb34b"
+  },
+  "artifacts": [
+    {
+      "path": "browser.json",
+      "sha256": "22d3f691e0a74ed5add48b028f10d1ce197cebee36e768c93cbcfce5595e86f9"
+    },
+    {
+      "path": "keyboard.png",
+      "sha256": "0eeca92b4d1730b9dac754bff2b8f8440e8dfae6f9df6fef18e4aa2d4694da69"
+    }
+  ],
+  "build": "characterlab-disposition-event-state-rev1 at127.0.0.1:4201; browser2/tab22",
+  "scope": "At native Plastic/Main prefix2, Space activates unchanged-write filtering on historical event26; ArrowUp selects25 and resets the filter; Enter expands its mutation disclosure. Before/after strings equal original event25; all five native identities unchanged. Frozen renderer sources authenticated. This qualifies those keyboard controls on the retained build, not full tab order, screen-reader behavior, all modes, current later UI builds or complete accessibility."
+}

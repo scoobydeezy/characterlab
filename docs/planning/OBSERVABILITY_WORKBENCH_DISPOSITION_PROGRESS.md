@@ -591,6 +591,21 @@ character testimony or concluding that unavailable concern means no concern.
 This is workbench qualification, not a new Campaign3 verdict or obligation closure.
 All18 conditional obligations and historical source restrictions survive.
 
+## Event-state keyboard controls — 2026-10-20
+
+`workbench-disposition-event-state-keyboard-rev1/receipt.json` PASS on the retained
+event-state build at127.0.0.1:4201, browser2/tab22. At Plastic/Main prefix2, Space
+activates changed-only filtering on historical adaptation26 and hides its unchanged
+write. ArrowUp selects identity25 and resets the filter. Enter expands its mutation
+disclosure; before/after values match the exact original historical event. All five
+native snapshot identities remain unchanged. Screenshot inspected.
+
+The verifier authenticates the frozen renderer sources and prior browser receipt,
+not the later modified workbench source as if it were the older build. This adds
+bounded keyboard control evidence; complete tab order, screen-reader behavior,
+responsive layouts, other modes and later-build accessibility remain unqualified.
+No production source or runtime semantics changed.
+
 ## Coverage routing reconciliation — 2026-10-20
 
 The Disposition successor entry in OBSERVABILITY_WORKBENCH_COVERAGE.json now
