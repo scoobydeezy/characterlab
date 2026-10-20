@@ -1,6 +1,6 @@
 /** Versioned diagnostic capabilities; none of these objects is simulation authority. */
-export const EXPERIMENT_REGISTRY_VERSION = 'workbench-experiments/0.22';
-export type ExperimentId = 'values' | 'reason' | 'general' | 'epi' | 'learn' | 'belief' | 'affect' | 'decision' | 'commit' | 'work' | 'skill' | 'habit' | 'social' | 'relationship';
+export const EXPERIMENT_REGISTRY_VERSION = 'workbench-experiments/0.23';
+export type ExperimentId = 'values' | 'reason' | 'general' | 'epi' | 'learn' | 'belief' | 'affect' | 'decision' | 'commit' | 'work' | 'skill' | 'habit' | 'social' | 'relationship' | 'long';
 export type BatchExperimentId = Exclude<ExperimentId, 'general'>;
 export interface InspectionCapabilities {
   committedStep: {supported: true; boundary: string};
@@ -17,6 +17,7 @@ export interface ExperimentDescriptor {
 const noIntervention = {supported: false as const, reason: 'The public contract admits original inputs on a fresh run; it exposes no runtime intervention ingress.'};
 const checkpoint = {supported: true as const, authentication: 'Exact public save, original inputs, model, seed and complete prefix.'};
 export const EXPERIMENTS: readonly ExperimentDescriptor[] = [
+  {id:'long',label:'LONG · acquisition and retention',seamVersion:'longitudinal-public/0.2-candidate',corpusScope:'32 original source programs/513 prefixes; goal, habit, routine and loss successors remain separate',capabilities:{committedStep:{supported:true,boundary:'One complete native source instant.'},checkpoint,runtimeIntervention:noIntervention,graph:{supported:false,reason:'Recorded parent/read links are diagnostic provenance, not a native memory graph.'},matrix:{supported:false,reason:'No native matrix in this original source profile.'},explanation:{supported:true,scope:'Closed native observer-field descriptions; learned projection equality is distinct from accessible detail.',qualification:'3078 descriptions/513 prefixes qualified in bounded scope. Full factor narrative and successor language remain separate.'}}},
   {id:"social",label:"SOCIAL · observers and fallible claims",seamVersion:"social-public/0.1-candidate",corpusScope:"26 programs/127 prefixes;47 declared comparisons",capabilities:{committedStep:{supported:true,boundary:'One complete native instant.'},checkpoint,runtimeIntervention:noIntervention,graph:{supported:false,reason:'No native graph in this bounded profile.'},matrix:{supported:false,reason:'No native matrix.'},explanation:{supported:true,scope:"Observer-specific admitted evidence and current belief; violating controls suppress narration.",qualification:"855 descriptions;70 observer-prefixes suppressed. Full narrative and browser qualification remain open."}}},
   {id:"relationship",label:"RELATIONSHIP · dyadic history and response",seamVersion:"relationship-public/0.2-candidate",corpusScope:"24 corrected and24 legacy programs;33 corrected and24 revision comparisons",capabilities:{committedStep:{supported:true,boundary:'One complete native instant.'},checkpoint,runtimeIntervention:noIntervention,graph:{supported:false,reason:'No native graph in this bounded profile.'},matrix:{supported:false,reason:'No native matrix.'},explanation:{supported:true,scope:"Own history, appraisal and selected intent; candidate4/5 and legacy narration suppressed.",qualification:"6794 corrected descriptions;88 observer-prefixes suppressed. Legacy0.1 retained as failed cohort. Full narrative and browser qualification remain open."}}},
 
@@ -60,6 +61,13 @@ export interface BatchJob {
 }
 /** The common transport intentionally exposes no mutable runtime or private evaluator. */
 export async function createBatchRun(job: BatchJob): Promise<InspectableBatchRun> {
+  if(job.experimentId==='long'){
+    const {default:catalog}=await import('./batchCatalogV8.json');
+    const frozen=catalog.jobs.find(j=>j.id===job.id);
+    if(!frozen||(['experimentId','name','seed','law','appraisal','numeric','expectedSaveHashes'] as const).some(k=>JSON.stringify((frozen as BatchJob)[k])!==JSON.stringify(job[k])))throw Error('Batch job differs from frozen LONG program declaration');
+    const run=await (await import('./longAdapter')).LongWorkbenchRun.create(job.name);
+    return {advance:()=>run.advance(),view:()=>{const {prefix,complete,clock,modelHash,runHash,stateHash,saveHash}=run.snapshot();return {prefix,total:frozen.expectedSaveHashes.length-1,complete,clock,modelHash,runHash,stateHash,saveHash};}};
+  }
   if(job.experimentId==='social'||job.experimentId==='relationship'||job.experimentId==='skill'||job.experimentId==='habit'||job.experimentId==='work'||job.experimentId==='belief'||job.experimentId==='affect'||job.experimentId==='decision'||job.experimentId==='commit'){
     const {default:catalog}=await import('./batchCatalogV7.json');
     const frozen=catalog.jobs.find(j=>j.id===job.id);

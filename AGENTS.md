@@ -52,7 +52,20 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
-**Current routing (2026-10-13):** Observability Workbench IN PROGRESS, owner-authorized.
+**Current routing (2026-10-20):** Observability Workbench IN PROGRESS, owner-authorized.
+Start docs/planning/OBSERVABILITY_WORKBENCH_BATCH_V8_PROGRESS.md.
+BatchV8 admits32 LONG source programs:947 roles/6388 prefixes; old915 unchanged.
+Native audit92941 and browser2/tab7 (4185) RUNNING; LONG-only tab6 (4184) RUNNING.
+Keep both browser tabs and frozen build/source dependencies; no completedV8 receipt yet.
+Disposition restore audit28212 remains RUNNING; do not restart quiet writers.
+LONG goal recorded-factor inspector qualified120 cases/1920 rows/2496 nuclei;
+raw signals/bases remain unavailable, so full factor accounting is still due.
+V7 full native/browser915/5875 PASS; LONG original32/513 and goal restore120/2040 PASS.
+Full corpus/successors, language, canonical architecture, specialized views and the
+integrated Campaign4 entry demonstration remain due. Goal remains active.
+No Campaign4 reduction/law selection/retirement;18 conditional obligations survive.
+
+**Prior routing (2026-10-13):** Observability Workbench IN PROGRESS, owner-authorized.
 Start docs/planning/OBSERVABILITY_WORKBENCH_PLAN.md and OBSERVABILITY_WORKBENCH_WORK_PROGRESS.md.
 SKILL native52 programs/279 prefixes PASS;85 comparisons declared; UI/language due.
 WORK native78 programs/624 prefixes PASS; six-mode worker UI/119 declared contrasts.

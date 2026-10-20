@@ -1,0 +1,31 @@
+{
+  "status": "RUNNING; NOT QUALIFIED",
+  "full": {
+    "browser": "2",
+    "tab": "7",
+    "url": "http://127.0.0.1:4185/",
+    "roles": 947,
+    "prefixes": 6388,
+    "previewSession": 45246,
+    "build": "characterlab-batch-v8-rev2"
+  },
+  "longOnly": {
+    "tab": "6",
+    "url": "http://127.0.0.1:4184/",
+    "roles": 32,
+    "prefixes": 513,
+    "previewSession": 4165,
+    "build": "characterlab-batch-v8-rev1"
+  },
+  "sources": [
+    {
+      "path": "src/workbench/inspectionRegistry.ts",
+      "sha256": "afd81458c72f62ae119f2946392953cad5b190534aa456939a4176974aaa34a2"
+    },
+    {
+      "path": "src/workbench/WorkbenchApp.tsx",
+      "sha256": "b67e151853d4adb0ec081bd8dcb24b40bfdb1adcf5ab54809ed28cd7a23d2a5e"
+    }
+  ],
+  "scope": "Rev1 retains the observed duplicate top-level LONG option; rev2 removes it and browser verifies one LONG option. Shared native/browser bound execution sources unchanged. Full batch running; no completed receipt yet."
+}
