@@ -56,7 +56,9 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 Start docs/planning/OBSERVABILITY_WORKBENCH_BATCH_V8_PROGRESS.md.
 Disposition raw factor sources/coverage PASS15 programs/285 archived snapshots:
 270 reason events,250 emitted records,750 source joins; historical stability and
-bounded browser factor table/Timeline link PASS. Full quantization/language remains due.
+bounded browser factor table/Timeline link PASS. Calibration reconstruction now
+PASS500 nuclei/84 nonzero/24 capped modifiers; learning1/probe5 browser tables PASS.
+Parameter-to-signal provenance, observer language and full integrated entry remain due.
 Disposition constitutional slider now creates the declared pair; either committed
 branch opens across Character/Reasoning/Timeline/Architecture with shared identities.
 Bounded native/browser0/1/2, both branch1 records, historical stability and independent

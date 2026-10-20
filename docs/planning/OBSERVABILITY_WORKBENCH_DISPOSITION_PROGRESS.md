@@ -467,3 +467,50 @@ than infer unavailable operands. This advances factor accounting but does not cl
 full quantization/calibration explanation, observer-safe reason language,
 parameter-to-signal provenance, general causal contribution or §32 entry acceptance.
 All18 conditional obligations and Campaign3 source restrictions remain unchanged.
+
+## Exact dice calibration reconstruction — 2026-10-20
+
+`disposition-calibration-inspection/0.1` reconstructs the accepted
+disposition-public/0.1-candidate / disposition-adaptation/0.1-candidate calibration
+from recorded source coverage and the evaluation's safe context. It is explicitly
+a diagnostic reconstruction, separate from recorded runtime quantization operations.
+The context's Learning field selects unit1 or1/16; the enabled ingress flag is not
+used as a substitute for that field.
+
+For each nucleus, Reasoning exposes signed effective role totals, bounded role nets
+x/(1+|x|), modifier scaling, truncation toward zero, cap±3, inclusive base-die bands,
+relevance and exact score masses. Every reconstructed value must match the recorded
+compiled nucleus. A version mismatch, context-lineage mismatch, incorrect die band,
+role net, modifier or distribution withholds the interpretation. The explanation
+does not relabel mechanical variance as character uncertainty.
+
+`workbench-disposition-calibration-rev1/receipt.json` PASS all15 programs/
+270 unique reasons events/250 emitted records/500 nuclei.180 emitted learning
+contexts and70 non-learning contexts include84 nonzero and24 capped modifiers.
+Inputs remain unchanged. Native-backed terminal snapshots supply every unique
+event; prior factor-source qualification separately establishes historical stability
+across285 snapshots. The receipt phrase “their285 prefix occurrences” refers to
+those285 snapshots, not to the number of repeated event occurrences.
+
+Recorded nets, dice, modifiers and complete score distributions all match.
+Wrong-version, changed-context and altered-die negative cases reject. Formal contract,
+native mathematical source and renderer dependencies are frozen with the verifier.
+This does not select a general calibration law or establish causal necessity.
+TypeScript, build569 modules, boundary and restored research checks PASS.
+
+`workbench-disposition-calibration-ui-rev1/receipt.json` PASS positive-constitution
+browser at learning1 and probe5: complete reports, role totals/bounded nets,
+truncation/caps, die-band tables and score-mass tables match the corpus. At probe5,
+standing total1/4 becomes net1/5, scales to16/5 and truncates/caps to3; the opposing
+nucleus has modifier−3. The active context changes unit1→1/16. Five identity fields
+match native-backed archives at both prefixes. Returning to historical event18
+preserves its original learning explanation despite subsequent state changes.
+Keyboard focus and screenshots inspected. One early next-step click timed out while
+the current step was busy; the same worker continued without recreation.
+
+LOCAL DISPOSITION: the version-bound mechanical calibration explanation is now
+qualified for this finite original corpus. Complete factor provenance still requires
+the parameter/state-to-raw-signal derivation, and observer-safe semantic/player reason
+language remains due. Live charts/vector inspection, comparison summary export and
+the full integrated §32 demonstration are not closed by these mechanics tables.
+No Campaign3 verdict, law selection or obligation disposition changes.
