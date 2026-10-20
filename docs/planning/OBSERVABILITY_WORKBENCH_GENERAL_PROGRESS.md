@@ -222,3 +222,25 @@ Four main graph-run commitments remain unchanged. Full displayed reports match t
 qualified frozen native cohort. Keyboard focus and screenshot inspected. No full
 36-pair browser replay, checkpoint download transport or completed integrated-entry
 claim. Isolated preview4189 preserves the separate running V8 browser builds.
+
+## Bounded keyboard state and event inspection — 2026-10-20
+
+`workbench-general-keyboard-rev1/receipt.json` PASS on the retained event-state
+build4204, browser2/tab28, frozen-seed baseline prefix4. Keyboard entry to Reasoning,
+typed exact-value search, root selection with Home/ArrowDown, Enter activation and
+local Tab order passed. Disabled single-page paging controls are skipped between
+the root selector and Clear; the next Tab reaches the matching record. Clearing
+restores all20 original paths. Selected root631 value and revision match the native
+archive exactly.
+
+Enter follows the selected event43 into Timeline. Space enables changed-only;
+ArrowDown selects44 and resets it; ArrowUp returns43 and Enter opens its mutation.
+Historical before/after strings match original event43, and all four current native
+identities remain unchanged. Screenshot inspected; the disclosure has visible focus.
+The checker authenticates the later event-state sources and unchanged search
+components separately, without asserting the earlier GeneralWorkbench build is current.
+
+LOCAL DISPOSITION: this qualifies these keyboard controls and local focus order.
+Full traversal, screen-reader behavior, multi-page results and broader accessibility
+remain due. No runtime implementation changed, so no new runtime suite/build was
+needed. No Campaign3 verdict, obligation closure or integrated-entry acceptance.

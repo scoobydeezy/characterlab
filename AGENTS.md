@@ -57,6 +57,9 @@ Start docs/planning/OBSERVABILITY_WORKBENCH_BATCH_V8_PROGRESS.md.
 General stored-state search PASS43 models/568 snapshots/10110 field observations.
 General event-state renderer PASS7074 events/7587 reads/2037 changed records;
 all568 histories stable. Bounded browser matrix43/read-only37/filter/reset/history PASS.
+General prefix4 keyboard search/root selection/local Tab order and event43→44→43
+filter reset/disclosure PASS with exact state/event values and unchanged four hashes.
+See workbench-general-keyboard-rev1; broader accessibility remains due.
 Revision1's incorrect unchanged-positive assertion retained; revision2 records zero
 unchanged General mutations without asserting a general absence of redundant writes.
 Root/path/value filtering preserves all fields; bounded browser baseline3/4 exact
