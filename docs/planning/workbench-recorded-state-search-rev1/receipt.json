@@ -1,0 +1,425 @@
+{
+  "status": "PASS FULL GENERAL RECORDED STATE SEARCH",
+  "sources": [
+    {
+      "path": "src/workbench/recordedStateSearch.ts",
+      "sha256": "324347ddde69dcd93c7dda614dbeb46f679e13b1617961d53ff3c482b37391f7"
+    },
+    {
+      "path": "src/workbench/RecordedStateInspector.tsx",
+      "sha256": "36728d81fd22c5ebc1e3d52272177384beb76f4b7a6231da0fdd99bd3c559f17"
+    },
+    {
+      "path": "src/workbench/GeneralWorkbench.tsx",
+      "sha256": "784c5c6311640332d359b2fe0bafa060b92a304920d9c44f006a2c539277ffe1"
+    },
+    {
+      "path": "scripts/check-workbench-recorded-state-search.mjs",
+      "sha256": "384ce0f437ab768f0b04314fba251807b750471c0d9c66b1f2e1f93328c3c75c"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "3d2c334ad3b6deed69df679c30d93acbcf2b852379591dc8e8234babb5acea4c"
+    },
+    {
+      "path": "docs/planning/workbench-general-comparison-cohort-rev1/receipt.json",
+      "sha256": "cde3dce99afa93fcf28945e8a0fd46ad609e2b1314be383d94cd3156f888d98c"
+    }
+  ],
+  "counts": {
+    "models": 43,
+    "snapshots": 568,
+    "fieldObservations": 10110,
+    "maxFields": 20
+  },
+  "results": [
+    {
+      "recipe": "baseline",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-00.json.gz",
+        "sha256": "1d268b0ba379d6279311df3cc14c6bdee255536a9c75e9752e912cbe820cc7ce"
+      }
+    },
+    {
+      "recipe": "budget-Independent-1/1",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-01.json.gz",
+        "sha256": "d11207785234107b11f5acecf4a40a7e868b934f186ccaadac788d603f612446"
+      }
+    },
+    {
+      "recipe": "budget-HistoricalShared-1/5",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-02.json.gz",
+        "sha256": "21be3d4e552b8f2f9cf799ed0115634b2fd43609975807196aa6ddaa1fb9dc9c"
+      }
+    },
+    {
+      "recipe": "budget-HistoricalShared-1/1",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-03.json.gz",
+        "sha256": "b7fc684bafcc32dfcfa82f0d5cdc56d6c46003039fdaad9132c0448d2fa085b3"
+      }
+    },
+    {
+      "recipe": "budget-HistoricalHybrid-1/5",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-04.json.gz",
+        "sha256": "70712864721495754da4b6740e9f64e551cc4f5c8aac5d6fc57f9c48d54ca972"
+      }
+    },
+    {
+      "recipe": "budget-HistoricalHybrid-1/1",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-05.json.gz",
+        "sha256": "bc2572e42fe943db2fb7d6208fa28fc6614f88939a30a5f385b7612ba45310b2"
+      }
+    },
+    {
+      "recipe": "budget-RetiredFlat-1/5",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-06.json.gz",
+        "sha256": "ac91cb3854e58c31d115b4f2fbc956609d809a1c60c02106d1a8b2eb68e6d765"
+      }
+    },
+    {
+      "recipe": "budget-RetiredFlat-1/1",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-07.json.gz",
+        "sha256": "2859621a92b9fe913b1d52d2853dc2053f1f606103418f04eb37fe75bcf8f50b"
+      }
+    },
+    {
+      "recipe": "allocation-disabled",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-08.json.gz",
+        "sha256": "7cc7e1f8def41e30cbddf368d3ab6868f7a57019860db0c4811a7f44e121a41d"
+      }
+    },
+    {
+      "recipe": "allocation-spatial",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-09.json.gz",
+        "sha256": "653c7c21084344caa6b8929c126c6a966f9ea443e73d1f573a46bf2f615e20ec"
+      }
+    },
+    {
+      "recipe": "feedback-encoding",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-10.json.gz",
+        "sha256": "8f5788029c929c90b38d8bae20d652a0ccb9b99fc017bd1af611bd744a9c5664"
+      }
+    },
+    {
+      "recipe": "feedback-retrieval",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-11.json.gz",
+        "sha256": "7ebdc44fb1ce0dc8a5ecb0fc10ef249b3dabb0461e037e8991521f612ad07a35"
+      }
+    },
+    {
+      "recipe": "feedback-both",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-12.json.gz",
+        "sha256": "b8256f9786d5af3800d51c582bb4cf0597ab0e2560fe04ddfd8a9d12db764d82"
+      }
+    },
+    {
+      "recipe": "local-access",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-13.json.gz",
+        "sha256": "66fe86f64dfdf42826456c5685d25163f1573a2f02ce1a0ea7066f29891f64e7"
+      }
+    },
+    {
+      "recipe": "association-decay",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-14.json.gz",
+        "sha256": "33bb9245dbe15209fa183cf883efe85b639bb672401cbbd8707035a5f91c79bf"
+      }
+    },
+    {
+      "recipe": "presentation-no-decay",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-15.json.gz",
+        "sha256": "a730b00ac18568ce1983cff9674ece912705df32470ff4f49b0a0b6e86b4c2af"
+      }
+    },
+    {
+      "recipe": "recall-k0",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-16.json.gz",
+        "sha256": "b22f438d56b51c6d41ccb2e3fc5b9673f850d523f114458c9a52ef9838b0450f"
+      }
+    },
+    {
+      "recipe": "recall-k1",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-17.json.gz",
+        "sha256": "648a8bb13cdf789e4e05ca0b083cfae26416bc869516f03ebf8f78d96348d0b9"
+      }
+    },
+    {
+      "recipe": "select-k0",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-18.json.gz",
+        "sha256": "62a0ec665f6495dde369ec7d1be09f67090e5e0f36ff68116199da1c220a824c"
+      }
+    },
+    {
+      "recipe": "select-k1",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-19.json.gz",
+        "sha256": "50d9ab46df6a8e766e25a46b50956751d65afbef49d1844c4ac938e479ac45cb"
+      }
+    },
+    {
+      "recipe": "select-k2",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-20.json.gz",
+        "sha256": "86c091cf3be2741667275de0aace34a7d551f2bf912cecacbe47efe630607c24"
+      }
+    },
+    {
+      "recipe": "select-equal-k2",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-21.json.gz",
+        "sha256": "c9c15daff58d8e63e7d1daa6d23f74ba03e13333591b04dea1dfbf6befc08bf0"
+      }
+    },
+    {
+      "recipe": "source-capacity1",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-22.json.gz",
+        "sha256": "e66931e949acab133318d036e95c92ca137ceec9b5695c8357010b413519ec5d"
+      }
+    },
+    {
+      "recipe": "source-no-prediction-access",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-23.json.gz",
+        "sha256": "c7422b0c65024dec4fb38bad031367fffb4d254f3eb476d7130c37123f7377d9"
+      }
+    },
+    {
+      "recipe": "source-no-task-access",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-24.json.gz",
+        "sha256": "fc34c8938ad5e8092ce90fe9fc883ce5a59baa9b3347b260610714fc57aca58a"
+      }
+    },
+    {
+      "recipe": "source-denied-probe",
+      "prefixes": 12,
+      "maxFields": 19,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-25.json.gz",
+        "sha256": "ab18f9d5d949658ab0b8b81a09333decb5aaa2f6a7356c41964b9fb6143870e1"
+      }
+    },
+    {
+      "recipe": "source-zero-concern",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-26.json.gz",
+        "sha256": "f7899eaa72f0dff9aab67d9e9a04d3f91bd91a9ea69771122dd644a498e2b3c9"
+      }
+    },
+    {
+      "recipe": "source-above-target",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-27.json.gz",
+        "sha256": "45450916633f1b28176d7d05f2be9a883e152f20215eed0474a3ece3a741db3a"
+      }
+    },
+    {
+      "recipe": "denied-port",
+      "prefixes": 12,
+      "maxFields": 19,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-28.json.gz",
+        "sha256": "26f1b6ffc75dfcffb8bc33e706bea4758732d402cf502850f0185938efcb69d5"
+      }
+    },
+    {
+      "recipe": "unresolved-role",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-29.json.gz",
+        "sha256": "2a04c15eaaeeb2ece5c1c70996af13641a655f34a3be9f63d5863f4aa8038d64"
+      }
+    },
+    {
+      "recipe": "credit-age-only",
+      "prefixes": 25,
+      "maxFields": 18,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-30.json.gz",
+        "sha256": "ebf24ab04513118efaa23aa38f149a6ae66cddb0d7c3a25fe147ab1ae5b42bd3"
+      }
+    },
+    {
+      "recipe": "credit-use-only",
+      "prefixes": 25,
+      "maxFields": 18,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-31.json.gz",
+        "sha256": "2fe806676a5c57cda141d0252f073e53f0580695d56b827102c8a1e34efb98c1"
+      }
+    },
+    {
+      "recipe": "credit-shared-protection",
+      "prefixes": 25,
+      "maxFields": 18,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-32.json.gz",
+        "sha256": "283868ffd45aace9d88849c65ca73c89b916f0a1c808b5f9b92705b3c2d6a4e7"
+      }
+    },
+    {
+      "recipe": "credit-significance-first",
+      "prefixes": 25,
+      "maxFields": 18,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-33.json.gz",
+        "sha256": "138ea8cb052352fa1b67d377a12b851d5047f73a626a8ceeb8b138b495fad46d"
+      }
+    },
+    {
+      "recipe": "source-consequence-lane",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-34.json.gz",
+        "sha256": "628a0e689d750f0ec168d5c00bd50df9243d463931dacae43c81d5ace4801e91"
+      }
+    },
+    {
+      "recipe": "footprint-Independent-sparse",
+      "prefixes": 12,
+      "maxFields": 18,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-35.json.gz",
+        "sha256": "0a8942170aebb4b0afb1f5f13b495f83887eea1f4b1a9c9fe124ed2aef631258"
+      }
+    },
+    {
+      "recipe": "footprint-Independent-dense",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-36.json.gz",
+        "sha256": "fc09500445ce17121413ede6be04b3b2e27d6f21677b33d6fcd00cdc40eb2291"
+      }
+    },
+    {
+      "recipe": "footprint-HistoricalShared-sparse",
+      "prefixes": 12,
+      "maxFields": 18,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-37.json.gz",
+        "sha256": "65e93309c56bca669337d4840ecf6ac01bffad6d1424ac7fb9d9d42db0849fcc"
+      }
+    },
+    {
+      "recipe": "footprint-HistoricalShared-dense",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-38.json.gz",
+        "sha256": "71d309aed77a3014039de866c238d8e0bad5be89906c40d87fc99ece945dda8b"
+      }
+    },
+    {
+      "recipe": "footprint-HistoricalHybrid-sparse",
+      "prefixes": 12,
+      "maxFields": 18,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-39.json.gz",
+        "sha256": "10ab7ea23f52c69d513e623b27dde9230fca9a13cb08f723d03a697c8cc2b03b"
+      }
+    },
+    {
+      "recipe": "footprint-HistoricalHybrid-dense",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-40.json.gz",
+        "sha256": "6fdcda374726a84f0d6d55a5e995ed0cc48c1e5cff38b57ef24b595ef136848d"
+      }
+    },
+    {
+      "recipe": "footprint-RetiredFlat-sparse",
+      "prefixes": 12,
+      "maxFields": 18,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-41.json.gz",
+        "sha256": "4dac0382b6a85acb9cbb36ec16ab70714d9c246a5c907069b854a66a61517c6f"
+      }
+    },
+    {
+      "recipe": "footprint-RetiredFlat-dense",
+      "prefixes": 12,
+      "maxFields": 20,
+      "source": {
+        "path": "docs/planning/workbench-general-comparison-cohort-rev1/model-42.json.gz",
+        "sha256": "e5bcb6093d9525f6e0aac5b90491d16328bb41dfb4e634ef8b8a80a1290ba34b"
+      }
+    }
+  ],
+  "scope": "All568 authenticated original snapshots retain every stored field under empty search and complete root partitions. Every exact path suffix and value prefix is searchable without changing fields. Long query and duplicate paths reject explicitly; zero/absence remain distinct. Does not classify all roots as character knowledge. UI pagination, keyboard behavior and current-revision selection require browser checks."
+}

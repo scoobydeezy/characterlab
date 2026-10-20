@@ -1,0 +1,22 @@
+{
+  "status": "PASS BOUNDED GENERAL STORED STATE SEARCH BROWSER",
+  "qualification": {
+    "path": "docs/planning/workbench-recorded-state-search-rev1/receipt.json",
+    "sha256": "5ae2b3ff1ec823676e5b5bb04f85d46344f32f5d33f9c1b61945656d39f91702"
+  },
+  "verifier": {
+    "path": "scripts/check-workbench-recorded-state-search-ui.mjs",
+    "sha256": "cc652deeab149c1800fec3a16a164f77f3816d730987ec41b6395dcdd2dab299"
+  },
+  "artifacts": [
+    {
+      "path": "browser.json",
+      "sha256": "974eb0c3d409593e5a88f1ccd1bc5ff1b4076a1270d95026155633373e1fb44d"
+    },
+    {
+      "path": "search.png",
+      "sha256": "07881df88adcb35d4c2a15788af0eca1924e3fdbc15b65735c325d7f66370b9e"
+    }
+  ],
+  "scope": "Frozen-seed baseline3/4: complete unfiltered path list, root631 exact selection, canonical substring search, explicit no-match with retained selection, long-query rejection and clear filters. All four native identities unchanged by filtering; selected value and visible revision update to original prefix4. Current corpus max20 fields fits one page; multi-page interaction and broader accessibility are not qualified."
+}

@@ -105,6 +105,38 @@ Screenshot inspected. Initial restore interaction timed out while step4 was stil
 busy; the same live session reached4 and was resumed without recreation or lost state.
 No file download/import or checkpoint reconstruction was attempted.
 
+## Searchable complete stored state — 2026-10-20
+
+Reasoning's complete native stored-state list now supports root, canonical-path
+and exact-value substring search. The selected record shows its complete exact
+value and the current prefix/save hash. Filtering preserves the selection with an
+explicit notice when it falls outside the results. Advancing the run updates the
+current selected path's value and visible revision; this is not a historical-state
+pin. A path removed from the current revision is labeled absent. No editable
+runtime state, derived chart authority or character-knowledge classification is
+introduced.
+
+`workbench-recorded-state-search-rev1/receipt.json` PASS43 original models,
+568 authenticated snapshots and10110 field observations. Empty searches retain
+all fields, root partitions have no omissions, and every field is findable through
+its canonical path and exact value without changing the input records. Long queries
+over256 characters and duplicate paths reject explicitly. Zero and absence remain
+distinct. The current corpus has at most20 fields per snapshot, within the25-result
+page size; multi-page interactions are not qualified by this corpus.
+
+`workbench-recorded-state-search-ui-rev1/receipt.json` verifies the original frozen-
+seed baseline at3/4: complete path listing, root631 selection, path substring,
+no-match with retained selection, long-query error and keyboard clearing. Filtering
+preserves all four native hashes. Prefix4 displays its exact original selected
+value and save identity rather than the earlier revision. Screenshot inspected.
+TypeScript, build588 modules, reference boundary and restored research checks PASS.
+
+The new build is isolated at127.0.0.1:4203, preview session56324/browser2/tab25.
+GeneralWorkbench and the new search files are outside all live Disposition and
+batch audit source sets; those sources and served builds remain unchanged.
+This improves complete-state usability, not full six-mode language, all-browser
+accessibility or integrated Campaign4 entry acceptance.
+
 Build524 modules PASS with existing chunk warning. This is navigation/instrument
 qualification, not full six-mode semantic completeness, full MEM coverage, all-recipe
 browser acceptance or full character-language/factor qualification.

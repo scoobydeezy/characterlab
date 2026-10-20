@@ -54,6 +54,10 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 **Current routing (2026-10-20):** Observability Workbench IN PROGRESS, owner-authorized.
 Start docs/planning/OBSERVABILITY_WORKBENCH_BATCH_V8_PROGRESS.md.
+General stored-state search PASS43 models/568 snapshots/10110 field observations.
+Root/path/value filtering preserves all fields; bounded browser baseline3/4 exact
+selection, revision update, no-match/long-query and unchanged native hashes PASS.
+See OBSERVABILITY_WORKBENCH_GENERAL_PROGRESS.md; browser tab25 (4203) retained.
 Disposition full-horizon browser tab24 (4202) RUNNING toward18; keep it alive.
 Run/Pause prefix1 five native identities PASS. Terminal and six-mode checks remain due.
 Retained event-state build keyboard filter/selection/disclosure PASS with unchanged
