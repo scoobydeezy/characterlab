@@ -1,0 +1,56 @@
+[
+  {
+    "prefix": 0,
+    "identity": {
+      "prefix": 0,
+      "clock": "0",
+      "modelHash": "cae46fcb4da4c9711ee24153854ca2eb976ec9dcad9a2394acb5861489007844",
+      "runHash": "bc0a94a53c992245b2e3887c51d067f690a18f430a3bd66f8221f6dd67d74b69",
+      "stateHash": "d9bc884c261530e47cee2064e2e1d5549434579c24fd9f6ceabe2bc7edfc4e42",
+      "outputsHash": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "traceHash": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "saveHash": "886c2e01c75dc3865bd49186ed3c870916ad3227e2856a8d45237d8ad7557989",
+      "events": 0
+    },
+    "report": {
+      "version": "body-admitted-pressure-language/0.1",
+      "rows": [],
+      "scope": "Descriptions of recorded admitted samples and their public pressure outputs only. They do not reveal hidden reserve, predict later pressure, infer a motive or choice, or describe a subjective feeling. Historical samples remain historical after delivery or later observations; unavailable evidence is distinct from known zero."
+    }
+  },
+  {
+    "prefix": 1,
+    "identity": {
+      "prefix": 1,
+      "clock": "1",
+      "modelHash": "cae46fcb4da4c9711ee24153854ca2eb976ec9dcad9a2394acb5861489007844",
+      "runHash": "bc0a94a53c992245b2e3887c51d067f690a18f430a3bd66f8221f6dd67d74b69",
+      "stateHash": "d9bc884c261530e47cee2064e2e1d5549434579c24fd9f6ceabe2bc7edfc4e42",
+      "outputsHash": "956e2f6206916a074d0256106ed6120a09a7b5896b799797ec82b98fcb892d5e",
+      "traceHash": "9afb90067ae8a577d49f1e20a201fb063f02e9e998f31e27a840829b721bb1c6",
+      "saveHash": "6b5cf4311f59faca4ed29bfaf05e45d33519d1bdc37eb79be9f8c801dfa1bf93",
+      "events": 6
+    },
+    "report": {
+      "version": "body-admitted-pressure-language/0.1",
+      "rows": [
+        {
+          "occurrence": "0bf6080202",
+          "at": "1",
+          "observer": "0be80705196f627365727665722f656d626f646965642d7375626a656374",
+          "character": "0bea070b8d080b8e08051a6368617261637465722f656d626f646965642d7375626a656374",
+          "available": true,
+          "pressure": "1/6",
+          "interval": {
+            "lower": "40/1",
+            "upper": "50/1"
+          },
+          "text": "At time 1, admitted body-level evidence ranged from 40/1 to 50/1. Mediated pressure was 1/6.",
+          "evidenceHex": "0ad003010501010bf608020202010bea070b8d080b8e08051a6368617261637465722f656d626f646965642d7375626a65637403010acd03010601010bdb08020002010be80705196f627365727665722f656d626f646965642d7375626a65637403010bed07051b6368616e6e656c2f656d626f646965642d6675656c2d6c6576656c0401030205010ace0301020101065001020106640106010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e312d63616e64696461746504010ae10301020101020102010602060501051f656d626f646965642d70726573737572652f302e312d63616e646964617465",
+          "exact": "{\n  \"record\": \"EmbodiedPressureOutput#464/1\",\n  \"PressureOccurrenceId [1]\": {\n    \"namespace\": \"1142\",\n    \"identity\": \"2\"\n  },\n  \"CharacterId [2]\": {\n    \"namespace\": \"1002\",\n    \"identity\": {\n      \"namespace\": \"1037\",\n      \"identity\": {\n        \"namespace\": \"1038\",\n        \"identity\": \"character/embodied-subject\"\n      }\n    }\n  },\n  \"Sample [3]\": {\n    \"record\": \"EmbodiedLevelObservation#461/1\",\n    \"ObservationId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"0\"\n    },\n    \"ObserverId [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/embodied-subject\"\n    },\n    \"ObservationChannelId [3]\": {\n      \"namespace\": \"1005\",\n      \"identity\": \"channel/embodied-fuel-level\"\n    },\n    \"OccurredAt [4]\": \"1\",\n    \"FiniteLevelInterval [5]\": {\n      \"record\": \"FiniteLevelInterval#462/1\",\n      \"Lower [1]\": \"40/1\",\n      \"Upper [2]\": \"50/1\"\n    },\n    \"TransformationVersion [6]\": \"embodied-level-observation/0.1-candidate\"\n  },\n  \"PressureResult [4]\": {\n    \"record\": \"PressureResult#481/1\",\n    \"VariantTag [1]\": \"1\",\n    \"Value [2]\": \"1/6\"\n  },\n  \"TransformationVersion [5]\": \"embodied-pressure/0.1-candidate\"\n}"
+        }
+      ],
+      "scope": "Descriptions of recorded admitted samples and their public pressure outputs only. They do not reveal hidden reserve, predict later pressure, infer a motive or choice, or describe a subjective feeling. Historical samples remain historical after delivery or later observations; unavailable evidence is distinct from known zero."
+    }
+  }
+]

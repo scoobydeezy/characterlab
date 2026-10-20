@@ -1,0 +1,748 @@
+{
+  "sources": [
+    {
+      "path": "docs/formal/BODY_OWNERSHIP_COMPARISON_CONTRACT.md",
+      "sha256": "09c720cd22d0f86e1d5359c6c50a57c828ac4d8cffe3875289569841f9e5ad20"
+    },
+    {
+      "path": "docs/formal/CAMPAIGN2_ALLOCATION_TABLE.json",
+      "sha256": "c7503135f1aa0daa8a260e0c159211bc89c8483c9a3ab72fd1019983708e37d8"
+    },
+    {
+      "path": "docs/formal/EMBODIED_PRESSURE_PROJECTION_CORRECTION.md",
+      "sha256": "aee71e70b89fb2a138b28a15d0d469b0ccf434f86133b9979016efa17547dfce"
+    },
+    {
+      "path": "docs/formal/EMBODIED_RECEIVING_ALLOCATION_TABLE.json",
+      "sha256": "c77ea031a5753e43e826dd4f5c79ce571d7d01fec49d6827a1772a7cc511b9bb"
+    },
+    {
+      "path": "docs/formal/EMBODIED_RESERVE_ALLOCATION_TABLE.json",
+      "sha256": "1194c2a442640397e117e47907b4287984e913dad62ee261bfd71c0103af15c8"
+    },
+    {
+      "path": "docs/formal/MEASUREMENT_EVIDENCE_CARRIAGE_ALLOCATION_TABLE.json",
+      "sha256": "9b2582aa44e6b4e7f576fd738155e4dc69d6458fedaa7746937099470faa139e"
+    },
+    {
+      "path": "docs/formal/MEASUREMENT_MEMORY_ALLOCATION_TABLE.json",
+      "sha256": "4a476c4f6a279f60af4597c3008e0e830d19b7bcbb4373838e028307ed9cc278"
+    },
+    {
+      "path": "docs/formal/MEASUREMENT_PREDICTION_ALLOCATION_TABLE.json",
+      "sha256": "648d573adeb6fc621e001e8ca5397ea0189defb172e1d760729dbe00576f2e21"
+    },
+    {
+      "path": "docs/formal/MEASUREMENT_PREDICTION_CORRECTION_ALLOCATION_TABLE.json",
+      "sha256": "c7f82429afcce5fe2ceb3e1730a2db5df44493ea3438efb6fbfbb50a7ade6443"
+    },
+    {
+      "path": "docs/formal/MEMORY_WRAPPER_ALLOCATION_TABLE.json",
+      "sha256": "cd6bb62b6b2b1bbb5759c1a397d88c14c553ba207dc1fa224e5e6d8c8c970cd7"
+    },
+    {
+      "path": "docs/formal/REGULATORY_PROBE_ALLOCATION_TABLE.json",
+      "sha256": "746d7a25adf3729f08d66419cca44916c6a08a8e28b5ad619f839a0f63da9af5"
+    },
+    {
+      "path": "docs/formal/TASK_COGNITIVE_ALLOCATION_TABLE.json",
+      "sha256": "5f326e56d8da5591ca17795d5d5129aab091c43a52876b17fa2312374f8c516e"
+    },
+    {
+      "path": "docs/formal/TASK_COMMITMENT_CORRECTION_ALLOCATION_TABLE.json",
+      "sha256": "8d1d42da9d9fc2bb45d79a4da9268cb4934a05db58a7564d4484cd8fcf81cc07"
+    },
+    {
+      "path": "docs/formal/VAL_ALLOCATION_TABLE.json",
+      "sha256": "8bef1ed8a2f05de224330ffa5aff0557064f7acef3edfbaa2e6738153c3bfd39"
+    },
+    {
+      "path": "docs/planning/campaign2-task-cognitive-model/FREEZE.json",
+      "sha256": "bea0ed30f08d4a1f0f0c572abd4285bdd5e29d0e0a1789140d1630c68066c799"
+    },
+    {
+      "path": "docs/planning/campaign2-task-cognitive-model/registry.cenc.hex",
+      "sha256": "f9dc919d8a28afd347a4e9129f321428825966a42de1f5c3f3cea26203b2cbe9"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/FREEZE.json",
+      "sha256": "985dbf1d020c4c529b9079a8f52363a98f7c753c64ac0b40cb4ac6fbb8aec8ad"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/baseline/content.cenc.hex",
+      "sha256": "492bc5f9f495222c1d4d7f3f8ed1e06ff865f196538799721a4cb209ed799bf0"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/baseline/model-identity.cenc.hex",
+      "sha256": "38324f4d793c89744da5886322247e3bc58cbaeb21c3606eee360b9872bbaed2"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/baseline/parameters.cenc.hex",
+      "sha256": "cd501947d1a22a162c98916a1bd07f83a18b90577a656b77763bf179aba485e7"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/baseline/registry.cenc.hex",
+      "sha256": "4df190180af2c83ca12408aeff8804b24f08c37c0e01b7fbf87cbbfb3137c8cd"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/coarser/content.cenc.hex",
+      "sha256": "492bc5f9f495222c1d4d7f3f8ed1e06ff865f196538799721a4cb209ed799bf0"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/coarser/model-identity.cenc.hex",
+      "sha256": "41536d74b9e863cc1082c81c57d7c03408f0ccbc495d80f145e7920d4e20b555"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/coarser/parameters.cenc.hex",
+      "sha256": "cd501947d1a22a162c98916a1bd07f83a18b90577a656b77763bf179aba485e7"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/coarser/registry.cenc.hex",
+      "sha256": "dca57963891ef703ad1ece4ed682b704a96efad03cb63beccee7d13e84030461"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/denied/content.cenc.hex",
+      "sha256": "492bc5f9f495222c1d4d7f3f8ed1e06ff865f196538799721a4cb209ed799bf0"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/denied/model-identity.cenc.hex",
+      "sha256": "0097a69fe1470d4c0d88f70e17987666e204b71c9da0d58de6fc5955f8b8c4e1"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/denied/parameters.cenc.hex",
+      "sha256": "cd501947d1a22a162c98916a1bd07f83a18b90577a656b77763bf179aba485e7"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/denied/registry.cenc.hex",
+      "sha256": "6b1432c830ebc8a781636e87c549b44c3b0310461649c27fb007b7ad8e18c59c"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/overflow/content.cenc.hex",
+      "sha256": "492bc5f9f495222c1d4d7f3f8ed1e06ff865f196538799721a4cb209ed799bf0"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/overflow/model-identity.cenc.hex",
+      "sha256": "07f9177c8ba27ad14f2a0dd8ef43db47a277d72e890360e68a97bc4432075954"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/overflow/parameters.cenc.hex",
+      "sha256": "cd501947d1a22a162c98916a1bd07f83a18b90577a656b77763bf179aba485e7"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/overflow/registry.cenc.hex",
+      "sha256": "a9900ad3bb01eccf5cd031021d3f9172ea2e0ca473423a3fa773584b6748b570"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/runs/baseline/initial-state.cenc.hex",
+      "sha256": "d89b3c7d018b6041092d9b87aa5484355bf3623a149e92ff02bd6ba94892228d"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/runs/baseline/ordered-inputs.cenc.hex",
+      "sha256": "daad5fd683cde1c4aacecc1603b9513fd04f5078ff25d4b3db7f71eb5f485158"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/runs/baseline/run-identity.cenc.hex",
+      "sha256": "56f7d1c8bbffd3130e3ea01ccdb7b9e091c5651032547cc50be0872fac2d7c8e"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/runs/coarser/initial-state.cenc.hex",
+      "sha256": "d89b3c7d018b6041092d9b87aa5484355bf3623a149e92ff02bd6ba94892228d"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/runs/coarser/ordered-inputs.cenc.hex",
+      "sha256": "daad5fd683cde1c4aacecc1603b9513fd04f5078ff25d4b3db7f71eb5f485158"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/runs/coarser/run-identity.cenc.hex",
+      "sha256": "b37602caee9557dc60d53b0b7cbf38290e239a8c065b3094ffbd4ed8a5566902"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/runs/denied/initial-state.cenc.hex",
+      "sha256": "d89b3c7d018b6041092d9b87aa5484355bf3623a149e92ff02bd6ba94892228d"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/runs/denied/ordered-inputs.cenc.hex",
+      "sha256": "daad5fd683cde1c4aacecc1603b9513fd04f5078ff25d4b3db7f71eb5f485158"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/runs/denied/run-identity.cenc.hex",
+      "sha256": "eac55a9f7a837edbc4edb1cb41abd873afcfbebb8cf72c164db6362a8f4b12b1"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/runs/hidden89/initial-state.cenc.hex",
+      "sha256": "09a2d92cd02462cc59ac0e0d25b08854e54022527e901e2878ef3d6272e23941"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/runs/hidden89/ordered-inputs.cenc.hex",
+      "sha256": "daad5fd683cde1c4aacecc1603b9513fd04f5078ff25d4b3db7f71eb5f485158"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/runs/hidden89/run-identity.cenc.hex",
+      "sha256": "c0cfd238ecaabdbb38004c99a0b198f2a747cfaffbe82a67ce7640a7d111b34c"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/runs/overflow/initial-state.cenc.hex",
+      "sha256": "d89b3c7d018b6041092d9b87aa5484355bf3623a149e92ff02bd6ba94892228d"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/runs/overflow/ordered-inputs.cenc.hex",
+      "sha256": "daad5fd683cde1c4aacecc1603b9513fd04f5078ff25d4b3db7f71eb5f485158"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/runs/overflow/run-identity.cenc.hex",
+      "sha256": "e5135cedda717cd2f0a5eaa5dc697becc8976995f6340ad446ca8a89affcdb0e"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/runs/slower/initial-state.cenc.hex",
+      "sha256": "d89b3c7d018b6041092d9b87aa5484355bf3623a149e92ff02bd6ba94892228d"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/runs/slower/ordered-inputs.cenc.hex",
+      "sha256": "daad5fd683cde1c4aacecc1603b9513fd04f5078ff25d4b3db7f71eb5f485158"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/runs/slower/run-identity.cenc.hex",
+      "sha256": "964982bdef527f771bfc3ee7e22e0216d3c61b6d34b4229b1cbc10a66c7d3952"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/runs/unavailable/initial-state.cenc.hex",
+      "sha256": "d89b3c7d018b6041092d9b87aa5484355bf3623a149e92ff02bd6ba94892228d"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/runs/unavailable/ordered-inputs.cenc.hex",
+      "sha256": "daad5fd683cde1c4aacecc1603b9513fd04f5078ff25d4b3db7f71eb5f485158"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/runs/unavailable/run-identity.cenc.hex",
+      "sha256": "8d15745d027b89ef212be6910e59405d3cdfabcae4e0ee9452d7f843e102ebf9"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/slower/content.cenc.hex",
+      "sha256": "492bc5f9f495222c1d4d7f3f8ed1e06ff865f196538799721a4cb209ed799bf0"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/slower/model-identity.cenc.hex",
+      "sha256": "d57ca6ccd89587d6c7c4f4e0a49063973da80b74b525cbb457a09bb835377d2f"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/slower/parameters.cenc.hex",
+      "sha256": "cd501947d1a22a162c98916a1bd07f83a18b90577a656b77763bf179aba485e7"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/slower/registry.cenc.hex",
+      "sha256": "caf0510a451ecc77829fc1a05b7ecd4a13017b4cb0f9e0e50f001703468631d6"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/unavailable/content.cenc.hex",
+      "sha256": "492bc5f9f495222c1d4d7f3f8ed1e06ff865f196538799721a4cb209ed799bf0"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/unavailable/model-identity.cenc.hex",
+      "sha256": "d9f95f9202b33f351900f83d12989363c8cdffb400b2c31c0144291f16686da6"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/unavailable/parameters.cenc.hex",
+      "sha256": "cd501947d1a22a162c98916a1bd07f83a18b90577a656b77763bf179aba485e7"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/unavailable/registry.cenc.hex",
+      "sha256": "29b7153eaa76fed62bd2ad3239d136f59f2d82709452f470e20d3acbfe3012b2"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/work7/content.cenc.hex",
+      "sha256": "492bc5f9f495222c1d4d7f3f8ed1e06ff865f196538799721a4cb209ed799bf0"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/work7/model-identity.cenc.hex",
+      "sha256": "12fd9a66d6d62d169f36201b70ee81a8b3e4d9df9ed8bea5445a9c00fc931370"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/work7/parameters.cenc.hex",
+      "sha256": "4d806d63a29996901d6ae4a7a281769bbc824dc10745b540e015bc4402cfa912"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/work7/registry.cenc.hex",
+      "sha256": "4df190180af2c83ca12408aeff8804b24f08c37c0e01b7fbf87cbbfb3137c8cd"
+    },
+    {
+      "path": "docs/planning/workbench-body-parity-rev1/receipt.json",
+      "sha256": "fde8553f05562e4a30664e1fd608249d97752474c6f93840fc8cd18730287ad5"
+    },
+    {
+      "path": "scripts/check-workbench-body-language.mjs",
+      "sha256": "cd02b3793cfff5a6208381491899e7a97a8fe4a0d9e564fbf8092ac533b7ab8f"
+    },
+    {
+      "path": "src/campaign2/adaptationDomains.ts",
+      "sha256": "e23e1ddb1c62aaea6f48c4b384821c516c0fd0932df16168db24b0c19c68281e"
+    },
+    {
+      "path": "src/campaign2/adaptationEvaluation.ts",
+      "sha256": "88276413f66a22e2f5f2754594aec57146d49ffee8398fbc12da9146f76d85fd"
+    },
+    {
+      "path": "src/campaign2/adaptationRuntime.ts",
+      "sha256": "f3bee081d6465027d67e68f864c00dd5b7902eda699da53df7b9a6a2216ddbac"
+    },
+    {
+      "path": "src/campaign2/adaptationTransitions.ts",
+      "sha256": "2ed1d04c09a7893bfd29762448ec2b8ac3b542ef09209397e40218c3ae821a97"
+    },
+    {
+      "path": "src/campaign2/admittedInput.ts",
+      "sha256": "1bd7816265474a9e63680c211853f5ec5aa65eb5bf4abe8fe2858fa33e968fa5"
+    },
+    {
+      "path": "src/campaign2/bridgeObservation.ts",
+      "sha256": "0c56a8dc3c694052f87be8d61f377b7a63f4bd6a597b02d168bf5d2f90679e1b"
+    },
+    {
+      "path": "src/campaign2/canonicalData.ts",
+      "sha256": "427b0a0b50003a8ead4cde2f2965ff3c57fde99e4ec9a5366627868e40f0903b"
+    },
+    {
+      "path": "src/campaign2/codecs.ts",
+      "sha256": "3193404cde5001dbbcf0dfac990eb3224a2c3d78a58325d932185d4bee7ecb16"
+    },
+    {
+      "path": "src/campaign2/cognitiveArbitration.ts",
+      "sha256": "d8d1fd7fa287d1d61164aa3e8f646f8d9169cf9b67ea0b5ebf625e0485348656"
+    },
+    {
+      "path": "src/campaign2/cognitiveChoice.ts",
+      "sha256": "a045d61d884a738cb3064683315ebb7985e33ab3fcddda6f22ae0cdd35749ba1"
+    },
+    {
+      "path": "src/campaign2/cognitiveCodecs.ts",
+      "sha256": "7ba605d092d65aef4d1f143de5e89540ad2ee3af6f4314304810d2e9ac1a6fb8"
+    },
+    {
+      "path": "src/campaign2/cognitiveDeclarations.ts",
+      "sha256": "1da9ad9497e9f174360045fa07034c725b7ecc8db5b3a7214f63c8dac2cbefd2"
+    },
+    {
+      "path": "src/campaign2/cognitiveExecution.ts",
+      "sha256": "3680f20a58ea145a0da5530c420e6312bb787b1b9a16fba9e0022b11427319ab"
+    },
+    {
+      "path": "src/campaign2/cognitiveMath.ts",
+      "sha256": "3d2ced68676b4fcb2c41046ea08e9fe8fb80fc47a331fa73b8ed0ca77d1fbb77"
+    },
+    {
+      "path": "src/campaign2/cognitiveModel.ts",
+      "sha256": "0ca14f5718543c21d666ac4941b5e50a29ee9fb572f1bf22f6690296c6044273"
+    },
+    {
+      "path": "src/campaign2/cognitiveState.ts",
+      "sha256": "b77ceb83ebb1eb13db84e8be70f3b1dfe6bda8e19edf2d90db1181ccfd0e0bfe"
+    },
+    {
+      "path": "src/campaign2/cognitiveTrace.ts",
+      "sha256": "7732b99d849c04d7407368a99e61971eb5e862e206e3b3389b038a8387a34b38"
+    },
+    {
+      "path": "src/campaign2/cognitiveTransforms.ts",
+      "sha256": "f19a6555e80455139eecdfecf4bf809fff9bce24e4a52760c5a54d6bfcb7203f"
+    },
+    {
+      "path": "src/campaign2/consequenceBridge.ts",
+      "sha256": "6268fc0b1d2af2bf210c1d862b6d2278464a642bf89f7ae8db6b3470ddcf5abe"
+    },
+    {
+      "path": "src/campaign2/contentProfile.ts",
+      "sha256": "bdea739b09b3feb7a6e1fbfabac0d2e2af95bd90c478f9d1de0349c496baa7b1"
+    },
+    {
+      "path": "src/campaign2/evidExecution.ts",
+      "sha256": "285aac632f246c604f3e07d835c047423f24e552538353909032e472d2601f49"
+    },
+    {
+      "path": "src/campaign2/factory.ts",
+      "sha256": "28c2aff5250f508bf170133ee1c33ad5dcabc9a2fa6214e2885eb8ff87694948"
+    },
+    {
+      "path": "src/campaign2/firstModelCandidate.ts",
+      "sha256": "beedc840995c8d4ae3332aa55416aa83c39df1227bc10234e759fd0bac7378f3"
+    },
+    {
+      "path": "src/campaign2/firstTraceModel.ts",
+      "sha256": "24f0bd87d2b50ac1f4fa260ece0fe2bca01c16981fbd763977ac61daeb0aac53"
+    },
+    {
+      "path": "src/campaign2/identityRoles.ts",
+      "sha256": "228697d9f5c1fd7c16ee2797d48067ff853c6ecd99809ff5dc1a789f73cfa8a3"
+    },
+    {
+      "path": "src/campaign2/measurementArchive.ts",
+      "sha256": "6b9d04803b505862ea231b9e2e52d80c69e97efa9473395c965dda822dcc4626"
+    },
+    {
+      "path": "src/campaign2/measurementExecution.ts",
+      "sha256": "81efeeaf071d2cc413d3f2d378ef1000a5482d73b42e8a26e694f1b345645b6d"
+    },
+    {
+      "path": "src/campaign2/measurementModel.ts",
+      "sha256": "f3734b196fdabf981a91cfcadcb7c8e514554010d2593207387dadb44bf514a5"
+    },
+    {
+      "path": "src/campaign2/measurementModelSource.ts",
+      "sha256": "a60429f121c55534c7572dffc88433b5d954f74d0bc242708ad55827e44e8f44"
+    },
+    {
+      "path": "src/campaign2/memoryCodecs.ts",
+      "sha256": "ddf510d7e6625d7a8cc3803349b7ea23dae3efe8802b1c3fe0f671c91e7aee27"
+    },
+    {
+      "path": "src/campaign2/memoryExecution.ts",
+      "sha256": "2872e0082d747314c56f9fc5b838d5576e42356abc561d04ce38d6f65d47ea6a"
+    },
+    {
+      "path": "src/campaign2/memoryModel.ts",
+      "sha256": "f257396b0fd17aa1c613400bf158b222856f4e844c447b331e6ce08d0e9fa05c"
+    },
+    {
+      "path": "src/campaign2/memoryModelSource.ts",
+      "sha256": "e166886f43b1bf70248bb9eb496f83c786b34e29d4770cc84bd7fcc4ee324869"
+    },
+    {
+      "path": "src/campaign2/modelPackaging.ts",
+      "sha256": "853e3849f58e7d413897497b34fffac1d60b4f7578a974213b08e864b50e1daf"
+    },
+    {
+      "path": "src/campaign2/occurrenceIdentity.ts",
+      "sha256": "cfe01d8314b5932ea81a92c2f0a3c4334eb7b2898a2aae64d93967b4f8eb6dd4"
+    },
+    {
+      "path": "src/campaign2/orderedInputs.ts",
+      "sha256": "b4b320728d49dad8b4f8fc31d85187c4686671934a9e51ecd2d0e01d11f97c4f"
+    },
+    {
+      "path": "src/campaign2/predictionCodecs.ts",
+      "sha256": "2a2001b8cbba5a0d08acf071f9913d3c0c6d81a7d2b29807c5736b03a0072945"
+    },
+    {
+      "path": "src/campaign2/predictionExecution.ts",
+      "sha256": "f29062b420ac14c8494aec2d70f8693a0cc153c25b9416b1e86871ad44e13c2e"
+    },
+    {
+      "path": "src/campaign2/predictionModel.ts",
+      "sha256": "623663b22e448a57ac224d0f940d5a5e3c8a6e897a7158b61e5ce75401b69792"
+    },
+    {
+      "path": "src/campaign2/predictionModelReview.ts",
+      "sha256": "f3e491084c91c9cf2cb985f7d394936862492ed325b16b4a49e872211b6eaedf"
+    },
+    {
+      "path": "src/campaign2/probeCodecs.ts",
+      "sha256": "94e6b02339a22e5b5099893a2b3ff1c4a96579fe9c0e7e8fec117f14d7ef1722"
+    },
+    {
+      "path": "src/campaign2/probeExecution.ts",
+      "sha256": "f61e751a5f7fd602b52aa62e98d48a1e1a9cbf00d5d5a07b2ddf025978bda13e"
+    },
+    {
+      "path": "src/campaign2/probeModel.ts",
+      "sha256": "b6d24ff1e45d89d35a76c739e6956b8b0c6ca117a53eb81a02eea33c2df88f5e"
+    },
+    {
+      "path": "src/campaign2/probeModelReview.ts",
+      "sha256": "3e1228392076fe642d7ccc22df1b2578e9102b331f6af1cc4426ae93b309fe79"
+    },
+    {
+      "path": "src/campaign2/probeReadout.ts",
+      "sha256": "5c07b062c20dbef7314c2f580ffb7370b27e55fd426a0b437561a879d915f3aa"
+    },
+    {
+      "path": "src/campaign2/probeSuccessorReview.ts",
+      "sha256": "9b8d7bbaae28b33359943e8e627f5269959a3b8be4832d32a45e1b8f2896caa3"
+    },
+    {
+      "path": "src/campaign2/protocolBridge.ts",
+      "sha256": "075d5e2b702a4878fc8ecac1cac5478182bb0ac4b2634bd72eaa2907af2073d7"
+    },
+    {
+      "path": "src/campaign2/protocolObservation.ts",
+      "sha256": "44f505c4261a1c1dbb012d707bce607c212e4bcebf2c0b2ab1e6331d0e287245"
+    },
+    {
+      "path": "src/campaign2/regulatoryReference.ts",
+      "sha256": "a697eaa1f0cf3e539c585efcfd4a42737c75e393ee3950f52915f468f1b2c485"
+    },
+    {
+      "path": "src/campaign2/requiredProjection.ts",
+      "sha256": "4eb6ed7de51df48837d406ad0a08065632c3678342444e85aa9c8b21ae74b89c"
+    },
+    {
+      "path": "src/campaign2/stateModel.ts",
+      "sha256": "1ebeee65357a37a1655649c8454f413db944e4a06f8c95820d7d375c84d956d7"
+    },
+    {
+      "path": "src/campaign2/taskBootstrap.ts",
+      "sha256": "2c3ffd7172b9f8e3233aa3ddb3479e68ecc774da86280eecab68167c4a13977a"
+    },
+    {
+      "path": "src/campaign2/taskCodecs.ts",
+      "sha256": "0d0d3c6db9bd662792b9630380ffb5bb289b76a7d088a1a1eeea0ed8987866e2"
+    },
+    {
+      "path": "src/campaign2/taskDeclarations.ts",
+      "sha256": "ffe7a5af91ff82dde22314d38b77ab187ffea32bd4920c2e4c579ad9eb1d9672"
+    },
+    {
+      "path": "src/campaign2/taskExecution.ts",
+      "sha256": "0798a98be6897125daf04b81e75aa98788d81a16dcfa4f903a467cb3aa935088"
+    },
+    {
+      "path": "src/campaign2/taskModel.ts",
+      "sha256": "fd5e874b0e14b50c812cc19e19bad3b8b3f1ca4779b95630d5ea4e1b2ea19189"
+    },
+    {
+      "path": "src/campaign2/taskModelReview.ts",
+      "sha256": "7c451327dc192e79c762fc550b7684891f7ba92cb1ed093c262a1a0c92905bf4"
+    },
+    {
+      "path": "src/campaign2/traceBinding.ts",
+      "sha256": "94eb88e23d08542afdace07dd506bdc7b1fab8892e5be72af30721ee478a100a"
+    },
+    {
+      "path": "src/campaign2/transitionAdmissionV04.ts",
+      "sha256": "c2695fb3e914b736e863cfc52d31a63d616b01b761aa62ae6c107d69092e11a9"
+    },
+    {
+      "path": "src/campaign2/transitionIngressV04.ts",
+      "sha256": "22fcc482c64c5164c881e0f9e9a0547f211396d1ae6a9f17e828d3008f858a6e"
+    },
+    {
+      "path": "src/campaign2/valDeclarations.ts",
+      "sha256": "b147b5fe2cc389d07bfbaa1885a8f4e2624525ad33e0638983304998113d45fc"
+    },
+    {
+      "path": "src/campaign3/bodyOwnershipComparison.ts",
+      "sha256": "7a5956f2151d32e6fa32956d002e9afeda66448699902b0d5790d2968a59f5fa"
+    },
+    {
+      "path": "src/campaign3/embodiedAdmission.ts",
+      "sha256": "915cec276a03f6d92ae22ad84322374b0e081891d842e9ef39ccdf7b8757ac61"
+    },
+    {
+      "path": "src/campaign3/embodiedBodyTarget.ts",
+      "sha256": "b39e11fe1a58be59198c30c4f076f6278a18620e01781773a542748001f8db40"
+    },
+    {
+      "path": "src/campaign3/embodiedCodecs.ts",
+      "sha256": "29a519c6569150546bd841a020a0e12443aa8099aa2b3ad5cd92e23b3f5762a0"
+    },
+    {
+      "path": "src/campaign3/embodiedFactory.ts",
+      "sha256": "94ebccdb6385bce2530a27938573ddc96be419c5050ba85eef9bf8e0a4c2cd55"
+    },
+    {
+      "path": "src/campaign3/embodiedMath.ts",
+      "sha256": "b7c2a25f3e9a157669962ed4c50b633eb1027edc67f00f73cd49b543156bf83d"
+    },
+    {
+      "path": "src/campaign3/embodiedModel.ts",
+      "sha256": "07ed740a3a9c9b4de439af7f062b5270721b8f563c5d99cf9dd973b82da6928d"
+    },
+    {
+      "path": "src/campaign3/embodiedReplenishment.ts",
+      "sha256": "f76a9432a5866d831c9e1764894389c8b5caed9f900811dce08790a20c84d746"
+    },
+    {
+      "path": "src/campaign3/embodiedRuntime.ts",
+      "sha256": "617be10d59927fb8f49fbdd4fc18fc23caa043c21e63c228224922ede1121313"
+    },
+    {
+      "path": "src/campaign3/embodiedTrace.ts",
+      "sha256": "5f167576260c6fe0bb84a60a75b6bd83cf1f753c327fb6309a396becd1e28476"
+    },
+    {
+      "path": "src/campaign3/publicWrapperQuiescence.ts",
+      "sha256": "83456f856a67d5b1ca7cddf894373e21d65f86c31f43f2952133575d50ea986e"
+    },
+    {
+      "path": "src/campaign3/receivingAdmission.ts",
+      "sha256": "a1f8706ddb0343cac5698e5783d16bed733e65bc58cb52549d9085c07f9f1a0e"
+    },
+    {
+      "path": "src/campaign3/receivingCodecs.ts",
+      "sha256": "deebaa5d28301572f72e08f6375500aedb615bce9a5672fd7cd9d43908f70e9c"
+    },
+    {
+      "path": "src/campaign3/receivingInputs.ts",
+      "sha256": "0b98a84c9cab0f1514b0b6317051b6be1846578df10170fc35d05c30069db970"
+    },
+    {
+      "path": "src/campaign3/scheduledWrapperQuiescence.ts",
+      "sha256": "4c11895fbe6f86ea8f0cdc190473eab1289dee3ab62c4c3aced61605000d8ceb"
+    },
+    {
+      "path": "src/observation/observation.ts",
+      "sha256": "ade1a3984b58de457024b707c23b8f1c2e04f3378a42b3b64528e2e21bbab2be"
+    },
+    {
+      "path": "src/semanticBinding/eventBindings.ts",
+      "sha256": "71dacd5b681f0ae8fcfb04b5f3fcff51edaa923e8cbfad7d308a223ae085bbcb"
+    },
+    {
+      "path": "src/semanticBinding/evidenceProvenance.ts",
+      "sha256": "dce698ec019e2ec24ca04d371c3821206285e28a4f1c4ae5156bdca84a8170b2"
+    },
+    {
+      "path": "src/semanticBinding/perceptualClassification.ts",
+      "sha256": "c394c1975ec4c3ad32aaa34830fa4b6121da052339ab03fb40344a9b1a5b6996"
+    },
+    {
+      "path": "src/semanticBinding/perceptualContinuantFiles.ts",
+      "sha256": "5ab014ec50f03d8d265fd8d6f37e68041e7d943c3521bd2d7708f76e8469562d"
+    },
+    {
+      "path": "src/semanticBinding/perceptualEventClassification.ts",
+      "sha256": "e9a53826ba375e2b6f877111f56771df14b3c4f08bc8192bcc7874842642824f"
+    },
+    {
+      "path": "src/semanticBinding/perceptualEventFiles.ts",
+      "sha256": "df179fdcca89872ba75acd46f0fefa31fcddeb07dc2478d3efd2304686ead740"
+    },
+    {
+      "path": "src/semanticBinding/phaseOrdering.ts",
+      "sha256": "dad03c3c616db20265dd2c5e1253db2fdf020b0996f266c68d726aaf9d39e0e6"
+    },
+    {
+      "path": "src/semanticBinding/recognition.ts",
+      "sha256": "4795c92c2db14f225f9f6c16cefb139263435d86ed3e3ab233a2e98fb7a409c6"
+    },
+    {
+      "path": "src/semanticBinding/semanticCodecs.ts",
+      "sha256": "fdb12714fcb19a98bb0c070cde6b688fe12d55fa35877ee054436ced55ca421f"
+    },
+    {
+      "path": "src/semanticBinding/semanticEvidenceCodecs.ts",
+      "sha256": "7dfad248c12d525e940a6f038c2affd5d8d336a31d365c507a85761bb819c4d6"
+    },
+    {
+      "path": "src/semanticBinding/semanticSchemaRegistry.ts",
+      "sha256": "5d4c5943e0f6eea5ef3c40a0a1c35930c9cf9856ddfd4f91cab4deed310689dd"
+    },
+    {
+      "path": "src/substrate/canonicalEncoding.ts",
+      "sha256": "38be0e954e9bc658f7bc199775b98326f4afdf1a77f7d05771d6728fd5368aa6"
+    },
+    {
+      "path": "src/substrate/contentDefinitionId.ts",
+      "sha256": "a8584be7ea476cae0ac82b9bb309763614fc42449e74a7d921f0ddcf4783af99"
+    },
+    {
+      "path": "src/substrate/contentManifest.ts",
+      "sha256": "078a8e031e985439c970e9ca7d95904753a79eff3c471bba0f746d59cd0467bb"
+    },
+    {
+      "path": "src/substrate/crypto.ts",
+      "sha256": "a1ab34b3f5a76e000ff2770dce03902001a5677fb2b609bd8049df4632515016"
+    },
+    {
+      "path": "src/substrate/exactMath.ts",
+      "sha256": "49791bf7a51ca1bb4012eb343bb4e5e27d8c3ec16e0d19d9db818505ab1b5c51"
+    },
+    {
+      "path": "src/substrate/identity.ts",
+      "sha256": "8e7c27aa4c95b35b8f100ffc7553991b0e893d1f82c0c4d0c9e7fe276430216a"
+    },
+    {
+      "path": "src/substrate/mutationAuthority.ts",
+      "sha256": "b93b30d42ec225a3a4c52a788accc5f3b2eaa0973b34f08c06325bf6a2266175"
+    },
+    {
+      "path": "src/substrate/observationUnitId.ts",
+      "sha256": "dbfd31f24e1b3838153b21cffdf390f60d7044d7d274f2b9cd878a6be8582799"
+    },
+    {
+      "path": "src/substrate/persistence.ts",
+      "sha256": "41c1bebcc31aa28a0c194202e74fbacc75a302221ee8ee77a04a80fc682c727f"
+    },
+    {
+      "path": "src/substrate/random.ts",
+      "sha256": "a01aeae52c0c43f1533e35dcd01c23acb1c44b02059c909960966cdb0de24596"
+    },
+    {
+      "path": "src/substrate/referentOrigin.ts",
+      "sha256": "260794908cc17aa7f81c5d3aa07b89d3cf723282cfa7d2d52c5819828d4f87a7"
+    },
+    {
+      "path": "src/substrate/scheduler.ts",
+      "sha256": "d82c1e44cc25064eeb635e9773793d84d18efabd24860bde2f25ca011f86ad32"
+    },
+    {
+      "path": "src/substrate/state.ts",
+      "sha256": "2df06663411d9f7d79527b8a2575f7ae14ef260eef979c6c444a16ab3fbb9761"
+    },
+    {
+      "path": "src/substrate/time.ts",
+      "sha256": "f6f72f54c559ec61e05b0f76108bc8828629db73933188281cfa2f1281627ecb"
+    },
+    {
+      "path": "src/substrate/trace.ts",
+      "sha256": "5ac1f6752380262ca905355468bbdf022db99805769d955d1a236468e0632825"
+    },
+    {
+      "path": "src/test/bodyOwnershipFixtures.ts",
+      "sha256": "d8ca382fcfb73ca29bfbb0ed14829ad8482d23c33fcc54f400f3ab7ec5ca54f3"
+    },
+    {
+      "path": "src/test/embodiedFixtures.ts",
+      "sha256": "6eec86de3a4557138b40a89a50b7d42f950ab4e4b7e1893d1e837486f91c71ce"
+    },
+    {
+      "path": "src/test/fixtures/campaign2Model.ts",
+      "sha256": "5c7f0759ad67036c3d8c8efafe200895c855110f232e2bc8fcd899386f11fa55"
+    },
+    {
+      "path": "src/workbench/BodyObserverDescription.tsx",
+      "sha256": "9a3fe88b0a6e106b3d42ea536c5ab8e6537a37737db33e1b508ef0ae5aa93a99"
+    },
+    {
+      "path": "src/workbench/BodyWorkbench.tsx",
+      "sha256": "e01d6bd5880401bd3f6399845580d5275bdb3bc9d144fc363d05e312996de05f"
+    },
+    {
+      "path": "src/workbench/PreparedExport.tsx",
+      "sha256": "4cf14eca7746d3260ce84c7d28532a6e795f4728889080f1cb2115531ed93e19"
+    },
+    {
+      "path": "src/workbench/bodyAdapter.ts",
+      "sha256": "7fc83ddd89ca243d140291d3b4daaa86515e9b2d8cd733e7a692e6153654bb97"
+    },
+    {
+      "path": "src/workbench/bodyCatalog.json",
+      "sha256": "7a2fa104719d2173e81641101db84c7e3d1e47540691435656f1e61d3be504ec"
+    },
+    {
+      "path": "src/workbench/bodyExplanations.ts",
+      "sha256": "65e8cf20ddd6e5e854f046caad34a97e9b296c2367ad1773a9386cebd527d882"
+    },
+    {
+      "path": "src/workbench/bodyOwnership.ts",
+      "sha256": "0b57860f693b0c805c82406488b5bfd12aa6760f98adf1868da66374b504db5b"
+    },
+    {
+      "path": "src/workbench/bodyWorker.ts",
+      "sha256": "6f97efa5c98065a120d2a890693e3df69dc938eb4ada8beee865ea590f137de5"
+    },
+    {
+      "path": "src/workbench/bodyWorkerClient.ts",
+      "sha256": "15f8226e6fbd2c639c8536cefaa043f7f8a179729439c1374d1a8be07bcbb34b"
+    },
+    {
+      "path": "src/workbench/canonical.ts",
+      "sha256": "f80f4a8353ea7604432d5ffcf0d4628f8b7bf13b82a06b4807445e9a9ba97bde"
+    },
+    {
+      "path": "src/workbench/contracts.ts",
+      "sha256": "c0e9239cbbba5341259be2f81199cefb43f7678426d61b653249c232c7b01f73"
+    },
+    {
+      "path": "src/workbench/nativeTimeline.ts",
+      "sha256": "ceed75f534e8158a2172ac962cab89aa9ffa5fcbaaf71e0d62347fd01a9c6775"
+    }
+  ]
+}

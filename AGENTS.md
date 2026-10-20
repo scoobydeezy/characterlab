@@ -54,6 +54,9 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 **Current routing (2026-10-20):** Observability Workbench IN PROGRESS, owner-authorized.
 Start docs/planning/OBSERVABILITY_WORKBENCH_BATCH_V8_PROGRESS.md.
+BODY admitted-pressure language PASS16/79,190 cumulative descriptions; known zero,
+unavailable and historical samples stay distinct. Bounded browser PASS; start
+docs/planning/OBSERVABILITY_WORKBENCH_BODY_LANGUAGE_PROGRESS.md.
 LONG canonical state correspondence PASS32/513: six roots/five boxes,2397 mapped
 path observations;34 destructive shared-slot observations kept outside box totals.
 Bounded browser reports and event navigation PASS; start

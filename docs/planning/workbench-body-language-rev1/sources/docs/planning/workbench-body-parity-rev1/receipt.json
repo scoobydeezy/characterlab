@@ -1,0 +1,164 @@
+{
+  "status": "PASS BODY SOURCE ADAPTER PARITY AND CONTINUATION",
+  "sources": [
+    {
+      "path": "src/workbench/bodyAdapter.ts",
+      "sha256": "3f93283526664209e40534d2ee5edf33a63d4971cf66cefd1a413ca7211ac983"
+    },
+    {
+      "path": "src/workbench/bodyCatalog.json",
+      "sha256": "7a2fa104719d2173e81641101db84c7e3d1e47540691435656f1e61d3be504ec"
+    },
+    {
+      "path": "src/workbench/canonical.ts",
+      "sha256": "f80f4a8353ea7604432d5ffcf0d4628f8b7bf13b82a06b4807445e9a9ba97bde"
+    },
+    {
+      "path": "src/workbench/nativeTimeline.ts",
+      "sha256": "ceed75f534e8158a2172ac962cab89aa9ffa5fcbaaf71e0d62347fd01a9c6775"
+    },
+    {
+      "path": "src/campaign3/embodiedFactory.ts",
+      "sha256": "94ebccdb6385bce2530a27938573ddc96be419c5050ba85eef9bf8e0a4c2cd55"
+    },
+    {
+      "path": "src/campaign3/embodiedRuntime.ts",
+      "sha256": "617be10d59927fb8f49fbdd4fc18fc23caa043c21e63c228224922ede1121313"
+    },
+    {
+      "path": "src/campaign3/embodiedCodecs.ts",
+      "sha256": "29a519c6569150546bd841a020a0e12443aa8099aa2b3ad5cd92e23b3f5762a0"
+    },
+    {
+      "path": "src/test/workbenchBody.test.ts",
+      "sha256": "1c7efe7f0ba6e9a01a41d09f5d7d8d463e55befafcb3ebdd67ffaa2f354e70e5"
+    },
+    {
+      "path": "scripts/build-workbench-body-catalog.mjs",
+      "sha256": "52ebe133f08b9c7bc933044d94b4c920f76f9526a74bc8a3118cb37e3077df39"
+    },
+    {
+      "path": "scripts/check-workbench-body.mjs",
+      "sha256": "e175b9f192c78cf5594486bb19a92f5370ad712b38a875af03c1bb1b1bdd042e"
+    },
+    {
+      "path": "docs/planning/BODY_OWNERSHIP_RESULT_REV1.json",
+      "sha256": "0cad832706f55cb81e3b201818756d2414bd60ec06fde6d4de4e5438d143b095"
+    },
+    {
+      "path": "docs/planning/BODY_OWNERSHIP_PLAN_REV1.json",
+      "sha256": "b5f41e96041f93a95c830de26485269de4ca809f09fca9268745084edf4502ca"
+    },
+    {
+      "path": "docs/planning/campaign3-history-body-ownership-rev1/current-source-finding.json",
+      "sha256": "56f9cfa24332dc6f43a31c2d0370dde7f00c3faa48cbdad8b9d848ca7b776070"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/src/campaign3/embodiedRuntime.ts",
+      "sha256": "d8103b0b9d9a6e16e00ba1d1c05ca4ed803deb8cbb2075fe8de974d713307fbe"
+    }
+  ],
+  "results": [
+    {
+      "path": "program-00.json",
+      "sha256": "96d4c03a526448d9c36e92065146c1e84fff23c48f96b06c560517a5b150eced",
+      "program": "baseline",
+      "prefixes": 7
+    },
+    {
+      "path": "program-01.json",
+      "sha256": "745ed27ec187bc19abb00fc4c3f246404b1633e157d260d320dd60ca86866c73",
+      "program": "slower",
+      "prefixes": 7
+    },
+    {
+      "path": "program-02.json",
+      "sha256": "e843c81065d030ff7537a6185ecdf7ed567deed3f9c5f0edeec46619aef9435c",
+      "program": "coarser",
+      "prefixes": 7
+    },
+    {
+      "path": "program-03.json",
+      "sha256": "1d94f274781cb4de34d6b03d5046acf19f120cc668295afff177cfa9930c50b1",
+      "program": "hidden89",
+      "prefixes": 7
+    },
+    {
+      "path": "program-04.json",
+      "sha256": "c4743ffab076a90e1f51cdc2255134b1e3a99895d2b0404e40eb809cc6e9bb74",
+      "program": "overflow",
+      "prefixes": 7
+    },
+    {
+      "path": "program-05.json",
+      "sha256": "3ab7cc971d9dd2cb7989ff32d0e7d269252d75b473456dff815d45cfd58e9eed",
+      "program": "denied",
+      "prefixes": 7
+    },
+    {
+      "path": "program-06.json",
+      "sha256": "fc3bc184dc144baf7245ea480b87577b3e8a80b6a559b9eefc95b96defae831a",
+      "program": "unavailable",
+      "prefixes": 7
+    },
+    {
+      "path": "program-07.json",
+      "sha256": "7adad85c9008aeb05958e17bfeea93e62489ae88ba5d5080c13c009da976e264",
+      "program": "kinetic-fast",
+      "prefixes": 5
+    },
+    {
+      "path": "program-08.json",
+      "sha256": "b2c362b40dd2aab51b1ccf29fee550b31664ae2fe6f046c4a620f31f289ef6ad",
+      "program": "kinetic-slow",
+      "prefixes": 5
+    },
+    {
+      "path": "program-09.json",
+      "sha256": "35c1ea8a505dd0dff2f2afe0e1ba274f1fce303cc5df39693e80e6e09873a354",
+      "program": "no-delivery",
+      "prefixes": 5
+    },
+    {
+      "path": "program-10.json",
+      "sha256": "ce61b3cba770676847c46b85335d6937bc56eeb638754b74718b2d9d14e656ac",
+      "program": "alias41",
+      "prefixes": 2
+    },
+    {
+      "path": "program-11.json",
+      "sha256": "35112b25a46c20625e53f92032c767a3a3a2378c7fddd6ffa262c7e4d9a32533",
+      "program": "alias49",
+      "prefixes": 2
+    },
+    {
+      "path": "program-12.json",
+      "sha256": "2b7f0fa33c8d860b92809d8eb19c93fb484793ab970b8d0840b9395778289a95",
+      "program": "fine41",
+      "prefixes": 2
+    },
+    {
+      "path": "program-13.json",
+      "sha256": "9c706e519569cd603f1bc7940165a2bf34240bd61725616360f86654b3e1763c",
+      "program": "depleted-refill",
+      "prefixes": 3
+    },
+    {
+      "path": "program-14.json",
+      "sha256": "20e0d1d3a4312c32094c1c18f4ca8dfeeb0123beb901d3eec21294758f0e9e6b",
+      "program": "partitioned",
+      "prefixes": 4
+    },
+    {
+      "path": "program-15.json",
+      "sha256": "7e24dfc767d3a5024825f51e233234d189e8c22d651f8bbd496513fbe6a00fcc",
+      "program": "direct",
+      "prefixes": 2
+    }
+  ],
+  "counts": {
+    "programs": 16,
+    "prefixes": 79
+  },
+  "scope": "Original16 BODY public EMB source programs under explicitly identified wrapper-repaired runtime. Every adapter save/state/output/trace matches direct current public execution; each checkpoint restores and continues or terminal no-ops. Final state/output/trace bytes also equal historical16-source matrix, without relabeling old source hashes. Five ownership components, browser, observer-safe pressure language and Campaign4 entry remain separate."
+}
