@@ -53,6 +53,12 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 ## Active direction
 
 **Current routing (2026-10-23):** Observability Workbench IN PROGRESS, owner-authorized.
+AFFECT reason-source inspector PASS105 roles/1331 decisions/2851 raw signals/
+2763 exact coverage joins/88 uncovered sources; all retained explicitly. Browser
+obligation0 both branches1/2/history1/exact decision35/native identities PASS.
+See workbench-affect-reason-sources-rev1; two tests/TypeScript/build619/research PASS.
+Initial test syntax failure retained. Tab20/4231; mark all workbenchLiveTabs1..20.
+Source-state attribution/player semantics/full integrated entry remain due.
 AFFECT obligation control now qualified:8 new original pairs/88 native paired
 prefixes, terminal restore/no-op;10 focused tests/TypeScript/research PASS.
 Browser seed0 draft isolation/keyboard endpoints/first choice3 with equal appraisal

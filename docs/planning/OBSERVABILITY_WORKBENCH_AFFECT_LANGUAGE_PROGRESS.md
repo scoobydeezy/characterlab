@@ -426,3 +426,33 @@ This closes bounded UI admission only. Player disclosure, broader accessibility,
 resource bounds and the integrated16-step entry demonstration remain due. The
 native audit25159 completed; its new source hold is released except overlaps with
 live BatchV8 and paged diagnostics (both reverified unchanged).
+
+## 2026-10-23 — decision-time raw source accounting
+
+The linked paired decision inspector now displays raw signals, role, signed strength,
+exact source-to-nucleus coverage, overlap, independent fraction and effective
+magnitude, alongside base/standing/situational compiled contributions, relevance,
+die and modifiers. Exact source keys and evidence bases remain expandable.
+Projection affect-reason-sources/0.1 reads only the detached decision757 snapshot;
+no current-state or world-truth resolver is introduced. Seam remains
+affect-public/0.1-candidate. Empty evidence basis is not corroboration, an uncovered
+source is not absent, and gameplay dice do not establish subjective certainty.
+
+Full retained105-program corpus PASS1331 decisions/2851 signals/2763 coverage
+joins/88 uncovered sources. Exact source keys join each coverage record uniquely;
+raw magnitude,1-minus-overlap and effective multiplication are checked with exact
+rationals. Two tests include input immutability, duplicate/missing source, corrupt
+arithmetic and uncovered-source negatives. Initial test syntax failure is retained
+under workbench-affect-reason-sources-rev1 before the corrected tests.
+
+Browser obligation seed0 both branches1/2 PASS exact projected reports, selected
+instant1 stable after2, original A decision35 link and native state/save identities.
+Screenshot inspected; tab20/4231 retained, preview38432. Independent verifier PASS.
+TypeScript,619-module build, boundaries, evidence restore and research PASS.
+Live BatchV8/277 and paged-diagnostic/166 source hashes remain unchanged.
+
+LOCAL DISPOSITION: this exposes the retained evaluation-to-signal chain and keeps
+all candidates. It does not claim complete source-to-state causal provenance,
+player-readable semantic qualification, calibrated-language policy or the complete
+16-step entry demonstration. No C3 verdict/obligation disposition changes; all18
+conditional obligations remain.
