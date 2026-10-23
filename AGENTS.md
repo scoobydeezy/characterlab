@@ -52,6 +52,17 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 appraisal factor-source update:** AFFECT five factor operands PASS
+18 original models/105 programs/1331 appraisals/6655 rows:3928 known/2727 unavailable/
+225 explicit zeros. Exact belief keys/means, profile severity, safe reserve/catalogue
+and both control laws retained. Eight rejection cases/typecheck/build636/research
+PASS. Browser baseline1/11/history1, empty/unknown catalogue11 and absolute14 PASS
+exact native identities/reports/layout. See workbench-affect-appraisal-factor-sources-rev1.
+Mark tabs1..32; new32/4243. Learning/state-read provenance, latest context/prior
+selection, player language and integrated entry remain due. Only paged166 source
+hold LIVE;23320 last10/15 prefix16. Packed pair29 last10/10 Working.
+
+
 **2026-10-23 coordinate-accounting update:** AFFECT exact candidate/feedback
 arithmetic PASS105/1331:189 known/1142 unavailable/302 coordinates/seven feedback
 records/six nonzero increments. All1331 historical reports stable; seven rejection

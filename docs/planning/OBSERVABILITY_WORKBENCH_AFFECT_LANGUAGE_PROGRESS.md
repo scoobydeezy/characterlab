@@ -665,3 +665,34 @@ conditional obligations survive. Upstream appraisal factor sources, prior-select
 completeness, player language, broader accessibility and integrated entry remain due.
 Live166-source paged diagnostic hold unchanged:23320 last10/15 prefix14/18.
 Packed pair tab29 last10/10 Working; no terminal checkpoint/restore result.
+
+## 2026-10-23 — appraisal belief/context/profile factor operands
+
+Reasoning now shows the exact sources and rules for likelihood, severity,
+vulnerability, efficacy and control. Current-cue/baseline/treated beliefs are joined
+by full registered key; their embedded estimates and support remain inspectable.
+Severity comes from governed profile747 field6; vulnerability is1-observed reserve.
+RelativeReduction and AbsoluteReduction retain distinct arithmetic. Unknown catalogue,
+observed empty catalogue, available mitigation with unavailable efficacy, known zero
+efficacy, and zero-baseline unavailability are not collapsed. No physical truth or
+confidence multiplier is introduced. Context remains a fallible safe observation.
+
+Audit PASS18 compiled original model identities and exact severity/control-law fields;
+105 programs/1331 appraisals/6655 factor rows:3928 known,2727 unavailable,225 explicit
+zeros. Both laws, all retained catalogue cases, exact raw source hashes and immutable
+cards/SSR panels PASS. Eight negative cases reject unknown model, fabricated zero,
+wrong severity, duplicate beliefs, invalid catalogue/reserve/future context and
+missing efficacy. TypeScript/build636 modules/evidence restore/research/boundary PASS.
+
+Browser baseline1/terminal11/historical1, empty-catalogue11, unknown-catalogue11,
+absolute14 PASS six exact reports/all four native identities/stable history. Empty
+catalogue control0, unknown catalogue unavailable and AbsoluteReduction control1/2
+verified. Width1265 no horizontal overflow; screenshot inspected. Tab32/4243 retained,
+preview64352. See workbench-affect-appraisal-factor-sources-rev1. No failed audit.
+
+LOCAL DISPOSITION reuses affect-public/0.1-candidate operands; no law or comparator
+selected and no C3 verdict/obligation changed. All18 conditional obligations survive.
+Learning-event/state-read provenance, latest eligible context/prior selection, player
+disclosure, broader accessibility and integrated entry remain due. Live paged166
+source hold unchanged;23320 last10/15 prefix16/18. Packed pair29 last10/10 Working;
+no terminal checkpoint/restore claim. Mark all32 retained tabs every turn.
