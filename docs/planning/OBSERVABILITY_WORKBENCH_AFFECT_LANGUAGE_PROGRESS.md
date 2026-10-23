@@ -728,3 +728,36 @@ LOCAL DISPOSITION instantiates exact accepted source paths without changing nati
 semantics or psychological verdicts. All18 conditional obligations survive. Full
 native scope, learning-evidence ancestry, latest context/prior selection, player
 language and integrated entry remain due.
+
+## 2026-10-23 — completed context/prior selection and trace limitation
+
+Researcher appraisal navigation now reconstructs the latest eligible frozen context
+and last known prior appraisal from top-level committed outputs strictly before the
+selected instant. Same-instant/later records are excluded; feedback-disabled priors
+are explicitly not used. Source buttons inspect the exact native freeze/appraisal
+events. This does not authenticate a caller-supplied incomplete timeline.
+
+Material diagnostic finding: original runtime uses committedCarry for execution but
+constructs appraisal trace input from current outputs. Four original snapshots/44
+appraisals all exhibit this discrepancy. It is not evidence of future/current operand
+use in cognition. The UI discloses that selection is reconstructed; it does not call
+the trace input an ingress receipt. Frozen runtime remains unchanged under both live
+holds. See OBSERVABILITY_WORKBENCH_AFFECT_CARRY_TRACE_LIMITATION.md, now explicitly
+registered under RO-C3-011 with the future trace-completeness distinction preserved.
+No existing obligation status, C3 verdict or original byte identity changed.
+
+Bounded audit PASS44 appraisals/40 contexts/three known priors/one enabled feedback,
+44 historical checks/four negative cases. Rev1 failed only on error-message regex
+casing; failure/source retained, rev2 corrected. Browser feedback-2 first1/terminal11/
+history1, context event136 (instant9), prior18 (instant10), current appraisal return
+and exact four native identities PASS; stale selection clears, width1265 no overflow.
+TypeScript/build640 modules/evidence restore/research4318/boundary PASS. Screenshot
+inspected. Tab34/4245 retained, preview72321. See workbench-affect-appraisal-carry-rev2.
+
+LOCAL DISPOSITION: expose the exact bounded reconstruction and preserve the original
+instrumentation limitation; any trace repair must be a versioned successor with
+identity/replay effects qualified, not a silent rewrite. All18 conditional obligations
+survive. Full source-selection corpus, learning ancestry, player language, trace
+limitation disposition and integrated entry remain due. Native appraisal-read18522
+continues at least40/105;280-source hold remains. Paged diagnostic23320 at11/15
+prefix11/18;166-source hold remains. Packed pair29 last12/12 Working. Mark tabs1..34.

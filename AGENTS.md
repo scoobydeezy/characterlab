@@ -52,6 +52,19 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 earlier-source update:** AFFECT latest completed context/prior
+reconstruction PASS44 appraisals/40 contexts/three priors/one enabled feedback.
+Original diagnostic input records current output instead of earlier carry in all44
+checked cases; runtime operands remain earlier committed outputs. Limitation
+disclosed/indexed RO-C3-011; see OBSERVABILITY_WORKBENCH_AFFECT_CARRY_TRACE_LIMITATION.md.
+No native source change or ingress completeness claim. Rev1 regex failure preserved;
+rev2/browser feedback-2 context136/prior18/current return/history/native identities
+PASS. Typecheck/build640/research4318 PASS. Retain tab34/4245; mark tabs1..34.
+Native appraisal-read18522 at least40/105,280-source hold; paged23320 at11/15 prefix11,
+166-source hold. Packed pair29 last12/12 Working. Full selection corpus, learning
+ancestry/player language/trace disposition/integrated entry remain due.
+
+
 **2026-10-23 appraisal-read update:** AFFECT direct appraisal emitter/belief-read
 link PASS four originals/48 prefixes/44 appraisals/132 reads/220 historical checks.
 Browser baseline1/11/history1, prior write60/return and stale reset PASS. Typecheck/
