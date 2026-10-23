@@ -53,6 +53,12 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 ## Active direction
 
 **Current routing (2026-10-23):** Observability Workbench IN PROGRESS, owner-authorized.
+AFFECT appraisal→decision linkage PASS105 retained roles/1331 exact embedded joins;
+two tests include22 original event links and missing/ambiguous/nested/phase negatives.
+Browser baseline/hidden1 both decision24/source revisions, appraisal return/keyboard
+and unchanged identities PASS. Build614/research PASS; tab17/4228 retained. See
+workbench-affect-decision-link-rev1; fixture and command-name corrections preserved.
+PlayerFacingRoll remains a mode label, not player disclosure or full-entry proof.
 AFFECT full event/history audit RUNNING63434: first3/105 roles/45 prefixes PASS.
 Target1436 prefixes/1331 appraisals; parsed-source correction in rev2, failed rev1
 retained. See workbench-affect-event-corpus-rev2/checkpoint-003.json. Its280 sources

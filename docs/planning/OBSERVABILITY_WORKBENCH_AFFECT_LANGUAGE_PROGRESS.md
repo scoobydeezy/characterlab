@@ -176,3 +176,33 @@ revalidation. Its280-source freeze is an additional live hold alongside original
 Disposition replay, BatchV8 and full paged diagnostics. All four freezes currently
 match. Do not restart a quiet writer or edit its bound sources. Research check PASS:
 active0, conditional18, closed4, unowned0. No Campaign3 verdict or obligation changes.
+
+## Appraisal-to-decision traversal — 2026-10-23
+
+The comparison inspector now follows an appraisal to a decision only when the
+decision's756 reasons contain755 raw reasons with the exact754 appraisal record.
+Matching instants alone cannot produce the link. Missing decisions remain explicit;
+ambiguous matches are withheld. The decision event must uniquely emit that original
+757 record at phase60/decision. Both branches show their original qualified language
+and exact source; the existing branch-local event/history inspector opens the emitter.
+
+Two tests PASS105 retained roles/1331 appraisal-to-decision joins,22 original browser
+timeline emitters and altered-payload, missing, duplicate, wrong-phase and nested-copy
+negatives. Test revision1 assumed an older comparison artifact contained explanation
+cards; that failure is preserved. The corrected test joins frozen language artifacts
+by program. No language templates, native semantics or live audit sources changed.
+
+`workbench-affect-decision-link-rev1/browser-receipt.json` PASS baseline/hidden prefix1:
+both original decision24 records and exact prose, exact branch save revisions,
+return to appraisal0, keyboard Enter back to decision24 and four unchanged native
+identities. Screenshot inspected; tab17/4228 retained. TypeScript/build614 PASS.
+An incorrectly named boundary command failed after the successful build; corrected
+`npm run check:boundaries` PASS. Restored research PASS18 conditional obligations;
+all four live source freezes unchanged. Full event/history audit continues separately.
+
+LOCAL DISPOSITION: recorded selection, analytical probabilities, reason contributions
+and mechanical draws are researcher evidence. PlayerFacingRoll names the original
+arbitration mode and does not grant player disclosure, establish execution success,
+or prove psychological necessity. Complete player-language traversal, paired lifecycle
+and the integrated entry demonstration remain required. No Campaign3 verdict or
+obligation disposition changed.
