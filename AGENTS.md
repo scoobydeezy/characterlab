@@ -53,6 +53,12 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 ## Active direction
 
 **Current routing (2026-10-23):** Observability Workbench IN PROGRESS, owner-authorized.
+BatchV8 browser COMPLETE947/6388; unchanged verifier PASS947 rows/12776 hashes/
+64000-char preview/7,461,907-byte declaration. First2000-hash capture truncated;
+retained and corrected by grouped DOM capture. All277 source hashes PASS. See
+workbench-batch-browser-rev8/receipt.json; completed tab3/4215 retained. Batch-only
+hold released; overlapping166-source native paged diagnostic audit remains LIVE.
+Packed terminal pair tab29/4240 RUNNING, last3/3; no terminal restore PASS.
 Packed paired checkpoint correction mounted: sequential gzip Blob transport, exact
 native0/1 capture/restore1/successor2 and four tests PASS. Rev1 TypeScript stream
 generic failure retained; rev2 corrected chunks/build629/research PASS. Native285

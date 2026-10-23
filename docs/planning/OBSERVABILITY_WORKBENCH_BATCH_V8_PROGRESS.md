@@ -81,3 +81,22 @@ Fresh full947 run started in tab3 at4215, preview21670;9 roles49 prefixes observ
 All277 original bound sources unchanged; current isolated bundle hashes retained
 in recovery-start-2026-10-23.json. Use original terminal verifier when complete.
 Do not restart on quiet observations. Retain current tabs1,2,3 each turn.
+
+## Complete browser qualification — 2026-10-23
+
+Replacement tab3/4215 COMPLETE947 roles/6388 prefixes. The unchanged original
+terminal verifier passes all947 row IDs/status/counts,12776 actual/expected hash
+strings, exact64000-character report preview and7,461,907-byte download declaration.
+All277 native source hashes and frozen copies match. See workbench-batch-browser-
+rev8/receipt.json, browser.json and complete.png. No download transport was attempted.
+
+The first DOM capture returned only2000 hash entries despite12776 elements; that
+partial capture is retained. Grouped per-execution-row capture obtained every hash
+and passed the original full verifier. capture-complete.json records the correction.
+Earlier interruptions remain evidence of interrupted runs, not substituted passes.
+
+The BatchV8-only277-source hold is released after terminal acceptance; overlaps
+with the live166-source paged diagnostic audit remain held. Retain completed tab3.
+This qualifies the complete registered V8 batch, not every required future successor,
+language layer, specialized visualization or integrated Campaign4 entry requirement.
+All18 conditional obligations and Campaign3 scope restrictions survive.
