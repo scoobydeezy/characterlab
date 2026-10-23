@@ -53,6 +53,14 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 ## Active direction
 
 **Current routing (2026-10-23):** Observability Workbench IN PROGRESS, owner-authorized.
+AFFECT task-key/path/read correspondence mounted:28 native decisions/four programs,
+browser obligation0 A/B1/2/history PASS. Rev1 path-overflow failure retained; rev2
+wraps exact bytes, width1265/1265 PASS. Two tests/build624/research PASS. Tabs24/4235
+and25/4236 retained; mark all workbenchLiveTabs1..25.
+Full task-read native audit76503 RUNNING105 programs/1436 prefixes target; first15
+complete in workbench-affect-task-read-corpus-rev1/checkpoint-001.json. NEW LIVE HOLD:
+281 frozen sources, including task-read/raw-event/source helpers. Keep unchanged.
+No magnitude-origin/necessity/player disclosure/full entry claim.
 AFFECT raw-reason event navigation PASS28 native joins/four programs; exact top-level
 755 lineage only. Browser obligation0 A/B event20/two task-state reads/history after2
 and save revisions PASS. Two tests/build622/research PASS. No prior mutation is

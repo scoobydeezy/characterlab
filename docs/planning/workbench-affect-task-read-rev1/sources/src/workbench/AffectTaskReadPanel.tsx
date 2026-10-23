@@ -1,0 +1,7 @@
+import type {AffectExplanation} from './affectExplanations';
+import type {TimelineEvent} from './contracts';
+import {affectTaskReadSources} from './affectTaskReadSources';
+export function AffectTaskReadPanel({card,events}:{card:AffectExplanation;events:TimelineEvent[]}){
+ let report:ReturnType<typeof affectTaskReadSources>;try{report=affectTaskReadSources(events,card);}catch(error){return <p role="alert">Task-state correspondence withheld: {String(error)}</p>;}
+ return <section aria-label="AFFECT factor task-state correspondence"><h5>Task state read for each raw factor</h5><p>{report.scope}</p><table><thead><tr><th>Source row</th><th>Role</th><th>Raw strength</th><th>Raw event</th><th>Read</th></tr></thead><tbody>{report.rows.map(r=><tr key={r.sourceIndex}><td>{r.sourceIndex+1}</td><td>{r.role}</td><td>{r.strength}</td><td>{report.eventId}</td><td>{r.readIndex===null?'No recorded read':r.readIndex+1}</td></tr>)}</tbody></table>{report.rows.map(r=><details key={r.sourceIndex}><summary>Source {r.sourceIndex+1}: exact task path and recorded value</summary><code>{r.path}</code><pre className="exact">{JSON.stringify(r.taskKey,null,2)}</pre><pre className="exact">{r.exact??'No recorded read'}</pre></details>)}<details><summary>Exact task-state correspondence report</summary><pre data-affect-task-read-sources className="exact">{JSON.stringify(report,null,2)}</pre></details></section>;
+}

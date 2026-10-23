@@ -535,3 +535,34 @@ recorded reads and parents do not establish causal necessity. Individual factor-
 state attribution, broader native join coverage, Reasoning-mode direct event links,
 player disclosure and full integrated entry remain due. No C3 verdict or obligation
 disposition changes; all18 conditional obligations survive.
+
+## 2026-10-23 — raw factor to exact task-state read correspondence
+
+Projection affect-task-read-source/0.1 matches each raw signal's complete registered
+task commitment key to the canonical path produced by taskPath/statePathValue.
+The original raw emitter's exact read path is the join authority; labels or equal
+values are not used to guess a match. Missing reads remain unavailable, duplicate
+paths are withheld, and recorded Absent remains a read value distinct from no read.
+This identifies a state dependency; it does not derive the factor magnitude from
+task status, establish prior adoption history, or establish psychological necessity.
+
+Two tests PASS28 native decisions across four programs and negative missing/wrong
+path/duplicate/recorded-absence controls. Browser obligation0 A/B1/2 exact task keys,
+paths, values, raw strengths and historical1 after2 PASS independent native-record
+verification. Revision1's expanded path caused horizontal page overflow; screenshot
+and failure retained. Revision2 wraps unchanged bytes; browser1 reports match exactly,
+expanded path scrollWidth/clientWidth1265/1265 PASS. Tab24/4235 retains failure;
+tab25/4236 corrected build retained (previews19472/94150).
+
+TypeScript/build624, boundaries/evidence restore/research PASS. See
+workbench-affect-task-read-rev1 and rev2. LOCAL DISPOSITION preserves every source,
+candidate and all18 conditional obligations; no C3 verdict/disposition changes.
+
+Full native105-program/1436-prefix/1331-decision qualification is RUNNING session76503
+under workbench-affect-task-read-corpus-rev1. checkpoint-001 authenticates the first15
+completed programs. Its281 source files are a new LIVE HOLD; do not modify them
+until terminal receipt or failure. This includes the new task-read/raw-event/source
+helpers plus the shared BatchV8 sources. Original BatchV8/277 and paged diagnostics/166
+holds remain unchanged. Do not infer full completion from the bounded browser result.
+Player disclosure, Reasoning-mode task/event navigation, magnitude-source derivation,
+broader coverage and integrated entry remain due.
