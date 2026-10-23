@@ -1063,3 +1063,35 @@ or complete architecture coverage. The canonical diagram's irreducibility condit
 is not discharged by showing this candidate baseline. Full integrated-entry,
 matrix/vector, player-language and broader resource/accessibility work remains due.
 All18 conditional obligations and historical source restrictions survive.
+
+## Paged pair browser integration — 2026-10-23
+
+Mounted paired native worker controls in paged inspection:30 declared contrasts,
+individual/joint advance, pause, paired checkpoint/restore, branch diagnostics and
+revision-bound exact source pages. A failed pair retains its last published view
+and disables inspection/advancement until restore or creation. Branch selection
+clears incompatible reports/pages; equal-root presence is distinct from zero.
+
+workbench-disposition-paged-pair-ui-rev2/receipt.json PASS constitution contrast
+A0/B0,A1/B0,A1/B1,A2/B2 against fresh native comparisons and ten identities.
+Unequal prefixes disable joint stepping and withhold equality; both branch state
+reports and B constitution page agree exactly. Historical diagnostic survives
+advance, paging disables, and paired restore1/1 reproduces the complete comparison
+and reenables history paging. Screenshot inspected; source paths wrap in the table.
+Revision1 native oracle/build retained, browser interrupted without receipt.
+TypeScript/build602 modules, boundary and restored research checks PASS.
+
+LOCAL DISPOSITION: this closes bounded actual pair-worker transport and UI source
+navigation. Run/pause, all contrasts/full horizons, six-mode migration, player
+language, latent-state visualization and integrated entry remain due. No Campaign3
+verdict or mechanism changed;18 conditional obligations/source limits survive.
+
+Original replay process28212 was missing on recovery, with242 preserved records
+and no terminal receipt. Interruption hashes retained. Resume20415 verifies bound
+sources and original records, reconstructs the interrupted program and runs the
+original restore/detachment/immediate-successor checks for missing records only.
+No original record is overwritten. Terminal285-prefix qualification remains due.
+
+Additional paired Run/Pause check PASS: from restored1/1, immediate pause finishes
+exactly2/2 with original comparison and ten hashes. See run-pause-receipt.json.
+Mode-leave and full-horizon paired qualification remain due.

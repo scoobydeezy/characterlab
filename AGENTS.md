@@ -52,8 +52,19 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
-**Current routing (2026-10-20):** Observability Workbench IN PROGRESS, owner-authorized.
+**Current routing (2026-10-23):** Observability Workbench IN PROGRESS, owner-authorized.
 Start docs/planning/OBSERVABILITY_WORKBENCH_BATCH_V8_PROGRESS.md.
+2026-10-23 recovery: old process28212 and browser tabs25..39 absent; no terminal claim.
+Original replay retained242/285 records; resume20415 RUNNING, same source bindings.
+Full BatchV8 restarted in tab3/4215; original947/6388 target unchanged.
+Paired paged UI browser PASS constitution0/0,1/0,1/1,2/2 and restored1/1:
+exact comparisons/ten hashes, branch diagnostics, source page and stale guards.
+See workbench-disposition-paged-pair-ui-rev2; rev1 interruption retained.
+Build602/research/boundary and bounded pair Run/Pause1/1->2/2 PASS.
+Mode-leave, full horizons, six modes and full entry remain due.
+Only current live browser handles: workbenchLiveTabs=[longTab(tab1),
+dispositionPairTab(tab2/4215),recoveredBatchTab(tab3/4215)]. Mark each every turn.
+Older tab references below describe retained evidence, not live sessions.
 SEM coverage ledger reconciled to retained rev3:100 scoped vector pointers,
 31 negative witnesses/10 acceptance items; zero complete Workbench vectors inferred.
 See workbench-sem-ledger-rev1; language/participation/full entry remain open.
@@ -89,7 +100,7 @@ Browser continuity correction: older tabs closed after missed turn-scoped marks.
 Inventory confirmed only1/25 survived. Interrupted7/6/24 do NOT establish completion.
 Replacement full BatchV8 tab26 (4185) RUNNING, last518/947 roles3642 prefixes.
 Disposition horizon tab27 (4202) CRASHED before terminal verification; failure retained.
-At EVERY turn mark current workbenchLiveTabs:1,25,26,27,28,29,30,31,32,33,34,35,36,37,38. Do not use stale handles.
+At EVERY turn mark current workbenchLiveTabs listed in the 2026-10-23 recovery above. Older handles are stale.
 Disposition horizon revision2 last verified16 Working; no terminal PASS. Investigate resource use before retry.
 Run/Pause prefix1 five native identities PASS. Terminal and six-mode checks remain due.
 Retained event-state build keyboard filter/selection/disclosure PASS with unchanged

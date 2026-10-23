@@ -1,0 +1,451 @@
+{
+  "version": "learn-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "date": "2026-09-21",
+  "namespace": 1158,
+  "records": [
+    {
+      "typeId": 884,
+      "name": "LearnProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Law",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "NumericProfile",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 885,
+      "name": "LearnTrialFrame",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Proposition",
+          "type": "id:1027",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "PotentialEffect",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Before",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Visible",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 886,
+      "name": "LearnOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Frames",
+          "type": {
+            "list": "ref:885",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 887,
+      "name": "LearnSafeSample",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "SampleId",
+          "type": "id:1115",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Proposition",
+          "type": "id:1027",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Measurement",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Kind",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Precision",
+          "type": "positiveQ",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 888,
+      "name": "LearnKey",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Character",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Proposition",
+          "type": "id:1027",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 889,
+      "name": "LearnEstimate",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Mean",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Precision",
+          "type": "positiveQ",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Support",
+          "type": {
+            "set": "id:1115",
+            "min": 1,
+            "max": 64
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 890,
+      "name": "LearnState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Learns",
+          "type": {
+            "map": [
+              "ref:888",
+              "ref:889"
+            ],
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 891,
+      "name": "LearnLearningEvidence",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1158",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Sample",
+          "type": "ref:887",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Class",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 892,
+      "name": "LearnApplication",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1158",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Evidence",
+          "type": "ref:891",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Prior",
+          "type": "ref:889",
+          "required": false
+        },
+        {
+          "id": 4,
+          "name": "Posterior",
+          "type": "ref:889",
+          "required": false
+        },
+        {
+          "id": 5,
+          "name": "Applied",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "RawMean",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "RawPrecision",
+          "type": "nonnegativeQ",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 893,
+      "name": "LearnProbe",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1158",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Key",
+          "type": "ref:888",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "NumericProfile",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Learn",
+          "type": "ref:889",
+          "required": false
+        },
+        {
+          "id": 5,
+          "name": "Mean",
+          "type": "unitQ",
+          "required": false
+        },
+        {
+          "id": 6,
+          "name": "Precision",
+          "type": "positiveQ",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 894,
+      "name": "LearnFrozenSamples",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1158",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Samples",
+          "type": {
+            "list": "ref:887",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Experience",
+          "type": "ref:227",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 895,
+      "name": "LearnStage",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "EventType",
+          "type": "id:1001",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reads",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Writes",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Authority",
+          "type": "id:1025",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 896,
+      "name": "LearnContent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Character",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Propositions",
+          "type": {
+            "list": "id:1027",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    }
+  ],
+  "unions": []
+}

@@ -1,0 +1,8 @@
+import type {semStateTransitions} from './semStateTransitions';
+export function SemStateTransitionsPanel({report,onEntry}:{report:ReturnType<typeof semStateTransitions>|undefined;onEntry:(index:number)=>void}){
+ return <section className="card" aria-label="SEM committed state participation"><h2>Observed perceptual-file transitions</h2>{report&&<><p>{report.scope}</p>
+ <table><thead><tr><th>Root</th><th>Canonical box / declared owner</th><th>Recorded boundaries</th><th>Changed boundaries</th><th>Reads / writes</th></tr></thead><tbody>{report.roots.map(r=><tr key={r.id}><th>{r.id} · {r.label}</th><td>{r.canonicalBox} / {r.declaredOwner}</td><td>{r.recordedTransitions}</td><td>{r.changedTransitions}</td><td>Unavailable / unavailable</td></tr>)}</tbody></table>
+ {!report.events.length&&<p>No committed transitions yet. Initial state remains inspectable below.</p>}
+ {report.events.map(e=><article key={e.sourceIndex}><h3>Committed entry {e.sourceIndex+1} · {e.stage}</h3><button onClick={()=>onEntry(e.sourceIndex)}>Inspect state-transition entry {e.sourceIndex+1}</button>{e.transitions.map(t=><details key={t.id}><summary>Root {t.id} · {t.changed?'Changed':'Equal recorded values'}</summary><div className="diff-grid"><section><h4>Before</h4><pre className="exact" data-sem-state-before>{t.before}</pre></section><section><h4>After</h4><pre className="exact" data-sem-state-after>{t.after}</pre></section></div></details>)}</article>)}
+ <details><summary>Exact committed state participation</summary><pre className="exact" data-sem-state-transitions>{JSON.stringify(report,null,2)}</pre></details></>}</section>;
+}

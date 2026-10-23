@@ -3,6 +3,7 @@ import {DispositionPagedWorkerClient as Client} from './dispositionPagedWorkerCl
 import type {DispositionInspectionSummary,DispositionTextSelector,DispositionPagedRun} from './dispositionPagedAdapter';
 import {DISPOSITION_PROGRAMS,type DispositionCheckpoint} from './dispositionAdapter';
 import {DispositionPagedDiagnostics} from './DispositionPagedDiagnostics';
+import {DispositionPagedPairInspector} from './DispositionPagedPairInspector';
 import type {DispositionDiagnosticSelection} from './dispositionCanonicalInspection';
 type Page=ReturnType<DispositionPagedRun['textPage']>;
 export function DispositionPagedInspector({active=true}:{active?:boolean}){
@@ -30,5 +31,5 @@ export function DispositionPagedInspector({active=true}:{active?:boolean}){
  <button disabled={busy||!view||(kind==='state'&&!selectedPath)||(kind==='event'&&!selectedEvent)} onClick={()=>void load()}>Load selected text at current revision</button>
  <p>Mechanism diagnostics do not establish represented self-knowledge. Offsets count UTF-16 code units. Each page contains up to4096 units; joining consecutive pages reproduces exact text.</p>
  {page&&<><h3>Displayed page</h3><code data-paged-revision>{page.saveHash}</code><pre className="exact" data-paged-selection>{JSON.stringify(page.selector)}</pre><p data-paged-range>Offset {page.offset} · {page.text.length} units · total {page.totalCodeUnits}</p>{stale&&<p role="status">Historical page retained from an earlier revision. Restore that checkpoint to continue its pages, or load the selection at the current revision.</p>}<div className="button-row"><button disabled={busy||stale||page.offset===0} onClick={()=>void load(Math.max(0,page.offset-4096),page.selector,page.saveHash)}>Previous exact page</button><button disabled={busy||stale||page.nextOffset===null} onClick={()=>void load(page.nextOffset!,page.selector,page.saveHash)}>Next exact page</button></div><pre className="exact" data-paged-text>{page.text}</pre></>}
- </section><footer>{view&&(['modelHash','runHash','stateHash','saveHash','projectionHash'] as const).map(k=><div className="hash" key={k}><span>{k}</span><code>{view[k]}</code></div>)}</footer></div></main>;
+ </section><DispositionPagedPairInspector active={active}/><footer>{view&&(['modelHash','runHash','stateHash','saveHash','projectionHash'] as const).map(k=><div className="hash" key={k}><span>{k}</span><code>{view[k]}</code></div>)}</footer></div></main>;
 }

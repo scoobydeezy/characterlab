@@ -1,0 +1,82 @@
+import {RecordedStateInspector} from './RecordedStateInspector';
+import {SemCausalLanguagePanel} from './SemCausalLanguagePanel';
+import {SemStateTransitionsPanel} from './SemStateTransitionsPanel';
+import type {SemInspectionSnapshot as SemSnapshot} from './semInspection';
+import {useEffect,useRef,useState} from 'react';
+import {SemWorkerClient} from './semWorkerClient';
+import type {SemCheckpoint} from './semAdapter';
+import type {verifySemReplay} from './semReplay';
+import {PreparedExport} from './PreparedExport';
+import {SemControlPanel} from './SemControlPanel';
+import {SemRecognitionPanel} from './SemRecognitionPanel';
+import {SemKnowledgePanel} from './SemKnowledgePanel';
+import {SemMeasurementPanel} from './SemMeasurementPanel';
+import {SemClassificationPanel} from './SemClassificationPanel';
+import {SemRecognitionBoundaryPanel} from './SemRecognitionBoundaryPanel';
+import {SemContinuantPanel} from './SemContinuantPanel';
+import {SemAxesPanel} from './SemAxesPanel';
+import {SemBindingPanel} from './SemBindingPanel';
+import {SemEventFilePanel} from './SemEventFilePanel';
+import {SemClassificationBoundaryPanel} from './SemClassificationBoundaryPanel';
+import {SemEventClassificationPanel} from './SemEventClassificationPanel';
+import {SemNegativePanel} from './SemNegativePanel';
+import {SemRendererPanel} from './SemRendererPanel';
+import {SemIntegratedPanel} from './SemIntegratedPanel';
+import {SemAuthorityPanel} from './SemAuthorityPanel';
+import {SemOccurrencePanel} from './SemOccurrencePanel';
+import {SemPhenomenonPanel} from './SemPhenomenonPanel';
+import {SemAcceptancePanel} from './SemAcceptancePanel';
+import {SemPersistencePanel} from './SemPersistencePanel';
+import {SemCodecPanel} from './SemCodecPanel';
+import {SemSchemaPanel} from './SemSchemaPanel';
+import {SemPhasePanel} from './SemPhasePanel';
+import {SemProvenancePanel} from './SemProvenancePanel';
+const modes=['Character','Experiment','Reasoning','Timeline','Compare','Architecture'] as const;
+export function SemWorkbench({active=true}:{active?:boolean}){
+ const run=useRef<SemWorkerClient>(),lock=useRef(false),stop=useRef(false);
+ const [view,setView]=useState<SemSnapshot>(),[mode,setMode]=useState<typeof modes[number]>('Experiment'),[busy,setBusy]=useState(false),[error,setError]=useState(''),[checkpoint,setCheckpoint]=useState<SemCheckpoint>(),[replay,setReplay]=useState<Awaited<ReturnType<typeof verifySemReplay>>>(),[observer,setObserver]=useState('character/mina'),[entry,setEntry]=useState(0),[text,setText]=useState('');
+ useEffect(()=>{if(!active)stop.current=true;},[active]);
+ async function execute(fn:()=>Promise<void>){if(lock.current)return;lock.current=true;stop.current=false;setBusy(true);setError('');try{await fn();if(run.current)setView(run.current.snapshot());}catch(e){setError(String(e));}finally{lock.current=false;setBusy(false);}}
+ useEffect(()=>{let cancelled=false;void execute(async()=>{const next=await SemWorkerClient.create();if(cancelled)next.dispose();else run.current=next;});return()=>{cancelled=true;stop.current=true;run.current?.dispose();};},[]);
+ const clear=()=>{setReplay(undefined);setEntry(0);setText('');};
+ async function advance(all=false){await execute(async()=>{clear();do{if(!run.current||!await run.current.advance())break;setView(run.current.snapshot());await new Promise(r=>setTimeout(r,0));}while(all&&!stop.current);});}
+ const character=view?.characters.find(c=>c.observer===observer);
+ const recognition=view?.recognitions.find(c=>c.observer===observer);
+ return <main><header className="topbar">OBSERVABILITY / SEM</header><div className="content"><h1>Inspect the three-observer semantic fixture.</h1><p>semantic-binding/0.1-candidate · SEM-001J</p><p>Accepted fixed scheduler harness: Mina, Darius and Glen. Each observer has distinct evidence and recognition. The original incremental schedule and empty input commitment are preserved.</p>{error&&<div role="alert" className="error">{error}</div>}
+ <section className="card"><div className="button-row"><button disabled={busy} onClick={()=>void execute(async()=>{const next=await SemWorkerClient.create();run.current?.dispose();run.current=next;clear();})}>Create SEM run</button><button disabled={busy||!view||view.complete||!!error} onClick={()=>void advance()}>Step SEM observer</button><button disabled={busy||!view||view.complete||!!error} onClick={()=>void advance(true)}>Run SEM fixture</button><button disabled={!busy} onClick={()=>{stop.current=true;}}>Pause SEM</button></div><p role="status">Prefix {view?.prefix??0} · instant {view?.clock??'0'} · {busy?'Working':view?.complete?'Complete':'Ready'}</p><p>Three original scheduled instants. This fixed harness is not a campaign public factory; fixture editing and runtime intervention are unavailable.</p></section>
+ <nav aria-label="SEM workbench modes" className="button-row">{modes.map(m=><button key={m} aria-pressed={mode===m} onClick={()=>setMode(m)}>{m}</button>)}</nav>
+ {mode==='Character'&&<section className="card"><h2>Character evidence</h2><label>SEM observer<select value={observer} onChange={e=>setObserver(e.target.value)}>{view?.characters.map(c=><option key={c.observer} value={c.observer}>{c.observer}</option>)}</select></label><p>{character?.scope}</p><p>{character?.notice}</p>{character?.entries.map(e=><article key={e.experience}><p>{e.human}</p><details><summary>Exact pre-recognition experience</summary><pre className="exact">{e.exact}</pre></details></article>)}<h3>Recorded recognition</h3><p>{recognition?.scope}</p>{!recognition?.entries.length&&<p>No recognition record is available for this observer at this prefix.</p>}{recognition?.entries.map(e=><article key={e.resolutionId}><p data-sem-recognition-human>{e.human}</p><details><summary>Recognition meaning and provenance</summary><pre className="exact" data-sem-recognition-semantic>{JSON.stringify({semantic:e.semantic,resolutionId:e.resolutionId,experienceId:e.experienceId,revises:e.revises,cueIds:e.cueIds},null,2)}</pre></details><details><summary>Exact observer recognition record</summary><pre className="exact" data-sem-recognition-record>{e.exact}</pre></details><button onClick={()=>{setEntry(e.sourceIndex);setMode('Timeline');}}>Inspect recognition committed entry {e.sourceIndex+1}</button></article>)}<SemCausalLanguagePanel report={view?.causalRoles.find(c=>c.observer===observer)} onEntry={index=>{setEntry(index);setMode('Timeline');}}/><p>Recognition cue-level and complete-choice explanations remain unqualified. Historical omniscient rendering is available only in researcher modes.</p></section>}
+ {mode==='Experiment'&&<section className="card"><h2>Exact harness continuation</h2><div className="button-row"><button disabled={busy||!view} onClick={()=>void execute(async()=>{setCheckpoint(await run.current!.checkpoint());})}>Capture SEM checkpoint</button><button disabled={busy||!checkpoint} onClick={()=>void execute(async()=>{const next=await SemWorkerClient.restore(checkpoint!);run.current?.dispose();run.current=next;clear();})}>Restore SEM checkpoint</button><button disabled={!checkpoint} onClick={()=>setText(JSON.stringify(checkpoint,null,2))}>Export SEM checkpoint</button></div><p>{checkpoint?`Captured prefix ${checkpoint.prefix}.`:'No checkpoint captured.'} Restore checks the diagnostic fixture identity and exact original prefix before native save/load.</p></section>}
+ {mode==='Reasoning'&&<section className="card"><h2>Historical native outputs</h2><p>Raw semantic, causal-role, recognition and viewpoint strings. Omniscient lines are not observer knowledge. These strings are preserved evidence, not newly qualified prose.</p><pre className="exact">{view?.researchOutputs}</pre></section>}
+ {mode==='Timeline'&&<section className="card"><h2>Committed semantic trace</h2><label>SEM trace entry<select disabled={!view?.traceEntries.length} value={entry} onChange={e=>setEntry(Number(e.target.value))}>{view?.traceEntries.map(e=><option key={e.index} value={e.index}>Committed entry {e.index+1}</option>)}</select></label><p>Entry order is the native committed sequence. This historical format does not supply later campaign event edges or read/write records. Record occurrence times are preserved independently of scheduler instants.</p><pre className="exact">{view?.traceEntries[entry]?.exact??'No committed trace yet.'}</pre></section>}
+ {mode==='Compare'&&<section className="card"><h2>Exact prefix replay</h2><button disabled={busy||!view} onClick={()=>void execute(async()=>{setReplay(await run.current!.verify());})}>Verify SEM replay</button>{replay&&<><p>Prefix {replay.prefix} · instant {replay.clock} · projection equal: {String(replay.projectionEqual)}</p><table><thead><tr><th>Native commitment</th><th>Equal</th></tr></thead><tbody>{replay.fields.map(f=><tr key={f.name}><td>{f.name}</td><td>{String(f.equal)}</td></tr>)}</tbody></table><button onClick={()=>setText(JSON.stringify(replay,null,2))}>Export SEM replay</button></>}<p>The component controls below have a separate execution boundary. Exact prefix replay does not establish causal necessity.</p></section>}
+ {mode==='Compare'&&<SemControlPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
+ {mode==='Compare'&&<SemRecognitionPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
+ {mode==='Compare'&&<SemKnowledgePanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
+ {mode==='Compare'&&<SemMeasurementPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
+ {mode==='Compare'&&<SemClassificationPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
+ {mode==='Compare'&&<SemRecognitionBoundaryPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
+ {mode==='Compare'&&<SemContinuantPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
+ {mode==='Compare'&&<SemAxesPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
+ {mode==='Compare'&&<SemBindingPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
+ {mode==='Compare'&&<SemEventFilePanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
+ {mode==='Compare'&&<SemClassificationBoundaryPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
+ {mode==='Compare'&&<SemEventClassificationPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
+ {mode==='Compare'&&<SemNegativePanel client={run.current} busy={busy} execute={execute} onExport={setText}/>} 
+ {mode==='Compare'&&<SemRendererPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
+ {mode==='Compare'&&<SemIntegratedPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
+ {mode==='Compare'&&<SemOccurrencePanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
+ {mode==='Compare'&&<SemPhenomenonPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
+ {mode==='Compare'&&<SemPersistencePanel client={run.current} busy={busy} execute={execute} onExport={setText}/>} 
+ {mode==='Compare'&&<SemCodecPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>} 
+ {mode==='Compare'&&<SemSchemaPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>} 
+ {mode==='Compare'&&<SemPhasePanel client={run.current} busy={busy} execute={execute} onExport={setText}/>} 
+ {mode==='Compare'&&<SemProvenancePanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
+ {mode==='Architecture'&&view&&<><p>{view.recordedState.scope}</p><RecordedStateInspector key={view.runHash} fields={view.recordedState.fields} prefix={view.prefix} saveHash={view.saveHash}/></>}
+ {mode==='Architecture'&&<SemStateTransitionsPanel report={view?.stateTransitions} onEntry={index=>{setEntry(index);setMode('Timeline');}}/>}
+ {mode==='Architecture'&&<section className="card"><h2>Retained semantic state</h2><p>Native continuant and event-file roots are shown below. Individual read/write counts remain unavailable for this historical trace format; committed snapshot changes above do not supply that missing instrumentation.</p><pre className="exact">{view?.researchState}</pre></section>}
+ {mode==='Architecture'&&<SemAuthorityPanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
+ {mode==='Architecture'&&<SemAcceptancePanel client={run.current} busy={busy} execute={execute} onExport={setText}/>}
+ {text&&<><PreparedExport text={text} label="Prepared SEM export" filename="characterlab-sem.json"/><button onClick={()=>setText('')}>Close SEM export</button></>}
+ <footer>{view&&(['modelHash','runHash','stateHash','saveHash','outputsHash','traceHash'] as const).map(k=><div className="hash" key={k}><span>{k}</span><code>{view[k]}</code></div>)}</footer></div></main>;
+}

@@ -1,0 +1,512 @@
+{
+  "version": "control-public-allocation/0.2-candidate",
+  "status": "ACCEPTED before implementation",
+  "namespace": null,
+  "records": [
+    {
+      "typeId": 1008,
+      "name": "ControlProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Candidate",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Law",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1009,
+      "name": "ControlStage",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Event",
+          "type": "id:1001",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reads",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 4
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Writes",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Authority",
+          "type": "id:1025",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1010,
+      "name": "ControlOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Opportunity",
+          "type": "ref:818",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Instruction",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reminder",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Support",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Card",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "BoardVisible",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1011,
+      "name": "ControlGoal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Active",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1012,
+      "name": "ControlGoalState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Values",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:1011"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1013,
+      "name": "ControlWorkspace",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Maintained",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "NeutralCard",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1014,
+      "name": "ControlWorkspaceState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Values",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:1013"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1015,
+      "name": "ControlEvaluation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Appraisal",
+          "type": "ref:826",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Active",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Maintained",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Card",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Inhibited",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1016,
+      "name": "ControlGoalUpdate",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Prior",
+          "type": "ref:1011",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Next",
+          "type": "ref:1011",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1017,
+      "name": "ControlRaw",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Options",
+          "type": "ref:827",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Signals",
+          "type": {
+            "list": "ref:402",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1018,
+      "name": "ControlReasons",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Raw",
+          "type": "ref:1017",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Nuclei",
+          "type": {
+            "list": "ref:407",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1019,
+      "name": "ControlDecision",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reasons",
+          "type": "ref:1018",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Probabilities",
+          "type": {
+            "list": "ref:421",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Mode",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Draws",
+          "type": {
+            "list": "ref:411",
+            "min": 0,
+            "max": 3
+          },
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Chosen",
+          "type": "ref:395",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1020,
+      "name": "ControlIntent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Decision",
+          "type": "ref:1019",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1021,
+      "name": "ControlExpression",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Intent",
+          "type": "ref:1020",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Alignment",
+          "type": {
+            "list": "signedUnitQ",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1022,
+      "name": "ControlPlan",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Expression",
+          "type": "ref:1021",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Action",
+          "type": "id:1027",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1023,
+      "name": "ControlAttempt",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Plan",
+          "type": "ref:1022",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1024,
+      "name": "ControlOutcome",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Attempt",
+          "type": "ref:1023",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Performed",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Reward",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    }
+  ]
+}

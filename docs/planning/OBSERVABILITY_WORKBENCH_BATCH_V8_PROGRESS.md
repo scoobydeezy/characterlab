@@ -71,3 +71,13 @@ selector sources; started.png records initiation only, not successful completion
 The inspection registry test and two prior V7 tests PASS (14 affected tests total).
 The selector correction introduces no change to either live audit's dependency
 graph; all current source hashes were rechecked against both manifests.
+
+## Session recovery — 2026-10-23
+
+Browser inventory contains only tab1; prior tab26 no longer exists. Last observation
+931/947 roles6162 prefixes was not terminal and does not establish acceptance.
+Interruption preserved in workbench-batch-browser-rev8/interruption-2026-10-23.json.
+Fresh full947 run started in tab3 at4215, preview21670;9 roles49 prefixes observed.
+All277 original bound sources unchanged; current isolated bundle hashes retained
+in recovery-start-2026-10-23.json. Use original terminal verifier when complete.
+Do not restart on quiet observations. Retain current tabs1,2,3 each turn.
