@@ -45,6 +45,15 @@ export class DispositionPagedRun{
   const leaves=this.#view.fields.filter(f=>f.root==='1457'||f.root==='1458').map(f=>({path:restoreStatePath(decode(fromHex(f.path))),value:this.#state.get(f.path)!}));
   return dispositionCanonicalStoredHistory(this.#view,new AuthoritativeState(leaves).canonicalValue(),this.#trace);
  }
+ choiceRows(saveHash:string){
+  this.#ready();if(saveHash!==this.#view.saveHash)throw Error('Stale DISPOSITION choice revision');
+  return this.#view.timeline.filter(e=>e.stage==='reasons').map(e=>{
+   const envelope=this.diagnostic(saveHash,{kind:'resolution',eventId:e.id});
+   if(envelope.selection.kind!=='resolution')throw Error('DISPOSITION resolution dispatch mismatch');
+   const r=(envelope as Extract<typeof envelope,{selection:{kind:'resolution'}}>).report;
+   return {instant:r.instant,reasonEvent:r.reasonEvent,decisionEvent:r.decisionEvent,intentEvent:r.intentEvent,emitted:r.emitted,candidate:r.emitted?r.chosenCandidate:null};
+  });
+ }
  async compare(comparison:string,other:DispositionPagedRun,saveHash:string,otherSaveHash:string){
   this.#ready();other.#ready();if(this===other)throw Error('DISPOSITION comparison requires distinct runs');
   if(saveHash!==this.#view.saveHash||otherSaveHash!==other.#view.saveHash)throw Error('Stale DISPOSITION comparison revision');

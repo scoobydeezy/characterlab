@@ -1155,3 +1155,37 @@ in the declared scope. Full historical projection coverage, first meaningful cho
 divergence, comparison summaries, observer-safe player language, meaningful latent
 state views and integrated entry remain due. No C3 semantics, laws, topology or
 obligation changed; all18 conditional obligations/source limits survive.
+
+## Paged recorded choice comparison — 2026-10-23
+
+The paired paged view now includes original disposition-choice-comparison/0.1
+reports, assembled from exact canonical reason/decision/intent joins. Compare
+shows the first recorded choice or emission difference and links each branch
+to its own decision event in Timeline. Missing instants remain unaligned.
+Publication and partial-failure behavior remain unchanged; restoration rebuilds
+choices from the native trace. The shared row assembler validates ordered pair,
+seam, prefix/clock/count and row shape; exact event joins remain the caller's duty.
+
+workbench-disposition-paged-choices-ui-rev1 records five passing tests: all570
+retained reports across30 contrasts reproduce exactly, including JSON ordering;
+the original full wrapper atconstitution0/1 remains identical. Fresh canonical
+constitution, Refold, Seed0 and InactiveProbes pairs at0..2, four paired restores,
+unequal horizons, stale revisions, partial failure and worker routing pass.
+InactiveProbes0..2 still emits; this is not late inactive-reader qualification.
+Two unrelated regression tests were intentionally skipped by the targeted filter.
+
+Browser PASS constitution and Seed0 at1/1, all ten branch identities, first Seed0
+choice difference, both branch-owned event19 links and restoration of the prior
+constitutional pair. Screenshot inspected. TypeScript/build603, boundary and
+restored research checks PASS. Original replay and BatchV8 bindings stay exact.
+
+LOCAL DISPOSITION: recorded choice divergence is available in the paged pair.
+It does not establish successful execution, observer knowledge, psychological
+significance or independent causal necessity. Full-horizon canonical reader and
+resource qualification, compact comparison summary/export, player language,
+meaningful latent-state views and integrated entry remain due. No C3 verdict,
+semantics, topology or obligation changed; all18 conditional obligations survive.
+
+Continuing audits: original replay recovery session20415 last observed14/15
+programs atprefix5; recovered BatchV8 browser tab3 last446/947 roles,2894 prefixes.
+Neither is terminal evidence. Preserve both writers and their bound sources.

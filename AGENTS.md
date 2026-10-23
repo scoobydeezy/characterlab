@@ -73,9 +73,16 @@ contrasts1/1, exact table/source identities, Refold absence and paired restore P
 See paged-history-ui-rev1; tab5/4217. Build603/research/boundary PASS.
 History reconstructs from current trace; source hash is containing save, not past save.
 Full historical scope, choice-summary, player language and integrated entry remain due.
+Paged recorded choices PASS570 retained reports/30 contrasts; four native pairs
+at0..2 and restores plus partial-failure/worker regressions (five tests). Browser
+constitution/Seed0 at1/1, both decision links, ten identities and paired restore PASS.
+See paged-choices-ui-rev1; tab6/4218. Build603/research/boundary PASS.
+Recorded choice divergence is not psychological significance or observer knowledge.
+Full canonical horizons, comparison summary/player language/integrated entry remain due.
 Only current live browser handles: workbenchLiveTabs=[longTab(tab1),
 dispositionPairTab(tab2/4215),recoveredBatchTab(tab3/4215),
-dispositionModesTab(tab4/4216),dispositionHistoryTab(tab5/4217)]. Mark each every turn.
+dispositionModesTab(tab4/4216),dispositionHistoryTab(tab5/4217),
+dispositionChoicesTab(tab6/4218)]. Mark each every turn.
 Older tab references below describe retained evidence, not live sessions.
 SEM coverage ledger reconciled to retained rev3:100 scoped vector pointers,
 31 negative witnesses/10 acceptance items; zero complete Workbench vectors inferred.
