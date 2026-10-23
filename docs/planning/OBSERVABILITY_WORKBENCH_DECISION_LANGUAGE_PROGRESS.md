@@ -81,3 +81,36 @@ overlap the existing277-source BatchV8 hold. No full player corpus PASS yet.
 All18 conditional obligations survive; no Campaign3 verdict amendment. Full
 meaning/source/history accounting, broader browser qualification, accessibility,
 resource bounds and integrated Campaign4 entry remain due.
+
+2026-10-23 completion: full native player audit9923 exited0. PASS174 programs/
+360 prefixes,70 cumulative displays/112 reason faces/14 empty-face displays and
+290 prefixes without a display. Independent verification reconciles every original
+native identity, program/prefix, historical report and seven frozen source copies.
+See workbench-decision-player-rev1/receipt.json and verification.json. The player
+preview source hold is released; original native holds still apply. Full native
+coverage does not broaden the existing three-case browser scope or observer policy.
+
+2026-10-23: researcher source navigation now joins each admitted949 display by
+its exact cumulative output position to the original phase60 decision emission.
+The complete flattened trace/output sequence must match; duplicate event IDs,
+wrong positions, changed order and nested lookalikes are rejected. Identical
+display values at distinct event occurrences remain distinct. It does not widen
+player disclosure: full event/state/history inspectors sit in a separate researcher
+section, absent from Character mode. Save changes reset selection.
+
+Two focused tests PASS, including identical-display occurrence regression. Four
+original native programs/ten prefixes/six cumulative links, exact native identities,
+historical links and SSR controls PASS. Browser1/continued prefix1->2 selection
+reset, exact retained event6, original reasons parent5, five hashes and Character
+exclusion PASS; desktop width1265/1265. TypeScript/build629/evidence restore/research/
+boundary PASS. See workbench-decision-player-trace-rev1; retain tab28/4239.
+Native decision/reasons stages record no state reads: payload dependencies are
+not fabricated as state dependencies. Later owned-history transitions stay separate.
+
+Full174/360 occurrence-link audit47795 RUNNING; first20 programs observed complete.
+See workbench-decision-player-trace-corpus-rev1/freeze.json. New280-source hold:
+BatchV8 native277 plus player presentation, player event resolver and audit script.
+Do not edit these until terminal verification. No full-corpus link PASS yet.
+LOCAL DISPOSITION uses the accepted separate player projection and original
+trace ordering, with no runtime, law, ownership or research-obligation change.
+All18 conditional obligations and full integrated Campaign4 entry remain open.
