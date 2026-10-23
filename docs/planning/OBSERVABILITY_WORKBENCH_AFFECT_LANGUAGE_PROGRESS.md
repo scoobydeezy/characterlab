@@ -510,3 +510,28 @@ researcher projections without changing semantics or granting player disclosure.
 No C3 verdict or obligation changes; all18 conditional obligations remain.
 Observer disclosure policy/player language, source-state causal attribution, broader
 accessibility/resource qualification and full integrated entry remain due.
+
+## 2026-10-23 — raw-reason emitter and state-read navigation
+
+The comparison's linked decision now opens each branch's exact raw-reason emitter.
+Join requires the complete raw755 record embedded in reasons756/decision757, matching
+instant, raw stage/phase51 and unique top-level output/event identity. Nested downstream
+copies, missing or duplicate emitters, wrong phases/instants and altered lineage are
+withheld. The existing event-state and history panels expose the emitter's original
+reads and scheduling history at the selected branch save revision.
+
+Two tests PASS28 retained native joins: baseline/hidden through11 and both obligation0
+branches through3, each with two original task-state reads and immutable input. This
+is not a105-program native join claim. Browser obligation0 A/B raw event20 at1 PASS
+exact native event, both read values, authentic save revisions and history. After
+advancing to2, historical event1 and both reads/history remain unchanged while the
+source revision updates correctly. No prior recorded mutation is reported for these
+task paths; no initial-state origin is inferred. Independent verifier PASS.
+
+See workbench-affect-raw-link-rev1; tab23/4234 retained, preview41508. Screenshot
+inspected. TypeScript/build622/boundary/evidence restore/research PASS; live277/166
+source holds unchanged. LOCAL DISPOSITION: exact execution provenance is navigable;
+recorded reads and parents do not establish causal necessity. Individual factor-to-
+state attribution, broader native join coverage, Reasoning-mode direct event links,
+player disclosure and full integrated entry remain due. No C3 verdict or obligation
+disposition changes; all18 conditional obligations survive.

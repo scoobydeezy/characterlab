@@ -53,6 +53,12 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 ## Active direction
 
 **Current routing (2026-10-23):** Observability Workbench IN PROGRESS, owner-authorized.
+AFFECT raw-reason event navigation PASS28 native joins/four programs; exact top-level
+755 lineage only. Browser obligation0 A/B event20/two task-state reads/history after2
+and save revisions PASS. Two tests/build622/research PASS. No prior mutation is
+reported, not inferred initial origin. See workbench-affect-raw-link-rev1; tab23/4234.
+Mark tabs1..23. Individual factor-state attribution/broader native joins/Reasoning
+direct event links/player disclosure/full entry remain due.
 AFFECT Reasoning mode now mounts semantic/source panels in standalone and paired
 history. Full1331 decision render PASS; bounded browser A/B1, B2/historical1/All,
 independent baseline1 and native identities PASS. TypeScript/build621/research PASS.
