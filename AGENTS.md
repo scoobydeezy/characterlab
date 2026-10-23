@@ -57,10 +57,11 @@ AFFECT full event/history COMPLETE105 roles/1436 prefixes/1331 appraisals;
 7916 historical checks,3993 reads:1713 prior exact matches/2280 no prior mutation,
 zero mismatches in this scope. Independent receipt/hash recount PASS; see
 workbench-affect-event-corpus-rev2/verification.json. No initial-origin inference.
-AFFECT full paired horizons RUNNING10278: first5/8 native terminal restores PASS.
-Its291-source freeze is live; prior event-corpus hold released only where not shared.
-Browser baseline11 and likelihood14 terminal/restore PASS; control RUNNING tab18/4229.
-See workbench-affect-pair-horizons-rev1. Full eight-pair browser/native gates remain.
+AFFECT full paired native horizons COMPLETE8/8:112 paired prefixes/1470 history
+checks, terminal restore/no-op continuation and independent frozen-original audit PASS.
+Keep291 source/asset bindings for remaining browser qualification. Baseline11,
+likelihood14/control14 terminal restores PASS3/8; feedback RUNNING tab18/4229.
+See workbench-affect-pair-horizons-rev1/native-verification.json. Full browser gate open.
 AFFECT persistent paired lifecycle mounted in Experiment: native3 tests PASS eight
 initial contrasts, main/supplement0/1/2 restore/continuation and partial-failure guards.
 Browser baseline/hidden0/1/2 six modes, unequal2/1, checkpoint1, Run/Pause1→2,

@@ -304,3 +304,33 @@ replay and paged diagnostic audits. Browser event-history interaction remains th
 separately documented bounded scope. Full player language, all paired browser
 horizons and integrated entry are still required. All18 conditional obligations and
 historical-source restrictions survive; no Campaign3 verdict or law changes.
+
+## All eight native paired horizons completed — 2026-10-23
+
+Session10278 exited0. `workbench-affect-pair-horizons-rev1/receipt.json` PASS all
+eight declared pairs/112 paired prefixes (224 branch-prefix observations),1470
+historical event/explanation checks, eight terminal authenticated paired restores
+and eight unchanged terminal no-op continuations. Each branch's state/save/output
+identities match the original native receipts at every prefix.
+
+`verify-affect-pair-horizons.mjs` independently authenticates the291 frozen sources,
+the exact eight-pair roster and every per-pair receipt. It compares all112 prefix
+appraisal reports with the earlier frozen eight-contrast reports restricted to the
+actual committed clock, preserving the first recorded difference and absent fields.
+It rechecks all original state/save/output hashes, complete horizons and historical
+check totals. `native-verification.json` PASS. This is an independent artifact audit,
+not a claim of an independently implemented runtime.
+
+Browser control14 terminal/restore now PASS (`browser-receipt-2.json`), including
+the original summary, both source revisions and all14 appraisal comparisons.
+Screenshot inspected. Together with baseline11 and likelihood14, this establishes
+three of eight browser terminal restores. Feedback is RUNNING in tab18/4229; the
+aggregate browser gate remains open. Retain the existing source/compiled-asset
+bindings until its remaining verifier calls are complete. No native process remains
+for this audit, but original Disposition replay, BatchV8 and full paged diagnostics
+remain live and source-bound.
+
+Research PASS preserves18 conditional obligations. Player disclosure, intermediate
+browser diagnostic coverage, full factor accounting, resource bounds and integrated
+Campaign4 entry remain separate required work. No Campaign3 verdict, psychological
+law selection, reduction or obligation disposition changes.
