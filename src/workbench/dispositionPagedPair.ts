@@ -1,3 +1,4 @@
+import {capturePackedDispositionPair,restorePackedDispositionPair,type DispositionPackedPairCheckpoint} from './dispositionPackedPairCheckpoint';
 import {DispositionPagedRun,type DispositionTextSelector} from './dispositionPagedAdapter';
 import {DISPOSITION_CONTRASTS} from './dispositionComparison';
 import {captureDispositionPair,restoreDispositionPair,type DispositionPairCheckpoint} from './dispositionPairCheckpoint';
@@ -11,6 +12,8 @@ export class DispositionPagedPair{
  private constructor(id:string,a:DispositionPagedRun,b:DispositionPagedRun){this.#id=id;this.#a=a;this.#b=b;}
  static async create(id:string){const spec=DISPOSITION_CONTRASTS.find(c=>c.id===id);if(!spec)throw Error('Unknown DISPOSITION comparison');const pair=new DispositionPagedPair(id,await DispositionPagedRun.create(spec.a),await DispositionPagedRun.create(spec.b));await pair.#refresh();return pair;}
  static async restore(input:DispositionPairCheckpoint){const checkpoint=structuredClone(input),[a,b]=await restoreDispositionPair(checkpoint,c=>DispositionPagedRun.restore(c),()=>{}),pair=new DispositionPagedPair(checkpoint.comparison,a,b);await pair.#refresh();return pair;}
+ static async restorePacked(input:DispositionPackedPairCheckpoint){const comparison=input.comparison,[a,b]=await restorePackedDispositionPair(input,c=>DispositionPagedRun.restore(c),()=>{}),pair=new DispositionPagedPair(comparison,a,b);await pair.#refresh();return pair;}
+ async packedCheckpoint(){this.#ready();this.#busy=true;try{return await capturePackedDispositionPair(this.#id,[this.#a,this.#b]);}finally{this.#busy=false;}}
  #ready(){if(this.#busy)throw Error('DISPOSITION pair command in flight');if(this.#failure)throw Error('DISPOSITION pair failed; restore or create a new pair');}
  #branch(branch:DispositionBranch){if(branch!=='a'&&branch!=='b')throw Error('Unknown DISPOSITION comparison branch');return branch==='a'?this.#a:this.#b;}
  summary(){if(this.#busy)throw Error('DISPOSITION pair command in flight');return structuredClone({...this.#view,failure:this.#failure});}

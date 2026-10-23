@@ -595,3 +595,38 @@ investigation. Source inspection shows two full hex checkpoints, structuredClone
 validation and full worker-to-main postMessage; memory causation is unmeasured.
 Next bound checkpoint size/copy lifetime and prepare a lower-copy transport without
 changing held sources. BatchV8/native paged diagnostics remain live and unchanged.
+
+2026-10-23 checkpoint transport correction: paired UI capture now compresses each
+native save sequentially into a gzip Blob. Branch A completes compression before
+B capture starts; full hex pairs are no longer cloned and posted to the main thread.
+The legacy checkpoint API remains available. The new versioned packed-pair wrapper
+restores branches sequentially through unchanged native identity/digest/prefix
+authentication. UI replacement remains atomic after both restores succeed.
+Streaming conversion uses bounded32768-byte chunks; decompression rejects declared
+size overrun, truncation and corrupt gzip. This is not a global heap bound.
+
+Verified285-record native save census: maximum48,814,745 bytes; terminal baseline
+44,252,262 and positive constitution48,814,745. These are native save counts, not
+diagnostic JSON sizes or heap measurements. Native packed capture0/1, exact original
+byte hashes/counts, restore1 and successor2 PASS. Four tests cover mutation detachment,
+corrupt/oversized input, partial restoration, duplicate busy commands and Blob worker
+transport. Initial stream generic failed TypeScript and is retained in revision1.
+Revision2 uses BufferSource with explicit ArrayBuffer-backed bounded chunk copies;
+all four tests, TypeScript/build629 and research/boundary pass. Both revisions have
+identical native result receipts. See workbench-disposition-packed-checkpoint-rev2.
+Browser qualification and corrected terminal retry are tracked separately; the
+original tab11 crash is not closed by the native or bounded transport result.
+
+Revision2 bounded browser PASS: compressed capture1, continuation2, restore1,
+exact original comparison/choice/history/ten identities and desktop width. Counts
+638135/743887 native bytes,11549/12985 compressed bytes. Browser history query
+initially targeted Experiment where its panel is absent; switched to Compare
+before capture. No state or checkpoint content was inferred from that timeout.
+Corrected terminal retry now RUNNING in tab29/4240, preview36029; new frozen324
+sources/171 build assets and original19-prefix oracle in paired-horizon-rev2.
+Native initial0 identities verified; restored1 after bounded check; retained
+Character diagnostic1. Wait for A18/B18, capture exact terminal comparison/history,
+verify retained prefix1 diagnostic/stale source, then compressed checkpoint18 and
+restore18. Do not claim terminal success until check-disposition-packed-horizon
+passes. No new current-source hold; immutable build/copies bind this browser run.
+All18 conditional obligations survive; integrated entry/resource gates remain.

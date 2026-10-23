@@ -1,0 +1,6 @@
+{
+  "status": "FAILED TYPECHECK",
+  "message": "TS2345: CompressionStream writable BufferSource is incompatible with ReadableStream<Uint8Array<ArrayBufferLike>>.",
+  "tests": "Three checkpoint tests and one worker test passed at runtime.",
+  "disposition": "Preserve this revision and finish its already-running bounded native audit. Correct the stream to BufferSource with explicit ArrayBuffer-backed bounded chunks, then repeat affected tests/build in revision2."
+}

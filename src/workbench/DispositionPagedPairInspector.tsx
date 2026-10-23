@@ -1,7 +1,7 @@
 import {useEffect,useRef,useState} from 'react';
 import {DispositionPagedPairWorkerClient as Client} from './dispositionPagedPairWorkerClient';
 import type {DispositionPagedPair,DispositionBranch} from './dispositionPagedPair';
-import type {DispositionPairCheckpoint} from './dispositionPairCheckpoint';
+import type {DispositionPackedPairCheckpoint} from './dispositionPackedPairCheckpoint';
 import type {DispositionTextSelector} from './dispositionPagedAdapter';
 import type {DispositionDiagnosticSelection} from './dispositionCanonicalInspection';
 import {DISPOSITION_CONTRASTS} from './dispositionComparison';
@@ -20,7 +20,7 @@ export function DispositionPagedPairInspector({active=true}:{active?:boolean}){
  const client=useRef<Client>(),alive=useRef(true),lock=useRef(false),stop=useRef(false);
  const [view,setView]=useState<View>(),[busy,setBusy]=useState(false),[error,setError]=useState('');
  const [contrast,setContrast]=useState('model/0/13'),[branch,setBranch]=useState<DispositionBranch>('a');
- const [checkpoint,setCheckpoint]=useState<DispositionPairCheckpoint>(),[diagnostics,setDiagnostics]=useState<Partial<Record<Mode,Envelope>>>({}),[page,setPage]=useState<{branch:DispositionBranch;value:Page}>();
+ const [checkpoint,setCheckpoint]=useState<DispositionPackedPairCheckpoint>(),[diagnostics,setDiagnostics]=useState<Partial<Record<Mode,Envelope>>>({}),[page,setPage]=useState<{branch:DispositionBranch;value:Page}>();
  const [mode,setMode]=useState<Mode>('Experiment'),[constitutionDraft,setConstitutionDraft]=useState(1);
  function navigate(next:Mode){stop.current=true;setMode(next);}
  useEffect(()=>{alive.current=true;return()=>{alive.current=false;stop.current=true;client.current?.dispose();};},[]);
@@ -42,7 +42,7 @@ export function DispositionPagedPairInspector({active=true}:{active?:boolean}){
  {(['a','b'] as const).map(b=><button key={b} disabled={blocked||view?.[b].complete} onClick={()=>void advance(b)}>Step branch {b.toUpperCase()}</button>)}</div>
  <p role="status" data-pair-status>{view?`Pair A${view.a.prefix} / B${view.b.prefix}`:'No pair created'} · {busy?'Working':view?.failure?'Failed':view?.a.complete&&view.b.complete?'Complete':'Ready'}</p><p>Pause finishes the current paired advancement. Unequal prefixes withhold comparisons until aligned.</p>
  {error&&<p role="alert">{error}</p>}{view?.failure&&<p role="alert">Last published comparison retained after failure: {view.failure}. Restore a checkpoint or create a pair before further inspection.</p>}
- <div hidden={mode!=='Experiment'}><button disabled={blocked} onClick={()=>void execute(async()=>{const next=await client.current!.checkpoint();if(alive.current)setCheckpoint(next);})}>Capture paired checkpoint</button><button disabled={busy||!checkpoint} onClick={()=>void execute(async()=>install(await Client.restore(checkpoint!)))}>Restore paired checkpoint</button><p data-pair-checkpoint>{checkpoint?`Captured ${checkpoint.comparison}: A${checkpoint.a.prefix} / B${checkpoint.b.prefix}.`:'No paired checkpoint captured.'}</p></div>
+ <div hidden={mode!=='Experiment'}><button disabled={blocked} onClick={()=>void execute(async()=>{const next=await client.current!.packedCheckpoint();if(alive.current)setCheckpoint(next);})}>Capture paired checkpoint</button><button disabled={busy||!checkpoint} onClick={()=>void execute(async()=>install(await Client.restorePacked(checkpoint!)))}>Restore paired checkpoint</button><p data-pair-checkpoint>{checkpoint?`Captured ${checkpoint.comparison}: A${checkpoint.a.prefix} / B${checkpoint.b.prefix}.`:'No paired checkpoint captured.'}</p>{checkpoint&&<p data-pair-checkpoint-size>Native save bytes A{checkpoint.a.saveBytes} / B{checkpoint.b.saveBytes}; compressed bytes A{checkpoint.a.blob.size} / B{checkpoint.b.blob.size}. In-session checkpoint; closing this tab discards it. Compression preserves exact native bytes and does not change the simulation.</p>}</div>
  {view&&<><div hidden={mode!=='Compare'}><p>{view.comparison.alignment}</p><p>{view.comparison.fieldEquality}</p><p>State equality: {String(view.comparison.stateEqual)} · mechanism projection equality: {String(view.comparison.mechanismProjectionEqual)}</p>
  <table style={{tableLayout:'fixed',overflowWrap:'anywhere'}}><caption>Aligned stored-field comparison</caption><thead><tr><th>Root / path</th><th>A present</th><th>B present</th><th>Readable equality</th><th>Exact source</th></tr></thead><tbody>{view.comparison.fields.map(f=><tr key={f.path}><td>{f.root} / {f.path}</td><td>{String(f.aPresent)}</td><td>{String(f.bPresent)}</td><td>{String(f.equal)}</td><td>{(['a','b'] as const).map(b=>{const source=b==='a'?f.aSource:f.bSource;return source?<button key={b} disabled={blocked} onClick={()=>void load(b,source.saveHash,source.selector)}>Open {b.toUpperCase()} root {f.root}</button>:<span key={b}>{b.toUpperCase()} absent </span>;})}</td></tr>)}</tbody></table>
  <details><summary>Exact comparison metadata</summary><pre className="exact" data-pair-comparison>{JSON.stringify(view.comparison,null,2)}</pre></details><fieldset disabled={blocked}><legend>Recorded choice history</legend><DispositionChoiceComparisonPanel report={view.choices} onEvent={(b,id)=>void inspectChoice(b==='A'?'a':'b',id)}/></fieldset><DispositionPagedSummaryPanel view={view} disabled={blocked}/></div>

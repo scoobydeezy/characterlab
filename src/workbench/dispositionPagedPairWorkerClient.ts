@@ -1,3 +1,4 @@
+import type {DispositionPackedPairCheckpoint} from './dispositionPackedPairCheckpoint';
 import type {DispositionPagedPair,DispositionBranch} from './dispositionPagedPair';
 import type {DispositionPairCheckpoint} from './dispositionPairCheckpoint';
 import type {DispositionTextSelector} from './dispositionPagedAdapter';
@@ -10,6 +11,8 @@ export class DispositionPagedPairWorkerClient{
  async #call<T>(operation:string,data:object={}):Promise<T>{if(this.#disposed)throw Error('DISPOSITION pair worker disposed');if(this.#busy)throw Error('DISPOSITION pair worker command already in flight');this.#busy=true;try{const id=++this.#next;return await new Promise<T>((resolve,reject)=>{this.#pending.set(id,{resolve:value=>resolve(value as T),reject});try{this.#worker.postMessage({id,operation,...data});}catch(e){this.#pending.delete(id);reject(e instanceof Error?e:new Error(String(e)));}});}finally{this.#busy=false;}}
  static async create(comparison:string){const client=new DispositionPagedPairWorkerClient();try{client.#view=await client.#call('create',{comparison});return client;}catch(e){client.dispose();throw e;}}
  static async restore(checkpoint:DispositionPairCheckpoint){const client=new DispositionPagedPairWorkerClient();try{client.#view=await client.#call('restore',{checkpoint});return client;}catch(e){client.dispose();throw e;}}
+ static async restorePacked(packedCheckpoint:DispositionPackedPairCheckpoint){const client=new DispositionPagedPairWorkerClient();try{client.#view=await client.#call('restorePacked',{packedCheckpoint});return client;}catch(e){client.dispose();throw e;}}
+ packedCheckpoint(){return this.#call<DispositionPackedPairCheckpoint>('packedCheckpoint');}
  summary(){return structuredClone(this.#view);}
  async advance(branch:DispositionBranch|'both'='both'){const result=await this.#call<{moved:boolean;summary:View}>('advance',{branch});this.#view=result.summary;return result.moved;}
  diagnostic(branch:DispositionBranch,saveHash:string,selection:DispositionDiagnosticSelection){return this.#call<ReturnType<DispositionPagedPair['diagnostic']>>('diagnostic',{branch,saveHash,selection});}

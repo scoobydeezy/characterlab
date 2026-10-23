@@ -114,3 +114,12 @@ Do not edit these until terminal verification. No full-corpus link PASS yet.
 LOCAL DISPOSITION uses the accepted separate player projection and original
 trace ordering, with no runtime, law, ownership or research-obligation change.
 All18 conditional obligations and full integrated Campaign4 entry remain open.
+
+2026-10-23: full occurrence-link audit47795 COMPLETE, exit0. All174 programs/
+360 prefixes/70 cumulative player displays match original native identities and
+original player reports, exact emission positions and stable historical event
+identities. Independent artifact reconciliation PASS280 frozen sources/copies.
+See workbench-decision-player-trace-corpus-rev1/receipt.json and verification.json.
+Player-link-only source hold released; overlapping277/166 native holds remain.
+Bounded browser scope stays1/continued1->2, not full corpus browser qualification.
+No expansion of player disclosure or integrated-entry acceptance.

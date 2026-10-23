@@ -53,6 +53,16 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 ## Active direction
 
 **Current routing (2026-10-23):** Observability Workbench IN PROGRESS, owner-authorized.
+Packed paired checkpoint correction mounted: sequential gzip Blob transport, exact
+native0/1 capture/restore1/successor2 and four tests PASS. Rev1 TypeScript stream
+generic failure retained; rev2 corrected chunks/build629/research PASS. Native285
+save census max48,814,745 bytes, not heap. Browser1->2->restore1 original comparison/
+choices/history/ten identities PASS. See workbench-disposition-packed-checkpoint-rev2.
+Terminal retry RUNNING tab29/4240 from restored1, retained diagnostic1; frozen324
+sources/171 assets in workbench-disposition-paired-horizon-rev2. Capture18/restore18
+still due; original tab11 crash preserved. Mark all workbenchLiveTabs1..29.
+DECISION occurrence audit47795 COMPLETE174/360/70, independent280-source/history
+verification PASS. Its source hold released; Batch277/paged diagnostic166 remain.
 Disposition paired terminal A18/B18 verified original comparison/ten hashes/choices/
 scalar histories and retained initial diagnostic. Capture checkpoint CRASHED tab11/
 4223 before restore; no terminal-plus-restore PASS, heap cause unmeasured. Preserve
