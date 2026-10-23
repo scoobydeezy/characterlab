@@ -90,10 +90,15 @@ Full paged diagnostic audit23320 RUNNING:15 programs/285 prefixes target; baseli
 All ten diagnostic kinds, scalar history, choices and historical reports checked.
 THREE live source bindings now: this audit166, original replay158 and BatchV8 277.
 Do not modify bound sources or restart quiet writers. No terminal PASS yet.
+Paged semantic event filters PASS baseline2/20 headers: category, keyboard phase
+query, no-match/reset and retained event19/five hashes. Build605/research PASS.
+See paged-event-filter-rev1, verifier-v2; original global-footer capture failure
+retained. Standalone scope only; broader paired/accessibility qualification due.
 Only current live browser handles: workbenchLiveTabs=[longTab(tab1),
 dispositionPairTab(tab2/4215),recoveredBatchTab(tab3/4215),
 dispositionModesTab(tab4/4216),dispositionHistoryTab(tab5/4217),
-dispositionChoicesTab(tab6/4218),dispositionSummaryTab(tab7/4219)]. Mark each every turn.
+dispositionChoicesTab(tab6/4218),dispositionSummaryTab(tab7/4219),
+dispositionFilterTab(tab8/4220)]. Mark each every turn.
 Older tab references below describe retained evidence, not live sessions.
 SEM coverage ledger reconciled to retained rev3:100 scoped vector pointers,
 31 negative witnesses/10 acceptance items; zero complete Workbench vectors inferred.

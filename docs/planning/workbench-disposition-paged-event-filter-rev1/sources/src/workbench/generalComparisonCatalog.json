@@ -1,0 +1,602 @@
+{
+  "version": "general-comparison-catalog/0.1",
+  "source": {
+    "path": "docs/planning/general-attention-public-comparisons-rev1/RESULTS.json",
+    "sha256": "f26e1f0b738e0fc1bd27afc3c852f2a24e9df92fbdbb7521b24b0b707dfb8da2"
+  },
+  "freeze": {
+    "path": "docs/planning/campaign3-general-attention-model-rev2/FREEZE.json",
+    "sha256": "27ba4b12edda9c284ef03bf4dd52744f395639429f16077dcf6a0f28c05ef8c4"
+  },
+  "seed": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20",
+  "models": [
+    {
+      "recipe": "baseline",
+      "modelHash": "38c13209db2a9d3fbdb5fcf01c4963ad5c678937f355bdab35be85e1cd2be503",
+      "runHash": "fa864707e65f6152788bed12d6b47502b5388c00883e035ab9533c6f2c0549fc"
+    },
+    {
+      "recipe": "budget-Independent-1/1",
+      "modelHash": "0855fa718b9582e4da687af2c2a203018fd610d2c2984f896515f8087184d3ac",
+      "runHash": "544f93a085d7bbb16570f59b939d9e8beaee8269c38e997d827b93f76001cae2"
+    },
+    {
+      "recipe": "budget-HistoricalShared-1/5",
+      "modelHash": "b043a843fabbdf8e3c63e97bfcd882e259cdad5b687271bd1bd4547904944d43",
+      "runHash": "760e727c13e6ddaa0d1c9ab1ece0276a58b650c7da29df8525e3a2bfd6a361ad"
+    },
+    {
+      "recipe": "budget-HistoricalShared-1/1",
+      "modelHash": "da346e91eb57475562075627ae11a8e51ea1088b08b798135e765cf7924554e0",
+      "runHash": "5c145308338a1981d0695ea123bdaba30d3ffc0252c3b2a3d28741f2cb292103"
+    },
+    {
+      "recipe": "budget-HistoricalHybrid-1/5",
+      "modelHash": "70c84f5bc8e0623d78681418a26d9886718fa0e9386dd51ac6174afccdcb4cda",
+      "runHash": "eee4dc3c5481e5a5405c4dffb10323ca2bdf2feb609fa995b1592f6e8332c7b6"
+    },
+    {
+      "recipe": "budget-HistoricalHybrid-1/1",
+      "modelHash": "68de2058e2e5e1f21a77b39411b4d5cbd90484ab377e8586a0be72e311114cad",
+      "runHash": "9473984f54b081bf41f9be9952967272a1707dfb1285454d1f33a4b6a6072786"
+    },
+    {
+      "recipe": "budget-RetiredFlat-1/5",
+      "modelHash": "2fd353002dbdbbf457ec81c0dd2399aea23350a6af44519fd2e590f3a28ee2af",
+      "runHash": "4a834f1d54fc87b808db4a65c1f2164a9e65be2ef779de201db2e1523b16ee5b"
+    },
+    {
+      "recipe": "budget-RetiredFlat-1/1",
+      "modelHash": "5bf4534c530d0a797348ed678b276ed377367a3a753e9f2a32d0c04108833ddb",
+      "runHash": "f0d508bddc3471ec37b35e41c8681256344aac7242d8d50d0399b078a248610b"
+    },
+    {
+      "recipe": "allocation-disabled",
+      "modelHash": "643783d6143323747d4abe59c8418feb3cbf01b8cac9f7bf36b8724f1d499725",
+      "runHash": "0cb54f8f77aecc2f03a73ea116b0ecef70f8dca8d0449371b7556e3c29a5935d"
+    },
+    {
+      "recipe": "allocation-spatial",
+      "modelHash": "288c215c14e5aef5b8e8ae7fc0ffd6f2a15dfa39531077b53f1f226c2bb5d553",
+      "runHash": "0a65a5b58f1a02db1b8bc39cf436ff25757304856d499902ebb8e17bdbb8f6b8"
+    },
+    {
+      "recipe": "feedback-encoding",
+      "modelHash": "f730332aed9661bb08c7898e73eee9fd676e46f24394d8843811d03b87f73ad1",
+      "runHash": "69cb5bf96ccd4ca1818d585473c45c6e999facf2ed50ec07393b3add90acfdf4"
+    },
+    {
+      "recipe": "feedback-retrieval",
+      "modelHash": "dfab151fead0bb5476052060afa5df8efe115d86a9811410d667bca91558baf0",
+      "runHash": "647263745fcf975b1d4fd329c61ba04d4eb9ab1b8137faebe9635df4dff8e495"
+    },
+    {
+      "recipe": "feedback-both",
+      "modelHash": "d3044c1cb2fb3dafdb073da0bf743d3221a52536b97cf83225d286c6e3b57b21",
+      "runHash": "9e52ed2b0650a63cf30a6fed512bbd2f0001766a6c8b31bb591ef5c19f984346"
+    },
+    {
+      "recipe": "local-access",
+      "modelHash": "008ec4475ad1ee59f20f2f20cfd79a36912eb4628f2fe2478fb46cfb545da24e",
+      "runHash": "720bb6220690a96cd6b5d45275b8babbd0f6b7d13a6379aad4984840c93a7743"
+    },
+    {
+      "recipe": "association-decay",
+      "modelHash": "83e3e15e98a82017ffe9c01fe61f644039c12be11782f7e3337492ea2d9eaf4d",
+      "runHash": "c3361290698b67428d8d37234afc1948172f0a3f249edf473ba7f9608aa556be"
+    },
+    {
+      "recipe": "presentation-no-decay",
+      "modelHash": "01b019c4e8c1ee044d9390cf6aaa175c027eceb7f1c6bf20c27a59efb8d93ac2",
+      "runHash": "a7591930134fe047447d418119b6c3e5833b754943133b38097e381b8d7c34bc"
+    },
+    {
+      "recipe": "recall-k0",
+      "modelHash": "2bab0e8cdd376089d5792a65535aa212e0b65371c89c868868afd0d34aec4034",
+      "runHash": "573145e680fbddf65c61ec5adb99ca75e8a73413b372e50e014186a4adf50ebf"
+    },
+    {
+      "recipe": "recall-k1",
+      "modelHash": "0b989fbf2ed43641b9dd87f5ed86c22e87773a7064f3e6541b21aaec4a8f7788",
+      "runHash": "75cc6044db2c9c6f532dab581b363ba2746b860ad57707737b6ca7bc41aed1e9"
+    },
+    {
+      "recipe": "select-k0",
+      "modelHash": "06ee32ab514d320b1e68e38b98b51076f6b73649601cce95186cf1abeaf8fd8b",
+      "runHash": "631b94e6f985aca10a06d8077a086233050f632aa8eab27476fdd828425b09af"
+    },
+    {
+      "recipe": "select-k1",
+      "modelHash": "463706dacd3051627733b3874b5b9760476fbd663d1c63cf4005030496fe8175",
+      "runHash": "02ae58ea52566b24ff9a481eb13b6794d71b80fd5ba042991e6f78b92dd2380e"
+    },
+    {
+      "recipe": "select-k2",
+      "modelHash": "e9fd5cdc73d8fdd13a6e7f9d2568dea20ed11980729f5df4fdc8001175fc21f3",
+      "runHash": "569ca06ed38c75388d9d68eaae4cecb91d8ca184f6bb2ae9c6e6d2ce6453c2bd"
+    },
+    {
+      "recipe": "select-equal-k2",
+      "modelHash": "c2637794f48ffff594eab058ae60376d657057ef72d75581dc5e9b71a22dfbd8",
+      "runHash": "b6f624eda5469dbd83c641dac9ab7e1a80d7ad5e6ed9e79de1045551951208c3"
+    },
+    {
+      "recipe": "source-capacity1",
+      "modelHash": "49967e500eac80e5c313ea6e3e27ad2ca0ee386160af16644d100fad14fc765e",
+      "runHash": "197ba0c8786933f018cfb1be8f95ee9374ef2e10926516af1048264d55ee74ea"
+    },
+    {
+      "recipe": "source-no-prediction-access",
+      "modelHash": "b2eaaa01fd01827ffa498830c5f8042b1ba1ca3b5806318da5d40d2293bbc840",
+      "runHash": "71463256d1fb3dd10739a72c80ded432d5b8d6dacb5d7c14248c97a029f0ad38"
+    },
+    {
+      "recipe": "source-no-task-access",
+      "modelHash": "869c85ffc151b5d19e9d87ce134415144c2a990d5b48540bc1b2a37fe1f72a1c",
+      "runHash": "efabe9c0d54150d4f9bbd5ec2d48f6e40b459872415e6fc201595d4da3a5db1c"
+    },
+    {
+      "recipe": "source-denied-probe",
+      "modelHash": "04716c8c43723441385394bd455aa833695d9e43fbafeca4cdee3887fb388bcc",
+      "runHash": "10f023413ad7d85010615b55cdcc49f80273b092bf514aea8f1b390a6451f410"
+    },
+    {
+      "recipe": "source-zero-concern",
+      "modelHash": "a69b4cbacea0e10766437dd88912291eeaa8d04b8aa4769b9f5c6ed886ca14f1",
+      "runHash": "6e6d4bd399ea8d8ae67a80a95bcf2de57c56e1d53520a4df3a73b2d77c7e28b0"
+    },
+    {
+      "recipe": "source-above-target",
+      "modelHash": "452e0318187cf225d1fc72face638f7ceb29a1178722afc8886c0119ac431ac0",
+      "runHash": "95f0169b666bbf5a8311c486fbce0f2881e2adf7f5611ff674586bb978052813"
+    },
+    {
+      "recipe": "denied-port",
+      "modelHash": "c7f6499ffc04af37f553652d9ff23906a78ea735e49258ed7b549503896fe43f",
+      "runHash": "24197d9bb4f2fec7ebd61aa6461a58d5afc4df54319532c497a3c8aee4ce7610"
+    },
+    {
+      "recipe": "unresolved-role",
+      "modelHash": "fe3e2b7f056cdc664b8e3f44ad41848a8319dc4fb095a76fbf4b560e91b6b447",
+      "runHash": "bbf757c26fc708e523a31bada015b56e2399197bd60c6c146db2865cb4669075"
+    },
+    {
+      "recipe": "credit-age-only",
+      "modelHash": "fd7cfdab9b11c6c233c4c97e5aac1f819bcd15b314f80a25a27a6cffda59c586",
+      "runHash": "7afcbdf72f4fb955f1d5fa989d497fcbeadc511950a6650f5707705a8ac1bd05"
+    },
+    {
+      "recipe": "credit-use-only",
+      "modelHash": "44b68d9499dce86638f1e29a839db7cd73e13c87f531e954626cbcf6ef7aed89",
+      "runHash": "343ff434b40421e8ba5a1ee877ed0bc70f116d98a2ae39da406b70186533c767"
+    },
+    {
+      "recipe": "credit-shared-protection",
+      "modelHash": "9cd72ffe7eea88c0a3305204fd4a6ff7614dcbb9083d7a4f3d97bcd4a63ee6fb",
+      "runHash": "ffc580c65017f9d9425fedc7dc258d5a9d5f51c4da4b2a49bff9f0bcf60971fe"
+    },
+    {
+      "recipe": "credit-significance-first",
+      "modelHash": "3f98fbd91a110f97137d63929befaf935a422fae9ee67d85ba60010e4e49b0aa",
+      "runHash": "6695c54532757c1e298e68d855a3b124fc59bdcaccdf3fef64e6f411cc2b266b"
+    },
+    {
+      "recipe": "source-consequence-lane",
+      "modelHash": "f3776fd2dffcf97fde9dc022a66b13319a1251e3834726d1c994984f67d0d02d",
+      "runHash": "c8b86b23a398f292fb532eee4aca135c851c51195b4640e16a916ad3dc8b416d"
+    },
+    {
+      "recipe": "footprint-Independent-sparse",
+      "modelHash": "2ca2f53c7fb3da2f85e7ad5ba8abbbbc323ef98858b036acb221be9cc9d00585",
+      "runHash": "8f732f3819ece710059c45c276dbf6691d22206b92de2bec9ced1d71254a9792"
+    },
+    {
+      "recipe": "footprint-Independent-dense",
+      "modelHash": "f1a7dcae16e4a617c7b2d721a13fb925c9433b4e40a1fcae8ea788006a36a491",
+      "runHash": "f8275fd4b61a5c082ef20087c94f51093a6ea9b9de2b9f4cd126ebb34ba1c4d5"
+    },
+    {
+      "recipe": "footprint-HistoricalShared-sparse",
+      "modelHash": "c4cffa7fe5048b2b8f53c8b69a2f41a58ad68b4971f16db68d39c62b3e218bbc",
+      "runHash": "8549f7e4182d30017b641ba41a637e486e6cb40dbdf06db606d4b57a5b134167"
+    },
+    {
+      "recipe": "footprint-HistoricalShared-dense",
+      "modelHash": "79713336b29be599eb281ccef2b7ee60406ba25f4f265ffbcf7aa228b8a0b997",
+      "runHash": "f14c78f323b7aa23b7b5d499beb9b2651713c78292578bc2b7c1ff1a62784147"
+    },
+    {
+      "recipe": "footprint-HistoricalHybrid-sparse",
+      "modelHash": "152527d795bf9637a8f30e48b3cfbf765f347b7ddb5fd38e3ccd7fdc0254fe35",
+      "runHash": "113a5614cf235363ad36cf9a4c21e89ea3855bd7954c4003c148e2717b3e40eb"
+    },
+    {
+      "recipe": "footprint-HistoricalHybrid-dense",
+      "modelHash": "c0fa1fb152756140550c723a1a773fbfe1c8ceabe7e2abcc10d2a9ef830c57f7",
+      "runHash": "395c4e628d5d55e25a4672fc99a5f66c5e30309b4f26284be1606d24031b170d"
+    },
+    {
+      "recipe": "footprint-RetiredFlat-sparse",
+      "modelHash": "1aeca4b386cc5558020907f75015c8a75bb8511bfaed70948b9613bdf8597f1b",
+      "runHash": "7e782b8766529ef2926b0cf64aae6214f75f6573197f66dce24e18916c64376f"
+    },
+    {
+      "recipe": "footprint-RetiredFlat-dense",
+      "modelHash": "046650331edaea7b94ce4c6026a582847b1c0e62957adc95634eabf936faa53e",
+      "runHash": "a8b6fe32a89b2426b9bfa067eb27e979a3b228c9afd59be58006e1805b37d310"
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "ga-pair-01",
+      "control": "baseline",
+      "candidate": "budget-Independent-1/1",
+      "changed": [
+        "encoding.law",
+        "encoding.floor"
+      ],
+      "alignment": "Same committed instant; exact state paths and association identities only. Event occurrence IDs are not cross-run correspondence.",
+      "originalComparisonDigest": "39274e5873025468936fec6dbcfde9f72c08ec031d64fdc9f65732e9ae4c9b0a"
+    },
+    {
+      "id": "ga-pair-02",
+      "control": "baseline",
+      "candidate": "budget-HistoricalShared-1/5",
+      "changed": [
+        "encoding.law",
+        "encoding.floor"
+      ],
+      "alignment": "Same committed instant; exact state paths and association identities only. Event occurrence IDs are not cross-run correspondence.",
+      "originalComparisonDigest": "e989fd09ff803c5829c91a0a5854de6142be69e4edca62663950660d0837e483"
+    },
+    {
+      "id": "ga-pair-03",
+      "control": "baseline",
+      "candidate": "budget-HistoricalShared-1/1",
+      "changed": [
+        "encoding.law",
+        "encoding.floor"
+      ],
+      "alignment": "Same committed instant; exact state paths and association identities only. Event occurrence IDs are not cross-run correspondence.",
+      "originalComparisonDigest": "92ae2109f92c4ea695ee78f49138d3e7b3ae1c2a2d90c26be3a4248a4be0775d"
+    },
+    {
+      "id": "ga-pair-04",
+      "control": "baseline",
+      "candidate": "budget-HistoricalHybrid-1/5",
+      "changed": [
+        "encoding.law",
+        "encoding.floor"
+      ],
+      "alignment": "Same committed instant; exact state paths and association identities only. Event occurrence IDs are not cross-run correspondence.",
+      "originalComparisonDigest": "f46c4a15a21bab8b433e0f7dda6958881ec3702b76473fa0837c5191f216c680"
+    },
+    {
+      "id": "ga-pair-05",
+      "control": "baseline",
+      "candidate": "budget-HistoricalHybrid-1/1",
+      "changed": [
+        "encoding.law",
+        "encoding.floor"
+      ],
+      "alignment": "Same committed instant; exact state paths and association identities only. Event occurrence IDs are not cross-run correspondence.",
+      "originalComparisonDigest": "abf7484ab0fe952093ed4c4f8c3c8e2b891d754b2ef125ac229ad2b8017117a4"
+    },
+    {
+      "id": "ga-pair-06",
+      "control": "baseline",
+      "candidate": "budget-RetiredFlat-1/5",
+      "changed": [
+        "encoding.law",
+        "encoding.floor"
+      ],
+      "alignment": "Same committed instant; exact state paths and association identities only. Event occurrence IDs are not cross-run correspondence.",
+      "originalComparisonDigest": "93e588fc73f0701df968b9adc87b793646aeb21e73c95435fdd38bab67a46f28"
+    },
+    {
+      "id": "ga-pair-07",
+      "control": "baseline",
+      "candidate": "budget-RetiredFlat-1/1",
+      "changed": [
+        "encoding.law",
+        "encoding.floor"
+      ],
+      "alignment": "Same committed instant; exact state paths and association identities only. Event occurrence IDs are not cross-run correspondence.",
+      "originalComparisonDigest": "d61ad6c78faea990a2d9f753a809544b02bc35151df0565567707da83ceb1fb5"
+    },
+    {
+      "id": "ga-pair-08",
+      "control": "baseline",
+      "candidate": "allocation-disabled",
+      "changed": [
+        "encoding.allocation"
+      ],
+      "alignment": "Same committed instant; exact state paths and association identities only. Event occurrence IDs are not cross-run correspondence.",
+      "originalComparisonDigest": "6ba2274bc663807454d7208caa64fc6fcb50df4272a123f20977ba198de79d8a"
+    },
+    {
+      "id": "ga-pair-09",
+      "control": "baseline",
+      "candidate": "allocation-spatial",
+      "changed": [
+        "encoding.allocation"
+      ],
+      "alignment": "Same committed instant; exact state paths and association identities only. Event occurrence IDs are not cross-run correspondence.",
+      "originalComparisonDigest": "8c587621c3d0572f5fc083e7cfd00b6d89a4d194f4bad4fe7ce70ef3b4497879"
+    },
+    {
+      "id": "ga-pair-10",
+      "control": "allocation-spatial",
+      "candidate": "feedback-encoding",
+      "changed": [
+        "feedback.encoding"
+      ],
+      "alignment": "Same committed instant; exact state paths and association identities only. Event occurrence IDs are not cross-run correspondence.",
+      "originalComparisonDigest": "5099b50c3958e9284a586ed65533706941f55cc93a704b48d81960b47a4403d8"
+    },
+    {
+      "id": "ga-pair-11",
+      "control": "allocation-spatial",
+      "candidate": "feedback-retrieval",
+      "changed": [
+        "feedback.retrieval"
+      ],
+      "alignment": "Same committed instant; exact state paths and association identities only. Event occurrence IDs are not cross-run correspondence.",
+      "originalComparisonDigest": "7df97562c31fc129c2181b721db17b3a6a950a6328bd12ba35638dfac25aff50"
+    },
+    {
+      "id": "ga-pair-12",
+      "control": "feedback-encoding",
+      "candidate": "feedback-both",
+      "changed": [
+        "feedback.retrieval"
+      ],
+      "alignment": "Same committed instant; exact state paths and association identities only. Event occurrence IDs are not cross-run correspondence.",
+      "originalComparisonDigest": "aaed21b784f943a14548632606df0478f0d2e9ca2255cb6a5dfdd60c1ac31318"
+    },
+    {
+      "id": "ga-pair-13",
+      "control": "baseline",
+      "candidate": "local-access",
+      "changed": [
+        "access.beta"
+      ],
+      "alignment": "Same committed instant; exact state paths and association identities only. Event occurrence IDs are not cross-run correspondence.",
+      "originalComparisonDigest": "0762b0260f9d251915bae12927f5e27cf95fa98b9f14e624bfeb847332228bbe"
+    },
+    {
+      "id": "ga-pair-14",
+      "control": "baseline",
+      "candidate": "association-decay",
+      "changed": [
+        "association.decay"
+      ],
+      "alignment": "Same committed instant; exact state paths and association identities only. Event occurrence IDs are not cross-run correspondence.",
+      "originalComparisonDigest": "b30f0eee08728f795709fb6762af26a73082bda0afee6a21f3951c129cfced92"
+    },
+    {
+      "id": "ga-pair-15",
+      "control": "baseline",
+      "candidate": "presentation-no-decay",
+      "changed": [
+        "access.decay"
+      ],
+      "alignment": "Same committed instant; exact state paths and association identities only. Event occurrence IDs are not cross-run correspondence.",
+      "originalComparisonDigest": "a4264a90b5412f0276745964cce25588c276b342ae4a61c114010144629f9cfd"
+    },
+    {
+      "id": "ga-pair-16",
+      "control": "baseline",
+      "candidate": "recall-k0",
+      "changed": [
+        "access.capacity"
+      ],
+      "alignment": "Same committed instant; exact state paths and association identities only. Event occurrence IDs are not cross-run correspondence.",
+      "originalComparisonDigest": "3036ac003713dac7023504603abf60f3c65631ada5469159b9c751ce48c75800"
+    },
+    {
+      "id": "ga-pair-17",
+      "control": "baseline",
+      "candidate": "recall-k1",
+      "changed": [
+        "access.capacity"
+      ],
+      "alignment": "Same committed instant; exact state paths and association identities only. Event occurrence IDs are not cross-run correspondence.",
+      "originalComparisonDigest": "5f35056c0dbd5952507eeda147edc7579599f25314a422eb8d51201e6697bca4"
+    },
+    {
+      "id": "ga-pair-18",
+      "control": "baseline",
+      "candidate": "select-k0",
+      "changed": [
+        "selection.algorithm",
+        "selection.capacity"
+      ],
+      "alignment": "Same committed instant; exact state paths and association identities only. Event occurrence IDs are not cross-run correspondence.",
+      "originalComparisonDigest": "e91aacefbda4354a441943de5c9b9dd2fbe46ac8b57f09bf7657a5a8987b3802"
+    },
+    {
+      "id": "ga-pair-19",
+      "control": "baseline",
+      "candidate": "select-k1",
+      "changed": [
+        "selection.algorithm",
+        "selection.capacity"
+      ],
+      "alignment": "Same committed instant; exact state paths and association identities only. Event occurrence IDs are not cross-run correspondence.",
+      "originalComparisonDigest": "81df83aeab61996a7becc8ccfa6055c97da61d6267daf369a8b69884e428337f"
+    },
+    {
+      "id": "ga-pair-20",
+      "control": "baseline",
+      "candidate": "select-k2",
+      "changed": [
+        "selection.algorithm",
+        "selection.capacity"
+      ],
+      "alignment": "Same committed instant; exact state paths and association identities only. Event occurrence IDs are not cross-run correspondence.",
+      "originalComparisonDigest": "8d68aa07f8d3cb8cd0397e314ed164ac174c02f9967b2443286d6d30292fbb5b"
+    },
+    {
+      "id": "ga-pair-21",
+      "control": "select-k2",
+      "candidate": "select-equal-k2",
+      "changed": [
+        "selection.algorithm"
+      ],
+      "alignment": "Same committed instant; exact state paths and association identities only. Event occurrence IDs are not cross-run correspondence.",
+      "originalComparisonDigest": "902244ebc52501ed0cc11157bf0aad0972f5bba473d3920e1e226b849b01e0d8"
+    },
+    {
+      "id": "ga-pair-22",
+      "control": "feedback-both",
+      "candidate": "source-capacity1",
+      "changed": [
+        "source.capacity"
+      ],
+      "alignment": "Same committed instant; exact state paths and association identities only. Event occurrence IDs are not cross-run correspondence.",
+      "originalComparisonDigest": "b3f072301b925440ae15e67443c1bda5e3e9b842a70a695eeade40a60f6750f3"
+    },
+    {
+      "id": "ga-pair-23",
+      "control": "feedback-both",
+      "candidate": "source-no-prediction-access",
+      "changed": [
+        "source.predictionAccess"
+      ],
+      "alignment": "Same committed instant; exact state paths and association identities only. Event occurrence IDs are not cross-run correspondence.",
+      "originalComparisonDigest": "188265218372e83f98f6dd131503faba719bf43ad884cab349fa49ff09279516"
+    },
+    {
+      "id": "ga-pair-24",
+      "control": "feedback-both",
+      "candidate": "source-no-task-access",
+      "changed": [
+        "source.taskAccess"
+      ],
+      "alignment": "Same committed instant; exact state paths and association identities only. Event occurrence IDs are not cross-run correspondence.",
+      "originalComparisonDigest": "cd7e1cf1c14140e102641f02acc8db39c3f84d3e583788f180f672f504e6b5d2"
+    },
+    {
+      "id": "ga-pair-25",
+      "control": "feedback-both",
+      "candidate": "source-denied-probe",
+      "changed": [
+        "source.probePermitted"
+      ],
+      "alignment": "Same committed instant; exact state paths and association identities only. Event occurrence IDs are not cross-run correspondence.",
+      "originalComparisonDigest": "59625101ffa51147d3c8f0019eeb98084f501599b0c205377794dc41ca461793"
+    },
+    {
+      "id": "ga-pair-26",
+      "control": "feedback-both",
+      "candidate": "source-zero-concern",
+      "changed": [
+        "source.regReference"
+      ],
+      "alignment": "Same committed instant; exact state paths and association identities only. Event occurrence IDs are not cross-run correspondence.",
+      "originalComparisonDigest": "7bf14edad60bbd65875da70e96ded3cb19cf360b65087deca05086751f006a74"
+    },
+    {
+      "id": "ga-pair-27",
+      "control": "feedback-both",
+      "candidate": "source-above-target",
+      "changed": [
+        "source.regReference"
+      ],
+      "alignment": "Same committed instant; exact state paths and association identities only. Event occurrence IDs are not cross-run correspondence.",
+      "originalComparisonDigest": "80e60f6b3920f8a092b8a415fb967bb9d83c9f7e466623957eea9ab86a2f39bb"
+    },
+    {
+      "id": "ga-pair-28",
+      "control": "allocation-spatial",
+      "candidate": "denied-port",
+      "changed": [
+        "source.ports.0.detected"
+      ],
+      "alignment": "Same committed instant; exact state paths and association identities only. Event occurrence IDs are not cross-run correspondence.",
+      "originalComparisonDigest": "93a62428f2141f880177cec627b8f684d2d885a8e33e6366178904ecbe90604b"
+    },
+    {
+      "id": "ga-pair-29",
+      "control": "allocation-spatial",
+      "candidate": "unresolved-role",
+      "changed": [
+        "source.ports.0.role"
+      ],
+      "alignment": "Same committed instant; exact state paths and association identities only. Event occurrence IDs are not cross-run correspondence.",
+      "originalComparisonDigest": "eb9cc710bbe0501173ad2d5372b0786604224fe4fd327212a73d461c10d2467b"
+    },
+    {
+      "id": "ga-pair-30",
+      "control": "footprint-Independent-sparse",
+      "candidate": "footprint-Independent-dense",
+      "changed": [
+        "permitted nonfocal participant count"
+      ],
+      "alignment": "same focal Actor role/position and later cue; opaque occurrence IDs remain trace-side",
+      "originalComparisonDigest": "df8949c686114faf9d2c84f3f3fe988da28711d6bca51f38de15cfbbea1477fa"
+    },
+    {
+      "id": "ga-pair-31",
+      "control": "footprint-HistoricalShared-sparse",
+      "candidate": "footprint-HistoricalShared-dense",
+      "changed": [
+        "permitted nonfocal participant count"
+      ],
+      "alignment": "same focal Actor role/position and later cue; opaque occurrence IDs remain trace-side",
+      "originalComparisonDigest": "edca2da2147e8949c4b2ab831b6e258944080f899c386e9b6b095fe816636ec7"
+    },
+    {
+      "id": "ga-pair-32",
+      "control": "footprint-HistoricalHybrid-sparse",
+      "candidate": "footprint-HistoricalHybrid-dense",
+      "changed": [
+        "permitted nonfocal participant count"
+      ],
+      "alignment": "same focal Actor role/position and later cue; opaque occurrence IDs remain trace-side",
+      "originalComparisonDigest": "004ff1f5adaf20f138cbb571bc35eea7151e7849ab0273a48be7828168c0fa12"
+    },
+    {
+      "id": "ga-pair-33",
+      "control": "footprint-RetiredFlat-sparse",
+      "candidate": "footprint-RetiredFlat-dense",
+      "changed": [
+        "permitted nonfocal participant count"
+      ],
+      "alignment": "same focal Actor role/position and later cue; opaque occurrence IDs remain trace-side",
+      "originalComparisonDigest": "229cd46b417050113750d9294eed34d93de50a7f3dd05afcd73c5fa0fdd2c3f8"
+    },
+    {
+      "id": "ga-pair-34",
+      "control": "credit-age-only",
+      "candidate": "credit-use-only",
+      "changed": [
+        "retention policy"
+      ],
+      "alignment": "Same committed instant; exact state paths and association identities only. Event occurrence IDs are not cross-run correspondence.",
+      "originalComparisonDigest": "508c422b768932411e18bfc3523edf89e2cd0ea13ba9b1a6c60e9116caaf03e8"
+    },
+    {
+      "id": "ga-pair-35",
+      "control": "credit-age-only",
+      "candidate": "credit-shared-protection",
+      "changed": [
+        "retention policy"
+      ],
+      "alignment": "Same committed instant; exact state paths and association identities only. Event occurrence IDs are not cross-run correspondence.",
+      "originalComparisonDigest": "592f1078f4c9c9eac56877c95d1291f2df7a219cffee4198ba7ed357220dacbe"
+    },
+    {
+      "id": "ga-pair-36",
+      "control": "credit-age-only",
+      "candidate": "credit-significance-first",
+      "changed": [
+        "retention policy"
+      ],
+      "alignment": "Same committed instant; exact state paths and association identities only. Event occurrence IDs are not cross-run correspondence.",
+      "originalComparisonDigest": "c880dcde5a4250b3a7cffaadc06ad2f8f28d26313faaa5eb3ba4feed5f0de530"
+    }
+  ],
+  "scope": "36 retained historical comparison declarations. Metadata alone does not qualify current execution. Shared seed does not imply RNG coupling; current compared traces must have zero draws for this deterministic comparison profile."
+}

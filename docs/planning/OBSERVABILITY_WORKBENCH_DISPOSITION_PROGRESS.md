@@ -1251,3 +1251,28 @@ requires285 records and unchanged frozen sources. No terminal PASS yet.
 LOCAL DISPOSITION: expanding migration qualification to original full horizons is
 required before integrated entry. No C3 finding, semantic contract, law, topology
 or obligation changed. All18 conditional obligations and source restrictions survive.
+
+## Paged semantic event filters — 2026-10-23
+
+Revision-bound diagnostics now filter eligible events by recorded semantic stage
+and a case-insensitive substring over event ID, instant, phase, stage and parent
+IDs. Filters never change native state or replace the loaded report. When the
+intended selection is hidden, the select shows an explicit placeholder and loading
+is disabled until a matching event is selected. Reset restores the intended
+selection; changing diagnostic kind clears the category filter.
+
+workbench-disposition-paged-event-filter-rev1/verifier-v2.mjs PASS browser baseline2:
+all20 headers, two decision-stage events, two phase52 reasons via keyboard query,
+no-match/disabled load and reset. Event19 report and five native hashes remain
+exact through each operation. Original capture incorrectly included four hidden
+Values hashes through a global footer selector; original verifier failure and
+capture remain retained. Repeat scopes the Disposition main region. Screenshot
+inspected. TypeScript/build605, boundary and restored research checks PASS.
+
+The shared component serves standalone and paired diagnostics; this browser receipt
+qualifies standalone baseline2 only, not all paired modes or complete accessibility.
+All three live source graphs remain unchanged (the freezer's inherited console
+text says two, while its actual live manifest correctly contains three). No C3
+semantics, topology, verdict or obligation changed; all18 conditional obligations
+survive. Tab8/4220 retained. Full native diagnostics last baseline10/18; original
+replay last14/15 prefix11. No terminal acceptance inferred from these prefixes.
