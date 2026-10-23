@@ -1,0 +1,16 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+const root='docs/planning/workbench-affect-obligation-control-rev1',read=p=>JSON.parse(fs.readFileSync(p)),sha=b=>createHash('sha256').update(b).digest('hex');
+const freeze=read(root+'/freeze.json'),receipt=read(root+'/receipt.json'),b=read(root+'/browser.json'),native=read(root+'/browser-oracle-3.json'),pair=read(root+'/pair-0.json');
+for(const s of [...freeze.sources,...freeze.references,...freeze.sharedSources]){assert.equal(sha(fs.readFileSync(s.path)),s.sha256);if(s.copy)assert.equal(sha(fs.readFileSync(s.copy)),s.sha256);}
+assert.equal(receipt.pairs,8);assert.equal(receipt.pairedPrefixes,88);
+for(const result of receipt.results){assert.equal(sha(fs.readFileSync(root+'/'+result.file)),result.sha256);const p=read(root+'/'+result.file);assert.equal(p.prefixes.length,11);assert(p.terminalRestore);}
+assert(b.zeroDisabled);assert(b.zeroText.includes('Both draft settings are 1/10.'));
+assert.deepEqual(JSON.parse(b.initialSummary),pair.prefixes[0].summary);assert.equal(b.initialSummary,b.draftSummary);assert.deepEqual(b.initialHashes,b.draftHashes);
+assert.equal(b.prefix1Choice,'No recorded selected-option difference through this aligned prefix.');assert.equal(b.prefix2Choice,b.prefix1Choice);
+assert.equal(b.prefix3Choice,'First recorded selected-option difference: instant 3.');assert.equal(b.appraisalStatus,'No difference in these fields through the aligned prefix.');assert.equal(b.selectedInstant,'3');
+assert.deepEqual(JSON.parse(b.choices),pair.prefixes[3].choices);assert.equal(b.choices,b.restoredChoices);
+for(const branch of ['a','b']){const decision=native[branch].explanations.find(e=>e.kind==='Decision'&&e.at==='3');assert.equal(b.decisionSources[branch],decision.provenance);const event=native[branch].timeline.find(e=>e.stage==='decision'&&e.instant==='3');assert.deepEqual(JSON.parse(b[branch==='a'?'eventA':'eventB']),event);}
+assert.deepEqual(JSON.parse(b.summary3),pair.prefixes[3].summary);assert.equal(b.summary3,b.historicalSummary);assert.equal(b.summary3,b.restoredSummary);assert.equal(b.afterAdvanceStatus,'Retained A4 / B4 · Ready');assert.equal(b.restoredStatus,'Retained A3 / B3 · Ready');assert.deepEqual(b.alerts,[]);
+const buildRoot='C:/Users/scoob/AppData/Local/Temp/characterlab-affect-obligation-control-rev1';
+const assets=fs.readdirSync(buildRoot,{recursive:true}).map(x=>buildRoot+'/'+x).filter(p=>fs.statSync(p).isFile()).map(path=>({path,sha256:sha(fs.readFileSync(path))}));
+fs.writeFileSync(root+'/verification.json',JSON.stringify({status:'PASS BOUNDED OBLIGATION CONTROL AND CHOICE LINKS',nativePairs:8,pairedPrefixes:88,browserSeed:0,browserPrefixes:[0,1,2,3,4],restoredPrefix:3,assets,artifacts:['freeze.json','receipt.json','browser.json','browser.png'].map(path=>({path,sha256:sha(fs.readFileSync(root+'/'+path))})),scope:'Discrete original settings, draft isolation, exact first-choice comparison, both decision links, stable prepared summary and paired restore. No player disclosure, general personality parameter or complete integrated-entry claim.'},null,2)+'\n',{flag:'wx'});console.log('PASS obligation control native receipts and bounded browser verification');

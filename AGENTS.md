@@ -53,6 +53,13 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 ## Active direction
 
 **Current routing (2026-10-23):** Observability Workbench IN PROGRESS, owner-authorized.
+AFFECT obligation control now qualified:8 new original pairs/88 native paired
+prefixes, terminal restore/no-op;10 focused tests/TypeScript/research PASS.
+Browser seed0 draft isolation/keyboard endpoints/first choice3 with equal appraisal
+fields/exact both decision48 links/advance4/restore3 PASS; independent verifier.
+See workbench-affect-obligation-control-rev1; tab19/4230 retained. Native25159
+complete; its source hold released except live overlaps. All current tabs1..19
+require turn marks. Player language and integrated16-step demonstration remain due.
 Original Disposition replay COMPLETE15 programs/285 checkpoints/270 successors/
 15 terminal no-ops. Recovery20415 exited0; all242 retained records unchanged.
 Independent state/projection/save/successor receipt audit PASS; see

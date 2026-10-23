@@ -6,9 +6,14 @@ import type {AffectSnapshot} from './affectAdapter';
 import {AFFECT_RENDERER} from './affectExplanations';
 export const AFFECT_OPTIONS=[...plan.runs.map(r=>r.name),...supplements.runs.map(r=>r.id)];
 export interface AffectContrast {id:string;label:string;a:string;b:string;kind:'input'|'model';equalThrough:number|null;firstFactorDifference:number|null;changed:string;}
+export const AFFECT_OBLIGATION_CONTRASTS:AffectContrast[]=Array.from({length:8},(_,seed)=>({id:`obligation/${seed}`,label:`Obligation strength · seed ${seed}`,a:`choice-${seed}-0.1`,b:`choice-${seed}-10`,kind:'model',equalThrough:0,firstFactorDifference:null,changed:'Adopted competing obligation base contribution1/10 versus10; identical original initial state, input calendar, seed and other settings. Fresh model configuration only, not a live intervention or personality trait. Appraisal factors and decision contributions are distinct.'}));
+export function affectObligationPairId(seed:number,position:number){
+ if(!Number.isInteger(seed)||seed<0||seed>7||![0,1].includes(position))throw Error('Unsupported frozen obligation setting');
+ return position===0?null:`obligation/${seed}`;
+}
 export const AFFECT_CONTRASTS:AffectContrast[]=[{id:'hidden-world',label:'Hidden physical world',a:'baseline',b:'hidden',kind:'input',equalThrough:null,firstFactorDifference:null,changed:'Physical truth changes while admitted evidence is fixed.'},
  ...timing.pairs.map(p=>({id:`timing/${p.name}`,label:`Timing · ${p.name}`,a:`timing/${p.name}/a`,b:`timing/${p.name}/b`,kind:(p.a.model===p.b.model?'input':'model') as 'input'|'model',equalThrough:p.prefix,firstFactorDifference:p.firstDifferentAt,changed:`Frozen ${p.name} contrast; exact outputs/state agree through prefix ${p.prefix}; the named appraisal factor first differs at instant ${p.firstDifferentAt}.`})),
- ...[1,2,3].map(c=>({id:`interior/${c}`,label:`Interior feedback · candidate ${c}`,a:`interior/candidate-${c}-feedback-false`,b:`interior/candidate-${c}-feedback-true`,kind:'model' as const,equalThrough:13,firstFactorDifference:14,changed:'Feedback setting only; identical original inputs and seed. Prior completed appraisal13 influences appraisal14; no universal feedback law is inferred.'}))];
+ ...[1,2,3].map(c=>({id:`interior/${c}`,label:`Interior feedback · candidate ${c}`,a:`interior/candidate-${c}-feedback-false`,b:`interior/candidate-${c}-feedback-true`,kind:'model' as const,equalThrough:13,firstFactorDifference:14,changed:'Feedback setting only; identical original inputs and seed. Prior completed appraisal13 influences appraisal14; no universal feedback law is inferred.'})),...AFFECT_OBLIGATION_CONTRASTS];
 export function affectPair(program:string){const c=AFFECT_CONTRASTS.find(c=>c.a===program||c.b===program);return c?(c.a===program?c.b:c.a):null;}
 export function affectContrast(program:string){return AFFECT_CONTRASTS.find(c=>c.a===program||c.b===program);}
 export function compareAffect(a:AffectSnapshot,b:AffectSnapshot){

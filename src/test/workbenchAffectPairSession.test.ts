@@ -6,7 +6,7 @@ const factory:AffectPairFactory={create:createAffectInspection,restore:restoreAf
 const load=(name:string)=>import(/* @vite-ignore */ name),{default:fs}=await load('node:fs');
 const references=['workbench-affect-parity-rev1','workbench-affect-supplements-rev1'].flatMap(root=>JSON.parse(fs.readFileSync(`docs/planning/${root}/receipt.json`,'utf8')).results);
 function original(view:ReturnType<AffectPairSession['snapshot']>){for(const s of [view.comparison.a,view.comparison.b]){const p=references.find((r:any)=>r.id===s.program).prefixes[s.prefix];for(const k of ['stateHash','saveHash','outputsHash'] as const)expect(s[k]).toBe(p[k]);}}
-it('preserves all eight declared initial comparisons and disposes independently',async()=>{
+it('preserves every declared initial comparison and disposes independently',async()=>{
  for(const spec of AFFECT_CONTRASTS){const pair=await AffectPairSession.create(spec.id,factory),view=pair.snapshot();original(view);expect(view.failure).toBeNull();expect(view.comparison).toEqual(compareAffect(await createAffectInspection(spec.a).then(r=>r.snapshot()),await createAffectInspection(spec.b).then(r=>r.snapshot())));pair.dispose();expect(()=>pair.snapshot()).toThrow('disposed');}
 },600000);
 it('advances, detaches, checkpoints, restores and continues native main and supplementary pairs',async()=>{

@@ -395,3 +395,34 @@ and a discrete fresh-fixture control; do not infer continuous interpolation, mut
 runtime intervention, a personality trait or general common-random-address coupling.
 UI admission and its qualification are still due. This preflight does not satisfy
 player-readable semantics or the full integrated16-step demonstration.
+
+## 2026-10-23 — bounded obligation control and first-choice locator
+
+Eight original obligation contrasts are now admitted after the unchanged original
+eight declarations. A discrete fresh-fixture slider uses only original1/10 and10
+settings and seeds0..7. Equal settings disable contrast creation. Draft changes do
+not alter the committed pair; this is a goal contribution, not a personality trait
+or runtime intervention. The seam remains affect-public/0.1-candidate.
+
+Ten focused tests and TypeScript pass. Full native qualification PASS8 pairs/88
+paired prefixes, exact original state/save/output identities, stable choice history
+and terminal checkpoint restore/no-op. See workbench-affect-obligation-control-rev1.
+The choice locator preserves missing decisions versus recorded no-choice outcomes,
+rejects ambiguous instants, and separates selected-option differences from appraisal
+factor differences and execution success.
+
+Bounded browser seed0 PASS initial setup, keyboard slider endpoints, draft seed/
+slider isolation, no choice difference through2, first difference3 with equal
+inspected appraisal fields, exact branch decision48 links, advance4 and restore3.
+Prepared prefix3 summary stays stable. Independent verifier compares native reports,
+source records and events, all8 native receipt hashes and frozen source identities.
+Screenshot layout inspected. Tab19/4230 retained; preview25850. Ten focused tests,
+TypeScript, boundaries, evidence restore and research check pass. Build assets are
+verified/served; completion console output was unavailable after session cleanup.
+
+LOCAL DISPOSITION: retain all candidates and the unchanged severity comparator.
+No C3 verdict or obligation disposition changes;18 conditional obligations remain.
+This closes bounded UI admission only. Player disclosure, broader accessibility,
+resource bounds and the integrated16-step entry demonstration remain due. The
+native audit25159 completed; its new source hold is released except overlaps with
+live BatchV8 and paged diagnostics (both reverified unchanged).
