@@ -52,6 +52,18 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 own-goal preview update:** AFFECT detached self-player policy0.1
+PASS105/1331/2640, explicit recipient-before-payload and field allowlist; hidden-world
+controls equal. Two templates carry no intensity/certainty claims; mechanical wording
+collisions audited and full language remains open. Native949/950 permission not used.
+Browser baseline1/2/history1/hidden1, exact semantic/raw-event links and separate
+researcher region PASS. Typecheck/build642/research4318 PASS; tab35/4246 retained,
+mark tabs1..35. See workbench-affect-player-preview-rev1 and explicit policy.
+Appraisal-read18522 at least87/105;280-source hold LIVE, terminal verifier prepared.
+Paged23320 at11/15 prefix14;166 hold LIVE. Packed pair29 last13/13 Working.
+Integrated entry, trace disposition and complete language/provenance remain due.
+
+
 **2026-10-23 earlier-source update:** AFFECT latest completed context/prior
 reconstruction PASS44 appraisals/40 contexts/three priors/one enabled feedback.
 Original diagnostic input records current output instead of earlier carry in all44

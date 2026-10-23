@@ -761,3 +761,36 @@ survive. Full source-selection corpus, learning ancestry, player language, trace
 limitation disposition and integrated entry remain due. Native appraisal-read18522
 continues at least40/105;280-source hold remains. Paged diagnostic23320 at11/15
 prefix11/18;166-source hold remains. Packed pair29 last12/12 Working. Mark tabs1..34.
+
+## 2026-10-23 — scoped player-readable own-goal preview
+
+LOCAL DISPOSITION under accepted brief15-17: qualify a detached preview for the
+player inspecting the single registered AFFECT character's own adopted goals. See
+OBSERVABILITY_WORKBENCH_AFFECT_PLAYER_PREVIEW_POLICY.md. This explicit policy does
+not grant other recipients, Character mode, all research fields or native949/950
+authority. Unknown recipient/policy rejects before payload access. Output fields are
+allowlisted; no world facts, RNG/address/seed, other private state, success claims or
+intensity/certainty assertions are emitted. Only exact registered positive safety/
+mitigation and obligation/continuation nuclei yield sentences; uncovered raw signals
+do not become extra reasons. Researcher links remain outside the preview region.
+
+Corpus PASS105 programs/1331 decisions/2640 sentences, with exact original semantics,
+source hashes and immutable cards. Baseline/hidden previews equal for all retained
+decisions. Three poisoned-payload recipient checks and extra-field nonpropagation
+PASS. Two text groups are audited with all distinct mechanical states: shared prose
+does not prove adequate strength communication. Null intensity/certainty bands remain
+unqualified, and full factor-language coverage is still due.
+
+Browser baseline1/advance2/history1/hidden1 PASS exact original reports/four identities,
+semantic nucleus1 and raw-event link, stale detail reset, zero researcher buttons or
+mechanical link content within preview. Layout width1265 no overflow; screenshot
+inspected. TypeScript/build642 modules/evidence restore/research/boundary PASS.
+Tab35/4246 retained, preview76465. See workbench-affect-player-preview-rev1. No failed
+audit. No runtime, formal law, C3 verdict or obligation disposition changed.
+
+This advances integrated-demo step12 but does not discharge the entire chain or the
+required demonstration. Strength/certainty language, other concepts/recipients, full
+selection provenance/trace disposition and entry remain open. All18 conditional
+obligations survive. Native appraisal-read18522 at least87/105,280-source hold LIVE;
+independent verifier prepared but not run without terminal receipt. Paged23320 at
+11/15 prefix14;166-source hold LIVE. Packed pair29 last13/13 Working. Mark tabs1..35.
