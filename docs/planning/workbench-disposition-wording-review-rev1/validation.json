@@ -1,0 +1,26 @@
+{
+  "tests": "2 PASS",
+  "typecheck": "PASS",
+  "build": "608 modules PASS",
+  "boundary": "PASS",
+  "research": "active0 conditional18 closed4 unowned0 PASS",
+  "corpus": "Authenticated deterministic builder check PASS",
+  "bindings": [
+    {
+      "path": "workbench-disposition-replay-rev1/manifest.json",
+      "sources": 158,
+      "status": "UNCHANGED"
+    },
+    {
+      "path": "workbench-batch-parity-rev8/manifest.json",
+      "sources": 277,
+      "status": "UNCHANGED"
+    },
+    {
+      "path": "workbench-disposition-paged-full-diagnostics-rev1/freeze.json",
+      "sources": 166,
+      "status": "UNCHANGED"
+    }
+  ],
+  "developmentObservation": "Initial build-asset census used sandbox TEMP, which differs from the escalated build TEMP, and failed ENOENT. Census retried successfully at the exact path emitted by the completed build; no assets replaced."
+}

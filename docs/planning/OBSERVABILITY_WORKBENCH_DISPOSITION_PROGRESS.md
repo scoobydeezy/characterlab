@@ -1371,3 +1371,32 @@ and all19 immutable receipts rechecked in baseline-complete.json; session contin
 remaining14 programs. This is a scoped baseline completion, not aggregate acceptance.
 No C3 semantics, law, topology, verdict or obligation changed; all18 conditional
 obligations/source restrictions survive.
+
+## Cross-corpus shared wording review — 2026-10-23
+
+`workbench-disposition-wording-review-rev1/receipt.json` PASS a new review inside
+the retained corpus language panel. The750 descriptions contain44 distinct sentences;
+four sentences span different retained task/candidate semantics, covering154 factor
+occurrences (69/69/8/8). The earlier zero within-event collision/redundancy counts
+retain their original scope. Cross-program sentence reuse is a review candidate,
+not by itself evidence of misleading language or permission to merge mechanisms.
+
+`dispositionLanguageReview.ts` groups exact retained wording, compares structured
+semantics with stable property ordering, and retains every program/event/row address.
+It does not regenerate historical descriptions or alter the frozen corpus. The UI
+shows exact alternative meanings and navigates from an occurrence into the existing
+retained report and source addresses. Live-report availability still requires the
+same current program and committed event; corpus navigation never installs state.
+
+Two focused tests PASS all four known groups, unique original addresses, unchanged
+input and equivalent-meaning exclusion. The corpus builder's authenticated check
+passes270 reports/750 descriptions/1500 original gaps. Browser tab13/4224 verifies all
+four group texts, semantics and154 option labels, first/last source navigation for
+each group, disabled unavailable live links and unchanged five native identities.
+Screenshot inspected. TypeScript, build608 modules, boundary and restored research
+checks PASS. Running replay158/BatchV8 277/paged diagnostics166 source holds survive.
+
+LOCAL DISPOSITION: this advances the required corpus-level language audit without
+declaring its full criteria or player language complete. No Campaign3 verdict or
+obligation disposition changes. Subject naming, disclosure, semantic bands, complete
+factor language and the integrated Campaign4 demonstration remain required.

@@ -53,6 +53,11 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 ## Active direction
 
 **Current routing (2026-10-23):** Observability Workbench IN PROGRESS, owner-authorized.
+Disposition cross-corpus wording review now surfaces4 shared sentences/154 factor
+occurrences with distinct task/candidate meanings. Browser all4 groups/eight exact
+source links/unchanged five identities PASS; two tests/build608/research PASS.
+Retain tab13/4224; see workbench-disposition-wording-review-rev1. Review candidates,
+not misleading-collision verdicts; prior within-event zero and player gaps survive.
 General matrix/initial heatmap now PASS43 recipes/568 retained frozen-seed snapshots:
 1647 directed cells/1026 nonzero/20 asymmetric pairs,325 empty graphs; exact state,
 node bytes, fractions and native identities. See workbench-general-matrix-cohort-rev1.
