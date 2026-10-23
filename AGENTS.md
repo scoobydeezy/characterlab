@@ -52,6 +52,17 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 stored belief full-corpus audit:** Native session66314 RUNNING.
+First4 programs/60 prefixes bound by checkpoint-001; no full-corpus PASS yet.
+NEW280-source hold: workbench-affect-belief-state-corpus-rev1/freeze.json
+(Batch277 plus stored-belief helper, profile sources and writer). Keep these exact.
+Independent terminal verifier prepared; run only after receipt.json exists.
+Other live hold: paged diagnostics166/session23320 last12/15 prefix5/18.
+Packed pair29 last14/14 Working; mark all36 tabs. Next independent work can map
+AFFECT participation to canonical boxes; generic census alone is not that mapping.
+Full stored-state corpus, architecture, language/provenance and integrated entry due.
+
+
 **2026-10-23 stored belief view:** AFFECT Character standalone/retained pair now show
 actual three-component root753 mean vector and committed mutation history. Initial
 state decoded from original model; every before/after joins and final state agrees.

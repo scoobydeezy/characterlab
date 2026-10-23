@@ -849,3 +849,26 @@ research verdict or obligation disposition changed. RO-C3-011 trace limitation a
 all18 conditional obligations survive. Full105-program stored-state qualification,
 learning ancestry, complete language, architecture integration and entry remain due.
 Paged23320 remains live; packed pair29 last14/14 Working. Mark all36 retained tabs.
+
+## 2026-10-23 — full stored-belief qualification running
+
+Native writer66314 now targets all105 original AFFECT programs/1436 prefixes/4308
+current vector cells. It checks original native state/save/output identities, exact
+current leaf values, absence, known zeros, each mutation revision and immutable
+historical vectors. Snapshot immutability and complete original horizons are required.
+First4 programs/60 prefixes PASS and bound by checkpoint-001; this is not a terminal
+receipt or full qualification. See workbench-affect-belief-state-corpus-rev1.
+
+NEW280-source live hold combines the277 BatchV8 sources, stored-belief projection,
+profile sources and writer. Independent artifact/history/count reconciliation script
+is prepared and syntax checked, but cannot run before terminal receipt. Do not release
+the hold until completion is independently checked. Overlapping paged166 hold survives.
+Research checks PASS4318 reports/18 conditional/4 closed/0 active/0 unowned. No new
+scientific verdict, law or obligation disposition. RO-C3-011 limitation remains.
+
+Architecture inspection confirms canonical Beliefs and Prospection boxes exist, while
+the current AFFECT Architecture view only exposes a generic participation census.
+Exact state-to-box correspondence and event links remain implementation work; counts
+alone do not establish causal necessity. Complete language, ancestry and integrated
+entry remain due. Paged23320 last12/15 prefix5; packed29 last14/14 Working.
+Mark all36 retained browser tabs every turn.
