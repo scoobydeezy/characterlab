@@ -244,3 +244,27 @@ LOCAL DISPOSITION: this qualifies these keyboard controls and local focus order.
 Full traversal, screen-reader behavior, multi-page results and broader accessibility
 remain due. No runtime implementation changed, so no new runtime suite/build was
 needed. No Campaign3 verdict, obligation closure or integrated-entry acceptance.
+
+## Full retained matrix and heatmap cohort — 2026-10-23
+
+`workbench-general-matrix-cohort-rev1/receipt.json` PASS all43 original recipes and
+568 frozen-seed snapshots. Each compressed/decoded archive is authenticated and
+joined to its original native model/run/state/save identities and prefix/clock.
+All State631 graph paths, Record625 node identities and revisions, Record624 rows,
+stored units, binding scale100, reduced exact fractions and display ratios agree.
+Canonical node bytes decode to the exact displayed identities.
+
+The actual server-rendered initial heatmap preserves all1647 directed cells,
+including1026 nonzero cells and20 asymmetric unordered-pair observations. Its
+accessible labels, visible fractions and selected source identities are exact.
+All325 empty graphs render the explicit empty-state message. There are621 cumulative
+node observations and zero absent graph records. Rendering leaves inputs unchanged.
+Source copies and per-prefix graph/render hashes are retained with the verifier.
+
+LOCAL DISPOSITION: this extends matrix/initial-heatmap qualification beyond the
+earlier two-recipe seed0 checks to the entire retained frozen-seed General cohort.
+It is not new native execution or a claim of all-client directed-graph/three-axis
+interaction coverage. Those controls, semantic interpretation and the integrated
+entry demonstration remain separate. This matrix is association state, not a
+personality vector. No Campaign3 verdict or obligation disposition changes; the
+18 conditional obligations and source restrictions survive. No runtime code changed.
