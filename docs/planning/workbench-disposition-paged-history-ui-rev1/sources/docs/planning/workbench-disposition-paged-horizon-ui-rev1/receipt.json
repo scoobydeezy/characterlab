@@ -1,0 +1,47 @@
+{
+  "status": "PASS BASELINE PAGED BROWSER TERMINAL",
+  "program": "Plastic/Main",
+  "startPrefix": 1,
+  "terminalPrefix": 18,
+  "events": 180,
+  "artifacts": [
+    {
+      "path": "browser.json",
+      "sha256": "de11ac8272f53ff86628ee434b4675cdbf4a8884617373304a4932527007c48e"
+    },
+    {
+      "path": "complete.png",
+      "sha256": "b692bdf624ae1fb7b7614705a665617b5c36e6ea79f359c9856be0efc61f0acf"
+    }
+  ],
+  "verifier": {
+    "status": "PREPARED; TERMINAL BROWSER CAPTURE REQUIRED",
+    "verifier": {
+      "path": "scripts/check-workbench-disposition-paged-horizon-ui-v2.mjs",
+      "sha256": "ba50b89c11de2cf51c8aea4d3e7a018644210569bb5ebaaa23779b42b6ce5076"
+    },
+    "inputs": [
+      {
+        "path": "docs/planning/workbench-disposition-paged-horizon-ui-rev1/freeze.json",
+        "sha256": "9d2af39d060b7cce7f7941877a46352ae3e73afeaf1dc11c0f90f13eb238ed75"
+      },
+      {
+        "path": "docs/planning/workbench-disposition-paged-horizon-ui-rev1/start.json",
+        "sha256": "05c4e616c8ecda309cf2ce70ac4fa882c513764417899b3b015b852521d4d2ff"
+      },
+      {
+        "path": "docs/planning/workbench-disposition-comparison-rev1/receipt.json",
+        "sha256": "7e777049d62a0b1f0c02b1164ebc1cfdceaf846f7996613b6cc4c2b2f55e2c7f"
+      },
+      {
+        "path": "docs/planning/workbench-disposition-paged-rev1/receipt.json",
+        "sha256": "cbebe0aa05b6d1c4dc932ea7f1daa7128d5a22a3736482f4bee289ae10aa359d"
+      },
+      {
+        "path": "docs/planning/workbench-disposition-paged-rev1/verification.json",
+        "sha256": "14692ca872bef29d5e29d811d47fd2b11238d9040c66abab1de825214b65519e"
+      }
+    ]
+  },
+  "scope": "Browser continued restored1 to complete18. All five terminal identities before/after reload and180 post-reload option headers match authenticated original. Pre-reload option query returned no nodes; that capture limitation is retained, not backfilled. Prefix1 event19 output page retains original revision with paging disabled; explicit reload at18 returns identical exact text with terminal revision and paging enabled. No alerts and no further advance controls. Native19-prefix audit is separate supporting evidence. No all-program, six-mode, terminal checkpoint restore, complete-text paging, heap or latency qualification."
+}

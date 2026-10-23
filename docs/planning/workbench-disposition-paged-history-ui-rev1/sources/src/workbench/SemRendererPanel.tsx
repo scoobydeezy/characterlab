@@ -1,0 +1,13 @@
+import {useState} from 'react';
+import type {runSemRendererControls} from './semRendererControls';
+import type {SemWorkerClient} from './semWorkerClient';
+type Report=Awaited<ReturnType<typeof runSemRendererControls>>;
+export function SemRendererPanel({client,busy,execute,onExport}:{client?:SemWorkerClient;busy:boolean;execute:(fn:()=>Promise<void>)=>Promise<void>;onExport:(text:string)=>void}){
+ const [report,setReport]=useState<Report>(),[presentation,setPresentation]=useState<'plain'|'narrative'>('plain');
+ return <section className="card"><h2>Three viewpoints of one experience</h2><p>Researcher diagnostic for CV-SEM-012. Glen first recognizes Darius, then appends a correction naming Mina. The original experience stays intact.</p><button disabled={busy||!client} onClick={()=>void execute(async()=>setReport(await client!.renderer()))}>Run renderer comparison</button>{report&&<>
+ <p>This separate fixture leaves the active integrated run unchanged. Omniscient ancestry below is researcher information, not character evidence.</p>
+ <label>Renderer presentation<select value={presentation} onChange={e=>setPresentation(e.target.value as typeof presentation)}><option value="plain">Plain</option><option value="narrative">Narrative</option></select></label>
+ {report.views.map(v=><article key={v.viewpoint}><h3>{v.viewpoint}</h3><pre className="exact">{v[presentation].displayLines.join('\n')}</pre><details><summary>Record-derived lines: {v.viewpoint}</summary><pre className="exact">{v.plain.recordLines.join('\n')}</pre></details></article>)}
+ <h3>Retained comparison controls</h3><table><thead><tr><th>Viewpoint</th><th>Repeat identical</th><th>Shifted IDs preserve record lines</th><th>Presentation preserves record lines</th><th>Removing correction preserves record lines</th></tr></thead><tbody>{report.views.map(v=><tr key={v.viewpoint}><td>{v.viewpoint}</td><td>{String(JSON.stringify(v.plain)===JSON.stringify(v.repeated))}</td><td>{String(JSON.stringify(v.plain.recordLines)===JSON.stringify(v.reallocated.recordLines))}</td><td>{String(JSON.stringify(v.plain.recordLines)===JSON.stringify(v.narrative.recordLines))}</td><td>{String(JSON.stringify(v.plain.recordLines)===JSON.stringify(v.withoutCorrection.recordLines))}</td></tr>)}</tbody></table>
+ <p>Current reinterpretation includes the later correction. It must not be read as evidence available at the original instant. Presentation changes wording only.</p><p>{report.scope}</p><details><summary>Exact renderer comparison report</summary><pre className="exact">{JSON.stringify(report,null,2)}</pre></details><button onClick={()=>onExport(JSON.stringify(report,null,2))}>Export renderer comparison</button></>}</section>;
+}

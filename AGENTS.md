@@ -67,9 +67,15 @@ linked event19, architecture, ten identities, non-mutating draft and retained re
 See paged-pair-modes-rev1; tab4/4216. TypeScript/build602/research/boundary PASS.
 Mode-leave Run1/1->Compare2/2 and stale Reasoning source-link guard PASS.
 Charts/choice-summary/player language/full horizons and integrated entry remain due.
+Paged compact scalar history/chart PASS positive0..5 (nonzero plastic), Refold0..2,
+paired unequal horizons/restore and worker regressions; six tests. Browser two
+contrasts1/1, exact table/source identities, Refold absence and paired restore PASS.
+See paged-history-ui-rev1; tab5/4217. Build603/research/boundary PASS.
+History reconstructs from current trace; source hash is containing save, not past save.
+Full historical scope, choice-summary, player language and integrated entry remain due.
 Only current live browser handles: workbenchLiveTabs=[longTab(tab1),
 dispositionPairTab(tab2/4215),recoveredBatchTab(tab3/4215),
-dispositionModesTab(tab4/4216)]. Mark each every turn.
+dispositionModesTab(tab4/4216),dispositionHistoryTab(tab5/4217)]. Mark each every turn.
 Older tab references below describe retained evidence, not live sessions.
 SEM coverage ledger reconciled to retained rev3:100 scoped vector pointers,
 31 negative witnesses/10 acceptance items; zero complete Workbench vectors inferred.

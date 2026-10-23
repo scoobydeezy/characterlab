@@ -4,7 +4,7 @@ import {dispositionRecipe,dispositionInitial,dispositionOrdered,VERSION} from '.
 import {prepareDispositionModel,createDispositionPublicRun,restoreDispositionPublicRun} from '../campaign3/dispositionPublicFactory';
 import {decodeDispositionPublic as decode} from '../campaign3/dispositionPublicCodecs';
 import {dataItems as items,dataRecord as rec,dataField as field} from '../campaign2/canonicalData';
-import {restoreAuthoritativeState,statePathValue} from '../substrate/state';
+import {AuthoritativeState,restoreAuthoritativeState,restoreStatePath,statePathValue} from '../substrate/state';
 import {bytesToHex,type CanonicalValue} from '../substrate/canonicalEncoding';
 import {digest,exactKey,fromHex} from './canonical';
 import {scalar} from './nativeTimeline';
@@ -14,6 +14,7 @@ import {DISPOSITION_MAX_SAVE_BYTES,type DispositionCheckpoint} from './dispositi
 import {dispositionCanonicalInspection,type DispositionDiagnosticSelection} from './dispositionCanonicalInspection';
 import {dispositionComparisonContext} from './dispositionComparison';
 import {equalCanonicalText} from './canonicalTextEquality';
+import {dispositionCanonicalStoredHistory} from './dispositionCanonicalStoredHistory';
 function original(id:string){const row=plan.runs.find(r=>r.law+'/'+r.name===id);if(!row)throw Error('Unknown frozen DISPOSITION program');const c=dispositionCase(row as DispositionCase);return {row,...c,source:dispositionRecipe(c.profile),initialState:dispositionInitial(),orderedInputs:dispositionOrdered(c.profile,c.frames)};}
 function header(value:CanonicalValue){
  const row=rec(value,160n),event=rec(field(row,4n),130n);
@@ -39,6 +40,11 @@ export class DispositionPagedRun{
  }
  #ready(){if(this.#busy)throw Error('DISPOSITION command in flight');}
  summary(){this.#ready();return structuredClone(this.#view);}
+ storedHistory(saveHash:string){
+  this.#ready();if(saveHash!==this.#view.saveHash)throw Error('Stale DISPOSITION history revision');
+  const leaves=this.#view.fields.filter(f=>f.root==='1457'||f.root==='1458').map(f=>({path:restoreStatePath(decode(fromHex(f.path))),value:this.#state.get(f.path)!}));
+  return dispositionCanonicalStoredHistory(this.#view,new AuthoritativeState(leaves).canonicalValue(),this.#trace);
+ }
  async compare(comparison:string,other:DispositionPagedRun,saveHash:string,otherSaveHash:string){
   this.#ready();other.#ready();if(this===other)throw Error('DISPOSITION comparison requires distinct runs');
   if(saveHash!==this.#view.saveHash||otherSaveHash!==other.#view.saveHash)throw Error('Stale DISPOSITION comparison revision');

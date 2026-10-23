@@ -1123,3 +1123,35 @@ history and comparison choice/summary through the paged pair, preserving scope.
 Bounded mode-leave pause also PASS: Run1/1 then Reasoning->Compare finishes2/2
 with original comparison/ten hashes. Returning to Reasoning retains1/1 and disables
 stale decision links. See mode-leave-receipt.json; full horizon remains due.
+
+## Compact paged stored history — 2026-10-23
+
+Version disposition-stored-history/0.1 reconstructs constitution and plastic values
+from current native leaves and reverse-ordered structural mutation records. Every
+relevant after-value/presence must join the reconstructed value before stepping
+back; immutable constitution mutations reject. Header order and prefix counts
+are checked. Only the two scalar roots are reconstructed; no historical runtime
+state is installed. Source saveHash names the containing current save, never an
+invented historical save. Refold absence stays absent.
+
+The paged adapter constructs a two-leaf state projection, avoiding decoding or
+formatting the full saved state for this history. Paired publication includes both
+compact histories only after comparison and projection succeed. Character and
+Compare render fixed-range charts with exact table values and paths. Checkpoint
+restoration reconstructs prior rows from the restored native trace, so it does not
+depend on an unexported UI cache. Unequal branch horizons remain explicit.
+
+workbench-disposition-paged-history-ui-rev1/native-test-receipt.json PASS six tests:
+positive constitution0..5 against frozen original scalar fields including nonzero
+plastic; Refold0..2; complete compact-history restoration, detached rows, stale
+revision/header/length/broken-chain rejection; unequal pair history and restore;
+original pair comparison/worker partial-failure regression.
+Browser receipt PASS constitution and Refold1/1 exact histories/tables/ten hashes,
+absent B plastic series and restoration of the original constitutional pair.
+Screenshot inspected; TypeScript/build603, boundary and restored research PASS.
+
+LOCAL DISPOSITION: stored scalar history/charts are now paged and restore-stable
+in the declared scope. Full historical projection coverage, first meaningful choice
+divergence, comparison summaries, observer-safe player language, meaningful latent
+state views and integrated entry remain due. No C3 semantics, laws, topology or
+obligation changed; all18 conditional obligations/source limits survive.

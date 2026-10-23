@@ -3,7 +3,7 @@ import {DISPOSITION_CONTRASTS} from './dispositionComparison';
 import {captureDispositionPair,restoreDispositionPair,type DispositionPairCheckpoint} from './dispositionPairCheckpoint';
 import type {DispositionDiagnosticSelection} from './dispositionCanonicalInspection';
 export type DispositionBranch='a'|'b';
-type PairView={comparison:Awaited<ReturnType<DispositionPagedRun['compare']>>;a:ReturnType<DispositionPagedRun['summary']>;b:ReturnType<DispositionPagedRun['summary']>};
+type PairView={history:{a:ReturnType<DispositionPagedRun['storedHistory']>;b:ReturnType<DispositionPagedRun['storedHistory']>};comparison:Awaited<ReturnType<DispositionPagedRun['compare']>>;a:ReturnType<DispositionPagedRun['summary']>;b:ReturnType<DispositionPagedRun['summary']>};
 /** Two original native runs; publishes only after the requested advancement and comparison finish. */
 export class DispositionPagedPair{
  #id:string;#a:DispositionPagedRun;#b:DispositionPagedRun;#busy=false;#failure:string|null=null;#view!:PairView;
@@ -13,7 +13,7 @@ export class DispositionPagedPair{
  #ready(){if(this.#busy)throw Error('DISPOSITION pair command in flight');if(this.#failure)throw Error('DISPOSITION pair failed; restore or create a new pair');}
  #branch(branch:DispositionBranch){if(branch!=='a'&&branch!=='b')throw Error('Unknown DISPOSITION comparison branch');return branch==='a'?this.#a:this.#b;}
  summary(){if(this.#busy)throw Error('DISPOSITION pair command in flight');return structuredClone({...this.#view,failure:this.#failure});}
- async #refresh(){const a=this.#a.summary(),b=this.#b.summary(),comparison=await this.#a.compare(this.#id,this.#b,a.saveHash,b.saveHash);this.#view={comparison,a,b};}
+ async #refresh(){const a=this.#a.summary(),b=this.#b.summary(),comparison=await this.#a.compare(this.#id,this.#b,a.saveHash,b.saveHash);const history={a:this.#a.storedHistory(a.saveHash),b:this.#b.storedHistory(b.saveHash)};this.#view={comparison,a,b,history};}
  async advance(branch:DispositionBranch|'both'='both'){
   this.#ready();if(!['a','b','both'].includes(branch))throw Error('Unknown DISPOSITION advance branch');
   if(branch==='both'&&!this.#view.comparison.aligned)throw Error('Align DISPOSITION prefixes before advancing both');

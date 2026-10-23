@@ -6,6 +6,7 @@ import type {DispositionTextSelector} from './dispositionPagedAdapter';
 import type {DispositionDiagnosticSelection} from './dispositionCanonicalInspection';
 import {DISPOSITION_CONTRASTS} from './dispositionComparison';
 import {DispositionPagedDiagnostics} from './DispositionPagedDiagnostics';
+import {DispositionPagedHistoryPanel} from './DispositionPagedHistoryPanel';
 
 const modes=['Character','Experiment','Reasoning','Timeline','Compare','Architecture'] as const;
 type Mode=typeof modes[number];
@@ -45,6 +46,7 @@ export function DispositionPagedPairInspector({active=true}:{active?:boolean}){
  <label>Inspected pair branch<select disabled={busy} value={branch} onChange={e=>selectBranch(e.target.value as DispositionBranch)}><option value="a">A · {view.a.program}</option><option value="b">B · {view.b.program}</option></select></label>
  <p data-pair-branch>Branch {branch.toUpperCase()} · {summary!.program} · prefix {summary!.prefix}</p>
  <p>All six modes inspect this branch and its committed revision. Character mode remains researcher diagnostics; qualified player disclosure is unavailable.</p>
+ {(mode==='Character'||mode==='Compare')&&<DispositionPagedHistoryPanel history={view.history}/>}
  {diagnosticKinds[mode]&&<DispositionPagedDiagnostics key={branch+mode} kinds={diagnosticKinds[mode]} summary={summary!} busy={blocked} envelope={diagnostics[mode]} onRequest={(revision,selection)=>void loadDiagnostic(revision,selection)} onText={(revision,selection)=>void load(branch,revision,selection)} onEvent={(revision,id)=>void loadDiagnostic(revision,{kind:'eventState',eventId:id},'Timeline')}/>}
  {page&&<section aria-label="Paired exact source"><h3>Exact source · branch {page.branch.toUpperCase()}</h3><code data-pair-page-revision>{page.value.saveHash}</code><pre className="exact" data-pair-page-selection>{JSON.stringify(page.value.selector)}</pre><p data-pair-page-range>Offset {page.value.offset} · {page.value.text.length} units · total {page.value.totalCodeUnits}</p><p>Offsets count UTF-16 code units; pages contain at most4096 units.</p>{stale&&<p role="status">Historical paired page retained. Restore its checkpoint or open a current source before continuing pages.</p>}<button disabled={blocked||stale||page.value.offset===0} onClick={()=>void load(page.branch,page.value.saveHash,page.value.selector,Math.max(0,page.value.offset-4096))}>Previous paired page</button><button disabled={blocked||stale||page.value.nextOffset===null} onClick={()=>void load(page.branch,page.value.saveHash,page.value.selector,page.value.nextOffset!)}>Next paired page</button><pre className="exact" data-pair-page-text>{page.value.text}</pre></section>}
  <div data-pair-hashes>{(['a','b'] as const).map(b=><div key={b}><h3>Branch {b.toUpperCase()} identities</h3>{(['modelHash','runHash','stateHash','saveHash','projectionHash'] as const).map(k=><div className="hash" key={k}><span>{k}</span><code>{view[b][k]}</code></div>)}</div>)}</div></>}
