@@ -53,6 +53,11 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 ## Active direction
 
 **Current routing (2026-10-23):** Observability Workbench IN PROGRESS, owner-authorized.
+Disposition paired terminal A18/B18 verified original comparison/ten hashes/choices/
+scalar histories and retained initial diagnostic. Capture checkpoint CRASHED tab11/
+4223 before restore; no terminal-plus-restore PASS, heap cause unmeasured. Preserve
+workbench-disposition-paired-horizon-rev1/checkpoint-capture-failure.json. Next
+checkpoint resource/transport investigation; do not blindly restart or reload.
 DECISION player audit9923 COMPLETE174/360:70 displays/112 faces/14 empty/290 absent;
 independent original identities/history/sources PASS. Prior seven-source hold released.
 Player occurrence navigation PASS four programs/ten prefixes/six links; two tests.

@@ -1,0 +1,46 @@
+{
+  "status": "TERMINAL COMPARISON VERIFIED; CHECKPOINT CAPTURE CRASHED",
+  "tab": "11",
+  "url": "http://127.0.0.1:4223/",
+  "terminalPrefixes": [
+    18,
+    18
+  ],
+  "terminalComparison": "PASS sample-18.json against original oracle, ten hashes and exact choice rows",
+  "terminalHistory": "PASS both histories and containing save hashes",
+  "retainedInitialReport": "PASS exact initial report and disabled historical source",
+  "action": "Capture paired checkpoint",
+  "lastObservedStatus": "Pair A18 / B18 · Working",
+  "subsequentInventoryTitle": "This page crashed",
+  "restoreAttempted": false,
+  "terminalScreenshotCaptured": false,
+  "heapCause": "Unmeasured. No heap exhaustion claim.",
+  "sourceObservation": "Current capture obtains both full hexadecimal saves, validates via structuredClone, then posts the full result from worker to main thread. Copies are a resource-risk hypothesis, not an established crash cause.",
+  "sources": [
+    {
+      "path": "src/workbench/dispositionPairCheckpoint.ts",
+      "sha256": "a421c8f2674ae1f356f7f537e2a30c12bbebfaec28dc1a0698c9ea54f346ed37"
+    },
+    {
+      "path": "src/workbench/dispositionPagedPair.ts",
+      "sha256": "5465920c5f19d8d1bd65213657f683d26532990e9d2f646afab44ba3800845c9"
+    },
+    {
+      "path": "src/workbench/dispositionPagedPairWorker.ts",
+      "sha256": "fed87d0e22972d12ca93526a2d38002214c32b98102ff1cb6e1c4ba15be6e944"
+    },
+    {
+      "path": "src/workbench/dispositionPagedPairWorkerClient.ts",
+      "sha256": "dfd6fe667063b793b44f5775260bca2d2bf907dc5739f322245d8fa49689168a"
+    },
+    {
+      "path": "src/workbench/DispositionPagedPairInspector.tsx",
+      "sha256": "c5e59264c356a7a6e28ffcafa8c807caf6d2a42804f71d86f8273263584ea193"
+    },
+    {
+      "path": "src/workbench/dispositionPagedAdapter.ts",
+      "sha256": "556bae7d02af77cc7b674acfa9c22512325c3bfe903045636a6694a9afbd3c54"
+    }
+  ],
+  "next": "Investigate checkpoint byte sizes and capture/transport lifetime before a new browser run. Preserve original frozen build and failure. Full terminal-plus-restore acceptance remains unsatisfied."
+}

@@ -582,3 +582,16 @@ Only original replay and BatchV8 retain live source holds; both remain exact.
 
 TypeScript,598-module isolated build, boundary/research checks PASS. Existing large
 chunks remain. Native runtime semantics and all18 conditional obligations survive.
+
+2026-10-23: terminal paired browser reached A18/B18 Complete. Original comparison,
+ten identities and complete choice rows PASS sample-18; scalar history and source
+save identities independently match oracle. Initial prefix0 report unchanged and
+source disabled. Evidence: workbench-disposition-paired-horizon-rev1.
+Capture paired checkpoint then showed Working, followed by tab11/4223 inventory
+This page crashed. Restore never attempted; terminal-plus-restore gate UNSATISFIED.
+No terminal screenshot or heap measurement obtained. All pre-crash DOM evidence and
+checkpoint-capture-failure.json retained. Do not restart/reload before resource
+investigation. Source inspection shows two full hex checkpoints, structuredClone
+validation and full worker-to-main postMessage; memory causation is unmeasured.
+Next bound checkpoint size/copy lifetime and prepare a lower-copy transport without
+changing held sources. BatchV8/native paged diagnostics remain live and unchanged.
