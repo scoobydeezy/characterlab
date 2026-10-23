@@ -53,6 +53,11 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 ## Active direction
 
 **Current routing (2026-10-23):** Observability Workbench IN PROGRESS, owner-authorized.
+AFFECT appraisal comparison PASS8 declared contrasts/104 retained rows; first
+four-factor/raw/result differences and both exact source revisions now inspectable.
+Browser interior2 terminal14/instant13-14 sources/native saves/unequal1/0 withholding
+PASS; two tests/build612/research PASS. See workbench-affect-appraisal-comparison-rev1;
+tab15/4226 retained. Recorded field divergence is not a changed choice/necessity claim.
 AFFECT derived-factor visualization PASS105 artifacts/1331 appraisals:1583 missing
 factor observations distinct from130 known zeros; actual one/two-coordinate results.
 Browser interior candidate2 feedback1/14 exact sources/history/axes/rotation/native

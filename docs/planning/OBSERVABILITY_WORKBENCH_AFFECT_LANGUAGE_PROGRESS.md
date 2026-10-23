@@ -90,3 +90,33 @@ TypeScript, build610 modules, boundary, evidence restoration and research checks
 All18 conditional obligations survive. LOCAL DISPOSITION: bounded visualization
 qualification only; full stored-state/latent coverage, player narrative and integrated
 entry remain due. No Campaign3 verdict or obligation disposition changes.
+
+## Revision-bound appraisal comparison — 2026-10-23
+
+Compare mode now shows the first recorded difference in likelihood, severity,
+vulnerability, control and raw/resulting coordinates, with a selectable appraisal
+instant and both exact evaluation sources/save revisions. Alignment uses appraisal
+instant, not array position or occurrence counters. Missing evaluation, unavailable
+factor and scalar zero remain distinct. Unequal horizons withhold the report. No
+numeric subtraction or cross-candidate scalar equivalence is inferred.
+
+`workbench-affect-appraisal-comparison-rev1/receipt.json` PASS all8 declared retained
+contrasts/104 aligned appraisal rows. The hidden-world contrast has no inspected-field
+difference. Timing likelihood/control/feedback/vulnerability-relief first differ at
+7/13/11/11; all three interior-feedback pairs first differ at14 in resulting
+coordinates only. Two tests check exact original operands, input immutability, array
+order independence, missing/zero distinctions and duplicate-instant rejection.
+
+`browser-receipt.json` PASS original interior candidate2 at terminal14: whole report
+equals the retained oracle, selected13 fields agree, selected14 factors/raw coordinates
+agree while resulting coordinates differ1/2,1/2 versus5/8,5/8. Both selected source
+records and branch terminal save identities match; the main native state hash matches
+and all four identities remain unchanged by selection. Fresh aligned0/0 followed by
+main1/paired0 displays the explicit unavailable message and removes the appraisal
+report. Tab15/4226 retained; screenshot inspected. TypeScript, build612, boundary and
+restored research checks PASS. All three live audit source bindings remain unchanged.
+
+LOCAL DISPOSITION: these are recorded appraisal-field differences, not the first
+changed choice, all appraisal operands, subjective experience or causal necessity.
+Full comparison lifecycle, player-language traversal and integrated entry remain
+required. No Campaign3 verdict, law selection or obligation disposition changes.
