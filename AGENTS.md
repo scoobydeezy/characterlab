@@ -52,6 +52,18 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 appraisal-read update:** AFFECT direct appraisal emitter/belief-read
+link PASS four originals/48 prefixes/44 appraisals/132 reads/220 historical checks.
+Browser baseline1/11/history1, prior write60/return and stale reset PASS. Typecheck/
+build638/research PASS; tab33/4244 retained. Mark tabs1..33 every turn.
+See workbench-affect-appraisal-reads-rev1. Full105-program native audit18522 RUNNING,
+seven completed bound by checkpoint-001. NEW280-source hold in
+workbench-affect-appraisal-read-corpus-rev1/freeze.json. Its inherited decisions
+counter names count Appraisal cards, explicitly qualified. Other hold166 paged
+diagnostics23320 last11/15 prefix6. Packed pair29 last12/12 Working. Full scope,
+learning/context provenance, player disclosure and integrated entry remain due.
+
+
 **2026-10-23 appraisal factor-source update:** AFFECT five factor operands PASS
 18 original models/105 programs/1331 appraisals/6655 rows:3928 known/2727 unavailable/
 225 explicit zeros. Exact belief keys/means, profile severity, safe reserve/catalogue

@@ -696,3 +696,35 @@ Learning-event/state-read provenance, latest eligible context/prior selection, p
 disclosure, broader accessibility and integrated entry remain due. Live paged166
 source hold unchanged;23320 last10/15 prefix16/18. Packed pair29 last10/10 Working;
 no terminal checkpoint/restore claim. Mark all32 retained tabs every turn.
+
+## 2026-10-23 — appraisal emitter and exact belief-state reads
+
+Reasoning appraisals now resolve the unique native stage50 emitter and three
+registered root753 belief paths. Embedded belief values must equal recorded reads;
+recorded Absent stays distinct from missing instrumentation, which withholds the
+report. Direct event inspection includes the existing state-read/write-history and
+parent navigator. Selection remounts on save revision and appraisal identity.
+
+Native four full originals baseline/hidden/feedback-2/zero-baseline PASS48 prefixes/
+44 appraisals/132 reads (60 present,72 absent)/220 historical rechecks; all native
+state/save/output identities, exact keys/paths/values and input immutability PASS.
+Six missing/duplicate/mismatch/wrong-phase/nested-emitter cases reject. SSR,
+TypeScript/build638 modules, evidence restore/research/boundary PASS.
+Browser baseline1/terminal11/history1 PASS exact events/reads/four identities;
+recorded prior mutation60 is native apply event, direct return exact; advance and
+selection clear stale events. Expanded canonical path wraps at width1265, no
+horizontal overflow. Tab33/4244 retained, preview4552. See
+workbench-affect-appraisal-reads-rev1. No failed audit.
+
+Full native105-program/1436-prefix/1331-appraisal/3993-read audit18522 RUNNING.
+Seven immutable completed program artifacts are bound by checkpoint-001; no full
+receipt yet. NEW280-source hold: workbench-affect-appraisal-read-corpus-rev1/freeze.json.
+The inherited counts.decisions/target.decisions labels count Appraisal cards here,
+explicit in frozen code and checkpoint; do not misreport them as decision coverage.
+The other live hold is paged diagnostics166,23320 last11/15 prefix6/18. Packed pair
+tab29 last12/12 Working; no terminal checkpoint/restore claim. Mark tabs1..33.
+
+LOCAL DISPOSITION instantiates exact accepted source paths without changing native
+semantics or psychological verdicts. All18 conditional obligations survive. Full
+native scope, learning-evidence ancestry, latest context/prior selection, player
+language and integrated entry remain due.
