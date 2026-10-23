@@ -1,0 +1,783 @@
+{
+  "version": "multisource-ui-menu/0.1",
+  "sources": [
+    {
+      "path": "src/workbench/multisourceAdapter.ts",
+      "sha256": "2b5698c1a5251c811659e1aee7de6daaa846c9089ded5a977af5e728a735e6de"
+    },
+    {
+      "path": "src/workbench/multisourceComparison.ts",
+      "sha256": "8ce57bb2df36e46f7dcd64b03bdb8811dfcb1387899a4725c08c44d84b6aab27"
+    },
+    {
+      "path": "src/workbench/multisourceCatalog.json",
+      "sha256": "68a58427718b416943a07b3abb7a37c13c2682ad671490241c6ba7bdc143c539"
+    }
+  ],
+  "programs": [
+    {
+      "id": "shared--GroundAggregate"
+    },
+    {
+      "id": "shared--GroundPairwise"
+    },
+    {
+      "id": "shared--GroundUncovered"
+    },
+    {
+      "id": "shared--FamilyNormalized"
+    },
+    {
+      "id": "independent--GroundAggregate"
+    },
+    {
+      "id": "independent--GroundPairwise"
+    },
+    {
+      "id": "independent--GroundUncovered"
+    },
+    {
+      "id": "independent--FamilyNormalized"
+    },
+    {
+      "id": "orphan--GroundAggregate"
+    },
+    {
+      "id": "orphan--GroundPairwise"
+    },
+    {
+      "id": "orphan--GroundUncovered"
+    },
+    {
+      "id": "orphan--FamilyNormalized"
+    },
+    {
+      "id": "orphan-removed--GroundAggregate"
+    },
+    {
+      "id": "orphan-removed--GroundPairwise"
+    },
+    {
+      "id": "orphan-removed--GroundUncovered"
+    },
+    {
+      "id": "orphan-removed--FamilyNormalized"
+    },
+    {
+      "id": "orphan-removed--DescriptionDice"
+    },
+    {
+      "id": "duplicate--GroundAggregate"
+    },
+    {
+      "id": "duplicate--GroundPairwise"
+    },
+    {
+      "id": "duplicate--GroundUncovered"
+    },
+    {
+      "id": "duplicate--FamilyNormalized"
+    },
+    {
+      "id": "duplicate--DescriptionDice"
+    },
+    {
+      "id": "aggregate--GroundAggregate"
+    },
+    {
+      "id": "aggregate--GroundPairwise"
+    },
+    {
+      "id": "aggregate--GroundUncovered"
+    },
+    {
+      "id": "aggregate--FamilyNormalized"
+    },
+    {
+      "id": "aggregate--DescriptionDice"
+    },
+    {
+      "id": "negative--GroundAggregate"
+    },
+    {
+      "id": "negative--GroundPairwise"
+    },
+    {
+      "id": "negative--GroundUncovered"
+    },
+    {
+      "id": "negative--FamilyNormalized"
+    },
+    {
+      "id": "unavailable--GroundAggregate"
+    },
+    {
+      "id": "unavailable--GroundPairwise"
+    },
+    {
+      "id": "unavailable--GroundUncovered"
+    },
+    {
+      "id": "unavailable--FamilyNormalized"
+    },
+    {
+      "id": "known-zero--GroundAggregate"
+    },
+    {
+      "id": "known-zero--GroundPairwise"
+    },
+    {
+      "id": "known-zero--GroundUncovered"
+    },
+    {
+      "id": "known-zero--FamilyNormalized"
+    },
+    {
+      "id": "capacity-zero--GroundAggregate"
+    },
+    {
+      "id": "capacity-zero--GroundPairwise"
+    },
+    {
+      "id": "capacity-zero--GroundUncovered"
+    },
+    {
+      "id": "capacity-zero--FamilyNormalized"
+    },
+    {
+      "id": "no-task--GroundAggregate"
+    },
+    {
+      "id": "no-task--GroundPairwise"
+    },
+    {
+      "id": "no-task--GroundUncovered"
+    },
+    {
+      "id": "no-task--FamilyNormalized"
+    },
+    {
+      "id": "no-body--GroundAggregate"
+    },
+    {
+      "id": "no-body--GroundPairwise"
+    },
+    {
+      "id": "no-body--GroundUncovered"
+    },
+    {
+      "id": "no-body--FamilyNormalized"
+    },
+    {
+      "id": "execution-blocked--GroundAggregate"
+    },
+    {
+      "id": "execution-blocked--GroundPairwise"
+    },
+    {
+      "id": "execution-blocked--GroundUncovered"
+    },
+    {
+      "id": "execution-blocked--FamilyNormalized"
+    },
+    {
+      "id": "duplicate-matched-aggregate"
+    },
+    {
+      "id": "duplicate-matched-description-dice"
+    },
+    {
+      "id": "aggregate-matched-aggregate"
+    },
+    {
+      "id": "aggregate-matched-description-dice"
+    },
+    {
+      "id": "hidden-21"
+    },
+    {
+      "id": "hidden-29"
+    },
+    {
+      "id": "independent-B-replenishment"
+    }
+  ],
+  "contrasts": [
+    {
+      "id": "law/shared--GroundPairwise",
+      "a": "shared--GroundAggregate",
+      "b": "shared--GroundPairwise",
+      "label": "law/shared--GroundPairwise"
+    },
+    {
+      "id": "law/shared--GroundUncovered",
+      "a": "shared--GroundAggregate",
+      "b": "shared--GroundUncovered",
+      "label": "law/shared--GroundUncovered"
+    },
+    {
+      "id": "law/shared--FamilyNormalized",
+      "a": "shared--GroundAggregate",
+      "b": "shared--FamilyNormalized",
+      "label": "law/shared--FamilyNormalized"
+    },
+    {
+      "id": "law/independent--GroundPairwise",
+      "a": "independent--GroundAggregate",
+      "b": "independent--GroundPairwise",
+      "label": "law/independent--GroundPairwise"
+    },
+    {
+      "id": "law/independent--GroundUncovered",
+      "a": "independent--GroundAggregate",
+      "b": "independent--GroundUncovered",
+      "label": "law/independent--GroundUncovered"
+    },
+    {
+      "id": "law/independent--FamilyNormalized",
+      "a": "independent--GroundAggregate",
+      "b": "independent--FamilyNormalized",
+      "label": "law/independent--FamilyNormalized"
+    },
+    {
+      "id": "law/orphan--GroundPairwise",
+      "a": "orphan--GroundAggregate",
+      "b": "orphan--GroundPairwise",
+      "label": "law/orphan--GroundPairwise"
+    },
+    {
+      "id": "law/orphan--GroundUncovered",
+      "a": "orphan--GroundAggregate",
+      "b": "orphan--GroundUncovered",
+      "label": "law/orphan--GroundUncovered"
+    },
+    {
+      "id": "law/orphan--FamilyNormalized",
+      "a": "orphan--GroundAggregate",
+      "b": "orphan--FamilyNormalized",
+      "label": "law/orphan--FamilyNormalized"
+    },
+    {
+      "id": "law/orphan-removed--GroundPairwise",
+      "a": "orphan-removed--GroundAggregate",
+      "b": "orphan-removed--GroundPairwise",
+      "label": "law/orphan-removed--GroundPairwise"
+    },
+    {
+      "id": "law/orphan-removed--GroundUncovered",
+      "a": "orphan-removed--GroundAggregate",
+      "b": "orphan-removed--GroundUncovered",
+      "label": "law/orphan-removed--GroundUncovered"
+    },
+    {
+      "id": "law/orphan-removed--FamilyNormalized",
+      "a": "orphan-removed--GroundAggregate",
+      "b": "orphan-removed--FamilyNormalized",
+      "label": "law/orphan-removed--FamilyNormalized"
+    },
+    {
+      "id": "law/orphan-removed--DescriptionDice",
+      "a": "orphan-removed--GroundAggregate",
+      "b": "orphan-removed--DescriptionDice",
+      "label": "law/orphan-removed--DescriptionDice"
+    },
+    {
+      "id": "law/duplicate--GroundPairwise",
+      "a": "duplicate--GroundAggregate",
+      "b": "duplicate--GroundPairwise",
+      "label": "law/duplicate--GroundPairwise"
+    },
+    {
+      "id": "law/duplicate--GroundUncovered",
+      "a": "duplicate--GroundAggregate",
+      "b": "duplicate--GroundUncovered",
+      "label": "law/duplicate--GroundUncovered"
+    },
+    {
+      "id": "law/duplicate--FamilyNormalized",
+      "a": "duplicate--GroundAggregate",
+      "b": "duplicate--FamilyNormalized",
+      "label": "law/duplicate--FamilyNormalized"
+    },
+    {
+      "id": "law/duplicate--DescriptionDice",
+      "a": "duplicate--GroundAggregate",
+      "b": "duplicate--DescriptionDice",
+      "label": "law/duplicate--DescriptionDice"
+    },
+    {
+      "id": "law/aggregate--GroundPairwise",
+      "a": "aggregate--GroundAggregate",
+      "b": "aggregate--GroundPairwise",
+      "label": "law/aggregate--GroundPairwise"
+    },
+    {
+      "id": "law/aggregate--GroundUncovered",
+      "a": "aggregate--GroundAggregate",
+      "b": "aggregate--GroundUncovered",
+      "label": "law/aggregate--GroundUncovered"
+    },
+    {
+      "id": "law/aggregate--FamilyNormalized",
+      "a": "aggregate--GroundAggregate",
+      "b": "aggregate--FamilyNormalized",
+      "label": "law/aggregate--FamilyNormalized"
+    },
+    {
+      "id": "law/aggregate--DescriptionDice",
+      "a": "aggregate--GroundAggregate",
+      "b": "aggregate--DescriptionDice",
+      "label": "law/aggregate--DescriptionDice"
+    },
+    {
+      "id": "law/negative--GroundPairwise",
+      "a": "negative--GroundAggregate",
+      "b": "negative--GroundPairwise",
+      "label": "law/negative--GroundPairwise"
+    },
+    {
+      "id": "law/negative--GroundUncovered",
+      "a": "negative--GroundAggregate",
+      "b": "negative--GroundUncovered",
+      "label": "law/negative--GroundUncovered"
+    },
+    {
+      "id": "law/negative--FamilyNormalized",
+      "a": "negative--GroundAggregate",
+      "b": "negative--FamilyNormalized",
+      "label": "law/negative--FamilyNormalized"
+    },
+    {
+      "id": "law/unavailable--GroundPairwise",
+      "a": "unavailable--GroundAggregate",
+      "b": "unavailable--GroundPairwise",
+      "label": "law/unavailable--GroundPairwise"
+    },
+    {
+      "id": "law/unavailable--GroundUncovered",
+      "a": "unavailable--GroundAggregate",
+      "b": "unavailable--GroundUncovered",
+      "label": "law/unavailable--GroundUncovered"
+    },
+    {
+      "id": "law/unavailable--FamilyNormalized",
+      "a": "unavailable--GroundAggregate",
+      "b": "unavailable--FamilyNormalized",
+      "label": "law/unavailable--FamilyNormalized"
+    },
+    {
+      "id": "law/known-zero--GroundPairwise",
+      "a": "known-zero--GroundAggregate",
+      "b": "known-zero--GroundPairwise",
+      "label": "law/known-zero--GroundPairwise"
+    },
+    {
+      "id": "law/known-zero--GroundUncovered",
+      "a": "known-zero--GroundAggregate",
+      "b": "known-zero--GroundUncovered",
+      "label": "law/known-zero--GroundUncovered"
+    },
+    {
+      "id": "law/known-zero--FamilyNormalized",
+      "a": "known-zero--GroundAggregate",
+      "b": "known-zero--FamilyNormalized",
+      "label": "law/known-zero--FamilyNormalized"
+    },
+    {
+      "id": "law/capacity-zero--GroundPairwise",
+      "a": "capacity-zero--GroundAggregate",
+      "b": "capacity-zero--GroundPairwise",
+      "label": "law/capacity-zero--GroundPairwise"
+    },
+    {
+      "id": "law/capacity-zero--GroundUncovered",
+      "a": "capacity-zero--GroundAggregate",
+      "b": "capacity-zero--GroundUncovered",
+      "label": "law/capacity-zero--GroundUncovered"
+    },
+    {
+      "id": "law/capacity-zero--FamilyNormalized",
+      "a": "capacity-zero--GroundAggregate",
+      "b": "capacity-zero--FamilyNormalized",
+      "label": "law/capacity-zero--FamilyNormalized"
+    },
+    {
+      "id": "law/no-task--GroundPairwise",
+      "a": "no-task--GroundAggregate",
+      "b": "no-task--GroundPairwise",
+      "label": "law/no-task--GroundPairwise"
+    },
+    {
+      "id": "law/no-task--GroundUncovered",
+      "a": "no-task--GroundAggregate",
+      "b": "no-task--GroundUncovered",
+      "label": "law/no-task--GroundUncovered"
+    },
+    {
+      "id": "law/no-task--FamilyNormalized",
+      "a": "no-task--GroundAggregate",
+      "b": "no-task--FamilyNormalized",
+      "label": "law/no-task--FamilyNormalized"
+    },
+    {
+      "id": "law/no-body--GroundPairwise",
+      "a": "no-body--GroundAggregate",
+      "b": "no-body--GroundPairwise",
+      "label": "law/no-body--GroundPairwise"
+    },
+    {
+      "id": "law/no-body--GroundUncovered",
+      "a": "no-body--GroundAggregate",
+      "b": "no-body--GroundUncovered",
+      "label": "law/no-body--GroundUncovered"
+    },
+    {
+      "id": "law/no-body--FamilyNormalized",
+      "a": "no-body--GroundAggregate",
+      "b": "no-body--FamilyNormalized",
+      "label": "law/no-body--FamilyNormalized"
+    },
+    {
+      "id": "law/execution-blocked--GroundPairwise",
+      "a": "execution-blocked--GroundAggregate",
+      "b": "execution-blocked--GroundPairwise",
+      "label": "law/execution-blocked--GroundPairwise"
+    },
+    {
+      "id": "law/execution-blocked--GroundUncovered",
+      "a": "execution-blocked--GroundAggregate",
+      "b": "execution-blocked--GroundUncovered",
+      "label": "law/execution-blocked--GroundUncovered"
+    },
+    {
+      "id": "law/execution-blocked--FamilyNormalized",
+      "a": "execution-blocked--GroundAggregate",
+      "b": "execution-blocked--FamilyNormalized",
+      "label": "law/execution-blocked--FamilyNormalized"
+    },
+    {
+      "id": "source/independent/GroundAggregate",
+      "a": "shared--GroundAggregate",
+      "b": "independent--GroundAggregate",
+      "label": "source/independent/GroundAggregate"
+    },
+    {
+      "id": "source/independent/GroundPairwise",
+      "a": "shared--GroundPairwise",
+      "b": "independent--GroundPairwise",
+      "label": "source/independent/GroundPairwise"
+    },
+    {
+      "id": "source/independent/GroundUncovered",
+      "a": "shared--GroundUncovered",
+      "b": "independent--GroundUncovered",
+      "label": "source/independent/GroundUncovered"
+    },
+    {
+      "id": "source/independent/FamilyNormalized",
+      "a": "shared--FamilyNormalized",
+      "b": "independent--FamilyNormalized",
+      "label": "source/independent/FamilyNormalized"
+    },
+    {
+      "id": "source/orphan/GroundAggregate",
+      "a": "shared--GroundAggregate",
+      "b": "orphan--GroundAggregate",
+      "label": "source/orphan/GroundAggregate"
+    },
+    {
+      "id": "source/orphan/GroundPairwise",
+      "a": "shared--GroundPairwise",
+      "b": "orphan--GroundPairwise",
+      "label": "source/orphan/GroundPairwise"
+    },
+    {
+      "id": "source/orphan/GroundUncovered",
+      "a": "shared--GroundUncovered",
+      "b": "orphan--GroundUncovered",
+      "label": "source/orphan/GroundUncovered"
+    },
+    {
+      "id": "source/orphan/FamilyNormalized",
+      "a": "shared--FamilyNormalized",
+      "b": "orphan--FamilyNormalized",
+      "label": "source/orphan/FamilyNormalized"
+    },
+    {
+      "id": "source/orphan-removed/GroundAggregate",
+      "a": "shared--GroundAggregate",
+      "b": "orphan-removed--GroundAggregate",
+      "label": "source/orphan-removed/GroundAggregate"
+    },
+    {
+      "id": "source/orphan-removed/GroundPairwise",
+      "a": "shared--GroundPairwise",
+      "b": "orphan-removed--GroundPairwise",
+      "label": "source/orphan-removed/GroundPairwise"
+    },
+    {
+      "id": "source/orphan-removed/GroundUncovered",
+      "a": "shared--GroundUncovered",
+      "b": "orphan-removed--GroundUncovered",
+      "label": "source/orphan-removed/GroundUncovered"
+    },
+    {
+      "id": "source/orphan-removed/FamilyNormalized",
+      "a": "shared--FamilyNormalized",
+      "b": "orphan-removed--FamilyNormalized",
+      "label": "source/orphan-removed/FamilyNormalized"
+    },
+    {
+      "id": "source/duplicate/GroundAggregate",
+      "a": "shared--GroundAggregate",
+      "b": "duplicate--GroundAggregate",
+      "label": "source/duplicate/GroundAggregate"
+    },
+    {
+      "id": "source/duplicate/GroundPairwise",
+      "a": "shared--GroundPairwise",
+      "b": "duplicate--GroundPairwise",
+      "label": "source/duplicate/GroundPairwise"
+    },
+    {
+      "id": "source/duplicate/GroundUncovered",
+      "a": "shared--GroundUncovered",
+      "b": "duplicate--GroundUncovered",
+      "label": "source/duplicate/GroundUncovered"
+    },
+    {
+      "id": "source/duplicate/FamilyNormalized",
+      "a": "shared--FamilyNormalized",
+      "b": "duplicate--FamilyNormalized",
+      "label": "source/duplicate/FamilyNormalized"
+    },
+    {
+      "id": "source/aggregate/GroundAggregate",
+      "a": "shared--GroundAggregate",
+      "b": "aggregate--GroundAggregate",
+      "label": "source/aggregate/GroundAggregate"
+    },
+    {
+      "id": "source/aggregate/GroundPairwise",
+      "a": "shared--GroundPairwise",
+      "b": "aggregate--GroundPairwise",
+      "label": "source/aggregate/GroundPairwise"
+    },
+    {
+      "id": "source/aggregate/GroundUncovered",
+      "a": "shared--GroundUncovered",
+      "b": "aggregate--GroundUncovered",
+      "label": "source/aggregate/GroundUncovered"
+    },
+    {
+      "id": "source/aggregate/FamilyNormalized",
+      "a": "shared--FamilyNormalized",
+      "b": "aggregate--FamilyNormalized",
+      "label": "source/aggregate/FamilyNormalized"
+    },
+    {
+      "id": "source/negative/GroundAggregate",
+      "a": "shared--GroundAggregate",
+      "b": "negative--GroundAggregate",
+      "label": "source/negative/GroundAggregate"
+    },
+    {
+      "id": "source/negative/GroundPairwise",
+      "a": "shared--GroundPairwise",
+      "b": "negative--GroundPairwise",
+      "label": "source/negative/GroundPairwise"
+    },
+    {
+      "id": "source/negative/GroundUncovered",
+      "a": "shared--GroundUncovered",
+      "b": "negative--GroundUncovered",
+      "label": "source/negative/GroundUncovered"
+    },
+    {
+      "id": "source/negative/FamilyNormalized",
+      "a": "shared--FamilyNormalized",
+      "b": "negative--FamilyNormalized",
+      "label": "source/negative/FamilyNormalized"
+    },
+    {
+      "id": "source/unavailable/GroundAggregate",
+      "a": "shared--GroundAggregate",
+      "b": "unavailable--GroundAggregate",
+      "label": "source/unavailable/GroundAggregate"
+    },
+    {
+      "id": "source/unavailable/GroundPairwise",
+      "a": "shared--GroundPairwise",
+      "b": "unavailable--GroundPairwise",
+      "label": "source/unavailable/GroundPairwise"
+    },
+    {
+      "id": "source/unavailable/GroundUncovered",
+      "a": "shared--GroundUncovered",
+      "b": "unavailable--GroundUncovered",
+      "label": "source/unavailable/GroundUncovered"
+    },
+    {
+      "id": "source/unavailable/FamilyNormalized",
+      "a": "shared--FamilyNormalized",
+      "b": "unavailable--FamilyNormalized",
+      "label": "source/unavailable/FamilyNormalized"
+    },
+    {
+      "id": "source/known-zero/GroundAggregate",
+      "a": "shared--GroundAggregate",
+      "b": "known-zero--GroundAggregate",
+      "label": "source/known-zero/GroundAggregate"
+    },
+    {
+      "id": "source/known-zero/GroundPairwise",
+      "a": "shared--GroundPairwise",
+      "b": "known-zero--GroundPairwise",
+      "label": "source/known-zero/GroundPairwise"
+    },
+    {
+      "id": "source/known-zero/GroundUncovered",
+      "a": "shared--GroundUncovered",
+      "b": "known-zero--GroundUncovered",
+      "label": "source/known-zero/GroundUncovered"
+    },
+    {
+      "id": "source/known-zero/FamilyNormalized",
+      "a": "shared--FamilyNormalized",
+      "b": "known-zero--FamilyNormalized",
+      "label": "source/known-zero/FamilyNormalized"
+    },
+    {
+      "id": "source/capacity-zero/GroundAggregate",
+      "a": "shared--GroundAggregate",
+      "b": "capacity-zero--GroundAggregate",
+      "label": "source/capacity-zero/GroundAggregate"
+    },
+    {
+      "id": "source/capacity-zero/GroundPairwise",
+      "a": "shared--GroundPairwise",
+      "b": "capacity-zero--GroundPairwise",
+      "label": "source/capacity-zero/GroundPairwise"
+    },
+    {
+      "id": "source/capacity-zero/GroundUncovered",
+      "a": "shared--GroundUncovered",
+      "b": "capacity-zero--GroundUncovered",
+      "label": "source/capacity-zero/GroundUncovered"
+    },
+    {
+      "id": "source/capacity-zero/FamilyNormalized",
+      "a": "shared--FamilyNormalized",
+      "b": "capacity-zero--FamilyNormalized",
+      "label": "source/capacity-zero/FamilyNormalized"
+    },
+    {
+      "id": "source/no-task/GroundAggregate",
+      "a": "shared--GroundAggregate",
+      "b": "no-task--GroundAggregate",
+      "label": "source/no-task/GroundAggregate"
+    },
+    {
+      "id": "source/no-task/GroundPairwise",
+      "a": "shared--GroundPairwise",
+      "b": "no-task--GroundPairwise",
+      "label": "source/no-task/GroundPairwise"
+    },
+    {
+      "id": "source/no-task/GroundUncovered",
+      "a": "shared--GroundUncovered",
+      "b": "no-task--GroundUncovered",
+      "label": "source/no-task/GroundUncovered"
+    },
+    {
+      "id": "source/no-task/FamilyNormalized",
+      "a": "shared--FamilyNormalized",
+      "b": "no-task--FamilyNormalized",
+      "label": "source/no-task/FamilyNormalized"
+    },
+    {
+      "id": "source/no-body/GroundAggregate",
+      "a": "shared--GroundAggregate",
+      "b": "no-body--GroundAggregate",
+      "label": "source/no-body/GroundAggregate"
+    },
+    {
+      "id": "source/no-body/GroundPairwise",
+      "a": "shared--GroundPairwise",
+      "b": "no-body--GroundPairwise",
+      "label": "source/no-body/GroundPairwise"
+    },
+    {
+      "id": "source/no-body/GroundUncovered",
+      "a": "shared--GroundUncovered",
+      "b": "no-body--GroundUncovered",
+      "label": "source/no-body/GroundUncovered"
+    },
+    {
+      "id": "source/no-body/FamilyNormalized",
+      "a": "shared--FamilyNormalized",
+      "b": "no-body--FamilyNormalized",
+      "label": "source/no-body/FamilyNormalized"
+    },
+    {
+      "id": "source/execution-blocked/GroundAggregate",
+      "a": "shared--GroundAggregate",
+      "b": "execution-blocked--GroundAggregate",
+      "label": "source/execution-blocked/GroundAggregate"
+    },
+    {
+      "id": "source/execution-blocked/GroundPairwise",
+      "a": "shared--GroundPairwise",
+      "b": "execution-blocked--GroundPairwise",
+      "label": "source/execution-blocked/GroundPairwise"
+    },
+    {
+      "id": "source/execution-blocked/GroundUncovered",
+      "a": "shared--GroundUncovered",
+      "b": "execution-blocked--GroundUncovered",
+      "label": "source/execution-blocked/GroundUncovered"
+    },
+    {
+      "id": "source/execution-blocked/FamilyNormalized",
+      "a": "shared--FamilyNormalized",
+      "b": "execution-blocked--FamilyNormalized",
+      "label": "source/execution-blocked/FamilyNormalized"
+    },
+    {
+      "id": "matched-dice/duplicate",
+      "a": "duplicate-matched-aggregate",
+      "b": "duplicate-matched-description-dice",
+      "label": "matched-dice/duplicate"
+    },
+    {
+      "id": "adoption/duplicate",
+      "a": "duplicate--GroundAggregate",
+      "b": "duplicate-matched-aggregate",
+      "label": "adoption/duplicate"
+    },
+    {
+      "id": "matched-dice/aggregate",
+      "a": "aggregate-matched-aggregate",
+      "b": "aggregate-matched-description-dice",
+      "label": "matched-dice/aggregate"
+    },
+    {
+      "id": "adoption/aggregate",
+      "a": "aggregate--GroundAggregate",
+      "b": "aggregate-matched-aggregate",
+      "label": "adoption/aggregate"
+    },
+    {
+      "id": "hidden-reserve",
+      "a": "hidden-21",
+      "b": "hidden-29",
+      "label": "hidden-reserve"
+    },
+    {
+      "id": "replenishment",
+      "a": "independent--GroundAggregate",
+      "b": "independent-B-replenishment",
+      "label": "replenishment"
+    }
+  ]
+}

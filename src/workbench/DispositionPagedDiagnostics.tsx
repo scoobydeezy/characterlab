@@ -13,13 +13,13 @@ import type {DispositionLanguageAudience} from './dispositionExplanations';
 type Envelope=ReturnType<DispositionPagedRun['diagnostic']>;
 type Kind=DispositionDiagnosticSelection['kind'];
 type Of<K extends Kind>=Extract<Envelope,{selection:{kind:K}}>;
-export function DispositionPagedDiagnostics({summary,busy,envelope,onRequest,onText}:{summary:DispositionInspectionSummary;busy:boolean;envelope?:Envelope;onRequest:(revision:string,selection:DispositionDiagnosticSelection)=>void;onText:(revision:string,selection:DispositionTextSelector)=>void}){
- const [kind,setKind]=useState<Kind>('storedState'),[event,setEvent]=useState('');
+export function DispositionPagedDiagnostics({summary,busy,envelope,onRequest,onText,kinds,onEvent}:{summary:DispositionInspectionSummary;busy:boolean;envelope?:Envelope;onRequest:(revision:string,selection:DispositionDiagnosticSelection)=>void;onText:(revision:string,selection:DispositionTextSelector)=>void;kinds?:readonly Kind[];onEvent?:(revision:string,id:string)=>void}){
+ const [kind,setKind]=useState<Kind>(envelope?.selection.kind??kinds?.[0]??'storedState'),[event,setEvent]=useState(envelope&&'eventId' in envelope.selection?envelope.selection.eventId:'');
  const [audience,setAudience]=useState<DispositionLanguageAudience>('researcher');
  const eventBased=kind!=='storedState'&&kind!=='architecture',events=summary.timeline.filter(e=>kind==='eventState'||e.stage==='reasons'),selected=events.find(e=>e.id===event)?.id??events.at(-1)?.id??'';
  const selection:DispositionDiagnosticSelection=kind==='storedState'||kind==='architecture'?{kind}:kind==='language'?{kind,eventId:selected,audience}:{kind,eventId:selected};
  const stale=!!envelope&&envelope.identity.saveHash!==summary.saveHash;
- const followEvent=(id:string)=>{if(envelope&&!stale&&!busy){setKind('eventState');setEvent(id);onRequest(envelope.identity.saveHash,{kind:'eventState',eventId:id});}};
+ const followEvent=(id:string)=>{if(envelope&&!stale&&!busy){if(onEvent){onEvent(envelope.identity.saveHash,id);return;}setKind('eventState');setEvent(id);onRequest(envelope.identity.saveHash,{kind:'eventState',eventId:id});}};
  const text=(revision:string,selector:DispositionTextSelector)=>{if(!stale&&!busy)onText(revision,selector);};
  function content(e:Envelope){switch(e.selection.kind){
   case 'reasons':return <DispositionReasonReportPanel diagnostic={(e as Of<'reasons'>).report}/>;
@@ -34,7 +34,7 @@ export function DispositionPagedDiagnostics({summary,busy,envelope,onRequest,onT
   case 'eventState':{const r=(e as Of<'eventState'>).report;return <><h3>Event {r.event.id} · {r.event.stage}</h3><p>{r.scope}</p><p>{r.counts.reads} reads · {r.counts.mutations} mutations · {r.counts.changes} changed</p><h4>Read references</h4><table><thead><tr><th>Index</th><th>Path</th><th>Presence</th></tr></thead><tbody>{r.reads.map(x=><tr key={x.index}><td>{x.index}</td><td><code>{x.path}</code></td><td>{x.presence?'Present':'Absent'}</td></tr>)}</tbody></table><h4>Mutation references</h4><table><thead><tr><th>Index</th><th>Path</th><th>Before</th><th>After</th><th>Changed</th></tr></thead><tbody>{r.diffs.map(x=><tr key={x.index}><td>{x.index}</td><td><code>{x.path}</code></td><td>{x.beforePresence?'Present':'Absent'}</td><td>{x.afterPresence?'Present':'Absent'}</td><td>{x.changed?'Yes':'No'}</td></tr>)}</tbody></table><button onClick={()=>text(e.identity.saveHash,r.sources.reads)}>Open event reads</button><button onClick={()=>text(e.identity.saveHash,r.sources.diffs)}>Open event before/after records</button></>;}
  }}
  return <section className="card" aria-label="Paged diagnostic reports"><h2>Revision-bound diagnostics</h2>
- <label>Diagnostic view<select value={kind} disabled={busy} onChange={e=>setKind(e.target.value as Kind)}>{(['storedState','architecture','reasons','resolution','factorSources','calibration','provenance','taskSources','language','eventState'] as const).map(k=><option key={k}>{k}</option>)}</select></label>
+ <label>Diagnostic view<select value={kind} disabled={busy} onChange={e=>setKind(e.target.value as Kind)}>{(kinds??(['storedState','architecture','reasons','resolution','factorSources','calibration','provenance','taskSources','language','eventState'] as const)).map(k=><option key={k}>{k}</option>)}</select></label>
  {kind==='language'&&<label>Explanation audience<select value={audience} disabled={busy} onChange={e=>setAudience(e.target.value as DispositionLanguageAudience)}>{(['researcher','character','player'] as const).map(a=><option key={a}>{a}</option>)}</select></label>}
  {eventBased&&<label>Diagnostic event<select value={selected} disabled={busy} onChange={e=>setEvent(e.target.value)}>{events.map(e=><option key={e.id} value={e.id}>{e.instant} · {e.stage} · {e.id}</option>)}</select></label>}
  <button disabled={busy||(eventBased&&!selected)} onClick={()=>onRequest(summary.saveHash,selection)}>Load diagnostic at current revision</button>

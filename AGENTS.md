@@ -62,8 +62,14 @@ exact comparisons/ten hashes, branch diagnostics, source page and stale guards.
 See workbench-disposition-paged-pair-ui-rev2; rev1 interruption retained.
 Build602/research/boundary and bounded pair Run/Pause1/1->2/2 PASS.
 Mode-leave, full horizons, six modes and full entry remain due.
+Paged pair six-mode routing PASS bounded1/1: both branch state, B reasons/resolution,
+linked event19, architecture, ten identities, non-mutating draft and retained report.
+See paged-pair-modes-rev1; tab4/4216. TypeScript/build602/research/boundary PASS.
+Mode-leave Run1/1->Compare2/2 and stale Reasoning source-link guard PASS.
+Charts/choice-summary/player language/full horizons and integrated entry remain due.
 Only current live browser handles: workbenchLiveTabs=[longTab(tab1),
-dispositionPairTab(tab2/4215),recoveredBatchTab(tab3/4215)]. Mark each every turn.
+dispositionPairTab(tab2/4215),recoveredBatchTab(tab3/4215),
+dispositionModesTab(tab4/4216)]. Mark each every turn.
 Older tab references below describe retained evidence, not live sessions.
 SEM coverage ledger reconciled to retained rev3:100 scoped vector pointers,
 31 negative witnesses/10 acceptance items; zero complete Workbench vectors inferred.

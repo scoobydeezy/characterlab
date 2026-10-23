@@ -1095,3 +1095,31 @@ No original record is overwritten. Terminal285-prefix qualification remains due.
 Additional paired Run/Pause check PASS: from restored1/1, immediate pause finishes
 exactly2/2 with original comparison and ten hashes. See run-pause-receipt.json.
 Mode-leave and full-horizon paired qualification remain due.
+
+## Paged six-mode pair routing — 2026-10-23
+
+The same paired native session now supplies Character, Experiment, Reasoning,
+Timeline, Compare and Architecture. Experiment has the original bounded constitution
+draft and paired checkpoint controls; draft changes never rewrite committed state.
+Compare preserves exact aligned field differences. The other modes select relevant
+canonical diagnostics. Per-mode reports survive navigation; branch changes clear
+incompatible cached reports/pages. Decision and architecture event callbacks load
+that branch's exact event in Timeline with its save revision. Navigation requests
+a pause at the next paired boundary. Character remains explicitly researcher-only.
+
+workbench-disposition-paged-pair-modes-rev1/receipt.json PASS one constitution pair
+at1/1: ten native identities, both branch stored-state reports, B reasons, resolution,
+decision event19 and canonical architecture; draft isolation, branch clearing and
+return to the retained resolution report. Six mode controls and screenshot inspected.
+TypeScript/build602, boundary and restored research checks PASS.
+
+LOCAL DISPOSITION: this qualifies bounded mode routing, not complete capabilities
+behind every mode. Live stored-state history/charts, comparison choice/summary,
+observer-safe player language, full horizons and integrated entry remain due.
+No psychological verdict, topology, law or C3 obligation changed. All18 conditional
+obligations and historical-source restrictions survive. Next migrate compact chart
+history and comparison choice/summary through the paged pair, preserving scope.
+
+Bounded mode-leave pause also PASS: Run1/1 then Reasoning->Compare finishes2/2
+with original comparison/ten hashes. Returning to Reasoning retains1/1 and disables
+stale decision links. See mode-leave-receipt.json; full horizon remains due.
