@@ -57,6 +57,10 @@ General matrix/initial heatmap now PASS43 recipes/568 retained frozen-seed snaps
 1647 directed cells/1026 nonzero/20 asymmetric pairs,325 empty graphs; exact state,
 node bytes, fractions and native identities. See workbench-general-matrix-cohort-rev1.
 All-client graph/three-axis interaction and integrated-entry acceptance remain due.
+General asymmetric matrix browser PASS frozen budget-HistoricalHybrid-1/5 at5/6:
+nine cells/six directed edges, exact3-axis coordinates, reordered/repeated axes,
+keyboard rotation and restore5 native identities. Retain tab12/4215; see
+workbench-general-matrix-browser-rev1. Verifier path failure retained; v2 PASS.
 Start docs/planning/OBSERVABILITY_WORKBENCH_BATCH_V8_PROGRESS.md.
 2026-10-23 recovery: old process28212 and browser tabs25..39 absent; no terminal claim.
 Original replay retained242/285 records; resume20415 RUNNING, same source bindings.

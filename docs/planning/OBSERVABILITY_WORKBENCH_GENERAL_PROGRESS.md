@@ -268,3 +268,31 @@ interaction coverage. Those controls, semantic interpretation and the integrated
 entry demonstration remain separate. This matrix is association state, not a
 personality vector. No Campaign3 verdict or obligation disposition changes; the
 18 conditional obligations and source restrictions survive. No runtime code changed.
+
+## Asymmetric matrix browser qualification — 2026-10-23
+
+`workbench-general-matrix-browser-rev1/receipt.json` PASS the exact frozen-seed
+`budget-HistoricalHybrid-1/5` program at prefixes5/6 and restored5. Tab12 on the
+retained isolated4215 build remains available. All four native identities match
+the authenticated original snapshot archive at each checked prefix.
+
+Nine heatmap cells and all six nonzero directed edges match exact native fractions;
+the opposing1→2 and2→1 edges retain12/25 versus43/100. Three-axis rows, point titles
+and SVG coordinates match the matrix at initial35-degree rotation and reordered
+targets3/2/1 at360 degrees (keyboard End). Axis scaling retains the exact maximum
+63/100. Repeating a dimension emits the lower-dimensional warning and projects
+the repeated column exactly. Selected target identities survive advancement to6
+and checkpoint restoration to5. Exact JSON matches the native graph; view changes
+preserve all four native identities. Full-page screenshot inspected.
+
+An observation wait timed out before a later read confirmed prefix3 Ready; the
+worker was not reset. Verifier revision1 then failed on its archive-relative path
+resolution before checking browser values. Both observations are retained. The
+corrected verifier-v2 passes the unchanged capture and frozen archive/oracle.
+
+LOCAL DISPOSITION: this adds an asymmetric native browser witness for the meaningful
+matrix, directed graph and selectable3D projection requirements. It does not qualify
+every recipe in every client view, invent semantic names, or complete the integrated
+entry demonstration. No runtime implementation, Campaign3 verdict or research
+obligation changed. Research and evidence-restoration checks PASS;18 conditional
+obligations remain. All live audit source bindings remain protected.
