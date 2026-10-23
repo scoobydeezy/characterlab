@@ -1,4 +1,5 @@
-import {useState} from 'react';
+import {lazy,Suspense,useState} from 'react';
+const DispositionLanguageCorpusPanel=lazy(()=>import('./DispositionLanguageCorpusPanel').then(m=>({default:m.DispositionLanguageCorpusPanel})));
 import type {DispositionInspectionSummary,DispositionPagedRun,DispositionTextSelector} from './dispositionPagedAdapter';
 import type {DispositionDiagnosticSelection} from './dispositionCanonicalInspection';
 import {DispositionReasonReportPanel} from './DispositionReasonReportPanel';
@@ -39,6 +40,7 @@ export function DispositionPagedDiagnostics({summary,busy,envelope,onRequest,onT
  }}
  return <section className="card" aria-label="Paged diagnostic reports"><h2>Revision-bound diagnostics</h2>
  <label>Diagnostic view<select value={kind} disabled={busy} onChange={e=>{setKind(e.target.value as Kind);setStage('');}}>{(kinds??(['storedState','architecture','reasons','resolution','factorSources','calibration','provenance','taskSources','language','eventState'] as const)).map(k=><option key={k}>{k}</option>)}</select></label>
+ {kind==='language'&&<Suspense fallback={<p>Loading retained language corpus…</p>}><DispositionLanguageCorpusPanel/></Suspense>}
  {kind==='language'&&<label>Explanation audience<select value={audience} disabled={busy} onChange={e=>setAudience(e.target.value as DispositionLanguageAudience)}>{(['researcher','character','player'] as const).map(a=><option key={a}>{a}</option>)}</select></label>}
  {eventBased&&<fieldset disabled={busy}><legend>Find a recorded event</legend><label>Event header search<input type="search" value={query} onChange={e=>setQuery(e.target.value)}/></label><label>Semantic event category<select value={stage} onChange={e=>setStage(e.target.value)}><option value="">All eligible categories</option>{stages.map(s=><option key={s} value={s}>{s}</option>)}</select></label><button onClick={()=>{setQuery('');setStage('');}}>Reset event filters</button><p>Search exact event ID, instant, phase, stage or parent IDs. Filtering does not change the displayed report or the native run.</p><p role="status" data-paged-event-filter>{events.length} of {eligible.length} eligible events. {selected?'Selected event remains visible.':events.length?'Select a matching event to load it.':'No matching events.'}</p><label>Diagnostic event<select value={selected} onChange={e=>setEvent(e.target.value)}><option value="" disabled>Select a matching event</option>{events.map(e=><option key={e.id} value={e.id}>{e.instant} · {e.stage} · {e.id}</option>)}</select></label></fieldset>}
  <button disabled={busy||(eventBased&&!selected)} onClick={()=>onRequest(summary.saveHash,selection)}>Load diagnostic at current revision</button>

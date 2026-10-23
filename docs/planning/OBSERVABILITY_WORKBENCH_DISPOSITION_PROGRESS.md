@@ -1297,3 +1297,35 @@ follows decision19, clears both filters, selects19 and exposes all20 headers.
 Exact original event envelope and five hashes unchanged; screenshot inspected.
 See verify.mjs/receipt.json. Retain tab9/4221. This is bounded standalone direct
 navigation, not complete paired-mode/accessibility or integrated-entry acceptance.
+
+## Retained corpus language audit in the paged UI — 2026-10-23
+
+The language view now lazy-loads a separate retained-corpus inspector. It exposes
+all15 programs/270 reports/750 descriptions/48 distinct semantics and1500 unresolved
+findings from language-rev2. Program/event/finding selectors preserve source archive
+SHA256, report/row indices, event identity and terminal snapshot reference. Exact
+historical semantics/text are reused; no current renderer rerenders prior records.
+The UI clearly separates this frozen audit from current native execution.
+
+Build-disposition-language-corpus verifies every compressed source hash and joins
+every row issue uniquely to the frozen findings archive, rejecting omissions or
+duplicates. Counts and equivalent-semantic text match the retained receipt. Its
+575351-byte derived JSON is reproducible with --check. This is a compact view of
+existing qualification evidence, not a new psychological verdict or disclosure grant.
+
+workbench-disposition-language-corpus-rev1/receipt.json PASS browser all15 program
+options, constitutional first-event exact semantics/source addresses, OPAQUE filter,
+inactive instant18 empty record and unchanged native hashes. Screenshot inspected.
+Build607/TypeScript, boundary and restored research PASS. Three live source bindings
+remain unchanged; sources reuse prior exact frozen copies where unchanged.
+
+LOCAL DISPOSITION: the accepted Disposition contract's mechanical character
+projection does not grant represented self-knowledge or testimony admission. Its
+frozen meaning excludes standing feedback. Researcher descriptions therefore remain
+researcher-only. This closes the missing corpus-audit surface in this bounded profile;
+player/subject disclosure, calibrated bands and complete factor language remain due.
+All18 conditional obligations and C3 source restrictions survive. Retain tab10/4222.
+
+Whitespace gate caught one trailing space on the lazy import. Live source corrected;
+original source/receipt retained. freeze-v2 and verify-v2 authenticate the formatting-only
+successor and the same browser evidence; no runtime behavior change.

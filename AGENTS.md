@@ -97,11 +97,16 @@ retained. Standalone scope only; broader paired/accessibility qualification due.
 Direct event navigation correction PASS baseline2: phase/category filters clear
 on resolution18->decision19, selection/report/five hashes agree. Reproduced defect
 and corrected evidence in event-navigation-rev1; tab9/4221. Build605/research PASS.
+Paged retained language corpus UI PASS15 programs/270 reports/750 descriptions/
+48 semantics/1500 uniquely joined findings. Browser subject/source addresses,
+OPAQUE filter/inactive18 and unchanged native identities PASS; build607/research.
+See language-corpus-rev1; tab10/4222. Player disclosure gaps remain open.
 Only current live browser handles: workbenchLiveTabs=[longTab(tab1),
 dispositionPairTab(tab2/4215),recoveredBatchTab(tab3/4215),
 dispositionModesTab(tab4/4216),dispositionHistoryTab(tab5/4217),
 dispositionChoicesTab(tab6/4218),dispositionSummaryTab(tab7/4219),
-dispositionFilterTab(tab8/4220),dispositionNavigationTab(tab9/4221)]. Mark each every turn.
+dispositionFilterTab(tab8/4220),dispositionNavigationTab(tab9/4221),
+dispositionCorpusTab(tab10/4222)]. Mark each every turn.
 Older tab references below describe retained evidence, not live sessions.
 SEM coverage ledger reconciled to retained rev3:100 scoped vector pointers,
 31 negative witnesses/10 acceptance items; zero complete Workbench vectors inferred.
