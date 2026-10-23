@@ -602,3 +602,34 @@ holds remain. Exact event/task-key/path/read correspondence does not establish
 magnitude derivation, adoption-history origin, subjective awareness or necessity.
 No new browser claim; prior bounded browser evidence remains scoped. All18
 conditional obligations and integrated-entry requirements remain.
+
+## 2026-10-23 — numeric origins of AFFECT raw strengths
+
+Researcher Reasoning and Compare now distinguish governed AffectProfile#747/1
+Safety[8]/Obligation[7] strengths from the final recorded AffectAppraisal#754/1
+Coordinates[6] modifier. Original task adoption enables the base, not its magnitude.
+The owning run supplies modelHash; the projection does not independently authenticate
+a snapshot. No invented standing source, player disclosure or causal necessity claim.
+
+Catalog regenerated against all18 original model identities and exact profile fields.
+Retained105-program audit PASS1331 decisions/2851 raw signals:2662 base,189
+situational,86 explicit zeros. All original artifact hashes, raw values, source fields,
+input immutability and server panels verified. Unknown/mismatched profile or altered
+coordinate withheld; two focused tests and TypeScript PASS. Revision1 test Buffer
+typing failure is retained; corrected revision2 has identical runtime results.
+
+Browser baseline1/terminal11/historical10, obligation0 A/B1, B2/history1 and paired
+Compare2/3 PASS exact reports and all four original identities. Zero situational
+samples remain explicit; nonzero situation coverage is corpus-only. Width1265 has
+no horizontal overflow. Browser verifier's original wrong metadata-location
+assumption is retained and corrected; all identities are still checked. Screenshot
+inspected; tab30/4241 retained, preview14221. Build632 modules, research, evidence
+restore and boundary checks PASS. See workbench-affect-magnitude-sources-rev1/rev2.
+
+LOCAL DISPOSITION: instantiate the accepted affect-public/0.1-candidate raw-source
+semantics without changing runtime/formal laws or any C3 verdict/obligation. All18
+conditional obligations survive. Entire appraisal derivation, prior adoption history,
+player disclosure, broader browser/accessibility scope and integrated entry remain due.
+Only the paged diagnostics166 live source hold remains; unchanged. Full audit23320
+last observed10/15 program prefix11/18. Packed pair tab29 last observed8/8 Working;
+no terminal restore claim. BatchV8 and DECISION source holds remain released.

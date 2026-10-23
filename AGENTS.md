@@ -52,6 +52,16 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 magnitude-source update:** AFFECT numeric origins PASS105/1331/2851
+(2662 profile bases/189 appraisal modifiers/86 explicit zeros),18 original model
+identities. Researcher Reasoning/Compare integration and bounded browser baseline
+1/11/history10 + obligation0 A/B1..3/history1 PASS. Typecheck/build632/research PASS.
+Retain typecheck and verifier corrections in workbench-affect-magnitude-sources-rev1/rev2.
+No entire appraisal/player disclosure/integrated-entry claim. Mark tabs1..30 everyturn;
+new tab30/4241. Only paged diagnostics166 live source hold remains (23320 last
+10/15 prefix11). Packed pair tab29 last8/8 Working, no terminal restore result.
+
+
 **Current routing (2026-10-23):** Observability Workbench IN PROGRESS, owner-authorized.
 BatchV8 browser COMPLETE947/6388; unchanged verifier PASS947 rows/12776 hashes/
 64000-char preview/7,461,907-byte declaration. First2000-hash capture truncated;

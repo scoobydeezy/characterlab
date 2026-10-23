@@ -1,0 +1,6 @@
+import type {AffectExplanation} from './affectExplanations';
+import {affectMagnitudeSources} from './affectMagnitudeSources';
+export function AffectMagnitudeSourcesPanel({card,modelHash}:{card:AffectExplanation;modelHash?:string}){
+ if(!modelHash)return <p>Numeric source attribution is unavailable without the owning model identity.</p>;let report:ReturnType<typeof affectMagnitudeSources>;try{report=affectMagnitudeSources(card,modelHash);}catch(error){return <p role="alert">Magnitude source withheld: {String(error)}</p>;}
+ return <section aria-label="AFFECT raw magnitude origins"><h5>Where each raw magnitude comes from</h5><p>{report.scope}</p><table><thead><tr><th>Source row</th><th>Role</th><th>Exact strength</th><th>Authority</th><th>Source field</th></tr></thead><tbody>{report.rows.map(r=><tr key={r.sourceIndex}><td>{r.sourceIndex+1}</td><td>{r.role}</td><td>{r.strength}</td><td>{r.authority}</td><td>{r.source.record} · {r.source.field}{'index' in r.source?` · index ${r.source.index}`:''}</td></tr>)}</tbody></table>{report.rows.map(r=><p key={r.sourceIndex}>Source {r.sourceIndex+1}: {r.enablement}</p>)}<details><summary>Exact magnitude origins and model binding</summary><pre className="exact" data-affect-magnitude-sources>{JSON.stringify(report,null,2)}</pre></details></section>;
+}
