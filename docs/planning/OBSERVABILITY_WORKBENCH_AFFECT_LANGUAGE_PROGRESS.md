@@ -246,3 +246,61 @@ Full paired horizons, every browser contrast, player-readable disclosure, a base
 parameter intervention suitable for the chosen entry experiment, and the complete
 integrated16-step demonstration remain required. No law or comparator is selected,
 retired or reduced; all18 conditional obligations and historical limits survive.
+
+## Full paired horizons qualification started — 2026-10-23
+
+`check-affect-pair-horizons.mjs` runs all eight declared pairs through every original
+prefix, checking native state/save/output identities and stable earlier event and
+explanation bodies. Each terminal pair is checkpointed and restored; the complete
+published comparison and checkpoint must match, and further advancement must return
+false without changing it. Immutable per-pair receipts are written only after restore.
+The aggregate receipt requires all eight. Session10278 remains RUNNING; its291-source
+freeze in `workbench-affect-pair-horizons-rev1` is an additional live source hold.
+
+Browser qualification reuses the isolated616-module build in tab18/4229. Baseline
+versus hidden-world completed11 and restored11 with exact original summary and all
+appraisal comparisons; `browser-receipt-0.json` PASS. The likelihood pair completed14
+and is restoring14. The initial attempt to capture while Run was still active timed
+out on a disabled button; the same run continued without errors and was not restarted.
+`browser-start.json` records this observation and binds every existing compiled asset.
+No terminal checkpoint bytes are copied out through browser DOM diagnostics.
+
+Checkpoint update: likelihood14 terminal restore now PASS with exact original summary
+and appraisal comparisons (`browser-receipt-1.json`); screenshot inspected. Control
+pair is RUNNING in the same tab18. Native terminal receipts now cover the first five
+contrasts; the three interior-feedback candidates remain running/pending. These
+updates do not establish the eight-pair aggregate.
+
+These receipts qualify native/worker execution and exact terminal replay, not player
+disclosure, full factor accounting, resource bounds or the integrated entry ceremony.
+All eight browser pairs and the full native aggregate remain required; partial
+per-pair receipts cannot close either full-scope requirement. Research PASS with18
+conditional obligations unchanged. No Campaign3 verdict or obligation disposition.
+
+## Full admitted AFFECT event/history audit completed — 2026-10-23
+
+Session63434 exited0. Revision2's complete receipt establishes105 original execution
+roles/1436 native prefixes/1331 unique appraisals and7916 historical event/history
+comparisons. Every prefix preserves the original state/save/output identities, all
+terminal explanation records match their prior frozen language artifacts, and every
+appraisal emitter is the unique original phase50 top-level754 record.
+
+All3993 unique appraisal-read observations were checked by an independent backwards
+trace scan:1713 exact prior-mutation matches, zero value mismatches,2280 without a
+prior recorded mutation. The latter retain an explicit unresolved relation; absence
+does not establish initial-state origin. No prior writes are inferred from later
+state, same-event mutations, matching labels or nested copies of evaluations.
+
+`verify-affect-event-corpus.mjs` independently authenticated every per-program file,
+all frozen source/reference bytes, the exact original role roster and all1436 prefix
+identities. It recounted1331 appraisal joins/7916 historical repeats and all read
+relations, yielding `workbench-affect-event-corpus-rev2/verification.json` PASS.
+This is a receipt/content audit, not an independent re-execution claim. The failed
+revision1 and initial partial checkpoint remain preserved.
+
+The event-corpus source hold is released following terminal verification; overlapping
+sources remain bound by the continuing paired-horizon, BatchV8, original Disposition
+replay and paged diagnostic audits. Browser event-history interaction remains the
+separately documented bounded scope. Full player language, all paired browser
+horizons and integrated entry are still required. All18 conditional obligations and
+historical-source restrictions survive; no Campaign3 verdict or law changes.

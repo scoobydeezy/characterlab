@@ -53,6 +53,14 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 ## Active direction
 
 **Current routing (2026-10-23):** Observability Workbench IN PROGRESS, owner-authorized.
+AFFECT full event/history COMPLETE105 roles/1436 prefixes/1331 appraisals;
+7916 historical checks,3993 reads:1713 prior exact matches/2280 no prior mutation,
+zero mismatches in this scope. Independent receipt/hash recount PASS; see
+workbench-affect-event-corpus-rev2/verification.json. No initial-origin inference.
+AFFECT full paired horizons RUNNING10278: first5/8 native terminal restores PASS.
+Its291-source freeze is live; prior event-corpus hold released only where not shared.
+Browser baseline11 and likelihood14 terminal/restore PASS; control RUNNING tab18/4229.
+See workbench-affect-pair-horizons-rev1. Full eight-pair browser/native gates remain.
 AFFECT persistent paired lifecycle mounted in Experiment: native3 tests PASS eight
 initial contrasts, main/supplement0/1/2 restore/continuation and partial-failure guards.
 Browser baseline/hidden0/1/2 six modes, unequal2/1, checkpoint1, Run/Pause1→2,
@@ -65,10 +73,9 @@ Browser baseline/hidden1 both decision24/source revisions, appraisal return/keyb
 and unchanged identities PASS. Build614/research PASS; tab17/4228 retained. See
 workbench-affect-decision-link-rev1; fixture and command-name corrections preserved.
 PlayerFacingRoll remains a mode label, not player disclosure or full-entry proof.
-AFFECT full event/history audit RUNNING63434: first3/105 roles/45 prefixes PASS.
-Target1436 prefixes/1331 appraisals; parsed-source correction in rev2, failed rev1
-retained. See workbench-affect-event-corpus-rev2/checkpoint-003.json. Its280 sources
-are now a fourth live hold; no complete-corpus claim. Preserve all18 current tabs.
+AFFECT full event/history audit63434 completed; parsed-source correction in rev2,
+failed rev1 retained. Final receipt and independent verification supersede partial
+checkpoint-003. Browser event-history coverage remains bounded. Preserve all18 tabs.
 AFFECT paired appraisal→event/state-history links PASS2 native branches/28 prefixes,
 28 appraisals/182 prior-event stability checks. Browser both event26 sources, B prior
 mutation105 before/after, return and A13 selection reset/native identities PASS.

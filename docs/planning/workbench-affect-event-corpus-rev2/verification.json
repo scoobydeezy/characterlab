@@ -1,0 +1,20 @@
+{
+  "status": "PASS INDEPENDENT AFFECT EVENT CORPUS RECEIPT CHECK",
+  "counts": {
+    "roles": 105,
+    "prefixes": 1436,
+    "appraisals": 1331,
+    "historicalComparisons": 7916,
+    "reads": 3993,
+    "exactMatches": 1713,
+    "valueMismatches": 0,
+    "noPriorMutation": 2280
+  },
+  "receiptSha256": "76be33ff940d1dbdfb29dcba603c616feea6ebb116462ca4d8dcaca9c642e1a3",
+  "freezeSha256": "10177091146fa962ffbd14982778e5a2206c8946bb74dccbcb606d710c0d1706",
+  "verifier": {
+    "path": "scripts/verify-affect-event-corpus.mjs",
+    "sha256": "31d5d461d62f4f3604305bfea8ad5435fe083cdc18620e74d4bf33ad2634979d"
+  },
+  "scope": "Authenticates all105 files/1436 prefix identities against original receipts, all1331 unique appraisal joins and stable historical join records; independently recounts read relation outcomes. Does not independently rerun native execution or grant browser/player-language acceptance."
+}
