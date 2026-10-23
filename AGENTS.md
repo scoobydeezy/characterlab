@@ -53,6 +53,10 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 ## Active direction
 
 **Current routing (2026-10-23):** Observability Workbench IN PROGRESS, owner-authorized.
+AFFECT full event/history audit RUNNING63434: first3/105 roles/45 prefixes PASS.
+Target1436 prefixes/1331 appraisals; parsed-source correction in rev2, failed rev1
+retained. See workbench-affect-event-corpus-rev2/checkpoint-003.json. Its280 sources
+are now a fourth live hold; no complete-corpus claim. Preserve all16 current tabs.
 AFFECT paired appraisal→event/state-history links PASS2 native branches/28 prefixes,
 28 appraisals/182 prior-event stability checks. Browser both event26 sources, B prior
 mutation105 before/after, return and A13 selection reset/native identities PASS.

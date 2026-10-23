@@ -151,3 +151,28 @@ are traversable evidence, not psychological necessity or complete causal attribu
 This advances the integrated inspection path without claiming complete player-language
 traversal or Campaign4 entry. All18 conditional obligations and historical restrictions
 survive; no Campaign3 verdict or obligation disposition changes.
+
+## Full admitted AFFECT event/history audit started — 2026-10-23
+
+`scripts/check-affect-event-corpus.mjs` now exercises all91 main programs and14
+supplementary execution roles against their original native prefix receipts and
+the previously qualified language artifacts. Target:1436 prefixes/1331 appraisals.
+Every prefix checks exact state/save/output hashes, exact top-level appraisal
+emission, unchanged input snapshot and stable earlier event/history reports.
+An independent reverse scan verifies the most recent earlier mutation for every
+appraisal read, including exact before/after values and absence versus mismatch.
+This qualifies recorded continuity only, not psychological necessity or complete
+causal provenance. Terminal descriptions must equal their frozen language artifacts.
+
+Revision1 failed before completing a role because its additional output assertion
+compared compact JSON with formatted provenance text. Its frozen source and failure
+remain in `workbench-affect-event-corpus-rev1`. Revision2 compares parsed records;
+the production event join already did so and needed no change.
+
+Revision2 is RUNNING in session63434. `checkpoint-003.json` authenticates the first
+three completed roles/45 prefixes; no full-corpus acceptance is claimed. Per-role
+files are immutable and a final receipt is written only after105 roles and source
+revalidation. Its280-source freeze is an additional live hold alongside original
+Disposition replay, BatchV8 and full paged diagnostics. All four freezes currently
+match. Do not restart a quiet writer or edit its bound sources. Research check PASS:
+active0, conditional18, closed4, unowned0. No Campaign3 verdict or obligation changes.

@@ -1,0 +1,31 @@
+{
+  "status": "PARTIAL 3 OF 105; AUDIT RUNNING",
+  "session": 63434,
+  "artifacts": [
+    {
+      "file": "program-000.json",
+      "sha256": "59ebc2bb33ac5b299b8d562c22f6b7f79377c6202c88d215849f7e0214c3cdc9",
+      "program": "factor-1-0.5-0.5-0.5-0",
+      "prefixes": 15,
+      "terminalAppraisals": 14
+    },
+    {
+      "file": "program-001.json",
+      "sha256": "8dd031bcc1e82621f6972ea20bc1791e3925dfb546f06b2a510ba84740576348",
+      "program": "factor-1-0.5-0.5-0.5-1",
+      "prefixes": 15,
+      "terminalAppraisals": 14
+    },
+    {
+      "file": "program-002.json",
+      "sha256": "4edf12d9944fd5a0b9149f393b5eeaf3a6d1bbb960d23a2853d6daef5bdbe0e9",
+      "program": "factor-1-0.5-0.5-1-0",
+      "prefixes": 15,
+      "terminalAppraisals": 14
+    }
+  ],
+  "research": "PASS active0 conditional18 closed4 unowned0",
+  "sourceBindings": "All four current freezes verified unchanged",
+  "failureDisposition": "Revision1 compact-versus-formatted JSON assertion failed before role completion. Revision2 compares parsed record values; original failed source and failure retained. No production change.",
+  "scope": "45 prefixes of 1436; no full corpus or browser acceptance. Do not restart a quiet writer."
+}
