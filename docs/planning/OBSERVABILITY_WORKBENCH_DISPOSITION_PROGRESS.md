@@ -1410,3 +1410,28 @@ verification has NOT run. Do not treat this preparation as replay acceptance or
 restart the quiet live writer. Run it only after its terminal receipt exists and
 the process has completed. Existing Campaign3 limits and18 obligations survive.
 
+## Original adapter replay completed — 2026-10-23
+
+Recovery session20415 exited0 after original program15 prefix18. The final receipt
+in `workbench-disposition-replay-rev1` establishes15 programs/285 checkpoints,
+270 advancing immediate successors and15 terminal no-ops. Original checkpoint
+bytes and complete detached snapshots were restored and compared, with unchanged
+terminal snapshots and exact original successor saves. The242 records preserved
+before the interruption retain their original hashes; missing records were completed
+under the same158-source binding and original recovery policy. No completed native
+prefix was replaced by an inferred or recomputed surrogate receipt.
+
+`verify-disposition-replay.mjs` now PASS independently authenticates all285 artifact
+hashes and all242 pre-interruption identities. Every state/projection/event count
+matches the frozen adapter parity; model/run/save and successor identities match
+the original public receipts. Counts270/15 and complete15×19 coverage are exact.
+`verification.json` binds the final receipt and verifier. This is an independent
+receipt/content audit, not an additional independent native implementation.
+
+The replay source hold is released following terminal verification. Shared sources
+remain bound by live BatchV8 and the full paged-diagnostic audit. Original interruption
+and recovery evidence remain preserved. Browser checkpoint transport, resource
+qualification, player-readable reasons and integrated Campaign4 entry remain separate
+required gates. No law, comparator, Campaign3 verdict or18 conditional obligations
+were changed by this replay acceptance.
+

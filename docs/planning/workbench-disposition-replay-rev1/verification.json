@@ -1,0 +1,17 @@
+{
+  "status": "PASS INDEPENDENT COMPLETE DISPOSITION REPLAY RECEIPT CHECK",
+  "counts": {
+    "programs": 15,
+    "prefixes": 285,
+    "advancing": 270,
+    "terminal": 15
+  },
+  "retainedRecordsUnchanged": 242,
+  "receiptSha256": "331247a0795a64137c8af6024a50436aa3bf1bf771d8287854f127631b617efc",
+  "priorReceiptSha256": "548a3e5ff8afbc43cc6a305616363ed2f2cfdfe7925b05481ee43e0d6197482d",
+  "verifier": {
+    "path": "scripts/verify-disposition-replay.mjs",
+    "sha256": "68fe64dff492ce5969c3a9be440c80dc9a0f99969d031fc51fae52de6937ffe4"
+  },
+  "scope": "All285 replay artifacts and242 pre-interruption originals authenticated. Every state/projection/event count matches original adapter parity; save and successor identities match original native receipts, with270 advancing and15 terminal outcomes. Receipt audit does not independently rerun restore or establish browser/resource/player-language/integrated-entry acceptance."
+}

@@ -53,19 +53,28 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 ## Active direction
 
 **Current routing (2026-10-23):** Observability Workbench IN PROGRESS, owner-authorized.
+Original Disposition replay COMPLETE15 programs/285 checkpoints/270 successors/
+15 terminal no-ops. Recovery20415 exited0; all242 retained records unchanged.
+Independent state/projection/save/successor receipt audit PASS; see
+workbench-disposition-replay-rev1/verification.json. Its158-source hold is released
+only where not shared with live BatchV8 or paged diagnostics. No browser/entry claim.
 AFFECT full event/history COMPLETE105 roles/1436 prefixes/1331 appraisals;
 7916 historical checks,3993 reads:1713 prior exact matches/2280 no prior mutation,
 zero mismatches in this scope. Independent receipt/hash recount PASS; see
 workbench-affect-event-corpus-rev2/verification.json. No initial-origin inference.
 AFFECT full paired native horizons COMPLETE8/8:112 paired prefixes/1470 history
 checks, terminal restore/no-op continuation and independent frozen-original audit PASS.
-Keep291 source/asset bindings for remaining browser qualification. Baseline11,
-likelihood14/control14/feedback11/relief12 terminal restores PASS5/8;
-interior1 RUNNING tab18/4229. Severity fresh-fixture preflight PASS identical
+All8 terminal browser restores COMPLETE; exact summaries/appraisal histories and
+aggregate verification PASS. Release its291-source checkout hold; retain frozen
+assets/evidence. Tab18/4229 at interior3 restored14. Browser intermediate coverage,
+player disclosure and integrated entry remain open. Severity preflight PASS identical
 initial state/inputs/seed/other settings for original1/2 versus1; UI admission due.
-See workbench-affect-severity-preflight-rev1. Original replay verifier prepared,
-not executed: wait for session20415 terminal receipt before verification.
-See workbench-affect-pair-horizons-rev1/native-verification.json. Full browser gate open.
+See workbench-affect-severity-preflight-rev1. Original replay verifier now PASS.
+See workbench-affect-pair-horizons-rev1/browser-verification.json. Obligation parameter
+preflight PASS8 original seed pairs/80 decision comparisons with changed choices;
+same initial state/inputs/other settings. Severity14 choices unchanged comparator
+retained. See workbench-affect-obligation-preflight-rev1. Next admit bounded original
+obligation contrasts and fresh-fixture control; no general trait or live intervention.
 AFFECT persistent paired lifecycle mounted in Experiment: native3 tests PASS eight
 initial contrasts, main/supplement0/1/2 restore/continuation and partial-failure guards.
 Browser baseline/hidden0/1/2 six modes, unequal2/1, checkpoint1, Run/Pause1→2,

@@ -356,3 +356,42 @@ severity a personality trait, or infer general RNG coupling from the common seed
 This is preflight evidence only: comparison admission, UI control, native/browser
 qualification and the full integrated demonstration remain due. Current source/asset
 bindings remain unchanged while the original eight browser contrasts are qualified.
+
+## All eight terminal browser pairs completed — 2026-10-23
+
+Interior candidates1/2/3 each completed14 and restored the terminal paired checkpoint.
+Their original summaries, both save revisions and all14 appraisal comparisons match
+the native oracle exactly. `browser-receipt-5/6/7.json` PASS; the final screenshot
+was inspected. `verify-affect-pair-horizons.mjs --browser` authenticates all eight
+per-pair browser receipts and their captures against the original native evidence.
+`workbench-affect-pair-horizons-rev1/browser-verification.json` PASS.
+
+The112 paired prefixes/1470 historical checks belong to the complete native audit;
+browser acceptance here is terminal execution and restore for all eight pairs, plus
+the earlier separately scoped intermediate lifecycle checks. It is not an all-prefix
+browser diagnostic or accessibility claim. The291-source checkout hold is released;
+frozen source copies and compiled assets remain for historical verification. Live
+BatchV8 and paged diagnostics retain their separate bindings. Tab18 remains at
+interior candidate3 restored14. Full integrated entry remains open.
+
+## Base-parameter demonstration candidate — 2026-10-23
+
+`workbench-affect-obligation-preflight-rev1` authenticates all eight original seed
+pairs `choice-{0..7}-0.1` versus `choice-{0..7}-10`. Each pair has identical initial
+state, ordered inputs, seed and all settings except the adopted competing obligation's
+base contribution1/10 versus10. All80 original decision pairs were compared. Each
+seed has a recorded selected-option difference, first appearing at3,8,1,3,2,6,4,4
+respectively. The original language records and source hashes are preserved.
+
+The earlier severity1/2 versus1 preflight remains a meaningful comparator: its14
+recorded decision pairs choose the same option despite changed appraisal factors.
+That finite equality is not general behavioral equivalence. Both controls remain
+available research originals; neither selects or reduces a psychological law.
+
+LOCAL DISPOSITION: use the existing obligation-strength originals for the next
+bounded parameter-to-reason-to-choice demonstration because they supply an observed
+choice contrast as well as changed reason contributions. Admit explicit contrasts
+and a discrete fresh-fixture control; do not infer continuous interpolation, mutable
+runtime intervention, a personality trait or general common-random-address coupling.
+UI admission and its qualification are still due. This preflight does not satisfy
+player-readable semantics or the full integrated16-step demonstration.
