@@ -52,6 +52,18 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 appraisal-read corpus completion:** Native105 programs/1436 prefixes/
+1331 appraisals/3993 reads/7916 historical checks PASS. Independent artifact/order/
+original prefix identity/history reconciliation and all280 frozen source hashes PASS.
+See workbench-affect-appraisal-read-corpus-rev1/verification.json. This completed
+appraisal-read-only source hold is RELEASED; overlaps with paged diagnostics166
+remain held. Inherited decisions counter means Appraisal cards, not decisions.
+Trace-input limitation under RO-C3-011 remains; no full provenance/entry claim.
+Paged23320 last11/15 prefix16/18 LIVE; packed pair29 last13/13 Working.
+Mark all35 retained tabs each turn. Next integrated AFFECT stored belief vector/history
+from genuine root753 state, followed by remaining demonstration gates.
+
+
 **2026-10-23 own-goal preview update:** AFFECT detached self-player policy0.1
 PASS105/1331/2640, explicit recipient-before-payload and field allowlist; hidden-world
 controls equal. Two templates carry no intensity/certainty claims; mechanical wording

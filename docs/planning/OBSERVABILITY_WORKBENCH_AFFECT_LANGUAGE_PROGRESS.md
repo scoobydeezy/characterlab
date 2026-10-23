@@ -794,3 +794,27 @@ selection provenance/trace disposition and entry remain open. All18 conditional
 obligations survive. Native appraisal-read18522 at least87/105,280-source hold LIVE;
 independent verifier prepared but not run without terminal receipt. Paged23320 at
 11/15 prefix14;166-source hold LIVE. Packed pair29 last13/13 Working. Mark tabs1..35.
+
+## 2026-10-23 — full appraisal-read corpus accepted
+
+Native writer18522 completed all105 original programs,1436 prefixes,1331 appraisals,
+3993 registered belief reads and7916 historical report rechecks. Each original
+state/save/output identity matches retained native evidence. Exact full-key/path/
+value/presence joins were checked by the frozen native writer. Absent records remain
+distinct from missing instrumentation. The inherited counts.decisions name counts
+Appraisal cards here and does not establish decision coverage.
+
+Independent verifier reconciled all105 artifact hashes, original program order,
+prefix identities, report history equality and totals; all280 frozen source copies
+and working sources remain exact. See workbench-affect-appraisal-read-corpus-rev1/
+receipt.json and verification.json. The verifier does not independently re-execute
+the writer's event/path joins. No failed audit revision.
+
+LOCAL DISPOSITION: accept this complete bounded appraisal-read correspondence.
+Release its completed280-source hold only; overlapping sources remain held by live
+paged diagnostics166. No runtime, law, research verdict or obligation status changes.
+RO-C3-011 continues to preserve the separately recorded trace-input limitation;
+this read audit neither repairs nor waives it. All18 conditional obligations survive.
+Learning ancestry, complete source-selection provenance, player strength/certainty
+language, stored-state vector integration and the full entry demonstration remain due.
+Paged23320 last11/15 prefix16/18; packed pair29 last13/13 Working. All35 tabs retained.
