@@ -53,6 +53,11 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 ## Active direction
 
 **Current routing (2026-10-23):** Observability Workbench IN PROGRESS, owner-authorized.
+AFFECT paired appraisal→event/state-history links PASS2 native branches/28 prefixes,
+28 appraisals/182 prior-event stability checks. Browser both event26 sources, B prior
+mutation105 before/after, return and A13 selection reset/native identities PASS.
+Two tests/build613/research PASS; see workbench-affect-event-link-rev1; tab16/4227.
+Recorded scheduling/value-history links do not establish necessity or full entry.
 AFFECT appraisal comparison PASS8 declared contrasts/104 retained rows; first
 four-factor/raw/result differences and both exact source revisions now inspectable.
 Browser interior2 terminal14/instant13-14 sources/native saves/unequal1/0 withholding

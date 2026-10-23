@@ -1,0 +1,63 @@
+{
+  "status": "PASS NATIVE AFFECT APPRAISAL EVENT LINKS",
+  "branches": 2,
+  "prefixes": 28,
+  "appraisals": 28,
+  "historicalComparisons": 182,
+  "sources": [
+    {
+      "path": "src/workbench/affectAppraisalEvent.ts",
+      "copy": "docs/planning/workbench-affect-event-link-rev1/sources/src/workbench/affectAppraisalEvent.ts",
+      "sha256": "2ac3b8a51bdcfb292dfd5804243d8812b8bc7cd3c992a891215c518757b2e1ff"
+    },
+    {
+      "path": "src/workbench/AffectAppraisalComparisonPanel.tsx",
+      "copy": "docs/planning/workbench-affect-event-link-rev1/sources/src/workbench/AffectAppraisalComparisonPanel.tsx",
+      "sha256": "9dedc8e1e74fb4c0474cf346fa41dc20c2319ef2df2849b3d09e7483ffcdce65"
+    },
+    {
+      "path": "src/workbench/AffectWorkbench.tsx",
+      "copy": "docs/planning/workbench-affect-event-link-rev1/sources/src/workbench/AffectWorkbench.tsx",
+      "sha256": "938b8b7969357b56bd0e0a7cd460e83d25533b1e0931f22ea47bf6a96231a74b"
+    },
+    {
+      "path": "src/workbench/EventStatePanel.tsx",
+      "copy": "docs/planning/workbench-affect-event-link-rev1/sources/src/workbench/EventStatePanel.tsx",
+      "sha256": "f96ba9932b00af6ba4e34052bc264c254b4a3bfd26f49c41df7ab6e23731e75d"
+    },
+    {
+      "path": "src/workbench/CausalHistoryPanel.tsx",
+      "copy": "docs/planning/workbench-affect-event-link-rev1/sources/src/workbench/CausalHistoryPanel.tsx",
+      "sha256": "5df00ef58cd5a29b88b8a48fc062fe6da8f3f67fccbfda8fcacc9ca08e69a96f"
+    },
+    {
+      "path": "src/workbench/StateReadHistoryPanel.tsx",
+      "copy": "docs/planning/workbench-affect-event-link-rev1/sources/src/workbench/StateReadHistoryPanel.tsx",
+      "sha256": "9338bea0a3e8c0a636e94c71efdd3bc4b41357c00c0e52ef539f3d1cffd43870"
+    },
+    {
+      "path": "src/workbench/stateReadHistory.ts",
+      "copy": "docs/planning/workbench-affect-event-link-rev1/sources/src/workbench/stateReadHistory.ts",
+      "sha256": "82fc3f9c2dfedeb8a5c3cb06d368f0ce1d961382c8e6c39b8c99fd0feeafb40e"
+    },
+    {
+      "path": "src/test/workbenchAffectAppraisalEvent.test.ts",
+      "copy": "docs/planning/workbench-affect-event-link-rev1/sources/src/test/workbenchAffectAppraisalEvent.test.ts",
+      "sha256": "a52f372bd4accb42c42cc98f81cc28ab940931f0f266783a620ccdbb150144b7"
+    },
+    {
+      "path": "scripts/check-affect-event-link.mjs",
+      "copy": "docs/planning/workbench-affect-event-link-rev1/sources/scripts/check-affect-event-link.mjs",
+      "sha256": "e1f582f7977ba50505710b0f63730fd2472ab5b1749f007661fda534180ec9c1"
+    }
+  ],
+  "reference": {
+    "path": "docs/planning/workbench-affect-supplements-rev1/receipt.json",
+    "sha256": "9d768172c67a24e5413e6f3d8ecd32c1577db24c7f97fc6cb8162186facac85e"
+  },
+  "artifact": {
+    "path": "native.json",
+    "sha256": "883ce6de20867a1c9b047f7f3311b7be71ed2f1c0b60d63c9ee957a5965979fc"
+  },
+  "scope": "Two original interior candidate2 branches through14. Every prefix state/save matches retained native oracle; all prior appraisal event records stable. Exact top-level source joins and retained state-read predecessors. Broader corpus event joins/browser integration separately qualified."
+}

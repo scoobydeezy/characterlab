@@ -120,3 +120,34 @@ LOCAL DISPOSITION: these are recorded appraisal-field differences, not the first
 changed choice, all appraisal operands, subjective experience or causal necessity.
 Full comparison lifecycle, player-language traversal and integrated entry remain
 required. No Campaign3 verdict, law selection or obligation disposition changes.
+
+## Appraisal-to-event and state-history traversal — 2026-10-23
+
+The paired appraisal inspector now follows either selected evaluation to its exact
+committed emitter. `affectAppraisalEvent.ts` requires one matching top-level754 output
+at the appraisal instant, appraise stage and phase50; nested downstream copies,
+wrong phases, changed payloads and ambiguous emitters cannot supply a link. The
+selected branch retains its own save revision while shared event-state and recorded
+history panels expose original reads, mutations, scheduling links and prior writes.
+Changing the compared appraisal clears the prior event selection. A new pair revision
+remounts the inspector, preventing a previous branch/event selection from carrying over.
+
+`workbench-affect-event-link-rev1/receipt.json` PASS both original interior candidate2
+branches through14:28 exact native state/save prefix joins,28 appraisal emitters and
+182 historical event stability comparisons. Two tests additionally verify the retained
+baseline/hidden emitter records and negative ambiguity/nesting/phase/payload cases.
+No native execution semantics, source language or stored state was changed.
+
+Browser tab16/4227 PASS both terminal appraisal event26 records and their three exact
+reads, branch save identities and state-read history. Branch B's first matching read
+opens prior mutation105/apply with the original before/after values, and the return
+action restores the appraisal selection. Selecting instant13 clears the old event;
+branch A13 then matches its original event. All four main native identities remain
+unchanged. `browser-receipt.json` binds the capture, native oracle and isolated build;
+screenshot inspected. TypeScript/build613, boundary and restored research checks PASS.
+
+LOCAL DISPOSITION: recorded scheduling dependencies and matching prior state writes
+are traversable evidence, not psychological necessity or complete causal attribution.
+This advances the integrated inspection path without claiming complete player-language
+traversal or Campaign4 entry. All18 conditional obligations and historical restrictions
+survive; no Campaign3 verdict or obligation disposition changes.
