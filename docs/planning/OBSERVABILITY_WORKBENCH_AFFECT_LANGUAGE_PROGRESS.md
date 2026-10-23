@@ -334,3 +334,25 @@ Research PASS preserves18 conditional obligations. Player disclosure, intermedia
 browser diagnostic coverage, full factor accounting, resource bounds and integrated
 Campaign4 entry remain separate required work. No Campaign3 verdict, psychological
 law selection, reduction or obligation disposition changes.
+
+## Browser horizons and severity preflight — 2026-10-23
+
+Feedback11 and vulnerability-relief12 terminal browser restores now PASS with exact
+original summaries, both save revisions and every retained appraisal comparison.
+`browser-receipt-3.json` and `browser-receipt-4.json` extend completed browser scope
+to five of eight contrasts. Relief screenshot inspected. Interior candidate1 is
+RUNNING in tab18/4229; all three interior browser horizons remain required.
+
+The next base-parameter control has a conservative existing-original candidate:
+`factor-2-0.5-0.5-1-0` versus `factor-2-0.5-1-1-0`. The preflight in
+`workbench-affect-severity-preflight-rev1` verifies identical initial state, ordered
+inputs, seed and all model settings except adopted safety-goal severity1/2 versus1.
+Both programs already have15 qualified native prefixes. The fixture bytes match
+original AFFECT parity; the plan bytes match the frozen BatchV8 source binding.
+
+LOCAL DISPOSITION: these originals can support a future two-position fresh-fixture
+severity control. Do not interpolate a continuous domain, mutate a live run, call
+severity a personality trait, or infer general RNG coupling from the common seed.
+This is preflight evidence only: comparison admission, UI control, native/browser
+qualification and the full integrated demonstration remain due. Current source/asset
+bindings remain unchanged while the original eight browser contrasts are qualified.

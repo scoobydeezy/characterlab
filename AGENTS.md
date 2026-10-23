@@ -60,7 +60,11 @@ workbench-affect-event-corpus-rev2/verification.json. No initial-origin inferenc
 AFFECT full paired native horizons COMPLETE8/8:112 paired prefixes/1470 history
 checks, terminal restore/no-op continuation and independent frozen-original audit PASS.
 Keep291 source/asset bindings for remaining browser qualification. Baseline11,
-likelihood14/control14 terminal restores PASS3/8; feedback RUNNING tab18/4229.
+likelihood14/control14/feedback11/relief12 terminal restores PASS5/8;
+interior1 RUNNING tab18/4229. Severity fresh-fixture preflight PASS identical
+initial state/inputs/seed/other settings for original1/2 versus1; UI admission due.
+See workbench-affect-severity-preflight-rev1. Original replay verifier prepared,
+not executed: wait for session20415 terminal receipt before verification.
 See workbench-affect-pair-horizons-rev1/native-verification.json. Full browser gate open.
 AFFECT persistent paired lifecycle mounted in Experiment: native3 tests PASS eight
 initial contrasts, main/supplement0/1/2 restore/continuation and partial-failure guards.

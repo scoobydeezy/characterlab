@@ -1400,3 +1400,13 @@ LOCAL DISPOSITION: this advances the required corpus-level language audit withou
 declaring its full criteria or player language complete. No Campaign3 verdict or
 obligation disposition changes. Subject naming, disclosure, semantic bands, complete
 factor language and the integrated Campaign4 demonstration remain required.
+# Replay completion verifier prepared — 2026-10-23
+
+`scripts/verify-disposition-replay.mjs` is prepared for the still-running original
+replay audit20415. It requires the final receipt before checking all285 records,
+the242 pre-interruption identities, original model/run/state/projection/save hashes,
+270 advancing successors and15 terminal outcomes. Syntax check PASS; completion
+verification has NOT run. Do not treat this preparation as replay acceptance or
+restart the quiet live writer. Run it only after its terminal receipt exists and
+the process has completed. Existing Campaign3 limits and18 obligations survive.
+

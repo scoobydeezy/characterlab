@@ -1,0 +1,63 @@
+{
+  "status": "PASS EXISTING FROZEN SEVERITY CONTRAST PREFLIGHT",
+  "programs": [
+    "factor-2-0.5-0.5-1-0",
+    "factor-2-0.5-1-1-0"
+  ],
+  "seam": "affect-public/0.1-candidate",
+  "kind": "model",
+  "parameter": "adopted safety goal severity",
+  "allowedValues": [
+    "1/2",
+    "1/1"
+  ],
+  "settings": [
+    {
+      "candidate": 2,
+      "controlLaw": 1,
+      "learningLaw": 1,
+      "feedback": false,
+      "severity": 0.5,
+      "obligation": 1,
+      "safety": 1,
+      "execution": true
+    },
+    {
+      "candidate": 2,
+      "controlLaw": 1,
+      "learningLaw": 1,
+      "feedback": false,
+      "severity": 1,
+      "obligation": 1,
+      "safety": 1,
+      "execution": true
+    }
+  ],
+  "sameOtherSettings": true,
+  "sameInitialState": true,
+  "sameOrderedInputs": true,
+  "sameSeed": true,
+  "seed": 0,
+  "initialStateSha256": "b7b1f740647434110e3e2bd2d581679cca5eb68484e944b3466458db2d61a859",
+  "orderedInputsSha256": "7749a2fddfe3d08e6197b9a0936a796f84c78600322ed7279eb86f3ee3f6b5d9",
+  "nativePrefixesPerProgram": 15,
+  "sources": [
+    {
+      "path": "docs/planning/AFFECT_PUBLIC_EXPERIMENT_PLAN_REV1.json",
+      "sha256": "519ce7ac58c0e01c17706ca89c14509323af1a1e2eafa00ff29e579659b2da89"
+    },
+    {
+      "path": "src/workbench/affectFixtures.json",
+      "sha256": "047aaf397de040c7ca208ff3a43d9fdd847820badcbae4c84101bc637dd6b926"
+    },
+    {
+      "path": "docs/planning/workbench-affect-parity-rev1/receipt.json",
+      "sha256": "12eb49a5aef60eb7ab84826f1fefebc013ba36076465daa98a78b45a928fa47d"
+    },
+    {
+      "path": "scripts/check-affect-severity-preflight.mjs",
+      "sha256": "1876711742f911299915c842d99d0ac39a5d3cbc23b80725ab282f5b392811e2"
+    }
+  ],
+  "scope": "Existing qualified originals differ only in the declared severity model setting. This supports a future two-position fresh-fixture control; no continuous interpolation, runtime mutation, personality-trait interpretation, stochastic coupling guarantee, UI admission or integrated-entry acceptance. Native addressed draws and exact model changes must remain disclosed."
+}
