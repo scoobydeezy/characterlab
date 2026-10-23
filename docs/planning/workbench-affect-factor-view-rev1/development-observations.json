@@ -1,0 +1,19 @@
+{
+  "observations": [
+    {
+      "status": "NO TESTS DISCOVERED",
+      "cause": "Initial .test.tsx filename did not match repository src/test/**/*.test.ts inclusion. Exit0 was not accepted as a pass.",
+      "correction": "Renamed test to .test.ts; source retained."
+    },
+    {
+      "status": "TWO TEST FAILURES",
+      "cause": "Windows extensionless resolution matched affectFactorView.ts instead of AffectFactorView.tsx, producing an undefined React component.",
+      "correction": "Reader renamed affectFactorProjection.ts; conflicting sources retained."
+    },
+    {
+      "status": "PASS WITH SSR TITLE WARNINGS",
+      "cause": "SVG title received multiple children.",
+      "correction": "Single deterministic string child. Corrected two tests pass without warnings; warning-producing source retained."
+    }
+  ]
+}

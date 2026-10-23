@@ -1,0 +1,886 @@
+{
+  "status": "PASS RETAINED AFFECT FACTOR VIEW",
+  "reference": {
+    "path": "docs/planning/workbench-affect-language-rev1/receipt.json",
+    "sha256": "fa273533551425597b1e61de38710529e0bab8d4df93a58546c3f0fa88dfb1ef"
+  },
+  "sources": [
+    {
+      "path": "src/workbench/affectFactorProjection.ts",
+      "copy": "docs/planning/workbench-affect-factor-view-rev1/sources/src/workbench/affectFactorProjection.ts",
+      "sha256": "044ced01f8da1a760e3a1ccd25fdfb3303c8d0c307dc5615350ae685145ea8b5"
+    },
+    {
+      "path": "src/workbench/AffectFactorView.tsx",
+      "copy": "docs/planning/workbench-affect-factor-view-rev1/sources/src/workbench/AffectFactorView.tsx",
+      "sha256": "56b8decffe0ec744a0855173f726274fc995a5ceefe0ca2834a0f37a1cab30ef"
+    },
+    {
+      "path": "src/workbench/AffectWorkbench.tsx",
+      "copy": "docs/planning/workbench-affect-factor-view-rev1/sources/src/workbench/AffectWorkbench.tsx",
+      "sha256": "0ef560470087e88dbc96fade3294e73a15e5c4f479dd68218fd1a371f551e6dd"
+    },
+    {
+      "path": "src/test/workbenchAffectFactorView.test.ts",
+      "copy": "docs/planning/workbench-affect-factor-view-rev1/sources/src/test/workbenchAffectFactorView.test.ts",
+      "sha256": "d2c097c983a1c42bd12cdce943a642492a8f5dce7143c5a958d2d15e7beff793"
+    },
+    {
+      "path": "scripts/check-affect-factor-view.mjs",
+      "copy": "docs/planning/workbench-affect-factor-view-rev1/sources/scripts/check-affect-factor-view.mjs",
+      "sha256": "bfe19e78a5f8eedef9adf146d5d914a388a8bf1ce368fecc3866d0d2b8cbf0cc"
+    }
+  ],
+  "counts": {
+    "programs": 105,
+    "appraisals": 1331,
+    "missingFactors": 1583,
+    "knownZeroFactors": 130,
+    "oneCoordinate": 76,
+    "twoCoordinates": 113,
+    "unavailableCoordinates": 1142
+  },
+  "results": [
+    {
+      "program": "factor-1-0.5-0.5-0.5-0",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/000.json",
+      "sha256": "de132433b319676f63186a2ab63b451285f1c33516585dabfd36b192e8cdfc04",
+      "appraisals": 14,
+      "projectionSha256": "420c88d992eb576ccc454fe2b2e5475c3d80608f0a6480c970bce20021134e58",
+      "renderSha256": "448825af80461e98be6076947cc78f223c5703cb801a6ab3a565a777622d6130"
+    },
+    {
+      "program": "factor-1-0.5-0.5-0.5-1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/001.json",
+      "sha256": "46be682d405ce6b94bee51a4130ee2f54a035c7e9f0cb8e92ba680b9baf3428b",
+      "appraisals": 14,
+      "projectionSha256": "147c6920d145009de13d75ee993be23326fba11de4bad1de34827e24f2859d7e",
+      "renderSha256": "712ce6d710eb2e036845a41b6edaaab373a0129c5b8a0e6190e1c8b42ea0184f"
+    },
+    {
+      "program": "factor-1-0.5-0.5-1-0",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/002.json",
+      "sha256": "7868317f269e0db329ac12eae7a53428a6913e510b41a0471f1a7c5375412171",
+      "appraisals": 14,
+      "projectionSha256": "43373094ccfd0b5d10b6334da1ca924f9e4250bfb293ef4c124459f2f230c905",
+      "renderSha256": "f70eaf78cf9c62a9e2b48cb3aa5c9d78c52f8a251d88ffd31199e514233af0e1"
+    },
+    {
+      "program": "factor-1-0.5-0.5-1-1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/003.json",
+      "sha256": "7043403f563a37d77d08378b89f0bc1363226ef8e59588820f9f95ac30b3731e",
+      "appraisals": 14,
+      "projectionSha256": "eae53f9296208e41468cc5ed7d5a9607b993117a066b0fecb43e7c662bcc0c01",
+      "renderSha256": "776e94dcbca5ed137d013525a5a40459b50e5bb9759e4fb86773173daa35d7f8"
+    },
+    {
+      "program": "factor-1-0.5-1-0.5-0",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/004.json",
+      "sha256": "26b35a9abcc6c987b908b44362a9aa99d9aba144aa48719c36f0336e5cad6109",
+      "appraisals": 14,
+      "projectionSha256": "a01e1f8bdfec19fafef8b9ca96a47e0d4c1b12b27f6c8b360e9ba9bdde85355e",
+      "renderSha256": "231692573ecc8302178a0c1449319b5bc137006200bb6ae8bbb9f5aae321b6bb"
+    },
+    {
+      "program": "factor-1-0.5-1-0.5-1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/005.json",
+      "sha256": "f5cc0928fc2514b42578aef10d48ccc68ee7c7492d1df5ca320dc84bd82812b3",
+      "appraisals": 14,
+      "projectionSha256": "fe37a5c264c2b6207290139435f3f77725b7e1a8128a0f7c99c7b9fce865a55b",
+      "renderSha256": "44feb68765a810c79326914d79d685c98f702bf83c7dcd33ef756eb0499d1634"
+    },
+    {
+      "program": "factor-1-0.5-1-1-0",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/006.json",
+      "sha256": "b6ac15347f11d87af5fee5c2254b25de5474b2a4d41c55e7076cc87d72d7daa4",
+      "appraisals": 14,
+      "projectionSha256": "dfc105db2e85d16ce1b00d067e1d00615405dafff97f827c8df1d966e9b2e2b8",
+      "renderSha256": "74b87766f289845d87531d7f1ce49f31e93045920f1bd0c0b0492cae02c16b32"
+    },
+    {
+      "program": "factor-1-0.5-1-1-1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/007.json",
+      "sha256": "55170e3c180aa244105a0aac3b67e8ce459543469a735175c50ae1eaca12baf2",
+      "appraisals": 14,
+      "projectionSha256": "baa64d620a5454ed8765645124fd9ec6d8350154c6f8c44f1b16d64b01e2f22d",
+      "renderSha256": "4118d021f0f2783eba066923fcfb143bb6181cfbd20145e56dfa542c0b0116f3"
+    },
+    {
+      "program": "factor-1-1-0.5-0.5-0",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/008.json",
+      "sha256": "6906b0e4266843ff75e8820e74edeb7d1d318e8dc157013a4c35a79c23c8fc06",
+      "appraisals": 14,
+      "projectionSha256": "929884e36bd529adff6e89b26e764a73380428367341c5efe5c906140cd5180c",
+      "renderSha256": "403398e965e135cc93a4d44f12c29aaf9e98ad08486853724e7f02d63308d1db"
+    },
+    {
+      "program": "factor-1-1-0.5-0.5-1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/009.json",
+      "sha256": "84d1d13064e94c6389e04b6c91f51389ada7630f246149c1d725a5a1d66d2b68",
+      "appraisals": 14,
+      "projectionSha256": "e75e35aeee849076de9aefacfc7544cbe785d4bb8f1c29f3f3e84510805fbe7c",
+      "renderSha256": "cdb9b89397324efcf9fdbfaecf28af5f30791a5adf5dfaf7e32315b2afd4adbe"
+    },
+    {
+      "program": "factor-1-1-0.5-1-0",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/010.json",
+      "sha256": "98100d71ed5263eb83d1a707b688d0ad4c34e35b12d63131093ac7b655a5c5f3",
+      "appraisals": 14,
+      "projectionSha256": "1ec668df75477136bca5b3f62dc7b8d07159e0600fe06760957c38faa33d90a8",
+      "renderSha256": "fc1883949a40e493509a07a76986f5b92641b8d2acbcf1e22da5df9d42110993"
+    },
+    {
+      "program": "factor-1-1-0.5-1-1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/011.json",
+      "sha256": "9892a549d616be092c0f01e6bbe9215d71842cfd4a546d4995c55ab22c563070",
+      "appraisals": 14,
+      "projectionSha256": "adc7fdd96f1a1e839025ea921ec3d01dabe7777aefb658a32c9af8da04ee153e",
+      "renderSha256": "cf927342121d4792231e424ac020f5827227d68ec96e0adfc8398fbbdf04980e"
+    },
+    {
+      "program": "factor-1-1-1-0.5-0",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/012.json",
+      "sha256": "60d9750f93d77723310d62fea9f8ebf163d5ef39475046f12865d2fb9c201263",
+      "appraisals": 14,
+      "projectionSha256": "4f9e371b5056abdc2170ecb8333aefb5c08b7f99c35a44ec579a52f87080f3d1",
+      "renderSha256": "455d9197e8af0c4703e2850de652d49a6bcc3a5e3892b5ff0ee461201e14bb5b"
+    },
+    {
+      "program": "factor-1-1-1-0.5-1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/013.json",
+      "sha256": "9f87d9ff4aa4b7683ffaf580f5c98c82b9b2901df92dc10cde542ee23cc8b04f",
+      "appraisals": 14,
+      "projectionSha256": "4577cfda927386619029a9887ad24bdf7cd4bab2b1912bc98f4ace32367719b5",
+      "renderSha256": "e2f6fcdc145b2e46c89ec534092287ee637b583b99cdc9addb929cbb4173ecc2"
+    },
+    {
+      "program": "factor-1-1-1-1-0",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/014.json",
+      "sha256": "9fe153be96f7e65bb75fdc8b6b761f227a92b34a96c4d3030103333149e02d14",
+      "appraisals": 14,
+      "projectionSha256": "d7818452a63fd99b9d33197708f6f83aa9a6d0098e9e94a8dd89b451f126e922",
+      "renderSha256": "68667a35a517638de54daad8bbbd4bc042455de1b5d07853b26ecc04509244c5"
+    },
+    {
+      "program": "factor-1-1-1-1-1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/015.json",
+      "sha256": "300a71c9eb9beb1da89b8bc9b9dd8398e0022806dbec61e793436730f4c66aec",
+      "appraisals": 14,
+      "projectionSha256": "527e88b3b9b238a3ec15e54cc76bdaab401ee80f44b11fe891c4a2235a215b7f",
+      "renderSha256": "ccbb881df40ce2c7c8b2f8e337d513568508d3d7a4dc6b1f217ff4f15a1dc385"
+    },
+    {
+      "program": "factor-2-0.5-0.5-0.5-0",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/016.json",
+      "sha256": "ff1e446def0ef9cebc4c11017572ba438e0276e33de7f08f6a22d5b1083f7c3e",
+      "appraisals": 14,
+      "projectionSha256": "54a6c9f6128eb8698b35f86293abb0a7199539ba02e029fce67fbe627657689d",
+      "renderSha256": "617493cd263d46a3a3c2034749ae83dd6ad604025583f89d79b066f9e296454a"
+    },
+    {
+      "program": "factor-2-0.5-0.5-0.5-1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/017.json",
+      "sha256": "c43343fe43772bc44293ac6da76ba358b6379bf3cf2bd4b01a268ae5a2a9e9a4",
+      "appraisals": 14,
+      "projectionSha256": "fb16432d3f926c931a99800c2cc81dc4d64ca2c8d64f28fd46ef7e4db93d9bcc",
+      "renderSha256": "8461d9d424d3cc3645614b3ed87b0d39885c78c5ec562842cf2db00288925f9c"
+    },
+    {
+      "program": "factor-2-0.5-0.5-1-0",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/018.json",
+      "sha256": "fd844cda3cf43f0cdf41c390ecc9ffafe8725b2128ca058109b7f23d5f9295eb",
+      "appraisals": 14,
+      "projectionSha256": "63948d3a39f0a3031920eba4a648ba6f24348dc12f6221bd155186a5c37ed54b",
+      "renderSha256": "19889f84411b62e07ff6031f64884923db33332a2390c59cf55cab914bbe115c"
+    },
+    {
+      "program": "factor-2-0.5-0.5-1-1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/019.json",
+      "sha256": "cf25aee57c3d883e1777e7f4321f0618bc8325fb009bff34e12df48ddd6db7f5",
+      "appraisals": 14,
+      "projectionSha256": "35348684d3275c90249780f365f921cd17e1cad492d7c9e1e171c0830ac26b0e",
+      "renderSha256": "86bc019136ef9e3099f5d6e17a614bf9ea767b50336a11c3dc3cb53e5d3127fd"
+    },
+    {
+      "program": "factor-2-0.5-1-0.5-0",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/020.json",
+      "sha256": "e46660de3079cb6de757b22400e85eab110292c01f70f97e6ac9f65fbfe63cf9",
+      "appraisals": 14,
+      "projectionSha256": "587054aa063706cd545eb287c7ecc54ac47800da14c0f0eed6ed10c44ff9bc64",
+      "renderSha256": "a1467994c3d8dc088c13c210ac024f085d6182f41b2c7a3df96af185443cee50"
+    },
+    {
+      "program": "factor-2-0.5-1-0.5-1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/021.json",
+      "sha256": "5e2fea43c1c85230f9b82fa351e81f4df62eef3904114314ca669b34585148bb",
+      "appraisals": 14,
+      "projectionSha256": "1ddd4a7ec2494be53824598a0271c6833e0ae52f0e4a70bc4b3245c7a27088ba",
+      "renderSha256": "bcf9aa7454490f3749c941a72fbddd0fbc44b7f023d01adafd70640a6c166c2c"
+    },
+    {
+      "program": "factor-2-0.5-1-1-0",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/022.json",
+      "sha256": "59b092f46339d07a570119bfcae157c3f128424b9fd1a2c9f279e1e0edcf6002",
+      "appraisals": 14,
+      "projectionSha256": "a85b5bdeb087ee09a668d2434bf0677575b2057285a8d277baa58c8989efaa0b",
+      "renderSha256": "5552f93f11ae2111a8c8b1ab93cbc6b277477d0b04415b78043a4f2aff512b37"
+    },
+    {
+      "program": "factor-2-0.5-1-1-1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/023.json",
+      "sha256": "7e04d33841705556323f0f28ee1cdfd4e960681ce34c1f4704acc015ee8fccb8",
+      "appraisals": 14,
+      "projectionSha256": "e3e31ad1e869263430a7b2200addf8586ba4d583abfe2798e5f1405fc0c50062",
+      "renderSha256": "524a4b16d6d9910162197d90cb19eb7a59a61523e79f1a5ce531e806ce4945d9"
+    },
+    {
+      "program": "factor-2-1-0.5-0.5-0",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/024.json",
+      "sha256": "a19150c04ba1b39f084f9d1d02403dcf2d8b9cd6c1b8c68a1b796639947a4e35",
+      "appraisals": 14,
+      "projectionSha256": "d408203b4665bf86b85b4085ad151d0c9675ece00a7f0e028628b69e3286c3b0",
+      "renderSha256": "069c745e2149110c1941466061bafa084b4314419b5f93fcf8fc783a16a5be9a"
+    },
+    {
+      "program": "factor-2-1-0.5-0.5-1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/025.json",
+      "sha256": "49b68a07b1c9e48e5d29ce16189203c8911f5c6d0f14aee82bb56abaa807a918",
+      "appraisals": 14,
+      "projectionSha256": "fc3864fe47d62d48a2b102ba9319705f67937115c86d4e16c11b936894b46182",
+      "renderSha256": "1f717ee3b5f06dd9911c404519017e482ede739dc6343540ec25cbbb02b569c0"
+    },
+    {
+      "program": "factor-2-1-0.5-1-0",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/026.json",
+      "sha256": "81dd7575387756f1b4a8780792b22299ad6e586dcba77de405baaa5bda3cbc14",
+      "appraisals": 14,
+      "projectionSha256": "ff19e8972ec54e37cd1f2667709f74624cf2c4acc2b3dbc066cc1f072404449b",
+      "renderSha256": "ec7a99e36f734c16ad5eaa81cd98f040d547bb920645767eb478b050a10cb71d"
+    },
+    {
+      "program": "factor-2-1-0.5-1-1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/027.json",
+      "sha256": "39e2833fdf56be573612c693c04bb188746e87a02ad939adb0720e22c10da88e",
+      "appraisals": 14,
+      "projectionSha256": "3aad11cac383d4651d69e0747cd1779e2538d325e8c767adc832cbd34d2c1e0c",
+      "renderSha256": "19a669e7dbacd916f51ff040c52a20ba1af1665fc35474722675f9eb1014cdc1"
+    },
+    {
+      "program": "factor-2-1-1-0.5-0",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/028.json",
+      "sha256": "c6684cf3c394e6ade9aa1fd275fcddb618e90a7e3782322011d9f5b232fba679",
+      "appraisals": 14,
+      "projectionSha256": "2e557e6eb014af8121ea995fed179bb774b59b5c019fc2be24c268ab409c4ac4",
+      "renderSha256": "ec7c2444f73f6dcde48cb2674fb2a5ac683fe43344587d3276b6f05baf4e3e41"
+    },
+    {
+      "program": "factor-2-1-1-0.5-1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/029.json",
+      "sha256": "08bdf870b7ca1537ddf0c9765e9240c2f0fa2e06035da394a45c5e178a9e0a2c",
+      "appraisals": 14,
+      "projectionSha256": "313dac2684969fffc0cc553dbca861a3413020ec3d0a024e43d629d106d97c67",
+      "renderSha256": "f41f58c9909dd5bbde4dba6356c046b83b73a1ce67e37be39a8c0e0dd607a055"
+    },
+    {
+      "program": "factor-2-1-1-1-0",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/030.json",
+      "sha256": "f0ec3b925d6c149c4854cd149f7135bd5ddc1bf13a88bf7046eeacbf5799dc6c",
+      "appraisals": 14,
+      "projectionSha256": "17dfea2511e3554ac96ec6405abdc6f57a0ef4c99ae9d039a02878da02aae5dd",
+      "renderSha256": "b6247c7d499c991522b7291512812c645c63d7b5fc0105e93b8d9a4858a21c96"
+    },
+    {
+      "program": "factor-2-1-1-1-1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/031.json",
+      "sha256": "1369ace56ba1df07a810cf56dbb24ce78862643e24c0d1e529d20206f4278d43",
+      "appraisals": 14,
+      "projectionSha256": "4b5681faafbf99d4fc7f3b5379ceeaf9759668b94d7953134f8b75d038eaea3c",
+      "renderSha256": "3b8a3241abda2e33ca0989b9c9671d4753dd3b6eefde26e4865e60a526ba7277"
+    },
+    {
+      "program": "factor-3-0.5-0.5-0.5-0",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/032.json",
+      "sha256": "0294ac516ea68eb0c88d92d001b3b2868143a5cc14856f87fd61227212afe5b4",
+      "appraisals": 14,
+      "projectionSha256": "420c88d992eb576ccc454fe2b2e5475c3d80608f0a6480c970bce20021134e58",
+      "renderSha256": "448825af80461e98be6076947cc78f223c5703cb801a6ab3a565a777622d6130"
+    },
+    {
+      "program": "factor-3-0.5-0.5-0.5-1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/033.json",
+      "sha256": "74d03dd0c95b4fe8fa102fce595db88e10b92df07347fd3c6146c612f874709d",
+      "appraisals": 14,
+      "projectionSha256": "1e60db12bfe5a6c8e58c1b0c35875d6db854fd2a37ccfb58bbbe52ea55e987aa",
+      "renderSha256": "8d821d1e0c85b95cf8b3d898a3c891a2f474aa16670fb66d78ae346cf9fe5a78"
+    },
+    {
+      "program": "factor-3-0.5-0.5-1-0",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/034.json",
+      "sha256": "ef0ba5fea85b5007f5467fc641b9aec1c71b90b1c1f0bd8773eca86d95602c92",
+      "appraisals": 14,
+      "projectionSha256": "43373094ccfd0b5d10b6334da1ca924f9e4250bfb293ef4c124459f2f230c905",
+      "renderSha256": "f70eaf78cf9c62a9e2b48cb3aa5c9d78c52f8a251d88ffd31199e514233af0e1"
+    },
+    {
+      "program": "factor-3-0.5-0.5-1-1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/035.json",
+      "sha256": "d2fc168d838ca5d272fe4b2e03df1ac495e82c2a109dc0f496f331ca2e85c890",
+      "appraisals": 14,
+      "projectionSha256": "42f409c1fcbd24c6449e3a1134d610a5e607aeda473faf2cd5d0036e25b02a44",
+      "renderSha256": "121f9f2be0d968487a79e6b1dba3104801e939ed1aa9475961aaee64d8654cbb"
+    },
+    {
+      "program": "factor-3-0.5-1-0.5-0",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/036.json",
+      "sha256": "58669fb6933cb237bf93853df7d04fc914ac15d47e95043a2f5d2463f334c8ab",
+      "appraisals": 14,
+      "projectionSha256": "a01e1f8bdfec19fafef8b9ca96a47e0d4c1b12b27f6c8b360e9ba9bdde85355e",
+      "renderSha256": "231692573ecc8302178a0c1449319b5bc137006200bb6ae8bbb9f5aae321b6bb"
+    },
+    {
+      "program": "factor-3-0.5-1-0.5-1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/037.json",
+      "sha256": "2a767e50a4069d40a2ef6213d5914c54d7967cf5bdac6b47672568f36095cbcc",
+      "appraisals": 14,
+      "projectionSha256": "3b57cfee64b0764bdd27a3aa17d4e0c00b7f5ee23fa65332f041c88d92ffb105",
+      "renderSha256": "6e026ed4c184cad14270111752cbf9fbe83cac355c578f4f6bf369539137fbd6"
+    },
+    {
+      "program": "factor-3-0.5-1-1-0",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/038.json",
+      "sha256": "1b86cb6a75ece41d4eacff8ca861a858916365b6e262f5fbbbc68b74728ac418",
+      "appraisals": 14,
+      "projectionSha256": "dfc105db2e85d16ce1b00d067e1d00615405dafff97f827c8df1d966e9b2e2b8",
+      "renderSha256": "74b87766f289845d87531d7f1ce49f31e93045920f1bd0c0b0492cae02c16b32"
+    },
+    {
+      "program": "factor-3-0.5-1-1-1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/039.json",
+      "sha256": "2f9d70ccfda173938e9ec03e6bb279d575ed61780cba0aa53a12e1bd94ef5939",
+      "appraisals": 14,
+      "projectionSha256": "5e7c823911333d584c31b764a5c1651dd316e4beadbc705ef2cb3f862732bf96",
+      "renderSha256": "aeffe82b3812e3144e55b7092f810102836543bed48f65a8fec5b81ba0f7c816"
+    },
+    {
+      "program": "factor-3-1-0.5-0.5-0",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/040.json",
+      "sha256": "8537a5929bc7df5f60bfa5092e499fce18930e90a3bf566970e4ddc895474d99",
+      "appraisals": 14,
+      "projectionSha256": "929884e36bd529adff6e89b26e764a73380428367341c5efe5c906140cd5180c",
+      "renderSha256": "403398e965e135cc93a4d44f12c29aaf9e98ad08486853724e7f02d63308d1db"
+    },
+    {
+      "program": "factor-3-1-0.5-0.5-1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/041.json",
+      "sha256": "d07d761a1d01e02ea0729e802885313087548053931deee65aa73a8a35071b41",
+      "appraisals": 14,
+      "projectionSha256": "0bfa255686f57d35620fdd49ac3f7b5943e8305f9f92c589446f8af93861a4a6",
+      "renderSha256": "c88c62024941d175d1ae792c0983502f30722d7de36a4657409515ecb2887a82"
+    },
+    {
+      "program": "factor-3-1-0.5-1-0",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/042.json",
+      "sha256": "563f312149d6d8f25c47a316ad09e85f52e235d8ef338909bb447e26afbd0a1e",
+      "appraisals": 14,
+      "projectionSha256": "1ec668df75477136bca5b3f62dc7b8d07159e0600fe06760957c38faa33d90a8",
+      "renderSha256": "fc1883949a40e493509a07a76986f5b92641b8d2acbcf1e22da5df9d42110993"
+    },
+    {
+      "program": "factor-3-1-0.5-1-1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/043.json",
+      "sha256": "be81f8bfaaa0a5ffac4c12d1b2748336ffcbd8934cb7128dd7f270bd54542659",
+      "appraisals": 14,
+      "projectionSha256": "56b0ae9d07007be52da0d0b23caa4f26c721faf4f30e69e175e897b89946629b",
+      "renderSha256": "a2e1eab619d96bde200beab163067504a34cb55bf3be10f5835354a3190654f7"
+    },
+    {
+      "program": "factor-3-1-1-0.5-0",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/044.json",
+      "sha256": "db01521b1df00f189d941753b8bd2240058b056829d6c5df3c63400d199a35e3",
+      "appraisals": 14,
+      "projectionSha256": "4f9e371b5056abdc2170ecb8333aefb5c08b7f99c35a44ec579a52f87080f3d1",
+      "renderSha256": "455d9197e8af0c4703e2850de652d49a6bcc3a5e3892b5ff0ee461201e14bb5b"
+    },
+    {
+      "program": "factor-3-1-1-0.5-1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/045.json",
+      "sha256": "c9cc5bedfa5e3ef1c87f45a46021a06a8e79fa3393280a9b3d317499ed034df6",
+      "appraisals": 14,
+      "projectionSha256": "f2cb09a9a02cf644874882ac81324f7867a49df2cb9e6ed0b7078a197652bc52",
+      "renderSha256": "ba7ba39a3901fc4a39051085c2e90b69247774ebf0982409c6eba14b3400ab7f"
+    },
+    {
+      "program": "factor-3-1-1-1-0",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/046.json",
+      "sha256": "23d28d6188e64e896bdd0f015ebbe16dcefc9a21e353ae1c1f73d39dc8ba7c68",
+      "appraisals": 14,
+      "projectionSha256": "d7818452a63fd99b9d33197708f6f83aa9a6d0098e9e94a8dd89b451f126e922",
+      "renderSha256": "68667a35a517638de54daad8bbbd4bc042455de1b5d07853b26ecc04509244c5"
+    },
+    {
+      "program": "factor-3-1-1-1-1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/047.json",
+      "sha256": "3266638a355ac4c9afb0dfbd4723f2ea317538d2ae79195efb07a04a965a05c8",
+      "appraisals": 14,
+      "projectionSha256": "ed9d336e7dde41640c3c28348cac3221a18a8c526e9f2ffa8c8c85b347fff855",
+      "renderSha256": "b50b5b349e70b03b497a23a48fc939bc3a89cefe0a7099ccd6e08804b916161e"
+    },
+    {
+      "program": "baseline",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/048.json",
+      "sha256": "9bb07496b866afaf6119b03160d74bdc9b94b0c91837f96a082cdd26c6c2c31f",
+      "appraisals": 11,
+      "projectionSha256": "fd545a25606eb0068fdce32b8dd799d564e12f998cae154723e62e09bf9c703f",
+      "renderSha256": "337f8ef64616eed21605b1fc23cfc961537e693c18b2cc0b96859f4f347db8bc"
+    },
+    {
+      "program": "hidden",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/049.json",
+      "sha256": "31715d5d7894fe1a3fd1793e70d9b94f0aad0615fca6059be5dd7702cdcba01e",
+      "appraisals": 11,
+      "projectionSha256": "fd545a25606eb0068fdce32b8dd799d564e12f998cae154723e62e09bf9c703f",
+      "renderSha256": "337f8ef64616eed21605b1fc23cfc961537e693c18b2cc0b96859f4f347db8bc"
+    },
+    {
+      "program": "false-current",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/050.json",
+      "sha256": "0571404458e58b276289d02e8bfcee76e35fda69eded83de891009173f2d1919",
+      "appraisals": 11,
+      "projectionSha256": "c0cdc1cb5b98067320db2f52d0e0b0da31a785292e59af6be4f0751a3a4c3273",
+      "renderSha256": "c7f077ed95ebb3a26789f09c51e3a9532c4322664386d572381b8986b0275acb"
+    },
+    {
+      "program": "missing-motion",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/051.json",
+      "sha256": "523aaf81e604bde09555a3a6f820872d1d170796ba9a568c9349305ae510231c",
+      "appraisals": 11,
+      "projectionSha256": "89f6187b70ba5a6b86b66241da02a2f59c3aded741e2757c3aa7ca1a74ea8bd1",
+      "renderSha256": "048beefb096636f4140e17becd81cbc86749736b83a6b8d54c97c671cf74dd4f"
+    },
+    {
+      "program": "missing-action",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/052.json",
+      "sha256": "d55f2fa5edba6a47cd929e3d9099944e62d235ebb75a03c8afdb6f3800efad7e",
+      "appraisals": 11,
+      "projectionSha256": "01f4b5307a6f0410118adf091ddc2cb842933652cfc54308a1bb0cb668086d3b",
+      "renderSha256": "cce4b04cc9d9cf8e07394c46c2e22978a67eef15faf975f5bd78221415afc645"
+    },
+    {
+      "program": "censored",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/053.json",
+      "sha256": "aa7572ad83e9142b8f6a81212fd3296d2a5e373a3a70317572310a4bc7f2f6e4",
+      "appraisals": 11,
+      "projectionSha256": "c63de18b836dfc4ee2cb7bd16c7a2d2ceeb26a0a5513a625f6e9ee84737b3e66",
+      "renderSha256": "7c603e3b2a32688a36f769e8d07e59adf4fe3085ad5ff9f85fb8bd41676f2050"
+    },
+    {
+      "program": "no-opportunity",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/054.json",
+      "sha256": "f8a14197adf729ac667d09b5c257307f28c8269f5ed29594b3378254407d28ba",
+      "appraisals": 11,
+      "projectionSha256": "67bb9fb8929d4353acb88323f734531bc10f9767afefdfd5d1bb06e91cfdf55d",
+      "renderSha256": "f60e3b9bbe98095125aa3480ff2d2046a777941447f6757830817dbf66427dcf"
+    },
+    {
+      "program": "denied",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/055.json",
+      "sha256": "ec1e03d353edc21eff855a110d1d12702f1f595767b4a0dba658b361e65a6158",
+      "appraisals": 11,
+      "projectionSha256": "bde7812da09c7d542fa6c4e95c28496714b9b71baf3a34a41fbf2b93e9a96c10",
+      "renderSha256": "c8e4c91587243485c6351f7460185064ca5416728b6060702276146dd5ca9932"
+    },
+    {
+      "program": "outcome-hidden",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/056.json",
+      "sha256": "7228cd5334b80c2c961ffc206b779aa8ffa79b9b38c1817b6f19463493d3caee",
+      "appraisals": 11,
+      "projectionSha256": "7a4d5ab47676baa38b79e8c75a5a9b432677e0af3ef613f695eae023e0c04935",
+      "renderSha256": "c19a9e4a5dfa35604ccb9358ed29af69a55495e00fca7de48c899e0e6b999f14"
+    },
+    {
+      "program": "ineffective",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/057.json",
+      "sha256": "a1f6618921bedc894b5df50e5c38f00e231589578a53a132db7eb8ed9537db97",
+      "appraisals": 11,
+      "projectionSha256": "f60f5f3c0b91a242ac7430ce1de2cde32694635f7184b2a46d56fae401598b28",
+      "renderSha256": "5dcd64ba497c47665be128245ba3acb52d704a7f33eab2534b20f813b82612cb"
+    },
+    {
+      "program": "zero-baseline",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/058.json",
+      "sha256": "717ef3d838b1c55f932f738ac2d404caf4244b045acbe04955e57c5ee4b76282",
+      "appraisals": 11,
+      "projectionSha256": "8ecaac359ade04e588606ee722ace9c5bf1d76615a381a38434fa8d5cd99fa2c",
+      "renderSha256": "b3c97120df6791776efa51288da71e5f83a1f482c50c865976f05a9a9f31b97f"
+    },
+    {
+      "program": "unknown-catalogue",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/059.json",
+      "sha256": "ddda4cb2c4dd7e3a50712c10bf390e8627c2f7cc40cb80d370fc588e04b07c69",
+      "appraisals": 11,
+      "projectionSha256": "0ac2530bb83510c0b419d171d3ca789b7bf1f79089ebba8cb03e892b57c02fa8",
+      "renderSha256": "0ec239c09c9b794b4b0b2b8b6d60260c7f02cea2b173549fc3cefdf63bc35df8"
+    },
+    {
+      "program": "empty-catalogue",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/060.json",
+      "sha256": "a8502402ac59e8c9c3126b41bb445691312b3fb30cb5451544ff0db876b67240",
+      "appraisals": 11,
+      "projectionSha256": "65cd1ab7900ba676907283c3aadb78b7e09fc5c97abd71101347d4ccb066058b",
+      "renderSha256": "12a673280b4bed42165427f63fb0cb0b498d9863a44409ec4b6ef97e62bccc7d"
+    },
+    {
+      "program": "unknown-reserve",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/061.json",
+      "sha256": "260bdb3cfd5cd1bdf547509129524e94ae20eea2bbc244b3c9ed64c7c6f1b46b",
+      "appraisals": 11,
+      "projectionSha256": "bacfc4aac09a00ad2667e07150a33a0d30816df7ba296a448960dfe1e1113936",
+      "renderSha256": "c4cf81e8dbf8c11df67bcc23ef9d62f5be68b64e6b8a0a4b045cf8296b55d18c"
+    },
+    {
+      "program": "feedback-1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/062.json",
+      "sha256": "bb2e9a8b696711571504c9e0ad041f4041959b9e25171dfcbe279c30f00246dd",
+      "appraisals": 11,
+      "projectionSha256": "d15a9ec2cab9fbeefefc2fcdedd314a1bc2fb31ac855fa10ecddb9a88c5d7f15",
+      "renderSha256": "3b788e3cabee90abb3e422879833a663ffcc80eee09721d4e0c7bb2ed479e9a5"
+    },
+    {
+      "program": "feedback-2",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/063.json",
+      "sha256": "9c425366357c4b8a3e5aa7306cd376155550ae883a7617116706f4638c2bf0a1",
+      "appraisals": 11,
+      "projectionSha256": "03590723b739673724cfd089a54b06ca04ed08b6a9041eaf96bc751af756804f",
+      "renderSha256": "53af67f79bebae2d8ad8f3ba5d30177c93da83ee12ff60cf37c3e7d4c07ca7a6"
+    },
+    {
+      "program": "feedback-3",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/064.json",
+      "sha256": "135a4068dd3dce5c4d07e4b5beaff1558c49bc3bd35b2b0e6a347baaedfe3ba9",
+      "appraisals": 11,
+      "projectionSha256": "445490ead8255b74d8cf38d743eb6f6e1325d8ad06594afdba566026a994b5d1",
+      "renderSha256": "7930a0acd6518c0dca40d991876d9d639ec31a74c86c5dbb8e483006b2c8393c"
+    },
+    {
+      "program": "learning-2",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/065.json",
+      "sha256": "00fb7d896412a8f04a104c588c97224d90c3896b3cc4268f83cf6198da7ed2ba",
+      "appraisals": 14,
+      "projectionSha256": "a6ddc74964ed4df12f34b2dc24ef2de8a45be6259764fccbcff12cedc2a51ff3",
+      "renderSha256": "2a66fcdb25d69ac5100a0cf60960c4a6131b5a0d232eeafc68724061dd48b322"
+    },
+    {
+      "program": "learning-3",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/066.json",
+      "sha256": "835a8e90df2f99fdaaa529a38ea18dc0246b964d04ad7b6f2355b251fe56da5a",
+      "appraisals": 14,
+      "projectionSha256": "694f8993ebcc9d7ddc03b6cd0cfb6d15387959ed6519c19b114cf0387d5fa757",
+      "renderSha256": "cece94edb318435be081a56db4529ffe4f12cb40091a8f216a31be8c2c98140a"
+    },
+    {
+      "program": "learning-mean",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/067.json",
+      "sha256": "575bbb84980d3784f67a42cce29ca43f7ff73daea5ec8e5a48413a9de2e79a5c",
+      "appraisals": 14,
+      "projectionSha256": "9e9ab06bb9e2c2e61af158994bf08190998444dc7d5481000d36f7cf5c88d7bb",
+      "renderSha256": "1b298ec2154a647396ab27bfc0b152db11850960575235c939babed78af83f09"
+    },
+    {
+      "program": "relative",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/068.json",
+      "sha256": "3d1f816b4fdcedf2354fe6e310605ee8541de3515708cac0dd0f7e673afaebfe",
+      "appraisals": 14,
+      "projectionSha256": "d67b54c6e7b446890ae943bfac43c983905d775c007f294ae3addd5ec9202065",
+      "renderSha256": "4908d6fff094ded621abd027ca102c0b6a65f851ee493f3a6ae9a5ec6b6ab3e7"
+    },
+    {
+      "program": "absolute",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/069.json",
+      "sha256": "f8105da9e0659a20e16ae7589fbd2bff7f70e9912ee0ef4035ccfc333c126851",
+      "appraisals": 14,
+      "projectionSha256": "4b9962f1836fe304c30c6789faf18d13bea6e6bcaead3e53f76c690baa57a873",
+      "renderSha256": "8deeb5823d47640a5a1189eb33967ece7b6bd6468fa52c122594676a59e04427"
+    },
+    {
+      "program": "no-safety",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/070.json",
+      "sha256": "a19f71e74c5e42b6faff28027e8105168e0545eb696457af7197ec55442b7d2b",
+      "appraisals": 11,
+      "projectionSha256": "f60f5f3c0b91a242ac7430ce1de2cde32694635f7184b2a46d56fae401598b28",
+      "renderSha256": "5dcd64ba497c47665be128245ba3acb52d704a7f33eab2534b20f813b82612cb"
+    },
+    {
+      "program": "blocked-execution",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/071.json",
+      "sha256": "f9e4e0a58d3e5d36b258c3e57f462b8bccaadc226bb92083232991798a3f58eb",
+      "appraisals": 11,
+      "projectionSha256": "fd545a25606eb0068fdce32b8dd799d564e12f998cae154723e62e09bf9c703f",
+      "renderSha256": "337f8ef64616eed21605b1fc23cfc961537e693c18b2cc0b96859f4f347db8bc"
+    },
+    {
+      "program": "no-obligation",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/072.json",
+      "sha256": "68cbe746c67d5f13a11ff5cf797dc46c28682514625b4e0c20d77bf6b112e34c",
+      "appraisals": 11,
+      "projectionSha256": "fd545a25606eb0068fdce32b8dd799d564e12f998cae154723e62e09bf9c703f",
+      "renderSha256": "337f8ef64616eed21605b1fc23cfc961537e693c18b2cc0b96859f4f347db8bc"
+    },
+    {
+      "program": "neutral-goal",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/073.json",
+      "sha256": "3dd243556b0d4ffbd771c40e13843529cee7ca27df22cf7069015599df15767a",
+      "appraisals": 11,
+      "projectionSha256": "a2926dacf7c4249536f6f9e3176c85d099cd424551817f3d798175dd717d0db6",
+      "renderSha256": "baf095bc3a855e4d43a337a69392326e790702b9183ae3bde03e9d6d64534ae4"
+    },
+    {
+      "program": "choice-0-0.1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/074.json",
+      "sha256": "8da2bff64108c7549b93a0004ff2f0479b157cbbce161c703a9703a00e0d5628",
+      "appraisals": 10,
+      "projectionSha256": "7101628b2e1a8b20c28169b41d89f792f25734341a23e374ab3ce200385585af",
+      "renderSha256": "86265d84197016be358d04048c0750e43f898478eebab9952e64532314f04940"
+    },
+    {
+      "program": "choice-0-10",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/075.json",
+      "sha256": "e5d2619394be78f9c94ba84ba90ecbbcfc4068da59eb9d14a383359112b78c41",
+      "appraisals": 10,
+      "projectionSha256": "7101628b2e1a8b20c28169b41d89f792f25734341a23e374ab3ce200385585af",
+      "renderSha256": "86265d84197016be358d04048c0750e43f898478eebab9952e64532314f04940"
+    },
+    {
+      "program": "choice-1-0.1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/076.json",
+      "sha256": "d7ec30ef09eeafb117de9eedca707d7d66377365ff76fbfe6f47e8a2a0bb261e",
+      "appraisals": 10,
+      "projectionSha256": "7101628b2e1a8b20c28169b41d89f792f25734341a23e374ab3ce200385585af",
+      "renderSha256": "86265d84197016be358d04048c0750e43f898478eebab9952e64532314f04940"
+    },
+    {
+      "program": "choice-1-10",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/077.json",
+      "sha256": "744f86add1168a7aebae6cd19770b46e92db0335ed49b8bf9c34cc0648892ac9",
+      "appraisals": 10,
+      "projectionSha256": "7101628b2e1a8b20c28169b41d89f792f25734341a23e374ab3ce200385585af",
+      "renderSha256": "86265d84197016be358d04048c0750e43f898478eebab9952e64532314f04940"
+    },
+    {
+      "program": "choice-2-0.1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/078.json",
+      "sha256": "152e7ee4131c3e5b875e39fb5456d626a86765149bd3c0584c3c5fe960653db5",
+      "appraisals": 10,
+      "projectionSha256": "7101628b2e1a8b20c28169b41d89f792f25734341a23e374ab3ce200385585af",
+      "renderSha256": "86265d84197016be358d04048c0750e43f898478eebab9952e64532314f04940"
+    },
+    {
+      "program": "choice-2-10",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/079.json",
+      "sha256": "94851770fa2a26c02afda03bcd3f16d78e7b2c481c71799521bbad7d8daf904a",
+      "appraisals": 10,
+      "projectionSha256": "7101628b2e1a8b20c28169b41d89f792f25734341a23e374ab3ce200385585af",
+      "renderSha256": "86265d84197016be358d04048c0750e43f898478eebab9952e64532314f04940"
+    },
+    {
+      "program": "choice-3-0.1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/080.json",
+      "sha256": "aedbab9ddeef8d9e2eb35add4af8fdc24456ec86e1e19e68e440dce5d2864bee",
+      "appraisals": 10,
+      "projectionSha256": "7101628b2e1a8b20c28169b41d89f792f25734341a23e374ab3ce200385585af",
+      "renderSha256": "86265d84197016be358d04048c0750e43f898478eebab9952e64532314f04940"
+    },
+    {
+      "program": "choice-3-10",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/081.json",
+      "sha256": "db44a39ac13b5ea46853969844aaf7c5b0bba350e02719705ab2455f050c52b5",
+      "appraisals": 10,
+      "projectionSha256": "7101628b2e1a8b20c28169b41d89f792f25734341a23e374ab3ce200385585af",
+      "renderSha256": "86265d84197016be358d04048c0750e43f898478eebab9952e64532314f04940"
+    },
+    {
+      "program": "choice-4-0.1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/082.json",
+      "sha256": "5f74433d99a84c031ca98ec9be40e60fb867c43b662b0d31a9f7bb3389404b66",
+      "appraisals": 10,
+      "projectionSha256": "7101628b2e1a8b20c28169b41d89f792f25734341a23e374ab3ce200385585af",
+      "renderSha256": "86265d84197016be358d04048c0750e43f898478eebab9952e64532314f04940"
+    },
+    {
+      "program": "choice-4-10",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/083.json",
+      "sha256": "f766d48cf59f0cec0128319ba0e15ee5365c795287233b372f59fcda166bc9dd",
+      "appraisals": 10,
+      "projectionSha256": "7101628b2e1a8b20c28169b41d89f792f25734341a23e374ab3ce200385585af",
+      "renderSha256": "86265d84197016be358d04048c0750e43f898478eebab9952e64532314f04940"
+    },
+    {
+      "program": "choice-5-0.1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/084.json",
+      "sha256": "4435c336a88582ce5aae5318e06555f4b4195048f5fa03f7348fe06bd56a3e08",
+      "appraisals": 10,
+      "projectionSha256": "7101628b2e1a8b20c28169b41d89f792f25734341a23e374ab3ce200385585af",
+      "renderSha256": "86265d84197016be358d04048c0750e43f898478eebab9952e64532314f04940"
+    },
+    {
+      "program": "choice-5-10",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/085.json",
+      "sha256": "b350f9f64d76fe498047d58e80b4bf13f5a7cfdbf31fb2e8a87487a6133a86b2",
+      "appraisals": 10,
+      "projectionSha256": "7101628b2e1a8b20c28169b41d89f792f25734341a23e374ab3ce200385585af",
+      "renderSha256": "86265d84197016be358d04048c0750e43f898478eebab9952e64532314f04940"
+    },
+    {
+      "program": "choice-6-0.1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/086.json",
+      "sha256": "31a61fae060b6a0601e59786701d464414791a70bf8e59457e5fe244f9121a24",
+      "appraisals": 10,
+      "projectionSha256": "7101628b2e1a8b20c28169b41d89f792f25734341a23e374ab3ce200385585af",
+      "renderSha256": "86265d84197016be358d04048c0750e43f898478eebab9952e64532314f04940"
+    },
+    {
+      "program": "choice-6-10",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/087.json",
+      "sha256": "6cfb178780a47473984ccc3f2f6884f5744e5210662892a3f6b7cf6a7533e6d8",
+      "appraisals": 10,
+      "projectionSha256": "7101628b2e1a8b20c28169b41d89f792f25734341a23e374ab3ce200385585af",
+      "renderSha256": "86265d84197016be358d04048c0750e43f898478eebab9952e64532314f04940"
+    },
+    {
+      "program": "choice-7-0.1",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/088.json",
+      "sha256": "9bb1c892148e6ad4edc54693128b319d53096236005711d955087f540db517c3",
+      "appraisals": 10,
+      "projectionSha256": "7101628b2e1a8b20c28169b41d89f792f25734341a23e374ab3ce200385585af",
+      "renderSha256": "86265d84197016be358d04048c0750e43f898478eebab9952e64532314f04940"
+    },
+    {
+      "program": "choice-7-10",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/089.json",
+      "sha256": "5851d8dfb3e1f03af6d9d4bf45fa4f71a980a0a15338290bb1b17e052b609355",
+      "appraisals": 10,
+      "projectionSha256": "7101628b2e1a8b20c28169b41d89f792f25734341a23e374ab3ce200385585af",
+      "renderSha256": "86265d84197016be358d04048c0750e43f898478eebab9952e64532314f04940"
+    },
+    {
+      "program": "relief",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/090.json",
+      "sha256": "18a32346c9711a86f7728e05cb4ea456972a447e8a766cf21547567229486d6e",
+      "appraisals": 12,
+      "projectionSha256": "4e0b35352759bb7573528ff1d0bfddaa2b2deb3a789c51ecc7c07aa2f095adca",
+      "renderSha256": "84587027fb04d5a9edf7067cad20b451dcda066154f7b754e1f32fdde73d36ba"
+    },
+    {
+      "program": "timing/likelihood/a",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/091.json",
+      "sha256": "48c0e44a409806f40606e6710537cc0d54f3e7234539e965b6f80d8258777db3",
+      "appraisals": 14,
+      "projectionSha256": "a85b5bdeb087ee09a668d2434bf0677575b2057285a8d277baa58c8989efaa0b",
+      "renderSha256": "5552f93f11ae2111a8c8b1ab93cbc6b277477d0b04415b78043a4f2aff512b37"
+    },
+    {
+      "program": "timing/likelihood/b",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/092.json",
+      "sha256": "85f42c3199371527d8f104bbb9f937105305088f144d4a418dd63ed7c653cfde",
+      "appraisals": 14,
+      "projectionSha256": "17dfea2511e3554ac96ec6405abdc6f57a0ef4c99ae9d039a02878da02aae5dd",
+      "renderSha256": "b6247c7d499c991522b7291512812c645c63d7b5fc0105e93b8d9a4858a21c96"
+    },
+    {
+      "program": "timing/control/a",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/093.json",
+      "sha256": "5c52762a463b1e0c10cc55f1232f81a9e546c8749f951319d66d364c28e0b317",
+      "appraisals": 14,
+      "projectionSha256": "17dfea2511e3554ac96ec6405abdc6f57a0ef4c99ae9d039a02878da02aae5dd",
+      "renderSha256": "b6247c7d499c991522b7291512812c645c63d7b5fc0105e93b8d9a4858a21c96"
+    },
+    {
+      "program": "timing/control/b",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/094.json",
+      "sha256": "196292ef029eca67727572f792678095620df39414887c60a42cfd125e840e5c",
+      "appraisals": 14,
+      "projectionSha256": "4b5681faafbf99d4fc7f3b5379ceeaf9759668b94d7953134f8b75d038eaea3c",
+      "renderSha256": "3b8a3241abda2e33ca0989b9c9671d4753dd3b6eefde26e4865e60a526ba7277"
+    },
+    {
+      "program": "timing/feedback/a",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/095.json",
+      "sha256": "bec629d1bbe5fac2778b38dcfee71e5a31320725d1553c158756bf77648ef94f",
+      "appraisals": 11,
+      "projectionSha256": "fd545a25606eb0068fdce32b8dd799d564e12f998cae154723e62e09bf9c703f",
+      "renderSha256": "337f8ef64616eed21605b1fc23cfc961537e693c18b2cc0b96859f4f347db8bc"
+    },
+    {
+      "program": "timing/feedback/b",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/096.json",
+      "sha256": "af8bc79cc8c25eada5107febef92b798acfe3dbc7a10d25feaccd3173fdae57c",
+      "appraisals": 11,
+      "projectionSha256": "03590723b739673724cfd089a54b06ca04ed08b6a9041eaf96bc751af756804f",
+      "renderSha256": "53af67f79bebae2d8ad8f3ba5d30177c93da83ee12ff60cf37c3e7d4c07ca7a6"
+    },
+    {
+      "program": "timing/vulnerability-relief/a",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/097.json",
+      "sha256": "c374934106004ff83678709e95434a50d0e6e0bf52e05d8b0c579c062a8c6e81",
+      "appraisals": 12,
+      "projectionSha256": "aa4033670294d290652c587d958c469adc364bc7096a2c0c90c3310fcc64506e",
+      "renderSha256": "dc477947d531ea781818838ed521a494167987151954c234ba2414eca9cf0b58"
+    },
+    {
+      "program": "timing/vulnerability-relief/b",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/098.json",
+      "sha256": "69f75664aff42106e0a7c0345aa9d9f34f798996cd11729891579d50ffb9ee7f",
+      "appraisals": 12,
+      "projectionSha256": "4e0b35352759bb7573528ff1d0bfddaa2b2deb3a789c51ecc7c07aa2f095adca",
+      "renderSha256": "84587027fb04d5a9edf7067cad20b451dcda066154f7b754e1f32fdde73d36ba"
+    },
+    {
+      "program": "interior/candidate-1-feedback-false",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/099.json",
+      "sha256": "ee830cd916d2eb4ec53dfbd5d3f6e65bdb3d83ca378413026ed5451c9ebd9cd5",
+      "appraisals": 14,
+      "projectionSha256": "dfc105db2e85d16ce1b00d067e1d00615405dafff97f827c8df1d966e9b2e2b8",
+      "renderSha256": "74b87766f289845d87531d7f1ce49f31e93045920f1bd0c0b0492cae02c16b32"
+    },
+    {
+      "program": "interior/candidate-1-feedback-true",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/100.json",
+      "sha256": "803e1c569a19fb3e72c137a65b486fe7cadc033a0507ccbfe70323b9bb3ac3c6",
+      "appraisals": 14,
+      "projectionSha256": "744cfddeb66e321fc62469755fcc1445a1354da4582c2538e2ceb3725892b38e",
+      "renderSha256": "cba788f3e60aeec24786339fa1152469f47d1aa59cd10aad4ec0497a0e01cebd"
+    },
+    {
+      "program": "interior/candidate-2-feedback-false",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/101.json",
+      "sha256": "ecb2964cc327547f479fd5d62634136a970c798103f6741ca3b1b382ae67f61a",
+      "appraisals": 14,
+      "projectionSha256": "a85b5bdeb087ee09a668d2434bf0677575b2057285a8d277baa58c8989efaa0b",
+      "renderSha256": "5552f93f11ae2111a8c8b1ab93cbc6b277477d0b04415b78043a4f2aff512b37"
+    },
+    {
+      "program": "interior/candidate-2-feedback-true",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/102.json",
+      "sha256": "06f52dad46f56f9026e936ad37c1b943bd6a28066ba5202f09ae7fb7cc264ae1",
+      "appraisals": 14,
+      "projectionSha256": "48491d3fc4e7813d5b3e37734e64ecd621370502620ce5f2403fb391348a9693",
+      "renderSha256": "de0503b58bdb0501f4c1de5dce269d3df9b5cad60e87d6555592d790e1a7a0f8"
+    },
+    {
+      "program": "interior/candidate-3-feedback-false",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/103.json",
+      "sha256": "69e3bff6bc267448e40951d3f33fca5030f9bee1c2b09a984b3ccdd62d553c47",
+      "appraisals": 14,
+      "projectionSha256": "dfc105db2e85d16ce1b00d067e1d00615405dafff97f827c8df1d966e9b2e2b8",
+      "renderSha256": "74b87766f289845d87531d7f1ce49f31e93045920f1bd0c0b0492cae02c16b32"
+    },
+    {
+      "program": "interior/candidate-3-feedback-true",
+      "source": "docs/planning/workbench-affect-language-rev1/rendered/104.json",
+      "sha256": "101de5b07437e28faa6d1b16aec48a9160bbed589523b872eeced4dd36e5326c",
+      "appraisals": 14,
+      "projectionSha256": "744cfddeb66e321fc62469755fcc1445a1354da4582c2538e2ceb3725892b38e",
+      "renderSha256": "cba788f3e60aeec24786339fa1152469f47d1aa59cd10aad4ec0497a0e01cebd"
+    }
+  ],
+  "scope": "105 original main/supplementary retained evaluation artifacts. Exact recorded factors/coordinates and initial latest-appraisal rendering; no new native semantics or stored-emotion claim. Browser axis changes and history are separate."
+}

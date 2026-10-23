@@ -54,3 +54,39 @@ full qualification; see OBSERVABILITY_WORKBENCH_BATCH_V3_PROGRESS.md. Continue
 wider comparisons and the remaining corpus after that receipt.
 Full narrative, export transport, specialized views, architecture participation
 and integrated Campaign4 entry remain required by the accepted plan.
+
+## Derived appraisal visualization — 2026-10-23
+
+`affectFactorProjection.ts` and `AffectFactorView.tsx` now expose the recorded
+Likelihood/Severity/Vulnerability/Control factors in Character mode. Users select
+three axes, rotate the view and select a historical appraisal. Exact factor fractions,
+raw candidate coordinates, resulting coordinates and the full original appraisal
+remain inspectable. Points use fixed0–1 numeric domains, with explicit profile-specific
+units and rounded plotting. Missing factors never become zero points; repeated axes
+and potentially overlapping instants are disclosed. These are derived evaluations,
+not independent stored emotion state or a universal affect space.
+
+`workbench-affect-factor-view-rev1/native-receipt.json` PASS105 authenticated retained
+main/supplementary artifacts with1331 appraisals:1583 missing factor observations,
+130 known-zero factors,76 one-coordinate results,113 two-coordinate results and1142
+unavailable coordinate records. Exact values and latest-appraisal server rendering
+preserve the original sources. Two focused tests cover this corpus and invalid
+revision/domain withholding. No candidate formula, native adapter or language renderer
+was changed.
+
+Browser tab14/4225 uses original `interior/candidate-2-feedback-true`: instant1 remains
+selected and exact after progression to terminal14. Latest14 preserves raw1/2,1/2
+versus resulting5/8,5/8. Control/Likelihood/Severity selection retains two qualifying
+points; exact titles and rotated positions pass the independent checker. Keyboard End
+sets360 degrees; repeated Control axes show the warning. Original terminal state/save
+hashes match and all four current identities remain unchanged by view operations.
+Screenshot inspected; overlapping13/14 factors retain distinct evaluation provenance.
+
+Development history is retained: the first .test.tsx filename matched no tests, so
+its exit0 was not accepted; extensionless Windows module resolution then confused
+the reader/component names and failed both tests. Distinct names fix that failure.
+An SVG title warning was corrected to one text child; both tests then passed cleanly.
+TypeScript, build610 modules, boundary, evidence restoration and research checks PASS.
+All18 conditional obligations survive. LOCAL DISPOSITION: bounded visualization
+qualification only; full stored-state/latent coverage, player narrative and integrated
+entry remain due. No Campaign3 verdict or obligation disposition changes.

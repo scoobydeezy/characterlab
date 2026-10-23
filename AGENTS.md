@@ -53,6 +53,12 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 ## Active direction
 
 **Current routing (2026-10-23):** Observability Workbench IN PROGRESS, owner-authorized.
+AFFECT derived-factor visualization PASS105 artifacts/1331 appraisals:1583 missing
+factor observations distinct from130 known zeros; actual one/two-coordinate results.
+Browser interior candidate2 feedback1/14 exact sources/history/axes/rotation/native
+terminal state-save PASS; tab14/4225 retained. Two tests/build610/research PASS.
+See workbench-affect-factor-view-rev1; test-discovery/module/title failures retained.
+This is derived evaluation visualization, not stored-emotion or integrated-entry proof.
 Disposition cross-corpus wording review now surfaces4 shared sentences/154 factor
 occurrences with distinct task/candidate meanings. Browser all4 groups/eight exact
 source links/unchanged five identities PASS; two tests/build608/research PASS.
