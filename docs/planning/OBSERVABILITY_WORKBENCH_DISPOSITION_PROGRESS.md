@@ -1189,3 +1189,37 @@ semantics, topology or obligation changed; all18 conditional obligations survive
 Continuing audits: original replay recovery session20415 last observed14/15
 programs atprefix5; recovered BatchV8 browser tab3 last446/947 roles,2894 prefixes.
 Neither is terminal evidence. Preserve both writers and their bound sources.
+
+## Paged comparison summary — 2026-10-23
+
+New disposition-paged-comparison-summary/0.1 prepares a detached researcher
+artifact from the published pair: declared changes and original input hashes,
+seed/address policy, ten branch identities, aligned field equality and exact
+page references, recorded choice divergence and restore-stable scalar history.
+It explicitly withholds first state divergence because scalar history is not a
+history of full-state hashes. Raw field values are referenced, not embedded;
+matching paired checkpoints are needed to retrieve those pages. This new profile
+does not silently replace full-field comparison-summary/0.2. Separate reason,
+architecture and execution reports remain necessary; no player disclosure follows.
+
+Compare now offers prepare, copy and download. Prepared text remains detached
+when the pair advances and is labeled historical. Blob URLs are revoked when
+replaced/unmounted. Preparation rejects failed pairs or mixed source revisions;
+its explicit eight-million-character ceiling rejects rather than truncates.
+
+workbench-disposition-paged-summary-ui-rev1/native-test-receipt.json records one
+passing native test across Refold and Seed0 at1, two restores, unequal A2/B1,
+JSON round-trip, exact component parity, detached output and negative guards.
+TypeScript/build605, boundaries and restored research checks PASS. All18 conditional
+obligations remain; no C3 verdict, topology, law or semantic change. Full-horizon
+summary/resource qualification, broader export diagnostics, player language,
+meaningful latent-state views and the integrated entry demonstration remain due.
+
+Browser verifier-v2 PASS constitution0/1: native report text exact, prefix0 report
+retained and labeled historical at1, restored0 summary exact, no alerts, download
+filename/link present. Initial clipboard read was empty despite UI success and
+original verifier remains unsatisfied. A stable prefix1 repeat yielded exact15168
+characters; both observations are retained. Downloaded file bytes were not tested;
+copy parity is the qualified transport. Screenshot inspected. Tab7/4219 retained.
+Original replay recovery last14/15 prefix8; BatchV8 last471/947 roles3200 prefixes.
+Neither audit is terminal. Keep both source bindings and running handles.

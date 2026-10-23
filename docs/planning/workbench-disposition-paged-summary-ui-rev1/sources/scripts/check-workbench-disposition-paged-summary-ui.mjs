@@ -1,0 +1,11 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';import {createServer} from 'vite';
+const root='docs/planning/workbench-disposition-paged-summary-ui-rev1',script='scripts/check-workbench-disposition-paged-summary-ui.mjs',sha=b=>createHash('sha256').update(b).digest('hex'),read=p=>JSON.parse(fs.readFileSync(p));
+for(const s of read(root+'/freeze.json').sources)assert.equal(sha(fs.readFileSync(s.path)),s.sha256,s.path);
+if(process.argv.includes('--oracle')){
+ fs.writeFileSync(root+'/verifier.mjs',fs.readFileSync(script),{flag:'wx'});const server=await createServer({configFile:false,server:{watch:null,middlewareMode:true,hmr:false,ws:false},appType:'custom'});
+ try{const {DispositionPagedPair:Pair}=await server.ssrLoadModule('/src/workbench/dispositionPagedPair.ts'),{dispositionPagedComparisonSummary:summary}=await server.ssrLoadModule('/src/workbench/dispositionPagedComparisonSummary.ts'),pair=await Pair.create('model/0/13'),reports=[summary(pair.summary())];await pair.advance();reports.push(summary(pair.summary()));fs.writeFileSync(root+'/oracle.json',JSON.stringify(reports,null,2)+'\n',{flag:'wx'});console.log('PASS native summary oracle');}finally{await server.close();}
+}else{
+ const o=read(root+'/oracle.json'),b=read(root+'/browser.json');assert.equal(sha(fs.readFileSync(script)),sha(fs.readFileSync(root+'/verifier.mjs')));
+ assert.equal(b.initial,o[0].text);assert.equal(b.current,o[1].text);assert.equal(b.clipboard,o[1].text);assert.equal(b.historical,o[0].text);assert.match(b.historicalLabel,/Historical summary/);assert.equal(b.restored,o[0].text);assert.deepEqual(b.alerts,[]);assert.equal(b.download,'characterlab-disposition-paged-comparison.txt');
+ fs.writeFileSync(root+'/receipt.json',JSON.stringify({status:'PASS BOUNDED SUMMARY UI',scope:'Constitution pair0/1 exact native report, retained historical summary, copy and checkpoint restoration. Download link target/filename present; downloaded file bytes not qualified.',artifacts:['oracle.json','browser.json','summary.png','verifier.mjs'].map(path=>({path,sha256:sha(fs.readFileSync(root+'/'+path))}))},null,2)+'\n',{flag:'wx'});console.log('PASS bounded summary UI');
+}

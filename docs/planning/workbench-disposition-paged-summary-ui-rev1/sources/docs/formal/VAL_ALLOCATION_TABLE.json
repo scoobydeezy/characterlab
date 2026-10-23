@@ -1,0 +1,71 @@
+{
+  "version": "val-allocation/0.1-candidate",
+  "status": "PERMANENT AND FROZEN",
+  "date": "2026-09-06",
+  "authority": "docs/planning/VAL_001_DRAFT_RESOLUTION.md",
+  "baseAllocation": {
+    "path": "docs/formal/CAMPAIGN2_ALLOCATION_TABLE.json",
+    "version": "campaign2-allocation/0.2-candidate",
+    "sha256": "c7503135f1aa0daa8a260e0c159211bc89c8483c9a3ab72fd1019983708e37d8"
+  },
+  "records": [
+    {
+      "typeId": 329,
+      "name": "GovernedContentKindDefinition",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "ContentSchema",
+          "type": "CanonicalRecordSchemaRef",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 330,
+      "name": "SemanticKindRoleValidatorDefinition",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "RequiredSemanticKind",
+          "type": "SemanticKindId",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "namespaces": [],
+  "members": [
+    {
+      "namespace": 1023,
+      "payload": "registry/semantic-kind"
+    },
+    {
+      "namespace": 1023,
+      "payload": "registry/domain-validator"
+    }
+  ],
+  "bindings": [
+    {
+      "stableIdNamespace": 1004,
+      "stableIdPayload": "semantic-kind/character",
+      "registryKind": "registry/semantic-kind",
+      "definitionVersion": "content-kind/0.1-candidate",
+      "definitionTypeId": 329,
+      "definitionSchemaVersion": 1
+    },
+    {
+      "stableIdNamespace": 1021,
+      "stableIdPayload": "validator/character-qualification",
+      "registryKind": "registry/domain-validator",
+      "definitionVersion": "governed-domain-validator/0.1-candidate",
+      "definitionTypeId": 330,
+      "definitionSchemaVersion": 1
+    }
+  ],
+  "unionVariants": [],
+  "finiteValues": [],
+  "unresolved": []
+}

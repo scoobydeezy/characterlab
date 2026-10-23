@@ -1,0 +1,11 @@
+import type {DispositionPagedPair} from './dispositionPagedPair';
+type History=ReturnType<DispositionPagedPair['summary']>['history'];
+export function DispositionPagedHistoryPanel({history}:{history:History}){
+ const colors={a:'#17695b',b:'#9b451b'};
+ return <section aria-label="Paged stored-state history"><h3>Committed constitution and plastic history</h3><p>{history.a.scope}</p>
+ {(['constitution','plastic'] as const).map(metric=><figure key={metric}><figcaption>{metric==='constitution'?'Immutable constitution':'Stored plastic contribution'} · A green / B orange · range −1 to +1</figcaption>
+ <svg viewBox="0 0 660 240" role="img" aria-label={`${metric} history; exact values in table`} style={{width:'100%',maxWidth:900}}><line x1="40" y1="120" x2="620" y2="120" stroke="#999"/><text x="5" y="25">+1</text><text x="5" y="125">0</text><text x="5" y="225">−1</text>
+ {(['a','b'] as const).map(branch=><g key={branch} fill={colors[branch]} stroke={colors[branch]}>{history[branch].rows.map((row,index)=>{const v=row[metric],prior=history[branch].rows[index-1],p=prior?.[metric],x=40+row.prefix*580/18,y=120-(v?.plot??0)*100;return v?<g key={row.prefix}>{p&&prior.prefix===row.prefix-1&&<line x1={40+prior.prefix*580/18} y1={120-p.plot*100} x2={x} y2={y} strokeDasharray={branch==='b'?'5 3':undefined}/>}<circle cx={x} cy={y} r={branch==='a'?4:2}><title>{branch.toUpperCase()} prefix {row.prefix}: {v.exact}</title></circle></g>:null;})}</g>)}<text x="40" y="238">0</text><text x="295" y="238">Committed prefix</text><text x="607" y="238">18</text></svg></figure>)}
+ <table><thead><tr><th>Branch</th><th>Prefix</th><th>Constitution</th><th>Stored plastic</th></tr></thead><tbody>{(['a','b'] as const).flatMap(branch=>history[branch].rows.map(row=><tr key={`${branch}/${row.prefix}`}><td>{branch.toUpperCase()}</td><td>{row.prefix}</td><td>{row.constitution.exact}</td><td>{row.plastic?.exact??'No stored leaf (Refold)'}</td></tr>))}</tbody></table>
+ <p>Branches retain their own horizons. Unequal horizons are not an aligned comparison. Each source hash below names the containing current save.</p><details><summary>Exact compact history and source identities</summary><pre className="exact" data-pair-stored-history>{JSON.stringify(history,null,2)}</pre></details></section>;
+}

@@ -79,10 +79,16 @@ constitution/Seed0 at1/1, both decision links, ten identities and paired restore
 See paged-choices-ui-rev1; tab6/4218. Build603/research/boundary PASS.
 Recorded choice divergence is not psychological significance or observer knowledge.
 Full canonical horizons, comparison summary/player language/integrated entry remain due.
+Paged summary/export prepared: native Refold/Seed0 at1, two restores, unequal2/1,
+JSON/detachment/failure/revision guards PASS; TypeScript/build605/research PASS.
+New paged-summary/0.1 retains source references, not full field values or invented
+historical state hashes. See paged-summary-ui-rev1: browser0/1 exact reports,
+history and restore PASS; stable retry clipboard15168 characters exact. Initial empty
+clipboard read/failing verifier retained; v2 PASS. Download bytes unqualified.
 Only current live browser handles: workbenchLiveTabs=[longTab(tab1),
 dispositionPairTab(tab2/4215),recoveredBatchTab(tab3/4215),
 dispositionModesTab(tab4/4216),dispositionHistoryTab(tab5/4217),
-dispositionChoicesTab(tab6/4218)]. Mark each every turn.
+dispositionChoicesTab(tab6/4218),dispositionSummaryTab(tab7/4219)]. Mark each every turn.
 Older tab references below describe retained evidence, not live sessions.
 SEM coverage ledger reconciled to retained rev3:100 scoped vector pointers,
 31 negative witnesses/10 acceptance items; zero complete Workbench vectors inferred.
