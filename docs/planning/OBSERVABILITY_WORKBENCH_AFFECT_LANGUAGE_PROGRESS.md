@@ -566,3 +566,28 @@ helpers plus the shared BatchV8 sources. Original BatchV8/277 and paged diagnost
 holds remain unchanged. Do not infer full completion from the bounded browser result.
 Player disclosure, Reasoning-mode task/event navigation, magnitude-source derivation,
 broader coverage and integrated entry remain due.
+
+## 2026-10-23 — direct Reasoning source/event/history navigation
+
+Standalone and retained paired Reasoning now provide task-read correspondence and
+raw/decision event controls under each decision. The selected event exposes exact
+state reads/transitions and the existing parent/read-history navigator. Trace context
+contains the selected branch's events, run hash and save hash; selection remounts on
+save revision or explanation identity changes. No event state is installed into the
+simulation. Character-mode presentation remains unchanged.
+
+Server rendering PASS28 decisions/four original snapshots, exact task-read panel and
+controls without alerts or input mutation. Browser standalone baseline1 and paired
+obligation0 A/B1 raw/decision links PASS exact native events. Branch switch and
+advance2 clear stale selection. Historical B1 after2 remains exact; parent appraisal0
+and return-to-raw20 PASS. Independent verifier authenticates all selected events and
+original save revisions. Screenshot inspected. Tab26/4237 retained, preview87552.
+
+TypeScript/build625/boundary/evidence restore/research PASS. See
+workbench-affect-reasoning-trace-rev1. All three live source holds remain unchanged.
+Full task-read corpus76503 continues (at least36/105 programs observed complete;
+checkpoint-001 still binds the first15 only). Do not change its281 frozen sources.
+LOCAL DISPOSITION reuses the qualified exact execution links; no C3 verdict or
+obligation disposition changes, all18 conditional obligations survive. Full corpus
+receipt, player disclosure/language, magnitude-source accounting and integrated
+entry demonstration remain due.

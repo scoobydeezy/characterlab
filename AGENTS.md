@@ -53,6 +53,12 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 ## Active direction
 
 **Current routing (2026-10-23):** Observability Workbench IN PROGRESS, owner-authorized.
+AFFECT direct Reasoning task/raw/decision/history navigation PASS28 native renders;
+browser standalone baseline1/paired obligation0 A/B1/advance2/historical1/parent0
+and return20 exact native events/save revisions PASS. Branch/revision reset PASS.
+Build625/research PASS; see workbench-affect-reasoning-trace-rev1; tab26/4237.
+Mark all workbenchLiveTabs1..26. Native task-read76503 at least36/105 complete,
+still RUNNING; preserve281-source hold. Player language/full entry remain due.
 AFFECT task-key/path/read correspondence mounted:28 native decisions/four programs,
 browser obligation0 A/B1/2/history PASS. Rev1 path-overflow failure retained; rev2
 wraps exact bytes, width1265/1265 PASS. Two tests/build624/research PASS. Tabs24/4235
