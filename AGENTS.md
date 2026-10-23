@@ -53,6 +53,11 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 ## Active direction
 
 **Current routing (2026-10-23):** Observability Workbench IN PROGRESS, owner-authorized.
+AFFECT Reasoning mode now mounts semantic/source panels in standalone and paired
+history. Full1331 decision render PASS; bounded browser A/B1, B2/historical1/All,
+independent baseline1 and native identities PASS. TypeScript/build621/research PASS.
+See workbench-affect-reasoning-panels-rev1; tab22/4233 retained. Mark tabs1..22.
+Observer disclosure/player language/source-state attribution/full entry remain due.
 AFFECT explicit reason semantics PASS105 programs/1331 decisions/2640 nuclei;
 full registered option/goal and raw-source correspondence, two wording groups with
 distinct magnitude meanings retained. Browser both obligation0 branches1/2/history

@@ -487,3 +487,26 @@ meaning without adding character state, a causal edge or a psychological law. No
 C3 verdict or obligation disposition changes. All18 conditional obligations survive.
 Reasoning-mode integration of the new structured panels, observer disclosure policy,
 full player language, source-state attribution and integrated entry remain due.
+
+## 2026-10-23 — Reasoning-mode semantic and source panels
+
+The shared AFFECT explanation view now mounts the previously qualified reason
+semantic and source-accounting panels for Decision cards in Reasoning history.
+Both standalone and retained paired Reasoning use the same view. Existing Character
+rendering and original explanation snapshots remain unchanged. Each article retains
+its exact explanation identity; latest, historical and all-instants selection remain.
+
+Full retained105-program/1331-decision server rendering PASS: both panels present
+in Reasoning, absent from the Character rendering, no alerts and no source mutation.
+Browser original obligation0 A/B at1 and B at2 PASS; historical1 remains exact and
+All shows both1/2 reports. Independent standalone baseline1 renders its own exact
+reports while pair stays2. Native state/save identities and source projections match
+the original corpus. Independent browser verifier PASS; screenshots inspected.
+See workbench-affect-reasoning-panels-rev1. Tab22/4233 retained; preview78999.
+
+TypeScript/build621, boundary/evidence restore/research PASS; live BatchV8/277 and
+paged diagnostics/166 sources unchanged. LOCAL DISPOSITION: reuse qualified
+researcher projections without changing semantics or granting player disclosure.
+No C3 verdict or obligation changes; all18 conditional obligations remain.
+Observer disclosure policy/player language, source-state causal attribution, broader
+accessibility/resource qualification and full integrated entry remain due.
