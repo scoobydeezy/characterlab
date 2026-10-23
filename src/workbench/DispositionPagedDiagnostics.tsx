@@ -23,7 +23,7 @@ export function DispositionPagedDiagnostics({summary,busy,envelope,onRequest,onT
  const intended=eligible.find(e=>e.id===event)?.id??eligible.at(-1)?.id??'',selected=events.some(e=>e.id===intended)?intended:'';
  const selection:DispositionDiagnosticSelection=kind==='storedState'||kind==='architecture'?{kind}:kind==='language'?{kind,eventId:selected,audience}:{kind,eventId:selected};
  const stale=!!envelope&&envelope.identity.saveHash!==summary.saveHash;
- const followEvent=(id:string)=>{if(envelope&&!stale&&!busy){if(onEvent){onEvent(envelope.identity.saveHash,id);return;}setKind('eventState');setEvent(id);onRequest(envelope.identity.saveHash,{kind:'eventState',eventId:id});}};
+ const followEvent=(id:string)=>{if(envelope&&!stale&&!busy){if(onEvent){onEvent(envelope.identity.saveHash,id);return;}setQuery('');setStage('');setKind('eventState');setEvent(id);onRequest(envelope.identity.saveHash,{kind:'eventState',eventId:id});}};
  const text=(revision:string,selector:DispositionTextSelector)=>{if(!stale&&!busy)onText(revision,selector);};
  function content(e:Envelope){switch(e.selection.kind){
   case 'reasons':return <DispositionReasonReportPanel diagnostic={(e as Of<'reasons'>).report}/>;

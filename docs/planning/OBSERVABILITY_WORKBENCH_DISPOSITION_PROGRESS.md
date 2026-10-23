@@ -1276,3 +1276,24 @@ text says two, while its actual live manifest correctly contains three). No C3
 semantics, topology, verdict or obligation changed; all18 conditional obligations
 survive. Tab8/4220 retained. Full native diagnostics last baseline10/18; original
 replay last14/15 prefix11. No terminal acceptance inferred from these prefixes.
+
+## Direct event navigation after filtering — 2026-10-23
+
+A real browser regression exposed a navigation inconsistency: with phase52 search
+active, following resolution18's decision19 link loads the correct report but
+leaves event19 hidden in the selector. before.json and before.tsx preserve the
+observation and implementation in workbench-disposition-event-navigation-rev1.
+
+Direct event navigation now clears query/category filters before selecting and
+requesting the linked event. Ordinary filtering still preserves the displayed
+report. This changes UI selection only, not native execution or disclosure.
+The prior frozen dependency graph is reused by exact hash, with the changed file
+preserved separately; all three live audit bindings remain unchanged.
+Build605/TypeScript, boundary and restored research checks PASS. No C3 verdict,
+semantic contract, law, topology or obligation changed; all18 conditional survive.
+
+Browser regression PASS baseline2: resolution18 with phase52 and reasons category
+follows decision19, clears both filters, selects19 and exposes all20 headers.
+Exact original event envelope and five hashes unchanged; screenshot inspected.
+See verify.mjs/receipt.json. Retain tab9/4221. This is bounded standalone direct
+navigation, not complete paired-mode/accessibility or integrated-entry acceptance.
