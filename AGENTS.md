@@ -85,6 +85,11 @@ New paged-summary/0.1 retains source references, not full field values or invent
 historical state hashes. See paged-summary-ui-rev1: browser0/1 exact reports,
 history and restore PASS; stable retry clipboard15168 characters exact. Initial empty
 clipboard read/failing verifier retained; v2 PASS. Download bytes unqualified.
+Full paged diagnostic audit23320 RUNNING:15 programs/285 prefixes target; baseline
+0..4 receipts atstart. See paged-full-diagnostics-rev1, source freeze166 files.
+All ten diagnostic kinds, scalar history, choices and historical reports checked.
+THREE live source bindings now: this audit166, original replay158 and BatchV8 277.
+Do not modify bound sources or restart quiet writers. No terminal PASS yet.
 Only current live browser handles: workbenchLiveTabs=[longTab(tab1),
 dispositionPairTab(tab2/4215),recoveredBatchTab(tab3/4215),
 dispositionModesTab(tab4/4216),dispositionHistoryTab(tab5/4217),

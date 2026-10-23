@@ -1223,3 +1223,31 @@ characters; both observations are retained. Downloaded file bytes were not teste
 copy parity is the qualified transport. Screenshot inspected. Tab7/4219 retained.
 Original replay recovery last14/15 prefix8; BatchV8 last471/947 roles3200 prefixes.
 Neither audit is terminal. Keep both source bindings and running handles.
+
+## Full paged native diagnostic qualification — 2026-10-23
+
+Session23320 runs check-workbench-disposition-paged-full-diagnostics.mjs against
+all15 original programs/all19 prefixes (285 observations). Source freeze166 files
+is in workbench-disposition-paged-full-diagnostics-rev1. Its start.json confirms
+all three live bindings: this audit, original replay158 files and BatchV8 277 files.
+Keep these source files unchanged until completion or preserved explicit failure.
+
+Each prefix authenticates its original compressed snapshot, compares all five
+native identities, state descriptors and event headers, current scalar values,
+complete reconstructed scalar history and canonical architecture. Each new event
+checks exact read/mutation metadata. Each new reason event checks reasons,
+resolution, calibration, provenance, task sources, three audience reports and
+factor rows/nuclei against the original formatted reader. All accumulated choice
+rows are checked; all earlier event reports are rechecked for historical stability.
+Per-prefix receipts preserve the archive hash, source identities and report hashes.
+
+This qualifies reader parity over the retained experiment, not independent proof
+of its laws. Process memory observations include archived snapshot parsing and are
+not UI heap guarantees. No browser, paired-control, full checkpoint restoration or
+complete source-page-byte claim follows. Character/player withholding is preserved,
+not discharged. Current start receipt contains baseline0..4 only; terminal receipt
+requires285 records and unchanged frozen sources. No terminal PASS yet.
+
+LOCAL DISPOSITION: expanding migration qualification to original full horizons is
+required before integrated entry. No C3 finding, semantic contract, law, topology
+or obligation changed. All18 conditional obligations and source restrictions survive.
