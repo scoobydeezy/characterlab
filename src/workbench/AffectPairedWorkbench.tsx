@@ -1,3 +1,4 @@
+import {AffectBeliefStateView} from './AffectBeliefStateView';
 import {useEffect,useRef,useState} from 'react';
 import {AffectPairSession,type AffectPairCheckpoint,type AffectPairBranch} from './affectPairSession';
 import {AffectWorkerClient} from './affectWorkerClient';
@@ -32,7 +33,7 @@ export function AffectPairedWorkbench({active}:{active:boolean}){
  <nav aria-label="Retained AFFECT modes" className="button-row">{modes.map(m=><button key={m} onClick={()=>{stop.current=true;setMode(m);}}>{m}</button>)}</nav>
  <label>Retained AFFECT branch<select value={branch} onChange={e=>{setBranch(e.target.value as AffectPairBranch);setEventId('');}}><option value="a">Branch A</option><option value="b">Branch B</option></select></label>
  {snapshot&&<><p>Branch {branch.toUpperCase()} · {snapshot.program} · prefix {snapshot.prefix}</p><div data-affect-retained-hashes>{(['modelHash','runHash','stateHash','saveHash'] as const).map(k=><div className="hash" key={k}><span>{k}</span><code>{snapshot[k]}</code></div>)}</div>
- {mode==='Character'&&<><AffectFactorView cards={snapshot.explanations}/><AffectExplanationView cards={snapshot.explanations}/></>}
+ {mode==='Character'&&<><AffectBeliefStateView key={snapshot.saveHash} snapshot={snapshot} onInspect={id=>{setEventId(id);setMode('Timeline');}}/><AffectFactorView cards={snapshot.explanations}/><AffectExplanationView cards={snapshot.explanations}/></>}
  {mode==='Experiment'&&<p>{report?.contrast.changed} Fixture changes create fresh original programs; runtime interventions remain unavailable.</p>}
  {mode==='Reasoning'&&<AffectExplanationView cards={snapshot.explanations} history trace={{events:snapshot.timeline,runHash:snapshot.runHash,saveHash:snapshot.saveHash,modelHash:snapshot.modelHash}}/>}
  {mode==='Timeline'&&<><label>Retained AFFECT event<select value={event?.id??''} onChange={e=>setEventId(e.target.value)}>{snapshot.timeline.map(e=><option key={e.id} value={e.id}>{e.instant} · {e.stage} · {e.id}</option>)}</select></label>{event&&<><EventStatePanel key={snapshot.saveHash+event.id} event={event}/><CausalHistoryPanel events={snapshot.timeline} selected={event.id} runHash={snapshot.runHash} onSelect={setEventId}/><pre className="exact" data-affect-retained-event>{JSON.stringify(event,null,2)}</pre></>}</>}

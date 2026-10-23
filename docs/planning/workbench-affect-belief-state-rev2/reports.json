@@ -1,0 +1,2518 @@
+{
+  "results": [
+    {
+      "program": "baseline",
+      "report": {
+        "version": "affect-belief-state/0.1",
+        "modelHash": "8605e8a55e85c58296326b8b4a3b2fbd9d0b9b2999c85d6288cd77a733e8b900",
+        "runHash": "983d81147c356cab0ae1b5051d5f011df15e30391f09504196899aebbc0cd9d8",
+        "saveHash": "c47e3e643b0786406fbf2fc47a76692c9a21fdb4591edc4690b9ad6a02e352c0",
+        "stateHash": "08396979556b09bc103fa6c271ee3344aa417b442848ecbc9f9c01fe752524fc",
+        "prefix": 11,
+        "current": [
+          {
+            "name": "Current cue",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+            "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+            "estimate": {
+              "mean": "1/1",
+              "precision": "1",
+              "support": [
+                {
+                  "namespace": "1115",
+                  "identity": "35"
+                }
+              ],
+              "plot": 1
+            }
+          },
+          {
+            "name": "Baseline",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+            "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"76\"\n    }\n  ]\n}",
+            "estimate": {
+              "mean": "1/1",
+              "precision": "1",
+              "support": [
+                {
+                  "namespace": "1115",
+                  "identity": "76"
+                }
+              ],
+              "plot": 1
+            }
+          },
+          {
+            "name": "Mitigation",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+            "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"0/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"117\"\n    }\n  ]\n}",
+            "estimate": {
+              "mean": "0/1",
+              "precision": "1",
+              "support": [
+                {
+                  "namespace": "1115",
+                  "identity": "117"
+                }
+              ],
+              "plot": 0
+            }
+          }
+        ],
+        "history": [
+          {
+            "eventId": null,
+            "at": null,
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          },
+          {
+            "eventId": "60",
+            "at": "3",
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "35"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          },
+          {
+            "eventId": "99",
+            "at": "6",
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "35"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"76\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "76"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          },
+          {
+            "eventId": "138",
+            "at": "9",
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "35"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"76\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "76"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"0/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"117\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "0/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "117"
+                    }
+                  ],
+                  "plot": 0
+                }
+              }
+            ]
+          }
+        ],
+        "scope": "Three registered learned-belief means in root753; exact original initial state and committed apply mutations. Absence is not zero. Precision is recorded learning precision, not subjective certainty. This is researcher state inspection, not an independent emotion vector or proof of learning-evidence ancestry."
+      }
+    },
+    {
+      "program": "hidden",
+      "report": {
+        "version": "affect-belief-state/0.1",
+        "modelHash": "8605e8a55e85c58296326b8b4a3b2fbd9d0b9b2999c85d6288cd77a733e8b900",
+        "runHash": "df947ea85a5674132f84fcbe4352bea2641ab12b992b52074956ff146e2ee27d",
+        "saveHash": "7a63159fca20855ae1078b049ebaa2d3b3d63535e0ebe626f35cf39bbe679d74",
+        "stateHash": "08396979556b09bc103fa6c271ee3344aa417b442848ecbc9f9c01fe752524fc",
+        "prefix": 11,
+        "current": [
+          {
+            "name": "Current cue",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+            "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+            "estimate": {
+              "mean": "1/1",
+              "precision": "1",
+              "support": [
+                {
+                  "namespace": "1115",
+                  "identity": "35"
+                }
+              ],
+              "plot": 1
+            }
+          },
+          {
+            "name": "Baseline",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+            "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"76\"\n    }\n  ]\n}",
+            "estimate": {
+              "mean": "1/1",
+              "precision": "1",
+              "support": [
+                {
+                  "namespace": "1115",
+                  "identity": "76"
+                }
+              ],
+              "plot": 1
+            }
+          },
+          {
+            "name": "Mitigation",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+            "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"0/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"117\"\n    }\n  ]\n}",
+            "estimate": {
+              "mean": "0/1",
+              "precision": "1",
+              "support": [
+                {
+                  "namespace": "1115",
+                  "identity": "117"
+                }
+              ],
+              "plot": 0
+            }
+          }
+        ],
+        "history": [
+          {
+            "eventId": null,
+            "at": null,
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          },
+          {
+            "eventId": "60",
+            "at": "3",
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "35"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          },
+          {
+            "eventId": "99",
+            "at": "6",
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "35"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"76\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "76"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          },
+          {
+            "eventId": "138",
+            "at": "9",
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "35"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"76\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "76"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"0/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"117\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "0/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "117"
+                    }
+                  ],
+                  "plot": 0
+                }
+              }
+            ]
+          }
+        ],
+        "scope": "Three registered learned-belief means in root753; exact original initial state and committed apply mutations. Absence is not zero. Precision is recorded learning precision, not subjective certainty. This is researcher state inspection, not an independent emotion vector or proof of learning-evidence ancestry."
+      }
+    },
+    {
+      "program": "feedback-2",
+      "report": {
+        "version": "affect-belief-state/0.1",
+        "modelHash": "7d6117cd6308d764171963615808fae9a468ee4c61c67b0402c15e2115deffad",
+        "runHash": "d1f46163dc1bd8e6d9953138aa492af9bc1fe39e77b6b77036516a7f94f35473",
+        "saveHash": "f92df02f96e934f8a5c55289697f1bd5e58efac37036ec4adf2fde186ad14d2e",
+        "stateHash": "08396979556b09bc103fa6c271ee3344aa417b442848ecbc9f9c01fe752524fc",
+        "prefix": 11,
+        "current": [
+          {
+            "name": "Current cue",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+            "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+            "estimate": {
+              "mean": "1/1",
+              "precision": "1",
+              "support": [
+                {
+                  "namespace": "1115",
+                  "identity": "35"
+                }
+              ],
+              "plot": 1
+            }
+          },
+          {
+            "name": "Baseline",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+            "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"76\"\n    }\n  ]\n}",
+            "estimate": {
+              "mean": "1/1",
+              "precision": "1",
+              "support": [
+                {
+                  "namespace": "1115",
+                  "identity": "76"
+                }
+              ],
+              "plot": 1
+            }
+          },
+          {
+            "name": "Mitigation",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+            "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"0/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"117\"\n    }\n  ]\n}",
+            "estimate": {
+              "mean": "0/1",
+              "precision": "1",
+              "support": [
+                {
+                  "namespace": "1115",
+                  "identity": "117"
+                }
+              ],
+              "plot": 0
+            }
+          }
+        ],
+        "history": [
+          {
+            "eventId": null,
+            "at": null,
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          },
+          {
+            "eventId": "60",
+            "at": "3",
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "35"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          },
+          {
+            "eventId": "99",
+            "at": "6",
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "35"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"76\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "76"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          },
+          {
+            "eventId": "138",
+            "at": "9",
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "35"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"76\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "76"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"0/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"117\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "0/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "117"
+                    }
+                  ],
+                  "plot": 0
+                }
+              }
+            ]
+          }
+        ],
+        "scope": "Three registered learned-belief means in root753; exact original initial state and committed apply mutations. Absence is not zero. Precision is recorded learning precision, not subjective certainty. This is researcher state inspection, not an independent emotion vector or proof of learning-evidence ancestry."
+      }
+    },
+    {
+      "program": "zero-baseline",
+      "report": {
+        "version": "affect-belief-state/0.1",
+        "modelHash": "8605e8a55e85c58296326b8b4a3b2fbd9d0b9b2999c85d6288cd77a733e8b900",
+        "runHash": "c8016b4cbdd5dd27a895d9eb15b372bfc650a21d421d4050abfa5bda0aa2093d",
+        "saveHash": "974685eab10cfb421b330252b1950837daed8feae77938ecc8688f0734098531",
+        "stateHash": "6bf4b890d5d27085cf65594785b5b999fc1f81517edcb9472f612e85e498b978",
+        "prefix": 11,
+        "current": [
+          {
+            "name": "Current cue",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+            "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+            "estimate": {
+              "mean": "1/1",
+              "precision": "1",
+              "support": [
+                {
+                  "namespace": "1115",
+                  "identity": "35"
+                }
+              ],
+              "plot": 1
+            }
+          },
+          {
+            "name": "Baseline",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+            "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"0/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"76\"\n    }\n  ]\n}",
+            "estimate": {
+              "mean": "0/1",
+              "precision": "1",
+              "support": [
+                {
+                  "namespace": "1115",
+                  "identity": "76"
+                }
+              ],
+              "plot": 0
+            }
+          },
+          {
+            "name": "Mitigation",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+            "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"0/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"117\"\n    }\n  ]\n}",
+            "estimate": {
+              "mean": "0/1",
+              "precision": "1",
+              "support": [
+                {
+                  "namespace": "1115",
+                  "identity": "117"
+                }
+              ],
+              "plot": 0
+            }
+          }
+        ],
+        "history": [
+          {
+            "eventId": null,
+            "at": null,
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          },
+          {
+            "eventId": "60",
+            "at": "3",
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "35"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          },
+          {
+            "eventId": "99",
+            "at": "6",
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "35"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"0/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"76\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "0/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "76"
+                    }
+                  ],
+                  "plot": 0
+                }
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          },
+          {
+            "eventId": "138",
+            "at": "9",
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "35"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"0/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"76\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "0/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "76"
+                    }
+                  ],
+                  "plot": 0
+                }
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"0/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"117\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "0/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "117"
+                    }
+                  ],
+                  "plot": 0
+                }
+              }
+            ]
+          }
+        ],
+        "scope": "Three registered learned-belief means in root753; exact original initial state and committed apply mutations. Absence is not zero. Precision is recorded learning precision, not subjective certainty. This is researcher state inspection, not an independent emotion vector or proof of learning-evidence ancestry."
+      }
+    }
+  ],
+  "prefixes": [
+    {
+      "prefix": 0,
+      "stateHash": "b7b1f740647434110e3e2bd2d581679cca5eb68484e944b3466458db2d61a859",
+      "saveHash": "b5cdc5820f4a7e4e89ef8a8236b1f31644635641c3492a43113fc1ded7231d6b",
+      "report": {
+        "version": "affect-belief-state/0.1",
+        "modelHash": "8605e8a55e85c58296326b8b4a3b2fbd9d0b9b2999c85d6288cd77a733e8b900",
+        "runHash": "983d81147c356cab0ae1b5051d5f011df15e30391f09504196899aebbc0cd9d8",
+        "saveHash": "b5cdc5820f4a7e4e89ef8a8236b1f31644635641c3492a43113fc1ded7231d6b",
+        "stateHash": "b7b1f740647434110e3e2bd2d581679cca5eb68484e944b3466458db2d61a859",
+        "prefix": 0,
+        "current": [
+          {
+            "name": "Current cue",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+            "exact": "Absent",
+            "estimate": null
+          },
+          {
+            "name": "Baseline",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+            "exact": "Absent",
+            "estimate": null
+          },
+          {
+            "name": "Mitigation",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+            "exact": "Absent",
+            "estimate": null
+          }
+        ],
+        "history": [
+          {
+            "eventId": null,
+            "at": null,
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          }
+        ],
+        "scope": "Three registered learned-belief means in root753; exact original initial state and committed apply mutations. Absence is not zero. Precision is recorded learning precision, not subjective certainty. This is researcher state inspection, not an independent emotion vector or proof of learning-evidence ancestry."
+      }
+    },
+    {
+      "prefix": 1,
+      "stateHash": "b7b1f740647434110e3e2bd2d581679cca5eb68484e944b3466458db2d61a859",
+      "saveHash": "33871d056fedd6368785368d0951f502c8bcb268d0aad66b9a8c44fe2e963bbc",
+      "report": {
+        "version": "affect-belief-state/0.1",
+        "modelHash": "8605e8a55e85c58296326b8b4a3b2fbd9d0b9b2999c85d6288cd77a733e8b900",
+        "runHash": "983d81147c356cab0ae1b5051d5f011df15e30391f09504196899aebbc0cd9d8",
+        "saveHash": "33871d056fedd6368785368d0951f502c8bcb268d0aad66b9a8c44fe2e963bbc",
+        "stateHash": "b7b1f740647434110e3e2bd2d581679cca5eb68484e944b3466458db2d61a859",
+        "prefix": 1,
+        "current": [
+          {
+            "name": "Current cue",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+            "exact": "Absent",
+            "estimate": null
+          },
+          {
+            "name": "Baseline",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+            "exact": "Absent",
+            "estimate": null
+          },
+          {
+            "name": "Mitigation",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+            "exact": "Absent",
+            "estimate": null
+          }
+        ],
+        "history": [
+          {
+            "eventId": null,
+            "at": null,
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          }
+        ],
+        "scope": "Three registered learned-belief means in root753; exact original initial state and committed apply mutations. Absence is not zero. Precision is recorded learning precision, not subjective certainty. This is researcher state inspection, not an independent emotion vector or proof of learning-evidence ancestry."
+      }
+    },
+    {
+      "prefix": 2,
+      "stateHash": "b7b1f740647434110e3e2bd2d581679cca5eb68484e944b3466458db2d61a859",
+      "saveHash": "5513499bb30d07282f21fd6d9adb808dd4e0b0d6403b3aa712c400dc91022284",
+      "report": {
+        "version": "affect-belief-state/0.1",
+        "modelHash": "8605e8a55e85c58296326b8b4a3b2fbd9d0b9b2999c85d6288cd77a733e8b900",
+        "runHash": "983d81147c356cab0ae1b5051d5f011df15e30391f09504196899aebbc0cd9d8",
+        "saveHash": "5513499bb30d07282f21fd6d9adb808dd4e0b0d6403b3aa712c400dc91022284",
+        "stateHash": "b7b1f740647434110e3e2bd2d581679cca5eb68484e944b3466458db2d61a859",
+        "prefix": 2,
+        "current": [
+          {
+            "name": "Current cue",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+            "exact": "Absent",
+            "estimate": null
+          },
+          {
+            "name": "Baseline",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+            "exact": "Absent",
+            "estimate": null
+          },
+          {
+            "name": "Mitigation",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+            "exact": "Absent",
+            "estimate": null
+          }
+        ],
+        "history": [
+          {
+            "eventId": null,
+            "at": null,
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          }
+        ],
+        "scope": "Three registered learned-belief means in root753; exact original initial state and committed apply mutations. Absence is not zero. Precision is recorded learning precision, not subjective certainty. This is researcher state inspection, not an independent emotion vector or proof of learning-evidence ancestry."
+      }
+    },
+    {
+      "prefix": 3,
+      "stateHash": "5067ef87c19b7054f36077a50afa3e75b2f76f4ec7574b0dbc5428569ff38ba1",
+      "saveHash": "4aa8e1028a9668d4dff14ea24674f89e37ae1a7453a6aaba97536f96224cb0d5",
+      "report": {
+        "version": "affect-belief-state/0.1",
+        "modelHash": "8605e8a55e85c58296326b8b4a3b2fbd9d0b9b2999c85d6288cd77a733e8b900",
+        "runHash": "983d81147c356cab0ae1b5051d5f011df15e30391f09504196899aebbc0cd9d8",
+        "saveHash": "4aa8e1028a9668d4dff14ea24674f89e37ae1a7453a6aaba97536f96224cb0d5",
+        "stateHash": "5067ef87c19b7054f36077a50afa3e75b2f76f4ec7574b0dbc5428569ff38ba1",
+        "prefix": 3,
+        "current": [
+          {
+            "name": "Current cue",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+            "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+            "estimate": {
+              "mean": "1/1",
+              "precision": "1",
+              "support": [
+                {
+                  "namespace": "1115",
+                  "identity": "35"
+                }
+              ],
+              "plot": 1
+            }
+          },
+          {
+            "name": "Baseline",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+            "exact": "Absent",
+            "estimate": null
+          },
+          {
+            "name": "Mitigation",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+            "exact": "Absent",
+            "estimate": null
+          }
+        ],
+        "history": [
+          {
+            "eventId": null,
+            "at": null,
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          },
+          {
+            "eventId": "60",
+            "at": "3",
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "35"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          }
+        ],
+        "scope": "Three registered learned-belief means in root753; exact original initial state and committed apply mutations. Absence is not zero. Precision is recorded learning precision, not subjective certainty. This is researcher state inspection, not an independent emotion vector or proof of learning-evidence ancestry."
+      }
+    },
+    {
+      "prefix": 4,
+      "stateHash": "5067ef87c19b7054f36077a50afa3e75b2f76f4ec7574b0dbc5428569ff38ba1",
+      "saveHash": "bfa361de4873a6bca9d27c401404d8e05f9f1d7f52ea760cc00c2ff9ee58ba43",
+      "report": {
+        "version": "affect-belief-state/0.1",
+        "modelHash": "8605e8a55e85c58296326b8b4a3b2fbd9d0b9b2999c85d6288cd77a733e8b900",
+        "runHash": "983d81147c356cab0ae1b5051d5f011df15e30391f09504196899aebbc0cd9d8",
+        "saveHash": "bfa361de4873a6bca9d27c401404d8e05f9f1d7f52ea760cc00c2ff9ee58ba43",
+        "stateHash": "5067ef87c19b7054f36077a50afa3e75b2f76f4ec7574b0dbc5428569ff38ba1",
+        "prefix": 4,
+        "current": [
+          {
+            "name": "Current cue",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+            "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+            "estimate": {
+              "mean": "1/1",
+              "precision": "1",
+              "support": [
+                {
+                  "namespace": "1115",
+                  "identity": "35"
+                }
+              ],
+              "plot": 1
+            }
+          },
+          {
+            "name": "Baseline",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+            "exact": "Absent",
+            "estimate": null
+          },
+          {
+            "name": "Mitigation",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+            "exact": "Absent",
+            "estimate": null
+          }
+        ],
+        "history": [
+          {
+            "eventId": null,
+            "at": null,
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          },
+          {
+            "eventId": "60",
+            "at": "3",
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "35"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          }
+        ],
+        "scope": "Three registered learned-belief means in root753; exact original initial state and committed apply mutations. Absence is not zero. Precision is recorded learning precision, not subjective certainty. This is researcher state inspection, not an independent emotion vector or proof of learning-evidence ancestry."
+      }
+    },
+    {
+      "prefix": 5,
+      "stateHash": "5067ef87c19b7054f36077a50afa3e75b2f76f4ec7574b0dbc5428569ff38ba1",
+      "saveHash": "1d5875c95399c78d5dabc7f25b847cfda06ad35911f437c1e8655ec3c0d5711e",
+      "report": {
+        "version": "affect-belief-state/0.1",
+        "modelHash": "8605e8a55e85c58296326b8b4a3b2fbd9d0b9b2999c85d6288cd77a733e8b900",
+        "runHash": "983d81147c356cab0ae1b5051d5f011df15e30391f09504196899aebbc0cd9d8",
+        "saveHash": "1d5875c95399c78d5dabc7f25b847cfda06ad35911f437c1e8655ec3c0d5711e",
+        "stateHash": "5067ef87c19b7054f36077a50afa3e75b2f76f4ec7574b0dbc5428569ff38ba1",
+        "prefix": 5,
+        "current": [
+          {
+            "name": "Current cue",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+            "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+            "estimate": {
+              "mean": "1/1",
+              "precision": "1",
+              "support": [
+                {
+                  "namespace": "1115",
+                  "identity": "35"
+                }
+              ],
+              "plot": 1
+            }
+          },
+          {
+            "name": "Baseline",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+            "exact": "Absent",
+            "estimate": null
+          },
+          {
+            "name": "Mitigation",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+            "exact": "Absent",
+            "estimate": null
+          }
+        ],
+        "history": [
+          {
+            "eventId": null,
+            "at": null,
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          },
+          {
+            "eventId": "60",
+            "at": "3",
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "35"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          }
+        ],
+        "scope": "Three registered learned-belief means in root753; exact original initial state and committed apply mutations. Absence is not zero. Precision is recorded learning precision, not subjective certainty. This is researcher state inspection, not an independent emotion vector or proof of learning-evidence ancestry."
+      }
+    },
+    {
+      "prefix": 6,
+      "stateHash": "50635ce2cef5ee9af37421e382919fc2a19a7db2ff06d46078c794bc52b15136",
+      "saveHash": "a700f0d3101a2a0155b4b0b46339e066b2391f2dc031414f0406d520237e89f1",
+      "report": {
+        "version": "affect-belief-state/0.1",
+        "modelHash": "8605e8a55e85c58296326b8b4a3b2fbd9d0b9b2999c85d6288cd77a733e8b900",
+        "runHash": "983d81147c356cab0ae1b5051d5f011df15e30391f09504196899aebbc0cd9d8",
+        "saveHash": "a700f0d3101a2a0155b4b0b46339e066b2391f2dc031414f0406d520237e89f1",
+        "stateHash": "50635ce2cef5ee9af37421e382919fc2a19a7db2ff06d46078c794bc52b15136",
+        "prefix": 6,
+        "current": [
+          {
+            "name": "Current cue",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+            "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+            "estimate": {
+              "mean": "1/1",
+              "precision": "1",
+              "support": [
+                {
+                  "namespace": "1115",
+                  "identity": "35"
+                }
+              ],
+              "plot": 1
+            }
+          },
+          {
+            "name": "Baseline",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+            "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"76\"\n    }\n  ]\n}",
+            "estimate": {
+              "mean": "1/1",
+              "precision": "1",
+              "support": [
+                {
+                  "namespace": "1115",
+                  "identity": "76"
+                }
+              ],
+              "plot": 1
+            }
+          },
+          {
+            "name": "Mitigation",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+            "exact": "Absent",
+            "estimate": null
+          }
+        ],
+        "history": [
+          {
+            "eventId": null,
+            "at": null,
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          },
+          {
+            "eventId": "60",
+            "at": "3",
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "35"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          },
+          {
+            "eventId": "99",
+            "at": "6",
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "35"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"76\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "76"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          }
+        ],
+        "scope": "Three registered learned-belief means in root753; exact original initial state and committed apply mutations. Absence is not zero. Precision is recorded learning precision, not subjective certainty. This is researcher state inspection, not an independent emotion vector or proof of learning-evidence ancestry."
+      }
+    },
+    {
+      "prefix": 7,
+      "stateHash": "50635ce2cef5ee9af37421e382919fc2a19a7db2ff06d46078c794bc52b15136",
+      "saveHash": "3830b8e2f12e83092a204ba0cf1d175cf49cdeae7a46a2b25d2816ae2ceea120",
+      "report": {
+        "version": "affect-belief-state/0.1",
+        "modelHash": "8605e8a55e85c58296326b8b4a3b2fbd9d0b9b2999c85d6288cd77a733e8b900",
+        "runHash": "983d81147c356cab0ae1b5051d5f011df15e30391f09504196899aebbc0cd9d8",
+        "saveHash": "3830b8e2f12e83092a204ba0cf1d175cf49cdeae7a46a2b25d2816ae2ceea120",
+        "stateHash": "50635ce2cef5ee9af37421e382919fc2a19a7db2ff06d46078c794bc52b15136",
+        "prefix": 7,
+        "current": [
+          {
+            "name": "Current cue",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+            "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+            "estimate": {
+              "mean": "1/1",
+              "precision": "1",
+              "support": [
+                {
+                  "namespace": "1115",
+                  "identity": "35"
+                }
+              ],
+              "plot": 1
+            }
+          },
+          {
+            "name": "Baseline",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+            "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"76\"\n    }\n  ]\n}",
+            "estimate": {
+              "mean": "1/1",
+              "precision": "1",
+              "support": [
+                {
+                  "namespace": "1115",
+                  "identity": "76"
+                }
+              ],
+              "plot": 1
+            }
+          },
+          {
+            "name": "Mitigation",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+            "exact": "Absent",
+            "estimate": null
+          }
+        ],
+        "history": [
+          {
+            "eventId": null,
+            "at": null,
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          },
+          {
+            "eventId": "60",
+            "at": "3",
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "35"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          },
+          {
+            "eventId": "99",
+            "at": "6",
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "35"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"76\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "76"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          }
+        ],
+        "scope": "Three registered learned-belief means in root753; exact original initial state and committed apply mutations. Absence is not zero. Precision is recorded learning precision, not subjective certainty. This is researcher state inspection, not an independent emotion vector or proof of learning-evidence ancestry."
+      }
+    },
+    {
+      "prefix": 8,
+      "stateHash": "50635ce2cef5ee9af37421e382919fc2a19a7db2ff06d46078c794bc52b15136",
+      "saveHash": "bf995a635acfe90dca4ba64c93cd71db60d82dd1a4c2bbfb89307ee1c718a882",
+      "report": {
+        "version": "affect-belief-state/0.1",
+        "modelHash": "8605e8a55e85c58296326b8b4a3b2fbd9d0b9b2999c85d6288cd77a733e8b900",
+        "runHash": "983d81147c356cab0ae1b5051d5f011df15e30391f09504196899aebbc0cd9d8",
+        "saveHash": "bf995a635acfe90dca4ba64c93cd71db60d82dd1a4c2bbfb89307ee1c718a882",
+        "stateHash": "50635ce2cef5ee9af37421e382919fc2a19a7db2ff06d46078c794bc52b15136",
+        "prefix": 8,
+        "current": [
+          {
+            "name": "Current cue",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+            "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+            "estimate": {
+              "mean": "1/1",
+              "precision": "1",
+              "support": [
+                {
+                  "namespace": "1115",
+                  "identity": "35"
+                }
+              ],
+              "plot": 1
+            }
+          },
+          {
+            "name": "Baseline",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+            "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"76\"\n    }\n  ]\n}",
+            "estimate": {
+              "mean": "1/1",
+              "precision": "1",
+              "support": [
+                {
+                  "namespace": "1115",
+                  "identity": "76"
+                }
+              ],
+              "plot": 1
+            }
+          },
+          {
+            "name": "Mitigation",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+            "exact": "Absent",
+            "estimate": null
+          }
+        ],
+        "history": [
+          {
+            "eventId": null,
+            "at": null,
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          },
+          {
+            "eventId": "60",
+            "at": "3",
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "35"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          },
+          {
+            "eventId": "99",
+            "at": "6",
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "35"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"76\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "76"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          }
+        ],
+        "scope": "Three registered learned-belief means in root753; exact original initial state and committed apply mutations. Absence is not zero. Precision is recorded learning precision, not subjective certainty. This is researcher state inspection, not an independent emotion vector or proof of learning-evidence ancestry."
+      }
+    },
+    {
+      "prefix": 9,
+      "stateHash": "08396979556b09bc103fa6c271ee3344aa417b442848ecbc9f9c01fe752524fc",
+      "saveHash": "0c46d94ac54f5c1a1641f85ae086880df9a301ac9650e70c490824b8e9e6712d",
+      "report": {
+        "version": "affect-belief-state/0.1",
+        "modelHash": "8605e8a55e85c58296326b8b4a3b2fbd9d0b9b2999c85d6288cd77a733e8b900",
+        "runHash": "983d81147c356cab0ae1b5051d5f011df15e30391f09504196899aebbc0cd9d8",
+        "saveHash": "0c46d94ac54f5c1a1641f85ae086880df9a301ac9650e70c490824b8e9e6712d",
+        "stateHash": "08396979556b09bc103fa6c271ee3344aa417b442848ecbc9f9c01fe752524fc",
+        "prefix": 9,
+        "current": [
+          {
+            "name": "Current cue",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+            "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+            "estimate": {
+              "mean": "1/1",
+              "precision": "1",
+              "support": [
+                {
+                  "namespace": "1115",
+                  "identity": "35"
+                }
+              ],
+              "plot": 1
+            }
+          },
+          {
+            "name": "Baseline",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+            "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"76\"\n    }\n  ]\n}",
+            "estimate": {
+              "mean": "1/1",
+              "precision": "1",
+              "support": [
+                {
+                  "namespace": "1115",
+                  "identity": "76"
+                }
+              ],
+              "plot": 1
+            }
+          },
+          {
+            "name": "Mitigation",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+            "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"0/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"117\"\n    }\n  ]\n}",
+            "estimate": {
+              "mean": "0/1",
+              "precision": "1",
+              "support": [
+                {
+                  "namespace": "1115",
+                  "identity": "117"
+                }
+              ],
+              "plot": 0
+            }
+          }
+        ],
+        "history": [
+          {
+            "eventId": null,
+            "at": null,
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          },
+          {
+            "eventId": "60",
+            "at": "3",
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "35"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          },
+          {
+            "eventId": "99",
+            "at": "6",
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "35"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"76\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "76"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          },
+          {
+            "eventId": "138",
+            "at": "9",
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "35"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"76\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "76"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"0/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"117\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "0/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "117"
+                    }
+                  ],
+                  "plot": 0
+                }
+              }
+            ]
+          }
+        ],
+        "scope": "Three registered learned-belief means in root753; exact original initial state and committed apply mutations. Absence is not zero. Precision is recorded learning precision, not subjective certainty. This is researcher state inspection, not an independent emotion vector or proof of learning-evidence ancestry."
+      }
+    },
+    {
+      "prefix": 10,
+      "stateHash": "08396979556b09bc103fa6c271ee3344aa417b442848ecbc9f9c01fe752524fc",
+      "saveHash": "fda85d1b1ff1703f0cfd4b9cc3f992155d14da31ef8496b48fe231a2d4b987f6",
+      "report": {
+        "version": "affect-belief-state/0.1",
+        "modelHash": "8605e8a55e85c58296326b8b4a3b2fbd9d0b9b2999c85d6288cd77a733e8b900",
+        "runHash": "983d81147c356cab0ae1b5051d5f011df15e30391f09504196899aebbc0cd9d8",
+        "saveHash": "fda85d1b1ff1703f0cfd4b9cc3f992155d14da31ef8496b48fe231a2d4b987f6",
+        "stateHash": "08396979556b09bc103fa6c271ee3344aa417b442848ecbc9f9c01fe752524fc",
+        "prefix": 10,
+        "current": [
+          {
+            "name": "Current cue",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+            "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+            "estimate": {
+              "mean": "1/1",
+              "precision": "1",
+              "support": [
+                {
+                  "namespace": "1115",
+                  "identity": "35"
+                }
+              ],
+              "plot": 1
+            }
+          },
+          {
+            "name": "Baseline",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+            "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"76\"\n    }\n  ]\n}",
+            "estimate": {
+              "mean": "1/1",
+              "precision": "1",
+              "support": [
+                {
+                  "namespace": "1115",
+                  "identity": "76"
+                }
+              ],
+              "plot": 1
+            }
+          },
+          {
+            "name": "Mitigation",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+            "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"0/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"117\"\n    }\n  ]\n}",
+            "estimate": {
+              "mean": "0/1",
+              "precision": "1",
+              "support": [
+                {
+                  "namespace": "1115",
+                  "identity": "117"
+                }
+              ],
+              "plot": 0
+            }
+          }
+        ],
+        "history": [
+          {
+            "eventId": null,
+            "at": null,
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          },
+          {
+            "eventId": "60",
+            "at": "3",
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "35"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          },
+          {
+            "eventId": "99",
+            "at": "6",
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "35"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"76\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "76"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          },
+          {
+            "eventId": "138",
+            "at": "9",
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "35"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"76\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "76"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"0/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"117\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "0/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "117"
+                    }
+                  ],
+                  "plot": 0
+                }
+              }
+            ]
+          }
+        ],
+        "scope": "Three registered learned-belief means in root753; exact original initial state and committed apply mutations. Absence is not zero. Precision is recorded learning precision, not subjective certainty. This is researcher state inspection, not an independent emotion vector or proof of learning-evidence ancestry."
+      }
+    },
+    {
+      "prefix": 11,
+      "stateHash": "08396979556b09bc103fa6c271ee3344aa417b442848ecbc9f9c01fe752524fc",
+      "saveHash": "c47e3e643b0786406fbf2fc47a76692c9a21fdb4591edc4690b9ad6a02e352c0",
+      "report": {
+        "version": "affect-belief-state/0.1",
+        "modelHash": "8605e8a55e85c58296326b8b4a3b2fbd9d0b9b2999c85d6288cd77a733e8b900",
+        "runHash": "983d81147c356cab0ae1b5051d5f011df15e30391f09504196899aebbc0cd9d8",
+        "saveHash": "c47e3e643b0786406fbf2fc47a76692c9a21fdb4591edc4690b9ad6a02e352c0",
+        "stateHash": "08396979556b09bc103fa6c271ee3344aa417b442848ecbc9f9c01fe752524fc",
+        "prefix": 11,
+        "current": [
+          {
+            "name": "Current cue",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+            "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+            "estimate": {
+              "mean": "1/1",
+              "precision": "1",
+              "support": [
+                {
+                  "namespace": "1115",
+                  "identity": "35"
+                }
+              ],
+              "plot": 1
+            }
+          },
+          {
+            "name": "Baseline",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+            "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"76\"\n    }\n  ]\n}",
+            "estimate": {
+              "mean": "1/1",
+              "precision": "1",
+              "support": [
+                {
+                  "namespace": "1115",
+                  "identity": "76"
+                }
+              ],
+              "plot": 1
+            }
+          },
+          {
+            "name": "Mitigation",
+            "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+            "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"0/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"117\"\n    }\n  ]\n}",
+            "estimate": {
+              "mean": "0/1",
+              "precision": "1",
+              "support": [
+                {
+                  "namespace": "1115",
+                  "identity": "117"
+                }
+              ],
+              "plot": 0
+            }
+          }
+        ],
+        "history": [
+          {
+            "eventId": null,
+            "at": null,
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          },
+          {
+            "eventId": "60",
+            "at": "3",
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "35"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "Absent",
+                "estimate": null
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          },
+          {
+            "eventId": "99",
+            "at": "6",
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "35"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"76\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "76"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "Absent",
+                "estimate": null
+              }
+            ]
+          },
+          {
+            "eventId": "138",
+            "at": "9",
+            "vector": [
+              {
+                "name": "Current cue",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "35"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Baseline",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"76\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "1/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "76"
+                    }
+                  ],
+                  "plot": 1
+                }
+              },
+              {
+                "name": "Mitigation",
+                "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+                "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"0/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"117\"\n    }\n  ]\n}",
+                "estimate": {
+                  "mean": "0/1",
+                  "precision": "1",
+                  "support": [
+                    {
+                      "namespace": "1115",
+                      "identity": "117"
+                    }
+                  ],
+                  "plot": 0
+                }
+              }
+            ]
+          }
+        ],
+        "scope": "Three registered learned-belief means in root753; exact original initial state and committed apply mutations. Absence is not zero. Precision is recorded learning precision, not subjective certainty. This is researcher state inspection, not an independent emotion vector or proof of learning-evidence ancestry."
+      }
+    }
+  ]
+}

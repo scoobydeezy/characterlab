@@ -52,6 +52,19 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 stored belief view:** AFFECT Character standalone/retained pair now show
+actual three-component root753 mean vector and committed mutation history. Initial
+state decoded from original model; every before/after joins and final state agrees.
+Native four terminal programs +12 baseline prefixes/66 historical checks PASS;
+browser baseline0/11/history60, both obligation branches3 and branch B event58 PASS.
+Rev1 audit wrongly assumed zero-baseline matched baseline; corrected rev2 retained.
+Browser attempted baseline event60 in B, rejected; actual58 verified, correction kept.
+TypeScript/build644/research4318/boundary PASS;166 live source hashes unchanged.
+See workbench-affect-belief-state-rev2. Tab36/4247 retained; mark tabs1..36.
+Full stored-state corpus, learning ancestry, trace disposition, complete language and
+integrated entry remain due. Paged23320 LIVE; packed29 last14/14 Working.
+
+
 **2026-10-23 appraisal-read corpus completion:** Native105 programs/1436 prefixes/
 1331 appraisals/3993 reads/7916 historical checks PASS. Independent artifact/order/
 original prefix identity/history reconciliation and all280 frozen source hashes PASS.

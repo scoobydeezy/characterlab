@@ -818,3 +818,34 @@ this read audit neither repairs nor waives it. All18 conditional obligations sur
 Learning ancestry, complete source-selection provenance, player strength/certainty
 language, stored-state vector integration and the full entry demonstration remain due.
 Paged23320 last11/15 prefix16/18; packed pair29 last13/13 Working. All35 tabs retained.
+
+## 2026-10-23 — stored belief vector and mutation history
+
+Character mode now mounts a researcher view in standalone and retained paired
+AFFECT runs. The three coordinates are actual stored means for current cue, baseline
+and mitigation, with exact full root753 paths, learning precision and recorded support.
+They are not invented emotion dimensions; learning precision is not subjective
+certainty. Original model initial state is decoded, then each original apply mutation
+is checked against its predecessor and final native state. Missing history, duplicate
+events, unknown models and inconsistent final state withhold the view. Absent is
+distinct from zero. Chart coordinates round only for display; fractions are authoritative.
+Selection exposes original before/after events through the existing Timeline.
+
+Native four original terminal snapshots plus all12 baseline prefixes/66 historical
+checks PASS; four negative checks, SSR and immutability PASS. Rev1 incorrectly
+expected the zero-baseline control's mean to be1; actual0 was correctly rendered.
+Failed audit/source preserved; corrected rev2 passes. Browser baseline0/11 and
+historical event60 exact, paired obligation A/B3 independently match native reports
+and four identities. Branch B actual event58 verified after an unavailable60 option
+attempt; correction retained. Standalone identities remain unchanged by paired work.
+Keyboard reaches mutation control, expanded canonical paths fit1265px; screenshot
+inspected. TypeScript/build644 modules/evidence restore/research4318/boundary PASS.
+All166 live paged-diagnostic source hashes unchanged. See
+workbench-affect-belief-state-rev2; tab36/4247, preview2099 retained.
+
+LOCAL DISPOSITION: expose the registered state vector with exact native history,
+advancing integrated step6 without claiming the full demonstration. No native law,
+research verdict or obligation disposition changed. RO-C3-011 trace limitation and
+all18 conditional obligations survive. Full105-program stored-state qualification,
+learning ancestry, complete language, architecture integration and entry remain due.
+Paged23320 remains live; packed pair29 last14/14 Working. Mark all36 retained tabs.
