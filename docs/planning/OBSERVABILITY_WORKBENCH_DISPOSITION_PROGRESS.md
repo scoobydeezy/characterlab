@@ -1346,3 +1346,28 @@ Build607/TypeScript, boundary and restored research checks PASS; all three live 
 bindings remain unchanged. Retain tab11/4223. Broader corpus-link coverage, player
 meaning and integrated entry remain due. No C3 law, topology, verdict or obligation
 changed; all18 conditional obligations/source restrictions survive.
+
+## Full paired browser horizon started; baseline diagnostics complete — 2026-10-23
+
+The current immutable607-module build at4223 runs constitutional pair model/0/13
+in tab11 toward18/18. Initial Character report0 is retained for historical checking.
+workbench-disposition-paired-horizon-rev1 freezes exact source copies and all served
+assets; no new checkout source hold is introduced. Three preexisting holds remain.
+An authenticated oracle for all19 prefixes derives from original comparison/chart/
+choice artifacts. Initial0 and sampled2 comparison/choices/ten hashes PASS.
+The pair remains RUNNING; mode changes would request pause, so leave Experiment
+until terminal. status.json specifies terminal capture and restoration work.
+
+Terminal acceptance requires18/18, exact comparison/choice/complete scalar history,
+ten identities, retained initial report with stale source disabled, terminal paired
+checkpoint capture/restore and exact restored history. No terminal receipt exists
+yet. This is one declared contrast, not all30 contrasts, player-language, complete
+resource/accessibility or integrated-entry qualification.
+
+Native paged diagnostic audit23320 completed Plastic/Main0..18:19 prefixes, allten
+kinds,380 direct report checks plus accumulated historical stability. Original
+archive identities, scalar history and choices pass throughout. Exact source freeze
+and all19 immutable receipts rechecked in baseline-complete.json; session continues
+remaining14 programs. This is a scoped baseline completion, not aggregate acceptance.
+No C3 semantics, law, topology, verdict or obligation changed; all18 conditional
+obligations/source restrictions survive.
