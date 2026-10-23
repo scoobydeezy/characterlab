@@ -456,3 +456,34 @@ all candidates. It does not claim complete source-to-state causal provenance,
 player-readable semantic qualification, calibrated-language policy or the complete
 16-step entry demonstration. No C3 verdict/obligation disposition changes; all18
 conditional obligations remain.
+
+## 2026-10-23 — explicit goal/option reason semantics
+
+Projection affect-reason-semantic/0.1 now gives each recorded nucleus an exact
+original option/goal correspondence, concept, polarity, base/standing/situational
+contributions, mechanical magnitude and raw source indices. Registered canonical
+identities are matched in full; identifier suffixes are not names. Coverage sources
+must agree with the nucleus's candidate and complete task commitment key. The
+renderer derives its deterministic summary from these semantics, not existing prose.
+The prior affect-evaluation-explanation/0.1 snapshots remain unchanged.
+
+Full retained corpus PASS105 programs/1331 decisions/2640 nuclei. Two tests cover
+all records, immutable input, prose independence, unknown actor identity, cross-goal
+source rejection and object-order independence. Both deterministic summary phrasings
+span distinct exact contribution values; wording-review.json preserves each distinct
+meaning and occurrence count. Summary equality does not establish semantic equality.
+Strength/certainty bands remain null because no band policy is qualified. This is
+a researcher explanation, not character/player disclosure or an awareness claim.
+
+Browser original obligation seed0 branches1/2 PASS exact semantic and source reports,
+historical1 after2, expanded meaning and missing-band disclosure, source-row reference
+and native state/save identity. Independent verification and screenshot inspection
+PASS. Tab21/4232 retained, preview39417. TypeScript/build621/boundary/evidence restore/
+research checks PASS; live277/166 source holds unchanged. See
+workbench-affect-reason-semantics-rev1.
+
+LOCAL DISPOSITION: explicit known goal/option labels instantiate accepted fixture
+meaning without adding character state, a causal edge or a psychological law. No
+C3 verdict or obligation disposition changes. All18 conditional obligations survive.
+Reasoning-mode integration of the new structured panels, observer disclosure policy,
+full player language, source-state attribution and integrated entry remain due.

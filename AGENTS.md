@@ -53,6 +53,13 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 ## Active direction
 
 **Current routing (2026-10-23):** Observability Workbench IN PROGRESS, owner-authorized.
+AFFECT explicit reason semantics PASS105 programs/1331 decisions/2640 nuclei;
+full registered option/goal and raw-source correspondence, two wording groups with
+distinct magnitude meanings retained. Browser both obligation0 branches1/2/history
+expanded semantics/source rows/native identity PASS. Two tests/build621/research PASS.
+See workbench-affect-reason-semantics-rev1; tab21/4232, mark live tabs1..21.
+Researcher-only; strength/certainty bands unqualified. Next Reasoning-mode panels,
+observer disclosure policy/player language and full integrated entry remain due.
 AFFECT reason-source inspector PASS105 roles/1331 decisions/2851 raw signals/
 2763 exact coverage joins/88 uncovered sources; all retained explicitly. Browser
 obligation0 both branches1/2/history1/exact decision35/native identities PASS.

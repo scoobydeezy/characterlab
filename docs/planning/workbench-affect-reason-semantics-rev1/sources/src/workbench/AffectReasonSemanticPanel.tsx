@@ -1,0 +1,6 @@
+import type {AffectExplanation} from './affectExplanations';
+import {affectReasonSemantics} from './affectReasonSemantics';
+export function AffectReasonSemanticPanel({card}:{card:AffectExplanation}){
+ let report:ReturnType<typeof affectReasonSemantics>;try{report=affectReasonSemantics(card);}catch(error){return <p role="alert">Reason semantics withheld: {String(error)}</p>;}
+ return <section aria-label="AFFECT reason meanings"><h5>Reason meanings</h5><p>{report.scope}</p>{report.reasons.map(r=><details key={r.nucleus}><summary>Nucleus {r.nucleus+1}: {r.human}</summary><dl><dt>Concept</dt><dd>{r.semantic.concept}</dd><dt>Option</dt><dd>{r.semantic.option}</dd><dt>Goal</dt><dd>{r.semantic.ground}</dd><dt>Polarity</dt><dd>{r.semantic.polarity}</dd><dt>Exact contributions</dt><dd>Base {r.semantic.contributions.base}; standing {r.semantic.contributions.standing}; situational {r.semantic.contributions.situational}</dd><dt>Strength / certainty bands</dt><dd>Unavailable: no qualified band policy</dd><dt>Source rows in accounting below</dt><dd>{r.sourceIndices.map(i=>i+1).join(', ')||'No recorded coverage'}</dd></dl><pre className="exact">{JSON.stringify(r,null,2)}</pre></details>)}<details><summary>Exact semantic report</summary><pre data-affect-reason-semantics className="exact">{JSON.stringify(report,null,2)}</pre></details></section>;
+}
