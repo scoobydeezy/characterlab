@@ -53,6 +53,12 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 ## Active direction
 
 **Current routing (2026-10-23):** Observability Workbench IN PROGRESS, owner-authorized.
+AFFECT persistent paired lifecycle mounted in Experiment: native3 tests PASS eight
+initial contrasts, main/supplement0/1/2 restore/continuation and partial-failure guards.
+Browser baseline/hidden0/1/2 six modes, unequal2/1, checkpoint1, Run/Pause1→2,
+historical summary and standalone isolation PASS. Build616/research PASS; tab18/4229.
+See workbench-affect-retained-pair-rev1. Full horizons/all browser pairs/player
+language and integrated entry remain due. Retain current workbenchLiveTabs1..18.
 AFFECT appraisal→decision linkage PASS105 retained roles/1331 exact embedded joins;
 two tests include22 original event links and missing/ambiguous/nested/phase negatives.
 Browser baseline/hidden1 both decision24/source revisions, appraisal return/keyboard
@@ -62,7 +68,7 @@ PlayerFacingRoll remains a mode label, not player disclosure or full-entry proof
 AFFECT full event/history audit RUNNING63434: first3/105 roles/45 prefixes PASS.
 Target1436 prefixes/1331 appraisals; parsed-source correction in rev2, failed rev1
 retained. See workbench-affect-event-corpus-rev2/checkpoint-003.json. Its280 sources
-are now a fourth live hold; no complete-corpus claim. Preserve all16 current tabs.
+are now a fourth live hold; no complete-corpus claim. Preserve all18 current tabs.
 AFFECT paired appraisal→event/state-history links PASS2 native branches/28 prefixes,
 28 appraisals/182 prior-event stability checks. Browser both event26 sources, B prior
 mutation105 before/after, return and A13 selection reset/native identities PASS.

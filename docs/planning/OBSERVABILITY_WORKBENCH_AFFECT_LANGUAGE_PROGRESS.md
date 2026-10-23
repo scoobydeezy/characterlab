@@ -206,3 +206,43 @@ arbitration mode and does not grant player disclosure, establish execution succe
 or prove psychological necessity. Complete player-language traversal, paired lifecycle
 and the integrated entry demonstration remain required. No Campaign3 verdict or
 obligation disposition changed.
+
+## Persistent AFFECT pair lifecycle — 2026-10-23
+
+Experiment now offers a retained pair session for all eight declared original
+contrasts. Both worker-backed native runs remain alive across advancement and mode
+changes. Users can step either branch, advance both, Run/Pause at committed pair
+boundaries, capture/restore a paired checkpoint and inspect either branch through
+Character, Experiment, Reasoning, Timeline, Compare and Architecture. The selected
+branch supplies every diagnostic revision. The prior standalone run and its bounded
+comparison path remain independent. Outer mode changes retain the pair and request
+a pause; closing the component disposes both workers.
+
+`affectPairSession.ts` delegates native execution/checkpoint authentication to the
+existing adapters. Unequal horizons withhold comparisons and require alignment before
+advancing both. Publication happens only after the requested operations succeed.
+If the second branch fails after the first advances, the last published pair stays
+historical and further advancement/checkpoint capture is blocked until replacement
+or restore. This is guarded recovery, not atomic rollback. Checkpoint envelopes must
+match the declared ordered programs and published revisions. Views and checkpoints
+are detached; no UI state becomes simulation authority.
+
+Three tests PASS all eight initial contrasts, main and supplementary native pairs
+through2, checkpoint1 restore/continuation, detached history, unequal prefixes,
+overlapping commands, invalid checkpoint programs and injected second-branch failure
+with disposal. `workbench-affect-retained-pair-rev1` preserves source copies and an
+independent native baseline/hidden0/1/2 browser oracle.
+
+Browser tab18/4229 PASS both branches0/1/2, all six modes using branch B1's exact
+identities and recorded content, unequal2/1 withholding and realignment, immutable
+prepared summary1, paired checkpoint1 restore, Run/Pause1→2, and outer-mode retention.
+The standalone baseline stays at0 with all four identities unchanged. Exact browser
+summaries, appraisal sources, timeline and participation records match the native
+oracle. Screenshot inspected; TypeScript/build616, boundary and restored research
+PASS. All four running audit source freezes remain unchanged.
+
+LOCAL DISPOSITION: this supplies the previously missing persistent A/B lifecycle.
+Full paired horizons, every browser contrast, player-readable disclosure, a base
+parameter intervention suitable for the chosen entry experiment, and the complete
+integrated16-step demonstration remain required. No law or comparator is selected,
+retired or reduced; all18 conditional obligations and historical limits survive.
