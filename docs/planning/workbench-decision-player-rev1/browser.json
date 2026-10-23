@@ -1,0 +1,65 @@
+{
+  "cases": [
+    {
+      "id": "1/r3-s0-allowed",
+      "prefix": 1,
+      "reports": [
+        "{\n  \"sourceIndex\": 6,\n  \"version\": \"decision-player-presentation/0.1\",\n  \"audience\": \"player\",\n  \"chosen\": \"option B\",\n  \"tieWinner\": null,\n  \"reasons\": [\n    {\n      \"semantic\": {\n        \"concept\": \"adopted-task-commitment\",\n        \"ground\": \"task A\",\n        \"option\": \"option A\",\n        \"polarity\": \"supports\",\n        \"certainty\": null\n      },\n      \"human\": \"The commitment to task A supports option A.\",\n      \"die\": \"4\",\n      \"face\": \"1\",\n      \"standing\": \"0\",\n      \"situation\": \"3\",\n      \"contribution\": \"4\",\n      \"sourceKey\": {\n        \"record\": \"ReasonNucleusKey#404/1\",\n        \"CandidateKey [1]\": {\n          \"record\": \"ProceduralCandidateKey#395/1\",\n          \"CharacterId [1]\": {\n            \"namespace\": \"1002\",\n            \"identity\": {\n              \"namespace\": \"1037\",\n              \"identity\": {\n                \"namespace\": \"1038\",\n                \"identity\": \"content/longitudinal/actor\"\n              }\n            }\n          },\n          \"ProtocolActionDefinitionId [2]\": {\n            \"namespace\": \"1027\",\n            \"identity\": \"action/longitudinal/a\"\n          }\n        },\n        \"MotiveChannel [2]\": {\n          \"namespace\": \"1040\",\n          \"identity\": \"Commitment\"\n        },\n        \"TaskReferent [3]\": {\n          \"namespace\": \"1002\",\n          \"identity\": {\n            \"namespace\": \"1037\",\n            \"identity\": {\n              \"namespace\": \"1038\",\n              \"identity\": \"content/longitudinal/task/a\"\n            }\n          }\n        },\n        \"Direction [4]\": \"1\"\n      }\n    },\n    {\n      \"semantic\": {\n        \"concept\": \"adopted-task-commitment\",\n        \"ground\": \"task B\",\n        \"option\": \"option B\",\n        \"polarity\": \"supports\",\n        \"certainty\": null\n      },\n      \"human\": \"The commitment to task B supports option B.\",\n      \"die\": \"4\",\n      \"face\": \"2\",\n      \"standing\": \"0\",\n      \"situation\": \"3\",\n      \"contribution\": \"5\",\n      \"sourceKey\": {\n        \"record\": \"ReasonNucleusKey#404/1\",\n        \"CandidateKey [1]\": {\n          \"record\": \"ProceduralCandidateKey#395/1\",\n          \"CharacterId [1]\": {\n            \"namespace\": \"1002\",\n            \"identity\": {\n              \"namespace\": \"1037\",\n              \"identity\": {\n                \"namespace\": \"1038\",\n                \"identity\": \"content/longitudinal/actor\"\n              }\n            }\n          },\n          \"ProtocolActionDefinitionId [2]\": {\n            \"namespace\": \"1027\",\n            \"identity\": \"action/longitudinal/b\"\n          }\n        },\n        \"MotiveChannel [2]\": {\n          \"namespace\": \"1040\",\n          \"identity\": \"Commitment\"\n        },\n        \"TaskReferent [3]\": {\n          \"namespace\": \"1002\",\n          \"identity\": {\n            \"namespace\": \"1037\",\n            \"identity\": {\n              \"namespace\": \"1038\",\n              \"identity\": \"content/longitudinal/task/b\"\n            }\n          }\n        },\n        \"Direction [4]\": \"1\"\n      }\n    }\n  ],\n  \"scope\": \"Only the native player presentation is rendered. Faces and contributions are actual recorded mechanics, not character evidence or subjective uncertainty. Displayed contributions need not determine the selected option under retained comparator laws. Selection does not establish execution success.\"\n}"
+      ],
+      "text": "Native player presentation\n\nThis preview uses only the separate player-display record admitted by decision-public/0.1-candidate. The surrounding workbench remains a researcher instrument; this is not character knowledge.\n\nSelected option B\n\nOnly the native player presentation is rendered. Faces and contributions are actual recorded mechanics, not character evidence or subjective uncertainty. Displayed contributions need not determine the selected option under retained comparator laws. Selection does not establish execution success.\n\nReason\tDie\tActual face\tStanding\tSituation\tSigned contribution\nThe commitment to task A supports option A.\td4\t1\t0\t3\t4\nThe commitment to task B supports option B.\td4\t2\t0\t3\t5\nExact permitted presentation · source index 6",
+      "hashes": [
+        "767999936a7f447787bf42999a7394d14a3e5d4491252c7aa8cd641e9fe6233e",
+        "c77b136cc17ff63f5758704fc70d0ba3da464242b6ee7b6cc16f51e87c46c000",
+        "c2ad470dd8ca2d06cf5859905fb0a3d04bddf74934b49d80d7b26de40a9e1dd9",
+        "f0b3c475f38933088e7be8e1ec6f0f8ea39ad1871d59ff1d78403641d559791f",
+        "3174d1d482ce41150d00b64dffe28ac284ebc1e4e3aa9b6abb88cfedaf870e1a",
+        "93daf9034105a58efdfdd62a55e490c9bb40d87a34fb1e3723b893bf1bba9349",
+        "88193e0bb798607713644e6556e9095a7fe7e645cfffa45708004295d49c0421",
+        "10b4dc0950ab44b9c3e29ec623e680b3a295e775ae5dd915ba27a752b0482f0e",
+        "6ad2a00f09cb6f3cd7813cc9250738154af1f1d6313d6223d9ad7c0cc2216ed8"
+      ]
+    },
+    {
+      "id": "5/r3-s0-allowed",
+      "prefix": 1,
+      "reports": [
+        "{\n  \"sourceIndex\": 6,\n  \"version\": \"decision-player-presentation/0.1\",\n  \"audience\": \"player\",\n  \"chosen\": \"option B\",\n  \"tieWinner\": null,\n  \"reasons\": [],\n  \"scope\": \"Only the native player presentation is rendered. Faces and contributions are actual recorded mechanics, not character evidence or subjective uncertainty. Displayed contributions need not determine the selected option under retained comparator laws. Selection does not establish execution success.\"\n}"
+      ],
+      "text": "Native player presentation\n\nThis preview uses only the separate player-display record admitted by decision-public/0.1-candidate. The surrounding workbench remains a researcher instrument; this is not character knowledge.\n\nSelected option B\n\nOnly the native player presentation is rendered. Faces and contributions are actual recorded mechanics, not character evidence or subjective uncertainty. Displayed contributions need not determine the selected option under retained comparator laws. Selection does not establish execution success.\n\nThe native display contains no reason faces. Do not infer zero contribution or an explained choice from this omission.\n\nReason\tDie\tActual face\tStanding\tSituation\tSigned contribution\nExact permitted presentation · source index 6",
+      "hashes": [
+        "767999936a7f447787bf42999a7394d14a3e5d4491252c7aa8cd641e9fe6233e",
+        "c77b136cc17ff63f5758704fc70d0ba3da464242b6ee7b6cc16f51e87c46c000",
+        "c2ad470dd8ca2d06cf5859905fb0a3d04bddf74934b49d80d7b26de40a9e1dd9",
+        "f0b3c475f38933088e7be8e1ec6f0f8ea39ad1871d59ff1d78403641d559791f",
+        "b8ed1ec556d36fe378a924eb1c607731b9cd6391b781860a9ba6ff79b15ee93c",
+        "91f2dedac93a014f9689f3129688b0d914aecbab4941109438f29b4e64e82e51",
+        "88193e0bb798607713644e6556e9095a7fe7e645cfffa45708004295d49c0421",
+        "28cbffffcdc1d0614d0189c61d83644947d1a6fbc92b1a0034f2cabf09fc6bcd",
+        "6ad2a00f09cb6f3cd7813cc9250738154af1f1d6313d6223d9ad7c0cc2216ed8"
+      ]
+    },
+    {
+      "id": "1/r1-s0-allowed",
+      "prefix": 1,
+      "reports": [],
+      "text": "Native player presentation\n\nThis preview uses only the separate player-display record admitted by decision-public/0.1-candidate. The surrounding workbench remains a researcher instrument; this is not character knowledge.\n\nNo native player presentation is recorded in this prefix. This does not mean that no choice or random draw occurred.",
+      "hashes": [
+        "767999936a7f447787bf42999a7394d14a3e5d4491252c7aa8cd641e9fe6233e",
+        "c77b136cc17ff63f5758704fc70d0ba3da464242b6ee7b6cc16f51e87c46c000",
+        "c2ad470dd8ca2d06cf5859905fb0a3d04bddf74934b49d80d7b26de40a9e1dd9",
+        "f0b3c475f38933088e7be8e1ec6f0f8ea39ad1871d59ff1d78403641d559791f",
+        "3174d1d482ce41150d00b64dffe28ac284ebc1e4e3aa9b6abb88cfedaf870e1a",
+        "f62478603649627c2f5d4167ad41b5f96c6b499a8f2a1569360ea3bf661c0973",
+        "a048e68f005d422d8cfc930b113f56814f25b12801dec65c570a774437cb3389",
+        "b85b39b9cf33471ee3747512ff412cf712837c7b799b1b9e1b29acc79f614ec6",
+        "f7c4a94f015be760187eb2b85b3855347032aa1242c010b118f7106305c4cedd"
+      ]
+    }
+  ],
+  "characterPlayerPanels": 0,
+  "alerts": [],
+  "dimensions": {
+    "client": 1265,
+    "scroll": 1265
+  }
+}

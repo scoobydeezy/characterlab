@@ -591,3 +591,14 @@ LOCAL DISPOSITION reuses the qualified exact execution links; no C3 verdict or
 obligation disposition changes, all18 conditional obligations survive. Full corpus
 receipt, player disclosure/language, magnitude-source accounting and integrated
 entry demonstration remain due.
+
+2026-10-23: full native task-read audit76503 COMPLETE, exit0. All105 programs/
+1436 prefixes/1331 unique decisions/2851 source rows/7916 historical checks PASS.
+Independent artifact/history reconciliation verifies all original native prefix
+hashes,105 immutable program files, counts,281 frozen sources and copies. See
+workbench-affect-task-read-corpus-rev1/receipt.json and verification.json. The
+task-read-only source hold is released; overlapping live BatchV8/paged diagnostic
+holds remain. Exact event/task-key/path/read correspondence does not establish
+magnitude derivation, adoption-history origin, subjective awareness or necessity.
+No new browser claim; prior bounded browser evidence remains scoped. All18
+conditional obligations and integrated-entry requirements remain.

@@ -1,0 +1,4084 @@
+{
+  "program": "choice-2-0.1",
+  "prefixes": [
+    {
+      "prefix": 0,
+      "stateHash": "b7b1f740647434110e3e2bd2d581679cca5eb68484e944b3466458db2d61a859",
+      "saveHash": "cff1d1f3d73ef85aad3723120f574e7ba0f8f64812affa4d06d0b53d0eaa30c2",
+      "outputsHash": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "reports": []
+    },
+    {
+      "prefix": 1,
+      "stateHash": "b7b1f740647434110e3e2bd2d581679cca5eb68484e944b3466458db2d61a859",
+      "saveHash": "8d47caffdd78512b28b92bc6d22c387a73ba1b93f7e5272c54c26773951882ba",
+      "outputsHash": "c8b3538d0cb639cc7e04d9188a3a8b09124dd2317a1921a316e9d1454c8d5958",
+      "reports": [
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "20",
+          "at": "1",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        }
+      ]
+    },
+    {
+      "prefix": 2,
+      "stateHash": "b7b1f740647434110e3e2bd2d581679cca5eb68484e944b3466458db2d61a859",
+      "saveHash": "8a49e1629dfc5e7b317982d36409d17924af8c2c9764fa676f2b54317824f64f",
+      "outputsHash": "342ca7c9aa3ffd90cd8f696ee44db8783c162130af808d78372573223b592137",
+      "reports": [
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "20",
+          "at": "1",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "33",
+          "at": "2",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        }
+      ]
+    },
+    {
+      "prefix": 3,
+      "stateHash": "5067ef87c19b7054f36077a50afa3e75b2f76f4ec7574b0dbc5428569ff38ba1",
+      "saveHash": "6b659c16d2f83a863388f5651338331d548064cd16be407eb7fb86e73e7c35d5",
+      "outputsHash": "74fb9acbedb2bd4b03a5aec0788015e6b7095d2332599499adc2729149657276",
+      "reports": [
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "20",
+          "at": "1",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "33",
+          "at": "2",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "46",
+          "at": "3",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        }
+      ]
+    },
+    {
+      "prefix": 4,
+      "stateHash": "5067ef87c19b7054f36077a50afa3e75b2f76f4ec7574b0dbc5428569ff38ba1",
+      "saveHash": "0603359ee2e2d3113551235b23c0513a0d6f9f5c856389360c0d83f6c812a039",
+      "outputsHash": "d0de0635c8e8257847dcde97eeb914761813d175468e59cb462f2c52d83b8d30",
+      "reports": [
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "20",
+          "at": "1",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "33",
+          "at": "2",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "46",
+          "at": "3",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "59",
+          "at": "4",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        }
+      ]
+    },
+    {
+      "prefix": 5,
+      "stateHash": "5067ef87c19b7054f36077a50afa3e75b2f76f4ec7574b0dbc5428569ff38ba1",
+      "saveHash": "51b2d25eafeaf9eeba3e306893d0fc48accde1cf028b7ed504b8388967865934",
+      "outputsHash": "68ffb6d19dbeaf67c2bb4917e9d179eb2f4442b3f911491732283657ab0e189a",
+      "reports": [
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "20",
+          "at": "1",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "33",
+          "at": "2",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "46",
+          "at": "3",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "59",
+          "at": "4",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "72",
+          "at": "5",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        }
+      ]
+    },
+    {
+      "prefix": 6,
+      "stateHash": "50635ce2cef5ee9af37421e382919fc2a19a7db2ff06d46078c794bc52b15136",
+      "saveHash": "6b9be3aea41484c3ff7d758896251540ac7232c92f5f9a08f51512bcc2d1afeb",
+      "outputsHash": "b14b9f5f69e9cf29a588b15d27f54fcf9936121d9dd09466c55ccae82354be81",
+      "reports": [
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "20",
+          "at": "1",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "33",
+          "at": "2",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "46",
+          "at": "3",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "59",
+          "at": "4",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "72",
+          "at": "5",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "85",
+          "at": "6",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        }
+      ]
+    },
+    {
+      "prefix": 7,
+      "stateHash": "50635ce2cef5ee9af37421e382919fc2a19a7db2ff06d46078c794bc52b15136",
+      "saveHash": "2650924436e1edab582651152aec9c98807a39cd88c1e908aea986f49c46dc8d",
+      "outputsHash": "b3bdbf14a788089537de3378ab766a1f7b87adb493293e603cea4420390b4b28",
+      "reports": [
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "20",
+          "at": "1",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "33",
+          "at": "2",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "46",
+          "at": "3",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "59",
+          "at": "4",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "72",
+          "at": "5",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "85",
+          "at": "6",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "98",
+          "at": "7",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        }
+      ]
+    },
+    {
+      "prefix": 8,
+      "stateHash": "50635ce2cef5ee9af37421e382919fc2a19a7db2ff06d46078c794bc52b15136",
+      "saveHash": "6a84c0838fbd3ae1d3c52750dca7b0c2d178b7c4c2b340581bf055b4b9f35e67",
+      "outputsHash": "26d98d7d10789e4322c0db8425f30f468477dc273e2a9fa85035c5093b9ee727",
+      "reports": [
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "20",
+          "at": "1",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "33",
+          "at": "2",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "46",
+          "at": "3",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "59",
+          "at": "4",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "72",
+          "at": "5",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "85",
+          "at": "6",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "98",
+          "at": "7",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "111",
+          "at": "8",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        }
+      ]
+    },
+    {
+      "prefix": 9,
+      "stateHash": "0c1ca722f279fe01781a61a6ecd1eeef4603d9c6e686e91df5f371ad4eff15be",
+      "saveHash": "fcb6ac99a7e1aaaaddf5f0937edead02de45d627ef5aab1885cf212de8191558",
+      "outputsHash": "72a30b985df9e7814fa0a250ee7b803ca2c31a3c8925c8b228a413738b30d5a4",
+      "reports": [
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "20",
+          "at": "1",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "33",
+          "at": "2",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "46",
+          "at": "3",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "59",
+          "at": "4",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "72",
+          "at": "5",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "85",
+          "at": "6",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "98",
+          "at": "7",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "111",
+          "at": "8",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "124",
+          "at": "9",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        }
+      ]
+    },
+    {
+      "prefix": 10,
+      "stateHash": "0c1ca722f279fe01781a61a6ecd1eeef4603d9c6e686e91df5f371ad4eff15be",
+      "saveHash": "ceaa380093812772e0b75beb2014ff328327f600a5888cb3699f568e7d2e4b8b",
+      "outputsHash": "28d15fc140fc349f86ef2768af9a8c53b202456f88d4511ae620e09b026ae3ff",
+      "reports": [
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "20",
+          "at": "1",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "33",
+          "at": "2",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "46",
+          "at": "3",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "59",
+          "at": "4",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "72",
+          "at": "5",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "85",
+          "at": "6",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "98",
+          "at": "7",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "111",
+          "at": "8",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "124",
+          "at": "9",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        },
+        {
+          "version": "affect-task-read-source/0.1",
+          "eventId": "137",
+          "at": "10",
+          "rows": [
+            {
+              "sourceIndex": 0,
+              "role": "base",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 1,
+              "role": "base",
+              "strength": "1/10",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/obligation",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "status": "recorded-read",
+              "readIndex": 1,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            },
+            {
+              "sourceIndex": 2,
+              "role": "situational",
+              "strength": "1/1",
+              "taskKey": {
+                "CharacterId [1]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/character",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "TaskReferent [2]": {
+                  "identity": {
+                    "identity": {
+                      "identity": "content/affect/safety",
+                      "namespace": "1038"
+                    },
+                    "namespace": "1037"
+                  },
+                  "namespace": "1002"
+                },
+                "record": "TaskCommitmentKey#371/1"
+              },
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "status": "recorded-read",
+              "readIndex": 0,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}"
+            }
+          ],
+          "scope": "Each raw factor names a complete task commitment key. Its registered task-status path is matched to the exact path read by the original raw-reason event. This identifies a recorded state dependency, not the origin of its magnitude, prior adoption history, observer awareness or causal necessity. A missing read is unavailable evidence, not an absent or zero task status."
+        }
+      ]
+    }
+  ]
+}

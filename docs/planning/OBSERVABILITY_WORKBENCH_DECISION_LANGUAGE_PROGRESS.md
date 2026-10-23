@@ -56,3 +56,28 @@ timed-out test source remains frozen in the corpus receipt. Registry0.15 now rep
 both COMMIT and DECISION bounded language capabilities. The exact metadata and
 timeout deltas are checked in workbench-qualification-refresh-rev1; shared factory
 bytes are unchanged. This does not broaden either language or batch claim.
+
+2026-10-23: native player presentation added under decision-public/0.1-candidate.
+LOCAL DISPOSITION: accepted contract949/950 explicitly authorizes this separate
+player record. Closed field validation, full registered option/task identity, exact
+signed face arithmetic and unknown/poisoned input withholding precede narration.
+Structured commitment/ground/option/polarity semantics retain exact mechanics; no
+subjective certainty is inferred. Decorative/opaque comparator meaning survives.
+The Reasoning preview stays separate from Character and does not make the entire
+research workbench player-safe. No AFFECT/Disposition disclosure authority inferred.
+
+Two focused tests PASS across18 native law/regime cases and malformed records.
+TypeScript/build627, evidence restore, research and boundary PASS. Browser/native
+three prefix1 cases PASS: baseline high conflict, opaque empty faces, automatic
+choice without a display. Exact reports/five DECISION identities, character
+exclusion and desktop width1265/1265 checked. Verifier rev1 accidentally selected
+four hidden Values hashes too; original failure/capture retained and corrected
+verifier accounts for all nine, with a separately scoped DECISION observation.
+See workbench-decision-player-rev1; retain tab27/4238.
+
+Full174-program/360-prefix player audit9923 remains RUNNING, last80/174 observed.
+Freeze.json seven sources must remain unchanged while live; native dependencies
+overlap the existing277-source BatchV8 hold. No full player corpus PASS yet.
+All18 conditional obligations survive; no Campaign3 verdict amendment. Full
+meaning/source/history accounting, broader browser qualification, accessibility,
+resource bounds and integrated Campaign4 entry remain due.

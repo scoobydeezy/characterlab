@@ -53,6 +53,15 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 ## Active direction
 
 **Current routing (2026-10-23):** Observability Workbench IN PROGRESS, owner-authorized.
+DECISION separate native player preview PASS18 law/regime cases/two tests; browser
+three prefix1 cases/exact records/five identities/Character separation PASS.
+Verifier hidden-Values scope failure retained and corrected; build627/research PASS.
+See workbench-decision-player-rev1; tab27/4238. Full player audit9923 RUNNING,
+last80/174; preserve seven freeze sources plus overlapping BatchV8 native hold.
+AFFECT task-read76503 COMPLETE105/1436/1331 decisions/2851 rows/7916 history;
+independent artifact/native identity/history reconciliation PASS281 sources.
+Task-read-only hold released, other live holds remain. Mark all live tabs1..27.
+Player preview is949/950 only, not general disclosure or full entry.
 AFFECT direct Reasoning task/raw/decision/history navigation PASS28 native renders;
 browser standalone baseline1/paired obligation0 A/B1/advance2/historical1/parent0
 and return20 exact native events/save revisions PASS. Branch/revision reset PASS.
