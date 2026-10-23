@@ -1329,3 +1329,20 @@ All18 conditional obligations and C3 source restrictions survive. Retain tab10/4
 Whitespace gate caught one trailing space on the lazy import. Live source corrected;
 original source/receipt retained. freeze-v2 and verify-v2 authenticate the formatting-only
 successor and the same browser evidence; no runtime behavior change.
+
+## Retained corpus to live report bridge — 2026-10-23
+
+A selected retained corpus event can now open the matching live researcher language
+report. The button requires the original program, seam and an existing header with
+the same event ID, instant, reasons stage and phase52. Busy, other-program and
+future-event cases remain disabled. The request carries the current save revision,
+clears event filters and selects the matching event; it never installs archive state
+or changes disclosure. This uses the already authenticated fixed-program adapter.
+
+workbench-disposition-corpus-link-rev1/receipt.json PASS browser baseline0 disabled,
+baseline1 report18 exactly equal to its SHA-authenticated retained report, mismatch
+and future guards, and five unchanged native identities. Screenshot inspected.
+Build607/TypeScript, boundary and restored research checks PASS; all three live source
+bindings remain unchanged. Retain tab11/4223. Broader corpus-link coverage, player
+meaning and integrated entry remain due. No C3 law, topology, verdict or obligation
+changed; all18 conditional obligations/source restrictions survive.

@@ -101,12 +101,15 @@ Paged retained language corpus UI PASS15 programs/270 reports/750 descriptions/
 48 semantics/1500 uniquely joined findings. Browser subject/source addresses,
 OPAQUE filter/inactive18 and unchanged native identities PASS; build607/research.
 See language-corpus-rev1; tab10/4222. Player disclosure gaps remain open.
+Corpus-to-live language link PASS baseline0/1 and exact frozen report18; other
+program/future guards and five unchanged hashes. See corpus-link-rev1; tab11/4223.
+Build607/research PASS. This grants no player disclosure or full-entry acceptance.
 Only current live browser handles: workbenchLiveTabs=[longTab(tab1),
 dispositionPairTab(tab2/4215),recoveredBatchTab(tab3/4215),
 dispositionModesTab(tab4/4216),dispositionHistoryTab(tab5/4217),
 dispositionChoicesTab(tab6/4218),dispositionSummaryTab(tab7/4219),
 dispositionFilterTab(tab8/4220),dispositionNavigationTab(tab9/4221),
-dispositionCorpusTab(tab10/4222)]. Mark each every turn.
+dispositionCorpusTab(tab10/4222),dispositionCorpusLinkTab(tab11/4223)]. Mark each every turn.
 Older tab references below describe retained evidence, not live sessions.
 SEM coverage ledger reconciled to retained rev3:100 scoped vector pointers,
 31 negative witnesses/10 acceptance items; zero complete Workbench vectors inferred.
