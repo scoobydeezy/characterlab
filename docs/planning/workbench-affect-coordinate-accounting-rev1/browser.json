@@ -1,0 +1,61 @@
+{
+  "first": {
+    "report": "{\n  \"version\": \"affect-coordinate-accounting/0.1\",\n  \"audience\": \"researcher\",\n  \"modelHash\": \"7d6117cd6308d764171963615808fae9a468ee4c61c67b0402c15e2115deffad\",\n  \"appraisalId\": \"0bff080200\",\n  \"at\": \"1\",\n  \"candidate\": \"SplitExposure\",\n  \"status\": \"Unavailable\",\n  \"missing\": [\n    \"Likelihood\",\n    \"Vulnerability\",\n    \"Control\"\n  ],\n  \"factors\": {\n    \"Likelihood\": null,\n    \"Severity\": {\n      \"exact\": \"1/1\",\n      \"plot\": 1\n    },\n    \"Vulnerability\": null,\n    \"Control\": null\n  },\n  \"exposure\": null,\n  \"uncontrolled\": null,\n  \"formula\": \"[exposure, uncontrolled]\",\n  \"feedbackEnabled\": true,\n  \"prior\": null,\n  \"rows\": [],\n  \"scope\": \"Exact reconstruction from recorded factors: exposure = likelihood × severity × (1 + vulnerability) / 2; uncontrolled = exposure × (1 − control); result = raw + (1 − raw) × earlier first coordinate / 2. Missing factors remain unavailable. This checks arithmetic and the named historical feedback record, not belief/context derivation, snapshot authentication, subjective awareness or causal necessity. Candidate coordinates retain different meanings and are not interchangeable emotion units.\"\n}",
+    "hashes": [
+      "7d6117cd6308d764171963615808fae9a468ee4c61c67b0402c15e2115deffad",
+      "d1f46163dc1bd8e6d9953138aa492af9bc1fe39e77b6b77036516a7f94f35473",
+      "b7b1f740647434110e3e2bd2d581679cca5eb68484e944b3466458db2d61a859",
+      "638d1b5a8ff562c342483229608adeb88a69d0129da642e3df1a9ca987a10453"
+    ]
+  },
+  "terminal": {
+    "report": "{\n  \"version\": \"affect-coordinate-accounting/0.1\",\n  \"audience\": \"researcher\",\n  \"modelHash\": \"7d6117cd6308d764171963615808fae9a468ee4c61c67b0402c15e2115deffad\",\n  \"appraisalId\": \"0bff08028401\",\n  \"at\": \"11\",\n  \"candidate\": \"SplitExposure\",\n  \"status\": \"Known\",\n  \"missing\": [],\n  \"factors\": {\n    \"Likelihood\": {\n      \"exact\": \"1/1\",\n      \"plot\": 1\n    },\n    \"Severity\": {\n      \"exact\": \"1/1\",\n      \"plot\": 1\n    },\n    \"Vulnerability\": {\n      \"exact\": \"1/1\",\n      \"plot\": 1\n    },\n    \"Control\": {\n      \"exact\": \"1/1\",\n      \"plot\": 1\n    }\n  },\n  \"exposure\": \"1/1\",\n  \"uncontrolled\": \"0/1\",\n  \"formula\": \"[exposure, uncontrolled]\",\n  \"feedbackEnabled\": true,\n  \"prior\": {\n    \"id\": \"0bff08027b\",\n    \"at\": \"10\",\n    \"occurrence\": {\n      \"namespace\": \"1151\",\n      \"identity\": \"123\"\n    },\n    \"firstCoordinate\": \"1/1\"\n  },\n  \"rows\": [\n    {\n      \"index\": 0,\n      \"raw\": \"1/1\",\n      \"feedback\": \"1/1\",\n      \"increment\": \"0/1\",\n      \"result\": \"1/1\"\n    },\n    {\n      \"index\": 1,\n      \"raw\": \"0/1\",\n      \"feedback\": \"1/1\",\n      \"increment\": \"1/2\",\n      \"result\": \"1/2\"\n    }\n  ],\n  \"scope\": \"Exact reconstruction from recorded factors: exposure = likelihood × severity × (1 + vulnerability) / 2; uncontrolled = exposure × (1 − control); result = raw + (1 − raw) × earlier first coordinate / 2. Missing factors remain unavailable. This checks arithmetic and the named historical feedback record, not belief/context derivation, snapshot authentication, subjective awareness or causal necessity. Candidate coordinates retain different meanings and are not interchangeable emotion units.\"\n}",
+    "hashes": [
+      "7d6117cd6308d764171963615808fae9a468ee4c61c67b0402c15e2115deffad",
+      "d1f46163dc1bd8e6d9953138aa492af9bc1fe39e77b6b77036516a7f94f35473",
+      "08396979556b09bc103fa6c271ee3344aa417b442848ecbc9f9c01fe752524fc",
+      "f92df02f96e934f8a5c55289697f1bd5e58efac37036ec4adf2fde186ad14d2e"
+    ]
+  },
+  "beforeTerminal": {
+    "report": "{\n  \"version\": \"affect-coordinate-accounting/0.1\",\n  \"audience\": \"researcher\",\n  \"modelHash\": \"7d6117cd6308d764171963615808fae9a468ee4c61c67b0402c15e2115deffad\",\n  \"appraisalId\": \"0bff08027b\",\n  \"at\": \"10\",\n  \"candidate\": \"SplitExposure\",\n  \"status\": \"Known\",\n  \"missing\": [],\n  \"factors\": {\n    \"Likelihood\": {\n      \"exact\": \"1/1\",\n      \"plot\": 1\n    },\n    \"Severity\": {\n      \"exact\": \"1/1\",\n      \"plot\": 1\n    },\n    \"Vulnerability\": {\n      \"exact\": \"1/1\",\n      \"plot\": 1\n    },\n    \"Control\": {\n      \"exact\": \"1/1\",\n      \"plot\": 1\n    }\n  },\n  \"exposure\": \"1/1\",\n  \"uncontrolled\": \"0/1\",\n  \"formula\": \"[exposure, uncontrolled]\",\n  \"feedbackEnabled\": true,\n  \"prior\": null,\n  \"rows\": [\n    {\n      \"index\": 0,\n      \"raw\": \"1/1\",\n      \"feedback\": \"0/1\",\n      \"increment\": \"0/1\",\n      \"result\": \"1/1\"\n    },\n    {\n      \"index\": 1,\n      \"raw\": \"0/1\",\n      \"feedback\": \"0/1\",\n      \"increment\": \"0/1\",\n      \"result\": \"0/1\"\n    }\n  ],\n  \"scope\": \"Exact reconstruction from recorded factors: exposure = likelihood × severity × (1 + vulnerability) / 2; uncontrolled = exposure × (1 − control); result = raw + (1 − raw) × earlier first coordinate / 2. Missing factors remain unavailable. This checks arithmetic and the named historical feedback record, not belief/context derivation, snapshot authentication, subjective awareness or causal necessity. Candidate coordinates retain different meanings and are not interchangeable emotion units.\"\n}",
+    "hashes": [
+      "7d6117cd6308d764171963615808fae9a468ee4c61c67b0402c15e2115deffad",
+      "d1f46163dc1bd8e6d9953138aa492af9bc1fe39e77b6b77036516a7f94f35473",
+      "08396979556b09bc103fa6c271ee3344aa417b442848ecbc9f9c01fe752524fc",
+      "32f5878aa000853bd08652c3d3c3fe57cd9c315d27c1b150a0fa8d5645f15ad4"
+    ]
+  },
+  "earlier": {
+    "report": "{\n  \"version\": \"affect-coordinate-accounting/0.1\",\n  \"audience\": \"researcher\",\n  \"modelHash\": \"7d6117cd6308d764171963615808fae9a468ee4c61c67b0402c15e2115deffad\",\n  \"appraisalId\": \"0bff08027b\",\n  \"at\": \"10\",\n  \"candidate\": \"SplitExposure\",\n  \"status\": \"Known\",\n  \"missing\": [],\n  \"factors\": {\n    \"Likelihood\": {\n      \"exact\": \"1/1\",\n      \"plot\": 1\n    },\n    \"Severity\": {\n      \"exact\": \"1/1\",\n      \"plot\": 1\n    },\n    \"Vulnerability\": {\n      \"exact\": \"1/1\",\n      \"plot\": 1\n    },\n    \"Control\": {\n      \"exact\": \"1/1\",\n      \"plot\": 1\n    }\n  },\n  \"exposure\": \"1/1\",\n  \"uncontrolled\": \"0/1\",\n  \"formula\": \"[exposure, uncontrolled]\",\n  \"feedbackEnabled\": true,\n  \"prior\": null,\n  \"rows\": [\n    {\n      \"index\": 0,\n      \"raw\": \"1/1\",\n      \"feedback\": \"0/1\",\n      \"increment\": \"0/1\",\n      \"result\": \"1/1\"\n    },\n    {\n      \"index\": 1,\n      \"raw\": \"0/1\",\n      \"feedback\": \"0/1\",\n      \"increment\": \"0/1\",\n      \"result\": \"0/1\"\n    }\n  ],\n  \"scope\": \"Exact reconstruction from recorded factors: exposure = likelihood × severity × (1 + vulnerability) / 2; uncontrolled = exposure × (1 − control); result = raw + (1 − raw) × earlier first coordinate / 2. Missing factors remain unavailable. This checks arithmetic and the named historical feedback record, not belief/context derivation, snapshot authentication, subjective awareness or causal necessity. Candidate coordinates retain different meanings and are not interchangeable emotion units.\"\n}",
+    "hashes": [
+      "7d6117cd6308d764171963615808fae9a468ee4c61c67b0402c15e2115deffad",
+      "d1f46163dc1bd8e6d9953138aa492af9bc1fe39e77b6b77036516a7f94f35473",
+      "08396979556b09bc103fa6c271ee3344aa417b442848ecbc9f9c01fe752524fc",
+      "f92df02f96e934f8a5c55289697f1bd5e58efac37036ec4adf2fde186ad14d2e"
+    ]
+  },
+  "linked": {
+    "report": "{\n  \"version\": \"affect-coordinate-accounting/0.1\",\n  \"audience\": \"researcher\",\n  \"modelHash\": \"7d6117cd6308d764171963615808fae9a468ee4c61c67b0402c15e2115deffad\",\n  \"appraisalId\": \"0bff08027b\",\n  \"at\": \"10\",\n  \"candidate\": \"SplitExposure\",\n  \"status\": \"Known\",\n  \"missing\": [],\n  \"factors\": {\n    \"Likelihood\": {\n      \"exact\": \"1/1\",\n      \"plot\": 1\n    },\n    \"Severity\": {\n      \"exact\": \"1/1\",\n      \"plot\": 1\n    },\n    \"Vulnerability\": {\n      \"exact\": \"1/1\",\n      \"plot\": 1\n    },\n    \"Control\": {\n      \"exact\": \"1/1\",\n      \"plot\": 1\n    }\n  },\n  \"exposure\": \"1/1\",\n  \"uncontrolled\": \"0/1\",\n  \"formula\": \"[exposure, uncontrolled]\",\n  \"feedbackEnabled\": true,\n  \"prior\": null,\n  \"rows\": [\n    {\n      \"index\": 0,\n      \"raw\": \"1/1\",\n      \"feedback\": \"0/1\",\n      \"increment\": \"0/1\",\n      \"result\": \"1/1\"\n    },\n    {\n      \"index\": 1,\n      \"raw\": \"0/1\",\n      \"feedback\": \"0/1\",\n      \"increment\": \"0/1\",\n      \"result\": \"0/1\"\n    }\n  ],\n  \"scope\": \"Exact reconstruction from recorded factors: exposure = likelihood × severity × (1 + vulnerability) / 2; uncontrolled = exposure × (1 − control); result = raw + (1 − raw) × earlier first coordinate / 2. Missing factors remain unavailable. This checks arithmetic and the named historical feedback record, not belief/context derivation, snapshot authentication, subjective awareness or causal necessity. Candidate coordinates retain different meanings and are not interchangeable emotion units.\"\n}",
+    "hashes": [
+      "7d6117cd6308d764171963615808fae9a468ee4c61c67b0402c15e2115deffad",
+      "d1f46163dc1bd8e6d9953138aa492af9bc1fe39e77b6b77036516a7f94f35473",
+      "08396979556b09bc103fa6c271ee3344aa417b442848ecbc9f9c01fe752524fc",
+      "f92df02f96e934f8a5c55289697f1bd5e58efac37036ec4adf2fde186ad14d2e"
+    ]
+  },
+  "returned": {
+    "report": "{\n  \"version\": \"affect-coordinate-accounting/0.1\",\n  \"audience\": \"researcher\",\n  \"modelHash\": \"7d6117cd6308d764171963615808fae9a468ee4c61c67b0402c15e2115deffad\",\n  \"appraisalId\": \"0bff08028401\",\n  \"at\": \"11\",\n  \"candidate\": \"SplitExposure\",\n  \"status\": \"Known\",\n  \"missing\": [],\n  \"factors\": {\n    \"Likelihood\": {\n      \"exact\": \"1/1\",\n      \"plot\": 1\n    },\n    \"Severity\": {\n      \"exact\": \"1/1\",\n      \"plot\": 1\n    },\n    \"Vulnerability\": {\n      \"exact\": \"1/1\",\n      \"plot\": 1\n    },\n    \"Control\": {\n      \"exact\": \"1/1\",\n      \"plot\": 1\n    }\n  },\n  \"exposure\": \"1/1\",\n  \"uncontrolled\": \"0/1\",\n  \"formula\": \"[exposure, uncontrolled]\",\n  \"feedbackEnabled\": true,\n  \"prior\": {\n    \"id\": \"0bff08027b\",\n    \"at\": \"10\",\n    \"occurrence\": {\n      \"namespace\": \"1151\",\n      \"identity\": \"123\"\n    },\n    \"firstCoordinate\": \"1/1\"\n  },\n  \"rows\": [\n    {\n      \"index\": 0,\n      \"raw\": \"1/1\",\n      \"feedback\": \"1/1\",\n      \"increment\": \"0/1\",\n      \"result\": \"1/1\"\n    },\n    {\n      \"index\": 1,\n      \"raw\": \"0/1\",\n      \"feedback\": \"1/1\",\n      \"increment\": \"1/2\",\n      \"result\": \"1/2\"\n    }\n  ],\n  \"scope\": \"Exact reconstruction from recorded factors: exposure = likelihood × severity × (1 + vulnerability) / 2; uncontrolled = exposure × (1 − control); result = raw + (1 − raw) × earlier first coordinate / 2. Missing factors remain unavailable. This checks arithmetic and the named historical feedback record, not belief/context derivation, snapshot authentication, subjective awareness or causal necessity. Candidate coordinates retain different meanings and are not interchangeable emotion units.\"\n}",
+    "hashes": [
+      "7d6117cd6308d764171963615808fae9a468ee4c61c67b0402c15e2115deffad",
+      "d1f46163dc1bd8e6d9953138aa492af9bc1fe39e77b6b77036516a7f94f35473",
+      "08396979556b09bc103fa6c271ee3344aa417b442848ecbc9f9c01fe752524fc",
+      "f92df02f96e934f8a5c55289697f1bd5e58efac37036ec4adf2fde186ad14d2e"
+    ]
+  },
+  "alerts": [],
+  "layout": {
+    "scrollWidth": 1265,
+    "width": 1265
+  }
+}

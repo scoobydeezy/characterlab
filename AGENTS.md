@@ -52,6 +52,17 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 coordinate-accounting update:** AFFECT exact candidate/feedback
+arithmetic PASS105/1331:189 known/1142 unavailable/302 coordinates/seven feedback
+records/six nonzero increments. All1331 historical reports stable; seven rejection
+cases, TypeScript/build634/research/boundary PASS. Browser feedback-2 terminal11
+prior10/return11 exact native identities and nonzero increment PASS. See
+workbench-affect-coordinate-accounting-rev1; verifier/timing corrections retained.
+Mark tabs1..31 every turn; tab31/4242 retained. Upstream factor derivation, prior
+selection completeness, player language and integrated entry remain due. Only live
+source hold166 remains;23320 last10/15 prefix14. Packed pair29 last10/10 Working.
+
+
 **2026-10-23 magnitude-source update:** AFFECT numeric origins PASS105/1331/2851
 (2662 profile bases/189 appraisal modifiers/86 explicit zeros),18 original model
 identities. Researcher Reasoning/Compare integration and bounded browser baseline

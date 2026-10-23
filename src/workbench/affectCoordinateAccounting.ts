@@ -1,0 +1,22 @@
+import {ExactRational as Q} from '../substrate/exactMath';
+import {affectFactorView} from './affectFactorProjection';
+import catalog from './affectProfileSources.json';
+import fixtures from './affectFixtures.json';
+import type {AffectExplanation} from './affectExplanations';
+const exact=(v:Q)=>`${v.numerator}/${v.denominator}`;
+const q=(s:string)=>{if(!/^\d+\/[1-9]\d*$/.test(s)||s.length>256)throw Error('Invalid coordinate operand');const [n,d]=s.split('/').map(BigInt);const v=Q.of(n,d);if(v.compare(Q.of(1n))>0||exact(v)!==s)throw Error('Invalid coordinate domain');return v;};
+const stable=(v:unknown):string=>v===null||typeof v!=='object'?JSON.stringify(v):Array.isArray(v)?'['+v.map(stable).join(',')+']':'{'+Object.entries(v).sort(([a],[b])=>a<b?-1:a>b?1:0).map(([k,x])=>JSON.stringify(k)+':'+stable(x)).join(',')+'}';
+/** Evaluation-time arithmetic only. Owning run identity and historical cards are supplied by the caller. */
+export function affectCoordinateAccounting(card:AffectExplanation,cards:readonly AffectExplanation[],modelHash:string){
+ const model=catalog.models.find(m=>m.modelHash===modelHash),settings=fixtures.models.find(m=>m.name===model?.name)?.settings;if(!model||!settings)throw Error('Unknown coordinate model');
+ const view=affectFactorView([card])[0];if(!view)throw Error('Expected appraisal');const r=JSON.parse(card.provenance),one=Q.of(1n),two=Q.of(2n),missing=Object.entries(view.factors).filter(([,v])=>v===null).map(([k])=>k),f=view.factors;
+ let exposure:Q|undefined,uncontrolled:Q|undefined,raw:Q[]=[];
+ if(!missing.length){exposure=q(f.Likelihood!.exact).multiply(q(f.Severity!.exact)).multiply(one.add(q(f.Vulnerability!.exact))).divide(two);uncontrolled=exposure.multiply(one.subtract(q(f.Control!.exact)));raw=settings.candidate===1?[exposure.multiply(two.subtract(q(f.Control!.exact))).divide(two)]:settings.candidate===2?[exposure,uncontrolled]:[uncontrolled];}
+ if(stable(raw.map(exact))!==stable(view.raw.map(v=>v.exact)))throw Error('Raw coordinate arithmetic mismatch');
+ const names=['PreviousAffect [11]','PreviousAt [12]','FeedbackOperand [13]'],has=names.some(k=>Object.hasOwn(r,k));let feedback=Q.of(0n),prior:null|{id:string;at:string;occurrence:unknown;firstCoordinate:string}=null;
+ if(has){if(!settings.feedback||!names.every(k=>Object.hasOwn(r,k))||typeof r['PreviousAt [12]']!=='string'||!/^\d+$/.test(r['PreviousAt [12]'])||BigInt(r['PreviousAt [12]'])>=BigInt(card.at))throw Error('Invalid earlier feedback source');
+  const matches=cards.filter(c=>c.kind==='Appraisal'&&c.at===r['PreviousAt [12]']&&stable(JSON.parse(c.provenance)['Occurrence [1]'])===stable(r['PreviousAffect [11]']));if(matches.length!==1)throw Error('Missing or ambiguous earlier appraisal');const p=affectFactorView(matches)[0];if(!p.result.length||p.result[0].exact!==r['FeedbackOperand [13]'])throw Error('Feedback disagrees with earlier coordinate');feedback=q(r['FeedbackOperand [13]']);prior={id:matches[0].id,at:matches[0].at,occurrence:r['PreviousAffect [11]'],firstCoordinate:exact(feedback)};
+ }
+ const rows=raw.map((z,index)=>{const increment=one.subtract(z).multiply(feedback).divide(two),result=z.add(increment);if(exact(result)!==view.result[index]?.exact)throw Error('Feedback coordinate arithmetic mismatch');return{index,raw:exact(z),feedback:exact(feedback),increment:exact(increment),result:exact(result)};});
+ return{version:'affect-coordinate-accounting/0.1',audience:'researcher',modelHash,appraisalId:card.id,at:card.at,candidate:['HistoricalProduct','SplitExposure','ScalarUncontrolled'][settings.candidate-1],status:missing.length?'Unavailable':'Known',missing,factors:view.factors,exposure:exposure?exact(exposure):null,uncontrolled:uncontrolled?exact(uncontrolled):null,formula:settings.candidate===1?'[exposure × (2 − control) / 2]':settings.candidate===2?'[exposure, uncontrolled]':'[uncontrolled]',feedbackEnabled:settings.feedback,prior,rows,scope:'Exact reconstruction from recorded factors: exposure = likelihood × severity × (1 + vulnerability) / 2; uncontrolled = exposure × (1 − control); result = raw + (1 − raw) × earlier first coordinate / 2. Missing factors remain unavailable. This checks arithmetic and the named historical feedback record, not belief/context derivation, snapshot authentication, subjective awareness or causal necessity. Candidate coordinates retain different meanings and are not interchangeable emotion units.'};
+}

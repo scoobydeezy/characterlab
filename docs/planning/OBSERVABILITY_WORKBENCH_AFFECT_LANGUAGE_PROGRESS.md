@@ -633,3 +633,35 @@ player disclosure, broader browser/accessibility scope and integrated entry rema
 Only the paged diagnostics166 live source hold remains; unchanged. Full audit23320
 last observed10/15 program prefix11/18. Packed pair tab29 last observed8/8 Working;
 no terminal restore claim. BatchV8 and DECISION source holds remain released.
+
+## 2026-10-23 — exact candidate coordinates and prior feedback
+
+Reasoning appraisal cards now expose exposure, uncontrolled exposure, the selected
+candidate formula, raw coordinates, earlier operand, increment and result. Fractions
+are exact; absent factors retain Unavailable. The original named prior appraisal
+is matched by occurrence/time and first coordinate, with a UI link to that instant.
+The calculation uses recorded factors and original model settings; belief/context
+derivation and independent snapshot authentication remain outside this projection.
+
+Audit PASS105 retained programs/1331 appraisals:189 known,1142 unavailable,302
+coordinates,seven feedback records/six nonzero increments,all three candidates.
+All1331 prefix-restricted reports equal their terminal-history counterpart; original
+source hashes, input immutability and server panels PASS. Seven malformed model/raw/
+result/operand/missing-prior/duplicate-prior/same-time cases reject. TypeScript and
+build634 modules PASS. Research/evidence restore/boundaries PASS. No native mutation.
+
+Browser feedback-2 prefix1 unavailable and terminal11 exact SplitExposure [1,1/2]
+PASS, including raw[1,0], prior first coordinate1, increment[0,1/2]. Earlier-appraisal
+10 link and return11 preserve exact report and all four native identities. Width1265
+no horizontal overflow. Initial terminal-named capture occurred at10 while Working;
+retained as beforeTerminal, independently identified against original prefix10.
+Verifier initially assumed the live diagnostic freeze has a copy field; its failure
+and correction are retained. All arithmetic/browser identity assertions passed.
+See workbench-affect-coordinate-accounting-rev1. Tab31/4242 retained; preview22706.
+
+LOCAL DISPOSITION: apply accepted affect-public/0.1-candidate and factor-comparison
+arithmetic without selecting a law or changing C3 verdicts/obligations. All18
+conditional obligations survive. Upstream appraisal factor sources, prior-selection
+completeness, player language, broader accessibility and integrated entry remain due.
+Live166-source paged diagnostic hold unchanged:23320 last10/15 prefix14/18.
+Packed pair tab29 last10/10 Working; no terminal checkpoint/restore result.
