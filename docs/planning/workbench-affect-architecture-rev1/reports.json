@@ -1,0 +1,2343 @@
+[
+  {
+    "program": "baseline",
+    "prefix": 11,
+    "report": {
+      "version": "affect-canonical-state-correspondence/0.1",
+      "identity": {
+        "modelHash": "8605e8a55e85c58296326b8b4a3b2fbd9d0b9b2999c85d6288cd77a733e8b900",
+        "runHash": "983d81147c356cab0ae1b5051d5f011df15e30391f09504196899aebbc0cd9d8",
+        "saveHash": "c47e3e643b0786406fbf2fc47a76692c9a21fdb4591edc4690b9ad6a02e352c0",
+        "stateHash": "08396979556b09bc103fa6c271ee3344aa417b442848ecbc9f9c01fe752524fc",
+        "prefix": 11
+      },
+      "authority": "CHARACTER_ARCHITECTURE.md, canonical main topology; docs/formal/AFFECT_PUBLIC_CONTRACT.md, affect-public/0.1-candidate",
+      "boxes": [
+        {
+          "id": "Beliefs",
+          "label": "Predictive / Causal Beliefs",
+          "basis": "AFFECT public contract root753 contains learned estimates; the full registered character/proposition keys identify these three leaves.",
+          "paths": [
+            {
+              "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+              "root": "753",
+              "box": "Beliefs",
+              "label": "Current cue estimate",
+              "present": true,
+              "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+              "reads": 12,
+              "mutations": 1,
+              "changes": 1,
+              "events": [
+                {
+                  "id": "0",
+                  "instant": "1",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "2",
+                  "instant": "2",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "4",
+                  "instant": "3",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "60",
+                  "instant": "3",
+                  "stage": "apply",
+                  "reads": 1,
+                  "mutations": 1,
+                  "changes": 1
+                },
+                {
+                  "id": "6",
+                  "instant": "4",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "8",
+                  "instant": "5",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "10",
+                  "instant": "6",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "12",
+                  "instant": "7",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "14",
+                  "instant": "8",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "16",
+                  "instant": "9",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "18",
+                  "instant": "10",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "20",
+                  "instant": "11",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                }
+              ]
+            },
+            {
+              "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+              "root": "753",
+              "box": "Beliefs",
+              "label": "Baseline estimate",
+              "present": true,
+              "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"76\"\n    }\n  ]\n}",
+              "reads": 12,
+              "mutations": 1,
+              "changes": 1,
+              "events": [
+                {
+                  "id": "0",
+                  "instant": "1",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "2",
+                  "instant": "2",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "4",
+                  "instant": "3",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "6",
+                  "instant": "4",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "8",
+                  "instant": "5",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "10",
+                  "instant": "6",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "99",
+                  "instant": "6",
+                  "stage": "apply",
+                  "reads": 1,
+                  "mutations": 1,
+                  "changes": 1
+                },
+                {
+                  "id": "12",
+                  "instant": "7",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "14",
+                  "instant": "8",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "16",
+                  "instant": "9",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "18",
+                  "instant": "10",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "20",
+                  "instant": "11",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                }
+              ]
+            },
+            {
+              "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+              "root": "753",
+              "box": "Beliefs",
+              "label": "Mitigation estimate",
+              "present": true,
+              "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"0/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"117\"\n    }\n  ]\n}",
+              "reads": 12,
+              "mutations": 1,
+              "changes": 1,
+              "events": [
+                {
+                  "id": "0",
+                  "instant": "1",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "2",
+                  "instant": "2",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "4",
+                  "instant": "3",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "6",
+                  "instant": "4",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "8",
+                  "instant": "5",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "10",
+                  "instant": "6",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "12",
+                  "instant": "7",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "14",
+                  "instant": "8",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "16",
+                  "instant": "9",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "138",
+                  "instant": "9",
+                  "stage": "apply",
+                  "reads": 1,
+                  "mutations": 1,
+                  "changes": 1
+                },
+                {
+                  "id": "18",
+                  "instant": "10",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "20",
+                  "instant": "11",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Prospection",
+          "label": "Prospection / Goal Management",
+          "basis": "AFFECT public contract root373 contains two adopted task statuses. This maps the retained commitment state, not all prospection capabilities.",
+          "paths": [
+            {
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "root": "373",
+              "box": "Prospection",
+              "label": "Safety task status",
+              "present": true,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}",
+              "reads": 11,
+              "mutations": 0,
+              "changes": 0,
+              "events": [
+                {
+                  "id": "22",
+                  "instant": "1",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "35",
+                  "instant": "2",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "48",
+                  "instant": "3",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "61",
+                  "instant": "4",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "74",
+                  "instant": "5",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "87",
+                  "instant": "6",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "100",
+                  "instant": "7",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "113",
+                  "instant": "8",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "126",
+                  "instant": "9",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "139",
+                  "instant": "10",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "152",
+                  "instant": "11",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                }
+              ]
+            },
+            {
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "root": "373",
+              "box": "Prospection",
+              "label": "Obligation task status",
+              "present": true,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}",
+              "reads": 11,
+              "mutations": 0,
+              "changes": 0,
+              "events": [
+                {
+                  "id": "22",
+                  "instant": "1",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "35",
+                  "instant": "2",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "48",
+                  "instant": "3",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "61",
+                  "instant": "4",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "74",
+                  "instant": "5",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "87",
+                  "instant": "6",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "100",
+                  "instant": "7",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "113",
+                  "instant": "8",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "126",
+                  "instant": "9",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "139",
+                  "instant": "10",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "152",
+                  "instant": "11",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "unmapped": [],
+      "scope": "Exact registered state paths mapped to two existing canonical boxes. Counts are selected-prefix recorded reads and structural mutations; presence is only at this revision. Zero activity does not prove irrelevance or permit removal. Payload dependencies, evaluation contributions, causal necessity and complete subsystem participation are not established. Appraisal/affect coordinates are derived outputs and are not assigned independent stored-state leaves. No canonical edge is added or removed."
+    }
+  },
+  {
+    "program": "hidden",
+    "prefix": 11,
+    "report": {
+      "version": "affect-canonical-state-correspondence/0.1",
+      "identity": {
+        "modelHash": "8605e8a55e85c58296326b8b4a3b2fbd9d0b9b2999c85d6288cd77a733e8b900",
+        "runHash": "df947ea85a5674132f84fcbe4352bea2641ab12b992b52074956ff146e2ee27d",
+        "saveHash": "7a63159fca20855ae1078b049ebaa2d3b3d63535e0ebe626f35cf39bbe679d74",
+        "stateHash": "08396979556b09bc103fa6c271ee3344aa417b442848ecbc9f9c01fe752524fc",
+        "prefix": 11
+      },
+      "authority": "CHARACTER_ARCHITECTURE.md, canonical main topology; docs/formal/AFFECT_PUBLIC_CONTRACT.md, affect-public/0.1-candidate",
+      "boxes": [
+        {
+          "id": "Beliefs",
+          "label": "Predictive / Causal Beliefs",
+          "basis": "AFFECT public contract root753 contains learned estimates; the full registered character/proposition keys identify these three leaves.",
+          "paths": [
+            {
+              "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+              "root": "753",
+              "box": "Beliefs",
+              "label": "Current cue estimate",
+              "present": true,
+              "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+              "reads": 12,
+              "mutations": 1,
+              "changes": 1,
+              "events": [
+                {
+                  "id": "0",
+                  "instant": "1",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "2",
+                  "instant": "2",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "4",
+                  "instant": "3",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "60",
+                  "instant": "3",
+                  "stage": "apply",
+                  "reads": 1,
+                  "mutations": 1,
+                  "changes": 1
+                },
+                {
+                  "id": "6",
+                  "instant": "4",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "8",
+                  "instant": "5",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "10",
+                  "instant": "6",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "12",
+                  "instant": "7",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "14",
+                  "instant": "8",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "16",
+                  "instant": "9",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "18",
+                  "instant": "10",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "20",
+                  "instant": "11",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                }
+              ]
+            },
+            {
+              "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+              "root": "753",
+              "box": "Beliefs",
+              "label": "Baseline estimate",
+              "present": true,
+              "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"76\"\n    }\n  ]\n}",
+              "reads": 12,
+              "mutations": 1,
+              "changes": 1,
+              "events": [
+                {
+                  "id": "0",
+                  "instant": "1",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "2",
+                  "instant": "2",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "4",
+                  "instant": "3",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "6",
+                  "instant": "4",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "8",
+                  "instant": "5",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "10",
+                  "instant": "6",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "99",
+                  "instant": "6",
+                  "stage": "apply",
+                  "reads": 1,
+                  "mutations": 1,
+                  "changes": 1
+                },
+                {
+                  "id": "12",
+                  "instant": "7",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "14",
+                  "instant": "8",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "16",
+                  "instant": "9",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "18",
+                  "instant": "10",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "20",
+                  "instant": "11",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                }
+              ]
+            },
+            {
+              "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+              "root": "753",
+              "box": "Beliefs",
+              "label": "Mitigation estimate",
+              "present": true,
+              "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"0/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"117\"\n    }\n  ]\n}",
+              "reads": 12,
+              "mutations": 1,
+              "changes": 1,
+              "events": [
+                {
+                  "id": "0",
+                  "instant": "1",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "2",
+                  "instant": "2",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "4",
+                  "instant": "3",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "6",
+                  "instant": "4",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "8",
+                  "instant": "5",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "10",
+                  "instant": "6",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "12",
+                  "instant": "7",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "14",
+                  "instant": "8",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "16",
+                  "instant": "9",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "138",
+                  "instant": "9",
+                  "stage": "apply",
+                  "reads": 1,
+                  "mutations": 1,
+                  "changes": 1
+                },
+                {
+                  "id": "18",
+                  "instant": "10",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "20",
+                  "instant": "11",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Prospection",
+          "label": "Prospection / Goal Management",
+          "basis": "AFFECT public contract root373 contains two adopted task statuses. This maps the retained commitment state, not all prospection capabilities.",
+          "paths": [
+            {
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "root": "373",
+              "box": "Prospection",
+              "label": "Safety task status",
+              "present": true,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}",
+              "reads": 11,
+              "mutations": 0,
+              "changes": 0,
+              "events": [
+                {
+                  "id": "22",
+                  "instant": "1",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "35",
+                  "instant": "2",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "48",
+                  "instant": "3",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "61",
+                  "instant": "4",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "74",
+                  "instant": "5",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "87",
+                  "instant": "6",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "100",
+                  "instant": "7",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "113",
+                  "instant": "8",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "126",
+                  "instant": "9",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "139",
+                  "instant": "10",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "152",
+                  "instant": "11",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                }
+              ]
+            },
+            {
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "root": "373",
+              "box": "Prospection",
+              "label": "Obligation task status",
+              "present": true,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}",
+              "reads": 11,
+              "mutations": 0,
+              "changes": 0,
+              "events": [
+                {
+                  "id": "22",
+                  "instant": "1",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "35",
+                  "instant": "2",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "48",
+                  "instant": "3",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "61",
+                  "instant": "4",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "74",
+                  "instant": "5",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "87",
+                  "instant": "6",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "100",
+                  "instant": "7",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "113",
+                  "instant": "8",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "126",
+                  "instant": "9",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "139",
+                  "instant": "10",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "152",
+                  "instant": "11",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "unmapped": [],
+      "scope": "Exact registered state paths mapped to two existing canonical boxes. Counts are selected-prefix recorded reads and structural mutations; presence is only at this revision. Zero activity does not prove irrelevance or permit removal. Payload dependencies, evaluation contributions, causal necessity and complete subsystem participation are not established. Appraisal/affect coordinates are derived outputs and are not assigned independent stored-state leaves. No canonical edge is added or removed."
+    }
+  },
+  {
+    "program": "feedback-2",
+    "prefix": 11,
+    "report": {
+      "version": "affect-canonical-state-correspondence/0.1",
+      "identity": {
+        "modelHash": "7d6117cd6308d764171963615808fae9a468ee4c61c67b0402c15e2115deffad",
+        "runHash": "d1f46163dc1bd8e6d9953138aa492af9bc1fe39e77b6b77036516a7f94f35473",
+        "saveHash": "f92df02f96e934f8a5c55289697f1bd5e58efac37036ec4adf2fde186ad14d2e",
+        "stateHash": "08396979556b09bc103fa6c271ee3344aa417b442848ecbc9f9c01fe752524fc",
+        "prefix": 11
+      },
+      "authority": "CHARACTER_ARCHITECTURE.md, canonical main topology; docs/formal/AFFECT_PUBLIC_CONTRACT.md, affect-public/0.1-candidate",
+      "boxes": [
+        {
+          "id": "Beliefs",
+          "label": "Predictive / Causal Beliefs",
+          "basis": "AFFECT public contract root753 contains learned estimates; the full registered character/proposition keys identify these three leaves.",
+          "paths": [
+            {
+              "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+              "root": "753",
+              "box": "Beliefs",
+              "label": "Current cue estimate",
+              "present": true,
+              "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+              "reads": 12,
+              "mutations": 1,
+              "changes": 1,
+              "events": [
+                {
+                  "id": "0",
+                  "instant": "1",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "2",
+                  "instant": "2",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "4",
+                  "instant": "3",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "60",
+                  "instant": "3",
+                  "stage": "apply",
+                  "reads": 1,
+                  "mutations": 1,
+                  "changes": 1
+                },
+                {
+                  "id": "6",
+                  "instant": "4",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "8",
+                  "instant": "5",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "10",
+                  "instant": "6",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "12",
+                  "instant": "7",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "14",
+                  "instant": "8",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "16",
+                  "instant": "9",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "18",
+                  "instant": "10",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "20",
+                  "instant": "11",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                }
+              ]
+            },
+            {
+              "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+              "root": "753",
+              "box": "Beliefs",
+              "label": "Baseline estimate",
+              "present": true,
+              "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"76\"\n    }\n  ]\n}",
+              "reads": 12,
+              "mutations": 1,
+              "changes": 1,
+              "events": [
+                {
+                  "id": "0",
+                  "instant": "1",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "2",
+                  "instant": "2",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "4",
+                  "instant": "3",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "6",
+                  "instant": "4",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "8",
+                  "instant": "5",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "10",
+                  "instant": "6",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "99",
+                  "instant": "6",
+                  "stage": "apply",
+                  "reads": 1,
+                  "mutations": 1,
+                  "changes": 1
+                },
+                {
+                  "id": "12",
+                  "instant": "7",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "14",
+                  "instant": "8",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "16",
+                  "instant": "9",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "18",
+                  "instant": "10",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "20",
+                  "instant": "11",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                }
+              ]
+            },
+            {
+              "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+              "root": "753",
+              "box": "Beliefs",
+              "label": "Mitigation estimate",
+              "present": true,
+              "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"0/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"117\"\n    }\n  ]\n}",
+              "reads": 12,
+              "mutations": 1,
+              "changes": 1,
+              "events": [
+                {
+                  "id": "0",
+                  "instant": "1",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "2",
+                  "instant": "2",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "4",
+                  "instant": "3",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "6",
+                  "instant": "4",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "8",
+                  "instant": "5",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "10",
+                  "instant": "6",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "12",
+                  "instant": "7",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "14",
+                  "instant": "8",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "16",
+                  "instant": "9",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "138",
+                  "instant": "9",
+                  "stage": "apply",
+                  "reads": 1,
+                  "mutations": 1,
+                  "changes": 1
+                },
+                {
+                  "id": "18",
+                  "instant": "10",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "20",
+                  "instant": "11",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Prospection",
+          "label": "Prospection / Goal Management",
+          "basis": "AFFECT public contract root373 contains two adopted task statuses. This maps the retained commitment state, not all prospection capabilities.",
+          "paths": [
+            {
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "root": "373",
+              "box": "Prospection",
+              "label": "Safety task status",
+              "present": true,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}",
+              "reads": 11,
+              "mutations": 0,
+              "changes": 0,
+              "events": [
+                {
+                  "id": "22",
+                  "instant": "1",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "35",
+                  "instant": "2",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "48",
+                  "instant": "3",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "61",
+                  "instant": "4",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "74",
+                  "instant": "5",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "87",
+                  "instant": "6",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "100",
+                  "instant": "7",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "113",
+                  "instant": "8",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "126",
+                  "instant": "9",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "139",
+                  "instant": "10",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "152",
+                  "instant": "11",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                }
+              ]
+            },
+            {
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "root": "373",
+              "box": "Prospection",
+              "label": "Obligation task status",
+              "present": true,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}",
+              "reads": 11,
+              "mutations": 0,
+              "changes": 0,
+              "events": [
+                {
+                  "id": "22",
+                  "instant": "1",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "35",
+                  "instant": "2",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "48",
+                  "instant": "3",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "61",
+                  "instant": "4",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "74",
+                  "instant": "5",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "87",
+                  "instant": "6",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "100",
+                  "instant": "7",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "113",
+                  "instant": "8",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "126",
+                  "instant": "9",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "139",
+                  "instant": "10",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "152",
+                  "instant": "11",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "unmapped": [],
+      "scope": "Exact registered state paths mapped to two existing canonical boxes. Counts are selected-prefix recorded reads and structural mutations; presence is only at this revision. Zero activity does not prove irrelevance or permit removal. Payload dependencies, evaluation contributions, causal necessity and complete subsystem participation are not established. Appraisal/affect coordinates are derived outputs and are not assigned independent stored-state leaves. No canonical edge is added or removed."
+    }
+  },
+  {
+    "program": "zero-baseline",
+    "prefix": 11,
+    "report": {
+      "version": "affect-canonical-state-correspondence/0.1",
+      "identity": {
+        "modelHash": "8605e8a55e85c58296326b8b4a3b2fbd9d0b9b2999c85d6288cd77a733e8b900",
+        "runHash": "c8016b4cbdd5dd27a895d9eb15b372bfc650a21d421d4050abfa5bda0aa2093d",
+        "saveHash": "974685eab10cfb421b330252b1950837daed8feae77938ecc8688f0734098531",
+        "stateHash": "6bf4b890d5d27085cf65594785b5b999fc1f81517edcb9472f612e85e498b978",
+        "prefix": 11
+      },
+      "authority": "CHARACTER_ARCHITECTURE.md, canonical main topology; docs/formal/AFFECT_PUBLIC_CONTRACT.md, affect-public/0.1-candidate",
+      "boxes": [
+        {
+          "id": "Beliefs",
+          "label": "Predictive / Causal Beliefs",
+          "basis": "AFFECT public contract root753 contains learned estimates; the full registered character/proposition keys identify these three leaves.",
+          "paths": [
+            {
+              "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+              "root": "753",
+              "box": "Beliefs",
+              "label": "Current cue estimate",
+              "present": true,
+              "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"1/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"35\"\n    }\n  ]\n}",
+              "reads": 12,
+              "mutations": 1,
+              "changes": 1,
+              "events": [
+                {
+                  "id": "0",
+                  "instant": "1",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "2",
+                  "instant": "2",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "4",
+                  "instant": "3",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "60",
+                  "instant": "3",
+                  "stage": "apply",
+                  "reads": 1,
+                  "mutations": 1,
+                  "changes": 1
+                },
+                {
+                  "id": "6",
+                  "instant": "4",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "8",
+                  "instant": "5",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "10",
+                  "instant": "6",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "12",
+                  "instant": "7",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "14",
+                  "instant": "8",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "16",
+                  "instant": "9",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "18",
+                  "instant": "10",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "20",
+                  "instant": "11",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                }
+              ]
+            },
+            {
+              "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+              "root": "753",
+              "box": "Beliefs",
+              "label": "Baseline estimate",
+              "present": true,
+              "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"0/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"76\"\n    }\n  ]\n}",
+              "reads": 12,
+              "mutations": 1,
+              "changes": 1,
+              "events": [
+                {
+                  "id": "0",
+                  "instant": "1",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "2",
+                  "instant": "2",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "4",
+                  "instant": "3",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "6",
+                  "instant": "4",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "8",
+                  "instant": "5",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "10",
+                  "instant": "6",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "99",
+                  "instant": "6",
+                  "stage": "apply",
+                  "reads": 1,
+                  "mutations": 1,
+                  "changes": 1
+                },
+                {
+                  "id": "12",
+                  "instant": "7",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "14",
+                  "instant": "8",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "16",
+                  "instant": "9",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "18",
+                  "instant": "10",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "20",
+                  "instant": "11",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                }
+              ]
+            },
+            {
+              "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+              "root": "753",
+              "box": "Beliefs",
+              "label": "Mitigation estimate",
+              "present": true,
+              "exact": "{\n  \"record\": \"BeliefEstimate#739/1\",\n  \"Mean [1]\": \"0/1\",\n  \"Precision [2]\": \"1\",\n  \"Support [3]\": [\n    {\n      \"namespace\": \"1115\",\n      \"identity\": \"117\"\n    }\n  ]\n}",
+              "reads": 12,
+              "mutations": 1,
+              "changes": 1,
+              "events": [
+                {
+                  "id": "0",
+                  "instant": "1",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "2",
+                  "instant": "2",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "4",
+                  "instant": "3",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "6",
+                  "instant": "4",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "8",
+                  "instant": "5",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "10",
+                  "instant": "6",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "12",
+                  "instant": "7",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "14",
+                  "instant": "8",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "16",
+                  "instant": "9",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "138",
+                  "instant": "9",
+                  "stage": "apply",
+                  "reads": 1,
+                  "mutations": 1,
+                  "changes": 1
+                },
+                {
+                  "id": "18",
+                  "instant": "10",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "20",
+                  "instant": "11",
+                  "stage": "appraise",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Prospection",
+          "label": "Prospection / Goal Management",
+          "basis": "AFFECT public contract root373 contains two adopted task statuses. This maps the retained commitment state, not all prospection capabilities.",
+          "paths": [
+            {
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "root": "373",
+              "box": "Prospection",
+              "label": "Safety task status",
+              "present": true,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}",
+              "reads": 11,
+              "mutations": 0,
+              "changes": 0,
+              "events": [
+                {
+                  "id": "22",
+                  "instant": "1",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "35",
+                  "instant": "2",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "48",
+                  "instant": "3",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "61",
+                  "instant": "4",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "74",
+                  "instant": "5",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "87",
+                  "instant": "6",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "100",
+                  "instant": "7",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "113",
+                  "instant": "8",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "126",
+                  "instant": "9",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "139",
+                  "instant": "10",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "152",
+                  "instant": "11",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                }
+              ]
+            },
+            {
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "root": "373",
+              "box": "Prospection",
+              "label": "Obligation task status",
+              "present": true,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}",
+              "reads": 11,
+              "mutations": 0,
+              "changes": 0,
+              "events": [
+                {
+                  "id": "22",
+                  "instant": "1",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "35",
+                  "instant": "2",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "48",
+                  "instant": "3",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "61",
+                  "instant": "4",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "74",
+                  "instant": "5",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "87",
+                  "instant": "6",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "100",
+                  "instant": "7",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "113",
+                  "instant": "8",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "126",
+                  "instant": "9",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "139",
+                  "instant": "10",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                },
+                {
+                  "id": "152",
+                  "instant": "11",
+                  "stage": "raw",
+                  "reads": 1,
+                  "mutations": 0,
+                  "changes": 0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "unmapped": [],
+      "scope": "Exact registered state paths mapped to two existing canonical boxes. Counts are selected-prefix recorded reads and structural mutations; presence is only at this revision. Zero activity does not prove irrelevance or permit removal. Payload dependencies, evaluation contributions, causal necessity and complete subsystem participation are not established. Appraisal/affect coordinates are derived outputs and are not assigned independent stored-state leaves. No canonical edge is added or removed."
+    }
+  },
+  {
+    "program": "baseline",
+    "prefix": 0,
+    "report": {
+      "version": "affect-canonical-state-correspondence/0.1",
+      "identity": {
+        "modelHash": "8605e8a55e85c58296326b8b4a3b2fbd9d0b9b2999c85d6288cd77a733e8b900",
+        "runHash": "983d81147c356cab0ae1b5051d5f011df15e30391f09504196899aebbc0cd9d8",
+        "saveHash": "b5cdc5820f4a7e4e89ef8a8236b1f31644635641c3492a43113fc1ded7231d6b",
+        "stateHash": "b7b1f740647434110e3e2bd2d581679cca5eb68484e944b3466458db2d61a859",
+        "prefix": 0
+      },
+      "authority": "CHARACTER_ARCHITECTURE.md, canonical main topology; docs/formal/AFFECT_PUBLIC_CONTRACT.md, affect-public/0.1-candidate",
+      "boxes": [
+        {
+          "id": "Beliefs",
+          "label": "Predictive / Causal Beliefs",
+          "basis": "AFFECT public contract root753 contains learned estimates; the full registered character/proposition keys identify these three leaves.",
+          "paths": [
+            {
+              "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051a70726f706f736974696f6e2f6166666563742f63757272656e74",
+              "root": "753",
+              "box": "Beliefs",
+              "label": "Current cue estimate",
+              "present": false,
+              "exact": "Absent",
+              "reads": 0,
+              "mutations": 0,
+              "changes": 0,
+              "events": []
+            },
+            {
+              "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051b70726f706f736974696f6e2f6166666563742f626173656c696e65",
+              "root": "753",
+              "box": "Beliefs",
+              "label": "Baseline estimate",
+              "present": false,
+              "exact": "Absent",
+              "reads": 0,
+              "mutations": 0,
+              "changes": 0,
+              "events": []
+            },
+            {
+              "path": "0a8c010103010102f10502010201030107010a8e01010101010afd05010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010b8308051c70726f706f736974696f6e2f6166666563742f6d6974696761746564",
+              "root": "753",
+              "box": "Beliefs",
+              "label": "Mitigation estimate",
+              "present": false,
+              "exact": "Absent",
+              "reads": 0,
+              "mutations": 0,
+              "changes": 0,
+              "events": []
+            }
+          ]
+        },
+        {
+          "id": "Prospection",
+          "label": "Prospection / Goal Management",
+          "basis": "AFFECT public contract root373 contains two adopted task statuses. This maps the retained commitment state, not all prospection capabilities.",
+          "paths": [
+            {
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080515636f6e74656e742f6166666563742f736166657479",
+              "root": "373",
+              "box": "Prospection",
+              "label": "Safety task status",
+              "present": true,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}",
+              "reads": 0,
+              "mutations": 0,
+              "changes": 0,
+              "events": []
+            },
+            {
+              "path": "0a8c010103010102f50202010201030107010a8e01010101010af302010201010bea070b8d080b8e080518636f6e74656e742f6166666563742f63686172616374657202010bea070b8d080b8e080519636f6e74656e742f6166666563742f6f626c69676174696f6e",
+              "root": "373",
+              "box": "Prospection",
+              "label": "Obligation task status",
+              "present": true,
+              "exact": "{\n  \"record\": \"TaskCommitmentStatus#372/1\",\n  \"VariantTag [1]\": \"1\"\n}",
+              "reads": 0,
+              "mutations": 0,
+              "changes": 0,
+              "events": []
+            }
+          ]
+        }
+      ],
+      "unmapped": [],
+      "scope": "Exact registered state paths mapped to two existing canonical boxes. Counts are selected-prefix recorded reads and structural mutations; presence is only at this revision. Zero activity does not prove irrelevance or permit removal. Payload dependencies, evaluation contributions, causal necessity and complete subsystem participation are not established. Appraisal/affect coordinates are derived outputs and are not assigned independent stored-state leaves. No canonical edge is added or removed."
+    }
+  }
+]

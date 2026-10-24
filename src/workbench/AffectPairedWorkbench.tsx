@@ -1,3 +1,4 @@
+import {AffectArchitectureView} from './AffectArchitectureView';
 import {AffectBeliefStateView} from './AffectBeliefStateView';
 import {useEffect,useRef,useState} from 'react';
 import {AffectPairSession,type AffectPairCheckpoint,type AffectPairBranch} from './affectPairSession';
@@ -9,7 +10,6 @@ import {AffectExplanationView} from './AffectExplanationView';
 import {EventStatePanel} from './EventStatePanel';
 import {CausalHistoryPanel} from './CausalHistoryPanel';
 import {PreparedExport} from './PreparedExport';
-import {participationReport} from './participation';
 const modes=['Character','Experiment','Reasoning','Timeline','Compare','Architecture'] as const;
 const factory={create:(program:string)=>AffectWorkerClient.create(program),restore:AffectWorkerClient.restore};
 export function AffectPairedWorkbench({active}:{active:boolean}){
@@ -38,7 +38,7 @@ export function AffectPairedWorkbench({active}:{active:boolean}){
  {mode==='Reasoning'&&<AffectExplanationView cards={snapshot.explanations} history trace={{events:snapshot.timeline,runHash:snapshot.runHash,saveHash:snapshot.saveHash,modelHash:snapshot.modelHash}}/>}
  {mode==='Timeline'&&<><label>Retained AFFECT event<select value={event?.id??''} onChange={e=>setEventId(e.target.value)}>{snapshot.timeline.map(e=><option key={e.id} value={e.id}>{e.instant} · {e.stage} · {e.id}</option>)}</select></label>{event&&<><EventStatePanel key={snapshot.saveHash+event.id} event={event}/><CausalHistoryPanel events={snapshot.timeline} selected={event.id} runHash={snapshot.runHash} onSelect={setEventId}/><pre className="exact" data-affect-retained-event>{JSON.stringify(event,null,2)}</pre></>}</>}
  {mode==='Compare'&&report&&<AffectAppraisalComparisonPanel key={report.a.saveHash+report.b.saveHash} comparison={report}/>}
- {mode==='Architecture'&&<pre className="exact" data-affect-retained-participation>{JSON.stringify(participationReport({modelHash:snapshot.modelHash,runHash:snapshot.runHash,saveHash:snapshot.saveHash,stateHash:snapshot.stateHash,prefix:snapshot.prefix},snapshot.timeline,snapshot.fields),null,2)}</pre>}
+ {mode==='Architecture'&&<AffectArchitectureView key={snapshot.saveHash} snapshot={snapshot} onInspect={id=>{setEventId(id);setMode('Timeline');}}/>}
  <button disabled={busy||failed} onClick={()=>setText(JSON.stringify(summarizeAffectComparison(report!),null,2))}>Prepare retained AFFECT summary</button></>}
  {text&&<PreparedExport text={text} label="Retained AFFECT summary preview" filename="affect-pair-summary.json"/>}</section>;
 }

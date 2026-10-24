@@ -1,3 +1,4 @@
+import {AffectArchitectureView} from './AffectArchitectureView';
 import {AffectBeliefStateView} from './AffectBeliefStateView';
 import {useEffect,useRef,useState} from 'react';
 import type {AffectSnapshot,AffectCheckpoint} from './affectSession';
@@ -8,7 +9,6 @@ import {AffectExplanationView} from './AffectExplanationView';
 import {AffectFactorView} from './AffectFactorView';
 import {AffectAppraisalComparisonPanel} from './AffectAppraisalComparisonPanel';
 import {AffectPairedWorkbench} from './AffectPairedWorkbench';
-import {participationReport} from './participation';
 const modes=['Character','Experiment','Reasoning','Timeline','Compare','Architecture'] as const;
 export function AffectWorkbench({active=true}:{active?:boolean}){
  const run=useRef<AffectWorkerClient>(),lock=useRef(false),stop=useRef(false);
@@ -27,6 +27,6 @@ export function AffectWorkbench({active=true}:{active?:boolean}){
  {mode==='Reasoning'&&<><AffectExplanationView cards={view?.explanations??[]} history trace={view?{events:view.timeline,runHash:view.runHash,saveHash:view.saveHash,modelHash:view.modelHash}:undefined}/><section className="card"><details><summary>Native output records for research</summary><p>Includes physical execution records, which do not establish character awareness. Source-world truth remains confined to researcher traces.</p><pre className="exact">{view?.admittedOutputs}</pre></details></section></>}
  {mode==='Timeline'&&<section className="card"><h2>Committed researcher timeline</h2><label>AFFECT event<select value={event?.id??''} onChange={e=>setEventId(e.target.value)}>{view?.timeline.map(e=><option key={e.id} value={e.id}>Instant {e.instant} · {e.stage} · event {e.id}</option>)}</select></label><p>Inspection does not install intermediate state. Raw input/output can include researcher-only truth.</p><pre className="exact">{JSON.stringify(event,null,2)}</pre></section>}
  {mode==='Compare'&&<section className="card"><h2>Declared frozen pair</h2><button disabled={busy||!!error||!view||!affectPair(view.program)} onClick={()=>void pair()}>Prepare AFFECT paired prefix</button><p className="caption">{view&&affectContrast(view.program)?.changed} Native addressed draws remain exact; shared seeds alone do not establish general stochastic coupling. Unequal horizons are not compared.</p>{comparison&&<><AffectAppraisalComparisonPanel key={comparison.a.saveHash+comparison.b.saveHash} comparison={comparison}/><p>{comparison.programs.join(' ↔ ')}</p><p>{comparison.aligned?'Aligned prefix':'Unequal horizons: prepare the paired prefix again'}</p><dl>{(['outputsEqual','stateEqual','exactSaveEqual'] as const).map(k=><div key={k}><dt>{k}</dt><dd>{comparison[k]===null?'Not compared':comparison[k]?'Equal':'Different'}</dd></div>)}</dl><button onClick={()=>setText(JSON.stringify(summarizeAffectComparison(comparison),null,2))}>Prepare AFFECT comparison summary</button><button onClick={()=>setText(JSON.stringify(comparison,null,2))}>Prepare AFFECT comparison export</button></>}</section>}
- {mode==='Architecture'&&<section className="card"><h2>Recorded state participation</h2><p>Learned belief root753 and initial task root373 remain distinct. Affect coordinates are derived outputs. Recorded reads and mutations do not establish causal necessity.</p><pre className="exact">{view&&JSON.stringify(participationReport({modelHash:view.modelHash,runHash:view.runHash,saveHash:view.saveHash,stateHash:view.stateHash,prefix:view.prefix},view.timeline,view.fields),null,2)}</pre></section>}
+ {mode==='Architecture'&&view&&<AffectArchitectureView key={view.saveHash} snapshot={view} onInspect={id=>{setEventId(id);setMode('Timeline');}}/>}
  {text&&<PreparedExport text={text} label="Prepared AFFECT export preview" filename="affect-inspection.json"/>}<footer>{view&&(['modelHash','runHash','stateHash','saveHash'] as const).map(k=><div className="hash" key={k}><span>{k}</span><code>{view[k]}</code></div>)}</footer></div></main>;
 }

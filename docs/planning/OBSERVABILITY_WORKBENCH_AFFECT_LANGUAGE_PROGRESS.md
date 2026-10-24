@@ -872,3 +872,34 @@ Exact state-to-box correspondence and event links remain implementation work; co
 alone do not establish causal necessity. Complete language, ancestry and integrated
 entry remain due. Paged23320 last12/15 prefix5; packed29 last14/14 Working.
 Mark all36 retained browser tabs every turn.
+
+## 2026-10-23 — canonical state correspondence
+
+LOCAL DISPOSITION: use existing canonical Beliefs and Prospection boxes for the exact
+three registered root753 learned-estimate paths and two root373 adopted-task paths.
+Authority: CHARACTER_ARCHITECTURE.md main topology and section11; accepted AFFECT
+public contract exact profile details. This is conceptual correspondence for those
+leaves, not a new owner, box, edge, general prospection implementation or causal claim.
+Derived appraisal/affect coordinates remain outside independent stored-state totals.
+
+Standalone and retained paired Architecture modes now display exact mapping, current
+presence, reads, mutations and changes separately. Each leaf expands to full canonical
+path/current value and original participating events; selecting an event navigates to
+the existing native Timeline. Unrecognized paths remain explicitly unmapped. Unknown
+models, duplicate fields and mismatched root/path claims reject. Zero counts do not
+prove irrelevance. Payload dependencies and evaluation/causal contributions remain
+explicitly outside this state correspondence.
+
+Five native observations (four original terminal programs plus baseline initial) PASS
+25 mapped paths/232 event joins, SSR and immutability, three negative checks and one
+unmapped-retention check. Browser baseline0/11, obligation A/B3 match independent
+native reports and all four identities; baseline apply60 and branch B raw20 links
+exact. Paired inspection preserves standalone identities. Expanded paths fit1265px,
+screenshot inspected. TypeScript/build646 modules/research4318/boundary PASS; both
+live source holds280/166 unchanged. See workbench-affect-architecture-rev1. No failed
+revision. Tab37/4248, preview75794 retained; mark all37 tabs each turn.
+
+All18 conditional obligations and RO-C3-011 trace limitation survive. Full105-program
+mapping, complete architecture participation, learning ancestry, player strength/
+certainty language and integrated entry remain due. Native stored-state66314 last24/
+105 RUNNING; paged23320 last12/15 prefix11; packed29 last14/14 Working.

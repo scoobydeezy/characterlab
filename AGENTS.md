@@ -52,6 +52,18 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 AFFECT canonical state mapping:** Architecture standalone/paired views
+map five exact registered paths to existing Beliefs and Prospection boxes. No edges
+added; derived affect is not independent stored state. Counts/presence/necessity distinct.
+Native five observations/25 paths/232 event joins PASS; browser baseline0/11 and
+obligation A/B3 exact reports/four identities, apply60/task-read20 links PASS.
+Unknown paths retained unmapped; root mismatch rejects. Typecheck/build646/research/
+boundary PASS; both280/166 live holds exact. See workbench-affect-architecture-rev1.
+Tab37/4248 retained, mark all37 tabs. Stored-state66314 last24/105 RUNNING;
+paged23320 last12/15 prefix11; packed29 last14/14 Working. Full mapping corpus,
+complete participation/causal evidence, language/provenance and integrated entry due.
+
+
 **2026-10-23 stored belief full-corpus audit:** Native session66314 RUNNING.
 First4 programs/60 prefixes bound by checkpoint-001; no full-corpus PASS yet.
 NEW280-source hold: workbench-affect-belief-state-corpus-rev1/freeze.json
