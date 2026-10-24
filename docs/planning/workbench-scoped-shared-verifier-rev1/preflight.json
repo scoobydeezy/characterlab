@@ -1,0 +1,25 @@
+{
+  "status": "PASS SHARED SCOPED VERIFIER PREFLIGHT ONLY",
+  "roles": 14,
+  "prefixes": 264,
+  "referenceReceiptSha256": "14e96108dd9fcccbf96e457cef3d7c5578e26cedf864beefb9fdcd965bfd9951",
+  "verifierSha256": "85c4bd55205f01f728eaca85b2ed5beb5ef908c90854afcc49b054bc9d5a184f",
+  "rejectedMutations": [
+    "missing role",
+    "reordered roles",
+    "partial status",
+    "invented BIO clock",
+    "missing SEM clock",
+    "repeated SEM seed",
+    "wrong state with matching save",
+    "false match",
+    "wrong expected save",
+    "missing prefix",
+    "promoted component",
+    "false component clock label",
+    "misbound boundary",
+    "missing BIO originals",
+    "changed SEM originals"
+  ],
+  "scope": "Retained transport references exercise independent report validation. No new native execution, shared worker, browser or full corpus acceptance."
+}

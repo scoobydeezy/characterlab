@@ -52,6 +52,13 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 V12 independent shared verifier prepared:** retained-JSON preflight
+PASS14/264 and15 corruption rejections; exact prior acceptance/receipt/catalog bound.
+See workbench-scoped-shared-verifier-rev1 and BATCH_V12_PROGRESS. This is verifier
+evidence only; fresh shared execution/tests/build/browser remain pending. Disposition43
+still Working18/18/no alerts/Restore disabled; no retry or mode change. V10 native94573
+last880/1068, browser53 last469/1068/3186. Retain all55 tabs each turn.
+
 **2026-10-23 V12 shared admission PREPARED, UNTESTED:** registry0.27/session0.12/
 export0.12 route BIO13/260 and SEM1/4 with explicit boundaries/exact seeds; catalog
 1086/7574 preserves prior1072. Three new tests and full shared audit writer prepared;

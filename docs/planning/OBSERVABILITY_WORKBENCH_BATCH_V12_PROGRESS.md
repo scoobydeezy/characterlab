@@ -170,3 +170,20 @@ transport receipt, and qualify both browser cohorts with exact seeds, boundary l
 hashes and original report data. Reconcile coverage only after those checks pass.
 Research/boundary checks also remain due for this prepared integration. No Campaign3
 verdict, obligation, native law, comparator or Campaign4 entry gate changes here.
+
+## Independent shared verifier preflight
+
+`verify-workbench-scoped-shared.mjs --preflight` PASS14 retained roles/264 prefixes
+and15 deliberate corruption rejections. The independent reader checks exact accepted
+transport views, original seeds, native/null clocks, expected-save flags, complete
+BIO/SEM originals, report versions/limits and per-role boundary identities. It binds
+the prior acceptance to its exact receipt hash and frozen catalog. Its eventual
+acceptance path verifies the shared audit's frozen source copies and result report;
+it does not rerun native execution or inspect browser behavior.
+
+Evidence is preserved in workbench-scoped-shared-verifier-rev1. This lightweight
+retained-JSON preflight is not a native test, shared admission or browser acceptance.
+No frozen source hold is created. The pending qualification sequence above remains.
+At this observation the live V10 native session94573 reached880/1068; browser53
+reached469/1068 roles and3186 prefixes, with no alerts. Disposition43 is still A18/B18
+Working with no alerts and Restore disabled. All55 tabs retained for continuation.
