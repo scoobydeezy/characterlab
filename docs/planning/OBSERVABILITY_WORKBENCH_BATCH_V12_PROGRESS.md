@@ -198,3 +198,25 @@ remain pending. A read-only review of the packed replay/worker path did not iden
 a concrete defect explaining the live wait; it provides no terminal acceptance.
 Disposition43 still reports A18/B18 Working with no alerts. Browser53 has advanced to
 478/1068 roles and3283 prefixes; native94573 remains live, last emitted900/1068.
+
+## Browser verification prepared
+
+`check-workbench-scoped-batch-browser.mjs` is prepared; `node --check` PASS only.
+Neither its freeze nor acceptance path has run. Freeze requires the complete shared
+native receipt plus independent acceptance, verifies current/source-copy bindings,
+and copies isolated build665 assets. Do not freeze before that build is qualified.
+
+After freeze, capture bio.json and sem.json from the rendered Batch view, each with
+status,alerts,headers,rows,hashes,preview,downloadLabel and limitCaption. Row fields are
+id,status,checks,seed (data-batch-seed),seedLabel (its parent span text), and boundary
+with kind (data-batch-execution-kind),label (strong text),step (first small text) and
+qualification (second small text). Read rendered values; do not manufacture them
+from the native receipt. Capture and inspect bio.png and sem.png from the completed
+cohorts, with additional viewport overviews if full-page images are unreadable.
+
+The checker requires13/260 BIO and1/4 SEM, all528 actual/expected hash strings, exact
+seed routing labels, native versus unavailable scheduler-clock descriptions and
+selected report preview/byte declarations. It preserves source/asset hashes and
+withholds full download-transport, all1086 fresh execution, broader control/language
+and Campaign4-entry claims. This prepared script creates no new live source hold.
+Terminal restore remains in flight; no new build or native execution was started.
