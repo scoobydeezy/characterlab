@@ -55,7 +55,16 @@
       ],
       "seamContract": "epi-public/0.1-candidate",
       "scope": "72 retained programs /240 exact prefixes; seed19, six public models; Safe character projection and violating leakage controls preserved. Browser established Safe/PotentialLeak pairs and exact replay verified; other browser programs remain unqualified.",
-      "receipt": "docs/planning/workbench-epi-parity-rev1/receipt.json"
+      "receipt": "docs/planning/workbench-epi-parity-rev1/receipt.json",
+      "batchQualification": {
+        "version": "workbench-batch-catalog/0.8",
+        "experimentId": "epi",
+        "status": "PASS NATIVE AND BROWSER",
+        "roles": 72,
+        "prefixes": 240,
+        "receipt": "docs/planning/workbench-batch-coverage-rev1/receipt.json",
+        "scope": "Registered V8 execution and displayed save-hash parity only. Does not close language, comparisons, successor coverage, specialized views or integrated Campaign4 entry."
+      }
     },
     {
       "id": "PHEN-SEM-001",
@@ -328,7 +337,16 @@
       "receipt": "docs/planning/workbench-learn-parity-rev1/receipt.json",
       "candidateSources": [
         "src/campaign3/learnFactory.ts"
-      ]
+      ],
+      "batchQualification": {
+        "version": "workbench-batch-catalog/0.8",
+        "experimentId": "learn",
+        "status": "PASS NATIVE AND BROWSER",
+        "roles": 39,
+        "prefixes": 580,
+        "receipt": "docs/planning/workbench-batch-coverage-rev1/receipt.json",
+        "scope": "Registered V8 execution and displayed save-hash parity only. Does not close language, comparisons, successor coverage, specialized views or integrated Campaign4 entry."
+      }
     },
     {
       "id": "PHEN-MEM-001",
@@ -363,7 +381,16 @@
       "scopeNotes": "Compilation probes are distinct from actual training decisions. No general correlation law or human-language adequacy claim.",
       "candidateSources": [
         "src/campaign3/reasonFactory.ts"
-      ]
+      ],
+      "batchQualification": {
+        "version": "workbench-batch-catalog/0.8",
+        "experimentId": "reason",
+        "status": "PASS NATIVE AND BROWSER",
+        "roles": 115,
+        "prefixes": 350,
+        "receipt": "docs/planning/workbench-batch-coverage-rev1/receipt.json",
+        "scope": "Registered V8 execution and displayed save-hash parity only. Does not close language, comparisons, successor coverage, specialized views or integrated Campaign4 entry."
+      }
     },
     {
       "id": "PHEN-DECISION-001",
@@ -373,11 +400,20 @@
         "docs/planning/CAMPAIGN3_DECISION_QUALIFICATION.md",
         "docs/planning/VERDICT_LEDGER.md"
       ],
-      "workbenchStatus": "174 PROGRAMS/360 PREFIXES NATIVE PARITY PASS; FOUR TESTS/BUILD AND BOUNDED BROWSER REPLAY/INVISIBLE COMPARISON PASS; BROADER COMPARISON/LANGUAGE/BATCH OPEN",
+      "workbenchStatus": "174 PROGRAMS/360 PREFIXES NATIVE PARITY PASS; FOUR TESTS/BUILD AND BOUNDED BROWSER REPLAY/INVISIBLE COMPARISON PASS; BROADER COMPARISON/LANGUAGE OPEN; REGISTERED V8 BATCH PASS",
       "executableAdapter": "src/workbench/decisionAdapter.ts",
       "candidateSources": [
         "src/campaign3/decisionFactory.ts"
-      ]
+      ],
+      "batchQualification": {
+        "version": "workbench-batch-catalog/0.8",
+        "experimentId": "decision",
+        "status": "PASS NATIVE AND BROWSER",
+        "roles": 174,
+        "prefixes": 360,
+        "receipt": "docs/planning/workbench-batch-coverage-rev1/receipt.json",
+        "scope": "Registered V8 execution and displayed save-hash parity only. Does not close language, comparisons, successor coverage, specialized views or integrated Campaign4 entry."
+      }
     },
     {
       "id": "PHEN-BIO-001",
@@ -405,11 +441,20 @@
         "docs/planning/CAMPAIGN3_COMMIT_QUALIFICATION.md",
         "docs/planning/VERDICT_LEDGER.md"
       ],
-      "workbenchStatus": "10 PROGRAMS/70 PREFIXES NATIVE PARITY PASS; WORKER/UI/FOUR TESTS/BUILD AND BOUNDED OBSERVER/PRIVATE-LIFECYCLE BROWSER PASS; BROADER CONTROLS/LANGUAGE/BATCH OPEN",
+      "workbenchStatus": "10 PROGRAMS/70 PREFIXES NATIVE PARITY PASS; WORKER/UI/FOUR TESTS/BUILD AND BOUNDED OBSERVER/PRIVATE-LIFECYCLE BROWSER PASS; BROADER CONTROLS/LANGUAGE OPEN; REGISTERED V8 BATCH PASS",
       "executableAdapter": "src/workbench/commitAdapter.ts",
       "candidateSources": [
         "src/campaign3/commitFactory.ts"
-      ]
+      ],
+      "batchQualification": {
+        "version": "workbench-batch-catalog/0.8",
+        "experimentId": "commit",
+        "status": "PASS NATIVE AND BROWSER",
+        "roles": 10,
+        "prefixes": 70,
+        "receipt": "docs/planning/workbench-batch-coverage-rev1/receipt.json",
+        "scope": "Registered V8 execution and displayed save-hash parity only. Does not close language, comparisons, successor coverage, specialized views or integrated Campaign4 entry."
+      }
     },
     {
       "id": "PHEN-ATTN-001",
@@ -453,14 +498,23 @@
         "docs/planning/CAMPAIGN3_BELIEF_QUALIFICATION.md",
         "docs/planning/VERDICT_LEDGER.md"
       ],
-      "workbenchStatus": "COMPLETE FROZEN PUBLIC ADAPTER PARITY PASS; BOUNDED BROWSER CONTRASTS/REPLAY AND EVALUATION LANGUAGE PASS; BATCH/FULL NARRATIVE OPEN",
+      "workbenchStatus": "COMPLETE FROZEN PUBLIC ADAPTER PARITY PASS; BOUNDED BROWSER CONTRASTS/REPLAY AND EVALUATION LANGUAGE PASS; REGISTERED V8 BATCH PASS; FULL NARRATIVE OPEN",
       "executableAdapter": "src/workbench/beliefAdapter.ts",
       "seamContract": "belief-public/0.1-candidate",
       "scope": "48 frozen programs /381 exact historical prefixes; seed7. Admitted outputs separate from raw researcher state/trace; four browser comparison families and prefix1-to9 replay verified; other browser programs unqualified;933 evaluation descriptions audited across48/381, full narrative open.",
       "receipt": "docs/planning/workbench-belief-parity-rev1/receipt.json",
       "candidateSources": [
         "src/campaign3/beliefFactory.ts"
-      ]
+      ],
+      "batchQualification": {
+        "version": "workbench-batch-catalog/0.8",
+        "experimentId": "belief",
+        "status": "PASS NATIVE AND BROWSER",
+        "roles": 48,
+        "prefixes": 381,
+        "receipt": "docs/planning/workbench-batch-coverage-rev1/receipt.json",
+        "scope": "Registered V8 execution and displayed save-hash parity only. Does not close language, comparisons, successor coverage, specialized views or integrated Campaign4 entry."
+      }
     },
     {
       "id": "PHEN-AFFECT-001",
@@ -505,7 +559,16 @@
           "scope": "123 positive appraisal component-presence explanations;88 uncovered sources excluded. Exact native normalization and bounded browser/source/history checks. Constituent factor explanations remain open."
         }
       ],
-      "openScope": "Complete factor/player language, complete experience ancestry, original carry-trace limitation disposition, broader browser/accessibility/resource qualification and full Campaign4 entry remain open. These workbench observations do not broaden PHEN-AFFECT psychological qualification or retire candidates."
+      "openScope": "Complete factor/player language, complete experience ancestry, original carry-trace limitation disposition, broader browser/accessibility/resource qualification and full Campaign4 entry remain open. These workbench observations do not broaden PHEN-AFFECT psychological qualification or retire candidates.",
+      "batchQualification": {
+        "version": "workbench-batch-catalog/0.8",
+        "experimentId": "affect",
+        "status": "PASS NATIVE AND BROWSER",
+        "roles": 105,
+        "prefixes": 1436,
+        "receipt": "docs/planning/workbench-batch-coverage-rev1/receipt.json",
+        "scope": "Registered V8 execution and displayed save-hash parity only. Does not close language, comparisons, successor coverage, specialized views or integrated Campaign4 entry."
+      }
     },
     {
       "id": "PHEN-WORK-001",
@@ -515,11 +578,20 @@
         "docs/planning/CAMPAIGN3_WORKSPACE_CONTROL_QUALIFICATION.md",
         "docs/planning/VERDICT_LEDGER.md"
       ],
-      "workbenchStatus": "NATIVE PARITY AND BOUNDED CHARACTER LANGUAGE PASS78/624;5152 DESCRIPTIONS AND256 SUPPRESSED PREFIXES; FULL UI/BATCH QUALIFICATION DUE",
+      "workbenchStatus": "NATIVE PARITY AND BOUNDED CHARACTER LANGUAGE PASS78/624;5152 DESCRIPTIONS AND256 SUPPRESSED PREFIXES; REGISTERED V8 BATCH PASS; FULL INSPECTION UI QUALIFICATION DUE",
       "executableAdapter": "src/workbench/workAdapter.ts",
       "candidateSources": [
         "src/campaign3/workFactory.ts"
-      ]
+      ],
+      "batchQualification": {
+        "version": "workbench-batch-catalog/0.8",
+        "experimentId": "work",
+        "status": "PASS NATIVE AND BROWSER",
+        "roles": 78,
+        "prefixes": 624,
+        "receipt": "docs/planning/workbench-batch-coverage-rev1/receipt.json",
+        "scope": "Registered V8 execution and displayed save-hash parity only. Does not close language, comparisons, successor coverage, specialized views or integrated Campaign4 entry."
+      }
     },
     {
       "id": "PHEN-SKILL-001",
@@ -529,13 +601,22 @@
         "docs/planning/CAMPAIGN3_SKILL_QUALIFICATION.md",
         "docs/planning/VERDICT_LEDGER.md"
       ],
-      "workbenchStatus": "NATIVE PARITY AND BOUNDED LANGUAGE PASS; UI PREPARED, REGISTRATION/BROWSER DUE",
+      "workbenchStatus": "NATIVE PARITY AND BOUNDED LANGUAGE PASS; REGISTERED V8 BATCH PASS; BROADER INSPECTION BROWSER DUE",
       "executableAdapter": "src/workbench/skillAdapter.ts",
       "candidateSources": [
         "src/campaign3/skillFactory.ts"
       ],
       "receipt": "docs/planning/workbench-skill-parity-rev1/receipt.json",
-      "scope": "52 original programs/27 models/279 exact native and historical save prefixes. Researcher projection only; no full workbench qualification."
+      "scope": "52 original programs/27 models/279 exact native and historical save prefixes. Researcher projection only; no full workbench qualification.",
+      "batchQualification": {
+        "version": "workbench-batch-catalog/0.8",
+        "experimentId": "skill",
+        "status": "PASS NATIVE AND BROWSER",
+        "roles": 52,
+        "prefixes": 279,
+        "receipt": "docs/planning/workbench-batch-coverage-rev1/receipt.json",
+        "scope": "Registered V8 execution and displayed save-hash parity only. Does not close language, comparisons, successor coverage, specialized views or integrated Campaign4 entry."
+      }
     },
     {
       "id": "PHEN-SOCIAL-001",
@@ -545,7 +626,7 @@
         "docs/planning/CAMPAIGN3_SOCIAL_QUALIFICATION.md",
         "docs/planning/VERDICT_LEDGER.md"
       ],
-      "workbenchStatus": "NATIVE PARITY/COMPARISONS/BOUNDED LANGUAGE PASS; UI REGISTERED/FIRST-PREFIX BROWSER PASS; BROADER BROWSER/BATCH DUE",
+      "workbenchStatus": "NATIVE PARITY/COMPARISONS/BOUNDED LANGUAGE PASS; UI REGISTERED/FIRST-PREFIX BROWSER PASS; REGISTERED V8 BATCH PASS; BROADER INSPECTION BROWSER DUE",
       "executableAdapter": "src/workbench/socialAdapter.ts",
       "candidateSources": [
         "src/campaign3/socialFactory.ts"
@@ -553,7 +634,16 @@
       "seamContract": "social-public/0.1-candidate",
       "scope": "26 frozen programs/18 models/127 prefixes; exact native state/output/trace/save and both observer views. Research diagnostics include violating controls; no safe narration claim.",
       "receipt": "docs/planning/workbench-social-parity-rev1/receipt.json",
-      "uiReceipt": "docs/planning/workbench-social-relationship-ui-rev1/receipt.json"
+      "uiReceipt": "docs/planning/workbench-social-relationship-ui-rev1/receipt.json",
+      "batchQualification": {
+        "version": "workbench-batch-catalog/0.8",
+        "experimentId": "social",
+        "status": "PASS NATIVE AND BROWSER",
+        "roles": 26,
+        "prefixes": 127,
+        "receipt": "docs/planning/workbench-batch-coverage-rev1/receipt.json",
+        "scope": "Registered V8 execution and displayed save-hash parity only. Does not close language, comparisons, successor coverage, specialized views or integrated Campaign4 entry."
+      }
     },
     {
       "id": "PHEN-MULTI-001",
@@ -585,7 +675,16 @@
         "src/campaign3/habitFactory.ts"
       ],
       "receipt": "docs/planning/workbench-habit-parity-rev1/receipt.json",
-      "scope": "23 original programs/12 models/291 exact native and historical save prefixes; successor qualifications remain separate coverage work."
+      "scope": "23 original programs/12 models/291 exact native and historical save prefixes; successor qualifications remain separate coverage work.",
+      "batchQualification": {
+        "version": "workbench-batch-catalog/0.8",
+        "experimentId": "habit",
+        "status": "PASS NATIVE AND BROWSER",
+        "roles": 23,
+        "prefixes": 291,
+        "receipt": "docs/planning/workbench-batch-coverage-rev1/receipt.json",
+        "scope": "Registered V8 execution and displayed save-hash parity only. Does not close language, comparisons, successor coverage, specialized views or integrated Campaign4 entry."
+      }
     },
     {
       "id": "PHEN-REL-001",
@@ -595,7 +694,7 @@
         "docs/planning/CAMPAIGN3_RELATIONSHIP_QUALIFICATION.md",
         "docs/planning/VERDICT_LEDGER.md"
       ],
-      "workbenchStatus": "NATIVE PARITY/COMPARISONS/BOUNDED LANGUAGE PASS; UI REGISTERED/FIRST-PREFIX BROWSER PASS; BROADER BROWSER/BATCH DUE",
+      "workbenchStatus": "NATIVE PARITY/COMPARISONS/BOUNDED LANGUAGE PASS; UI REGISTERED/FIRST-PREFIX BROWSER PASS; REGISTERED V8 BATCH PASS; BROADER INSPECTION BROWSER DUE",
       "executableAdapter": "src/workbench/relationshipAdapter.ts",
       "candidateSources": [
         "src/campaign3/relationshipFactory.ts"
@@ -605,7 +704,16 @@
       "scope": "Corrected0.2 and retained failed0.1:24 programs/11 models/256 prefixes each, both native observer views. Corrected cohort6794 descriptions/88 suppressed observer-prefixes; legacy narration suppressed. All24 cross-revision reports PASS against both historical observer histories; UI registered; bounded first-prefix browser check passes; broader browser due.",
       "legacyReceipt": "docs/planning/workbench-relationship-legacy-parity-rev1/receipt.json",
       "revisionComparisonReceipt": "docs/planning/workbench-relationship-revision-comparison-rev1/receipt.json",
-      "uiReceipt": "docs/planning/workbench-social-relationship-ui-rev1/receipt.json"
+      "uiReceipt": "docs/planning/workbench-social-relationship-ui-rev1/receipt.json",
+      "batchQualification": {
+        "version": "workbench-batch-catalog/0.8",
+        "experimentId": "relationship",
+        "status": "PASS NATIVE AND BROWSER",
+        "roles": 48,
+        "prefixes": 512,
+        "receipt": "docs/planning/workbench-batch-coverage-rev1/receipt.json",
+        "scope": "Registered V8 execution and displayed save-hash parity only. Does not close language, comparisons, successor coverage, specialized views or integrated Campaign4 entry."
+      }
     },
     {
       "id": "PHEN-LONG-001",
@@ -615,7 +723,7 @@
         "docs/planning/CAMPAIGN3_LONGITUDINAL_QUALIFICATION.md",
         "docs/planning/VERDICT_LEDGER.md"
       ],
-      "workbenchStatus": "SOURCE ADAPTER IMPLEMENTED; FOCUSED PARITY PASS; FULL COHORT AUDIT RUNNING",
+      "workbenchStatus": "ORIGINAL32 SOURCE PROGRAMS/513 PREFIXES NATIVE AND V8 BROWSER BATCH PASS; SUCCESSORS AND FULL INSPECTION REMAIN SEPARATE",
       "executableAdapter": "src/workbench/longAdapter.ts",
       "comparisonReceipt": "docs/planning/workbench-long-comparison-cohort-rev1/receipt.json",
       "comparisonScope": "All24 declared comparisons:28 current source programs/476 captured prefixes,407 aligned comparisons and2 explicitly missing schedule instants. Original save hashes and main-cohort observer hashes match; exact six-field projections and addressed draws retained. Native every-prefix restoration and broader browser coverage remain separate.",
@@ -623,7 +731,16 @@
       "languageScope": "32 programs/513 prefixes/3078 current observer-field descriptions; diagnostic controls included explicitly; no full-choice or causal explanation. Bounded browser prefixes0/1: workbench-long-language-ui-rev1/receipt.json.",
       "candidateSources": [
         "src/campaign3/longitudinalFactory.ts"
-      ]
+      ],
+      "batchQualification": {
+        "version": "workbench-batch-catalog/0.8",
+        "experimentId": "long",
+        "status": "PASS NATIVE AND BROWSER",
+        "roles": 32,
+        "prefixes": 513,
+        "receipt": "docs/planning/workbench-batch-coverage-rev1/receipt.json",
+        "scope": "Registered V8 execution and displayed save-hash parity only. Does not close language, comparisons, successor coverage, specialized views or integrated Campaign4 entry."
+      }
     }
   ],
   "successors": [
@@ -727,7 +844,16 @@
       "workbenchStatus": "ADAPTER PARITY PASS; UI AND LANGUAGE QUALIFICATION PARTIAL",
       "executableAdapter": "src/workbench/valuesAdapter.ts",
       "scope": "125 frozen native programs /625 exact original save prefixes /309 factors; full-tail restore tested separately in focused suite. Not complete workbench qualification.",
-      "receipt": "docs/planning/workbench-values-parity-rev1/receipt.json"
+      "receipt": "docs/planning/workbench-values-parity-rev1/receipt.json",
+      "batchQualification": {
+        "version": "workbench-batch-catalog/0.8",
+        "experimentId": "values",
+        "status": "PASS NATIVE AND BROWSER",
+        "roles": 125,
+        "prefixes": 625,
+        "receipt": "docs/planning/workbench-batch-coverage-rev1/receipt.json",
+        "scope": "Registered V8 execution and displayed save-hash parity only. Does not close language, comparisons, successor coverage, specialized views or integrated Campaign4 entry."
+      }
     },
     {
       "id": "VER-C3-DISPOSITION-PUBLIC-001",

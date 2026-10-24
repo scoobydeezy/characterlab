@@ -100,3 +100,21 @@ with the live166-source paged diagnostic audit remain held. Retain completed tab
 This qualifies the complete registered V8 batch, not every required future successor,
 language layer, specialized visualization or integrated Campaign4 entry requirement.
 All18 conditional obligations and Campaign3 scope restrictions survive.
+
+## Coverage ledger reconciliation — 2026-10-23
+
+LOCAL DISPOSITION: reconcile registered batch execution separately from phenomenon
+and integrated-entry acceptance. The retained catalog, native result and browser
+rows join exactly across947 roles/6388 prefixes/12776 displayed save hashes.
+`workbench-batch-coverage-rev1/receipt.json` records14 experiment families and exact
+per-family job IDs/counts. Thirteen corpus members and the Values integration
+successor receive scoped batch pointers; eight stale status strings are corrected.
+All other ledger fields are independently checked unchanged against the retained
+before-copy. Original source and browser artifact hashes are verified.
+
+Eight corpus members are outside V8 enrollment: ADAPT, DET, SEM, MEM, BIO, ATTN,
+BODY and MULTI. This is an enrollment gap, not an assertion that their separate
+native/inspection evidence is absent. General's43-model/568-prefix cohort serves
+both MEM and ATTN and must not be double-counted when admitting it. Disposition
+and component successors also remain separate from V8. No language, comparison,
+specialized-view or full Campaign4 entry requirement is closed by this update.
