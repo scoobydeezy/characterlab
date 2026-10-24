@@ -52,6 +52,17 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 episode corpus COMPLETE:** Native68613 + independent verifier PASS
+105/1436,9247 cumulative reports/7916 history checks/16767 role joins. Terminal unique
+scope:1331 apply events,1137 conditional/194 empty inputs,2265 roles;1137 distinct
+program-scoped evidence/freeze/track/observe events each. No missing/multiple joins.
+See episode-corpus-rev1/acceptance.json. All281 audit sources released; preceding
+support and Disposition native audits accepted. Frozen evidence unchanged.
+Coverage ledger refreshed with scoped episode and player-language receipts.
+Pair43 last12/12 Working in frozen build651; terminal18 restore still due.
+Mark all47 tabs. General ancestry/constituent language/full entry remain open.
+
+
 **2026-10-23 appraisal language and diagnostics:** Separate player-appraisal0.1
 PASS105/1331:123 positive component sentences,88 uncovered exclusions,6 feedback
 cases. Original net-normalization mistake retained in rev1; corrected rev2 and

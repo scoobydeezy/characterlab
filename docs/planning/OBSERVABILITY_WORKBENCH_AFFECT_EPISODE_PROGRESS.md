@@ -68,3 +68,31 @@ Tab45 now retains pair4/4, branchA/event60. Mark all45 tabs each turn.
 
 Support45578 last98/105 LIVE283hold; diagnostics23320 last15/15 prefix14 LIVE166hold;
 corrected terminal pair43 last9/9 Working. All remain active, no terminal pass inferred.
+
+## Full original episode corpus accepted — 2026-10-23
+
+Session68613 COMPLETE105 programs/1436 prefixes; independent verifier PASS281
+source/copy hashes, original reference/artifact hashes, original order and exact
+prefix identities, historical equality, role/status/chronology and count consistency.
+See workbench-affect-learning-episode-corpus-rev1/acceptance.json.
+
+Cumulative counts:9247 apply reports,8964 conditional reports,283 empty-input reports,
+16767 Current/EpisodeBasis roles,8964 evidence joins and16767 each freeze/track/observe
+joins,7916 historical checks; zero unavailable/multiple joins in this original scope.
+These counts repeat prior reports at later prefixes. At terminal prefixes there are
+1331 unique apply events:1137 conditional and194 empty;2265 explicit role occurrences.
+There are1137 distinct program-scoped evidence, freeze, track and observe events each.
+Current and EpisodeBasis roles intentionally remain separate when they share a source.
+
+The frozen writer verifies native output and parent joins. The independent verifier
+checks the artifacts without claiming to rerun that native work. Empty input is not
+an unavailable source; absence and zero remain distinct. No general completeness of
+experience ancestry, psychological necessity or full browser coverage follows.
+
+All281 source paths for this audit are now released. The preceding support and
+Disposition native audits are already accepted; their overlapping holds no longer
+require retention for those runs. Frozen evidence remains immutable. Browser pair43
+still runs its frozen build651, last12/12 Working, and requires terminal18 capture/
+restore verification. Do not modify or restart that live session. Mark all47 tabs.
+Coverage ledger updated with episode acceptance and recent relative/appraisal language
+receipts, preserving its prior bytes. Research4318/18conditional PASS. Full entry open.
