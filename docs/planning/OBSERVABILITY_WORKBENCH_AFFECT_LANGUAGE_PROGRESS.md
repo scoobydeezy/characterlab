@@ -1326,3 +1326,28 @@ Typecheck/build657modules(temp655), research4318 and boundary PASS. Preview32709
 tab47 retained atprefix5/historical4. Mark all47 tabs. Episode68613 last98/105 live281
 hold; Disposition23320 COMPLETE and independent verifier PASS; acceptance separately
 recorded in resource progress. Paired terminal43 last11/11 Working, no terminal pass.
+
+## 2026-10-23 — current factor-language coverage in Reasoning
+
+Version0.2 is a separate successor to the preserved0.1 gap census. It joins the
+qualified appraisal-component preview to exact raw/coverage rows, without rewriting
+any original mechanical value or historical report. The UI places this audit only
+inside researcher inspection. Each source discloses its role, exact strength, linked
+nucleus, own-goal sentence, relative-pull sentence, component sentence and remaining
+limits. Uncovered sources remain explicit and receive no inferred player reason.
+
+Full105 programs/1331 decisions/2851 sources PASS writer and independent reconciliation:
+2640 goal-presence paths,123 component-presence paths,88 uncovered exclusions,zero
+remaining component-presence gaps in this original scope. Absolute magnitude, certainty
+and constituent appraisal-factor language remain open; zero component-presence gaps
+is not complete language acceptance. All1331 researcher renders PASS. Source and
+coverage fields match frozen0.1, and component sentences match accepted appraisal0.1.
+
+Browser no-safety1 displays its uncovered base explicitly. Empty-catalogue4 displays
+its situational sentence and retained gaps, with unchanged historical report at5.
+Both exact reports match corpus artifacts; expanded source disclosure and screenshot
+review PASS. See workbench-affect-factor-language-coverage-rev2. Typecheck/build660
+modules(temp656), research4318 and boundary PASS. No native contract, C3 verdict or
+obligation changed. Tab48/4258 (preview8666) retained atprefix5/historical4. Mark all48.
+Corrected terminal pair43 last12/12 Working; no terminal restore acceptance yet.
+Native audit holds released; frozen browser build and archived evidence remain intact.

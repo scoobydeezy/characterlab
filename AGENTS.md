@@ -52,6 +52,16 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 factor-language UI:** Separate coverage0.2 successor mounted in
+researcher Reasoning. Full105/1331/2851 PASS:2640 goal-presence/123 component-presence/
+88 uncovered; zero original component-presence gaps, not full language acceptance.
+Exact0.1 values preserved; accepted appraisal sentences joined. All1331 renders and
+independent reconciliation PASS. Browser no-safety1 and empty-catalogue4/history5
+PASS exact reports/disclosures. Tab48/4258 retained; mark all48. Typecheck/build660
+(temp656)/research4318/boundary PASS. Pair43 last12/12 Working.
+Absolute magnitude/certainty/constituent factors and full entry remain open.
+
+
 **2026-10-23 episode corpus COMPLETE:** Native68613 + independent verifier PASS
 105/1436,9247 cumulative reports/7916 history checks/16767 role joins. Terminal unique
 scope:1331 apply events,1137 conditional/194 empty inputs,2265 roles;1137 distinct

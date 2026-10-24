@@ -1,0 +1,7 @@
+import type {AffectExplanation} from './affectExplanations';
+import {affectFactorLanguageCoverageV2} from './affectFactorLanguageCoverageV2';
+export function AffectFactorLanguageCoveragePanel({card}:{card:AffectExplanation}){
+ try{const report=affectFactorLanguageCoverageV2(card);
+  return <section aria-label="AFFECT factor language coverage"><h5>Factor language coverage</h5><p>{report.scope}</p><p>{report.rows.length} recorded raw sources. Presence explanations do not certify full factor language.</p>{report.rows.map(row=><details key={row.sourceIndex}><summary>Source {row.sourceIndex+1} · {row.role} · {row.links.length?row.links.map(l=>l.status).join('; '):row.status}</summary><p>Exact signed raw strength: {row.raw}</p>{row.links.map(link=><div key={link.nucleus}><h6>Nucleus {link.nucleus+1} · {link.concept}</h6><p>{link.option} · {link.polarity} · effective magnitude {link.effective}</p><p>Goal presence: {link.goalSentence}</p><p>Relative pull: {link.relativeSentence}</p><p>Component presence: {link.componentSentence??'No separate component sentence admitted for this source.'}</p></div>)}<details><summary>Exact source key</summary><pre className="exact">{row.key}</pre></details></details>)}<details><summary>Exact factor-language coverage report</summary><pre className="exact" data-affect-factor-language>{JSON.stringify(report,null,2)}</pre></details></section>;
+ }catch(error){return <p role="alert">Factor language coverage withheld: {String(error)}</p>;}
+}
