@@ -1,0 +1,155 @@
+{
+  "program": "alias49",
+  "snapshots": [
+    {
+      "prefix": 0,
+      "saveHash": "5ba03331f48464426ab7fceb6020b8a75d775da5164d952de6ec251632c3f82f",
+      "modelHash": "99c1ec88d9a49320f455a505bfc499f665ee5a878adc81d7b48d6bf1fe1b4030",
+      "runHash": "82c0220bc5f3a9dd3ae936fb5e2d471351cc9e94528332edb5ca459cddc24ea4",
+      "stateHash": "80e640888a1ffb6a42a203f611147f5ab4555b426145ead78dbc38fd655f13aa",
+      "outputsHash": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "traceHash": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "fields": [
+        {
+          "path": "0a8c0101030101028c0202010201030107010a8e01010101010be80705196f627365727665722f656d626f646965642d7375626a656374",
+          "root": "268",
+          "exact": "{\n  \"record\": \"CharacterObserverBindingValue#267/1\",\n  \"CharacterId [1]\": {\n    \"namespace\": \"1002\",\n    \"identity\": {\n      \"namespace\": \"1037\",\n      \"identity\": {\n        \"namespace\": \"1038\",\n        \"identity\": \"character/embodied-subject\"\n      }\n    }\n  }\n}"
+        },
+        {
+          "path": "0a8c010103010102c70302010201030107010a8e01010101010bea070b8d080b8e08051a6368617261637465722f656d626f646965642d7375626a656374",
+          "root": "455",
+          "exact": "{\n  \"record\": \"ReserveAnchor#454/1\",\n  \"AmountAtAnchor [1]\": \"50/1\",\n  \"AnchorInstant [2]\": \"0\"\n}"
+        }
+      ],
+      "timeline": []
+    },
+    {
+      "prefix": 1,
+      "saveHash": "1f5ec245683c88bb66bc5bf42139dc944b4c05b8d598dcefa9dcbbe308cef27c",
+      "modelHash": "99c1ec88d9a49320f455a505bfc499f665ee5a878adc81d7b48d6bf1fe1b4030",
+      "runHash": "82c0220bc5f3a9dd3ae936fb5e2d471351cc9e94528332edb5ca459cddc24ea4",
+      "stateHash": "80e640888a1ffb6a42a203f611147f5ab4555b426145ead78dbc38fd655f13aa",
+      "outputsHash": "1da95d562cb6bb1d61211efd49c9136b08f6f11a95aa74d04116893279153366",
+      "traceHash": "1b0136a62b3bf4f3b0c45b18e0fbce84de075d23388fe8ee03f4687784cb9df0",
+      "fields": [
+        {
+          "path": "0a8c0101030101028c0202010201030107010a8e01010101010be80705196f627365727665722f656d626f646965642d7375626a656374",
+          "root": "268",
+          "exact": "{\n  \"record\": \"CharacterObserverBindingValue#267/1\",\n  \"CharacterId [1]\": {\n    \"namespace\": \"1002\",\n    \"identity\": {\n      \"namespace\": \"1037\",\n      \"identity\": {\n        \"namespace\": \"1038\",\n        \"identity\": \"character/embodied-subject\"\n      }\n    }\n  }\n}"
+        },
+        {
+          "path": "0a8c010103010102c70302010201030107010a8e01010101010bea070b8d080b8e08051a6368617261637465722f656d626f646965642d7375626a656374",
+          "root": "455",
+          "exact": "{\n  \"record\": \"ReserveAnchor#454/1\",\n  \"AmountAtAnchor [1]\": \"50/1\",\n  \"AnchorInstant [2]\": \"0\"\n}"
+        }
+      ],
+      "timeline": [
+        {
+          "id": "0",
+          "instant": "1",
+          "phase": "10",
+          "stage": "embodied-level-sample",
+          "parents": [],
+          "reads": [
+            {
+              "path": "0a8c0101030101028c0202010201030107010a8e01010101010be80705196f627365727665722f656d626f646965642d7375626a656374",
+              "label": "{\n  \"record\": \"StatePath#140/1\",\n  \"RootStateTypeId [1]\": \"268\",\n  \"FieldId [2]\": \"1\",\n  \"Selectors [3]\": [\n    {\n      \"record\": \"CanonicalMapKeySelector#142/1\",\n      \"CanonicalMapKey [1]\": {\n        \"namespace\": \"1000\",\n        \"identity\": \"observer/embodied-subject\"\n      }\n    }\n  ]\n}",
+              "exact": "{\n  \"namespace\": \"1002\",\n  \"identity\": {\n    \"namespace\": \"1037\",\n    \"identity\": {\n      \"namespace\": \"1038\",\n      \"identity\": \"character/embodied-subject\"\n    }\n  }\n}"
+            },
+            {
+              "path": "0a8c010103010102c70302010201030107010a8e01010101010bea070b8d080b8e08051a6368617261637465722f656d626f646965642d7375626a656374",
+              "label": "{\n  \"record\": \"StatePath#140/1\",\n  \"RootStateTypeId [1]\": \"455\",\n  \"FieldId [2]\": \"1\",\n  \"Selectors [3]\": [\n    {\n      \"record\": \"CanonicalMapKeySelector#142/1\",\n      \"CanonicalMapKey [1]\": {\n        \"namespace\": \"1002\",\n        \"identity\": {\n          \"namespace\": \"1037\",\n          \"identity\": {\n            \"namespace\": \"1038\",\n            \"identity\": \"character/embodied-subject\"\n          }\n        }\n      }\n    }\n  ]\n}",
+              "exact": "{\n  \"record\": \"ReserveAnchor#454/1\",\n  \"AmountAtAnchor [1]\": \"50/1\",\n  \"AnchorInstant [2]\": \"0\"\n}"
+            }
+          ],
+          "diffs": [],
+          "input": "{\n  \"record\": \"LevelSamplingOpportunity#459/1\",\n  \"ObserverId [1]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/embodied-subject\"\n  },\n  \"ChannelDefinitionId [2]\": {\n    \"namespace\": \"1027\",\n    \"identity\": \"definition/embodied-level-channel\"\n  }\n}",
+          "output": "[\n  {\n    \"record\": \"EmbodiedLevelObservation#461/1\",\n    \"ObservationId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"0\"\n    },\n    \"ObserverId [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/embodied-subject\"\n    },\n    \"ObservationChannelId [3]\": {\n      \"namespace\": \"1005\",\n      \"identity\": \"channel/embodied-fuel-level\"\n    },\n    \"OccurredAt [4]\": \"1\",\n    \"FiniteLevelInterval [5]\": {\n      \"record\": \"FiniteLevelInterval#462/1\",\n      \"Lower [1]\": \"40/1\",\n      \"Upper [2]\": \"60/1\"\n    },\n    \"TransformationVersion [6]\": \"embodied-level-observation/0.1-candidate\"\n  }\n]",
+          "draws": "[]",
+          "quantization": "[\n  {\n    \"record\": \"LevelBinQuantization#484/1\",\n    \"InputLevel [1]\": \"49/1\",\n    \"Capacity [2]\": \"100/1\",\n    \"BinWidth [3]\": \"20/1\",\n    \"BinIndex [4]\": \"2\"\n  }\n]"
+        },
+        {
+          "id": "1",
+          "instant": "1",
+          "phase": "11",
+          "stage": "embodied-level-tracking-slot",
+          "parents": [
+            "0"
+          ],
+          "reads": [],
+          "diffs": [],
+          "input": "{\n  \"record\": \"LevelChainCarrier#482/1\",\n  \"VariantTag [1]\": \"1\",\n  \"Sample [2]\": {\n    \"record\": \"EmbodiedLevelObservation#461/1\",\n    \"ObservationId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"0\"\n    },\n    \"ObserverId [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/embodied-subject\"\n    },\n    \"ObservationChannelId [3]\": {\n      \"namespace\": \"1005\",\n      \"identity\": \"channel/embodied-fuel-level\"\n    },\n    \"OccurredAt [4]\": \"1\",\n    \"FiniteLevelInterval [5]\": {\n      \"record\": \"FiniteLevelInterval#462/1\",\n      \"Lower [1]\": \"40/1\",\n      \"Upper [2]\": \"60/1\"\n    },\n    \"TransformationVersion [6]\": \"embodied-level-observation/0.1-candidate\"\n  },\n  \"ReservedExperienceId [3]\": {\n    \"namespace\": \"1106\",\n    \"identity\": \"1\"\n  }\n}",
+          "output": "[]",
+          "draws": "[]",
+          "quantization": "[]"
+        },
+        {
+          "id": "2",
+          "instant": "1",
+          "phase": "12",
+          "stage": "embodied-level-binding-slot",
+          "parents": [
+            "1"
+          ],
+          "reads": [],
+          "diffs": [],
+          "input": "{\n  \"record\": \"LevelChainCarrier#482/1\",\n  \"VariantTag [1]\": \"1\",\n  \"Sample [2]\": {\n    \"record\": \"EmbodiedLevelObservation#461/1\",\n    \"ObservationId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"0\"\n    },\n    \"ObserverId [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/embodied-subject\"\n    },\n    \"ObservationChannelId [3]\": {\n      \"namespace\": \"1005\",\n      \"identity\": \"channel/embodied-fuel-level\"\n    },\n    \"OccurredAt [4]\": \"1\",\n    \"FiniteLevelInterval [5]\": {\n      \"record\": \"FiniteLevelInterval#462/1\",\n      \"Lower [1]\": \"40/1\",\n      \"Upper [2]\": \"60/1\"\n    },\n    \"TransformationVersion [6]\": \"embodied-level-observation/0.1-candidate\"\n  },\n  \"ReservedExperienceId [3]\": {\n    \"namespace\": \"1106\",\n    \"identity\": \"1\"\n  }\n}",
+          "output": "[]",
+          "draws": "[]",
+          "quantization": "[]"
+        },
+        {
+          "id": "3",
+          "instant": "1",
+          "phase": "13",
+          "stage": "embodied-level-classification-slot",
+          "parents": [
+            "2"
+          ],
+          "reads": [],
+          "diffs": [],
+          "input": "{\n  \"record\": \"LevelChainCarrier#482/1\",\n  \"VariantTag [1]\": \"1\",\n  \"Sample [2]\": {\n    \"record\": \"EmbodiedLevelObservation#461/1\",\n    \"ObservationId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"0\"\n    },\n    \"ObserverId [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/embodied-subject\"\n    },\n    \"ObservationChannelId [3]\": {\n      \"namespace\": \"1005\",\n      \"identity\": \"channel/embodied-fuel-level\"\n    },\n    \"OccurredAt [4]\": \"1\",\n    \"FiniteLevelInterval [5]\": {\n      \"record\": \"FiniteLevelInterval#462/1\",\n      \"Lower [1]\": \"40/1\",\n      \"Upper [2]\": \"60/1\"\n    },\n    \"TransformationVersion [6]\": \"embodied-level-observation/0.1-candidate\"\n  },\n  \"ReservedExperienceId [3]\": {\n    \"namespace\": \"1106\",\n    \"identity\": \"1\"\n  }\n}",
+          "output": "[]",
+          "draws": "[]",
+          "quantization": "[]"
+        },
+        {
+          "id": "4",
+          "instant": "1",
+          "phase": "14",
+          "stage": "embodied-level-settlement",
+          "parents": [
+            "3"
+          ],
+          "reads": [],
+          "diffs": [],
+          "input": "{\n  \"record\": \"LevelChainCarrier#482/1\",\n  \"VariantTag [1]\": \"1\",\n  \"Sample [2]\": {\n    \"record\": \"EmbodiedLevelObservation#461/1\",\n    \"ObservationId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"0\"\n    },\n    \"ObserverId [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/embodied-subject\"\n    },\n    \"ObservationChannelId [3]\": {\n      \"namespace\": \"1005\",\n      \"identity\": \"channel/embodied-fuel-level\"\n    },\n    \"OccurredAt [4]\": \"1\",\n    \"FiniteLevelInterval [5]\": {\n      \"record\": \"FiniteLevelInterval#462/1\",\n      \"Lower [1]\": \"40/1\",\n      \"Upper [2]\": \"60/1\"\n    },\n    \"TransformationVersion [6]\": \"embodied-level-observation/0.1-candidate\"\n  },\n  \"ReservedExperienceId [3]\": {\n    \"namespace\": \"1106\",\n    \"identity\": \"1\"\n  }\n}",
+          "output": "[\n  {\n    \"record\": \"PreRecognitionSemanticExperience#227/1\",\n    \"ExperienceId [1]\": {\n      \"namespace\": \"1106\",\n      \"identity\": \"1\"\n    },\n    \"ObserverId [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/embodied-subject\"\n    },\n    \"OccurredAt [3]\": \"1\",\n    \"PerceptualEventReferentIds [4]\": [],\n    \"PerceivedBindings [5]\": [],\n    \"PerceptualClassifications [6]\": [],\n    \"PerceptualEventClassifications [7]\": [],\n    \"SupportingObservationIds [8]\": [\n      {\n        \"record\": \"SupportingObservationId#216/1\",\n        \"ObserverId [1]\": {\n          \"namespace\": \"1000\",\n          \"identity\": \"observer/embodied-subject\"\n        },\n        \"ObservationId [2]\": {\n          \"namespace\": \"1115\",\n          \"identity\": \"0\"\n        }\n      }\n    ],\n    \"TransformationVersion [9]\": \"semantic-binding/0.1-candidate#SEM-001H\"\n  }\n]",
+          "draws": "[]",
+          "quantization": "[]"
+        },
+        {
+          "id": "5",
+          "instant": "1",
+          "phase": "60",
+          "stage": "embodied-pressure-present",
+          "parents": [
+            "4"
+          ],
+          "reads": [
+            {
+              "path": "0a8c0101030101028c0202010201030107010a8e01010101010be80705196f627365727665722f656d626f646965642d7375626a656374",
+              "label": "{\n  \"record\": \"StatePath#140/1\",\n  \"RootStateTypeId [1]\": \"268\",\n  \"FieldId [2]\": \"1\",\n  \"Selectors [3]\": [\n    {\n      \"record\": \"CanonicalMapKeySelector#142/1\",\n      \"CanonicalMapKey [1]\": {\n        \"namespace\": \"1000\",\n        \"identity\": \"observer/embodied-subject\"\n      }\n    }\n  ]\n}",
+              "exact": "{\n  \"namespace\": \"1002\",\n  \"identity\": {\n    \"namespace\": \"1037\",\n    \"identity\": {\n      \"namespace\": \"1038\",\n      \"identity\": \"character/embodied-subject\"\n    }\n  }\n}"
+            }
+          ],
+          "diffs": [],
+          "input": "{\n  \"record\": \"EmbodiedLevelObservation#461/1\",\n  \"ObservationId [1]\": {\n    \"namespace\": \"1115\",\n    \"identity\": \"0\"\n  },\n  \"ObserverId [2]\": {\n    \"namespace\": \"1000\",\n    \"identity\": \"observer/embodied-subject\"\n  },\n  \"ObservationChannelId [3]\": {\n    \"namespace\": \"1005\",\n    \"identity\": \"channel/embodied-fuel-level\"\n  },\n  \"OccurredAt [4]\": \"1\",\n  \"FiniteLevelInterval [5]\": {\n    \"record\": \"FiniteLevelInterval#462/1\",\n    \"Lower [1]\": \"40/1\",\n    \"Upper [2]\": \"60/1\"\n  },\n  \"TransformationVersion [6]\": \"embodied-level-observation/0.1-candidate\"\n}",
+          "output": "[\n  {\n    \"record\": \"EmbodiedPressureOutput#464/1\",\n    \"PressureOccurrenceId [1]\": {\n      \"namespace\": \"1142\",\n      \"identity\": \"2\"\n    },\n    \"CharacterId [2]\": {\n      \"namespace\": \"1002\",\n      \"identity\": {\n        \"namespace\": \"1037\",\n        \"identity\": {\n          \"namespace\": \"1038\",\n          \"identity\": \"character/embodied-subject\"\n        }\n      }\n    },\n    \"Sample [3]\": {\n      \"record\": \"EmbodiedLevelObservation#461/1\",\n      \"ObservationId [1]\": {\n        \"namespace\": \"1115\",\n        \"identity\": \"0\"\n      },\n      \"ObserverId [2]\": {\n        \"namespace\": \"1000\",\n        \"identity\": \"observer/embodied-subject\"\n      },\n      \"ObservationChannelId [3]\": {\n        \"namespace\": \"1005\",\n        \"identity\": \"channel/embodied-fuel-level\"\n      },\n      \"OccurredAt [4]\": \"1\",\n      \"FiniteLevelInterval [5]\": {\n        \"record\": \"FiniteLevelInterval#462/1\",\n        \"Lower [1]\": \"40/1\",\n        \"Upper [2]\": \"60/1\"\n      },\n      \"TransformationVersion [6]\": \"embodied-level-observation/0.1-candidate\"\n    },\n    \"PressureResult [4]\": {\n      \"record\": \"PressureResult#481/1\",\n      \"VariantTag [1]\": \"1\",\n      \"Value [2]\": \"0/1\"\n    },\n    \"TransformationVersion [5]\": \"embodied-pressure/0.1-candidate\"\n  }\n]",
+          "draws": "[]",
+          "quantization": "[]"
+        }
+      ]
+    }
+  ]
+}

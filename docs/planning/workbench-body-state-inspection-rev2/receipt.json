@@ -1,0 +1,159 @@
+{
+  "status": "PASS BODY STATE INSPECTION",
+  "sources": [
+    {
+      "path": "src/workbench/BodyWorkbench.tsx",
+      "copy": "docs/planning/workbench-body-state-inspection-rev2/sources/src/workbench/BodyWorkbench.tsx",
+      "sha256": "14bc3a0473f2e21345c82afba2b7fe2b196752e0696efcacf26868e5e54daafc"
+    },
+    {
+      "path": "src/workbench/bodyAdapter.ts",
+      "copy": "docs/planning/workbench-body-state-inspection-rev2/sources/src/workbench/bodyAdapter.ts",
+      "sha256": "7fc83ddd89ca243d140291d3b4daaa86515e9b2d8cd733e7a692e6153654bb97"
+    },
+    {
+      "path": "src/workbench/bodyCatalog.json",
+      "copy": "docs/planning/workbench-body-state-inspection-rev2/sources/src/workbench/bodyCatalog.json",
+      "sha256": "7a2fa104719d2173e81641101db84c7e3d1e47540691435656f1e61d3be504ec"
+    },
+    {
+      "path": "src/workbench/nativeTimeline.ts",
+      "copy": "docs/planning/workbench-body-state-inspection-rev2/sources/src/workbench/nativeTimeline.ts",
+      "sha256": "ceed75f534e8158a2172ac962cab89aa9ffa5fcbaaf71e0d62347fd01a9c6775"
+    },
+    {
+      "path": "src/workbench/RecordedStateInspector.tsx",
+      "copy": "docs/planning/workbench-body-state-inspection-rev2/sources/src/workbench/RecordedStateInspector.tsx",
+      "sha256": "36728d81fd22c5ebc1e3d52272177384beb76f4b7a6231da0fdd99bd3c559f17"
+    },
+    {
+      "path": "src/workbench/recordedStateSearch.ts",
+      "copy": "docs/planning/workbench-body-state-inspection-rev2/sources/src/workbench/recordedStateSearch.ts",
+      "sha256": "324347ddde69dcd93c7dda614dbeb46f679e13b1617961d53ff3c482b37391f7"
+    },
+    {
+      "path": "src/workbench/EventStatePanel.tsx",
+      "copy": "docs/planning/workbench-body-state-inspection-rev2/sources/src/workbench/EventStatePanel.tsx",
+      "sha256": "f96ba9932b00af6ba4e34052bc264c254b4a3bfd26f49c41df7ab6e23731e75d"
+    },
+    {
+      "path": "scripts/check-body-state-inspection.mjs",
+      "copy": "docs/planning/workbench-body-state-inspection-rev2/sources/scripts/check-body-state-inspection.mjs",
+      "sha256": "201ca96c66ab15acb65787994e1ee5e255168397c228cc7a71bdf7ec9e4d3de4"
+    },
+    {
+      "path": "docs/planning/workbench-body-parity-rev1/receipt.json",
+      "copy": "docs/planning/workbench-body-state-inspection-rev2/sources/docs/planning/workbench-body-parity-rev1/receipt.json",
+      "sha256": "fde8553f05562e4a30664e1fd608249d97752474c6f93840fc8cd18730287ad5"
+    }
+  ],
+  "counts": {
+    "programs": 16,
+    "prefixes": 79,
+    "fields": 158,
+    "events": 402,
+    "reads": 201,
+    "mutations": 24,
+    "changes": 24,
+    "historicalEvents": 823
+  },
+  "results": [
+    {
+      "program": "baseline",
+      "path": "program-00.json",
+      "sha256": "c67f633e7851f50a133cfbe1a5266cbaa3d532797296bbc1cd7ab1588caf2cc9",
+      "prefixes": 7
+    },
+    {
+      "program": "slower",
+      "path": "program-01.json",
+      "sha256": "3e5bb9c2378e3cb9d63a40a6213cef815fe1fd1734aa4b366f4ac54035727570",
+      "prefixes": 7
+    },
+    {
+      "program": "coarser",
+      "path": "program-02.json",
+      "sha256": "a68f997f277ef480223534d9cd20b9a0050e89843e79ca969fea633ed7230244",
+      "prefixes": 7
+    },
+    {
+      "program": "hidden89",
+      "path": "program-03.json",
+      "sha256": "0671b0ca8ceda1293de305507270b5ac841c0b8feea11a4154ddb56f012bcc05",
+      "prefixes": 7
+    },
+    {
+      "program": "overflow",
+      "path": "program-04.json",
+      "sha256": "3603b1a0d1e7d952cdca78f5ba467379a63a54dbf0b63631e5d85c348e5dd497",
+      "prefixes": 7
+    },
+    {
+      "program": "denied",
+      "path": "program-05.json",
+      "sha256": "f221452246635ea699308f55e3073093167a60a283c5b4df4d134f54485144d9",
+      "prefixes": 7
+    },
+    {
+      "program": "unavailable",
+      "path": "program-06.json",
+      "sha256": "72bb0f52d807468bce5af331cca99fc314c924764d4faef48b59a6ea58d28afa",
+      "prefixes": 7
+    },
+    {
+      "program": "kinetic-fast",
+      "path": "program-07.json",
+      "sha256": "138c8a29c35ff882b387211f926049169cf7d8914c17222bcf6e37933c729d8b",
+      "prefixes": 5
+    },
+    {
+      "program": "kinetic-slow",
+      "path": "program-08.json",
+      "sha256": "9333e651be41cebfb7f6e8dd7e10a11c30da60b7a479db81b10f5ad5f015eea3",
+      "prefixes": 5
+    },
+    {
+      "program": "no-delivery",
+      "path": "program-09.json",
+      "sha256": "40625034824b5488a5a9505fd5f6f0803ce9831d1c0908c7809e54cfe0334a8c",
+      "prefixes": 5
+    },
+    {
+      "program": "alias41",
+      "path": "program-10.json",
+      "sha256": "ae6860e7c9d413e071631038af4cba7905da9634b5754791795ca611a56f6d6e",
+      "prefixes": 2
+    },
+    {
+      "program": "alias49",
+      "path": "program-11.json",
+      "sha256": "0e2c8b8e41d069ea26638fc2e1a9fa4e508196177fcb8a385eb8773e662c33a9",
+      "prefixes": 2
+    },
+    {
+      "program": "fine41",
+      "path": "program-12.json",
+      "sha256": "fc798c1d14cecd151259c36bc5a353be0e89a016d2362d99e5f81f16ba062ee2",
+      "prefixes": 2
+    },
+    {
+      "program": "depleted-refill",
+      "path": "program-13.json",
+      "sha256": "36194d79c4c1c398dd8dca31749d62a5cf1ee834542218349218e3167948f556",
+      "prefixes": 3
+    },
+    {
+      "program": "partitioned",
+      "path": "program-14.json",
+      "sha256": "e0505f22f31fbe0132105a8066793c9f7938b592469a09b9958b1dbefedddb2b",
+      "prefixes": 4
+    },
+    {
+      "program": "direct",
+      "path": "program-15.json",
+      "sha256": "24a08d0c27e89c16434897f4fcddcb58d46d5026c8079333ec9d67b8955c44be",
+      "prefixes": 2
+    }
+  ],
+  "scope": "All16 original programs/79 prefixes preserve native commitments under read-only state search and server rendering. Exact event read/before/after values and historical stability checked. Browser selection/filter/reset and broader accessibility remain separate. Researcher diagnostics do not confer character knowledge or causal necessity."
+}

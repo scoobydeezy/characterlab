@@ -52,6 +52,13 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 BODY state inspection:** Full16/79 native/search/render PASS158 fields,
+402 events/201 reads/24 changed records/823 history joins. Independent reconciliation
+and browser baseline0/6 exact six identities,state,event0/2,filters/fresh reset PASS.
+Rev1 script parse failure retained; accepted rev2. Start BODY_STATE_PROGRESS; retain
+tab51/4261 and mark all51 tabs each turn. Typecheck/build660/research/boundary PASS.
+General76981 last33/43 RUNNING;417-source hold remains. Pair43 last15/15 Working.
+
 **2026-10-23 MULTISOURCE state inspection:** Full62/249 native/render/search PASS:
 2177 field observations,1737 events,1341 reads,117 changed records/2433 history joins.
 Independent reconciliation PASS; source hold released. Corrected browser0/3 exact
