@@ -52,6 +52,16 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 V11 persistence batch:** ADAPT2/8 and DET2/18 admitted to shared native/
+worker/UI. Catalog1072/7310 preserves prior1068 unchanged. Transport2 tests plus8
+shared/regression tests,typecheck/build663 PASS. Native direct and independent
+reconciliation PASS4/26; browser both cohorts PASS52 displayed hashes/exact seeds/
+report previews and byte counts. Keep build warning re circular admittedInput export;
+bounded browser succeeds, no all-route/build-order claim. Start BATCH_V11_PROGRESS.
+Tab54/4264 preview70445 retained on DET report; mark all54 tabs each turn. All current
+checkout holds released. V10 native94573/full browser53, General52 and pair43 remain
+live. No full1072 execution, broader controls or Campaign4 entry acceptance inferred.
+
 **2026-10-23 V10 independent verifier:** preflight PASS1068 prior roles/7284 prefixes,
 450 frozen sources and11 corruption rejections; no fresh V10 acceptance inferred.
 Run scripts/verify-workbench-batch-v10.mjs after native94573 completes, before browser

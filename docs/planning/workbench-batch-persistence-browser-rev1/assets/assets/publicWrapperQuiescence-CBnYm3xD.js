@@ -1,0 +1,1 @@
+import{ak as o}from"./taskCodecs-Blr9R-0e.js";function c(e){let r=!1;const a=()=>{if(r)throw new o("RUN_NOT_ACTIVE","public wrapper is not quiescent")};async function s(t){a(),r=!0;try{return await(t?e.settleForConformance(t):e.settle())}finally{r=!1}}return{...e,settle:()=>s(),settleForConformance:t=>s(t),snapshot:()=>(a(),e.snapshot()),save:()=>(a(),e.save())}}export{c as g};
