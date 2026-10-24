@@ -1,0 +1,16 @@
+import catalog from './affectProfileSources.json';
+import {OPTIONS,TASKS} from '../campaign3/affectModel';
+import {readable} from './canonical';
+import {affectReasonSources} from './affectReasonSources';
+import type {AffectExplanation} from './affectExplanations';
+const stable=(v:unknown):string=>v===null||typeof v!=='object'?JSON.stringify(v):Array.isArray(v)?'['+v.map(stable).join(',')+']':'{'+Object.entries(v).sort(([a],[b])=>a<b?-1:a>b?1:0).map(([k,x])=>JSON.stringify(k)+':'+stable(x)).join(',')+'}';
+const options=OPTIONS.map(v=>stable(readable(v))),tasks=TASKS.map(v=>stable(readable(v)));
+/** Researcher provenance: model parameters and event-time appraisal values remain distinct from task state. */
+export function affectMagnitudeSources(card:AffectExplanation,modelHash:string){
+ const model=catalog.models.find(m=>m.modelHash===modelHash);if(!model)throw Error('Unknown AFFECT model identity');const sources=affectReasonSources(card),decision=JSON.parse(card.provenance),appraisal=decision['Reasons [3]']['Raw [2]']['Appraisal [2]'];if(appraisal?.record!=='AffectAppraisal#754/1'||appraisal['At [2]']!==card.at)throw Error('Invalid appraisal magnitude source');const coordinates=appraisal['Coordinates [6]'];if(!Array.isArray(coordinates))throw Error('Invalid appraisal coordinates');
+ const rows=sources.rows.map(row=>{const key=JSON.parse(row.key),task=tasks.indexOf(stable(key['TaskCommitmentKey [2]']));if(task<0||stable(key['CandidateKey [1]'])!==options[task])throw Error('Unsupported magnitude task/option correspondence');
+  if(row.role==='base'){const field=task===0?model.safety:model.obligation;if(row.strength!==field.value)throw Error('Base strength disagrees with original profile');return{sourceIndex:row.index,role:row.role,strength:row.strength,authority:'Model parameter',source:{record:model.record,field:field.field,exact:field.value,parametersHash:model.parametersHash},enablement:'Task adoption enables this base; task status does not supply its numeric magnitude.'};}
+  if(row.role!=='situational'||task!==0||!coordinates.length)throw Error('Unsupported situational magnitude source');const index=coordinates.length-1,exact=coordinates[index];if(typeof exact!=='string'||row.strength!==exact)throw Error('Situational strength disagrees with recorded coordinate');return{sourceIndex:row.index,role:row.role,strength:row.strength,authority:'Recorded derived appraisal',source:{record:'AffectAppraisal#754/1',field:'Coordinates [6]',index,exact,occurrence:appraisal['Occurrence [1]'],at:card.at},enablement:'The final recorded coordinate modifies the safety ground. A signal can remain uncovered when its base is inactive.'};
+ });
+ return{version:'affect-magnitude-source/0.1',audience:'researcher',modelHash,at:card.at,rows,scope:'Exact numeric origin for every emitted raw signal under the registered model. The owning run supplies the model identity; this projection does not independently authenticate its snapshot. Base parameters, task-adoption state and derived appraisal coordinates have distinct authority. This does not reconstruct the entire appraisal computation, establish prior adoption history, imply observer awareness or prove causal necessity.'};
+}

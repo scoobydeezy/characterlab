@@ -1,0 +1,7 @@
+import {affectAppraisalCarrySources} from './affectAppraisalCarrySources';
+import type {AffectExplanation} from './affectExplanations';
+import type {TimelineEvent} from './contracts';
+export function AffectAppraisalCarryPanel({card,events,modelHash,onSelect}:{card:AffectExplanation;events:readonly TimelineEvent[];modelHash:string;onSelect:(id:string)=>void}){
+ let r:ReturnType<typeof affectAppraisalCarrySources>;try{r=affectAppraisalCarrySources(events,card,modelHash);}catch(error){return <p role="alert">Earlier appraisal sources withheld: {String(error)}</p>;}
+ return <section aria-label="AFFECT earlier committed sources"><h4>Latest completed context and affect</h4><p>{r.scope}</p>{r.context?<p>Context from completed instant {r.context.instant}. <button onClick={()=>onSelect(r.context!.eventId)}>Inspect selected context event {r.context.eventId}</button></p>:<p>No earlier completed frozen context is recorded.</p>}{r.prior?<p>Most recent known affect is from instant {r.prior.instant}; {r.prior.used?'used for feedback':'feedback disabled; not used'}. <button onClick={()=>onSelect(r.prior!.eventId)}>Inspect prior known appraisal event {r.prior.eventId}</button></p>:<p>No earlier known affect is recorded.</p>}<details><summary>Exact earlier-source selection and trace limitation</summary><pre className="exact" data-affect-appraisal-carry-sources>{JSON.stringify(r,null,2)}</pre></details></section>;
+}

@@ -52,6 +52,22 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 connected demonstration:** One obligation/0 browser session now passes
+all16 §32 steps in bounded scope. Initial named character, slider1/10->10, same-state
+A/B, state vectors, semantic Timeline, first chosen-action divergence3, exact diff,
+reason/semantic/evaluation/raw task-read/parent chain, historical stability, canonical
+Architecture, full clipboard summary and checkpoint1->terminal10 replay verified.
+Native22 prefixes and all browser identities/reports exact. See
+workbench-affect-integrated-demo-rev1/step-review.json. This is NOT Campaign4 entry:
+complete factor language/strength/certainty, ancestry/trace disposition, full corpus
+and specialized/architecture requirements remain. Parser CRLF failure preserved.
+Tab39/4249 retained; mark all39 tabs. Research4318/boundary/size PASS.
+Stored-belief66314 COMPLETE105/1436/4308 cells:2019 present/2289 absent/162 zero;
+368 mutation revisions/3522 history checks. Independent verification PASS280 sources;
+release stored-state-only hold, retain paged166 overlaps. See belief-state-corpus-rev1.
+Paged23320 last12/15 prefix17 LIVE; packed29 last15/15 Working.
+
+
 **2026-10-23 shared semantic Timeline:** AFFECT standalone and retained pair use
 version0.1 operation labels with original order, exact event state and causal-history
 controls. Physical outcomes/observations distinct; appraisal ingress limitation shown.

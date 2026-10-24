@@ -1,0 +1,9 @@
+import {useState} from 'react';
+import {affectPlayerReasonPreview,affectPreviewRecipient,AFFECT_PLAYER_PREVIEW_POLICY} from './affectPlayerReasonPreview';
+import {affectReasonSemantics} from './affectReasonSemantics';
+import type {AffectExplanation} from './affectExplanations';
+export function AffectPlayerReasonPreviewPanel({card}:{card:AffectExplanation}){
+ const [selected,setSelected]=useState<number|null>(null);let report:ReturnType<typeof affectPlayerReasonPreview>;try{report=affectPlayerReasonPreview(card,affectPreviewRecipient(),AFFECT_PLAYER_PREVIEW_POLICY);}catch(error){return <p role="alert">Player-readable preview withheld: {String(error)}</p>;}
+ const detail=selected===null?null:affectReasonSemantics(card).reasons.find(r=>r.nucleus===selected);
+ return <section aria-label="AFFECT reason presentation inspection"><section aria-label="AFFECT player-readable preview"><h4>Player-readable preview: own goals</h4><p>{report.scope}</p>{report.reasons.length?<ul>{report.reasons.map(r=><li key={r.nucleus}>{r.human}</li>)}</ul>:<p>No admitted reason sentence is available.</p>}<details><summary>Preview semantics</summary><pre className="exact" data-affect-player-preview>{JSON.stringify(report,null,2)}</pre></details></section><section aria-label="AFFECT preview researcher links"><h5>Researcher inspection</h5><p>These controls and exact mechanics are outside the player-readable preview.</p>{report.reasons.map(r=><button key={r.nucleus} onClick={()=>setSelected(r.nucleus)}>Inspect preview reason {r.nucleus+1}</button>)}{detail&&<><p>Reason {detail.nucleus+1}: source rows {detail.sourceIndices.map(i=>i+1).join(', ')} in the accounting below. Raw-event and state-history controls remain in this decision.</p><pre className="exact" data-affect-player-preview-link>{JSON.stringify(detail,null,2)}</pre></>}</section></section>;
+}

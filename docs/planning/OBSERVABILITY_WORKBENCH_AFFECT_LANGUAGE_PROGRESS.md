@@ -932,3 +932,51 @@ and assess each numbered step from exact evidence; disconnected prior checks do 
 prove that gate. Full corpus, complete factor language, provenance/trace disposition
 and full entry remain open. Stored66314 last33/105, paged23320 last12/15 prefix12,
 packed29 last15/15 Working. Mark all38 browser tabs every turn.
+
+## 2026-10-23 — one connected section32 demonstration
+
+The original16 numbered requirements were extracted from the authoritative brief and
+assessed individually against a single browser experiment, obligation/0. See
+workbench-affect-integrated-demo-rev1/step-review.json and verification.json. Named
+choice-0-0.1 initial state was inspected; slider B changed1/10->10; fresh original A/B
+models share initial state/calendar/seed. Both branches ran to their native terminal10.
+Current belief vectors and mutation charts were inspected at0/3/10. Native22 prefixes
+independently establish exact event/report/state/summary correspondence.
+
+The first differing chosen action is3, the bounded semantic divergence metric, not
+a general psychological significance or necessity claim. Semantic Timeline and apply58
+before/after were inspected. An admitted own-goal sentence was expanded through its
+registered semantic nucleus, compiled evaluation/die, contributing raw signals, exact
+task reads and recorded parent history. It conveys no intensity/certainty; this does
+not qualify complete player language. The earlier preview, semantic, factor and task
+reports remain exactly unchanged after native belief state changes. Architecture
+inspection maps five paths to two existing boxes. Full8610-character comparison
+summary copied through UI and equals native summary. Checkpoint1 restored and both
+terminal10 branches reproduced with exact identities/state and identical summary text.
+No downloaded checkpoint or file-export transport claim.
+
+LOCAL DISPOSITION: accept one bounded §32 connected demonstration. This is distinct
+from §33/34 Workbench entry acceptance, which remains open. The actual16-step review
+retains scope limits for starting-state inspection, selected-choice divergence, own-
+goal preview and two-box participation. Full factor language/strength/certainty,
+learning ancestry, RO-C3-011 trace disposition, all corpus/successor requirements and
+specialized/architecture qualification remain. All18 conditional obligations survive.
+
+Initial nested browser locator corrected; checkpoint Ready observation timed out but
+subsequent live status confirmed completed restore, no restart. Requirement parser
+first assumed LF and extracted only1 requirement from CRLF brief; failed source and
+correction retained. Corrected parser assessed all16. Source freeze326 plus171 built
+asset hashes, native/browser reports and screenshots retained. Tab39/4249 remains;
+mark all39 tabs. Research4318/boundary checks PASS; no native source changes.
+
+## 2026-10-23 — full stored-belief corpus accepted
+
+Native audit66314 COMPLETE105 programs/1436 prefixes/4308 current cells:2019 present,
+2289 absent,162 known zero.368 distinct mutation revisions/3522 historical rechecks.
+Original state/save/output identities, initial/diff/final state joins and immutable
+history PASS. Independent artifact/order/prefix/count/history reconciliation and all
+280 frozen sources/copies PASS. See workbench-affect-belief-state-corpus-rev1/
+verification.json. The verifier does not independently re-execute the writer's native
+state joins. Release this completed source hold only; paged diagnostics166 overlaps
+remain held. No stored emotion-state or learning ancestry claim is added.
+Paged23320 last12/15 prefix17 LIVE; packed29 last15/15 Working.

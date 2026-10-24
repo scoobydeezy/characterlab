@@ -1,0 +1,5 @@
+{
+  "error": "AssertionError: extracted1 requirement, expected16",
+  "cause": "Section extraction regex assumed LF blank lines; original brief uses CRLF. Original source/evidence unchanged.",
+  "correction": "Normalize line endings only in the parser input, retain original brief hash."
+}
