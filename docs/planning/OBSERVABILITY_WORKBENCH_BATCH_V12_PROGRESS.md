@@ -187,3 +187,14 @@ No frozen source hold is created. The pending qualification sequence above remai
 At this observation the live V10 native session94573 reached880/1068; browser53
 reached469/1068 roles and3186 prefixes, with no alerts. Disposition43 is still A18/B18
 Working with no alerts and Restore disabled. All55 tabs retained for continuation.
+
+## Static reference boundary check
+
+On commit0e1bb603, `npm run check:boundaries` PASS for the prepared shared integration.
+This parses active-source import/export/require declarations and rejects imports into
+reference/. It performs no simulation execution and establishes no runtime or browser
+parity. Native tests, TypeScript, build, fresh shared audit, browser and research checks
+remain pending. A read-only review of the packed replay/worker path did not identify
+a concrete defect explaining the live wait; it provides no terminal acceptance.
+Disposition43 still reports A18/B18 Working with no alerts. Browser53 has advanced to
+478/1068 roles and3283 prefixes; native94573 remains live, last emitted900/1068.
