@@ -1133,3 +1133,16 @@ It does not independently rerun diagnostic bodies. Do not run before native23320
 terminates; last confirmed13/15 prefix16 RUNNING. Packed browser29 remains17/17 Working.
 All41 tabs retained. LOCAL DISPOSITION preserves original semantics and all18
 conditional obligations. Remaining full-entry obligations are unchanged.
+
+## 2026-10-23 — distinguish comparison disclosures
+
+Stored-state comparison disclosure summaries and branch last-write buttons now include
+the selected row's ordinal. Two different canonical paths with an identical abbreviated
+prefix no longer have identical visible labels. Full canonical paths remain inside
+each disclosure; ordinals are local to the selected row, not persistent state IDs.
+Native hidden-world prefix0 report/values remain exact and unchanged after keyboard
+Tab from select to path1, Enter, Tab to path2, Enter. Two unique labels verified.
+See workbench-affect-comparison-labels-rev1. Later write-button activation and broader
+accessibility are not claimed by this bounded check. TypeScript/build649 modules
+(temp650), research4318 and boundary checks PASS. Tab42/4252 retained, preview55683;
+mark all42 tabs. No native semantics, research verdict or obligation status changed.

@@ -52,6 +52,19 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 terminal restore failure retained:** Packed tab29/4240 reached18/18;
+original comparison/ten hashes/choice/history and retained prefix1 PASS. Compressed
+terminal capture PASS A44252262/B48814745 native ->829195/883498 bytes. Restore once
+then browser CRASHED; no post-restore identity. See paired-horizon-rev2 failure record
+and DISPOSITION_RESOURCE_PROGRESS. Terminal restore gate UNSATISFIED. Do not restart
+unchanged run. Old/new worker residency and full hex reconstruction need investigation;
+no measured cause. Concurrent build650 noted. Native23320 last14/15 prefix2 LIVE166hold.
+AFFECT disclosure labels now unique by row ordinal; native initial report and keyboard
+Tab/Enter PASS, typecheck/build649/research/boundary PASS. See comparison-labels-rev1.
+Retain new tab42/4252; mark all42 tabs, including crashed11/29 without reading handles.
+Full Workbench goal active; no law or conditional obligation retired.
+
+
 **2026-10-23 full comparison qualification:** Native8325 COMPLETE16 declared AFFECT
 pairs/200 paired prefixes; independent282-source/original-identity reconciliation PASS.
 1175 historical checks/2388 recorded-write links; two terminal differing pairs:

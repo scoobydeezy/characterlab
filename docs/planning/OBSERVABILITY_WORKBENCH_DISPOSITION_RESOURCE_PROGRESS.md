@@ -630,3 +630,33 @@ verify retained prefix1 diagnostic/stale source, then compressed checkpoint18 an
 restore18. Do not claim terminal success until check-disposition-packed-horizon
 passes. No new current-source hold; immutable build/copies bind this browser run.
 All18 conditional obligations survive; integrated entry/resource gates remain.
+
+## 2026-10-23 — packed terminal capture passed; restore crashed
+
+Retained tab29/4240 reached A18/B18 Complete. sample-18.json passes the original
+native oracle for exact comparison, all ten identities and complete choice rows.
+Pre-restore scalar histories and both source save hashes match the original terminal
+oracle. The prefix1 diagnostic remains byte-identical and its source button disabled.
+terminal.png captures the complete status. browser-pre-restore.json and
+browser-checkpoint-captured.json preserve the reports before restoration.
+
+Sequential compressed terminal capture SUCCEEDED: native A44,252,262/B48,814,745
+bytes; compressed A829,195/B883,498 bytes. These are reported save/Blob counts,
+not heap measurements. Restore was requested once. A Complete-status observation
+expired while subsequent live reads remained Working; no repeated request was made.
+The browser then reported This page crashed, confirmed by inventory. No restored
+identities were obtained. checkpoint-restore-failure.json retains the failure and
+inventory. The terminal-plus-restore gate remains UNSATISFIED; do not create the
+final receipt or treat prior bounded restore1 evidence as terminal acceptance.
+
+Source review: DispositionPagedPairInspector awaits Client.restorePacked before
+install disposes the previous client. Thus the old two-branch worker remains while
+a new worker restores both branches. unpackDispositionCheckpoint accumulates full
+hex chunks and joins them before native restore. Compression addresses transport
+size; it does not eliminate those restoration representations or old/new residency.
+These are code-level lifetime observations, not a measured crash cause. A TypeScript/
+build650 process ran concurrently near the final crash observation; this confound
+is preserved. Do not retry the unchanged long run or attribute the crash to one cause.
+Next investigate native restore representation/lifetime and old-worker residency,
+retaining transactional failure behavior and exact hashes before another terminal
+browser attempt. Live native23320 continues; its166 sources remain held.
