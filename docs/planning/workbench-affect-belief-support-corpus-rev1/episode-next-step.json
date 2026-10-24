@@ -1,0 +1,36 @@
+{
+  "status": "BOUNDED ORIGINAL EPISODE CHAIN IDENTIFIED",
+  "source": {
+    "path": "docs/planning/workbench-affect-appraisal-reads-rev1/baseline.json",
+    "sha256": "2de4ffa29f2c5820fdfa242c8228056990c1b1d9fbc9d932419c10816b73eeaf"
+  },
+  "apply": "60",
+  "evidence": "59",
+  "orderedEpisodeBasis": [
+    {
+      "instant": "1",
+      "freeze": "32",
+      "track": "31",
+      "observe": "30"
+    },
+    {
+      "instant": "2",
+      "freeze": "45",
+      "track": "44",
+      "observe": "43"
+    },
+    {
+      "instant": "3",
+      "freeze": "58",
+      "track": "57",
+      "observe": "56"
+    }
+  ],
+  "checks": [
+    "Apply input exactly equals evidence top-level output and names its parent",
+    "Each episode item exactly equals a freeze top-level output",
+    "Frozen observation equals track top-level output; freeze parent names track",
+    "Track input equals observe top-level output; track parent names observe"
+  ],
+  "next": "Implement historical conditional-episode source inspector; distinguish Current from ordered EpisodeBasis and preserve missing/ambiguous joins. No completed UI or full ancestry claim."
+}

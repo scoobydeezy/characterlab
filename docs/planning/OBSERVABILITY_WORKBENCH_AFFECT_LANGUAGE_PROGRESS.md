@@ -1178,3 +1178,34 @@ experience/conditional-episode ancestry remain due, as do player strength/certai
 language and full entry. No missing source is resolved by assumption. All18 conditional
 obligations survive. Corrected Disposition43 now5/5 Working; native23320 last14/15
 prefix16. Mark all44 tabs, retaining crashed11/29 without inspecting stale handles.
+
+## 2026-10-23 — full support corpus launched
+
+Native45578 RUNNING across all105 original programs/1436 prefixes. It checks exact
+original state/save/output identities at every prefix, all registered belief revisions,
+application/observation top-level output joins and chronology, historical support
+stability and input immutability. Unavailable/multiple joins are counted explicitly;
+no general uniqueness is presumed. The first9 programs/135 prefixes are bound by
+checkpoint-001. This is not terminal qualification and does not claim positive support
+coverage for these initial factor programs. Earlier bounded positive cases remain.
+
+NEW283-source hold: workbench-affect-belief-support-corpus-rev1/freeze.json. Do not
+modify these sources until terminal receipt and independent verification pass.
+verify-affect-belief-support-corpus.mjs is prepared and syntax checked; only run after
+receipt.json exists. It separately reconciles frozen/source/artifact hashes, original
+order/identities, status consistency, exact sample fields and historical rows/counts.
+Full native event-body joins remain the writer's checks, not independently re-executed.
+
+Next ancestry source confirmed in original baseline: apply60 input exactly matches
+parent evidence59 output; its ordered EpisodeBasis holds freeze32/45/58 from instants
+1/2/3. Each frozen observation matches track31/44/57, whose input matches admitted
+observe30/43/56, with corresponding parent edges. These are exact recorded chains,
+not proof of necessity. See episode-next-step.json. A dedicated historical episode
+inspector and broader qualification remain due; current support UI does not yet expose
+this conditional basis. Do not infer missing episode sources or confuse Current with
+ordered EpisodeBasis.
+
+Research4318/boundary PASS; all18 conditional obligations survive. Native23320 last
+14/15 prefix17 live166 hold; corrected browser43 last6/6 Working. Mark all44 tabs.
+LOCAL DISPOSITION broadens required qualification while preserving full entry gates,
+all original evidence and known trace limitations. No runtime change this increment.

@@ -52,6 +52,17 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 full support audit:** Native45578 RUNNING105 programs/1436 prefixes;
+first9 programs/135 prefixes checkpoint-001. NEW283-source hold in
+workbench-affect-belief-support-corpus-rev1/freeze.json. Independent verifier prepared/
+syntax checked; terminal receipt required. Checks original hashes, all stored revisions,
+exact support application/observation joins and immutable history; no terminal pass.
+Next conditional episode inspector: baseline apply60->evidence59, ordered freeze32/45/58
+->track31/44/57->observe30/43/56 exact outputs/parents confirmed, no complete ancestry claim.
+Native23320 last14/15 prefix17 LIVE166hold; corrected browser43 last6/6 Working.
+Mark all44 tabs. Research4318/boundary PASS; full Workbench entry still open.
+
+
 **2026-10-23 recorded learning support:** AFFECT belief revisions now link support
 IDs to original applied learning sample and earlier admitted observation, with exact
 proposition/report/opportunity/monitoring checks. Four originals/24 cumulative joins,
