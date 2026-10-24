@@ -52,6 +52,18 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 complete stored-field search:** AFFECT Character standalone/paired now
+reuse unchanged RecordedStateInspector for every native stored field, including task
+statuses. Root/path/value filters, selection and exact revision; runHash keys prevent
+selection crossing distinct runs. Native browser baseline0/3/11, both pair3, all five
+terminal fields and identity/isolation PASS. Initial capture raced worker readiness;
+failed capture/verifier retained, separate Ready-confirmed recreation PASS. Two shared
+search tests/typecheck/build647/research/boundary PASS; live288/166 holds unchanged.
+See workbench-affect-state-search-rev1. Tab40/4250 retained; mark all40 tabs.
+Inspection69168 last24/105 RUNNING; paged23320 last13/15 prefix10; packed29 last16/16
+Working. Broader browser corpus/accessibility and full Workbench entry remain open.
+
+
 **2026-10-23 full AFFECT inspection audit:** Native69168 RUNNING. First5 programs/
 75 prefixes bound by checkpoint-001; no terminal qualification. NEW288-source hold:
 workbench-affect-inspection-corpus-rev1/freeze.json. Checks all105/1436 original

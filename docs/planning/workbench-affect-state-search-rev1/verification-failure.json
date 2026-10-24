@@ -1,0 +1,5 @@
+{
+  "error": "Initial hash capture [] did not equal four native hashes.",
+  "cause": "Initial paths/hashes read before async worker initialization; later Task selection and subsequent captures completed after initialization.",
+  "correction": "Fresh identical original baseline after confirmed Ready, saved separately in browser-initial-recheck.json. Original browser.json unchanged."
+}

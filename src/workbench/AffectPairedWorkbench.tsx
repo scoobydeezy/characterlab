@@ -1,3 +1,4 @@
+import {RecordedStateInspector} from './RecordedStateInspector';
 import {AffectTimelineView} from './AffectTimelineView';
 import {AffectArchitectureView} from './AffectArchitectureView';
 import {AffectBeliefStateView} from './AffectBeliefStateView';
@@ -32,7 +33,7 @@ export function AffectPairedWorkbench({active}:{active:boolean}){
  <nav aria-label="Retained AFFECT modes" className="button-row">{modes.map(m=><button key={m} onClick={()=>{stop.current=true;setMode(m);}}>{m}</button>)}</nav>
  <label>Retained AFFECT branch<select value={branch} onChange={e=>{setBranch(e.target.value as AffectPairBranch);setEventId('');}}><option value="a">Branch A</option><option value="b">Branch B</option></select></label>
  {snapshot&&<><p>Branch {branch.toUpperCase()} · {snapshot.program} · prefix {snapshot.prefix}</p><div data-affect-retained-hashes>{(['modelHash','runHash','stateHash','saveHash'] as const).map(k=><div className="hash" key={k}><span>{k}</span><code>{snapshot[k]}</code></div>)}</div>
- {mode==='Character'&&<><AffectBeliefStateView key={snapshot.saveHash} snapshot={snapshot} onInspect={id=>{setEventId(id);setMode('Timeline');}}/><AffectFactorView cards={snapshot.explanations}/><AffectExplanationView cards={snapshot.explanations}/></>}
+ {mode==='Character'&&<><RecordedStateInspector key={snapshot.runHash} fields={snapshot.fields} prefix={snapshot.prefix} saveHash={snapshot.saveHash}/><AffectBeliefStateView key={snapshot.saveHash} snapshot={snapshot} onInspect={id=>{setEventId(id);setMode('Timeline');}}/><AffectFactorView cards={snapshot.explanations}/><AffectExplanationView cards={snapshot.explanations}/></>}
  {mode==='Experiment'&&<p>{report?.contrast.changed} Fixture changes create fresh original programs; runtime interventions remain unavailable.</p>}
  {mode==='Reasoning'&&<AffectExplanationView cards={snapshot.explanations} history trace={{events:snapshot.timeline,runHash:snapshot.runHash,saveHash:snapshot.saveHash,modelHash:snapshot.modelHash}}/>}
  {mode==='Timeline'&&<AffectTimelineView snapshot={snapshot} selected={eventId} onSelect={setEventId} retained/>}

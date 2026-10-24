@@ -1003,3 +1003,31 @@ canonical topology or law selection. Full inspection qualification remains pendi
 complete architecture/causal participation, factor strength/certainty language, learning
 ancestry, trace disposition and Workbench entry remain open despite bounded §32 pass.
 Paged23320 remains live; packed pair29 last16/16 Working. Retain all39 tabs each turn.
+
+## 2026-10-23 — complete stored-field search integration
+
+AFFECT Character standalone and paired views now reuse the existing unchanged
+RecordedStateInspector over the entire native fields array. This exposes adopted task
+statuses alongside learned estimates, with root/path/exact-value search, root filter,
+full selected values and save revision. Search retains its existing explicit256-char
+limit, pagination and no-silent-truncation behavior. No derived values are inserted.
+Filters persist across prefixes within a run; distinct runHash changes remount the
+inspector, clearing queries/selections across paired branches. Recreating the identical
+run may retain filters because its deterministic identity is unchanged.
+
+Independent native/browser comparison PASS baseline0/3/11 and obligation A/B3: all
+five terminal fields present, exact selected task/belief values, case-insensitive path
+search, root mismatch, clear, long-query rejection, revision updates, filter retention,
+branch reset and standalone isolation. Expanded paths fit1265px; keyboard proceeds
+from query to root filter; screenshot inspected. Initial hash/path capture raced worker
+initialization and was empty; verifier failure/source retained. A separate recreation
+of the identical initial baseline after confirmed Ready supplies corrected evidence,
+without overwriting original browser.json. See workbench-affect-state-search-rev1.
+
+Two existing shared search regression tests PASS; TypeScript/build647 modules, research
+4318/boundary PASS. Both live288/166 source holds unchanged. Tab40/4250, preview29000
+retained; mark all40 tabs. LOCAL DISPOSITION reuses accepted exact diagnostic search
+without changing cognition, C3 verdicts or obligations. All18 conditional obligations
+and RO-C3-011 trace limitation remain. Broader browser corpus/accessibility, complete
+player factor language, ancestry/trace disposition and entry remain open. Full
+inspection69168 last24/105, paged23320 last13/15 prefix10, packed29 last16/16 Working.
