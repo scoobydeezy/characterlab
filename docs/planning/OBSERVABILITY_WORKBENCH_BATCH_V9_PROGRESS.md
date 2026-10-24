@@ -36,3 +36,23 @@ then full General browser cohort and full990-role V9 regression as separate gate
 Other corpus/component successors, language, specialized views and full Campaign4
 entry remain open. All18 conditional obligations survive. Disposition browser43
 remains an independent live packed-pair qualification; last13/13 Working.
+
+## Prepared verification and seed renderer
+
+`BatchSeed.tsx` is prepared separately while the audit source graph remains held.
+Two tests render all990 declarations, verify all43 exact General seeds, and withhold
+four malformed/missing General seed cases instead of displaying placeholder0.
+The first test file used a TSX suffix excluded by the repository test include;
+its zero exit with no discovered tests is retained in
+`workbench-batch-seed-renderer-rev1/test-discovery-correction.json`. Corrected
+`.test.ts` with createElement discovers and passes both tests. No browser or mounted
+table correction is claimed yet. The receipt freezes this prepared component and
+verifiers, and confirms every live audit source is unchanged.
+
+`verify-workbench-batch-general.mjs` independently checks all43 original identities,
+seed,initial/calendar bytes and568 prefix commitments before releasing the hold.
+`check-workbench-batch-general-browser.mjs` is prepared for the corrected renderer:
+it requires the completed native receipt, frozen unchanged execution sources,43
+browser rows with exact seeds,1136 displayed actual/expected hashes,exact64000-char
+preview and complete report byte declaration. These verifiers are prepared, not
+yet accepted results. Native76981 reached7/43; Disposition tab43 reached14/14 Working.

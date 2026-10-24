@@ -1,0 +1,36 @@
+{
+  "status": "PASS PREPARED SEED RENDERER",
+  "tests": 2,
+  "renderedDeclarations": 990,
+  "generalExactSeeds": 43,
+  "missingOrMalformedCases": 4,
+  "sources": [
+    {
+      "path": "src/workbench/BatchSeed.tsx",
+      "copy": "docs/planning/workbench-batch-seed-renderer-rev1/sources/src/workbench/BatchSeed.tsx",
+      "sha256": "ebbee14b5b3c2aa0576a180af7083d81c1117fcaf3f0fb2f30929541aeff3d44"
+    },
+    {
+      "path": "src/test/workbenchBatchSeed.test.ts",
+      "copy": "docs/planning/workbench-batch-seed-renderer-rev1/sources/src/test/workbenchBatchSeed.test.ts",
+      "sha256": "291ef1a1af8bd10a2d1bc1d05c56833c52076e6eabb73f89886d37d6ebd76b99"
+    },
+    {
+      "path": "src/workbench/batchCatalogV9.json",
+      "copy": "docs/planning/workbench-batch-seed-renderer-rev1/sources/src/workbench/batchCatalogV9.json",
+      "sha256": "f2b684f6fe300e9770d08e5aa6afc04b56da7954b0e5c6150adbd872e177acc9"
+    },
+    {
+      "path": "scripts/check-workbench-batch-general-browser.mjs",
+      "copy": "docs/planning/workbench-batch-seed-renderer-rev1/sources/scripts/check-workbench-batch-general-browser.mjs",
+      "sha256": "2bceff1d8c869bd9d1e2dddad0d9208dbe8fa62a9f1f1977283ed1367993b0a0"
+    },
+    {
+      "path": "scripts/verify-workbench-batch-general.mjs",
+      "copy": "docs/planning/workbench-batch-seed-renderer-rev1/sources/scripts/verify-workbench-batch-general.mjs",
+      "sha256": "59043032658e54ca10895c9a9973eaa908969d541a65f8ea533df76e1c692f10"
+    }
+  ],
+  "auditSourceGraphUnchanged": true,
+  "scope": "Prepared component only; not mounted in BatchWorkbench while native audit holds its sources. Browser verifier and independent native verifier prepared, not executed; their acceptance remains pending."
+}

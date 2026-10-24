@@ -52,6 +52,13 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 General batch follow-up:** Native76981 last7/43 RUNNING; sources held.
+Prepared BatchSeed component PASS990 renders/43 exact seeds/four malformed cases;
+two discovered tests PASS after retained TSX test-discovery correction. Not mounted.
+See workbench-batch-seed-renderer-rev1 and V9 progress. Native independent verifier
+and corrected browser verifier prepared; run after native completion, then mount
+BatchSeed and browser-qualify. Pair43 last14/14 Working. Retain all48 tabs each turn.
+
 **2026-10-23 General batch admission:** Start OBSERVABILITY_WORKBENCH_BATCH_V9_PROGRESS.md.
 Catalog0.9 adds43 original General recipes/568 prefixes, exact32-byte seed and
 originals; previous947 declarations unchanged,990/6956 total. Eleven tests/tsc and
