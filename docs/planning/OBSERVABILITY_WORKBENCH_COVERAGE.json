@@ -344,7 +344,18 @@
         "Architecture participation: declared ownership, actual reads/writes and causal effects remain distinct",
         "Integrated six-mode browser, export/import, resource and accessibility acceptance",
         "Full Workbench requirement acceptance; bounded pointer coverage is not completion"
-      ]
+      ],
+      "batchQualification": {
+        "version": "workbench-batch-catalog/0.12",
+        "experimentId": "sem",
+        "executionKind": "fixed-scheduler-harness",
+        "status": "TRANSPORT PASS; SHARED ADMISSION DUE",
+        "roles": 1,
+        "prefixes": 4,
+        "transportReceipt": "docs/planning/workbench-scoped-batch-rev2/receipt.json",
+        "acceptance": "docs/planning/workbench-scoped-batch-rev2/acceptance.json",
+        "scope": "One fixed incremental scheduler harness; empty original input commitment preserved. Broader SEM vectors/controls/language and entry remain open."
+      }
     },
     {
       "id": "PHEN-LEARN-001",
@@ -467,7 +478,18 @@
       ],
       "seamContract": "bio-coupled-comparison/0.2-candidate with BIO_COMPARISON_IDENTITY_BINDING.md",
       "scope": "Original13 component cases/260 prefixes and every continuation qualified against native components; final saves match historical matrix. These are component checkpoints, not public Save132 or scheduler events. Browser breadth, full comparison coverage and language remain open.",
-      "receipt": "docs/planning/workbench-bio-parity-rev1/receipt.json"
+      "receipt": "docs/planning/workbench-bio-parity-rev1/receipt.json",
+      "batchQualification": {
+        "version": "workbench-batch-catalog/0.12",
+        "experimentId": "bio",
+        "executionKind": "composed-component",
+        "status": "TRANSPORT PASS; SHARED ADMISSION DUE",
+        "roles": 13,
+        "prefixes": 260,
+        "transportReceipt": "docs/planning/workbench-scoped-batch-rev2/receipt.json",
+        "acceptance": "docs/planning/workbench-scoped-batch-rev2/acceptance.json",
+        "scope": "Original composed component cases; no scheduler clock or public factory admission. Full language/controls and entry remain open."
+      }
     },
     {
       "id": "PHEN-COMMIT-001",

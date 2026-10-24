@@ -115,3 +115,26 @@ binds the corrected audit. At terminal run the verifier without flags; only its
 acceptance.json releases the source hold. Shared BIO/SEM admission remains next.
 Mark all55 retained browser tabs every turn. Full V10 native/browser, General browser
 and Disposition terminal pair remain independent ongoing work.
+
+## Corrected native transport accepted
+
+Session79379 COMPLETE exit0, all14 roles/264 prefixes. The independent verifier
+PASS exact original declarations,boundaries,seed encodings,clocks,model/run/state/save
+identities and every retained prefix. All476 current-source/copy bindings passed;
+acceptance.json releases that source hold. Separate role-reconciliation.json verifies
+all14 incrementally retained files equal the final receipt, with exact hashes.
+Evidence: workbench-scoped-batch-rev2/receipt.json,acceptance.json and role files.
+Revision1's verifier failure remains preserved and is not counted as acceptance.
+
+BIO13/260 keeps null scheduler clocks. SEM1/4 retains native0/1/2/3 time, the exact
+friendly13 seed and original empty input commitment. No public factory promotion or
+full BIO/SEM control/language claim follows. Ledger batch entries now record transport
+acceptance with shared admission explicitly due; previous ledger bytes are retained.
+
+Next connect the qualified scoped transport, nullable clock type and boundary-aware
+seed validation to the shared registry/session/worker. Preserve all1072 existing
+declarations; add BIO/SEM originals and execution-boundary metadata to the versioned
+report; mount scoped exact seed displays and explicit captions. Qualify full new-role
+shared execution and browser cohorts before claiming admission complete. The separate
+Disposition terminal restore on tab43 is currently Working; avoid new builds/native
+tests until that operation completes. There is no remaining current-source hold.

@@ -52,6 +52,15 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 BIO/SEM transport COMPLETE:** corrected79379 exit0 PASS14/264;
+independent original-boundary/seed/clock/identity/prefix reconciliation and all14
+retained role files PASS. All476 current-source holds released. Revision1 verifier
+failure preserved. Start BATCH_V12_PROGRESS. Shared registry/session/worker/UI
+admission remains due; no public factory promotion. Ledger records transport-only.
+Disposition tab43 terminal restore still Working/no alerts; DO NOT retry or change
+modes. Avoid new builds/native tests while it runs. Retain all55 tabs. V10 native
+94573 last640/1068 and browser53 last450/1068/2943 remain live on frozen sources/assets.
+
 **2026-10-23 Disposition terminal restore IN FLIGHT:** tab43 reached18/18 Complete;
 original comparison/choices/ten hashes PASS sampled native oracle. Exact history and
 prefix1 retained diagnostic/stale source guard captured. Terminal checkpoint label
