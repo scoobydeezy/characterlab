@@ -1231,3 +1231,36 @@ The277 overlapping sources remain held by episode and/or Disposition audits.
 Episode68613 last20/105 LIVE281hold; Disposition23320 last15/15 prefix14 LIVE166hold.
 Corrected paired browser43 last9/9 Working. Full episode ancestry, language and
 Workbench entry remain open. Mark all45 tabs. No quiet writer restarted.
+
+## 2026-10-23 — relative own-goal player preview
+
+New separate policy workbench-affect-player-relative/0.1 compares exact recorded
+Relevance among the two admitted own-goal reason nuclei in one evaluation. Integer
+cross multiplication yields stronger/equal/weaker; sole reasons remain not-comparable.
+Original own-goal preview0.1 stays unchanged. Policy/recipient checks precede payload
+access; no physical-world state or current-state lookup, numbers, source keys or
+private fields enter the explicit preview allowlist. This is relative reason pull,
+not a forecast of choice, absolute intensity or subjective certainty.
+
+LOCAL DISPOSITION uses ordinal comparison, avoiding invented absolute thresholds.
+See OBSERVABILITY_WORKBENCH_AFFECT_RELATIVE_LANGUAGE_POLICY.md. Native semantics,
+Campaign3 verdicts, candidates and18 conditional obligations remain unchanged.
+
+Full original105 programs/1331 decisions/2640 reason occurrences PASS:267 stronger,
+267 weaker,2084 equal,22 sole reasons. Exact order, field allowlist, input immutability,
+hidden-world equality and five negative/boundary checks PASS, including equivalent
+fractions and recipient rejection before payload access. Eight concept/order groups
+retain all mechanical distinctions in language-audit.json: weaker obligation spans
+three mechanical states and stronger safety spans ten. Shared wording does not close
+absolute-strength or individual-factor semantics. No certainty band is invented.
+
+UI mounts a separate expandable relative preview beside the original own-goal text.
+Browser baseline1/2/3 and historical1 match corpus reports; original choice-0-0.1 at1
+shows weaker obligation/stronger safety and matches its report. Independent browser
+verifier checks original source and presenter hashes; screenshot reviewed. Initial
+status locator matched both run and state-search status; narrowed before advancing.
+Typecheck/build655modules(temp654), research4318 and boundary PASS. Evidence in
+workbench-affect-player-relative-rev1; tab46/4256 (preview29825) retained. Mark all46.
+
+Episode68613 last45/105 LIVE281hold; Disposition23320 last15/15 prefix16 LIVE166hold;
+paired43 last10/10 Working. No terminal claims. Full language/ancestry/entry open.

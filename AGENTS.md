@@ -52,6 +52,17 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 relative goal language:** Separate player-relative0.1 preview now
+compares exact own-goal relevance, preserving original preview0.1. Full105 programs/
+1331 decisions/2640 reasons PASS:267 stronger/267 weaker/2084 equal/22 sole. Hidden
+world/recipient/allowlist PASS; eight meaning groups retain remaining mechanics
+collisions. Absolute intensity, certainty and full factor language remain open.
+Browser baseline1/2/3/history1 and choice-0-0.1 at1 PASS exact reports. Tab46/4256
+retained; mark all46. Typecheck/build655(temp654)/research4318/boundary PASS.
+Episode68613 last45/105 LIVE281hold; diagnostics23320 last15/15 prefix16 LIVE166hold.
+Pair43 last10/10 Working. Start AFFECT_LANGUAGE_PROGRESS; full entry open.
+
+
 **2026-10-23 support corpus COMPLETE:** Native45578 and independent verifier PASS
 105 programs/1436 prefixes/3995 revision reports/3522 historical checks.4848 cumulative
 joins represent368 distinct program-scoped supports/applications/observations; zero
