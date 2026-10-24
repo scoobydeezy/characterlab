@@ -52,6 +52,16 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 V12 scoped transport PREPARED:** catalog1086/7574 retains prior1072;
+BIO13/260 composed components and SEM1/4 fixed harness are not public factories.
+BIO clock null; SEM genuine clock, friendly13 exact32-byte seed/empty original input
+commitment preserved. Transport2 tests and boundary/seed4 tests PASS. Renderer
+Windows basename collision retained in rev1; distinct Cell basename corrected.
+Native audit17393 RUNNING last5/14. HOLD476 current sources/copies listed by
+workbench-scoped-batch-rev1/manifest.json until terminal verification. Start
+BATCH_V12_PROGRESS. No shared BIO/SEM admission yet. Other live audits unchanged;
+mark all54 tabs. Browser53 last400/1068/2202; General52 last26/43/323; pair43 A17/B17.
+
 **2026-10-23 V11 persistence batch:** ADAPT2/8 and DET2/18 admitted to shared native/
 worker/UI. Catalog1072/7310 preserves prior1068 unchanged. Transport2 tests plus8
 shared/regression tests,typecheck/build663 PASS. Native direct and independent

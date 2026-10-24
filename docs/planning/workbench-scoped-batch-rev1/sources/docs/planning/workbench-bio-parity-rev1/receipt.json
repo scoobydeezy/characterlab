@@ -1,0 +1,170 @@
+{
+  "status": "PASS BIO COMPONENT ADAPTER PARITY AND CONTINUATION",
+  "sources": [
+    {
+      "path": "src/workbench/bioAdapter.ts",
+      "sha256": "cdf47ea23beeac8852faf54548d423e325e5146fb3178811e3ae91fdacd4d2c3"
+    },
+    {
+      "path": "src/workbench/canonical.ts",
+      "sha256": "f80f4a8353ea7604432d5ffcf0d4628f8b7bf13b82a06b4807445e9a9ba97bde"
+    },
+    {
+      "path": "src/test/workbenchBio.test.ts",
+      "sha256": "c8a847596d291718efb4c92eaa385b2863936281fc39b56f6d98f029ae9c38bc"
+    },
+    {
+      "path": "scripts/check-workbench-bio.mjs",
+      "sha256": "35bb5967dde3ca6f7004a5a99d86c2cbadb3d6a4610fb6f462dc5ea86fad3667"
+    },
+    {
+      "path": "docs/planning/BIO_COMPARISON_PLAN_REV3.json",
+      "sha256": "172301d5e38cc38352e3cf4111bf59d73efeb5148252c15e6b3651ad9e4c0b98"
+    },
+    {
+      "path": "docs/planning/BIO_IDENTITY_PLAN_REV1.json",
+      "sha256": "16c777b71e832099156104ea9bcae021d0eba094898107021a22b87b0599fc3c"
+    },
+    {
+      "path": "docs/planning/BIO_COMPARISON_RESULT_REV3.json",
+      "sha256": "0e683a321f19bc0034ecd903432be44422814ca7fcdca6d505bb442e05ac5770"
+    },
+    {
+      "path": "docs/formal/BIO_COMPARISON_CONTRACT.md",
+      "sha256": "c59b4f051429abd50a07fc47cf2f199a7c823a130e65279ec17ac1b870fad2ca"
+    },
+    {
+      "path": "src/campaign3/bioComparison.ts",
+      "sha256": "7a6dd2556eb74eb5a52250c29274b193c7df05070606a9e871796c3d133ce07a"
+    },
+    {
+      "path": "src/campaign3/longitudinalMath.ts",
+      "sha256": "bc135f1bf235ee32e0bc0bc4f17f3b51de2264c23dac9526de16e2b6d8640bf9"
+    },
+    {
+      "path": "src/campaign3/longitudinalModel.ts",
+      "sha256": "30e9fb70d40fba6a9b6e329916ab16fac173b1779928688798318c2d14dc5b70"
+    },
+    {
+      "path": "src/campaign2/cognitiveMath.ts",
+      "sha256": "3d2ced68676b4fcb2c41046ea08e9fe8fb80fc47a331fa73b8ed0ca77d1fbb77"
+    },
+    {
+      "path": "src/campaign2/cognitiveTransforms.ts",
+      "sha256": "f19a6555e80455139eecdfecf4bf809fff9bce24e4a52760c5a54d6bfcb7203f"
+    },
+    {
+      "path": "src/campaign2/cognitiveArbitration.ts",
+      "sha256": "d8d1fd7fa287d1d61164aa3e8f646f8d9169cf9b67ea0b5ebf625e0485348656"
+    },
+    {
+      "path": "src/campaign2/cognitiveChoice.ts",
+      "sha256": "a045d61d884a738cb3064683315ebb7985e33ab3fcddda6f22ae0cdd35749ba1"
+    },
+    {
+      "path": "src/substrate/random.ts",
+      "sha256": "a01aeae52c0c43f1533e35dcd01c23acb1c44b02059c909960966cdb0de24596"
+    },
+    {
+      "path": "scripts/qualify-bio-comparison.mjs",
+      "sha256": "5fc6e4b6797457bf7fc9f24faec854a7c1d4224e6afeb07d3475b00f2cc583b0"
+    },
+    {
+      "path": "docs/planning/BIO_CALIBRATION_REV2.json",
+      "sha256": "ed5c5adbd35d44e467289cef0a9376ffcb0562848899fe5a556d499061475015"
+    },
+    {
+      "path": "docs/formal/BIO_COMPARISON_IDENTITY_BINDING.md",
+      "sha256": "d443a46e5cb4615181de9da30f96339279e61abadde804511ed47fd668a2d00a"
+    },
+    {
+      "path": "scripts/bind-bio-identities.mjs",
+      "sha256": "856e48320ee8c2d752cb601e85cfd492beb4ca350e6521c6048bd0786e44d819"
+    }
+  ],
+  "cases": [
+    {
+      "name": "Earned/6",
+      "path": "case-00.json",
+      "sha256": "7e0b8f055e02888cb0d12fefee4ce3a8d9c0ca69b53655818bdd9c378671c583",
+      "prefixes": 20
+    },
+    {
+      "name": "Earned/0",
+      "path": "case-01.json",
+      "sha256": "8a7cbb62e38bc8db6a931ecfddcd5112a3d06ec069e366bd020b075c14c1edac",
+      "prefixes": 20
+    },
+    {
+      "name": "AuthoredTrait/6",
+      "path": "case-02.json",
+      "sha256": "77ce7371fb3cad00b8b92db1fb158b5f255ac1ece6878e2400599a719575add1",
+      "prefixes": 20
+    },
+    {
+      "name": "AuthoredTrait/0",
+      "path": "case-03.json",
+      "sha256": "8798653187a272fb41ab1859f2655b99c45d0f942b49619047b9db43a3595bd6",
+      "prefixes": 20
+    },
+    {
+      "name": "DisplayOnly/6",
+      "path": "case-04.json",
+      "sha256": "db9732a59cd0d1deee4e801b4e6900808d3218e1df66666931dc5f582e4a2f09",
+      "prefixes": 20
+    },
+    {
+      "name": "DisplayOnly/0",
+      "path": "case-05.json",
+      "sha256": "bcfb3f1b31d6f32e308fecd09c815c6e81065a34a90b6f614ef4ac0f7bbc6ae0",
+      "prefixes": 20
+    },
+    {
+      "name": "HistoryOnly/6",
+      "path": "case-06.json",
+      "sha256": "30f1271441ae90e2bfa9d50b833246d4ede1ba5ddf835fa6476e619dd6ed29d3",
+      "prefixes": 20
+    },
+    {
+      "name": "HistoryOnly/0",
+      "path": "case-07.json",
+      "sha256": "338a6fb2c8391cab18c34657af3804d6f26e0bdae8d31cdff85d5a490aa78dd8",
+      "prefixes": 20
+    },
+    {
+      "name": "RecomputedHistory/6",
+      "path": "case-08.json",
+      "sha256": "ca3659a54da1f2ed769a2690d95ae334c3f22171dc976a012555091569598bba",
+      "prefixes": 20
+    },
+    {
+      "name": "RecomputedHistory/0",
+      "path": "case-09.json",
+      "sha256": "f9370fae6b7f3e818397a95cf47f5fd365070a5c79fd53a50ab1208a409dbf47",
+      "prefixes": 20
+    },
+    {
+      "name": "Refold/6",
+      "path": "case-10.json",
+      "sha256": "ecaabfdb16dfd8771c6ec787384911b0e202bcd0b1b7c6fb0d95a909f1f16b5d",
+      "prefixes": 20
+    },
+    {
+      "name": "Refold/0",
+      "path": "case-11.json",
+      "sha256": "886e52f11fe37f2a57709d53c2356fea04c78dbd135d2067462489cd34b28029",
+      "prefixes": 20
+    },
+    {
+      "name": "coupled-repeat",
+      "path": "case-12.json",
+      "sha256": "62c2212145edc36f2736f4b123a62a12d4c7986ed3f15fd0e8fa8bf121254e28",
+      "prefixes": 20
+    }
+  ],
+  "counts": {
+    "cases": 13,
+    "prefixes": 260
+  },
+  "scope": "All13 identity-bound BIO component cases/260 prefixes; current save bytes/state hashes/row summaries equal direct components, final saves match historical qualified matrix. Every checkpoint restores and reproduces its next save or terminal no-op. Diagnostic reads preserve checkpoints. These are composed component records, not public scheduler trace or factory admission. No browser, observer-safe language, broader biography or Campaign4 entry qualification."
+}

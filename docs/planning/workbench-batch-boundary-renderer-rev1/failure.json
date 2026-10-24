@@ -1,0 +1,26 @@
+{
+  "status": "FAIL RENDERER MODULE RESOLUTION",
+  "tests": {
+    "passed": 1,
+    "failed": 1
+  },
+  "error": "React element type undefined: extensionless BatchExecutionBoundary import resolved batchExecutionBoundary.ts on case-insensitive Windows instead of the TSX renderer.",
+  "sources": [
+    {
+      "path": "src/workbench/batchExecutionBoundary.ts",
+      "copy": "docs/planning/workbench-batch-boundary-renderer-rev1/sources/src/workbench/batchExecutionBoundary.ts",
+      "sha256": "c4115cd9ae41fdeca33952ce322c671ac012b30d6b0a64022de5f51da9da4c7e"
+    },
+    {
+      "path": "src/workbench/BatchExecutionBoundary.tsx",
+      "copy": "docs/planning/workbench-batch-boundary-renderer-rev1/sources/src/workbench/BatchExecutionBoundary.tsx",
+      "sha256": "206a53986de40dbfdc1122671c1ea60e0947f209f3e55690d4986290940ec6bb"
+    },
+    {
+      "path": "src/test/workbenchBatchBoundary.test.ts",
+      "copy": "docs/planning/workbench-batch-boundary-renderer-rev1/sources/src/test/workbenchBatchBoundary.test.ts",
+      "sha256": "b417ccc7cd9f531891a9c0bc9910619b9c570f3026cb2358ade0128e5aff33f1"
+    }
+  ],
+  "disposition": "Rename renderer with a distinct basename; preserve failed sources. Clock validation test passed; browser integration not attempted."
+}

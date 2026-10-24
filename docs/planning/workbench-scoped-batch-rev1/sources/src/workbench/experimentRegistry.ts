@@ -1,0 +1,119 @@
+/** Versioned diagnostic capabilities; none of these objects is simulation authority. */
+export const EXPERIMENT_REGISTRY_VERSION = 'workbench-experiments/0.26';
+export type ExperimentId = 'values' | 'reason' | 'general' | 'epi' | 'learn' | 'belief' | 'affect' | 'decision' | 'commit' | 'work' | 'skill' | 'habit' | 'social' | 'relationship' | 'long' | 'body' | 'multisource' | 'adapt' | 'det';
+export type BatchExperimentId = ExperimentId;
+export interface InspectionCapabilities {
+  committedStep: {supported: true; boundary: string};
+  checkpoint: {supported: true; authentication: string};
+  runtimeIntervention: {supported: false; reason: string};
+  graph: {supported: boolean; reason: string};
+  matrix: {supported: boolean; reason: string};
+  explanation: {supported: boolean; scope: string; qualification: string};
+}
+export interface ExperimentDescriptor {
+  id: ExperimentId; label: string; seamVersion: string; corpusScope: string;
+  capabilities: InspectionCapabilities;
+}
+const noIntervention = {supported: false as const, reason: 'The public contract admits original inputs on a fresh run; it exposes no runtime intervention ingress.'};
+const checkpoint = {supported: true as const, authentication: 'Exact public save, original inputs, model, seed and complete prefix.'};
+const persistenceCommon={committedStep:{supported:true as const,boundary:'One complete native instant.'},checkpoint:{supported:true as const,authentication:'Exact original program, model, seed, saved bytes and complete prefix.'},runtimeIntervention:{supported:false as const,reason:'Only frozen original programs on fresh runs are admitted.'},graph:{supported:false,reason:'No native graph exposed by this bounded profile.'},matrix:{supported:false,reason:'No native matrix exposed by this bounded profile.'}};
+export const EXPERIMENTS: readonly ExperimentDescriptor[] = [
+ {id:'adapt',label:'ADAPT · exposure and measurement',seamVersion:'measurement-episodic-memory/0.1-candidate',corpusScope:'Accepted PHEN-ADAPT-001/1.11.0 parent pair;2 programs/8 prefixes',capabilities:{...persistenceCommon,explanation:{supported:true,scope:'Admitted and recalled diagnostic measurement only',qualification:'Six descriptions across8 prefixes; hidden adaptation and exposure attribution excluded. Broader controls remain open.'}}},
+ {id:'det',label:'DET · exact replay and draws',seamVersion:'campaign2-task-cognitive-persistence/0.1-candidate',corpusScope:'Cognitive successor2 programs/18 prefixes; original substrate and failure/capacity controls remain separate',capabilities:{...persistenceCommon,explanation:{supported:false,scope:'Researcher diagnostics only',qualification:'No observer-safe narrative qualified; actual draws are not character uncertainty.'}}},
+ {id:'body',label:'BODY · evidence and ownership',seamVersion:'campaign3-embodied-persistence/0.1-candidate',corpusScope:'16 source programs/79 prefixes; five separate ownership components',capabilities:{committedStep:{supported:true,boundary:'One complete native instant.'},checkpoint,runtimeIntervention:noIntervention,graph:{supported:false,reason:'No native graph exposed by this bounded profile.'},matrix:{supported:false,reason:'No native matrix exposed by this bounded profile.'},explanation:{supported:true,scope:'Recorded admitted samples and public mediated pressure only',qualification:'190 descriptions across79 prefixes; known zero and unavailable remain distinct. Hidden41/49 evidence equality and historical text stability qualified. Choice, subjective feeling and ownership-component narration remain unsupported.'}}},
+ {id:'multisource',label:'MULTISOURCE · selected evidence',seamVersion:'multisource-public/0.1-candidate',corpusScope:'62 programs/249 prefixes;96 declared comparisons',capabilities:{committedStep:{supported:true,boundary:'One complete native instant.'},checkpoint,runtimeIntervention:noIntervention,graph:{supported:false,reason:'No native graph exposed by this bounded profile.'},matrix:{supported:false,reason:'No native matrix exposed by this bounded profile.'},explanation:{supported:true,scope:'Observer assessment descriptions only',qualification:'632 descriptions across249 prefixes; full task-reason/choice/expression language remains open.'}}},
+  {id:'long',label:'LONG · acquisition and retention',seamVersion:'longitudinal-public/0.2-candidate',corpusScope:'32 original source programs/513 prefixes; goal, habit, routine and loss successors remain separate',capabilities:{committedStep:{supported:true,boundary:'One complete native source instant.'},checkpoint,runtimeIntervention:noIntervention,graph:{supported:false,reason:'Recorded parent/read links are diagnostic provenance, not a native memory graph.'},matrix:{supported:false,reason:'No native matrix in this original source profile.'},explanation:{supported:true,scope:'Closed native observer-field descriptions; learned projection equality is distinct from accessible detail.',qualification:'3078 descriptions/513 prefixes qualified in bounded scope. Full factor narrative and successor language remain separate.'}}},
+  {id:"social",label:"SOCIAL · observers and fallible claims",seamVersion:"social-public/0.1-candidate",corpusScope:"26 programs/127 prefixes;47 declared comparisons",capabilities:{committedStep:{supported:true,boundary:'One complete native instant.'},checkpoint,runtimeIntervention:noIntervention,graph:{supported:false,reason:'No native graph in this bounded profile.'},matrix:{supported:false,reason:'No native matrix.'},explanation:{supported:true,scope:"Observer-specific admitted evidence and current belief; violating controls suppress narration.",qualification:"855 descriptions;70 observer-prefixes suppressed. Full narrative and browser qualification remain open."}}},
+  {id:"relationship",label:"RELATIONSHIP · dyadic history and response",seamVersion:"relationship-public/0.2-candidate",corpusScope:"24 corrected and24 legacy programs;33 corrected and24 revision comparisons",capabilities:{committedStep:{supported:true,boundary:'One complete native instant.'},checkpoint,runtimeIntervention:noIntervention,graph:{supported:false,reason:'No native graph in this bounded profile.'},matrix:{supported:false,reason:'No native matrix.'},explanation:{supported:true,scope:"Own history, appraisal and selected intent; candidate4/5 and legacy narration suppressed.",qualification:"6794 corrected descriptions;88 observer-prefixes suppressed. Legacy0.1 retained as failed cohort. Full narrative and browser qualification remain open."}}},
+
+  {id:'skill',label:'SKILL · competence and performance evidence',seamVersion:'skill-public/0.1-candidate',corpusScope:'52 original programs/279 prefixes',capabilities:{committedStep:{supported:true,boundary:'One complete native instant.'},checkpoint,runtimeIntervention:noIntervention,graph:{supported:false,reason:'No native graph in this bounded profile.'},matrix:{supported:false,reason:'No native matrix.'},explanation:{supported:true,scope:'Evaluation-time evidence and admitted learning; violating-control narration suppressed.',qualification:'5630 descriptions;58 control prefixes suppressed. Full narrative and browser qualification remain open.'}}},
+  {id:'habit',label:'HABIT · history and expectation',seamVersion:'habit-public/0.1-candidate',corpusScope:'23 original programs/291 prefixes; successors remain open',capabilities:{committedStep:{supported:true,boundary:'One complete native instant.'},checkpoint,runtimeIntervention:noIntervention,graph:{supported:false,reason:'No native graph in this bounded profile.'},matrix:{supported:false,reason:'No native matrix.'},explanation:{supported:true,scope:'Evaluation-time evidence and admitted learning; violating-control narration suppressed.',qualification:'9688 descriptions;65 control prefixes suppressed. Full narrative and browser qualification remain open.'}}},
+  {id:'work',label:'WORK · retained tasks and active access',seamVersion:'workspace-control/0.1-candidate',corpusScope:'PHEN-WORK-001;70 main programs and8 distractor controls',capabilities:{committedStep:{supported:true,boundary:'One complete native instant, including deadline-only instants.'},checkpoint,runtimeIntervention:noIntervention,graph:{supported:false,reason:'No native graph in this profile.'},matrix:{supported:false,reason:'No native matrix.'},explanation:{supported:true,scope:'StoredSet/IndexedReplay admitted display, access, reasons and chosen intent; violating-control narration suppressed',qualification:'work-character-explanation/0.1; 5152 descriptions/624 prefixes pass, including256 explicitly suppressed control prefixes. Full narrative remains open.'}}},
+  {id:'commit',label:'COMMIT · lifecycle and knowledge',seamVersion:'commit-public/0.1-candidate',corpusScope:'PHEN-COMMIT-001;10 programs/70 native prefixes',capabilities:{committedStep:{supported:true,boundary:'One complete native instant.'},checkpoint,runtimeIntervention:noIntervention,graph:{supported:false,reason:'Concrete lifecycle and observer knowledge leaves; no native graph.'},matrix:{supported:false,reason:'No native matrix.'},explanation:{supported:true,scope:'Native observer admitted reports only',qualification:'commit-observer-explanation/0.1; 57 descriptions/140 observer projections/70 prefixes pass. Bounded browser language and checkpoint replay pass; full narrative remains open.'}}},
+  {id:'decision',label:'DECISION · choice and consequence',seamVersion:'decision-public/0.1-candidate',corpusScope:'PHEN-DECISION-001;174 programs/360 native prefixes',capabilities:{committedStep:{supported:true,boundary:'One complete native instant.'},checkpoint,runtimeIntervention:noIntervention,graph:{supported:false,reason:'Bounded recorded decision/history; no native graph.'},matrix:{supported:false,reason:'No native matrix.'},explanation:{supported:true,scope:'Native current evidence, selected intent and recorded factors, admitted consequences',qualification:'decision-character-explanation/0.1; 798 descriptions/360 prefixes/174 programs pass. Two browser language cases pass; full narrative remains open.'}}},
+  {id:'affect',label:'AFFECT · appraisal and choice',seamVersion:'affect-public/0.1-candidate',corpusScope:'PHEN-AFFECT-001;91 main programs and14 supplementary execution roles',capabilities:{committedStep:{supported:true,boundary:'One complete native instant.'},checkpoint,runtimeIntervention:noIntervention,graph:{supported:false,reason:'No native graph in this bounded profile.'},matrix:{supported:false,reason:'No native matrix.'},explanation:{supported:true,scope:'Recorded AFFECT learning, appraisal and decision evaluations',qualification:'affect-evaluation-explanation/0.1; 3037 descriptions/1436 prefixes pass the bounded corpus language audit. No full character narrative claim.'}}},
+  {id:'belief',label:'BELIEF · displayed evidence',seamVersion:'belief-public/0.1-candidate',corpusScope:'PHEN-BELIEF-001;48 frozen programs',capabilities:{committedStep:{supported:true,boundary:'One complete native instant.'},checkpoint,runtimeIntervention:noIntervention,graph:{supported:false,reason:'Scalar belief leaves; no native graph.'},matrix:{supported:false,reason:'No native matrix.'},explanation:{supported:true,scope:'Recorded BELIEF learning/appraisal descriptions',qualification:'belief-evaluation-explanation/0.1; full decision narrative remains open.'}}},
+  {id:'learn',label:'LEARN · censored evidence',seamVersion:'learn-public/0.1-candidate',corpusScope:'PHEN-LEARN-001; 39 frozen public programs',capabilities:{committedStep:{supported:true,boundary:'One complete native instant.'},checkpoint,runtimeIntervention:noIntervention,graph:{supported:false,reason:'Scalar belief leaves; no native graph.'},matrix:{supported:false,reason:'No native matrix representation.'},explanation:{supported:true,scope:'Recorded LEARN application descriptions only',qualification:'learn-application-explanation/0.1; closed evidence projection. Full narrative remains unqualified.'}}},
+  {id: 'values', label: 'Values integration', seamVersion: 'values-integration-public/0.1-candidate', corpusScope: 'Values integrated qualification successor', capabilities: {
+    committedStep: {supported: true, boundary: 'One whole instant, including all 13 native stages.'}, checkpoint, runtimeIntervention: noIntervention,
+    graph: {supported: false, reason: 'This profile does not expose a memory or belief graph.'}, matrix: {supported: false, reason: 'This profile has no embedding or matrix representation.'},
+    explanation: {supported: true, scope: 'Recorded Values evaluation factors', qualification: 'Native parity verified; complete language audit remains open.'},
+  }},
+  {id: 'reason', label: 'Joined reasoning', seamVersion: 'reason-public/0.3-candidate', corpusScope: 'PHEN-REASON-001, bounded joined-source qualification', capabilities: {
+    committedStep: {supported: true, boundary: 'One whole training or probe instant; probes do not draw decisions.'}, checkpoint, runtimeIntervention: noIntervention,
+    graph: {supported: false, reason: 'Source provenance is available, but this profile has no memory or belief graph.'}, matrix: {supported: false, reason: 'This profile has no embedding or matrix representation.'},
+    explanation: {supported: true, scope: 'Recorded source roles, overlap, grouping and rejection', qualification: 'Native parity verified; complete language audit remains open.'},
+  }},
+  {id: 'general', label: 'General attention · graph inspection', seamVersion: 'rules/campaign3-general-attention/0.1-candidate', corpusScope: '43 original General recipes/568 native prefixes shared by MEM and ATTN; batch/browser admission qualified separately', capabilities: {
+    committedStep: {supported: true, boundary: 'One whole public instant; worker-owned execution.'}, checkpoint, runtimeIntervention: noIntervention,
+    graph: {supported: true, reason: 'Actual directed Record625 association cells; layout distance is diagnostic.'}, matrix: {supported: true, reason: 'Exact association matrix and three selected target columns; no personality embedding.'},
+    explanation: {supported: false, scope: 'Raw committed reads, diffs and outputs only', qualification: 'No observer-safe narrative renderer qualified for this profile.'},
+  }},
+  {id: 'epi', label: 'EPI · evidence boundary', seamVersion: 'epi-public/0.1-candidate', corpusScope: 'PHEN-EPI-001; 72 frozen public programs', capabilities: {committedStep: {supported: true, boundary: 'One whole native instant.'}, checkpoint, runtimeIntervention: noIntervention, graph: {supported: false, reason: 'This profile has belief and encoding leaves, no graph.'}, matrix: {supported: false, reason: 'No native matrix representation.'}, explanation: {supported: true, scope: 'Safe-profile encoding descriptions only', qualification: 'epi-encoding-explanation/0.1; frozen 72-program audit. Violating controls suppressed; full decision narrative remains unqualified.'}}},
+];
+export interface BatchRunView {
+  prefix: number; total: number; complete: boolean; clock: string;
+  modelHash: string; runHash: string; stateHash: string; saveHash: string;
+}
+export interface InspectableBatchRun {
+  advance(): Promise<boolean>;
+  view(): BatchRunView;
+}
+export interface BatchJob {
+  id: string; experimentId: BatchExperimentId; name: string; seed: number;
+  law: string | number; appraisal?: string; numeric?: number; seedHex?: string;
+  expectedSaveHashes: string[];
+}
+/** The common transport intentionally exposes no mutable runtime or private evaluator. */
+export async function createBatchRun(job: BatchJob): Promise<InspectableBatchRun> {
+  if(job.experimentId==='adapt'||job.experimentId==='det')return (await import('./persistenceBatch')).createPersistenceBatchRun({...job,experimentId:job.experimentId});
+  if(job.experimentId==='body'||job.experimentId==='multisource')return (await import('./publicSourceBatch')).createPublicSourceBatchRun({...job,experimentId:job.experimentId});
+  if(job.experimentId==='general'){
+    const {default:catalog}=await import('./batchCatalogV9.json');
+    const frozen=catalog.jobs.find(j=>j.id===job.id) as BatchJob | undefined;
+    if(!frozen||(['experimentId','name','seed','seedHex','law','appraisal','numeric','expectedSaveHashes'] as const).some(k=>JSON.stringify(frozen[k])!==JSON.stringify(job[k])))throw Error('Batch job differs from frozen General declaration');
+    const run=await (await import('./generalAdapter')).GeneralWorkbenchRun.create(job.name,frozen.seedHex!);
+    return {advance:()=>run.advance(),view:()=>{const {prefix,complete,clock,modelHash,runHash,stateHash,saveHash}=run.snapshot();return {prefix,total:frozen.expectedSaveHashes.length-1,complete,clock,modelHash,runHash,stateHash,saveHash};}};
+  }
+  if(job.seedHex!==undefined)throw Error('Exact seedHex is only admitted for frozen General jobs');
+  if(job.experimentId==='long'){
+    const {default:catalog}=await import('./batchCatalogV8.json');
+    const frozen=catalog.jobs.find(j=>j.id===job.id);
+    if(!frozen||(['experimentId','name','seed','law','appraisal','numeric','expectedSaveHashes'] as const).some(k=>JSON.stringify((frozen as BatchJob)[k])!==JSON.stringify(job[k])))throw Error('Batch job differs from frozen LONG program declaration');
+    const run=await (await import('./longAdapter')).LongWorkbenchRun.create(job.name);
+    return {advance:()=>run.advance(),view:()=>{const {prefix,complete,clock,modelHash,runHash,stateHash,saveHash}=run.snapshot();return {prefix,total:frozen.expectedSaveHashes.length-1,complete,clock,modelHash,runHash,stateHash,saveHash};}};
+  }
+  if(job.experimentId==='social'||job.experimentId==='relationship'||job.experimentId==='skill'||job.experimentId==='habit'||job.experimentId==='work'||job.experimentId==='belief'||job.experimentId==='affect'||job.experimentId==='decision'||job.experimentId==='commit'){
+    const {default:catalog}=await import('./batchCatalogV7.json');
+    const frozen=catalog.jobs.find(j=>j.id===job.id);
+    if(!frozen||(['experimentId','name','seed','law','appraisal','numeric','expectedSaveHashes'] as const).some(k=>JSON.stringify((frozen as BatchJob)[k])!==JSON.stringify(job[k])))throw Error('Batch job differs from frozen program declaration');
+    const run=job.experimentId==='social'?await (await import('./socialAdapter')).SocialWorkbenchRun.create(job.name):job.experimentId==='relationship'?await (await import('./relationshipAdapter')).RelationshipWorkbenchRun.create(job.name):job.experimentId==='skill'?await (await import('./skillAdapter')).SkillWorkbenchRun.create(job.name):job.experimentId==='habit'?await (await import('./habitAdapter')).HabitWorkbenchRun.create(job.name):job.experimentId==='work'?await (await import('./workAdapter')).WorkWorkbenchRun.create(job.name):job.experimentId==='decision'?await (await import('./decisionAdapter')).DecisionWorkbenchRun.create(job.name):job.experimentId==='commit'?await (await import('./commitAdapter')).CommitWorkbenchRun.create(job.name):job.experimentId==='belief'?await (await import('./beliefAdapter')).BeliefWorkbenchRun.create(job.name):await (await import('./affectSession')).createAffectInspection(job.name);
+    return {advance:()=>run.advance(),view:()=>{const {prefix,complete,clock,modelHash,runHash,stateHash,saveHash}=run.snapshot();return {prefix,total:frozen.expectedSaveHashes.length-1,complete,clock,modelHash,runHash,stateHash,saveHash};}};
+  }
+  if(job.experimentId==='epi'||job.experimentId==='learn'){
+    if(job.seed!==(job.experimentId==='epi'?19:0)||![1,2].includes(job.numeric!)||job.appraisal!==undefined)throw Error('Invalid frozen batch profile');
+    const {canonicalDecode,RecordSchemaRegistry}=await import('../substrate/canonicalEncoding'),{fromHex}=await import('./canonical');
+    const isEpi=job.experimentId==='epi';
+    const plan=isEpi?(await import('../../docs/planning/EPI_PUBLIC_EXPERIMENT_PLAN_REV1.json')).default:(await import('../../docs/planning/LEARN_PUBLIC_EXPERIMENT_PLAN_REV1.json')).default;
+    const row=plan.runs.find(r=>r.name===job.name&&r.law===job.law&&r.numeric===job.numeric);if(!row)throw Error('Unknown frozen batch program');
+    const schemas=isEpi?(await import('../campaign3/epiCodecs')).epiSupportedSchemas():(await import('../campaign3/learnCodecs')).learnSupportedSchemas();
+    const inputs=canonicalDecode(fromHex(row.orderedInputs),new RecordSchemaRegistry(schemas));if(typeof inputs==='boolean'||inputs.kind!=='list')throw Error('Invalid original calendar');
+    const total=inputs.items.length,program=`${row.law}/${row.numeric}/${row.name}`;
+    const run=isEpi?await (await import('./epiAdapter')).EpiWorkbenchRun.create(program):await (await import('./learnAdapter')).LearnWorkbenchRun.create(program);
+    return {advance:()=>run.advance(),view:()=>{const {prefix,complete,clock,modelHash,runHash,stateHash,saveHash}=run.snapshot();return {prefix,total,complete,clock,modelHash,runHash,stateHash,saveHash};}};
+  }
+  if (job.experimentId === 'values') {
+    const [{ValuesWorkbenchRun}, {default: fixtures}] = await Promise.all([import('./valuesAdapter'), import('./valuesFixtures.json')]);
+    const fixture = fixtures.cases.find(f => f.name === job.name);
+    if (!fixture) throw Error('Unknown Values batch program');
+    // Adapter ingress performs the contract's strict profile/frame validation.
+    const run = await ValuesWorkbenchRun.create({profile: {law: job.law, appraisal: job.appraisal, seed: job.seed}, frames: fixture.frames} as Parameters<typeof ValuesWorkbenchRun.create>[0]);
+    return {advance: () => run.advance(), view: () => {const s = run.snapshot(); return {prefix: s.prefix, total: 4, complete: s.prefix === 4, clock: s.clock, modelHash: s.modelHash, runHash: s.runHash, stateHash: s.stateHash, saveHash: s.saveHash};}};
+  }
+  if (job.experimentId === 'reason') {
+    const {ReasonWorkbenchRun} = await import('./reasonAdapter');
+    const run = await ReasonWorkbenchRun.create({law: Number(job.law), name: job.name, seed: job.seed});
+    return {advance: () => run.advance(), view: () => {const {prefix, total, complete, clock, modelHash, runHash, stateHash, saveHash} = run.snapshot(); return {prefix, total, complete, clock, modelHash, runHash, stateHash, saveHash};}};
+  }
+  throw Error('Unsupported batch experiment');
+}
