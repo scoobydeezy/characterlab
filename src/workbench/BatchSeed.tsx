@@ -1,7 +1,9 @@
 import type {BatchJob} from './experimentRegistry';
+import {ScopedBatchSeed} from './ScopedBatchSeed';
 
 /** The exact hexadecimal General seed takes precedence over its transport placeholder. */
 export function BatchSeed({job}: {job: BatchJob}) {
+  if(job.experimentId==='bio'||job.experimentId==='sem')return <ScopedBatchSeed job={{experimentId:job.experimentId,seedHex:job.seedHex}}/>;
   if (job.experimentId === 'general') {
     if (typeof job.seedHex !== 'string' || !/^[0-9a-f]{64}$/.test(job.seedHex)) {
       return <span role="alert">Exact General seed unavailable</span>;

@@ -138,3 +138,35 @@ report; mount scoped exact seed displays and explicit captions. Qualify full new
 shared execution and browser cohorts before claiming admission complete. The separate
 Disposition terminal restore on tab43 is currently Working; avoid new builds/native
 tests until that operation completes. There is no remaining current-source hold.
+
+## Shared admission prepared; qualification pending
+
+The working implementation now routes BIO/SEM through the shared registry, session
+and worker dispatch. Registry0.27/session0.12/export0.12 select the prepared V12
+catalog1086/7574, preserving the prior1072 declarations. BIO retains a null scheduler
+clock; SEM retains its native clock. Scoped jobs require exact32-byte seeds and their
+explicit component/harness boundary. Scoped seed displays and per-job boundary
+metadata are mounted; reports retain selected BIO originals and the SEM originals.
+Inspection descriptors have one registry owner, without changing native contracts.
+
+This is PREPARED implementation, not accepted shared admission. Three new tests cover
+catalog preservation, shared report/boundary transport with a fake adapter, and
+rejection of invented BIO scheduler time. They have NOT RUN. The complete shared
+14-role/264-prefix audit writer is prepared and `node --check` PASS only; it binds
+the independent native acceptance and exact receipt hash before freezing sources.
+Its execution, TypeScript, build, regression tests and browser checks remain pending.
+No new evidence directory or native audit source hold has been created.
+
+LOCAL DISPOSITION: continue bounded source preparation while Disposition tab43 is
+restoring its terminal checkpoint; defer builds/native tests to avoid competing
+resource use. Latest observation remains A18/B18 Working, no alerts and Restore
+disabled. Do not retry or switch modes. The frozen V10 native audit last reached
+680/1068; its browser and copied sources remain independent of these edits.
+
+After terminal restore verification, run targeted V12, inspection registry, boundary,
+seed, prior V11/public-session and worker tests, then TypeScript and isolated build665.
+Run `check-workbench-scoped-shared.mjs`, review every14/264 result against the accepted
+transport receipt, and qualify both browser cohorts with exact seeds, boundary labels,
+hashes and original report data. Reconcile coverage only after those checks pass.
+Research/boundary checks also remain due for this prepared integration. No Campaign3
+verdict, obligation, native law, comparator or Campaign4 entry gate changes here.

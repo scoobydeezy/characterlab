@@ -1,8 +1,8 @@
 import {createBatchRun, type BatchJob, type BatchRunView, type InspectableBatchRun} from './experimentRegistry';
 import {batchExecutionBoundary,validBatchClock} from './batchExecutionBoundary';
 
-export const BATCH_VERSION = 'workbench-batch/0.11';
-export const BATCH_LIMITS = Object.freeze({jobs: 1072, prefixesPerJob: 33, simultaneousRuns: 1});
+export const BATCH_VERSION = 'workbench-batch/0.12';
+export const BATCH_LIMITS = Object.freeze({jobs: 1086, prefixesPerJob: 33, simultaneousRuns: 1});
 export interface BatchPrefix extends BatchRunView {expectedSaveHash: string; matchesFrozenSave: boolean;}
 export interface BatchResult {job: BatchJob; status: 'queued' | 'running' | 'complete' | 'failed'; prefixes: BatchPrefix[]; error?: string;}
 export interface BatchSnapshot {
@@ -20,7 +20,8 @@ export class BatchSession {
     if (!jobs.length || jobs.length > BATCH_LIMITS.jobs || new Set(jobs.map(j => j.id)).size !== jobs.length) throw Error(`Batch requires 1–${BATCH_LIMITS.jobs} uniquely identified jobs`);
     for (const job of jobs) {
       batchExecutionBoundary(job);
-      if ((job.seedHex !== undefined && (job.experimentId !== 'general' || !hash(job.seedHex))) || typeof job.id !== 'string' || job.id.length > 160 || typeof job.name !== 'string' || job.name.length > 160 || !['values', 'reason', 'epi', 'learn', 'belief', 'affect', 'decision', 'commit', 'work', 'skill', 'habit', 'social', 'relationship', 'long', 'general', 'body', 'multisource', 'adapt', 'det'].includes(job.experimentId) || !Number.isInteger(job.seed) || job.seed < 0 || job.seed > 255 || !(typeof job.law === 'number' && Number.isFinite(job.law) || typeof job.law === 'string' && job.law.length <= 80) || job.appraisal !== undefined && (typeof job.appraisal !== 'string' || job.appraisal.length > 80) || job.expectedSaveHashes.length < 1 || job.expectedSaveHashes.length > BATCH_LIMITS.prefixesPerJob || !job.expectedSaveHashes.every(hash)) throw Error('Invalid bounded batch job');
+      if(['bio','sem'].includes(job.experimentId)&&!hash(job.seedHex))throw Error('Scoped batch jobs require exact 32-byte seed bytes');
+      if ((job.seedHex !== undefined && (!['general','bio','sem'].includes(job.experimentId) || !hash(job.seedHex))) || typeof job.id !== 'string' || job.id.length > 160 || typeof job.name !== 'string' || job.name.length > 160 || !['values', 'reason', 'epi', 'learn', 'belief', 'affect', 'decision', 'commit', 'work', 'skill', 'habit', 'social', 'relationship', 'long', 'general', 'body', 'multisource', 'adapt', 'det', 'bio', 'sem'].includes(job.experimentId) || !Number.isInteger(job.seed) || job.seed < 0 || job.seed > 255 || !(typeof job.law === 'number' && Number.isFinite(job.law) || typeof job.law === 'string' && job.law.length <= 80) || job.appraisal !== undefined && (typeof job.appraisal !== 'string' || job.appraisal.length > 80) || job.expectedSaveHashes.length < 1 || job.expectedSaveHashes.length > BATCH_LIMITS.prefixesPerJob || !job.expectedSaveHashes.every(hash)) throw Error('Invalid bounded batch job');
     }
     this.#factory = factory;
     this.#snapshot = {version: BATCH_VERSION, status: 'idle', current: 0, results: jobs.map(job => ({job: copy(job), status: 'queued', prefixes: []})), retention: 'Exact profile/program references and every prefix hash are retained. Raw traces are omitted explicitly from this summary; inspect or replay the original program through its adapter.'};

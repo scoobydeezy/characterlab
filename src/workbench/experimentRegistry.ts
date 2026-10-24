@@ -1,6 +1,7 @@
+import {batchExecutionBoundary} from './batchExecutionBoundary';
 /** Versioned diagnostic capabilities; none of these objects is simulation authority. */
-export const EXPERIMENT_REGISTRY_VERSION = 'workbench-experiments/0.26';
-export type ExperimentId = 'values' | 'reason' | 'general' | 'epi' | 'learn' | 'belief' | 'affect' | 'decision' | 'commit' | 'work' | 'skill' | 'habit' | 'social' | 'relationship' | 'long' | 'body' | 'multisource' | 'adapt' | 'det';
+export const EXPERIMENT_REGISTRY_VERSION = 'workbench-experiments/0.27';
+export type ExperimentId = 'values' | 'reason' | 'general' | 'epi' | 'learn' | 'belief' | 'affect' | 'decision' | 'commit' | 'work' | 'skill' | 'habit' | 'social' | 'relationship' | 'long' | 'body' | 'multisource' | 'adapt' | 'det' | 'bio' | 'sem';
 export type BatchExperimentId = ExperimentId;
 export interface InspectionCapabilities {
   committedStep: {supported: true; boundary: string};
@@ -18,6 +19,8 @@ const noIntervention = {supported: false as const, reason: 'The public contract 
 const checkpoint = {supported: true as const, authentication: 'Exact public save, original inputs, model, seed and complete prefix.'};
 const persistenceCommon={committedStep:{supported:true as const,boundary:'One complete native instant.'},checkpoint:{supported:true as const,authentication:'Exact original program, model, seed, saved bytes and complete prefix.'},runtimeIntervention:{supported:false as const,reason:'Only frozen original programs on fresh runs are admitted.'},graph:{supported:false,reason:'No native graph exposed by this bounded profile.'},matrix:{supported:false,reason:'No native matrix exposed by this bounded profile.'}};
 export const EXPERIMENTS: readonly ExperimentDescriptor[] = [
+ {id:'bio',label:'BIO · earned biography components',seamVersion:'bio-coupled-comparison/0.2-candidate',corpusScope:'13 identity-bound component cases/260 prefixes and continuations qualified; not public scheduler admission',capabilities:{...persistenceCommon,committedStep:{supported:true,boundary:'One committed BIO component step; no public scheduler event.'},checkpoint:{supported:true,authentication:'Original component case, canonical model/run identity, exact save and prefix.'},explanation:{supported:false,scope:'Recorded component evaluations only',qualification:'Character-facing language and full comparison coverage remain open.'}}},
+ {id:'sem',label:'SEM · three-observer fixture',seamVersion:'semantic-binding/0.1-candidate; SEM-001J',corpusScope:'Accepted fixed integrated harness;1 program/4 prefixes; broader controls remain separate',capabilities:{...persistenceCommon,committedStep:{supported:true,boundary:'One original observer instant in the fixed scheduler harness.'},checkpoint:{supported:true,authentication:'Diagnostic fixture identity, exact original prefix and native save/load.'},explanation:{supported:false,scope:'Historical researcher outputs only',qualification:'Historical omniscient strings are not observer-safe language. Native trace does not provide later campaign read/write participation.'}}},
  {id:'adapt',label:'ADAPT · exposure and measurement',seamVersion:'measurement-episodic-memory/0.1-candidate',corpusScope:'Accepted PHEN-ADAPT-001/1.11.0 parent pair;2 programs/8 prefixes',capabilities:{...persistenceCommon,explanation:{supported:true,scope:'Admitted and recalled diagnostic measurement only',qualification:'Six descriptions across8 prefixes; hidden adaptation and exposure attribution excluded. Broader controls remain open.'}}},
  {id:'det',label:'DET · exact replay and draws',seamVersion:'campaign2-task-cognitive-persistence/0.1-candidate',corpusScope:'Cognitive successor2 programs/18 prefixes; original substrate and failure/capacity controls remain separate',capabilities:{...persistenceCommon,explanation:{supported:false,scope:'Researcher diagnostics only',qualification:'No observer-safe narrative qualified; actual draws are not character uncertainty.'}}},
  {id:'body',label:'BODY · evidence and ownership',seamVersion:'campaign3-embodied-persistence/0.1-candidate',corpusScope:'16 source programs/79 prefixes; five separate ownership components',capabilities:{committedStep:{supported:true,boundary:'One complete native instant.'},checkpoint,runtimeIntervention:noIntervention,graph:{supported:false,reason:'No native graph exposed by this bounded profile.'},matrix:{supported:false,reason:'No native matrix exposed by this bounded profile.'},explanation:{supported:true,scope:'Recorded admitted samples and public mediated pressure only',qualification:'190 descriptions across79 prefixes; known zero and unavailable remain distinct. Hidden41/49 evidence equality and historical text stability qualified. Choice, subjective feeling and ownership-component narration remain unsupported.'}}},
@@ -52,7 +55,7 @@ export const EXPERIMENTS: readonly ExperimentDescriptor[] = [
   {id: 'epi', label: 'EPI · evidence boundary', seamVersion: 'epi-public/0.1-candidate', corpusScope: 'PHEN-EPI-001; 72 frozen public programs', capabilities: {committedStep: {supported: true, boundary: 'One whole native instant.'}, checkpoint, runtimeIntervention: noIntervention, graph: {supported: false, reason: 'This profile has belief and encoding leaves, no graph.'}, matrix: {supported: false, reason: 'No native matrix representation.'}, explanation: {supported: true, scope: 'Safe-profile encoding descriptions only', qualification: 'epi-encoding-explanation/0.1; frozen 72-program audit. Violating controls suppressed; full decision narrative remains unqualified.'}}},
 ];
 export interface BatchRunView {
-  prefix: number; total: number; complete: boolean; clock: string;
+  prefix: number; total: number; complete: boolean; clock: string | null;
   modelHash: string; runHash: string; stateHash: string; saveHash: string;
 }
 export interface InspectableBatchRun {
@@ -62,10 +65,13 @@ export interface InspectableBatchRun {
 export interface BatchJob {
   id: string; experimentId: BatchExperimentId; name: string; seed: number;
   law: string | number; appraisal?: string; numeric?: number; seedHex?: string;
+  executionKind?: 'composed-component' | 'fixed-scheduler-harness';
   expectedSaveHashes: string[];
 }
 /** The common transport intentionally exposes no mutable runtime or private evaluator. */
 export async function createBatchRun(job: BatchJob): Promise<InspectableBatchRun> {
+  batchExecutionBoundary(job);
+  if(job.experimentId==='bio'||job.experimentId==='sem')return (await import('./scopedBatch')).createScopedBatchRun({...job,experimentId:job.experimentId,executionKind:job.executionKind!,seedHex:job.seedHex!});
   if(job.experimentId==='adapt'||job.experimentId==='det')return (await import('./persistenceBatch')).createPersistenceBatchRun({...job,experimentId:job.experimentId});
   if(job.experimentId==='body'||job.experimentId==='multisource')return (await import('./publicSourceBatch')).createPublicSourceBatchRun({...job,experimentId:job.experimentId});
   if(job.experimentId==='general'){

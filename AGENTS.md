@@ -52,6 +52,14 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 V12 shared admission PREPARED, UNTESTED:** registry0.27/session0.12/
+export0.12 route BIO13/260 and SEM1/4 with explicit boundaries/exact seeds; catalog
+1086/7574 preserves prior1072. Three new tests and full shared audit writer prepared;
+only writer syntax checked. Tests/typecheck/build/native/browser/research remain due.
+Start BATCH_V12_PROGRESS latest section. Disposition43 still restoring18/18, no alerts,
+Restore disabled; DO NOT retry or switch modes. Defer heavy checks until it completes.
+V10 native94573 last680/1068; browser53 independent. Retain all55 tabs every turn.
+
 **2026-10-23 BIO/SEM transport COMPLETE:** corrected79379 exit0 PASS14/264;
 independent original-boundary/seed/clock/identity/prefix reconciliation and all14
 retained role files PASS. All476 current-source holds released. Revision1 verifier
