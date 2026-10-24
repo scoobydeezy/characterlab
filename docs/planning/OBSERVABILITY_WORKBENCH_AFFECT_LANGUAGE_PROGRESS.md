@@ -1101,3 +1101,35 @@ last13/15 prefix15. Packed tab29 now17/17 Working, no terminal pass. Retain all4
 LOCAL DISPOSITION: widen exact native inspection coverage and preserve the original
 trace defect. Full comparison corpus/browser breadth, complete player factor language,
 strength/certainty, learning ancestry, trace disposition and full entry remain due.
+
+## 2026-10-23 — complete declared state-comparison corpus
+
+Native8325 COMPLETE all16 declared AFFECT pairs/200 aligned paired prefixes through
+original terminal horizons. Independent artifact reconciliation PASS all282 frozen
+sources/copies, three original prefix identities, complete declaration order and
+1175 historical row checks. The native writer verified2388 cumulative owning-branch
+last-write links against original mutation bodies and every current field against the
+native snapshots. Inputs remain immutable. See
+workbench-affect-state-comparison-corpus-rev1/receipt.json and verification.json.
+
+Two pairs differ in terminal stored state: timing/likelihood first at6 and timing/control
+first at12. The other14 have no stored-leaf difference at any retained prefix. These
+include feedback and obligation contrasts whose appraisal/choice behavior can differ;
+state equality does not collapse those distinctions. The independent verifier counts
+actual terminal differing leaves separately from the writer's first-difference count,
+so an earlier difference alone cannot establish terminal inequality. No transient
+reconvergence occurs in this declared corpus. This is exact leaf-value comparison,
+not general character equivalence, causal necessity or a new verdict about affect laws.
+
+The282-source comparison hold is released now that native and independent terminal
+verification have passed; paged166 overlaps remain held and unchanged. No broader
+browser claim beyond retained timing/likelihood0/6/7 and earlier bounded controls.
+No complete deletion provenance, new player disclosure or full Workbench entry claim.
+
+Prepared scripts/verify-disposition-paged-full-diagnostics.mjs and syntax checked.
+It requires the final285-prefix receipt, checks original archive/artifact/source
+hashes, ordered coverage, diagnostic selections and cumulative history accounting.
+It does not independently rerun diagnostic bodies. Do not run before native23320
+terminates; last confirmed13/15 prefix16 RUNNING. Packed browser29 remains17/17 Working.
+All41 tabs retained. LOCAL DISPOSITION preserves original semantics and all18
+conditional obligations. Remaining full-entry obligations are unchanged.

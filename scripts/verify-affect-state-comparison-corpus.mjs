@@ -26,7 +26,12 @@ for(const [i,r] of receipt.results.entries()){
   const first=p.report.rows.find(row=>row.fields.some(f=>!f.equal));assert.deepEqual(p.report.firstDifference,first?{at:first.at,initial:first.at===null}:null);
   counts.prefixes++;
  }
- assert.deepEqual(r.firstDifference,data.prefixes.at(-1).report.firstDifference);if(r.firstDifference!==null)counts.differentTerminalPairs++;counts.pairs++;
+ const terminal=data.prefixes.at(-1).report;
+ assert.deepEqual(r.firstDifference,terminal.firstDifference);
+ // Independently count actual terminal differences, rather than assuming that
+ // an earlier difference cannot have converged again by the final prefix.
+ if(terminal.rows.at(-1).fields.some(f=>!f.equal))counts.differentTerminalPairs++;
+ counts.pairs++;
 }
 assert.deepEqual(counts,receipt.counts);
 fs.writeFileSync(root+'/verification.json',JSON.stringify({status:'PASS INDEPENDENT DECLARED COMPARISON ARTIFACT RECONCILIATION',counts,frozenSources:freeze.sources.length,receiptHash:sha(fs.readFileSync(root+'/receipt.json')),scope:'All declarations, original prefix identities, report equality/first-difference consistency, cumulative write-link counts and historical report stability. Direct native current-field and event-body checks belong to the frozen writer; not independently re-executed here.'},null,2)+'\n',{flag:'wx'});

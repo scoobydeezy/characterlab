@@ -52,6 +52,16 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 full comparison qualification:** Native8325 COMPLETE16 declared AFFECT
+pairs/200 paired prefixes; independent282-source/original-identity reconciliation PASS.
+1175 historical checks/2388 recorded-write links; two terminal differing pairs:
+likelihood first6, control first12. Other14 stored histories equal; choice/appraisal
+metrics remain distinct. See workbench-affect-state-comparison-corpus-rev1.
+Comparison-only hold released; paged166 overlap remains. Paged23320 last13/15 prefix16
+RUNNING; terminal verifier prepared/syntax checked, not yet run. Packed29 remains
+17/17 Working. Mark all41 tabs. Full player language/accessibility/entry remain due.
+
+
 **2026-10-23 full inspection completion:** Native69168 COMPLETE105 programs/1436
 prefixes. Independent288-source/copy and original-identity reconciliation PASS:
 7180 mapped paths,19965 events/118740 history checks,1331 appraisals/7916 carry history,
