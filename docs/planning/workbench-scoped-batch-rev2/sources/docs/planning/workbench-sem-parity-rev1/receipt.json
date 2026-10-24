@@ -1,0 +1,109 @@
+{
+  "status": "PASS ACCEPTED SEM INTEGRATED HARNESS PARITY",
+  "sources": [
+    {
+      "path": "src/workbench/semAdapter.ts",
+      "sha256": "86eba962cbdff90d19d464f0d00e6c71ea9d9dbf1658648534720301a7bb2280"
+    },
+    {
+      "path": "src/workbench/semCatalog.json",
+      "sha256": "ef9261056197022d3626d898a911bb8edf19e5e2623dbd7e997f2acc73701abf"
+    },
+    {
+      "path": "src/workbench/canonical.ts",
+      "sha256": "f80f4a8353ea7604432d5ffcf0d4628f8b7bf13b82a06b4807445e9a9ba97bde"
+    },
+    {
+      "path": "src/test/workbenchSem.test.ts",
+      "sha256": "d3a4bf03cc4f475a24ef0d87a812eed6093324091194c97f0c5bc87f66a8bb5a"
+    },
+    {
+      "path": "scripts/build-workbench-sem-catalog.mjs",
+      "sha256": "f81d914d3196f13e1488696e9b75a714a2642b69aac3dc6c4dc15dc4391bd312"
+    },
+    {
+      "path": "scripts/check-workbench-sem.mjs",
+      "sha256": "c719009339f79b3208b15e4d29c3d7a0fd03418105bc1f1a016d92d5e1e55c45"
+    }
+  ],
+  "originals": [
+    {
+      "path": "src/test/fixtures/phenSem001Run.ts",
+      "sha256": "a56703c6b4b9e94d9acfc0949150e4a17c8c285c537c412387c5d951b1d76dd3"
+    },
+    {
+      "path": "src/test/fixtures/phenSem001.ts",
+      "sha256": "09dde6788290292c23d6e129288d1e4c14b1e324b892cac9c90364cd16dbb5cf"
+    },
+    {
+      "path": "src/test/fixtures/phenSem001Renderer.ts",
+      "sha256": "a8013da66c7285229c76a39b4ef625657c8963adb360b44f07529760b604bfdb"
+    },
+    {
+      "path": "src/test/fixtures/referentOrigin.ts",
+      "sha256": "c2ab6b8bf6b9dfe9bf5bd9daa4ee8faa8bf2e007076fa3cf109cb07af459de29"
+    },
+    {
+      "path": "src/test/phenSem001Integration.test.ts",
+      "sha256": "2458cb471d54f51573e5260764250f63543af33d49e0a7abbbc352e4d18bba69"
+    },
+    {
+      "path": "src/semanticBinding/semanticCodecs.ts",
+      "sha256": "fdb12714fcb19a98bb0c070cde6b688fe12d55fa35877ee054436ced55ca421f"
+    },
+    {
+      "path": "src/semanticBinding/semanticEvidenceCodecs.ts",
+      "sha256": "7dfad248c12d525e940a6f038c2affd5d8d336a31d365c507a85761bb819c4d6"
+    },
+    {
+      "path": "src/semanticBinding/semanticSchemaRegistry.ts",
+      "sha256": "5d4c5943e0f6eea5ef3c40a0a1c35930c9cf9856ddfd4f91cab4deed310689dd"
+    }
+  ],
+  "fixtureDigest": "682b02c6e35bc92c3be9d4941aad9517c23cfeb587eb06141fd9d2c871ee5314",
+  "programs": 1,
+  "prefixes": 4,
+  "results": [
+    {
+      "prefix": 0,
+      "clock": "0",
+      "saveHash": "04b40a84ffc823d7a39bdc41d4141f69b1c5a7ac9150c1dd67bd103a6a9785e9",
+      "stateHash": "dba611488a7079bdee6d75a852c14062996b8b22568a0f12e2cc5c3b9d6479bc",
+      "outputsHash": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "traceHash": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "projectionHash": "8eda859ba4f9cd27517e3c4e35cacf6453676d4c926cdf18b4dfa1fc57045aef",
+      "traceEntries": 0
+    },
+    {
+      "prefix": 1,
+      "clock": "1",
+      "saveHash": "2283e9df2c39718bc7adf7ade184b6d7dcd9c84233e43b8875b29a0e95ec4882",
+      "stateHash": "dfffbded9de472db36551698b0bd4faa8aa610b7a40b6453ccc771decb49e0a9",
+      "outputsHash": "da28d480ca0e6854a08a4cf443e1a00d677459f109935b7c93f24af0d6300f9f",
+      "traceHash": "34a5ae7eedd66b2e05678cac2eb442e91f58e8b592e13b103e8e6a8165a12a43",
+      "projectionHash": "f6c392ec5dfaa4b2ef6d272f08b41914fbf17949af787f5972e29b9010795499",
+      "traceEntries": 1
+    },
+    {
+      "prefix": 2,
+      "clock": "2",
+      "saveHash": "51e99ebadf2ecfeb894659b909c5ab2321c6157879d7c1070df5082f27c34d06",
+      "stateHash": "4ce441be3764203531d53f1942b13b5825a49610bb26aece660c779ebd2ae591",
+      "outputsHash": "5422fdff9a9c990ddd1fb966eca7d05e84c183db257066393e6c8734ae5d1568",
+      "traceHash": "91484596c6ad6c1bd8648746afea638fab7ebf5eb07d3a9299e79d7f72195c85",
+      "projectionHash": "d83e98dd9c9f7f88f1ec7c251405a3369faaec2142348e2fdf50496e0c4d4830",
+      "traceEntries": 2
+    },
+    {
+      "prefix": 3,
+      "clock": "3",
+      "saveHash": "ea65d8618b034e390d0be92b0fc20f08b68c0c7bf86faf124b1c5e601c5b043c",
+      "stateHash": "5cf87e4c51dc908d6452c8634fcc7ce4153881fa20197a9ebfb1cebe670ec634",
+      "outputsHash": "7ae76cb99c825cd1b09434e243befd444b1db0694dce38e3e3aafd2c4c21d630",
+      "traceHash": "319e14b6309c5e0d2946165ce059d002b0273a1b73c40ca1892160db7d75e8ae",
+      "projectionHash": "16239ba32e9a2d7a44381ff7bd045e32fc7df1088dee779404a4334019a60aae",
+      "traceEntries": 3
+    }
+  ],
+  "scope": "Exact accepted three-observer scheduler harness; native state/output/trace/save and restored continuation match at every prefix. Canonical detached trace rendering is replay stable. Not a campaign factory, new character language qualification, full SEM controls, causal participation or browser acceptance."
+}

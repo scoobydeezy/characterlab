@@ -1,4 +1,5 @@
 import {createBatchRun, type BatchJob, type BatchRunView, type InspectableBatchRun} from './experimentRegistry';
+import {batchExecutionBoundary,validBatchClock} from './batchExecutionBoundary';
 
 export const BATCH_VERSION = 'workbench-batch/0.11';
 export const BATCH_LIMITS = Object.freeze({jobs: 1072, prefixesPerJob: 33, simultaneousRuns: 1});
@@ -18,6 +19,7 @@ export class BatchSession {
   constructor(jobs: readonly BatchJob[], factory: Factory = createBatchRun) {
     if (!jobs.length || jobs.length > BATCH_LIMITS.jobs || new Set(jobs.map(j => j.id)).size !== jobs.length) throw Error(`Batch requires 1–${BATCH_LIMITS.jobs} uniquely identified jobs`);
     for (const job of jobs) {
+      batchExecutionBoundary(job);
       if ((job.seedHex !== undefined && (job.experimentId !== 'general' || !hash(job.seedHex))) || typeof job.id !== 'string' || job.id.length > 160 || typeof job.name !== 'string' || job.name.length > 160 || !['values', 'reason', 'epi', 'learn', 'belief', 'affect', 'decision', 'commit', 'work', 'skill', 'habit', 'social', 'relationship', 'long', 'general', 'body', 'multisource', 'adapt', 'det'].includes(job.experimentId) || !Number.isInteger(job.seed) || job.seed < 0 || job.seed > 255 || !(typeof job.law === 'number' && Number.isFinite(job.law) || typeof job.law === 'string' && job.law.length <= 80) || job.appraisal !== undefined && (typeof job.appraisal !== 'string' || job.appraisal.length > 80) || job.expectedSaveHashes.length < 1 || job.expectedSaveHashes.length > BATCH_LIMITS.prefixesPerJob || !job.expectedSaveHashes.every(hash)) throw Error('Invalid bounded batch job');
     }
     this.#factory = factory;
@@ -29,7 +31,7 @@ export class BatchSession {
   pause() {this.#stop = true;}
   #record(result: BatchResult, view: BatchRunView) {
     const previous = result.prefixes.at(-1);
-    if (view.prefix !== result.prefixes.length || view.total !== result.job.expectedSaveHashes.length - 1 || view.complete !== (view.prefix === view.total) || typeof view.clock !== 'string' || view.clock.length > 80 || ![view.modelHash, view.runHash, view.stateHash, view.saveHash].every(hash) || previous && (previous.modelHash !== view.modelHash || previous.runHash !== view.runHash)) throw Error('Adapter prefix or identity contract mismatch');
+    if (view.prefix !== result.prefixes.length || view.total !== result.job.expectedSaveHashes.length - 1 || view.complete !== (view.prefix === view.total) || !validBatchClock(result.job,view.clock) || ![view.modelHash, view.runHash, view.stateHash, view.saveHash].every(hash) || previous && (previous.modelHash !== view.modelHash || previous.runHash !== view.runHash)) throw Error('Adapter prefix or identity contract mismatch');
     const expectedSaveHash = result.job.expectedSaveHashes[view.prefix];
     result.prefixes.push({...copy(view), expectedSaveHash, matchesFrozenSave: view.saveHash === expectedSaveHash});
     if (view.saveHash !== expectedSaveHash) throw Error(`Frozen save mismatch at prefix ${view.prefix}`);

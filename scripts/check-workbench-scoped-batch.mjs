@@ -1,5 +1,5 @@
 import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';import {createServer} from 'vite';
-const root='docs/planning/workbench-scoped-batch-rev1';assert(!fs.existsSync(root),'Preserve evidence');
+const root='docs/planning/workbench-scoped-batch-rev2';assert(!fs.existsSync(root),'Preserve evidence');
 const read=p=>JSON.parse(fs.readFileSync(p)),sha=b=>createHash('sha256').update(b).digest('hex');
 const catalog=read('src/workbench/batchCatalogV12.json'),previous=read('src/workbench/batchCatalogV11.json');assert.deepEqual(catalog.jobs.slice(0,1072),previous.jobs);
 const bioRoot='docs/planning/workbench-bio-parity-rev1',bioReceipt=read(bioRoot+'/receipt.json'),semReceipt=read('docs/planning/workbench-sem-parity-rev1/receipt.json');
@@ -18,7 +18,7 @@ try{
  const {createBioComparison}=await server.ssrLoadModule('/src/campaign3/bioComparison.ts');
  const h=await server.ssrLoadModule('/src/test/fixtures/phenSem001Run.ts'),{createCanonicalSave}=await server.ssrLoadModule('/src/substrate/persistence.ts');
  const results=[];
- for(const job of catalog.jobs.slice(1072)){
+ for(const job of [...catalog.jobs.slice(-1),...catalog.jobs.slice(1072,-1)]){
   const run=await createScopedBatchRun(job),prefixes=[];
   if(job.experimentId==='bio'){
    assert.equal(job.executionKind,'composed-component');assert.equal(job.seedHex,job.seed.toString(16).padStart(2,'0').repeat(32));
@@ -47,11 +47,12 @@ try{
     assert.equal(v.stateHash,sha(enc(h.adapter.canonicalValue(native.getState()))));assert.equal(v.saveHash,sha(save));assert.equal(v.saveHash,job.expectedSaveHashes[i]);
     assert.equal(sha(enc(list(native.getOutputs()))),e.outputsHash);assert.equal(sha(enc(list(native.getCommittedTrace()))),e.traceHash);prefixes.push(v);
     const moved=await run.advance();assert.equal(moved,i<3);
-    if(i<3){const [observer,at,experience]=h.SCHEDULE[i];native.schedule({dueAt:at,phase:10n,eventTypeId:h.OBSERVE,payload:h.observerPayload(observer,experience),dependencies:list([])});assert.equal(await native.settleNextInstant(),true);}else assert.deepEqual(run.view(),v);
+    if(i<3){const [observer,at,experience]=h.SCHEDULE[i];native.schedule({dueAt:at,phase:10n,eventTypeId:h.OBSERVE,payload:h.observerPayload(observer,experience),dependencies:list([])});const settled=await native.settleNextInstant();assert(settled,'SEM scheduled instant must settle');assert.equal(settled.dueAt,at);}else assert.deepEqual(run.view(),v);
    }
   }
-  results.push({job,prefixes});console.log(`PASS ${results.length}/14 ${job.id}`);
+  const result={job,prefixes};results.push(result);const index=catalog.jobs.findIndex(j=>j.id===job.id)-1072;fs.writeFileSync(root+'/role-'+String(index).padStart(2,'0')+'.json',JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(`PASS ${results.length}/14 ${job.id}`);
  }
+ results.sort((a,b)=>catalog.jobs.findIndex(j=>j.id===a.job.id)-catalog.jobs.findIndex(j=>j.id===b.job.id));
  assert.equal(results.length,14);assert.equal(results.reduce((n,r)=>n+r.prefixes.length,0),264);
  for(const s of sources){assert.equal(sha(fs.readFileSync(s.path)),s.sha256,s.path);assert.equal(sha(fs.readFileSync(s.copy)),s.sha256,s.copy);}
  fs.writeFileSync(root+'/receipt.json',JSON.stringify({status:'PASS PREPARED BIO SEM SCOPED TRANSPORT',sources,roles:14,prefixes:264,results,

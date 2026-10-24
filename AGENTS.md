@@ -52,6 +52,17 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 Scoped audit correction:**17393 failed a verifier-only strict-boolean
+assertion: raw SEM scheduler returns SettlementResult. Original476 sources/failure
+preserved; no complete acceptance. Corrected rev2 session79379 RUNNING, SEM first
+PASS4 clocks0/1/2/3/exactseed/empty-input commitment. HOLD476 current sources/copies
+in workbench-scoped-batch-rev2/manifest.json. Per-role results now retained. At terminal
+run verify-workbench-scoped-batch.mjs; preflight14/264 +10 corruption rejections PASS.
+Shared boundary validator/column mounted for existing public families:10 tests,
+typecheck/build664 and browser ADAPT2/8/16 hashes/exact unchanged report PASS.
+Tab55/4265 preview5147 retained; mark all55. Start BATCH_V12_PROGRESS. BIO/SEM shared
+admission remains due; native revision1 progress messages do not substitute receipts.
+
 **2026-10-23 V12 scoped transport PREPARED:** catalog1086/7574 retains prior1072;
 BIO13/260 composed components and SEM1/4 fixed harness are not public factories.
 BIO clock null; SEM genuine clock, friendly13 exact32-byte seed/empty original input
