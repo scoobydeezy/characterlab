@@ -1,0 +1,21 @@
+{
+  "strategy": "workbench-packed-replay/0.1",
+  "nativeContract": "disposition-public/0.1-candidate",
+  "status": "BOUNDARY QUALIFICATION IN PROGRESS",
+  "change": "Create original frozen program and replay declared committed prefix, then compare each decompressed checkpoint byte with the regenerated native save. Avoid decoding incoming saved trace and avoid incoming full hex assembly.",
+  "preserved": [
+    "Original native runtime and save format",
+    "Original input calendar and run identity",
+    "Exact whole-save bytes, not digest-only equality",
+    "Sequential branch restore",
+    "Old client remains until both fresh branches succeed",
+    "Legacy native restore and packed helper remain comparators"
+  ],
+  "remaining": [
+    "Old/new worker coexistence remains",
+    "Regenerated saveHex and runtime diagnostic snapshots remain",
+    "Per-prefix diagnostic refresh adds work",
+    "Browser terminal restore and measured heap remain unqualified"
+  ],
+  "priorFailure": "workbench-disposition-paired-horizon-rev2/checkpoint-restore-failure.json"
+}

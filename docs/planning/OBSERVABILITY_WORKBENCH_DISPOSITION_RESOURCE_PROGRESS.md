@@ -660,3 +660,38 @@ is preserved. Do not retry the unchanged long run or attribute the crash to one 
 Next investigate native restore representation/lifetime and old-worker residency,
 retaining transactional failure behavior and exact hashes before another terminal
 browser attempt. Live native23320 continues; its166 sources remain held.
+
+## 2026-10-23 — exact-byte packed replay restore strategy
+
+Source inspection found that native restoreDispositionPublicRun parses and retains
+incoming saved canonical trace while deterministically replaying the original program.
+The Workbench now has a distinct packed transport restore strategy: create the frozen
+original program, advance exactly the declared bounded prefix, verify generated
+program/prefix/run/save identities and byte count, then stream-decompress the supplied
+checkpoint and compare EVERY byte with the regenerated native save. It never decodes
+the incoming saved trace or assembles incoming full hex. The native
+ disposition-public/0.1-candidate factory/runtime/save format remain unchanged.
+Legacy native restore and legacy packed helper remain available as comparators.
+
+The new pair helper reconstructs A then B. Failure disposes completed/partial fresh
+branches; the UI still installs only after both succeed, retaining the old client on
+failure. Old/new worker coexistence remains. The regenerated saveHex, snapshots and
+per-prefix diagnostic refresh remain resource costs. This is a representation/lifetime
+change, not a measured heap bound or demonstrated fix for the terminal browser crash.
+
+Seven targeted tests PASS: exact-byte checks despite matching metadata, mutable-input
+snapshot, corrupt gzip, wrong digest/identity, early end, partial B cleanup, legacy
+native restore parity and successor equality, sequential pair handling and worker
+Blob transport. Initial failure was only incompatible error wording (identity versus
+identity/digest); source/failure retained before correction. Corrected full suite PASS.
+Frozen native audit PASS original save-byte hashes/counts at0/1, pair restore1 and exact
+successor2. Independent original oracle reconciliation PASS comparisons, ten hashes,
+choices and scalar histories at0/1/2. See workbench-disposition-packed-replay-rev1.
+
+Typecheck/build649 modules (temp651), evidence restore/research4318/boundary PASS.
+Live paged166 sources unchanged; no native source was amended. No browser successor
+claim yet. Next qualify this build in a new frozen browser session, then full terminal
+restore without concurrent build/test work; retain both prior crash revisions and
+account for remaining worker residency. All42 tabs retained, including crashed29.
+LOCAL DISPOSITION preserves exact whole-save proof, all C3 semantics and18 conditional
+obligations. Full entry and terminal restore remain open.

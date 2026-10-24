@@ -52,6 +52,18 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 packed replay correction:** Packed pair restore now reconstructs the
+frozen original program and stream-compares every incoming checkpoint byte with the
+regenerated native save. Avoids incoming parsed trace/full hex; old/new workers and
+generated saveHex remain. Legacy native restore unchanged. Seven tests/native0/1,
+restore1->2 and independent original oracle PASS; error-message failure retained.
+Typecheck/build649 modules(temp651)/research/boundary PASS. See packed-replay-rev1.
+No new browser qualification or terminal restore PASS. Next new frozen browser run
+for corrected build; avoid concurrent heavy work during terminal restore. Prior tab29
+crash remains retained. Mark all42 tabs. Native23320 last14/15 prefix9 LIVE166hold.
+No native semantics, law selection or conditional obligation status changed.
+
+
 **2026-10-23 terminal restore failure retained:** Packed tab29/4240 reached18/18;
 original comparison/ten hashes/choice/history and retained prefix1 PASS. Compressed
 terminal capture PASS A44252262/B48814745 native ->829195/883498 bytes. Restore once
