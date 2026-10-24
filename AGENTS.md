@@ -52,6 +52,13 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 V10 shared batch:** BODY/MULTISOURCE registered;1068 roles/7284 prefixes,
+prior990 unchanged. Nine tests/typecheck/build662 PASS. Full native94573 RUNNING
+from450 frozen source copies; no checkout hold. Full browser tab53/4263 preview48350
+RUNNING18/1068 roles92 prefixes;204 served/copied assets frozen. General tab52 last
+8/43/105; pair43 last16/16 Working. Mark all53 tabs each turn. Start V10 progress
+for terminal capture/verifier instructions. No full V10 acceptance or Campaign4 entry.
+
 **2026-10-23 General native batch COMPLETE:**43/568 plus independent original-seed/
 identity/calendar/prefix reconciliation PASS;417 current-source holds released.
 BatchSeed mounted; five tests/typecheck/build661 PASS. Full General browser tab52/

@@ -8,7 +8,7 @@ import freeze from '../../docs/planning/campaign3-general-attention-model-rev2/F
 const jobs=catalog.jobs.filter(j=>j.experimentId==='general') as BatchJob[];
 it('retains V8 and admits each original General recipe exactly once',()=>{
   expect(catalog.jobs.slice(0,947)).toEqual(previous.jobs);
-  expect(catalog.jobs).toHaveLength(990);expect(BATCH_LIMITS.jobs).toBe(990);
+  expect(catalog.jobs).toHaveLength(990);expect(BATCH_LIMITS.jobs).toBeGreaterThanOrEqual(990);
   expect(jobs.map(j=>j.name)).toEqual(freeze.models.map(m=>m.name));
   expect(jobs.reduce((n,j)=>n+j.expectedSaveHashes.length,0)).toBe(568);
   expect(jobs.every(j=>j.seedHex===freeze.seed)).toBe(true);

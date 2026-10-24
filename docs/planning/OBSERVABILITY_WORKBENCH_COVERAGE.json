@@ -513,7 +513,18 @@
       "ownershipReceipt": "docs/planning/workbench-body-ownership-rev1/receipt.json",
       "stateInspectionReceipt": "docs/planning/workbench-body-state-inspection-rev2/receipt.json",
       "stateInspectionAcceptance": "docs/planning/workbench-body-state-inspection-rev2/acceptance.json",
-      "stateInspectionBrowserReceipt": "docs/planning/workbench-body-state-inspection-rev2/browser-verification.json"
+      "stateInspectionBrowserReceipt": "docs/planning/workbench-body-state-inspection-rev2/browser-verification.json",
+      "batchQualification": {
+        "version": "workbench-batch-catalog/0.10",
+        "experimentId": "body",
+        "status": "REGISTERED; TRANSPORT PASS; FULL SHARED NATIVE/BROWSER RUNNING",
+        "roles": 16,
+        "prefixes": 79,
+        "transportReceipt": "docs/planning/workbench-public-source-batch-rev1/receipt.json",
+        "nativeFreeze": "docs/planning/workbench-batch-parity-rev10/manifest.json",
+        "browserFreeze": "docs/planning/workbench-batch-browser-rev10/freeze.json",
+        "scope": "Original public source programs only; component successors, full corpus phenomena and Campaign4 entry remain separate."
+      }
     },
     {
       "id": "PHEN-BELIEF-001",
@@ -687,7 +698,18 @@
       "scope": "55 named main scenarios/43 model identities plus seven matched interventions. Two focused replay/privacy tests and type-check PASS. Full native/historical parity running; comparisons, observer-safe language, UI and batch remain due.",
       "stateInspectionReceipt": "docs/planning/workbench-multisource-state-inspection-rev1/receipt.json",
       "stateInspectionAcceptance": "docs/planning/workbench-multisource-state-inspection-rev1/acceptance.json",
-      "stateInspectionBrowserReceipt": "docs/planning/workbench-multisource-state-inspection-rev1/browser-verification.json"
+      "stateInspectionBrowserReceipt": "docs/planning/workbench-multisource-state-inspection-rev1/browser-verification.json",
+      "batchQualification": {
+        "version": "workbench-batch-catalog/0.10",
+        "experimentId": "multisource",
+        "status": "REGISTERED; TRANSPORT PASS; FULL SHARED NATIVE/BROWSER RUNNING",
+        "roles": 62,
+        "prefixes": 249,
+        "transportReceipt": "docs/planning/workbench-public-source-batch-rev1/receipt.json",
+        "nativeFreeze": "docs/planning/workbench-batch-parity-rev10/manifest.json",
+        "browserFreeze": "docs/planning/workbench-batch-browser-rev10/freeze.json",
+        "scope": "Original public source programs only; component successors, full corpus phenomena and Campaign4 entry remain separate."
+      }
     },
     {
       "id": "PHEN-HABIT-001",
