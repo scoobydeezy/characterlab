@@ -52,6 +52,14 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 General batch admission:** Start OBSERVABILITY_WORKBENCH_BATCH_V9_PROGRESS.md.
+Catalog0.9 adds43 original General recipes/568 prefixes, exact32-byte seed and
+originals; previous947 declarations unchanged,990/6956 total. Eleven tests/tsc and
+isolated build657 PASS. Full native cohort session76981 RUNNING; freeze all sources
+in workbench-batch-general-rev1 until terminal. Seed table still shows legacy numeric
+placeholder; correct to seedHex after source hold releases, then browser qualification.
+No cohort/browser/full V9 acceptance yet. Pair43 last13/13 Working; retain all48 tabs.
+
 **2026-10-23 factor-language UI:** Separate coverage0.2 successor mounted in
 researcher Reasoning. Full105/1331/2851 PASS:2640 goal-presence/123 component-presence/
 88 uncovered; zero original component-presence gaps, not full language acceptance.

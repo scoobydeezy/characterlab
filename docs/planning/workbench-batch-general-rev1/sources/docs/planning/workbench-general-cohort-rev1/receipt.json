@@ -1,0 +1,355 @@
+{
+  "status": "PASS FROZEN GA COHORT NATIVE INSTRUMENT PARITY",
+  "sources": [
+    {
+      "path": "src/workbench/generalAdapter.ts",
+      "sha256": "6f8db8436008012fd95787aa25a9a973a0c846c860b6bcb9ec3bb1c363637a28"
+    },
+    {
+      "path": "src/workbench/generalWorker.ts",
+      "sha256": "4a5aee250c887e04d821575eef6eb3074d313ec32bff845f09e97cbf65999c1a"
+    },
+    {
+      "path": "src/workbench/generalWorkerClient.ts",
+      "sha256": "818b383c255d4fbdaba96d5ab946b57424740cff951cb9e3a7d7378f0336ebf6"
+    },
+    {
+      "path": "src/workbench/generalExport.ts",
+      "sha256": "676dbd98af8ff2e0ea4eea703994d1ae465cae854275757be04e52ac399e3fbe"
+    },
+    {
+      "path": "src/workbench/associationProjection.ts",
+      "sha256": "07fcd4b576a0476beefb8d995bd53a2ff7ead47a0fe3bde92ecf459fa3eb8d2f"
+    },
+    {
+      "path": "src/workbench/nativeTimeline.ts",
+      "sha256": "ceed75f534e8158a2172ac962cab89aa9ffa5fcbaaf71e0d62347fd01a9c6775"
+    },
+    {
+      "path": "src/campaign3/generalFactory.ts",
+      "sha256": "e32f09bc93719fb15ca46b1af29a7eef9c0b91df339992b4e8bd52ba263e15cf"
+    },
+    {
+      "path": "src/test/workbenchGeneralSeed.test.ts",
+      "sha256": "0d8ada8d2d0217b0c4052e6b44bae4b0e9c94e571d70e8e573e2ed6b956cf1b7"
+    },
+    {
+      "path": "docs/planning/campaign3-general-attention-model-rev2/FREEZE.json",
+      "sha256": "27ba4b12edda9c284ef03bf4dd52744f395639429f16077dcf6a0f28c05ef8c4"
+    },
+    {
+      "path": "scripts/check-workbench-general-cohort.mjs",
+      "sha256": "b797185922c962520f5f6139274d77155247f6e103a93b941f1b1a192ec8269f"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "model-00.json",
+      "sha256": "c25f178d9402b26aba41a28463120601ab4455cfeda3e2c6aca97f7e067f558e",
+      "recipe": "baseline",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-01.json",
+      "sha256": "f3890b79201e39b31878b6d3edb82a5cbdc8eb35e4881db1cd5d3bd33d848e0d",
+      "recipe": "budget-Independent-1/1",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-02.json",
+      "sha256": "656bad5633da0b626f67815f1597609b684bf3da29650beb42b759fabd9ce27d",
+      "recipe": "budget-HistoricalShared-1/5",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-03.json",
+      "sha256": "7dea762ce3615ce64e8ef37b0310219b8aa3fefaa1ed9494c5961a8568b23c9b",
+      "recipe": "budget-HistoricalShared-1/1",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-04.json",
+      "sha256": "7a3f5ec30665c7af9fda9cf1154884fa5270ebb4fef2cd21a40c28429bc30cdc",
+      "recipe": "budget-HistoricalHybrid-1/5",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-05.json",
+      "sha256": "de4b4344dc3d85846c45f23b14e20f3768654d5eb6604dfb2fcebdcd51582e85",
+      "recipe": "budget-HistoricalHybrid-1/1",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-06.json",
+      "sha256": "69651ce1f0f8ddb7f6386efbee739abe25dd2414469ad4b0a11158bf5195d0f9",
+      "recipe": "budget-RetiredFlat-1/5",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-07.json",
+      "sha256": "e74b284cc0f2f0dc7b12ce71595164e69231bdbc1f269e7e00c8d34aef156214",
+      "recipe": "budget-RetiredFlat-1/1",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-08.json",
+      "sha256": "12b19817ef311d25d05595639dd9add79b1ea8a091ea244f46abe2c5c4014305",
+      "recipe": "allocation-disabled",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-09.json",
+      "sha256": "577a25316caa294026faa9fe1318939361d8fa8da3ba8606068efebb46deb8ca",
+      "recipe": "allocation-spatial",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-10.json",
+      "sha256": "8c6a063d9ae94400bc47faa362fa070430cca33ff5d51ca901addc43fa5e4fe9",
+      "recipe": "feedback-encoding",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-11.json",
+      "sha256": "20a95dd90d6f67f3366fea4f8efc91fdbfb6e10e537628ccbbd9e2ef4cd6ec75",
+      "recipe": "feedback-retrieval",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-12.json",
+      "sha256": "638d1761f3c3e6de64b581c429a44472f3e6d12450995ee72ecf8c25de57dcc4",
+      "recipe": "feedback-both",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-13.json",
+      "sha256": "7416a627fc57df490588d7af7dac3d14b2c49eeb4a58e94eda3f40a6935decdd",
+      "recipe": "local-access",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-14.json",
+      "sha256": "0f30c3490d4f6982e683c68e60bd63ef5b2e4d567689c2632d3a11860412b7d9",
+      "recipe": "association-decay",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-15.json",
+      "sha256": "d14966b916c65d217db2a50ecb3f66434c67ea60ee5734ee891c6002413b5f6d",
+      "recipe": "presentation-no-decay",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-16.json",
+      "sha256": "ae87f71e2f3ff9633991ef29fa417173c2c1116bce0e7b20a1a149fd6bbd031d",
+      "recipe": "recall-k0",
+      "prefixes": 12,
+      "events": 145
+    },
+    {
+      "path": "model-17.json",
+      "sha256": "e42221035c5a23d012bfef68a047572d6cb0cb945245230a2a8c74b5ca7c349d",
+      "recipe": "recall-k1",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-18.json",
+      "sha256": "8addec32af86d03b0d142b45d482b032c9b15b5d64199bb98bb88e3d8677a7e1",
+      "recipe": "select-k0",
+      "prefixes": 12,
+      "events": 133
+    },
+    {
+      "path": "model-19.json",
+      "sha256": "d063baa756b7951d94803dcf8f8015e612e944ab2dbb88168adfc1a78e20956a",
+      "recipe": "select-k1",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-20.json",
+      "sha256": "2275ee34f984e7d5dc1818955e53b616bbe17e91cc703564e8b8b8ba5f591f87",
+      "recipe": "select-k2",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-21.json",
+      "sha256": "a07004bd2c9e57322dbd544cb46d383a4ae090866a9308c8be0456ccf6de6f05",
+      "recipe": "select-equal-k2",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-22.json",
+      "sha256": "449bb18ffe2cf9724209924121b891bea7a7123f9c5ffbf1003c8409caf7b9fb",
+      "recipe": "source-capacity1",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-23.json",
+      "sha256": "fd2d22555219b6300f93baee8c4533e149ae5d555b8c2e07d1501c0d60dee565",
+      "recipe": "source-no-prediction-access",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-24.json",
+      "sha256": "fb5dee312756b8cbf5d97693544455e3b6e0e02dc1c4d8536050fa7b187a024b",
+      "recipe": "source-no-task-access",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-25.json",
+      "sha256": "f38d8b3e3a81b0c607944fb4568f09530982c8ff33c009323f5f0f74e3708e86",
+      "recipe": "source-denied-probe",
+      "prefixes": 12,
+      "events": 152
+    },
+    {
+      "path": "model-26.json",
+      "sha256": "1da28383b2282c7bc2428d2279e54c58982326121ea7e40cd855cad643d18dbe",
+      "recipe": "source-zero-concern",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-27.json",
+      "sha256": "bf02ac74c7e116232047d568e4d774b88bdf34e64f6ec122e72af37fcc3ca30e",
+      "recipe": "source-above-target",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-28.json",
+      "sha256": "4bfca9091e77f4f1dc5a5f792664e758e63ea0c5ad5e123f3c53b5ed68b89a5e",
+      "recipe": "denied-port",
+      "prefixes": 12,
+      "events": 145
+    },
+    {
+      "path": "model-29.json",
+      "sha256": "6b62412cee993ce4455fe513a20ba04e15b7419a69bb3a6c4c1af5f23f59c325",
+      "recipe": "unresolved-role",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-30.json",
+      "sha256": "ab5e53efdc13b9f91f786f37b02789dd3ed563b5cd886a33464d2106a06000f9",
+      "recipe": "credit-age-only",
+      "prefixes": 25,
+      "events": 288
+    },
+    {
+      "path": "model-31.json",
+      "sha256": "f5eb12fb160cdaa414026fe9107bfb69d0aa48efb41855c1a117b68464042ebd",
+      "recipe": "credit-use-only",
+      "prefixes": 25,
+      "events": 288
+    },
+    {
+      "path": "model-32.json",
+      "sha256": "748ffe232baa0d64b9a907eacdc37c6baa4190be4c6faa5f20794b4e3bc130d5",
+      "recipe": "credit-shared-protection",
+      "prefixes": 25,
+      "events": 288
+    },
+    {
+      "path": "model-33.json",
+      "sha256": "bc36a67409570a7aa284cb7cfa10a2ff1832bf758cf5c0555cc7ea0f79f8d8d7",
+      "recipe": "credit-significance-first",
+      "prefixes": 25,
+      "events": 288
+    },
+    {
+      "path": "model-34.json",
+      "sha256": "4105c02147df544a70984e0f4068f26cfc5ae31ed66604b46725f9e7bc157ba3",
+      "recipe": "source-consequence-lane",
+      "prefixes": 12,
+      "events": 145
+    },
+    {
+      "path": "model-35.json",
+      "sha256": "39d4f4031387c8ad22c8e9715f1acc8edcafbd33087656b2cd88f191ef7ebc4c",
+      "recipe": "footprint-Independent-sparse",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-36.json",
+      "sha256": "09ce52da2e0fad9087fa324121286ec8c4933928171a37d4ddf44c2990714049",
+      "recipe": "footprint-Independent-dense",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-37.json",
+      "sha256": "4bf4902ac50062d7d57f07c498c4ea6f76112ed2f9df42aafdbc6e4fd3a5a848",
+      "recipe": "footprint-HistoricalShared-sparse",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-38.json",
+      "sha256": "195d363582c4cdaee30f2668b9f42afc71d01354564280a57fa62f117d897b99",
+      "recipe": "footprint-HistoricalShared-dense",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-39.json",
+      "sha256": "96d90e92095d08ac2908629e95b2f61b62d2a5142288a785ec5b1320d32abcb8",
+      "recipe": "footprint-HistoricalHybrid-sparse",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-40.json",
+      "sha256": "14410e01ef7431e568128992a6d45a95f8834d6ba0225bb1747039962bbbd57b",
+      "recipe": "footprint-HistoricalHybrid-dense",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-41.json",
+      "sha256": "2aec48da1b55534f9987aec98586139b98fbbb7143d7e0f625f6ac2064e4817e",
+      "recipe": "footprint-RetiredFlat-sparse",
+      "prefixes": 12,
+      "events": 153
+    },
+    {
+      "path": "model-42.json",
+      "sha256": "5a433028d64eca08bf0ae791890a840c087c14ca893f6b3fb389b1fd6030d6f1",
+      "recipe": "footprint-RetiredFlat-dense",
+      "prefixes": 12,
+      "events": 153
+    }
+  ],
+  "counts": {
+    "models": 43,
+    "prefixes": 568,
+    "events": 7074
+  },
+  "seed": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20",
+  "scope": "Exact original model/run identities and original calendar at frozen seed. Every quiescent prefix save equals direct native execution, with state/output/trace hashes retained. Baseline exact-seed restore/export continuation separately tested; not all-model restore qualification. No browser, full memory/attention language, comparison, batch or Campaign4 entry acceptance. Legacy seed0 qualification remains separate; no Campaign3 semantics or obligations changed."
+}

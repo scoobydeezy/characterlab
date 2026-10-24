@@ -8,7 +8,7 @@ import long from '../workbench/longCatalog.json';
 const job=(name:string)=>catalog.jobs.find(j=>j.id==='long/'+name)! as BatchJob;
 it('retains prior roles and admits the complete original LONG source census',()=>{
  expect(catalog.jobs.slice(0,915)).toEqual(previous.jobs);
- expect(catalog.jobs).toHaveLength(947);expect(BATCH_LIMITS.jobs).toBe(947);
+ expect(catalog.jobs).toHaveLength(947);expect(BATCH_LIMITS.jobs).toBeGreaterThanOrEqual(947);
  expect(catalog.jobs.reduce((n,j)=>n+j.expectedSaveHashes.length,0)).toBe(6388);
  expect(catalog.jobs.filter(j=>j.experimentId==='long').map(j=>j.name)).toEqual(long.programs.map(p=>p.name));
 });

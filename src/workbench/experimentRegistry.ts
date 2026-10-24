@@ -1,7 +1,7 @@
 /** Versioned diagnostic capabilities; none of these objects is simulation authority. */
-export const EXPERIMENT_REGISTRY_VERSION = 'workbench-experiments/0.23';
+export const EXPERIMENT_REGISTRY_VERSION = 'workbench-experiments/0.24';
 export type ExperimentId = 'values' | 'reason' | 'general' | 'epi' | 'learn' | 'belief' | 'affect' | 'decision' | 'commit' | 'work' | 'skill' | 'habit' | 'social' | 'relationship' | 'long';
-export type BatchExperimentId = Exclude<ExperimentId, 'general'>;
+export type BatchExperimentId = ExperimentId;
 export interface InspectionCapabilities {
   committedStep: {supported: true; boundary: string};
   checkpoint: {supported: true; authentication: string};
@@ -39,7 +39,7 @@ export const EXPERIMENTS: readonly ExperimentDescriptor[] = [
     graph: {supported: false, reason: 'Source provenance is available, but this profile has no memory or belief graph.'}, matrix: {supported: false, reason: 'This profile has no embedding or matrix representation.'},
     explanation: {supported: true, scope: 'Recorded source roles, overlap, grouping and rejection', qualification: 'Native parity verified; complete language audit remains open.'},
   }},
-  {id: 'general', label: 'General attention · graph inspection', seamVersion: 'rules/campaign3-general-attention/0.1-candidate', corpusScope: 'General-attention association inspection; two recipes qualified, corpus mapping incomplete', capabilities: {
+  {id: 'general', label: 'General attention · graph inspection', seamVersion: 'rules/campaign3-general-attention/0.1-candidate', corpusScope: '43 original General recipes/568 native prefixes shared by MEM and ATTN; batch/browser admission qualified separately', capabilities: {
     committedStep: {supported: true, boundary: 'One whole public instant; worker-owned execution.'}, checkpoint, runtimeIntervention: noIntervention,
     graph: {supported: true, reason: 'Actual directed Record625 association cells; layout distance is diagnostic.'}, matrix: {supported: true, reason: 'Exact association matrix and three selected target columns; no personality embedding.'},
     explanation: {supported: false, scope: 'Raw committed reads, diffs and outputs only', qualification: 'No observer-safe narrative renderer qualified for this profile.'},
@@ -56,11 +56,19 @@ export interface InspectableBatchRun {
 }
 export interface BatchJob {
   id: string; experimentId: BatchExperimentId; name: string; seed: number;
-  law: string | number; appraisal?: string; numeric?: number;
+  law: string | number; appraisal?: string; numeric?: number; seedHex?: string;
   expectedSaveHashes: string[];
 }
 /** The common transport intentionally exposes no mutable runtime or private evaluator. */
 export async function createBatchRun(job: BatchJob): Promise<InspectableBatchRun> {
+  if(job.experimentId==='general'){
+    const {default:catalog}=await import('./batchCatalogV9.json');
+    const frozen=catalog.jobs.find(j=>j.id===job.id) as BatchJob | undefined;
+    if(!frozen||(['experimentId','name','seed','seedHex','law','appraisal','numeric','expectedSaveHashes'] as const).some(k=>JSON.stringify(frozen[k])!==JSON.stringify(job[k])))throw Error('Batch job differs from frozen General declaration');
+    const run=await (await import('./generalAdapter')).GeneralWorkbenchRun.create(job.name,frozen.seedHex!);
+    return {advance:()=>run.advance(),view:()=>{const {prefix,complete,clock,modelHash,runHash,stateHash,saveHash}=run.snapshot();return {prefix,total:frozen.expectedSaveHashes.length-1,complete,clock,modelHash,runHash,stateHash,saveHash};}};
+  }
+  if(job.seedHex!==undefined)throw Error('Exact seedHex is only admitted for frozen General jobs');
   if(job.experimentId==='long'){
     const {default:catalog}=await import('./batchCatalogV8.json');
     const frozen=catalog.jobs.find(j=>j.id===job.id);
