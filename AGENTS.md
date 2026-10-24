@@ -52,6 +52,15 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 MULTISOURCE state inspection:** Full62/249 native/render/search PASS:
+2177 field observations,1737 events,1341 reads,117 changed records/2433 history joins.
+Independent reconciliation PASS; source hold released. Corrected browser0/3 exact
+state,event0/2,filters and fresh-run reset PASS; first deterministic-key reset failure
+retained. See workbench-multisource-state-inspection-rev1; typecheck/build659/research
+and boundary PASS. Retain tabs49/4259 and50/4260; mark all50 tabs every turn.
+General batch76981 last25/43 RUNNING with417 sources held; next terminal verifier,
+then mount BatchSeed and browser qualification. Pair43 last14/14 Working.
+
 **2026-10-23 General batch follow-up:** Native76981 last7/43 RUNNING; sources held.
 Prepared BatchSeed component PASS990 renders/43 exact seeds/four malformed cases;
 two discovered tests PASS after retained TSX test-discovery correction. Not mounted.

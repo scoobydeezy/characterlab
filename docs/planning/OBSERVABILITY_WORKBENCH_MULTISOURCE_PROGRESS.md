@@ -110,3 +110,35 @@ not qualify Blob download. One wait timed out while comparison remained Working;
 the same run subsequently completed without restart. Screenshot inspected. Receipt:
 workbench-multisource-worker-ui-rev1/receipt.json. Full browser cohort/resource scope
 and complete workbench entry qualification remain open.
+
+## Searchable state and structured event inspection — 2026-10-23
+
+Researcher Reasoning now exposes exact stored-state root/path/value search and a
+selected revision hash. Timeline shows event-time reads, before/after mutations,
+changed filtering and the original event. These panels reuse qualified generic
+read-only components; character assessment descriptions and native semantics stay
+unchanged. Missing activity is not a causal-necessity or retirement claim.
+
+Full native commitment/search/server-render audit PASS62 programs/249 prefixes,
+2177 stored-field observations,1737 distinct program-local events,1341 reads and117
+mutations (all117 changed in this cohort). All2433 repeated historical event
+observations remain exact. Independent artifact/hash/original-save/count/history
+reconciliation PASS; see workbench-multisource-state-inspection-rev1/acceptance.json.
+This releases that audit's source hold. General batch76981 has a separate hold.
+
+First browser build658 verified baseline0/3 exact stored records, root/no-match
+filters, event0 reads and event2 deadline before/after, five unchanged hashes and
+event filter reset. Same-program recreation retained root649/query reserve because
+the original key used deterministic runHash. Preserve browser-first.json and both
+initial screenshots as this failed lifecycle observation. A presentation successor
+adds a diagnostic inspector generation on fresh creation,restore and installed
+comparison. It does not change native identity. Corrected build/browser acceptance
+is separate and must pass verify-multisource-state-browser.mjs.
+
+Corrected build659 and TypeScript PASS. Browser tab50/4260 repeats baseline0/3,
+exact selected records, no-match/reset, event0 reads/event2 before-after, event-filter
+reset and unchanged five current hashes. Fresh same-program creation now resets
+root to all and query to empty. Corrected browser verifier PASS; source successor,
+first failure and corrected screenshot retained. Tab49/4259 preserves initial
+failure; retain both. Full browser cohort/accessibility and complete language remain
+open. Research4318/18 conditional and boundary checks PASS.
