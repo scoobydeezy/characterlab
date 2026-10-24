@@ -45,3 +45,26 @@ Support audit45578 last70/105; its283-source hold remains live. Paged diagnostic
 audit23320 last15/15 prefix12/18; its166-source hold remains live. Corrected paired
 terminal tab43 lastA8/B8 Working, unchanged. No terminal acceptance inferred.
 Mark all45 workbenchLiveTabs each turn;11/29 remain crashed. Do not restart writers.
+
+## Full corpus launch and paired browser — 2026-10-23
+
+Native episode audit68613 RUNNING105 programs/1436 prefixes. New281-source hold
+in workbench-affect-learning-episode-corpus-rev1/freeze.json; includes shared Timeline
+and episode helper/panel. First11 programs/165 prefixes preserved in checkpoint-001,
+not terminal acceptance. Writer checks original state/save/output hashes, exact
+conditional input and ordered roles, native output/parent joins and immutable history.
+Independent verifier syntax PASS; run only after receipt.json exists. Missing/multiple
+sources are counted explicitly. Early factor programs do not establish all later joins.
+
+Bounded paired browser PASS baseline/hidden at3/4, using the unchanged build653.
+Both branch episode60 bodies match their authenticated original reports, observation30
+links match exact original events, save identities differ between branches, and report
+bodies remain stable at4. Standalone remains prefix4. paired-browser.json and
+paired-verification.json retain scope; paired.png reviewed. An initial status query
+matched both pair status and event-state counts; narrowing to the Retained A status
+resolved the locator ambiguity before capture, with no simulation action repeated.
+This closes the bounded paired inspection check, not full paired/browser coverage.
+Tab45 now retains pair4/4, branchA/event60. Mark all45 tabs each turn.
+
+Support45578 last98/105 LIVE283hold; diagnostics23320 last15/15 prefix14 LIVE166hold;
+corrected terminal pair43 last9/9 Working. All remain active, no terminal pass inferred.

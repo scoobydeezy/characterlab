@@ -52,6 +52,16 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 full episode audit:** Native68613 RUNNING105/1436; NEW281-source
+hold workbench-affect-learning-episode-corpus-rev1/freeze.json (includes Timeline).
+First11/165 checkpoint001; terminal receipt and independent verifier still required.
+Paired baseline/hidden episode browser3/4 PASS both original reports/observe30 links,
+history and distinct saves; standalone prefix4. Tab45 now pair4/4 branchA/event60.
+See AFFECT_EPISODE_PROGRESS and paired-verification in episode-rev2. No full ancestry.
+Support45578 last98/105 LIVE283hold; diagnostics23320 last15/15 prefix14 LIVE166hold.
+Corrected pair43 last9/9 Working. Mark all45 tabs. Full entry remains open.
+
+
 **2026-10-23 episode source inspector:** Shared AFFECT Timeline now links apply
 to exact evidence and ordered Current/EpisodeBasis freeze/track/observe sources.
 Four originals/44 applies/72 roles/36 historical checks and8 boundary controls PASS.
