@@ -1,4 +1,4 @@
-import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
 const root='docs/planning/workbench-batch-general-browser-rev1',nativeRoot='docs/planning/workbench-batch-general-rev1';
 const read=p=>JSON.parse(fs.readFileSync(p)),sha=b=>createHash('sha256').update(b).digest('hex');
 // Freeze only after the corrected seed renderer is mounted and the original native audit completes.
@@ -10,13 +10,18 @@ if(process.argv.includes('--freeze')){
  for(const s of native.sources)if(!changed.includes(s.path))assert.equal(sha(fs.readFileSync(s.path)),s.sha256,s.path);
  const sources=files.map(path=>{const bytes=fs.readFileSync(path),copy=root+'/sources/'+path;
   fs.mkdirSync(copy.slice(0,copy.lastIndexOf('/')),{recursive:true});fs.writeFileSync(copy,bytes,{flag:'wx'});return {path,copy,sha256:sha(bytes)};});
- fs.writeFileSync(root+'/freeze.json',JSON.stringify({sources,native:{path:nativeRoot+'/receipt.json',sha256:sha(fs.readFileSync(nativeRoot+'/receipt.json'))},
-  allowedPresentationSuccessor:changed,scope:'All43 General recipes, exact seed display,568 prefix pairs and export preview. Does not qualify full990-role browser execution.'},null,2)+'\n',{flag:'wx'});
+ const build='C:/Users/scoob/AppData/Local/Temp/characterlab-workbench-661',assets=[];
+ function visit(relative=''){for(const entry of fs.readdirSync(path.join(build,relative),{withFileTypes:true})){
+  const name=path.join(relative,entry.name);if(entry.isDirectory())visit(name);else{const served=path.join(build,name),bytes=fs.readFileSync(served),copy=path.join(root,'assets',name);fs.mkdirSync(path.dirname(copy),{recursive:true});fs.writeFileSync(copy,bytes,{flag:'wx'});assets.push({served,copy,sha256:sha(bytes)});}
+ }}visit();assert(assets.some(a=>a.served.endsWith('index.html')));
+ fs.writeFileSync(root+'/freeze.json',JSON.stringify({sources,assets,native:{path:nativeRoot+'/receipt.json',sha256:sha(fs.readFileSync(nativeRoot+'/receipt.json'))},
+  allowedPresentationSuccessor:changed,currentSourceHold:false,scope:'All43 General recipes, exact seed display,568 prefix pairs and export preview. Frozen source copies and immutable served/copied assets bind this browser run; current checkout may advance. Does not qualify full990-role browser execution.'},null,2)+'\n',{flag:'wx'});
  console.log('FROZEN corrected General batch browser source graph');
 }else{
  const freeze=read(root+'/freeze.json'),native=read(freeze.native.path),b=read(root+'/browser.json');
  assert.equal(sha(fs.readFileSync(freeze.native.path)),freeze.native.sha256);
- for(const s of freeze.sources){assert.equal(sha(fs.readFileSync(s.path)),s.sha256,s.path);assert.equal(sha(fs.readFileSync(s.copy)),s.sha256,s.copy);}
+ for(const s of freeze.sources)assert.equal(sha(fs.readFileSync(s.copy)),s.sha256,s.copy);
+ for(const a of freeze.assets){assert.equal(sha(fs.readFileSync(a.served)),a.sha256,a.served);assert.equal(sha(fs.readFileSync(a.copy)),a.sha256,a.copy);}
  const results=native.report.snapshot.results;assert.equal(results.length,43);
  assert.equal(b.status,'43/43 execution roles complete · 568 prefixes checked');
  assert.deepEqual(b.alerts,[]);

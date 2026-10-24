@@ -56,3 +56,21 @@ it requires the completed native receipt, frozen unchanged execution sources,43
 browser rows with exact seeds,1136 displayed actual/expected hashes,exact64000-char
 preview and complete report byte declaration. These verifiers are prepared, not
 yet accepted results. Native76981 reached7/43; Disposition tab43 reached14/14 Working.
+
+## Full native cohort accepted; browser qualification running
+
+Native76981 completed all43 recipes/568 prefixes. Independent verifier PASS exact
+original model/run identities,seed,initial/calendar bytes and every prefix; all417
+current-source holds released. See workbench-batch-general-rev1/acceptance.json.
+Prior947 declarations and original exports remain unchanged. Full990 replay is not
+inferred from the General-only run and earlier V8 acceptance.
+
+BatchSeed is now mounted. Five affected tests,TypeScript and isolated build661
+PASS760 modules. All43 exact General seeds are visible in prepared browser rows.
+Full General browser batch started in tab52/4262 (preview57205); completion remains
+pending. Freeze includes exact source copies and both served/copied build assets.
+Do not replace these assets or restart on quiet observations. This frozen build
+has no current-checkout source hold, permitting separate V10 integration. After
+43/43 complete, capture every row/id/status/check/seed and all1136 hash strings,
+prepare summary export, capture exact preview/byte declaration, and run
+check-workbench-batch-general-browser.mjs. Started screenshot is not acceptance.

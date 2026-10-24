@@ -52,6 +52,16 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 General native batch COMPLETE:**43/568 plus independent original-seed/
+identity/calendar/prefix reconciliation PASS;417 current-source holds released.
+BatchSeed mounted; five tests/typecheck/build661 PASS. Full General browser tab52/
+4262 preview57205 RUNNING; immutable served/copied assets and source copies frozen,
+no current-checkout source hold. Mark all52 tabs every turn. V9 progress has terminal
+capture instructions; no browser/full990 acceptance yet. Pair43 last15/15 Working.
+V10 BODY/MULTISOURCE transport COMPLETE78/328; independent seeds/models/commitments
+PASS, source holds released. Next shared registry/session/worker/UI admission;
+catalog1068/7284 retains all990 previous jobs. Start V10 progress; not yet registered.
+
 **2026-10-23 BODY state inspection:** Full16/79 native/search/render PASS158 fields,
 402 events/201 reads/24 changed records/823 history joins. Independent reconciliation
 and browser baseline0/6 exact six identities,state,event0/2,filters/fresh reset PASS.

@@ -28,3 +28,9 @@ do not edit its417 held sources before its terminal independent verification.
 Full1068 native/browser regression, other corpus/component successors, observer-safe
 language, specialized inspection and Campaign4 entry remain required. No law or
 comparator is selected or retired; all18 conditional obligations survive.
+
+Transport session94394 COMPLETE PASS78 roles/328 prefixes. Independent declaration,
+exact repeated-byte seed,model identity and per-prefix commitment reconciliation
+PASS. Receipt and acceptance.json release this preparation's current-source holds.
+Two focused tests and TypeScript pass. Shared session/worker/UI integration remains
+the next step; the active V9 General browser uses frozen build661 independently.

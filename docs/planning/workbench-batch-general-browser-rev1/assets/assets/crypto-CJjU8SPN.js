@@ -1,0 +1,1 @@
+async function s(n){const t=new ArrayBuffer(n.byteLength);return new Uint8Array(t).set(n),new Uint8Array(await globalThis.crypto.subtle.digest("SHA-256",t))}function a(...n){const t=new Uint8Array(n.reduce((r,o)=>r+o.length,0));let e=0;for(const r of n)t.set(r,e),e+=r.length;return t}function u(n){let t=0n;for(const e of n)t=t<<8n|BigInt(e);return t}export{a as c,s,u};
