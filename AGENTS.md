@@ -52,6 +52,16 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 full AFFECT inspection audit:** Native69168 RUNNING. First5 programs/
+75 prefixes bound by checkpoint-001; no terminal qualification. NEW288-source hold:
+workbench-affect-inspection-corpus-rev1/freeze.json. Checks all105/1436 original
+prefixes for five-path/two-box architecture, semantic stage/order/history and earlier
+context/prior selection. Trace-input limitation remains explicit, not repaired.
+Independent terminal verifier prepared/syntax checked; run only after receipt exists.
+Paged23320 remains live166 hold; packed29 last16/16 Working. Mark all39 browser tabs.
+Integrated §32 bounded pass retained; full language/provenance/entry remain open.
+
+
 **2026-10-23 connected demonstration:** One obligation/0 browser session now passes
 all16 §32 steps in bounded scope. Initial named character, slider1/10->10, same-state
 A/B, state vectors, semantic Timeline, first chosen-action divergence3, exact diff,

@@ -980,3 +980,26 @@ verification.json. The verifier does not independently re-execute the writer's n
 state joins. Release this completed source hold only; paged diagnostics166 overlaps
 remain held. No stored emotion-state or learning ancestry claim is added.
 Paged23320 last12/15 prefix17 LIVE; packed29 last15/15 Working.
+
+## 2026-10-23 — full inspection corpus running
+
+Native audit69168 targets all105 original programs/1436 prefixes, combining canonical
+five-path/two-box participation, semantic stage/phase/order and immutable event
+hashes with strictly earlier context/prior selection. Each prefix retains original
+state/save/output identities. Participation event counts and current values are
+reconciled directly against native snapshots; carry reports retain original diagnostic
+input mismatch flags rather than treating reconstruction as an ingress receipt.
+Historical event and carry reports must remain identical after later state changes.
+
+First5 programs/75 prefixes PASS and are bound by checkpoint-001. This is partial
+evidence only. NEW288-source hold: workbench-affect-inspection-corpus-rev1/freeze.json.
+Independent artifact/order/prefix/count/history verifier prepared and syntax checked;
+terminal receipt required before executing it or releasing this hold. Other paged166
+source restrictions remain. No failed revision. Research4318 references/dispositions
+PASS; all18 conditional obligations and RO-C3-011 trace limitation survive.
+
+LOCAL DISPOSITION expands exact inspection qualification without changing execution,
+canonical topology or law selection. Full inspection qualification remains pending;
+complete architecture/causal participation, factor strength/certainty language, learning
+ancestry, trace disposition and Workbench entry remain open despite bounded §32 pass.
+Paged23320 remains live; packed pair29 last16/16 Working. Retain all39 tabs each turn.
