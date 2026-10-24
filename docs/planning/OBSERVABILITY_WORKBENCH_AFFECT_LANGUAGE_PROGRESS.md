@@ -1065,3 +1065,39 @@ claimed. Abbreviated disclosure summaries can coincide; broader accessibility an
 full comparison corpus remain due. LOCAL DISPOSITION: exact observational comparison
 only; no C3 verdict, law, obligation status or original semantics amended. All18
 conditional obligations and full Campaign4 entry gates remain open as applicable.
+
+## 2026-10-23 — full inspection corpus independently reconciled
+
+Native inspection69168 completed all105 original programs/1436 prefixes. Independent
+artifact reconciliation PASS:7180 mapped path observations in the two admitted boxes,
+19965 original events/118740 historical event checks,1331 appraisals/7916 historical
+carry checks,1226 earlier contexts,94 known priors and7 used priors. All288 source
+and frozen-copy hashes, reference hashes, program order and original state/save/output
+identities match. See workbench-affect-inspection-corpus-rev1/receipt.json and
+verification.json. Inspection-only source hold is released; live overlapping holds
+continue. This qualifies the declared five-path/two-box correspondence and semantic
+Timeline/history coverage, not complete architectural necessity or Campaign4 entry.
+
+All1331 diagnostic appraisal inputs match current outputs; zero match reconstructed
+earlier carry. This extends evidence for the already registered RO-C3-011 trace
+limitation, without changing execution or claiming a repair. The material limitation
+and required versioned-successor disposition remain recorded in
+OBSERVABILITY_WORKBENCH_AFFECT_CARRY_TRACE_LIMITATION.md and RESEARCH_OBLIGATIONS.json.
+No new C3 verdict or obligation status change. All18 conditional obligations survive.
+
+A new full declared state-comparison audit8325 is RUNNING across all16 pairs and their
+complete original horizons. NEW282-source hold in
+workbench-affect-state-comparison-corpus-rev1/freeze.json. First4 completed pairs/
+54 paired prefixes are frozen in checkpoint-001: hidden-world, timing likelihood,
+control and feedback. The writer checks each current field against native snapshots,
+three original identities, first state difference, historical rows and owning-branch
+write bodies. Independent artifact verifier prepared and syntax checked; run after
+terminal receipt only. No terminal state-comparison corpus claim yet.
+
+Evidence restore/research4318/reference boundary PASS. Initial command check:boundary
+was a nonexistent script; corrected check:boundaries PASS. No runtime change in this
+increment and no redundant application build. Paged23320 live166 hold unchanged;
+last13/15 prefix15. Packed tab29 now17/17 Working, no terminal pass. Retain all41 tabs.
+LOCAL DISPOSITION: widen exact native inspection coverage and preserve the original
+trace defect. Full comparison corpus/browser breadth, complete player factor language,
+strength/certainty, learning ancestry, trace disposition and full entry remain due.

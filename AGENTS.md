@@ -52,6 +52,17 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 full inspection completion:** Native69168 COMPLETE105 programs/1436
+prefixes. Independent288-source/copy and original-identity reconciliation PASS:
+7180 mapped paths,19965 events/118740 history checks,1331 appraisals/7916 carry history,
+1226 contexts/94 priors/7 used. All1331 trace inputs match current outputs, zero earlier
+carry; RO-C3-011 limitation preserved, no repair. Inspection-only hold released.
+NEW state-comparison corpus8325 RUNNING16 pairs; first4/54 prefixes checkpoint-001.
+Preserve282 sources in workbench-affect-state-comparison-corpus-rev1/freeze.json;
+terminal independent verifier prepared. Paged23320 live166 hold, last13/15 prefix15;
+packed29 now17/17 Working. Mark all41 tabs. Research4318/boundary PASS. Full entry due.
+
+
 **2026-10-23 exact stored-state comparison:** AFFECT paired Compare now shows first
 stored-leaf divergence, exact A/B history and branch last-write inspection. Native
 11 obligation prefixes/55 history checks and15 timing/likelihood prefixes/105 history
