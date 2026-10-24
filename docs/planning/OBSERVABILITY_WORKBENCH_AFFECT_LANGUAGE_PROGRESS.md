@@ -903,3 +903,32 @@ All18 conditional obligations and RO-C3-011 trace limitation survive. Full105-pr
 mapping, complete architecture participation, learning ancestry, player strength/
 certainty language and integrated entry remain due. Native stored-state66314 last24/
 105 RUNNING; paged23320 last12/15 prefix11; packed29 last14/14 Working.
+
+## 2026-10-23 — shared semantic Timeline and exact event state
+
+Brief section32 requires one connected demonstration, including semantic Timeline
+and before/after inspection. Standalone Timeline previously exposed raw event JSON
+without the paired view's state/history controls. Both now use one versioned component
+with15 operation labels, original native order and event IDs, selected exact state
+reads/mutations, change filter, parent navigation and state-read history. Labels name
+operations rather than guarantee successful output. Physical outcome is separate
+from admitted observation. Appraisal selection explicitly discloses the RO-C3-011
+trace-input limitation; raw input is not presented as an ingress receipt.
+
+Four original terminal runs PASS660 rendered events/232 reads/12 mutations, every
+phase checked against the original stage registry. SSR, unchanged snapshots and
+complete label coverage PASS. Browser baseline initial empty state,45 exact ordered
+options at3, mutation60 before/after, event selection filter reset and historical60
+equality at4 PASS. Retained obligation branchB3 mutation58/parent57 exactly match
+native events, four identities and before/after values; standalone4 identities remain
+unchanged. Expanded layout1265px PASS; screenshots inspected. TypeScript/build647
+modules/research4318/boundary PASS. Live280/166 source holds remain exact. No failed
+revision. See workbench-affect-semantic-timeline-rev1; tab38/4249 preview23860.
+
+LOCAL DISPOSITION improves integrated steps7/9 without modifying native semantics,
+selecting a law or changing research dispositions. All18 conditional obligations
+survive. Next run the entire obligation0 section32 flow in one retained experiment
+and assess each numbered step from exact evidence; disconnected prior checks do not
+prove that gate. Full corpus, complete factor language, provenance/trace disposition
+and full entry remain open. Stored66314 last33/105, paged23320 last12/15 prefix12,
+packed29 last15/15 Working. Mark all38 browser tabs every turn.

@@ -1,0 +1,4646 @@
+[
+  {
+    "program": "baseline",
+    "saveHash": "c47e3e643b0786406fbf2fc47a76692c9a21fdb4591edc4690b9ad6a02e352c0",
+    "rows": [
+      {
+        "id": "0",
+        "instant": "1",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "6f611bfc73830129fcb49ad318b0ca49cdf707579eda78f5f4bcfeba7228cdce"
+      },
+      {
+        "id": "22",
+        "instant": "1",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "6ae7f84b22e69fc4993e22149528a8d50b11841ef4e2d7537d0549a935bee70d"
+      },
+      {
+        "id": "23",
+        "instant": "1",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "c6d0cb63abaeaf7a9f5d438396c9a87cbfe0555219c8559face733cd0a65bbd1"
+      },
+      {
+        "id": "24",
+        "instant": "1",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "d6779085b5f09da64d7fa5a9c3500399363b2935a3139840cc6b40a2117feef4"
+      },
+      {
+        "id": "25",
+        "instant": "1",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "2e4cabc7838c86b07ca5701836f8a3d7a738d5ae7f559a09d255d7afe8b6a9c5"
+      },
+      {
+        "id": "26",
+        "instant": "1",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "d4b66b375559fd6ad7020ac47948af38fc185b75d6009a616d660fc7f56abb6b"
+      },
+      {
+        "id": "27",
+        "instant": "1",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "ab6843726411aa9fcf2cd0beb916629c815760b67c10d0e77b06c72aac35b162"
+      },
+      {
+        "id": "28",
+        "instant": "1",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "cf4a75ea0ce2a40908b38c32247f6be330783f3e0d1f8ecb304420ec28b3a31c"
+      },
+      {
+        "id": "1",
+        "instant": "1",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "4e6621c989c0d17a9624473ce0a5e1d80c8a2f10ff4046874adbfc9950f2f7d3"
+      },
+      {
+        "id": "29",
+        "instant": "1",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "b047db65f5cbf6c18580a8e8e54263192ba726a8dbce7ccf3628891b2923d8ff"
+      },
+      {
+        "id": "30",
+        "instant": "1",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "a5c7e7592061b70ad2100ff646713bcb1644e9de857da70e8e84468c4ed3bce6"
+      },
+      {
+        "id": "31",
+        "instant": "1",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "5cbc5b61d5ccb33bc2320abb9f9f1941f2db0c0190c500d9219d491ba615f3aa"
+      },
+      {
+        "id": "32",
+        "instant": "1",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "32c2ef3d5046b3a49ff1d565146392264aea86dba123454b6640c15af81b024a"
+      },
+      {
+        "id": "33",
+        "instant": "1",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "41a3f6bb9a4a37cee4f09b3f926c9689950b942a9d4d26d70142aa1ae5e8df75"
+      },
+      {
+        "id": "34",
+        "instant": "1",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "73af57932b6f02bf8e96d26d3d89e90d5f4702e5501e4f3c8b5200c2dec7fe06"
+      },
+      {
+        "id": "2",
+        "instant": "2",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "346391bd70d3aff9a41a49685d2e7d31e493747f3361665d572400a7159827e4"
+      },
+      {
+        "id": "35",
+        "instant": "2",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "0470ae19de67a4abcd3d872fa42d7933a8ad8831a6f1b1cceec13b1edae954a8"
+      },
+      {
+        "id": "36",
+        "instant": "2",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "fa30898891f7bc0834b78d61b1ddb5f699db90a358703c7eaa2c0c4a105c0a17"
+      },
+      {
+        "id": "37",
+        "instant": "2",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "3de91828c63296cea9add63a4c997ed67dbffa38ea1e6d532b177b6f428cbb44"
+      },
+      {
+        "id": "38",
+        "instant": "2",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "6746909aaaefe872204f5a813c554ec405cea35099b89354be844427f3466197"
+      },
+      {
+        "id": "39",
+        "instant": "2",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "f3633ba2954e0d50a5e18098ac3d7646c878a4c8783b7eeb0dd8b2218b92c159"
+      },
+      {
+        "id": "40",
+        "instant": "2",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "a23d822262c3e27bf380b50a06b9eb8cf666aac733733200291e8fdee78b9633"
+      },
+      {
+        "id": "41",
+        "instant": "2",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "7b0327f7cda36ae7bb993f739a83d99258df618b4c5c84cae04d8839078452eb"
+      },
+      {
+        "id": "3",
+        "instant": "2",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "19ca2977d45afa9dc032900fd6eb66bd15b7371234c0254470b2fbcb93163ae9"
+      },
+      {
+        "id": "42",
+        "instant": "2",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "4c9c3b74dc1ab1e3d0c8213091304c337a79f784860fd1058cffb1e4d3449b59"
+      },
+      {
+        "id": "43",
+        "instant": "2",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "332b06c30dd06436fc70c1c202c26cda623acbf82dc8c2e926ded4de6e2ca86f"
+      },
+      {
+        "id": "44",
+        "instant": "2",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "6be35a65f739c94591dd14b811fc882f22afbfaa17b59286e8cdcd7ba227a290"
+      },
+      {
+        "id": "45",
+        "instant": "2",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "334c3f780f2bc99b9974acdbabc75ad53039b50d533fbb39b191cf7abefd594f"
+      },
+      {
+        "id": "46",
+        "instant": "2",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "09a7a2eb8d87cf3ee43b2fab3985d8066113e51e072c8688b6cad717c233b9b6"
+      },
+      {
+        "id": "47",
+        "instant": "2",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "0c5aebe4adc217428eb637d5ccb69e382cd9d8ea53e5ab295adb018bf2e21a63"
+      },
+      {
+        "id": "4",
+        "instant": "3",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "9c39176c68bd52a45010f9f7bb18a8f38ac51c0ebf980234bc61790068c8ccc6"
+      },
+      {
+        "id": "48",
+        "instant": "3",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "5c359d584a74c094a177b9a09e2f3e73876fdf9a80ea7f973c77e930b2f7a700"
+      },
+      {
+        "id": "49",
+        "instant": "3",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "34b667d363398d34a477ad1b73e5e019673a4dbf1d87c2a6e2688821c01cea5d"
+      },
+      {
+        "id": "50",
+        "instant": "3",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "fa86843b94bcf9974f4b160cae7e07c27fde95665bc6bc6f11c96617de31cc66"
+      },
+      {
+        "id": "51",
+        "instant": "3",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "f963524ce89bebed495584a022262191a2f89994bdd61723d9681c7d7049a732"
+      },
+      {
+        "id": "52",
+        "instant": "3",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "2e63ed409413956acbe7d0c58e1de9e34a4d3d3daf1701a038ac4271744919bb"
+      },
+      {
+        "id": "53",
+        "instant": "3",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "55185a8bbc9cd36eab20e602772a52e55577fe0086921165fb4cef5444ea7228"
+      },
+      {
+        "id": "54",
+        "instant": "3",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "2db5f19b86fd525f4a95ac7f2fc539cda7612fbfa0ed1948ac1cd64b4f01e78b"
+      },
+      {
+        "id": "5",
+        "instant": "3",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "a815925f971bfedeaa65b3c03d831e896159055c70eec8304f6a593c6ebce38a"
+      },
+      {
+        "id": "55",
+        "instant": "3",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "ebbe54ca8e18bb9d655f7249f6aa38ab11fbb0c2a880055c74d1e471f2b4aa6b"
+      },
+      {
+        "id": "56",
+        "instant": "3",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "727b6cfb7af77a209579af85c9accbe03993d63c03e21b252adb4d0cec5e527e"
+      },
+      {
+        "id": "57",
+        "instant": "3",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "55e81d8f5fc806d96d6993d16bafc31aea666b7f31ca6f2e93b3072b6b64f52a"
+      },
+      {
+        "id": "58",
+        "instant": "3",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "7e870bdd26a11ccf5a0e75487359d696b736389e2a115eed25f9eaa5beec64ec"
+      },
+      {
+        "id": "59",
+        "instant": "3",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "dbeadf0da25aa437c26643e41305dfa6ed90d241bad4cafe3523e6887e674c11"
+      },
+      {
+        "id": "60",
+        "instant": "3",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "7abb39b5aaa7ea5e59e88d15b5a0788b361e23589e21302f3857ea4cbb313a94"
+      },
+      {
+        "id": "6",
+        "instant": "4",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "3b66c4c82ab909d00b3c2f88125d4cce99f52e06a517ea4763a66d178731ed1d"
+      },
+      {
+        "id": "61",
+        "instant": "4",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "b17c3d804f986aadcb98979c0a30c4a9e273782c8736b947b3cc0a4a203f53b5"
+      },
+      {
+        "id": "62",
+        "instant": "4",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "e823cdfb72517c18be37596fa60beaedf38e886ffd3c36f52a08bf114be98b82"
+      },
+      {
+        "id": "63",
+        "instant": "4",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "0843fe0bb760ee301f81a0bdefe83f355396d8a3b4a8c53e9d5e7128afb8bf84"
+      },
+      {
+        "id": "64",
+        "instant": "4",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "d05b3e549589e8c703e8f543e4bb2d8f3eb0e9a41b5d717af9b76982ee81a60b"
+      },
+      {
+        "id": "65",
+        "instant": "4",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "7dcc5f42c5a39769363a663c8f9d7a3010ad40f5e9d721c1a9c718e0ed6976d0"
+      },
+      {
+        "id": "66",
+        "instant": "4",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "6a4cb893d0e941f03ca3b8953c9ef3ceeafbe7c28ca4fee0d28f9a97dcb517a2"
+      },
+      {
+        "id": "67",
+        "instant": "4",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "9778206444d3aa77895faef5f814156b7061f520bb7c325711b8ad72bfc19254"
+      },
+      {
+        "id": "7",
+        "instant": "4",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "a1081a8695aa6995c40c8bacd684a3e7ce28685544a2929decfa3ab2842b8e61"
+      },
+      {
+        "id": "68",
+        "instant": "4",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "37d718617772b155309c83dfdb7b7ee592740f646d59b3b7f6854c28da73259e"
+      },
+      {
+        "id": "69",
+        "instant": "4",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "306d0a50a3b344d3dab9a087652d9d80c580f82c553bd9000d95ec01dbc7399e"
+      },
+      {
+        "id": "70",
+        "instant": "4",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "acbaaf4e210b8c48bb19ab6c31da9d914fe41c68de920f7eec200a32d9f5a6cb"
+      },
+      {
+        "id": "71",
+        "instant": "4",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "70318efc3255e9bb15bd7753bf0afe5527670200f35a8936b81497ec10350749"
+      },
+      {
+        "id": "72",
+        "instant": "4",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "7ff95423f1061e0d8e0dc3ff20c327fc76760391a6b18e1b42f27c7848fe8074"
+      },
+      {
+        "id": "73",
+        "instant": "4",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "0631ce18a79ef485db8e7f9f6f6d3ae212161589651a21bc9779fa514dd75858"
+      },
+      {
+        "id": "8",
+        "instant": "5",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "7293f613d30434b909790a99178e0f2aaad819da0948509efe9dc76b99a51da9"
+      },
+      {
+        "id": "74",
+        "instant": "5",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "4024233e762b21cb2fddaf00a6547b4b292ea6029058148452c5d698570fe35c"
+      },
+      {
+        "id": "75",
+        "instant": "5",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "e0390cd0d9cc1da8e81c34fc0774acd1aa1ec4fd1afb05bf7873a458935b23ee"
+      },
+      {
+        "id": "76",
+        "instant": "5",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "d49a9c468392f95dac97a7b183fc76adf4b918400058777a5f53175aac0f2ed5"
+      },
+      {
+        "id": "77",
+        "instant": "5",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "6ec4216487d9da79975697496f41c0ea7627de728fb5daa6b69b0ac6fff0a874"
+      },
+      {
+        "id": "78",
+        "instant": "5",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "eb440bdb14a3263253ca1ef429c6a6bb3647ff563a405ca346d210943fd2fd42"
+      },
+      {
+        "id": "79",
+        "instant": "5",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "0f4a1bb04862b832d14d8605a9ebd5bbf1f4d545535b82e72c2cdfa747c5e469"
+      },
+      {
+        "id": "80",
+        "instant": "5",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "d4d113d585fd8f8118c8633a3381cb913aeb286f10a92bcfeadaf563800d881e"
+      },
+      {
+        "id": "9",
+        "instant": "5",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "626af4dceef3e4552e61989ca2d751289fa0f640a79f523f0874d73de9a1bb57"
+      },
+      {
+        "id": "81",
+        "instant": "5",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "3302b15b17251e003214ea35202c189add2ed7b344713c35a4ef09b24697f49f"
+      },
+      {
+        "id": "82",
+        "instant": "5",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "e5563ca95cecb98853bc9354479b49e0002747de9e8e4c5d4c3913c7d61577ae"
+      },
+      {
+        "id": "83",
+        "instant": "5",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "90a57e369cea8b72d5f820d60c7f28c9c29359838f3cf24ebb04d3bf93b97875"
+      },
+      {
+        "id": "84",
+        "instant": "5",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "706b982aec509ea67bdd906a94e5761820670f6a5cd9044a75668f0dbfdcd680"
+      },
+      {
+        "id": "85",
+        "instant": "5",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "a81422c95a5b074940c00220936e85170d38822d1b402e62ddebff78d6057add"
+      },
+      {
+        "id": "86",
+        "instant": "5",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "57c4779f803029d9dfc6332ed039a52e8be313d8288d9fd6f8940afcabf1226f"
+      },
+      {
+        "id": "10",
+        "instant": "6",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "a833d465441850efcf8b4fbcdde7ba248e2ca0ae04a271fdb5dc67f0d856fea8"
+      },
+      {
+        "id": "87",
+        "instant": "6",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "7a42ed1afefe4cdf22eb61f43957538adc2af4c81e668f9b33a10685bb3ec76a"
+      },
+      {
+        "id": "88",
+        "instant": "6",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "6c8419b5d2a304cb62ca84790bbc773dbfde17c91c73dbce65f21999d1434220"
+      },
+      {
+        "id": "89",
+        "instant": "6",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "ead923de35389c2b2689d9c2583dea54da601df24648fd8f96140b582a4f0510"
+      },
+      {
+        "id": "90",
+        "instant": "6",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "583e9fd9236fd5c8a3c845770d7acef40eecdc3ba8a060197873a38a2f08f0b4"
+      },
+      {
+        "id": "91",
+        "instant": "6",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "01934cbbc06dabe04a30fb86dc75d9d3f5c5ea5db4156306547d4a8ad6133fda"
+      },
+      {
+        "id": "92",
+        "instant": "6",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "5c415cc86389e8a5f1411a869a36dac458dc5d7112f1208d02b4514ed9779414"
+      },
+      {
+        "id": "93",
+        "instant": "6",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "73ae652acb420e56fe138b711b03ced8ebaac595ac95ff83bf17d29f053c352b"
+      },
+      {
+        "id": "11",
+        "instant": "6",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "56a077392de89be6ddbe9f6e2ba80320e04106676be8ca9a4218c723ffe0d106"
+      },
+      {
+        "id": "94",
+        "instant": "6",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "b4b5236730b94ded597dab78dff7332e8b9faeaa96c744a8f6c940dac128f5ba"
+      },
+      {
+        "id": "95",
+        "instant": "6",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "dac937518ef8e3872b695d351fd8019f74495698551870ea31c2c2b8fddb9dd0"
+      },
+      {
+        "id": "96",
+        "instant": "6",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "b973f384e13b341fd5294527d3869c60fed1ed19f61d9b636d1597dd54b08d55"
+      },
+      {
+        "id": "97",
+        "instant": "6",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "56af065756c83c578b4406d89138475bf30eac7dbaebdda0733adcffe1393e36"
+      },
+      {
+        "id": "98",
+        "instant": "6",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "d8e4f222b2136349ddc93701b4e6594f02401eacf331fdc3832376cf47a56480"
+      },
+      {
+        "id": "99",
+        "instant": "6",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "ce89355b1025161559df69b8e4e2a0f01aa75ea45556abded057e0596c74dfc6"
+      },
+      {
+        "id": "12",
+        "instant": "7",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "5b515c6549bde5a7afd2d6c42bc9a6b6aec15038e1fff8ae7f857f784cf8d4cb"
+      },
+      {
+        "id": "100",
+        "instant": "7",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "fe2aeeaed5d4e4783e190d47e9c965c67d7af8cfa08fa200899be7556a5cc03b"
+      },
+      {
+        "id": "101",
+        "instant": "7",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "9adedb51404c0c6e953b009499e28d88973be3f013ce8162c837b7dc4be111af"
+      },
+      {
+        "id": "102",
+        "instant": "7",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "d04a7104ca79dfd70b12cb5bd51b9f5d335850d31b02862c886e0be4932dc6bd"
+      },
+      {
+        "id": "103",
+        "instant": "7",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "0afb327739e9c2d1890b4995cc3ad0aedc763ef1a94388a472b9fdb12202c706"
+      },
+      {
+        "id": "104",
+        "instant": "7",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "36c3de99b3cd6ef4f48d49970453edc35d1cfcc0bd693ef570aaf6f6a18b53be"
+      },
+      {
+        "id": "105",
+        "instant": "7",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "d9ed92f44c52e404714c3a06bde8c43862924a249ac18fe9fb1cd4e6d352df12"
+      },
+      {
+        "id": "106",
+        "instant": "7",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "2e564a2dc789f6484d610e78bb344beb82ff457fe48434b131488ef36f241317"
+      },
+      {
+        "id": "13",
+        "instant": "7",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "f8119b651fe4ff0264251689a4994673a7e3311ff75db5c1de7a39c4c33345b6"
+      },
+      {
+        "id": "107",
+        "instant": "7",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "e74cf822ffd8e9596de1e1743bc4a40f442d63650bd9f6efc0445315a6b29d84"
+      },
+      {
+        "id": "108",
+        "instant": "7",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "f06ba83ed74d62b163f337ee971997fe6960810adf548469ab25ebe9c4daaf19"
+      },
+      {
+        "id": "109",
+        "instant": "7",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "f8a39846c2e991713679ad80bf7f934131a279d0a03a602411f363a159020574"
+      },
+      {
+        "id": "110",
+        "instant": "7",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "112be2b67bc30f8c18493fb0a2903e505d4c9d5bc895462578a05ea186d884b3"
+      },
+      {
+        "id": "111",
+        "instant": "7",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "2df8c825d0fad41dbea6494f5bd9b23ef69d6e33b79a54aa4ccb901ea2bc9824"
+      },
+      {
+        "id": "112",
+        "instant": "7",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "d81f28915c653a89cd2d3a264c352374df1ccd06c185b8fa888f044a0cab9d96"
+      },
+      {
+        "id": "14",
+        "instant": "8",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "77a94c609f99c1acaacf42500226111abdc31d6e0b311045fd65fb77794acedf"
+      },
+      {
+        "id": "113",
+        "instant": "8",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "13137bfa3d20fad0922d30e62cfa8d085b1d10fd3bb3fdd80be27f96763a11d7"
+      },
+      {
+        "id": "114",
+        "instant": "8",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "6fca3a7251285a5c16fe58bc6c50b2e0048ef7d91b72da4d62ab2a50b520ec22"
+      },
+      {
+        "id": "115",
+        "instant": "8",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "02b27c356ffdc0ac53b709918933b85a2e8a0278539a04410eee8dd60e3cf9eb"
+      },
+      {
+        "id": "116",
+        "instant": "8",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "9c6dbfeba56532437622ca06da4e863e7a34231bcbd2ba3a01334a9e2c764967"
+      },
+      {
+        "id": "117",
+        "instant": "8",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "d8231e1f07435528bc4599c08154e326163159da0a4fbfde1a8c904f59bf8edf"
+      },
+      {
+        "id": "118",
+        "instant": "8",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "e547a2224a2723db6e894c8c86e68aa037eec55d924cf50aff08986ce5609489"
+      },
+      {
+        "id": "119",
+        "instant": "8",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "b79cdda3d6e49029e2c03a2b488fd396a41d62dc378a2e8cee3f195e1baaf921"
+      },
+      {
+        "id": "15",
+        "instant": "8",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "fce14bf7b17cf19e8281f44c0e7aa87a0591027a0562055639d37a0f46fa6c09"
+      },
+      {
+        "id": "120",
+        "instant": "8",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "995a90d671a931821a4ed9dff5e3d838137ab01190b7e8c4a4cef4ab351531ae"
+      },
+      {
+        "id": "121",
+        "instant": "8",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "15a734d92727e73134308c1e64066ffa5cce84ffd6f0edd3915455ef0ada0727"
+      },
+      {
+        "id": "122",
+        "instant": "8",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "60ed9ed8b2e5540f09fa8b75e68ea2715183280730f6b55b0e44d1e1eaf5987b"
+      },
+      {
+        "id": "123",
+        "instant": "8",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "98516d88a97c8714c44e4ac4fa74e9a3f28e4d6ae74d2c55a137734e869cbe76"
+      },
+      {
+        "id": "124",
+        "instant": "8",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "0aec4ab2583a7321dab12f252d2c9cb1bfa4c784983b9e581a1010318502da34"
+      },
+      {
+        "id": "125",
+        "instant": "8",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "f675a925ec5fd600e3e9c9bafd7a0d0e6b1d18296d0e6d1631f247a24592319e"
+      },
+      {
+        "id": "16",
+        "instant": "9",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "1eb192465fd3395d0e62460a42873db4fec22b359a8eb9790dc76185a3370244"
+      },
+      {
+        "id": "126",
+        "instant": "9",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "623408cb2d6f1de232630393f04daa0353f925a46b46d1d9c97d189167ac54b8"
+      },
+      {
+        "id": "127",
+        "instant": "9",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "cc551a5aa6896a2385ad7ab82a3dfd59adf41ca2cc61438435f81b4c1441640c"
+      },
+      {
+        "id": "128",
+        "instant": "9",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "ea0060df29b3d6cccf687a3916003539143a7c81f35007d15e40435672f2bca1"
+      },
+      {
+        "id": "129",
+        "instant": "9",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "38c00bfff63188b35f22d4de9bd1293513f8657557e37af63d811d85de73a775"
+      },
+      {
+        "id": "130",
+        "instant": "9",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "32bce6991756d950d5c2c79d95315b4125a9f776e222e028c830eab8ac6ccf35"
+      },
+      {
+        "id": "131",
+        "instant": "9",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "1ac75d8f3783629707e0e8dbf5189ba7df08443f4deabded2a96cc149e56bd61"
+      },
+      {
+        "id": "132",
+        "instant": "9",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "727aacb273f99d59886e9f0057f054a58e8d04eded9982cc7fee6935538b323b"
+      },
+      {
+        "id": "17",
+        "instant": "9",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "699ab5a299918a6dfae26548984ee31e3b51e2f982bd7b4089dea71628c63d30"
+      },
+      {
+        "id": "133",
+        "instant": "9",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "cdf59a2a360c87a7dabdcd80fd99ba33d0c6be2458357f53da9eda3b5c9adc30"
+      },
+      {
+        "id": "134",
+        "instant": "9",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "ae37928a4962a138a9e3c4e53357b810fd62c9ba92056fa53bdbb3bdae547ec5"
+      },
+      {
+        "id": "135",
+        "instant": "9",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "909ee30509c944530add875d036b22956ccc5f32491262d38c621334cc730cd7"
+      },
+      {
+        "id": "136",
+        "instant": "9",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "1b1093b45ecf2eba1306029db3bfad2b1314d2054e36b5d4863c33c302e702ec"
+      },
+      {
+        "id": "137",
+        "instant": "9",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "f437b3312cc1b4dddc75746a822bfe26ecfdf7b3ff3e1837eb80a478e6ca7854"
+      },
+      {
+        "id": "138",
+        "instant": "9",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "f75029636f9daa9765218c6ea99c6aa2d3dc55627354971b5c532f5ee4fe5f58"
+      },
+      {
+        "id": "18",
+        "instant": "10",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "2046a3973f8b5467c99f4b8bc731860807fcdb4114f95369e54b0855da8f4370"
+      },
+      {
+        "id": "139",
+        "instant": "10",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "d1f9ca466e6194272ded2eec9557dcce006fac29535a50740ae89e81c45453c5"
+      },
+      {
+        "id": "140",
+        "instant": "10",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "15237a9dfb419aa85bba52bad5cd27e292fdddda3dddeff4f467380810b328bd"
+      },
+      {
+        "id": "141",
+        "instant": "10",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "baa20c81a2768bba30bc35d9ebfa9ae9828f755400d18480482bf5386fcae5f7"
+      },
+      {
+        "id": "142",
+        "instant": "10",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "80e3f698bea85a5c4aaf3d71ae75bb510edca41a5079cd0b4c51f47afa931002"
+      },
+      {
+        "id": "143",
+        "instant": "10",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "9437b48d3e66dab2d62152b4d0ca32c4e58f93147f3041555e8b832426ac5c27"
+      },
+      {
+        "id": "144",
+        "instant": "10",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "2b24100eb5349d3673bc95b1faea115b8455ede51601a85a8630fbe68db5b036"
+      },
+      {
+        "id": "145",
+        "instant": "10",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "b597a52a28c3668e4bd68cc7ad84010baefadda67ef1ebdfe21b595d64271bf1"
+      },
+      {
+        "id": "19",
+        "instant": "10",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "6b0159095f1fe3e351f5fcfd5a8f685d78bce3b4e90dceb4a4da7a18e81320f0"
+      },
+      {
+        "id": "146",
+        "instant": "10",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "a99a21687fadf7aeef250f850bf93213ca15716d464d00d4cab814a6bcfad4da"
+      },
+      {
+        "id": "147",
+        "instant": "10",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "dc2d6c357d45f9ac67f9dfbed350eb276c0f59c92e54e105026d22977a0a7bc8"
+      },
+      {
+        "id": "148",
+        "instant": "10",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "307fe59d8d3e3ee390919ee04f410db44addd6c98d0cb9a53a36a0c56fd70223"
+      },
+      {
+        "id": "149",
+        "instant": "10",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "bd6b5e626eb2530bf6f3b631bfe9c7631feabe50981d3db61380d28771f3da32"
+      },
+      {
+        "id": "150",
+        "instant": "10",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "cf4cd023654ac583c94aea096fa8019d1ff6f5fb688d7d571eb5f93b21af9297"
+      },
+      {
+        "id": "151",
+        "instant": "10",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "3a3fa7257d1335fa6f9cf550496cc8ad91a9e1e9cf4dc9140e391e486f7cb9a8"
+      },
+      {
+        "id": "20",
+        "instant": "11",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "4d26f3898dffc72e3baf46152f9e19f14f3719a022a39489717c5085dd947bfe"
+      },
+      {
+        "id": "152",
+        "instant": "11",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "9a7effa888faeb68e84df98f1212cafdc0760d4dcd9a761f56da20ffef597981"
+      },
+      {
+        "id": "153",
+        "instant": "11",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "53dadd279764a6f8f168740a66c023274b2229d106f21c1ca6fc9774889e6d34"
+      },
+      {
+        "id": "154",
+        "instant": "11",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "ab224c69ef7822bf1248d5849dd6b0d95119b8bb885de815264da242b15a9a5e"
+      },
+      {
+        "id": "155",
+        "instant": "11",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "3dd559acae2ec27acffb04cabd4c0074e36a1683b2a1ba8410a94c377370f394"
+      },
+      {
+        "id": "156",
+        "instant": "11",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "0454fa86c331c2ab06d25e58f310e4c7a809ff4017dfcb22ab0634953889bdbf"
+      },
+      {
+        "id": "157",
+        "instant": "11",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "e570a676f80b8c5c22e734720fca24351cf01577812c909443a0d2f652d41616"
+      },
+      {
+        "id": "158",
+        "instant": "11",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "ecb94cd3c985d0556c214bbd8ce10cad280971611df51c60d9396dd3b456aa92"
+      },
+      {
+        "id": "21",
+        "instant": "11",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "712edea24d71b0f9dfaa1534fb48ccd7d44b372fe5e50ffd3aebf83bf228dcb2"
+      },
+      {
+        "id": "159",
+        "instant": "11",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "fdd4047260b0ccbc56ed9232c17b98163442d03ef68e0e85f28048a6a0414cc3"
+      },
+      {
+        "id": "160",
+        "instant": "11",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "ac267751694c535b6524e49ef257e607586248cd143fd4f779877149e7a7839b"
+      },
+      {
+        "id": "161",
+        "instant": "11",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "ae5be490315734ca993b8a8cfd55446cf96a94c71df96dfaaa6992bc173bca45"
+      },
+      {
+        "id": "162",
+        "instant": "11",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "52f8c0576dbea466c19b4bdf535935437ff78cbbf38197a371f3b9d22f2237da"
+      },
+      {
+        "id": "163",
+        "instant": "11",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "ddd495846225574560a3879e81492ace3b2b951f05789423187beabd7f29b8de"
+      },
+      {
+        "id": "164",
+        "instant": "11",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "6c95084f9da4bb31254e88a2f9ebaecd32bc4224d3e6c9b6db657ddb0aef5bf8"
+      }
+    ]
+  },
+  {
+    "program": "hidden",
+    "saveHash": "7a63159fca20855ae1078b049ebaa2d3b3d63535e0ebe626f35cf39bbe679d74",
+    "rows": [
+      {
+        "id": "0",
+        "instant": "1",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "6f611bfc73830129fcb49ad318b0ca49cdf707579eda78f5f4bcfeba7228cdce"
+      },
+      {
+        "id": "22",
+        "instant": "1",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "6ae7f84b22e69fc4993e22149528a8d50b11841ef4e2d7537d0549a935bee70d"
+      },
+      {
+        "id": "23",
+        "instant": "1",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "c6d0cb63abaeaf7a9f5d438396c9a87cbfe0555219c8559face733cd0a65bbd1"
+      },
+      {
+        "id": "24",
+        "instant": "1",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "d6779085b5f09da64d7fa5a9c3500399363b2935a3139840cc6b40a2117feef4"
+      },
+      {
+        "id": "25",
+        "instant": "1",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "2e4cabc7838c86b07ca5701836f8a3d7a738d5ae7f559a09d255d7afe8b6a9c5"
+      },
+      {
+        "id": "26",
+        "instant": "1",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "d4b66b375559fd6ad7020ac47948af38fc185b75d6009a616d660fc7f56abb6b"
+      },
+      {
+        "id": "27",
+        "instant": "1",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "ab6843726411aa9fcf2cd0beb916629c815760b67c10d0e77b06c72aac35b162"
+      },
+      {
+        "id": "28",
+        "instant": "1",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "cf4a75ea0ce2a40908b38c32247f6be330783f3e0d1f8ecb304420ec28b3a31c"
+      },
+      {
+        "id": "1",
+        "instant": "1",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "bb9aeb0d3a71a98bf60f7d5461ebb8a98625deee3ff8d94c1e50bbd4b9452a37"
+      },
+      {
+        "id": "29",
+        "instant": "1",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "b047db65f5cbf6c18580a8e8e54263192ba726a8dbce7ccf3628891b2923d8ff"
+      },
+      {
+        "id": "30",
+        "instant": "1",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "a7b5c8c61447d90615ee6862ed4834f7eb6d826d8853f5d512f9b38c2db74b06"
+      },
+      {
+        "id": "31",
+        "instant": "1",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "5cbc5b61d5ccb33bc2320abb9f9f1941f2db0c0190c500d9219d491ba615f3aa"
+      },
+      {
+        "id": "32",
+        "instant": "1",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "32c2ef3d5046b3a49ff1d565146392264aea86dba123454b6640c15af81b024a"
+      },
+      {
+        "id": "33",
+        "instant": "1",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "41a3f6bb9a4a37cee4f09b3f926c9689950b942a9d4d26d70142aa1ae5e8df75"
+      },
+      {
+        "id": "34",
+        "instant": "1",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "73af57932b6f02bf8e96d26d3d89e90d5f4702e5501e4f3c8b5200c2dec7fe06"
+      },
+      {
+        "id": "2",
+        "instant": "2",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "346391bd70d3aff9a41a49685d2e7d31e493747f3361665d572400a7159827e4"
+      },
+      {
+        "id": "35",
+        "instant": "2",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "0470ae19de67a4abcd3d872fa42d7933a8ad8831a6f1b1cceec13b1edae954a8"
+      },
+      {
+        "id": "36",
+        "instant": "2",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "fa30898891f7bc0834b78d61b1ddb5f699db90a358703c7eaa2c0c4a105c0a17"
+      },
+      {
+        "id": "37",
+        "instant": "2",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "3de91828c63296cea9add63a4c997ed67dbffa38ea1e6d532b177b6f428cbb44"
+      },
+      {
+        "id": "38",
+        "instant": "2",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "6746909aaaefe872204f5a813c554ec405cea35099b89354be844427f3466197"
+      },
+      {
+        "id": "39",
+        "instant": "2",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "f3633ba2954e0d50a5e18098ac3d7646c878a4c8783b7eeb0dd8b2218b92c159"
+      },
+      {
+        "id": "40",
+        "instant": "2",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "a23d822262c3e27bf380b50a06b9eb8cf666aac733733200291e8fdee78b9633"
+      },
+      {
+        "id": "41",
+        "instant": "2",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "7b0327f7cda36ae7bb993f739a83d99258df618b4c5c84cae04d8839078452eb"
+      },
+      {
+        "id": "3",
+        "instant": "2",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "b6337567cf60434e9ac9be5d815d5ce9bfb3c8dd8e094f731b2ce221d2ccbe01"
+      },
+      {
+        "id": "42",
+        "instant": "2",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "4c9c3b74dc1ab1e3d0c8213091304c337a79f784860fd1058cffb1e4d3449b59"
+      },
+      {
+        "id": "43",
+        "instant": "2",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "56f3b78db504c64cfb65df2717d893a335b5bc3d636a78e9e9d3f789e4c453e4"
+      },
+      {
+        "id": "44",
+        "instant": "2",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "6be35a65f739c94591dd14b811fc882f22afbfaa17b59286e8cdcd7ba227a290"
+      },
+      {
+        "id": "45",
+        "instant": "2",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "334c3f780f2bc99b9974acdbabc75ad53039b50d533fbb39b191cf7abefd594f"
+      },
+      {
+        "id": "46",
+        "instant": "2",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "09a7a2eb8d87cf3ee43b2fab3985d8066113e51e072c8688b6cad717c233b9b6"
+      },
+      {
+        "id": "47",
+        "instant": "2",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "0c5aebe4adc217428eb637d5ccb69e382cd9d8ea53e5ab295adb018bf2e21a63"
+      },
+      {
+        "id": "4",
+        "instant": "3",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "9c39176c68bd52a45010f9f7bb18a8f38ac51c0ebf980234bc61790068c8ccc6"
+      },
+      {
+        "id": "48",
+        "instant": "3",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "5c359d584a74c094a177b9a09e2f3e73876fdf9a80ea7f973c77e930b2f7a700"
+      },
+      {
+        "id": "49",
+        "instant": "3",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "34b667d363398d34a477ad1b73e5e019673a4dbf1d87c2a6e2688821c01cea5d"
+      },
+      {
+        "id": "50",
+        "instant": "3",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "fa86843b94bcf9974f4b160cae7e07c27fde95665bc6bc6f11c96617de31cc66"
+      },
+      {
+        "id": "51",
+        "instant": "3",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "f963524ce89bebed495584a022262191a2f89994bdd61723d9681c7d7049a732"
+      },
+      {
+        "id": "52",
+        "instant": "3",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "2e63ed409413956acbe7d0c58e1de9e34a4d3d3daf1701a038ac4271744919bb"
+      },
+      {
+        "id": "53",
+        "instant": "3",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "55185a8bbc9cd36eab20e602772a52e55577fe0086921165fb4cef5444ea7228"
+      },
+      {
+        "id": "54",
+        "instant": "3",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "2db5f19b86fd525f4a95ac7f2fc539cda7612fbfa0ed1948ac1cd64b4f01e78b"
+      },
+      {
+        "id": "5",
+        "instant": "3",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "e0d791f37fd9cd7a95d24ecf5daa71646e28732ca9e6c72f4b4b876c22d4a3e9"
+      },
+      {
+        "id": "55",
+        "instant": "3",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "ebbe54ca8e18bb9d655f7249f6aa38ab11fbb0c2a880055c74d1e471f2b4aa6b"
+      },
+      {
+        "id": "56",
+        "instant": "3",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "89383614e18363acc04fcb3ad041388a7ca1a3044f9dceb18a28a630e1b76153"
+      },
+      {
+        "id": "57",
+        "instant": "3",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "55e81d8f5fc806d96d6993d16bafc31aea666b7f31ca6f2e93b3072b6b64f52a"
+      },
+      {
+        "id": "58",
+        "instant": "3",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "7e870bdd26a11ccf5a0e75487359d696b736389e2a115eed25f9eaa5beec64ec"
+      },
+      {
+        "id": "59",
+        "instant": "3",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "dbeadf0da25aa437c26643e41305dfa6ed90d241bad4cafe3523e6887e674c11"
+      },
+      {
+        "id": "60",
+        "instant": "3",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "7abb39b5aaa7ea5e59e88d15b5a0788b361e23589e21302f3857ea4cbb313a94"
+      },
+      {
+        "id": "6",
+        "instant": "4",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "3b66c4c82ab909d00b3c2f88125d4cce99f52e06a517ea4763a66d178731ed1d"
+      },
+      {
+        "id": "61",
+        "instant": "4",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "b17c3d804f986aadcb98979c0a30c4a9e273782c8736b947b3cc0a4a203f53b5"
+      },
+      {
+        "id": "62",
+        "instant": "4",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "e823cdfb72517c18be37596fa60beaedf38e886ffd3c36f52a08bf114be98b82"
+      },
+      {
+        "id": "63",
+        "instant": "4",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "0843fe0bb760ee301f81a0bdefe83f355396d8a3b4a8c53e9d5e7128afb8bf84"
+      },
+      {
+        "id": "64",
+        "instant": "4",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "d05b3e549589e8c703e8f543e4bb2d8f3eb0e9a41b5d717af9b76982ee81a60b"
+      },
+      {
+        "id": "65",
+        "instant": "4",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "7dcc5f42c5a39769363a663c8f9d7a3010ad40f5e9d721c1a9c718e0ed6976d0"
+      },
+      {
+        "id": "66",
+        "instant": "4",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "6a4cb893d0e941f03ca3b8953c9ef3ceeafbe7c28ca4fee0d28f9a97dcb517a2"
+      },
+      {
+        "id": "67",
+        "instant": "4",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "9778206444d3aa77895faef5f814156b7061f520bb7c325711b8ad72bfc19254"
+      },
+      {
+        "id": "7",
+        "instant": "4",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "b5cfc588c02a03abdcf4e8046517f7eb992f7aae5bcff4a432c34df2a0640d65"
+      },
+      {
+        "id": "68",
+        "instant": "4",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "37d718617772b155309c83dfdb7b7ee592740f646d59b3b7f6854c28da73259e"
+      },
+      {
+        "id": "69",
+        "instant": "4",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "8e02f542401ed1486750107587cf26169e5bc5060e2c4af3e8da16126033ea98"
+      },
+      {
+        "id": "70",
+        "instant": "4",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "acbaaf4e210b8c48bb19ab6c31da9d914fe41c68de920f7eec200a32d9f5a6cb"
+      },
+      {
+        "id": "71",
+        "instant": "4",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "70318efc3255e9bb15bd7753bf0afe5527670200f35a8936b81497ec10350749"
+      },
+      {
+        "id": "72",
+        "instant": "4",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "7ff95423f1061e0d8e0dc3ff20c327fc76760391a6b18e1b42f27c7848fe8074"
+      },
+      {
+        "id": "73",
+        "instant": "4",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "0631ce18a79ef485db8e7f9f6f6d3ae212161589651a21bc9779fa514dd75858"
+      },
+      {
+        "id": "8",
+        "instant": "5",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "7293f613d30434b909790a99178e0f2aaad819da0948509efe9dc76b99a51da9"
+      },
+      {
+        "id": "74",
+        "instant": "5",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "4024233e762b21cb2fddaf00a6547b4b292ea6029058148452c5d698570fe35c"
+      },
+      {
+        "id": "75",
+        "instant": "5",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "e0390cd0d9cc1da8e81c34fc0774acd1aa1ec4fd1afb05bf7873a458935b23ee"
+      },
+      {
+        "id": "76",
+        "instant": "5",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "d49a9c468392f95dac97a7b183fc76adf4b918400058777a5f53175aac0f2ed5"
+      },
+      {
+        "id": "77",
+        "instant": "5",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "6ec4216487d9da79975697496f41c0ea7627de728fb5daa6b69b0ac6fff0a874"
+      },
+      {
+        "id": "78",
+        "instant": "5",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "eb440bdb14a3263253ca1ef429c6a6bb3647ff563a405ca346d210943fd2fd42"
+      },
+      {
+        "id": "79",
+        "instant": "5",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "0f4a1bb04862b832d14d8605a9ebd5bbf1f4d545535b82e72c2cdfa747c5e469"
+      },
+      {
+        "id": "80",
+        "instant": "5",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "d4d113d585fd8f8118c8633a3381cb913aeb286f10a92bcfeadaf563800d881e"
+      },
+      {
+        "id": "9",
+        "instant": "5",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "cc4df459a4d2acaf4169fc7a65ddcbf30558ab30c1ec74de7569ce14f9b1b26f"
+      },
+      {
+        "id": "81",
+        "instant": "5",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "3302b15b17251e003214ea35202c189add2ed7b344713c35a4ef09b24697f49f"
+      },
+      {
+        "id": "82",
+        "instant": "5",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "b358e1b6105a78e7e83be3351cc90d1ac1b84799f5985c4802e6d575ea0765f1"
+      },
+      {
+        "id": "83",
+        "instant": "5",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "90a57e369cea8b72d5f820d60c7f28c9c29359838f3cf24ebb04d3bf93b97875"
+      },
+      {
+        "id": "84",
+        "instant": "5",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "706b982aec509ea67bdd906a94e5761820670f6a5cd9044a75668f0dbfdcd680"
+      },
+      {
+        "id": "85",
+        "instant": "5",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "a81422c95a5b074940c00220936e85170d38822d1b402e62ddebff78d6057add"
+      },
+      {
+        "id": "86",
+        "instant": "5",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "57c4779f803029d9dfc6332ed039a52e8be313d8288d9fd6f8940afcabf1226f"
+      },
+      {
+        "id": "10",
+        "instant": "6",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "a833d465441850efcf8b4fbcdde7ba248e2ca0ae04a271fdb5dc67f0d856fea8"
+      },
+      {
+        "id": "87",
+        "instant": "6",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "7a42ed1afefe4cdf22eb61f43957538adc2af4c81e668f9b33a10685bb3ec76a"
+      },
+      {
+        "id": "88",
+        "instant": "6",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "6c8419b5d2a304cb62ca84790bbc773dbfde17c91c73dbce65f21999d1434220"
+      },
+      {
+        "id": "89",
+        "instant": "6",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "ead923de35389c2b2689d9c2583dea54da601df24648fd8f96140b582a4f0510"
+      },
+      {
+        "id": "90",
+        "instant": "6",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "583e9fd9236fd5c8a3c845770d7acef40eecdc3ba8a060197873a38a2f08f0b4"
+      },
+      {
+        "id": "91",
+        "instant": "6",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "01934cbbc06dabe04a30fb86dc75d9d3f5c5ea5db4156306547d4a8ad6133fda"
+      },
+      {
+        "id": "92",
+        "instant": "6",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "5c415cc86389e8a5f1411a869a36dac458dc5d7112f1208d02b4514ed9779414"
+      },
+      {
+        "id": "93",
+        "instant": "6",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "73ae652acb420e56fe138b711b03ced8ebaac595ac95ff83bf17d29f053c352b"
+      },
+      {
+        "id": "11",
+        "instant": "6",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "57d1822833ad81f11018c2399639f4c49e3fdc3dd00d22a1c55730ecf6d1918e"
+      },
+      {
+        "id": "94",
+        "instant": "6",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "b4b5236730b94ded597dab78dff7332e8b9faeaa96c744a8f6c940dac128f5ba"
+      },
+      {
+        "id": "95",
+        "instant": "6",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "5074e43c0e8b535e48cf56b1cd5d39f955ec9e814b5079f743651792912e3bd9"
+      },
+      {
+        "id": "96",
+        "instant": "6",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "b973f384e13b341fd5294527d3869c60fed1ed19f61d9b636d1597dd54b08d55"
+      },
+      {
+        "id": "97",
+        "instant": "6",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "56af065756c83c578b4406d89138475bf30eac7dbaebdda0733adcffe1393e36"
+      },
+      {
+        "id": "98",
+        "instant": "6",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "d8e4f222b2136349ddc93701b4e6594f02401eacf331fdc3832376cf47a56480"
+      },
+      {
+        "id": "99",
+        "instant": "6",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "ce89355b1025161559df69b8e4e2a0f01aa75ea45556abded057e0596c74dfc6"
+      },
+      {
+        "id": "12",
+        "instant": "7",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "5b515c6549bde5a7afd2d6c42bc9a6b6aec15038e1fff8ae7f857f784cf8d4cb"
+      },
+      {
+        "id": "100",
+        "instant": "7",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "fe2aeeaed5d4e4783e190d47e9c965c67d7af8cfa08fa200899be7556a5cc03b"
+      },
+      {
+        "id": "101",
+        "instant": "7",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "9adedb51404c0c6e953b009499e28d88973be3f013ce8162c837b7dc4be111af"
+      },
+      {
+        "id": "102",
+        "instant": "7",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "d04a7104ca79dfd70b12cb5bd51b9f5d335850d31b02862c886e0be4932dc6bd"
+      },
+      {
+        "id": "103",
+        "instant": "7",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "0afb327739e9c2d1890b4995cc3ad0aedc763ef1a94388a472b9fdb12202c706"
+      },
+      {
+        "id": "104",
+        "instant": "7",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "36c3de99b3cd6ef4f48d49970453edc35d1cfcc0bd693ef570aaf6f6a18b53be"
+      },
+      {
+        "id": "105",
+        "instant": "7",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "d9ed92f44c52e404714c3a06bde8c43862924a249ac18fe9fb1cd4e6d352df12"
+      },
+      {
+        "id": "106",
+        "instant": "7",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "2e564a2dc789f6484d610e78bb344beb82ff457fe48434b131488ef36f241317"
+      },
+      {
+        "id": "13",
+        "instant": "7",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "c7ad6c970e337f6fe509d7cdf258abbcb6e21883055fd2cfddad6eca1a40f2d7"
+      },
+      {
+        "id": "107",
+        "instant": "7",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "e74cf822ffd8e9596de1e1743bc4a40f442d63650bd9f6efc0445315a6b29d84"
+      },
+      {
+        "id": "108",
+        "instant": "7",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "cc3f4184d9d97ea91e59a323ef905f8c97450caa25ac74d3aa589f523a9028c0"
+      },
+      {
+        "id": "109",
+        "instant": "7",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "f8a39846c2e991713679ad80bf7f934131a279d0a03a602411f363a159020574"
+      },
+      {
+        "id": "110",
+        "instant": "7",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "112be2b67bc30f8c18493fb0a2903e505d4c9d5bc895462578a05ea186d884b3"
+      },
+      {
+        "id": "111",
+        "instant": "7",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "2df8c825d0fad41dbea6494f5bd9b23ef69d6e33b79a54aa4ccb901ea2bc9824"
+      },
+      {
+        "id": "112",
+        "instant": "7",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "d81f28915c653a89cd2d3a264c352374df1ccd06c185b8fa888f044a0cab9d96"
+      },
+      {
+        "id": "14",
+        "instant": "8",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "77a94c609f99c1acaacf42500226111abdc31d6e0b311045fd65fb77794acedf"
+      },
+      {
+        "id": "113",
+        "instant": "8",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "13137bfa3d20fad0922d30e62cfa8d085b1d10fd3bb3fdd80be27f96763a11d7"
+      },
+      {
+        "id": "114",
+        "instant": "8",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "6fca3a7251285a5c16fe58bc6c50b2e0048ef7d91b72da4d62ab2a50b520ec22"
+      },
+      {
+        "id": "115",
+        "instant": "8",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "02b27c356ffdc0ac53b709918933b85a2e8a0278539a04410eee8dd60e3cf9eb"
+      },
+      {
+        "id": "116",
+        "instant": "8",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "9c6dbfeba56532437622ca06da4e863e7a34231bcbd2ba3a01334a9e2c764967"
+      },
+      {
+        "id": "117",
+        "instant": "8",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "d8231e1f07435528bc4599c08154e326163159da0a4fbfde1a8c904f59bf8edf"
+      },
+      {
+        "id": "118",
+        "instant": "8",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "e547a2224a2723db6e894c8c86e68aa037eec55d924cf50aff08986ce5609489"
+      },
+      {
+        "id": "119",
+        "instant": "8",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "b79cdda3d6e49029e2c03a2b488fd396a41d62dc378a2e8cee3f195e1baaf921"
+      },
+      {
+        "id": "15",
+        "instant": "8",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "147d712ecf3f725fe799620535f012bfac860d86df260501c2e3fcf6c9c4b84f"
+      },
+      {
+        "id": "120",
+        "instant": "8",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "995a90d671a931821a4ed9dff5e3d838137ab01190b7e8c4a4cef4ab351531ae"
+      },
+      {
+        "id": "121",
+        "instant": "8",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "162b4c6fa41fc52a78b8291394946a92ca72455119121f8f34c66633e330baab"
+      },
+      {
+        "id": "122",
+        "instant": "8",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "60ed9ed8b2e5540f09fa8b75e68ea2715183280730f6b55b0e44d1e1eaf5987b"
+      },
+      {
+        "id": "123",
+        "instant": "8",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "98516d88a97c8714c44e4ac4fa74e9a3f28e4d6ae74d2c55a137734e869cbe76"
+      },
+      {
+        "id": "124",
+        "instant": "8",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "0aec4ab2583a7321dab12f252d2c9cb1bfa4c784983b9e581a1010318502da34"
+      },
+      {
+        "id": "125",
+        "instant": "8",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "f675a925ec5fd600e3e9c9bafd7a0d0e6b1d18296d0e6d1631f247a24592319e"
+      },
+      {
+        "id": "16",
+        "instant": "9",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "1eb192465fd3395d0e62460a42873db4fec22b359a8eb9790dc76185a3370244"
+      },
+      {
+        "id": "126",
+        "instant": "9",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "623408cb2d6f1de232630393f04daa0353f925a46b46d1d9c97d189167ac54b8"
+      },
+      {
+        "id": "127",
+        "instant": "9",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "cc551a5aa6896a2385ad7ab82a3dfd59adf41ca2cc61438435f81b4c1441640c"
+      },
+      {
+        "id": "128",
+        "instant": "9",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "ea0060df29b3d6cccf687a3916003539143a7c81f35007d15e40435672f2bca1"
+      },
+      {
+        "id": "129",
+        "instant": "9",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "38c00bfff63188b35f22d4de9bd1293513f8657557e37af63d811d85de73a775"
+      },
+      {
+        "id": "130",
+        "instant": "9",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "32bce6991756d950d5c2c79d95315b4125a9f776e222e028c830eab8ac6ccf35"
+      },
+      {
+        "id": "131",
+        "instant": "9",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "1ac75d8f3783629707e0e8dbf5189ba7df08443f4deabded2a96cc149e56bd61"
+      },
+      {
+        "id": "132",
+        "instant": "9",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "727aacb273f99d59886e9f0057f054a58e8d04eded9982cc7fee6935538b323b"
+      },
+      {
+        "id": "17",
+        "instant": "9",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "28e0f3c81e5f0cc3c18e8a91ee88562a709f81824f40170b451692e167673b14"
+      },
+      {
+        "id": "133",
+        "instant": "9",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "cdf59a2a360c87a7dabdcd80fd99ba33d0c6be2458357f53da9eda3b5c9adc30"
+      },
+      {
+        "id": "134",
+        "instant": "9",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "113477e5c5b93e8ba9e5d0e8800d723c08fa4e2daa739411a8c5838965be3ec6"
+      },
+      {
+        "id": "135",
+        "instant": "9",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "909ee30509c944530add875d036b22956ccc5f32491262d38c621334cc730cd7"
+      },
+      {
+        "id": "136",
+        "instant": "9",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "1b1093b45ecf2eba1306029db3bfad2b1314d2054e36b5d4863c33c302e702ec"
+      },
+      {
+        "id": "137",
+        "instant": "9",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "f437b3312cc1b4dddc75746a822bfe26ecfdf7b3ff3e1837eb80a478e6ca7854"
+      },
+      {
+        "id": "138",
+        "instant": "9",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "f75029636f9daa9765218c6ea99c6aa2d3dc55627354971b5c532f5ee4fe5f58"
+      },
+      {
+        "id": "18",
+        "instant": "10",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "2046a3973f8b5467c99f4b8bc731860807fcdb4114f95369e54b0855da8f4370"
+      },
+      {
+        "id": "139",
+        "instant": "10",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "d1f9ca466e6194272ded2eec9557dcce006fac29535a50740ae89e81c45453c5"
+      },
+      {
+        "id": "140",
+        "instant": "10",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "15237a9dfb419aa85bba52bad5cd27e292fdddda3dddeff4f467380810b328bd"
+      },
+      {
+        "id": "141",
+        "instant": "10",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "baa20c81a2768bba30bc35d9ebfa9ae9828f755400d18480482bf5386fcae5f7"
+      },
+      {
+        "id": "142",
+        "instant": "10",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "80e3f698bea85a5c4aaf3d71ae75bb510edca41a5079cd0b4c51f47afa931002"
+      },
+      {
+        "id": "143",
+        "instant": "10",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "9437b48d3e66dab2d62152b4d0ca32c4e58f93147f3041555e8b832426ac5c27"
+      },
+      {
+        "id": "144",
+        "instant": "10",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "2b24100eb5349d3673bc95b1faea115b8455ede51601a85a8630fbe68db5b036"
+      },
+      {
+        "id": "145",
+        "instant": "10",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "b597a52a28c3668e4bd68cc7ad84010baefadda67ef1ebdfe21b595d64271bf1"
+      },
+      {
+        "id": "19",
+        "instant": "10",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "6b0159095f1fe3e351f5fcfd5a8f685d78bce3b4e90dceb4a4da7a18e81320f0"
+      },
+      {
+        "id": "146",
+        "instant": "10",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "a99a21687fadf7aeef250f850bf93213ca15716d464d00d4cab814a6bcfad4da"
+      },
+      {
+        "id": "147",
+        "instant": "10",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "dc2d6c357d45f9ac67f9dfbed350eb276c0f59c92e54e105026d22977a0a7bc8"
+      },
+      {
+        "id": "148",
+        "instant": "10",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "307fe59d8d3e3ee390919ee04f410db44addd6c98d0cb9a53a36a0c56fd70223"
+      },
+      {
+        "id": "149",
+        "instant": "10",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "bd6b5e626eb2530bf6f3b631bfe9c7631feabe50981d3db61380d28771f3da32"
+      },
+      {
+        "id": "150",
+        "instant": "10",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "cf4cd023654ac583c94aea096fa8019d1ff6f5fb688d7d571eb5f93b21af9297"
+      },
+      {
+        "id": "151",
+        "instant": "10",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "3a3fa7257d1335fa6f9cf550496cc8ad91a9e1e9cf4dc9140e391e486f7cb9a8"
+      },
+      {
+        "id": "20",
+        "instant": "11",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "4d26f3898dffc72e3baf46152f9e19f14f3719a022a39489717c5085dd947bfe"
+      },
+      {
+        "id": "152",
+        "instant": "11",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "9a7effa888faeb68e84df98f1212cafdc0760d4dcd9a761f56da20ffef597981"
+      },
+      {
+        "id": "153",
+        "instant": "11",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "53dadd279764a6f8f168740a66c023274b2229d106f21c1ca6fc9774889e6d34"
+      },
+      {
+        "id": "154",
+        "instant": "11",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "ab224c69ef7822bf1248d5849dd6b0d95119b8bb885de815264da242b15a9a5e"
+      },
+      {
+        "id": "155",
+        "instant": "11",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "3dd559acae2ec27acffb04cabd4c0074e36a1683b2a1ba8410a94c377370f394"
+      },
+      {
+        "id": "156",
+        "instant": "11",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "0454fa86c331c2ab06d25e58f310e4c7a809ff4017dfcb22ab0634953889bdbf"
+      },
+      {
+        "id": "157",
+        "instant": "11",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "e570a676f80b8c5c22e734720fca24351cf01577812c909443a0d2f652d41616"
+      },
+      {
+        "id": "158",
+        "instant": "11",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "ecb94cd3c985d0556c214bbd8ce10cad280971611df51c60d9396dd3b456aa92"
+      },
+      {
+        "id": "21",
+        "instant": "11",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "712edea24d71b0f9dfaa1534fb48ccd7d44b372fe5e50ffd3aebf83bf228dcb2"
+      },
+      {
+        "id": "159",
+        "instant": "11",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "fdd4047260b0ccbc56ed9232c17b98163442d03ef68e0e85f28048a6a0414cc3"
+      },
+      {
+        "id": "160",
+        "instant": "11",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "ac267751694c535b6524e49ef257e607586248cd143fd4f779877149e7a7839b"
+      },
+      {
+        "id": "161",
+        "instant": "11",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "ae5be490315734ca993b8a8cfd55446cf96a94c71df96dfaaa6992bc173bca45"
+      },
+      {
+        "id": "162",
+        "instant": "11",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "52f8c0576dbea466c19b4bdf535935437ff78cbbf38197a371f3b9d22f2237da"
+      },
+      {
+        "id": "163",
+        "instant": "11",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "ddd495846225574560a3879e81492ace3b2b951f05789423187beabd7f29b8de"
+      },
+      {
+        "id": "164",
+        "instant": "11",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "6c95084f9da4bb31254e88a2f9ebaecd32bc4224d3e6c9b6db657ddb0aef5bf8"
+      }
+    ]
+  },
+  {
+    "program": "feedback-2",
+    "saveHash": "f92df02f96e934f8a5c55289697f1bd5e58efac37036ec4adf2fde186ad14d2e",
+    "rows": [
+      {
+        "id": "0",
+        "instant": "1",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "6f611bfc73830129fcb49ad318b0ca49cdf707579eda78f5f4bcfeba7228cdce"
+      },
+      {
+        "id": "22",
+        "instant": "1",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "6ae7f84b22e69fc4993e22149528a8d50b11841ef4e2d7537d0549a935bee70d"
+      },
+      {
+        "id": "23",
+        "instant": "1",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "c6d0cb63abaeaf7a9f5d438396c9a87cbfe0555219c8559face733cd0a65bbd1"
+      },
+      {
+        "id": "24",
+        "instant": "1",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "d6779085b5f09da64d7fa5a9c3500399363b2935a3139840cc6b40a2117feef4"
+      },
+      {
+        "id": "25",
+        "instant": "1",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "2e4cabc7838c86b07ca5701836f8a3d7a738d5ae7f559a09d255d7afe8b6a9c5"
+      },
+      {
+        "id": "26",
+        "instant": "1",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "d4b66b375559fd6ad7020ac47948af38fc185b75d6009a616d660fc7f56abb6b"
+      },
+      {
+        "id": "27",
+        "instant": "1",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "ab6843726411aa9fcf2cd0beb916629c815760b67c10d0e77b06c72aac35b162"
+      },
+      {
+        "id": "28",
+        "instant": "1",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "cf4a75ea0ce2a40908b38c32247f6be330783f3e0d1f8ecb304420ec28b3a31c"
+      },
+      {
+        "id": "1",
+        "instant": "1",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "4e6621c989c0d17a9624473ce0a5e1d80c8a2f10ff4046874adbfc9950f2f7d3"
+      },
+      {
+        "id": "29",
+        "instant": "1",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "b047db65f5cbf6c18580a8e8e54263192ba726a8dbce7ccf3628891b2923d8ff"
+      },
+      {
+        "id": "30",
+        "instant": "1",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "a5c7e7592061b70ad2100ff646713bcb1644e9de857da70e8e84468c4ed3bce6"
+      },
+      {
+        "id": "31",
+        "instant": "1",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "5cbc5b61d5ccb33bc2320abb9f9f1941f2db0c0190c500d9219d491ba615f3aa"
+      },
+      {
+        "id": "32",
+        "instant": "1",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "32c2ef3d5046b3a49ff1d565146392264aea86dba123454b6640c15af81b024a"
+      },
+      {
+        "id": "33",
+        "instant": "1",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "41a3f6bb9a4a37cee4f09b3f926c9689950b942a9d4d26d70142aa1ae5e8df75"
+      },
+      {
+        "id": "34",
+        "instant": "1",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "73af57932b6f02bf8e96d26d3d89e90d5f4702e5501e4f3c8b5200c2dec7fe06"
+      },
+      {
+        "id": "2",
+        "instant": "2",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "346391bd70d3aff9a41a49685d2e7d31e493747f3361665d572400a7159827e4"
+      },
+      {
+        "id": "35",
+        "instant": "2",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "0470ae19de67a4abcd3d872fa42d7933a8ad8831a6f1b1cceec13b1edae954a8"
+      },
+      {
+        "id": "36",
+        "instant": "2",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "fa30898891f7bc0834b78d61b1ddb5f699db90a358703c7eaa2c0c4a105c0a17"
+      },
+      {
+        "id": "37",
+        "instant": "2",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "3de91828c63296cea9add63a4c997ed67dbffa38ea1e6d532b177b6f428cbb44"
+      },
+      {
+        "id": "38",
+        "instant": "2",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "6746909aaaefe872204f5a813c554ec405cea35099b89354be844427f3466197"
+      },
+      {
+        "id": "39",
+        "instant": "2",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "f3633ba2954e0d50a5e18098ac3d7646c878a4c8783b7eeb0dd8b2218b92c159"
+      },
+      {
+        "id": "40",
+        "instant": "2",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "a23d822262c3e27bf380b50a06b9eb8cf666aac733733200291e8fdee78b9633"
+      },
+      {
+        "id": "41",
+        "instant": "2",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "7b0327f7cda36ae7bb993f739a83d99258df618b4c5c84cae04d8839078452eb"
+      },
+      {
+        "id": "3",
+        "instant": "2",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "19ca2977d45afa9dc032900fd6eb66bd15b7371234c0254470b2fbcb93163ae9"
+      },
+      {
+        "id": "42",
+        "instant": "2",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "4c9c3b74dc1ab1e3d0c8213091304c337a79f784860fd1058cffb1e4d3449b59"
+      },
+      {
+        "id": "43",
+        "instant": "2",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "332b06c30dd06436fc70c1c202c26cda623acbf82dc8c2e926ded4de6e2ca86f"
+      },
+      {
+        "id": "44",
+        "instant": "2",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "6be35a65f739c94591dd14b811fc882f22afbfaa17b59286e8cdcd7ba227a290"
+      },
+      {
+        "id": "45",
+        "instant": "2",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "334c3f780f2bc99b9974acdbabc75ad53039b50d533fbb39b191cf7abefd594f"
+      },
+      {
+        "id": "46",
+        "instant": "2",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "09a7a2eb8d87cf3ee43b2fab3985d8066113e51e072c8688b6cad717c233b9b6"
+      },
+      {
+        "id": "47",
+        "instant": "2",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "0c5aebe4adc217428eb637d5ccb69e382cd9d8ea53e5ab295adb018bf2e21a63"
+      },
+      {
+        "id": "4",
+        "instant": "3",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "9c39176c68bd52a45010f9f7bb18a8f38ac51c0ebf980234bc61790068c8ccc6"
+      },
+      {
+        "id": "48",
+        "instant": "3",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "5c359d584a74c094a177b9a09e2f3e73876fdf9a80ea7f973c77e930b2f7a700"
+      },
+      {
+        "id": "49",
+        "instant": "3",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "34b667d363398d34a477ad1b73e5e019673a4dbf1d87c2a6e2688821c01cea5d"
+      },
+      {
+        "id": "50",
+        "instant": "3",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "fa86843b94bcf9974f4b160cae7e07c27fde95665bc6bc6f11c96617de31cc66"
+      },
+      {
+        "id": "51",
+        "instant": "3",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "f963524ce89bebed495584a022262191a2f89994bdd61723d9681c7d7049a732"
+      },
+      {
+        "id": "52",
+        "instant": "3",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "2e63ed409413956acbe7d0c58e1de9e34a4d3d3daf1701a038ac4271744919bb"
+      },
+      {
+        "id": "53",
+        "instant": "3",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "55185a8bbc9cd36eab20e602772a52e55577fe0086921165fb4cef5444ea7228"
+      },
+      {
+        "id": "54",
+        "instant": "3",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "2db5f19b86fd525f4a95ac7f2fc539cda7612fbfa0ed1948ac1cd64b4f01e78b"
+      },
+      {
+        "id": "5",
+        "instant": "3",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "a815925f971bfedeaa65b3c03d831e896159055c70eec8304f6a593c6ebce38a"
+      },
+      {
+        "id": "55",
+        "instant": "3",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "ebbe54ca8e18bb9d655f7249f6aa38ab11fbb0c2a880055c74d1e471f2b4aa6b"
+      },
+      {
+        "id": "56",
+        "instant": "3",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "727b6cfb7af77a209579af85c9accbe03993d63c03e21b252adb4d0cec5e527e"
+      },
+      {
+        "id": "57",
+        "instant": "3",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "55e81d8f5fc806d96d6993d16bafc31aea666b7f31ca6f2e93b3072b6b64f52a"
+      },
+      {
+        "id": "58",
+        "instant": "3",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "7e870bdd26a11ccf5a0e75487359d696b736389e2a115eed25f9eaa5beec64ec"
+      },
+      {
+        "id": "59",
+        "instant": "3",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "dbeadf0da25aa437c26643e41305dfa6ed90d241bad4cafe3523e6887e674c11"
+      },
+      {
+        "id": "60",
+        "instant": "3",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "7abb39b5aaa7ea5e59e88d15b5a0788b361e23589e21302f3857ea4cbb313a94"
+      },
+      {
+        "id": "6",
+        "instant": "4",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "3b66c4c82ab909d00b3c2f88125d4cce99f52e06a517ea4763a66d178731ed1d"
+      },
+      {
+        "id": "61",
+        "instant": "4",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "b17c3d804f986aadcb98979c0a30c4a9e273782c8736b947b3cc0a4a203f53b5"
+      },
+      {
+        "id": "62",
+        "instant": "4",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "e823cdfb72517c18be37596fa60beaedf38e886ffd3c36f52a08bf114be98b82"
+      },
+      {
+        "id": "63",
+        "instant": "4",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "0843fe0bb760ee301f81a0bdefe83f355396d8a3b4a8c53e9d5e7128afb8bf84"
+      },
+      {
+        "id": "64",
+        "instant": "4",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "d05b3e549589e8c703e8f543e4bb2d8f3eb0e9a41b5d717af9b76982ee81a60b"
+      },
+      {
+        "id": "65",
+        "instant": "4",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "7dcc5f42c5a39769363a663c8f9d7a3010ad40f5e9d721c1a9c718e0ed6976d0"
+      },
+      {
+        "id": "66",
+        "instant": "4",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "6a4cb893d0e941f03ca3b8953c9ef3ceeafbe7c28ca4fee0d28f9a97dcb517a2"
+      },
+      {
+        "id": "67",
+        "instant": "4",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "9778206444d3aa77895faef5f814156b7061f520bb7c325711b8ad72bfc19254"
+      },
+      {
+        "id": "7",
+        "instant": "4",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "a1081a8695aa6995c40c8bacd684a3e7ce28685544a2929decfa3ab2842b8e61"
+      },
+      {
+        "id": "68",
+        "instant": "4",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "37d718617772b155309c83dfdb7b7ee592740f646d59b3b7f6854c28da73259e"
+      },
+      {
+        "id": "69",
+        "instant": "4",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "306d0a50a3b344d3dab9a087652d9d80c580f82c553bd9000d95ec01dbc7399e"
+      },
+      {
+        "id": "70",
+        "instant": "4",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "acbaaf4e210b8c48bb19ab6c31da9d914fe41c68de920f7eec200a32d9f5a6cb"
+      },
+      {
+        "id": "71",
+        "instant": "4",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "70318efc3255e9bb15bd7753bf0afe5527670200f35a8936b81497ec10350749"
+      },
+      {
+        "id": "72",
+        "instant": "4",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "7ff95423f1061e0d8e0dc3ff20c327fc76760391a6b18e1b42f27c7848fe8074"
+      },
+      {
+        "id": "73",
+        "instant": "4",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "0631ce18a79ef485db8e7f9f6f6d3ae212161589651a21bc9779fa514dd75858"
+      },
+      {
+        "id": "8",
+        "instant": "5",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "7293f613d30434b909790a99178e0f2aaad819da0948509efe9dc76b99a51da9"
+      },
+      {
+        "id": "74",
+        "instant": "5",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "4024233e762b21cb2fddaf00a6547b4b292ea6029058148452c5d698570fe35c"
+      },
+      {
+        "id": "75",
+        "instant": "5",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "e0390cd0d9cc1da8e81c34fc0774acd1aa1ec4fd1afb05bf7873a458935b23ee"
+      },
+      {
+        "id": "76",
+        "instant": "5",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "d49a9c468392f95dac97a7b183fc76adf4b918400058777a5f53175aac0f2ed5"
+      },
+      {
+        "id": "77",
+        "instant": "5",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "6ec4216487d9da79975697496f41c0ea7627de728fb5daa6b69b0ac6fff0a874"
+      },
+      {
+        "id": "78",
+        "instant": "5",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "eb440bdb14a3263253ca1ef429c6a6bb3647ff563a405ca346d210943fd2fd42"
+      },
+      {
+        "id": "79",
+        "instant": "5",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "0f4a1bb04862b832d14d8605a9ebd5bbf1f4d545535b82e72c2cdfa747c5e469"
+      },
+      {
+        "id": "80",
+        "instant": "5",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "d4d113d585fd8f8118c8633a3381cb913aeb286f10a92bcfeadaf563800d881e"
+      },
+      {
+        "id": "9",
+        "instant": "5",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "626af4dceef3e4552e61989ca2d751289fa0f640a79f523f0874d73de9a1bb57"
+      },
+      {
+        "id": "81",
+        "instant": "5",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "3302b15b17251e003214ea35202c189add2ed7b344713c35a4ef09b24697f49f"
+      },
+      {
+        "id": "82",
+        "instant": "5",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "e5563ca95cecb98853bc9354479b49e0002747de9e8e4c5d4c3913c7d61577ae"
+      },
+      {
+        "id": "83",
+        "instant": "5",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "90a57e369cea8b72d5f820d60c7f28c9c29359838f3cf24ebb04d3bf93b97875"
+      },
+      {
+        "id": "84",
+        "instant": "5",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "706b982aec509ea67bdd906a94e5761820670f6a5cd9044a75668f0dbfdcd680"
+      },
+      {
+        "id": "85",
+        "instant": "5",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "a81422c95a5b074940c00220936e85170d38822d1b402e62ddebff78d6057add"
+      },
+      {
+        "id": "86",
+        "instant": "5",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "57c4779f803029d9dfc6332ed039a52e8be313d8288d9fd6f8940afcabf1226f"
+      },
+      {
+        "id": "10",
+        "instant": "6",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "a833d465441850efcf8b4fbcdde7ba248e2ca0ae04a271fdb5dc67f0d856fea8"
+      },
+      {
+        "id": "87",
+        "instant": "6",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "7a42ed1afefe4cdf22eb61f43957538adc2af4c81e668f9b33a10685bb3ec76a"
+      },
+      {
+        "id": "88",
+        "instant": "6",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "6c8419b5d2a304cb62ca84790bbc773dbfde17c91c73dbce65f21999d1434220"
+      },
+      {
+        "id": "89",
+        "instant": "6",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "ead923de35389c2b2689d9c2583dea54da601df24648fd8f96140b582a4f0510"
+      },
+      {
+        "id": "90",
+        "instant": "6",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "583e9fd9236fd5c8a3c845770d7acef40eecdc3ba8a060197873a38a2f08f0b4"
+      },
+      {
+        "id": "91",
+        "instant": "6",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "01934cbbc06dabe04a30fb86dc75d9d3f5c5ea5db4156306547d4a8ad6133fda"
+      },
+      {
+        "id": "92",
+        "instant": "6",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "5c415cc86389e8a5f1411a869a36dac458dc5d7112f1208d02b4514ed9779414"
+      },
+      {
+        "id": "93",
+        "instant": "6",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "73ae652acb420e56fe138b711b03ced8ebaac595ac95ff83bf17d29f053c352b"
+      },
+      {
+        "id": "11",
+        "instant": "6",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "56a077392de89be6ddbe9f6e2ba80320e04106676be8ca9a4218c723ffe0d106"
+      },
+      {
+        "id": "94",
+        "instant": "6",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "b4b5236730b94ded597dab78dff7332e8b9faeaa96c744a8f6c940dac128f5ba"
+      },
+      {
+        "id": "95",
+        "instant": "6",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "dac937518ef8e3872b695d351fd8019f74495698551870ea31c2c2b8fddb9dd0"
+      },
+      {
+        "id": "96",
+        "instant": "6",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "b973f384e13b341fd5294527d3869c60fed1ed19f61d9b636d1597dd54b08d55"
+      },
+      {
+        "id": "97",
+        "instant": "6",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "56af065756c83c578b4406d89138475bf30eac7dbaebdda0733adcffe1393e36"
+      },
+      {
+        "id": "98",
+        "instant": "6",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "d8e4f222b2136349ddc93701b4e6594f02401eacf331fdc3832376cf47a56480"
+      },
+      {
+        "id": "99",
+        "instant": "6",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "ce89355b1025161559df69b8e4e2a0f01aa75ea45556abded057e0596c74dfc6"
+      },
+      {
+        "id": "12",
+        "instant": "7",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "5b515c6549bde5a7afd2d6c42bc9a6b6aec15038e1fff8ae7f857f784cf8d4cb"
+      },
+      {
+        "id": "100",
+        "instant": "7",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "fe2aeeaed5d4e4783e190d47e9c965c67d7af8cfa08fa200899be7556a5cc03b"
+      },
+      {
+        "id": "101",
+        "instant": "7",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "9adedb51404c0c6e953b009499e28d88973be3f013ce8162c837b7dc4be111af"
+      },
+      {
+        "id": "102",
+        "instant": "7",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "d04a7104ca79dfd70b12cb5bd51b9f5d335850d31b02862c886e0be4932dc6bd"
+      },
+      {
+        "id": "103",
+        "instant": "7",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "0afb327739e9c2d1890b4995cc3ad0aedc763ef1a94388a472b9fdb12202c706"
+      },
+      {
+        "id": "104",
+        "instant": "7",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "36c3de99b3cd6ef4f48d49970453edc35d1cfcc0bd693ef570aaf6f6a18b53be"
+      },
+      {
+        "id": "105",
+        "instant": "7",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "d9ed92f44c52e404714c3a06bde8c43862924a249ac18fe9fb1cd4e6d352df12"
+      },
+      {
+        "id": "106",
+        "instant": "7",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "2e564a2dc789f6484d610e78bb344beb82ff457fe48434b131488ef36f241317"
+      },
+      {
+        "id": "13",
+        "instant": "7",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "f8119b651fe4ff0264251689a4994673a7e3311ff75db5c1de7a39c4c33345b6"
+      },
+      {
+        "id": "107",
+        "instant": "7",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "e74cf822ffd8e9596de1e1743bc4a40f442d63650bd9f6efc0445315a6b29d84"
+      },
+      {
+        "id": "108",
+        "instant": "7",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "f06ba83ed74d62b163f337ee971997fe6960810adf548469ab25ebe9c4daaf19"
+      },
+      {
+        "id": "109",
+        "instant": "7",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "f8a39846c2e991713679ad80bf7f934131a279d0a03a602411f363a159020574"
+      },
+      {
+        "id": "110",
+        "instant": "7",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "112be2b67bc30f8c18493fb0a2903e505d4c9d5bc895462578a05ea186d884b3"
+      },
+      {
+        "id": "111",
+        "instant": "7",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "2df8c825d0fad41dbea6494f5bd9b23ef69d6e33b79a54aa4ccb901ea2bc9824"
+      },
+      {
+        "id": "112",
+        "instant": "7",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "d81f28915c653a89cd2d3a264c352374df1ccd06c185b8fa888f044a0cab9d96"
+      },
+      {
+        "id": "14",
+        "instant": "8",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "77a94c609f99c1acaacf42500226111abdc31d6e0b311045fd65fb77794acedf"
+      },
+      {
+        "id": "113",
+        "instant": "8",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "13137bfa3d20fad0922d30e62cfa8d085b1d10fd3bb3fdd80be27f96763a11d7"
+      },
+      {
+        "id": "114",
+        "instant": "8",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "6fca3a7251285a5c16fe58bc6c50b2e0048ef7d91b72da4d62ab2a50b520ec22"
+      },
+      {
+        "id": "115",
+        "instant": "8",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "02b27c356ffdc0ac53b709918933b85a2e8a0278539a04410eee8dd60e3cf9eb"
+      },
+      {
+        "id": "116",
+        "instant": "8",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "9c6dbfeba56532437622ca06da4e863e7a34231bcbd2ba3a01334a9e2c764967"
+      },
+      {
+        "id": "117",
+        "instant": "8",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "d8231e1f07435528bc4599c08154e326163159da0a4fbfde1a8c904f59bf8edf"
+      },
+      {
+        "id": "118",
+        "instant": "8",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "e547a2224a2723db6e894c8c86e68aa037eec55d924cf50aff08986ce5609489"
+      },
+      {
+        "id": "119",
+        "instant": "8",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "b79cdda3d6e49029e2c03a2b488fd396a41d62dc378a2e8cee3f195e1baaf921"
+      },
+      {
+        "id": "15",
+        "instant": "8",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "fce14bf7b17cf19e8281f44c0e7aa87a0591027a0562055639d37a0f46fa6c09"
+      },
+      {
+        "id": "120",
+        "instant": "8",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "995a90d671a931821a4ed9dff5e3d838137ab01190b7e8c4a4cef4ab351531ae"
+      },
+      {
+        "id": "121",
+        "instant": "8",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "15a734d92727e73134308c1e64066ffa5cce84ffd6f0edd3915455ef0ada0727"
+      },
+      {
+        "id": "122",
+        "instant": "8",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "60ed9ed8b2e5540f09fa8b75e68ea2715183280730f6b55b0e44d1e1eaf5987b"
+      },
+      {
+        "id": "123",
+        "instant": "8",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "98516d88a97c8714c44e4ac4fa74e9a3f28e4d6ae74d2c55a137734e869cbe76"
+      },
+      {
+        "id": "124",
+        "instant": "8",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "0aec4ab2583a7321dab12f252d2c9cb1bfa4c784983b9e581a1010318502da34"
+      },
+      {
+        "id": "125",
+        "instant": "8",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "f675a925ec5fd600e3e9c9bafd7a0d0e6b1d18296d0e6d1631f247a24592319e"
+      },
+      {
+        "id": "16",
+        "instant": "9",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "1eb192465fd3395d0e62460a42873db4fec22b359a8eb9790dc76185a3370244"
+      },
+      {
+        "id": "126",
+        "instant": "9",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "623408cb2d6f1de232630393f04daa0353f925a46b46d1d9c97d189167ac54b8"
+      },
+      {
+        "id": "127",
+        "instant": "9",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "cc551a5aa6896a2385ad7ab82a3dfd59adf41ca2cc61438435f81b4c1441640c"
+      },
+      {
+        "id": "128",
+        "instant": "9",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "ea0060df29b3d6cccf687a3916003539143a7c81f35007d15e40435672f2bca1"
+      },
+      {
+        "id": "129",
+        "instant": "9",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "38c00bfff63188b35f22d4de9bd1293513f8657557e37af63d811d85de73a775"
+      },
+      {
+        "id": "130",
+        "instant": "9",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "32bce6991756d950d5c2c79d95315b4125a9f776e222e028c830eab8ac6ccf35"
+      },
+      {
+        "id": "131",
+        "instant": "9",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "1ac75d8f3783629707e0e8dbf5189ba7df08443f4deabded2a96cc149e56bd61"
+      },
+      {
+        "id": "132",
+        "instant": "9",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "727aacb273f99d59886e9f0057f054a58e8d04eded9982cc7fee6935538b323b"
+      },
+      {
+        "id": "17",
+        "instant": "9",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "699ab5a299918a6dfae26548984ee31e3b51e2f982bd7b4089dea71628c63d30"
+      },
+      {
+        "id": "133",
+        "instant": "9",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "cdf59a2a360c87a7dabdcd80fd99ba33d0c6be2458357f53da9eda3b5c9adc30"
+      },
+      {
+        "id": "134",
+        "instant": "9",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "ae37928a4962a138a9e3c4e53357b810fd62c9ba92056fa53bdbb3bdae547ec5"
+      },
+      {
+        "id": "135",
+        "instant": "9",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "909ee30509c944530add875d036b22956ccc5f32491262d38c621334cc730cd7"
+      },
+      {
+        "id": "136",
+        "instant": "9",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "1b1093b45ecf2eba1306029db3bfad2b1314d2054e36b5d4863c33c302e702ec"
+      },
+      {
+        "id": "137",
+        "instant": "9",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "f437b3312cc1b4dddc75746a822bfe26ecfdf7b3ff3e1837eb80a478e6ca7854"
+      },
+      {
+        "id": "138",
+        "instant": "9",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "f75029636f9daa9765218c6ea99c6aa2d3dc55627354971b5c532f5ee4fe5f58"
+      },
+      {
+        "id": "18",
+        "instant": "10",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "2046a3973f8b5467c99f4b8bc731860807fcdb4114f95369e54b0855da8f4370"
+      },
+      {
+        "id": "139",
+        "instant": "10",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "d1f9ca466e6194272ded2eec9557dcce006fac29535a50740ae89e81c45453c5"
+      },
+      {
+        "id": "140",
+        "instant": "10",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "15237a9dfb419aa85bba52bad5cd27e292fdddda3dddeff4f467380810b328bd"
+      },
+      {
+        "id": "141",
+        "instant": "10",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "baa20c81a2768bba30bc35d9ebfa9ae9828f755400d18480482bf5386fcae5f7"
+      },
+      {
+        "id": "142",
+        "instant": "10",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "80e3f698bea85a5c4aaf3d71ae75bb510edca41a5079cd0b4c51f47afa931002"
+      },
+      {
+        "id": "143",
+        "instant": "10",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "9437b48d3e66dab2d62152b4d0ca32c4e58f93147f3041555e8b832426ac5c27"
+      },
+      {
+        "id": "144",
+        "instant": "10",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "2b24100eb5349d3673bc95b1faea115b8455ede51601a85a8630fbe68db5b036"
+      },
+      {
+        "id": "145",
+        "instant": "10",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "b597a52a28c3668e4bd68cc7ad84010baefadda67ef1ebdfe21b595d64271bf1"
+      },
+      {
+        "id": "19",
+        "instant": "10",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "6b0159095f1fe3e351f5fcfd5a8f685d78bce3b4e90dceb4a4da7a18e81320f0"
+      },
+      {
+        "id": "146",
+        "instant": "10",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "a99a21687fadf7aeef250f850bf93213ca15716d464d00d4cab814a6bcfad4da"
+      },
+      {
+        "id": "147",
+        "instant": "10",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "dc2d6c357d45f9ac67f9dfbed350eb276c0f59c92e54e105026d22977a0a7bc8"
+      },
+      {
+        "id": "148",
+        "instant": "10",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "307fe59d8d3e3ee390919ee04f410db44addd6c98d0cb9a53a36a0c56fd70223"
+      },
+      {
+        "id": "149",
+        "instant": "10",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "bd6b5e626eb2530bf6f3b631bfe9c7631feabe50981d3db61380d28771f3da32"
+      },
+      {
+        "id": "150",
+        "instant": "10",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "cf4cd023654ac583c94aea096fa8019d1ff6f5fb688d7d571eb5f93b21af9297"
+      },
+      {
+        "id": "151",
+        "instant": "10",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "3a3fa7257d1335fa6f9cf550496cc8ad91a9e1e9cf4dc9140e391e486f7cb9a8"
+      },
+      {
+        "id": "20",
+        "instant": "11",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "0742e2a4d8789c807de4d93ccd8f2a780963a0194ed67265541cf1d968e7456b"
+      },
+      {
+        "id": "152",
+        "instant": "11",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "dd3b38bda28d80d897968d5f7e0887cf3a1e0df81f945af2d8219f4ecf91875f"
+      },
+      {
+        "id": "153",
+        "instant": "11",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "0dde6f460bcc90f204fa55dbcd0c1c34616bda6fe50d84664423a9a69a79ac85"
+      },
+      {
+        "id": "154",
+        "instant": "11",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "ab298fcbc6ea0a82ab8184edf4320959ee969d118987cc65e0d8ec2b4a096772"
+      },
+      {
+        "id": "155",
+        "instant": "11",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "071dcf5337c2145e8d5252d199d175dc0a522e73f34bfc81372875e3d263059c"
+      },
+      {
+        "id": "156",
+        "instant": "11",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "4cc27f28560221f0c0766a19019c53c9deed38455b34374d99062fabf0bfcf02"
+      },
+      {
+        "id": "157",
+        "instant": "11",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "f90082e6a48a075ceb04257965c8f2e53c5ad7080d6b72bb7cd69515d86ce8aa"
+      },
+      {
+        "id": "158",
+        "instant": "11",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "e230c28162d8d84e6cb13781006cf2df115a3b50cfae5aed4adb078e7f91c7ec"
+      },
+      {
+        "id": "21",
+        "instant": "11",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "712edea24d71b0f9dfaa1534fb48ccd7d44b372fe5e50ffd3aebf83bf228dcb2"
+      },
+      {
+        "id": "159",
+        "instant": "11",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "a5ea1779ceba262e466b358fa4598eb7d039b3f3f784fde31b0cb9c709a844eb"
+      },
+      {
+        "id": "160",
+        "instant": "11",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "ac267751694c535b6524e49ef257e607586248cd143fd4f779877149e7a7839b"
+      },
+      {
+        "id": "161",
+        "instant": "11",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "ae5be490315734ca993b8a8cfd55446cf96a94c71df96dfaaa6992bc173bca45"
+      },
+      {
+        "id": "162",
+        "instant": "11",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "52f8c0576dbea466c19b4bdf535935437ff78cbbf38197a371f3b9d22f2237da"
+      },
+      {
+        "id": "163",
+        "instant": "11",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "ddd495846225574560a3879e81492ace3b2b951f05789423187beabd7f29b8de"
+      },
+      {
+        "id": "164",
+        "instant": "11",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "6c95084f9da4bb31254e88a2f9ebaecd32bc4224d3e6c9b6db657ddb0aef5bf8"
+      }
+    ]
+  },
+  {
+    "program": "zero-baseline",
+    "saveHash": "974685eab10cfb421b330252b1950837daed8feae77938ecc8688f0734098531",
+    "rows": [
+      {
+        "id": "0",
+        "instant": "1",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "6f611bfc73830129fcb49ad318b0ca49cdf707579eda78f5f4bcfeba7228cdce"
+      },
+      {
+        "id": "22",
+        "instant": "1",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "6ae7f84b22e69fc4993e22149528a8d50b11841ef4e2d7537d0549a935bee70d"
+      },
+      {
+        "id": "23",
+        "instant": "1",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "c6d0cb63abaeaf7a9f5d438396c9a87cbfe0555219c8559face733cd0a65bbd1"
+      },
+      {
+        "id": "24",
+        "instant": "1",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "d6779085b5f09da64d7fa5a9c3500399363b2935a3139840cc6b40a2117feef4"
+      },
+      {
+        "id": "25",
+        "instant": "1",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "2e4cabc7838c86b07ca5701836f8a3d7a738d5ae7f559a09d255d7afe8b6a9c5"
+      },
+      {
+        "id": "26",
+        "instant": "1",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "d4b66b375559fd6ad7020ac47948af38fc185b75d6009a616d660fc7f56abb6b"
+      },
+      {
+        "id": "27",
+        "instant": "1",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "ab6843726411aa9fcf2cd0beb916629c815760b67c10d0e77b06c72aac35b162"
+      },
+      {
+        "id": "28",
+        "instant": "1",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "cf4a75ea0ce2a40908b38c32247f6be330783f3e0d1f8ecb304420ec28b3a31c"
+      },
+      {
+        "id": "1",
+        "instant": "1",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "4e6621c989c0d17a9624473ce0a5e1d80c8a2f10ff4046874adbfc9950f2f7d3"
+      },
+      {
+        "id": "29",
+        "instant": "1",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "b047db65f5cbf6c18580a8e8e54263192ba726a8dbce7ccf3628891b2923d8ff"
+      },
+      {
+        "id": "30",
+        "instant": "1",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "a5c7e7592061b70ad2100ff646713bcb1644e9de857da70e8e84468c4ed3bce6"
+      },
+      {
+        "id": "31",
+        "instant": "1",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "5cbc5b61d5ccb33bc2320abb9f9f1941f2db0c0190c500d9219d491ba615f3aa"
+      },
+      {
+        "id": "32",
+        "instant": "1",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "32c2ef3d5046b3a49ff1d565146392264aea86dba123454b6640c15af81b024a"
+      },
+      {
+        "id": "33",
+        "instant": "1",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "41a3f6bb9a4a37cee4f09b3f926c9689950b942a9d4d26d70142aa1ae5e8df75"
+      },
+      {
+        "id": "34",
+        "instant": "1",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "73af57932b6f02bf8e96d26d3d89e90d5f4702e5501e4f3c8b5200c2dec7fe06"
+      },
+      {
+        "id": "2",
+        "instant": "2",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "346391bd70d3aff9a41a49685d2e7d31e493747f3361665d572400a7159827e4"
+      },
+      {
+        "id": "35",
+        "instant": "2",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "0470ae19de67a4abcd3d872fa42d7933a8ad8831a6f1b1cceec13b1edae954a8"
+      },
+      {
+        "id": "36",
+        "instant": "2",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "fa30898891f7bc0834b78d61b1ddb5f699db90a358703c7eaa2c0c4a105c0a17"
+      },
+      {
+        "id": "37",
+        "instant": "2",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "3de91828c63296cea9add63a4c997ed67dbffa38ea1e6d532b177b6f428cbb44"
+      },
+      {
+        "id": "38",
+        "instant": "2",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "6746909aaaefe872204f5a813c554ec405cea35099b89354be844427f3466197"
+      },
+      {
+        "id": "39",
+        "instant": "2",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "f3633ba2954e0d50a5e18098ac3d7646c878a4c8783b7eeb0dd8b2218b92c159"
+      },
+      {
+        "id": "40",
+        "instant": "2",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "a23d822262c3e27bf380b50a06b9eb8cf666aac733733200291e8fdee78b9633"
+      },
+      {
+        "id": "41",
+        "instant": "2",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "7b0327f7cda36ae7bb993f739a83d99258df618b4c5c84cae04d8839078452eb"
+      },
+      {
+        "id": "3",
+        "instant": "2",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "19ca2977d45afa9dc032900fd6eb66bd15b7371234c0254470b2fbcb93163ae9"
+      },
+      {
+        "id": "42",
+        "instant": "2",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "4c9c3b74dc1ab1e3d0c8213091304c337a79f784860fd1058cffb1e4d3449b59"
+      },
+      {
+        "id": "43",
+        "instant": "2",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "332b06c30dd06436fc70c1c202c26cda623acbf82dc8c2e926ded4de6e2ca86f"
+      },
+      {
+        "id": "44",
+        "instant": "2",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "6be35a65f739c94591dd14b811fc882f22afbfaa17b59286e8cdcd7ba227a290"
+      },
+      {
+        "id": "45",
+        "instant": "2",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "334c3f780f2bc99b9974acdbabc75ad53039b50d533fbb39b191cf7abefd594f"
+      },
+      {
+        "id": "46",
+        "instant": "2",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "09a7a2eb8d87cf3ee43b2fab3985d8066113e51e072c8688b6cad717c233b9b6"
+      },
+      {
+        "id": "47",
+        "instant": "2",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "0c5aebe4adc217428eb637d5ccb69e382cd9d8ea53e5ab295adb018bf2e21a63"
+      },
+      {
+        "id": "4",
+        "instant": "3",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "9c39176c68bd52a45010f9f7bb18a8f38ac51c0ebf980234bc61790068c8ccc6"
+      },
+      {
+        "id": "48",
+        "instant": "3",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "5c359d584a74c094a177b9a09e2f3e73876fdf9a80ea7f973c77e930b2f7a700"
+      },
+      {
+        "id": "49",
+        "instant": "3",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "34b667d363398d34a477ad1b73e5e019673a4dbf1d87c2a6e2688821c01cea5d"
+      },
+      {
+        "id": "50",
+        "instant": "3",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "fa86843b94bcf9974f4b160cae7e07c27fde95665bc6bc6f11c96617de31cc66"
+      },
+      {
+        "id": "51",
+        "instant": "3",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "f963524ce89bebed495584a022262191a2f89994bdd61723d9681c7d7049a732"
+      },
+      {
+        "id": "52",
+        "instant": "3",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "2e63ed409413956acbe7d0c58e1de9e34a4d3d3daf1701a038ac4271744919bb"
+      },
+      {
+        "id": "53",
+        "instant": "3",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "55185a8bbc9cd36eab20e602772a52e55577fe0086921165fb4cef5444ea7228"
+      },
+      {
+        "id": "54",
+        "instant": "3",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "2db5f19b86fd525f4a95ac7f2fc539cda7612fbfa0ed1948ac1cd64b4f01e78b"
+      },
+      {
+        "id": "5",
+        "instant": "3",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "a815925f971bfedeaa65b3c03d831e896159055c70eec8304f6a593c6ebce38a"
+      },
+      {
+        "id": "55",
+        "instant": "3",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "ebbe54ca8e18bb9d655f7249f6aa38ab11fbb0c2a880055c74d1e471f2b4aa6b"
+      },
+      {
+        "id": "56",
+        "instant": "3",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "727b6cfb7af77a209579af85c9accbe03993d63c03e21b252adb4d0cec5e527e"
+      },
+      {
+        "id": "57",
+        "instant": "3",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "55e81d8f5fc806d96d6993d16bafc31aea666b7f31ca6f2e93b3072b6b64f52a"
+      },
+      {
+        "id": "58",
+        "instant": "3",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "7e870bdd26a11ccf5a0e75487359d696b736389e2a115eed25f9eaa5beec64ec"
+      },
+      {
+        "id": "59",
+        "instant": "3",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "dbeadf0da25aa437c26643e41305dfa6ed90d241bad4cafe3523e6887e674c11"
+      },
+      {
+        "id": "60",
+        "instant": "3",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "7abb39b5aaa7ea5e59e88d15b5a0788b361e23589e21302f3857ea4cbb313a94"
+      },
+      {
+        "id": "6",
+        "instant": "4",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "3b66c4c82ab909d00b3c2f88125d4cce99f52e06a517ea4763a66d178731ed1d"
+      },
+      {
+        "id": "61",
+        "instant": "4",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "b17c3d804f986aadcb98979c0a30c4a9e273782c8736b947b3cc0a4a203f53b5"
+      },
+      {
+        "id": "62",
+        "instant": "4",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "e823cdfb72517c18be37596fa60beaedf38e886ffd3c36f52a08bf114be98b82"
+      },
+      {
+        "id": "63",
+        "instant": "4",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "0843fe0bb760ee301f81a0bdefe83f355396d8a3b4a8c53e9d5e7128afb8bf84"
+      },
+      {
+        "id": "64",
+        "instant": "4",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "d05b3e549589e8c703e8f543e4bb2d8f3eb0e9a41b5d717af9b76982ee81a60b"
+      },
+      {
+        "id": "65",
+        "instant": "4",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "7dcc5f42c5a39769363a663c8f9d7a3010ad40f5e9d721c1a9c718e0ed6976d0"
+      },
+      {
+        "id": "66",
+        "instant": "4",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "6a4cb893d0e941f03ca3b8953c9ef3ceeafbe7c28ca4fee0d28f9a97dcb517a2"
+      },
+      {
+        "id": "67",
+        "instant": "4",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "9778206444d3aa77895faef5f814156b7061f520bb7c325711b8ad72bfc19254"
+      },
+      {
+        "id": "7",
+        "instant": "4",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "1f9ec5284db60834782ea131d047700f597c4a0ae45899ee2b4d7da885d8607e"
+      },
+      {
+        "id": "68",
+        "instant": "4",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "37d718617772b155309c83dfdb7b7ee592740f646d59b3b7f6854c28da73259e"
+      },
+      {
+        "id": "69",
+        "instant": "4",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "f6c64f0f6327a95bc274c2521822882eedadef478f3867069dd4eb9d1b489b86"
+      },
+      {
+        "id": "70",
+        "instant": "4",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "2db3419b0765976ced5ffd1cdf8802cb90dfaf349540c4df06eb59de14385d67"
+      },
+      {
+        "id": "71",
+        "instant": "4",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "8a4bcbfba1200284376af4349ba2750a1e727afb0b608d8a9455a7c28713b940"
+      },
+      {
+        "id": "72",
+        "instant": "4",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "a6ab86b6af47a112b17317c5523ee8cea4569846b912d8b22805faeb3f5f7fdc"
+      },
+      {
+        "id": "73",
+        "instant": "4",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "1e389d04fd0b45a21861d50b3ba09711fa158f0f6d6d8e4f59d4d6e3103718f1"
+      },
+      {
+        "id": "8",
+        "instant": "5",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "128204763d8b0c29e319f47d0a6803edf176ec523184199146d4e86fbb76ec91"
+      },
+      {
+        "id": "74",
+        "instant": "5",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "bb6b2c547a3536809ed098627347cbf88c830339ce118eed445d758adac841d3"
+      },
+      {
+        "id": "75",
+        "instant": "5",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "c543deb9bb5847f97a1828961d5eb80bf8c59a864997d4f1b1bcf611760551e7"
+      },
+      {
+        "id": "76",
+        "instant": "5",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "e3bfffe593bec1d26ecd8267a7a957108133cf4a785af9d57a1df6dce3f74e2b"
+      },
+      {
+        "id": "77",
+        "instant": "5",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "0e11bfd5d7f15a20c17d68a9af8df773e7da770b0fbe75a6f8bb17b771749927"
+      },
+      {
+        "id": "78",
+        "instant": "5",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "4708f8ef11d9e3f718d301bb6094e4f6b10f84b82d75eb29d4a01411663c1884"
+      },
+      {
+        "id": "79",
+        "instant": "5",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "691b0025466f9a0793ba751a6b03b7aef0de59553b6f95b2765151daa374ee0e"
+      },
+      {
+        "id": "80",
+        "instant": "5",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "87a0f0d6b7adf18eaa184725b8995718071c1941eedc922b5e9be3e555001cf4"
+      },
+      {
+        "id": "9",
+        "instant": "5",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "4c98218f946b707c2bbc37e027597d509b5ab2a49f3b1e9d0dcc5800b7528ee8"
+      },
+      {
+        "id": "81",
+        "instant": "5",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "f35a83578118b0769ebbafe9cdd3000777a2f035a8e787b87ea5ed4374b68352"
+      },
+      {
+        "id": "82",
+        "instant": "5",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "0f1e0e80ad46da8cff559c85473d87330acbae5810e756fecd661d089cb00f9e"
+      },
+      {
+        "id": "83",
+        "instant": "5",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "a89ec90b4086b8df2f51ddd2103e12baf6339debee3f4eb065a4bd54515b82fa"
+      },
+      {
+        "id": "84",
+        "instant": "5",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "1284fd5df093dbbaee9cf4fd4e4f7b12a036010bca44437c3744e1cf51781fa9"
+      },
+      {
+        "id": "85",
+        "instant": "5",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "49b3d1ae47f0555055208848722eb715981dece640b0081e185e64e186e420d0"
+      },
+      {
+        "id": "86",
+        "instant": "5",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "6f8feca85d031b56c49c5774607f770e2f49d1ef5cf7d4223b0e7224f0fdad2a"
+      },
+      {
+        "id": "10",
+        "instant": "6",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "86a328d4dcda8bacfef82feb873bc441da1df87520c7cbdd62d546796d5bec2b"
+      },
+      {
+        "id": "87",
+        "instant": "6",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "4f327684125a871141f145af36924515554acbbbdea20111c86c441e7ee830f2"
+      },
+      {
+        "id": "88",
+        "instant": "6",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "29e99c8f49bae792860ab3ebfec06b5745324df96297e7a14ab9ee25b77b1cf7"
+      },
+      {
+        "id": "89",
+        "instant": "6",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "88c5b0fa8b09519f7d25ea8c72d4514f922e5de8738de32e61af509ff02a09c9"
+      },
+      {
+        "id": "90",
+        "instant": "6",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "b5976aae229d0009a20e51f0259d6aec36f1b8cb4e7117a3f553de2f6c17ee4d"
+      },
+      {
+        "id": "91",
+        "instant": "6",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "79e3f73ab889232e6899fe73095d266a56409ba2485907f9105f8abba84ecc1f"
+      },
+      {
+        "id": "92",
+        "instant": "6",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "14f97be19b2689d4de15aaf40d06e862762850f31d3eba26699b48b7c87c928d"
+      },
+      {
+        "id": "93",
+        "instant": "6",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "f7eec400e0c820705baa3dea7a5fbaa609ca7cad0a66827f8919bfeeadc75883"
+      },
+      {
+        "id": "11",
+        "instant": "6",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "5cab161a308f3b7128e6664ca84fc5f206ff0eec46a88d8c5ac0bf24704c6ff4"
+      },
+      {
+        "id": "94",
+        "instant": "6",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "de3c818745d413a25b3853cda544e135d195874798f6b96a816fe9e5da890685"
+      },
+      {
+        "id": "95",
+        "instant": "6",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "679d479135094e49db945ed3dccd17eea02d03e7321a8d01719d3b8ef4857f03"
+      },
+      {
+        "id": "96",
+        "instant": "6",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "a29cc4acdd57fea37a3d7a8507e07e6ed0f42f66be3bf76ad54e3ba3401c928d"
+      },
+      {
+        "id": "97",
+        "instant": "6",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "326111f22edc6556729e49492e10166edbb974011836cf6f0b1ffc8dc33b699d"
+      },
+      {
+        "id": "98",
+        "instant": "6",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "9b71266d1840e95d286334a97908b23b87e83180fb474d4ddd8c97399f2b7405"
+      },
+      {
+        "id": "99",
+        "instant": "6",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "dffc83865f997532850a8651446f2ff5a1b0a25dfa62fb800d8b3feb13048f9b"
+      },
+      {
+        "id": "12",
+        "instant": "7",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "c73eb8fa68046f34942be8dff38fb51130e5010606de1d253efc8fc9ed89abe1"
+      },
+      {
+        "id": "100",
+        "instant": "7",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "2d7cbe5d9ad26a35d5907e405ef60804f6af2406a6fc7be99e8df422223a42e4"
+      },
+      {
+        "id": "101",
+        "instant": "7",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "2a7fc34ddaa359e7b264ba7e61031b8996f93e63bcb2868994c4fbcc9042339f"
+      },
+      {
+        "id": "102",
+        "instant": "7",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "15f58494399c25f6fec1eb72d00923e64ee7ad8b6a064189cba7237dcf954664"
+      },
+      {
+        "id": "103",
+        "instant": "7",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "c6817abfd8679b0a036906fa72f37f4c70e0854e0dcf9a35f6b582773bf940d8"
+      },
+      {
+        "id": "104",
+        "instant": "7",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "1a07800791a4d66c59470dbed5b1ea5b294d28e36167dedd5185263729647d07"
+      },
+      {
+        "id": "105",
+        "instant": "7",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "112eeebaade36ffca1655d131ce77a0bc97f65e3a7d4365b42e22fa003cd1a80"
+      },
+      {
+        "id": "106",
+        "instant": "7",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "293c945e8357e099e62dc8d847a165df2e6ba8accd2728a34fff64cc1db43132"
+      },
+      {
+        "id": "13",
+        "instant": "7",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "f8119b651fe4ff0264251689a4994673a7e3311ff75db5c1de7a39c4c33345b6"
+      },
+      {
+        "id": "107",
+        "instant": "7",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "eff8e992fbbbc2eb57345d7b40fba85afeb973469e6280d4ff6512126190c0e7"
+      },
+      {
+        "id": "108",
+        "instant": "7",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "f06ba83ed74d62b163f337ee971997fe6960810adf548469ab25ebe9c4daaf19"
+      },
+      {
+        "id": "109",
+        "instant": "7",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "f8a39846c2e991713679ad80bf7f934131a279d0a03a602411f363a159020574"
+      },
+      {
+        "id": "110",
+        "instant": "7",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "112be2b67bc30f8c18493fb0a2903e505d4c9d5bc895462578a05ea186d884b3"
+      },
+      {
+        "id": "111",
+        "instant": "7",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "2df8c825d0fad41dbea6494f5bd9b23ef69d6e33b79a54aa4ccb901ea2bc9824"
+      },
+      {
+        "id": "112",
+        "instant": "7",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "d81f28915c653a89cd2d3a264c352374df1ccd06c185b8fa888f044a0cab9d96"
+      },
+      {
+        "id": "14",
+        "instant": "8",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "d111715d0802959fc320a46fe4bb4a2d470dfb283abb4e12ddc03e8ab3f31068"
+      },
+      {
+        "id": "113",
+        "instant": "8",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "95cef3ecd3a60cb5f4eb48bb3a60ed76327745d155cc20ca3738fcf0dd91416f"
+      },
+      {
+        "id": "114",
+        "instant": "8",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "e066251412ee2a793c929edd65d49759a29c4bc7f9495d14b13da865279edbfd"
+      },
+      {
+        "id": "115",
+        "instant": "8",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "e7f0cd83c922e5d7cf4e25da08ca060f99b3a3e09f3b3853c47c6bb035b7cc29"
+      },
+      {
+        "id": "116",
+        "instant": "8",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "f51d8e8bb8c1174f3a0ddebb90b6684cd97d4601aa06b136f1f2dc66b93dbd46"
+      },
+      {
+        "id": "117",
+        "instant": "8",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "1ede065601a01cfc8af2c409f30e43387a859cb447b818235f7dbbbb49212561"
+      },
+      {
+        "id": "118",
+        "instant": "8",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "c6c2e8a2b4b67235b2866e3bd758a11f0618c12ee6cea675e3d1e288dad1b10e"
+      },
+      {
+        "id": "119",
+        "instant": "8",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "aaf3cc5fe0cc18561d6ecaf710a0375dcbdce892f12cc01bcbda2fb2fe8dc9ed"
+      },
+      {
+        "id": "15",
+        "instant": "8",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "fce14bf7b17cf19e8281f44c0e7aa87a0591027a0562055639d37a0f46fa6c09"
+      },
+      {
+        "id": "120",
+        "instant": "8",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "e8cab61906347a55b5c464a984379b1ce376787de9a21c5c5194de73f8e67a40"
+      },
+      {
+        "id": "121",
+        "instant": "8",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "15a734d92727e73134308c1e64066ffa5cce84ffd6f0edd3915455ef0ada0727"
+      },
+      {
+        "id": "122",
+        "instant": "8",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "60ed9ed8b2e5540f09fa8b75e68ea2715183280730f6b55b0e44d1e1eaf5987b"
+      },
+      {
+        "id": "123",
+        "instant": "8",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "98516d88a97c8714c44e4ac4fa74e9a3f28e4d6ae74d2c55a137734e869cbe76"
+      },
+      {
+        "id": "124",
+        "instant": "8",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "0aec4ab2583a7321dab12f252d2c9cb1bfa4c784983b9e581a1010318502da34"
+      },
+      {
+        "id": "125",
+        "instant": "8",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "f675a925ec5fd600e3e9c9bafd7a0d0e6b1d18296d0e6d1631f247a24592319e"
+      },
+      {
+        "id": "16",
+        "instant": "9",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "3e32a5080ef1c055c0f1f87430a48dd4b17da8e6d55c59dbb9b711e7df095e28"
+      },
+      {
+        "id": "126",
+        "instant": "9",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "bc0a5d818add558246dbd9c69bbe8a0ffcfd17a78a4580d07c4c926c18402c35"
+      },
+      {
+        "id": "127",
+        "instant": "9",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "705b428e65d36bf2eefad162e26160608f8e4150522d5b509644fde28ab401ef"
+      },
+      {
+        "id": "128",
+        "instant": "9",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "d50db80a35bdc6cebe589d6e897d8ad1c1c78255713d32dad40e680dfc6cb07f"
+      },
+      {
+        "id": "129",
+        "instant": "9",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "07d5d981efd26dad78a36137f4427cd0e0224cc559284e076985d149f9a2e3b3"
+      },
+      {
+        "id": "130",
+        "instant": "9",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "63a4f92c68e52a337ec52598a0a8dc854ed7fcab144dab568f3a91871f4c824c"
+      },
+      {
+        "id": "131",
+        "instant": "9",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "0c5117d4e0d661f304b154abd3f123c6f591bee9ee458b55c2ed2b987811970a"
+      },
+      {
+        "id": "132",
+        "instant": "9",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "f2a326da3cd383c565b1f81abf9bdcb28ea864c8f046f0d62699e9d63beb65cf"
+      },
+      {
+        "id": "17",
+        "instant": "9",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "699ab5a299918a6dfae26548984ee31e3b51e2f982bd7b4089dea71628c63d30"
+      },
+      {
+        "id": "133",
+        "instant": "9",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "b12d4930d01584dafe54eda71c5f0ec917be84c8cf7a254e6a04d51021424fe9"
+      },
+      {
+        "id": "134",
+        "instant": "9",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "ae37928a4962a138a9e3c4e53357b810fd62c9ba92056fa53bdbb3bdae547ec5"
+      },
+      {
+        "id": "135",
+        "instant": "9",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "909ee30509c944530add875d036b22956ccc5f32491262d38c621334cc730cd7"
+      },
+      {
+        "id": "136",
+        "instant": "9",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "1b1093b45ecf2eba1306029db3bfad2b1314d2054e36b5d4863c33c302e702ec"
+      },
+      {
+        "id": "137",
+        "instant": "9",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "f437b3312cc1b4dddc75746a822bfe26ecfdf7b3ff3e1837eb80a478e6ca7854"
+      },
+      {
+        "id": "138",
+        "instant": "9",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "f75029636f9daa9765218c6ea99c6aa2d3dc55627354971b5c532f5ee4fe5f58"
+      },
+      {
+        "id": "18",
+        "instant": "10",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "007c0be636b8fa00ac7ee811db33f0245ae4c3a73505b13507817b6cb40533de"
+      },
+      {
+        "id": "139",
+        "instant": "10",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "b947291eb5c35c6fb99dfae243c7b16caba85212e78f71550a4330b5c9846e93"
+      },
+      {
+        "id": "140",
+        "instant": "10",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "f5c4d5a572d6318a267b5120ea77e182c99a8c867eaccc3c6e13804845532c12"
+      },
+      {
+        "id": "141",
+        "instant": "10",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "5706386d4a406eb7c7046c7e9ed523e2066643e5800f8b20e00f0b787d463fe7"
+      },
+      {
+        "id": "142",
+        "instant": "10",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "50eebb8128b3a0c8ac2f1870fc50dc1d3025e83aec80bc5b94085b731c17d968"
+      },
+      {
+        "id": "143",
+        "instant": "10",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "3ee78d757949ff9c41104e634feee41ac6cb38ee512cd711f61a52ba4c4d1356"
+      },
+      {
+        "id": "144",
+        "instant": "10",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "02e8bda11961cef39f52c801c30a9946e7d3ec0b6fd1b7a57156c06cd974a5df"
+      },
+      {
+        "id": "145",
+        "instant": "10",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "3eeb897ea10ad463b36a565141f134fe178ad5f563f8c3706bb3b8bf9613c2ec"
+      },
+      {
+        "id": "19",
+        "instant": "10",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "6b0159095f1fe3e351f5fcfd5a8f685d78bce3b4e90dceb4a4da7a18e81320f0"
+      },
+      {
+        "id": "146",
+        "instant": "10",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "937bc387b4927710605207ae7f7fa876a6719ac9f50a4aab83df6b930b7ae170"
+      },
+      {
+        "id": "147",
+        "instant": "10",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "dc2d6c357d45f9ac67f9dfbed350eb276c0f59c92e54e105026d22977a0a7bc8"
+      },
+      {
+        "id": "148",
+        "instant": "10",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "307fe59d8d3e3ee390919ee04f410db44addd6c98d0cb9a53a36a0c56fd70223"
+      },
+      {
+        "id": "149",
+        "instant": "10",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "bd6b5e626eb2530bf6f3b631bfe9c7631feabe50981d3db61380d28771f3da32"
+      },
+      {
+        "id": "150",
+        "instant": "10",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "cf4cd023654ac583c94aea096fa8019d1ff6f5fb688d7d571eb5f93b21af9297"
+      },
+      {
+        "id": "151",
+        "instant": "10",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "3a3fa7257d1335fa6f9cf550496cc8ad91a9e1e9cf4dc9140e391e486f7cb9a8"
+      },
+      {
+        "id": "20",
+        "instant": "11",
+        "stage": "appraise",
+        "label": "Evaluate threat and control",
+        "eventHash": "b0ab868855b04e5584380ffc18be2cef4ce586723d1a220b6978c414deaf105b"
+      },
+      {
+        "id": "152",
+        "instant": "11",
+        "stage": "raw",
+        "label": "Produce goal-grounded cognitive signals",
+        "eventHash": "db7a80f8a43cb6840d908780072f7b66303c97f6e0cdfb54b2bebd999ffc888d"
+      },
+      {
+        "id": "153",
+        "instant": "11",
+        "stage": "reasons",
+        "label": "Compile semantic reasons",
+        "eventHash": "db09b8fa0e2fb71a559f7672171e37f8728dbed9f0f5c0c8ac2a7aa81cab787c"
+      },
+      {
+        "id": "154",
+        "instant": "11",
+        "stage": "decision",
+        "label": "Resolve the choice",
+        "eventHash": "e4975ea6511e0a70385cc040c0af77d5368e3530fd8e2721ae6eb462746a4c3d"
+      },
+      {
+        "id": "155",
+        "instant": "11",
+        "stage": "intent",
+        "label": "Record chosen intent",
+        "eventHash": "c0ab447df8848796454813e73e26513eb48ff3c172676b40bd86d8859903121c"
+      },
+      {
+        "id": "156",
+        "instant": "11",
+        "stage": "expression",
+        "label": "Freeze decision expression",
+        "eventHash": "9e6a1d9acaf09e9cc676dd0a6fb74e29b792e67a38ef57c43e92c67ff6d1ef2a"
+      },
+      {
+        "id": "157",
+        "instant": "11",
+        "stage": "plan",
+        "label": "Construct action plan",
+        "eventHash": "3bfad538f67dcf904aa39fae22f4b92675c853a26d68f1d09b6bd567bba694ae"
+      },
+      {
+        "id": "158",
+        "instant": "11",
+        "stage": "attempt",
+        "label": "Record action attempt",
+        "eventHash": "b315a158838741354b4526fd84fdcf67887e6388f3e81a9e178847eab1f7afd3"
+      },
+      {
+        "id": "21",
+        "instant": "11",
+        "stage": "world",
+        "label": "Supply original world input",
+        "eventHash": "712edea24d71b0f9dfaa1534fb48ccd7d44b372fe5e50ffd3aebf83bf228dcb2"
+      },
+      {
+        "id": "159",
+        "instant": "11",
+        "stage": "outcome",
+        "label": "Record physical execution outcome",
+        "eventHash": "47002cda4c56a3b8d4de546067b757e6ae41021324345b592725bdfaf82aa296"
+      },
+      {
+        "id": "160",
+        "instant": "11",
+        "stage": "observe",
+        "label": "Admit available observation",
+        "eventHash": "ac267751694c535b6524e49ef257e607586248cd143fd4f779877149e7a7839b"
+      },
+      {
+        "id": "161",
+        "instant": "11",
+        "stage": "track",
+        "label": "Track observation context",
+        "eventHash": "ae5be490315734ca993b8a8cfd55446cf96a94c71df96dfaaa6992bc173bca45"
+      },
+      {
+        "id": "162",
+        "instant": "11",
+        "stage": "freeze",
+        "label": "Freeze observation context",
+        "eventHash": "52f8c0576dbea466c19b4bdf535935437ff78cbbf38197a371f3b9d22f2237da"
+      },
+      {
+        "id": "163",
+        "instant": "11",
+        "stage": "evidence",
+        "label": "Derive learning evidence",
+        "eventHash": "ddd495846225574560a3879e81492ace3b2b951f05789423187beabd7f29b8de"
+      },
+      {
+        "id": "164",
+        "instant": "11",
+        "stage": "apply",
+        "label": "Apply learned-belief update",
+        "eventHash": "6c95084f9da4bb31254e88a2f9ebaecd32bc4224d3e6c9b6db657ddb0aef5bf8"
+      }
+    ]
+  }
+]

@@ -52,6 +52,19 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 shared semantic Timeline:** AFFECT standalone and retained pair use
+version0.1 operation labels with original order, exact event state and causal-history
+controls. Physical outcomes/observations distinct; appraisal ingress limitation shown.
+Native660 events/232 reads/12 mutations/15 stages PASS in four retained originals.
+Browser45 ordered options, baseline3->4 event60 historical equality, branchB3 event58
+and parent57, exact before/after/four identities PASS. Typecheck/build647/research/
+boundary PASS; live280/166 sources exact. See workbench-affect-semantic-timeline-rev1.
+Tab38/4249 retained; mark all38 tabs. Stored66314 last33/105, paged23320 last12/15
+prefix12, packed29 last15/15 Working. Next attempt one connected obligation0 §32
+demonstration with exact receipt; assess all16 steps, do not infer completion from
+separate slices. Full corpus/language/provenance/entry remain open.
+
+
 **2026-10-23 AFFECT canonical state mapping:** Architecture standalone/paired views
 map five exact registered paths to existing Beliefs and Prospection boxes. No edges
 added; derived affect is not independent stored state. Counts/presence/necessity distinct.

@@ -1,3 +1,4 @@
+import {AffectTimelineView} from './AffectTimelineView';
 import {AffectArchitectureView} from './AffectArchitectureView';
 import {AffectBeliefStateView} from './AffectBeliefStateView';
 import {useEffect,useRef,useState} from 'react';
@@ -7,8 +8,6 @@ import {AFFECT_CONTRASTS,summarizeAffectComparison,affectObligationPairId} from 
 import {AffectAppraisalComparisonPanel} from './AffectAppraisalComparisonPanel';
 import {AffectFactorView} from './AffectFactorView';
 import {AffectExplanationView} from './AffectExplanationView';
-import {EventStatePanel} from './EventStatePanel';
-import {CausalHistoryPanel} from './CausalHistoryPanel';
 import {PreparedExport} from './PreparedExport';
 const modes=['Character','Experiment','Reasoning','Timeline','Compare','Architecture'] as const;
 const factory={create:(program:string)=>AffectWorkerClient.create(program),restore:AffectWorkerClient.restore};
@@ -23,7 +22,7 @@ export function AffectPairedWorkbench({active}:{active:boolean}){
  async function execute(action:()=>Promise<void>){if(lock.current)return;lock.current=true;stop.current=false;setBusy(true);setError('');try{await action();}catch(e){if(alive.current)setError(String(e));}finally{if(alive.current){if(session.current)setView(session.current.snapshot());setBusy(false);}lock.current=false;}}
  async function install(next:AffectPairSession){if(!alive.current){next.dispose();return;}session.current?.dispose();session.current=next;setEventId('');}
  async function advance(which:AffectPairBranch|'both',all=false){await execute(async()=>{do{if(!session.current||!await session.current.advance(which))break;if(alive.current)setView(session.current.snapshot());await new Promise(r=>setTimeout(r,0));}while(all&&!stop.current);});}
- const report=view?.comparison,snapshot=report?.[branch],event=snapshot?.timeline.find(e=>e.id===eventId)??snapshot?.timeline.at(-1),failed=!!view?.failure;
+ const report=view?.comparison,snapshot=report?.[branch],failed=!!view?.failure;
  return <section className="card" aria-label="Persistent AFFECT paired experiment"><h2>Retained AFFECT branches</h2><p>This pair is independent of the standalone run above. Both branches retain their original frozen program, seed and committed history. All views below inspect the selected branch revision.</p>
  <fieldset><legend>Fresh obligation-strength comparison</legend><label>Frozen obligation seed<select disabled={busy} value={obligationSeed} onChange={e=>setObligationSeed(Number(e.target.value))}>{Array.from({length:8},(_,seed)=><option key={seed} value={seed}>{seed}</option>)}</select></label><label>Branch B obligation contribution<input type="range" min="0" max="1" step="1" value={obligationPosition} aria-valuetext={obligationPosition===0?'1/10, same as branch A':'10/1'} disabled={busy} onChange={e=>setObligationPosition(Number(e.target.value))}/></label><p>Draft: branch A 1/10; branch B {obligationPosition===0?'1/10':'10/1'}. These are two original settings, with no intermediate values.</p><p>Changing the draft does not change a committed run. Creating the comparison starts fresh original branches with identical initial state, input calendar and seed, changing only the competing obligation contribution. This is a goal setting, not a personality trait.</p><button disabled={busy||!obligationId} onClick={()=>void execute(async()=>{if(!obligationId)throw Error('No differing original setting');await install(await AffectPairSession.create(obligationId,factory));setId(obligationId);setCheckpoint(undefined);setText('');})}>Create obligation comparison from draft</button>{!obligationId&&<p>Both draft settings are 1/10. Select 10/1 to create the declared contrast.</p>}</fieldset>
  <label>Retained AFFECT contrast<select disabled={busy} value={id} onChange={e=>setId(e.target.value)}>{AFFECT_CONTRASTS.map(c=><option key={c.id} value={c.id}>{c.label}</option>)}</select></label>
@@ -36,7 +35,7 @@ export function AffectPairedWorkbench({active}:{active:boolean}){
  {mode==='Character'&&<><AffectBeliefStateView key={snapshot.saveHash} snapshot={snapshot} onInspect={id=>{setEventId(id);setMode('Timeline');}}/><AffectFactorView cards={snapshot.explanations}/><AffectExplanationView cards={snapshot.explanations}/></>}
  {mode==='Experiment'&&<p>{report?.contrast.changed} Fixture changes create fresh original programs; runtime interventions remain unavailable.</p>}
  {mode==='Reasoning'&&<AffectExplanationView cards={snapshot.explanations} history trace={{events:snapshot.timeline,runHash:snapshot.runHash,saveHash:snapshot.saveHash,modelHash:snapshot.modelHash}}/>}
- {mode==='Timeline'&&<><label>Retained AFFECT event<select value={event?.id??''} onChange={e=>setEventId(e.target.value)}>{snapshot.timeline.map(e=><option key={e.id} value={e.id}>{e.instant} · {e.stage} · {e.id}</option>)}</select></label>{event&&<><EventStatePanel key={snapshot.saveHash+event.id} event={event}/><CausalHistoryPanel events={snapshot.timeline} selected={event.id} runHash={snapshot.runHash} onSelect={setEventId}/><pre className="exact" data-affect-retained-event>{JSON.stringify(event,null,2)}</pre></>}</>}
+ {mode==='Timeline'&&<AffectTimelineView snapshot={snapshot} selected={eventId} onSelect={setEventId} retained/>}
  {mode==='Compare'&&report&&<AffectAppraisalComparisonPanel key={report.a.saveHash+report.b.saveHash} comparison={report}/>}
  {mode==='Architecture'&&<AffectArchitectureView key={snapshot.saveHash} snapshot={snapshot} onInspect={id=>{setEventId(id);setMode('Timeline');}}/>}
  <button disabled={busy||failed} onClick={()=>setText(JSON.stringify(summarizeAffectComparison(report!),null,2))}>Prepare retained AFFECT summary</button></>}
