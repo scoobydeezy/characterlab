@@ -52,6 +52,18 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 corrected replay browser:** NEW tab43/4253 (preview70707,build651)
+bounded0->1->2->restore1 PASS original comparisons/ten hashes/choices/history and
+retained prefix1 diagnostic/stale source guard. See paired-horizon-rev3:326 sources/
+171 assets frozen; object-order ad hoc check correction retained. Same pair now RUNNING
+from1 toward18, Experiment mode. Do not mode-change while Working. At terminal capture
+comparison/history BEFORE compressed checkpoint, then restore and verify exact data.
+Terminal checker check-disposition-packed-replay-horizon.mjs prepared. No terminal
+pass yet. Avoid concurrent builds/tests during restore. Mark all43 tabs;11/29 crashed.
+Native23320 last14/15 prefix15 LIVE166hold unchanged; research4318/boundary PASS.
+Full Workbench entry remains open; original crashes and all18 obligations preserved.
+
+
 **2026-10-23 packed replay correction:** Packed pair restore now reconstructs the
 frozen original program and stream-compares every incoming checkpoint byte with the
 regenerated native save. Avoids incoming parsed trace/full hex; old/new workers and

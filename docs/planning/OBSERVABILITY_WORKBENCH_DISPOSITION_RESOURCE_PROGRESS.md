@@ -695,3 +695,36 @@ restore without concurrent build/test work; retain both prior crash revisions an
 account for remaining worker residency. All42 tabs retained, including crashed29.
 LOCAL DISPOSITION preserves exact whole-save proof, all C3 semantics and18 conditional
 obligations. Full entry and terminal restore remain open.
+
+## 2026-10-23 — corrected replay browser bounded pass and horizon launch
+
+New frozen build651 served by preview70707 at4253, tab43. Root
+workbench-disposition-paired-horizon-rev3 freezes326 source copies and171 assets,
+with the authenticated original19-prefix constitutional oracle. No mutable checkout
+source hold is added; existing paged166 hold remains unchanged.
+
+Browser model/0/13 sequence0->1->2->restore1 PASS independently: original comparison,
+ten identities, complete choice rows and scalar histories; immutable prefix1 stored
+report at2 with stale source disabled; exact restored prefix1 report/history.
+Compressed capture1 reports native638135/743887 bytes and compressed11549/12985 bytes.
+These are save/Blob sizes, not heap bounds. Initial ad hoc JSON.stringify comparison
+failed on property ordering; corrected parsed deep equality passed unchanged captures.
+That check correction is retained. Browser screenshot and bounded verification retained.
+
+After passing restore1, the SAME session was switched to Experiment and Run both
+branches once. Live43 is now RUNNING from1 toward18 with prefix1 checkpoint and
+historical stored report retained. Do not change modes while Working (mode changes
+request pause). At Complete18/18, capture terminal comparison/choices/ten hashes and
+both histories BEFORE checkpoint capture; preserve screenshot and prefix1 report/stale
+source check. Then capture compressed terminal checkpoint and restore it, preserving
+all exact results and size metadata. Use check-disposition-packed-replay-horizon.mjs
+only after browser-terminal.json exists with terminal/restored/history fields.
+Avoid concurrent build/test work during terminal restore; old/new worker coexistence
+is still a risk requiring observation. Retain both earlier crash revisions. A UI wait
+timeout alone is not a failure or permission to restart; read live status again.
+
+No terminal restore, general heap, all30 comparison browser or full-entry claim.
+Research4318/boundary PASS, all18 conditional obligations preserved. Native23320
+last14/15 prefix15 RUNNING; frozen166 sources unchanged. All43 tabs marked for handoff,
+including crashed11 and29. LOCAL DISPOSITION qualifies the changed transport in the
+browser before the complete horizon, without weakening original byte/identity gates.
