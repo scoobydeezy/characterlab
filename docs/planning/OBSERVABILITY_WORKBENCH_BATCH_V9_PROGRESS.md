@@ -74,3 +74,20 @@ has no current-checkout source hold, permitting separate V10 integration. After
 43/43 complete, capture every row/id/status/check/seed and all1136 hash strings,
 prepare summary export, capture exact preview/byte declaration, and run
 check-workbench-batch-general-browser.mjs. Started screenshot is not acceptance.
+
+## Full General browser cohort accepted
+
+2026-10-23. Tab52 completed all43 recipes/568 prefixes. The frozen verifier PASS
+every ordered row ID,status,check count and exact32-byte seed; all1136 displayed
+actual/expected hashes match the accepted native receipt. The64000-character report
+preview and complete1266120-byte UTF-8 declaration match exactly. All frozen source
+copies and served/copied build661 assets remain unchanged. Full-page and readable
+overview screenshots inspected. Evidence: workbench-batch-general-browser-rev1/
+receipt.json,browser.json,complete.png and complete-overview.png.
+
+MEM and ATTN ledger batch entries now reference this accepted browser receipt.
+The prior ledger and an exact reconciliation prove only their two status strings
+and receipt pointers changed. This remains one shared43-role cohort, not86 runs.
+Download transport, fresh full990 execution, broader phenomenon/successor coverage
+and Campaign4 entry remain separate. No C3 verdict or conditional obligation changed.
+Keep tab52/4262 and its frozen assets; it is complete, not a running writer.

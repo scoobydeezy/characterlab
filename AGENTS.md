@@ -52,6 +52,14 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 General full browser COMPLETE:** tab52 PASS43 recipes/568 prefixes,
+43 exact32-byte seeds,1136 actual/expected hashes,64000-char report preview and
+1266120-byte declaration. Frozen copies/served assets unchanged. MEM/ATTN batch
+ledger reconciled as one43-role cohort; no broader coverage or full990 claim.
+Start BATCH_V9_PROGRESS; browser receipt in workbench-batch-general-browser-rev1.
+Tab52/4262 remains retained but no longer running. Mark all55 tabs. BIO/SEM rev2
+audit79379 remains live with476-source hold; V10 native94573/browser53 and pair43 live.
+
 **2026-10-23 Scoped audit correction:**17393 failed a verifier-only strict-boolean
 assertion: raw SEM scheduler returns SettlementResult. Original476 sources/failure
 preserved; no complete acceptance. Corrected rev2 session79379 RUNNING, SEM first
