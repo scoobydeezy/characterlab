@@ -52,6 +52,17 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 episode source inspector:** Shared AFFECT Timeline now links apply
+to exact evidence and ordered Current/EpisodeBasis freeze/track/observe sources.
+Four originals/44 applies/72 roles/36 historical checks and8 boundary controls PASS.
+Revision1 empty-input failure retained; corrected revision2 explicitly reports absence.
+Browser3/4 exact report +events59/32/31/30 and stable history PASS; tab45/4255 retained.
+Start OBSERVABILITY_WORKBENCH_AFFECT_EPISODE_PROGRESS.md; full episode corpus/paired
+browser/complete ancestry remain due. Typecheck/build653/research4318/boundary PASS.
+Support45578 last70/105 LIVE283hold; diagnostics23320 last15/15 prefix12 LIVE166hold.
+Corrected pair43 last8/8 Working; no terminal pass. Mark all45 tabs; goal active.
+
+
 **2026-10-23 full support audit:** Native45578 RUNNING105 programs/1436 prefixes;
 first9 programs/135 prefixes checkpoint-001. NEW283-source hold in
 workbench-affect-belief-support-corpus-rev1/freeze.json. Independent verifier prepared/
