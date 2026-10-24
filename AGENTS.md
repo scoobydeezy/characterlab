@@ -52,6 +52,17 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 recorded learning support:** AFFECT belief revisions now link support
+IDs to original applied learning sample and earlier admitted observation, with exact
+proposition/report/opportunity/monitoring checks. Four originals/24 cumulative joins,
+12 baseline prefixes/120 history checks and3 negative controls PASS. Browser0/3/4
+exact report/apply60/observe56/history PASS; no player/complete ancestry claim.
+See workbench-affect-belief-support-rev1. Full105 corpus and conditional episode
+ancestry remain due. Typecheck/build651 modules(temp652)/research/boundary PASS.
+Retain tab44/4254; mark all44 tabs (11/29 crashed). Corrected paired43 last5/5 Working;
+native23320 last14/15 prefix16 LIVE166hold unchanged. Goal active; full entry due.
+
+
 **2026-10-23 corrected replay browser:** NEW tab43/4253 (preview70707,build651)
 bounded0->1->2->restore1 PASS original comparisons/ten hashes/choices/history and
 retained prefix1 diagnostic/stale source guard. See paired-horizon-rev3:326 sources/

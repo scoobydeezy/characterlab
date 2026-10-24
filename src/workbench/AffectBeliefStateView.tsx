@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import type {AffectSnapshot} from './affectSession';
 import {affectBeliefStateProjection} from './affectBeliefStateProjection';
+import {AffectBeliefSupportPanel} from './AffectBeliefSupportPanel';
 export function AffectBeliefStateView({snapshot,onInspect}:{snapshot:AffectSnapshot;onInspect:(eventId:string)=>void}){
  const [selection,setSelection]=useState('current');
  let report:ReturnType<typeof affectBeliefStateProjection>;try{report=affectBeliefStateProjection(snapshot);}catch(error){return <section className="card"><p role="alert">Stored belief view unavailable: {String(error)}</p></section>;}
@@ -13,5 +14,6 @@ export function AffectBeliefStateView({snapshot,onInspect}:{snapshot:AffectSnaps
  <svg viewBox="0 0 640 260" role="img" aria-label="Stored belief means by committed mutation" style={{width:'100%',maxHeight:260}}><line x1="40" y1="210" x2="610" y2="210" stroke="currentColor"/><line x1="40" y1="30" x2="40" y2="210" stroke="currentColor"/><text x="15" y="35">1</text><text x="15" y="210">0</text>
  {report.history.map((r,i)=>{const x=50+540*i/Math.max(1,report.history.length-1);return <g key={r.eventId??'initial'}><text x={x} y="235">{i}</text>{r.vector.map((v,j)=>v.estimate&&<circle key={v.path} cx={x} cy={210-v.estimate.plot*180} r={7-j*1.5} fill="none" stroke={colors[j]} strokeWidth="2"><title>{`${v.name}, revision ${i}: ${v.estimate.mean}`}</title></circle>)}</g>;})}</svg>
  {selected&&<><h3>{selected.eventId?`After apply event ${selected.eventId} · instant ${selected.at}`:'Original initial state'}</h3><table><thead><tr><th>Component</th><th>Mean</th><th>Learning precision</th><th>Recorded support</th></tr></thead><tbody>{selected.vector.map((r,i)=><tr key={r.path}><th style={{color:colors[i]}}>{r.name}</th><td>{r.estimate?.mean??'Absent'}</td><td>{r.estimate?.precision??'Absent'}</td><td><code>{r.estimate?JSON.stringify(r.estimate.support):'Absent'}</code></td></tr>)}</tbody></table>{selected.eventId&&<button onClick={()=>onInspect(selected.eventId!)}>Inspect stored belief mutation</button>}<details><summary>Exact stored belief paths and values</summary><pre className="exact" data-affect-belief-selected>{JSON.stringify(selected,null,2)}</pre></details></>}
+ {selected&&<AffectBeliefSupportPanel snapshot={snapshot} eventId={selected.eventId} onInspect={onInspect}/>}
  <details><summary>Stored belief history report</summary><pre className="exact" data-affect-belief-report>{JSON.stringify(report,null,2)}</pre></details></section>;
 }

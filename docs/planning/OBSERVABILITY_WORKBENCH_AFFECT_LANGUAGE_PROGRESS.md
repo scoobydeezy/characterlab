@@ -1146,3 +1146,35 @@ See workbench-affect-comparison-labels-rev1. Later write-button activation and b
 accessibility are not claimed by this bounded check. TypeScript/build649 modules
 (temp650), research4318 and boundary checks PASS. Tab42/4252 retained, preview55683;
 mark all42 tabs. No native semantics, research verdict or obligation status changed.
+
+## 2026-10-23 — recorded belief support links
+
+AFFECT stored-belief revisions now include a support inspector in both standalone
+and paired Character views. Each registered support identity is joined to applied
+learning samples for the same proposition within the selected historical prefix,
+then to earlier emitted admitted observations with exact sample ID/time, report,
+opportunity and monitoring agreement. The inspector links to original apply and
+observe events using existing Timeline navigation. Initial-state support has no
+invented source; unavailable and multiple matches are explicit. It never reads
+physical-frame input to manufacture the learning sample. Researcher access remains
+separate from player disclosure and causal necessity.
+
+Frozen native qualification PASS four authenticated original programs (baseline,
+hidden, feedback-2, zero-baseline),24 cumulative support joins, all12 baseline native
+prefixes and120 historical row checks. Exact top-level application/observation outputs,
+unchanged snapshots and hidden-world control pass. Conflicting observation report is
+rejected, missing emitted observation remains unavailable, unknown revision rejected.
+SSR succeeds. See workbench-affect-belief-support-rev1/receipt.json.
+
+Browser baseline0/3/4 PASS exact reports and unchanged historical support. Both links
+select original application60 and observation56, with complete event bodies checked
+against native originals. No alerts or horizontal overflow at1265px; screenshot
+inspected. browser-verification.json retains exact scope. Tab44/4254, preview31189,
+build652 (651 modules), TypeScript/research4318/boundary PASS. Live166 sources exact.
+
+LOCAL DISPOSITION adds recorded support provenance without changing native semantics,
+C3 verdicts or obligation status. Full105-program support qualification and complete
+experience/conditional-episode ancestry remain due, as do player strength/certainty
+language and full entry. No missing source is resolved by assumption. All18 conditional
+obligations survive. Corrected Disposition43 now5/5 Working; native23320 last14/15
+prefix16. Mark all44 tabs, retaining crashed11/29 without inspecting stale handles.
