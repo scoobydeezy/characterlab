@@ -1031,3 +1031,37 @@ without changing cognition, C3 verdicts or obligations. All18 conditional obliga
 and RO-C3-011 trace limitation remain. Broader browser corpus/accessibility, complete
 player factor language, ancestry/trace disposition and entry remain open. Full
 inspection69168 last24/105, paged23320 last13/15 prefix10, packed29 last16/16 Working.
+
+## 2026-10-23 — exact A/B stored-state divergence
+
+The paired AFFECT Compare view now reconstructs every stored leaf from original
+initial state and ordered native mutations, checks before-values and final native
+fields, and aligns the two histories by actual instant. It displays exact A/B values,
+explicit absence, first stored-state difference, historical selection and owning
+branch last-write links. Model/save/output/choice differences remain separate.
+
+Native verification covers all11 obligation/0 paired prefixes (55 history checks)
+and all15 timing/likelihood paired prefixes (105 history checks), with independent
+current-field oracles, hidden-world equal-state control, immutable inputs, SSR and
+three rejection checks per audit (unequal horizons, broken before-value, wrong final
+state). Obligation/0 first chooses differently at3 but its stored leaves remain equal
+through10. Timing/likelihood first differs in stored state at6, before appraisal
+factors differ at7: mean1/2 versus1/1, precision2 and supports35/76 retained exactly.
+Neither result establishes causal necessity or general character divergence.
+
+Browser timing/likelihood0/6/7 PASS: exact reports and values, historical3 selection,
+stable row6 after advancement, branch-specific event105 bodies, inspection reset,
+standalone identity isolation and no horizontal overflow at1265px. Two Ready
+observation timeouts are retained; subsequent live reads confirmed completion
+without restarting or repeating advancement. See workbench-affect-state-comparison-
+rev1 and workbench-affect-state-comparison-positive-rev1 (receipt.json,
+browser-verification.json and browser.png). Tab41/4251 retained; mark all41 tabs.
+
+TypeScript/build649 modules, evidence restore, research4318 and boundary checks PASS.
+Live288 inspection and166 paged source hashes remain unchanged. Inspection69168 last
+40/105, paged23320 last13/15 prefix11, packed browser29 last16/16 Working; no terminal
+pass inferred. Native deletion provenance is not qualified; no deletion witness was
+claimed. Abbreviated disclosure summaries can coincide; broader accessibility and
+full comparison corpus remain due. LOCAL DISPOSITION: exact observational comparison
+only; no C3 verdict, law, obligation status or original semantics amended. All18
+conditional obligations and full Campaign4 entry gates remain open as applicable.

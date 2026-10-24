@@ -1,3 +1,4 @@
+import {AffectStateComparisonPanel} from './AffectStateComparisonPanel';
 import {useState} from 'react';
 import type {compareAffect} from './affectComparison';
 import {compareAffectAppraisals} from './affectAppraisalComparison';
@@ -22,7 +23,7 @@ export function AffectAppraisalComparisonPanel({comparison}:{comparison:ReturnTy
  const decisions=(['a','b'] as const).map(branch=>{try{return {branch,card:row?.[branch]?affectAppraisalDecision(comparison[branch].explanations,row[branch]!.provenance):null,error:''};}catch(error){return {branch,card:null,error:String(error)};}});
  function inspectDecision(branch:'a'|'b'){try{const card=decisions.find(d=>d.branch===branch)?.card;if(!card)throw Error('No linked decision');const event=affectDecisionEvent(comparison[branch].timeline,card);setInspection({branch,id:event.id});setLinkError('');}catch(error){setInspection(null);setLinkError(String(error));}}
  function inspectRaw(branch:'a'|'b'){try{const card=decisions.find(d=>d.branch===branch)?.card;if(!card)throw Error('No linked decision');const event=affectRawReasonEvent(comparison[branch].timeline,card);setInspection({branch,id:event.id});setLinkError('');}catch(error){setInspection(null);setLinkError(String(error));}}
- return <section aria-label="AFFECT appraisal comparison"><h3>Recorded appraisal divergence</h3><p>{report.scope}</p>
+ return <section aria-label="AFFECT appraisal comparison"><AffectStateComparisonPanel key={comparison.a.saveHash+comparison.b.saveHash} comparison={comparison} onInspect={(branch,id)=>{setInspection({branch,id});setLinkError('');}}/><h3>Recorded appraisal divergence</h3><p>{report.scope}</p>
  <p data-affect-first-difference>{report.firstDifference===null?'No difference in these fields through the aligned prefix.':`First recorded difference in these fields: instant ${report.firstDifference}.`}</p>
  <p data-affect-first-choice>{choiceReport.firstDifferentChoice===null?'No recorded selected-option difference through this aligned prefix.':`First recorded selected-option difference: instant ${choiceReport.firstDifferentChoice}.`}</p><p>{choiceReport.scope}</p><button disabled={choiceReport.firstDifferentChoice===null||!report.rows.some(r=>r.at===choiceReport.firstDifferentChoice)} onClick={()=>{setSelected(choiceReport.firstDifferentChoice!);setInspection(null);setLinkError('');}}>Inspect first choice difference</button><details><summary>Exact selected-option comparison</summary><pre className="exact" data-affect-choice-comparison>{JSON.stringify(choiceReport,null,2)}</pre></details>
  <p>Branch A: {comparison.a.program} · prefix {comparison.a.prefix}. Branch B: {comparison.b.program} · prefix {comparison.b.prefix}.</p>

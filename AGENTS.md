@@ -52,6 +52,17 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 exact stored-state comparison:** AFFECT paired Compare now shows first
+stored-leaf divergence, exact A/B history and branch last-write inspection. Native
+11 obligation prefixes/55 history checks and15 timing/likelihood prefixes/105 history
+checks PASS. Obligation choices differ3 but stored state equal through10; timing
+state first differs6, appraisal factors7. Browser0/6/7 exact state/event105/history/
+isolation PASS. Typecheck/build649/research/boundary PASS; live288/166 holds unchanged.
+See workbench-affect-state-comparison-positive-rev1 and AFFECT_LANGUAGE_PROGRESS.
+Retain tab41/4251; mark all41 tabs. Inspection69168 last40/105 RUNNING; paged23320
+last13/15 prefix11; packed29 last16/16 Working. Full corpus/accessibility/entry due.
+
+
 **2026-10-23 complete stored-field search:** AFFECT Character standalone/paired now
 reuse unchanged RecordedStateInspector for every native stored field, including task
 statuses. Root/path/value filters, selection and exact revision; runHash keys prevent
