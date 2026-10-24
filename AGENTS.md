@@ -52,6 +52,15 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 Disposition terminal restore IN FLIGHT:** tab43 reached18/18 Complete;
+original comparison/choices/ten hashes PASS sampled native oracle. Exact history and
+prefix1 retained diagnostic/stale source guard captured. Terminal checkpoint label
+A18/B18; native bytes44252262/48814745, compressed829195/883498. Restore clicked ONCE,
+currently Working/control disabled/no alerts. DO NOT retry,mode-switch or restart.
+Avoid concurrent builds/native tests. Read latest DISPOSITION_RESOURCE_PROGRESS for
+post-restore captures and both verifiers. No terminal restore PASS yet. All55 tabs
+must be retained each turn. BIO/SEM79379 last11/14 with476-source hold; V10 audits live.
+
 **2026-10-23 General full browser COMPLETE:** tab52 PASS43 recipes/568 prefixes,
 43 exact32-byte seeds,1136 actual/expected hashes,64000-char report preview and
 1266120-byte declaration. Frozen copies/served assets unchanged. MEM/ATTN batch

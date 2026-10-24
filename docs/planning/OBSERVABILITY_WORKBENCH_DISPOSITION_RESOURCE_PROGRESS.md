@@ -746,6 +746,40 @@ source hold is released only for paths listed in acceptance.json. Paths overlapp
 the live episode281-source set remain held. This is native diagnostic qualification,
 not terminal browser restore, general heap bounds or full Campaign4 entry.
 
-Corrected paired browser43 remains live, last11/11 Working; do not restart or change
-modes. Preserve prefix1 checkpoint and report for terminal18 comparison/capture/restore.
+At that earlier checkpoint, corrected paired browser43 remained live at11/11 Working.
 Both earlier browser crashes and all18 conditional obligations remain preserved.
+
+## 2026-10-23 — revision3 terminal capture; restore in flight
+
+Tab43/build651 reached A18/B18 Complete. Before checkpoint operations, exact original
+comparison,all18 choice rows,ten identities and complete scalar histories were saved
+in workbench-disposition-paired-horizon-rev3/browser-pre-restore.json and
+pre-restore.png. `check-disposition-packed-replay-horizon.mjs --sample sample-18.json`
+PASS original oracle comparison,choices and identities. The prefix1 diagnostic is
+byte-for-byte unchanged at18 and its stale constitution-source link is disabled;
+historical-before-restore.json preserves this observation.
+
+Terminal checkpoint capture completed with label Captured model/0/13: A18 / B18.
+Declared native save sizes are A44252262/B48814745 bytes; compressed payload sizes
+A829195/B883498 bytes. These are checkpoint byte declarations, not heap measurements.
+checkpoint-captured.json preserves the exact label/size/status with no alerts. No
+checkpoint bytes were exported or read through the DOM.
+
+Restore paired checkpoint was clicked ONCE. restore-started.json records Working
+and the disabled restore control. It remains IN FLIGHT with no reported error;
+do not click restore again, change modes or restart because observations are quiet.
+Avoid concurrent builds/native tests. Existing native qualification writers continue
+independently. This is not a terminal restore acceptance receipt.
+
+After Complete, first capture Experiment's checkpoint label/size and alerts, then
+Compare's restored comparison/choices/ten hashes/history and disabled Step both.
+Character must still expose the exact prefix1 report with stale source disabled.
+Save restore-observation.json with status,alerts,checkpoint,checkpointSize,
+retainedInitialReport,historicalSourceDisabled. Save browser-terminal.json with
+terminal,history,retainedInitialReport,historicalSourceDisabled,checkpointSize,
+restored,restoredHistory; the pre-restore/historical files supply the original fields.
+Capture terminal.png. Run the original horizon verifier, then the prepared
+check-disposition-packed-restore-observation.mjs supplemental verifier. It also
+requires the observed capture/Working/completion lifecycle and retained diagnostic
+AFTER restore. Do not create acceptance from the current pre-restore evidence alone.
+
