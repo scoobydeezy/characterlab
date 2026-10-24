@@ -68,3 +68,39 @@ DOM reads per row to avoid the prior global-array truncation. Final native recei
 is mandatory for check-workbench-batch-v10-browser.mjs acceptance. Full source replay
 and full browser completion remain unproven until those receipts pass. Other corpus
 and component successors and Campaign4 entry remain open.
+
+## Independent acceptance preparation
+
+2026-10-23. `verify-workbench-batch-v10.mjs --preflight` PASS against all1068
+previously accepted role records/7284 prefixes and450 frozen source hashes. Eleven
+deliberate corruptions are rejected: omission/reordering, seed change, partial
+completion, missing prefix, incorrect state/clock/expected-save/completion boundary,
+identity drift and false match flag. This is verifier qualification using prior
+receipts, not fresh V10 execution. Exact verifier/preflight bytes are retained in
+workbench-batch-v10-independent-rev1. No production or frozen execution source changed.
+
+After native completion, run `node scripts/verify-workbench-batch-v10.mjs`. It checks
+every fresh result against prior accepted clocks/model/run/state/save commitments,
+all ordered declarations, complete boundaries, version/limit metadata and preserved
+original exports. It reads frozen copies rather than requiring today's checkout to
+match the earlier build. Acceptance is written only after all checks pass. Terminal
+no-op execution remains the frozen writer's evidence; this verifier does not claim
+to repeat native execution. Run this before treating the full browser receipt as
+accepted, in addition to the existing frozen browser verifier.
+
+Latest native observation:340/1068 roles, still RUNNING. Browser53 last60/1068 roles/
+304 prefixes; General52 last12/43/147; Disposition43 still16/16 Working. These are
+progress observations, not terminal receipts. Retain all53 tabs and frozen assets.
+
+LOCAL DISPOSITION for subsequent admission: ADAPT's accepted two-program/eight-prefix
+parent pair uses public memoryFactory with adaptation-input/0.31-candidate beneath
+measurement-episodic-memory/0.1-candidate. DET's two-program/eighteen-prefix cognitive
+successor uses campaign2-task-cognitive-persistence/0.1-candidate. They can be assessed
+for public batch transport without changing execution semantics; preserve ADAPT's
+remaining boundary/rollback controls and DET's original substrate/failure/capacity
+scope separately. BIO's13/260 are composed component cases under
+bio-coupled-comparison/0.2-candidate, not public scheduler programs. SEM's one/four is
+the fixed three-observer harness with incremental scheduling and empty ordered-input
+commitment, not a later campaign factory. Neither belongs under a blanket public
+execution caption without an explicit transport/disclosure distinction. This review
+does not enroll any of these four families or close their outstanding obligations.

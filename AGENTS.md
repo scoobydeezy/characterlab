@@ -52,6 +52,14 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 V10 independent verifier:** preflight PASS1068 prior roles/7284 prefixes,
+450 frozen sources and11 corruption rejections; no fresh V10 acceptance inferred.
+Run scripts/verify-workbench-batch-v10.mjs after native94573 completes, before browser
+acceptance. Latest native340/1068; browser53 last60/1068/304, General52 last12/43/147;
+pair43 still16/16 Working. Keep all53 tabs and frozen copies/assets. Current checkout
+has no holds. ADAPT2/8 and DET2/18 use public factories; BIO13/260 is component-only,
+SEM1/4 fixed harness. No new admission; see V10 progress for exact scope distinctions.
+
 **2026-10-23 V10 shared batch:** BODY/MULTISOURCE registered;1068 roles/7284 prefixes,
 prior990 unchanged. Nine tests/typecheck/build662 PASS. Full native94573 RUNNING
 from450 frozen source copies; no checkout hold. Full browser tab53/4263 preview48350
