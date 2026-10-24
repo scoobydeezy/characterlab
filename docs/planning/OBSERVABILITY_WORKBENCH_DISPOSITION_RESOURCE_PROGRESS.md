@@ -728,3 +728,24 @@ Research4318/boundary PASS, all18 conditional obligations preserved. Native23320
 last14/15 prefix15 RUNNING; frozen166 sources unchanged. All43 tabs marked for handoff,
 including crashed11 and29. LOCAL DISPOSITION qualifies the changed transport in the
 browser before the complete horizon, without weakening original byte/identity gates.
+
+## 2026-10-23 — full native paged diagnostics accepted
+
+Session23320 COMPLETE15 original programs/285 prefixes. Independent verifier PASS
+all166 source/copy hashes,285 artifacts and original compressed archives, exact
+program/prefix order, stable model/run identities, diagnostic selection coverage and
+43605 historical checks. Counts:285 stored-state,285 architecture,2700 event-state,
+270 each reasons/resolution/calibration/provenance/taskSources/factorSources and
+810 audience-language reports. Language report coverage includes explicit withholding;
+it does not grant player/character disclosure.
+
+See workbench-disposition-paged-full-diagnostics-rev1/receipt.json, verification.json
+and acceptance.json. Native exact bodies/headers/fields were checked by the frozen
+writer; independent artifact reconciliation does not re-execute that work. Original
+source hold is released only for paths listed in acceptance.json. Paths overlapping
+the live episode281-source set remain held. This is native diagnostic qualification,
+not terminal browser restore, general heap bounds or full Campaign4 entry.
+
+Corrected paired browser43 remains live, last11/11 Working; do not restart or change
+modes. Preserve prefix1 checkpoint and report for terminal18 comparison/capture/restore.
+Both earlier browser crashes and all18 conditional obligations remain preserved.

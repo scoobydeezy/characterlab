@@ -1296,3 +1296,33 @@ The projection is prepared for researcher UI integration; no new browser/build c
 TypeScript, full original corpus writer/verifier, research4318 and boundary PASS.
 No C3 verdict or obligation amended. Episode68613 last60/105 LIVE281hold; diagnostics
 23320 last15/15 prefix16 LIVE166hold; corrected pair43 last11/11 Working. Mark all46.
+
+## 2026-10-23 — appraisal contribution player language
+
+Separate policy player-appraisal0.1 now renders a subjective safety contribution:
+“The way I see things adds to my reason to keep myself safe.” Exact recipient/policy
+authorization precedes payload access. Only positive compiled safety situational
+coverage qualifies; raw strength must match the final recorded appraisal coordinate,
+and effective coverage must reproduce the bounded situational net. No raw coordinates,
+source keys, world truth or private fields enter the explicit player report allowlist.
+The wording allows retained earlier appraisal and does not claim new evidence.
+
+Revision1 mistakenly compared effective support directly with bounded net and failed
+on original3/16 versus3/19. Its failure and sources are preserved. Revision2 uses the
+existing cognitiveMath bounded rule total/(1+absolute total); no runtime law changed.
+See workbench-affect-appraisal-language-rev1 and rev2 and the explicit policy document.
+
+Full105 programs/1331 original decisions PASS123 component-presence sentences,
+including6 with earlier feedback;88 uncovered raw sources excluded;1208 empty reports.
+All123 prior component-presence gaps receive a sentence, but constituent likelihood,
+severity, control, vulnerability and feedback explanations, absolute intensity and
+certainty remain open. The old gap census remains an immutable pre-change audit.
+Five recipient/extra-field/correspondence checks PASS. Independent verification
+reconciles all123 original positive nets and exact normalization, then browser
+empty-catalogue1/4/history4-after5 and researcher source rows/nuclei. Screenshot
+reviewed. Player and researcher regions remain separate. No full language/entry claim.
+
+Typecheck/build657modules(temp655), research4318 and boundary PASS. Preview32709/4257,
+tab47 retained atprefix5/historical4. Mark all47 tabs. Episode68613 last98/105 live281
+hold; Disposition23320 COMPLETE and independent verifier PASS; acceptance separately
+recorded in resource progress. Paired terminal43 last11/11 Working, no terminal pass.

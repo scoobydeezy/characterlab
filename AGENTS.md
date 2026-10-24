@@ -52,6 +52,17 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 appraisal language and diagnostics:** Separate player-appraisal0.1
+PASS105/1331:123 positive component sentences,88 uncovered exclusions,6 feedback
+cases. Original net-normalization mistake retained in rev1; corrected rev2 and
+independent original-net/browser1/4/history4-after5/source checks PASS. Tab47/4257
+retained; mark all47. Typecheck/build657(temp655)/research/boundary PASS.
+Disposition23320 COMPLETE15/285; independent166-source/artifact verifier PASS all
+ten kinds/43605 history checks. See paged-full-diagnostics-rev1/acceptance.json for
+exact released paths; episode-overlap holds survive. No browser restore/heap claim.
+Episode68613 last98/105 LIVE281hold; pair43 last11/11 Working. Full entry still open.
+
+
 **2026-10-23 factor-language census:** Full105/1331/2851 raw sources audited.
 2640 base sources have goal-presence language;123 nonzero situational safety
 components lack individual language;88 raw sources have no compiled coverage.
