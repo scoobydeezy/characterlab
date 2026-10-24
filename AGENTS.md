@@ -52,6 +52,17 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 factor-language census:** Full105/1331/2851 raw sources audited.
+2640 base sources have goal-presence language;123 nonzero situational safety
+components lack individual language;88 raw sources have no compiled coverage.
+Independent original source-key/coverage verifier PASS,66 witness programs retained.
+See factor-language-coverage-rev1 and AFFECT_LANGUAGE_PROGRESS. Gap census is not
+completed language. Next appraisal-contribution semantics with explicit disclosure
+and feedback limits; researcher UI integration also due. Typecheck/research/boundary PASS.
+Episode68613 last60/105 LIVE281hold; diagnostics23320 last15/15 prefix16 LIVE166hold.
+Pair43 last11/11 Working. Mark all46 tabs. Full entry remains open.
+
+
 **2026-10-23 relative goal language:** Separate player-relative0.1 preview now
 compares exact own-goal relevance, preserving original preview0.1. Full105 programs/
 1331 decisions/2640 reasons PASS:267 stronger/267 weaker/2084 equal/22 sole. Hidden

@@ -1264,3 +1264,35 @@ workbench-affect-player-relative-rev1; tab46/4256 (preview29825) retained. Mark 
 
 Episode68613 last45/105 LIVE281hold; Disposition23320 last15/15 prefix16 LIVE166hold;
 paired43 last10/10 Working. No terminal claims. Full language/ancestry/entry open.
+
+## 2026-10-23 — complete raw-factor language gap accounting
+
+New researcher projection affect-factor-language-coverage/0.1 audits all2851 raw
+sources across105 programs/1331 original decision cards. Every source is joined by
+exact coverage nucleus to own-goal0.1 and relative-pull0.1 sentences. Goal-level prose
+is never credited as an explanation of an individual situational component.
+
+Counts:2640 base sources have goal-presence language with absolute magnitude still
+open;123 nonzero situational components lack component-specific language;88 raw
+sources have no compiled coverage and no inferred player reason. No zero-effective
+covered source occurs in these originals. The123 gaps concern the safety goal, with
+first witnesses retained for66 programs. These are exact occurrence counts, not
+psychological completeness or evidence of universally absent mechanisms.
+
+Independent verifier reads original decision provenance directly and reconciles every
+source key, nucleus coverage/effective magnitude and missing-component witness. Both
+writer and verifier PASS; source/artifact hashes, immutable input/repeated evaluation
+and hidden-world control PASS. See workbench-affect-factor-language-coverage-rev1.
+This is an accepted gap census, not a pass for complete player-factor language.
+
+LOCAL DISPOSITION: next qualify a separate appraisal-contribution semantic against
+these123 positive witnesses and88 uncovered exclusions. It must describe the character
+appraisal rather than physical danger, retain current/earlier feedback distinctions,
+and withhold unsupported recipients before payload access. Absolute intensity,
+certainty and the complete appraisal-factor chain remain separate obligations.
+No presentation is silently added and no new disclosure permission inferred here.
+
+The projection is prepared for researcher UI integration; no new browser/build claim.
+TypeScript, full original corpus writer/verifier, research4318 and boundary PASS.
+No C3 verdict or obligation amended. Episode68613 last60/105 LIVE281hold; diagnostics
+23320 last15/15 prefix16 LIVE166hold; corrected pair43 last11/11 Working. Mark all46.
