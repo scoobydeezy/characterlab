@@ -52,6 +52,16 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**2026-10-23 support corpus COMPLETE:** Native45578 and independent verifier PASS
+105 programs/1436 prefixes/3995 revision reports/3522 historical checks.4848 cumulative
+joins represent368 distinct program-scoped supports/applications/observations; zero
+missing/ambiguous original joins. See support-corpus-rev1/acceptance.json. Coverage
+ledger refreshed with scoped original inspection/comparison/support receipts.
+Six support-only source holds released;277 overlapping sources remain held.
+Episode68613 last20/105 LIVE281hold; diagnostics23320 last15/15 prefix14 LIVE166hold.
+Pair43 last9/9 Working. Mark all45 tabs. Complete ancestry/language/full entry open.
+
+
 **2026-10-23 full episode audit:** Native68613 RUNNING105/1436; NEW281-source
 hold workbench-affect-learning-episode-corpus-rev1/freeze.json (includes Timeline).
 First11/165 checkpoint001; terminal receipt and independent verifier still required.

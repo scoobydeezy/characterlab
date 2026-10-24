@@ -1209,3 +1209,25 @@ Research4318/boundary PASS; all18 conditional obligations survive. Native23320 l
 14/15 prefix17 live166 hold; corrected browser43 last6/6 Working. Mark all44 tabs.
 LOCAL DISPOSITION broadens required qualification while preserving full entry gates,
 all original evidence and known trace limitations. No runtime change this increment.
+
+## 2026-10-23 — full recorded support corpus accepted
+
+Session45578 COMPLETE105 programs/1436 original prefixes. All3995 cumulative
+revision reports preserve exact stored values;3522 historical checks PASS. There are
+4848 cumulative application/observation joins, representing368 distinct program-scoped
+support IDs,368 application events and368 observation events. No unavailable or
+multiple matches occurred for these recorded supports. This is not a general claim
+that every experience has been recorded or that historical sources are always unique.
+
+Independent verifier PASS283 source/copy hashes, every original prefix identity and
+artifact hash, exact sample fields, status/count consistency and historical equality.
+Native output/event joins remain verified by the frozen writer, not independently
+re-executed. See workbench-affect-belief-support-corpus-rev1/acceptance.json. The
+coverage ledger now references this acceptance plus existing inspection/comparison
+receipts; its prior bytes are preserved. No new Campaign3 verdict or obligation change.
+
+Support-only six source holds are released, listed exactly in acceptance.json.
+The277 overlapping sources remain held by episode and/or Disposition audits.
+Episode68613 last20/105 LIVE281hold; Disposition23320 last15/15 prefix14 LIVE166hold.
+Corrected paired browser43 last9/9 Working. Full episode ancestry, language and
+Workbench entry remain open. Mark all45 tabs. No quiet writer restarted.
