@@ -99,8 +99,19 @@ archived logs into the assembly branch (they remain on the preserved branch). Ca
 
 No other Workbench implementation, catalog or evidence bundle moves by default.
 Historical controls stay executable and unchanged on the new branch. Reuse tested
-mechanism functions where sound; do not copy entire runtimes or redesign mathematics
-merely to make assembly convenient.
+mechanism functions where sound; do not redesign mathematics to ease assembly.
+
+The successor model, admission, composition and runtime live under `src/assembled`.
+Freeze the original Campaign 2 model/factory/runtime, fixtures and contracts as controls;
+do not extend them in place. Reuse unchanged mechanism/substrate functions directly.
+A changed shared dependency must retain its old behavior and old control imports via
+a separate versioned successor; unchanged Campaign 2 files alone do not prove isolation.
+M2 names successor files, reused dependencies, identity/version boundaries and the
+control dependency closure before coding. New composition binds one shared state and
+scheduler; it never dispatches to independent research runtimes. No wholesale runtime
+copy is planned. If an inseparable component needs a bounded port/refactor, M2 must
+name that boundary, justification and control comparison for its single owner review.
+The M1 no-copy rule does not authorize changing the frozen control in place.
 
 ## Milestones and decision gates
 
@@ -121,6 +132,16 @@ merely to make assembly convenient.
   duplicates, different operations and genuine alternative laws. Review the complete
   classified table with the owner once before broad integration. Recommend a reference
   law or named fixed variant for each genuine alternative. No averaging or silent choice.
+  Put classification first: DUPLICATE (equivalence established), DISTINCT OPERATION,
+  GENUINE ALTERNATIVE, or UNRESOLVED. A duplicate needs cited agreement in domains,
+  semantics, ordering, ownership and observable effects, not only equal fixture outputs.
+  Missing evidence stays unresolved. Alternatives retain controls and require an owner
+  ruling; local duplicate dispositions remain visible in the same reviewed table.
+  Include successor/control placement and validation selections in that single register.
+  Budget: 90 minutes source analysis; 10 minutes/check, 30 minutes total verification;
+  one table document <=250 lines / 64 KiB plus CURRENT updates, zero production/test
+  edits and no new runtime tests. Keep findings/results in the register, not companion
+  documents. At a limit, checkpoint incomplete; do not shrink coverage or force a class.
 - **M2a — configuration admission:** immediately after M2 review, before broader
   integration, define the versioned successor to frozen-recipe admission, then
   implement it in the shared model/runtime. Validate domains and cross-field, reference,
@@ -179,6 +200,19 @@ be corrected transparently while retaining the original failure and expected mea
   relevant ordering/ownership/epistemic negative controls, and the affected pinned replay.
   Run existing type/boundary/research checks as applicable. Complete full pinned replay
   once for the final candidate; rerun only changes with a stated invalidation reason.
+  For later milestones, predeclare affected fixtures, semantic projections, causal
+  boundaries and checkpoint points from the change/dependency risk. Require exact-byte
+  determinism and restore equality within each unchanged model; compare changed models
+  through predeclared semantic correspondence, not equal final actions alone.
+  Full frozen-control byte checks run when its dependency closure or entry changes,
+  at successor/control separation, and for the final candidate; otherwise retain the
+  previous result and document why untouched dependencies cannot invalidate it. M1's
+  original equivalence criteria remain fixed for its version; a changed successor model
+  uses the reviewed semantic comparison, not forced byte equality with the old model.
+  M2 must map each check to its failure risk and invalidating paths. This is no waiver
+  of affected replay or final full coverage. For an expected slow check, split a bounded
+  milestone or obtain a concrete runtime-budget amendment BEFORE execution. Never trim
+  fixtures, checkpoints or assertions because the run is slow or has failed.
 - No browser execution, exhaustive browser parity, every-prefix whole-corpus parity,
   verifier-of-verifier chain, or new validation framework. Each additional check must
   name a concrete undetected failure risk and why a smaller existing check cannot catch it.

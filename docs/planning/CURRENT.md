@@ -34,14 +34,22 @@ Results: [M0](ASSEMBLED_CHARACTER_M0_RESULT.md), [M1](ASSEMBLED_CHARACTER_M1_RES
 - Deliverables (3): inventory mechanisms by architecture operation/state authority;
   classify duplicates, distinct operations and genuine alternative laws; map them
   to pinned comparisons and identify the M2a admission contract/fields/controls.
-- One register in docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md; reuse existing
-  source/formal/fixture references. No implementation, parallel audit or new framework.
+- One table document: docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md, including
+  findings/results. No companion result, design documents, implementation or new framework.
+- Classification is the first column: proved duplicate, distinct operation, genuine
+  alternative, unresolved. Cite equivalence for duplicates; alternatives need owner ruling.
 - Coverage: all pinned members/families remain visible; mark unresolved executable
   mappings explicitly. Sharing a box or producing equal actions proves no equivalence.
-- Source budget: zero production/test files; one register, CURRENT and one compact
-  result. Evidence <=20 files / 5 MiB; no recursive copies or new test execution.
+- Budget: 90 minutes source analysis; one register <=250 lines / 64 KiB plus CURRENT;
+  zero production/test files and no new runtime tests, copies or evidence bundles.
+  At a limit, checkpoint incomplete; do not silently narrow coverage or force a class.
 - Checks: source/contract references and clause/member accounting; document limits,
-  whitespace and staged-size check. Each check <=10 minutes, one job at a time.
+  whitespace and staged-size check. Each <=10 minutes, total <=30, one job at a time.
+- Placement: successor under src/assembled; freeze Campaign 2 and its control behavior.
+  Name reused dependencies and versioned replacements; no in-place control extension.
+- Validation: map affected fixtures/projections/checkpoints to failure risks and
+  invalidating paths before execution. Preserve exact within-model replay and restore.
+  Full control comparison at separation, affected dependency changes and final acceptance.
 - Done: complete classified table and explicit unresolved decisions presented once
   for owner review. No broad integration or law choice before that review.
 

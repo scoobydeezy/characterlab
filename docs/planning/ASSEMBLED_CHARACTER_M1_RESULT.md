@@ -14,7 +14,10 @@ This is deliberately a thin scaffold entry, not a newly independent implementati
 LOCAL DISPOSITION: use direct exports so the existing data-only admission and exact
 save semantics cannot be weakened by a redundant wrapper. The unchanged runtime
 composes its components around one stateModel and one adaptation scheduler.
-Future capability must extend that shared composition, not select alternate pipelines.
+Future capability must extend the successor shared composition, not select alternate
+pipelines. M2 review clarification: that successor lives under src/assembled; the
+Campaign 2 composition and its dependency behavior remain frozen controls. M1's direct
+exports are the starting adapter, not permission to extend Campaign 2 in place.
 Frozen 21-recipe admission remains; its replacement is mandatory M2a after M2 review.
 
 Production/test scope was exactly the four predeclared files:
@@ -48,7 +51,8 @@ Validation completed once without failures or changed expectations:
 - TypeScript: node node_modules/typescript/bin/tsc -b --pretty false, exit 0.
 - Reference boundary check PASS.
 - Research accounting PASS: 0 active / 18 conditional / 4 closed / 0 unowned;
-  103 checked verdict headings / 4318 reports. The different historical total remains 109.
+  103 VER-C3-* headings / 4318 reports; all 109 ledger verdicts include those 103,
+  five Campaign 0 verdicts and one Campaign 1 verdict (excluded by the checker's selector).
 - Whitespace, document limits and staged-size checks PASS before commit.
 
 The test command stayed below 10 minutes; remaining checks each took under a minute,

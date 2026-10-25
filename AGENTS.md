@@ -33,6 +33,9 @@ Name the implemented contract version. No primitive becomes authoritative by exi
 Follow the work order's single-model, single-state, single-scheduler requirements.
 No hidden per-phenomenon pipelines or new standalone phenomenon factories.
 Scenarios configure the same mechanisms; they do not dispatch to substitute psychology.
+Successor composition lives under src/assembled; Campaign 2 remains the frozen control.
+Preserve control behavior through shared dependencies; version changed implementations
+separately. M2 names the placement, reuse and comparison boundaries before coding.
 The pinned denominator remains 21 corpus members / 15 families / 132 clauses.
 Intermediate breadth is not completion. No UI or reduction is authorized by a milestone pass.
 
