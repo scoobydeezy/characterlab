@@ -1,4 +1,4 @@
-# M1 comparison — proposed for the M0 review
+# M1 comparison — owner approved 2026-10-25
 
 M1 gives the Campaign 2 character a single entry point we will grow; it adds no new
 behavior. Comparison written before implementation, 2026-10-25.
@@ -12,10 +12,10 @@ comparison requirements and limitations in eight version-pinned source records.
 The 219 member requirement records overlap the family clauses. Exact executable
 mappings remain required before each affected implementation.
 
-Owner adoption of this full baseline and approval of this M1 comparison are still
-pending. The Campaign 2 control below is only M1's comparator, not the full baseline.
-Record the owner's explicit decision in CURRENT.md before starting M1; another agent's
-recommendation and completion of setup are not owner approval.
+The owner explicitly approved this full baseline and the revised comparison at
+`c2367f16` on 2026-10-25; the decision is recorded in CURRENT.md. The Campaign 2
+control below is only M1's comparator, not the full baseline. Comparison criteria
+below are unchanged by this approval record.
 
 ## Purpose and limit
 

@@ -3,7 +3,7 @@
 2026-10-25. Active preparation directive, authorized by the owner's request to turn
 the reviewed v2 draft into actionable instructions with guardrails. This document
 incorporates that review. It selects no psychological law and grants no reduction.
-The owner authorized M0 setup on 2026-10-25. M1 remains gated by the M0 review.
+The owner completed the M0 review and authorized M1 on 2026-10-25.
 
 ## Outcome and authority
 
@@ -196,7 +196,8 @@ be corrected transparently while retaining the original failure and expected mea
 
 ## Current authorization boundary
 
-M0 setup was authorized by the owner on 2026-10-25. Its result and the predeclared
-M1 comparison are linked from CURRENT.md. Stop for their review before implementing
-the shell. No law selection, assembly acceptance, publishing, browser work, long
-audits or automatic Campaign 4/UI transition is authorized by M0 completion.
+The owner adopted the pinned baseline and approved the revised M1 comparison
+(c2367f16) on 2026-10-25. M1 is authorized under its bounded card in CURRENT.md.
+M2 review and M2a admission remain required before broader integration. No law
+selection, assembly acceptance, publishing, browser work, long audits or automatic
+Campaign 4/UI transition is authorized by this approval.
