@@ -114,11 +114,22 @@ merely to make assembly convenient.
   Require equal bytes only where model identity and serialization remain unchanged.
   Reuse existing fixtures, add focused determinism and checkpoint continuation checks,
   and report what is actually assembled. No generic framework or UI belongs here.
+  The entry becomes the assembled model definition/composition entry; add capability
+  inside shared runtime/state, never through alternate psychological pipeline dispatch.
 - **M2 — reconcile mechanisms:** one table maps architecture area, operation,
   implementations, laws, state authority and dependent pinned comparisons. Distinguish
   duplicates, different operations and genuine alternative laws. Review the complete
   classified table with the owner once before broad integration. Recommend a reference
   law or named fixed variant for each genuine alternative. No averaging or silent choice.
+- **M2a — configuration admission:** immediately after M2 review, before broader
+  integration, define the versioned successor to frozen-recipe admission, then
+  implement it in the shared model/runtime. Validate domains and cross-field, reference,
+  capacity and state invariants; give specific rejection reasons. Demonstrate a valid
+  non-preset configuration and deterministic save/restore. Recipe membership cannot
+  decide validity. Preserve original Campaign 2 controls. M2 identifies the affected
+  contract/fields/comparisons; split M2a into bounded packages if needed, without
+  postponing this gate behind broad integration. Later mechanisms extend this same
+  admission contract; M2a does not reduce the final configuration requirement.
 - **Later milestones:** integrate by causal dependency and architecture area, keeping
   one running character after each milestone. Name the next milestone only; do not
   instantiate a separate factory per phenomenon. Track covered and still-missing

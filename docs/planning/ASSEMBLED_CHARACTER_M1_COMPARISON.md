@@ -1,7 +1,21 @@
 # M1 comparison — proposed for the M0 review
 
-2026-10-25. Written before shell implementation or execution. This is a bounded
-scaffold milestone, not a new psychological qualification or assembled-character pass.
+M1 gives the Campaign 2 character a single entry point we will grow; it adds no new
+behavior. Comparison written before implementation, 2026-10-25.
+
+## M0 baseline and approval status
+
+M0 setup and the full [baseline](ASSEMBLED_CHARACTER_BASELINE.json) are committed in
+`f614c4d12604f5e7e507fc80ab0b54441aaf7aff`; see [M0 result](ASSEMBLED_CHARACTER_M0_RESULT.md).
+The pin covers corpus 0.29.0, all 21 members, 15 families and 132 clauses, with original
+comparison requirements and limitations in eight version-pinned source records.
+The 219 member requirement records overlap the family clauses. Exact executable
+mappings remain required before each affected implementation.
+
+Owner adoption of this full baseline and approval of this M1 comparison are still
+pending. The Campaign 2 control below is only M1's comparator, not the full baseline.
+Record the owner's explicit decision in CURRENT.md before starting M1; another agent's
+recommendation and completion of setup are not owner approval.
 
 ## Purpose and limit
 
@@ -10,12 +24,28 @@ start, settle, inspect, save and restore. Reuse cognitiveFactory/cognitiveRuntim
 there is one authoritative state, scheduler and trace behind that entry. Do not fan
 out to Campaign 3 runtimes, add a profile registry, copy a runtime, or invent new math.
 A thin entry is sufficient for M1; it supplies no new psychological capability.
-The actual integration starts after the M2 reconciliation review.
+`src/assembled/character.ts` becomes the assembled model definition and composition
+entry: capability is added inside the shared runtime and authoritative state, never
+as alternate Campaign 3 pipelines dispatched by the entry point.
+The actual integration starts after M2 review and the M2a admission gate below.
 
 M1 leaves the frozen Campaign 2 admission contract intact. Its 21-model restriction
 is a known temporary limit, not satisfaction of the work order's arbitrary-valid-
 configuration requirement. Removing that restriction requires a versioned successor
-contract before implementation. Do not enlarge its allowlist as an assembly solution.
+contract before implementation. **M2a — configuration admission** is the mandatory
+next milestone after the M2 register review and before broader mechanism integration:
+version the successor admission contract first, then implement and check it in the
+shared model/runtime. It must admit configurations by declared domains and cross-field,
+reference, capacity and state invariants, with specific invalid-input rejections and
+a valid non-preset run that deterministically saves/restores. Presets may remain
+conveniences; membership in a recipe list cannot determine admissibility. Preserve
+frozen Campaign 2 controls unchanged. Do not enlarge the allowlist as a workaround.
+
+M2 must identify the affected contract, configuration fields and control mappings for
+M2a. Apply the existing file/check/evidence budgets; split implementation into bounded
+packages if necessary, without moving admission behind broad integration. Future
+mechanism additions extend the same validation contract; M2a does not claim those
+mechanisms already exist or narrow the eventual valid-configuration requirement.
 
 ## Exact controls and correspondence
 
@@ -80,7 +110,8 @@ supply the later bounded runtime disposition. No accepted formal source changes 
 REFERENCE_MECHANISM_LEDGER.md (in this directory) applies: SUB-004/007/008 and
 MEC-013..019 remain reused mechanisms/controls; no retirement or new necessity claim.
 
-Baseline scope: the pinned Campaign 2 completion review is the scaffold control.
+M1 control scope: the pinned Campaign 2 completion review supplies the scaffold
+control within the full assembly baseline identified above.
 This milestone discharges NONE of the 21 Campaign 3 member mappings or 132 family
 clauses. Those remain pending, with exact affected mappings required before integration.
 The RO-C3-011 diagnostic finding remains open in its existing conditional scope.
