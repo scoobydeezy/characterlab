@@ -4,6 +4,16 @@
 
 **Authority:** sequencing document beneath the North Star, canonical Architecture Map, Research Program Brief, and accepted Formal Reference Model contracts
 
+## Active sequence amendment — 2026-10-25
+
+The owner has authorized preparation for one assembled character under
+[ASSEMBLED_CHARACTER_WORK_ORDER.md](docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md).
+Workbench development is stopped. The accepted bounded Campaign 3 results remain
+controls; they are not evidence of one assembled character. Assembly of all pinned
+families and an accepted classified replay precede any UI work or Campaign 4.
+[CURRENT.md](docs/planning/CURRENT.md) owns the next bounded task and review gates.
+Earlier dated routing below is historical where it conflicts with this amendment.
+
 ## 1. Sequence declaration
 
 CharacterLab does not resume Phase 3. The active sequence is:
@@ -15,7 +25,11 @@ Campaign 1 — prove truth → observation → SemanticExperience
         ↓
 Campaign 2 — specify and build the thin intact North-Star scaffold
         ↓
-Campaign 3 — prove end-to-end traversability and retained corpus replay
+Campaign 3 — bounded phenomenon/control qualification (historical accepted scope)
+        ↓
+Assembled Character — one continuing model and pinned corpus replay
+        ↓
+Human inspection UI — one simulation page, scoped after assembly
         ↓
 Campaign 4+ — controlled reduction campaigns chosen by invalidation risk
 ```
@@ -157,6 +171,10 @@ Historical `PORT` entries are initial reference implementations and controls, ne
 - no `P0` decision relevant to the slice remains open.
 
 ## 6. Campaign 3 — Traversability and retained-corpus replay
+
+Current disposition: retain bounded historical acceptance below. The assembled
+character requirement is now governed by the 2026-10-25 work order, not inferred
+from the collection of separately qualified models.
 
 ### Pre-entry reconciliation (2026-09-10)
 
@@ -342,6 +360,10 @@ not block LEARN. After LEARN, order remaining gaps by importance/invalidation ri
 not a rigid reading of the audit's list.
 
 ## 7. Campaign 4+ — Reduction sequence
+
+Entry remains blocked until the Assembled Character work order is satisfied and
+the subsequently scoped human inspection interface is accepted. No intermediate
+assembly milestone or prior Workbench receipt grants Campaign 4 entry.
 
 Before merging or retiring a mechanism, consult the research obligation registry
 for the affected distinctions and record the relevant IDs and disposition in the
@@ -1370,14 +1392,13 @@ All21 corpus scopes/15 families/132 bounded clauses and18 conditional debts rema
 109 verdicts;1529/0;56/59 publication inventory. No law or comparator retired.
 Dedicated inspection UI is next between Campaigns3 and4; reduction ranking is separate.
 
-## Observability Workbench — owner-authorized 2026-10-11
+## Observability Workbench — historical authorization, superseded 2026-10-25
 
-The dedicated inspection step is now active under
-docs/planning/OBSERVABILITY_WORKBENCH_PLAN.md and its retained product brief.
-The owner accepted the six-mode workbench and review amendments: scoped instrumentation,
-observer-safe historical reason semantics, separate input/model comparisons, quiescent
-stepping, explicit corpus coverage and meaningful state visualizations. All six milestones
-and the integrated demonstration are required before Campaign4 reduction work begins.
-The workbench is presentation/experimental tooling over authoritative public seams,
-not a new simulation owner. No Campaign3 qualification scope is enlarged by this step.
-Current implementation and limits are in OBSERVABILITY_WORKBENCH_PROGRESS.md.
+The October 11 six-mode plan and review amendments are retained as historical scope
+in docs/planning/OBSERVABILITY_WORKBENCH_PLAN.md and its product brief. That implementation
+effort is stopped. Its milestone sequence, browser audits, source holds and tab-retention
+instructions are not active work. No current task should resume them.
+
+Assembly now precedes UI development. Existing controls/evidence remain preserved.
+No psychological law is selected and no Campaign 3 verdict is expanded by this change.
+Use docs/planning/CURRENT.md and the Assembled Character work order.

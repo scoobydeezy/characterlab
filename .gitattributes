@@ -1,4 +1,6 @@
 # Preserve exact bytes for the workbench's hash-bound source and evidence only.
+# One-time historical routing archive; retain original mixed line endings exactly.
+/docs/planning/archive/2026-10-25-workbench-routing/** -text
 /src/workbench/** -text
 /scripts/check-workbench-values.mjs -text
 /scripts/check-workbench-export.mjs -text
@@ -1538,3 +1540,7 @@
 /docs/planning/workbench-batch-scoped-shared-rev1/** -text
 /scripts/check-workbench-scoped-batch-browser.mjs -text
 /docs/planning/workbench-batch-scoped-browser-rev1/** -text
+# Preserve stopped Workbench untracked artifacts byte-for-byte.
+/docs/planning/workbench-batch-keyboard-rev1/** -text
+/docs/planning/workbench-batch-parity-rev10/receipt.json -text
+/scripts/check-workbench-batch-keyboard.mjs -text
