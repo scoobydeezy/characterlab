@@ -4,6 +4,16 @@
 
 **Authority:** sequencing document beneath the North Star, canonical Architecture Map, Research Program Brief, and accepted Formal Reference Model contracts
 
+## Active sequence amendment — 2026-10-25
+
+The owner authorized M0 setup under
+[ASSEMBLED_CHARACTER_WORK_ORDER.md](docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md).
+Workbench development is stopped and preserved on tag `archive/workbench-stopped-2026-10-25`.
+Bounded Campaign 3 results remain controls, not proof of one assembled character.
+Assembly and accepted pinned replay precede the human inspection UI and Campaign 4.
+[CURRENT.md](docs/planning/CURRENT.md) owns the next task and review gates.
+Conflicting earlier dated routing below is historical.
+
 ## 1. Sequence declaration
 
 CharacterLab does not resume Phase 3. The active sequence is:
@@ -15,7 +25,11 @@ Campaign 1 — prove truth → observation → SemanticExperience
         ↓
 Campaign 2 — specify and build the thin intact North-Star scaffold
         ↓
-Campaign 3 — prove end-to-end traversability and retained corpus replay
+Campaign 3 — bounded phenomenon/control qualification (historical accepted scope)
+        ↓
+Assembled Character — one continuing model and pinned corpus replay
+        ↓
+Human inspection UI — one simulation page, scoped after assembly
         ↓
 Campaign 4+ — controlled reduction campaigns chosen by invalidation risk
 ```
@@ -157,6 +171,9 @@ Historical `PORT` entries are initial reference implementations and controls, ne
 - no `P0` decision relevant to the slice remains open.
 
 ## 6. Campaign 3 — Traversability and retained-corpus replay
+
+Retain bounded historical acceptance below; the 2026-10-25 work order governs
+assembly, which is not inferred from separately qualified models.
 
 ### Pre-entry reconciliation (2026-09-10)
 
@@ -342,6 +359,9 @@ not block LEARN. After LEARN, order remaining gaps by importance/invalidation ri
 not a rigid reading of the audit's list.
 
 ## 7. Campaign 4+ — Reduction sequence
+
+Entry requires completed assembly and subsequent acceptance of the scoped human
+inspection interface. No intermediate milestone or prior Workbench receipt grants entry.
 
 Before merging or retiring a mechanism, consult the research obligation registry
 for the affected distinctions and record the relevant IDs and disposition in the

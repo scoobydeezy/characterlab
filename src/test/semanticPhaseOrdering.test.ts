@@ -260,16 +260,30 @@ describe('SEM-001H two-lane semantic phase conformance', () => {
     expect(() => barrierScheduler.schedule({ dueAt: simInstant(1n), phase: SETTLEMENT_BARRIER_PHASE, eventTypeId: eventType, payload: list([]), dependencies: list([]) }))
       .toThrowError(expect.objectContaining({ code: 'INVALID_EVENT' }));
 
+    let attemptedReservation: ExperienceReservation | undefined;
+    let validationFailureCode: string | undefined;
     const handler: EventHandler<PhaseState> = ({ state, allocateRuntimeId }) => {
       const reservation = admitObservationLane({ observerId, lane: 'Current', dueAt: 1n, emitsCharacterAccessibleEvidence: true }, allocateRuntimeId).reservation!;
-      expect(reservation.experienceId).toBe(8950n);
-      validateSuccessfulExperienceSettlement([reservation], []);
+      attemptedReservation = reservation;
+      try {
+        validateSuccessfulExperienceSettlement([reservation], []);
+      } catch (error) {
+        validationFailureCode = (error as { code?: string }).code;
+        throw error;
+      }
       return { nextState: state, emittedEvents: [], traceContributions: [], outputs: [] };
     };
     const subject = phaseScheduler(new Map([[key(eventType), handler]]), 70n);
     subject.schedule({ dueAt: simInstant(1n), phase: 10n, eventTypeId: eventType, payload: list([]), dependencies: list([]) });
     const before = subject.getAllocatorState();
-    await expect(subject.settleNextInstant()).rejects.toThrowError(expect.objectContaining({ code: 'TRANSITION_FAILURE' }));
+    const beforeState = subject.getState();
+    await expect(subject.settleNextInstant()).rejects.toThrowError(expect.objectContaining({
+      code: 'TRANSITION_FAILURE',
+      message: 'successful instant contains a reservation without exactly one experience envelope',
+    }));
+    expect(attemptedReservation?.experienceId).toBe(70n);
+    expect(validationFailureCode).toBe('ORPHAN_EXPERIENCE_RESERVATION');
+    expect(subject.getState()).toEqual(beforeState);
     expect(subject.getAllocatorState()).toEqual(before);
     expect(subject.getCommittedTrace()).toEqual([]);
     expect(subject.getOutputs()).toEqual([]);
