@@ -1,53 +1,42 @@
-# Current work — M8 shared workspace access
+# Current work — M8 shared workspace access complete
 
-2026-10-26. M7 at70e7802c supplies genuine body-cue retrieval. M8 connects those
-current recall results to the existing finite task workspace, without another store.
-[Contract](../formal/ASSEMBLED_CHARACTER_WORKSPACE_CONTRACT.md), written before code.
+2026-10-26. Current body recall can enter unused capacity in the existing task
+workspace. Full task/forecast focus excludes it without erasing retained memory.
+[M8 result](ASSEMBLED_CHARACTER_M8_RESULT.md); [contract](../formal/ASSEMBLED_CHARACTER_WORKSPACE_CONTRACT.md).
 
 | Status | Disposition |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 | Baseline |21 members/219 records;15 families/132 clauses; six foundations/five C2 conditions |
-| Prior |[M7 PASS](ASSEMBLED_CHARACTER_M7_RESULT.md); controls preserved |
-| Active |M8: one capacity, existing task focus first, current recalled content in spare slots |
+| M3–M7 |Passed; original controls/failures preserved |
+| M8 |PASS: actual current recall handoff, one workspace capacity, expiry/continuation |
+| Reference |Rules/registry0.8; existing task capacity3; retrieval1; retention8/8; recall delay2 |
+| Allocation |Existing task/forecast focus first; recalled content fills spare slots only |
 
-## Bounded card
+## Established result
 
-Three capabilities: current authenticated recall can enter the same workspace;
-shared capacity can exclude an accessed memory without erasing it; no prior-instant
-recall or rejected sample can silently become current workspace content.
-Areas M3/M4/M8, FND3/4/6, Brief12.3/12.6. No corpus/obligation closure.
-LOCAL DISPOSITION under Architecture10.1 and escalation-policy heuristics3/5/6:
-preserve accepted task/forecast selection; fill actual unused slots in recall rank
-order. This is a conservative engineering default, no verdict. Do not invent a
-cross-kind priority or an action meaning for a remembered bodily interval.
-MEC-010/011/022 and WORKSPACE_CONTROL controls stay preserved; this is no full WORK port.
+One task plus forecast costs2; capacity3 admits one body episode, capacity2 excludes
+it. Two tasks plus forecast fill3 and exclude it. The episode remains stored and
+recalled. Current retrieval event/episode bytes are traced into workspace; no trace
+archive or additional memory read. Delivery expires after its scheduler instant.
 
-Rules/registry0.8 uses the same ten slots as0.7. Existing task capacity0..3 is the
-single bound; no memory-specific workspace budget. M7 retrieval capacity remains
-an earlier access limit, not extra workspace capacity. No new state/schema owner.
-Seven production/test files: assembled/{workspace,model,memory,runtime,execution,
-traceBinding}.ts and test/assembledWorkspace.test.ts. No C2 dependency edits.
+Four M3 cells preserve full state, prior outputs, draws and non-workspace traces
+modulo identities. One-task later-choice control likewise preserves prior behavior.
+Repeat/restore after4 matches every later boundary. Hidden truth, denial/exclusion,
+known zero, no current sensing, stale/foreign/future delivery and late rollback pass.
+26 distinct tests and type/boundary/research checks pass. Frozen105 dependencies,
+fixture/config and M1 entry/test remain unchanged; prior full-control result retained.
 
-Predeclared comparisons: four M3 cells seed7 vs0.7, exact full state and prior outputs
-except one added workspace report; actual draws unchanged. With live recall at5:
-two open tasks plus forecast occupy3 and exclude memory; one open task plus forecast
-occupy2 and admit one memory atcapacity3, whilecapacity2 excludes it. Same retained
-episode and recall bytes. Task eligibility changes via legal task activation times,
-not authored workspace selections. No memory-based choice change is required/claimed.
+Seven production/test files; recorded checks under four minutes. Test timestamp
+construction and rollback-fixture errors were corrected with failures retained.
+Explicit occupancy assertions added after review. Only affected cases rerun.
+Before-code card in d79c5427; one result/raw log records exact scope and budget.
 
-Checks, sequential: tsc; new integration tests plus inherited cognitiveTransforms
-workspace cases if present; M7 regressions. New tests cover all capacities, no-spare
-and spare-slot witnesses, actual selected source/value links, no source archive reads,
-no-current-cue, hidden truth, exclusion/denial, zero pressure, generated handoff expiry,
-repeat/restore after4 at every later boundary, and late failure after workspace.
-Frozen105/config/fixture/M1 guard; boundary/research; document and staged size checks.
-Failure risks: invented memory, double capacity, stale transient data, epistemic leak,
-partial commit, displaced controls and obligation loss. Full frozen replay retained
-unless the dependency guard reveals an invalidator; no unrelated test expansion.
+## Stop and remaining work
 
-Limits: seven planned files/12 ceiling,20 evidence files/5MiB (one result/raw log),
-10min/command/30min total checks;32 settled instants per run, cap is failure.
-Done only when every declared comparison/control passes within limits; then stop.
-General workspace maintenance, cross-kind displacement, recall-to-reasoning and full
-assembly remain open. No UI/browser/audit chain or next package opened.
+This is current workspace access, not persistent maintenance or memory interpretation.
+Body memory still supplies no appraisal/reason/action meaning. Cross-kind displacement,
+rich perception, association, encoding, credit and reconstruction remain open.
+Prepare only the next bounded card before code; no next package opened here.
+No corpus member/clause or conditional obligation closes. RO-C3-011 unchanged.
+UI/Campaign4 and old audits remain stopped.

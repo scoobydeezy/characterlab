@@ -7,6 +7,7 @@ import {scheduledEventValue} from '../substrate/persistence';
 import {traceRecordValue} from '../substrate/trace';
 import {checkedAddDuration,simDuration} from '../substrate/time';
 import {decodeEmbodied as decode} from '../campaign3/embodiedCodecs';
+import type {BodyRecallDelivery} from './workspace';
 import {retrieveBodyEpisodes,type RetrievalDeclaration} from './retrieval';
 import {exact} from '../campaign3/embodiedMath';
 import {dataItems as items,dataField as f,dataRecord as rec,dataKey as key,dataIdentity as id,dataText as txt,dataUnsigned as uint} from '../campaign2/canonicalData';
@@ -54,7 +55,8 @@ export function withEpisodicState(base:ReturnType<typeof compileCampaign2StateMo
   },
  });
 }
-export function createEpisodicExtension(C:CanonicalValue,d:BodyDeclaration,stateModel:ReturnType<typeof compileCampaign2StateModel>,model:CanonicalValue,run:CanonicalValue,recallDelay?:bigint,retrieval?:RetrievalDeclaration){
+export function createEpisodicExtension(C:CanonicalValue,d:BodyDeclaration,stateModel:ReturnType<typeof compileCampaign2StateModel>,model:CanonicalValue,run:CanonicalValue,recallDelay?:bigint,retrieval?:RetrievalDeclaration,workspace=false){
+ let delivered:BodyRecallDelivery[]=[];
  let active=false,at=0n,pending=new Map<string,ScheduledEvent>(),checkpoint=new Map<string,ScheduledEvent>(),seen=new Set<bigint>();
  const eventKey=(e:ScheduledEvent)=>key(scheduledEventValue(e));
  const trace=(event:ScheduledEvent,outputs:CanonicalValue[],children:readonly ScheduledEvent[],reads:ActualReadRecord[]=[],patch:StatePatch={operations:[]},diffs:ReturnType<typeof stateModel.applyPatch>['diffs']=[])=>traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model,runIdentity:run,event,seamId:bodyId(1036,'seam/assembled-episodic-memory'),seamVersion:retrieval?'assembled-character-memory/0.3-candidate':recallDelay===undefined?'assembled-character-memory/0.1-candidate':'assembled-character-memory/0.2-candidate',recordKind:event.eventTypeId,subjectIds:[id(C),BODY_OBSERVER],sourceRecordIds:[],registeredReadDomain:retrieval&&eq(event.eventTypeId,MEMORY_RECALL)?[{rootStateTypeId:346n,fieldId:1n,selectors:[{kind:'wildcard',selectorKind:'mapKey'}]}]:reads.map(r=>pattern(r.path)),actualReadRecords:reads,inputProjection:event.payload,outputProjection:list(outputs),randomDrawRecords:[],quantizationOperations:[],statePatch:patch,structuralMutationDiffs:diffs,emittedEvents:children,invariantResults:[]});
@@ -63,11 +65,12 @@ export function createEpisodicExtension(C:CanonicalValue,d:BodyDeclaration,state
  const authenticated=(e:ScheduledEvent,phase:bigint)=>{if(!active||e.dueAt!==at||e.phase!==phase||!pending.has(eventKey(e)))fail('unassociated child');};
  const pathFor=(v:CanonicalValue)=>{const a=items(v,'list');if(a.length!==3||txt(a[0])!==EPISODE||!eq(a[1],C))fail('recall target');occurrence(a[2],1115n);return bodyEpisodePath(C,a[2]);};
  return Object.freeze({
+  currentRecalls(){if(!active)fail('recall delivery outside instant');return structuredClone(delivered);},
   eventTypes:()=>[MEMORY_EVIDENCE,MEMORY_FORMATION,MEMORY_RECALL],isFormation:(e:ScheduledEvent)=>eq(e.eventTypeId,MEMORY_FORMATION),
-  begin(instant:bigint){if(active)fail('already active');active=true;at=instant;checkpoint=new Map(pending);seen=new Set();},
+  begin(instant:bigint){if(active)fail('already active');active=true;at=instant;delivered=[];checkpoint=new Map(pending);seen=new Set();},
   prepareCommit(){if([...pending.values()].some(e=>e.dueAt<=at))fail('unconsumed child');},
   commit(){checkpoint=new Map(pending);},
-  close(){pending=new Map(checkpoint);active=false;seen.clear();},
+  close(){pending=new Map(checkpoint);delivered=[];active=false;seen.clear();},
   observeSelection(event:ScheduledEvent,evidence:BodyEvidence|undefined){
    if(!active||event.dueAt!==at||event.phase!==20n||!eq(event.eventTypeId,BODY_SELECTION)||seen.has(event.eventId)||!evidence||eventKey(evidence.settledEvent)!==eventKey(event))fail('actual selection lifecycle');seen.add(event.eventId);
    if(!evidence)return fail('missing selection');
@@ -83,7 +86,7 @@ export function createEpisodicExtension(C:CanonicalValue,d:BodyDeclaration,state
    if(evidence){const a=items(event.payload,'list');if(a.length!==3)fail('evidence payload');const s=validateEvidence(a[0],a[1],a[2],at,d),episode=list([text(EPISODE),typedIdentifier(1125,unsigned(context.allocateRuntimeId())),...a,signed(at)]),path=bodyEpisodePath(C,f(s,1n));
     const later=checkedAddDuration(event.dueAt,simDuration(recallDelay??1n));outputs=[episode];emissions=[emit(event,MEMORY_FORMATION,140n,episode),emit(event,MEMORY_RECALL,20n,retrieval?BODY_CHANNEL:(path.selectors[0] as {kind:'mapKey';key:CanonicalValue}).key,later)];
    }else if(retrieval){if(!eq(event.payload,BODY_CHANNEL))fail('retrieval channel');const result=retrieveBodyEpisodes(state,stateModel,C,at,retrieval);outputs=result.outputs;reads=result.reads;}else{const path=pathFor(event.payload),value=stateModel.read(state,path);reads=[{accessorId:bodyId(1028,'accessor/assembled-exact-episode'),path,presence:value.presence,value:value.value,derivedSources:[]}];if(value.presence){if(time(items(value.value!,'list')[5])>=at)fail('recall requires earlier episode');outputs=[list([text(RECALL),signed(at),value.value!])];}if(recallDelay!==undefined)outputs.push(list([text(ACCESS),signed(at),event.payload,value.presence]));}
-   const p=plan(event,emissions);return {nextState:state,outputs,emittedEvents:emissions,traceContributions:[],traceFactory(children:readonly ScheduledEvent[]){p.bind(children);return [trace(event,outputs,children,reads)];}};
+   const p=plan(event,emissions);let deliveredOnce=false;return {nextState:state,outputs,emittedEvents:emissions,traceContributions:[],traceFactory(children:readonly ScheduledEvent[]){p.bind(children);const contribution=trace(event,outputs,children,reads);if(workspace&&retrieval&&!evidence){if(deliveredOnce)fail('duplicate recall delivery');deliveredOnce=true;const episodes=outputs.filter(v=>typeof v!=='boolean'&&v.kind==='list'&&eq(v.items[0],text(RECALL))).map(v=>items(v,'list')[2]);delivered.push(structuredClone({character:C,event,episodes}));}return [contribution];}};
   },
   prepare(events:readonly ScheduledEvent[],state:AuthoritativeState){
    const targets=new Set<string>(),candidates=events.map(event=>{authenticated(event,140n);if(!eq(event.eventTypeId,MEMORY_FORMATION))fail('formation kind');const a=items(event.payload,'list');if(a.length!==6||txt(a[0])!==EPISODE||time(a[5])!==at)fail('formation payload');occurrence(a[1],1125n);const s=validateEvidence(a[2],a[3],a[4],at,d),path=bodyEpisodePath(C,f(s,1n));stateModel.validatePath(path);const prior=stateModel.read(state,path);if(prior.presence||targets.has(key(statePathValue(path))))fail('duplicate formation');targets.add(key(statePathValue(path)));

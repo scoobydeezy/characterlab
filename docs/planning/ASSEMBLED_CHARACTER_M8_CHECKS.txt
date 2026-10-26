@@ -1,0 +1,126 @@
+M8 checks; before-code card/contract d79c5427; failures retained.
+COMMAND npx tsc -b --pretty false
+exit=0 seconds=14.940011
+COMMAND npx tsc -b --pretty false (test sources)
+src/test/assembledWorkspace.test.ts(32,299): error TS2322: Type 'bigint' is not assignable to type 'SimInstant'.
+  Type 'bigint' is not assignable to type '{ readonly [instantBrand]: true; }'.
+src/test/assembledWorkspace.test.ts(69,237): error TS2322: Type '{ character: { readonly kind: "typedIdentifier"; readonly namespaceId: bigint; readonly payload: CanonicalValue; }; event: ScheduledEvent; episodes: readonly CanonicalValue[]; } | { ...; }' is not assignable to type 'BodyRecallDelivery'.
+  Type '{ event: { dueAt: bigint; eventId: bigint; phase: bigint; eventSequence: bigint; eventTypeId: TypedIdentifierValue; payload: CanonicalValue; dependencies: CanonicalValue; causalParentEventIds: readonly bigint[]; }; character: CanonicalValue; episodes: readonly CanonicalValue[]; }' is not assignable to type 'BodyRecallDelivery'.
+    The types of 'event.dueAt' are incompatible between these types.
+      Type 'bigint' is not assignable to type 'SimInstant'.
+        Type 'bigint' is not assignable to type '{ readonly [instantBrand]: true; }'.
+exit=1 seconds=14.7504397
+COMMAND npx vitest run src/test/assembledWorkspace.test.ts src/test/campaign2CognitiveTransforms.test.ts --maxWorkers=1 --minWorkers=1
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledWorkspace.test.ts > M8 recalled content shares the existing workspace capacity > preserves four original M3 cells and every non-workspace trace field modulo identities
+M8 four-cell correspondence: full state, prior outputs, draws, non-workspace trace exact
+
+stdout | src/test/assembledWorkspace.test.ts > M8 recalled content shares the existing workspace capacity > one task plus forecast admits recall only in the third shared slot; two tasks exclude it without erasure
+M8 slots0..3 shared occupancy PASS; one task+forecast admits memory at3, two tasks+forecast excludes it
+
+ ❯ src/test/assembledWorkspace.test.ts (7 tests | 1 failed) 57020ms
+   ✓ M8 recalled content shares the existing workspace capacity > preserves four original M3 cells and every non-workspace trace field modulo identities 14996ms
+   ✓ M8 recalled content shares the existing workspace capacity > one task plus forecast admits recall only in the third shared slot; two tasks exclude it without erasure 15735ms
+   ✓ M8 recalled content shares the existing workspace capacity > workspace traces actual delivery and has no memory/archive read, then the delivery expires 2867ms
+   ✓ M8 recalled content shares the existing workspace capacity > repeat and restore after4 match every later boundary, including selected memory at5 8594ms
+   ✓ M8 recalled content shares the existing workspace capacity > hidden truth stays out, excluded/denied samples supply no recall, zero pressure remains content 8535ms
+   × M8 recalled content shares the existing workspace capacity > late failure after the workspace handoff rolls back the whole instant 3784ms
+     → same-instant settlement exceeded its configured work ceiling
+   ✓ M8 recalled content shares the existing workspace capacity > rejects stale/foreign/future handoffs and forged public recall; deduplicates repeated acquisitions without double charging 2509ms
+ ✓ src/test/campaign2CognitiveTransforms.test.ts (12 tests) 46ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledWorkspace.test.ts > M8 recalled content shares the existing workspace capacity > late failure after the workspace handoff rolls back the whole instant
+SchedulerContractError: same-instant settlement exceeded its configured work ceiling
+ ❯ fail src/substrate/scheduler.ts:667:9
+    665| 
+    666| function fail(code: SchedulerFailureCode, message: string): never {
+    667|   throw new SchedulerContractError(code, message);
+       |         ^
+    668| }
+    669| 
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:358:11
+ ❯ Object.settleNextInstant src/assembled/character.ts:40:58
+ ❯ through src/test/assembledWorkspace.test.ts:25:118
+ ❯ src/test/assembledWorkspace.test.ts:65:102
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 18 passed (19)
+   Start at  12:07:29
+   Duration  59.02s (transform 874ms, setup 0ms, collect 1.44s, tests 57.07s, environment 0ms, prepare 177ms)
+
+exit=1 seconds=60.5158883
+CORRECTIONS: test reconstructed timestamps now use simInstant (no value change). Rollback fixture now includes an actual body sample at5, making the intended failing instant costlier than prior diagnostics. Required outcome remains late failure after workspace with complete rollback; original failure retained. Added explicit task/forecast occupancy assertions to close a review-found assertion gap.
+COMMAND npx tsc -b --pretty false (corrected tests)
+exit=0 seconds=14.6049665
+COMMAND npx vitest run src/test/assembledWorkspace.test.ts -t "one task plus|late failure|rejects stale" --maxWorkers=1 --minWorkers=1
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledWorkspace.test.ts > M8 recalled content shares the existing workspace capacity > one task plus forecast admits recall only in the third shared slot; two tasks exclude it without erasure
+M8 slots0..3 shared occupancy PASS; one task+forecast admits memory at3, two tasks+forecast excludes it
+
+stdout | src/test/assembledWorkspace.test.ts > M8 recalled content shares the existing workspace capacity > late failure after the workspace handoff rolls back the whole instant
+M8 workspace then execution: 35 events, cap34 entire instant rolls back
+
+ ✓ src/test/assembledWorkspace.test.ts (7 tests | 4 skipped) 24274ms
+   ✓ M8 recalled content shares the existing workspace capacity > one task plus forecast admits recall only in the third shared slot; two tasks exclude it without erasure 16415ms
+   ✓ M8 recalled content shares the existing workspace capacity > late failure after the workspace handoff rolls back the whole instant 5209ms
+   ✓ M8 recalled content shares the existing workspace capacity > rejects stale/foreign/future handoffs and forged public recall; deduplicates repeated acquisitions without double charging 2648ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 4 skipped (7)
+   Start at  12:10:38
+   Duration  25.83s (transform 863ms, setup 0ms, collect 1.27s, tests 24.27s, environment 0ms, prepare 92ms)
+
+exit=0 seconds=27.2806143
+COMMAND npx vitest run src/test/assembledRetrieval.test.ts --maxWorkers=1 --minWorkers=1
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRetrieval.test.ts > M7 body cue access over the same episodic owner > preserves four singleton M3 cells: all state, non-recall outputs, actual draws and non-memory traces
+M7 four-cell correspondence: state/non-recall outputs/draws/non-memory trace exact; singleton recall bytes exact
+
+stdout | src/test/assembledRetrieval.test.ts > M7 body cue access over the same episodic owner > channel cue retrieves newer competing memory, while slots0/1/2 change access without changing retention
+M7 two retained episodes: cue5 selects newer4; slots0/1/2 access0/1/2; lost3 cannot reappear
+
+stdout | src/test/assembledRetrieval.test.ts > M7 body cue access over the same episodic owner > rolls back a late failing instant after retrieval has read and reported prior memory
+M7 retrieval then joint formation: 24 events; cap23 rolls back whole instant
+
+ ✓ src/test/assembledRetrieval.test.ts (7 tests) 72195ms
+   ✓ M7 body cue access over the same episodic owner > preserves four singleton M3 cells: all state, non-recall outputs, actual draws and non-memory traces 16047ms
+   ✓ M7 body cue access over the same episodic owner > channel cue retrieves newer competing memory, while slots0/1/2 change access without changing retention 16523ms
+   ✓ M7 body cue access over the same episodic owner > repeat/restore after4 agree at every later full boundary; hidden truth cannot enter recall 22017ms
+   ✓ M7 body cue access over the same episodic owner > excluded/denied evidence has no cue, zero pressure can be recalled, and recall cannot replace current sensing 10287ms
+   ✓ M7 body cue access over the same episodic owner > rolls back a late failing instant after retrieval has read and reported prior memory 4784ms
+   ✓ M7 body cue access over the same episodic owner > rejects invalid limits, forged channel cues and mismatched model versions 2530ms
+
+ Test Files  1 passed (1)
+      Tests  7 passed (7)
+   Start at  12:11:32
+   Duration  73.78s (transform 866ms, setup 0ms, collect 1.28s, tests 72.20s, environment 0ms, prepare 92ms)
+
+exit=0 seconds=75.2488913
+
+PASS frozen105 dependencies/config/original fixture unchanged vsdb0ca7a8; M1 test/control unchanged vs31553ea7. No V1 invalidation; prior full-control result retained.
+COMMAND npm run check:boundaries
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+exit=0 seconds=2.4784739
+COMMAND npm run check:research
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+exit=0 seconds=4.0307424
+
+PASS document caps/register64KiB; two evidence files/14478 bytes; seven production/test files; recorded checks 213.85s, longest 75.25s.

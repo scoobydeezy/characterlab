@@ -17,6 +17,7 @@ import {compileProtocolBridge} from '../campaign2/protocolBridge';
 import {cognitiveTraceRecord,protocolTraceRecord} from '../campaign2/cognitiveTrace';
 import {workspaceOutput,appraisalOutput,concernOutput,motiveOutput,candidateOutput,rawSignalOutput} from '../campaign2/cognitiveTransforms';
 import {dataRecord as rec,dataField as f,dataItems as items,dataKey as key,dataUnsigned as u,dataIdentity as id} from '../campaign2/canonicalData';
+import {sharedWorkspace,type BodyRecallDelivery} from './workspace';
 import {jointAppraisal,jointConcern,jointSignalSupport} from './appraisal';
 import type {BodyEvidence} from './body';
 import type {compileCharacterInputs} from './inputs';
@@ -47,7 +48,7 @@ const stages=[
 function fail(message:string):never {throw new SchedulerContractError('INPUT_NOT_ADMITTED',message);}
 function stageFail(message:string):never {throw new SchedulerContractError('COGNITIVE_STAGE_VIOLATION',message);}
 
-export function createCognitiveExecution(model:Model,component:State,inputs:Awaited<ReturnType<typeof compileCharacterInputs>>,bodyEvidence:()=>BodyEvidence|undefined=()=>undefined){
+export function createCognitiveExecution(model:Model,component:State,inputs:Awaited<ReturnType<typeof compileCharacterInputs>>,bodyEvidence:()=>BodyEvidence|undefined=()=>undefined,recallEvidence:()=>readonly BodyRecallDelivery[]=()=>[]){
  const rows=items(items(decodeCognitive(model.baseRegistry),'list')[0],'set').filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n).map(v=>rec(v,171n));
  const registration=(name:string)=>f(rows.find(v=>key(f(v,1n))===key(atom(1009,name)))!,4n);
  const definition=(name:string)=>cloneCognitive(component.definition(name));
@@ -114,6 +115,7 @@ export function createCognitiveExecution(model:Model,component:State,inputs:Awai
    // One shared reservation. No nested or copied source allocates an identity.
    const occurrence=typedIdentifier(namespace,unsigned(allocator.allocateRuntimeId()));
    let extraOutputs:CanonicalValue[]=[],jointInput:CanonicalValue|undefined;
+   let workspaceJoin:ReturnType<typeof sharedWorkspace>|undefined;
    let output:CanonicalValue,quantizationOperations:CanonicalValue[]=[],randomDrawRecords:CanonicalValue[]=[];
    if(i===0){
     const cue=rec(event.payload,377n);model.content.validateRecordRoles(enc(cue));
@@ -129,6 +131,7 @@ export function createCognitiveExecution(model:Model,component:State,inputs:Awai
      status(task){const t=tasks.find(v=>key(v.key)===key(task));if(!t)fail('unselected workspace task read');return read(t.path,f(tr,4n)).value;},
      prediction(){return read({rootStateTypeId:pt.rootStateTypeId,fieldId:pt.fieldId,selectors:[{kind:'mapKey',key:r(360,[C,f(pr,2n)])}]},f(pr,4n)).value;},
     }).output;
+    if(model.workspace){workspaceJoin=sharedWorkspace(output,Number(u(f(rec(definition('task-workspace'),378n),2n))),instant,recallEvidence());extraOutputs=[workspaceJoin.report];}
    }else if(i===1){
     const w=rec(event.payload,381n),selected=items(f(w,4n),'list');
     const criteria=selected.map(v=>{const item=rec(v,379n),t=component.tasks.find(t=>key(t.key)===key(f(item,1n))&&key(t.specId)===key(f(item,2n)));if(!t)fail('unselected criterion');return {taskKey:t.key,specId:t.specId,minimum:readQ(t.minimum),maximum:readQ(t.maximum)};});
@@ -172,6 +175,7 @@ export function createCognitiveExecution(model:Model,component:State,inputs:Awai
    const report=joint,projection=jointInput;
    return {output:cloneCognitive(output),additionalOutputs:extraOutputs,reads,domain,quantizationOperations,randomDrawRecords,
     trace(children:readonly ScheduledEvent[]){if(!bound)stageFail('cognitive trace before child binding');const original=rec(cognitiveTraceRecord(model.modelIdentity.value,inputs.runIdentity.value,event,registered,output,children,{domain,reads,quantizationOperations,randomDrawRecords}),160n);
+     if(workspaceJoin){const replacements=new Map<bigint,CanonicalValue>([[6n,text('assembled-character-workspace/0.1-candidate')],[9n,list(workspaceJoin.sourceIds)],[12n,list([event.payload,workspaceJoin.input])],[13n,list([output,workspaceJoin.report])]]);return record(original.schema,new Map([...original.fields].map(([n,v])=>[n,replacements.get(n)??v])));}
      if(!projection)return original;const safe=report?items(report,'list').slice(2,4):[],extraSources=safe.filter(v=>typeof v!=='boolean'&&v.kind==='record').map(v=>f(v as Extract<CanonicalValue,{kind:'record'}>,1n)),sources=new Map([...items(f(original,9n),'list'),...extraSources].map(v=>[key(v),v]));
      const replacements=new Map<bigint,CanonicalValue>([[6n,text(model.body?.selectionCapacity===undefined?'assembled-character-interaction/0.1-candidate':'assembled-character-attention/0.1-candidate')],[9n,list([...sources.values()].sort((a,b)=>key(a)<key(b)?-1:1))],[12n,projection],[13n,extraOutputs.length?list([output,...extraOutputs]):output]]);return record(original.schema,new Map([...original.fields].map(([n,v])=>[n,replacements.get(n)??v])));},
     emissions:()=>structuredClone([...emissions,...additional]),
