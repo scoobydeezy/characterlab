@@ -21,8 +21,8 @@ Results: [M0](ASSEMBLED_CHARACTER_M0_RESULT.md), [M1](ASSEMBLED_CHARACTER_M1_RES
 - M1: all three controls match; 16 tests, typecheck, boundary and research checks PASS.
   Four production/test files; no changes to existing simulation/formal trees.
 - No Campaign 3 member/family coverage closed. No reference law selected.
-- Proposed foundation amendment is in baseline.foundationConstraints; owner adoption
-  pending before the M2 table. The already-adopted phenomenon inventory is unchanged.
+- Owner adopted baseline.foundationConstraints on 2026-10-25, affirming one combined
+  character from Campaigns 0-3 under the existing guardrails. Phenomenon scope is unchanged.
   It pins six C0/C1 verdicts, conformance, five C2 conditions and perception integration.
   Campaign 2 already executes observation/semantic-binding code; rich perception remains
   to compose. SEM-001 closed 2026-09-04; do not reopen it from older ledger status text.

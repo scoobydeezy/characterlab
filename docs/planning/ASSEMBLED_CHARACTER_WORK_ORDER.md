@@ -7,7 +7,8 @@ The owner completed the M0 review and authorized M1 on 2026-10-25.
 
 ## Outcome and authority
 
-Build one continuing character from the Campaign 2 scaffold and Campaign 3 mechanisms.
+Build one continuing character integrating Campaign 0 foundations, Campaign 1 perception,
+Campaign 2 scaffold and Campaign 3 mechanisms. Historical models remain comparison controls.
 The Workbench is stopped. UI development and Campaign 4 remain gated on assembly.
 The eventual UI is one simulation page with a few human-oriented views; its design
 and reuse decisions are deferred. No Workbench screen, catalog or audit framework
@@ -228,9 +229,9 @@ be corrected transparently while retaining the original failure and expected mea
 - Status begins with what the character can now do and what remains. Technical evidence
   follows. Neither file counts nor audit counts constitute feature progress.
 
-## Proposed foundation clarification — owner adoption pending
+## Foundation clarification — owner adopted 2026-10-25
 
-The baseline's foundationConstraints section proposes explicit C0/C1 standing
+The owner adopted the baseline's foundationConstraints section: explicit C0/C1 standing
 constraints, their affected conformance checks/reopen dispositions, the five C2 control
 conditions and Experience integration mapping. This adds no phenomenon denominator.
 Campaign 2 already uses observation/semanticBinding; M2 must locate the actual missing
@@ -239,7 +240,8 @@ capabilities. Historical gate status does not override later accepted closure.
 ## Current authorization boundary
 
 The owner adopted the pinned baseline and approved the revised M1 comparison
-(c2367f16) on 2026-10-25. M1 is authorized under its bounded card in CURRENT.md.
+(c2367f16) and foundation amendment on 2026-10-25. M1 is complete; M2 reconciliation
+is authorized under its bounded card in CURRENT.md.
 M2 review and M2a admission remain required before broader integration. No law
 selection, assembly acceptance, publishing, browser work, long audits or automatic
 Campaign 4/UI transition is authorized by this approval.
