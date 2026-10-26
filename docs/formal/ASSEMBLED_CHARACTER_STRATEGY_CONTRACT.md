@@ -38,6 +38,7 @@ Evidence130 carries exactly these observations; learning140 appends unique recei
 Denied records and the display source never enter planning operands or learned state.
 All generated children are bound by full event fingerprint, parent, phase and payload.
 
+Planning opportunities are admitted only at integer1..100 in0.12.
 At the existing workspace40, only selected, active task keys reach the planner.
 It reads own committed plan/knowledge and uses SeparateGoalPlan: retain a known usable
 prior route, else first known available route0 then1, else no route. Latest issued
@@ -68,6 +69,7 @@ common-stage rollback after a proposed knowledge write, foreign authority, malfo
 source/state/reference and forged/duplicate generated-event rejection.
 MEC004 PORT controlled perception; MEC015..019/022 existing decision/expression/identity
 controls retained; MEC020/EXP013 PORT existing goal lifecycle. No reductions.
-RO-C3-012/013/014/019/020 retain wider monitoring/attribution/goal-control debt.
+RO-C3-012/013/014/020 retain wider monitoring/attribution/control debt. RO019 stays
+closed for historical Campaign3 gates; assembled family replay remains mandatory.
 FND3/4/6 affected ordering/ownership/boundary vectors run in focused integration tests;
 no new foundation law, C3 verdict, corpus replay acceptance or debt closure claimed.

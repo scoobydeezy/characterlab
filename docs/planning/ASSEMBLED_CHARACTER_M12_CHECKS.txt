@@ -1,0 +1,124 @@
+src/assembled/strategy.ts(18,150): error TS2345: Argument of type 'CanonicalValue' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+src/assembled/strategy.ts(18,173): error TS2345: Argument of type 'CanonicalValue' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+src/assembled/strategy.ts(19,239): error TS2345: Argument of type 'CanonicalValue' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+src/assembled/strategy.ts(19,326): error TS2345: Argument of type 'CanonicalValue' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+src/assembled/strategy.ts(19,379): error TS2345: Argument of type 'CanonicalValue' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+src/assembled/strategy.ts(19,448): error TS2345: Argument of type 'CanonicalValue' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+src/assembled/strategyExecution.ts(18,103): error TS2322: Type 'bigint' is not assignable to type 'SimInstant'.
+  Type 'bigint' is not assignable to type '{ readonly [instantBrand]: true; }'.
+src/assembled/strategyExecution.ts(32,237): error TS2538: Type 'undefined' cannot be used as an index type.
+M12 tsc exit=1 seconds=14.9903996
+M12 tsc correction and tests exit=0 seconds=14.8626303
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledStrategy.test.ts > M12 assembled strategy > connection: changed plan reaches actual choice, practiced execution and shared body
+M12 fixed seed7: choices3 two/two; choices5 one/two; actual protocol1/2; fuel0/80; skill1/2; goals preserved.
+
+ ✓ src/test/assembledStrategy.test.ts > M12 assembled strategy > connection: changed plan reaches actual choice, practiced execution and shared body 9077ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  17:06:55
+   Duration  11.46s (transform 1.27s, setup 0ms, collect 1.99s, tests 9.08s, environment 0ms, prepare 124ms)
+
+M12 connection exit=0 seconds=12.93026
+M12 tsc explicit consumed-plan trace exit=0 seconds=15.0563885
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledStrategy.test.ts > M12 assembled strategy > connection: changed plan reaches actual choice, practiced execution and shared body 7370ms
+   → requires list
+ ✓ src/test/assembledStrategy.test.ts > M12 assembled strategy > controls: no-option gap preserves goals and resumes without readoption; denied changes are private 10619ms
+ ✓ src/test/assembledStrategy.test.ts > M12 assembled strategy > controls: selector matches existing component; retained plans, expiry and serious alternatives
+ ✓ src/test/assembledStrategy.test.ts > M12 assembled strategy > controls: repeat and restore after learned switch preserve every later whole boundary 39217ms
+ ✓ src/test/assembledStrategy.test.ts > M12 assembled strategy > controls: false availability does not erase goals; legal reversed mapping; terminal goals stop planning 5317ms
+stdout | src/test/assembledStrategy.test.ts > M12 assembled strategy > controls: closed references/source/state/ownership, real pending children and whole-instant rollback
+M12 common-stage rollback 40 events; limit39
+
+ ✓ src/test/assembledStrategy.test.ts > M12 assembled strategy > controls: closed references/source/state/ownership, real pending children and whole-instant rollback 7605ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledStrategy.test.ts > M12 assembled strategy > connection: changed plan reaches actual choice, practiced execution and shared body
+SchedulerContractError: requires list
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataItems src/campaign2/canonicalData.ts:23:50
+ ❯ src/test/assembledStrategy.test.ts:42:118
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 5 passed (6)
+   Start at  17:08:50
+   Duration  72.56s (transform 1.28s, setup 0ms, collect 2.00s, tests 70.14s, environment 0ms, prepare 128ms)
+
+M12 full affected suite exit=1 seconds=74.0939329
+M12 tsc trace correction and complete admission/lifecycle controls exit=0 seconds=15.0555282
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledStrategy.test.ts > M12 assembled strategy > connection: changed plan reaches actual choice, practiced execution and shared body
+M12 fixed seed7: choices3 two/two; choices5 one/two; actual protocol1/2; fuel0/80; skill1/2; goals preserved.
+
+ ✓ src/test/assembledStrategy.test.ts > M12 assembled strategy > connection: changed plan reaches actual choice, practiced execution and shared body 9290ms
+ ✓ src/test/assembledStrategy.test.ts > M12 assembled strategy > controls: repeat and restore after learned switch preserve every later whole boundary 39029ms
+ ✓ src/test/assembledStrategy.test.ts > M12 assembled strategy > controls: false availability does not erase goals; legal reversed mapping; terminal goals stop planning 9068ms
+stdout | src/test/assembledStrategy.test.ts > M12 assembled strategy > controls: closed references/source/state/ownership, real pending children and whole-instant rollback
+M12 common-stage rollback 40 events; limit39
+
+ ✓ src/test/assembledStrategy.test.ts > M12 assembled strategy > controls: closed references/source/state/ownership, real pending children and whole-instant rollback 7570ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed | 2 skipped (6)
+   Start at  17:11:25
+   Duration  67.38s (transform 1.27s, setup 0ms, collect 1.98s, tests 64.96s, environment 0ms, prepare 124ms)
+
+M12 affected corrections exit=0 seconds=68.8644401
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledSkill.test.ts > M11 procedural integration > controls: unsensed skill/body differences cannot enter cognition through old recalled context 7981ms
+ ✓ src/test/assembledSkill.test.ts > M11 procedural integration > controls: no/blocked practice and absent choice cannot manufacture skill; impairment recovers without unlearning 12874ms
+ ✓ src/test/assembledSkill.test.ts > M11 procedural integration > controls: accepted Development arithmetic, saturation and retained serious laws remain distinguishable 4649ms
+ ✓ src/test/assembledSkill.test.ts > M11 procedural integration > controls: repeat and restore after practice preserve every later whole boundary and actual RNG 50683ms
+ ✓ src/test/assembledSkill.test.ts > M11 procedural integration > controls: malformed sources, phase reversal, foreign writers and supplied acquired state reject 4568ms
+stdout | src/test/assembledSkill.test.ts > M11 procedural integration > controls: late common-stage failure rolls back practice; private forged children reject
+M11 rollback 35 events; limit34
+
+ ✓ src/test/assembledSkill.test.ts > M11 procedural integration > controls: late common-stage failure rolls back practice; private forged children reject 6215ms
+
+ Test Files  1 passed (1)
+      Tests  6 passed | 1 skipped (7)
+   Start at  17:12:47
+   Duration  89.41s (transform 1.28s, setup 0ms, collect 2.00s, tests 86.97s, environment 0ms, prepare 127ms)
+
+M12 prior shared-stage and skill/body regressions exit=0 seconds=90.9260387
+PASS historical105 dependency/config/original-fixture guard vsdb0ca7a8; M1 vs31553ea7. No full historical byte-replay invalidator. seconds=0.319
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+M12 boundaries exit=0 seconds=2.5373829
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+M12 research exit=0 seconds=4.037564
+PASS final caps: production/test10/12; evidence2/20 bytes=17470/5242880; register=65440/65536; lines={'AGENTS.md': 96, 'docs/planning/CURRENT.md': 32, 'docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md': 249, 'docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md': 130}; diff whitespace PASS; seconds=0.451
