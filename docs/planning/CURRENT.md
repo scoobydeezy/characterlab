@@ -1,12 +1,12 @@
-# Current work — M1 complete; M2 reconciliation next
+# Current work — M2 register ready for owner review
 
-2026-10-25. The bounded Campaign 2 character now has one headless entry for prepare,
-start, settle/inspect and save/restore. Its behavior is unchanged. Campaign 3 mechanisms
-remain separate; unified behavior and general configuration admission are still ahead.
+2026-10-25. The character still runs the unchanged Campaign 2 scaffold through one
+headless entry. The M2 register maps the mechanisms to shared owners and names the
+successor boundary. Unified behavior and general configuration remain to implement.
 
 Read [work order](ASSEMBLED_CHARACTER_WORK_ORDER.md),
 [baseline](ASSEMBLED_CHARACTER_BASELINE.json), and
-[M1 comparison](ASSEMBLED_CHARACTER_M1_COMPARISON.md).
+[M2 reconciliation](ASSEMBLED_CHARACTER_RECONCILIATION.md).
 Results: [M0](ASSEMBLED_CHARACTER_M0_RESULT.md), [M1](ASSEMBLED_CHARACTER_M1_RESULT.md).
 
 ## State and owner decision
@@ -14,59 +14,58 @@ Results: [M0](ASSEMBLED_CHARACTER_M0_RESULT.md), [M1](ASSEMBLED_CHARACTER_M1_RES
 - Branch: codex/assembled-character; base 788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535.
 - Old checkout retained; tag archive/workbench-stopped-2026-10-25 preserves
   a2f801146729acb218f245042d103f65170615cf and the original untracked evidence.
-- Owner explicitly said “Yes” on 2026-10-25 to the full baseline at f614c4d1 and
-  revised M1 comparison at c2367f16. That approval preceded implementation.
-- Baseline: corpus 0.29.0; 21 members / 219 overlapping requirement records;
-  15 families / 132 clauses. These are not 351 distinct phenomena.
-- M1: all three controls match; 16 tests, typecheck, boundary and research checks PASS.
-  Four production/test files; no changes to existing simulation/formal trees.
-- No Campaign 3 member/family coverage closed. No reference law selected.
-- Owner adopted baseline.foundationConstraints on 2026-10-25, affirming one combined
-  character from Campaigns 0-3 under the existing guardrails. Phenomenon scope is unchanged.
-  It pins six C0/C1 verdicts, conformance, five C2 conditions and perception integration.
-  Campaign 2 already executes observation/semantic-binding code; rich perception remains
-  to compose. SEM-001 closed 2026-09-04; do not reopen it from older ledger status text.
-- RO-C3-011 and all other conditional debts retain their existing scope/triggers.
-- UI, old audits and Campaign 4 remain stopped. No browser retention requirement.
+- Owner adopted M0 baseline and revised M1 comparison before M1 implementation,
+  then the foundation amendment on 2026-10-25. M2 source review used db0ca7a8.
+- Baseline: corpus0.29.0; 21 members /219 overlapping requirement records;
+  15 families /132 clauses. Six C0/C1 verdicts and five C2 conditions also apply.
+- M1: three controls match;16 tests, typecheck, boundary and research checks PASS.
+  No existing simulation/formal trees changed. Original M1 criteria remain fixed.
+- M2: one register plus CURRENT; no implementation, runtime tests or evidence copies.
+  All60 C3 Runtime.ts files are represented alongside component-only mechanisms.
+- Zero whole runtimes proved duplicate. Shared functions are reusable; meaningful
+  operations keep their own roles and feed the appropriate shared state authority.
+- No Campaign3 family/member coverage closed and no new reference law selected.
+- Campaign2 already calls observation/semanticBinding; rich perception remains to join.
+  SEM-001 closed 2026-09-04. Historical gate wording does not reopen it.
+- RO-C3-011 and other conditional debts keep their scope/triggers. No obligation closed.
+- UI, old audits and Campaign4 remain stopped. No browser retention requirement.
 
 | Item | Disposition |
 |---|---|
-| Research obligations | **0 active / 18 conditional / 0 unowned** |
+| Research obligations | **0 active /18 conditional /0 unowned** |
 | Closed obligations | 4; scoped historical closures preserved |
 
-## Next bounded task: M2 reconciliation table
+## M2 review checkpoint
 
-- Deliverables (3): inventory mechanisms by architecture operation/state authority;
-  classify duplicates, distinct operations and genuine alternative laws; map them
-  to pinned comparisons and identify the M2a admission contract/fields/controls.
-- One table document: docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md, including
-  findings/results. No companion result, design documents, implementation or new framework.
-- Classification is the first column: proved duplicate, distinct operation, genuine
-  alternative, unresolved. Cite equivalence for duplicates; alternatives need owner ruling.
-- Foundation review: include observation/semanticBinding in Experience, existing thin
-  adapters, required successor capabilities, affected vectors and reopen dispositions.
-- Coverage: all pinned members/families remain visible; mark unresolved executable
-  mappings explicitly. Sharing a box or producing equal actions proves no equivalence.
-- Budget: 90 minutes source analysis; one register <=250 lines / 64 KiB plus CURRENT;
-  zero production/test files and no new runtime tests, copies or evidence bundles.
-  At a limit, checkpoint incomplete; do not silently narrow coverage or force a class.
-- Checks: source/contract references and clause/member accounting; document limits,
-  whitespace and staged-size check. Each <=10 minutes, total <=30, one job at a time.
-- Placement: successor under src/assembled; freeze Campaign 2 and its control behavior.
-  Name reused dependencies and versioned replacements; no in-place control extension.
-- Validation: map affected fixtures/projections/checkpoints to failure risks and
-  invalidating paths before execution. Preserve exact within-model replay and restore.
-  Full control comparison at separation, affected dependency changes and final acceptance.
-- Done: complete classified table and explicit unresolved decisions presented once
-  for owner review. No broad integration or law choice before that review.
+- Review register R0/R1 first, genuine alternatives L1–L8, then U1–U4 unresolved work.
+- Recommendation: separate successor under src/assembled; keep Campaign2 and its
+  transitive control dependencies frozen. Reuse kernels; no independent-runtime dispatch.
+- Recommend fixed named variants for meaningful alternatives; preserve negative,
+  ablation and representation controls in their proper roles. No new variant catalog.
+- U1–U4 retain unresolved shared keys/evidence, selector correspondences, domain lifts
+  and interaction/trace work. Resolve affected executable mappings before their coding;
+  source/family routing is not executable coverage or approval to guess fixtures.
+- S1–S4 name placement, identity boundary and bounded composition-port proposal.
+  A1–A3 specify M2a admission fields, nested gates, negative controls and finish rule.
+- V1–V4 tie future checks to concrete failure risks and invalidating dependencies.
+  Keep full-byte checks for frozen control and within-model replay/restore; use
+  predeclared semantic correspondence across changed models. Never trim after failure.
+- Budget used: one register <=250 lines /64 KiB plus this file; zero production/tests.
+  Reference/accounting/document-limit checks PASS; whitespace and staged size gate commit.
+- Stop here for the work order's single M2 owner review before M2a implementation.
 
 ## Required follow-on sequence
 
-M2 register and owner review -> M2a configuration admission -> broader integration.
-M2a versions and implements invariant-based admission with a valid non-preset run
-and deterministic save/restore. The 21-model allowlist cannot be enlarged or left as
-later backlog. Its bounded implementation card follows the M2 review.
-New capability belongs inside shared runtime/state, never alternate entry pipelines.
+M2 owner review -> bounded M2a configuration-admission card -> versioned contract
+before code -> invariant-based successor admission -> broader integration by causal
+need. No additional review gate is invented for routine work within the approved card.
 
-Historical routing logs/evidence resolve on the preservation tag. M1 checks are done;
-rerun only after a relevant change/failure, with its invalidation reason named.
+M2a must admit a legal non-preset configuration and deterministic save/restore without
+21-recipe digest membership. Nested task/channel/content restrictions must be stated
+as domain invariants or replaced explicitly. Removing only the top-level gate is
+insufficient. Later mechanisms extend this same contract and shared runtime/state.
+
+Before coding: <=3 capabilities, <=12 production/test files, <=20 evidence files/5MiB,
+10 minutes/check and30 minutes total; exact fixtures/projections/checkpoints/risks.
+If the work cannot fit, split or seek a concrete budget amendment before execution.
+Historical controls and the final21-member/15-family/132-clause acceptance remain.
