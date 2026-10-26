@@ -1,0 +1,101 @@
+/** assembled-character-interaction/0.1: one physical owner and current evidence lane.
+ * This adapter has no scheduler, run, save, RNG or cognition of its own. */
+import {canonicalEncode as enc,list,set,signed,unsigned,text,typedIdentifier,type CanonicalValue} from '../substrate/canonicalEncoding';
+import {AuthoritativeState,StateAuthorityRegistry,ContractReadProjection,applyStatePatch,restoreAuthoritativeState,statePathValue,type StatePath,type StatePathPattern,type StatePatch,type ActualReadRecord} from '../substrate/state';
+import {SchedulerContractError,type ScheduledEvent,type EventHandlerContext,type EventEmission} from '../substrate/scheduler';
+import {traceRecordValue} from '../substrate/trace';
+import {scheduledEventValue} from '../substrate/persistence';
+import {ExactRational as Q} from '../substrate/exactMath';
+import {decodeEmbodied as decode,embodiedRecord as r} from '../campaign3/embodiedCodecs';
+import {exact,atom,materializeReserve,reserveBin} from '../campaign3/embodiedMath';
+import {proposeEmbodiedReplenishment} from '../campaign3/embodiedReplenishment';
+import {admitObservationLane,freezeAndStageSemanticExperience,validateSuccessfulExperienceSettlement,type ExperienceReservation,type StagedSemanticExperience} from '../semanticBinding/phaseOrdering';
+import {assemblePreRecognitionExperience} from '../semanticBinding/perceptualEventFiles';
+import {preRecognitionSemanticExperienceValue} from '../semanticBinding/semanticEvidenceCodecs';
+import {dataItems as items,dataField as f,dataRecord as rec,dataKey as key,dataIdentity as id,dataText as txt,invalidModel} from '../campaign2/canonicalData';
+import type {compileCampaign2StateModel} from '../campaign2/stateModel';
+export const bodyId=(ns:number,name:string)=>typedIdentifier(ns,text(name));
+export const BODY_SAMPLE=bodyId(1001,'event/assembled-body-sample'),BODY_DELIVERY=bodyId(1001,'event/assembled-body-delivery');
+export const BODY_OWNER=bodyId(1025,'authority/embodied-reserve');
+export const BODY_OBSERVER=bodyId(1000,'observer/bridge-subject');
+export const BODY_CHANNEL=bodyId(1005,'channel/assembled-body-level');
+export const BODY_DEFINITION=bodyId(1027,'definition/assembled-body-level');
+const SEM='semantic-binding/0.1-candidate#SEM-001H';
+const fail=(s:string):never=>{throw new SchedulerContractError('INPUT_NOT_ADMITTED',s);};
+export function compileBodyDeclaration(value:CanonicalValue){
+ const a=items(value,'list');if(a.length!==7||txt(a[0])!=='assembled-body/0.1'||typeof a[5]!=='boolean'||typeof a[6]!=='boolean')invalidModel('body declaration requires seven typed fields');
+ const [capacity,rate,width,threshold]=a.slice(1,5).map(exact),zero=Q.of(0n);
+ if(capacity.compare(zero)<=0||rate.compare(zero)<0||width.compare(zero)<=0||width.compare(capacity)>0||capacity.divide(width).denominator!==1n||threshold.compare(zero)<=0||threshold.compare(capacity)>0)invalidModel('body capacity/rate/grid/threshold domain');
+ return Object.freeze({capacity,rate,width,threshold,permitted:a[5] as boolean,available:a[6] as boolean});
+}
+export type BodyDeclaration=ReturnType<typeof compileBodyDeclaration>;
+export const bodyPath=(C:CanonicalValue):StatePath=>({rootStateTypeId:455n,fieldId:1n,selectors:[{kind:'mapKey',key:C}]});
+const exactPattern=(path:StatePath):StatePathPattern=>({...path,selectors:path.selectors.map(selector=>({kind:'exact',selector}))});
+/** Extend the single authoritative state, preserving the inherited validator/owners. */
+export function withBodyState(base:ReturnType<typeof compileCampaign2StateModel>,C:CanonicalValue,d:BodyDeclaration){
+ const path=bodyPath(C),pattern=exactPattern(path),pathKey=key(statePathValue(path));
+ const checkPath=(p:StatePath)=>{if(key(statePathValue(p))!==pathKey)fail('body path is not the declared holder');};
+ const checkValue=(v:CanonicalValue)=>{const a=rec(decode(enc(v)),454n),at=f(a,2n);if(typeof at==='boolean'||at.kind!=='signed'||at.value<0n)fail('body anchor instant');materializeReserve(exact(f(a,1n)),(at as {value:bigint}).value,d.capacity,d.rate,(at as {value:bigint}).value);};
+ const authority=new StateAuthorityRegistry([{pattern,validateValue:checkValue,removalAllowed:false}],[{mutationAuthorityId:BODY_OWNER,patterns:[pattern]}]);
+ const without=(s:AuthoritativeState)=>new AuthoritativeState(s.entries().filter(e=>e.path.rootStateTypeId!==455n));
+ function validateState(s:AuthoritativeState){base.validateState(without(s));const bodies=s.entries().filter(e=>e.path.rootStateTypeId===455n);if(bodies.length!==1)fail('one required body anchor');for(const e of bodies){checkPath(e.path);checkValue(e.value);}}
+ return Object.freeze({...base,validateState,
+  validatePath(p:StatePath){if(p.rootStateTypeId===455n)checkPath(p);else base.validatePath(p);},
+  restoreState(bytes:Uint8Array){const s=restoreAuthoritativeState(decode(bytes));validateState(s);return s;},
+  read(s:AuthoritativeState,p:StatePath){if(p.rootStateTypeId!==455n)return base.read(s,p);checkPath(p);const v=s.read(p);if(v.presence)checkValue(v.value!);return v;},
+  applyPatch(s:AuthoritativeState,p:StatePatch,owner:Parameters<typeof base.applyPatch>[2],scope?:Parameters<typeof base.applyPatch>[3]){
+   const body=p.operations.filter(o=>o.path.rootStateTypeId===455n);if(body.length&&body.length!==p.operations.length)fail('body writer cannot cross owner families');
+   if(body.length){for(const o of body){checkPath(o.path);if(scope&&(!scope.writableRoots.includes(455n)||!scope.targetPaths.some(x=>key(statePathValue(x))===key(statePathValue(o.path)))))fail('body write scope');}const result=applyStatePatch(s,p,owner,authority);validateState(result.state);return result;}
+   const result=base.applyPatch(without(s),p,owner,scope),state=new AuthoritativeState([...result.state.entries(),...s.entries().filter(e=>e.path.rootStateTypeId===455n)]);validateState(state);return {...result,state};
+  },
+ });
+}
+export interface BodyEvidence {sample:CanonicalValue;experience?:CanonicalValue;settledEvent:ScheduledEvent;}
+export function createBodyExecution(d:BodyDeclaration,C:CanonicalValue,stateModel:ReturnType<typeof compileCampaign2StateModel>,originals:readonly ScheduledEvent[],model:CanonicalValue,run:CanonicalValue){
+ const path=bodyPath(C),roster:StatePath={rootStateTypeId:268n,fieldId:1n,selectors:[{kind:'mapKey',key:BODY_OBSERVER}]};
+ const names=['tracking','binding','classification','freeze'],internal=names.map(n=>bodyId(1001,'event/assembled-body-'+n));
+ const pending=new Map<string,ScheduledEvent>();let at=0n,active=false,used=new Set<bigint>(),reservations:ExperienceReservation[]=[],staged:StagedSemanticExperience[]=[],current:BodyEvidence|undefined;
+ function read(state:AuthoritativeState,p:StatePath,accessor:string){const projection=new ContractReadProjection(state,[exactPattern(p)],{value:{kind:'direct',accessorId:bodyId(1028,accessor),path:p}});const value=projection.read('value');if(value===undefined)fail('required body/IDN projection absent');return {value:value!,reads:projection.actualReadRecords()};}
+ function authenticate(e:ScheduledEvent){if(!active||e.dueAt!==at||used.has(e.eventId))fail('body source lifecycle');const expected=e.phase===10n||e.phase===110n?originals.find(o=>o.eventId===e.eventId):pending.get(key(scheduledEventValue(e)));if(!expected||key(scheduledEventValue(expected))!==key(scheduledEventValue(e)))fail('unbound body source/child');used.add(e.eventId);pending.delete(key(scheduledEventValue(e)));}
+ return Object.freeze({
+  eventTypes:()=>[BODY_SAMPLE,BODY_DELIVERY,...internal],
+  begin(instant:bigint){if(active)fail('body instant already active');at=instant;active=true;used=new Set();pending.clear();reservations=[];staged=[];current=undefined;},
+  evidence(){if(!active)fail('body evidence outside current instant');return current?structuredClone(current):undefined;},
+  execute(context:EventHandlerContext<AuthoritativeState>){
+   const {event,state}=context;authenticate(event);
+   let outputs:CanonicalValue[]=[],reads:ActualReadRecord[]=[],quantization:CanonicalValue[]=[],patch:StatePatch={operations:[]},nextState=state,diffs:ReturnType<typeof stateModel.applyPatch>['diffs']=[],emissions:EventEmission[]=[],domain:StatePathPattern[]=[],sources:ReturnType<typeof id>[]=[];
+   const emit=(phase:bigint,type:CanonicalValue,payload:CanonicalValue)=>{emissions=[{dueAt:event.dueAt,phase,eventTypeId:id(type),payload,dependencies:list([])}];};
+   if(event.phase===110n){
+    if(key(event.eventTypeId)!==key(BODY_DELIVERY))fail('body delivery event');const payload=items(event.payload,'list');if(payload.length!==2||key(payload[0])!==key(C))fail('body delivery target');
+    const prior=read(state,path,'accessor/embodied-reserve-anchor'),anchor=rec(prior.value,454n),anchorAt=f(anchor,2n);if(typeof anchorAt==='boolean'||anchorAt.kind!=='signed')fail('body anchor');
+    reads=[...prior.reads];domain=[exactPattern(path)];const level=materializeReserve(exact(f(anchor,1n)),(anchorAt as {value:bigint}).value,d.capacity,d.rate,at);
+    const proposal=proposeEmbodiedReplenishment(anchor,level,d.capacity,exact(payload[1]),at,path);patch=proposal.patch;const applied=stateModel.applyPatch(state,patch,BODY_OWNER,{writableRoots:[455n],targetPaths:[path]});nextState=applied.state;diffs=applied.diffs;outputs=[proposal.output];
+   }else if(event.phase===10n){
+    if(key(event.eventTypeId)!==key(BODY_SAMPLE))fail('body sample event');const cue=rec(event.payload,459n);if(key(f(cue,1n))!==key(BODY_OBSERVER)||key(f(cue,2n))!==key(BODY_DEFINITION))fail('body observer/channel');
+    const binding=read(state,roster,'ResolvedCharacterSubject');if(key(f(rec(binding.value,267n),1n))!==key(C))fail('body IDN target mismatch');reads=[...binding.reads];domain=[exactPattern(roster),exactPattern(path)];
+    const occurrence=typedIdentifier(1115,unsigned(context.allocateRuntimeId()));let sample:CanonicalValue,carrier:CanonicalValue;
+    if(d.permitted&&d.available){const prior=read(state,path,'accessor/embodied-reserve-anchor'),anchor=rec(prior.value,454n),anchorAt=f(anchor,2n);if(typeof anchorAt==='boolean'||anchorAt.kind!=='signed')fail('body anchor');reads.push(...prior.reads);
+     const level=materializeReserve(exact(f(anchor,1n)),(anchorAt as {value:bigint}).value,d.capacity,d.rate,at),bin=reserveBin(level,d.capacity,d.width);
+     sample=r(461,[occurrence,BODY_OBSERVER,BODY_CHANNEL,signed(at),r(462,[atom(bin.lower),atom(bin.upper)]),text('embodied-level-observation/0.1-candidate')]);quantization=[r(484,[atom(level),atom(d.capacity),atom(d.width),unsigned(bin.index)])];
+     const reservation=admitObservationLane({observerId:txt(BODY_OBSERVER.payload),lane:'Current',dueAt:at,emitsCharacterAccessibleEvidence:true},()=>context.allocateRuntimeId()).reservation!;reservations.push(reservation);carrier=r(482,[unsigned(1),sample,typedIdentifier(1106,unsigned(reservation.experienceId))]);
+    }else{sample=r(463,[occurrence,BODY_OBSERVER,BODY_CHANNEL,signed(at),text('embodied-level-observation/0.1-candidate')]);context.allocateRuntimeId();carrier=r(482,[unsigned(2),sample]);}
+    outputs=[sample];emit(11n,internal[0],carrier);
+   }else{
+    const index=internal.findIndex(t=>key(t)===key(event.eventTypeId));if(index<0||event.phase!==11n+BigInt(index))fail('body internal phase');const carrier=rec(event.payload,482n),sample=f(carrier,2n),present=(sample as {schema:{typeId:bigint}}).schema.typeId===461n,s=rec(sample,present?461n:463n);sources=[id(f(s,1n))];
+    if(index<3)emit(event.phase+1n,internal[index+1],carrier);
+    else {let experience:CanonicalValue|undefined;
+     if(present){const occurrence=id(f(carrier,3n)),ordinal=occurrence.payload;if(typeof ordinal==='boolean'||ordinal.kind!=='unsigned')fail('body reservation id');const reservation=reservations.find(v=>v.experienceId===(ordinal as {value:bigint}).value);if(!reservation)fail('body missing reservation');
+      const observation=id(f(s,1n)).payload;if(typeof observation==='boolean'||observation.kind!=='unsigned')fail('body observation id');const value=assemblePreRecognitionExperience({experienceId:reservation!.experienceId,observerId:txt(BODY_OBSERVER.payload),occurredAt:at,perceptualEventReferentIds:[],perceivedBindings:[],perceptualClassifications:[],perceptualEventClassifications:[],supportingObservationIds:[{observerId:txt(BODY_OBSERVER.payload),observationId:(observation as {value:bigint}).value}],transformationVersion:SEM});
+      const frozen=freezeAndStageSemanticExperience(reservation!,value,event.phase);staged.push(frozen);experience=preRecognitionSemanticExperienceValue(frozen.experience);outputs=[experience];
+     }current={sample,experience,settledEvent:structuredClone(event)};
+    }
+   }
+   return {nextState,outputs,emittedEvents:emissions,traceContributions:[],traceFactory(children:readonly ScheduledEvent[]){
+    if(children.length!==emissions.length)fail('body child multiplicity');for(const [i,child] of children.entries()){const e=emissions[i],expected={...e,eventId:child.eventId,eventSequence:child.eventSequence,causalParentEventIds:[event.eventId]};if(child.eventSequence<=event.eventSequence||pending.has(key(scheduledEventValue(child)))||key(scheduledEventValue(child))!==key(scheduledEventValue(expected)))fail('body child differs from generated plan');pending.set(key(scheduledEventValue(child)),structuredClone(child));}
+    return [traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model,runIdentity:run,event,seamId:bodyId(1036,'seam/assembled-body'),seamVersion:'assembled-character-interaction/0.1-candidate',recordKind:event.eventTypeId,subjectIds:[id(C),BODY_OBSERVER],sourceRecordIds:sources,registeredReadDomain:domain,actualReadRecords:reads,inputProjection:event.payload,outputProjection:list(outputs),randomDrawRecords:[],quantizationOperations:quantization,statePatch:patch,structuralMutationDiffs:diffs,emittedEvents:children,invariantResults:[]})];
+   }};
+  },
+  prepareCommit(){if(!active||pending.size||originals.some(e=>e.dueAt===at&&!used.has(e.eventId)))fail('unfinished body instant');validateSuccessfulExperienceSettlement(reservations,staged);},
+  close(){active=false;pending.clear();current=undefined;reservations=[];staged=[];},
+ });
+}

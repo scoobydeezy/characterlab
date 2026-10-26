@@ -1,0 +1,95 @@
+src/assembled/body.ts(38,207): error TS2551: Property 'value' does not exist on type 'CanonicalValue'. Did you mean 'valueOf'?
+  Property 'value' does not exist on type 'false'.
+src/assembled/body.ts(38,234): error TS2551: Property 'value' does not exist on type 'CanonicalValue'. Did you mean 'valueOf'?
+  Property 'value' does not exist on type 'false'.
+src/assembled/body.ts(39,105): error TS2353: Object literal may only specify known properties, and 'authorityId' does not exist in type 'MutationAuthorityDeclaration'.
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/semanticPhaseOrdering.test.ts (10 tests) 14ms
+ ✓ src/test/observationIntegration.test.ts (2 tests) 20ms
+ ✓ src/test/embodiedContrasts.test.ts (8 tests) 3691ms
+   ✓ EMB committed public comparisons > executes the exact 41/49 alias and depleted-refill witnesses as new original-input runs 1257ms
+   ✓ EMB committed public comparisons > separates kinetics, resolution and hidden-state aliases through the admitted channel 1235ms
+   ✓ EMB committed public comparisons > same saturated body/evidence coexists with different trace-only overflow 601ms
+   ✓ EMB committed public comparisons > denied/unavailable branches are byte-equal, make only the real roster read and never write 594ms
+ ❯ src/test/assembledBody.test.ts (4 tests | 3 failed) 8873ms
+   × M3 A: body evidence in the one character > executes physical delivery and actual current SEM, then restores the complete character 2015ms
+     → assembled trace requires exact model/run binding
+   ✓ M3 A: body evidence in the one character > rejects invalid declarations, foreign sources and body ownership 3255ms
+   × M3 A: body evidence in the one character > permission and availability produce the same no-operand evidence, distinct from a known empty bin 1796ms
+     → assembled trace requires exact model/run binding
+   × M3 A: body evidence in the one character > rolls back an earlier body write when a later source in the same instant fails 1807ms
+     → assembled trace requires exact model/run binding
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledBody.test.ts > M3 A: body evidence in the one character > executes physical delivery and actual current SEM, then restores the complete character
+SchedulerContractError: assembled trace requires exact model/run binding
+ ❯ Module.compileCharacterTraceBinding src/assembled/traceBinding.ts:25:75
+     23| export function compileCharacterTraceBinding(modelIdentity:CanonicalVa…
+     24|  const model=rec(modelIdentity,103n),run=rec(runIdentity,104n);
+     25|  if(txt(f(model,1n))!==CHARACTER_RULES||key(f(run,1n))!==key(model))th…
+       |                                                                           ^
+     26|  return Object.freeze({record(event:ScheduledEvent,outputs:readonly Ca…
+     27|   const name=txt(event.eventTypeId.payload),probeIndex=probe?.eventTyp…
+ ❯ Module.createCharacterRuntime src/assembled/runtime.ts:41:14
+ ❯ Module.createCharacterRun src/assembled/character.ts:39:122
+ ❯ src/test/assembledBody.test.ts:16:104
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/3]⎯
+
+ FAIL  src/test/assembledBody.test.ts > M3 A: body evidence in the one character > permission and availability produce the same no-operand evidence, distinct from a known empty bin
+SchedulerContractError: assembled trace requires exact model/run binding
+ ❯ Module.compileCharacterTraceBinding src/assembled/traceBinding.ts:25:75
+     23| export function compileCharacterTraceBinding(modelIdentity:CanonicalVa…
+     24|  const model=rec(modelIdentity,103n),run=rec(runIdentity,104n);
+     25|  if(txt(f(model,1n))!==CHARACTER_RULES||key(f(run,1n))!==key(model))th…
+       |                                                                           ^
+     26|  return Object.freeze({record(event:ScheduledEvent,outputs:readonly Ca…
+     27|   const name=txt(event.eventTypeId.payload),probeIndex=probe?.eventTyp…
+ ❯ Module.createCharacterRuntime src/assembled/runtime.ts:41:14
+ ❯ Module.createCharacterRun src/assembled/character.ts:39:122
+ ❯ src/test/assembledBody.test.ts:41:14
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/3]⎯
+
+ FAIL  src/test/assembledBody.test.ts > M3 A: body evidence in the one character > rolls back an earlier body write when a later source in the same instant fails
+SchedulerContractError: assembled trace requires exact model/run binding
+ ❯ Module.compileCharacterTraceBinding src/assembled/traceBinding.ts:25:75
+     23| export function compileCharacterTraceBinding(modelIdentity:CanonicalVa…
+     24|  const model=rec(modelIdentity,103n),run=rec(runIdentity,104n);
+     25|  if(txt(f(model,1n))!==CHARACTER_RULES||key(f(run,1n))!==key(model))th…
+       |                                                                           ^
+     26|  return Object.freeze({record(event:ScheduledEvent,outputs:readonly Ca…
+     27|   const name=txt(event.eventTypeId.payload),probeIndex=probe?.eventTyp…
+ ❯ Module.createCharacterRuntime src/assembled/runtime.ts:41:14
+ ❯ Module.createCharacterRun src/assembled/character.ts:39:122
+ ❯ src/test/assembledBody.test.ts:50:41
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/3]⎯
+
+ Test Files  1 failed | 3 passed (4)
+      Tests  3 failed | 21 passed (24)
+   Start at  21:55:01
+   Duration  15.57s (transform 1.10s, setup 0ms, collect 2.01s, tests 12.60s, environment 1ms, prepare 343ms)
+
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledBody.test.ts (4 tests) 14453ms
+   ✓ M3 A: body evidence in the one character > executes physical delivery and actual current SEM, then restores the complete character 3885ms
+   ✓ M3 A: body evidence in the one character > rejects invalid declarations, foreign sources and body ownership 3249ms
+   ✓ M3 A: body evidence in the one character > permission and availability produce the same no-operand evidence, distinct from a known empty bin 5497ms
+   ✓ M3 A: body evidence in the one character > rolls back an earlier body write when a later source in the same instant fails 1821ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed (4)
+   Start at  21:55:37
+   Duration  15.95s (transform 830ms, setup 0ms, collect 1.22s, tests 14.45s, environment 0ms, prepare 92ms)
+
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.

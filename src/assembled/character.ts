@@ -12,8 +12,8 @@ import {compileCharacterModel} from './model';
 import {compileCharacterState} from './state';
 import {compileCognitiveIngress} from './ingress';
 import {createCharacterRuntime} from './runtime';
-import {compileOrderedInputProfile,COGNITIVE_INPUT_PROFILE} from '../campaign2/orderedInputs';
-import {decodeCognitive} from '../campaign2/cognitiveCodecs';
+import {compileCharacterInputs} from './inputs';
+import {decodeEmbodied as decodeCognitive} from '../campaign3/embodiedCodecs';
 import {dataRecord as rec,dataField as f,dataItems as items,dataKey as key,invalidModel} from '../campaign2/canonicalData';
 import type {Campaign2ModelSource} from '../campaign2/factory';
 declare const brand:unique symbol;
@@ -36,8 +36,7 @@ function copies<K extends string>(input:Record<K,Uint8Array>,names:readonly K[])
 }
 export async function createCharacterRun(handle:CharacterModel,input:{initialState:Uint8Array;orderedInputs:Uint8Array;runSeed:Uint8Array}){
  const {model,component}=facts(handle),data=copies(input,['initialState','orderedInputs','runSeed']);
- const state=component.initialState(data.initialState),profile=compileOrderedInputProfile(COGNITIVE_INPUT_PROFILE,model.content,component.prior.base.domains,decodeCognitive);
- const inputs=await profile.create(data.orderedInputs,data.initialState,model.modelIdentity,data.runSeed),runtime=createCharacterRuntime(model,component,inputs,state);
+ const state=component.initialState(data.initialState),inputs=await compileCharacterInputs(model,component,data),runtime=createCharacterRuntime(model,component,inputs,state);
  return Object.freeze({async settleNextInstant(){return (await runtime.settleNextInstant())!==undefined;},snapshot(){const s=runtime.snapshot();return Object.freeze({clock:s.clock,status:s.status,state:enc(s.state.canonicalValue()),outputs:enc(list(s.outputs)),trace:enc(list(s.committedTrace))});},
   save:()=>runtime.save(model.modelIdentity,inputs.runIdentity),runIdentity:()=>inputs.runIdentity.canonicalBytes.slice(),diagnostic(){const d=runtime.diagnostic();return d?enc(failureDiagnosticValue(inputs.runIdentity.value,d)):undefined;}});
 }

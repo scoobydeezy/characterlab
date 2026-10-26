@@ -1,6 +1,6 @@
 /** assembled-character-model/0.1-candidate. One fixed composition and scheduler.
  * Bounded port of the reachable cognitive wiring in C2 adaptationRuntime; no optional
- * model selection, authored-fact branch, bridge branch or imported continuation. */
+ * model selection, authored-fact/consequence bridge branch (the generated protocol bridge remains) or imported continuation. */
 import {canonicalEncode,text,list,type CanonicalValue} from '../substrate/canonicalEncoding';
 import {AuthoritativeState} from '../substrate/state';
 import {DeterministicScheduler,SchedulerContractError,type ScheduledEvent,type EventHandlerContext,type EventHandler} from '../substrate/scheduler';
@@ -23,10 +23,12 @@ import {evidOperands,executeEvid} from '../campaign2/evidExecution';
 import {compileCognitiveIngress} from './ingress';
 import {createCognitiveExecution} from './execution';
 import {compileCharacterTraceBinding} from './traceBinding';
+import {createBodyExecution,BODY_SAMPLE,BODY_DELIVERY} from './body';
+import type {compileCharacterInputs} from './inputs';
 import type {compileCharacterModel} from './model';
 import type {compileCharacterState} from './state';
 
-export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCharacterModel>>,component:Awaited<ReturnType<typeof compileCharacterState>>,inputs:Awaited<ReturnType<ReturnType<typeof compileOrderedInputProfile>['create']>>,initialState:AuthoritativeState){
+export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCharacterModel>>,component:Awaited<ReturnType<typeof compileCharacterState>>,inputs:Awaited<ReturnType<typeof compileCharacterInputs>>,initialState:AuthoritativeState){
  const base=component.prior.base,bindings=compileCognitiveIngress(model,component),stateModel=component.stateModel,content=model.content;
  const memory=Object.freeze({...component.prior.memoryComponent,stateModel,content});
  const prediction=Object.freeze({...component.prior,stateModel,content,memoryComponent:memory});
@@ -38,7 +40,8 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
  const predictionRuntime=createPredictionExecution(prediction,modelIdentity,inputs.runIdentity.value,[]);
  const trace=compileCharacterTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel);
  stateModel.validateState(initialState);domains.validateStatic(initialState);domains.validateReferences(initialState,0n);
- const initial=taskInitialSchedule(task,inputs,canonicalEncode(initialState.canonicalValue()));
+ const initial=inputs.initial;
+ const body=model.body?createBodyExecution(model.body,component.tasks[0].character,stateModel,inputs.bodyEvents,modelIdentity,inputs.runIdentity.value):undefined;
  const taskRuntime=createTaskExecution(task,modelIdentity,inputs.runIdentity.value,initial.deadlines.map(event=>({event})));
  let ingress:ReturnType<typeof beginTransitionIngressV04>|undefined;
  let probe:ReturnType<typeof probeModel.begin>|undefined,probeSource:ReturnType<typeof beginProbeSourceInstant>|undefined;
@@ -49,6 +52,7 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
   const registerHandler=(eventKey:string,handler:EventHandler<AuthoritativeState>)=>{
     if(handlers.has(eventKey))throw new SchedulerContractError('INVALID_CONFIGURATION','event has multiple fixed runtime adapters');handlers.set(eventKey,handler);
   };
+  for(const eventType of body?.eventTypes()??[])registerHandler(key(eventType),context=>body!.execute(context));
   for(const eventType of probeModel.eventTypes()??[])registerHandler(key(eventType),context=>{
    if(!probe||!ingress||!probeSource)throw new SchedulerContractError('INPUT_NOT_ADMITTED','probe outside live instant');
    if(key(context.event.eventTypeId)===key(PROBE_SOURCE_EVENT)){probeSource.admit(context.event);probeInstant=true;}
@@ -130,10 +134,10 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
     adaptationSettlement:{version:'adaptation-settlement/0.2-candidate',
       beforeInstant(state,instant){
         domains.validateStatic(state);domains.validateReferences(state,instant);
-        probeInstant=false;runtimeCount=0;childCount=0;carriagePadding=undefined;memoryRuntime.begin(instant);predictionRuntime.begin(instant);taskRuntime.begin(instant);cognitive.begin(instant);
+        probeInstant=false;runtimeCount=0;childCount=0;carriagePadding=undefined;memoryRuntime.begin(instant);predictionRuntime.begin(instant);taskRuntime.begin(instant);cognitive.begin(instant);body?.begin(instant);
         ingress=beginTransitionIngressV04(shared,instant);
 
-        probe=probeModel.begin(instant);probeSource=beginProbeSourceInstant(inputs,instant);
+        probe=probeModel.begin(instant);probeSource=beginProbeSourceInstant(inputs.base,instant);
       },
       prepare(events,state,instant){
         if(!ingress)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','missing live ingress');
@@ -209,9 +213,9 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
          finish(){if(finished||cursor!==events.length||!result)bad('incomplete cognitive common stage');finished=true;const inheritedState=inherited.finish(),applied=stateModel.applyPatch(inheritedState,result!.patch,result!.authority,{writableRoots:[415n],targetPaths:paths});identityTrace=result!.trace(applied.diffs);return applied.state;},
          finalizeTrace(){if(!finished||!identityTrace)bad('cognitive trace before WRT completion');const rows=inherited.finalizeTrace();let i=0;return events.map(e=>e===identityEvent?identityTrace!:rows[i++]);}};
       },
-      beforeCommit(state,instant){domains.validateStatic(state);domains.validateReferences(state,instant);probe?.finish();ingress!.finish();if(probeInstant&&(runtimeCount!==7||childCount!==14||carriagePadding))throw new SchedulerContractError('TRANSITION_INGRESS_VIOLATION','carriage/memory budget closure');taskRuntime.prepareCommit(state);predictionRuntime.prepareCommit();cognitive.prepareCommit();memoryRuntime.commit();predictionRuntime.commit();taskRuntime.commit();cognitive.commit();},
-      close(){memoryRuntime.close();predictionRuntime.close();taskRuntime.close();cognitive.close();ingress?.abort();probe?.abort();probeSource?.close();ingress=undefined;probe=undefined;probeSource=undefined;},
-      validateRuntimeEmission(event){if(key(event.eventTypeId)===key(AUTHORED_FACT_EVENT)||key(event.eventTypeId)===key(PROBE_SOURCE_EVENT)||key(event.eventTypeId)===key(DELIBERATION_EVENT)||key(event.eventTypeId)===key(TASK_DEADLINE_EVENT))throw new SchedulerContractError('INPUT_ONLY_EVENT_ORIGIN_VIOLATION','sources are compiler-only inputs');},
+      beforeCommit(state,instant){domains.validateStatic(state);domains.validateReferences(state,instant);probe?.finish();body?.prepareCommit();ingress!.finish();if(probeInstant&&(runtimeCount!==7||childCount!==14||carriagePadding))throw new SchedulerContractError('TRANSITION_INGRESS_VIOLATION','carriage/memory budget closure');taskRuntime.prepareCommit(state);predictionRuntime.prepareCommit();cognitive.prepareCommit();memoryRuntime.commit();predictionRuntime.commit();taskRuntime.commit();cognitive.commit();},
+      close(){body?.close();memoryRuntime.close();predictionRuntime.close();taskRuntime.close();cognitive.close();ingress?.abort();probe?.abort();probeSource?.close();ingress=undefined;probe=undefined;probeSource=undefined;},
+      validateRuntimeEmission(event){if(key(event.eventTypeId)===key(BODY_SAMPLE)||key(event.eventTypeId)===key(BODY_DELIVERY)||key(event.eventTypeId)===key(AUTHORED_FACT_EVENT)||key(event.eventTypeId)===key(PROBE_SOURCE_EVENT)||key(event.eventTypeId)===key(DELIBERATION_EVENT)||key(event.eventTypeId)===key(TASK_DEADLINE_EVENT))throw new SchedulerContractError('INPUT_ONLY_EVENT_ORIGIN_VIOLATION','sources are compiler-only inputs');},
     },
   });
   // Only quiescent observations/settlement are exposed. No injection, allocator or handler API.

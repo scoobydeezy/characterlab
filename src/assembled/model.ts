@@ -13,6 +13,10 @@ import {decodeCognitive,cognitiveSchemaByType} from '../campaign2/cognitiveCodec
 import {dataRecord as rec,dataField as f,dataItems as items,dataKey as key,dataIdentity as id,dataText as txt,dataUnsigned as uint,invalidModel} from '../campaign2/canonicalData';
 import type {Campaign2ModelSource} from '../campaign2/factory';
 
+import {decodeEmbodied} from '../campaign3/embodiedCodecs';
+import {compileBodyDeclaration} from './body';
+export const INTERACTION_RULES='rules/assembled-character/0.2-candidate';
+export const INTERACTION_REGISTRY='assembled-character-registry/0.2-candidate';
 export const CHARACTER_RULES='rules/assembled-character/0.1-candidate';
 export const CHARACTER_REGISTRY='assembled-character-registry/0.1-candidate';
 const hex=(s:string)=>Uint8Array.from(s.trim().match(/../g)!.map(v=>parseInt(v,16)));
@@ -47,15 +51,18 @@ function topology(registry:CanonicalValue){
 }
 export async function compileCharacterModel(input:Campaign2ModelSource){
  const source=snapshotMemorySource(input);
- if(source.rulesVersion!==CHARACTER_RULES||source.registrySchemaVersion!==CHARACTER_REGISTRY||source.contentSchemaVersion!=='content/0.2-candidate'||source.parameterSchemaVersion!=='campaign2-parameters/0.1-candidate'||source.numericProfileVersion!=='numeric/task-cognitive-exact/0.1-candidate'||source.randomAlgorithmVersion!==RANDOM_ALGORITHM_VERSION)invalidModel('unsupported assembled model version bundle');
- const registry=decodeCognitive(source.registry),slots=items(registry,'list');
+ const interaction=source.rulesVersion===INTERACTION_RULES;
+ if((interaction?source.registrySchemaVersion!==INTERACTION_REGISTRY:source.rulesVersion!==CHARACTER_RULES||source.registrySchemaVersion!==CHARACTER_REGISTRY)||source.contentSchemaVersion!=='content/0.2-candidate'||source.parameterSchemaVersion!=='campaign2-parameters/0.1-candidate'||source.numericProfileVersion!=='numeric/task-cognitive-exact/0.1-candidate'||source.randomAlgorithmVersion!==RANDOM_ALGORITHM_VERSION)invalidModel('unsupported assembled model version bundle');
+ const registry=decodeEmbodied(source.registry),allSlots=items(registry,'list');
+ if(allSlots.length!==(interaction?7:6))invalidModel('assembled registry slot count');
+ const body=interaction?compileBodyDeclaration(allSlots[6]):undefined,slots=allSlots.slice(0,6),baseRegistry=enc(list(slots));
  // Validate open slots before generic declarations, giving specific domain errors.
- const shape=topology(registry);
- const content=await compileCognitiveDeclarations(source.content,source.registry);
+ const shape=topology(list(slots));
+ const content=await compileCognitiveDeclarations(source.content,baseRegistry);
  const structuralState=compileCampaign2StateModel(enc(slots[2]),enc(slots[3]),enc(slots[4]),content,{decode:decodeCognitive,schema:cognitiveSchemaByType});
  compileCampaign2Parameters(source.parameterSchemaVersion,source.parameters);
  if(key(decodeCognitive(source.content))!==key(decodeCognitive(hex(contentHex))))invalidModel('content outside declared assembled holder/task topology');
  if(key(shape)!==key(topology(decodeCognitive(hex(registryHex)))))invalidModel('undeclared topology change: references, schemas, phases, ownership and producers are fixed');
  const modelIdentity=await createModelIdentity({...source,contentManifest:await commitManifest(decodeCognitive(source.content)),registryManifest:await commitManifest(registry),parameterSet:await commitManifest(decodeCognitive(source.parameters))});
- return Object.freeze({source,modelIdentity,content,structuralState});
+ return Object.freeze({source,modelIdentity,content,structuralState,body,baseRegistry});
 }

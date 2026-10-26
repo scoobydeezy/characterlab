@@ -20,13 +20,14 @@ Affected scope: C-BODY/C-AFFECT/C-LEARN/C-DECISION/C-EPI/C-DET, slices of12.1/3/
 none of their full clause sets or the18 conditional obligations closes on this gate.
 
 Serial package A: one body owner/channel in existing state/scheduler/trace/save.
-At most10 production/test files: assembled/{body,inputs,model,state,character,runtime,
+At most11 production/test files: assembled/{body,inputs,model,state,character,runtime,
 execution}.ts; test/fixtures/assembledInteraction.ts; test/assembledBody.test.ts;
-assembled/ingress.ts only if declaration binding needs it. Existing C2 kernels frozen.
+assembled/ingress.ts and traceBinding.ts. Existing C2 kernels frozen. The first body run rejected the new rules version at the successor trace binder; extend its explicit version check, retaining exact actual model/run equality.
 Validate body admission, actual replenishment/read/bin/SEM chain, identity and save,
 wrong observer/owner, malformed source, absence vs zero, atomic failure.
 
-Serial package B: joint appraisal and the2x2 witness, immediately after A.
+Package A PASS:24 checks/type/boundary;11 files, under2min verification. See M3 result.
+Serial package B (ACTIVE): joint appraisal and the2x2 witness, immediately after A.
 At most5 production/test files: assembled/{appraisal,execution,runtime}.ts,
 test/fixtures/assembledInteraction.ts,test/assembledInteraction.test.ts.
 Both packages are ONE M3 gate. A alone is not M3 PASS. No breadth between them.

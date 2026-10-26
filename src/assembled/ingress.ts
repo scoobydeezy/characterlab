@@ -15,7 +15,7 @@ const atom=(ns:number,s:string)=>typedIdentifier(ns,text(s));
 function replace(value:CanonicalValue,field:bigint,next:CanonicalValue){if(typeof value==='boolean'||value.kind!=='record')return invalidModel('record replacement required');return record(value.schema,new Map([...value.fields].map(([k,v])=>[k,k===field?next:v])));}
 
 export function compileCognitiveIngress(model:Awaited<ReturnType<typeof compileCharacterModel>>,state:Awaited<ReturnType<typeof compileCharacterState>>){
- const base=state.prior.base,slots=items(decodeCognitive(model.source.registry),'list');
+ const base=state.prior.base,slots=items(decodeCognitive(model.baseRegistry),'list');
  const rows=items(slots[0],'set').filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n).map(v=>rec(v,171n));
  const singleton=rows.find(r=>key(f(r,1n))===key(atom(1027,'definition/transition-admission')))??invalidModel('missing admission singleton');
  const occurrences=compileOccurrenceIdentities(enc(f(rec(f(singleton,4n),279n),3n)),model.content,{decode:decodeCognitive,schema:cognitiveSchemaByType});

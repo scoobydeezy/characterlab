@@ -10,10 +10,11 @@ import {predictionModelReviewSource} from '../campaign2/predictionModelReview';
 import {decodeCognitive,cognitiveRecord as r} from '../campaign2/cognitiveCodecs';
 import {validateIdentityHistory,readQ} from '../campaign2/cognitiveMath';
 import {dataRecord as rec,dataField as f,dataIdentity as id,dataItems as items,dataKey as key,dataText as txt,dataUnsigned as u,invalidModel} from '../campaign2/canonicalData';
+import {withBodyState} from './body';
 import type {compileCharacterModel} from './model';
 
 export async function compileCharacterState(model:Awaited<ReturnType<typeof compileCharacterModel>>){
- const structural=model.structuralState,slots=items(decodeCognitive(model.source.registry),'list');
+ const structural=model.structuralState,slots=items(decodeCognitive(model.baseRegistry),'list');
  const rows=items(slots[0],'set').filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n).map(v=>rec(v,171n));
  const row=(stable:CanonicalValue)=>rows.find(v=>key(f(v,1n))===key(stable))??invalidModel('missing cognitive state definition');
  const definition=(name:string)=>f(row(typedIdentifier(1027,text('definition/'+name))),4n);
@@ -56,15 +57,17 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
   for(const e of entries){validateEntry(e.path,e.value);if(e.path.rootStateTypeId===373n&&e.path.fieldId===1n)adopted.add(key((e.path.selectors[0] as {kind:'mapKey';key:CanonicalValue}).key));}
   for(const e of entries)if(e.path.rootStateTypeId===373n&&e.path.fieldId===2n&&!adopted.has(key((e.path.selectors[0] as {kind:'mapKey';key:CanonicalValue}).key)))invalidModel('instruction requires actually adopted task');
  }
- const stateModel=Object.freeze({...structural,validateState,
+ const inheritedState=Object.freeze({...structural,validateState,
   validatePath(path:StatePath){structural.validatePath(path);validateEntry(path);},
   restoreState(bytes:Uint8Array){const state=structural.restoreState(bytes);validateState(state);return state;},
   read(state:AuthoritativeState,path:StatePath){structural.validatePath(path);validateEntry(path);const result=structural.read(state,path);if(result.presence)validateEntry(path,result.value!);return result;},
   applyPatch(state:AuthoritativeState,patch:StatePatch,authority:Parameters<typeof structural.applyPatch>[2],scope?:Parameters<typeof structural.applyPatch>[3]){const result=structural.applyPatch(state,patch,authority,scope);validateState(result.state);return result;},
  });
+ const stateModel=model.body?withBodyState(inheritedState,C,model.body):inheritedState;
  function initialState(bytes:Uint8Array){
   const state=stateModel.restoreState(bytes);
   for(const e of state.entries()){
+   if(e.path.rootStateTypeId===455n){const at=f(rec(e.value,454n),2n);if(typeof at==='boolean'||at.kind!=='signed'||at.value!==0n)invalidModel('initial body anchor must be at0');}
    if([346n,362n,415n].includes(e.path.rootStateTypeId))invalidModel('initial learned memory, prediction and identity must be empty');
    if(e.path.rootStateTypeId===373n&&e.path.fieldId===1n&&u(f(rec(e.value,372n),1n))!==1n)invalidModel('initial tasks must be Open');
   }
