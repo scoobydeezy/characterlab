@@ -7,6 +7,7 @@ import {traceRecordValue} from '../substrate/trace';
 import {scheduledEventValue} from '../substrate/persistence';
 import {ExactRational as Q} from '../substrate/exactMath';
 import {decodeEmbodied as decode,embodiedRecord as r} from '../campaign3/embodiedCodecs';
+import {selectInteroceptiveSamples,consumeInteroceptiveSelection,closeInteroceptiveSelection} from '../campaign3/interoceptiveSelection';
 import {exact,atom,materializeReserve,reserveBin} from '../campaign3/embodiedMath';
 import {proposeEmbodiedReplenishment} from '../campaign3/embodiedReplenishment';
 import {admitObservationLane,freezeAndStageSemanticExperience,validateSuccessfulExperienceSettlement,type ExperienceReservation,type StagedSemanticExperience} from '../semanticBinding/phaseOrdering';
@@ -16,6 +17,8 @@ import {dataItems as items,dataField as f,dataRecord as rec,dataKey as key,dataI
 import type {compileCampaign2StateModel} from '../campaign2/stateModel';
 export const bodyId=(ns:number,name:string)=>typedIdentifier(ns,text(name));
 export const BODY_SAMPLE=bodyId(1001,'event/assembled-body-sample'),BODY_DELIVERY=bodyId(1001,'event/assembled-body-delivery');
+export const BODY_SELECTION=bodyId(1001,'event/assembled-body-selection');
+export const BODY_SELECTION_REPORT='assembled-body-selection/0.1';
 export const BODY_OWNER=bodyId(1025,'authority/embodied-reserve');
 export const BODY_OBSERVER=bodyId(1000,'observer/bridge-subject');
 export const BODY_CHANNEL=bodyId(1005,'channel/assembled-body-level');
@@ -28,7 +31,7 @@ export function compileBodyDeclaration(value:CanonicalValue){
  if(capacity.compare(zero)<=0||rate.compare(zero)<0||width.compare(zero)<=0||width.compare(capacity)>0||capacity.divide(width).denominator!==1n||threshold.compare(zero)<=0||threshold.compare(capacity)>0)invalidModel('body capacity/rate/grid/threshold domain');
  return Object.freeze({capacity,rate,width,threshold,permitted:a[5] as boolean,available:a[6] as boolean});
 }
-export type BodyDeclaration=ReturnType<typeof compileBodyDeclaration>;
+export type BodyDeclaration=ReturnType<typeof compileBodyDeclaration>&{readonly selectionCapacity?:number};
 export const bodyPath=(C:CanonicalValue):StatePath=>({rootStateTypeId:455n,fieldId:1n,selectors:[{kind:'mapKey',key:C}]});
 const exactPattern=(path:StatePath):StatePathPattern=>({...path,selectors:path.selectors.map(selector=>({kind:'exact',selector}))});
 /** Extend the single authoritative state, preserving the inherited validator/owners. */
@@ -50,7 +53,7 @@ export function withBodyState(base:ReturnType<typeof compileCampaign2StateModel>
   },
  });
 }
-export interface BodyEvidence {sample:CanonicalValue;experience?:CanonicalValue;settledEvent:ScheduledEvent;}
+export interface BodyEvidence {sample?:CanonicalValue;experience?:CanonicalValue;selection?:CanonicalValue;settledEvent:ScheduledEvent;}
 export function createBodyExecution(d:BodyDeclaration,C:CanonicalValue,stateModel:ReturnType<typeof compileCampaign2StateModel>,originals:readonly ScheduledEvent[],model:CanonicalValue,run:CanonicalValue){
  const path=bodyPath(C),roster:StatePath={rootStateTypeId:268n,fieldId:1n,selectors:[{kind:'mapKey',key:BODY_OBSERVER}]};
  const names=['tracking','binding','classification','freeze'],internal=names.map(n=>bodyId(1001,'event/assembled-body-'+n));
@@ -58,7 +61,7 @@ export function createBodyExecution(d:BodyDeclaration,C:CanonicalValue,stateMode
  function read(state:AuthoritativeState,p:StatePath,accessor:string){const projection=new ContractReadProjection(state,[exactPattern(p)],{value:{kind:'direct',accessorId:bodyId(1028,accessor),path:p}});const value=projection.read('value');if(value===undefined)fail('required body/IDN projection absent');return {value:value!,reads:projection.actualReadRecords()};}
  function authenticate(e:ScheduledEvent){if(!active||e.dueAt!==at||used.has(e.eventId))fail('body source lifecycle');const expected=e.phase===10n||e.phase===110n?originals.find(o=>o.eventId===e.eventId):pending.get(key(scheduledEventValue(e)));if(!expected||key(scheduledEventValue(expected))!==key(scheduledEventValue(e)))fail('unbound body source/child');used.add(e.eventId);pending.delete(key(scheduledEventValue(e)));}
  return Object.freeze({
-  eventTypes:()=>[BODY_SAMPLE,BODY_DELIVERY,...internal],
+  eventTypes:()=>[BODY_SAMPLE,BODY_DELIVERY,...internal,...(d.selectionCapacity===undefined?[]:[BODY_SELECTION])],
   begin(instant:bigint){if(active)fail('body instant already active');at=instant;active=true;used=new Set();pending.clear();reservations=[];staged=[];current=undefined;},
   evidence(){if(!active)fail('body evidence outside current instant');return current?structuredClone(current):undefined;},
   execute(context:EventHandlerContext<AuthoritativeState>){
@@ -80,6 +83,16 @@ export function createBodyExecution(d:BodyDeclaration,C:CanonicalValue,stateMode
      const reservation=admitObservationLane({observerId:txt(BODY_OBSERVER.payload),lane:'Current',dueAt:at,emitsCharacterAccessibleEvidence:true},()=>context.allocateRuntimeId()).reservation!;reservations.push(reservation);carrier=r(482,[unsigned(1),sample,typedIdentifier(1106,unsigned(reservation.experienceId))]);
     }else{sample=r(463,[occurrence,BODY_OBSERVER,BODY_CHANNEL,signed(at),text('embodied-level-observation/0.1-candidate')]);context.allocateRuntimeId();carrier=r(482,[unsigned(2),sample]);}
     outputs=[sample];emit(11n,internal[0],carrier);
+   }else if(event.phase===20n){
+    if(d.selectionCapacity===undefined||key(event.eventTypeId)!==key(BODY_SELECTION))fail('body selection event');
+    const payload=items(event.payload,'list');if(payload.length!==2)fail('body selection payload');
+    const selected=selectInteroceptiveSamples([payload[0]],d.selectionCapacity!);
+    try{
+     const samples=consumeInteroceptiveSelection(selected.view),sample=rec(payload[0],(payload[0] as {schema:{typeId:bigint}}).schema.typeId);
+     const report=list([text(BODY_SELECTION_REPORT),signed(at),unsigned(d.selectionCapacity!),f(sample,1n),text(selected.audit[0].disposition)]);
+     const experience=samples.length?rec(payload[1],227n):undefined;
+     current={sample:samples[0],experience,selection:report,settledEvent:structuredClone(event)};outputs=[report];sources=[id(f(sample,1n))];
+    }finally{closeInteroceptiveSelection(selected.view);}
    }else{
     const index=internal.findIndex(t=>key(t)===key(event.eventTypeId));if(index<0||event.phase!==11n+BigInt(index))fail('body internal phase');const carrier=rec(event.payload,482n),sample=f(carrier,2n),present=(sample as {schema:{typeId:bigint}}).schema.typeId===461n,s=rec(sample,present?461n:463n);sources=[id(f(s,1n))];
     if(index<3)emit(event.phase+1n,internal[index+1],carrier);
@@ -87,12 +100,12 @@ export function createBodyExecution(d:BodyDeclaration,C:CanonicalValue,stateMode
      if(present){const occurrence=id(f(carrier,3n)),ordinal=occurrence.payload;if(typeof ordinal==='boolean'||ordinal.kind!=='unsigned')fail('body reservation id');const reservation=reservations.find(v=>v.experienceId===(ordinal as {value:bigint}).value);if(!reservation)fail('body missing reservation');
       const observation=id(f(s,1n)).payload;if(typeof observation==='boolean'||observation.kind!=='unsigned')fail('body observation id');const value=assemblePreRecognitionExperience({experienceId:reservation!.experienceId,observerId:txt(BODY_OBSERVER.payload),occurredAt:at,perceptualEventReferentIds:[],perceivedBindings:[],perceptualClassifications:[],perceptualEventClassifications:[],supportingObservationIds:[{observerId:txt(BODY_OBSERVER.payload),observationId:(observation as {value:bigint}).value}],transformationVersion:SEM});
       const frozen=freezeAndStageSemanticExperience(reservation!,value,event.phase);staged.push(frozen);experience=preRecognitionSemanticExperienceValue(frozen.experience);outputs=[experience];
-     }current={sample,experience,settledEvent:structuredClone(event)};
+     }if(d.selectionCapacity===undefined)current={sample,experience,settledEvent:structuredClone(event)};else emit(20n,BODY_SELECTION,list([sample,experience??list([])]));
     }
    }
    return {nextState,outputs,emittedEvents:emissions,traceContributions:[],traceFactory(children:readonly ScheduledEvent[]){
     if(children.length!==emissions.length)fail('body child multiplicity');for(const [i,child] of children.entries()){const e=emissions[i],expected={...e,eventId:child.eventId,eventSequence:child.eventSequence,causalParentEventIds:[event.eventId]};if(child.eventSequence<=event.eventSequence||pending.has(key(scheduledEventValue(child)))||key(scheduledEventValue(child))!==key(scheduledEventValue(expected)))fail('body child differs from generated plan');pending.set(key(scheduledEventValue(child)),structuredClone(child));}
-    return [traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model,runIdentity:run,event,seamId:bodyId(1036,'seam/assembled-body'),seamVersion:'assembled-character-interaction/0.1-candidate',recordKind:event.eventTypeId,subjectIds:[id(C),BODY_OBSERVER],sourceRecordIds:sources,registeredReadDomain:domain,actualReadRecords:reads,inputProjection:event.payload,outputProjection:list(outputs),randomDrawRecords:[],quantizationOperations:quantization,statePatch:patch,structuralMutationDiffs:diffs,emittedEvents:children,invariantResults:[]})];
+    return [traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model,runIdentity:run,event,seamId:bodyId(1036,'seam/assembled-body'),seamVersion:d.selectionCapacity===undefined?'assembled-character-interaction/0.1-candidate':'assembled-character-attention/0.1-candidate',recordKind:event.eventTypeId,subjectIds:[id(C),BODY_OBSERVER],sourceRecordIds:sources,registeredReadDomain:domain,actualReadRecords:reads,inputProjection:event.payload,outputProjection:list(outputs),randomDrawRecords:[],quantizationOperations:quantization,statePatch:patch,structuralMutationDiffs:diffs,emittedEvents:children,invariantResults:[]})];
    }};
   },
   prepareCommit(){if(!active||pending.size||originals.some(e=>e.dueAt===at&&!used.has(e.eventId)))fail('unfinished body instant');validateSuccessfulExperienceSettlement(reservations,staged);},

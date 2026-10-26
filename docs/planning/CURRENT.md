@@ -1,48 +1,40 @@
-# Current work — M4 first live attention gate
+# Current work — M4 body selection complete
 
-2026-10-26. Owner requested continued assembly after M3. M4 connects the accepted
-body selection component to the same character's current appraisal path.
-[Contract](../formal/ASSEMBLED_CHARACTER_ATTENTION_CONTRACT.md) precedes code.
+2026-10-26. Only selected current body evidence can now enter appraisal in the shared
+character. Permitted but excluded evidence remains recorded without supplying a value.
+[M4 result](ASSEMBLED_CHARACTER_M4_RESULT.md); [contract](../formal/ASSEMBLED_CHARACTER_ATTENTION_CONTRACT.md).
 
 | Status | Disposition |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 | Baseline |21 members/219 records;15 families/132 clauses; six foundations/five C2 conditions |
-| M3 |PASS at02901a38; unit1 failed control retained |
-| Active milestone |M4: actual observed/selected/consumed body distinction |
+| M3 |PASS at02901a38; prior failed control retained |
+| M4 |PASS: live selection, exclusion/unknown/zero distinctions, continuation and isolation |
+| Reference |Rules/registry0.4; capacity1; unchanged M3 context calibration |
+| Comparison |Capacity0; old0.1/0.2/0.3 still executable |
 
-## Bounded card
+## Established result and scope
 
-Capabilities: (1) actual current-body selection precedes appraisal; (2) excluded,
-unavailable and selected-zero remain distinct; (3) exact continuation/rollback.
-Five production/test files: src/assembled/{model,body,execution,traceBinding}.ts and
-src/test/assembledAttention.test.ts. No independent runtime, new state owner or store.
-Rules/registry0.4 adds capacity0..1 in slot8; existing calibrations/inputs unchanged.
-Reuse interoceptive-selection-component/0.1 unchanged. One candidate means no priority
-or salience selection. Capacity1 reference,0 explicit exclusion control. M2 SEQ/M3,
-FND3/4/6; no full ATTN/BODY clause closure or retention/recognition claim.
+Actual freeze14 produces authenticated selection20 before appraisal50. The accepted
+one-use selector supplies only selected canonical sample bytes. Empty selection has
+its own trace audit/causal parent. No new state owner, memory, scheduler, RNG or save.
+With capacity1, all four M3 cells at seed7 preserve exact state, outputs minus only
+selection audit, and actual draws. The existing body-dependent choice change survives.
+Capacity0 observes/freeze successfully but yields no appraisal body operand or body
+reason. Denied/unavailable, zero pressure, no sensing and stale earlier sensing differ.
+Repeat/restore after learning matches every full boundary for both capacities; hidden
+truth and whole-instant rollback checks pass. Malformed models/sources/saves reject.
 
-Comparisons: all four existing M3 cells, seed7, capacity1 versus0.3; exact state,
-outputs minus only new audit, actual draw records, original choice-change witness.
-Capacity0 must retain actual observation but pass no body operand to appraisal.
-Test denied/unavailable/zero/no-source distinctions; hidden-truth equivalence; no stale
-next-instant reuse; fresh repeat/restore at1 across all later boundaries for0/1;
-cross-capacity save rejection and whole-instant rollback after selection.
-No authored selector event, arbitrary capacity or mixed version admitted. Actual
-selection-parent and trace inputs must join. FND3 newphase20 source joins are
-explicitly versioned in the contract; unchanged SEM ordering vectors apply.
+51 tests pass:7 M4,7 component,10 SEM ordering,27 M3/body/M2a regression. Type checking
+passes; frozen105 dependencies and repository guards are recorded in the check log.
+Five production/test files; one result/raw log, within20 files/5MiB and timing caps.
+Only correction: test raw-signal record narrowing; no calibration or comparison change.
 
-Verification: new assembledAttention, existing interoceptiveSelection,
-semanticPhaseOrdering, assembledInteraction, assembledBody and assembledAdmission.
-Risks: bypass via raw observation/audit, stale capability, changed old-model behavior,
-unbound source, missing transaction rollback; each has the comparison above.
-Types/boundary/research, frozen105 dependency/config/fixture check, document/Git guards.
-One job at a time; <=10min/check,30min total; <=12 production/test files (planned5),
-20 evidence files/5MiB, one compact result and raw log. No verifier chains or browser.
-Done only when all listed gates pass; stop on pass/failure/budget without broadening.
+## Stop and remaining work
 
-## Remaining scope
-
-M3 result remains ASSEMBLED_CHARACTER_M3_RESULT.md. Broader rich perception,
-recognition, attention competition, encoding/memory and resource consolidation remain.
-No obligation/pinned clause closes; RO-C3-011 is unchanged. UI/Campaign4 stay stopped.
+This is a single-channel body gate, not full attention competition or rich perception.
+No encoding/retention law was selected; it creates no body-memory side store. Recognition,
+visual/recalled selection, memory acquisition and shared resource accounting remain.
+The next integration needs its own bounded card; no next milestone is opened here.
+All21 corpus members/15 families/132 clauses remain final scope. No pinned clause or
+conditional obligation closes. RO-C3-011 unchanged. UI/Campaign4/old audits stay stopped.

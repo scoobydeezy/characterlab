@@ -1,0 +1,158 @@
+2026-10-26 M4 contract/card d2341540; npx tsc -b
+src/test/assembledAttention.test.ts(22,363): error TS2345: Argument of type 'CanonicalValue' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+exit=1 seconds=14.652644
+
+Type correction: narrow test raw signal to record402 before field access; npx tsc -b
+exit=0 seconds=14.5108002
+
+M4 live gate and unchanged component/order vectors: npx vitest run src/test/assembledAttention.test.ts src/test/interoceptiveSelection.test.ts src/test/semanticPhaseOrdering.test.ts --maxWorkers=1 --minWorkers=1
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/semanticPhaseOrdering.test.ts (10 tests) 14ms
+stdout | src/test/assembledAttention.test.ts > M4 live body selection in the shared character > capacity1 preserves all four M3 cells at seed7, complete state/outputs/draws and actual choice change
+M4 selected four-cell correspondence PASS: [["definition/protocol-contact-two","definition/protocol-contact-one"],["definition/protocol-contact-one","definition/protocol-contact-one"]]
+
+ ✓ src/test/assembledAttention.test.ts (7 tests) 68396ms
+   ✓ M4 live body selection in the shared character > capacity1 preserves all four M3 cells at seed7, complete state/outputs/draws and actual choice change 13049ms
+   ✓ M4 live body selection in the shared character > capacity0 excludes an actual permitted sample without inventing zero or allowing a body reason 2400ms
+   ✓ M4 live body selection in the shared character > unavailable and denied differ from selected zero pressure and zero task exposure 7311ms
+   ✓ M4 live body selection in the shared character > repeat and post-learning restore match every boundary for both capacities; capacity changes cannot restore 30285ms
+   ✓ M4 live body selection in the shared character > hidden truth with equal body evidence cannot change cognition or draws at either capacity 6598ms
+   ✓ M4 live body selection in the shared character > no sensing and a later choice cannot reuse an earlier selected body sample 4414ms
+   ✓ M4 live body selection in the shared character > rejects malformed capacities/version/source and rolls back selection before a failed consumer 4338ms
+ ✓ src/test/interoceptiveSelection.test.ts (7 tests) 36ms
+
+ Test Files  3 passed (3)
+      Tests  24 passed (24)
+   Start at  09:10:25
+   Duration  70.70s (transform 877ms, setup 0ms, collect 1.50s, tests 68.45s, environment 0ms, prepare 258ms)
+
+exit=0 seconds=72.1574575
+
+Affected old model/entry regression: npx vitest run src/test/assembledInteraction.test.ts src/test/assembledBody.test.ts src/test/assembledAdmission.test.ts --maxWorkers=1 --minWorkers=1
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > fixed unit1 control and unit1/10 candidate, same matrix seeds0..7
+M3 unit 1 seed 0: [["definition/protocol-contact-one","definition/protocol-contact-one"],["definition/protocol-contact-one","definition/protocol-contact-one"]]; exact U/reason interaction and causal joins
+
+stdout | src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > fixed unit1 control and unit1/10 candidate, same matrix seeds0..7
+M3 unit 1 seed 1: [["definition/protocol-contact-one","definition/protocol-contact-one"],["definition/protocol-contact-one","definition/protocol-contact-one"]]; exact U/reason interaction and causal joins
+
+stdout | src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > fixed unit1 control and unit1/10 candidate, same matrix seeds0..7
+M3 unit 1 seed 2: [["definition/protocol-contact-one","definition/protocol-contact-one"],["definition/protocol-contact-one","definition/protocol-contact-one"]]; exact U/reason interaction and causal joins
+
+stdout | src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > fixed unit1 control and unit1/10 candidate, same matrix seeds0..7
+M3 unit 1 seed 3: [["definition/protocol-contact-two","definition/protocol-contact-two"],["definition/protocol-contact-one","definition/protocol-contact-one"]]; exact U/reason interaction and causal joins
+
+stdout | src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > fixed unit1 control and unit1/10 candidate, same matrix seeds0..7
+M3 unit 1 seed 4: [["definition/protocol-contact-two","definition/protocol-contact-two"],["definition/protocol-contact-one","definition/protocol-contact-one"]]; exact U/reason interaction and causal joins
+
+stdout | src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > fixed unit1 control and unit1/10 candidate, same matrix seeds0..7
+M3 unit 1 seed 5: [["definition/protocol-contact-one","definition/protocol-contact-one"],["definition/protocol-contact-one","definition/protocol-contact-one"]]; exact U/reason interaction and causal joins
+
+stdout | src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > fixed unit1 control and unit1/10 candidate, same matrix seeds0..7
+M3 unit 1 seed 6: [["definition/protocol-contact-two","definition/protocol-contact-two"],["definition/protocol-contact-one","definition/protocol-contact-one"]]; exact U/reason interaction and causal joins
+
+stdout | src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > fixed unit1 control and unit1/10 candidate, same matrix seeds0..7
+M3 unit 1 seed 7: [["definition/protocol-contact-one","definition/protocol-contact-one"],["definition/protocol-contact-one","definition/protocol-contact-one"]]; exact U/reason interaction and causal joins
+M3 unit 1 group 0,1,2,3,4,5,6,7: changed choices=0, identical shared-address draws=18
+
+stdout | src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > fixed unit1 control and unit1/10 candidate, same matrix seeds0..7
+M3 unit 1/10 seed 0: [["definition/protocol-contact-two","definition/protocol-contact-two"],["definition/protocol-contact-one","definition/protocol-contact-one"]]; exact U/reason interaction and causal joins
+
+stdout | src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > fixed unit1 control and unit1/10 candidate, same matrix seeds0..7
+M3 unit 1/10 seed 1: [["definition/protocol-contact-two","definition/protocol-contact-two"],["definition/protocol-contact-one","definition/protocol-contact-one"]]; exact U/reason interaction and causal joins
+
+stdout | src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > fixed unit1 control and unit1/10 candidate, same matrix seeds0..7
+M3 unit 1/10 seed 2: [["definition/protocol-contact-two","definition/protocol-contact-two"],["definition/protocol-contact-one","definition/protocol-contact-one"]]; exact U/reason interaction and causal joins
+
+stdout | src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > fixed unit1 control and unit1/10 candidate, same matrix seeds0..7
+M3 unit 1/10 seed 3: [["definition/protocol-contact-two","definition/protocol-contact-two"],["definition/protocol-contact-one","definition/protocol-contact-one"]]; exact U/reason interaction and causal joins
+
+stdout | src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > fixed unit1 control and unit1/10 candidate, same matrix seeds0..7
+M3 unit 1/10 seed 4: [["definition/protocol-contact-two","definition/protocol-contact-two"],["definition/protocol-contact-one","definition/protocol-contact-one"]]; exact U/reason interaction and causal joins
+
+stdout | src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > fixed unit1 control and unit1/10 candidate, same matrix seeds0..7
+M3 unit 1/10 seed 5: [["definition/protocol-contact-two","definition/protocol-contact-two"],["definition/protocol-contact-one","definition/protocol-contact-one"]]; exact U/reason interaction and causal joins
+
+stdout | src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > fixed unit1 control and unit1/10 candidate, same matrix seeds0..7
+M3 unit 1/10 seed 6: [["definition/protocol-contact-two","definition/protocol-contact-two"],["definition/protocol-contact-one","definition/protocol-contact-one"]]; exact U/reason interaction and causal joins
+
+stdout | src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > fixed unit1 control and unit1/10 candidate, same matrix seeds0..7
+M3 unit 1/10 seed 7: [["definition/protocol-contact-two","definition/protocol-contact-one"],["definition/protocol-contact-one","definition/protocol-contact-one"]]; exact U/reason interaction and causal joins
+M3 unit 1/10 group 0,1,2,3,4,5,6,7: changed choices=1, identical shared-address draws=0
+M3 cross-calibration exact shared-address records=16
+
+stdout | src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > exact repeat and restore after learning before the later body condition in all four cells
+M3 continuation cell 0/0: [{"task":"content/task-a","rawBounded":"11/131","situationModifier":"0","die":"4"},{"task":"content/task-b","rawBounded":"11/41","situationModifier":"2","die":"4"}]
+
+stdout | src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > exact repeat and restore after learning before the later body condition in all four cells
+M3 continuation cell 0/1: [{"task":"content/task-a","rawBounded":"1/21","situationModifier":"0","die":"4"},{"task":"content/task-b","rawBounded":"1/6","situationModifier":"1","die":"4"}]
+
+stdout | src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > exact repeat and restore after learning before the later body condition in all four cells
+M3 continuation cell 1/0: [{"task":"content/task-a","rawBounded":"11/51","situationModifier":"2","die":"4"}]
+
+stdout | src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > exact repeat and restore after learning before the later body condition in all four cells
+M3 continuation cell 1/1: [{"task":"content/task-a","rawBounded":"3/23","situationModifier":"1","die":"4"}]
+
+ ✓ src/test/assembledInteraction.test.ts (5 tests) 203794ms
+   ✓ M3 B: one learned-history x body interaction > fixed unit1 control and unit1/10 candidate, same matrix seeds0..7 129052ms
+   ✓ M3 B: one learned-history x body interaction > binds the declared calibration to model identity and rejects other units or versions 6039ms
+   ✓ M3 B: one learned-history x body interaction > exact repeat and restore after learning before the later body condition in all four cells 61116ms
+   ✓ M3 B: one learned-history x body interaction > hidden body truth with identical evidence leaves every cognitive output and draw equal 5516ms
+   ✓ M3 B: one learned-history x body interaction > without acquired history, body evidence cannot manufacture a forecast or a situational reason 2069ms
+stdout | src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > baseline preserves every semantic boundary and addressed draw
+M2a control baseline: 8 instants, 9 exact coupled draws
+
+stdout | src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > deadline overlap preserves every semantic boundary and addressed draw
+M2a control deadline overlap: 6 instants, 0 exact coupled draws
+
+stdout | src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > equal criteria preserves every semantic boundary and addressed draw
+M2a control equal criteria: 8 instants, 6 exact coupled draws
+
+stdout | src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > non-preset prepares, learns, decides, repeats and restores the whole run
+M2a non-preset: 8 instants; learned prediction, decision, repeat and restore exact
+
+ ✓ src/test/assembledAdmission.test.ts (18 tests) 144424ms
+   ✓ M2a invariant admission and one continuing successor > baseline preserves every semantic boundary and addressed draw 24725ms
+   ✓ M2a invariant admission and one continuing successor > deadline overlap preserves every semantic boundary and addressed draw 7200ms
+   ✓ M2a invariant admission and one continuing successor > equal criteria preserves every semantic boundary and addressed draw 20014ms
+   ✓ M2a invariant admission and one continuing successor > non-preset prepares, learns, decides, repeats and restores the whole run 78379ms
+   ✓ M2a invariant admission and one continuing successor > rejects work limit before publishing a model 309ms
+   ✓ M2a invariant admission and one continuing successor > rejects overlapping authority before publishing a model 332ms
+   ✓ M2a invariant admission and one continuing successor > rejects undeclared topology before publishing a model 385ms
+   ✓ M2a invariant admission and one continuing successor > rejects unsupported versions/schema and executable or mutable source substitution 2820ms
+   ✓ M2a invariant admission and one continuing successor > rejects invented learned S0 and foreign observer evidence, and rolls back a tiny work budget 2937ms
+   ✓ M2a invariant admission and one continuing successor > binds restore to its model, inputs and every saved byte 5819ms
+ ✓ src/test/assembledBody.test.ts (4 tests) 14408ms
+   ✓ M3 A: body evidence in the one character > executes physical delivery and actual current SEM, then restores the complete character 3894ms
+   ✓ M3 A: body evidence in the one character > rejects invalid declarations, foreign sources and body ownership 3212ms
+   ✓ M3 A: body evidence in the one character > permission and availability produce the same no-operand evidence, distinct from a known empty bin 5481ms
+   ✓ M3 A: body evidence in the one character > rolls back an earlier body write when a later source in the same instant fails 1821ms
+
+ Test Files  3 passed (3)
+      Tests  27 passed (27)
+   Start at  09:11:58
+   Duration  365.43s (transform 936ms, setup 0ms, collect 1.90s, tests 362.63s, environment 0ms, prepare 258ms)
+
+exit=0 seconds=366.9014613
+
+PASS:105 frozen C2 factory dependencies, fixture/config unchanged against db0ca7a8; M1 test/control alias unchanged against31553ea7 (working tree included). Full-byte V1 result retained; no invalidating changes.
+
+Final boundary/research checks
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+exit=0 seconds=6.4750378
+
+PASS document/evidence/runtime limits:5 production/test files;2 evidence/result files 20019 bytes before final receipt; recorded checks 474.70s, longest 366.90s. Stage and run Git size guard before commit.

@@ -15,6 +15,8 @@ import type {Campaign2ModelSource} from '../campaign2/factory';
 
 import {decodeEmbodied} from '../campaign3/embodiedCodecs';
 import {compileBodyDeclaration} from './body';
+export const ATTENTION_RULES='rules/assembled-character/0.4-candidate';
+export const ATTENTION_REGISTRY='assembled-character-registry/0.4-candidate';
 export const CALIBRATED_RULES='rules/assembled-character/0.3-candidate';
 export const CALIBRATED_REGISTRY='assembled-character-registry/0.3-candidate';
 export const INTERACTION_RULES='rules/assembled-character/0.2-candidate';
@@ -61,11 +63,13 @@ function topology(registry:CanonicalValue,calibrated=false){
 }
 export async function compileCharacterModel(input:Campaign2ModelSource){
  const source=snapshotMemorySource(input);
- const calibrated=source.rulesVersion===CALIBRATED_RULES,interaction=calibrated||source.rulesVersion===INTERACTION_RULES;
- if((interaction?source.registrySchemaVersion!==(calibrated?CALIBRATED_REGISTRY:INTERACTION_REGISTRY):source.rulesVersion!==CHARACTER_RULES||source.registrySchemaVersion!==CHARACTER_REGISTRY)||source.contentSchemaVersion!=='content/0.2-candidate'||source.parameterSchemaVersion!=='campaign2-parameters/0.1-candidate'||source.numericProfileVersion!=='numeric/task-cognitive-exact/0.1-candidate'||source.randomAlgorithmVersion!==RANDOM_ALGORITHM_VERSION)invalidModel('unsupported assembled model version bundle');
+ const attention=source.rulesVersion===ATTENTION_RULES,calibrated=attention||source.rulesVersion===CALIBRATED_RULES,interaction=calibrated||source.rulesVersion===INTERACTION_RULES;
+ if((interaction?source.registrySchemaVersion!==(attention?ATTENTION_REGISTRY:calibrated?CALIBRATED_REGISTRY:INTERACTION_REGISTRY):source.rulesVersion!==CHARACTER_RULES||source.registrySchemaVersion!==CHARACTER_REGISTRY)||source.contentSchemaVersion!=='content/0.2-candidate'||source.parameterSchemaVersion!=='campaign2-parameters/0.1-candidate'||source.numericProfileVersion!=='numeric/task-cognitive-exact/0.1-candidate'||source.randomAlgorithmVersion!==RANDOM_ALGORITHM_VERSION)invalidModel('unsupported assembled model version bundle');
  const registry=decodeEmbodied(source.registry),allSlots=items(registry,'list');
- if(allSlots.length!==(interaction?7:6))invalidModel('assembled registry slot count');
- const body=interaction?compileBodyDeclaration(allSlots[6]):undefined,slots=allSlots.slice(0,6),baseRegistry=enc(list(slots));
+ if(allSlots.length!==(attention?8:interaction?7:6))invalidModel('assembled registry slot count');
+ let selectionCapacity:number|undefined;
+ if(attention){const declaration=items(allSlots[7],'list');if(declaration.length!==2||txt(declaration[0])!=='assembled-body-selection/0.1'||uint(declaration[1])>1n)invalidModel('body selection requires capacity0..1');selectionCapacity=Number(uint(declaration[1]));}
+ const body=interaction?Object.freeze({...compileBodyDeclaration(allSlots[6]),selectionCapacity}):undefined,slots=allSlots.slice(0,6),baseRegistry=enc(list(slots));
  // Validate open slots before generic declarations, giving specific domain errors.
  const shape=topology(list(slots),calibrated);
  const content=await compileCognitiveDeclarations(source.content,baseRegistry);
