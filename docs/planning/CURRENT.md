@@ -1,47 +1,45 @@
-# Current work — M2a result; M3 next
+# Current work — M3 early interaction
 
-2026-10-25. M2a PASS. Execution, frozen-control, foundation and preservation checks are complete.
-The character now admits and runs non-preset configurations in the first two-task
-invariant domain and restores exactly. Full Campaigns0–3 assembly remains ahead.
-
-Read [M2a result](ASSEMBLED_CHARACTER_M2A_RESULT.md),
-[admission contract](../formal/ASSEMBLED_CHARACTER_MODEL_CONTRACT.md),
-[adopted M2 register](ASSEMBLED_CHARACTER_RECONCILIATION.md),
-[baseline](ASSEMBLED_CHARACTER_BASELINE.json) and [work order](ASSEMBLED_CHARACTER_WORK_ORDER.md).
+2026-10-25. Owner explicitly authorized beginning and completing M3.
+M2a PASS at31553ea7; frozen C2 and M1 controls remain unchanged.
+Read ASSEMBLED_CHARACTER_RECONCILIATION.md and ASSEMBLED_CHARACTER_WORK_ORDER.md.
 
 | Status | Disposition |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
-| Historical closed |4; prior scoped closures preserved |
-| Baseline |21 members/219 overlapping records;15 families/132 clauses |
-| Foundations |Six C0/C1 constraints and five C2 completion conditions remain standing |
-| Owner decisions |D1–D5 approved; D2 evidence/first-use condition recorded |
+| Baseline |21 members/219 records;15 families/132 clauses; six foundations/five C2 conditions |
+| Active gate |M3 only: learned history x later body -> appraisal/reasons -> actual choice |
 
-Every L selection is labelled engineering default, no verdict establishing superiority.
-Each R3 choice stays provisional until its first-use card records and locks its exact
-semantics/domain before code or replay. M2a used no R3 choice. D3's developmental
-shared updates remain the approved reference direction; older laws remain controls.
+## Bounded card, declared before code
 
-## M2a scope and retained evidence
+Contract: ../formal/ASSEMBLED_CHARACTER_INTERACTION_CONTRACT.md,0.1-candidate.
+Three capabilities: authenticated body evidence; joint appraisal/reasons; exact
+continuation of the interacting character. No broad family or UI completion claim.
+U1 key/owner/phase map and exact comparison are in that contract.
+Affected scope: C-BODY/C-AFFECT/C-LEARN/C-DECISION/C-EPI/C-DET, slices of12.1/3/4/5;
+none of their full clause sets or the18 conditional obligations closes on this gate.
 
-Predeclared contract/card: bf89c03e; corrected complete M2 register: b9a609b3.
-S3 trace-version wiring disposition before its implementation:327e7aa9.
-Twelve production/test files total: eight assembled files, M1 test import, successor
-test/fixture, and the discovered CRLF-only corpus-parser fix. No further file budget.
-One result plus one raw check log; no audit framework, source copies or browser work.
-The original twelve admission checks and six replay/run checks pass; frozen M1/C2
-controls16 pass; selected foundation56 pass after the retained parser correction.
-No C3 corpus coverage or obligation closed. M2a's fixed holder/task/channel and
-inherited component restrictions are explicit in its contract and result.
+Serial package A: one body owner/channel in existing state/scheduler/trace/save.
+At most10 production/test files: assembled/{body,inputs,model,state,character,runtime,
+execution}.ts; test/fixtures/assembledInteraction.ts; test/assembledBody.test.ts;
+assembled/ingress.ts only if declaration binding needs it. Existing C2 kernels frozen.
+Validate body admission, actual replenishment/read/bin/SEM chain, identity and save,
+wrong observer/owner, malformed source, absence vs zero, atomic failure.
 
-## Next milestone and stop
+Serial package B: joint appraisal and the2x2 witness, immediately after A.
+At most5 production/test files: assembled/{appraisal,execution,runtime}.ts,
+test/fixtures/assembledInteraction.ts,test/assembledInteraction.test.ts.
+Both packages are ONE M3 gate. A alone is not M3 PASS. No breadth between them.
 
-M2a stops here. M3 requires a new bounded card before
-implementation: shared holder/proposition/action/support keys and sole state owners,
-then the adopted2x2 learned-history × later-body interaction under one fixed policy.
-Require consumed-record joins, nonzero appraisal/reason interaction and a real choice
-change, hidden-truth/equal-evidence control and save-after-learning continuation.
-No authored psychological intermediate or fixture-specific law/tuning switch.
-At most3 capabilities/12 production-test files; split serially under the same gate
-before widening. Checks10min each/30min total; evidence20 files/5MiB. Stop on pass.
-Broader integration waits for that witness. UI, old audits and Campaign4 stay stopped.
+Checks per package: <=10min/command, <=30min cumulative verification; one job at a
+ time; <=20 evidence files/5MiB for all M3. Retain outputs/failures in one checks log.
+A: targeted assembledBody, embodiedContrasts, semanticPhaseOrdering, observationIntegration,
+TypeScript and boundary check. B: predeclared2x2 for seeds0..7 in bounded seed groups,
+repeat/restore after learning for seed0, hidden truth/equal evidence and no-history
+controls, affected assembledAdmission replay, TypeScript/boundary/research.
+Full M1 controls retain their392s M2a result unless S1 closure/config/toolchain changes;
+check unchanged dependencies with Git. No global line-ending normalization.
+
+Stop on passing all M3 checks; record one compact result. At a budget/blocker limit,
+checkpoint incompletion without relaxing comparisons or tuning laws/seed/criteria.
+M3 does not complete Campaigns0–3 assembly. UI/Campaign4/old audits remain stopped.
