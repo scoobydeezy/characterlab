@@ -1,34 +1,44 @@
-# Current work — M11 complete
+# Current work — M12 goal-preserving replanning
 
-2026-10-26. Actual practice now builds retained skill in the continuing character.
-That skill changes later execution, sensed body consequences and actual choice.
-This joins Campaign3 Skill/Development to the shared Campaign0–3 simulation.
+The character will change its action plan from permitted availability evidence,
+keep its goal during a gap, and resume through the existing decision/execution loop.
 
 | Status | Disposition |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 | Baseline |21 members/219 records;15 families/132 clauses; six foundations/five C2 conditions |
-| M11 |PASS: practice -> skill -> execution -> perception -> later choice |
-| Before-code card/contract |70cb3228; basea2bf824f; rules/registry0.11 |
-| Evidence |[M11 result](ASSEMBLED_CHARACTER_M11_RESULT.md); [raw checks](ASSEMBLED_CHARACTER_M11_CHECKS.txt) |
-| Historical controls |105 dependency/config/fixture and M1 guards unchanged; prior byte receipt retained |
+| M11 |PASS at0e283b64; practice -> skill -> execution -> perception -> choice |
+| M12 |Before-code card; rules/registry0.12; one active package |
+| Contract |[strategy0.1](../formal/ASSEMBLED_CHARACTER_STRATEGY_CONTRACT.md) |
 
-Fixed16-seed comparison:4 later choices change, with identical first two choices,
-expressions and identity. Both histories reach the same mature phase before testing;
-the difference is retained earlier practice. Removing later sensing removes the
-cognitive difference. Impairment/recovery preserves competence. Repeat/restore and
-whole-instant rollback pass within the one state/scheduler/save.
+Capabilities: (1) received availability changes a retained plan and actual action;
+(2) missing options preserve the goal, permitting later resumption without readoption.
+Scope: existing two commitments/actions, one holder, existing skill/body/attention/
+memory/reason/identity loop. No UI, new factory, performance threshold or framework.
+R3 SeparateGoalPlan first-use lock: engineering default, no verdict. Other laws fixed.
+Architecture areas M9/M10; C-WORK/COMMIT and F12.6/7 integration only, no clause closure.
+MEC004/015..020/022 preserved per contract. RO012/013/014/019/020 remain conditional.
 
-14 distinct tests pass, including all M10 regressions. One retained compiler-only
-correction; no functional failure, retuning or fixture change. Ten production/test
-files, two evidence files; verification within10min each/30min total.
+Production/test budget10 files: strategy.ts, strategyExecution.ts, model.ts, state.ts,
+inputs.ts, execution.ts, runtime.ts, traceBinding.ts; assembledStrategy.test.ts and
+fixtures/assembledStrategy.ts. Split before exceeding12; no unrelated breadth.
+Documentation: this card/contract, one compact result/raw check log and index links.
+Evidence <=20 files/5MiB; planned2. All historical sources remain unchanged.
 
-One controlled motor procedure is integrated. Capability belief, multiple procedures,
-natural attribution, general development/personality and wider integration remain.
-RO-C3-013's bounded receiving controls pass; its broader debt remains. No corpus or
-132-clause closure. UI/Campaign4 stopped; no separate subsystem simulation added.
+Comparison fixed before implementation: seed7; M11 choices3/5/7, practice3; route1
+observed at1, route0 replacing it at3. Same first choice, changed plan/candidate/
+intent/actual execution5, shared body consequence, equal goal state and skill.
+No-option gap at3, reopening5 must suppress choice5 and resume7 without readoption.
+See contract for false/denied/expired evidence and whole-loop controls.
 
-No next milestone is open. On authorization choose the next complete behavioral
-connection in the shared character and commit its card before code. Limits remain:
-3 capabilities,12 production/test files/package,20 evidence files/5MiB, one validation
-job; no unrelated breadth between packages or repeated passing checks without cause.
+Checks, sequential, <=10min/command and <=30min total including reruns:
+- tsc: version/domain/interface errors; focused M12 tests: actual connection, component
+  correspondence, epistemic/ownership/source controls, rollback, repeat and restore.
+- Existing M11 controls (excluding its16-seed acquisition matrix): shared140 and
+  skill/body execution regression. Matrix unchanged; closure guard covers its sources.
+-105 historical dependency/config/fixture + M1 guard; no full historical byte replay
+  absent an invalidator. Boundary/research checks preserve authority and debt.
+- Document/evidence caps, stage intended files, check:git-size, then local commit.
+Retain failures and explanations. Stop after pass; never retune comparisons to pass.
+Done only when actual plan/action changes, gap/resumption and controls pass inside
+one continuing simulation and budgets. On unresolved defect or limit, record incomplete.
