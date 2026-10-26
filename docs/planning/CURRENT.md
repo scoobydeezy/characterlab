@@ -1,40 +1,58 @@
-# Current work — M4 body selection complete
+# Current work — M5 selected evidence into the existing episodic owner
 
-2026-10-26. Only selected current body evidence can now enter appraisal in the shared
-character. Permitted but excluded evidence remains recorded without supplying a value.
-[M4 result](ASSEMBLED_CHARACTER_M4_RESULT.md); [contract](../formal/ASSEMBLED_CHARACTER_ATTENTION_CONTRACT.md).
+2026-10-26. Owner continuation authorizes this bounded integration. M4 passed at31260a24.
+The character will retain selected body observations beside its existing measurement
+episodes and recall them as past evidence, without treating them as current body state.
 
 | Status | Disposition |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
-| Baseline |21 members/219 records;15 families/132 clauses; six foundations/five C2 conditions |
-| M3 |PASS at02901a38; prior failed control retained |
-| M4 |PASS: live selection, exclusion/unknown/zero distinctions, continuation and isolation |
-| Reference |Rules/registry0.4; capacity1; unchanged M3 context calibration |
-| Comparison |Capacity0; old0.1/0.2/0.3 still executable |
+| Baseline |21 members/219 records;15 families/132 clauses; no final scope change |
+| Reference |New rules/registry0.5; existing capacity1 and context unit1/10 unchanged |
+| Control |0.4 remains executable; capacity0 and denied/unavailable sources |
 
-## Established result and scope
+## Bounded card — before implementation
 
-Actual freeze14 produces authenticated selection20 before appraisal50. The accepted
-one-use selector supplies only selected canonical sample bytes. Empty selection has
-its own trace audit/causal parent. No new state owner, memory, scheduler, RNG or save.
-With capacity1, all four M3 cells at seed7 preserve exact state, outputs minus only
-selection audit, and actual draws. The existing body-dependent choice change survives.
-Capacity0 observes/freeze successfully but yields no appraisal body operand or body
-reason. Denied/unavailable, zero pressure, no sensing and stale earlier sensing differ.
-Repeat/restore after learning matches every full boundary for both capacities; hidden
-truth and whole-instant rollback checks pass. Malformed models/sources/saves reject.
+Capabilities (three): (1) actual selected body evidence forms a dated episode in the
+existing346/1 episodic family; (2) a generated next-instant exact recall reads that
+committed episode; (3) simultaneous measurement/body formation commits atomically.
+No body-memory root, independent runtime, new learning rule, or private stored history.
+Recall is an output of memory access, not fresh interoception or new belief evidence.
 
-51 tests pass:7 M4,7 component,10 SEM ordering,27 M3/body/M2a regression. Type checking
-passes; frozen105 dependencies and repository guards are recorded in the check log.
-Five production/test files; one result/raw log, within20 files/5MiB and timing caps.
-Only correction: test raw-signal record narrowing; no calibration or comparison change.
+Contract: [assembled-character-memory/0.1](../formal/ASSEMBLED_CHARACTER_MEMORY_CONTRACT.md).
+Baseline mapping: C-MEM:2..11, C-ATTN:4..13, C-BODY:4..13, F-12.3:1..10 remain
+pending; this is their shared-owner prerequisite, not replay closure. FND3/4 schema,
+owner-extension and phase140 joins require the versioned requalification below.
+FND6 evidence isolation remains mandatory. RO-C3-011 and all conditional debts unchanged.
 
-## Stop and remaining work
+Production/test files: src/assembled/{model,state,runtime,traceBinding}.ts,
+new src/assembled/memory.ts and src/test/assembledMemory.test.ts (six; ceiling12).
+Reuse body.evidence() only inside the authenticated actual selection20 handler;
+leave body/inputs/execution and frozen Campaign2 components unchanged if sufficient.
+Existing measurement execution remains the original operation under the same owner.
 
-This is a single-channel body gate, not full attention competition or rich perception.
-No encoding/retention law was selected; it creates no body-memory side store. Recognition,
-visual/recalled selection, memory acquisition and shared resource accounting remain.
-The next integration needs its own bounded card; no next milestone is opened here.
-All21 corpus members/15 families/132 clauses remain final scope. No pinned clause or
-conditional obligation closes. RO-C3-011 unchanged. UI/Campaign4/old audits stay stopped.
+Comparison declared before runs: all four M3 cells at seed7 against0.4; preserve
+choice, appraisal and draws through choice3, numeric prediction and task status to10.
+New acquisitions allocate real IDs, so later occurrence IDs need not match0.4.
+Compare original selected sample/experience bytes with stored/recalled bytes, causal
+selection->evidence130->formation140 and recall20 joins, and the actual memory read.
+Repeat and restore after3 must match full state/outputs/trace/save at every boundary.
+Test selected/excluded/denied, same-evidence hidden truth, simultaneous probe/sample,
+stale recall without fresh sensing, malformed versions/authored sources/learned S0,
+wrong authority and failure after prepared formation with whole-instant rollback.
+
+Checks, serial: typecheck; assembledMemory plus state authority/semantic rollback
+vectors; assembledAttention and assembledBody regressions. These cover new ownership,
+ordering, epistemic joins, old versions and public admission. Frozen105 dependency
+and control fixture/config comparison decides whether full M1 must rerun.
+Boundary/research/size checks and document budgets follow. No browser or full corpus.
+10min/check,30min total verification;20 evidence files/5MiB; one result and raw log.
+Binary done: all declared assertions pass within budget, source isolation holds, and
+results classify differences. Otherwise preserve failure and stop incomplete.
+
+## Limit and next dependency
+
+This extends the C2 exact-episode control across sources. It does not claim the C3
+selective encoding, significance retention, retrieval competition or workspace-use laws.
+Those require a common cross-source policy on this owner, not another memory store.
+Rich perception remains pending. UI/Campaign4/old Workbench audits remain stopped.
