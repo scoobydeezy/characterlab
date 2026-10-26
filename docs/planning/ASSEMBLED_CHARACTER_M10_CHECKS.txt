@@ -1,0 +1,195 @@
+M10 raw checks; before-code card/contracte1699240; base638dc593. Failures retained.
+COMMAND npx tsc -b --pretty false (production and tests)
+exit=0 seconds=15.0341996
+PRE-FUNCTIONAL REVIEW: track unbound effect plans explicitly; commit rejects a producer whose effect child was never bound. Added assertion to the planned private-lifecycle control.
+COMMAND npx tsc -b --pretty false (lifecycle guard)
+exit=0 seconds=14.7756478
+npx vitest run src/test/assembledActionBody.test.ts -t fixed16-seed --maxWorkers=1 --minWorkers=1
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice
+M10 seed 0 first=definition/protocol-contact-two later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[3,0]
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice
+M10 seed 1 first=definition/protocol-contact-two later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[3,0]
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice
+M10 seed 2 first=definition/protocol-contact-two later=["definition/protocol-contact-one","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice
+M10 seed 3 first=definition/protocol-contact-two later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice
+M10 seed 4 first=definition/protocol-contact-two later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice
+M10 seed 5 first=definition/protocol-contact-two later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice
+M10 seed 6 first=definition/protocol-contact-two later=["definition/protocol-contact-one","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice
+M10 seed 7 first=definition/protocol-contact-two later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice
+M10 seed 8 first=definition/protocol-contact-two later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice
+M10 seed 9 first=definition/protocol-contact-two later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice
+M10 seed 10 first=definition/protocol-contact-two later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice
+M10 seed 11 first=definition/protocol-contact-two later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[3,0]
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice
+M10 seed 12 first=definition/protocol-contact-two later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice
+M10 seed 13 first=definition/protocol-contact-two later=["definition/protocol-contact-one","definition/protocol-contact-two"] draws=[3,0]
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice
+M10 seed 14 first=definition/protocol-contact-two later=["definition/protocol-contact-one","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice
+M10 seed 15 first=definition/protocol-contact-two later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[2,0]
+M10 later choices differ=4/16; actual overlapping draw pairs=0; overflow witnesses=12
+
+ ✓ src/test/assembledActionBody.test.ts (7 tests | 6 skipped) 116857ms
+   ✓ M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice 116856ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  16:07:32
+   Duration  118.45s (transform 882ms, setup 0ms, collect 1.30s, tests 116.86s, environment 0ms, prepare 91ms)
+
+exit=0 seconds=119.9613428
+npx vitest run M10 controls + all M9 + cognitive transforms; one worker; testTimeout180000 (command cap600s)
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > controls: late failure after actual body application rolls back state, outputs, trace and queue
+M10 late rollback 33 events; limit32
+
+ ❯ src/test/assembledActionBody.test.ts (7 tests | 1 failed | 1 skipped) 59088ms
+   ✓ M10 executed-action feedback > controls: without later sensing hidden actuation cannot change cognition, even with recalled old context 8024ms
+   ✓ M10 executed-action feedback > controls: whole-prefix repeat/restore after physical actuation at3 matches later boundaries and real draws 30972ms
+   × M10 executed-action feedback > controls: hidden levels preserve safe cognition; zero/unselected mappings and absent choice cannot create gain 4669ms
+     → expected Uint8Array[ 9, 15, 10, 151, 1, 1, …(3018) ] to not deeply equal Uint8Array[ 9, 15, 10, 151, 1, 1, …(3018) ]
+   ✓ M10 executed-action feedback > controls: late failure after actual body application rolls back state, outputs, trace and queue 4806ms
+   ✓ M10 executed-action feedback > controls: governed configuration rejects missing/foreign/duplicate/invalid effects and forged public source 6566ms
+   ✓ M10 executed-action feedback > controls: private execution binding rejects foreign attempts, forged/duplicate children and repeated execution 4050ms
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 0 choices=[["definition/protocol-contact-two","definition/protocol-contact-two"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 1 choices=[["definition/protocol-contact-two","definition/protocol-contact-two"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 2 choices=[["definition/protocol-contact-two","definition/protocol-contact-one"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,3,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 3 choices=[["definition/protocol-contact-two","definition/protocol-contact-one"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 4 choices=[["definition/protocol-contact-two","definition/protocol-contact-one"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,3,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 5 choices=[["definition/protocol-contact-two","definition/protocol-contact-two"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 6 choices=[["definition/protocol-contact-two","definition/protocol-contact-two"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,3,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 7 choices=[["definition/protocol-contact-two","definition/protocol-contact-one"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 8 choices=[["definition/protocol-contact-two","definition/protocol-contact-two"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 9 choices=[["definition/protocol-contact-two","definition/protocol-contact-two"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,3,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 10 choices=[["definition/protocol-contact-two","definition/protocol-contact-two"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 11 choices=[["definition/protocol-contact-two","definition/protocol-contact-two"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,3,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 12 choices=[["definition/protocol-contact-two","definition/protocol-contact-one"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 13 choices=[["definition/protocol-contact-two","definition/protocol-contact-two"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 14 choices=[["definition/protocol-contact-two","definition/protocol-contact-one"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 15 choices=[["definition/protocol-contact-two","definition/protocol-contact-two"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+M9 changed-history choices=6/16; actual equal-address draw pairs=0
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > controls: late failure after consuming appraisal rolls back the entire instant
+M9 late rollback 28 events, limit27
+
+ ✓ src/test/assembledMemoryContext.test.ts (7 tests) 170730ms
+   ✓ M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect 117701ms
+   ✓ M9 memory-dependent choice > controls: four current-sensing M3 cells preserve prior behavior against0.8 14439ms
+   ✓ M9 memory-dependent choice > controls: repeat and restore before recall match every whole later boundary 15703ms
+   ✓ M9 memory-dependent choice > controls: hidden truth stays out, current zero takes precedence, failed sensing cannot fall back 10464ms
+   ✓ M9 memory-dependent choice > controls: no current handoff at6 even though the memory remains stored 3688ms
+   ✓ M9 memory-dependent choice > controls: late failure after consuming appraisal rolls back the entire instant 4984ms
+   ✓ M9 memory-dependent choice > controls: version/capacity admission and public memory forgery reject 3751ms
+ ✓ src/test/campaign2CognitiveTransforms.test.ts (12 tests) 45ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledActionBody.test.ts > M10 executed-action feedback > controls: hidden levels preserve safe cognition; zero/unselected mappings and absent choice cannot create gain
+AssertionError: expected Uint8Array[ 9, 15, 10, 151, 1, 1, …(3018) ] to not deeply equal Uint8Array[ 9, 15, 10, 151, 1, 1, …(3018) ]
+
+Compared values have no visual difference.
+
+ ❯ src/test/assembledActionBody.test.ts:68:222
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed | 2 passed (3)
+      Tests  1 failed | 24 passed | 1 skipped (26)
+   Start at  16:09:40
+   Duration  232.46s (transform 917ms, setup 0ms, collect 1.78s, tests 229.86s, environment 0ms, prepare 260ms)
+
+exit=1 seconds=234.0225457
+CORRECTION: hidden-level control incorrectly demanded different terminal states after both runs saturate at100. Assert physical state differs at3 BEFORE saturation, retain identical cognitive/observation/draw comparison through terminal. No fixture, production code, seed, formula or behavioral gate changed. Previous failure retained.
+npx tsc -b --pretty false (corrected test)
+exit=0 seconds=15.1168237
+npx vitest run src/test/assembledActionBody.test.ts -t hidden levels --maxWorkers=1 --minWorkers=1 (only failed control)
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledActionBody.test.ts (7 tests | 6 skipped) 18625ms
+   ✓ M10 executed-action feedback > controls: hidden levels preserve safe cognition; zero/unselected mappings and absent choice cannot create gain 18624ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  16:14:48
+   Duration  20.23s (transform 888ms, setup 0ms, collect 1.31s, tests 18.63s, environment 0ms, prepare 92ms)
+
+exit=0 seconds=21.7104691
+PASS frozen105 dependency/config/original-fixture guard vsdb0ca7a8; M1 test/control vs31553ea7. No full-control invalidator. seconds=0.269
+npm run check:boundaries
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+exit=0 seconds=2.5047668
+npm run check:research
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+exit=0 seconds=4.1264663
+PASS final caps: production/test7/12; evidence2/20 bytes=22832/5242880; register bytes=65400/65536; AGENTS.md:96/120, docs/planning/CURRENT.md:32/80, docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md:249/250, docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md:130/250; git diff --check PASS; seconds=0.462

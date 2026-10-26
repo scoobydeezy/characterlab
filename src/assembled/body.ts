@@ -14,6 +14,7 @@ import {admitObservationLane,freezeAndStageSemanticExperience,validateSuccessful
 import {assemblePreRecognitionExperience} from '../semanticBinding/perceptualEventFiles';
 import {preRecognitionSemanticExperienceValue} from '../semanticBinding/semanticEvidenceCodecs';
 import {dataItems as items,dataField as f,dataRecord as rec,dataKey as key,dataIdentity as id,dataText as txt,invalidModel} from '../campaign2/canonicalData';
+import {ACTION_BODY,ACTION_BODY_EVENT,selectedBodyEffect,type ActionBodyDeclaration} from './actionBody';
 import type {compileCampaign2StateModel} from '../campaign2/stateModel';
 export const bodyId=(ns:number,name:string)=>typedIdentifier(ns,text(name));
 export const BODY_SAMPLE=bodyId(1001,'event/assembled-body-sample'),BODY_DELIVERY=bodyId(1001,'event/assembled-body-delivery');
@@ -54,25 +55,42 @@ export function withBodyState(base:ReturnType<typeof compileCampaign2StateModel>
  });
 }
 export interface BodyEvidence {sample?:CanonicalValue;experience?:CanonicalValue;selection?:CanonicalValue;settledEvent:ScheduledEvent;}
-export function createBodyExecution(d:BodyDeclaration,C:CanonicalValue,stateModel:ReturnType<typeof compileCampaign2StateModel>,originals:readonly ScheduledEvent[],model:CanonicalValue,run:CanonicalValue){
+export function createBodyExecution(d:BodyDeclaration,C:CanonicalValue,stateModel:ReturnType<typeof compileCampaign2StateModel>,originals:readonly ScheduledEvent[],model:CanonicalValue,run:CanonicalValue,actionBody?:ActionBodyDeclaration){
  const path=bodyPath(C),roster:StatePath={rootStateTypeId:268n,fieldId:1n,selectors:[{kind:'mapKey',key:BODY_OBSERVER}]};
  const names=['tracking','binding','classification','freeze'],internal=names.map(n=>bodyId(1001,'event/assembled-body-'+n));
- const pending=new Map<string,ScheduledEvent>();let at=0n,active=false,used=new Set<bigint>(),reservations:ExperienceReservation[]=[],staged:StagedSemanticExperience[]=[],current:BodyEvidence|undefined;
+ const executionParents=new Set<bigint>();const pending=new Map<string,ScheduledEvent>();let unboundEffects=0,at=0n,active=false,used=new Set<bigint>(),reservations:ExperienceReservation[]=[],staged:StagedSemanticExperience[]=[],current:BodyEvidence|undefined;
  function read(state:AuthoritativeState,p:StatePath,accessor:string){const projection=new ContractReadProjection(state,[exactPattern(p)],{value:{kind:'direct',accessorId:bodyId(1028,accessor),path:p}});const value=projection.read('value');if(value===undefined)fail('required body/IDN projection absent');return {value:value!,reads:projection.actualReadRecords()};}
- function authenticate(e:ScheduledEvent){if(!active||e.dueAt!==at||used.has(e.eventId))fail('body source lifecycle');const expected=e.phase===10n||e.phase===110n?originals.find(o=>o.eventId===e.eventId):pending.get(key(scheduledEventValue(e)));if(!expected||key(scheduledEventValue(expected))!==key(scheduledEventValue(e)))fail('unbound body source/child');used.add(e.eventId);pending.delete(key(scheduledEventValue(e)));}
+ function authenticate(e:ScheduledEvent){if(!active||e.dueAt!==at||used.has(e.eventId))fail('body source lifecycle');const expected=key(e.eventTypeId)===key(BODY_SAMPLE)||key(e.eventTypeId)===key(BODY_DELIVERY)?originals.find(o=>o.eventId===e.eventId):pending.get(key(scheduledEventValue(e)));if(!expected||key(scheduledEventValue(expected))!==key(scheduledEventValue(e)))fail('unbound body source/child');used.add(e.eventId);pending.delete(key(scheduledEventValue(e)));}
  return Object.freeze({
-  eventTypes:()=>[BODY_SAMPLE,BODY_DELIVERY,...internal,...(d.selectionCapacity===undefined?[]:[BODY_SELECTION])],
-  begin(instant:bigint){if(active)fail('body instant already active');at=instant;active=true;used=new Set();pending.clear();reservations=[];staged=[];current=undefined;},
+  eventTypes:()=>[BODY_SAMPLE,BODY_DELIVERY,...(actionBody?[ACTION_BODY_EVENT]:[]),...internal,...(d.selectionCapacity===undefined?[]:[BODY_SELECTION])],
+  begin(instant:bigint){if(active)fail('body instant already active');at=instant;active=true;used=new Set();pending.clear();executionParents.clear();unboundEffects=0;reservations=[];staged=[];current=undefined;},
+  observeExecution(parent:ScheduledEvent,outcome:CanonicalValue){
+   if(!actionBody)return undefined;
+   if(!active||parent.dueAt!==at||parent.phase!==110n||key(parent.eventTypeId)!==key(bodyId(1001,'event/protocol-execution'))||executionParents.has(parent.eventId))fail('action body execution source lifecycle');
+   const effect=selectedBodyEffect(outcome,C,actionBody);if(key(effect.attempt)!==key(parent.payload))fail('action body parent attempt association');executionParents.add(parent.eventId);unboundEffects++;
+   const emission:EventEmission={dueAt:parent.dueAt,phase:110n,eventTypeId:ACTION_BODY_EVENT,payload:structuredClone(outcome),dependencies:list([])};let bound=false;
+   return {emissions:[emission],bind(children:readonly ScheduledEvent[]){
+    if(!active||bound||children.length!==1)fail('action body child multiplicity/lifecycle');const child=children[0],expected={...emission,eventId:child.eventId,eventSequence:child.eventSequence,causalParentEventIds:[parent.eventId]};
+    if(child.eventId===parent.eventId||child.eventSequence<=parent.eventSequence||key(scheduledEventValue(child))!==key(scheduledEventValue(expected))||pending.has(key(scheduledEventValue(child))))fail('action body generated child mismatch');
+    pending.set(key(scheduledEventValue(child)),structuredClone(child));bound=true;unboundEffects--;
+   }};
+  },
   evidence(){if(!active)fail('body evidence outside current instant');return current?structuredClone(current):undefined;},
   execute(context:EventHandlerContext<AuthoritativeState>){
    const {event,state}=context;authenticate(event);
    let outputs:CanonicalValue[]=[],reads:ActualReadRecord[]=[],quantization:CanonicalValue[]=[],patch:StatePatch={operations:[]},nextState=state,diffs:ReturnType<typeof stateModel.applyPatch>['diffs']=[],emissions:EventEmission[]=[],domain:StatePathPattern[]=[],sources:ReturnType<typeof id>[]=[];
    const emit=(phase:bigint,type:CanonicalValue,payload:CanonicalValue)=>{emissions=[{dueAt:event.dueAt,phase,eventTypeId:id(type),payload,dependencies:list([])}];};
    if(event.phase===110n){
-    if(key(event.eventTypeId)!==key(BODY_DELIVERY))fail('body delivery event');const payload=items(event.payload,'list');if(payload.length!==2||key(payload[0])!==key(C))fail('body delivery target');
-    const prior=read(state,path,'accessor/embodied-reserve-anchor'),anchor=rec(prior.value,454n),anchorAt=f(anchor,2n);if(typeof anchorAt==='boolean'||anchorAt.kind!=='signed')fail('body anchor');
-    reads=[...prior.reads];domain=[exactPattern(path)];const level=materializeReserve(exact(f(anchor,1n)),(anchorAt as {value:bigint}).value,d.capacity,d.rate,at);
-    const proposal=proposeEmbodiedReplenishment(anchor,level,d.capacity,exact(payload[1]),at,path);patch=proposal.patch;const applied=stateModel.applyPatch(state,patch,BODY_OWNER,{writableRoots:[455n],targetPaths:[path]});nextState=applied.state;diffs=applied.diffs;outputs=[proposal.output];
+    const generated=key(event.eventTypeId)===key(ACTION_BODY_EVENT);if(!generated&&key(event.eventTypeId)!==key(BODY_DELIVERY)||generated&&!actionBody)fail('body delivery event');
+    const effect=generated?selectedBodyEffect(event.payload,C,actionBody!):undefined,payload=generated?undefined:items(event.payload,'list');
+    if(payload&&(payload.length!==2||key(payload[0])!==key(C)))fail('body delivery target');
+    const amount=effect?.requested??exact(payload![1]);let physical:CanonicalValue=list([]);
+    if(!effect||effect.applied){
+     const prior=read(state,path,'accessor/embodied-reserve-anchor'),anchor=rec(prior.value,454n),anchorAt=f(anchor,2n);if(typeof anchorAt==='boolean'||anchorAt.kind!=='signed')fail('body anchor');
+     reads=[...prior.reads];domain=[exactPattern(path)];const level=materializeReserve(exact(f(anchor,1n)),(anchorAt as {value:bigint}).value,d.capacity,d.rate,at);
+     const proposal=proposeEmbodiedReplenishment(anchor,level,d.capacity,amount,at,path);patch=proposal.patch;const applied=stateModel.applyPatch(state,patch,BODY_OWNER,{writableRoots:[455n],targetPaths:[path]});nextState=applied.state;diffs=applied.diffs;physical=proposal.output;
+    }
+    if(effect){sources=[id(effect.outcomeId),id(effect.attemptId)];outputs=[list([text(ACTION_BODY),effect.outcomeId,effect.attemptId,effect.action,atom(amount),text(effect.applied?'Applied':'Blocked'),physical])];}else outputs=[physical];
    }else if(event.phase===10n){
     if(key(event.eventTypeId)!==key(BODY_SAMPLE))fail('body sample event');const cue=rec(event.payload,459n);if(key(f(cue,1n))!==key(BODY_OBSERVER)||key(f(cue,2n))!==key(BODY_DEFINITION))fail('body observer/channel');
     const binding=read(state,roster,'ResolvedCharacterSubject');if(key(f(rec(binding.value,267n),1n))!==key(C))fail('body IDN target mismatch');reads=[...binding.reads];domain=[exactPattern(roster),exactPattern(path)];
@@ -105,10 +123,10 @@ export function createBodyExecution(d:BodyDeclaration,C:CanonicalValue,stateMode
    }
    return {nextState,outputs,emittedEvents:emissions,traceContributions:[],traceFactory(children:readonly ScheduledEvent[]){
     if(children.length!==emissions.length)fail('body child multiplicity');for(const [i,child] of children.entries()){const e=emissions[i],expected={...e,eventId:child.eventId,eventSequence:child.eventSequence,causalParentEventIds:[event.eventId]};if(child.eventSequence<=event.eventSequence||pending.has(key(scheduledEventValue(child)))||key(scheduledEventValue(child))!==key(scheduledEventValue(expected)))fail('body child differs from generated plan');pending.set(key(scheduledEventValue(child)),structuredClone(child));}
-    return [traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model,runIdentity:run,event,seamId:bodyId(1036,'seam/assembled-body'),seamVersion:d.selectionCapacity===undefined?'assembled-character-interaction/0.1-candidate':'assembled-character-attention/0.1-candidate',recordKind:event.eventTypeId,subjectIds:[id(C),BODY_OBSERVER],sourceRecordIds:sources,registeredReadDomain:domain,actualReadRecords:reads,inputProjection:event.payload,outputProjection:list(outputs),randomDrawRecords:[],quantizationOperations:quantization,statePatch:patch,structuralMutationDiffs:diffs,emittedEvents:children,invariantResults:[]})];
+    return [traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model,runIdentity:run,event,seamId:bodyId(1036,'seam/assembled-body'),seamVersion:key(event.eventTypeId)===key(ACTION_BODY_EVENT)?'assembled-character-action-body/0.1-candidate':d.selectionCapacity===undefined?'assembled-character-interaction/0.1-candidate':'assembled-character-attention/0.1-candidate',recordKind:event.eventTypeId,subjectIds:[id(C),BODY_OBSERVER],sourceRecordIds:sources,registeredReadDomain:domain,actualReadRecords:reads,inputProjection:event.payload,outputProjection:list(outputs),randomDrawRecords:[],quantizationOperations:quantization,statePatch:patch,structuralMutationDiffs:diffs,emittedEvents:children,invariantResults:[]})];
    }};
   },
-  prepareCommit(){if(!active||pending.size||originals.some(e=>e.dueAt===at&&!used.has(e.eventId)))fail('unfinished body instant');validateSuccessfulExperienceSettlement(reservations,staged);},
-  close(){active=false;pending.clear();current=undefined;reservations=[];staged=[];},
+  prepareCommit(){if(!active||unboundEffects||pending.size||originals.some(e=>e.dueAt===at&&!used.has(e.eventId)))fail('unfinished body instant');validateSuccessfulExperienceSettlement(reservations,staged);},
+  close(){active=false;pending.clear();executionParents.clear();unboundEffects=0;current=undefined;reservations=[];staged=[];},
  });
 }

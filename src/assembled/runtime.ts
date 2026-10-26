@@ -1,7 +1,7 @@
 /** assembled-character-model/0.1-candidate. One fixed composition and scheduler.
  * Bounded port of the reachable cognitive wiring in C2 adaptationRuntime; no optional
  * model selection, authored-fact/consequence bridge branch (the generated protocol bridge remains) or imported continuation. */
-import {canonicalEncode,text,list,type CanonicalValue} from '../substrate/canonicalEncoding';
+import {canonicalEncode,text,list,record,type CanonicalValue} from '../substrate/canonicalEncoding';
 import {AuthoritativeState} from '../substrate/state';
 import {DeterministicScheduler,SchedulerContractError,type ScheduledEvent,type EventHandlerContext,type EventHandler} from '../substrate/scheduler';
 import {scheduledEventValue,createCanonicalSave} from '../substrate/persistence';
@@ -37,7 +37,7 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
  const task=Object.freeze({base,content,stateModel,tasks:component.tasks,measurement:component.measurement,deadline:component.deadline,predictionComponent:prediction});
  const maxWork=compileCampaign2Parameters(model.source.parameterSchemaVersion,model.source.parameters).maxWork;
  const modelIdentity=model.modelIdentity.value;
- const body=model.body?createBodyExecution(model.body,component.tasks[0].character,stateModel,inputs.bodyEvents,modelIdentity,inputs.runIdentity.value):undefined;
+ const body=model.body?createBodyExecution(model.body,component.tasks[0].character,stateModel,inputs.bodyEvents,modelIdentity,inputs.runIdentity.value,model.actionBody):undefined;
  const episodes=model.memory?createEpisodicExtension(component.tasks[0].character,model.body!,stateModel,modelIdentity,inputs.runIdentity.value,model.retention?.recallDelay,model.retrieval,model.workspace):undefined;
  const cognitive=createCognitiveExecution(model,component,inputs,()=>body?.evidence(),()=>episodes?.currentRecalls()??[]);
  const probeModel=base.probe,measurement=base.measurement,domains=base.domains,shared=bindings.admission,evaluator=bindings.evaluator;
@@ -127,7 +127,11 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
    if(!ingress)throw new SchedulerContractError('INPUT_NOT_ADMITTED','cognitive outside live ingress');
    const result=await cognitive.execute(context.event,context.state,context),own=result.emissions();
    const extra=typeof result.output!=='boolean'&&result.output.kind==='record'&&result.output.schema.typeId===307n?ingress.observeProtocolSource(context.event,canonicalEncode(result.output)):undefined;
-   return {nextState:context.state,outputs:[result.output,...result.additionalOutputs],emittedEvents:[...own,...(extra?.emissions()??[])],traceContributions:[],traceFactory:children=>{result.bindAllocatedChildren(children.slice(0,own.length));extra?.bindAllocatedChildren(children.slice(own.length));return [result.trace(children)];}};
+   const extraEvents=extra?.emissions()??[],effect=typeof result.output!=='boolean'&&result.output.kind==='record'&&result.output.schema.typeId===433n?body?.observeExecution(context.event,result.output):undefined;
+   return {nextState:context.state,outputs:[result.output,...result.additionalOutputs],emittedEvents:[...own,...extraEvents,...(effect?.emissions??[])],traceContributions:[],traceFactory:children=>{
+    result.bindAllocatedChildren(children.slice(0,own.length));extra?.bindAllocatedChildren(children.slice(own.length,own.length+extraEvents.length));effect?.bind(children.slice(own.length+extraEvents.length));
+    const original=rec(result.trace(children),160n);return [effect?record(original.schema,new Map([...original.fields].map(([n,v])=>[n,n===6n?text('assembled-character-protocol-body-source/0.1-candidate'):v]))):original];
+   }};
   });
   for(const eventType of cognitive.protocolEventTypes()??[])registerHandler(key(eventType),context=>{
    if(!ingress)throw new SchedulerContractError('INPUT_NOT_ADMITTED','protocol outside live ingress');
