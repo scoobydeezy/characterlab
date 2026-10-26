@@ -1,71 +1,70 @@
-# Current work — M2 register ready for owner review
+# Current work — revised M2 decisions pending
 
-2026-10-25. The character still runs the unchanged Campaign 2 scaffold through one
-headless entry. The M2 register maps the mechanisms to shared owners and names the
-successor boundary. Unified behavior and general configuration remain to implement.
+2026-10-25. The character still runs the unchanged Campaign 2 scaffold. The revised
+register now compares operations, recommends a single reference policy and places an
+early interaction gate before broadening. No simulation behavior has changed.
 
 Read [work order](ASSEMBLED_CHARACTER_WORK_ORDER.md),
-[baseline](ASSEMBLED_CHARACTER_BASELINE.json), and
+[baseline](ASSEMBLED_CHARACTER_BASELINE.json), and the opening decision sheet in
 [M2 reconciliation](ASSEMBLED_CHARACTER_RECONCILIATION.md).
 Results: [M0](ASSEMBLED_CHARACTER_M0_RESULT.md), [M1](ASSEMBLED_CHARACTER_M1_RESULT.md).
 
-## State and owner decision
+## Authorization and preservation
 
-- Branch: codex/assembled-character; base 788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535.
-- Old checkout retained; tag archive/workbench-stopped-2026-10-25 preserves
-  a2f801146729acb218f245042d103f65170615cf and the original untracked evidence.
-- Owner adopted M0 baseline and revised M1 comparison before M1 implementation,
-  then the foundation amendment on 2026-10-25. M2 source review used db0ca7a8.
-- Baseline: corpus0.29.0; 21 members /219 overlapping requirement records;
-  15 families /132 clauses. Six C0/C1 verdicts and five C2 conditions also apply.
-- M1: three controls match;16 tests, typecheck, boundary and research checks PASS.
-  No existing simulation/formal trees changed. Original M1 criteria remain fixed.
-- M2: one register plus CURRENT; no implementation, runtime tests or evidence copies.
-  All60 C3 Runtime.ts files are represented alongside component-only mechanisms.
-- Zero whole runtimes proved duplicate. Shared functions are reusable; meaningful
-  operations keep their own roles and feed the appropriate shared state authority.
-- No Campaign3 family/member coverage closed and no new reference law selected.
-- Campaign2 already calls observation/semanticBinding; rich perception remains to join.
-  SEM-001 closed 2026-09-04. Historical gate wording does not reopen it.
-- RO-C3-011 and other conditional debts keep their scope/triggers. No obligation closed.
-- UI, old audits and Campaign4 remain stopped. No browser retention requirement.
+- Branch codex/assembled-character; base788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535.
+- Old checkout and archive/workbench-stopped-2026-10-25 preserve original work/evidence.
+- Owner approved M0/M1 and adopted foundation constraints. M1 passed its16 tests
+  and applicable checks. Current review revises abe7a3ce; old M1 criteria stay fixed.
+- The other agent's recommendation is review evidence, not owner approval.
+- **D1–D5 are all PENDING.** No M2a or broader implementation has started.
+- Baseline stays21 members/219 overlapping records,15 families/132 clauses;
+  six C0/C1 constraints, five C2 conditions and all18 conditional debts remain.
+- Zero coverage closed, no law adopted and no verdict/qualification changed.
+- C2 executes thin observation/event-file/phase paths; rich classification/recognition
+  remains to join. SEM-001's historical closure is preserved.
+- UI, old audits and Campaign4 stay stopped; no browser retention requirement.
 
-| Item | Disposition |
+| Research obligations | Disposition |
 |---|---|
-| Research obligations | **0 active /18 conditional /0 unowned** |
-| Closed obligations | 4; scoped historical closures preserved |
+| Active / conditional / unowned | 0 /18 /0 |
+| Historical closed | 4; scoped closures preserved |
 
-## M2 review checkpoint
+## Owner decision sheet in the register
 
-- Review register R0/R1 first, genuine alternatives L1–L8, then U1–U4 unresolved work.
-- Recommendation: separate successor under src/assembled; keep Campaign2 and its
-  transitive control dependencies frozen. Reuse kernels; no independent-runtime dispatch.
-- Recommend fixed named variants for meaningful alternatives; preserve negative,
-  ablation and representation controls in their proper roles. No new variant catalog.
-- U1–U4 retain unresolved shared keys/evidence, selector correspondences, domain lifts
-  and interaction/trace work. Resolve affected executable mappings before their coding;
-  source/family routing is not executable coverage or approval to guess fixtures.
-- S1–S4 name placement, identity boundary and bounded composition-port proposal.
-  A1–A3 specify M2a admission fields, nested gates, negative controls and finish rule.
-- V1–V4 tie future checks to concrete failure risks and invalidating dependencies.
-  Keep full-byte checks for frozen control and within-model replay/restore; use
-  predeclared semantic correspondence across changed models. Never trim after failure.
-- Budget used: one register <=250 lines /64 KiB plus this file; zero production/tests.
-  Reference/accounting/document-limit checks PASS; whitespace and staged size gate commit.
-- Stop here for the work order's single M2 owner review before M2a implementation.
+1. D1: recommend approving S1–S4/A1–A3 and releasing M2a only, while other decisions
+   remain pending. This partial release requires the owner's explicit ruling.
+2. D2: recommend one reference policy, with L1–L4/L7–L8 and R3 choices. Additional
+   variants preserve comparisons; a variant-only pass cannot close reference coverage.
+3. D3: recommend development-aware common practice/performance/personality updates
+   (L5/L6), retaining incompatible Skill/Disposition laws as comparison controls.
+4. D4: recommend the M3 early interaction gate before breadth; SEQ/W1/W2 define it.
+5. D5: recommend operation-level consolidation O1–O6 with no separate cleanup project.
 
-## Required follow-on sequence
+O2 proves duplicate binary-mean arithmetic on its common domain; evidence admission,
+repeat handling and ownership differ. O4 proves duplicate state clone/projection only.
+Appraisal operations differ but share a factor kernel. Reasons already share their
+compiler; source joins, lifecycle, schemas and capabilities still require reconciliation.
 
-M2 owner review -> bounded M2a configuration-admission card -> versioned contract
-before code -> invariant-based successor admission -> broader integration by causal
-need. No additional review gate is invented for routine work within the approved card.
+The revised L5/L6 expose actual conflicts: fixed Skill practice versus developmental
+practice, and Plastic's batched personality update versus developmental formation.
+The proposed reference uses one update per owner. No scenario may silently choose
+its old fixture's update, tune gains or switch producers to obtain a pass.
 
-M2a must admit a legal non-preset configuration and deterministic save/restore without
-21-recipe digest membership. Nested task/channel/content restrictions must be stated
-as domain invariants or replaced explicitly. Removing only the top-level gate is
-insufficient. Later mechanisms extend this same contract and shared runtime/state.
+## Next sequence and gates
 
-Before coding: <=3 capabilities, <=12 production/test files, <=20 evidence files/5MiB,
-10 minutes/check and30 minutes total; exact fixtures/projections/checkpoints/risks.
-If the work cannot fit, split or seek a concrete budget amendment before execution.
-Historical controls and the final21-member/15-family/132-clause acceptance remain.
+If D1 is approved: write the bounded M2a card and version its contract before code;
+admit a valid non-preset and prove deterministic continuation without digest membership.
+Nested fixed tasks/channels/content remain explicit invariants or versioned replacements.
+
+Proposed next integration gate: M3 first resolves shared keys/owners, then demonstrates
+learned history × later permitted body evidence changing a real choice in one run.
+Predeclare2x2 history/body scenarios, consumed-state/causal joins and checkpoint;
+no authored learned estimate, no factory dispatch, no retuning after failure.
+No broader-area integration before this witness. Later dependency order is in SEQ;
+full pinned reference replay and required alternative comparisons remain final gates.
+
+Limits: one register <=250lines/64KiB plus CURRENT<=80lines; no new companion docs.
+One active package, <=3 capabilities/12 production-test files/20 evidence files/5MiB;
+checks<=10min each/30min total. Split or amend before exceeding limits.
+This revision changes only two planning files. Reference/accounting/limit checks PASS;
+whitespace/staged size gate commit. No runtime tests needed because production, fixtures and contracts are unchanged.
