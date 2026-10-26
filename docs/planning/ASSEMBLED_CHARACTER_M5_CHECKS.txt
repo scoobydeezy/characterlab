@@ -1,0 +1,92 @@
+M5 checks — contract e84b6578; preserved failures and serial commands
+COMMAND npx tsc -b --pretty false
+src/assembled/memory.ts(37,182): error TS2339: Property 'key' does not exist on type 'StateSelector'.
+  Property 'key' does not exist on type '{ readonly kind: "typedEntity"; readonly id: { readonly kind: "typedIdentifier"; readonly namespaceId: bigint; readonly payload: CanonicalValue; }; }'.
+src/assembled/memory.ts(70,8): error TS18048: 'evidence' is possibly 'undefined'.
+src/assembled/memory.ts(71,21): error TS18048: 'evidence' is possibly 'undefined'.
+src/assembled/memory.ts(71,37): error TS18048: 'evidence' is possibly 'undefined'.
+src/assembled/memory.ts(71,58): error TS18048: 'evidence' is possibly 'undefined'.
+src/assembled/memory.ts(72,24): error TS18048: 'evidence' is possibly 'undefined'.
+src/assembled/memory.ts(72,40): error TS18048: 'evidence' is possibly 'undefined'.
+src/assembled/memory.ts(72,61): error TS18048: 'evidence' is possibly 'undefined'.
+exit=1 seconds=14.9470074
+CORRECTION: explicit TypeScript narrowing for validated selector and selection receipt; no domain change. COMMAND npx tsc -b --pretty false
+exit=0 seconds=14.4874037
+COMMAND npx vitest run src/test/assembledMemory.test.ts src/test/state.test.ts src/test/semanticPhaseRollbackCause.test.ts --maxWorkers=1 --minWorkers=1
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMemory.test.ts > M5 selected evidence shares episodic state and settlement > retains the four-cell M3/M4 choice, appraisal, draws and later prediction/task semantics
+M5 four-cell correspondence: exact choice/appraisal/draws through3; prediction means/support counts/task status through10
+
+stdout | src/test/assembledMemory.test.ts > M5 selected evidence shares episodic state and settlement > commits simultaneous measurement/body formation together and rolls back a late stage failure
+M5 joint formation 21 scheduled events; late failure cap 20 rolls back full instant
+
+ ✓ src/test/assembledMemory.test.ts (7 tests) 58549ms
+   ✓ M5 selected evidence shares episodic state and settlement > retains the four-cell M3/M4 choice, appraisal, draws and later prediction/task semantics 16783ms
+   ✓ M5 selected evidence shares episodic state and settlement > excluded, denied and unavailable observations form no episode or recall; selected safe evidence does 7371ms
+   ✓ M5 selected evidence shares episodic state and settlement > repeat and restore with pending recall match every full boundary after formation 20827ms
+   ✓ M5 selected evidence shares episodic state and settlement > same permitted evidence hides exact body truth in memory and recall 4113ms
+   ✓ M5 selected evidence shares episodic state and settlement > recall remains past evidence when a later decision has no current sensing 2284ms
+   ✓ M5 selected evidence shares episodic state and settlement > commits simultaneous measurement/body formation together and rolls back a late stage failure 3468ms
+   ✓ M5 selected evidence shares episodic state and settlement > rejects wrong owners/holders, forged episodes, authored memory events and version mismatches 3703ms
+ ✓ src/test/state.test.ts (6 tests) 11ms
+ ✓ src/test/semanticPhaseRollbackCause.test.ts (1 test) 6ms
+
+ Test Files  3 passed (3)
+      Tests  14 passed (14)
+   Start at  09:42:08
+   Duration  60.61s (transform 859ms, setup 0ms, collect 1.30s, tests 58.57s, environment 0ms, prepare 257ms)
+
+exit=0 seconds=62.0847209
+
+PASS frozen105 transitive dependencies plus fixture/config unchanged vs db0ca7a8; M1 test/control alias unchanged vs31553ea7. Existing M1 result retained; no invalidator.
+COMMAND npx vitest run src/test/assembledAttention.test.ts src/test/assembledBody.test.ts --maxWorkers=1 --minWorkers=1
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAttention.test.ts > M4 live body selection in the shared character > capacity1 preserves all four M3 cells at seed7, complete state/outputs/draws and actual choice change
+M4 selected four-cell correspondence PASS: [["definition/protocol-contact-two","definition/protocol-contact-one"],["definition/protocol-contact-one","definition/protocol-contact-one"]]
+
+ ✓ src/test/assembledAttention.test.ts (7 tests) 67750ms
+   ✓ M4 live body selection in the shared character > capacity1 preserves all four M3 cells at seed7, complete state/outputs/draws and actual choice change 12902ms
+   ✓ M4 live body selection in the shared character > capacity0 excludes an actual permitted sample without inventing zero or allowing a body reason 2366ms
+   ✓ M4 live body selection in the shared character > unavailable and denied differ from selected zero pressure and zero task exposure 7248ms
+   ✓ M4 live body selection in the shared character > repeat and post-learning restore match every boundary for both capacities; capacity changes cannot restore 29953ms
+   ✓ M4 live body selection in the shared character > hidden truth with equal body evidence cannot change cognition or draws at either capacity 6580ms
+   ✓ M4 live body selection in the shared character > no sensing and a later choice cannot reuse an earlier selected body sample 4374ms
+   ✓ M4 live body selection in the shared character > rejects malformed capacities/version/source and rolls back selection before a failed consumer 4327ms
+ ✓ src/test/assembledBody.test.ts (4 tests) 14471ms
+   ✓ M3 A: body evidence in the one character > executes physical delivery and actual current SEM, then restores the complete character 3890ms
+   ✓ M3 A: body evidence in the one character > rejects invalid declarations, foreign sources and body ownership 3245ms
+   ✓ M3 A: body evidence in the one character > permission and availability produce the same no-operand evidence, distinct from a known empty bin 5500ms
+   ✓ M3 A: body evidence in the one character > rolls back an earlier body write when a later source in the same instant fails 1835ms
+
+ Test Files  2 passed (2)
+      Tests  11 passed (11)
+   Start at  09:44:30
+   Duration  84.28s (transform 849ms, setup 0ms, collect 1.52s, tests 82.22s, environment 0ms, prepare 174ms)
+
+exit=0 seconds=85.7420841
+COMMAND npm run check:boundaries
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+exit=0 seconds=2.4384127
+COMMAND npm run check:research
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+exit=0 seconds=4.026779
+
+PASS document caps; register<=64KiB. M5 result/raw log:2 files/10957 bytes before final guard output;6 production/test files. Timed checks 183.73s, longest 85.74s.
+FINAL GUARDS: staged diff whitespace check PASS. COMMAND npm run check:git-size
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.

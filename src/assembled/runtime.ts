@@ -23,7 +23,8 @@ import {evidOperands,executeEvid} from '../campaign2/evidExecution';
 import {compileCognitiveIngress} from './ingress';
 import {createCognitiveExecution} from './execution';
 import {compileCharacterTraceBinding} from './traceBinding';
-import {createBodyExecution,BODY_SAMPLE,BODY_DELIVERY} from './body';
+import {createEpisodicExtension} from './memory';
+import {createBodyExecution,BODY_SAMPLE,BODY_DELIVERY,BODY_SELECTION} from './body';
 import type {compileCharacterInputs} from './inputs';
 import type {compileCharacterModel} from './model';
 import type {compileCharacterState} from './state';
@@ -36,6 +37,7 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
  const maxWork=compileCampaign2Parameters(model.source.parameterSchemaVersion,model.source.parameters).maxWork;
  const modelIdentity=model.modelIdentity.value;
  const body=model.body?createBodyExecution(model.body,component.tasks[0].character,stateModel,inputs.bodyEvents,modelIdentity,inputs.runIdentity.value):undefined;
+ const episodes=model.memory?createEpisodicExtension(component.tasks[0].character,model.body!,stateModel,modelIdentity,inputs.runIdentity.value):undefined;
  const cognitive=createCognitiveExecution(model,component,inputs,()=>body?.evidence());
  const probeModel=base.probe,measurement=base.measurement,domains=base.domains,shared=bindings.admission,evaluator=bindings.evaluator;
  const memoryRuntime=createMemoryExecution(memory,measurement.validateOutput,modelIdentity,inputs.runIdentity.value,[]);
@@ -53,7 +55,12 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
   const registerHandler=(eventKey:string,handler:EventHandler<AuthoritativeState>)=>{
     if(handlers.has(eventKey))throw new SchedulerContractError('INVALID_CONFIGURATION','event has multiple fixed runtime adapters');handlers.set(eventKey,handler);
   };
-  for(const eventType of body?.eventTypes()??[])registerHandler(key(eventType),context=>body!.execute(context));
+  for(const eventType of episodes?.eventTypes()??[])registerHandler(key(eventType),context=>episodes!.execute(context));
+  for(const eventType of body?.eventTypes()??[])registerHandler(key(eventType),context=>{
+   const result=body!.execute(context),extra=episodes&&key(context.event.eventTypeId)===key(BODY_SELECTION)?episodes.observeSelection(context.event,body!.evidence()):undefined;
+   if(!extra)return result;
+   const own=result.emittedEvents.length;return {...result,emittedEvents:[...result.emittedEvents,...extra.emissions],traceFactory(children:readonly ScheduledEvent[]){const trace=result.traceFactory(children.slice(0,own));extra.bind(children.slice(own));return [...trace,extra.trace(children.slice(own))];}};
+  });
   for(const eventType of probeModel.eventTypes()??[])registerHandler(key(eventType),context=>{
    if(!probe||!ingress||!probeSource)throw new SchedulerContractError('INPUT_NOT_ADMITTED','probe outside live instant');
    if(key(context.event.eventTypeId)===key(PROBE_SOURCE_EVENT)){probeSource.admit(context.event);probeInstant=true;}
@@ -135,13 +142,14 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
     adaptationSettlement:{version:'adaptation-settlement/0.2-candidate',
       beforeInstant(state,instant){
         domains.validateStatic(state);domains.validateReferences(state,instant);
-        probeInstant=false;runtimeCount=0;childCount=0;carriagePadding=undefined;memoryRuntime.begin(instant);predictionRuntime.begin(instant);taskRuntime.begin(instant);cognitive.begin(instant);body?.begin(instant);
+        probeInstant=false;runtimeCount=0;childCount=0;carriagePadding=undefined;memoryRuntime.begin(instant);predictionRuntime.begin(instant);taskRuntime.begin(instant);cognitive.begin(instant);body?.begin(instant);episodes?.begin(instant);
         ingress=beginTransitionIngressV04(shared,instant);
 
         probe=probeModel.begin(instant);probeSource=beginProbeSourceInstant(inputs.base,instant);
       },
       prepare(events,state,instant){
         if(!ingress)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','missing live ingress');
+        function inheritedStage(events:readonly ScheduledEvent[]){
         cognitive.validateParticipants(events);
         function prepareGroup(events:readonly ScheduledEvent[]){
         function inherited(events:readonly ScheduledEvent[]){
@@ -213,9 +221,21 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
          if(key(context.event.eventTypeId)===key(cognitive.identityEventType())){result=cognitive.identityCandidate(context.event,state);return {nextState:state,outputs:[],emittedEvents:[],traceContributions:[]};}return inherited.execute(context);},
          finish(){if(finished||cursor!==events.length||!result)bad('incomplete cognitive common stage');finished=true;const inheritedState=inherited.finish(),applied=stateModel.applyPatch(inheritedState,result!.patch,result!.authority,{writableRoots:[415n],targetPaths:paths});identityTrace=result!.trace(applied.diffs);return applied.state;},
          finalizeTrace(){if(!finished||!identityTrace)bad('cognitive trace before WRT completion');const rows=inherited.finalizeTrace();let i=0;return events.map(e=>e===identityEvent?identityTrace!:rows[i++]);}};
+        }
+        const added=events.filter(e=>episodes?.isFormation(e));
+        if(!added.length)return inheritedStage(events);
+        // Authenticate all new targets against common B0 BEFORE inherited evaluation.
+        const episodeStage=episodes!.prepare(added,state),rest=events.filter(e=>!episodes!.isFormation(e));
+        const priorStage=rest.length?inheritedStage(rest):undefined;
+        let cursor=0,finished=false;
+        return {execute(context:EventHandlerContext<AuthoritativeState>){
+         if(finished||cursor>=events.length||key(scheduledEventValue(context.event))!==key(scheduledEventValue(events[cursor++])))throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','shared episodic stage order');
+         return episodes!.isFormation(context.event)?episodeStage.execute(context):priorStage!.execute(context);
+        },finish(){if(finished||cursor!==events.length)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','incomplete shared episodic stage');finished=true;return episodeStage.finish(priorStage?.finish()??state);},
+        finalizeTrace(){if(!finished)throw new SchedulerContractError('TRACE_VALIDATION_FAILURE','episodic trace before completion');const old=priorStage?.finalizeTrace()??[],added=episodeStage.traces();let i=0,j=0;return events.map(e=>episodes!.isFormation(e)?added[j++]:old[i++]);}};
       },
-      beforeCommit(state,instant){domains.validateStatic(state);domains.validateReferences(state,instant);probe?.finish();body?.prepareCommit();ingress!.finish();if(probeInstant&&(runtimeCount!==7||childCount!==14||carriagePadding))throw new SchedulerContractError('TRANSITION_INGRESS_VIOLATION','carriage/memory budget closure');taskRuntime.prepareCommit(state);predictionRuntime.prepareCommit();cognitive.prepareCommit();memoryRuntime.commit();predictionRuntime.commit();taskRuntime.commit();cognitive.commit();},
-      close(){body?.close();memoryRuntime.close();predictionRuntime.close();taskRuntime.close();cognitive.close();ingress?.abort();probe?.abort();probeSource?.close();ingress=undefined;probe=undefined;probeSource=undefined;},
+      beforeCommit(state,instant){domains.validateStatic(state);domains.validateReferences(state,instant);probe?.finish();body?.prepareCommit();episodes?.prepareCommit();ingress!.finish();if(probeInstant&&(runtimeCount!==7||childCount!==14||carriagePadding))throw new SchedulerContractError('TRANSITION_INGRESS_VIOLATION','carriage/memory budget closure');taskRuntime.prepareCommit(state);predictionRuntime.prepareCommit();cognitive.prepareCommit();memoryRuntime.commit();episodes?.commit();predictionRuntime.commit();taskRuntime.commit();cognitive.commit();},
+      close(){episodes?.close();body?.close();memoryRuntime.close();predictionRuntime.close();taskRuntime.close();cognitive.close();ingress?.abort();probe?.abort();probeSource?.close();ingress=undefined;probe=undefined;probeSource=undefined;},
       validateRuntimeEmission(event){if(key(event.eventTypeId)===key(BODY_SAMPLE)||key(event.eventTypeId)===key(BODY_DELIVERY)||key(event.eventTypeId)===key(AUTHORED_FACT_EVENT)||key(event.eventTypeId)===key(PROBE_SOURCE_EVENT)||key(event.eventTypeId)===key(DELIBERATION_EVENT)||key(event.eventTypeId)===key(TASK_DEADLINE_EVENT))throw new SchedulerContractError('INPUT_ONLY_EVENT_ORIGIN_VIOLATION','sources are compiler-only inputs');},
     },
   });
