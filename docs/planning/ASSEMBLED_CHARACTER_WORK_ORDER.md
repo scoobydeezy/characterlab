@@ -184,7 +184,8 @@ be corrected transparently while retaining the original failure and expected mea
 ## Anti-bloat rules (operational limits, not aspirational advice)
 
 - One active implementation milestone and one long-running validation job at a time.
-  No speculative parallel audit tracks. Finish a milestone before extending its scope.
+  No speculative parallel audit tracks. Milestones finish a behavioral connection;
+  bounded packages are not separate capability completions. No unrelated breadth between them.
 - Before coding, put a milestone card in CURRENT.md: at most 3 observable capabilities,
   baseline IDs, touched contracts/files, comparison, exact checks with failure risks,
   runtime/output budgets, and a binary done condition. No empty budget placeholders.
@@ -243,5 +244,6 @@ The owner adopted M0/M1 and M2 D1-D5 (with D2 evidence/first-use conditions), an
 explicitly authorized beginning and completing M3 on2026-10-25. M2a is complete.
 On2026-10-26 the owner approved comparing fixed context unit1/10 with retained unit1,
 using the same four cells/eight seeds and unchanged choice gate. CURRENT.md bounds
-this M3 amendment, now passed. Continued assembly authorized2026-10-26; M4 passed; CURRENT bounds the next package.
+this M3 amendment passed. Continued assembly authorized2026-10-26; M3-M8 passed.
+Owner adjustment: close recall-to-choice before further memory mechanics; CURRENT bounds M9.
 No assembly acceptance, publishing, unbounded integration or Campaign4/UI transition follows.
