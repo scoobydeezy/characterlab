@@ -210,7 +210,7 @@ describe('corpus manifest / phenomenon section agreement', () => {
   it('has one section version per manifest row, and they agree', async () => {
     const corpus = Object.values(import.meta.glob('../../docs/planning/PHENOMENON_CORPUS.md', {
       query: '?raw', import: 'default', eager: true,
-    }) as Record<string, string>)[0];
+    }) as Record<string, string>)[0].replace(/\r\n/g, '\n'); // Platform line endings are presentation, not corpus semantics.
 
     const manifest = new Map([...corpus.matchAll(/^\| `(PHEN-[A-Z]+-\d+)` \| `([^`]+)` \|/gm)]
       .map((match) => [match[1], match[2]] as const));

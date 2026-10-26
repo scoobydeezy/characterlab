@@ -1,7 +1,7 @@
 import {describe,expect,it} from 'vitest';
 import {
   prepareCharacterModel,characterModelIdentity,createCharacterRun,restoreCharacterRun,
-} from '../assembled/character';
+} from '../assembled/m1Control';
 import {
   prepareCognitiveModel,cognitiveModelIdentity,createCognitiveRun,restoreCognitiveRun,
 } from '../campaign2/cognitiveFactory';

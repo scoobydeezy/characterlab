@@ -1,63 +1,47 @@
-# Current work — M2a configuration admission
+# Current work — M2a result; M3 next
 
-2026-10-25. Owner approved D1–D5 with the D2 evidence/first-use condition.
-The character still runs the C2 scaffold; this card precedes implementation.
-Read [work order](ASSEMBLED_CHARACTER_WORK_ORDER.md), [baseline](ASSEMBLED_CHARACTER_BASELINE.json),
-[adopted M2 register](ASSEMBLED_CHARACTER_RECONCILIATION.md) and
-[M2a contract](../formal/ASSEMBLED_CHARACTER_MODEL_CONTRACT.md).
-M1 result/criteria remain unchanged. No R3 choice is used or locked in M2a.
+2026-10-25. M2a PASS. Execution, frozen-control, foundation and preservation checks are complete.
+The character now admits and runs non-preset configurations in the first two-task
+invariant domain and restores exactly. Full Campaigns0–3 assembly remains ahead.
 
-## Bounded M2a card
+Read [M2a result](ASSEMBLED_CHARACTER_M2A_RESULT.md),
+[admission contract](../formal/ASSEMBLED_CHARACTER_MODEL_CONTRACT.md),
+[adopted M2 register](ASSEMBLED_CHARACTER_RECONCILIATION.md),
+[baseline](ASSEMBLED_CHARACTER_BASELINE.json) and [work order](ASSEMBLED_CHARACTER_WORK_ORDER.md).
 
-Capabilities (3): admit non-preset exact task/parameter combinations; execute them
-in one continuing run; restore that run exactly while preserving the C2 control.
-Scope: first two-task domain only. No C3 integration or UI. All21 members/15 families/
-132 clauses remain pending; six C0/C1 constraints/five C2 conditions stand.
-All18 conditional obligations retain their triggers; none closed or newly triggered.
-Reference ledger MEC-012..018/020/022 preserved via unchanged kernels/controls.
+| Status | Disposition |
+|---|---|
+| Research obligations | **0 active / 18 conditional / 0 unowned** |
+| Historical closed |4; prior scoped closures preserved |
+| Baseline |21 members/219 overlapping records;15 families/132 clauses |
+| Foundations |Six C0/C1 constraints and five C2 completion conditions remain standing |
+| Owner decisions |D1–D5 approved; D2 evidence/first-use condition recorded |
 
-Contract assembled-character-model/0.1-candidate is committed before coding.
-Fixed versus configurable restrictions and comparison are specified there.
-Production/test budget11 files (amended before the wiring port): src/assembled/{character,model,state,ingress,
-execution,runtime,traceBinding,m1Control}.ts, src/test/assembledCharacter.test.ts (import only),
-src/test/assembledAdmission.test.ts, src/test/fixtures/assembledCharacter.ts.
-The bounded port includes cognitiveState/Ingress/Execution composition adapters:
-their C2 compiler types require recipe metadata although these adapters never use it.
-Use successor types and unchanged adapter bodies; reuse mathematical, scheduler,
-ownership, observation and semantic kernels. No fabricated recipe or admission cast.
-Trace-version failure exposed a hardcoded C2 binder in adaptationRuntime. LOCAL
-DISPOSITION under S3: port only its fixed cognitive wiring into runtime.ts, removing
-optional factories/authored-source/bridge/decoded-continuation paths; use successor
-traceBinding.ts. No generic runtime copy and no change to the105-file control closure.
-One compact M2a result; <=20 evidence files/5MiB, no source copies/audit chain.
+Every L selection is labelled engineering default, no verdict establishing superiority.
+Each R3 choice stays provisional until its first-use card records and locks its exact
+semantics/domain before code or replay. M2a used no R3 choice. D3's developmental
+shared updates remain the approved reference direction; older laws remain controls.
 
-Comparison locked before execution:
-- Original source/deadlineSource/equalCriteriaSource, unchanged data/zero seed;
-  compare all settled boundaries through exhaustion, cap32 is failure.
-- Exact state/output/clock/status/diagnostics and full trace except mapped model/run
-  identity fields2/3. Equal event ordinals and semantic reason bindings give the same
-  addressed RNG keys; compare complete draw records, not just final choices.
-- Non-preset: A interval[7/3,19/3], window[0,13); B[8/3,23/3], window[2,17);
-  concern gain2/5, motive pressure3/5, workspace capacity3, work ceiling100000.
-  Original six inputs unchanged. Fresh repeat plus restore after second settled
-  instant; full run/snapshot/save/diagnostic bytes at every boundary and terminal.
-- Invalid domain/window/reference, duplicate or overlapping authority, unknown schema,
-  authored learned S0, foreign observer, altered original inputs/model/save rejected.
+## M2a scope and retained evidence
 
-Checks and risks (one command/job at a time):
-1. npx tsc -b --pretty false: interfaces and no fabricated recipe/type bypass.
-2. npx vitest run src/test/assembledAdmission.test.ts --maxWorkers=1 --minWorkers=1:
-   successor semantic replay, non-preset continuation and admission negatives.
-3. npx vitest run src/test/assembledCharacter.test.ts src/test/campaign2CognitiveFactory.test.ts
-   --maxWorkers=1 --minWorkers=1: unchanged M1 and C2 controls (previously ~6min).
-4. npx vitest run src/test/{random,identity,exactMath,scheduler,persistence,state,
-   contentGovernance,trace,observation}.test.ts --maxWorkers=1 --minWorkers=1:
-   affected foundation vectors (explicit file list, no shell brace expansion).
-5. npm run check:boundaries; npm run check:research; control closure Git comparison;
-   git diff --check and staged npm run check:git-size: preservation/integration guards.
-Checks <=10min each/30min total; stop at cap, retain failure, never trim assertions.
-If a failure requires a new change, rerun only the checks it invalidates.
+Predeclared contract/card: bf89c03e; corrected complete M2 register: b9a609b3.
+S3 trace-version wiring disposition before its implementation:327e7aa9.
+Twelve production/test files total: eight assembled files, M1 test import, successor
+test/fixture, and the discovered CRLF-only corpus-parser fix. No further file budget.
+One result plus one raw check log; no audit framework, source copies or browser work.
+The original twelve admission checks and six replay/run checks pass; frozen M1/C2
+controls16 pass; selected foundation56 pass after the retained parser correction.
+No C3 corpus coverage or obligation closed. M2a's fixed holder/task/channel and
+inherited component restrictions are explicit in its contract and result.
 
-Done only when non-preset prepares/runs/restores, declared-domain negatives reject,
-three semantic controls and frozen-control checks pass within budgets.
-Then report M2a and stop; M3 is next, requiring its own predeclared interaction card.
+## Next milestone and stop
+
+M2a stops here. M3 requires a new bounded card before
+implementation: shared holder/proposition/action/support keys and sole state owners,
+then the adopted2x2 learned-history × later-body interaction under one fixed policy.
+Require consumed-record joins, nonzero appraisal/reason interaction and a real choice
+change, hidden-truth/equal-evidence control and save-after-learning continuation.
+No authored psychological intermediate or fixture-specific law/tuning switch.
+At most3 capabilities/12 production-test files; split serially under the same gate
+before widening. Checks10min each/30min total; evidence20 files/5MiB. Stop on pass.
+Broader integration waits for that witness. UI, old audits and Campaign4 stay stopped.

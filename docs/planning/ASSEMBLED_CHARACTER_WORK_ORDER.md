@@ -3,7 +3,7 @@
 2026-10-25. Active preparation directive, authorized by the owner's request to turn
 the reviewed v2 draft into actionable instructions with guardrails. This document
 incorporates that review. It selects no psychological law and grants no reduction.
-The owner completed the M0 review and authorized M1 on 2026-10-25.
+Owner adopted M0/M1 and M2 D1–D5 on 2026-10-25; D2's evidence/first-use condition is in the register.
 
 ## Outcome and authority
 

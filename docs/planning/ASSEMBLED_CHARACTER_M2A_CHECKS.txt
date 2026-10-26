@@ -1,0 +1,663 @@
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > baseline preserves every semantic boundary and addressed draw 1494ms
+   → requires text
+ × src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > deadline overlap preserves every semantic boundary and addressed draw 1434ms
+   → requires text
+ × src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > equal criteria preserves every semantic boundary and addressed draw 1392ms
+   → requires text
+ × src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > non-preset prepares, learns, decides, repeats and restores the whole run 887ms
+   → requires text
+ × src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects minimum before publishing a model
+   → expected [Function] to throw error matching /task minimum/ but got 'requires text'
+ × src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects reversed interval before publishing a model
+   → expected [Function] to throw error matching /minimum exceeds/ but got 'requires text'
+ × src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects window before publishing a model
+   → expected [Function] to throw error matching /task window/ but got 'requires text'
+ × src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects gain before publishing a model
+   → expected [Function] to throw error matching /concern gain/ but got 'requires text'
+ × src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects pressure before publishing a model
+   → expected [Function] to throw error matching /motive pressure/ but got 'requires text'
+ × src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects capacity before publishing a model
+   → expected [Function] to throw error matching /workspace capacity/ but got 'requires text'
+ × src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects work limit before publishing a model
+   → expected [Function] to throw error matching /work limit/ but got 'requires text'
+ × src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects reference before publishing a model
+   → expected [Function] to throw error matching /391/ but got 'requires text'
+ × src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects duplicate registry before publishing a model
+   → expected [Function] to throw error matching /duplicate registry/ but got 'requires text'
+ × src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects overlapping authority before publishing a model
+   → requires set
+ × src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects undeclared topology before publishing a model
+   → expected [Function] to throw error matching /undeclared topology/ but got 'requires text'
+ × src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects unsupported versions/schema and executable or mutable source substitution 413ms
+   → requires text
+ × src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects invented learned S0 and foreign observer evidence, and rolls back a tiny work budget
+   → requires text
+ × src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > binds restore to its model, inputs and every saved byte
+   → requires text
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 18 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > baseline preserves every semantic boundary and addressed draw
+ FAIL  src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > deadline overlap preserves every semantic boundary and addressed draw
+ FAIL  src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > equal criteria preserves every semantic boundary and addressed draw
+SchedulerContractError: requires text
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataText src/campaign2/canonicalData.ts:17:52
+ ❯ src/assembled/model.ts:30:33
+ ❯ topology src/assembled/model.ts:28:41
+ ❯ Module.compileCharacterModel src/assembled/model.ts:52:14
+ ❯ Module.prepareCharacterModel src/assembled/character.ts:24:116
+ ❯ src/test/assembledAdmission.test.ts:20:57
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/18]⎯
+
+ FAIL  src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > non-preset prepares, learns, decides, repeats and restores the whole run
+SchedulerContractError: requires text
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataText src/campaign2/canonicalData.ts:17:52
+ ❯ src/assembled/model.ts:30:33
+ ❯ topology src/assembled/model.ts:28:41
+ ❯ Module.compileCharacterModel src/assembled/model.ts:52:14
+ ❯ Module.prepareCharacterModel src/assembled/character.ts:24:116
+ ❯ src/test/assembledAdmission.test.ts:30:21
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/18]⎯
+
+ FAIL  src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects minimum before publishing a model
+AssertionError: expected [Function] to throw error matching /task minimum/ but got 'requires text'
+
+- Expected: 
+/task minimum/
+
++ Received: 
+"requires text"
+
+ ❯ src/test/assembledAdmission.test.ts:53:79
+     51|   ['overlapping authority',()=>overlapAuthority(successor()),/overlap/…
+     52|   ['undeclared topology',()=>changeDefinition(successor(),'definition/…
+     53|  ] as const)('rejects %s before publishing a model',async(_name,make,e…
+       |                                                                               ^
+     54|  it('rejects unsupported versions/schema and executable or mutable sou…
+     55|   await expect(prepareCharacterModel({...successor(),registrySchemaVer…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/18]⎯
+
+ FAIL  src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects reversed interval before publishing a model
+AssertionError: expected [Function] to throw error matching /minimum exceeds/ but got 'requires text'
+
+- Expected: 
+/minimum exceeds/
+
++ Received: 
+"requires text"
+
+ ❯ src/test/assembledAdmission.test.ts:53:79
+     51|   ['overlapping authority',()=>overlapAuthority(successor()),/overlap/…
+     52|   ['undeclared topology',()=>changeDefinition(successor(),'definition/…
+     53|  ] as const)('rejects %s before publishing a model',async(_name,make,e…
+       |                                                                               ^
+     54|  it('rejects unsupported versions/schema and executable or mutable sou…
+     55|   await expect(prepareCharacterModel({...successor(),registrySchemaVer…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/18]⎯
+
+ FAIL  src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects window before publishing a model
+AssertionError: expected [Function] to throw error matching /task window/ but got 'requires text'
+
+- Expected: 
+/task window/
+
++ Received: 
+"requires text"
+
+ ❯ src/test/assembledAdmission.test.ts:53:79
+     51|   ['overlapping authority',()=>overlapAuthority(successor()),/overlap/…
+     52|   ['undeclared topology',()=>changeDefinition(successor(),'definition/…
+     53|  ] as const)('rejects %s before publishing a model',async(_name,make,e…
+       |                                                                               ^
+     54|  it('rejects unsupported versions/schema and executable or mutable sou…
+     55|   await expect(prepareCharacterModel({...successor(),registrySchemaVer…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/18]⎯
+
+ FAIL  src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects gain before publishing a model
+AssertionError: expected [Function] to throw error matching /concern gain/ but got 'requires text'
+
+- Expected: 
+/concern gain/
+
++ Received: 
+"requires text"
+
+ ❯ src/test/assembledAdmission.test.ts:53:79
+     51|   ['overlapping authority',()=>overlapAuthority(successor()),/overlap/…
+     52|   ['undeclared topology',()=>changeDefinition(successor(),'definition/…
+     53|  ] as const)('rejects %s before publishing a model',async(_name,make,e…
+       |                                                                               ^
+     54|  it('rejects unsupported versions/schema and executable or mutable sou…
+     55|   await expect(prepareCharacterModel({...successor(),registrySchemaVer…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/18]⎯
+
+ FAIL  src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects pressure before publishing a model
+AssertionError: expected [Function] to throw error matching /motive pressure/ but got 'requires text'
+
+- Expected: 
+/motive pressure/
+
++ Received: 
+"requires text"
+
+ ❯ src/test/assembledAdmission.test.ts:53:79
+     51|   ['overlapping authority',()=>overlapAuthority(successor()),/overlap/…
+     52|   ['undeclared topology',()=>changeDefinition(successor(),'definition/…
+     53|  ] as const)('rejects %s before publishing a model',async(_name,make,e…
+       |                                                                               ^
+     54|  it('rejects unsupported versions/schema and executable or mutable sou…
+     55|   await expect(prepareCharacterModel({...successor(),registrySchemaVer…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/18]⎯
+
+ FAIL  src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects capacity before publishing a model
+AssertionError: expected [Function] to throw error matching /workspace capacity/ but got 'requires text'
+
+- Expected: 
+/workspace capacity/
+
++ Received: 
+"requires text"
+
+ ❯ src/test/assembledAdmission.test.ts:53:79
+     51|   ['overlapping authority',()=>overlapAuthority(successor()),/overlap/…
+     52|   ['undeclared topology',()=>changeDefinition(successor(),'definition/…
+     53|  ] as const)('rejects %s before publishing a model',async(_name,make,e…
+       |                                                                               ^
+     54|  it('rejects unsupported versions/schema and executable or mutable sou…
+     55|   await expect(prepareCharacterModel({...successor(),registrySchemaVer…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/18]⎯
+
+ FAIL  src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects work limit before publishing a model
+AssertionError: expected [Function] to throw error matching /work limit/ but got 'requires text'
+
+- Expected: 
+/work limit/
+
++ Received: 
+"requires text"
+
+ ❯ src/test/assembledAdmission.test.ts:53:79
+     51|   ['overlapping authority',()=>overlapAuthority(successor()),/overlap/…
+     52|   ['undeclared topology',()=>changeDefinition(successor(),'definition/…
+     53|  ] as const)('rejects %s before publishing a model',async(_name,make,e…
+       |                                                                               ^
+     54|  it('rejects unsupported versions/schema and executable or mutable sou…
+     55|   await expect(prepareCharacterModel({...successor(),registrySchemaVer…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/18]⎯
+
+ FAIL  src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects reference before publishing a model
+AssertionError: expected [Function] to throw error matching /391/ but got 'requires text'
+
+- Expected: 
+/391/
+
++ Received: 
+"requires text"
+
+ ❯ src/test/assembledAdmission.test.ts:53:79
+     51|   ['overlapping authority',()=>overlapAuthority(successor()),/overlap/…
+     52|   ['undeclared topology',()=>changeDefinition(successor(),'definition/…
+     53|  ] as const)('rejects %s before publishing a model',async(_name,make,e…
+       |                                                                               ^
+     54|  it('rejects unsupported versions/schema and executable or mutable sou…
+     55|   await expect(prepareCharacterModel({...successor(),registrySchemaVer…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/18]⎯
+
+ FAIL  src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects duplicate registry before publishing a model
+AssertionError: expected [Function] to throw error matching /duplicate registry/ but got 'requires text'
+
+- Expected: 
+/duplicate registry/
+
++ Received: 
+"requires text"
+
+ ❯ src/test/assembledAdmission.test.ts:53:79
+     51|   ['overlapping authority',()=>overlapAuthority(successor()),/overlap/…
+     52|   ['undeclared topology',()=>changeDefinition(successor(),'definition/…
+     53|  ] as const)('rejects %s before publishing a model',async(_name,make,e…
+       |                                                                               ^
+     54|  it('rejects unsupported versions/schema and executable or mutable sou…
+     55|   await expect(prepareCharacterModel({...successor(),registrySchemaVer…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/18]⎯
+
+ FAIL  src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects overlapping authority before publishing a model
+SchedulerContractError: requires set
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataItems src/campaign2/canonicalData.ts:23:50
+ ❯ Module.overlapAuthority src/test/fixtures/assembledCharacter.ts:22:136
+ ❯ src/test/assembledAdmission.test.ts:51:32
+ ❯ src/test/assembledAdmission.test.ts:53:114
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/18]⎯
+
+ FAIL  src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects undeclared topology before publishing a model
+AssertionError: expected [Function] to throw error matching /undeclared topology/ but got 'requires text'
+
+- Expected: 
+/undeclared topology/
+
++ Received: 
+"requires text"
+
+ ❯ src/test/assembledAdmission.test.ts:53:79
+     51|   ['overlapping authority',()=>overlapAuthority(successor()),/overlap/…
+     52|   ['undeclared topology',()=>changeDefinition(successor(),'definition/…
+     53|  ] as const)('rejects %s before publishing a model',async(_name,make,e…
+       |                                                                               ^
+     54|  it('rejects unsupported versions/schema and executable or mutable sou…
+     55|   await expect(prepareCharacterModel({...successor(),registrySchemaVer…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[13/18]⎯
+
+ FAIL  src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects unsupported versions/schema and executable or mutable source substitution
+SchedulerContractError: requires text
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataText src/campaign2/canonicalData.ts:17:52
+ ❯ src/assembled/model.ts:30:33
+ ❯ topology src/assembled/model.ts:28:41
+ ❯ Module.compileCharacterModel src/assembled/model.ts:52:14
+ ❯ Module.prepareCharacterModel src/assembled/character.ts:24:116
+ ❯ src/test/assembledAdmission.test.ts:58:37
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[14/18]⎯
+
+ FAIL  src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects invented learned S0 and foreign observer evidence, and rolls back a tiny work budget
+SchedulerContractError: requires text
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataText src/campaign2/canonicalData.ts:17:52
+ ❯ src/assembled/model.ts:30:33
+ ❯ topology src/assembled/model.ts:28:41
+ ❯ Module.compileCharacterModel src/assembled/model.ts:52:14
+ ❯ Module.prepareCharacterModel src/assembled/character.ts:24:116
+ ❯ src/test/assembledAdmission.test.ts:61:17
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[15/18]⎯
+
+ FAIL  src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > binds restore to its model, inputs and every saved byte
+SchedulerContractError: requires text
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataText src/campaign2/canonicalData.ts:17:52
+ ❯ src/assembled/model.ts:30:33
+ ❯ topology src/assembled/model.ts:28:41
+ ❯ Module.compileCharacterModel src/assembled/model.ts:52:14
+ ❯ Module.prepareCharacterModel src/assembled/character.ts:24:116
+ ❯ src/test/assembledAdmission.test.ts:68:65
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[16/18]⎯
+
+ Test Files  1 failed (1)
+      Tests  18 failed (18)
+   Start at  20:03:00
+   Duration  9.36s (transform 842ms, setup 0ms, collect 1.24s, tests 7.50s, environment 0ms, prepare 373ms)
+
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > baseline preserves every semantic boundary and addressed draw 2794ms
+   → canonical trace requires exact 0.2 model/run binding
+ × src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > deadline overlap preserves every semantic boundary and addressed draw 2685ms
+   → canonical trace requires exact 0.2 model/run binding
+ × src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > equal criteria preserves every semantic boundary and addressed draw 2657ms
+   → canonical trace requires exact 0.2 model/run binding
+ × src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > non-preset prepares, learns, decides, repeats and restores the whole run 2079ms
+   → canonical trace requires exact 0.2 model/run binding
+ ✓ src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects minimum before publishing a model
+ ✓ src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects reversed interval before publishing a model
+ ✓ src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects window before publishing a model
+ ✓ src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects gain before publishing a model
+ ✓ src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects pressure before publishing a model
+ ✓ src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects capacity before publishing a model
+ ✓ src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects work limit before publishing a model 306ms
+ ✓ src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects reference before publishing a model
+ ✓ src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects duplicate registry before publishing a model
+ ✓ src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects overlapping authority before publishing a model 307ms
+ ✓ src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects undeclared topology before publishing a model 372ms
+ ✓ src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects unsupported versions/schema and executable or mutable source substitution 2808ms
+ × src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects invented learned S0 and foreign observer evidence, and rolls back a tiny work budget 1339ms
+   → canonical trace requires exact 0.2 model/run binding
+ × src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > binds restore to its model, inputs and every saved byte 1332ms
+   → canonical trace requires exact 0.2 model/run binding
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 6 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > baseline preserves every semantic boundary and addressed draw
+ FAIL  src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > deadline overlap preserves every semantic boundary and addressed draw
+ FAIL  src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > equal criteria preserves every semantic boundary and addressed draw
+SchedulerContractError: canonical trace requires exact 0.2 model/run binding
+ ❯ compileBinding src/campaign2/traceBinding.ts:43:465
+
+ ❯ Module.compileCognitiveBaseTraceBinding src/campaign2/traceBinding.ts:40:161
+ ❯ Module.createAdaptationRuntime src/campaign2/adaptationRuntime.ts:46:37
+ ❯ Module.createCharacterRuntime src/assembled/runtime.ts:21:16
+ ❯ Module.createCharacterRun src/assembled/character.ts:40:115
+ ❯ src/test/assembledAdmission.test.ts:22:49
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/6]⎯
+
+ FAIL  src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > non-preset prepares, learns, decides, repeats and restores the whole run
+SchedulerContractError: canonical trace requires exact 0.2 model/run binding
+ ❯ compileBinding src/campaign2/traceBinding.ts:43:465
+
+ ❯ Module.compileCognitiveBaseTraceBinding src/campaign2/traceBinding.ts:40:161
+ ❯ Module.createAdaptationRuntime src/campaign2/adaptationRuntime.ts:46:37
+ ❯ Module.createCharacterRuntime src/assembled/runtime.ts:21:16
+ ❯ Module.createCharacterRun src/assembled/character.ts:40:115
+ ❯ src/test/assembledAdmission.test.ts:30:48
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/6]⎯
+
+ FAIL  src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects invented learned S0 and foreign observer evidence, and rolls back a tiny work budget
+SchedulerContractError: canonical trace requires exact 0.2 model/run binding
+ ❯ compileBinding src/campaign2/traceBinding.ts:43:465
+
+ ❯ Module.compileCognitiveBaseTraceBinding src/campaign2/traceBinding.ts:40:161
+ ❯ Module.createAdaptationRuntime src/campaign2/adaptationRuntime.ts:46:37
+ ❯ Module.createCharacterRuntime src/assembled/runtime.ts:21:16
+ ❯ Module.createCharacterRun src/assembled/character.ts:40:115
+ ❯ src/test/assembledAdmission.test.ts:61:65
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/6]⎯
+
+ FAIL  src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > binds restore to its model, inputs and every saved byte
+SchedulerContractError: canonical trace requires exact 0.2 model/run binding
+ ❯ compileBinding src/campaign2/traceBinding.ts:43:465
+
+ ❯ Module.compileCognitiveBaseTraceBinding src/campaign2/traceBinding.ts:40:161
+ ❯ Module.createAdaptationRuntime src/campaign2/adaptationRuntime.ts:46:37
+ ❯ Module.createCharacterRuntime src/assembled/runtime.ts:21:16
+ ❯ Module.createCharacterRun src/assembled/character.ts:40:115
+ ❯ src/test/assembledAdmission.test.ts:68:34
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/6]⎯
+
+ Test Files  1 failed (1)
+      Tests  6 failed | 12 passed (18)
+   Start at  20:03:38
+   Duration  19.49s (transform 847ms, setup 0ms, collect 1.24s, tests 17.98s, environment 0ms, prepare 93ms)
+
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > baseline preserves every semantic boundary and addressed draw
+M2a control baseline: 8 instants, 9 exact coupled draws
+
+ ✓ src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > baseline preserves every semantic boundary and addressed draw 24908ms
+stdout | src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > deadline overlap preserves every semantic boundary and addressed draw
+M2a control deadline overlap: 6 instants, 0 exact coupled draws
+
+ ✓ src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > deadline overlap preserves every semantic boundary and addressed draw 7194ms
+stdout | src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > equal criteria preserves every semantic boundary and addressed draw
+M2a control equal criteria: 8 instants, 6 exact coupled draws
+
+ ✓ src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > equal criteria preserves every semantic boundary and addressed draw 20057ms
+stdout | src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > non-preset prepares, learns, decides, repeats and restores the whole run
+M2a non-preset: 8 instants; learned prediction, decision, repeat and restore exact
+
+ ✓ src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > non-preset prepares, learns, decides, repeats and restores the whole run 78372ms
+ ✓ src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > rejects invented learned S0 and foreign observer evidence, and rolls back a tiny work budget 2882ms
+ ✓ src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > binds restore to its model, inputs and every saved byte 5700ms
+
+ Test Files  1 passed (1)
+      Tests  6 passed | 12 skipped (18)
+   Start at  20:07:39
+   Duration  140.75s (transform 861ms, setup 0ms, collect 1.26s, tests 139.11s, environment 0ms, prepare 92ms)
+
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/campaign2CognitiveFactory.test.ts > cognitive public factory and complete-prefix persistence > copies exact public data and rejects capabilities/accessors without invoking them
+ ✓ src/test/campaign2CognitiveFactory.test.ts > cognitive public factory and complete-prefix persistence > executes the exact27-event deadline overlap; ceiling26 rejects atomically 2150ms
+ ✓ src/test/campaign2CognitiveFactory.test.ts > cognitive public factory and complete-prefix persistence > rebuilds actual pre-save draws and matches the complete continuation byte for byte 18278ms
+ ✓ src/test/campaign2CognitiveFactory.test.ts > cognitive public factory and complete-prefix persistence > rejects stale projection, missing trace and changed outputs at whole-save equality 6069ms
+ ✓ src/test/campaign2CognitiveFactory.test.ts > cognitive public factory and complete-prefix persistence > rebuilds consumed addresses even when genuine choices leave no retained identity contribution 5607ms
+ ✓ src/test/campaign2CognitiveFactory.test.ts > cognitive public factory and complete-prefix persistence > rejects independent retained-root, instruction, seed and prior-draw substitutions 10304ms
+ ✓ src/test/campaign2CognitiveFactory.test.ts > cognitive public factory and complete-prefix persistence > rolls back a final identity trace failure after genuine draws and retries with identical candidate bytes 3142ms
+ ✓ src/test/campaign2CognitiveFactory.test.ts > cognitive public factory and complete-prefix persistence > rejects missing-I before any common-stage prior read 475ms
+ ✓ src/test/campaign2CognitiveFactory.test.ts > cognitive public factory and complete-prefix persistence > rejects duplicate-I before any common-stage prior read 471ms
+ ✓ src/test/campaign2CognitiveFactory.test.ts > cognitive public factory and complete-prefix persistence > rejects missing-A before any common-stage prior read 469ms
+ ✓ src/test/campaign2CognitiveFactory.test.ts > cognitive public factory and complete-prefix persistence > rejects unexpected-P before any common-stage prior read 473ms
+stdout | src/test/assembledCharacter.test.ts > single character entry: predeclared M1 comparison > baseline: exact boundaries, repeat, restored continuation and terminal no-op
+M1 baseline: 8 settled instants; all byte comparisons and both restores passed
+
+ ✓ src/test/assembledCharacter.test.ts > single character entry: predeclared M1 comparison > baseline: exact boundaries, repeat, restored continuation and terminal no-op 168335ms
+stdout | src/test/assembledCharacter.test.ts > single character entry: predeclared M1 comparison > deadline overlap: exact boundaries, repeat, restored continuation and terminal no-op
+M1 deadline overlap: 6 settled instants; all byte comparisons and both restores passed
+
+ ✓ src/test/assembledCharacter.test.ts > single character entry: predeclared M1 comparison > deadline overlap: exact boundaries, repeat, restored continuation and terminal no-op 35719ms
+stdout | src/test/assembledCharacter.test.ts > single character entry: predeclared M1 comparison > equal criteria: exact boundaries, repeat, restored continuation and terminal no-op
+M1 equal criteria: 8 settled instants; all byte comparisons and both restores passed
+
+ ✓ src/test/assembledCharacter.test.ts > single character entry: predeclared M1 comparison > equal criteria: exact boundaries, repeat, restored continuation and terminal no-op 132984ms
+ ✓ src/test/assembledCharacter.test.ts > single character entry: predeclared M1 comparison > rejects extra executable input through the character entry 1142ms
+ ✓ src/test/assembledCharacter.test.ts > single character entry: predeclared M1 comparison > rejects changed original inputs when restoring through the character entry 2945ms
+
+ Test Files  2 passed (2)
+      Tests  16 passed (16)
+   Start at  20:10:23
+   Duration  392.10s (transform 794ms, setup 0ms, collect 1.40s, tests 389.99s, environment 0ms, prepare 171ms)
+
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/contentGovernance.test.ts > CONTENT-001 governed content and registry manifests > commits exact golden content bytes/digest and ignores presentation-only changes
+ ✓ src/test/contentGovernance.test.ts > CONTENT-001 governed content and registry manifests > commits exact golden registry bytes/digest independent of construction order
+ ✓ src/test/contentGovernance.test.ts > CONTENT-001 governed content and registry manifests > changes the content commitment for every authoritative field but not presentation
+ ✓ src/test/contentGovernance.test.ts > CONTENT-001 governed content and registry manifests > rejects duplicate/unknown IDs, invalid references, cycles, and malformed registries
+ ✓ src/test/contentGovernance.test.ts > CONTENT-001 governed content and registry manifests > publishes the exact aggregate phenomenon-corpus manifest
+ × src/test/contentGovernance.test.ts > corpus manifest / phenomenon section agreement > has one section version per manifest row, and they agree
+   → expected [] to deeply equal [ 'PHEN-ADAPT-001', …(20) ]
+ ✓ src/test/random.test.ts > Campaign 0B addressed randomness > CV-RNG-001: has checked-in candidate-input, SHA-256, and first-128-bit vectors
+ ✓ src/test/random.test.ts > Campaign 0B addressed randomness > canonicalizes subject bindings and rejects duplicate pairs
+ ✓ src/test/random.test.ts > Campaign 0B addressed randomness > CV-RNG-002: maps every span boundary and rejects values outside the contract
+ ✓ src/test/random.test.ts > Campaign 0B addressed randomness > CV-RNG-003: records index-0, index-1, and fresh index-2 fallback paths exactly
+ ✓ src/test/random.test.ts > Campaign 0B addressed randomness > CV-RNG-004: verifies threshold uniformity and the published integer bounds
+ ✓ src/test/random.test.ts > Campaign 0B addressed randomness > CV-RNG-005: selects exact cumulative intervals in canonical item-ID order
+ ✓ src/test/random.test.ts > Campaign 0B addressed randomness > CV-RNG-006/007: unrelated draws and model identity cannot shift an address
+ ✓ src/test/random.test.ts > Campaign 0B addressed randomness > CV-RNG-008: explicitly couples different addresses and rejects invalid maps
+ ✓ src/test/persistence.test.ts > Campaign 0D canonical persistence > CV-SAVE-001/002: preserves full structure and continuation exactly
+ ✓ src/test/persistence.test.ts > Campaign 0D canonical persistence > CV-SAVE-002: rejects mid-transition saves and unresolved handler registries
+ ✓ src/test/observation.test.ts > Campaign 1 MATH-006 exact observation compiler > CV-OBS-001 classifies exact point, lower bound, upper bound, and zero-information bound without Overflow
+ ✓ src/test/observation.test.ts > Campaign 1 MATH-006 exact observation compiler > CV-OBS-002 and CV-EPI-001 make exact-boundary and hidden-Overflow timelines byte-identical to the character
+ ✓ src/test/observation.test.ts > Campaign 1 MATH-006 exact observation compiler > CV-OBS-003 keeps a missing observation structurally distinct from observed zero
+ ✓ src/test/observation.test.ts > Campaign 1 MATH-006 exact observation compiler > CV-OBS-004/005 projects only visible slots with permanent priority and canonical concept order
+ ✓ src/test/observation.test.ts > Campaign 1 MATH-006 exact observation compiler > CV-OBS-006 rejects inconsistent truth, invalid channels, ambiguous signed zero, and unnamed omniscient controls
+ ✓ src/test/observation.test.ts > Campaign 1 MATH-006 exact observation compiler > round-trips canonical truth and channel records before compilation
+ ✓ src/test/trace.test.ts > Campaign 0E committed trace and diagnostics > CV-TRC-001 produces byte-identical canonical traces with structurally decodable records
+ ✓ src/test/trace.test.ts > Campaign 0E committed trace and diagnostics > CV-TRC-002 keeps aborted staged evidence only in FailureDiagnostic and rolls back the instant
+ ✓ src/test/trace.test.ts > Campaign 0E committed trace and diagnostics > CV-TXN-001 rolls concrete reads, patches, allocated emissions, and trace back at every boundary
+ ✓ src/test/trace.test.ts > Campaign 0E first-divergence evidence > CV-TRC-003 locates identity, random, time/event, read, patch, and output divergence with ancestry
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-ORD-001: queue insertion order cannot override DueAt, Phase, EventSequence
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-ORD-002: same-phase and later-phase emissions order correctly; earlier phase fails atomically
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-ORD-003: drains a newly emitted chain before external observation
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-ORD-004: cascade overflow restores everything and leaves no deferrable remainder
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > snapshots mutable canonical payloads and committed artifacts at every authority boundary
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-TXN-001: injected failure at before-state-validation restores state, queue, allocators, trace, and outputs
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-TXN-001: injected failure at after-state-validation restores state, queue, allocators, trace, and outputs
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-TXN-001: injected failure at before-event-validation restores state, queue, allocators, trace, and outputs
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-TXN-001: injected failure at after-event-validation restores state, queue, allocators, trace, and outputs
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-TXN-001: injected failure at before-trace-validation restores state, queue, allocators, trace, and outputs
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-TXN-001: injected failure at after-trace-validation restores state, queue, allocators, trace, and outputs
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-TXN-001: injected failure at before-invariant-validation restores state, queue, allocators, trace, and outputs
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-TXN-001: injected failure at after-invariant-validation restores state, queue, allocators, trace, and outputs
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-TXN-001: injected failure at before-commit restores state, queue, allocators, trace, and outputs
+ ✓ src/test/state.test.ts > Campaign 0E ownership and read-domain contracts > CV-OWN-001 rejects ownership overlap and uncovered writable families
+ ✓ src/test/state.test.ts > Campaign 0E ownership and read-domain contracts > CV-READ-001 rejects bindings and forged accessors outside the declared interface
+ ✓ src/test/state.test.ts > Campaign 0E ownership and read-domain contracts > CV-READ-002 records only actual reads and preserves derived-source provenance
+ ✓ src/test/state.test.ts > Campaign 0E canonical patches > CV-PATCH-001 canonicalizes construction order and emits exact structural diffs
+ ✓ src/test/state.test.ts > Campaign 0E canonical patches > CV-PATCH-002 rejects authority, precondition, overlap, domain, and mutable-alias failures
+ ✓ src/test/state.test.ts > Campaign 0E canonical patches > CV-PATCH-003 isolates deep counterfactual copies and encodings
+ ✓ src/test/identity.test.ts > Campaign 0A structural identities > CV-ID-001: identical complete manifests produce identical model bytes and digest
+ ✓ src/test/identity.test.ts > Campaign 0A structural identities > CV-ID-002: each authoritative model field changes the identity digest
+ ✓ src/test/identity.test.ts > Campaign 0A structural identities > CV-ID-004: research identity changes independently of model identity
+ ✓ src/test/identity.test.ts > Campaign 0A structural identities > CV-ID-003: presentation-only content is excluded but authoritative fields cannot be disguised as presentation
+ ✓ src/test/identity.test.ts > Campaign 0A structural identities > CV-ID-004: comparison membership and ordering remain research structure
+ ✓ src/test/identity.test.ts > Campaign 0A structural identities > CV-ID-005: initial state, ordered input, and seed participate in run identity
+ ✓ src/test/identity.test.ts > Campaign 0A structural identities > encodes friendly seeds as exactly 256-bit unsigned big-endian values
+ ✓ src/test/exactMath.test.ts > Campaign 0 exact arithmetic oracle > implements sign-correct floor and ceiling division
+ ✓ src/test/exactMath.test.ts > Campaign 0 exact arithmetic oracle > rounds exact half-ties to the even integer for both signs
+ ✓ src/test/exactMath.test.ts > Campaign 0 exact arithmetic oracle > ports reduced exact rational arithmetic without authoritative number conversion
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/contentGovernance.test.ts > corpus manifest / phenomenon section agreement > has one section version per manifest row, and they agree
+AssertionError: expected [] to deeply equal [ 'PHEN-ADAPT-001', …(20) ]
+
+- Expected
++ Received
+
+- Array [
+-   "PHEN-ADAPT-001",
+-   "PHEN-AFFECT-001",
+-   "PHEN-ATTN-001",
+-   "PHEN-BELIEF-001",
+-   "PHEN-BIO-001",
+-   "PHEN-BODY-001",
+-   "PHEN-COMMIT-001",
+-   "PHEN-DECISION-001",
+-   "PHEN-DET-001",
+-   "PHEN-EPI-001",
+-   "PHEN-HABIT-001",
+-   "PHEN-LEARN-001",
+-   "PHEN-LONG-001",
+-   "PHEN-MEM-001",
+-   "PHEN-MULTI-001",
+-   "PHEN-REASON-001",
+-   "PHEN-REL-001",
+-   "PHEN-SEM-001",
+-   "PHEN-SKILL-001",
+-   "PHEN-SOCIAL-001",
+-   "PHEN-WORK-001",
+- ]
++ Array []
+
+ ❯ src/test/contentGovernance.test.ts:222:41
+    220| 
+    221|     expect(manifest.size).toBeGreaterThan(0);
+    222|     expect([...sections.keys()].sort()).toEqual([...manifest.keys()].s…
+       |                                         ^
+    223| 
+    224|     const disagreements = [...manifest].filter(([id, version]) => sect…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed | 8 passed (9)
+      Tests  1 failed | 55 passed (56)
+   Start at  20:17:04
+   Duration  2.61s (transform 224ms, setup 0ms, collect 438ms, tests 185ms, environment 1ms, prepare 750ms)
+
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/contentGovernance.test.ts > corpus manifest / phenomenon section agreement > has one section version per manifest row, and they agree
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  20:18:03
+   Duration  399ms (transform 99ms, setup 0ms, collect 124ms, tests 3ms, environment 0ms, prepare 95ms)
+
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: CURRENT obligation counts are stale
+    at file:///C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/scripts/check-research-obligations.mjs:75:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.20.0
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+PASS:105 frozen C2 dependencies unchanged against db0ca7a8; M1 alias/assertions unchanged except import;12 production/test files; document budgets pass.
