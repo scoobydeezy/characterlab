@@ -1,0 +1,5197 @@
+M7 checks — before-code contract/card dbafa2f5; failed checks retained.
+COMMAND npx tsc -b --pretty false
+exit=0 seconds=14.8300337
+COMMAND npx tsc -b --pretty false (test sources and retrieval trace domain)
+exit=0 seconds=14.7482186
+COMMAND npx vitest run src/test/assembledRetrieval.test.ts src/test/bodyRecall.test.ts --maxWorkers=1 --minWorkers=1
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRetrieval.test.ts > M7 body cue access over the same episodic owner > rolls back a late failing instant after retrieval has read and reported prior memory
+M7 retrieval then joint formation: 24 events; cap23 rolls back whole instant
+
+ ❯ src/test/assembledRetrieval.test.ts (7 tests | 2 failed) 49162ms
+   × M7 body cue access over the same episodic owner > preserves four singleton M3 cells: all state, non-recall outputs, actual draws and non-memory traces 7013ms
+     → expected [ { kind: 'record', …(2) }, …(3) ] to deeply equal [ { kind: 'record', …(2) }, …(3) ]
+   × M7 body cue access over the same episodic owner > channel cue retrieves newer competing memory, while slots0/1/2 change access without changing retention 3292ms
+     → expected { kind: 'typedIdentifier', …(2) } to deeply equal { kind: 'typedIdentifier', …(2) }
+   ✓ M7 body cue access over the same episodic owner > repeat/restore after4 agree at every later full boundary; hidden truth cannot enter recall 21712ms
+   ✓ M7 body cue access over the same episodic owner > excluded/denied evidence has no cue, zero pressure can be recalled, and recall cannot replace current sensing 10022ms
+   ✓ M7 body cue access over the same episodic owner > rolls back a late failing instant after retrieval has read and reported prior memory 4683ms
+   ✓ M7 body cue access over the same episodic owner > rejects invalid limits, forged channel cues and mismatched model versions 2432ms
+ ✓ src/test/bodyRecall.test.ts (8 tests) 6ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledRetrieval.test.ts > M7 body cue access over the same episodic owner > preserves four singleton M3 cells: all state, non-recall outputs, actual draws and non-memory traces
+AssertionError: expected [ { kind: 'record', …(2) }, …(3) ] to deeply equal [ { kind: 'record', …(2) }, …(3) ]
+
+- Expected
++ Received
+
+  Array [
+    Object {
+      "fields": Map {
+        1n => Object {
+          "kind": "text",
+          "value": "trace/0.2-candidate",
+        },
+        2n => false,
+        3n => false,
+        4n => Object {
+          "fields": Map {
+            1n => Object {
+              "kind": "unsigned",
+              "value": 25n,
+            },
+            2n => Object {
+              "kind": "signed",
+              "value": 3n,
+            },
+            3n => Object {
+              "kind": "unsigned",
+              "value": 20n,
+            },
+            4n => Object {
+              "kind": "unsigned",
+              "value": 25n,
+            },
+            5n => Object {
+              "kind": "typedIdentifier",
+              "namespaceId": 1001n,
+              "payload": Object {
+                "kind": "text",
+                "value": "event/assembled-body-selection",
+              },
+            },
+            6n => Object {
+              "items": Array [
+                Object {
+                  "fields": Map {
+                    1n => Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1115n,
+                      "payload": Object {
+                        "kind": "unsigned",
+                        "value": 9n,
+                      },
+                    },
+                    2n => Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1000n,
+                      "payload": Object {
+                        "kind": "text",
+                        "value": "observer/bridge-subject",
+                      },
+                    },
+                    3n => Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1005n,
+                      "payload": Object {
+                        "kind": "text",
+                        "value": "channel/assembled-body-level",
+                      },
+                    },
+                    4n => Object {
+                      "kind": "signed",
+                      "value": 3n,
+                    },
+                    5n => Object {
+                      "fields": Map {
+                        1n => Object {
+                          "denominator": 1n,
+                          "kind": "rational",
+                          "numerator": 0n,
+                        },
+                        2n => Object {
+                          "denominator": 1n,
+                          "kind": "rational",
+                          "numerator": 10n,
+                        },
+                      },
+                      "kind": "record",
+                      "schema": Object {
+                        "fields": Array [
+                          Object {
+                            "id": 1n,
+                            "name": "Lower",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 2n,
+                            "name": "Upper",
+                            "required": true,
+                          },
+                        ],
+                        "name": "FiniteLevelInterval",
+                        "schemaVersion": 1n,
+                        "typeId": 462n,
+                      },
+                    },
+                    6n => Object {
+                      "kind": "text",
+                      "value": "embodied-level-observation/0.1-candidate",
+                    },
+                  },
+                  "kind": "record",
+                  "schema": Object {
+                    "fields": Array [
+                      Object {
+                        "id": 1n,
+                        "name": "ObservationId",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 2n,
+                        "name": "ObserverId",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 3n,
+                        "name": "ObservationChannelId",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 4n,
+                        "name": "OccurredAt",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 5n,
+                        "name": "FiniteLevelInterval",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 6n,
+                        "name": "TransformationVersion",
+                        "required": true,
+                      },
+                    ],
+                    "name": "EmbodiedLevelObservation",
+                    "schemaVersion": 1n,
+                    "typeId": 461n,
+                  },
+                },
+                Object {
+                  "fields": Map {
+                    1n => Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1106n,
+                      "payload": Object {
+                        "kind": "unsigned",
+                        "value": 10n,
+                      },
+                    },
+                    2n => Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1000n,
+                      "payload": Object {
+                        "kind": "text",
+                        "value": "observer/bridge-subject",
+                      },
+                    },
+                    3n => Object {
+                      "kind": "unsigned",
+                      "value": 3n,
+                    },
+                    4n => Object {
+                      "items": Array [],
+                      "kind": "set",
+                    },
+                    5n => Object {
+                      "items": Array [],
+                      "kind": "set",
+                    },
+                    6n => Object {
+                      "items": Array [],
+                      "kind": "set",
+                    },
+                    7n => Object {
+                      "items": Array [],
+                      "kind": "set",
+                    },
+                    8n => Object {
+                      "items": Array [
+                        Object {
+                          "fields": Map {
+                            1n => Object {
+                              "kind": "typedIdentifier",
+                              "namespaceId": 1000n,
+                              "payload": Object {
+                                "kind": "text",
+                                "value": "observer/bridge-subject",
+                              },
+                            },
+                            2n => Object {
+                              "kind": "typedIdentifier",
+                              "namespaceId": 1115n,
+                              "payload": Object {
+                                "kind": "unsigned",
+                                "value": 9n,
+                              },
+                            },
+                          },
+                          "kind": "record",
+                          "schema": Object {
+                            "fields": Array [
+                              Object {
+                                "id": 1n,
+                                "name": "ObserverId",
+                                "required": true,
+                              },
+                              Object {
+                                "id": 2n,
+                                "name": "ObservationId",
+                                "required": true,
+                              },
+                            ],
+                            "name": "SupportingObservationId",
+                            "schemaVersion": 1n,
+                            "typeId": 216n,
+                          },
+                        },
+                      ],
+                      "kind": "set",
+                    },
+                    9n => Object {
+                      "kind": "text",
+                      "value": "semantic-binding/0.1-candidate#SEM-001H",
+                    },
+                  },
+                  "kind": "record",
+                  "schema": Object {
+                    "fields": Array [
+                      Object {
+                        "id": 1n,
+                        "name": "ExperienceId",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 2n,
+                        "name": "ObserverId",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 3n,
+                        "name": "OccurredAt",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 4n,
+                        "name": "PerceptualEventReferentIds",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 5n,
+                        "name": "PerceivedBindings",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 6n,
+                        "name": "PerceptualClassifications",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 7n,
+                        "name": "PerceptualEventClassifications",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 8n,
+                        "name": "SupportingObservationIds",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 9n,
+                        "name": "TransformationVersion",
+                        "required": true,
+                      },
+                    ],
+                    "name": "PreRecognitionSemanticExperience",
+                    "schemaVersion": 1n,
+                    "typeId": 227n,
+                  },
+                },
+              ],
+              "kind": "list",
+            },
+            7n => Object {
+              "items": Array [],
+              "kind": "list",
+            },
+            8n => Object {
+              "items": Array [
+                Object {
+                  "kind": "unsigned",
+                  "value": 24n,
+                },
+              ],
+              "kind": "list",
+            },
+          },
+          "kind": "record",
+          "schema": Object {
+            "fields": Array [
+              Object {
+                "id": 1n,
+                "name": "EventId",
+                "required": true,
+              },
+              Object {
+                "id": 2n,
+                "name": "DueAt",
+                "required": true,
+              },
+              Object {
+                "id": 3n,
+                "name": "Phase",
+                "required": true,
+              },
+              Object {
+                "id": 4n,
+                "name": "EventSequence",
+                "required": true,
+              },
+              Object {
+                "id": 5n,
+                "name": "EventTypeId",
+                "required": true,
+              },
+              Object {
+                "id": 6n,
+                "name": "Payload",
+                "required": true,
+              },
+              Object {
+                "id": 7n,
+                "name": "Dependencies",
+                "required": true,
+              },
+              Object {
+                "id": 8n,
+                "name": "CausalParentEventIds",
+                "required": true,
+              },
+            ],
+            "name": "ScheduledEvent",
+            "schemaVersion": 1n,
+            "typeId": 130n,
+          },
+        },
+        5n => Object {
+          "kind": "typedIdentifier",
+          "namespaceId": 1036n,
+          "payload": Object {
+            "kind": "text",
+            "value": "seam/assembled-episodic-memory",
+          },
+        },
+        6n => false,
+        7n => Object {
+          "kind": "typedIdentifier",
+          "namespaceId": 1001n,
+          "payload": Object {
+            "kind": "text",
+            "value": "event/assembled-body-selection",
+          },
+        },
+        8n => Object {
+          "items": Array [
+            Object {
+              "kind": "typedIdentifier",
+              "namespaceId": 1000n,
+              "payload": Object {
+                "kind": "text",
+                "value": "observer/bridge-subject",
+              },
+            },
+            Object {
+              "kind": "typedIdentifier",
+              "namespaceId": 1002n,
+              "payload": Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1037n,
+                "payload": Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1038n,
+                  "payload": Object {
+                    "kind": "text",
+                    "value": "character/bridge-subject",
+                  },
+                },
+              },
+            },
+          ],
+          "kind": "list",
+        },
+        9n => Object {
+          "items": Array [],
+          "kind": "list",
+        },
+        10n => Object {
+          "items": Array [],
+          "kind": "list",
+        },
+        11n => Object {
+          "items": Array [],
+          "kind": "list",
+        },
+        12n => Object {
+          "items": Array [
+            Object {
+              "fields": Map {
+                1n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1115n,
+                  "payload": Object {
+                    "kind": "unsigned",
+                    "value": 9n,
+                  },
+                },
+                2n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1000n,
+                  "payload": Object {
+                    "kind": "text",
+                    "value": "observer/bridge-subject",
+                  },
+                },
+                3n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1005n,
+                  "payload": Object {
+                    "kind": "text",
+                    "value": "channel/assembled-body-level",
+                  },
+                },
+                4n => Object {
+                  "kind": "signed",
+                  "value": 3n,
+                },
+                5n => Object {
+                  "fields": Map {
+                    1n => Object {
+                      "denominator": 1n,
+                      "kind": "rational",
+                      "numerator": 0n,
+                    },
+                    2n => Object {
+                      "denominator": 1n,
+                      "kind": "rational",
+                      "numerator": 10n,
+                    },
+                  },
+                  "kind": "record",
+                  "schema": Object {
+                    "fields": Array [
+                      Object {
+                        "id": 1n,
+                        "name": "Lower",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 2n,
+                        "name": "Upper",
+                        "required": true,
+                      },
+                    ],
+                    "name": "FiniteLevelInterval",
+                    "schemaVersion": 1n,
+                    "typeId": 462n,
+                  },
+                },
+                6n => Object {
+                  "kind": "text",
+                  "value": "embodied-level-observation/0.1-candidate",
+                },
+              },
+              "kind": "record",
+              "schema": Object {
+                "fields": Array [
+                  Object {
+                    "id": 1n,
+                    "name": "ObservationId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 2n,
+                    "name": "ObserverId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 3n,
+                    "name": "ObservationChannelId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 4n,
+                    "name": "OccurredAt",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 5n,
+                    "name": "FiniteLevelInterval",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 6n,
+                    "name": "TransformationVersion",
+                    "required": true,
+                  },
+                ],
+                "name": "EmbodiedLevelObservation",
+                "schemaVersion": 1n,
+                "typeId": 461n,
+              },
+            },
+            Object {
+              "fields": Map {
+                1n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1106n,
+                  "payload": Object {
+                    "kind": "unsigned",
+                    "value": 10n,
+                  },
+                },
+                2n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1000n,
+                  "payload": Object {
+                    "kind": "text",
+                    "value": "observer/bridge-subject",
+                  },
+                },
+                3n => Object {
+                  "kind": "unsigned",
+                  "value": 3n,
+                },
+                4n => Object {
+                  "items": Array [],
+                  "kind": "set",
+                },
+                5n => Object {
+                  "items": Array [],
+                  "kind": "set",
+                },
+                6n => Object {
+                  "items": Array [],
+                  "kind": "set",
+                },
+                7n => Object {
+                  "items": Array [],
+                  "kind": "set",
+                },
+                8n => Object {
+                  "items": Array [
+                    Object {
+                      "fields": Map {
+                        1n => Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1000n,
+                          "payload": Object {
+                            "kind": "text",
+                            "value": "observer/bridge-subject",
+                          },
+                        },
+                        2n => Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1115n,
+                          "payload": Object {
+                            "kind": "unsigned",
+                            "value": 9n,
+                          },
+                        },
+                      },
+                      "kind": "record",
+                      "schema": Object {
+                        "fields": Array [
+                          Object {
+                            "id": 1n,
+                            "name": "ObserverId",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 2n,
+                            "name": "ObservationId",
+                            "required": true,
+                          },
+                        ],
+                        "name": "SupportingObservationId",
+                        "schemaVersion": 1n,
+                        "typeId": 216n,
+                      },
+                    },
+                  ],
+                  "kind": "set",
+                },
+                9n => Object {
+                  "kind": "text",
+                  "value": "semantic-binding/0.1-candidate#SEM-001H",
+                },
+              },
+              "kind": "record",
+              "schema": Object {
+                "fields": Array [
+                  Object {
+                    "id": 1n,
+                    "name": "ExperienceId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 2n,
+                    "name": "ObserverId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 3n,
+                    "name": "OccurredAt",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 4n,
+                    "name": "PerceptualEventReferentIds",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 5n,
+                    "name": "PerceivedBindings",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 6n,
+                    "name": "PerceptualClassifications",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 7n,
+                    "name": "PerceptualEventClassifications",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 8n,
+                    "name": "SupportingObservationIds",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 9n,
+                    "name": "TransformationVersion",
+                    "required": true,
+                  },
+                ],
+                "name": "PreRecognitionSemanticExperience",
+                "schemaVersion": 1n,
+                "typeId": 227n,
+              },
+            },
+          ],
+          "kind": "list",
+        },
+        13n => Object {
+          "items": Array [],
+          "kind": "list",
+        },
+        14n => Object {
+          "items": Array [],
+          "kind": "list",
+        },
+        15n => Object {
+          "items": Array [],
+          "kind": "list",
+        },
+        16n => Object {
+          "fields": Map {
+            1n => Object {
+              "items": Array [],
+              "kind": "list",
+            },
+          },
+          "kind": "record",
+          "schema": Object {
+            "fields": Array [
+              Object {
+                "id": 1n,
+                "name": "Operations",
+                "required": true,
+              },
+            ],
+            "name": "StatePatch",
+            "schemaVersion": 1n,
+            "typeId": 144n,
+          },
+        },
+        17n => Object {
+          "items": Array [],
+          "kind": "list",
+        },
+        18n => Object {
+          "items": Array [
+            Object {
+              "fields": Map {
+                1n => Object {
+                  "kind": "unsigned",
+                  "value": 26n,
+                },
+                2n => Object {
+                  "kind": "signed",
+                  "value": 3n,
+                },
+                3n => Object {
+                  "kind": "unsigned",
+                  "value": 130n,
+                },
+                4n => Object {
+                  "kind": "unsigned",
+                  "value": 26n,
+                },
+                5n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1001n,
+                  "payload": Object {
+                    "kind": "text",
+                    "value": "event/assembled-memory-evidence",
+                  },
+                },
+                6n => Object {
+                  "items": Array [
+                    Object {
+                      "fields": Map {
+                        1n => Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1115n,
+                          "payload": Object {
+                            "kind": "unsigned",
+                            "value": 9n,
+                          },
+                        },
+                        2n => Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1000n,
+                          "payload": Object {
+                            "kind": "text",
+                            "value": "observer/bridge-subject",
+                          },
+                        },
+                        3n => Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1005n,
+                          "payload": Object {
+                            "kind": "text",
+                            "value": "channel/assembled-body-level",
+                          },
+                        },
+                        4n => Object {
+                          "kind": "signed",
+                          "value": 3n,
+                        },
+                        5n => Object {
+                          "fields": Map {
+                            1n => Object {
+                              "denominator": 1n,
+                              "kind": "rational",
+                              "numerator": 0n,
+                            },
+                            2n => Object {
+                              "denominator": 1n,
+                              "kind": "rational",
+                              "numerator": 10n,
+                            },
+                          },
+                          "kind": "record",
+                          "schema": Object {
+                            "fields": Array [
+                              Object {
+                                "id": 1n,
+                                "name": "Lower",
+                                "required": true,
+                              },
+                              Object {
+                                "id": 2n,
+                                "name": "Upper",
+                                "required": true,
+                              },
+                            ],
+                            "name": "FiniteLevelInterval",
+                            "schemaVersion": 1n,
+                            "typeId": 462n,
+                          },
+                        },
+                        6n => Object {
+                          "kind": "text",
+                          "value": "embodied-level-observation/0.1-candidate",
+                        },
+                      },
+                      "kind": "record",
+                      "schema": Object {
+                        "fields": Array [
+                          Object {
+                            "id": 1n,
+                            "name": "ObservationId",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 2n,
+                            "name": "ObserverId",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 3n,
+                            "name": "ObservationChannelId",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 4n,
+                            "name": "OccurredAt",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 5n,
+                            "name": "FiniteLevelInterval",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 6n,
+                            "name": "TransformationVersion",
+                            "required": true,
+                          },
+                        ],
+                        "name": "EmbodiedLevelObservation",
+                        "schemaVersion": 1n,
+                        "typeId": 461n,
+                      },
+                    },
+                    Object {
+                      "fields": Map {
+                        1n => Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1106n,
+                          "payload": Object {
+                            "kind": "unsigned",
+                            "value": 10n,
+                          },
+                        },
+                        2n => Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1000n,
+                          "payload": Object {
+                            "kind": "text",
+                            "value": "observer/bridge-subject",
+                          },
+                        },
+                        3n => Object {
+                          "kind": "unsigned",
+                          "value": 3n,
+                        },
+                        4n => Object {
+                          "items": Array [],
+                          "kind": "set",
+                        },
+                        5n => Object {
+                          "items": Array [],
+                          "kind": "set",
+                        },
+                        6n => Object {
+                          "items": Array [],
+                          "kind": "set",
+                        },
+                        7n => Object {
+                          "items": Array [],
+                          "kind": "set",
+                        },
+                        8n => Object {
+                          "items": Array [
+                            Object {
+                              "fields": Map {
+                                1n => Object {
+                                  "kind": "typedIdentifier",
+                                  "namespaceId": 1000n,
+                                  "payload": Object {
+                                    "kind": "text",
+                                    "value": "observer/bridge-subject",
+                                  },
+                                },
+                                2n => Object {
+                                  "kind": "typedIdentifier",
+                                  "namespaceId": 1115n,
+                                  "payload": Object {
+                                    "kind": "unsigned",
+                                    "value": 9n,
+                                  },
+                                },
+                              },
+                              "kind": "record",
+                              "schema": Object {
+                                "fields": Array [
+                                  Object {
+                                    "id": 1n,
+                                    "name": "ObserverId",
+                                    "required": true,
+                                  },
+                                  Object {
+                                    "id": 2n,
+                                    "name": "ObservationId",
+                                    "required": true,
+                                  },
+                                ],
+                                "name": "SupportingObservationId",
+                                "schemaVersion": 1n,
+                                "typeId": 216n,
+                              },
+                            },
+                          ],
+                          "kind": "set",
+                        },
+                        9n => Object {
+                          "kind": "text",
+                          "value": "semantic-binding/0.1-candidate#SEM-001H",
+                        },
+                      },
+                      "kind": "record",
+                      "schema": Object {
+                        "fields": Array [
+                          Object {
+                            "id": 1n,
+                            "name": "ExperienceId",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 2n,
+                            "name": "ObserverId",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 3n,
+                            "name": "OccurredAt",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 4n,
+                            "name": "PerceptualEventReferentIds",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 5n,
+                            "name": "PerceivedBindings",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 6n,
+                            "name": "PerceptualClassifications",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 7n,
+                            "name": "PerceptualEventClassifications",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 8n,
+                            "name": "SupportingObservationIds",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 9n,
+                            "name": "TransformationVersion",
+                            "required": true,
+                          },
+                        ],
+                        "name": "PreRecognitionSemanticExperience",
+                        "schemaVersion": 1n,
+                        "typeId": 227n,
+                      },
+                    },
+                    Object {
+                      "items": Array [
+                        Object {
+                          "kind": "text",
+                          "value": "assembled-body-selection/0.1",
+                        },
+                        Object {
+                          "kind": "signed",
+                          "value": 3n,
+                        },
+                        Object {
+                          "kind": "unsigned",
+                          "value": 1n,
+                        },
+                        Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1115n,
+                          "payload": Object {
+                            "kind": "unsigned",
+                            "value": 9n,
+                          },
+                        },
+                        Object {
+                          "kind": "text",
+                          "value": "Selected",
+                        },
+                      ],
+                      "kind": "list",
+                    },
+                  ],
+                  "kind": "list",
+                },
+                7n => Object {
+                  "items": Array [],
+                  "kind": "list",
+                },
+                8n => Object {
+                  "items": Array [
+                    Object {
+                      "kind": "unsigned",
+                      "value": 25n,
+                    },
+                  ],
+                  "kind": "list",
+                },
+              },
+              "kind": "record",
+              "schema": Object {
+                "fields": Array [
+                  Object {
+                    "id": 1n,
+                    "name": "EventId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 2n,
+                    "name": "DueAt",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 3n,
+                    "name": "Phase",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 4n,
+                    "name": "EventSequence",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 5n,
+                    "name": "EventTypeId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 6n,
+                    "name": "Payload",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 7n,
+                    "name": "Dependencies",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 8n,
+                    "name": "CausalParentEventIds",
+                    "required": true,
+                  },
+                ],
+                "name": "ScheduledEvent",
+                "schemaVersion": 1n,
+                "typeId": 130n,
+              },
+            },
+          ],
+          "kind": "list",
+        },
+        19n => Object {
+          "items": Array [],
+          "kind": "list",
+        },
+      },
+      "kind": "record",
+      "schema": Object {
+        "fields": Array [
+          Object {
+            "id": 1n,
+            "name": "TraceSchemaVersion",
+            "required": true,
+          },
+          Object {
+            "id": 2n,
+            "name": "ModelIdentity",
+            "required": true,
+          },
+          Object {
+            "id": 3n,
+            "name": "RunIdentity",
+            "required": true,
+          },
+          Object {
+            "id": 4n,
+            "name": "Event",
+            "required": true,
+          },
+          Object {
+            "id": 5n,
+            "name": "SeamId",
+            "required": true,
+          },
+          Object {
+            "id": 6n,
+            "name": "SeamVersion",
+            "required": true,
+          },
+          Object {
+            "id": 7n,
+            "name": "RecordKind",
+            "required": true,
+          },
+          Object {
+            "id": 8n,
+            "name": "SubjectIds",
+            "required": true,
+          },
+          Object {
+            "id": 9n,
+            "name": "SourceRecordIds",
+            "required": true,
+          },
+          Object {
+            "id": 10n,
+            "name": "RegisteredReadDomain",
+            "required": true,
+          },
+          Object {
+            "id": 11n,
+            "name": "ActualReadRecords",
+            "required": true,
+          },
+          Object {
+            "id": 12n,
+            "name": "InputProjection",
+            "required": true,
+          },
+          Object {
+            "id": 13n,
+            "name": "OutputProjection",
+            "required": true,
+          },
+          Object {
+            "id": 14n,
+            "name": "RandomDrawRecords",
+            "required": true,
+          },
+          Object {
+            "id": 15n,
+            "name": "QuantizationOperations",
+            "required": true,
+          },
+          Object {
+            "id": 16n,
+            "name": "StatePatch",
+            "required": true,
+          },
+          Object {
+            "id": 17n,
+            "name": "StructuralMutationDiffs",
+            "required": true,
+          },
+          Object {
+            "id": 18n,
+            "name": "EmittedEvents",
+            "required": true,
+          },
+          Object {
+            "id": 19n,
+            "name": "InvariantResults",
+            "required": true,
+          },
+        ],
+        "name": "TraceRecord",
+        "schemaVersion": 1n,
+        "typeId": 160n,
+      },
+    },
+    Object {
+      "fields": Map {
+        1n => Object {
+          "kind": "text",
+          "value": "trace/0.2-candidate",
+        },
+        2n => false,
+        3n => false,
+        4n => Object {
+          "fields": Map {
+            1n => Object {
+              "kind": "unsigned",
+              "value": 26n,
+            },
+            2n => Object {
+              "kind": "signed",
+              "value": 3n,
+            },
+            3n => Object {
+              "kind": "unsigned",
+              "value": 130n,
+            },
+            4n => Object {
+              "kind": "unsigned",
+              "value": 26n,
+            },
+            5n => Object {
+              "kind": "typedIdentifier",
+              "namespaceId": 1001n,
+              "payload": Object {
+                "kind": "text",
+                "value": "event/assembled-memory-evidence",
+              },
+            },
+            6n => Object {
+              "items": Array [
+                Object {
+                  "fields": Map {
+                    1n => Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1115n,
+                      "payload": Object {
+                        "kind": "unsigned",
+                        "value": 9n,
+                      },
+                    },
+                    2n => Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1000n,
+                      "payload": Object {
+                        "kind": "text",
+                        "value": "observer/bridge-subject",
+                      },
+                    },
+                    3n => Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1005n,
+                      "payload": Object {
+                        "kind": "text",
+                        "value": "channel/assembled-body-level",
+                      },
+                    },
+                    4n => Object {
+                      "kind": "signed",
+                      "value": 3n,
+                    },
+                    5n => Object {
+                      "fields": Map {
+                        1n => Object {
+                          "denominator": 1n,
+                          "kind": "rational",
+                          "numerator": 0n,
+                        },
+                        2n => Object {
+                          "denominator": 1n,
+                          "kind": "rational",
+                          "numerator": 10n,
+                        },
+                      },
+                      "kind": "record",
+                      "schema": Object {
+                        "fields": Array [
+                          Object {
+                            "id": 1n,
+                            "name": "Lower",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 2n,
+                            "name": "Upper",
+                            "required": true,
+                          },
+                        ],
+                        "name": "FiniteLevelInterval",
+                        "schemaVersion": 1n,
+                        "typeId": 462n,
+                      },
+                    },
+                    6n => Object {
+                      "kind": "text",
+                      "value": "embodied-level-observation/0.1-candidate",
+                    },
+                  },
+                  "kind": "record",
+                  "schema": Object {
+                    "fields": Array [
+                      Object {
+                        "id": 1n,
+                        "name": "ObservationId",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 2n,
+                        "name": "ObserverId",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 3n,
+                        "name": "ObservationChannelId",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 4n,
+                        "name": "OccurredAt",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 5n,
+                        "name": "FiniteLevelInterval",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 6n,
+                        "name": "TransformationVersion",
+                        "required": true,
+                      },
+                    ],
+                    "name": "EmbodiedLevelObservation",
+                    "schemaVersion": 1n,
+                    "typeId": 461n,
+                  },
+                },
+                Object {
+                  "fields": Map {
+                    1n => Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1106n,
+                      "payload": Object {
+                        "kind": "unsigned",
+                        "value": 10n,
+                      },
+                    },
+                    2n => Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1000n,
+                      "payload": Object {
+                        "kind": "text",
+                        "value": "observer/bridge-subject",
+                      },
+                    },
+                    3n => Object {
+                      "kind": "unsigned",
+                      "value": 3n,
+                    },
+                    4n => Object {
+                      "items": Array [],
+                      "kind": "set",
+                    },
+                    5n => Object {
+                      "items": Array [],
+                      "kind": "set",
+                    },
+                    6n => Object {
+                      "items": Array [],
+                      "kind": "set",
+                    },
+                    7n => Object {
+                      "items": Array [],
+                      "kind": "set",
+                    },
+                    8n => Object {
+                      "items": Array [
+                        Object {
+                          "fields": Map {
+                            1n => Object {
+                              "kind": "typedIdentifier",
+                              "namespaceId": 1000n,
+                              "payload": Object {
+                                "kind": "text",
+                                "value": "observer/bridge-subject",
+                              },
+                            },
+                            2n => Object {
+                              "kind": "typedIdentifier",
+                              "namespaceId": 1115n,
+                              "payload": Object {
+                                "kind": "unsigned",
+                                "value": 9n,
+                              },
+                            },
+                          },
+                          "kind": "record",
+                          "schema": Object {
+                            "fields": Array [
+                              Object {
+                                "id": 1n,
+                                "name": "ObserverId",
+                                "required": true,
+                              },
+                              Object {
+                                "id": 2n,
+                                "name": "ObservationId",
+                                "required": true,
+                              },
+                            ],
+                            "name": "SupportingObservationId",
+                            "schemaVersion": 1n,
+                            "typeId": 216n,
+                          },
+                        },
+                      ],
+                      "kind": "set",
+                    },
+                    9n => Object {
+                      "kind": "text",
+                      "value": "semantic-binding/0.1-candidate#SEM-001H",
+                    },
+                  },
+                  "kind": "record",
+                  "schema": Object {
+                    "fields": Array [
+                      Object {
+                        "id": 1n,
+                        "name": "ExperienceId",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 2n,
+                        "name": "ObserverId",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 3n,
+                        "name": "OccurredAt",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 4n,
+                        "name": "PerceptualEventReferentIds",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 5n,
+                        "name": "PerceivedBindings",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 6n,
+                        "name": "PerceptualClassifications",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 7n,
+                        "name": "PerceptualEventClassifications",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 8n,
+                        "name": "SupportingObservationIds",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 9n,
+                        "name": "TransformationVersion",
+                        "required": true,
+                      },
+                    ],
+                    "name": "PreRecognitionSemanticExperience",
+                    "schemaVersion": 1n,
+                    "typeId": 227n,
+                  },
+                },
+                Object {
+                  "items": Array [
+                    Object {
+                      "kind": "text",
+                      "value": "assembled-body-selection/0.1",
+                    },
+                    Object {
+                      "kind": "signed",
+                      "value": 3n,
+                    },
+                    Object {
+                      "kind": "unsigned",
+                      "value": 1n,
+                    },
+                    Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1115n,
+                      "payload": Object {
+                        "kind": "unsigned",
+                        "value": 9n,
+                      },
+                    },
+                    Object {
+                      "kind": "text",
+                      "value": "Selected",
+                    },
+                  ],
+                  "kind": "list",
+                },
+              ],
+              "kind": "list",
+            },
+            7n => Object {
+              "items": Array [],
+              "kind": "list",
+            },
+            8n => Object {
+              "items": Array [
+                Object {
+                  "kind": "unsigned",
+                  "value": 25n,
+                },
+              ],
+              "kind": "list",
+            },
+          },
+          "kind": "record",
+          "schema": Object {
+            "fields": Array [
+              Object {
+                "id": 1n,
+                "name": "EventId",
+                "required": true,
+              },
+              Object {
+                "id": 2n,
+                "name": "DueAt",
+                "required": true,
+              },
+              Object {
+                "id": 3n,
+                "name": "Phase",
+                "required": true,
+              },
+              Object {
+                "id": 4n,
+                "name": "EventSequence",
+                "required": true,
+              },
+              Object {
+                "id": 5n,
+                "name": "EventTypeId",
+                "required": true,
+              },
+              Object {
+                "id": 6n,
+                "name": "Payload",
+                "required": true,
+              },
+              Object {
+                "id": 7n,
+                "name": "Dependencies",
+                "required": true,
+              },
+              Object {
+                "id": 8n,
+                "name": "CausalParentEventIds",
+                "required": true,
+              },
+            ],
+            "name": "ScheduledEvent",
+            "schemaVersion": 1n,
+            "typeId": 130n,
+          },
+        },
+        5n => Object {
+          "kind": "typedIdentifier",
+          "namespaceId": 1036n,
+          "payload": Object {
+            "kind": "text",
+            "value": "seam/assembled-episodic-memory",
+          },
+        },
+        6n => false,
+        7n => Object {
+          "kind": "typedIdentifier",
+          "namespaceId": 1001n,
+          "payload": Object {
+            "kind": "text",
+            "value": "event/assembled-memory-evidence",
+          },
+        },
+        8n => Object {
+          "items": Array [
+            Object {
+              "kind": "typedIdentifier",
+              "namespaceId": 1000n,
+              "payload": Object {
+                "kind": "text",
+                "value": "observer/bridge-subject",
+              },
+            },
+            Object {
+              "kind": "typedIdentifier",
+              "namespaceId": 1002n,
+              "payload": Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1037n,
+                "payload": Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1038n,
+                  "payload": Object {
+                    "kind": "text",
+                    "value": "character/bridge-subject",
+                  },
+                },
+              },
+            },
+          ],
+          "kind": "list",
+        },
+        9n => Object {
+          "items": Array [],
+          "kind": "list",
+        },
+        10n => Object {
+          "items": Array [],
+          "kind": "list",
+        },
+        11n => Object {
+          "items": Array [],
+          "kind": "list",
+        },
+        12n => Object {
+          "items": Array [
+            Object {
+              "fields": Map {
+                1n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1115n,
+                  "payload": Object {
+                    "kind": "unsigned",
+                    "value": 9n,
+                  },
+                },
+                2n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1000n,
+                  "payload": Object {
+                    "kind": "text",
+                    "value": "observer/bridge-subject",
+                  },
+                },
+                3n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1005n,
+                  "payload": Object {
+                    "kind": "text",
+                    "value": "channel/assembled-body-level",
+                  },
+                },
+                4n => Object {
+                  "kind": "signed",
+                  "value": 3n,
+                },
+                5n => Object {
+                  "fields": Map {
+                    1n => Object {
+                      "denominator": 1n,
+                      "kind": "rational",
+                      "numerator": 0n,
+                    },
+                    2n => Object {
+                      "denominator": 1n,
+                      "kind": "rational",
+                      "numerator": 10n,
+                    },
+                  },
+                  "kind": "record",
+                  "schema": Object {
+                    "fields": Array [
+                      Object {
+                        "id": 1n,
+                        "name": "Lower",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 2n,
+                        "name": "Upper",
+                        "required": true,
+                      },
+                    ],
+                    "name": "FiniteLevelInterval",
+                    "schemaVersion": 1n,
+                    "typeId": 462n,
+                  },
+                },
+                6n => Object {
+                  "kind": "text",
+                  "value": "embodied-level-observation/0.1-candidate",
+                },
+              },
+              "kind": "record",
+              "schema": Object {
+                "fields": Array [
+                  Object {
+                    "id": 1n,
+                    "name": "ObservationId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 2n,
+                    "name": "ObserverId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 3n,
+                    "name": "ObservationChannelId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 4n,
+                    "name": "OccurredAt",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 5n,
+                    "name": "FiniteLevelInterval",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 6n,
+                    "name": "TransformationVersion",
+                    "required": true,
+                  },
+                ],
+                "name": "EmbodiedLevelObservation",
+                "schemaVersion": 1n,
+                "typeId": 461n,
+              },
+            },
+            Object {
+              "fields": Map {
+                1n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1106n,
+                  "payload": Object {
+                    "kind": "unsigned",
+                    "value": 10n,
+                  },
+                },
+                2n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1000n,
+                  "payload": Object {
+                    "kind": "text",
+                    "value": "observer/bridge-subject",
+                  },
+                },
+                3n => Object {
+                  "kind": "unsigned",
+                  "value": 3n,
+                },
+                4n => Object {
+                  "items": Array [],
+                  "kind": "set",
+                },
+                5n => Object {
+                  "items": Array [],
+                  "kind": "set",
+                },
+                6n => Object {
+                  "items": Array [],
+                  "kind": "set",
+                },
+                7n => Object {
+                  "items": Array [],
+                  "kind": "set",
+                },
+                8n => Object {
+                  "items": Array [
+                    Object {
+                      "fields": Map {
+                        1n => Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1000n,
+                          "payload": Object {
+                            "kind": "text",
+                            "value": "observer/bridge-subject",
+                          },
+                        },
+                        2n => Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1115n,
+                          "payload": Object {
+                            "kind": "unsigned",
+                            "value": 9n,
+                          },
+                        },
+                      },
+                      "kind": "record",
+                      "schema": Object {
+                        "fields": Array [
+                          Object {
+                            "id": 1n,
+                            "name": "ObserverId",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 2n,
+                            "name": "ObservationId",
+                            "required": true,
+                          },
+                        ],
+                        "name": "SupportingObservationId",
+                        "schemaVersion": 1n,
+                        "typeId": 216n,
+                      },
+                    },
+                  ],
+                  "kind": "set",
+                },
+                9n => Object {
+                  "kind": "text",
+                  "value": "semantic-binding/0.1-candidate#SEM-001H",
+                },
+              },
+              "kind": "record",
+              "schema": Object {
+                "fields": Array [
+                  Object {
+                    "id": 1n,
+                    "name": "ExperienceId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 2n,
+                    "name": "ObserverId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 3n,
+                    "name": "OccurredAt",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 4n,
+                    "name": "PerceptualEventReferentIds",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 5n,
+                    "name": "PerceivedBindings",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 6n,
+                    "name": "PerceptualClassifications",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 7n,
+                    "name": "PerceptualEventClassifications",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 8n,
+                    "name": "SupportingObservationIds",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 9n,
+                    "name": "TransformationVersion",
+                    "required": true,
+                  },
+                ],
+                "name": "PreRecognitionSemanticExperience",
+                "schemaVersion": 1n,
+                "typeId": 227n,
+              },
+            },
+            Object {
+              "items": Array [
+                Object {
+                  "kind": "text",
+                  "value": "assembled-body-selection/0.1",
+                },
+                Object {
+                  "kind": "signed",
+                  "value": 3n,
+                },
+                Object {
+                  "kind": "unsigned",
+                  "value": 1n,
+                },
+                Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1115n,
+                  "payload": Object {
+                    "kind": "unsigned",
+                    "value": 9n,
+                  },
+                },
+                Object {
+                  "kind": "text",
+                  "value": "Selected",
+                },
+              ],
+              "kind": "list",
+            },
+          ],
+          "kind": "list",
+        },
+        13n => Object {
+          "items": Array [
+            Object {
+              "items": Array [
+                Object {
+                  "kind": "text",
+                  "value": "assembled-body-episode/0.1",
+                },
+                Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1125n,
+                  "payload": Object {
+                    "kind": "unsigned",
+                    "value": 27n,
+                  },
+                },
+                Object {
+                  "fields": Map {
+                    1n => Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1115n,
+                      "payload": Object {
+                        "kind": "unsigned",
+                        "value": 9n,
+                      },
+                    },
+                    2n => Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1000n,
+                      "payload": Object {
+                        "kind": "text",
+                        "value": "observer/bridge-subject",
+                      },
+                    },
+                    3n => Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1005n,
+                      "payload": Object {
+                        "kind": "text",
+                        "value": "channel/assembled-body-level",
+                      },
+                    },
+                    4n => Object {
+                      "kind": "signed",
+                      "value": 3n,
+                    },
+                    5n => Object {
+                      "fields": Map {
+                        1n => Object {
+                          "denominator": 1n,
+                          "kind": "rational",
+                          "numerator": 0n,
+                        },
+                        2n => Object {
+                          "denominator": 1n,
+                          "kind": "rational",
+                          "numerator": 10n,
+                        },
+                      },
+                      "kind": "record",
+                      "schema": Object {
+                        "fields": Array [
+                          Object {
+                            "id": 1n,
+                            "name": "Lower",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 2n,
+                            "name": "Upper",
+                            "required": true,
+                          },
+                        ],
+                        "name": "FiniteLevelInterval",
+                        "schemaVersion": 1n,
+                        "typeId": 462n,
+                      },
+                    },
+                    6n => Object {
+                      "kind": "text",
+                      "value": "embodied-level-observation/0.1-candidate",
+                    },
+                  },
+                  "kind": "record",
+                  "schema": Object {
+                    "fields": Array [
+                      Object {
+                        "id": 1n,
+                        "name": "ObservationId",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 2n,
+                        "name": "ObserverId",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 3n,
+                        "name": "ObservationChannelId",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 4n,
+                        "name": "OccurredAt",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 5n,
+                        "name": "FiniteLevelInterval",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 6n,
+                        "name": "TransformationVersion",
+                        "required": true,
+                      },
+                    ],
+                    "name": "EmbodiedLevelObservation",
+                    "schemaVersion": 1n,
+                    "typeId": 461n,
+                  },
+                },
+                Object {
+                  "fields": Map {
+                    1n => Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1106n,
+                      "payload": Object {
+                        "kind": "unsigned",
+                        "value": 10n,
+                      },
+                    },
+                    2n => Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1000n,
+                      "payload": Object {
+                        "kind": "text",
+                        "value": "observer/bridge-subject",
+                      },
+                    },
+                    3n => Object {
+                      "kind": "unsigned",
+                      "value": 3n,
+                    },
+                    4n => Object {
+                      "items": Array [],
+                      "kind": "set",
+                    },
+                    5n => Object {
+                      "items": Array [],
+                      "kind": "set",
+                    },
+                    6n => Object {
+                      "items": Array [],
+                      "kind": "set",
+                    },
+                    7n => Object {
+                      "items": Array [],
+                      "kind": "set",
+                    },
+                    8n => Object {
+                      "items": Array [
+                        Object {
+                          "fields": Map {
+                            1n => Object {
+                              "kind": "typedIdentifier",
+                              "namespaceId": 1000n,
+                              "payload": Object {
+                                "kind": "text",
+                                "value": "observer/bridge-subject",
+                              },
+                            },
+                            2n => Object {
+                              "kind": "typedIdentifier",
+                              "namespaceId": 1115n,
+                              "payload": Object {
+                                "kind": "unsigned",
+                                "value": 9n,
+                              },
+                            },
+                          },
+                          "kind": "record",
+                          "schema": Object {
+                            "fields": Array [
+                              Object {
+                                "id": 1n,
+                                "name": "ObserverId",
+                                "required": true,
+                              },
+                              Object {
+                                "id": 2n,
+                                "name": "ObservationId",
+                                "required": true,
+                              },
+                            ],
+                            "name": "SupportingObservationId",
+                            "schemaVersion": 1n,
+                            "typeId": 216n,
+                          },
+                        },
+                      ],
+                      "kind": "set",
+                    },
+                    9n => Object {
+                      "kind": "text",
+                      "value": "semantic-binding/0.1-candidate#SEM-001H",
+                    },
+                  },
+                  "kind": "record",
+                  "schema": Object {
+                    "fields": Array [
+                      Object {
+                        "id": 1n,
+                        "name": "ExperienceId",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 2n,
+                        "name": "ObserverId",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 3n,
+                        "name": "OccurredAt",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 4n,
+                        "name": "PerceptualEventReferentIds",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 5n,
+                        "name": "PerceivedBindings",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 6n,
+                        "name": "PerceptualClassifications",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 7n,
+                        "name": "PerceptualEventClassifications",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 8n,
+                        "name": "SupportingObservationIds",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 9n,
+                        "name": "TransformationVersion",
+                        "required": true,
+                      },
+                    ],
+                    "name": "PreRecognitionSemanticExperience",
+                    "schemaVersion": 1n,
+                    "typeId": 227n,
+                  },
+                },
+                Object {
+                  "items": Array [
+                    Object {
+                      "kind": "text",
+                      "value": "assembled-body-selection/0.1",
+                    },
+                    Object {
+                      "kind": "signed",
+                      "value": 3n,
+                    },
+                    Object {
+                      "kind": "unsigned",
+                      "value": 1n,
+                    },
+                    Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1115n,
+                      "payload": Object {
+                        "kind": "unsigned",
+                        "value": 9n,
+                      },
+                    },
+                    Object {
+                      "kind": "text",
+                      "value": "Selected",
+                    },
+                  ],
+                  "kind": "list",
+                },
+                Object {
+                  "kind": "signed",
+                  "value": 3n,
+                },
+              ],
+              "kind": "list",
+            },
+          ],
+          "kind": "list",
+        },
+        14n => Object {
+          "items": Array [],
+          "kind": "list",
+        },
+        15n => Object {
+          "items": Array [],
+          "kind": "list",
+        },
+        16n => Object {
+          "fields": Map {
+            1n => Object {
+              "items": Array [],
+              "kind": "list",
+            },
+          },
+          "kind": "record",
+          "schema": Object {
+            "fields": Array [
+              Object {
+                "id": 1n,
+                "name": "Operations",
+                "required": true,
+              },
+            ],
+            "name": "StatePatch",
+            "schemaVersion": 1n,
+            "typeId": 144n,
+          },
+        },
+        17n => Object {
+          "items": Array [],
+          "kind": "list",
+        },
+        18n => Object {
+          "items": Array [
+            Object {
+              "fields": Map {
+                1n => Object {
+                  "kind": "unsigned",
+                  "value": 48n,
+                },
+                2n => Object {
+                  "kind": "signed",
+                  "value": 3n,
+                },
+                3n => Object {
+                  "kind": "unsigned",
+                  "value": 140n,
+                },
+                4n => Object {
+                  "kind": "unsigned",
+                  "value": 48n,
+                },
+                5n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1001n,
+                  "payload": Object {
+                    "kind": "text",
+                    "value": "event/assembled-memory-formation",
+                  },
+                },
+                6n => Object {
+                  "items": Array [
+                    Object {
+                      "kind": "text",
+                      "value": "assembled-body-episode/0.1",
+                    },
+                    Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1125n,
+                      "payload": Object {
+                        "kind": "unsigned",
+                        "value": 27n,
+                      },
+                    },
+                    Object {
+                      "fields": Map {
+                        1n => Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1115n,
+                          "payload": Object {
+                            "kind": "unsigned",
+                            "value": 9n,
+                          },
+                        },
+                        2n => Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1000n,
+                          "payload": Object {
+                            "kind": "text",
+                            "value": "observer/bridge-subject",
+                          },
+                        },
+                        3n => Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1005n,
+                          "payload": Object {
+                            "kind": "text",
+                            "value": "channel/assembled-body-level",
+                          },
+                        },
+                        4n => Object {
+                          "kind": "signed",
+                          "value": 3n,
+                        },
+                        5n => Object {
+                          "fields": Map {
+                            1n => Object {
+                              "denominator": 1n,
+                              "kind": "rational",
+                              "numerator": 0n,
+                            },
+                            2n => Object {
+                              "denominator": 1n,
+                              "kind": "rational",
+                              "numerator": 10n,
+                            },
+                          },
+                          "kind": "record",
+                          "schema": Object {
+                            "fields": Array [
+                              Object {
+                                "id": 1n,
+                                "name": "Lower",
+                                "required": true,
+                              },
+                              Object {
+                                "id": 2n,
+                                "name": "Upper",
+                                "required": true,
+                              },
+                            ],
+                            "name": "FiniteLevelInterval",
+                            "schemaVersion": 1n,
+                            "typeId": 462n,
+                          },
+                        },
+                        6n => Object {
+                          "kind": "text",
+                          "value": "embodied-level-observation/0.1-candidate",
+                        },
+                      },
+                      "kind": "record",
+                      "schema": Object {
+                        "fields": Array [
+                          Object {
+                            "id": 1n,
+                            "name": "ObservationId",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 2n,
+                            "name": "ObserverId",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 3n,
+                            "name": "ObservationChannelId",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 4n,
+                            "name": "OccurredAt",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 5n,
+                            "name": "FiniteLevelInterval",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 6n,
+                            "name": "TransformationVersion",
+                            "required": true,
+                          },
+                        ],
+                        "name": "EmbodiedLevelObservation",
+                        "schemaVersion": 1n,
+                        "typeId": 461n,
+                      },
+                    },
+                    Object {
+                      "fields": Map {
+                        1n => Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1106n,
+                          "payload": Object {
+                            "kind": "unsigned",
+                            "value": 10n,
+                          },
+                        },
+                        2n => Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1000n,
+                          "payload": Object {
+                            "kind": "text",
+                            "value": "observer/bridge-subject",
+                          },
+                        },
+                        3n => Object {
+                          "kind": "unsigned",
+                          "value": 3n,
+                        },
+                        4n => Object {
+                          "items": Array [],
+                          "kind": "set",
+                        },
+                        5n => Object {
+                          "items": Array [],
+                          "kind": "set",
+                        },
+                        6n => Object {
+                          "items": Array [],
+                          "kind": "set",
+                        },
+                        7n => Object {
+                          "items": Array [],
+                          "kind": "set",
+                        },
+                        8n => Object {
+                          "items": Array [
+                            Object {
+                              "fields": Map {
+                                1n => Object {
+                                  "kind": "typedIdentifier",
+                                  "namespaceId": 1000n,
+                                  "payload": Object {
+                                    "kind": "text",
+                                    "value": "observer/bridge-subject",
+                                  },
+                                },
+                                2n => Object {
+                                  "kind": "typedIdentifier",
+                                  "namespaceId": 1115n,
+                                  "payload": Object {
+                                    "kind": "unsigned",
+                                    "value": 9n,
+                                  },
+                                },
+                              },
+                              "kind": "record",
+                              "schema": Object {
+                                "fields": Array [
+                                  Object {
+                                    "id": 1n,
+                                    "name": "ObserverId",
+                                    "required": true,
+                                  },
+                                  Object {
+                                    "id": 2n,
+                                    "name": "ObservationId",
+                                    "required": true,
+                                  },
+                                ],
+                                "name": "SupportingObservationId",
+                                "schemaVersion": 1n,
+                                "typeId": 216n,
+                              },
+                            },
+                          ],
+                          "kind": "set",
+                        },
+                        9n => Object {
+                          "kind": "text",
+                          "value": "semantic-binding/0.1-candidate#SEM-001H",
+                        },
+                      },
+                      "kind": "record",
+                      "schema": Object {
+                        "fields": Array [
+                          Object {
+                            "id": 1n,
+                            "name": "ExperienceId",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 2n,
+                            "name": "ObserverId",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 3n,
+                            "name": "OccurredAt",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 4n,
+                            "name": "PerceptualEventReferentIds",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 5n,
+                            "name": "PerceivedBindings",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 6n,
+                            "name": "PerceptualClassifications",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 7n,
+                            "name": "PerceptualEventClassifications",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 8n,
+                            "name": "SupportingObservationIds",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 9n,
+                            "name": "TransformationVersion",
+                            "required": true,
+                          },
+                        ],
+                        "name": "PreRecognitionSemanticExperience",
+                        "schemaVersion": 1n,
+                        "typeId": 227n,
+                      },
+                    },
+                    Object {
+                      "items": Array [
+                        Object {
+                          "kind": "text",
+                          "value": "assembled-body-selection/0.1",
+                        },
+                        Object {
+                          "kind": "signed",
+                          "value": 3n,
+                        },
+                        Object {
+                          "kind": "unsigned",
+                          "value": 1n,
+                        },
+                        Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1115n,
+                          "payload": Object {
+                            "kind": "unsigned",
+                            "value": 9n,
+                          },
+                        },
+                        Object {
+                          "kind": "text",
+                          "value": "Selected",
+                        },
+                      ],
+                      "kind": "list",
+                    },
+                    Object {
+                      "kind": "signed",
+                      "value": 3n,
+                    },
+                  ],
+                  "kind": "list",
+                },
+                7n => Object {
+                  "items": Array [],
+                  "kind": "list",
+                },
+                8n => Object {
+                  "items": Array [
+                    Object {
+                      "kind": "unsigned",
+                      "value": 26n,
+                    },
+                  ],
+                  "kind": "list",
+                },
+              },
+              "kind": "record",
+              "schema": Object {
+                "fields": Array [
+                  Object {
+                    "id": 1n,
+                    "name": "EventId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 2n,
+                    "name": "DueAt",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 3n,
+                    "name": "Phase",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 4n,
+                    "name": "EventSequence",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 5n,
+                    "name": "EventTypeId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 6n,
+                    "name": "Payload",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 7n,
+                    "name": "Dependencies",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 8n,
+                    "name": "CausalParentEventIds",
+                    "required": true,
+                  },
+                ],
+                "name": "ScheduledEvent",
+                "schemaVersion": 1n,
+                "typeId": 130n,
+              },
+            },
+            Object {
+              "fields": Map {
+                1n => Object {
+                  "kind": "unsigned",
+                  "value": 49n,
+                },
+                2n => Object {
+                  "kind": "signed",
+                  "value": 5n,
+                },
+                3n => Object {
+                  "kind": "unsigned",
+                  "value": 20n,
+                },
+                4n => Object {
+                  "kind": "unsigned",
+                  "value": 49n,
+                },
+                5n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1001n,
+                  "payload": Object {
+                    "kind": "text",
+                    "value": "event/assembled-memory-recall",
+                  },
+                },
+                6n => Object {
+-                 "items": Array [
+-                   Object {
+-                     "kind": "text",
+-                     "value": "assembled-body-episode/0.1",
+-                   },
+-                   Object {
+                  "kind": "typedIdentifier",
+-                     "namespaceId": 1002n,
+-                     "payload": Object {
+-                       "kind": "typedIdentifier",
+-                       "namespaceId": 1037n,
+-                       "payload": Object {
+-                         "kind": "typedIdentifier",
+-                         "namespaceId": 1038n,
++                 "namespaceId": 1005n,
+                  "payload": Object {
+                    "kind": "text",
+-                           "value": "character/bridge-subject",
+-                         },
+-                       },
+-                     },
+-                   },
+-                   Object {
+-                     "kind": "typedIdentifier",
+-                     "namespaceId": 1115n,
+-                     "payload": Object {
+-                       "kind": "unsigned",
+-                       "value": 9n,
+-                     },
++                   "value": "channel/assembled-body-level",
+                  },
+-                 ],
+-                 "kind": "list",
+                },
+                7n => Object {
+                  "items": Array [],
+                  "kind": "list",
+                },
+                8n => Object {
+                  "items": Array [
+                    Object {
+                      "kind": "unsigned",
+                      "value": 26n,
+                    },
+                  ],
+                  "kind": "list",
+                },
+              },
+              "kind": "record",
+              "schema": Object {
+                "fields": Array [
+                  Object {
+                    "id": 1n,
+                    "name": "EventId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 2n,
+                    "name": "DueAt",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 3n,
+                    "name": "Phase",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 4n,
+                    "name": "EventSequence",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 5n,
+                    "name": "EventTypeId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 6n,
+                    "name": "Payload",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 7n,
+                    "name": "Dependencies",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 8n,
+                    "name": "CausalParentEventIds",
+                    "required": true,
+                  },
+                ],
+                "name": "ScheduledEvent",
+                "schemaVersion": 1n,
+                "typeId": 130n,
+              },
+            },
+          ],
+          "kind": "list",
+        },
+        19n => false,
+      },
+      "kind": "record",
+      "schema": Object {
+        "fields": Array [
+          Object {
+            "id": 1n,
+            "name": "TraceSchemaVersion",
+            "required": true,
+          },
+          Object {
+            "id": 2n,
+            "name": "ModelIdentity",
+            "required": true,
+          },
+          Object {
+            "id": 3n,
+            "name": "RunIdentity",
+            "required": true,
+          },
+          Object {
+            "id": 4n,
+            "name": "Event",
+            "required": true,
+          },
+          Object {
+            "id": 5n,
+            "name": "SeamId",
+            "required": true,
+          },
+          Object {
+            "id": 6n,
+            "name": "SeamVersion",
+            "required": true,
+          },
+          Object {
+            "id": 7n,
+            "name": "RecordKind",
+            "required": true,
+          },
+          Object {
+            "id": 8n,
+            "name": "SubjectIds",
+            "required": true,
+          },
+          Object {
+            "id": 9n,
+            "name": "SourceRecordIds",
+            "required": true,
+          },
+          Object {
+            "id": 10n,
+            "name": "RegisteredReadDomain",
+            "required": true,
+          },
+          Object {
+            "id": 11n,
+            "name": "ActualReadRecords",
+            "required": true,
+          },
+          Object {
+            "id": 12n,
+            "name": "InputProjection",
+            "required": true,
+          },
+          Object {
+            "id": 13n,
+            "name": "OutputProjection",
+            "required": true,
+          },
+          Object {
+            "id": 14n,
+            "name": "RandomDrawRecords",
+            "required": true,
+          },
+          Object {
+            "id": 15n,
+            "name": "QuantizationOperations",
+            "required": true,
+          },
+          Object {
+            "id": 16n,
+            "name": "StatePatch",
+            "required": true,
+          },
+          Object {
+            "id": 17n,
+            "name": "StructuralMutationDiffs",
+            "required": true,
+          },
+          Object {
+            "id": 18n,
+            "name": "EmittedEvents",
+            "required": true,
+          },
+          Object {
+            "id": 19n,
+            "name": "InvariantResults",
+            "required": true,
+          },
+        ],
+        "name": "TraceRecord",
+        "schemaVersion": 1n,
+        "typeId": 160n,
+      },
+    },
+    Object {
+      "fields": Map {
+        1n => Object {
+          "kind": "text",
+          "value": "trace/0.2-candidate",
+        },
+        2n => false,
+        3n => false,
+        4n => Object {
+          "fields": Map {
+            1n => Object {
+              "kind": "unsigned",
+              "value": 48n,
+            },
+            2n => Object {
+              "kind": "signed",
+              "value": 3n,
+            },
+            3n => Object {
+              "kind": "unsigned",
+              "value": 140n,
+            },
+            4n => Object {
+              "kind": "unsigned",
+              "value": 48n,
+            },
+            5n => Object {
+              "kind": "typedIdentifier",
+              "namespaceId": 1001n,
+              "payload": Object {
+                "kind": "text",
+                "value": "event/assembled-memory-formation",
+              },
+            },
+            6n => Object {
+              "items": Array [
+                Object {
+                  "kind": "text",
+                  "value": "assembled-body-episode/0.1",
+                },
+                Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1125n,
+                  "payload": Object {
+                    "kind": "unsigned",
+                    "value": 27n,
+                  },
+                },
+                Object {
+                  "fields": Map {
+                    1n => Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1115n,
+                      "payload": Object {
+                        "kind": "unsigned",
+                        "value": 9n,
+                      },
+                    },
+                    2n => Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1000n,
+                      "payload": Object {
+                        "kind": "text",
+                        "value": "observer/bridge-subject",
+                      },
+                    },
+                    3n => Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1005n,
+                      "payload": Object {
+                        "kind": "text",
+                        "value": "channel/assembled-body-level",
+                      },
+                    },
+                    4n => Object {
+                      "kind": "signed",
+                      "value": 3n,
+                    },
+                    5n => Object {
+                      "fields": Map {
+                        1n => Object {
+                          "denominator": 1n,
+                          "kind": "rational",
+                          "numerator": 0n,
+                        },
+                        2n => Object {
+                          "denominator": 1n,
+                          "kind": "rational",
+                          "numerator": 10n,
+                        },
+                      },
+                      "kind": "record",
+                      "schema": Object {
+                        "fields": Array [
+                          Object {
+                            "id": 1n,
+                            "name": "Lower",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 2n,
+                            "name": "Upper",
+                            "required": true,
+                          },
+                        ],
+                        "name": "FiniteLevelInterval",
+                        "schemaVersion": 1n,
+                        "typeId": 462n,
+                      },
+                    },
+                    6n => Object {
+                      "kind": "text",
+                      "value": "embodied-level-observation/0.1-candidate",
+                    },
+                  },
+                  "kind": "record",
+                  "schema": Object {
+                    "fields": Array [
+                      Object {
+                        "id": 1n,
+                        "name": "ObservationId",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 2n,
+                        "name": "ObserverId",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 3n,
+                        "name": "ObservationChannelId",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 4n,
+                        "name": "OccurredAt",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 5n,
+                        "name": "FiniteLevelInterval",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 6n,
+                        "name": "TransformationVersion",
+                        "required": true,
+                      },
+                    ],
+                    "name": "EmbodiedLevelObservation",
+                    "schemaVersion": 1n,
+                    "typeId": 461n,
+                  },
+                },
+                Object {
+                  "fields": Map {
+                    1n => Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1106n,
+                      "payload": Object {
+                        "kind": "unsigned",
+                        "value": 10n,
+                      },
+                    },
+                    2n => Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1000n,
+                      "payload": Object {
+                        "kind": "text",
+                        "value": "observer/bridge-subject",
+                      },
+                    },
+                    3n => Object {
+                      "kind": "unsigned",
+                      "value": 3n,
+                    },
+                    4n => Object {
+                      "items": Array [],
+                      "kind": "set",
+                    },
+                    5n => Object {
+                      "items": Array [],
+                      "kind": "set",
+                    },
+                    6n => Object {
+                      "items": Array [],
+                      "kind": "set",
+                    },
+                    7n => Object {
+                      "items": Array [],
+                      "kind": "set",
+                    },
+                    8n => Object {
+                      "items": Array [
+                        Object {
+                          "fields": Map {
+                            1n => Object {
+                              "kind": "typedIdentifier",
+                              "namespaceId": 1000n,
+                              "payload": Object {
+                                "kind": "text",
+                                "value": "observer/bridge-subject",
+                              },
+                            },
+                            2n => Object {
+                              "kind": "typedIdentifier",
+                              "namespaceId": 1115n,
+                              "payload": Object {
+                                "kind": "unsigned",
+                                "value": 9n,
+                              },
+                            },
+                          },
+                          "kind": "record",
+                          "schema": Object {
+                            "fields": Array [
+                              Object {
+                                "id": 1n,
+                                "name": "ObserverId",
+                                "required": true,
+                              },
+                              Object {
+                                "id": 2n,
+                                "name": "ObservationId",
+                                "required": true,
+                              },
+                            ],
+                            "name": "SupportingObservationId",
+                            "schemaVersion": 1n,
+                            "typeId": 216n,
+                          },
+                        },
+                      ],
+                      "kind": "set",
+                    },
+                    9n => Object {
+                      "kind": "text",
+                      "value": "semantic-binding/0.1-candidate#SEM-001H",
+                    },
+                  },
+                  "kind": "record",
+                  "schema": Object {
+                    "fields": Array [
+                      Object {
+                        "id": 1n,
+                        "name": "ExperienceId",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 2n,
+                        "name": "ObserverId",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 3n,
+                        "name": "OccurredAt",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 4n,
+                        "name": "PerceptualEventReferentIds",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 5n,
+                        "name": "PerceivedBindings",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 6n,
+                        "name": "PerceptualClassifications",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 7n,
+                        "name": "PerceptualEventClassifications",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 8n,
+                        "name": "SupportingObservationIds",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 9n,
+                        "name": "TransformationVersion",
+                        "required": true,
+                      },
+                    ],
+                    "name": "PreRecognitionSemanticExperience",
+                    "schemaVersion": 1n,
+                    "typeId": 227n,
+                  },
+                },
+                Object {
+                  "items": Array [
+                    Object {
+                      "kind": "text",
+                      "value": "assembled-body-selection/0.1",
+                    },
+                    Object {
+                      "kind": "signed",
+                      "value": 3n,
+                    },
+                    Object {
+                      "kind": "unsigned",
+                      "value": 1n,
+                    },
+                    Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1115n,
+                      "payload": Object {
+                        "kind": "unsigned",
+                        "value": 9n,
+                      },
+                    },
+                    Object {
+                      "kind": "text",
+                      "value": "Selected",
+                    },
+                  ],
+                  "kind": "list",
+                },
+                Object {
+                  "kind": "signed",
+                  "value": 3n,
+                },
+              ],
+              "kind": "list",
+            },
+            7n => Object {
+              "items": Array [],
+              "kind": "list",
+            },
+            8n => Object {
+              "items": Array [
+                Object {
+                  "kind": "unsigned",
+                  "value": 26n,
+                },
+              ],
+              "kind": "list",
+            },
+          },
+          "kind": "record",
+          "schema": Object {
+            "fields": Array [
+              Object {
+                "id": 1n,
+                "name": "EventId",
+                "required": true,
+              },
+              Object {
+                "id": 2n,
+                "name": "DueAt",
+                "required": true,
+              },
+              Object {
+                "id": 3n,
+                "name": "Phase",
+                "required": true,
+              },
+              Object {
+                "id": 4n,
+                "name": "EventSequence",
+                "required": true,
+              },
+              Object {
+                "id": 5n,
+                "name": "EventTypeId",
+                "required": true,
+              },
+              Object {
+                "id": 6n,
+                "name": "Payload",
+                "required": true,
+              },
+              Object {
+                "id": 7n,
+                "name": "Dependencies",
+                "required": true,
+              },
+              Object {
+                "id": 8n,
+                "name": "CausalParentEventIds",
+                "required": true,
+              },
+            ],
+            "name": "ScheduledEvent",
+            "schemaVersion": 1n,
+            "typeId": 130n,
+          },
+        },
+        5n => Object {
+          "kind": "typedIdentifier",
+          "namespaceId": 1036n,
+          "payload": Object {
+            "kind": "text",
+            "value": "seam/assembled-episodic-memory",
+          },
+        },
+        6n => false,
+        7n => Object {
+          "kind": "typedIdentifier",
+          "namespaceId": 1001n,
+          "payload": Object {
+            "kind": "text",
+            "value": "event/assembled-memory-formation",
+          },
+        },
+        8n => Object {
+          "items": Array [
+            Object {
+              "kind": "typedIdentifier",
+              "namespaceId": 1000n,
+              "payload": Object {
+                "kind": "text",
+                "value": "observer/bridge-subject",
+              },
+            },
+            Object {
+              "kind": "typedIdentifier",
+              "namespaceId": 1002n,
+              "payload": Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1037n,
+                "payload": Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1038n,
+                  "payload": Object {
+                    "kind": "text",
+                    "value": "character/bridge-subject",
+                  },
+                },
+              },
+            },
+          ],
+          "kind": "list",
+        },
+        9n => Object {
+          "items": Array [],
+          "kind": "list",
+        },
+        10n => Object {
+          "items": Array [
+            Object {
+              "fields": Map {
+                1n => Object {
+                  "kind": "unsigned",
+                  "value": 346n,
+                },
+                2n => Object {
+                  "kind": "unsigned",
+                  "value": 1n,
+                },
+                3n => Object {
+                  "items": Array [
+                    Object {
+                      "fields": Map {
+                        1n => Object {
+                          "items": Array [
+                            Object {
+                              "kind": "text",
+                              "value": "assembled-body-episode/0.1",
+                            },
+                            Object {
+                              "kind": "typedIdentifier",
+                              "namespaceId": 1002n,
+                              "payload": Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1037n,
+                                "payload": Object {
+                                  "kind": "typedIdentifier",
+                                  "namespaceId": 1038n,
+                                  "payload": Object {
+                                    "kind": "text",
+                                    "value": "character/bridge-subject",
+                                  },
+                                },
+                              },
+                            },
+                            Object {
+                              "kind": "typedIdentifier",
+                              "namespaceId": 1115n,
+                              "payload": Object {
+                                "kind": "unsigned",
+                                "value": 9n,
+                              },
+                            },
+                          ],
+                          "kind": "list",
+                        },
+                      },
+                      "kind": "record",
+                      "schema": Object {
+                        "fields": Array [
+                          Object {
+                            "id": 1n,
+                            "name": "CanonicalMapKey",
+                            "required": true,
+                          },
+                        ],
+                        "name": "CanonicalMapKeySelector",
+                        "schemaVersion": 1n,
+                        "typeId": 142n,
+                      },
+                    },
+                  ],
+                  "kind": "list",
+                },
+              },
+              "kind": "record",
+              "schema": Object {
+                "fields": Array [
+                  Object {
+                    "id": 1n,
+                    "name": "RootStateTypeId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 2n,
+                    "name": "FieldId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 3n,
+                    "name": "SelectorPatterns",
+                    "required": true,
+                  },
+                ],
+                "name": "StatePathPattern",
+                "schemaVersion": 1n,
+                "typeId": 149n,
+              },
+            },
+          ],
+          "kind": "list",
+        },
+        11n => Object {
+          "items": Array [
+            Object {
+              "fields": Map {
+                1n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1028n,
+                  "payload": Object {
+                    "kind": "text",
+                    "value": "accessor/assembled-episode-formation-target",
+                  },
+                },
+                2n => Object {
+                  "fields": Map {
+                    1n => Object {
+                      "kind": "unsigned",
+                      "value": 346n,
+                    },
+                    2n => Object {
+                      "kind": "unsigned",
+                      "value": 1n,
+                    },
+                    3n => Object {
+                      "items": Array [
+                        Object {
+                          "fields": Map {
+                            1n => Object {
+                              "items": Array [
+                                Object {
+                                  "kind": "text",
+                                  "value": "assembled-body-episode/0.1",
+                                },
+                                Object {
+                                  "kind": "typedIdentifier",
+                                  "namespaceId": 1002n,
+                                  "payload": Object {
+                                    "kind": "typedIdentifier",
+                                    "namespaceId": 1037n,
+                                    "payload": Object {
+                                      "kind": "typedIdentifier",
+                                      "namespaceId": 1038n,
+                                      "payload": Object {
+                                        "kind": "text",
+                                        "value": "character/bridge-subject",
+                                      },
+                                    },
+                                  },
+                                },
+                                Object {
+                                  "kind": "typedIdentifier",
+                                  "namespaceId": 1115n,
+                                  "payload": Object {
+                                    "kind": "unsigned",
+                                    "value": 9n,
+                                  },
+                                },
+                              ],
+                              "kind": "list",
+                            },
+                          },
+                          "kind": "record",
+                          "schema": Object {
+                            "fields": Array [
+                              Object {
+                                "id": 1n,
+                                "name": "CanonicalMapKey",
+                                "required": true,
+                              },
+                            ],
+                            "name": "CanonicalMapKeySelector",
+                            "schemaVersion": 1n,
+                            "typeId": 142n,
+                          },
+                        },
+                      ],
+                      "kind": "list",
+                    },
+                  },
+                  "kind": "record",
+                  "schema": Object {
+                    "fields": Array [
+                      Object {
+                        "id": 1n,
+                        "name": "RootStateTypeId",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 2n,
+                        "name": "FieldId",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 3n,
+                        "name": "Selectors",
+                        "required": true,
+                      },
+                    ],
+                    "name": "StatePath",
+                    "schemaVersion": 1n,
+                    "typeId": 140n,
+                  },
+                },
+                3n => false,
+                4n => false,
+                5n => Object {
+                  "items": Array [],
+                  "kind": "list",
+                },
+                6n => false,
+              },
+              "kind": "record",
+              "schema": Object {
+                "fields": Array [
+                  Object {
+                    "id": 1n,
+                    "name": "AccessorId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 2n,
+                    "name": "Path",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 3n,
+                    "name": "Presence",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 4n,
+                    "name": "Value",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 5n,
+                    "name": "DerivedSources",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 6n,
+                    "name": "TransformationId",
+                    "required": true,
+                  },
+                ],
+                "name": "ActualReadRecord",
+                "schemaVersion": 1n,
+                "typeId": 147n,
+              },
+            },
+          ],
+          "kind": "list",
+        },
+        12n => Object {
+          "items": Array [
+            Object {
+              "kind": "text",
+              "value": "assembled-body-episode/0.1",
+            },
+            Object {
+              "kind": "typedIdentifier",
+              "namespaceId": 1125n,
+              "payload": Object {
+                "kind": "unsigned",
+                "value": 27n,
+              },
+            },
+            Object {
+              "fields": Map {
+                1n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1115n,
+                  "payload": Object {
+                    "kind": "unsigned",
+                    "value": 9n,
+                  },
+                },
+                2n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1000n,
+                  "payload": Object {
+                    "kind": "text",
+                    "value": "observer/bridge-subject",
+                  },
+                },
+                3n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1005n,
+                  "payload": Object {
+                    "kind": "text",
+                    "value": "channel/assembled-body-level",
+                  },
+                },
+                4n => Object {
+                  "kind": "signed",
+                  "value": 3n,
+                },
+                5n => Object {
+                  "fields": Map {
+                    1n => Object {
+                      "denominator": 1n,
+                      "kind": "rational",
+                      "numerator": 0n,
+                    },
+                    2n => Object {
+                      "denominator": 1n,
+                      "kind": "rational",
+                      "numerator": 10n,
+                    },
+                  },
+                  "kind": "record",
+                  "schema": Object {
+                    "fields": Array [
+                      Object {
+                        "id": 1n,
+                        "name": "Lower",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 2n,
+                        "name": "Upper",
+                        "required": true,
+                      },
+                    ],
+                    "name": "FiniteLevelInterval",
+                    "schemaVersion": 1n,
+                    "typeId": 462n,
+                  },
+                },
+                6n => Object {
+                  "kind": "text",
+                  "value": "embodied-level-observation/0.1-candidate",
+                },
+              },
+              "kind": "record",
+              "schema": Object {
+                "fields": Array [
+                  Object {
+                    "id": 1n,
+                    "name": "ObservationId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 2n,
+                    "name": "ObserverId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 3n,
+                    "name": "ObservationChannelId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 4n,
+                    "name": "OccurredAt",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 5n,
+                    "name": "FiniteLevelInterval",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 6n,
+                    "name": "TransformationVersion",
+                    "required": true,
+                  },
+                ],
+                "name": "EmbodiedLevelObservation",
+                "schemaVersion": 1n,
+                "typeId": 461n,
+              },
+            },
+            Object {
+              "fields": Map {
+                1n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1106n,
+                  "payload": Object {
+                    "kind": "unsigned",
+                    "value": 10n,
+                  },
+                },
+                2n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1000n,
+                  "payload": Object {
+                    "kind": "text",
+                    "value": "observer/bridge-subject",
+                  },
+                },
+                3n => Object {
+                  "kind": "unsigned",
+                  "value": 3n,
+                },
+                4n => Object {
+                  "items": Array [],
+                  "kind": "set",
+                },
+                5n => Object {
+                  "items": Array [],
+                  "kind": "set",
+                },
+                6n => Object {
+                  "items": Array [],
+                  "kind": "set",
+                },
+                7n => Object {
+                  "items": Array [],
+                  "kind": "set",
+                },
+                8n => Object {
+                  "items": Array [
+                    Object {
+                      "fields": Map {
+                        1n => Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1000n,
+                          "payload": Object {
+                            "kind": "text",
+                            "value": "observer/bridge-subject",
+                          },
+                        },
+                        2n => Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1115n,
+                          "payload": Object {
+                            "kind": "unsigned",
+                            "value": 9n,
+                          },
+                        },
+                      },
+                      "kind": "record",
+                      "schema": Object {
+                        "fields": Array [
+                          Object {
+                            "id": 1n,
+                            "name": "ObserverId",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 2n,
+                            "name": "ObservationId",
+                            "required": true,
+                          },
+                        ],
+                        "name": "SupportingObservationId",
+                        "schemaVersion": 1n,
+                        "typeId": 216n,
+                      },
+                    },
+                  ],
+                  "kind": "set",
+                },
+                9n => Object {
+                  "kind": "text",
+                  "value": "semantic-binding/0.1-candidate#SEM-001H",
+                },
+              },
+              "kind": "record",
+              "schema": Object {
+                "fields": Array [
+                  Object {
+                    "id": 1n,
+                    "name": "ExperienceId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 2n,
+                    "name": "ObserverId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 3n,
+                    "name": "OccurredAt",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 4n,
+                    "name": "PerceptualEventReferentIds",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 5n,
+                    "name": "PerceivedBindings",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 6n,
+                    "name": "PerceptualClassifications",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 7n,
+                    "name": "PerceptualEventClassifications",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 8n,
+                    "name": "SupportingObservationIds",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 9n,
+                    "name": "TransformationVersion",
+                    "required": true,
+                  },
+                ],
+                "name": "PreRecognitionSemanticExperience",
+                "schemaVersion": 1n,
+                "typeId": 227n,
+              },
+            },
+            Object {
+              "items": Array [
+                Object {
+                  "kind": "text",
+                  "value": "assembled-body-selection/0.1",
+                },
+                Object {
+                  "kind": "signed",
+                  "value": 3n,
+                },
+                Object {
+                  "kind": "unsigned",
+                  "value": 1n,
+                },
+                Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1115n,
+                  "payload": Object {
+                    "kind": "unsigned",
+                    "value": 9n,
+                  },
+                },
+                Object {
+                  "kind": "text",
+                  "value": "Selected",
+                },
+              ],
+              "kind": "list",
+            },
+            Object {
+              "kind": "signed",
+              "value": 3n,
+            },
+          ],
+          "kind": "list",
+        },
+        13n => Object {
+          "items": Array [],
+          "kind": "list",
+        },
+        14n => Object {
+          "items": Array [],
+          "kind": "list",
+        },
+        15n => Object {
+          "items": Array [],
+          "kind": "list",
+        },
+        16n => Object {
+          "fields": Map {
+            1n => Object {
+              "items": Array [
+                Object {
+                  "fields": Map {
+                    1n => Object {
+                      "fields": Map {
+                        1n => Object {
+                          "kind": "unsigned",
+                          "value": 346n,
+                        },
+                        2n => Object {
+                          "kind": "unsigned",
+                          "value": 1n,
+                        },
+                        3n => Object {
+                          "items": Array [
+                            Object {
+                              "fields": Map {
+                                1n => Object {
+                                  "items": Array [
+                                    Object {
+                                      "kind": "text",
+                                      "value": "assembled-body-episode/0.1",
+                                    },
+                                    Object {
+                                      "kind": "typedIdentifier",
+                                      "namespaceId": 1002n,
+                                      "payload": Object {
+                                        "kind": "typedIdentifier",
+                                        "namespaceId": 1037n,
+                                        "payload": Object {
+                                          "kind": "typedIdentifier",
+                                          "namespaceId": 1038n,
+                                          "payload": Object {
+                                            "kind": "text",
+                                            "value": "character/bridge-subject",
+                                          },
+                                        },
+                                      },
+                                    },
+                                    Object {
+                                      "kind": "typedIdentifier",
+                                      "namespaceId": 1115n,
+                                      "payload": Object {
+                                        "kind": "unsigned",
+                                        "value": 9n,
+                                      },
+                                    },
+                                  ],
+                                  "kind": "list",
+                                },
+                              },
+                              "kind": "record",
+                              "schema": Object {
+                                "fields": Array [
+                                  Object {
+                                    "id": 1n,
+                                    "name": "CanonicalMapKey",
+                                    "required": true,
+                                  },
+                                ],
+                                "name": "CanonicalMapKeySelector",
+                                "schemaVersion": 1n,
+                                "typeId": 142n,
+                              },
+                            },
+                          ],
+                          "kind": "list",
+                        },
+                      },
+                      "kind": "record",
+                      "schema": Object {
+                        "fields": Array [
+                          Object {
+                            "id": 1n,
+                            "name": "RootStateTypeId",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 2n,
+                            "name": "FieldId",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 3n,
+                            "name": "Selectors",
+                            "required": true,
+                          },
+                        ],
+                        "name": "StatePath",
+                        "schemaVersion": 1n,
+                        "typeId": 140n,
+                      },
+                    },
+                    2n => false,
+                    3n => false,
+                    4n => Object {
+                      "items": Array [
+                        Object {
+                          "kind": "text",
+                          "value": "assembled-body-episode/0.1",
+                        },
+                        Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1125n,
+                          "payload": Object {
+                            "kind": "unsigned",
+                            "value": 27n,
+                          },
+                        },
+                        Object {
+                          "fields": Map {
+                            1n => Object {
+                              "kind": "typedIdentifier",
+                              "namespaceId": 1115n,
+                              "payload": Object {
+                                "kind": "unsigned",
+                                "value": 9n,
+                              },
+                            },
+                            2n => Object {
+                              "kind": "typedIdentifier",
+                              "namespaceId": 1000n,
+                              "payload": Object {
+                                "kind": "text",
+                                "value": "observer/bridge-subject",
+                              },
+                            },
+                            3n => Object {
+                              "kind": "typedIdentifier",
+                              "namespaceId": 1005n,
+                              "payload": Object {
+                                "kind": "text",
+                                "value": "channel/assembled-body-level",
+                              },
+                            },
+                            4n => Object {
+                              "kind": "signed",
+                              "value": 3n,
+                            },
+                            5n => Object {
+                              "fields": Map {
+                                1n => Object {
+                                  "denominator": 1n,
+                                  "kind": "rational",
+                                  "numerator": 0n,
+                                },
+                                2n => Object {
+                                  "denominator": 1n,
+                                  "kind": "rational",
+                                  "numerator": 10n,
+                                },
+                              },
+                              "kind": "record",
+                              "schema": Object {
+                                "fields": Array [
+                                  Object {
+                                    "id": 1n,
+                                    "name": "Lower",
+                                    "required": true,
+                                  },
+                                  Object {
+                                    "id": 2n,
+                                    "name": "Upper",
+                                    "required": true,
+                                  },
+                                ],
+                                "name": "FiniteLevelInterval",
+                                "schemaVersion": 1n,
+                                "typeId": 462n,
+                              },
+                            },
+                            6n => Object {
+                              "kind": "text",
+                              "value": "embodied-level-observation/0.1-candidate",
+                            },
+                          },
+                          "kind": "record",
+                          "schema": Object {
+                            "fields": Array [
+                              Object {
+                                "id": 1n,
+                                "name": "ObservationId",
+                                "required": true,
+                              },
+                              Object {
+                                "id": 2n,
+                                "name": "ObserverId",
+                                "required": true,
+                              },
+                              Object {
+                                "id": 3n,
+                                "name": "ObservationChannelId",
+                                "required": true,
+                              },
+                              Object {
+                                "id": 4n,
+                                "name": "OccurredAt",
+                                "required": true,
+                              },
+                              Object {
+                                "id": 5n,
+                                "name": "FiniteLevelInterval",
+                                "required": true,
+                              },
+                              Object {
+                                "id": 6n,
+                                "name": "TransformationVersion",
+                                "required": true,
+                              },
+                            ],
+                            "name": "EmbodiedLevelObservation",
+                            "schemaVersion": 1n,
+                            "typeId": 461n,
+                          },
+                        },
+                        Object {
+                          "fields": Map {
+                            1n => Object {
+                              "kind": "typedIdentifier",
+                              "namespaceId": 1106n,
+                              "payload": Object {
+                                "kind": "unsigned",
+                                "value": 10n,
+                              },
+                            },
+                            2n => Object {
+                              "kind": "typedIdentifier",
+                              "namespaceId": 1000n,
+                              "payload": Object {
+                                "kind": "text",
+                                "value": "observer/bridge-subject",
+                              },
+                            },
+                            3n => Object {
+                              "kind": "unsigned",
+                              "value": 3n,
+                            },
+                            4n => Object {
+                              "items": Array [],
+                              "kind": "set",
+                            },
+                            5n => Object {
+                              "items": Array [],
+                              "kind": "set",
+                            },
+                            6n => Object {
+                              "items": Array [],
+                              "kind": "set",
+                            },
+                            7n => Object {
+                              "items": Array [],
+                              "kind": "set",
+                            },
+                            8n => Object {
+                              "items": Array [
+                                Object {
+                                  "fields": Map {
+                                    1n => Object {
+                                      "kind": "typedIdentifier",
+                                      "namespaceId": 1000n,
+                                      "payload": Object {
+                                        "kind": "text",
+                                        "value": "observer/bridge-subject",
+                                      },
+                                    },
+                                    2n => Object {
+                                      "kind": "typedIdentifier",
+                                      "namespaceId": 1115n,
+                                      "payload": Object {
+                                        "kind": "unsigned",
+                                        "value": 9n,
+                                      },
+                                    },
+                                  },
+                                  "kind": "record",
+                                  "schema": Object {
+                                    "fields": Array [
+                                      Object {
+                                        "id": 1n,
+                                        "name": "ObserverId",
+                                        "required": true,
+                                      },
+                                      Object {
+                                        "id": 2n,
+                                        "name": "ObservationId",
+                                        "required": true,
+                                      },
+                                    ],
+                                    "name": "SupportingObservationId",
+                                    "schemaVersion": 1n,
+                                    "typeId": 216n,
+                                  },
+                                },
+                              ],
+                              "kind": "set",
+                            },
+                            9n => Object {
+                              "kind": "text",
+                              "value": "semantic-binding/0.1-candidate#SEM-001H",
+                            },
+                          },
+                          "kind": "record",
+                          "schema": Object {
+                            "fields": Array [
+                              Object {
+                                "id": 1n,
+                                "name": "ExperienceId",
+                                "required": true,
+                              },
+                              Object {
+                                "id": 2n,
+                                "name": "ObserverId",
+                                "required": true,
+                              },
+                              Object {
+                                "id": 3n,
+                                "name": "OccurredAt",
+                                "required": true,
+                              },
+                              Object {
+                                "id": 4n,
+                                "name": "PerceptualEventReferentIds",
+                                "required": true,
+                              },
+                              Object {
+                                "id": 5n,
+                                "name": "PerceivedBindings",
+                                "required": true,
+                              },
+                              Object {
+                                "id": 6n,
+                                "name": "PerceptualClassifications",
+                                "required": true,
+                              },
+                              Object {
+                                "id": 7n,
+                                "name": "PerceptualEventClassifications",
+                                "required": true,
+                              },
+                              Object {
+                                "id": 8n,
+                                "name": "SupportingObservationIds",
+                                "required": true,
+                              },
+                              Object {
+                                "id": 9n,
+                                "name": "TransformationVersion",
+                                "required": true,
+                              },
+                            ],
+                            "name": "PreRecognitionSemanticExperience",
+                            "schemaVersion": 1n,
+                            "typeId": 227n,
+                          },
+                        },
+                        Object {
+                          "items": Array [
+                            Object {
+                              "kind": "text",
+                              "value": "assembled-body-selection/0.1",
+                            },
+                            Object {
+                              "kind": "signed",
+                              "value": 3n,
+                            },
+                            Object {
+                              "kind": "unsigned",
+                              "value": 1n,
+                            },
+                            Object {
+                              "kind": "typedIdentifier",
+                              "namespaceId": 1115n,
+                              "payload": Object {
+                                "kind": "unsigned",
+                                "value": 9n,
+                              },
+                            },
+                            Object {
+                              "kind": "text",
+                              "value": "Selected",
+                            },
+                          ],
+                          "kind": "list",
+                        },
+                        Object {
+                          "kind": "signed",
+                          "value": 3n,
+                        },
+                      ],
+                      "kind": "list",
+                    },
+                  },
+                  "kind": "record",
+                  "schema": Object {
+                    "fields": Array [
+                      Object {
+                        "id": 1n,
+                        "name": "Path",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 2n,
+                        "name": "ExpectedPresence",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 3n,
+                        "name": "ExpectedOldValue",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 4n,
+                        "name": "NewValue",
+                        "required": true,
+                      },
+                    ],
+                    "name": "SetPatchOperation",
+                    "schemaVersion": 1n,
+                    "typeId": 145n,
+                  },
+                },
+              ],
+              "kind": "list",
+            },
+          },
+          "kind": "record",
+          "schema": Object {
+            "fields": Array [
+              Object {
+                "id": 1n,
+                "name": "Operations",
+                "required": true,
+              },
+            ],
+            "name": "StatePatch",
+            "schemaVersion": 1n,
+            "typeId": 144n,
+          },
+        },
+        17n => Object {
+          "items": Array [
+            Object {
+              "fields": Map {
+                1n => Object {
+                  "fields": Map {
+                    1n => Object {
+                      "kind": "unsigned",
+                      "value": 346n,
+                    },
+                    2n => Object {
+                      "kind": "unsigned",
+                      "value": 1n,
+                    },
+                    3n => Object {
+                      "items": Array [
+                        Object {
+                          "fields": Map {
+                            1n => Object {
+                              "items": Array [
+                                Object {
+                                  "kind": "text",
+                                  "value": "assembled-body-episode/0.1",
+                                },
+                                Object {
+                                  "kind": "typedIdentifier",
+                                  "namespaceId": 1002n,
+                                  "payload": Object {
+                                    "kind": "typedIdentifier",
+                                    "namespaceId": 1037n,
+                                    "payload": Object {
+                                      "kind": "typedIdentifier",
+                                      "namespaceId": 1038n,
+                                      "payload": Object {
+                                        "kind": "text",
+                                        "value": "character/bridge-subject",
+                                      },
+                                    },
+                                  },
+                                },
+                                Object {
+                                  "kind": "typedIdentifier",
+                                  "namespaceId": 1115n,
+                                  "payload": Object {
+                                    "kind": "unsigned",
+                                    "value": 9n,
+                                  },
+                                },
+                              ],
+                              "kind": "list",
+                            },
+                          },
+                          "kind": "record",
+                          "schema": Object {
+                            "fields": Array [
+                              Object {
+                                "id": 1n,
+                                "name": "CanonicalMapKey",
+                                "required": true,
+                              },
+                            ],
+                            "name": "CanonicalMapKeySelector",
+                            "schemaVersion": 1n,
+                            "typeId": 142n,
+                          },
+                        },
+                      ],
+                      "kind": "list",
+                    },
+                  },
+                  "kind": "record",
+                  "schema": Object {
+                    "fields": Array [
+                      Object {
+                        "id": 1n,
+                        "name": "RootStateTypeId",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 2n,
+                        "name": "FieldId",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 3n,
+                        "name": "Selectors",
+                        "required": true,
+                      },
+                    ],
+                    "name": "StatePath",
+                    "schemaVersion": 1n,
+                    "typeId": 140n,
+                  },
+                },
+                2n => false,
+                3n => false,
+                4n => true,
+                5n => Object {
+                  "items": Array [
+                    Object {
+                      "kind": "text",
+                      "value": "assembled-body-episode/0.1",
+                    },
+                    Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1125n,
+                      "payload": Object {
+                        "kind": "unsigned",
+                        "value": 27n,
+                      },
+                    },
+                    Object {
+                      "fields": Map {
+                        1n => Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1115n,
+                          "payload": Object {
+                            "kind": "unsigned",
+                            "value": 9n,
+                          },
+                        },
+                        2n => Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1000n,
+                          "payload": Object {
+                            "kind": "text",
+                            "value": "observer/bridge-subject",
+                          },
+                        },
+                        3n => Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1005n,
+                          "payload": Object {
+                            "kind": "text",
+                            "value": "channel/assembled-body-level",
+                          },
+                        },
+                        4n => Object {
+                          "kind": "signed",
+                          "value": 3n,
+                        },
+                        5n => Object {
+                          "fields": Map {
+                            1n => Object {
+                              "denominator": 1n,
+                              "kind": "rational",
+                              "numerator": 0n,
+                            },
+                            2n => Object {
+                              "denominator": 1n,
+                              "kind": "rational",
+                              "numerator": 10n,
+                            },
+                          },
+                          "kind": "record",
+                          "schema": Object {
+                            "fields": Array [
+                              Object {
+                                "id": 1n,
+                                "name": "Lower",
+                                "required": true,
+                              },
+                              Object {
+                                "id": 2n,
+                                "name": "Upper",
+                                "required": true,
+                              },
+                            ],
+                            "name": "FiniteLevelInterval",
+                            "schemaVersion": 1n,
+                            "typeId": 462n,
+                          },
+                        },
+                        6n => Object {
+                          "kind": "text",
+                          "value": "embodied-level-observation/0.1-candidate",
+                        },
+                      },
+                      "kind": "record",
+                      "schema": Object {
+                        "fields": Array [
+                          Object {
+                            "id": 1n,
+                            "name": "ObservationId",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 2n,
+                            "name": "ObserverId",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 3n,
+                            "name": "ObservationChannelId",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 4n,
+                            "name": "OccurredAt",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 5n,
+                            "name": "FiniteLevelInterval",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 6n,
+                            "name": "TransformationVersion",
+                            "required": true,
+                          },
+                        ],
+                        "name": "EmbodiedLevelObservation",
+                        "schemaVersion": 1n,
+                        "typeId": 461n,
+                      },
+                    },
+                    Object {
+                      "fields": Map {
+                        1n => Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1106n,
+                          "payload": Object {
+                            "kind": "unsigned",
+                            "value": 10n,
+                          },
+                        },
+                        2n => Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1000n,
+                          "payload": Object {
+                            "kind": "text",
+                            "value": "observer/bridge-subject",
+                          },
+                        },
+                        3n => Object {
+                          "kind": "unsigned",
+                          "value": 3n,
+                        },
+                        4n => Object {
+                          "items": Array [],
+                          "kind": "set",
+                        },
+                        5n => Object {
+                          "items": Array [],
+                          "kind": "set",
+                        },
+                        6n => Object {
+                          "items": Array [],
+                          "kind": "set",
+                        },
+                        7n => Object {
+                          "items": Array [],
+                          "kind": "set",
+                        },
+                        8n => Object {
+                          "items": Array [
+                            Object {
+                              "fields": Map {
+                                1n => Object {
+                                  "kind": "typedIdentifier",
+                                  "namespaceId": 1000n,
+                                  "payload": Object {
+                                    "kind": "text",
+                                    "value": "observer/bridge-subject",
+                                  },
+                                },
+                                2n => Object {
+                                  "kind": "typedIdentifier",
+                                  "namespaceId": 1115n,
+                                  "payload": Object {
+                                    "kind": "unsigned",
+                                    "value": 9n,
+                                  },
+                                },
+                              },
+                              "kind": "record",
+                              "schema": Object {
+                                "fields": Array [
+                                  Object {
+                                    "id": 1n,
+                                    "name": "ObserverId",
+                                    "required": true,
+                                  },
+                                  Object {
+                                    "id": 2n,
+                                    "name": "ObservationId",
+                                    "required": true,
+                                  },
+                                ],
+                                "name": "SupportingObservationId",
+                                "schemaVersion": 1n,
+                                "typeId": 216n,
+                              },
+                            },
+                          ],
+                          "kind": "set",
+                        },
+                        9n => Object {
+                          "kind": "text",
+                          "value": "semantic-binding/0.1-candidate#SEM-001H",
+                        },
+                      },
+                      "kind": "record",
+                      "schema": Object {
+                        "fields": Array [
+                          Object {
+                            "id": 1n,
+                            "name": "ExperienceId",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 2n,
+                            "name": "ObserverId",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 3n,
+                            "name": "OccurredAt",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 4n,
+                            "name": "PerceptualEventReferentIds",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 5n,
+                            "name": "PerceivedBindings",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 6n,
+                            "name": "PerceptualClassifications",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 7n,
+                            "name": "PerceptualEventClassifications",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 8n,
+                            "name": "SupportingObservationIds",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 9n,
+                            "name": "TransformationVersion",
+                            "required": true,
+                          },
+                        ],
+                        "name": "PreRecognitionSemanticExperience",
+                        "schemaVersion": 1n,
+                        "typeId": 227n,
+                      },
+                    },
+                    Object {
+                      "items": Array [
+                        Object {
+                          "kind": "text",
+                          "value": "assembled-body-selection/0.1",
+                        },
+                        Object {
+                          "kind": "signed",
+                          "value": 3n,
+                        },
+                        Object {
+                          "kind": "unsigned",
+                          "value": 1n,
+                        },
+                        Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1115n,
+                          "payload": Object {
+                            "kind": "unsigned",
+                            "value": 9n,
+                          },
+                        },
+                        Object {
+                          "kind": "text",
+                          "value": "Selected",
+                        },
+                      ],
+                      "kind": "list",
+                    },
+                    Object {
+                      "kind": "signed",
+                      "value": 3n,
+                    },
+                  ],
+                  "kind": "list",
+                },
+                6n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1025n,
+                  "payload": Object {
+                    "kind": "text",
+                    "value": "authority/measurement-episode-formation",
+                  },
+                },
+              },
+              "kind": "record",
+              "schema": Object {
+                "fields": Array [
+                  Object {
+                    "id": 1n,
+                    "name": "Path",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 2n,
+                    "name": "OldPresence",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 3n,
+                    "name": "OldValue",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 4n,
+                    "name": "NewPresence",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 5n,
+                    "name": "NewValue",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 6n,
+                    "name": "MutationAuthorityId",
+                    "required": true,
+                  },
+                ],
+                "name": "StructuralMutationDiff",
+                "schemaVersion": 1n,
+                "typeId": 148n,
+              },
+            },
+          ],
+          "kind": "list",
+        },
+        18n => Object {
+          "items": Array [],
+          "kind": "list",
+        },
+        19n => Object {
+          "items": Array [],
+          "kind": "list",
+        },
+      },
+      "kind": "record",
+      "schema": Object {
+        "fields": Array [
+          Object {
+            "id": 1n,
+            "name": "TraceSchemaVersion",
+            "required": true,
+          },
+          Object {
+            "id": 2n,
+            "name": "ModelIdentity",
+            "required": true,
+          },
+          Object {
+            "id": 3n,
+            "name": "RunIdentity",
+            "required": true,
+          },
+          Object {
+            "id": 4n,
+            "name": "Event",
+            "required": true,
+          },
+          Object {
+            "id": 5n,
+            "name": "SeamId",
+            "required": true,
+          },
+          Object {
+            "id": 6n,
+            "name": "SeamVersion",
+            "required": true,
+          },
+          Object {
+            "id": 7n,
+            "name": "RecordKind",
+            "required": true,
+          },
+          Object {
+            "id": 8n,
+            "name": "SubjectIds",
+            "required": true,
+          },
+          Object {
+            "id": 9n,
+            "name": "SourceRecordIds",
+            "required": true,
+          },
+          Object {
+            "id": 10n,
+            "name": "RegisteredReadDomain",
+            "required": true,
+          },
+          Object {
+            "id": 11n,
+            "name": "ActualReadRecords",
+            "required": true,
+          },
+          Object {
+            "id": 12n,
+            "name": "InputProjection",
+            "required": true,
+          },
+          Object {
+            "id": 13n,
+            "name": "OutputProjection",
+            "required": true,
+          },
+          Object {
+            "id": 14n,
+            "name": "RandomDrawRecords",
+            "required": true,
+          },
+          Object {
+            "id": 15n,
+            "name": "QuantizationOperations",
+            "required": true,
+          },
+          Object {
+            "id": 16n,
+            "name": "StatePatch",
+            "required": true,
+          },
+          Object {
+            "id": 17n,
+            "name": "StructuralMutationDiffs",
+            "required": true,
+          },
+          Object {
+            "id": 18n,
+            "name": "EmittedEvents",
+            "required": true,
+          },
+          Object {
+            "id": 19n,
+            "name": "InvariantResults",
+            "required": true,
+          },
+        ],
+        "name": "TraceRecord",
+        "schemaVersion": 1n,
+        "typeId": 160n,
+      },
+    },
+    Object {
+      "fields": Map {
+        1n => Object {
+          "kind": "text",
+          "value": "trace/0.2-candidate",
+        },
+        2n => false,
+        3n => false,
+        4n => false,
+        5n => Object {
+          "kind": "typedIdentifier",
+          "namespaceId": 1036n,
+          "payload": Object {
+            "kind": "text",
+            "value": "seam/assembled-episodic-memory",
+          },
+        },
+        6n => false,
+        7n => Object {
+          "kind": "typedIdentifier",
+          "namespaceId": 1001n,
+          "payload": Object {
+            "kind": "text",
+            "value": "event/assembled-memory-recall",
+          },
+        },
+        8n => Object {
+          "items": Array [
+            Object {
+              "kind": "typedIdentifier",
+              "namespaceId": 1000n,
+              "payload": Object {
+                "kind": "text",
+                "value": "observer/bridge-subject",
+              },
+            },
+            Object {
+              "kind": "typedIdentifier",
+              "namespaceId": 1002n,
+              "payload": Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1037n,
+                "payload": Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1038n,
+                  "payload": Object {
+                    "kind": "text",
+                    "value": "character/bridge-subject",
+                  },
+                },
+              },
+            },
+          ],
+          "kind": "list",
+        },
+        9n => Object {
+          "items": Array [],
+          "kind": "list",
+        },
+        10n => false,
+        11n => false,
+        12n => false,
+        13n => false,
+        14n => Object {
+          "items": Array [],
+          "kind": "list",
+        },
+        15n => Object {
+          "items": Array [],
+          "kind": "list",
+        },
+        16n => Object {
+          "fields": Map {
+            1n => Object {
+              "items": Array [],
+              "kind": "list",
+            },
+          },
+          "kind": "record",
+          "schema": Object {
+            "fields": Array [
+              Object {
+                "id": 1n,
+                "name": "Operations",
+                "required": true,
+              },
+            ],
+            "name": "StatePatch",
+            "schemaVersion": 1n,
+            "typeId": 144n,
+          },
+        },
+        17n => Object {
+          "items": Array [],
+          "kind": "list",
+        },
+        18n => Object {
+          "items": Array [],
+          "kind": "list",
+        },
+        19n => Object {
+          "items": Array [],
+          "kind": "list",
+        },
+      },
+      "kind": "record",
+      "schema": Object {
+        "fields": Array [
+          Object {
+            "id": 1n,
+            "name": "TraceSchemaVersion",
+            "required": true,
+          },
+          Object {
+            "id": 2n,
+            "name": "ModelIdentity",
+            "required": true,
+          },
+          Object {
+            "id": 3n,
+            "name": "RunIdentity",
+            "required": true,
+          },
+          Object {
+            "id": 4n,
+            "name": "Event",
+            "required": true,
+          },
+          Object {
+            "id": 5n,
+            "name": "SeamId",
+            "required": true,
+          },
+          Object {
+            "id": 6n,
+            "name": "SeamVersion",
+            "required": true,
+          },
+          Object {
+            "id": 7n,
+            "name": "RecordKind",
+            "required": true,
+          },
+          Object {
+            "id": 8n,
+            "name": "SubjectIds",
+            "required": true,
+          },
+          Object {
+            "id": 9n,
+            "name": "SourceRecordIds",
+            "required": true,
+          },
+          Object {
+            "id": 10n,
+            "name": "RegisteredReadDomain",
+            "required": true,
+          },
+          Object {
+            "id": 11n,
+            "name": "ActualReadRecords",
+            "required": true,
+          },
+          Object {
+            "id": 12n,
+            "name": "InputProjection",
+            "required": true,
+          },
+          Object {
+            "id": 13n,
+            "name": "OutputProjection",
+            "required": true,
+          },
+          Object {
+            "id": 14n,
+            "name": "RandomDrawRecords",
+            "required": true,
+          },
+          Object {
+            "id": 15n,
+            "name": "QuantizationOperations",
+            "required": true,
+          },
+          Object {
+            "id": 16n,
+            "name": "StatePatch",
+            "required": true,
+          },
+          Object {
+            "id": 17n,
+            "name": "StructuralMutationDiffs",
+            "required": true,
+          },
+          Object {
+            "id": 18n,
+            "name": "EmittedEvents",
+            "required": true,
+          },
+          Object {
+            "id": 19n,
+            "name": "InvariantResults",
+            "required": true,
+          },
+        ],
+        "name": "TraceRecord",
+        "schemaVersion": 1n,
+        "typeId": 160n,
+      },
+    },
+  ]
+
+ ❯ src/test/assembledRetrieval.test.ts:48:49
+     46|    expect(traces(n).filter(t=>!memory(t)).map(t=>mask(t,[2n,3n]))).toE…
+     47|    const stable=(t:CanonicalValue)=>mask(t,[2n,3n,6n,...(name(t)==='ev…
+     48|    expect(traces(n).filter(memory).map(stable)).toEqual(traces(a).filt…
+       |                                                 ^
+     49|   }console.info('M7 four-cell correspondence: state/non-recall outputs…
+     50|  },180000);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  src/test/assembledRetrieval.test.ts > M7 body cue access over the same episodic owner > channel cue retrieves newer competing memory, while slots0/1/2 change access without changing retention
+AssertionError: expected { kind: 'typedIdentifier', …(2) } to deeply equal { kind: 'typedIdentifier', …(2) }
+
+- Expected
++ Received
+
+  Object {
+    "kind": "typedIdentifier",
+-   "namespaceId": 1005n,
++   "namespaceId": 1001n,
+    "payload": Object {
+      "kind": "text",
+-     "value": "channel/assembled-body-level",
++     "value": "event/assembled-memory-recall",
+    },
+  }
+
+ ❯ src/test/assembledRetrieval.test.ts:55:99
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  2 failed | 13 passed (15)
+   Start at  10:52:06
+   Duration  50.99s (transform 872ms, setup 0ms, collect 1.30s, tests 49.17s, environment 0ms, prepare 177ms)
+
+exit=1 seconds=53.8713412
+CORRECTION: test serialization references only: EmittedEvents18 not19; scheduled payload6 not5. Production and comparison meaning unchanged. Original failures retained.
+COMMAND npx vitest run src/test/assembledRetrieval.test.ts -t "preserves four|channel cue retrieves" --maxWorkers=1 --minWorkers=1
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRetrieval.test.ts > M7 body cue access over the same episodic owner > preserves four singleton M3 cells: all state, non-recall outputs, actual draws and non-memory traces
+M7 four-cell correspondence: state/non-recall outputs/draws/non-memory trace exact; singleton recall bytes exact
+
+stdout | src/test/assembledRetrieval.test.ts > M7 body cue access over the same episodic owner > channel cue retrieves newer competing memory, while slots0/1/2 change access without changing retention
+M7 two retained episodes: cue5 selects newer4; slots0/1/2 access0/1/2; lost3 cannot reappear
+
+ ✓ src/test/assembledRetrieval.test.ts (7 tests | 5 skipped) 32365ms
+   ✓ M7 body cue access over the same episodic owner > preserves four singleton M3 cells: all state, non-recall outputs, actual draws and non-memory traces 15987ms
+   ✓ M7 body cue access over the same episodic owner > channel cue retrieves newer competing memory, while slots0/1/2 change access without changing retention 16376ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 5 skipped (7)
+   Start at  10:53:33
+   Duration  33.94s (transform 867ms, setup 0ms, collect 1.28s, tests 32.36s, environment 0ms, prepare 92ms)
+
+exit=0 seconds=35.3898529
+COMMAND npx vitest run src/test/assembledRetention.test.ts --maxWorkers=1 --minWorkers=1
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRetention.test.ts > M6 finite retention in one episodic owner > capacity8 delay1 preserves the four M3 cells against M5 exactly except the two declared audits
+M6 four-cell M5 correspondence: full state/existing outputs/actual draws PASS
+
+stdout | src/test/assembledRetention.test.ts > M6 finite retention in one episodic owner > actual loss prevents delayed exact recall; a surviving episode retains its bytes and budgets never borrow
+M6 delayed access: capacity1 misses first/retains second, capacity2 recalls both; reference8 evicts ninth-source oldest
+
+stdout | src/test/assembledRetention.test.ts > M6 finite retention in one episodic owner > keeps joint diagnostic/body formation and removal atomic on a late failing instant
+M6 joint formation/removal 21 events; cap 20 full rollback
+
+ ✓ src/test/assembledRetention.test.ts (8 tests) 69111ms
+   ✓ M6 finite retention in one episodic owner > capacity8 delay1 preserves the four M3 cells against M5 exactly except the two declared audits 12900ms
+   ✓ M6 finite retention in one episodic owner > actual loss prevents delayed exact recall; a surviving episode retains its bytes and budgets never borrow 9716ms
+   ✓ M6 finite retention in one episodic owner > diagnostic episode loss does not erase learned predictions or change the existing choice 6017ms
+   ✓ M6 finite retention in one episodic owner > repeat and restore after loss preserve pending cues and every full later boundary; hidden truth stays outside retention 21309ms
+   ✓ M6 finite retention in one episodic owner > exclusion/denial cannot be replaced by retention and zero capacity creates an absent recall, not a zero measurement 7582ms
+   ✓ M6 finite retention in one episodic owner > keeps joint diagnostic/body formation and removal atomic on a late failing instant 3474ms
+   ✓ M6 finite retention in one episodic owner > rejects malformed limits, wrong-owner/stale removal, authored cues and learned initial state 8106ms
+
+ Test Files  1 passed (1)
+      Tests  8 passed (8)
+   Start at  10:54:18
+   Duration  70.71s (transform 875ms, setup 0ms, collect 1.30s, tests 69.11s, environment 0ms, prepare 93ms)
+
+exit=0 seconds=72.1471148
+
+PASS frozen105 dependencies/config/original fixture unchanged vsdb0ca7a8; M1 test/control unchanged vs31553ea7. Retain prior full-control result: no dependency/entry invalidation.
+COMMAND npm run check:boundaries
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+exit=0 seconds=2.447141
+COMMAND npm run check:research
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+exit=0 seconds=4.1198725
+
+PASS document caps/register64KiB; two evidence files/193768 bytes before final guard output; six production/test files; timed checks 197.55s, longest 72.15s.
+FINAL GUARDS: staged source/document whitespace check PASS; raw failure output preserved unchanged. COMMAND npm run check:git-size
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.

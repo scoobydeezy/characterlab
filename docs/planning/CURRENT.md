@@ -1,48 +1,41 @@
-# Current work — M7 cue-based body recall
+# Current work — M7 cue-based body recall complete
 
-2026-10-26. M6 at602a22c6 gives one continuing character finite episodic memory.
-M7 replaces exact body-episode lookup with signal-cued, capacity-limited retrieval
-from that same owner. It adds no current-body inference or new learning from recall.
+2026-10-26. The continuing character now searches retained body episodes by channel
+cue and accesses a finite number of matching memories. Stored and recalled differ.
+[M7 result](ASSEMBLED_CHARACTER_M7_RESULT.md); [contract](../formal/ASSEMBLED_CHARACTER_RETRIEVAL_CONTRACT.md).
 
 | Status | Disposition |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 | Baseline |21 members/219 records;15 families/132 clauses; six foundations/five C2 conditions |
-| Last result |[M6](ASSEMBLED_CHARACTER_M6_RESULT.md), frozen controls retained |
-| Active |M7; before-code card and [contract](../formal/ASSEMBLED_CHARACTER_RETRIEVAL_CONTRACT.md) |
+| M3–M6 |Passed; original controls and failures preserved |
+| M7 |PASS: cue search, bounded access, unchanged storage, deterministic continuation |
+| Reference |Rules/registry0.7; retrieval1 slot; retention diagnostic8/body8; recall delay2 |
+| Controls |0.6 exact-key recall; slots0/2; retention capacity1 |
 
-## Bounded card, written before implementation
+## Established result
 
-Three capabilities: an authenticated delayed channel cue searches surviving episodes;
-a fixed slot limit distinguishes retained from accessed; repeat/restore and failed
-instants preserve the one state/queue/trace/save. Reference retrieval slots1 (engineering
-default, no verdict); body retention8, delay2 remain. Versions0.1..0.6 stay controls.
-Baseline areas M3/M4, FND3/4/6, Brief12.3 and12.2; no clause/member closure.
-MEC-010/011/022 remain distinct; accepted BODY_RECALL_RECENCY_COMPONENT governs rank.
-LOCAL DISPOSITION: the qualified channel identity is the cue, not private acquisition
-identity or intensity. No cross-kind ranking, recency refresh, credit or reconstruction.
+Episodes3/4 both remain stored; cue5 accesses4 under slots1,4 then3 under slots2,
+neither under slots0. All three finish with identical state. The0.6 control accesses3.
+After retention loss, only the surviving match is accessible. Actual346/1 reads are
+traced. No intensity ranking, reconstruction, age refresh or new psychological store.
 
-At most six production/test files: assembled/{model,memory,runtime,traceBinding,
-retrieval}.ts and test/assembledRetrieval.test.ts. No state schema or frozen C2 edits.
-Compare four M3 cells at seed7 against0.6: exact state, existing non-recall outputs,
-actual RNG draws; singleton recalled episode bytes identical. Traces differ only at
-new model/run binding and the declared memory cue/read/output seam. Retain0.6 exact
-lookup as the semantic comparator; two samples at3/4, recall5 must select the newer
-matching episode rather than the original3. Slots0/1/2 alter access, never retention.
+Four M3 cells at seed7 preserve full state, non-recall outputs, actual draws and
+non-memory traces modulo identities. Singleton recall bytes agree. Repeat/restore
+after4 match each later full boundary. Hidden truth, exclusion/denial, zero pressure,
+no current sensing, late rollback and invalid source/model controls pass.
 
-Checks in order, one job at a time: production/test typecheck; new integration tests
-plus bodyRecall tests (ranking/domain); M6 regression suite (formation/loss/old lookup).
-New tests cover kernel correspondence including canonical ties/permutations and >32
-stored candidates; actual read provenance, competing episodes, present-zero sample,
-exclusion/denial, retained-but-inaccessible, loss, hidden truth, authored cue rejection,
-repeat/restore after4 at each later boundary, and late-instant rollback after retrieval.
-Frozen105 dependency/config/fixture/M1 diff guard retains prior full control results.
-Then boundary/research, document budgets and staged git-size. These catch accidental
-control mutation, evidence leakage, undeclared seams and lost obligation accounting.
+23 distinct tests and type/boundary/research checks pass. Two test field-index errors
+were corrected; original failures retained, only the affected two tests rerun.
+Six production/test files; checks under four minutes. Frozen105 dependency/config/
+fixture and M1 control guard unchanged; prior full-control result retained.
+Before-code card is in commit dbafa2f5. Result and raw log preserve exact scope.
 
-Limits:12 files ceiling (six planned),20 evidence files/5MiB (one result/log planned),
-10min/command,30min total checks,32 settled instants per test run (cap is failure).
-Done iff all declared comparisons/negative controls pass within budgets; otherwise
-record incomplete. Stop testing on pass. No browser/UI, corpus expansion or audit chain.
-Next integration is not opened by this card; recalled body evidence still has no
-workspace/reason consumer. Full significance, rich perception and remaining areas stay open.
+## Stop and remaining work
+
+Cues remain controlled delayed opportunities; recall is not yet consumed by workspace
+or reasoning. Diagnostic recall remains exact-key. Rich perception, association,
+selective encoding, significance/use credit, reconstruction and other areas stay open.
+Prepare only the next bounded card before code; no new package opened here.
+No corpus member/clause or conditional obligation closes. RO-C3-011 unchanged.
+UI/Campaign4 and old audits remain stopped.

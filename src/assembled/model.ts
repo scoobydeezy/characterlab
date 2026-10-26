@@ -14,8 +14,11 @@ import {dataRecord as rec,dataField as f,dataItems as items,dataKey as key,dataI
 import type {Campaign2ModelSource} from '../campaign2/factory';
 
 import {decodeEmbodied} from '../campaign3/embodiedCodecs';
+import {compileRetrievalDeclaration} from './retrieval';
 import {compileRetentionDeclaration} from './retention';
 import {compileBodyDeclaration} from './body';
+export const RETRIEVAL_RULES='rules/assembled-character/0.7-candidate';
+export const RETRIEVAL_REGISTRY='assembled-character-registry/0.7-candidate';
 export const RETENTION_RULES='rules/assembled-character/0.6-candidate';
 export const RETENTION_REGISTRY='assembled-character-registry/0.6-candidate';
 export const MEMORY_RULES='rules/assembled-character/0.5-candidate';
@@ -68,10 +71,11 @@ function topology(registry:CanonicalValue,calibrated=false){
 }
 export async function compileCharacterModel(input:Campaign2ModelSource){
  const source=snapshotMemorySource(input);
- const retained=source.rulesVersion===RETENTION_RULES,memory=retained||source.rulesVersion===MEMORY_RULES,attention=memory||source.rulesVersion===ATTENTION_RULES,calibrated=attention||source.rulesVersion===CALIBRATED_RULES,interaction=calibrated||source.rulesVersion===INTERACTION_RULES;
- if((interaction?source.registrySchemaVersion!==(retained?RETENTION_REGISTRY:memory?MEMORY_REGISTRY:attention?ATTENTION_REGISTRY:calibrated?CALIBRATED_REGISTRY:INTERACTION_REGISTRY):source.rulesVersion!==CHARACTER_RULES||source.registrySchemaVersion!==CHARACTER_REGISTRY)||source.contentSchemaVersion!=='content/0.2-candidate'||source.parameterSchemaVersion!=='campaign2-parameters/0.1-candidate'||source.numericProfileVersion!=='numeric/task-cognitive-exact/0.1-candidate'||source.randomAlgorithmVersion!==RANDOM_ALGORITHM_VERSION)invalidModel('unsupported assembled model version bundle');
+ const retrievalEnabled=source.rulesVersion===RETRIEVAL_RULES,retained=retrievalEnabled||source.rulesVersion===RETENTION_RULES,memory=retained||source.rulesVersion===MEMORY_RULES,attention=memory||source.rulesVersion===ATTENTION_RULES,calibrated=attention||source.rulesVersion===CALIBRATED_RULES,interaction=calibrated||source.rulesVersion===INTERACTION_RULES;
+ if((interaction?source.registrySchemaVersion!==(retrievalEnabled?RETRIEVAL_REGISTRY:retained?RETENTION_REGISTRY:memory?MEMORY_REGISTRY:attention?ATTENTION_REGISTRY:calibrated?CALIBRATED_REGISTRY:INTERACTION_REGISTRY):source.rulesVersion!==CHARACTER_RULES||source.registrySchemaVersion!==CHARACTER_REGISTRY)||source.contentSchemaVersion!=='content/0.2-candidate'||source.parameterSchemaVersion!=='campaign2-parameters/0.1-candidate'||source.numericProfileVersion!=='numeric/task-cognitive-exact/0.1-candidate'||source.randomAlgorithmVersion!==RANDOM_ALGORITHM_VERSION)invalidModel('unsupported assembled model version bundle');
  const registry=decodeEmbodied(source.registry),allSlots=items(registry,'list');
- if(allSlots.length!==(retained?9:attention?8:interaction?7:6))invalidModel('assembled registry slot count');
+ if(allSlots.length!==(retrievalEnabled?10:retained?9:attention?8:interaction?7:6))invalidModel('assembled registry slot count');
+ const retrieval=retrievalEnabled?compileRetrievalDeclaration(allSlots[9]):undefined;
  const retention=retained?compileRetentionDeclaration(allSlots[8]):undefined;
  let selectionCapacity:number|undefined;
  if(attention){const declaration=items(allSlots[7],'list');if(declaration.length!==2||txt(declaration[0])!=='assembled-body-selection/0.1'||uint(declaration[1])>1n)invalidModel('body selection requires capacity0..1');selectionCapacity=Number(uint(declaration[1]));}
@@ -84,5 +88,5 @@ export async function compileCharacterModel(input:Campaign2ModelSource){
  if(key(decodeCognitive(source.content))!==key(decodeCognitive(hex(contentHex))))invalidModel('content outside declared assembled holder/task topology');
  if(key(shape)!==key(topology(decodeCognitive(hex(registryHex)))))invalidModel('undeclared topology change: references, schemas, phases, ownership and producers are fixed');
  const modelIdentity=await createModelIdentity({...source,contentManifest:await commitManifest(decodeCognitive(source.content)),registryManifest:await commitManifest(registry),parameterSet:await commitManifest(decodeCognitive(source.parameters))});
- return Object.freeze({source,modelIdentity,content,structuralState,body,baseRegistry,memory,retention});
+ return Object.freeze({source,modelIdentity,content,structuralState,body,baseRegistry,memory,retention,retrieval});
 }
