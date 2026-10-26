@@ -1,43 +1,48 @@
-# Current work — M3 early interaction complete
+# Current work — M4 first live attention gate
 
-2026-10-26. The character combines retained experience with later body evidence to
-change an actual choice through one appraisal/reason/arbitration path. The approved
-fixed1/10 calibration passes M3; the original unit1 failure remains an executable control.
-Read [M3 result](ASSEMBLED_CHARACTER_M3_RESULT.md) and
-[interaction contract](../formal/ASSEMBLED_CHARACTER_INTERACTION_CONTRACT.md).
+2026-10-26. Owner requested continued assembly after M3. M4 connects the accepted
+body selection component to the same character's current appraisal path.
+[Contract](../formal/ASSEMBLED_CHARACTER_ATTENTION_CONTRACT.md) precedes code.
 
 | Status | Disposition |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 | Baseline |21 members/219 records;15 families/132 clauses; six foundations/five C2 conditions |
-| M3 gate |PASS:1/16 body-paired choices change; same four cells/seeds0..7 |
-| Unit1 control |Reproduced0/16; retained original failure at917d2fab |
-| Candidate |Rules/registry0.3; fixed context unit1/10; unchanged reason/arbitration kernels |
-| Continuation |Fresh repeat and post-learning restore exact at every boundary, all four cells |
-| Epistemic controls |Hidden truth with equal evidence preserves cognition; no-history unknown |
+| M3 |PASS at02901a38; unit1 failed control retained |
+| Active milestone |M4: actual observed/selected/consumed body distinction |
 
-## What is established
+## Bounded card
 
-One body owner/state/scheduler/RNG ledger/trace/save. Actual learned prediction/support
-and generated permitted body evidence join appraisal, reasons and real execution.
-At seed7/history3, low reserve selects contact-two; replenishment selects contact-one.
-Low reserve is Auto; replenishment rolls. Automatic choices have no invented draws.
-All16 candidate reason-face records match actual control records at the same addresses.
-Nonzero appraisal/reason interaction and actual causal support joins pass in every cell.
+Capabilities: (1) actual current-body selection precedes appraisal; (2) excluded,
+unavailable and selected-zero remain distinct; (3) exact continuation/rollback.
+Five production/test files: src/assembled/{model,body,execution,traceBinding}.ts and
+src/test/assembledAttention.test.ts. No independent runtime, new state owner or store.
+Rules/registry0.4 adds capacity0..1 in slot8; existing calibrations/inputs unchanged.
+Reuse interoceptive-selection-component/0.1 unchanged. One candidate means no priority
+or salience selection. Capacity1 reference,0 explicit exclusion control. M2 SEQ/M3,
+FND3/4/6; no full ATTN/BODY clause closure or retention/recognition claim.
 
-The amendment touched4 production/test files. All27 affected tests pass, including
-three original C2 semantic comparisons and non-preset continuation/admission controls.
-All105 C2 dependencies/config/fixtures unchanged; the accepted M1 alias/test migration
-is unchanged against M2a. Previous full-byte control and20 unaffected foundation/body
-checks retained under V1. Type, boundary, research and Git checks recorded in the log.
-Two existing result/evidence files remain well below5MiB; checks within10min/command
-and30min amendment budget. Original failures and test-assumption corrections retained.
+Comparisons: all four existing M3 cells, seed7, capacity1 versus0.3; exact state,
+outputs minus only new audit, actual draw records, original choice-change witness.
+Capacity0 must retain actual observation but pass no body operand to appraisal.
+Test denied/unavailable/zero/no-source distinctions; hidden-truth equivalence; no stale
+next-instant reuse; fresh repeat/restore at1 across all later boundaries for0/1;
+cross-capacity save rejection and whole-instant rollback after selection.
+No authored selector event, arbitrary capacity or mixed version admitted. Actual
+selection-parent and trace inputs must join. FND3 newphase20 source joins are
+explicitly versioned in the contract; unchanged SEM ordering vectors apply.
 
-## Stop and remaining scope
+Verification: new assembledAttention, existing interoceptiveSelection,
+semanticPhaseOrdering, assembledInteraction, assembledBody and assembledAdmission.
+Risks: bypass via raw observation/audit, stale capability, changed old-model behavior,
+unbound source, missing transaction rollback; each has the comparison above.
+Types/boundary/research, frozen105 dependency/config/fixture check, document/Git guards.
+One job at a time; <=10min/check,30min total; <=12 production/test files (planned5),
+20 evidence files/5MiB, one compact result and raw log. No verifier chains or browser.
+Done only when all listed gates pass; stop on pass/failure/budget without broadening.
 
-M3 is the early thin interaction witness, not completed assembly or corpus acceptance.
-Rich recognition, broader owners/areas and the21-member/132-clause replay remain.
-No obligation or pinned clause is closed. RO-C3-011 retains its existing scope/trigger.
-No additional calibration, seed search, framework, cleanup or browser work.
-A subsequent integration needs its own bounded card before coding; none opened here.
-UI/Campaign4 and old audits remain stopped.
+## Remaining scope
+
+M3 result remains ASSEMBLED_CHARACTER_M3_RESULT.md. Broader rich perception,
+recognition, attention competition, encoding/memory and resource consolidation remain.
+No obligation/pinned clause closes; RO-C3-011 is unchanged. UI/Campaign4 stay stopped.
