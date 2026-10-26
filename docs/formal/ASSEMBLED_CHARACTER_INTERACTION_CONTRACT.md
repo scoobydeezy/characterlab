@@ -131,3 +131,27 @@ and expected values unchanged. This is local source/fixture sequencing under the
 escalation policy; preserve the failed attempt. No absent task is counted as zero.
 Reason nuclei use existing bounded(x)=x/(1+abs(x)); the raw situational input equals
 the declared U and its bounded nucleus is checked separately. No reason equation changes.
+
+## Owner-approved calibration amendment — 2026-10-26
+
+Version assembled-character-interaction/0.2-candidate. The owner explicitly approved
+this comparison after the unit1 witness failed; its failure is retained, not waived.
+Add rules/assembled-character/0.3-candidate with registry0.3-candidate. The only changed
+semantic declaration is definition/task-reason-dice record437 field4 (context modifier),
+record439 field1: exactly1/10 instead of1. All other fields remain fixed; no open law
+selector. Old0.2 remains the unit1 control; old0.1 remains the M2a model. Both body
+models execute the same composition and unchanged reason kernel. Full registry and
+version commit identity. Reject a mismatched version/unit or any other topology change.
+This is the existing Campaign2 context-integer calibration, an engineering default,
+not a new psychological verdict or evidence for a universal magnitude scale.
+
+Execute BOTH fixed models under the same predeclared four cells and seeds0..7.
+Do not change inputs, means, activation windows, U predictions, laws or settle cap.
+The retained unit1 control must reproduce0/16 body-dependent choices. The unit1/10
+candidate must satisfy the original nonzero appraisal/reason interaction AND actual
+body-dependent choice gate. Compare actual shared-address draws within and across
+models wherever addresses coincide. Prediction: context modifiers in history3 are
+A0/B2 versus A0/B1; history9 A2 versus A1 with B inactive. No predicted seed is selected.
+Fresh repeat, post-learning restore, hidden-truth and missing-history controls run
+under0.3. No completion claim if the original choice gate still fails. No further
+calibration search is authorized. Earlier failed results and corrections remain intact.

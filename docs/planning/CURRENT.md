@@ -1,8 +1,8 @@
-# Current work — M3 incomplete: choice gate failed
+# Current work — M3 approved calibration comparison
 
-2026-10-25. Owner authorized beginning and completing M3. Implementation and the
-predeclared checks ran; the required body-dependent choice divergence did NOT occur.
-Do not mark M3 complete or start broader integration/UI. Do not rerun unchanged matrix.
+2026-10-26. Owner approved the proposed fixed context-unit1/10 comparison with unit1
+retained as control. M3 remains incomplete until the unchanged interaction gate passes.
+The earlier0/16 choice result and raw failures remain preserved at917d2fab and in the log.
 Read [M3 result](ASSEMBLED_CHARACTER_M3_RESULT.md) and
 [interaction contract](../formal/ASSEMBLED_CHARACTER_INTERACTION_CONTRACT.md).
 
@@ -10,40 +10,37 @@ Read [M3 result](ASSEMBLED_CHARACTER_M3_RESULT.md) and
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 | Baseline |21 members/219 records;15 families/132 clauses; six foundations/five C2 conditions |
-| M3 gate |INCOMPLETE:0/16 body-paired choice changes across32 runs/eight fixed seeds |
-| Package A |Body owner/current evidence PASS;11 production/test files |
-| Package B |Joint appraisal/reasons and continuation execute; choice assertion FAIL;5 files |
+| M3 package A |Body owner/current evidence PASS;11 production/test files |
+| M3 package B |Joint appraisal/reasons/continuation pass; unit1 choice gate failed |
+| Approved amendment |One fixed unit1/10 candidate; same four cells/seeds0..7; unit1 control |
 
-## What is established
+## Bounded implementation card
 
-One body owner, state, scheduler, trace and save; generated permitted body evidence
-joins actual learned prediction and common reasons. SplitExposure yields the exact
-predeclared nonzero interaction. All eight seeds use the same model and input design.
-Exact fresh repeat and post-learning restore pass in all four cells. Hidden truth
-with identical admitted evidence leaves cognition/draws equal. No-history stays unknown.
-The three original C2 scenario comparisons and M2a non-preset/admission checks pass.
-All105 frozen C2 dependencies and package/toolchain configuration remain unchanged.
-The M1 full-byte result is retained under V1; it was not rerun without invalidation.
+Capability: retained learning plus later body evidence changes an actual choice in
+one continuing character. No additional mechanism or reference-policy selection.
+Version the calibration as rules/registry0.3; keep0.1 and0.2 executable and unchanged.
+Contract amendment precedes code. At most5 production/test files: assembled/model.ts,
+assembled/traceBinding.ts, test/fixtures/assembledInteraction.ts,
+test/assembledInteraction.test.ts, optionally test/assembledBody.test.ts.
+Only definition/task-reason-dice record437 field4 ->439 field1 changes from1 to1/10;
+standing unit, cap, thresholds, inputs, all other parameters and kernels stay fixed.
+No historical control dependency changes. No per-cell model switches.
 
-## Why M3 is not passed
+Checks (one job at a time): interaction matrix BOTH fixed models, same32 runs each;
+exact predeclared U/bounded reason values, causal support joins and shared-address draws;
+unit1 retains0/16 changes; unit1/10 must produce at least one body-dependent choice.
+Fresh repeat/post-learning restore every settled boundary in all four cells for0.3;
+hidden-truth and no-history controls; reject wrong calibration/version bundles.
+Run assembledAdmission and assembledBody tests: changed admission may affect original
+three-scenario semantic replay, non-preset domains, body ownership and rollback.
+Run tsc -b, boundary/research checks,105-control dependency/config comparison and Git
+size guard. Retain previous frozen-control full-byte and unchanged SEM/body-kernel
+results under V1; no invalidating source change is planned.
 
-The inherited context-modifier unit is1. Every contextual strength here is below1,
-so every integer situation modifier is0. Body conditions also leave the active reason
-sets unchanged; the resulting dice distributions and chosen actions are identical.
-Learning changes some choices across histories, but that is not the required body effect.
-The failing choice assertion remains active. No seed search, retuning or gate waiver.
-
-A possible next decision is a separately declared comparison using the existing C2
-context-integer calibration (unit1/10) as one fixed assembled configuration, retaining
-the current unit1 control. NOT APPROVED/IMPLEMENTED by this result. The work order
-forbids changing comparison meaning after seeing results; obtain an explicit amendment
-before changing this candidate or its experiment. No further milestone is opened.
-
-## Preserved limits and evidence
-
-One compact result and one raw check log, under5MiB. Test commands total339.15s,
-including failures/reruns; longest161.88s. Short type/boundary/research/Git checks also
-remain within10min/command and30min/package. No concurrent long validation jobs.
-Fixture corrections and failed assertions remain in the log/contract/Git history.
-No pinned clause, conditional obligation or historical control is closed or retired.
-UI/Campaign4/old audits remain stopped.
+Risks: accidentally admit other laws, alter old models, fail to commit calibration in
+identity/restore, or compare uncoupled draws. Checks above target each risk.
+Budgets: <=10min/command, <=30min verification; <=12 production/test files (planned4),
+<=20 evidence files/5MiB; append existing raw check log and update one compact M3 result.
+Stop on PASS, or on a failed required gate/budget. No further tuning or seeds without
+owner amendment. No pinned clause closure or obligation change is claimed by this gate.
+UI/Campaign4/broad integration and old audits remain stopped.

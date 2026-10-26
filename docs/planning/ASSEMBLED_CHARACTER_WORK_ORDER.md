@@ -241,7 +241,7 @@ capabilities. Historical gate status does not override later accepted closure.
 
 The owner adopted M0/M1 and M2 D1-D5 (with D2 evidence/first-use conditions), and
 explicitly authorized beginning and completing M3 on2026-10-25. M2a is complete.
-M3's current experiment failed its required body-dependent choice gate; CURRENT.md
-and ASSEMBLED_CHARACTER_M3_RESULT.md record the incomplete result. A comparison
-amendment is required before changing the failed candidate to seek a different result.
+On2026-10-26 the owner approved comparing fixed context unit1/10 with retained unit1,
+using the same four cells/eight seeds and unchanged choice gate. CURRENT.md bounds
+this M3 amendment; no additional calibration, seed search or scope change is authorized.
 No assembly acceptance, publishing, broad integration or Campaign4/UI transition follows.
