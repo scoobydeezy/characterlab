@@ -239,9 +239,9 @@ capabilities. Historical gate status does not override later accepted closure.
 
 ## Current authorization boundary
 
-The owner adopted the pinned baseline and approved the revised M1 comparison
-(c2367f16) and foundation amendment on 2026-10-25. M1 is complete; M2 reconciliation
-is authorized under its bounded card in CURRENT.md.
-M2 review and M2a admission remain required before broader integration. No law
-selection, assembly acceptance, publishing, browser work, long audits or automatic
-Campaign 4/UI transition is authorized by this approval.
+The owner adopted M0/M1 and M2 D1-D5 (with D2 evidence/first-use conditions), and
+explicitly authorized beginning and completing M3 on2026-10-25. M2a is complete.
+M3's current experiment failed its required body-dependent choice gate; CURRENT.md
+and ASSEMBLED_CHARACTER_M3_RESULT.md record the incomplete result. A comparison
+amendment is required before changing the failed candidate to seek a different result.
+No assembly acceptance, publishing, broad integration or Campaign4/UI transition follows.

@@ -2,7 +2,7 @@
 /** task-cognitive-path/0.1-candidate trusted upstream execution adapter.
  * Live association checks precede all reads. Character transformers receive only
  * their restricted operands; this outer adapter owns state/registry access. */
-import {canonicalEncode as enc,list,set,text,unsigned,typedIdentifier,type CanonicalValue} from '../substrate/canonicalEncoding';
+import {canonicalEncode as enc,list,set,text,unsigned,typedIdentifier,record,type CanonicalValue} from '../substrate/canonicalEncoding';
 import {AuthoritativeState,StateContractError,patternMatches,type StatePath,type ActualReadRecord,type StatePatch,type StructuralMutationDiff} from '../substrate/state';
 import {SchedulerContractError,type ScheduledEvent,type EventEmission} from '../substrate/scheduler';
 import {scheduledEventValue} from '../substrate/persistence';
@@ -17,6 +17,8 @@ import {compileProtocolBridge} from '../campaign2/protocolBridge';
 import {cognitiveTraceRecord,protocolTraceRecord} from '../campaign2/cognitiveTrace';
 import {workspaceOutput,appraisalOutput,concernOutput,motiveOutput,candidateOutput,rawSignalOutput} from '../campaign2/cognitiveTransforms';
 import {dataRecord as rec,dataField as f,dataItems as items,dataKey as key,dataUnsigned as u,dataIdentity as id} from '../campaign2/canonicalData';
+import {jointAppraisal,jointConcern,jointSignalSupport} from './appraisal';
+import type {BodyEvidence} from './body';
 import type {compileCharacterInputs} from './inputs';
 import type {compileCharacterModel} from './model';
 import type {compileCharacterState} from './state';
@@ -45,7 +47,7 @@ const stages=[
 function fail(message:string):never {throw new SchedulerContractError('INPUT_NOT_ADMITTED',message);}
 function stageFail(message:string):never {throw new SchedulerContractError('COGNITIVE_STAGE_VIOLATION',message);}
 
-export function createCognitiveExecution(model:Model,component:State,inputs:Awaited<ReturnType<typeof compileCharacterInputs>>){
+export function createCognitiveExecution(model:Model,component:State,inputs:Awaited<ReturnType<typeof compileCharacterInputs>>,bodyEvidence:()=>BodyEvidence|undefined=()=>undefined){
  const rows=items(items(decodeCognitive(model.baseRegistry),'list')[0],'set').filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n).map(v=>rec(v,171n));
  const registration=(name:string)=>f(rows.find(v=>key(f(v,1n))===key(atom(1009,name)))!,4n);
  const definition=(name:string)=>cloneCognitive(component.definition(name));
@@ -54,6 +56,7 @@ export function createCognitiveExecution(model:Model,component:State,inputs:Awai
  const protocol=compileProtocolBridge(definition('protocol-observation'));let protocolInstant:ReturnType<typeof protocol.begin>|undefined;
  let pending=new Map<string,ScheduledEvent>(),checkpoint=new Map<string,ScheduledEvent>(),active=false,instant=0n,sealed=false,unbound=0,chosen=false;
  let source:ReturnType<typeof beginCognitiveSourceInstant>|undefined;
+ let joint:CanonicalValue|undefined;
  let identityPlan:{event:ScheduledEvent;state:AuthoritativeState;path?:StatePath;subject?:CanonicalValue;contribution?:CanonicalValue}|undefined,identitySealed=false;
  const identityRegistration=rec(registration('TaskIdentityApplicationTransition'),450n),identityRequirement=rec(f(identityRegistration,8n),448n),identityDomain=items(f(identityRegistration,4n),'set').map(decodeStatePattern);
  const index=(event:ScheduledEvent)=>stages.findIndex(s=>key(event.eventTypeId)===key(atom(1001,'event/'+s[0])));
@@ -63,7 +66,7 @@ export function createCognitiveExecution(model:Model,component:State,inputs:Awai
   protocolEventTypes:()=>protocol.eventTypes(),
   identityEventType:()=>atom(1001,'event/task-identity-application'),
   executeProtocol(event:ScheduledEvent,allocator:{allocateRuntimeId():bigint}){if(!active||sealed||!protocolInstant)stageFail('protocol outside live cognitive instant');const result=protocolInstant.execute(event,allocator);return {...result,trace:(children:readonly ScheduledEvent[])=>protocolTraceRecord(model.modelIdentity.value,inputs.runIdentity.value,event,result.outputs,children)};},
-  begin(at:bigint){if(active)stageFail('cognitive instant already active');active=true;sealed=false;unbound=0;chosen=false;identityPlan=undefined;identitySealed=false;instant=at;checkpoint=new Map(pending);source=beginCognitiveSourceInstant(inputs.base,at);random.begin();protocolInstant=protocol.begin(at);},
+  begin(at:bigint){joint=undefined;if(active)stageFail('cognitive instant already active');active=true;sealed=false;unbound=0;chosen=false;identityPlan=undefined;identitySealed=false;instant=at;checkpoint=new Map(pending);source=beginCognitiveSourceInstant(inputs.base,at);random.begin();protocolInstant=protocol.begin(at);},
   validateParticipants(events:readonly ScheduledEvent[]){
    if(!active||sealed)stageFail('participant check outside instant');
    const count=(name:string)=>events.filter(e=>key(e.eventTypeId)===key(atom(1001,'event/'+name))).length;
@@ -110,6 +113,7 @@ export function createCognitiveExecution(model:Model,component:State,inputs:Awai
    const namespace=u(f(rec(decodeCognitive(role),263n),1n));
    // One shared reservation. No nested or copied source allocates an identity.
    const occurrence=typedIdentifier(namespace,unsigned(allocator.allocateRuntimeId()));
+   let extraOutputs:CanonicalValue[]=[],jointInput:CanonicalValue|undefined;
    let output:CanonicalValue,quantizationOperations:CanonicalValue[]=[],randomDrawRecords:CanonicalValue[]=[];
    if(i===0){
     const cue=rec(event.payload,377n);model.content.validateRecordRoles(enc(cue));
@@ -129,7 +133,8 @@ export function createCognitiveExecution(model:Model,component:State,inputs:Awai
     const w=rec(event.payload,381n),selected=items(f(w,4n),'list');
     const criteria=selected.map(v=>{const item=rec(v,379n),t=component.tasks.find(t=>key(t.key)===key(f(item,1n))&&key(t.specId)===key(f(item,2n)));if(!t)fail('unselected criterion');return {taskKey:t.key,specId:t.specId,minimum:readQ(t.minimum),maximum:readQ(t.maximum)};});
     output=appraisalOutput(occurrence,event.payload,criteria);
-   }else if(i===2)output=concernOutput(occurrence,event.payload,definition('task-concern'));
+    if(model.body){const evidence=bodyEvidence();if(evidence&&(evidence.settledEvent.phase!==14n||evidence.settledEvent.dueAt!==instant))fail('joint appraisal requires current settled body evidence');joint=jointAppraisal(output,evidence?.sample,evidence?.experience,model.body.threshold);extraOutputs=[joint];jointInput=list([event.payload,evidence?.sample??list([]),evidence?.experience??list([])]);}
+   }else if(i===2){if(model.body){if(!joint)fail('concern requires generated joint appraisal');output=jointConcern(occurrence,event.payload,joint!,definition('task-concern'));jointInput=list([event.payload,joint!]);}else output=concernOutput(occurrence,event.payload,definition('task-concern'));}
    else if(i===3)output=motiveOutput(occurrence,event.payload,definition('task-motive'));
    else if(i===4){
     const req=rec(f(wrapper,3n),447n),template=decodeStatePattern(f(req,3n));
@@ -145,6 +150,7 @@ export function createCognitiveExecution(model:Model,component:State,inputs:Awai
     for(const n of items(f(req,1n),'list').map(u)){if(typeof C==='boolean'||C.kind!=='record')fail('identity subject path');C=f(C,n);}
     const d=rec(definition('task-reason-source'),436n),result=rawSignalOutput(occurrence,event.payload,f(d,1n)===true,readQ(f(d,2n)),()=>read({rootStateTypeId:template.rootStateTypeId,fieldId:template.fieldId,selectors:[{kind:'mapKey',key:r(412,[C,f(req,2n)])}]},f(req,4n)).value);
     output=result.output;quantizationOperations=result.quantizationOperations;
+    if(model.body){if(!joint)fail('raw signals require generated joint appraisal');output=jointSignalSupport(output,joint!);jointInput=list([event.payload,joint!]);}
    }else if(i===6)output=r(408,[occurrence,event.payload,list(compileReasonNuclei(items(f(rec(event.payload,403n),3n),'set'),definition('task-reason-dice')))]);
    else if(i===7){
     output=await arbitrationOutput(occurrence,instant,event.payload,definition('task-arbitration'),random.forResolution(occurrence,event.payload));
@@ -160,16 +166,19 @@ export function createCognitiveExecution(model:Model,component:State,inputs:Awai
    model.content.validateRecordRoles(enc(output));
    const noChoice=i===7&&u(f(rec(f(rec(output,409n),4n),419n),1n))!==3n;
    const destinations:readonly (readonly [string,number])[]=noChoice||i===14?[]:i===8?[['task-expression',90],['task-plan',100]]:i===9?[['task-qualification',130]]:i===12?[['protocol-actual-fact',110]]:i===13?[['task-identity-application',140]]:[[stages[i+1][0],stages[i+1][2]]];
-   const emissions:EventEmission[]=destinations.map(([name,phase])=>({dueAt:event.dueAt,phase:BigInt(phase),eventTypeId:atom(1001,'event/'+name),payload:cloneCognitive(output),dependencies:list([])}));
+   const emissions:EventEmission[]=destinations.map(([name,phase])=>({dueAt:event.dueAt,phase:BigInt(phase),eventTypeId:atom(1001,'event/'+name),payload:cloneCognitive(output),dependencies:list([]),...(i===0&&model.body&&bodyEvidence()?{additionalCausalParentEventIds:[bodyEvidence()!.settledEvent.eventId]}:{})}));
    const protocolPlan=i===12?protocolInstant!.source(event,output):undefined;
    const additional=protocolPlan?.emissions()??[];let bound=false;unbound++;
-   return {output:cloneCognitive(output),reads,domain,quantizationOperations,randomDrawRecords,
-    trace(children:readonly ScheduledEvent[]){if(!bound)stageFail('cognitive trace before child binding');return cognitiveTraceRecord(model.modelIdentity.value,inputs.runIdentity.value,event,registered,output,children,{domain,reads,quantizationOperations,randomDrawRecords});},
+   const report=joint,projection=jointInput;
+   return {output:cloneCognitive(output),additionalOutputs:extraOutputs,reads,domain,quantizationOperations,randomDrawRecords,
+    trace(children:readonly ScheduledEvent[]){if(!bound)stageFail('cognitive trace before child binding');const original=rec(cognitiveTraceRecord(model.modelIdentity.value,inputs.runIdentity.value,event,registered,output,children,{domain,reads,quantizationOperations,randomDrawRecords}),160n);
+     if(!projection)return original;const safe=report?items(report,'list').slice(2,4):[],extraSources=safe.filter(v=>typeof v!=='boolean'&&v.kind==='record').map(v=>f(v as Extract<CanonicalValue,{kind:'record'}>,1n)),sources=new Map([...items(f(original,9n),'list'),...extraSources].map(v=>[key(v),v]));
+     const replacements=new Map<bigint,CanonicalValue>([[6n,text('assembled-character-interaction/0.1-candidate')],[9n,list([...sources.values()].sort((a,b)=>key(a)<key(b)?-1:1))],[12n,projection],[13n,extraOutputs.length?list([output,...extraOutputs]):output]]);return record(original.schema,new Map([...original.fields].map(([n,v])=>[n,replacements.get(n)??v])));},
     emissions:()=>structuredClone([...emissions,...additional]),
     bindAllocatedChildren(children:readonly ScheduledEvent[]){
      if(!active||sealed||bound||children.length!==emissions.length+additional.length)stageFail('cognitive child binding lifecycle');
      const ids=new Set<bigint>();for(const [j,child] of children.slice(0,emissions.length).entries()){const emission=emissions[j];
-      if(ids.has(child.eventId)||child.eventId===event.eventId||child.eventSequence<=event.eventSequence||child.dueAt!==event.dueAt||child.phase!==emission.phase||key(child.eventTypeId)!==key(emission.eventTypeId)||key(child.payload)!==key(emission.payload)||key(child.dependencies)!==key(emission.dependencies)||child.causalParentEventIds.length!==1||child.causalParentEventIds[0]!==event.eventId||pending.has(eventKey(child)))fail('cognitive child differs from generated plan');ids.add(child.eventId);
+      if(ids.has(child.eventId)||child.eventId===event.eventId||child.eventSequence<=event.eventSequence||child.dueAt!==event.dueAt||child.phase!==emission.phase||key(child.eventTypeId)!==key(emission.eventTypeId)||key(child.payload)!==key(emission.payload)||key(child.dependencies)!==key(emission.dependencies)||key(list(child.causalParentEventIds.map(unsigned)))!==key(list([...new Set([event.eventId,...(emission.additionalCausalParentEventIds??[])])].sort((a,b)=>a<b?-1:1).map(unsigned)))||pending.has(eventKey(child)))fail('cognitive child differs from generated plan');ids.add(child.eventId);
      }
      protocolPlan?.bindAllocatedChildren(children.slice(emissions.length));
      for(const child of children.slice(0,emissions.length))pending.set(eventKey(child),structuredClone(child));bound=true;unbound--;
@@ -177,7 +186,7 @@ export function createCognitiveExecution(model:Model,component:State,inputs:Awai
   },
   prepareCommit(){if(!active||sealed||unbound||identityPlan||[...pending.values()].some(e=>e.dueAt<=instant))stageFail('unfinished cognitive instant');protocolInstant!.finish();random.prepareCommit();sealed=true;},
   commit(){if(!active||!sealed)stageFail('unprepared cognitive commit');random.commit();checkpoint=new Map(pending);},
-  close(){pending=checkpoint;source?.close();source=undefined;protocolInstant?.abort();protocolInstant=undefined;random.close();active=false;sealed=false;unbound=0;identityPlan=undefined;identitySealed=false;},
+  close(){joint=undefined;pending=checkpoint;source?.close();source=undefined;protocolInstant?.abort();protocolInstant=undefined;random.close();active=false;sealed=false;unbound=0;identityPlan=undefined;identitySealed=false;},
   committedRandomAddressKeys:()=>random.committedAddressKeys(),
   randomRelevantAuthoritativeIds(state:AuthoritativeState){
    if(active)stageFail('random-relevant projection requires quiescence');

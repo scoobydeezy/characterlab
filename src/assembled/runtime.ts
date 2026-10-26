@@ -34,14 +34,15 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
  const prediction=Object.freeze({...component.prior,stateModel,content,memoryComponent:memory});
  const task=Object.freeze({base,content,stateModel,tasks:component.tasks,measurement:component.measurement,deadline:component.deadline,predictionComponent:prediction});
  const maxWork=compileCampaign2Parameters(model.source.parameterSchemaVersion,model.source.parameters).maxWork;
- const cognitive=createCognitiveExecution(model,component,inputs),modelIdentity=model.modelIdentity.value;
+ const modelIdentity=model.modelIdentity.value;
+ const body=model.body?createBodyExecution(model.body,component.tasks[0].character,stateModel,inputs.bodyEvents,modelIdentity,inputs.runIdentity.value):undefined;
+ const cognitive=createCognitiveExecution(model,component,inputs,()=>body?.evidence());
  const probeModel=base.probe,measurement=base.measurement,domains=base.domains,shared=bindings.admission,evaluator=bindings.evaluator;
  const memoryRuntime=createMemoryExecution(memory,measurement.validateOutput,modelIdentity,inputs.runIdentity.value,[]);
  const predictionRuntime=createPredictionExecution(prediction,modelIdentity,inputs.runIdentity.value,[]);
  const trace=compileCharacterTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel);
  stateModel.validateState(initialState);domains.validateStatic(initialState);domains.validateReferences(initialState,0n);
  const initial=inputs.initial;
- const body=model.body?createBodyExecution(model.body,component.tasks[0].character,stateModel,inputs.bodyEvents,modelIdentity,inputs.runIdentity.value):undefined;
  const taskRuntime=createTaskExecution(task,modelIdentity,inputs.runIdentity.value,initial.deadlines.map(event=>({event})));
  let ingress:ReturnType<typeof beginTransitionIngressV04>|undefined;
  let probe:ReturnType<typeof probeModel.begin>|undefined,probeSource:ReturnType<typeof beginProbeSourceInstant>|undefined;
@@ -118,7 +119,7 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
    if(!ingress)throw new SchedulerContractError('INPUT_NOT_ADMITTED','cognitive outside live ingress');
    const result=await cognitive.execute(context.event,context.state,context),own=result.emissions();
    const extra=typeof result.output!=='boolean'&&result.output.kind==='record'&&result.output.schema.typeId===307n?ingress.observeProtocolSource(context.event,canonicalEncode(result.output)):undefined;
-   return {nextState:context.state,outputs:[result.output],emittedEvents:[...own,...(extra?.emissions()??[])],traceContributions:[],traceFactory:children=>{result.bindAllocatedChildren(children.slice(0,own.length));extra?.bindAllocatedChildren(children.slice(own.length));return [result.trace(children)];}};
+   return {nextState:context.state,outputs:[result.output,...result.additionalOutputs],emittedEvents:[...own,...(extra?.emissions()??[])],traceContributions:[],traceFactory:children=>{result.bindAllocatedChildren(children.slice(0,own.length));extra?.bindAllocatedChildren(children.slice(own.length));return [result.trace(children)];}};
   });
   for(const eventType of cognitive.protocolEventTypes()??[])registerHandler(key(eventType),context=>{
    if(!ingress)throw new SchedulerContractError('INPUT_NOT_ADMITTED','protocol outside live ingress');

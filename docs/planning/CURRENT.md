@@ -1,46 +1,49 @@
-# Current work — M3 early interaction
+# Current work — M3 incomplete: choice gate failed
 
-2026-10-25. Owner explicitly authorized beginning and completing M3.
-M2a PASS at31553ea7; frozen C2 and M1 controls remain unchanged.
-Read ASSEMBLED_CHARACTER_RECONCILIATION.md and ASSEMBLED_CHARACTER_WORK_ORDER.md.
+2026-10-25. Owner authorized beginning and completing M3. Implementation and the
+predeclared checks ran; the required body-dependent choice divergence did NOT occur.
+Do not mark M3 complete or start broader integration/UI. Do not rerun unchanged matrix.
+Read [M3 result](ASSEMBLED_CHARACTER_M3_RESULT.md) and
+[interaction contract](../formal/ASSEMBLED_CHARACTER_INTERACTION_CONTRACT.md).
 
 | Status | Disposition |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 | Baseline |21 members/219 records;15 families/132 clauses; six foundations/five C2 conditions |
-| Active gate |M3 only: learned history x later body -> appraisal/reasons -> actual choice |
+| M3 gate |INCOMPLETE:0/16 body-paired choice changes across32 runs/eight fixed seeds |
+| Package A |Body owner/current evidence PASS;11 production/test files |
+| Package B |Joint appraisal/reasons and continuation execute; choice assertion FAIL;5 files |
 
-## Bounded card, declared before code
+## What is established
 
-Contract: ../formal/ASSEMBLED_CHARACTER_INTERACTION_CONTRACT.md,0.1-candidate.
-Three capabilities: authenticated body evidence; joint appraisal/reasons; exact
-continuation of the interacting character. No broad family or UI completion claim.
-U1 key/owner/phase map and exact comparison are in that contract.
-Affected scope: C-BODY/C-AFFECT/C-LEARN/C-DECISION/C-EPI/C-DET, slices of12.1/3/4/5;
-none of their full clause sets or the18 conditional obligations closes on this gate.
+One body owner, state, scheduler, trace and save; generated permitted body evidence
+joins actual learned prediction and common reasons. SplitExposure yields the exact
+predeclared nonzero interaction. All eight seeds use the same model and input design.
+Exact fresh repeat and post-learning restore pass in all four cells. Hidden truth
+with identical admitted evidence leaves cognition/draws equal. No-history stays unknown.
+The three original C2 scenario comparisons and M2a non-preset/admission checks pass.
+All105 frozen C2 dependencies and package/toolchain configuration remain unchanged.
+The M1 full-byte result is retained under V1; it was not rerun without invalidation.
 
-Serial package A: one body owner/channel in existing state/scheduler/trace/save.
-At most11 production/test files: assembled/{body,inputs,model,state,character,runtime,
-execution}.ts; test/fixtures/assembledInteraction.ts; test/assembledBody.test.ts;
-assembled/ingress.ts and traceBinding.ts. Existing C2 kernels frozen. The first body run rejected the new rules version at the successor trace binder; extend its explicit version check, retaining exact actual model/run equality.
-Validate body admission, actual replenishment/read/bin/SEM chain, identity and save,
-wrong observer/owner, malformed source, absence vs zero, atomic failure.
+## Why M3 is not passed
 
-Package A PASS:24 checks/type/boundary;11 files, under2min verification. See M3 result.
-Serial package B (ACTIVE): joint appraisal and the2x2 witness, immediately after A.
-At most5 production/test files: assembled/{appraisal,execution,runtime}.ts,
-test/fixtures/assembledInteraction.ts,test/assembledInteraction.test.ts.
-Both packages are ONE M3 gate. A alone is not M3 PASS. No breadth between them.
+The inherited context-modifier unit is1. Every contextual strength here is below1,
+so every integer situation modifier is0. Body conditions also leave the active reason
+sets unchanged; the resulting dice distributions and chosen actions are identical.
+Learning changes some choices across histories, but that is not the required body effect.
+The failing choice assertion remains active. No seed search, retuning or gate waiver.
 
-Checks per package: <=10min/command, <=30min cumulative verification; one job at a
- time; <=20 evidence files/5MiB for all M3. Retain outputs/failures in one checks log.
-A: targeted assembledBody, embodiedContrasts, semanticPhaseOrdering, observationIntegration,
-TypeScript and boundary check. B: predeclared2x2 for seeds0..7 in bounded seed groups,
-repeat/restore after learning for seed0, hidden truth/equal evidence and no-history
-controls, affected assembledAdmission replay, TypeScript/boundary/research.
-Full M1 controls retain their392s M2a result unless S1 closure/config/toolchain changes;
-check unchanged dependencies with Git. No global line-ending normalization.
+A possible next decision is a separately declared comparison using the existing C2
+context-integer calibration (unit1/10) as one fixed assembled configuration, retaining
+the current unit1 control. NOT APPROVED/IMPLEMENTED by this result. The work order
+forbids changing comparison meaning after seeing results; obtain an explicit amendment
+before changing this candidate or its experiment. No further milestone is opened.
 
-Stop on passing all M3 checks; record one compact result. At a budget/blocker limit,
-checkpoint incompletion without relaxing comparisons or tuning laws/seed/criteria.
-M3 does not complete Campaigns0–3 assembly. UI/Campaign4/old audits remain stopped.
+## Preserved limits and evidence
+
+One compact result and one raw check log, under5MiB. Test commands total339.15s,
+including failures/reruns; longest161.88s. Short type/boundary/research/Git checks also
+remain within10min/command and30min/package. No concurrent long validation jobs.
+Fixture corrections and failed assertions remain in the log/contract/Git history.
+No pinned clause, conditional obligation or historical control is closed or retired.
+UI/Campaign4/old audits remain stopped.

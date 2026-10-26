@@ -81,9 +81,9 @@ New seam trace versions explicitly identify joint appraisal, concern and raw sup
 
 ## Predeclared experiment and correspondence
 
-One model for ALL cells: taskA[4,6], taskB[7,9], both active[0,10); gain1,pressure1/2,
+One model for ALL cells: taskA[4,6], taskB[7,9], both active[2,10); gain1,pressure1/2,
 workspace3,work100000; capacity100,rate1,width10,threshold60,permission/availability true.
-History H0/H1: initial regulatory displacement -30/-90 and a real diagnostic probe at1;
+History H0/H1: initial regulatory displacement -20/+40 and a real diagnostic probe at1;
 there is no learned S0. The resulting permitted point observations yield learned means
 3/9 through the unchanged memory/prediction owner. Initial body amount10 at0 in all cells.
 Later physical condition B0/B1: actual delivery0/80 at2. Sample and deliberate at3;
@@ -116,3 +116,18 @@ Existing body arithmetic/contrast and observation/SEM controls remain unchanged.
 Affected original C2 three-scenario semantic replay stays the M2a comparison for0.1;
 new0.2 is an explicitly changed interaction model. Full C0–3 corpus remains pending.
 No pinned clause, conditional obligation or historical control is retired by M3.
+
+Pre-matrix fixture correction: source inspection found committed R0=50 and Scale=10.
+The original card's -30/-90 would yield2/-4, not the declared3/9. Use -20/+40;
+the intended histories, independent predictions, model, seeds and gate are unchanged.
+No matrix results had been observed when this arithmetic correction was made.
+Seed encoding:32 bytes, all zero except final byte0..7.
+
+Fixture sequencing correction after first matrix attempts: taskB correctly completed
+at probe1 in history9 under the originally written[0,10) window, so it was absent
+at choice3. Move BOTH task activations to2 in ALL cells: the declared learned-history
+comparison precedes commitment activation. Keep intervals, laws, seeds, all four cells
+and expected values unchanged. This is local source/fixture sequencing under the
+escalation policy; preserve the failed attempt. No absent task is counted as zero.
+Reason nuclei use existing bounded(x)=x/(1+abs(x)); the raw situational input equals
+the declared U and its bounded nucleus is checked separately. No reason equation changes.

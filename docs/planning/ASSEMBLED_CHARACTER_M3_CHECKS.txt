@@ -93,3 +93,218 @@ SchedulerContractError: assembled trace requires exact model/run binding
 > node scripts/check-reference-boundary.mjs
 
 Reference boundary check passed.
+Pre-matrix source inspection: R0=50, Scale=10. Correct fixture displacements to -20/+40 to produce the predeclared3/9; no matrix run yet.
+src/test/assembledInteraction.test.ts(29,83): error TS2367: This comparison appears to be unintentional because the types '0' and '1' have no overlap.
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledInteraction.test.ts (4 tests | 1 failed | 3 skipped) 3278ms
+   × M3 B: one learned-history x body interaction > matrix seeds0..7 3277ms
+     → expected false to be true // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > matrix seeds0..7
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ matrix src/test/assembledInteraction.test.ts:40:206
+
+ ❯ src/test/assembledInteraction.test.ts:50:41
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 3 skipped (4)
+   Start at  22:05:22
+   Duration  4.79s (transform 845ms, setup 0ms, collect 1.24s, tests 3.28s, environment 0ms, prepare 93ms)
+
+Matrix assertion correction: existing reason consolidation applies x/(1+abs(x)); the first run correctly produced this bounded value. Preserve exact declared U at raw situation input and independently check the bounded nucleus value. No production law/fixture/seed changed.
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledInteraction.test.ts (4 tests | 1 failed | 3 skipped) 5816ms
+   × M3 B: one learned-history x body interaction > matrix seeds0..7 5815ms
+     → Cannot read properties of undefined (reading '4')
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > matrix seeds0..7
+TypeError: Cannot read properties of undefined (reading '4')
+ ❯ matrix src/test/assembledInteraction.test.ts:40:125
+
+ ❯ src/test/assembledInteraction.test.ts:51:41
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 3 skipped (4)
+   Start at  22:06:36
+   Duration  7.33s (transform 841ms, setup 0ms, collect 1.24s, tests 5.82s, environment 0ms, prepare 91ms)
+
+Fixture timing correction: probe1 completed taskB before choice. Both tasks now activate2 in all cells, preserving learning-before-choice intent, criteria, laws, eight seeds and every comparison. Prior failure retained; no absent/zero substitution.
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledInteraction.test.ts (4 tests | 1 failed | 3 skipped) 5953ms
+   × M3 B: one learned-history x body interaction > matrix seeds0..7 5953ms
+     → expected undefined to deeply equal ExactRational{ numerator: 0n, …(1) }
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > matrix seeds0..7
+AssertionError: expected undefined to deeply equal ExactRational{ numerator: 0n, …(1) }
+
+- Expected: 
+ExactRational {
+  "denominator": 1n,
+  "numerator": 0n,
+}
+
++ Received: 
+undefined
+
+ ❯ matrix src/test/assembledInteraction.test.ts:40:237
+
+ ❯ src/test/assembledInteraction.test.ts:51:41
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 3 skipped (4)
+   Start at  22:08:15
+   Duration  7.46s (transform 846ms, setup 0ms, collect 1.24s, tests 5.95s, environment 0ms, prepare 95ms)
+
+Assertion correction: existing activation threshold excludes taskB nucleus when its joint appraisal is known zero. Check that absence explicitly, preserve raw/known-zero checks, require actual nucleus interaction on taskA. No law/parameter/gate changed.
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > matrix seeds0..7
+M3 seed 0: [["definition/protocol-contact-one","definition/protocol-contact-one"],["definition/protocol-contact-one","definition/protocol-contact-one"]]; exact U/reason interaction and causal joins
+
+stdout | src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > matrix seeds0..7
+M3 seed 1: [["definition/protocol-contact-one","definition/protocol-contact-one"],["definition/protocol-contact-one","definition/protocol-contact-one"]]; exact U/reason interaction and causal joins
+
+stdout | src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > matrix seeds0..7
+M3 seed 2: [["definition/protocol-contact-one","definition/protocol-contact-one"],["definition/protocol-contact-one","definition/protocol-contact-one"]]; exact U/reason interaction and causal joins
+
+stdout | src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > matrix seeds0..7
+M3 seed 3: [["definition/protocol-contact-two","definition/protocol-contact-two"],["definition/protocol-contact-one","definition/protocol-contact-one"]]; exact U/reason interaction and causal joins
+
+stdout | src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > matrix seeds0..7
+M3 seed 4: [["definition/protocol-contact-two","definition/protocol-contact-two"],["definition/protocol-contact-one","definition/protocol-contact-one"]]; exact U/reason interaction and causal joins
+
+stdout | src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > matrix seeds0..7
+M3 seed 5: [["definition/protocol-contact-one","definition/protocol-contact-one"],["definition/protocol-contact-one","definition/protocol-contact-one"]]; exact U/reason interaction and causal joins
+
+stdout | src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > matrix seeds0..7
+M3 seed 6: [["definition/protocol-contact-two","definition/protocol-contact-two"],["definition/protocol-contact-one","definition/protocol-contact-one"]]; exact U/reason interaction and causal joins
+
+stdout | src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > matrix seeds0..7
+M3 seed 7: [["definition/protocol-contact-one","definition/protocol-contact-one"],["definition/protocol-contact-one","definition/protocol-contact-one"]]; exact U/reason interaction and causal joins
+M3 group 0,1,2,3,4,5,6,7: changed choices=0, identical shared-address draws=18
+
+ ❯ src/test/assembledInteraction.test.ts (4 tests | 1 failed | 3 skipped) 54722ms
+   × M3 B: one learned-history x body interaction > matrix seeds0..7 54721ms
+     → expected 0 to be greater than 0
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > matrix seeds0..7
+AssertionError: expected 0 to be greater than 0
+ ❯ src/test/assembledInteraction.test.ts:51:74
+     49| }
+     50| describe('M3 B: one learned-history x body interaction',()=>{
+     51|  it('matrix seeds0..7',async()=>{expect(await matrix([0,1,2,3,4,5,6,7]…
+       |                                                                          ^
+     52|  it('exact repeat and restore after learning before the later body con…
+     53|   const source=interactionSource(),model=await prepareCharacterModel(s…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 3 skipped (4)
+   Start at  22:09:36
+   Duration  56.24s (transform 845ms, setup 0ms, collect 1.24s, tests 54.72s, environment 0ms, prepare 92ms)
+
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > exact repeat and restore after learning before the later body condition in all four cells
+M3 continuation cell 0/0: [{"task":"content/task-a","rawBounded":"11/131","situationModifier":"0","die":"4"},{"task":"content/task-b","rawBounded":"11/41","situationModifier":"0","die":"4"}]
+
+stdout | src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > exact repeat and restore after learning before the later body condition in all four cells
+M3 continuation cell 0/1: [{"task":"content/task-a","rawBounded":"1/21","situationModifier":"0","die":"4"},{"task":"content/task-b","rawBounded":"1/6","situationModifier":"0","die":"4"}]
+
+stdout | src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > exact repeat and restore after learning before the later body condition in all four cells
+M3 continuation cell 1/0: [{"task":"content/task-a","rawBounded":"11/51","situationModifier":"0","die":"4"}]
+
+stdout | src/test/assembledInteraction.test.ts > M3 B: one learned-history x body interaction > exact repeat and restore after learning before the later body condition in all four cells
+M3 continuation cell 1/1: [{"task":"content/task-a","rawBounded":"3/23","situationModifier":"0","die":"4"}]
+
+ ✓ src/test/assembledInteraction.test.ts (4 tests | 1 skipped) 68389ms
+   ✓ M3 B: one learned-history x body interaction > exact repeat and restore after learning before the later body condition in all four cells 60738ms
+   ✓ M3 B: one learned-history x body interaction > hidden body truth with identical evidence leaves every cognitive output and draw equal 5589ms
+   ✓ M3 B: one learned-history x body interaction > without acquired history, body evidence cannot manufacture a forecast or a situational reason 2062ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 1 skipped (4)
+   Start at  22:11:34
+   Duration  69.93s (transform 845ms, setup 0ms, collect 1.23s, tests 68.39s, environment 0ms, prepare 95ms)
+
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > baseline preserves every semantic boundary and addressed draw
+M2a control baseline: 8 instants, 9 exact coupled draws
+
+stdout | src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > deadline overlap preserves every semantic boundary and addressed draw
+M2a control deadline overlap: 6 instants, 0 exact coupled draws
+
+stdout | src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > equal criteria preserves every semantic boundary and addressed draw
+M2a control equal criteria: 8 instants, 6 exact coupled draws
+
+stdout | src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > non-preset prepares, learns, decides, repeats and restores the whole run
+M2a non-preset: 8 instants; learned prediction, decision, repeat and restore exact
+
+ ✓ src/test/assembledAdmission.test.ts (18 tests) 145352ms
+   ✓ M2a invariant admission and one continuing successor > baseline preserves every semantic boundary and addressed draw 24700ms
+   ✓ M2a invariant admission and one continuing successor > deadline overlap preserves every semantic boundary and addressed draw 7312ms
+   ✓ M2a invariant admission and one continuing successor > equal criteria preserves every semantic boundary and addressed draw 20269ms
+   ✓ M2a invariant admission and one continuing successor > non-preset prepares, learns, decides, repeats and restores the whole run 78908ms
+   ✓ M2a invariant admission and one continuing successor > rejects work limit before publishing a model 304ms
+   ✓ M2a invariant admission and one continuing successor > rejects overlapping authority before publishing a model 331ms
+   ✓ M2a invariant admission and one continuing successor > rejects undeclared topology before publishing a model 383ms
+   ✓ M2a invariant admission and one continuing successor > rejects unsupported versions/schema and executable or mutable source substitution 2830ms
+   ✓ M2a invariant admission and one continuing successor > rejects invented learned S0 and foreign observer evidence, and rolls back a tiny work budget 2968ms
+   ✓ M2a invariant admission and one continuing successor > binds restore to its model, inputs and every saved byte 5846ms
+ ✓ src/test/assembledBody.test.ts (4 tests) 14341ms
+   ✓ M3 A: body evidence in the one character > executes physical delivery and actual current SEM, then restores the complete character 3867ms
+   ✓ M3 A: body evidence in the one character > rejects invalid declarations, foreign sources and body ownership 3236ms
+   ✓ M3 A: body evidence in the one character > permission and availability produce the same no-operand evidence, distinct from a known empty bin 5424ms
+   ✓ M3 A: body evidence in the one character > rolls back an earlier body write when a later source in the same instant fails 1812ms
+
+ Test Files  2 passed (2)
+      Tests  22 passed (22)
+   Start at  22:14:13
+   Duration  161.88s (transform 911ms, setup 0ms, collect 1.59s, tests 159.69s, environment 0ms, prepare 174ms)
+
+PASS: 105 transitive frozen C2 dependencies unchanged against db0ca7a8 (working tree included).
+PASS: package/toolchain configuration unchanged.
+Final TypeScript PASS, seconds=14.51
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+Git whitespace check found two trailing spaces in verbatim Vitest failure output (Expected/Received headings); raw log preserved. Source/document whitespace checked excluding only this raw output file.
