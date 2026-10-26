@@ -1,0 +1,180 @@
+M11 raw verification; before-code70cb3228; basea2bf824f. Fixed seeds/fixtures/acceptance gate.
+npx tsc -b --pretty false
+src/assembled/skillExecution.ts(27,457): error TS18048: 'setting' is possibly 'undefined'.
+src/assembled/skillExecution.ts(27,551): error TS18048: 'setting' is possibly 'undefined'.
+src/assembled/skillExecution.ts(27,621): error TS18048: 'setting' is possibly 'undefined'.
+src/assembled/skillExecution.ts(27,650): error TS18048: 'setting' is possibly 'undefined'.
+src/assembled/skillExecution.ts(28,109): error TS18048: 'setting' is possibly 'undefined'.
+src/assembled/skillExecution.ts(28,131): error TS18048: 'setting' is possibly 'undefined'.
+src/assembled/skillExecution.ts(28,176): error TS18048: 'setting' is possibly 'undefined'.
+src/assembled/skillExecution.ts(28,202): error TS18048: 'setting' is possibly 'undefined'.
+src/assembled/skillExecution.ts(30,405): error TS2322: Type 'CanonicalValue | undefined' is not assignable to type 'CanonicalValue'.
+  Type 'undefined' is not assignable to type 'CanonicalValue'.
+src/assembled/skillExecution.ts(31,609): error TS2322: Type 'CanonicalValue | undefined' is not assignable to type 'CanonicalValue'.
+  Type 'undefined' is not assignable to type 'CanonicalValue'.
+exit=1 seconds=14.9484067
+CORRECTION: compiler requires stable admitted setting/assessment locals across calls. Capture them with explicit missing-value rejection; no domain, fixture or comparison change.
+npx tsc -b --pretty false (admitted locals)
+exit=0 seconds=14.8593806
+npx vitest run src/test/assembledSkill.test.ts -t fixed16-seed --maxWorkers=1 --minWorkers=1
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSkill.test.ts > M11 procedural integration > fixed16-seed matrix: practiced skill changes execution then sensed body and later actual choice
+M11 seed 0 later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledSkill.test.ts > M11 procedural integration > fixed16-seed matrix: practiced skill changes execution then sensed body and later actual choice
+M11 seed 1 later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledSkill.test.ts > M11 procedural integration > fixed16-seed matrix: practiced skill changes execution then sensed body and later actual choice
+M11 seed 2 later=["definition/protocol-contact-one","definition/protocol-contact-two"] draws=[3,0]
+
+stdout | src/test/assembledSkill.test.ts > M11 procedural integration > fixed16-seed matrix: practiced skill changes execution then sensed body and later actual choice
+M11 seed 3 later=["definition/protocol-contact-one","definition/protocol-contact-two"] draws=[3,0]
+
+stdout | src/test/assembledSkill.test.ts > M11 procedural integration > fixed16-seed matrix: practiced skill changes execution then sensed body and later actual choice
+M11 seed 4 later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledSkill.test.ts > M11 procedural integration > fixed16-seed matrix: practiced skill changes execution then sensed body and later actual choice
+M11 seed 5 later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledSkill.test.ts > M11 procedural integration > fixed16-seed matrix: practiced skill changes execution then sensed body and later actual choice
+M11 seed 6 later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledSkill.test.ts > M11 procedural integration > fixed16-seed matrix: practiced skill changes execution then sensed body and later actual choice
+M11 seed 7 later=["definition/protocol-contact-one","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledSkill.test.ts > M11 procedural integration > fixed16-seed matrix: practiced skill changes execution then sensed body and later actual choice
+M11 seed 8 later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[3,0]
+
+stdout | src/test/assembledSkill.test.ts > M11 procedural integration > fixed16-seed matrix: practiced skill changes execution then sensed body and later actual choice
+M11 seed 9 later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledSkill.test.ts > M11 procedural integration > fixed16-seed matrix: practiced skill changes execution then sensed body and later actual choice
+M11 seed 10 later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledSkill.test.ts > M11 procedural integration > fixed16-seed matrix: practiced skill changes execution then sensed body and later actual choice
+M11 seed 11 later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledSkill.test.ts > M11 procedural integration > fixed16-seed matrix: practiced skill changes execution then sensed body and later actual choice
+M11 seed 12 later=["definition/protocol-contact-one","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledSkill.test.ts > M11 procedural integration > fixed16-seed matrix: practiced skill changes execution then sensed body and later actual choice
+M11 seed 13 later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledSkill.test.ts > M11 procedural integration > fixed16-seed matrix: practiced skill changes execution then sensed body and later actual choice
+M11 seed 14 later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledSkill.test.ts > M11 procedural integration > fixed16-seed matrix: practiced skill changes execution then sensed body and later actual choice
+M11 seed 15 later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[2,0]
+M11 later choices differ=4/16; overlapping actual draw pairs=0
+
+ ✓ src/test/assembledSkill.test.ts (7 tests | 6 skipped) 158907ms
+   ✓ M11 procedural integration > fixed16-seed matrix: practiced skill changes execution then sensed body and later actual choice 158906ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  16:39:52
+   Duration  161.18s (transform 1.26s, setup 0ms, collect 1.97s, tests 158.91s, environment 0ms, prepare 92ms)
+
+exit=0 seconds=162.6751322
+PRE-CONTROL REVIEW: private forgery check now exercises a real pending practice child; retained practice laws compared from identical zero competence. Matrix and production unchanged.
+npx tsc -b --pretty false (completed control assertions)
+exit=0 seconds=14.8067437
+npx vitest run M11 controls and all M10 tests; one worker; testTimeout180000; command cap600s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSkill.test.ts > M11 procedural integration > controls: late common-stage failure rolls back practice; private forged children reject
+M11 rollback 35 events; limit34
+
+ ✓ src/test/assembledSkill.test.ts (7 tests | 1 skipped) 86700ms
+   ✓ M11 procedural integration > controls: unsensed skill/body differences cannot enter cognition through old recalled context 7896ms
+   ✓ M11 procedural integration > controls: no/blocked practice and absent choice cannot manufacture skill; impairment recovers without unlearning 12594ms
+   ✓ M11 procedural integration > controls: accepted Development arithmetic, saturation and retained serious laws remain distinguishable 4587ms
+   ✓ M11 procedural integration > controls: repeat and restore after practice preserve every later whole boundary and actual RNG 51253ms
+   ✓ M11 procedural integration > controls: malformed sources, phase reversal, foreign writers and supplied acquired state reject 4462ms
+   ✓ M11 procedural integration > controls: late common-stage failure rolls back practice; private forged children reject 5907ms
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice
+M10 seed 0 first=definition/protocol-contact-two later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[3,0]
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice
+M10 seed 1 first=definition/protocol-contact-two later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[3,0]
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice
+M10 seed 2 first=definition/protocol-contact-two later=["definition/protocol-contact-one","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice
+M10 seed 3 first=definition/protocol-contact-two later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice
+M10 seed 4 first=definition/protocol-contact-two later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice
+M10 seed 5 first=definition/protocol-contact-two later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice
+M10 seed 6 first=definition/protocol-contact-two later=["definition/protocol-contact-one","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice
+M10 seed 7 first=definition/protocol-contact-two later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice
+M10 seed 8 first=definition/protocol-contact-two later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice
+M10 seed 9 first=definition/protocol-contact-two later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice
+M10 seed 10 first=definition/protocol-contact-two later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice
+M10 seed 11 first=definition/protocol-contact-two later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[3,0]
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice
+M10 seed 12 first=definition/protocol-contact-two later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice
+M10 seed 13 first=definition/protocol-contact-two later=["definition/protocol-contact-one","definition/protocol-contact-two"] draws=[3,0]
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice
+M10 seed 14 first=definition/protocol-contact-two later=["definition/protocol-contact-one","definition/protocol-contact-two"] draws=[2,0]
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice
+M10 seed 15 first=definition/protocol-contact-two later=["definition/protocol-contact-two","definition/protocol-contact-two"] draws=[2,0]
+M10 later choices differ=4/16; actual overlapping draw pairs=0; overflow witnesses=12
+
+stdout | src/test/assembledActionBody.test.ts > M10 executed-action feedback > controls: late failure after actual body application rolls back state, outputs, trace and queue
+M10 late rollback 33 events; limit32
+
+ ✓ src/test/assembledActionBody.test.ts (7 tests) 188390ms
+   ✓ M10 executed-action feedback > fixed16-seed matrix: identical first intent, actual actuation, later perception and changed later choice 116527ms
+   ✓ M10 executed-action feedback > controls: without later sensing hidden actuation cannot change cognition, even with recalled old context 7741ms
+   ✓ M10 executed-action feedback > controls: whole-prefix repeat/restore after physical actuation at3 matches later boundaries and real draws 30601ms
+   ✓ M10 executed-action feedback > controls: hidden levels preserve safe cognition; zero/unselected mappings and absent choice cannot create gain 18231ms
+   ✓ M10 executed-action feedback > controls: late failure after actual body application rolls back state, outputs, trace and queue 4799ms
+   ✓ M10 executed-action feedback > controls: governed configuration rejects missing/foreign/duplicate/invalid effects and forged public source 6468ms
+   ✓ M10 executed-action feedback > controls: private execution binding rejects foreign attempts, forged/duplicate children and repeated execution 4022ms
+
+ Test Files  2 passed (2)
+      Tests  13 passed | 1 skipped (14)
+   Start at  16:43:50
+   Duration  278.26s (transform 1.29s, setup 0ms, collect 2.52s, tests 275.09s, environment 0ms, prepare 175ms)
+
+exit=0 seconds=279.7680109
+PASS historical105 dependency/config/original-fixture guard vsdb0ca7a8; M1 test/control vs31553ea7. No historical byte-replay invalidator. seconds=0.265
+npm run check:boundaries
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+exit=0 seconds=2.5190687
+npm run check:research
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+exit=0 seconds=4.1513675
+PASS final caps: production/test10/12; evidence2/20 bytes=22183/5242880; register bytes=65481/65536; AGENTS.md:96/120, docs/planning/CURRENT.md:34/80, docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md:249/250, docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md:130/250; git diff --check PASS; seconds=0.466

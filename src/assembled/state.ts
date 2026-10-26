@@ -10,6 +10,7 @@ import {predictionModelReviewSource} from '../campaign2/predictionModelReview';
 import {decodeCognitive,cognitiveRecord as r} from '../campaign2/cognitiveCodecs';
 import {validateIdentityHistory,readQ} from '../campaign2/cognitiveMath';
 import {dataRecord as rec,dataField as f,dataIdentity as id,dataItems as items,dataKey as key,dataText as txt,dataUnsigned as u,invalidModel} from '../campaign2/canonicalData';
+import {withSkillState} from './skill';
 import {withRetentionState} from './retention';
 import {withEpisodicState} from './memory';
 import {withBodyState} from './body';
@@ -67,10 +68,12 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  });
  const episodes=model.memory?withEpisodicState(inheritedState,C,model.body!):inheritedState;
  const embodied=model.body?withBodyState(episodes,C,model.body):episodes;
- const stateModel=model.retention?withRetentionState(embodied,C):embodied;
+ const retained=model.retention?withRetentionState(embodied,C):embodied;
+ const stateModel=model.skill?withSkillState(retained,C):retained;
  function initialState(bytes:Uint8Array){
   const state=stateModel.restoreState(bytes);
   for(const e of state.entries()){
+   if(model.skill&&[785n,1500n].includes(e.path.rootStateTypeId))invalidModel('initial skill/development must be absent');
    if(e.path.rootStateTypeId===455n){const at=f(rec(e.value,454n),2n);if(typeof at==='boolean'||at.kind!=='signed'||at.value!==0n)invalidModel('initial body anchor must be at0');}
    if([346n,362n,415n].includes(e.path.rootStateTypeId))invalidModel('initial learned memory, prediction and identity must be empty');
    if(e.path.rootStateTypeId===373n&&e.path.fieldId===1n&&u(f(rec(e.value,372n),1n))!==1n)invalidModel('initial tasks must be Open');

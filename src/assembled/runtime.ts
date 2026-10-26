@@ -25,6 +25,9 @@ import {createCognitiveExecution} from './execution';
 import {compileCharacterTraceBinding} from './traceBinding';
 import {prepareEpisodicRetention} from './retention';
 import {createEpisodicExtension} from './memory';
+import {createSkillExecution} from './skillExecution';
+import {PRACTICE_SETTING,PRACTICE} from './skill';
+import {ACTION_BODY_EVENT} from './actionBody';
 import {createBodyExecution,BODY_SAMPLE,BODY_DELIVERY,BODY_SELECTION} from './body';
 import type {compileCharacterInputs} from './inputs';
 import type {compileCharacterModel} from './model';
@@ -37,7 +40,8 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
  const task=Object.freeze({base,content,stateModel,tasks:component.tasks,measurement:component.measurement,deadline:component.deadline,predictionComponent:prediction});
  const maxWork=compileCampaign2Parameters(model.source.parameterSchemaVersion,model.source.parameters).maxWork;
  const modelIdentity=model.modelIdentity.value;
- const body=model.body?createBodyExecution(model.body,component.tasks[0].character,stateModel,inputs.bodyEvents,modelIdentity,inputs.runIdentity.value,model.actionBody):undefined;
+ const procedure=model.skill?createSkillExecution(component.tasks[0].character,stateModel,inputs.skillEvents,modelIdentity,inputs.runIdentity.value):undefined;
+ const body=model.body?createBodyExecution(model.body,component.tasks[0].character,stateModel,inputs.bodyEvents,modelIdentity,inputs.runIdentity.value,model.actionBody,procedure):undefined;
  const episodes=model.memory?createEpisodicExtension(component.tasks[0].character,model.body!,stateModel,modelIdentity,inputs.runIdentity.value,model.retention?.recallDelay,model.retrieval,model.workspace):undefined;
  const cognitive=createCognitiveExecution(model,component,inputs,()=>body?.evidence(),()=>episodes?.currentRecalls()??[]);
  const probeModel=base.probe,measurement=base.measurement,domains=base.domains,shared=bindings.admission,evaluator=bindings.evaluator;
@@ -57,10 +61,12 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
     if(handlers.has(eventKey))throw new SchedulerContractError('INVALID_CONFIGURATION','event has multiple fixed runtime adapters');handlers.set(eventKey,handler);
   };
   for(const eventType of episodes?.eventTypes()??[])registerHandler(key(eventType),context=>episodes!.execute(context));
+  if(procedure){registerHandler(key(PRACTICE_SETTING),context=>procedure.execute(context));registerHandler(key(PRACTICE),()=>{throw new SchedulerContractError('INPUT_NOT_ADMITTED','practice requires prepared stage');});}
   for(const eventType of body?.eventTypes()??[])registerHandler(key(eventType),context=>{
    const result=body!.execute(context),extra=episodes&&key(context.event.eventTypeId)===key(BODY_SELECTION)?episodes.observeSelection(context.event,body!.evidence()):undefined;
-   if(!extra)return result;
-   const own=result.emittedEvents.length;return {...result,emittedEvents:[...result.emittedEvents,...extra.emissions],traceFactory(children:readonly ScheduledEvent[]){const trace=result.traceFactory(children.slice(0,own));extra.bind(children.slice(own));return [...trace,extra.trace(children.slice(own))];}};
+   const practice=procedure&&key(context.event.eventTypeId)===key(ACTION_BODY_EVENT)?procedure.observeEffect(context.event,result.outputs):undefined;
+   if(!extra&&!practice)return result;
+   const own=result.emittedEvents.length,extraEvents=extra?.emissions??[];return {...result,emittedEvents:[...result.emittedEvents,...extraEvents,...(practice?.emissions??[])],traceFactory(children:readonly ScheduledEvent[]){const trace=result.traceFactory(children.slice(0,own)),middle=children.slice(own,own+extraEvents.length),tail=children.slice(own+extraEvents.length);extra?.bind(middle);practice?.bind(tail);return [...trace,...(extra?[extra.trace(middle)]:[]),...(practice?[practice.trace(tail)]:[])];}};
   });
   for(const eventType of probeModel.eventTypes()??[])registerHandler(key(eventType),context=>{
    if(!probe||!ingress||!probeSource)throw new SchedulerContractError('INPUT_NOT_ADMITTED','probe outside live instant');
@@ -147,13 +153,16 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
     adaptationSettlement:{version:'adaptation-settlement/0.2-candidate',
       beforeInstant(state,instant){
         domains.validateStatic(state);domains.validateReferences(state,instant);
-        probeInstant=false;runtimeCount=0;childCount=0;carriagePadding=undefined;memoryRuntime.begin(instant);predictionRuntime.begin(instant);taskRuntime.begin(instant);cognitive.begin(instant);body?.begin(instant);episodes?.begin(instant);
+        probeInstant=false;runtimeCount=0;childCount=0;carriagePadding=undefined;memoryRuntime.begin(instant);predictionRuntime.begin(instant);taskRuntime.begin(instant);cognitive.begin(instant);body?.begin(instant);episodes?.begin(instant);procedure?.begin(instant);
         ingress=beginTransitionIngressV04(shared,instant);
 
         probe=probeModel.begin(instant);probeSource=beginProbeSourceInstant(inputs.base,instant);
       },
       prepare(events,state,instant){
         if(!ingress)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','missing live ingress');
+        const allEvents=events,practiceEvents=events.filter(e=>procedure?.isPractice(e));
+        const practiceStage=practiceEvents.length?procedure!.prepare(practiceEvents,state):undefined;
+        events=events.filter(e=>!procedure?.isPractice(e));
         function joinedStage(){
         function inheritedStage(events:readonly ScheduledEvent[]){
         cognitive.validateParticipants(events);
@@ -242,14 +251,18 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
         }
         const stage=joinedStage();
         const retention=model.retention?prepareEpisodicRetention(events,state,component.tasks[0].character,model.retention,stateModel,modelIdentity,inputs.runIdentity.value):undefined;
-        if(!retention)return stage;
-        return {execute(context:EventHandlerContext<AuthoritativeState>){const result=stage.execute(context);return context.event.eventId===retention.anchor.eventId?{...result,outputs:[...result.outputs,retention.audit]}:result;},
+        const retained=retention?{execute(context:EventHandlerContext<AuthoritativeState>){const result=stage.execute(context);return context.event.eventId===retention.anchor.eventId?{...result,outputs:[...result.outputs,retention.audit]}:result;},
          finish(){return retention.finish(stage.finish());},
-         finalizeTrace(){const rows=stage.finalizeTrace();return rows.flatMap((row,index)=>events[index].eventId===retention.anchor.eventId?[row,retention.trace()]:[row]);}};
+         finalizeTrace(){const rows=stage.finalizeTrace();return rows.flatMap((row,index)=>events[index].eventId===retention.anchor.eventId?[row,retention.trace()]:[row]);}}:stage;
+        if(!practiceStage)return retained;
+        let cursor=0,finished=false;
+        return {execute(context:EventHandlerContext<AuthoritativeState>){if(finished||cursor>=allEvents.length||key(scheduledEventValue(context.event))!==key(scheduledEventValue(allEvents[cursor++])))throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','procedural common stage order');return procedure!.isPractice(context.event)?practiceStage.execute(context):retained.execute(context);},
+         finish(){if(finished||cursor!==allEvents.length)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','incomplete procedural common stage');finished=true;return practiceStage.finish(retained.finish());},
+         finalizeTrace(){if(!finished)throw new SchedulerContractError('TRACE_VALIDATION_FAILURE','procedural trace before finish');const rows=[...retained.finalizeTrace(),...practiceStage.traces()];return allEvents.flatMap(e=>rows.filter(row=>key(f(rec(f(rec(row,160n),4n),130n),1n))===key({kind:'unsigned',value:e.eventId})));}};
       },
-      beforeCommit(state,instant){domains.validateStatic(state);domains.validateReferences(state,instant);probe?.finish();body?.prepareCommit();episodes?.prepareCommit();ingress!.finish();if(probeInstant&&(runtimeCount!==7||childCount!==14||carriagePadding))throw new SchedulerContractError('TRANSITION_INGRESS_VIOLATION','carriage/memory budget closure');taskRuntime.prepareCommit(state);predictionRuntime.prepareCommit();cognitive.prepareCommit();memoryRuntime.commit();episodes?.commit();predictionRuntime.commit();taskRuntime.commit();cognitive.commit();},
-      close(){episodes?.close();body?.close();memoryRuntime.close();predictionRuntime.close();taskRuntime.close();cognitive.close();ingress?.abort();probe?.abort();probeSource?.close();ingress=undefined;probe=undefined;probeSource=undefined;},
-      validateRuntimeEmission(event){if(key(event.eventTypeId)===key(BODY_SAMPLE)||key(event.eventTypeId)===key(BODY_DELIVERY)||key(event.eventTypeId)===key(AUTHORED_FACT_EVENT)||key(event.eventTypeId)===key(PROBE_SOURCE_EVENT)||key(event.eventTypeId)===key(DELIBERATION_EVENT)||key(event.eventTypeId)===key(TASK_DEADLINE_EVENT))throw new SchedulerContractError('INPUT_ONLY_EVENT_ORIGIN_VIOLATION','sources are compiler-only inputs');},
+      beforeCommit(state,instant){domains.validateStatic(state);domains.validateReferences(state,instant);probe?.finish();procedure?.prepareCommit();body?.prepareCommit();episodes?.prepareCommit();ingress!.finish();if(probeInstant&&(runtimeCount!==7||childCount!==14||carriagePadding))throw new SchedulerContractError('TRANSITION_INGRESS_VIOLATION','carriage/memory budget closure');taskRuntime.prepareCommit(state);predictionRuntime.prepareCommit();cognitive.prepareCommit();memoryRuntime.commit();episodes?.commit();predictionRuntime.commit();taskRuntime.commit();cognitive.commit();},
+      close(){procedure?.close();episodes?.close();body?.close();memoryRuntime.close();predictionRuntime.close();taskRuntime.close();cognitive.close();ingress?.abort();probe?.abort();probeSource?.close();ingress=undefined;probe=undefined;probeSource=undefined;},
+      validateRuntimeEmission(event){if(key(event.eventTypeId)===key(PRACTICE_SETTING)||key(event.eventTypeId)===key(BODY_SAMPLE)||key(event.eventTypeId)===key(BODY_DELIVERY)||key(event.eventTypeId)===key(AUTHORED_FACT_EVENT)||key(event.eventTypeId)===key(PROBE_SOURCE_EVENT)||key(event.eventTypeId)===key(DELIBERATION_EVENT)||key(event.eventTypeId)===key(TASK_DEADLINE_EVENT))throw new SchedulerContractError('INPUT_ONLY_EVENT_ORIGIN_VIOLATION','sources are compiler-only inputs');},
     },
   });
   // Only quiescent observations/settlement are exposed. No injection, allocator or handler API.

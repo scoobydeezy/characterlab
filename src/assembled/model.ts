@@ -14,10 +14,13 @@ import {dataRecord as rec,dataField as f,dataItems as items,dataKey as key,dataI
 import type {Campaign2ModelSource} from '../campaign2/factory';
 
 import {decodeEmbodied} from '../campaign3/embodiedCodecs';
+import {compileSkill} from './skill';
 import {compileActionBody} from './actionBody';
 import {compileRetrievalDeclaration} from './retrieval';
 import {compileRetentionDeclaration} from './retention';
 import {compileBodyDeclaration} from './body';
+export const SKILL_RULES='rules/assembled-character/0.11-candidate';
+export const SKILL_REGISTRY='assembled-character-registry/0.11-candidate';
 export const ACTION_BODY_RULES='rules/assembled-character/0.10-candidate';
 export const ACTION_BODY_REGISTRY='assembled-character-registry/0.10-candidate';
 export const MEMORY_CONTEXT_RULES='rules/assembled-character/0.9-candidate';
@@ -78,10 +81,11 @@ function topology(registry:CanonicalValue,calibrated=false,memoryContext=false){
 }
 export async function compileCharacterModel(input:Campaign2ModelSource){
  const source=snapshotMemorySource(input);
- const actionBodyEnabled=source.rulesVersion===ACTION_BODY_RULES,memoryContext=actionBodyEnabled||source.rulesVersion===MEMORY_CONTEXT_RULES,workspace=memoryContext||source.rulesVersion===WORKSPACE_RULES,retrievalEnabled=workspace||source.rulesVersion===RETRIEVAL_RULES,retained=retrievalEnabled||source.rulesVersion===RETENTION_RULES,memory=retained||source.rulesVersion===MEMORY_RULES,attention=memory||source.rulesVersion===ATTENTION_RULES,calibrated=attention||source.rulesVersion===CALIBRATED_RULES,interaction=calibrated||source.rulesVersion===INTERACTION_RULES;
- if((interaction?source.registrySchemaVersion!==(actionBodyEnabled?ACTION_BODY_REGISTRY:memoryContext?MEMORY_CONTEXT_REGISTRY:workspace?WORKSPACE_REGISTRY:retrievalEnabled?RETRIEVAL_REGISTRY:retained?RETENTION_REGISTRY:memory?MEMORY_REGISTRY:attention?ATTENTION_REGISTRY:calibrated?CALIBRATED_REGISTRY:INTERACTION_REGISTRY):source.rulesVersion!==CHARACTER_RULES||source.registrySchemaVersion!==CHARACTER_REGISTRY)||source.contentSchemaVersion!=='content/0.2-candidate'||source.parameterSchemaVersion!=='campaign2-parameters/0.1-candidate'||source.numericProfileVersion!=='numeric/task-cognitive-exact/0.1-candidate'||source.randomAlgorithmVersion!==RANDOM_ALGORITHM_VERSION)invalidModel('unsupported assembled model version bundle');
+ const skill=source.rulesVersion===SKILL_RULES,actionBodyEnabled=skill||source.rulesVersion===ACTION_BODY_RULES,memoryContext=actionBodyEnabled||source.rulesVersion===MEMORY_CONTEXT_RULES,workspace=memoryContext||source.rulesVersion===WORKSPACE_RULES,retrievalEnabled=workspace||source.rulesVersion===RETRIEVAL_RULES,retained=retrievalEnabled||source.rulesVersion===RETENTION_RULES,memory=retained||source.rulesVersion===MEMORY_RULES,attention=memory||source.rulesVersion===ATTENTION_RULES,calibrated=attention||source.rulesVersion===CALIBRATED_RULES,interaction=calibrated||source.rulesVersion===INTERACTION_RULES;
+ if((interaction?source.registrySchemaVersion!==(skill?SKILL_REGISTRY:actionBodyEnabled?ACTION_BODY_REGISTRY:memoryContext?MEMORY_CONTEXT_REGISTRY:workspace?WORKSPACE_REGISTRY:retrievalEnabled?RETRIEVAL_REGISTRY:retained?RETENTION_REGISTRY:memory?MEMORY_REGISTRY:attention?ATTENTION_REGISTRY:calibrated?CALIBRATED_REGISTRY:INTERACTION_REGISTRY):source.rulesVersion!==CHARACTER_RULES||source.registrySchemaVersion!==CHARACTER_REGISTRY)||source.contentSchemaVersion!=='content/0.2-candidate'||source.parameterSchemaVersion!=='campaign2-parameters/0.1-candidate'||source.numericProfileVersion!=='numeric/task-cognitive-exact/0.1-candidate'||source.randomAlgorithmVersion!==RANDOM_ALGORITHM_VERSION)invalidModel('unsupported assembled model version bundle');
  const registry=decodeEmbodied(source.registry),allSlots=items(registry,'list');
- if(allSlots.length!==(actionBodyEnabled?11:retrievalEnabled?10:retained?9:attention?8:interaction?7:6))invalidModel('assembled registry slot count');
+ if(allSlots.length!==(skill?12:actionBodyEnabled?11:retrievalEnabled?10:retained?9:attention?8:interaction?7:6))invalidModel('assembled registry slot count');
+ if(skill)compileSkill(allSlots[11]);
  const retrieval=retrievalEnabled?compileRetrievalDeclaration(allSlots[9]):undefined;
  const retention=retained?compileRetentionDeclaration(allSlots[8]):undefined;
  let selectionCapacity:number|undefined;
@@ -96,5 +100,5 @@ export async function compileCharacterModel(input:Campaign2ModelSource){
  if(key(shape)!==key(topology(decodeCognitive(hex(registryHex)))))invalidModel('undeclared topology change: references, schemas, phases, ownership and producers are fixed');
  const actionBody=actionBodyEnabled?compileActionBody(allSlots[10],body!.capacity,items(slots[0],'set').filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n&&key(f(v,2n))===key({kind:'typedIdentifier',namespaceId:1023n,payload:{kind:'text',value:'registry/protocol-action'}})).map(v=>({action:f(rec(v,171n),1n),definition:f(rec(v,171n),4n)}))):undefined;
  const modelIdentity=await createModelIdentity({...source,contentManifest:await commitManifest(decodeCognitive(source.content)),registryManifest:await commitManifest(registry),parameterSet:await commitManifest(decodeCognitive(source.parameters))});
- return Object.freeze({source,modelIdentity,content,structuralState,body,baseRegistry,memory,retention,retrieval,workspace,memoryContext,actionBody});
+ return Object.freeze({source,modelIdentity,content,structuralState,body,baseRegistry,memory,retention,retrieval,workspace,memoryContext,actionBody,skill});
 }

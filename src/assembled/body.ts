@@ -15,6 +15,7 @@ import {assemblePreRecognitionExperience} from '../semanticBinding/perceptualEve
 import {preRecognitionSemanticExperienceValue} from '../semanticBinding/semanticEvidenceCodecs';
 import {dataItems as items,dataField as f,dataRecord as rec,dataKey as key,dataIdentity as id,dataText as txt,invalidModel} from '../campaign2/canonicalData';
 import {ACTION_BODY,ACTION_BODY_EVENT,selectedBodyEffect,type ActionBodyDeclaration} from './actionBody';
+import type {createSkillExecution} from './skillExecution';
 import type {compileCampaign2StateModel} from '../campaign2/stateModel';
 export const bodyId=(ns:number,name:string)=>typedIdentifier(ns,text(name));
 export const BODY_SAMPLE=bodyId(1001,'event/assembled-body-sample'),BODY_DELIVERY=bodyId(1001,'event/assembled-body-delivery');
@@ -55,7 +56,7 @@ export function withBodyState(base:ReturnType<typeof compileCampaign2StateModel>
  });
 }
 export interface BodyEvidence {sample?:CanonicalValue;experience?:CanonicalValue;selection?:CanonicalValue;settledEvent:ScheduledEvent;}
-export function createBodyExecution(d:BodyDeclaration,C:CanonicalValue,stateModel:ReturnType<typeof compileCampaign2StateModel>,originals:readonly ScheduledEvent[],model:CanonicalValue,run:CanonicalValue,actionBody?:ActionBodyDeclaration){
+export function createBodyExecution(d:BodyDeclaration,C:CanonicalValue,stateModel:ReturnType<typeof compileCampaign2StateModel>,originals:readonly ScheduledEvent[],model:CanonicalValue,run:CanonicalValue,actionBody?:ActionBodyDeclaration,procedure?:ReturnType<typeof createSkillExecution>){
  const path=bodyPath(C),roster:StatePath={rootStateTypeId:268n,fieldId:1n,selectors:[{kind:'mapKey',key:BODY_OBSERVER}]};
  const names=['tracking','binding','classification','freeze'],internal=names.map(n=>bodyId(1001,'event/assembled-body-'+n));
  const executionParents=new Set<bigint>();const pending=new Map<string,ScheduledEvent>();let unboundEffects=0,at=0n,active=false,used=new Set<bigint>(),reservations:ExperienceReservation[]=[],staged:StagedSemanticExperience[]=[],current:BodyEvidence|undefined;
@@ -84,13 +85,14 @@ export function createBodyExecution(d:BodyDeclaration,C:CanonicalValue,stateMode
     const generated=key(event.eventTypeId)===key(ACTION_BODY_EVENT);if(!generated&&key(event.eventTypeId)!==key(BODY_DELIVERY)||generated&&!actionBody)fail('body delivery event');
     const effect=generated?selectedBodyEffect(event.payload,C,actionBody!):undefined,payload=generated?undefined:items(event.payload,'list');
     if(payload&&(payload.length!==2||key(payload[0])!==key(C)))fail('body delivery target');
-    const amount=effect?.requested??exact(payload![1]);let physical:CanonicalValue=list([]);
-    if(!effect||effect.applied){
+    const amount=effect?.requested??exact(payload![1]),assessment=effect&&procedure?procedure.assess(context,effect.applied):undefined,applies=assessment?assessment.allowed:effect?.applied;let physical:CanonicalValue=list([]);
+    if(assessment){reads=[...assessment.reads];domain=[...assessment.domain];}
+    if(!effect||applies){
      const prior=read(state,path,'accessor/embodied-reserve-anchor'),anchor=rec(prior.value,454n),anchorAt=f(anchor,2n);if(typeof anchorAt==='boolean'||anchorAt.kind!=='signed')fail('body anchor');
-     reads=[...prior.reads];domain=[exactPattern(path)];const level=materializeReserve(exact(f(anchor,1n)),(anchorAt as {value:bigint}).value,d.capacity,d.rate,at);
+     reads=[...reads,...prior.reads];domain=[...domain,exactPattern(path)];const level=materializeReserve(exact(f(anchor,1n)),(anchorAt as {value:bigint}).value,d.capacity,d.rate,at);
      const proposal=proposeEmbodiedReplenishment(anchor,level,d.capacity,amount,at,path);patch=proposal.patch;const applied=stateModel.applyPatch(state,patch,BODY_OWNER,{writableRoots:[455n],targetPaths:[path]});nextState=applied.state;diffs=applied.diffs;physical=proposal.output;
     }
-    if(effect){sources=[id(effect.outcomeId),id(effect.attemptId)];outputs=[list([text(ACTION_BODY),effect.outcomeId,effect.attemptId,effect.action,atom(amount),text(effect.applied?'Applied':'Blocked'),physical])];}else outputs=[physical];
+    if(effect){sources=[id(effect.outcomeId),id(effect.attemptId)];outputs=[list([text(ACTION_BODY),effect.outcomeId,effect.attemptId,effect.action,atom(amount),text(applies?'Applied':'Blocked'),physical]),...(assessment?[assessment.output]:[])];}else outputs=[physical];
    }else if(event.phase===10n){
     if(key(event.eventTypeId)!==key(BODY_SAMPLE))fail('body sample event');const cue=rec(event.payload,459n);if(key(f(cue,1n))!==key(BODY_OBSERVER)||key(f(cue,2n))!==key(BODY_DEFINITION))fail('body observer/channel');
     const binding=read(state,roster,'ResolvedCharacterSubject');if(key(f(rec(binding.value,267n),1n))!==key(C))fail('body IDN target mismatch');reads=[...binding.reads];domain=[exactPattern(roster),exactPattern(path)];
@@ -123,7 +125,7 @@ export function createBodyExecution(d:BodyDeclaration,C:CanonicalValue,stateMode
    }
    return {nextState,outputs,emittedEvents:emissions,traceContributions:[],traceFactory(children:readonly ScheduledEvent[]){
     if(children.length!==emissions.length)fail('body child multiplicity');for(const [i,child] of children.entries()){const e=emissions[i],expected={...e,eventId:child.eventId,eventSequence:child.eventSequence,causalParentEventIds:[event.eventId]};if(child.eventSequence<=event.eventSequence||pending.has(key(scheduledEventValue(child)))||key(scheduledEventValue(child))!==key(scheduledEventValue(expected)))fail('body child differs from generated plan');pending.set(key(scheduledEventValue(child)),structuredClone(child));}
-    return [traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model,runIdentity:run,event,seamId:bodyId(1036,'seam/assembled-body'),seamVersion:key(event.eventTypeId)===key(ACTION_BODY_EVENT)?'assembled-character-action-body/0.1-candidate':d.selectionCapacity===undefined?'assembled-character-interaction/0.1-candidate':'assembled-character-attention/0.1-candidate',recordKind:event.eventTypeId,subjectIds:[id(C),BODY_OBSERVER],sourceRecordIds:sources,registeredReadDomain:domain,actualReadRecords:reads,inputProjection:event.payload,outputProjection:list(outputs),randomDrawRecords:[],quantizationOperations:quantization,statePatch:patch,structuralMutationDiffs:diffs,emittedEvents:children,invariantResults:[]})];
+    return [traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model,runIdentity:run,event,seamId:bodyId(1036,'seam/assembled-body'),seamVersion:key(event.eventTypeId)===key(ACTION_BODY_EVENT)?(procedure?'assembled-character-procedural/0.1-candidate':'assembled-character-action-body/0.1-candidate'):d.selectionCapacity===undefined?'assembled-character-interaction/0.1-candidate':'assembled-character-attention/0.1-candidate',recordKind:event.eventTypeId,subjectIds:[id(C),BODY_OBSERVER],sourceRecordIds:sources,registeredReadDomain:domain,actualReadRecords:reads,inputProjection:event.payload,outputProjection:list(outputs),randomDrawRecords:[],quantizationOperations:quantization,statePatch:patch,structuralMutationDiffs:diffs,emittedEvents:children,invariantResults:[]})];
    }};
   },
   prepareCommit(){if(!active||unboundEffects||pending.size||originals.some(e=>e.dueAt===at&&!used.has(e.eventId)))fail('unfinished body instant');validateSuccessfulExperienceSettlement(reservations,staged);},
