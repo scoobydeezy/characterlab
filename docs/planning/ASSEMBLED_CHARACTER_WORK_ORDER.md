@@ -245,5 +245,5 @@ explicitly authorized beginning and completing M3 on2026-10-25. M2a is complete.
 On2026-10-26 the owner approved comparing fixed context unit1/10 with retained unit1,
 using the same four cells/eight seeds and unchanged choice gate. CURRENT.md bounds
 this M3 amendment passed. Continued assembly authorized2026-10-26; M3-M8 passed.
-Owner adjustment: close recall-to-choice before further memory mechanics; CURRENT bounds M9.
+Owner adjustment: close recall-to-choice before further memory mechanics; CURRENT bounds each next behavioral milestone.
 No assembly acceptance, publishing, unbounded integration or Campaign4/UI transition follows.

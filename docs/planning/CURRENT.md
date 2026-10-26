@@ -1,43 +1,57 @@
-# Current work — M9 memory-dependent choice complete
+# Current work — M10 executed-action feedback
 
-2026-10-26. Earlier bodily experience now changes a later actual choice through
-recall, shared workspace, appraisal and existing task reasons. No new runtime/store.
-[M9 result](ASSEMBLED_CHARACTER_M9_RESULT.md); [contract](../formal/ASSEMBLED_CHARACTER_MEMORY_CONTEXT_CONTRACT.md).
+2026-10-26. Owner authorized the next behavioral milestone under the same guardrails.
+M9 passed. M10 connects an executed choice to the body and a later perceived choice.
 
 | Status | Disposition |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 | Baseline |21 members/219 records;15 families/132 clauses; six foundations/five C2 conditions |
-| M3-M8 |Passed; original controls/failures preserved |
-| M9 |PASS: remembered-context choice effect, access ablation, continuation/boundaries |
-| Reference |Rules/registry0.9; same R2 laws; shared capacity4; retrieval1; retention8/8; delay2 |
-| Interpretation |RecalledContext, engineering default/no superiority verdict; never current sensing |
+| Base |638dc593; frozen C2db0ca7a8; separation31553ea7 |
+| M10 |Before-code plan; no implementation or pass yet |
 
-## Established result
+## Bounded card: one behavioral milestone/package
 
-Six of16 fixed-seed history pairs choose different actual actions. Goals, current
-inputs and learned forecasts are held fixed. Original episode/recall/workspace and
-reason-support links are traced. Capacity3 excludes the recalled episode without
-erasing it; both histories then produce identical NoChoice outcomes under inherited
-reason-role requirements. That is an access ablation, not an always-choosing control.
+Capabilities: (1) actual selected protocol execution triggers a governed physical
+reserve effect through the existing body owner; (2) later sensing feeds the changed
+body into a later actual choice; (3) physical blockage/no later sensing controls,
+whole-instant rollback and exact continuation preserve intent/evidence separation.
 
-Current sensing takes precedence; failed current access cannot fall back to memory.
-Current zero remains known. No handoff at6 means no recalled context despite retention.
-Hidden truth with equal evidence preserves cognition. Rolling-case repeat/restore
-matches every later whole boundary. Auto/roll pairs have zero overlapping draws;
-no fictitious shared-draw claim. Late28-event/limit27 failure rolls back the whole instant.
+Contract ASSEMBLED_CHARACTER_ACTION_BODY_CONTRACT.md,0.1; rules/registry0.10.
+LOCAL DISPOSITION: a controlled physical actuator attaches independently declared
+fuel-unit amounts to existing action identities; protocol contact counts are NOT
+converted into fuel. Reuse embodied replenishment exactly. This is environment
+configuration, not learned efficacy, an extra motive, or an alternative psychology.
+No new owner/store/runtime. M2 body/reasons/execution areas; FND1-6/C2five conditions;
+MEC003/004/012-019/022 retained. Body/DECISION clause12.1/2/14 interactions, no closure.
 
-26 distinct tests and production/test types, boundary/research checks pass. Frozen105
-closure/config/fixture and M1 guard unchanged; prior full-byte control result retained.
-Seven production/test files; two evidence files; checks under10min total. Before-code
-card08c3c154; failures/corrections and exact budgets retained in one result/raw log.
+Seven production/test files: assembled/{actionBody,body,model,runtime,traceBinding}.ts;
+test/assembledActionBody.test.ts; test/fixtures/assembledActionBody.ts.
+Risk: forged execution child, unselected-action actuation, wrong owner/phase, private
+physical outcome leaking into cognition, double delivery or partial-instant commit.
 
-## Stop and remaining work
+Fixed comparison: existing M3 history0/low body, choices3 and5, body sensing3 and5,
+no probe4 so task/forecast state stays fixed. Initial10, external delivery0 at2;
+action-one amount0, action-two80; same laws/seeds0..15. Compare actuator allowed/blocked.
+Require first intent/expression/choice/identity equal, actual selected effect at110,
+changed safe observation5, changed appraisal/reasons and >=1 changed later choice.
+Omit sensing5: retained old memory can still be recalled, but enabled/blocked physical
+histories must yield identical cognition through5. No seed/parameter search on failure.
+Compare actual same-address draw records where present; never invent Auto draws.
 
-The owner adjustment is recorded: milestones finish behavioral connections; bounded
-packages are not separate capability completions. No unrelated breadth between them.
-This candidate interprets a recalled context; it does not establish current reserve,
-action efficacy, general memory inference or completed assembly. No member/clause or
-conditional obligation closes; RO-C3-011 remains. Other architecture areas and the
-full pinned replay remain. Prepare only the next bounded card before new code.
-No next package opened. UI/Campaign4 and old audits remain stopped.
+Validation sequential: <=10min/command, <=30min total; <=20 evidence files/5MiB.
+1. Production/test tsc (schema/adapter mismatch).
+2. Fixed16-seed M10 matrix (physical-to-perceived-to-choice causal gate).
+3. Other M10 tests: no sensing; first/frozen expression and identity; hidden truth;
+   zero/unselected effect, capacity/overflow, no choice/no actuation, denial;
+   malformed declaration/reference/source; duplicate/forged child; repeat/restore
+   after3 and every later boundary; late failure after actual physical application.
+4. Existing M9 tests and cognitive-transform tests (prior behavior/dice/access).
+5. Frozen105 closure/config/fixture and M1 guard; boundary/research; doc/evidence/index caps.
+Full C2 byte replay only on guard invalidation, per V1. Preserve prior receipt otherwise.
+One result/raw log. No browser, copies, verifier chain or additional sweep on pass.
+
+Done only if the physical feedback changes a later actual choice and removing later
+perception removes that effect, with all controls passing. Otherwise incomplete;
+no report-only package completion. Stop before another milestone. No skill/habit/
+relief-belief or full assembled claim. UI/Campaign4 remain stopped.
