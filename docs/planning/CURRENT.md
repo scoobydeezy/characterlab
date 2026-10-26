@@ -1,42 +1,48 @@
-# Current work — M6 finite episodic retention complete
+# Current work — M7 cue-based body recall
 
-2026-10-26. The character now loses episodes under finite evidence-kind budgets and
-reports genuine later recall misses. Learned beliefs can survive loss of the episode.
-[M6 result](ASSEMBLED_CHARACTER_M6_RESULT.md); [contract](../formal/ASSEMBLED_CHARACTER_RETENTION_CONTRACT.md).
+2026-10-26. M6 at602a22c6 gives one continuing character finite episodic memory.
+M7 replaces exact body-episode lookup with signal-cued, capacity-limited retrieval
+from that same owner. It adds no current-body inference or new learning from recall.
 
 | Status | Disposition |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 | Baseline |21 members/219 records;15 families/132 clauses; six foundations/five C2 conditions |
-| M3/M4/M5 |Passed at02901a38/31260a24/62ef1333; controls/failures preserved |
-| M6 |PASS: finite retention, missing recall, distinct learned belief, atomic continuation |
-| Reference |Rules/registry0.6; diagnostic8/body8 slots; generated body recall delay2 |
-| Comparisons |0.5; capacities0/1/2; delay1 correspondence control |
+| Last result |[M6](ASSEMBLED_CHARACTER_M6_RESULT.md), frozen controls retained |
+| Active |M7; before-code card and [contract](../formal/ASSEMBLED_CHARACTER_RETRIEVAL_CONTRACT.md) |
 
-## Established result
+## Bounded card, written before implementation
 
-One346/1 store and episodic authority govern both payload kinds. Capacity partitions
-remain separate as the accepted law requires. Current episodes have no qualified credit,
-so this uses SignificanceFirst's unprotected tier only. Original age and canonical tie
-order determine loss; surviving records keep their bytes. No new store/runtime/save.
+Three capabilities: an authenticated delayed channel cue searches surviving episodes;
+a fixed slot limit distinguishes retained from accessed; repeat/restore and failed
+instants preserve the one state/queue/trace/save. Reference retrieval slots1 (engineering
+default, no verdict); body retention8, delay2 remain. Versions0.1..0.6 stay controls.
+Baseline areas M3/M4, FND3/4/6, Brief12.3 and12.2; no clause/member closure.
+MEC-010/011/022 remain distinct; accepted BODY_RECALL_RECENCY_COMPONENT governs rank.
+LOCAL DISPOSITION: the qualified channel identity is the cue, not private acquisition
+identity or intensity. No cross-kind ranking, recency refresh, credit or reconstruction.
 
-Body samples at3/4 with capacity1 lose the first episode before its generated recall5;
-capacity2 keeps both. The survivor recalls unchanged at6. Reference capacity8 loses the
-oldest after nine samples at9. Diagnostic capacity0 removes episodes while preserving
-learned prediction, tested choice/draws and all non-memory state. No budget borrowing.
-Four M3 cells at seed7 with capacity8/delay1 preserve M5 full state, existing outputs
-and actual draws; only retention/access audits are added. Reference delay2 changes timing.
+At most six production/test files: assembled/{model,memory,runtime,traceBinding,
+retrieval}.ts and test/assembledRetrieval.test.ts. No state schema or frozen C2 edits.
+Compare four M3 cells at seed7 against0.6: exact state, existing non-recall outputs,
+actual RNG draws; singleton recalled episode bytes identical. Traces differ only at
+new model/run binding and the declared memory cue/read/output seam. Retain0.6 exact
+lookup as the semantic comparator; two samples at3/4, recall5 must select the newer
+matching episode rather than the original3. Slots0/1/2 alter access, never retention.
 
-Repeat/restore after committed loss match every later full boundary. Hidden truth,
-exclusion/denial, zero-vs-absence, joint formation/loss, rollback and invalid inputs pass.
-36 tests and type/boundary/research checks pass; frozen105 control dependencies and
-fixture/config remain unchanged. Seven production/test files. One corrected test-builder
-syntax failure retained. Checks and result/log stay within declared runtime/output caps.
+Checks in order, one job at a time: production/test typecheck; new integration tests
+plus bodyRecall tests (ranking/domain); M6 regression suite (formation/loss/old lookup).
+New tests cover kernel correspondence including canonical ties/permutations and >32
+stored candidates; actual read provenance, competing episodes, present-zero sample,
+exclusion/denial, retained-but-inaccessible, loss, hidden truth, authored cue rejection,
+repeat/restore after4 at each later boundary, and late-instant rollback after retrieval.
+Frozen105 dependency/config/fixture/M1 diff guard retains prior full control results.
+Then boundary/research, document budgets and staged git-size. These catch accidental
+control mutation, evidence leakage, undeclared seams and lost obligation accounting.
 
-## Stop and remaining work
-
-Use/significance credit and the rest of SignificanceFirst, selective encoding,
-reconstruction, rich perception, association, shared workspace and using recalled body
-evidence in reasoning remain open. Preserve one owner; do not create subsystem stores.
-No next package opened here; prepare its bounded card before code. No corpus clause or
-conditional obligation closes. RO-C3-011 unchanged. UI/Campaign4/old audits stay stopped.
+Limits:12 files ceiling (six planned),20 evidence files/5MiB (one result/log planned),
+10min/command,30min total checks,32 settled instants per test run (cap is failure).
+Done iff all declared comparisons/negative controls pass within budgets; otherwise
+record incomplete. Stop testing on pass. No browser/UI, corpus expansion or audit chain.
+Next integration is not opened by this card; recalled body evidence still has no
+workspace/reason consumer. Full significance, rich perception and remaining areas stay open.
