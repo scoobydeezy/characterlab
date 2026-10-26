@@ -1,42 +1,53 @@
-# Current work — M5 shared episodic connection complete
+# Current work — M6 finite retention through the common episodic owner
 
-2026-10-26. The character now retains selected body observations in the existing
-episodic store and recalls them as past evidence, preserving time and uncertainty.
-[M5 result](ASSEMBLED_CHARACTER_M5_RESULT.md); [contract](../formal/ASSEMBLED_CHARACTER_MEMORY_CONTRACT.md).
+2026-10-26. Owner continuation authorizes this bounded package after M5 at62ef1333.
+Episodes will compete within declared evidence-kind budgets. A lost episode must
+become unavailable to later exact recall while already learned beliefs remain intact.
 
 | Status | Disposition |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
-| Baseline |21 members/219 records;15 families/132 clauses; six foundations/five C2 conditions |
-| M3/M4 |Passed at02901a38/31260a24; controls and earlier failure preserved |
-| M5 |PASS: selected formation, joint settlement, exact past access and continuation |
-| Reference |Rules/registry0.5; capacity1; unchanged context unit1/10 |
-| Comparison |0.4; capacity0, denied/unavailable; old versions remain executable |
+| Baseline |21 members/219 records;15 families/132 clauses; no final scope change |
+| Reference |Rules/registry0.6: diagnostic8/body8 slots, generated body recall delay2 |
+| Controls |0.5 unchanged; capacities0/1/2; delay1 correspondence control |
 
-## Established result
+## Before-code card
 
-One episodic family346/1 and its existing mutation authority now accept both measurement
-and body episodes. Actual selection20 supplies evidence130; formation140 participates
-in the same atomic transaction as prediction/task/identity updates. No new state root,
-scheduler, RNG, save or independent simulation. A generated next-instant recall reads
-the committed episode and preserves its original sample/experience bytes and time.
+Three capabilities: finite retention of both episode payloads under the existing
+owner; authenticated later access reports absence after loss; atomic formation/loss
+and exact continuation of the whole character. Preserve distinct beliefs and current
+body evidence. No new memory root, private history, scheduler, UI or scenario dispatch.
 
-Four M3 cells at seed7 keep exact choices/appraisals/draws through3 versus M4 and later
-prediction means/support counts/task statuses through10. New acquisition IDs account
-for later occurrence-number differences. Repeat/restore with pending recall match all
-full subsequent boundaries. Excluded/unavailable evidence cannot form an episode;
-hidden truth with equal evidence yields equal memory. Recall never supplies current
-body pressure. Simultaneous measurement/body formation and whole-instant rollback pass.
+Contract [assembled-character-retention/0.1](../formal/ASSEMBLED_CHARACTER_RETENTION_CONTRACT.md).
+L2 SignificanceFirst remains the reference law. Current episodes have no qualified use
+or significance metadata, so only its unprotected tier applies. Its separate-kind
+budgets MUST remain separate; one owner does not authorize a common exchange rate.
+Diagnostic measurement retains its own payload kind, never masquerades as a C3 event.
+One whole admitted episode costs one slot in this bounded domain. Capacity8 and delay2
+are engineering defaults, no verdict. No significance/encoding/reconstruction claim.
 
-25 tests and type/boundary/research checks pass. Frozen105 control dependencies plus
-fixtures/config remain unchanged. Six production/test files; result/raw log within
-20 files/5MiB and checks within10min each/30min total. Initial narrowing errors retained.
+Baseline dependencies: C-MEM:2..11, C-ATTN:4..13, C-BODY:4..13, F-12.3:1..10 remain
+pending. FND3/4 loss/transaction/trace extension requires successor checks; FND6 source
+isolation remains. MEC-010/011/022 and all18 conditional debts/RO-C3-011 preserved.
 
-## Stop and remaining dependencies
+Seven production/test files: src/assembled/{model,memory,state,runtime,traceBinding}.ts,
+new src/assembled/retention.ts and src/test/assembledRetention.test.ts; ceiling12.
+The frozen C2 owner/recall operations remain unchanged; successor removal permission
+belongs only to the same episodic authority and applies only in the joined settlement.
 
-M5 extends the C2 exact-episode control across sources. Selective encoding, retention,
-retrieval competition, reconstruction, shared limits and use of recalled body evidence
-in reasoning remain open. Integrate their common policy on this owner; no body side store.
-Rich perception and association remain pending. The next integration needs its own card.
-All21 members/15 families/132 clauses remain final scope. No pinned clause or conditional
-obligation closes. RO-C3-011 unchanged. UI/Campaign4/old audits remain stopped.
+Predeclared comparisons: capacity8/delay1 versus0.5 across four M3 cells at seed7:
+exact state, existing outputs (remove only new retention/access audits), actual draws.
+Reference delay2: repeated body sensing at3/4 with cap1 vs2; first recall at5 misses
+only after genuine earlier loss; later survivor recall preserves its original bytes.
+Diagnostic cap0 must erase episodes but preserve prediction means/support and choices.
+Budgets cannot borrow. Preserve known-zero, denied/unselected and hidden-truth isolation.
+Repeat/restore after4 (loss committed; cues pending) match every full later boundary.
+Same-instant diagnostic/body formation plus retention must roll back on late failure.
+Reject malformed capacity/delay, wrong-owner removal, authored cue/loss and learned S0.
+
+Validation serial: typecheck; new integration tests plus SignificanceFirst component
+and state tests; assembledMemory and assembledAttention regressions; boundary/research.
+Compare frozen105 dependencies and control fixture/config; rerun M1 only if invalidated.
+10min/command,30min total verification;20 evidence files/5MiB; one result/raw log.
+Done only when all comparisons/invariants pass in budget; otherwise record incomplete.
+Stop after pass. No additional integration or broad replay in this package.
