@@ -23,6 +23,7 @@ import {evidOperands,executeEvid} from '../campaign2/evidExecution';
 import {compileCognitiveIngress} from './ingress';
 import {createCognitiveExecution} from './execution';
 import {compileCharacterTraceBinding} from './traceBinding';
+import {prepareEpisodicRetention} from './retention';
 import {createEpisodicExtension} from './memory';
 import {createBodyExecution,BODY_SAMPLE,BODY_DELIVERY,BODY_SELECTION} from './body';
 import type {compileCharacterInputs} from './inputs';
@@ -37,7 +38,7 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
  const maxWork=compileCampaign2Parameters(model.source.parameterSchemaVersion,model.source.parameters).maxWork;
  const modelIdentity=model.modelIdentity.value;
  const body=model.body?createBodyExecution(model.body,component.tasks[0].character,stateModel,inputs.bodyEvents,modelIdentity,inputs.runIdentity.value):undefined;
- const episodes=model.memory?createEpisodicExtension(component.tasks[0].character,model.body!,stateModel,modelIdentity,inputs.runIdentity.value):undefined;
+ const episodes=model.memory?createEpisodicExtension(component.tasks[0].character,model.body!,stateModel,modelIdentity,inputs.runIdentity.value,model.retention?.recallDelay):undefined;
  const cognitive=createCognitiveExecution(model,component,inputs,()=>body?.evidence());
  const probeModel=base.probe,measurement=base.measurement,domains=base.domains,shared=bindings.admission,evaluator=bindings.evaluator;
  const memoryRuntime=createMemoryExecution(memory,measurement.validateOutput,modelIdentity,inputs.runIdentity.value,[]);
@@ -149,6 +150,7 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
       },
       prepare(events,state,instant){
         if(!ingress)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','missing live ingress');
+        function joinedStage(){
         function inheritedStage(events:readonly ScheduledEvent[]){
         cognitive.validateParticipants(events);
         function prepareGroup(events:readonly ScheduledEvent[]){
@@ -233,6 +235,13 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
          return episodes!.isFormation(context.event)?episodeStage.execute(context):priorStage!.execute(context);
         },finish(){if(finished||cursor!==events.length)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','incomplete shared episodic stage');finished=true;return episodeStage.finish(priorStage?.finish()??state);},
         finalizeTrace(){if(!finished)throw new SchedulerContractError('TRACE_VALIDATION_FAILURE','episodic trace before completion');const old=priorStage?.finalizeTrace()??[],added=episodeStage.traces();let i=0,j=0;return events.map(e=>episodes!.isFormation(e)?added[j++]:old[i++]);}};
+        }
+        const stage=joinedStage();
+        const retention=model.retention?prepareEpisodicRetention(events,state,component.tasks[0].character,model.retention,stateModel,modelIdentity,inputs.runIdentity.value):undefined;
+        if(!retention)return stage;
+        return {execute(context:EventHandlerContext<AuthoritativeState>){const result=stage.execute(context);return context.event.eventId===retention.anchor.eventId?{...result,outputs:[...result.outputs,retention.audit]}:result;},
+         finish(){return retention.finish(stage.finish());},
+         finalizeTrace(){const rows=stage.finalizeTrace();return rows.flatMap((row,index)=>events[index].eventId===retention.anchor.eventId?[row,retention.trace()]:[row]);}};
       },
       beforeCommit(state,instant){domains.validateStatic(state);domains.validateReferences(state,instant);probe?.finish();body?.prepareCommit();episodes?.prepareCommit();ingress!.finish();if(probeInstant&&(runtimeCount!==7||childCount!==14||carriagePadding))throw new SchedulerContractError('TRANSITION_INGRESS_VIOLATION','carriage/memory budget closure');taskRuntime.prepareCommit(state);predictionRuntime.prepareCommit();cognitive.prepareCommit();memoryRuntime.commit();episodes?.commit();predictionRuntime.commit();taskRuntime.commit();cognitive.commit();},
       close(){episodes?.close();body?.close();memoryRuntime.close();predictionRuntime.close();taskRuntime.close();cognitive.close();ingress?.abort();probe?.abort();probeSource?.close();ingress=undefined;probe=undefined;probeSource=undefined;},

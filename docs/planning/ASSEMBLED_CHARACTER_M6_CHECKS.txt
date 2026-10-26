@@ -1,0 +1,98 @@
+M6 checks; contract/card bcca1340; failures retained; serial validation.
+COMMAND npx tsc -b --pretty false
+exit=0 seconds=14.5148557
+COMMAND npx tsc -b --pretty false (new test file)
+src/test/assembledRetention.test.ts(16,439): error TS1005: ',' expected.
+exit=1 seconds=4.5302835
+CORRECTION test source builder missing array bracket; expanded builder, no semantics/comparison change. COMMAND npx tsc -b --pretty false
+exit=0 seconds=14.6193283
+COMMAND npx vitest run src/test/assembledRetention.test.ts src/test/significanceFirstRetention.test.ts src/test/state.test.ts --maxWorkers=1 --minWorkers=1
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRetention.test.ts > M6 finite retention in one episodic owner > capacity8 delay1 preserves the four M3 cells against M5 exactly except the two declared audits
+M6 four-cell M5 correspondence: full state/existing outputs/actual draws PASS
+
+stdout | src/test/assembledRetention.test.ts > M6 finite retention in one episodic owner > actual loss prevents delayed exact recall; a surviving episode retains its bytes and budgets never borrow
+M6 delayed access: capacity1 misses first/retains second, capacity2 recalls both; reference8 evicts ninth-source oldest
+
+stdout | src/test/assembledRetention.test.ts > M6 finite retention in one episodic owner > keeps joint diagnostic/body formation and removal atomic on a late failing instant
+M6 joint formation/removal 21 events; cap 20 full rollback
+
+ ✓ src/test/assembledRetention.test.ts (8 tests) 69890ms
+   ✓ M6 finite retention in one episodic owner > capacity8 delay1 preserves the four M3 cells against M5 exactly except the two declared audits 13242ms
+   ✓ M6 finite retention in one episodic owner > actual loss prevents delayed exact recall; a surviving episode retains its bytes and budgets never borrow 9954ms
+   ✓ M6 finite retention in one episodic owner > diagnostic episode loss does not erase learned predictions or change the existing choice 6080ms
+   ✓ M6 finite retention in one episodic owner > repeat and restore after loss preserve pending cues and every full later boundary; hidden truth stays outside retention 21451ms
+   ✓ M6 finite retention in one episodic owner > exclusion/denial cannot be replaced by retention and zero capacity creates an absent recall, not a zero measurement 7655ms
+   ✓ M6 finite retention in one episodic owner > keeps joint diagnostic/body formation and removal atomic on a late failing instant 3446ms
+   ✓ M6 finite retention in one episodic owner > rejects malformed limits, wrong-owner/stale removal, authored cues and learned initial state 8054ms
+ ✓ src/test/state.test.ts (6 tests) 11ms
+ ✓ src/test/significanceFirstRetention.test.ts (8 tests) 9ms
+
+ Test Files  3 passed (3)
+      Tests  22 passed (22)
+   Start at  10:11:19
+   Duration  71.98s (transform 893ms, setup 0ms, collect 1.35s, tests 69.91s, environment 0ms, prepare 257ms)
+
+exit=0 seconds=73.4371018
+COMMAND npx vitest run src/test/assembledMemory.test.ts src/test/assembledAttention.test.ts --maxWorkers=1 --minWorkers=1
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMemory.test.ts > M5 selected evidence shares episodic state and settlement > retains the four-cell M3/M4 choice, appraisal, draws and later prediction/task semantics
+M5 four-cell correspondence: exact choice/appraisal/draws through3; prediction means/support counts/task status through10
+
+stdout | src/test/assembledMemory.test.ts > M5 selected evidence shares episodic state and settlement > commits simultaneous measurement/body formation together and rolls back a late stage failure
+M5 joint formation 21 scheduled events; late failure cap 20 rolls back full instant
+
+ ✓ src/test/assembledMemory.test.ts (7 tests) 58836ms
+   ✓ M5 selected evidence shares episodic state and settlement > retains the four-cell M3/M4 choice, appraisal, draws and later prediction/task semantics 16733ms
+   ✓ M5 selected evidence shares episodic state and settlement > excluded, denied and unavailable observations form no episode or recall; selected safe evidence does 7340ms
+   ✓ M5 selected evidence shares episodic state and settlement > repeat and restore with pending recall match every full boundary after formation 21066ms
+   ✓ M5 selected evidence shares episodic state and settlement > same permitted evidence hides exact body truth in memory and recall 4133ms
+   ✓ M5 selected evidence shares episodic state and settlement > recall remains past evidence when a later decision has no current sensing 2277ms
+   ✓ M5 selected evidence shares episodic state and settlement > commits simultaneous measurement/body formation together and rolls back a late stage failure 3499ms
+   ✓ M5 selected evidence shares episodic state and settlement > rejects wrong owners/holders, forged episodes, authored memory events and version mismatches 3787ms
+stdout | src/test/assembledAttention.test.ts > M4 live body selection in the shared character > capacity1 preserves all four M3 cells at seed7, complete state/outputs/draws and actual choice change
+M4 selected four-cell correspondence PASS: [["definition/protocol-contact-two","definition/protocol-contact-one"],["definition/protocol-contact-one","definition/protocol-contact-one"]]
+
+ ✓ src/test/assembledAttention.test.ts (7 tests) 68777ms
+   ✓ M4 live body selection in the shared character > capacity1 preserves all four M3 cells at seed7, complete state/outputs/draws and actual choice change 12947ms
+   ✓ M4 live body selection in the shared character > capacity0 excludes an actual permitted sample without inventing zero or allowing a body reason 2427ms
+   ✓ M4 live body selection in the shared character > unavailable and denied differ from selected zero pressure and zero task exposure 7365ms
+   ✓ M4 live body selection in the shared character > repeat and post-learning restore match every boundary for both capacities; capacity changes cannot restore 30539ms
+   ✓ M4 live body selection in the shared character > hidden truth with equal body evidence cannot change cognition or draws at either capacity 6683ms
+   ✓ M4 live body selection in the shared character > no sensing and a later choice cannot reuse an earlier selected body sample 4456ms
+   ✓ M4 live body selection in the shared character > rejects malformed capacities/version/source and rolls back selection before a failed consumer 4360ms
+
+ Test Files  2 passed (2)
+      Tests  14 passed (14)
+   Start at  10:12:57
+   Duration  129.72s (transform 870ms, setup 0ms, collect 1.55s, tests 127.61s, environment 0ms, prepare 176ms)
+
+exit=0 seconds=131.1699758
+
+PASS frozen105 dependencies and original fixture/config unchanged vsdb0ca7a8; M1 test/control unchanged vs31553ea7. No V1 invalidation; retain prior full-control result.
+COMMAND npm run check:boundaries
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+exit=0 seconds=2.4585829
+COMMAND npm run check:research
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+exit=0 seconds=4.0163716
+
+PASS document caps/register64KiB. M6 result/raw log2 files/12301 bytes before final guard output. Seven production/test files. Timed checks 244.75s; longest 131.17s.
+FINAL GUARDS: staged whitespace check PASS. COMMAND npm run check:git-size
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.

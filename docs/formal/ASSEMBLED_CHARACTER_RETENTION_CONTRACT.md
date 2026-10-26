@@ -57,7 +57,8 @@ Body evidence130 generates its exact recall at formedAt+bodyRecallDelay, using c
 integer addition. The delay is a committed controlled opportunity, not learned salience
 or autonomous cue discovery. Old versions retain delay1. The cue still contains only
 the original episode key and authentic parent. No replacement episode can satisfy it.
-On recall, emit ["assembled-episode-access/0.1", at, episodeKey, presence]. If present,
+The memory trace seam is `assembled-character-memory/0.2-candidate` for this successor;
+old versions retain0.1. On recall, emit ["assembled-episode-access/0.1", at, episodeKey, presence]. If present,
 also emit the original M5 recall report with unchanged sample/experience/time bytes.
 If absent, emit no recalled measurement, zero pressure or fabricated prior. The actual
 absent read is traced. Existing diagnostic recall similarly reports its actual absent

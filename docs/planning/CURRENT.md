@@ -1,53 +1,42 @@
-# Current work — M6 finite retention through the common episodic owner
+# Current work — M6 finite episodic retention complete
 
-2026-10-26. Owner continuation authorizes this bounded package after M5 at62ef1333.
-Episodes will compete within declared evidence-kind budgets. A lost episode must
-become unavailable to later exact recall while already learned beliefs remain intact.
+2026-10-26. The character now loses episodes under finite evidence-kind budgets and
+reports genuine later recall misses. Learned beliefs can survive loss of the episode.
+[M6 result](ASSEMBLED_CHARACTER_M6_RESULT.md); [contract](../formal/ASSEMBLED_CHARACTER_RETENTION_CONTRACT.md).
 
 | Status | Disposition |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
-| Baseline |21 members/219 records;15 families/132 clauses; no final scope change |
-| Reference |Rules/registry0.6: diagnostic8/body8 slots, generated body recall delay2 |
-| Controls |0.5 unchanged; capacities0/1/2; delay1 correspondence control |
+| Baseline |21 members/219 records;15 families/132 clauses; six foundations/five C2 conditions |
+| M3/M4/M5 |Passed at02901a38/31260a24/62ef1333; controls/failures preserved |
+| M6 |PASS: finite retention, missing recall, distinct learned belief, atomic continuation |
+| Reference |Rules/registry0.6; diagnostic8/body8 slots; generated body recall delay2 |
+| Comparisons |0.5; capacities0/1/2; delay1 correspondence control |
 
-## Before-code card
+## Established result
 
-Three capabilities: finite retention of both episode payloads under the existing
-owner; authenticated later access reports absence after loss; atomic formation/loss
-and exact continuation of the whole character. Preserve distinct beliefs and current
-body evidence. No new memory root, private history, scheduler, UI or scenario dispatch.
+One346/1 store and episodic authority govern both payload kinds. Capacity partitions
+remain separate as the accepted law requires. Current episodes have no qualified credit,
+so this uses SignificanceFirst's unprotected tier only. Original age and canonical tie
+order determine loss; surviving records keep their bytes. No new store/runtime/save.
 
-Contract [assembled-character-retention/0.1](../formal/ASSEMBLED_CHARACTER_RETENTION_CONTRACT.md).
-L2 SignificanceFirst remains the reference law. Current episodes have no qualified use
-or significance metadata, so only its unprotected tier applies. Its separate-kind
-budgets MUST remain separate; one owner does not authorize a common exchange rate.
-Diagnostic measurement retains its own payload kind, never masquerades as a C3 event.
-One whole admitted episode costs one slot in this bounded domain. Capacity8 and delay2
-are engineering defaults, no verdict. No significance/encoding/reconstruction claim.
+Body samples at3/4 with capacity1 lose the first episode before its generated recall5;
+capacity2 keeps both. The survivor recalls unchanged at6. Reference capacity8 loses the
+oldest after nine samples at9. Diagnostic capacity0 removes episodes while preserving
+learned prediction, tested choice/draws and all non-memory state. No budget borrowing.
+Four M3 cells at seed7 with capacity8/delay1 preserve M5 full state, existing outputs
+and actual draws; only retention/access audits are added. Reference delay2 changes timing.
 
-Baseline dependencies: C-MEM:2..11, C-ATTN:4..13, C-BODY:4..13, F-12.3:1..10 remain
-pending. FND3/4 loss/transaction/trace extension requires successor checks; FND6 source
-isolation remains. MEC-010/011/022 and all18 conditional debts/RO-C3-011 preserved.
+Repeat/restore after committed loss match every later full boundary. Hidden truth,
+exclusion/denial, zero-vs-absence, joint formation/loss, rollback and invalid inputs pass.
+36 tests and type/boundary/research checks pass; frozen105 control dependencies and
+fixture/config remain unchanged. Seven production/test files. One corrected test-builder
+syntax failure retained. Checks and result/log stay within declared runtime/output caps.
 
-Seven production/test files: src/assembled/{model,memory,state,runtime,traceBinding}.ts,
-new src/assembled/retention.ts and src/test/assembledRetention.test.ts; ceiling12.
-The frozen C2 owner/recall operations remain unchanged; successor removal permission
-belongs only to the same episodic authority and applies only in the joined settlement.
+## Stop and remaining work
 
-Predeclared comparisons: capacity8/delay1 versus0.5 across four M3 cells at seed7:
-exact state, existing outputs (remove only new retention/access audits), actual draws.
-Reference delay2: repeated body sensing at3/4 with cap1 vs2; first recall at5 misses
-only after genuine earlier loss; later survivor recall preserves its original bytes.
-Diagnostic cap0 must erase episodes but preserve prediction means/support and choices.
-Budgets cannot borrow. Preserve known-zero, denied/unselected and hidden-truth isolation.
-Repeat/restore after4 (loss committed; cues pending) match every full later boundary.
-Same-instant diagnostic/body formation plus retention must roll back on late failure.
-Reject malformed capacity/delay, wrong-owner removal, authored cue/loss and learned S0.
-
-Validation serial: typecheck; new integration tests plus SignificanceFirst component
-and state tests; assembledMemory and assembledAttention regressions; boundary/research.
-Compare frozen105 dependencies and control fixture/config; rerun M1 only if invalidated.
-10min/command,30min total verification;20 evidence files/5MiB; one result/raw log.
-Done only when all comparisons/invariants pass in budget; otherwise record incomplete.
-Stop after pass. No additional integration or broad replay in this package.
+Use/significance credit and the rest of SignificanceFirst, selective encoding,
+reconstruction, rich perception, association, shared workspace and using recalled body
+evidence in reasoning remain open. Preserve one owner; do not create subsystem stores.
+No next package opened here; prepare its bounded card before code. No corpus clause or
+conditional obligation closes. RO-C3-011 unchanged. UI/Campaign4/old audits stay stopped.

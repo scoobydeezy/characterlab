@@ -10,6 +10,7 @@ import {predictionModelReviewSource} from '../campaign2/predictionModelReview';
 import {decodeCognitive,cognitiveRecord as r} from '../campaign2/cognitiveCodecs';
 import {validateIdentityHistory,readQ} from '../campaign2/cognitiveMath';
 import {dataRecord as rec,dataField as f,dataIdentity as id,dataItems as items,dataKey as key,dataText as txt,dataUnsigned as u,invalidModel} from '../campaign2/canonicalData';
+import {withRetentionState} from './retention';
 import {withEpisodicState} from './memory';
 import {withBodyState} from './body';
 import type {compileCharacterModel} from './model';
@@ -65,7 +66,8 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
   applyPatch(state:AuthoritativeState,patch:StatePatch,authority:Parameters<typeof structural.applyPatch>[2],scope?:Parameters<typeof structural.applyPatch>[3]){const result=structural.applyPatch(state,patch,authority,scope);validateState(result.state);return result;},
  });
  const episodes=model.memory?withEpisodicState(inheritedState,C,model.body!):inheritedState;
- const stateModel=model.body?withBodyState(episodes,C,model.body):episodes;
+ const embodied=model.body?withBodyState(episodes,C,model.body):episodes;
+ const stateModel=model.retention?withRetentionState(embodied,C):embodied;
  function initialState(bytes:Uint8Array){
   const state=stateModel.restoreState(bytes);
   for(const e of state.entries()){
