@@ -18,14 +18,17 @@ Reference ledger MEC-012..018/020/022 preserved via unchanged kernels/controls.
 
 Contract assembled-character-model/0.1-candidate is committed before coding.
 Fixed versus configurable restrictions and comparison are specified there.
-Production/test budget10 files: src/assembled/{character,model,state,ingress,
-execution,runtime,m1Control}.ts, src/test/assembledCharacter.test.ts (import only),
+Production/test budget11 files (amended before the wiring port): src/assembled/{character,model,state,ingress,
+execution,runtime,traceBinding,m1Control}.ts, src/test/assembledCharacter.test.ts (import only),
 src/test/assembledAdmission.test.ts, src/test/fixtures/assembledCharacter.ts.
 The bounded port includes cognitiveState/Ingress/Execution composition adapters:
 their C2 compiler types require recipe metadata although these adapters never use it.
 Use successor types and unchanged adapter bodies; reuse mathematical, scheduler,
 ownership, observation and semantic kernels. No fabricated recipe or admission cast.
-Do not copy adaptationRuntime or change the105-file control dependency closure.
+Trace-version failure exposed a hardcoded C2 binder in adaptationRuntime. LOCAL
+DISPOSITION under S3: port only its fixed cognitive wiring into runtime.ts, removing
+optional factories/authored-source/bridge/decoded-continuation paths; use successor
+traceBinding.ts. No generic runtime copy and no change to the105-file control closure.
 One compact M2a result; <=20 evidence files/5MiB, no source copies/audit chain.
 
 Comparison locked before execution:

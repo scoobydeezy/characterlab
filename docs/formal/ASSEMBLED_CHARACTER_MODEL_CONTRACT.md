@@ -83,8 +83,14 @@ bodies consume no recipe. Successor adapters name the new model directly and ret
 their original bodies. No fabricated recipe, assertion to a frozen-model type,
 module augmentation or public callback bypasses admission. Mathematical transforms,
 arbitration, state/ownership, observation/SEM and scheduler kernels remain shared.
-The large adaptationRuntime is reused unchanged, not copied; its single scheduler
-receives this one fixed composition. Later joins version its wiring when necessary.
+Pre-execution amendment after the retained trace-version failure: adaptationRuntime
+hardcodes the old RulesVersion through traceBinding. S3 permits its fixed composition
+wiring boundary to be ported. runtime.ts therefore becomes the one cognitive-only
+composition, removing optional-model, authored-source/bridge and decoded-continuation
+paths. A successor traceBinding checks the actual new identity and retains every
+applicable event/read/write/output constraint. No identity substitution occurs in
+production. Scheduler, evaluators and mechanism kernels remain shared; no generic
+runtime framework or second scheduler. This is11 production/test files, within12.
 
 ## Persistence and predeclared proof
 
