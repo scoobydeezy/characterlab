@@ -1,41 +1,53 @@
-# Current work — M7 cue-based body recall complete
+# Current work — M8 shared workspace access
 
-2026-10-26. The continuing character now searches retained body episodes by channel
-cue and accesses a finite number of matching memories. Stored and recalled differ.
-[M7 result](ASSEMBLED_CHARACTER_M7_RESULT.md); [contract](../formal/ASSEMBLED_CHARACTER_RETRIEVAL_CONTRACT.md).
+2026-10-26. M7 at70e7802c supplies genuine body-cue retrieval. M8 connects those
+current recall results to the existing finite task workspace, without another store.
+[Contract](../formal/ASSEMBLED_CHARACTER_WORKSPACE_CONTRACT.md), written before code.
 
 | Status | Disposition |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 | Baseline |21 members/219 records;15 families/132 clauses; six foundations/five C2 conditions |
-| M3–M6 |Passed; original controls and failures preserved |
-| M7 |PASS: cue search, bounded access, unchanged storage, deterministic continuation |
-| Reference |Rules/registry0.7; retrieval1 slot; retention diagnostic8/body8; recall delay2 |
-| Controls |0.6 exact-key recall; slots0/2; retention capacity1 |
+| Prior |[M7 PASS](ASSEMBLED_CHARACTER_M7_RESULT.md); controls preserved |
+| Active |M8: one capacity, existing task focus first, current recalled content in spare slots |
 
-## Established result
+## Bounded card
 
-Episodes3/4 both remain stored; cue5 accesses4 under slots1,4 then3 under slots2,
-neither under slots0. All three finish with identical state. The0.6 control accesses3.
-After retention loss, only the surviving match is accessible. Actual346/1 reads are
-traced. No intensity ranking, reconstruction, age refresh or new psychological store.
+Three capabilities: current authenticated recall can enter the same workspace;
+shared capacity can exclude an accessed memory without erasing it; no prior-instant
+recall or rejected sample can silently become current workspace content.
+Areas M3/M4/M8, FND3/4/6, Brief12.3/12.6. No corpus/obligation closure.
+LOCAL DISPOSITION under Architecture10.1 and escalation-policy heuristics3/5/6:
+preserve accepted task/forecast selection; fill actual unused slots in recall rank
+order. This is a conservative engineering default, no verdict. Do not invent a
+cross-kind priority or an action meaning for a remembered bodily interval.
+MEC-010/011/022 and WORKSPACE_CONTROL controls stay preserved; this is no full WORK port.
 
-Four M3 cells at seed7 preserve full state, non-recall outputs, actual draws and
-non-memory traces modulo identities. Singleton recall bytes agree. Repeat/restore
-after4 match each later full boundary. Hidden truth, exclusion/denial, zero pressure,
-no current sensing, late rollback and invalid source/model controls pass.
+Rules/registry0.8 uses the same ten slots as0.7. Existing task capacity0..3 is the
+single bound; no memory-specific workspace budget. M7 retrieval capacity remains
+an earlier access limit, not extra workspace capacity. No new state/schema owner.
+Seven production/test files: assembled/{workspace,model,memory,runtime,execution,
+traceBinding}.ts and test/assembledWorkspace.test.ts. No C2 dependency edits.
 
-23 distinct tests and type/boundary/research checks pass. Two test field-index errors
-were corrected; original failures retained, only the affected two tests rerun.
-Six production/test files; checks under four minutes. Frozen105 dependency/config/
-fixture and M1 control guard unchanged; prior full-control result retained.
-Before-code card is in commit dbafa2f5. Result and raw log preserve exact scope.
+Predeclared comparisons: four M3 cells seed7 vs0.7, exact full state and prior outputs
+except one added workspace report; actual draws unchanged. With live recall at5:
+two open tasks plus forecast occupy3 and exclude memory; one open task plus forecast
+occupy2 and admit one memory atcapacity3, whilecapacity2 excludes it. Same retained
+episode and recall bytes. Task eligibility changes via legal task activation times,
+not authored workspace selections. No memory-based choice change is required/claimed.
 
-## Stop and remaining work
+Checks, sequential: tsc; new integration tests plus inherited cognitiveTransforms
+workspace cases if present; M7 regressions. New tests cover all capacities, no-spare
+and spare-slot witnesses, actual selected source/value links, no source archive reads,
+no-current-cue, hidden truth, exclusion/denial, zero pressure, generated handoff expiry,
+repeat/restore after4 at every later boundary, and late failure after workspace.
+Frozen105/config/fixture/M1 guard; boundary/research; document and staged size checks.
+Failure risks: invented memory, double capacity, stale transient data, epistemic leak,
+partial commit, displaced controls and obligation loss. Full frozen replay retained
+unless the dependency guard reveals an invalidator; no unrelated test expansion.
 
-Cues remain controlled delayed opportunities; recall is not yet consumed by workspace
-or reasoning. Diagnostic recall remains exact-key. Rich perception, association,
-selective encoding, significance/use credit, reconstruction and other areas stay open.
-Prepare only the next bounded card before code; no new package opened here.
-No corpus member/clause or conditional obligation closes. RO-C3-011 unchanged.
-UI/Campaign4 and old audits remain stopped.
+Limits: seven planned files/12 ceiling,20 evidence files/5MiB (one result/raw log),
+10min/command/30min total checks;32 settled instants per run, cap is failure.
+Done only when every declared comparison/control passes within limits; then stop.
+General workspace maintenance, cross-kind displacement, recall-to-reasoning and full
+assembly remain open. No UI/browser/audit chain or next package opened.
