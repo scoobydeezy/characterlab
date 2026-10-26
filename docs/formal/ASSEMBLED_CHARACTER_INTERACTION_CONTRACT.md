@@ -155,3 +155,12 @@ A0/B2 versus A0/B1; history9 A2 versus A1 with B inactive. No predicted seed is 
 Fresh repeat, post-learning restore, hidden-truth and missing-history controls run
 under0.3. No completion claim if the original choice gate still fails. No further
 calibration search is authorized. Earlier failed results and corrections remain intact.
+
+Test correction after the first0.3 matrix: the retained kernel switches history3
+from Auto under low reserve to a roll after replenishment. There are no actual shared
+draws within that body's pair; requiring a positive intersection was a test assumption,
+not a valid coupling requirement for Auto. Assert the actual modes and absent Auto
+draws, compare every shared record, and require all candidate reason-face records to
+match actual retained-control records at the same cell/address. Optional tie draws
+remain conditional. No synthetic draws, RNG changes or weaker choice gate. Preserve
+that failed assertion; repeat only its affected matrix, not passed continuation tests.

@@ -2,7 +2,7 @@
  * The imported declarations fix topology only; named numeric slots are open domains. */
 import registryHex from '../../docs/planning/campaign2-task-cognitive-model/registry.cenc.hex?raw';
 import contentHex from '../../docs/planning/campaign2-task-cognitive-model/content.cenc.hex?raw';
-import {canonicalEncode as enc,list,set,record,type CanonicalValue} from '../substrate/canonicalEncoding';
+import {canonicalEncode as enc,list,set,record,rational,type CanonicalValue} from '../substrate/canonicalEncoding';
 import {createModelIdentity,commitManifest} from '../substrate/identity';
 import {RANDOM_ALGORITHM_VERSION} from '../substrate/random';
 import {snapshotMemorySource} from '../campaign2/memoryModel';
@@ -15,6 +15,8 @@ import type {Campaign2ModelSource} from '../campaign2/factory';
 
 import {decodeEmbodied} from '../campaign3/embodiedCodecs';
 import {compileBodyDeclaration} from './body';
+export const CALIBRATED_RULES='rules/assembled-character/0.3-candidate';
+export const CALIBRATED_REGISTRY='assembled-character-registry/0.3-candidate';
 export const INTERACTION_RULES='rules/assembled-character/0.2-candidate';
 export const INTERACTION_REGISTRY='assembled-character-registry/0.2-candidate';
 export const CHARACTER_RULES='rules/assembled-character/0.1-candidate';
@@ -27,12 +29,20 @@ const fields:Readonly<Record<string,readonly bigint[]>>={
 function rationalRange(v:CanonicalValue,name:string,lo:bigint,hi:bigint,strict=false){
  if(typeof v==='boolean'||v.kind!=='rational'||(strict?v.numerator<=lo*v.denominator:v.numerator<lo*v.denominator)||v.numerator>hi*v.denominator)invalidModel(name+' outside exact rational domain');
 }
-function topology(registry:CanonicalValue){
+function topology(registry:CanonicalValue,calibrated=false){
  const slots=items(registry,'list');if(slots.length!==6)invalidModel('six assembled registry slots required');
  const normalized=items(slots[0],'set').map(v=>{
   if(typeof v==='boolean'||v.kind!=='record'||v.schema.typeId!==171n)return v;
   const stable=id(f(v,1n));if(stable.namespaceId!==1027n||typeof stable.payload==='boolean'||stable.payload.kind!=='text')return v;
   const name=txt(stable.payload),open=Object.hasOwn(fields,name)?fields[name]:undefined;
+  if(calibrated&&name==='definition/task-reason-dice'){
+   const dice=rec(f(v,4n),437n),context=rec(f(dice,4n),439n);
+   if(key(f(context,1n))!==key(rational(1,10)))invalidModel('calibrated context unit must be exactly 1/10');
+   // Comparison image only: the executed and committed registry retains 1/10.
+   const normalizedContext=record(context.schema,new Map([...context.fields].map(([n,x])=>[n,n===1n?rational(1,1):x])));
+   const normalizedDice=record(dice.schema,new Map([...dice.fields].map(([n,x])=>[n,n===4n?normalizedContext:x])));
+   return record(v.schema,new Map([...v.fields].map(([n,x])=>[n,n===4n?normalizedDice:x])));
+  }
   if(!open)return v;
   const d=rec(f(v,4n),name==='definition/task-workspace'?378n:name==='definition/task-concern'?385n:name==='definition/task-motive'?392n:370n);
   if(d.schema.typeId===370n){
@@ -51,13 +61,13 @@ function topology(registry:CanonicalValue){
 }
 export async function compileCharacterModel(input:Campaign2ModelSource){
  const source=snapshotMemorySource(input);
- const interaction=source.rulesVersion===INTERACTION_RULES;
- if((interaction?source.registrySchemaVersion!==INTERACTION_REGISTRY:source.rulesVersion!==CHARACTER_RULES||source.registrySchemaVersion!==CHARACTER_REGISTRY)||source.contentSchemaVersion!=='content/0.2-candidate'||source.parameterSchemaVersion!=='campaign2-parameters/0.1-candidate'||source.numericProfileVersion!=='numeric/task-cognitive-exact/0.1-candidate'||source.randomAlgorithmVersion!==RANDOM_ALGORITHM_VERSION)invalidModel('unsupported assembled model version bundle');
+ const calibrated=source.rulesVersion===CALIBRATED_RULES,interaction=calibrated||source.rulesVersion===INTERACTION_RULES;
+ if((interaction?source.registrySchemaVersion!==(calibrated?CALIBRATED_REGISTRY:INTERACTION_REGISTRY):source.rulesVersion!==CHARACTER_RULES||source.registrySchemaVersion!==CHARACTER_REGISTRY)||source.contentSchemaVersion!=='content/0.2-candidate'||source.parameterSchemaVersion!=='campaign2-parameters/0.1-candidate'||source.numericProfileVersion!=='numeric/task-cognitive-exact/0.1-candidate'||source.randomAlgorithmVersion!==RANDOM_ALGORITHM_VERSION)invalidModel('unsupported assembled model version bundle');
  const registry=decodeEmbodied(source.registry),allSlots=items(registry,'list');
  if(allSlots.length!==(interaction?7:6))invalidModel('assembled registry slot count');
  const body=interaction?compileBodyDeclaration(allSlots[6]):undefined,slots=allSlots.slice(0,6),baseRegistry=enc(list(slots));
  // Validate open slots before generic declarations, giving specific domain errors.
- const shape=topology(list(slots));
+ const shape=topology(list(slots),calibrated);
  const content=await compileCognitiveDeclarations(source.content,baseRegistry);
  const structuralState=compileCampaign2StateModel(enc(slots[2]),enc(slots[3]),enc(slots[4]),content,{decode:decodeCognitive,schema:cognitiveSchemaByType});
  compileCampaign2Parameters(source.parameterSchemaVersion,source.parameters);

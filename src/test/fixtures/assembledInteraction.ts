@@ -3,13 +3,14 @@ import {restoreAuthoritativeState,AuthoritativeState} from '../../substrate/stat
 import {decodeEmbodied as decode,embodiedRecord as r} from '../../campaign3/embodiedCodecs';
 import {source,data,C,id} from './campaign2Cognitive';
 import {successor,changeDefinition,workLimit} from './assembledCharacter';
-import {INTERACTION_RULES,INTERACTION_REGISTRY} from '../../assembled/model';
+import {INTERACTION_RULES,INTERACTION_REGISTRY,CALIBRATED_RULES,CALIBRATED_REGISTRY} from '../../assembled/model';
 import {BODY_SAMPLE,BODY_DELIVERY,BODY_OBSERVER,BODY_DEFINITION,bodyPath} from '../../assembled/body';
 import {dataItems as items,dataField as f,dataRecord as rec} from '../../campaign2/canonicalData';
-export function interactionSource(permitted=true,available=true){
+export function interactionSource(permitted=true,available=true,calibrated=true){
  let s=successor(source());for(const [name,min,max] of [['a',4,6],['b',7,9]] as const)for(const [field,value] of [[3n,rational(min,1)],[4n,rational(max,1)],[5n,signed(2)],[6n,signed(10)]] as const)s=changeDefinition(s,'definition/task-'+name,field,value);
  s=changeDefinition(s,'definition/task-concern',1n,rational(1,1));s=changeDefinition(s,'definition/task-motive',1n,rational(1,2));s=changeDefinition(s,'definition/task-workspace',2n,unsigned(3));s=workLimit(s,100000n);
- return {...s,rulesVersion:INTERACTION_RULES,registrySchemaVersion:INTERACTION_REGISTRY,registry:enc(list([...items(decode(s.registry),'list'),list([ {kind:'text',value:'assembled-body/0.1'},rational(100,1),rational(1,1),rational(10,1),rational(60,1),permitted,available])]))};
+ if(calibrated)s=changeDefinition(s,'definition/task-reason-dice',4n,r(439,[rational(1,10),unsigned(3)]));
+ return {...s,rulesVersion:calibrated?CALIBRATED_RULES:INTERACTION_RULES,registrySchemaVersion:calibrated?CALIBRATED_REGISTRY:INTERACTION_REGISTRY,registry:enc(list([...items(decode(s.registry),'list'),list([ {kind:'text',value:'assembled-body/0.1'},rational(100,1),rational(1,1),rational(10,1),rational(60,1),permitted,available])]))};
 }
 export function interactionData(history:0|1,body:0|1,seed=0,amount=10){
  const d=data(),old=restoreAuthoritativeState(decode(d.initialState));const initial=new AuthoritativeState([...old.entries().map(e=>e.path.rootStateTypeId===302n?{...e,value:r(299,[signed(history?40:-20)])}:e),{path:bodyPath(C),value:r(454,[rational(amount,1),signed(0)])}]);
