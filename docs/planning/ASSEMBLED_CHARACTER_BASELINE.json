@@ -799,5 +799,214 @@
       "obligation": "RO-C3-011",
       "evidenceLocation": "Preserved Workbench branch; do not copy its source/UI bundles"
     }
+  },
+  "foundationConstraints": {
+    "status": "PROPOSED OWNER AMENDMENT 2026-10-25; existing adopted phenomenon inventory unchanged",
+    "purpose": "Make standing foundation requirements and scoped scaffold control explicit before M2; not six new phenomenon replay targets or a new acceptance claim.",
+    "sourceCommit": "788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535",
+    "sources": [
+      {
+        "path": "docs/planning/VERDICT_LEDGER.md",
+        "gitBlob": "50837608f1036bb7e5ed6d3ae2f1a6289ad6a2c5",
+        "sha256OfGitBytes": "8c3ecf2db46e6c6e28042774cf79e5f4373da65dd57d3586064ff78b32a63531"
+      },
+      {
+        "path": "docs/formal/CONFORMANCE_VECTORS.md",
+        "gitBlob": "d25d47759524900ea0bfdb9b44eb4dcb0e7610d8",
+        "sha256OfGitBytes": "8e740c287dd082e340ea23b395e19fa49732008370c97f300261ab3363d7e49c"
+      },
+      {
+        "path": "docs/formal/CAMPAIGN1_CONFORMANCE_VECTORS.md",
+        "gitBlob": "c27b826697b762c84d0c29fd3f20b42fa2a939a0",
+        "sha256OfGitBytes": "026fdb02943a1e18692643c51fb464fc67db2f1f3779869220dbba0826bd2b1c"
+      },
+      {
+        "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+        "gitBlob": "6b82b0d5ae485c7a8eeb24d88b032ab43b8c63e1",
+        "sha256OfGitBytes": "59bdd5fef46866d1b65c1f4bcf8c96031cfefd972b482423b27a75d81e0962f0"
+      },
+      {
+        "path": "docs/formal/EVENT_SEMANTIC_BINDING.md",
+        "gitBlob": "13f0acb09af0f5be9f1545734d196ff2cf223cf9",
+        "sha256OfGitBytes": "013ed30d236bb3f00af4f6c6afa29ae35e598271fbda791b2d08259c2d91b629"
+      },
+      {
+        "path": "docs/formal/OBSERVATION_AND_EVIDENCE.md",
+        "gitBlob": "47cb43d6b74027f0352f127d4f35caa600b1f048",
+        "sha256OfGitBytes": "76621450d9e65f844414f35795e2ed1036be945e096b195b9eb4dfe96f70feb9"
+      },
+      {
+        "path": "docs/planning/CAMPAIGN2_COMPLETION_REVIEW.md",
+        "gitBlob": "e84ee9a20537c374f6bc95f07c5bae82e683a55d",
+        "sha256OfGitBytes": "4c40af964373794362d9ceebed6b4deb77f2453d5003edf94d34361193210e34"
+      },
+      {
+        "path": "docs/planning/CAMPAIGN3_ENTRY_READINESS.md",
+        "gitBlob": "294fe9894e449c2a930c9709465c3c5b438f397b",
+        "sha256OfGitBytes": "15d840351d6bf42aeb14c497309e4aabdb8f47a869279bb7721c412dfc29daaa"
+      },
+      {
+        "path": "src/campaign2/probeExecution.ts",
+        "gitBlob": "d6fc1eac676c4c7feb2ecc6a99bd6b106d2d4cf1",
+        "sha256OfGitBytes": "f61e751a5f7fd602b52aa62e98d48a1e1a9cbf00d5d5a07b2ddf025978bda13e"
+      },
+      {
+        "path": "src/campaign2/protocolBridge.ts",
+        "gitBlob": "029e025c563d68daa817c71343537fb04c2d6ee4",
+        "sha256OfGitBytes": "075d5e2b702a4878fc8ecac1cac5478182bb0ac4b2634bd72eaa2907af2073d7"
+      },
+      {
+        "path": "src/campaign2/protocolObservation.ts",
+        "gitBlob": "bc2abf30c0230d5e85da553a2fada75366985d82",
+        "sha256OfGitBytes": "44f505c4261a1c1dbb012d707bce607c212e4bcebf2c0b2ab1e6331d0e287245"
+      },
+      {
+        "path": "src/campaign2/cognitiveExecution.ts",
+        "gitBlob": "e9c014fd6c06972a31ee63c49fc245ff2f2151c4",
+        "sha256OfGitBytes": "3680f20a58ea145a0da5530c420e6312bb787b1b9a16fba9e0022b11427319ab"
+      },
+      {
+        "path": "src/campaign2/adaptationRuntime.ts",
+        "gitBlob": "2c9c2957ee63f1f1805d96bcafb956daf6843903",
+        "sha256OfGitBytes": "f3bee081d6465027d67e68f864c00dd5b7902eda699da53df7b9a6a2216ddbac"
+      }
+    ],
+    "verdicts": [
+      {
+        "id": "VER-C0-RNG-001",
+        "source": "docs/planning/VERDICT_LEDGER.md",
+        "heading": "## `VER-C0-RNG-001`",
+        "historicalContracts": "`cenc/1`, `cenc-records/0.1-candidate`, `substrate/0.2-candidate`, `rng/sha256-addressed-128-v1-candidate`",
+        "declaredDomain": "256-bit run seeds; registered semantic addresses; bounded spans `1..2^32`; positive canonical weighted choices with total at most `2^32`; injective role-compatible comparison maps",
+        "evidence": "`CV-ENC-001..003`, `CV-ID-001..005`, `CV-RNG-001..008`, independently reproduced SHA-256 golden, reduced-width exhaustive threshold enumeration, exact bound inequalities, and the five preserved historical random tests",
+        "preservedProperties": "pure causal addressing, replay, unrelated-draw independence, purpose separation, explicit paired coupling, and exact range membership",
+        "historicalLimits": "psychological dice/modifier use remains outside this substrate verdict",
+        "reopenConditions": "address or schema change, random algorithm/version change, failed platform golden, observed replay divergence, or evidence invalidating the declared ideal-candidate bias analysis"
+      },
+      {
+        "id": "VER-C0-TIME-001",
+        "source": "docs/planning/VERDICT_LEDGER.md",
+        "heading": "## `VER-C0-TIME-001`",
+        "historicalContracts": "`substrate/0.2-candidate`, `cenc/1`",
+        "declaredDomain": "bigint exact arithmetic; `SimInstant` in `0..Int64.MaxValue`; signed Int64 durations; linear integer rates over positive integer scales; explicitly bounded stored values",
+        "evidence": "sign-correct division and ties-to-even fixtures, `CV-TIME-001..006`, positive/negative direct-versus-partitioned equality, the failing truncation control, checked overflow fixtures, and seven preserved historical rational tests",
+        "preservedProperties": "exact reduction, exact equality and comparison, deterministic arithmetic, non-mutating analytical reads, and semantic-event materialize→mutate→re-anchor order",
+        "historicalLimits": "nonlinear psychological dynamics remain outside this linear analytical-time verdict",
+        "reopenConditions": "numeric profile change, time-unit change, new nonlinear candidate, representation-bound change, partition divergence, or save/load mismatch"
+      },
+      {
+        "id": "VER-C0-ORD-001",
+        "source": "docs/planning/VERDICT_LEDGER.md",
+        "heading": "## `VER-C0-ORD-001`",
+        "historicalContracts": "`ordering/0.2-candidate`, `state/0.2-candidate`, `trace/0.2-candidate`, `save/1-candidate`, `cenc/1`",
+        "declaredDomain": "registered phases; nonnegative global event/sequence/runtime allocators; quiescent saves; positive manifest-committed settlement ceiling; registered event handlers",
+        "evidence": "`CV-ORD-001..004`, `CV-SAVE-001..002`, nine generic `CV-TXN-001` failure boundaries, mutable-reference isolation, canonical save round-trip, uninterrupted-versus-loaded continuation, and four preserved deterministic replay tests",
+        "preservedProperties": "logical time, deterministic event identity, replay, causal addressing continuity, and handler-independent serialized data",
+        "historicalLimits": "later multi-character and regulation-specific phase decisions remain separately open",
+        "reopenConditions": "phase registry or event schema change, different transaction boundary, allocator change, cascade policy change, canonical save migration, or replay/save divergence"
+      },
+      {
+        "id": "VER-C0-STATE-TRACE-001",
+        "source": "docs/planning/VERDICT_LEDGER.md",
+        "heading": "## `VER-C0-STATE-TRACE-001`",
+        "historicalContracts": "`state/0.2-candidate`, `trace/0.2-candidate`, `ordering/0.2-candidate`, `save/1-candidate`, `cenc/1`",
+        "declaredDomain": "canonical leaf paths using typed entity, canonical map-key, and stable-list-item selectors; prefix patterns with typed wildcards; exactly one authority for every declared writable family; canonical set/remove patches with exact preconditions; capability-bound accessors; whole-instant transactions",
+        "evidence": "`CV-OWN-001`, `CV-READ-001..002`, `CV-PATCH-001..003`, `CV-TRC-001..003`, nine concrete transaction-boundary injections, unknown-schema rejection, structural decode/re-encode, and integrated save/load continuation in `PHEN-DET-001`",
+        "preservedProperties": "deterministic replay, deep counterfactual isolation, event identity and causal continuity, complete read/write provenance, exact pre/post mutation proof, and terminal all-or-nothing failure",
+        "historicalLimits": "psychological state-family ownership and privacy-safe trace views require their own later seam contracts",
+        "reopenConditions": "state-path selector or ownership semantics change, patch precondition/order change, trace schema evolution, non-atomic settlement, emitted-event allocation order change, save/restore mismatch, or first-divergence failure"
+      },
+      {
+        "id": "VER-C0-CONTENT-001",
+        "source": "docs/planning/VERDICT_LEDGER.md",
+        "heading": "## `VER-C0-CONTENT-001`",
+        "historicalContracts": "`content/0.2-candidate`, `cenc-records/0.1-candidate`, `substrate/0.2-candidate`, `cenc/1`",
+        "declaredDomain": "type-170 governed semantic world/action definitions; types 171–173 semantic and record-schema registries; type-174 phenomenon corpus manifest; stable typed IDs; acyclic content references; deterministic semantic-kind validators",
+        "evidence": "exact canonical content, registry, and corpus bytes, independently computed SHA-256 digests, every-authoritative-field sensitivity, presentation-only insensitivity, construction-order invariance, and duplicate/unknown/out-of-domain/cycle/malformed negative controls",
+        "preservedProperties": "structural `ContentIdentity`/`RegistryIdentity`, presentation separation, complete inspectable manifests, and deterministic failure before model construction",
+        "historicalLimits": "each later content kind and psychological receiving seam must define its own domain validator and may not author interpretation directly",
+        "reopenConditions": "field authority, schema/version, reference/cycle policy, validator resolution, canonical registry, or commitment semantics change"
+      },
+      {
+        "id": "VER-C1-OBS-001",
+        "source": "docs/planning/VERDICT_LEDGER.md",
+        "heading": "## `VER-C1-OBS-001`",
+        "historicalContracts": "accepted immutable identifier `observation/0.1-candidate`; accepted Campaign 0 substrate contracts",
+        "declaredDomain": "exact signed bounded scalar effects; registered deterministic state-change or named omniscient-control channels; known bounds; exact point/lower/upper intervals; registered polarity, precision, missingness, and restricted visible provenance slots. A token may carry a truth-side concept ID only when the channel itself establishes identity; general event observation is excluded.",
+        "evidence": "`CV-OBS-001..006`, `CV-EPI-001..002`; exact `PHEN-EPI-001` pair through capability-limited reads, accepted transactional scheduling/trace, thin `SemanticExperience`, and a same-instant immediate consumer; canonical round trips, forbidden-record closure, invalid-input rollback, and named first divergence for every prohibited control",
+        "preservedProperties": "historical `EffectProvenance` remains complete truth/trace input; a restricted registered visible causal-role projection remains a control; exact state change remains observable; missing evidence remains explicit",
+        "historicalLimits": "amended `SEM-001A` resolves observer-relative, potentially mistaken continuant-files for people, discrete objects, and places/regions, with independent allocation and no truth repair or ordinal psychology. `SEM-001B` resolves truth binding occurrence identity, role grammar, cardinality/domain narrowing, and truth-role epistemic projection. `SEM-001C` resolves fallible event-files, event-grouped perceived bindings, experience/event multiplicity, continuant/event carrier separation, and transactional replay. `SEM-001D` resolves finite typed continuant classification, optional boolean assertions, feature missing/false semantics, sole facet authority, provenance, and output boundaries. `SEM-001E` resolves finite typed event-pattern classification, scoped necessary-feature conjunction, append-only evidence, Action projection asymmetry, and separation from learned action identity. `SEM-001F` resolves continuant-instance recognition permission, typed cue evaluation, categorical misrecognition, append-only replacement/withdrawal, and output boundaries without track repair. `SEM-001G` resolves closed character-evidence references, exact schema/seam and consumer-`ReadDomain` admissibility, strict same-observer safe linkage, separate omniscient/character graphs, proposition-local future evidence quality, and nonrecursive multi-role causal-role epistemics. `SEM-001H` resolves exact current/consequence phase lanes, truth cutoffs, conditional experience reservation, immutable experience/recognition snapshots, perceived-outcome learning, adaptation separation, and settlement-barrier semantics without deciding `ORD-001`. `SEM-001I.1` resolves the canonical schema inventory, exact occurrence keys, recognition-knowledge instance ownership, trace-only evaluations, self-sufficient resolution state, typed occurrence allocation, and revision-topology history; `SEM-001I.2` freezes the permanent numeric allocation and union matrices. Canonical runtime codecs/persistence and the integrated binding gate, noisy/ambiguous sensory production beyond the symbolic fixture, attention, event/action-schema recognition, interval-aware surprise/learning, memory, and belief updates remain separate later contracts. Parent `SEM-001` is the immediate P0 owner; full ontology inference remains under `ONT-001`.",
+        "reopenConditions": "measurement mode, interval vocabulary, polarity, channel-known bounds, missingness, visibility/role projection, precision/unit, timing, safe-reference policy, or any discovered hidden-truth influence"
+      }
+    ],
+    "conformance": {
+      "campaign0": "docs/formal/CONFORMANCE_VECTORS.md",
+      "campaign1Observation": "docs/formal/CAMPAIGN1_CONFORMANCE_VECTORS.md",
+      "semanticBinding": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+      "versionRule": "Historical verdict versions and limits are preserved, not substituted for later accepted contracts. Follow explicit accepted amendments; do not roll back ownership, observation or phase semantics to an older verdict version.",
+      "milestoneRule": "Before implementing each milestone, identify affected foundation constraints, reopen conditions, exact conformance vector IDs/tests and dependency changes in its card/register. Run affected vectors and successor boundary checks within the predeclared budget. Record a dependency-based no-impact rationale for unaffected controls; do not rerun all foundation vectors by habit.",
+      "reopenRule": "When a listed condition is hit, stop the affected implementation/acceptance claim and report the trigger plus disposition in CURRENT. Before resuming, resolve it through applicable accepted contracts, explicit versioned amendments and affected conformance evidence. Architectural/authority conflicts, genuine alternative laws and baseline changes require owner ruling under the existing escalation policy; routine requalification is not automatically an owner blocker. Hidden-truth influence is a defect to resolve, never an acceptable scoped pass.",
+      "scopeRule": "Creating new state declarations under unchanged ownership semantics is not by itself proof that the substrate ownership semantics changed. Evaluate each actual trigger. Source imports alone likewise prove neither full integration nor conformance."
+    },
+    "scaffoldControl": {
+      "source": "docs/planning/CAMPAIGN2_COMPLETION_REVIEW.md",
+      "qualificationForm": "Dated bounded Campaign 2 acceptance, not VER-C2 entries; no VER-C2 heading exists in the pinned verdict ledger.",
+      "conditions": [
+        {
+          "id": "C2-COMPLETION-1",
+          "condition": "Every used canonical read/write has a contract and sole authority",
+          "historicalFinding": "PASS. Actual fixed registrations and governed projections own task/workspace, prediction, identity and inherited EVID/ADAPT/memory reads. Immutable instructions use373/2 field2; lifecycle owns field1, not the root. Identity alone writes415; ADAPT retains its own roots. Common140 admission and target preflight finish before any prior read, and every candidate uses B0. No generic psychological writer or public callback was introduced."
+        },
+        {
+          "id": "C2-COMPLETION-2",
+          "condition": "Complete causal path without a hand-authored psychological intermediate",
+          "historicalFinding": "PASS. Original probe produces observer-safe measurement, EVID, episode/prediction and retained task evidence. Later original deliberation produces workspace → appraisal → concern → motive → candidates → raw reasons → nuclei → arbitration → intent. Intent separately produces frozen expression/qualified identity evidence and plan → attempt → execution → actual consequence. The observer cut yields consequence SEM → OutcomeEvaluation → CharacterLearningEvidence; actual307 independently drives ADAPT. The common140 stage consolidates under separate authorities. All are genuine scheduled production outputs from empty learned S0."
+        },
+        {
+          "id": "C2-COMPLETION-3",
+          "condition": "Retained dice/identity pipeline through new contracts",
+          "historicalFinding": "PASS, bounded port. All die bands and Auto/Quiet/Player modes execute; exact historical dice, coverage and identity comparisons pass. Authorship-weighted acquired history feeds later standing, while standing is excluded from evidence's nonidentity meaning. No authored trait bonus, separate identity die or opaque weighted-choice replacement."
+        },
+        {
+          "id": "C2-COMPLETION-4",
+          "condition": "Truth, evidence, intent, attempt, outcome and trace remain separate",
+          "historicalFinding": "PASS. Execution permission is a world-adapter operand. Actual307 is not character learning evidence. Protocol observer0/1/2 preserves uncertainty and strips truth references before SEM/EVID. Frozen expression precedes execution and is unchanged by blocked execution. Character transformers have no truth/model/trace read capability; omniscient trace is not a character input."
+        },
+        {
+          "id": "C2-COMPLETION-5",
+          "condition": "No relevant P0 remains",
+          "historicalFinding": "PASS. Required seams, whole cognitive shape, permanent allocation and model gates preceded implementation. Immediate same-event belief reads, multi-character ordering, broad decision qualification and context modulation are explicitly absent from this accepted slice. No default resolves those decisions silently."
+        }
+      ],
+      "scope": "All five findings are scoped controls, not proof of full assembled-character coverage."
+    },
+    "perceptionIntegration": {
+      "requiredImplementations": [
+        "src/observation",
+        "src/semanticBinding"
+      ],
+      "executingScaffoldPaths": [
+        {
+          "path": "src/campaign2/adaptationRuntime.ts -> probeExecution.ts",
+          "finding": "The registered probe handler executes observation/semantic-binding imports, reserves the Consequence-lane experience and freezes it. Tracking/binding/classification collections are empty in this bounded measurement profile."
+        },
+        {
+          "path": "src/campaign2/cognitiveExecution.ts -> protocolBridge.ts -> protocolObservation.ts",
+          "finding": "Actual protocol execution feeds the registered observation/consequence stages. Observation uses compilePermittedEvidence and removes unsafe source references; phaseOrdering governs reservation, staging and freeze. Perceptual bindings/classifications remain empty."
+        }
+      ],
+      "correction": "Campaign 2 already uses the observation and semantic-binding layers. The missing claim is rich composed perception, not the total absence of Campaign 1 code or proof of a superseded unlawful scaffold.",
+      "historicalGate": "CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md, SEM-001J integrated evidence and Acceptance gate, records SEM-001 closed 2026-09-04 with zero pending CV-SEM rows. The older VER-C1-OBS-001 uncovered-region text is not a current instruction to reopen that gate.",
+      "retainedControls": [
+        "src/test/observation.test.ts",
+        "src/test/observationIntegration.test.ts",
+        "src/test/sem001AcceptanceGate.test.ts",
+        "src/test/phenSem001Integration.test.ts",
+        "src/test/semanticPhaseOrdering.test.ts",
+        "src/test/semanticNegativeControls.test.ts"
+      ],
+      "m2Requirement": "Experience rows must list src/observation and src/semanticBinding, trace the existing bounded scaffold adapters and identify the successor composition of required fallible tracking, bindings, classification, recognition, both phase lanes and downstream evidence consumers. Classify actual operations/laws; do not treat thin adapters as equivalent to the full stack or dispatch to an independent fixture runtime. Name shared ownership, observer cuts, retained controls and integration gaps before implementation."
+    },
+    "countExplanation": "109 verdict headings = 103 VER-C3 + five VER-C0 + one VER-C1. check-research-obligations.mjs deliberately selects VER-C3 for Campaign 3 bookkeeping; its PASS does not certify foundation conformance."
   }
 }

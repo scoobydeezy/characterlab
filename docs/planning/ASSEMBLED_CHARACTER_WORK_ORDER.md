@@ -228,6 +228,14 @@ be corrected transparently while retaining the original failure and expected mea
 - Status begins with what the character can now do and what remains. Technical evidence
   follows. Neither file counts nor audit counts constitute feature progress.
 
+## Proposed foundation clarification — owner adoption pending
+
+The baseline's foundationConstraints section proposes explicit C0/C1 standing
+constraints, their affected conformance checks/reopen dispositions, the five C2 control
+conditions and Experience integration mapping. This adds no phenomenon denominator.
+Campaign 2 already uses observation/semanticBinding; M2 must locate the actual missing
+capabilities. Historical gate status does not override later accepted closure.
+
 ## Current authorization boundary
 
 The owner adopted the pinned baseline and approved the revised M1 comparison
