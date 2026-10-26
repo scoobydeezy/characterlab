@@ -5,7 +5,11 @@ import {ExactRational as Q} from '../substrate/exactMath';
 import {compareAffectFactors} from '../campaign3/affectFactorComparison';
 import {deficitPressure,exact,atom} from '../campaign3/embodiedMath';
 import {cognitiveRecord as r} from '../campaign2/cognitiveCodecs';
-import {dataRecord as rec,dataField as f,dataItems as items,dataKey as key,dataUnsigned as uint} from '../campaign2/canonicalData';
+import {dataRecord as rec,dataField as f,dataItems as items,dataKey as key,dataUnsigned as uint,dataText as txt} from '../campaign2/canonicalData';
+import type {BodyEvidence} from './body';
+import {WORKSPACE} from './workspace';
+import {EPISODE} from './memory';
+export const MEMORY_CONTEXT='assembled-memory-context/0.1';
 export const JOINT_APPRAISAL='assembled-body-appraisal/0.1';
 export function jointAppraisal(taskAppraisal:CanonicalValue,sample:CanonicalValue|undefined,experience:CanonicalValue|undefined,threshold:Q){
  const appraisal=rec(taskAppraisal,384n),present=sample!==undefined&&typeof sample!=='boolean'&&sample.kind==='record'&&sample.schema.typeId===461n;
@@ -31,4 +35,18 @@ export function jointSignalSupport(raw:CanonicalValue,joint:CanonicalValue){
   return r(402,[f(signal,1n),f(signal,2n),r(400,[map([...merged.values()])])]);
  });
  return record(source.schema,new Map([...source.fields].map(([n,v])=>[n,n===3n?set(signals):v])));
+}
+
+/** Earlier context is an explicitly qualified appraisal, never a current observation. */
+export function contextAppraisal(task:CanonicalValue,workspace:CanonicalValue,at:bigint,current:BodyEvidence|undefined,threshold:Q){
+ const w=items(workspace,'list'),t=w[1];
+ if(w.length!==5||txt(w[0])!==WORKSPACE||typeof t==='boolean'||t.kind!=='signed'||t.value!==at||key(w[3])!==key(f(rec(task,384n),2n)))throw Error('memory context workspace association');
+ let sample=current?.sample,experience=current?.experience,selected:CanonicalValue=list([]),mode=sample?'Current':'Unavailable';
+ if(current){if(current.settledEvent.dueAt!==at||current.settledEvent.phase!==20n)throw Error('memory context current evidence time');}
+ else {const first=items(w[4],'list')[0];if(first){
+  const row=items(first,'list'),episode=items(row[1],'list'),time=episode[5];
+  if(row.length!==3||episode.length!==6||txt(episode[0])!==EPISODE||key(row[0])!==key(episode[1])||typeof time==='boolean'||time.kind!=='signed'||time.value>=at)throw Error('memory context episode association');
+  sample=episode[2];experience=episode[3];selected=first;mode='RecalledContext';
+ }}
+ return list([...items(jointAppraisal(task,sample,experience,threshold),'list'),list([text(MEMORY_CONTEXT),text(mode),selected])]);
 }

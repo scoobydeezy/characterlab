@@ -1,0 +1,291 @@
+M9 raw checks; before-code card/contract08c3c154; base8ca43750. Failures retained.
+COMMAND npx tsc -b --pretty false (production and test sources)
+exit=0 seconds=21.5679308
+COMMAND npx vitest run src/test/assembledMemoryContext.test.ts -t "fixed seeds" --maxWorkers=1 --minWorkers=1
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledMemoryContext.test.ts (7 tests | 1 failed | 6 skipped) 5805ms
+   × M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect 5804ms
+     → unknown record schema 461/1
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+SchedulerContractError: unknown record schema 461/1
+ ❯ fail src/substrate/scheduler.ts:667:9
+    665| 
+    666| function fail(code: SchedulerFailureCode, message: string): never {
+    667|   throw new SchedulerContractError(code, message);
+       |         ^
+    668| }
+    669| 
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:390:11
+ ❯ Object.settleNextInstant src/assembled/character.ts:40:58
+ ❯ through src/test/assembledMemoryContext.test.ts:32:118
+ ❯ src/test/assembledMemoryContext.test.ts:53:71
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 6 skipped (7)
+   Start at  15:08:32
+   Duration  7.93s (transform 902ms, setup 0ms, collect 1.32s, tests 5.81s, environment 0ms, prepare 498ms)
+
+exit=1 seconds=11.3532285
+CORRECTION: actual workspace includes body461, so detach with structuredClone rather than frozen C2-only decoder. Rollback control uses a genuine later probe, ensuring recalled context (not current sensing) is consumed before failure.
+COMMAND npx tsc -b --pretty false
+exit=0 seconds=14.8381499
+COMMAND npx vitest run src/test/assembledMemoryContext.test.ts -t "fixed seeds" --maxWorkers=1 --minWorkers=1 (after decoder fix)
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledMemoryContext.test.ts (7 tests | 1 failed | 6 skipped) 10098ms
+   × M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect 10097ms
+     → expected 2n to be 3n // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+AssertionError: expected 2n to be 3n // Object.is equality
+
+- Expected
++ Received
+
+- 3n
++ 2n
+
+ ❯ choice src/test/assembledMemoryContext.test.ts:31:140
+
+ ❯ src/test/assembledMemoryContext.test.ts:54:178
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 6 skipped (7)
+   Start at  15:09:46
+   Duration  11.69s (transform 897ms, setup 0ms, collect 1.31s, tests 10.10s, environment 0ms, prepare 92ms)
+
+exit=1 seconds=13.2061793
+TEST CORRECTION: access ablation legitimately returns NoChoice tag2 (no compiled nuclei); require actual chosen actions in BOTH recalled-history cells, equal outcomes in ablation. Shared-draw count is measured, not forced positive: Auto versus roll versus no-reason can have no overlap. Repeat/restore control uses the rolling high-body history to verify real draws. Acceptance gate/seeds/math unchanged.
+COMMAND npx tsc -b --pretty false (test corrections)
+exit=0 seconds=14.8205788
+COMMAND npx vitest run src/test/assembledMemoryContext.test.ts -t "fixed seeds" --maxWorkers=1 --minWorkers=1 (ablation outcome correction)
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 0 choices=[["definition/protocol-contact-two","definition/protocol-contact-two"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 1 choices=[["definition/protocol-contact-two","definition/protocol-contact-two"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 2 choices=[["definition/protocol-contact-two","definition/protocol-contact-one"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,3,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 3 choices=[["definition/protocol-contact-two","definition/protocol-contact-one"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 4 choices=[["definition/protocol-contact-two","definition/protocol-contact-one"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,3,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 5 choices=[["definition/protocol-contact-two","definition/protocol-contact-two"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 6 choices=[["definition/protocol-contact-two","definition/protocol-contact-two"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,3,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 7 choices=[["definition/protocol-contact-two","definition/protocol-contact-one"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 8 choices=[["definition/protocol-contact-two","definition/protocol-contact-two"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 9 choices=[["definition/protocol-contact-two","definition/protocol-contact-two"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,3,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 10 choices=[["definition/protocol-contact-two","definition/protocol-contact-two"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 11 choices=[["definition/protocol-contact-two","definition/protocol-contact-two"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,3,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 12 choices=[["definition/protocol-contact-two","definition/protocol-contact-one"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 13 choices=[["definition/protocol-contact-two","definition/protocol-contact-two"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 14 choices=[["definition/protocol-contact-two","definition/protocol-contact-one"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 15 choices=[["definition/protocol-contact-two","definition/protocol-contact-two"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+M9 changed-history choices=6/16; actual equal-address draw pairs=0
+
+ ✓ src/test/assembledMemoryContext.test.ts (7 tests | 6 skipped) 119832ms
+   ✓ M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect 119831ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  15:11:44
+   Duration  121.44s (transform 901ms, setup 0ms, collect 1.31s, tests 119.83s, environment 0ms, prepare 91ms)
+
+exit=0 seconds=122.9252628
+COMMAND npx vitest run src/test/assembledMemoryContext.test.ts src/test/assembledWorkspace.test.ts src/test/campaign2CognitiveTransforms.test.ts -t "controls:|M8 recalled|cognitive restricted" --maxWorkers=1 --minWorkers=1
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledMemoryContext.test.ts (7 tests | 1 failed | 1 skipped) 50338ms
+   ✓ M9 memory-dependent choice > controls: four current-sensing M3 cells preserve prior behavior against0.8 14917ms
+   ✓ M9 memory-dependent choice > controls: repeat and restore before recall match every whole later boundary 15623ms
+   ✓ M9 memory-dependent choice > controls: hidden truth stays out, current zero takes precedence, failed sensing cannot fall back 10502ms
+   ✓ M9 memory-dependent choice > controls: no current handoff at6 even though the memory remains stored 3664ms
+   × M9 memory-dependent choice > controls: late failure after consuming appraisal rolls back the entire instant 1816ms
+     → cognitive profile requires at most100 exclusive original instants
+   ✓ M9 memory-dependent choice > controls: version/capacity admission and public memory forgery reject 3814ms
+stdout | src/test/assembledWorkspace.test.ts > M8 recalled content shares the existing workspace capacity > preserves four original M3 cells and every non-workspace trace field modulo identities
+M8 four-cell correspondence: full state, prior outputs, draws, non-workspace trace exact
+
+stdout | src/test/assembledWorkspace.test.ts > M8 recalled content shares the existing workspace capacity > one task plus forecast admits recall only in the third shared slot; two tasks exclude it without erasure
+M8 slots0..3 shared occupancy PASS; one task+forecast admits memory at3, two tasks+forecast excludes it
+
+stdout | src/test/assembledWorkspace.test.ts > M8 recalled content shares the existing workspace capacity > late failure after the workspace handoff rolls back the whole instant
+M8 workspace then execution: 35 events, cap34 entire instant rolls back
+
+ ✓ src/test/assembledWorkspace.test.ts (7 tests) 57886ms
+   ✓ M8 recalled content shares the existing workspace capacity > preserves four original M3 cells and every non-workspace trace field modulo identities 14905ms
+   ✓ M8 recalled content shares the existing workspace capacity > one task plus forecast admits recall only in the third shared slot; two tasks exclude it without erasure 15584ms
+   ✓ M8 recalled content shares the existing workspace capacity > workspace traces actual delivery and has no memory/archive read, then the delivery expires 2890ms
+   ✓ M8 recalled content shares the existing workspace capacity > repeat and restore after4 match every later boundary, including selected memory at5 8506ms
+   ✓ M8 recalled content shares the existing workspace capacity > hidden truth stays out, excluded/denied samples supply no recall, zero pressure remains content 8529ms
+   ✓ M8 recalled content shares the existing workspace capacity > late failure after the workspace handoff rolls back the whole instant 4950ms
+   ✓ M8 recalled content shares the existing workspace capacity > rejects stale/foreign/future handoffs and forged public recall; deduplicates repeated acquisitions without double charging 2521ms
+ ✓ src/test/campaign2CognitiveTransforms.test.ts (12 tests) 45ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > controls: late failure after consuming appraisal rolls back the entire instant
+SchedulerContractError: cognitive profile requires at most100 exclusive original instants
+ ❯ invalid src/campaign2/orderedInputs.ts:24:47
+     22| type Content=Awaited<ReturnType<ReturnType<typeof compileValDeclaratio…
+     23| type Domains=Pick<ReturnType<typeof compileAdaptationDomains>,'hasProc…
+     24| function invalid(message:string):never {throw new SchedulerContractErr…
+       |                                               ^
+     25| declare const compilationBrand:unique symbol;
+     26| export interface OrderedInputCompilation {readonly [compilationBrand]:…
+ ❯ decode src/campaign2/orderedInputs.ts:120:97
+ ❯ Object.create src/campaign2/orderedInputs.ts:139:32
+ ❯ Module.compileCharacterInputs src/assembled/inputs.ts:18:27
+ ❯ Module.createCharacterRun src/assembled/character.ts:39:69
+ ❯ src/test/assembledMemoryContext.test.ts:83:288
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed | 2 passed (3)
+      Tests  1 failed | 24 passed | 1 skipped (26)
+   Start at  15:14:03
+   Duration  110.83s (transform 933ms, setup 0ms, collect 1.78s, tests 108.27s, environment 0ms, prepare 257ms)
+
+exit=1 seconds=112.3404757
+ROLLBACK FIXTURE CORRECTION: legacy probe and choice originals must occupy distinct instants. Use legal body delivery5 at phase110 after recalled-context appraisal50; no current sensing or psychological evidence is added.
+COMMAND npx tsc -b --pretty false (rollback fixture correction)
+exit=0 seconds=14.8525287
+COMMAND npx vitest run src/test/assembledMemoryContext.test.ts -t "late failure" --maxWorkers=1 --minWorkers=1 (only failed case)
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > controls: late failure after consuming appraisal rolls back the entire instant
+M9 late rollback 28 events, limit27
+
+ ✓ src/test/assembledMemoryContext.test.ts (7 tests | 6 skipped) 5389ms
+   ✓ M9 memory-dependent choice > controls: late failure after consuming appraisal rolls back the entire instant 5388ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  15:16:41
+   Duration  6.98s (transform 902ms, setup 0ms, collect 1.31s, tests 5.39s, environment 0ms, prepare 94ms)
+
+exit=0 seconds=8.479348
+PASS frozen105 dependency/config/original-fixture guard vsdb0ca7a8; M1 test/control vs31553ea7. No full-control invalidator. seconds=1.360
+COMMAND npm run check:boundaries
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+exit=0 seconds=2.8251577
+COMMAND npm run check:research
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+exit=0 seconds=4.3097582
+REVIEW CORRECTION: version the extended workspace domain as workspace/0.2 in0.9 traces; retain workspace/0.1 for old models. No formula/selection change. Target reruns: matrix source joins, current-sensing correspondence, byte repeat/restore. Other completed controls unaffected.
+COMMAND npx tsc -b --pretty false (workspace trace version correction)
+exit=0 seconds=14.6719456
+COMMAND npx vitest run src/test/assembledMemoryContext.test.ts -t "fixed seeds|four current-sensing|repeat and restore" --maxWorkers=1 --minWorkers=1 (trace version affected cases)
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 0 choices=[["definition/protocol-contact-two","definition/protocol-contact-two"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 1 choices=[["definition/protocol-contact-two","definition/protocol-contact-two"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 2 choices=[["definition/protocol-contact-two","definition/protocol-contact-one"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,3,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 3 choices=[["definition/protocol-contact-two","definition/protocol-contact-one"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 4 choices=[["definition/protocol-contact-two","definition/protocol-contact-one"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,3,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 5 choices=[["definition/protocol-contact-two","definition/protocol-contact-two"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 6 choices=[["definition/protocol-contact-two","definition/protocol-contact-two"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,3,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 7 choices=[["definition/protocol-contact-two","definition/protocol-contact-one"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 8 choices=[["definition/protocol-contact-two","definition/protocol-contact-two"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 9 choices=[["definition/protocol-contact-two","definition/protocol-contact-two"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,3,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 10 choices=[["definition/protocol-contact-two","definition/protocol-contact-two"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 11 choices=[["definition/protocol-contact-two","definition/protocol-contact-two"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,3,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 12 choices=[["definition/protocol-contact-two","definition/protocol-contact-one"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 13 choices=[["definition/protocol-contact-two","definition/protocol-contact-two"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 14 choices=[["definition/protocol-contact-two","definition/protocol-contact-one"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+
+stdout | src/test/assembledMemoryContext.test.ts > M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect
+M9 seed 15 choices=[["definition/protocol-contact-two","definition/protocol-contact-two"],["NoChoice:2","NoChoice:2"]] drawCounts=[0,2,0,0]
+M9 changed-history choices=6/16; actual equal-address draw pairs=0
+
+ ✓ src/test/assembledMemoryContext.test.ts (7 tests | 4 skipped) 149104ms
+   ✓ M9 memory-dependent choice > fixed seeds0..15 matrix: recalled context changes choice and workspace ablation removes the history effect 118812ms
+   ✓ M9 memory-dependent choice > controls: four current-sensing M3 cells preserve prior behavior against0.8 14665ms
+   ✓ M9 memory-dependent choice > controls: repeat and restore before recall match every whole later boundary 15626ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 4 skipped (7)
+   Start at  15:19:06
+   Duration  150.69s (transform 869ms, setup 0ms, collect 1.28s, tests 149.10s, environment 0ms, prepare 93ms)
+
+exit=0 seconds=152.2048851

@@ -1,7 +1,7 @@
 # Assembled Character — M2 reconciliation
 
 Owner approved D1–D5 on 2026-10-25 with the D2 condition below. M2a is complete.
-M2a admits non-presets; M3 interaction/M4 body selection pass. [M4 result](ASSEMBLED_CHARACTER_M4_RESULT.md).
+M2a-M9 pass: recalled context changes choices. [M9 result](ASSEMBLED_CHARACTER_M9_RESULT.md).
 
 ## Decision sheet — adopted 2026-10-25
 

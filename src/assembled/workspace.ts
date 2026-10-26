@@ -1,5 +1,5 @@
 /** assembled-character-workspace/0.1-candidate. One capacity, existing focus first. */
-import {list,text,signed,unsigned,type CanonicalValue} from '../substrate/canonicalEncoding';
+import {list,text,signed,unsigned,record,type CanonicalValue} from '../substrate/canonicalEncoding';
 import {SchedulerContractError,type ScheduledEvent} from '../substrate/scheduler';
 import {scheduledEventValue} from '../substrate/persistence';
 import {dataItems as items,dataRecord as rec,dataField as f,dataKey as key,dataIdentity as id,dataText as txt,dataUnsigned as uint} from '../campaign2/canonicalData';
@@ -12,7 +12,7 @@ const eq=(a:CanonicalValue,b:CanonicalValue)=>key(a)===key(b);
 /** The caller supplies only current, completed retrieval deliveries; never an archive. */
 export function sharedWorkspace(taskWorkspace:CanonicalValue,capacity:number,at:bigint,deliveries:readonly BodyRecallDelivery[]){
  const w=rec(taskWorkspace,381n),C=f(w,2n),tasks=items(f(w,4n),'list'),forecast=rec(f(w,5n),380n),tag=uint(f(forecast,1n));
- if(!Number.isSafeInteger(capacity)||capacity<0||capacity>3||typeof at!=='bigint'||at<0n||![1n,2n].includes(tag))fail('capacity/clock/forecast');
+ if(!Number.isSafeInteger(capacity)||capacity<0||capacity>4||typeof at!=='bigint'||at<0n||![1n,2n].includes(tag))fail('capacity/clock/forecast');
  const used=tasks.length+(tag===2n?1:0);if(used>capacity)fail('existing focus exceeds capacity');
  const candidates:CanonicalValue[]=[],seen=new Map<string,CanonicalValue>(),events=new Set<bigint>();let lastSequence=-1n;
  for(const delivery of deliveries){const {event,episodes}=delivery;
@@ -24,4 +24,11 @@ export function sharedWorkspace(taskWorkspace:CanonicalValue,capacity:number,at:
  }
  const selected=candidates.slice(0,capacity-used),sourceIds=selected.map(v=>items(v,'list')[0]).sort((a,b)=>key(a)<key(b)?-1:key(a)>key(b)?1:0);
  return structuredClone({report:list([text(WORKSPACE),signed(at),unsigned(capacity),taskWorkspace,list(selected)]),sourceIds,input:list(deliveries.map(d=>list([d.character,scheduledEventValue(d.event),list(d.episodes)])))});
+}
+
+/** Task/forecast selection keeps its three-slot domain within the ONE shared budget. */
+export function taskWorkspaceDefinition(definition:CanonicalValue){
+ const d=rec(definition,378n),capacity=uint(f(d,2n));
+ if(capacity>4n)fail('task projection capacity');
+ return capacity===4n?record(d.schema,new Map([...d.fields].map(([n,v])=>[n,n===2n?unsigned(3):v]))):definition;
 }

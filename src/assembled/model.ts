@@ -17,6 +17,8 @@ import {decodeEmbodied} from '../campaign3/embodiedCodecs';
 import {compileRetrievalDeclaration} from './retrieval';
 import {compileRetentionDeclaration} from './retention';
 import {compileBodyDeclaration} from './body';
+export const MEMORY_CONTEXT_RULES='rules/assembled-character/0.9-candidate';
+export const MEMORY_CONTEXT_REGISTRY='assembled-character-registry/0.9-candidate';
 export const WORKSPACE_RULES='rules/assembled-character/0.8-candidate';
 export const WORKSPACE_REGISTRY='assembled-character-registry/0.8-candidate';
 export const RETRIEVAL_RULES='rules/assembled-character/0.7-candidate';
@@ -41,7 +43,7 @@ const fields:Readonly<Record<string,readonly bigint[]>>={
 function rationalRange(v:CanonicalValue,name:string,lo:bigint,hi:bigint,strict=false){
  if(typeof v==='boolean'||v.kind!=='rational'||(strict?v.numerator<=lo*v.denominator:v.numerator<lo*v.denominator)||v.numerator>hi*v.denominator)invalidModel(name+' outside exact rational domain');
 }
-function topology(registry:CanonicalValue,calibrated=false){
+function topology(registry:CanonicalValue,calibrated=false,memoryContext=false){
  const slots=items(registry,'list');if(slots.length!==6)invalidModel('six assembled registry slots required');
  const normalized=items(slots[0],'set').map(v=>{
   if(typeof v==='boolean'||v.kind!=='record'||v.schema.typeId!==171n)return v;
@@ -62,7 +64,7 @@ function topology(registry:CanonicalValue,calibrated=false){
    if(typeof lo==='boolean'||lo.kind!=='rational'||typeof hi==='boolean'||hi.kind!=='rational')invalidModel('task rational required');
    if(lo.numerator*hi.denominator>hi.numerator*lo.denominator)invalidModel('task minimum exceeds maximum');
    const a=f(d,5n),b=f(d,6n);if(typeof a==='boolean'||a.kind!=='signed'||typeof b==='boolean'||b.kind!=='signed'||a.value<0n||b.value<=a.value)invalidModel('task window requires 0 <= activation < deadline');
-  }else if(d.schema.typeId===378n){if(uint(f(d,2n))>3n)invalidModel('workspace capacity outside 0..3');}
+  }else if(d.schema.typeId===378n){if(uint(f(d,2n))>(memoryContext?4n:3n))invalidModel('workspace capacity outside '+(memoryContext?'0..4':'0..3'));}
   else rationalRange(f(d,1n),d.schema.typeId===385n?'concern gain':'motive pressure',0n,1n,d.schema.typeId===392n);
   // This internal comparison image is never decoded/executed/committed: mask ONLY
   // the validated open slots; all remaining declared fields must match exactly.
@@ -73,8 +75,8 @@ function topology(registry:CanonicalValue,calibrated=false){
 }
 export async function compileCharacterModel(input:Campaign2ModelSource){
  const source=snapshotMemorySource(input);
- const workspace=source.rulesVersion===WORKSPACE_RULES,retrievalEnabled=workspace||source.rulesVersion===RETRIEVAL_RULES,retained=retrievalEnabled||source.rulesVersion===RETENTION_RULES,memory=retained||source.rulesVersion===MEMORY_RULES,attention=memory||source.rulesVersion===ATTENTION_RULES,calibrated=attention||source.rulesVersion===CALIBRATED_RULES,interaction=calibrated||source.rulesVersion===INTERACTION_RULES;
- if((interaction?source.registrySchemaVersion!==(workspace?WORKSPACE_REGISTRY:retrievalEnabled?RETRIEVAL_REGISTRY:retained?RETENTION_REGISTRY:memory?MEMORY_REGISTRY:attention?ATTENTION_REGISTRY:calibrated?CALIBRATED_REGISTRY:INTERACTION_REGISTRY):source.rulesVersion!==CHARACTER_RULES||source.registrySchemaVersion!==CHARACTER_REGISTRY)||source.contentSchemaVersion!=='content/0.2-candidate'||source.parameterSchemaVersion!=='campaign2-parameters/0.1-candidate'||source.numericProfileVersion!=='numeric/task-cognitive-exact/0.1-candidate'||source.randomAlgorithmVersion!==RANDOM_ALGORITHM_VERSION)invalidModel('unsupported assembled model version bundle');
+ const memoryContext=source.rulesVersion===MEMORY_CONTEXT_RULES,workspace=memoryContext||source.rulesVersion===WORKSPACE_RULES,retrievalEnabled=workspace||source.rulesVersion===RETRIEVAL_RULES,retained=retrievalEnabled||source.rulesVersion===RETENTION_RULES,memory=retained||source.rulesVersion===MEMORY_RULES,attention=memory||source.rulesVersion===ATTENTION_RULES,calibrated=attention||source.rulesVersion===CALIBRATED_RULES,interaction=calibrated||source.rulesVersion===INTERACTION_RULES;
+ if((interaction?source.registrySchemaVersion!==(memoryContext?MEMORY_CONTEXT_REGISTRY:workspace?WORKSPACE_REGISTRY:retrievalEnabled?RETRIEVAL_REGISTRY:retained?RETENTION_REGISTRY:memory?MEMORY_REGISTRY:attention?ATTENTION_REGISTRY:calibrated?CALIBRATED_REGISTRY:INTERACTION_REGISTRY):source.rulesVersion!==CHARACTER_RULES||source.registrySchemaVersion!==CHARACTER_REGISTRY)||source.contentSchemaVersion!=='content/0.2-candidate'||source.parameterSchemaVersion!=='campaign2-parameters/0.1-candidate'||source.numericProfileVersion!=='numeric/task-cognitive-exact/0.1-candidate'||source.randomAlgorithmVersion!==RANDOM_ALGORITHM_VERSION)invalidModel('unsupported assembled model version bundle');
  const registry=decodeEmbodied(source.registry),allSlots=items(registry,'list');
  if(allSlots.length!==(retrievalEnabled?10:retained?9:attention?8:interaction?7:6))invalidModel('assembled registry slot count');
  const retrieval=retrievalEnabled?compileRetrievalDeclaration(allSlots[9]):undefined;
@@ -83,12 +85,12 @@ export async function compileCharacterModel(input:Campaign2ModelSource){
  if(attention){const declaration=items(allSlots[7],'list');if(declaration.length!==2||txt(declaration[0])!=='assembled-body-selection/0.1'||uint(declaration[1])>1n)invalidModel('body selection requires capacity0..1');selectionCapacity=Number(uint(declaration[1]));}
  const body=interaction?Object.freeze({...compileBodyDeclaration(allSlots[6]),selectionCapacity}):undefined,slots=allSlots.slice(0,6),baseRegistry=enc(list(slots));
  // Validate open slots before generic declarations, giving specific domain errors.
- const shape=topology(list(slots),calibrated);
+ const shape=topology(list(slots),calibrated,memoryContext);
  const content=await compileCognitiveDeclarations(source.content,baseRegistry);
  const structuralState=compileCampaign2StateModel(enc(slots[2]),enc(slots[3]),enc(slots[4]),content,{decode:decodeCognitive,schema:cognitiveSchemaByType});
  compileCampaign2Parameters(source.parameterSchemaVersion,source.parameters);
  if(key(decodeCognitive(source.content))!==key(decodeCognitive(hex(contentHex))))invalidModel('content outside declared assembled holder/task topology');
  if(key(shape)!==key(topology(decodeCognitive(hex(registryHex)))))invalidModel('undeclared topology change: references, schemas, phases, ownership and producers are fixed');
  const modelIdentity=await createModelIdentity({...source,contentManifest:await commitManifest(decodeCognitive(source.content)),registryManifest:await commitManifest(registry),parameterSet:await commitManifest(decodeCognitive(source.parameters))});
- return Object.freeze({source,modelIdentity,content,structuralState,body,baseRegistry,memory,retention,retrieval,workspace});
+ return Object.freeze({source,modelIdentity,content,structuralState,body,baseRegistry,memory,retention,retrieval,workspace,memoryContext});
 }

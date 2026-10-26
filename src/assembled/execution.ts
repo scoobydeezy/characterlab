@@ -17,8 +17,8 @@ import {compileProtocolBridge} from '../campaign2/protocolBridge';
 import {cognitiveTraceRecord,protocolTraceRecord} from '../campaign2/cognitiveTrace';
 import {workspaceOutput,appraisalOutput,concernOutput,motiveOutput,candidateOutput,rawSignalOutput} from '../campaign2/cognitiveTransforms';
 import {dataRecord as rec,dataField as f,dataItems as items,dataKey as key,dataUnsigned as u,dataIdentity as id} from '../campaign2/canonicalData';
-import {sharedWorkspace,type BodyRecallDelivery} from './workspace';
-import {jointAppraisal,jointConcern,jointSignalSupport} from './appraisal';
+import {sharedWorkspace,taskWorkspaceDefinition,type BodyRecallDelivery} from './workspace';
+import {contextAppraisal,jointAppraisal,jointConcern,jointSignalSupport} from './appraisal';
 import type {BodyEvidence} from './body';
 import type {compileCharacterInputs} from './inputs';
 import type {compileCharacterModel} from './model';
@@ -57,7 +57,7 @@ export function createCognitiveExecution(model:Model,component:State,inputs:Awai
  const protocol=compileProtocolBridge(definition('protocol-observation'));let protocolInstant:ReturnType<typeof protocol.begin>|undefined;
  let pending=new Map<string,ScheduledEvent>(),checkpoint=new Map<string,ScheduledEvent>(),active=false,instant=0n,sealed=false,unbound=0,chosen=false;
  let source:ReturnType<typeof beginCognitiveSourceInstant>|undefined;
- let joint:CanonicalValue|undefined;
+ let joint:CanonicalValue|undefined,activeWorkspace:CanonicalValue|undefined;
  let identityPlan:{event:ScheduledEvent;state:AuthoritativeState;path?:StatePath;subject?:CanonicalValue;contribution?:CanonicalValue}|undefined,identitySealed=false;
  const identityRegistration=rec(registration('TaskIdentityApplicationTransition'),450n),identityRequirement=rec(f(identityRegistration,8n),448n),identityDomain=items(f(identityRegistration,4n),'set').map(decodeStatePattern);
  const index=(event:ScheduledEvent)=>stages.findIndex(s=>key(event.eventTypeId)===key(atom(1001,'event/'+s[0])));
@@ -67,7 +67,7 @@ export function createCognitiveExecution(model:Model,component:State,inputs:Awai
   protocolEventTypes:()=>protocol.eventTypes(),
   identityEventType:()=>atom(1001,'event/task-identity-application'),
   executeProtocol(event:ScheduledEvent,allocator:{allocateRuntimeId():bigint}){if(!active||sealed||!protocolInstant)stageFail('protocol outside live cognitive instant');const result=protocolInstant.execute(event,allocator);return {...result,trace:(children:readonly ScheduledEvent[])=>protocolTraceRecord(model.modelIdentity.value,inputs.runIdentity.value,event,result.outputs,children)};},
-  begin(at:bigint){joint=undefined;if(active)stageFail('cognitive instant already active');active=true;sealed=false;unbound=0;chosen=false;identityPlan=undefined;identitySealed=false;instant=at;checkpoint=new Map(pending);source=beginCognitiveSourceInstant(inputs.base,at);random.begin();protocolInstant=protocol.begin(at);},
+  begin(at:bigint){activeWorkspace=undefined;joint=undefined;if(active)stageFail('cognitive instant already active');active=true;sealed=false;unbound=0;chosen=false;identityPlan=undefined;identitySealed=false;instant=at;checkpoint=new Map(pending);source=beginCognitiveSourceInstant(inputs.base,at);random.begin();protocolInstant=protocol.begin(at);},
   validateParticipants(events:readonly ScheduledEvent[]){
    if(!active||sealed)stageFail('participant check outside instant');
    const count=(name:string)=>events.filter(e=>key(e.eventTypeId)===key(atom(1001,'event/'+name))).length;
@@ -127,16 +127,16 @@ export function createCognitiveExecution(model:Model,component:State,inputs:Awai
     reads[reads.length-1]={accessorId:id(f(q,5n)),path,presence:true,value:C,derivedSources:[prior],transformationId:id(f(q,5n))};
     const tr=rec(items(f(wrapper,10n),'set')[0],416n),pr=rec(items(f(wrapper,11n),'set')[0],363n),pt=decodeStatePattern(f(pr,3n));
     const tasks=component.tasks.filter(t=>key(t.character)===key(C));
-    output=workspaceOutput(occurrence,C,f(cue,2n),definition('task-workspace'),tasks,instant,{
+    output=workspaceOutput(occurrence,C,f(cue,2n),taskWorkspaceDefinition(definition('task-workspace')),tasks,instant,{
      status(task){const t=tasks.find(v=>key(v.key)===key(task));if(!t)fail('unselected workspace task read');return read(t.path,f(tr,4n)).value;},
      prediction(){return read({rootStateTypeId:pt.rootStateTypeId,fieldId:pt.fieldId,selectors:[{kind:'mapKey',key:r(360,[C,f(pr,2n)])}]},f(pr,4n)).value;},
     }).output;
-    if(model.workspace){workspaceJoin=sharedWorkspace(output,Number(u(f(rec(definition('task-workspace'),378n),2n))),instant,recallEvidence());extraOutputs=[workspaceJoin.report];}
+    if(model.workspace){workspaceJoin=sharedWorkspace(output,Number(u(f(rec(definition('task-workspace'),378n),2n))),instant,recallEvidence());extraOutputs=[workspaceJoin.report];if(model.memoryContext)activeWorkspace=structuredClone(workspaceJoin.report);}
    }else if(i===1){
     const w=rec(event.payload,381n),selected=items(f(w,4n),'list');
     const criteria=selected.map(v=>{const item=rec(v,379n),t=component.tasks.find(t=>key(t.key)===key(f(item,1n))&&key(t.specId)===key(f(item,2n)));if(!t)fail('unselected criterion');return {taskKey:t.key,specId:t.specId,minimum:readQ(t.minimum),maximum:readQ(t.maximum)};});
     output=appraisalOutput(occurrence,event.payload,criteria);
-    if(model.body){const evidence=bodyEvidence();if(evidence&&(evidence.settledEvent.phase!==(model.body.selectionCapacity===undefined?14n:20n)||evidence.settledEvent.dueAt!==instant))fail('joint appraisal requires current settled body evidence');joint=jointAppraisal(output,evidence?.sample,evidence?.experience,model.body.threshold);extraOutputs=[joint];jointInput=list([event.payload,evidence?.sample??list([]),evidence?.experience??list([]),...(model.body.selectionCapacity===undefined?[]:[evidence?.selection??list([])])]);}
+    if(model.body){const evidence=bodyEvidence();if(evidence&&(evidence.settledEvent.phase!==(model.body.selectionCapacity===undefined?14n:20n)||evidence.settledEvent.dueAt!==instant))fail('joint appraisal requires current settled body evidence');if(model.memoryContext&&!activeWorkspace)fail('appraisal requires actual current workspace');joint=model.memoryContext?contextAppraisal(output,activeWorkspace!,instant,evidence,model.body.threshold):jointAppraisal(output,evidence?.sample,evidence?.experience,model.body.threshold);extraOutputs=[joint];jointInput=list([event.payload,...(model.memoryContext?[activeWorkspace!]:[]),evidence?.sample??list([]),evidence?.experience??list([]),...(model.body.selectionCapacity===undefined?[]:[evidence?.selection??list([])])]);}
    }else if(i===2){if(model.body){if(!joint)fail('concern requires generated joint appraisal');output=jointConcern(occurrence,event.payload,joint!,definition('task-concern'));jointInput=list([event.payload,joint!]);}else output=concernOutput(occurrence,event.payload,definition('task-concern'));}
    else if(i===3)output=motiveOutput(occurrence,event.payload,definition('task-motive'));
    else if(i===4){
@@ -169,15 +169,16 @@ export function createCognitiveExecution(model:Model,component:State,inputs:Awai
    model.content.validateRecordRoles(enc(output));
    const noChoice=i===7&&u(f(rec(f(rec(output,409n),4n),419n),1n))!==3n;
    const destinations:readonly (readonly [string,number])[]=noChoice||i===14?[]:i===8?[['task-expression',90],['task-plan',100]]:i===9?[['task-qualification',130]]:i===12?[['protocol-actual-fact',110]]:i===13?[['task-identity-application',140]]:[[stages[i+1][0],stages[i+1][2]]];
-   const emissions:EventEmission[]=destinations.map(([name,phase])=>({dueAt:event.dueAt,phase:BigInt(phase),eventTypeId:atom(1001,'event/'+name),payload:cloneCognitive(output),dependencies:list([]),...(i===0&&model.body&&bodyEvidence()?{additionalCausalParentEventIds:[bodyEvidence()!.settledEvent.eventId]}:{})}));
+   const emissions:EventEmission[]=destinations.map(([name,phase])=>({dueAt:event.dueAt,phase:BigInt(phase),eventTypeId:atom(1001,'event/'+name),payload:cloneCognitive(output),dependencies:list([]),...(i===0?{additionalCausalParentEventIds:bodyEvidence()?[bodyEvidence()!.settledEvent.eventId]:model.memoryContext&&workspaceJoin&&items(items(workspaceJoin.report,'list')[4],'list').length?[u(items(items(items(workspaceJoin.report,'list')[4],'list')[0],'list')[2])]:[]}:{} )}));
    const protocolPlan=i===12?protocolInstant!.source(event,output):undefined;
    const additional=protocolPlan?.emissions()??[];let bound=false;unbound++;
    const report=joint,projection=jointInput;
    return {output:cloneCognitive(output),additionalOutputs:extraOutputs,reads,domain,quantizationOperations,randomDrawRecords,
     trace(children:readonly ScheduledEvent[]){if(!bound)stageFail('cognitive trace before child binding');const original=rec(cognitiveTraceRecord(model.modelIdentity.value,inputs.runIdentity.value,event,registered,output,children,{domain,reads,quantizationOperations,randomDrawRecords}),160n);
-     if(workspaceJoin){const replacements=new Map<bigint,CanonicalValue>([[6n,text('assembled-character-workspace/0.1-candidate')],[9n,list(workspaceJoin.sourceIds)],[12n,list([event.payload,workspaceJoin.input])],[13n,list([output,workspaceJoin.report])]]);return record(original.schema,new Map([...original.fields].map(([n,v])=>[n,replacements.get(n)??v])));}
+     if(workspaceJoin){const replacements=new Map<bigint,CanonicalValue>([[6n,text(model.memoryContext?'assembled-character-workspace/0.2-candidate':'assembled-character-workspace/0.1-candidate')],[9n,list(workspaceJoin.sourceIds)],[12n,list([event.payload,workspaceJoin.input])],[13n,list([output,workspaceJoin.report])]]);return record(original.schema,new Map([...original.fields].map(([n,v])=>[n,replacements.get(n)??v])));}
      if(!projection)return original;const safe=report?items(report,'list').slice(2,4):[],extraSources=safe.filter(v=>typeof v!=='boolean'&&v.kind==='record').map(v=>f(v as Extract<CanonicalValue,{kind:'record'}>,1n)),sources=new Map([...items(f(original,9n),'list'),...extraSources].map(v=>[key(v),v]));
-     const replacements=new Map<bigint,CanonicalValue>([[6n,text(model.body?.selectionCapacity===undefined?'assembled-character-interaction/0.1-candidate':'assembled-character-attention/0.1-candidate')],[9n,list([...sources.values()].sort((a,b)=>key(a)<key(b)?-1:1))],[12n,projection],[13n,extraOutputs.length?list([output,...extraOutputs]):output]]);return record(original.schema,new Map([...original.fields].map(([n,v])=>[n,replacements.get(n)??v])));},
+     if(model.memoryContext&&report){const context=items(report,'list')[5],selected=items(items(context,'list')[2],'list');if(selected.length)sources.set(key(selected[0]),selected[0]);}
+     const replacements=new Map<bigint,CanonicalValue>([[6n,text(model.memoryContext?'assembled-character-memory-context/0.1-candidate':model.body?.selectionCapacity===undefined?'assembled-character-interaction/0.1-candidate':'assembled-character-attention/0.1-candidate')],[9n,list([...sources.values()].sort((a,b)=>key(a)<key(b)?-1:1))],[12n,projection],[13n,extraOutputs.length?list([output,...extraOutputs]):output]]);return record(original.schema,new Map([...original.fields].map(([n,v])=>[n,replacements.get(n)??v])));},
     emissions:()=>structuredClone([...emissions,...additional]),
     bindAllocatedChildren(children:readonly ScheduledEvent[]){
      if(!active||sealed||bound||children.length!==emissions.length+additional.length)stageFail('cognitive child binding lifecycle');
@@ -190,7 +191,7 @@ export function createCognitiveExecution(model:Model,component:State,inputs:Awai
   },
   prepareCommit(){if(!active||sealed||unbound||identityPlan||[...pending.values()].some(e=>e.dueAt<=instant))stageFail('unfinished cognitive instant');protocolInstant!.finish();random.prepareCommit();sealed=true;},
   commit(){if(!active||!sealed)stageFail('unprepared cognitive commit');random.commit();checkpoint=new Map(pending);},
-  close(){joint=undefined;pending=checkpoint;source?.close();source=undefined;protocolInstant?.abort();protocolInstant=undefined;random.close();active=false;sealed=false;unbound=0;identityPlan=undefined;identitySealed=false;},
+  close(){activeWorkspace=undefined;joint=undefined;pending=checkpoint;source?.close();source=undefined;protocolInstant?.abort();protocolInstant=undefined;random.close();active=false;sealed=false;unbound=0;identityPlan=undefined;identitySealed=false;},
   committedRandomAddressKeys:()=>random.committedAddressKeys(),
   randomRelevantAuthoritativeIds(state:AuthoritativeState){
    if(active)stageFail('random-relevant projection requires quiescence');

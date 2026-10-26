@@ -27,7 +27,9 @@ This does not replace R2 law selections or settle interpretation of all memories
 
 ## Shared capacity and authenticated consumption
 
-Rules/registry0.9 retains the ten registry slots. The single workspace capacity
+Rules/registry0.9 retains the ten registry slots. Its workspace trace names
+assembled-character-workspace/0.2-candidate for the extended capacity domain;0.8
+retains workspace0.1 unchanged. The single workspace capacity
 extends0..3 to0..4. Its task/forecast projection uses min(capacity,3), preserving
 exact old task ordering/allocation; recalls fill remaining slots in existing rank.
 This is a projection of one budget, not a second workspace. The original committed
