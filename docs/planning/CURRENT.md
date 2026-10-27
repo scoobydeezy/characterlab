@@ -1,45 +1,49 @@
-# Current work — M13 importance and urgency
+# Current work — M13 approved comparison amendment
 
 The character retains importance and consumes fresh urgency in shared reasons.
-M13 is INCOMPLETE: the fixed comparison changes motives but not choice probabilities.
+M13 remains incomplete until the approved choice-change comparison passes.
 
 | Status | Disposition |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 | Baseline |21 members/219 records;15 families/132 clauses; six foundations/five C2 conditions |
-| M12 |PASS at8777ec8b; goal-preserving plans feed actual action |
-| M13 |INCOMPLETE; choice gate failed; rules/registry0.13 |
+| M12 |PASS at8777ec8b |
+| M13 |Checkpoint25632df2; original failed gate retained |
 | Contract |[priority0.1](../formal/ASSEMBLED_CHARACTER_PRIORITY_CONTRACT.md) |
 
-[Result and proposed amendment](ASSEMBLED_CHARACTER_M13_RESULT.md): preserve original
-null comparison; propose common urgency1 at5 under unchanged dice, pending owner.
-11 tests pass; matrix fails at seed0. No48-run acceptance. No further integration.
-Before-code card below remains the original required comparison, not a passed gate.
+Owner approved the specific amendment on2026-10-26: "Sure, go ahead."
+[Result](ASSEMBLED_CHARACTER_M13_RESULT.md) preserves the failure and diagnosis.
+Before-test amendment: production/laws/calibrations and existing fixtures unchanged.
+Only assembledPriority.test.ts changes; same total10 production/test files/12 cap.
+No new capability, source channel, helper framework, runtime or UI work.
 
 Capabilities: retained importance and fresh urgency jointly change actual choice;
-unknown/zero/denied inputs preserve distinct meanings and zero-motive exclusion.
+unknown/zero/denied evidence preserves distinct meanings and zero-motive exclusion.
 M2 areasM9/M18; F-12.2 clause2 and related goal/reason integration, no clause closure.
-R3 Factored first-use lock: engineering default, no verdict. No other law changes.
-MEC004/011..020/022 preserved. RO001 affected receiving tests; no body reduction.
+Factored remains the locked R3 engineering default, no superiority verdict.
 
-Budget10 production/test files: priority.ts, priorityExecution.ts, model.ts, state.ts,
-inputs.ts, execution.ts, runtime.ts, traceBinding.ts, assembledPriority.test.ts and
-fixtures/assembledPriority.ts. Split before exceeding12; no unrelated breadth.
-Evidence <=20 files/5MiB, planned result + raw log. No UI/new runtime/framework.
+Original48 runs retained: collision pair I1/U0 versus I1/2/U1 at3 for seeds0..15,
+both U0 at5. First cognition/choice/skill equal; later motive1/2 versus1/4 but
+same choice probabilities/distributions and sampled choice. Other two cells for
+seeds0..7 retain their original inputs; report all outcomes, not pairwise null claims.
 
-Fixed comparison: taskA I1/U0 versus I1/2/U1 at3, both U0 at5; taskB I1/U0.
-Body100; original M11 practice and M12 distinct routes. First strength/cognition equal,
-then reasons differ and at least one actual choice5 changes across seeds0..15.
-Add the other two I/U cells for seeds0..7:48 total runs, all retained. Current urgency
-missing at7 cannot be reused. RNG coupling checked at actual matched addresses/domains.
+Additional32 runs: same collision pair/seeds0..15, both taskA branches U1 at5.
+First cognition/choice/skill equal. At5 require motive1 versus1/2, different actual
+reason distributions/probabilities, and >=1 actual choice divergence across16 pairs.
+Actual execution must agree with each choice. No seed search or further retuning.
+All80 runs settle to terminal10; missing taskA urgency7 must not reuse older values.
+Compare actual RNG records at matched addresses AND span/limit; retain unmatched
+addresses/differing domains explicitly. Same seed alone is not a coupling claim.
 
-Sequential checks <=10min each/30min total including failures/reruns:
-- tsc; fixed48-run M13 matrix; M13 finite-component/epistemic/zero-motive/ownership/
-  source/rollback/repeat/restore controls (separate command to bound runtime).
-- Existing six M12 tests: regression risk in shared140, plans, candidate trace and save.
-- Historical105 dependency/config/fixture + M1 guard; no full historical byte replay
-  absent a changed dependency/entry. Boundary/research, caps, staged git-size.
-- Local implementation/result commit after checks; retain every failure/correction.
-Done only on the complete behavioral witness and declared controls within budgets.
-No retuning or shrinking comparisons after failure. Stop on pass; final whole-corpus
-replay remains due, and no following milestone opens automatically.
+Sequential checks <=10min each/30min total INCLUDING prior264.49s:
+- tsc for changed test; original48 and added32 matrices in separate commands.
+- Five M13 controls and six M12 regressions already pass at25632df2. Retain these
+  exact results if production/fixture/control bodies stay unchanged; rerun only if
+  a concrete invalidator is found. Existing repeat/restore covers model0.13.
+- Confirm unchanged production/fixtures/control bodies and historical105/M1 guard;
+  boundary/research results retained absent relevant changes. Final document caps,
+  diff whitespace and staged git-size, then local commit.
+Evidence remains two files (result/raw log), <=20/5MiB; retain original failure.
+Done requires both complete matrices plus retained controls within the same budget.
+Stop on pass or the declared failure/budget guard; final corpus remains due.
+No following milestone or Campaign4/UI work opens automatically.

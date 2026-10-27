@@ -71,3 +71,19 @@ execution/lifecycle controls retained. RO001's new receiving domain gets the nam
 role/zero/epistemic controls. RO008 has no body merger; RO012 access/lifecycle stays
 separate. FND3/4/6 affected vectors run; RO019 historical closure is unchanged.
 No new C3 verdict, general Need law, rich-recognition or family/corpus closure.
+
+## Owner comparison amendment — adopted2026-10-26
+
+At checkpoint25632df2 the original gate failed: motive1/2 and1/4 normalize to1/3
+and1/5, both D4. The original contract and failure remain historical evidence.
+Owner explicitly approved the proposed comparison amendment before further tests.
+Retain all48 original runs; the collision pair is now an equal-distribution/choice
+control with different motives, while the other two cells retain their actual results.
+Add32 runs: the same collision pair/seeds0..15, both taskA branches receive U1 at5.
+This yields motive1 versus1/2, bounded strength1/2 versus1/3, D6 versusD4.
+Require equal initial cognition/skill/choice; different later reason distributions
+and probabilities, >=1 actual choice5 divergence across16 pairs, and matching actual
+execution. Record all80 outcomes and actual RNG address/domain correspondence.
+Keep terminal10 and missing-urgency7 checks. No production/law/calibration changes.
+All original controls and budgets remain. This amendment replaces the original
+pair's impossible choice-change expectation, not the milestone's behavioral gate.

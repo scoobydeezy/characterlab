@@ -97,3 +97,7 @@ report it; do not hunt for seeds or add another comparator automatically.
 The work order says: "Changes to comparison meaning or required scope need an owner
 amendment." This changes the declared comparison, so it is proposed for review only.
 M13 remains incomplete; M14 and UI work are not open.
+
+Owner adopted the proposed amendment on2026-10-26 ("Sure, go ahead"). CURRENT.md
+and the contract record the fixed80-run scope before changing the test. The failure
+above remains retained; approval alone does not complete M13.
