@@ -1,30 +1,43 @@
-# Current work — M14 complete
+# Current work — M15 performance feedback and route adjustment
 
-The character now uses a received future-opening forecast to postpone a goal,
-keep it active, and pursue it later through the same simulation loop.
+The next connection lets the character change route after repeated perceived failure,
+then execute the new route while keeping its goal active.
 
 | Status | Disposition |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 | Baseline |21 members/219 records;15 families/132 clauses; six foundations/five C2 conditions |
-| M14 |PASS; before-code plan7e556f52; rules/registry0.14 |
-| Result |[M14 result](ASSEMBLED_CHARACTER_M14_RESULT.md) |
-| Contract |[horizon0.1](../formal/ASSEMBLED_CHARACTER_HORIZON_CONTRACT.md) |
+| M14 |PASS at53b2d0b2 |
+| M15 |Before-code card; one active package; rules/registry0.15 |
+| Contract |[performance0.1](../formal/ASSEMBLED_CHARACTER_PERFORMANCE_CONTRACT.md) |
 
-All32 fixed runs terminate10. Received opening5 availability changes choice3 in7/16
-pairs; all losing goals stay Open;9 deferred runs later choose/execute taskA at5/7.
-Same knowledge owner1000/2 and motive slot; current route1000/1 remains distinct.
-Campaign0 foundations, Campaign1/2 perception/cognition and joined Campaign3
-mechanisms use one model/state/scheduler/RNG/trace/save. No standalone runtime calls.
+Scope: actual action -> permitted outcome report -> retained knowledge -> monitoring
+-> existing planner/candidates/choice -> later executed route. M2 M9/M10/M18; F12.6/8/14.
+TwoFailures first-use engineering default from performance-public0.1; no superiority
+claim. OutcomeBlind/AnyFailure/TruthOracle retained as original controls.
 
-Six M14 control groups and M13 added32/five-control regression pass. TypeScript,
-historical105/config/fixture and M1 guards, boundary/research pass. Missing/denied,
-correction/ordering, expiry/no route, actual child binding, ownership, atomic rollback
-and exact repeat/restore covered. Ten production/test files; two evidence files;
-recorded checks about10.5min, each under10min. Type-literal and launcher errors retained.
-HorizonRelative is an R3 engineering default, locked at first use; no superiority claim.
+Budget10 production/test files: performance.ts, performanceExecution.ts,
+strategyExecution.ts, model.ts, state.ts, inputs.ts, runtime.ts, traceBinding.ts,
+assembledPerformance.test.ts, fixtures/assembledPerformance.ts. Hard12; split first.
+Existing knowledge1000/3 and plan996/2 owners; common scheduler/state/RNG/trace/save.
+No runtime fan-out, UI, framework, skill-to-control inference or new psychological law.
 
-Stop at M14. No next package is open. Full21-member/132-clause reference replay,
-rich recognition and remaining architecture integration are still due. RO011 and
-other broader obligations unchanged; no new corpus/foundation closure. UI and
-Campaign4 remain stopped. Next authorized work must pin its own bounded card first.
+Fixed16 runs: seeds0..7, M14 source/body100/zero fuel, original practice3, taskA I1/U1,
+taskB I0/U0, absent forecast, both routes known available at1. TaskA failure versus
+success feedback3/5; actual feedback7. Both choose/execute route0 at3/5; only repeated
+failure switches and executes route1 at7. Goal Open and same availability; all terminal10.
+Record actual randomness, no seed-coupling assumption; no post-result retuning.
+
+Sequential checks <=10min each/30min total including failures/reruns:
+- tsc; fixed16 witness; six receiving-control groups: original8-frame kernel comparisons,
+  correction/missing/fresh visits/no alternative/no attempt/expiry; privacy; restore5;
+  admission/children/owners/late140 rollback. Contract pins projections and controls.
+- M14 matrix32 and six controls (planner/common140 risk), separate commands;
+  six M12 strategy tests (changed planner/plan writer). M13 results retained where
+  unchanged; M14 exercises its active motive integration. No full historical replay
+  without a changed control dependency.
+- Historical105/config/fixture + M1 guard, boundary/research, document/evidence caps,
+  staged git-size and local commit. Stop verification on pass.
+Evidence planned result+raw log; hard20 files/5MiB. RO010/012/013/014 bounded receiving
+checks; broader obligations remain. Done only when the full declared witness and
+controls pass within budgets. No next milestone or Campaign4/UI opens automatically.
