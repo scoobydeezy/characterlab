@@ -1,7 +1,7 @@
 # Assembled Character — M2 reconciliation
 
 Owner approved D1–D5 on 2026-10-25 with the D2 condition below. M2a is complete.
-M2a-M12 pass: plans change actual actions. [M12](ASSEMBLED_CHARACTER_M12_RESULT.md).
+M2a-M12 pass. [M13](ASSEMBLED_CHARACTER_M13_RESULT.md) INCOMPLETE: choice gate failed.
 
 ## Decision sheet — adopted 2026-10-25
 

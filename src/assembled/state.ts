@@ -10,6 +10,7 @@ import {predictionModelReviewSource} from '../campaign2/predictionModelReview';
 import {decodeCognitive,cognitiveRecord as r} from '../campaign2/cognitiveCodecs';
 import {validateIdentityHistory,readQ} from '../campaign2/cognitiveMath';
 import {dataRecord as rec,dataField as f,dataIdentity as id,dataItems as items,dataKey as key,dataText as txt,dataUnsigned as u,invalidModel} from '../campaign2/canonicalData';
+import {withPriorityState} from './priority';
 import {withStrategyState} from './strategy';
 import {withSkillState} from './skill';
 import {withRetentionState} from './retention';
@@ -71,10 +72,12 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  const embodied=model.body?withBodyState(episodes,C,model.body):episodes;
  const retained=model.retention?withRetentionState(embodied,C):embodied;
  const procedural=model.skill?withSkillState(retained,C):retained;
- const stateModel=model.strategy?withStrategyState(procedural,C,model.strategy):procedural;
+ const planned=model.strategy?withStrategyState(procedural,C,model.strategy):procedural;
+ const stateModel=model.priority?withPriorityState(planned,tasks.map(t=>t.key)):planned;
  function initialState(bytes:Uint8Array){
   const state=stateModel.restoreState(bytes);
   for(const e of state.entries()){
+   if(model.priority&&e.path.rootStateTypeId===373n&&e.path.fieldId===3n)invalidModel('initial importance must be absent');
    if(model.strategy&&[996n,1000n].includes(e.path.rootStateTypeId))invalidModel('initial strategy state must be absent');
    if(model.skill&&[785n,1500n].includes(e.path.rootStateTypeId))invalidModel('initial skill/development must be absent');
    if(e.path.rootStateTypeId===455n){const at=f(rec(e.value,454n),2n);if(typeof at==='boolean'||at.kind!=='signed'||at.value!==0n)invalidModel('initial body anchor must be at0');}

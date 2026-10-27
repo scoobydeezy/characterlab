@@ -7,14 +7,15 @@ import {taskInitialSchedule} from '../campaign2/taskBootstrap';
 import {decodeEmbodied as decode} from '../campaign3/embodiedCodecs';
 import {exact} from '../campaign3/embodiedMath';
 import {dataItems as items,dataField as f,dataRecord as rec,dataIdentity as id,dataKey as key,invalidModel} from '../campaign2/canonicalData';
+import {PRIORITY_DISPLAY,priorityDisplay} from './priority';
 import {DISPLAY,display,validateDisplayHistory} from './strategy';
 import {PRACTICE_SETTING,practiceSetting} from './skill';
 import {BODY_SAMPLE,BODY_DELIVERY,BODY_OBSERVER,BODY_DEFINITION} from './body';
 import type {compileCharacterModel} from './model';
 import type {compileCharacterState} from './state';
 export async function compileCharacterInputs(model:Awaited<ReturnType<typeof compileCharacterModel>>,component:Awaited<ReturnType<typeof compileCharacterState>>,data:{initialState:Uint8Array;orderedInputs:Uint8Array;runSeed:Uint8Array}){
- const manifest=decode(data.orderedInputs),rows=items(manifest,'list'),bodyRows:CanonicalValue[]=[],skillRows:CanonicalValue[]=[],strategyRows:CanonicalValue[]=[],legacyRows:CanonicalValue[]=[];
- for(const row of rows){const slots=items(row,'list');if(slots.length!==5)invalidModel('five-position assembled input required');const isBody=[BODY_SAMPLE,BODY_DELIVERY].some(t=>key(t)===key(slots[2]));(isBody?bodyRows:key(slots[2])===key(PRACTICE_SETTING)?skillRows:key(slots[2])===key(DISPLAY)?strategyRows:legacyRows).push(row);}
+ const manifest=decode(data.orderedInputs),rows=items(manifest,'list'),bodyRows:CanonicalValue[]=[],skillRows:CanonicalValue[]=[],strategyRows:CanonicalValue[]=[],priorityRows:CanonicalValue[]=[],legacyRows:CanonicalValue[]=[];
+ for(const row of rows){const slots=items(row,'list');if(slots.length!==5)invalidModel('five-position assembled input required');const isBody=[BODY_SAMPLE,BODY_DELIVERY].some(t=>key(t)===key(slots[2]));(isBody?bodyRows:key(slots[2])===key(PRACTICE_SETTING)?skillRows:key(slots[2])===key(DISPLAY)?strategyRows:key(slots[2])===key(PRIORITY_DISPLAY)?priorityRows:legacyRows).push(row);}
  if(bodyRows.length&&!model.body)invalidModel('body sources require assembled0.2');if(bodyRows.length>100)invalidModel('body source capacity100');
  if(model.strategy)for(const row of legacyRows){const x=items(row,'list');if(key(x[2])===key(DELIBERATION_EVENT)){const at=x[0];if(typeof at==='boolean'||at.kind!=='signed'||at.value<1n||at.value>100n)invalidModel('strategy planning time1..100');}}
  const profile=compileOrderedInputProfile(COGNITIVE_INPUT_PROFILE,model.content,component.prior.base.domains,decode);
@@ -33,7 +34,10 @@ export async function compileCharacterInputs(model:Awaited<ReturnType<typeof com
  const displayTimes=new Set<bigint>();
  const displays=strategyRows.map((row,index)=>{const [at,phase,event,payload,dependencies]=items(row,'list');if(typeof at==='boolean'||at.kind!=='signed'||at.value<1n||at.value>100n||key(phase)!==key({kind:'unsigned',value:30n})||key(dependencies)!==key(list([])))invalidModel('strategy source time/phase/dependencies');const time=(at as {value:bigint}).value;if(displayTimes.has(time))invalidModel('duplicate strategy display');displayTimes.add(time);display(payload,time,model.strategy!);const offset=BigInt(bodies.length+settings.length+index);return {dueAt:simInstant(time),phase:30n,eventTypeId:id(event),payload,dependencies,eventId:initial.allocators.nextEventId+offset,eventSequence:initial.allocators.nextEventSequence+offset,causalParentEventIds:[]};});
  if(model.strategy)validateDisplayHistory(displays,model.strategy);
- const runIdentity=bodyRows.length||skillRows.length||strategyRows.length?await createRunIdentity({modelIdentity:model.modelIdentity,initialState:await commitManifest(decode(data.initialState)),orderedInputSequence:await commitManifest(manifest),runSeed:data.runSeed}):base.runIdentity;
+ if(priorityRows.length&&!model.priority||priorityRows.length>100)invalidModel('priority source domain');
+ const priorityTimes=new Set<bigint>();
+ const priorities=priorityRows.map((row,index)=>{const [at,phase,event,payload,dependencies]=items(row,'list');if(typeof at==='boolean'||at.kind!=='signed'||at.value<1n||at.value>100n||key(phase)!==key({kind:'unsigned',value:10n})||key(dependencies)!==key(list([])))invalidModel('priority source time/phase/dependencies');const time=(at as {value:bigint}).value;if(priorityTimes.has(time))invalidModel('duplicate priority display');priorityTimes.add(time);priorityDisplay(payload,time,component.tasks.map(t=>t.key));const offset=BigInt(bodies.length+settings.length+displays.length+index);return {dueAt:simInstant(time),phase:10n,eventTypeId:id(event),payload,dependencies,eventId:initial.allocators.nextEventId+offset,eventSequence:initial.allocators.nextEventSequence+offset,causalParentEventIds:[]};});
+ const runIdentity=bodyRows.length||skillRows.length||strategyRows.length||priorityRows.length?await createRunIdentity({modelIdentity:model.modelIdentity,initialState:await commitManifest(decode(data.initialState)),orderedInputSequence:await commitManifest(manifest),runSeed:data.runSeed}):base.runIdentity;
  // Even without body rows, supplied ordering equals the legacy manifest exactly.
- return Object.freeze({base,runIdentity,bodyEvents:bodies,skillEvents:settings,strategyEvents:displays,initial:{...initial,events:[...initial.events,...bodies,...settings,...displays],allocators:{...initial.allocators,nextEventId:initial.allocators.nextEventId+BigInt(bodies.length+settings.length+displays.length),nextEventSequence:initial.allocators.nextEventSequence+BigInt(bodies.length+settings.length+displays.length)}}});
+ return Object.freeze({base,runIdentity,bodyEvents:bodies,skillEvents:settings,strategyEvents:displays,priorityEvents:priorities,initial:{...initial,events:[...initial.events,...bodies,...settings,...displays,...priorities],allocators:{...initial.allocators,nextEventId:initial.allocators.nextEventId+BigInt(bodies.length+settings.length+displays.length+priorities.length),nextEventSequence:initial.allocators.nextEventSequence+BigInt(bodies.length+settings.length+displays.length+priorities.length)}}});
 }

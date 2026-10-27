@@ -1,15 +1,20 @@
 # Current work — M13 importance and urgency
 
-The continuing character will retain how important a goal is and respond separately
-to its currently perceived urgency, through the existing reason and execution loop.
+The character retains importance and consumes fresh urgency in shared reasons.
+M13 is INCOMPLETE: the fixed comparison changes motives but not choice probabilities.
 
 | Status | Disposition |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 | Baseline |21 members/219 records;15 families/132 clauses; six foundations/five C2 conditions |
 | M12 |PASS at8777ec8b; goal-preserving plans feed actual action |
-| M13 |Before-code card; rules/registry0.13; one active package |
+| M13 |INCOMPLETE; choice gate failed; rules/registry0.13 |
 | Contract |[priority0.1](../formal/ASSEMBLED_CHARACTER_PRIORITY_CONTRACT.md) |
+
+[Result and proposed amendment](ASSEMBLED_CHARACTER_M13_RESULT.md): preserve original
+null comparison; propose common urgency1 at5 under unchanged dice, pending owner.
+11 tests pass; matrix fails at seed0. No48-run acceptance. No further integration.
+Before-code card below remains the original required comparison, not a passed gate.
 
 Capabilities: retained importance and fresh urgency jointly change actual choice;
 unknown/zero/denied inputs preserve distinct meanings and zero-motive exclusion.
