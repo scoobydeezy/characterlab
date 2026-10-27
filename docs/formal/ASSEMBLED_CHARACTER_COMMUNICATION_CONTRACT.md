@@ -47,7 +47,7 @@ Every generated event authenticates full payload, phase, parent and allocated id
 ## Comparisons and stop
 Fixed current control matrix/seeds0..7 as CURRENT. Source at8 permits A only; source9
 allows a later probe. Original COMM cases run unchanged through their full horizons;
-compare latest private claim and exact recipient mean kernels on identical admitted
+compare the exact latest/Boolean-mean algebra port on identical admitted
 histories. Keep LastReceipt/NoLearning/privacy/transmission violations as controls.
 Different source topology and receiving law scope are correspondence, not byte equality.
 Within identical assembled models repeat and restores6/8 must match state, outputs,
@@ -63,3 +63,7 @@ LOCAL DISPOSITION: semantic signal attached to existing physical action, control
 Boolean channel and two passive receivers. This is actual action-to-learning, not full
 multi-character agency, intentional lying, misunderstanding or recipient appraisal.
 RO014/020 wider requirements and all pinned denominators remain unchanged.
+
+Implementation refinement: legacy codec fixes holder1000/history8; port only its exact
+latest/mean algebra into declared holder/history16 domains. Differential controls bind
+the math; no legacy runtime or transient observer identity enters production.

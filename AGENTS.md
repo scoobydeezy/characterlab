@@ -7,7 +7,7 @@ Read [CURRENT.md](docs/planning/CURRENT.md), then
 The active direction is assembly of one continuing character.
 Workbench/UI development and Campaign 4 are stopped pending assembly acceptance.
 This is the assembly checkout, based on
-`788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`. M17 passed: maintained-goal inhibition shares workspace with tasks and memory and changes actual choice under load. Follow CURRENT.md; no next milestone is open. UI remains stopped.
+`788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`. M18 passed: actual choice/execution gates communication and later recipient knowledge in the shared simulation. Follow CURRENT.md; no next milestone is open. UI remains stopped.
 Do not execute historical TODOs, resume old audits, or retain/revisit browser tabs.
 Old instructions/evidence remain on tag `archive/workbench-stopped-2026-10-25`.
 

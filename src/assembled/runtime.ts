@@ -25,6 +25,8 @@ import {createCognitiveExecution} from './execution';
 import {compileCharacterTraceBinding} from './traceBinding';
 import {prepareEpisodicRetention} from './retention';
 import {createEpisodicExtension} from './memory';
+import {createCommunicationExecution} from './communicationExecution';
+import {COMM_SOURCE} from './communication';
 import {createControlExecution} from './controlExecution';
 import {CONTROL_SOURCE} from './control';
 import {createHabitExecution} from './habitExecution';
@@ -61,6 +63,7 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
  const priority=model.priority?createPriorityExecution(component.tasks[0].character,component.tasks.map(t=>t.key),stateModel,inputs.priorityEvents,modelIdentity,inputs.runIdentity.value,horizon):undefined;
  const habit=model.habit?createHabitExecution(component.tasks[0].character,model.habit,model.strategy!,stateModel,inputs.habitEvents,modelIdentity,inputs.runIdentity.value,model.actionBody!):undefined;
  const control=model.control?createControlExecution(component.tasks[0].character,model.habit!,stateModel,inputs.controlEvents,modelIdentity,inputs.runIdentity.value):undefined;
+ const communication=model.communication?createCommunicationExecution(component.tasks[0].character,model.communication,stateModel,inputs.communicationEvents,modelIdentity,inputs.runIdentity.value):undefined;
  const cognitive=createCognitiveExecution(model,component,inputs,()=>body?.evidence(),()=>episodes?.currentRecalls()??[],strategy,priority,habit,control);
  const probeModel=base.probe,measurement=base.measurement,domains=base.domains,shared=bindings.admission,evaluator=bindings.evaluator;
  const memoryRuntime=createMemoryExecution(memory,measurement.validateOutput,modelIdentity,inputs.runIdentity.value,[]);
@@ -78,6 +81,7 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
   const registerHandler=(eventKey:string,handler:EventHandler<AuthoritativeState>)=>{
     if(handlers.has(eventKey))throw new SchedulerContractError('INVALID_CONFIGURATION','event has multiple fixed runtime adapters');handlers.set(eventKey,handler);
   };
+  for(const eventType of communication?.eventTypes()??[])registerHandler(key(eventType),context=>communication!.execute(context));
   for(const eventType of control?.eventTypes()??[])registerHandler(key(eventType),context=>control!.execute(context));
   for(const eventType of habit?.eventTypes()??[])registerHandler(key(eventType),context=>habit!.execute(context));
   for(const eventType of performance?.eventTypes()??[])registerHandler(key(eventType),context=>performance!.execute(context));
@@ -91,8 +95,9 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
    const practice=procedure&&key(context.event.eventTypeId)===key(ACTION_BODY_EVENT)?procedure.observeEffect(context.event,result.outputs):undefined;
    const feedback=performance&&key(context.event.eventTypeId)===key(ACTION_BODY_EVENT)?performance.observeEffect(context.event,result.outputs):undefined;
    const habitFeedback=habit&&key(context.event.eventTypeId)===key(ACTION_BODY_EVENT)?habit.observeEffect(context.event,result.outputs):undefined;
-   if(!extra&&!practice&&!feedback&&!habitFeedback)return result;
-   const own=result.emittedEvents.length,extraEvents=extra?.emissions??[];return {...result,emittedEvents:[...result.emittedEvents,...extraEvents,...(practice?.emissions??[]),...(feedback?.emissions??[]),...(habitFeedback?.emissions??[])],traceFactory(children:readonly ScheduledEvent[]){const trace=result.traceFactory(children.slice(0,own)),middle=children.slice(own,own+extraEvents.length),tail=children.slice(own+extraEvents.length,own+extraEvents.length+(practice?.emissions.length??0)),feedbackStart=own+extraEvents.length+(practice?.emissions.length??0),feedbackChildren=children.slice(feedbackStart,feedbackStart+(feedback?.emissions.length??0)),habitChildren=children.slice(feedbackStart+(feedback?.emissions.length??0));extra?.bind(middle);practice?.bind(tail);feedback?.bind(feedbackChildren);habitFeedback?.bind(habitChildren);return [...trace,...(extra?[extra.trace(middle)]:[]),...(practice?[practice.trace(tail)]:[]),...(feedback?[feedback.trace(feedbackChildren)]:[]),...(habitFeedback?[habitFeedback.trace(habitChildren)]:[])];}};
+   const message=communication&&key(context.event.eventTypeId)===key(ACTION_BODY_EVENT)?communication.observeEffect(context.event,result.outputs):undefined;
+   if(!extra&&!practice&&!feedback&&!habitFeedback&&!message)return result;
+   const own=result.emittedEvents.length,extraEvents=extra?.emissions??[];return {...result,outputs:[...result.outputs,...(message?.outputs??[])],emittedEvents:[...result.emittedEvents,...extraEvents,...(practice?.emissions??[]),...(feedback?.emissions??[]),...(habitFeedback?.emissions??[]),...(message?.emissions??[])],traceFactory(children:readonly ScheduledEvent[]){const trace=result.traceFactory(children.slice(0,own)),middle=children.slice(own,own+extraEvents.length),tail=children.slice(own+extraEvents.length,own+extraEvents.length+(practice?.emissions.length??0)),feedbackStart=own+extraEvents.length+(practice?.emissions.length??0),feedbackChildren=children.slice(feedbackStart,feedbackStart+(feedback?.emissions.length??0)),habitStart=feedbackStart+(feedback?.emissions.length??0),habitChildren=children.slice(habitStart,habitStart+(habitFeedback?.emissions.length??0)),messageChildren=children.slice(habitStart+(habitFeedback?.emissions.length??0));extra?.bind(middle);practice?.bind(tail);feedback?.bind(feedbackChildren);habitFeedback?.bind(habitChildren);message?.bind(messageChildren);return [...trace,...(extra?[extra.trace(middle)]:[]),...(practice?[practice.trace(tail)]:[]),...(feedback?[feedback.trace(feedbackChildren)]:[]),...(habitFeedback?[habitFeedback.trace(habitChildren)]:[]),...(message?[message.trace(messageChildren)]:[])];}};
   });
   for(const eventType of probeModel.eventTypes()??[])registerHandler(key(eventType),context=>{
    if(!probe||!ingress||!probeSource)throw new SchedulerContractError('INPUT_NOT_ADMITTED','probe outside live instant');
@@ -160,9 +165,10 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
    const result=await cognitive.execute(context.event,context.state,context),own=result.emissions();
    const extra=typeof result.output!=='boolean'&&result.output.kind==='record'&&result.output.schema.typeId===307n?ingress.observeProtocolSource(context.event,canonicalEncode(result.output)):undefined;
    const extraEvents=extra?.emissions()??[],strategyPlan=result.strategyPlan,effect=typeof result.output!=='boolean'&&result.output.kind==='record'&&result.output.schema.typeId===433n?body?.observeExecution(context.event,result.output):undefined;
-   return {nextState:result.nextState??context.state,outputs:[result.output,...result.additionalOutputs],emittedEvents:[...own,...extraEvents,...(effect?.emissions??[]),...(strategyPlan?.emissions??[])],traceContributions:[],traceFactory:children=>{
+   const expression=typeof result.output!=='boolean'&&result.output.kind==='record'&&result.output.schema.typeId===426n?communication?.expression(context.event,context.state,result.output):undefined;
+   return {nextState:result.nextState??context.state,outputs:[result.output,...result.additionalOutputs,...(expression?[expression.report]:[])],emittedEvents:[...own,...extraEvents,...(effect?.emissions??[]),...(strategyPlan?.emissions??[])],traceContributions:[],traceFactory:children=>{
     result.bindAllocatedChildren(children.slice(0,own.length));extra?.bindAllocatedChildren(children.slice(own.length,own.length+extraEvents.length));const effectEnd=own.length+extraEvents.length+(effect?.emissions.length??0);effect?.bind(children.slice(own.length+extraEvents.length,effectEnd));strategyPlan?.bind(children.slice(effectEnd));
-    const original=rec(result.trace(children),160n);return [effect?record(original.schema,new Map([...original.fields].map(([n,v])=>[n,n===6n?text('assembled-character-protocol-body-source/0.1-candidate'):v]))):original,...result.controlTraces(children),...(strategyPlan?[strategyPlan.trace(children.slice(effectEnd))]:[])];
+    const original=rec(result.trace(children),160n);return [effect?record(original.schema,new Map([...original.fields].map(([n,v])=>[n,n===6n?text('assembled-character-protocol-body-source/0.1-candidate'):v]))):original,...result.controlTraces(children),...(expression?[expression.trace(children)]:[]),...(strategyPlan?[strategyPlan.trace(children.slice(effectEnd))]:[])];
    }};
   });
   for(const eventType of cognitive.protocolEventTypes()??[])registerHandler(key(eventType),context=>{
@@ -179,13 +185,17 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
     adaptationSettlement:{version:'adaptation-settlement/0.2-candidate',
       beforeInstant(state,instant){
         domains.validateStatic(state);domains.validateReferences(state,instant);
-        probeInstant=false;runtimeCount=0;childCount=0;carriagePadding=undefined;memoryRuntime.begin(instant);predictionRuntime.begin(instant);taskRuntime.begin(instant);cognitive.begin(instant);body?.begin(instant);episodes?.begin(instant);procedure?.begin(instant);strategy?.begin(instant);priority?.begin(instant);horizon?.begin(instant);performance?.begin(instant);habit?.begin(instant);control?.begin(instant);
+        probeInstant=false;runtimeCount=0;childCount=0;carriagePadding=undefined;memoryRuntime.begin(instant);predictionRuntime.begin(instant);taskRuntime.begin(instant);cognitive.begin(instant);body?.begin(instant);episodes?.begin(instant);procedure?.begin(instant);strategy?.begin(instant);priority?.begin(instant);horizon?.begin(instant);performance?.begin(instant);habit?.begin(instant);control?.begin(instant);communication?.begin(instant);
         ingress=beginTransitionIngressV04(shared,instant);
 
         probe=probeModel.begin(instant);probeSource=beginProbeSourceInstant(inputs.base,instant);
       },
       prepare(events,state,instant){
         if(!ingress)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','missing live ingress');
+        const communicationAll=events,communicationEvents=events.filter(e=>communication?.isLearning(e));
+        const communicationStage=communicationEvents.length?communication!.prepare(communicationEvents,state):undefined;
+        events=events.filter(e=>!communication?.isLearning(e));
+        function withoutCommunication(){
         const controlAll=events,controlEvents=events.filter(e=>control?.isLearning(e));
         const controlStage=controlEvents.length?control!.prepare(controlEvents,state):undefined;
         events=events.filter(e=>!control?.isLearning(e));
@@ -333,10 +343,14 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
         const inner=withoutControl();if(!controlStage)return inner;
         let cursor=0,finished=false;
         return {execute(context:EventHandlerContext<AuthoritativeState>){if(finished||cursor>=controlAll.length||key(scheduledEventValue(context.event))!==key(scheduledEventValue(controlAll[cursor++])))throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','control common stage order');return control!.isLearning(context.event)?controlStage.execute(context):inner.execute(context);},finish(){if(finished||cursor!==controlAll.length)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','incomplete control stage');finished=true;return controlStage.finish(inner.finish());},finalizeTrace(){if(!finished)throw new SchedulerContractError('TRACE_VALIDATION_FAILURE','control trace before finish');const rows=[...inner.finalizeTrace(),...controlStage.traces()];return controlAll.flatMap(e=>rows.filter(row=>key(f(rec(f(rec(row,160n),4n),130n),1n))===key({kind:'unsigned',value:e.eventId})));}};
+        }
+        const inner=withoutCommunication();if(!communicationStage)return inner;
+        let cursor=0,finished=false;
+        return {execute(context:EventHandlerContext<AuthoritativeState>){if(finished||cursor>=communicationAll.length||key(scheduledEventValue(context.event))!==key(scheduledEventValue(communicationAll[cursor++])))throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','communication common stage order');return communication!.isLearning(context.event)?communicationStage.execute(context):inner.execute(context);},finish(){if(finished||cursor!==communicationAll.length)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','incomplete communication stage');finished=true;return communicationStage.finish(inner.finish());},finalizeTrace(){if(!finished)throw new SchedulerContractError('TRACE_VALIDATION_FAILURE','communication trace before finish');const rows=[...inner.finalizeTrace(),...communicationStage.traces()];return communicationAll.flatMap(e=>rows.filter(row=>key(f(rec(f(rec(row,160n),4n),130n),1n))===key({kind:'unsigned',value:e.eventId})));}};
       },
-      beforeCommit(state,instant){domains.validateStatic(state);domains.validateReferences(state,instant);probe?.finish();control?.prepareCommit();habit?.prepareCommit();performance?.prepareCommit();horizon?.prepareCommit();priority?.prepareCommit();strategy?.prepareCommit();procedure?.prepareCommit();body?.prepareCommit();episodes?.prepareCommit();ingress!.finish();if(probeInstant&&(runtimeCount!==7||childCount!==14||carriagePadding))throw new SchedulerContractError('TRANSITION_INGRESS_VIOLATION','carriage/memory budget closure');taskRuntime.prepareCommit(state);predictionRuntime.prepareCommit();cognitive.prepareCommit();memoryRuntime.commit();episodes?.commit();predictionRuntime.commit();taskRuntime.commit();cognitive.commit();},
-      close(){control?.close();habit?.close();performance?.close();horizon?.close();priority?.close();strategy?.close();procedure?.close();episodes?.close();body?.close();memoryRuntime.close();predictionRuntime.close();taskRuntime.close();cognitive.close();ingress?.abort();probe?.abort();probeSource?.close();ingress=undefined;probe=undefined;probeSource=undefined;},
-      validateRuntimeEmission(event){if(key(event.eventTypeId)===key(CONTROL_SOURCE)||key(event.eventTypeId)===key(HABIT_SOURCE)||key(event.eventTypeId)===key(PERFORMANCE_SETTING)||key(event.eventTypeId)===key(HORIZON_DISPLAY)||key(event.eventTypeId)===key(PRIORITY_DISPLAY)||key(event.eventTypeId)===key(DISPLAY)||key(event.eventTypeId)===key(PRACTICE_SETTING)||key(event.eventTypeId)===key(BODY_SAMPLE)||key(event.eventTypeId)===key(BODY_DELIVERY)||key(event.eventTypeId)===key(AUTHORED_FACT_EVENT)||key(event.eventTypeId)===key(PROBE_SOURCE_EVENT)||key(event.eventTypeId)===key(DELIBERATION_EVENT)||key(event.eventTypeId)===key(TASK_DEADLINE_EVENT))throw new SchedulerContractError('INPUT_ONLY_EVENT_ORIGIN_VIOLATION','sources are compiler-only inputs');},
+      beforeCommit(state,instant){domains.validateStatic(state);domains.validateReferences(state,instant);probe?.finish();communication?.prepareCommit();control?.prepareCommit();habit?.prepareCommit();performance?.prepareCommit();horizon?.prepareCommit();priority?.prepareCommit();strategy?.prepareCommit();procedure?.prepareCommit();body?.prepareCommit();episodes?.prepareCommit();ingress!.finish();if(probeInstant&&(runtimeCount!==7||childCount!==14||carriagePadding))throw new SchedulerContractError('TRANSITION_INGRESS_VIOLATION','carriage/memory budget closure');taskRuntime.prepareCommit(state);predictionRuntime.prepareCommit();cognitive.prepareCommit();memoryRuntime.commit();episodes?.commit();predictionRuntime.commit();taskRuntime.commit();cognitive.commit();},
+      close(){communication?.close();control?.close();habit?.close();performance?.close();horizon?.close();priority?.close();strategy?.close();procedure?.close();episodes?.close();body?.close();memoryRuntime.close();predictionRuntime.close();taskRuntime.close();cognitive.close();ingress?.abort();probe?.abort();probeSource?.close();ingress=undefined;probe=undefined;probeSource=undefined;},
+      validateRuntimeEmission(event){if(key(event.eventTypeId)===key(COMM_SOURCE)||key(event.eventTypeId)===key(CONTROL_SOURCE)||key(event.eventTypeId)===key(HABIT_SOURCE)||key(event.eventTypeId)===key(PERFORMANCE_SETTING)||key(event.eventTypeId)===key(HORIZON_DISPLAY)||key(event.eventTypeId)===key(PRIORITY_DISPLAY)||key(event.eventTypeId)===key(DISPLAY)||key(event.eventTypeId)===key(PRACTICE_SETTING)||key(event.eventTypeId)===key(BODY_SAMPLE)||key(event.eventTypeId)===key(BODY_DELIVERY)||key(event.eventTypeId)===key(AUTHORED_FACT_EVENT)||key(event.eventTypeId)===key(PROBE_SOURCE_EVENT)||key(event.eventTypeId)===key(DELIBERATION_EVENT)||key(event.eventTypeId)===key(TASK_DEADLINE_EVENT))throw new SchedulerContractError('INPUT_ONLY_EVENT_ORIGIN_VIOLATION','sources are compiler-only inputs');},
     },
   });
   // Only quiescent observations/settlement are exposed. No injection, allocator or handler API.

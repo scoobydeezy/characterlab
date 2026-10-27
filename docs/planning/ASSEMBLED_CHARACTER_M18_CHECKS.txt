@@ -1,0 +1,192 @@
+M18 initial type check
+type exit=0 seconds=14.3480465
+M18 matrix16
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledCommunication.test.ts (5 tests | 1 failed | 4 skipped) 3873ms
+   × M18 assembled communication > matrix16: actual withholding or disclosure changes later recipient belief 3872ms
+     → COMMUNICATION_CODEC: id:1000
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledCommunication.test.ts > M18 assembled communication > matrix16: actual withholding or disclosure changes later recipient belief
+SchedulerContractError: COMMUNICATION_CODEC: id:1000
+ ❯ fail src/substrate/scheduler.ts:667:9
+    665| 
+    666| function fail(code: SchedulerFailureCode, message: string): never {
+    667|   throw new SchedulerContractError(code, message);
+       |         ^
+    668| }
+    669| 
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:390:11
+ ❯ Object.settleNextInstant src/assembled/character.ts:40:58
+ ❯ finish src/test/assembledCommunication.test.ts:29:42
+ ❯ src/test/assembledCommunication.test.ts:34:158
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 4 skipped (5)
+   Start at  15:26:04
+   Duration  6.47s (transform 1.51s, setup 0ms, collect 2.32s, tests 3.87s, environment 0ms, prepare 90ms)
+
+matrix exit=1 seconds=6.9915557
+M18 matrix retry: transient legacy kernel holder mapping, real state holder unchanged
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCommunication.test.ts > M18 assembled communication > matrix16: actual withholding or disclosure changes later recipient belief
+M18 cell {"seed":0,"withheld":false,"loadedDelivered":false,"A":"0700","terminal":10}
+
+stdout | src/test/assembledCommunication.test.ts > M18 assembled communication > matrix16: actual withholding or disclosure changes later recipient belief
+M18 cell {"seed":1,"withheld":false,"loadedDelivered":false,"A":"0700","terminal":10}
+
+stdout | src/test/assembledCommunication.test.ts > M18 assembled communication > matrix16: actual withholding or disclosure changes later recipient belief
+M18 cell {"seed":2,"withheld":false,"loadedDelivered":true,"A":"0701060201","terminal":10}
+
+stdout | src/test/assembledCommunication.test.ts > M18 assembled communication > matrix16: actual withholding or disclosure changes later recipient belief
+M18 cell {"seed":3,"withheld":false,"loadedDelivered":false,"A":"0700","terminal":10}
+
+stdout | src/test/assembledCommunication.test.ts > M18 assembled communication > matrix16: actual withholding or disclosure changes later recipient belief
+M18 cell {"seed":4,"withheld":false,"loadedDelivered":false,"A":"0700","terminal":10}
+
+stdout | src/test/assembledCommunication.test.ts > M18 assembled communication > matrix16: actual withholding or disclosure changes later recipient belief
+M18 cell {"seed":5,"withheld":false,"loadedDelivered":false,"A":"0700","terminal":10}
+
+stdout | src/test/assembledCommunication.test.ts > M18 assembled communication > matrix16: actual withholding or disclosure changes later recipient belief
+M18 cell {"seed":6,"withheld":false,"loadedDelivered":false,"A":"0700","terminal":10}
+
+stdout | src/test/assembledCommunication.test.ts > M18 assembled communication > matrix16: actual withholding or disclosure changes later recipient belief
+M18 cell {"seed":7,"withheld":false,"loadedDelivered":true,"A":"0701060201","terminal":10}
+M18 matrix {"runs":16,"changed":[2,7],"draws":16,"matched":0}
+
+ ✓ src/test/assembledCommunication.test.ts (5 tests | 4 skipped) 149968ms
+   ✓ M18 assembled communication > matrix16: actual withholding or disclosure changes later recipient belief 149967ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 4 skipped (5)
+   Start at  15:26:25
+   Duration  152.57s (transform 1.50s, setup 0ms, collect 2.31s, tests 149.97s, environment 0ms, prepare 89ms)
+
+matrix-retry exit=0 seconds=153.0716087
+Inspection correction before control execution: historical codec max8 conflicts with declared16. Replace envelope reuse with exact scalar algebra port; rerun matrix. Seed0 has concealment at8, so controls use earlier actual disclosures (A access3/5), never a searched replacement seed. Restore checks acquired history rather than assuming one receipt.
+type-tests exit=0 seconds=14.1997871
+M18 full affected tests after scalar-domain correction
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCommunication.test.ts > M18 assembled communication > matrix16: actual withholding or disclosure changes later recipient belief
+M18 cell {"seed":0,"withheld":false,"loadedDelivered":false,"A":"0700","terminal":10}
+
+stdout | src/test/assembledCommunication.test.ts > M18 assembled communication > matrix16: actual withholding or disclosure changes later recipient belief
+M18 cell {"seed":1,"withheld":false,"loadedDelivered":false,"A":"0700","terminal":10}
+
+stdout | src/test/assembledCommunication.test.ts > M18 assembled communication > matrix16: actual withholding or disclosure changes later recipient belief
+M18 cell {"seed":2,"withheld":false,"loadedDelivered":true,"A":"0701060201","terminal":10}
+
+stdout | src/test/assembledCommunication.test.ts > M18 assembled communication > matrix16: actual withholding or disclosure changes later recipient belief
+M18 cell {"seed":3,"withheld":false,"loadedDelivered":false,"A":"0700","terminal":10}
+
+stdout | src/test/assembledCommunication.test.ts > M18 assembled communication > matrix16: actual withholding or disclosure changes later recipient belief
+M18 cell {"seed":4,"withheld":false,"loadedDelivered":false,"A":"0700","terminal":10}
+
+stdout | src/test/assembledCommunication.test.ts > M18 assembled communication > matrix16: actual withholding or disclosure changes later recipient belief
+M18 cell {"seed":5,"withheld":false,"loadedDelivered":false,"A":"0700","terminal":10}
+
+stdout | src/test/assembledCommunication.test.ts > M18 assembled communication > matrix16: actual withholding or disclosure changes later recipient belief
+M18 cell {"seed":6,"withheld":false,"loadedDelivered":false,"A":"0700","terminal":10}
+
+stdout | src/test/assembledCommunication.test.ts > M18 assembled communication > matrix16: actual withholding or disclosure changes later recipient belief
+M18 cell {"seed":7,"withheld":false,"loadedDelivered":true,"A":"0701060201","terminal":10}
+M18 matrix {"runs":16,"changed":[2,7],"draws":16,"matched":0}
+
+stdout | src/test/assembledCommunication.test.ts > M18 assembled communication > controls: complete later safe views, failure, unknown, false and correction
+M18 privacy/delivery/physical block/unknown/false/correction:11 full runs; correction samples=2
+
+stdout | src/test/assembledCommunication.test.ts > M18 assembled communication > controls: original COMM full cases and retained alternatives preserve exact kernels
+M18 original COMM 21 full runs/79 frames; all admitted histories, mean/latest/NoLearning/privacy/transmission retained
+
+stdout | src/test/assembledCommunication.test.ts > M18 assembled communication > controls: admission, ownership, trace phases and whole-instant rollback
+M18 rollback 55 events, limit54; acquired knowledge and all shared state rolled back
+
+ ✓ src/test/assembledCommunication.test.ts (5 tests) 363932ms
+   ✓ M18 assembled communication > matrix16: actual withholding or disclosure changes later recipient belief 148616ms
+   ✓ M18 assembled communication > controls: complete later safe views, failure, unknown, false and correction 89347ms
+   ✓ M18 assembled communication > controls: original COMM full cases and retained alternatives preserve exact kernels 19017ms
+   ✓ M18 assembled communication > controls: exact repeat and acquired-history restores6/8 through10 89699ms
+   ✓ M18 assembled communication > controls: admission, ownership, trace phases and whole-instant rollback 17252ms
+
+ Test Files  1 passed (1)
+      Tests  5 passed (5)
+   Start at  15:30:46
+   Duration  366.62s (transform 1.50s, setup 0ms, collect 2.32s, tests 363.93s, environment 0ms, prepare 90ms)
+
+M18-full exit=0 seconds=367.1222791
+M17 unchanged regression: shared runtime/state and predecessor behavior
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledControl.test.ts > M17 assembled control > matrix16: shared load changes inhibition and actual choice; release exposes retained habit
+M17 pair {"seed":0,"spare":["one","one","two","None"],"loaded":["one","one","one","None"],"terminal":10}
+
+stdout | src/test/assembledControl.test.ts > M17 assembled control > matrix16: shared load changes inhibition and actual choice; release exposes retained habit
+M17 pair {"seed":1,"spare":["one","one","two","None"],"loaded":["one","one","two","None"],"terminal":10}
+
+stdout | src/test/assembledControl.test.ts > M17 assembled control > matrix16: shared load changes inhibition and actual choice; release exposes retained habit
+M17 pair {"seed":2,"spare":["one","one","two","None"],"loaded":["one","one","two","None"],"terminal":10}
+
+stdout | src/test/assembledControl.test.ts > M17 assembled control > matrix16: shared load changes inhibition and actual choice; release exposes retained habit
+M17 pair {"seed":3,"spare":["one","one","two","None"],"loaded":["one","one","one","None"],"terminal":10}
+
+stdout | src/test/assembledControl.test.ts > M17 assembled control > matrix16: shared load changes inhibition and actual choice; release exposes retained habit
+M17 pair {"seed":4,"spare":["one","one","two","None"],"loaded":["one","one","one","None"],"terminal":10}
+
+stdout | src/test/assembledControl.test.ts > M17 assembled control > matrix16: shared load changes inhibition and actual choice; release exposes retained habit
+M17 pair {"seed":5,"spare":["one","one","two","None"],"loaded":["one","one","one","None"],"terminal":10}
+
+stdout | src/test/assembledControl.test.ts > M17 assembled control > matrix16: shared load changes inhibition and actual choice; release exposes retained habit
+M17 pair {"seed":6,"spare":["one","one","two","None"],"loaded":["one","one","two","None"],"terminal":10}
+
+stdout | src/test/assembledControl.test.ts > M17 assembled control > matrix16: shared load changes inhibition and actual choice; release exposes retained habit
+M17 pair {"seed":7,"spare":["one","one","two","None"],"loaded":["one","one","two","None"],"terminal":10}
+M17 matrix {"runs":16,"changed":[0,3,4,5],"matched":0,"changedDomains":0,"onlySpare":0,"onlyLoaded":17}
+
+stdout | src/test/assembledControl.test.ts > M17 assembled control > controls: original CONTROL horizons and mapped shared maintenance predicate
+M17 original CONTROL 254 frames,37 full runs; six candidates and Linear retained
+
+stdout | src/test/assembledControl.test.ts > M17 assembled control > controls: admission, single owners, authentic children, trace reads and atomic rollback
+M17 rollback 52 events, limit51; goal adoption/memory/body/history rolled back at3
+
+ ✓ src/test/assembledControl.test.ts (5 tests) 324001ms
+   ✓ M17 assembled control > matrix16: shared load changes inhibition and actual choice; release exposes retained habit 151013ms
+   ✓ M17 assembled control > controls: original CONTROL horizons and mapped shared maintenance predicate 49193ms
+   ✓ M17 assembled control > controls: hidden board, lost maintenance, shared recalled load and no-choice 34591ms
+   ✓ M17 assembled control > controls: exact repeat and restore after adoption and maintenance 74410ms
+   ✓ M17 assembled control > controls: admission, single owners, authentic children, trace reads and atomic rollback 14793ms
+
+ Test Files  1 passed (1)
+      Tests  5 passed (5)
+   Start at  15:37:18
+   Duration  326.64s (transform 1.48s, setup 0ms, collect 2.29s, tests 324.00s, environment 0ms, prepare 90ms)
+
+M17-regression exit=0 seconds=327.1463964
+M18 frozen-control/dependency source guards
+PASS:105 frozen dependencies/config/original fixtures; M1; C0-C3 source trees; COMM originals; M17 controls; unchanged choice/entry/habit/control mechanisms
+PASS:new communication code imports no standalone runtime/factory
+source-guards exit=0 seconds=0.4895877
+check:boundaries
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+check:boundaries exit=0 seconds=2.7189907
+check:research
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+check:research exit=0 seconds=4.1729834
+PASS final caps:9 production/test files;2 evidence files/18978 bytes before this line; checks 890.26s, longest 367.12s; planning line/byte caps passed. Raw failure stack whitespace retained.

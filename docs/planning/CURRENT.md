@@ -1,45 +1,34 @@
-# Current work — M18 communication
+# Current work — M18 complete
 
-The next connection lets an actual chosen and executed action carry a statement.
-Recipients learn only from delivered, permitted evidence and use it at a later probe.
+The character can communicate learned information through an actual chosen action.
+Withholding, failed execution and denied receipt prevent recipient learning.
+Permitted statements remain in each recipient's own history and change later belief.
 
 | Status | Disposition |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 | Baseline |21 members/219 records;15 families/132 clauses; six foundations/five C2 conditions |
-| M17 |PASS at4ad7a1a4; [result](ASSEMBLED_CHARACTER_M17_RESULT.md) |
-| M18 |PRE-CODE; [contract](../formal/ASSEMBLED_CHARACTER_COMMUNICATION_CONTRACT.md) |
+| M18 |PASS; [result](ASSEMBLED_CHARACTER_M18_RESULT.md), [checks](ASSEMBLED_CHARACTER_M18_CHECKS.txt) |
+| Contract |[communication0.1](../formal/ASSEMBLED_CHARACTER_COMMUNICATION_CONTRACT.md), rules/registry0.18 |
 
-Capabilities (three): acquired private evidence freezes with actual expression;
-shared action/skill execution gates delivery; independent recipients retain evidence
-and change later beliefs. No separate decision, scheduler, RNG, runtime or save.
-Two controlled receiving observers are not yet autonomous reciprocal characters.
+One shared model/state/scheduler/RNG/trace/save. Actual expression90 freezes admitted
+knowledge; execution110 gates assertion; recipient observation120 and learning140
+feed later probes40. Two receiving observers are not autonomous reciprocal characters.
+No separate choice pipeline or standalone Campaign3 runtime/factory is called.
 
-Baseline links: M14/M1/M18; C-SOCIAL/C-DECISION/C-MULTI; Brief12.13/12.14.
-FND1..6 and five C2 conditions stand. RO014/020 and closed019 history preserved.
-No reduction, corpus closure or new Campaign3 qualification. Rich recognition,
-lying, interpretation, social appraisal and reciprocal decisions remain open.
+All16 fixed runs finish10. Seeds2/7 change action and A's later knowledge; six equal
+pairs retained. B remains denied. Sixteen draws, zero matched addresses at8; no coupling
+claim. Eleven controlled runs and21 original COMM runs/79 frames preserve privacy,
+failed execution/delivery, unknown/false, correction and retained law comparisons.
 
-Files (nine planned, hard12): assembled communication.ts, communicationExecution.ts,
-model.ts, state.ts, inputs.ts, runtime.ts, traceBinding.ts; test/assembledCommunication.test.ts
-and test/fixtures/assembledCommunication.ts. Rules/registry0.18, communication0.1.
-Use existing actual expression426 at90 and Applied body outcome at110.
+Exact repeat/restores6/8 through10, ownership/admission/generated-child checks and
+55-event whole-instant rollback pass. All five unchanged M17 tests pass. TypeScript,
+boundary/research and105/control/config/M1/C0-C3 source guards pass.
 
-Comparison fixed before execution: inherited control matrix, card absent/present,
-seeds0..7, through terminal10; target protocol-contact-one discloses, other withholds.
-Sources3/5 deny recipient access; source8 allows A, denies B; probe9 observes learning.
-Require at least one changed actual choice AND corresponding changed recipient belief.
-Compare choices, frozen claims, executions, safe histories, phase order and state reads.
-Same seeds alone make no coupling claim; report matched random addresses if any.
+Nine production/test files; two evidence files. Recorded checks including failure and
+reruns total890.26s before final index gates, longest367.12s. Pre-code plan97cc71ff.
+Historical codec holder/history limits required an exact scalar algebra port; first
+failure and corrections retained. No seed search or primary comparison retuning.
 
-Checks, one at a time, each<=600s, total<=1800s including failures/reruns:
-M18 matrix; negative controls (hidden truth/private denial/nonrecipient access,
-failed physical execution/delivery, unknown versus false, correction); original COMM
-full fixture cases under EvidenceMean plus retained alternatives/violations; exact repeat
-and restore at6/8 through10; malformed admission/owner/child/rollback controls.
-Run unchanged M17 file (shared runtime/state risk); tsc -b, boundaries, research;
-105-source/config/M1/C0-C3 guard instead of unchanged full frozen replay.
-Two evidence files planned (raw checks and compact result), hard20/5MiB.
-
-Done iff actual action changes later permitted recipient belief and all declared
-checks pass inside budgets. Stop then; no UI, extra mechanics or next milestone.
+Stop M18. No next milestone is open. Rich communication, autonomous recipients and
+wider assembly/final replay remain. UI/Workbench and Campaign4 remain stopped.
