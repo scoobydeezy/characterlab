@@ -10,6 +10,7 @@ import {predictionModelReviewSource} from '../campaign2/predictionModelReview';
 import {decodeCognitive,cognitiveRecord as r} from '../campaign2/cognitiveCodecs';
 import {validateIdentityHistory,readQ} from '../campaign2/cognitiveMath';
 import {dataRecord as rec,dataField as f,dataIdentity as id,dataItems as items,dataKey as key,dataText as txt,dataUnsigned as u,invalidModel} from '../campaign2/canonicalData';
+import {withRelationshipState} from './relationship';
 import {withSocialState} from './social';
 import {withCommunicationState} from './communication';
 import {withControlState} from './control';
@@ -85,10 +86,12 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  const habitual=model.habit?withHabitState(monitored,C):monitored;
  const controlled=model.control?withControlState(habitual,C):habitual;
  const communicating=model.communication?withCommunicationState(controlled,[C,...model.communication.recipients]):controlled;
- const stateModel=model.social?withSocialState(communicating,C,model.social.target):communicating;
+ const socialized=model.social?withSocialState(communicating,C,model.social.target):communicating;
+ const stateModel=model.relationship?withRelationshipState(socialized,C,model.relationship.target):socialized;
  function initialState(bytes:Uint8Array){
   const state=stateModel.restoreState(bytes);
   for(const e of state.entries()){
+   if(model.relationship&&e.path.rootStateTypeId===848n)invalidModel('initial relationship history must be absent');
    if(model.social&&e.path.rootStateTypeId===810n)invalidModel('initial person belief must be absent');
    if(model.communication&&e.path.rootStateTypeId===1072n)invalidModel('initial communication knowledge must be absent');
    if(model.control&&(e.path.rootStateTypeId===1014n||e.path.rootStateTypeId===373n&&e.path.fieldId===4n))invalidModel('initial control state must be absent');

@@ -21,6 +21,7 @@ import {workspaceOutput,appraisalOutput,concernOutput,motiveOutput,candidateOutp
 import {dataRecord as rec,dataField as f,dataItems as items,dataKey as key,dataUnsigned as u,dataIdentity as id} from '../campaign2/canonicalData';
 import {sharedWorkspace,taskWorkspaceDefinition,type BodyRecallDelivery} from './workspace';
 import {contextAppraisal,jointAppraisal,jointConcern,jointSignalSupport} from './appraisal';
+import type {createRelationshipExecution} from './relationshipExecution';
 import type {createSocialExecution} from './socialExecution';
 import type {createControlExecution} from './controlExecution';
 import type {createHabitExecution} from './habitExecution';
@@ -55,7 +56,7 @@ const stages=[
 function fail(message:string):never {throw new SchedulerContractError('INPUT_NOT_ADMITTED',message);}
 function stageFail(message:string):never {throw new SchedulerContractError('COGNITIVE_STAGE_VIOLATION',message);}
 
-export function createCognitiveExecution(model:Model,component:State,inputs:Awaited<ReturnType<typeof compileCharacterInputs>>,bodyEvidence:()=>BodyEvidence|undefined=()=>undefined,recallEvidence:()=>readonly BodyRecallDelivery[]=()=>[],strategy?:ReturnType<typeof createStrategyExecution>,priority?:ReturnType<typeof createPriorityExecution>,habit?:ReturnType<typeof createHabitExecution>,control?:ReturnType<typeof createControlExecution>,social?:ReturnType<typeof createSocialExecution>){
+export function createCognitiveExecution(model:Model,component:State,inputs:Awaited<ReturnType<typeof compileCharacterInputs>>,bodyEvidence:()=>BodyEvidence|undefined=()=>undefined,recallEvidence:()=>readonly BodyRecallDelivery[]=()=>[],strategy?:ReturnType<typeof createStrategyExecution>,priority?:ReturnType<typeof createPriorityExecution>,habit?:ReturnType<typeof createHabitExecution>,control?:ReturnType<typeof createControlExecution>,social?:ReturnType<typeof createSocialExecution>,relationship?:ReturnType<typeof createRelationshipExecution>){
  const rows=items(items(decodeCognitive(model.baseRegistry),'list')[0],'set').filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n).map(v=>rec(v,171n));
  const registration=(name:string)=>f(rows.find(v=>key(f(v,1n))===key(atom(1009,name)))!,4n);
  const definition=(name:string)=>cloneCognitive(component.definition(name));
@@ -121,6 +122,7 @@ export function createCognitiveExecution(model:Model,component:State,inputs:Awai
    const namespace=u(f(rec(decodeCognitive(role),263n),1n));
    // One shared reservation. No nested or copied source allocates an identity.
    const occurrence=typedIdentifier(namespace,unsigned(allocator.allocateRuntimeId()));
+   let relationshipResult:ReturnType<NonNullable<typeof relationship>['raw']>|undefined;
    let socialResult:ReturnType<NonNullable<typeof social>['appraise']>|undefined;
    let controlWorkspace:ReturnType<NonNullable<typeof control>['workspace']>|undefined,controlCandidates:ReturnType<NonNullable<typeof control>['candidates']>|undefined;
    let habitResult:ReturnType<NonNullable<typeof habit>['candidates']>|undefined;
@@ -173,6 +175,7 @@ export function createCognitiveExecution(model:Model,component:State,inputs:Awai
     const d=rec(definition('task-reason-source'),436n),result=rawSignalOutput(occurrence,event.payload,f(d,1n)===true,readQ(f(d,2n)),()=>read({rootStateTypeId:template.rootStateTypeId,fieldId:template.fieldId,selectors:[{kind:'mapKey',key:r(412,[C,f(req,2n)])}]},f(req,4n)).value);
     output=result.output;quantizationOperations=result.quantizationOperations;
     if(model.body){if(!joint)fail('raw signals require generated joint appraisal');output=jointSignalSupport(output,joint!);jointInput=list([event.payload,joint!]);}
+    if(relationship){relationshipResult=relationship.raw(event,state,output);output=relationshipResult.output;extraOutputs.push(relationshipResult.report);}
    }else if(i===6)output=r(408,[occurrence,event.payload,list((model.habit?compileAssembledReasons:compileReasonNuclei)(items(f(rec(event.payload,403n),3n),'set'),definition('task-reason-dice')))]);
    else if(i===7){
     output=await arbitrationOutput(occurrence,instant,event.payload,definition('task-arbitration'),random.forResolution(occurrence,event.payload));
@@ -193,7 +196,7 @@ export function createCognitiveExecution(model:Model,component:State,inputs:Awai
    const protocolPlan=i===12?protocolInstant!.source(event,output):undefined;
    const additional=protocolPlan?.emissions()??[];let bound=false;unbound++;
    const report=joint,projection=jointInput;
-   return {output:cloneCognitive(output),nextState:controlWorkspace?.nextState,controlTraces:(children:readonly ScheduledEvent[])=>[...(socialResult?[socialResult.trace(children)]:[]),...(controlWorkspace?[controlWorkspace.trace(children)]:[]),...(controlCandidates?[controlCandidates.trace(children)]:[])],strategyPlan,additionalOutputs:[...extraOutputs,...(strategyPlan?[strategyPlan.report]:[])],reads,domain,quantizationOperations,randomDrawRecords,
+   return {output:cloneCognitive(output),nextState:controlWorkspace?.nextState,controlTraces:(children:readonly ScheduledEvent[])=>[...(relationshipResult?[relationshipResult.trace(children)]:[]),...(socialResult?[socialResult.trace(children)]:[]),...(controlWorkspace?[controlWorkspace.trace(children)]:[]),...(controlCandidates?[controlCandidates.trace(children)]:[])],strategyPlan,additionalOutputs:[...extraOutputs,...(strategyPlan?[strategyPlan.report]:[])],reads,domain,quantizationOperations,randomDrawRecords,
     trace(children:readonly ScheduledEvent[]){if(!bound)stageFail('cognitive trace before child binding');if(habitResult)return habitResult.trace(children);if(priorityResult)return priorityResult.trace(children);const original=rec(cognitiveTraceRecord(model.modelIdentity.value,inputs.runIdentity.value,event,registered,output,children,{domain,reads,quantizationOperations,randomDrawRecords}),160n);
      if(model.habit&&(i===6||i===7))return record(original.schema,new Map([...original.fields].map(([n,v])=>[n,n===6n?text('assembled-character-habit/0.1-candidate'):v])));
      if(workspaceJoin){const replacements=new Map<bigint,CanonicalValue>([[6n,text(model.control?'assembled-character-workspace/0.3-candidate':model.memoryContext?'assembled-character-workspace/0.2-candidate':'assembled-character-workspace/0.1-candidate')],[9n,list(workspaceJoin.sourceIds)],[12n,list([event.payload,workspaceJoin.input,...(controlWorkspace?[controlWorkspace.report]:[])])],[13n,list([output,workspaceJoin.report])]]);return record(original.schema,new Map([...original.fields].map(([n,v])=>[n,replacements.get(n)??v])));}

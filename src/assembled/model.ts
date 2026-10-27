@@ -14,6 +14,7 @@ import {dataRecord as rec,dataField as f,dataItems as items,dataKey as key,dataI
 import type {Campaign2ModelSource} from '../campaign2/factory';
 
 import {decodeEmbodied} from '../campaign3/embodiedCodecs';
+import {compileRelationship} from './relationship';
 import {compileSocial} from './social';
 import {compileCommunication} from './communication';
 import {compileControl} from './control';
@@ -27,6 +28,8 @@ import {compileActionBody} from './actionBody';
 import {compileRetrievalDeclaration} from './retrieval';
 import {compileRetentionDeclaration} from './retention';
 import {compileBodyDeclaration} from './body';
+export const RELATIONSHIP_RULES='rules/assembled-character/0.20-candidate';
+export const RELATIONSHIP_REGISTRY='assembled-character-registry/0.20-candidate';
 export const SOCIAL_RULES='rules/assembled-character/0.19-candidate';
 export const SOCIAL_REGISTRY='assembled-character-registry/0.19-candidate';
 export const COMMUNICATION_RULES='rules/assembled-character/0.18-candidate';
@@ -73,7 +76,7 @@ const fields:Readonly<Record<string,readonly bigint[]>>={
 function rationalRange(v:CanonicalValue,name:string,lo:bigint,hi:bigint,strict=false){
  if(typeof v==='boolean'||v.kind!=='rational'||(strict?v.numerator<=lo*v.denominator:v.numerator<lo*v.denominator)||v.numerator>hi*v.denominator)invalidModel(name+' outside exact rational domain');
 }
-function topology(registry:CanonicalValue,calibrated=false,memoryContext=false){
+function topology(registry:CanonicalValue,calibrated=false,memoryContext=false,relationship=false){
  const slots=items(registry,'list');if(slots.length!==6)invalidModel('six assembled registry slots required');
  const normalized=items(slots[0],'set').map(v=>{
   if(typeof v==='boolean'||v.kind!=='record'||v.schema.typeId!==171n)return v;
@@ -84,7 +87,9 @@ function topology(registry:CanonicalValue,calibrated=false,memoryContext=false){
    if(key(f(context,1n))!==key(rational(1,10)))invalidModel('calibrated context unit must be exactly 1/10');
    // Comparison image only: the executed and committed registry retains 1/10.
    const normalizedContext=record(context.schema,new Map([...context.fields].map(([n,x])=>[n,n===1n?rational(1,1):x])));
-   const normalizedDice=record(dice.schema,new Map([...dice.fields].map(([n,x])=>[n,n===4n?normalizedContext:x])));
+   if(relationship){const standing=rec(f(dice,3n),439n);if(key(f(standing,1n))!==key(rational(1,4))||uint(f(standing,2n))!==3n)invalidModel('relationship standing unit1/4 cap3 required');}
+   const originalDice=relationship?f(rec(items(items(decodeCognitive(hex(registryHex)),'list')[0],'set').find(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n&&key(f(v,1n))===key(stable))!,171n),4n):dice;
+   const normalizedDice=record(dice.schema,new Map([...dice.fields].map(([n,x])=>[n,n===4n?normalizedContext:n===3n&&relationship?f(rec(originalDice,437n),3n):x])));
    return record(v.schema,new Map([...v.fields].map(([n,x])=>[n,n===4n?normalizedDice:x])));
   }
   if(!open)return v;
@@ -105,10 +110,10 @@ function topology(registry:CanonicalValue,calibrated=false,memoryContext=false){
 }
 export async function compileCharacterModel(input:Campaign2ModelSource){
  const source=snapshotMemorySource(input);
- const socialEnabled=source.rulesVersion===SOCIAL_RULES,communicationEnabled=socialEnabled||source.rulesVersion===COMMUNICATION_RULES,control=communicationEnabled||source.rulesVersion===CONTROL_RULES,habitEnabled=control||source.rulesVersion===HABIT_RULES,performance=habitEnabled||source.rulesVersion===PERFORMANCE_RULES,horizon=performance||source.rulesVersion===HORIZON_RULES,priority=horizon||source.rulesVersion===PRIORITY_RULES,strategyEnabled=priority||source.rulesVersion===STRATEGY_RULES,skill=strategyEnabled||source.rulesVersion===SKILL_RULES,actionBodyEnabled=skill||source.rulesVersion===ACTION_BODY_RULES,memoryContext=actionBodyEnabled||source.rulesVersion===MEMORY_CONTEXT_RULES,workspace=memoryContext||source.rulesVersion===WORKSPACE_RULES,retrievalEnabled=workspace||source.rulesVersion===RETRIEVAL_RULES,retained=retrievalEnabled||source.rulesVersion===RETENTION_RULES,memory=retained||source.rulesVersion===MEMORY_RULES,attention=memory||source.rulesVersion===ATTENTION_RULES,calibrated=attention||source.rulesVersion===CALIBRATED_RULES,interaction=calibrated||source.rulesVersion===INTERACTION_RULES;
- if((interaction?source.registrySchemaVersion!==(socialEnabled?SOCIAL_REGISTRY:communicationEnabled?COMMUNICATION_REGISTRY:control?CONTROL_REGISTRY:habitEnabled?HABIT_REGISTRY:performance?PERFORMANCE_REGISTRY:horizon?HORIZON_REGISTRY:priority?PRIORITY_REGISTRY:strategyEnabled?STRATEGY_REGISTRY:skill?SKILL_REGISTRY:actionBodyEnabled?ACTION_BODY_REGISTRY:memoryContext?MEMORY_CONTEXT_REGISTRY:workspace?WORKSPACE_REGISTRY:retrievalEnabled?RETRIEVAL_REGISTRY:retained?RETENTION_REGISTRY:memory?MEMORY_REGISTRY:attention?ATTENTION_REGISTRY:calibrated?CALIBRATED_REGISTRY:INTERACTION_REGISTRY):source.rulesVersion!==CHARACTER_RULES||source.registrySchemaVersion!==CHARACTER_REGISTRY)||source.contentSchemaVersion!=='content/0.2-candidate'||source.parameterSchemaVersion!=='campaign2-parameters/0.1-candidate'||source.numericProfileVersion!=='numeric/task-cognitive-exact/0.1-candidate'||source.randomAlgorithmVersion!==RANDOM_ALGORITHM_VERSION)invalidModel('unsupported assembled model version bundle');
+ const relationshipEnabled=source.rulesVersion===RELATIONSHIP_RULES,socialEnabled=relationshipEnabled||source.rulesVersion===SOCIAL_RULES,communicationEnabled=socialEnabled||source.rulesVersion===COMMUNICATION_RULES,control=communicationEnabled||source.rulesVersion===CONTROL_RULES,habitEnabled=control||source.rulesVersion===HABIT_RULES,performance=habitEnabled||source.rulesVersion===PERFORMANCE_RULES,horizon=performance||source.rulesVersion===HORIZON_RULES,priority=horizon||source.rulesVersion===PRIORITY_RULES,strategyEnabled=priority||source.rulesVersion===STRATEGY_RULES,skill=strategyEnabled||source.rulesVersion===SKILL_RULES,actionBodyEnabled=skill||source.rulesVersion===ACTION_BODY_RULES,memoryContext=actionBodyEnabled||source.rulesVersion===MEMORY_CONTEXT_RULES,workspace=memoryContext||source.rulesVersion===WORKSPACE_RULES,retrievalEnabled=workspace||source.rulesVersion===RETRIEVAL_RULES,retained=retrievalEnabled||source.rulesVersion===RETENTION_RULES,memory=retained||source.rulesVersion===MEMORY_RULES,attention=memory||source.rulesVersion===ATTENTION_RULES,calibrated=attention||source.rulesVersion===CALIBRATED_RULES,interaction=calibrated||source.rulesVersion===INTERACTION_RULES;
+ if((interaction?source.registrySchemaVersion!==(relationshipEnabled?RELATIONSHIP_REGISTRY:socialEnabled?SOCIAL_REGISTRY:communicationEnabled?COMMUNICATION_REGISTRY:control?CONTROL_REGISTRY:habitEnabled?HABIT_REGISTRY:performance?PERFORMANCE_REGISTRY:horizon?HORIZON_REGISTRY:priority?PRIORITY_REGISTRY:strategyEnabled?STRATEGY_REGISTRY:skill?SKILL_REGISTRY:actionBodyEnabled?ACTION_BODY_REGISTRY:memoryContext?MEMORY_CONTEXT_REGISTRY:workspace?WORKSPACE_REGISTRY:retrievalEnabled?RETRIEVAL_REGISTRY:retained?RETENTION_REGISTRY:memory?MEMORY_REGISTRY:attention?ATTENTION_REGISTRY:calibrated?CALIBRATED_REGISTRY:INTERACTION_REGISTRY):source.rulesVersion!==CHARACTER_RULES||source.registrySchemaVersion!==CHARACTER_REGISTRY)||source.contentSchemaVersion!=='content/0.2-candidate'||source.parameterSchemaVersion!=='campaign2-parameters/0.1-candidate'||source.numericProfileVersion!=='numeric/task-cognitive-exact/0.1-candidate'||source.randomAlgorithmVersion!==RANDOM_ALGORITHM_VERSION)invalidModel('unsupported assembled model version bundle');
  const registry=decodeEmbodied(source.registry),allSlots=items(registry,'list');
- if(allSlots.length!==(socialEnabled?20:communicationEnabled?19:control?18:habitEnabled?17:performance?16:horizon?15:priority?14:strategyEnabled?13:skill?12:actionBodyEnabled?11:retrievalEnabled?10:retained?9:attention?8:interaction?7:6))invalidModel('assembled registry slot count');
+ if(allSlots.length!==(relationshipEnabled?21:socialEnabled?20:communicationEnabled?19:control?18:habitEnabled?17:performance?16:horizon?15:priority?14:strategyEnabled?13:skill?12:actionBodyEnabled?11:retrievalEnabled?10:retained?9:attention?8:interaction?7:6))invalidModel('assembled registry slot count');
  if(control)compileControl(allSlots[17]);
  if(skill)compileSkill(allSlots[11]);
  if(priority)compilePriority(allSlots[13]);
@@ -120,7 +125,7 @@ export async function compileCharacterModel(input:Campaign2ModelSource){
  if(attention){const declaration=items(allSlots[7],'list');if(declaration.length!==2||txt(declaration[0])!=='assembled-body-selection/0.1'||uint(declaration[1])>1n)invalidModel('body selection requires capacity0..1');selectionCapacity=Number(uint(declaration[1]));}
  const body=interaction?Object.freeze({...compileBodyDeclaration(allSlots[6]),selectionCapacity}):undefined,slots=allSlots.slice(0,6),baseRegistry=enc(list(slots));
  // Validate open slots before generic declarations, giving specific domain errors.
- const shape=topology(list(slots),calibrated,memoryContext);
+ const shape=topology(list(slots),calibrated,memoryContext,relationshipEnabled);
  const content=await compileCognitiveDeclarations(source.content,baseRegistry);
  const structuralState=compileCampaign2StateModel(enc(slots[2]),enc(slots[3]),enc(slots[4]),content,{decode:decodeCognitive,schema:cognitiveSchemaByType});
  compileCampaign2Parameters(source.parameterSchemaVersion,source.parameters);
@@ -130,7 +135,8 @@ export async function compileCharacterModel(input:Campaign2ModelSource){
  const actionBody=actionBodyEnabled?compileActionBody(allSlots[10],body!.capacity,items(slots[0],'set').filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n&&key(f(v,2n))===key({kind:'typedIdentifier',namespaceId:1023n,payload:{kind:'text',value:'registry/protocol-action'}})).map(v=>({action:f(rec(v,171n),1n),definition:f(rec(v,171n),4n)}))):undefined;
  const modelIdentity=await createModelIdentity({...source,contentManifest:await commitManifest(decodeCognitive(source.content)),registryManifest:await commitManifest(registry),parameterSet:await commitManifest(decodeCognitive(source.parameters))});
  const social=socialEnabled?compileSocial(allSlots[19],strategy!):undefined;
+ const relationship=relationshipEnabled?compileRelationship(allSlots[20],social!.target,strategy!):undefined;
  const communication=communicationEnabled?compileCommunication(allSlots[18],strategy!):undefined;
  const habit=habitEnabled?compileHabit(allSlots[16],strategy!):undefined;
- return Object.freeze({source,modelIdentity,content,structuralState,body,baseRegistry,memory,retention,retrieval,workspace,memoryContext,actionBody,skill,strategy,priority,horizon,performance,habit,control,communication,social});
+ return Object.freeze({source,modelIdentity,content,structuralState,body,baseRegistry,memory,retention,retrieval,workspace,memoryContext,actionBody,skill,strategy,priority,horizon,performance,habit,control,communication,social,relationship});
 }

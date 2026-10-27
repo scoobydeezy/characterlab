@@ -1,0 +1,153 @@
+M20 initial TypeScript
+type exit=0 seconds=14.5461885
+M20 matrix16
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > matrix16: equal person belief with different own history changes shared reasons and choice
+M20 cell {"seed":0,"cooperation":["definition/protocol-contact-one","definition/protocol-contact-two","definition/protocol-contact-one"],"breach":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > matrix16: equal person belief with different own history changes shared reasons and choice
+M20 cell {"seed":1,"cooperation":["definition/protocol-contact-one","definition/protocol-contact-one","definition/protocol-contact-one"],"breach":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > matrix16: equal person belief with different own history changes shared reasons and choice
+M20 cell {"seed":2,"cooperation":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-one"],"breach":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > matrix16: equal person belief with different own history changes shared reasons and choice
+M20 cell {"seed":3,"cooperation":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"],"breach":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > matrix16: equal person belief with different own history changes shared reasons and choice
+M20 cell {"seed":4,"cooperation":["definition/protocol-contact-one","definition/protocol-contact-one","definition/protocol-contact-one"],"breach":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > matrix16: equal person belief with different own history changes shared reasons and choice
+M20 cell {"seed":5,"cooperation":["definition/protocol-contact-one","definition/protocol-contact-two","definition/protocol-contact-two"],"breach":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > matrix16: equal person belief with different own history changes shared reasons and choice
+M20 cell {"seed":6,"cooperation":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-one"],"breach":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > matrix16: equal person belief with different own history changes shared reasons and choice
+M20 cell {"seed":7,"cooperation":["definition/protocol-contact-one","definition/protocol-contact-two","definition/protocol-contact-one"],"breach":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+M20 matrix {"runs":16,"changed":[0,1,2,4,5,6,7],"draws":52,"matched":0,"terminal":10}
+
+ ✓ src/test/assembledRelationship.test.ts (1 test) 144968ms
+   ✓ M20 assembled relationship > matrix16: equal person belief with different own history changes shared reasons and choice 144967ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed (1)
+   Start at  17:29:17
+   Duration  147.64s (transform 1.53s, setup 0ms, collect 2.36s, tests 144.97s, environment 0ms, prepare 101ms)
+
+matrix exit=0 seconds=148.1373662
+M20 controls
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > controls: privacy, witnessing, statement versus repair, absence and existing identity
+M20 controls:10 full runs; privacy/participant/statement/repair/absence/timing/no-contact; identity retained and no base creates no reason
+
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > controls: original REL full scenarios, retained laws, caches and violations
+M20 original REL {"runs":14,"frames":140,"comparisons":80}
+
+ ✓ src/test/assembledRelationship.test.ts (5 tests | 1 skipped) 237267ms
+   ✓ M20 assembled relationship > controls: privacy, witnessing, statement versus repair, absence and existing identity 81178ms
+   ✓ M20 assembled relationship > controls: original REL full scenarios, retained laws, caches and violations 26603ms
+   ✓ M20 assembled relationship > controls: exact repeat and acquired-history restores2/5 through10 111410ms
+   ✓ M20 assembled relationship > controls: admission, owners, genuine evidence, child authentication and whole-instant rollback 18075ms
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > controls: admission, owners, genuine evidence, child authentication and whole-instant rollback
+M20 rollback 48 events, limit47; earlier history retained and shared instant rolled back
+
+
+ Test Files  1 passed (1)
+      Tests  4 passed | 1 skipped (5)
+   Start at  17:32:26
+   Duration  240.02s (transform 1.56s, setup 0ms, collect 2.40s, tests 237.27s, environment 0ms, prepare 89ms)
+
+controls exit=0 seconds=240.5216703
+M20 final TypeScript
+src/test/assembledRelationship.test.ts(70,649): error TS2345: Argument of type 'CanonicalValue' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+type-final exit=1 seconds=14.4979785
+M20 TypeScript retry: narrow constructed test record type, no executable change
+type-corrected exit=0 seconds=14.4777429
+M20 unchanged M19 regression matrix16:
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > matrix16: reports change shared appraisal, reasons and actual choice
+M19 cell {"seed":0,"negative":["definition/protocol-contact-one","definition/protocol-contact-two","definition/protocol-contact-two"],"positive":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > matrix16: reports change shared appraisal, reasons and actual choice
+M19 cell {"seed":1,"negative":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-one"],"positive":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > matrix16: reports change shared appraisal, reasons and actual choice
+M19 cell {"seed":2,"negative":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"],"positive":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > matrix16: reports change shared appraisal, reasons and actual choice
+M19 cell {"seed":3,"negative":["definition/protocol-contact-one","definition/protocol-contact-one","definition/protocol-contact-one"],"positive":["definition/protocol-contact-one","definition/protocol-contact-one","definition/protocol-contact-one"]}
+
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > matrix16: reports change shared appraisal, reasons and actual choice
+M19 cell {"seed":4,"negative":["definition/protocol-contact-one","definition/protocol-contact-two","definition/protocol-contact-two"],"positive":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > matrix16: reports change shared appraisal, reasons and actual choice
+M19 cell {"seed":5,"negative":["definition/protocol-contact-two","definition/protocol-contact-one","definition/protocol-contact-one"],"positive":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-one"]}
+
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > matrix16: reports change shared appraisal, reasons and actual choice
+M19 cell {"seed":6,"negative":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-one"],"positive":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-one"]}
+
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > matrix16: reports change shared appraisal, reasons and actual choice
+M19 cell {"seed":7,"negative":["definition/protocol-contact-one","definition/protocol-contact-two","definition/protocol-contact-two"],"positive":["definition/protocol-contact-one","definition/protocol-contact-two","definition/protocol-contact-two"]}
+M19 matrix {"runs":16,"changed":[0,1,4,5],"draws":101,"matched":48,"terminal":10}
+
+ ✓ src/test/assembledSocial.test.ts (5 tests | 4 skipped) 125121ms
+   ✓ M19 assembled social belief > matrix16: reports change shared appraisal, reasons and actual choice 125120ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 4 skipped (5)
+   Start at  17:37:55
+   Duration  127.77s (transform 1.53s, setup 0ms, collect 2.36s, tests 125.12s, environment 0ms, prepare 92ms)
+
+M19-matrix16: exit=0 seconds=128.2695216
+M20 unchanged M19 regression controls:
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > controls: hidden truth, denied and duplicate reports, corrections and goal direction
+M19 controls:12 full runs; truth/access/source grouping/unknown/correction/timing/goal direction/physical separation
+
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > controls: original SOCIAL scenarios, reference arithmetic and retained alternatives
+M19 original SOCIAL {"runs":14,"frames":50,"comparisons":26}
+
+ ✓ src/test/assembledSocial.test.ts (5 tests | 1 skipped) 211700ms
+   ✓ M19 assembled social belief > controls: hidden truth, denied and duplicate reports, corrections and goal direction 86090ms
+   ✓ M19 assembled social belief > controls: exact repeat and acquired-history restores2/5 through10 106374ms
+   ✓ M19 assembled social belief > controls: original SOCIAL scenarios, reference arithmetic and retained alternatives 1375ms
+   ✓ M19 assembled social belief > controls: admission, owner, genuine perception support, child authentication and rollback 17859ms
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > controls: admission, owner, genuine perception support, child authentication and rollback
+M19 rollback 48 events, limit47; prior belief retained and all instant changes rolled back; reason links=9
+
+
+ Test Files  1 passed (1)
+      Tests  4 passed | 1 skipped (5)
+   Start at  17:40:03
+   Duration  214.43s (transform 1.55s, setup 0ms, collect 2.38s, tests 211.70s, environment 0ms, prepare 89ms)
+
+M19-controls: exit=0 seconds=214.9296125
+M20 frozen-control and dependency source guards
+PASS:105 frozen dependencies/config/original fixture; M1; C0-C3 trees; REL originals; unchanged M19 tests/social/appraisal/reasons; entry and predecessor mechanisms
+PASS:new relationship production imports no standalone runtime/factory
+source-guards exit=0 seconds=0.4800117
+check:boundaries
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+check:boundaries exit=0 seconds=2.5761165
+check:research
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+check:research exit=0 seconds=4.1476314
+PASS final caps:10 production/test files;2 evidence files/19119 bytes before this line; checks 782.58s, longest 240.52s; planning line/byte caps passed. Test type assertion is erased; final EOF whitespace normalized only.

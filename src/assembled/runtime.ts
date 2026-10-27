@@ -25,6 +25,8 @@ import {createCognitiveExecution} from './execution';
 import {compileCharacterTraceBinding} from './traceBinding';
 import {prepareEpisodicRetention} from './retention';
 import {createEpisodicExtension} from './memory';
+import {createRelationshipExecution} from './relationshipExecution';
+import {REL_SOURCE} from './relationship';
 import {createSocialExecution} from './socialExecution';
 import {SOCIAL_SOURCE} from './social';
 import {createCommunicationExecution} from './communicationExecution';
@@ -67,7 +69,8 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
  const control=model.control?createControlExecution(component.tasks[0].character,model.habit!,stateModel,inputs.controlEvents,modelIdentity,inputs.runIdentity.value):undefined;
  const communication=model.communication?createCommunicationExecution(component.tasks[0].character,model.communication,stateModel,inputs.communicationEvents,modelIdentity,inputs.runIdentity.value):undefined;
  const social=model.social?createSocialExecution(component.tasks[0].character,model.social,stateModel,inputs.socialEvents,modelIdentity,inputs.runIdentity.value):undefined;
- const cognitive=createCognitiveExecution(model,component,inputs,()=>body?.evidence(),()=>episodes?.currentRecalls()??[],strategy,priority,habit,control,social);
+ const relationship=model.relationship?createRelationshipExecution(component.tasks[0].character,model.relationship,stateModel,inputs.relationshipEvents,modelIdentity,inputs.runIdentity.value):undefined;
+ const cognitive=createCognitiveExecution(model,component,inputs,()=>body?.evidence(),()=>episodes?.currentRecalls()??[],strategy,priority,habit,control,social,relationship);
  const probeModel=base.probe,measurement=base.measurement,domains=base.domains,shared=bindings.admission,evaluator=bindings.evaluator;
  const memoryRuntime=createMemoryExecution(memory,measurement.validateOutput,modelIdentity,inputs.runIdentity.value,[]);
  const predictionRuntime=createPredictionExecution(prediction,modelIdentity,inputs.runIdentity.value,[]);
@@ -84,6 +87,7 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
   const registerHandler=(eventKey:string,handler:EventHandler<AuthoritativeState>)=>{
     if(handlers.has(eventKey))throw new SchedulerContractError('INVALID_CONFIGURATION','event has multiple fixed runtime adapters');handlers.set(eventKey,handler);
   };
+  for(const eventType of relationship?.eventTypes()??[])registerHandler(key(eventType),context=>relationship!.execute(context));
   for(const eventType of social?.eventTypes()??[])registerHandler(key(eventType),context=>social!.execute(context));
   for(const eventType of communication?.eventTypes()??[])registerHandler(key(eventType),context=>communication!.execute(context));
   for(const eventType of control?.eventTypes()??[])registerHandler(key(eventType),context=>control!.execute(context));
@@ -189,13 +193,17 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
     adaptationSettlement:{version:'adaptation-settlement/0.2-candidate',
       beforeInstant(state,instant){
         domains.validateStatic(state);domains.validateReferences(state,instant);
-        probeInstant=false;runtimeCount=0;childCount=0;carriagePadding=undefined;memoryRuntime.begin(instant);predictionRuntime.begin(instant);taskRuntime.begin(instant);cognitive.begin(instant);body?.begin(instant);episodes?.begin(instant);procedure?.begin(instant);strategy?.begin(instant);priority?.begin(instant);horizon?.begin(instant);performance?.begin(instant);habit?.begin(instant);control?.begin(instant);communication?.begin(instant);social?.begin(instant);
+        probeInstant=false;runtimeCount=0;childCount=0;carriagePadding=undefined;memoryRuntime.begin(instant);predictionRuntime.begin(instant);taskRuntime.begin(instant);cognitive.begin(instant);body?.begin(instant);episodes?.begin(instant);procedure?.begin(instant);strategy?.begin(instant);priority?.begin(instant);horizon?.begin(instant);performance?.begin(instant);habit?.begin(instant);control?.begin(instant);communication?.begin(instant);social?.begin(instant);relationship?.begin(instant);
         ingress=beginTransitionIngressV04(shared,instant);
 
         probe=probeModel.begin(instant);probeSource=beginProbeSourceInstant(inputs.base,instant);
       },
       prepare(events,state,instant){
         if(!ingress)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','missing live ingress');
+        const relationshipAll=events,relationshipEvents=events.filter(e=>relationship?.isLearning(e));
+        const relationshipStage=relationshipEvents.length?relationship!.prepare(relationshipEvents,state):undefined;
+        events=events.filter(e=>!relationship?.isLearning(e));
+        function withoutRelationship(){
         const socialAll=events,socialEvents=events.filter(e=>social?.isLearning(e));
         const socialStage=socialEvents.length?social!.prepare(socialEvents,state):undefined;
         events=events.filter(e=>!social?.isLearning(e));
@@ -359,10 +367,14 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
         const inner=withoutSocial();if(!socialStage)return inner;
         let cursor=0,finished=false;
         return {execute(context:EventHandlerContext<AuthoritativeState>){if(finished||cursor>=socialAll.length||key(scheduledEventValue(context.event))!==key(scheduledEventValue(socialAll[cursor++])))throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','social common stage order');return social!.isLearning(context.event)?socialStage.execute(context):inner.execute(context);},finish(){if(finished||cursor!==socialAll.length)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','incomplete social stage');finished=true;return socialStage.finish(inner.finish());},finalizeTrace(){if(!finished)throw new SchedulerContractError('TRACE_VALIDATION_FAILURE','social trace before finish');const rows=[...inner.finalizeTrace(),...socialStage.traces()];return socialAll.flatMap(e=>rows.filter(row=>key(f(rec(f(rec(row,160n),4n),130n),1n))===key({kind:'unsigned',value:e.eventId})));}};
+        }
+        const inner=withoutRelationship();if(!relationshipStage)return inner;
+        let cursor=0,finished=false;
+        return {execute(context:EventHandlerContext<AuthoritativeState>){if(finished||cursor>=relationshipAll.length||key(scheduledEventValue(context.event))!==key(scheduledEventValue(relationshipAll[cursor++])))throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','relationship common stage order');return relationship!.isLearning(context.event)?relationshipStage.execute(context):inner.execute(context);},finish(){if(finished||cursor!==relationshipAll.length)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','incomplete relationship stage');finished=true;return relationshipStage.finish(inner.finish());},finalizeTrace(){if(!finished)throw new SchedulerContractError('TRACE_VALIDATION_FAILURE','relationship trace before finish');const rows=[...inner.finalizeTrace(),...relationshipStage.traces()];return relationshipAll.flatMap(e=>rows.filter(row=>key(f(rec(f(rec(row,160n),4n),130n),1n))===key({kind:'unsigned',value:e.eventId})));}};
       },
-      beforeCommit(state,instant){domains.validateStatic(state);domains.validateReferences(state,instant);probe?.finish();social?.prepareCommit();communication?.prepareCommit();control?.prepareCommit();habit?.prepareCommit();performance?.prepareCommit();horizon?.prepareCommit();priority?.prepareCommit();strategy?.prepareCommit();procedure?.prepareCommit();body?.prepareCommit();episodes?.prepareCommit();ingress!.finish();if(probeInstant&&(runtimeCount!==7||childCount!==14||carriagePadding))throw new SchedulerContractError('TRANSITION_INGRESS_VIOLATION','carriage/memory budget closure');taskRuntime.prepareCommit(state);predictionRuntime.prepareCommit();cognitive.prepareCommit();memoryRuntime.commit();episodes?.commit();predictionRuntime.commit();taskRuntime.commit();cognitive.commit();},
-      close(){social?.close();communication?.close();control?.close();habit?.close();performance?.close();horizon?.close();priority?.close();strategy?.close();procedure?.close();episodes?.close();body?.close();memoryRuntime.close();predictionRuntime.close();taskRuntime.close();cognitive.close();ingress?.abort();probe?.abort();probeSource?.close();ingress=undefined;probe=undefined;probeSource=undefined;},
-      validateRuntimeEmission(event){if(key(event.eventTypeId)===key(SOCIAL_SOURCE)||key(event.eventTypeId)===key(COMM_SOURCE)||key(event.eventTypeId)===key(CONTROL_SOURCE)||key(event.eventTypeId)===key(HABIT_SOURCE)||key(event.eventTypeId)===key(PERFORMANCE_SETTING)||key(event.eventTypeId)===key(HORIZON_DISPLAY)||key(event.eventTypeId)===key(PRIORITY_DISPLAY)||key(event.eventTypeId)===key(DISPLAY)||key(event.eventTypeId)===key(PRACTICE_SETTING)||key(event.eventTypeId)===key(BODY_SAMPLE)||key(event.eventTypeId)===key(BODY_DELIVERY)||key(event.eventTypeId)===key(AUTHORED_FACT_EVENT)||key(event.eventTypeId)===key(PROBE_SOURCE_EVENT)||key(event.eventTypeId)===key(DELIBERATION_EVENT)||key(event.eventTypeId)===key(TASK_DEADLINE_EVENT))throw new SchedulerContractError('INPUT_ONLY_EVENT_ORIGIN_VIOLATION','sources are compiler-only inputs');},
+      beforeCommit(state,instant){domains.validateStatic(state);domains.validateReferences(state,instant);probe?.finish();relationship?.prepareCommit();social?.prepareCommit();communication?.prepareCommit();control?.prepareCommit();habit?.prepareCommit();performance?.prepareCommit();horizon?.prepareCommit();priority?.prepareCommit();strategy?.prepareCommit();procedure?.prepareCommit();body?.prepareCommit();episodes?.prepareCommit();ingress!.finish();if(probeInstant&&(runtimeCount!==7||childCount!==14||carriagePadding))throw new SchedulerContractError('TRANSITION_INGRESS_VIOLATION','carriage/memory budget closure');taskRuntime.prepareCommit(state);predictionRuntime.prepareCommit();cognitive.prepareCommit();memoryRuntime.commit();episodes?.commit();predictionRuntime.commit();taskRuntime.commit();cognitive.commit();},
+      close(){relationship?.close();social?.close();communication?.close();control?.close();habit?.close();performance?.close();horizon?.close();priority?.close();strategy?.close();procedure?.close();episodes?.close();body?.close();memoryRuntime.close();predictionRuntime.close();taskRuntime.close();cognitive.close();ingress?.abort();probe?.abort();probeSource?.close();ingress=undefined;probe=undefined;probeSource=undefined;},
+      validateRuntimeEmission(event){if(key(event.eventTypeId)===key(REL_SOURCE)||key(event.eventTypeId)===key(SOCIAL_SOURCE)||key(event.eventTypeId)===key(COMM_SOURCE)||key(event.eventTypeId)===key(CONTROL_SOURCE)||key(event.eventTypeId)===key(HABIT_SOURCE)||key(event.eventTypeId)===key(PERFORMANCE_SETTING)||key(event.eventTypeId)===key(HORIZON_DISPLAY)||key(event.eventTypeId)===key(PRIORITY_DISPLAY)||key(event.eventTypeId)===key(DISPLAY)||key(event.eventTypeId)===key(PRACTICE_SETTING)||key(event.eventTypeId)===key(BODY_SAMPLE)||key(event.eventTypeId)===key(BODY_DELIVERY)||key(event.eventTypeId)===key(AUTHORED_FACT_EVENT)||key(event.eventTypeId)===key(PROBE_SOURCE_EVENT)||key(event.eventTypeId)===key(DELIBERATION_EVENT)||key(event.eventTypeId)===key(TASK_DEADLINE_EVENT))throw new SchedulerContractError('INPUT_ONLY_EVENT_ORIGIN_VIOLATION','sources are compiler-only inputs');},
     },
   });
   // Only quiescent observations/settlement are exposed. No injection, allocator or handler API.
