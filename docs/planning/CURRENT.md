@@ -16,9 +16,9 @@ forms cue history separately from expectation; history adds a feasible candidate
 ordinary task reasons/arbitration/execution. Residual reference, DerivedHistory; accepted
 kernel reused. No skill/history/episodic reduction or habit strength added to reasons.
 
-Ten production/test files planned: new habit.ts,habitExecution.ts,
+Twelve production/test files (capacity correction below): new habit.ts,habitExecution.ts,
 assembledHabit.test.ts,fixtures/assembledHabit.ts; modify model,state,inputs,runtime,
-execution,traceBinding. Hard12; split before expanding. No separate runtime/framework/UI.
+execution,traceBinding; new reasons.ts and random.ts. Hard12; split before expanding. No separate runtime/framework/UI.
 Existing habit/reward conceptual owners821/823, one state/scheduler/RNG/trace/save.
 
 Fixed16 witness: seeds0..7; M15 both A routes available/B route1 only; body100/fuel0,
@@ -38,3 +38,9 @@ Checks sequential, <=10min/command and30min total including failures/reruns:
 Evidence result+raw log planned; hard20 files/5MiB. Reopen RO015 only in this bounded
 receiving scope; no broader debt closure or final replay claim. Source analysis/card
 bounded to90min. Done iff declared witness/controls pass; null or budget limit stops.
+
+Capacity correction after retained witness failure: two tasks/two actions need up to
+four action/task groups,12 signals and five addressed draws. Version receiving compiler
+and RNG ledger before code; preserve formulas and original versions. Add exact per-group
+correspondence and four-group live draw/restore checks to the existing control groups.
+The fixed witness is unchanged. Failure and correction stay in the same raw log.

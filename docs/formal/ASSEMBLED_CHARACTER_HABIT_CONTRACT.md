@@ -70,3 +70,17 @@ closed model/source/S0/owner/append validation, real child forgery/duplicate rej
 actual read provenance and late140 atomic rollback. Bounded RO015 join trigger exercised;
 broader control/body/addiction, recognition and compression remain pending. Preserve
 MEC008..010 distinctions, MEC012..020, RO011 and all baseline requirements.
+
+## Receiving capacity correction before implementation
+
+The first witness reached candidate7 but exposed the inherited two action/task-group
+ceiling. The declared two tasks/two actions can legitimately supply four groups.
+Version the assembled receiving compiler to admit at most12 signals/four groups,
+preserving every original grouping, role consolidation, threshold, die and modifier.
+The shared run RNG capability correspondingly permits four reason draws plus one tie,
+with all original address/authentication/rollback rules. No per-fixture filter or
+zero-motive-origin deletion. Prior versions keep the original compiler/ledger. Exact
+kernel correspondence on each group and active four-group draw/restore controls are
+required. This changes capacity, not laws, sources, seeds or the fixed comparison.
+Two added implementation files (reasons.ts,random.ts) consume the hard12-file package
+budget; any further file requires a split. No new unresolved psychological alternative.
