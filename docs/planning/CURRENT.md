@@ -1,33 +1,45 @@
-# Current work — M17 complete
+# Current work — M18 communication
 
-The character can keep a withholding goal in mind and suppress a practiced action.
-A distractor can use the last shared workspace slot and change the executed choice.
-Withholding preserves habit; retirement restores access to the practiced action.
+The next connection lets an actual chosen and executed action carry a statement.
+Recipients learn only from delivered, permitted evidence and use it at a later probe.
 
 | Status | Disposition |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 | Baseline |21 members/219 records;15 families/132 clauses; six foundations/five C2 conditions |
-| M17 |PASS; [result](ASSEMBLED_CHARACTER_M17_RESULT.md), [checks](ASSEMBLED_CHARACTER_M17_CHECKS.txt) |
-| Contract |[control0.1](../formal/ASSEMBLED_CHARACTER_CONTROL_CONTRACT.md), rules/registry0.17 |
+| M17 |PASS at4ad7a1a4; [result](ASSEMBLED_CHARACTER_M17_RESULT.md) |
+| M18 |PRE-CODE; [contract](../formal/ASSEMBLED_CHARACTER_COMMUNICATION_CONTRACT.md) |
 
-All16 fixed runs finish10. At8 task+forecast+goal use3/4 slots; one visible card consumes
-slot4 and prevents inhibition. Seeds0/3/4/5 change actual action; four equal pairs retained.
-No matched RNG addresses, no coupling claim. Release9 restores the candidate; no action
-executes there because current urgency is absent. History is preserved, not reset.
+Capabilities (three): acquired private evidence freezes with actual expression;
+shared action/skill execution gates delivery; independent recipients retain evidence
+and change later beliefs. No separate decision, scheduler, RNG, runtime or save.
+Two controlled receiving observers are not yet autonomous reciprocal characters.
 
-Maintenance, tasks, forecasts and recalled episodes share one capacity. Goal writes use
-the existing prospective authority; workspace maintenance has its own rightful authority.
-One candidate/reason/decision path, state, scheduler, RNG, trace and save; no factory fan-out.
+Baseline links: M14/M1/M18; C-SOCIAL/C-DECISION/C-MULTI; Brief12.13/12.14.
+FND1..6 and five C2 conditions stand. RO014/020 and closed019 history preserved.
+No reduction, corpus closure or new Campaign3 qualification. Rich recognition,
+lying, interpretation, social appraisal and reciprocal decisions remain open.
 
-Original CONTROL37 runs/254 frames, hidden-board/maintenance/recall/capacity controls,
-exact repeat/restores6/8 and52-event whole-instant rollback pass. All seven unchanged M16
-tests pass. Type/boundary/research and105/control/config/M1 source guards pass.
+Files (nine planned, hard12): assembled communication.ts, communicationExecution.ts,
+model.ts, state.ts, inputs.ts, runtime.ts, traceBinding.ts; test/assembledCommunication.test.ts
+and test/fixtures/assembledCommunication.ts. Rules/registry0.18, communication0.1.
+Use existing actual expression426 at90 and Applied body outcome at110.
 
-Eleven production/test files, two evidence files. Checks including failures/reruns total
-1003.61s before final index gates, longest306.06s; within10min/command and30min total.
-Before-code plan4b25cac0; rollback-harness/type/provenance corrections retained in result.
-SpareSlot/shared admission is a local engineering default, no general psychology claim.
+Comparison fixed before execution: inherited control matrix, card absent/present,
+seeds0..7, through terminal10; target protocol-contact-one discloses, other withholds.
+Sources3/5 deny recipient access; source8 allows A, denies B; probe9 observes learning.
+Require at least one changed actual choice AND corresponding changed recipient belief.
+Compare choices, frozen claims, executions, safe histories, phase order and state reads.
+Same seeds alone make no coupling claim; report matched random addresses if any.
 
-Stop M17. No next milestone is open. Wider assembly and complete pinned replay remain;
-no history reduction or obligation closure. UI/Workbench and Campaign4 remain stopped.
+Checks, one at a time, each<=600s, total<=1800s including failures/reruns:
+M18 matrix; negative controls (hidden truth/private denial/nonrecipient access,
+failed physical execution/delivery, unknown versus false, correction); original COMM
+full fixture cases under EvidenceMean plus retained alternatives/violations; exact repeat
+and restore at6/8 through10; malformed admission/owner/child/rollback controls.
+Run unchanged M17 file (shared runtime/state risk); tsc -b, boundaries, research;
+105-source/config/M1/C0-C3 guard instead of unchanged full frozen replay.
+Two evidence files planned (raw checks and compact result), hard20/5MiB.
+
+Done iff actual action changes later permitted recipient belief and all declared
+checks pass inside budgets. Stop then; no UI, extra mechanics or next milestone.
