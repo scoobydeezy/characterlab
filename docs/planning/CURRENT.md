@@ -1,31 +1,40 @@
-# Current work — M15 complete
+# Current work — M16 acquired habit enters shared choice
 
-The character can change its next executed route after repeated perceived failures,
-keep its goal, and continue from a saved run. Performance joins the existing body,
-practice, memory, motivation, planning and decision paths in one simulation.
+Rewarded action history can offer an alternative after the planner switches routes.
+The comparison holds current belief fixed and requires a changed actual choice.
 
 | Status | Disposition |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 | Baseline |21 members/219 records;15 families/132 clauses; six foundations/five C2 conditions |
-| M15 |PASS; [result](ASSEMBLED_CHARACTER_M15_RESULT.md), [checks](ASSEMBLED_CHARACTER_M15_CHECKS.txt) |
-| Contract |[performance0.1](../formal/ASSEMBLED_CHARACTER_PERFORMANCE_CONTRACT.md), rules/registry0.15 |
+| M15 |PASS at0d8a45bb |
+| M16 |Before-code card; one active package; rules/registry0.16 |
+| Contract |[habit0.1](../formal/ASSEMBLED_CHARACTER_HABIT_CONTRACT.md) |
 
-All16 fixed runs pass: eight failure branches switch the third actual action; eight
-success branches retain the first route. Goals stay Open and route availability agrees.
-Six receiving-control groups, M14 matrix32/six controls and all six M12 tests pass.
-No arbitration draws occurred in the M15 witness; no seed-coupling claim.
+Scope M2 M11/M18; C-HABIT, F12.9/14. Two linked capabilities: observed performed reward
+forms cue history separately from expectation; history adds a feasible candidate to
+ordinary task reasons/arbitration/execution. Residual reference, DerivedHistory; accepted
+kernel reused. No skill/history/episodic reduction or habit strength added to reasons.
 
-Existing knowledge/plan owners retain reports and visit start; one scheduler/state/
-RNG/trace/save. TwoFailures is an engineering default, not a superiority verdict.
-False/denied reports exclude hidden physical success from cognition. No attempt or
-unmatched selected route gains feedback; late140 failure rolls back the whole instant.
-Historical105/config/fixture/M1 and unchanged M13 guards, type/boundary/research pass.
-Ten production/test files; two evidence files; checks within10min each/30min total.
-Before-code card and exact comparison are preserved atb3969b97; no retuning or failures.
+Ten production/test files planned: new habit.ts,habitExecution.ts,
+assembledHabit.test.ts,fixtures/assembledHabit.ts; modify model,state,inputs,runtime,
+execution,traceBinding. Hard12; split before expanding. No separate runtime/framework/UI.
+Existing habit/reward conceptual owners821/823, one state/scheduler/RNG/trace/save.
 
-Stop M15. No next milestone is open. Future work requires a bounded card and a complete
-behavioral connection under the same work order. Broader skill/control, rich recognition
-and the remaining architecture areas still need integration. Full reference replay and
-assembly acceptance remain pending. RO010/012/013/014 wider conditional debt and RO011
-are unchanged; RO019 stays historically closed. No UI or Campaign4 work is authorized.
+Fixed16 witness: seeds0..7; M15 both A routes available/B route1 only; body100/fuel0,
+practice3 difficulty0, A importance/urgency1/B0. Common performance failures3/5 switch
+plan to route1 at7. Target actionone rewards true versus false at3/5; correction6 false.
+At7 expectation false in both, cue true, fold3/4 versus0. Trained history offers actionone;
+other branch only actiontwo. Require changed probability and >=1 changed actual action.
+All runs terminal10. Preserve equal pairs and actual RNG; no retuning after results.
+
+Checks sequential, <=10min/command and30min total including failures/reruns:
+- Typecheck; fixed16 witness; six control groups in contract, including original full
+  scenario kernels/comparators, privacy, exact restore6, owners/children/late140 rollback.
+- M15 matrix16 and six controls in separate commands: physical/feedback/common140 risks.
+- M14 matrix32: candidate/reason/arbitration join; prior controls retained if sources
+  unchanged. Historical105/config/fixture/M1 guards plus M12/M13/M14 control-source guards.
+- Boundary/research, document/evidence caps, staged size and local commit. Stop on pass.
+Evidence result+raw log planned; hard20 files/5MiB. Reopen RO015 only in this bounded
+receiving scope; no broader debt closure or final replay claim. Source analysis/card
+bounded to90min. Done iff declared witness/controls pass; null or budget limit stops.
