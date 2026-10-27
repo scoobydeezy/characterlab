@@ -7,7 +7,7 @@ Read [CURRENT.md](docs/planning/CURRENT.md), then
 The active direction is assembly of one continuing character.
 Workbench/UI development and Campaign 4 are stopped pending assembly acceptance.
 This is the assembly checkout, based on
-`788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`. M12 passed. M13 comparison amendment approved; checkpoint incomplete. Follow CURRENT.md for the fixed80-run comparison; no further retuning or breadth.
+`788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`. M13 passed: retained importance and current urgency change actual choice. Follow CURRENT.md; no next milestone is open and UI remains stopped.
 Do not execute historical TODOs, resume old audits, or retain/revisit browser tabs.
 Old instructions/evidence remain on tag `archive/workbench-stopped-2026-10-25`.
 

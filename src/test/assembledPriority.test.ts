@@ -33,19 +33,33 @@ async function through(r:Run,time:bigint){for(let i=0;r.snapshot().clock<time;i+
 async function finish(r:Run){for(let i=0;await r.settleNextInstant();i++)expect(i).toBeLessThan(32);expect(r.snapshot().clock).toBe(10n);expect(r.diagnostic()).toBeUndefined();}
 const exact=(a:Run,b:Run)=>{expect(b.snapshot()).toEqual(a.snapshot());expect(b.save()).toEqual(a.save());};
 describe('M13 assembled priority',()=>{
- it('matrix: retained importance and fresh urgency change genuine reasons and actual choices',async()=>{
-  const m=await prepareCharacterModel(prioritySource()),changed:number[]=[],receipts:unknown[]=[];let matched=0,domains=0;
+ // Owner amendment9f851e57: preserve48 original runs and add32 fixed runs.
+ for(const amended of [false,true])it(amended?'matrix added32: retained importance changes actual choice with current urgency1':'matrix original48: retain collision null control and other original cells',async()=>{
+  const m=await prepareCharacterModel(prioritySource()),changed:number[]=[],receipts:unknown[]=[];let matched=0,domains=0,unmatchedA=0,unmatchedB=0;
+  const fractions=(xs:CanonicalValue[])=>xs.map(v=>{if(typeof v==='boolean'||v.kind!=='rational')throw Error('fraction');return v.numerator+'/'+v.denominator;});
+  const distributions=(run:Run,i:number)=>items(f(outputs(run.snapshot().outputs,408n)[i],3n),'list').map(v=>f(rec(v,407n),7n));
+  const dice=(run:Run,i:number)=>items(f(outputs(run.snapshot().outputs,408n)[i],3n),'list').map(v=>Number(uint(f(rec(v,407n),4n))));
   for(let seed=0;seed<16;seed++){
-   const a=await createCharacterRun(m,priorityData(rational(1,1),rational(0,1),seed)),b=await createCharacterRun(m,priorityData(rational(1,2),rational(1,1),seed));
+   const options=amended?{urgency5:rational(1,1)}:{};
+   const a=await createCharacterRun(m,priorityData(rational(1,1),rational(0,1),seed,options)),b=await createCharacterRun(m,priorityData(rational(1,2),rational(1,1),seed,options));
    await through(a,3n);await through(b,3n);expect(operand(a,3)[3]).toEqual(rational(1,2));expect(operand(b,3)[3]).toEqual(rational(1,2));expect(cognition(a)).toEqual(cognition(b));expect(state(a).read(skillPath(C))).toEqual(state(b).read(skillPath(C)));
-   await through(a,5n);await through(b,5n);expect(operand(a,5)[3]).toEqual(rational(1,2));expect(operand(b,5)[3]).toEqual(rational(1,4));expect(probability(a,1)).not.toEqual(probability(b,1));if(choice(a,1)!==choice(b,1))changed.push(seed);
-   for(const [address,x]of draws(a,5)){const y=draws(b,5).get(address);if(!y)continue;if(key(f(x,4n))===key(f(y,4n))&&key(f(x,5n))===key(f(y,5n))){expect(y).toEqual(x);matched++;}else domains++;}
+   await through(a,5n);await through(b,5n);expect(operand(a,5)[3]).toEqual(amended?rational(1,1):rational(1,2));expect(operand(b,5)[3]).toEqual(amended?rational(1,2):rational(1,4));
+   if(amended){expect.soft(probability(a,1)).not.toEqual(probability(b,1));expect.soft(distributions(a,1)).not.toEqual(distributions(b,1));}
+   else {expect.soft(probability(a,1)).toEqual(probability(b,1));expect.soft(distributions(a,1)).toEqual(distributions(b,1));expect.soft(choice(a,1)).toEqual(choice(b,1));}
+   if(choice(a,1)!==choice(b,1))changed.push(seed);
+   const ad=draws(a,5),bd=draws(b,5);let seedMatched=0,seedDomains=0;
+   for(const [address,x]of ad){const y=bd.get(address);if(!y){unmatchedA++;continue;}if(key(f(x,4n))===key(f(y,4n))&&key(f(x,5n))===key(f(y,5n))){expect(y).toEqual(x);matched++;seedMatched++;}else{domains++;seedDomains++;}}
+   for(const address of bd.keys())if(!ad.has(address))unmatchedB++;
    for(const run of [a,b])expect(uint(f(outputs(run.snapshot().outputs,433n)[1],3n))).toBe(choice(run,1)==='one'?1n:2n);
    const cells=[{I:'1',U:'0',run:a},{I:'1/2',U:'1',run:b}];
-   if(seed<8)for(const [I,U,labelI,labelU]of [[rational(1,1),rational(1,1),'1','1'],[rational(1,2),rational(0,1),'1/2','0']] as const){const run=await createCharacterRun(m,priorityData(I,U,seed));await through(run,5n);expect(operand(run,3)[3]).toEqual(labelI==='1'?rational(1,1):rational(1,4));cells.push({I:labelI,U:labelU,run});}
-   for(const cell of cells){await finish(cell.run);expect(operand(cell.run,7)[2]).toEqual(list([]));expect(operand(cell.run,7)[3]).toEqual(rational(0,1));receipts.push({seed,I:cell.I,U3:cell.U,choices:[0,1,2].map(i=>choice(cell.run,i)),probability5:probability(cell.run,1).map(v=>{if(typeof v==='boolean'||v.kind!=='rational')throw Error('fraction');return v.numerator+'/'+v.denominator;})});}
+   if(!amended&&seed<8)for(const [I,U,labelI,labelU]of [[rational(1,1),rational(1,1),'1','1'],[rational(1,2),rational(0,1),'1/2','0']] as const){const run=await createCharacterRun(m,priorityData(I,U,seed));await through(run,5n);expect(operand(run,3)[3]).toEqual(labelI==='1'?rational(1,1):rational(1,4));cells.push({I:labelI,U:labelU,run});}
+   const seedReceipts=[];
+   for(const cell of cells){await finish(cell.run);expect(operand(cell.run,7)[2]).toEqual(list([]));expect(operand(cell.run,7)[3]).toEqual(rational(0,1));const receipt={seed,I:cell.I,U3:cell.U,U5:amended?'1':'0',choices:[0,1,2].map(i=>choice(cell.run,i)),motive35:fractions([operand(cell.run,3)[3],operand(cell.run,5)[3]]),dice3:dice(cell.run,0),dice5:dice(cell.run,1),probability3:fractions(probability(cell.run,0)),probability5:fractions(probability(cell.run,1))};receipts.push(receipt);seedReceipts.push(receipt);}
+   console.info('M13 '+(amended?'added32':'original48')+' '+JSON.stringify({receipts:seedReceipts,matchedDraws:seedMatched,changedDomains:seedDomains}));
   }
-  console.info('M13 fixed48 '+JSON.stringify({receipts,changedSeeds:changed,matchedDraws:matched,changedDomains:domains}));expect(changed.length).toBeGreaterThan(0);expect(matched).toBeGreaterThan(0);expect(domains).toBeGreaterThan(0);expect(receipts).toHaveLength(48);
+  console.info('M13 '+(amended?'added32':'original48')+' complete '+JSON.stringify({runs:receipts.length,changedSeeds:changed,matchedDraws:matched,changedDomains:domains,unmatchedA,unmatchedB}));
+  if(amended){expect(changed.length).toBeGreaterThan(0);expect(domains).toBeGreaterThan(0);}else{expect(changed).toEqual([]);expect(domains).toBe(0);expect(unmatchedA+unmatchedB).toBe(0);}
+  expect(matched).toBeGreaterThan(0);expect(receipts).toHaveLength(amended?32:48);
  },540000);
  it('controls: finite component correspondence and meaningful retained comparators',async()=>{
   const frames=(I:number,U:number):Frame[]=>[U,0,0,1000,0,0].map((u,i)=>({at:i+1,adopt:i?null:I,adoptionVisible:true,urgency:i===2?null:u,urgencyVisible:true,hiddenUrgency:0}));
