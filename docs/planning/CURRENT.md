@@ -1,33 +1,45 @@
-# Current work — M19 complete
+# Current work — M20 relationship history into choice
 
-Received reports about another person now change the character's owned belief,
-shared appraisal, ordinary reasons and actual choice. Private truth stays separate.
-One continuing simulation; no separate social decision pipeline.
+M20 will let experienced cooperation or breach change an actual choice while current
+person belief stays fixed. Relationship history and person estimates keep separate owners.
 
 | Status | Disposition |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 | Baseline |21 members/219 records;15 families/132 clauses; six foundations/five C2 conditions |
-| M19 |PASS; [result](ASSEMBLED_CHARACTER_M19_RESULT.md), [checks](ASSEMBLED_CHARACTER_M19_CHECKS.txt) |
-| Contract |[social0.1](../formal/ASSEMBLED_CHARACTER_SOCIAL_CONTRACT.md); rules/registry0.19 |
+| M19 |PASS at f2b67ef3; [result](ASSEMBLED_CHARACTER_M19_RESULT.md) |
+| M20 |PRE-CODE; [contract](../formal/ASSEMBLED_CHARACTER_RELATIONSHIP_CONTRACT.md) |
 
-Plan committed before code at1a6e553f; predecessor2f4fb07d. Fixed seeds0..7:
-16 negative/positive report runs reach10; actual choice changes in4 pairs.
-48 matched random addresses agree exactly;5 unmatched draws remain explicit.
+Three capabilities: admitted own interaction history; derived relationship appraisal
+with preserved identity contribution; ordinary reasons and changed executed choice.
+Register M13/M18/U1/L8; C-REL/C-SOCIAL/C-LONG; Brief12.10/11/15; FND1..6 stand.
+REL0.2/LatestInteraction is the adopted engineering default, not a settled trust law.
+MEC004 controlled identity, P3-006/007/012 and MEC012..019 are mapped in the contract.
+RO016 identity/body/control coupling is exercised, not closed; RO014/017 remain open.
 
-One person owner, source-grouped history and goal-relative likelihood feed the existing
-joint appraisal. C1 consequence-lane observations/SEM provide actual evidence support.
-Unknown/zero, hidden truth, denied/duplicate/missing reports, corrections and current-
-instant exclusion are checked. Exact repeats/restores2/5 and full-instant rollback pass.
-Original SOCIAL:14 runs/50 frames; reference arithmetic/support matches26 frames.
+Ten production/test files planned, hard12: relationship.ts/relationshipExecution.ts,
+model/state/inputs/runtime/traceBinding/execution.ts, assembledRelationship.test.ts
+and fixtures/assembledRelationship.ts. One composition; rules/registry0.20.
+New history848 is separate from person810 and identity415. Genuine C1 observation/SEM,
+source110 ->120 ->121..124 ->130 ->140; raw80 consumes earlier committed history.
 
-All five M19 tests and five unchanged M18 tests pass. TypeScript/boundary/research pass.
-105 control dependencies, M1, C0-C3 trees and original comparison fixtures unchanged.
-Eleven production/test files and two compact evidence files; validation below30min,
-no command over10min. Initial invalid transformation-version failure is retained;
-corrected code uses accepted SEM-001C without changing C1.
+Fixed matrix: same M19 socialData(true), seeds0..7, person reports1/2 unchanged;
+relationship participant events1/2 both cooperation versus both breach. Choices3/5/7,
+terminal10. Existing body/skill/task inputs unchanged, contact action protocol-contact-one.
+Standing modifier unit1/4 cap3 (REL0.2 precedent); context remains1/10. No other dice,
+threshold or gain change. Require exact different relationship/standing reasons and
+at least one actual choice divergence. Preserve equal cells/address mismatches.
+No post-result retuning. Identity and relationship raw strengths add only because their
+actual evidence classes are disjoint; bound once in existing reasons, retain both sources.
 
-The target remains a controlled input, M18 recipients remain passive, and reciprocal
-agency/recognition/credibility/relationships/wider social appraisal remain required.
-Engineering defaults are not settled laws. No corpus clause or obligation is closed.
-M19 is complete; assembly is not. No next milestone is open. UI stays stopped.
+Checks one at a time: <=600s each, <=1800s total including failures/reruns.
+M20 matrix16; hidden-truth/denied/witness equality, statement versus repair, absence,
+same-instant exclusion, current-person/history distinction, no-base/no-contact controls;
+original REL full scenario/candidates/laws/revision/order and mapped history/fold;
+exact repeat/restores2/5 through10; admission/owner/child/trace/whole-instant rollback.
+Unchanged M19 tests split matrix/controls for command budget; tsc/boundary/research;
+105/control/config/M1/C0-C3 source guards instead of unaffected full frozen replay.
+Two evidence files planned; hard20/5MiB. One compact result, no companion register.
+
+Done iff own history changes actual choice through shared reasons and all checks pass
+within budgets. Stop on pass; no reciprocal-agent, rich attribution, grief or UI claim.
