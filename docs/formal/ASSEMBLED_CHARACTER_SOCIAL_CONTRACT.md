@@ -36,7 +36,7 @@ remain in historical comparisons. L3's reference is engineering default, no verd
 Source110 -> observation120 -> tracking121 -> binding122 -> classification123 ->
 experience freeze124 -> evidence130 -> learning140. Identity/semantic content is a
 controlled channel, with no rich recognition claim. Use C1 consequence lane admission,
-assemble/freeze pre-recognition experience and validate settlement. Visible reports
+assemble/freeze pre-recognition experience under accepted SEM-001C and validate settlement. Visible reports
 produce a new genuine observation1115 and a SEM experience1106; absent branches pad.
 Reserve observation and experience ordinals for each source independent of access.
 Do not rename old SOCIAL1154 records or inject fake ObservationRef237 support.
@@ -46,8 +46,8 @@ optionalPhysicalOutcome]. Denial suppresses claim/physical outcome and receipt. 
 visible silent report can have physical evidence but no accepted person-belief sample.
 SEM support names the actual observer/body-observer identity and this observation.
 Generated events authenticate exact phase, payload, allocated identity and parents.
-Evidence130 carries only actual observed claim with nonzero receipt; update140 reads
-common B0 and owns only810. Current50 cannot consume that instant's later receipt.
+Evidence130 carries the safe observation and its optional SEM experience. Only an
+observed claim with nonzero receipt can update140, which reads common B0 and owns810. Current50 cannot consume that instant's later receipt.
 No character consumer reads source truth, complete trace, output history or another mind.
 
 ## One appraisal, reasons and action

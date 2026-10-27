@@ -1,0 +1,170 @@
+M19 initial type check
+type exit=0 seconds=14.4574403
+M19 matrix16
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledSocial.test.ts (3 tests | 1 failed | 2 skipped) 2927ms
+   × M19 assembled social belief > matrix16: reports change shared appraisal, reasons and actual choice 2926ms
+     → contract version assembled-social-perception/0.1 is not an admitted seam contract
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSocial.test.ts > M19 assembled social belief > matrix16: reports change shared appraisal, reasons and actual choice
+SchedulerContractError: contract version assembled-social-perception/0.1 is not an admitted seam contract
+ ❯ fail src/substrate/scheduler.ts:667:9
+    665| 
+    666| function fail(code: SchedulerFailureCode, message: string): never {
+    667|   throw new SchedulerContractError(code, message);
+       |         ^
+    668| }
+    669| 
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:390:11
+ ❯ Object.settleNextInstant src/assembled/character.ts:40:58
+ ❯ finish src/test/assembledSocial.test.ts:35:42
+ ❯ src/test/assembledSocial.test.ts:40:144
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 2 skipped (3)
+   Start at  16:28:17
+   Duration  5.48s (transform 1.48s, setup 0ms, collect 2.29s, tests 2.93s, environment 0ms, prepare 92ms)
+
+matrix exit=1 seconds=6.0414313
+M19 matrix retry: use accepted SEM-001C transformation version
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > matrix16: reports change shared appraisal, reasons and actual choice
+M19 cell {"seed":0,"negative":["definition/protocol-contact-one","definition/protocol-contact-two","definition/protocol-contact-two"],"positive":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > matrix16: reports change shared appraisal, reasons and actual choice
+M19 cell {"seed":1,"negative":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-one"],"positive":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > matrix16: reports change shared appraisal, reasons and actual choice
+M19 cell {"seed":2,"negative":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"],"positive":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > matrix16: reports change shared appraisal, reasons and actual choice
+M19 cell {"seed":3,"negative":["definition/protocol-contact-one","definition/protocol-contact-one","definition/protocol-contact-one"],"positive":["definition/protocol-contact-one","definition/protocol-contact-one","definition/protocol-contact-one"]}
+
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > matrix16: reports change shared appraisal, reasons and actual choice
+M19 cell {"seed":4,"negative":["definition/protocol-contact-one","definition/protocol-contact-two","definition/protocol-contact-two"],"positive":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > matrix16: reports change shared appraisal, reasons and actual choice
+M19 cell {"seed":5,"negative":["definition/protocol-contact-two","definition/protocol-contact-one","definition/protocol-contact-one"],"positive":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-one"]}
+
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > matrix16: reports change shared appraisal, reasons and actual choice
+M19 cell {"seed":6,"negative":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-one"],"positive":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-one"]}
+
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > matrix16: reports change shared appraisal, reasons and actual choice
+M19 cell {"seed":7,"negative":["definition/protocol-contact-one","definition/protocol-contact-two","definition/protocol-contact-two"],"positive":["definition/protocol-contact-one","definition/protocol-contact-two","definition/protocol-contact-two"]}
+M19 matrix {"runs":16,"changed":[0,1,4,5],"draws":101,"matched":48,"terminal":10}
+
+ ✓ src/test/assembledSocial.test.ts (3 tests | 2 skipped) 124453ms
+   ✓ M19 assembled social belief > matrix16: reports change shared appraisal, reasons and actual choice 124453ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 2 skipped (3)
+   Start at  16:28:43
+   Duration  127.02s (transform 1.47s, setup 0ms, collect 2.27s, tests 124.45s, environment 0ms, prepare 89ms)
+
+matrix-corrected exit=0 seconds=127.510835
+M19 controls
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > controls: hidden truth, denied and duplicate reports, corrections and goal direction
+M19 controls:12 full runs; truth/access/source grouping/unknown/correction/timing/goal direction/physical separation
+
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > controls: original SOCIAL scenarios, reference arithmetic and retained alternatives
+M19 original SOCIAL {"runs":14,"frames":50,"comparisons":26}
+
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > controls: admission, owner, genuine perception support, child authentication and rollback
+M19 rollback 48 events, limit47; prior belief retained and all instant changes rolled back; reason links=9
+
+ ✓ src/test/assembledSocial.test.ts (5 tests | 1 skipped) 213153ms
+   ✓ M19 assembled social belief > controls: hidden truth, denied and duplicate reports, corrections and goal direction 86623ms
+   ✓ M19 assembled social belief > controls: exact repeat and acquired-history restores2/5 through10 107353ms
+   ✓ M19 assembled social belief > controls: original SOCIAL scenarios, reference arithmetic and retained alternatives 1382ms
+   ✓ M19 assembled social belief > controls: admission, owner, genuine perception support, child authentication and rollback 17794ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed | 1 skipped (5)
+   Start at  16:31:14
+   Duration  215.89s (transform 1.51s, setup 0ms, collect 2.33s, tests 213.15s, environment 0ms, prepare 89ms)
+
+controls exit=0 seconds=216.3764258
+M19 final TypeScript
+type-final exit=0 seconds=14.4077343
+M19 unchanged M18 regression: shared runtime/appraisal compatibility
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCommunication.test.ts > M18 assembled communication > matrix16: actual withholding or disclosure changes later recipient belief
+M18 cell {"seed":0,"withheld":false,"loadedDelivered":false,"A":"0700","terminal":10}
+
+stdout | src/test/assembledCommunication.test.ts > M18 assembled communication > matrix16: actual withholding or disclosure changes later recipient belief
+M18 cell {"seed":1,"withheld":false,"loadedDelivered":false,"A":"0700","terminal":10}
+
+stdout | src/test/assembledCommunication.test.ts > M18 assembled communication > matrix16: actual withholding or disclosure changes later recipient belief
+M18 cell {"seed":2,"withheld":false,"loadedDelivered":true,"A":"0701060201","terminal":10}
+
+stdout | src/test/assembledCommunication.test.ts > M18 assembled communication > matrix16: actual withholding or disclosure changes later recipient belief
+M18 cell {"seed":3,"withheld":false,"loadedDelivered":false,"A":"0700","terminal":10}
+
+stdout | src/test/assembledCommunication.test.ts > M18 assembled communication > matrix16: actual withholding or disclosure changes later recipient belief
+M18 cell {"seed":4,"withheld":false,"loadedDelivered":false,"A":"0700","terminal":10}
+
+stdout | src/test/assembledCommunication.test.ts > M18 assembled communication > matrix16: actual withholding or disclosure changes later recipient belief
+M18 cell {"seed":5,"withheld":false,"loadedDelivered":false,"A":"0700","terminal":10}
+
+stdout | src/test/assembledCommunication.test.ts > M18 assembled communication > matrix16: actual withholding or disclosure changes later recipient belief
+M18 cell {"seed":6,"withheld":false,"loadedDelivered":false,"A":"0700","terminal":10}
+
+stdout | src/test/assembledCommunication.test.ts > M18 assembled communication > matrix16: actual withholding or disclosure changes later recipient belief
+M18 cell {"seed":7,"withheld":false,"loadedDelivered":true,"A":"0701060201","terminal":10}
+M18 matrix {"runs":16,"changed":[2,7],"draws":16,"matched":0}
+
+stdout | src/test/assembledCommunication.test.ts > M18 assembled communication > controls: complete later safe views, failure, unknown, false and correction
+M18 privacy/delivery/physical block/unknown/false/correction:11 full runs; correction samples=2
+
+stdout | src/test/assembledCommunication.test.ts > M18 assembled communication > controls: original COMM full cases and retained alternatives preserve exact kernels
+M18 original COMM 21 full runs/79 frames; all admitted histories, mean/latest/NoLearning/privacy/transmission retained
+
+stdout | src/test/assembledCommunication.test.ts > M18 assembled communication > controls: admission, ownership, trace phases and whole-instant rollback
+M18 rollback 55 events, limit54; acquired knowledge and all shared state rolled back
+
+ ✓ src/test/assembledCommunication.test.ts (5 tests) 363690ms
+   ✓ M18 assembled communication > matrix16: actual withholding or disclosure changes later recipient belief 147502ms
+   ✓ M18 assembled communication > controls: complete later safe views, failure, unknown, false and correction 88546ms
+   ✓ M18 assembled communication > controls: original COMM full cases and retained alternatives preserve exact kernels 19923ms
+   ✓ M18 assembled communication > controls: exact repeat and acquired-history restores6/8 through10 90577ms
+   ✓ M18 assembled communication > controls: admission, ownership, trace phases and whole-instant rollback 17142ms
+
+ Test Files  1 passed (1)
+      Tests  5 passed (5)
+   Start at  16:35:32
+   Duration  366.38s (transform 1.52s, setup 0ms, collect 2.35s, tests 363.69s, environment 0ms, prepare 90ms)
+
+M18-regression exit=0 seconds=366.8880993
+M19 frozen-control and dependency source guards
+PASS:105 frozen dependencies/config/original fixture; M1; C0-C3 trees; SOCIAL originals; M18 controls; unchanged entry/communication/control/habit/body/memory/workspace/skill
+PASS:new social production imports no standalone runtime/factory
+source-guards exit=0 seconds=0.5485971
+check:boundaries
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+check:boundaries exit=0 seconds=2.5185344
+check:research
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+check:research exit=0 seconds=4.2142499
+PASS final caps:11 production/test files;2 evidence files/17884 bytes before this line; checks 752.96s, longest 366.89s; planning line/byte caps passed. Raw failure stack whitespace retained.
+Final staged whitespace check rejected extra EOF blank lines in socialExecution.ts and fixture; trimmed only EOF whitespace. No semantic changes. index-whitespace exit=2 seconds=0.2877177

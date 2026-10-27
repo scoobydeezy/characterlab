@@ -1,47 +1,33 @@
-# Current work — M19 social belief into choice
+# Current work — M19 complete
 
-The next connection lets received reports about another person change the character's
-own appraisal and actual choice. Private truth and perceived commitment stay separate.
+Received reports about another person now change the character's owned belief,
+shared appraisal, ordinary reasons and actual choice. Private truth stays separate.
+One continuing simulation; no separate social decision pipeline.
 
 | Status | Disposition |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 | Baseline |21 members/219 records;15 families/132 clauses; six foundations/five C2 conditions |
-| M18 |PASS at2f4fb07d; [result](ASSEMBLED_CHARACTER_M18_RESULT.md) |
-| M19 |PRE-CODE; [contract](../formal/ASSEMBLED_CHARACTER_SOCIAL_CONTRACT.md) |
+| M19 |PASS; [result](ASSEMBLED_CHARACTER_M19_RESULT.md), [checks](ASSEMBLED_CHARACTER_M19_CHECKS.txt) |
+| Contract |[social0.1](../formal/ASSEMBLED_CHARACTER_SOCIAL_CONTRACT.md); rules/registry0.19 |
 
-Three capabilities: consequence-lane receipt and source-grouped person belief;
-goal-relative social likelihood in the existing joint appraisal; changed ordinary
-reasons/choice/execution. One continuing composition; no autonomous-peer claim.
-Target identity is controlled; incoming environment reports are explicit stimuli.
+Plan committed before code at1a6e553f; predecessor2f4fb07d. Fixed seeds0..7:
+16 negative/positive report runs reach10; actual choice changes in4 pairs.
+48 matched random addresses agree exactly;5 unmatched draws remain explicit.
 
-Baseline: register M1/M7/M12/M18; C-SOCIAL/C-DECISION/C-MULTI, Brief12.5/10/13/14.
-L3 SourceGroupedMean, L4 SplitExposure and unchanged dice remain reference defaults.
-MEC004 controlled identity; P3-006 port; P3-007/008 wider scope preserved; RO011/014/020
-stay open. FND1..6/five C2 conditions stand. No new verdict or corpus closure.
+One person owner, source-grouped history and goal-relative likelihood feed the existing
+joint appraisal. C1 consequence-lane observations/SEM provide actual evidence support.
+Unknown/zero, hidden truth, denied/duplicate/missing reports, corrections and current-
+instant exclusion are checked. Exact repeats/restores2/5 and full-instant rollback pass.
+Original SOCIAL:14 runs/50 frames; reference arithmetic/support matches26 frames.
 
-Eleven production/test files planned, hard12: new social.ts/socialExecution.ts,
-model/state/inputs/runtime/traceBinding/execution/appraisal.ts; assembledSocial.test.ts
-and fixtures/assembledSocial.ts. Versions rules/registry0.19 and social0.1.
-C1 consequence observation120 ->121..124 freeze ->130 evidence ->140 learning;
-appraisal50 reads prior owned belief. Actual observation1115 plus SEM experience
-provides lawful reason support; historical SOCIAL1154 is not relabelled as observation.
+All five M19 tests and five unchanged M18 tests pass. TypeScript/boundary/research pass.
+105 control dependencies, M1, C0-C3 trees and original comparison fixtures unchanged.
+Eleven production/test files and two compact evidence files; validation below30min,
+no command over10min. Initial invalid transformation-version failure is retained;
+corrected code uses accepted SEM-001C without changing C1.
 
-Fixed comparison: seeds0..7, same model/body/task evidence, two prior reports1/2
-both negative versus both positive; choices3/5/7, terminal10. Existing horizon fixture
-with both tasks' importance/urgency1, zero action-body amounts, no habit/control inputs,
-task deadlines10, practice difficulty0. Tasks have opposite declared social goals.
-Require changed exact factors/reasons and at least one actual choice divergence.
-No seed/formula/threshold retuning; report matched RNG addresses honestly.
-
-Checks one at a time, <=600s each/1800s total including failure/reruns:
-M19 matrix16; hidden-truth and denied-report equality, duplicate/missing receipt,
-false report/correction/unknown-vs-zero, same-instant exclusion, goal reversal;
-original SOCIAL fixtures/laws/violations and exact source-grouping correspondence;
-repeat/restores2/5 through10; admission/owner/child/trace/whole-instant rollback.
-Unchanged M18 tests (shared runtime/appraisal risk); tsc -b, boundaries/research;
-105/control/config/M1/C0-C3 source guard rather than unchanged full control replay.
-Two evidence files planned, hard20/5MiB. One compact result and this card only.
-
-Done iff received social evidence changes a real choice via the shared appraisal and
-all checks pass within budgets. Stop then; no UI, additional mechanics or next milestone.
+The target remains a controlled input, M18 recipients remain passive, and reciprocal
+agency/recognition/credibility/relationships/wider social appraisal remain required.
+Engineering defaults are not settled laws. No corpus clause or obligation is closed.
+M19 is complete; assembly is not. No next milestone is open. UI stays stopped.

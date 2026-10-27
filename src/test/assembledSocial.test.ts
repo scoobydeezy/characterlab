@@ -1,0 +1,88 @@
+import {describe,it,expect} from 'vitest';
+import {prepareCharacterModel,createCharacterRun,restoreCharacterRun} from '../assembled/character';
+import {compileCharacterModel} from '../assembled/model';
+import {compileCharacterInputs} from '../assembled/inputs';
+import {compileCharacterState} from '../assembled/state';
+import {createSocialExecution} from '../assembled/socialExecution';
+import {SOCIAL,SOCIAL_SOURCE,SOCIAL_OBSERVATION,SOCIAL_APPRAISAL,PERSON_OWNER,personPath,personHistory,personMean,personUpdate} from '../assembled/social';
+import {JOINT_APPRAISAL} from '../assembled/appraisal';
+import {canonicalEncode as enc,list,text,signed,unsigned,typedIdentifier,rational as q,type CanonicalValue} from '../substrate/canonicalEncoding';
+import {restoreAuthoritativeState} from '../substrate/state';
+import {ExactRational as Q} from '../substrate/exactMath';
+import {simInstant} from '../substrate/time';
+import type {ScheduledEvent} from '../substrate/scheduler';
+import {decodeEmbodied as decode} from '../campaign3/embodiedCodecs';
+import {dataItems as items,dataRecord as rec,dataField as f,dataKey as key,dataIdentity as id,dataText as txt,dataUnsigned as uint} from '../campaign2/canonicalData';
+import {readQ,qValue} from '../campaign2/cognitiveMath';
+import {socialSource,socialData,socialFrame,target,type Frame} from './fixtures/assembledSocial';
+import {outputs} from './fixtures/assembledInteraction';
+import {workLimit} from './fixtures/assembledCharacter';
+import {C} from './fixtures/campaign2Cognitive';
+import {sid} from '../assembled/skill';
+import {compileSocialModel,compileSocialInputs,socialRecipe,personPath as oldPath,OBSERVERS,type SocialSettings} from '../campaign3/socialModel';
+import {createSocialRuntime} from '../campaign3/socialRuntime';
+import {socialScenario,socialInputs,type Display} from './socialFixtures';
+type Run=Awaited<ReturnType<typeof createCharacterRun>>;
+const state=(r:Run)=>restoreAuthoritativeState(decode(r.snapshot().state));
+const reports=(r:Run,label:string)=>items(decode(r.snapshot().outputs),'list').filter(v=>typeof v!=='boolean'&&v.kind==='list'&&v.items[0]&&key(v.items[0])===key(text(label))).map(v=>items(v,'list'));
+const at=(v:CanonicalValue)=>{if(typeof v==='boolean'||v.kind!=='signed')throw Error('time');return v.value;};
+const social=(r:Run,t:number)=>reports(r,SOCIAL_APPRAISAL).find(x=>at(x[1])===BigInt(t))!;
+const belief=(r:Run)=>state(r).read(personPath(C,target)).value;
+const traces=(r:Run)=>outputs(r.snapshot().trace,160n),event=(t:CanonicalValue)=>rec(f(rec(t,160n),4n),130n);
+const cognition=(r:Run)=>items(decode(r.snapshot().outputs),'list').filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId>=381n&&v.schema.typeId<=433n);
+const choices=(r:Run)=>outputs(r.snapshot().outputs,409n).map(v=>{const x=rec(f(v,4n),419n);return uint(f(x,1n))===3n?txt(id(f(rec(f(rec(f(x,2n),420n),1n),395n),2n)).payload):'None';});
+async function through(r:Run,t:bigint){for(let n=0;r.snapshot().clock<t;n++){expect(n).toBeLessThan(32);expect(await r.settleNextInstant()).toBe(true);}expect(r.snapshot().clock).toBe(t);}
+async function finish(r:Run){for(let n=0;await r.settleNextInstant();n++)expect(n).toBeLessThan(32);expect(r.snapshot().clock).toBe(10n);expect(r.diagnostic()).toBeUndefined();}
+const exact=(a:Run,b:Run)=>{expect(b.snapshot()).toEqual(a.snapshot());expect(b.save()).toEqual(a.save());};
+describe('M19 assembled social belief',()=>{
+ it('matrix16: reports change shared appraisal, reasons and actual choice',async()=>{
+  const m=await prepareCharacterModel(socialSource()),changed:number[]=[];let draws=0,matched=0;
+  for(let seed=0;seed<8;seed++){const a=await createCharacterRun(m,socialData(false,seed)),b=await createCharacterRun(m,socialData(true,seed));await finish(a);await finish(b);
+   expect(social(a,3)[4]).toEqual(list([q(0,1)]));expect(social(b,3)[4]).toEqual(list([q(1,1)]));
+   for(const r of [a,b])for(const joint of reports(r,JOINT_APPRAISAL)){const s=items(joint[6],'list'),likelihoods=new Map(items(s[5],'list').map(v=>{const x=items(v,'list');return [key(x[0]),readQ(items(x[2],'list')[0])];}));expect(items(s[3],'list')).toHaveLength(2);for(const v of items(joint[4],'list')){const x=items(v,'list');expect(x).toHaveLength(5);const expected=likelihoods.get(key(x[0]))!.multiply(readQ(x[1])).multiply(Q.of(1n).add(readQ(x[2]))).divide(Q.of(2n));expect(x[3]).toEqual(qValue(expected));expect(x[4]).toEqual(qValue(expected));}}
+   expect(outputs(a.snapshot().outputs,408n)).not.toEqual(outputs(b.snapshot().outputs,408n));const ca=choices(a),cb=choices(b);if(JSON.stringify(ca)!==JSON.stringify(cb))changed.push(seed);
+   const ledger=(r:Run)=>new Map(traces(r).flatMap(t=>items(f(t,14n),'list')).map(v=>[key(f(rec(v,411n),1n)),v]));const x=ledger(a),y=ledger(b);draws+=x.size+y.size;for(const [k,v]of x)if(y.has(k)){matched++;expect(y.get(k)).toEqual(v);}console.info('M19 cell '+JSON.stringify({seed,negative:ca,positive:cb}));
+  }expect(changed.length).toBeGreaterThan(0);console.info('M19 matrix '+JSON.stringify({runs:16,changed,draws,matched,terminal:10}));
+ },420000);
+ it('controls: hidden truth, denied and duplicate reports, corrections and goal direction',async()=>{
+  const m=await prepareCharacterModel(socialSource()),run=async(xs:Frame[],model=m)=>{const r=await createCharacterRun(model,socialData(true,0,xs));await finish(r);return r;},baseFrames=[{at:1},{at:2}];
+  const base=await run(baseFrames),hidden=await run(baseFrames.map(x=>({...x,truth:false})));expect(cognition(hidden)).toEqual(cognition(base));expect(state(hidden).canonicalValue()).toEqual(state(base).canonicalValue());
+  const denied=await run(baseFrames.map(x=>({...x,access:false}))),deniedOther=await run(baseFrames.map(x=>({...x,access:false,truth:false,mode:4,physical:false})));expect(cognition(deniedOther)).toEqual(cognition(denied));expect(belief(denied)).toBeUndefined();expect(social(denied,3)[4]).toEqual(list([]));
+  const negative=await run(baseFrames.map(x=>({...x,mode:4})));expect(social(negative,3)[4]).toEqual(list([q(0,1)]));
+  const dup=[{at:1,mode:4},{at:2,mode:3},{at:4,mode:3,receipt:2}],duplicate=await run(dup),silent=await run([...dup.slice(0,2),{at:4,mode:0,receipt:0}]);expect(cognition(duplicate)).toEqual(cognition(silent));expect(personHistory(belief(duplicate))).toHaveLength(2);expect(personMean(belief(duplicate))).toEqual(Q.of(1n,2n));
+  const missing=await run(baseFrames.map(x=>({...x,receipt:0})));expect(belief(missing)).toBeUndefined();
+  const correction=await run([{at:1,mode:4},{at:2,mode:4},{at:4,kind:2,mode:3},{at:6,kind:2,mode:3}]);for(const [t,n,d]of [[3,0,1],[5,1,3],[7,1,2]])expect(social(correction,t)[4]).toEqual(list([q(n,d)]));expect(items(social(correction,3)[3],'list')).toHaveLength(2);
+  const same=await run([{at:3}]);expect(social(same,3)[4]).toEqual(list([]));expect(social(same,5)[4]).toEqual(list([q(1,1)]));
+  const reverse=await run(baseFrames,await prepareCharacterModel(socialSource(true)));expect(personMean(belief(reverse))).toEqual(personMean(belief(base)));expect(items(social(reverse,3)[5],'list').map(v=>items(v,'list')[2])).toEqual(items(social(base,3)[5],'list').map(v=>items(v,'list')[2]).reverse());
+  const physical=await run(baseFrames.map(x=>({...x,physical:false})));expect(cognition(physical)).toEqual(cognition(base));console.info('M19 controls:12 full runs; truth/access/source grouping/unknown/correction/timing/goal direction/physical separation');
+ },300000);
+ it('controls: exact repeat and acquired-history restores2/5 through10',async()=>{
+  const s=socialSource(),d=socialData(true,0,[{at:1,mode:4},{at:2,mode:4},{at:4,kind:2},{at:6,kind:2}]),m=await prepareCharacterModel(s),a=await createCharacterRun(m,d),b=await createCharacterRun(m,d);await through(a,2n);await through(b,2n);exact(a,b);const restored=await restoreCharacterRun(s,{initialState:d.initialState,orderedInputs:d.orderedInputs,save:a.save()});exact(a,restored);await through(a,5n);await through(b,5n);await through(restored,5n);exact(a,b);exact(a,restored);expect(personHistory(belief(a))).toHaveLength(3);const late=await restoreCharacterRun(s,{initialState:d.initialState,orderedInputs:d.orderedInputs,save:a.save()});exact(a,late);while(await a.settleNextInstant()){for(const r of [b,restored,late]){expect(await r.settleNextInstant()).toBe(true);exact(a,r);}}expect(a.snapshot().clock).toBe(10n);
+ },180000);
+
+ it('controls: original SOCIAL scenarios, reference arithmetic and retained alternatives',async()=>{
+  const cases:Record<string,Display[]>={main:socialScenario(),denied:socialScenario().map(x=>x.kind===2?{...x,a:false}:x),lie:socialScenario().map(x=>x.kind===2?{...x,mode:4}:x),duplicate:socialScenario().map(x=>x.kind===2?{...x,receipt:2}:x),missing:[{at:1,receipt:0}],silent:[{at:1,mode:0}]};
+  let runs=0,frames=0,comparisons=0;const result=new Map<string,CanonicalValue>(),views=new Map<string,Uint8Array>();
+  for(const [name,xs]of Object.entries(cases))for(const setting of name==='main'?[{},{learningLaw:2},{learningLaw:3},{control:2},{control:3},{control:3,privateCommitment:false},{privateCommitment:false},{reverse:true}]:name==='duplicate'?[{},{control:4}]:[{}]){
+   const settings:Partial<SocialSettings>=setting,m=await compileSocialModel(socialRecipe(settings)),input=await compileSocialInputs(m,enc(m.initial.canonicalValue()),socialInputs(xs),new Uint8Array(32)),r=createSocialRuntime(m,input);let prior:CanonicalValue|undefined;
+   while(await r.settle()){frames++;const snapshot=r.snapshot();if(m.settings.learningLaw===1&&m.settings.control===1){const obs=snapshot.outputs.filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===807n&&key(f(v,2n))===key(OBSERVERS[0])&&at(f(v,4n))===snapshot.clock)[0],o=rec(obs,807n),claim=o.fields.get(9n),physical=o.fields.get(8n),mapped=list([typedIdentifier(1115,unsigned(snapshot.clock)),C,target,f(o,4n),f(o,5n),f(o,6n),list(claim===undefined?[]:[claim]),list(physical===undefined?[]:[physical])]);prior=personUpdate(prior,mapped);const old=snapshot.state.read(oldPath(0)).value;if(!old)expect(prior).toBeUndefined();else {const oldState=rec(old,809n);expect(qValue(personMean(prior)!)).toEqual(f(oldState,1n));expect(BigInt(personHistory(prior).length)).toBe(uint(f(oldState,2n)));const sources=personHistory(prior).map(v=>{const a=items(v,'list');return key(list([a[4],a[5]]));}).sort();expect(sources).toEqual(items(f(oldState,3n),'set').map(v=>key(list([f(rec(v,806n),1n),f(rec(v,806n),2n)]))).sort());}comparisons++;}}
+   expect(r.snapshot().clock).toBe(BigInt(xs.at(-1)!.at));expect(r.diagnostic()).toBeUndefined();const label=name+'/'+m.settings.learningLaw+'/'+m.settings.control+'/'+m.settings.privateCommitment+'/'+m.settings.reverse;result.set(label,r.snapshot().state.read(oldPath(0)).value??list([]));views.set(label,r.view(OBSERVERS[0]));runs++;
+  }
+  const v=(suffix:string)=>result.get('main/'+suffix)!;expect(f(rec(v('1/1/true/false'),809n),1n)).toEqual(q(2,3));expect(f(rec(v('2/1/true/false'),809n),1n)).toEqual(q(1,1));expect(v('3/1/true/false')).toEqual(list([]));expect(views.get('main/1/1/true/false')).toEqual(views.get('main/1/1/false/false'));expect(views.get('main/1/3/true/false')).not.toEqual(views.get('main/1/3/false/false'));expect(v('1/1/true/true')).toEqual(v('1/1/true/false'));expect(result.get('duplicate/1/4/true/false')).not.toEqual(result.get('duplicate/1/1/true/false'));console.info('M19 original SOCIAL '+JSON.stringify({runs,frames,comparisons}));
+ },120000);
+ it('controls: admission, owner, genuine perception support, child authentication and rollback',async()=>{
+  const s=socialSource(),d=socialData(true,0,[{at:1,mode:4},{at:3,mode:3}]),m=await prepareCharacterModel(s),model=await compileCharacterModel(s),component=await compileCharacterState(model),initial=component.initialState(d.initialState),r=await createCharacterRun(m,d);await through(r,1n);const acquired=state(r),p=personPath(C,target),v=acquired.read(p).value!,patch={operations:[{kind:'set' as const,path:p,expected:{presence:false as const},newValue:v}]};expect(()=>component.stateModel.applyPatch(initial,patch,sid(1025,'authority/workspace'))).toThrow();expect(()=>component.stateModel.applyPatch(acquired,{operations:[{kind:'set',path:p,expected:{presence:true,value:v},newValue:v}]},PERSON_OWNER)).toThrow('history rewrite');await expect(createCharacterRun(m,{...d,initialState:enc(acquired.canonicalValue())})).rejects.toThrow('initial');
+  const rows=items(decode(d.orderedInputs),'list');for(const extra of [socialFrame({at:1}),socialFrame({at:101}),socialFrame({at:4,receipt:1,mode:3}),list([signed(2),unsigned(110),SOCIAL_SOURCE,list([text(SOCIAL),true,unsigned(1),unsigned(3),unsigned(2),unsigned(1),true]),list([])])])await expect(createCharacterRun(m,{...d,orderedInputs:enc(list([...rows,extra]))})).rejects.toThrow();
+  const slots=items(decode(s.registry),'list'),declaration=items(slots[19],'list');for(const next of [list([text(SOCIAL),C,declaration[2]]),list([text(SOCIAL),target,list([...items(declaration[2],'list'),items(declaration[2],'list')[0]])]),list([text(SOCIAL),sid(1000,'foreign'),declaration[2]])])await expect(prepareCharacterModel({...s,registry:enc(list([...slots.slice(0,19),next]))})).rejects.toThrow();
+  await finish(r);const ts=traces(r).filter(t=>txt(f(t,6n))==='assembled-character-social/0.1-candidate'),obs=reports(r,SOCIAL_OBSERVATION).map(x=>items(x[1],'list'));expect(obs).toHaveLength(2);for(const o of obs)expect(id(o[0]).namespaceId).toBe(1115n);
+  for(const [name,phase]of [['source',110n],['observe',120n],['track',121n],['bind',122n],['classify',123n],['freeze',124n],['evidence',130n],['update',140n]] as const){const xs=ts.filter(t=>txt(id(f(t,7n)).payload)==='event/assembled-social-'+name);expect(xs).toHaveLength(2);for(const t of xs)expect(uint(f(event(t),3n))).toBe(phase);}
+  const freezes=ts.filter(t=>uint(f(event(t),3n))===124n);for(const [i,t]of freezes.entries()){const semantic=items(f(t,13n),'list')[0];expect(semantic).toBeDefined();expect(key(semantic)).toContain(key(obs[i][0]));}
+  const reads=ts.filter(t=>uint(f(event(t),3n))===50n);expect(reads).toHaveLength(3);for(const t of reads)expect(items(f(t,11n),'list')).toHaveLength(1);
+  // Every social evidence atom in ordinary raw reasons resolves to a real received observation.
+  let linked=0;for(const raw of outputs(r.snapshot().outputs,403n))for(const signal of items(f(raw,3n),'set')){const basis=f(rec(f(rec(signal,402n),3n),400n),1n);if(typeof basis==='boolean'||basis.kind!=='map')throw Error('basis');for(const [atom]of basis.entries){const a=rec(atom,399n);if(uint(f(a,1n))!==1n)continue;const ref=rec(f(a,2n),237n);if(uint(f(ref,1n))!==1n)continue;const occurrence=f(ref,2n);if(obs.some(o=>key(o[0])===key(occurrence)))linked++;}}expect(linked).toBeGreaterThan(0);
+  const scheduled=(t:CanonicalValue):ScheduledEvent=>{const e=event(t);return {eventId:uint(f(e,1n)),dueAt:simInstant(at(f(e,2n))),phase:uint(f(e,3n)),eventSequence:uint(f(e,4n)),eventTypeId:id(f(e,5n)),payload:f(e,6n),dependencies:f(e,7n),causalParentEventIds:items(f(e,8n),'list').map(uint)};};
+  const input=await compileCharacterInputs(model,component,d),adapter=createSocialExecution(C,model.social!,component.stateModel,input.socialEvents,model.modelIdentity.value,input.runIdentity.value),source=input.socialEvents[0],find=(name:string)=>scheduled(ts.find(t=>txt(id(f(t,7n)).payload)==='event/assembled-social-'+name&&at(f(event(t),2n))===1n)!),child=find('observe'),track=find('track');let allocation=uint(id(obs[0][0]).payload);const context={event:source,state:initial,instant:simInstant(1n),allocateRuntimeId:()=>allocation++};adapter.begin(1n);expect(()=>adapter.execute({...context,event:child})).toThrow('unbound');const first=adapter.execute(context);expect(()=>first.traceFactory([{...child,causalParentEventIds:[]}])).toThrow('mismatch');first.traceFactory([child]);adapter.execute({...context,event:child}).traceFactory([track]);expect(()=>adapter.execute({...context,event:child})).toThrow('unbound');adapter.close();
+  let growing=initial;for(let n=1;n<=8;n++){const prior=growing.read(p),observation=list([typedIdentifier(1115,unsigned(n)),C,target,signed(n),unsigned(1),unsigned(n),list([n%2===0]),list([true])]),next=personUpdate(prior.value,observation)!;growing=component.stateModel.applyPatch(growing,{operations:[{kind:'set',path:p,expected:prior.presence?{presence:true,value:prior.value!}:{presence:false},newValue:next}]},PERSON_OWNER).state;}expect(personMean(growing.read(p).value)).toEqual(Q.of(1n,2n));const ninth=personUpdate(growing.read(p).value,list([typedIdentifier(1115,unsigned(9)),C,target,signed(9),unsigned(2),unsigned(1),list([true]),list([true])]))!;expect(()=>component.stateModel.applyPatch(growing,{operations:[{kind:'set',path:p,expected:{presence:true,value:growing.read(p).value!},newValue:ninth}]},PERSON_OWNER)).toThrow('capacity');
+  const oracle=await createCharacterRun(m,d);let checkpoint=oracle.snapshot();while(oracle.snapshot().clock<3n){checkpoint=oracle.snapshot();await oracle.settleNextInstant();}const ids=new Set(traces(oracle).filter(t=>at(f(event(t),2n))===3n).map(t=>key(f(event(t),1n)))),failed=await createCharacterRun(await prepareCharacterModel(workLimit(s,BigInt(ids.size-1))),d);await through(failed,checkpoint.clock);const snapshot=failed.snapshot();await expect(failed.settleNextInstant()).rejects.toThrow();expect({...failed.snapshot(),status:snapshot.status}).toEqual(snapshot);expect(personHistory(belief(failed))).toHaveLength(1);console.info('M19 rollback '+ids.size+' events, limit'+(ids.size-1)+'; prior belief retained and all instant changes rolled back; reason links='+linked);
+ },150000);
+});
