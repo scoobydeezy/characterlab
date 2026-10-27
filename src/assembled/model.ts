@@ -14,6 +14,7 @@ import {dataRecord as rec,dataField as f,dataItems as items,dataKey as key,dataI
 import type {Campaign2ModelSource} from '../campaign2/factory';
 
 import {decodeEmbodied} from '../campaign3/embodiedCodecs';
+import {compileHorizon} from './horizon';
 import {compilePriority} from './priority';
 import {compileStrategy} from './strategy';
 import {compileSkill} from './skill';
@@ -21,6 +22,8 @@ import {compileActionBody} from './actionBody';
 import {compileRetrievalDeclaration} from './retrieval';
 import {compileRetentionDeclaration} from './retention';
 import {compileBodyDeclaration} from './body';
+export const HORIZON_RULES='rules/assembled-character/0.14-candidate';
+export const HORIZON_REGISTRY='assembled-character-registry/0.14-candidate';
 export const PRIORITY_RULES='rules/assembled-character/0.13-candidate';
 export const PRIORITY_REGISTRY='assembled-character-registry/0.13-candidate';
 export const STRATEGY_RULES='rules/assembled-character/0.12-candidate';
@@ -87,12 +90,13 @@ function topology(registry:CanonicalValue,calibrated=false,memoryContext=false){
 }
 export async function compileCharacterModel(input:Campaign2ModelSource){
  const source=snapshotMemorySource(input);
- const priority=source.rulesVersion===PRIORITY_RULES,strategyEnabled=priority||source.rulesVersion===STRATEGY_RULES,skill=strategyEnabled||source.rulesVersion===SKILL_RULES,actionBodyEnabled=skill||source.rulesVersion===ACTION_BODY_RULES,memoryContext=actionBodyEnabled||source.rulesVersion===MEMORY_CONTEXT_RULES,workspace=memoryContext||source.rulesVersion===WORKSPACE_RULES,retrievalEnabled=workspace||source.rulesVersion===RETRIEVAL_RULES,retained=retrievalEnabled||source.rulesVersion===RETENTION_RULES,memory=retained||source.rulesVersion===MEMORY_RULES,attention=memory||source.rulesVersion===ATTENTION_RULES,calibrated=attention||source.rulesVersion===CALIBRATED_RULES,interaction=calibrated||source.rulesVersion===INTERACTION_RULES;
- if((interaction?source.registrySchemaVersion!==(priority?PRIORITY_REGISTRY:strategyEnabled?STRATEGY_REGISTRY:skill?SKILL_REGISTRY:actionBodyEnabled?ACTION_BODY_REGISTRY:memoryContext?MEMORY_CONTEXT_REGISTRY:workspace?WORKSPACE_REGISTRY:retrievalEnabled?RETRIEVAL_REGISTRY:retained?RETENTION_REGISTRY:memory?MEMORY_REGISTRY:attention?ATTENTION_REGISTRY:calibrated?CALIBRATED_REGISTRY:INTERACTION_REGISTRY):source.rulesVersion!==CHARACTER_RULES||source.registrySchemaVersion!==CHARACTER_REGISTRY)||source.contentSchemaVersion!=='content/0.2-candidate'||source.parameterSchemaVersion!=='campaign2-parameters/0.1-candidate'||source.numericProfileVersion!=='numeric/task-cognitive-exact/0.1-candidate'||source.randomAlgorithmVersion!==RANDOM_ALGORITHM_VERSION)invalidModel('unsupported assembled model version bundle');
+ const horizon=source.rulesVersion===HORIZON_RULES,priority=horizon||source.rulesVersion===PRIORITY_RULES,strategyEnabled=priority||source.rulesVersion===STRATEGY_RULES,skill=strategyEnabled||source.rulesVersion===SKILL_RULES,actionBodyEnabled=skill||source.rulesVersion===ACTION_BODY_RULES,memoryContext=actionBodyEnabled||source.rulesVersion===MEMORY_CONTEXT_RULES,workspace=memoryContext||source.rulesVersion===WORKSPACE_RULES,retrievalEnabled=workspace||source.rulesVersion===RETRIEVAL_RULES,retained=retrievalEnabled||source.rulesVersion===RETENTION_RULES,memory=retained||source.rulesVersion===MEMORY_RULES,attention=memory||source.rulesVersion===ATTENTION_RULES,calibrated=attention||source.rulesVersion===CALIBRATED_RULES,interaction=calibrated||source.rulesVersion===INTERACTION_RULES;
+ if((interaction?source.registrySchemaVersion!==(horizon?HORIZON_REGISTRY:priority?PRIORITY_REGISTRY:strategyEnabled?STRATEGY_REGISTRY:skill?SKILL_REGISTRY:actionBodyEnabled?ACTION_BODY_REGISTRY:memoryContext?MEMORY_CONTEXT_REGISTRY:workspace?WORKSPACE_REGISTRY:retrievalEnabled?RETRIEVAL_REGISTRY:retained?RETENTION_REGISTRY:memory?MEMORY_REGISTRY:attention?ATTENTION_REGISTRY:calibrated?CALIBRATED_REGISTRY:INTERACTION_REGISTRY):source.rulesVersion!==CHARACTER_RULES||source.registrySchemaVersion!==CHARACTER_REGISTRY)||source.contentSchemaVersion!=='content/0.2-candidate'||source.parameterSchemaVersion!=='campaign2-parameters/0.1-candidate'||source.numericProfileVersion!=='numeric/task-cognitive-exact/0.1-candidate'||source.randomAlgorithmVersion!==RANDOM_ALGORITHM_VERSION)invalidModel('unsupported assembled model version bundle');
  const registry=decodeEmbodied(source.registry),allSlots=items(registry,'list');
- if(allSlots.length!==(priority?14:strategyEnabled?13:skill?12:actionBodyEnabled?11:retrievalEnabled?10:retained?9:attention?8:interaction?7:6))invalidModel('assembled registry slot count');
+ if(allSlots.length!==(horizon?15:priority?14:strategyEnabled?13:skill?12:actionBodyEnabled?11:retrievalEnabled?10:retained?9:attention?8:interaction?7:6))invalidModel('assembled registry slot count');
  if(skill)compileSkill(allSlots[11]);
  if(priority)compilePriority(allSlots[13]);
+ if(horizon)compileHorizon(allSlots[14]);
  const retrieval=retrievalEnabled?compileRetrievalDeclaration(allSlots[9]):undefined;
  const retention=retained?compileRetentionDeclaration(allSlots[8]):undefined;
  let selectionCapacity:number|undefined;
@@ -108,5 +112,5 @@ export async function compileCharacterModel(input:Campaign2ModelSource){
  const strategy=strategyEnabled?compileStrategy(allSlots[12],items(slots[0],'set').filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n),decodeCognitive(source.content)):undefined;
  const actionBody=actionBodyEnabled?compileActionBody(allSlots[10],body!.capacity,items(slots[0],'set').filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n&&key(f(v,2n))===key({kind:'typedIdentifier',namespaceId:1023n,payload:{kind:'text',value:'registry/protocol-action'}})).map(v=>({action:f(rec(v,171n),1n),definition:f(rec(v,171n),4n)}))):undefined;
  const modelIdentity=await createModelIdentity({...source,contentManifest:await commitManifest(decodeCognitive(source.content)),registryManifest:await commitManifest(registry),parameterSet:await commitManifest(decodeCognitive(source.parameters))});
- return Object.freeze({source,modelIdentity,content,structuralState,body,baseRegistry,memory,retention,retrieval,workspace,memoryContext,actionBody,skill,strategy,priority});
+ return Object.freeze({source,modelIdentity,content,structuralState,body,baseRegistry,memory,retention,retrieval,workspace,memoryContext,actionBody,skill,strategy,priority,horizon});
 }

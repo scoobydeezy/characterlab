@@ -25,6 +25,8 @@ import {createCognitiveExecution} from './execution';
 import {compileCharacterTraceBinding} from './traceBinding';
 import {prepareEpisodicRetention} from './retention';
 import {createEpisodicExtension} from './memory';
+import {createHorizonExecution} from './horizonExecution';
+import {HORIZON_DISPLAY} from './horizon';
 import {createPriorityExecution} from './priorityExecution';
 import {PRIORITY_DISPLAY} from './priority';
 import {createStrategyExecution} from './strategyExecution';
@@ -48,7 +50,8 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
  const body=model.body?createBodyExecution(model.body,component.tasks[0].character,stateModel,inputs.bodyEvents,modelIdentity,inputs.runIdentity.value,model.actionBody,procedure):undefined;
  const episodes=model.memory?createEpisodicExtension(component.tasks[0].character,model.body!,stateModel,modelIdentity,inputs.runIdentity.value,model.retention?.recallDelay,model.retrieval,model.workspace):undefined;
  const strategy=model.strategy?createStrategyExecution(component.tasks[0].character,model.strategy,stateModel,inputs.strategyEvents,modelIdentity,inputs.runIdentity.value):undefined;
- const priority=model.priority?createPriorityExecution(component.tasks[0].character,component.tasks.map(t=>t.key),stateModel,inputs.priorityEvents,modelIdentity,inputs.runIdentity.value):undefined;
+ const horizon=model.horizon?createHorizonExecution(component.tasks[0].character,component.tasks.map(t=>t.key),stateModel,inputs.horizonEvents,modelIdentity,inputs.runIdentity.value):undefined;
+ const priority=model.priority?createPriorityExecution(component.tasks[0].character,component.tasks.map(t=>t.key),stateModel,inputs.priorityEvents,modelIdentity,inputs.runIdentity.value,horizon):undefined;
  const cognitive=createCognitiveExecution(model,component,inputs,()=>body?.evidence(),()=>episodes?.currentRecalls()??[],strategy,priority);
  const probeModel=base.probe,measurement=base.measurement,domains=base.domains,shared=bindings.admission,evaluator=bindings.evaluator;
  const memoryRuntime=createMemoryExecution(memory,measurement.validateOutput,modelIdentity,inputs.runIdentity.value,[]);
@@ -66,6 +69,7 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
   const registerHandler=(eventKey:string,handler:EventHandler<AuthoritativeState>)=>{
     if(handlers.has(eventKey))throw new SchedulerContractError('INVALID_CONFIGURATION','event has multiple fixed runtime adapters');handlers.set(eventKey,handler);
   };
+  for(const eventType of horizon?.eventTypes()??[])registerHandler(key(eventType),context=>horizon!.execute(context));
   for(const eventType of priority?.eventTypes()??[])registerHandler(key(eventType),context=>priority!.execute(context));
   for(const eventType of strategy?.eventTypes()??[])registerHandler(key(eventType),context=>strategy!.execute(context));
   for(const eventType of episodes?.eventTypes()??[])registerHandler(key(eventType),context=>episodes!.execute(context));
@@ -161,13 +165,17 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
     adaptationSettlement:{version:'adaptation-settlement/0.2-candidate',
       beforeInstant(state,instant){
         domains.validateStatic(state);domains.validateReferences(state,instant);
-        probeInstant=false;runtimeCount=0;childCount=0;carriagePadding=undefined;memoryRuntime.begin(instant);predictionRuntime.begin(instant);taskRuntime.begin(instant);cognitive.begin(instant);body?.begin(instant);episodes?.begin(instant);procedure?.begin(instant);strategy?.begin(instant);priority?.begin(instant);
+        probeInstant=false;runtimeCount=0;childCount=0;carriagePadding=undefined;memoryRuntime.begin(instant);predictionRuntime.begin(instant);taskRuntime.begin(instant);cognitive.begin(instant);body?.begin(instant);episodes?.begin(instant);procedure?.begin(instant);strategy?.begin(instant);priority?.begin(instant);horizon?.begin(instant);
         ingress=beginTransitionIngressV04(shared,instant);
 
         probe=probeModel.begin(instant);probeSource=beginProbeSourceInstant(inputs.base,instant);
       },
       prepare(events,state,instant){
         if(!ingress)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','missing live ingress');
+        const horizonAll=events,horizonEvents=events.filter(e=>horizon?.isLearning(e));
+        const horizonStage=horizonEvents.length?horizon!.prepare(horizonEvents,state):undefined;
+        events=events.filter(e=>!horizon?.isLearning(e));
+        function withoutHorizon(){
         const priorityAll=events,priorityEvents=events.filter(e=>priority?.isLearning(e));
         const priorityStage=priorityEvents.length?priority!.prepare(priorityEvents,state):undefined;
         events=events.filter(e=>!priority?.isLearning(e));
@@ -283,10 +291,14 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
         const prior=withoutPriority();if(!priorityStage)return prior;
         let cursor=0,finished=false;
         return {execute(context:EventHandlerContext<AuthoritativeState>){if(finished||cursor>=priorityAll.length||key(scheduledEventValue(context.event))!==key(scheduledEventValue(priorityAll[cursor++])))throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','priority common stage order');return priority!.isLearning(context.event)?priorityStage.execute(context):prior.execute(context);},finish(){if(finished||cursor!==priorityAll.length)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','incomplete priority stage');finished=true;return priorityStage.finish(prior.finish());},finalizeTrace(){if(!finished)throw new SchedulerContractError('TRACE_VALIDATION_FAILURE','priority trace before finish');const rows=[...prior.finalizeTrace(),...priorityStage.traces()];return priorityAll.flatMap(e=>rows.filter(row=>key(f(rec(f(rec(row,160n),4n),130n),1n))===key({kind:'unsigned',value:e.eventId})));}};
+        }
+        const inner=withoutHorizon();if(!horizonStage)return inner;
+        let cursor=0,finished=false;
+        return {execute(context:EventHandlerContext<AuthoritativeState>){if(finished||cursor>=horizonAll.length||key(scheduledEventValue(context.event))!==key(scheduledEventValue(horizonAll[cursor++])))throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','horizon common stage order');return horizon!.isLearning(context.event)?horizonStage.execute(context):inner.execute(context);},finish(){if(finished||cursor!==horizonAll.length)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','incomplete horizon stage');finished=true;return horizonStage.finish(inner.finish());},finalizeTrace(){if(!finished)throw new SchedulerContractError('TRACE_VALIDATION_FAILURE','horizon trace before finish');const rows=[...inner.finalizeTrace(),...horizonStage.traces()];return horizonAll.flatMap(e=>rows.filter(row=>key(f(rec(f(rec(row,160n),4n),130n),1n))===key({kind:'unsigned',value:e.eventId})));}};
       },
-      beforeCommit(state,instant){domains.validateStatic(state);domains.validateReferences(state,instant);probe?.finish();priority?.prepareCommit();strategy?.prepareCommit();procedure?.prepareCommit();body?.prepareCommit();episodes?.prepareCommit();ingress!.finish();if(probeInstant&&(runtimeCount!==7||childCount!==14||carriagePadding))throw new SchedulerContractError('TRANSITION_INGRESS_VIOLATION','carriage/memory budget closure');taskRuntime.prepareCommit(state);predictionRuntime.prepareCommit();cognitive.prepareCommit();memoryRuntime.commit();episodes?.commit();predictionRuntime.commit();taskRuntime.commit();cognitive.commit();},
-      close(){priority?.close();strategy?.close();procedure?.close();episodes?.close();body?.close();memoryRuntime.close();predictionRuntime.close();taskRuntime.close();cognitive.close();ingress?.abort();probe?.abort();probeSource?.close();ingress=undefined;probe=undefined;probeSource=undefined;},
-      validateRuntimeEmission(event){if(key(event.eventTypeId)===key(PRIORITY_DISPLAY)||key(event.eventTypeId)===key(DISPLAY)||key(event.eventTypeId)===key(PRACTICE_SETTING)||key(event.eventTypeId)===key(BODY_SAMPLE)||key(event.eventTypeId)===key(BODY_DELIVERY)||key(event.eventTypeId)===key(AUTHORED_FACT_EVENT)||key(event.eventTypeId)===key(PROBE_SOURCE_EVENT)||key(event.eventTypeId)===key(DELIBERATION_EVENT)||key(event.eventTypeId)===key(TASK_DEADLINE_EVENT))throw new SchedulerContractError('INPUT_ONLY_EVENT_ORIGIN_VIOLATION','sources are compiler-only inputs');},
+      beforeCommit(state,instant){domains.validateStatic(state);domains.validateReferences(state,instant);probe?.finish();horizon?.prepareCommit();priority?.prepareCommit();strategy?.prepareCommit();procedure?.prepareCommit();body?.prepareCommit();episodes?.prepareCommit();ingress!.finish();if(probeInstant&&(runtimeCount!==7||childCount!==14||carriagePadding))throw new SchedulerContractError('TRANSITION_INGRESS_VIOLATION','carriage/memory budget closure');taskRuntime.prepareCommit(state);predictionRuntime.prepareCommit();cognitive.prepareCommit();memoryRuntime.commit();episodes?.commit();predictionRuntime.commit();taskRuntime.commit();cognitive.commit();},
+      close(){horizon?.close();priority?.close();strategy?.close();procedure?.close();episodes?.close();body?.close();memoryRuntime.close();predictionRuntime.close();taskRuntime.close();cognitive.close();ingress?.abort();probe?.abort();probeSource?.close();ingress=undefined;probe=undefined;probeSource=undefined;},
+      validateRuntimeEmission(event){if(key(event.eventTypeId)===key(HORIZON_DISPLAY)||key(event.eventTypeId)===key(PRIORITY_DISPLAY)||key(event.eventTypeId)===key(DISPLAY)||key(event.eventTypeId)===key(PRACTICE_SETTING)||key(event.eventTypeId)===key(BODY_SAMPLE)||key(event.eventTypeId)===key(BODY_DELIVERY)||key(event.eventTypeId)===key(AUTHORED_FACT_EVENT)||key(event.eventTypeId)===key(PROBE_SOURCE_EVENT)||key(event.eventTypeId)===key(DELIBERATION_EVENT)||key(event.eventTypeId)===key(TASK_DEADLINE_EVENT))throw new SchedulerContractError('INPUT_ONLY_EVENT_ORIGIN_VIOLATION','sources are compiler-only inputs');},
     },
   });
   // Only quiescent observations/settlement are exposed. No injection, allocator or handler API.

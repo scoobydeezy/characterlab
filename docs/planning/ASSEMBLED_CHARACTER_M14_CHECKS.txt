@@ -1,0 +1,190 @@
+M14 typecheck attempt1
+src/test/assembledHorizon.test.ts(84,230): error TS2345: Argument of type '{ operations: { kind: "set"; path: StatePath; expected: { presence: boolean; }; newValue: CanonicalValue; }[]; }' is not assignable to parameter of type 'StatePatch'.
+  Types of property 'operations' are incompatible.
+    Type '{ kind: "set"; path: StatePath; expected: { presence: boolean; }; newValue: CanonicalValue; }[]' is not assignable to type 'readonly PatchOperation[]'.
+      Type '{ kind: "set"; path: StatePath; expected: { presence: boolean; }; newValue: CanonicalValue; }' is not assignable to type 'PatchOperation'.
+        Type '{ kind: "set"; path: StatePath; expected: { presence: boolean; }; newValue: CanonicalValue; }' is not assignable to type 'SetPatchOperation'.
+          Types of property 'expected' are incompatible.
+            Type '{ presence: boolean; }' is not assignable to type '{ readonly presence: false; } | { readonly presence: true; readonly value: CanonicalValue; }'.
+              Property 'value' is missing in type '{ presence: boolean; }' but required in type '{ readonly presence: true; readonly value: CanonicalValue; }'.
+src/test/assembledHorizon.test.ts(84,314): error TS2345: Argument of type '{ operations: { kind: "set"; path: StatePath; expected: { presence: boolean; }; newValue: CanonicalValue; }[]; }' is not assignable to parameter of type 'StatePatch'.
+  Types of property 'operations' are incompatible.
+    Type '{ kind: "set"; path: StatePath; expected: { presence: boolean; }; newValue: CanonicalValue; }[]' is not assignable to type 'readonly PatchOperation[]'.
+      Type '{ kind: "set"; path: StatePath; expected: { presence: boolean; }; newValue: CanonicalValue; }' is not assignable to type 'PatchOperation'.
+        Type '{ kind: "set"; path: StatePath; expected: { presence: boolean; }; newValue: CanonicalValue; }' is not assignable to type 'SetPatchOperation'.
+          Types of property 'expected' are incompatible.
+            Type '{ presence: boolean; }' is not assignable to type '{ readonly presence: false; } | { readonly presence: true; readonly value: CanonicalValue; }'.
+              Property 'value' is missing in type '{ presence: boolean; }' but required in type '{ readonly presence: true; readonly value: CanonicalValue; }'.
+typecheck exit=2 seconds=21.6118289
+Type annotation correction only; typecheck attempt2
+typecheck2 exit=0 seconds=14.8198875
+M14 fixed matrix32 attempt1
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit
+M14 pair {"seed":0,"available":["two","two","two"],"unavailable":["two","two","two"],"probability3":[["0/1","1/1"],["1/2","1/2"]],"matchedDraws":0,"changedDomains":0}
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit
+M14 pair {"seed":1,"available":["two","one","one"],"unavailable":["two","one","one"],"probability3":[["0/1","1/1"],["1/2","1/2"]],"matchedDraws":0,"changedDomains":0}
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit
+M14 pair {"seed":2,"available":["two","two","two"],"unavailable":["one","two","two"],"probability3":[["0/1","1/1"],["1/2","1/2"]],"matchedDraws":0,"changedDomains":0}
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit
+M14 pair {"seed":3,"available":["two","one","two"],"unavailable":["two","one","two"],"probability3":[["0/1","1/1"],["1/2","1/2"]],"matchedDraws":0,"changedDomains":0}
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit
+M14 pair {"seed":4,"available":["two","one","two"],"unavailable":["one","one","two"],"probability3":[["0/1","1/1"],["1/2","1/2"]],"matchedDraws":0,"changedDomains":0}
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit
+M14 pair {"seed":5,"available":["two","one","two"],"unavailable":["two","one","two"],"probability3":[["0/1","1/1"],["1/2","1/2"]],"matchedDraws":0,"changedDomains":0}
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit
+M14 pair {"seed":6,"available":["two","two","two"],"unavailable":["two","two","two"],"probability3":[["0/1","1/1"],["1/2","1/2"]],"matchedDraws":0,"changedDomains":0}
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit
+M14 pair {"seed":7,"available":["two","one","two"],"unavailable":["one","one","two"],"probability3":[["0/1","1/1"],["1/2","1/2"]],"matchedDraws":0,"changedDomains":0}
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit
+M14 pair {"seed":8,"available":["two","two","two"],"unavailable":["two","two","two"],"probability3":[["0/1","1/1"],["1/2","1/2"]],"matchedDraws":0,"changedDomains":0}
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit
+M14 pair {"seed":9,"available":["two","one","two"],"unavailable":["two","one","two"],"probability3":[["0/1","1/1"],["1/2","1/2"]],"matchedDraws":0,"changedDomains":0}
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit
+M14 pair {"seed":10,"available":["two","two","two"],"unavailable":["two","two","two"],"probability3":[["0/1","1/1"],["1/2","1/2"]],"matchedDraws":0,"changedDomains":0}
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit
+M14 pair {"seed":11,"available":["two","two","one"],"unavailable":["two","two","one"],"probability3":[["0/1","1/1"],["1/2","1/2"]],"matchedDraws":0,"changedDomains":0}
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit
+M14 pair {"seed":12,"available":["two","two","one"],"unavailable":["one","two","one"],"probability3":[["0/1","1/1"],["1/2","1/2"]],"matchedDraws":0,"changedDomains":0}
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit
+M14 pair {"seed":13,"available":["two","two","two"],"unavailable":["one","two","two"],"probability3":[["0/1","1/1"],["1/2","1/2"]],"matchedDraws":0,"changedDomains":0}
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit
+M14 pair {"seed":14,"available":["two","one","one"],"unavailable":["one","one","one"],"probability3":[["0/1","1/1"],["1/2","1/2"]],"matchedDraws":0,"changedDomains":0}
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit
+M14 pair {"seed":15,"available":["two","two","two"],"unavailable":["one","two","two"],"probability3":[["0/1","1/1"],["1/2","1/2"]],"matchedDraws":0,"changedDomains":0}
+M14 matrix complete {"runs":32,"changedSeeds":[2,4,7,12,13,14,15],"laterPursuitSeeds":[1,3,4,5,7,9,11,12,14],"matchedDraws":0,"changedDomains":0,"unmatchedA":0,"unmatchedB":37}
+
+ ✓ src/test/assembledHorizon.test.ts (7 tests | 6 skipped) 200736ms
+   ✓ M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit 200735ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  08:52:04
+   Duration  203.71s (transform 1.40s, setup 0ms, collect 2.15s, tests 200.74s, environment 0ms, prepare 500ms)
+
+matrix32 exit=0 seconds=207.2279959
+M14 receiving controls attempt1
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > controls: closed admission, knowledge ownership, authenticated children and atomic late fault
+M14 common-stage rollback 25 events; limit24
+
+ ✓ src/test/assembledHorizon.test.ts (7 tests | 1 skipped) 88491ms
+   ✓ M14 assembled horizon > controls: original eight-frame valuation and retained lifecycle diagnostics 432ms
+   ✓ M14 assembled horizon > controls: prior-only correction, missing retention, nonpreset boundary and actual read provenance 13115ms
+   ✓ M14 assembled horizon > controls: denied forecasts preserve cognition, zero and missing urgency stay inert 13500ms
+   ✓ M14 assembled horizon > controls: repeat and prefix restore preserve every later whole boundary 49265ms
+   ✓ M14 assembled horizon > controls: forecast cannot supply a missing route or revive expired goals 6925ms
+   ✓ M14 assembled horizon > controls: closed admission, knowledge ownership, authenticated children and atomic late fault 5253ms
+
+ Test Files  1 passed (1)
+      Tests  6 passed | 1 skipped (7)
+   Start at  08:56:02
+   Duration  90.98s (transform 1.39s, setup 0ms, collect 2.13s, tests 88.49s, environment 0ms, prepare 92ms)
+
+controls exit=0 seconds=92.3946632
+M13 receiving regression: added32 and five controls (original48 retained unchanged)
+'controls:' is not recognized as an internal or external command,
+operable program or batch file.
+M13-regression exit=255 seconds=0.1070412
+Regression launcher correction: direct Node avoids cmd interpreting test-name regex pipe
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledPriority.test.ts > M13 assembled priority > matrix added32: retained importance changes actual choice with current urgency1
+M13 added32 {"receipts":[{"seed":0,"I":"1","U3":"0","U5":"1","choices":["two","two","two"],"motive35":["1/2","1/1"],"dice3":[4,4],"dice5":[6,4],"probability3":["9/32","23/32"],"probability5":["1/2","1/2"]},{"seed":0,"I":"1/2","U3":"1","U5":"1","choices":["two","two","two"],"motive35":["1/2","1/2"],"dice3":[4,4],"dice5":[4,4],"probability3":["9/32","23/32"],"probability5":["9/32","23/32"]}],"matchedDraws":1,"changedDomains":1}
+
+stdout | src/test/assembledPriority.test.ts > M13 assembled priority > matrix added32: retained importance changes actual choice with current urgency1
+M13 added32 {"receipts":[{"seed":1,"I":"1","U3":"0","U5":"1","choices":["one","one","two"],"motive35":["1/2","1/1"],"dice3":[4,4],"dice5":[6,4],"probability3":["9/32","23/32"],"probability5":["1/2","1/2"]},{"seed":1,"I":"1/2","U3":"1","U5":"1","choices":["one","two","two"],"motive35":["1/2","1/2"],"dice3":[4,4],"dice5":[4,4],"probability3":["9/32","23/32"],"probability5":["9/32","23/32"]}],"matchedDraws":1,"changedDomains":1}
+
+stdout | src/test/assembledPriority.test.ts > M13 assembled priority > matrix added32: retained importance changes actual choice with current urgency1
+M13 added32 {"receipts":[{"seed":2,"I":"1","U3":"0","U5":"1","choices":["one","one","two"],"motive35":["1/2","1/1"],"dice3":[4,4],"dice5":[6,4],"probability3":["9/32","23/32"],"probability5":["1/2","1/2"]},{"seed":2,"I":"1/2","U3":"1","U5":"1","choices":["one","one","two"],"motive35":["1/2","1/2"],"dice3":[4,4],"dice5":[4,4],"probability3":["9/32","23/32"],"probability5":["9/32","23/32"]}],"matchedDraws":1,"changedDomains":1}
+
+stdout | src/test/assembledPriority.test.ts > M13 assembled priority > matrix added32: retained importance changes actual choice with current urgency1
+M13 added32 {"receipts":[{"seed":3,"I":"1","U3":"0","U5":"1","choices":["one","one","two"],"motive35":["1/2","1/1"],"dice3":[4,4],"dice5":[6,4],"probability3":["9/32","23/32"],"probability5":["1/2","1/2"]},{"seed":3,"I":"1/2","U3":"1","U5":"1","choices":["one","one","two"],"motive35":["1/2","1/2"],"dice3":[4,4],"dice5":[4,4],"probability3":["9/32","23/32"],"probability5":["9/32","23/32"]}],"matchedDraws":1,"changedDomains":1}
+
+stdout | src/test/assembledPriority.test.ts > M13 assembled priority > matrix added32: retained importance changes actual choice with current urgency1
+M13 added32 {"receipts":[{"seed":4,"I":"1","U3":"0","U5":"1","choices":["one","two","two"],"motive35":["1/2","1/1"],"dice3":[4,4],"dice5":[6,4],"probability3":["9/32","23/32"],"probability5":["1/2","1/2"]},{"seed":4,"I":"1/2","U3":"1","U5":"1","choices":["one","two","two"],"motive35":["1/2","1/2"],"dice3":[4,4],"dice5":[4,4],"probability3":["9/32","23/32"],"probability5":["9/32","23/32"]}],"matchedDraws":1,"changedDomains":1}
+
+stdout | src/test/assembledPriority.test.ts > M13 assembled priority > matrix added32: retained importance changes actual choice with current urgency1
+M13 added32 {"receipts":[{"seed":5,"I":"1","U3":"0","U5":"1","choices":["two","two","two"],"motive35":["1/2","1/1"],"dice3":[4,4],"dice5":[6,4],"probability3":["9/32","23/32"],"probability5":["1/2","1/2"]},{"seed":5,"I":"1/2","U3":"1","U5":"1","choices":["two","two","two"],"motive35":["1/2","1/2"],"dice3":[4,4],"dice5":[4,4],"probability3":["9/32","23/32"],"probability5":["9/32","23/32"]}],"matchedDraws":2,"changedDomains":1}
+
+stdout | src/test/assembledPriority.test.ts > M13 assembled priority > matrix added32: retained importance changes actual choice with current urgency1
+M13 added32 {"receipts":[{"seed":6,"I":"1","U3":"0","U5":"1","choices":["two","two","two"],"motive35":["1/2","1/1"],"dice3":[4,4],"dice5":[6,4],"probability3":["9/32","23/32"],"probability5":["1/2","1/2"]},{"seed":6,"I":"1/2","U3":"1","U5":"1","choices":["two","one","two"],"motive35":["1/2","1/2"],"dice3":[4,4],"dice5":[4,4],"probability3":["9/32","23/32"],"probability5":["9/32","23/32"]}],"matchedDraws":1,"changedDomains":1}
+
+stdout | src/test/assembledPriority.test.ts > M13 assembled priority > matrix added32: retained importance changes actual choice with current urgency1
+M13 added32 {"receipts":[{"seed":7,"I":"1","U3":"0","U5":"1","choices":["two","two","two"],"motive35":["1/2","1/1"],"dice3":[4,4],"dice5":[6,4],"probability3":["9/32","23/32"],"probability5":["1/2","1/2"]},{"seed":7,"I":"1/2","U3":"1","U5":"1","choices":["two","two","two"],"motive35":["1/2","1/2"],"dice3":[4,4],"dice5":[4,4],"probability3":["9/32","23/32"],"probability5":["9/32","23/32"]}],"matchedDraws":1,"changedDomains":1}
+
+stdout | src/test/assembledPriority.test.ts > M13 assembled priority > matrix added32: retained importance changes actual choice with current urgency1
+M13 added32 {"receipts":[{"seed":8,"I":"1","U3":"0","U5":"1","choices":["two","two","two"],"motive35":["1/2","1/1"],"dice3":[4,4],"dice5":[6,4],"probability3":["9/32","23/32"],"probability5":["1/2","1/2"]},{"seed":8,"I":"1/2","U3":"1","U5":"1","choices":["two","two","two"],"motive35":["1/2","1/2"],"dice3":[4,4],"dice5":[4,4],"probability3":["9/32","23/32"],"probability5":["9/32","23/32"]}],"matchedDraws":2,"changedDomains":1}
+
+stdout | src/test/assembledPriority.test.ts > M13 assembled priority > matrix added32: retained importance changes actual choice with current urgency1
+M13 added32 {"receipts":[{"seed":9,"I":"1","U3":"0","U5":"1","choices":["one","two","two"],"motive35":["1/2","1/1"],"dice3":[4,4],"dice5":[6,4],"probability3":["9/32","23/32"],"probability5":["1/2","1/2"]},{"seed":9,"I":"1/2","U3":"1","U5":"1","choices":["one","two","two"],"motive35":["1/2","1/2"],"dice3":[4,4],"dice5":[4,4],"probability3":["9/32","23/32"],"probability5":["9/32","23/32"]}],"matchedDraws":1,"changedDomains":1}
+
+stdout | src/test/assembledPriority.test.ts > M13 assembled priority > matrix added32: retained importance changes actual choice with current urgency1
+M13 added32 {"receipts":[{"seed":10,"I":"1","U3":"0","U5":"1","choices":["two","one","two"],"motive35":["1/2","1/1"],"dice3":[4,4],"dice5":[6,4],"probability3":["9/32","23/32"],"probability5":["1/2","1/2"]},{"seed":10,"I":"1/2","U3":"1","U5":"1","choices":["two","one","two"],"motive35":["1/2","1/2"],"dice3":[4,4],"dice5":[4,4],"probability3":["9/32","23/32"],"probability5":["9/32","23/32"]}],"matchedDraws":1,"changedDomains":1}
+
+stdout | src/test/assembledPriority.test.ts > M13 assembled priority > matrix added32: retained importance changes actual choice with current urgency1
+M13 added32 {"receipts":[{"seed":11,"I":"1","U3":"0","U5":"1","choices":["two","two","two"],"motive35":["1/2","1/1"],"dice3":[4,4],"dice5":[6,4],"probability3":["9/32","23/32"],"probability5":["1/2","1/2"]},{"seed":11,"I":"1/2","U3":"1","U5":"1","choices":["two","two","two"],"motive35":["1/2","1/2"],"dice3":[4,4],"dice5":[4,4],"probability3":["9/32","23/32"],"probability5":["9/32","23/32"]}],"matchedDraws":1,"changedDomains":1}
+
+stdout | src/test/assembledPriority.test.ts > M13 assembled priority > matrix added32: retained importance changes actual choice with current urgency1
+M13 added32 {"receipts":[{"seed":12,"I":"1","U3":"0","U5":"1","choices":["two","one","two"],"motive35":["1/2","1/1"],"dice3":[4,4],"dice5":[6,4],"probability3":["9/32","23/32"],"probability5":["1/2","1/2"]},{"seed":12,"I":"1/2","U3":"1","U5":"1","choices":["two","two","two"],"motive35":["1/2","1/2"],"dice3":[4,4],"dice5":[4,4],"probability3":["9/32","23/32"],"probability5":["9/32","23/32"]}],"matchedDraws":1,"changedDomains":1}
+
+stdout | src/test/assembledPriority.test.ts > M13 assembled priority > matrix added32: retained importance changes actual choice with current urgency1
+M13 added32 {"receipts":[{"seed":13,"I":"1","U3":"0","U5":"1","choices":["two","one","two"],"motive35":["1/2","1/1"],"dice3":[4,4],"dice5":[6,4],"probability3":["9/32","23/32"],"probability5":["1/2","1/2"]},{"seed":13,"I":"1/2","U3":"1","U5":"1","choices":["two","two","two"],"motive35":["1/2","1/2"],"dice3":[4,4],"dice5":[4,4],"probability3":["9/32","23/32"],"probability5":["9/32","23/32"]}],"matchedDraws":1,"changedDomains":1}
+
+stdout | src/test/assembledPriority.test.ts > M13 assembled priority > matrix added32: retained importance changes actual choice with current urgency1
+M13 added32 {"receipts":[{"seed":14,"I":"1","U3":"0","U5":"1","choices":["two","two","two"],"motive35":["1/2","1/1"],"dice3":[4,4],"dice5":[6,4],"probability3":["9/32","23/32"],"probability5":["1/2","1/2"]},{"seed":14,"I":"1/2","U3":"1","U5":"1","choices":["two","two","two"],"motive35":["1/2","1/2"],"dice3":[4,4],"dice5":[4,4],"probability3":["9/32","23/32"],"probability5":["9/32","23/32"]}],"matchedDraws":1,"changedDomains":1}
+
+stdout | src/test/assembledPriority.test.ts > M13 assembled priority > matrix added32: retained importance changes actual choice with current urgency1
+M13 added32 {"receipts":[{"seed":15,"I":"1","U3":"0","U5":"1","choices":["two","one","two"],"motive35":["1/2","1/1"],"dice3":[4,4],"dice5":[6,4],"probability3":["9/32","23/32"],"probability5":["1/2","1/2"]},{"seed":15,"I":"1/2","U3":"1","U5":"1","choices":["two","one","two"],"motive35":["1/2","1/2"],"dice3":[4,4],"dice5":[4,4],"probability3":["9/32","23/32"],"probability5":["9/32","23/32"]}],"matchedDraws":1,"changedDomains":1}
+M13 added32 complete {"runs":32,"changedSeeds":[1,6,12,13],"matchedDraws":18,"changedDomains":16,"unmatchedA":0,"unmatchedB":2}
+
+stdout | src/test/assembledPriority.test.ts > M13 assembled priority > controls: admission, immutable same-owner fields, authenticated children and late rollback
+M13 common-stage rollback 21 events; limit20
+
+ ✓ src/test/assembledPriority.test.ts (7 tests | 1 skipped) 281937ms
+   ✓ M13 assembled priority > matrix added32: retained importance changes actual choice with current urgency1 206583ms
+   ✓ M13 assembled priority > controls: denied or missing evidence, known zero and unrelated body modifiers stay distinct 10656ms
+   ✓ M13 assembled priority > controls: repeat and restore retain importance and exact subsequent trace, state, RNG and save 49959ms
+   ✓ M13 assembled priority > controls: legal non-preset, absent selection and expiry respect goal lifecycle 9610ms
+   ✓ M13 assembled priority > controls: admission, immutable same-owner fields, authenticated children and late rollback 5004ms
+
+ Test Files  1 passed (1)
+      Tests  6 passed | 1 skipped (7)
+   Start at  08:58:46
+   Duration  284.39s (transform 1.36s, setup 0ms, collect 2.10s, tests 281.94s, environment 0ms, prepare 90ms)
+
+M13-regression2 exit=0 seconds=284.8864329
+Historical105/config/fixture and M1 guards PASS; M12 strategy and M13 tests/fixtures unchanged. Guard seconds=1.230727
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+check:boundaries exit=0 seconds=2.7948608
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+check:research exit=0 seconds=4.2437078
+Final caps PASS:10 production/test files;2 evidence files/28220 bytes before this line; register65507 bytes. Final-caps seconds=0.129454

@@ -10,6 +10,7 @@ import {predictionModelReviewSource} from '../campaign2/predictionModelReview';
 import {decodeCognitive,cognitiveRecord as r} from '../campaign2/cognitiveCodecs';
 import {validateIdentityHistory,readQ} from '../campaign2/cognitiveMath';
 import {dataRecord as rec,dataField as f,dataIdentity as id,dataItems as items,dataKey as key,dataText as txt,dataUnsigned as u,invalidModel} from '../campaign2/canonicalData';
+import {withHorizonState} from './horizon';
 import {withPriorityState} from './priority';
 import {withStrategyState} from './strategy';
 import {withSkillState} from './skill';
@@ -73,7 +74,8 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  const retained=model.retention?withRetentionState(embodied,C):embodied;
  const procedural=model.skill?withSkillState(retained,C):retained;
  const planned=model.strategy?withStrategyState(procedural,C,model.strategy):procedural;
- const stateModel=model.priority?withPriorityState(planned,tasks.map(t=>t.key)):planned;
+ const prioritized=model.priority?withPriorityState(planned,tasks.map(t=>t.key)):planned;
+ const stateModel=model.horizon?withHorizonState(prioritized,tasks.map(t=>t.key)):prioritized;
  function initialState(bytes:Uint8Array){
   const state=stateModel.restoreState(bytes);
   for(const e of state.entries()){
