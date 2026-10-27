@@ -7,7 +7,7 @@ import {createStatePatch,statePathPatternValue,type ActualReadRecord,type StateP
 import {SchedulerContractError,type ScheduledEvent} from '../substrate/scheduler';
 import {dataRecord as rec,dataField as f,dataIdentity as id,dataText as txt,dataKey as key} from '../campaign2/canonicalData';
 import type {compileProbeExecution} from '../campaign2/probeExecution';
-import {CHARACTER_RULES,INTERACTION_RULES,CALIBRATED_RULES,ATTENTION_RULES,MEMORY_RULES,RETENTION_RULES,RETRIEVAL_RULES,WORKSPACE_RULES,MEMORY_CONTEXT_RULES,ACTION_BODY_RULES,SKILL_RULES,STRATEGY_RULES,PRIORITY_RULES,HORIZON_RULES,PERFORMANCE_RULES,HABIT_RULES} from './model';
+import {CHARACTER_RULES,INTERACTION_RULES,CALIBRATED_RULES,ATTENTION_RULES,MEMORY_RULES,RETENTION_RULES,RETRIEVAL_RULES,WORKSPACE_RULES,MEMORY_CONTEXT_RULES,ACTION_BODY_RULES,SKILL_RULES,STRATEGY_RULES,PRIORITY_RULES,HORIZON_RULES,PERFORMANCE_RULES,HABIT_RULES,CONTROL_RULES} from './model';
 const seam=(name:string)=>typedIdentifier(1036n,text('seam/'+name));
 const matrix:Record<string,{phase:bigint;seam:string;version:string}>={
  'event/outcome-evaluation':{phase:130n,seam:'character-learning-evidence',version:'character-learning-evidence/0.5-candidate'},
@@ -22,7 +22,7 @@ export interface AdaptationTraceEvidence {
 }
 export function compileCharacterTraceBinding(modelIdentity:CanonicalValue,runIdentity:CanonicalValue,probe:ReturnType<typeof compileProbeExecution>){
  const model=rec(modelIdentity,103n),run=rec(runIdentity,104n);
- if(![CHARACTER_RULES,INTERACTION_RULES,CALIBRATED_RULES,ATTENTION_RULES,MEMORY_RULES,RETENTION_RULES,RETRIEVAL_RULES,WORKSPACE_RULES,MEMORY_CONTEXT_RULES,ACTION_BODY_RULES,SKILL_RULES,STRATEGY_RULES,PRIORITY_RULES,HORIZON_RULES,PERFORMANCE_RULES,HABIT_RULES].includes(txt(f(model,1n)))||key(f(run,1n))!==key(model))throw new SchedulerContractError('INVALID_CONFIGURATION','assembled trace requires exact model/run binding');
+ if(![CHARACTER_RULES,INTERACTION_RULES,CALIBRATED_RULES,ATTENTION_RULES,MEMORY_RULES,RETENTION_RULES,RETRIEVAL_RULES,WORKSPACE_RULES,MEMORY_CONTEXT_RULES,ACTION_BODY_RULES,SKILL_RULES,STRATEGY_RULES,PRIORITY_RULES,HORIZON_RULES,PERFORMANCE_RULES,HABIT_RULES,CONTROL_RULES].includes(txt(f(model,1n)))||key(f(run,1n))!==key(model))throw new SchedulerContractError('INVALID_CONFIGURATION','assembled trace requires exact model/run binding');
  return Object.freeze({record(event:ScheduledEvent,outputs:readonly CanonicalValue[],children:readonly ScheduledEvent[],registration?:CanonicalValue,evidence?:AdaptationTraceEvidence):CanonicalValue{
   const name=txt(event.eventTypeId.payload),probeIndex=probe?.eventTypes().findIndex(e=>key(e)===key(event.eventTypeId))??-1;
   const carriage=['event/measurement-evidence-intake','event/measurement-evidence-padding'].includes(name),padding=name==='event/measurement-evidence-padding';

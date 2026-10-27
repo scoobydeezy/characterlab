@@ -6,7 +6,8 @@ existing action candidate, and later release that control without deleting learn
 
 Implements Architecture10.1/10.2 Control -> OptionGeneration and CONTROL public0.2
 SpareSlot maintenance/inhibition in the shared assembled0.17 composition. Reference
-SpareSlot is the existing R3 engineering default, no universal psychological law.
+SpareSlot is locally adopted from the accepted bounded CONTROL precedent; this is an
+engineering default, not an R3 ruling or universal psychological law.
 Residual habit and all earlier laws remain fixed. C3 controlRuntime remains a control,
 never a production dependency. NoInhibition/LoadBlind/RetainedEqualsMaintained and
 EraseHistory/NoHistory retain their original control identities; Linear remains comparison.
@@ -55,7 +56,9 @@ existing owners. No executed target => no performed habit reward credit.
 Maintenance40 writes1014/1 through the workspace authority; at70 consumes its current
 validated projection, not a second read of truth. Trace includes source evidence/parents,
 prior goal/maintenance reads, actual occupancy, selected recalls, removed candidates and
-resulting output. Versioned40 and70 traces retain predecessor contributions, including
+resulting output. The shared workspace contribution becomes workspace/0.3 and records its consumed control
+projection. Separate control0.1 contributions prove the owned reads/writes. Both40 and70
+traces retain predecessor contributions, including
 habit candidate evidence. Pending events are authenticated; generated sources rejected;
 all queues/allocators/state/trace/output roll back together on any instant failure.
 

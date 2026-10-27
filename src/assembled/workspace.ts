@@ -10,10 +10,11 @@ export interface BodyRecallDelivery {readonly character:CanonicalValue;readonly 
 const fail=(s:string):never=>{throw new SchedulerContractError('INPUT_NOT_ADMITTED','assembled workspace: '+s);};
 const eq=(a:CanonicalValue,b:CanonicalValue)=>key(a)===key(b);
 /** The caller supplies only current, completed retrieval deliveries; never an archive. */
-export function sharedWorkspace(taskWorkspace:CanonicalValue,capacity:number,at:bigint,deliveries:readonly BodyRecallDelivery[]){
+export function sharedWorkspace(taskWorkspace:CanonicalValue,capacity:number,at:bigint,deliveries:readonly BodyRecallDelivery[],reserved=0){
  const w=rec(taskWorkspace,381n),C=f(w,2n),tasks=items(f(w,4n),'list'),forecast=rec(f(w,5n),380n),tag=uint(f(forecast,1n));
  if(!Number.isSafeInteger(capacity)||capacity<0||capacity>4||typeof at!=='bigint'||at<0n||![1n,2n].includes(tag))fail('capacity/clock/forecast');
- const used=tasks.length+(tag===2n?1:0);if(used>capacity)fail('existing focus exceeds capacity');
+ if(!Number.isSafeInteger(reserved)||reserved<0||reserved>capacity)fail('reserved capacity');
+ const used=tasks.length+(tag===2n?1:0)+reserved;if(used>capacity)fail('existing focus exceeds capacity');
  const candidates:CanonicalValue[]=[],seen=new Map<string,CanonicalValue>(),events=new Set<bigint>();let lastSequence=-1n;
  for(const delivery of deliveries){const {event,episodes}=delivery;
   if(!eq(delivery.character,C)||event.dueAt!==at||event.phase!==20n||!eq(event.eventTypeId,MEMORY_RECALL)||!eq(event.payload,BODY_CHANNEL)||events.has(event.eventId)||event.eventSequence<=lastSequence)fail('foreign/stale/unordered recall delivery');events.add(event.eventId);lastSequence=event.eventSequence;

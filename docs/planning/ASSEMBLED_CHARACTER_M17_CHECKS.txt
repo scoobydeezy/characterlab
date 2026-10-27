@@ -1,0 +1,215 @@
+M17 initial typecheck
+npm error Missing script: "typecheck"
+npm error
+npm error To see a list of scripts, run:
+npm error   npm run
+npm error A complete log of this run can be found in: C:\Users\scoob\AppData\Local\npm-cache\_logs\2026-10-27T19_36_07_873Z-debug-0.log
+typecheck exit=1 seconds=0.431665
+Correct typecheck entry: direct tsc -b (package has no typecheck script)
+src/assembled/controlExecution.ts(38,424): error TS2322: Type 'CanonicalValue | undefined' is not assignable to type 'CanonicalValue'.
+  Type 'undefined' is not assignable to type 'CanonicalValue'.
+src/assembled/controlExecution.ts(39,362): error TS2345: Argument of type 'CanonicalValue | undefined' is not assignable to parameter of type 'CanonicalValue'.
+  Type 'undefined' is not assignable to type 'CanonicalValue'.
+tsc exit=1 seconds=14.6441965
+M17 matrix16 after TypeScript optional-value narrowing correction
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledControl.test.ts > M17 assembled control > matrix16: shared load changes inhibition and actual choice; release exposes retained habit
+M17 pair {"seed":0,"spare":["one","one","two","None"],"loaded":["one","one","one","None"],"terminal":10}
+
+stdout | src/test/assembledControl.test.ts > M17 assembled control > matrix16: shared load changes inhibition and actual choice; release exposes retained habit
+M17 pair {"seed":1,"spare":["one","one","two","None"],"loaded":["one","one","two","None"],"terminal":10}
+
+stdout | src/test/assembledControl.test.ts > M17 assembled control > matrix16: shared load changes inhibition and actual choice; release exposes retained habit
+M17 pair {"seed":2,"spare":["one","one","two","None"],"loaded":["one","one","two","None"],"terminal":10}
+
+stdout | src/test/assembledControl.test.ts > M17 assembled control > matrix16: shared load changes inhibition and actual choice; release exposes retained habit
+M17 pair {"seed":3,"spare":["one","one","two","None"],"loaded":["one","one","one","None"],"terminal":10}
+
+stdout | src/test/assembledControl.test.ts > M17 assembled control > matrix16: shared load changes inhibition and actual choice; release exposes retained habit
+M17 pair {"seed":4,"spare":["one","one","two","None"],"loaded":["one","one","one","None"],"terminal":10}
+
+stdout | src/test/assembledControl.test.ts > M17 assembled control > matrix16: shared load changes inhibition and actual choice; release exposes retained habit
+M17 pair {"seed":5,"spare":["one","one","two","None"],"loaded":["one","one","one","None"],"terminal":10}
+
+stdout | src/test/assembledControl.test.ts > M17 assembled control > matrix16: shared load changes inhibition and actual choice; release exposes retained habit
+M17 pair {"seed":6,"spare":["one","one","two","None"],"loaded":["one","one","two","None"],"terminal":10}
+
+stdout | src/test/assembledControl.test.ts > M17 assembled control > matrix16: shared load changes inhibition and actual choice; release exposes retained habit
+M17 pair {"seed":7,"spare":["one","one","two","None"],"loaded":["one","one","two","None"],"terminal":10}
+M17 matrix {"runs":16,"changed":[0,3,4,5],"matched":0,"changedDomains":0,"onlySpare":0,"onlyLoaded":17}
+
+ ✓ src/test/assembledControl.test.ts (5 tests | 4 skipped) 151560ms
+   ✓ M17 assembled control > matrix16: shared load changes inhibition and actual choice; release exposes retained habit 151559ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 4 skipped (5)
+   Start at  14:37:52
+   Duration  154.15s (transform 1.48s, setup 0ms, collect 2.28s, tests 151.56s, environment 0ms, prepare 97ms)
+
+matrix16 exit=0 seconds=154.6680994
+Static review: save RNG-relevant projection now recognizes holder-keyed373/4 separately from task-keyed373/1..3; matrix does not call save. Contract attribution corrected: local CONTROL precedent, not R3. M17 controls
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledControl.test.ts > M17 assembled control > controls: original CONTROL horizons and mapped shared maintenance predicate
+M17 original CONTROL 254 frames,37 full runs; six candidates and Linear retained
+
+ ❯ src/test/assembledControl.test.ts (5 tests | 1 failed | 1 skipped) 169265ms
+   ✓ M17 assembled control > controls: original CONTROL horizons and mapped shared maintenance predicate 48494ms
+   ✓ M17 assembled control > controls: hidden board, lost maintenance, shared recalled load and no-choice 35038ms
+   ✓ M17 assembled control > controls: exact repeat and restore after adoption and maintenance 73546ms
+   × M17 assembled control > controls: admission, single owners, authentic children, trace reads and atomic rollback 12185ms
+     → same-instant settlement exceeded its configured work ceiling
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledControl.test.ts > M17 assembled control > controls: admission, single owners, authentic children, trace reads and atomic rollback
+SchedulerContractError: same-instant settlement exceeded its configured work ceiling
+ ❯ fail src/substrate/scheduler.ts:667:9
+    665| 
+    666| function fail(code: SchedulerFailureCode, message: string): never {
+    667|   throw new SchedulerContractError(code, message);
+       |         ^
+    668| }
+    669| 
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:358:11
+ ❯ Object.settleNextInstant src/assembled/character.ts:40:58
+ ❯ through src/test/assembledControl.test.ts:37:114
+ ❯ src/test/assembledControl.test.ts:74:149
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 3 passed | 1 skipped (5)
+   Start at  14:40:42
+   Duration  171.94s (transform 1.48s, setup 0ms, collect 2.30s, tests 169.27s, environment 0ms, prepare 90ms)
+
+controls exit=1 seconds=172.4646194
+Correction: original rollback limit for smaller at8 instant failed earlier at3. Dedicated rollback control adopts at3, measures that actual complete instant and stops one event short; main matrix unchanged. Trace review: workspace0.3 explicitly records consumed control reservation. Run affected matrix/restore/admission.
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledControl.test.ts > M17 assembled control > matrix16: shared load changes inhibition and actual choice; release exposes retained habit
+M17 pair {"seed":0,"spare":["one","one","two","None"],"loaded":["one","one","one","None"],"terminal":10}
+
+stdout | src/test/assembledControl.test.ts > M17 assembled control > matrix16: shared load changes inhibition and actual choice; release exposes retained habit
+M17 pair {"seed":1,"spare":["one","one","two","None"],"loaded":["one","one","two","None"],"terminal":10}
+
+stdout | src/test/assembledControl.test.ts > M17 assembled control > matrix16: shared load changes inhibition and actual choice; release exposes retained habit
+M17 pair {"seed":2,"spare":["one","one","two","None"],"loaded":["one","one","two","None"],"terminal":10}
+
+stdout | src/test/assembledControl.test.ts > M17 assembled control > matrix16: shared load changes inhibition and actual choice; release exposes retained habit
+M17 pair {"seed":3,"spare":["one","one","two","None"],"loaded":["one","one","one","None"],"terminal":10}
+
+stdout | src/test/assembledControl.test.ts > M17 assembled control > matrix16: shared load changes inhibition and actual choice; release exposes retained habit
+M17 pair {"seed":4,"spare":["one","one","two","None"],"loaded":["one","one","one","None"],"terminal":10}
+
+stdout | src/test/assembledControl.test.ts > M17 assembled control > matrix16: shared load changes inhibition and actual choice; release exposes retained habit
+M17 pair {"seed":5,"spare":["one","one","two","None"],"loaded":["one","one","one","None"],"terminal":10}
+
+stdout | src/test/assembledControl.test.ts > M17 assembled control > matrix16: shared load changes inhibition and actual choice; release exposes retained habit
+M17 pair {"seed":6,"spare":["one","one","two","None"],"loaded":["one","one","two","None"],"terminal":10}
+
+stdout | src/test/assembledControl.test.ts > M17 assembled control > matrix16: shared load changes inhibition and actual choice; release exposes retained habit
+M17 pair {"seed":7,"spare":["one","one","two","None"],"loaded":["one","one","two","None"],"terminal":10}
+M17 matrix {"runs":16,"changed":[0,3,4,5],"matched":0,"changedDomains":0,"onlySpare":0,"onlyLoaded":17}
+
+stdout | src/test/assembledControl.test.ts > M17 assembled control > controls: admission, single owners, authentic children, trace reads and atomic rollback
+M17 rollback 52 events, limit51; goal adoption/memory/body/history rolled back at3
+
+ ✓ src/test/assembledControl.test.ts (5 tests | 2 skipped) 242471ms
+   ✓ M17 assembled control > matrix16: shared load changes inhibition and actual choice; release exposes retained habit 153415ms
+   ✓ M17 assembled control > controls: exact repeat and restore after adoption and maintenance 73897ms
+   ✓ M17 assembled control > controls: admission, single owners, authentic children, trace reads and atomic rollback 15157ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 2 skipped (5)
+   Start at  14:44:16
+   Duration  245.10s (transform 1.48s, setup 0ms, collect 2.28s, tests 242.47s, environment 0ms, prepare 92ms)
+
+affected-correction exit=0 seconds=245.5966745
+M16 affected regression: unchanged matrix and six receiving controls; catches shared workspace/candidates/state/trace/RNG regression
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledHabit.test.ts > M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action
+M16 pair {"seed":0,"trained":["one","one","two"],"unrewarded":["one","one","two"],"probability7":["1/2","0"],"terminal":10}
+
+stdout | src/test/assembledHabit.test.ts > M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action
+M16 pair {"seed":1,"trained":["one","one","one"],"unrewarded":["one","one","two"],"probability7":["1/2","0"],"terminal":10}
+
+stdout | src/test/assembledHabit.test.ts > M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action
+M16 pair {"seed":2,"trained":["one","one","two"],"unrewarded":["one","one","two"],"probability7":["1/2","0"],"terminal":10}
+
+stdout | src/test/assembledHabit.test.ts > M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action
+M16 pair {"seed":3,"trained":["one","one","two"],"unrewarded":["one","one","two"],"probability7":["1/2","0"],"terminal":10}
+
+stdout | src/test/assembledHabit.test.ts > M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action
+M16 pair {"seed":4,"trained":["one","one","two"],"unrewarded":["one","one","two"],"probability7":["1/2","0"],"terminal":10}
+
+stdout | src/test/assembledHabit.test.ts > M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action
+M16 pair {"seed":5,"trained":["one","one","two"],"unrewarded":["one","one","two"],"probability7":["1/2","0"],"terminal":10}
+
+stdout | src/test/assembledHabit.test.ts > M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action
+M16 pair {"seed":6,"trained":["one","one","two"],"unrewarded":["one","one","two"],"probability7":["1/2","0"],"terminal":10}
+
+stdout | src/test/assembledHabit.test.ts > M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action
+M16 pair {"seed":7,"trained":["one","one","two"],"unrewarded":["one","one","two"],"probability7":["1/2","0"],"terminal":10}
+M16 matrix complete {"runs":16,"changed":[1],"matched":0,"changedDomains":0,"unmatchedA":16,"unmatchedB":0}
+
+stdout | src/test/assembledHabit.test.ts > M16 assembled habit > controls: cue access, correction, reversal and no duplicate option or extra strength
+M16 four active groups: 4 addressed draws, exact restore6->7->terminal10
+
+stdout | src/test/assembledHabit.test.ts > M16 assembled habit > controls: closed admission, owners, real child authentication and late atomic rollback
+M16 common-stage rollback 49 events; limit48
+
+ ✓ src/test/assembledHabit.test.ts (7 tests) 302989ms
+   ✓ M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action 135461ms
+   ✓ M16 assembled habit > controls: original full habit horizon, alternative laws and derived/cache/belief/truth comparisons 13735ms
+   ✓ M16 assembled habit > controls: cue access, correction, reversal and no duplicate option or extra strength 47488ms
+   ✓ M16 assembled habit > controls: hidden reward, denied evidence, blocked and other actions cannot invent training 31905ms
+   ✓ M16 assembled habit > controls: exact repeat and restore6 preserve all later whole boundaries 50527ms
+   ✓ M16 assembled habit > controls: unavailable routes, inactive goals and no attempt exclude habitual execution 12381ms
+   ✓ M16 assembled habit > controls: closed admission, owners, real child authentication and late atomic rollback 11491ms
+
+ Test Files  1 passed (1)
+      Tests  7 passed (7)
+   Start at  14:48:29
+   Duration  305.56s (transform 1.45s, setup 0ms, collect 2.24s, tests 302.99s, environment 0ms, prepare 89ms)
+
+M16-regression exit=0 seconds=306.0566097
+Final provenance correction: observation20 produces its receipt, so cannot cite that new receipt as an input source. Only consuming40/70/140 cite it. No state/output/RNG change; exact trace restore and source assertions rerun. M16 never executes this new handler, so its completed regression is not invalidated.
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledControl.test.ts > M17 assembled control > controls: admission, single owners, authentic children, trace reads and atomic rollback
+M17 rollback 52 events, limit51; goal adoption/memory/body/history rolled back at3
+
+ ✓ src/test/assembledControl.test.ts (5 tests | 3 skipped) 85365ms
+   ✓ M17 assembled control > controls: exact repeat and restore after adoption and maintenance 71094ms
+   ✓ M17 assembled control > controls: admission, single owners, authentic children, trace reads and atomic rollback 14270ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 3 skipped (5)
+   Start at  14:53:49
+   Duration  87.97s (transform 1.47s, setup 0ms, collect 2.28s, tests 85.36s, environment 0ms, prepare 90ms)
+
+provenance exit=0 seconds=88.4670522
+Final TypeScript check
+final-tsc exit=0 seconds=14.2290489
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+boundaries exit=0 seconds=2.5381907
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+research exit=0 seconds=4.2096201
+PASS105 frozen factory dependencies/config/original fixtures, M1, complete C0-C3 source trees and retained M12-M16 mechanism/tests unchanged; no full historical byte replay invalidator. seconds=0.307
+PASS final caps: production/test11/12; evidence2/20 bytes=21275/5242880; register=65509/65536; lines={'AGENTS.md': 96, 'docs/planning/CURRENT.md': 33, 'docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md': 249, 'docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md': 130}; source/document whitespace PASS; exact two original stack-frame blank-line spaces retained in raw failure log. seconds=0.200
