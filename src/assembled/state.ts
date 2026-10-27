@@ -10,6 +10,7 @@ import {predictionModelReviewSource} from '../campaign2/predictionModelReview';
 import {decodeCognitive,cognitiveRecord as r} from '../campaign2/cognitiveCodecs';
 import {validateIdentityHistory,readQ} from '../campaign2/cognitiveMath';
 import {dataRecord as rec,dataField as f,dataIdentity as id,dataItems as items,dataKey as key,dataText as txt,dataUnsigned as u,invalidModel} from '../campaign2/canonicalData';
+import {withHabitState} from './habit';
 import {withPerformanceState} from './performance';
 import {withHorizonState} from './horizon';
 import {withPriorityState} from './priority';
@@ -77,10 +78,12 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  const planned=model.strategy?withStrategyState(procedural,C,model.strategy):procedural;
  const prioritized=model.priority?withPriorityState(planned,tasks.map(t=>t.key)):planned;
  const forecasted=model.horizon?withHorizonState(prioritized,tasks.map(t=>t.key)):prioritized;
- const stateModel=model.performance?withPerformanceState(forecasted,model.strategy!):forecasted;
+ const monitored=model.performance?withPerformanceState(forecasted,model.strategy!):forecasted;
+ const stateModel=model.habit?withHabitState(monitored,C):monitored;
  function initialState(bytes:Uint8Array){
   const state=stateModel.restoreState(bytes);
   for(const e of state.entries()){
+   if(model.habit&&[821n,823n].includes(e.path.rootStateTypeId))invalidModel('initial habit/reward must be absent');
    if(model.priority&&e.path.rootStateTypeId===373n&&e.path.fieldId===3n)invalidModel('initial importance must be absent');
    if(model.strategy&&[996n,1000n].includes(e.path.rootStateTypeId))invalidModel('initial strategy state must be absent');
    if(model.skill&&[785n,1500n].includes(e.path.rootStateTypeId))invalidModel('initial skill/development must be absent');

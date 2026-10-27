@@ -25,6 +25,8 @@ import {createCognitiveExecution} from './execution';
 import {compileCharacterTraceBinding} from './traceBinding';
 import {prepareEpisodicRetention} from './retention';
 import {createEpisodicExtension} from './memory';
+import {createHabitExecution} from './habitExecution';
+import {HABIT_SOURCE} from './habit';
 import {createPerformanceExecution} from './performanceExecution';
 import {PERFORMANCE_SETTING} from './performance';
 import {createHorizonExecution} from './horizonExecution';
@@ -55,7 +57,8 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
  const strategy=model.strategy?createStrategyExecution(component.tasks[0].character,model.strategy,stateModel,inputs.strategyEvents,modelIdentity,inputs.runIdentity.value,performance):undefined;
  const horizon=model.horizon?createHorizonExecution(component.tasks[0].character,component.tasks.map(t=>t.key),stateModel,inputs.horizonEvents,modelIdentity,inputs.runIdentity.value):undefined;
  const priority=model.priority?createPriorityExecution(component.tasks[0].character,component.tasks.map(t=>t.key),stateModel,inputs.priorityEvents,modelIdentity,inputs.runIdentity.value,horizon):undefined;
- const cognitive=createCognitiveExecution(model,component,inputs,()=>body?.evidence(),()=>episodes?.currentRecalls()??[],strategy,priority);
+ const habit=model.habit?createHabitExecution(component.tasks[0].character,model.habit,model.strategy!,stateModel,inputs.habitEvents,modelIdentity,inputs.runIdentity.value,model.actionBody!):undefined;
+ const cognitive=createCognitiveExecution(model,component,inputs,()=>body?.evidence(),()=>episodes?.currentRecalls()??[],strategy,priority,habit);
  const probeModel=base.probe,measurement=base.measurement,domains=base.domains,shared=bindings.admission,evaluator=bindings.evaluator;
  const memoryRuntime=createMemoryExecution(memory,measurement.validateOutput,modelIdentity,inputs.runIdentity.value,[]);
  const predictionRuntime=createPredictionExecution(prediction,modelIdentity,inputs.runIdentity.value,[]);
@@ -72,6 +75,7 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
   const registerHandler=(eventKey:string,handler:EventHandler<AuthoritativeState>)=>{
     if(handlers.has(eventKey))throw new SchedulerContractError('INVALID_CONFIGURATION','event has multiple fixed runtime adapters');handlers.set(eventKey,handler);
   };
+  for(const eventType of habit?.eventTypes()??[])registerHandler(key(eventType),context=>habit!.execute(context));
   for(const eventType of performance?.eventTypes()??[])registerHandler(key(eventType),context=>performance!.execute(context));
   for(const eventType of horizon?.eventTypes()??[])registerHandler(key(eventType),context=>horizon!.execute(context));
   for(const eventType of priority?.eventTypes()??[])registerHandler(key(eventType),context=>priority!.execute(context));
@@ -82,8 +86,9 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
    const result=body!.execute(context),extra=episodes&&key(context.event.eventTypeId)===key(BODY_SELECTION)?episodes.observeSelection(context.event,body!.evidence()):undefined;
    const practice=procedure&&key(context.event.eventTypeId)===key(ACTION_BODY_EVENT)?procedure.observeEffect(context.event,result.outputs):undefined;
    const feedback=performance&&key(context.event.eventTypeId)===key(ACTION_BODY_EVENT)?performance.observeEffect(context.event,result.outputs):undefined;
-   if(!extra&&!practice&&!feedback)return result;
-   const own=result.emittedEvents.length,extraEvents=extra?.emissions??[];return {...result,emittedEvents:[...result.emittedEvents,...extraEvents,...(practice?.emissions??[]),...(feedback?.emissions??[])],traceFactory(children:readonly ScheduledEvent[]){const trace=result.traceFactory(children.slice(0,own)),middle=children.slice(own,own+extraEvents.length),tail=children.slice(own+extraEvents.length,own+extraEvents.length+(practice?.emissions.length??0)),feedbackChildren=children.slice(own+extraEvents.length+(practice?.emissions.length??0));extra?.bind(middle);practice?.bind(tail);feedback?.bind(feedbackChildren);return [...trace,...(extra?[extra.trace(middle)]:[]),...(practice?[practice.trace(tail)]:[]),...(feedback?[feedback.trace(feedbackChildren)]:[])];}};
+   const habitFeedback=habit&&key(context.event.eventTypeId)===key(ACTION_BODY_EVENT)?habit.observeEffect(context.event,result.outputs):undefined;
+   if(!extra&&!practice&&!feedback&&!habitFeedback)return result;
+   const own=result.emittedEvents.length,extraEvents=extra?.emissions??[];return {...result,emittedEvents:[...result.emittedEvents,...extraEvents,...(practice?.emissions??[]),...(feedback?.emissions??[]),...(habitFeedback?.emissions??[])],traceFactory(children:readonly ScheduledEvent[]){const trace=result.traceFactory(children.slice(0,own)),middle=children.slice(own,own+extraEvents.length),tail=children.slice(own+extraEvents.length,own+extraEvents.length+(practice?.emissions.length??0)),feedbackStart=own+extraEvents.length+(practice?.emissions.length??0),feedbackChildren=children.slice(feedbackStart,feedbackStart+(feedback?.emissions.length??0)),habitChildren=children.slice(feedbackStart+(feedback?.emissions.length??0));extra?.bind(middle);practice?.bind(tail);feedback?.bind(feedbackChildren);habitFeedback?.bind(habitChildren);return [...trace,...(extra?[extra.trace(middle)]:[]),...(practice?[practice.trace(tail)]:[]),...(feedback?[feedback.trace(feedbackChildren)]:[]),...(habitFeedback?[habitFeedback.trace(habitChildren)]:[])];}};
   });
   for(const eventType of probeModel.eventTypes()??[])registerHandler(key(eventType),context=>{
    if(!probe||!ingress||!probeSource)throw new SchedulerContractError('INPUT_NOT_ADMITTED','probe outside live instant');
@@ -170,13 +175,17 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
     adaptationSettlement:{version:'adaptation-settlement/0.2-candidate',
       beforeInstant(state,instant){
         domains.validateStatic(state);domains.validateReferences(state,instant);
-        probeInstant=false;runtimeCount=0;childCount=0;carriagePadding=undefined;memoryRuntime.begin(instant);predictionRuntime.begin(instant);taskRuntime.begin(instant);cognitive.begin(instant);body?.begin(instant);episodes?.begin(instant);procedure?.begin(instant);strategy?.begin(instant);priority?.begin(instant);horizon?.begin(instant);performance?.begin(instant);
+        probeInstant=false;runtimeCount=0;childCount=0;carriagePadding=undefined;memoryRuntime.begin(instant);predictionRuntime.begin(instant);taskRuntime.begin(instant);cognitive.begin(instant);body?.begin(instant);episodes?.begin(instant);procedure?.begin(instant);strategy?.begin(instant);priority?.begin(instant);horizon?.begin(instant);performance?.begin(instant);habit?.begin(instant);
         ingress=beginTransitionIngressV04(shared,instant);
 
         probe=probeModel.begin(instant);probeSource=beginProbeSourceInstant(inputs.base,instant);
       },
       prepare(events,state,instant){
         if(!ingress)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','missing live ingress');
+        const habitAll=events,habitEvents=events.filter(e=>habit?.isLearning(e));
+        const habitStage=habitEvents.length?habit!.prepare(habitEvents,state):undefined;
+        events=events.filter(e=>!habit?.isLearning(e));
+        function withoutHabit(){
         const performanceAll=events,performanceEvents=events.filter(e=>performance?.isLearning(e));
         const performanceStage=performanceEvents.length?performance!.prepare(performanceEvents,state):undefined;
         events=events.filter(e=>!performance?.isLearning(e));
@@ -308,10 +317,14 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
         const inner=withoutPerformance();if(!performanceStage)return inner;
         let cursor=0,finished=false;
         return {execute(context:EventHandlerContext<AuthoritativeState>){if(finished||cursor>=performanceAll.length||key(scheduledEventValue(context.event))!==key(scheduledEventValue(performanceAll[cursor++])))throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','performance common stage order');return performance!.isLearning(context.event)?performanceStage.execute(context):inner.execute(context);},finish(){if(finished||cursor!==performanceAll.length)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','incomplete performance stage');finished=true;return performanceStage.finish(inner.finish());},finalizeTrace(){if(!finished)throw new SchedulerContractError('TRACE_VALIDATION_FAILURE','performance trace before finish');const rows=[...inner.finalizeTrace(),...performanceStage.traces()];return performanceAll.flatMap(e=>rows.filter(row=>key(f(rec(f(rec(row,160n),4n),130n),1n))===key({kind:'unsigned',value:e.eventId})));}};
+        }
+        const inner=withoutHabit();if(!habitStage)return inner;
+        let cursor=0,finished=false;
+        return {execute(context:EventHandlerContext<AuthoritativeState>){if(finished||cursor>=habitAll.length||key(scheduledEventValue(context.event))!==key(scheduledEventValue(habitAll[cursor++])))throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','habit common stage order');return habit!.isLearning(context.event)?habitStage.execute(context):inner.execute(context);},finish(){if(finished||cursor!==habitAll.length)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','incomplete habit stage');finished=true;return habitStage.finish(inner.finish());},finalizeTrace(){if(!finished)throw new SchedulerContractError('TRACE_VALIDATION_FAILURE','habit trace before finish');const rows=[...inner.finalizeTrace(),...habitStage.traces()];return habitAll.flatMap(e=>rows.filter(row=>key(f(rec(f(rec(row,160n),4n),130n),1n))===key({kind:'unsigned',value:e.eventId})));}};
       },
-      beforeCommit(state,instant){domains.validateStatic(state);domains.validateReferences(state,instant);probe?.finish();performance?.prepareCommit();horizon?.prepareCommit();priority?.prepareCommit();strategy?.prepareCommit();procedure?.prepareCommit();body?.prepareCommit();episodes?.prepareCommit();ingress!.finish();if(probeInstant&&(runtimeCount!==7||childCount!==14||carriagePadding))throw new SchedulerContractError('TRANSITION_INGRESS_VIOLATION','carriage/memory budget closure');taskRuntime.prepareCommit(state);predictionRuntime.prepareCommit();cognitive.prepareCommit();memoryRuntime.commit();episodes?.commit();predictionRuntime.commit();taskRuntime.commit();cognitive.commit();},
-      close(){performance?.close();horizon?.close();priority?.close();strategy?.close();procedure?.close();episodes?.close();body?.close();memoryRuntime.close();predictionRuntime.close();taskRuntime.close();cognitive.close();ingress?.abort();probe?.abort();probeSource?.close();ingress=undefined;probe=undefined;probeSource=undefined;},
-      validateRuntimeEmission(event){if(key(event.eventTypeId)===key(PERFORMANCE_SETTING)||key(event.eventTypeId)===key(HORIZON_DISPLAY)||key(event.eventTypeId)===key(PRIORITY_DISPLAY)||key(event.eventTypeId)===key(DISPLAY)||key(event.eventTypeId)===key(PRACTICE_SETTING)||key(event.eventTypeId)===key(BODY_SAMPLE)||key(event.eventTypeId)===key(BODY_DELIVERY)||key(event.eventTypeId)===key(AUTHORED_FACT_EVENT)||key(event.eventTypeId)===key(PROBE_SOURCE_EVENT)||key(event.eventTypeId)===key(DELIBERATION_EVENT)||key(event.eventTypeId)===key(TASK_DEADLINE_EVENT))throw new SchedulerContractError('INPUT_ONLY_EVENT_ORIGIN_VIOLATION','sources are compiler-only inputs');},
+      beforeCommit(state,instant){domains.validateStatic(state);domains.validateReferences(state,instant);probe?.finish();habit?.prepareCommit();performance?.prepareCommit();horizon?.prepareCommit();priority?.prepareCommit();strategy?.prepareCommit();procedure?.prepareCommit();body?.prepareCommit();episodes?.prepareCommit();ingress!.finish();if(probeInstant&&(runtimeCount!==7||childCount!==14||carriagePadding))throw new SchedulerContractError('TRANSITION_INGRESS_VIOLATION','carriage/memory budget closure');taskRuntime.prepareCommit(state);predictionRuntime.prepareCommit();cognitive.prepareCommit();memoryRuntime.commit();episodes?.commit();predictionRuntime.commit();taskRuntime.commit();cognitive.commit();},
+      close(){habit?.close();performance?.close();horizon?.close();priority?.close();strategy?.close();procedure?.close();episodes?.close();body?.close();memoryRuntime.close();predictionRuntime.close();taskRuntime.close();cognitive.close();ingress?.abort();probe?.abort();probeSource?.close();ingress=undefined;probe=undefined;probeSource=undefined;},
+      validateRuntimeEmission(event){if(key(event.eventTypeId)===key(HABIT_SOURCE)||key(event.eventTypeId)===key(PERFORMANCE_SETTING)||key(event.eventTypeId)===key(HORIZON_DISPLAY)||key(event.eventTypeId)===key(PRIORITY_DISPLAY)||key(event.eventTypeId)===key(DISPLAY)||key(event.eventTypeId)===key(PRACTICE_SETTING)||key(event.eventTypeId)===key(BODY_SAMPLE)||key(event.eventTypeId)===key(BODY_DELIVERY)||key(event.eventTypeId)===key(AUTHORED_FACT_EVENT)||key(event.eventTypeId)===key(PROBE_SOURCE_EVENT)||key(event.eventTypeId)===key(DELIBERATION_EVENT)||key(event.eventTypeId)===key(TASK_DEADLINE_EVENT))throw new SchedulerContractError('INPUT_ONLY_EVENT_ORIGIN_VIOLATION','sources are compiler-only inputs');},
     },
   });
   // Only quiescent observations/settlement are exposed. No injection, allocator or handler API.

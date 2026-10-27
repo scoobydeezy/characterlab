@@ -1,0 +1,380 @@
+M16 typecheck attempt1
+src/assembled/habitExecution.ts(31,504): error TS2345: Argument of type 'CanonicalValue' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+src/assembled/habitExecution.ts(31,649): error TS2322: Type 'CanonicalValue' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+typecheck exit=2 seconds=14.2757248
+Correction: decode constructed397 into the checked record type in candidate merge; no semantic change. Typecheck attempt2.
+typecheck exit=0 seconds=13.9410488
+M16 fixed matrix16 attempt1
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledHabit.test.ts (7 tests | 1 failed | 6 skipped) 4578ms
+   × M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action 4578ms
+     → HABIT_CODEC: id:1155
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledHabit.test.ts > M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action
+SchedulerContractError: HABIT_CODEC: id:1155
+ ❯ fail src/substrate/scheduler.ts:667:9
+    665| 
+    666| function fail(code: SchedulerFailureCode, message: string): never {
+    667|   throw new SchedulerContractError(code, message);
+       |         ^
+    668| }
+    669| 
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:390:11
+ ❯ Object.settleNextInstant src/assembled/character.ts:40:58
+ ❯ through src/test/assembledHabit.test.ts:35:118
+ ❯ src/test/assembledHabit.test.ts:47:150
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 6 skipped (7)
+   Start at  13:13:35
+   Duration  7.06s (transform 1.42s, setup 0ms, collect 2.20s, tests 4.58s, environment 0ms, prepare 94ms)
+
+matrix exit=1 seconds=7.6089303
+Correction: pure legacy fold operand requires1155, while shared stored occurrences are1164. Bijective namespace projection preserves payload, order and semantics; no allocation/state change. Matrix attempt2.
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledHabit.test.ts (7 tests | 1 failed | 6 skipped) 10005ms
+   × M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action 10005ms
+     → expected '[object Object]' to be '3/4' // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledHabit.test.ts > M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action
+AssertionError: expected '[object Object]' to be '3/4' // Object.is equality
+
+Expected: "3/4"
+Received: "[object Object]"
+
+ ❯ src/test/assembledHabit.test.ts:47:611
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 6 skipped (7)
+   Start at  13:14:02
+   Duration  12.45s (transform 1.40s, setup 0ms, collect 2.17s, tests 10.01s, environment 0ms, prepare 90ms)
+
+matrix exit=1 seconds=12.970706
+Correction: ExactRational has no string override. Test now compares exact rational equality, with the same expected3/4,0,3/8 values. Matrix attempt3.
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledHabit.test.ts (7 tests | 1 failed | 6 skipped) 10475ms
+   × M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action 10474ms
+     → reason nucleus limit
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledHabit.test.ts > M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action
+SchedulerContractError: reason nucleus limit
+ ❯ bad src/campaign2/cognitiveMath.ts:17:43
+
+ ❯ Module.compileReasonNuclei src/campaign2/cognitiveMath.ts:59:19
+ ❯ Object.execute src/assembled/execution.ts:168:63
+ ❯ src/assembled/runtime.ts:156:33
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:373:26
+ ❯ Object.settleNextInstant src/assembled/character.ts:40:58
+ ❯ through src/test/assembledHabit.test.ts:36:118
+ ❯ src/test/assembledHabit.test.ts:49:4
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 6 skipped (7)
+   Start at  13:14:30
+   Duration  12.93s (transform 1.41s, setup 0ms, collect 2.18s, tests 10.47s, environment 0ms, prepare 90ms)
+
+matrix exit=1 seconds=13.4591604
+Capacity correction7a8971ba: unchanged compiler per group, max4 groups/12 signals; shared addressed ledger max5. Frozen control diff verified unchanged after an automatic-review rejection; explicit new successor writes used. Matrix attempt4.
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledHabit.test.ts > M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action
+M16 pair {"seed":0,"trained":["one","one","two"],"unrewarded":["one","one","two"],"probability7":["1/2","0"],"terminal":10}
+
+stdout | src/test/assembledHabit.test.ts > M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action
+M16 pair {"seed":1,"trained":["one","one","one"],"unrewarded":["one","one","two"],"probability7":["1/2","0"],"terminal":10}
+
+stdout | src/test/assembledHabit.test.ts > M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action
+M16 pair {"seed":2,"trained":["one","one","two"],"unrewarded":["one","one","two"],"probability7":["1/2","0"],"terminal":10}
+
+stdout | src/test/assembledHabit.test.ts > M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action
+M16 pair {"seed":3,"trained":["one","one","two"],"unrewarded":["one","one","two"],"probability7":["1/2","0"],"terminal":10}
+
+stdout | src/test/assembledHabit.test.ts > M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action
+M16 pair {"seed":4,"trained":["one","one","two"],"unrewarded":["one","one","two"],"probability7":["1/2","0"],"terminal":10}
+
+stdout | src/test/assembledHabit.test.ts > M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action
+M16 pair {"seed":5,"trained":["one","one","two"],"unrewarded":["one","one","two"],"probability7":["1/2","0"],"terminal":10}
+
+stdout | src/test/assembledHabit.test.ts > M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action
+M16 pair {"seed":6,"trained":["one","one","two"],"unrewarded":["one","one","two"],"probability7":["1/2","0"],"terminal":10}
+
+stdout | src/test/assembledHabit.test.ts > M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action
+M16 pair {"seed":7,"trained":["one","one","two"],"unrewarded":["one","one","two"],"probability7":["1/2","0"],"terminal":10}
+M16 matrix complete {"runs":16,"changed":[1],"matched":0,"changedDomains":0,"unmatchedA":16,"unmatchedB":0}
+
+ ✓ src/test/assembledHabit.test.ts (7 tests | 6 skipped) 132543ms
+   ✓ M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action 132542ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  13:17:05
+   Duration  135.06s (transform 1.44s, setup 0ms, collect 2.22s, tests 132.54s, environment 0ms, prepare 90ms)
+
+matrix exit=0 seconds=135.5485406
+Capacity control added as predeclared: four active groups and live shared draws/restore. Reason/arbitration trace now explicitly names receiving habit0.1; recheck matrix after controls because trace bytes changed. Typecheck final.
+typecheck exit=0 seconds=14.0329394
+M16 six controls attempt1
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledHabit.test.ts > M16 assembled habit > controls: closed admission, owners, real child authentication and late atomic rollback
+M16 common-stage rollback 49 events; limit48
+
+ ❯ src/test/assembledHabit.test.ts (7 tests | 1 failed | 1 skipped) 155624ms
+   ✓ M16 assembled habit > controls: original full habit horizon, alternative laws and derived/cache/belief/truth comparisons 13636ms
+   × M16 assembled habit > controls: cue access, correction, reversal and no duplicate option or extra strength 34029ms
+     → expected [ { kind: 'record', …(2) }, …(2) ] to have a length of 4 but got 3
+   ✓ M16 assembled habit > controls: hidden reward, denied evidence, blocked and other actions cannot invent training 32670ms
+   ✓ M16 assembled habit > controls: exact repeat and restore6 preserve all later whole boundaries 50898ms
+   ✓ M16 assembled habit > controls: unavailable routes, inactive goals and no attempt exclude habitual execution 12792ms
+   ✓ M16 assembled habit > controls: closed admission, owners, real child authentication and late atomic rollback 11598ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledHabit.test.ts > M16 assembled habit > controls: cue access, correction, reversal and no duplicate option or extra strength
+AssertionError: expected [ { kind: 'record', …(2) }, …(2) ] to have a length of 4 but got 3
+
+- Expected
++ Received
+
+- 4
++ 3
+
+ ❯ src/test/assembledHabit.test.ts:64:1716
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 5 passed | 1 skipped (7)
+   Start at  13:20:20
+   Duration  158.20s (transform 1.44s, setup 0ms, collect 2.23s, tests 155.62s, environment 0ms, prepare 90ms)
+
+controls exit=1 seconds=158.7278434
+Corrections: four-group control now reports performance success so monitoring retains both route1 plans; previous false failures legitimately switched A and produced only3 groups. Fixed witness unchanged. Reward projection trace now records its consumed authenticated cue and source ID. Repeat all receiving controls for changed trace.
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledHabit.test.ts > M16 assembled habit > controls: cue access, correction, reversal and no duplicate option or extra strength
+M16 four active groups: 4 addressed draws, exact restore6->7->terminal10
+
+stdout | src/test/assembledHabit.test.ts > M16 assembled habit > controls: closed admission, owners, real child authentication and late atomic rollback
+M16 common-stage rollback 49 events; limit48
+
+ ✓ src/test/assembledHabit.test.ts (7 tests | 1 skipped) 170338ms
+   ✓ M16 assembled habit > controls: original full habit horizon, alternative laws and derived/cache/belief/truth comparisons 13651ms
+   ✓ M16 assembled habit > controls: cue access, correction, reversal and no duplicate option or extra strength 48547ms
+   ✓ M16 assembled habit > controls: hidden reward, denied evidence, blocked and other actions cannot invent training 32736ms
+   ✓ M16 assembled habit > controls: exact repeat and restore6 preserve all later whole boundaries 50803ms
+   ✓ M16 assembled habit > controls: unavailable routes, inactive goals and no attempt exclude habitual execution 12953ms
+   ✓ M16 assembled habit > controls: closed admission, owners, real child authentication and late atomic rollback 11647ms
+
+ Test Files  1 passed (1)
+      Tests  6 passed | 1 skipped (7)
+   Start at  13:23:36
+   Duration  172.92s (transform 1.43s, setup 0ms, collect 2.22s, tests 170.34s, environment 0ms, prepare 89ms)
+
+controls exit=0 seconds=173.4184339
+M16 final matrix after trace corrections; explicit Applied and negative-performed3/4->3/8 checks cover the already-pinned physical execution/reversal requirements.
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledHabit.test.ts > M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action
+M16 pair {"seed":0,"trained":["one","one","two"],"unrewarded":["one","one","two"],"probability7":["1/2","0"],"terminal":10}
+
+stdout | src/test/assembledHabit.test.ts > M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action
+M16 pair {"seed":1,"trained":["one","one","one"],"unrewarded":["one","one","two"],"probability7":["1/2","0"],"terminal":10}
+
+stdout | src/test/assembledHabit.test.ts > M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action
+M16 pair {"seed":2,"trained":["one","one","two"],"unrewarded":["one","one","two"],"probability7":["1/2","0"],"terminal":10}
+
+stdout | src/test/assembledHabit.test.ts > M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action
+M16 pair {"seed":3,"trained":["one","one","two"],"unrewarded":["one","one","two"],"probability7":["1/2","0"],"terminal":10}
+
+stdout | src/test/assembledHabit.test.ts > M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action
+M16 pair {"seed":4,"trained":["one","one","two"],"unrewarded":["one","one","two"],"probability7":["1/2","0"],"terminal":10}
+
+stdout | src/test/assembledHabit.test.ts > M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action
+M16 pair {"seed":5,"trained":["one","one","two"],"unrewarded":["one","one","two"],"probability7":["1/2","0"],"terminal":10}
+
+stdout | src/test/assembledHabit.test.ts > M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action
+M16 pair {"seed":6,"trained":["one","one","two"],"unrewarded":["one","one","two"],"probability7":["1/2","0"],"terminal":10}
+
+stdout | src/test/assembledHabit.test.ts > M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action
+M16 pair {"seed":7,"trained":["one","one","two"],"unrewarded":["one","one","two"],"probability7":["1/2","0"],"terminal":10}
+M16 matrix complete {"runs":16,"changed":[1],"matched":0,"changedDomains":0,"unmatchedA":16,"unmatchedB":0}
+
+ ✓ src/test/assembledHabit.test.ts (7 tests | 6 skipped) 138505ms
+   ✓ M16 assembled habit > matrix16: acquired history adds a feasible alternative and changes actual action 138504ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  13:26:44
+   Duration  141.01s (transform 1.43s, setup 0ms, collect 2.22s, tests 138.51s, environment 0ms, prepare 91ms)
+
+final matrix exit=0 seconds=141.5049016
+M15 matrix16 regression
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledPerformance.test.ts > M15 assembled performance > matrix16: reported failures change the later route, intent and executed action
+M15 pair {"seed":0,"failureChoices":["one","one","two"],"successChoices":["one","one","one"],"failureCounts":[0,1,2],"successCounts":[0,0,0],"terminal":10}
+
+stdout | src/test/assembledPerformance.test.ts > M15 assembled performance > matrix16: reported failures change the later route, intent and executed action
+M15 pair {"seed":1,"failureChoices":["one","one","two"],"successChoices":["one","one","one"],"failureCounts":[0,1,2],"successCounts":[0,0,0],"terminal":10}
+
+stdout | src/test/assembledPerformance.test.ts > M15 assembled performance > matrix16: reported failures change the later route, intent and executed action
+M15 pair {"seed":2,"failureChoices":["one","one","two"],"successChoices":["one","one","one"],"failureCounts":[0,1,2],"successCounts":[0,0,0],"terminal":10}
+
+stdout | src/test/assembledPerformance.test.ts > M15 assembled performance > matrix16: reported failures change the later route, intent and executed action
+M15 pair {"seed":3,"failureChoices":["one","one","two"],"successChoices":["one","one","one"],"failureCounts":[0,1,2],"successCounts":[0,0,0],"terminal":10}
+
+stdout | src/test/assembledPerformance.test.ts > M15 assembled performance > matrix16: reported failures change the later route, intent and executed action
+M15 pair {"seed":4,"failureChoices":["one","one","two"],"successChoices":["one","one","one"],"failureCounts":[0,1,2],"successCounts":[0,0,0],"terminal":10}
+
+stdout | src/test/assembledPerformance.test.ts > M15 assembled performance > matrix16: reported failures change the later route, intent and executed action
+M15 pair {"seed":5,"failureChoices":["one","one","two"],"successChoices":["one","one","one"],"failureCounts":[0,1,2],"successCounts":[0,0,0],"terminal":10}
+
+stdout | src/test/assembledPerformance.test.ts > M15 assembled performance > matrix16: reported failures change the later route, intent and executed action
+M15 pair {"seed":6,"failureChoices":["one","one","two"],"successChoices":["one","one","one"],"failureCounts":[0,1,2],"successCounts":[0,0,0],"terminal":10}
+
+stdout | src/test/assembledPerformance.test.ts > M15 assembled performance > matrix16: reported failures change the later route, intent and executed action
+M15 pair {"seed":7,"failureChoices":["one","one","two"],"successChoices":["one","one","one"],"failureCounts":[0,1,2],"successCounts":[0,0,0],"terminal":10}
+M15 matrix complete {"runs":16,"changedPairs":8,"arbitrationDraws":0}
+
+ ✓ src/test/assembledPerformance.test.ts (7 tests | 6 skipped) 117194ms
+   ✓ M15 assembled performance > matrix16: reported failures change the later route, intent and executed action 117193ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  13:29:14
+   Duration  119.74s (transform 1.45s, setup 0ms, collect 2.25s, tests 117.19s, environment 0ms, prepare 89ms)
+
+M15 matrix exit=0 seconds=120.2390736
+M15 six controls regression
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledPerformance.test.ts > M15 assembled performance > controls: admission, exact read paths, owners, real children and late atomic rollback
+M15 common-stage rollback 44 events; limit43
+
+ ✓ src/test/assembledPerformance.test.ts (7 tests | 1 skipped) 98999ms
+   ✓ M15 assembled performance > controls: original full-horizon monitoring correspondence and retained alternatives 898ms
+   ✓ M15 assembled performance > controls: missing feedback, success reset and unavailable alternatives preserve the goal 15268ms
+   ✓ M15 assembled performance > controls: false and denied feedback exclude hidden physical performance from cognition 20992ms
+   ✓ M15 assembled performance > controls: repeat and restore at5 preserve all later whole boundaries 42018ms
+   ✓ M15 assembled performance > controls: no attempt, unmatched selected route and expired goals cannot gain feedback 9908ms
+   ✓ M15 assembled performance > controls: admission, exact read paths, owners, real children and late atomic rollback 9914ms
+
+ Test Files  1 passed (1)
+      Tests  6 passed | 1 skipped (7)
+   Start at  13:31:22
+   Duration  101.66s (transform 1.46s, setup 0ms, collect 2.33s, tests 99.00s, environment 0ms, prepare 89ms)
+
+M15 controls exit=0 seconds=102.1552518
+M14 matrix32 regression
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit
+M14 pair {"seed":0,"available":["two","two","two"],"unavailable":["two","two","two"],"probability3":[["0/1","1/1"],["1/2","1/2"]],"matchedDraws":0,"changedDomains":0}
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit
+M14 pair {"seed":1,"available":["two","one","one"],"unavailable":["two","one","one"],"probability3":[["0/1","1/1"],["1/2","1/2"]],"matchedDraws":0,"changedDomains":0}
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit
+M14 pair {"seed":2,"available":["two","two","two"],"unavailable":["one","two","two"],"probability3":[["0/1","1/1"],["1/2","1/2"]],"matchedDraws":0,"changedDomains":0}
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit
+M14 pair {"seed":3,"available":["two","one","two"],"unavailable":["two","one","two"],"probability3":[["0/1","1/1"],["1/2","1/2"]],"matchedDraws":0,"changedDomains":0}
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit
+M14 pair {"seed":4,"available":["two","one","two"],"unavailable":["one","one","two"],"probability3":[["0/1","1/1"],["1/2","1/2"]],"matchedDraws":0,"changedDomains":0}
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit
+M14 pair {"seed":5,"available":["two","one","two"],"unavailable":["two","one","two"],"probability3":[["0/1","1/1"],["1/2","1/2"]],"matchedDraws":0,"changedDomains":0}
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit
+M14 pair {"seed":6,"available":["two","two","two"],"unavailable":["two","two","two"],"probability3":[["0/1","1/1"],["1/2","1/2"]],"matchedDraws":0,"changedDomains":0}
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit
+M14 pair {"seed":7,"available":["two","one","two"],"unavailable":["one","one","two"],"probability3":[["0/1","1/1"],["1/2","1/2"]],"matchedDraws":0,"changedDomains":0}
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit
+M14 pair {"seed":8,"available":["two","two","two"],"unavailable":["two","two","two"],"probability3":[["0/1","1/1"],["1/2","1/2"]],"matchedDraws":0,"changedDomains":0}
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit
+M14 pair {"seed":9,"available":["two","one","two"],"unavailable":["two","one","two"],"probability3":[["0/1","1/1"],["1/2","1/2"]],"matchedDraws":0,"changedDomains":0}
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit
+M14 pair {"seed":10,"available":["two","two","two"],"unavailable":["two","two","two"],"probability3":[["0/1","1/1"],["1/2","1/2"]],"matchedDraws":0,"changedDomains":0}
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit
+M14 pair {"seed":11,"available":["two","two","one"],"unavailable":["two","two","one"],"probability3":[["0/1","1/1"],["1/2","1/2"]],"matchedDraws":0,"changedDomains":0}
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit
+M14 pair {"seed":12,"available":["two","two","one"],"unavailable":["one","two","one"],"probability3":[["0/1","1/1"],["1/2","1/2"]],"matchedDraws":0,"changedDomains":0}
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit
+M14 pair {"seed":13,"available":["two","two","two"],"unavailable":["one","two","two"],"probability3":[["0/1","1/1"],["1/2","1/2"]],"matchedDraws":0,"changedDomains":0}
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit
+M14 pair {"seed":14,"available":["two","one","one"],"unavailable":["one","one","one"],"probability3":[["0/1","1/1"],["1/2","1/2"]],"matchedDraws":0,"changedDomains":0}
+
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit
+M14 pair {"seed":15,"available":["two","two","two"],"unavailable":["one","two","two"],"probability3":[["0/1","1/1"],["1/2","1/2"]],"matchedDraws":0,"changedDomains":0}
+M14 matrix complete {"runs":32,"changedSeeds":[2,4,7,12,13,14,15],"laterPursuitSeeds":[1,3,4,5,7,9,11,12,14],"matchedDraws":0,"changedDomains":0,"unmatchedA":0,"unmatchedB":37}
+
+ ✓ src/test/assembledHorizon.test.ts (7 tests | 6 skipped) 203602ms
+   ✓ M14 assembled horizon > matrix32: future opening changes present choice, preserves loser and permits later pursuit 203602ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  13:33:12
+   Duration  206.11s (transform 1.41s, setup 0ms, collect 2.22s, tests 203.60s, environment 0ms, prepare 89ms)
+
+M14 matrix exit=0 seconds=206.6068556
+M16 final typecheck after capacity tests and cue trace correction
+final typecheck exit=0 seconds=14.2455801
+PASS historical105/config/original-fixture guard vsdb0ca7a8; M1 vs31553ea7; retained M12-M15 mechanism/test/fixture and original habit source guards vs0d8a45bb. No full historical replay invalidator. seconds=0.332
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+M16 check:boundaries exit=0 seconds=2.5729969
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+M16 check:research exit=0 seconds=4.3197293
+PASS final caps: production/test12/12; evidence2/20 bytes=34014/5242880; register=65520/65536; lines={'AGENTS.md': 96, 'docs/planning/CURRENT.md': 33, 'docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md': 249, 'docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md': 130}; diff whitespace PASS; seconds=0.465
+Final index whitespace check flagged two verbatim stack-frame blank lines in the retained failure log (665 and669). Original bytes retained. All production/test/document changes pass whitespace check; only this exact raw-log exception remains.
+docs/planning/ASSEMBLED_CHARACTER_M16_CHECKS.txt:22: trailing whitespace.
++    665| 
+docs/planning/ASSEMBLED_CHARACTER_M16_CHECKS.txt:27: trailing whitespace.
++    669| 
+PASS source/document index whitespace and exact two-line raw evidence exception; seconds=0.090

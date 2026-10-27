@@ -1,3 +1,5 @@
+import {compileAssembledReasons} from './reasons';
+import {createAssembledRandomSession} from './random';
 // assembled-character-model/0.1-candidate: bounded successor of cognitiveExecution at db0ca7a8.
 /** task-cognitive-path/0.1-candidate trusted upstream execution adapter.
  * Live association checks precede all reads. Character transformers receive only
@@ -19,6 +21,7 @@ import {workspaceOutput,appraisalOutput,concernOutput,motiveOutput,candidateOutp
 import {dataRecord as rec,dataField as f,dataItems as items,dataKey as key,dataUnsigned as u,dataIdentity as id} from '../campaign2/canonicalData';
 import {sharedWorkspace,taskWorkspaceDefinition,type BodyRecallDelivery} from './workspace';
 import {contextAppraisal,jointAppraisal,jointConcern,jointSignalSupport} from './appraisal';
+import type {createHabitExecution} from './habitExecution';
 import type {createPriorityExecution} from './priorityExecution';
 import type {createStrategyExecution} from './strategyExecution';
 import type {BodyEvidence} from './body';
@@ -50,12 +53,12 @@ const stages=[
 function fail(message:string):never {throw new SchedulerContractError('INPUT_NOT_ADMITTED',message);}
 function stageFail(message:string):never {throw new SchedulerContractError('COGNITIVE_STAGE_VIOLATION',message);}
 
-export function createCognitiveExecution(model:Model,component:State,inputs:Awaited<ReturnType<typeof compileCharacterInputs>>,bodyEvidence:()=>BodyEvidence|undefined=()=>undefined,recallEvidence:()=>readonly BodyRecallDelivery[]=()=>[],strategy?:ReturnType<typeof createStrategyExecution>,priority?:ReturnType<typeof createPriorityExecution>){
+export function createCognitiveExecution(model:Model,component:State,inputs:Awaited<ReturnType<typeof compileCharacterInputs>>,bodyEvidence:()=>BodyEvidence|undefined=()=>undefined,recallEvidence:()=>readonly BodyRecallDelivery[]=()=>[],strategy?:ReturnType<typeof createStrategyExecution>,priority?:ReturnType<typeof createPriorityExecution>,habit?:ReturnType<typeof createHabitExecution>){
  const rows=items(items(decodeCognitive(model.baseRegistry),'list')[0],'set').filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n).map(v=>rec(v,171n));
  const registration=(name:string)=>f(rows.find(v=>key(f(v,1n))===key(atom(1009,name)))!,4n);
  const definition=(name:string)=>cloneCognitive(component.definition(name));
  const seed=f(rec(inputs.runIdentity.value,104n),4n);if(typeof seed==='boolean'||seed.kind!=='bytes')fail('run seed required');
- const random=createCognitiveRandomSession(seed.value);
+ const random=(model.habit?createAssembledRandomSession:createCognitiveRandomSession)(seed.value);
  const protocol=compileProtocolBridge(definition('protocol-observation'));let protocolInstant:ReturnType<typeof protocol.begin>|undefined;
  let pending=new Map<string,ScheduledEvent>(),checkpoint=new Map<string,ScheduledEvent>(),active=false,instant=0n,sealed=false,unbound=0,chosen=false;
  let source:ReturnType<typeof beginCognitiveSourceInstant>|undefined;
@@ -116,6 +119,7 @@ export function createCognitiveExecution(model:Model,component:State,inputs:Awai
    const namespace=u(f(rec(decodeCognitive(role),263n),1n));
    // One shared reservation. No nested or copied source allocates an identity.
    const occurrence=typedIdentifier(namespace,unsigned(allocator.allocateRuntimeId()));
+   let habitResult:ReturnType<NonNullable<typeof habit>['candidates']>|undefined;
    let priorityResult:ReturnType<NonNullable<typeof priority>['motive']>|undefined;
    let strategyInput:CanonicalValue|undefined;
    let extraOutputs:CanonicalValue[]=[],jointInput:CanonicalValue|undefined;
@@ -156,13 +160,14 @@ export function createCognitiveExecution(model:Model,component:State,inputs:Awai
      const prior=read({rootStateTypeId:template.rootStateTypeId,fieldId:template.fieldId,selectors:[{kind:'mapKey',key:task}]},f(req,4n));if(!prior.presence)return undefined;
      const instructionId=f(rec(prior.value!,390n),1n),row=rows.find(v=>key(f(v,1n))===key(instructionId));if(!row)fail('unknown adopted instruction');return {instructionId,actionId:f(rec(f(row,4n),389n),1n)};
     });
+    if(habit){habitResult=habit.candidates(event,state,output,strategyInput!);output=habitResult.output;extraOutputs.push(habitResult.report);}
    }else if(i===5){
     const req=rec(f(wrapper,3n),448n),template=decodeStatePattern(f(req,3n));let C=event.payload;
     for(const n of items(f(req,1n),'list').map(u)){if(typeof C==='boolean'||C.kind!=='record')fail('identity subject path');C=f(C,n);}
     const d=rec(definition('task-reason-source'),436n),result=rawSignalOutput(occurrence,event.payload,f(d,1n)===true,readQ(f(d,2n)),()=>read({rootStateTypeId:template.rootStateTypeId,fieldId:template.fieldId,selectors:[{kind:'mapKey',key:r(412,[C,f(req,2n)])}]},f(req,4n)).value);
     output=result.output;quantizationOperations=result.quantizationOperations;
     if(model.body){if(!joint)fail('raw signals require generated joint appraisal');output=jointSignalSupport(output,joint!);jointInput=list([event.payload,joint!]);}
-   }else if(i===6)output=r(408,[occurrence,event.payload,list(compileReasonNuclei(items(f(rec(event.payload,403n),3n),'set'),definition('task-reason-dice')))]);
+   }else if(i===6)output=r(408,[occurrence,event.payload,list((model.habit?compileAssembledReasons:compileReasonNuclei)(items(f(rec(event.payload,403n),3n),'set'),definition('task-reason-dice')))]);
    else if(i===7){
     output=await arbitrationOutput(occurrence,instant,event.payload,definition('task-arbitration'),random.forResolution(occurrence,event.payload));
     const result=rec(f(rec(output,409n),4n),419n);chosen=u(f(result,1n))===3n;if(chosen){const data=rec(f(result,2n),420n);randomDrawRecords=items(f(data,9n),'list').map(v=>f(rec(v,422n),5n));const tie=rec(f(data,10n),423n);if(u(f(tie,1n))===2n)randomDrawRecords.push(f(tie,3n));}
@@ -183,7 +188,8 @@ export function createCognitiveExecution(model:Model,component:State,inputs:Awai
    const additional=protocolPlan?.emissions()??[];let bound=false;unbound++;
    const report=joint,projection=jointInput;
    return {output:cloneCognitive(output),strategyPlan,additionalOutputs:[...extraOutputs,...(strategyPlan?[strategyPlan.report]:[])],reads,domain,quantizationOperations,randomDrawRecords,
-    trace(children:readonly ScheduledEvent[]){if(!bound)stageFail('cognitive trace before child binding');if(priorityResult)return priorityResult.trace(children);const original=rec(cognitiveTraceRecord(model.modelIdentity.value,inputs.runIdentity.value,event,registered,output,children,{domain,reads,quantizationOperations,randomDrawRecords}),160n);
+    trace(children:readonly ScheduledEvent[]){if(!bound)stageFail('cognitive trace before child binding');if(habitResult)return habitResult.trace(children);if(priorityResult)return priorityResult.trace(children);const original=rec(cognitiveTraceRecord(model.modelIdentity.value,inputs.runIdentity.value,event,registered,output,children,{domain,reads,quantizationOperations,randomDrawRecords}),160n);
+     if(model.habit&&(i===6||i===7))return record(original.schema,new Map([...original.fields].map(([n,v])=>[n,n===6n?text('assembled-character-habit/0.1-candidate'):v])));
      if(workspaceJoin){const replacements=new Map<bigint,CanonicalValue>([[6n,text(model.memoryContext?'assembled-character-workspace/0.2-candidate':'assembled-character-workspace/0.1-candidate')],[9n,list(workspaceJoin.sourceIds)],[12n,list([event.payload,workspaceJoin.input])],[13n,list([output,workspaceJoin.report])]]);return record(original.schema,new Map([...original.fields].map(([n,v])=>[n,replacements.get(n)??v])));}
      if(strategyInput)return record(original.schema,new Map([...original.fields].map(([n,v])=>[n,n===6n?text('assembled-character-strategy/0.1-candidate'):n===12n?list([event.payload,strategyInput!]):v])));
      if(!projection)return original;const safe=report?items(report,'list').slice(2,4):[],extraSources=safe.filter(v=>typeof v!=='boolean'&&v.kind==='record').map(v=>f(v as Extract<CanonicalValue,{kind:'record'}>,1n)),sources=new Map([...items(f(original,9n),'list'),...extraSources].map(v=>[key(v),v]));
