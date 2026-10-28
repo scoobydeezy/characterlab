@@ -1,3 +1,4 @@
+import {withRecognitionState} from './recognitionState';
 // assembled-character-model/0.1-candidate: bounded successor of cognitiveState at db0ca7a8.
 /** task-cognitive-path/0.1-candidate: state refinements and immutable instruction boundary.
  * Structural history validity never authenticates a caller-supplied learning history.
@@ -87,10 +88,12 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  const controlled=model.control?withControlState(habitual,C):habitual;
  const communicating=model.communication?withCommunicationState(controlled,[C,...model.communication.recipients]):controlled;
  const socialized=model.social?withSocialState(communicating,C,model.social.target):communicating;
- const stateModel=model.relationship?withRelationshipState(socialized,C,model.relationship.target):socialized;
+ const related=model.relationship?withRelationshipState(socialized,C,model.relationship.target):socialized;
+ const stateModel=model.recognition?withRecognitionState(related,model.recognition):related;
  function initialState(bytes:Uint8Array){
   const state=stateModel.restoreState(bytes);
   for(const e of state.entries()){
+   if(model.recognition&&[241n,244n].includes(e.path.rootStateTypeId))invalidModel('initial recognition tracks/resolutions must be absent');
    if(model.relationship&&e.path.rootStateTypeId===848n)invalidModel('initial relationship history must be absent');
    if(model.social&&e.path.rootStateTypeId===810n)invalidModel('initial person belief must be absent');
    if(model.communication&&e.path.rootStateTypeId===1072n)invalidModel('initial communication knowledge must be absent');

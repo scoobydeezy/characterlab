@@ -1,7 +1,7 @@
 # Assembled Character — M2 reconciliation
 
 Owner approved D1–D5 on2026-10-25 with the D2 condition below.
-M2a-M21b pass. [M21b](ASSEMBLED_CHARACTER_M21B_RESULT.md): coupled configuration widening.
+M2a-M21b pass. [M21b](ASSEMBLED_CHARACTER_M21B_RESULT.md): coupled configuration widening. M22 [INCOMPLETE](ASSEMBLED_CHARACTER_M22_RESULT.md): unmatched tie in the sole changed pair.
 
 ## Decision sheet — adopted 2026-10-25
 

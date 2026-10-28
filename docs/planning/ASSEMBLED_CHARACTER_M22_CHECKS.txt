@@ -1,0 +1,80 @@
+src/assembled/recognitionExecution.ts(24,527): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number | bigint'.
+src/assembled/recognitionExecution.ts(24,823): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number | bigint'.
+src/assembled/recognitionExecution.ts(35,937): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number | bigint'.
+src/assembled/recognitionExecution.ts(35,1131): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number | bigint'.
+src/assembled/recognitionExecution.ts(35,1258): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number | bigint'.
+src/assembled/recognitionState.ts(23,406): error TS2339: Property 'candidateSemanticReferentId' does not exist on type 'RecognitionResolution'.
+  Property 'candidateSemanticReferentId' does not exist on type '{ readonly kind: "withdrawn"; }'.
+src/assembled/socialExecution.ts(38,385): error TS2345: Argument of type 'CanonicalValue | undefined' is not assignable to parameter of type 'CanonicalValue'.
+  Type 'undefined' is not assignable to type 'CanonicalValue'.
+src/assembled/socialExecution.ts(38,654): error TS2345: Argument of type 'CanonicalValue | undefined' is not assignable to parameter of type 'CanonicalValue'.
+  Type 'undefined' is not assignable to type 'CanonicalValue'.
+src/assembled/socialExecution.ts(38,699): error TS2322: Type 'CanonicalValue | undefined' is not assignable to type 'CanonicalValue'.
+  Type 'undefined' is not assignable to type 'CanonicalValue'.
+M22-initial-types exit=2 seconds=14.7169578
+M22-types-corrected exit=0 seconds=14.4139116
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRecognition.test.ts > M22 observer-local recognition in one character > matrix: recognition evidence changes learned belief, reasons and coupled choice
+M22 preflight {"targetCue":true,"draws":3,"belief":2,"resolutions":1}
+
+stdout | src/test/assembledRecognition.test.ts > M22 observer-local recognition in one character > matrix: recognition evidence changes learned belief, reasons and coupled choice
+M22 preflight {"targetCue":false,"draws":4,"belief":0,"resolutions":1}
+
+stdout | src/test/assembledRecognition.test.ts > M22 observer-local recognition in one character > matrix: recognition evidence changes learned belief, reasons and coupled choice
+M22 cell {"seed":0,"a":"definition/configurable-water","b":"definition/configurable-water","common":3,"unmatched":0}
+
+stdout | src/test/assembledRecognition.test.ts > M22 observer-local recognition in one character > matrix: recognition evidence changes learned belief, reasons and coupled choice
+M22 cell {"seed":1,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-one","common":4,"unmatched":0}
+
+stdout | src/test/assembledRecognition.test.ts > M22 observer-local recognition in one character > matrix: recognition evidence changes learned belief, reasons and coupled choice
+M22 cell {"seed":2,"a":"definition/configurable-water","b":"definition/configurable-water","common":4,"unmatched":0}
+
+stdout | src/test/assembledRecognition.test.ts > M22 observer-local recognition in one character > matrix: recognition evidence changes learned belief, reasons and coupled choice
+M22 cell {"seed":3,"a":"definition/configurable-water","b":"definition/configurable-water","common":3,"unmatched":0}
+
+stdout | src/test/assembledRecognition.test.ts > M22 observer-local recognition in one character > matrix: recognition evidence changes learned belief, reasons and coupled choice
+M22 cell {"seed":4,"a":"definition/protocol-contact-two","b":"definition/protocol-contact-two","common":3,"unmatched":0}
+
+stdout | src/test/assembledRecognition.test.ts > M22 observer-local recognition in one character > matrix: recognition evidence changes learned belief, reasons and coupled choice
+M22 cell {"seed":5,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-one","common":3,"unmatched":0}
+
+stdout | src/test/assembledRecognition.test.ts > M22 observer-local recognition in one character > matrix: recognition evidence changes learned belief, reasons and coupled choice
+M22 cell {"seed":6,"a":"definition/protocol-contact-two","b":"definition/protocol-contact-one","common":3,"unmatched":1}
+
+stdout | src/test/assembledRecognition.test.ts > M22 observer-local recognition in one character > matrix: recognition evidence changes learned belief, reasons and coupled choice
+M22 cell {"seed":7,"a":"definition/configurable-water","b":"definition/configurable-water","common":3,"unmatched":0}
+
+ ❯ src/test/assembledRecognition.test.ts (1 test | 1 failed) 225677ms
+   × M22 observer-local recognition in one character > matrix: recognition evidence changes learned belief, reasons and coupled choice 225676ms
+     → expected 0 to be greater than 0
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledRecognition.test.ts > M22 observer-local recognition in one character > matrix: recognition evidence changes learned belief, reasons and coupled choice
+AssertionError: expected 0 to be greater than 0
+ ❯ src/test/assembledRecognition.test.ts:28:73
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed (1)
+   Start at  08:49:46
+   Duration  228.63s (transform 1.66s, setup 0ms, collect 2.55s, tests 225.68s, environment 0ms, prepare 123ms)
+
+M22-matrix exit=1 seconds=229.1935265
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+M22-checkpoint-boundaries exit=0 seconds=2.6076114
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+M22-checkpoint-research exit=0 seconds=4.209583
+PASS checkpoint only:105 frozen blobs exact, 105 Git-declared CRLF conversions only; historical sources and M19/M21b tests unchanged;11 code-test files/document caps/two evidence files within5MiB. M22 remains INCOMPLETE. M22-checkpoint-source-docs exit=0 seconds=9.904862799914554
