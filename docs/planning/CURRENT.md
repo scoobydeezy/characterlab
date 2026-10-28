@@ -20,8 +20,8 @@ No new psychological breadth between M21 packages. UI remains stopped.
   model rules/registry0.21, same21 slots and all M20 owners/mechanisms.
 - Baseline: FND1 RNG / FND3 order-save / FND4 ownership-trace / FND5 admission;
   PHEN-DET, PHEN-DECISION and PHEN-REL comparison projections. No corpus closure.
-- Production files (5): assembled/comparison.ts, model.ts, inputs.ts, random.ts,
-  execution.ts. Test files (2): assembledComparison.test.ts and its fixture.
+- Production files (6): assembled/comparison.ts, model.ts, inputs.ts, random.ts,
+  execution.ts, traceBinding.ts. Test files (2): assembledComparison.test.ts and its fixture.
   No state/owner registry cleanup or historical source changes.
 - Input map: optional first canonical ComparisonDrawMap116, committed with ordered
   input and RunIdentity; not a scheduled event or character-accessible evidence.

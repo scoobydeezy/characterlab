@@ -24,7 +24,7 @@ The map is fixed before execution; there is no live installation or mutation API
 Local roots are namespace1135 unsigned resolution occurrences. DrawIndex is0.
 Only task-reason-face and task-decision-tie purposes in namespace1042 are admitted.
 Subject roles in1043 and subject namespaces match the existing assembled RNG grammar:
-reason actor1000, action1027, task1002; tie actor1000. Bindings are complete and unique.
+reason actor1002, action1027, task1002; tie actor1002. Bindings are complete and unique.
 Comparison role identifiers use the C0 test-domain namespace10005 with text
 assembled/task-reason-face or assembled/task-decision-tie. Key identifiers use10006
 with nonempty text <=4096 characters. These are experimental identifiers, never
