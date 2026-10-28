@@ -4,7 +4,8 @@ Recognition now produces actual Campaign1 tracks, appearance classifications and
 resolutions inside the assembled runtime. Target recognition admits two observations
 to person belief; recognizing the other candidate admits none to that target. Later
 appraisal consumes those differences. M22 is INCOMPLETE: its positive choice test
-failed the stricter all-executed-draws-matched requirement. Stop; no retuning.
+failed the stricter all-executed-draws-matched requirement. The authorized diagnosis
+now explains the extra tie draw (below); no acceptance amendment or retuning applied.
 
 ## Candidate and evidence
 
@@ -91,3 +92,46 @@ to exceed the run count. No score/tie explanation or gate amendment can follow f
 this attempt. M22 remains INCOMPLETE; M21b remains last completed. Timed M22 validation
 including this failure and the corrected test typecheck is314.56sec before index
 checks. Corrected test typecheck PASS in14.897sec; no simulation rerun was performed.
+
+## Corrected diagnosis — explanation complete; M22 still incomplete
+
+Owner approved four fresh runs capped90sec. Plan956d87de preceded execution. The
+unchanged two identity-only setups and same seed6 pair through3 completed in27.1754sec;
+diagnostic assertions PASS. Original matrix was not rerun or weakened. Together both
+diagnostic attempts used51.7864sec and seven runs under their separate authorizations.
+Timed M22 validation total is341.73sec before index/bookkeeping checks; no budget reset.
+
+The two actual maps are identical and each matches its run's occurrence/nuclei. All
+three corresponding effective keys, complete raw attempt records, die spans (six),
+faces (4,4,6) and standing modifiers (0,2,0) agree. At the scored-reason projection,
+only contact-two's situational modifier changes, from0 to1 with target recognition.
+
+| Action | Target recognized | Other candidate recognized |
+| --- | ---: | ---: |
+| configurable-water | 4 | 4 |
+| contact-one | 6 | 6 |
+| contact-two | 7 | 6 |
+
+Target recognition produces a unique contact-two leader, so there is no tie draw.
+Other-candidate recognition produces contact-one/contact-two leaders; the accepted
+conditional tie draw selects contact-one. Thus the branch-only draw is downstream
+of the changed score, not evidence that corresponding reason dice were uncoupled.
+The observed choice difference involves that tie outcome: with the other tie outcome,
+both branches would select contact-two. Do not claim choice changes for every draw.
+
+Exact maps/run identities, nuclei, raw draws, scores/leaders and tie record are retained:
+[target projection](ASSEMBLED_CHARACTER_M22_SEED6_TARGET.json) (18830 bytes) and
+[other projection](ASSEMBLED_CHARACTER_M22_SEED6_OTHER.json) (20969 bytes).
+Production and recognition/comparison fixture sources match522f18dd; no law or input
+change. Static evidence reconciliation and document/evidence budgets PASS. The prior
+decoder failure and both attempts remain in the same raw log. Verification stops here.
+
+Recommendation, NOT applied: amend the added strict assertion to require identical
+raw draws for corresponding reason addresses (and corresponding tie addresses when
+both execute), while allowing a branch-only tie only when retained computed scores
+prove that branch alone ties. Keep the changed-choice requirement and report the
+conditional tie outcome explicitly. For this pair, spans and faces also match exactly.
+The original stricter failure remains evidence. After that explicit interpretation is
+approved, complete the already-planned privacy/correction/restore/rollback/conformance
+and regression checks within the original remaining budget; add no new area. Diagnosis
+alone grants no M22 PASS, broader recognition qualification or obligation closure.

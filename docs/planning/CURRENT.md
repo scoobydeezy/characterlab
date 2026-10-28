@@ -1,41 +1,35 @@
-# Current work — M22 corrected diagnosis authorized
+# Current work — M22 diagnosis explains the conditional tie
 
-The candidate connects Campaign1 recognition to person learning and later reasons.
-M22 is INCOMPLETE. Only seed6 changed choice, with one unmatched conditional tie draw;
-no changed pair had every executed draw matched. Do not retune or continue breadth.
+Recognition changes learned person belief, later reasons and the first choice in
+seed6. The corrected diagnosis passed: shared reason dice are identical; a +1 score
+modifier removes a tie. M22 remains INCOMPLETE pending explicit gate interpretation
+and its unfinished controls. No further execution or breadth is authorized here.
 
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
-- [Result and proposed bounded diagnosis](ASSEMBLED_CHARACTER_M22_RESULT.md).
-- [Raw failures/checks](ASSEMBLED_CHARACTER_M22_CHECKS.txt).
-- [Pre-implementation contract](../formal/ASSEMBLED_CHARACTER_RECOGNITION_CONTRACT.md),
-  plan63b5fe1; rules/registry0.23 is an unqualified local candidate.
-- Fixed16 runs all reach10:26 common draw keys, one unmatched tie, one changed choice.
-  Actual tracks/classifications/resolutions and target belief2 versus0 are present;
-  appraisal/reasons differ. This is not a fully matched behavioral PASS.
-- The test imposed a stricter all-executed-draws match than the contract's common-draw
-  wording. Preserve the failure; do not remove the assertion to manufacture acceptance.
-- Owner approved diagnosis of the same seed6 pair through3: exact nuclei, raw
-  draws/faces, scores, leaders and tie;120sec/two small projections. No gate amendment.
-- Preparation found maps were not retained. Unchanged fixture needs two identity-only
-  setup runs before the diagnostic pair. Owner approved FOUR runs total within120sec.
-  Same source/inputs/laws/map generator; no contrast or seed search.
-- Diagnosis failed in24.611sec after three of four allowed runs: its decoder rejected
-  coupled draw411/2 by requiring411/1. No projections saved; no causal finding.
-  Corrected to the existing successor decoder; correction not simulation-tested.
-  Owner now approved FOUR fresh runs with a90sec cap for the corrected diagnosis.
-  Preserve the prior failure; no other contrast, law or acceptance change authorized.
-- Diagnostic edits only the existing recognition test (11-file package unchanged),
-  existing log/result and at most two projections. Run only its diagnostic selector,
-  under a90sec process timeout; compare effective keys, raw candidates, spans, faces,
-  signed modifiers, scores and leader sets. Finish with explanation, not M22 acceptance.
-- All planned correction/privacy/restore/rollback controls and C1/M19/M21b regressions
-  remain pending. No M22 qualification, reduction, debt closure or UI authorization.
-- Package11 production/test files; original1800sec validation/600sec command cap and
-  20 evidence files/5MiB remain. Failed attempts count. No budget reset on continuation.
-- M21b15a0210d remains the last completed milestone. Historical C0-C3 controls unchanged.
-  Canonical semantic owners now join the same state; no independent runtime or save.
-- RO-C3-014 recognition trigger explicitly recorded; broad SOCIAL claims remain open.
-  RO-C3-016 relationship ingress stays controlled and is not qualified by M22.
-- One holder,1..3 tasks/actions and bounded templates/physical primitives remain.
-  Multi-character work/autonomous partners remain deferred, not a prerequisite.
+- [Result, exact score table and recommendation](ASSEMBLED_CHARACTER_M22_RESULT.md).
+- [Raw failures/checks](ASSEMBLED_CHARACTER_M22_CHECKS.txt); two linked seed6 projections
+  retain exact maps, run identities, nuclei, draws, scores and tie record.
+- [Contract](../formal/ASSEMBLED_CHARACTER_RECOGNITION_CONTRACT.md), plan63b5fe1;
+  rules/registry0.23 remains an unqualified local candidate.
+- Original16-run matrix: all reach10;26 common keys, one unmatched conditional tie,
+  one changed choice. The added all-executed-draws-matched assertion remains FAILED.
+- Initial diagnosis used3 runs/24.611sec then failed in diagnostic decoder411/1.
+  Corrected decoder typecheck PASS. Owner approved4 fresh runs/90sec; corrected
+  diagnosis PASS in27.1754sec. No inputs/laws/seeds/map-generation changes.
+- Both branches use the same three reason draws, die spans and faces. Scores are
+  water4/contact-one6/contact-two7 versus4/6/6. The latter branch's tie selects
+  contact-one; the former selects contact-two without a tie. No every-draw claim.
+- Recommendation ONLY: couple corresponding draws; permit a branch-only tie when
+  exact computed leaders explain it. Keep the choice gate and retain the old failure.
+  Acceptance/test assertion has NOT been amended. No more diagnostic retries needed.
+- Next after explicit gate interpretation: complete existing ambiguity/correction,
+  privacy, repeat/restore, authority/rollback, C1 conformance and M19/M21b regressions.
+  No added psychology, UI, autonomous partners or multi-character dependency.
+- Package11 production/test files;20 evidence files/5MiB limit. Timed validation
+  ~341.73sec of1800sec (including failures/types), before index/bookkeeping checks.
+  Original600sec command cap and one validation job remain. No budget reset.
+- M21b15a0210d is last completed. Production/recognition/comparison fixtures remain
+  exact to522f18dd; historical C0-C3 controls and105-blob preservation unchanged.
+- RO-C3-014 bounded recognition trigger remains unclosed; RO-C3-016 relationship
+  ingress stays controlled. No21-member/15-family/132-clause closure inferred.
