@@ -1,4 +1,4 @@
-# Current work — M22 stopped at its behavioral gate
+# Current work — M22 bounded diagnosis
 
 The candidate connects Campaign1 recognition to person learning and later reasons.
 M22 is INCOMPLETE. Only seed6 changed choice, with one unmatched conditional tie draw;
@@ -15,9 +15,15 @@ no changed pair had every executed draw matched. Do not retune or continue bread
   appraisal/reasons differ. This is not a fully matched behavioral PASS.
 - The test imposed a stricter all-executed-draws match than the contract's common-draw
   wording. Preserve the failure; do not remove the assertion to manufacture acceptance.
-- Next owner decision: diagnose only the same seed6 pair through3, retaining exact
-  nuclei/faces/scores/leader sets/tie. Two runs,120sec,two small projections maximum;
-  no changed contrast/seed/law/parameters. Then report; no automatic gate amendment.
+- Owner approved diagnosis of the same seed6 pair through3: exact nuclei, raw
+  draws/faces, scores, leaders and tie;120sec/two small projections. No gate amendment.
+- Preparation found maps were not retained. Unchanged fixture needs two identity-only
+  setup runs before the diagnostic pair. Four-run allowance requested; execution waits
+  for that answer. Same source/inputs/laws/map generator; no contrast or seed search.
+- Diagnostic edits only the existing recognition test (11-file package unchanged),
+  existing log/result and at most two projections. Run only its diagnostic selector,
+  under a120sec process timeout; compare effective keys, raw candidates, spans, faces,
+  signed modifiers, scores and leader sets. Finish with explanation, not M22 acceptance.
 - All planned correction/privacy/restore/rollback controls and C1/M19/M21b regressions
   remain pending. No M22 qualification, reduction, debt closure or UI authorization.
 - Package11 production/test files; original1800sec validation/600sec command cap and
