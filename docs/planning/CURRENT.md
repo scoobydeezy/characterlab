@@ -18,8 +18,8 @@ no changed pair had every executed draw matched. Do not retune or continue bread
 - Owner approved diagnosis of the same seed6 pair through3: exact nuclei, raw
   draws/faces, scores, leaders and tie;120sec/two small projections. No gate amendment.
 - Preparation found maps were not retained. Unchanged fixture needs two identity-only
-  setup runs before the diagnostic pair. Four-run allowance requested; execution waits
-  for that answer. Same source/inputs/laws/map generator; no contrast or seed search.
+  setup runs before the diagnostic pair. Owner approved FOUR runs total within120sec.
+  Same source/inputs/laws/map generator; no contrast or seed search.
 - Diagnostic edits only the existing recognition test (11-file package unchanged),
   existing log/result and at most two projections. Run only its diagnostic selector,
   under a120sec process timeout; compare effective keys, raw candidates, spans, faces,

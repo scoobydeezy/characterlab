@@ -66,7 +66,7 @@ Preparation found that neither preflight map was retained in the original eviden
 The unchanged fixture generates them with two seed0 identity-only setup runs before
 the seed6 pair. Those are real executions and count against the run budget. Requested
 allowance: four runs total, all through3, within the unchanged120sec process cap.
-This allowance is pending; no diagnostic/setup runs have been executed on this turn.
+Owner approved four runs total within120sec before execution. No other scope changed.
 The diagnostic is prepared, UNTESTED, in the existing recognition test. It preserves
 the failed matrix assertion and adds no production changes. Plan43c709f7 preceded it.
 It checks the regenerated map against the diagnostic run's actual occurrence/nuclei,
