@@ -37,11 +37,11 @@ A (component checks PASS,5 files): assembled/taskDeclarations.ts, cognitiveDecla
 configurationTopology.ts; test fixture assembledConfiguration.ts and admission test.
 Only declaration components; public model still rejects the widened version.
 
-B (next,11 files): strategy and strategyExecution; actionBody; priority and priorityExecution;
+B (component checks PASS,11 files): strategy and strategyExecution; actionBody; priority and priorityExecution;
 horizon and horizonExecution; performance and performanceExecution; social; consumer
 boundary test. Complete task/route allocation coverage; public admission stays closed.
 
-C (12 files): model, traceBinding, runtime, execution, workspace, reasons, random,
+C (next,12 files): model, traceBinding, runtime, execution, workspace, reasons, random,
 arbitration; configurationMath and configurationWorkspace; integration test and the
 existing configuration fixture. Activate only after A/B are checkpointed and verified.
 No broad cleanup or new state owner. Record aggregate file count honestly across packages.
@@ -57,3 +57,6 @@ follows widening; no intervening psychology or UI work.
 Package A: declaration tests3/3 PASS; public0.22 rejection confirmed before activation.
 The permanent version-negative uses an unknown version so later0.22 activation does
 not invalidate it. No public widening or milestone pass claimed.
+
+Package B: three-task consumer checks and9 visible/hidden/absent projection cases PASS.
+Feedback reservation uses full routes; actual feedback projection is checked in C.

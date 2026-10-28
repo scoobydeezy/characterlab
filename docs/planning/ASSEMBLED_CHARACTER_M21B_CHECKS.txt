@@ -16,3 +16,17 @@ src/test/fixtures/assembledConfiguration.ts(20,52): error TS2345: Argument of ty
   Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
 A-types exit=2 seconds=14.4830521
 A-types-correction exit=0 seconds=14.4277388
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledConfigurationConsumers.test.ts (2 tests) 5550ms
+   ✓ M21b complete consumer domains > requires complete strategy/body mappings and admits three-task priority/horizon/feedback/social 1565ms
+   ✓ M21b complete consumer domains > reserves all declared projection slots regardless of visibility or absent rows 3985ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  21:29:59
+   Duration  8.36s (transform 1.59s, setup 0ms, collect 2.43s, tests 5.55s, environment 0ms, prepare 130ms)
+
+B-consumers exit=0 seconds=8.8716959
+B-types exit=0 seconds=14.2167747
