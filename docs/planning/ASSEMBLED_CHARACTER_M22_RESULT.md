@@ -72,3 +72,22 @@ the failed matrix assertion and adds no production changes. Plan43c709f7 precede
 It checks the regenerated map against the diagnostic run's actual occurrence/nuclei,
 then retains map/run identities, exact nuclei/draws, scores and tie in two projections.
 M21b remains the last completed milestone; M22 controls and acceptance stay pending.
+
+## Diagnostic attempt — stopped; no causal conclusion
+
+Approved four-run attempt used24.611sec: both seed0 identity-only setups and the
+first seed6 target run reached3. Projection then failed at the diagnostic's call to
+legacy dataRecord(draw,411), which requires411/1; coupled records are411/2. The second
+seed6 run never started. This is a diagnostic-code defect, not a simulation failure.
+The raw stack is retained in the existing checks log. No score projections were saved.
+
+Corrected the call to the existing assembled randomDrawRecord decoder. Prepared
+logging of both exact maps immediately after setup so subsequent projection failure
+cannot hide them. Neither change touches simulation source, fixture inputs, law,
+seeds, map generation or acceptance. The correction has not been simulation-tested.
+Three of four authorized runs were consumed; recreating the entire diagnostic now
+requires four fresh runs, so no rerun was attempted. The120sec limit is not permission
+to exceed the run count. No score/tie explanation or gate amendment can follow from
+this attempt. M22 remains INCOMPLETE; M21b remains last completed. Timed M22 validation
+including this failure and the corrected test typecheck is314.56sec before index
+checks. Corrected test typecheck PASS in14.897sec; no simulation rerun was performed.

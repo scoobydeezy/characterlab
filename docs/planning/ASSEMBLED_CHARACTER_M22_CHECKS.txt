@@ -78,3 +78,42 @@ M22-checkpoint-boundaries exit=0 seconds=2.6076114
 PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
 M22-checkpoint-research exit=0 seconds=4.209583
 PASS checkpoint only:105 frozen blobs exact, 105 Git-declared CRLF conversions only; historical sources and M19/M21b tests unchanged;11 code-test files/document caps/two evidence files within5MiB. M22 remains INCOMPLETE. M22-checkpoint-source-docs exit=0 seconds=9.904862799914554
+
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRecognition.test.ts > diagnosis: unchanged M22 seed6 scores and conditional tie
+M22 preflight {"targetCue":true,"draws":3,"belief":2,"resolutions":1}
+
+stdout | src/test/assembledRecognition.test.ts > diagnosis: unchanged M22 seed6 scores and conditional tie
+M22 preflight {"targetCue":false,"draws":4,"belief":0,"resolutions":1}
+
+ ❯ src/test/assembledRecognition.test.ts (2 tests | 1 failed | 1 skipped) 18594ms
+   × diagnosis: unchanged M22 seed6 scores and conditional tie 18593ms
+     → requires 411/1
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledRecognition.test.ts > diagnosis: unchanged M22 seed6 scores and conditional tie
+SchedulerContractError: requires 411/1
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataRecord src/campaign2/canonicalData.ts:9:117
+ ❯ src/test/assembledRecognition.test.ts:52:15
+ ❯ src/test/assembledRecognition.test.ts:49:44
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 skipped (2)
+   Start at  09:22:10
+   Duration  22.07s (transform 1.67s, setup 0ms, collect 2.53s, tests 18.59s, environment 0ms, prepare 527ms)
+
+
+M22-approved-diagnosis exit=1 timeout=False seconds=24.6110
+M22-diagnostic-correction-types exit=0 seconds=14.8973549

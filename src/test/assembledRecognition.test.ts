@@ -1,6 +1,7 @@
 import {describe,it,expect} from 'vitest';
 import {prepareCharacterModel,createCharacterRun,restoreCharacterRun} from '../assembled/character';
 import {restoreAuthoritativeState} from '../substrate/state';
+import {randomDrawRecord} from '../assembled/codecs';
 import {list,type CanonicalValue} from '../substrate/canonicalEncoding';
 import {dataRecord as rec,dataField as f,dataUnsigned as uint,dataIdentity as id,dataText as txt} from '../campaign2/canonicalData';
 import {personPath,personHistory,SOCIAL_APPRAISAL} from '../assembled/social';
@@ -35,6 +36,7 @@ it('diagnosis: unchanged M22 seed6 scores and conditional tie',async()=>{
  const signed=(v:CanonicalValue)=>{if(typeof v==='boolean'||v.kind!=='signed')throw Error('signed score');return v.value;};
  const action=(v:CanonicalValue)=>txt(id(f(rec(v,395n),2n)).payload);
  const projections=[];
+ for(const [branch,map]of maps.entries())console.info('M22_DIAG_MAP '+JSON.stringify({branch:branch?'other':'target',comparisonMap:key(map.canonicalValue)}));
  for(const [branch,cue]of [true,false].entries()){
   const input=mapped(cue,6,maps[branch]),run=await createCharacterRun(model,input);await through(run,3n);
   expect(run.diagnostic()).toBeUndefined();
@@ -49,7 +51,7 @@ it('diagnosis: unchanged M22 seed6 scores and conditional tie',async()=>{
   const reasons=items(f(result,9n),'list').map(v=>{
    const sample=rec(v,422n),nk=rec(f(sample,1n),404n),candidate=f(nk,1n);
    const nucleus=nuclei.find(n=>key(f(rec(n,407n),1n))===key(nk))!;
-   const draw=rec(f(sample,5n),411n),face=uint(f(sample,6n));
+   const draw=randomDrawRecord(f(sample,5n)),face=uint(f(sample,6n));
    const standing=signed(f(sample,3n)),situational=signed(f(sample,4n));
    const contribution=(uint(f(nk,4n))===1n?1n:-1n)*(face+standing+situational);
    expect(contribution).toBe(signed(f(sample,7n)));expect(face).toBe(uint(f(draw,3n))+1n);

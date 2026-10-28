@@ -1,4 +1,4 @@
-# Current work — M22 bounded diagnosis
+# Current work — M22 diagnosis stopped on diagnostic-code failure
 
 The candidate connects Campaign1 recognition to person learning and later reasons.
 M22 is INCOMPLETE. Only seed6 changed choice, with one unmatched conditional tie draw;
@@ -20,6 +20,11 @@ no changed pair had every executed draw matched. Do not retune or continue bread
 - Preparation found maps were not retained. Unchanged fixture needs two identity-only
   setup runs before the diagnostic pair. Owner approved FOUR runs total within120sec.
   Same source/inputs/laws/map generator; no contrast or seed search.
+- Diagnosis failed in24.611sec after three of four allowed runs: its decoder rejected
+  coupled draw411/2 by requiring411/1. No projections saved; no causal finding.
+  Corrected to the existing successor decoder; correction not simulation-tested.
+  A complete rerun needs four fresh runs, beyond the remaining one-run allowance.
+  Preserve failure; do not execute another pair without an explicit run-budget amendment.
 - Diagnostic edits only the existing recognition test (11-file package unchanged),
   existing log/result and at most two projections. Run only its diagnostic selector,
   under a120sec process timeout; compare effective keys, raw candidates, spans, faces,
