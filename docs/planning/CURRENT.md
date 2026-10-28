@@ -1,9 +1,9 @@
-# Current work — M22 diagnosis explains the conditional tie
+# Current work — M22 completion under accepted tie amendment
 
 Recognition changes learned person belief, later reasons and the first choice in
 seed6. The corrected diagnosis passed: shared reason dice are identical; a +1 score
-modifier removes a tie. M22 remains INCOMPLETE pending explicit gate interpretation
-and its unfinished controls. No further execution or breadth is authorized here.
+modifier removes a tie. Owner accepted the recommended gate amendment and continued
+M22. Complete the original controls; no new capabilities or broader integration.
 
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
@@ -20,10 +20,10 @@ and its unfinished controls. No further execution or breadth is authorized here.
 - Both branches use the same three reason draws, die spans and faces. Scores are
   water4/contact-one6/contact-two7 versus4/6/6. The latter branch's tie selects
   contact-one; the former selects contact-two without a tie. No every-draw claim.
-- Recommendation ONLY: couple corresponding draws; permit a branch-only tie when
-  exact computed leaders explain it. Keep the choice gate and retain the old failure.
-  Acceptance/test assertion has NOT been amended. No more diagnostic retries needed.
-- Next after explicit gate interpretation: complete existing ambiguity/correction,
+- Accepted amendment1: couple corresponding draws; permit a branch-only tie only
+  when recomputed leaders explain it. Keep changed-choice gate and original failure.
+  Update the existing matrix test, not fixture inputs/parameters/laws. No seed search.
+- Complete existing ambiguity/correction,
   privacy, repeat/restore, authority/rollback, C1 conformance and M19/M21b regressions.
   No added psychology, UI, autonomous partners or multi-character dependency.
 - Package11 production/test files;20 evidence files/5MiB limit. Timed validation
@@ -33,3 +33,20 @@ and its unfinished controls. No further execution or breadth is authorized here.
   exact to522f18dd; historical C0-C3 controls and105-blob preservation unchanged.
 - RO-C3-014 bounded recognition trigger remains unclosed; RO-C3-016 relationship
   ingress stays controlled. No21-member/15-family/132-clause closure inferred.
+
+## Bounded completion card (before test edits)
+
+- Same two contract capabilities; same11 code/test files. Edit existing recognition
+  test only unless a demonstrated integration defect requires an in-scope correction.
+- Re-run fixed16-run matrix with score/leader and draw-correspondence assertions.
+- Focused controls: hidden referent, denied access, ambiguity/missing/false appearance,
+  mistaken recognition/replacement/withdrawal; repeat seed0/restore2&3 through10;
+  bound catalog/initial-state/source rejection, wrong owner/rewrite and late rollback.
+- Direct accepted recognition-law comparison plus unchanged C1 tracking/classification/
+  recognition/state/phase tests. Run unchanged assembledSocial.test.ts and
+  assembledConfiguration.test.ts; types/boundaries/research/frozen-blob/index gates.
+- One job at a time;600sec/command, remaining~1458sec of original1800sec total.
+  Expected matrix230sec, controls200sec, social400sec, configuration350sec,
+  conformance/static60sec. Failures count; stop incomplete at cap, never trim controls.
+- Keep20 evidence files/5MiB, existing result/log and two diagnostic projections.
+  Done only when amended matrix AND all listed checks pass; then report and stop.

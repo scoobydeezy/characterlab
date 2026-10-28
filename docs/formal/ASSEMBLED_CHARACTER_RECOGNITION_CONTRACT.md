@@ -86,3 +86,15 @@ assembledRecognition.test.ts. Split/checkpoint BEFORE a twelfth-file overflow.
 At most1800sec total validation including failures/retries,600sec/command, one job;
 20 evidence files/5MiB. Stop on pass, cap or failed contrast; do not trim checks.
 No UI, owner registry, framework, additional psychology or multi-character dependency.
+
+## Comparison amendment1 — owner accepted2026-10-28
+
+After the retained seed6 diagnosis, the owner authorized continuing under the proposed
+conditional-tie rule. Preserve the original strict failure and diagnosis. Require
+identical raw candidate prefixes at every corresponding reason/tie address; no
+unmatched reason draws. A branch-only tie is allowed ONLY if recomputed scores and
+ordered leaders prove that branch alone ties, and its actual draw selects the stored
+winner. Both branches' corresponding draws remain coupled; retain spans/faces and
+report any differences. Require at least one changed actual choice, with no tuning,
+replacement seeds or contrast. This changes the added test gate, not simulation laws,
+source grammar, scope, or the original requirement for a coupled behavioral witness.
