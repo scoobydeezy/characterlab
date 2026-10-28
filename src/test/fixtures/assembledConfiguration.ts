@@ -3,7 +3,7 @@ import {semanticReferentFromAuthoredContent as ref} from '../../substrate/refere
 import {AuthoritativeState,restoreAuthoritativeState} from '../../substrate/state';
 import {dataItems as items,dataRecord as rec,dataField as f,dataKey as key,dataIdentity as id} from '../../campaign2/canonicalData';
 import {cognitiveRecord as r} from '../../campaign2/cognitiveCodecs';
-import {decodeEmbodied as decode} from '../../campaign3/embodiedCodecs';
+import {decodeCognitive as decode} from '../../assembled/codecs';
 import {relationshipSource,relationshipData} from './assembledRelationship';
 import {walk,C} from './campaign2Cognitive';
 import {replace,changeDefinition} from './assembledCharacter';
@@ -37,3 +37,13 @@ export function configurationData(participant=true,seed=0){
 }
 export const baseRegistry=(s:ReturnType<typeof configurationSource>)=>enc(list(items(decode(s.registry),'list').slice(0,6)));
 export {decode,items,rec,f,key,enc,list,set,replace,walk};
+
+export function reducedSource(){
+ const s=configurationSource(),slots=[...items(decode(s.registry),'list')],keepTask=sid(1038,'content/task-a'),keepSpec=sid(1027,'definition/task-a'),keepAction=sid(1027,'definition/protocol-contact-one');
+ const rows=items(slots[0],'set').filter(v=>{if(typeof v==='boolean'||v.kind!=='record'||v.schema.typeId!==171n)return true;const kind=key(f(v,2n)),stable=key(f(v,1n));return kind===key(sid(1023,'registry/task-commitment-spec'))?stable===key(keepSpec):kind===key(sid(1023,'registry/protocol-action'))?stable===key(keepAction):stable!==key(newInstruction);});
+ slots[0]=walk(set(rows),v=>typeof v!=='boolean'&&v.kind==='record'?[374n,416n].includes(v.schema.typeId)?replace(v,2n,set([keepSpec])):v.schema.typeId===389n?replace(v,1n,keepAction):v:v);
+ const task=r(371,[C,ref(keepTask)]),strategy=items(slots[12],'list');slots[12]=list([strategy[0],list([list([task,sid(1027,'definition/task-instruction-one'),sid(1027,'definition/task-instruction-two')])])]);
+ const body=items(slots[10],'list');slots[10]=list([body[0],body[1],set(items(body[2],'set').filter(v=>key(items(v,'list')[0])===key(keepAction)))]);
+ const social=items(slots[19],'list');slots[19]=list([social[0],social[1],list([list([task,true])])]);
+ return {...s,content:enc(set(items(decode(s.content),'set').filter(v=>key(f(rec(v,170n),1n))===key(keepTask)||key(f(rec(v,170n),2n))===key(sid(1004,'semantic-kind/character'))))),registry:enc(list(slots))};
+}

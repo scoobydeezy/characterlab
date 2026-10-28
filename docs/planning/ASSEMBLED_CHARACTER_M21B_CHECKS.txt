@@ -31,3 +31,410 @@ A-types-correction exit=0 seconds=14.4277388
 B-consumers exit=0 seconds=8.8716959
 B-types exit=0 seconds=14.2167747
 C-types exit=0 seconds=14.5479414
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledConfiguration.test.ts (5 tests | 1 failed | 3 skipped) 6325ms
+   × M21b one configurable character > admission: arbitrary names, reduced configuration and malformed coverage/topology 6320ms
+     → strategy task/routes
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledConfiguration.test.ts > M21b one configurable character > admission: arbitrary names, reduced configuration and malformed coverage/topology
+SchedulerContractError: strategy task/routes
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ require src/assembled/strategy.ts:15:44
+ ❯ src/assembled/strategy.ts:19:66
+ ❯ Module.compileStrategy src/assembled/strategy.ts:19:34
+ ❯ Module.compileCharacterModel src/assembled/model.ts:143:33
+ ❯ Module.prepareCharacterModel src/assembled/character.ts:24:110
+ ❯ src/test/assembledConfiguration.test.ts:39:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed | 3 skipped (5)
+   Start at  21:39:15
+   Duration  9.21s (transform 1.65s, setup 0ms, collect 2.52s, tests 6.33s, environment 0ms, prepare 121ms)
+
+D-domain-math exit=1 seconds=9.7424405
+
+Correction: renamed-ID test must traverse typed semantic origin payloads as well as content rows; the existing walk helper intentionally skips identifier payloads. Production correctly rejected the inconsistent reference. No admission invariant relaxed.
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledConfiguration.test.ts (5 tests | 1 failed | 4 skipped) 6588ms
+   × M21b one configurable character > admission: arbitrary names, reduced configuration and malformed coverage/topology 6588ms
+     → Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledConfiguration.test.ts > M21b one configurable character > admission: arbitrary names, reduced configuration and malformed coverage/topology
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 4 skipped (5)
+   Start at  21:40:02
+   Duration  9.86s (transform 1.63s, setup 0ms, collect 2.47s, tests 6.59s, environment 0ms, prepare 128ms)
+
+D-renamed-reference-correction exit=1 seconds=10.3761857
+
+Correction: the multiple-model admission test needs an explicit60s test timeout instead of Vitest default5s. The command cap600s and total1800s are unchanged; no cases removed.
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledConfiguration.test.ts > M21b one configurable character > matrix: three genuine candidates and acquired history change choice under coupled entropy
+M21b preflight {"participant":true,"mode":3,"draws":3}
+
+stdout | src/test/assembledConfiguration.test.ts > M21b one configurable character > matrix: three genuine candidates and acquired history change choice under coupled entropy
+M21b preflight {"participant":false,"mode":3,"draws":3}
+
+ ❯ src/test/assembledConfiguration.test.ts (5 tests | 1 failed | 3 skipped) 31060ms
+   ✓ M21b one configurable character > admission: arbitrary names, reduced configuration and malformed coverage/topology 8265ms
+   × M21b one configurable character > matrix: three genuine candidates and acquired history change choice under coupled entropy 22793ms
+     → unknown record schema 411/2
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledConfiguration.test.ts > M21b one configurable character > matrix: three genuine candidates and acquired history change choice under coupled entropy
+CanonicalEncodingError: unknown record schema 411/2
+ ❯ fail src/substrate/canonicalEncoding.ts:430:9
+    428| 
+    429| function fail(message: string): never {
+    430|   throw new CanonicalEncodingError(message);
+       |         ^
+    431| }
+    432| 
+ ❯ Reader.readRecord src/substrate/canonicalEncoding.ts:348:18
+ ❯ Reader.readValue src/substrate/canonicalEncoding.ts:257:36
+ ❯ Reader.readRecord src/substrate/canonicalEncoding.ts:359:34
+ ❯ Reader.readValue src/substrate/canonicalEncoding.ts:257:36
+ ❯ src/substrate/canonicalEncoding.ts:254:90
+ ❯ Reader.readMany src/substrate/canonicalEncoding.ts:367:64
+ ❯ Reader.readValue src/substrate/canonicalEncoding.ts:254:39
+ ❯ Reader.readRecord src/substrate/canonicalEncoding.ts:359:34
+ ❯ Reader.readValue src/substrate/canonicalEncoding.ts:257:36
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed | 3 skipped (5)
+   Start at  21:40:41
+   Duration  33.92s (transform 1.63s, setup 0ms, collect 2.48s, tests 31.06s, environment 0ms, prepare 124ms)
+
+D-admission-matrix exit=1 seconds=34.4400199
+
+Correction: configuration test reports were decoded with the pre-coupling embodied codec, which rejects genuine411/2 traces. Use the existing assembled receiving codec in the test fixture. Production completed the mapped first decision; no production receiving semantics changed.
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledConfiguration.test.ts > M21b one configurable character > matrix: three genuine candidates and acquired history change choice under coupled entropy
+M21b preflight {"participant":true,"mode":3,"draws":3}
+
+stdout | src/test/assembledConfiguration.test.ts > M21b one configurable character > matrix: three genuine candidates and acquired history change choice under coupled entropy
+M21b preflight {"participant":false,"mode":3,"draws":3}
+
+stdout | src/test/assembledConfiguration.test.ts > M21b one configurable character > matrix: three genuine candidates and acquired history change choice under coupled entropy
+M21b cell {"seed":0,"a":"definition/configurable-water","b":"definition/configurable-water","common":3,"draws":6}
+
+stdout | src/test/assembledConfiguration.test.ts > M21b one configurable character > matrix: three genuine candidates and acquired history change choice under coupled entropy
+M21b cell {"seed":1,"a":"definition/protocol-contact-one","b":"definition/configurable-water","common":3,"draws":7}
+
+stdout | src/test/assembledConfiguration.test.ts > M21b one configurable character > matrix: three genuine candidates and acquired history change choice under coupled entropy
+M21b cell {"seed":2,"a":"definition/configurable-water","b":"definition/configurable-water","common":3,"draws":7}
+
+stdout | src/test/assembledConfiguration.test.ts > M21b one configurable character > matrix: three genuine candidates and acquired history change choice under coupled entropy
+M21b cell {"seed":3,"a":"definition/configurable-water","b":"definition/configurable-water","common":3,"draws":6}
+
+stdout | src/test/assembledConfiguration.test.ts > M21b one configurable character > matrix: three genuine candidates and acquired history change choice under coupled entropy
+M21b cell {"seed":4,"a":"definition/protocol-contact-two","b":"definition/protocol-contact-two","common":3,"draws":6}
+
+stdout | src/test/assembledConfiguration.test.ts > M21b one configurable character > matrix: three genuine candidates and acquired history change choice under coupled entropy
+M21b cell {"seed":5,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-two","common":3,"draws":6}
+
+stdout | src/test/assembledConfiguration.test.ts > M21b one configurable character > matrix: three genuine candidates and acquired history change choice under coupled entropy
+M21b cell {"seed":6,"a":"definition/protocol-contact-two","b":"definition/protocol-contact-two","common":3,"draws":6}
+
+stdout | src/test/assembledConfiguration.test.ts > M21b one configurable character > matrix: three genuine candidates and acquired history change choice under coupled entropy
+M21b cell {"seed":7,"a":"definition/configurable-water","b":"definition/configurable-water","common":3,"draws":6}
+
+stdout | src/test/assembledConfiguration.test.ts > M21b one configurable character > matrix: three genuine candidates and acquired history change choice under coupled entropy
+M21b matrix {"runs":16,"changed":[1,5],"common":24,"unmatched":2,"thirdActionExecutions":15,"terminal":10}
+
+ ✓ src/test/assembledConfiguration.test.ts (5 tests | 4 skipped) 227976ms
+   ✓ M21b one configurable character > matrix: three genuine candidates and acquired history change choice under coupled entropy 227975ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 4 skipped (5)
+   Start at  21:41:59
+   Duration  230.86s (transform 1.64s, setup 0ms, collect 2.49s, tests 227.98s, environment 0ms, prepare 118ms)
+
+D-matrix-receiving-correction exit=0 seconds=231.3632612
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledConfiguration.test.ts > M21b one configurable character > continuation: exact repeat, restores2/3, hidden truth, learned-S0 rejection and rollback
+M21b preflight {"participant":true,"mode":3,"draws":3}
+
+stdout | src/test/assembledConfiguration.test.ts > M21b one configurable character > continuation: exact repeat, restores2/3, hidden truth, learned-S0 rejection and rollback
+M21b preflight {"participant":false,"mode":3,"draws":3}
+
+stdout | src/test/assembledConfiguration.test.ts > M21b one configurable character > continuation: exact repeat, restores2/3, hidden truth, learned-S0 rejection and rollback
+M21b continuation: repeat/restores2/3/hidden truth/learned-S0/rollback/three-leader tie PASS
+
+ ✓ src/test/assembledConfiguration.test.ts (5 tests | 3 skipped) 114764ms
+   ✓ M21b one configurable character > continuation: exact repeat, restores2/3, hidden truth, learned-S0 rejection and rollback 102747ms
+   ✓ M21b one configurable character > feedback: all three selected task reports get real identities; hidden rows preserve later allocation 12016ms
+stdout | src/test/assembledConfiguration.test.ts > M21b one configurable character > feedback: all three selected task reports get real identities; hidden rows preserve later allocation
+M21b three-target feedback IDs and later qualification allocation PASS
+
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 3 skipped (5)
+   Start at  21:47:10
+   Duration  117.74s (transform 1.63s, setup 0ms, collect 2.48s, tests 114.76s, environment 0ms, prepare 119ms)
+
+D-continuation-feedback exit=0 seconds=118.2789074
+D-final-types exit=0 seconds=14.4004115
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > baseline preserves every semantic boundary and addressed draw
+M2a control baseline: 8 instants, 9 exact coupled draws
+
+stdout | src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > deadline overlap preserves every semantic boundary and addressed draw
+M2a control deadline overlap: 6 instants, 0 exact coupled draws
+
+stdout | src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > equal criteria preserves every semantic boundary and addressed draw
+M2a control equal criteria: 8 instants, 6 exact coupled draws
+
+stdout | src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > non-preset prepares, learns, decides, repeats and restores the whole run
+M2a non-preset: 8 instants; learned prediction, decision, repeat and restore exact
+
+ ✓ src/test/assembledAdmission.test.ts (18 tests) 148906ms
+   ✓ M2a invariant admission and one continuing successor > baseline preserves every semantic boundary and addressed draw 25320ms
+   ✓ M2a invariant admission and one continuing successor > deadline overlap preserves every semantic boundary and addressed draw 7370ms
+   ✓ M2a invariant admission and one continuing successor > equal criteria preserves every semantic boundary and addressed draw 20393ms
+   ✓ M2a invariant admission and one continuing successor > non-preset prepares, learns, decides, repeats and restores the whole run 80642ms
+   ✓ M2a invariant admission and one continuing successor > rejects overlapping authority before publishing a model 325ms
+   ✓ M2a invariant admission and one continuing successor > rejects undeclared topology before publishing a model 388ms
+   ✓ M2a invariant admission and one continuing successor > rejects unsupported versions/schema and executable or mutable source substitution 2922ms
+   ✓ M2a invariant admission and one continuing successor > rejects invented learned S0 and foreign observer evidence, and rolls back a tiny work budget 3313ms
+   ✓ M2a invariant admission and one continuing successor > binds restore to its model, inputs and every saved byte 6429ms
+
+ Test Files  1 passed (1)
+      Tests  18 passed (18)
+   Start at  21:49:42
+   Duration  151.77s (transform 1.59s, setup 0ms, collect 2.42s, tests 148.91s, environment 0ms, prepare 123ms)
+
+Regression-M2a exit=0 seconds=152.3175094
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > matrix16: equal person belief with different own history changes shared reasons and choice
+M20 cell {"seed":0,"cooperation":["definition/protocol-contact-one","definition/protocol-contact-two","definition/protocol-contact-one"],"breach":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > matrix16: equal person belief with different own history changes shared reasons and choice
+M20 cell {"seed":1,"cooperation":["definition/protocol-contact-one","definition/protocol-contact-one","definition/protocol-contact-one"],"breach":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > matrix16: equal person belief with different own history changes shared reasons and choice
+M20 cell {"seed":2,"cooperation":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-one"],"breach":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > matrix16: equal person belief with different own history changes shared reasons and choice
+M20 cell {"seed":3,"cooperation":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"],"breach":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > matrix16: equal person belief with different own history changes shared reasons and choice
+M20 cell {"seed":4,"cooperation":["definition/protocol-contact-one","definition/protocol-contact-one","definition/protocol-contact-one"],"breach":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > matrix16: equal person belief with different own history changes shared reasons and choice
+M20 cell {"seed":5,"cooperation":["definition/protocol-contact-one","definition/protocol-contact-two","definition/protocol-contact-two"],"breach":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > matrix16: equal person belief with different own history changes shared reasons and choice
+M20 cell {"seed":6,"cooperation":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-one"],"breach":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > matrix16: equal person belief with different own history changes shared reasons and choice
+M20 cell {"seed":7,"cooperation":["definition/protocol-contact-one","definition/protocol-contact-two","definition/protocol-contact-one"],"breach":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+M20 matrix {"runs":16,"changed":[0,1,2,4,5,6,7],"draws":52,"matched":0,"terminal":10}
+
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > controls: privacy, witnessing, statement versus repair, absence and existing identity
+M20 controls:10 full runs; privacy/participant/statement/repair/absence/timing/no-contact; identity retained and no base creates no reason
+
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > controls: original REL full scenarios, retained laws, caches and violations
+M20 original REL {"runs":14,"frames":140,"comparisons":80}
+
+ ✓ src/test/assembledRelationship.test.ts (5 tests) 383513ms
+   ✓ M20 assembled relationship > matrix16: equal person belief with different own history changes shared reasons and choice 143085ms
+   ✓ M20 assembled relationship > controls: privacy, witnessing, statement versus repair, absence and existing identity 81671ms
+   ✓ M20 assembled relationship > controls: original REL full scenarios, retained laws, caches and violations 26675ms
+   ✓ M20 assembled relationship > controls: exact repeat and acquired-history restores2/5 through10 113460ms
+   ✓ M20 assembled relationship > controls: admission, owners, genuine evidence, child authentication and whole-instant rollback 18620ms
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > controls: admission, owners, genuine evidence, child authentication and whole-instant rollback
+M20 rollback 48 events, limit47; earlier history retained and shared instant rolled back
+
+
+ Test Files  1 passed (1)
+      Tests  5 passed (5)
+   Start at  21:52:23
+   Duration  386.45s (transform 1.64s, setup 0ms, collect 2.50s, tests 383.51s, environment 0ms, prepare 121ms)
+
+Regression-M20 exit=0 seconds=386.9993312
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > negative matrix: cooperation versus automatic breach has no shared draws
+M21a preflight {"contrast":"breach","history":true,"mode":3,"draws":3}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > negative matrix: cooperation versus automatic breach has no shared draws
+M21a preflight {"contrast":"breach","history":false,"mode":1,"draws":0}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > negative matrix: cooperation versus automatic breach has no shared draws
+M21a cell {"contrast":"breach","seed":0,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-two","draws":2,"common":0,"differentRoots":0,"unmatched":2}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > negative matrix: cooperation versus automatic breach has no shared draws
+M21a cell {"contrast":"breach","seed":1,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-two","draws":2,"common":0,"differentRoots":0,"unmatched":2}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > negative matrix: cooperation versus automatic breach has no shared draws
+M21a cell {"contrast":"breach","seed":2,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-two","draws":2,"common":0,"differentRoots":0,"unmatched":2}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > negative matrix: cooperation versus automatic breach has no shared draws
+M21a cell {"contrast":"breach","seed":3,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-two","draws":2,"common":0,"differentRoots":0,"unmatched":2}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > negative matrix: cooperation versus automatic breach has no shared draws
+M21a cell {"contrast":"breach","seed":4,"a":"definition/protocol-contact-two","b":"definition/protocol-contact-two","draws":2,"common":0,"differentRoots":0,"unmatched":2}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > negative matrix: cooperation versus automatic breach has no shared draws
+M21a cell {"contrast":"breach","seed":5,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-two","draws":2,"common":0,"differentRoots":0,"unmatched":2}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > negative matrix: cooperation versus automatic breach has no shared draws
+M21a cell {"contrast":"breach","seed":6,"a":"definition/protocol-contact-two","b":"definition/protocol-contact-two","draws":2,"common":0,"differentRoots":0,"unmatched":2}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > negative matrix: cooperation versus automatic breach has no shared draws
+M21a cell {"contrast":"breach","seed":7,"a":"definition/protocol-contact-two","b":"definition/protocol-contact-two","draws":3,"common":0,"differentRoots":0,"unmatched":3}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > negative matrix: cooperation versus automatic breach has no shared draws
+M21a matrix {"contrast":"breach","runs":16,"seeds":8,"changedFirstChoices":[0,1,2,3,5],"draws":17,"common":0,"differentRoots":0,"unmatched":17,"laterNatural":34}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+M21a preflight {"contrast":"witness","history":true,"mode":3,"draws":3}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+M21a preflight {"contrast":"witness","history":false,"mode":3,"draws":2}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+M21a cell {"contrast":"witness","seed":0,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-two","draws":4,"common":2,"differentRoots":0,"unmatched":0}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+M21a cell {"contrast":"witness","seed":1,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-two","draws":4,"common":2,"differentRoots":0,"unmatched":0}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+M21a cell {"contrast":"witness","seed":2,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-one","draws":4,"common":2,"differentRoots":0,"unmatched":0}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+M21a cell {"contrast":"witness","seed":3,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-one","draws":5,"common":2,"differentRoots":0,"unmatched":1}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+M21a cell {"contrast":"witness","seed":4,"a":"definition/protocol-contact-two","b":"definition/protocol-contact-two","draws":4,"common":2,"differentRoots":0,"unmatched":0}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+M21a cell {"contrast":"witness","seed":5,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-two","draws":4,"common":2,"differentRoots":0,"unmatched":0}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+M21a cell {"contrast":"witness","seed":6,"a":"definition/protocol-contact-two","b":"definition/protocol-contact-two","draws":4,"common":2,"differentRoots":0,"unmatched":0}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+M21a cell {"contrast":"witness","seed":7,"a":"definition/protocol-contact-two","b":"definition/protocol-contact-two","draws":5,"common":2,"differentRoots":0,"unmatched":1}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+M21a matrix {"contrast":"witness","runs":16,"seeds":8,"changedFirstChoices":[0,1,5],"draws":34,"common":16,"differentRoots":0,"unmatched":2,"laterNatural":67}
+
+ ✓ src/test/assembledComparison.test.ts (5 tests | 3 skipped) 366208ms
+   ✓ M21a explicit comparison foundation > negative matrix: cooperation versus automatic breach has no shared draws 181506ms
+   ✓ M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs 184699ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 3 skipped (5)
+   Start at  21:59:00
+   Duration  369.08s (transform 1.63s, setup 0ms, collect 2.48s, tests 366.21s, environment 0ms, prepare 118ms)
+
+Regression-M21a-matrices exit=0 seconds=369.6356181
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: witness exact repeat and restore2/3 through10
+M21a preflight {"contrast":"witness","history":true,"mode":3,"draws":3}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: witness exact repeat and restore2/3 through10
+M21a preflight {"contrast":"witness","history":false,"mode":3,"draws":2}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: witness exact repeat and restore2/3 through10
+M21a participation: witness repeat and restore2/3 exact through10
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > controls: exact repeat, restore2/3, map identity and inaccessible truth
+M21a preflight {"contrast":"breach","history":true,"mode":3,"draws":3}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > controls: exact repeat, restore2/3, map identity and inaccessible truth
+M21a preflight {"contrast":"breach","history":false,"mode":1,"draws":0}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > controls: admission, natural fallback, purpose separation and atomic ledger retry
+M21a controls: map validation, strict411 versions, shifted-root entropy, natural fallback, atomic RNG ledger retry and whole-first-instant rollback
+
+ ✓ src/test/assembledComparison.test.ts (5 tests | 2 skipped) 156829ms
+   ✓ M21a explicit comparison foundation > participation: witness exact repeat and restore2/3 through10 68061ms
+   ✓ M21a explicit comparison foundation > controls: exact repeat, restore2/3, map identity and inaccessible truth 79877ms
+   ✓ M21a explicit comparison foundation > controls: admission, natural fallback, purpose separation and atomic ledger retry 8889ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 2 skipped (5)
+   Start at  22:05:22
+   Duration  159.76s (transform 1.62s, setup 0ms, collect 2.47s, tests 156.83s, environment 0ms, prepare 127ms)
+
+Regression-M21a-controls exit=0 seconds=160.3061258
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledConfigurationConsumers.test.ts (2 tests) 5907ms
+   ✓ M21b complete consumer domains > requires complete strategy/body mappings and admits three-task priority/horizon/feedback/social 1652ms
+   ✓ M21b complete consumer domains > reserves all declared projection slots regardless of visibility or absent rows 4255ms
+ ✓ src/test/assembledConfigurationAdmission.test.ts (3 tests) 6446ms
+   ✓ M21b governed configuration declarations > admits three ordinary named tasks/actions and independently renamed identities 2505ms
+   ✓ M21b governed configuration declarations > rejects cardinality, missing target coverage and foreign action references 2225ms
+   ✓ M21b governed configuration declarations > normalizes only dynamic declarations and task target sets; unknown model versions remain closed 1716ms
+
+ Test Files  2 passed (2)
+      Tests  5 passed (5)
+   Start at  22:08:12
+   Duration  9.14s (transform 1.82s, setup 0ms, collect 4.62s, tests 12.35s, environment 0ms, prepare 244ms)
+
+Final-components-after-fixture-correction exit=0 seconds=9.6895319
+Source-guard first attempt FAILED raw checkout-byte equality at docs/formal/CAMPAIGN2_ALLOCATION_TABLE.json; investigating Git EOL conversion. Source-guard-first exit=1 seconds=1.311602
+PASS frozen105 tracked blobs byte-identical to db0ca7a8; working files differ only by Git-declared CRLF conversion in105 files (core.autocrlf=true). Historical C0-C3 trees and M2a/M20/M21a tests unchanged from84abdac3. Analytical body exact except declared bound/parameter/error. Source-guards-corrected exit=0 seconds=9.669370500021614
+CRLF checkout files: docs/formal/CAMPAIGN2_ALLOCATION_TABLE.json, docs/formal/EMBODIED_RECEIVING_ALLOCATION_TABLE.json, docs/formal/EMBODIED_RESERVE_ALLOCATION_TABLE.json, docs/formal/MEASUREMENT_EVIDENCE_CARRIAGE_ALLOCATION_TABLE.json, docs/formal/MEASUREMENT_MEMORY_ALLOCATION_TABLE.json, docs/formal/MEASUREMENT_PREDICTION_ALLOCATION_TABLE.json, docs/formal/MEASUREMENT_PREDICTION_CORRECTION_ALLOCATION_TABLE.json, docs/formal/MEMORY_WRAPPER_ALLOCATION_TABLE.json, docs/formal/REGULATORY_PROBE_ALLOCATION_TABLE.json, docs/formal/TASK_COGNITIVE_ALLOCATION_TABLE.json, docs/formal/TASK_COMMITMENT_CORRECTION_ALLOCATION_TABLE.json, docs/formal/VAL_ALLOCATION_TABLE.json, docs/planning/campaign2-task-cognitive-model/FREEZE.json, src/campaign2/adaptationDomains.ts, src/campaign2/adaptationEvaluation.ts, src/campaign2/adaptationRuntime.ts, src/campaign2/adaptationTransitions.ts, src/campaign2/admittedInput.ts, src/campaign2/bridgeObservation.ts, src/campaign2/canonicalData.ts, src/campaign2/codecs.ts, src/campaign2/cognitiveArbitration.ts, src/campaign2/cognitiveChoice.ts, src/campaign2/cognitiveCodecs.ts, src/campaign2/cognitiveDeclarations.ts, src/campaign2/cognitiveExecution.ts, src/campaign2/cognitiveFactory.ts, src/campaign2/cognitiveIngress.ts, src/campaign2/cognitiveMath.ts, src/campaign2/cognitiveModel.ts, src/campaign2/cognitiveRuntime.ts, src/campaign2/cognitiveState.ts, src/campaign2/cognitiveTrace.ts, src/campaign2/cognitiveTransforms.ts, src/campaign2/consequenceBridge.ts, src/campaign2/contentProfile.ts, src/campaign2/evidExecution.ts, src/campaign2/factory.ts, src/campaign2/firstModelCandidate.ts, src/campaign2/firstTraceModel.ts, src/campaign2/identityRoles.ts, src/campaign2/measurementArchive.ts, src/campaign2/measurementExecution.ts, src/campaign2/measurementModel.ts, src/campaign2/measurementModelSource.ts, src/campaign2/memoryCodecs.ts, src/campaign2/memoryExecution.ts, src/campaign2/memoryModel.ts, src/campaign2/memoryModelSource.ts, src/campaign2/modelPackaging.ts, src/campaign2/occurrenceIdentity.ts, src/campaign2/orderedInputs.ts, src/campaign2/predictionCodecs.ts, src/campaign2/predictionExecution.ts, src/campaign2/predictionModel.ts, src/campaign2/predictionModelReview.ts, src/campaign2/probeCodecs.ts, src/campaign2/probeExecution.ts, src/campaign2/probeModel.ts, src/campaign2/probeModelReview.ts, src/campaign2/probeReadout.ts, src/campaign2/probeSuccessorReview.ts, src/campaign2/protocolBridge.ts, src/campaign2/protocolObservation.ts, src/campaign2/regulatoryReference.ts, src/campaign2/stateModel.ts, src/campaign2/taskBootstrap.ts, src/campaign2/taskCodecs.ts, src/campaign2/taskDeclarations.ts, src/campaign2/taskExecution.ts, src/campaign2/taskModel.ts, src/campaign2/taskModelReview.ts, src/campaign2/traceBinding.ts, src/campaign2/transitionAdmissionV04.ts, src/campaign2/transitionIngressV04.ts, src/campaign2/valDeclarations.ts, src/campaign3/embodiedCodecs.ts, src/campaign3/receivingCodecs.ts, src/observation/observation.ts, src/semanticBinding/eventBindings.ts, src/semanticBinding/evidenceProvenance.ts, src/semanticBinding/perceptualClassification.ts, src/semanticBinding/perceptualContinuantFiles.ts, src/semanticBinding/perceptualEventClassification.ts, src/semanticBinding/perceptualEventFiles.ts, src/semanticBinding/phaseOrdering.ts, src/semanticBinding/recognition.ts, src/semanticBinding/semanticCodecs.ts, src/semanticBinding/semanticEvidenceCodecs.ts, src/semanticBinding/semanticSchemaRegistry.ts, src/substrate/canonicalEncoding.ts, src/substrate/contentDefinitionId.ts, src/substrate/contentManifest.ts, src/substrate/crypto.ts, src/substrate/exactMath.ts, src/substrate/identity.ts, src/substrate/mutationAuthority.ts, src/substrate/observationUnitId.ts, src/substrate/persistence.ts, src/substrate/random.ts, src/substrate/referentOrigin.ts, src/substrate/scheduler.ts, src/substrate/state.ts, src/substrate/time.ts, src/substrate/trace.ts
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+Final-boundaries exit=0 seconds=2.5502875
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+Final-research exit=0 seconds=4.1176764
+Final document gate first attempt: sizes/counts PASS; git diff --check FAILED on two trailing spaces in captured Vitest code excerpts (raw log lines111/116). Preserve exact failure output; exclude only this raw log from whitespace lint. Document-first exit=1 seconds=0.913682
+PASS document caps/register65366bytes/28 code-test files/two evidence files/43848bytes; whitespace check passes outside unchanged raw-log formatting. Final-document-gates exit=0 seconds=0.4726348000112921
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+Staged-size exit=0 seconds=0.7994484

@@ -1,67 +1,38 @@
-# Current work — M21b configuration widening
+# Current work — M21b complete; recognition next
 
-The next change lets more declared tasks/actions run inside the existing character.
-M21a coupling passed; wider configuration is not yet admitted. No new psychology/UI.
+The single character now accepts1..3 declared tasks/actions and executes all three
+through its shared reasoning/action loop. Acquired history changes a later choice
+under coupled randomness. M21b PASS; stop verification and report.
 
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
-## M21b card — before implementation
+## Completed foundation gate
 
-- Capabilities (2): ordinary1..3 task/action configuration in one runtime; retained
-  experience influences three-action reasoning/choice under coupled entropy.
-- Contract: ../formal/ASSEMBLED_CHARACTER_CONFIGURATION_CONTRACT.md, configuration0.1;
-  rules/registry0.22, numeric/assembled-task-exact/0.1. All21 owners/slots retained.
-- Baseline: FND1/3/4/5/6; PHEN-DET/DECISION/REL and task/goal projections. No closure.
-  SUB-004/005/009 retained. RO-C3-020 multi-option limits remain explicit/conditional.
-- One holder, one prediction channel, two routes/task; arbitrary valid stable names,
-  complete declaration references, workspace0..5. New physical primitives not admitted.
-- Comparison: three tasks and actions, existing participant/witness encounters1/2,
-  all three priority/urgency sources, fixed laws/parameters/seeds0..7. At3 require
-  three candidates, consumed learned history, changed reasons, common mapped random
-  candidates and >=1 changed choice. At least one fixed run executes the third action.
-  All16 reach10 with three deadline clocks. No tuning or extra seeds after results.
-- Exact repeat seed0; restore2/3; hidden truth; work-limit rollback; renamed/reduced
-  configurations and malformed references/coverage/cardinality/topology/S0 negatives.
-- Numerical checks: exact binary predecessor agreement; independent three-option
-  enumeration, fair1/3 ties, full canonical leader draw. Invisible-slot allocation
-  must preserve later IDs. No dummy psychological outputs or alternate runtime.
-- Required regressions: unchanged M2a admission, M20 relationship, M21a coupling;
-  type/boundary/research, frozen-source guard and staged size checks.
-- Shared budget across all packages: <=1800sec validation incl failures/retries,
-  <=600sec/command, one validation job; <=20 evidence files/5MiB. Stop on pass or cap.
-- Binary done: all acceptance items pass; declaration-only/component-only is INCOMPLETE.
+- [Result](ASSEMBLED_CHARACTER_M21B_RESULT.md); [raw checks](ASSEMBLED_CHARACTER_M21B_CHECKS.txt).
+- Contract: [configuration0.1](../formal/ASSEMBLED_CHARACTER_CONFIGURATION_CONTRACT.md),
+  rules/registry0.22 and numeric/assembled-task-exact/0.1.
+- Fixed16-run participation/witness matrix: three candidates each,24 common draw keys,
+  choices differ seeds1/5; seed5 has all draws matched. Two conditional unmatched ties
+  disclosed. The third action executes15 times. All16 reach10 with three deadlines.
+- Exact repeat/restore2/3, truth isolation, rollback, complete allocation and admission
+  controls PASS. All10 new and28 unchanged M2a/M20/M21a tests PASS; types/boundary/research PASS.
+- Frozen105 dependency Git blobs unchanged; checkout CRLF differences explicitly recorded.
+- Four packages A5/B11/C10/D4 code/test files,28 distinct overall. Original1800sec shared
+  validation budget retained; no reset at package splits. Two evidence files below5MiB.
+- Original M21a cooperation/breach zero-shared-draw result remains negative evidence.
+  No contrast/seed/parameter tuning; all failures/corrections retained in the raw log.
 
-## Serial package plan (split before code)
+## Next milestone boundary
 
-A (component checks PASS,5 files): assembled/taskDeclarations.ts, cognitiveDeclarations.ts,
-configurationTopology.ts; test fixture assembledConfiguration.ts and admission test.
-Only declaration components; public model still rejects the widened version.
+Rich recognition must replace a bounded controlled identity ingress with an actual
+observer-local recognition producer and downstream consumer in the SAME character.
+Write its bounded card and versioned seam amendment before implementation; pin one
+behavioral comparison plus epistemic controls. No new psychology between these gates.
+Do not start an owner registry/framework/cleanup campaign or multi-character system.
+Autonomous partners remain deferred and are not an assembly prerequisite.
 
-B (component checks PASS,11 files): strategy and strategyExecution; actionBody; priority and priorityExecution;
-horizon and horizonExecution; performance and performanceExecution; social; consumer
-boundary test. Complete task/route allocation coverage; public admission stays closed.
-
-C (INCOMPLETE checkpoint,10 files): model, traceBinding, runtime, execution, workspace, reasons, random,
-arbitration; configurationMath and configurationWorkspace. Types PASS, runtime not
-qualified. Public0.22 explicitly rejects until the final control consumer is ready.
-No broad cleanup or new state owner. Record aggregate file count honestly across packages.
-
-## Preserved limits
-
-M21a result: ASSEMBLED_CHARACTER_M21A_RESULT.md (commit84abdac3).
-Historical C0-C3 controls remain unchanged. One simulation is the implementation;
-frozen controls are comparisons. No21-member/15-family/132-clause closure follows.
-Autonomous partners remain deferred, not an assembly prerequisite. Rich recognition
-follows widening; no intervening psychology or UI work.
-
-Package A: declaration tests3/3 PASS; public0.22 rejection confirmed before activation.
-The permanent version-negative uses an unknown version so later0.22 activation does
-not invalidate it. No public widening or milestone pass claimed.
-
-Package B: three-task consumer checks and9 visible/hidden/absent projection cases PASS.
-Feedback reservation uses full routes; actual feedback projection is checked in C.
-
-Before expanding C: discovered control.ts capacity<=4 also needs the declared0..5
-successor domain. C checkpoints10 files. D (4 files): control.ts, model.ts to activate,
-configuration fixture and integration test. Same planned semantics/checks/1800sec budget;
-no new capability and no skipped consumer. C is not a milestone pass.
+One holder/channel, two routes/task and physical count1/2 remain deliberate limits.
+The three-option extension is an engineering default, no psychological verdict;
+RO-C3-020 and all18 conditional debts remain. Rich recognition and final generality
+are still open. No21-member/15-family/132-clause closure, UI or Campaign4 acceptance.
+Historical controls remain comparisons; the shared assembled runtime is the simulation.
