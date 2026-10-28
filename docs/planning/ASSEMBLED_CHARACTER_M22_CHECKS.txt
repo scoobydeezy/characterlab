@@ -149,3 +149,230 @@ M22-corrected-diagnosis exit=0 timeout=False seconds=27.1754
 
 Diagnostic evidence reconciliation PASS: identical maps and all three raw attempts/spans/faces/standing modifiers; production and recognition/comparison fixtures unchanged from522f18dd; document/evidence budgets hold.
 Projection SHA256 target2cfc9d9073ce4f93714f6e30e872898f8f0851a9cb4a0d20d646257f3209a12c; other03d2a0d4b91d54b4acb7887f61cd9a02e872b92ff3c6435cdfc34e5865c79d08.
+M22-completion-types exit=0 seconds=14.8096299
+
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRecognition.test.ts > M22 observer-local recognition in one character > matrix: recognition evidence changes learned belief, reasons and coupled choice
+M22 preflight {"targetCue":true,"draws":3,"belief":2,"resolutions":1}
+
+stdout | src/test/assembledRecognition.test.ts > M22 observer-local recognition in one character > matrix: recognition evidence changes learned belief, reasons and coupled choice
+M22 preflight {"targetCue":false,"draws":4,"belief":0,"resolutions":1}
+
+stdout | src/test/assembledRecognition.test.ts > M22 observer-local recognition in one character > matrix: recognition evidence changes learned belief, reasons and coupled choice
+M22 cell {"seed":0,"a":"definition/configurable-water","b":"definition/configurable-water","common":3,"unmatched":0}
+
+stdout | src/test/assembledRecognition.test.ts > M22 observer-local recognition in one character > matrix: recognition evidence changes learned belief, reasons and coupled choice
+M22 cell {"seed":1,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-one","common":4,"unmatched":0}
+
+stdout | src/test/assembledRecognition.test.ts > M22 observer-local recognition in one character > matrix: recognition evidence changes learned belief, reasons and coupled choice
+M22 cell {"seed":2,"a":"definition/configurable-water","b":"definition/configurable-water","common":4,"unmatched":0}
+
+stdout | src/test/assembledRecognition.test.ts > M22 observer-local recognition in one character > matrix: recognition evidence changes learned belief, reasons and coupled choice
+M22 cell {"seed":3,"a":"definition/configurable-water","b":"definition/configurable-water","common":3,"unmatched":0}
+
+stdout | src/test/assembledRecognition.test.ts > M22 observer-local recognition in one character > matrix: recognition evidence changes learned belief, reasons and coupled choice
+M22 cell {"seed":4,"a":"definition/protocol-contact-two","b":"definition/protocol-contact-two","common":3,"unmatched":0}
+
+stdout | src/test/assembledRecognition.test.ts > M22 observer-local recognition in one character > matrix: recognition evidence changes learned belief, reasons and coupled choice
+M22 cell {"seed":5,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-one","common":3,"unmatched":0}
+
+stdout | src/test/assembledRecognition.test.ts > M22 observer-local recognition in one character > matrix: recognition evidence changes learned belief, reasons and coupled choice
+M22 cell {"seed":6,"a":"definition/protocol-contact-two","b":"definition/protocol-contact-one","common":3,"unmatched":1}
+
+stdout | src/test/assembledRecognition.test.ts > M22 observer-local recognition in one character > matrix: recognition evidence changes learned belief, reasons and coupled choice
+M22 cell {"seed":7,"a":"definition/configurable-water","b":"definition/configurable-water","common":3,"unmatched":0}
+
+stdout | src/test/assembledRecognition.test.ts > M22 observer-local recognition in one character > matrix: recognition evidence changes learned belief, reasons and coupled choice
+M22 matrix {"runs":16,"changed":[6],"conditionalTies":1,"common":26,"terminal":10}
+
+ ✓ src/test/assembledRecognition.test.ts (5 tests | 4 skipped) 250955ms
+   ✓ M22 observer-local recognition in one character > matrix: recognition evidence changes learned belief, reasons and coupled choice 250955ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 4 skipped (5)
+   Start at  11:15:33
+   Duration  253.91s (transform 1.65s, setup 0ms, collect 2.58s, tests 250.96s, environment 0ms, prepare 113ms)
+
+
+M22-amended-matrix exit=0 seconds=254.4059
+
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRecognition.test.ts > controls: observer boundary, ambiguous cues, appearance and correction
+M22 preflight {"targetCue":true,"draws":3,"belief":2,"resolutions":1}
+
+stdout | src/test/assembledRecognition.test.ts > controls: observer boundary, ambiguous cues, appearance and correction
+M22 preflight {"targetCue":false,"draws":4,"belief":0,"resolutions":1}
+
+stdout | src/test/assembledRecognition.test.ts > controls: observer boundary, ambiguous cues, appearance and correction
+M22 boundary/correction:9 runs; exact hidden/access controls; missing/ambiguous; false distinct from absent; mistaken identity/replacement/withdrawal; direct law comparisons=16
+
+stdout | src/test/assembledRecognition.test.ts > controls: exact repeat and recognition restores2/3 through10
+M22 continuation: exact state/output/trace/save repeat and restores2/3 to10
+
+stdout | src/test/assembledRecognition.test.ts > controls: forged knowledge, ownership, initial history and late atomic rollback
+M22 admission/authority and late rollback: 50 events; state, outputs, trace, queue and allocators restored
+
+ ✓ src/test/assembledRecognition.test.ts (5 tests | 2 skipped) 201241ms
+   ✓ controls: observer boundary, ambiguous cues, appearance and correction 45987ms
+   ✓ controls: exact repeat and recognition restores2/3 through10 142036ms
+   ✓ controls: forged knowledge, ownership, initial history and late atomic rollback 13217ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 2 skipped (5)
+   Start at  11:20:39
+   Duration  204.25s (transform 1.65s, setup 0ms, collect 2.51s, tests 201.24s, environment 0ms, prepare 121ms)
+
+
+M22-recognition-controls exit=0 seconds=204.7416
+
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/recognition.test.ts (10 tests) 28ms
+ ✓ src/test/semanticStateAuthority.test.ts (8 tests) 23ms
+ ✓ src/test/perceptualClassification.test.ts (10 tests) 21ms
+ ✓ src/test/semanticPhaseOrdering.test.ts (10 tests) 14ms
+ ✓ src/test/semanticStatePersistence.test.ts (3 tests) 16ms
+ ✓ src/test/perceptualContinuantFiles.test.ts (11 tests) 9ms
+ ✓ src/test/semanticRecognitionState.test.ts (5 tests) 21ms
+ ✓ src/test/semanticPhaseRollbackCause.test.ts (1 test) 6ms
+
+ Test Files  8 passed (8)
+      Tests  58 passed (58)
+   Start at  11:24:40
+   Duration  2.47s (transform 260ms, setup 0ms, collect 646ms, tests 137ms, environment 1ms, prepare 639ms)
+
+
+M22-C1-conformance exit=0 seconds=2.9439
+
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > matrix16: reports change shared appraisal, reasons and actual choice
+M19 cell {"seed":0,"negative":["definition/protocol-contact-one","definition/protocol-contact-two","definition/protocol-contact-two"],"positive":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > matrix16: reports change shared appraisal, reasons and actual choice
+M19 cell {"seed":1,"negative":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-one"],"positive":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > matrix16: reports change shared appraisal, reasons and actual choice
+M19 cell {"seed":2,"negative":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"],"positive":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > matrix16: reports change shared appraisal, reasons and actual choice
+M19 cell {"seed":3,"negative":["definition/protocol-contact-one","definition/protocol-contact-one","definition/protocol-contact-one"],"positive":["definition/protocol-contact-one","definition/protocol-contact-one","definition/protocol-contact-one"]}
+
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > matrix16: reports change shared appraisal, reasons and actual choice
+M19 cell {"seed":4,"negative":["definition/protocol-contact-one","definition/protocol-contact-two","definition/protocol-contact-two"],"positive":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > matrix16: reports change shared appraisal, reasons and actual choice
+M19 cell {"seed":5,"negative":["definition/protocol-contact-two","definition/protocol-contact-one","definition/protocol-contact-one"],"positive":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-one"]}
+
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > matrix16: reports change shared appraisal, reasons and actual choice
+M19 cell {"seed":6,"negative":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-one"],"positive":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-one"]}
+
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > matrix16: reports change shared appraisal, reasons and actual choice
+M19 cell {"seed":7,"negative":["definition/protocol-contact-one","definition/protocol-contact-two","definition/protocol-contact-two"],"positive":["definition/protocol-contact-one","definition/protocol-contact-two","definition/protocol-contact-two"]}
+M19 matrix {"runs":16,"changed":[0,1,4,5],"draws":101,"matched":48,"terminal":10}
+
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > controls: hidden truth, denied and duplicate reports, corrections and goal direction
+M19 controls:12 full runs; truth/access/source grouping/unknown/correction/timing/goal direction/physical separation
+
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > controls: original SOCIAL scenarios, reference arithmetic and retained alternatives
+M19 original SOCIAL {"runs":14,"frames":50,"comparisons":26}
+
+ ✓ src/test/assembledSocial.test.ts (5 tests) 346127ms
+   ✓ M19 assembled social belief > matrix16: reports change shared appraisal, reasons and actual choice 128614ms
+   ✓ M19 assembled social belief > controls: hidden truth, denied and duplicate reports, corrections and goal direction 89010ms
+   ✓ M19 assembled social belief > controls: exact repeat and acquired-history restores2/5 through10 108702ms
+   ✓ M19 assembled social belief > controls: original SOCIAL scenarios, reference arithmetic and retained alternatives 1419ms
+   ✓ M19 assembled social belief > controls: admission, owner, genuine perception support, child authentication and rollback 18382ms
+stdout | src/test/assembledSocial.test.ts > M19 assembled social belief > controls: admission, owner, genuine perception support, child authentication and rollback
+M19 rollback 48 events, limit47; prior belief retained and all instant changes rolled back; reason links=9
+
+
+ Test Files  1 passed (1)
+      Tests  5 passed (5)
+   Start at  11:24:52
+   Duration  349.05s (transform 1.63s, setup 0ms, collect 2.49s, tests 346.13s, environment 0ms, prepare 115ms)
+
+
+M22-M19-regression exit=0 seconds=349.5299
+
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledConfiguration.test.ts > M21b one configurable character > matrix: three genuine candidates and acquired history change choice under coupled entropy
+M21b preflight {"participant":true,"mode":3,"draws":3}
+
+stdout | src/test/assembledConfiguration.test.ts > M21b one configurable character > matrix: three genuine candidates and acquired history change choice under coupled entropy
+M21b preflight {"participant":false,"mode":3,"draws":3}
+
+stdout | src/test/assembledConfiguration.test.ts > M21b one configurable character > matrix: three genuine candidates and acquired history change choice under coupled entropy
+M21b cell {"seed":0,"a":"definition/configurable-water","b":"definition/configurable-water","common":3,"draws":6}
+
+stdout | src/test/assembledConfiguration.test.ts > M21b one configurable character > matrix: three genuine candidates and acquired history change choice under coupled entropy
+M21b cell {"seed":1,"a":"definition/protocol-contact-one","b":"definition/configurable-water","common":3,"draws":7}
+
+stdout | src/test/assembledConfiguration.test.ts > M21b one configurable character > matrix: three genuine candidates and acquired history change choice under coupled entropy
+M21b cell {"seed":2,"a":"definition/configurable-water","b":"definition/configurable-water","common":3,"draws":7}
+
+stdout | src/test/assembledConfiguration.test.ts > M21b one configurable character > matrix: three genuine candidates and acquired history change choice under coupled entropy
+M21b cell {"seed":3,"a":"definition/configurable-water","b":"definition/configurable-water","common":3,"draws":6}
+
+stdout | src/test/assembledConfiguration.test.ts > M21b one configurable character > matrix: three genuine candidates and acquired history change choice under coupled entropy
+M21b cell {"seed":4,"a":"definition/protocol-contact-two","b":"definition/protocol-contact-two","common":3,"draws":6}
+
+stdout | src/test/assembledConfiguration.test.ts > M21b one configurable character > matrix: three genuine candidates and acquired history change choice under coupled entropy
+M21b cell {"seed":5,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-two","common":3,"draws":6}
+
+stdout | src/test/assembledConfiguration.test.ts > M21b one configurable character > matrix: three genuine candidates and acquired history change choice under coupled entropy
+M21b cell {"seed":6,"a":"definition/protocol-contact-two","b":"definition/protocol-contact-two","common":3,"draws":6}
+
+stdout | src/test/assembledConfiguration.test.ts > M21b one configurable character > matrix: three genuine candidates and acquired history change choice under coupled entropy
+M21b cell {"seed":7,"a":"definition/configurable-water","b":"definition/configurable-water","common":3,"draws":6}
+
+stdout | src/test/assembledConfiguration.test.ts > M21b one configurable character > matrix: three genuine candidates and acquired history change choice under coupled entropy
+M21b matrix {"runs":16,"changed":[1,5],"common":24,"unmatched":2,"thirdActionExecutions":15,"terminal":10}
+
+stdout | src/test/assembledConfiguration.test.ts > M21b one configurable character > continuation: exact repeat, restores2/3, hidden truth, learned-S0 rejection and rollback
+M21b continuation: repeat/restores2/3/hidden truth/learned-S0/rollback/three-leader tie PASS
+
+stdout | src/test/assembledConfiguration.test.ts > M21b one configurable character > feedback: all three selected task reports get real identities; hidden rows preserve later allocation
+M21b three-target feedback IDs and later qualification allocation PASS
+
+ ✓ src/test/assembledConfiguration.test.ts (5 tests) 337816ms
+   ✓ M21b one configurable character > admission: arbitrary names, reduced configuration and malformed coverage/topology 8377ms
+   ✓ M21b one configurable character > matrix: three genuine candidates and acquired history change choice under coupled entropy 228049ms
+   ✓ M21b one configurable character > continuation: exact repeat, restores2/3, hidden truth, learned-S0 rejection and rollback 89380ms
+   ✓ M21b one configurable character > feedback: all three selected task reports get real identities; hidden rows preserve later allocation 12004ms
+
+ Test Files  1 passed (1)
+      Tests  5 passed (5)
+   Start at  11:30:57
+   Duration  340.80s (transform 1.64s, setup 0ms, collect 2.53s, tests 337.82s, environment 0ms, prepare 108ms)
+
+
+M22-M21b-regression exit=0 seconds=341.2847
+
+M22-final-source-guard PASS105 frozen dependencies atdb0ca7a8; HEAD blobs and Git-normalized worktree bytes exact (CRLF conversion retained); historical trees and regression tests unchanged. seconds=8.7325
+
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+M22-final-check:boundaries exit=0 seconds=2.8036
+
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M22-final-check:research exit=0 seconds=3.8180
+
+M22-final-document-guard PASS11 code/test files;4 evidence/result files/122460 bytes; register65467 bytes; line/size caps; unchanged production/fixtures; whitespace outside preserved raw log. seconds=0.2030
