@@ -1,7 +1,7 @@
 # Assembled Character — M2 reconciliation
 
 Owner approved D1–D5 on2026-10-25 with the D2 condition below.
-M2a-M22 pass. [M21b](ASSEMBLED_CHARACTER_M21B_RESULT.md): configuration widening. [M22](ASSEMBLED_CHARACTER_M22_RESULT.md): recognition governs learning/choice; accepted conditional-tie gate.
+M2a-M23 pass. [M23](ASSEMBLED_CHARACTER_M23_RESULT.md): one recognized encounter feeds belief/history; coupled participation-to-choice witness. General event roles remain controlled.
 
 ## Decision sheet — adopted 2026-10-25
 
