@@ -41,9 +41,9 @@ B (component checks PASS,11 files): strategy and strategyExecution; actionBody; 
 horizon and horizonExecution; performance and performanceExecution; social; consumer
 boundary test. Complete task/route allocation coverage; public admission stays closed.
 
-C (next,12 files): model, traceBinding, runtime, execution, workspace, reasons, random,
-arbitration; configurationMath and configurationWorkspace; integration test and the
-existing configuration fixture. Activate only after A/B are checkpointed and verified.
+C (INCOMPLETE checkpoint,10 files): model, traceBinding, runtime, execution, workspace, reasons, random,
+arbitration; configurationMath and configurationWorkspace. Types PASS, runtime not
+qualified. Public0.22 explicitly rejects until the final control consumer is ready.
 No broad cleanup or new state owner. Record aggregate file count honestly across packages.
 
 ## Preserved limits
@@ -60,3 +60,8 @@ not invalidate it. No public widening or milestone pass claimed.
 
 Package B: three-task consumer checks and9 visible/hidden/absent projection cases PASS.
 Feedback reservation uses full routes; actual feedback projection is checked in C.
+
+Before expanding C: discovered control.ts capacity<=4 also needs the declared0..5
+successor domain. C checkpoints10 files. D (4 files): control.ts, model.ts to activate,
+configuration fixture and integration test. Same planned semantics/checks/1800sec budget;
+no new capability and no skipped consumer. C is not a milestone pass.

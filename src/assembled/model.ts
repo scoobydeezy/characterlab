@@ -7,6 +7,8 @@ import {createModelIdentity,commitManifest} from '../substrate/identity';
 import {RANDOM_ALGORITHM_VERSION} from '../substrate/random';
 import {snapshotMemorySource} from '../campaign2/memoryModel';
 import {compileCognitiveDeclarations} from '../campaign2/cognitiveDeclarations';
+import {compileCognitiveDeclarations as compileConfigurationDeclarations} from './cognitiveDeclarations';
+import {configurationTopology} from './configurationTopology';
 import {compileCampaign2StateModel} from '../campaign2/stateModel';
 import {compileCampaign2Parameters} from '../campaign2/modelPackaging';
 import {decodeCognitive,cognitiveSchemaByType} from '../campaign2/cognitiveCodecs';
@@ -29,6 +31,8 @@ import {compileActionBody} from './actionBody';
 import {compileRetrievalDeclaration} from './retrieval';
 import {compileRetentionDeclaration} from './retention';
 import {compileBodyDeclaration} from './body';
+export const CONFIGURATION_RULES='rules/assembled-character/0.22-candidate';
+export const CONFIGURATION_REGISTRY='assembled-character-registry/0.22-candidate';
 export const COMPARISON_RULES='rules/assembled-character/0.21-candidate';
 export const COMPARISON_REGISTRY='assembled-character-registry/0.21-candidate';
 export const RELATIONSHIP_RULES='rules/assembled-character/0.20-candidate';
@@ -79,7 +83,7 @@ const fields:Readonly<Record<string,readonly bigint[]>>={
 function rationalRange(v:CanonicalValue,name:string,lo:bigint,hi:bigint,strict=false){
  if(typeof v==='boolean'||v.kind!=='rational'||(strict?v.numerator<=lo*v.denominator:v.numerator<lo*v.denominator)||v.numerator>hi*v.denominator)invalidModel(name+' outside exact rational domain');
 }
-function topology(registry:CanonicalValue,calibrated=false,memoryContext=false,relationship=false){
+function topology(registry:CanonicalValue,calibrated=false,memoryContext=false,relationship=false,configuration=false){
  const slots=items(registry,'list');if(slots.length!==6)invalidModel('six assembled registry slots required');
  const normalized=items(slots[0],'set').map(v=>{
   if(typeof v==='boolean'||v.kind!=='record'||v.schema.typeId!==171n)return v;
@@ -102,7 +106,7 @@ function topology(registry:CanonicalValue,calibrated=false,memoryContext=false,r
    if(typeof lo==='boolean'||lo.kind!=='rational'||typeof hi==='boolean'||hi.kind!=='rational')invalidModel('task rational required');
    if(lo.numerator*hi.denominator>hi.numerator*lo.denominator)invalidModel('task minimum exceeds maximum');
    const a=f(d,5n),b=f(d,6n);if(typeof a==='boolean'||a.kind!=='signed'||typeof b==='boolean'||b.kind!=='signed'||a.value<0n||b.value<=a.value)invalidModel('task window requires 0 <= activation < deadline');
-  }else if(d.schema.typeId===378n){if(uint(f(d,2n))>(memoryContext?4n:3n))invalidModel('workspace capacity outside '+(memoryContext?'0..4':'0..3'));}
+  }else if(d.schema.typeId===378n){if(uint(f(d,2n))>(configuration?5n:memoryContext?4n:3n))invalidModel('workspace capacity outside '+(configuration?'0..5':memoryContext?'0..4':'0..3'));}
   else rationalRange(f(d,1n),d.schema.typeId===385n?'concern gain':'motive pressure',0n,1n,d.schema.typeId===392n);
   // This internal comparison image is never decoded/executed/committed: mask ONLY
   // the validated open slots; all remaining declared fields must match exactly.
@@ -113,8 +117,9 @@ function topology(registry:CanonicalValue,calibrated=false,memoryContext=false,r
 }
 export async function compileCharacterModel(input:Campaign2ModelSource){
  const source=snapshotMemorySource(input);
- const comparisonEnabled=source.rulesVersion===COMPARISON_RULES,relationshipEnabled=comparisonEnabled||source.rulesVersion===RELATIONSHIP_RULES,socialEnabled=relationshipEnabled||source.rulesVersion===SOCIAL_RULES,communicationEnabled=socialEnabled||source.rulesVersion===COMMUNICATION_RULES,control=communicationEnabled||source.rulesVersion===CONTROL_RULES,habitEnabled=control||source.rulesVersion===HABIT_RULES,performance=habitEnabled||source.rulesVersion===PERFORMANCE_RULES,horizon=performance||source.rulesVersion===HORIZON_RULES,priority=horizon||source.rulesVersion===PRIORITY_RULES,strategyEnabled=priority||source.rulesVersion===STRATEGY_RULES,skill=strategyEnabled||source.rulesVersion===SKILL_RULES,actionBodyEnabled=skill||source.rulesVersion===ACTION_BODY_RULES,memoryContext=actionBodyEnabled||source.rulesVersion===MEMORY_CONTEXT_RULES,workspace=memoryContext||source.rulesVersion===WORKSPACE_RULES,retrievalEnabled=workspace||source.rulesVersion===RETRIEVAL_RULES,retained=retrievalEnabled||source.rulesVersion===RETENTION_RULES,memory=retained||source.rulesVersion===MEMORY_RULES,attention=memory||source.rulesVersion===ATTENTION_RULES,calibrated=attention||source.rulesVersion===CALIBRATED_RULES,interaction=calibrated||source.rulesVersion===INTERACTION_RULES;
- if((interaction?source.registrySchemaVersion!==(comparisonEnabled?COMPARISON_REGISTRY:relationshipEnabled?RELATIONSHIP_REGISTRY:socialEnabled?SOCIAL_REGISTRY:communicationEnabled?COMMUNICATION_REGISTRY:control?CONTROL_REGISTRY:habitEnabled?HABIT_REGISTRY:performance?PERFORMANCE_REGISTRY:horizon?HORIZON_REGISTRY:priority?PRIORITY_REGISTRY:strategyEnabled?STRATEGY_REGISTRY:skill?SKILL_REGISTRY:actionBodyEnabled?ACTION_BODY_REGISTRY:memoryContext?MEMORY_CONTEXT_REGISTRY:workspace?WORKSPACE_REGISTRY:retrievalEnabled?RETRIEVAL_REGISTRY:retained?RETENTION_REGISTRY:memory?MEMORY_REGISTRY:attention?ATTENTION_REGISTRY:calibrated?CALIBRATED_REGISTRY:INTERACTION_REGISTRY):source.rulesVersion!==CHARACTER_RULES||source.registrySchemaVersion!==CHARACTER_REGISTRY)||source.contentSchemaVersion!=='content/0.2-candidate'||source.parameterSchemaVersion!=='campaign2-parameters/0.1-candidate'||source.numericProfileVersion!=='numeric/task-cognitive-exact/0.1-candidate'||source.randomAlgorithmVersion!==RANDOM_ALGORITHM_VERSION)invalidModel('unsupported assembled model version bundle');
+ const configurationEnabled=source.rulesVersion===CONFIGURATION_RULES,comparisonEnabled=configurationEnabled||source.rulesVersion===COMPARISON_RULES,relationshipEnabled=comparisonEnabled||source.rulesVersion===RELATIONSHIP_RULES,socialEnabled=relationshipEnabled||source.rulesVersion===SOCIAL_RULES,communicationEnabled=socialEnabled||source.rulesVersion===COMMUNICATION_RULES,control=communicationEnabled||source.rulesVersion===CONTROL_RULES,habitEnabled=control||source.rulesVersion===HABIT_RULES,performance=habitEnabled||source.rulesVersion===PERFORMANCE_RULES,horizon=performance||source.rulesVersion===HORIZON_RULES,priority=horizon||source.rulesVersion===PRIORITY_RULES,strategyEnabled=priority||source.rulesVersion===STRATEGY_RULES,skill=strategyEnabled||source.rulesVersion===SKILL_RULES,actionBodyEnabled=skill||source.rulesVersion===ACTION_BODY_RULES,memoryContext=actionBodyEnabled||source.rulesVersion===MEMORY_CONTEXT_RULES,workspace=memoryContext||source.rulesVersion===WORKSPACE_RULES,retrievalEnabled=workspace||source.rulesVersion===RETRIEVAL_RULES,retained=retrievalEnabled||source.rulesVersion===RETENTION_RULES,memory=retained||source.rulesVersion===MEMORY_RULES,attention=memory||source.rulesVersion===ATTENTION_RULES,calibrated=attention||source.rulesVersion===CALIBRATED_RULES,interaction=calibrated||source.rulesVersion===INTERACTION_RULES;
+ if((interaction?source.registrySchemaVersion!==(configurationEnabled?CONFIGURATION_REGISTRY:comparisonEnabled?COMPARISON_REGISTRY:relationshipEnabled?RELATIONSHIP_REGISTRY:socialEnabled?SOCIAL_REGISTRY:communicationEnabled?COMMUNICATION_REGISTRY:control?CONTROL_REGISTRY:habitEnabled?HABIT_REGISTRY:performance?PERFORMANCE_REGISTRY:horizon?HORIZON_REGISTRY:priority?PRIORITY_REGISTRY:strategyEnabled?STRATEGY_REGISTRY:skill?SKILL_REGISTRY:actionBodyEnabled?ACTION_BODY_REGISTRY:memoryContext?MEMORY_CONTEXT_REGISTRY:workspace?WORKSPACE_REGISTRY:retrievalEnabled?RETRIEVAL_REGISTRY:retained?RETENTION_REGISTRY:memory?MEMORY_REGISTRY:attention?ATTENTION_REGISTRY:calibrated?CALIBRATED_REGISTRY:INTERACTION_REGISTRY):source.rulesVersion!==CHARACTER_RULES||source.registrySchemaVersion!==CHARACTER_REGISTRY)||source.contentSchemaVersion!=='content/0.2-candidate'||source.parameterSchemaVersion!=='campaign2-parameters/0.1-candidate'||source.numericProfileVersion!==(configurationEnabled?'numeric/assembled-task-exact/0.1-candidate':'numeric/task-cognitive-exact/0.1-candidate')||source.randomAlgorithmVersion!==RANDOM_ALGORITHM_VERSION)invalidModel('unsupported assembled model version bundle');
+ if(configurationEnabled)invalidModel('configuration0.22 checkpoint: control capacity integration pending');
  const registry=decodeEmbodied(source.registry),allSlots=items(registry,'list');
  if(allSlots.length!==(relationshipEnabled?21:socialEnabled?20:communicationEnabled?19:control?18:habitEnabled?17:performance?16:horizon?15:priority?14:strategyEnabled?13:skill?12:actionBodyEnabled?11:retrievalEnabled?10:retained?9:attention?8:interaction?7:6))invalidModel('assembled registry slot count');
  if(control)compileControl(allSlots[17]);
@@ -128,13 +133,14 @@ export async function compileCharacterModel(input:Campaign2ModelSource){
  if(attention){const declaration=items(allSlots[7],'list');if(declaration.length!==2||txt(declaration[0])!=='assembled-body-selection/0.1'||uint(declaration[1])>1n)invalidModel('body selection requires capacity0..1');selectionCapacity=Number(uint(declaration[1]));}
  const body=interaction?Object.freeze({...compileBodyDeclaration(allSlots[6]),selectionCapacity}):undefined,slots=allSlots.slice(0,6),baseRegistry=enc(list(slots));
  // Validate open slots before generic declarations, giving specific domain errors.
- const shape=topology(list(slots),calibrated,memoryContext,relationshipEnabled);
- const originalContent=await compileCognitiveDeclarations(source.content,baseRegistry);
+ const shape=topology(configurationEnabled?configurationTopology(list(slots)):list(slots),calibrated,memoryContext,relationshipEnabled,configurationEnabled);
+ const originalContent=await (configurationEnabled?compileConfigurationDeclarations:compileCognitiveDeclarations)(source.content,baseRegistry);
  const content=comparisonEnabled?Object.freeze({...originalContent,validateRecordRoles:(bytes:Uint8Array)=>validateCharacterRecordRoles(originalContent,bytes)}):originalContent;
  const structuralState=compileCampaign2StateModel(enc(slots[2]),enc(slots[3]),enc(slots[4]),content,{decode:decodeCognitive,schema:cognitiveSchemaByType});
  compileCampaign2Parameters(source.parameterSchemaVersion,source.parameters);
- if(key(decodeCognitive(source.content))!==key(decodeCognitive(hex(contentHex))))invalidModel('content outside declared assembled holder/task topology');
- if(key(shape)!==key(topology(decodeCognitive(hex(registryHex)))))invalidModel('undeclared topology change: references, schemas, phases, ownership and producers are fixed');
+ const contentShape=(value:CanonicalValue)=>configurationEnabled?set(items(value,'set').filter(v=>txt(id(f(rec(v,170n),2n)).payload)==='semantic-kind/character')):value;
+ if(key(contentShape(decodeCognitive(source.content)))!==key(contentShape(decodeCognitive(hex(contentHex)))))invalidModel('content outside declared assembled holder/task topology');
+ if(key(shape)!==key(topology(configurationEnabled?configurationTopology(decodeCognitive(hex(registryHex))):decodeCognitive(hex(registryHex)))))invalidModel('undeclared topology change: references, schemas, phases, ownership and producers are fixed');
  const strategy=strategyEnabled?compileStrategy(allSlots[12],items(slots[0],'set').filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n),decodeCognitive(source.content)):undefined;
  const actionBody=actionBodyEnabled?compileActionBody(allSlots[10],body!.capacity,items(slots[0],'set').filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n&&key(f(v,2n))===key({kind:'typedIdentifier',namespaceId:1023n,payload:{kind:'text',value:'registry/protocol-action'}})).map(v=>({action:f(rec(v,171n),1n),definition:f(rec(v,171n),4n)}))):undefined;
  const modelIdentity=await createModelIdentity({...source,contentManifest:await commitManifest(decodeCognitive(source.content)),registryManifest:await commitManifest(registry),parameterSet:await commitManifest(decodeCognitive(source.parameters))});
@@ -142,5 +148,5 @@ export async function compileCharacterModel(input:Campaign2ModelSource){
  const relationship=relationshipEnabled?compileRelationship(allSlots[20],social!.target,strategy!):undefined;
  const communication=communicationEnabled?compileCommunication(allSlots[18],strategy!):undefined;
  const habit=habitEnabled?compileHabit(allSlots[16],strategy!):undefined;
- return Object.freeze({source,comparisonEnabled,modelIdentity,content,structuralState,body,baseRegistry,memory,retention,retrieval,workspace,memoryContext,actionBody,skill,strategy,priority,horizon,performance,habit,control,communication,social,relationship});
+ return Object.freeze({source,configurationEnabled,comparisonEnabled,modelIdentity,content,structuralState,body,baseRegistry,memory,retention,retrieval,workspace,memoryContext,actionBody,skill,strategy,priority,horizon,performance,habit,control,communication,social,relationship});
 }

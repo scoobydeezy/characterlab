@@ -75,15 +75,18 @@ shared declaration, allocation, arbitration and public paths are affected. No UI
 
 ## Work packages and stop rule
 
-One milestone, three serial packages committed separately, each <=12 code/test files.
+One milestone, four serial packages committed separately, each <=12 code/test files.
 A: taskDeclarations.ts, cognitiveDeclarations.ts, configurationTopology.ts; fixture
 assembledConfiguration.ts and test assembledConfigurationAdmission.test.ts (5).
 B: strategy.ts/strategyExecution.ts, actionBody.ts, priority.ts/priorityExecution.ts,
 horizon.ts/horizonExecution.ts, performance.ts/performanceExecution.ts, social.ts;
 assembledConfigurationConsumers.test.ts (11). No public widening yet.
-C: model.ts, traceBinding.ts, runtime.ts, execution.ts, workspace.ts, reasons.ts,
+C (checkpoint10): model.ts, traceBinding.ts, runtime.ts, execution.ts, workspace.ts, reasons.ts,
 random.ts, arbitration.ts; configurationMath.ts, configurationWorkspace.ts;
-assembledConfiguration.test.ts and its existing fixture (12).
+D (completion4): control.ts capacity0..5, model.ts activation,
+assembledConfiguration.test.ts and its existing fixture. This split follows discovery
+of the control allocator capacity4 guard before its implementation; public0.22 stays
+explicitly closed at the C checkpoint. Same acceptance and1800sec budget.
 Paths are under src/assembled or src/test[/fixtures]. No owner-registry cleanup.
 Before each package, retain the card/checkpoint; no unrelated breadth between packages.
 Same <=1800sec total validation including failures/retries, <=600sec per command,

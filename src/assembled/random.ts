@@ -10,7 +10,7 @@ import type {ArbitrationDraws} from '../campaign2/cognitiveArbitration';
 const atom=(n:number,s:string)=>typedIdentifier(n,text(s));
 function drawValue(draw:RandomDrawRecord){return (draw.comparisonDrawKey?successorRecord:r)(411,[randomAddressValue(draw.localAddress),draw.effectiveKey,u(draw.result),u(draw.span),u(draw.limit),draw.fallback,list(draw.attempts.map(a=>r(410,[u(a.internalCandidateIndex),u(a.candidate),a.rejected])))]);}
 function context(value:CanonicalValue){const reason=rec(value,408n),raw=rec(f(reason,2n),403n),options=rec(f(raw,2n),398n);return {nuclei:items(f(reason,3n),'list'),candidates:items(f(options,3n),'list').map(v=>f(rec(v,397n),1n))};}
-export function createAssembledRandomSession(seed:Uint8Array,comparison?:ComparisonDrawMap){
+export function createAssembledRandomSession(seed:Uint8Array,comparison?:ComparisonDrawMap,maxDomain=2){
  const runSeed=seed.slice(),committed=new Set<string>();let oracle:RandomRunOracle|undefined,staged=new Set<string>(),sealed=false,generation=0,inFlight=0;
  function stage(message:string):never{throw new SchedulerContractError('COGNITIVE_STAGE_VIOLATION',message);}
  return Object.freeze({
@@ -23,7 +23,7 @@ export function createAssembledRandomSession(seed:Uint8Array,comparison?:Compari
    async function draw(purpose:string,bindings:RandomAddress['subjectBindings'],span:bigint){
     if(!oracle||sealed||generation!==epoch)stage('expired random capability');
     const address:RandomAddress={causalRootId:rootId,purposeId:atom(1042,purpose),subjectBindings:bindings,drawIndex:0n},addressKey=key(randomAddressValue(address));
-    if(committed.has(addressKey)||staged.has(addressKey)||staged.size>=5)stage('repeated or excessive cognitive draw');
+    if(committed.has(addressKey)||staged.has(addressKey)||staged.size>=maxDomain*maxDomain+1)stage('repeated or excessive cognitive draw');
     staged.add(addressKey);const current=oracle;inFlight++;
     try{const result=await current.drawBounded(address,span);if(generation!==epoch||oracle!==current)stage('random result crossed instant');return drawValue(result);}finally{inFlight--;}
    }
@@ -32,7 +32,7 @@ export function createAssembledRandomSession(seed:Uint8Array,comparison?:Compari
      const n=rec(matched,407n),nk=rec(f(n,1n),404n),candidate=rec(f(nk,1n),395n);
      return draw('purpose/task-reason-face',[{subjectRoleId:atom(1043,'subject/actor'),subjectId:id(f(candidate,1n))},{subjectRoleId:atom(1043,'subject/action'),subjectId:id(f(candidate,2n))},{subjectRoleId:atom(1043,'subject/task'),subjectId:id(f(nk,3n))}],uint(f(n,4n)));
     },
-    async tie(leaders:readonly CanonicalValue[]){if(!actor||leaders.length!==2||new Set(leaders.map(key)).size!==2||leaders.some(v=>!candidates.some(c=>key(c)===key(v)))||key(leaders[0])>=key(leaders[1]))stage('invalid tie leaders');
+    async tie(leaders:readonly CanonicalValue[]){if(!actor||leaders.length<2||leaders.length>maxDomain||new Set(leaders.map(key)).size!==leaders.length||leaders.some(v=>!candidates.some(c=>key(c)===key(v)))||leaders.some((v,i)=>i>0&&key(leaders[i-1])>=key(v)))stage('invalid tie leaders');
      return draw('purpose/task-decision-tie',[{subjectRoleId:atom(1043,'subject/actor'),subjectId:id(actor)}],BigInt(leaders.length));
     },
    });

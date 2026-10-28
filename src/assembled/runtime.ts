@@ -287,7 +287,7 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
         const prospective=events.filter(e=>taskRuntime.isEvent(e)),baseEvents=events.filter(e=>!taskRuntime.isEvent(e)),slots=prospective.filter(e=>key(e.eventTypeId)!==key(TASK_DEADLINE_EVENT)),clocks=prospective.filter(e=>key(e.eventTypeId)===key(TASK_DEADLINE_EVENT));
         const hasPair=baseEvents.some(e=>memoryRuntime.isEvent(e)||predictionRuntime.isEvent(e));
         const bad=(message:string):never=>{throw new SchedulerContractError('TASK_STAGE_VIOLATION',message);};
-        if(clocks.length>2||slots.length!==(hasPair?1:0))bad('task stage slot multiplicity');
+        if(clocks.length>component.tasks.length||slots.length!==(hasPair?1:0))bad('task stage slot multiplicity');
         if(hasPair){predictionRuntime.validatePair(baseEvents);const p=baseEvents.find(e=>predictionRuntime.isEvent(e))!,s=slots[0];if(s.causalParentEventIds.length!==1||s.causalParentEventIds[0]!==p.causalParentEventIds[0]||key(s.payload)!==key(p.payload)||(key(s.eventTypeId)===key({kind:'typedIdentifier',namespaceId:1001n,payload:text('event/task-measurement-settlement-padding')}))!==(key(p.eventTypeId)===key({kind:'typedIdentifier',namespaceId:1001n,payload:text('event/measurement-prediction-application-padding')})))bad('task S does not match P');}
         // Source/subject/target admission precedes every group's prior evaluation.
         for(const event of events){if(taskRuntime.isEvent(event))taskRuntime.preflight(event,state);else if(memoryRuntime.isEvent(event))memoryRuntime.preflightFormation(event,state);else if(predictionRuntime.isEvent(event))predictionRuntime.preflightApplication(event,state);}

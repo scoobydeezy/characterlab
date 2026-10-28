@@ -12,7 +12,7 @@ const eq=(a:CanonicalValue,b:CanonicalValue)=>key(a)===key(b);
 /** The caller supplies only current, completed retrieval deliveries; never an archive. */
 export function sharedWorkspace(taskWorkspace:CanonicalValue,capacity:number,at:bigint,deliveries:readonly BodyRecallDelivery[],reserved=0){
  const w=rec(taskWorkspace,381n),C=f(w,2n),tasks=items(f(w,4n),'list'),forecast=rec(f(w,5n),380n),tag=uint(f(forecast,1n));
- if(!Number.isSafeInteger(capacity)||capacity<0||capacity>4||typeof at!=='bigint'||at<0n||![1n,2n].includes(tag))fail('capacity/clock/forecast');
+ if(!Number.isSafeInteger(capacity)||capacity<0||capacity>5||typeof at!=='bigint'||at<0n||![1n,2n].includes(tag))fail('capacity/clock/forecast');
  if(!Number.isSafeInteger(reserved)||reserved<0||reserved>capacity)fail('reserved capacity');
  const used=tasks.length+(tag===2n?1:0)+reserved;if(used>capacity)fail('existing focus exceeds capacity');
  const candidates:CanonicalValue[]=[],seen=new Map<string,CanonicalValue>(),events=new Set<bigint>();let lastSequence=-1n;
@@ -28,8 +28,8 @@ export function sharedWorkspace(taskWorkspace:CanonicalValue,capacity:number,at:
 }
 
 /** Task/forecast selection keeps its three-slot domain within the ONE shared budget. */
-export function taskWorkspaceDefinition(definition:CanonicalValue){
+export function taskWorkspaceDefinition(definition:CanonicalValue,taskLimit=2){
  const d=rec(definition,378n),capacity=uint(f(d,2n));
- if(capacity>4n)fail('task projection capacity');
- return capacity===4n?record(d.schema,new Map([...d.fields].map(([n,v])=>[n,n===2n?unsigned(3):v]))):definition;
+ if(capacity>BigInt(taskLimit+2))fail('task projection capacity');
+ return capacity>BigInt(taskLimit+1)?record(d.schema,new Map([...d.fields].map(([n,v])=>[n,n===2n?unsigned(taskLimit+1):v]))):definition;
 }

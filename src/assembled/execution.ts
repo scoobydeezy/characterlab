@@ -1,3 +1,4 @@
+import {workspaceOutput as configurationWorkspaceOutput} from './configurationWorkspace';
 import {compileAssembledReasons} from './reasons';
 import {createAssembledRandomSession} from './random';
 // assembled-character-model/0.1-candidate: bounded successor of cognitiveExecution at db0ca7a8.
@@ -62,7 +63,7 @@ export function createCognitiveExecution(model:Model,component:State,inputs:Awai
  const registration=(name:string)=>f(rows.find(v=>key(f(v,1n))===key(atom(1009,name)))!,4n);
  const definition=(name:string)=>cloneCognitive(component.definition(name));
  const seed=f(rec(inputs.runIdentity.value,104n),4n);if(typeof seed==='boolean'||seed.kind!=='bytes')fail('run seed required');
- const random=model.habit?createAssembledRandomSession(seed.value,inputs.comparison):createCognitiveRandomSession(seed.value);
+ const random=model.habit?createAssembledRandomSession(seed.value,inputs.comparison,model.configurationEnabled?3:2):createCognitiveRandomSession(seed.value);
  const protocol=compileProtocolBridge(definition('protocol-observation'));let protocolInstant:ReturnType<typeof protocol.begin>|undefined;
  let pending=new Map<string,ScheduledEvent>(),checkpoint=new Map<string,ScheduledEvent>(),active=false,instant=0n,sealed=false,unbound=0,chosen=false;
  let source:ReturnType<typeof beginCognitiveSourceInstant>|undefined;
@@ -80,7 +81,7 @@ export function createCognitiveExecution(model:Model,component:State,inputs:Awai
   validateParticipants(events:readonly ScheduledEvent[]){
    if(!active||sealed)stageFail('participant check outside instant');
    const count=(name:string)=>events.filter(e=>key(e.eventTypeId)===key(atom(1001,'event/'+name))).length;
-   if(chosen){if(count('task-identity-application')!==1||count('regulatory-adaptation')!==1||events.length!==2+count('task-deadline')||count('task-deadline')>2)stageFail('chosen stage requires exactly A + I and optional deadlines');}
+   if(chosen){if(count('task-identity-application')!==1||count('regulatory-adaptation')!==1||events.length!==2+count('task-deadline')||count('task-deadline')>component.tasks.length)stageFail('chosen stage requires exactly A + I and optional deadlines');}
    else if(count('task-identity-application')||count('regulatory-adaptation'))stageFail('unchosen source cannot enter A or I');
   },
   /** Called by the common phase-140 preparation barrier, before any participant prior. */
@@ -143,7 +144,7 @@ export function createCognitiveExecution(model:Model,component:State,inputs:Awai
     reads[reads.length-1]={accessorId:id(f(q,5n)),path,presence:true,value:C,derivedSources:[prior],transformationId:id(f(q,5n))};
     const tr=rec(items(f(wrapper,10n),'set')[0],416n),pr=rec(items(f(wrapper,11n),'set')[0],363n),pt=decodeStatePattern(f(pr,3n));
     const tasks=component.tasks.filter(t=>key(t.character)===key(C));
-    output=workspaceOutput(occurrence,C,f(cue,2n),taskWorkspaceDefinition(definition('task-workspace')),tasks,instant,{
+    output=(model.configurationEnabled?configurationWorkspaceOutput:workspaceOutput)(occurrence,C,f(cue,2n),taskWorkspaceDefinition(definition('task-workspace'),model.configurationEnabled?3:2),tasks,instant,{
      status(task){const t=tasks.find(v=>key(v.key)===key(task));if(!t)fail('unselected workspace task read');return read(t.path,f(tr,4n)).value;},
      prediction(){return read({rootStateTypeId:pt.rootStateTypeId,fieldId:pt.fieldId,selectors:[{kind:'mapKey',key:r(360,[C,f(pr,2n)])}]},f(pr,4n)).value;},
     }).output;
@@ -177,9 +178,9 @@ export function createCognitiveExecution(model:Model,component:State,inputs:Awai
     output=result.output;quantizationOperations=result.quantizationOperations;
     if(model.body){if(!joint)fail('raw signals require generated joint appraisal');output=jointSignalSupport(output,joint!);jointInput=list([event.payload,joint!]);}
     if(relationship){relationshipResult=relationship.raw(event,state,output);output=relationshipResult.output;extraOutputs.push(relationshipResult.report);}
-   }else if(i===6)output=r(408,[occurrence,event.payload,list((model.habit?compileAssembledReasons:compileReasonNuclei)(items(f(rec(event.payload,403n),3n),'set'),definition('task-reason-dice')))]);
+   }else if(i===6)output=r(408,[occurrence,event.payload,list((model.habit?compileAssembledReasons(items(f(rec(event.payload,403n),3n),'set'),definition('task-reason-dice'),model.configurationEnabled?3:2):compileReasonNuclei(items(f(rec(event.payload,403n),3n),'set'),definition('task-reason-dice'))))]);
    else if(i===7){
-    output=await arbitrationOutput(occurrence,instant,event.payload,definition('task-arbitration'),random.forResolution(occurrence,event.payload));
+    output=await arbitrationOutput(occurrence,instant,event.payload,definition('task-arbitration'),random.forResolution(occurrence,event.payload),model.configurationEnabled?3:2);
     const result=rec(f(rec(output,409n),4n),419n);chosen=u(f(result,1n))===3n;if(chosen){const data=rec(f(result,2n),420n);randomDrawRecords=items(f(data,9n),'list').map(v=>f(rec(v,422n),5n));const tie=rec(f(data,10n),423n);if(u(f(tie,1n))===2n)randomDrawRecords.push(f(tie,3n));}
    }else if(i===8)output=intentOutput(occurrence,event.payload);
    else if(i===9)output=expressionOutput(occurrence,event.payload);
