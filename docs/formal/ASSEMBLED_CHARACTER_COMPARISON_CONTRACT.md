@@ -81,3 +81,25 @@ phase order and owner boundaries; only receiving/constructing codec imports chan
 Character restore uses the successor decoder. Old-model no-map draws retain411/1.
 Code checkpoint is not a pass. Complete the original comparisons and negative controls
 before declaring M21a complete; do not reset its runtime budget across this split.
+
+The successor ingress receives draw-bearing qualified outputs. Governed scalar-role
+validation walks the decoded successor record and applies EVERY existing content
+recordRole/validateRole rule; no roles or predicates are skipped or changed. Coupled
+draws may be nested only through their cognitive envelopes or scheduler/save/trace
+envelopes130/132/160, not inserted into unrelated embodied records.
+
+## Owner amendment — approved 2026-10-27 before execution
+
+Retain the failed cooperation/breach matrix and its zero-overlap finding. Replace only
+M21a's positive behavioral witness with the existing M20 own-participation control:
+two cooperative encounters at1/2, participant=true versus participant=false, all other
+source fields, person evidence, initial state, model laws and parameters identical.
+The participant=false branch witnesses the encounters without acquiring own history.
+Predeclare seeds0..7 and first decision3; map full potential reason/tie identities as
+above, never outcomes. Require actual shared mapped draws, equal candidate prefixes,
+exact consumed-state/reason differences, and at least one first-choice difference.
+Both branches must be contested; if not, report failure and stop without another
+contrast, law change, parameter adjustment or seed search. Run to10; repeat and restore
+the new witness branch at2/3. The previous positive claim remains failed, not repaired.
+The owner explicitly approved this bounded replacement in the chat, satisfying
+work-order lines179-182. No second replacement is authorized by this amendment. Widening remains pending until the foundation gate closes.

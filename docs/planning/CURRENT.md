@@ -64,6 +64,14 @@ First matrix failed: frozen draw411/1 admits only NaturalRandomKey, blocking cou
 keys throughout the choice chain. Eight code/test files checkpointed INCOMPLETE.
 Continue the SAME M21a gate and original1800sec budget, no new capability: successor
 codecs.ts, arbitration.ts, choice.ts, protocolBridge.ts; update random.ts, execution.ts,
-character.ts and the two comparison test/fixture files (<=9 files). All affected old
+character.ts, ingress.ts, model.ts and the two comparison test/fixture files (<=11 files). All affected old
 records keep exact grammar/bytes; draw411/2 is the explicit receiving successor.
 No bypass, fake natural-key trace or C0-C3 source mutation. Contract amendment precedes code.
+
+## Owner amendment adopted before replacement code
+
+Owner approved the exact participation-versus-witnessing replacement in the contract.
+Keep cooperation/breach as a negative control (Auto versus Roll, no actual overlap).
+One replacement only, same reference laws/parameters/seeds0..7, first decision3.
+Require contested branches, shared mapped candidates and changed choice; restore2/3
+on the witness branch. Stop if it fails. Original1800sec total budget still applies.
