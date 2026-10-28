@@ -5,15 +5,16 @@ import {createAssembledRandomSession} from '../assembled/random';
 import {ComparisonDrawMap,RandomRunOracle,randomAddressValue} from '../substrate/random';
 import {canonicalEncode as enc,list,unsigned,record,type CanonicalValue} from '../substrate/canonicalEncoding';
 import {dataItems as items,dataRecord as rec,dataField as f,dataKey as key,dataUnsigned as uint} from '../campaign2/canonicalData';
-import {decodeEmbodied as decode} from '../campaign3/embodiedCodecs';
+import {decodeCognitive as decode} from '../assembled/codecs';
+import {decodeCognitive as frozenDecode} from '../campaign2/cognitiveCodecs';
 import {restoreAuthoritativeState} from '../substrate/state';
 import {personPath} from '../assembled/social';
-import {REL_APPRAISAL} from '../assembled/relationship';
+import {REL_APPRAISAL,relationshipPath,relationshipHistory} from '../assembled/relationship';
 import {C} from './fixtures/campaign2Cognitive';
 import {target} from './fixtures/assembledSocial';
 import {relationshipSource} from './fixtures/assembledRelationship';
 import {workLimit,replace} from './fixtures/assembledCharacter';
-import {outputs} from './fixtures/assembledInteraction';
+import {outputs} from './fixtures/assembledComparison';
 import {source,fixture,data,mappedData,atom,through,finish,draws,choice,decisions,signedValue,type Run} from './fixtures/assembledComparison';
 const state=(r:Run)=>restoreAuthoritativeState(decode(r.snapshot().state));
 const exact=(a:Run,b:Run)=>{expect(b.snapshot()).toEqual(a.snapshot());expect(b.save()).toEqual(a.save());};
@@ -28,21 +29,30 @@ function assertCoupled(a:Run,b:Run){
  return {draws:aa.length+bb.length,common,differentRoots,unmatched:aa.length+bb.length-2*common};
 }
 describe('M21a explicit comparison foundation',()=>{
- it('matrix: first-decision correspondence holds entropy fixed across all eight prescribed pairs',async()=>{
-  const {model,maps}=await fixture(),changed:number[]=[];let common=0,differentRoots=0,total=0,unmatched=0,laterNatural=0;
+ for(const contrast of ['breach','witness'] as const)it(contrast==='breach'?'negative matrix: cooperation versus automatic breach has no shared draws':'participation: first-decision correspondence holds entropy fixed across all eight pairs',async()=>{
+  const {model,maps}=await fixture(contrast),changed:number[]=[];let common=0,differentRoots=0,total=0,unmatched=0,laterNatural=0;
   for(let seed=0;seed<8;seed++){
-   const a=await createCharacterRun(model,data(true,seed,maps[0])),b=await createCharacterRun(model,data(false,seed,maps[1]));await through(a,3n);await through(b,3n);
+   const a=await createCharacterRun(model,data(true,seed,maps[0],contrast)),b=await createCharacterRun(model,data(false,seed,maps[1],contrast));await through(a,3n);await through(b,3n);
    expect(state(a).read(personPath(C,target))).toEqual(state(b).read(personPath(C,target)));
    expect(f(decisions(a)[0],3n)).not.toEqual(f(decisions(b)[0],3n));
    const reports=(r:Run)=>items(decode(r.snapshot().outputs),'list').filter(v=>typeof v!=='boolean'&&v.kind==='list'&&v.items[0]&&key(v.items[0])===key(atom(0,REL_APPRAISAL).payload)).map(v=>items(v,'list'));
-   expect(reports(a).at(-1)!.slice(4,7)).toEqual([unsigned(2),false,true]);expect(reports(b).at(-1)!.slice(4,7)).toEqual([unsigned(0),true,false]);
+   expect(reports(a).at(-1)!.slice(4,7)).toEqual([unsigned(2),false,true]);expect(reports(b).at(-1)!.slice(4,7)).toEqual([unsigned(0),contrast==='breach',false]);
+   for(const run of [a,b]){const prior=state(run).read(relationshipPath(C,target)).value;expect(reports(run).at(-1)![3]).toEqual(prior??list([]));expect(relationshipHistory(prior)).toHaveLength(run===a||contrast==='breach'?2:0);}
+   const mode=(r:Run)=>uint(f(rec(f(rec(f(decisions(r)[0],4n),419n),2n),420n),8n));expect(mode(a)).toBe(3n);expect(mode(b)).toBe(contrast==='witness'?3n:1n);
    const counts=assertCoupled(a,b);common+=counts.common;differentRoots+=counts.differentRoots;total+=counts.draws;unmatched+=counts.unmatched;
-   if(choice(a)!==choice(b))changed.push(seed);console.info('M21a cell '+JSON.stringify({seed,a:choice(a),b:choice(b),...counts}));
+   if(contrast==='witness')expect(counts.common).toBeGreaterThan(0);
+   if(choice(a)!==choice(b))changed.push(seed);console.info('M21a cell '+JSON.stringify({contrast,seed,a:choice(a),b:choice(b),...counts}));
    await finish(a);await finish(b);for(const run of [a,b])for(const at of [5n,7n])for(const d of draws(run,at)){expect(rec(f(d,2n),112n).schema.typeId).toBe(112n);laterNatural++;}
   }
-  expect(common).toBeGreaterThan(0);expect(differentRoots).toBeGreaterThan(0);expect(changed.length).toBeGreaterThan(0);
-  console.info('M21a matrix '+JSON.stringify({runs:16,seeds:8,changedFirstChoices:changed,draws:total,common,differentRoots,unmatched,laterNatural}));
+  if(contrast==='witness'){expect(common).toBeGreaterThan(0);expect(changed.length).toBeGreaterThan(0);}else{expect(common).toBe(0);expect(unmatched).toBe(total);}
+  console.info('M21a matrix '+JSON.stringify({contrast,runs:16,seeds:8,changedFirstChoices:changed,draws:total,common,differentRoots,unmatched,laterNatural}));
  },420000);
+ it('participation: witness exact repeat and restore2/3 through10',async()=>{
+  const {model,maps}=await fixture('witness'),d=data(false,0,maps[1],'witness'),run=await createCharacterRun(model,d),repeat=await createCharacterRun(model,d);
+  await through(run,2n);const save2=run.save();await through(run,3n);const save3=run.save();await finish(run);await finish(repeat);exact(run,repeat);
+  for(const save of [save2,save3]){const restored=await restoreCharacterRun(source(),{initialState:d.initialState,orderedInputs:d.orderedInputs,save});await finish(restored);exact(run,restored);}
+  console.info('M21a participation: witness repeat and restore2/3 exact through10');
+ },180000);
  it('controls: exact repeat, restore2/3, map identity and inaccessible truth',async()=>{
   const {model,maps}=await fixture(),d=data(true,0,maps[0]),run=await createCharacterRun(model,d),repeat=await createCharacterRun(model,d);await through(run,2n);const save2=run.save();await through(run,3n);const save3=run.save();await finish(run);await finish(repeat);exact(run,repeat);
   for(const save of [save2,save3]){const restored=await restoreCharacterRun(source(),{initialState:d.initialState,orderedInputs:d.orderedInputs,save});await finish(restored);exact(run,restored);}
@@ -68,10 +78,21 @@ describe('M21a explicit comparison foundation',()=>{
   expect(await new RandomRunOracle(seed,new ComparisonDrawMap([...entries,extra],comparisonRoles)).drawBounded(address,7n)).toEqual(await new RandomRunOracle(seed,m).drawBounded(address,7n));
   const run=await createCharacterRun(model,d);await through(run,3n);const decision=decisions(run)[0],context=f(decision,3n),nucleus=items(f(rec(context,408n),3n),'list')[0],session=createAssembledRandomSession(seed,m);
   session.begin();const first=await session.forResolution(f(decision,1n),context).reason(nucleus);session.close();expect(session.committedAddressKeys()).toEqual([]);
+  const admitted=draws(run)[0];expect(admitted.schema.schemaVersion).toBe(2n);expect(()=>frozenDecode(enc(admitted))).toThrow();
+  expect(()=>decode(enc(record({...admitted.schema,schemaVersion:1n},admitted.fields)))).toThrow();
+  expect(()=>decode(enc(record(admitted.schema,new Map([...admitted.fields].map(([k,v])=>[k,k===4n?true:v])))))).toThrow('unsigned');
+  const root=f(decision,1n) as Extract<CanonicalValue,{kind:'typedIdentifier'}>,newRoot={...root,payload:unsigned(uint(root.payload)+10000n)};
+  const remapped=new ComparisonDrawMap(entries.map(e=>({...e,localRandomAddress:{...e.localRandomAddress,causalRootId:newRoot}})),comparisonRoles),other=createAssembledRandomSession(seed,remapped);
+  other.begin();const second=await other.forResolution(newRoot,context).reason(nucleus);other.close();
+  const asRecord=(v:CanonicalValue)=>v as Extract<CanonicalValue,{kind:'record'}>;expect(f(asRecord(first),1n)).not.toEqual(f(asRecord(second),1n));expect(f(asRecord(first),2n)).toEqual(f(asRecord(second),2n));expect(f(asRecord(first),7n)).toEqual(f(asRecord(second),7n));
+
   session.begin();expect(await session.forResolution(f(decision,1n),context).reason(nucleus)).toEqual(first);session.prepareCommit();session.commit();session.close();expect(session.committedAddressKeys()).toHaveLength(1);
   session.begin();await expect(session.forResolution(f(decision,1n),context).reason(nucleus)).rejects.toThrow('repeated');session.close();
-  const traces=outputs(run.snapshot().trace,160n),count=new Set(traces.filter(t=>signedValue(f(rec(f(t,4n),130n),2n))===3n).map(t=>key(f(rec(f(t,4n),130n),1n)))).size;
-  const failed=await createCharacterRun(await prepareCharacterModel(workLimit(source(),BigInt(count-1))),d);await through(failed,2n);const before=failed.snapshot();await expect(failed.settleNextInstant()).rejects.toThrow();expect({...failed.snapshot(),status:before.status}).toEqual(before);
-  console.info('M21a controls: map validation, no evidence ingress, repeat/restore and atomic address ledger; rollback limit '+(count-1));
+  // A fixed low ceiling must fail the first instant; it cannot isolate instant3 if
+  // an earlier instant has more events. RNG-after-draw rollback/retry is checked above.
+  const failed=await createCharacterRun(await prepareCharacterModel(workLimit(source(),1n)),d),before=failed.snapshot();
+  await expect(failed.settleNextInstant()).rejects.toThrow('work ceiling');expect({...failed.snapshot(),status:before.status}).toEqual(before);
+  console.info('M21a controls: map validation, strict411 versions, shifted-root entropy, natural fallback, atomic RNG ledger retry and whole-first-instant rollback');
+
  },180000);
 });

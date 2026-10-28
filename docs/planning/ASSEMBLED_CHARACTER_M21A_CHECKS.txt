@@ -35,3 +35,418 @@ SchedulerContractError: cognitive record grammar: wrong nested record schema
    Duration  13.11s (transform 1.60s, setup 0ms, collect 2.43s, tests 9.90s, environment 0ms, prepare 407ms)
 
 M21a-matrix exit=1 seconds=15.3425361
+typecheck-codec exit=0 seconds=14.5769234
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledComparison.test.ts (3 tests | 1 failed | 2 skipped) 10149ms
+   × M21a explicit comparison foundation > matrix: first-decision correspondence holds entropy fixed across all eight prescribed pairs 10148ms
+     → requires 411/1
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledComparison.test.ts > M21a explicit comparison foundation > matrix: first-decision correspondence holds entropy fixed across all eight prescribed pairs
+SchedulerContractError: requires 411/1
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataRecord src/campaign2/canonicalData.ts:9:117
+ ❯ Module.arbitrationOutput src/assembled/arbitration.ts:18:80
+ ❯ Object.execute src/assembled/execution.ts:182:12
+ ❯ src/assembled/runtime.ts:173:17
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:373:20
+ ❯ Object.settleNextInstant src/assembled/character.ts:40:58
+ ❯ Module.through src/test/fixtures/assembledComparison.ts:15:125
+ ❯ src/test/assembledComparison.test.ts:34:127
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 2 skipped (3)
+   Start at  20:34:37
+   Duration  12.95s (transform 1.59s, setup 0ms, collect 2.43s, tests 10.15s, environment 0ms, prepare 122ms)
+
+M21a-matrix-codec exit=1 seconds=13.5158643
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledComparison.test.ts (3 tests | 1 failed | 2 skipped) 10206ms
+   × M21a explicit comparison foundation > matrix: first-decision correspondence holds entropy fixed across all eight prescribed pairs 10205ms
+     → unknown record schema 411/2
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledComparison.test.ts > M21a explicit comparison foundation > matrix: first-decision correspondence holds entropy fixed across all eight prescribed pairs
+SchedulerContractError: unknown record schema 411/2
+ ❯ fail src/substrate/scheduler.ts:667:9
+    665| 
+    666| function fail(code: SchedulerFailureCode, message: string): never {
+    667|   throw new SchedulerContractError(code, message);
+       |         ^
+    668| }
+    669| 
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:390:11
+ ❯ Object.settleNextInstant src/assembled/character.ts:40:58
+ ❯ Module.through src/test/fixtures/assembledComparison.ts:15:125
+ ❯ src/test/assembledComparison.test.ts:34:127
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 2 skipped (3)
+   Start at  20:35:42
+   Duration  13.01s (transform 1.59s, setup 0ms, collect 2.43s, tests 10.21s, environment 0ms, prepare 119ms)
+
+M21a-matrix-reader exit=1 seconds=13.5333119
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > matrix: first-decision correspondence holds entropy fixed across all eight prescribed pairs
+M21a cell {"seed":0,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-two","draws":2,"common":0,"differentRoots":0,"unmatched":2}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > matrix: first-decision correspondence holds entropy fixed across all eight prescribed pairs
+M21a cell {"seed":1,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-two","draws":2,"common":0,"differentRoots":0,"unmatched":2}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > matrix: first-decision correspondence holds entropy fixed across all eight prescribed pairs
+M21a cell {"seed":2,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-two","draws":2,"common":0,"differentRoots":0,"unmatched":2}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > matrix: first-decision correspondence holds entropy fixed across all eight prescribed pairs
+M21a cell {"seed":3,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-two","draws":2,"common":0,"differentRoots":0,"unmatched":2}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > matrix: first-decision correspondence holds entropy fixed across all eight prescribed pairs
+M21a cell {"seed":4,"a":"definition/protocol-contact-two","b":"definition/protocol-contact-two","draws":2,"common":0,"differentRoots":0,"unmatched":2}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > matrix: first-decision correspondence holds entropy fixed across all eight prescribed pairs
+M21a cell {"seed":5,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-two","draws":2,"common":0,"differentRoots":0,"unmatched":2}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > matrix: first-decision correspondence holds entropy fixed across all eight prescribed pairs
+M21a cell {"seed":6,"a":"definition/protocol-contact-two","b":"definition/protocol-contact-two","draws":2,"common":0,"differentRoots":0,"unmatched":2}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > matrix: first-decision correspondence holds entropy fixed across all eight prescribed pairs
+M21a cell {"seed":7,"a":"definition/protocol-contact-two","b":"definition/protocol-contact-two","draws":3,"common":0,"differentRoots":0,"unmatched":3}
+
+ ❯ src/test/assembledComparison.test.ts (3 tests | 1 failed | 2 skipped) 179988ms
+   × M21a explicit comparison foundation > matrix: first-decision correspondence holds entropy fixed across all eight prescribed pairs 179987ms
+     → expected 0 to be greater than 0
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledComparison.test.ts > M21a explicit comparison foundation > matrix: first-decision correspondence holds entropy fixed across all eight prescribed pairs
+AssertionError: expected 0 to be greater than 0
+ ❯ src/test/assembledComparison.test.ts:43:18
+     41|    await finish(a);await finish(b);for(const run of [a,b])for(const at…
+     42|   }
+     43|   expect(common).toBeGreaterThan(0);expect(differentRoots).toBeGreater…
+       |                  ^
+     44|   console.info('M21a matrix '+JSON.stringify({runs:16,seeds:8,changedF…
+     45|  },420000);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 2 skipped (3)
+   Start at  20:38:50
+   Duration  182.81s (transform 1.58s, setup 0ms, collect 2.41s, tests 179.99s, environment 0ms, prepare 130ms)
+
+M21a-matrix-ingress exit=1 seconds=183.3323351
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > controls: exact repeat, restore2/3, map identity and inaccessible truth
+M21a preflight {"history":"cooperation","mode":3,"draws":3}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > controls: exact repeat, restore2/3, map identity and inaccessible truth
+M21a preflight {"history":"breach","mode":1,"draws":0}
+
+ ❯ src/test/assembledComparison.test.ts (3 tests | 1 failed | 1 skipped) 92394ms
+   ✓ M21a explicit comparison foundation > controls: exact repeat, restore2/3, map identity and inaccessible truth 82834ms
+   × M21a explicit comparison foundation > controls: admission, natural fallback, purpose separation and atomic ledger retry 9559ms
+     → same-instant settlement exceeded its configured work ceiling
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledComparison.test.ts > M21a explicit comparison foundation > controls: admission, natural fallback, purpose separation and atomic ledger retry
+SchedulerContractError: same-instant settlement exceeded its configured work ceiling
+ ❯ fail src/substrate/scheduler.ts:667:9
+    665| 
+    666| function fail(code: SchedulerFailureCode, message: string): never {
+    667|   throw new SchedulerContractError(code, message);
+       |         ^
+    668| }
+    669| 
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:358:11
+ ❯ Object.settleNextInstant src/assembled/character.ts:40:58
+ ❯ Module.through src/test/fixtures/assembledComparison.ts:15:125
+ ❯ src/test/assembledComparison.test.ts:83:109
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed | 1 skipped (3)
+   Start at  20:43:20
+   Duration  95.32s (transform 1.58s, setup 0ms, collect 2.41s, tests 92.39s, environment 0ms, prepare 126ms)
+
+M21a-controls exit=1 seconds=95.8436553
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > controls: admission, natural fallback, purpose separation and atomic ledger retry
+M21a preflight {"history":"cooperation","mode":3,"draws":3}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > controls: admission, natural fallback, purpose separation and atomic ledger retry
+M21a preflight {"history":"breach","mode":1,"draws":0}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > controls: admission, natural fallback, purpose separation and atomic ledger retry
+M21a controls: map validation, strict411 versions, shifted-root entropy, natural fallback, atomic RNG ledger retry and whole-first-instant rollback
+
+ ✓ src/test/assembledComparison.test.ts (3 tests | 2 skipped) 19166ms
+   ✓ M21a explicit comparison foundation > controls: admission, natural fallback, purpose separation and atomic ledger retry 19165ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 2 skipped (3)
+   Start at  20:46:17
+   Duration  21.94s (transform 1.56s, setup 0ms, collect 2.39s, tests 19.17s, environment 0ms, prepare 117ms)
+
+M21a-admission-rollback-correction exit=0 seconds=22.4332939
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > matrix16: equal person belief with different own history changes shared reasons and choice
+M20 cell {"seed":0,"cooperation":["definition/protocol-contact-one","definition/protocol-contact-two","definition/protocol-contact-one"],"breach":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > matrix16: equal person belief with different own history changes shared reasons and choice
+M20 cell {"seed":1,"cooperation":["definition/protocol-contact-one","definition/protocol-contact-one","definition/protocol-contact-one"],"breach":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > matrix16: equal person belief with different own history changes shared reasons and choice
+M20 cell {"seed":2,"cooperation":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-one"],"breach":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > matrix16: equal person belief with different own history changes shared reasons and choice
+M20 cell {"seed":3,"cooperation":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"],"breach":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > matrix16: equal person belief with different own history changes shared reasons and choice
+M20 cell {"seed":4,"cooperation":["definition/protocol-contact-one","definition/protocol-contact-one","definition/protocol-contact-one"],"breach":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > matrix16: equal person belief with different own history changes shared reasons and choice
+M20 cell {"seed":5,"cooperation":["definition/protocol-contact-one","definition/protocol-contact-two","definition/protocol-contact-two"],"breach":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > matrix16: equal person belief with different own history changes shared reasons and choice
+M20 cell {"seed":6,"cooperation":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-one"],"breach":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > matrix16: equal person belief with different own history changes shared reasons and choice
+M20 cell {"seed":7,"cooperation":["definition/protocol-contact-one","definition/protocol-contact-two","definition/protocol-contact-one"],"breach":["definition/protocol-contact-two","definition/protocol-contact-two","definition/protocol-contact-two"]}
+M20 matrix {"runs":16,"changed":[0,1,2,4,5,6,7],"draws":52,"matched":0,"terminal":10}
+
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > controls: privacy, witnessing, statement versus repair, absence and existing identity
+M20 controls:10 full runs; privacy/participant/statement/repair/absence/timing/no-contact; identity retained and no base creates no reason
+
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > controls: original REL full scenarios, retained laws, caches and violations
+M20 original REL {"runs":14,"frames":140,"comparisons":80}
+
+stdout | src/test/assembledRelationship.test.ts > M20 assembled relationship > controls: admission, owners, genuine evidence, child authentication and whole-instant rollback
+M20 rollback 48 events, limit47; earlier history retained and shared instant rolled back
+
+ ✓ src/test/assembledRelationship.test.ts (5 tests) 382214ms
+   ✓ M20 assembled relationship > matrix16: equal person belief with different own history changes shared reasons and choice 143403ms
+   ✓ M20 assembled relationship > controls: privacy, witnessing, statement versus repair, absence and existing identity 78744ms
+   ✓ M20 assembled relationship > controls: original REL full scenarios, retained laws, caches and violations 26230ms
+   ✓ M20 assembled relationship > controls: exact repeat and acquired-history restores2/5 through10 115401ms
+   ✓ M20 assembled relationship > controls: admission, owners, genuine evidence, child authentication and whole-instant rollback 18436ms
+
+ Test Files  1 passed (1)
+      Tests  5 passed (5)
+   Start at  20:46:58
+   Duration  385.12s (transform 1.60s, setup 0ms, collect 2.45s, tests 382.21s, environment 0ms, prepare 129ms)
+
+M20-regression exit=0 seconds=385.6486157
+PASS source guards:105 factory dependencies match db0ca7a8; historical C0-C3 source trees and unchanged M20/M2a tests match1d3b9e01. Guard6.90s. Choice/protocol bridge bodies exact except receiving imports; arbitration body exact except411 version reader; guard0.34s.
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > baseline preserves every semantic boundary and addressed draw
+M2a control baseline: 8 instants, 9 exact coupled draws
+
+stdout | src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > deadline overlap preserves every semantic boundary and addressed draw
+M2a control deadline overlap: 6 instants, 0 exact coupled draws
+
+stdout | src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > equal criteria preserves every semantic boundary and addressed draw
+M2a control equal criteria: 8 instants, 6 exact coupled draws
+
+stdout | src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > non-preset prepares, learns, decides, repeats and restores the whole run
+M2a non-preset: 8 instants; learned prediction, decision, repeat and restore exact
+
+ ✓ src/test/assembledAdmission.test.ts (18 tests) 146829ms
+   ✓ M2a invariant admission and one continuing successor > baseline preserves every semantic boundary and addressed draw 25075ms
+   ✓ M2a invariant admission and one continuing successor > deadline overlap preserves every semantic boundary and addressed draw 7283ms
+   ✓ M2a invariant admission and one continuing successor > equal criteria preserves every semantic boundary and addressed draw 19971ms
+   ✓ M2a invariant admission and one continuing successor > non-preset prepares, learns, decides, repeats and restores the whole run 79370ms
+   ✓ M2a invariant admission and one continuing successor > rejects work limit before publishing a model 300ms
+   ✓ M2a invariant admission and one continuing successor > rejects overlapping authority before publishing a model 328ms
+   ✓ M2a invariant admission and one continuing successor > rejects undeclared topology before publishing a model 382ms
+   ✓ M2a invariant admission and one continuing successor > rejects unsupported versions/schema and executable or mutable source substitution 2909ms
+   ✓ M2a invariant admission and one continuing successor > rejects invented learned S0 and foreign observer evidence, and rolls back a tiny work budget 3341ms
+   ✓ M2a invariant admission and one continuing successor > binds restore to its model, inputs and every saved byte 6387ms
+
+ Test Files  1 passed (1)
+      Tests  18 passed (18)
+   Start at  20:54:58
+   Duration  149.74s (transform 1.54s, setup 0ms, collect 2.37s, tests 146.83s, environment 0ms, prepare 150ms)
+
+M2a-regression exit=0 seconds=150.2649613
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+M21a preflight {"contrast":"witness","history":true,"mode":3,"draws":3}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+M21a preflight {"contrast":"witness","history":false,"mode":3,"draws":2}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+M21a cell {"contrast":"witness","seed":0,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-two","draws":4,"common":2,"differentRoots":0,"unmatched":0}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+M21a cell {"contrast":"witness","seed":1,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-two","draws":4,"common":2,"differentRoots":0,"unmatched":0}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+M21a cell {"contrast":"witness","seed":2,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-one","draws":4,"common":2,"differentRoots":0,"unmatched":0}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+M21a cell {"contrast":"witness","seed":3,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-one","draws":5,"common":2,"differentRoots":0,"unmatched":1}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+M21a cell {"contrast":"witness","seed":4,"a":"definition/protocol-contact-two","b":"definition/protocol-contact-two","draws":4,"common":2,"differentRoots":0,"unmatched":0}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+M21a cell {"contrast":"witness","seed":5,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-two","draws":4,"common":2,"differentRoots":0,"unmatched":0}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+M21a cell {"contrast":"witness","seed":6,"a":"definition/protocol-contact-two","b":"definition/protocol-contact-two","draws":4,"common":2,"differentRoots":0,"unmatched":0}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+M21a cell {"contrast":"witness","seed":7,"a":"definition/protocol-contact-two","b":"definition/protocol-contact-two","draws":5,"common":2,"differentRoots":0,"unmatched":1}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: witness exact repeat and restore2/3 through10
+M21a participation: witness repeat and restore2/3 exact through10
+
+ ❯ src/test/assembledComparison.test.ts (5 tests | 1 failed | 3 skipped) 241752ms
+   × M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs 185026ms
+     → expected 0 to be greater than 0
+   ✓ M21a explicit comparison foundation > participation: witness exact repeat and restore2/3 through10 56725ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+AssertionError: expected 0 to be greater than 0
+ ❯ src/test/assembledComparison.test.ts:47:85
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed | 3 skipped (5)
+   Start at  21:01:43
+   Duration  245.17s (transform 1.58s, setup 0ms, collect 2.42s, tests 241.75s, environment 0ms, prepare 513ms)
+
+Approved-participation exit=1 seconds=247.8016676
+
+TEST CORRECTION: Approved participation matrix completed all16 runs with16 shared actual keys and changed choices0/1/5; witness repeat/restore PASS. Matrix failed only the leftover differentRoots>0 assertion from the previous contrast. The owner-approved comparison requires shared entropy, not different occurrence ordinals. Remove that inapplicable assertion, continue reporting differentRoots=0, and retain the passing direct shifted-root RNG proof. No model/input/seed/map correspondence or required choice/shared-draw assertion changes. Rerun only the two amended matrices.
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > negative matrix: cooperation versus automatic breach has no shared draws
+M21a preflight {"contrast":"breach","history":true,"mode":3,"draws":3}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > negative matrix: cooperation versus automatic breach has no shared draws
+M21a preflight {"contrast":"breach","history":false,"mode":1,"draws":0}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > negative matrix: cooperation versus automatic breach has no shared draws
+M21a cell {"contrast":"breach","seed":0,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-two","draws":2,"common":0,"differentRoots":0,"unmatched":2}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > negative matrix: cooperation versus automatic breach has no shared draws
+M21a cell {"contrast":"breach","seed":1,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-two","draws":2,"common":0,"differentRoots":0,"unmatched":2}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > negative matrix: cooperation versus automatic breach has no shared draws
+M21a cell {"contrast":"breach","seed":2,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-two","draws":2,"common":0,"differentRoots":0,"unmatched":2}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > negative matrix: cooperation versus automatic breach has no shared draws
+M21a cell {"contrast":"breach","seed":3,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-two","draws":2,"common":0,"differentRoots":0,"unmatched":2}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > negative matrix: cooperation versus automatic breach has no shared draws
+M21a cell {"contrast":"breach","seed":4,"a":"definition/protocol-contact-two","b":"definition/protocol-contact-two","draws":2,"common":0,"differentRoots":0,"unmatched":2}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > negative matrix: cooperation versus automatic breach has no shared draws
+M21a cell {"contrast":"breach","seed":5,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-two","draws":2,"common":0,"differentRoots":0,"unmatched":2}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > negative matrix: cooperation versus automatic breach has no shared draws
+M21a cell {"contrast":"breach","seed":6,"a":"definition/protocol-contact-two","b":"definition/protocol-contact-two","draws":2,"common":0,"differentRoots":0,"unmatched":2}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > negative matrix: cooperation versus automatic breach has no shared draws
+M21a cell {"contrast":"breach","seed":7,"a":"definition/protocol-contact-two","b":"definition/protocol-contact-two","draws":3,"common":0,"differentRoots":0,"unmatched":3}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > negative matrix: cooperation versus automatic breach has no shared draws
+M21a matrix {"contrast":"breach","runs":16,"seeds":8,"changedFirstChoices":[0,1,2,3,5],"draws":17,"common":0,"differentRoots":0,"unmatched":17,"laterNatural":34}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+M21a preflight {"contrast":"witness","history":true,"mode":3,"draws":3}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+M21a preflight {"contrast":"witness","history":false,"mode":3,"draws":2}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+M21a cell {"contrast":"witness","seed":0,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-two","draws":4,"common":2,"differentRoots":0,"unmatched":0}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+M21a cell {"contrast":"witness","seed":1,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-two","draws":4,"common":2,"differentRoots":0,"unmatched":0}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+M21a cell {"contrast":"witness","seed":2,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-one","draws":4,"common":2,"differentRoots":0,"unmatched":0}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+M21a cell {"contrast":"witness","seed":3,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-one","draws":5,"common":2,"differentRoots":0,"unmatched":1}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+M21a cell {"contrast":"witness","seed":4,"a":"definition/protocol-contact-two","b":"definition/protocol-contact-two","draws":4,"common":2,"differentRoots":0,"unmatched":0}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+M21a cell {"contrast":"witness","seed":5,"a":"definition/protocol-contact-one","b":"definition/protocol-contact-two","draws":4,"common":2,"differentRoots":0,"unmatched":0}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+M21a cell {"contrast":"witness","seed":6,"a":"definition/protocol-contact-two","b":"definition/protocol-contact-two","draws":4,"common":2,"differentRoots":0,"unmatched":0}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+M21a cell {"contrast":"witness","seed":7,"a":"definition/protocol-contact-two","b":"definition/protocol-contact-two","draws":5,"common":2,"differentRoots":0,"unmatched":1}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs
+M21a matrix {"contrast":"witness","runs":16,"seeds":8,"changedFirstChoices":[0,1,5],"draws":34,"common":16,"differentRoots":0,"unmatched":2,"laterNatural":67}
+
+ ✓ src/test/assembledComparison.test.ts (5 tests | 3 skipped) 371796ms
+   ✓ M21a explicit comparison foundation > negative matrix: cooperation versus automatic breach has no shared draws 184171ms
+   ✓ M21a explicit comparison foundation > participation: first-decision correspondence holds entropy fixed across all eight pairs 187624ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 3 skipped (5)
+   Start at  21:06:11
+   Duration  374.61s (transform 1.59s, setup 0ms, collect 2.42s, tests 371.80s, environment 0ms, prepare 126ms)
+
+Approved-matrices-correction exit=0 seconds=375.104509
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/random.test.ts (8 tests) 37ms
+
+ Test Files  1 passed (1)
+      Tests  8 passed (8)
+   Start at  21:12:58
+   Duration  474ms (transform 74ms, setup 0ms, collect 90ms, tests 37ms, environment 0ms, prepare 113ms)
+
+C0-random exit=0 seconds=1.0011978
+final-typecheck exit=0 seconds=14.7576875
+Reference boundary check passed.
+boundary exit=0 seconds=2.4528873
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+research exit=0 seconds=3.8045452
+Final-document-source-diff-gates exit=0 seconds=1.0134595

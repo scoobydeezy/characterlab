@@ -4,7 +4,7 @@
  * registry or a second producer API. Only the frozen regulatory producer changes.
  */
 import {canonicalEncode as enc,record,set,text,typedIdentifier,type CanonicalValue} from '../substrate/canonicalEncoding';
-import {decodeCognitive,cognitiveSchemaByType,cognitiveNamed} from '../campaign2/cognitiveCodecs';
+import {decodeCognitive,cognitiveSchemaByType,cognitiveNamed} from './codecs';
 import {campaign2Schema} from '../campaign2/codecs';
 import {compileAdaptationEvaluator} from '../campaign2/adaptationEvaluation';
 import {compileOccurrenceIdentities} from '../campaign2/occurrenceIdentity';

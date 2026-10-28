@@ -1,77 +1,47 @@
-# Current work — M21a coupled comparison foundation
+# Current work — M21a coupled comparison complete; configuration widening next
 
-The character must admit more tasks/actions and support controlled comparisons before
-more psychological areas are added. M21 is split before coding because widening touches
-both frozen declaration/math successors and assembled consumers, beyond12 code/test files.
-M21a establishes explicit coupling; it does NOT complete configuration widening.
+The character now carries explicit shared-randomness comparisons through its existing
+entry, decisions, execution and save. Personally experiencing versus witnessing the
+same cooperation changes3/8 first choices with matched random candidates. Task/action
+configuration is still restricted; that foundation work is next, before further breadth.
 
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
-## Authorized direction
+## Completed package
 
-Single-character assembly only. Other people remain controlled external stimuli;
-autonomous partners are deferred and are not an assembly prerequisite. Existing pinned
-phenomena remain required; no baseline waiver follows. Recognition follows widening.
-No new psychological breadth between M21 packages. UI remains stopped.
+M21a PASS under the owner's bounded participation replacement.
+[Result and retained failures](ASSEMBLED_CHARACTER_M21A_RESULT.md).
+[Versioned contract and owner amendment](../formal/ASSEMBLED_CHARACTER_COMPARISON_CONTRACT.md).
+Plan1625198c / correction d6fa8f52 preceded implementation; checkpoint c5ba7b4b named
+and bounded the receiving-codec continuation. Owner amendment f18ab1bd preceded the
+replacement. Git preserves the full cards; no new revision chain.
 
-## M21a card (written before code)
+Two capabilities: explicit C0 maps through the one character entry, and a relationship
+comparison under shared entropy with exact continuation. First package8 code/test
+files, continuation11,14 distinct overall; same1800sec validation budget throughout.
+Comparison metadata is committed in run identity, never perception. Draw411/2 receives
+coupled keys through the existing pipeline; historical411/1 stays natural-only.
 
-- Capabilities (2): explicit C0 comparison maps through the existing character entry;
-  relationship-to-choice comparison under coupled entropy with exact continuation.
-- Contract: ../formal/ASSEMBLED_CHARACTER_COMPARISON_CONTRACT.md, comparison0.1;
-  model rules/registry0.21, same21 slots and all M20 owners/mechanisms.
-- Baseline: FND1 RNG / FND3 order-save / FND4 ownership-trace / FND5 admission;
-  PHEN-DET, PHEN-DECISION and PHEN-REL comparison projections. No corpus closure.
-- Production files (6): assembled/comparison.ts, model.ts, inputs.ts, random.ts,
-  execution.ts, traceBinding.ts. Test files (2): assembledComparison.test.ts and its fixture.
-  No state/owner registry cleanup or historical source changes.
-- Input map: optional first canonical ComparisonDrawMap116, committed with ordered
-  input and RunIdentity; not a scheduled event or character-accessible evidence.
-  C0 injectivity/purpose checks apply; undeclared addresses retain natural draws.
-- Comparison: unchanged M20 cooperation/breach scenarios, seeds0..7. Preflight each
-  history at seed0 through instant3 only to identify resolution root and full reason
-  domain; map all potential reason/tie addresses at that decision by semantic role.
-  No choice/result participates in mapping, no seed selection or calibration change.
-  Run both mapped histories to terminal10; assert all instant3 draws mapped, common
-  effective keys have equal raw candidate prefixes, span-aware results, changed reasons
-  and at least one first-decision difference. Later decisions are explicitly uncoupled.
-- Checks: admission/duplicate/noninjective/wrong-purpose/old-version rejection;
-  mapped versus natural/local-root independence and unrelated-map insertion;
-  exact repeat, restore2/3 through10, changed-map restore rejection; hidden-truth control;
-  whole-instant rollback/retry with the same map; all unchanged M20 tests; C0 random
-  vectors; typecheck, boundary/research, frozen-source guard and staged size check.
-- Budget: <=12 production/test files, <=20 evidence files/5MiB; one validation job;
-  <=600sec/command, <=1800sec total including retries. Tests grouped before running.
-- Done: all above pass, coupled and unmatched counts reported without attributing
-  uncoupled later choices to the mechanism; stop verification on pass.
-- Failure risk: maps can omit actual draws, collide, leak into evidence, lose identity
-  commitment or be lost on restore/rollback. Tests cover these separately.
+Original cooperation/breach FAIL retained: Auto versus Roll, zero common actual draws.
+The approved participant/witness pair has16 common first-decision keys, two unmatched
+conditional tie draws, and changed choices in seeds0/1/5. Those three pairs have no
+unmatched first-decision draw. Later draws are natural and explicitly uncoupled.
+Exact repeat, restore2/3, hidden truth, admission and rollback controls pass. All5
+unchanged M20 and18 admission tests pass; C0 random8/8, types, boundary and research pass.
+No original scenario, law, parameter or seed was tuned. Source guards preserve the105
+frozen dependencies and historical C0-C3 trees. Full assembly remains unqualified.
 
-## Next package under the same gate
+## Next bounded package under the same foundation gate
 
-Widen declared task/action cardinalities, including third-task/action execution under
-one reference policy. Known affected seams: taskDeclarations and cognitiveDeclarations,
-model topology admission, strategy/action-body coverage, reasons, arbitration/analysis,
-workspace/candidate transforms and deadline stage bounds. Port changed frozen semantics
-under assembled; resolve complete producer/consumer coverage before writing its card.
-Do not claim widening from accepting a declaration alone. Its done condition includes
-actual three-action arbitration, integrated learned-state influence and exact restore.
-M21a passing authorizes no intervening area and closes none of the21/132 baseline.
+Widen ordinary declared task/action cardinalities; demonstrate actual three-action
+arbitration, retained-learning influence and exact restore in the one simulation.
+Known affected seams: taskDeclarations and cognitiveDeclarations, model topology,
+strategy/action-body coverage, reasons, arbitration/analysis, workspace/candidate
+transforms and deadline bounds. Resolve complete producer/consumer coverage and commit
+the versioned contract and <=12-file package card BEFORE code; split if necessary.
+A declaration-only admission does not pass. No new psychological area intervenes.
 
-## Checkpoint and bounded continuation (before codec implementation)
-
-First matrix failed: frozen draw411/1 admits only NaturalRandomKey, blocking coupled
-keys throughout the choice chain. Eight code/test files checkpointed INCOMPLETE.
-Continue the SAME M21a gate and original1800sec budget, no new capability: successor
-codecs.ts, arbitration.ts, choice.ts, protocolBridge.ts; update random.ts, execution.ts,
-character.ts, ingress.ts, model.ts and the two comparison test/fixture files (<=11 files). All affected old
-records keep exact grammar/bytes; draw411/2 is the explicit receiving successor.
-No bypass, fake natural-key trace or C0-C3 source mutation. Contract amendment precedes code.
-
-## Owner amendment adopted before replacement code
-
-Owner approved the exact participation-versus-witnessing replacement in the contract.
-Keep cooperation/breach as a negative control (Auto versus Roll, no actual overlap).
-One replacement only, same reference laws/parameters/seeds0..7, first decision3.
-Require contested branches, shared mapped candidates and changed choice; restore2/3
-on the witness branch. Stop if it fails. Original1800sec total budget still applies.
+One holder remains intentional. Other people remain controlled external stimuli;
+autonomous partners are deferred and are not an assembly prerequisite. Rich recognition
+follows configuration widening. The21-member/15-family/132-clause baseline remains
+required; no corpus or conditional-obligation closure follows M21a. UI remains stopped.

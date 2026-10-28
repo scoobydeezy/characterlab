@@ -14,6 +14,7 @@ import {dataRecord as rec,dataField as f,dataItems as items,dataKey as key,dataI
 import type {Campaign2ModelSource} from '../campaign2/factory';
 
 import {decodeEmbodied} from '../campaign3/embodiedCodecs';
+import {validateCharacterRecordRoles} from './codecs';
 import {compileRelationship} from './relationship';
 import {compileSocial} from './social';
 import {compileCommunication} from './communication';
@@ -128,7 +129,8 @@ export async function compileCharacterModel(input:Campaign2ModelSource){
  const body=interaction?Object.freeze({...compileBodyDeclaration(allSlots[6]),selectionCapacity}):undefined,slots=allSlots.slice(0,6),baseRegistry=enc(list(slots));
  // Validate open slots before generic declarations, giving specific domain errors.
  const shape=topology(list(slots),calibrated,memoryContext,relationshipEnabled);
- const content=await compileCognitiveDeclarations(source.content,baseRegistry);
+ const originalContent=await compileCognitiveDeclarations(source.content,baseRegistry);
+ const content=comparisonEnabled?Object.freeze({...originalContent,validateRecordRoles:(bytes:Uint8Array)=>validateCharacterRecordRoles(originalContent,bytes)}):originalContent;
  const structuralState=compileCampaign2StateModel(enc(slots[2]),enc(slots[3]),enc(slots[4]),content,{decode:decodeCognitive,schema:cognitiveSchemaByType});
  compileCampaign2Parameters(source.parameterSchemaVersion,source.parameters);
  if(key(decodeCognitive(source.content))!==key(decodeCognitive(hex(contentHex))))invalidModel('content outside declared assembled holder/task topology');

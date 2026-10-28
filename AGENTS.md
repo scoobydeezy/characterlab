@@ -7,7 +7,7 @@ Read [CURRENT.md](docs/planning/CURRENT.md), then
 The active direction is assembly of one continuing character.
 Workbench/UI development and Campaign 4 are stopped pending assembly acceptance.
 This is the assembly checkout, based on
-`788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`. M20 passed: own relationship history joins identity in shared standing reasons and changes actual choice. Follow CURRENT.md; no next milestone is open. UI remains stopped.
+`788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`. M21a passes the owner-approved participation comparison with shared draws and3/8 changed choices. The failed cooperation/breach comparison remains negative evidence. Follow CURRENT.md for configuration widening; UI and further breadth remain stopped.
 Do not execute historical TODOs, resume old audits, or retain/revisit browser tabs.
 Old instructions/evidence remain on tag `archive/workbench-stopped-2026-10-25`.
 

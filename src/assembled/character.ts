@@ -13,7 +13,7 @@ import {compileCharacterState} from './state';
 import {compileCognitiveIngress} from './ingress';
 import {createCharacterRuntime} from './runtime';
 import {compileCharacterInputs} from './inputs';
-import {decodeEmbodied as decodeCognitive} from '../campaign3/embodiedCodecs';
+import {decodeCognitive} from './codecs';
 import {dataRecord as rec,dataField as f,dataItems as items,dataKey as key,invalidModel} from '../campaign2/canonicalData';
 import type {Campaign2ModelSource} from '../campaign2/factory';
 declare const brand:unique symbol;

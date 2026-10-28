@@ -5,9 +5,10 @@ import {RandomRunOracle,randomAddressValue,type RandomAddress,type RandomDrawRec
 import {SchedulerContractError} from '../substrate/scheduler';
 import {cognitiveRecord as r,cloneCognitive} from '../campaign2/cognitiveCodecs';
 import {dataRecord as rec,dataField as f,dataItems as items,dataKey as key,dataUnsigned as uint,dataIdentity as id,invalidModel} from '../campaign2/canonicalData';
+import {cognitiveRecord as successorRecord} from './codecs';
 import type {ArbitrationDraws} from '../campaign2/cognitiveArbitration';
 const atom=(n:number,s:string)=>typedIdentifier(n,text(s));
-function drawValue(draw:RandomDrawRecord){return r(411,[randomAddressValue(draw.localAddress),draw.effectiveKey,u(draw.result),u(draw.span),u(draw.limit),draw.fallback,list(draw.attempts.map(a=>r(410,[u(a.internalCandidateIndex),u(a.candidate),a.rejected])))]);}
+function drawValue(draw:RandomDrawRecord){return (draw.comparisonDrawKey?successorRecord:r)(411,[randomAddressValue(draw.localAddress),draw.effectiveKey,u(draw.result),u(draw.span),u(draw.limit),draw.fallback,list(draw.attempts.map(a=>r(410,[u(a.internalCandidateIndex),u(a.candidate),a.rejected])))]);}
 function context(value:CanonicalValue){const reason=rec(value,408n),raw=rec(f(reason,2n),403n),options=rec(f(raw,2n),398n);return {nuclei:items(f(reason,3n),'list'),candidates:items(f(options,3n),'list').map(v=>f(rec(v,397n),1n))};}
 export function createAssembledRandomSession(seed:Uint8Array,comparison?:ComparisonDrawMap){
  const runSeed=seed.slice(),committed=new Set<string>();let oracle:RandomRunOracle|undefined,staged=new Set<string>(),sealed=false,generation=0,inFlight=0;
