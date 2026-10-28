@@ -52,9 +52,9 @@ No M22 PASS, general recognition, SOCIAL qualification, research-debt closure or
 21-member/15-family/132-clause closure. RO-C3-014's exercised recognition trigger remains
 bounded and unclosed; other obligations and all historical controls remain preserved.
 
-## Recommended owner decision
+## Authorized diagnosis and setup constraint
 
-Authorize one diagnosis of the SAME seed6 pair, with unchanged source/inputs/laws/maps:
+Owner authorized one diagnosis of the SAME seed6 pair, with unchanged source/inputs/laws/maps:
 retain first-decision reason nuclei, raw reason candidates/faces, scored options,
 leader sets and conditional tie record. Compare the exact first score/leader divergence
 under common reason draws. This is two runs through3 only, at most120sec and two small
@@ -62,4 +62,13 @@ projection files; no seed search, parameter change, replacement contrast or new 
 Done when the record explains whether changed recognized evidence changed the tie
 condition and what the unmatched draw determined. Report that finding and propose any
 acceptance-rule amendment explicitly; diagnosis alone cannot turn M22 into PASS.
-If not authorized, keep the candidate paused and M21b as the last completed milestone.
+Preparation found that neither preflight map was retained in the original evidence.
+The unchanged fixture generates them with two seed0 identity-only setup runs before
+the seed6 pair. Those are real executions and count against the run budget. Requested
+allowance: four runs total, all through3, within the unchanged120sec process cap.
+This allowance is pending; no diagnostic/setup runs have been executed on this turn.
+The diagnostic is prepared, UNTESTED, in the existing recognition test. It preserves
+the failed matrix assertion and adds no production changes. Plan43c709f7 preceded it.
+It checks the regenerated map against the diagnostic run's actual occurrence/nuclei,
+then retains map/run identities, exact nuclei/draws, scores and tie in two projections.
+M21b remains the last completed milestone; M22 controls and acceptance stay pending.
