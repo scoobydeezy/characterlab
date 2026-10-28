@@ -1,38 +1,43 @@
-# Current work — M21b complete; recognition next
+# Current work — M22 recognition to social learning and choice
 
-The single character now accepts1..3 declared tasks/actions and executes all three
-through its shared reasoning/action loop. Acquired history changes a later choice
-under coupled randomness. M21b PASS; stop verification and report.
+M21b passed. Next replace one predetermined social identity ingress with actual
+Campaign1 tracking/classification/recognition in the same continuing character.
 
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
-## Completed foundation gate
+## M22 card — before implementation
 
-- [Result](ASSEMBLED_CHARACTER_M21B_RESULT.md); [raw checks](ASSEMBLED_CHARACTER_M21B_CHECKS.txt).
-- Contract: [configuration0.1](../formal/ASSEMBLED_CHARACTER_CONFIGURATION_CONTRACT.md),
-  rules/registry0.22 and numeric/assembled-task-exact/0.1.
-- Fixed16-run participation/witness matrix: three candidates each,24 common draw keys,
-  choices differ seeds1/5; seed5 has all draws matched. Two conditional unmatched ties
-  disclosed. The third action executes15 times. All16 reach10 with three deadlines.
-- Exact repeat/restore2/3, truth isolation, rollback, complete allocation and admission
-  controls PASS. All10 new and28 unchanged M2a/M20/M21a tests PASS; types/boundary/research PASS.
-- Frozen105 dependency Git blobs unchanged; checkout CRLF differences explicitly recorded.
-- Four packages A5/B11/C10/D4 code/test files,28 distinct overall. Original1800sec shared
-  validation budget retained; no reset at package splits. Two evidence files below5MiB.
-- Original M21a cooperation/breach zero-shared-draw result remains negative evidence.
-  No contrast/seed/parameter tuning; all failures/corrections retained in the raw log.
+- Two capabilities: recognition governs person learning/later choice; correction
+  preserves history and exact continuation. One character, state, scheduler and save.
+- Contract: [recognition0.1](../formal/ASSEMBLED_CHARACTER_RECOGNITION_CONTRACT.md);
+  rules/registry0.23, configuration/comparison/numeric contracts otherwise unchanged.
+- Use SEM-A/D/F/H/I directly. Canonical241/243/244 owners; no extra side store.
+  Two known candidates/templates in admitted initial recognition knowledge; empty
+  tracks/resolutions. Hidden identity never selects a candidate or repairs continuity.
+- One consequence channel:120/121/123/124/126/127/130/140. No event-role claim at122.
+  Resolution gates existing person belief; later appraisal/reasons/choice consume it.
+- Fixed comparison: M21b three actions, same personal history/social claims/laws/seeds
+  0..7; unique target versus other-template support at1/2. All16 reach10; require
+  consumed recognition/learned belief, changed reasons, common draws and changed choice.
+  No tuning, seed search or replacement if it fails. Preflight identities only.
+- Ambiguity/missing/false appearance/no-access, hidden truth, mistaken recognition,
+  replacement/withdrawal, exact repeat/restore2/3 and late rollback controls required.
+  Reject foreign/forged knowledge, prelearned resolution, old grammar, wrong owner/rewrite.
+- Eleven code/test files: assembled recognition/recognitionState/recognitionExecution;
+  model/state/inputs/runtime/socialExecution/traceBinding; recognition fixture and test.
+  Split/checkpoint before exceeding12. No owner-registry or cleanup work.
+- Validation: affected C1 conformance; unchanged M19 social and M21b integration;
+  types/boundary/research; frozen105 tracked-blob guard and staged size. Git CRLF
+  conversion must be distinguished from changed control sources.
+- Budget1800sec total incl failures/retries;600sec/command; one validation job;
+ 20 evidence files/5MiB. Binary completion requires all stated gates. Stop at cap.
+- FND1/3/4/5/6; PHEN-EPI/SEM/SOCIAL/DET. MEC-004 accepted components preserved.
+  RO-C3-014 new-channel trigger: only bounded isolation/mistake/correction qualified;
+  no general SOCIAL/alternative-learner/correlation closure. RO-C3-016 not expanded.
 
-## Next milestone boundary
+## Remaining boundaries
 
-Rich recognition must replace a bounded controlled identity ingress with an actual
-observer-local recognition producer and downstream consumer in the SAME character.
-Write its bounded card and versioned seam amendment before implementation; pin one
-behavioral comparison plus epistemic controls. No new psychology between these gates.
-Do not start an owner registry/framework/cleanup campaign or multi-character system.
-Autonomous partners remain deferred and are not an assembly prerequisite.
-
-One holder/channel, two routes/task and physical count1/2 remain deliberate limits.
-The three-option extension is an engineering default, no psychological verdict;
-RO-C3-020 and all18 conditional debts remain. Rich recognition and final generality
-are still open. No21-member/15-family/132-clause closure, UI or Campaign4 acceptance.
-Historical controls remain comparisons; the shared assembled runtime is the simulation.
+One holder,1..3 tasks/actions, two routes/task and physical count1/2 remain.
+This is finite symbolic recognition, not general vision. Other channels remain
+controlled and require later integration. Autonomous partners remain deferred.
+No psychological breadth/UI/Campaign4 or21-member/15-family/132-clause closure.
