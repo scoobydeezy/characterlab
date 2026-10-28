@@ -33,11 +33,11 @@ M21a coupling passed; wider configuration is not yet admitted. No new psychology
 
 ## Serial package plan (split before code)
 
-A (active,5 files): assembled/taskDeclarations.ts, cognitiveDeclarations.ts,
+A (component checks PASS,5 files): assembled/taskDeclarations.ts, cognitiveDeclarations.ts,
 configurationTopology.ts; test fixture assembledConfiguration.ts and admission test.
 Only declaration components; public model still rejects the widened version.
 
-B (11 files): strategy and strategyExecution; actionBody; priority and priorityExecution;
+B (next,11 files): strategy and strategyExecution; actionBody; priority and priorityExecution;
 horizon and horizonExecution; performance and performanceExecution; social; consumer
 boundary test. Complete task/route allocation coverage; public admission stays closed.
 
@@ -53,3 +53,7 @@ Historical C0-C3 controls remain unchanged. One simulation is the implementation
 frozen controls are comparisons. No21-member/15-family/132-clause closure follows.
 Autonomous partners remain deferred, not an assembly prerequisite. Rich recognition
 follows widening; no intervening psychology or UI work.
+
+Package A: declaration tests3/3 PASS; public0.22 rejection confirmed before activation.
+The permanent version-negative uses an unknown version so later0.22 activation does
+not invalidate it. No public widening or milestone pass claimed.
