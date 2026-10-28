@@ -1,7 +1,7 @@
 /** assembled-character-habit/0.1: successor of the fixed cognitive RNG capability.
  * Same addresses, event binding and atomic ledger; capacity four nuclei plus one tie. */
 import {list,unsigned as u,text,typedIdentifier,type CanonicalValue} from '../substrate/canonicalEncoding';
-import {RandomRunOracle,randomAddressValue,type RandomAddress,type RandomDrawRecord} from '../substrate/random';
+import {RandomRunOracle,randomAddressValue,type RandomAddress,type RandomDrawRecord,type ComparisonDrawMap} from '../substrate/random';
 import {SchedulerContractError} from '../substrate/scheduler';
 import {cognitiveRecord as r,cloneCognitive} from '../campaign2/cognitiveCodecs';
 import {dataRecord as rec,dataField as f,dataItems as items,dataKey as key,dataUnsigned as uint,dataIdentity as id,invalidModel} from '../campaign2/canonicalData';
@@ -9,11 +9,11 @@ import type {ArbitrationDraws} from '../campaign2/cognitiveArbitration';
 const atom=(n:number,s:string)=>typedIdentifier(n,text(s));
 function drawValue(draw:RandomDrawRecord){return r(411,[randomAddressValue(draw.localAddress),draw.effectiveKey,u(draw.result),u(draw.span),u(draw.limit),draw.fallback,list(draw.attempts.map(a=>r(410,[u(a.internalCandidateIndex),u(a.candidate),a.rejected])))]);}
 function context(value:CanonicalValue){const reason=rec(value,408n),raw=rec(f(reason,2n),403n),options=rec(f(raw,2n),398n);return {nuclei:items(f(reason,3n),'list'),candidates:items(f(options,3n),'list').map(v=>f(rec(v,397n),1n))};}
-export function createAssembledRandomSession(seed:Uint8Array){
+export function createAssembledRandomSession(seed:Uint8Array,comparison?:ComparisonDrawMap){
  const runSeed=seed.slice(),committed=new Set<string>();let oracle:RandomRunOracle|undefined,staged=new Set<string>(),sealed=false,generation=0,inFlight=0;
  function stage(message:string):never{throw new SchedulerContractError('COGNITIVE_STAGE_VIOLATION',message);}
  return Object.freeze({
-  begin(){if(oracle)stage('random instant already active');oracle=new RandomRunOracle(runSeed);staged=new Set();sealed=false;generation++;},
+  begin(){if(oracle)stage('random instant already active');oracle=new RandomRunOracle(runSeed,comparison);staged=new Set();sealed=false;generation++;},
   forResolution(root:CanonicalValue,reasonContext:CanonicalValue):ArbitrationDraws {
    if(!oracle||sealed)stage('random capability requires live instant');
    const epoch=generation,{nuclei,candidates}=context(cloneCognitive(reasonContext)),rootId=id(cloneCognitive(root));

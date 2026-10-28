@@ -64,3 +64,20 @@ epistemic and whole-instant rollback controls must pass.
 This package does not widen task/action cardinality. Widening remains the next serial
 package, under the same foundation gate; recognition follows. Autonomous partners
 are outside the current single-character experiment. Final pinned scope is unchanged.
+
+## Receiving grammar amendment after retained first-test failure
+
+The C2 allocation restricts draw411/1 field2 to NaturalRandomKey112. It cannot transport
+C0 coupled key113 through the resolution/expression/protocol chain. Versioned successor
+TaskRandomDraw411/2 retains the seven fields and their types, except EffectiveKey is
+NaturalRandomKey112/1 OR CoupledRandomKey113/1. All original411/1 bytes remain valid
+with their original natural-only restriction; they are not silently reinterpreted.
+The assembled receiving codec admits this version in existing draw-bearing envelopes,
+validates all other original fields/unions, and delegates unchanged subtrees to the
+accepted embodied/cognitive decoders. Coupled keys validate address, key and purpose
+roles against the admitted comparison grammar. No validation projection masks keys.
+Successor arbitration, choice and protocol bridge functions retain exact equations,
+phase order and owner boundaries; only receiving/constructing codec imports change.
+Character restore uses the successor decoder. Old-model no-map draws retain411/1.
+Code checkpoint is not a pass. Complete the original comparisons and negative controls
+before declaring M21a complete; do not reset its runtime budget across this split.

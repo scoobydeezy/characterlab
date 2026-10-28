@@ -61,7 +61,7 @@ export function createCognitiveExecution(model:Model,component:State,inputs:Awai
  const registration=(name:string)=>f(rows.find(v=>key(f(v,1n))===key(atom(1009,name)))!,4n);
  const definition=(name:string)=>cloneCognitive(component.definition(name));
  const seed=f(rec(inputs.runIdentity.value,104n),4n);if(typeof seed==='boolean'||seed.kind!=='bytes')fail('run seed required');
- const random=(model.habit?createAssembledRandomSession:createCognitiveRandomSession)(seed.value);
+ const random=model.habit?createAssembledRandomSession(seed.value,inputs.comparison):createCognitiveRandomSession(seed.value);
  const protocol=compileProtocolBridge(definition('protocol-observation'));let protocolInstant:ReturnType<typeof protocol.begin>|undefined;
  let pending=new Map<string,ScheduledEvent>(),checkpoint=new Map<string,ScheduledEvent>(),active=false,instant=0n,sealed=false,unbound=0,chosen=false;
  let source:ReturnType<typeof beginCognitiveSourceInstant>|undefined;

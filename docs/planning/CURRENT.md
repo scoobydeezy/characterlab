@@ -5,6 +5,8 @@ more psychological areas are added. M21 is split before coding because widening 
 both frozen declaration/math successors and assembled consumers, beyond12 code/test files.
 M21a establishes explicit coupling; it does NOT complete configuration widening.
 
+| Research obligations | **0 active / 18 conditional / 0 unowned** |
+
 ## Authorized direction
 
 Single-character assembly only. Other people remain controlled external stimuli;
@@ -55,3 +57,13 @@ under assembled; resolve complete producer/consumer coverage before writing its 
 Do not claim widening from accepting a declaration alone. Its done condition includes
 actual three-action arbitration, integrated learned-state influence and exact restore.
 M21a passing authorizes no intervening area and closes none of the21/132 baseline.
+
+## Checkpoint and bounded continuation (before codec implementation)
+
+First matrix failed: frozen draw411/1 admits only NaturalRandomKey, blocking coupled
+keys throughout the choice chain. Eight code/test files checkpointed INCOMPLETE.
+Continue the SAME M21a gate and original1800sec budget, no new capability: successor
+codecs.ts, arbitration.ts, choice.ts, protocolBridge.ts; update random.ts, execution.ts,
+character.ts and the two comparison test/fixture files (<=9 files). All affected old
+records keep exact grammar/bytes; draw411/2 is the explicit receiving successor.
+No bypass, fake natural-key trace or C0-C3 source mutation. Contract amendment precedes code.
