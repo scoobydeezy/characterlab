@@ -1,43 +1,32 @@
-# Current work — M24 configurable recognition knowledge
+# Current work — M24 complete
 
-Widen the shared recognition catalog beyond two people/one template each, and let
-shared appearance remain ambiguous for both existing learning consumers.
-Owner authorized the next milestone; M23 is complete at7ca168d4.
+The shared character now accepts configurable recognition knowledge:1-8 people,
+1-4 templates each, including shared appearances. Ambiguity governs both existing
+learning consumers and can change choice. M24 passes its bounded contract.
+Stop here; no next milestone is active.
 
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
-## Bounded card — commit before code
-
-- Capabilities: governed1-8 candidate catalogs with1-4 templates each; shared cues
-  affect recognition, belief/history and coupled choice; preserve correction/restore.
-- Register Experience M1, Social M12, Relationships M13; FND1-6. MEC-004 PORT;
-  RO-C3-014/016 unchanged. No corpus closure or extra psychology/autonomous partners.
+- [M24 result and limits](ASSEMBLED_CHARACTER_M24_RESULT.md).
+- [Raw checks, maps and draws](ASSEMBLED_CHARACTER_M24_CHECKS.txt).
 - [Catalog0.1 contract](../formal/ASSEMBLED_CHARACTER_RECOGNITION_CATALOG_CONTRACT.md),
-  rules/registry0.25. SEM-001F law, state owners and M23 encounter path unchanged.
-- LOCAL DISPOSITION: candidate/template associations replace positional pairing.
-  Shared templates emit several evidence-backed cues; accepted law decides ambiguity.
-  Canonical allocation/order and finite caps are engineering defaults, no verdict.
-- Planned6 code/test files: recognition.ts, recognitionExecution.ts, model.ts,
-  traceBinding.ts, assembledRecognitionCatalog test and fixture. Hard12. No framework.
-- Fixed matrix: four candidates, target coat/voice; decoy1 plain versus coat; other
-  two stripe/hat. Same coat observations/cooperative participation/reports at1/2.
-  Seeds0-7, first choice3, terminal10; unique target versus ambiguous must cause
-  belief/history2/0, consumed reasons and changed choice. Two identity-only setup
-  runs with saved maps. M23 coupled-reason/conditional-tie rule; no replacement/tuning.
-- Controls: min/max/multiple templates, canonical order, shared-cue ambiguity,
-  contradiction/correction/withdrawal, hidden/denied evidence, malformed/missing/
-  duplicate/oversize catalog, unknown cues, S0/ownership, late rollback, repeat and
-  restores2/3 to10. Model identity may differ across configurations; semantic output
-  equality only where declared. Exact bytes required within unchanged model.
-- Checks one job at a time: types60s; new matrix350s; new controls400s;
-  unchanged M23 matrix/controls500s; C1 recognition/state conformance30s;
-  boundary/research/frozen105/doc/size60s. Hard600s/command,1800s total including
-  failures/retries. New evidence/result <=20files/5MiB; one log/one result intended.
-- Risks/checks: positional identity leakage (shared/reordered controls); wrong cue
-  allocation or multiplicity (direct law/trace/restore); unjustified causal choice
-  (coupled matrix); initial knowledge/owner leakage (negative admission); old-version
-  drift (M23 regression); historical mutation (dependency guard). Existing C1 math
-  unchanged, original Campaign3 controls retained through M23 if closure unchanged.
-- Binary done: fixed matrix AND all controls/regressions/guards pass within caps.
-  Failed contrast/cap -> preserve incomplete checkpoint. Passing ends verification.
-- No UI/build/browser, push, event-kind inference, multi-character work or next area.
+  planf3b1f5fb; rules/registry0.25. M23 encounter path and SEM-001F law unchanged.
+- Explicit candidate/template associations replace positional pairing. Shared
+  templates produce multiple supported cues; accepted law decides recognition.
+  One state/scheduler/trace/save; existing owners and legacy versions preserved.
+- Fixed16-run matrix PASS: identical evidence, changed initial knowledge association;
+  unique target versus ambiguity yields belief/history2/0. Choices differ seeds1/5;
+  24 common reason keys, three explained conditional ties; all runs reach10.
+- Min/max/multiple templates, canonical order, hidden/denied evidence, correction,
+  withdrawal/prior-under-ambiguity, admission/immutable knowledge, exact repeat/
+  restores2/3 to10 and late52-event rollback PASS.
+- All4 M23 regression and26 C1 conformance tests PASS. Types/boundary/research PASS;
+  105 frozen dependency blobs and historical controls unchanged. No validation failure.
+- Timed checks959.58sec before final document/index gates; longest438.32sec.
+  Six code/test files, two evidence/result files below5MiB; all caps held.
+- Still one character/channel, Person catalogs supplied initially and one downstream
+  person/relationship target. Participation/kind and communication remain controlled.
+  No general visual/event recognition, learned catalog or autonomous partners.
+- RO-C3-014/016 and18 conditional obligations remain unclosed;21 members/15 families/
+  132 clauses remain the completion denominator. No UI or Campaign4 entry.
+- Further work needs the next bounded card; no speculative audit/cleanup campaign.
