@@ -1,7 +1,7 @@
 # Assembled Character — M2 reconciliation
 
 Owner approved D1–D5 on2026-10-25 with the D2 condition below.
-M2a-M25 pass. [M25](ASSEMBLED_CHARACTER_M25_RESULT.md): recognized person histories feed coupled choices.
+M2a-M25 pass. [M26 incomplete](ASSEMBLED_CHARACTER_M26_RESULT.md): no chosen disclosure in fixed comparison.
 
 ## Decision sheet — adopted 2026-10-25
 

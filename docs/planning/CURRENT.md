@@ -1,6 +1,9 @@
-# Current work — M26 active
+# Current work — M26 incomplete: delivery gate failed
 
-Connect learned person reports to actual disclosure and passive recipient learning.
+M26 froze actual learned reports, but no fixed pair chose disclosure. No acceptance.
+See [result and proposed amendment](ASSEMBLED_CHARACTER_M26_RESULT.md); no further runs
+until the comparison amendment is approved. M25 remains the last accepted milestone.
+The original committed card below is retained; its delivery condition failed.
 M25 complete77522f0a; owner authorized continuation. One character, no UI/partner agents.
 
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
