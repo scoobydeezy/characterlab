@@ -79,7 +79,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  const episodes=model.memory?withEpisodicState(inheritedState,C,model.body!):inheritedState;
  const embodied=model.body?withBodyState(episodes,C,model.body):episodes;
  const retained=model.retention?withRetentionState(embodied,C):embodied;
- const procedural=model.skill?withSkillState(retained,C):retained;
+ const procedural=model.skill?withSkillState(retained,C,model.procedures):retained;
  const planned=model.strategy?withStrategyState(procedural,C,model.strategy):procedural;
  const prioritized=model.priority?withPriorityState(planned,tasks.map(t=>t.key)):planned;
  const forecasted=model.horizon?withHorizonState(prioritized,tasks.map(t=>t.key)):prioritized;
