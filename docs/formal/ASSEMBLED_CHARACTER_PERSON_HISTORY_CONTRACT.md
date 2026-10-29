@@ -25,7 +25,10 @@ cannot write either family. Prior recognition under ambiguity follows unchangedS
 Appraisal reads each task's declared person's mean; relationship raw reasons read
 each contact action's person's own history, using unchanged LatestInteraction and
 standing1/4 cap3. One commonB0, prepared patches, trace/save and atomic rollback.
-Reports retain individual consumed records and resulting contributions.
+Reports retain individual consumed records and resulting contributions. The joint
+trace uses assembled-character-social-joint/0.2-candidate for grouped reports and
+collects actual observation source IDs from each consumed person report; old single
+report versions retain0.1 and their exact projection.
 
 Receipt identity is scoped by recognized person, source kind and receipt number.
 For0.26 check inconsistent repeated claims against that person's retained history

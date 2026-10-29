@@ -1,4 +1,4 @@
-# Current work — M25 stopped, incomplete
+# Current work — M25 repair and validation active
 
 Remove the single-person bottleneck inside the one character: recognition routes
 learning to separate person histories, which feed task appraisal and contact reasons.
@@ -36,10 +36,13 @@ Two setup attempts failed before maps or behavioral cells; preserve the partial 
   exception logging only. Clock2 committed; instant3 trace aborts at execution.ts:208.
   The joint trace's source-ID extraction still indexes a single social report;
   grouped person reports make its old index3 undefined. No model-law failure inferred.
-- STOP after authorized diagnostic; no production repair or matrix rerun performed.
-  Recommend updating that trace reader to gather each consumed person's observations,
-  preserving old-version behavior, then resuming the unchanged declared checks under
-  a bounded repair card. Diagnostic source and raw failure retained.
+- Owner authorized repair and routine autonomous debugging2026-10-29.
+  Repair package starts at35c31d7d: execution.ts plus existing person-history test
+  (2 planned files, hard12). First package's12 files remain preserved; no breadth.
+  Update the grouped trace reader and version, assert actual source joins, then run
+  unchanged M25 matrix/controls and M24 matrix/controls in separate bounded commands.
+  Original total1800sec persists:74.38sec already used,1725.62sec remaining.
+  Failures permit targeted repairs; no altered law, fixed comparison or acceptance.
 - [Incomplete result](ASSEMBLED_CHARACTER_M25_RESULT.md); raw failures retained in
   ASSEMBLED_CHARACTER_M25_CHECKS.txt. Static checks do not qualify behavior.
 - Done only when fixed behavioral and invariants pass within caps; stop on pass.
