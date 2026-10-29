@@ -59,26 +59,27 @@ it('positive control: available disclosure delivers actual learned content',asyn
 },115000);
 
 it('controls: actual learned content, timing, hidden evidence and delivery boundaries',async()=>{
- const source=learnedSource(),model=await prepareCharacterModel(source),run=async(data=learnedData(),m=model,time=3n)=>{const r=await createCharacterRun(m,data);await through(r,time);return r;};
+ const source=learnedSource(),model=await prepareCharacterModel(source),run=async(data=learnedData(),m=model,time=3n)=>{const r=await createCharacterRun(m,disclosureAvailable(data));await through(r,time);return r;};
  const base=await run(),hidden=await run(learnedData(0,encounters.map(x=>({...x,hidden:other}))),model,2n),prior=await run(learnedData(),model,2n);expect(hidden.snapshot().state).toEqual(prior.snapshot().state);expect(hidden.snapshot().outputs).toEqual(prior.snapshot().outputs);
  const unknown=await run(learnedData(0,[encounters[1]])),denied=await run(learnedData(0,encounters.map(x=>({...x,access:false}))));for(const r of [unknown,denied]){expect(at(r,FROZEN)[4]).toEqual(list([]));expect(at(r,SIGNAL)[5]).toBe(false);expect(knowledge(r)).toBeUndefined();expressionJoin(r,target);}
  const mixed=await run(learnedData(0,[encounters[0],{at:2,signals:[['appearance/coat',true]],continuity:true}]));expect(personMean(state(mixed).read(personPath(C,target)).value)!.numerator).toBe(1n);expect(personMean(state(mixed).read(personPath(C,target)).value)!.denominator).toBe(2n);expect(at(mixed,FROZEN)[4]).toEqual(list([false]));expressionJoin(mixed,target);
  const late=await run(learnedData(0,[...encounters,{at:3,signals:[['appearance/coat',true]]}]));expect(records(late,target)).toHaveLength(2);expect(items(records(late,target).at(-1)!,'list')[6]).toEqual(list([false]));expect(at(late,FROZEN)[4]).toEqual(list([true]));const frozenTrace=outputs(late.snapshot().trace,160n).find(t=>key(f(t,6n))===key(text('assembled-character-learned-disclosure/0.1-candidate'))&&uint(f(rec(f(t,4n),130n),3n))===90n)!;expect(f(frozenTrace,9n)).toEqual(list([items(records(late,target)[0],'list')[0]]));
  const slots=items(decode(source.registry),'list'),body=items(slots[10],'list'),blocked=await prepareCharacterModel({...source,registry:enc(list(slots.map((v,i)=>i===10?list([body[0],false,...body.slice(2)]):v)))});
- const noDelivery=await run(learnedData(1,encounters,opportunities.map(o=>({...o,delivery:false})))),noAccess=await run(learnedData(1,encounters,opportunities.map(o=>({...o,a:false,b:false})))),physical=await run(learnedData(1),blocked);
- for(const r of [noDelivery,noAccess,physical]){expect(at(r,FROZEN)[4]).toEqual(list([true]));expect(knowledge(r)).toBeUndefined();expect(knowledge(r,1)).toBeUndefined();for(const row of reports(r,RECEIVED)){const obs=items(row[1],'list');expect(obs).toHaveLength(5);expect(obs[3]).toEqual(list([]));expect(obs[4]).toEqual(target);}}
- expect(at(noDelivery,SIGNAL)[5]).toBe(false);expect(at(physical,SIGNAL)[4]).toBe(false);
+ const noDelivery=await run(learnedData(0,encounters,opportunities.map(o=>({...o,delivery:false})))),noAccess=await run(learnedData(0,encounters,opportunities.map(o=>({...o,a:false,b:false})))),physical=await run(learnedData(0),blocked);
+ expect(at(base,SIGNAL)[5]).toBe(true);expect(communicationEstimate(knowledge(base))).toEqual(list([q(1,1)]));
+ for(const r of [noDelivery,noAccess,physical]){expect(choice(r)).toBe(choice(base));expect(at(r,FROZEN)[4]).toEqual(list([true]));expect(knowledge(r)).toBeUndefined();expect(knowledge(r,1)).toBeUndefined();for(const row of reports(r,RECEIVED)){const obs=items(row[1],'list');expect(obs).toHaveLength(5);expect(obs[3]).toEqual(list([]));expect(obs[4]).toEqual(target);}}
+ expect(at(noDelivery,SIGNAL)[4]).toBe(true);expect(at(noDelivery,SIGNAL)[5]).toBe(false);expect(at(noAccess,SIGNAL)[5]).toBe(true);expect(at(physical,SIGNAL)[4]).toBe(false);expect(at(physical,SIGNAL)[5]).toBe(false);
  expect(at(base,FROZEN)[4]).toEqual(list([true]));console.info('M26 learned/latest/not-mean/unknown/hidden/denied/same-instant/physical/delivery/access/privacy controls PASS');
 },350000);
 
 it('controls: exact repeat and acquired-history restores2/3 through10',async()=>{
- const source=learnedSource(),data=learnedData(1),model=await prepareCharacterModel(source),a=await createCharacterRun(model,data),b=await createCharacterRun(model,data);await through(a,2n);await through(b,2n);exact(a,b);
- const early=await restoreCharacterRun(source,{initialState:data.initialState,orderedInputs:data.orderedInputs,save:a.save()});exact(a,early);for(const r of [a,b,early])await through(r,3n);exact(a,b);exact(a,early);
+ const source=learnedSource(),data=disclosureAvailable(learnedData(0)),model=await prepareCharacterModel(source),a=await createCharacterRun(model,data),b=await createCharacterRun(model,data);await through(a,2n);await through(b,2n);exact(a,b);
+ const early=await restoreCharacterRun(source,{initialState:data.initialState,orderedInputs:data.orderedInputs,save:a.save()});exact(a,early);for(const r of [a,b,early])await through(r,3n);exact(a,b);exact(a,early);expect(history(knowledge(a))).toHaveLength(1);
  const late=await restoreCharacterRun(source,{initialState:data.initialState,orderedInputs:data.orderedInputs,save:a.save()});exact(a,late);while(await a.settleNextInstant())for(const r of [b,early,late]){expect(await r.settleNextInstant()).toBe(true);exact(a,r);}expect(a.snapshot().clock).toBe(10n);expect(a.diagnostic()).toBeUndefined();console.info('M26 exact repeat/restores2/3 through10 PASS');
 },240000);
 
 it('controls: topic/source/state admission, authority, phases and late rollback',async()=>{
- const source=learnedSource(),data=learnedData(1),model=await prepareCharacterModel(source),compiled=await compileCharacterModel(source),component=await compileCharacterState(compiled),r=await createCharacterRun(model,data);await through(r,3n);
+ const source=learnedSource(),data=disclosureAvailable(learnedData(0)),model=await prepareCharacterModel(source),compiled=await compileCharacterModel(source),component=await compileCharacterState(compiled),r=await createCharacterRun(model,data);await through(r,3n);
  await expect(prepareCharacterModel(learnedSource(candidate(7)))).rejects.toThrow('topic');const slots=items(decode(source.registry),'list'),declaration=items(slots[18],'list');
  for(const altered of [list(declaration.slice(0,3)),list([declaration[0],declaration[1],list([recipients[0],recipients[0]]),target])])await expect(prepareCharacterModel({...source,registry:enc(list(slots.map((v,i)=>i===18?altered:v)))})).rejects.toThrow();
  const input=items(decode(data.orderedInputs),'list'),row=input.find(v=>key(items(v,'list')[2])===key(COMM_SOURCE))!;

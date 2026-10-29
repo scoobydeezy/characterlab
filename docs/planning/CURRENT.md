@@ -1,46 +1,29 @@
-# Current work — M26 corrected control repeat authorized
+# Current work — M26 complete
 
-Owner approved four additional runs on2026-10-29 after the test repair in316e2190.
-Repeat the identical availability control within120sec; total milestone cap1800sec.
-No model/input changes. Empty draws require both Auto decisions with probability1,
-margin1, contest0 and no reason draws; otherwise require exact draw coupling.
-Original failed matrix remains in f5e72eca and the raw log. No acceptance yet.
-Amendment below supersedes only its positive-delivery condition; no other scope change.
-M25 complete77522f0a; owner authorized continuation. One character, no UI/partner agents.
+The character can disclose a report it actually learned about a recognized person.
+The recipient learns only through chosen action, successful execution and permitted
+access. One character, shared runtime/state/trace/save; passive recipients only.
+See [M26 result](ASSEMBLED_CHARACTER_M26_RESULT.md) and
+[contract](../formal/ASSEMBLED_CHARACTER_LEARNED_DISCLOSURE_CONTRACT.md).
 
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
-- Commit this card/[contract](../formal/ASSEMBLED_CHARACTER_LEARNED_DISCLOSURE_CONTRACT.md)
-  before code. Rules/registry0.27; same22 slots and shared runtime/owners.
-- One capability: actual retained810 report -> frozen expression -> chosen action/
-  body execution -> recipient evidence/1072 learning. No authored private-display input,
-  no copied speaker knowledge, no belief-mean threshold; disclose latest observed report.
-- Scope: assembled/{model,state,inputs,traceBinding,communication,communicationExecution}.ts,
-  test/fixtures/assembledLearnedDisclosure.ts and test/assembledLearnedDisclosure.test.ts.
-  Eight planned code/test files, hard12. New schema only in successor; old paths preserved.
-- Fixed comparison: same M25 three tasks/actions, target positive report1/other negative2,
-  coat/plain recognition, cooperative participation. Topic target versus other only.
-  Opportunities3/4, delivery/A access on, B off. Fixed seeds0-7; two identity-only maps.
-  Same actual choices under coupled dice, frozen true/false from actual records;
-  at least one actual delivered pair -> A mean1/0 at4, B absent. All16 finish10.
-- Approved amendment: same three tasks/actions, histories, topics and opportunity inputs;
-  only time1 strategy availability changes: mapped disclosure routes available, all
-  others unavailable. Seed0; two identity-only setups through3 plus two coupled runs
-  through10; four runs total in120sec. Require actual disclosure/Applied execution,
-  exact810 -> expression -> observation joins, A mean1/0 at4, B absent, coupled dice.
-  Stop if this also fails; no second contrast, seed search or tuning. Original matrix
-  remains withholding evidence. Use positive context for delivery/access/failure controls.
-- Checks: new matrix (knowledge/action/receiving join and coupling); new controls
-  (latest/unknown/hidden/denied/same-instant/delivery/access/physical failure, privacy,
-  topic/admission/owners, repeat/restores2/3 and late rollback). Legacy M25 matrix and
-  controls separately; M18 controls complete later safe views and admission/ownership/
-  trace/rollback (two tests) for affected old communication paths. Types/boundary/
-  research and105 frozen dependencies; no full historical corpus rerun.
-- MEC-004, M2 M12/M14, FND0/1 and RO-C3-014/020 govern; no21/15/132 closure or new verdict.
-- Budget:600sec/check,1800sec total validation including failures/repairs; one long job
-  at a time.20 evidence files/5MiB, one raw log and one compact result. Settle cap32.
-  Routine bug diagnosis/repair authorized; retain failures. No changing fixed contrast,
-  laws or acceptance. Stop at budget or failed behavioral gate; no outcome tuning.
-- Done only on all declared checks passing; stop on pass. No further breadth in M26.
-  Controlled recipients stay passive, one model-bound Boolean report topic; no natural
-  language, strategic lying, general recipient cognition or autonomous partners.
+- Rules/registry0.27, learned-disclosure0.1. No speaker knowledge copy or authored claim.
+- Original eight-seed comparison FAILED delivery; all16 runs and25 matched draws
+  remain recorded. None chose disclosure. No claim that this original gate passed.
+- Approved availability control and corrected four-run repeat PASS: both choose
+  original disclosure action automatically, actual true/false reports reach A, B
+  learns neither. Auto/probability1/empty dice checked explicitly; both finish10.
+- Three new controls PASS: latest/unknown/hidden/denied/same-instant evidence,
+  meaningful delivery/access/physical denial, privacy, topic/state/authority admission,
+  exact repeat/restores2/3 through10 and late atomic rollback45/44.
+- Four unchanged M25 tests and two selected M18 tests PASS. Person-history comparison
+  retains changed seeds1/4/5/6,24 shared draws and4 conditional ties. No broad rerun.
+- Types/boundary/research PASS.105 frozen control dependencies unchanged; eight
+  production/test files total. Original failures and repairs retained in one raw log.
+- Disclosure preference, richer communication and autonomous partners are not claimed.
+  Engineering default latest-report mapping remains labelled; RO-C3-014/020 stay
+  conditional.21 corpus members/15 families/132 clauses remain unclosed.
+- Stop after this milestone. Next continuation must declare one bounded causal
+  connection in this same simulation before coding. No UI, verifier expansion or
+  new runtime. Keep ordinary repair authority and all existing work-order budgets.
