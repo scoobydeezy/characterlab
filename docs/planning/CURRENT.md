@@ -31,12 +31,15 @@ Two setup attempts failed before maps or behavioral cells; preserve the partial 
   repeated blocker or budget; no tuning/alternate contrast/breadth. No build/browser.
 - Two attempts failed with Cannot read properties of undefined (reading kind).
   A separate single-report assumption in jointSignalSupport was corrected between
-  attempts; it did not resolve startup. No root cause is established.
-- Owner authorized one diagnostic on2026-10-29: first branch, seed0, original
-  setup through3,120sec command cap. Test-only exception-stack logging in
-  assembledPersonHistoryDiagnostic.test.ts; original exceptions rethrown unchanged.
-  No production/frozen edits, alternate contrast or parameter change. Stop after
-  this run and report; no resumed matrix or repair is authorized by this amendment.
+  attempts; it did not resolve startup. Approved diagnostic now located the cause.
+- Approved diagnostic completed9.12sec: original first branch/seed0, one run,
+  exception logging only. Clock2 committed; instant3 trace aborts at execution.ts:208.
+  The joint trace's source-ID extraction still indexes a single social report;
+  grouped person reports make its old index3 undefined. No model-law failure inferred.
+- STOP after authorized diagnostic; no production repair or matrix rerun performed.
+  Recommend updating that trace reader to gather each consumed person's observations,
+  preserving old-version behavior, then resuming the unchanged declared checks under
+  a bounded repair card. Diagnostic source and raw failure retained.
 - [Incomplete result](ASSEMBLED_CHARACTER_M25_RESULT.md); raw failures retained in
   ASSEMBLED_CHARACTER_M25_CHECKS.txt. Static checks do not qualify behavior.
 - Done only when fixed behavioral and invariants pass within caps; stop on pass.
