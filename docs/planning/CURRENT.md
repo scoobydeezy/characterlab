@@ -1,16 +1,19 @@
-# Current work — M25 active
+# Current work — M25 stopped, incomplete
 
 Remove the single-person bottleneck inside the one character: recognition routes
 learning to separate person histories, which feed task appraisal and contact reasons.
-M24 complete at e038bdae; user authorized the next milestone. No UI/multi-character work.
+M24 is the last accepted milestone at e038bdae. M25 is not qualified.
+Two setup attempts failed before maps or behavioral cells; preserve the partial work.
+
+| Research obligations | **0 active / 18 conditional / 0 unowned** |
 
 - Contract: [person histories0.1](../formal/ASSEMBLED_CHARACTER_PERSON_HISTORY_CONTRACT.md).
   Commit this card/contract before production changes. Rules/registry0.26,22 slots.
 - Capabilities (2): configurable per-person histories; those histories affect the
   appropriate tasks/actions through existing laws and owners810/848.
 - Scope: src/assembled/{model,state,social,socialExecution,relationship,
-  relationshipExecution,inputs,traceBinding}.ts plus new test/fixture
-  assembledPersonHistory.ts / assembledPersonHistory.test.ts. Ten planned code/test
+  relationshipExecution,inputs,traceBinding,appraisal}.ts plus new test/fixture
+  assembledPersonHistory.ts / assembledPersonHistory.test.ts. Eleven code/test
   files, hard cap12. No new runtime or owner. Historical C0-C3 trees frozen.
 - Fixed comparison: four candidates, two downstream people, three tasks/actions.
   Original first two task mappings/old contact action target; third task/water other.
@@ -27,6 +30,15 @@ M24 complete at e038bdae; user authorized the next milestone. No UI/multi-charac
   one long job at a time;20 evidence files/5MiB, one raw log plus one compact result.
   Tests use settle cap32 as failure. Stop at failed behavioral contrast, unchanged
   repeated blocker or budget; no tuning/alternate contrast/breadth. No build/browser.
+- Two attempts failed with Cannot read properties of undefined (reading kind).
+  A separate single-report assumption in jointSignalSupport was corrected between
+  attempts; it did not resolve startup. No root cause is established.
+- STOP under the two-attempt guardrail. No third simulation/check matrix authorized
+  by this checkpoint. Proposed next authorization: one first-branch seed0 setup only,
+ 120sec cap, test-only exception-stack instrumentation, same data/laws/acceptance.
+  No alternate contrast, parameter change or further run follows automatically.
+- [Incomplete result](ASSEMBLED_CHARACTER_M25_RESULT.md); raw failures retained in
+  ASSEMBLED_CHARACTER_M25_CHECKS.txt. Static checks do not qualify behavior.
 - Done only when fixed behavioral and invariants pass within caps; stop on pass.
   Preserve prior full controls by unchanged dependency closure; no broad rerun.
 - Limits retained: one holder/channel, controlled participation/kind/communication,

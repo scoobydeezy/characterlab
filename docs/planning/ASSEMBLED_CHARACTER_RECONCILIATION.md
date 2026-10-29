@@ -1,7 +1,7 @@
 # Assembled Character — M2 reconciliation
 
 Owner approved D1–D5 on2026-10-25 with the D2 condition below.
-M2a-M24 pass. [M24](ASSEMBLED_CHARACTER_M24_RESULT.md): configurable recognition knowledge; ambiguity governs shared belief/history and coupled choice.
+M2a-M24 pass. M25 person histories STOPPED incomplete; see [result](ASSEMBLED_CHARACTER_M25_RESULT.md).
 
 ## Decision sheet — adopted 2026-10-25
 

@@ -9,12 +9,21 @@ import {dataItems as items,dataText as txt,dataUnsigned as uint,dataIdentity as 
 import {sid,pattern} from './skill';
 import type {compileCampaign2StateModel} from '../campaign2/stateModel';
 import type {Strategy} from './strategy';
+export const REL_PEOPLE='assembled-relationship-people/0.1';
 export const REL='assembled-relationship/0.1',REL_OBSERVATION=REL+'/observation',REL_APPRAISAL=REL+'/appraisal',REL_LEARNING=REL+'/learning';
 export const REL_SOURCE=sid(1001,'event/assembled-relationship-source'),REL_OBSERVE=sid(1001,'event/assembled-relationship-observe'),REL_EVIDENCE=sid(1001,'event/assembled-relationship-evidence'),REL_UPDATE=sid(1001,'event/assembled-relationship-update');
 export const REL_STAGES=['track','bind','classify','freeze'].map(n=>sid(1001,'event/assembled-relationship-'+n));
 export const REL_OWNER=sid(1025,'authority/relationship-history');
 const require=(b:boolean,s:string)=>{if(!b)invalidModel('relationship '+s);};
-export function compileRelationship(v:CanonicalValue,target:CanonicalValue,strategy:Strategy){const a=items(v,'list');require(a.length===2&&txt(a[0])===REL&&strategy.some(t=>t.plans.some(p=>key(p.actionId)===key(a[1]))),'contact action');return {target,action:a[1]};}
+export function compileRelationship(v:CanonicalValue,target:CanonicalValue,strategy:Strategy,targets:readonly CanonicalValue[]=[target],multiple=false){
+ const a=items(v,'list');require(a.length===2&&txt(a[0])===(multiple?REL_PEOPLE:REL),'declaration');
+ const rows=multiple?items(a[1],'list').map(v=>items(v,'list')):[[target,a[1]]];
+ const bindings=rows.map(x=>{require(x.length===2&&targets.some(t=>key(t)===key(x[0]))&&strategy.some(t=>t.plans.some(p=>key(p.actionId)===key(x[1]))),'person/contact action');return {target:x[0],action:x[1]};});
+ require(bindings.length===targets.length&&new Set(bindings.map(b=>key(b.target))).size===targets.length,'person mapping');
+ require(new Set(bindings.map(b=>key(b.action))).size===bindings.length,'duplicate contact action');
+ if(multiple)bindings.sort((a,b)=>key(a.target)<key(b.target)?-1:1);
+ return {...bindings[0],bindings,multiple};
+}
 export function relationshipSetting(v:CanonicalValue){const a=items(v,'list');require(a.length===5&&txt(a[0])===REL&&uint(a[1])<=3n&&typeof a[2]==='boolean'&&typeof a[3]==='boolean'&&uint(a[4])<=3n,'source');return {access:a[3]===true,participant:a[2]===true,kind:uint(a[4])===0n?uint(a[1]):uint(a[4])};}
 export const relationshipPath=(C:CanonicalValue,target:CanonicalValue):StatePath=>({rootStateTypeId:848n,fieldId:1n,selectors:[{kind:'mapKey',key:list([C,target])}]});
 export const relationshipHistory=(v:CanonicalValue|undefined):readonly CanonicalValue[]=>v===undefined?[]:items(items(v,'list')[1],'list');
@@ -33,11 +42,11 @@ export function relationshipRaw(raw:CanonicalValue,history:CanonicalValue|undefi
  const output=record(source.schema,new Map([...source.fields].map(([n,v])=>[n,n===3n?set(signals):v])));
  return {output,fold,contact:offered.length>0,missing:fold.count>=2n&&!offered.length,amount,joined:list(joined)};
 }
-export function withRelationshipState(base:ReturnType<typeof compileCampaign2StateModel>,C:CanonicalValue,target:CanonicalValue){
- require(key(C)!==key(target),'target cannot be self');const path=relationshipPath(C,target),fresh=(p:StatePath)=>p.rootStateTypeId===848n;
- const checkPath=(p:StatePath)=>require(key(statePathValue(path))===key(statePathValue(p)),'foreign path');
- const check=(p:StatePath,v:CanonicalValue)=>{checkPath(p);const a=items(v,'list');require(a.length===2&&txt(a[0])===REL,'state');const xs=relationshipHistory(v);require(xs.length>0&&xs.length<=12,'history capacity');let last=0n;const ids=new Set<string>();for(const o of xs){const b=items(o,'list');require(b.length===7&&key(b[1])===key(C)&&key(b[2])===key(target),'observation holder/target');const occ=id(b[0]);require(occ.namespaceId===1115n&&!ids.has(key(occ)),'observation id');uint(occ.payload);ids.add(key(occ));const time=b[3];require(typeof time!=='boolean'&&time.kind==='signed'&&time.value>last&&time.value<=100n,'history time');if(typeof time!=='boolean'&&time.kind==='signed')last=time.value;require(b[4]===true&&b[5]===true&&[1n,2n].includes(uint(b[6])),'admitted participant interaction');}};
- const authority=new StateAuthorityRegistry([{pattern:pattern(path),validateValue:(v:CanonicalValue)=>check(path,v),removalAllowed:false}],[{mutationAuthorityId:REL_OWNER,patterns:[pattern(path)]}]);
+export function withRelationshipState(base:ReturnType<typeof compileCampaign2StateModel>,C:CanonicalValue,target:CanonicalValue,targets:readonly CanonicalValue[]=[target]){
+ require(targets.every(t=>key(C)!==key(t)),'target cannot be self');const paths=targets.map(t=>relationshipPath(C,t)),fresh=(p:StatePath)=>p.rootStateTypeId===848n;
+ const checkPath=(p:StatePath)=>require(paths.some(path=>key(statePathValue(path))===key(statePathValue(p))),'foreign path');
+ const check=(p:StatePath,v:CanonicalValue)=>{checkPath(p);const target=items((p.selectors[0] as {key:CanonicalValue}).key,'list')[1],a=items(v,'list');require(a.length===2&&txt(a[0])===REL,'state');const xs=relationshipHistory(v);require(xs.length>0&&xs.length<=12,'history capacity');let last=0n;const ids=new Set<string>();for(const o of xs){const b=items(o,'list');require(b.length===7&&key(b[1])===key(C)&&key(b[2])===key(target),'observation holder/target');const occ=id(b[0]);require(occ.namespaceId===1115n&&!ids.has(key(occ)),'observation id');uint(occ.payload);ids.add(key(occ));const time=b[3];require(typeof time!=='boolean'&&time.kind==='signed'&&time.value>last&&time.value<=100n,'history time');if(typeof time!=='boolean'&&time.kind==='signed')last=time.value;require(b[4]===true&&b[5]===true&&[1n,2n].includes(uint(b[6])),'admitted participant interaction');}};
+ const authority=new StateAuthorityRegistry(paths.map(path=>({pattern:pattern(path),validateValue:(v:CanonicalValue)=>check(path,v),removalAllowed:false})),[{mutationAuthorityId:REL_OWNER,patterns:paths.map(pattern)}]);
  const without=(s:AuthoritativeState)=>new AuthoritativeState(s.entries().filter(e=>!fresh(e.path)));
  function validateState(s:AuthoritativeState){base.validateState(without(s));for(const e of s.entries().filter(e=>fresh(e.path)))check(e.path,e.value);}
  return Object.freeze({...base,validateState,validatePath(p:StatePath){if(fresh(p))checkPath(p);else base.validatePath(p);},restoreState(bytes:Uint8Array){const s=restoreAuthoritativeState(decode(bytes));validateState(s);return s;},read(s:AuthoritativeState,p:StatePath){if(!fresh(p))return base.read(s,p);checkPath(p);const v=s.read(p);if(v.presence)check(p,v.value!);return v;},

@@ -1,0 +1,110 @@
+
+=== types ===
+
+M25_CHECK types exit=0 seconds=15.16
+
+=== matrix ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledPersonHistory.test.ts (4 tests | 1 failed | 3 skipped) 5426ms
+   × matrix: recognized people retain separate histories that feed coupled choices 5426ms
+     → Cannot read properties of undefined (reading 'kind')
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledPersonHistory.test.ts > matrix: recognized people retain separate histories that feed coupled choices
+SchedulerContractError: Cannot read properties of undefined (reading 'kind')
+ ❯ fail src/substrate/scheduler.ts:667:9
+    665| 
+    666| function fail(code: SchedulerFailureCode, message: string): never {
+    667|   throw new SchedulerContractError(code, message);
+       |         ^
+    668| }
+    669| 
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:425:11
+ ❯ Object.settleNextInstant src/assembled/character.ts:40:58
+ ❯ Module.through src/test/fixtures/assembledComparison.ts:15:125
+ ❯ src/test/assembledPersonHistory.test.ts:42:108
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 3 skipped (4)
+   Start at  12:32:21
+   Duration  8.38s (transform 1.70s, setup 0ms, collect 2.58s, tests 5.43s, environment 0ms, prepare 121ms)
+
+
+M25_CHECK matrix exit=1 seconds=8.93
+
+=== matrix-corrected-provenance ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledPersonHistory.test.ts (4 tests | 1 failed | 3 skipped) 5407ms
+   × matrix: recognized people retain separate histories that feed coupled choices 5406ms
+     → Cannot read properties of undefined (reading 'kind')
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledPersonHistory.test.ts > matrix: recognized people retain separate histories that feed coupled choices
+SchedulerContractError: Cannot read properties of undefined (reading 'kind')
+ ❯ fail src/substrate/scheduler.ts:667:9
+    665| 
+    666| function fail(code: SchedulerFailureCode, message: string): never {
+    667|   throw new SchedulerContractError(code, message);
+       |         ^
+    668| }
+    669| 
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:425:11
+ ❯ Object.settleNextInstant src/assembled/character.ts:40:58
+ ❯ Module.through src/test/fixtures/assembledComparison.ts:15:125
+ ❯ src/test/assembledPersonHistory.test.ts:42:108
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 3 skipped (4)
+   Start at  12:33:14
+   Duration  8.30s (transform 1.66s, setup 0ms, collect 2.53s, tests 5.41s, environment 0ms, prepare 107ms)
+
+
+M25_CHECK matrix-corrected-provenance exit=1 seconds=8.81
+
+=== checkpoint-static ===
+Reference boundary check passed.
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: CURRENT obligation counts are stale
+    at file:///C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/scripts/check-research-obligations.mjs:75:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.20.0
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import subprocess; [subprocess.run(c,check=True) for c in [['node','node_modules/typescript/bin/tsc','-b'],['node','scripts/check-reference-boundary.mjs'],['node','scripts/check-research-obligations.mjs']]]
+                        ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\scoob\AppData\Local\Python\pythoncore-3.15-64\Lib\subprocess.py", line 692, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command ['node', 'scripts/check-research-obligations.mjs'] returned non-zero exit status 1.
+
+M25_CHECK checkpoint-static exit=1 seconds=20.42
+
+=== research-current-row-corrected ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M25_CHECK research-current-row-corrected exit=0 seconds=3.17
+
+M25 guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and M22/M23/M24 tests unchanged; document/evidence caps. seconds=8.77

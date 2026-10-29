@@ -87,8 +87,8 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  const habitual=model.habit?withHabitState(monitored,C):monitored;
  const controlled=model.control?withControlState(habitual,C):habitual;
  const communicating=model.communication?withCommunicationState(controlled,[C,...model.communication.recipients]):controlled;
- const socialized=model.social?withSocialState(communicating,C,model.social.target):communicating;
- const related=model.relationship?withRelationshipState(socialized,C,model.relationship.target):socialized;
+ const socialized=model.social?withSocialState(communicating,C,model.social.target,model.social.targets):communicating;
+ const related=model.relationship?withRelationshipState(socialized,C,model.relationship.target,model.relationship.bindings.map(b=>b.target)):socialized;
  const stateModel=model.recognition?withRecognitionState(related,model.recognition):related;
  function initialState(bytes:Uint8Array){
   const state=stateModel.restoreState(bytes);

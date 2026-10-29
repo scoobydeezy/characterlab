@@ -33,7 +33,8 @@ export function jointSignalSupport(raw:CanonicalValue,joint:CanonicalValue){
   const basis=f(rec(f(signal,3n),400n),1n);if(typeof basis==='boolean'||basis.kind!=='map')throw Error('joint signal evidence map');
   const merged=new Map(basis.entries.map(([k,v])=>[key(k),[k,v] as const])),add=(occ:CanonicalValue)=>{const observation=r(399,[u(1),r(237,[u(1),occ])]);merged.set(key(observation),[observation,atom(Q.of(1n))]);};
   if(present)add(f(rec(sample,461n),1n));
-  if(social&&items(social[5],'list').some(v=>key(items(v,'list')[0])===key(f(signalKey,2n))))for(const o of items(social[3],'list'))add(items(o,'list')[0]);
+  const people=social?(txt(social[0])==='assembled-social-people/0.1/appraisal'?social.slice(1).map(v=>items(v,'list')):[social]):[];
+  for(const person of people)if(items(person[5],'list').some(v=>key(items(v,'list')[0])===key(f(signalKey,2n))))for(const o of items(person[3],'list'))add(items(o,'list')[0]);
   return r(402,[f(signal,1n),f(signal,2n),r(400,[map([...merged.values()])])]);
  });return record(source.schema,new Map([...source.fields].map(([n,v])=>[n,n===3n?set(signals):v])));
 }
