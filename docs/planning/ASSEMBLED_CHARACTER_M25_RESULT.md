@@ -1,71 +1,74 @@
-# M25 — incomplete; stopped after repeated startup failure
+# M25 — separate histories for recognized people in one character
 
-The proposed change lets one character retain belief and own-interaction histories
-for several recognized people, then consume the appropriate history in task appraisal
-and contact reasons. The implementation is not qualified. M24 at e038bdae remains
-the last accepted result. No M25 behavioral claim or corpus closure is made.
+The character can now retain belief and own-interaction histories for several
+recognized people, then use the appropriate history in task appraisal and contact
+reasons. M25 PASSES its bounded contract. One character, state, scheduler, trace
+and save remain; the other people are observed stimuli, not autonomous characters.
 
-## Scope and attempts
+## Connection and limits
 
-Plan d8e7694c committed the card and person-history0.1 contract before code.
-Rules/registry0.26 draft expands the existing810/848 keyed owners, uses the same
-recognition path and shared scheduler, and scopes receipt checks by recognized person.
-No autonomous partner, new owner, psychology law or runtime was introduced.
-Eleven production/test files (cap12), including appraisal.ts added after inspection
-found its reason-provenance consumer assumed a single social report.
+Plan d8e7694c preceded implementation. Rules/registry0.26 implement
+[person-history0.1](../formal/ASSEMBLED_CHARACTER_PERSON_HISTORY_CONTRACT.md).
+Slot19 maps1-8 distinct non-self people to disjoint admitted task mappings; all
+must occur in the recognition catalog. Slot20 maps exactly those people to distinct
+registered contact actions. Task/action counts further bound the possible people.
+No preset allowlist or per-person runtime: the existing810/848 owners govern several
+[holder,person] paths. Recognition127 determines the destination of140 learning;
+unknown/unconfigured identity cannot write either family. Same accepted recognition,
+person mean and LatestInteraction laws, commonB0 and prepared mutation authority.
 
-The fixed coat/plain comparison remains unchanged: two configured people, original
-three tasks/actions/calibration, positive cooperative encounters1/2, seeds0-7,
-choice3, terminal10, coupled reasons and independently justified conditional ties.
-Neither attempted invocation reached the coupling maps or matrix. Both failed during
-the first identity-only setup with `Cannot read properties of undefined (reading kind)`.
-The scheduler exposes the message rather than the underlying stack. The initially
-unknown cause was located by the later owner-authorized diagnostic below.
+Receipts are scoped by recognized person/source kind/number; another person's same
+receipt is independent. Identical repeats do not relearn; conflicting repeats reject
+atomically. Each task reads its declared person's mean; each contact action reads
+its declared relationship. Reasons preserve the corresponding observed evidence.
+The new grouped joint trace is version0.2 and names each consumed observation;
+legacy single-person traces retain0.1. Catalog knowledge remains initially supplied.
 
-Attempt1:8.93sec. Before attempt2, corrected a distinct single-report assumption in
-jointSignalSupport so task-specific provenance can read the new grouped report.
-Attempt2:8.81sec, same startup error. The correction is unverified. Two-attempt stop
-rule applied; no third simulation was attempted before the owner authorized the
-single diagnostic below. No substitute comparison or tuning run.
-Both failures are retained in ASSEMBLED_CHARACTER_M25_CHECKS.txt.
+LOCAL DISPOSITION: generalize existing keyed owners and their consumers under
+MEC-004 and the standing C0/C1 constraints. No new state owner, law, pipeline or
+self-participation inference. Controlled participation/kind/communication, one holder
+and channel, finite tasks/actions remain. Autonomous partners/general event parsing
+and complete configuration are not claimed. RO-C3-014/016 remain conditional/unclosed;
+21 members/15 families/132 clauses remain the final completion denominator.
 
-## Validation status
+## Fixed behavioral result
 
-Initial types passed15.16sec before the complete control tests were added.
-Checkpoint types and reference boundary passed. Research first failed because the
-new CURRENT card omitted its required obligation-count row; restored that unchanged
-row and reran research only. Failure retained. Frozen-source/document guards are
-recorded in the same log; these cannot establish runtime correctness. The new matrix, all new controls,
-unchanged M24 matrix/controls, repeat/restore and late rollback remain UNSATISFIED.
-Historical Campaign0-3 control sources are unchanged; no broad controls were rerun.
-Timed checks total74.38sec including the approved diagnostic (cap1800), longest20.42sec (cap600).
-One raw log and this compact result remain within20 files/5MiB. Baseline21 members,
-15 families,132 clauses and RO-C3-014/016 remain unclosed/unchanged.
+Same four-candidate catalog, three tasks/actions and calibration; original first two
+task mappings/contact action belong to target, third task/water action to other.
+Only visible coat versus plain differs at1/2; positive reports/cooperative own
+encounters and hidden referent are fixed. Two identity-only setup maps were retained
+before the fixed seeds0-7 matrix. Both branches learn two belief and two relationship
+records on the correct person's paths, leaving the other absent. Those records are
+consumed by appraisal/reasons and correctly joined in the trace. All16 runs reach10.
+Choice differs at seeds1/4/5/6;24 shared reason keys, four branch-only conditional ties
+independently explained by scores/leaders and actual winner checks. No retuning.
 
-## Approved diagnostic — cause located, no repair performed
+## Checks and preserved failures
 
-Owner authorized one first-branch/seed0 setup through3,120sec cap. Card5316ffbe
-preceded test-only instrumentation. One invocation took9.12sec, rethrew the original
-exception and exited1. No coupling maps, second branch or matrix cells executed.
-The diagnostic is opt-in (M25_DIAGNOSTIC=1), skipped during ordinary test execution.
-Instrumentation logs and rethrows canonical-reader/trace exceptions unchanged.
-It did not change production code, inputs, laws, seeds or acceptance criteria.
+- New matrix PASS242.07sec; three new controls PASS209.30sec: both people in one
+  continuing run, receipt isolation/conflict rollback, hidden/denied evidence,
+  unconfigured recognized candidate, declaration order, singleton admission,
+  invalid targets/task/action mappings and owner/key isolation.
+- Exact repeat and restores2/3 through10 match state, outputs, trace and saves.
+  Late52-event instant with limit51 rolls back state, outputs, queue and allocators.
+- Unchanged M24 matrix PASS245.96sec, reproducing changed seeds1/5,24 shared keys,
+  three explained ties. All three M24 controls PASS224.40sec, including direct C1
+  law, knowledge admission/immutability, exact restore and late rollback.
+- Final types, reference boundary and research accounting PASS:0 active/18 conditional/
+  4 closed/0 unowned,103 C3 verdicts/4318 reports. No historical verdict was amended.
+  All105 frozen dependency blobs match db0ca7a8 (Git-normalized working bytes too);
+  historical trees and M22/M23/M24 test sources unchanged. No broad control rerun.
+- Original two setup failures8.93/8.81sec remain in the raw log. First repaired
+  jointSignalSupport's single-report assumption; startup still failed. Approved
+  diagnostic5316ffbe took9.12sec and located execution.ts's independent single-report
+  source-ID reader at instant3. Repair card dcc3df16 preceded that production repair.
+- The CURRENT count-row omission and diagnostic Node-global typing error were fixed;
+  both original static failures remain recorded. No new dependency or acceptance
+  change. Diagnostic stays opt-in, skipped normally; routine bug repairs are now
+  owner-authorized within scope/budgets, recorded in AGENTS and the work order.
 
-Captured stack: canonicalData.dataItems -> assembled/execution.ts:208 ->
-assembled/runtime.ts:179 traceFactory -> scheduler trace validation. Clock2 remained
-committed. The trace writer reads report[6] as one social appraisal and takes its
-index3 as history. M25 report[6] is [groupTag,personReport,personReport], whose index3
-is undefined. This is a concrete report-format integration defect at the shared
-trace boundary, not evidence of a psychological-law conflict. Earlier provenance
-repair addressed a different consumer and therefore did not remove this failure.
-
-Recommend a bounded repair of the joint trace reader: collect the observation IDs
-from each consumed person report, retain original single-report handling, and check
-actual source joins before resuming the fixed M25 matrix/control and M24 regressions.
-Stop remains in effect: owner approval covered this diagnostic only. No repair or
-further simulation executed. A repair card must address the12-file package budget:
-the diagnostic brought the current package to12 files; execution.ts would be an
-additional file, so declare a separate bounded repair package rather than exceed it.
-
-Raw stack and outcome are in ASSEMBLED_CHARACTER_M25_CHECKS.txt. Original failures
-and historical controls remain unchanged. M25 still has no behavioral qualification.
+Timed validation1040.31sec including failures/diagnostic/guards (cap1800), longest
+245.96sec (cap600). First package12 code/test files; repair package3, overlapping2,
+13 unique in the milestone. Two result/evidence files below5MiB; one validation job
+at a time. Raw maps, draws, stacks and checks: ASSEMBLED_CHARACTER_M25_CHECKS.txt.
+Passing declared checks ends this milestone; no next milestone is active.

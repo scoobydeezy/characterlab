@@ -17,7 +17,7 @@ vi.mock('../substrate/trace',async importOriginal=>{
 import {prepareCharacterModel,createCharacterRun} from '../assembled/character';
 import {peopleSource,peopleData} from './fixtures/assembledPersonHistory';
 import {through} from './fixtures/assembledComparison';
-it.skipIf(process.env.M25_DIAGNOSTIC!=='1')('diagnostic only: original first-branch seed0 setup through3',async()=>{
+it.skipIf((globalThis as typeof globalThis & {process?:{env?:{M25_DIAGNOSTIC?:string}}}).process?.env?.M25_DIAGNOSTIC!=='1')('diagnostic only: original first-branch seed0 setup through3',async()=>{
  const model=await prepareCharacterModel(peopleSource()),run=await createCharacterRun(model,peopleData(false,0));
  try{await through(run,3n);console.info('M25_DIAGNOSTIC setup reached3; no matrix executed');}
  catch(error){console.error('M25_DIAGNOSTIC stopped at committed clock='+run.snapshot().clock,error instanceof Error?error.stack:String(error));throw error;}

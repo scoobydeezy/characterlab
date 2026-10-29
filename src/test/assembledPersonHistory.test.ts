@@ -3,7 +3,7 @@ import {prepareCharacterModel,createCharacterRun,restoreCharacterRun} from '../a
 import {compileCharacterModel} from '../assembled/model';
 import {compileCharacterState} from '../assembled/state';
 import {restoreAuthoritativeState} from '../substrate/state';
-import {list,text,unsigned,type CanonicalValue} from '../substrate/canonicalEncoding';
+import {list,text,unsigned,signed,typedIdentifier,type CanonicalValue} from '../substrate/canonicalEncoding';
 import {dataRecord as rec,dataField as f,dataUnsigned as uint} from '../campaign2/canonicalData';
 import {randomDrawRecord} from '../assembled/codecs';
 import {personPath,personHistory,personMean,PERSON_OWNER} from '../assembled/social';
@@ -47,6 +47,10 @@ it('matrix: recognized people retain separate histories that feed coupled choice
   for(const [run,person,absent] of [[a,target,other],[b,other,target]] as const){expect(personHistory(belief(run,person))).toHaveLength(2);expect(relationshipHistory(history(run,person))).toHaveLength(2);expect(belief(run,absent)).toBeUndefined();expect(history(run,absent)).toBeUndefined();
    const social=reports(run,'assembled-social-people/0.1/appraisal').at(-1)!.slice(1).map(v=>items(v,'list')),relation=reports(run,'assembled-relationship-people/0.1/appraisal').at(-1)!.slice(1).map(v=>items(v,'list'));
    for(const t of [target,other]){expect(social.find(r=>key(r[2])===key(t))![3]).toEqual(list(personHistory(belief(run,t))));expect(relation.find(r=>key(r[2])===key(t))![3]).toEqual(history(run,t)??list([]));}
+   const joint=outputs(run.snapshot().trace,160n).filter(t=>key(f(t,6n))===key(text('assembled-character-social-joint/0.2-candidate'))&&signedValue(f(rec(f(t,4n),130n),2n))===3n);
+   expect(joint.length).toBeGreaterThan(0);
+   const consumed=social.flatMap(p=>items(p[3],'list').map(o=>items(o,'list')[0]));
+   for(const row of joint){const sourceIds=items(f(row,9n),'list').map(key);for(const id of consumed)expect(sourceIds).toContain(key(id));}
    expect(relation.find(r=>key(r[2])===key(person))![6]).toBe(true);
    expect(items(relation.find(r=>key(r[2])===key(person))![9],'list').length).toBeGreaterThan(0);
   }
@@ -82,8 +86,10 @@ it('controls: sequential people, receipt isolation, hidden evidence and admissio
  const singleton=await run(peopleData(),await prepareCharacterModel(peopleSource(true)),2n);expect(personHistory(belief(singleton))).toHaveLength(2);expect(relationshipHistory(history(singleton))).toHaveLength(2);
  const mutate=(slot:number,rows:CanonicalValue[])=>({...source,registry:enc(list(slots.map((v,i)=>i===slot?list([items(v,'list')[0],list(rows)]):v)))}),social=items(items(slots[19],'list')[1],'list'),rel=items(items(slots[20],'list')[1],'list'),s0=items(social[0],'list'),s1=items(social[1],'list'),r0=items(rel[0],'list'),r1=items(rel[1],'list');
  for(const bad of [mutate(19,[]),mutate(19,[...social,social[0]]),mutate(19,[list([candidate(7),s0[1]]),social[1]]),mutate(19,[social[0],list([s1[0],s0[1]])]),mutate(20,[rel[0]]),mutate(20,[rel[0],list([r1[0],r0[1]])]),mutate(20,[rel[0],rel[0]]),{...source,registry:catalogSource().registry}])await expect(prepareCharacterModel(bad)).rejects.toThrow();
- const compiled=await compileCharacterModel(source),component=await compileCharacterState(compiled),current=state(a),entry=current.entries().find(e=>e.path.rootStateTypeId===810n)!;
- expect(()=>component.stateModel.applyPatch(current,{operations:[{kind:'set',path:entry.path,expected:{presence:true,value:entry.value},newValue:entry.value}]},REL_OWNER)).toThrow();
+ const compiled=await compileCharacterModel(source),component=await compileCharacterState(compiled),current=state(a),entry=current.entries().find(e=>e.path.rootStateTypeId===810n&&key((e.path.selectors[0] as {key:CanonicalValue}).key)===key(list([C,target])))!;
+ const original=items(entry.value,'list'),records=items(original[1],'list'),observation=[...items(records[0],'list')];observation[0]=typedIdentifier(1115,unsigned(999999));observation[3]=signed(5);observation[5]=unsigned(2);
+ const validAppend=list([original[0],list([...records,list(observation)])]);
+ expect(()=>component.stateModel.applyPatch(current,{operations:[{kind:'set',path:entry.path,expected:{presence:true,value:entry.value},newValue:validAppend}]},REL_OWNER)).toThrow();
  expect(()=>component.stateModel.read(current,personPath(C,candidate(7)))).toThrow('foreign path');expect(()=>component.stateModel.read(current,relationshipPath(C,candidate(7)))).toThrow('foreign path');
  const otherEntry=current.entries().find(e=>e.path.rootStateTypeId===810n&&key((e.path.selectors[0] as {key:CanonicalValue}).key)===key(list([C,other])))!;
  expect(()=>component.stateModel.applyPatch(current,{operations:[{kind:'set',path:otherEntry.path,expected:{presence:true,value:otherEntry.value},newValue:entry.value}]},PERSON_OWNER)).toThrow('observation holder/target');
