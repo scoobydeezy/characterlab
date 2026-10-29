@@ -122,3 +122,5 @@ Final amended-checkpoint types/boundary/research PASS in20.28sec. Total timed va
 is400.43sec of1800. Production and historical sources are unchanged since f5e72eca;
 the prior105-file preservation result remains applicable. Current document/evidence
 caps PASS. Only the two planned test/fixture files changed in this amendment.
+
+Owner approved the proposed four additional runs on2026-10-29; execution pending.

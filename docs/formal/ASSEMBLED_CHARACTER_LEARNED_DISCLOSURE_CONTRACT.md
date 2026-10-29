@@ -87,3 +87,10 @@ Stop on failure; no seed search or second replacement. On pass, complete existin
 controls/regressions in the original1800sec total budget (323.54sec already spent).
 Use this positive context for delivery/access/physical-failure controls. This proves
 delivery when the disclosure route is available, not spontaneous disclosure preference.
+
+Owner further approved2026-10-29: four additional runs of the identical control after
+repairing the erroneous nonzero-draw assertion (316e2190), capped at120sec. For empty
+draw sets, require both resolutions Auto with one candidate/probability1, margin1,
+contest0 and no reason draws. Otherwise compare exact coupled draws. This validates
+actual arbitration without forcing randomness; all delivery gates and the1800sec
+milestone cap remain.400.43sec was spent before this repeat.

@@ -1,8 +1,9 @@
-# Current work — M26 incomplete: repaired test needs rerun
+# Current work — M26 corrected control repeat authorized
 
-Owner approved the availability comparison on2026-10-29; its four-run allowance is used.
-Fixture/schema and nonzero-draw test assumptions are repaired; no accepted result.
-See M26 result: additional runs need a count amendment; no new contrast proposed.
+Owner approved four additional runs on2026-10-29 after the test repair in316e2190.
+Repeat the identical availability control within120sec; total milestone cap1800sec.
+No model/input changes. Empty draws require both Auto decisions with probability1,
+margin1, contest0 and no reason draws; otherwise require exact draw coupling.
 Original failed matrix remains in f5e72eca and the raw log. No acceptance yet.
 Amendment below supersedes only its positive-delivery condition; no other scope change.
 M25 complete77522f0a; owner authorized continuation. One character, no UI/partner agents.
