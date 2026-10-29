@@ -13,8 +13,7 @@ Two setup attempts failed before maps or behavioral cells; preserve the partial 
   appropriate tasks/actions through existing laws and owners810/848.
 - Scope: src/assembled/{model,state,social,socialExecution,relationship,
   relationshipExecution,inputs,traceBinding,appraisal}.ts plus new test/fixture
-  assembledPersonHistory.ts / assembledPersonHistory.test.ts. Eleven code/test
-  files, hard cap12. No new runtime or owner. Historical C0-C3 trees frozen.
+  assembledPersonHistory.ts / assembledPersonHistory.test.ts. Eleven implementation/test files plus one test-only diagnostic, hard cap12. No new runtime or owner. Historical C0-C3 trees frozen.
 - Fixed comparison: four candidates, two downstream people, three tasks/actions.
   Original first two task mappings/old contact action target; third task/water other.
   Coat versus plain at1/2, same reports/cooperation/seeds0-7. Two identity-only maps;
@@ -33,10 +32,11 @@ Two setup attempts failed before maps or behavioral cells; preserve the partial 
 - Two attempts failed with Cannot read properties of undefined (reading kind).
   A separate single-report assumption in jointSignalSupport was corrected between
   attempts; it did not resolve startup. No root cause is established.
-- STOP under the two-attempt guardrail. No third simulation/check matrix authorized
-  by this checkpoint. Proposed next authorization: one first-branch seed0 setup only,
- 120sec cap, test-only exception-stack instrumentation, same data/laws/acceptance.
-  No alternate contrast, parameter change or further run follows automatically.
+- Owner authorized one diagnostic on2026-10-29: first branch, seed0, original
+  setup through3,120sec command cap. Test-only exception-stack logging in
+  assembledPersonHistoryDiagnostic.test.ts; original exceptions rethrown unchanged.
+  No production/frozen edits, alternate contrast or parameter change. Stop after
+  this run and report; no resumed matrix or repair is authorized by this amendment.
 - [Incomplete result](ASSEMBLED_CHARACTER_M25_RESULT.md); raw failures retained in
   ASSEMBLED_CHARACTER_M25_CHECKS.txt. Static checks do not qualify behavior.
 - Done only when fixed behavioral and invariants pass within caps; stop on pass.
