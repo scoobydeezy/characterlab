@@ -56,7 +56,7 @@ Eight production/test files changed, within12; one raw log and this result, with
 20 files/5MiB. No UI, autonomous partner, new scheduler or historical source edits.
 RO-C3-014/020 remain conditional;21 members/15 families/132 clauses remain unclosed.
 
-## Proposed bounded amendment — NOT APPROVED OR EXECUTED
+## Bounded amendment — owner APPROVED2026-10-29, execution pending
 
 Keep the original failure and original three-task/action comparison as evidence of
 withholding with correct frozen content. Replace its unsatisfied positive-delivery
@@ -78,6 +78,6 @@ requirement with one explicit availability-controlled comparison:
 
 This narrows the positive witness to delivery when disclosure is the available route;
 it does not establish spontaneous disclosure preference. It changes the predeclared
-comparison, so it needs the owner's amendment. The work order states: "Changes to
+comparison; the owner explicitly approved it on2026-10-29. The work order states: "Changes to
 comparison meaning or required scope need an owner amendment." Routine bug-repair
 authorization does not itself approve replacing a failed behavioral comparison.

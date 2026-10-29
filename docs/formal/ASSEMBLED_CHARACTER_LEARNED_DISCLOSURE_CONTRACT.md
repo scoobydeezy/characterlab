@@ -70,3 +70,20 @@ and stages. Legacy M25 matrix/controls plus M18 privacy/delivery and admission/o
 rollback tests cover affected old paths; original communication math is unchanged.
 No new historical verdict; C0/C1 standing invariants tested through these controls,
 105 frozen dependency blobs checked, no broad frozen corpus rerun.
+
+## Owner amendment2026-10-29 — availability-controlled delivery witness
+
+The original fixed matrix failed: no pair chose the disclosure action. Preserve it
+as withholding evidence, including the failed assertion; do not claim its gate passed.
+Owner approved replacing that positive requirement with the same model/topic/history
+contrast at seed0, changing only time1 strategy availability: a route is available
+iff its mapped action is the original protocol-contact-one disclosure action.
+All three tasks/actions remain declared; existing perception and strategy choose the
+route, with no forced resolution or execution bypass. Two identity-only setups
+through3 then two coupled runs through10: four runs total,120sec command cap.
+Require actual disclosure and Applied execution in both at3, precise learned810 ->
+expression -> receiving joins, recipient A mean1/0 at4, B absent and coupled draws.
+Stop on failure; no seed search or second replacement. On pass, complete existing
+controls/regressions in the original1800sec total budget (323.54sec already spent).
+Use this positive context for delivery/access/physical-failure controls. This proves
+delivery when the disclosure route is available, not spontaneous disclosure preference.

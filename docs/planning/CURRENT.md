@@ -1,9 +1,8 @@
-# Current work — M26 incomplete: delivery gate failed
+# Current work — M26 approved availability control
 
-M26 froze actual learned reports, but no fixed pair chose disclosure. No acceptance.
-See [result and proposed amendment](ASSEMBLED_CHARACTER_M26_RESULT.md); no further runs
-until the comparison amendment is approved. M25 remains the last accepted milestone.
-The original committed card below is retained; its delivery condition failed.
+Owner approved the proposed availability-controlled comparison on2026-10-29.
+Original failed matrix remains in f5e72eca and the raw log. No acceptance yet.
+Amendment below supersedes only its positive-delivery condition; no other scope change.
 M25 complete77522f0a; owner authorized continuation. One character, no UI/partner agents.
 
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
@@ -21,6 +20,13 @@ M25 complete77522f0a; owner authorized continuation. One character, no UI/partne
   Opportunities3/4, delivery/A access on, B off. Fixed seeds0-7; two identity-only maps.
   Same actual choices under coupled dice, frozen true/false from actual records;
   at least one actual delivered pair -> A mean1/0 at4, B absent. All16 finish10.
+- Approved amendment: same three tasks/actions, histories, topics and opportunity inputs;
+  only time1 strategy availability changes: mapped disclosure routes available, all
+  others unavailable. Seed0; two identity-only setups through3 plus two coupled runs
+  through10; four runs total in120sec. Require actual disclosure/Applied execution,
+  exact810 -> expression -> observation joins, A mean1/0 at4, B absent, coupled dice.
+  Stop if this also fails; no second contrast, seed search or tuning. Original matrix
+  remains withholding evidence. Use positive context for delivery/access/failure controls.
 - Checks: new matrix (knowledge/action/receiving join and coupling); new controls
   (latest/unknown/hidden/denied/same-instant/delivery/access/physical failure, privacy,
   topic/admission/owners, repeat/restores2/3 and late rollback). Legacy M25 matrix and
