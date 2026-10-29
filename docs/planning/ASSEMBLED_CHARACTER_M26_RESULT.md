@@ -56,7 +56,7 @@ Eight production/test files changed, within12; one raw log and this result, with
 20 files/5MiB. No UI, autonomous partner, new scheduler or historical source edits.
 RO-C3-014/020 remain conditional;21 members/15 families/132 clauses remain unclosed.
 
-## Bounded amendment — owner APPROVED2026-10-29, execution pending
+## Bounded amendment — owner APPROVED2026-10-29, attempted below
 
 Keep the original failure and original three-task/action comparison as evidence of
 withholding with correct frozen content. Replace its unsatisfied positive-delivery
@@ -81,3 +81,44 @@ it does not establish spontaneous disclosure preference. It changes the predecla
 comparison; the owner explicitly approved it on2026-10-29. The work order states: "Changes to
 comparison meaning or required scope need an owner amendment." Routine bug-repair
 authorization does not itself approve replacing a failed behavioral comparison.
+
+## Approved control attempt —2026-10-29
+
+Plan amendment b8a42eb4 preceded code. Original data/model and laws stayed fixed;
+only time1 strategy availability evidence changed as approved. No production edit.
+The helper initially passed all registry members to compileStrategy, which requires
+only definition171 rows. It failed before any createCharacterRun call. Corrected
+using the exact filter from model.ts. A readonly-array type error was also retained.
+That failed command consumed11.26sec; the next command was capped at108sec so both
+attempts stayed inside120sec together, and the run allowance remained four.
+
+The repaired-fixture command created exactly four runs: two identity-only setups
+and two coupled comparisons, all through3. It failed after30.44sec on the test's
+`draws.length > 0` assertion. Neither comparison was advanced to10 afterward.
+Actual delivery, recipient learning and terminal continuation were not reached by
+assertions, so this attempt does not establish those results. Maps are in the raw log;
+complete resolution/state snapshots were not retained by this failed attempt.
+
+Source analysis: configurationMath gives a sole candidate probability1, margin1,
+contest0, hence Auto (the admitted roll threshold is positive). arbitration.ts draws
+only outside Auto. The availability control intentionally leaves one action, so
+requiring a positive draw count was an erroneous test assumption. Do not alter the
+model to manufacture random draws. The repaired assertion now requires identical
+actual draw-key sets; if empty, BOTH resolutions must explicitly show Auto, one
+candidate with probability1, margin1, contest0 and no reason draws. For nonempty sets,
+exact coupled draw/prefix comparisons remain. All delivery/learning gates remain.
+The repair also logs both full resolutions before assertions for useful failures.
+This is a prepared test repair, not an executed pass or a new contrast.
+
+Four-run allowance is exhausted. Remaining checks have not run. Proposed next action:
+repeat the same four-run test (two identity setups, two comparisons), allowing four
+additional runs, still at most120sec for the command and within the unchanged1800sec
+milestone budget. No scenario, seed, law, score, topic or delivery criterion changes.
+The repair falls under standing bug-repair authority; additional runs need explicit
+permission because the approved comparison specified four runs total. On a pass,
+resume the already-planned controls/regressions. No second contrast is proposed.
+
+Final amended-checkpoint types/boundary/research PASS in20.28sec. Total timed validation
+is400.43sec of1800. Production and historical sources are unchanged since f5e72eca;
+the prior105-file preservation result remains applicable. Current document/evidence
+caps PASS. Only the two planned test/fixture files changed in this amendment.

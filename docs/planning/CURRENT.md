@@ -1,6 +1,8 @@
-# Current work — M26 approved availability control
+# Current work — M26 incomplete: repaired test needs rerun
 
-Owner approved the proposed availability-controlled comparison on2026-10-29.
+Owner approved the availability comparison on2026-10-29; its four-run allowance is used.
+Fixture/schema and nonzero-draw test assumptions are repaired; no accepted result.
+See M26 result: additional runs need a count amendment; no new contrast proposed.
 Original failed matrix remains in f5e72eca and the raw log. No acceptance yet.
 Amendment below supersedes only its positive-delivery condition; no other scope change.
 M25 complete77522f0a; owner authorized continuation. One character, no UI/partner agents.

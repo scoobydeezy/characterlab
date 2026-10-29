@@ -11,7 +11,7 @@ import {C} from './fixtures/campaign2Cognitive';
 import {recipients} from './fixtures/assembledCommunication';
 import {workLimit} from './fixtures/assembledCharacter';
 import {candidate} from './fixtures/assembledRecognitionCatalog';
-import {learnedSource,learnedData,encounters,opportunities,target,other,decode,items,key,enc} from './fixtures/assembledLearnedDisclosure';
+import {learnedSource,learnedData,disclosureAvailable,encounters,opportunities,target,other,decode,items,key,enc} from './fixtures/assembledLearnedDisclosure';
 import {through,finish,outputs,decisions,mapFromDecision,draws,choice,signedValue,type Run} from './fixtures/assembledComparison';
 const state=(r:Run)=>restoreAuthoritativeState(decode(r.snapshot().state));
 const knowledge=(r:Run,i=0)=>state(r).read(knowledgePath(recipients[i])).value;
@@ -21,7 +21,7 @@ const at=(r:Run,name:string,time=3n)=>reports(r,name).find(v=>signedValue(v[1])=
 const exact=(a:Run,b:Run)=>{expect(a.snapshot()).toEqual(b.snapshot());expect(a.save()).toEqual(b.save());};
 const mapped=(seed:number,map:ReturnType<typeof mapFromDecision>)=>{const d=learnedData(seed);return {...d,orderedInputs:enc(list([map.canonicalValue,...items(decode(d.orderedInputs),'list')]))};};
 function expressionJoin(r:Run,topic:CanonicalValue,time=3n){const frozen=at(r,FROZEN,time),latest=records(r,topic).at(-1),traces=outputs(r.snapshot().trace,160n).filter(t=>key(f(t,6n))===key(text('assembled-character-learned-disclosure/0.1-candidate'))&&signedValue(f(rec(f(t,4n),130n),2n))===time&&uint(f(rec(f(t,4n),130n),3n))===90n);expect(traces).toHaveLength(1);expect(frozen[4]).toEqual(latest?items(latest,'list')[6]:list([]));expect(frozen[5]).toEqual(topic);expect(f(traces[0],9n)).toEqual(list(latest?[items(latest,'list')[0]]:[]));expect(items(f(traces[0],11n),'list')).toHaveLength(1);expect(state(r).read(knowledgePath(C)).presence).toBe(false);expect(reports(r,PRIVATE)).toHaveLength(0);}
-it('matrix: learned topic changes received content under the same coupled choices',async()=>{
+it('retained matrix: learned topics freeze correctly while other actions are chosen',async()=>{
  const models=await Promise.all([target,other].map(t=>prepareCharacterModel(learnedSource(t)))),maps=[];
  for(const model of models){const r=await createCharacterRun(model,learnedData());await through(r,3n);maps.push(mapFromDecision(r));}
  console.info('M26_MAPS '+JSON.stringify(maps.map(m=>key(m.canonicalValue))));let common=0;const delivered:number[]=[];
@@ -35,8 +35,28 @@ it('matrix: learned topic changes received content under the same coupled choice
   for(const r of [a,b])expect(at(r,PROBE,4n)[4]).toEqual(communicationEstimate(knowledge(r)));
   console.info('M26_CELL '+JSON.stringify({seed,choice:choice(a),delivered:sa[5],common:aa.length,drawsA:aa.map(key),drawsB:bb.map(key)}));await finish(a);await finish(b);
  }
- expect(delivered.length).toBeGreaterThan(0);console.info('M26_MATRIX '+JSON.stringify({runs:16,delivered,common,terminal:10}));
+ expect(delivered).toEqual([]);console.info('M26_WITHHOLDING_MATRIX '+JSON.stringify({runs:16,delivered,common,terminal:10}));
 },550000);
+
+it('positive control: available disclosure delivers actual learned content',async()=>{
+ const models=await Promise.all([target,other].map(t=>prepareCharacterModel(learnedSource(t)))),data=disclosureAvailable(),maps=[];
+ for(const model of models){const r=await createCharacterRun(model,data);await through(r,3n);maps.push(mapFromDecision(r));}
+ console.info('M26_POSITIVE_MAPS '+JSON.stringify(maps.map(m=>key(m.canonicalValue))));
+ const runs=[];for(let i=0;i<2;i++){const r=await createCharacterRun(models[i],{...data,orderedInputs:enc(list([maps[i].canonicalValue,...items(decode(data.orderedInputs),'list')]))});await through(r,3n);runs.push(r);}
+ const [a,b]=runs,aa=draws(a),bb=draws(b),by=new Map(bb.map(d=>[key(f(d,2n)),d]));
+ console.info('M26_POSITIVE_DECISIONS '+JSON.stringify({choices:runs.map(choice),draws:[aa.length,bb.length],resolutions:runs.map(r=>key(decisions(r)[0]))}));
+ expect(aa.map(d=>key(f(d,2n))).sort()).toEqual(bb.map(d=>key(f(d,2n))).sort());
+ if(!aa.length){for(const r of runs){const result=rec(f(rec(f(decisions(r)[0],4n),419n),2n),420n);expect(uint(f(result,8n))).toBe(1n);expect(f(result,3n)).toEqual(q(1,1));expect(f(result,4n)).toEqual(q(0,1));expect(f(result,9n)).toEqual(list([]));const probabilities=items(f(result,2n),'list');expect(probabilities).toHaveLength(1);expect(f(rec(probabilities[0],421n),2n)).toEqual(q(1,1));}}
+ for(const x of aa){const y=by.get(key(f(x,2n)))!;for(const n of [3n,4n,7n])expect(f(x,n)).toEqual(f(y,n));}
+ for(const [i,r] of runs.entries()){
+  const topic=i===0?target:other,claim=i===0;expressionJoin(r,topic);expect(choice(r)).toBe('definition/protocol-contact-one');const frozen=at(r,FROZEN),signal=at(r,SIGNAL);expect(frozen[4]).toEqual(list([claim]));expect(signal[2]).toEqual(frozen[2]);expect(signal[3]).toEqual(frozen[3]);expect(signal[4]).toBe(true);expect(signal[5]).toBe(true);expect(signal[6]).toEqual(list([claim]));expect(signal[7]).toEqual(topic);
+  const received=reports(r,RECEIVED).map(v=>v[1]);expect(received).toHaveLength(2);for(const [j,o] of received.entries()){const obs=items(o,'list');expect(obs).toHaveLength(5);expect(obs[1]).toEqual(recipients[j]);expect(obs[2]).toEqual(signed(3));expect(obs[3]).toEqual(list(j===0?[claim]:[]));expect(obs[4]).toEqual(topic);}expect(history(knowledge(r))).toEqual([received[0]]);expect(knowledge(r,1)).toBeUndefined();
+  const traces=outputs(r.snapshot().trace,160n).filter(t=>key(f(t,6n))===key(text('assembled-character-learned-disclosure/0.1-candidate'))&&signedValue(f(rec(f(t,4n),130n),2n))===3n),phase=(t:ReturnType<typeof rec>)=>uint(f(rec(f(t,4n),130n),3n));
+  const effect=traces.find(t=>phase(t)===110n)!,receive=traces.find(t=>phase(t)===120n)!,learn=traces.find(t=>phase(t)===140n)!;expect(f(effect,13n)).toEqual(list([list(signal)]));expect(f(receive,13n)).toEqual(list(received.map(o=>list([text(RECEIVED),o]))));expect(f(learn,12n)).toEqual(list(received));expect(f(learn,9n)).toEqual(list(received.map(o=>items(o,'list')[0])));
+  await through(r,4n);expect(communicationEstimate(knowledge(r))).toEqual(list([q(i===0?1:0,1)]));expect(at(r,PROBE,4n)[4]).toEqual(communicationEstimate(knowledge(r)));expect(knowledge(r,1)).toBeUndefined();await finish(r);
+ }
+ console.info('M26_POSITIVE '+JSON.stringify({seed:0,runs:4,setup:2,compared:2,common:aa.length,drawsA:aa.map(key),drawsB:bb.map(key),action:choice(a),A:[1,0],B:'absent',terminal:10}));
+},115000);
 
 it('controls: actual learned content, timing, hidden evidence and delivery boundaries',async()=>{
  const source=learnedSource(),model=await prepareCharacterModel(source),run=async(data=learnedData(),m=model,time=3n)=>{const r=await createCharacterRun(m,data);await through(r,time);return r;};
