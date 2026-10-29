@@ -1,32 +1,33 @@
-# Current work — M24 complete
+# Current work — M25 active
 
-The shared character now accepts configurable recognition knowledge:1-8 people,
-1-4 templates each, including shared appearances. Ambiguity governs both existing
-learning consumers and can change choice. M24 passes its bounded contract.
-Stop here; no next milestone is active.
+Remove the single-person bottleneck inside the one character: recognition routes
+learning to separate person histories, which feed task appraisal and contact reasons.
+M24 complete at e038bdae; user authorized the next milestone. No UI/multi-character work.
 
-| Research obligations | **0 active / 18 conditional / 0 unowned** |
-
-- [M24 result and limits](ASSEMBLED_CHARACTER_M24_RESULT.md).
-- [Raw checks, maps and draws](ASSEMBLED_CHARACTER_M24_CHECKS.txt).
-- [Catalog0.1 contract](../formal/ASSEMBLED_CHARACTER_RECOGNITION_CATALOG_CONTRACT.md),
-  planf3b1f5fb; rules/registry0.25. M23 encounter path and SEM-001F law unchanged.
-- Explicit candidate/template associations replace positional pairing. Shared
-  templates produce multiple supported cues; accepted law decides recognition.
-  One state/scheduler/trace/save; existing owners and legacy versions preserved.
-- Fixed16-run matrix PASS: identical evidence, changed initial knowledge association;
-  unique target versus ambiguity yields belief/history2/0. Choices differ seeds1/5;
-  24 common reason keys, three explained conditional ties; all runs reach10.
-- Min/max/multiple templates, canonical order, hidden/denied evidence, correction,
-  withdrawal/prior-under-ambiguity, admission/immutable knowledge, exact repeat/
-  restores2/3 to10 and late52-event rollback PASS.
-- All4 M23 regression and26 C1 conformance tests PASS. Types/boundary/research PASS;
-  105 frozen dependency blobs and historical controls unchanged. No validation failure.
-- Timed checks959.58sec before final document/index gates; longest438.32sec.
-  Six code/test files, two evidence/result files below5MiB; all caps held.
-- Still one character/channel, Person catalogs supplied initially and one downstream
-  person/relationship target. Participation/kind and communication remain controlled.
-  No general visual/event recognition, learned catalog or autonomous partners.
-- RO-C3-014/016 and18 conditional obligations remain unclosed;21 members/15 families/
-  132 clauses remain the completion denominator. No UI or Campaign4 entry.
-- Further work needs the next bounded card; no speculative audit/cleanup campaign.
+- Contract: [person histories0.1](../formal/ASSEMBLED_CHARACTER_PERSON_HISTORY_CONTRACT.md).
+  Commit this card/contract before production changes. Rules/registry0.26,22 slots.
+- Capabilities (2): configurable per-person histories; those histories affect the
+  appropriate tasks/actions through existing laws and owners810/848.
+- Scope: src/assembled/{model,state,social,socialExecution,relationship,
+  relationshipExecution,inputs,traceBinding}.ts plus new test/fixture
+  assembledPersonHistory.ts / assembledPersonHistory.test.ts. Ten planned code/test
+  files, hard cap12. No new runtime or owner. Historical C0-C3 trees frozen.
+- Fixed comparison: four candidates, two downstream people, three tasks/actions.
+  Original first two task mappings/old contact action target; third task/water other.
+  Coat versus plain at1/2, same reports/cooperation/seeds0-7. Two identity-only maps;
+  both histories2 each on correct person, consumed contributions, changed choice>=1;
+  all reason draws coupled, conditional ties justified asM24. Finish all16 at10.
+- Baseline M1/Experience, social/relationship areas, MEC-004, RO-C3-014/016 exercised;
+  no21-member/15-family/132-clause closure, no obligation or historical verdict change.
+- Checks and risks: new matrix (routing/choice/coupling); new controls (per-person
+  isolation, receipt attribution, hidden/denied, order/admission/owners, exact repeat,
+  restore2/3 and late rollback); unchanged M24 matrix + controls separately (legacy
+  execution compatibility). Types/boundary/research;105 frozen dependency blob guard.
+- Budgets: each command<=600sec, total validation<=1800sec incl failures/retries;
+  one long job at a time;20 evidence files/5MiB, one raw log plus one compact result.
+  Tests use settle cap32 as failure. Stop at failed behavioral contrast, unchanged
+  repeated blocker or budget; no tuning/alternate contrast/breadth. No build/browser.
+- Done only when fixed behavioral and invariants pass within caps; stop on pass.
+  Preserve prior full controls by unchanged dependency closure; no broad rerun.
+- Limits retained: one holder/channel, controlled participation/kind/communication,
+  initial Person catalogs, finite tasks/actions. Partners remain observed stimuli.
