@@ -1,28 +1,34 @@
-# Current work — M27 complete
+# Current work — M28 outcome disclosure
 
-The character can learn one declared procedure without training its other procedures.
-Later execution and permitted performance reports reflect the skill actually used.
-Explicitly shared procedures share learning. One existing skill owner, simulation,
-state, scheduler, trace and save. See [M27 result](ASSEMBLED_CHARACTER_M27_RESULT.md)
-and [contract](../formal/ASSEMBLED_CHARACTER_PROCEDURES_CONTRACT.md).
+The next connection lets the character communicate its own observed action results.
+M27 is complete. M28 uses its continuing character and M15's existing outcome memory.
 
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
-- Rules/registry0.28:1..3 governed procedures across the existing1..3 actions.
-  No new learning law, owner wrapper, input channel, runtime or random call.
-- Fixed reciprocal witness PASS: practice A yields success on A/failure on B;
-  practice B reverses it. Only the practiced K becomes1/2; third skill stays absent.
-  Six permitted reports per history; actual mapped reads; both finish10.
-- All decisions Auto/probability1/empty draws checked. This is execution/learning
-  isolation, not a new sampled-choice or spontaneous selection claim.
-- Shared keys, no/blocked practice, hidden/false feedback, impairment/recovery,
-  admission/authority, repeat, restores3/5 and late rollback44/43 PASS.
-- Unchanged M11 matrix/arithmetic and M25 coupled matrix PASS. M25 retains24 shared
-  draws,4 conditional ties and changed seeds1/4/5/6. Types/boundary/research PASS.
-- 105 frozen dependencies and historical trees unchanged. Nine production/test files;
-  about14 minutes validation including retained failures/repairs, within all limits.
-- RO-C3-013 addressed for this scoped extension; broader debt remains conditional.
-  No C3 verdict or corpus closure.21 members/15 families/132 clauses remain unclosed.
-- Stop after this milestone. Next continuation must declare one bounded causal
-  connection in the same simulation before code. No UI or multi-character expansion.
-  Preserve existing guards and autonomous ordinary implementation/test repair authority.
+## Card committed before code
+- Capabilities: disclose a learned route outcome; preserve false/unknown reports and
+  recipient boundaries; continue the connection exactly across save/restore.
+- Contract: ../formal/ASSEMBLED_CHARACTER_OUTCOME_DISCLOSURE_CONTRACT.md.
+  Rules/registry0.29, same22 slots and all0.28 mechanisms. No new psychological law.
+- Baselines COMM/PERF/SKILL, BRIEF12.13/12.8/12.14; FND3/4/6; conditional
+  RO012/013/019/020 receiving boundaries preserved. No corpus requirement closes.
+- Expected files: assembled model, communication, communicationExecution, traceBinding;
+  test assembledOutcomeDisclosure and its fixture. Six code/test files, maximum12.
+  Documentation: this card, contract, result/raw log, AGENTS and existing register.
+- Fixed comparison: M27 trainA, seed0; authentic versus displayed-success feedback3;
+  same physical history/laws. Topic first task/A route; opportunities3/5/7, terminal10.
+  Both success histories false/false/true. Recipient A receives false versus true at7;
+  B denied. Choices Auto/probability1 with empty actual draws, not sampled divergence.
+- New test groups separately: positive<=180s; privacy/delivery/routing<=360s;
+  repeat/restores3/5<=240s; admission/authority/late rollback<=180s.
+- Regression: unchanged M26 controls<=400s (changed consumer regression); M27 positive
+  <=120s (unchanged physical producer and procedure identity); original COMM algebra
+  comparison included from M26 existing tests if separately named.
+- tsc -b, reference-boundary, research, frozen105-file blob/historical-tree guard and
+  git diff/size checks<=120s. No full C2 byte replay: closure/entry remain untouched.
+- Hard caps:600s/command,1800s total validation incl failures/repairs; one check at a
+  time;20 evidence files/5MiB (planned result+one raw log). No browser/build/audit track.
+- Done only if fixed witness and all declared controls pass. Preserve failures and
+  stop at behavioral gate failure/budget exhaustion; no tuning. Ordinary defects
+  repaired autonomously within scope and budget under standing owner authorization.
+- Full21 members/15 families/132 clauses remain open. Stop after this milestone.
