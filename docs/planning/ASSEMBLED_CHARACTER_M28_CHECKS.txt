@@ -1,0 +1,188 @@
+
+=== types ===
+
+M28_CHECK types exit=0 seconds=15.92
+
+=== positive ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledOutcomeDisclosure.test.ts > positive: prior observed result reaches a recipient independently of current physical success
+M28 witness {"report":false,"actual":[false,false,true],"claims":["unknown",false,false],"deliveredAt":7,"recipientB":"absent","draws":0,"terminal":10}
+
+stdout | src/test/assembledOutcomeDisclosure.test.ts > positive: prior observed result reaches a recipient independently of current physical success
+M28 witness {"report":true,"actual":[false,false,true],"claims":["unknown",true,true],"deliveredAt":7,"recipientB":"absent","draws":0,"terminal":10}
+
+ ✓ src/test/assembledOutcomeDisclosure.test.ts (4 tests | 3 skipped) 46951ms
+   ✓ positive: prior observed result reaches a recipient independently of current physical success 46951ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 3 skipped (4)
+   Start at  21:21:40
+   Duration  54.26s (transform 1.76s, setup 0ms, collect 6.39s, tests 46.95s, environment 0ms, prepare 484ms)
+
+
+M28_CHECK positive exit=0 seconds=56.75
+
+=== privacy ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledOutcomeDisclosure.test.ts > privacy: missing and misleading feedback, route isolation, hidden practice and delivery gates
+M28 hidden physical/unknown/other-route/current-feedback/delivery/access PASS
+
+ ✓ src/test/assembledOutcomeDisclosure.test.ts (4 tests | 3 skipped) 106373ms
+   ✓ privacy: missing and misleading feedback, route isolation, hidden practice and delivery gates 106372ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 3 skipped (4)
+   Start at  21:22:42
+   Duration  112.99s (transform 1.68s, setup 0ms, collect 6.23s, tests 106.37s, environment 0ms, prepare 116ms)
+
+
+M28_CHECK privacy exit=0 seconds=113.47
+
+=== persistence ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledOutcomeDisclosure.test.ts > persistence: repeat and restores3/5 at every later settled instant
+M28 exact repeat/restores3/5 whole-tail PASS
+
+ ✓ src/test/assembledOutcomeDisclosure.test.ts (4 tests | 3 skipped) 132636ms
+   ✓ persistence: repeat and restores3/5 at every later settled instant 132635ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 3 skipped (4)
+   Start at  21:24:52
+   Duration  139.31s (transform 1.68s, setup 0ms, collect 6.24s, tests 132.64s, environment 0ms, prepare 110ms)
+
+
+M28_CHECK persistence exit=0 seconds=139.79
+
+=== admission ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledOutcomeDisclosure.test.ts (4 tests | 1 failed | 3 skipped) 42672ms
+   × admission: topics, historical versions, owners and late transactional rollback 42671ms
+     → same-instant settlement exceeded its configured work ceiling
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledOutcomeDisclosure.test.ts > admission: topics, historical versions, owners and late transactional rollback
+SchedulerContractError: same-instant settlement exceeded its configured work ceiling
+ ❯ fail src/substrate/scheduler.ts:667:9
+    665| 
+    666| function fail(code: SchedulerFailureCode, message: string): never {
+    667|   throw new SchedulerContractError(code, message);
+       |         ^
+    668| }
+    669| 
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:358:11
+ ❯ Object.settleNextInstant src/assembled/character.ts:40:58
+ ❯ through src/test/assembledOutcomeDisclosure.test.ts:20:119
+ ❯ src/test/assembledOutcomeDisclosure.test.ts:53:308
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 3 skipped (4)
+   Start at  21:27:18
+   Duration  49.34s (transform 1.68s, setup 0ms, collect 6.29s, tests 42.67s, environment 0ms, prepare 102ms)
+
+
+M28_CHECK admission exit=1 seconds=49.84
+
+=== admission-fault-target-repair ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledOutcomeDisclosure.test.ts > admission: topics, historical versions, owners and late transactional rollback
+M28 late7 rollback events=58 cap=57
+
+ ✓ src/test/assembledOutcomeDisclosure.test.ts (4 tests | 3 skipped) 51497ms
+   ✓ admission: topics, historical versions, owners and late transactional rollback 51497ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 3 skipped (4)
+   Start at  21:28:54
+   Duration  58.10s (transform 1.68s, setup 0ms, collect 6.23s, tests 51.50s, environment 0ms, prepare 111ms)
+
+
+M28_CHECK admission-fault-target-repair exit=0 seconds=58.58
+
+=== M26-regressions ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledLearnedDisclosure.test.ts > controls: actual learned content, timing, hidden evidence and delivery boundaries
+M26 learned/latest/not-mean/unknown/hidden/denied/same-instant/physical/delivery/access/privacy controls PASS
+
+stdout | src/test/assembledLearnedDisclosure.test.ts > controls: exact repeat and acquired-history restores2/3 through10
+M26 exact repeat/restores2/3 through10 PASS
+
+ ✓ src/test/assembledLearnedDisclosure.test.ts (5 tests | 2 skipped) 207825ms
+   ✓ controls: actual learned content, timing, hidden evidence and delivery boundaries 67540ms
+   ✓ controls: exact repeat and acquired-history restores2/3 through10 121601ms
+   ✓ controls: topic/source/state admission, authority, phases and late rollback 18684ms
+stdout | src/test/assembledLearnedDisclosure.test.ts > controls: topic/source/state admission, authority, phases and late rollback
+M26 topic/source/no-speaker-copy/phases/owner/rollback controls PASS events=45
+
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 2 skipped (5)
+   Start at  21:30:01
+   Duration  210.84s (transform 1.68s, setup 0ms, collect 2.57s, tests 207.83s, environment 0ms, prepare 112ms)
+
+
+M28_CHECK M26-regressions exit=0 seconds=211.32
+
+=== M27-producer-regression ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledProcedures.test.ts > M27 independent procedures > positive: practice is procedure-specific and actual reports follow reciprocal execution
+M27 reciprocal {"train":"A","competence":["060001","060001","060202"],"success":[false,false,true],"reports":6,"terminal":10,"draws":0}
+
+stdout | src/test/assembledProcedures.test.ts > M27 independent procedures > positive: practice is procedure-specific and actual reports follow reciprocal execution
+M27 reciprocal {"train":"B","competence":["060001","060202","060001"],"success":[false,true,false],"reports":6,"terminal":10,"draws":0}
+
+ ✓ src/test/assembledProcedures.test.ts (4 tests | 3 skipped) 34905ms
+   ✓ M27 independent procedures > positive: practice is procedure-specific and actual reports follow reciprocal execution 34904ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 3 skipped (4)
+   Start at  21:33:40
+   Duration  37.83s (transform 1.68s, setup 0ms, collect 2.55s, tests 34.91s, environment 0ms, prepare 111ms)
+
+
+M28_CHECK M27-producer-regression exit=0 seconds=38.31
+
+=== original-COMM-controls ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCommunication.test.ts > M18 assembled communication > controls: original COMM full cases and retained alternatives preserve exact kernels
+M18 original COMM 21 full runs/79 frames; all admitted histories, mean/latest/NoLearning/privacy/transmission retained
+
+ ✓ src/test/assembledCommunication.test.ts (5 tests | 4 skipped) 20180ms
+   ✓ M18 assembled communication > controls: original COMM full cases and retained alternatives preserve exact kernels 20180ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 4 skipped (5)
+   Start at  21:34:43
+   Duration  23.08s (transform 1.66s, setup 0ms, collect 2.52s, tests 20.18s, environment 0ms, prepare 112ms)
+
+
+M28_CHECK original-COMM-controls exit=0 seconds=23.57
+
+=== final-static ===
+Reference boundary check passed.
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M28_CHECK final-static exit=0 seconds=20.8
+
+M28 final guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and M22/M23/M24/M25 tests unchanged; document/evidence caps. seconds=8.86
+
+M28 final metadata:9 declared test groups PASS; one fault-test setup failure retained/repaired. Timed checks+guard737.21s; longest211.32s. Six code/test files; two evidence files below5MiB; diff whitespace PASS excluding unchanged raw terminal formatting.

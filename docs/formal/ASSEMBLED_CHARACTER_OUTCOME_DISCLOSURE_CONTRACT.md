@@ -4,7 +4,7 @@ M28 lets the character tell a recipient its latest observed result for a declare
 route. The source is its existing outcome memory, not physical skill or hidden truth.
 LOCAL DISPOSITION,2026-10-29, before implementation. Architecture communication,
 learning and intent/execution boundaries; M15 performance and M26 learned disclosure
-are the accepted producer and receiver. Latest observed result is an episodic claim,
+are the accepted producer and receiver. Latest observed result is a claim about an observed event,
 not a competence estimate, probability, truth guarantee or new learning law.
 
 ## Composition and admission
@@ -57,8 +57,12 @@ rolls back all state, outputs, trace, queue and allocator effects, including rec
 
 ## Preservation and limits
 Affected baselines COMM/PERF/SKILL; BRIEF12.13/12.8/12.14, FND3/4/6,
-MEC004/011..020/022. RO-C3-012/013/019/020 retain their broader conditional scope;
+MEC004/011..020/022. RO-C3-012/013/020 remain conditional; RO-C3-019 remains closed;
 no reduction, new C3 qualification/verdict or obligation closure. Ordinary feedback
 recognition, competence belief and confidence-sensitive choice remain open. Reuse
 M26 controls and M27 reciprocal execution unchanged; no historical dependency changes.
 One character/runtime/state/RNG/save; no UI, autonomous partners or corpus closure.
+
+Fault-test correction: the first late7 cap also rejected an earlier busier instant.
+The rollback-only fixture now adds eight admitted zero body deliveries at7, asserts
+all earlier event counts fit, then fails7 one event short. Behavioral inputs unchanged.

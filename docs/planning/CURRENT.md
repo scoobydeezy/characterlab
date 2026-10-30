@@ -1,34 +1,29 @@
-# Current work — M28 outcome disclosure
+# Current work — M28 complete
 
-The next connection lets the character communicate its own observed action results.
-M27 is complete. M28 uses its continuing character and M15's existing outcome memory.
+The character can communicate its own observed action results from existing memory.
+Misleading feedback changes the message; hidden physical truth and current success
+cannot replace the earlier evidence used when speaking. See [M28 result](ASSEMBLED_CHARACTER_M28_RESULT.md)
+and [contract](../formal/ASSEMBLED_CHARACTER_OUTCOME_DISCLOSURE_CONTRACT.md).
 
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
-## Card committed before code
-- Capabilities: disclose a learned route outcome; preserve false/unknown reports and
-  recipient boundaries; continue the connection exactly across save/restore.
-- Contract: ../formal/ASSEMBLED_CHARACTER_OUTCOME_DISCLOSURE_CONTRACT.md.
-  Rules/registry0.29, same22 slots and all0.28 mechanisms. No new psychological law.
-- Baselines COMM/PERF/SKILL, BRIEF12.13/12.8/12.14; FND3/4/6; conditional
-  RO012/013/019/020 receiving boundaries preserved. No corpus requirement closes.
-- Expected files: assembled model, communication, communicationExecution, traceBinding;
-  test assembledOutcomeDisclosure and its fixture. Six code/test files, maximum12.
-  Documentation: this card, contract, result/raw log, AGENTS and existing register.
-- Fixed comparison: M27 trainA, seed0; authentic versus displayed-success feedback3;
-  same physical history/laws. Topic first task/A route; opportunities3/5/7, terminal10.
-  Both success histories false/false/true. Recipient A receives false versus true at7;
-  B denied. Choices Auto/probability1 with empty actual draws, not sampled divergence.
-- New test groups separately: positive<=180s; privacy/delivery/routing<=360s;
-  repeat/restores3/5<=240s; admission/authority/late rollback<=180s.
-- Regression: unchanged M26 controls<=400s (changed consumer regression); M27 positive
-  <=120s (unchanged physical producer and procedure identity); original COMM algebra
-  comparison included from M26 existing tests if separately named.
-- tsc -b, reference-boundary, research, frozen105-file blob/historical-tree guard and
-  git diff/size checks<=120s. No full C2 byte replay: closure/entry remain untouched.
-- Hard caps:600s/command,1800s total validation incl failures/repairs; one check at a
-  time;20 evidence files/5MiB (planned result+one raw log). No browser/build/audit track.
-- Done only if fixed witness and all declared controls pass. Preserve failures and
-  stop at behavioral gate failure/budget exhaustion; no tuning. Ordinary defects
-  repaired autonomously within scope and budget under standing owner authorization.
-- Full21 members/15 families/132 clauses remain open. Stop after this milestone.
+- Rules/registry0.29 extends all0.28 capabilities. One governed person or task/route
+  topic per model; existing1000/3 -> expression90 -> execution -> recipient1072.
+  No new owner, state root, input channel, runtime, RNG call or learning law.
+- Fixed seed0 witness PASS: actual false/false/true in both branches; authentic versus
+  misleading report3 produces false versus true delivered at7. B denied. Exact
+  consumed source/read checked; current success cannot rewrite the frozen message.
+- Choices remain identical Auto/probability1/empty actual draws; no sampled-choice claim.
+- Unknown, hidden physical changes, route separation, delivery/access, admission and
+  authority controls PASS. Exact repeat/restores3/5 through10 and late7 rollback PASS.
+- One fault-test setup failure retained and repaired: eight zero body deliveries in
+  the fault-only fixture target late7,58 events/cap57. Behavioral witness unchanged.
+- Unchanged M26 controls, M27 reciprocal procedures and original COMM21 runs/79 frames
+  PASS. Types/boundary/research and105-control-dependency preservation PASS.
+- Six production/test files; result+raw log; about12.5 minutes validation incl failure.
+  RO012/013/020 remain conditional; RO019 remains closed. No new verdict or reduction.
+- Full21 members/15 families/132 clauses remain open. Controlled feedback and passive
+  recipients are the current boundary; competence expectations remain unintegrated.
+- Stop after this milestone. Next continuation must declare one bounded causal
+  connection in this same simulation before code, under existing limits. No UI or
+  autonomous multi-character expansion. Preserve ordinary defect repair authorization.
