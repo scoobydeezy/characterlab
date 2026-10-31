@@ -61,7 +61,7 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
  const procedure=model.skill?createSkillExecution(component.tasks[0].character,stateModel,inputs.skillEvents,modelIdentity,inputs.runIdentity.value,model.procedures,model.actionBody):undefined;
  const body=model.body?createBodyExecution(model.body,component.tasks[0].character,stateModel,inputs.bodyEvents,modelIdentity,inputs.runIdentity.value,model.actionBody,procedure):undefined;
  const episodes=model.memory?createEpisodicExtension(component.tasks[0].character,model.body!,stateModel,modelIdentity,inputs.runIdentity.value,model.retention?.recallDelay,model.retrieval,model.workspace):undefined;
- const performance=model.performance?createPerformanceExecution(component.tasks[0].character,model.strategy!,stateModel,inputs.performanceEvents,modelIdentity,inputs.runIdentity.value,model.actionBody!):undefined;
+ const performance=model.performance?createPerformanceExecution(component.tasks[0].character,model.strategy!,stateModel,inputs.performanceEvents,modelIdentity,inputs.runIdentity.value,model.actionBody!,model.expectationEnabled):undefined;
  const strategy=model.strategy?createStrategyExecution(component.tasks[0].character,model.strategy,stateModel,inputs.strategyEvents,modelIdentity,inputs.runIdentity.value,performance):undefined;
  const horizon=model.horizon?createHorizonExecution(component.tasks[0].character,component.tasks.map(t=>t.key),stateModel,inputs.horizonEvents,modelIdentity,inputs.runIdentity.value):undefined;
  const priority=model.priority?createPriorityExecution(component.tasks[0].character,component.tasks.map(t=>t.key),stateModel,inputs.priorityEvents,modelIdentity,inputs.runIdentity.value,horizon):undefined;

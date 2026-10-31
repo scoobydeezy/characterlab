@@ -84,3 +84,8 @@ PRIORITY_DISPLAY row from7 at9 in both branches. All payload values, the sole
 feedback3 contrast, seed0 and original expected results remain fixed. No body-sample
 addition or other contrast is authorized by this repair. If the positive still
 fails, stop. Original logs remain; no acceptance is inferred from the diagnosis.
+
+Rollback setup repair: with eight zero deliveries, time9 had50 events and an earlier
+instant also had50. Its cap49 would fail early. Add exactly one zero delivery to the
+FAULT-ONLY run: predicted51 events/cap50, with every earlier count checked before
+failure injection. Positive inputs and the late atomic-rollback requirement unchanged.

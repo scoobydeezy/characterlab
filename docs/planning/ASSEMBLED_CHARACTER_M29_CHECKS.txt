@@ -1,0 +1,675 @@
+
+=== types-before-tests ===
+
+M29_CHECK types-before-tests exit=0 seconds=15.56
+
+=== types-with-tests ===
+
+M29_CHECK types-with-tests exit=0 seconds=15.02
+
+=== positive ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledPerformanceExpectation.test.ts (5 tests | 1 failed | 4 skipped) 12829ms
+   × positive: same latest success, different learned expectation and actual disclosure 12828ms
+     → RegisteredReadDomain must be duplicate-free
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledPerformanceExpectation.test.ts > positive: same latest success, different learned expectation and actual disclosure
+SchedulerContractError: RegisteredReadDomain must be duplicate-free
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:470:11
+    468|       const contractError = error instanceof SchedulerContractError
+    469|         ? error
+    470|         : new SchedulerContractError('TRANSITION_FAILURE', errorMessag…
+       |           ^
+    471|       this.#status = 'Failed';
+    472|       this.#diagnostic = {
+ ❯ Object.settleNextInstant src/assembled/character.ts:40:58
+ ❯ through src/test/assembledPerformanceExpectation.test.ts:32:119
+ ❯ src/test/assembledPerformanceExpectation.test.ts:39:98
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 4 skipped (5)
+   Start at  17:00:21
+   Duration  23.53s (transform 1.72s, setup 0ms, collect 10.08s, tests 12.83s, environment 0ms, prepare 323ms)
+
+
+M29_CHECK positive exit=1 seconds=25.04
+
+=== positive-repaired-phase-read ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledPerformanceExpectation.test.ts (5 tests | 1 failed | 4 skipped) 24888ms
+   × positive: same latest success, different learned expectation and actual disclosure 24887ms
+     → missing field 2
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledPerformanceExpectation.test.ts > positive: same latest success, different learned expectation and actual disclosure
+SchedulerContractError: missing field 2
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataField src/campaign2/canonicalData.ts:12:101
+ ❯ automatic src/test/assembledPerformanceExpectation.test.ts:36:129
+ ❯ src/test/assembledPerformanceExpectation.test.ts:39:449
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 4 skipped (5)
+   Start at  17:02:07
+   Duration  35.21s (transform 1.70s, setup 0ms, collect 9.91s, tests 24.89s, environment 0ms, prepare 123ms)
+
+
+M29_CHECK positive-repaired-phase-read exit=1 seconds=35.74
+
+=== unchanged-fixture-diagnosis ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledPerformanceExpectation.test.ts > positive: same latest success, different learned expectation and actual disclosure
+M29 decision diagnostic {"variants":[3,3,3,2],"actual":[false,false,true],"claims":[{"kind":"list","items":[]},{"kind":"list","items":[{"kind":"rational","numerator":"0","denominator":"1"}]},{"kind":"list","items":[{"kind":"rational","numerator":"0","denominator":"1"}]}],"expectation":{"kind":"list","items":[{"kind":"rational","numerator":"1","denominator":"8"}]},"tasks":[{"path":{"rootStateTypeId":"373","fieldId":"1","selectors":[{"kind":"mapKey","key":{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}}}]},"value":{"kind":"record","schema":{"typeId":"372","schemaVersion":"1","name":"TaskCommitmentStatus","fields":[{"id":"1","name":"VariantTag","required":true},{"id":"2","name":"ObservationRef","required":false},{"id":"3","name":"ObservedAt","required":false}]},"fields":{}}},{"path":{"rootStateTypeId":"373","fieldId":"1","selectors":[{"kind":"mapKey","key":{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}}}]},"value":{"kind":"record","schema":{"typeId":"372","schemaVersion":"1","name":"TaskCommitmentStatus","fields":[{"id":"1","name":"VariantTag","required":true},{"id":"2","name":"ObservationRef","required":false},{"id":"3","name":"ObservedAt","required":false}]},"fields":{}}},{"path":{"rootStateTypeId":"373","fieldId":"1","selectors":[{"kind":"mapKey","key":{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}}}]},"value":{"kind":"record","schema":{"typeId":"372","schemaVersion":"1","name":"TaskCommitmentStatus","fields":[{"id":"1","name":"VariantTag","required":true},{"id":"2","name":"ObservationRef","required":false},{"id":"3","name":"ObservedAt","required":false}]},"fields":{}}},{"path":{"rootStateTypeId":"373","fieldId":"2","selectors":[{"kind":"mapKey","key":{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}}}]},"value":{"kind":"record","schema":{"typeId":"390","schemaVersion":"1","name":"AdoptedTaskInstruction","fields":[{"id":"1","name":"PlanInstructionDefinitionId","required":true}]},"fields":{}}},{"path":{"rootStateTypeId":"373","fieldId":"2","selectors":[{"kind":"mapKey","key":{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}}}]},"value":{"kind":"record","schema":{"typeId":"390","schemaVersion":"1","name":"AdoptedTaskInstruction","fields":[{"id":"1","name":"PlanInstructionDefinitionId","required":true}]},"fields":{}}},{"path":{"rootStateTypeId":"373","fieldId":"2","selectors":[{"kind":"mapKey","key":{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}}}]},"value":{"kind":"record","schema":{"typeId":"390","schemaVersion":"1","name":"AdoptedTaskInstruction","fields":[{"id":"1","name":"PlanInstructionDefinitionId","required":true}]},"fields":{}}},{"path":{"rootStateTypeId":"373","fieldId":"3","selectors":[{"kind":"mapKey","key":{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}}}]},"value":{"kind":"list","items":[{"kind":"text","value":"assembled-goal-priority/0.1"},{"kind":"rational","numerator":"1","denominator":"1"},{"kind":"typedIdentifier","namespaceId":"1164","payload":{"kind":"unsigned","value":"0"}},{"kind":"unsigned","value":"1"}]}},{"path":{"rootStateTypeId":"373","fieldId":"3","selectors":[{"kind":"mapKey","key":{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}}}]},"value":{"kind":"list","items":[{"kind":"text","value":"assembled-goal-priority/0.1"},{"kind":"rational","numerator":"1","denominator":"1"},{"kind":"typedIdentifier","namespaceId":"1164","payload":{"kind":"unsigned","value":"1"}},{"kind":"unsigned","value":"1"}]}},{"path":{"rootStateTypeId":"373","fieldId":"3","selectors":[{"kind":"mapKey","key":{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}}}]},"value":{"kind":"list","items":[{"kind":"text","value":"assembled-goal-priority/0.1"},{"kind":"rational","numerator":"1","denominator":"1"},{"kind":"typedIdentifier","namespaceId":"1164","payload":{"kind":"unsigned","value":"2"}},{"kind":"unsigned","value":"1"}]}}]}
+
+ ❯ src/test/assembledPerformanceExpectation.test.ts (5 tests | 1 failed | 4 skipped) 25242ms
+   × positive: same latest success, different learned expectation and actual disclosure 25241ms
+     → expected [ 3, 3, 3, 2 ] to deeply equal [ 3, 3, 3, 3 ]
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledPerformanceExpectation.test.ts > positive: same latest success, different learned expectation and actual disclosure
+AssertionError: expected [ 3, 3, 3, 2 ] to deeply equal [ 3, 3, 3, 3 ]
+
+- Expected
++ Received
+
+  Array [
+    3,
+    3,
+    3,
+-   3,
++   2,
+  ]
+
+ ❯ automatic src/test/assembledPerformanceExpectation.test.ts:36:436
+
+ ❯ src/test/assembledPerformanceExpectation.test.ts:39:449
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 4 skipped (5)
+   Start at  17:03:45
+   Duration  35.56s (transform 1.69s, setup 0ms, collect 9.91s, tests 25.24s, environment 0ms, prepare 125ms)
+
+
+M29_CHECK unchanged-fixture-diagnosis exit=1 seconds=36.09
+
+=== positive-with-declared-urgency-repair ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledPerformanceExpectation.test.ts > positive: same latest success, different learned expectation and actual disclosure
+M29 decision diagnostic {"variants":[3,3,3,3],"actual":[false,false,true,true],"claims":[{"kind":"list","items":[]},{"kind":"list","items":[{"kind":"rational","numerator":"0","denominator":"1"}]},{"kind":"list","items":[{"kind":"rational","numerator":"0","denominator":"1"}]},{"kind":"list","items":[{"kind":"rational","numerator":"1","denominator":"8"}]}],"expectation":{"kind":"list","items":[{"kind":"rational","numerator":"15","denominator":"64"}]}}
+
+ ❯ src/test/assembledPerformanceExpectation.test.ts (5 tests | 1 failed | 4 skipped) 30201ms
+   × positive: same latest success, different learned expectation and actual disclosure 30200ms
+     → expected [ { kind: 'record', …(2) }, …(2) ] to deeply equal [ { kind: 'record', …(2) } ]
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledPerformanceExpectation.test.ts > positive: same latest success, different learned expectation and actual disclosure
+AssertionError: expected [ { kind: 'record', …(2) }, …(2) ] to deeply equal [ { kind: 'record', …(2) } ]
+
+- Expected
++ Received
+
+  Array [
+    Object {
+      "fields": Map {
+        1n => Object {
+          "kind": "unsigned",
+-         "value": 1000n,
++         "value": 996n,
+        },
+        2n => Object {
+          "kind": "unsigned",
+-         "value": 4n,
++         "value": 2n,
+        },
+        3n => Object {
+          "items": Array [
+            Object {
++             "fields": Map {
++               1n => Object {
+                  "fields": Map {
+                    1n => Object {
++                     "kind": "typedIdentifier",
++                     "namespaceId": 1002n,
++                     "payload": Object {
++                       "kind": "typedIdentifier",
++                       "namespaceId": 1037n,
++                       "payload": Object {
++                         "kind": "typedIdentifier",
++                         "namespaceId": 1038n,
++                         "payload": Object {
++                           "kind": "text",
++                           "value": "character/bridge-subject",
++                         },
++                       },
++                     },
++                   },
++                   2n => Object {
++                     "kind": "typedIdentifier",
++                     "namespaceId": 1002n,
++                     "payload": Object {
++                       "kind": "typedIdentifier",
++                       "namespaceId": 1037n,
++                       "payload": Object {
++                         "kind": "typedIdentifier",
++                         "namespaceId": 1038n,
++                         "payload": Object {
++                           "kind": "text",
++                           "value": "content/task-a",
++                         },
++                       },
++                     },
++                   },
++                 },
++                 "kind": "record",
++                 "schema": Object {
++                   "fields": Array [
++                     Object {
++                       "id": 1n,
++                       "name": "CharacterId",
++                       "required": true,
++                     },
++                     Object {
++                       "id": 2n,
++                       "name": "TaskReferent",
++                       "required": true,
++                     },
++                   ],
++                   "name": "TaskCommitmentKey",
++                   "schemaVersion": 1n,
++                   "typeId": 371n,
++                 },
++               },
++             },
++             "kind": "record",
++             "schema": Object {
++               "fields": Array [
++                 Object {
++                   "id": 1n,
++                   "name": "CanonicalMapKey",
++                   "required": true,
++                 },
++               ],
++               "name": "CanonicalMapKeySelector",
++               "schemaVersion": 1n,
++               "typeId": 142n,
++             },
++           },
++         ],
++         "kind": "list",
++       },
++     },
++     "kind": "record",
++     "schema": Object {
++       "fields": Array [
++         Object {
++           "id": 1n,
++           "name": "RootStateTypeId",
++           "required": true,
++         },
++         Object {
++           "id": 2n,
++           "name": "FieldId",
++           "required": true,
++         },
++         Object {
++           "id": 3n,
++           "name": "Selectors",
++           "required": true,
++         },
++       ],
++       "name": "StatePath",
++       "schemaVersion": 1n,
++       "typeId": 140n,
++     },
++   },
++   Object {
++     "fields": Map {
++       1n => Object {
++         "kind": "unsigned",
++         "value": 996n,
++       },
++       2n => Object {
++         "kind": "unsigned",
++         "value": 2n,
++       },
++       3n => Object {
+          "items": Array [
+            Object {
+              "fields": Map {
+                1n => Object {
++                 "fields": Map {
++                   1n => Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1002n,
+                      "payload": Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1037n,
+                        "payload": Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1038n,
+                          "payload": Object {
+                            "kind": "text",
+                            "value": "character/bridge-subject",
+                          },
+                        },
+                      },
+                    },
+                    2n => Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1002n,
+                      "payload": Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1037n,
+                        "payload": Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1038n,
+                          "payload": Object {
+                            "kind": "text",
+-                               "value": "content/task-a",
++                           "value": "content/task-b",
+                          },
+                        },
+                      },
+                    },
+                  },
+                  "kind": "record",
+                  "schema": Object {
+                    "fields": Array [
+                      Object {
+                        "id": 1n,
+                        "name": "CharacterId",
+                        "required": true,
+                      },
+                      Object {
+                        "id": 2n,
+                        "name": "TaskReferent",
+                        "required": true,
+                      },
+                    ],
+                    "name": "TaskCommitmentKey",
+                    "schemaVersion": 1n,
+                    "typeId": 371n,
++                 },
+                },
+              },
++             "kind": "record",
++             "schema": Object {
++               "fields": Array [
+                  Object {
++                   "id": 1n,
++                   "name": "CanonicalMapKey",
++                   "required": true,
++                 },
++               ],
++               "name": "CanonicalMapKeySelector",
++               "schemaVersion": 1n,
++               "typeId": 142n,
++             },
++           },
++         ],
++         "kind": "list",
++       },
++     },
++     "kind": "record",
++     "schema": Object {
++       "fields": Array [
++         Object {
++           "id": 1n,
++           "name": "RootStateTypeId",
++           "required": true,
++         },
++         Object {
++           "id": 2n,
++           "name": "FieldId",
++           "required": true,
++         },
++         Object {
++           "id": 3n,
++           "name": "Selectors",
++           "required": true,
++         },
++       ],
++       "name": "StatePath",
++       "schemaVersion": 1n,
++       "typeId": 140n,
++     },
++   },
++   Object {
++     "fields": Map {
++       1n => Object {
+          "kind": "unsigned",
+-                     "value": 0n,
++         "value": 996n,
++       },
++       2n => Object {
++         "kind": "unsigned",
++         "value": 2n,
++       },
++       3n => Object {
++         "items": Array [
++           Object {
++             "fields": Map {
++               1n => Object {
++                 "fields": Map {
++                   1n => Object {
++                     "kind": "typedIdentifier",
++                     "namespaceId": 1002n,
++                     "payload": Object {
++                       "kind": "typedIdentifier",
++                       "namespaceId": 1037n,
++                       "payload": Object {
++                         "kind": "typedIdentifier",
++                         "namespaceId": 1038n,
++                         "payload": Object {
++                           "kind": "text",
++                           "value": "character/bridge-subject",
++                         },
++                       },
++                     },
++                   },
++                   2n => Object {
++                     "kind": "typedIdentifier",
++                     "namespaceId": 1002n,
++                     "payload": Object {
++                       "kind": "typedIdentifier",
++                       "namespaceId": 1037n,
++                       "payload": Object {
++                         "kind": "typedIdentifier",
++                         "namespaceId": 1038n,
++                         "payload": Object {
++                           "kind": "text",
++                           "value": "content/configurable-garden",
++                         },
++                       },
++                     },
++                   },
++                 },
++                 "kind": "record",
++                 "schema": Object {
++                   "fields": Array [
++                     Object {
++                       "id": 1n,
++                       "name": "CharacterId",
++                       "required": true,
++                     },
++                     Object {
++                       "id": 2n,
++                       "name": "TaskReferent",
++                       "required": true,
+                      },
+                    ],
+-                 "kind": "list",
++                   "name": "TaskCommitmentKey",
++                   "schemaVersion": 1n,
++                   "typeId": 371n,
++                 },
+                },
+              },
+              "kind": "record",
+              "schema": Object {
+                "fields": Array [
+                  Object {
+                    "id": 1n,
+                    "name": "CanonicalMapKey",
+                    "required": true,
+                  },
+                ],
+                "name": "CanonicalMapKeySelector",
+                "schemaVersion": 1n,
+                "typeId": 142n,
+              },
+            },
+          ],
+          "kind": "list",
+        },
+      },
+      "kind": "record",
+      "schema": Object {
+        "fields": Array [
+          Object {
+            "id": 1n,
+            "name": "RootStateTypeId",
+            "required": true,
+          },
+          Object {
+            "id": 2n,
+            "name": "FieldId",
+            "required": true,
+          },
+          Object {
+            "id": 3n,
+            "name": "Selectors",
+            "required": true,
+          },
+        ],
+        "name": "StatePath",
+        "schemaVersion": 1n,
+        "typeId": 140n,
+      },
+    },
+  ]
+
+ ❯ src/test/assembledPerformanceExpectation.test.ts:42:69
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 4 skipped (5)
+   Start at  17:06:02
+   Duration  40.46s (transform 1.68s, setup 0ms, collect 9.85s, tests 30.20s, environment 0ms, prepare 125ms)
+
+
+M29_CHECK positive-with-declared-urgency-repair exit=1 seconds=40.99
+
+=== positive-correct-expression-trace ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledPerformanceExpectation.test.ts > positive: same latest success, different learned expectation and actual disclosure
+M29 decision diagnostic {"variants":[3,3,3,3],"actual":[false,false,true,true],"claims":[{"kind":"list","items":[]},{"kind":"list","items":[{"kind":"rational","numerator":"0","denominator":"1"}]},{"kind":"list","items":[{"kind":"rational","numerator":"0","denominator":"1"}]},{"kind":"list","items":[{"kind":"rational","numerator":"1","denominator":"8"}]}],"expectation":{"kind":"list","items":[{"kind":"rational","numerator":"15","denominator":"64"}]}}
+M29 witness {"firstReport":false,"actual":[false,false,true,true],"at9":"1/8","final":"15/64","supports":3,"draws":0,"terminal":10}
+
+stdout | src/test/assembledPerformanceExpectation.test.ts > positive: same latest success, different learned expectation and actual disclosure
+M29 decision diagnostic {"variants":[3,3,3,3],"actual":[false,false,true,true],"claims":[{"kind":"list","items":[]},{"kind":"list","items":[{"kind":"rational","numerator":"1","denominator":"1"}]},{"kind":"list","items":[{"kind":"rational","numerator":"1","denominator":"1"}]},{"kind":"list","items":[{"kind":"rational","numerator":"1","denominator":"1"}]}],"expectation":{"kind":"list","items":[{"kind":"rational","numerator":"1","denominator":"1"}]}}
+M29 witness {"firstReport":true,"actual":[false,false,true,true],"at9":"1","final":"1","supports":3,"draws":0,"terminal":10}
+
+ ✓ src/test/assembledPerformanceExpectation.test.ts (5 tests | 4 skipped) 55875ms
+   ✓ positive: same latest success, different learned expectation and actual disclosure 55874ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 4 skipped (5)
+   Start at  17:07:14
+   Duration  66.26s (transform 1.69s, setup 0ms, collect 9.97s, tests 55.87s, environment 0ms, prepare 132ms)
+
+
+M29_CHECK positive-correct-expression-trace exit=0 seconds=66.77
+
+=== evidence-controls ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledPerformanceExpectation.test.ts > controls: missing evidence, engagement, hidden practice and recipient permission
+M29 unknown/zero/no-engagement/hidden-practice/route/delivery/access PASS
+
+ ✓ src/test/assembledPerformanceExpectation.test.ts (5 tests | 4 skipped) 137823ms
+   ✓ controls: missing evidence, engagement, hidden practice and recipient permission 137822ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 4 skipped (5)
+   Start at  17:08:33
+   Duration  148.18s (transform 1.67s, setup 0ms, collect 9.92s, tests 137.82s, environment 0ms, prepare 125ms)
+
+
+M29_CHECK evidence-controls exit=0 seconds=148.69
+
+=== original-development-and-skill-controls ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledPerformanceExpectation.test.ts > math: approved Development filter and preserved alternatives
+M29 Development all five phases/contradictions; Step/disabled/mean/latest distinctions PASS
+
+ ✓ src/test/assembledPerformanceExpectation.test.ts (5 tests | 4 skipped) 11ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 4 skipped (5)
+   Start at  17:11:32
+   Duration  10.28s (transform 1.69s, setup 0ms, collect 9.88s, tests 11ms, environment 0ms, prepare 123ms)
+
+
+M29_CHECK original-development-and-skill-controls exit=0 seconds=10.79
+
+=== repeat-and-restores ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledPerformanceExpectation.test.ts > persistence: repeat and restores3/7 preserve every later settled instant
+M29 exact repeat/restores3/7 whole-tail PASS
+
+ ✓ src/test/assembledPerformanceExpectation.test.ts (5 tests | 4 skipped) 157328ms
+   ✓ persistence: repeat and restores3/7 preserve every later settled instant 157327ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 4 skipped (5)
+   Start at  17:11:51
+   Duration  167.65s (transform 1.69s, setup 0ms, collect 9.84s, tests 157.33s, environment 0ms, prepare 128ms)
+
+
+M29_CHECK repeat-and-restores exit=0 seconds=168.16
+
+=== admission-and-rollback ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledPerformanceExpectation.test.ts (5 tests | 1 failed | 4 skipped) 54179ms
+   × admission: support integrity, one writer, typed topics and late rollback 54179ms
+     → expected 50 to be less than or equal to 49
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledPerformanceExpectation.test.ts > admission: support integrity, one writer, typed topics and late rollback
+AssertionError: expected 50 to be less than or equal to 49
+ ❯ src/test/assembledPerformanceExpectation.test.ts:77:587
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 4 skipped (5)
+   Start at  17:14:45
+   Duration  64.60s (transform 1.71s, setup 0ms, collect 10.01s, tests 54.18s, environment 0ms, prepare 128ms)
+
+
+M29_CHECK admission-and-rollback exit=1 seconds=65.12
+
+=== admission-corrected-fault-placement ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledPerformanceExpectation.test.ts > admission: support integrity, one writer, typed topics and late rollback
+M29 late9 rollback events=51 cap=50
+
+ ✓ src/test/assembledPerformanceExpectation.test.ts (5 tests | 4 skipped) 75483ms
+   ✓ admission: support integrity, one writer, typed topics and late rollback 75482ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 4 skipped (5)
+   Start at  17:16:11
+   Duration  85.93s (transform 1.69s, setup 0ms, collect 10.03s, tests 75.48s, environment 0ms, prepare 123ms)
+
+
+M29_CHECK admission-corrected-fault-placement exit=0 seconds=86.44
+
+=== unchanged-M28-regressions ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledOutcomeDisclosure.test.ts > positive: prior observed result reaches a recipient independently of current physical success
+M28 witness {"report":false,"actual":[false,false,true],"claims":["unknown",false,false],"deliveredAt":7,"recipientB":"absent","draws":0,"terminal":10}
+
+stdout | src/test/assembledOutcomeDisclosure.test.ts > positive: prior observed result reaches a recipient independently of current physical success
+M28 witness {"report":true,"actual":[false,false,true],"claims":["unknown",true,true],"deliveredAt":7,"recipientB":"absent","draws":0,"terminal":10}
+
+stdout | src/test/assembledOutcomeDisclosure.test.ts > privacy: missing and misleading feedback, route isolation, hidden practice and delivery gates
+M28 hidden physical/unknown/other-route/current-feedback/delivery/access PASS
+
+ ✓ src/test/assembledOutcomeDisclosure.test.ts (4 tests | 1 skipped) 200528ms
+   ✓ positive: prior observed result reaches a recipient independently of current physical success 47620ms
+   ✓ privacy: missing and misleading feedback, route isolation, hidden practice and delivery gates 101689ms
+   ✓ admission: topics, historical versions, owners and late transactional rollback 51219ms
+stdout | src/test/assembledOutcomeDisclosure.test.ts > admission: topics, historical versions, owners and late transactional rollback
+M28 late7 rollback events=58 cap=57
+
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 1 skipped (4)
+   Start at  17:18:44
+   Duration  207.27s (transform 1.69s, setup 0ms, collect 6.33s, tests 200.53s, environment 0ms, prepare 122ms)
+
+
+M29_CHECK unchanged-M28-regressions exit=0 seconds=207.78
+
+=== unchanged-M27-procedures ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledProcedures.test.ts > M27 independent procedures > positive: practice is procedure-specific and actual reports follow reciprocal execution
+M27 reciprocal {"train":"A","competence":["060001","060001","060202"],"success":[false,false,true],"reports":6,"terminal":10,"draws":0}
+
+stdout | src/test/assembledProcedures.test.ts > M27 independent procedures > positive: practice is procedure-specific and actual reports follow reciprocal execution
+M27 reciprocal {"train":"B","competence":["060001","060202","060001"],"success":[false,true,false],"reports":6,"terminal":10,"draws":0}
+
+ ✓ src/test/assembledProcedures.test.ts (4 tests | 3 skipped) 35120ms
+   ✓ M27 independent procedures > positive: practice is procedure-specific and actual reports follow reciprocal execution 35119ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 3 skipped (4)
+   Start at  17:22:17
+   Duration  38.08s (transform 1.67s, setup 0ms, collect 2.55s, tests 35.12s, environment 0ms, prepare 121ms)
+
+
+M29_CHECK unchanged-M27-procedures exit=0 seconds=38.58
+
+=== final-types ===
+
+M29_CHECK final-types exit=0 seconds=14.87
+
+=== reference-boundary ===
+Reference boundary check passed.
+
+M29_CHECK reference-boundary exit=0 seconds=2.21
+
+=== research ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M29_CHECK research exit=0 seconds=3.39
+
+M29 final guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and M22/M23/M24/M25 tests unchanged; document/evidence caps. seconds=8.94
+
+M29 validation summary: 17 timed commands, 5 retained failures/diagnostics; timed total including final guards=990.18s; max command=207.78s. Nine selected test groups pass. Guard also checked unchanged M26/M27/M28 test sources.

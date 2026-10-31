@@ -1,0 +1,78 @@
+import {it,expect} from 'vitest';
+import {list,text,unsigned,signed,rational as q,typedIdentifier,type CanonicalValue} from '../substrate/canonicalEncoding';
+import {AuthoritativeState,restoreAuthoritativeState,statePathValue} from '../substrate/state';
+import {ExactRational as Q} from '../substrate/exactMath';
+import {prepareCharacterModel,createCharacterRun,restoreCharacterRun} from '../assembled/character';
+import {compileCharacterModel,OUTCOME_DISCLOSURE_RULES,OUTCOME_DISCLOSURE_REGISTRY} from '../assembled/model';
+import {compileCharacterState} from '../assembled/state';
+import {EXPECTATION,EXPECTATION_TOPIC,expectationPath,expectationValue,appendExpectation,updateExpectation} from '../assembled/performanceExpectation';
+import {FROZEN,SIGNAL,PROBE,knowledgePath,history,withCommunicationState,KNOWLEDGE_OWNER as RECEIVER_OWNER} from '../assembled/communication';
+import {outcomePath,PERFORMANCE,PERFORMANCE_OBS} from '../assembled/performance';
+import {KNOWLEDGE_OWNER} from '../assembled/strategy';
+import {SKILL_ACTUAL,SKILL_OWNER,phasePath,skillPath,skillValue,sid} from '../assembled/skill';
+import {BODY_DELIVERY} from '../assembled/body';
+import {createDevelopmentRun,type DevelopmentFrame} from '../campaign3/developmentComponent';
+import {learnSkill} from '../campaign3/skillMath';
+import {DEFAULT_SETTINGS} from '../campaign3/skillModel';
+import {skillRecord} from '../campaign3/skillCodecs';
+import {dataRecord as rec,dataField as f,dataUnsigned as uint} from '../campaign2/canonicalData';
+import {outputs} from './fixtures/assembledInteraction';
+import {workLimit} from './fixtures/assembledCharacter';
+import {C} from './fixtures/campaign2Cognitive';
+import {PA} from './fixtures/assembledProcedures';
+import {topic as outcomeTopic,outcomeSource} from './fixtures/assembledOutcomeDisclosure';
+import {expectationSource,expectationData,expectationTopic,decode,items,key,enc} from './fixtures/assembledPerformanceExpectation';
+type Run=Awaited<ReturnType<typeof createCharacterRun>>;
+const state=(r:Run)=>restoreAuthoritativeState(decode(r.snapshot().state));
+const reports=(r:Run,label:string)=>items(decode(r.snapshot().outputs),'list').filter(v=>typeof v!=='boolean'&&v.kind==='list'&&v.items.length&&key(v.items[0])===key(text(label))).map(v=>items(v,'list'));
+const topic=items(expectationTopic(),'list'),path=expectationPath(topic[1],uint(topic[2])),otherPath=expectationPath(topic[1],1n-uint(topic[2]));
+const recipients=items(items(items(decode(expectationSource().registry),'list')[18],'list')[2],'list');
+const received=(r:Run,i=0)=>state(r).read(knowledgePath(recipients[i])).value;
+const belief=(r:Run,p=path)=>expectationValue(state(r).read(p).value);
+const mean=(r:Run,p=path)=>{const b=belief(r,p);return b.mean===undefined?list([]):list([q(b.mean.numerator,b.mean.denominator)]);};
+const at=(v:CanonicalValue)=>{if(typeof v==='boolean'||v.kind!=='signed')throw Error('time');return v.value;};
+const fraction=(s:string)=>{const [n,d]=s.split('/').map(BigInt);return Q.of(n,d);};
+async function through(r:Run,t:bigint){let n=0;while(r.snapshot().clock<t){expect(++n).toBeLessThanOrEqual(32);expect(await r.settleNextInstant()).toBe(true);}expect(r.snapshot().clock).toBe(t);}
+async function finish(r:Run){let n=0;while(await r.settleNextInstant())expect(++n).toBeLessThanOrEqual(32);expect(r.snapshot().clock).toBe(10n);expect(r.diagnostic()).toBeUndefined();}
+const exact=(a:Run,b:Run)=>{expect(a.snapshot()).toEqual(b.snapshot());expect(a.save()).toEqual(b.save());};
+const claims=(r:Run)=>reports(r,FROZEN).map(x=>x[4]);
+function automatic(r:Run){const ds=outputs(r.snapshot().outputs,409n);expect(ds).toHaveLength(4);const variants=ds.map(x=>Number(uint(f(rec(f(x,4n),419n),1n))));console.info('M29 decision diagnostic '+JSON.stringify({variants,actual:reports(r,SKILL_ACTUAL).map(x=>x[7]),claims:claims(r),expectation:mean(r)},(_,v)=>typeof v==='bigint'?v.toString():v));expect(variants).toEqual([3,3,3,3]);for(const x of ds){const c=rec(f(rec(f(x,4n),419n),2n),420n);expect(uint(f(c,8n))).toBe(1n);expect(f(c,3n)).toEqual(q(1,1));expect(f(c,9n)).toEqual(list([]));for(const p of items(f(c,2n),'list'))expect(f(rec(p,421n),2n)).toEqual(q(1,1));}expect(outputs(r.snapshot().trace,160n).flatMap(t=>items(f(t,14n),'list'))).toEqual([]);}
+it('positive: same latest success, different learned expectation and actual disclosure',async()=>{
+ const m=await prepareCharacterModel(expectationSource()),runs:Run[]=[];
+ for(const success of [false,true]){const r=await createCharacterRun(m,expectationData(success));await through(r,3n);expect(mean(r)).toEqual(list([q(success?1:0,1)]));expect(belief(r).supports).toHaveLength(1);const first=belief(r).supports[0];await through(r,7n);expect(mean(r)).toEqual(list([q(success?1:1,success?1:8)]));expect(belief(r).supports[0]).toEqual(first);expect(mean(r,otherPath)).toEqual(list([q(0,1)]));await finish(r);runs.push(r);automatic(r);
+  expect(reports(r,SKILL_ACTUAL).map(x=>x[7])).toEqual([false,false,true,true]);expect(claims(r)).toEqual([list([]),list([q(success?1:0,1)]),list([q(success?1:0,1)]),list([q(1,success?1:8)])]);expect(reports(r,SIGNAL).map(x=>x[5])).toEqual([false,false,true,true]);expect(history(received(r)).map(o=>items(o,'list')[3])).toEqual([list([q(success?1:0,1)]),list([q(1,success?1:8)])]);expect(received(r,1)).toBeUndefined();expect(mean(r)).toEqual(list([success?q(1,1):q(15,64)]));expect(belief(r).supports).toHaveLength(3);
+  const ts=outputs(r.snapshot().trace,160n).filter(t=>key(f(t,6n))===key(text('assembled-character-performance-expectation/0.1-candidate'))),expression=ts.find(t=>key(f(t,5n))===key(sid(1036,'seam/assembled-communication'))&&uint(f(rec(f(t,4n),130n),3n))===90n&&at(f(rec(f(t,4n),130n),2n))===9n)!;
+  expect(items(f(expression,11n),'list').map(x=>f(rec(x,147n),2n))).toEqual([statePathValue(path)]);expect(f(expression,9n)).toEqual(list(belief(r).supports.slice(0,2).map(v=>items(items(v,'list')[0],'list')[1])));
+  const learning=ts.filter(t=>uint(f(rec(f(t,4n),130n),3n))===140n&&items(f(t,11n),'list').some(x=>key(f(rec(x,147n),2n))===key(statePathValue(path))));expect(learning).toHaveLength(3);for(const t of learning)expect(items(f(t,11n),'list').some(x=>key(f(rec(x,147n),2n))===key(statePathValue(phasePath(C))))).toBe(true);
+  const probe=reports(r,PROBE).find(x=>at(x[1])===9n&&key(x[2])===key(recipients[0]))!;expect(probe[4]).toEqual(list([q(success?1:0,1)]));console.info('M29 witness '+JSON.stringify({firstReport:success,actual:[false,false,true,true],at9:success?'1':'1/8',final:success?'1':'15/64',supports:3,draws:0,terminal:10}));
+ }
+ for(const t of [409n,425n,426n])expect(outputs(runs[0].snapshot().outputs,t)).toEqual(outputs(runs[1].snapshot().outputs,t));
+},180000);
+it('controls: missing evidence, engagement, hidden practice and recipient permission',async()=>{
+ const m=await prepareCharacterModel(expectationSource()),run=async(o:Parameters<typeof expectationData>[1],success=false,model=m)=>{const r=await createCharacterRun(model,expectationData(success,o));await finish(r);return r;};
+ const hidden=await run({visible:false}),noPractice=await run({visible:false,practice:false});for(const r of [hidden,noPractice]){expect(mean(r)).toEqual(list([]));expect(received(r)).toBeUndefined();expect(claims(r)).toEqual([list([]),list([]),list([]),list([])]);}expect(skillValue(state(hidden).read(skillPath(C,PA)).value,PA).count).toBe(1n);expect(skillValue(state(noPractice).read(skillPath(C,PA)).value,PA).count).toBe(0n);for(const t of [381n,384n,398n,403n,409n,425n,426n])expect(outputs(hidden.snapshot().outputs,t)).toEqual(outputs(noPractice.snapshot().outputs,t));
+ const blocked=await createCharacterRun(m,expectationData(true,{permitted:false}));await through(blocked,3n);expect(mean(blocked)).toEqual(list([]));const rows=reports(blocked,PERFORMANCE_OBS);expect(rows.length).toBeGreaterThan(0);expect(rows.every(x=>x[6]===true&&x[7]===false)).toBe(true);expect(state(blocked).read(outcomePath(topic[1])).presence).toBe(true);
+ const missing=await run({missingA:true});expect(claims(missing)).toEqual([list([]),list([]),list([]),list([q(1,1)])]);expect(belief(missing).supports).toHaveLength(2);
+ for(const o of [{delivery:false},{access:false}]){const r=await run(o);expect(mean(r)).toEqual(list([q(15,64)]));expect(received(r)).toBeUndefined();expect(received(r,1)).toBeUndefined();}
+ const other=await run({},false,await prepareCharacterModel(expectationSource(expectationTopic(true))));expect(claims(other)).toEqual([list([]),list([]),list([q(0,1)]),list([q(0,1)])]);console.info('M29 unknown/zero/no-engagement/hidden-practice/route/delivery/access PASS');
+},420000);
+it('math: approved Development filter and preserved alternatives',async()=>{
+ for(const phase of [0,1,2,3,4]){const reports=[false,true,false,true],frames:DevelopmentFrame[]=reports.map(report=>({phase,exercise:true,practice:false,permitted:true,difficulty:4,report,choice:'None',significance:0,pressure:0,setting:'Work',seed:0})),control=createDevelopmentRun({curve:'Ramp',learning:true,formation:false,constitution:0},frames);while(await control.step()){}let current:Q|undefined;for(const [i,row]of control.rows().entries()){const update=updateExpectation(current,reports[i],phase);expect(update.gain).toEqual(fraction(row.learningGain));expect(update.mean).toEqual(fraction(row.beliefAfter!));current=update.mean;}}
+ const frames:DevelopmentFrame[]=[false,true].map(report=>({phase:1,exercise:true,practice:false,permitted:true,difficulty:4,report,choice:'None',significance:0,pressure:0,setting:'Work',seed:0}));for(const [curve,learning,want]of [['Ramp',true,'13/32'],['Step',true,'1/2'],['Ramp',false,'1/8']] as const){const r=createDevelopmentRun({curve,learning,formation:false,constitution:0},frames);while(await r.step()){}expect(r.rows().at(-1)!.beliefAfter).toBe(want);}
+ for(const [beliefLaw,want]of [[1,q(1,2)],[2,q(1,1)]] as const){let prior:CanonicalValue|undefined;for(const [i,report]of [false,true].entries())prior=learnSkill({...DEFAULT_SETTINGS,beliefLaw},prior,skillRecord(797,[typedIdentifier(1153,unsigned(i+1)),signed(i+1),true,report])).next;expect(f(rec(prior!,786n),1n)).toEqual(want);}
+ expect(updateExpectation(Q.of(0n),true,4).mean).toEqual(Q.of(1n,8n));expect(updateExpectation(Q.of(0n),true,4).mean).not.toEqual(Q.of(1n,2n));expect(updateExpectation(Q.of(0n),true,4).mean).not.toEqual(Q.of(1n));console.info('M29 Development all five phases/contradictions; Step/disabled/mean/latest distinctions PASS');
+},120000);
+it('persistence: repeat and restores3/7 preserve every later settled instant',async()=>{
+ const s=expectationSource(),d=expectationData(),m=await prepareCharacterModel(s),a=await createCharacterRun(m,d),b=await createCharacterRun(m,d);await through(a,3n);await through(b,3n);exact(a,b);const c=await restoreCharacterRun(s,{initialState:d.initialState,orderedInputs:d.orderedInputs,save:a.save()});exact(a,c);while(a.snapshot().clock<7n){expect(await a.settleNextInstant()).toBe(true);for(const r of [b,c]){expect(await r.settleNextInstant()).toBe(true);exact(a,r);}}const e=await restoreCharacterRun(s,{initialState:d.initialState,orderedInputs:d.orderedInputs,save:a.save()});exact(a,e);while(await a.settleNextInstant())for(const r of [b,c,e]){expect(await r.settleNextInstant()).toBe(true);exact(a,r);}expect(mean(a)).toEqual(list([q(15,64)]));console.info('M29 exact repeat/restores3/7 whole-tail PASS');
+},300000);
+it('admission: support integrity, one writer, typed topics and late rollback',async()=>{
+ const s=expectationSource(),d=expectationData(),m=await prepareCharacterModel(s),compiled=await compileCharacterModel(s),component=await compileCharacterState(compiled),r=await createCharacterRun(m,d);await through(r,3n);const initial=component.initialState(d.initialState),value=state(r).read(path).value!,journalPath=outcomePath(topic[1]),journal=state(r).read(journalPath).value!;
+ await expect(createCharacterRun(m,{...d,initialState:r.snapshot().state})).rejects.toThrow('initial');expect(()=>component.stateModel.validatePath(expectationPath(topic[1],2n))).toThrow('foreign');
+ const patch={operations:[{kind:'set' as const,path,expected:{presence:false as const},newValue:value},{kind:'set' as const,path:journalPath,expected:{presence:false as const},newValue:journal}]};expect(()=>component.stateModel.applyPatch(initial,patch,SKILL_OWNER)).toThrow();expect(()=>component.stateModel.applyPatch(initial,patch,KNOWLEDGE_OWNER)).not.toThrow();
+ const parts=items(value,'list'),supports=items(parts[2],'list'),entry=items(supports[0],'list');for(const malformed of [list([parts[0],q(1,1),parts[2]]),list([parts[0],parts[1],list([list([entry[0],entry[1],q(1,1)])])]),list([parts[0],parts[1],list([supports[0],supports[0]])])])expect(()=>expectationValue(malformed)).toThrow();expect(()=>component.stateModel.validateState(new AuthoritativeState([...initial.entries(),{path,value}]))).toThrow('support mismatch');
+ const other=expectationPath(topic[1],1n-uint(topic[2]));expect(()=>component.stateModel.validateState(new AuthoritativeState([...state(r).entries().filter(e=>key(statePathValue(e.path))!==key(statePathValue(path))),{path:other,value}]))).toThrow('support mismatch');
+ const slots=items(decode(s.registry),'list');await expect(prepareCharacterModel({...s,rulesVersion:OUTCOME_DISCLOSURE_RULES,registrySchemaVersion:OUTCOME_DISCLOSURE_REGISTRY})).rejects.toThrow('declaration');await expect(prepareCharacterModel({...outcomeSource(),registry:enc(list(slots.map((v,i)=>i===15?list([text(PERFORMANCE)]):v)))})).rejects.toThrow('topic');
+ for(const t of [list([text(EXPECTATION_TOPIC),topic[1],unsigned(2)]),list([text(EXPECTATION_TOPIC),sid(1027,'foreign'),topic[2]])])await expect(prepareCharacterModel(expectationSource(t))).rejects.toThrow('topic');
+ const receiverPath=knowledgePath(recipients[0]),obs=list([typedIdentifier(1168,unsigned(9999)),recipients[0],signed(3),list([true]),expectationTopic()]);expect(()=>component.stateModel.applyPatch(initial,{operations:[{kind:'set',path:receiverPath,expected:{presence:false},newValue:list([obs])}]},RECEIVER_OWNER)).toThrow('sample');const oldComponent=await compileCharacterState(await compileCharacterModel(outcomeSource())),numeric=list([typedIdentifier(1168,unsigned(9999)),recipients[0],signed(3),list([q(1,8)]),outcomeTopic()]);expect(()=>oldComponent.stateModel.applyPatch(oldComponent.initialState(d.initialState),{operations:[{kind:'set',path:receiverPath,expected:{presence:false},newValue:list([numeric])}]},RECEIVER_OWNER)).toThrow('sample');
+ const fault={...d,orderedInputs:enc(list([...items(decode(d.orderedInputs),'list'),...Array.from({length:9},()=>list([signed(9),unsigned(110),BODY_DELIVERY,list([C,q(0,1)]),list([])]))]))},oracle=await createCharacterRun(m,fault);await through(oracle,9n);const counts=new Map<bigint,Set<string>>();for(const t of outputs(oracle.snapshot().trace,160n)){const e=rec(f(t,4n),130n),time=at(f(e,2n)),ids=counts.get(time)??new Set<string>();ids.add(key(f(e,1n)));counts.set(time,ids);}const count=counts.get(9n)!.size;expect(Math.max(...[...counts].filter(([t])=>t<9n).map(([,v])=>v.size))).toBeLessThanOrEqual(count-1);const failed=await createCharacterRun(await prepareCharacterModel(workLimit(s,BigInt(count-1))),fault);await through(failed,7n);const before=failed.snapshot();await expect(failed.settleNextInstant()).rejects.toThrow('work ceiling');expect({...failed.snapshot(),status:before.status}).toEqual(before);expect(history(received(failed))).toHaveLength(1);expect(mean(failed)).toEqual(list([q(1,8)]));console.info('M29 late9 rollback events='+count+' cap='+(count-1));
+},180000);
