@@ -34,3 +34,13 @@ that expectation separately from the latest result. M28 is complete.
   ordinary repairs authorized within scope/budget. Stop on gate failure or exhaustion;
   no retuning, scope shrinkage or implicit law change.
 - Full21 members/15 families/132 clauses remain open. Stop after M29.
+
+## Transparent fixture correction,2026-10-31
+The fixed positive reached mean1/8 at7 but at9 returned candidates/no reasons.
+The four-row opportunity extension omitted PRIORITY_DISPLAY: urgency is current,
+not retained (priorityExecution.begin clears it); absent U makes factored priority0.
+Under work-order ordinary-test repair authorization, add exactly the time7 priority
+input at9 to BOTH branches. No other input, seed, law, contrast or expected result
+changes. Retain the original failure. If this repair does not meet the existing
+positive gate, stop; no further evidence additions or alternate contrasts.
+The initial duplicate phase-read defect was repaired by reading common B0 phase once.

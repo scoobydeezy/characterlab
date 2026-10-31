@@ -74,3 +74,13 @@ BRIEF12.4/12.8/12.13/12.14. RO010/012/013/020 stay conditional; RO019 stays clos
 This discharges no corpus member/clause and creates no new Campaign3 verdict.
 Competence-sensitive choice, general uncertainty, natural feedback recognition and
 autonomous recipients remain open. Prior versions and historical sources unchanged.
+
+## Recorded fixture repair before rerun,2026-10-31
+The original four-row time9 extension omitted current urgency. The unchanged run
+returned resolution variant2 (candidates/no reasons); mean1/8 at7 was retained, but
+no fourth execution/disclosure occurred. This is an incomplete opportunity fixture,
+not evidence for changing a psychological law. Ordinary-test repair adds the exact
+PRIORITY_DISPLAY row from7 at9 in both branches. All payload values, the sole
+feedback3 contrast, seed0 and original expected results remain fixed. No body-sample
+addition or other contrast is authorized by this repair. If the positive still
+fails, stop. Original logs remain; no acceptance is inferred from the diagnosis.
