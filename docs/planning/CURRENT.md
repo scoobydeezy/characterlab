@@ -1,47 +1,39 @@
-# Current work — M33 observed outcomes to Values and appraisal
+# Current work — M33 complete
 
-The same character will retain a preference from permitted task outcomes and use
-it with its learned performance forecast in later appraisal.
+The character now retains a preference from permitted task outcomes and uses it
+with its learned performance forecast in later appraisal. Full assembly remains open.
 
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
-- Prior M32: ASSEMBLED_CHARACTER_M32_RESULT.md,2f05d6f7.
+- Result: [M33](ASSEMBLED_CHARACTER_M33_RESULT.md); prior M32 2f05d6f7.
 - Contract: ../formal/ASSEMBLED_CHARACTER_VALUES_CONTRACT.md; rules/registry0.34.
-- M2 M17/L7, Brief12.5/12.12/12.15. Adopted Accumulated and ValueRelative; engineering
-  defaults, no superiority verdict. Original Latest/Refold/NoConsolidation and
-  NoValueAppraisal controls retained. NeedOnly/ValuesOnly/Joint receiving stays open.
-- U1: existing permitted PERFORMANCE_OBS for one declared task -> separate Values
-  authority1516 at the existing performance common140 -> later appraisal50, reading
-  the existing1000/4 performance forecast. No hidden execution or phase input to learner.
-- Controlled category TaskOutcome names the declared task-outcome semantic channel;
-  explicit safe context supplies category linkage and prospective direction only.
-  True/false observed outcomes map+1/-1. No invented intermediate or receipt without
-  an actual observed task outcome. Neutral/missing outcomes remain original controls.
-- Retain original observation IDs/bytes and link status; reject duplicate conflicting
-  receipts. Unlinked is not neutral. Preference=sum/(n+1), exact, max8 originals.
-  Existing knowledge, identity, disposition, body and task owners remain distinct.
-- Fixed primary: M28 procedure/outcome fixture lifted to M32 source then0.34;
-  opportunities3/5/7, terminal10, seeds0..7, first positive display fixed. Change only
-  first category linkage. Later linkage identical; all actual choice/draws agree.
-  At3 both Values unknown; at5 identical forecast but linked preference1/2 versus0,
-  and corresponding distinct exact Value meaning. No choice-effect claim.
-- Checks: Accumulated versus original owner for all81 four-report +/-/0 histories,
-  missing/category/duplicate controls, original appraise endpoints and rational
-  forecast extension; hidden difficulty/withheld/category/direction boundaries;
-  repeat3/restore3 every remaining instant; owner/fold/append/S0/source negatives;
-  late3 atomic rollback. Unchanged M32 math/privacy and M29 outcome controls regressions.
-- Eleven production/test files: values, model, state, performance, performanceExecution,
-  runtime, execution, inputs, traceBinding, one fixture and one test. Register the
-  new sole authority in the existing composition, no new wrapper/runtime or scheduler.
-- Each check <=600s; total <=1800s including failures/repairs;20 evidence files/5MiB.
-  tsc/boundary/research,105 frozen blobs/history/retained tests, doc caps/staged size.
-  No full unchanged control suite/build/browser. Stop on pass.
-- Done: actual admitted outcomes produce exact retained Values; later appraisal
-  consumes prior Values and learned forecast, with original evidence preserved and
-  declared controls passing. Ordinary repairs authorized; no seed/acceptance tuning.
-- Pre-control correction: permission also gates engagement. Hold engagement fixed
-  and vary first difficulty0 versus1/2 for hidden success/failure; retain denied engagement
-  as a separate unknown-forecast control. Primary inputs/laws/acceptance unchanged.
-- Limits: one explicitly linked task category, not general category recognition,
-  moral importance, autonomous value adoption or the L7 motivational receiver.
-  RO010/020 remain conditional; RO019/021/022 remain closed. Final21/15/132 stays open.
+- Plan606213fe preceded code. Pre-control fixture correction77d894ae: permission
+  also gates engagement, so hidden success/failure varies difficulty at fixed
+  engagement/display. Denied engagement retained as a separate control.
+- Actual permitted performance report -> separate Values owner1516 at common140
+  -> prior Values plus learned1000/4 forecast at50. Existing state/scheduler/save;
+  no new runtime, wrapper, alternate pipeline or authored psychological intermediate.
+- Eight fixed first-link pairs pass, seeds0..7, terminal10. At3 both appraisals unknown;
+  at5 same forecast1, preference/meaning1/2 versus0. Choices remain identical and
+  automatic, with zero random draws: no random-choice or Value-to-action claim.
+- Original owner oracle324 prefixes and72 appraisal cases pass; retained laws,
+  missing/neutral, duplicates and fractional forecast comparison remain distinct.
+  Physical outcome with equal reports preserves whole Values/appraisal. Withheld
+  report prevents acquisition; context reversal preserves preference, reverses meaning.
+- Six new groups and unchanged M32 math/privacy plus M29 outcome controls pass.
+  Repeat3/restore3 match every remaining state/output/trace/save. Forged originals,
+  foreign owner/path/scope, rewritten history, invalid context/S0/capacity reject.
+  Late3 failure at67 of68 events publishes no Values or other learning.
+- Eleven production/test files; two evidence files. Validation and preservation
+  checks below15 minutes/30-minute cap; longest358s/600s. Stop verification on pass.
+  TypeScript, boundary, research,105 frozen blobs/history/retained tests, doc/evidence
+  limits and staged Git size pass. No unchanged full suite/build/browser.
+- LOCAL DISPOSITION: adopted Accumulated/ValueRelative, engineering defaults with
+  original controls retained. One controlled TaskOutcome category on a declared
+  task channel; no automatic Care inference, general taxonomy or moral-value claim.
+- Next connection: Values into the adopted L7 motivational receiver, before adding
+  further category/storage mechanics. Define shared source meaning and avoid counting
+  existing task/Need contributions twice; no substitute law or unearned action bonus.
+- RO010/020 retain their broader domains; RO019/021/022 stay closed. No new verdict
+  or obligation closure. Final21 members/15 families/132 clauses remain required.
+  UI and multi-character simulation remain outside the active work.
