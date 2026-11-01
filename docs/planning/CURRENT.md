@@ -1,4 +1,4 @@
-# Current work — M36 planned
+# Current work — M36 fixture amendment pending
 
 M35 connects an observed failed attempt and later diagnostics to causal appraisal.
 M36 will connect direct obstruction reports about actual past attempts to a later
@@ -47,3 +47,12 @@ route expectation and goal-relative appraisal in the same continuing character.
   Ordinary implementation bugs repaired within budget. No comparator retuning.
 - RO010/014/020 trust/correlation/natural grouping limits remain; RO019/021/022
   stay closed. No new verdict, reduction or obligation closure.
+
+- First connection failed: the unchanged M35 seed0 fixture retained only outcome3;
+  report about5 correctly stayed unbound. Fixed-seed diagnosis retained. Await
+  owner approval to report success at3, preserving this failed case as a control;
+  no replacement execution before approval. Independent checks continue.
+- Independent original416 comparisons, privacy, repeat/restore, late rollback and
+  admission/ownership checks pass. Result: [M36 checkpoint](ASSEMBLED_CHARACTER_M36_RESULT.md).
+- Unchanged M35 regressions, final TypeScript/boundary/research pass. Native
+  connection remains failed; dependent gates are unrun. No full milestone pass.
