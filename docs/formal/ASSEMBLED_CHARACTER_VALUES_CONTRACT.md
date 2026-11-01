@@ -87,14 +87,26 @@ Original owner oracle: all81 four-outcome histories over -1/0/+1, every prefix,
 Accumulated projection and Refold equivalence; explicit Latest/NoConsolidation,
 missing/unlinked, receipt repetition/conflict and opposite corrections preserved.
 Original ValueRelative/NoValueAppraisal endpoints plus fractional forecasts; context
-reversal preserves acquired Values. Hidden physical permission with positive display
+reversal preserves acquired Values. Hidden physical difficulty with positive display
 preserves the whole Value/forecast/appraisal path despite different actual execution.
 Withheld report produces no receipt; empty/unlinked/known neutral remain distinct.
 Exact repeat3 and restore3 through10; owner/path/source/fold/S0/append and late3
-rollback checks. Unchanged M32 math/privacy and M29 privacy guard prior behavior.
+rollback checks. Unchanged M32 math/privacy and M29 outcome controls guard prior behavior.
 
 Eleven production/test files;20 evidence files/5MiB;600s/command and1800s total,
 including failures and repairs. Stop on pass. 105 frozen control dependencies remain
 unchanged; no full-suite rerun without invalidation. RO010 inference/category limits
 and RO020 provenance/reduction limits remain; no retirement of distinctions, new
 Campaign3 verdict or closure. RO019/021/022 stay closed. Full21/15/132 remains open.
+
+## Pre-control fixture correction
+Source inspection before the privacy check found that the practice 'permitted'
+flag gates engagement as well as success. M29 correctly excludes unengaged reports
+from its forecast. It is therefore not an intervention that holds admitted evidence
+fixed. Preserve that negative control: positive Value evidence can coexist with an
+unknown performance forecast when engagement is denied. For the hidden-outcome
+contrast use first physical difficulty0 versus1/2 at unchanged engagement, positive
+display, inputs/seed0 and laws. Initial competence0 makes success versus failure
+exact without searching. Require the same whole Value state and appraisal reports.
+This corrects a fixture assumption; no production law, primary eight-pair inputs,
+or epistemic acceptance condition changes. Record this before executing controls.

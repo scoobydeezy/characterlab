@@ -27,9 +27,9 @@ it with its learned performance forecast in later appraisal.
   and corresponding distinct exact Value meaning. No choice-effect claim.
 - Checks: Accumulated versus original owner for all81 four-report +/-/0 histories,
   missing/category/duplicate controls, original appraise endpoints and rational
-  forecast extension; hidden physical/withheld/category/direction boundaries;
+  forecast extension; hidden difficulty/withheld/category/direction boundaries;
   repeat3/restore3 every remaining instant; owner/fold/append/S0/source negatives;
-  late3 atomic rollback. Unchanged M32 math/privacy and M29 privacy regressions.
+  late3 atomic rollback. Unchanged M32 math/privacy and M29 outcome controls regressions.
 - Eleven production/test files: values, model, state, performance, performanceExecution,
   runtime, execution, inputs, traceBinding, one fixture and one test. Register the
   new sole authority in the existing composition, no new wrapper/runtime or scheduler.
@@ -39,6 +39,9 @@ it with its learned performance forecast in later appraisal.
 - Done: actual admitted outcomes produce exact retained Values; later appraisal
   consumes prior Values and learned forecast, with original evidence preserved and
   declared controls passing. Ordinary repairs authorized; no seed/acceptance tuning.
+- Pre-control correction: permission also gates engagement. Hold engagement fixed
+  and vary first difficulty0 versus1/2 for hidden success/failure; retain denied engagement
+  as a separate unknown-forecast control. Primary inputs/laws/acceptance unchanged.
 - Limits: one explicitly linked task category, not general category recognition,
   moral importance, autonomous value adoption or the L7 motivational receiver.
   RO010/020 remain conditional; RO019/021/022 remain closed. Final21/15/132 stays open.
