@@ -18,8 +18,8 @@ assembly remains open. M33 baseline b69006fd; no production changes before this 
   original mathematical controls; no claim of assembled Need receiving completion.
 - One distinct Value ground per actual matching candidate/task route; no invented
   candidate, extra Value-appraisal die, cross-domain exchange rate or new state.
-- Planned9 production/test files: model,codecs,comparison,random,execution,
-  traceBinding,valueReceiving; test assembledValueReceiving and its fixture.
+- Planned11 production/test files: model,codecs,comparison,random,execution,
+  traceBinding,valueReceiving,arbitration,choice; test assembledValueReceiving and its fixture.
   Limit12; split before exceeding. Existing state/scheduler/owners unchanged.
 - Primary comparison: M33 first positive report linked/unlinked, seeds0..7. First
   opportunity3 forced A as before; later displays4/6 select each task's route0.
@@ -28,7 +28,7 @@ assembly remains open. M33 baseline b69006fd; no production changes before this 
   Value reason versus absence, unchanged goal nuclei, analytical probability shift,
   and at least one changed chosen action across the fixed eight pairs required.
 - Two setup runs seed0 through5 read identities only to predeclare coupling keys
-  for all decision opportunities, including new Value purpose and tie. Maps bind
+  through5, including new Value purpose and tie. Maps bind
   semantic time/purpose/actor/action/task, never output or a searched seed. Common
   actual draws must have equal effective keys, spans and results; report counts
   and Auto/Roll changes explicitly. A skipped Auto draw is not a shared draw.

@@ -77,6 +77,10 @@ rejections, repeat and checkpoint continuation and atomic late failure. Hidden
 physical success at fixed reports must preserve Value motivation. First Value
 consolidation at140 cannot affect current60/80. No earlier learned initial state.
 
-Nine planned production/test files (limit12);20 evidence files/5MiB;600 seconds per
+Eleven planned production/test files (limit12);20 evidence files/5MiB;600 seconds per
 command,1800 total including failures/repairs. RO010/020 limits preserved; no new
 Campaign3 verdict, reduction or obligation closure. Full21/15/132 remains open.
+
+Pre-runtime repair: original strict record readers admit version1 only. The two
+existing downstream receiving adapters (arbitration and choice) also need the
+versioned reader; plan11 files, still below12. No equation/source/input changes.
