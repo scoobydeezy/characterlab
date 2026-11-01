@@ -23,7 +23,7 @@ assembly remains open. M33 baseline b69006fd; no production changes before this 
   Limit12; split before exceeding. Existing state/scheduler/owners unchanged.
 - Primary comparison: M33 first positive report linked/unlinked, seeds0..7. First
   opportunity3 forced A as before; later displays4/6 select each task's route0.
-  Goal importance1/2 and urgency1 for every task, same in both histories; no person
+  Owner-amended goal importance1 and urgency1 for every task, same in both histories; no person
   encounters. No tuning after results. At5 prior preference1/2 versus0; genuine
   Value reason versus absence, unchanged goal nuclei, analytical probability shift,
   and at least one changed chosen action across the fixed eight pairs required.
@@ -47,7 +47,7 @@ assembly remains open. M33 baseline b69006fd; no production changes before this 
 - Done only when above behavior, preservation and negative controls pass. Original
   C3 comparisons stay controls; final21 members/15 families/132 clauses remain open.
 
-- Retained first run: importance1/2 bounds to1/3 < fixed task activation37/100,
-  hence NoReasons before acquisition. Owner question pending for importance1,
-  with all other comparator inputs/criteria fixed. Do not run that amendment yet.
-  Independent repair: NoReasons must settle without an invented qualification.
+- Owner approved bounded fixture amendment: goal importance1 instead of1/2,
+  all other inputs/laws/seeds/coupling/choice criterion unchanged. Original1/2
+  is retained as NoReasons control. No further contrasts if this witness fails.
+  NoReasons lifecycle and original Value calibration controls pass.

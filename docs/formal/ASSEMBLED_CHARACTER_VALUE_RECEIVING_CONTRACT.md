@@ -103,3 +103,8 @@ resolution. Chosen branches still require the full qualification/update barrier.
 This uses one transient handler flag, no psychological state or synthetic evidence.
 Twelve files including selfBelief; no further breadth. Fixture amendment pending
 owner response; no changes to the primary inputs without it.
+
+Owner amendment2026-11-01: use importance1 for all primary tasks instead of1/2.
+Laws, threshold, histories, seeds0..7, coupling and choice-change requirement stay
+fixed. Retain importance1/2 as the NoReasons control. Stop if the amended comparison
+fails; no further contrast or seed search. This supersedes the pending-fixture note.
