@@ -1,42 +1,36 @@
-# Current work — M31 self-belief to prospective appraisal
+# Current work — M31 complete
 
-The character will form a belief about its task fidelity from permitted reports
-of its own qualified choices, then appraise that belief against a later safe goal.
-Earned identity, belief and appraisal remain distinct.
+The character now forms self-belief from a permitted report of its own qualified
+choice and appraises that belief later. Earned identity can exist without self-knowledge.
 
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
-- Prior M30: ASSEMBLED_CHARACTER_M30_RESULT.md; control head3be9c5c7.
-- Contract: ../formal/ASSEMBLED_CHARACTER_SELF_BELIEF_CONTRACT.md.
-- Scope: source projection130 -> existing knowledge owner140 -> later appraisal50.
-  One character/runtime/state/save. L3 Mean and L4 SplitExposure already adopted;
-  engineering defaults, no verdict of superiority. No second identity bonus.
-- Baseline: M15, Brief12.12 clauses4/6; original IDENTITY-BELIEF component/public
-  controls. No full family/corpus closure or autonomous observer work.
-- U1: same holder and CommitmentFidelity channel; distinct1000/5 belief leaf,
-  existing KNOWLEDGE_OWNER. Identity415 remains solely its existing owner.
-  Source report contains holder/target/proposition/visible time ticket/polarity only.
-- One authenticated self-context30 per deliberation: report visibility and safe goal
-  +/-1. No authored belief/qualification, hidden outcome or research Learn/Probe tag.
-- Fixed primary: unchanged M30 declaration/scenario lifted to0.32, seeds0..7,
-  opportunities3/5/7, terminal10. Only self-report visibility differs. First report
-  from first qualified choice; later significance0 unchanged. Compare earned journal,
-  actual choices and draw addresses/bytes, then known versus unknown later appraisal.
-  Goal-only seed0 +/-1 preserves belief and changes later adverse appraisal.
-- Tests: original pure Mean/Latest/NoLearning and appraisal oracle including contrary,
-  neutral and absent evidence; source pressure/hidden execution controls; exact
-  repeat3/restore3 through10; ownership/path/append/S0 negatives; late3 rollback.
-  Existing M30 math and exact-standing tests unchanged (affected source boundary).
-- Ten production/test files: selfBelief, performance, state, model, inputs,
-  execution, runtime, traceBinding, one fixture and one test. No new factory.
-- Validation: tsc; targeted groups one at a time; boundary/research;105 frozen
-  closure blobs and historical/control tests; document/evidence limits; staged size.
-  No full old suite because closure/entry unchanged. No browser/build/full replay.
-- Budget: <=12 production/test files; <=20 evidence files/5MiB (result + raw log);
-  <=600 seconds/command, <=1800 seconds total checks including repairs. Stop on pass.
-- Done: authentic admitted evidence updates only self-belief; strictly later appraisal
-  consumes it; report-withholding preserves earned identity/choices/matched draws;
-  all declared checks pass. Ordinary bugs repaired with failures retained; no retuning.
-- Remaining: natural introspective inference, observer beliefs/communication, broader
-  identity/disposition/biology and full21 members/15 families/132 clauses. RO009/010/
-  014/020 conditional;019 closed. No new Campaign3 verdict/reduction/closure.
+- Result: [M31](ASSEMBLED_CHARACTER_M31_RESULT.md); raw checks alongside it.
+- Plan/contract983a1a84 preceded code. Contract:
+  ../formal/ASSEMBLED_CHARACTER_SELF_BELIEF_CONTRACT.md; rules/registry0.32,24 slots.
+- Existing knowledge owner1000/5 learns safe self reports at common140; existing
+  identity415 stays distinct. Prior belief plus safe goal -> appraisal50. One runtime,
+  scheduler, state, trace and save. No second identity bonus or new choice modifier.
+- Fixed seeds0..7, opportunities3/5/7, terminal10: eight visibility pairs pass.
+  Earned journals and choices identical;78 actual draw records match addresses/bytes.
+  All eight visible branches learn mean-1; denied branches remain unknown.
+  First appraisal unknown; later adverse1 versus unknown. Goal-only seed0 flips
+  adverse1->0 with unchanged belief/choices. Actual success/denial does not author belief.
+- Six new groups pass: primary;128 original mathematical appraisal comparisons;
+  goal/pressure/physical privacy; exact repeat3/restore3 through10; ownership/admission;
+  late3 rollback (58 events, cap57). Unchanged M30 math/standing checks pass.
+- Retained correction: episodic trace merge assumed one row/event and lost the new
+  learning trace. Join all rows by event identity; retention trace attaches once.
+  Initial test typing error and pre-execution preflight/causal-parent corrections logged.
+- Ten production/test files; two evidence files. Longest check391s; all checks and
+  guards under13 minutes including failures. TypeScript/boundary/research/preservation/
+  staged size pass.105 historical dependency blobs and retained controls unchanged.
+- This ports the accepted controlled self-report source and Mean/SplitExposure laws
+  (engineering defaults). It does not establish natural introspection, observer belief,
+  general affect dynamics, developmental disposition or full identity/biology mapping.
+  RO009/010/014/020 stay conditional;019 closed. No new Campaign3 verdict/reduction.
+  Full21 members/15 families/132 clauses remain open. No UI or autonomous partners.
+
+Continue with a new bounded card grounded in the reconciliation register and accepted
+contracts. Ordinary bug repair is authorized; preserve failures, comparison meaning,
+existing controls and the finite budget. Keep integrating one continuing character.

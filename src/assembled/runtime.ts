@@ -1,3 +1,4 @@
+import {KNOWLEDGE_OWNER} from './strategy';
 /** assembled-character-model/0.1-candidate. One fixed composition and scheduler.
  * Bounded port of the reachable cognitive wiring in C2 adaptationRuntime; no optional
  * model selection, authored-fact/consequence bridge branch (the generated protocol bridge remains) or imported continuation. */
@@ -168,6 +169,7 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
     return {nextState:result.nextState,outputs:result.outputs,emittedEvents:[],traceContributions:[],traceFactory:()=>[result.trace()]};
   });
   for(const eventType of taskRuntime.eventTypes()??[])registerHandler(key(eventType),()=>{throw new SchedulerContractError('TASK_STAGE_VIOLATION','task requires prepared stage');});
+  if(model.selfBeliefEnabled)registerHandler(key(cognitive.selfContextType()),context=>({nextState:context.state,outputs:[],emittedEvents:[],traceContributions:[cognitive.executeSelfContext(context.event)]}));
   if(model.eligibilityEnabled)registerHandler(key(cognitive.contextEventType()),context=>({nextState:context.state,outputs:[],emittedEvents:[],traceContributions:[cognitive.executeContext(context.event)]}));
   for(const eventType of cognitive.eventTypes()??[])registerHandler(key(eventType),async context=>{
    if(!ingress)throw new SchedulerContractError('INPUT_NOT_ADMITTED','cognitive outside live ingress');
@@ -307,12 +309,14 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
         // Source and target admission for I precedes prepareGroup, which admits
         // every inherited target before it opens the ADAPT B0 read capability.
         const paths=cognitive.preflightIdentity(identityEvent,state);if(paths.some(p=>p.rootStateTypeId!==415n))bad('identity target overlaps inherited owners');
+        cognitive.selfPreflight(identityEvent);
         const inherited=prepareGroup(rest);cognitive.sealIdentityPreflight();
-        let cursor=0,finished=false,result:ReturnType<NonNullable<typeof cognitive>['identityCandidate']>|undefined,identityTrace:CanonicalValue|undefined;
+        const selfCandidate=cognitive.selfCandidate(identityEvent,state);
+        let cursor=0,finished=false,result:ReturnType<NonNullable<typeof cognitive>['identityCandidate']>|undefined,identityTrace:CanonicalValue|undefined,selfTrace:CanonicalValue|undefined;
         return {execute(context:EventHandlerContext<AuthoritativeState>){if(finished||cursor>=events.length||key(scheduledEventValue(context.event))!==key(scheduledEventValue(events[cursor++])))bad('cognitive common-stage execution order');
          if(key(context.event.eventTypeId)===key(cognitive.identityEventType())){result=cognitive.identityCandidate(context.event,state);return {nextState:state,outputs:[],emittedEvents:[],traceContributions:[]};}return inherited.execute(context);},
-         finish(){if(finished||cursor!==events.length||!result)bad('incomplete cognitive common stage');finished=true;const inheritedState=inherited.finish(),applied=stateModel.applyPatch(inheritedState,result!.patch,result!.authority,{writableRoots:[415n],targetPaths:paths});identityTrace=result!.trace(applied.diffs);return applied.state;},
-         finalizeTrace(){if(!finished||!identityTrace)bad('cognitive trace before WRT completion');const rows=inherited.finalizeTrace();let i=0;return events.map(e=>e===identityEvent?identityTrace!:rows[i++]);}};
+         finish(){if(finished||cursor!==events.length||!result)bad('incomplete cognitive common stage');finished=true;const inheritedState=inherited.finish(),applied=stateModel.applyPatch(inheritedState,result!.patch,result!.authority,{writableRoots:[415n],targetPaths:paths});identityTrace=result!.trace(applied.diffs);if(selfCandidate){const learned=stateModel.applyPatch(applied.state,selfCandidate.patch,KNOWLEDGE_OWNER,{writableRoots:[1000n],targetPaths:selfCandidate.patch.operations.map(o=>o.path)});selfTrace=selfCandidate.trace(learned.diffs);return learned.state;}return applied.state;},
+         finalizeTrace(){if(!finished||!identityTrace)bad('cognitive trace before WRT completion');const rows=inherited.finalizeTrace();let i=0;return events.flatMap(e=>e===identityEvent?[identityTrace!,...(selfTrace?[selfTrace]:[])]:[rows[i++]]);}};
         }
         const added=events.filter(e=>episodes?.isFormation(e));
         if(!added.length)return inheritedStage(events);
@@ -324,13 +328,13 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
          if(finished||cursor>=events.length||key(scheduledEventValue(context.event))!==key(scheduledEventValue(events[cursor++])))throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','shared episodic stage order');
          return episodes!.isFormation(context.event)?episodeStage.execute(context):priorStage!.execute(context);
         },finish(){if(finished||cursor!==events.length)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','incomplete shared episodic stage');finished=true;return episodeStage.finish(priorStage?.finish()??state);},
-        finalizeTrace(){if(!finished)throw new SchedulerContractError('TRACE_VALIDATION_FAILURE','episodic trace before completion');const old=priorStage?.finalizeTrace()??[],added=episodeStage.traces();let i=0,j=0;return events.map(e=>episodes!.isFormation(e)?added[j++]:old[i++]);}};
+        finalizeTrace(){if(!finished)throw new SchedulerContractError('TRACE_VALIDATION_FAILURE','episodic trace before completion');const rows=[...(priorStage?.finalizeTrace()??[]),...episodeStage.traces()];return events.flatMap(e=>rows.filter(row=>key(f(rec(f(rec(row,160n),4n),130n),1n))===key({kind:'unsigned',value:e.eventId})));}};
         }
         const stage=joinedStage();
         const retention=model.retention?prepareEpisodicRetention(events,state,component.tasks[0].character,model.retention,stateModel,modelIdentity,inputs.runIdentity.value):undefined;
         const retained=retention?{execute(context:EventHandlerContext<AuthoritativeState>){const result=stage.execute(context);return context.event.eventId===retention.anchor.eventId?{...result,outputs:[...result.outputs,retention.audit]}:result;},
          finish(){return retention.finish(stage.finish());},
-         finalizeTrace(){const rows=stage.finalizeTrace();return rows.flatMap((row,index)=>events[index].eventId===retention.anchor.eventId?[row,retention.trace()]:[row]);}}:stage;
+         finalizeTrace(){const rows=stage.finalizeTrace();let attached=false;return rows.flatMap(row=>{const anchor=key(f(rec(f(rec(row,160n),4n),130n),1n))===key({kind:'unsigned',value:retention.anchor.eventId});if(anchor&&!attached){attached=true;return [row,retention.trace()];}return [row];});}}:stage;
         if(!practiceStage)return retained;
         let cursor=0,finished=false;
         return {execute(context:EventHandlerContext<AuthoritativeState>){if(finished||cursor>=allEvents.length||key(scheduledEventValue(context.event))!==key(scheduledEventValue(allEvents[cursor++])))throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','procedural common stage order');return procedure!.isPractice(context.event)?practiceStage.execute(context):retained.execute(context);},

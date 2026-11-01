@@ -1,0 +1,174 @@
+
+=== typescript-initial ===
+
+M31_CHECK typescript-initial exit=0 seconds=16.13
+
+=== typescript-tests ===
+src/test/assembledSelfBelief.test.ts(63,258): error TS2353: Object literal may only specify known properties, and 'expected' does not exist in type 'RemovePatchOperation'.
+
+M31_CHECK typescript-tests exit=1 seconds=15.26
+
+Pre-execution corrections: removal negative test used set-operation expected field; corrected to expectedOldValue. Static review separated self target preflight from B0 evaluation after inherited preflight and linked phase30 safe goal to appraisal causal parent. No comparator/input/law changes.
+
+=== typescript-corrected ===
+
+M31_CHECK typescript-corrected exit=0 seconds=14.99
+
+=== positive-eight-pairs ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledSelfBelief.test.ts (6 tests | 1 failed | 5 skipped) 53520ms
+   × positive: permitted self evidence changes later appraisal with all actual dice fixed 53519ms
+     → expected [] to have a length of 3 but got +0
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSelfBelief.test.ts > positive: permitted self evidence changes later appraisal with all actual dice fixed
+AssertionError: expected [] to have a length of 3 but got +0
+
+- Expected
++ Received
+
+- 3
++ 0
+
+ ❯ src/test/assembledSelfBelief.test.ts:36:174
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 5 skipped (6)
+   Start at  10:51:13
+   Duration  56.90s (transform 1.79s, setup 0ms, collect 2.70s, tests 53.52s, environment 0ms, prepare 335ms)
+
+
+M31_CHECK positive-eight-pairs exit=1 seconds=58.5
+
+Positive seed0 completed both terminal runs with equal choices/draws/earned journal and correct self-belief/appraisal, then failed missing140 trace rows. Diagnosis: episodic common-stage wrapper indexed inherited rows one-per-event and discarded second same-event trace. Fix joins all inherited rows by event ID; retention attachment also uses event ID once. No input/law/assertion change. Full same eight-pair comparison rerun.
+
+=== positive-eight-pairs-trace-corrected ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSelfBelief.test.ts > positive: permitted self evidence changes later appraisal with all actual dice fixed
+M31 witness {"seed":0,"earnedEntries":1,"selfMean":"-1/1","withheldMean":null,"laterAppraisals":["060201","060201"],"choicesEqual":true}
+
+stdout | src/test/assembledSelfBelief.test.ts > positive: permitted self evidence changes later appraisal with all actual dice fixed
+M31 witness {"seed":1,"earnedEntries":1,"selfMean":"-1/1","withheldMean":null,"laterAppraisals":["060201","060201"],"choicesEqual":true}
+
+stdout | src/test/assembledSelfBelief.test.ts > positive: permitted self evidence changes later appraisal with all actual dice fixed
+M31 witness {"seed":2,"earnedEntries":1,"selfMean":"-1/1","withheldMean":null,"laterAppraisals":["060201","060201"],"choicesEqual":true}
+
+stdout | src/test/assembledSelfBelief.test.ts > positive: permitted self evidence changes later appraisal with all actual dice fixed
+M31 witness {"seed":3,"earnedEntries":1,"selfMean":"-1/1","withheldMean":null,"laterAppraisals":["060201","060201"],"choicesEqual":true}
+
+stdout | src/test/assembledSelfBelief.test.ts > positive: permitted self evidence changes later appraisal with all actual dice fixed
+M31 witness {"seed":4,"earnedEntries":1,"selfMean":"-1/1","withheldMean":null,"laterAppraisals":["060201","060201"],"choicesEqual":true}
+
+stdout | src/test/assembledSelfBelief.test.ts > positive: permitted self evidence changes later appraisal with all actual dice fixed
+M31 witness {"seed":5,"earnedEntries":1,"selfMean":"-1/1","withheldMean":null,"laterAppraisals":["060201","060201"],"choicesEqual":true}
+
+stdout | src/test/assembledSelfBelief.test.ts > positive: permitted self evidence changes later appraisal with all actual dice fixed
+M31 witness {"seed":6,"earnedEntries":1,"selfMean":"-1/1","withheldMean":null,"laterAppraisals":["060201","060201"],"choicesEqual":true}
+
+stdout | src/test/assembledSelfBelief.test.ts > positive: permitted self evidence changes later appraisal with all actual dice fixed
+M31 witness {"seed":7,"earnedEntries":1,"selfMean":"-1/1","withheldMean":null,"laterAppraisals":["060201","060201"],"choicesEqual":true}
+M31 eight visibility pairs, all three decisions, actual matched draws=78
+
+ ✓ src/test/assembledSelfBelief.test.ts (6 tests | 5 skipped) 387517ms
+   ✓ positive: permitted self evidence changes later appraisal with all actual dice fixed 387516ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  10:52:46
+   Duration  390.62s (transform 1.76s, setup 0ms, collect 2.68s, tests 387.52s, environment 0ms, prepare 126ms)
+
+
+M31_CHECK positive-eight-pairs-trace-corrected exit=0 seconds=391.14
+
+=== math-and-privacy ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSelfBelief.test.ts > math: exact original Mean and prospective appraisal with retained alternatives
+M31 original math oracle 128 appraisal cases; Mean/Latest/NoLearning and unknown/neutral retained
+
+stdout | src/test/assembledSelfBelief.test.ts > privacy: goal-only appraisal and actual execution are separate from self evidence
+M31 goal-only complementary appraisal, pressure exclusion and hidden execution separation PASS
+
+ ✓ src/test/assembledSelfBelief.test.ts (6 tests | 4 skipped) 52431ms
+   ✓ privacy: goal-only appraisal and actual execution are separate from self evidence 52406ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 4 skipped (6)
+   Start at  10:59:24
+   Duration  55.48s (transform 1.73s, setup 0ms, collect 2.63s, tests 52.43s, environment 0ms, prepare 127ms)
+
+
+M31_CHECK math-and-privacy exit=0 seconds=55.99
+
+=== persistence-admission-rollback ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSelfBelief.test.ts > persistence: exact repeat and restore through every remaining instant
+M31 repeat3/restore3 every remaining state/output/trace/save PASS
+
+stdout | src/test/assembledSelfBelief.test.ts > admission: safe grammar, original source, single authority and immutable belief history
+M31 admission/owner/safe evidence/append and source substitution negatives PASS
+
+stdout | src/test/assembledSelfBelief.test.ts > rollback: late failure publishes neither learned self belief nor earned history
+M31 atomic late3 rollback events=58 cap=57
+
+ ✓ src/test/assembledSelfBelief.test.ts (6 tests | 3 skipped) 128089ms
+   ✓ persistence: exact repeat and restore through every remaining instant 90819ms
+   ✓ admission: safe grammar, original source, single authority and immutable belief history 14086ms
+   ✓ rollback: late failure publishes neither learned self belief nor earned history 23183ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 3 skipped (6)
+   Start at  11:00:27
+   Duration  131.28s (transform 1.75s, setup 0ms, collect 2.66s, tests 128.09s, environment 0ms, prepare 132ms)
+
+
+M31_CHECK persistence-admission-rollback exit=0 seconds=131.79
+
+=== M30-unchanged-math-standing ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledIdentityEligibility.test.ts > math: original qualification laws and restricted safe operands
+M30 original Threshold oracle 18 exact safe-context cases; retained alternatives differ
+
+stdout | src/test/assembledIdentityEligibility.test.ts > standing: numeric change equals the earned fold with original qualification support
+M30 exact standing delta -33607/46107 across 3 sources; qualification support joined
+
+ ✓ src/test/assembledIdentityEligibility.test.ts (7 tests | 5 skipped) 33215ms
+   ✓ math: original qualification laws and restricted safe operands 1513ms
+   ✓ standing: numeric change equals the earned fold with original qualification support 31702ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 5 skipped (7)
+   Start at  11:02:46
+   Duration  36.28s (transform 1.74s, setup 0ms, collect 2.65s, tests 33.22s, environment 0ms, prepare 127ms)
+
+
+M31_CHECK M30-unchanged-math-standing exit=0 seconds=36.79
+
+=== typescript-final ===
+
+M31_CHECK typescript-final exit=0 seconds=14.9
+
+=== reference-boundary ===
+Reference boundary check passed.
+
+M31_CHECK reference-boundary exit=0 seconds=2.25
+
+=== research-obligations ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M31_CHECK research-obligations exit=0 seconds=3.51
+
+M31 final guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and M22-M30 retained tests unchanged; document/evidence caps. seconds=9.03
