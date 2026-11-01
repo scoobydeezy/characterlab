@@ -1,3 +1,4 @@
+import {withQualifiedIdentityState} from './identityEligibility';
 import {withRecognitionState} from './recognitionState';
 // assembled-character-model/0.1-candidate: bounded successor of cognitiveState at db0ca7a8.
 /** task-cognitive-path/0.1-candidate: state refinements and immutable instruction boundary.
@@ -89,7 +90,9 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  const communicating=model.communication?withCommunicationState(controlled,[...(model.communication.topic?[]:[C]),...model.communication.recipients],model.communication.topic,model.communication.expectation):controlled;
  const socialized=model.social?withSocialState(communicating,C,model.social.target,model.social.targets):communicating;
  const related=model.relationship?withRelationshipState(socialized,C,model.relationship.target,model.relationship.bindings.map(b=>b.target)):socialized;
- const stateModel=model.recognition?withRecognitionState(related,model.recognition):related;
+ const recognized=model.recognition?withRecognitionState(related,model.recognition):related;
+ const identityRegistration=rec(f(rows.find(v=>key(f(v,1n))===key(typedIdentifier(1009,text('TaskIdentityApplicationTransition'))))!,4n),450n);
+ const stateModel=model.eligibilityEnabled?withQualifiedIdentityState(recognized,identityKey,id(f(rec(f(identityRegistration,6n),322n),2n))):recognized;
  function initialState(bytes:Uint8Array){
   const state=stateModel.restoreState(bytes);
   for(const e of state.entries()){

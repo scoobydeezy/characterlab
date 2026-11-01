@@ -168,6 +168,7 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
     return {nextState:result.nextState,outputs:result.outputs,emittedEvents:[],traceContributions:[],traceFactory:()=>[result.trace()]};
   });
   for(const eventType of taskRuntime.eventTypes()??[])registerHandler(key(eventType),()=>{throw new SchedulerContractError('TASK_STAGE_VIOLATION','task requires prepared stage');});
+  if(model.eligibilityEnabled)registerHandler(key(cognitive.contextEventType()),context=>({nextState:context.state,outputs:[],emittedEvents:[],traceContributions:[cognitive.executeContext(context.event)]}));
   for(const eventType of cognitive.eventTypes()??[])registerHandler(key(eventType),async context=>{
    if(!ingress)throw new SchedulerContractError('INPUT_NOT_ADMITTED','cognitive outside live ingress');
    const result=await cognitive.execute(context.event,context.state,context),own=result.emissions();

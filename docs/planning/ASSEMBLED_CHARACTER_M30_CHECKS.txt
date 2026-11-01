@@ -1,0 +1,289 @@
+
+=== TypeScript initial ===
+
+M30_CHECK TypeScript initial exit=0 seconds=15.48
+
+=== positive first ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledIdentityEligibility.test.ts > positive: fixed first dice, qualified history and later standing
+M30 witness {"seed":0,"accepted":true,"firstDraws":3,"laterStandingDiffers":true,"terminal":10}
+
+stdout | src/test/assembledIdentityEligibility.test.ts > positive: fixed first dice, qualified history and later standing
+M30 witness {"seed":1,"accepted":true,"firstDraws":3,"laterStandingDiffers":true,"terminal":10}
+
+stdout | src/test/assembledIdentityEligibility.test.ts > positive: fixed first dice, qualified history and later standing
+M30 witness {"seed":2,"accepted":true,"firstDraws":3,"laterStandingDiffers":true,"terminal":10}
+
+stdout | src/test/assembledIdentityEligibility.test.ts > positive: fixed first dice, qualified history and later standing
+M30 witness {"seed":3,"accepted":true,"firstDraws":3,"laterStandingDiffers":true,"terminal":10}
+
+
+M30_CHECK positive first exit=1 seconds=190.92
+
+=== TypeScript with tests ===
+src/test/assembledIdentityEligibility.test.ts(41,135): error TS2345: Argument of type '{ output: { readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }; addresses: string[]; }' is not assignable to parameter of type 'CanonicalValue'.
+src/test/assembledIdentityEligibility.test.ts(49,34): error TS2339: Property 'schema' does not exist on type 'CanonicalValue'.
+  Property 'schema' does not exist on type 'false'.
+src/test/assembledIdentityEligibility.test.ts(49,62): error TS2339: Property 'fields' does not exist on type 'CanonicalValue'.
+  Property 'fields' does not exist on type 'false'.
+src/test/assembledIdentityEligibility.test.ts(50,29): error TS2339: Property 'schema' does not exist on type 'CanonicalValue'.
+  Property 'schema' does not exist on type 'false'.
+src/test/assembledIdentityEligibility.test.ts(50,57): error TS2339: Property 'fields' does not exist on type 'CanonicalValue'.
+  Property 'fields' does not exist on type 'false'.
+
+M30_CHECK TypeScript with tests exit=1 seconds=15.15
+
+=== math original oracle ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledIdentityEligibility.test.ts (6 tests | 1 failed | 5 skipped) 23ms
+   × math: original qualification laws and restricted safe operands 23ms
+     → IDENTITY_PUBLIC_CODEC: id:1155
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledIdentityEligibility.test.ts > math: original qualification laws and restricted safe operands
+Error: IDENTITY_PUBLIC_CODEC: id:1155
+ ❯ fail src/campaign3/identityPublicCodecs.ts:10:39
+      8| const added:RecordSchema[]=allocation.records.map(d=>({typeId:BigInt(d…
+      9| const schemas=[...biologyPublicSupportedSchemas(),...added],registry=n…
+     10| const fail=(why:string):never=>{throw Error('IDENTITY_PUBLIC_CODEC: '+…
+       |                                       ^
+     11| function envelope(v:CanonicalValue):CanonicalValue {
+     12|  if(typeof v==='boolean')return v;
+ ❯ typed src/campaign3/identityPublicCodecs.ts:47:99
+ ❯ validate src/campaign3/identityPublicCodecs.ts:62:98
+ ❯ decodeIdentityPublic src/campaign3/identityPublicCodecs.ts:69:116
+ ❯ Module.identityPublicRecord src/campaign3/identityPublicCodecs.ts:71:136
+ ❯ Module.taskReasons src/campaign3/identityPublicMath.ts:37:9
+ ❯ src/test/assembledIdentityEligibility.test.ts:41:16
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 5 skipped (6)
+   Start at  20:36:40
+   Duration  3.02s (transform 1.72s, setup 0ms, collect 2.62s, tests 23ms, environment 0ms, prepare 130ms)
+
+
+M30_CHECK math original oracle exit=1 seconds=3.56
+
+=== math original oracle corrected occurrence ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledIdentityEligibility.test.ts > math: original qualification laws and restricted safe operands
+M30 original Threshold oracle 18 exact safe-context cases; retained alternatives differ
+
+ ✓ src/test/assembledIdentityEligibility.test.ts (6 tests | 5 skipped) 1485ms
+   ✓ math: original qualification laws and restricted safe operands 1485ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  20:36:54
+   Duration  4.48s (transform 1.72s, setup 0ms, collect 2.62s, tests 1.49s, environment 0ms, prepare 126ms)
+
+
+M30_CHECK math original oracle corrected occurrence exit=0 seconds=5.01
+
+=== positive corrected safe context ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledIdentityEligibility.test.ts > positive: fixed first dice, qualified history and later standing
+M30 witness {"seed":0,"accepted":true,"firstDraws":3,"laterStandingDiffers":true,"terminal":10}
+
+stdout | src/test/assembledIdentityEligibility.test.ts > positive: fixed first dice, qualified history and later standing
+M30 witness {"seed":1,"accepted":true,"firstDraws":3,"laterStandingDiffers":true,"terminal":10}
+
+stdout | src/test/assembledIdentityEligibility.test.ts > positive: fixed first dice, qualified history and later standing
+M30 witness {"seed":2,"accepted":true,"firstDraws":3,"laterStandingDiffers":true,"terminal":10}
+
+stdout | src/test/assembledIdentityEligibility.test.ts > positive: fixed first dice, qualified history and later standing
+M30 witness {"seed":3,"accepted":true,"firstDraws":3,"laterStandingDiffers":true,"terminal":10}
+
+stdout | src/test/assembledIdentityEligibility.test.ts > positive: fixed first dice, qualified history and later standing
+M30 witness {"seed":4,"accepted":true,"firstDraws":3,"laterStandingDiffers":true,"terminal":10}
+
+stdout | src/test/assembledIdentityEligibility.test.ts > positive: fixed first dice, qualified history and later standing
+M30 witness {"seed":5,"accepted":true,"firstDraws":4,"laterStandingDiffers":true,"terminal":10}
+
+stdout | src/test/assembledIdentityEligibility.test.ts > positive: fixed first dice, qualified history and later standing
+M30 witness {"seed":6,"accepted":true,"firstDraws":4,"laterStandingDiffers":true,"terminal":10}
+
+stdout | src/test/assembledIdentityEligibility.test.ts > positive: fixed first dice, qualified history and later standing
+M30 witness {"seed":7,"accepted":true,"firstDraws":3,"laterStandingDiffers":true,"terminal":10}
+M30 roster {"earned":8,"changed":8,"matchedFirstDraws":26}
+
+ ✓ src/test/assembledIdentityEligibility.test.ts (6 tests | 5 skipped) 298099ms
+   ✓ positive: fixed first dice, qualified history and later standing 298099ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  20:37:19
+   Duration  301.13s (transform 1.71s, setup 0ms, collect 2.60s, tests 298.10s, environment 0ms, prepare 121ms)
+
+
+M30_CHECK positive corrected safe context exit=0 seconds=301.64
+
+=== math admission rollback ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledIdentityEligibility.test.ts > math: original qualification laws and restricted safe operands
+M30 original Threshold oracle 18 exact safe-context cases; retained alternatives differ
+
+stdout | src/test/assembledIdentityEligibility.test.ts > rollback: late work failure publishes no identity or draws
+M30 late3 rollback events=57 cap=56
+
+ ❯ src/test/assembledIdentityEligibility.test.ts (6 tests | 1 failed | 3 skipped) 39466ms
+   ✓ math: original qualification laws and restricted safe operands 1475ms
+   × admission: source completeness, owner and joint journal invariants 13946ms
+     → requires 171/1
+   ✓ rollback: late work failure publishes no identity or draws 24044ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledIdentityEligibility.test.ts > admission: source completeness, owner and joint journal invariants
+SchedulerContractError: requires 171/1
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataRecord src/campaign2/canonicalData.ts:9:117
+ ❯ src/test/assembledIdentityEligibility.test.ts:69:364
+ ❯ src/test/assembledIdentityEligibility.test.ts:69:357
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 2 passed | 3 skipped (6)
+   Start at  20:42:26
+   Duration  42.50s (transform 1.72s, setup 0ms, collect 2.62s, tests 39.47s, environment 0ms, prepare 118ms)
+
+
+M30_CHECK math admission rollback exit=1 seconds=43.03
+
+=== admission corrected registry selector plus privacy persistence ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledIdentityEligibility.test.ts > privacy: instruction and world execution do not author qualification
+M30 instruction/permission/trivial first-choice and qualification separation PASS
+
+stdout | src/test/assembledIdentityEligibility.test.ts > persistence: exact repeat and restore retain qualified history
+M30 exact repeat3 and restore3 at every remaining settled instant PASS
+
+stdout | src/test/assembledIdentityEligibility.test.ts > admission: source completeness, owner and joint journal invariants
+M30 source completeness and one-owner full-journal/numeric invariants PASS
+
+ ✓ src/test/assembledIdentityEligibility.test.ts (6 tests | 3 skipped) 133335ms
+   ✓ privacy: instruction and world execution do not author qualification 31368ms
+   ✓ persistence: exact repeat and restore retain qualified history 88020ms
+   ✓ admission: source completeness, owner and joint journal invariants 13946ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 3 skipped (6)
+   Start at  20:43:51
+   Duration  136.45s (transform 1.71s, setup 0ms, collect 2.61s, tests 133.34s, environment 0ms, prepare 123ms)
+
+
+M30_CHECK admission corrected registry selector plus privacy persistence exit=0 seconds=136.96
+
+=== unchanged M29 positive regression ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledPerformanceExpectation.test.ts > positive: same latest success, different learned expectation and actual disclosure
+M29 decision diagnostic {"variants":[3,3,3,3],"actual":[false,false,true,true],"claims":[{"kind":"list","items":[]},{"kind":"list","items":[{"kind":"rational","numerator":"0","denominator":"1"}]},{"kind":"list","items":[{"kind":"rational","numerator":"0","denominator":"1"}]},{"kind":"list","items":[{"kind":"rational","numerator":"1","denominator":"8"}]}],"expectation":{"kind":"list","items":[{"kind":"rational","numerator":"15","denominator":"64"}]}}
+M29 witness {"firstReport":false,"actual":[false,false,true,true],"at9":"1/8","final":"15/64","supports":3,"draws":0,"terminal":10}
+
+stdout | src/test/assembledPerformanceExpectation.test.ts > positive: same latest success, different learned expectation and actual disclosure
+M29 decision diagnostic {"variants":[3,3,3,3],"actual":[false,false,true,true],"claims":[{"kind":"list","items":[]},{"kind":"list","items":[{"kind":"rational","numerator":"1","denominator":"1"}]},{"kind":"list","items":[{"kind":"rational","numerator":"1","denominator":"1"}]},{"kind":"list","items":[{"kind":"rational","numerator":"1","denominator":"1"}]}],"expectation":{"kind":"list","items":[{"kind":"rational","numerator":"1","denominator":"1"}]}}
+M29 witness {"firstReport":true,"actual":[false,false,true,true],"at9":"1","final":"1","supports":3,"draws":0,"terminal":10}
+
+ ✓ src/test/assembledPerformanceExpectation.test.ts (5 tests | 4 skipped) 56087ms
+   ✓ positive: same latest success, different learned expectation and actual disclosure 56086ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 4 skipped (5)
+   Start at  20:46:14
+   Duration  66.58s (transform 1.71s, setup 0ms, collect 10.08s, tests 56.09s, environment 0ms, prepare 118ms)
+
+
+M30_CHECK unchanged M29 positive regression exit=0 seconds=67.09
+
+=== exact standing magnitude and provenance ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledIdentityEligibility.test.ts (7 tests | 1 failed | 6 skipped) 25725ms
+   × standing: numeric change equals the earned fold with original qualification support 25724ms
+     → expected ExactRational{ …(2) } to deeply equal ExactRational{ …(2) }
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledIdentityEligibility.test.ts > standing: numeric change equals the earned fold with original qualification support
+AssertionError: expected ExactRational{ …(2) } to deeply equal ExactRational{ …(2) }
+
+- Expected
++ Received
+
+  ExactRational {
+-   "denominator": 158607n,
++   "denominator": 46107n,
+    "numerator": -33607n,
+  }
+
+ ❯ src/test/assembledIdentityEligibility.test.ts:82:143
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 6 skipped (7)
+   Start at  20:47:46
+   Duration  28.74s (transform 1.71s, setup 0ms, collect 2.61s, tests 25.72s, environment 0ms, prepare 123ms)
+
+
+M30_CHECK exact standing magnitude and provenance exit=1 seconds=29.26
+
+=== standing declared scale and typed support corrected ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledIdentityEligibility.test.ts > standing: numeric change equals the earned fold with original qualification support
+M30 exact standing delta -33607/46107 across 3 sources; qualification support joined
+
+ ✓ src/test/assembledIdentityEligibility.test.ts (7 tests | 6 skipped) 30939ms
+   ✓ standing: numeric change equals the earned fold with original qualification support 30938ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  20:49:07
+   Duration  33.96s (transform 1.72s, setup 0ms, collect 2.62s, tests 30.94s, environment 0ms, prepare 120ms)
+
+
+M30_CHECK standing declared scale and typed support corrected exit=0 seconds=34.48
+
+=== TypeScript final ===
+
+M30_CHECK TypeScript final exit=0 seconds=15.0
+
+=== reference boundary ===
+Reference boundary check passed.
+
+M30_CHECK reference boundary exit=0 seconds=2.22
+
+=== research obligations ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M30_CHECK research obligations exit=0 seconds=3.39
+
+M30 final guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and M22-M29 retained tests unchanged; document/evidence caps. seconds=8.95
