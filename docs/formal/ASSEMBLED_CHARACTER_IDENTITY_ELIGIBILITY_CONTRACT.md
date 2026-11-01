@@ -12,7 +12,7 @@ path. Instruction alone is not constraint; execution outcome cannot rewrite inte
 IDENTITY_ELIGIBILITY_CONTRACT.md and IDENTITY_PUBLIC_CONTRACT.md supply Threshold:
 significance>=1/2, perceived refusal pressure<1/2, nonzero alignment*authorship.
 No eligible channel contributes zero. Test-only learning/probe tags never enter cognition.
-Use the inherited exact1e6 round-even fold and K1. Threshold is the adopted engineering
+Use the inherited exact1e6 round-even fold with its declared K1/10. Threshold is the adopted engineering
 reference, not evidence of universal psychological superiority. Graded, IgnorePressure,
 Frequency, NoFeedback and Refold remain original comparison sources; no selectors
 for individual corpus members. Ledger MEC015..018/022, EXP011/012 remain preserved.
@@ -92,3 +92,11 @@ an already-admitted trivial context, instead of a test-only learning switch.
 The first pressure contrast, original opportunities, seeds, reference law, numeric
 calibration, acceptance condition and cumulative budget are unchanged. Commit this
 correction before revised execution; no replacement search or expanded capability.
+
+The quantitative standing check also exposed a mistaken K1 claim in this card/test.
+The assembled registry inherited from the pinned source declares K1/10. Production
+always read that existing declaration; no model, input, seed or implementation
+constant changed. Correct the test to compare against the declared K1/10; retain
+native K1 as a distinct numeric control. This is a documented description/oracle
+repair, not retuning the model to make its measured result pass. The first failed
+magnitude assertion is retained before the corrected check.

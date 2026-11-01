@@ -39,3 +39,7 @@ Pre-acceptance repair: the initial card incorrectly admitted a Learning flag, ag
 M2 L6. Remove it; later significance0 supplies ordinary triviality. First pressure
 contrast/seeds/law/gate/budget unchanged. Initial partial execution retained; corrected
 full roster due. See contract correction, committed before revised execution.
+
+Magnitude oracle correction: the preserved registry declares identity K1/10, not
+native experiment K1. Production was unchanged; correct the documented expectation
+and retain native K1 as control. First mismatch stays in the raw log.
