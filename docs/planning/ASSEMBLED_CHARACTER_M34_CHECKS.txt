@@ -1,0 +1,1443 @@
+
+=== initial typecheck ===
+src/assembled/codecs.ts(89,141): error TS2345: Argument of type 'CanonicalValue | undefined' is not assignable to parameter of type 'CanonicalValue'.
+  Type 'undefined' is not assignable to type 'CanonicalValue'.
+src/assembled/codecs.ts(89,198): error TS18048: 'extra' is possibly 'undefined'.
+src/assembled/codecs.ts(89,284): error TS18048: 'extra' is possibly 'undefined'.
+src/assembled/codecs.ts(89,290): error TS2339: Property 'items' does not exist on type 'CanonicalValue'.
+  Property 'items' does not exist on type 'false'.
+src/assembled/codecs.ts(89,428): error TS2339: Property 'kind' does not exist on type 'CanonicalValue'.
+  Property 'kind' does not exist on type 'false'.
+
+M34_CHECK initial typecheck exit=1 seconds=15.57
+
+=== receiver and tests typecheck ===
+src/test/assembledValueReceiving.test.ts(55,188): error TS1005: ')' expected.
+
+M34_CHECK receiver and tests typecheck exit=1 seconds=3.71
+
+=== corrected typecheck ===
+
+M34_CHECK corrected typecheck exit=0 seconds=15.23
+
+=== original receiver math and codecs ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledValueReceiving.test.ts (5 tests | 1 failed | 4 skipped) 56ms
+   × math: original receiver modes, separate grounds and closed successor codec 55ms
+     → requires 403/1
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledValueReceiving.test.ts > math: original receiver modes, separate grounds and closed successor codec
+SchedulerContractError: requires 403/1
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataRecord src/campaign2/canonicalData.ts:9:117
+ ❯ Module.valueReasons src/assembled/valueReceiving.ts:30:16
+ ❯ src/test/assembledValueReceiving.test.ts:37:90
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 4 skipped (5)
+   Start at  14:24:30
+   Duration  3.14s (transform 1.77s, setup 0ms, collect 2.71s, tests 56ms, environment 0ms, prepare 128ms)
+
+
+M34_CHECK original receiver math and codecs exit=1 seconds=3.68
+
+=== repaired versioned reader math and codecs ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledValueReceiving.test.ts (5 tests | 1 failed | 4 skipped) 291ms
+   × math: original receiver modes, separate grounds and closed successor codec 290ms
+     → expected { kind: 'set', …(1) } to deeply equal { kind: 'set', …(1) }
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledValueReceiving.test.ts > math: original receiver modes, separate grounds and closed successor codec
+AssertionError: expected { kind: 'set', …(1) } to deeply equal { kind: 'set', …(1) }
+
+- Expected
++ Received
+
+  Object {
+    "items": Array [
+      Object {
+        "fields": Map {
+          1n => Object {
+            "fields": Map {
+              1n => Object {
+                "fields": Map {
+                  1n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1037n,
+                      "payload": Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1038n,
+                        "payload": Object {
+                          "kind": "text",
+                          "value": "content/longitudinal/actor",
+                        },
+                      },
+                    },
+                  },
+                  2n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1027n,
+                    "payload": Object {
+                      "kind": "text",
+-                     "value": "action/longitudinal/a",
++                     "value": "action/longitudinal/b",
+                    },
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    Object {
+                      "id": 1n,
+                      "name": "CharacterId",
+                      "required": true,
+                    },
+                    Object {
+                      "id": 2n,
+                      "name": "ProtocolActionDefinitionId",
+                      "required": true,
+                    },
+                  ],
+                  "name": "ProceduralCandidateKey",
+                  "schemaVersion": 1n,
+                  "typeId": 395n,
+                },
+              },
+              2n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1040n,
+                "payload": Object {
+                  "kind": "text",
+                  "value": "Commitment",
+                },
+              },
+              3n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1002n,
+                "payload": Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1037n,
+                  "payload": Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1038n,
+                    "payload": Object {
+                      "kind": "text",
+-                     "value": "content/longitudinal/task/a",
++                     "value": "content/longitudinal/task/b",
+                    },
+                  },
+                },
+              },
+              4n => Object {
+                "kind": "unsigned",
+-               "value": 2n,
++               "value": 1n,
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "CandidateKey",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "MotiveChannel",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "TaskReferent",
+                  "required": true,
+                },
+                Object {
+                  "id": 4n,
+                  "name": "Direction",
+                  "required": true,
+                },
+              ],
+              "name": "ReasonNucleusKey",
+              "schemaVersion": 1n,
+              "typeId": 404n,
+            },
+          },
+          2n => Object {
+            "fields": Map {
+              1n => Object {
+-               "denominator": 3n,
++               "denominator": 5n,
+                "kind": "rational",
+-               "numerator": -1n,
++               "numerator": 1n,
+              },
+              2n => Object {
+                "denominator": 1n,
+                "kind": "rational",
+                "numerator": 0n,
+              },
+              3n => Object {
+                "denominator": 1n,
+                "kind": "rational",
+                "numerator": 0n,
+              },
+              4n => Object {
+                "items": Array [
+                  Object {
+                    "fields": Map {
+                      1n => Object {
+                        "fields": Map {
+                          1n => Object {
+                            "fields": Map {
+                              1n => Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1002n,
+                                "payload": Object {
+                                  "kind": "typedIdentifier",
+                                  "namespaceId": 1037n,
+                                  "payload": Object {
+                                    "kind": "typedIdentifier",
+                                    "namespaceId": 1038n,
+                                    "payload": Object {
+                                      "kind": "text",
+                                      "value": "content/longitudinal/actor",
+                                    },
+                                  },
+                                },
+                              },
+                              2n => Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1027n,
+                                "payload": Object {
+                                  "kind": "text",
+-                                 "value": "action/longitudinal/a",
++                                 "value": "action/longitudinal/b",
+                                },
+                              },
+                            },
+                            "kind": "record",
+                            "schema": Object {
+                              "fields": Array [
+                                Object {
+                                  "id": 1n,
+                                  "name": "CharacterId",
+                                  "required": true,
+                                },
+                                Object {
+                                  "id": 2n,
+                                  "name": "ProtocolActionDefinitionId",
+                                  "required": true,
+                                },
+                              ],
+                              "name": "ProceduralCandidateKey",
+                              "schemaVersion": 1n,
+                              "typeId": 395n,
+                            },
+                          },
+                          2n => Object {
+                            "fields": Map {
+                              1n => Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1002n,
+                                "payload": Object {
+                                  "kind": "typedIdentifier",
+                                  "namespaceId": 1037n,
+                                  "payload": Object {
+                                    "kind": "typedIdentifier",
+                                    "namespaceId": 1038n,
+                                    "payload": Object {
+                                      "kind": "text",
+                                      "value": "content/longitudinal/actor",
+                                    },
+                                  },
+                                },
+                              },
+                              2n => Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1002n,
+                                "payload": Object {
+                                  "kind": "typedIdentifier",
+                                  "namespaceId": 1037n,
+                                  "payload": Object {
+                                    "kind": "typedIdentifier",
+                                    "namespaceId": 1038n,
+                                    "payload": Object {
+                                      "kind": "text",
+-                                     "value": "content/longitudinal/task/a",
++                                     "value": "content/longitudinal/task/b",
+                                    },
+                                  },
+                                },
+                              },
+                            },
+                            "kind": "record",
+                            "schema": Object {
+                              "fields": Array [
+                                Object {
+                                  "id": 1n,
+                                  "name": "CharacterId",
+                                  "required": true,
+                                },
+                                Object {
+                                  "id": 2n,
+                                  "name": "TaskReferent",
+                                  "required": true,
+                                },
+                              ],
+                              "name": "TaskCommitmentKey",
+                              "schemaVersion": 1n,
+                              "typeId": 371n,
+                            },
+                          },
+                          3n => Object {
+                            "kind": "unsigned",
+                            "value": 1n,
+                          },
+                        },
+                        "kind": "record",
+                        "schema": Object {
+                          "fields": Array [
+                            Object {
+                              "id": 1n,
+                              "name": "CandidateKey",
+                              "required": true,
+                            },
+                            Object {
+                              "id": 2n,
+                              "name": "TaskCommitmentKey",
+                              "required": true,
+                            },
+                            Object {
+                              "id": 3n,
+                              "name": "SourceRole",
+                              "required": true,
+                            },
+                          ],
+                          "name": "TaskRawSignalKey",
+                          "schemaVersion": 1n,
+                          "typeId": 401n,
+                        },
+                      },
+                      2n => Object {
+-                       "denominator": 2n,
++                       "denominator": 4n,
+                        "kind": "rational",
+                        "numerator": 1n,
+                      },
+                      3n => Object {
+                        "denominator": 1n,
+                        "kind": "rational",
+                        "numerator": 0n,
+                      },
+                      4n => Object {
+                        "denominator": 1n,
+                        "kind": "rational",
+                        "numerator": 1n,
+                      },
+                      5n => Object {
+-                       "denominator": 2n,
++                       "denominator": 4n,
+                        "kind": "rational",
+                        "numerator": 1n,
+                      },
+                    },
+                    "kind": "record",
+                    "schema": Object {
+                      "fields": Array [
+                        Object {
+                          "id": 1n,
+                          "name": "SourceKey",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 2n,
+                          "name": "RawMagnitude",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 3n,
+                          "name": "OverlapWithPrior",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 4n,
+                          "name": "IndependentFraction",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 5n,
+                          "name": "EffectiveMagnitude",
+                          "required": true,
+                        },
+                      ],
+                      "name": "CoverageResult",
+                      "schemaVersion": 1n,
+                      "typeId": 405n,
+                    },
+                  },
+                ],
+                "kind": "list",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "BaseNet",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "StandingNet",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "SituationalNet",
+                  "required": true,
+                },
+                Object {
+                  "id": 4n,
+                  "name": "CoverageResults",
+                  "required": true,
+                },
+              ],
+              "name": "ReasonRoleSummary",
+              "schemaVersion": 1n,
+              "typeId": 406n,
+            },
+          },
+          3n => Object {
+-           "denominator": 3n,
++           "denominator": 5n,
+            "kind": "rational",
+            "numerator": 1n,
+          },
+          4n => Object {
+            "kind": "unsigned",
+            "value": 6n,
+          },
+          5n => Object {
+            "kind": "signed",
+            "value": 0n,
+          },
+          6n => Object {
+            "kind": "signed",
+            "value": 0n,
+          },
+          7n => Object {
+            "fields": Map {
+              1n => Object {
+                "entries": Array [
+                  Array [
+                    Object {
+                      "kind": "signed",
+-                     "value": -1n,
++                     "value": 1n,
+                    },
+                    Object {
+                      "denominator": 6n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "kind": "signed",
+-                     "value": -2n,
++                     "value": 2n,
+                    },
+                    Object {
+                      "denominator": 6n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "kind": "signed",
+-                     "value": -3n,
++                     "value": 3n,
+                    },
+                    Object {
+                      "denominator": 6n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "kind": "signed",
+-                     "value": -4n,
++                     "value": 4n,
+                    },
+                    Object {
+                      "denominator": 6n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "kind": "signed",
+-                     "value": -5n,
++                     "value": 5n,
+                    },
+                    Object {
+                      "denominator": 6n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "kind": "signed",
+-                     "value": -6n,
++                     "value": 6n,
+                    },
+                    Object {
+                      "denominator": 6n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                ],
+                "kind": "map",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "Masses",
+                  "required": true,
+                },
+              ],
+              "name": "ExactScoreDistribution",
+              "schemaVersion": 1n,
+              "typeId": 424n,
+            },
+          },
+        },
+        "kind": "record",
+        "schema": Object {
+          "fields": Array [
+            Object {
+              "id": 1n,
+              "name": "Key",
+              "required": true,
+            },
+            Object {
+              "id": 2n,
+              "name": "RoleSummary",
+              "required": true,
+            },
+            Object {
+              "id": 3n,
+              "name": "Relevance",
+              "required": true,
+            },
+            Object {
+              "id": 4n,
+              "name": "BaseDie",
+              "required": true,
+            },
+            Object {
+              "id": 5n,
+              "name": "StandingModifier",
+              "required": true,
+            },
+            Object {
+              "id": 6n,
+              "name": "SituationalModifier",
+              "required": true,
+            },
+            Object {
+              "id": 7n,
+              "name": "Distribution",
+              "required": true,
+            },
+          ],
+          "name": "CompiledReasonNucleus",
+          "schemaVersion": 1n,
+          "typeId": 407n,
+        },
+      },
+      Object {
+        "fields": Map {
+          1n => Object {
+            "fields": Map {
+              1n => Object {
+                "fields": Map {
+                  1n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1037n,
+                      "payload": Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1038n,
+                        "payload": Object {
+                          "kind": "text",
+                          "value": "content/longitudinal/actor",
+                        },
+                      },
+                    },
+                  },
+                  2n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1027n,
+                    "payload": Object {
+                      "kind": "text",
+-                     "value": "action/longitudinal/b",
++                     "value": "action/longitudinal/a",
+                    },
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    Object {
+                      "id": 1n,
+                      "name": "CharacterId",
+                      "required": true,
+                    },
+                    Object {
+                      "id": 2n,
+                      "name": "ProtocolActionDefinitionId",
+                      "required": true,
+                    },
+                  ],
+                  "name": "ProceduralCandidateKey",
+                  "schemaVersion": 1n,
+                  "typeId": 395n,
+                },
+              },
+              2n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1040n,
+                "payload": Object {
+                  "kind": "text",
+                  "value": "Commitment",
+                },
+              },
+              3n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1002n,
+                "payload": Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1037n,
+                  "payload": Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1038n,
+                    "payload": Object {
+                      "kind": "text",
+-                     "value": "content/longitudinal/task/b",
++                     "value": "content/longitudinal/task/a",
+                    },
+                  },
+                },
+              },
+              4n => Object {
+                "kind": "unsigned",
+-               "value": 1n,
++               "value": 2n,
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "CandidateKey",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "MotiveChannel",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "TaskReferent",
+                  "required": true,
+                },
+                Object {
+                  "id": 4n,
+                  "name": "Direction",
+                  "required": true,
+                },
+              ],
+              "name": "ReasonNucleusKey",
+              "schemaVersion": 1n,
+              "typeId": 404n,
+            },
+          },
+          2n => Object {
+            "fields": Map {
+              1n => Object {
+-               "denominator": 5n,
++               "denominator": 3n,
+                "kind": "rational",
+-               "numerator": 1n,
++               "numerator": -1n,
+              },
+              2n => Object {
+                "denominator": 1n,
+                "kind": "rational",
+                "numerator": 0n,
+              },
+              3n => Object {
+                "denominator": 1n,
+                "kind": "rational",
+                "numerator": 0n,
+              },
+              4n => Object {
+                "items": Array [
+                  Object {
+                    "fields": Map {
+                      1n => Object {
+                        "fields": Map {
+                          1n => Object {
+                            "fields": Map {
+                              1n => Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1002n,
+                                "payload": Object {
+                                  "kind": "typedIdentifier",
+                                  "namespaceId": 1037n,
+                                  "payload": Object {
+                                    "kind": "typedIdentifier",
+                                    "namespaceId": 1038n,
+                                    "payload": Object {
+                                      "kind": "text",
+                                      "value": "content/longitudinal/actor",
+                                    },
+                                  },
+                                },
+                              },
+                              2n => Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1027n,
+                                "payload": Object {
+                                  "kind": "text",
+-                                 "value": "action/longitudinal/b",
++                                 "value": "action/longitudinal/a",
+                                },
+                              },
+                            },
+                            "kind": "record",
+                            "schema": Object {
+                              "fields": Array [
+                                Object {
+                                  "id": 1n,
+                                  "name": "CharacterId",
+                                  "required": true,
+                                },
+                                Object {
+                                  "id": 2n,
+                                  "name": "ProtocolActionDefinitionId",
+                                  "required": true,
+                                },
+                              ],
+                              "name": "ProceduralCandidateKey",
+                              "schemaVersion": 1n,
+                              "typeId": 395n,
+                            },
+                          },
+                          2n => Object {
+                            "fields": Map {
+                              1n => Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1002n,
+                                "payload": Object {
+                                  "kind": "typedIdentifier",
+                                  "namespaceId": 1037n,
+                                  "payload": Object {
+                                    "kind": "typedIdentifier",
+                                    "namespaceId": 1038n,
+                                    "payload": Object {
+                                      "kind": "text",
+                                      "value": "content/longitudinal/actor",
+                                    },
+                                  },
+                                },
+                              },
+                              2n => Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1002n,
+                                "payload": Object {
+                                  "kind": "typedIdentifier",
+                                  "namespaceId": 1037n,
+                                  "payload": Object {
+                                    "kind": "typedIdentifier",
+                                    "namespaceId": 1038n,
+                                    "payload": Object {
+                                      "kind": "text",
+-                                     "value": "content/longitudinal/task/b",
++                                     "value": "content/longitudinal/task/a",
+                                    },
+                                  },
+                                },
+                              },
+                            },
+                            "kind": "record",
+                            "schema": Object {
+                              "fields": Array [
+                                Object {
+                                  "id": 1n,
+                                  "name": "CharacterId",
+                                  "required": true,
+                                },
+                                Object {
+                                  "id": 2n,
+                                  "name": "TaskReferent",
+                                  "required": true,
+                                },
+                              ],
+                              "name": "TaskCommitmentKey",
+                              "schemaVersion": 1n,
+                              "typeId": 371n,
+                            },
+                          },
+                          3n => Object {
+                            "kind": "unsigned",
+                            "value": 1n,
+                          },
+                        },
+                        "kind": "record",
+                        "schema": Object {
+                          "fields": Array [
+                            Object {
+                              "id": 1n,
+                              "name": "CandidateKey",
+                              "required": true,
+                            },
+                            Object {
+                              "id": 2n,
+                              "name": "TaskCommitmentKey",
+                              "required": true,
+                            },
+                            Object {
+                              "id": 3n,
+                              "name": "SourceRole",
+                              "required": true,
+                            },
+                          ],
+                          "name": "TaskRawSignalKey",
+                          "schemaVersion": 1n,
+                          "typeId": 401n,
+                        },
+                      },
+                      2n => Object {
+-                       "denominator": 4n,
++                       "denominator": 2n,
+                        "kind": "rational",
+                        "numerator": 1n,
+                      },
+                      3n => Object {
+                        "denominator": 1n,
+                        "kind": "rational",
+                        "numerator": 0n,
+                      },
+                      4n => Object {
+                        "denominator": 1n,
+                        "kind": "rational",
+                        "numerator": 1n,
+                      },
+                      5n => Object {
+-                       "denominator": 4n,
++                       "denominator": 2n,
+                        "kind": "rational",
+                        "numerator": 1n,
+                      },
+                    },
+                    "kind": "record",
+                    "schema": Object {
+                      "fields": Array [
+                        Object {
+                          "id": 1n,
+                          "name": "SourceKey",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 2n,
+                          "name": "RawMagnitude",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 3n,
+                          "name": "OverlapWithPrior",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 4n,
+                          "name": "IndependentFraction",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 5n,
+                          "name": "EffectiveMagnitude",
+                          "required": true,
+                        },
+                      ],
+                      "name": "CoverageResult",
+                      "schemaVersion": 1n,
+                      "typeId": 405n,
+                    },
+                  },
+                ],
+                "kind": "list",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "BaseNet",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "StandingNet",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "SituationalNet",
+                  "required": true,
+                },
+                Object {
+                  "id": 4n,
+                  "name": "CoverageResults",
+                  "required": true,
+                },
+              ],
+              "name": "ReasonRoleSummary",
+              "schemaVersion": 1n,
+              "typeId": 406n,
+            },
+          },
+          3n => Object {
+-           "denominator": 5n,
++           "denominator": 3n,
+            "kind": "rational",
+            "numerator": 1n,
+          },
+          4n => Object {
+            "kind": "unsigned",
+            "value": 6n,
+          },
+          5n => Object {
+            "kind": "signed",
+            "value": 0n,
+          },
+          6n => Object {
+            "kind": "signed",
+            "value": 0n,
+          },
+          7n => Object {
+            "fields": Map {
+              1n => Object {
+                "entries": Array [
+                  Array [
+                    Object {
+                      "kind": "signed",
+-                     "value": 1n,
++                     "value": -1n,
+                    },
+                    Object {
+                      "denominator": 6n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "kind": "signed",
+-                     "value": 2n,
++                     "value": -2n,
+                    },
+                    Object {
+                      "denominator": 6n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "kind": "signed",
+-                     "value": 3n,
++                     "value": -3n,
+                    },
+                    Object {
+                      "denominator": 6n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "kind": "signed",
+-                     "value": 4n,
++                     "value": -4n,
+                    },
+                    Object {
+                      "denominator": 6n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "kind": "signed",
+-                     "value": 5n,
++                     "value": -5n,
+                    },
+                    Object {
+                      "denominator": 6n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "kind": "signed",
+-                     "value": 6n,
++                     "value": -6n,
+                    },
+                    Object {
+                      "denominator": 6n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                ],
+                "kind": "map",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "Masses",
+                  "required": true,
+                },
+              ],
+              "name": "ExactScoreDistribution",
+              "schemaVersion": 1n,
+              "typeId": 424n,
+            },
+          },
+        },
+        "kind": "record",
+        "schema": Object {
+          "fields": Array [
+            Object {
+              "id": 1n,
+              "name": "Key",
+              "required": true,
+            },
+            Object {
+              "id": 2n,
+              "name": "RoleSummary",
+              "required": true,
+            },
+            Object {
+              "id": 3n,
+              "name": "Relevance",
+              "required": true,
+            },
+            Object {
+              "id": 4n,
+              "name": "BaseDie",
+              "required": true,
+            },
+            Object {
+              "id": 5n,
+              "name": "StandingModifier",
+              "required": true,
+            },
+            Object {
+              "id": 6n,
+              "name": "SituationalModifier",
+              "required": true,
+            },
+            Object {
+              "id": 7n,
+              "name": "Distribution",
+              "required": true,
+            },
+          ],
+          "name": "CompiledReasonNucleus",
+          "schemaVersion": 1n,
+          "typeId": 407n,
+        },
+      },
+    ],
+    "kind": "set",
+  }
+
+ ❯ src/test/assembledValueReceiving.test.ts:39:235
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 4 skipped (5)
+   Start at  14:25:27
+   Duration  3.37s (transform 1.77s, setup 0ms, collect 2.70s, tests 291ms, environment 0ms, prepare 125ms)
+
+
+M34_CHECK repaired versioned reader math and codecs exit=1 seconds=3.9
+
+=== canonical set comparison repair ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledValueReceiving.test.ts > math: original receiver modes, separate grounds and closed successor codec
+M34 original receiver 36 cases, numeric tie/aligned domain, separate motive and old-model/version/role guards PASS
+
+ ✓ src/test/assembledValueReceiving.test.ts (5 tests | 4 skipped) 9211ms
+   ✓ math: original receiver modes, separate grounds and closed successor codec 9211ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 4 skipped (5)
+   Start at  14:25:49
+   Duration  12.30s (transform 1.76s, setup 0ms, collect 2.69s, tests 9.21s, environment 0ms, prepare 121ms)
+
+
+M34_CHECK canonical set comparison repair exit=0 seconds=12.82
+
+=== fixed eight-pair behavioral comparison ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledValueReceiving.test.ts (5 tests | 1 failed | 4 skipped) 14391ms
+   × positive: acquired Values enter actual later reasons and choices with explicit coupling 14390ms
+     → self belief unfinished instant
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledValueReceiving.test.ts > positive: acquired Values enter actual later reasons and choices with explicit coupling
+SchedulerContractError: self belief unfinished instant
+ ❯ fail src/assembled/selfBelief.ts:32:38
+
+ ❯ Object.prepareCommit src/assembled/selfBelief.ts:44:133
+ ❯ Object.prepareCommit src/assembled/execution.ts:268:25
+ ❯ Object.beforeCommit src/assembled/runtime.ts:383:724
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:452:25
+ ❯ Object.settleNextInstant src/assembled/character.ts:40:58
+ ❯ Module.through src/test/fixtures/assembledComparison.ts:15:125
+ ❯ src/test/assembledValueReceiving.test.ts:49:143
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 4 skipped (5)
+   Start at  14:26:21
+   Duration  17.49s (transform 1.77s, setup 0ms, collect 2.71s, tests 14.39s, environment 0ms, prepare 124ms)
+
+
+M34_CHECK fixed eight-pair behavioral comparison exit=1 seconds=18.02
+
+=== unfinished-instant diagnosis unchanged inputs ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledValueReceiving.test.ts > positive: acquired Values enter actual later reasons and choices with explicit coupling
+M34 diagnostic decision 3 0a9903010401010bef0802230201030603010a9803010301010bee08022202010a9303020501010bed08022102010a8e03010301010bec08022002010a8a03010301010beb08021f02010a8403010301010bea08021e02010a8003010301010be908021d02010afd02010501010be808021c02010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637403010b83080519646566696e6974696f6e2f7461736b2d776f726b7370616365040107030afb02010201010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d6102010b83080511646566696e6974696f6e2f7461736b2d610afb02010201010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d6202010b83080511646566696e6974696f6e2f7461736b2d620afb02010201010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08051b636f6e74656e742f636f6e666967757261626c652d67617264656e02010b8308051e646566696e6974696f6e2f636f6e666967757261626c652d67617264656e05010afc0201020101020202010ae90201020101060601020109010aed01010a0101020102010bdb08020d03000400050006000700080009000a00030107030aff02010201010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d6102010afe0201020101020202010602010aff02010201010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d6202010afe0201020101020202010608010aff02010201010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08051b636f6e74656e742f636f6e666967757261626c652d67617264656e02010afe020102010102040201060601030107030a8303010201010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d6102010a820301020101020102000a8303010201010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d6202010a820301020101020102000a8303010201010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08051b636f6e74656e742f636f6e666967757261626c652d67617264656e02010a82030102010102010200030107030a8903010201010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d6102010602020a8903010201010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d6202010602020a8903010201010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08051b636f6e74656e742f636f6e666967757261626c652d67617264656e0201060202030107010a8d03010201010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65020109020a8c03010201010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d6102010b8308051f646566696e6974696f6e2f7461736b2d696e737472756374696f6e2d6f6e650a8c03010201010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08051b636f6e74656e742f636f6e666967757261626c652d67617264656e02010b8308051f646566696e6974696f6e2f7461736b2d696e737472756374696f6e2d6f6e65030109020a9203010301010a9103010301010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d6103010201020106020203010a90030101010108000a9203010301010a9103010301010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08051b636f6e74656e742f636f6e666967757261626c652d67617264656e03010201020106020203010a9003010101010800040108010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65060202050109000301070004010aa3030102010102020200
+
+ ❯ src/test/assembledValueReceiving.test.ts (5 tests | 1 failed | 4 skipped) 14188ms
+   × positive: acquired Values enter actual later reasons and choices with explicit coupling 14187ms
+     → self belief unfinished instant
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledValueReceiving.test.ts > positive: acquired Values enter actual later reasons and choices with explicit coupling
+SchedulerContractError: self belief unfinished instant
+ ❯ fail src/assembled/selfBelief.ts:32:38
+
+ ❯ Object.prepareCommit src/assembled/selfBelief.ts:44:133
+ ❯ Object.prepareCommit src/assembled/execution.ts:269:25
+ ❯ Object.beforeCommit src/assembled/runtime.ts:383:724
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:452:25
+ ❯ Object.settleNextInstant src/assembled/character.ts:40:58
+ ❯ Module.through src/test/fixtures/assembledComparison.ts:15:125
+ ❯ src/test/assembledValueReceiving.test.ts:49:143
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 4 skipped (5)
+   Start at  14:27:29
+   Duration  17.29s (transform 1.78s, setup 0ms, collect 2.71s, tests 14.19s, environment 0ms, prepare 127ms)
+
+
+M34_CHECK unfinished-instant diagnosis unchanged inputs exit=1 seconds=17.83
+
+=== decode retained failed instant no new simulation ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledValueReceiving.test.ts > diagnostic: decode retained failed decision only
+M34 retained failure projection {"status":"2","candidates":1,"motives":["1/2","1/2","1/2"],"signals":[{"role":"1","q":"060202"},{"role":"1","q":"060202"}],"nuclei":0}
+
+ ❯ src/test/assembledValueReceiving.test.ts (6 tests | 1 failed | 5 skipped) 7803ms
+   × diagnostic: decode retained failed decision only 7802ms
+     → Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledValueReceiving.test.ts > diagnostic: decode retained failed decision only
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 5 skipped (6)
+   Start at  14:28:17
+   Duration  11.19s (transform 1.78s, setup 0ms, collect 2.71s, tests 7.80s, environment 0ms, prepare 122ms)
+
+
+M34_CHECK decode retained failed instant no new simulation exit=1 seconds=11.7
+
+=== retained failure and fixed task calibration read ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledValueReceiving.test.ts > diagnostic: decode retained failed decision only
+M34 retained failure projection {"status":"2","candidates":1,"motives":["1/2","1/2","1/2"],"signals":[{"role":"1","q":"060202"},{"role":"1","q":"060202"}],"nuclei":0}
+M34 inherited task activation threshold ExactRational { numerator: 37n, denominator: 100n }
+
+ ✓ src/test/assembledValueReceiving.test.ts (6 tests | 5 skipped) 7730ms
+   ✓ diagnostic: decode retained failed decision only 7729ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  14:29:28
+   Duration  10.82s (transform 1.75s, setup 0ms, collect 2.68s, tests 7.73s, environment 0ms, prepare 123ms)
+
+
+M34_CHECK retained failure and fixed task calibration read exit=0 seconds=11.33
+
+=== original calibration and no-choice repair ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledValueReceiving.test.ts > math: original receiver modes, separate grounds and closed successor codec
+M34 original receiver 36 cases, numeric tie/aligned domain, separate motive and old-model/version/role guards PASS
+
+stdout | src/test/assembledValueReceiving.test.ts > no-choice: retained failed fixture settles without fabricated learning
+M34 retained importance1/2 NoReasons settles/replays with no fabricated expression, qualification or Value acquisition
+
+ ✓ src/test/assembledValueReceiving.test.ts (6 tests | 4 skipped) 53338ms
+   ✓ math: original receiver modes, separate grounds and closed successor codec 9192ms
+   ✓ no-choice: retained failed fixture settles without fabricated learning 44145ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 4 skipped (6)
+   Start at  14:31:08
+   Duration  56.47s (transform 1.76s, setup 0ms, collect 2.68s, tests 53.34s, environment 0ms, prepare 121ms)
+
+
+M34_CHECK original calibration and no-choice repair exit=0 seconds=56.97
+
+=== unchanged M33 math and privacy regression ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledValues.test.ts > math: original Values accumulation, retained alternatives and appraisal
+M33 original oracle 324 prefixes; 72 appraisal cases; missing/neutral/duplicate/alternatives PASS
+
+stdout | src/test/assembledValues.test.ts > privacy: hidden physical outcome, withheld report and prospective direction
+M33 hidden execution / absent report / context reversal PASS
+
+ ✓ src/test/assembledValues.test.ts (6 tests | 4 skipped) 67693ms
+   ✓ privacy: hidden physical outcome, withheld report and prospective direction 67657ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 4 skipped (6)
+   Start at  14:32:20
+   Duration  70.85s (transform 1.79s, setup 0ms, collect 2.73s, tests 67.69s, environment 0ms, prepare 126ms)
+
+
+M34_CHECK unchanged M33 math and privacy regression exit=0 seconds=71.36
+
+=== Value and task draw-purpose separation ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledValueReceiving.test.ts > math: original receiver modes, separate grounds and closed successor codec
+M34 original receiver 36 cases, numeric tie/aligned domain, separate motive and old-model/version/role guards PASS
+
+ ✓ src/test/assembledValueReceiving.test.ts (6 tests | 5 skipped) 9161ms
+   ✓ math: original receiver modes, separate grounds and closed successor codec 9160ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  14:34:02
+   Duration  12.26s (transform 1.77s, setup 0ms, collect 2.70s, tests 9.16s, environment 0ms, prepare 123ms)
+
+
+M34_CHECK Value and task draw-purpose separation exit=0 seconds=12.77
+
+=== owner-amended fixed eight-pair comparison ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledValueReceiving.test.ts > positive: acquired Values enter actual later reasons and choices with explicit coupling
+M34 seed 0 modes 1/3 draws 0/3 shared 0 changed true
+
+stdout | src/test/assembledValueReceiving.test.ts > positive: acquired Values enter actual later reasons and choices with explicit coupling
+M34 seed 1 modes 1/3 draws 0/3 shared 0 changed true
+
+stdout | src/test/assembledValueReceiving.test.ts > positive: acquired Values enter actual later reasons and choices with explicit coupling
+M34 seed 2 modes 1/3 draws 0/4 shared 0 changed true
+
+stdout | src/test/assembledValueReceiving.test.ts > positive: acquired Values enter actual later reasons and choices with explicit coupling
+M34 seed 3 modes 1/3 draws 0/4 shared 0 changed true
+
+stdout | src/test/assembledValueReceiving.test.ts > positive: acquired Values enter actual later reasons and choices with explicit coupling
+M34 seed 4 modes 1/3 draws 0/3 shared 0 changed true
+
+stdout | src/test/assembledValueReceiving.test.ts > positive: acquired Values enter actual later reasons and choices with explicit coupling
+M34 seed 5 modes 1/3 draws 0/3 shared 0 changed true
+
+stdout | src/test/assembledValueReceiving.test.ts > positive: acquired Values enter actual later reasons and choices with explicit coupling
+M34 seed 6 modes 1/3 draws 0/4 shared 0 changed false
+
+stdout | src/test/assembledValueReceiving.test.ts > positive: acquired Values enter actual later reasons and choices with explicit coupling
+M34 seed 7 modes 1/3 draws 0/4 shared 0 changed true
+M34 eight pairs changed=7 actual shared draws=0; Auto omissions are not shared draws
+
+ ✓ src/test/assembledValueReceiving.test.ts (6 tests | 5 skipped) 278893ms
+   ✓ positive: acquired Values enter actual later reasons and choices with explicit coupling 278892ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  14:34:26
+   Duration  282.03s (transform 1.77s, setup 0ms, collect 2.71s, tests 278.89s, environment 0ms, prepare 125ms)
+
+
+M34_CHECK owner-amended fixed eight-pair comparison exit=0 seconds=282.54
+
+=== privacy and actual candidate controls ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledValueReceiving.test.ts > privacy: fixed reports, missing evidence and actual route gates
+M34 hidden physical truth, missing report, no/foreign candidate, no-goal Value and untouched goal meaning PASS
+
+ ✓ src/test/assembledValueReceiving.test.ts (6 tests | 5 skipped) 49138ms
+   ✓ privacy: fixed reports, missing evidence and actual route gates 49137ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  14:39:51
+   Duration  52.37s (transform 1.84s, setup 0ms, collect 2.80s, tests 49.14s, environment 0ms, prepare 130ms)
+
+
+M34_CHECK privacy and actual candidate controls exit=0 seconds=52.89
+
+=== exact repeat and checkpoint continuation ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledValueReceiving.test.ts > persistence: exact repeat3 and restore3 through10
+M34 repeat3/restore3 every remaining state/output/trace/save PASS
+
+ ✓ src/test/assembledValueReceiving.test.ts (6 tests | 5 skipped) 97665ms
+   ✓ persistence: exact repeat3 and restore3 through10 97664ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  14:40:49
+   Duration  101.14s (transform 1.90s, setup 0ms, collect 2.88s, tests 97.67s, environment 0ms, prepare 154ms)
+
+
+M34_CHECK exact repeat and checkpoint continuation exit=0 seconds=101.73
+
+=== late instant whole-character rollback ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledValueReceiving.test.ts > rollback: late failure preserves the whole prior character and draw ledger
+M34 late5 atomic rollback 69 events cap68
+
+ ✓ src/test/assembledValueReceiving.test.ts (6 tests | 5 skipped) 40316ms
+   ✓ rollback: late failure preserves the whole prior character and draw ledger 40315ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  14:42:36
+   Duration  43.46s (transform 1.76s, setup 0ms, collect 2.74s, tests 40.32s, environment 0ms, prepare 125ms)
+
+
+M34_CHECK late instant whole-character rollback exit=0 seconds=43.97
+
+=== predecessor comparison admission and ledger controls ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > controls: admission, natural fallback, purpose separation and atomic ledger retry
+M21a preflight {"contrast":"breach","history":true,"mode":3,"draws":3}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > controls: admission, natural fallback, purpose separation and atomic ledger retry
+M21a preflight {"contrast":"breach","history":false,"mode":1,"draws":0}
+
+stdout | src/test/assembledComparison.test.ts > M21a explicit comparison foundation > controls: admission, natural fallback, purpose separation and atomic ledger retry
+M21a controls: map validation, strict411 versions, shifted-root entropy, natural fallback, atomic RNG ledger retry and whole-first-instant rollback
+
+ ✓ src/test/assembledComparison.test.ts (5 tests | 4 skipped) 19524ms
+   ✓ M21a explicit comparison foundation > controls: admission, natural fallback, purpose separation and atomic ledger retry 19523ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 4 skipped (5)
+   Start at  14:43:27
+   Duration  22.56s (transform 1.69s, setup 0ms, collect 2.63s, tests 19.52s, environment 0ms, prepare 116ms)
+
+
+M34_CHECK predecessor comparison admission and ledger controls exit=0 seconds=23.07
+
+=== final TypeScript ===
+
+M34_CHECK final TypeScript exit=0 seconds=15.35
+
+=== reference boundary ===
+Reference boundary check passed.
+
+M34_CHECK reference boundary exit=0 seconds=2.21
+
+=== research obligations ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M34_CHECK research obligations exit=0 seconds=3.39
+
+M34 final guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and M22-M33 retained tests unchanged; document/evidence caps. seconds=9.18

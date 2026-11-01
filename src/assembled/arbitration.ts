@@ -1,8 +1,9 @@
+import {receivingRecord as rec} from './codecs';
 /** assembled-character-comparison/0.1: unchanged C2 arbitration mathematics; successor receiving codec. */
 import {list,unsigned as u,signed,type CanonicalValue} from '../substrate/canonicalEncoding';
 import {cognitiveRecord as r,randomDrawRecord} from './codecs';
 import {ZERO,ONE,absolute,convolve,expectation,readDistribution,readQ,qValue} from '../campaign2/cognitiveMath';
-import {dataRecord as rec,dataField as f,dataItems as items,dataKey as key,dataUnsigned as uint,invalidModel} from '../campaign2/canonicalData';
+import {dataField as f,dataItems as items,dataKey as key,dataUnsigned as uint,invalidModel} from '../campaign2/canonicalData';
 import {analyzeOptions} from './configurationMath';
 import type {ArbitrationDraws} from '../campaign2/cognitiveArbitration';
 function context(value:CanonicalValue){const reason=rec(value,408n),raw=rec(f(reason,2n),403n),options=rec(f(raw,2n),398n);return {nuclei:items(f(reason,3n),'list'),candidates:items(f(options,3n),'list').map(v=>f(rec(v,397n),1n))};}

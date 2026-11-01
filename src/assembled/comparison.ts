@@ -4,11 +4,11 @@ import {ComparisonDrawMap,PurposeComparisonRoleRegistry,type RandomAddress} from
 import {validateSemanticReferent} from '../substrate/referentOrigin';
 import {dataRecord as rec,dataField as f,dataItems as items,dataIdentity as id,dataText as txt,dataUnsigned as uint,dataKey as key,invalidModel} from '../campaign2/canonicalData';
 const atom=(n:number,s:string)=>typedIdentifier(n,text(s));
-export const comparisonRoles=new PurposeComparisonRoleRegistry(['task-reason-face','task-decision-tie'].map(p=>({purposeId:atom(1042,'purpose/'+p),comparisonRoleId:atom(10005,'assembled/'+p)})));
+export const comparisonRoles=new PurposeComparisonRoleRegistry(['task-reason-face','value-reason-face','task-decision-tie'].map(p=>({purposeId:atom(1042,'purpose/'+p),comparisonRoleId:atom(10005,'assembled/'+p)})));
 export function comparisonAddress(value:CanonicalValue):RandomAddress {
  const v=rec(value,110n),root=id(f(v,1n)),purpose=id(f(v,2n));
  if(root.namespaceId!==1135n||uint(root.payload)<0n||purpose.namespaceId!==1042n||uint(f(v,4n))!==0n)invalidModel('comparison address domain');
- const name=txt(purpose.payload),roles=name==='purpose/task-reason-face'?['actor','action','task']:name==='purpose/task-decision-tie'?['actor']:invalidModel('comparison purpose');
+ const name=txt(purpose.payload),roles=['purpose/task-reason-face','purpose/value-reason-face'].includes(name)?['actor','action','task']:name==='purpose/task-decision-tie'?['actor']:invalidModel('comparison purpose');
  const bindings=items(f(v,3n),'list').map(x=>{const b=rec(x,111n);return {subjectRoleId:id(f(b,1n)),subjectId:id(f(b,2n))};});
  if(bindings.length!==roles.length||new Set(bindings.map(b=>key(b.subjectRoleId))).size!==roles.length)invalidModel('comparison subject coverage');
  for(const role of roles){const b=bindings.find(b=>key(b.subjectRoleId)===key(atom(1043,'subject/'+role)));if(!b)invalidModel('comparison subject role');

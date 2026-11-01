@@ -12,9 +12,10 @@ import {invalidModel} from '../campaign2/canonicalData';
 
 // 411/1 stays natural-only; 411/2 receives the C0 effective-key union.
 const predecessor=embodiedSupportedSchemas(),drawV1=predecessor.find(s=>s.typeId===411n)!;
-const added:readonly RecordSchema[]=[{...drawV1,schemaVersion:2n}];
+const rawV1=predecessor.find(s=>s.typeId===403n)!,nucleusV1=predecessor.find(s=>s.typeId===404n)!;
+const added:readonly RecordSchema[]=[{...drawV1,schemaVersion:2n},{...rawV1,schemaVersion:2n,fields:[...rawV1.fields,{id:5n,name:'ValueSignals',required:true}]},{...nucleusV1,schemaVersion:2n}];
 const schemas=[...predecessor,...added],registry=new RecordSchemaRegistry(schemas);
-const current=new Map<bigint,RecordSchema>();for(const schema of schemas)current.set(schema.typeId,schema);
+const current=new Map<bigint,RecordSchema>();for(const schema of schemas)if(!([403n,404n].includes(schema.typeId)&&schema.schemaVersion===2n))current.set(schema.typeId,schema);
 const byName=new Map(schemas.map(s=>[s.name,s]));
 const declarations=new Map([...allocation.records,...allocation.schemaSuccessors].map(r=>[`${r.typeId}/${r.schemaVersion}`,r]));
 const identityNamespaces=allocation.identifierAliases as Readonly<Record<string,number>>;
@@ -35,13 +36,13 @@ function checkType(value:CanonicalValue,grammar:string):void {
  }
  if(kind==='r'){
   const schema=/^\d+$/.test(body)?current.get(BigInt(body)):byName.get(body);
-  if(!schema||!isRecord(value)||value.schema.typeId!==schema.typeId||(value.schema.schemaVersion!==schema.schemaVersion&&!(schema.typeId===411n&&value.schema.schemaVersion===1n)))fail('wrong nested record schema');return;
+  if(!schema||!isRecord(value)||value.schema.typeId!==schema.typeId||(value.schema.schemaVersion!==schema.schemaVersion&&!([403n,404n,411n].includes(schema.typeId)&&[1n,2n].includes(value.schema.schemaVersion))))fail('wrong nested record schema');return;
  }
  if(kind==='id'){
   const namespace=identityNamespaces[body];if(namespace===undefined||typeof value==='boolean'||value.kind!=='typedIdentifier'||value.namespaceId!==BigInt(namespace))fail('wrong identifier family');
   const identifier=value as Extract<CanonicalValue,{kind:'typedIdentifier'}>;
   if(namespace>=1128&&namespace<=1141){if(typeof identifier.payload==='boolean'||identifier.payload.kind!=='unsigned')fail('occurrence requires unsigned ordinal');}
-  if(namespace>=1040&&namespace<=1043){const p=identifier.payload;if(typeof p==='boolean'||p.kind!=='text'||!allocation.members.some(m=>m.namespace===namespace&&m.payload===p.value))fail('member outside cognitive vocabulary');}
+  if(namespace>=1040&&namespace<=1043){const p=identifier.payload;if(typeof p==='boolean'||p.kind!=='text'||!allocation.members.some(m=>m.namespace===namespace&&m.payload===p.value)&&!(namespace===1042&&p.value==='purpose/value-reason-face'))fail('member outside cognitive vocabulary');}
   return;
  }
  if(kind==='enum'){
@@ -66,7 +67,7 @@ function validate(value:CanonicalValue):void {
  function containsExtension(v:CanonicalValue):boolean {
   if(typeof v==='boolean')return false;const known=extended.get(v);if(known!==undefined)return known;
   let result=false;
-  if(v.kind==='record')result=v.schema.typeId===411n&&v.schema.schemaVersion===2n||[...v.fields.values()].some(containsExtension);
+  if(v.kind==='record')result=[403n,404n,411n].includes(v.schema.typeId)&&v.schema.schemaVersion===2n||[...v.fields.values()].some(containsExtension);
   else if(v.kind==='list'||v.kind==='set')result=v.items.some(containsExtension);
   else if(v.kind==='map')result=v.entries.some(([a,b])=>containsExtension(a)||containsExtension(b));
   else if(v.kind==='typedIdentifier')result=containsExtension(v.payload);
@@ -76,7 +77,7 @@ function validate(value:CanonicalValue):void {
   if(!containsExtension(v)){decodeEmbodied(canonicalEncode(v));return;}
   if(typeof v==='boolean')return;
   if(v.kind==='record'){
-   const declaration=declarations.get(`${v.schema.typeId}/${v.schema.typeId===411n&&v.schema.schemaVersion===2n?1n:v.schema.schemaVersion}`);
+   const declaration=declarations.get(`${v.schema.typeId}/${[403n,404n,411n].includes(v.schema.typeId)&&v.schema.schemaVersion===2n?1n:v.schema.schemaVersion}`);
    if(!declaration&&![130n,132n,160n].includes(v.schema.typeId))fail('coupled draw in unrelated record');
    if(declaration){
     for(const field of declaration.fields){const child=v.fields.get(BigInt(field.id));if(child===undefined){if(field.required)fail('missing required field');}else if(v.schema.typeId===411n&&v.schema.schemaVersion===2n&&field.id===2){
@@ -84,7 +85,12 @@ function validate(value:CanonicalValue):void {
        const entry=record(randomSchemas.mapEntry,new Map([[1n,v.fields.get(1n)!],[2n,child.fields.get(1n)!]]));
        compileComparison(record(randomSchemas.drawMap,new Map([[1n,list([entry])]])));
       }else checkType(child,field.type);
-     }else checkType(child,field.type);}
+     }else if(v.schema.typeId===404n&&v.schema.schemaVersion===2n&&field.id===2){if(typeof child==='boolean'||child.kind!=='typedIdentifier'||child.namespaceId!==1040n||typeof child.payload==='boolean'||child.payload.kind!=='text'||child.payload.value!=='Value')fail('fixed Value motive required');}else checkType(child,field.type);}
+    if(v.schema.typeId===403n&&v.schema.schemaVersion===2n){
+     const extra=v.fields.get(5n)??fail('Value signals required');checkType(extra,'set(TaskRawSignal)');
+     if(typeof extra==='boolean'||extra.kind!=='set'||extra.items.length>1)return fail('one Value source');
+     for(const signal of extra.items){if(!isRecord(signal))return fail('Value source');const source=signal.fields.get(1n);if(!source||!isRecord(source))return fail('Value source key');const role=source.fields.get(3n);if(!role||typeof role==='boolean'||role.kind!=='unsigned'||role.value!==1n)fail('Value base only');}
+    }
     const variants=allocation.unionVariants.filter(u=>BigInt(u.recordTypeId)===v.schema.typeId);
     if(variants.length){const tag=v.fields.get(1n);if(!tag||typeof tag==='boolean'||tag.kind!=='unsigned')fail('union discriminator');const variant=variants.find(u=>BigInt(u.tag)===(tag as {value:bigint}).value);
      if(!variant||variant.requiredFields.some(i=>v.fields.get(BigInt(i))===undefined)||variant.forbiddenFields.some(i=>v.fields.get(BigInt(i))!==undefined))fail('closed union payload');}
@@ -120,11 +126,17 @@ export function randomDrawRecord(value:CanonicalValue):Extract<CanonicalValue,{k
 }
 
 /** Same scalar-role traversal as the accepted task content validator, using successor decoding. */
-export function validateCharacterRecordRoles(content:{recordRole:(type:bigint,field:bigint)=>Uint8Array|undefined;validateRole:(value:Uint8Array,role:Uint8Array)=>void},bytes:Uint8Array){
+export function validateCharacterRecordRoles(content:{recordRole:(type:bigint,field:bigint)=>Uint8Array|undefined;validateRole:(value:Uint8Array,role:Uint8Array)=>void},bytes:Uint8Array,valueReceiving=false){
  function visit(v:CanonicalValue):void {
   if(typeof v==='boolean')return;
-  if(v.kind==='record'){for(const [field,value] of v.fields){const role=content.recordRole(v.schema.typeId,field);if(role)content.validateRole(canonicalEncode(value),role);}for(const value of v.fields.values())visit(value);}
+  if(v.kind==='record'){const added=[403n,404n].includes(v.schema.typeId)&&v.schema.schemaVersion===2n;if(added&&!valueReceiving)fail('Value receiving requires successor model');for(const [field,value] of v.fields){if(v.schema.typeId===404n&&v.schema.schemaVersion===2n&&field===2n)continue;const role=content.recordRole(v.schema.typeId,field);if(role)content.validateRole(canonicalEncode(value),role);}for(const value of v.fields.values())visit(value);}
   else if(v.kind==='list'||v.kind==='set')v.items.forEach(visit);else if(v.kind==='map')for(const [k,value] of v.entries){visit(k);visit(value);}
  }
  visit(decodeCognitive(bytes));
+}
+
+/** Strict reader for already admitted predecessor and receiving records. */
+export function receivingRecord(value:CanonicalValue,typeId:bigint):RecordValue {
+ if(!isRecord(value)||value.schema.typeId!==typeId||!(value.schema.schemaVersion===1n||[403n,404n].includes(typeId)&&value.schema.schemaVersion===2n))return fail('unsupported receiving record version');
+ return value;
 }

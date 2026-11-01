@@ -1,53 +1,31 @@
-# Current work — M34 planned
+# Current work — M34 complete
 
-Connect acquired Values to motivation and the existing decision process. Full
-assembly remains open. M33 baseline b69006fd; no production changes before this card.
+Acquired Values now enter the character's existing motivation, reasons, decision
+and execution path. They change the later choice in7 of8 fixed seed pairs while
+preserving every goal reason. One model/state/scheduler/trace/save remains.
 
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
-- Capability1: prior Values produce a genuine, separately identified motivational
-  ground at60; ordinary goal/concern/standing sources remain byte-identical.
-- Capability2: that ground supplies one reason to existing arbitration, intent and
-  execution, with original-source trace, addressed dice and whole-run restore.
-- Scope: M17/L7, F12.2/5/7/12/15; MEC012-017/020, EXP009/010, CTL007. No closure.
+- Result: [M34](ASSEMBLED_CHARACTER_M34_RESULT.md); raw checks alongside.
 - Contract: ../formal/ASSEMBLED_CHARACTER_VALUE_RECEIVING_CONTRACT.md,0.1.
-  Rules/registry0.35, unchanged26 slots; original0.34 remains a control.
-- LOCAL DISPOSITION: current TaskOutcome category has no justified Need producer.
-  Joint receives absent Need=0, retains Value on ties. Never relabel a task goal
-  or bodily concern as its Need. NeedOnly/ValuesOnly/full-overlap Joint remain
-  original mathematical controls; no claim of assembled Need receiving completion.
-- One distinct Value ground per actual matching candidate/task route; no invented
-  candidate, extra Value-appraisal die, cross-domain exchange rate or new state.
-- Planned12 production/test files: model,codecs,comparison,random,execution,
-  traceBinding,valueReceiving,arbitration,choice,selfBelief; test assembledValueReceiving and its fixture.
-  Limit12; split before exceeding. Existing state/scheduler/owners unchanged.
-- Primary comparison: M33 first positive report linked/unlinked, seeds0..7. First
-  opportunity3 forced A as before; later displays4/6 select each task's route0.
-  Owner-amended goal importance1 and urgency1 for every task, same in both histories; no person
-  encounters. No tuning after results. At5 prior preference1/2 versus0; genuine
-  Value reason versus absence, unchanged goal nuclei, analytical probability shift,
-  and at least one changed chosen action across the fixed eight pairs required.
-- Two setup runs seed0 through5 read identities only to predeclare coupling keys
-  through5, including new Value purpose and tie. Maps bind
-  semantic time/purpose/actor/action/task, never output or a searched seed. Common
-  actual draws must have equal effective keys, spans and results; report counts
-  and Auto/Roll changes explicitly. A skipped Auto draw is not a shared draw.
-- Checks, one job at a time: new math/codec guards; positive eight pairs; privacy/
-  admission (hidden success, missing report, expired/mismatched route, no goal
-  overwrite); repeat3/restore3 through10; common late-instant rollback.
-  Original receiver numeric/reason comparison preserves all3 modes and tie rule.
-  Unchanged M33 math/privacy and existing comparison codec tests guard predecessors.
-- Risks: carrier-goal conflation, double credit, unauthenticated source, RNG address
-  collision, widened decoding, same-instant feedback, lost restore/rollback.
-- TypeScript,boundary,research,105 frozen blobs/history/retained tests,doc/evidence
-  and staged Git-size checks. No full frozen suite: dependencies untouched.
-- 600s/command,1800s total including failures/repairs;20 evidence files/5MiB.
-  One result plus raw log normally. Stop on pass; checkpoint on unresolved failure
-  or exhausted budget. No new phenomena, browser/UI or multi-character work.
-- Done only when above behavior, preservation and negative controls pass. Original
-  C3 comparisons stay controls; final21 members/15 families/132 clauses remain open.
-
-- Owner approved bounded fixture amendment: goal importance1 instead of1/2,
-  all other inputs/laws/seeds/coupling/choice criterion unchanged. Original1/2
-  is retained as NoReasons control. No further contrasts if this witness fails.
-  NoReasons lifecycle and original Value calibration controls pass.
+  Rules/registry0.35;26 slots, no new state owner or scheduler.
+- One independent Value ground for the actual matching task/route candidate.
+  Goal/concern/standing signals and CommitmentFidelity retain their meaning.
+- Adopted Joint rule preserved; TaskOutcome Need is absent, not inferred from a
+  goal or body concern. Full same-category Need integration remains open.
+- Comparison: fixed seeds0..7, first report linked/unlinked. At5 preference1/2
+  versus0, one Value reason versus none, equal goal nuclei and changed exact
+  probabilities. Value decisions Auto/control Roll: zero shared actual draws.
+  Explicit comparison keys do not turn skipped draws into matched-roll evidence.
+- Owner-approved primary importance1 amendment passed. Original importance1/2
+  remains a NoReasons/restore control; no invented learning or changed threshold.
+- Six new groups, M33 math/privacy and original comparison admission controls pass;
+  exact repeat/restore through10, hidden-truth/missing-evidence/candidate controls
+  and late5 atomic rollback included. Twelve production/test files, two evidence
+  files; validation below15 minutes, longest283 seconds. Required static,
+  preservation, research and staged-size checks pass.
+- Full21 members/15 families/132 clauses, broader category/configuration coverage
+  and a same-category Need producer remain open. No new verdict or debt closure.
+- Stop this milestone on pass. Before further code, name the next bounded causal
+  connection and affected pinned comparisons in a committed card. No UI,
+  multi-character dependency, category/storage expansion or audit campaign implied.

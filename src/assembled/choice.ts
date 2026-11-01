@@ -1,10 +1,11 @@
+import {receivingRecord as rec} from './codecs';
 /** assembled-character-comparison/0.1: exact predecessor port; receiving codec successor only. */
 /** task-decision-expression/0.1-candidate and task-identity-evidence/0.1-candidate.
  * Frozen choice meaning has no state or execution operand. */
 import {list,unsigned as u,text,typedIdentifier,type CanonicalValue} from '../substrate/canonicalEncoding';
 import {cognitiveRecord as r,cognitiveNamed as named} from './codecs';
 import {choiceAlignment,readQ,qValue,ZERO} from '../campaign2/cognitiveMath';
-import {dataRecord as rec,dataField as f,dataItems as items,dataUnsigned as uint,dataKey as key,invalidModel} from '../campaign2/canonicalData';
+import {dataField as f,dataItems as items,dataUnsigned as uint,dataKey as key,invalidModel} from '../campaign2/canonicalData';
 
 export function chosenData(resolution:CanonicalValue){const result=rec(f(rec(resolution,409n),4n),419n);if(uint(f(result,1n))!==3n)invalidModel('chosen resolution required');return rec(f(result,2n),420n);}
 export function intentOutput(occurrence:CanonicalValue,resolution:CanonicalValue){chosenData(resolution);return r(425,[occurrence,resolution]);}
