@@ -17,10 +17,10 @@ Meaningful voluntary choices can enter history; trivial or pressured choices can
   execution.ts, runtime.ts, traceBinding.ts; one test and fixture (9 total; max12).
 - Fixed witness: M29 declaration + M26 learnedData with no communication operations;
   seeds0..7, original3/5/7 opportunities. Only pressure at3 differs0 versus1/2.
-  First choices/intent and actual draws equal; later probes do not learn. Require
+  First choices/intent and actual draws equal; later significance0 contexts do not qualify. Require
   nonzero accepted history and later exact raw standing difference for >=1 seed;
   pressured histories empty. No later choice-effect claim or seed/fixture search.
-- Controls: original pure qualification oracle; significance, instruction, probe,
+- Controls: original pure qualification oracle; significance, instruction, native probe control,
   channel/authorship boundaries; world permission independence; malformed source,
   owner and journal rejection; exact repeat/restore and late rollback.
 - Checks: tsc; new tests in bounded groups; unchanged M29 positive; reference boundary;
@@ -34,3 +34,8 @@ Meaningful voluntary choices can enter history; trivial or pressured choices can
   No witness/budget exhaustion: record and stop, no replacement contrast.
 - RO009/014/020 conditional; RO019 closed. No Campaign3 verdict/reduction/closure.
   Full21 members/15 families/132 clauses remain open; no assembly completion claim.
+
+Pre-acceptance repair: the initial card incorrectly admitted a Learning flag, against
+M2 L6. Remove it; later significance0 supplies ordinary triviality. First pressure
+contrast/seeds/law/gate/budget unchanged. Initial partial execution retained; corrected
+full roster due. See contract correction, committed before revised execution.

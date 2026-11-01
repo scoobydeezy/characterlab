@@ -11,7 +11,7 @@ qualification. Its retained meaning supplies the existing next-decision standing
 path. Instruction alone is not constraint; execution outcome cannot rewrite intent.
 IDENTITY_ELIGIBILITY_CONTRACT.md and IDENTITY_PUBLIC_CONTRACT.md supply Threshold:
 significance>=1/2, perceived refusal pressure<1/2, nonzero alignment*authorship.
-Learning-disabled probes contribute zero. No eligible channel contributes zero.
+No eligible channel contributes zero. Test-only learning/probe tags never enter cognition.
 Use the inherited exact1e6 round-even fold and K1. Threshold is the adopted engineering
 reference, not evidence of universal psychological superiority. Graded, IgnorePressure,
 Frequency, NoFeedback and Refold remain original comparison sources; no selectors
@@ -23,8 +23,8 @@ forced-movement source or natural coercion/significance inference is added here.
 Registry slot22 is [assembled-identity-eligibility/0.1]; earlier22 slots unchanged.
 Input event/assembled-identity-context has phase30, empty dependencies, time1..100,
 one per actual deliberation opportunity and no other times, max16. Its safe payload
-is [assembled-identity-eligibility/0.1, significance, pressure, instruction, learning].
-Significance admits0,1/4,1; pressure0,1/2,1; final two fields are Boolean. This is
+is [assembled-identity-eligibility/0.1, significance, pressure, instruction].
+Significance admits0,1/4,1; pressure0,1/2,1; instruction is Boolean. This is
 explicit admitted character-side context, never permission or hidden-world truth.
 A source handler authenticates the committed original event and freezes its payload.
 At expression90, build a successor list envelope [version/expression, original426,
@@ -32,7 +32,7 @@ source event id, safe context]. The original426/428 remains a source choice reco
 its fixed fixture eligibility context428 is not the new expression's context.
 Qualification130 consumes only that generated envelope, never world/state/trace.
 Its list is [version/qualification, allocated1138 id, envelope, status, contribution].
-Status precedence: Probe; NoEligibleChannel; Insignificant; Constrained;
+Status precedence: NoEligibleChannel; Insignificant; Constrained;
 ZeroContribution; Accepted. Contribution is zero except Accepted, where it is the
 original420 authorshipPotential times original427 alignment. Instruction is retained
 but not a veto. Parent joins include the actual context event and expression event.
@@ -59,7 +59,7 @@ with the existing M26 learnedData(seed, default encounters, no communication ops
 Do not use M27's single-available-route Auto fixture. Fixed seeds0..7, unchanged
 original opportunities3/5/7, terminal10; no seed or input search. Add safe contexts
 at each opportunity. At3 compare significant voluntary with pressure1/2; later
-contexts are identical nonlearning probes. First decisions/intent/choice meaning,
+contexts have identical significance0 (trivial), so the same Threshold rule rejects them. First decisions/intent/choice meaning,
 actual random addresses and bytes must match. Require at least one nonzero earned
 entry, none in the pressured branch, and a later exact raw standing difference
 joined to that entry. Quantized modifier/choice differences are observations, not
@@ -67,7 +67,7 @@ required or claimed from unmatched later dice. This closes qualification-to-hist
 to-standing, not a new final-choice-effect or calibrated identity claim.
 Original native qualifier is an independent pure oracle for all context/status
 boundaries and authentic expressions. Additional bounded controls cover triviality,
-instruction, no learning/channel/authorship; world permission changes with safe
+instruction, no channel/authorship; original nonlearning probes remain controls; world permission changes with safe
 context held fixed; rejection of malformed/missing/duplicate contexts and forged
 state/owner/history; exact repeat/restore and a late rollback failure.
 One unchanged M29 positive regression guards the previous connection. No full
@@ -81,3 +81,14 @@ authorized without changing the contrast, law, seed roster or acceptance conditi
 No witness or exhausted budget means report the limitation, no replacement search.
 RO009/014/020 remain conditional; RO019 is closed. No reduction, new Campaign3
 verdict or obligation closure; final21 members/15 families/132 clauses remain open.
+
+## Pre-acceptance correction — 2026-10-31
+The first draft copied the native fixture Learning flag into admitted context. M2
+L6 expressly forbids authored Learn/Probe tags in cognition. That design was wrong.
+The initial positive command was interrupted after seeds0..3; its partial evidence
+is retained, not accepted. Remove the flag and Probe status from the successor;
+retain native Probe as a control only. Later opportunities use significance0,
+an already-admitted trivial context, instead of a test-only learning switch.
+The first pressure contrast, original opportunities, seeds, reference law, numeric
+calibration, acceptance condition and cumulative budget are unchanged. Commit this
+correction before revised execution; no replacement search or expanded capability.
