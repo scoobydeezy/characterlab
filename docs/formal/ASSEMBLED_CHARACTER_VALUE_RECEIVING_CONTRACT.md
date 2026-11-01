@@ -77,10 +77,29 @@ rejections, repeat and checkpoint continuation and atomic late failure. Hidden
 physical success at fixed reports must preserve Value motivation. First Value
 consolidation at140 cannot affect current60/80. No earlier learned initial state.
 
-Eleven planned production/test files (limit12);20 evidence files/5MiB;600 seconds per
+Twelve planned production/test files (limit12);20 evidence files/5MiB;600 seconds per
 command,1800 total including failures/repairs. RO010/020 limits preserved; no new
 Campaign3 verdict, reduction or obligation closure. Full21/15/132 remains open.
 
 Pre-runtime repair: original strict record readers admit version1 only. The two
 existing downstream receiving adapters (arbitration and choice) also need the
 versioned reader; plan11 files, still below12. No equation/source/input changes.
+
+## Pre-comparison calibration and no-choice repair
+
+The original Values receiver uses threshold0, cutoffs1/10,1/5,3/5,4/5,9/10
+and unused unit1/cap3 modifiers. Value compilation must retain exactly that
+calibration; the real task goals retain their existing threshold37/100. Reusing
+the task threshold for Value would silently change L7 and suppress every first
+preference1/2. Keep the two named calibrations distinct, never tune either.
+
+The fixed importance1/2 comparator yields bounded task Base1/3 and NoReasons
+at3, before any acquisition. Keep this failed witness as a NoReasons control.
+The old self-belief lifecycle incorrectly demands a qualification even on a
+NoReasons/NoCandidates resolution. On the actual authenticated resolution at80,
+record whether choice exists. No choice permits no expression, qualification
+or learning; prepareCommit still requires current context/appraisal and that
+resolution. Chosen branches still require the full qualification/update barrier.
+This uses one transient handler flag, no psychological state or synthetic evidence.
+Twelve files including selfBelief; no further breadth. Fixture amendment pending
+owner response; no changes to the primary inputs without it.
