@@ -1,0 +1,65 @@
+/** assembled-character-causal-attribution/0.1: safe diagnostics -> prior causal appraisal. */
+import {list,text,unsigned,type CanonicalValue} from '../substrate/canonicalEncoding';
+import type {AuthoritativeState,StatePath,StatePatch,ActualReadRecord} from '../substrate/state';
+import {SchedulerContractError,type ScheduledEvent,type EventEmission,type EventHandlerContext} from '../substrate/scheduler';
+import {scheduledEventValue} from '../substrate/persistence';
+import {traceRecordValue} from '../substrate/trace';
+import {simInstant} from '../substrate/time';
+import {ExactRational as Q} from '../substrate/exactMath';
+import {compareAffectFactors} from '../campaign3/affectFactorComparison';
+import {dataItems as items,dataText as txt,dataUnsigned as uint,dataKey as key,dataIdentity as id,invalidModel} from '../campaign2/canonicalData';
+import {qValue} from '../campaign2/cognitiveMath';
+import type {compileCampaign2StateModel} from '../campaign2/stateModel';
+import {KNOWLEDGE_OWNER,type Strategy} from './strategy';
+import {outcomePath,outcomeJournal} from './performance';
+import {sid,pattern} from './skill';
+export const CAUSAL='assembled-causal/0.1',CAUSAL_OBS=CAUSAL+'/observation',CAUSAL_QUERY=CAUSAL+'/context',CAUSAL_APPRAISAL=CAUSAL+'/appraisal',CAUSAL_VERSION='assembled-character-causal-attribution/0.1-candidate';
+export const CAUSAL_SOURCE=sid(1001,'event/assembled-causal-source'),CAUSAL_CONTEXT=sid(1001,'event/assembled-causal-context'),CAUSAL_OBSERVE=sid(1001,'event/assembled-causal-observe'),CAUSAL_EVIDENCE=sid(1001,'event/assembled-causal-evidence'),CAUSAL_LEARN=sid(1001,'event/assembled-causal-learn');
+export const causalPath=(task:CanonicalValue):StatePath=>({rootStateTypeId:1000n,fieldId:6n,selectors:[{kind:'mapKey',key:task}]});
+const require=(b:boolean,s:string)=>{if(!b)invalidModel('causal '+s);};
+export type CausalLaw='JointDiagnostics'|'MotionOnly'|'OutcomeOnly'|'NoLearning';
+export const lamp=(v:CanonicalValue):boolean|null=>{if(typeof v==='boolean')return v;require(v.kind==='list'&&v.items.length===0,'optional lamp');return null;};
+function task(v:CanonicalValue,routes:Strategy){require(routes.some(r=>key(r.task)===key(v)),'task');}
+export function causalSource(v:CanonicalValue,routes:Strategy){const a=items(v,'list');require(a.length===7&&txt(a[0])===CAUSAL&&typeof a[4]==='boolean','source');task(a[1],routes);const ticket=uint(a[2]),receipt=uint(a[3]);require(ticket>=1n&&ticket<=100n&&receipt>=1n&&receipt<=16n,'ticket/receipt');return {task:a[1],ticket,receipt,visible:a[4]===true,motion:lamp(a[5]),drag:lamp(a[6])};}
+export function causalContext(v:CanonicalValue,routes:Strategy){const a=items(v,'list');require(a.length===4&&txt(a[0])===CAUSAL_QUERY,'context');task(a[1],routes);const ticket=uint(a[2]),goal=txt(a[3]);require(ticket>=1n&&ticket<=100n&&['ProtectRoute','RepairCapability'].includes(goal),'query');return {task:a[1],ticket,goal:goal as 'ProtectRoute'|'RepairCapability'};}
+export function diagnostic(v:CanonicalValue,expectedTask:CanonicalValue){const a=items(v,'list');require(a.length===7&&txt(a[0])===CAUSAL_OBS&&key(a[2])===key(expectedTask),'observation');const at=uint(a[1]),ticket=uint(a[3]),receipt=uint(a[4]),motion=lamp(a[5]),drag=lamp(a[6]);require(at>=1n&&at<=100n&&ticket>=1n&&ticket<at&&receipt>=1n&&receipt<=16n&&(motion!==null||drag!==null),'observation domain');return {at,ticket,receipt,motion,drag};}
+export function causalJournal(v:CanonicalValue|undefined,t:CanonicalValue){if(v===undefined)return [] as CanonicalValue[];const a=items(v,'list');require(a.length===2&&txt(a[0])===CAUSAL,'journal');const rows=[...items(a[1],'list')];require(rows.length>0&&rows.length<=16,'capacity');let last=0n;for(const row of rows){const o=diagnostic(row,t);require(o.at>last,'order');last=o.at;}return rows;}
+export function appendDiagnostic(prior:CanonicalValue|undefined,observation:CanonicalValue,t:CanonicalValue){const rows=causalJournal(prior,t),value=list([text(CAUSAL),list([...rows,observation])]);causalJournal(value,t);return value;}
+export function inferCause(outcome:boolean|null,diagnostics:readonly {receipt:bigint;motion:boolean|null;drag:boolean|null}[],law:CausalLaw='JointDiagnostics'){
+ require(['JointDiagnostics','MotionOnly','OutcomeOnly','NoLearning'].includes(law),'law');
+ if(outcome===null||law==='NoLearning')return {status:'Unknown',blockage:null,limitation:null};
+ if(outcome)return {status:'NotFailure',blockage:null,limitation:null};
+ let motion:boolean|null=null,drag:boolean|null=null;const seen=new Set<bigint>();
+ for(const d of diagnostics){if(seen.has(d.receipt))continue;seen.add(d.receipt);if(d.motion!==null)motion=d.motion;if(d.drag!==null)drag=d.drag;}
+ let odds=Q.of(1n);for(const v of law==='OutcomeOnly'?[]:law==='MotionOnly'?[motion]:[motion,drag])if(v!==null)odds=odds.multiply(v?Q.of(3n):Q.of(1n,3n));
+ const blockage=odds.divide(Q.of(1n).add(odds));return {status:blockage.compare(Q.of(1n,2n))===0?'Ambiguous':blockage.compare(Q.of(1n,2n))>0?'Obstruction':'Limitation',blockage,limitation:Q.of(1n).subtract(blockage)};
+}
+export function causalAffect(j:ReturnType<typeof inferCause>,goal:'ProtectRoute'|'RepairCapability'){require(['ProtectRoute','RepairCapability'].includes(goal),'appraisal goal');return compareAffectFactors({likelihood:(goal==='ProtectRoute'?j.blockage:j.limitation)??undefined,severity:Q.of(1n),vulnerability:Q.of(1n),control:Q.of(0n)},'SplitExposure');}
+export function createCausalExecution(C:CanonicalValue,routes:Strategy,stateModel:ReturnType<typeof compileCampaign2StateModel>,originals:readonly ScheduledEvent[],model:CanonicalValue,run:CanonicalValue){
+ const fp=(e:ScheduledEvent)=>key(scheduledEventValue(e)),fail=(s:string):never=>{throw new SchedulerContractError('INPUT_NOT_ADMITTED','causal '+s);};
+ let active=false,at=0n,unbound=0,setting:ScheduledEvent|undefined,appraised=false;const pending=new Map<string,ScheduledEvent>(),used=new Set<bigint>();
+ const read=(s:AuthoritativeState,p:StatePath)=>{const v=stateModel.read(s,p);return {...v,record:{accessorId:sid(1028,'accessor/causal'),path:p,presence:v.presence,value:v.value,derivedSources:[]} as ActualReadRecord};};
+ const trace=(event:ScheduledEvent,input:CanonicalValue,output:CanonicalValue,children:readonly ScheduledEvent[]=[],reads:readonly ActualReadRecord[]=[],patch:StatePatch={operations:[]},diffs:ReturnType<typeof stateModel.applyPatch>['diffs']=[])=>traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model,runIdentity:run,event,seamId:sid(1036,'seam/assembled-causal-attribution'),seamVersion:CAUSAL_VERSION,recordKind:event.eventTypeId,subjectIds:[id(C)],sourceRecordIds:[],registeredReadDomain:reads.map(r=>pattern(r.path)),actualReadRecords:reads,inputProjection:input,outputProjection:output,randomDrawRecords:[],quantizationOperations:[],statePatch:patch,structuralMutationDiffs:diffs,emittedEvents:children,invariantResults:[]});
+ const admit=(e:ScheduledEvent,phase:bigint)=>{if(!active||e.dueAt!==at||e.phase!==phase||!pending.delete(fp(e)))fail('unbound generated event');};
+ const original=(e:ScheduledEvent,phase:bigint)=>{if(!active||e.dueAt!==at||e.phase!==phase||used.has(e.eventId)||!originals.some(x=>fp(x)===fp(e)))fail('unbound source');used.add(e.eventId);};
+ return Object.freeze({
+ eventTypes:()=>[CAUSAL_SOURCE,CAUSAL_CONTEXT,CAUSAL_OBSERVE,CAUSAL_EVIDENCE,CAUSAL_LEARN],isLearning:(e:ScheduledEvent)=>key(e.eventTypeId)===key(CAUSAL_LEARN),
+ begin(instant:bigint){if(active)fail('already active');active=true;at=instant;unbound=0;setting=undefined;appraised=false;pending.clear();used.clear();},
+ close(){active=false;pending.clear();used.clear();setting=undefined;unbound=0;},
+ parents:()=>setting?[setting.eventId]:[],
+ prepareCommit(){if(!active||unbound||pending.size||originals.some(e=>e.dueAt===at&&!used.has(e.eventId))||setting&&!appraised)fail('unfinished instant');},
+ execute({event,state}:EventHandlerContext<AuthoritativeState>){
+  const kind=key(event.eventTypeId),outputs:CanonicalValue[]=[],emissions:EventEmission[]=[];
+  const emit=(phase:bigint,eventTypeId:ReturnType<typeof sid>,payload:CanonicalValue)=>emissions.push({dueAt:simInstant(at),phase,eventTypeId,payload,dependencies:list([])});
+  if(kind===key(CAUSAL_CONTEXT)){original(event,30n);if(setting)fail('duplicate context');causalContext(event.payload,routes);setting=structuredClone(event);}
+  else if(kind===key(CAUSAL_SOURCE)){original(event,10n);const s=causalSource(event.payload,routes);if(s.visible&&(s.motion!==null||s.drag!==null)){const a=items(event.payload,'list');emit(14n,CAUSAL_OBSERVE,list([text(CAUSAL_OBS),unsigned(at),s.task,unsigned(s.ticket),unsigned(s.receipt),a[5],a[6]]));}}
+  else if(kind===key(CAUSAL_OBSERVE)){admit(event,14n);diagnostic(event.payload,items(event.payload,'list')[2]);outputs.push(event.payload);emit(130n,CAUSAL_EVIDENCE,event.payload);}
+  else if(kind===key(CAUSAL_EVIDENCE)){admit(event,130n);emit(140n,CAUSAL_LEARN,event.payload);}
+  else fail('learning requires prepared stage');
+  let bound=false;unbound++;
+  return {nextState:state,outputs,emittedEvents:emissions,traceContributions:[],traceFactory(children:readonly ScheduledEvent[]){if(!active||bound||children.length!==emissions.length)fail('children');for(const [i,c]of children.entries()){const e=emissions[i];if(c.eventId===event.eventId||c.eventSequence<=event.eventSequence||fp(c)!==fp({...e,eventId:c.eventId,eventSequence:c.eventSequence,causalParentEventIds:[event.eventId]}))fail('child association');pending.set(fp(c),structuredClone(c));}bound=true;unbound--;return [trace(event,event.payload,list(outputs),children)];}};
+ },
+ appraise(e:ScheduledEvent,s:AuthoritativeState){if(!active||!setting||appraised||e.dueAt!==at||e.phase!==50n)fail('appraisal lifecycle');appraised=true;const ctx=causalContext(setting!.payload,routes),outcomes=read(s,outcomePath(ctx.task)),diagnostics=read(s,causalPath(ctx.task)),rows=outcomeJournal(outcomes.value,ctx.task,routes,true),history=causalJournal(diagnostics.value,ctx.task);if(rows.some(v=>uint(items(v,'list')[2])>=at)||history.some(v=>diagnostic(v,ctx.task).at>=at))fail('same-instant evidence');const observed=rows.find(v=>uint(items(v,'list')[2])===ctx.ticket),selected=history.filter(v=>diagnostic(v,ctx.task).ticket===ctx.ticket),j=inferCause(observed?items(observed,'list')[6]===true:null,selected.map(v=>diagnostic(v,ctx.task))),a=causalAffect(j,ctx.goal),report=list([text(CAUSAL_APPRAISAL),unsigned(at),ctx.task,unsigned(ctx.ticket),text(ctx.goal),text(j.status),j.blockage?qValue(j.blockage):list([]),j.limitation?qValue(j.limitation):list([]),a.status==='Known'?list(a.coordinates.map(qValue)):list([]),observed??list([]),list(selected)]);return {report,trace:()=>trace(e,list([setting!.payload,outcomes.value??list([]),diagnostics.value??list([])]),report,[],[outcomes.record,diagnostics.record])};},
+ prepare(events:readonly ScheduledEvent[],B0:AuthoritativeState){if(events.length!==1||key(events[0].eventTypeId)!==key(CAUSAL_LEARN))fail('learning multiplicity');const e=events[0];admit(e,140n);const t=items(e.payload,'list')[2],p=causalPath(t),o=diagnostic(e.payload,t);if(o.at!==at)fail('learning time');const prior=read(B0,p),next=appendDiagnostic(prior.value,e.payload,t),patch:StatePatch={operations:[{kind:'set',path:p,expected:prior.presence?{presence:true,value:prior.value!}:{presence:false},newValue:next}]};let executed=false,finished=false,rows:CanonicalValue[]=[];return {execute(ctx:EventHandlerContext<AuthoritativeState>){if(executed||finished||fp(ctx.event)!==fp(e))fail('learning association');executed=true;return {nextState:B0,outputs:[],emittedEvents:[],traceContributions:[]};},finish(state:AuthoritativeState){if(!executed||finished)fail('learning finish');finished=true;const result=stateModel.applyPatch(state,patch,KNOWLEDGE_OWNER,{writableRoots:[1000n],targetPaths:[p]});rows=[trace(e,e.payload,next,[],[prior.record],patch,result.diffs)];return result.state;},traces(){if(!finished)fail('trace before finish');return rows;}};}
+ });
+}

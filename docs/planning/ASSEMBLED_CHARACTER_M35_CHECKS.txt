@@ -1,0 +1,164 @@
+
+=== initial production typecheck ===
+
+M35_CHECK initial production typecheck exit=0 seconds=15.75
+
+=== production and tests typecheck ===
+src/test/assembledCausalAttribution.test.ts(67,371): error TS2353: Object literal may only specify known properties, and 'expected' does not exist in type 'RemovePatchOperation'.
+
+M35_CHECK production and tests typecheck exit=1 seconds=15.41
+
+=== correct removal control shape typecheck ===
+src/test/assembledCausalAttribution.test.ts(67,351): error TS2322: Type '{ kind: "remove"; path: StatePath; }' is not assignable to type 'PatchOperation'.
+  Property 'expectedOldValue' is missing in type '{ kind: "remove"; path: StatePath; }' but required in type 'RemovePatchOperation'.
+
+M35_CHECK correct removal control shape typecheck exit=1 seconds=15.23
+
+=== original comparison and admission controls ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCausalAttribution.test.ts > math: all original latent-cause cases and laws preserve inference and appraisal
+M35 original14 cases x4 laws x6 prefixes =336 exact inference/appraisal comparisons
+
+stdout | src/test/assembledCausalAttribution.test.ts > admission: source, ownership, append-only history and generated-event guards
+M35 malformed source/admission, absent learned S0, sole owner, immutable history and bound generated evidence guards
+
+ ✓ src/test/assembledCausalAttribution.test.ts (7 tests | 5 skipped) 24907ms
+   ✓ admission: source, ownership, append-only history and generated-event guards 24869ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 5 skipped (7)
+   Start at  17:14:23
+   Duration  28.31s (transform 1.83s, setup 0ms, collect 2.79s, tests 24.91s, environment 0ms, prepare 305ms)
+
+
+M35_CHECK original comparison and admission controls exit=0 seconds=29.74
+
+=== actual attempt correction and goal appraisal ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCausalAttribution.test.ts > connection: actual failed attempt, later correction and independent goal appraisal
+M35 actual3 intent/outcome -> diagnostics4/6 -> appraisal5/7 pB1/10 then9/10; goal complements without changing knowledge
+
+ ✓ src/test/assembledCausalAttribution.test.ts (7 tests | 6 skipped) 63341ms
+   ✓ connection: actual failed attempt, later correction and independent goal appraisal 63340ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  17:15:04
+   Duration  66.47s (transform 1.80s, setup 0ms, collect 2.73s, tests 63.34s, environment 0ms, prepare 116ms)
+
+
+M35_CHECK actual attempt correction and goal appraisal exit=0 seconds=66.98
+
+=== hidden physical truth and denied diagnostics ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCausalAttribution.test.ts > privacy: hidden physical outcome and denied changed displays
+M35 hidden physical success/failure and denied changed diagnostic equality
+
+ ✓ src/test/assembledCausalAttribution.test.ts (7 tests | 6 skipped) 76441ms
+   ✓ privacy: hidden physical outcome and denied changed displays 76440ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  17:16:17
+   Duration  79.61s (transform 1.82s, setup 0ms, collect 2.75s, tests 76.44s, environment 0ms, prepare 118ms)
+
+
+M35_CHECK hidden physical truth and denied diagnostics exit=0 seconds=80.12
+
+=== missing duplicate foreign and current evidence ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCausalAttribution.test.ts > gates: missing outcome, duplicate receipt, foreign ticket and current evidence
+M35 missing original, first-receipt wins, foreign ticket and same-instant correction exclusion
+
+ ✓ src/test/assembledCausalAttribution.test.ts (7 tests | 6 skipped) 100448ms
+   ✓ gates: missing outcome, duplicate receipt, foreign ticket and current evidence 100447ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  17:17:43
+   Duration  103.59s (transform 1.80s, setup 0ms, collect 2.74s, tests 100.45s, environment 0ms, prepare 122ms)
+
+
+M35_CHECK missing duplicate foreign and current evidence exit=0 seconds=104.1
+
+=== exact repeat and restored continuation ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCausalAttribution.test.ts > persistence: exact repeat3 and restore5 through10
+M35 repeat3 and every restored settled state/output/trace/save5..10 exact
+
+ ✓ src/test/assembledCausalAttribution.test.ts (7 tests | 6 skipped) 107659ms
+   ✓ persistence: exact repeat3 and restore5 through10 107659ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  17:19:33
+   Duration  110.92s (transform 1.81s, setup 0ms, collect 2.74s, tests 107.66s, environment 0ms, prepare 121ms)
+
+
+M35_CHECK exact repeat and restored continuation exit=0 seconds=111.42
+
+=== late shared instant atomic rollback ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCausalAttribution.test.ts > rollback: late shared instant publishes no partial knowledge or RNG
+M35 late7 atomic failure cap73/74 preserves state/output/trace/RNG
+
+ ✓ src/test/assembledCausalAttribution.test.ts (7 tests | 6 skipped) 59745ms
+   ✓ rollback: late shared instant publishes no partial knowledge or RNG 59744ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  17:21:31
+   Duration  62.93s (transform 1.83s, setup 0ms, collect 2.76s, tests 59.75s, environment 0ms, prepare 119ms)
+
+
+M35_CHECK late shared instant atomic rollback exit=0 seconds=63.44
+
+=== unchanged M34 reason math and privacy regressions ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledValueReceiving.test.ts > math: original receiver modes, separate grounds and closed successor codec
+M34 original receiver 36 cases, numeric tie/aligned domain, separate motive and old-model/version/role guards PASS
+
+stdout | src/test/assembledValueReceiving.test.ts > privacy: fixed reports, missing evidence and actual route gates
+M34 hidden physical truth, missing report, no/foreign candidate, no-goal Value and untouched goal meaning PASS
+
+ ✓ src/test/assembledValueReceiving.test.ts (6 tests | 4 skipped) 57379ms
+   ✓ math: original receiver modes, separate grounds and closed successor codec 9458ms
+   ✓ privacy: fixed reports, missing evidence and actual route gates 47920ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 4 skipped (6)
+   Start at  17:22:41
+   Duration  60.60s (transform 1.82s, setup 0ms, collect 2.82s, tests 57.38s, environment 0ms, prepare 124ms)
+
+
+M35_CHECK unchanged M34 reason math and privacy regressions exit=0 seconds=61.11
+
+=== final TypeScript ===
+
+M35_CHECK final TypeScript exit=0 seconds=15.19
+
+=== reference boundary ===
+Reference boundary check passed.
+
+M35_CHECK reference boundary exit=0 seconds=2.24
+
+=== research obligations ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M35_CHECK research obligations exit=0 seconds=3.37
+
+M35 final guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and M22-M34 retained tests unchanged; document/evidence caps. seconds=9.69
