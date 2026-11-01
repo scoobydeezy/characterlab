@@ -1,36 +1,43 @@
-# Current work — M31 complete
+# Current work — M32 developmental formation to reasons
 
-The character now forms self-belief from a permitted report of its own qualified
-choice and appraises that belief later. Earned identity can exist without self-knowledge.
+A qualified choice will shape acquired disposition with the developmental gain
+at that event, and the retained disposition will enter later standing reasons.
 
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
-- Result: [M31](ASSEMBLED_CHARACTER_M31_RESULT.md); raw checks alongside it.
-- Plan/contract983a1a84 preceded code. Contract:
-  ../formal/ASSEMBLED_CHARACTER_SELF_BELIEF_CONTRACT.md; rules/registry0.32,24 slots.
-- Existing knowledge owner1000/5 learns safe self reports at common140; existing
-  identity415 stays distinct. Prior belief plus safe goal -> appraisal50. One runtime,
-  scheduler, state, trace and save. No second identity bonus or new choice modifier.
-- Fixed seeds0..7, opportunities3/5/7, terminal10: eight visibility pairs pass.
-  Earned journals and choices identical;78 actual draw records match addresses/bytes.
-  All eight visible branches learn mean-1; denied branches remain unknown.
-  First appraisal unknown; later adverse1 versus unknown. Goal-only seed0 flips
-  adverse1->0 with unchanged belief/choices. Actual success/denial does not author belief.
-- Six new groups pass: primary;128 original mathematical appraisal comparisons;
-  goal/pressure/physical privacy; exact repeat3/restore3 through10; ownership/admission;
-  late3 rollback (58 events, cap57). Unchanged M30 math/standing checks pass.
-- Retained correction: episodic trace merge assumed one row/event and lost the new
-  learning trace. Join all rows by event identity; retention trace attaches once.
-  Initial test typing error and pre-execution preflight/causal-parent corrections logged.
-- Ten production/test files; two evidence files. Longest check391s; all checks and
-  guards under13 minutes including failures. TypeScript/boundary/research/preservation/
-  staged size pass.105 historical dependency blobs and retained controls unchanged.
-- This ports the accepted controlled self-report source and Mean/SplitExposure laws
-  (engineering defaults). It does not establish natural introspection, observer belief,
-  general affect dynamics, developmental disposition or full identity/biology mapping.
-  RO009/010/014/020 stay conditional;019 closed. No new Campaign3 verdict/reduction.
-  Full21 members/15 families/132 clauses remain open. No UI or autonomous partners.
-
-Continue with a new bounded card grounded in the reconciliation register and accepted
-contracts. Ordinary bug repair is authorized; preserve failures, comparison meaning,
-existing controls and the finite budget. Keep integrating one continuing character.
+- Prior M31: ASSEMBLED_CHARACTER_M31_RESULT.md, d2b88864.
+- Contract: ../formal/ASSEMBLED_CHARACTER_FORMATION_CONTRACT.md; rules/registry0.33.
+- Scope: actual Threshold qualification130 + existing developmental phase1500 ->
+  acquired disposition1503 at common140 -> later standing80. One continuing model.
+- M2 M15/M16/L6, Brief12.12/12.15-1. Ramp and P'=clamp(P+c*g/4,+/-1/2) adopted;
+  engineering defaults, no verdict of universal superiority. Preserve original
+  Development, Plastic/Leaky/JointMax/JointAdd and standing-only controls unchanged.
+- U1: same holder/CommitmentFidelity; existing phase owner, separate disposition
+  authority1503/1. Retain event-time qualification ID, c, phase, gain and applied delta.
+  No learning/probe tag, new phase source, copied runtime or authored learned state.
+- Receiving: sole personality term P times the existing candidate choiceAlignment
+  of unadapted task meaning, once per existing task-origin source. No extra motive.
+  Do not add the old identity fold. Keep original meaning, dice units1/4/cap3,
+  journal415, self-belief1000/5, physical execution and other reason sources distinct.
+- Fixed primary: M31 scenario, seeds0..7, opportunities3/5/7, terminal10. Only first
+  practice-setting phase differs0/4; both phase4 from5. No fixture/search/tuning.
+  First actual choices/qualification/draws equal. At5 non-personality raw signals and
+  meaning equal; exact P and standing differ, consumed prior history/phase traced.
+  Later choice changes are observations only, no claim from unmatched later dice.
+- Tests: original Development Ramp row oracle (phases0..4, seeds0..3, four eligible
+  frames each); pure saturation/contrary histories and two-option direction mapping;
+  pressure/physical permission/self-report separation; immutable event-time weights;
+  repeat3/restore3 through10; ownership/fold/append/S0 negatives; late3 rollback.
+  Unchanged M31 math/privacy and M30 exact-standing regressions guard earlier versions.
+- Nine production/test files: formation, skill, state, model, execution, runtime,
+  traceBinding, one fixture and one test. Extend existing state composition; no framework.
+- Checks: targeted groups one at a time, tsc, boundary/research,105 frozen closure
+  blobs/historical trees/retained tests, document/evidence caps and staged Git size.
+  Each <=600s; total <=1800s including failures/repairs. <=12 production/test files;
+  <=20 evidence files/5MiB (one result/raw log). Stop on pass, no browser/build/replay.
+- Done: first evidence is unchanged, event-time gain persists at common mature phase,
+  later reasons consume only the new personality term, and declared checks pass.
+- Limits: task-fidelity scalar only; no general constitution axes, biology/cross-context
+  identity, natural maturation sensing or whole-family closure. RO009 changed receiving
+  calibration is explicitly bounded here; no waiver of its broader comparisons.
+  Full21/15/132 remains open. Ordinary repairs authorized; no acceptance changes.
