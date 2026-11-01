@@ -53,10 +53,12 @@ The formation history stores references/weights, not another copy of biography.
 At raw-signals80 first compute the unchanged unadapted task signals and meaning map
 with the old identity-fold feedback disabled. For each live candidate/origin source,
 a=choiceAlignment(candidate,unadapted meaning map), using the SAME accepted formula
-as frozen expression alignment: clamp(own meaning minus sum(other meanings),[-1,1]).
+as frozen expression alignment: x/(1+abs(x)), where x is own meaning minus the sum
+of other meanings. This is the existing bounded() kernel, not clipping.
 Emit standing role3 with strength P*a and original qualification support IDs from
 formation entries. Zero P/alignment emits nothing. This gives the original opposing
-signs for two options with meanings1/0 and extends the same semantic correspondence
+signs for two options with meanings1/0 (alignments+/-1/2; strengths+/-P/2, not the
+native fixture's full +/-P) and extends the same semantic correspondence
 to admitted1..3 actions. Existing source grouping/dice bounding applies once; no
 new motive, die, feedback factor, or contribution to the meaning map. The original
 native two-option profile is a control, not an alternate pipeline. Exact old-fold
@@ -91,3 +93,11 @@ owner/path/order/fold/append/S0 and late3 rollback negatives. Run unchanged M31
 math/privacy and M30 exact-standing tests plus tsc/boundary/research/blob guards.
 Nine production/test files,20 evidence files/5MiB max;600s/command,1800s total checks
 including repairs. Stop after pass. Full21 members/15 families/132 clauses stay open.
+
+## Pre-behavioral-check correction
+The first receiving unit assertion expected +/-1/4 for P1/4 with meanings1/0.
+Production used the named unchanged choiceAlignment kernel and returned+/-1/8.
+The mistaken prose said clipping; corrected above to x/(1+abs(x)). Keep the original
+failed assertion in M32_CHECKS. The choiceAlignment correspondence, production law,
+input/seed roster and required later-standing difference are unchanged. Native
+opposing-direction controls remain distinct in scale; no full native replay parity.

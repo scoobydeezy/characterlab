@@ -15,6 +15,8 @@ at that event, and the retained disposition will enter later standing reasons.
 - U1: same holder/CommitmentFidelity; existing phase owner, separate disposition
   authority1503/1. Retain event-time qualification ID, c, phase, gain and applied delta.
   No learning/probe tag, new phase source, copied runtime or authored learned state.
+- Formula correction: choiceAlignment uses x/(1+abs(x)), not clipping; native
+  opposing signs retained with explicitly different magnitude. Failed assertion logged.
 - Receiving: sole personality term P times the existing candidate choiceAlignment
   of unadapted task meaning, once per existing task-origin source. No extra motive.
   Do not add the old identity fold. Keep original meaning, dice units1/4/cap3,
