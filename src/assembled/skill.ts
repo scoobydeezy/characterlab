@@ -1,3 +1,4 @@
+import {formationPath,formationValue,FORMATION_OWNER} from './formation';
 /** assembled-character-procedural/0.1-candidate: one procedural owner, fixed L5/L6. */
 import {canonicalEncode as enc,list,text,unsigned,rational,typedIdentifier,type CanonicalValue} from '../substrate/canonicalEncoding';
 import {AuthoritativeState,StateAuthorityRegistry,applyStatePatch,restoreAuthoritativeState,statePathValue,type StatePath,type StatePathPattern,type StatePatch} from '../substrate/state';
@@ -28,11 +29,11 @@ export function skillValue(v?:CanonicalValue,procedure?:CanonicalValue){if(v===u
 export function phaseValue(v:CanonicalValue){const a=items(v,'list');if(a.length!==2||txt(a[0])!==PHASE||uint(a[1])>4n)invalidModel('development phase grammar');return Number(uint(a[1]));}
 export function practiced(K:Q,count:bigint,phase:number,procedure?:CanonicalValue){const gain=developmentalGain('Ramp',phase),candidate=K.add(gain.divide(Q.of(8n))),after=candidate.compare(Q.of(1n))>0?Q.of(1n):candidate;if(count>=100n)invalidModel('practice count bound');return {gain,after,value:list([text(procedure?PROCEDURES:SKILL),q(after),unsigned(count+1n),...(procedure?[procedure]:[])])};}
 /** Closed successor leaves; inherited303 is not a second competence representation. */
-export function withSkillState(base:ReturnType<typeof compileCampaign2StateModel>,C:CanonicalValue,procedures?:Procedures){
+export function withSkillState(base:ReturnType<typeof compileCampaign2StateModel>,C:CanonicalValue,procedures?:Procedures,formation=false){
  const distinct=procedures?[...new Map(procedures.map(x=>[key(x.procedure),x.procedure])).values()]:undefined;
- const paths=[...(distinct?distinct.map(p=>skillPath(C,p)):[skillPath(C)]),phasePath(C)],roots=[785n,1500n],isNew=(p:StatePath)=>roots.includes(p.rootStateTypeId),checkPath=(p:StatePath)=>{if(!paths.some(x=>key(statePathValue(x))===key(statePathValue(p))))invalidModel('foreign procedural/development path');};
- const check=(p:StatePath,v:CanonicalValue)=>{checkPath(p);if(p.rootStateTypeId===785n)skillValue(v,distinct?items((p.selectors[0] as {key:CanonicalValue}).key,'list')[1]:undefined);else phaseValue(v);};
- const authority=new StateAuthorityRegistry(paths.map(p=>({pattern:pattern(p),validateValue:(v:CanonicalValue)=>check(p,v),removalAllowed:false})),[{mutationAuthorityId:SKILL_OWNER,patterns:paths.filter(p=>p.rootStateTypeId===785n).map(pattern)},{mutationAuthorityId:PHASE_OWNER,patterns:[pattern(phasePath(C))]}]);
+ const paths=[...(distinct?distinct.map(p=>skillPath(C,p)):[skillPath(C)]),phasePath(C),...(formation?[formationPath(C)]:[])],roots=[785n,1500n,...(formation?[1503n]:[])],isNew=(p:StatePath)=>roots.includes(p.rootStateTypeId),checkPath=(p:StatePath)=>{if(!paths.some(x=>key(statePathValue(x))===key(statePathValue(p))))invalidModel('foreign procedural/development path');};
+ const check=(p:StatePath,v:CanonicalValue)=>{checkPath(p);if(p.rootStateTypeId===785n)skillValue(v,distinct?items((p.selectors[0] as {key:CanonicalValue}).key,'list')[1]:undefined);else if(p.rootStateTypeId===1503n)formationValue(v);else phaseValue(v);};
+ const authority=new StateAuthorityRegistry(paths.map(p=>({pattern:pattern(p),validateValue:(v:CanonicalValue)=>check(p,v),removalAllowed:false})),[{mutationAuthorityId:SKILL_OWNER,patterns:paths.filter(p=>p.rootStateTypeId===785n).map(pattern)},{mutationAuthorityId:PHASE_OWNER,patterns:[pattern(phasePath(C))]},...(formation?[{mutationAuthorityId:FORMATION_OWNER,patterns:[pattern(formationPath(C))]}]:[])]);
  const without=(s:AuthoritativeState)=>new AuthoritativeState(s.entries().filter(e=>!isNew(e.path)));
  function validateState(s:AuthoritativeState){if(s.entries().some(e=>e.path.rootStateTypeId===303n))invalidModel('legacy303 competence excluded from procedural successor');base.validateState(without(s));for(const e of s.entries().filter(e=>isNew(e.path)))check(e.path,e.value);}
  return Object.freeze({...base,validateState,
@@ -41,7 +42,7 @@ export function withSkillState(base:ReturnType<typeof compileCampaign2StateModel
   read(s:AuthoritativeState,p:StatePath){if(!isNew(p))return base.read(s,p);checkPath(p);const v=s.read(p);if(v.presence)check(p,v.value!);return v;},
   applyPatch(s:AuthoritativeState,p:StatePatch,owner:Parameters<typeof base.applyPatch>[2],scope?:Parameters<typeof base.applyPatch>[3]){
    const fresh=p.operations.filter(o=>isNew(o.path));if(fresh.length&&fresh.length!==p.operations.length)invalidModel('procedural writer crosses owner families');
-   if(fresh.length){for(const o of fresh){checkPath(o.path);if(scope&&(!scope.writableRoots.includes(o.path.rootStateTypeId)||!scope.targetPaths.some(x=>key(statePathValue(x))===key(statePathValue(o.path)))))invalidModel('procedural write scope');}const result=applyStatePatch(s,p,owner,authority);validateState(result.state);return result;}
+   if(fresh.length){for(const o of fresh){checkPath(o.path);if(o.path.rootStateTypeId===1503n){if(o.kind!=='set')invalidModel('formation append only');if(o.kind==='set'){const old=formationValue(s.read(o.path).value).entries,next=formationValue(o.newValue).entries;if(next.length!==old.length+1||key(list(next.slice(0,old.length)))!==key(list(old)))invalidModel('formation history rewrite');}}if(scope&&(!scope.writableRoots.includes(o.path.rootStateTypeId)||!scope.targetPaths.some(x=>key(statePathValue(x))===key(statePathValue(o.path)))))invalidModel('procedural write scope');}const result=applyStatePatch(s,p,owner,authority);validateState(result.state);return result;}
    const result=base.applyPatch(without(s),p,owner,scope),state=new AuthoritativeState([...result.state.entries(),...s.entries().filter(e=>isNew(e.path))]);validateState(state);return {...result,state};
   }
  });

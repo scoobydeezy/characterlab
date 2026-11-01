@@ -1,0 +1,193 @@
+
+=== typescript-initial ===
+src/assembled/execution.ts(89,673): error TS2304: Cannot find name 'qValue'.
+src/assembled/execution.ts(89,685): error TS2304: Cannot find name 'qValue'.
+
+M32_CHECK typescript-initial exit=1 seconds=15.24
+
+Corrected missing qValue import reported by TypeScript; no comparison or law change.
+
+=== typescript-tests ===
+
+M32_CHECK typescript-tests exit=0 seconds=14.91
+
+=== original-math-and-receiving ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledFormation.test.ts (6 tests | 1 failed | 5 skipped) 19111ms
+   × math: original Development rows, saturation, contrary evidence and direction mapping 19110ms
+     → expected { kind: 'rational', …(2) } to deeply equal { kind: 'rational', …(2) }
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledFormation.test.ts > math: original Development rows, saturation, contrary evidence and direction mapping
+AssertionError: expected { kind: 'rational', …(2) } to deeply equal { kind: 'rational', …(2) }
+
+- Expected
++ Received
+
+  Object {
+-   "denominator": 4n,
++   "denominator": 8n,
+    "kind": "rational",
+    "numerator": 1n,
+  }
+
+ ❯ src/test/assembledFormation.test.ts:51:502
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 5 skipped (6)
+   Start at  12:45:19
+   Duration  22.20s (transform 1.76s, setup 0ms, collect 2.68s, tests 19.11s, environment 0ms, prepare 128ms)
+
+
+M32_CHECK original-math-and-receiving exit=1 seconds=22.75
+
+Math correction: all80 original Development formation rows agreed before the final receiving assertion. The unchanged choiceAlignment helper bounds x as x/(1+abs(x)), not clipping. For meanings1/0 and P1/4 it yields +/-1/8. Correct contract prose and independent numeric assertion; production and fixed behavioral comparison unchanged. Native +/-P magnitude is an explicitly different fixture receiving scale.
+
+=== original-math-corrected-alignment-oracle ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledFormation.test.ts > math: original Development rows, saturation, contrary evidence and direction mapping
+M32 original Ramp oracle 80 rows; saturation/contrary/retained alternative and two-option signs PASS
+
+ ✓ src/test/assembledFormation.test.ts (6 tests | 5 skipped) 18801ms
+   ✓ math: original Development rows, saturation, contrary evidence and direction mapping 18800ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  12:46:42
+   Duration  21.84s (transform 1.74s, setup 0ms, collect 2.65s, tests 18.80s, environment 0ms, prepare 120ms)
+
+
+M32_CHECK original-math-corrected-alignment-oracle exit=0 seconds=22.35
+
+=== eight-development-history-pairs ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledFormation.test.ts > positive: event-time development persists and changes later standing from the same first choice
+M32 witness {"seed":0,"contribution":"-4167/15499","earlyP":"-4167/15499","matureP":"-4167/61996","commonPhase":4,"standingChanged":true}
+
+stdout | src/test/assembledFormation.test.ts > positive: event-time development persists and changes later standing from the same first choice
+M32 witness {"seed":1,"contribution":"-4167/15499","earlyP":"-4167/15499","matureP":"-4167/61996","commonPhase":4,"standingChanged":true}
+
+stdout | src/test/assembledFormation.test.ts > positive: event-time development persists and changes later standing from the same first choice
+M32 witness {"seed":2,"contribution":"-4347/15719","earlyP":"-4347/15719","matureP":"-4347/62876","commonPhase":4,"standingChanged":true}
+
+stdout | src/test/assembledFormation.test.ts > positive: event-time development persists and changes later standing from the same first choice
+M32 witness {"seed":3,"contribution":"-4347/15719","earlyP":"-4347/15719","matureP":"-4347/62876","commonPhase":4,"standingChanged":true}
+
+stdout | src/test/assembledFormation.test.ts > positive: event-time development persists and changes later standing from the same first choice
+M32 witness {"seed":4,"contribution":"-4941/16445","earlyP":"-4941/16445","matureP":"-4941/65780","commonPhase":4,"standingChanged":true}
+
+stdout | src/test/assembledFormation.test.ts > positive: event-time development persists and changes later standing from the same first choice
+M32 witness {"seed":5,"contribution":"-4941/16445","earlyP":"-4941/16445","matureP":"-4941/65780","commonPhase":4,"standingChanged":true}
+
+stdout | src/test/assembledFormation.test.ts > positive: event-time development persists and changes later standing from the same first choice
+M32 witness {"seed":6,"contribution":"-4167/15499","earlyP":"-4167/15499","matureP":"-4167/61996","commonPhase":4,"standingChanged":true}
+
+stdout | src/test/assembledFormation.test.ts > positive: event-time development persists and changes later standing from the same first choice
+M32 witness {"seed":7,"contribution":"-4347/15719","earlyP":"-4347/15719","matureP":"-4347/62876","commonPhase":4,"standingChanged":true}
+M32 eight history pairs; matched first actual draws=26
+
+ ✓ src/test/assembledFormation.test.ts (6 tests | 5 skipped) 326971ms
+   ✓ positive: event-time development persists and changes later standing from the same first choice 326970ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  12:47:50
+   Duration  330.06s (transform 1.74s, setup 0ms, collect 2.65s, tests 326.97s, environment 0ms, prepare 126ms)
+
+
+M32_CHECK eight-development-history-pairs exit=0 seconds=330.57
+
+=== privacy-continuation-admission-rollback ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledFormation.test.ts > privacy: pressure, execution and self-knowledge stay distinct from formation
+M32 pressure excludes; physical success and self-report do not author formation PASS
+
+stdout | src/test/assembledFormation.test.ts > persistence: exact repeat and restore retain original event-time weights
+M32 repeat3/restore3 every remaining snapshot/save PASS
+
+stdout | src/test/assembledFormation.test.ts > admission: sole formation owner, exact immutable history and no learned S0
+M32 authority/path/fold/immutability/S0/capacity negatives PASS
+
+stdout | src/test/assembledFormation.test.ts > rollback: late failure publishes no new formation or other learning
+M32 late3 atomic rollback events=58 cap=57
+
+ ✓ src/test/assembledFormation.test.ts (6 tests | 2 skipped) 171441ms
+   ✓ privacy: pressure, execution and self-knowledge stay distinct from formation 39641ms
+   ✓ persistence: exact repeat and restore retain original event-time weights 93573ms
+   ✓ admission: sole formation owner, exact immutable history and no learned S0 14564ms
+   ✓ rollback: late failure publishes no new formation or other learning 23661ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed | 2 skipped (6)
+   Start at  12:53:27
+   Duration  174.57s (transform 1.74s, setup 0ms, collect 2.65s, tests 171.44s, environment 0ms, prepare 128ms)
+
+
+M32_CHECK privacy-continuation-admission-rollback exit=0 seconds=175.08
+
+=== unchanged-M31-math-privacy ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSelfBelief.test.ts > math: exact original Mean and prospective appraisal with retained alternatives
+M31 original math oracle 128 appraisal cases; Mean/Latest/NoLearning and unknown/neutral retained
+
+stdout | src/test/assembledSelfBelief.test.ts > privacy: goal-only appraisal and actual execution are separate from self evidence
+M31 goal-only complementary appraisal, pressure exclusion and hidden execution separation PASS
+
+ ✓ src/test/assembledSelfBelief.test.ts (6 tests | 4 skipped) 52610ms
+   ✓ privacy: goal-only appraisal and actual execution are separate from self evidence 52584ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 4 skipped (6)
+   Start at  12:56:31
+   Duration  55.65s (transform 1.72s, setup 0ms, collect 2.62s, tests 52.61s, environment 0ms, prepare 123ms)
+
+
+M32_CHECK unchanged-M31-math-privacy exit=0 seconds=56.16
+
+=== unchanged-M30-standing ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledIdentityEligibility.test.ts > standing: numeric change equals the earned fold with original qualification support
+M30 exact standing delta -33607/46107 across 3 sources; qualification support joined
+
+ ✓ src/test/assembledIdentityEligibility.test.ts (7 tests | 6 skipped) 31850ms
+   ✓ standing: numeric change equals the earned fold with original qualification support 31849ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  12:57:38
+   Duration  34.88s (transform 1.73s, setup 0ms, collect 2.63s, tests 31.85s, environment 0ms, prepare 125ms)
+
+
+M32_CHECK unchanged-M30-standing exit=0 seconds=35.39
+
+=== typescript-final ===
+
+M32_CHECK typescript-final exit=0 seconds=14.99
+
+=== reference-boundary ===
+Reference boundary check passed.
+
+M32_CHECK reference-boundary exit=0 seconds=2.21
+
+=== research-obligations ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M32_CHECK research-obligations exit=0 seconds=3.23
+
+M32 final guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and M22-M31 retained tests unchanged; document/evidence caps. seconds=9.02

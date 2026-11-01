@@ -80,7 +80,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  const episodes=model.memory?withEpisodicState(inheritedState,C,model.body!):inheritedState;
  const embodied=model.body?withBodyState(episodes,C,model.body):episodes;
  const retained=model.retention?withRetentionState(embodied,C):embodied;
- const procedural=model.skill?withSkillState(retained,C,model.procedures):retained;
+ const procedural=model.skill?withSkillState(retained,C,model.procedures,model.formationEnabled):retained;
  const planned=model.strategy?withStrategyState(procedural,C,model.strategy):procedural;
  const prioritized=model.priority?withPriorityState(planned,tasks.map(t=>t.key)):planned;
  const forecasted=model.horizon?withHorizonState(prioritized,tasks.map(t=>t.key)):prioritized;
@@ -104,6 +104,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
    if(model.habit&&[821n,823n].includes(e.path.rootStateTypeId))invalidModel('initial habit/reward must be absent');
    if(model.priority&&e.path.rootStateTypeId===373n&&e.path.fieldId===3n)invalidModel('initial importance must be absent');
    if(model.strategy&&[996n,1000n].includes(e.path.rootStateTypeId))invalidModel('initial strategy state must be absent');
+   if(model.formationEnabled&&e.path.rootStateTypeId===1503n)invalidModel('initial formation must be absent');
    if(model.skill&&[785n,1500n].includes(e.path.rootStateTypeId))invalidModel('initial skill/development must be absent');
    if(e.path.rootStateTypeId===455n){const at=f(rec(e.value,454n),2n);if(typeof at==='boolean'||at.kind!=='signed'||at.value!==0n)invalidModel('initial body anchor must be at0');}
    if([346n,362n,415n].includes(e.path.rootStateTypeId))invalidModel('initial learned memory, prediction and identity must be empty');
