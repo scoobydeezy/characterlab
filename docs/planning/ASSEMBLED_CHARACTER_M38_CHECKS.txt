@@ -206,3 +206,235 @@ STOP after approved reserve10 connection failure: physical receipt arithmetic an
 
 M38 final guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and M22-M37 retained tests unchanged; document/evidence caps. seconds=9.39
 M38 validation seconds including guard=771.27
+
+=== dependency amendment typecheck ===
+
+M38_CHECK dependency amendment typecheck exit=0 seconds=15.4
+
+=== owner dependency correction live connection ONCE ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDelayedBody.test.ts > connection: a performed action waits for delivery, then changes permitted body appraisal and reasons
+M38 liveness PASS: both original physical-task rows have five known fields in both arms at5
+M38 draws A=0 B=4 matched=0; modes=[["1","1","1"],["1","3","1"]]
+
+ × src/test/assembledDelayedBody.test.ts > connection: a performed action waits for delivery, then changes permitted body appraisal and reasons 135719ms
+   → expected [ [ …(8) ], [ …(8) ], …(1) ] to deeply equal [ [ …(8) ], [ …(8) ], …(1) ]
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledDelayedBody.test.ts > connection: a performed action waits for delivery, then changes permitted body appraisal and reasons
+AssertionError: expected [ [ …(8) ], [ …(8) ], …(1) ] to deeply equal [ [ …(8) ], [ …(8) ], …(1) ]
+
+- Expected
++ Received
+
+  Array [
+    Array [
+      Object {
+        "denominator": 1n,
+        "kind": "rational",
+        "numerator": 0n,
+      },
+      Object {
+        "denominator": 1n,
+        "kind": "rational",
+        "numerator": 0n,
+      },
+      Object {
+        "denominator": 1n,
+        "kind": "rational",
+        "numerator": 0n,
+      },
+      true,
+      true,
+      true,
+      Object {
+        "kind": "unsigned",
+        "value": 0n,
+      },
+      Object {
+        "kind": "typedIdentifier",
+        "namespaceId": 1027n,
+        "payload": Object {
+          "kind": "text",
+          "value": "definition/procedure/a",
+        },
+      },
+    ],
+    Array [
+      Object {
+-       "denominator": 1n,
++       "denominator": 2n,
+        "kind": "rational",
+-       "numerator": 0n,
++       "numerator": 1n,
+      },
+      Object {
+        "denominator": 1n,
+        "kind": "rational",
+        "numerator": 0n,
+      },
+      Object {
+        "denominator": 1n,
+        "kind": "rational",
+        "numerator": 0n,
+      },
+      true,
+      true,
+      false,
+      Object {
+        "kind": "unsigned",
+        "value": 4n,
+      },
+      Object {
+        "kind": "typedIdentifier",
+        "namespaceId": 1027n,
+        "payload": Object {
+          "kind": "text",
+-         "value": "definition/procedure/b",
++         "value": "definition/procedure/a",
+        },
+      },
+    ],
+    Array [
+      Object {
+        "denominator": 2n,
+        "kind": "rational",
+        "numerator": 1n,
+      },
+      Object {
+        "denominator": 1n,
+        "kind": "rational",
+        "numerator": 0n,
+      },
+      Object {
+        "denominator": 1n,
+        "kind": "rational",
+        "numerator": 0n,
+      },
+      true,
+      true,
+      false,
+      Object {
+        "kind": "unsigned",
+        "value": 4n,
+      },
+      Object {
+        "kind": "typedIdentifier",
+        "namespaceId": 1027n,
+        "payload": Object {
+          "kind": "text",
+          "value": "definition/procedure/a",
+        },
+      },
+    ],
+  ]
+
+ ❯ src/test/assembledDelayedBody.test.ts:44:124
+     42|  expect(reports(a,ACTION_BODY)).toHaveLength(3);expect(reports(b,ACTIO…
+     43|  expect(reports(a,ACTION_BODY).map(x=>x[5])).toEqual(Array(3).fill(tex…
+     44|  expect(reports(b,SKILL_ACTUAL).map(x=>x[7])).toEqual([true,true,true]…
+       |                                                                                                                            ^
+     45|  expect(reports(a,SKILL_UPDATE)).toHaveLength(3);expect(reports(b,SKIL…
+     46|  const request=traceAt(b,ACTION_BODY_EVENT,3n)[0],receipt=traceAt(b,AC…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 5 skipped (6)
+   Start at  17:06:29
+   Duration  139.13s (transform 1.88s, setup 0ms, collect 2.92s, tests 135.72s, environment 0ms, prepare 138ms)
+
+
+M38_CHECK owner dependency correction live connection ONCE exit=1 seconds=139.69
+
+=== dependency corrected saturation hidden blocked zero controls ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDelayedBody.test.ts > saturation: original reserve100 masks the delivery contrast through the permitted interval
+M38 retained reserve100 saturation: receipt5 95+80 ->100, applied5/overflow75; permitted intervals/body factors equal; no choice-effect claim
+
+ ✓ src/test/assembledDelayedBody.test.ts > saturation: original reserve100 masks the delivery contrast through the permitted interval 72084ms
+ × src/test/assembledDelayedBody.test.ts > controls: hidden delivery cannot affect cognition; blocked and zero effects cannot invent gain 114012ms
+   → liveness: Unavailable/Deferred is not a behavioral comparison: expected [ { kind: 'record', …(2) }, …(1) ] to have a length of 5 but got 2
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledDelayedBody.test.ts > controls: hidden delivery cannot affect cognition; blocked and zero effects cannot invent gain
+AssertionError: liveness: Unavailable/Deferred is not a behavioral comparison: expected [ { kind: 'record', …(2) }, …(1) ] to have a length of 5 but got 2
+
+- Expected
++ Received
+
+- 5
++ 2
+
+ ❯ live src/test/assembledDelayedBody.test.ts:31:339
+
+ ❯ src/test/assembledDelayedBody.test.ts:61:100
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed | 4 skipped (6)
+   Start at  17:11:24
+   Duration  189.32s (transform 1.84s, setup 0ms, collect 2.80s, tests 186.10s, environment 0ms, prepare 122ms)
+
+
+M38_CHECK dependency corrected saturation hidden blocked zero controls exit=1 seconds=189.85
+
+=== dependency corrected persistence rollback admission ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDelayedBody.test.ts > persistence: pending receipt survives exact repeat3 and restore3 through10
+M38 pending receipt5 restored from3; exact continuation through10; three operations, three receipts, no duplicate practice
+
+ ✓ src/test/assembledDelayedBody.test.ts > persistence: pending receipt survives exact repeat3 and restore3 through10 123174ms
+stdout | src/test/assembledDelayedBody.test.ts > rollback: late5 failure preserves shared state and private receipt association retries atomically
+M38 late5 work limit 69/70; private receipt rollback/retry, forged/duplicate/overdue delivery and overflow reject
+
+ ✓ src/test/assembledDelayedBody.test.ts > rollback: late5 failure preserves shared state and private receipt association retries atomically 51511ms
+stdout | src/test/assembledDelayedBody.test.ts > admission: governed delays reject invalid coverage, versions and public receipt injection
+M38 delay0..4 governed; invalid scalar/coverage/version/public receipt rejected
+
+ ✓ src/test/assembledDelayedBody.test.ts > admission: governed delays reject invalid coverage, versions and public receipt injection 61372ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 3 skipped (6)
+   Start at  17:14:45
+   Duration  239.35s (transform 1.82s, setup 0ms, collect 2.78s, tests 236.06s, environment 0ms, prepare 129ms)
+
+
+M38_CHECK dependency corrected persistence rollback admission exit=0 seconds=239.86
+
+=== independent blocked zero controls ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDelayedBody.test.ts > blocked/zero: no queued receipt when blocked and no gain from zero amount
+M38 blocked has no queue; zero settles without gain
+
+ ✓ src/test/assembledDelayedBody.test.ts > blocked/zero: no queued receipt when blocked and no gain from zero amount 70748ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  17:18:59
+   Duration  73.93s (transform 1.81s, setup 0ms, collect 2.76s, tests 70.75s, environment 0ms, prepare 120ms)
+
+
+M38_CHECK independent blocked zero controls exit=0 seconds=74.44
+
+=== final test repair types ===
+
+M38_CHECK final test repair types exit=0 seconds=14.95
+
+=== canonical diagnostic serialization types ===
+
+M38_CHECK canonical diagnostic serialization types exit=0 seconds=15.02
+
+M38 final guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and M22-M37 retained tests unchanged; document/evidence caps. seconds=9.32
+M38 validation seconds including guard=1469.8

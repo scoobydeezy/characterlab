@@ -1,47 +1,52 @@
-# Current work — M38 dependency correction approved
+# Current work — M38 incomplete; preserve the stopped comparisons
 
-The owner classified both prior failures as test-setup errors. Correct the task
-scope and prove a live body -> appraisal -> reason connection in one character.
+Physical tasks now have live appraisals. The single authorized connection stopped
+on an overbroad test assertion; the hidden control stopped at liveness. Neither
+is accepted. Finish independent controls; do not repeat either comparison.
 
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
-- Owner ruling2026-11-02 is in WORK_ORDER: normal perceived stand-ins for missing
-  external evidence; Deferred(component/clause) for unintegrated interior state;
-  live quantities before every new behavioral comparison. No placeholder beliefs.
-- M38 scenario: all three tasks are physical, none person-dependent. Both known
-  people stay declared for recognition/relationship/communication; no social task
-  requires an encounter. Performance-disclosure observers remain existing stand-ins
-  receiving ordinary permitted messages. Person beliefs remain Unknown, unused.
-- Local admission correction: only rules/registry0.39 permits an empty task list
-  for a declared person (slot19). Earlier versions preserve their restriction.
-  Existing unmapped-task likelihood semantics, laws and appraisal kernel unchanged.
-- No required interior component missing for this gate: Deferred list is empty;
-  no waiting clause is closed. ADAPT/BIO/BODY12.1/2/8/9 and full21/15/132 persist.
-- Fixed source/data M37 with existing M38 amendments: reserve10, delay0 versus2,
-  amount80 on each action, seed0, difficulty0, informational habit frames. Body
-  samples3/5/7, task/priority/practice/performance/value/causal-report and disclosure
-  channels stay live; no encounter channel or manual belief. Saturation starts100.
-- Assert social mappings empty and initial person beliefs absent. Before comparison
-  require both original physical-task appraisal rows at5 to have all five known
-  fields in BOTH arms; otherwise stop/report. Record liveness and consumed samples.
-- Two identity-only setup runs plus two mapped runs through7, ONCE. Unchanged gate:
-  execution -> queued lineage -> receipt5 exact5+80=85 -> sample5 upper90/10,
-  delayed sample7 upper90 -> changed body factors and reason modifiers at5.
-  Compare overlapping mapped draws exactly; report Auto/zero draws honestly.
-- Pending controls after pass: saturation0/2 through7 (live rows, no effect claim),
-  hidden later samples removed (live recalled context, equal factors/decisions),
-  blocked/zero gain, exact repeat3/restore3..10, late5 rollback, admission/types.
-  New admission check:0.39 admits empty task lists;0.38 rejects them; malformed,
-  duplicate/foreign mappings still reject. No autonomous partner or new owner.
-- Prior plans5c511a13/a1e6effe and failuresd78fcd6a/77fca859 retained. Source finding:
-  all inherited tasks were person-dependent with no encounters, so appraisals
-  unavailable. This is setup error, not interaction; no mechanism/law change.
-- <=3 capabilities, <=12 production/test files; expected10 total: previous9 plus
-  social.ts; model.ts already counted. Contracts and governance docs precede code.
-- Prior771.27s leaves1028.73s of original1800s. One validation process at a time,
-  <=600s/command; connection <=540, saturation <=180, hidden <=300,
-  persistence <=300, rollback <=180, admission <=90. Types/boundary/research and
-  frozen/document guards only for their changed risks; prior unaffected checks kept.
-- <=20 evidence files/5MiB; result+raw log only. Frozen105 closure unchanged.
-- Done requires original connection gate and all affected controls. Stop on absent
-  liveness or failed comparison; no fixture search, new laws, UI or audit tracks.
+- Owner ruling2026-11-02 in WORK_ORDER/AGENTS: stand-ins through normal perception
+  for missing external evidence; Deferred(component/clause) for missing interior
+  components; explicit scenarios and live quantities before behavioral comparisons.
+- Plan a670f81f preceded dependency edits. All three M38 tasks are physical with
+  no person dependency. Two known people and passive disclosure observers remain;
+  no social task/encounters or injected beliefs. No missing interior component.
+- Only candidate0.39 permits empty per-person task mappings. Older versions and
+  duplicate/foreign/identity checks remain. No appraisal/kernel/law change.
+- Fixed reserve10, delay0/2, amount80, seed0, difficulty0, informational habit frames;
+  body3/5/7 and ordinary task/priority/practice/performance/value/causal/disclosure
+  channels. Original reserve100 retained as saturation control.
+- Connection ONCE: four runs through7 (two identity-only setups, two mapped arms).
+  Live physical-task rows at5 PASS; three Applied versus Queued; delayed success3/3.
+  First skill assessment equal. Second procedure differs: a/skill1/2 versus b/0.
+  Test wrongly demanded all later assessments equal. Modes1/1/1 versus1/3/1;
+  draws0/4, matched0. No isolated stochastic choice-effect claim.
+- Original receipt/sample/appraisal/reason gate was NOT REACHED after that failure.
+  Ordinary test repair: first assessment equivalence and per-arm success/count/
+  action association, not identical later selected procedures/communication content.
+  Repair must remain unrun under the owner's one-comparison limit.
+- Saturation100 PASS: receipt5 95+80 capped100, applied5/overflow75; live appraisal
+  rows and body factors equal. Hidden control removes samples5/7; liveness FAIL,
+  so no behavioral equality accepted. Which row/factor needs bounded diagnostics;
+  do not invent remembered evidence or weaken the precondition. Its later blocked/
+  zero section was not reached; split unchanged for independent validation.
+  Persistence/rollback/admission and independent blocked/zero PASS. Types PASS;
+  final serialization/preservation guards are recorded in the raw log.
+- Test diagnostics should expose index/task, consumed sample/context and task
+  assessment before liveness failure. This changes no inputs, laws or thresholds.
+- Prior setup failuresd78fcd6a/77fca859 retained: saturated reserve, then false
+  person dependencies with unknown likelihood. Owner classified setup, not interaction.
+- Required connection unchanged: executed action -> queued lineage -> receipt5
+  exact5+80=85 -> sample5 upper90/10, sample7 delayed90 -> changed body appraisal
+  and reason modifier at5. A deviation is not a qualified Interaction until the
+  consumed-state chain and required phenomenon are established with evidence.
+- <=3 capabilities,10/12 production/test files; result+raw log only, <=20/5MiB.
+  One check at a time, <=600s each, <=1800s total INCLUDING prior failures/guards.
+  Cumulative1469.80s;330.20s remains. No reset or broader suite.
+- Proposed ONLY after owner approval of repeat: connection then hidden tests once,
+  same four runs each, bail on first failure,280s combined ceiling. No fixture/law/
+  gate changes; repaired assertions and diagnostics only. Not yet authorized.
+- Frozen105 closure/historical controls unchanged; no UI/new factory/active partners.
+  No corpus/obligation closure. ADAPT/BIO/BODY12.1/2/8/9, delayed reward/discounting
+  and full21 members/15 families/132 clauses remain open.

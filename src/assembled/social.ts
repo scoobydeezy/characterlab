@@ -14,12 +14,12 @@ export const SOCIAL_SOURCE=sid(1001,'event/assembled-social-source'),SOCIAL_OBSE
 export const SOCIAL_STAGES=['track','bind','classify','freeze'].map(n=>sid(1001,'event/assembled-social-'+n));
 export const PERSON_OWNER=sid(1025,'authority/person-model');
 const require=(b:boolean,s:string)=>{if(!b)invalidModel('social '+s);};
-export function compileSocial(v:CanonicalValue,strategy:Strategy,multiple=false){
+export function compileSocial(v:CanonicalValue,strategy:Strategy,multiple=false,allowEmptyTasks=false){
  const a=items(v,'list');
  const groups=multiple?(()=>{require(a.length===2&&txt(a[0])===SOCIAL_PEOPLE,'people declaration');return items(a[1],'list').map(v=>{const x=items(v,'list');require(x.length===2,'person mapping');return x;});})():(()=>{require(a.length===3&&txt(a[0])===SOCIAL,'declaration');return [[a[1],a[2]]];})();
  require(groups.length>=1&&groups.length<=8,'people capacity');
  const targets=groups.map(x=>{validateSemanticReferent(x[0]);return x[0];});require(new Set(targets.map(key)).size===targets.length,'duplicate person');
- const tasks=groups.flatMap(([target,mapping])=>{const rows=items(mapping,'list');require(rows.length>=1,'person requires task');return rows.map(v=>{const x=items(v,'list');require(x.length===2&&typeof x[1]==='boolean'&&strategy.some(r=>key(r.task)===key(x[0])),'task goal');return {target,task:x[0],desired:x[1]===true};});});
+ const tasks=groups.flatMap(([target,mapping])=>{const rows=items(mapping,'list');require(allowEmptyTasks||rows.length>=1,'person requires task');return rows.map(v=>{const x=items(v,'list');require(x.length===2&&typeof x[1]==='boolean'&&strategy.some(r=>key(r.task)===key(x[0])),'task goal');return {target,task:x[0],desired:x[1]===true};});});
  require(tasks.length<=strategy.length&&new Set(tasks.map(t=>key(t.task))).size===tasks.length,'task mapping');
  if(multiple){targets.sort((a,b)=>key(a)<key(b)?-1:1);tasks.sort((a,b)=>key(a.task)<key(b.task)?-1:1);}
  return {target:targets[0],targets,tasks,multiple};

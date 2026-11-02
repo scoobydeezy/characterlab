@@ -186,7 +186,7 @@ export async function compileCharacterModel(input:Campaign2ModelSource){
  const actionBody=actionBodyEnabled?compileActionBody(allSlots[10],body!.capacity,items(slots[0],'set').filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n&&key(f(v,2n))===key({kind:'typedIdentifier',namespaceId:1023n,payload:{kind:'text',value:'registry/protocol-action'}})).map(v=>({action:f(rec(v,171n),1n),definition:f(rec(v,171n),4n)})),delayedBody):undefined;
  const procedures=proceduresEnabled?compileProcedures(allSlots[11],actionBody!.entries.map(e=>e.action)):undefined;
  const modelIdentity=await createModelIdentity({...source,contentManifest:await commitManifest(decodeCognitive(source.content)),registryManifest:await commitManifest(registry),parameterSet:await commitManifest(decodeCognitive(source.parameters))});
- const social=socialEnabled?compileSocial(allSlots[19],strategy!,peopleEnabled):undefined;
+ const social=socialEnabled?compileSocial(allSlots[19],strategy!,peopleEnabled,delayedBody):undefined;
  const recognition=recognitionEnabled?compileRecognition(allSlots[21],social!.target,catalogEnabled):undefined;
  if(peopleEnabled&&social!.targets.some(t=>!recognition!.candidates.some(c=>key(c)===key(t))))invalidModel('social person missing from recognition catalog');
  const relationship=relationshipEnabled?compileRelationship(allSlots[20],social!.target,strategy!,social!.targets,peopleEnabled):undefined;
