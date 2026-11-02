@@ -1,35 +1,48 @@
-# Current work — M37 complete
+# Current work — M38 delayed action consequences
 
-The character can learn causal evidence between decisions without mandatory
-queries, then appraise it when a later question arrives. Latent and route
-questions are independent. Mitigation actions remain unconnected.
+The character performs an action now; its physical benefit can arrive later.
+One scheduler carries that consequence into the existing body and evidence path.
 
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
-- Result: [M37](ASSEMBLED_CHARACTER_M37_RESULT.md); raw checks alongside.
-- Contract: ../formal/ASSEMBLED_CHARACTER_CAUSAL_OPPORTUNITIES_CONTRACT.md,0.1.
-  Plan23fc2b3f preceded code. Rules/registry0.38 retain all26 slots and the
-  existing knowledge owner, scheduler, RNG, save and psychological equations.
-- Same M36 approved source/data and seed0: full queries, both only7, latent
-  only7, route only7, neither. Only specified query records are removed.
-- Five identity-only setup runs and five explicitly mapped comparison runs
-  preserve two observed attempts3/5, two reports4/6, source support, decision
-  probabilities and chosen actions. Late route appraisal recovers1/2.
-- Every compared decision is Auto: zero actual/shared draws. This establishes
-  deterministic equality, not a new choice effect or matched-roll witness.
-- Missing queries emit explicit availability with no synthetic appraisal or
-  associated read. Present-but-unknown remains distinct. Earlier queries expire;
-  evidence still consolidates at140. No inferred query or new persistent state.
-- Stale-context, denied changed evidence, source/phase/duplicate/opportunity/
-  version and generated-child controls pass. Old0.37 completeness remains fixed.
-- Exact repeat6 and restore6 through10 pass. Late7 work-cap failure preserves
-  the whole previous character and acquired evidence.
-- Five focused groups, unchanged M36 connection/admission, TypeScript,
-  reference boundary/research and105-file frozen/history/document guards pass.
-- Eight production/test files, two evidence files; <=600s/check and1800s total.
-  No failed comparison, fixture amendment, new verdict or obligation closure.
-- This is configuration hardening. Natural query production, appraisal-driven
-  mitigation and remaining configuration domains/full21/15/132 remain open.
-  RO010/011/014/020 limits persist; RO019/021/022 stay closed.
-- Verification stops. Commit the next bounded behavioral connection before
-  implementation; no UI, multi-character dependency or extra audit track.
+- Authorized continuation2026-11-02; predecessor80ff3530 (M37 PASS).
+- Baseline M2 body: ADAPT/BIO/BODY, clauses12.1/2/8/9; MEC019 separates
+  intent/attempt/outcome; MEC003/011 preserve physical truth versus evidence;
+  SUB009 couples comparisons. No new verdict or denominator change.
+- Contract: ../formal/ASSEMBLED_CHARACTER_DELAYED_BODY_CONTRACT.md,0.1.
+  Physical timing ports DELAYED_PUBLIC_CONTRACT; no discount law is selected.
+- Capability: successful execution queues a governed body effect; delivery later
+  changes permitted interoception, joint appraisal and reason factors.
+- Rules/registry0.39 retain26 slots. Slot10 action-body0.2 adds delay0..4 per
+  action. Delay0 retains immediate behavior; old versions keep pair declarations.
+- At most10 production/test files: actionBody,body,model,runtime,traceBinding,
+  performanceExecution,communicationExecution; assembledDelayedBody test/fixture;
+  inputs only if generated-child ingress needs an explicit rejection.
+- Fixed source: M37 source/data(none), seed0, all actions amount80, permissiontrue;
+  difficulty0 at3/5/7; all habit frames informational, rewardfalse (no consummatory
+  reward contrast). Compare delays0/2, all other laws/settings/input rows fixed.
+- Identity-only setup each arm then explicitly mapped runs through7. Compare
+  first execution success; no early body write; child request/due lineage;
+  exact existing replenish arithmetic; samples5 before due110, samples7 after;
+  current-evidence appraisal and changed body factors/reason modifier at5.
+  Log mode/draw counts; compare every overlapping mapped draw exactly. A changed
+  final choice is not required: this gate is physical -> evidence -> reasons.
+- Hidden control: remove body samples5/7 in both arms; retained sample3 equal,
+  appraisal body factors and decision distributions/actions equal. No future
+  physical receipt may manufacture a performance attempt or communication.
+- Controls: blocked actuation, zero amount, invalid/missing/duplicate delay,
+  predecessor version rejection, forged public/private delivery, duplicate
+  delivery, skipped due instant and overflow. Queue commits/rolls back atomically.
+- Exact repeat3 and restore3 (pending delivery5) through terminal10. Late5
+  work-limit failure after delivery preserves previous full snapshot; direct
+  handler rollback preserves pending association for retry.
+- Tests: connection <=540s; hidden/blocked/zero <=300s; persistence <=300s;
+  rollback/private <=180s; admission <=90s. Unchanged M37 admission and M10
+  private binding/admission <=120s; tsc/reference/research <=600s each.
+  One check at a time; <=600s/check, <=1800s total including failures/repairs.
+- <=12 production/test files, <=20 evidence files/5MiB (target result+raw log).
+  Frozen105 dependency/history guard replaces full replay: no frozen edit.
+- Done only when all declared connection, negative, persistence and repository
+  checks pass; otherwise preserve failure and stop/replan within owner policy.
+- Deferred: delayed reward reinforcement, future-value discounting, cancellation,
+  autonomous partners, full21/15/132 replay. No UI or additional audit track.
