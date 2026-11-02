@@ -5,7 +5,7 @@ import {compileCharacterState} from '../assembled/state';
 import {routeExpectation,interferencePath,interferenceJournal,interferenceObservation,appendInterference,INTERFERENCE_OBS,INTERFERENCE_APPRAISAL,INTERFERENCE_SOURCE,INTERFERENCE_CONTEXT,INTERFERENCE_LEARN,INTERFERENCE_VERSION,type Episode} from '../assembled/interferenceExpectation';
 import {createCausalExecution} from '../assembled/causalAttribution';
 import {KNOWLEDGE_OWNER} from '../assembled/strategy';
-import {outcomePath} from '../assembled/performance';
+import {outcomePath,PERFORMANCE_SETTING} from '../assembled/performance';
 import {SKILL_ACTUAL,sid} from '../assembled/skill';
 import {BODY_DELIVERY} from '../assembled/body';
 import {createInterferenceExpectationRun,LAWS} from '../campaign3/interferenceExpectation';
@@ -51,9 +51,9 @@ it('connection: two actual attempts become one sample each and change later appr
  await through(a,7n);await through(b,7n);await through(zero,7n);
  const aa=reports(a),bb=reports(b),zz=reports(zero);
  expect(aa.map(v=>v[6])).toEqual([list([]),q(1,1),q(1,2)]);expect(bb.map(v=>v[6])).toEqual([list([]),q(1,1),q(1,1)]);
- expect(aa.map(v=>v[5])).toEqual([0,1,2].map(unsigned));expect(aa[2][7]).toEqual(list([q(1,2),q(1,2)]));expect(zz.map(v=>v[6])).toEqual(aa.map(v=>v[6]));expect(zz[2][7]).toEqual(list([q(0,1),q(0,1)]));
+ expect(aa.map(v=>v[5])).toEqual([0,1,2].map(unsigned));expect(bb.map(v=>v[5])).toEqual([0,1,2].map(unsigned));expect(aa[2][7]).toEqual(list([q(1,2),q(1,2)]));expect(zz.map(v=>v[6])).toEqual(aa.map(v=>v[6]));expect(zz[2][7]).toEqual(list([q(0,1),q(0,1)]));
  expect(state(a).read(interferencePath(task()))).toEqual(state(zero).read(interferencePath(task())));expect(aa[0]).toEqual(old);expect(outputs(a.snapshot().outputs,425n)[0]).toEqual(intent);
- for(const v of interferenceJournal(state(a).read(interferencePath(task())).value,task())){const o=interferenceObservation(v,task());expect(o.outcome).toBeDefined();expect(o.route).toBe(0n);expect(items(items(state(a).read(outcomePath(task())).value!,'list')[1],'list')).toContainEqual(o.outcome);}
+ for(const branch of [a,b])for(const v of interferenceJournal(state(branch).read(interferencePath(task())).value,task())){const o=interferenceObservation(v,task());expect(o.outcome).toBeDefined();expect(o.route).toBe(0n);expect(items(items(state(branch).read(outcomePath(task())).value!,'list')[1],'list')).toContainEqual(o.outcome);}
  const trace=outputs(a.snapshot().trace,160n).filter(v=>key(f(v,6n))===key(text(INTERFERENCE_VERSION)));
  expect(trace.filter(v=>key(f(rec(f(v,4n),130n),5n))===key(sid(1001,'event/task-appraisal')))).toHaveLength(3);
  for(const v of trace.filter(v=>[14n,50n].includes(uint(f(rec(f(v,4n),130n),3n)))))expect(items(f(v,11n),'list')).toHaveLength(1);
@@ -68,10 +68,10 @@ it('privacy: hidden physical outcomes and denied changed reports do not alter th
 it('gates: missing opportunity, duplicate source, other or absent context and current evidence',async()=>{
  const m=await prepareCharacterModel(source());
  for(const o of [{missing:true},{duplicate:true},{route:1},{route:null},{current:true}] as Options[]){
-  const r=await createCharacterRun(m,data(o));await through(r,7n);const last=reports(r).at(-1)!;
-  expect(last[6]).toEqual(o.missing?q(0,1):o.route!==undefined?list([]):q(1,1));
-  expect(last[5]).toEqual(unsigned(o.route!==undefined?0:1));
-  if(o.missing){const rows=interferenceJournal(state(r).read(interferencePath(task())).value,task());expect(interferenceObservation(rows[0],task()).outcome).toBeUndefined();expect(interferenceObservation(rows[1],task()).outcome).toBeDefined();}
+  const r=await createCharacterRun(m,data(o));await through(r,o.missing?5n:7n);const last=reports(r).at(-1)!;
+  expect(last[6]).toEqual(o.missing||o.route!==undefined?list([]):q(1,1));
+  expect(last[5]).toEqual(unsigned(o.missing||o.route!==undefined?0:1));
+  if(o.missing){const rows=interferenceJournal(state(r).read(interferencePath(task())).value,task());expect(interferenceObservation(rows[0],task()).outcome).toBeUndefined();expect(rows).toHaveLength(1);}
   if(o.current){expect(reports(r,INTERFERENCE_OBS)).toHaveLength(2);expect(items(last[8],'list')).toHaveLength(1);expect(interferenceJournal(state(r).read(interferencePath(task())).value,task())).toHaveLength(2);}
  }
  console.info('M36 missing outcome stays unbound; duplicate first source wins; route/absence scopes; current14 report waits until140');
@@ -97,7 +97,15 @@ it('admission: source domains, original support, sole owner, append-only and gen
  const handler=createCausalExecution(C,compiled.strategy!,component.stateModel,[],compiled.modelIdentity.value,compiled.modelIdentity.value,true);handler.begin(4n);const e={dueAt:4n as never,phase:140n,eventTypeId:INTERFERENCE_LEARN,payload:o,dependencies:list([]),eventId:999n,eventSequence:999n,causalParentEventIds:[]};expect(()=>handler.prepare([e],initial)).toThrow('unbound generated');handler.close();console.info('M36 source/context/version, exact original support, learned S0, sole owner, immutable history and bound evidence negatives');
 },180000);
 
-it('diagnostic: inspect the fixed seed0 source joins after connection failure',async()=>{
- const r=await createCharacterRun(await prepareCharacterModel(source()),data());await through(r,7n);
- console.info('M36_DIAGNOSTIC '+JSON.stringify({outcomes:state(r).read(outcomePath(task())),reports:reports(r,INTERFERENCE_OBS),appraisal:reports(r).map(v=>v.slice(0,8))},(_k,v)=>typeof v==='bigint'?String(v):v));
+it('control: original failure remains a one-episode unbound-report witness',async()=>{
+ const original=data({originalFailure:true}),amended=data(),xs=items(decode(original.orderedInputs),'list'),ys=items(decode(amended.orderedInputs),'list');
+ expect(original.initialState).toEqual(amended.initialState);expect(original.runSeed).toEqual(amended.runSeed);expect(xs.length).toBe(ys.length);
+ const changed=xs.flatMap((v,i)=>key(v)===key(ys[i])?[]:[i]);expect(changed).toHaveLength(1);
+ const before=items(xs[changed[0]],'list'),after=items(ys[changed[0]],'list');expect(before[0]).toEqual(signed(3));expect(before[2]).toEqual(PERFORMANCE_SETTING);expect(after.slice(0,3)).toEqual(before.slice(0,3));expect(after[4]).toEqual(before[4]);
+ const p=items(before[3],'list');expect(after[3]).toEqual(list([p[0],list(items(p[1],'list').map(v=>{const x=items(v,'list');if(key(x[0])!==key(task()))return v;expect(x[2]).toEqual(unsigned(1));return list([x[0],x[1],unsigned(2)]);}))]));
+ const r=await createCharacterRun(await prepareCharacterModel(source()),original);await through(r,7n);
+ expect(items(items(state(r).read(outcomePath(task())).value!,'list')[1],'list')).toHaveLength(1);
+ const history=interferenceJournal(state(r).read(interferencePath(task())).value,task());expect(history).toHaveLength(2);expect(interferenceObservation(history[0],task()).outcome).toBeDefined();expect(interferenceObservation(history[1],task()).outcome).toBeUndefined();
+ expect(reports(r).map(v=>v[6])).toEqual([list([]),q(1,1),q(1,1)]);
+ console.info('M36 original failure control retained: one observed attempt; second report unbound; amendment changes exactly queried outcome3 mode1 to2');
 },180000);
