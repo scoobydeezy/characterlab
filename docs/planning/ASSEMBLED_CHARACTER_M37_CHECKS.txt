@@ -1,0 +1,102 @@
+
+=== typecheck ===
+
+M37_CHECK typecheck exit=0 seconds=15.2
+
+=== connection ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCausalOpportunities.test.ts > connection: independent late queries consume the same acquired evidence with coupled decisions
+M37 full evidence=2 latent=3 route=3 actual draws=0
+M37 late evidence=2 latent=1 route=1 actual draws=0
+M37 latent evidence=2 latent=1 route=0 actual draws=0
+M37 route evidence=2 latent=0 route=1 actual draws=0
+M37 none evidence=2 latent=0 route=0 actual draws=0
+M37 five fixed configurations retain identical decision probabilities/choices and evidence meaning; matched actual draws=0; absent is not unknown
+
+ ✓ src/test/assembledCausalOpportunities.test.ts > connection: independent late queries consume the same acquired evidence with coupled decisions 434683ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 4 skipped (5)
+   Start at  08:04:40
+   Duration  437.93s (transform 1.84s, setup 0ms, collect 2.79s, tests 434.68s, environment 0ms, prepare 127ms)
+
+
+M37_CHECK connection exit=0 seconds=438.44
+
+=== absence privacy admission ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCausalOpportunities.test.ts > controls: absence clears context and denied changed reports never supply evidence
+M37 earlier contexts expire; learning continues without queries; denied polarity changes remain unavailable
+
+ ✓ src/test/assembledCausalOpportunities.test.ts > controls: absence clears context and denied changed reports never supply evidence 91244ms
+stdout | src/test/assembledCausalOpportunities.test.ts > admission: optional does not weaken phase, scope, duplicate, version or generated-child checks
+M37 phase/duplicate/opportunity/task/version, predecessor completeness, one-appraisal lifecycle and private generated association guards
+
+ ✓ src/test/assembledCausalOpportunities.test.ts > admission: optional does not weaken phase, scope, duplicate, version or generated-child checks 32265ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 3 skipped (5)
+   Start at  08:12:15
+   Duration  126.68s (transform 1.81s, setup 0ms, collect 2.75s, tests 123.51s, environment 0ms, prepare 130ms)
+
+
+M37_CHECK absence privacy admission exit=0 seconds=127.19
+
+=== exact persistence and atomic rollback ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCausalOpportunities.test.ts > persistence: sparse prefix repeat and restore6 through10 are byte exact
+M37 exact repeat6; restore6..10 retains pre-query evidence and actual later appraisal
+
+ ✓ src/test/assembledCausalOpportunities.test.ts > persistence: sparse prefix repeat and restore6 through10 are byte exact 114941ms
+stdout | src/test/assembledCausalOpportunities.test.ts > rollback: late shared failure preserves acquired evidence and the entire prior instant
+M37 late7 atomic rollback cap70/71; evidence remains, no partial query publication
+
+ ✓ src/test/assembledCausalOpportunities.test.ts > rollback: late shared failure preserves acquired evidence and the entire prior instant 61721ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 3 skipped (5)
+   Start at  08:15:06
+   Duration  179.91s (transform 1.81s, setup 0ms, collect 2.75s, tests 176.66s, environment 0ms, prepare 119ms)
+
+
+M37_CHECK exact persistence and atomic rollback exit=0 seconds=180.42
+
+=== unchanged M36 connection and admission ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledInterference.test.ts > connection: two actual attempts become one sample each and change later appraisal
+M36 actual3/5 outcomes, direct4/6 reports -> appraisal7 half versus one; goal0 preserves expectation; exact original support/read joins
+
+ ✓ src/test/assembledInterference.test.ts > connection: two actual attempts become one sample each and change later appraisal 111326ms
+stdout | src/test/assembledInterference.test.ts > admission: source domains, original support, sole owner, append-only and generated-event guards
+M36 source/context/version, exact original support, learned S0, sole owner, immutable history and bound evidence negatives
+
+ ✓ src/test/assembledInterference.test.ts > admission: source domains, original support, sole owner, append-only and generated-event guards 27395ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 6 skipped (8)
+   Start at  08:18:15
+   Duration  142.00s (transform 1.88s, setup 0ms, collect 2.85s, tests 138.72s, environment 0ms, prepare 133ms)
+
+
+M37_CHECK unchanged M36 connection and admission exit=0 seconds=142.51
+
+=== reference boundary ===
+Reference boundary check passed.
+
+M37_CHECK reference boundary exit=0 seconds=2.23
+
+=== research obligations ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M37_CHECK research obligations exit=0 seconds=3.39
+
+M37 final guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and M22-M36 retained tests unchanged; document/evidence caps. seconds=9.4
+M37 validation seconds including guard=918.78

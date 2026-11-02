@@ -103,8 +103,8 @@ export async function compileCharacterInputs(model:Awaited<ReturnType<typeof com
   const offset=BigInt(bodies.length+settings.length+displays.length+priorities.length+forecasts.length+feedback.length+habits.length+controls.length+communications.length+socials.length+relationships.length+identities.length+selfContexts.length+valueContexts.length+index);
   return {dueAt:simInstant(at.value),phase:query?30n:10n,eventTypeId:id(event),payload,dependencies,eventId:initial.allocators.nextEventId+offset,eventSequence:initial.allocators.nextEventSequence+offset,causalParentEventIds:[]};
  });
- if(model.causalEnabled&&queryTimes.size!==opportunityTimes.size)invalidModel('causal context missing for opportunity');
- if(model.interferenceEnabled&&futureTimes.size!==opportunityTimes.size)invalidModel('interference context missing for opportunity');
+ if(model.causalEnabled&&!model.causalOpportunities&&queryTimes.size!==opportunityTimes.size)invalidModel('causal context missing for opportunity');
+ if(model.interferenceEnabled&&!model.causalOpportunities&&futureTimes.size!==opportunityTimes.size)invalidModel('interference context missing for opportunity');
  if(!model.social?.multiple)validateSocialSources(model.recognition?socials.map(e=>({...e,payload:(model.encounterEnabled?encounterSource(e.payload,model.recognition!):recognitionSource(e.payload,model.recognition!)).social})):socials);
  const runIdentity=comparison||bodyRows.length||skillRows.length||strategyRows.length||priorityRows.length||horizonRows.length||performanceRows.length||habitRows.length||controlRows.length||communicationRows.length||socialRows.length||relationshipRows.length||identityRows.length||selfRows.length||valuesRows.length||causalRows.length?await createRunIdentity({modelIdentity:model.modelIdentity,initialState:await commitManifest(decode(data.initialState)),orderedInputSequence:await commitManifest(manifest),runSeed:data.runSeed}):base.runIdentity;
  // Even without body rows, supplied ordering equals the legacy manifest exactly.

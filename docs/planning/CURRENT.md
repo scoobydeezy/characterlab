@@ -1,46 +1,35 @@
-# Current work — M37 causal opportunities
-The character will learn causal evidence without a query at every decision,
-then appraise that retained evidence when the relevant query arrives.
-This removes a fixture admission dependency; mitigation actions remain open.
+# Current work — M37 complete
+
+The character can learn causal evidence between decisions without mandatory
+queries, then appraise it when a later question arrives. Latent and route
+questions are independent. Mitigation actions remain unconnected.
 
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
-- M36 remains complete: [result](ASSEMBLED_CHARACTER_M36_RESULT.md).
-- LOCAL DISPOSITION: Architecture3.2/4.13 separates learning from appraisal.
-  Neither causal contract makes every deliberation a causal query. Admit absent
-  queries independently; preserve unknown evidence when a query IS present.
+- Result: [M37](ASSEMBLED_CHARACTER_M37_RESULT.md); raw checks alongside.
 - Contract: ../formal/ASSEMBLED_CHARACTER_CAUSAL_OPPORTUNITIES_CONTRACT.md,0.1.
-  Rules/registry0.38 retain all26 slots and all existing mechanisms/owners.
-- Scope: (1) evidence acquisition with no queries; (2) late independent latent
-  and route queries over retained knowledge; (3) explicit per-decision availability.
-  No automatic query inference, new law, store, scheduler, RNG or scenario selector.
-- Eight planned production/test files: model, inputs, causalAttribution, runtime,
-  execution, traceBinding; assembledCausalOpportunities test and fixture.
-- Fixed inputs: unchanged M36 approved source/data, seed0, reports4/6 and
-  opportunities3/5/7. Compare full queries, both only7, latent only7,
-  route only7, and neither. Delete only the specified query records.
-- Setup runs may inspect resolution identities only to build existing explicit
-  semantic coupling maps. Then run the same five configurations under those maps.
-  No seed/contrast search. Every shared actual draw must match; Auto absence
-  stays explicit. Compare probabilities/choices, exact evidence semantics and
-  original support joins, and common queried appraisal projections.
-- Require two observed attempts3/5 and two bound reports4/6; final route mean1/2
-  in every queried branch. Absent query emits no invented appraisal/read, while
-  present-but-unknown query at3 remains distinguishable. No stale context reuse.
-- Negative controls: duplicate/non-opportunity/wrong phase/foreign task queries,
-  unsupported version, stale-context lifecycle, forged generated child, denied
-  changed report with sparse queries; old0.37 still requires complete contexts.
-- Repeat and restore6 -> terminal10 compare exact state/output/trace/save.
-  Late7 work-cap failure with retained evidence rolls back the complete instant.
-- Checks sequential: focused native connection; controls/persistence/admission;
-  unchanged M36 connection/admission; TypeScript, reference boundary, research;
-  frozen105-file/history and document/source/evidence budgets.
-- Limits: <=600s/command,1800s TOTAL validation including setup/failures/repairs;
-  <=12 production/test files; <=20 evidence files/5MiB (result + raw log planned).
-  No full control replay: frozen dependencies and entry untouched, checked by blobs.
-- Done only when fixed native witness, independent-query/epistemic controls,
-  persistence/atomicity, regression and static checks pass. Stop on pass; ordinary
-  bugs repaired within budget, comparator changes or exhaustion escalated.
-- Baseline M6/M7 architecture areas, A2 configuration;21/15/132 remains open.
-  MEC001/003/011/012..019/022 retained; RO010/011/014/020 remain conditional.
-  No verdict, reduction, closure, UI or multi-character work.
+  Plan23fc2b3f preceded code. Rules/registry0.38 retain all26 slots and the
+  existing knowledge owner, scheduler, RNG, save and psychological equations.
+- Same M36 approved source/data and seed0: full queries, both only7, latent
+  only7, route only7, neither. Only specified query records are removed.
+- Five identity-only setup runs and five explicitly mapped comparison runs
+  preserve two observed attempts3/5, two reports4/6, source support, decision
+  probabilities and chosen actions. Late route appraisal recovers1/2.
+- Every compared decision is Auto: zero actual/shared draws. This establishes
+  deterministic equality, not a new choice effect or matched-roll witness.
+- Missing queries emit explicit availability with no synthetic appraisal or
+  associated read. Present-but-unknown remains distinct. Earlier queries expire;
+  evidence still consolidates at140. No inferred query or new persistent state.
+- Stale-context, denied changed evidence, source/phase/duplicate/opportunity/
+  version and generated-child controls pass. Old0.37 completeness remains fixed.
+- Exact repeat6 and restore6 through10 pass. Late7 work-cap failure preserves
+  the whole previous character and acquired evidence.
+- Five focused groups, unchanged M36 connection/admission, TypeScript,
+  reference boundary/research and105-file frozen/history/document guards pass.
+- Eight production/test files, two evidence files; <=600s/check and1800s total.
+  No failed comparison, fixture amendment, new verdict or obligation closure.
+- This is configuration hardening. Natural query production, appraisal-driven
+  mitigation and remaining configuration domains/full21/15/132 remain open.
+  RO010/011/014/020 limits persist; RO019/021/022 stay closed.
+- Verification stops. Commit the next bounded behavioral connection before
+  implementation; no UI, multi-character dependency or extra audit track.
