@@ -1,56 +1,70 @@
-# M38 — delayed consequences implemented; comparison not accepted
+# M38 — stopped after the approved comparison also failed
 
-The character can perform an action and receive its bodily effect later through
-its existing scheduler. M38 is NOT complete: my fixed comparison inherited a
-full starting reserve100, while I wrote its prediction assuming10. The failed
-expectation is preserved; I have not changed the starting state or declared pass.
+The delayed physical effect reaches the character as permitted body evidence.
+The required later appraisal contribution does not change in the fixed scenario.
+M38 remains INCOMPLETE. The approved correction was run once; its stop rule is
+now enforced. No further fixture, law or acceptance change was made.
 
-Plan5c511a13 preceded code; predecessor80ff3530. Contract:
-[delayed body0.1](../formal/ASSEMBLED_CHARACTER_DELAYED_BODY_CONTRACT.md).
-Rules/registry0.39 retain26 slots, one state/scheduler/RNG/trace/save and body owner.
+Plan5c511a13 preceded implementation; checkpointd78fcd6a retained the first failure.
+Owner approved the reserve correction2026-11-02; amendmenta1e6effe preceded edits.
+[Contract0.1](../formal/ASSEMBLED_CHARACTER_DELAYED_BODY_CONTRACT.md), rules/registry
+0.39,26 slots, one state/scheduler/RNG/trace/save and existing body owner remain.
+No production file changed during the approved correction.
 
-- Action-body0.2 declares exact delay0..4 for each action. Successful delayed
-  operation emits Queued with no body write; its authenticated future receipt
-  applies the existing capacity/overflow law once at110. Sample10 still precedes
-  a same-instant receipt. Performance reports the operation, not promised fuel.
-- Original fixed source/data are M37 with the declared difficulty0, amount80 and
-  informational habit frames. `assembledPriority.ts:16` supplies initial100.
-  At receipt5, actual before95/request80/applied5/overflow75/after100 contradicts
-  my declared before5/request80/applied80/overflow0/after85. This is an incorrect
-  test precondition analysis, not an observed replenish arithmetic defect.
-- Before that failure, the native comparison confirmed three Queued operations,
-  no early body patch, exact receipt/request/outcome lineage, equal successful
-  skill assessments and no extra practice or communication. The required changed
-  body factors/reason modifier was not reached or established. No choice claim.
-- Independent controls PASS: hidden timing with body samples5/7 removed preserves
-  body factors and decision distributions/actions; blocked actuation emits no
-  receipt; zero amount settles with zero gain. Both comparisons use explicit
-  identity-derived maps; all decisions Auto, zero actual/shared draws.
-- Exact repeat3 and restore3 through terminal10 PASS with pending receipt5;
-  three operations, three receipts and three practice updates. No second scheduler.
-- Late5 failure after receipt, work limit69/70, preserves previous whole snapshot.
-  Private staged delivery rollback/retry, forged/duplicate/overdue receipt and
-  time overflow controls PASS. Invalid delay/coverage/version and public receipt
-  injection reject. Legal delay4 admits. Original model versions remain separate.
-- LOCAL DISPOSITION: the hidden control compares differing physical histories at3,
-  not differing final anchors: both can saturate by7. This assertion repair
-  changes no fixture or required cognitive equality; retained in the raw log.
+## Corrected result
 
-Owner decision pending: set initial reserve10 in both comparison arms, retain100
-as saturation control, preserve delay0/2, amount80, laws, seed0, coupling and the
-required body-appraisal/reason difference. Stop if the corrected contrast fails.
-The work order's Replay and interpretation rule requires approval before this
-post-execution change to the fixed comparison. No alternative fixtures searched.
+Both arms now start at reserve10, with delay0 versus2, amount80, difficulty0,
+seed0 and identity-derived coupling unchanged. Four runs: two identity-only
+setups, then two mapped comparisons through7. The comparison passed:
 
-Validation receipts and exact time totals: [raw checks](ASSEMBLED_CHARACTER_M38_CHECKS.txt).
-TypeScript (including final test repair), unchanged M37 admission, M10 admission
-and private binding, reference boundary and research checks PASS. M10 admission
-first exceeded its default5-second test timeout; the unchanged failed test alone
-passed at6.96seconds with an explicit120-second ceiling, inside the original
-command/milestone budget. Both outcomes remain in the log. No old test was edited.
-Frozen105 closure/history and document/file-budget guard is recorded in that log;
-full frozen replay is not invalidated by these successor-only changes.
-Nine production/test
-files; two evidence files, within12 files/20 evidence/5MiB. No UI, multi-character
-work, new factory, verdict or obligation closure. Delayed reward reinforcement,
-future-value discounting and full21 members/15 families/132 clauses remain open.
+- Three successful performed actions per arm; immediate Applied versus Queued.
+- No body write at request3; exact request/receipt/outcome lineage; no duplicate
+  skill practice or communication.
+- First delayed receipt5: before5/request80/applied80/overflow0/after85.
+- Sample5 precedes receipt110: upper90 immediate versus10 delayed; delayed
+  sample7 upper90. The actual samples are present in the corresponding joint
+  appraisal reports.
+
+It FAILED at `expect(bodyRows(a)[1]).not.toEqual(bodyRows(b)[1])` (test line47).
+The required changed reason-modifier assertion was not reached. All three
+choices in each arm are Auto, with zero actual/shared draws; no stochastic
+choice-effect claim. This does not qualify the required behavioral connection.
+
+## Source inspection after the failure (no further simulation)
+
+`fixtures/assembledProcedures.ts` calls `learnedData(0,[],[])`, which removes all
+encounters through recognitionData. The inherited person-history declaration
+still maps all three tasks to people. Initial person beliefs must be absent
+(`assembled/state.ts:101`). `socialExecution.ts:47-49` therefore derives unknown
+likelihood for every mapped task. `appraisal.ts:19-20` and the unchanged Affect
+kernel preserve Unavailable when a required factor is unknown; a different body
+interval cannot supply that missing likelihood. Any selected mapped task is
+therefore unavailable in this scenario. This is a source-level explanation of
+the blocked comparison, not a new runtime qualification or a demonstrated law bug.
+
+The next step should examine which tasks actually depend on other people and
+correct their declared dependencies, preserving Unknown for genuinely social
+tasks. Do not silently substitute a known probability, add convenient social
+history, reduce the gate to body sensing, or try another contrast under this card.
+
+## Preserved evidence and limits
+
+Original reserve100 failure remains: receipt5 was95+80 capped100, applied5 and
+overflow75, contradicting my mistaken reserve10 prediction. Its original hidden,
+blocked/zero, repeat3/restore3..10, late5 rollback69/70, private binding/admission,
+TypeScript, M37/M10 compatibility, boundary/research and105-file guards passed.
+Those passes retain their ORIGINAL fixture scope. The M10 default5-second test
+timeout and unchanged targeted120-second-cap rerun remain in the raw log.
+
+The explicit reserve100 saturation test is prepared but NOT RUN after the second
+failure. Amended hidden/control/persistence/type checks were not run either.
+The earlier hidden assertion repair compares different physical histories at3,
+not unequal final anchors that can legitimately saturate by7; no input changed.
+
+[Raw checks](ASSEMBLED_CHARACTER_M38_CHECKS.txt) preserve both failures. Validation
+was623.35s before approval plus138.53s for the corrected comparison,761.88s before
+the final static preservation guard; exact total is in the log. Original600s per
+command/1800s total budget remains. Nine production/test files, two evidence files
+within20/5MiB; historical controls unchanged. No UI, new factory, verdict or
+obligation closure. Delayed reward learning, future-value discounting and full
+21 members/15 families/132 clauses remain open.

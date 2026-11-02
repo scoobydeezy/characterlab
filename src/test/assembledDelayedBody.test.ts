@@ -33,6 +33,7 @@ function scheduled(t:CanonicalValue):ScheduledEvent{const e=event(t);return {eve
 async function mapped(delay:number,sense=true){const m=await prepareCharacterModel(source(delay)),setup=await createCharacterRun(m,data(sense));await through(setup,7n);const r=await createCharacterRun(m,data(sense,mapIdentities(setup)));await through(r,7n);return r;}
 function coupled(a:Run,b:Run){const right=new Map(draws(b).map(v=>[key(f(v,2n)),v]));let n=0;for(const x of draws(a)){const y=right.get(key(f(x,2n)));if(y){for(const k of [2n,3n,4n,7n])expect(f(y,k)).toEqual(f(x,k));n++;}}console.info('M38 draws A='+draws(a).length+' B='+draws(b).length+' matched='+n+'; modes='+JSON.stringify([a,b].map(r=>outputs(r.snapshot().outputs,409n).map(v=>String(uint(f(rec(f(rec(f(v,4n),419n),2n),420n),8n)))))));return n;}
 it('connection: a performed action waits for delivery, then changes permitted body appraisal and reasons',async()=>{
+ expect(f(rec(restoreAuthoritativeState(decode(data().initialState)).read(bodyPath(C)).value!,454n),1n)).toEqual(q(10,1));
  const a=await mapped(0),b=await mapped(2);coupled(a,b);
  expect(reports(a,ACTION_BODY)).toHaveLength(3);expect(reports(b,ACTION_BODY)).toHaveLength(3);
  expect(reports(a,ACTION_BODY).map(x=>x[5])).toEqual(Array(3).fill(text('Applied')));expect(reports(b,ACTION_BODY).map(x=>x[5])).toEqual(Array(3).fill(text('Queued')));
@@ -46,6 +47,10 @@ it('connection: a performed action waits for delivery, then changes permitted bo
  for(const r of [a,b])expect(reports(r,JOINT_APPRAISAL)[1][2]).toEqual(sample(r,5n));expect(bodyRows(a)[1]).not.toEqual(bodyRows(b)[1]);expect(modifiers(a,1)).not.toEqual(modifiers(b,1));
  console.info('M38 first receipt5: before5 +80 =>85; sample5 upper immediate90/delayed10; sample7 delayed90; exact current-evidence body factors/reason modifiers differ');
 },540000);
+it('saturation: original reserve100 masks the delivery contrast through the permitted interval',async()=>{
+ const runs:Run[]=[];for(const delay of [0,2]){const d=data(true,undefined,100),r=await createCharacterRun(await prepareCharacterModel(source(delay)),d);expect(f(rec(state(r).read(bodyPath(C)).value!,454n),1n)).toEqual(q(100,1));await through(r,7n);runs.push(r);for(const at of [3n,5n,7n])expect(f(rec(f(sample(r,at),5n),462n),2n)).toEqual(q(100,1));}
+ const receipt=reports(runs[1],ACTION_BODY_RECEIPT)[0];expect([1n,2n,3n,4n,5n].map(k=>f(rec(receipt[5],479n),k))).toEqual([95,80,5,75,100].map(n=>q(n,1)));expect(bodyRows(runs[0])).toEqual(bodyRows(runs[1]));console.info('M38 retained reserve100 saturation: receipt5 95+80 ->100, applied5/overflow75; permitted intervals/body factors equal; no choice-effect claim');
+},180000);
 it('controls: hidden delivery cannot affect cognition; blocked and zero effects cannot invent gain',async()=>{
  const a=await mapped(0,false),b=await mapped(2,false);coupled(a,b);expect(bodyRows(a)).toEqual(bodyRows(b));expect(decisions(a)).toEqual(decisions(b));expect(items(f(traceAt(a,ACTION_BODY_EVENT,3n)[0],17n),'list')).toHaveLength(1);expect(f(traceAt(b,ACTION_BODY_EVENT,3n)[0],17n)).toEqual(list([]));expect(outputs(a.snapshot().outputs,461n)).toHaveLength(1);expect(outputs(b.snapshot().outputs,461n)).toHaveLength(1);
  for(const [permitted,amount]of [[false,80],[true,0]] as const){const r=await createCharacterRun(await prepareCharacterModel(source(2,permitted,amount)),data());await through(r,7n);const rs=reports(r,ACTION_BODY_RECEIPT);if(!permitted){expect(rs).toEqual([]);expect(reports(r,ACTION_BODY).every(x=>txt(x[5])==='Blocked')).toBe(true);}else{expect(rs).toHaveLength(2);for(const x of rs)expect(f(rec(x[5],479n),3n)).toEqual(q(0,1));}}

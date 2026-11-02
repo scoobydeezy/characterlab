@@ -1,4 +1,4 @@
-# Current work — M38 approved fixture correction
+# Current work — M38 stopped; corrected comparison failed
 
 The character performs an action now; its physical benefit can arrive later.
 One scheduler carries that consequence into the existing body and evidence path.
@@ -17,11 +17,20 @@ One scheduler carries that consequence into the existing body and evidence path.
 - Owner approved2026-11-02: set both arms initial reserve10; retain100 as
   saturation control. No other input, law, seed, coupling or gate changes.
   Stop if the corrected connection fails; no alternative contrasts.
-- Amendment checks: corrected connection first; then saturation0/2 through7
-  (physical samples/appraisal only, no stochastic-choice claim), affected hidden/
-  blocked/zero, repeat/restore and rollback/admission groups; final TypeScript.
-  Prior repository/old-version checks retained: no production change planned.
-  Prior validation623.35s leaves1176.65s of the original1800s budget; no reset.
+- Approved correction a1e6effe executed ONCE: physical arithmetic and safe
+  samples PASS, but body-appraisal rows at5 remain equal. Reason-modifier
+  assertion not reached. All choices Auto; zero actual/shared draws.
+- STOP enforced: no further simulation/check suite, contrast or input change.
+  New saturation test is prepared, NOT RUN; amended controls/persistence remain
+  unrun. Earlier passes apply to the original reserve100 fixture only.
+- Source explanation: procedureData calls learnedData(0,[],[]); all three tasks
+  remain socially mapped, but initial person belief and encounters are absent.
+  socialExecution therefore supplies unknown likelihood; appraisal returns
+  Unavailable for each selected mapped task, even with changed body evidence.
+- Next decision: inspect/correct declared task-to-person dependencies before
+  another experiment. Preserve Unknown on genuinely social tasks; no law change.
+  Prior623.35s + corrected check138.53s =761.88s before final static guard.
+  No production change from d78fcd6a; original1800s budget does not reset.
 - Baseline M2 body: ADAPT/BIO/BODY, clauses12.1/2/8/9; MEC019 separates
   intent/attempt/outcome; MEC003/011 preserve physical truth versus evidence;
   SUB009 couples comparisons. No new verdict or denominator change.
