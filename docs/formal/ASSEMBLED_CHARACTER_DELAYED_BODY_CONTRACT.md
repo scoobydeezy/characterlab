@@ -67,3 +67,12 @@ are equal despite different physical truth. Report zero draws/Auto honestly;
 this test does not claim a changed stochastic choice. Exact pending-save restore,
 transaction rollback and unchanged predecessor guards are mandatory. Passing ends
 verification; additional mechanisms require the next bounded milestone.
+
+## Approved fixture correction — 2026-11-02
+
+The owner approved correcting both fixed comparison arms to initial reserve10,
+retaining the inherited100 as a saturation control. Original failure is retained:
+receipt5 with initial100 was95+80 capped100 (applied5/overflow75). All other laws,
+settings, inputs, seed0, explicit coupling and the required appraisal/reason
+contrast stay fixed. Stop if the corrected comparison fails. This changes no
+runtime semantics or seam version and does not restart the validation budget.

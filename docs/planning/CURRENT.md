@@ -1,4 +1,4 @@
-# Current work — M38 comparison amendment pending
+# Current work — M38 approved fixture correction
 
 The character performs an action now; its physical benefit can arrive later.
 One scheduler carries that consequence into the existing body and evidence path.
@@ -9,14 +9,19 @@ One scheduler carries that consequence into the existing body and evidence path.
 - Plan5c511a13 committed first. First connection FAILED: inherited priorityData
   starts reserve100, not the10 assumed by the declared physical prediction.
   Actual first receipt5: before95/request80/applied5/overflow75/after100.
-  Failure retained in M38_CHECKS; no connection PASS or fixture change.
+  Failure retained in M38_CHECKS; no connection PASS yet.
 - Independent hidden/blocked/zero controls, pending-save repeat/restore3..10,
   late5 rollback69/70, private association and admission checks PASS.
   TypeScript, unchanged M37/M10 tests and boundary/research PASS.
   Result: [M38](ASSEMBLED_CHARACTER_M38_RESULT.md); no acceptance.
-- Owner question pending: set both arms initial reserve10, retaining100 as
-  saturation control; all other fixed fields/gates unchanged. Do not run this
-  amended comparison before approval. Independent boundary checks may continue.
+- Owner approved2026-11-02: set both arms initial reserve10; retain100 as
+  saturation control. No other input, law, seed, coupling or gate changes.
+  Stop if the corrected connection fails; no alternative contrasts.
+- Amendment checks: corrected connection first; then saturation0/2 through7
+  (physical samples/appraisal only, no stochastic-choice claim), affected hidden/
+  blocked/zero, repeat/restore and rollback/admission groups; final TypeScript.
+  Prior repository/old-version checks retained: no production change planned.
+  Prior validation623.35s leaves1176.65s of the original1800s budget; no reset.
 - Baseline M2 body: ADAPT/BIO/BODY, clauses12.1/2/8/9; MEC019 separates
   intent/attempt/outcome; MEC003/011 preserve physical truth versus evidence;
   SUB009 couples comparisons. No new verdict or denominator change.
