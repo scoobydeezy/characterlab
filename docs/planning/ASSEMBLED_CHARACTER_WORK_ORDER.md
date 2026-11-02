@@ -1,23 +1,18 @@
 # Assembled Character work order
 
 2026-10-25. Active preparation directive, authorized by the owner's request to turn
-the reviewed v2 draft into actionable instructions with guardrails. This document
-incorporates that review. It selects no psychological law and grants no reduction.
+the reviewed v2 draft into actionable instructions with guardrails. This document incorporates that review. It selects no psychological law and grants no reduction.
 Owner adopted M0/M1 and M2 D1–D5 on 2026-10-25; D2's evidence/first-use condition is in the register.
 
 ## Outcome and authority
 
 Build one continuing character integrating Campaign 0 foundations, Campaign 1 perception,
 Campaign 2 scaffold and Campaign 3 mechanisms. Historical models remain comparison controls.
-The Workbench is stopped. UI development and Campaign 4 remain gated on assembly.
-The eventual UI is one simulation page with a few human-oriented views; its design
-and reuse decisions are deferred. No Workbench screen, catalog or audit framework
-is a prerequisite for assembly.
+The Workbench is stopped. UI development and Campaign 4 remain gated on assembly. The eventual UI is one simulation page with a few human-oriented views; its design
+and reuse decisions are deferred. No Workbench screen, catalog or audit framework is a prerequisite for assembly.
 
-The North Star, CHARACTER_ARCHITECTURE.md, Research Program Brief and accepted formal
-contracts retain their subject-specific authority. This order changes sequence and
-assembly procedure, not accepted mathematics, original evidence or historical verdicts.
-Formal changes require explicit versioned amendments before their implementation.
+The North Star, CHARACTER_ARCHITECTURE.md, Research Program Brief and accepted formal contracts retain their subject-specific authority. This order changes sequence and
+assembly procedure, not accepted mathematics, original evidence or historical verdicts. Formal changes require explicit versioned amendments before their implementation.
 Old status logs are history, not instructions to resume an experiment.
 
 ## Definition of assembled (all required)
@@ -56,8 +51,7 @@ Old status logs are history, not instructions to resume an experiment.
 ## Baseline and preservation
 
 [ASSEMBLED_CHARACTER_BASELINE.json](ASSEMBLED_CHARACTER_BASELINE.json) pins the source
-commit, source records, member versions, requirement keys and family clause IDs.
-The source records retain full comparison requirements, evidence pointers and limits;
+commit, source records, member versions, requirement keys and family clause IDs. The source records retain full comparison requirements, evidence pointers and limits;
 they are referenced, not recopied. This is a scope pin, not assembly acceptance.
 The final Values closure supersedes the earlier HQ012 open-gate status in its stated
 scope. Dated status text in pinned documents does not reopen completed historical work.
@@ -79,13 +73,8 @@ Start assembly at `788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`, immediately before
 the first Workbench commit. The six simulation/formal trees match reviewed Workbench
 HEAD `46e0017a7bc39b05a2ce977036615bd164804d58`; no simulation change is lost.
 
-Before switching, preserve the current branch, reviewed planning changes and untracked
-Workbench files in a local commit/tag after size checks. Inspect untracked files first;
-record incomplete receipts without declaring acceptance. Preserve originals as bytes.
-Do not reset/delete the existing checkout. Use a separate assembly branch/worktree.
-Push the preservation ref only with explicit publishing authorization; local preservation
-is sufficient to proceed. Check current state rather than assuming old process IDs are live.
-Stop only confirmed task-owned jobs. Do not restart audits or revisit/retain 55 tabs.
+Preserve the original checkout and research bytes; assembly uses a separate worktree.
+Do not publish preservation refs without authorization or restart historical audits.
 
 Transfer this planning package and the newly trimmed directives; do not import the
 archived logs into the assembly branch (they remain on the preserved branch). Carry:
@@ -240,10 +229,22 @@ capabilities. Historical gate status does not override later accepted closure.
 
 ## Current authorization boundary
 
-The owner adopted M0/M1 and M2 D1-D5 (with D2 evidence/first-use conditions), and
-explicitly authorized beginning and completing M3 on2026-10-25. M2a is complete.
-On2026-10-26 the owner approved comparing fixed context unit1/10 with retained unit1,
-using the same four cells/eight seeds and unchanged choice gate. CURRENT.md bounds
-this M3 amendment passed. Continued assembly authorized2026-10-26; M3-M8 passed.
-Owner adjustment: close recall-to-choice before further memory mechanics; CURRENT bounds each next behavioral milestone.
-No assembly acceptance, publishing, unbounded integration or Campaign4/UI transition follows.
+Owner adopted M0/M1, M2 D1-D5 and subsequent bounded continuations. CURRENT names
+one authorized milestone at a time. No UI, publishing or assembly acceptance follows.
+
+## Owner ruling — unknown factors and live gates (2026-11-02)
+
+- Required external participant/observer absent: supply a stand-in through normal
+  perceived behavior/reports; never inject placeholder belief. Unknown stays unknown
+  until admitted evidence arrives. No autonomous multi-character dependency follows.
+- Required interior component absent: mark the affected appraisal **Deferred
+  (component not integrated)**, distinct from **Unavailable (unknown)**. Record
+  component and waiting clause IDs in the register; revisit when it lands.
+- Each new behavioral gate first asserts its compared quantity is live in both arms;
+  otherwise stop/report. Each test states social task dependencies, live channels and
+  initial body up front. Preserve historical controls rather than retrofitting them.
+- Classify cross-system deviations with evidence under Replay and interpretation.
+  M38's saturated reserve and missing person evidence are test-setup errors, not
+  interactions or law failures. Correct task declarations; delayed-body tasks have
+  no person dependency. Keep laws/kernel, reserve10, delay0/2, amount80, seed0 and
+  acceptance gate fixed; one comparison then pending controls within1800s total.

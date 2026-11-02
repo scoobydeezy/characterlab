@@ -7,7 +7,7 @@ Read [CURRENT.md](docs/planning/CURRENT.md), then
 The active direction is assembly of one continuing character.
 Workbench/UI development and Campaign 4 are stopped pending assembly acceptance.
 This is the assembly checkout, based on
-`788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`. M38 stopped after the approved comparison also failed; follow CURRENT.md. Do not add UI or multi-character work.
+`788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`. M38 owner-approved dependency correction in progress; follow CURRENT.md. Do not add UI or multi-character work.
 Do not execute historical TODOs, resume old audits, or retain/revisit browser tabs.
 Old instructions/evidence remain on tag `archive/workbench-stopped-2026-10-25`.
 
@@ -48,6 +48,15 @@ deterministic representation choices or differences with an established disposit
 Never silently select the easiest law or average competing laws.
 OD-C3-001 remains ratified within its transient-state-to-attention scope:
 TaskConcern is not general Affect; A/B/C remain candidates, not settled laws.
+
+## Live comparisons and unknown factors
+
+Follow the work order's2026-11-02 owner ruling: external missing evidence needs a
+stand-in through normal perception, never injected belief. Missing interior components
+are Deferred (component not integrated), with component/clause IDs recorded, distinct
+from Unavailable (unknown). New tests declare scenario dependencies/channels/body;
+each behavioral gate first asserts both compared quantities are live. Stop if not.
+Classify deviations with evidence; fixture setup mistakes are not interactions.
 
 ## Work limits
 

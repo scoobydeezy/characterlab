@@ -1,73 +1,47 @@
-# Current work — M38 stopped; corrected comparison failed
+# Current work — M38 dependency correction approved
 
-The character performs an action now; its physical benefit can arrive later.
-One scheduler carries that consequence into the existing body and evidence path.
+The owner classified both prior failures as test-setup errors. Correct the task
+scope and prove a live body -> appraisal -> reason connection in one character.
 
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
-- Authorized continuation2026-11-02; predecessor80ff3530 (M37 PASS).
-- Plan5c511a13 committed first. First connection FAILED: inherited priorityData
-  starts reserve100, not the10 assumed by the declared physical prediction.
-  Actual first receipt5: before95/request80/applied5/overflow75/after100.
-  Failure retained in M38_CHECKS; no connection PASS yet.
-- Independent hidden/blocked/zero controls, pending-save repeat/restore3..10,
-  late5 rollback69/70, private association and admission checks PASS.
-  TypeScript, unchanged M37/M10 tests and boundary/research PASS.
-  Result: [M38](ASSEMBLED_CHARACTER_M38_RESULT.md); no acceptance.
-- Owner approved2026-11-02: set both arms initial reserve10; retain100 as
-  saturation control. No other input, law, seed, coupling or gate changes.
-  Stop if the corrected connection fails; no alternative contrasts.
-- Approved correction a1e6effe executed ONCE: physical arithmetic and safe
-  samples PASS, but body-appraisal rows at5 remain equal. Reason-modifier
-  assertion not reached. All choices Auto; zero actual/shared draws.
-- STOP enforced: no further simulation/check suite, contrast or input change.
-  New saturation test is prepared, NOT RUN; amended controls/persistence remain
-  unrun. Earlier passes apply to the original reserve100 fixture only.
-- Source explanation: procedureData calls learnedData(0,[],[]); all three tasks
-  remain socially mapped, but initial person belief and encounters are absent.
-  socialExecution therefore supplies unknown likelihood; appraisal returns
-  Unavailable for each selected mapped task, even with changed body evidence.
-- Next decision: inspect/correct declared task-to-person dependencies before
-  another experiment. Preserve Unknown on genuinely social tasks; no law change.
-  Prior623.35s + corrected check138.53s =761.88s before final static guard.
-  No production change from d78fcd6a; original1800s budget does not reset.
-- Baseline M2 body: ADAPT/BIO/BODY, clauses12.1/2/8/9; MEC019 separates
-  intent/attempt/outcome; MEC003/011 preserve physical truth versus evidence;
-  SUB009 couples comparisons. No new verdict or denominator change.
-- Contract: ../formal/ASSEMBLED_CHARACTER_DELAYED_BODY_CONTRACT.md,0.1.
-  Physical timing ports DELAYED_PUBLIC_CONTRACT; no discount law is selected.
-- Capability: successful execution queues a governed body effect; delivery later
-  changes permitted interoception, joint appraisal and reason factors.
-- Rules/registry0.39 retain26 slots. Slot10 action-body0.2 adds delay0..4 per
-  action. Delay0 retains immediate behavior; old versions keep pair declarations.
-- At most10 production/test files: actionBody,body,model,runtime,traceBinding,
-  performanceExecution,communicationExecution; assembledDelayedBody test/fixture;
-  inputs only if generated-child ingress needs an explicit rejection.
-- Fixed source: M37 source/data(none), seed0, all actions amount80, permissiontrue;
-  difficulty0 at3/5/7; all habit frames informational, rewardfalse (no consummatory
-  reward contrast). Compare delays0/2, all other laws/settings/input rows fixed.
-- Identity-only setup each arm then explicitly mapped runs through7. Compare
-  first execution success; no early body write; child request/due lineage;
-  exact existing replenish arithmetic; samples5 before due110, samples7 after;
-  current-evidence appraisal and changed body factors/reason modifier at5.
-  Log mode/draw counts; compare every overlapping mapped draw exactly. A changed
-  final choice is not required: this gate is physical -> evidence -> reasons.
-- Hidden control: remove body samples5/7 in both arms; retained sample3 equal,
-  appraisal body factors and decision distributions/actions equal. No future
-  physical receipt may manufacture a performance attempt or communication.
-- Controls: blocked actuation, zero amount, invalid/missing/duplicate delay,
-  predecessor version rejection, forged public/private delivery, duplicate
-  delivery, skipped due instant and overflow. Queue commits/rolls back atomically.
-- Exact repeat3 and restore3 (pending delivery5) through terminal10. Late5
-  work-limit failure after delivery preserves previous full snapshot; direct
-  handler rollback preserves pending association for retry.
-- Tests: connection <=540s; hidden/blocked/zero <=300s; persistence <=300s;
-  rollback/private <=180s; admission <=90s. Unchanged M37 admission and M10
-  private binding/admission <=120s; tsc/reference/research <=600s each.
-  One check at a time; <=600s/check, <=1800s total including failures/repairs.
-- <=12 production/test files, <=20 evidence files/5MiB (target result+raw log).
-  Frozen105 dependency/history guard replaces full replay: no frozen edit.
-- Done only when all declared connection, negative, persistence and repository
-  checks pass; otherwise preserve failure and stop/replan within owner policy.
-- Deferred: delayed reward reinforcement, future-value discounting, cancellation,
-  autonomous partners, full21/15/132 replay. No UI or additional audit track.
+- Owner ruling2026-11-02 is in WORK_ORDER: normal perceived stand-ins for missing
+  external evidence; Deferred(component/clause) for unintegrated interior state;
+  live quantities before every new behavioral comparison. No placeholder beliefs.
+- M38 scenario: all three tasks are physical, none person-dependent. Both known
+  people stay declared for recognition/relationship/communication; no social task
+  requires an encounter. Performance-disclosure observers remain existing stand-ins
+  receiving ordinary permitted messages. Person beliefs remain Unknown, unused.
+- Local admission correction: only rules/registry0.39 permits an empty task list
+  for a declared person (slot19). Earlier versions preserve their restriction.
+  Existing unmapped-task likelihood semantics, laws and appraisal kernel unchanged.
+- No required interior component missing for this gate: Deferred list is empty;
+  no waiting clause is closed. ADAPT/BIO/BODY12.1/2/8/9 and full21/15/132 persist.
+- Fixed source/data M37 with existing M38 amendments: reserve10, delay0 versus2,
+  amount80 on each action, seed0, difficulty0, informational habit frames. Body
+  samples3/5/7, task/priority/practice/performance/value/causal-report and disclosure
+  channels stay live; no encounter channel or manual belief. Saturation starts100.
+- Assert social mappings empty and initial person beliefs absent. Before comparison
+  require both original physical-task appraisal rows at5 to have all five known
+  fields in BOTH arms; otherwise stop/report. Record liveness and consumed samples.
+- Two identity-only setup runs plus two mapped runs through7, ONCE. Unchanged gate:
+  execution -> queued lineage -> receipt5 exact5+80=85 -> sample5 upper90/10,
+  delayed sample7 upper90 -> changed body factors and reason modifiers at5.
+  Compare overlapping mapped draws exactly; report Auto/zero draws honestly.
+- Pending controls after pass: saturation0/2 through7 (live rows, no effect claim),
+  hidden later samples removed (live recalled context, equal factors/decisions),
+  blocked/zero gain, exact repeat3/restore3..10, late5 rollback, admission/types.
+  New admission check:0.39 admits empty task lists;0.38 rejects them; malformed,
+  duplicate/foreign mappings still reject. No autonomous partner or new owner.
+- Prior plans5c511a13/a1e6effe and failuresd78fcd6a/77fca859 retained. Source finding:
+  all inherited tasks were person-dependent with no encounters, so appraisals
+  unavailable. This is setup error, not interaction; no mechanism/law change.
+- <=3 capabilities, <=12 production/test files; expected10 total: previous9 plus
+  social.ts; model.ts already counted. Contracts and governance docs precede code.
+- Prior771.27s leaves1028.73s of original1800s. One validation process at a time,
+  <=600s/command; connection <=540, saturation <=180, hidden <=300,
+  persistence <=300, rollback <=180, admission <=90. Types/boundary/research and
+  frozen/document guards only for their changed risks; prior unaffected checks kept.
+- <=20 evidence files/5MiB; result+raw log only. Frozen105 closure unchanged.
+- Done requires original connection gate and all affected controls. Stop on absent
+  liveness or failed comparison; no fixture search, new laws, UI or audit tracks.

@@ -76,3 +76,23 @@ receipt5 with initial100 was95+80 capped100 (applied5/overflow75). All other law
 settings, inputs, seed0, explicit coupling and the required appraisal/reason
 contrast stay fixed. Stop if the corrected comparison fails. This changes no
 runtime semantics or seam version and does not restart the validation budget.
+
+## Owner dependency amendment — 2026-11-02
+
+M38 tasks are physical and declare no person dependency. Known people may remain
+in slot19 with empty task lists; only the unaccepted0.39 candidate admits these
+empty lists. All earlier versions preserve their existing admission. Group count,
+identity, duplicate and foreign-task checks remain. This corrects a representation
+restriction, not a law: unmapped tasks already use the existing likelihood1 path.
+Any genuinely social task must instead receive a stand-in's evidence through normal
+perception; no such task is required in this physical scenario. Initial person
+beliefs remain absent. Existing disclosure observers receive normal permitted
+messages; no active partner simulation is introduced.
+
+Before behavior is compared, both original physical-task rows at5 must be live
+(five known fields each). A missing/Unavailable row fails the precondition and
+stops the comparison. No required interior component is unintegrated here; the
+standing Deferred(component not integrated) category has no M38 entries or clause
+closures. The kernel, reserve10, delays0/2, amount80, seed0 and original gate remain
+fixed. Prior failures are setup errors; later cross-system differences require
+explicit evidence/classification rather than silent retuning.
