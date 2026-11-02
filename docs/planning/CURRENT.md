@@ -48,6 +48,12 @@ is accepted yet. Owner now authorizes continued diagnosis/repair through M38 com
   Diagnose/repair within M38; no law/fixture/gate tuning. Initial run ceiling280s,
   original1800s cumulative remains. Retain exact hidden projections before assertions
   so an assertion failure does not erase evidence already computed.
+- Continued run: connection PASS; hidden stops at index2 (time7). Retained exact
+  projections prove Current3/RecalledContext5 live, no sample/recall7; decisions and
+  all4 draws equal. Repair only the overbroad time7 precondition: require absence
+  and Unavailable for every row there, preserve live3/5 and all decision comparisons.
+- Cumulative1770.41s leaves29.59s after final types/guards. A single +180s allowance
+  requested for final native hidden rerun/types/guards; do not overrun pending reply.
 - Frozen105 closure/historical controls unchanged; no UI/new factory/active partners.
   No corpus/obligation closure. ADAPT/BIO/BODY12.1/2/8/9, delayed reward/discounting
   and full21 members/15 families/132 clauses remain open.

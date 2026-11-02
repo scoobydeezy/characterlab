@@ -71,10 +71,20 @@ it('saturation: original reserve100 masks the delivery contrast through the perm
  const runs:Run[]=[];for(const delay of [0,2]){const d=data(true,undefined,100),r=await createCharacterRun(await prepareCharacterModel(source(delay)),d);expect(f(rec(state(r).read(bodyPath(C)).value!,454n),1n)).toEqual(q(100,1));await through(r,7n);live(r);runs.push(r);for(const at of [3n,5n,7n])expect(f(rec(f(sample(r,at),5n),462n),2n)).toEqual(q(100,1));}
  const receipt=reports(runs[1],ACTION_BODY_RECEIPT)[0];expect([1n,2n,3n,4n,5n].map(k=>f(rec(receipt[5],479n),k))).toEqual([95,80,5,75,100].map(n=>q(n,1)));expect(bodyRows(runs[0])).toEqual(bodyRows(runs[1]));console.info('M38 retained reserve100 saturation: receipt5 95+80 ->100, applied5/overflow75; permitted intervals/body factors equal; no choice-effect claim');
 },180000);
-// Physical tasks; samples5/7 removed, sample3 retained; recalled-context liveness must be checked; reserve10.
+// Physical tasks, reserve10; sample3 retained -> recall5; no sample5 -> no recall7.
+// Compare live factors3/5; at7 assert evidence absence explicitly, never call Unknown a live factor.
 it('controls: hidden delivery cannot affect cognition',async()=>{
- const a=await mapped(0,false),b=await mapped(2,false);console.info('M38 hidden projections '+diagnostic([a,b].map(r=>({appraisals:reports(r,JOINT_APPRAISAL),decisions:decisions(r),draws:draws(r),bodySamples:outputs(r.snapshot().outputs,461n),request3Patch:f(traceAt(r,ACTION_BODY_EVENT,3n)[0],17n)}))));for(const r of [a,b])for(const i of [0,1,2])live(r,i);coupled(a,b);expect(bodyRows(a)).toEqual(bodyRows(b));expect(decisions(a)).toEqual(decisions(b));expect(items(f(traceAt(a,ACTION_BODY_EVENT,3n)[0],17n),'list')).toHaveLength(1);expect(f(traceAt(b,ACTION_BODY_EVENT,3n)[0],17n)).toEqual(list([]));expect(outputs(a.snapshot().outputs,461n)).toHaveLength(1);expect(outputs(b.snapshot().outputs,461n)).toHaveLength(1);
- console.info('M38 hidden physical timing preserves live body factors/decisions');
+ const a=await mapped(0,false),b=await mapped(2,false);console.info('M38 hidden projections '+diagnostic([a,b].map(r=>({appraisals:reports(r,JOINT_APPRAISAL),decisions:decisions(r),draws:draws(r),bodySamples:outputs(r.snapshot().outputs,461n),request3Patch:f(traceAt(r,ACTION_BODY_EVENT,3n)[0],17n)}))));for(const r of [a,b]){
+  for(const i of [0,1])live(r,i);
+  const appraisals=reports(r,JOINT_APPRAISAL);
+  expect(appraisals.map(x=>items(x[5],'list')[1])).toEqual(['Current','RecalledContext','Unavailable'].map(text));
+  expect(appraisals[2][2]).toEqual(list([]));expect(appraisals[2][3]).toEqual(list([]));expect(items(appraisals[2][5],'list')[2]).toEqual(list([]));
+  const tasks=items(appraisals[1][4],'list').map(v=>items(v,'list')[0]);
+  expect(appraisals[2][4]).toEqual(list(tasks.map(task=>list([task,text('Unavailable')]))));
+ }
+ expect(coupled(a,b)).toBe(4);expect(draws(a)).toHaveLength(4);expect(draws(b)).toHaveLength(4);
+ expect(bodyRows(a).slice(0,2)).toEqual(bodyRows(b).slice(0,2));expect(decisions(a)).toEqual(decisions(b));expect(items(f(traceAt(a,ACTION_BODY_EVENT,3n)[0],17n),'list')).toHaveLength(1);expect(f(traceAt(b,ACTION_BODY_EVENT,3n)[0],17n)).toEqual(list([]));expect(outputs(a.snapshot().outputs,461n)).toHaveLength(1);expect(outputs(b.snapshot().outputs,461n)).toHaveLength(1);
+ console.info('M38 hidden control PASS: live Current3/RecalledContext5 factors and all decisions equal; four matched draws; at7 both lack sample/experience/selected recall and all body rows explicitly Unavailable');
 },300000);
 // Same physical scenario/channels, reserve10; disabled actuator or zero amount only.
 it('blocked/zero: no queued receipt when blocked and no gain from zero amount',async()=>{
