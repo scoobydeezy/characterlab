@@ -228,7 +228,6 @@ Campaign 2 already uses observation/semanticBinding; M2 must locate the actual m
 capabilities. Historical gate status does not override later accepted closure.
 
 ## Current authorization boundary
-
 Owner adopted M0/M1, M2 D1-D5 and subsequent bounded continuations. CURRENT names
 one authorized milestone at a time. No UI, publishing or assembly acceptance follows.
 
@@ -247,4 +246,5 @@ one authorized milestone at a time. No UI, publishing or assembly acceptance fol
   M38's saturated reserve and missing person evidence are test-setup errors, not
   interactions or law failures. Correct task declarations; delayed-body tasks have
   no person dependency. Keep laws/kernel, reserve10, delay0/2, amount80, seed0 and
-  acceptance gate fixed; one comparison then pending controls within1800s total.
+  acceptance gate fixed. Latest owner continuation permits diagnosis/repair after
+  failures until M38 completion; original1800s budget and evidence gates remain.

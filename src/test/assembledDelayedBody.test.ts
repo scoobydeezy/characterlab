@@ -73,7 +73,7 @@ it('saturation: original reserve100 masks the delivery contrast through the perm
 },180000);
 // Physical tasks; samples5/7 removed, sample3 retained; recalled-context liveness must be checked; reserve10.
 it('controls: hidden delivery cannot affect cognition',async()=>{
- const a=await mapped(0,false),b=await mapped(2,false);for(const r of [a,b])for(const i of [0,1,2])live(r,i);coupled(a,b);expect(bodyRows(a)).toEqual(bodyRows(b));expect(decisions(a)).toEqual(decisions(b));expect(items(f(traceAt(a,ACTION_BODY_EVENT,3n)[0],17n),'list')).toHaveLength(1);expect(f(traceAt(b,ACTION_BODY_EVENT,3n)[0],17n)).toEqual(list([]));expect(outputs(a.snapshot().outputs,461n)).toHaveLength(1);expect(outputs(b.snapshot().outputs,461n)).toHaveLength(1);
+ const a=await mapped(0,false),b=await mapped(2,false);console.info('M38 hidden projections '+diagnostic([a,b].map(r=>({appraisals:reports(r,JOINT_APPRAISAL),decisions:decisions(r),draws:draws(r),bodySamples:outputs(r.snapshot().outputs,461n),request3Patch:f(traceAt(r,ACTION_BODY_EVENT,3n)[0],17n)}))));for(const r of [a,b])for(const i of [0,1,2])live(r,i);coupled(a,b);expect(bodyRows(a)).toEqual(bodyRows(b));expect(decisions(a)).toEqual(decisions(b));expect(items(f(traceAt(a,ACTION_BODY_EVENT,3n)[0],17n),'list')).toHaveLength(1);expect(f(traceAt(b,ACTION_BODY_EVENT,3n)[0],17n)).toEqual(list([]));expect(outputs(a.snapshot().outputs,461n)).toHaveLength(1);expect(outputs(b.snapshot().outputs,461n)).toHaveLength(1);
  console.info('M38 hidden physical timing preserves live body factors/decisions');
 },300000);
 // Same physical scenario/channels, reserve10; disabled actuator or zero amount only.

@@ -2,7 +2,7 @@
 
 Physical tasks now have live appraisals. The single authorized connection stopped
 on an overbroad test assertion; the hidden control stopped at liveness. Neither
-is accepted. Finish independent controls; do not repeat either comparison.
+is accepted yet. Owner now authorizes continued diagnosis/repair through M38 completion.
 
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
@@ -25,7 +25,7 @@ is accepted. Finish independent controls; do not repeat either comparison.
 - Original receipt/sample/appraisal/reason gate was NOT REACHED after that failure.
   Ordinary test repair: first assessment equivalence and per-arm success/count/
   action association, not identical later selected procedures/communication content.
-  Repair must remain unrun under the owner's one-comparison limit.
+  Owner now authorizes execution and continued evidence-based repairs.
 - Saturation100 PASS: receipt5 95+80 capped100, applied5/overflow75; live appraisal
   rows and body factors equal. Hidden control removes samples5/7; liveness FAIL,
   so no behavioral equality accepted. Which row/factor needs bounded diagnostics;
@@ -44,9 +44,10 @@ is accepted. Finish independent controls; do not repeat either comparison.
 - <=3 capabilities,10/12 production/test files; result+raw log only, <=20/5MiB.
   One check at a time, <=600s each, <=1800s total INCLUDING prior failures/guards.
   Cumulative1469.80s;330.20s remains. No reset or broader suite.
-- Proposed ONLY after owner approval of repeat: connection then hidden tests once,
-  same four runs each, bail on first failure,280s combined ceiling. No fixture/law/
-  gate changes; repaired assertions and diagnostics only. Not yet authorized.
+- Owner continuation: run both repaired checks; do not bail on first failure.
+  Diagnose/repair within M38; no law/fixture/gate tuning. Initial run ceiling280s,
+  original1800s cumulative remains. Retain exact hidden projections before assertions
+  so an assertion failure does not erase evidence already computed.
 - Frozen105 closure/historical controls unchanged; no UI/new factory/active partners.
   No corpus/obligation closure. ADAPT/BIO/BODY12.1/2/8/9, delayed reward/discounting
   and full21 members/15 families/132 clauses remain open.
