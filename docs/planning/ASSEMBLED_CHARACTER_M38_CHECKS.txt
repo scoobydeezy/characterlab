@@ -1,0 +1,173 @@
+
+=== typecheck ===
+
+M38_CHECK typecheck exit=0 seconds=15.27
+
+=== connection ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDelayedBody.test.ts > connection: a performed action waits for delivery, then changes permitted body appraisal and reasons
+M38 draws A=0 B=0 matched=0; modes=[["1","1","1"],["1","1","1"]]
+
+ × src/test/assembledDelayedBody.test.ts > connection: a performed action waits for delivery, then changes permitted body appraisal and reasons 127116ms
+   → expected [ { kind: 'rational', …(2) }, …(4) ] to deeply equal [ { kind: 'rational', …(2) }, …(4) ]
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledDelayedBody.test.ts > connection: a performed action waits for delivery, then changes permitted body appraisal and reasons
+AssertionError: expected [ { kind: 'rational', …(2) }, …(4) ] to deeply equal [ { kind: 'rational', …(2) }, …(4) ]
+
+- Expected
++ Received
+
+  Array [
+    Object {
+      "denominator": 1n,
+      "kind": "rational",
+-     "numerator": 5n,
++     "numerator": 95n,
+    },
+    Object {
+      "denominator": 1n,
+      "kind": "rational",
+      "numerator": 80n,
+    },
+    Object {
+      "denominator": 1n,
+      "kind": "rational",
+-     "numerator": 80n,
++     "numerator": 5n,
+    },
+    Object {
+      "denominator": 1n,
+      "kind": "rational",
+-     "numerator": 0n,
++     "numerator": 75n,
+    },
+    Object {
+      "denominator": 1n,
+      "kind": "rational",
+-     "numerator": 85n,
++     "numerator": 100n,
+    },
+  ]
+
+ ❯ src/test/assembledDelayedBody.test.ts:44:221
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 4 skipped (5)
+   Start at  13:00:49
+   Duration  130.31s (transform 1.83s, setup 0ms, collect 2.77s, tests 127.12s, environment 0ms, prepare 124ms)
+
+
+M38_CHECK connection exit=1 seconds=130.84
+
+=== pending-save rollback admission ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDelayedBody.test.ts > persistence: pending receipt survives exact repeat3 and restore3 through10
+M38 pending receipt5 restored from3; exact continuation through10; three operations, three receipts, no duplicate practice
+
+ ✓ src/test/assembledDelayedBody.test.ts > persistence: pending receipt survives exact repeat3 and restore3 through10 108499ms
+stdout | src/test/assembledDelayedBody.test.ts > rollback: late5 failure preserves shared state and private receipt association retries atomically
+M38 late5 work limit 69/70; private receipt rollback/retry, forged/duplicate/overdue delivery and overflow reject
+
+ ✓ src/test/assembledDelayedBody.test.ts > rollback: late5 failure preserves shared state and private receipt association retries atomically 48794ms
+stdout | src/test/assembledDelayedBody.test.ts > admission: governed delays reject invalid coverage, versions and public receipt injection
+M38 delay0..4 governed; invalid scalar/coverage/version/public receipt rejected
+
+ ✓ src/test/assembledDelayedBody.test.ts > admission: governed delays reject invalid coverage, versions and public receipt injection 51384ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 2 skipped (5)
+   Start at  13:04:15
+   Duration  211.89s (transform 1.80s, setup 0ms, collect 2.73s, tests 208.68s, environment 0ms, prepare 121ms)
+
+
+M38_CHECK pending-save rollback admission exit=0 seconds=212.4
+
+LOCAL DISPOSITION: before running hidden controls, compare the actual physical histories at3 (immediate body patch versus queued no patch), not unequal terminal anchors. Both can legitimately saturate at100 by7. This repairs the assertion without changing inputs, laws or the required hidden-cognition equality.
+
+=== hidden blocked zero controls ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDelayedBody.test.ts > controls: hidden delivery cannot affect cognition; blocked and zero effects cannot invent gain
+M38 draws A=0 B=0 matched=0; modes=[["1","1","1"],["1","1","1"]]
+
+stdout | src/test/assembledDelayedBody.test.ts > controls: hidden delivery cannot affect cognition; blocked and zero effects cannot invent gain
+M38 hidden physical timing preserves body factors/decisions; no extra attempts; blocked has no queue, zero settles without gain
+
+ ✓ src/test/assembledDelayedBody.test.ts > controls: hidden delivery cannot affect cognition; blocked and zero effects cannot invent gain 185162ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 4 skipped (5)
+   Start at  13:08:21
+   Duration  188.31s (transform 1.79s, setup 0ms, collect 2.72s, tests 185.16s, environment 0ms, prepare 128ms)
+
+
+M38_CHECK hidden blocked zero controls exit=0 seconds=188.81
+
+=== unchanged M37 and M10 admission binding ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledActionBody.test.ts > M10 executed-action feedback > controls: governed configuration rejects missing/foreign/duplicate/invalid effects and forged public source 5917ms
+   → Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ✓ src/test/assembledActionBody.test.ts > M10 executed-action feedback > controls: private execution binding rejects foreign attempts, forged/duplicate children and repeated execution 5796ms
+stdout | src/test/assembledCausalOpportunities.test.ts > admission: optional does not weaken phase, scope, duplicate, version or generated-child checks
+M37 phase/duplicate/opportunity/task/version, predecessor completeness, one-appraisal lifecycle and private generated association guards
+
+ ✓ src/test/assembledCausalOpportunities.test.ts > admission: optional does not weaken phase, scope, duplicate, version or generated-child checks 32269ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledActionBody.test.ts > M10 executed-action feedback > controls: governed configuration rejects missing/foreign/duplicate/invalid effects and forged public source
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 2 passed | 9 skipped (12)
+   Start at  13:11:43
+   Duration  35.41s (transform 1.90s, setup 0ms, collect 5.26s, tests 43.98s, environment 0ms, prepare 247ms)
+
+
+M38_CHECK unchanged M37 and M10 admission binding exit=1 seconds=35.91
+
+=== M10 admission explicit timeout repair ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledActionBody.test.ts > M10 executed-action feedback > controls: governed configuration rejects missing/foreign/duplicate/invalid effects and forged public source 6964ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  13:13:18
+   Duration  9.84s (transform 1.64s, setup 0ms, collect 2.48s, tests 6.96s, environment 0ms, prepare 121ms)
+
+
+M38_CHECK M10 admission explicit timeout repair exit=0 seconds=10.35
+
+=== reference boundary ===
+Reference boundary check passed.
+
+M38_CHECK reference boundary exit=0 seconds=2.22
+
+=== research obligations ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M38_CHECK research obligations exit=0 seconds=3.33
+
+=== typecheck after hidden-control assertion repair ===
+
+M38_CHECK typecheck after hidden-control assertion repair exit=0 seconds=14.83
+
+M38 final guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and M22-M37 retained tests unchanged; document/evidence caps. seconds=9.39
+M38 validation seconds including guard=623.35
