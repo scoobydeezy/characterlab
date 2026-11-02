@@ -21,12 +21,12 @@ The report at6 referring to5 is correctly unbound; neither an attempt nor an
 episode is invented. The failed comparison and diagnosis remain in the
 [raw log](ASSEMBLED_CHARACTER_M36_CHECKS.txt), and its assertion remains failing.
 
-Pending owner request: change only the initial reported task outcome at3 from
+Owner approved2026-11-02 (implementation pending): change only the initial reported task outcome at3 from
 failure to success, preserving this failed case as a control. Seed0, laws, goals,
 route, direct report polarities and required1/2-versus1 result stay fixed. This
 reuses M34's successful reported-outcome condition; its effect under0.37 has not
 been tried. Stop if the amended fixture also lacks the required attempts.
-The work order requires an amendment before changing a predeclared comparison.
+This approved amendment is recorded before changing the fixture.
 The context/duplicate/current-evidence native group remains unrun because it also
 assumes the missing second attempt. No acceptance requirement is weakened.
 

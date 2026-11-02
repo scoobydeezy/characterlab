@@ -1,4 +1,4 @@
-# Current work — M36 fixture amendment pending
+# Current work — M36 approved fixture amendment
 
 M35 connects an observed failed attempt and later diagnostics to causal appraisal.
 M36 will connect direct obstruction reports about actual past attempts to a later
@@ -49,10 +49,17 @@ route expectation and goal-relative appraisal in the same continuing character.
   stay closed. No new verdict, reduction or obligation closure.
 
 - First connection failed: the unchanged M35 seed0 fixture retained only outcome3;
-  report about5 correctly stayed unbound. Fixed-seed diagnosis retained. Await
-  owner approval to report success at3, preserving this failed case as a control;
-  no replacement execution before approval. Independent checks continue.
+  report about5 correctly stayed unbound. Fixed-seed diagnosis retained.
+  Owner approved2026-11-02: change only the queried task's reported outcome3
+  from failure(mode1) to success(mode2); retain original failure as a control.
+  Seed0/laws/goals/route/polarities and required1/2-versus1 stay fixed. Stop if
+  replacement lacks required attempts. Commit amendment before fixture changes.
 - Independent original416 comparisons, privacy, repeat/restore, late rollback and
   admission/ownership checks pass. Result: [M36 checkpoint](ASSEMBLED_CHARACTER_M36_RESULT.md).
 - Unchanged M35 regressions, final TypeScript/boundary/research pass. Native
   connection remains failed; dependent gates are unrun. No full milestone pass.
+- Prior validation699.59s includes the checkpoint guard; remaining1100.41s.
+  Run amended connection first, then affected native groups/control, TypeScript
+  and preservation guard. Retain original416 replay/M35 regressions/static checks
+  because production is unchanged. Missing-outcome control checks appraisal5
+  after the first unbound report; it does not presume a later unrelated action.
