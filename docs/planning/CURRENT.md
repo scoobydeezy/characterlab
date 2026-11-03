@@ -1,59 +1,61 @@
-# Current work — post-M40 review adjustment (2026-11-03)
+# Current work — M41 chosen reappraisal (2026-11-03)
 
-M40 remains complete at9ca6bb53. Review checked against that source; this update
-changes sequence/guardrails only. No simulation, law or historical result changed.
+The character will learn an alternative interpretation, choose whether to use it,
+execute that cognitive operation, and appraise later using its retained frame.
+M40 is complete; post-M40 guardrails at061cea16 remain in force. No UI work.
 
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
-## Findings and local dispositions
+## Bounded card (commit before code)
 
-- Structure confirmed: one scheduler,15 existing state wrappers, no production
-  Campaign3 factory/runtime imports. Leave the wrapper structure alone.
-- Affect gap confirmed: factor-derived appraisals exist; broader emotional meaning,
-  chosen reappraisal, rumination and fatigue are not integrated. Architecture5.1(6)
-  makes Affect derived and persistence conditional; L4 self-feedback remains OFF.
-  A new persistent emotion store is not the default remedy.
-- Memory gap confirmed with a correction: root346 retains diagnostic AND body
-  episodes (retention.ts); social/performance/relationship journals also retain
-  history. They are not a shared cue-retrievable social/choice episodic memory.
-  Their latest collective change is8ca43750 (2026-10-26).
-- Calibration concern accepted; neither same choice nor minority choice changes
-  alone prove lost integration. cognitiveMath.ts modifier truncates toward zero,
-  caps at3; reference context unit1/10 was explicitly adopted in M3. For positive
-  net input x bounded as x/(1+x), modifier boundaries are1/9,1/4,3/7. M39 amount80
-  preserves the equal-band result; amount40 proves another connection, not general
-  calibration adequacy. No retrospective retraction or claim that80 was hidden.
-- Autonomous partners remain outside this experiment under the owner's prior scope.
-  Scripted, fallible reports/stand-ins can test one character's interpretation,
-  deception response and repair; mutual autonomous behavior remains explicitly open.
-- The review's35-40% estimate has no reproducible weighting; do not adopt it.
-  Configuration and recognition are bounded achievements; coupling is per comparison,
-  not automatically solved for future runs. Final21/15/132 replay stays open.
+- Capabilities: (1) perceived condition/catalogue evidence supports a reappraisal
+  option in the shared choice loop; (2) successful completion retains a frame that
+  changes later derived affect; (3) interruption/no-op/hidden evidence controls.
+- Contract: ASSEMBLED_CHARACTER_REAPPRAISAL_CONTRACT.md v0.1, rules/registry0.42.
+  Port chosen-reappraisal-component/public0.1 semantics into existing owners and
+  phases. Reference BenefitRelative/SplitExposure; KnowledgeOnly/NoReappraisal
+  comparisons remain. Self-feedback OFF; no stored affect or separate runtime.
+- Files (10 planned,12 maximum): assembled/{reappraisal,model,inputs,state,control,
+  execution,runtime,traceBinding}.ts; test/fixtures/assembledReappraisal.ts;
+  test/assembledReappraisal.test.ts. No frozen dependency changes.
+- Original mapping: chosenReappraisalFixtures.ts chosenFrames(SafetyOnly) versus
+  Interrupted, all eight original source frames, seed0; shared goals adopt safety/4
+  through existing priority perception. Declared reframe task/action maps onto the
+  existing task, candidate, reason, arbitration, intent, attempt and execution path.
+  Original component is a test oracle only, never a production dispatcher.
+- Gate: at4 both arms have live known means1/0, catalogue2, goal1 and a selected
+  available reframe action. Both execute; only successful completion changes frame.
+  At5 both appraisal rows are live, knowledge is equal and unchanged by relief,
+  and SplitExposure differs1/1 versus0/0. All eight source frames are consumed.
+- Calibration before behavioral runs: original safety4/4 * benefit(1-0)=1;
+  consolidated motive1/2 reaches unchanged activation1/2, with no standing/context
+  contribution. Record actual die, modifiers, analytic probability and mode.
+  Mixed history benefit1/2 yields motive1/2 -> bounded1/3: retain as subthreshold.
+  This domain cannot reach modifier saturation (no contextual/standing source);
+  no magnitude/seed search, changed reference units or post-result comparator swap.
+- Controls: NoReappraisal, Unknown, SameInstant, DeniedCatalogue, NoOpportunity,
+  Ineffective/Harmful with BenefitRelative and KnowledgeOnly, HiddenTruth, Mixed.
+  Use original frames unchanged; original WorkOnly/Balanced remain pending.
+  Main comparisons are single-option Auto or no-choice; assert zero draws rather
+  than claim same-seed coupling. No stochastic behavioral comparison is authorized.
+- Exact repeat/restore at4 through8 plus terminal deadlines; forged source/initial
+  frame/wrong-owner rejection and late-instant rollback. Original component oracle
+  for SafetyOnly/Interrupted/NoReappraisal: means, frame timing, later affect,
+  preserved evidence. Original opaque IDs/phases map semantically, not bytewise.
+- Replay scope: BRIEF-12.5-7 bounded connection and12.5-1 same-knowledge contrast;
+  PHEN-AFFECT-001:10 relief-not-evidence subrequirement and:11 relevant trace fields.
+  Other clauses/subrequirements stay blocked or pending in the existing register.
+  RO-C3-011 prior-affect carry is not consumed; trace explicitly records prior
+  knowledge/frame, not newly generated appraisals. No inherited self-feedback repair.
+- Checks: types first; focused calibration then behavioral/negative/persistence/
+  rollback tests; unchanged M40 connection regression; boundaries/research; frozen
+  105 dependency/hash and historical-source guards; document/evidence/Git size.
+  One check at a time,600s each,1800s cumulative including failures. Evidence <=20
+  files/5MiB (one result/log);3 capabilities/12 source files. Keep every failure.
+- Binary done: connection plus all declared controls/checks pass, evidence retained,
+  exact covered/pending IDs recorded, result committed. Passing ends verification.
+  Routine implementation repairs local; law/comparison/budget changes escalate.
 
-## Adjusted next work
-
-1. Next implementation target M41: chosen reappraisal over the shared appraisal/
-   reason/choice/execute loop. A successful cognitive operation changes retained
-   interpretive context and a later derived affect/reason or action; failed/no-op
-   completion does not. Relief must not become evidence. Preserve L4 BenefitRelative,
-   SplitExposure and its comparators; do not silently enable persistence feedback.
-   First commit the exact contract/card, state/phase mapping and binary live gate.
-2. Before its behavioral execution, map raw input -> consolidated strength ->
-   activation/die/modifier -> analytic probabilities/mode, with exact boundaries.
-   Keep reference settings, meaningful small/saturated controls and original failed
-   contrasts. No post-result magnitude hunting. A substantive calibration alternative
-   requires a finite measured comparison and owner ruling; no new law adopted now.
-3. Bring original pinned requirements into assembled replay now, one affected member
-   at a time within the milestone budget. Start C-AFFECT/F-12.5 with M41; record exact
-   requirement IDs exercised and blocked by missing producers. Historical standalone
-   passes are controls, not assembled replay. No whole-member closure from one witness.
-4. Then extend the existing episodic owner to social/action/outcome experience and
-   demonstrate later recall changing social judgment; selective encoding and affect
-   bias follow this connection. No separate memory store or machinery-only milestones.
-
-No code started here. M41's card must resolve actual original cases/requirements,
-calibration and provenance before implementation, including RO-C3-011 diagnostic
-carry if consumed. Keep3 capabilities/12 source files/20 evidence files/5MiB,
-600s per check/1800s total. Full pinned replay remains the final gate; no extra UI,
-autonomous character, audit track or progress dashboard is added.
-[M40 result](ASSEMBLED_CHARACTER_M40_RESULT.md) and [register](ASSEMBLED_CHARACTER_RECONCILIATION.md).
+Next after M41: non-body experience in the existing episodic owner, with recall
+changing social judgment before more memory machinery. Autonomous partners deferred.
+Full pinned21-member/15-family/132-clause replay remains required for final acceptance.
