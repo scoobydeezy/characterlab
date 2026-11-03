@@ -28,11 +28,13 @@ M40 is complete; post-M40 guardrails at061cea16 remain in force. No UI work.
   At5 both appraisal rows are live, knowledge is equal and unchanged by relief,
   and SplitExposure differs1/1 versus0/0. All eight source frames are consumed.
 - Calibration before behavioral runs: original safety4/4 * benefit(1-0)=1;
-  consolidated motive1/2 reaches unchanged activation1/2, with no standing/context
+  consolidated motive1/2 reaches inherited activation37/100, with no standing/context
   contribution. Record actual die, modifiers, analytic probability and mode.
   Mixed history benefit1/2 yields motive1/2 -> bounded1/3: retain as subthreshold.
   This domain cannot reach modifier saturation (no contextual/standing source);
   no magnitude/seed search, changed reference units or post-result comparator swap.
+- LOCAL DISPOSITION before behavioral execution: registry measured37/100, not the
+  card's assumed1/2. Preserve actual reference settings; primary/small gates unchanged.
 - Controls: NoReappraisal, Unknown, SameInstant, DeniedCatalogue, NoOpportunity,
   Ineffective/Harmful with BenefitRelative and KnowledgeOnly, HiddenTruth, Mixed.
   Use original frames unchanged; original WorkOnly/Balanced remain pending.
