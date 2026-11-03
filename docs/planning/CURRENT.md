@@ -1,41 +1,53 @@
-# Current work — M38 complete
+# Current work — M39 tolerance affects actual delivery
 
-A performed action can have a later physical consequence. Delivery timing changes
-permitted body evidence, live appraisal and actual reason modifiers in the same
-character. Hidden delivery timing does not change cognition without new evidence.
+M39 connects retained ADAPT tolerance to the physical consequence of execution,
+then normal body perception, live appraisal and reasons in one continuing character.
 
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
-- [M38 result](ASSEMBLED_CHARACTER_M38_RESULT.md) and exact native checks record
-  connection, saturation, hidden evidence, blocked/zero, persistence, rollback
-  and admission PASS. Types and frozen105 preservation checks PASS.
-- Rules/registry0.39,26 slots; delayed-body0.1 candidate seam. One state, scheduler,
-  RNG ledger, trace and save; existing body owner. No Campaign3 runtime dispatch.
-- Fixed reserve10, delay0/2, amount80, seed0. Three physical tasks have no person
-  dependency. People remain declared; unknown person beliefs are never filled in.
-  Only0.39 permits empty per-person task lists; earlier admission is preserved.
-- Connection: request3 queues without a body write; exact lineage to receipt5,
-  before5+80=85. Sample5 upper90/10; delayed sample7 upper90. Live task rows at5
-  consume those samples and produce different appraisal factors/reason modifiers.
-- Positive arms have0/4 draws, no shared draws; no isolated choice-effect claim.
-  The downstream procedure/skill difference is reported, not forced equal.
-- Hidden control: both Current3 and RecalledContext5 live; factors and all decisions
-  equal, four actual draws explicitly matched. At7 neither arm has sample,
-  experience or selected recall: every expected body row must be Unavailable.
-  An absence assertion is not presented as a live behavioral comparison.
-- Earlier saturated-reserve and false person-dependency setup errors retained.
-  All-later-skill equality and time7 liveness were test defects; repaired without
-  changing inputs/laws/gate. Raw failures/projections remain in the single log.
-- Standing owner rule: missing external evidence enters through perceived stand-ins;
-  missing interior component is Deferred(component/clause), distinct from Unknown.
-  Tests declare scenario dependencies/channels/body and assert compared values live.
-  No required interior component is missing here; no Deferred clause is closed.
-- Ten production/test files, two evidence files, within12 and20/5MiB limits.
-  Original1800s plus explicitly approved180s =1980s cumulative; no budget reset.
-  Final measured total is in the M38 result/log. No more checks after completion.
-- Existing historical/control sources remain unchanged. No full frozen-suite rerun:
-  no control dependency or entry changed. No UI or autonomous partner work.
-- Delayed reward learning, future-value discounting, wider body mechanisms and final
-  21 members/15 families/132 clauses remain open. No verdict/obligation closure.
-- Next milestone requires its own bounded card and connected behavioral gate.
-  Do not infer permission for new breadth, UI, a verifier track or final acceptance.
+## Bounded card (before implementation)
+
+- Baseline d650168c (M38 complete); retain its result and all earlier controls.
+- One capability: actual prior exposure attenuates a later delivered body effect;
+  normal perception carries that difference into live appraisal/reason modifiers.
+- Implements assembled-character-tolerance/0.1-candidate; rules/registry0.40,
+  slot26 declaration. Existing302/1 ADAPT owner writes tolerance; body455 owner
+  reads it at actual delivery, never at queueing, and writes only reserve.
+- Reference Reciprocal adopted in L1 (engineering default, no winning-law verdict).
+  Linear and Unattenuated are explicit fixed comparison laws, never per-task gates.
+- Preserve VER-C3-TOLERANCE-001, MEC003/MEC019 and EXP002 distinctions;
+  RO-C3-008/010/015/019/020 remain conditional. Scheduled consumption is new
+  qualification beyond the frozen component, not retroactive evidence for it.
+- Files: assembled tolerance.ts, model.ts, state.ts, runtime.ts, body.ts;
+  fixtures/assembledTolerance.ts and assembledTolerance.test.ts (7 planned,12 cap).
+- Scenario: inherited M38 three physical tasks, no social dependencies/encounters;
+  passive disclosure observers, normal task/practice/performance/value channels;
+  body samples3/5/7, initial reserve10, amount80, delay2, difficulty0, seed0.
+  Informational habit frames unchanged; no authored starting tolerance/belief.
+- Primary: Reciprocal versus Unattenuated, identical inputs/history through first
+  receipt5. Execution3 supplies one exposure and ADAPT140 commits tolerance1;
+  receipt5 reads1 before same-instant adaptation140, yielding potential40 vs80.
+  Before5 is5, after5 is45 vs85; sample7 upper50 vs90. Assert compared task rows
+  live in both arms before requiring different appraisal and reason modifiers7.
+- Each arm: identity-only setup through7 then same fixed seed with semantic map.
+  Report actual matched draws; no stochastic choice-effect claim without coupling.
+- Hidden control removes only sample7 in both arms: equal permitted samples3/5,
+  live recalled context7, equal body factors/reasons/decisions despite body truth.
+  Hold matched actual dice fixed. Do not manufacture missing evidence.
+- Persistence: exact repeat at3 and checkpoint3 continuation through10 with pending
+  delivery and earned tolerance. Late5 work-ceiling failure must roll back all state.
+- Arithmetic/admission: all three existing laws, absent/wrong key/other leaves,
+  capacity conversion, zero/saturation, invalid declaration/variable/version;
+  no tolerance read on queue/blocked/external delivery; old0.39 remains unattenuated.
+- Checks (one process at a time): types; new targeted groups; existing M38 connection;
+  existing tolerance arithmetic; boundary/research; frozen105/history/doc/size guards.
+  Each catches arithmetic, ownership/order, hidden truth, save/rollback, admission,
+  backward compatibility or evidence-preservation risk respectively.
+- Budget:600s per command,1800s cumulative including failures/repairs/guards;
+  <=20 evidence files /5MiB, expected one raw log plus one result. No UI/build/browser.
+- Done iff all declared gates pass and findings classified. Ordinary bugs may be
+  repaired with failures retained; no law/input/acceptance tuning. At budget/scope
+  boundary report incomplete. Stop verification on pass.
+- No recovery, sensitization effect, cross-tolerance, compensatory behavior or new
+  cognition access to tolerance. Missing interior components remain Deferred when
+  required; none is required by this gate. Final21/15/132 replay remains open.
