@@ -1,3 +1,4 @@
+import type {MemoryUseConsumer} from './memoryUse';
 import {encodeExperience,ENCODING_VERSION,type EncodingSettings} from './encoding';
 import {SOCIAL_EPISODE} from './memory';
 import {encounterSource,ENCOUNTER_VERSION} from './encounter';
@@ -23,7 +24,7 @@ import {SOCIAL_OBSERVATION,SOCIAL_APPRAISAL,SOCIAL_LEARNING,SOCIAL_SOURCE,SOCIAL
 import type {compileCampaign2StateModel} from '../campaign2/stateModel';
 const eq=(a:CanonicalValue,b:CanonicalValue)=>key(a)===key(b),fp=(e:ScheduledEvent)=>key(scheduledEventValue(e));
 const fail=(s:string):never=>{throw new SchedulerContractError('INPUT_NOT_ADMITTED','social: '+s);};
-export function createSocialExecution(C:CanonicalValue,settings:ReturnType<typeof compileSocial>,stateModel:ReturnType<typeof compileCampaign2StateModel>,originals:readonly ScheduledEvent[],model:CanonicalValue,run:CanonicalValue,recognitionSettings?:RecognitionSettings,relationship?:Pick<ReturnType<typeof createRelationshipExecution>,'receiveEncounter'>,socialMemory=false,encoding?:EncodingSettings){
+export function createSocialExecution(C:CanonicalValue,settings:ReturnType<typeof compileSocial>,stateModel:ReturnType<typeof compileCampaign2StateModel>,originals:readonly ScheduledEvent[],model:CanonicalValue,run:CanonicalValue,recognitionSettings?:RecognitionSettings,relationship?:Pick<ReturnType<typeof createRelationshipExecution>,'receiveEncounter'>,socialMemory=false,encoding?:EncodingSettings,consumeMemory?:MemoryUseConsumer){
  const recognition=recognitionSettings?createRecognitionExecution(recognitionSettings,stateModel,!!encoding):undefined;
  let recognizedObservation:CanonicalValue|undefined,encounterEvidence:CanonicalValue|undefined;
  let active=false,at=0n,unbound=0,observation:CanonicalValue|undefined,experience:CanonicalValue|undefined,reservation:ExperienceReservation|undefined,staged:StagedSemanticExperience[]=[];const pending=new Set<string>(),used=new Set<bigint>();
@@ -47,9 +48,11 @@ export function createSocialExecution(C:CanonicalValue,settings:ReturnType<typeo
  appraise(event:ScheduledEvent,state:AuthoritativeState,workspace?:CanonicalValue){
  if(!active||event.phase!==50n||event.dueAt!==at)fail('appraisal lifecycle');
  const priors=settings.targets.map(target=>({target,prior:read(state,personPath(C,target))})),likelihoods=new Map<string,Q|undefined>();
- const reports=priors.map(({target,prior})=>{const recalled=socialMemory&&workspace?items(items(workspace,'list')[4],'list').map(v=>items(items(v,'list')[1],'list')).filter(a=>txt(a[0])===SOCIAL_EPISODE&&eq(items(a[2],'list')[2],target)):[];const effective=recalled.length?list([text('assembled-social/0.1'),list([...new Map(recalled.map(a=>{const o=items(a[2],'list');return [key(list([o[4],o[5]])),a[2]];})).values()])]):prior.value,mean=personMean(effective),tasks=settings.tasks.filter(t=>eq(t.target,target));for(const t of tasks)likelihoods.set(key(t.task),mean===undefined?undefined:t.desired?Q.of(1n).subtract(mean):mean);
+ const used:CanonicalValue[]=[];
+ const reports=priors.map(({target,prior})=>{const recalled=socialMemory&&workspace?items(items(workspace,'list')[4],'list').map(v=>items(items(v,'list')[1],'list')).filter(a=>txt(a[0])===SOCIAL_EPISODE&&eq(items(a[2],'list')[2],target)):[];const operands=[...new Map(recalled.map(a=>{const o=items(a[2],'list');return [key(list([o[4],o[5]])),a] as const;})).values()];used.push(...operands.map(list));const effective=operands.length?list([text('assembled-social/0.1'),list(operands.map(a=>a[2]))]):prior.value,mean=personMean(effective),tasks=settings.tasks.filter(t=>eq(t.target,target));for(const t of tasks)likelihoods.set(key(t.task),mean===undefined?undefined:t.desired?Q.of(1n).subtract(mean):mean);
  return list([text(SOCIAL_APPRAISAL),signed(at),target,list(personHistory(effective)),list(mean===undefined?[]:[qValue(mean)]),list(tasks.map(t=>list([t.task,t.desired,list(likelihoods.get(key(t.task))===undefined?[]:[qValue(likelihoods.get(key(t.task))!)])]))),...(socialMemory?[list([text('assembled-social-memory-context/0.1'),list(personHistory(prior.value)),list(personMean(prior.value)===undefined?[]:[qValue(personMean(prior.value)!)]),list(recalled.map(a=>a[1]))])]:[])]);});
  const report=settings.multiple?list([text('assembled-social-people/0.1/appraisal'),...reports]):reports[0];
+ if(consumeMemory&&used.length)consumeMemory(event,used,report);
  return {report,likelihoods,trace:(xs:readonly ScheduledEvent[])=>trace(event,socialMemory?list([workspace??list([]),report]):settings.multiple?list([list(priors.map(p=>p.prior.value??list([]))),report]):list([priors[0].prior.value??list([]),report]),[report],xs,priors.map(p=>p.prior.record),{operations:[]},[],[...priors.flatMap(p=>personHistory(p.prior.value).map(o=>items(o,'list')[0])),...(socialMemory?reports.flatMap(p=>items(items(items(p,'list')[6],'list')[3],'list')):[])])};
  },
  prepare(events:readonly ScheduledEvent[],B0:AuthoritativeState){if(events.length!==1)fail('update multiplicity');const event=events[0];admit(event,140n);if(!eq(event.eventTypeId,SOCIAL_UPDATE)||!observation||!eq(event.payload,list([observation,experience??list([])])))fail('update association');const target=recognizedObservation?settings.targets.find(t=>eq(t,items(recognizedObservation!,'list')[2])):undefined,path=personPath(C,target??settings.target),prior=read(B0,path);

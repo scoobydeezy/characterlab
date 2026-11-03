@@ -1,0 +1,243 @@
+
+=== calibration-original-tiers ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMemoryUse.test.ts > calibration: original used tier and AgeOnly preserve ties budgets and access arithmetic
+M45 CALIBRATION exact original SF/UP/AgeOnly capacities0..4/canonical ties; A history2,4 base5/12 + pull1/4*gain2=11/12 > C1/2. Graph1/2, seed0/dice unchanged.
+
+ ✓ src/test/assembledMemoryUse.test.ts (6 tests | 5 skipped) 8ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  14:50:03
+   Duration  3.48s (transform 2.10s, setup 0ms, collect 3.18s, tests 8ms, environment 0ms, prepare 102ms)
+
+
+M45_CHECK calibration-original-tiers exit=0 seconds=4.01
+
+=== types-initial ===
+
+M45_CHECK types-initial exit=0 seconds=15.91
+
+=== connection-continuation ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMemoryUse.test.ts > connection and continuation: committed use protects old evidence and changes later live judgment
+M45 BARRIER 4 survivors; prior-use=false,true,true,false,false
+M45 BARRIER 4 survivors; prior-use=false,true,true,false,false
+
+ ❯ src/test/assembledMemoryUse.test.ts (6 tests | 1 failed | 5 skipped) 127894ms
+   × connection and continuation: committed use protects old evidence and changes later live judgment 127893ms
+     → expected false to be true // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledMemoryUse.test.ts > connection and continuation: committed use protects old evidence and changes later live judgment
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ live src/test/assembledMemoryUse.test.ts:34:280
+
+ ❯ src/test/assembledMemoryUse.test.ts:50:182
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 5 skipped (6)
+   Start at  14:50:57
+   Duration  131.28s (transform 2.00s, setup 0ms, collect 3.05s, tests 127.89s, environment 0ms, prepare 101ms)
+
+
+M45_CHECK connection-continuation exit=1 seconds=131.81
+
+=== diagnose-final-liveness-fixed-source ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMemoryUse.test.ts > diagnostic M45 final liveness
+M45 LIVENESS {"joint":[{"kind":"text","value":"assembled-body-appraisal/0.1"},{"kind":"record","schema":{"typeId":"384","schemaVersion":"1","name":"TaskAppraisal","fields":[{"id":"1","name":"AppraisalOccurrenceId","required":true},{"id":"2","name":"Workspace","required":true},{"id":"3","name":"Assessments","required":true}]},"fields":{}},{"kind":"list","items":[]},{"kind":"list","items":[]},{"kind":"list","items":[{"kind":"list","items":[{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}},{"kind":"text","value":"Unavailable"}]},{"kind":"list","items":[{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}},{"kind":"text","value":"Unavailable"}]},{"kind":"list","items":[{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}},{"kind":"text","value":"Unavailable"}]}]},{"kind":"list","items":[{"kind":"text","value":"assembled-memory-context/0.1"},{"kind":"text","value":"Unavailable"},{"kind":"list","items":[]}]},{"kind":"list","items":[{"kind":"text","value":"assembled-social-people/0.1/appraisal"},{"kind":"list","items":[{"kind":"text","value":"assembled-social/0.1/appraisal"},{"kind":"signed","value":"7"},{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"content/recognition/other"}}}},{"kind":"list","items":[]},{"kind":"list","items":[]},{"kind":"list","items":[{"kind":"list","items":[{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}},true,{"kind":"list","items":[]}]}]},{"kind":"list","items":[{"kind":"text","value":"assembled-social-memory-context/0.1"},{"kind":"list","items":[]},{"kind":"list","items":[]},{"kind":"list","items":[]}]}]},{"kind":"list","items":[{"kind":"text","value":"assembled-social/0.1/appraisal"},{"kind":"signed","value":"7"},{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"content/assembled-social/target"}}}},{"kind":"list","items":[{"kind":"list","items":[{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"13"}},{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"character/bridge-subject"}}}},{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"content/assembled-social/target"}}}},{"kind":"signed","value":"1"},{"kind":"unsigned","value":"1"},{"kind":"unsigned","value":"1"},{"kind":"list","items":[true]},{"kind":"list","items":[true]}]}]},{"kind":"list","items":[{"kind":"rational","numerator":"1","denominator":"1"}]},{"kind":"list","items":[{"kind":"list","items":[{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}},true,{"kind":"list","items":[{"kind":"rational","numerator":"0","denominator":"1"}]}]},{"kind":"list","items":[{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}},false,{"kind":"list","items":[{"kind":"rational","numerator":"1","denominator":"1"}]}]}]},{"kind":"list","items":[{"kind":"text","value":"assembled-social-memory-context/0.1"},{"kind":"list","items":[{"kind":"list","items":[{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"13"}},{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"character/bridge-subject"}}}},{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"content/assembled-social/target"}}}},{"kind":"signed","value":"1"},{"kind":"unsigned","value":"1"},{"kind":"unsigned","value":"1"},{"kind":"list","items":[true]},{"kind":"list","items":[true]}]},{"kind":"list","items":[{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"39"}},{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"character/bridge-subject"}}}},{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"content/assembled-social/target"}}}},{"kind":"signed","value":"2"},{"kind":"unsigned","value":"1"},{"kind":"unsigned","value":"2"},{"kind":"list","items":[false]},{"kind":"list","items":[true]}]},{"kind":"list","items":[{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"100"}},{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"character/bridge-subject"}}}},{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"content/assembled-social/target"}}}},{"kind":"signed","value":"5"},{"kind":"unsigned","value":"1"},{"kind":"unsigned","value":"4"},{"kind":"list","items":[false]},{"kind":"list","items":[true]}]}]},{"kind":"list","items":[{"kind":"rational","numerator":"1","denominator":"3"}]},{"kind":"list","items":[{"kind":"typedIdentifier","namespaceId":"1125","payload":{"kind":"unsigned","value":"30"}}]}]}]}]}],"social":[{"kind":"text","value":"assembled-social/0.1/appraisal"},{"kind":"signed","value":"7"},{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"content/assembled-social/target"}}}},{"kind":"list","items":[{"kind":"list","items":[{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"13"}},{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"character/bridge-subject"}}}},{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"content/assembled-social/target"}}}},{"kind":"signed","value":"1"},{"kind":"unsigned","value":"1"},{"kind":"unsigned","value":"1"},{"kind":"list","items":[true]},{"kind":"list","items":[true]}]}]},{"kind":"list","items":[{"kind":"rational","numerator":"1","denominator":"1"}]},{"kind":"list","items":[{"kind":"list","items":[{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}},true,{"kind":"list","items":[{"kind":"rational","numerator":"0","denominator":"1"}]}]},{"kind":"list","items":[{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}},false,{"kind":"list","items":[{"kind":"rational","numerator":"1","denominator":"1"}]}]}]},{"kind":"list","items":[{"kind":"text","value":"assembled-social-memory-context/0.1"},{"kind":"list","items":[{"kind":"list","items":[{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"13"}},{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"character/bridge-subject"}}}},{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"content/assembled-social/target"}}}},{"kind":"signed","value":"1"},{"kind":"unsigned","value":"1"},{"kind":"unsigned","value":"1"},{"kind":"list","items":[true]},{"kind":"list","items":[true]}]},{"kind":"list","items":[{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"39"}},{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"character/bridge-subject"}}}},{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"content/assembled-social/target"}}}},{"kind":"signed","value":"2"},{"kind":"unsigned","value":"1"},{"kind":"unsigned","value":"2"},{"kind":"list","items":[false]},{"kind":"list","items":[true]}]},{"kind":"list","items":[{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"100"}},{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"character/bridge-subject"}}}},{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"content/assembled-social/target"}}}},{"kind":"signed","value":"5"},{"kind":"unsigned","value":"1"},{"kind":"unsigned","value":"4"},{"kind":"list","items":[false]},{"kind":"list","items":[true]}]}]},{"kind":"list","items":[{"kind":"rational","numerator":"1","denominator":"3"}]},{"kind":"list","items":[{"kind":"typedIdentifier","namespaceId":"1125","payload":{"kind":"unsigned","value":"30"}}]}]}]}
+
+ ✓ src/test/assembledMemoryUse.test.ts (7 tests | 6 skipped) 65132ms
+   ✓ diagnostic M45 final liveness 65131ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  14:54:03
+   Duration  68.43s (transform 1.97s, setup 0ms, collect 3.00s, tests 65.13s, environment 0ms, prepare 100ms)
+
+
+M45_CHECK diagnose-final-liveness-fixed-source exit=0 seconds=68.94
+
+=== connection-body-evidence-repaired ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMemoryUse.test.ts > connection and continuation: committed use protects old evidence and changes later live judgment
+M45 BARRIER 4 survivors; prior-use=false,true,true,false,false
+M45 BARRIER 4 survivors; prior-use=false,true,true,false,false
+
+ ❯ src/test/assembledMemoryUse.test.ts (6 tests | 1 failed | 5 skipped) 132506ms
+   × connection and continuation: committed use protects old evidence and changes later live judgment 132505ms
+     → requires list
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledMemoryUse.test.ts > connection and continuation: committed use protects old evidence and changes later live judgment
+SchedulerContractError: requires list
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataItems src/campaign2/canonicalData.ts:23:50
+ ❯ src/test/assembledMemoryUse.test.ts:53:422
+ ❯ src/test/assembledMemoryUse.test.ts:53:368
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 5 skipped (6)
+   Start at  14:56:01
+   Duration  135.93s (transform 2.00s, setup 0ms, collect 3.03s, tests 132.51s, environment 0ms, prepare 99ms)
+
+
+M45_CHECK connection-body-evidence-repaired exit=1 seconds=136.45
+
+=== connection-controls-trace-assertion-repaired ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMemoryUse.test.ts > connection and continuation: committed use protects old evidence and changes later live judgment
+M45 BARRIER 4 survivors; prior-use=false,true,true,false,false
+M45 BARRIER 4 survivors; prior-use=false,true,true,false,false
+M45 CONNECTION used A/B survive pressure; AgeOnly loses A; live contexts1/0, semantic1/3 both; exact repeat/save and restore4->7; draws7=0/0
+
+stdout | src/test/assembledMemoryUse.test.ts > controls: presentation alone and same-barrier use do not protect; zero and ample quotas
+M45 CONTROLS publication without workspace use no credit; use at4 cannot rescue A at4; quota0 loss/global1/3; ample4 both context1.
+
+ ✓ src/test/assembledMemoryUse.test.ts (6 tests | 4 skipped) 218417ms
+   ✓ connection and continuation: committed use protects old evidence and changes later live judgment 135056ms
+   ✓ controls: presentation alone and same-barrier use do not protect; zero and ample quotas 83361ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 4 skipped (6)
+   Start at  14:58:50
+   Duration  221.83s (transform 2.00s, setup 0ms, collect 3.03s, tests 218.42s, environment 0ms, prepare 100ms)
+
+
+M45_CHECK connection-controls-trace-assertion-repaired exit=0 seconds=222.34
+
+=== hidden-boundaries-rollback ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMemoryUse.test.ts > epistemic control: hidden physical role cannot change use retention or judgment
+M45 HIDDEN physical-role changes leave complete state/use/retention/social judgment equal.
+
+stdout | src/test/assembledMemoryUse.test.ts > boundaries: formation false, binary repeat, immutable evidence and public/foreign writes reject
+M45 BOUNDARIES fresh false/presentation no credit; repeated true never stacks; clearing/encoding rewrite, foreign owner, credited formation, external child and unknown law reject.
+
+stdout | src/test/assembledMemoryUse.test.ts > rollback: failure after actual use discards candidate credit and whole instant
+M45 ROLLBACK after-use failure leaves snapshot unchanged; saved continuation reproduces complete allocator/queue/state/trace bytes.
+
+ ✓ src/test/assembledMemoryUse.test.ts (6 tests | 3 skipped) 159148ms
+   ✓ epistemic control: hidden physical role cannot change use retention or judgment 87777ms
+   ✓ boundaries: formation false, binary repeat, immutable evidence and public/foreign writes reject 31511ms
+   ✓ rollback: failure after actual use discards candidate credit and whole instant 39859ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 3 skipped (6)
+   Start at  15:02:56
+   Duration  162.49s (transform 1.98s, setup 0ms, collect 3.01s, tests 159.15s, environment 0ms, prepare 98ms)
+
+
+M45_CHECK hidden-boundaries-rollback exit=0 seconds=163.0
+
+Review: isolate forged fresh-use rejection by clearing presentation history in that negative control. The first assertion could also reject for nonempty history; rerun only the affected boundary test. No production/scenario change.
+
+=== fresh-credit-isolated-negative-control ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMemoryUse.test.ts > boundaries: formation false, binary repeat, immutable evidence and public/foreign writes reject
+M45 BOUNDARIES fresh false/presentation no credit; repeated true never stacks; clearing/encoding rewrite, foreign owner, credited formation, external child and unknown law reject.
+
+ ✓ src/test/assembledMemoryUse.test.ts (6 tests | 5 skipped) 77520ms
+   ✓ boundaries: formation false, binary repeat, immutable evidence and public/foreign writes reject 77519ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  15:06:01
+   Duration  80.85s (transform 1.99s, setup 0ms, collect 3.03s, tests 77.52s, environment 0ms, prepare 100ms)
+
+
+M45_CHECK fresh-credit-isolated-negative-control exit=0 seconds=81.35
+
+=== original-components-affected-foundations ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/persistence.test.ts (2 tests) 16ms
+ ✓ src/test/observation.test.ts (6 tests) 20ms
+ ✓ src/test/observationIntegration.test.ts (2 tests) 21ms
+ ✓ src/test/trace.test.ts (4 tests) 25ms
+ ✓ src/test/scheduler.test.ts (14 tests) 13ms
+ ✓ src/test/state.test.ts (6 tests) 12ms
+ ✓ src/test/retentionFragmentation.test.ts (8 tests) 7ms
+ ✓ src/test/useProtectedRetention.test.ts (8 tests) 8ms
+ ✓ src/test/significanceFirstRetention.test.ts (8 tests) 9ms
+ ✓ src/test/recencyRetention.test.ts (8 tests) 8ms
+ ✓ src/test/semanticPhaseRollbackCause.test.ts (1 test) 6ms
+
+ Test Files  11 passed (11)
+      Tests  67 passed (67)
+   Start at  15:07:45
+   Duration  3.31s (transform 268ms, setup 0ms, collect 543ms, tests 144ms, environment 2ms, prepare 1.01s)
+
+
+M45_CHECK original-components-affected-foundations exit=0 seconds=3.78
+
+=== unchanged-M44-connection-continuation ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledEncoding.test.ts > connection and continuation: excluded at encoding changes recalled judgment with semantic belief fixed
+M44 OCCURRENCE IDs 13,39 vs 13,37
+M44 CONNECTION A/B stored vs B only; live recalled means1/0, semantic1/2 both, zero draws at4; exact restore3->4 and immutable acquisition provenance.
+
+ ✓ src/test/assembledEncoding.test.ts (6 tests | 5 skipped) 87880ms
+   ✓ connection and continuation: excluded at encoding changes recalled judgment with semantic belief fixed 87880ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  15:07:58
+   Duration  91.22s (transform 1.98s, setup 0ms, collect 3.01s, tests 87.88s, environment 0ms, prepare 97ms)
+
+
+M45_CHECK unchanged-M44-connection-continuation exit=0 seconds=91.72
+
+=== types-final ===
+
+M45_CHECK types-final exit=0 seconds=15.38
+
+=== boundary ===
+Reference boundary check passed.
+
+M45_CHECK boundary exit=0 seconds=2.24
+
+=== research ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M45_CHECK research exit=0 seconds=3.34
+
+M45 final guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and M22-M44 retained tests unchanged; document/evidence caps. seconds=9.58
+M45 validation seconds including guard=949.85

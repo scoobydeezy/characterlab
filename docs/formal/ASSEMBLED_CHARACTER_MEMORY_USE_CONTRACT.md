@@ -54,3 +54,19 @@ CURRENT fixes source declarations, calibration and semantic comparisons. Differe
 model identities/occurrence allocation are reported separately from content equality.
 Exact repeat/save/restore remain byte-identical within an unchanged model.
 No psychological law settlement, new Campaign3 verdict or obligation closure.
+
+## Local corrections before the behavioral rerun
+The first live-gate check rejected joint appraisal7: its current sample/experience
+were absent and all joint rows were Unavailable; person mean remained live.
+The one fixed-source diagnostic confirms this. Add the identical normal body
+sample at7 to both arms, preserving reserve10, quota3, source histories, laws,
+seed0 and the required context1/0 contrast. This supplies a required scenario
+input; it does not inject belief or relax liveness. Retention7 still uses B0.
+The initial card's arithmetic omitted A's presentation2: the original kernel
+calibration, run before behavior, gives base5/12 and total11/12, not3/4.
+No fixture magnitude changed. Both original errors and checks remain recorded.
+
+The repaired run passed liveness, context1/0, mean1/3 and exact restore, then
+its trace-link assertion tried to parse every matching event projection as a list.
+Some legitimate projections are records. Guard the projection variant before the
+exact receipt/result comparison; do not alter or omit any trace requirement.
