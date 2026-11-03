@@ -1,59 +1,52 @@
-# Current work — M42 social episodes and cued judgment (2026-11-03)
+# Current work — M42 complete; next affect-to-memory connection (2026-11-03)
 
-M41 is complete. M42 connects recognized social experience to the existing episodic
-owner, finite recall/workspace and later social appraisal. No second memory system.
+The character now remembers recognized social statements in its shared episodic
+memory. A perceived receipt can recall one and change contextual social judgment,
+while learned person belief stays unchanged. M42 is complete.
 
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
-## M42 bounded card — committed before implementation
+## M42 result
 
-Baseline13e4e4f5. Contract: [social episodic context0.1](../formal/ASSEMBLED_CHARACTER_SOCIAL_MEMORY_CONTRACT.md).
-Three capabilities: encode perceived recognized statements; recall surviving episodes
-from a later perceived receipt; use recalled evidence as contextual social judgment
-without adding person-belief learning credit. One model/state/scheduler/trace/save.
-Rules/registry0.43, existing29 slots; no new model selector, source or state owner.
+[Result](ASSEMBLED_CHARACTER_M42_RESULT.md), [contract](../formal/ASSEMBLED_CHARACTER_SOCIAL_MEMORY_CONTRACT.md),
+[checks](ASSEMBLED_CHARACTER_M42_CHECKS.txt), [register](ASSEMBLED_CHARACTER_RECONCILIATION.md).
+Plan10391be7 preceded implementation. Setup/diagnostic failures and repairs are
+retained in the result/log; no law, seed, strength or acceptance gate was retuned.
 
-Scenario: one holder, three mapped tasks, perceived stand-in, existing recognition
-catalogue; body reserve10 and a permitted body sample at decision8. No autonomous peer.
-Observed statement history at1/2/3: false/false/true, receipts1/2/3; at6 repeat receipt3
-without new claim. Visible coat evidence identifies the target through C1 recognition.
-Deliberation8 only; existing priority/route/practice/identity settings remain fixed.
-Seed0. Memory cue delay2, retrieval1, shared workspace5, retention8; controls alter
-only recall slots0 or sensory retention0. No belief or episode injected in S0.
+- Same observed false/false/true history; later receipt recalls original time3
+  episode. Contextual mean1 versus fallback1/3 changes live joint appraisal.
+  Learned person mean1/3 and three evidence records remain unchanged.
+- Zero recall slots retains-but-excludes episodes; zero sensory quota forgets them.
+  Wrong/denied cue and full workspace also remove the contextual effect.
+- Recognized observer-safe evidence only; hidden truth cannot change safe results.
+  Same346/1 episodic owner, shared quota/workspace, one scheduler/state/trace/save.
+- No new acquisition on repeated retained receipt. Exact repeat/restore6->8 and
+  whole-instant rollback33/34 pass, including final trace persistence.
+-11 source/test files.28 foundation vectors/tests and3 unchanged body-memory/M41
+  regressions, types, boundary/research and frozen105-dependency checks pass.
+  Validation818.84s through the final guard; all attempted checks remain recorded.
+- BRIEF-12.3-5/-10 and PHEN-MEM-001:6/:8/:9 receive bounded subrequirement witnesses;
+  no family/member closure or new Campaign3 verdict. All18 conditional debts remain.
 
-Before behavior, inspect actual fixed reason threshold/dice and expose exact bounded
-strength transformation. Gate is live social judgment (1 versus global1/3), and its
-consumption by joint appraisal, not a claimed stochastic choice effect. Preserve any
-subthreshold/no-reason result. No seed/magnitude search or global dice change.
-First assert known person mean and known contextual/current body appraisal in both
-arms. Require unchanged person history; inaccessible episodes remain stored; forgotten
-ones are absent. Repeat receipt cannot add an episode or semantic learning credit.
-Controls: wrong receipt, denied perception, hidden truth with fixed display, capacity
-competition, unknown/false distinction, foreign source/owner, exact repeat/restore6->8,
-and rollback of an actual social formation. All comparisons declared before running.
+## Next implementation target
 
-Original mappings: BODY_RECALL_RECENCY_COMPONENT BR-D/G/H (cue absence/mismatch,
-zero slots and immutable acquisition) ported to social receipt cue; socialFixtures
-source modes4/3/4-no-access remain source controls; recollectionFixtures knownFalse
-pins false versus unknown meaning (no fragmentation/reconstruction claim).
-BRIEF-12.3-5 and -10 (non-double-counting subrequirement); PHEN-MEM-001:6/:8/:9
-retained-only access/cardinality/provenance subrequirements. No full member closure.
-MEC004/008/009/010/021/022 and P3-006 preserved; no reduction or debt closure.
+Connect prior affect to memory access under the existing L2 candidate. Pin a concrete
+original comparison with competing retained evidence and a downstream consumer;
+keep encoding, retained content and cue fixed against the no-feedback control.
+Affect is derived; add persistence only if a required distinction earns it. Preserve
+L4 self-feedback OFF and L2 UncontrolledGain as an engineering default, not a verdict.
+Selective encoding and retrieval bias remain distinct mechanisms. No autonomous
+partners, UI, unrelated refinement or separate audit campaign.
 
-Files (11): memory, retention, workspace, appraisal, socialExecution, execution,
-runtime, model, traceBinding; new fixtures/assembledSocialMemory and its test.
-No historical source/test edits. Exact frozen105 dependency guard replaces full C2
-replay because entry and dependencies are unchanged. Existing body recall/workspace
-and M41 affected regression run once. Types, boundary, research and staged size checks.
-Foundation vectors: CV-ORD001..004, CV-TXN001 (ordering/atomic rollback), CV-OWN001,
-CV-READ001/002, CV-PATCH001..003, CV-TRC001..003 (owner/read/trace), CV-OBS001..006,
-CV-EPI001 (observer evidence). Run scheduler/state/trace/observation tests plus new
-actual social formation/recall provenance/hidden controls. New tagged episode variant
-reopens FND3/4 seam conformance explicitly under this version; no phase registry or
-foundation math change. FND6 epistemic risk checked; FND1/2/5 unchanged dependency guard.
+Before code, commit the next bounded card/contract with source/owner/phase mappings,
+exact original requirement IDs, scenario declarations and live comparison gates.
+Name exact CV-ORD/CV-TXN/CV-OWN/CV-READ/CV-PATCH/CV-TRC/CV-OBS/CV-EPI vector IDs
+and affected checks/reopen dispositions before implementation. State the full
+strength-to-decision calibration if claiming a choice effect; use explicit stochastic
+coupling or report zero-draw Auto. No post-result magnitude/seed search.
 
-Budgets:3 capabilities,12 production/test files,20 evidence files/5MiB; one compact
-result and check log. One check at a time,600s/check,1800s total including failures.
-Done only when live contextual judgment and consumed provenance pass all declared
-controls. Routine bugs repaired locally with failures retained; actual law/scope/
-comparison/budget changes escalate. No UI, audit chain, affect-bias or other breadth.
+Same limits:3 capabilities/12 production-test files,20 evidence files/5MiB,
+600s/check1800s cumulative,one check at a time. Routine bugs repaired locally;
+law/scope/comparison/budget changes follow the work order. Passing ends validation.
+Incremental affected original replay stays inside the milestone; final full
+21-member/15-family/132-clause replay remains mandatory.

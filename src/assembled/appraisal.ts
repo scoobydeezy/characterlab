@@ -45,10 +45,12 @@ export function contextAppraisal(task:CanonicalValue,workspace:CanonicalValue,at
  if(w.length!==5||txt(w[0])!==WORKSPACE||typeof t==='boolean'||t.kind!=='signed'||t.value!==at||key(w[3])!==key(f(rec(task,384n),2n)))throw Error('memory context workspace association');
  let sample=current?.sample,experience=current?.experience,selected:CanonicalValue=list([]),mode=sample?'Current':'Unavailable';
  if(current){if(current.settledEvent.dueAt!==at||current.settledEvent.phase!==20n)throw Error('memory context current evidence time');}
- else {const first=items(w[4],'list')[0];if(first){
+ else {const first=items(w[4],'list').find(v=>eqEpisode(items(v,'list')[1]));if(first){
   const row=items(first,'list'),episode=items(row[1],'list'),time=episode[5];
   if(row.length!==3||episode.length!==6||txt(episode[0])!==EPISODE||key(row[0])!==key(episode[1])||typeof time==='boolean'||time.kind!=='signed'||time.value>=at)throw Error('memory context episode association');
   sample=episode[2];experience=episode[3];selected=first;mode='RecalledContext';
  }}
  return list([...items(jointAppraisal(task,sample,experience,threshold,likelihoods),'list'),list([text(MEMORY_CONTEXT),text(mode),selected])]);
 }
+
+const eqEpisode=(v:CanonicalValue)=>key(items(v,'list')[0])===key(text(EPISODE));

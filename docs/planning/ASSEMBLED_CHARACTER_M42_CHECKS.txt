@@ -1,0 +1,287 @@
+
+=== types-first ===
+
+M42_CHECK types-first exit=0 seconds=15.66
+
+=== calibration ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSocialMemory.test.ts > calibration: fixed reference settings and exact cue controls before behavior
+M42 CALIBRATION {"threshold":{"kind":"rational","numerator":"37","denominator":"100"},"dice":{"kind":"record","schema":{"typeId":"437","schemaVersion":"1","name":"ReasonDiceDefinition","fields":[{"id":"1","name":"BaseDieThresholds","required":true},{"id":"2","name":"ActivationThreshold","required":true},{"id":"3","name":"StandingModifier","required":true},{"id":"4","name":"SituationalModifier","required":true}]},"fields":{}},"rawExamples":["1 -> 1/2","1/3 -> 1/4"],"gate":"live contextual likelihood and joint appraisal; no choice-causality claim","seed":0}
+
+ ✓ src/test/assembledSocialMemory.test.ts (5 tests | 4 skipped) 19147ms
+   ✓ calibration: fixed reference settings and exact cue controls before behavior 19146ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 4 skipped (5)
+   Start at  08:38:49
+   Duration  22.36s (transform 1.92s, setup 0ms, collect 2.91s, tests 19.15s, environment 0ms, prepare 102ms)
+
+
+M42_CHECK calibration exit=0 seconds=22.87
+
+=== connection-first ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledSocialMemory.test.ts (5 tests | 1 failed | 4 skipped) 47041ms
+   × connection: surviving recall changes live social judgment without duplicate belief credit 47040ms
+     → identity context time/phase/duplicate/opportunity
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSocialMemory.test.ts > connection: surviving recall changes live social judgment without duplicate belief credit
+SchedulerContractError: identity context time/phase/duplicate/opportunity
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ src/assembled/inputs.ts:84:327
+ ❯ Module.compileCharacterInputs src/assembled/inputs.ts:84:32
+ ❯ Module.createCharacterRun src/assembled/character.ts:39:63
+ ❯ run src/test/assembledSocialMemory.test.ts:28:105
+ ❯ src/test/assembledSocialMemory.test.ts:38:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 4 skipped (5)
+   Start at  08:39:22
+   Duration  50.21s (transform 1.89s, setup 0ms, collect 2.88s, tests 47.04s, environment 0ms, prepare 98ms)
+
+
+M42_CHECK connection-first exit=1 seconds=50.73
+
+=== connection-context-correction ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledSocialMemory.test.ts (6 tests | 1 failed | 5 skipped) 67614ms
+   × connection: surviving recall changes live social judgment without duplicate belief credit 67614ms
+     → expected false to be true // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSocialMemory.test.ts > connection: surviving recall changes live social judgment without duplicate belief credit
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ live src/test/assembledSocialMemory.test.ts:29:341
+
+ ❯ src/test/assembledSocialMemory.test.ts:38:77
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 5 skipped (6)
+   Start at  08:40:52
+   Duration  70.83s (transform 1.92s, setup 0ms, collect 2.92s, tests 67.61s, environment 0ms, prepare 99ms)
+
+
+M42_CHECK connection-context-correction exit=1 seconds=71.37
+
+=== connection-live-source-correction ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSocialMemory.test.ts > connection: surviving recall changes live social judgment without duplicate belief credit
+M42 CONNECTION [{"clock":"8","episodes":[{"time":{"kind":"signed","value":"1"},"source":{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"12"}}},{"time":{"kind":"signed","value":"2"},"source":{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"34"}}},{"time":{"kind":"signed","value":"3"},"source":{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"50"}}}],"mean":{"kind":"rational","numerator":"1","denominator":"1"},"semanticMean":{"kind":"list","items":[{"kind":"rational","numerator":"1","denominator":"3"}]},"workspace":{"kind":"list","items":[{"kind":"list","items":[{"kind":"typedIdentifier","namespaceId":"1125","payload":{"kind":"unsigned","value":"62"}},{"kind":"list","items":[{"kind":"text","value":"assembled-social-episode/0.1"},{"kind":"typedIdentifier","namespaceId":"1125","payload":{"kind":"unsigned","value":"62"}},{"kind":"list","items":[{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"50"}},{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"character/bridge-subject"}}}},{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"content/assembled-social/target"}}}},{"kind":"signed","value":"3"},{"kind":"unsigned","value":"1"},{"kind":"unsigned","value":"3"},{"kind":"list","items":[true]},{"kind":"list","items":[true]}]},{"kind":"record","schema":{"typeId":"227","schemaVersion":"1","name":"PreRecognitionSemanticExperience","fields":[{"id":"1","name":"ExperienceId","required":true},{"id":"2","name":"ObserverId","required":true},{"id":"3","name":"OccurredAt","required":true},{"id":"4","name":"PerceptualEventReferentIds","required":true},{"id":"5","name":"PerceivedBindings","required":true},{"id":"6","name":"PerceptualClassifications","required":true},{"id":"7","name":"PerceptualEventClassifications","required":true},{"id":"8","name":"SupportingObservationIds","required":true},{"id":"9","name":"TransformationVersion","required":true}]},"fields":{}},{"kind":"list","items":[]},{"kind":"signed","value":"3"}]},{"kind":"unsigned","value":"107"}]}]},"draws":0},{"clock":"8","episodes":[{"time":{"kind":"signed","value":"1"},"source":{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"12"}}},{"time":{"kind":"signed","value":"2"},"source":{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"34"}}},{"time":{"kind":"signed","value":"3"},"source":{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"50"}}}],"mean":{"kind":"rational","numerator":"1","denominator":"3"},"semanticMean":{"kind":"list","items":[{"kind":"rational","numerator":"1","denominator":"3"}]},"workspace":{"kind":"list","items":[]},"draws":0},{"clock":"8","episodes":[],"mean":{"kind":"rational","numerator":"1","denominator":"3"},"semanticMean":{"kind":"list","items":[{"kind":"rational","numerator":"1","denominator":"3"}]},"workspace":{"kind":"list","items":[]},"draws":0}]
+
+ ✓ src/test/assembledSocialMemory.test.ts (6 tests | 5 skipped) 79892ms
+   ✓ connection: surviving recall changes live social judgment without duplicate belief credit 79891ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  08:43:05
+   Duration  83.10s (transform 1.91s, setup 0ms, collect 2.89s, tests 79.89s, environment 0ms, prepare 99ms)
+
+
+M42_CHECK connection-live-source-correction exit=0 seconds=83.6
+
+=== access-hidden-persistence ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSocialMemory.test.ts > controls: perceived cues, workspace exclusion and hidden truth preserve the boundary
+M42 CONTROLS [{"clock":"8","episodes":[{"time":{"kind":"signed","value":"1"},"source":{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"12"}}},{"time":{"kind":"signed","value":"2"},"source":{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"34"}}},{"time":{"kind":"signed","value":"3"},"source":{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"50"}}}],"mean":{"kind":"rational","numerator":"1","denominator":"3"},"semanticMean":{"kind":"list","items":[{"kind":"rational","numerator":"1","denominator":"3"}]},"workspace":{"kind":"list","items":[]},"draws":0},{"clock":"8","episodes":[{"time":{"kind":"signed","value":"1"},"source":{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"12"}}},{"time":{"kind":"signed","value":"2"},"source":{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"34"}}},{"time":{"kind":"signed","value":"3"},"source":{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"50"}}}],"mean":{"kind":"rational","numerator":"1","denominator":"3"},"semanticMean":{"kind":"list","items":[{"kind":"rational","numerator":"1","denominator":"3"}]},"workspace":{"kind":"list","items":[]},"draws":0},{"clock":"8","episodes":[{"time":{"kind":"signed","value":"1"},"source":{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"12"}}},{"time":{"kind":"signed","value":"2"},"source":{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"34"}}},{"time":{"kind":"signed","value":"3"},"source":{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"50"}}}],"mean":{"kind":"rational","numerator":"1","denominator":"3"},"semanticMean":{"kind":"list","items":[{"kind":"rational","numerator":"1","denominator":"3"}]},"workspace":{"kind":"list","items":[]},"draws":0},{"clock":"8","episodes":[{"time":{"kind":"signed","value":"1"},"source":{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"12"}}},{"time":{"kind":"signed","value":"2"},"source":{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"34"}}},{"time":{"kind":"signed","value":"3"},"source":{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"50"}}}],"mean":{"kind":"rational","numerator":"1","denominator":"1"},"semanticMean":{"kind":"list","items":[{"kind":"rational","numerator":"1","denominator":"3"}]},"workspace":{"kind":"list","items":[{"kind":"list","items":[{"kind":"typedIdentifier","namespaceId":"1125","payload":{"kind":"unsigned","value":"62"}},{"kind":"list","items":[{"kind":"text","value":"assembled-social-episode/0.1"},{"kind":"typedIdentifier","namespaceId":"1125","payload":{"kind":"unsigned","value":"62"}},{"kind":"list","items":[{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"50"}},{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"character/bridge-subject"}}}},{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"content/assembled-social/target"}}}},{"kind":"signed","value":"3"},{"kind":"unsigned","value":"1"},{"kind":"unsigned","value":"3"},{"kind":"list","items":[true]},{"kind":"list","items":[true]}]},{"kind":"record","schema":{"typeId":"227","schemaVersion":"1","name":"PreRecognitionSemanticExperience","fields":[{"id":"1","name":"ExperienceId","required":true},{"id":"2","name":"ObserverId","required":true},{"id":"3","name":"OccurredAt","required":true},{"id":"4","name":"PerceptualEventReferentIds","required":true},{"id":"5","name":"PerceivedBindings","required":true},{"id":"6","name":"PerceptualClassifications","required":true},{"id":"7","name":"PerceptualEventClassifications","required":true},{"id":"8","name":"SupportingObservationIds","required":true},{"id":"9","name":"TransformationVersion","required":true}]},"fields":{}},{"kind":"list","items":[]},{"kind":"signed","value":"3"}]},{"kind":"unsigned","value":"107"}]}]},"draws":0}]
+
+ ❯ src/test/assembledSocialMemory.test.ts (6 tests | 1 failed | 4 skipped) 114871ms
+   ✓ controls: perceived cues, workspace exclusion and hidden truth preserve the boundary 100302ms
+   × persistence: exact repeat and restore retain acquisition and pending cue 14568ms
+     → exact data-only run fields required
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSocialMemory.test.ts > persistence: exact repeat and restore retain acquisition and pending cue
+SchedulerContractError: exact data-only run fields required
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ copies src/assembled/character.ts:30:117
+ ❯ Module.restoreCharacterRun src/assembled/character.ts:46:13
+ ❯ src/test/assembledSocialMemory.test.ts:52:315
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed | 4 skipped (6)
+   Start at  08:44:40
+   Duration  118.07s (transform 1.90s, setup 0ms, collect 2.88s, tests 114.87s, environment 0ms, prepare 99ms)
+
+
+M42_CHECK access-hidden-persistence exit=1 seconds=118.59
+
+=== persistence-authority-rollback ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSocialMemory.test.ts > persistence: exact repeat and restore retain acquisition and pending cue
+M42 PERSISTENCE exact6/8 {"episodeCount":3,"saveBytes":313792}
+
+ ❯ src/test/assembledSocialMemory.test.ts (6 tests | 1 failed | 3 skipped) 98042ms
+   ✓ persistence: exact repeat and restore retain acquisition and pending cue 76546ms
+   ✓ ownership: foreign authority, initial memory and direct formation reject 16509ms
+   × rollback: failed social formation restores the whole instant 4986ms
+     → expected false to be true // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSocialMemory.test.ts > rollback: failed social formation restores the whole instant
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ src/test/assembledSocialMemory.test.ts:64:382
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 2 passed | 3 skipped (6)
+   Start at  08:47:03
+   Duration  101.26s (transform 1.90s, setup 0ms, collect 2.89s, tests 98.04s, environment 0ms, prepare 99ms)
+
+
+M42_CHECK persistence-authority-rollback exit=1 seconds=101.78
+
+=== final-connection-boundaries-rollback ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSocialMemory.test.ts > connection: surviving recall changes live social judgment without duplicate belief credit
+M42 CONNECTION [{"clock":"8","episodes":[{"time":{"kind":"signed","value":"1"},"source":{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"12"}}},{"time":{"kind":"signed","value":"2"},"source":{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"34"}}},{"time":{"kind":"signed","value":"3"},"source":{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"50"}}}],"mean":{"kind":"rational","numerator":"1","denominator":"1"},"semanticMean":{"kind":"list","items":[{"kind":"rational","numerator":"1","denominator":"3"}]},"workspace":{"kind":"list","items":[{"kind":"list","items":[{"kind":"typedIdentifier","namespaceId":"1125","payload":{"kind":"unsigned","value":"62"}},{"kind":"list","items":[{"kind":"text","value":"assembled-social-episode/0.1"},{"kind":"typedIdentifier","namespaceId":"1125","payload":{"kind":"unsigned","value":"62"}},{"kind":"list","items":[{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"50"}},{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"character/bridge-subject"}}}},{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"content/assembled-social/target"}}}},{"kind":"signed","value":"3"},{"kind":"unsigned","value":"1"},{"kind":"unsigned","value":"3"},{"kind":"list","items":[true]},{"kind":"list","items":[true]}]},{"kind":"record","schema":{"typeId":"227","schemaVersion":"1","name":"PreRecognitionSemanticExperience","fields":[{"id":"1","name":"ExperienceId","required":true},{"id":"2","name":"ObserverId","required":true},{"id":"3","name":"OccurredAt","required":true},{"id":"4","name":"PerceptualEventReferentIds","required":true},{"id":"5","name":"PerceivedBindings","required":true},{"id":"6","name":"PerceptualClassifications","required":true},{"id":"7","name":"PerceptualEventClassifications","required":true},{"id":"8","name":"SupportingObservationIds","required":true},{"id":"9","name":"TransformationVersion","required":true}]},"fields":{}},{"kind":"list","items":[]},{"kind":"signed","value":"3"}]},{"kind":"unsigned","value":"107"}]}]},"draws":0},{"clock":"8","episodes":[{"time":{"kind":"signed","value":"1"},"source":{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"12"}}},{"time":{"kind":"signed","value":"2"},"source":{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"34"}}},{"time":{"kind":"signed","value":"3"},"source":{"kind":"typedIdentifier","namespaceId":"1115","payload":{"kind":"unsigned","value":"50"}}}],"mean":{"kind":"rational","numerator":"1","denominator":"3"},"semanticMean":{"kind":"list","items":[{"kind":"rational","numerator":"1","denominator":"3"}]},"workspace":{"kind":"list","items":[]},"draws":0},{"clock":"8","episodes":[],"mean":{"kind":"rational","numerator":"1","denominator":"3"},"semanticMean":{"kind":"list","items":[{"kind":"rational","numerator":"1","denominator":"3"}]},"workspace":{"kind":"list","items":[]},"draws":0}]
+
+ ✓ src/test/assembledSocialMemory.test.ts (6 tests | 3 skipped) 101870ms
+   ✓ connection: surviving recall changes live social judgment without duplicate belief credit 78739ms
+   ✓ ownership: foreign authority, initial memory and direct formation reject 16134ms
+   ✓ rollback: failed social formation restores the whole instant 6996ms
+stdout | src/test/assembledSocialMemory.test.ts > rollback: failed social formation restores the whole instant
+M42 ROLLBACK 33/34
+
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 3 skipped (6)
+   Start at  08:49:13
+   Duration  105.06s (transform 1.90s, setup 0ms, collect 2.88s, tests 101.87s, environment 0ms, prepare 99ms)
+
+
+M42_CHECK final-connection-boundaries-rollback exit=0 seconds=105.56
+
+=== foundations-body-memory-M41-regression ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledMemoryContext.test.ts (7 tests | 6 skipped) 4224ms
+   ✓ M9 memory-dependent choice > controls: no current handoff at6 even though the memory remains stored 4223ms
+stdout | src/test/assembledWorkspace.test.ts > M8 recalled content shares the existing workspace capacity > one task plus forecast admits recall only in the third shared slot; two tasks exclude it without erasure
+M8 slots0..3 shared occupancy PASS; one task+forecast admits memory at3, two tasks+forecast excludes it
+
+ ✓ src/test/assembledWorkspace.test.ts (7 tests | 6 skipped) 16593ms
+   ✓ M8 recalled content shares the existing workspace capacity > one task plus forecast admits recall only in the third shared slot; two tasks exclude it without erasure 16592ms
+stdout | src/test/assembledReappraisal.test.ts > connection: original SafetyOnly, Interrupted and NoReappraisal share evidence and differ only after completion
+M41 primary/original replay [{"clock":"8","means":["1/1","0/1"],"frame":"4","appraisals":[{"at":"1","known":false,"affect":[]},{"at":"2","known":true,"affect":["1/1","1/1"]},{"at":"3","known":true,"affect":["1/1","1/1"]},{"at":"4","known":true,"affect":["1/1","1/1"]},{"at":"5","known":true,"affect":["0/1","0/1"]},{"at":"6","known":true,"affect":["0/1","0/1"]},{"at":"7","known":true,"affect":["0/1","0/1"]},{"at":"8","known":true,"affect":["0/1","0/1"]}],"motive4":[true,{"kind":"rational","numerator":"1","denominator":"1"},{"kind":"rational","numerator":"1","denominator":"1"},{"kind":"rational","numerator":"1","denominator":"1"}],"choice":"3","draws":0},{"clock":"8","means":["1/1","0/1"],"frame":"0","appraisals":[{"at":"1","known":false,"affect":[]},{"at":"2","known":true,"affect":["1/1","1/1"]},{"at":"3","known":true,"affect":["1/1","1/1"]},{"at":"4","known":true,"affect":["1/1","1/1"]},{"at":"5","known":true,"affect":["1/1","1/1"]},{"at":"6","known":true,"affect":["1/1","1/1"]},{"at":"7","known":true,"affect":["1/1","1/1"]},{"at":"8","known":true,"affect":["1/1","1/1"]}],"motive4":[true,{"kind":"rational","numerator":"1","denominator":"1"},{"kind":"rational","numerator":"1","denominator":"1"},{"kind":"rational","numerator":"1","denominator":"1"}],"choice":"3","draws":0},{"clock":"8","means":["1/1","0/1"],"frame":"0","appraisals":[{"at":"1","known":false,"affect":[]},{"at":"2","known":true,"affect":["1/1","1/1"]},{"at":"3","known":true,"affect":["1/1","1/1"]},{"at":"4","known":true,"affect":["1/1","1/1"]},{"at":"5","known":true,"affect":["1/1","1/1"]},{"at":"6","known":true,"affect":["1/1","1/1"]},{"at":"7","known":true,"affect":["1/1","1/1"]},{"at":"8","known":true,"affect":["1/1","1/1"]}],"motive4":[true,{"kind":"rational","numerator":"1","denominator":"1"},{"kind":"rational","numerator":"1","denominator":"1"},{"kind":"rational","numerator":"1","denominator":"1"}],"choice":"3","draws":0}]
+
+ ✓ src/test/assembledReappraisal.test.ts (8 tests | 7 skipped) 93019ms
+   ✓ connection: original SafetyOnly, Interrupted and NoReappraisal share evidence and differ only after completion 93019ms
+ ✓ src/test/observation.test.ts (6 tests | 1 skipped) 20ms
+ ✓ src/test/trace.test.ts (4 tests) 25ms
+ ✓ src/test/scheduler.test.ts (14 tests | 1 skipped) 13ms
+ ✓ src/test/state.test.ts (6 tests) 12ms
+
+ Test Files  7 passed (7)
+      Tests  31 passed | 21 skipped (52)
+   Start at  08:51:12
+   Duration  119.99s (transform 2.00s, setup 0ms, collect 4.31s, tests 113.91s, environment 1ms, prepare 651ms)
+
+
+M42_CHECK foundations-body-memory-M41-regression exit=0 seconds=120.5
+
+=== types-final ===
+src/test/assembledSocialMemory.test.ts(32,158): error TS2345: Argument of type 'CanonicalValue' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+src/test/assembledSocialMemory.test.ts(32,184): error TS2345: Argument of type 'CanonicalValue' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+src/test/assembledSocialMemory.test.ts(32,253): error TS2345: Argument of type 'CanonicalValue' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+src/test/assembledSocialMemory.test.ts(35,58): error TS2345: Argument of type 'CanonicalValue' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+src/test/assembledSocialMemory.test.ts(65,349): error TS2345: Argument of type 'CanonicalValue' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+
+M42_CHECK types-final exit=1 seconds=15.51
+
+=== types-record-narrowing ===
+
+M42_CHECK types-record-narrowing exit=0 seconds=15.26
+
+=== final-trace-persistence-calibration ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSocialMemory.test.ts > calibration: fixed reference settings and exact cue controls before behavior
+M42 CALIBRATION {"threshold":{"kind":"rational","numerator":"37","denominator":"100"},"dice":{"kind":"record","schema":{"typeId":"437","schemaVersion":"1","name":"ReasonDiceDefinition","fields":[{"id":"1","name":"BaseDieThresholds","required":true},{"id":"2","name":"ActivationThreshold","required":true},{"id":"3","name":"StandingModifier","required":true},{"id":"4","name":"SituationalModifier","required":true}]},"fields":{}},"rawExamples":["1 -> 1/2","1/3 -> 1/4"],"gate":"live contextual likelihood and joint appraisal; no choice-causality claim","seed":0}
+
+stdout | src/test/assembledSocialMemory.test.ts > persistence: exact repeat and restore retain acquisition and pending cue
+M42 PERSISTENCE exact6/8 {"episodeCount":3,"saveBytes":313792}
+
+ ✓ src/test/assembledSocialMemory.test.ts (6 tests | 4 skipped) 78671ms
+   ✓ calibration: fixed reference settings and exact cue controls before behavior 20712ms
+   ✓ persistence: exact repeat and restore retain acquisition and pending cue 57958ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 4 skipped (6)
+   Start at  08:55:15
+   Duration  81.89s (transform 1.92s, setup 0ms, collect 2.91s, tests 78.67s, environment 0ms, prepare 99ms)
+
+
+M42_CHECK final-trace-persistence-calibration exit=0 seconds=82.39
+
+=== boundaries ===
+Reference boundary check passed.
+
+M42_CHECK boundaries exit=0 seconds=2.27
+
+=== research ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M42_CHECK research exit=0 seconds=3.24
+
+M42 final guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and M22-M40 retained tests unchanged; document/evidence caps. seconds=9.51
+M42 validation seconds including guard=818.84

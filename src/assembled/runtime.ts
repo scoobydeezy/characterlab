@@ -65,7 +65,7 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
  const modelIdentity=model.modelIdentity.value;
  const procedure=model.skill?createSkillExecution(component.tasks[0].character,stateModel,inputs.skillEvents,modelIdentity,inputs.runIdentity.value,model.procedures,model.actionBody):undefined;
  const body=model.body?createBodyExecution(model.body,component.tasks[0].character,stateModel,inputs.bodyEvents,modelIdentity,inputs.runIdentity.value,model.actionBody,procedure,model.tolerance):undefined;
- const episodes=model.memory?createEpisodicExtension(component.tasks[0].character,model.body!,stateModel,modelIdentity,inputs.runIdentity.value,model.retention?.recallDelay,model.retrieval,model.workspace):undefined;
+ const episodes=model.memory?createEpisodicExtension(component.tasks[0].character,model.body!,stateModel,modelIdentity,inputs.runIdentity.value,model.retention?.recallDelay,model.retrieval,model.workspace,model.socialMemory):undefined;
  const causal=model.causalEnabled?createCausalExecution(component.tasks[0].character,model.strategy!,stateModel,inputs.causalEvents,modelIdentity,inputs.runIdentity.value,model.interferenceEnabled,model.causalOpportunities):undefined;
  const values=model.values?createValuesExecution(component.tasks[0].character,model.values,stateModel,inputs.valuesEvents,modelIdentity,inputs.runIdentity.value):undefined;
  const performance=model.performance?createPerformanceExecution(component.tasks[0].character,model.strategy!,stateModel,inputs.performanceEvents,modelIdentity,inputs.runIdentity.value,model.actionBody!,model.expectationEnabled,values):undefined;
@@ -76,7 +76,7 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
  const control=model.control?createControlExecution(component.tasks[0].character,model.habit!,stateModel,inputs.controlEvents,modelIdentity,inputs.runIdentity.value):undefined;
  const communication=model.communication?createCommunicationExecution(component.tasks[0].character,model.communication,stateModel,inputs.communicationEvents,modelIdentity,inputs.runIdentity.value,model.delayedBody):undefined;
  const relationship=model.relationship?createRelationshipExecution(component.tasks[0].character,model.relationship,stateModel,inputs.relationshipEvents,modelIdentity,inputs.runIdentity.value,model.encounterEnabled):undefined;
- const social=model.social?createSocialExecution(component.tasks[0].character,model.social,stateModel,inputs.socialEvents,modelIdentity,inputs.runIdentity.value,model.recognition,model.encounterEnabled?relationship:undefined):undefined;
+ const social=model.social?createSocialExecution(component.tasks[0].character,model.social,stateModel,inputs.socialEvents,modelIdentity,inputs.runIdentity.value,model.recognition,model.encounterEnabled?relationship:undefined,model.socialMemory):undefined;
  const reappraisal=model.reappraisal?createReappraisalExecution(model.reappraisal,component.tasks[0].character,stateModel,inputs.reappraisalEvents,modelIdentity,inputs.runIdentity.value):undefined;
  const cognitive=createCognitiveExecution(model,component,inputs,()=>body?.evidence(),()=>episodes?.currentRecalls()??[],strategy,priority,habit,control,social,relationship,values,causal,reappraisal);
  const probeModel=base.probe,measurement=base.measurement,domains=base.domains,shared=bindings.admission,evaluator=bindings.evaluator;
@@ -96,7 +96,7 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
     if(handlers.has(eventKey))throw new SchedulerContractError('INVALID_CONFIGURATION','event has multiple fixed runtime adapters');handlers.set(eventKey,handler);
   };
   for(const eventType of relationship?.eventTypes()??[])registerHandler(key(eventType),context=>relationship!.execute(context));
-  for(const eventType of social?.eventTypes()??[])registerHandler(key(eventType),context=>social!.execute(context));
+  for(const eventType of social?.eventTypes()??[])registerHandler(key(eventType),context=>{const result=social!.execute(context),e=result.memoryEvidence,extra=e?episodes?.observeSocial(context.event,e.observation,e.experience,context.state,()=>context.allocateRuntimeId()):undefined;if(!extra)return result;const own=result.emittedEvents.length;return {...result,outputs:[...result.outputs,...extra.outputs],emittedEvents:[...result.emittedEvents,...extra.emissions],traceFactory(children){const tail=children.slice(own);extra.bind(tail);return [...result.traceFactory(children.slice(0,own)),extra.trace(tail)];}};});
   for(const eventType of communication?.eventTypes()??[])registerHandler(key(eventType),context=>communication!.execute(context));
   for(const eventType of control?.eventTypes()??[])registerHandler(key(eventType),context=>control!.execute(context));
   for(const eventType of habit?.eventTypes()??[])registerHandler(key(eventType),context=>habit!.execute(context));

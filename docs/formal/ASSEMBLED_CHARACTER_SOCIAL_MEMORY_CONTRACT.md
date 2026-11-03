@@ -58,3 +58,7 @@ Existing BR-D/G/H cue/access rules and knownFalse distinction are exercised on a
 assembled episodes. No reconstruction, familiarity, defining-memory significance,
 affect-biased recall, selective encoding or autonomous partner is claimed. All pinned
 21 members/15 families/132 clauses and18 conditional obligations remain in scope.
+
+Trace versions: social-memory0.1 names formation/access/context; workspace0.4 and
+social-joint0.3 name the extended delivery/consumer. Retention0.2 names the shared
+sensory tier when social records participate. Older paths keep their prior versions.

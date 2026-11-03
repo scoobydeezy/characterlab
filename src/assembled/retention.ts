@@ -7,7 +7,7 @@ import {SchedulerContractError,type ScheduledEvent} from '../substrate/scheduler
 import {dataItems as items,dataField as f,dataRecord as rec,dataKey as key,dataIdentity as id,dataText as txt,dataUnsigned as uint,invalidModel} from '../campaign2/canonicalData';
 import {memoryRecord as r} from '../campaign2/memoryCodecs';
 import {bodyId} from './body';
-import {EPISODE,EPISODIC_OWNER,MEMORY_FORMATION,bodyEpisodePath,isBodyEpisodePath} from './memory';
+import {EPISODE,EPISODIC_OWNER,MEMORY_FORMATION,bodyEpisodePath,isBodyEpisodePath,isSocialEpisodePath,socialEpisodePath,SOCIAL_EPISODE} from './memory';
 import type {compileCampaign2StateModel} from '../campaign2/stateModel';
 export const RETENTION='assembled-episodic-retention/0.1';
 export function compileRetentionDeclaration(v:CanonicalValue){const a=items(v,'list');if(a.length!==4||txt(a[0])!==RETENTION||uint(a[1])>1024n||uint(a[2])>1024n||uint(a[3])<1n||uint(a[3])>100n)invalidModel('retention requires capacities0..1024 and body recall delay1..100');return Object.freeze({diagnostic:Number(uint(a[1])),body:Number(uint(a[2])),recallDelay:uint(a[3])});}
@@ -27,7 +27,7 @@ export function retainedEpisodeIds(rows:readonly UncreditedEpisode[],now:bigint,
  return survivors.sort((a,b)=>compare(enc(unsigned(a)),enc(unsigned(b))));
 }
 const domain:StatePathPattern={rootStateTypeId:346n,fieldId:1n,selectors:[{kind:'wildcard',selectorKind:'mapKey'}]};
-function holder(path:StatePath,C:CanonicalValue){const selector=path.selectors[0];if(path.rootStateTypeId!==346n||path.fieldId!==1n||path.selectors.length!==1||selector?.kind!=='mapKey')return fail('episode removal path');const k=selector.key,c=isBodyEpisodePath(path)?items(k,'list')[1]:f(rec(k,344n),1n);if(!eq(c,C))fail('foreign episode holder');}
+function holder(path:StatePath,C:CanonicalValue){const selector=path.selectors[0];if(path.rootStateTypeId!==346n||path.fieldId!==1n||path.selectors.length!==1||selector?.kind!=='mapKey')return fail('episode removal path');const k=selector.key,c=(isBodyEpisodePath(path)||isSocialEpisodePath(path))?items(k,'list')[1]:f(rec(k,344n),1n);if(!eq(c,C))fail('foreign episode holder');}
 /** Only removal is extended; all existing formation validators/owners stay in force. */
 export function withRetentionState(base:ReturnType<typeof compileCampaign2StateModel>,C:CanonicalValue){
  const authority=new StateAuthorityRegistry([{pattern:domain,validateValue:()=>{fail('retention is removal only');},removalAllowed:true}],[{mutationAuthorityId:EPISODIC_OWNER,patterns:[domain]}]);
@@ -40,7 +40,7 @@ export function withRetentionState(base:ReturnType<typeof compileCampaign2StateM
 }
 function episode(entry:{path:StatePath;value:CanonicalValue},C:CanonicalValue):UncreditedEpisode&typeof entry{
  holder(entry.path,C);let acquisition:CanonicalValue,acquiredAt:bigint,kind:'diagnostic'|'body';
- if(isBodyEpisodePath(entry.path)){const a=items(entry.value,'list');if(a.length!==6||txt(a[0])!==EPISODE)fail('body episode schema');acquisition=a[1];acquiredAt=time(a[5]);kind='body';}
+ if(isBodyEpisodePath(entry.path)||isSocialEpisodePath(entry.path)){const a=items(entry.value,'list');if(a.length!==6||![EPISODE,SOCIAL_EPISODE].includes(txt(a[0])))fail('body episode schema');acquisition=a[1];acquiredAt=time(a[5]);kind='body';}
  else{const e=rec(f(rec(entry.value,345n),1n),342n),source=rec(f(e,2n),337n);acquisition=f(e,1n);acquiredAt=time(f(rec(f(source,2n),203n),5n));kind='diagnostic';}
  const occurrence=id(acquisition);if(occurrence.namespaceId!==1125n)fail('acquisition identity');return {...entry,acquisition:uint(occurrence.payload),acquiredAt,kind};
 }
@@ -50,7 +50,7 @@ export function prepareEpisodicRetention(events:readonly ScheduledEvent[],B0:Aut
  const at=formations[0].dueAt,anchor=formations.at(-1)!;
  const prior=B0.entries().filter(e=>e.path.rootStateTypeId===346n).map(e=>episode(e,C));
  const fresh=formations.map(event=>{if(event.phase!==140n||event.dueAt!==at)fail('formation phase/time');let entry:{path:StatePath;value:CanonicalValue};
-  if(eq(event.eventTypeId,MEMORY_FORMATION)){const a=items(event.payload,'list');entry={path:bodyEpisodePath(C,f(rec(a[2],461n),1n)),value:event.payload};}
+  if(eq(event.eventTypeId,MEMORY_FORMATION)){const a=items(event.payload,'list');entry={path:txt(a[0])===SOCIAL_EPISODE?socialEpisodePath(C,a[2]):bodyEpisodePath(C,f(rec(a[2],461n),1n)),value:event.payload};}
   else{const source=rec(f(rec(event.payload,342n),2n),337n);entry={path:{rootStateTypeId:346n,fieldId:1n,selectors:[{kind:'mapKey',key:r(344,[C,f(source,1n)])}]},value:r(345,[event.payload])};}
   const result=episode(entry,C);if(result.acquiredAt!==at)fail('fresh acquisition time');return result;
  });
@@ -62,5 +62,5 @@ export function prepareEpisodicRetention(events:readonly ScheduledEvent[],B0:Aut
  return {anchor,audit,finish(candidate:AuthoritativeState){if(complete)fail('settlement reused');complete=true;const actual=candidate.entries().filter(e=>e.path.rootStateTypeId===346n);if(actual.length!==rows.length||actual.some(e=>!rows.some(r=>eq(statePathValue(r.path),statePathValue(e.path))&&eq(r.value,e.value))))fail('formed episode union mismatch');
    const applied=stateModel.applyPatch(candidate,patch,EPISODIC_OWNER,{writableRoots:[346n],targetPaths:lost.map(e=>e.path)});diffs=applied.diffs;const after=applied.state.entries().filter(e=>e.path.rootStateTypeId===346n).map(e=>episode(e,C));
    if(after.length!==retained.length||after.some(e=>!survivors.has(e.acquisition))||after.filter(e=>e.kind==='body').length>d.body||after.filter(e=>e.kind==='diagnostic').length>d.diagnostic)fail('retention invariant');return applied.state;
-  },trace(){if(!complete)fail('trace before completed retention');return traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model,runIdentity:run,event:anchor,seamId:bodyId(1036,'seam/assembled-episodic-retention'),seamVersion:'assembled-character-retention/0.1-candidate',recordKind:anchor.eventTypeId,subjectIds:[id(C)],sourceRecordIds:[],registeredReadDomain:[domain],actualReadRecords:reads,inputProjection:list(formations.map(e=>list([unsigned(e.eventId),e.payload]))),outputProjection:audit,randomDrawRecords:[],quantizationOperations:[],statePatch:patch,structuralMutationDiffs:diffs,emittedEvents:[],invariantResults:[]});}};
+  },trace(){if(!complete)fail('trace before completed retention');return traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model,runIdentity:run,event:anchor,seamId:bodyId(1036,'seam/assembled-episodic-retention'),seamVersion:rows.some(e=>isSocialEpisodePath(e.path))?'assembled-character-retention/0.2-candidate':'assembled-character-retention/0.1-candidate',recordKind:anchor.eventTypeId,subjectIds:[id(C)],sourceRecordIds:[],registeredReadDomain:[domain],actualReadRecords:reads,inputProjection:list(formations.map(e=>list([unsigned(e.eventId),e.payload]))),outputProjection:audit,randomDrawRecords:[],quantizationOperations:[],statePatch:patch,structuralMutationDiffs:diffs,emittedEvents:[],invariantResults:[]});}};
 }

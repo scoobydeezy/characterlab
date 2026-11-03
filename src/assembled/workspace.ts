@@ -4,7 +4,7 @@ import {SchedulerContractError,type ScheduledEvent} from '../substrate/scheduler
 import {scheduledEventValue} from '../substrate/persistence';
 import {dataItems as items,dataRecord as rec,dataField as f,dataKey as key,dataIdentity as id,dataText as txt,dataUnsigned as uint} from '../campaign2/canonicalData';
 import {BODY_OBSERVER,BODY_CHANNEL} from './body';
-import {MEMORY_RECALL,EPISODE} from './memory';
+import {MEMORY_RECALL,EPISODE,SOCIAL_EPISODE,socialEpisodePath,validateSocialEpisode} from './memory';
 export const WORKSPACE='assembled-workspace/0.1';
 export interface BodyRecallDelivery {readonly character:CanonicalValue;readonly event:ScheduledEvent;readonly episodes:readonly CanonicalValue[]}
 const fail=(s:string):never=>{throw new SchedulerContractError('INPUT_NOT_ADMITTED','assembled workspace: '+s);};
@@ -17,9 +17,9 @@ export function sharedWorkspace(taskWorkspace:CanonicalValue,capacity:number,at:
  const used=tasks.length+(tag===2n?1:0)+reserved;if(used>capacity)fail('existing focus exceeds capacity');
  const candidates:CanonicalValue[]=[],seen=new Map<string,CanonicalValue>(),events=new Set<bigint>();let lastSequence=-1n;
  for(const delivery of deliveries){const {event,episodes}=delivery;
-  if(!eq(delivery.character,C)||event.dueAt!==at||event.phase!==20n||!eq(event.eventTypeId,MEMORY_RECALL)||!eq(event.payload,BODY_CHANNEL)||events.has(event.eventId)||event.eventSequence<=lastSequence)fail('foreign/stale/unordered recall delivery');events.add(event.eventId);lastSequence=event.eventSequence;
-  for(const episode of episodes){const a=items(episode,'list');if(a.length!==6||txt(a[0])!==EPISODE)fail('episode shape');const acquisition=id(a[1]),acquired=a[5],sample=rec(a[2],461n);
-   if(acquisition.namespaceId!==1125n||typeof acquisition.payload==='boolean'||acquisition.payload.kind!=='unsigned'||typeof acquired==='boolean'||acquired.kind!=='signed'||acquired.value<0n||acquired.value>=at||!eq(f(sample,2n),BODY_OBSERVER)||!eq(f(sample,3n),BODY_CHANNEL))fail('foreign/future episode');
+  if(!eq(delivery.character,C)||event.dueAt!==at||event.phase!==20n||!eq(event.eventTypeId,MEMORY_RECALL)||!(eq(event.payload,BODY_CHANNEL)||(typeof event.payload!=='boolean'&&event.payload.kind==='list'&&eq(event.payload.items[0],text(SOCIAL_EPISODE))))||events.has(event.eventId)||event.eventSequence<=lastSequence)fail('foreign/stale/unordered recall delivery');events.add(event.eventId);lastSequence=event.eventSequence;
+  for(const episode of episodes){const a=items(episode,'list');if(a.length!==6||![EPISODE,SOCIAL_EPISODE].includes(txt(a[0])))fail('episode shape');const acquisition=id(a[1]),acquired=a[5],social=txt(a[0])===SOCIAL_EPISODE,sample=social?undefined:rec(a[2],461n);if(social)validateSocialEpisode(episode,C);if(social&&!eq((socialEpisodePath(C,a[2]).selectors[0] as {key:CanonicalValue}).key,event.payload))fail('social cue/episode mismatch');
+   if(acquisition.namespaceId!==1125n||typeof acquisition.payload==='boolean'||acquisition.payload.kind!=='unsigned'||typeof acquired==='boolean'||acquired.kind!=='signed'||acquired.value<0n||acquired.value>=at||(!social&&(!eq(f(sample!,2n),BODY_OBSERVER)||!eq(f(sample!,3n),BODY_CHANNEL))))fail('foreign/future episode');
    const k=key(acquisition),prior=seen.get(k);if(prior){if(!eq(prior,episode))fail('inconsistent repeated acquisition');continue;}seen.set(k,episode);candidates.push(list([acquisition,episode,unsigned(event.eventId)]));
   }
  }
