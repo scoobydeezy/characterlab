@@ -42,18 +42,19 @@ is accepted yet. Owner now authorizes continued diagnosis/repair through M38 com
   and reason modifier at5. A deviation is not a qualified Interaction until the
   consumed-state chain and required phenomenon are established with evidence.
 - <=3 capabilities,10/12 production/test files; result+raw log only, <=20/5MiB.
-  One check at a time, <=600s each, <=1800s total INCLUDING prior failures/guards.
-  Cumulative1469.80s;330.20s remains. No reset or broader suite.
+  One check at a time, <=600s each, <=1980s total INCLUDING prior failures/guards (owner +180s approved).
+  No budget reset or broader suite.
 - Owner continuation: run both repaired checks; do not bail on first failure.
   Diagnose/repair within M38; no law/fixture/gate tuning. Initial run ceiling280s,
-  original1800s cumulative remains. Retain exact hidden projections before assertions
+  Retain exact hidden projections before assertions
   so an assertion failure does not erase evidence already computed.
 - Continued run: connection PASS; hidden stops at index2 (time7). Retained exact
   projections prove Current3/RecalledContext5 live, no sample/recall7; decisions and
   all4 draws equal. Repair only the overbroad time7 precondition: require absence
   and Unavailable for every row there, preserve live3/5 and all decision comparisons.
-- Cumulative1770.41s leaves29.59s after final types/guards. A single +180s allowance
-  requested for final native hidden rerun/types/guards; do not overrun pending reply.
+- Owner approved a single +180s allowance: cumulative cap1980s, prior1770.41s,
+  remaining209.59s. Run repaired hidden control only, <=180s, then final document/
+  budget checks. Types and frozen105 guards already pass on unchanged source.
 - Frozen105 closure/historical controls unchanged; no UI/new factory/active partners.
   No corpus/obligation closure. ADAPT/BIO/BODY12.1/2/8/9, delayed reward/discounting
   and full21 members/15 families/132 clauses remain open.

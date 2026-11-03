@@ -247,4 +247,4 @@ one authorized milestone at a time. No UI, publishing or assembly acceptance fol
   interactions or law failures. Correct task declarations; delayed-body tasks have
   no person dependency. Keep laws/kernel, reserve10, delay0/2, amount80, seed0 and
   acceptance gate fixed. Latest owner continuation permits diagnosis/repair after
-  failures until M38 completion; original1800s budget and evidence gates remain.
+  failures until M38 completion; owner approved +180s (1980s total); evidence gates remain.
