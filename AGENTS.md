@@ -76,6 +76,18 @@ architectural/scope/comparison changes or exhausted budgets; no paperwork bypass
 Keep AGENTS.md <=120 lines, CURRENT.md <=80, the work order <=250.
 Git stores history; keep one baseline, one register, one compact result per milestone.
 
+## Post-M40 review adjustment — 2026-11-03
+
+Prioritize affect/reappraisal, then non-body episodic recall, over body/habit refinements.
+Affect is derived; persistence must earn necessity. Keep adopted L4 self-feedback OFF.
+Before behavioral runs, expose the strength-to-decision calibration path.
+Retain subthreshold/saturated controls; no magnitude/seed search to manufacture a pass.
+Keep reference dice settings; global changes need measured evidence and an owner ruling.
+Replay original requirements in the assembled model; record exact IDs in the existing register.
+Control passes are not assembled coverage; no parallel audit or blanket completion percentage.
+Autonomous partners remain deferred until the single-character experiment succeeds.
+Use perceived stand-ins; explicitly mark requirements needing mutual autonomy.
+
 ## Research and artifact preservation
 
 Keep accepted contracts, frozen bytes/hashes, controls, meaningful comparators and
