@@ -10,6 +10,10 @@ import {sid,pattern} from './skill';
 import type {Strategy} from './strategy';
 import type {compileCampaign2StateModel} from '../campaign2/stateModel';
 export const HABIT='assembled-habit/0.1',HABIT_OBS='assembled-habit-observation/0.1',HABIT_OPTIONS='assembled-habit-options/0.1';
+export const DELIVERY_REWARD='assembled-delivery-reward/0.1',DELIVERY_REWARD_VERSION='assembled-character-delivery-reward/0.1-candidate';
+export function compileDeliveryReward(v:CanonicalValue){const a=items(v,'list');require(a.length===1&&txt(a[0])===DELIVERY_REWARD,'delivery reward declaration');}
+/** Apparatus transduction from the actual applied gain, never the intended dose. */
+export function deliveredReward(v:CanonicalValue){const physical=rec(v,479n),applied=readQ(f(physical,3n));require(applied.numerator>=0n,'negative applied gain');return applied.numerator>0n;}
 export const HABIT_SOURCE=sid(1001,'event/assembled-habit-source'),HABIT_CUE=sid(1001,'event/assembled-habit-cue'),HABIT_OBSERVE=sid(1001,'event/assembled-habit-observe'),HABIT_EVIDENCE=sid(1001,'event/assembled-habit-evidence'),HABIT_LEARN=sid(1001,'event/assembled-habit-learn');
 export const HABIT_OWNER=sid(1025,'authority/habit-history'),REWARD_OWNER=sid(1025,'authority/reward-expectation');
 export const habitPath=(C:CanonicalValue):StatePath=>({rootStateTypeId:821n,fieldId:1n,selectors:[{kind:'mapKey',key:C}]}),rewardPath=(C:CanonicalValue):StatePath=>({...habitPath(C),rootStateTypeId:823n});
