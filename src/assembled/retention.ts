@@ -1,4 +1,4 @@
-import type {MemoryUseLaw} from './memoryUse';
+import {assertBodyUseUpdate,type MemoryUseLaw} from './memoryUse';
 import {assertPresentationUpdate} from './affectMemory';
 import {MEMORY_PRESENTATION} from './memory';
 /** assembled-character-retention/0.1: same episodic owner, explicit kind budgets.
@@ -43,9 +43,9 @@ export function withRetentionState(base:ReturnType<typeof compileCampaign2StateM
 }
 function episode(entry:{path:StatePath;value:CanonicalValue},C:CanonicalValue):UncreditedEpisode&typeof entry{
  holder(entry.path,C);let acquisition:CanonicalValue,acquiredAt:bigint,kind:'diagnostic'|'body';
- if(isBodyEpisodePath(entry.path)||isSocialEpisodePath(entry.path)){const a=items(entry.value,'list');if(!(a.length===6||[7,8].includes(a.length)&&txt(a[0])===SOCIAL_EPISODE)||![EPISODE,SOCIAL_EPISODE].includes(txt(a[0])))fail('body episode schema');acquisition=a[1];acquiredAt=time(a[5]);kind='body';}
+ if(isBodyEpisodePath(entry.path)||isSocialEpisodePath(entry.path)){const a=items(entry.value,'list');if(!(a.length===6||a.length===7&&txt(a[0])===EPISODE&&typeof a[6]==='boolean'||[7,8].includes(a.length)&&txt(a[0])===SOCIAL_EPISODE)||![EPISODE,SOCIAL_EPISODE].includes(txt(a[0])))fail('body episode schema');acquisition=a[1];acquiredAt=time(a[5]);kind='body';}
  else{const e=rec(f(rec(entry.value,345n),1n),342n),source=rec(f(e,2n),337n);acquisition=f(e,1n);acquiredAt=time(f(rec(f(source,2n),203n),5n));kind='diagnostic';}
- const occurrence=id(acquisition);if(occurrence.namespaceId!==1125n)fail('acquisition identity');return {...entry,acquisition:uint(occurrence.payload),acquiredAt,kind,useProtection:isSocialEpisodePath(entry.path)&&items(entry.value,'list').length===8?items(entry.value,'list')[7] as boolean:false};
+ const occurrence=id(acquisition);if(occurrence.namespaceId!==1125n)fail('acquisition identity');return {...entry,acquisition:uint(occurrence.payload),acquiredAt,kind,useProtection:isSocialEpisodePath(entry.path)&&items(entry.value,'list').length===8?items(entry.value,'list')[7] as boolean:isBodyEpisodePath(entry.path)&&items(entry.value,'list').length===7?items(entry.value,'list')[6] as boolean:false};
 }
 /** Called only AFTER both existing formation producers/targets are authenticated. */
 export function prepareEpisodicRetention(events:readonly ScheduledEvent[],B0:AuthoritativeState,C:CanonicalValue,d:RetentionDeclaration,stateModel:ReturnType<typeof compileCampaign2StateModel>,model:CanonicalValue,run:CanonicalValue,law?:MemoryUseLaw,presentation?:(event:ScheduledEvent)=>CanonicalValue){
@@ -57,7 +57,7 @@ export function prepareEpisodicRetention(events:readonly ScheduledEvent[],B0:Aut
   else{const source=rec(f(rec(event.payload,342n),2n),337n);entry={path:{rootStateTypeId:346n,fieldId:1n,selectors:[{kind:'mapKey',key:r(344,[C,f(source,1n)])}]},value:r(345,[event.payload])};}
   const result=episode(entry,C);if(result.acquiredAt!==at)fail('fresh acquisition time');return result;
  });
- const updated=prior.map(e=>{const changes=events.filter(v=>eq(v.eventTypeId,MEMORY_PRESENTATION)).map(v=>presentation?presentation(v):items(v.payload,'list')[1]).filter(v=>uint(id(items(v,'list')[1]).payload)===e.acquisition);if(changes.length>1)fail('duplicate presentation');if(!changes.length)return e;assertPresentationUpdate(e.value,changes[0],!!law);return {...e,value:changes[0]};});
+ const updated=prior.map(e=>{const changes=events.filter(v=>eq(v.eventTypeId,MEMORY_PRESENTATION)).map(v=>presentation?presentation(v):items(v.payload,'list')[1]).filter(v=>uint(id(items(v,'list')[1]).payload)===e.acquisition);if(changes.length>1)fail('duplicate presentation');if(!changes.length)return e;if(isBodyEpisodePath(e.path))assertBodyUseUpdate(e.value,changes[0]);else assertPresentationUpdate(e.value,changes[0],!!law);return {...e,value:changes[0]};});
  const rows=[...updated,...fresh],paths=new Set(rows.map(e=>key(statePathValue(e.path))));if(paths.size!==rows.length)fail('duplicate episode path');
  const retained=retainedEpisodeIds(rows,at,d,law),survivors=new Set(retained),lost=rows.filter(e=>!survivors.has(e.acquisition)).sort((a,b)=>compare(enc(statePathValue(a.path)),enc(statePathValue(b.path))));
  const audit=list([text(RETENTION),signed(at),unsigned(d.diagnostic),unsigned(d.body),list(lost.map(e=>unsigned(e.acquisition))),list(retained.map(unsigned)),...(law?[text(law),list(rows.map(e=>list([unsigned(e.acquisition),e.useProtection??false])))]:[])]);

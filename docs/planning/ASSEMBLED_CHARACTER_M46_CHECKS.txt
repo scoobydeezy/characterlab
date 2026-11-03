@@ -1,0 +1,139 @@
+
+=== calibration ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledBodyMemoryUse.test.ts > calibration: original body used tier and exact pressure before native comparison
+M46 CALIBRATION original SF/UP/AgeOnly Interoceptive capacities0..4/ties; upper-bin10/90 threshold60 =>5/6/0; prior-use ordering unchanged.
+
+ ✓ src/test/assembledBodyMemoryUse.test.ts (6 tests | 5 skipped) 8ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  16:37:31
+   Duration  9.51s (transform 2.51s, setup 0ms, collect 9.20s, tests 8ms, environment 0ms, prepare 110ms)
+
+
+M46_CHECK calibration exit=0 seconds=10.16
+
+=== connection ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledBodyMemoryUse.test.ts > connection and continuation: real body use protects evidence and changes later live appraisal
+M46 CONNECTION used A1 survives4 vs AgeOnly B4; live recalled-context pressure5/6 vs0; exact repeat/save and restore2->5; draws5=0/0; no sampled-choice claim.
+
+ ✓ src/test/assembledBodyMemoryUse.test.ts (6 tests | 5 skipped) 80471ms
+   ✓ connection and continuation: real body use protects evidence and changes later live appraisal 80470ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  16:38:00
+   Duration  83.92s (transform 2.04s, setup 0ms, collect 3.11s, tests 80.47s, environment 0ms, prepare 102ms)
+
+
+M46_CHECK connection exit=0 seconds=84.43
+
+=== controls-boundaries ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledBodyMemoryUse.test.ts > controls: recall alone current precedence zero and ample quotas
+M46 CONTROLS same-barrier actual use cannot rescue A from new perceived social episode; recall-alone no credit; current perception prevents memory credit; zero quota unavailable; ample2 same latest-body appraisal.
+
+stdout | src/test/assembledBodyMemoryUse.test.ts > epistemic: within-bin hidden reserve does not alter cognitive memory/use/appraisal
+M46 HIDDEN reserve10/10.5 same observed bins; memory/use/retention/judgment equal.
+
+stdout | src/test/assembledBodyMemoryUse.test.ts > boundaries: fresh false binary metadata immutable source and external writes
+M46 BOUNDARIES no authored credit; fresh false; repeated true binary; source immutable; foreign writer/clearing/fresh true/external child reject.
+
+stdout | src/test/assembledBodyMemoryUse.test.ts > rollback: failed actual-use settlement leaves whole instant unchanged
+M46 ROLLBACK actual use failure leaves state/outputs/trace/queue unchanged; saved continuation exact.
+
+ ✓ src/test/assembledBodyMemoryUse.test.ts (6 tests | 2 skipped) 145822ms
+   ✓ controls: recall alone current precedence zero and ample quotas 89619ms
+   ✓ epistemic: within-bin hidden reserve does not alter cognitive memory/use/appraisal 16280ms
+   ✓ boundaries: fresh false binary metadata immutable source and external writes 21205ms
+   ✓ rollback: failed actual-use settlement leaves whole instant unchanged 18718ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed | 2 skipped (6)
+   Start at  16:40:23
+   Duration  149.23s (transform 2.04s, setup 0ms, collect 3.09s, tests 145.82s, environment 0ms, prepare 102ms)
+
+
+M46_CHECK controls-boundaries exit=0 seconds=149.74
+
+=== version-and-context-regressions ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledMemoryContext.test.ts (7 tests | 6 skipped) 16082ms
+   ✓ M9 memory-dependent choice > controls: repeat and restore before recall match every whole later boundary 16082ms
+stdout | src/test/assembledBodyMemoryUse.test.ts > connection and continuation: real body use protects evidence and changes later live appraisal
+M46 CONNECTION used A1 survives4 vs AgeOnly B4; live recalled-context pressure5/6 vs0; exact repeat/save and restore2->5; draws5=0/0; no sampled-choice claim.
+
+stdout | src/test/assembledBodyMemoryUse.test.ts > regression: M45 social connection survives the0.47 body representation
+M46 REGRESSION original M45 inputs under0.47 preserve live social means1/0 and social-use receipts; merely recalled body earns no credit.
+
+ ✓ src/test/assembledBodyMemoryUse.test.ts (7 tests | 5 skipped) 119601ms
+   ✓ connection and continuation: real body use protects evidence and changes later live appraisal 80572ms
+   ✓ regression: M45 social connection survives the0.47 body representation 39029ms
+stdout | src/test/assembledMemoryUse.test.ts > connection and continuation: committed use protects old evidence and changes later live judgment
+M45 BARRIER 4 survivors; prior-use=false,true,true,false,false
+M45 BARRIER 4 survivors; prior-use=false,true,true,false,false
+M45 CONNECTION used A/B survive pressure; AgeOnly loses A; live contexts1/0, semantic1/3 both; exact repeat/save and restore4->7; draws7=0/0
+
+ ✓ src/test/assembledMemoryUse.test.ts (6 tests | 5 skipped) 134359ms
+   ✓ connection and continuation: committed use protects old evidence and changes later live judgment 134359ms
+
+ Test Files  3 passed (3)
+      Tests  4 passed | 16 skipped (20)
+   Start at  16:43:36
+   Duration  275.51s (transform 2.06s, setup 0ms, collect 4.50s, tests 270.04s, environment 0ms, prepare 283ms)
+
+
+M46_CHECK version-and-context-regressions exit=0 seconds=276.01
+
+=== foundation-and-original-components ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/persistence.test.ts (2 tests) 17ms
+ ✓ src/test/observation.test.ts (6 tests) 20ms
+ ✓ src/test/observationIntegration.test.ts (2 tests) 21ms
+ ✓ src/test/trace.test.ts (4 tests) 26ms
+ ✓ src/test/scheduler.test.ts (14 tests) 14ms
+ ✓ src/test/state.test.ts (6 tests) 11ms
+ ✓ src/test/retentionFragmentation.test.ts (8 tests) 7ms
+ ✓ src/test/useProtectedRetention.test.ts (8 tests) 8ms
+ ✓ src/test/significanceFirstRetention.test.ts (8 tests) 9ms
+ ✓ src/test/recencyRetention.test.ts (8 tests) 8ms
+ ✓ src/test/bodyRecall.test.ts (8 tests) 6ms
+ ✓ src/test/semanticPhaseRollbackCause.test.ts (1 test) 5ms
+ ✓ src/test/bodyRecallPriorityBoundary.test.ts (1 test) 3ms
+
+ Test Files  13 passed (13)
+      Tests  76 passed (76)
+   Start at  16:48:20
+   Duration  3.83s (transform 283ms, setup 0ms, collect 590ms, tests 154ms, environment 2ms, prepare 1.21s)
+
+
+M46_CHECK foundation-and-original-components exit=0 seconds=4.32
+
+=== types ===
+
+M46_CHECK types exit=0 seconds=15.84
+
+=== boundary ===
+Reference boundary check passed.
+
+M46_CHECK boundary exit=0 seconds=2.26
+
+=== research ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M46_CHECK research exit=0 seconds=3.44
+
+M46 final guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and M22-M45 retained tests unchanged; document/evidence caps. seconds=9.63
+M46 validation seconds including guard=555.83
