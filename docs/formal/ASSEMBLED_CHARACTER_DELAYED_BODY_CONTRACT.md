@@ -80,7 +80,7 @@ runtime semantics or seam version and does not restart the validation budget.
 ## Owner dependency amendment — 2026-11-02
 
 M38 tasks are physical and declare no person dependency. Known people may remain
-in slot19 with empty task lists; only the unaccepted0.39 candidate admits these
+in slot19 with empty task lists; only the0.39 candidate admits these
 empty lists. All earlier versions preserve their existing admission. Group count,
 identity, duplicate and foreign-task checks remain. This corrects a representation
 restriction, not a law: unmapped tasks already use the existing likelihood1 path.
@@ -96,3 +96,14 @@ standing Deferred(component not integrated) category has no M38 entries or claus
 closures. The kernel, reserve10, delays0/2, amount80, seed0 and original gate remain
 fixed. Prior failures are setup errors; later cross-system differences require
 explicit evidence/classification rather than silent retuning.
+
+## M38 qualification
+
+The fixed connection and controls pass; see ASSEMBLED_CHARACTER_M38_RESULT.md.
+Hidden control uses live Current3/RecalledContext5 and explicitly absent evidence
+at7: no sample5 means no scheduled recall7. Every expected body appraisal at7 is
+Unavailable; it is not a live factor comparison. All three decisions remain equal
+with four actual matched draws. No missing interior component is inferred.
+Earlier stop rules were superseded by owner authorization to continue diagnosis
+and repair, plus an explicit180s extension to1980s cumulative validation. Inputs,
+laws, kernel and acceptance remained fixed; all failures remain recorded.

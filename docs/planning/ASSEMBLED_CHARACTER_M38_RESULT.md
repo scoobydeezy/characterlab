@@ -1,9 +1,9 @@
-# M38 — connection passes; final hidden-control rerun pending
+# M38 — delayed physical consequences connected
 
 A performed action can now deliver its body effect later, and the changed delivery
 timing changes live appraisal and reason modifiers through permitted perception.
-The connection gate passes. M38 completion awaits the final repaired hidden-control
-native check; its exact retained projections already identify the test mistake.
+M38 is complete: the connection and all required controls pass. Delivery stays
+separate from execution, and hidden physical truth does not become character belief.
 
 ## Fixed scenario and implementation
 
@@ -47,12 +47,14 @@ Unavailable for EVERY expected task at7, and still compares ALL three actual
 decisions. No assertion of absence is presented as a live behavioral comparison.
 Retained projections show equal live factors/decisions and four exactly matched
 actual random draws (address, derived address, counter and draw fields2/3/4/7).
-Final native rerun is pending the requested180-second budget amendment.
+Final native rerun PASS: both arms have four draws, all four matched, equal live
+factors and all decisions, with every expected row explicitly Unavailable at7.
+It completed in135.92s, within the approved180s allowance.
 
 ## Other controls and preserved failures
 
 Saturation100 PASS: receipt5 95+80 capped100, applied5/overflow75; live appraisal
-rows/factors equal. Hidden control is the only pending rerun. Blocked/zero PASS;
+rows/factors equal. Hidden control PASS. Blocked/zero PASS;
 repeat3 and exact restore3..10 PASS; three operations/receipts/practice reports;
 late5 rollback69/70 and private binding retry/forgery/duplicate/overdue/overflow PASS.
 Admission PASS: empty mappings0.39 only; prior0.38, foreign/duplicate mappings,
@@ -68,9 +70,11 @@ psychological interaction. No raw failure or meaningful comparator was discarded
 
 ## Budget and scope
 
-Cumulative1770.41s of original1800s, including failed checks and preservation guards;
-29.59s remains. Owner authorized continuing after failures; a specific additional
-180s was requested before overrun for final hidden rerun, not yet adopted.
+Cumulative validation 1906.45s, including all failed checks and preservation
+checks, within the owner-amended1980s cap (original1800 plus approved180; no reset).
+Approval58493d97 preceded the final native run. All seven M38 test groups now pass
+across their targeted runs; no production/input changes invalidated the earlier
+passes. Tests stopped when the last required control passed.
 Ten production/test files; two evidence files within20/5MiB. Frozen105 dependency
 closure, historical tests/trees and document caps PASS. No full frozen rerun needed
 because no control dependency changed. No UI/new factory/active partner work.
@@ -78,5 +82,5 @@ No verdict/obligation/corpus closure; delayed reward learning, future discountin
 and full21 members/15 families/132 clauses remain open.
 
 Plans5c511a13/a1e6effe/a670f81f and repair continuation7fa03e1a precede their work;
-checkpointsd78fcd6a/77fca859/1f790f3e preserve earlier outcomes.
+checkpointsd78fcd6a/77fca859/1f790f3e/eebdad9a preserve earlier outcomes.
 [Raw checks](ASSEMBLED_CHARACTER_M38_CHECKS.txt) contain exact native projections.
