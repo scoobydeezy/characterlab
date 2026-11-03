@@ -47,25 +47,25 @@ const modifiers=(r:Run,index:number)=>items(f(outputs(r.snapshot().outputs,408n)
 const decisions=(r:Run)=>outputs(r.snapshot().outputs,409n).map(v=>{const status=rec(f(v,4n),419n);expect(uint(f(status,1n))).toBe(3n);const chosen=rec(f(status,2n),420n);return list([f(v,2n),...([1n,2n,3n,4n,8n].map(n=>f(chosen,n)))]);});
 const draws=(r:Run)=>traces(r).flatMap(t=>items(f(t,14n),'list')).map(randomDrawRecord);
 function coupled(a:Run,b:Run){const right=new Map(draws(b).map(v=>[key(f(v,2n)),v]));let n=0;for(const x of draws(a)){const y=right.get(key(f(x,2n)));if(y){for(const k of [2n,3n,4n,7n])expect(f(y,k)).toEqual(f(x,k));n++;}}console.info('M39 draws A='+draws(a).length+' B='+draws(b).length+' matched='+n+'; modes='+JSON.stringify([a,b].map(r=>outputs(r.snapshot().outputs,409n).map(v=>String(uint(f(rec(f(rec(f(v,4n),419n),2n),420n),8n)))))));return n;}
-async function mapped(law:ToleranceLaw,hidden=false){const m=await prepareCharacterModel(source(law)),setup=await createCharacterRun(m,data(hidden));await through(setup,7n);const r=await createCharacterRun(m,data(hidden,mapIdentities(setup)));await through(r,7n);return r;}
+async function mapped(law:ToleranceLaw,hidden=false,amount=80){const m=await prepareCharacterModel(source(law,2,true,amount)),setup=await createCharacterRun(m,data(hidden));await through(setup,7n);const r=await createCharacterRun(m,data(hidden,mapIdentities(setup)));await through(r,7n);return r;}
 const declaration=(law:ToleranceLaw='Reciprocal')=>compileTolerance(list([text('assembled-tolerance/0.1'),variable,text(law)]));
 const magnitude=(n:bigint)=>record('ToleranceValue',{Magnitude:unsigned(n)});
 const physical=(r:Run)=>reports(r,ACTION_BODY_RECEIPT).map(a=>[1n,2n,3n,4n,5n].map(k=>f(rec(a[5],479n),k)));
 // Three physical tasks; all ordinary channels live, reserve10. No person dependency.
-it('connection: earned adaptation changes delivered effect then live appraisal and reasons',async()=>{
- const a=await mapped('Reciprocal'),b=await mapped('Unattenuated');
+it.each([80,40])('connection: amount %i retains quantization control or crosses live modifier boundary',async(amount)=>{
+ const a=await mapped('Reciprocal',false,amount),b=await mapped('Unattenuated',false,amount);
  console.info('M39 primary '+diagnostic([a,b].map(r=>({tolerance:reports(r,TOLERANCE_EFFECT),physical:physical(r),sample7:sample(r,7n),appraisal7:reports(r,JOINT_APPRAISAL)[2],modifiers7:modifiers(r,2)}))));
  live(a);live(b);const n=coupled(a,b);console.info('M39 matched primary draws '+n+'; gate is live factors/reasons, not stochastic choice');
  for(const r of [a,b]){
-  const effects=reports(r,TOLERANCE_EFFECT);expect(effects).toHaveLength(2);expect(effects[0][1]).toEqual(signed(5));expect(effects[0][2]).toEqual((tolerancePath(C,variable).selectors[0] as {key:CanonicalValue}).key);expect(effects[0][4]).toEqual(unsigned(1));expect(effects[0][5]).toEqual(q(80,1));
+  const effects=reports(r,TOLERANCE_EFFECT);expect(effects).toHaveLength(2);expect(effects[0][1]).toEqual(signed(5));expect(effects[0][2]).toEqual((tolerancePath(C,variable).selectors[0] as {key:CanonicalValue}).key);expect(effects[0][4]).toEqual(unsigned(1));expect(effects[0][5]).toEqual(q(amount,1));
   expect(f(traceAt(r,ACTION_BODY_RECEIPT_EVENT,5n)[0],6n)).toEqual(text(TOLERANCE_VERSION));
   const queued=traceAt(r,ACTION_BODY_EVENT,3n)[0],received=traceAt(r,ACTION_BODY_RECEIPT_EVENT,5n)[0];expect(f(queued,17n)).toEqual(list([]));expect(items(f(queued,11n),'list')).toHaveLength(2);expect(items(f(received,11n),'list')).toHaveLength(2);expect(f(event(received),8n)).toEqual(list([f(event(queued),1n)]));
   expect(reports(r,JOINT_APPRAISAL)[2][2]).toEqual(sample(r,7n));
  }
- expect(physical(a)[0]).toEqual([5,40,40,0,45].map(n=>q(n,1)));expect(physical(b)[0]).toEqual([5,80,80,0,85].map(n=>q(n,1)));
- expect(f(rec(f(sample(a,7n),5n),462n),2n)).toEqual(q(50,1));expect(f(rec(f(sample(b,7n),5n),462n),2n)).toEqual(q(90,1));
- expect(bodyRows(a).slice(0,2)).toEqual(bodyRows(b).slice(0,2));expect(bodyRows(a)[2]).not.toEqual(bodyRows(b)[2]);expect(modifiers(a,2)).not.toEqual(modifiers(b,2));
- console.info('M39 PASS: actual execution earns t1; receipt5 potentials40/80, reserves45/85; sample7 upper50/90; live appraisal and reasons differ');
+ expect(physical(a)[0]).toEqual([5,amount/2,amount/2,0,5+amount/2].map(n=>q(n,1)));expect(physical(b)[0]).toEqual([5,amount,amount,0,5+amount].map(n=>q(n,1)));
+ expect(f(rec(f(sample(a,7n),5n),462n),2n)).toEqual(q(amount/2+10,1));expect(f(rec(f(sample(b,7n),5n),462n),2n)).toEqual(q(amount+10,1));
+ expect(bodyRows(a).slice(0,2)).toEqual(bodyRows(b).slice(0,2));expect(bodyRows(a)[2]).not.toEqual(bodyRows(b)[2]);if(amount===40)expect(modifiers(a,2)).not.toEqual(modifiers(b,2));else expect(modifiers(a,2)).toEqual(modifiers(b,2));
+ console.info('M39 amount='+amount+' PASS: actual t1 delivery and live appraisal; '+(amount===40?'different reason modifiers':'retained equal-integer-band control'));
 },540000);
 // Same physical scenario, sample7 withheld; normal samples3/5 supply live recalled context7.
 it('hidden: identical perceived history keeps cognition equal with actual dice coupled',async()=>{

@@ -1,8 +1,9 @@
-# M39 — tolerance affects actual delivery; behavioral gate incomplete
+# M39 — tolerance changes delivery, appraisal and reasons
 
 Prior execution now reduces a later physical delivery through the existing tolerance
 state. The resulting permitted body sample changes live appraisal. The predeclared
-integer reason-modifier difference did not occur, so M39 is not complete.
+integer reason-modifier difference did not occur at amount80. The owner-approved
+amount40 comparison passes it; M39 is complete within the declared scope.
 
 ## Fixed comparison and classification
 
@@ -43,14 +44,15 @@ its repair preserves that record and all scenario inputs. A later pure control u
 a malformed placeholder referent; repaired with the existing valid other-exposure
 identity and a correctly shaped sensitization key. All failures remain retained.
 
-## Pending decision and scope
+## Approved follow-up and scope
 
-Requested one amount40 follow-up in both arms, retaining80 as a modifier-band
-control. Analytical prediction: first receipt potentials20/40, reserves25/45,
-sample7 upper30/50, task-b coordinates3/10 versus7/30, bounded strengths3/13
-versus7/37 and integer modifiers2/1. No permission assumed; no run at40 performed.
-Laws, reserve, delay, seed, coupling and required live modifier contrast would stay
-fixed, within the original1800s budget. No search across amounts is authorized.
+Owner approved amount40 and necessary bounded amendments through M40. Amendment
+2f64045e preceded execution. Both amount80 (retained equal-modifier control) and40
+passed native checks; no production changes. At40 receipt potentials20/40,
+reserves25/45, sample upper30/50, live appraisal and actual reason modifiers differ.
+Actual draws8/4 with4 matched; the gate is the reason contrast, not a controlled
+stochastic choice change. All earlier80 controls retain unchanged inputs and pass.
+The original failure remains in the log and result as a quantization interaction.
 
 One state/scheduler/RNG/trace/save; tolerance302 retains ADAPT ownership, body455
 is the only effect write. Actual delivery reads exact tolerance; queue/blocked and
@@ -60,9 +62,9 @@ default, not a winning-law verdict. Historical controls remain preserved; final2
 remain open for assembled replay. No research obligation closes. The existing
 protocol supplies one common exposure referent; this is not general cross-tolerance.
 
-[Raw checks](ASSEMBLED_CHARACTER_M39_CHECKS.txt) retain every attempt and measured
-validation duration. Eight production/test files, two evidence files (under0.3MiB),
-all document caps PASS. Measured validation815.64s before final staged Git-size
-check, within1800s; budget is not reset. Five of six new test groups pass; the
-original primary test intentionally remains failing at the unmet gate. Do not
-start the next milestone or claim M39 complete.
+[Raw checks](ASSEMBLED_CHARACTER_M39_CHECKS.txt) preserve all attempts. Seven new
+test cases pass across targeted runs, plus predecessor/kernel controls and types.
+Eight production/test files, two evidence files under5MiB. Measured validation
+1123.48s plus small staged Git-size checks remains below1800s. No further tests
+are needed: frozen105 and historical guards remain valid (no production change
+since their pass). Completion does not close the final21/15/132 replay.
