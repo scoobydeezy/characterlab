@@ -1,52 +1,62 @@
-# Current work — M42 complete; next affect-to-memory connection (2026-11-03)
+# Current work — M43 affect changes remembered context (2026-11-03)
 
-The character now remembers recognized social statements in its shared episodic
-memory. A perceived receipt can recall one and change contextual social judgment,
-while learned person belief stays unchanged. M42 is complete.
+M42 is complete. M43 connects completed prior affect to competing social episodic
+access, then to the existing workspace and social appraisal in the same character.
 
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
-## M42 result
+## M43 bounded card — before implementation
 
-[Result](ASSEMBLED_CHARACTER_M42_RESULT.md), [contract](../formal/ASSEMBLED_CHARACTER_SOCIAL_MEMORY_CONTRACT.md),
-[checks](ASSEMBLED_CHARACTER_M42_CHECKS.txt), [register](ASSEMBLED_CHARACTER_RECONCILIATION.md).
-Plan10391be7 preceded implementation. Setup/diagnostic failures and repairs are
-retained in the result/log; no law, seed, strength or acceptance gate was retuned.
+Baseline2b124981. [Contract](../formal/ASSEMBLED_CHARACTER_AFFECT_MEMORY_CONTRACT.md).
+Three capabilities: delayed affect-dependent access; actual publication history in
+the existing episodic owner; selected memory changes live contextual judgment.
+Rules/registry0.44; one additional static law/association declaration, no new owner,
+scheduler, RNG ledger or private persistence. L4 self-feedback stays OFF.
 
-- Same observed false/false/true history; later receipt recalls original time3
-  episode. Contextual mean1 versus fallback1/3 changes live joint appraisal.
-  Learned person mean1/3 and three evidence records remain unchanged.
-- Zero recall slots retains-but-excludes episodes; zero sensory quota forgets them.
-  Wrong/denied cue and full workspace also remove the contextual effect.
-- Recognized observer-safe evidence only; hidden truth cannot change safe results.
-  Same346/1 episodic owner, shared quota/workspace, one scheduler/state/trace/save.
-- No new acquisition on repeated retained receipt. Exact repeat/restore6->8 and
-  whole-instant rollback33/34 pass, including final trace persistence.
--11 source/test files.28 foundation vectors/tests and3 unchanged body-memory/M41
-  regressions, types, boundary/research and frozen105-dependency checks pass.
-  Validation818.84s through the final guard; all attempted checks remain recorded.
-- BRIEF-12.3-5/-10 and PHEN-MEM-001:6/:8/:9 receive bounded subrequirement witnesses;
-  no family/member closure or new Campaign3 verdict. All18 conditional debts remain.
+Scenario: one holder, three tasks, perceived coat-identified stand-in. Statements
+A=true at1 and B=false at2, distinct receipts; silent NEW receiptQ at3. Normal C1
+recognition supplies all cues. Recall delay1, slots1, workspace5, sensory quota8.
+Actual recalls2/3 publish A/B, giving histories[2]/[3]. Deliberations3/4, body reserve10
+sampled at4; real diagnostic evidence1 supplies forecast. Two tasks depend on the
+perceived person; the third unknown person is outside the compared judgment.
+Risk report1=true is perceived, giving M41 SplitExposure E=U=1 at3; no cognitive
+operation opportunity. No learned initial state. Seed0 and reference dice fixed.
 
-## Next implementation target
+Original affectRetrievalFixtures high: k1,beta1/2,scale1000,lambda1,exponent1,
+omegaB1; apparatus edge A->Q weight1/4. At4 base A1/3,B1/2,pull A1/8,B0.
+UncontrolledGain2 selects A(7/12); NoFeedback1 selects B(A11/24). Encoding, retained
+content, history before4 and cue fixed across arms. Downstream contextual mean1/0;
+semantic mean1/2 unchanged. Assert live rows/operands before comparisons. Require
+joint appraisal to consume selected evidence. Gate is judgment, not stochastic choice.
+Before behavior inspect fixed37/100 threshold and bounded1->1/2,0->0 calibration.
+Report actual draws; do not claim same seed proves coupling or search seeds/magnitudes.
 
-Connect prior affect to memory access under the existing L2 candidate. Pin a concrete
-original comparison with competing retained evidence and a downstream consumer;
-keep encoding, retained content and cue fixed against the no-feedback control.
-Affect is derived; add persistence only if a required distinction earns it. Preserve
-L4 self-feedback OFF and L2 UncontrolledGain as an engineering default, not a verdict.
-Selective encoding and retrieval bias remain distinct mechanisms. No autonomous
-partners, UI, unrelated refinement or separate audit campaign.
+Controls: known-zero and unavailable risk, hidden truth at fixed perceived evidence,
+denied cue, empty graph, zero slots, full workspace; late/current risk cannot alter
+already queued prior affect. Exact repeat/restore3->4, actual presentation rollback,
+foreign owner/content rewrite/direct child rejection. Preserve original fixture
+predictions through real assembled ranking/publication, not only standalone controls.
+Original low-severity/full-control variants remain unported: M41 fixes those factors.
+New presentation times are credit for retrieval only, never semantic belief updates.
 
-Before code, commit the next bounded card/contract with source/owner/phase mappings,
-exact original requirement IDs, scenario declarations and live comparison gates.
-Name exact CV-ORD/CV-TXN/CV-OWN/CV-READ/CV-PATCH/CV-TRC/CV-OBS/CV-EPI vector IDs
-and affected checks/reopen dispositions before implementation. State the full
-strength-to-decision calibration if claiming a choice effect; use explicit stochastic
-coupling or report zero-draw Auto. No post-result magnitude/seed search.
+Original requirement portions: BRIEF-12.3-9 affect-biased recall, BRIEF-12.5-6 retrieval
+portion; full clauses and PHEN-MEM/AFFECT members remain open. MEC008/009/010/022,
+RO-C3-002/003/004/005/006/007/010/011/019/020/021 distinctions preserved. Static graph
+is controlled apparatus, not learned association; selective encoding remains distinct.
 
-Same limits:3 capabilities/12 production-test files,20 evidence files/5MiB,
-600s/check1800s cumulative,one check at a time. Routine bugs repaired locally;
-law/scope/comparison/budget changes follow the work order. Passing ends validation.
-Incremental affected original replay stays inside the milestone; final full
-21-member/15-family/132-clause replay remains mandatory.
+Files (11): new affectMemory, memory, retention, workspace, model, state, reappraisal,
+runtime, traceBinding; new assembledAffectMemory fixture/test. No historical edits.
+Foundation vectors: CV-ORD001..004/CV-TXN001, CV-OWN001/CV-READ001/002,
+CV-PATCH001..003/CV-TRC001..003, CV-OBS001..006/CV-EPI001: existing scheduler/state/
+trace/observation tests plus new prior-only, publication, ownership and hidden controls.
+FND3/4 reopen locally for queued affect and presentation writes under the named seam;
+phase registry unchanged. FND6 checked at observed source; FND1/2/5 frozen guard.
+Types, boundary/research, staged-size; affected M42 connection/persistence and M41
+prior appraisal regression. Frozen105 dependencies/entry unchanged: hash guard,
+not a repeated full C2 replay. Exact tests named in check log, one job at a time.
+
+Budgets:3 capabilities/12 production-test files,20 evidence files/5MiB,600s/check,
+1800s cumulative including failures. One result/log. Done only when original ranking,
+live consumed judgment and all declared controls pass. Repair routine defects locally,
+retaining failures; escalate actual law/scope/comparison/budget changes. No UI,
+autonomous partners, selective-encoding work or unrelated breadth.
