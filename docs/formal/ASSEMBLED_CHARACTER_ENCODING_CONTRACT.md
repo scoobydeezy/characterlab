@@ -50,3 +50,22 @@ original exact encoding equivalence from the new interaction with judgment. No w
 corpus/clause closure, new Campaign3 verdict, claim of a settled psychological law,
 or retirement of any candidate/obligation. Later selective encoding of other channels
 and spatial/Need/surprise/consolidation remain explicit work.
+
+## Validation correspondence (expanded vector names)
+
+The card's event/binding/causal vectors are CV-SEM-031..040 (event files),
+071..080 (observer-safe causal evidence),081..090 (phase/freeze boundary),097/098
+(state save/rollback and observer identity). Existing semanticStateAuthority tests
+check roots241..244; state/trace/scheduler/persistence and observation/integration
+suites cover CV-OWN-001,READ-001/002,PATCH-001..003,TRC-001..003,ORD-001..004,
+SAVE-001/002,TXN-001,OBS-001..006,EPI-001. Original attentionSelection,
+selectedEncoding and selectedEncodingBudgetControl suites preserve capabilities,
+unselected footprint and budget alternatives. These identifiers expand the named
+preimplementation suites; no acceptance gate or comparison is replaced.
+
+LOCAL DISPOSITION after retained test failure: the semantic mean/content projection
+was met, but an extra raw person-history equality assertion included occurrence IDs.
+Skipping A formation/publication shifts B observation ID39 to37; the retained diff
+has exactly that one field. Compare all observation fields except occurrence ID,
+report IDs separately, and keep exact repeat/restore within each unchanged run.
+This implements the pinned semantic correspondence, not a changed law or gate.

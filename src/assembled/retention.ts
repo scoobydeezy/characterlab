@@ -42,7 +42,7 @@ export function withRetentionState(base:ReturnType<typeof compileCampaign2StateM
 }
 function episode(entry:{path:StatePath;value:CanonicalValue},C:CanonicalValue):UncreditedEpisode&typeof entry{
  holder(entry.path,C);let acquisition:CanonicalValue,acquiredAt:bigint,kind:'diagnostic'|'body';
- if(isBodyEpisodePath(entry.path)||isSocialEpisodePath(entry.path)){const a=items(entry.value,'list');if(a.length!==6||![EPISODE,SOCIAL_EPISODE].includes(txt(a[0])))fail('body episode schema');acquisition=a[1];acquiredAt=time(a[5]);kind='body';}
+ if(isBodyEpisodePath(entry.path)||isSocialEpisodePath(entry.path)){const a=items(entry.value,'list');if(!(a.length===6||a.length===7&&txt(a[0])===SOCIAL_EPISODE)||![EPISODE,SOCIAL_EPISODE].includes(txt(a[0])))fail('body episode schema');acquisition=a[1];acquiredAt=time(a[5]);kind='body';}
  else{const e=rec(f(rec(entry.value,345n),1n),342n),source=rec(f(e,2n),337n);acquisition=f(e,1n);acquiredAt=time(f(rec(f(source,2n),203n),5n));kind='diagnostic';}
  const occurrence=id(acquisition);if(occurrence.namespaceId!==1125n)fail('acquisition identity');return {...entry,acquisition:uint(occurrence.payload),acquiredAt,kind};
 }

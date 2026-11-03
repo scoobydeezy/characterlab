@@ -23,3 +23,363 @@ M44 PRODUCER actual SEM242/224/240 selected, hidden invariant, unresolved Missin
 
 
 M44_CHECK package-A-calibration-producer exit=0 seconds=65.15
+
+=== package-B-types ===
+
+M44_CHECK package-B-types exit=0 seconds=15.38
+
+=== connection-continuation ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledEncoding.test.ts (6 tests | 1 failed | 5 skipped) 49912ms
+   × connection and continuation: excluded at encoding changes recalled judgment with semantic belief fixed 49911ms
+     → assembled memory: formation payload
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledEncoding.test.ts > connection and continuation: excluded at encoding changes recalled judgment with semantic belief fixed
+SchedulerContractError: assembled memory: formation payload
+ ❯ fail src/assembled/memory.ts:24:37
+
+ ❯ src/assembled/memory.ts:122:1090
+ ❯ Object.prepare src/assembled/memory.ts:122:54
+ ❯ joinedStage src/assembled/runtime.ts:342:38
+ ❯ withoutStrategy src/assembled/runtime.ts:351:21
+ ❯ withoutPriority src/assembled/runtime.ts:362:19
+ ❯ withoutHorizon src/assembled/runtime.ts:366:21
+ ❯ withoutPerformance src/assembled/runtime.ts:370:21
+ ❯ withoutHabit src/assembled/runtime.ts:374:21
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 5 skipped (6)
+   Start at  10:21:41
+   Duration  53.22s (transform 1.99s, setup 0ms, collect 3.02s, tests 49.91s, environment 0ms, prepare 98ms)
+
+
+M44_CHECK connection-continuation exit=1 seconds=53.75
+
+=== connection-continuation-repaired ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledEncoding.test.ts (6 tests | 1 failed | 5 skipped) 86181ms
+   × connection and continuation: excluded at encoding changes recalled judgment with semantic belief fixed 86180ms
+     → expected { kind: 'list', …(1) } to deeply equal { kind: 'list', …(1) }
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledEncoding.test.ts > connection and continuation: excluded at encoding changes recalled judgment with semantic belief fixed
+AssertionError: expected { kind: 'list', …(1) } to deeply equal { kind: 'list', …(1) }
+
+- Expected
++ Received
+
+  Object {
+    "items": Array [
+      Object {
+        "kind": "text",
+        "value": "assembled-social/0.1",
+      },
+      Object {
+        "items": Array [
+          Object {
+            "items": Array [
+              Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1115n,
+                "payload": Object {
+                  "kind": "unsigned",
+                  "value": 13n,
+                },
+              },
+              Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1002n,
+                "payload": Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1037n,
+                  "payload": Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1038n,
+                    "payload": Object {
+                      "kind": "text",
+                      "value": "character/bridge-subject",
+                    },
+                  },
+                },
+              },
+              Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1002n,
+                "payload": Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1037n,
+                  "payload": Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1038n,
+                    "payload": Object {
+                      "kind": "text",
+                      "value": "content/assembled-social/target",
+                    },
+                  },
+                },
+              },
+              Object {
+                "kind": "signed",
+                "value": 1n,
+              },
+              Object {
+                "kind": "unsigned",
+                "value": 1n,
+              },
+              Object {
+                "kind": "unsigned",
+                "value": 1n,
+              },
+              Object {
+                "items": Array [
+                  true,
+                ],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [
+                  true,
+                ],
+                "kind": "list",
+              },
+            ],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [
+              Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1115n,
+                "payload": Object {
+                  "kind": "unsigned",
+-                 "value": 37n,
++                 "value": 39n,
+                },
+              },
+              Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1002n,
+                "payload": Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1037n,
+                  "payload": Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1038n,
+                    "payload": Object {
+                      "kind": "text",
+                      "value": "character/bridge-subject",
+                    },
+                  },
+                },
+              },
+              Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1002n,
+                "payload": Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1037n,
+                  "payload": Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1038n,
+                    "payload": Object {
+                      "kind": "text",
+                      "value": "content/assembled-social/target",
+                    },
+                  },
+                },
+              },
+              Object {
+                "kind": "signed",
+                "value": 2n,
+              },
+              Object {
+                "kind": "unsigned",
+                "value": 1n,
+              },
+              Object {
+                "kind": "unsigned",
+                "value": 2n,
+              },
+              Object {
+                "items": Array [
+                  false,
+                ],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [
+                  true,
+                ],
+                "kind": "list",
+              },
+            ],
+            "kind": "list",
+          },
+        ],
+        "kind": "list",
+      },
+    ],
+    "kind": "list",
+  }
+
+ ❯ src/test/assembledEncoding.test.ts:38:84
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 5 skipped (6)
+   Start at  10:22:56
+   Duration  89.54s (transform 2.00s, setup 0ms, collect 3.03s, tests 86.18s, environment 0ms, prepare 101ms)
+
+
+M44_CHECK connection-continuation-repaired exit=1 seconds=90.06
+
+=== connection-semantic-correspondence ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledEncoding.test.ts > connection and continuation: excluded at encoding changes recalled judgment with semantic belief fixed
+M44 OCCURRENCE IDs 13,39 vs 13,37
+M44 CONNECTION A/B stored vs B only; live recalled means1/0, semantic1/2 both, zero draws at4; exact restore3->4 and immutable acquisition provenance.
+
+ ✓ src/test/assembledEncoding.test.ts (6 tests | 5 skipped) 89151ms
+   ✓ connection and continuation: excluded at encoding changes recalled judgment with semantic belief fixed 89151ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  10:25:04
+   Duration  92.49s (transform 1.98s, setup 0ms, collect 3.01s, tests 89.15s, environment 0ms, prepare 101ms)
+
+
+M44_CHECK connection-semantic-correspondence exit=0 seconds=93.0
+
+=== remaining-controls-repeat-rollback ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledEncoding.test.ts > calibration: original selected encoder factors before behavioral comparison
+M44 CALIBRATION Actor3/10 Target243/1000 disabled27/100; fixed historical-shared/UnitBudget; seed0 unchanged.
+
+stdout | src/test/assembledEncoding.test.ts > producer: actual observed role binding selects evidence and hidden physical role does not
+M44 PRODUCER actual SEM242/224/240 selected, hidden invariant, unresolved MissingRole
+
+stdout | src/test/assembledEncoding.test.ts > controls: zero selection unsupported role and absent future cue keep formation distinct
+M44 CONTROLS denied source no event/assessment/episode; capacity0 no memory/global1/2; unsupported A absent/B context0; no future cue still forms1/2; actual Target243/1000 vs27/100.
+
+stdout | src/test/assembledEncoding.test.ts > boundaries and repeat: admission owners immutable annex and direct formation reject
+M44 BOUNDARIES exact repeat/save; changed annex, foreign owner, direct child, invalid capacity reject.
+
+stdout | src/test/assembledEncoding.test.ts > rollback: failure after real selected encoding rolls back perception and whole instant
+M44 ROLLBACK actual encoder failure leaves state/outputs/trace/clock unchanged; restored continuation forms normally.
+
+ ✓ src/test/assembledEncoding.test.ts (6 tests | 1 skipped) 134759ms
+   ✓ producer: actual observed role binding selects evidence and hidden physical role does not 63592ms
+   ✓ controls: zero selection unsupported role and absent future cue keep formation distinct 43834ms
+   ✓ boundaries and repeat: admission owners immutable annex and direct formation reject 20093ms
+   ✓ rollback: failure after real selected encoding rolls back perception and whole instant 7223ms
+
+ Test Files  1 passed (1)
+      Tests  5 passed | 1 skipped (6)
+   Start at  10:27:16
+   Duration  138.08s (transform 1.98s, setup 0ms, collect 3.01s, tests 134.76s, environment 0ms, prepare 99ms)
+
+
+M44_CHECK remaining-controls-repeat-rollback exit=0 seconds=138.58
+
+=== affected-foundations-original-components ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/semanticStateAuthority.test.ts (8 tests) 23ms
+ ✓ src/test/evidenceProvenance.test.ts (10 tests) 13ms
+ ✓ src/test/semanticPhaseOrdering.test.ts (10 tests) 14ms
+ ✓ src/test/semanticStatePersistence.test.ts (3 tests) 16ms
+ ✓ src/test/perceptualEventFiles.test.ts (10 tests) 11ms
+ ✓ src/test/persistence.test.ts (2 tests) 16ms
+ ✓ src/test/observation.test.ts (6 tests) 20ms
+ ✓ src/test/observationIntegration.test.ts (2 tests) 20ms
+ ✓ src/test/trace.test.ts (4 tests) 25ms
+ ✓ src/test/scheduler.test.ts (14 tests) 14ms
+ ✓ src/test/state.test.ts (6 tests) 11ms
+ ✓ src/test/attentionSelection.test.ts (12 tests) 46ms
+ ✓ src/test/selectedEncoding.test.ts (8 tests) 49ms
+ ✓ src/test/selectedEncodingBudgetControl.test.ts (5 tests) 50ms
+
+ Test Files  14 passed (14)
+      Tests  100 passed (100)
+   Start at  10:29:48
+   Duration  4.58s (transform 381ms, setup 0ms, collect 956ms, tests 328ms, environment 2ms, prepare 1.29s)
+
+
+M44_CHECK affected-foundations-original-components exit=0 seconds=5.06
+
+=== unchanged-M43-connection-persistence ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectMemory.test.ts > connection: fixed episodes cue and history reproduce original gain winner and consumed judgment
+M43 CONNECTION [{"gain":"2/1","scores":[{"at":"1","base":"1/3","pull":"1/8","score":"7/12"},{"at":"2","base":"1/2","pull":"0/1","score":"1/2"}],"winner":["1"],"mean":"1/1","draws":0},{"gain":"1/1","scores":[{"at":"1","base":"1/3","pull":"1/8","score":"11/24"},{"at":"2","base":"1/2","pull":"0/1","score":"1/2"}],"winner":["2"],"mean":"0/1","draws":0}]
+
+stdout | src/test/assembledAffectMemory.test.ts > persistence: exact repeat and restore carry earlier affect and presentation histories
+M43 PERSISTENCE exact3->4
+
+ ✓ src/test/assembledAffectMemory.test.ts (7 tests | 5 skipped) 99681ms
+   ✓ connection: fixed episodes cue and history reproduce original gain winner and consumed judgment 70908ms
+   ✓ persistence: exact repeat and restore carry earlier affect and presentation histories 28772ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 5 skipped (7)
+   Start at  10:30:02
+   Duration  103.04s (transform 2.01s, setup 0ms, collect 3.05s, tests 99.68s, environment 0ms, prepare 100ms)
+
+
+M44_CHECK unchanged-M43-connection-persistence exit=0 seconds=103.55
+
+=== final-types ===
+
+M44_CHECK final-types exit=0 seconds=15.5
+
+=== boundary ===
+Reference boundary check passed.
+
+M44_CHECK boundary exit=0 seconds=2.25
+
+=== research ===
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: CURRENT obligation counts are stale
+    at file:///C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/scripts/check-research-obligations.mjs:75:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.20.0
+
+M44_CHECK research exit=1 seconds=3.26
+
+=== research-current-count-row-repaired ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M44_CHECK research-current-count-row-repaired exit=0 seconds=3.19
+
+M44 final guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and M22-M43 retained tests unchanged; document/evidence caps. seconds=9.68
+M44 validation seconds including guard=614.05

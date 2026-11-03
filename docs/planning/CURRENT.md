@@ -1,63 +1,42 @@
-# Current work — M44 selective encoding (2026-11-03)
+# Current work — M44 complete (2026-11-03)
 
-M44 connects perceived event roles to selective episodic formation, then to remembered
-judgment. Authorized continuation after M43; baseline e713b2f1. No UI or autonomy work.
-Contract: [encoding0.1](../formal/ASSEMBLED_CHARACTER_ENCODING_CONTRACT.md).
+Observed event roles now control which social episodes form. That changes what later
+recall supplies to judgment, while ordinary person learning stays the same.
+M44 is complete. Behavioral, foundation, regression, research and frozen-source checks pass.
 
-Package A checkpoint: types and calibration/producer PASS;80.79s cumulative.
-12 source/test files. Encoding does not govern formation until package B below.
+| Research obligations | **0 active / 18 conditional / 0 unowned** |
 
-## Written before implementation
+[Result](ASSEMBLED_CHARACTER_M44_RESULT.md), [contract](../formal/ASSEMBLED_CHARACTER_ENCODING_CONTRACT.md),
+[checks](ASSEMBLED_CHARACTER_M44_CHECKS.txt), [register](ASSEMBLED_CHARACTER_RECONCILIATION.md).
+Plan b1d52a20 preceded code; baseline e713b2f1; package A checkpoint1c324944.
+Rules/registry0.45, one model/state/scheduler/RNG ledger/trace/save.
 
-Three capabilities: actual event-role perception; selected-only encoding; formation
-consumed by existing recall/workspace/judgment. Two consecutive bounded packages:
-A: encoding.ts, encounter.ts, recognitionExecution.ts, recognitionState.ts, state.ts,
-socialExecution.ts, inputs.ts, model.ts, runtime.ts, traceBinding.ts and two new
-assembledEncoding fixture/test files (12). It produces and traces encoding evidence;
-formation remains the prior behavior until B. Intermediate checkpoint is NOT a pass.
-B: memory.ts, state.ts, runtime.ts, workspace.ts, retention.ts, affectMemory.ts,
-encoding.ts and the two new fixture/test files (9). No unrelated work between A/B.
-At most12 source/test files per package,20 evidence files/5MiB total,600s/check,
-1800s cumulative including failures/guards across BOTH packages; one check at a time.
-One result and check log. Commit this card/contract before code; checkpoint A before B.
+- C1 event files/bindings and causal-role evidence feed the original attention and
+  selected-encoding components. Hidden physical role never enters that path.
+- Same historical-shared/UnitBudget reference and fixed perception/retention/access
+  settings. A/B remembered -> context1; A role unresolved -> only B forms -> context0.
+  Both learned statement contents and semantic mean1/2 match. Zero draws at judgment4.
+- Episode field7 retains immutable original encoding provenance under existing346/1
+  owner. Presentation updates preserve it; no extra memory/affect owner or archive.
+- Calibration, denied/unknown/unsupported/empty selection, immediate formation,
+  repeat/restore3->4, foreign-write/direct-child and after-encoding rollback pass.
+  Six new tests,100 original foundation/component tests,2 unchanged M43 regressions.
+- Formation-shape defect fixed. Cross-arm history assertion corrected to compare
+  content separately from shifted observation IDs39/37. Research checker also caught
+  a missing CURRENT count row; restored here. All failures remain in the check log.
+- Two consecutive packages: A12 source/test files; B8,16 unique overall. Same3
+  capabilities,600s/check1800s cumulative,20 evidence files/5MiB; no new audit system.
+  Validation614.05s including failures and guard; longest138.58s.105 dependencies unchanged.
+- Only one perceived social unit per source; no broad spatial/Need/surprise encoding,
+  learned graph, familiarity/reconstruction or whole-clause/member qualification.
 
-## Fixed scenario and gate
+## Next boundary
 
-One holder, perceived coat stand-in; two social tasks, third unknown outside gate.
-A true statement at1, B false at2, silent Q cue3; risk observed1; deliberate3/4;
-body reserve10 sampled4, diagnostic1. Seed0, threshold37/100 unchanged. Retention8,
-recall delay1/slots1, workspace5, UncontrolledGain, graph A->Q1/4 unchanged.
-Reference: A/B observed Actor; contrast A role unresolved, B Actor. Same laws,
-parameters, evidence claims and safe recognition. Physical role is separate from
-observed role; unknown remains unknown. Q role unresolved and creates no new memory.
-Calibration first: Actor base/raw/strength3/10; Target raw/strength243/1000,
-disabled attention Target27/100. Historical-shared/UnitBudget; no invented threshold.
-Before comparison assert live semantic/contextual/joint rows in both arms. At4,
-reference retains A/B and recalls A -> context1; unresolved A never forms, recalls
-B -> context0. Both global means1/2. Show actual binding/claim/selected refs, formation,
-retained content, recall and consuming appraisal. Report draws; no choice-effect claim.
-Controls: capacity0, hidden physical role, denied role, unsupported role, Target
-calibration, no future cue (formation immediate), forbidden owner/direct child,
-immutable encoding annex, repeat and save3->4, failure after actual encoding.
-
-## Original requirements and standing foundations
-
-Selected encoding SEC-A/D/F/H bounded one-unit semantic projection; SEC-E original
-capability controls; SBC-A..E original budget comparisons preserved and rerun.
-EL-B immediate durable formation/no future consequence; no broad EL closure.
-BRIEF-12.3-5 retained-versus-never-encoded distinction and -10 no duplicate semantic
-credit gain bounded evidence; not whole clauses, family or member closure.
-Need/surprise Disabled; no spatial/familiarity/consolidation/learned-graph extension.
-L2 historical-shared/UnitBudget/role-calibrated remains engineering default, no verdict.
-Affected C0/C1: CV-OWN/READ/PATCH/TRC, CV-ORD/SAVE/TXN, CV-OBS/EPI and event/binding/
-causal-role vectors. Rerun their existing focused suites plus new live-boundary tests.
-FND1/2 exact arithmetic/no RNG law change; FND3 scheduler phases unchanged, extends
-payload explicitly; FND4 existing Perception+episodic authorities, no new owner;
-FND5 versioned validated grammar; FND6 observed-only roles, hidden control required.
-Reopen disposition: versioned successor only; unexpected hidden influence or changed
-owner/order is a defect to repair, actual conceptual conflict escalates. Historical
-controls/dependencies frozen and hash-checked; no slow frozen replay unless changed.
-M43 connection/persistence regression, types, boundary/research and final size guard.
-Each check catches changed handoff/ownership/continuation or source-boundary risk.
-Stop validation on pass. Record failures and local repairs without changing laws/gate.
-Final21 members/15 families/132 clauses and18 conditional debts remain mandatory.
+M44 adds bounded evidence for BRIEF-12.3-5/-10 distinctions; all21 members/15 families/
+132 clauses and18 conditional debts remain. Next card must select an unresolved
+original requirement and pin its original comparison, actual consumer and foundation
+vectors before code. Do not turn this result into another verification campaign.
+No next milestone started. No UI or multi-character dependency. Preserve fixed
+reference laws, live preconditions and calibration, coupled draws for choice claims,
+exact-ID incremental replay and failure classification. Repair routine defects locally;
+escalate actual architectural/law/scope/budget changes. Stop testing on pass.
