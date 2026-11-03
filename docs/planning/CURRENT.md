@@ -19,7 +19,8 @@ then normal body perception, live appraisal and reasons in one continuing charac
   RO-C3-008/010/015/019/020 remain conditional. Scheduled consumption is new
   qualification beyond the frozen component, not retroactive evidence for it.
 - Files: assembled tolerance.ts, model.ts, state.ts, runtime.ts, body.ts;
-  fixtures/assembledTolerance.ts and assembledTolerance.test.ts (7 planned,12 cap).
+  fixtures/assembledTolerance.ts and assembledTolerance.test.ts; traceBinding.ts
+  adds the missing new-version admission (8 files,12 cap). Native rejection retained.
 - Scenario: inherited M38 three physical tasks, no social dependencies/encounters;
   passive disclosure observers, normal task/practice/performance/value channels;
   body samples3/5/7, initial reserve10, amount80, delay2, difficulty0, seed0.
@@ -51,3 +52,21 @@ then normal body perception, live appraisal and reasons in one continuing charac
 - No recovery, sensitization effect, cross-tolerance, compensatory behavior or new
   cognition access to tolerance. Missing interior components remain Deferred when
   required; none is required by this gate. Final21/15/132 replay remains open.
+
+## Current evidence
+
+Primary amount80 fails the required modifier contrast: delivery40/80, reserves45/85,
+sample upper50/90 and live appraisal contrast all pass, four draws match; both
+reason modifiers remain in the same integer band. This is a reason-quantization
+interaction, not a failed tolerance effect. No acceptance claim or fixture retuning.
+Hidden sample7 control PASS: live recalled context, equal factors/reasons/decisions,
+eight matched draws. Earlier trace-version omission and map-filter bug repaired;
+failures retained. Requested amount40 follow-up is pending owner approval; unchanged
+controls complete. At most one amended contrast, no search over amounts.
+
+Persistence/rollback, arithmetic/admission, old M38 connection, types, boundary,
+research and frozen105/history guards PASS. Five of six new groups pass; original
+modifier gate remains failing. Eight production/test files, two evidence files;
+measured815.64s before final staged Git-size check, original1800s cap unchanged.
+[M39 result](ASSEMBLED_CHARACTER_M39_RESULT.md). Await the requested owner decision;
+do not begin a new milestone or infer acceptance from the passed controls.

@@ -44,6 +44,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  }).sort((a,b)=>key(a.key)<key(b.key)?-1:1);
  const byKey=new Map(tasks.map(t=>[key(t.key),t]));
  const C=tasks[0].character,identityKey=r(412,[C,typedIdentifier(1041,text('CommitmentFidelity'))]);
+ if(model.tolerance&&!prior.base.reg.hasVariable(model.tolerance.variable))invalidModel('unknown tolerance regulatory variable');
  const identityK=readQ(f(rec(definition('task-reason-source'),436n),2n));
  function validateEntry(path:StatePath,value?:CanonicalValue){
   if(path.rootStateTypeId!==373n&&path.rootStateTypeId!==415n)return;

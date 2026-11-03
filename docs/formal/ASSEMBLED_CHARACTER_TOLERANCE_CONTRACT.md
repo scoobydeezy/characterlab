@@ -50,7 +50,7 @@ before code. Both compared appraisal rows must be live before comparison. Failur
 of a standalone prediction is classified from the actual consumed records, never
 patched by choosing a different law or per-phenomenon configuration.
 
-MEC003/EXP002 actual effect, MEC019 regulatory adaptation, and the tolerance verdict
+MEC003/EXP002 actual effect, MEC019 intent/attempt/outcome separation, and the tolerance verdict
 remain distinct from learning, dependence, recovery and compensatory behavior.
 RO-C3-008/010/015/019/020 remain preserved; no reduction or new Campaign3 verdict.
 Passing M39 closes no corpus member or clause automatically.

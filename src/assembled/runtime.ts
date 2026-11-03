@@ -63,7 +63,7 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
  const maxWork=compileCampaign2Parameters(model.source.parameterSchemaVersion,model.source.parameters).maxWork;
  const modelIdentity=model.modelIdentity.value;
  const procedure=model.skill?createSkillExecution(component.tasks[0].character,stateModel,inputs.skillEvents,modelIdentity,inputs.runIdentity.value,model.procedures,model.actionBody):undefined;
- const body=model.body?createBodyExecution(model.body,component.tasks[0].character,stateModel,inputs.bodyEvents,modelIdentity,inputs.runIdentity.value,model.actionBody,procedure):undefined;
+ const body=model.body?createBodyExecution(model.body,component.tasks[0].character,stateModel,inputs.bodyEvents,modelIdentity,inputs.runIdentity.value,model.actionBody,procedure,model.tolerance):undefined;
  const episodes=model.memory?createEpisodicExtension(component.tasks[0].character,model.body!,stateModel,modelIdentity,inputs.runIdentity.value,model.retention?.recallDelay,model.retrieval,model.workspace):undefined;
  const causal=model.causalEnabled?createCausalExecution(component.tasks[0].character,model.strategy!,stateModel,inputs.causalEvents,modelIdentity,inputs.runIdentity.value,model.interferenceEnabled,model.causalOpportunities):undefined;
  const values=model.values?createValuesExecution(component.tasks[0].character,model.values,stateModel,inputs.valuesEvents,modelIdentity,inputs.runIdentity.value):undefined;
