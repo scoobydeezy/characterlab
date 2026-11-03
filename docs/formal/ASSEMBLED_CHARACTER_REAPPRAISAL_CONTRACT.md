@@ -46,8 +46,9 @@ Execution110 of the declared cognitive action uses actual attempted execution an
 source completion permission; it produces no physical protocol/body effect, practice,
 reward or fabricated outcome evidence. Failed completion leaves frame unchanged.
 Successful eligible completion emits frame application140; NoReappraisal suppresses
-application only. Frame records its operation completion, prior evidence identities
-and application time. It does not change the evidence means. Later appraisal can
+application only. Frame records its operation completion identity, prior evidence identities
+and application time. The trace retains the full completion; state does not duplicate
+the entire nested decision pipeline. It does not change the evidence means. Later appraisal can
 change without new external evidence. Relief is never an observation or learning sample.
 
 Both knowledge and frame candidates are prepared from the common phase140 B0,
@@ -58,7 +59,7 @@ RO-C3-011's historical current-output/prior-input confusion is not copied.
 
 ## Scope and comparisons
 
-M41 card in CURRENT predeclares original source frames, semantic mapping, calibration,
+M41 card at84e73817 (calibration correction9d5db56b) predeclares source frames, mapping,
 controls, budgets and binary gate. Seed0 with single-option Auto requires zero draws;
 no cross-run stochastic attribution from equal seeds. Historical projections and law
 comparators remain executable unchanged. No global calibration or law change.
