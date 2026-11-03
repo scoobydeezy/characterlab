@@ -65,7 +65,8 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
  const modelIdentity=model.modelIdentity.value;
  const procedure=model.skill?createSkillExecution(component.tasks[0].character,stateModel,inputs.skillEvents,modelIdentity,inputs.runIdentity.value,model.procedures,model.actionBody):undefined;
  const body=model.body?createBodyExecution(model.body,component.tasks[0].character,stateModel,inputs.bodyEvents,modelIdentity,inputs.runIdentity.value,model.actionBody,procedure,model.tolerance):undefined;
- const episodes=model.memory?createEpisodicExtension(component.tasks[0].character,model.body!,stateModel,modelIdentity,inputs.runIdentity.value,model.retention?.recallDelay,model.retrieval,model.workspace,model.socialMemory):undefined;
+ if(model.affectMemory&&inputs.socialEvents.length>32)throw new SchedulerContractError('INPUT_NOT_ADMITTED','affect memory supports at most32 social source instants');
+ const episodes=model.memory?createEpisodicExtension(component.tasks[0].character,model.body!,stateModel,modelIdentity,inputs.runIdentity.value,model.retention?.recallDelay,model.retrieval,model.workspace,model.socialMemory,model.affectMemory,()=>reappraisal?.completedAffect()):undefined;
  const causal=model.causalEnabled?createCausalExecution(component.tasks[0].character,model.strategy!,stateModel,inputs.causalEvents,modelIdentity,inputs.runIdentity.value,model.interferenceEnabled,model.causalOpportunities):undefined;
  const values=model.values?createValuesExecution(component.tasks[0].character,model.values,stateModel,inputs.valuesEvents,modelIdentity,inputs.runIdentity.value):undefined;
  const performance=model.performance?createPerformanceExecution(component.tasks[0].character,model.strategy!,stateModel,inputs.performanceEvents,modelIdentity,inputs.runIdentity.value,model.actionBody!,model.expectationEnabled,values):undefined;

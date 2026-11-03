@@ -4,9 +4,11 @@ LOCAL DISPOSITION before implementation, 2026-11-03. Rules/registry0.44 adds slo
 [tag, law, edges], tag assembled-affect-memory/0.1; law UncontrolledGain (reference)
 or NoFeedback (retained comparator). Up to8 edges [target,kind,fromReceipt,toReceipt,
 weight], validated against admitted people, kinds1/2, receipts1..8, rational[0,1],
-unique edges and row sum<=1. This is fixed experimental association apparatus, not
+unique non-self edges and row sum<=1. This is fixed experimental association apparatus, not
 learned association ownership. Existing sensory retention is capped at32 to respect
-the canonical event-recall component domain; reject incompatible declarations.
+the canonical event-recall component domain; at most32 social source instants per input
+stream bound actual presentation histories. Reject incompatible declarations/inputs;
+never truncate episodes or history.
 
 ## Causal handoff and access
 
@@ -25,7 +27,8 @@ Gain reuses affectRetrievalGain from affect-retrieval-component/0.1-candidate:
 omegaA=1+prior U, or1 under NoFeedback; unavailable is explicit with gain1, known0
 is distinct. Strict sourceAt<recallAt. Same canonical event-recall and actual
 prepare/publish/takeEventPresentation components as the original experiment, with
-beta1/2,scale1000,lambda1,exponent1,omegaB1 and existing slots. One retained social
+beta1/2,scale1000,lambda1,exponent1,omegaB1 and existing slots. Publication uses canonical identity keys of the actual BODY_OBSERVER and holder,
+checks the returned subject/time and records both typed identities. One retained social
 acquisition maps to one canonical receipt key/view; no truncation, invented episode
 or semantic-summary fallback in recall. Graph changes access, never stored content.
 
@@ -47,6 +50,8 @@ the receipt itself may differ. Existing exact-cue and body paths remain unchange
 Social appraisal retains M42 contextual precedence and separate global mean. Trace
 links prior appraisal parent, cue, actual episode reads, exact base/pull/gain/score,
 selected acquisitions/publications, phase140 patch and consumed workspace context.
+Workspace trace0.5 and retention trace0.3 explicitly name the extended handoffs;
+retention records both formation and presentation event inputs in its union check.
 
 ## Comparison and scope
 
