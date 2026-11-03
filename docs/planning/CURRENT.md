@@ -53,20 +53,12 @@ then normal body perception, live appraisal and reasons in one continuing charac
   cognition access to tolerance. Missing interior components remain Deferred when
   required; none is required by this gate. Final21/15/132 replay remains open.
 
-## Current evidence
+## Approved continuation — 2026-11-02
 
-Primary amount80 fails the required modifier contrast: delivery40/80, reserves45/85,
-sample upper50/90 and live appraisal contrast all pass, four draws match; both
-reason modifiers remain in the same integer band. This is a reason-quantization
-interaction, not a failed tolerance effect. No acceptance claim or fixture retuning.
-Hidden sample7 control PASS: live recalled context, equal factors/reasons/decisions,
-eight matched draws. Earlier trace-version omission and map-filter bug repaired;
-failures retained. Requested amount40 follow-up is pending owner approval; unchanged
-controls complete. At most one amended contrast, no search over amounts.
-
-Persistence/rollback, arithmetic/admission, old M38 connection, types, boundary,
-research and frozen105/history guards PASS. Five of six new groups pass; original
-modifier gate remains failing. Eight production/test files, two evidence files;
-measured815.64s before final staged Git-size check, original1800s cap unchanged.
-[M39 result](ASSEMBLED_CHARACTER_M39_RESULT.md). Await the requested owner decision;
-do not begin a new milestone or infer acceptance from the passed controls.
+Owner approved the amount40 comparison and authorized necessary amendments through
+M40 completion. Retain amount80 as the equal-integer-band control, including its
+original failure. New40 gate: first receipt20/40, reserve25/45, sample7 upper30/50;
+live appraisal/reason modifiers must differ (task-b predicted2/1). Run both cases
+once; all previous controls retain their unchanged80 inputs. Budget1800s continues
+from815.64s plus final prior Git-size check; no reset, no production changes needed.
+Record amendments before execution. Laws/final corpus scope and gates unchanged.

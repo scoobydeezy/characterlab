@@ -54,3 +54,13 @@ MEC003/EXP002 actual effect, MEC019 intent/attempt/outcome separation, and the t
 remain distinct from learning, dependence, recovery and compensatory behavior.
 RO-C3-008/010/015/019/020 remain preserved; no reduction or new Campaign3 verdict.
 Passing M39 closes no corpus member or clause automatically.
+
+## Owner amendment — 2026-11-02
+
+Amount80 reaches live appraisal but both situational strengths fall in the same
+integer reason band. Preserve this failed prediction as a quantization control.
+Owner approves amount40 in both arms: predicted receipt20/40, reserve25/45,
+sample7 upper30/50 and task-b modifiers2/1. The positive modifier gate, laws,
+reserve10, delay2, seed0 and semantic coupling remain fixed. Existing80 controls
+retain their inputs and validity. This authorizes a fixture correction, not a law
+change, closure of corpus clauses or erasure of the original failed assertion.

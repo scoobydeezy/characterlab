@@ -209,9 +209,9 @@ be corrected transparently while retaining the original failure and expected mea
   name a concrete undetected failure risk and why a smaller existing check cannot catch it.
 - On passing the milestone's checks, stop adding tests and report the outcome. New
   failures or source changes can justify targeted reruns; habit and counter growth cannot.
-- Owner amendment2026-10-29: diagnose and repair ordinary implementation bugs within
-  scope/budgets without per-repair approval. Retain failures; no blind retries or
-  outcome tuning. Escalate architectural/scope/comparison changes or budget exhaustion.
+- Owner continuation2026-11-02: complete M39 and M40, making necessary amendments
+  locally. Record each rationale before execution, retain failures/comparators and
+  preserve laws, final scope and binary gates; no blind retries or unbounded tuning.
 - Planning document budget: AGENTS.md <=120 lines, CURRENT.md <=80, this order <=250.
   One baseline manifest and one reconciliation register. Git holds history; no REV chains,
   duplicated ledgers, or new dashboards. One compact result per milestone, linked from
