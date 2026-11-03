@@ -6,7 +6,7 @@ the frozen component and its independent challenge qualification remain unchange
 
 ## Declaration and identity
 
-Rules assembled-character-model/0.40-candidate and matching registry0.40 retain
+Rules rules/assembled-character/0.40-candidate and matching registry0.40 retain
 all0.39 fields and add slot26: [assembled-tolerance/0.1, regulatoryVariable, law].
 The variable must be registered for the inherited ADAPT domain; law is Reciprocal,
 Linear or Unattenuated. Reference Reciprocal is the adopted L1 engineering default,
