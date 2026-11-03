@@ -4,6 +4,9 @@ M44 connects perceived event roles to selective episodic formation, then to reme
 judgment. Authorized continuation after M43; baseline e713b2f1. No UI or autonomy work.
 Contract: [encoding0.1](../formal/ASSEMBLED_CHARACTER_ENCODING_CONTRACT.md).
 
+Package A checkpoint: types and calibration/producer PASS;80.79s cumulative.
+12 source/test files. Encoding does not govern formation until package B below.
+
 ## Written before implementation
 
 Three capabilities: actual event-role perception; selected-only encoding; formation

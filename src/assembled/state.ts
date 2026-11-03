@@ -91,14 +91,14 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  const communicating=model.communication?withCommunicationState(controlled,[...(model.communication.topic?[]:[C]),...model.communication.recipients],model.communication.topic,model.communication.expectation):controlled;
  const socialized=model.social?withSocialState(communicating,C,model.social.target,model.social.targets):communicating;
  const related=model.relationship?withRelationshipState(socialized,C,model.relationship.target,model.relationship.bindings.map(b=>b.target)):socialized;
- const recognized=model.recognition?withRecognitionState(related,model.recognition):related;
+ const recognized=model.recognition?withRecognitionState(related,model.recognition,!!model.encoding):related;
  const identityRegistration=rec(f(rows.find(v=>key(f(v,1n))===key(typedIdentifier(1009,text('TaskIdentityApplicationTransition'))))!,4n),450n);
  const stateModel=model.eligibilityEnabled?withQualifiedIdentityState(recognized,identityKey,id(f(rec(f(identityRegistration,6n),322n),2n))):recognized;
  function initialState(bytes:Uint8Array){
   const state=stateModel.restoreState(bytes);
   for(const e of state.entries()){
    if(model.reappraisal&&(e.path.rootStateTypeId===1031n||e.path.rootStateTypeId===1000n&&e.path.fieldId===8n))invalidModel('initial reappraisal knowledge/frame must be absent');
-   if(model.recognition&&[241n,244n].includes(e.path.rootStateTypeId))invalidModel('initial recognition tracks/resolutions must be absent');
+   if(model.recognition&&[241n,242n,244n].includes(e.path.rootStateTypeId))invalidModel('initial recognition tracks/resolutions must be absent');
    if(model.relationship&&e.path.rootStateTypeId===848n)invalidModel('initial relationship history must be absent');
    if(model.social&&e.path.rootStateTypeId===810n)invalidModel('initial person belief must be absent');
    if(model.communication&&e.path.rootStateTypeId===1072n)invalidModel('initial communication knowledge must be absent');

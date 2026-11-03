@@ -1,0 +1,25 @@
+
+=== package-A-types ===
+
+M44_CHECK package-A-types exit=0 seconds=15.64
+
+=== package-A-calibration-producer ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledEncoding.test.ts > calibration: original selected encoder factors before behavioral comparison
+M44 CALIBRATION Actor3/10 Target243/1000 disabled27/100; fixed historical-shared/UnitBudget; seed0 unchanged.
+
+stdout | src/test/assembledEncoding.test.ts > producer: actual observed role binding selects evidence and hidden physical role does not
+M44 PRODUCER actual SEM242/224/240 selected, hidden invariant, unresolved MissingRole
+
+ ✓ src/test/assembledEncoding.test.ts (2 tests) 61361ms
+   ✓ producer: actual observed role binding selects evidence and hidden physical role does not 61345ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  10:15:46
+   Duration  64.65s (transform 1.97s, setup 0ms, collect 2.99s, tests 61.36s, environment 0ms, prepare 99ms)
+
+
+M44_CHECK package-A-calibration-producer exit=0 seconds=65.15
