@@ -3,7 +3,7 @@
 The character can attach goal-relative significance to an observed event it actually
 attributes, keep that event under memory pressure, and recall it later.
 The fixed primary comparison and384 original-retention comparisons pass.
-This is an implementation checkpoint; M52 is NOT complete.
+M52 is complete within its bounded comparison and owner-amended verification budget.
 
 Plan84d26859; baselinec7895dee; rules/registry0.53.
 [Contract](../formal/ASSEMBLED_CHARACTER_SIGNIFICANCE_CONTRACT.md);
@@ -38,28 +38,25 @@ presentation ingress, learned initial memory, wrong owner, old version, fresh cr
 and invalid direction sets. A coordinator control with actual native records proves
 candidate credit does not enter PRIOR retention priority.
 
-Rollback now passes at109.56s; the earlier100s timeout remains recorded.
-The unchanged retained M51 witness passes at151.06s.
-Final types,23 original kernel tests and boundary/research checks pass.
-All seven M52 cases have passed at least once, including384 comparator combinations
-within one case; continuation and ordinary disclosure need final-source receipts.
-Those receipts predate the final trace-input disclosure edit where applicable.
+Rollback now passes: failure after significance preparation restores the whole
+prior instant, including exact state, outputs and trace. The earlier100s timeout
+remains recorded. The unchanged M51 witness also passes on the current sources.
 
-Final review added explicit attribution to goal trace input, matching the actual
-attribution already included in that report's output. It changes trace bytes, not
-state, qualification, retention or serialization logic. The new targeted trace
-assertion and continuation on the final bytes remain to run. Length plus every-byte
-comparisons replace generic byte-array object diff without changing the checked data.
-The earlier persistence receipt included stale rollback wording; its correction is
-retained in the log. Persistence is not rollback evidence.
+The final goal trace explicitly includes the actual attribution already carried in
+its output report. The ordinary-goal check verifies this disclosure while preserving
+goal assessment without a focal cue. Save17/restore through33 now passes on the
+final trace bytes: state, outputs, trace and final save compare exactly.
+Length plus every-byte comparisons replace generic byte-array object diff; no
+hash, projection or truncation substitutes for those bytes. The earlier persistence
+receipt's stale rollback wording remains corrected in the log.
 
-Pending: ordinary-goal trace check and continuation on the final trace bytes.
-Their combined command timed out at330.12s without an individual test receipt.
-No pass is inferred. The successful rollback and M51 checks consumed260.62s;
-the prior405.50s combined run was underestimated when allocating the extension.
-No code, scenarios or assertions changed during this extension. Owner-approved additional allowance:600s (2400s total), superseding
-the earlier300s request, on 2026-11-04. Each command remains capped at600s.
-No additional production scope, scenario changes or weakened assertions are proposed.
+All7 M52 cases, the retained M51 witness and23 original kernel cases pass.
+Types, boundary and research checks pass; unchanged historical dependencies retain
+their previous control receipt. No new Campaign3 verdict or obligation closure.
+Owner approved two600s extensions on2026-11-04 (3000s total), replacing the earlier
+300s proposal. The final command reserves time for preservation and Git-size checks;
+each command stays below600s. Exact timings, including failures, are in the log.
+Scenarios, laws, seeds, acceptance criteria and the12-file limit remain unchanged.
 
 ## Local repairs and limits
 - Import initialization order repaired after the first load failure.
@@ -81,6 +78,8 @@ general defining-memory domains, or turn significance tags into belief/action cr
 
 Preservation/artifact guard and staged Git-size receipts are recorded in the check log.
 
-Verification checkpoint after the approved extension:2384.47s before final guards.
-A further600s (3000s total) is proposed solely for the remaining command (cap570s)
-and closing guards; NOT APPROVED. No additional native execution is authorized.
+The prior330s final-check timeout remains in the log. The completion run used the
+owner-approved570s command cap; scenarios/laws/assertions were unchanged.
+
+Final recorded verification:2806.77s of3000s (46m46.77s), including failures.
+Preservation, staged Git size and whitespace checks PASS;11 source/test files.

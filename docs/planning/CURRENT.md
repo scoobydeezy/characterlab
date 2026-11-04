@@ -1,46 +1,34 @@
-# Current work — M52 verification checkpoint (2026-11-04)
+# Current work — M52 complete (2026-11-04)
 
-M52 is implemented but NOT complete. Plan84d26859; baselinec7895dee.
+The character can mark an actually attributed event as significant to its goal,
+retain it under memory pressure, and recall it later in the same simulation.
 [Result](ASSEMBLED_CHARACTER_M52_RESULT.md); [checks](ASSEMBLED_CHARACTER_M52_CHECKS.txt).
-The original card remains in84d26859. Rules/registry0.53;11 source/test files.
+Plan84d26859; implementation175f4d58; baselinec7895dee. Rules/registry0.53.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
-## Verified connection
-- Actual attribution40 + focal goal meaning50 qualify significance in the existing
-  episodic owner140. Original directional kernel; no second store/runtime/allocator.
-- Fixed High30..31 versus Wide0..100 goals: both have4 groups/16 consumed operands,
-  Supported attribution and Assessed Before13/After16. Only High grants MovingCloser
-  to the focal position-end15. Same laws, seed0, retention16/recall16/workspace20.
-- After14 body samples18..31 and visual32, High retains and actually recalls that
-  episode33; Wide loses it. Separate diagnostic quota is preserved. No choice claim.
--384 original-comparator combinations pass; use/direction cardinality give no extra
-  bonus within the significance tier. Same-instant credit cannot enter PRIOR priority.
-- Hidden30/30.5 and unsupported-attribution controls pass. Foreign/missing targets,
-  unauthenticated consumer, forged ingress, learned initial state, wrong owner,
-  old version, fresh credit and invalid direction sets reject.
-- Save17/restore through33 passed byte-exactly BEFORE the final disclosure-only edit.
-  Ordinary goal assessment without focal attribution also passed before that edit.
-- Final types,23 original kernel tests, boundary and research checks pass.
+## Completed connection
+- One episodic owner346/1, allocator, scheduler and save. Actual attribution40 and
+  focal goal meaning50 qualify authenticated significance at presentation140.
+- Fixed High30..31 versus Wide0..100: both4 groups/16 consumed operands, Supported
+  attribution and Assessed Before13/After16. Same laws, seed0 and memory quotas.
+- Only High marks position-end15 MovingCloser. After14 body samples and visual32,
+  High retains and actually recalls it33; Wide loses it. No action-choice claim.
+-384 original-retention comparisons preserve significance > use > unprotected,
+  prior metadata, direction independence and separate diagnostic/shared quotas.
+- Hidden truth, unsupported attribution, ingress/owner/version controls pass.
+- Rollback after significance preparation restores the entire prior instant.
+- Save17/restore through33 matches state, outputs, trace and save bytes exactly
+  on the final disclosure fields. Ordinary goal meaning remains live without a
+  focal cue; its trace explicitly discloses the actual attribution input.
+- Retained M51 witness, types,23 original kernel tests, boundary and research pass.
+-11 production/test files. Failures and the earlier100s timeout remain in the log.
+  Owner approved two600s extensions (3000s total); earlier failures remain recorded.
+  Final preservation and staged-size checks PASS; recorded verification46m46.77s
+  of50 minutes, including failures. Exact receipts are in the check log.
 
-## Outstanding before completion
-1. Final continuation and ordinary-goal trace disclosure remain unverified.
-   Their combined command timed out at330s, reserving time for closing guards.
-   No individual test result was emitted; neither is counted as passing.
-2. Rollback now PASSES at109.56s; unchanged retained M51 witness PASSES at151.06s.
-3. The final trace edit remains: actual attribution is explicit in goal trace input.
-   Earlier continuation/ordinary receipts predate that disclosure-only change.
-
-## Budget and permission boundary
-Owner approved +600s on2026-11-04 (2400s total), superseding the earlier +300s.
-Validation used2384.47s before final preservation/size guards; no further native
-checks fit. Final verification total2395.12s/2400s (39m55.12s); guards and size PASS.
-The extension was underestimated: two successful checks consumed260.62s, leaving
-only330s for continuation/ordinary plus closing guards. The earlier combined
-continuation/ordinary run took405.50s; faster byte comparisons did not make330s enough.
-Do not rerun without an explicit budget amendment. No source or fixture changes
-were made during this extension. Failures, timeout and completed checks are retained.
-A concrete follow-up would allow up to600s additional total (3000s total), solely
-for the final continuation/ordinary command (cap570s) and closing guards.
-This follow-up is PROPOSED, NOT APPROVED; no broader implementation is proposed.
-All21 members/15 families/132 clauses remain open; no UI/autonomous partners,
-private archive, invented credit, broader retention-law verdict or corpus closure.
+## Remaining boundary
+No next implementation is started. Select the next bounded integration against
+the existing register and pinned requirements before writing its card.
+All21 members/15 families/132 clauses remain open; this is bounded evidence.
+Wider defining memory, familiarity/reconstruction, learned graph and consolidation
+remain. No UI, autonomous partners, private archive or blanket corpus closure.
