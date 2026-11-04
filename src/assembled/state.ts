@@ -83,7 +83,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  const retained=model.retention?withRetentionState(embodied,C):embodied;
  const procedural=model.skill?withSkillState(retained,C,model.procedures,model.formationEnabled):retained;
  const planned=model.strategy?withStrategyState(procedural,C,model.strategy):procedural;
- const prioritized=model.priority?withPriorityState(planned,tasks.map(t=>t.key)):planned;
+ const prioritized=model.priority?withPriorityState(planned,tasks.map(t=>t.key),model.goalMeaning?{C,settings:model.goalMeaning}:undefined):planned;
  const forecasted=model.horizon?withHorizonState(prioritized,tasks.map(t=>t.key)):prioritized;
  const monitored=model.performance?withPerformanceState(forecasted,model.strategy!,model.expectationEnabled,model.selfBeliefEnabled?C:undefined,model.values,model.causalEnabled,model.interferenceEnabled):forecasted;
  const habitual=model.habit?withHabitState(monitored,C):monitored;
@@ -104,6 +104,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
    if(model.communication&&e.path.rootStateTypeId===1072n)invalidModel('initial communication knowledge must be absent');
    if(model.control&&(e.path.rootStateTypeId===1014n||e.path.rootStateTypeId===373n&&e.path.fieldId===4n))invalidModel('initial control state must be absent');
    if(model.habit&&[821n,823n].includes(e.path.rootStateTypeId))invalidModel('initial habit/reward must be absent');
+   if(model.goalMeaning&&e.path.rootStateTypeId===373n&&e.path.fieldId===5n)invalidModel('initial maintenance goal must be absent');
    if(model.priority&&e.path.rootStateTypeId===373n&&e.path.fieldId===3n)invalidModel('initial importance must be absent');
    if(model.strategy&&[996n,1000n].includes(e.path.rootStateTypeId))invalidModel('initial strategy state must be absent');
    if(model.values&&e.path.rootStateTypeId===1516n)invalidModel('initial values must be absent');

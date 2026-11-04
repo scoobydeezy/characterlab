@@ -1,0 +1,238 @@
+
+=== types-initial ===
+
+M47_CHECK types-initial exit=0 seconds=16.34
+
+=== calibration-connection ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledGoalMeaning.test.ts (6 tests | 2 failed | 4 skipped) 84101ms
+   × calibration: unchanged exact goal kernels preserve direction distance and boundary 11ms
+     → expected { kind: 'list', …(1) } to deeply equal { kind: 'list', …(1) }
+   × connection: actual recalled pair changes meaning under adopted goal; exact repeat save and deadline 84089ms
+     → expected { kind: 'text', value: 'Unavailable' } to deeply equal { kind: 'text', value: 'Assessed' }
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledGoalMeaning.test.ts > calibration: unchanged exact goal kernels preserve direction distance and boundary
+AssertionError: expected { kind: 'list', …(1) } to deeply equal { kind: 'list', …(1) }
+
+- Expected
++ Received
+
+  Object {
+    "items": Array [
+      Object {
+        "items": Array [
+          Object {
+            "kind": "text",
+            "value": "lower",
+          },
+          Object {
+            "denominator": 1n,
+            "kind": "rational",
+            "numerator": 9n,
+          },
+        ],
+        "kind": "list",
+      },
+      Object {
+        "items": Array [
+          Object {
+            "kind": "text",
+            "value": "upper",
+          },
+          Object {
+            "denominator": 1n,
+            "kind": "rational",
+-           "numerator": 11n,
++           "numerator": 10n,
+          },
+        ],
+        "kind": "list",
+      },
+    ],
+    "kind": "list",
+  }
+
+ ❯ src/test/assembledGoalMeaning.test.ts:28:776
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  src/test/assembledGoalMeaning.test.ts > connection: actual recalled pair changes meaning under adopted goal; exact repeat save and deadline
+AssertionError: expected { kind: 'text', value: 'Unavailable' } to deeply equal { kind: 'text', value: 'Assessed' }
+
+- Expected
++ Received
+
+  Object {
+    "kind": "text",
+-   "value": "Assessed",
++   "value": "Unavailable",
+  }
+
+ ❯ live src/test/assembledGoalMeaning.test.ts:25:66
+
+ ❯ src/test/assembledGoalMeaning.test.ts:33:143
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+ Test Files  1 failed (1)
+      Tests  2 failed | 4 skipped (6)
+   Start at  21:29:15
+   Duration  87.77s (transform 2.09s, setup 0ms, collect 3.16s, tests 84.10s, environment 0ms, prepare 279ms)
+
+
+M47_CHECK calibration-connection exit=1 seconds=89.22
+
+=== calibration-and-setup-diagnostic ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledGoalMeaning.test.ts > calibration: unchanged exact goal kernels preserve direction distance and boundary
+M47 CALIBRATION High9..10->0 closer/attainment; Low0->9..10 farther/violation; unchanged original math.
+
+stdout | src/test/assembledGoalMeaning.test.ts > diagnostic: original inherited task focus leaves one actual memory slot
+M47 ORIGINAL SETUP {"tasks":3,"forecast":"2","selected":1,"stored":2,"assessment":"0702070205046b696e64050b556e617661696c61626c6507020506726561736f6e050f4d697373696e6745766964656e6365"}
+
+ ✓ src/test/assembledGoalMeaning.test.ts (7 tests | 5 skipped) 54581ms
+   ✓ diagnostic: original inherited task focus leaves one actual memory slot 54577ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 5 skipped (7)
+   Start at  21:31:45
+   Duration  57.98s (transform 2.06s, setup 0ms, collect 3.11s, tests 54.58s, environment 0ms, prepare 99ms)
+
+
+M47_CHECK calibration-and-setup-diagnostic exit=0 seconds=58.49
+
+=== connection-corrected-focus ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledGoalMeaning.test.ts > connection: actual recalled pair changes meaning under adopted goal; exact repeat save and deadline
+M47 CONNECTION actual20..21->30..31 pair live; High closer/attainment Low farther/violation; two unique actual-use receipts, no significance or choice claim; repeat/save/restore4->5->101 exact.
+
+ ✓ src/test/assembledGoalMeaning.test.ts (7 tests | 6 skipped) 88362ms
+   ✓ connection: actual recalled pair changes meaning under adopted goal; exact repeat save and deadline 88361ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  21:33:16
+   Duration  91.80s (transform 2.06s, setup 0ms, collect 3.12s, tests 88.36s, environment 0ms, prepare 99ms)
+
+
+M47_CHECK connection-corrected-focus exit=0 seconds=92.3
+
+=== controls-boundaries-rollback-projection ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledGoalMeaning.test.ts > controls: wide absent pending quota workspace equal uncertainty and comparator
+M47 CONTROLS wide same distance; absent/pending distinct; quota1 and workspace3 missing evidence; identical uncertain intervals indeterminate; deterioration-only excludes progress.
+
+stdout | src/test/assembledGoalMeaning.test.ts > epistemic and ownership: hidden reserve, forged bootstrap/state and invalid declarations
+M47 BOUNDARIES hidden20/20.5 identical perceived histories/meaning/use; forged memory/goal/bootstrap, foreign writes/re-adoption and invalid intervals reject.
+
+stdout | src/test/assembledGoalMeaning.test.ts > rollback: late body-use failure rolls back goal assessment and all instant effects
+M47 ROLLBACK after assessed memory use; whole instant unchanged and saved continuation exact.
+
+stdout | src/test/assembledGoalMeaning.test.ts > regression: M45 social evidence survives0.48 with absent intrinsic goal
+M47 REGRESSION unchanged M45 input social means1/0 and actual-use receipts under0.48; absent goal earns no credit.
+
+ ✓ src/test/assembledGoalMeaning.test.ts (7 tests | 3 skipped) 205622ms
+   ✓ controls: wide absent pending quota workspace equal uncertainty and comparator 104513ms
+   ✓ epistemic and ownership: hidden reserve, forged bootstrap/state and invalid declarations 34803ms
+   ✓ rollback: late body-use failure rolls back goal assessment and all instant effects 26965ms
+   ✓ regression: M45 social evidence survives0.48 with absent intrinsic goal 39341ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed | 3 skipped (7)
+   Start at  21:34:58
+   Duration  209.05s (transform 2.05s, setup 0ms, collect 3.10s, tests 205.62s, environment 0ms, prepare 99ms)
+
+
+M47_CHECK controls-boundaries-rollback-projection exit=0 seconds=209.56
+
+=== permission-and-unchanged-M46 ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledGoalMeaning.test.ts > permission: denied body channel cannot supply goal-meaning evidence
+M47 PERMISSION denied body channel -> no body memories, no meaning evidence, no actual-use credit.
+
+ ✓ src/test/assembledGoalMeaning.test.ts (8 tests | 7 skipped) 53016ms
+   ✓ permission: denied body channel cannot supply goal-meaning evidence 53015ms
+stdout | src/test/assembledBodyMemoryUse.test.ts > connection and continuation: real body use protects evidence and changes later live appraisal
+M46 CONNECTION used A1 survives4 vs AgeOnly B4; live recalled-context pressure5/6 vs0; exact repeat/save and restore2->5; draws5=0/0; no sampled-choice claim.
+
+ ✓ src/test/assembledBodyMemoryUse.test.ts (7 tests | 6 skipped) 80220ms
+   ✓ connection and continuation: real body use protects evidence and changes later live appraisal 80219ms
+
+ Test Files  2 passed (2)
+      Tests  2 passed | 13 skipped (15)
+   Start at  21:39:07
+   Duration  137.66s (transform 2.07s, setup 0ms, collect 3.85s, tests 133.24s, environment 0ms, prepare 191ms)
+
+
+M47_CHECK permission-and-unchanged-M46 exit=0 seconds=138.16
+
+=== original-goals-and-foundations ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/persistence.test.ts (2 tests) 17ms
+ ✓ src/test/observation.test.ts (6 tests) 20ms
+ ✓ src/test/observationIntegration.test.ts (2 tests) 21ms
+ ✓ src/test/trace.test.ts (4 tests) 27ms
+ ✓ src/test/scheduler.test.ts (14 tests) 14ms
+ ✓ src/test/state.test.ts (6 tests) 12ms
+ ✓ src/test/goalOutcomeQualification.test.ts (7 tests) 8ms
+ ✓ src/test/goalDistanceRelation.test.ts (8 tests) 11ms
+ ✓ src/test/bodilyMaintenanceGoal.test.ts (6 tests) 6ms
+ ✓ src/test/semanticPhaseRollbackCause.test.ts (1 test) 6ms
+ ✓ src/test/maintenanceGoalDeadline.test.ts (3 tests) 5ms
+
+ Test Files  11 passed (11)
+      Tests  59 passed (59)
+   Start at  21:41:55
+   Duration  3.29s (transform 254ms, setup 0ms, collect 526ms, tests 146ms, environment 2ms, prepare 1.01s)
+
+
+M47_CHECK original-goals-and-foundations exit=0 seconds=3.77
+
+=== types-final ===
+src/test/assembledGoalMeaning.test.ts(28,806): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
+src/test/assembledGoalMeaning.test.ts(28,890): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
+
+M47_CHECK types-final exit=1 seconds=15.66
+
+=== types-tuple-correction ===
+
+M47_CHECK types-tuple-correction exit=0 seconds=15.54
+
+=== reference-boundary ===
+Reference boundary check passed.
+
+M47_CHECK reference-boundary exit=0 seconds=2.31
+
+=== research ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M47_CHECK research exit=0 seconds=3.39
+
+M47 final guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and M22-M46 retained tests unchanged; document/evidence caps. seconds=10.15
+M47 validation seconds including guard=654.89
+
+=== staged-git-size ===
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M47_CHECK staged-git-size exit=0 seconds=0.75
+
+M47 final validation total including failures, guard and staged size check=655.64s; longest=209.56s; source/test files=10; evidence files=2.
