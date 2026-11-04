@@ -16,8 +16,8 @@ export function compileControl(v:CanonicalValue){const a=items(v,'list');require
 export function controlSetting(v:CanonicalValue){const a=items(v,'list');require(a.length===6&&txt(a[0])===CONTROL&&uint(a[1])<=2n&&a.slice(2).every(v=>typeof v==='boolean'),'source');return {instruction:uint(a[1]),reminder:a[2]===true,support:a[3]===true,card:a[4]===true,visible:a[5]===true};}
 export function controlValue(v:CanonicalValue|undefined,goal:boolean){if(v===undefined)return {active:false,maintained:false,at:0n,status:0n};const a=items(v,'list');require(a.length===3&&txt(a[0])===CONTROL&&uint(a[2])>=1n&&uint(a[2])<=100n&&(goal?[1n,2n].includes(uint(a[1])):typeof a[1]==='boolean'),'state value');return {active:goal&&uint(a[1])===1n,maintained:!goal&&a[1]===true,at:uint(a[2]),status:goal?uint(a[1]):0n};}
 /** Same SpareSlot predicate as control-public/0.2, after mapping actual shared load. */
-export function controlAllocation(capacity:number,used:number,active:boolean,prior:boolean,reminder:boolean,support:boolean,card:boolean){
- require(Number.isSafeInteger(capacity)&&capacity>=0&&capacity<=5&&Number.isSafeInteger(used)&&used>=0&&used<=capacity,'capacity');
+export function controlAllocation(capacity:number,used:number,active:boolean,prior:boolean,reminder:boolean,support:boolean,card:boolean,capacityLimit:5|32=5){
+ require(Number.isSafeInteger(capacity)&&capacity>=0&&capacity<=capacityLimit&&Number.isSafeInteger(used)&&used>=0&&used<=capacity,'capacity');
  const maintained=active&&(reminder||prior&&support)&&used<capacity,selectedCard=card&&used+Number(maintained)<capacity,reserved=Number(maintained)+Number(selectedCard);
  return {maintained,card:selectedCard,reserved,spare:capacity-used-reserved};
 }

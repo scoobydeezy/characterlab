@@ -1,0 +1,140 @@
+
+=== types ===
+
+Runner failure after type process returned: NameError LABEL in elapsed-time writer. No compiler diagnostics; exit/time not captured. Conservatively charge full600s ceiling to total, not a measured duration. Correct wrapper and rerun types once.
+M48_CHECK types-wrapper-failure-upper-bound exit=1 seconds=600
+
+=== admission-connection ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledWorkspaceDomain.test.ts > admission and reservations: versioned bounds and one unchanged shared budget
+M48 DOMAIN capacity0..32 version0.49 only; old0.48 rejects6; reservations consume same capacity, no new task slots.
+
+stdout | src/test/assembledWorkspaceDomain.test.ts > connection: all three tasks coexist with live recalled goal meaning at6 and20
+M48 CONNECTION 3 tasks+forecast+2 actual recalls:6/20 High closer/attainment,6 Low farther/violation;5 remains one recall/MissingEvidence. Seed0, no choice claim.
+
+ ✓ src/test/assembledWorkspaceDomain.test.ts (4 tests | 2 skipped) 104372ms
+   ✓ admission and reservations: versioned bounds and one unchanged shared budget 41287ms
+   ✓ connection: all three tasks coexist with live recalled goal meaning at6 and20 63084ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 2 skipped (4)
+   Start at  07:11:50
+   Duration  108.10s (transform 2.12s, setup 0ms, collect 3.20s, tests 104.37s, environment 0ms, prepare 298ms)
+
+
+M48_CHECK admission-connection exit=0 seconds=109.6
+
+=== broad-current-access-continuation ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledWorkspaceDomain.test.ts > broad access: sixteen real publications, consumed use only, repeat and restore16->17
+M48 BROAD 3+1+16 actual recalled at20;3+1+15 at19 without erasure; actual current publication joins; latest15/16 uncertain pair, only2 used; full repeat/save/restore16->17 exact.
+
+ ✓ src/test/assembledWorkspaceDomain.test.ts (4 tests | 3 skipped) 257867ms
+   ✓ broad access: sixteen real publications, consumed use only, repeat and restore16->17 257866ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 3 skipped (4)
+   Start at  07:13:49
+   Duration  261.35s (transform 2.06s, setup 0ms, collect 3.11s, tests 257.87s, environment 0ms, prepare 99ms)
+
+
+M48_CHECK broad-current-access-continuation exit=0 seconds=261.85
+
+=== epistemic-rollback ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledWorkspaceDomain.test.ts > epistemic and rollback: equal evidence, denied channel and late failure
+M48 BOUNDARIES hidden20/20.5 same meaning, denied -> no recall/use; late actual-use failure rolls back complete instant.
+
+ ✓ src/test/assembledWorkspaceDomain.test.ts (4 tests | 3 skipped) 78918ms
+   ✓ epistemic and rollback: equal evidence, denied channel and late failure 78918ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 3 skipped (4)
+   Start at  07:18:20
+   Duration  82.33s (transform 2.06s, setup 0ms, collect 3.11s, tests 78.92s, environment 0ms, prepare 100ms)
+
+
+M48_CHECK epistemic-rollback exit=0 seconds=82.84
+
+=== retained-M47-M8-M17-regressions ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledControl.test.ts > M17 assembled control > controls: original CONTROL horizons and mapped shared maintenance predicate
+M17 original CONTROL 254 frames,37 full runs; six candidates and Linear retained
+
+ ✓ src/test/assembledControl.test.ts (5 tests | 4 skipped) 48905ms
+   ✓ M17 assembled control > controls: original CONTROL horizons and mapped shared maintenance predicate 48904ms
+stdout | src/test/assembledWorkspace.test.ts > M8 recalled content shares the existing workspace capacity > one task plus forecast admits recall only in the third shared slot; two tasks exclude it without erasure
+M8 slots0..3 shared occupancy PASS; one task+forecast admits memory at3, two tasks+forecast excludes it
+
+ ✓ src/test/assembledWorkspace.test.ts (7 tests | 5 skipped) 19646ms
+   ✓ M8 recalled content shares the existing workspace capacity > one task plus forecast admits recall only in the third shared slot; two tasks exclude it without erasure 16611ms
+   ✓ M8 recalled content shares the existing workspace capacity > workspace traces actual delivery and has no memory/archive read, then the delivery expires 3034ms
+stdout | src/test/assembledGoalMeaning.test.ts > connection: actual recalled pair changes meaning under adopted goal; exact repeat save and deadline
+M47 CONNECTION actual20..21->30..31 pair live; High closer/attainment Low farther/violation; two unique actual-use receipts, no significance or choice claim; repeat/save/restore4->5->101 exact.
+
+stdout | src/test/assembledGoalMeaning.test.ts > diagnostic: original inherited task focus leaves one actual memory slot
+M47 ORIGINAL SETUP {"tasks":3,"forecast":"2","selected":1,"stored":2,"assessment":"0702070205046b696e64050b556e617661696c61626c6507020506726561736f6e050f4d697373696e6745766964656e6365"}
+
+ ✓ src/test/assembledGoalMeaning.test.ts (8 tests | 6 skipped) 98109ms
+   ✓ connection: actual recalled pair changes meaning under adopted goal; exact repeat save and deadline 89604ms
+   ✓ diagnostic: original inherited task focus leaves one actual memory slot 8504ms
+
+ Test Files  3 passed (3)
+      Tests  5 passed | 15 skipped (20)
+   Start at  07:19:54
+   Duration  172.14s (transform 2.16s, setup 0ms, collect 4.58s, tests 166.66s, environment 0ms, prepare 283ms)
+
+
+M48_CHECK retained-M47-M8-M17-regressions exit=0 seconds=172.65
+
+=== foundation-order-save-perception ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/persistence.test.ts (2 tests) 17ms
+ ✓ src/test/observationIntegration.test.ts (2 tests) 21ms
+ ✓ src/test/scheduler.test.ts (14 tests) 18ms
+
+ Test Files  3 passed (3)
+      Tests  18 passed (18)
+   Start at  07:22:56
+   Duration  1.04s (transform 152ms, setup 0ms, collect 242ms, tests 55ms, environment 0ms, prepare 286ms)
+
+
+M48_CHECK foundation-order-save-perception exit=0 seconds=1.52
+
+=== types-corrected-runner ===
+
+M48_CHECK types-corrected-runner exit=0 seconds=15.61
+
+=== boundary ===
+Reference boundary check passed.
+
+M48_CHECK boundary exit=0 seconds=2.32
+
+=== research ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M48_CHECK research exit=0 seconds=3.4
+
+M48 final guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and M22-M47 retained tests unchanged; document/evidence caps. seconds=10.2
+M48 validation seconds including guard=1259.99
+
+=== staged-git-size ===
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M48_CHECK staged-git-size exit=0 seconds=0.75
+
+M48 FINAL validation charge including600s logger-failure ceiling, guards and staged size=1260.74s/1800s. Measured maximum261.85s/600s.
