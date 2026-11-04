@@ -34,6 +34,8 @@ Original retained-context-grouping must supply four complete contexts (16 unique
 experiences); order is deterministic by context sequence, never a subset search.
 Each trial binds original retained body before/after and position start/end addresses.
 The original focal-position-pair kernel performs the unchanged replicated contrast.
+The original string character argument is the full canonical identity key, preserving
+structured assembled identities without an invented person label.
 Original attribution-production allocates one result through the shared allocator;
 its consumed addresses and focal end target appear in the workspace trace/output.
 Incomplete access produces identified Unavailable; complete but unsupported evidence

@@ -1,0 +1,213 @@
+
+=== initial-types ===
+src/assembled/execution.ts(205,515): error TS2304: Cannot find name 'context'.
+
+M51_CHECK initial-types exit=1 seconds=16.94
+
+=== corrected-types-and-test ===
+src/test/assembledRetainedAttribution.test.ts(65,383): error TS2352: Conversion of type '{ event: { eventId: bigint; eventSequence: bigint; dueAt: SimInstant; phase: bigint; eventTypeId: { readonly kind: "typedIdentifier"; readonly namespaceId: bigint; readonly payload: CanonicalValue; }; payload: CanonicalValue; dependencies: CanonicalValue; causalParentEventIds: never[]; }; state: AuthoritativeState; ...' to type 'EventHandlerContext<AuthoritativeState>' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Property 'instant' is missing in type '{ event: { eventId: bigint; eventSequence: bigint; dueAt: SimInstant; phase: bigint; eventTypeId: { readonly kind: "typedIdentifier"; readonly namespaceId: bigint; readonly payload: CanonicalValue; }; payload: CanonicalValue; dependencies: CanonicalValue; causalParentEventIds: never[]; }; state: AuthoritativeState; ...' but required in type 'EventHandlerContext<AuthoritativeState>'.
+
+M51_CHECK corrected-types-and-test exit=1 seconds=16.81
+
+=== native-witness ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledRetainedAttribution.test.ts (4 tests | 1 failed | 3 skipped) 82838ms
+   × witness: observed body context and original retained focal contrast 82837ms
+     → requires text
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledRetainedAttribution.test.ts > witness: observed body context and original retained focal contrast
+SchedulerContractError: requires text
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataText src/campaign2/canonicalData.ts:17:52
+ ❯ Module.deriveRetainedAttribution src/assembled/retainedAttribution.ts:32:62
+ ❯ Object.execute src/assembled/execution.ts:205:436
+ ❯ src/assembled/runtime.ts:193:33
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:373:26
+ ❯ Object.settleNextInstant src/assembled/character.ts:40:58
+ ❯ Module.through src/test/fixtures/assembledComparison.ts:15:125
+ ❯ run src/test/assembledRetainedAttribution.test.ts:36:122
+ ❯ src/test/assembledRetainedAttribution.test.ts:41:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 3 skipped (4)
+   Start at  11:31:00
+   Duration  86.38s (transform 2.13s, setup 0ms, collect 3.24s, tests 82.84s, environment 0ms, prepare 98ms)
+
+
+M51_CHECK native-witness exit=1 seconds=87.92
+
+=== native-witness-identity-correction ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledRetainedAttribution.test.ts (4 tests | 1 failed | 3 skipped) 142319ms
+   × witness: observed body context and original retained focal contrast 142319ms
+     → Cannot read properties of undefined (reading 'fields')
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledRetainedAttribution.test.ts > witness: observed body context and original retained focal contrast
+TypeError: Cannot read properties of undefined (reading 'fields')
+ ❯ Module.dataField src/campaign2/canonicalData.ts:12:85
+     10|   return value as RecordValue;
+     11| }
+     12| export function dataField(value:RecordValue,id:bigint):CanonicalValue …
+       |                                                                                     ^
+     13| export function dataUnsigned(value:CanonicalValue):bigint {
+     14|   if(typeof value==='boolean'||value.kind!=='unsigned')invalidModel('r…
+ ❯ deliveries src/test/assembledRetainedAttribution.test.ts:39:47
+ ❯ src/test/assembledRetainedAttribution.test.ts:45:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 3 skipped (4)
+   Start at  11:32:56
+   Duration  145.85s (transform 2.11s, setup 0ms, collect 3.20s, tests 142.32s, environment 0ms, prepare 99ms)
+
+
+M51_CHECK native-witness-identity-correction exit=1 seconds=147.39
+
+=== native-witness-access-hidden-boundaries ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRetainedAttribution.test.ts > witness: observed body context and original retained focal contrast
+M51 WITNESS live4 groups/16 operands; before20..21; primary after0/0/30/30 Supported16consumed/1focal-end target; confounded30/30/30/30 Unavailable16/0. Workspace19 and recalled15 operands Unavailable0/0. [{"kind":"text","value":"assembled-retained-attribution/0.1"},{"kind":"signed","value":"17"},{"kind":"list","items":[{"kind":"text","value":"assembled-retained-attribution/0.1"},{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"character/bridge-subject"}}}},{"kind":"typedIdentifier","namespaceId":"1106","payload":{"kind":"unsigned","value":"125"}},{"kind":"signed","value":"16"}]},{"kind":"list","items":[{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"afterExperience"},{"kind":"signed","value":"41"}]},{"kind":"list","items":[{"kind":"text","value":"beforeExperience"},{"kind":"signed","value":"1"}]},{"kind":"list","items":[{"kind":"text","value":"context"},{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"observerEventSequence"},{"kind":"signed","value":"0"}]},{"kind":"list","items":[{"kind":"text","value":"observerId"},{"kind":"text","value":"observer/bridge-subject"}]}]}]},{"kind":"list","items":[{"kind":"text","value":"endExperience"},{"kind":"signed","value":"34"}]},{"kind":"list","items":[{"kind":"text","value":"kind"},{"kind":"text","value":"Grouped"}]},{"kind":"list","items":[{"kind":"text","value":"startExperience"},{"kind":"signed","value":"24"}]}]},{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"afterExperience"},{"kind":"signed","value":"69"}]},{"kind":"list","items":[{"kind":"text","value":"beforeExperience"},{"kind":"signed","value":"47"}]},{"kind":"list","items":[{"kind":"text","value":"context"},{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"observerEventSequence"},{"kind":"signed","value":"1"}]},{"kind":"list","items":[{"kind":"text","value":"observerId"},{"kind":"text","value":"observer/bridge-subject"}]}]}]},{"kind":"list","items":[{"kind":"text","value":"endExperience"},{"kind":"signed","value":"62"}]},{"kind":"list","items":[{"kind":"text","value":"kind"},{"kind":"text","value":"Grouped"}]},{"kind":"list","items":[{"kind":"text","value":"startExperience"},{"kind":"signed","value":"54"}]}]},{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"afterExperience"},{"kind":"signed","value":"97"}]},{"kind":"list","items":[{"kind":"text","value":"beforeExperience"},{"kind":"signed","value":"75"}]},{"kind":"list","items":[{"kind":"text","value":"context"},{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"observerEventSequence"},{"kind":"signed","value":"2"}]},{"kind":"list","items":[{"kind":"text","value":"observerId"},{"kind":"text","value":"observer/bridge-subject"}]}]}]},{"kind":"list","items":[{"kind":"text","value":"endExperience"},{"kind":"signed","value":"90"}]},{"kind":"list","items":[{"kind":"text","value":"kind"},{"kind":"text","value":"Grouped"}]},{"kind":"list","items":[{"kind":"text","value":"startExperience"},{"kind":"signed","value":"82"}]}]},{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"afterExperience"},{"kind":"signed","value":"125"}]},{"kind":"list","items":[{"kind":"text","value":"beforeExperience"},{"kind":"signed","value":"103"}]},{"kind":"list","items":[{"kind":"text","value":"context"},{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"observerEventSequence"},{"kind":"signed","value":"3"}]},{"kind":"list","items":[{"kind":"text","value":"observerId"},{"kind":"text","value":"observer/bridge-subject"}]}]}]},{"kind":"list","items":[{"kind":"text","value":"endExperience"},{"kind":"signed","value":"118"}]},{"kind":"list","items":[{"kind":"text","value":"kind"},{"kind":"text","value":"Grouped"}]},{"kind":"list","items":[{"kind":"text","value":"startExperience"},{"kind":"signed","value":"110"}]}]}]},{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"kind"},{"kind":"text","value":"Result"}]},{"kind":"list","items":[{"kind":"text","value":"result"},{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"at"},{"kind":"signed","value":"17"}]},{"kind":"list","items":[{"kind":"text","value":"character"},{"kind":"text","value":"0bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a656374"}]},{"kind":"list","items":[{"kind":"text","value":"consequence"},{"kind":"signed","value":"125"}]},{"kind":"list","items":[{"kind":"text","value":"consumed"},{"kind":"list","items":[{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"acquisition"},{"kind":"signed","value":"31"}]},{"kind":"list","items":[{"kind":"text","value":"unit"},{"kind":"text","value":"episode"}]}]},{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"acquisition"},{"kind":"signed","value":"39"}]},{"kind":"list","items":[{"kind":"text","value":"unit"},{"kind":"text","value":"episode"}]}]},{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"acquisition"},{"kind":"signed","value":"17"}]},{"kind":"list","items":[{"kind":"text","value":"unit"},{"kind":"text","value":"episode"}]}]},{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"acquisition"},{"kind":"signed","value":"45"}]},{"kind":"list","items":[{"kind":"text","value":"unit"},{"kind":"text","value":"episode"}]}]},{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"acquisition"},{"kind":"signed","value":"59"}]},{"kind":"list","items":[{"kind":"text","value":"unit"},{"kind":"text","value":"episode"}]}]},{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"acquisition"},{"kind":"signed","value":"67"}]},{"kind":"list","items":[{"kind":"text","value":"unit"},{"kind":"text","value":"episode"}]}]},{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"acquisition"},{"kind":"signed","value":"51"}]},{"kind":"list","items":[{"kind":"text","value":"unit"},{"kind":"text","value":"episode"}]}]},{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"acquisition"},{"kind":"signed","value":"73"}]},{"kind":"list","items":[{"kind":"text","value":"unit"},{"kind":"text","value":"episode"}]}]},{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"acquisition"},{"kind":"signed","value":"87"}]},{"kind":"list","items":[{"kind":"text","value":"unit"},{"kind":"text","value":"episode"}]}]},{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"acquisition"},{"kind":"signed","value":"95"}]},{"kind":"list","items":[{"kind":"text","value":"unit"},{"kind":"text","value":"episode"}]}]},{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"acquisition"},{"kind":"signed","value":"79"}]},{"kind":"list","items":[{"kind":"text","value":"unit"},{"kind":"text","value":"episode"}]}]},{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"acquisition"},{"kind":"signed","value":"101"}]},{"kind":"list","items":[{"kind":"text","value":"unit"},{"kind":"text","value":"episode"}]}]},{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"acquisition"},{"kind":"signed","value":"115"}]},{"kind":"list","items":[{"kind":"text","value":"unit"},{"kind":"text","value":"episode"}]}]},{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"acquisition"},{"kind":"signed","value":"123"}]},{"kind":"list","items":[{"kind":"text","value":"unit"},{"kind":"text","value":"episode"}]}]},{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"acquisition"},{"kind":"signed","value":"107"}]},{"kind":"list","items":[{"kind":"text","value":"unit"},{"kind":"text","value":"episode"}]}]},{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"acquisition"},{"kind":"signed","value":"129"}]},{"kind":"list","items":[{"kind":"text","value":"unit"},{"kind":"text","value":"episode"}]}]}]}]},{"kind":"list","items":[{"kind":"text","value":"disposition"},{"kind":"text","value":"Supported"}]},{"kind":"list","items":[{"kind":"text","value":"observer"},{"kind":"text","value":"observer/bridge-subject"}]},{"kind":"list","items":[{"kind":"text","value":"resultId"},{"kind":"signed","value":"131"}]},{"kind":"list","items":[{"kind":"text","value":"targets"},{"kind":"list","items":[{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"acquisition"},{"kind":"signed","value":"123"}]},{"kind":"list","items":[{"kind":"text","value":"unit"},{"kind":"text","value":"episode"}]}]}]}]},{"kind":"list","items":[{"kind":"text","value":"transformationVersion"},{"kind":"text","value":"attribution-production/0.1-candidate"}]}]}]}]}]
+
+stdout | src/test/assembledRetainedAttribution.test.ts > loss and hidden truth: finite memory cannot fabricate missing trial evidence
+M51 LOSS retention15 erases earliest Before: actual focal result Unavailable0/0. Hidden reserve30.5 has exact same observed461/227, goal meaning and attribution as30; Supported.
+
+stdout | src/test/assembledRetainedAttribution.test.ts > boundaries: actual context, cue, owner and version checks reject substitutions
+M51 BOUNDARIES foreign/time/support/context, historical version, wrong owner, learned bootstrap, forged recall/formation rejected.
+
+ ✓ src/test/assembledRetainedAttribution.test.ts (5 tests | 2 skipped) 255826ms
+   ✓ witness: observed body context and original retained focal contrast 148672ms
+   ✓ loss and hidden truth: finite memory cannot fabricate missing trial evidence 89812ms
+   ✓ boundaries: actual context, cue, owner and version checks reject substitutions 17341ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 2 skipped (5)
+   Start at  11:36:51
+   Duration  259.43s (transform 2.16s, setup 0ms, collect 3.26s, tests 255.83s, environment 0ms, prepare 99ms)
+
+
+M51_CHECK native-witness-access-hidden-boundaries exit=0 seconds=260.96
+
+=== native-continuation-absence ===
+'absence:' is not recognized as an internal or external command,
+operable program or batch file.
+
+M51_CHECK native-continuation-absence exit=255 seconds=0.03
+
+=== native-continuation-absence-direct-node ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRetainedAttribution.test.ts > continuation: exact replay restore and attribution allocation rollback
+M51 PERSISTENCE restore12 and repeated12->17 byte-exact; post-result shared allocation failure rolls back whole17.
+
+stdout | src/test/assembledRetainedAttribution.test.ts > absence: denied motion and missing After evidence never become attribution
+M51 ABSENCE denied motion x0/x7 gives exact cognitive state and Unavailable0/0; missing permitted After16 gives NoConsequence, no result allocation.
+
+ ✓ src/test/assembledRetainedAttribution.test.ts (5 tests | 3 skipped) 304752ms
+   ✓ continuation: exact replay restore and attribution allocation rollback 189330ms
+   ✓ absence: denied motion and missing After evidence never become attribution 115421ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 3 skipped (5)
+   Start at  11:41:41
+   Duration  308.39s (transform 2.14s, setup 0ms, collect 3.24s, tests 304.75s, environment 0ms, prepare 102ms)
+
+
+M51_CHECK native-continuation-absence-direct-node exit=0 seconds=308.9
+
+=== retained-M50-M49-M46 ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledPositionPerception.test.ts > mixed continuity: social -> visual -> social retains its own observed track
+M49 MIXED social track0 remains0 after visual track1; recognized identity unchanged, panel context closes without removing2 social events.
+
+ ✓ src/test/assembledPositionPerception.test.ts (5 tests | 4 skipped) 68090ms
+   ✓ mixed continuity: social -> visual -> social retains its own observed track 68089ms
+stdout | src/test/assembledPositionMemory.test.ts > connection and access: actual selected memories group only within the shared budgets
+M50 OPERANDS [{"label":"full","selected":[{"tag":"assembled-position-episode/0.1","at":"4","acquisition":"62","experience":"57"},{"tag":"assembled-position-episode/0.1","at":"3","acquisition":"52","experience":"47"},{"tag":"assembled-position-episode/0.1","at":"2","acquisition":"44","experience":"29"},{"tag":"assembled-position-episode/0.1","at":"1","acquisition":"21","experience":"4"},{"tag":"assembled-body-episode/0.1","at":"4","acquisition":"63","experience":"54"},{"tag":"assembled-body-episode/0.1","at":"1","acquisition":"22","experience":"1"}],"grouping":[{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"afterExperience"},{"kind":"signed","value":"57"}]},{"kind":"list","items":[{"kind":"text","value":"beforeExperience"},{"kind":"signed","value":"4"}]},{"kind":"list","items":[{"kind":"text","value":"context"},{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"observerEventSequence"},{"kind":"signed","value":"0"}]},{"kind":"list","items":[{"kind":"text","value":"observerId"},{"kind":"text","value":"observer/bridge-subject"}]}]}]},{"kind":"list","items":[{"kind":"text","value":"endExperience"},{"kind":"signed","value":"47"}]},{"kind":"list","items":[{"kind":"text","value":"kind"},{"kind":"text","value":"Grouped"}]},{"kind":"list","items":[{"kind":"text","value":"startExperience"},{"kind":"signed","value":"29"}]}]}]},{"label":"retained5","selected":[{"tag":"assembled-position-episode/0.1","at":"4","acquisition":"62","experience":"57"},{"tag":"assembled-position-episode/0.1","at":"3","acquisition":"52","experience":"47"},{"tag":"assembled-position-episode/0.1","at":"2","acquisition":"44","experience":"29"},{"tag":"assembled-body-episode/0.1","at":"4","acquisition":"63","experience":"54"},{"tag":"assembled-body-episode/0.1","at":"1","acquisition":"22","experience":"1"}],"grouping":[{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"kind"},{"kind":"text","value":"Unavailable"}]},{"kind":"list","items":[{"kind":"text","value":"reason"},{"kind":"text","value":"IncompleteContext"}]}]}]},{"label":"workspace9","selected":[{"tag":"assembled-position-episode/0.1","at":"4","acquisition":"62","experience":"57"},{"tag":"assembled-position-episode/0.1","at":"3","acquisition":"52","experience":"47"},{"tag":"assembled-position-episode/0.1","at":"2","acquisition":"44","experience":"29"},{"tag":"assembled-position-episode/0.1","at":"1","acquisition":"21","experience":"4"},{"tag":"assembled-body-episode/0.1","at":"4","acquisition":"63","experience":"54"}],"grouping":[{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"afterExperience"},{"kind":"signed","value":"57"}]},{"kind":"list","items":[{"kind":"text","value":"beforeExperience"},{"kind":"signed","value":"4"}]},{"kind":"list","items":[{"kind":"text","value":"context"},{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"observerEventSequence"},{"kind":"signed","value":"0"}]},{"kind":"list","items":[{"kind":"text","value":"observerId"},{"kind":"text","value":"observer/bridge-subject"}]}]}]},{"kind":"list","items":[{"kind":"text","value":"endExperience"},{"kind":"signed","value":"47"}]},{"kind":"list","items":[{"kind":"text","value":"kind"},{"kind":"text","value":"Grouped"}]},{"kind":"list","items":[{"kind":"text","value":"startExperience"},{"kind":"signed","value":"29"}]}]}]},{"label":"workspace7","selected":[{"tag":"assembled-position-episode/0.1","at":"4","acquisition":"62","experience":"57"},{"tag":"assembled-position-episode/0.1","at":"3","acquisition":"52","experience":"47"},{"tag":"assembled-position-episode/0.1","at":"2","acquisition":"44","experience":"29"}],"grouping":[{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"kind"},{"kind":"text","value":"Unavailable"}]},{"kind":"list","items":[{"kind":"text","value":"reason"},{"kind":"text","value":"IncompleteContext"}]}]}]},{"label":"recall3","selected":[{"tag":"assembled-position-episode/0.1","at":"4","acquisition":"62","experience":"57"},{"tag":"assembled-position-episode/0.1","at":"3","acquisition":"52","experience":"47"},{"tag":"assembled-position-episode/0.1","at":"2","acquisition":"44","experience":"29"},{"tag":"assembled-body-episode/0.1","at":"4","acquisition":"63","experience":"54"},{"tag":"assembled-body-episode/0.1","at":"1","acquisition":"22","experience":"1"}],"grouping":[{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"kind"},{"kind":"text","value":"Unavailable"}]},{"kind":"list","items":[{"kind":"text","value":"reason"},{"kind":"text","value":"IncompleteContext"}]}]}]}]
+M50 CONNECTION four positive actual freezes -> four episodes+two body -> actual phase20 recalls -> shared workspace -> original Grouped IDs. Retention5/workspace7/recall3 each IncompleteContext; original9 retains4 positions+1 body and stays Grouped.
+
+ ✓ src/test/assembledPositionMemory.test.ts (4 tests | 3 skipped) 116756ms
+   ✓ connection and access: actual selected memories group only within the shared budgets 116755ms
+stdout | src/test/assembledBodyMemoryUse.test.ts > connection and continuation: real body use protects evidence and changes later live appraisal
+M46 CONNECTION used A1 survives4 vs AgeOnly B4; live recalled-context pressure5/6 vs0; exact repeat/save and restore2->5; draws5=0/0; no sampled-choice claim.
+
+ ✓ src/test/assembledBodyMemoryUse.test.ts (7 tests | 6 skipped) 81821ms
+   ✓ connection and continuation: real body use protects evidence and changes later live appraisal 81820ms
+
+ Test Files  3 passed (3)
+      Tests  3 passed | 13 skipped (16)
+   Start at  11:47:00
+   Duration  272.33s (transform 2.17s, setup 0ms, collect 4.80s, tests 266.67s, environment 0ms, prepare 284ms)
+
+
+M51_CHECK retained-M50-M49-M46 exit=0 seconds=272.84
+
+=== original-kernels-and-SEM ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/semanticStateAuthority.test.ts (8 tests) 24ms
+ ✓ src/test/semanticPhaseOrdering.test.ts (10 tests) 14ms
+ ✓ src/test/retainedPositionPairAttribution.test.ts (8 tests) 13ms
+ ✓ src/test/attributionProduction.test.ts (6 tests) 12ms
+ ✓ src/test/retainedContextGrouping.test.ts (5 tests) 14ms
+ ✓ src/test/contrastiveAttribution.test.ts (9 tests) 7ms
+ ✓ src/test/semanticPhaseRollbackCause.test.ts (1 test) 5ms
+
+ Test Files  7 passed (7)
+      Tests  47 passed (47)
+   Start at  11:52:43
+   Duration  2.25s (transform 255ms, setup 0ms, collect 490ms, tests 88ms, environment 1ms, prepare 648ms)
+
+
+M51_CHECK original-kernels-and-SEM exit=0 seconds=2.74
+
+=== final-types ===
+
+M51_CHECK final-types exit=0 seconds=16.94
+
+=== boundary ===
+Reference boundary check passed.
+
+M51_CHECK boundary exit=0 seconds=2.3
+
+=== research ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M51_CHECK research exit=0 seconds=3.23
+
+M51_CHECK plan-write-stage-size-commit exit=0 seconds=1.43
+
+M51 final guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and M22-M50 retained tests unchanged; document/evidence caps. seconds=9.82
+M51 validation seconds including guard=1148.25
+
+=== staged-git-size ===
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M51_CHECK staged-git-size exit=0 seconds=0.75

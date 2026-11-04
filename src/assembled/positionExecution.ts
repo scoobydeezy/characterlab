@@ -1,4 +1,5 @@
 /** Current-lane position/context operations within the one assembled scheduler. */
+import {BODY_CONTEXT} from './retainedAttribution';
 import {POSITION_SELECT,POSITION_MEMORY_VERSION} from './memory';
 import {observedRole} from './encoding';
 import type {PreRecognitionSemanticExperience} from '../semanticBinding/perceptualEventFiles';
@@ -28,14 +29,16 @@ const fail=(s:string):never=>{throw new SchedulerContractError('INPUT_NOT_ADMITT
 export function createPositionExecution(stateModel:ReturnType<typeof compileCampaign2StateModel>,originals:readonly ScheduledEvent[],model:CanonicalValue,run:CanonicalValue,positionMemory=false){
  const stages=positionMemory?[...POSITION_STAGES,POSITION_SELECT]:POSITION_STAGES,phases=[11n,12n,14n,20n];
  let active=false,at=0n,used=false,unbound=0,sample:ReturnType<typeof samplePosition>|undefined,observation:CanonicalValue|undefined,visualObservation:bigint|undefined,panelObservation:bigint|undefined,visualDetection:bigint|undefined,eventDetection:bigint|undefined,track:PerceptualReferentId|undefined,contextRef:PerceptualEventReferentId|undefined,eventRef:PerceptualEventReferentId|undefined,reservation:ExperienceReservation|undefined;
+ let contextEvent:bigint|undefined;
  let bindings:readonly PerceivedBindingEvidence[]=[],staged:StagedSemanticExperience[]=[];const pending=new Set<string>();
  const support=()=>[...(sample?.position?.kind==='Present'?[{observerId:OBSERVER,observationId:visualObservation!}]:[]),...(sample?.panel?.kind==='Present'?[{observerId:OBSERVER,observationId:panelObservation!}]:[])];
  const emit=(e:ScheduledEvent,phase:bigint,eventTypeId:ReturnType<typeof sid>):EventEmission=>({dueAt:e.dueAt,phase,eventTypeId,payload:observation!,dependencies:list([])});
  function trace(event:ScheduledEvent,input:CanonicalValue,outputs:CanonicalValue[],children:readonly ScheduledEvent[],reads:ActualReadRecord[],patch:StatePatch,diffs:ReturnType<typeof stateModel.applyPatch>['diffs']){return traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model,runIdentity:run,event,seamId:sid(1036,'seam/assembled-position-perception'),seamVersion:positionMemory?POSITION_MEMORY_VERSION:POSITION_VERSION,recordKind:event.eventTypeId,subjectIds:[BODY_OBSERVER],sourceRecordIds:[],registeredReadDomain:reads.map(x=>pattern(x.path)),actualReadRecords:reads,inputProjection:input,outputProjection:list(outputs),randomDrawRecords:[],quantizationOperations:[],statePatch:patch,structuralMutationDiffs:diffs,emittedEvents:children,invariantResults:[]});}
  return {
+ contextForBody(){if(!active)fail('context outside instant');return contextEvent!==undefined&&contextRef&&sample?.panel?.kind==='Present'?list([text(BODY_CONTEXT),signed(at),perceptualEventReferentIdValue(contextRef),typedIdentifier(1115,u(panelObservation!)),u(sample.panel.glyph),text(sample.panel.stage),u(contextEvent)]):undefined;},
  eventTypes:()=>[POSITION_SOURCE,...stages],
- begin(instant:bigint){if(active)fail('already active');active=true;at=instant;used=false;unbound=0;sample=undefined;observation=undefined;track=undefined;contextRef=undefined;eventRef=undefined;reservation=undefined;visualObservation=undefined;panelObservation=undefined;visualDetection=undefined;eventDetection=undefined;bindings=[];staged=[];pending.clear();},
- close(){active=false;sample=undefined;observation=undefined;reservation=undefined;staged=[];bindings=[];pending.clear();},
+ begin(instant:bigint){if(active)fail('already active');active=true;at=instant;used=false;unbound=0;contextEvent=undefined;sample=undefined;observation=undefined;track=undefined;contextRef=undefined;eventRef=undefined;reservation=undefined;visualObservation=undefined;panelObservation=undefined;visualDetection=undefined;eventDetection=undefined;bindings=[];staged=[];pending.clear();},
+ close(){active=false;contextEvent=undefined;sample=undefined;observation=undefined;reservation=undefined;staged=[];bindings=[];pending.clear();},
  prepareCommit(){if(!active||unbound||pending.size||originals.some(e=>e.dueAt===at)&&!used)fail('unfinished instant');validateSuccessfulExperienceSettlement(reservation?[reservation]:[],staged);},
  execute(c:EventHandlerContext<AuthoritativeState>){const {event,state}=c;if(!active||event.dueAt!==at)fail('inactive');const source=eq(event.eventTypeId,POSITION_SOURCE);
  let memoryEvidence:{observation:CanonicalValue;experience:PreRecognitionSemanticExperience;contexts:CanonicalValue}|undefined;
@@ -65,7 +68,7 @@ export function createPositionExecution(stateModel:ReturnType<typeof compileCamp
    if(panel){if(at<=window.panelAt)fail('panel clock');window.panelAt=at;if(panel.kind==='Unavailable')end();else{
     if(window.panel&&(panel.stage==='Before'||window.panel.glyph!==BigInt(panel.glyph)))end();
     eventDetection=c.allocateRuntimeId();const r=applyPerceptualEventTransition(newEvents,{observerId:OBSERVER,currentEventDetectionId:{observerId:OBSERVER,eventDetectionOccurrenceId:eventDetection},continuityKind:window.panel?'ContinuesPriorEventFile':'NewEventFile',...(window.panel?{priorPerceptualEventReferentId:window.panel.file}:{}),supportingObservationIds:panelSupport,occurredAt:at,transformationVersion:'semantic-binding/0.1-candidate#SEM-001C'});
-    newEvents=r.state;contextRef=r.transition.perceptualEventReferentId;eventRef=contextRef;window.panel={glyph:BigInt(panel.glyph),file:contextRef};changes.push(transitionValue(r.transition));if(panel.stage==='After')end();
+    newEvents=r.state;contextRef=r.transition.perceptualEventReferentId;contextEvent=event.eventId;eventRef=contextRef;window.panel={glyph:BigInt(panel.glyph),file:contextRef};changes.push(transitionValue(r.transition));if(panel.stage==='After')end();
    }}
    if(track&&!eventRef){eventDetection=c.allocateRuntimeId();const s=[{observerId:OBSERVER,observationId:visualObservation!}],r=applyPerceptualEventTransition(newEvents,{observerId:OBSERVER,currentEventDetectionId:{observerId:OBSERVER,eventDetectionOccurrenceId:eventDetection},continuityKind:'NewEventFile',supportingObservationIds:s,occurredAt:at,transformationVersion:'semantic-binding/0.1-candidate#SEM-001C'});eventRef=r.transition.perceptualEventReferentId;const ended=endPerceptualEventFile(r.state,{observerId:OBSERVER,perceptualEventReferentId:eventRef,supportingObservationIds:s,occurredAt:at,transformationVersion:'semantic-binding/0.1-candidate#SEM-001C'});newEvents=ended.state;changes.push(transitionValue(r.transition),transitionValue(ended.eventEnd));}
    const operations:StatePatch['operations'][number][]=[];
