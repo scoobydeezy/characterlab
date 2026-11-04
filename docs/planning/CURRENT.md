@@ -1,45 +1,44 @@
-# Current work — M52 outcome significance (2026-11-04)
+# Current work — M52 verification checkpoint (2026-11-04)
 
-M51 complete at c7895dee. M52 card frozen before implementation.
-The character will attach goal-relative significance to the actual attributed
-remembered event, then retain and recall it under ordinary memory pressure.
+M52 is implemented but NOT complete. Plan84d26859; baselinec7895dee.
+[Result](ASSEMBLED_CHARACTER_M52_RESULT.md); [checks](ASSEMBLED_CHARACTER_M52_CHECKS.txt).
+The original card remains in84d26859. Rules/registry0.53;11 source/test files.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
-## Scope and contract
-Three connected capabilities: focal goal/attribution join, same-owner directional
-significance, and its shared-retention/recall consequence.
-Implement [outcome-significance0.1](../formal/ASSEMBLED_CHARACTER_SIGNIFICANCE_CONTRACT.md).
-Rules/registry0.53 adds slot36; original0.52 and all prior controls remain unchanged.
-Reuse Campaign3 directional-significance kernel and original goal/attribution laws.
-One existing episodic owner346/1; one allocator, scheduler, workspace and save.
-No new archive, runtime, perception shortcut, UI or autonomous partner.
+## Verified connection
+- Actual attribution40 + focal goal meaning50 qualify significance in the existing
+  episodic owner140. Original directional kernel; no second store/runtime/allocator.
+- Fixed High30..31 versus Wide0..100 goals: both have4 groups/16 consumed operands,
+  Supported attribution and Assessed Before13/After16. Only High grants MovingCloser
+  to the focal position-end15. Same laws, seed0, retention16/recall16/workspace20.
+- After14 body samples18..31 and visual32, High retains and actually recalls that
+  episode33; Wide loses it. Separate diagnostic quota is preserved. No choice claim.
+-384 original-comparator combinations pass; use/direction cardinality give no extra
+  bonus within the significance tier. Same-instant credit cannot enter PRIOR priority.
+- Hidden30/30.5 and unsupported-attribution controls pass. Foreign/missing targets,
+  unauthenticated consumer, forged ingress, learned initial state, wrong owner,
+  old version, fresh credit and invalid direction sets reject.
+- Save17/restore through33 passed byte-exactly BEFORE the final disclosure-only edit.
+  Ordinary goal assessment without focal attribution also passed before that edit.
+- Final types,23 original kernel tests, boundary and research checks pass.
 
-## Fixed comparison and liveness
-One holder/3 physical tasks, seed0, body30/rate10/width1/capacity100.
-M51 four Before/Motion/Motion/After contexts1..16, same eight body samples,
-eight Actor movements and refills30@4/8,40@11/15. Deliberation17.
-Reference SignificanceFirst; retention16, recall16, workspace20 throughout.
-Compare High reserve goal30..31 with Wide0..100; same laws and inputs.
-Before comparing: both must have4 actual groups/16 consumed operands, Supported
-focal attribution, and Assessed goal meaning using focal Before13/After16.
-High must qualify MovingCloser; Wide must not qualify. Only focal position-end15
-gets credit. No final-action or random-choice claim.
-Pressure:14 fresh body samples18..31, then one visual32 without panel creates
-an ordinary position recall33. High focal episode must survive and appear in that
-actual recall; Wide focal episode must be absent. Count all settlements; no cutoff.
-No additional appraisal needed after17. No law, seed or quota tuning.
+## Outstanding before completion
+1. Rerun rollback. It timed out at a shortened100s cap used to reserve final-check
+   time; this is not a mechanism verdict. Exact byte comparisons now use length plus
+   every byte instead of generic object diff; coverage is unchanged.
+2. Run the predeclared retained M51 witness.
+3. Run the ordinary-goal trace check and continuation on final trace bytes.
+   Goal trace input now includes the same attribution already present in its output;
+   no state/qualification/retention or serialization algorithm changed.
+4. Record results, rerun only affected/static guards as needed, stage/size-check/commit.
+No further production scope is planned. No fixture, law, seed or acceptance change.
 
-## Checks and stop
-At most12 production/test files (expected11); one validation job at a time.
-600s per command,1800s total including failures and guards.
-At most20 evidence files/5MiB; one result and one check log.
-Native primary pair plus save17/restore->33 and failure after significance preparation;
-hidden30.5 and confounded attribution controls through17. Kernel/adapter tests cover
-both directions, idempotence, use/significance separation, stale/foreign/missing
-joins, fresh-credit rejection and PRIOR-only retention. Check old-version rejection.
-Selected M51 witness and original directional-significance/retention/goal kernels;
-types, boundary/research,105 frozen control dependencies and retained tests.
-No full historical replay when its closure is unchanged.
-Routine mistakes repaired locally with failed attempts retained; no new contrasts
-to manufacture success. Stop at this gate or an actual budget/architectural blocker.
-All21 members/15 families/132 clauses remain open; no global retention-law verdict.
+## Budget and permission boundary
+Original total1800s is nearly consumed, including failures; no further native runs
+fit with adequate margin.600s per command;20 evidence files/5MiB;<=12 source/test files.
+A bounded completion allowance of +600s (2400s total) is PROPOSED, NOT AUTHORIZED.
+This supersedes the earlier +300s request because the final trace edit also needs
+its continuation check. Obtain the owner's ruling before additional native checks.
+Preserve all failed attempts and stop if the amended allowance is reached.
+All21 members/15 families/132 clauses remain open; no UI/autonomous partners,
+private archive, invented credit, broader retention-law verdict or corpus closure.

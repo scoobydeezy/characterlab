@@ -8,7 +8,9 @@ directionalSignificanceState semantics within the assembled scheduler.
 1. Phase40 produces actual retained attribution from current selected workspace
    operands. Phase50 goal meaning uses that focal group's exact Before/After body
    episodes. It never substitutes the newest unrelated pair. Incomplete evidence
-   stays unavailable. Previous versions retain their original pairing.
+   stays unavailable. With no focal cue, ordinary goal assessment retains its prior
+   latest-pair behavior but cannot grant significance. Previous versions retain
+   their original pairing.
 2. Credit requires current Supported attribution, exact observer/character/focal
    consequence, Qualifies goal result and its MovingCloser/MovingFarther direction,
    and the exact recalled focal end child in both attribution consumption and
@@ -38,3 +40,7 @@ LOCAL DISPOSITION: this is the existing reference SignificanceFirst connection,
 not a new psychological ranking law. VER-C3-DEFINING-MEMORY-BRIDGE-001 and its
 directional/significance controls motivate the connection; all broader obligations
 in RESEARCH_OBLIGATIONS.json remain conditional and unchanged.
+
+The pure original significance kernel accepts <=64-byte subject symbols. After the
+full canonical holder/observer join, its detached one-holder adapter uses local
+character symbol holder, as the existing goal adapter does; no identity is truncated.

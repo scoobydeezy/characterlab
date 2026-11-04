@@ -1,0 +1,266 @@
+
+=== types-1 ===
+
+M52_CHECK types-1 exit=0 seconds=15.81
+
+=== native-witness-1 ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledSignificance.test.ts (0 test)
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSignificance.test.ts [ src/test/assembledSignificance.test.ts ]
+TypeError: bodyId is not a function
+ ❯ src/assembled/memory.ts:34:29
+
+ ❯ src/assembled/retainedAttribution.ts:10:31
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  no tests
+   Start at  12:28:02
+   Duration  2.25s (transform 1.20s, setup 0ms, collect 0ms, tests 0ms, environment 0ms, prepare 119ms)
+
+
+M52_CHECK native-witness-1 exit=1 seconds=2.78
+
+=== native-witness-2 ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledSignificance.test.ts (4 tests | 1 failed | 3 skipped) 105253ms
+   × witness: actual goal attribution credit changes survival and later recall 105252ms
+     → ATTRIBUTED_TARGET_SYMBOL
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSignificance.test.ts > witness: actual goal attribution credit changes survival and later recall
+SchedulerContractError: ATTRIBUTED_TARGET_SYMBOL
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:470:11
+    468|       const contractError = error instanceof SchedulerContractError
+    469|         ? error
+    470|         : new SchedulerContractError('TRANSITION_FAILURE', errorMessag…
+       |           ^
+    471|       this.#status = 'Failed';
+    472|       this.#diagnostic = {
+ ❯ Object.settleNextInstant src/assembled/character.ts:40:58
+ ❯ advance src/test/assembledSignificance.test.ts:44:80
+ ❯ run src/test/assembledSignificance.test.ts:45:121
+ ❯ src/test/assembledSignificance.test.ts:49:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 3 skipped (4)
+   Start at  12:28:31
+   Duration  108.99s (transform 2.16s, setup 0ms, collect 3.32s, tests 105.25s, environment 0ms, prepare 118ms)
+
+
+M52_CHECK native-witness-2 exit=1 seconds=109.52
+
+=== native-witness-3 ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+
+M52_CHECK native-witness-3 exit=1 seconds=62.2
+
+LOCAL REPAIR: native-witness-3 intentionally terminated at62.20s before a known incorrect negative assertion: High and Wide may legitimately have identical attribution. Replaced that assertion with an explicit mismatched report; the fixed behavioral comparison is unchanged. Symbol limit repaired with existing one-holder local alias after full canonical identity check.
+
+=== types-2 ===
+
+M52_CHECK types-2 exit=0 seconds=15.48
+
+=== native-witness-4 ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSignificance.test.ts > witness: actual goal attribution credit changes survival and later recall
+M52 live gate PASS: both arms Supported/Assessed, High qualifies and Wide does not.
+M52 High pressure settled33.
+
+ ❯ src/test/assembledSignificance.test.ts (4 tests | 1 failed | 3 skipped) 384814ms
+   × witness: actual goal attribution credit changes survival and later recall 384813ms
+     → expected [ { path: { …(3) }, …(1) }, …(16) ] to have a length of 16 but got 17
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSignificance.test.ts > witness: actual goal attribution credit changes survival and later recall
+AssertionError: expected [ { path: { …(3) }, …(1) }, …(16) ] to have a length of 16 but got 17
+
+- Expected
++ Received
+
+- 16
++ 17
+
+ ❯ src/test/assembledSignificance.test.ts:56:308
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 3 skipped (4)
+   Start at  12:33:37
+   Duration  388.52s (transform 2.16s, setup 0ms, collect 3.28s, tests 384.81s, environment 0ms, prepare 123ms)
+
+
+M52_CHECK native-witness-4 exit=1 seconds=389.04
+
+LOCAL REVIEW REPAIR: compare exact three-tier number before recency. The initial extension could give significant+used an extra bonus over significant-only; current native position episodes have no use bit, so the primary witness is unaffected. Added exhaustive original-kernel comparison including that combination; no law or gate change.
+
+LOCAL TEST REPAIR: native-witness-4 passed liveness, qualification, target survival/loss and actual recall33 before a final count assertion included the separate diagnostic quota. Corrected count to body/position shared quota16; capacity/laws unchanged. Cache immutable snapshots within each settled test checkpoint; invalidate before every advance. Split rollback and persistence into separate checks under the same caps.
+
+=== native-witness-5-and-calibration ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSignificance.test.ts > witness: actual goal attribution credit changes survival and later recall
+M52 live gate PASS: both arms Supported/Assessed, High qualifies and Wide does not.
+M52 High pressure settled33.
+M52 WITNESS live4groups/16consumed; focal body13/16. High MovingCloser -> focal end15 significant, survives14body+1visual pressure and actual recall33. Wide SameDistance -> no credit, end15 lost and absent recall33. Same laws/quotas/seed; no choice claim.
+
+stdout | src/test/assembledSignificance.test.ts > calibration: all directional and use combinations match original retention tiers
+M52 CALIBRATION 384 exact original-comparator matches; both directions/cardinality and extra use confer no significance-tier bonus. Existing assembled quota partition preserved.
+
+ ✓ src/test/assembledSignificance.test.ts (6 tests | 4 skipped) 388386ms
+   ✓ witness: actual goal attribution credit changes survival and later recall 388351ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 4 skipped (6)
+   Start at  12:42:13
+   Duration  392.10s (transform 2.17s, setup 0ms, collect 3.28s, tests 388.39s, environment 0ms, prepare 127ms)
+
+
+M52_CHECK native-witness-5-and-calibration exit=0 seconds=392.62
+
+LOCAL REVIEW REPAIR: preserve ordinary two-body goal assessment when no focal cue exists. Only actual focal assessments require focal pairing; incomplete focal evidence never falls back. A new0.53 native ordinary-goal regression checks no unsupported significance. This branch is absent from the primary comparison and does not change its gate.
+
+=== continuation-and-ordinary ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSignificance.test.ts > continuation: exact save17 restore through pressure
+M52 PERSISTENCE post-credit preparation failure rolls back17; save17 restore through33 byte-exact including significance, retention, recall, allocator and trace.
+
+ ✓ src/test/assembledSignificance.test.ts (7 tests | 5 skipped) 401223ms
+   ✓ continuation: exact save17 restore through pressure 393076ms
+   ✓ ordinary: existing goal meaning remains live without focal attribution 8146ms
+stdout | src/test/assembledSignificance.test.ts > ordinary: existing goal meaning remains live without focal attribution
+M52 ORDINARY original two-body goal assessment still Qualifies/MovingCloser under0.53 without a focal attribution; no significance invented.
+
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 5 skipped (7)
+   Start at  12:49:57
+   Duration  404.99s (transform 2.13s, setup 0ms, collect 3.23s, tests 401.22s, environment 0ms, prepare 124ms)
+
+
+M52_CHECK continuation-and-ordinary exit=0 seconds=405.5
+
+RECEIPT TEXT CORRECTION: continuation-and-ordinary selected only persistence and ordinary assessment. Its inherited console sentence also mentioned rollback; rollback has NOT run yet. Removed that clause from the test message. The separate rollback test remains mandatory and pending.
+M52_CHECK plan-stage-size-commit exit=0 seconds=1.45
+
+=== epistemic-and-boundaries ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSignificance.test.ts > epistemic: hidden body truth and unsupported attribution controls
+M52 EPISTEMIC reserve30/30.5 exact evidence-derived meaning/attribution/credit. Confounded attribution with qualifying goal produces no significance.
+
+stdout | src/test/assembledSignificance.test.ts > boundaries: old versions owner and fresh credit; PRIOR retention tiers
+M52 BOUNDARIES wrong owner/old version/fresh credit/stale lifecycle rejected; significance > use > unprotected, AgeOnly retained; immutable canonical direction set.
+
+ ✓ src/test/assembledSignificance.test.ts (7 tests | 5 skipped) 261399ms
+   ✓ epistemic: hidden body truth and unsupported attribution controls 249440ms
+   ✓ boundaries: old versions owner and fresh credit; PRIOR retention tiers 11958ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 5 skipped (7)
+   Start at  12:58:23
+   Duration  265.05s (transform 2.12s, setup 0ms, collect 3.22s, tests 261.40s, environment 0ms, prepare 115ms)
+
+
+M52_CHECK epistemic-and-boundaries exit=0 seconds=265.57
+
+=== rollback ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+SUCCESS: The process with PID 6044 (child process of PID 17312) has been terminated.
+SUCCESS: The process with PID 23916 (child process of PID 17312) has been terminated.
+SUCCESS: The process with PID 36848 (child process of PID 17312) has been terminated.
+SUCCESS: The process with PID 46308 (child process of PID 17312) has been terminated.
+SUCCESS: The process with PID 32504 (child process of PID 17312) has been terminated.
+SUCCESS: The process with PID 7376 (child process of PID 17312) has been terminated.
+SUCCESS: The process with PID 44112 (child process of PID 17312) has been terminated.
+SUCCESS: The process with PID 42136 (child process of PID 17312) has been terminated.
+SUCCESS: The process with PID 39344 (child process of PID 17312) has been terminated.
+SUCCESS: The process with PID 47784 (child process of PID 17312) has been terminated.
+SUCCESS: The process with PID 28944 (child process of PID 17312) has been terminated.
+SUCCESS: The process with PID 44848 (child process of PID 17312) has been terminated.
+SUCCESS: The process with PID 7388 (child process of PID 17312) has been terminated.
+SUCCESS: The process with PID 23452 (child process of PID 17312) has been terminated.
+SUCCESS: The process with PID 29180 (child process of PID 17312) has been terminated.
+SUCCESS: The process with PID 48556 (child process of PID 17312) has been terminated.
+SUCCESS: The process with PID 17312 (child process of PID 30676) has been terminated.
+
+M52_CHECK rollback exit=124 seconds=100.16
+
+LOCAL REVIEW: goal trace now explicitly includes the same actual attribution already serialized in its output report. No state/qualification/retention or serialization algorithm changed. The targeted ordinary-goal trace check is pending. Previous persistence passed before this disclosure-only edit; no claim that its new bytes have been rerun. Rollback hit the shortened100s budget-reservation cap, not its original600s cap. Replaced generic deep diff of byte arrays with exact length plus every-byte comparison (no hashing/truncation); clock/status and all three snapshot byte fields remain checked. Rollback and M51 regression remain pending.
+
+=== final-types ===
+
+M52_CHECK final-types exit=0 seconds=15.49
+
+=== original-kernels ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/goalOutcomeQualification.test.ts (7 tests) 9ms
+ ✓ src/test/directionalSignificanceState.test.ts (8 tests) 8ms
+ ✓ src/test/significanceFirstRetention.test.ts (8 tests) 9ms
+
+ Test Files  3 passed (3)
+      Tests  23 passed (23)
+   Start at  13:10:01
+   Duration  495ms (transform 174ms, setup 0ms, collect 291ms, tests 26ms, environment 0ms, prepare 375ms)
+
+
+M52_CHECK original-kernels exit=0 seconds=0.98
+
+=== boundary ===
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+M52_CHECK boundary exit=0 seconds=2.7
+
+=== research ===
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M52_CHECK research exit=0 seconds=3.62
+
+M52_CHECK whitespace-review exit=0 seconds=0.28
+CHECKPOINT: M52 incomplete; original1800s cap retained. Proposed +600s completion allowance supersedes the earlier +300s request, neither authorized yet. Remaining rollback/M51/ordinary trace/final-byte continuation are mandatory. No tests are waived.
+
+M52 preservation guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and M22-M51 retained tests unchanged; document/evidence caps. seconds=9.78
+M52 validation seconds including guard=1792.98
+
+=== staged-git-size ===
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M52_CHECK staged-git-size exit=0 seconds=0.75
