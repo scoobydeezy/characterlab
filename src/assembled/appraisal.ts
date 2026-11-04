@@ -7,6 +7,7 @@ import {deficitPressure,exact,atom} from '../campaign3/embodiedMath';
 import {cognitiveRecord as r} from '../campaign2/cognitiveCodecs';
 import {dataRecord as rec,dataField as f,dataItems as items,dataKey as key,dataUnsigned as uint,dataText as txt} from '../campaign2/canonicalData';
 import type {BodyEvidence} from './body';
+import {POSITION_MEMORY} from './memory';
 import {WORKSPACE} from './workspace';
 import {EPISODE} from './memory';
 export const MEMORY_CONTEXT='assembled-memory-context/0.1';
@@ -42,7 +43,7 @@ export function jointSignalSupport(raw:CanonicalValue,joint:CanonicalValue){
 /** Earlier context is an explicitly qualified appraisal, never a current observation. */
 export function contextAppraisal(task:CanonicalValue,workspace:CanonicalValue,at:bigint,current:BodyEvidence|undefined,threshold:Q,likelihoods?:ReadonlyMap<string,Q|undefined>){
  const w=items(workspace,'list'),t=w[1];
- if(w.length!==5||txt(w[0])!==WORKSPACE||typeof t==='boolean'||t.kind!=='signed'||t.value!==at||key(w[3])!==key(f(rec(task,384n),2n)))throw Error('memory context workspace association');
+ if(!(w.length===5||w.length===6&&txt(items(w[5],'list')[0])===POSITION_MEMORY+'/grouping')||txt(w[0])!==WORKSPACE||typeof t==='boolean'||t.kind!=='signed'||t.value!==at||key(w[3])!==key(f(rec(task,384n),2n)))throw Error('memory context workspace association');
  let sample=current?.sample,experience=current?.experience,selected:CanonicalValue=list([]),mode=sample?'Current':'Unavailable';
  if(current){if(current.settledEvent.dueAt!==at||current.settledEvent.phase!==20n)throw Error('memory context current evidence time');}
  else {const first=items(w[4],'list').find(v=>eqEpisode(items(v,'list')[1]));if(first){

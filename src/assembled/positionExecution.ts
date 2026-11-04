@@ -1,4 +1,7 @@
 /** Current-lane position/context operations within the one assembled scheduler. */
+import {POSITION_SELECT,POSITION_MEMORY_VERSION} from './memory';
+import {observedRole} from './encoding';
+import type {PreRecognitionSemanticExperience} from '../semanticBinding/perceptualEventFiles';
 import {list,text,unsigned as u,signed,typedIdentifier,type CanonicalValue} from '../substrate/canonicalEncoding';
 import {type AuthoritativeState,type StatePatch,type ActualReadRecord,statePathValue} from '../substrate/state';
 import {SchedulerContractError,type ScheduledEvent,type EventHandlerContext,type EventEmission} from '../substrate/scheduler';
@@ -22,27 +25,29 @@ import type {compileCampaign2StateModel} from '../campaign2/stateModel';
 const transitionValue=(v:object)=>meaningValue(Object.fromEntries(Object.entries(v).filter(([,x])=>x!==undefined)));
 const eq=(a:CanonicalValue,b:CanonicalValue)=>key(a)===key(b),fp=(e:ScheduledEvent)=>key(scheduledEventValue(e));
 const fail=(s:string):never=>{throw new SchedulerContractError('INPUT_NOT_ADMITTED','position '+s);};
-export function createPositionExecution(stateModel:ReturnType<typeof compileCampaign2StateModel>,originals:readonly ScheduledEvent[],model:CanonicalValue,run:CanonicalValue){
+export function createPositionExecution(stateModel:ReturnType<typeof compileCampaign2StateModel>,originals:readonly ScheduledEvent[],model:CanonicalValue,run:CanonicalValue,positionMemory=false){
+ const stages=positionMemory?[...POSITION_STAGES,POSITION_SELECT]:POSITION_STAGES,phases=[11n,12n,14n,20n];
  let active=false,at=0n,used=false,unbound=0,sample:ReturnType<typeof samplePosition>|undefined,observation:CanonicalValue|undefined,visualObservation:bigint|undefined,panelObservation:bigint|undefined,visualDetection:bigint|undefined,eventDetection:bigint|undefined,track:PerceptualReferentId|undefined,contextRef:PerceptualEventReferentId|undefined,eventRef:PerceptualEventReferentId|undefined,reservation:ExperienceReservation|undefined;
  let bindings:readonly PerceivedBindingEvidence[]=[],staged:StagedSemanticExperience[]=[];const pending=new Set<string>();
  const support=()=>[...(sample?.position?.kind==='Present'?[{observerId:OBSERVER,observationId:visualObservation!}]:[]),...(sample?.panel?.kind==='Present'?[{observerId:OBSERVER,observationId:panelObservation!}]:[])];
  const emit=(e:ScheduledEvent,phase:bigint,eventTypeId:ReturnType<typeof sid>):EventEmission=>({dueAt:e.dueAt,phase,eventTypeId,payload:observation!,dependencies:list([])});
- function trace(event:ScheduledEvent,input:CanonicalValue,outputs:CanonicalValue[],children:readonly ScheduledEvent[],reads:ActualReadRecord[],patch:StatePatch,diffs:ReturnType<typeof stateModel.applyPatch>['diffs']){return traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model,runIdentity:run,event,seamId:sid(1036,'seam/assembled-position-perception'),seamVersion:POSITION_VERSION,recordKind:event.eventTypeId,subjectIds:[BODY_OBSERVER],sourceRecordIds:[],registeredReadDomain:reads.map(x=>pattern(x.path)),actualReadRecords:reads,inputProjection:input,outputProjection:list(outputs),randomDrawRecords:[],quantizationOperations:[],statePatch:patch,structuralMutationDiffs:diffs,emittedEvents:children,invariantResults:[]});}
+ function trace(event:ScheduledEvent,input:CanonicalValue,outputs:CanonicalValue[],children:readonly ScheduledEvent[],reads:ActualReadRecord[],patch:StatePatch,diffs:ReturnType<typeof stateModel.applyPatch>['diffs']){return traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model,runIdentity:run,event,seamId:sid(1036,'seam/assembled-position-perception'),seamVersion:positionMemory?POSITION_MEMORY_VERSION:POSITION_VERSION,recordKind:event.eventTypeId,subjectIds:[BODY_OBSERVER],sourceRecordIds:[],registeredReadDomain:reads.map(x=>pattern(x.path)),actualReadRecords:reads,inputProjection:input,outputProjection:list(outputs),randomDrawRecords:[],quantizationOperations:[],statePatch:patch,structuralMutationDiffs:diffs,emittedEvents:children,invariantResults:[]});}
  return {
- eventTypes:()=>[POSITION_SOURCE,...POSITION_STAGES],
+ eventTypes:()=>[POSITION_SOURCE,...stages],
  begin(instant:bigint){if(active)fail('already active');active=true;at=instant;used=false;unbound=0;sample=undefined;observation=undefined;track=undefined;contextRef=undefined;eventRef=undefined;reservation=undefined;visualObservation=undefined;panelObservation=undefined;visualDetection=undefined;eventDetection=undefined;bindings=[];staged=[];pending.clear();},
  close(){active=false;sample=undefined;observation=undefined;reservation=undefined;staged=[];bindings=[];pending.clear();},
  prepareCommit(){if(!active||unbound||pending.size||originals.some(e=>e.dueAt===at)&&!used)fail('unfinished instant');validateSuccessfulExperienceSettlement(reservation?[reservation]:[],staged);},
  execute(c:EventHandlerContext<AuthoritativeState>){const {event,state}=c;if(!active||event.dueAt!==at)fail('inactive');const source=eq(event.eventTypeId,POSITION_SOURCE);
+ let memoryEvidence:{observation:CanonicalValue;experience:PreRecognitionSemanticExperience;contexts:CanonicalValue}|undefined;
  let nextState=state,outputs:CanonicalValue[]=[],reads:ActualReadRecord[]=[],patch:StatePatch={operations:[]},diffs:ReturnType<typeof stateModel.applyPatch>['diffs']=[];
  if(source){
-  if(event.phase!==10n||used||!originals.some(e=>fp(e)===fp(event)))fail('source binding');used=true;sample=samplePosition(event.payload,at);
+  if(event.phase!==10n||used||!originals.some(e=>fp(e)===fp(event)))fail('source binding');used=true;sample=samplePosition(event.payload,at,positionMemory);
   visualObservation=sample.position?c.allocateRuntimeId():undefined;panelObservation=sample.panel?c.allocateRuntimeId():undefined;
   const v=sample.position,p=sample.panel;
-  observation=list([text(POSITION),signed(at),!!v,!!p,list(v?.kind==='Present'?[typedIdentifier(1115,u(visualObservation!)),u(v.position.x),u(v.position.y),u(v.glyph)]:[]),list(p?.kind==='Present'?[typedIdentifier(1115,u(panelObservation!)),u(p.glyph),text(p.stage)]:[])]);
+  observation=list([text(POSITION),signed(at),!!v,!!p,list(v?.kind==='Present'?[typedIdentifier(1115,u(visualObservation!)),u(v.position.x),u(v.position.y),u(v.glyph)]:[]),list(p?.kind==='Present'?[typedIdentifier(1115,u(panelObservation!)),u(p.glyph),text(p.stage)]:[]),...(positionMemory?[u(sample.role)]:[])]);
   reservation=admitObservationLane({observerId:OBSERVER,lane:'Current',dueAt:at,emitsCharacterAccessibleEvidence:v?.kind==='Present'||p?.kind==='Present'},()=>c.allocateRuntimeId()).reservation;outputs=[observation];
  }else {
-  if(!pending.delete(fp(event))||!observation||!eq(event.payload,observation))fail('unbound child');const index=POSITION_STAGES.findIndex(t=>eq(t,event.eventTypeId));if(index<0||event.phase!==[11n,12n,14n][index])fail('phase');
+  if(!pending.delete(fp(event))||!observation||!eq(event.payload,observation))fail('unbound child');const index=stages.findIndex(t=>eq(t,event.eventTypeId));if(index<0||event.phase!==phases[index])fail('phase');
   if(index===0){
    const wp=windowPath(OBSERVER,'position'),priorWindow=stateModel.read(state,wp),window=readWindow(priorWindow.value,OBSERVER),tracks=trackState(state),events=eventState(state);
    const paths=[wp,nextTrackSequencePath(OBSERVER),nextEventSequencePath(OBSERVER),...state.entries().filter(e=>[241n,242n].includes(e.path.rootStateTypeId)&&e.path.fieldId===2n).map(e=>e.path)];
@@ -70,13 +75,13 @@ export function createPositionExecution(stateModel:ReturnType<typeof compileCamp
    for(const path of old)if(!target.some(p=>key(statePathValue(p))===key(statePathValue(path))))operations.push({kind:'remove',path,expectedOldValue:true});
    for(const path of target)if(!state.read(path).presence)operations.push(replacement(state,path,true));
    operations.push(replacement(state,wp,windowValue(window)));patch={operations};const applied=stateModel.applyPatch(state,patch,OWNER.Perception,{writableRoots:[241n,242n],targetPaths:operations.map(o=>o.path)});nextState=applied.state;diffs=applied.diffs;outputs=[list([text(POSITION+'/tracking'),signed(at),list(changes),windowValue(window)])];
-  }else if(index===1&&track){bindings=compilePerceivedBindings([{observerId:OBSERVER,perceptualEventReferentId:eventRef!,perceptualReferentId:track,eventRoleEvidence:{kind:'unresolved'},supportingObservationIds:[{observerId:OBSERVER,observationId:visualObservation!}],occurredAt:at,transformationVersion:'semantic-binding/0.1-candidate#SEM-001C'}],c.allocateRuntimeId()).bindings;outputs=bindings.map(perceivedBindingEvidenceValue);}
+  }else if(index===1&&track){bindings=compilePerceivedBindings([{observerId:OBSERVER,perceptualEventReferentId:eventRef!,perceptualReferentId:track,eventRoleEvidence:observedRole(positionMemory?sample!.role:0n),supportingObservationIds:[{observerId:OBSERVER,observationId:visualObservation!}],occurredAt:at,transformationVersion:'semantic-binding/0.1-candidate#SEM-001C'}],c.allocateRuntimeId()).bindings;outputs=bindings.map(perceivedBindingEvidenceValue);}
   else if(index===2){let experience:CanonicalValue=list([]);if(reservation){const x=freezeAndStageSemanticExperience(reservation,{experienceId:reservation.experienceId,observerId:OBSERVER,occurredAt:at,perceptualEventReferentIds:eventRef?[eventRef]:[],perceivedBindings:bindings,perceptualClassifications:[],perceptualEventClassifications:[],supportingObservationIds:support(),transformationVersion:'semantic-binding/0.1-candidate#SEM-001H'},14n);staged.push(x);experience=preRecognitionSemanticExperienceValue(x.experience);outputs.push(experience);}
    outputs.push(list([text(POSITION+'/experience'),signed(at),observation!,list(track?[perceptualReferentIdValue(track)]:[]),list(contextRef?[perceptualEventReferentIdValue(contextRef)]:[]),list(bindings.map(perceivedBindingEvidenceValue)),experience]));
-  }
+  }else if(index===3&&staged.length&&bindings.length){memoryEvidence={observation:observation!,experience:staged[0].experience,contexts:list(contextRef?[perceptualEventReferentIdValue(contextRef)]:[])};}
  }
- const step=source?0:POSITION_STAGES.findIndex(t=>eq(t,event.eventTypeId))+1,emissions=step<3?[emit(event,[11n,12n,14n][step],POSITION_STAGES[step])]:[];let bound=false;unbound++;
- return {nextState,outputs,emittedEvents:emissions,traceContributions:[],traceFactory(children:readonly ScheduledEvent[]){if(bound||!active||children.length!==emissions.length)fail('child binding');for(const [i,e] of children.entries()){const expected={...emissions[i],eventId:e.eventId,eventSequence:e.eventSequence,causalParentEventIds:[event.eventId]};if(e.eventSequence<=event.eventSequence||fp(e)!==fp(expected)||pending.has(fp(e)))fail('generated child mismatch');pending.add(fp(e));}bound=true;unbound--;return [trace(event,event.payload,outputs,children,reads,patch,diffs)];}};
+ const step=source?0:stages.findIndex(t=>eq(t,event.eventTypeId))+1,emissions=step<stages.length?[emit(event,phases[step],stages[step])]:[];let bound=false;unbound++;
+ return {memoryEvidence,nextState,outputs,emittedEvents:emissions,traceContributions:[],traceFactory(children:readonly ScheduledEvent[]){if(bound||!active||children.length!==emissions.length)fail('child binding');for(const [i,e] of children.entries()){const expected={...emissions[i],eventId:e.eventId,eventSequence:e.eventSequence,causalParentEventIds:[event.eventId]};if(e.eventSequence<=event.eventSequence||fp(e)!==fp(expected)||pending.has(fp(e)))fail('generated child mismatch');pending.add(fp(e));}bound=true;unbound--;return [trace(event,event.payload,outputs,children,reads,patch,diffs)];}};
  }
  };
 }

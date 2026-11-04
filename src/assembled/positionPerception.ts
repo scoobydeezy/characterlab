@@ -15,14 +15,15 @@ const require=(b:boolean,s:string)=>{if(!b)invalidModel('position perception '+s
 const time=(v:CanonicalValue)=>{require(typeof v!=='boolean'&&v.kind==='signed'&&v.value>=0n,'time');return (v as {value:bigint}).value;};
 const cell=(v:CanonicalValue)=>{const n=uint(v);require(n<=7n,'coordinate/glyph0..7');return n;};
 export function compilePosition(v:CanonicalValue){const a=items(v,'list');require(a.length===2&&key(a[0])===key(text(POSITION))&&key(a[1])===key(POSITION_AUTHORITY),'declaration/authority');return true;}
-export function positionSource(v:CanonicalValue,at:bigint){
+export function positionSource(v:CanonicalValue,at:bigint,roles=false){
  const a=items(v,'list');require(a.length===3&&key(a[0])===key(text(POSITION)),'source');
- const pos=items(a[1],'list'),panel=items(a[2],'list');require([0,5].includes(pos.length)&&[0,4].includes(panel.length)&&!!(pos.length||panel.length),'sample grammar');
- if(pos.length)require(pos.slice(3).every(v=>typeof v==='boolean'),'position permission');
+ const pos=items(a[1],'list'),panel=items(a[2],'list');require((roles?[0,5,6]:[0,5]).includes(pos.length)&&[0,4].includes(panel.length)&&!!(pos.length||panel.length),'sample grammar');
+ if(pos.length)require(pos.slice(3,5).every(v=>typeof v==='boolean'),'position permission');
  if(panel.length)require(panel.slice(2).every(v=>typeof v==='boolean')&&['Before','Motion','After'].includes(txt(panel[1])),'panel permission/stage');
- return {position:pos.length?{at,x:cell(pos[0]),y:cell(pos[1]),glyph:cell(pos[2]),visible:pos[3]===true,permitted:pos[4]===true}:undefined,panel:panel.length?{at,glyph:Number(cell(panel[0])),stage:txt(panel[1]) as TrialPanelStage,visible:panel[2]===true,permitted:panel[3]===true}:undefined};
+ const role=pos.length===6?uint(pos[5]):0n;require(role<=4n,'observed role0..4');
+ return {role,position:pos.length?{at,x:cell(pos[0]),y:cell(pos[1]),glyph:cell(pos[2]),visible:pos[3]===true,permitted:pos[4]===true}:undefined,panel:panel.length?{at,glyph:Number(cell(panel[0])),stage:txt(panel[1]) as TrialPanelStage,visible:panel[2]===true,permitted:panel[3]===true}:undefined};
 }
-export function samplePosition(v:CanonicalValue,at:bigint){const s=positionSource(v,at);return {position:s.position?observePositionDisplay(createPositionDisplaySource([s.position]),at):undefined,panel:s.panel?observeTrialPanel(createTrialPanelSource([s.panel]),at):undefined};}
+export function samplePosition(v:CanonicalValue,at:bigint,roles=false){const s=positionSource(v,at,roles);return {role:s.position?.visible&&s.position.permitted?s.role:0n,position:s.position?observePositionDisplay(createPositionDisplaySource([s.position]),at):undefined,panel:s.panel?observeTrialPanel(createTrialPanelSource([s.panel]),at):undefined};}
 export const windowPath=(observer:string,channel:'position'|'social'):StatePath=>({rootStateTypeId:241n,fieldId:3n,selectors:[{kind:'mapKey',key:list([observerIdValue(observer),text(channel)])}]});
 export const isWindow=(p:StatePath)=>p.rootStateTypeId===241n&&p.fieldId===3n;
 export function readWindow(v:CanonicalValue|undefined,observer:string){
