@@ -1,56 +1,39 @@
-# Current work — M49 shared position/context perception (2026-11-04)
+# Current work — M49 shared perception complete (2026-11-04)
 
-M49 is the perception package of the retained-attribution connection. Baseline8c1b2453.
-Plan committed before code. It joins actual observed positions and trial boundaries
-through the character's existing SEM owners, allocator, scheduler, trace and save.
+The character perceives displayed positions and trial boundaries through its shared
+perception state. Interleaved visual markers preserve the recognized person's own
+continuity. Closing a trial leaves unrelated social events intact.
+
+[M49 result](ASSEMBLED_CHARACTER_M49_RESULT.md) and
+[checks](ASSEMBLED_CHARACTER_M49_CHECKS.txt). Plan e6c6b2bf, baseline8c1b2453.
+The committed plan contains the original bounded card; Git preserves its exact scope.
 
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
-## Bounded card
-- Capability1: governed position-display and trial-panel sources -> permitted current
-  observations10 -> shared tracking/segmentation11 -> bindings12 -> freeze14.
-  One displayed marker per sweep,0..7 coordinates/glyph; at most10 visual and16 panel
-  sweeps at1..100, one combined opportunity per instant. Explicit unsampled differs
-  from observed absence. No authored identity, event grouping, motion or support.
-- Capability2: observed equal glyph across consecutive visual sweeps retains track;
-  missing/changed glyph starts a new track. Before/changed panel glyph starts context,
-  Motion continues it, After/observed absence ends it. Other active social files stay
-  intact. Both channels share observer/counters. Last social track is explicitly
-  scoped so an interleaved visual track cannot become the previous observed person.
-- Capability3: actual semantic freezes publish positions/bindings and perceived
-  context with supporting observations, checked against original component outcomes.
-  No episodic persistence, attribution, significance or choice-change claim in this
-  package. Memory/access and body-context joining follow immediately, no other breadth.
-- Rules/registry0.50,34 slots. New contract ASSEMBLED_CHARACTER_POSITION_PERCEPTION.
-  Port the bounded window matching/segmentation policies around unchanged SEM A/C/H
-  kernels; original marker/panel-window components remain differential controls.
-  Shared observer counters admit0..64 (engineering bound); historical bundles keep8.
-  Perception-owned241/3 keyed by observer/channel stores current window only, no
-  history or parallel counter. Event memberships can end under existing SEM authority.
-- Files max12: positionPerception, positionExecution; model,inputs,state,runtime,
-  traceBinding,recognition,recognitionState,recognitionExecution,socialExecution;
-  one assembledPositionPerception test with embedded fixture. No framework or UI.
-- Primary fixture: physical tasks, reserve20/rate0/width1, seed0. Panel Before1,
-  Motion2/3, After4; visible positions(0,0)->(1,0) at2/3; same glyph. Compare changed
-  visual glyph and changed panel glyph with both freezes live. Expected same vs new
-  track/context; actual coordinate values preserved, no inferred Stroke flag.
-- Mixed witness: earlier social observation, then visual track, then actual social
-  continuity. Require prior social track retained, global distinct track/event IDs,
-  original social recognition/meaning intact and no social event removed by panel end.
-- Checks: original marker/panel differential vectors; native liveness/observed joins;
-  hidden coordinates under denied access, absent vs unsampled, stale/forged child,
-  invalid domains/source count/bootstrap/foreign ownership; late-failure rollback;
-  exact repeat and restore during active context through closure. Original M48
-  connection and targeted recognition/encoding controls; SEM phase/authority/rollback
-  vectors, types/boundary/research, frozen105 and old-test/doc/artifact guards, Git size.
-- One validation job.600s/command,1800s cumulative including failures/guards;
- 20 evidence files/5MiB,12 source/test files. Stop on passing checks; ordinary defects
-  repaired transparently inside scope. No seed/magnitude search or changed gate.
-- Done: shared perception and mixed-channel continuity witnesses plus checks pass.
-  Record BRIEF-12.3-5/12.1 experience prerequisite only; full132-clause gate unchanged.
+## Completed bounded package
+- Rules/registry0.50; [position perception0.1](../formal/ASSEMBLED_CHARACTER_POSITION_PERCEPTION_CONTRACT.md).
+- Original source filtering and SEM A/C/H kernels; bounded marker/panel window policy
+  joins existing241/242 state/counters. Perception owns241/3 current channel windows.
+  No private archive, counter, scheduler, alternate factory or new psychological law.
+- Physical primary: position(0,0)->(1,0), panel Before/Motion/After. Same/changed glyph
+  and context match original controls after live-freeze preconditions.
+- Mixed M45 social stand-in: track0 -> visual track1 -> social track0; recognized
+  identity and live appraisal preserved; both social events survive panel closure.
+- Five new tests,3 unchanged regressions,19 SEM foundation vectors pass. Types,
+  boundary and research pass. Denial/absence/unsampled, admission/authority, actual
+  children, whole-instant rollback and exact active-context restore2->4 covered.
+- Ordinary serialization/test/type errors are preserved in the result/log. No seed,
+  magnitude, law or behavioral-gate tuning.12 production/test files,2 evidence files;
+  final guards/size pass;668.00s/1800s total, maximum178.76s/600s.
 
-LOCAL DISPOSITION: the original scene/window wrappers assume exclusive SEM state.
-Use the same SEM authorities with channel-window metadata; no private perception
-manager or separate allocator. Position/context-to-retained-attribution remains
-Deferred (component not integrated) until the following memory/access package.
+## Next connection — no unrelated breadth
+Carry actual frozen position/context records into existing346 episodic retention,
+then normal retrieval/workspace, joining actual body evidence for focal attribution.
+Only then derive significance from attribution plus goal-relative meaning.
+Position/context retention and focal attribution remain **Deferred (component not
+integrated)** for BRIEF-12.3-2/-5. M49 supplies perception prerequisites only.
+No archive scan, authored grouping/motion/causal support or separate store is admitted.
+Write the next bounded card before code; retain the same package/check limits.
+
 All21 members/15 families/132 clauses and18 conditional obligations remain.
+No full clause/corpus completion, UI work or autonomous partner work is inferred.

@@ -1,0 +1,1277 @@
+
+=== types-first ===
+npm error Missing script: "typecheck"
+npm error
+npm error To see a list of scripts, run:
+npm error   npm run
+npm error A complete log of this run can be found in: C:\Users\scoob\AppData\Local\npm-cache\_logs\2026-11-04T14_43_52_274Z-debug-0.log
+
+M49_CHECK types-first exit=1 seconds=0.38
+
+=== types ===
+src/assembled/positionExecution.ts(33,197): error TS2554: Expected 2 arguments, but got 4.
+src/assembled/positionExecution.ts(52,6): error TS2322: Type 'PerceptualContinuantFileState' is not assignable to type '{ nextTrackSequenceByObserver: Map<string, bigint>; activePerceptualReferentIds: PerceptualReferentId[]; }'.
+  Types of property 'nextTrackSequenceByObserver' are incompatible.
+    Type 'ReadonlyMap<string, bigint>' is missing the following properties from type 'Map<string, bigint>': clear, delete, set, [Symbol.toStringTag]
+src/assembled/positionExecution.ts(56,260): error TS2322: Type 'PerceptualEventFileState' is not assignable to type '{ nextEventSequenceByObserver: Map<string, bigint>; activeEventFiles: PerceptualEventReferentId[]; }'.
+  Types of property 'nextEventSequenceByObserver' are incompatible.
+    Type 'ReadonlyMap<string, bigint>' is missing the following properties from type 'Map<string, bigint>': clear, delete, set, [Symbol.toStringTag]
+src/assembled/positionExecution.ts(61,5): error TS2322: Type 'PerceptualEventFileState' is not assignable to type '{ nextEventSequenceByObserver: Map<string, bigint>; activeEventFiles: PerceptualEventReferentId[]; }'.
+  Types of property 'nextEventSequenceByObserver' are incompatible.
+    Type 'ReadonlyMap<string, bigint>' is missing the following properties from type 'Map<string, bigint>': clear, delete, set, [Symbol.toStringTag]
+src/assembled/positionExecution.ts(63,670): error TS2322: Type 'PerceptualEventFileState' is not assignable to type '{ nextEventSequenceByObserver: Map<string, bigint>; activeEventFiles: PerceptualEventReferentId[]; }'.
+  Types of property 'nextEventSequenceByObserver' are incompatible.
+    Type 'ReadonlyMap<string, bigint>' is missing the following properties from type 'Map<string, bigint>': clear, delete, set, [Symbol.toStringTag]
+src/assembled/positionExecution.ts(73,63): error TS2322: Type 'CanonicalValue | undefined' is not assignable to type 'CanonicalValue'.
+  Type 'undefined' is not assignable to type 'CanonicalValue'.
+
+M49_CHECK types exit=1 seconds=19.18
+
+=== position-connection ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledPositionPerception.test.ts (5 tests | 1 failed | 4 skipped) 50747ms
+   × connection and original controls: actual positions and contexts share native SEM owners 50746ms
+     → unsupported meaning result
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledPositionPerception.test.ts > connection and original controls: actual positions and contexts share native SEM owners
+SchedulerContractError: unsupported meaning result
+ ❯ fail src/substrate/scheduler.ts:667:9
+    665| 
+    666| function fail(code: SchedulerFailureCode, message: string): never {
+    667|   throw new SchedulerContractError(code, message);
+       |         ^
+    668| }
+    669| 
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:390:11
+ ❯ Object.settleNextInstant src/assembled/character.ts:40:58
+ ❯ Module.through src/test/fixtures/assembledComparison.ts:15:125
+ ❯ run src/test/assembledPositionPerception.test.ts:37:148
+ ❯ src/test/assembledPositionPerception.test.ts:48:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 4 skipped (5)
+   Start at  08:46:39
+   Duration  54.57s (transform 2.13s, setup 0ms, collect 3.23s, tests 50.75s, environment 0ms, prepare 299ms)
+
+
+M49_CHECK position-connection exit=1 seconds=57.07
+
+=== types-corrected ===
+
+M49_CHECK types-corrected exit=0 seconds=16.62
+
+=== position-and-social ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledPositionPerception.test.ts (5 tests | 2 failed | 3 skipped) 95765ms
+   × connection and original controls: actual positions and contexts share native SEM owners 73555ms
+     → expected [ { kind: 'record', …(2) }, …(16) ] to have a length of 16 but got 17
+   × mixed continuity: social -> visual -> social retains its own observed track 22209ms
+     → expected [ …(2) ] to deeply equal [ …(2) ]
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledPositionPerception.test.ts > connection and original controls: actual positions and contexts share native SEM owners
+AssertionError: expected [ { kind: 'record', …(2) }, …(16) ] to have a length of 16 but got 17
+
+- Expected
++ Received
+
+- 16
++ 17
+
+ ❯ src/test/assembledPositionPerception.test.ts:54:115
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  src/test/assembledPositionPerception.test.ts > mixed continuity: social -> visual -> social retains its own observed track
+AssertionError: expected [ …(2) ] to deeply equal [ …(2) ]
+
+- Expected
++ Received
+
+  Array [
+    Array [
+      Object {
+        "kind": "text",
+        "value": "assembled-social-people/0.1/appraisal",
+      },
+      Object {
+        "items": Array [
+          Object {
+            "kind": "text",
+            "value": "assembled-social/0.1/appraisal",
+          },
+          Object {
+            "kind": "signed",
+            "value": 3n,
+          },
+          Object {
+            "kind": "typedIdentifier",
+            "namespaceId": 1002n,
+            "payload": Object {
+              "kind": "typedIdentifier",
+              "namespaceId": 1037n,
+              "payload": Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1038n,
+                "payload": Object {
+                  "kind": "text",
+                  "value": "content/recognition/other",
+                },
+              },
+            },
+          },
+          Object {
+            "items": Array [],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [
+              Object {
+                "items": Array [
+                  Object {
+                    "fields": Map {
+                      1n => Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1002n,
+                        "payload": Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1037n,
+                          "payload": Object {
+                            "kind": "typedIdentifier",
+                            "namespaceId": 1038n,
+                            "payload": Object {
+                              "kind": "text",
+                              "value": "character/bridge-subject",
+                            },
+                          },
+                        },
+                      },
+                      2n => Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1002n,
+                        "payload": Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1037n,
+                          "payload": Object {
+                            "kind": "typedIdentifier",
+                            "namespaceId": 1038n,
+                            "payload": Object {
+                              "kind": "text",
+                              "value": "content/configurable-garden",
+                            },
+                          },
+                        },
+                      },
+                    },
+                    "kind": "record",
+                    "schema": Object {
+                      "fields": Array [
+                        Object {
+                          "id": 1n,
+                          "name": "CharacterId",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 2n,
+                          "name": "TaskReferent",
+                          "required": true,
+                        },
+                      ],
+                      "name": "TaskCommitmentKey",
+                      "schemaVersion": 1n,
+                      "typeId": 371n,
+                    },
+                  },
+                  true,
+                  Object {
+                    "items": Array [],
+                    "kind": "list",
+                  },
+                ],
+                "kind": "list",
+              },
+            ],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [
+              Object {
+                "kind": "text",
+                "value": "assembled-social-memory-context/0.1",
+              },
+              Object {
+                "items": Array [],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [],
+                "kind": "list",
+              },
+            ],
+            "kind": "list",
+          },
+        ],
+        "kind": "list",
+      },
+      Object {
+        "items": Array [
+          Object {
+            "kind": "text",
+            "value": "assembled-social/0.1/appraisal",
+          },
+          Object {
+            "kind": "signed",
+            "value": 3n,
+          },
+          Object {
+            "kind": "typedIdentifier",
+            "namespaceId": 1002n,
+            "payload": Object {
+              "kind": "typedIdentifier",
+              "namespaceId": 1037n,
+              "payload": Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1038n,
+                "payload": Object {
+                  "kind": "text",
+                  "value": "content/assembled-social/target",
+                },
+              },
+            },
+          },
+          Object {
+            "items": Array [
+              Object {
+                "items": Array [
+                  Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1115n,
+                    "payload": Object {
+                      "kind": "unsigned",
+-                     "value": 13n,
++                     "value": 16n,
+                    },
+                  },
+                  Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1037n,
+                      "payload": Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1038n,
+                        "payload": Object {
+                          "kind": "text",
+                          "value": "character/bridge-subject",
+                        },
+                      },
+                    },
+                  },
+                  Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1037n,
+                      "payload": Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1038n,
+                        "payload": Object {
+                          "kind": "text",
+                          "value": "content/assembled-social/target",
+                        },
+                      },
+                    },
+                  },
+                  Object {
+                    "kind": "signed",
+                    "value": 1n,
+                  },
+                  Object {
+                    "kind": "unsigned",
+                    "value": 1n,
+                  },
+                  Object {
+                    "kind": "unsigned",
+                    "value": 1n,
+                  },
+                  Object {
+                    "items": Array [
+                      true,
+                    ],
+                    "kind": "list",
+                  },
+                  Object {
+                    "items": Array [
+                      true,
+                    ],
+                    "kind": "list",
+                  },
+                ],
+                "kind": "list",
+              },
+            ],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [
+              Object {
+                "denominator": 1n,
+                "kind": "rational",
+                "numerator": 1n,
+              },
+            ],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [
+              Object {
+                "items": Array [
+                  Object {
+                    "fields": Map {
+                      1n => Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1002n,
+                        "payload": Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1037n,
+                          "payload": Object {
+                            "kind": "typedIdentifier",
+                            "namespaceId": 1038n,
+                            "payload": Object {
+                              "kind": "text",
+                              "value": "character/bridge-subject",
+                            },
+                          },
+                        },
+                      },
+                      2n => Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1002n,
+                        "payload": Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1037n,
+                          "payload": Object {
+                            "kind": "typedIdentifier",
+                            "namespaceId": 1038n,
+                            "payload": Object {
+                              "kind": "text",
+                              "value": "content/task-a",
+                            },
+                          },
+                        },
+                      },
+                    },
+                    "kind": "record",
+                    "schema": Object {
+                      "fields": Array [
+                        Object {
+                          "id": 1n,
+                          "name": "CharacterId",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 2n,
+                          "name": "TaskReferent",
+                          "required": true,
+                        },
+                      ],
+                      "name": "TaskCommitmentKey",
+                      "schemaVersion": 1n,
+                      "typeId": 371n,
+                    },
+                  },
+                  true,
+                  Object {
+                    "items": Array [
+                      Object {
+                        "denominator": 1n,
+                        "kind": "rational",
+                        "numerator": 0n,
+                      },
+                    ],
+                    "kind": "list",
+                  },
+                ],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "fields": Map {
+                      1n => Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1002n,
+                        "payload": Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1037n,
+                          "payload": Object {
+                            "kind": "typedIdentifier",
+                            "namespaceId": 1038n,
+                            "payload": Object {
+                              "kind": "text",
+                              "value": "character/bridge-subject",
+                            },
+                          },
+                        },
+                      },
+                      2n => Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1002n,
+                        "payload": Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1037n,
+                          "payload": Object {
+                            "kind": "typedIdentifier",
+                            "namespaceId": 1038n,
+                            "payload": Object {
+                              "kind": "text",
+                              "value": "content/task-b",
+                            },
+                          },
+                        },
+                      },
+                    },
+                    "kind": "record",
+                    "schema": Object {
+                      "fields": Array [
+                        Object {
+                          "id": 1n,
+                          "name": "CharacterId",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 2n,
+                          "name": "TaskReferent",
+                          "required": true,
+                        },
+                      ],
+                      "name": "TaskCommitmentKey",
+                      "schemaVersion": 1n,
+                      "typeId": 371n,
+                    },
+                  },
+                  false,
+                  Object {
+                    "items": Array [
+                      Object {
+                        "denominator": 1n,
+                        "kind": "rational",
+                        "numerator": 1n,
+                      },
+                    ],
+                    "kind": "list",
+                  },
+                ],
+                "kind": "list",
+              },
+            ],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [
+              Object {
+                "kind": "text",
+                "value": "assembled-social-memory-context/0.1",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "items": Array [
+                      Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1115n,
+                        "payload": Object {
+                          "kind": "unsigned",
+-                         "value": 13n,
++                         "value": 16n,
+                        },
+                      },
+                      Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1002n,
+                        "payload": Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1037n,
+                          "payload": Object {
+                            "kind": "typedIdentifier",
+                            "namespaceId": 1038n,
+                            "payload": Object {
+                              "kind": "text",
+                              "value": "character/bridge-subject",
+                            },
+                          },
+                        },
+                      },
+                      Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1002n,
+                        "payload": Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1037n,
+                          "payload": Object {
+                            "kind": "typedIdentifier",
+                            "namespaceId": 1038n,
+                            "payload": Object {
+                              "kind": "text",
+                              "value": "content/assembled-social/target",
+                            },
+                          },
+                        },
+                      },
+                      Object {
+                        "kind": "signed",
+                        "value": 1n,
+                      },
+                      Object {
+                        "kind": "unsigned",
+                        "value": 1n,
+                      },
+                      Object {
+                        "kind": "unsigned",
+                        "value": 1n,
+                      },
+                      Object {
+                        "items": Array [
+                          true,
+                        ],
+                        "kind": "list",
+                      },
+                      Object {
+                        "items": Array [
+                          true,
+                        ],
+                        "kind": "list",
+                      },
+                    ],
+                    "kind": "list",
+                  },
+                ],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "denominator": 1n,
+                    "kind": "rational",
+                    "numerator": 1n,
+                  },
+                ],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [],
+                "kind": "list",
+              },
+            ],
+            "kind": "list",
+          },
+        ],
+        "kind": "list",
+      },
+    ],
+    Array [
+      Object {
+        "kind": "text",
+        "value": "assembled-social-people/0.1/appraisal",
+      },
+      Object {
+        "items": Array [
+          Object {
+            "kind": "text",
+            "value": "assembled-social/0.1/appraisal",
+          },
+          Object {
+            "kind": "signed",
+            "value": 4n,
+          },
+          Object {
+            "kind": "typedIdentifier",
+            "namespaceId": 1002n,
+            "payload": Object {
+              "kind": "typedIdentifier",
+              "namespaceId": 1037n,
+              "payload": Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1038n,
+                "payload": Object {
+                  "kind": "text",
+                  "value": "content/recognition/other",
+                },
+              },
+            },
+          },
+          Object {
+            "items": Array [],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [
+              Object {
+                "items": Array [
+                  Object {
+                    "fields": Map {
+                      1n => Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1002n,
+                        "payload": Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1037n,
+                          "payload": Object {
+                            "kind": "typedIdentifier",
+                            "namespaceId": 1038n,
+                            "payload": Object {
+                              "kind": "text",
+                              "value": "character/bridge-subject",
+                            },
+                          },
+                        },
+                      },
+                      2n => Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1002n,
+                        "payload": Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1037n,
+                          "payload": Object {
+                            "kind": "typedIdentifier",
+                            "namespaceId": 1038n,
+                            "payload": Object {
+                              "kind": "text",
+                              "value": "content/configurable-garden",
+                            },
+                          },
+                        },
+                      },
+                    },
+                    "kind": "record",
+                    "schema": Object {
+                      "fields": Array [
+                        Object {
+                          "id": 1n,
+                          "name": "CharacterId",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 2n,
+                          "name": "TaskReferent",
+                          "required": true,
+                        },
+                      ],
+                      "name": "TaskCommitmentKey",
+                      "schemaVersion": 1n,
+                      "typeId": 371n,
+                    },
+                  },
+                  true,
+                  Object {
+                    "items": Array [],
+                    "kind": "list",
+                  },
+                ],
+                "kind": "list",
+              },
+            ],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [
+              Object {
+                "kind": "text",
+                "value": "assembled-social-memory-context/0.1",
+              },
+              Object {
+                "items": Array [],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [],
+                "kind": "list",
+              },
+            ],
+            "kind": "list",
+          },
+        ],
+        "kind": "list",
+      },
+      Object {
+        "items": Array [
+          Object {
+            "kind": "text",
+            "value": "assembled-social/0.1/appraisal",
+          },
+          Object {
+            "kind": "signed",
+            "value": 4n,
+          },
+          Object {
+            "kind": "typedIdentifier",
+            "namespaceId": 1002n,
+            "payload": Object {
+              "kind": "typedIdentifier",
+              "namespaceId": 1037n,
+              "payload": Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1038n,
+                "payload": Object {
+                  "kind": "text",
+                  "value": "content/assembled-social/target",
+                },
+              },
+            },
+          },
+          Object {
+            "items": Array [
+              Object {
+                "items": Array [
+                  Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1115n,
+                    "payload": Object {
+                      "kind": "unsigned",
+-                     "value": 13n,
++                     "value": 16n,
+                    },
+                  },
+                  Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1037n,
+                      "payload": Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1038n,
+                        "payload": Object {
+                          "kind": "text",
+                          "value": "character/bridge-subject",
+                        },
+                      },
+                    },
+                  },
+                  Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1037n,
+                      "payload": Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1038n,
+                        "payload": Object {
+                          "kind": "text",
+                          "value": "content/assembled-social/target",
+                        },
+                      },
+                    },
+                  },
+                  Object {
+                    "kind": "signed",
+                    "value": 1n,
+                  },
+                  Object {
+                    "kind": "unsigned",
+                    "value": 1n,
+                  },
+                  Object {
+                    "kind": "unsigned",
+                    "value": 1n,
+                  },
+                  Object {
+                    "items": Array [
+                      true,
+                    ],
+                    "kind": "list",
+                  },
+                  Object {
+                    "items": Array [
+                      true,
+                    ],
+                    "kind": "list",
+                  },
+                ],
+                "kind": "list",
+              },
+            ],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [
+              Object {
+                "denominator": 1n,
+                "kind": "rational",
+                "numerator": 1n,
+              },
+            ],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [
+              Object {
+                "items": Array [
+                  Object {
+                    "fields": Map {
+                      1n => Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1002n,
+                        "payload": Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1037n,
+                          "payload": Object {
+                            "kind": "typedIdentifier",
+                            "namespaceId": 1038n,
+                            "payload": Object {
+                              "kind": "text",
+                              "value": "character/bridge-subject",
+                            },
+                          },
+                        },
+                      },
+                      2n => Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1002n,
+                        "payload": Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1037n,
+                          "payload": Object {
+                            "kind": "typedIdentifier",
+                            "namespaceId": 1038n,
+                            "payload": Object {
+                              "kind": "text",
+                              "value": "content/task-a",
+                            },
+                          },
+                        },
+                      },
+                    },
+                    "kind": "record",
+                    "schema": Object {
+                      "fields": Array [
+                        Object {
+                          "id": 1n,
+                          "name": "CharacterId",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 2n,
+                          "name": "TaskReferent",
+                          "required": true,
+                        },
+                      ],
+                      "name": "TaskCommitmentKey",
+                      "schemaVersion": 1n,
+                      "typeId": 371n,
+                    },
+                  },
+                  true,
+                  Object {
+                    "items": Array [
+                      Object {
+                        "denominator": 1n,
+                        "kind": "rational",
+                        "numerator": 0n,
+                      },
+                    ],
+                    "kind": "list",
+                  },
+                ],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "fields": Map {
+                      1n => Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1002n,
+                        "payload": Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1037n,
+                          "payload": Object {
+                            "kind": "typedIdentifier",
+                            "namespaceId": 1038n,
+                            "payload": Object {
+                              "kind": "text",
+                              "value": "character/bridge-subject",
+                            },
+                          },
+                        },
+                      },
+                      2n => Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1002n,
+                        "payload": Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1037n,
+                          "payload": Object {
+                            "kind": "typedIdentifier",
+                            "namespaceId": 1038n,
+                            "payload": Object {
+                              "kind": "text",
+                              "value": "content/task-b",
+                            },
+                          },
+                        },
+                      },
+                    },
+                    "kind": "record",
+                    "schema": Object {
+                      "fields": Array [
+                        Object {
+                          "id": 1n,
+                          "name": "CharacterId",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 2n,
+                          "name": "TaskReferent",
+                          "required": true,
+                        },
+                      ],
+                      "name": "TaskCommitmentKey",
+                      "schemaVersion": 1n,
+                      "typeId": 371n,
+                    },
+                  },
+                  false,
+                  Object {
+                    "items": Array [
+                      Object {
+                        "denominator": 1n,
+                        "kind": "rational",
+                        "numerator": 1n,
+                      },
+                    ],
+                    "kind": "list",
+                  },
+                ],
+                "kind": "list",
+              },
+            ],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [
+              Object {
+                "kind": "text",
+                "value": "assembled-social-memory-context/0.1",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "items": Array [
+                      Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1115n,
+                        "payload": Object {
+                          "kind": "unsigned",
+-                         "value": 13n,
++                         "value": 16n,
+                        },
+                      },
+                      Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1002n,
+                        "payload": Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1037n,
+                          "payload": Object {
+                            "kind": "typedIdentifier",
+                            "namespaceId": 1038n,
+                            "payload": Object {
+                              "kind": "text",
+                              "value": "character/bridge-subject",
+                            },
+                          },
+                        },
+                      },
+                      Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1002n,
+                        "payload": Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1037n,
+                          "payload": Object {
+                            "kind": "typedIdentifier",
+                            "namespaceId": 1038n,
+                            "payload": Object {
+                              "kind": "text",
+                              "value": "content/assembled-social/target",
+                            },
+                          },
+                        },
+                      },
+                      Object {
+                        "kind": "signed",
+                        "value": 1n,
+                      },
+                      Object {
+                        "kind": "unsigned",
+                        "value": 1n,
+                      },
+                      Object {
+                        "kind": "unsigned",
+                        "value": 1n,
+                      },
+                      Object {
+                        "items": Array [
+                          true,
+                        ],
+                        "kind": "list",
+                      },
+                      Object {
+                        "items": Array [
+                          true,
+                        ],
+                        "kind": "list",
+                      },
+                    ],
+                    "kind": "list",
+                  },
+                ],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "denominator": 1n,
+                    "kind": "rational",
+                    "numerator": 1n,
+                  },
+                ],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [],
+                "kind": "list",
+              },
+            ],
+            "kind": "list",
+          },
+        ],
+        "kind": "list",
+      },
+    ],
+  ]
+
+ ❯ src/test/assembledPositionPerception.test.ts:65:289
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+ Test Files  1 failed (1)
+      Tests  2 failed | 3 skipped (5)
+   Start at  08:49:59
+   Duration  99.36s (transform 2.10s, setup 0ms, collect 3.17s, tests 95.76s, environment 0ms, prepare 127ms)
+
+
+M49_CHECK position-and-social exit=1 seconds=100.93
+
+=== position-full ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledPositionPerception.test.ts (0 test)
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledPositionPerception.test.ts [ src/test/assembledPositionPerception.test.ts ]
+Error: Transform failed with 1 error:
+C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/src/test/assembledPositionPerception.test.ts:55:123: ERROR: Expected ";" but found ")"
+  Plugin: vite:esbuild
+  File: C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/src/test/assembledPositionPerception.test.ts:55:123
+  
+  Expected ";" but found ")"
+  53 |   expect(items(items(at(a,2)[2],'list')[4],'list').slice(1,3)).toEqual([u(0),u(0)]);expect(items(items(at(a,3)[2],'list')[4],'list').slice(1,3)).toEqual([u(1),u(0)]);
+  54 |   expect(readWindow(state(a).read(windowPath(OBSERVER,'position')).value,OBSERVER).panel).toBeUndefined();expect(eventState(state(a)).activeEventFiles).toHaveLength(0);
+  55 |   const trace=outputs(a.snapshot().trace,160n).filter(t=>key(f(t,5n))===key(sid(1036,'seam/assembled-position-perception'))));expect(trace).toHaveLength(16);for(const t of trace){const e=rec(f(t,4n),130n);if(uint(f(e,3n))!==10n){const parents=items(f(e,8n),'list');expect(parents).toHaveLength(1);expect(trace.some(p=>key(f(rec(f(p,4n),130n),1n))===key(parents[0]))).toBe(true);}}
+     |                                                                                                                             ^
+  56 |   console.info('M49 CONNECTION live typed227 + observed coordinates; same/changed visual glyph and panel glyph match original windows; real shared241/242 mutations and child joins; closure ends panel.');
+  57 |  },600000);
+  
+ ❯ failureErrorWithLog ../../../../Documents/GitHub/characterlab/node_modules/esbuild/lib/main.js:1472:15
+ ❯ ../../../../Documents/GitHub/characterlab/node_modules/esbuild/lib/main.js:755:50
+ ❯ responseCallbacks.<computed> ../../../../Documents/GitHub/characterlab/node_modules/esbuild/lib/main.js:622:9
+ ❯ handleIncomingPacket ../../../../Documents/GitHub/characterlab/node_modules/esbuild/lib/main.js:677:12
+ ❯ Socket.readFromStdout ../../../../Documents/GitHub/characterlab/node_modules/esbuild/lib/main.js:600:7
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  no tests
+   Start at  08:53:00
+   Duration  371ms (transform 11ms, setup 0ms, collect 0ms, tests 0ms, environment 0ms, prepare 117ms)
+
+
+M49_CHECK position-full exit=1 seconds=1.91
+
+=== position-full-corrected ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledPositionPerception.test.ts > connection and original controls: actual positions and contexts share native SEM owners
+M49 CONNECTION live typed227 + observed coordinates; same/changed visual glyph and panel glyph match original windows; real shared241/242 mutations and child joins; closure ends panel.
+
+stdout | src/test/assembledPositionPerception.test.ts > mixed continuity: social -> visual -> social retains its own observed track
+M49 MIXED social track0 remains0 after visual track1; recognized identity unchanged, panel context closes without removing2 social events.
+
+stdout | src/test/assembledPositionPerception.test.ts > epistemic absence: denied coordinates hidden; unsampled differs from observed absence
+M49 EPISTEMIC denied x0/x7 same observations/freeze/state; live panel remains; unsampled keeps matching window, observed absence breaks it.
+
+stdout | src/test/assembledPositionPerception.test.ts > persistence and rollback: repeat, restore active context and failure after tracking
+M49 PERSISTENCE repeat/save and active-context restore2->4 exact; late freeze and missing active-panel sample roll back complete instant.
+
+stdout | src/test/assembledPositionPerception.test.ts > admission and authority: domain, source count, forged child/bootstrap and foreign writes
+M49 ADMISSION invalid times/glyph/stage/duplicates/11visual/17panel/oldversion/child/bootstrap and foreign writes reject; stale window rejected.
+
+ ✓ src/test/assembledPositionPerception.test.ts (5 tests) 165889ms
+   ✓ connection and original controls: actual positions and contexts share native SEM owners 70910ms
+   ✓ mixed continuity: social -> visual -> social retains its own observed track 21933ms
+   ✓ epistemic absence: denied coordinates hidden; unsampled differs from observed absence 31273ms
+   ✓ persistence and rollback: repeat, restore active context and failure after tracking 32830ms
+   ✓ admission and authority: domain, source count, forged child/bootstrap and foreign writes 8942ms
+
+ Test Files  1 passed (1)
+      Tests  5 passed (5)
+   Start at  08:53:18
+   Duration  169.48s (transform 2.09s, setup 0ms, collect 3.17s, tests 165.89s, environment 0ms, prepare 126ms)
+
+
+M49_CHECK position-full-corrected exit=0 seconds=171.02
+
+=== retained-workspace-recognition-encoding ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRecognition.test.ts > controls: forged knowledge, ownership, initial history and late atomic rollback
+M22 preflight {"targetCue":true,"draws":3,"belief":2,"resolutions":1}
+
+stdout | src/test/assembledRecognition.test.ts > controls: forged knowledge, ownership, initial history and late atomic rollback
+M22 preflight {"targetCue":false,"draws":4,"belief":0,"resolutions":1}
+
+stdout | src/test/assembledRecognition.test.ts > controls: forged knowledge, ownership, initial history and late atomic rollback
+M22 admission/authority and late rollback: 50 events; state, outputs, trace, queue and allocators restored
+
+ ✓ src/test/assembledRecognition.test.ts (5 tests | 4 skipped) 27867ms
+   ✓ controls: forged knowledge, ownership, initial history and late atomic rollback 27866ms
+stdout | src/test/assembledEncoding.test.ts > producer: actual observed role binding selects evidence and hidden physical role does not
+M44 PRODUCER actual SEM242/224/240 selected, hidden invariant, unresolved MissingRole
+
+ ✓ src/test/assembledEncoding.test.ts (6 tests | 5 skipped) 62137ms
+   ✓ producer: actual observed role binding selects evidence and hidden physical role does not 62136ms
+stdout | src/test/assembledWorkspaceDomain.test.ts > connection: all three tasks coexist with live recalled goal meaning at6 and20
+M48 CONNECTION 3 tasks+forecast+2 actual recalls:6/20 High closer/attainment,6 Low farther/violation;5 remains one recall/MissingEvidence. Seed0, no choice claim.
+
+ ✓ src/test/assembledWorkspaceDomain.test.ts (4 tests | 3 skipped) 81734ms
+   ✓ connection: all three tasks coexist with live recalled goal meaning at6 and20 81733ms
+
+ Test Files  3 passed (3)
+      Tests  3 passed | 12 skipped (15)
+   Start at  08:56:55
+   Duration  177.24s (transform 2.15s, setup 0ms, collect 4.66s, tests 171.74s, environment 0ms, prepare 283ms)
+
+
+M49_CHECK retained-workspace-recognition-encoding exit=0 seconds=178.76
+
+=== foundation-SEM-phase-authority-rollback ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/semanticStateAuthority.test.ts (8 tests) 24ms
+ ✓ src/test/semanticPhaseOrdering.test.ts (10 tests) 14ms
+ ✓ src/test/semanticPhaseRollbackCause.test.ts (1 test) 7ms
+
+ Test Files  3 passed (3)
+      Tests  19 passed (19)
+   Start at  09:00:13
+   Duration  1.14s (transform 203ms, setup 0ms, collect 348ms, tests 45ms, environment 0ms, prepare 284ms)
+
+
+M49_CHECK foundation-SEM-phase-authority-rollback exit=0 seconds=2.64
+
+=== types-final ===
+src/test/assembledPositionPerception.test.ts(93,110): error TS2352: Conversion of type '{ event: { eventId: bigint; eventSequence: bigint; dueAt: bigint; phase: bigint; eventTypeId: { readonly kind: "typedIdentifier"; readonly namespaceId: bigint; readonly payload: CanonicalValue; }; payload: CanonicalValue; dependencies: CanonicalValue; causalParentEventIds: never[]; }; state: AuthoritativeState; }' to type 'EventHandlerContext<AuthoritativeState>' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Type '{ event: { eventId: bigint; eventSequence: bigint; dueAt: bigint; phase: bigint; eventTypeId: { readonly kind: "typedIdentifier"; readonly namespaceId: bigint; readonly payload: CanonicalValue; }; payload: CanonicalValue; dependencies: CanonicalValue; causalParentEventIds: never[]; }; state: AuthoritativeState; }' is missing the following properties from type 'EventHandlerContext<AuthoritativeState>': instant, allocateRuntimeId
+
+M49_CHECK types-final exit=1 seconds=16.76
+
+=== types-final-context ===
+
+M49_CHECK types-final-context exit=0 seconds=16.57
+
+=== admission-context-correction ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledPositionPerception.test.ts > admission and authority: domain, source count, forged child/bootstrap and foreign writes
+M49 ADMISSION invalid times/glyph/stage/duplicates/11visual/17panel/oldversion/child/bootstrap and foreign writes reject; stale window rejected.
+
+ ✓ src/test/assembledPositionPerception.test.ts (5 tests | 4 skipped) 63700ms
+   ✓ admission and authority: domain, source count, forged child/bootstrap and foreign writes 63699ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 4 skipped (5)
+   Start at  09:01:52
+   Duration  67.25s (transform 2.08s, setup 0ms, collect 3.16s, tests 63.70s, environment 0ms, prepare 121ms)
+
+
+M49_CHECK admission-context-correction exit=0 seconds=68.78
+
+=== boundary ===
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+M49_CHECK boundary exit=0 seconds=2.72
+
+=== research ===
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M49_CHECK research exit=0 seconds=3.75
+
+M49 final guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and M22-M48 retained tests unchanged; document/evidence caps. seconds=10.16
+M49 validation seconds including guard=667.25
+
+=== staged-git-size ===
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M49_CHECK staged-git-size exit=0 seconds=0.75
+
+M49 final validation total=668.00s/1800s; maximum command178.76s/600s.
