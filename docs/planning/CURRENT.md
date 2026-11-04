@@ -1,34 +1,44 @@
-# Current work — M52 complete (2026-11-04)
+# Current work — bounded verification performance (2026-11-04)
 
-The character can mark an actually attributed event as significant to its goal,
-retain it under memory pressure, and recall it later in the same simulation.
-[Result](ASSEMBLED_CHARACTER_M52_RESULT.md); [checks](ASSEMBLED_CHARACTER_M52_CHECKS.txt).
-Plan84d26859; implementation175f4d58; baselinec7895dee. Rules/registry0.53.
-| Research obligations | **0 active / 18 conditional / 0 unowned** |
+M52 is complete at f4069c29. Owner authorized a verification-performance pass.
+This package adds no psychological capability and does not start memory breadth.
+One runtime/state/scheduler; accepted assembled-character-model/0.1-candidate
+persistence semantics and all historical fixtures/assertions stay fixed.
 
-## Completed connection
-- One episodic owner346/1, allocator, scheduler and save. Actual attribution40 and
-  focal goal meaning50 qualify authenticated significance at presentation140.
-- Fixed High30..31 versus Wide0..100: both4 groups/16 consumed operands, Supported
-  attribution and Assessed Before13/After16. Same laws, seed0 and memory quotas.
-- Only High marks position-end15 MovingCloser. After14 body samples and visual32,
-  High retains and actually recalls it33; Wide loses it. No action-choice claim.
--384 original-retention comparisons preserve significance > use > unprotected,
-  prior metadata, direction independence and separate diagnostic/shared quotas.
-- Hidden truth, unsupported attribution, ingress/owner/version controls pass.
-- Rollback after significance preparation restores the entire prior instant.
-- Save17/restore through33 matches state, outputs, trace and save bytes exactly
-  on the final disclosure fields. Ordinary goal meaning remains live without a
-  focal cue; its trace explicitly discloses the actual attribution input.
-- Retained M51 witness, types,23 original kernel tests, boundary and research pass.
--11 production/test files. Failures and the earlier100s timeout remain in the log.
-  Owner approved two600s extensions (3000s total); earlier failures remain recorded.
-  Final preservation and staged-size checks PASS; recorded verification46m46.77s
-  of50 minutes, including failures. Exact receipts are in the check log.
+## Scope and comparison
+- Measure the unchanged M52 continuation case (save17, restore, both through33).
+- Use Node CPU samples at10ms, one Vitest fork, one job. Retain compressed raw
+  profiles and a concise measured summary; no benchmark framework.
+- Optimize measured redundant observation/serialization in assembled code only.
+  Candidate: restore serializes the whole snapshot just to count committed events.
+- At most4 production/test files: character.ts, runtime.ts only if needed,
+  and up to2 focused performance/regression test helpers. Frozen sources unchanged.
+- No new cache of mutable authoritative values, weaker equality, omitted validation,
+  new save format, law/seed/input changes, or checkpoint truncation.
+- Preserve complete-prefix restore, commitment binding, atomic instants and full
+  canonical save equality. Read REFERENCE_MECHANISM_LEDGER SUB-008/CTL-005; this is
+  execution-cost work, not a mechanism reduction or research-obligation closure.
 
-## Remaining boundary
-No next implementation is started. Select the next bounded integration against
-the existing register and pinned requirements before writing its card.
-All21 members/15 families/132 clauses remain open; this is bounded evidence.
-Wider defining memory, familiarity/reconstruction, learned graph and consolidation
-remain. No UI, autonomous partners, private archive or blanket corpus closure.
+## Checks and budgets declared before code
+- Baseline: unchanged M52 continuation with CPU profile, <=600s.
+- After: same case/same profiler settings, <=600s; then stop profiling.
+- Focused small-case comparison against the old restore algorithm, including
+  full-byte snapshot/save/continuation and corrupt/incomplete save rejection;
+  targeted existing admission restore/rollback controls, <=180s together.
+- Because the successor public entry changes: retain the three original Campaign2
+  semantic-boundary controls in assembledAdmission, <=300s.
+- Types, boundaries, research, preservation, staged size/whitespace: <=60s.
+- Total verification <=1800s INCLUDING failures; one command <=600s.
+  Planned successful checks target<=1200s after optimization; reserve repairs.
+  If projected work cannot fit, checkpoint/replan BEFORE another long run.
+- Evidence <=20files/5MiB losslessly compressed, no recursive source copies.
+  AGENTS<=120lines, CURRENT<=80, work order/register<=250; register<=65536bytes.
+
+## Done condition
+Measured lower cost on the same M52 case, exact persistence and rejection behavior
+preserved, required checks pass inside the package budget. If no safe material
+improvement is measured, report that rather than expanding scope or weakening gates.
+Record actual timing limits; a bounded result does not prove every future suite fits.
+Next capability remains significant recall affecting appraisal/choice, separately
+predeclared with current-goal/body/evidence/dice controls. No implementation yet.
+All21 members/15 families/132 clauses and18 conditional obligations stay open.
