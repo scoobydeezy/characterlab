@@ -38,9 +38,11 @@ presentation ingress, learned initial memory, wrong owner, old version, fresh cr
 and invalid direction sets. A coordinator control with actual native records proves
 candidate credit does not enter PRIOR retention priority.
 
-Rollback timed out at the shortened100s reservation cap and remains unverified.
+Rollback now passes at109.56s; the earlier100s timeout remains recorded.
+The unchanged retained M51 witness passes at151.06s.
 Final types,23 original kernel tests and boundary/research checks pass.
-Six M52 test cases passed, including384 comparator combinations within one case.
+All seven M52 cases have passed at least once, including384 comparator combinations
+within one case; continuation and ordinary disclosure need final-source receipts.
 Those receipts predate the final trace-input disclosure edit where applicable.
 
 Final review added explicit attribution to goal trace input, matching the actual
@@ -51,9 +53,12 @@ comparisons replace generic byte-array object diff without changing the checked 
 The earlier persistence receipt included stale rollback wording; its correction is
 retained in the log. Persistence is not rollback evidence.
 
-Pending: rollback, retained M51 witness, ordinary-goal trace check, and continuation
-on the final trace bytes. Proposed additional allowance:600s (2400s total), superseding
-the earlier300s request; NOT authorized yet. Each command remains capped at600s.
+Pending: ordinary-goal trace check and continuation on the final trace bytes.
+Their combined command timed out at330.12s without an individual test receipt.
+No pass is inferred. The successful rollback and M51 checks consumed260.62s;
+the prior405.50s combined run was underestimated when allocating the extension.
+No code, scenarios or assertions changed during this extension. Owner-approved additional allowance:600s (2400s total), superseding
+the earlier300s request, on 2026-11-04. Each command remains capped at600s.
 No additional production scope, scenario changes or weakened assertions are proposed.
 
 ## Local repairs and limits
@@ -75,3 +80,7 @@ This does not integrate familiarity, reconstruction, consolidation, learned grap
 general defining-memory domains, or turn significance tags into belief/action credit.
 
 Preservation/artifact guard and staged Git-size receipts are recorded in the check log.
+
+Verification checkpoint after the approved extension:2384.47s before final guards.
+A further600s (3000s total) is proposed solely for the remaining command (cap570s)
+and closing guards; NOT APPROVED. No additional native execution is authorized.

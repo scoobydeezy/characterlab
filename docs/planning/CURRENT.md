@@ -23,22 +23,24 @@ The original card remains in84d26859. Rules/registry0.53;11 source/test files.
 - Final types,23 original kernel tests, boundary and research checks pass.
 
 ## Outstanding before completion
-1. Rerun rollback. It timed out at a shortened100s cap used to reserve final-check
-   time; this is not a mechanism verdict. Exact byte comparisons now use length plus
-   every byte instead of generic object diff; coverage is unchanged.
-2. Run the predeclared retained M51 witness.
-3. Run the ordinary-goal trace check and continuation on final trace bytes.
-   Goal trace input now includes the same attribution already present in its output;
-   no state/qualification/retention or serialization algorithm changed.
-4. Record results, rerun only affected/static guards as needed, stage/size-check/commit.
-No further production scope is planned. No fixture, law, seed or acceptance change.
+1. Final continuation and ordinary-goal trace disclosure remain unverified.
+   Their combined command timed out at330s, reserving time for closing guards.
+   No individual test result was emitted; neither is counted as passing.
+2. Rollback now PASSES at109.56s; unchanged retained M51 witness PASSES at151.06s.
+3. The final trace edit remains: actual attribution is explicit in goal trace input.
+   Earlier continuation/ordinary receipts predate that disclosure-only change.
 
 ## Budget and permission boundary
-Original total1800s is nearly consumed, including failures; no further native runs
-fit with adequate margin.600s per command;20 evidence files/5MiB;<=12 source/test files.
-A bounded completion allowance of +600s (2400s total) is PROPOSED, NOT AUTHORIZED.
-This supersedes the earlier +300s request because the final trace edit also needs
-its continuation check. Obtain the owner's ruling before additional native checks.
-Preserve all failed attempts and stop if the amended allowance is reached.
+Owner approved +600s on2026-11-04 (2400s total), superseding the earlier +300s.
+Validation used2384.47s before final preservation/size guards; no further native
+checks fit. Final verification total2395.12s/2400s (39m55.12s); guards and size PASS.
+The extension was underestimated: two successful checks consumed260.62s, leaving
+only330s for continuation/ordinary plus closing guards. The earlier combined
+continuation/ordinary run took405.50s; faster byte comparisons did not make330s enough.
+Do not rerun without an explicit budget amendment. No source or fixture changes
+were made during this extension. Failures, timeout and completed checks are retained.
+A concrete follow-up would allow up to600s additional total (3000s total), solely
+for the final continuation/ordinary command (cap570s) and closing guards.
+This follow-up is PROPOSED, NOT APPROVED; no broader implementation is proposed.
 All21 members/15 families/132 clauses remain open; no UI/autonomous partners,
 private archive, invented credit, broader retention-law verdict or corpus closure.
