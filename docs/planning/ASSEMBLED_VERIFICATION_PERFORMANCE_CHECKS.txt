@@ -1,0 +1,163 @@
+
+=== baseline-profile ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSignificance.test.ts > continuation: exact save17 restore through pressure
+M52 PERSISTENCE save17 restore through33 byte-exact including significance, retention, recall, allocator and trace.
+
+ ✓ src/test/assembledSignificance.test.ts (7 tests | 6 skipped) 407052ms
+   ✓ continuation: exact save17 restore through pressure 407051ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  16:46:41
+   Duration  410.87s (transform 2.27s, setup 0ms, collect 3.43s, tests 407.05s, environment 0ms, prepare 105ms)
+
+
+PERF_CHECK baseline-profile exit=0 seconds=411.45
+
+LOCAL CAPTURE REPAIR: CLI profile contained409.073s idle coordinator, no simulation samples. Elapsed baseline411.45s remains valid. Capture in worker with explicit inspector.stop/afterAll; existing rollback case <=150s, then same continuation after fix. No fixture/assertion changes.
+PERF_CHECK plan-stage-size-commit exit=0 seconds=1.4
+
+=== baseline-worker-rollback-profile ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSignificance.test.ts > rollback: significance preparation is atomic
+M52 ROLLBACK after significance preparation rolls back whole17.
+
+ ✓ src/test/assembledSignificance.test.ts (7 tests | 6 skipped) 107530ms
+   ✓ rollback: significance preparation is atomic 107056ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  16:55:05
+   Duration  111.14s (transform 2.16s, setup 25ms, collect 3.27s, tests 107.53s, environment 0ms, prepare 100ms)
+
+
+PERF_CHECK baseline-worker-rollback-profile exit=0 seconds=111.68
+
+LOCAL DISPOSITION: worker rollback profile107.13s: canonicalEncode51.165s inclusive, fixture procedureSource41.328s inclusive, settlement50.735s inclusive (overlap; not additive). Change only character.ts: private commit-derived trace count avoids snapshot/encode/decode during restore; final generated-save bytes compared against fully decoded/canonically encoded input without redundant generated-save decode/hex. No authoritative state cache. Incoming grammar validation, whole-instant bound and complete-save equality retained. Allocate original controls400s instead of300 within unchanged1800s total.
+
+=== types ===
+
+PERF_CHECK types exit=0 seconds=15.94
+
+=== restore-regressions ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledAdmission.test.ts (18 tests | 16 skipped) 9814ms
+   ✓ M2a invariant admission and one continuing successor > rejects invented learned S0 and foreign observer evidence, and rolls back a tiny work budget 3483ms
+   ✓ M2a invariant admission and one continuing successor > binds restore to its model, inputs and every saved byte 6331ms
+ ✓ src/test/assembledRestorePerformance.test.ts (3 tests) 42738ms
+   ✓ old and optimized restore agree from empty and learned checkpoints through the complete run 22052ms
+   ✓ old and optimized restore reject incomplete instants and altered outputs 12518ms
+   ✓ caller save and returned snapshot mutation cannot alter restored continuation 6062ms
+
+ Test Files  2 passed (2)
+      Tests  5 passed | 16 skipped (21)
+   Start at  16:59:31
+   Duration  56.33s (transform 1.95s, setup 0ms, collect 3.46s, tests 52.55s, environment 0ms, prepare 99ms)
+
+
+PERF_CHECK restore-regressions exit=0 seconds=56.85
+
+=== after-continuation-profile ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSignificance.test.ts > continuation: exact save17 restore through pressure
+M52 PERSISTENCE save17 restore through33 byte-exact including significance, retention, recall, allocator and trace.
+
+ ✓ src/test/assembledSignificance.test.ts (7 tests | 6 skipped) 389057ms
+   ✓ continuation: exact save17 restore through pressure 388240ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  17:00:38
+   Duration  392.72s (transform 2.17s, setup 26ms, collect 3.28s, tests 389.06s, environment 0ms, prepare 101ms)
+
+
+PERF_CHECK after-continuation-profile exit=0 seconds=393.25
+
+=== original-three-scenario-controls ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > baseline preserves every semantic boundary and addressed draw
+M2a control baseline: 8 instants, 9 exact coupled draws
+
+stdout | src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > deadline overlap preserves every semantic boundary and addressed draw
+M2a control deadline overlap: 6 instants, 0 exact coupled draws
+
+stdout | src/test/assembledAdmission.test.ts > M2a invariant admission and one continuing successor > equal criteria preserves every semantic boundary and addressed draw
+M2a control equal criteria: 8 instants, 6 exact coupled draws
+
+ ✓ src/test/assembledAdmission.test.ts (18 tests | 15 skipped) 53362ms
+   ✓ M2a invariant admission and one continuing successor > baseline preserves every semantic boundary and addressed draw 25251ms
+   ✓ M2a invariant admission and one continuing successor > deadline overlap preserves every semantic boundary and addressed draw 7492ms
+   ✓ M2a invariant admission and one continuing successor > equal criteria preserves every semantic boundary and addressed draw 20618ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 15 skipped (18)
+   Start at  17:07:33
+   Duration  56.66s (transform 1.93s, setup 0ms, collect 2.92s, tests 53.36s, environment 0ms, prepare 100ms)
+
+
+PERF_CHECK original-three-scenario-controls exit=0 seconds=57.18
+
+=== final-types-including-new-tests ===
+
+PERF_CHECK final-types-including-new-tests exit=0 seconds=15.61
+
+=== boundaries ===
+Reference boundary check passed.
+
+PERF_CHECK boundaries exit=0 seconds=2.29
+
+=== research ===
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: CURRENT obligation counts are stale
+    at file:///C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/scripts/check-research-obligations.mjs:75:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.20.0
+
+PERF_CHECK research exit=1 seconds=3.38
+
+PERF preservation guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and M22-M51 retained tests unchanged; document/evidence caps. seconds=9.86
+PERF validation seconds including guard=1078.89
+
+LOCAL DOCUMENT REPAIR: research checker rejected missing machine-read obligation status row in rewritten CURRENT. Restore unchanged0 active/18 conditional/0 unowned row; no obligation or corpus disposition changed.
+
+=== research-after-status-row-repair ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+PERF_CHECK research-after-status-row-repair exit=0 seconds=3.17
+
+=== staged-git-size ===
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+PERF_CHECK staged-git-size exit=0 seconds=0.75
+
+PERF_CHECK final-artifact-hashes-and-caps exit=0 seconds=0.14
+
+PERFORMANCE PACKAGE COMPLETE. Recorded verification 1082.95s/1800s; evidence 9 files/2315752 bytes; all compressed profile hashes, document/file caps, types, functional, boundary, research, preservation, Git-size and whitespace checks PASS.

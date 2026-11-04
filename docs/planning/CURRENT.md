@@ -1,44 +1,38 @@
-# Current work — bounded verification performance (2026-11-04)
+# Current work — bounded verification performance complete (2026-11-04)
 
-M52 is complete at f4069c29. Owner authorized a verification-performance pass.
-This package adds no psychological capability and does not start memory breadth.
-One runtime/state/scheduler; accepted assembled-character-model/0.1-candidate
-persistence semantics and all historical fixtures/assertions stay fixed.
+M52 remains complete at f4069c29. The authorized performance package changes only
+restore bookkeeping; no psychological capability or assembly coverage was added.
+[Result](ASSEMBLED_VERIFICATION_PERFORMANCE_RESULT.md);
+[checks](ASSEMBLED_VERIFICATION_PERFORMANCE_CHECKS.txt).
+Plan a0d5d32d; unchanged assembled-character-model/0.1-candidate persistence.
+| Research obligations | **0 active / 18 conditional / 0 unowned** |
 
-## Scope and comparison
-- Measure the unchanged M52 continuation case (save17, restore, both through33).
-- Use Node CPU samples at10ms, one Vitest fork, one job. Retain compressed raw
-  profiles and a concise measured summary; no benchmark framework.
-- Optimize measured redundant observation/serialization in assembled code only.
-  Candidate: restore serializes the whole snapshot just to count committed events.
-- At most4 production/test files: character.ts, runtime.ts only if needed,
-  and up to2 focused performance/regression test helpers. Frozen sources unchanged.
-- No new cache of mutable authoritative values, weaker equality, omitted validation,
-  new save format, law/seed/input changes, or checkpoint truncation.
-- Preserve complete-prefix restore, commitment binding, atomic instants and full
-  canonical save equality. Read REFERENCE_MECHANISM_LEDGER SUB-008/CTL-005; this is
-  execution-cost work, not a mechanism reduction or research-obligation closure.
+## What changed and passed
+- A private count of committed trace contributions replaces repeated whole-snapshot
+  encode/decode just to count replayed events.
+- Full save equality still checks every canonical byte, after incoming grammar
+  validation; no redundant generated-save decode or huge hex strings.
+- Same M52 continuation command:411.45s before,393.25s after (4.4% in this pair).
+  Modest improvement; one pair and capture differences limit timing certainty.
+- Nine post-change cases: M52 exact17->33 continuation, three old/new restore
+  comparisons/rejections/isolation, two original admission controls, three original
+  Campaign2 semantic-boundary scenarios. All assertions/fixtures retained.
+- Initial CPU capture found only the coordinator; worker-local capture corrected
+  that. Failed capture and original raw profiles remain losslessly compressed.
+- Four production/test/tool files, no scope/verification extension.
+  Final checks and elapsed total are in the log.
 
-## Checks and budgets declared before code
-- Baseline: unchanged M52 continuation with CPU profile, <=600s.
-- After: same case/same profiler settings, <=600s; then stop profiling.
-- Focused small-case comparison against the old restore algorithm, including
-  full-byte snapshot/save/continuation and corrupt/incomplete save rejection;
-  targeted existing admission restore/rollback controls, <=180s together.
-- Because the successor public entry changes: retain the three original Campaign2
-  semantic-boundary controls in assembledAdmission, <=300s.
-- Types, boundaries, research, preservation, staged size/whitespace: <=60s.
-- Total verification <=1800s INCLUDING failures; one command <=600s.
-  Planned successful checks target<=1200s after optimization; reserve repairs.
-  If projected work cannot fit, checkpoint/replan BEFORE another long run.
-- Evidence <=20files/5MiB losslessly compressed, no recursive source copies.
-  AGENTS<=120lines, CURRENT<=80, work order/register<=250; register<=65536bytes.
+## What remains
+The dominant measured cost is nested owner-state validation during settlement:
+295.81s of388.31 sampled seconds; fixture construction48.86s, GC32.38s.
+These exclusive categories differ from overlapping inclusive function timings.
+This package does NOT establish that every future milestone fits20 minutes.
+Next performance work must map redundant validation and invalidation rules before
+changing it, preserving whole-state invariants, rejection behavior and rollback.
+Future tests should reuse defensively copied unchanged fixture inputs instead of
+rebuilding their full inheritance chain; frozen controls remain intact.
+Next behavioral capability remains significant recall changing appraisal/choice
+with current goal/body/evidence/dice controlled. No new implementation started.
+All21 members/15 families/132 clauses and18 conditional obligations remain open.
 
-## Done condition
-Measured lower cost on the same M52 case, exact persistence and rejection behavior
-preserved, required checks pass inside the package budget. If no safe material
-improvement is measured, report that rather than expanding scope or weakening gates.
-Record actual timing limits; a bounded result does not prove every future suite fits.
-Next capability remains significant recall affecting appraisal/choice, separately
-predeclared with current-goal/body/evidence/dice controls. No implementation yet.
-All21 members/15 families/132 clauses and18 conditional obligations stay open.
+Recorded verification 1082.95s/1800s; evidence 9 files/2315752 bytes; all compressed profile hashes, document/file caps, types, functional, boundary, research, preservation, Git-size and whitespace checks PASS.

@@ -20,6 +20,9 @@ declare const brand:unique symbol;
 export interface CharacterModel {readonly [brand]:true;}
 type Prepared={model:Awaited<ReturnType<typeof compileCharacterModel>>;component:Awaited<ReturnType<typeof compileCharacterState>>};
 const models=new WeakMap<object,Prepared>();
+// Private replay progress, derived only from successful scheduler commits.
+// This is not authoritative state and cannot replace the final full-save check.
+const traceCounts=new WeakMap<object,()=>number>();
 function facts(handle:CharacterModel){return models.get(handle)??invalidModel('prepared cognitive model required');}
 export async function prepareCharacterModel(source:Campaign2ModelSource):Promise<CharacterModel>{const model=await compileCharacterModel(source),component=await compileCharacterState(model),handle=Object.freeze({}) as CharacterModel;compileCognitiveIngress(model,component);models.set(handle,{model,component});return handle;}
 export const characterModelIdentity=(handle:CharacterModel)=>facts(handle).model.modelIdentity.canonicalBytes.slice();
@@ -37,8 +40,11 @@ function copies<K extends string>(input:Record<K,Uint8Array>,names:readonly K[])
 export async function createCharacterRun(handle:CharacterModel,input:{initialState:Uint8Array;orderedInputs:Uint8Array;runSeed:Uint8Array}){
  const {model,component}=facts(handle),data=copies(input,['initialState','orderedInputs','runSeed']);
  const state=component.initialState(data.initialState),inputs=await compileCharacterInputs(model,component,data),runtime=createCharacterRuntime(model,component,inputs,state);
- return Object.freeze({async settleNextInstant(){return (await runtime.settleNextInstant())!==undefined;},snapshot(){const s=runtime.snapshot();return Object.freeze({clock:s.clock,status:s.status,state:enc(s.state.canonicalValue()),outputs:enc(list(s.outputs)),trace:enc(list(s.committedTrace))});},
+ let committedTraceCount=0;
+ const run=Object.freeze({async settleNextInstant(){const result=await runtime.settleNextInstant();if(result===undefined)return false;committedTraceCount+=result.traceContributions.length;return true;},snapshot(){const s=runtime.snapshot();return Object.freeze({clock:s.clock,status:s.status,state:enc(s.state.canonicalValue()),outputs:enc(list(s.outputs)),trace:enc(list(s.committedTrace))});},
   save:()=>runtime.save(model.modelIdentity,inputs.runIdentity),runIdentity:()=>inputs.runIdentity.canonicalBytes.slice(),diagnostic(){const d=runtime.diagnostic();return d?enc(failureDiagnosticValue(inputs.runIdentity.value,d)):undefined;}});
+ traceCounts.set(run,()=>committedTraceCount);
+ return run;
 }
 export async function restoreCharacterRun(source:Campaign2ModelSource,input:{initialState:Uint8Array;orderedInputs:Uint8Array;save:Uint8Array}){
  // Snapshot caller data before the first await, including model bytes inside its
@@ -50,13 +56,16 @@ export async function restoreCharacterRun(source:Campaign2ModelSource,input:{ini
  if(key(decodeCognitive(replay.runIdentity()))!==key(runIdentity.value))throw new SaveContractError('original S0/input/model commitments differ');
  const rows=items(f(save,11n),'list');for(const value of rows)rec(value,160n);
  let count=0;while(count<rows.length){try{if(!await replay.settleNextInstant())throw new SaveContractError('prefix exhausted');}catch(error){throw new SaveContractError('prefix execution failed: '+(error instanceof Error?error.message:String(error)));}
-  count=items(decodeCognitive(replay.snapshot().trace),'list').length;if(count>rows.length)throw new SaveContractError('prefix crosses whole-instant boundary');
+  count=traceCounts.get(replay)!();if(count>rows.length)throw new SaveContractError('prefix crosses whole-instant boundary');
  }
  // Exact equality to a newly generated valid canonical save checks every section,
  // including projections, queue, allocator, complete trace and outputs. No partial
  // imported state is installed. Retaining replay also retains genuine used draws,
  // including choices whose rejected meaning produced no identity contribution.
- if(key(decodeCognitive(replay.save()))!==key(save))throw new SaveContractError('whole-save prefix equality failed');
+ // The incoming save has already passed complete grammar decoding. Compare every
+ // canonical byte with the generated save: no second grammar walk or hex strings.
+ const actual=replay.save(),expected=enc(save);
+ if(actual.length!==expected.length||actual.some((byte,i)=>byte!==expected[i]))throw new SaveContractError('whole-save prefix equality failed');
  return replay;
 }
 
