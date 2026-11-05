@@ -1,0 +1,105 @@
+M54 plan 5e97506a; baseline e44854c0. Same-reference-law historical comparison.
+
+=== types ===
+
+M54_CHECK types exit=0 seconds=18.68
+
+=== native-witness ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ↓ src/test/assembledHistoricalMeaning.test.ts (3 tests | 3 skipped)
+
+ Test Files  1 skipped (1)
+      Tests  3 skipped (3)
+   Start at  20:16:26
+   Duration  3.66s (transform 2.18s, setup 0ms, collect 3.29s, tests 0ms, environment 0ms, prepare 128ms)
+
+
+M54_CHECK native-witness exit=0 seconds=5.22
+
+=== native-witness-filter-corrected ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledHistoricalMeaning.test.ts > witness: one perceived historical difference crosses the full same-law path
+M54 LIVE17: both four grouped trials,16 consumed operands and Assessed/Qualifies reserve meaning.
+M54 LIVE33: both current spatial appraisals Assessed.
+M54 WITNESS same model/S0/goals/seed/reference SF; only permitted x15=1/0 differs. Supported/Unsupported -> acquired credit/no credit -> end15 survives/lost -> actual recall15,32/31,32 -> Farther/Same. Equal current body/goals and all later inputs; no draws on claimed path.
+
+ ✓ src/test/assembledHistoricalMeaning.test.ts (3 tests | 2 skipped) 366027ms
+   ✓ witness: one perceived historical difference crosses the full same-law path 366026ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 2 skipped (3)
+   Start at  20:16:42
+   Duration  369.69s (transform 2.13s, setup 0ms, collect 3.22s, tests 366.03s, environment 0ms, prepare 123ms)
+
+
+M54_CHECK native-witness-filter-corrected exit=0 seconds=371.23
+
+=== changed-history-continuation ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledHistoricalMeaning.test.ts > continuation: changed history repeats exactly through memory pressure
+M54 CONTINUATION changed history save17 reconstructed exactly; state/output/trace/save33 byte-equal. Reference arm continuation retained from unchanged M53.
+
+ ✓ src/test/assembledHistoricalMeaning.test.ts (3 tests | 2 skipped) 362563ms
+   ✓ continuation: changed history repeats exactly through memory pressure 362562ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 2 skipped (3)
+   Start at  20:23:03
+   Duration  366.25s (transform 2.13s, setup 0ms, collect 3.22s, tests 362.56s, environment 0ms, prepare 124ms)
+
+
+M54_CHECK changed-history-continuation exit=0 seconds=367.79
+
+=== denied-history-control ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledHistoricalMeaning.test.ts > epistemic: denied historical positions cannot affect meaning or credit
+M54 DENIAL hidden x15=1/0 yields identical attribution/reserve/spatial reports, no end15 memory or significance. Missing perception stays missing.
+
+ ✓ src/test/assembledHistoricalMeaning.test.ts (3 tests | 2 skipped) 165438ms
+   ✓ epistemic: denied historical positions cannot affect meaning or credit 165438ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 2 skipped (3)
+   Start at  20:29:22
+   Duration  169.07s (transform 2.13s, setup 0ms, collect 3.22s, tests 165.44s, environment 0ms, prepare 122ms)
+
+
+M54_CHECK denied-history-control exit=0 seconds=170.62
+
+=== boundaries ===
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+M54_CHECK boundaries exit=0 seconds=2.74
+
+=== research ===
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M54_CHECK research exit=0 seconds=3.63
+
+M54 preservation guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and M22-M51 retained tests unchanged; document/evidence caps. seconds=9.88
+M54 validation seconds including guard=949.79
+
+=== staged-git-size ===
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M54_CHECK staged-git-size exit=0 seconds=0.74
