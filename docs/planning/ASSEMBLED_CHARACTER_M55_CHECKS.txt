@@ -1,0 +1,164 @@
+
+=== types-1 ===
+npm error Missing script: "check:types"
+npm error
+npm error To see a list of scripts, run:
+npm error   npm run
+npm error A complete log of this run can be found in: C:\Users\scoob\AppData\Local\npm-cache\_logs\2026-11-05T13_08_25_809Z-debug-0.log
+
+=== types-2 ===
+src/assembled/fatigue.ts(46,174): error TS2345: Argument of type 'CanonicalValue | undefined' is not assignable to parameter of type 'CanonicalValue'.
+  Type 'undefined' is not assignable to type 'CanonicalValue'.
+src/assembled/fatigue.ts(46,259): error TS2322: Type 'CanonicalValue | undefined' is not assignable to type 'CanonicalValue'.
+  Type 'undefined' is not assignable to type 'CanonicalValue'.
+src/assembled/fatigue.ts(46,267): error TS2322: Type 'CanonicalValue | undefined' is not assignable to type 'CanonicalValue'.
+  Type 'undefined' is not assignable to type 'CanonicalValue'.
+src/assembled/fatigue.ts(46,597): error TS2322: Type 'CanonicalValue | undefined' is not assignable to type 'CanonicalValue'.
+  Type 'undefined' is not assignable to type 'CanonicalValue'.
+src/assembled/runtime.ts(91,146): error TS2345: Argument of type 'Readonly<{ eventTypes: () => { readonly kind: "typedIdentifier"; readonly namespaceId: bigint; readonly payload: CanonicalValue; }[]; isLearning: (e: ScheduledEvent) => boolean; ... 7 more ...; prepare(events: readonly ScheduledEvent[], B0: AuthoritativeState): { ...; }; }> | { ...; } | undefined' is not assignable to parameter of type 'Readonly<{ eventTypes: () => { readonly kind: "typedIdentifier"; readonly namespaceId: bigint; readonly payload: CanonicalValue; }[]; isLearning: (e: ScheduledEvent) => boolean; ... 7 more ...; prepare(events: readonly ScheduledEvent[], B0: AuthoritativeState): { ...; }; }> | undefined'.
+  Type '{ eventTypes: () => { readonly kind: "typedIdentifier"; readonly namespaceId: bigint; readonly payload: CanonicalValue; }[]; isLearning: (e: ScheduledEvent) => boolean; ... 7 more ...; candidates: (event: ScheduledEvent, input: CanonicalValue) => { ...; }; }' is not assignable to type 'Readonly<{ eventTypes: () => { readonly kind: "typedIdentifier"; readonly namespaceId: bigint; readonly payload: CanonicalValue; }[]; isLearning: (e: ScheduledEvent) => boolean; ... 7 more ...; prepare(events: readonly ScheduledEvent[], B0: AuthoritativeState): { ...; }; }>'.
+    The types of 'prepare(...).execute(...).outputs' are incompatible between these types.
+      Type 'CanonicalValue[]' is not assignable to type 'never[]'.
+        Type 'CanonicalValue' is not assignable to type 'never'.
+          Type 'false' is not assignable to type 'never'.
+
+M55_CHECK types-2 exit=1 seconds=19.26
+
+M55_CHECK types-1 exit=1 seconds=1 (missing npm script; runner footer NameError corrected; no check ran)
+
+=== types-3 ===
+
+M55_CHECK types-3 exit=0 seconds=16.91
+
+=== witness-1 ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledFatigue.test.ts > witness: experienced fatigue impairs live inhibition and observed recovery restores it
+M55 LIVE 5 maintained/spare/offered target/no dice in both arms
+M55 LIVE 7 maintained/spare/offered target/no dice in both arms
+M55 WITNESS severe permits actual target5/7; rested withholds; both withhold9 after recovery. Original acquired habit retained.
+
+stdout | src/test/assembledFatigue.test.ts > witness: experienced fatigue impairs live inhibition and observed recovery restores it
+M55 CONTINUATION save4 ->9 state/output/trace/save exact
+
+ ✓ src/test/assembledFatigue.test.ts (1 test) 160540ms
+   ✓ witness: experienced fatigue impairs live inhibition and observed recovery restores it 160539ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed (1)
+   Start at  07:10:41
+   Duration  164.53s (transform 2.23s, setup 0ms, collect 3.36s, tests 160.54s, environment 0ms, prepare 313ms)
+
+
+M55_CHECK witness-1 exit=0 seconds=167.05
+
+=== types-controls ===
+
+M55_CHECK types-controls exit=0 seconds=16.87
+
+=== native-and-boundaries-1 ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledFatigue.test.ts > original: native fatigue observations and control candidates retain exact predicates
+M55 ORIGINAL 72 native observation/control comparisons; MotorOnly forced execution failure retained
+
+stdout | src/test/assembledFatigue.test.ts > boundaries: admission, one journal authority, authenticated stages and atomic late rollback
+M55 BOUNDARIES version/source/bootstrap, unique owner, append, child authentication and late140 whole-instant rollback PASS
+
+ ✓ src/test/assembledFatigue.test.ts (4 tests | 2 skipped) 124580ms
+   ✓ original: native fatigue observations and control candidates retain exact predicates 19605ms
+   ✓ boundaries: admission, one journal authority, authenticated stages and atomic late rollback 104975ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 2 skipped (4)
+   Start at  07:14:58
+   Duration  128.35s (transform 2.22s, setup 0ms, collect 3.35s, tests 124.58s, environment 0ms, prepare 124ms)
+
+
+M55_CHECK native-and-boundaries-1 exit=0 seconds=128.86
+
+=== epistemic-1 ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledFatigue.test.ts > epistemic: fixed evidence hides physical truth; denied and mild onsets preserve control
+M55 EPISTEMIC fixed display3 with physical0/2 gives exact cognitive outputs/state through7; denied/absent unknown, mild known but unimpaired
+
+ ✓ src/test/assembledFatigue.test.ts (4 tests | 3 skipped) 167811ms
+   ✓ epistemic: fixed evidence hides physical truth; denied and mild onsets preserve control 167810ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 3 skipped (4)
+   Start at  07:18:49
+   Duration  171.57s (transform 2.23s, setup 0ms, collect 3.36s, tests 167.81s, environment 0ms, prepare 125ms)
+
+
+M55_CHECK epistemic-1 exit=0 seconds=172.08
+
+=== retained-control-admission ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledControl.test.ts > M17 assembled control > controls: admission, single owners, authentic children, trace reads and atomic rollback
+M17 rollback 52 events, limit51; goal adoption/memory/body/history rolled back at3
+
+ ✓ src/test/assembledControl.test.ts (5 tests | 4 skipped) 15730ms
+   ✓ M17 assembled control > controls: admission, single owners, authentic children, trace reads and atomic rollback 15729ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 4 skipped (5)
+   Start at  07:22:40
+   Duration  19.19s (transform 2.02s, setup 0ms, collect 3.04s, tests 15.73s, environment 0ms, prepare 119ms)
+
+
+M55_CHECK retained-control-admission exit=0 seconds=19.69
+
+=== witness-final-trace-assertions ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledFatigue.test.ts > witness: experienced fatigue impairs live inhibition and observed recovery restores it
+M55 LIVE 5 maintained/spare/offered target/no dice in both arms
+M55 LIVE 7 maintained/spare/offered target/no dice in both arms
+M55 WITNESS severe permits actual target5/7; rested withholds; both withhold9 after recovery. Original acquired habit retained.
+
+stdout | src/test/assembledFatigue.test.ts > witness: experienced fatigue impairs live inhibition and observed recovery restores it
+M55 CONTINUATION save4 ->9 state/output/trace/save exact
+
+ ✓ src/test/assembledFatigue.test.ts (4 tests | 3 skipped) 163691ms
+   ✓ witness: experienced fatigue impairs live inhibition and observed recovery restores it 163690ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 3 skipped (4)
+   Start at  07:23:58
+   Duration  167.49s (transform 2.22s, setup 0ms, collect 3.36s, tests 163.69s, environment 0ms, prepare 126ms)
+
+
+M55_CHECK witness-final-trace-assertions exit=0 seconds=168.0
+
+=== types-final ===
+
+M55_CHECK types-final exit=0 seconds=16.98
+
+=== boundaries ===
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+M55_CHECK boundaries exit=0 seconds=2.74
+
+=== research ===
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M55_CHECK research exit=0 seconds=3.83
+
+M55 preservation guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and all previous retained tests unchanged; document/evidence caps. seconds=10.54
+M55 validation seconds including guard=743.81

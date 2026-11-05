@@ -1,3 +1,4 @@
+import {createFatigueExecution} from './fatigue';
 import {createPositionExecution} from './positionExecution';
 import {createGoalMeaning,GOAL_ADOPT,GOAL_EXPIRE} from './goalMeaning';
 import {createReappraisalExecution,REAPPRAISAL_SOURCE} from './reappraisal';
@@ -79,7 +80,8 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
  const spatialMeaning=model.spatialMeaning?createGoalMeaning(component.tasks[0].character,model.spatialMeaning,stateModel,inputs.goalEvents,modelIdentity,inputs.runIdentity.value):undefined;
  const priorityCore=model.priority?createPriorityExecution(component.tasks[0].character,component.tasks.map(t=>t.key),stateModel,inputs.priorityEvents,modelIdentity,inputs.runIdentity.value,horizon):undefined;
  const habit=model.habit?createHabitExecution(component.tasks[0].character,model.habit,model.strategy!,stateModel,inputs.habitEvents,modelIdentity,inputs.runIdentity.value,model.actionBody!,model.deliveryReward):undefined;
- const control=model.control?createControlExecution(component.tasks[0].character,model.habit!,stateModel,inputs.controlEvents,modelIdentity,inputs.runIdentity.value,model.workspaceLimit):undefined;
+ const controlBase=model.control?createControlExecution(component.tasks[0].character,model.habit!,stateModel,inputs.controlEvents,modelIdentity,inputs.runIdentity.value,model.workspaceLimit,model.fatigue):undefined;
+ const control=controlBase&&model.fatigue?createFatigueExecution(component.tasks[0].character,stateModel,inputs.fatigueEvents,modelIdentity,inputs.runIdentity.value).extend(controlBase):controlBase;
  const communication=model.communication?createCommunicationExecution(component.tasks[0].character,model.communication,stateModel,inputs.communicationEvents,modelIdentity,inputs.runIdentity.value,model.delayedBody):undefined;
  const relationship=model.relationship?createRelationshipExecution(component.tasks[0].character,model.relationship,stateModel,inputs.relationshipEvents,modelIdentity,inputs.runIdentity.value,model.encounterEnabled):undefined;
  const social=model.social?createSocialExecution(component.tasks[0].character,model.social,stateModel,inputs.socialEvents,modelIdentity,inputs.runIdentity.value,model.recognition,model.encounterEnabled?relationship:undefined,model.socialMemory,model.encoding,model.memoryUse?(event,operands,report)=>episodes!.qualifyUse(event,operands,report):undefined):undefined;

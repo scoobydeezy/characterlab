@@ -87,7 +87,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  const forecasted=model.horizon?withHorizonState(prioritized,tasks.map(t=>t.key)):prioritized;
  const monitored=model.performance?withPerformanceState(forecasted,model.strategy!,model.expectationEnabled,model.selfBeliefEnabled?C:undefined,model.values,model.causalEnabled,model.interferenceEnabled):forecasted;
  const habitual=model.habit?withHabitState(monitored,C):monitored;
- const controlled=model.control?withControlState(habitual,C,model.reappraisal!==undefined):habitual;
+ const controlled=model.control?withControlState(habitual,C,model.reappraisal!==undefined,model.fatigue!==undefined):habitual;
  const communicating=model.communication?withCommunicationState(controlled,[...(model.communication.topic?[]:[C]),...model.communication.recipients],model.communication.topic,model.communication.expectation):controlled;
  const socialized=model.social?withSocialState(communicating,C,model.social.target,model.social.targets):communicating;
  const related=model.relationship?withRelationshipState(socialized,C,model.relationship.target,model.relationship.bindings.map(b=>b.target)):socialized;
@@ -102,6 +102,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
    if(model.relationship&&e.path.rootStateTypeId===848n)invalidModel('initial relationship history must be absent');
    if(model.social&&e.path.rootStateTypeId===810n)invalidModel('initial person belief must be absent');
    if(model.communication&&e.path.rootStateTypeId===1072n)invalidModel('initial communication knowledge must be absent');
+   if(e.path.rootStateTypeId===1351n)invalidModel('initial fatigue must be absent');
    if(model.control&&(e.path.rootStateTypeId===1014n||e.path.rootStateTypeId===373n&&e.path.fieldId===4n))invalidModel('initial control state must be absent');
    if(model.habit&&[821n,823n].includes(e.path.rootStateTypeId))invalidModel('initial habit/reward must be absent');
    if(e.path.rootStateTypeId===373n&&(model.goalMeaning&&e.path.fieldId===5n||model.spatialMeaning&&e.path.fieldId===6n))invalidModel('initial maintenance goal must be absent');
