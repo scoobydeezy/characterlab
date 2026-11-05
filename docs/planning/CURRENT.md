@@ -30,11 +30,12 @@ Baseline c98081fd; M56 complete.
   third unavailable/importance0. Reappraisal action remains unavailable C.
 - Recognized coat stand-in at1/2; same social claim/receipts and same support2,
   resolved=true, priorDemand=true, own participant=true, ordinary kind0.
-  Only unableUnaided differs true versus false. No ordinary comfort boost.
+  Only unableUnaided differs true versus false. At2 support opportunity=false
+  in both arms; both recognized encounters remain. No ordinary comfort boost.
 - At3 explicit target absent, adequate alternative=true, currentDemand=false.
   No later observations before the compared decision. All scene facts declared.
-- Precondition: resolved target, two support rows, equal person evidence, offered
-  A/B and nonzero base reasons. Qualifying counts2/0 -> Bond1/0 -> MissingContact1/0.
+- Precondition: resolved target, one support row in each arm, equal person evidence, offered
+  A/B and nonzero base reasons. Qualifying counts1/0 -> Bond1/2 or0 -> MissingContact1/2 or0.
   Exact distinct standing contribution and compiled modifier required. Fixed seeds
   0..7 with explicit comparison maps from two identity-only setup runs; prove shared
   reason-face draws, classify conditional tie draws, require >=1 actual choice change.
@@ -58,11 +59,12 @@ Baseline c98081fd; M56 complete.
 - BRIEF-12.11-5 bounded only;21 members/15 families/132 clauses/18 debts remain.
   No UI, grief, natural dependence attribution, full utility or autonomous peers.
 
-## M57 checkpoint — corrected amendment requested, not adopted
-- Original witness fails roll precondition: d6, raw1 -> bounded1/2 -> standing+2.
-- Urgency proposal withdrawn: inherited urgency already1, not0. No run used it.
-- Proposed single replacement: one support opportunity rather than two in BOTH
-  arms (second encounter remains, support opportunity=false). Bond1/2 versus0;
-  retain original two-support Auto control. All other inputs/laws/seeds/gates fixed.
-- Independent controls, M25 regression, types, boundary/research checks PASS.
-- [Checkpoint](ASSEMBLED_CHARACTER_M57_RESULT.md); no milestone or corpus PASS.
+## M57 amendment — owner approved 2026-11-05
+- Owner approved ONE support opportunity in both arms; retain the second recognized
+  encounter with support opportunity=false. Original two-support Auto control stays.
+- Original failure retained: d6, raw1 -> bounded1/2 -> standing+2 gives Auto.
+  One support: raw1/2 -> bounded1/3 -> standing+1; no law/calibration change.
+- Withdrawn urgency proposal never ran; urgency remains its original1.
+- Seeds0..7, coupling, actual choice-change gate, budget and all other settings fixed.
+  If this replacement fails, report it without another contrast/calibration attempt.
+- Independent controls already PASS; matrix/continuation/provenance remain due.

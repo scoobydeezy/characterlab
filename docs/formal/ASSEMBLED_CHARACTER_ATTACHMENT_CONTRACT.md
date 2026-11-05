@@ -58,3 +58,9 @@ The fixed card controls the scenario, paired dice and behavioral gate.
 BRIEF-12.11-5 bounded dependence-to-contact witness only; all final requirements
 remain. MEC001/004/012..019/022, P3-007/009/012 and RO010/011/016/019/020 preserve
 their recorded controls, conditional debts and limits. No reduction or C3 verdict.
+
+Owner amendment2026-11-05: the fixed behavioral comparison has one support
+opportunity in each arm. Both recognized encounters remain; the second has no
+support opportunity. The original two-support Auto case is retained as a control.
+All laws, task settings, seeds0..7, coupling, choice-change gate and budgets stay
+fixed. This replaces only the failed roll-mode comparison, not its evidence.
