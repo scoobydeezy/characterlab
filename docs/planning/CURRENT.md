@@ -1,38 +1,50 @@
-# Current work — bounded verification performance complete (2026-11-04)
+# Current work — M53 remembered spatial appraisal (2026-11-04)
 
-M52 remains complete at f4069c29. The authorized performance package changes only
-restore bookkeeping; no psychological capability or assembly coverage was added.
-[Result](ASSEMBLED_VERIFICATION_PERFORMANCE_RESULT.md);
-[checks](ASSEMBLED_VERIFICATION_PERFORMANCE_CHECKS.txt).
-Plan a0d5d32d; unchanged assembled-character-model/0.1-candidate persistence.
+The next connection lets a recalled visual history change a current goal assessment.
+M52's significance tag protects content; it is never itself world evidence or a reason.
+Performance package f87066c0 remains the baseline; its modest speedup is not a budget waiver.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
-## What changed and passed
-- A private count of committed trace contributions replaces repeated whole-snapshot
-  encode/decode just to count replayed events.
-- Full save equality still checks every canonical byte, after incoming grammar
-  validation; no redundant generated-save decode or huge hex strings.
-- Same M52 continuation command:411.45s before,393.25s after (4.4% in this pair).
-  Modest improvement; one pair and capture differences limit timing certainty.
-- Nine post-change cases: M52 exact17->33 continuation, three old/new restore
-  comparisons/rejections/isolation, two original admission controls, three original
-  Campaign2 semantic-boundary scenarios. All assertions/fixtures retained.
-- Initial CPU capture found only the coordinator; worker-local capture corrected
-  that. Failed capture and original raw profiles remain losslessly compressed.
-- Four production/test/tool files, no scope/verification extension.
-  Final checks and elapsed total are in the log.
-
-## What remains
-The dominant measured cost is nested owner-state validation during settlement:
-295.81s of388.31 sampled seconds; fixture construction48.86s, GC32.38s.
-These exclusive categories differ from overlapping inclusive function timings.
-This package does NOT establish that every future milestone fits20 minutes.
-Next performance work must map redundant validation and invalidation rules before
-changing it, preserving whole-state invariants, rejection behavior and rollback.
-Future tests should reuse defensively copied unchanged fixture inputs instead of
-rebuilding their full inheritance chain; frozen controls remain intact.
-Next behavioral capability remains significant recall changing appraisal/choice
-with current goal/body/evidence/dice controlled. No new implementation started.
-All21 members/15 families/132 clauses and18 conditional obligations remain open.
-
-Recorded verification 1082.95s/1800s; evidence 9 files/2315752 bytes; all compressed profile hashes, document/file caps, types, functional, boundary, research, preservation, Git-size and whitespace checks PASS.
+## Bounded card (before implementation)
+- One capability: actual selected position episodes -> adopted spatial goal -> phase50
+  goal-distance appraisal, inside the existing runtime/goal owner. No action claim.
+- LOCAL DISPOSITION: reuse exact goal-distance/qualification0.1 and existing goal
+  lifecycle for a distinct position-x signal, bounds0..7, observed marker glyph0..7.
+  New rules/registry0.54 and spatial-meaning0.1 contract; old versions unchanged.
+- Goal owner373 gains field6, not a new owner/store. Bootstrap adoption/expiration,
+  state, trace, allocator and save remain shared. Reserve goal stays separate.
+- Comparison policy: oldest and newest distinct-time selected positions for the
+  declared observed marker. This asks about change across the accessible span.
+  Engineering default, no verdict; no significance-based selection or archive read.
+  This does not prove object identity from glyph or causal attribution.
+- Fixed native comparison: same High reserve goal, spatial x goal[0,0], activeFrom1,
+  BothDirections, seed0; SignificanceFirst reference vs preserved AgeOnly control.
+  M52's four panels1..16/refills/body30/rate10/width1; physical tasks only.
+  Capacity16/recall16/workspace20. Thirteen body samples18..30 and position x2
+  at31/32, marker1, Actor role. Deliberations17/33, deadlines40.
+  Expected: reference end15(x1) survives; AgeOnly loses it. Both actually recall
+  enough selected positions for Assessed at33: MovingFarther vs SameDistance.
+  Assert both live before comparison; current goals/body/perceived sources identical.
+  Appraisal is deterministic and reads no dice; no final-choice inference.
+- Test fixture builds source/input once and copies for controls. No edited frozen fixture.
+- Sources: goalMeaning/model/priority/state/inputs/runtime/execution (7), new test
+  and fixture (2): <=12. One formal contract, one compact result/log; <=20 evidence
+  files/5MiB. CURRENT<=80, AGENTS<=120, work order/register<=250 lines.
+- Checks: new native pair (<=600s); repeat and exact save17->33 continuation
+  (<=600s); short boundary/kernel/hidden-permission/rollback checks (<=300s);
+  M52 ordinary no-focal regression (<=180s); types/boundary/research/preservation
+  and staged Git-size (<=120s). All charged actual time including failures, <=1800s;
+  one job at a time, each command<=600s. At budget exhaustion checkpoint, no extension.
+- Compare every state/output/trace/save byte for the unchanged-model continuation;
+  malformed goal/foreign/stale/unselected operands, absent goal and denied observation
+  remain rejected/unavailable; rollback after new appraisal leaves instant atomic.
+  Hidden display truth with denied perception cannot enter the spatial assessment.
+- Frozen C2 controls/dependency closure and all earlier tests unchanged: no full rerun
+  because neither their sources nor entry changed. Original goal kernels reused.
+- Preservation: ledger MEC007/010 acquisition/access vs meaning; defining-memory
+  readiness and RO005/006/007/009/011/017/020 distinctions retained. No reduction,
+  changed C3 verdict or retired alternative. BRIEF-12.3-2/-5/-10 and12.7 remain
+  bounded; full21 members/15 families/132 clauses and18 debts remain open.
+- Done only when reference significance -> survival -> actual recall -> different
+  live spatial appraisal is traced, deterministic continuation and affected controls
+  pass within budget. Missing evidence stays unavailable; no tuning after results.
