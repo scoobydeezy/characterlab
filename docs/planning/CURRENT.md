@@ -1,4 +1,4 @@
-# Current work — M57 planned (2026-11-05)
+# Current work — M57 incomplete (2026-11-05)
 
 Meaningful dependence on a recognized person will change later contact reasons
 and choices, through the existing relationship and decision paths.
@@ -57,3 +57,12 @@ Baseline c98081fd; M56 complete.
   failures. Stop on declared pass; no routine extensions or parallel audit track.
 - BRIEF-12.11-5 bounded only;21 members/15 families/132 clauses/18 debts remain.
   No UI, grief, natural dependence attribution, full utility or autonomous peers.
+
+## M57 checkpoint — corrected amendment requested, not adopted
+- Original witness fails roll precondition: d6, raw1 -> bounded1/2 -> standing+2.
+- Urgency proposal withdrawn: inherited urgency already1, not0. No run used it.
+- Proposed single replacement: one support opportunity rather than two in BOTH
+  arms (second encounter remains, support opportunity=false). Bond1/2 versus0;
+  retain original two-support Auto control. All other inputs/laws/seeds/gates fixed.
+- Independent controls, M25 regression, types, boundary/research checks PASS.
+- [Checkpoint](ASSEMBLED_CHARACTER_M57_RESULT.md); no milestone or corpus PASS.

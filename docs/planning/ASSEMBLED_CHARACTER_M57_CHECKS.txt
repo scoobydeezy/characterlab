@@ -1,0 +1,160 @@
+
+=== types-1 ===
+
+Types command returned without compiler output; logger failed after wait with undefined LABEL. Reserve 60s conservatively; repeat after tests added.
+
+=== types-2 ===
+src/test/assembledAttachment.test.ts(53,49): error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+src/test/assembledAttachment.test.ts(124,88): error TS2339: Property 'kind' does not exist on type 'CanonicalValue'.
+  Property 'kind' does not exist on type 'false'.
+
+M57_CHECK types-2 exit=1 seconds=15.93
+
+=== witness-1 ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledAttachment.test.ts (4 tests | 1 failed | 3 skipped) 101297ms
+   × witness: fixed coupled dependence changes a choice and survives continuation 101296ms
+     → requires 403/1
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledAttachment.test.ts > witness: fixed coupled dependence changes a choice and survives continuation
+SchedulerContractError: requires 403/1
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataRecord src/campaign2/canonicalData.ts:9:117
+ ❯ live src/test/assembledAttachment.test.ts:59:52
+ ❯ src/test/assembledAttachment.test.ts:67:122
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 3 skipped (4)
+   Start at  12:22:04
+   Duration  105.14s (transform 2.27s, setup 0ms, collect 3.44s, tests 101.30s, environment 0ms, prepare 127ms)
+
+
+M57_CHECK witness-1 exit=1 seconds=105.68
+
+=== witness-2 ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledAttachment.test.ts (4 tests | 1 failed | 3 skipped) 105344ms
+   × witness: fixed coupled dependence changes a choice and survives continuation 105343ms
+     → expected 1n not to be 1n // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledAttachment.test.ts > witness: fixed coupled dependence changes a choice and survives continuation
+AssertionError: expected 1n not to be 1n // Object.is equality
+ ❯ live src/test/assembledAttachment.test.ts:63:74
+
+ ❯ src/test/assembledAttachment.test.ts:69:122
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 3 skipped (4)
+   Start at  12:24:36
+   Duration  109.11s (transform 2.23s, setup 0ms, collect 3.37s, tests 105.34s, environment 0ms, prepare 128ms)
+
+
+M57_CHECK witness-2 exit=1 seconds=109.65
+
+=== diagnostic-fixed ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAttachment.test.ts > diagnostic: fixed predeclared arms and calibration, no acceptance claim
+M57_DIAGNOSTIC {"dependent":true,"mode":"1","choice":"definition/protocol-contact-one","draws":0,"attachment":"07060522617373656d626c65642d6174746163686d656e742f302e312f61707072616973616c020206020107010602010706051c617373656d626c65642d6174746163686d656e742f302e312f6375650bdb0802350bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a6563740bea070b8d080b8e08051f636f6e74656e742f617373656d626c65642d736f6369616c2f7461726765740203070300010007020bdb08020f0bdb080225","nuclei":[{"key":"0a9403010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010b9008050a436f6d6d69746d656e7403010bea070b8d080b8e08050e636f6e74656e742f7461736b2d6104010201","roles":"0a96030104010106020202010602020301060001040107020a9503010501010a9103010301010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d610301020102010602010301060001040106020105010602010a9503010501010a9103010301010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61030102030201060201030106000104010602010501060201","relevance":"060201","die":"6","standing":"2","context":"0"},{"key":"0a9403010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f02010b9008050a436f6d6d69746d656e7403010bea070b8d080b8e08050e636f6e74656e742f7461736b2d6204010201","roles":"0a96030104010106020202010600010301060001040107010a9503010501010a9103010301010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f02010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62030102010201060201030106000104010602010501060201","relevance":"060202","die":"6","standing":"0","context":"0"}]}
+
+stdout | src/test/assembledAttachment.test.ts > diagnostic: fixed predeclared arms and calibration, no acceptance claim
+M57_DIAGNOSTIC {"dependent":false,"mode":"3","choice":"definition/protocol-contact-two","draws":2,"attachment":"07060522617373656d626c65642d6174746163686d656e742f302e312f61707072616973616c020006000107010600010706051c617373656d626c65642d6174746163686d656e742f302e312f6375650bdb0802350bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a6563740bea070b8d080b8e08051f636f6e74656e742f617373656d626c65642d736f6369616c2f746172676574020307030001000700","nuclei":[{"key":"0a9403010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010b9008050a436f6d6d69746d656e7403010bea070b8d080b8e08050e636f6e74656e742f7461736b2d6104010201","roles":"0a96030104010106020202010600010301060001040107010a9503010501010a9103010301010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61030102010201060201030106000104010602010501060201","relevance":"060202","die":"6","standing":"0","context":"0"},{"key":"0a9403010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f02010b9008050a436f6d6d69746d656e7403010bea070b8d080b8e08050e636f6e74656e742f7461736b2d6204010201","roles":"0a96030104010106020202010600010301060001040107010a9503010501010a9103010301010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f02010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62030102010201060201030106000104010602010501060201","relevance":"060202","die":"6","standing":"0","context":"0"}]}
+
+ ✓ src/test/assembledAttachment.test.ts (5 tests | 4 skipped) 110532ms
+   ✓ diagnostic: fixed predeclared arms and calibration, no acceptance claim 110531ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 4 skipped (5)
+   Start at  12:27:23
+   Duration  114.33s (transform 2.25s, setup 0ms, collect 3.39s, tests 110.53s, environment 0ms, prepare 122ms)
+
+
+M57_CHECK diagnostic-fixed exit=0 seconds=114.85
+
+=== controls-native-boundaries-1 ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAttachment.test.ts > controls: admitted support, recognition, cue and hidden truth boundaries
+M57_CONTROLS own/witness, one/repeated, zero/unresolved/inactive/self-sufficient, present/unknown, hidden/denied/no-opportunity, unconfigured/other identity PASS
+
+stdout | src/test/assembledAttachment.test.ts > native: exact Bond and MissingContact correspondence; retained alternatives
+M57_NATIVE original own-history Bond/MissingContact correspondence and five retained law distinctions PASS; no expected-relief/utility port claimed
+
+stdout | src/test/assembledAttachment.test.ts > boundaries: admission, append ownership, source authentication and late140 rollback
+M57_BOUNDARIES source/admission/bootstrap/unique owner/append/late140 whole-instant rollback PASS
+
+ ✓ src/test/assembledAttachment.test.ts (5 tests | 2 skipped) 271277ms
+   ✓ controls: admitted support, recognition, cue and hidden truth boundaries 262686ms
+   ✓ native: exact Bond and MissingContact correspondence; retained alternatives 2839ms
+   ✓ boundaries: admission, append ownership, source authentication and late140 rollback 5752ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 2 skipped (5)
+   Start at  12:30:54
+   Duration  275.09s (transform 2.24s, setup 0ms, collect 3.39s, tests 271.28s, environment 0ms, prepare 123ms)
+
+
+M57_CHECK controls-native-boundaries-1 exit=0 seconds=275.61
+
+=== m25-regression ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledPersonHistory.test.ts > controls: sequential people, receipt isolation, hidden evidence and admission
+M25 isolation/receipt/hidden/denied/order/singleton/admission/authority controls PASS
+
+ ✓ src/test/assembledPersonHistory.test.ts (4 tests | 3 skipped) 38268ms
+   ✓ controls: sequential people, receipt isolation, hidden evidence and admission 38267ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 3 skipped (4)
+   Start at  12:35:46
+   Duration  41.74s (transform 2.03s, setup 0ms, collect 3.07s, tests 38.27s, environment 0ms, prepare 122ms)
+
+
+M57_CHECK m25-regression exit=0 seconds=42.25
+
+=== types-final ===
+
+M57_CHECK types-final exit=0 seconds=15.81
+
+=== reference-boundary ===
+Reference boundary check passed.
+
+M57_CHECK reference-boundary exit=0 seconds=2.23
+
+=== research ===
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M57_CHECK research exit=0 seconds=3.77
+
+M57 preservation guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and all previous retained tests unchanged; document/evidence caps. seconds=9.9
+M57 validation seconds including guard=755.68
+
+=== types-checkpoint ===
+
+M57_CHECK types-checkpoint exit=0 seconds=15.98
