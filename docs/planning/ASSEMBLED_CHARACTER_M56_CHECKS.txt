@@ -1,0 +1,201 @@
+
+=== types-1 ===
+
+M56_CHECK types-1 exit=0 seconds=16.81
+
+=== witness-1 ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRumination.test.ts > witness: recurrent concern occupies shared control; interruption rebounds until perceived resolution
+M56 LIVE 5 arm=true spare=0 concern=true/true/true/true/false/true/true
+M56 LIVE 5 arm=false spare=0 concern=true/true/true/true/false/true/true
+M56 LIVE 7 arm=true spare=1 concern=true/true/false/false/true/false/false
+M56 LIVE 7 arm=false spare=0 concern=true/true/true/true/false/true/true
+M56 LIVE 9 arm=true spare=0 concern=true/true/true/true/false/true/true
+M56 LIVE 9 arm=false spare=0 concern=true/true/true/true/false/true/true
+M56 LIVE 11 arm=true spare=1 concern=true/false/false/false/false/false/false
+M56 LIVE 11 arm=false spare=1 concern=true/false/false/false/false/false/false
+
+stdout | src/test/assembledRumination.test.ts > witness: recurrent concern occupies shared control; interruption rebounds until perceived resolution
+M56 WITNESS Auto A5 both; interruption withholds7; A9 rebound; both withhold11. Habit/reward unchanged. Save7 ->11 exact state/output/trace/save.
+
+ ✓ src/test/assembledRumination.test.ts (1 test) 106713ms
+   ✓ witness: recurrent concern occupies shared control; interruption rebounds until perceived resolution 106712ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed (1)
+   Start at  09:53:23
+   Duration  200.54s (transform 2.24s, setup 0ms, collect 93.16s, tests 106.71s, environment 0ms, prepare 311ms)
+
+
+M56_CHECK witness-1 exit=0 seconds=202.02
+
+=== types-controls ===
+
+M56_CHECK types-controls exit=0 seconds=15.96
+
+=== native-boundaries-1 ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRumination.test.ts > original: native concern observations and all four recurrence laws retain exact predicates
+M56 ORIGINAL 160 native frames: four laws x main/denied/nonrecipient/board-denied/external-load, exact retained evidence, access/interruption/load and observation projection.
+
+stdout | src/test/assembledRumination.test.ts > boundaries: one journal authority, authenticated stages, domain checks and atomic late rollback
+M56 BOUNDARIES version/source/bootstrap, unique owner, append, child authentication and late140 whole-instant rollback PASS.
+
+ ✓ src/test/assembledRumination.test.ts (4 tests | 2 skipped) 50372ms
+   ✓ original: native concern observations and all four recurrence laws retain exact predicates 39525ms
+   ✓ boundaries: one journal authority, authenticated stages, domain checks and atomic late rollback 10846ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 2 skipped (4)
+   Start at  09:58:56
+   Duration  144.25s (transform 2.24s, setup 0ms, collect 93.46s, tests 50.37s, environment 0ms, prepare 123ms)
+
+
+M56_CHECK native-boundaries-1 exit=0 seconds=144.76
+
+=== epistemic-capacity-1 ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRumination.test.ts > epistemic: hidden truth, denied onset/resolution/instruction and external load remain distinct
+M56 EPISTEMIC cognitive state/output bytes unaffected by private truth; denied onset unknown; denied resolution persists; denied instruction recurs; external card consumes its own slot.
+
+ ❯ src/test/assembledRumination.test.ts (5 tests | 1 failed | 3 skipped) 118469ms
+   ✓ epistemic: hidden truth, denied onset/resolution/instruction and external load remain distinct 118463ms
+   × capacity: requested recurrence never overbooks the shared slots or reinforces recall 5ms
+     → embodied codec: interval must have positive width
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledRumination.test.ts > capacity: requested recurrence never overbooks the shared slots or reinforces recall
+SchedulerContractError: embodied codec: interval must have positive width
+ ❯ fail src/campaign3/embodiedCodecs.ts:17:43
+     15| const namespaces=new Map([...allocation.roles,...allocation.mapKeyRole…
+     16| const external=new Map(Object.entries(allocation.existingRecordReferen…
+     17| const fail=(message:string):never=>{throw new SchedulerContractError('…
+       |                                           ^
+     18| const isRecord=(v:CanonicalValue):v is R=>typeof v!=='boolean'&&v.kind…
+     19| const q=(v:CanonicalValue):Q=>{if(typeof v==='boolean'||v.kind!=='rati…
+ ❯ domains src/campaign3/embodiedCodecs.ts:49:44
+ ❯ visit src/campaign3/embodiedCodecs.ts:72:172
+ ❯ validate src/campaign3/embodiedCodecs.ts:75:2
+ ❯ decodeEmbodied src/campaign3/embodiedCodecs.ts:79:110
+ ❯ Module.embodiedRecord src/campaign3/embodiedCodecs.ts:80:218
+ ❯ src/test/assembledRumination.test.ts:138:87
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed | 3 skipped (5)
+   Start at  10:01:34
+   Duration  213.24s (transform 2.25s, setup 0ms, collect 94.34s, tests 118.47s, environment 0ms, prepare 124ms)
+
+
+M56_CHECK epistemic-capacity-1 exit=1 seconds=213.77
+
+LOCAL DISPOSITION: epistemic controls passed; synthetic capacity handoff used invalid zero-width body interval. Correct its unused interval10..10 to legal10..11; no behavioral fixture, law, seed or expected allocation changes. Target capacity plus pending joint-owner/trace check.
+
+=== capacity-joined-2 ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRumination.test.ts > capacity: requested recurrence never overbooks the shared slots or reinforces recall
+M56 CAPACITY zero/one/two slots; recurrence vs recall; external saturation; candidate distinctions; no evidence mutation.
+
+ ❯ src/test/assembledRumination.test.ts (6 tests | 1 failed | 4 skipped) 14872ms
+   × joined: fatigue and concern share learning140 and disclose consumed instruction/evidence 14863ms
+     → expected [ 2n ] to include 148n
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledRumination.test.ts > joined: fatigue and concern share learning140 and disclose consumed instruction/evidence
+AssertionError: expected [ 2n ] to include 148n
+ ❯ src/test/assembledRumination.test.ts:179:68
+    177|    expect(f(read,4n)).toEqual(diag[9]);
+    178|    const children=items(f(t,18n),'list').map(x=>rec(x,130n));expect(ch…
+    179|    for(const e of children)expect(items(f(e,8n),'list').map(uint)).toC…
+       |                                                                    ^
+    180|   }
+    181|  }
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed | 4 skipped (6)
+   Start at  10:06:10
+   Duration  110.92s (transform 2.24s, setup 0ms, collect 95.64s, tests 14.87s, environment 0ms, prepare 124ms)
+
+
+M56_CHECK capacity-joined-2 exit=1 seconds=111.46
+
+LOCAL DISPOSITION: capacity and joint fatigue/concern/goal state checks passed. Trace assertion incorrectly required every workspace child (including independent strategy writes) to inherit the interruption. execution.ts adds consumed control parents to the cognitive appraisal child; runtime.ts passes all independent children to supplementary traces. Restrict the parent assertion to phase50 appraisal, keep exact safe receipt/source/read assertions. No production or behavioral change.
+
+=== joined-trace-3 ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRumination.test.ts > joined: fatigue and concern share learning140 and disclose consumed instruction/evidence
+M56 JOINED fatigue/concern/goal writes coexist; control trace consumes safe instruction and exact journal; emitted causal parents include instruction; missing report makes no concern patch.
+
+ ✓ src/test/assembledRumination.test.ts (6 tests | 5 skipped) 14770ms
+   ✓ joined: fatigue and concern share learning140 and disclose consumed instruction/evidence 14770ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  10:09:53
+   Duration  108.57s (transform 2.24s, setup 0ms, collect 93.40s, tests 14.77s, environment 0ms, prepare 126ms)
+
+
+M56_CHECK joined-trace-3 exit=0 seconds=109.07
+
+=== retained-M55-witness ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledFatigue.test.ts > witness: experienced fatigue impairs live inhibition and observed recovery restores it
+M55 LIVE 5 maintained/spare/offered target/no dice in both arms
+M55 LIVE 7 maintained/spare/offered target/no dice in both arms
+M55 WITNESS severe permits actual target5/7; rested withholds; both withhold9 after recovery. Original acquired habit retained.
+
+stdout | src/test/assembledFatigue.test.ts > witness: experienced fatigue impairs live inhibition and observed recovery restores it
+M55 CONTINUATION save4 ->9 state/output/trace/save exact
+
+ ✓ src/test/assembledFatigue.test.ts (4 tests | 3 skipped) 163983ms
+   ✓ witness: experienced fatigue impairs live inhibition and observed recovery restores it 163982ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 3 skipped (4)
+   Start at  10:12:15
+   Duration  167.79s (transform 2.24s, setup 0ms, collect 3.38s, tests 163.98s, environment 0ms, prepare 124ms)
+
+
+M56_CHECK retained-M55-witness exit=0 seconds=168.3
+
+=== types-final ===
+
+M56_CHECK types-final exit=0 seconds=15.9
+
+=== boundaries ===
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+M56_CHECK boundaries exit=0 seconds=3.21
+
+=== research ===
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M56_CHECK research exit=0 seconds=3.74
+
+M56 preservation guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and all previous retained tests unchanged; document/evidence caps. seconds=10.53
+M56 validation seconds including guard=1015.53
