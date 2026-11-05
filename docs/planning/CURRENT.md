@@ -1,42 +1,59 @@
-# Current work — M55 complete (2026-11-05)
+# Current work — M56 planned (2026-11-05)
 
-Experienced fatigue now affects the character's existing inhibition of an action.
-Admitted recovery restores control; missing reports preserve prior experience.
-[Result](ASSEMBLED_CHARACTER_M55_RESULT.md); [checks](ASSEMBLED_CHARACTER_M55_CHECKS.txt).
-Plan0cd7f784; baseline09bd1533. Rules/registry0.55; fatigue contract0.1.
+Recurrent unresolved content will occupy shared cognition and affect inhibition.
+M55 experienced fatigue is complete; baseline2dcdc080.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
-## Result and boundaries
-- One holder; three physical tasks; reserve10 unsensed; workspace6; seed0.
-  Same model, goals, initial state and sources except authentic fatigue at4=2/0.
-- Goal adopted4; both5/7 control paths maintained, spare capacity, target offered.
-  Severe permits A; rested withholds. Missing6 retains condition; both withhold9
-  after admitted recovery8. No draws at compared decisions, retained habit preserved.
-- Source30 -> observation120 -> journal1351/140 -> later shared control40/70.
-  Sole fatigue-experience owner registered inside the existing control state adapter.
-  One runtime/state/trace/save, no new resource or capacity.
-- Exact checkpoint4 reconstruction and continuation9 state/output/trace/save.
-  Focused native, epistemic, authority, ingress and rollback results in the report.
-- SevereThreshold reference is a first-use engineering default with bounded original
-  evidence. NoFatigue/AnyFatigue remain comparisons; original MotorOnly retained.
-- Ten source/test files, one contract and two evidence files; no historical edits,
-  fixture retuning or budget extension. Verification timing is recorded in the log.
+## M56 card — before implementation
+- Capability: perceived unresolved task status recurs at actual opportunities;
+  interruption frees capacity for one opportunity, then recurrence returns;
+  admitted resolution releases later control load without deleting evidence.
+- Port rumination-public/0.1's EveryOpportunity predicate, controlled task channel
+  and append-only concern journal. NoRecurrence/StaticLoad/Alternating retained.
+  Reference EveryOpportunity: engineering default with bounded
+  VER-C3-RUMINATION-001 evidence, not a universal or clinical law.
+- [Successor contract](../formal/ASSEMBLED_CHARACTER_RUMINATION_CONTRACT.md).
+  Rules/registry0.56 slot39 binds one existing task and law. Root1330 uses sole
+  rumination-concern authority inside existing control state adapter. No new store
+  for access, separate capacity, clock, pipeline, scheduler or save.
+- Expected10 source/test files: rumination, control, controlExecution, model,
+  state, inputs, runtime, traceBinding; new fixture/test. Hard cap12.
+- Source10 -> visible instruction20 and concern observation120 -> learning140.
+  Only prior journal reaches control40; one internal slot after task/forecast/
+  goal/external-card allocation, before episodic recall. Requested vs admitted
+  load is explicit; no overbooking or evidence from repeated internal access.
 
-## Next work
-M55 supplies bounded BRIEF-12.6-7 fatigue/control integration; no whole clause or
-family closure. Select another missing connection, rather than a fatigue-only
-verification series. Recurrent unresolved content consuming shared cognition
-(rumination) is distinct from fatigue and external distraction; map its accepted
-producer, interruption and release conditions before implementation.
-All21 members/15 families/132 clauses and18 conditional debts remain. Final replay,
-broader memory, natural sensing and other unintegrated mechanisms remain open.
-UI and autonomous partners remain deferred.
+## Fixed witness and done condition
+- M55 scene: one holder, three physical tasks, reserve10 unsensed, capacity6,
+  deadlines12, A-only important tasks, third C/B unavailable and importance0.
+  No fatigue reports; same reference fatigue law, empty initial learned state.
+- Same seed0, EveryOpportunity and initial/model bytes. Action3 earns history;
+  later habit feedback hidden (including removal of informational correction6).
+  Existing goal4 and reminders5/7/9 plus11, no external card.
+- Concern source4 displays unresolved;5 missing;7 missing with interruption true
+  versus false;9 displays resolution;11 missing. Copy decision9 contexts to11.
+  Source private truth is controlled apparatus, not authoritative task status.
+- Both compared paths must have a maintained goal, target offered and exactly one
+  spare slot before internal allocation. Concern remains live and fatigue unimpaired.
+  Both choose Auto A5; only interrupted arm withholds7; both choose A9 (rebound
+  before resolution140); both withhold11. Assert zero draws at compared decisions.
+- Journal/evidence unchanged during access/interruption; acquired habit/reward
+  unchanged without feedback. Save7 reconstructs and continues11 byte-exact.
+  A failed liveness gate needs a setup diagnosis; no law/seed/magnitude retuning.
 
-## Continuing guardrails
-Commit a bounded card and required contract before code; maximum3 capabilities,
-12 source/test files,20 evidence files/5MiB. Fixed laws/contrasts; live compared paths.
-Unknown external factors require permitted evidence; absent interior components
-are Deferred, never filled with invented belief. No per-phenomenon pipelines.
-One validation job,600s/command and1800s total including failures; no routine
-extensions. Use affected-owner checks, preserve failures, repair ordinary bugs
-locally, and stop verifying after the gate passes. Historical controls stay frozen.
+## Checks, risks and limits
+- Types; fixed witness/continuation; native original source/recurrence comparisons
+  for all4 laws; hidden truth, denied onset/resolution/instruction and external-card
+  controls; capacity saturation/recall accounting; owner/append/initial-state/
+  version/domain/child authentication negatives; late140 rollback.
+- Rerun M55 witness because shared control allocation/extension composition changes.
+  No unrelated old-suite rerun. Freeze all prior contracts/fixtures/dependencies.
+- Risks: load double counting, phantom evidence, premature release, interruption
+  erasing history, competing140 writers, source truth crossing the safe boundary.
+- Maximum3 capabilities,12 source/test files,20 evidence files/5MiB. One validation
+  job,600s/command,1800s total including failures; no routine extensions. Diagnose
+  and repair ordinary defects locally, retain failures, stop on the declared pass.
+- BRIEF-12.6-6 bounded integration only;21 members/15 families/132 clauses remain.
+  MEC004/009/010/011/012..022 and P3-009/012 retain their original dispositions.
+  RO010/011/012/017/019/020/021 remain as recorded; no reduction or C3 verdict change.
+  No UI, autonomous peers, endogenous recurrence clock or self-chosen regulation.
