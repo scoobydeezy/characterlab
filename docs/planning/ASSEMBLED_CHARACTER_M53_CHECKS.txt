@@ -1,0 +1,204 @@
+
+=== types-initial ===
+src/assembled/goalMeaning.ts(43,259): error TS2551: Property 'value' does not exist on type 'CanonicalValue'. Did you mean 'valueOf'?
+  Property 'value' does not exist on type 'false'.
+
+M53_CHECK types-initial exit=1 seconds=16.46
+
+=== types-with-tests ===
+
+M53_CHECK types-with-tests exit=0 seconds=15.94
+
+=== native-witness ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledSpatialMeaning.test.ts > witness: significance survival changes a live later spatial appraisal 50073ms
+   → assembled trace requires exact model/run binding
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSpatialMeaning.test.ts > witness: significance survival changes a live later spatial appraisal
+SchedulerContractError: assembled trace requires exact model/run binding
+ ❯ Module.compileCharacterTraceBinding src/assembled/traceBinding.ts:25:997
+
+ ❯ Module.createCharacterRuntime src/assembled/runtime.ts:93:14
+ ❯ Module.createCharacterRun src/assembled/character.ts:42:122
+ ❯ src/test/assembledSpatialMeaning.test.ts:29:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 2 skipped (3)
+   Start at  19:03:36
+   Duration  53.93s (transform 2.20s, setup 0ms, collect 3.35s, tests 50.07s, environment 0ms, prepare 279ms)
+
+
+M53_CHECK native-witness exit=1 seconds=55.18
+
+LOCAL REPAIR: initial native run rejected new rule0.54 in traceBinding before settling any instant. Add declared successor to exact model/run binding list; no scenario/law/gate change. Ten production/test files remain within12. Type narrowing failure also retained and repaired.
+
+=== native-witness-trace-repair ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSpatialMeaning.test.ts > witness: significance survival changes a live later spatial appraisal
+M53 LIVE both current goals active, both spatial appraisals Assessed at33.
+
+stdout | src/test/assembledSpatialMeaning.test.ts > witness: significance survival changes a live later spatial appraisal
+M53 WITNESS same goals/history/body; SF selects15/32 -> MovingFarther, AgeOnly31/32 -> SameDistance. Actual recall/workspace/read/trace joined. Stale/foreign/absent/unselected/lifecycle/owner/initial controls PASS.
+
+ ✓ src/test/assembledSpatialMeaning.test.ts > witness: significance survival changes a live later spatial appraisal 369500ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 2 skipped (3)
+   Start at  19:05:02
+   Duration  373.08s (transform 2.16s, setup 0ms, collect 3.25s, tests 369.50s, environment 0ms, prepare 99ms)
+
+
+M53_CHECK native-witness-trace-repair exit=0 seconds=373.59
+
+=== exact-continuation ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledSpatialMeaning.test.ts > continuation: exact repeat through the new consumer 114550ms
+   → cognitive record grammar: unsupported receiving record version
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSpatialMeaning.test.ts > continuation: exact repeat through the new consumer
+SchedulerContractError: cognitive record grammar: unsupported receiving record version
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ fail src/assembled/codecs.ts:24:36
+ ❯ Module.receivingRecord src/assembled/codecs.ts:140:158
+ ❯ Object.randomRelevantAuthoritativeIds src/assembled/execution.ts:295:194
+ ❯ Object.randomRelevantAuthoritativeIds src/assembled/runtime.ts:424:150
+ ❯ Module.createCanonicalSave src/substrate/persistence.ts:102:26
+ ❯ Object.save src/assembled/runtime.ts:422:14
+ ❯ Object.save src/assembled/character.ts:45:20
+ ❯ src/test/assembledSpatialMeaning.test.ts:60:81
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 2 skipped (3)
+   Start at  19:11:52
+   Duration  118.13s (transform 2.17s, setup 0ms, collect 3.27s, tests 114.55s, environment 0ms, prepare 100ms)
+
+
+M53_CHECK exact-continuation exit=1 seconds=118.65
+
+LOCAL REPAIR: save17 exposed the RNG relevant-ID projection still classifying new373/6 as a TaskKey. Treat6 like holder-keyed4/5; identity collection is unchanged for predecessors. No RNG algorithm, draw, scenario or acceptance change. Rerun exact continuation; original failure retained.
+
+=== exact-continuation-id-repair ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSpatialMeaning.test.ts > continuation: exact repeat through the new consumer
+M53 CONTINUATION repeat save17 and exact state/output/trace/save33 PASS.
+
+ ✓ src/test/assembledSpatialMeaning.test.ts > continuation: exact repeat through the new consumer 364910ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 2 skipped (3)
+   Start at  19:14:31
+   Duration  368.53s (transform 2.17s, setup 0ms, collect 3.27s, tests 364.91s, environment 0ms, prepare 99ms)
+
+
+M53_CHECK exact-continuation-id-repair exit=0 seconds=369.03
+
+=== epistemic-owner-rollback-controls ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSpatialMeaning.test.ts > controls: denied hidden positions and atomic appraisal rollback
+M53 CONTROLS exact paired input bytes; denied x0/x7 identical appraisal; missing stays missing; atomic rollback, domain/version, isolated goal injection/foreign owner/bootstrap rejection and both expirations101 PASS.
+
+ ✓ src/test/assembledSpatialMeaning.test.ts > controls: denied hidden positions and atomic appraisal rollback 72284ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 2 skipped (3)
+   Start at  19:20:54
+   Duration  75.88s (transform 2.17s, setup 0ms, collect 3.27s, tests 72.28s, environment 0ms, prepare 101ms)
+
+
+M53_CHECK epistemic-owner-rollback-controls exit=0 seconds=76.38
+
+=== original-goal-kernels ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/goalOutcomeQualification.test.ts > binary goal outcome qualification > GQ-A: both directions qualify with distinct provenance; comparator excludes only progress
+ ✓ src/test/goalOutcomeQualification.test.ts > binary goal outcome qualification > GQ-B: same-distance crossing, indeterminate evidence and absence remain distinct
+ ✓ src/test/goalOutcomeQualification.test.ts > binary goal outcome qualification > GQ-C: tiny and large definite changes qualify equally, including outside-to-outside progress
+ ✓ src/test/goalOutcomeQualification.test.ts > binary goal outcome qualification > GQ-D: repetition neither accumulates nor mutates goal state
+ ✓ src/test/goalOutcomeQualification.test.ts > qualification-only projection > GQP-A: numeric basis cannot be recovered from same-direction projections
+ ✓ src/test/goalOutcomeQualification.test.ts > qualification-only projection > GQP-B: negative and indeterminate results retain meaning without assessment objects
+ ✓ src/test/goalOutcomeQualification.test.ts > qualification-only projection > GQP-C: all absence causes survive projection without carrying goal state
+ ✓ src/test/goalDistanceRelation.test.ts > conservative goal distance relation > GR-A: equal consequence under different goals changes exact relation
+ ✓ src/test/goalDistanceRelation.test.ts > conservative goal distance relation > GR-B: overlapping evidence is indeterminate, distinct from missing and known equal
+ ✓ src/test/goalDistanceRelation.test.ts > conservative goal distance relation > GR-C: equal distance across opposite sides preserves position
+ ✓ src/test/goalDistanceRelation.test.ts > conservative goal distance relation > GR-D: inclusive endpoints, ambiguous position and violation remain separate
+ ✓ src/test/goalDistanceRelation.test.ts > conservative goal distance relation > GR-E: metric admission and exact signal domain are required
+ ✓ src/test/goalDistanceRelation.test.ts > conservative goal distance relation > GR-F: withdrawal affects future assessment without rewriting past basis
+ ✓ src/test/goalDistanceRelation.test.ts > conservative goal distance relation > GR-G: boundary comparator discards outside-range direction without changing source
+ ✓ src/test/goalDistanceRelation.test.ts > conservative goal distance relation > GR-H: exact range bounds and asserted direction agree with exhaustive half-step witnesses
+ ✓ src/test/bodilyMaintenanceGoal.test.ts > bodily maintenance goal lifecycle > MG-A: independent adopted concern with pending and absent distinguished
+ ✓ src/test/bodilyMaintenanceGoal.test.ts > bodily maintenance goal lifecycle > MG-B: withdrawal changes future concern without altering old read basis
+ ✓ src/test/bodilyMaintenanceGoal.test.ts > bodily maintenance goal lifecycle > MG-C: expiry is explicit and ordered before assessment at boundary
+ ✓ src/test/bodilyMaintenanceGoal.test.ts > bodily maintenance goal lifecycle > MG-D: reads never retire maintenance goal; terminal goals cannot be replayed or replaced
+ ✓ src/test/bodilyMaintenanceGoal.test.ts > bodily maintenance goal lifecycle > MG-E: signal identity is model admitted; raw-source names and out-of-domain criteria reject
+ ✓ src/test/bodilyMaintenanceGoal.test.ts > bodily maintenance goal lifecycle > MG-F: rational criterion and concern snapshots do not alias caller objects
+
+ Test Files  3 passed (3)
+      Tests  21 passed (21)
+   Start at  19:22:47
+   Duration  863ms (transform 67ms, setup 0ms, collect 109ms, tests 25ms, environment 0ms, prepare 282ms)
+
+
+M53_CHECK original-goal-kernels exit=0 seconds=1.34
+
+=== retained-M52-ordinary ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSignificance.test.ts > ordinary: existing goal meaning remains live without focal attribution
+M52 ORDINARY original two-body goal assessment still Qualifies/MovingCloser under0.53 without a focal attribution; no significance invented.
+
+ ✓ src/test/assembledSignificance.test.ts > ordinary: existing goal meaning remains live without focal attribution 54947ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  19:23:00
+   Duration  58.52s (transform 2.17s, setup 0ms, collect 3.27s, tests 54.95s, environment 0ms, prepare 101ms)
+
+
+M53_CHECK retained-M52-ordinary exit=0 seconds=59.03
+
+=== final-types ===
+
+M53_CHECK final-types exit=0 seconds=15.91
+
+=== boundaries ===
+Reference boundary check passed.
+
+M53_CHECK boundaries exit=0 seconds=2.34
+
+=== research ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M53_CHECK research exit=0 seconds=3.4
+
+M53 preservation guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and M22-M51 retained tests unchanged; document/evidence caps. seconds=10.37
+M53 validation seconds including guard=1117.62
