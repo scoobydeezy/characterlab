@@ -158,3 +158,57 @@ M57 validation seconds including guard=755.68
 === types-checkpoint ===
 
 M57_CHECK types-checkpoint exit=0 seconds=15.98
+
+=== approved-witness-and-auto ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAttachment.test.ts > witness: fixed coupled dependence changes a choice and survives continuation
+M57_CELL {"seed":0,"dependent":"definition/protocol-contact-two","selfSufficient":"definition/protocol-contact-two","shared":2}
+
+stdout | src/test/assembledAttachment.test.ts > witness: fixed coupled dependence changes a choice and survives continuation
+M57_CELL {"seed":1,"dependent":"definition/protocol-contact-two","selfSufficient":"definition/protocol-contact-two","shared":2}
+
+stdout | src/test/assembledAttachment.test.ts > witness: fixed coupled dependence changes a choice and survives continuation
+M57_CELL {"seed":2,"dependent":"definition/protocol-contact-one","selfSufficient":"definition/protocol-contact-two","shared":2}
+
+stdout | src/test/assembledAttachment.test.ts > witness: fixed coupled dependence changes a choice and survives continuation
+M57_CELL {"seed":3,"dependent":"definition/protocol-contact-two","selfSufficient":"definition/protocol-contact-two","shared":2}
+
+stdout | src/test/assembledAttachment.test.ts > witness: fixed coupled dependence changes a choice and survives continuation
+M57_CELL {"seed":4,"dependent":"definition/protocol-contact-two","selfSufficient":"definition/protocol-contact-two","shared":2}
+
+stdout | src/test/assembledAttachment.test.ts > witness: fixed coupled dependence changes a choice and survives continuation
+M57_CELL {"seed":5,"dependent":"definition/protocol-contact-two","selfSufficient":"definition/protocol-contact-two","shared":2}
+
+stdout | src/test/assembledAttachment.test.ts > witness: fixed coupled dependence changes a choice and survives continuation
+M57_CELL {"seed":6,"dependent":"definition/protocol-contact-two","selfSufficient":"definition/protocol-contact-two","shared":2}
+
+stdout | src/test/assembledAttachment.test.ts > witness: fixed coupled dependence changes a choice and survives continuation
+M57_CELL {"seed":7,"dependent":"definition/protocol-contact-one","selfSufficient":"definition/protocol-contact-one","shared":2}
+M57_WITNESS {"runs":16,"changed":[2],"common":16,"conditional":2,"continuation":"exact2-to3"}
+
+stdout | src/test/assembledAttachment.test.ts > auto control: original two-support comparison retains its automatic branch
+M57_AUTO_CONTROL {"dependent":true,"mode":"1","choice":"definition/protocol-contact-one","draws":0,"attachment":"07060522617373656d626c65642d6174746163686d656e742f302e312f61707072616973616c020206020107010602010706051c617373656d626c65642d6174746163686d656e742f302e312f6375650bdb0802350bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a6563740bea070b8d080b8e08051f636f6e74656e742f617373656d626c65642d736f6369616c2f7461726765740203070300010007020bdb08020f0bdb080225","nuclei":[{"key":"0a9403010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010b9008050a436f6d6d69746d656e7403010bea070b8d080b8e08050e636f6e74656e742f7461736b2d6104010201","roles":"0a96030104010106020202010602020301060001040107020a9503010501010a9103010301010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d610301020102010602010301060001040106020105010602010a9503010501010a9103010301010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61030102030201060201030106000104010602010501060201","relevance":"060201","die":"6","standing":"2","context":"0"},{"key":"0a9403010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f02010b9008050a436f6d6d69746d656e7403010bea070b8d080b8e08050e636f6e74656e742f7461736b2d6204010201","roles":"0a96030104010106020202010600010301060001040107010a9503010501010a9103010301010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f02010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62030102010201060201030106000104010602010501060201","relevance":"060202","die":"6","standing":"0","context":"0"}]}
+
+stdout | src/test/assembledAttachment.test.ts > auto control: original two-support comparison retains its automatic branch
+M57_AUTO_CONTROL {"dependent":false,"mode":"3","choice":"definition/protocol-contact-two","draws":2,"attachment":"07060522617373656d626c65642d6174746163686d656e742f302e312f61707072616973616c020006000107010600010706051c617373656d626c65642d6174746163686d656e742f302e312f6375650bdb0802350bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a6563740bea070b8d080b8e08051f636f6e74656e742f617373656d626c65642d736f6369616c2f746172676574020307030001000700","nuclei":[{"key":"0a9403010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010b9008050a436f6d6d69746d656e7403010bea070b8d080b8e08050e636f6e74656e742f7461736b2d6104010201","roles":"0a96030104010106020202010600010301060001040107010a9503010501010a9103010301010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61030102010201060201030106000104010602010501060201","relevance":"060202","die":"6","standing":"0","context":"0"},{"key":"0a9403010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f02010b9008050a436f6d6d69746d656e7403010bea070b8d080b8e08050e636f6e74656e742f7461736b2d6204010201","roles":"0a96030104010106020202010600010301060001040107010a9503010501010a9103010301010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f02010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62030102010201060201030106000104010602010501060201","relevance":"060202","die":"6","standing":"0","context":"0"}]}
+
+ ✓ src/test/assembledAttachment.test.ts (5 tests | 3 skipped) 327757ms
+   ✓ witness: fixed coupled dependence changes a choice and survives continuation 305565ms
+   ✓ auto control: original two-support comparison retains its automatic branch 22191ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 3 skipped (5)
+   Start at  14:34:04
+   Duration  331.74s (transform 2.36s, setup 0ms, collect 3.54s, tests 327.76s, environment 0ms, prepare 140ms)
+
+
+M57_CHECK approved-witness-and-auto exit=0 seconds=332.25
+
+=== types-approved-witness ===
+
+M57_CHECK types-approved-witness exit=0 seconds=16.14
+
+M57 preservation guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and all previous retained tests unchanged; document/evidence caps. seconds=9.88
+M57 validation seconds including guard=1129.93

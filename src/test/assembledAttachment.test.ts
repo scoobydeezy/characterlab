@@ -2,7 +2,8 @@ import {receivingRecord as rec,randomDrawRecord} from '../assembled/codecs';
 import {mapIdentities as mapFromDecision} from './fixtures/assembledValueReceiving';
 /** M57 fixed scene: physical A/B tasks, no person dependencies, reserve10 unsensed,
  * workspace6; recognized coat support at1/2, absent cue3, alternative true/demand false.
- * Only unableUnaided differs. No learned bootstrap, authored bond, or active partner. */
+ * Owner-approved witness: support opportunity only at1 in both arms;
+ * original two-support scene retained as Auto control. Only unableUnaided differs. No learned bootstrap, authored bond, or active partner. */
 import {it,expect,vi} from 'vitest';
 import {list,text,unsigned as u,signed,rational as q,typedIdentifier,type CanonicalValue} from '../substrate/canonicalEncoding';
 import * as stateModule from '../substrate/state';
@@ -70,13 +71,13 @@ function live(r:Run,count:number,historyLength=2){
 }
 it('witness: fixed coupled dependence changes a choice and survives continuation',async()=>{
  const {s}=fixture(),m=await prepareCharacterModel(s),maps=[];
- for(const dependent of [true,false]){const {d}=fixture({dependent}),r=await createCharacterRun(m,d);await through(r,3n);live(r,dependent?2:0);maps.push(mapFromDecision(r));}
+ for(const dependent of [true,false]){const {d}=fixture({dependent,one:true}),r=await createCharacterRun(m,d);await through(r,3n);live(r,dependent?1:0,1);maps.push(mapFromDecision(r));}
  const changed:number[]=[];let common=0,conditional=0;
  for(let seed=0;seed<8;seed++){
   const rs:Run[]=[];
-  for(const [i,dependent]of [true,false].entries()){const {d}=fixture({dependent},seed);d.orderedInputs=enc(list([maps[i].canonicalValue,...items(decode(d.orderedInputs),'list')]));const r=await createCharacterRun(m,d);
+  for(const [i,dependent]of [true,false].entries()){const {d}=fixture({dependent,one:true},seed);d.orderedInputs=enc(list([maps[i].canonicalValue,...items(decode(d.orderedInputs),'list')]));const r=await createCharacterRun(m,d);
    if(seed===0&&dependent){await through(r,2n);const restored=await restoreCharacterRun(s,{initialState:d.initialState,orderedInputs:d.orderedInputs,save:r.save()}),repeat=await createCharacterRun(m,d);await through(repeat,2n);exact(r,restored);exact(r,repeat);for(const x of [r,restored,repeat])await through(x,3n);exact(r,restored);exact(r,repeat);}else await through(r,3n);
-   live(r,dependent?2:0);rs.push(r);
+   live(r,dependent?1:0,1);rs.push(r);
   }
   const [a,b]=rs;expect(state(a).read(personPath(C,target))).toEqual(state(b).read(personPath(C,target)));
   const aa=draws(a),bb=draws(b),shared=aa.filter(x=>bb.some(y=>key(f(x,2n))===key(f(y,2n))));
@@ -158,9 +159,10 @@ it('boundaries: admission, append ownership, source authentication and late140 r
  console.info('M57_BOUNDARIES source/admission/bootstrap/unique owner/append/late140 whole-instant rollback PASS');
 },590000);
 
-it('diagnostic: fixed predeclared arms and calibration, no acceptance claim',async()=>{
+it('auto control: original two-support comparison retains its automatic branch',async()=>{
  for(const dependent of [true,false]){const r=await run({dependent}),decision=decisions(r)[0],context=rec(f(decision,3n),408n),result=rec(f(rec(f(decision,4n),419n),2n),420n);
  const nuclei=items(f(context,3n),'list').map(v=>rec(v,407n));
- console.info('M57_DIAGNOSTIC '+JSON.stringify({dependent,mode:String(uint(f(result,8n))),choice:choice(r),draws:draws(r).length,attachment:key(list(derived(r))),nuclei:nuclei.map(n=>({key:key(f(n,1n)),roles:key(f(n,2n)),relevance:key(f(n,3n)),die:String(uint(f(n,4n))),standing:String(signedValue(f(n,5n))),context:String(signedValue(f(n,6n)))}))}));
+ expect(uint(f(result,8n))).toBe(dependent?1n:3n);expect(draws(r).length).toBe(dependent?0:2);expect(relationshipHistory(history(r))).toHaveLength(2);expect(derived(r)[2]).toEqual(q(dependent?1:0,1));expect(nuclei.map(n=>signedValue(f(n,5n)))).toEqual(dependent?[2n,0n]:[0n,0n]);
+ console.info('M57_AUTO_CONTROL '+JSON.stringify({dependent,mode:String(uint(f(result,8n))),choice:choice(r),draws:draws(r).length,attachment:key(list(derived(r))),nuclei:nuclei.map(n=>({key:key(f(n,1n)),roles:key(f(n,2n)),relevance:key(f(n,3n)),die:String(uint(f(n,4n))),standing:String(signedValue(f(n,5n))),context:String(signedValue(f(n,6n)))}))}));
  }
 },590000);
