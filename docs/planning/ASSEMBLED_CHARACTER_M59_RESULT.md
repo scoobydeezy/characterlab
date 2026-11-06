@@ -57,13 +57,24 @@ It therefore cannot establish shared-dice differences or continuing participatio
 with positive affect. This is a failed fixture-calibration precondition, not a law
 failure or permission to lower the gate. The original is retained as an Auto control.
 
-Owner approval is pending for one negative and one nonnegative judgment report in
-both arms (mean1/2), keeping mismatch true versus false, goals/laws, seeds0..7,
-explicit coupling and the choice-change gate fixed. No amended run has occurred.
-The work order requires that ruling because it changes the predeclared evidence.
-Required next: live Roll/positive grounds in both arms,16 matched reason-face draws,
-a changed choice, continuing with positive affect, and coupled exact repeat/save2->3.
-If this bounded replacement fails, do not search more contrasts.
+Owner approved the mixed-report replacement2026-11-05; ruling committed09bf27d2
+before execution. Both arms were declared to receive judgment true at1 and false
+at2, with mismatch still the only contrast. Goals, laws, seeds0..7, coupling and
+acceptance requirements stayed fixed. Default controls remain all-negative.
+
+The replacement failed in the FIRST identity-only setup run, before comparison-map
+construction or paired seeds. Known judgment/likelihood/E/U1/2, two retained reports
+and two nuclei passed; arbitration was still Auto. The second setup arm,16 shared
+draws, choice difference, continuing with positive affect, and coupled repeat/save2->3
+were not reached. Earlier independent exact post-choice persistence remains valid.
+The117.63s failed command is retained. No further contrasts or reruns were tried.
+
+Static inspection of assembled/configurationMath.ts and arbitration.ts confirms
+Auto means contest < thetaRoll and bypasses reason draws. Halving appraisal does
+not guarantee a Roll. The failed assertion did not emit actual nucleus distributions
+or threshold operands, so their precise numerical contribution is not established.
+A next step needs bounded analysis of this unchanged calibration before any new
+comparison proposal; neither laws nor the gate should be tuned to manufacture a pass.
 
 ## Scope and checks
 Three new tests pass in targeted runs (controls, boundaries, post-choice persistence);
@@ -71,8 +82,10 @@ the required paired witness remains unresolved. Types, reference boundary, resea
 and preservation checks pass:105 frozen dependencies, historical trees and all
 previous tests unchanged. No full historical replay was invalidated. Source/formal
 diffs are whitespace-clean; raw failure logs retain their original excerpt spacing.
-Logged verification1261.85s including failed commands and preservation; longest
-command287.39s. About538s of the1800s cap remains before the staged-size check.
+Final changed-test types PASS18.61s; preservation PASS10.85s. Logged cumulative
+verification1408.94s before staged-size validation, including failed commands;
+longest command287.39s. Earlier staged-size checks also passed (about2s).
+The1800s cap remains intact; the comparison stop rule, not time, ends this attempt.
 Staged-size validation is part of the commit step.
 M59-A12 files and M59-B2 overlap in the new test:13 distinct source/test files.
 The split was committed before the13th file; the original1800s cumulative budget,

@@ -336,3 +336,41 @@ M59_CHECK research exit=0 seconds=3.25
 
 M59 preservation guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and all previous retained tests unchanged; document/evidence caps. seconds=9.95
 M59 validation seconds including guard=1261.85
+
+=== approved-mixed-witness ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledEmbarrassment.test.ts (4 tests | 1 failed | 3 skipped) 111641ms
+   × witness: contextual appraisal changes coupled choices and permits continuing with positive affect 111640ms
+     → expected 1n not to be 1n // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledEmbarrassment.test.ts > witness: contextual appraisal changes coupled choices and permits continuing with positive affect
+AssertionError: expected 1n not to be 1n // Object.is equality
+ ❯ live src/test/assembledEmbarrassment.test.ts:70:74
+     68|  expect(personHistory(history(r))).toHaveLength(2);expect(personMean(h…
+     69|  const nuclei=items(f(rec(f(decisions(r)[0],3n),408n),3n),'list').map(…
+     70|  expect(uint(f(rec(f(rec(f(decisions(r)[0],4n),419n),2n),420n),8n))).n…
+       |                                                                          ^
+     71|  expect(nuclei.map(n=>f(n,6n))).toEqual([signed(mismatch?1:0),signed(0…
+     72| }
+ ❯ src/test/assembledEmbarrassment.test.ts:75:131
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 3 skipped (4)
+   Start at  20:42:22
+   Duration  116.02s (transform 2.57s, setup 0ms, collect 3.83s, tests 111.64s, environment 0ms, prepare 325ms)
+
+
+M59_CHECK approved-mixed-witness exit=1 seconds=117.63
+
+=== approved-test-types ===
+
+M59_CHECK approved-test-types exit=0 seconds=18.61
+
+M59 preservation guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and all previous retained tests unchanged; document/evidence caps. seconds=10.85
+M59 validation seconds including guard=1408.94

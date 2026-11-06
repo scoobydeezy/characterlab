@@ -33,8 +33,9 @@ import {estimate} from '../campaign3/embarrassment';
 /** M59: physical A/B tasks, no person dependency, unsensed reserve10, workspace6.
  * Fixed known competence incident, coat evaluator reports1/2, choice3.
  * Reputation/withdrawal/continuation importance1; no support, bond or loss cue.
+ * Approved primary: judgment true at1, false at2 in both arms.
  * Only mismatch differs in primary arms. Evidence is independently gated. */
-type Opt={mismatch?:boolean;seen?:boolean;judgment?:boolean;unknown?:number;denied?:boolean;truth?:boolean;signal?:string;late?:boolean;correction?:boolean;zeroBase?:boolean;duplicate?:boolean};
+type Opt={mixed?:boolean;mismatch?:boolean;seen?:boolean;judgment?:boolean;unknown?:number;denied?:boolean;truth?:boolean;signal?:string;late?:boolean;correction?:boolean;zeroBase?:boolean;duplicate?:boolean};
 let base:ReturnType<typeof previous>|undefined,frames:CanonicalValue[]|undefined;
 const actionA=typedIdentifier(1027,text('definition/protocol-contact-one')),actionB=typedIdentifier(1027,text('definition/protocol-contact-two'));
 function fixture(o:Opt={},seed=0){
@@ -51,7 +52,7 @@ function fixture(o:Opt={},seed=0){
  const selected=o.late?[list([signed(3),...items(frames[0],'list').slice(1)])]:[...frames];
  if(o.correction){selected.push(list([signed(3),...items(frames[1],'list').slice(1)]));for(const row of [...rows])if(signedValue(items(row,'list')[0])===3n)rows.push(list([signed(4),...items(row,'list').slice(1)]));}
  for(const frame of selected){const row=[...items(frame,'list')],p=[...items(row[3],'list')],s=[...items(p[1],'list')],r=[...items(p[6],'list')];const at=signedValue(row[0]);s[3]=u(0);s[4]=u(o.duplicate&&at===3n?1:Number(at));s[5]=o.denied!==true;p[1]=list(s);r[2]=false;p[6]=list(r);p[5]=list([list([text(o.signal??'appearance/coat'),true])]);
-  p.push(list([u(1),u(1)]),list([false,u(0),false,false,false,true,true]),list([false,u(0),true,u(0)]),list([o.mismatch??true,o.seen??true,at===3n&&o.correction?false:o.judgment??true].map((v,i)=>list([v,o.unknown!==i,o.truth??true]))));row[3]=list(p);rows.push(list(row));
+  p.push(list([u(1),u(1)]),list([false,u(0),false,false,false,true,true]),list([false,u(0),true,u(0)]),list([o.mismatch??true,o.seen??true,(at===3n&&o.correction)||(at===2n&&o.mixed)?false:o.judgment??true].map((v,i)=>list([v,o.unknown!==i,o.truth??true]))));row[3]=list(p);rows.push(list(row));
  }
  b.d={...b.d,runSeed:new Uint8Array(32).fill(seed),orderedInputs:enc(list(rows))};return b;
 }
@@ -63,20 +64,20 @@ const bytes=(a:Uint8Array,b:Uint8Array)=>expect(a.length===b.length&&a.every((v,
 const exact=(a:Run,b:Run)=>{for(const k of ['state','outputs','trace'] as const)bytes(a.snapshot()[k],b.snapshot()[k]);bytes(a.save(),b.save());expect(a.snapshot().clock).toBe(b.snapshot().clock);};
 const run=async(o:Opt={},at=3n)=>{const {s,d}=fixture(o),r=await createCharacterRun(await prepareCharacterModel(s),d);await through(r,at);return r;};
 function live(r:Run,mismatch:boolean){
- const a=app(r);expect(a,'live appraisal').toBeDefined();expect(a[8]).toEqual(text('Known'));expect(a.slice(3,8)).toEqual([list([mismatch]),list([true]),list([q(1,1)]),list([q(mismatch?1:0,1)]),q(1,1)]);expect(a[9]).toEqual(list([q(mismatch?1:0,1),q(mismatch?1:0,1)]));
+ const a=app(r);expect(a,'live appraisal').toBeDefined();expect(a[8]).toEqual(text('Known'));expect(a.slice(3,8)).toEqual([list([mismatch]),list([true]),list([q(1,2)]),list([q(mismatch?1:0,2)]),q(1,1)]);expect(a[9]).toEqual(list([q(mismatch?1:0,2),q(mismatch?1:0,2)]));
  expect(personHistory(history(r))).toHaveLength(2);expect(personMean(history(r))).toBeUndefined();
  const nuclei=items(f(rec(f(decisions(r)[0],3n),408n),3n),'list').map(v=>rec(v,407n));expect(nuclei).toHaveLength(2);
  expect(uint(f(rec(f(rec(f(decisions(r)[0],4n),419n),2n),420n),8n))).not.toBe(1n);
- expect(nuclei.map(n=>f(n,6n))).toEqual([signed(mismatch?2:0),signed(0)]);for(const n of nuclei)expect(uint(f(n,4n))).toBeGreaterThan(0n);
+ expect(nuclei.map(n=>f(n,6n))).toEqual([signed(mismatch?1:0),signed(0)]);for(const n of nuclei)expect(uint(f(n,4n))).toBeGreaterThan(0n);
 }
 it('witness: contextual appraisal changes coupled choices and permits continuing with positive affect',async()=>{
- const {s}=fixture(),m=await prepareCharacterModel(s),maps=[];
- for(const mismatch of [true,false]){const {d}=fixture({mismatch}),r=await createCharacterRun(m,d);await through(r,3n);live(r,mismatch);maps.push(mapFromDecision(r));}
+ const {s}=fixture({mixed:true}),m=await prepareCharacterModel(s),maps=[];
+ for(const mismatch of [true,false]){const {d}=fixture({mixed:true,mismatch}),r=await createCharacterRun(m,d);await through(r,3n);live(r,mismatch);maps.push(mapFromDecision(r));}
  const changed:number[]=[],continued:number[]=[];let common=0,conditional=0;
  for(let seed=0;seed<8;seed++){
   const rs:Run[]=[];
   for(const [i,mismatch]of [true,false].entries()){
-   const {d}=fixture({mismatch},seed);d.orderedInputs=enc(list([maps[i].canonicalValue,...items(decode(d.orderedInputs),'list')]));const r=await createCharacterRun(m,d);
+   const {d}=fixture({mixed:true,mismatch},seed);d.orderedInputs=enc(list([maps[i].canonicalValue,...items(decode(d.orderedInputs),'list')]));const r=await createCharacterRun(m,d);
    if(seed===0&&mismatch){await through(r,2n);const b=await restoreCharacterRun(s,{initialState:d.initialState,orderedInputs:d.orderedInputs,save:r.save()}),repeat=await createCharacterRun(m,d);await through(repeat,2n);exact(r,b);exact(r,repeat);for(const x of [r,b,repeat])await through(x,3n);exact(r,b);exact(r,repeat);}else await through(r,3n);
    live(r,mismatch);rs.push(r);
   }

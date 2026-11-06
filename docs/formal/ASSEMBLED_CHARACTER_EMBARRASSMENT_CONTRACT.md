@@ -78,3 +78,9 @@ contains one negative report at1 and one nonnegative report at2 in BOTH arms.
 Mean judgment1/2; only mismatch differs. Same laws, goals, seeds0..7, coupling,
 choice-change/positive-affect continuation gates and cumulative1800s budget.
 Keep the all-negative original as Auto/persistence control. No further contrasts.
+
+Approved replacement result: FAIL before paired execution. The positive-mismatch
+setup passed Known judgment/likelihood/E/U1/2, two history rows and two nuclei,
+but arbitration mode remained Auto. No maps or seed-pair claims were produced.
+The approved stop rule now applies: no further contrasts. This result does not
+establish a law failure or completed embarrassment-without-avoidance capability.

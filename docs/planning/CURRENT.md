@@ -1,4 +1,4 @@
-# Current work — M59 behavioral gate pending (2026-11-05)
+# Current work — M59 bounded replacement failed (2026-11-05)
 
 Contextual evaluation reports now feed the shared appraisal/reason path. The
 independent controls and post-choice persistence repair pass; M59 is NOT complete.
@@ -23,16 +23,20 @@ independent controls and post-choice persistence repair pass; M59 is NOT complet
   malformed records reject. Exact post-choice restore and whole-save corruption
   rejection PASS. Types, boundary, research and preservation checks PASS.
 
-## Owner amendment — approved 2026-11-05
-Original all-negative history yields Auto withdrawal. The predeclared Roll gate
-failed before paired-choice claims. Keep that original as an Auto control.
-Approved: one negative and one nonnegative judgment report in BOTH arms (mean1/2),
-then the same mismatch-true versus mismatch-false contrast. Laws, goals, seeds0..7,
-coupling and choice-change requirement stay fixed. No further contrast search.
-Owner answered ‘go for it’ to this exact bounded amendment. Record before running;
-the original failed scene stays as the Auto/persistence control.
-Still required: live Roll in both arms,16 shared reason-face draws, >=1 changed
-choice, >=1 continuation with positive affect, exact coupled repeat/save2->3.
+## Approved replacement result — FAIL, stop rule applied
+Owner approved one negative report at1 and one nonnegative at2 in BOTH arms,
+recorded before execution in09bf27d2. Laws, goals, seeds0..7 and gates unchanged.
+The mismatch-positive setup run reached Known appraisal with judgment/likelihood/
+E/U1/2, two report records and two reason nuclei. It still selected Auto, failing
+live Roll before map construction or any paired-seed comparison. No shared-dice,
+choice-change or positive-affect continuation claim follows. No second arm ran.
+Original all-negative Auto/persistence control remains. Both failed contrasts and
+all logs retained; no further contrasts, calibration changes or retries authorized.
+Code inspection: Auto is selected when analytical contest is below thetaRoll;
+reducing affect does not guarantee crossing that gate. Exact nucleus distributions
+and threshold operands were not emitted; a numerical cause beyond this is unproven.
+Next decision requires a bounded calibration analysis of the unchanged scene,
+not more scenario trials. M59 remains incomplete; no new integration area starts.
 
 ## Package and verification limits
 M59-A used12 source/test files; the c464f226 checkpoint explicitly split M59-B
@@ -41,5 +45,5 @@ before adding codecs.ts. M59-B touches only codecs.ts and the existing new test:
 all failures,600s/command;20 evidence files/5MiB. All failures retained.
 No completed BRIEF-12.5-4 credit or reconciliation closure. Final21 members,
 15 families,132 clauses and18 conditional obligations remain. Finish this gate
-before choosing another integration area. No automatic approval or budget reset. Logged verification1261.85s before the
-staged-size check; about538s remains for the pending gate, not a new budget.
+before choosing another integration area. No automatic approval or budget reset. Approved witness117.63s; types18.61s and preservation10.85s PASS. Logged
+cumulative1408.94s before staged-size validation. No budget reset; the comparison stop rule applies despite time remaining.
