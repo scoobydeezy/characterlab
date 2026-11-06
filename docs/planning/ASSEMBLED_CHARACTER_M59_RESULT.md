@@ -141,6 +141,42 @@ of a runtime defect, law failure, general impossibility or completed BRIEF-12.5-
 No additional contrast, seed search, goal tuning, threshold change or acceptance
 waiver follows. Stop rule applied. M59 remains incomplete; no new integration area.
 
+## Fixed-cohort diagnosis2026-11-06
+Owner continuation authorized a bounded diagnosis, card aa02b863. The existing
+substrate RNG reconstructed the same M34 comparison keys, identities, seeds0..7
+and spans4/6; no character simulation, alternate seed or contrast was executed.
+The5.78s diagnostic reconciled every retained final choice:
+
+| Seeds | Withdrawal face | Completion face | With +2 / without modifier |
+|---|---|---|---|
+| 0,4 | 3 | 6 | Continue / Continue |
+| 1,2,3 | 2 | 6 | Continue / Continue |
+| 5,6 | 1 | 6 | Continue / Continue |
+| 7 | 4 | 2 | Withdraw / Withdraw |
+
+No ties arise. The positive modifier cannot change these winners. This explains
+the finite witness failure without identifying a scoring/coupling discrepancy;
+it does not qualify the RNG generally or change the failed acceptance result.
+These are reconstructed effective-key draws agreeing with recorded choices,
+not newly captured full-run trace files. The exact setup-map local roots were
+not archived; effective comparison keys exclude them under the accepted contract.
+Types PASS17.01s. Production, seeds and scenario remain unchanged.
+
+Proposed owner decision, NOT adopted: replace only the requirement that at least
+one of these eight sampled pairs changes choice with an exhaustive check at the
+existing assembled arbitration seam. Enumerate4 withdrawal faces x6 completion
+faces x2 shared fair-tie outcomes =48 equally weighted coupled cases, using the
+same live-verified nuclei/identities/distributions and +2/0 modifier. Call existing
+production arbitration; control the test draw capability only, never runtime RNG.
+Exact expected results:16 changed winners and16 positive-affect continuations.
+Retain all end-to-end live appraisal/reason,16 shared draws, trace, repeat/restore,
+negative controls and the failed0/8 result. This is a seam-level proof combined
+with existing integration evidence, NOT a new full-simulation changed-choice run.
+Final corpus acceptance remains unchanged. No new fixtures/seeds/laws/framework.
+Implementation would stay in the same test; one20s targeted check plus types and
+preservation, within the remaining1980s budget. Owner approval is required because
+this substitutes a different proof for M59's explicit sampled-choice criterion.
+
 ## Scope and checks
 Three new tests pass in targeted runs (controls, boundaries, post-choice persistence);
 the required paired witness failed its choice-change gate. Types, reference boundary, research
@@ -162,3 +198,6 @@ No whole-clause/family credit is claimed for BRIEF-12.5-4. Episodic recall of th
 reports, natural norm inference, enacted withdrawal/participation, emotional display,
 source trust and general embarrassment remain outside this bounded connection.
 The21 members/15 families/132 clauses and18 conditional obligations remain required.
+
+Fixed-cohort diagnostic checkpoint: latest preservation PASS10.72s; cumulative
+logged1900.49s before staged-size, within1980s. Proposed gate not implemented.

@@ -32,15 +32,22 @@ Numerical prediction was correct; the fixed sampled pairs did not supply the
 required behavioral witness. No psychological law failure or completed clause
 is inferred. M59 remains open; no new integration area or UI work starts.
 
-## Authorized continuation — fixed-draw diagnosis only
-Owner said continue2026-11-06. Read-only production inspection plus one kernel-only
-diagnostic in the existing M59 test: reconstruct the SAME M34 comparison keys,
-actor/action/task identities, seed bytes0..7 and spans4/6; derive score/tie outcomes
-and reconcile the eight retained cells. No new scenario, seed, simulation or gate.
-Use existing substrate random functions; no independent RNG implementation.
-One diagnostic command capped20s; types/preservation/research/size as needed,
-within unchanged1980s cumulative (1866.98s logged). Done when this fixed cohort's
-scores explain its choices or identify a concrete discrepancy. No closure inferred.
+## Fixed-cohort diagnosis complete; proof amendment PROPOSED
+Owner-authorized kernel-only diagnostic aa02b863 PASS5.78s; types PASS17.01s.
+Same effective comparison keys/seeds/spans reproduce all retained choices:
+seeds0/4 faces3,6;1/2/3 faces2,6;5/6 faces1,6;7 faces4,2. No ties. Adding2
+cannot change any winner. No scoring/coupling discrepancy found, no new simulation.
+Original0/8 failure stays; this diagnosis does not complete M59.
+
+PROPOSED, not adopted: replace the eight-seed changed-choice gate with exhaustive
+existing-arbitration coverage of4 x6 faces x2 shared tie outcomes =48 coupled cases.
+Use the same live-verified nuclei/identities/distributions,+2/0; production arbitration,
+test-controlled draw capability only. Require16 changed winners and16 positive-affect
+continuations. Keep end-to-end live/reason/trace/coupling/persistence/negative evidence
+and failed0/8 result. This is seam proof plus integration evidence, not a new observed
+full-run choice change. Final corpus acceptance unchanged. No new seeds or laws.
+Owner ruling needed under work order Replay and interpretation. If approved: same
+test file,20s targeted check, types/preservation, remaining1980s budget; no new suite.
 
 ## Retained checks and limits
 Unknown/denied/unrecognized/hidden/late/correction, no-base, native projections,
@@ -50,7 +57,7 @@ Original all-negative and equal-importance mixed Auto scenes remain controls;
 wrong-unit prediction and successor restore repair remain explicitly recorded.
 M59-A12 and M59-B2 files overlap in the test:13 distinct source/test files.
 20 evidence files/5MiB,1980s cumulative including all failures; no reset.
-Final research3.48s/preservation10.04s PASS; logged1866.98s before staged-size.
-Budget1980s intact. Only the bounded diagnostic above is newly authorized.
+Latest preservation PASS10.72s; logged1900.49s before staged-size (1980s cap).
+Budget1980s intact. Proposed proof-gate change is NOT authorized yet.
 No completed BRIEF-12.5-4 credit/reconciliation closure. Final21 members,
 15 families,132 clauses and18 conditional obligations remain required.

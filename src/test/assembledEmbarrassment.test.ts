@@ -1,3 +1,6 @@
+import {coupledRandomKeyValue,mapCandidatesToBoundedRange,randomCandidate128} from '../substrate/random';
+import {semanticReferentFromAuthoredContent} from '../substrate/referentOrigin';
+import {governedContentDefinitionId} from '../substrate/contentDefinitionId';
 import {sid} from '../assembled/skill';
 import {cognitiveSupportedSchemas,decodeCognitive} from '../assembled/codecs';
 import {canonicalDecode,RecordSchemaRegistry,record,set} from '../substrate/canonicalEncoding';
@@ -135,3 +138,22 @@ it('persistence: post-choice save containing qualified identity restores exactly
  const save=rec(decodeCognitive(a.save()),132n),corrupt=record(save.schema,new Map([...save.fields].map(([n,v])=>[n,n===5n?set([]):v])));await expect(restoreCharacterRun(s,{initialState:d.initialState,orderedInputs:d.orderedInputs,save:enc(corrupt)})).rejects.toThrow('whole-save prefix equality');
  console.info('M59 post-choice full-state save/restore and malformed metadata/nested record/whole-save corruption PASS');
 },180000);
+
+/** Fixed already-executed cohort only; no fixture construction or new seed search. */
+it('diagnostic: reconcile fixed M59 coupled faces and scores with retained choices',async()=>{
+ const effective=(purpose:string,subjects:readonly (readonly [string,CanonicalValue])[])=>coupledRandomKeyValue({
+  keyId:sid(10006,key(list([text('M34'),signed(3),sid(1042,'purpose/'+purpose),list(subjects.map(([role,id])=>list([sid(1043,'subject/'+role),id])))]))),
+  comparisonRoleId:sid(10005,'assembled/'+purpose),
+ });
+ const reasonKeys=['a','b'].map((task,i)=>effective('task-reason-face',[['actor',C],['action',i?actionB:actionA],['task',semanticReferentFromAuthoredContent(governedContentDefinitionId('content/task-'+task))]])),tieKey=effective('task-decision-tie',[['actor',C]]);
+ const cells:{seed:number;faces:string[];positive:string;neutral:string;tie:string|null}[]=[];
+ for(let seed=0;seed<8;seed++){
+  const runSeed=new Uint8Array(32).fill(seed),draw=async(k:CanonicalValue,span:bigint)=>(await mapCandidatesToBoundedRange(span,async index=>(await randomCandidate128(runSeed,k,index)).candidate)).result;
+  const a=await draw(reasonKeys[0],4n)+1n,b=await draw(reasonKeys[1],6n)+1n;let tie:bigint|undefined;
+  if(a===b||a+2n===b)tie=await draw(tieKey,2n);
+  const selected=(offset:bigint)=>a+offset>b?'Withdraw':a+offset<b?'Continue':tie===0n?'Withdraw':'Continue';
+  const cell={seed,faces:[String(a),String(b)],positive:selected(2n),neutral:selected(0n),tie:tie===undefined?null:String(tie)};cells.push(cell);console.info('M59_FIXED_DRAWS '+JSON.stringify(cell));
+ }
+ const expected=Array.from({length:8},(_,i)=>i===7?'Withdraw':'Continue');
+ expect(cells.map(c=>c.positive)).toEqual(expected);expect(cells.map(c=>c.neutral)).toEqual(expected);
+},15000);

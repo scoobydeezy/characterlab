@@ -496,3 +496,36 @@ M59_CHECK final-research exit=0 seconds=3.48
 
 M59 preservation guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and all previous retained tests unchanged; document/evidence caps. seconds=10.04
 M59 validation seconds including guard=1866.98
+
+=== fixed-cohort-draw-diagnostic ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledEmbarrassment.test.ts > diagnostic: reconcile fixed M59 coupled faces and scores with retained choices
+M59_FIXED_DRAWS {"seed":0,"faces":["3","6"],"positive":"Continue","neutral":"Continue","tie":null}
+M59_FIXED_DRAWS {"seed":1,"faces":["2","6"],"positive":"Continue","neutral":"Continue","tie":null}
+
+stdout | src/test/assembledEmbarrassment.test.ts > diagnostic: reconcile fixed M59 coupled faces and scores with retained choices
+M59_FIXED_DRAWS {"seed":2,"faces":["2","6"],"positive":"Continue","neutral":"Continue","tie":null}
+M59_FIXED_DRAWS {"seed":3,"faces":["2","6"],"positive":"Continue","neutral":"Continue","tie":null}
+M59_FIXED_DRAWS {"seed":4,"faces":["3","6"],"positive":"Continue","neutral":"Continue","tie":null}
+M59_FIXED_DRAWS {"seed":5,"faces":["1","6"],"positive":"Continue","neutral":"Continue","tie":null}
+M59_FIXED_DRAWS {"seed":6,"faces":["1","6"],"positive":"Continue","neutral":"Continue","tie":null}
+M59_FIXED_DRAWS {"seed":7,"faces":["4","2"],"positive":"Withdraw","neutral":"Withdraw","tie":null}
+
+ ✓ src/test/assembledEmbarrassment.test.ts (5 tests | 4 skipped) 7ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 4 skipped (5)
+   Start at  17:39:25
+   Duration  4.23s (transform 2.48s, setup 0ms, collect 3.71s, tests 7ms, environment 0ms, prepare 319ms)
+
+
+M59_CHECK fixed-cohort-draw-diagnostic exit=0 seconds=5.78
+
+=== fixed-draw-diagnostic-types ===
+
+M59_CHECK fixed-draw-diagnostic-types exit=0 seconds=17.01
+
+M59 preservation guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and all previous retained tests unchanged; document/evidence caps. seconds=10.72
+M59 validation seconds including guard=1900.49
