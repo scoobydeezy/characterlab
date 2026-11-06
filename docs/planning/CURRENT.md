@@ -38,15 +38,15 @@ one continuation with positive affect. Seed0 positive exact repeat/save2->restor
 on state/output/trace/save. No further contrasts if this amended witness fails.
 Passing these gates completes only the bounded M59 connection, not BRIEF-12.5-4.
 
-## Verification and budget — execution NOT yet authorized by budget
+## Verification and budget — extension approved2026-11-06
 Existing controls, negative/hidden/rollback/native/M58 and post-choice persistence
 checks PASS; untouched production/dependencies do not invalidate them. No reruns.
 Changed-test types, final preservation, applicable research and staged-size only,
 plus this witness. Prior comparable M58 witness288s, M57 witness332s; plan360s cap.
-Logged1578.50s including types18.51s/preservation10.09s;1800s remains in force.
-Request a single180s extension to1980s (33min total), no reset,600s/command unchanged.
-Do not start the witness until the extension is approved. Finish implementation,
-static preflight/types first so that only this concrete bounded run awaits approval.
+Logged1578.50s including types18.51s/preservation10.09s before approval.
+Owner approved +180s to1980s (33min total), no reset,600s/command unchanged.
+Prepared witness31db185d runs once with360s command cap; only final preservation,
+research and staged-size follow. All failures count. No further contrasts if it fails.
 M59-A12 files and M59-B2 overlapping test =13 distinct source/test files;
 20 evidence files/5MiB total, no new evidence directory. No new integration area.
 Final21 members/15 families/132 clauses and18 conditional obligations remain.

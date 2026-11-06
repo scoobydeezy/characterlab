@@ -101,3 +101,6 @@ Positive scores d4+2 vs d6 yield withdrawal2/3; no-mismatch d4 vs d6 yields1/3.
 Both contest2/3 >=ThetaRoll1/2. Same seeds0..7,16 shared reason draws, changed
 choice and positive-affect continuation gates. Original saturated cases retained.
 Witness execution awaits the specific cumulative-budget extension in CURRENT.
+
+Owner approved2026-11-06: +180s verification to1980s cumulative, no reset;
+prepared31db185d witness capped360s, fixed seeds/laws/gates; final checks only.
