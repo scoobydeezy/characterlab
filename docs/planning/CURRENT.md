@@ -32,6 +32,16 @@ Numerical prediction was correct; the fixed sampled pairs did not supply the
 required behavioral witness. No psychological law failure or completed clause
 is inferred. M59 remains open; no new integration area or UI work starts.
 
+## Authorized continuation — fixed-draw diagnosis only
+Owner said continue2026-11-06. Read-only production inspection plus one kernel-only
+diagnostic in the existing M59 test: reconstruct the SAME M34 comparison keys,
+actor/action/task identities, seed bytes0..7 and spans4/6; derive score/tie outcomes
+and reconcile the eight retained cells. No new scenario, seed, simulation or gate.
+Use existing substrate random functions; no independent RNG implementation.
+One diagnostic command capped20s; types/preservation/research/size as needed,
+within unchanged1980s cumulative (1866.98s logged). Done when this fixed cohort's
+scores explain its choices or identify a concrete discrepancy. No closure inferred.
+
 ## Retained checks and limits
 Unknown/denied/unrecognized/hidden/late/correction, no-base, native projections,
 ownership/append-only, after-person140 rollback, M58 controls and post-choice
@@ -41,6 +51,6 @@ wrong-unit prediction and successor restore repair remain explicitly recorded.
 M59-A12 and M59-B2 files overlap in the test:13 distinct source/test files.
 20 evidence files/5MiB,1980s cumulative including all failures; no reset.
 Final research3.48s/preservation10.04s PASS; logged1866.98s before staged-size.
-Budget1980s intact. No further simulation or checks beyond the final commit step.
+Budget1980s intact. Only the bounded diagnostic above is newly authorized.
 No completed BRIEF-12.5-4 credit/reconciliation closure. Final21 members,
 15 families,132 clauses and18 conditional obligations remain required.
