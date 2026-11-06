@@ -1,0 +1,154 @@
+
+=== types-1 ===
+
+M59_CHECK types-1 exit=0 seconds=16.16
+
+=== witness-1 ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledEmbarrassment.test.ts (3 tests | 1 failed | 2 skipped) 97779ms
+   × witness: contextual appraisal changes coupled choices and permits continuing with positive affect 97778ms
+     → cognitive record grammar: coupled draw in unrelated record
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledEmbarrassment.test.ts > witness: contextual appraisal changes coupled choices and permits continuing with positive affect
+SchedulerContractError: cognitive record grammar: coupled draw in unrelated record
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ fail src/assembled/codecs.ts:24:36
+ ❯ visit src/assembled/codecs.ts:81:65
+ ❯ visit src/assembled/codecs.ts:99:52
+ ❯ validate src/assembled/codecs.ts:103:2
+ ❯ Module.decodeCognitive src/assembled/codecs.ts:110:111
+ ❯ state src/test/assembledEmbarrassment.test.ts:64:48
+ ❯ history src/test/assembledEmbarrassment.test.ts:65:24
+ ❯ live src/test/assembledEmbarrassment.test.ts:73:23
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 2 skipped (3)
+   Start at  18:55:50
+   Duration  101.56s (transform 2.30s, setup 0ms, collect 3.48s, tests 97.78s, environment 0ms, prepare 99ms)
+
+
+M59_CHECK witness-1 exit=1 seconds=102.09
+
+=== witness-2 ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledEmbarrassment.test.ts (3 tests | 1 failed | 2 skipped) 100071ms
+   × witness: contextual appraisal changes coupled choices and permits continuing with positive affect 100070ms
+     → unknown record schema 151/1
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledEmbarrassment.test.ts > witness: contextual appraisal changes coupled choices and permits continuing with positive affect
+CanonicalEncodingError: unknown record schema 151/1
+ ❯ fail src/substrate/canonicalEncoding.ts:430:9
+    428| 
+    429| function fail(message: string): never {
+    430|   throw new CanonicalEncodingError(message);
+       |         ^
+    431| }
+    432| 
+ ❯ Reader.readRecord src/substrate/canonicalEncoding.ts:348:18
+ ❯ Reader.readValue src/substrate/canonicalEncoding.ts:257:36
+ ❯ Reader.readSet src/substrate/canonicalEncoding.ts:334:25
+ ❯ Reader.readValue src/substrate/canonicalEncoding.ts:256:33
+ ❯ Module.canonicalDecode src/substrate/canonicalEncoding.ts:107:24
+ ❯ state src/test/assembledEmbarrassment.test.ts:65:48
+ ❯ history src/test/assembledEmbarrassment.test.ts:66:24
+ ❯ live src/test/assembledEmbarrassment.test.ts:74:23
+ ❯ src/test/assembledEmbarrassment.test.ts:81:120
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 2 skipped (3)
+   Start at  18:58:02
+   Duration  103.85s (transform 2.31s, setup 0ms, collect 3.48s, tests 100.07s, environment 0ms, prepare 99ms)
+
+
+M59_CHECK witness-2 exit=1 seconds=104.38
+
+=== post-choice-diagnostic ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledEmbarrassment.test.ts (4 tests | 1 failed | 3 skipped) 98997ms
+   × persistence: post-choice save containing qualified identity restores exactly 98996ms
+     → expected 1n not to be 1n // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledEmbarrassment.test.ts > persistence: post-choice save containing qualified identity restores exactly
+AssertionError: expected 1n not to be 1n // Object.is equality
+ ❯ live src/test/assembledEmbarrassment.test.ts:77:74
+     75|  expect(personHistory(history(r))).toHaveLength(2);expect(personMean(h…
+     76|  const nuclei=items(f(rec(f(decisions(r)[0],3n),408n),3n),'list').map(…
+     77|  expect(uint(f(rec(f(rec(f(decisions(r)[0],4n),419n),2n),420n),8n))).n…
+       |                                                                          ^
+     78|  expect(nuclei.map(n=>f(n,6n))).toEqual([signed(mismatch?2:0),signed(0…
+     79| }
+ ❯ src/test/assembledEmbarrassment.test.ts:124:105
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 3 skipped (4)
+   Start at  19:00:42
+   Duration  102.78s (transform 2.31s, setup 0ms, collect 3.48s, tests 99.00s, environment 0ms, prepare 99ms)
+
+
+M59_CHECK post-choice-diagnostic exit=1 seconds=103.31
+
+=== post-choice-diagnostic-2 ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledEmbarrassment.test.ts (4 tests | 1 failed | 3 skipped) 99998ms
+   × persistence: post-choice save containing qualified identity restores exactly 99998ms
+     → cognitive record grammar: coupled draw in unrelated record
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledEmbarrassment.test.ts > persistence: post-choice save containing qualified identity restores exactly
+SchedulerContractError: cognitive record grammar: coupled draw in unrelated record
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ fail src/assembled/codecs.ts:24:36
+ ❯ visit src/assembled/codecs.ts:81:65
+ ❯ visit src/assembled/codecs.ts:99:52
+ ❯ visit src/assembled/codecs.ts:98:41
+ ❯ validate src/assembled/codecs.ts:103:2
+ ❯ Module.decodeCognitive src/assembled/codecs.ts:110:111
+ ❯ Module.restoreCharacterRun src/assembled/character.ts:53:17
+ ❯ src/test/assembledEmbarrassment.test.ts:125:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 3 skipped (4)
+   Start at  19:04:08
+   Duration  103.77s (transform 2.32s, setup 0ms, collect 3.48s, tests 100.00s, environment 0ms, prepare 98ms)
+
+
+M59_CHECK post-choice-diagnostic-2 exit=1 seconds=104.3
+
+=== types-2 ===
+
+M59_CHECK types-2 exit=0 seconds=16.19

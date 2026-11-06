@@ -45,3 +45,23 @@ world value enters safe outputs or cognition. No Campaign3 pipeline is invoked.
 M59 comparison/budgets are fixed in the committed CURRENT card. Preserve original
 public/component competitors and frozen Campaign0–3 evidence. This is bounded
 BRIEF-12.5-4 evidence, not whole-family acceptance or a research-debt closure.
+
+Development correction: the first coupled witness reached a test reader using the
+cognitive-output decoder on a full authoritative state. That grammar rejects an
+embedded coupled decision in the identity journal. Use canonical state decoding
+for the state projection. Production admission/restore and all comparison inputs,
+laws and assertions remain unchanged; failed run retained in M59 checks.
+
+Further diagnostics: canonical state reading also requires the registered schema
+set (the first correction omitted it). The corrected reader then exposed Auto
+arbitration in the all-negative scene, before any paired choice claims. This is a
+fixture-calibration failure of the predeclared Roll gate, not a psychological law
+failure. The original remains an Auto/persistence control. A proposed mixed-report
+amendment is pending owner approval; independent boundary checks may proceed.
+
+Post-choice restoration also fails in production: assembled receiving validation
+omitted state-value containers for newer cognitive records (403/2,404/2,411/2).
+M59-B admits them only in the canonical value slots of151,144..148, recursively
+validates the nested cognitive records and leaves metadata paths extension-free.
+Canonical schema checks and exact original-prefix replay remain mandatory.
+This repairs representation, not a psychological law or control source.

@@ -46,3 +46,15 @@ M58 complete at51109d4a; its result and failures remain preserved.
   persistence, boundary/owner/native controls and required checks all pass
   within caps. Diagnose ordinary bugs and retain failures; no passing claim
   from an altered law or failed gate. Stop after result and register update.
+
+## Checkpoint and bounded repair package
+M59-A contains the12 planned source/test files; it is INCOMPLETE, not a pass.
+Failed readers and Auto gate retained. Owner amendment for a mixed-report paired
+witness is pending; that gate is blocked. Independent controls remain authorized.
+Post-choice restore reproduces an actual decoder defect: newer cognitive records
+inside state151 / mutation containers are rejected. M59-B will touch only
+assembled/codecs.ts and the existing M59 test, preserving validation of the nested
+records and rejecting extensions in container metadata. Add malformed-container
+and whole-save corruption controls; no blanket schema waiver. Commit this split
+before that13th overall file. Both packages share the original1800s cumulative /
+600s-command / evidence caps. No law, completion gate or denominator changes.

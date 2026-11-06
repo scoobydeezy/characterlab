@@ -29,7 +29,7 @@ export function compileLoss(v:CanonicalValue,bindings:readonly {target:Canonical
 export function returnSource(v:CanonicalValue){const a=items(v,'list');require(a.length===4&&typeof a[0]==='boolean'&&typeof a[2]==='boolean'&&uint(a[1])<=2n&&uint(a[3])<=2n,'return source');return {safe:list(a[0]===true&&a[2]===true?[a[1]]:[])};}
 export function returnTuple(v:CanonicalValue){const a=items(v,'list');require(a.length===0||a.length===1&&uint(a[0])<=2n,'return tuple');return a;}
 export function lossFold(attachment:ReturnType<typeof attachmentFold>,person:readonly CanonicalValue[]){
- const latest=person.filter(v=>{const a=items(v,'list');return a.length===9&&returnTuple(a[8]).length===1;}).at(-1);
+ const latest=person.filter(v=>{const a=items(v,'list');return a.length>=9&&returnTuple(a[8]).length===1;}).at(-1);
  const future=latest?Q.of(uint(returnTuple(items(latest,'list')[8])[0]),2n):undefined;
  const missing=attachment.missing,loss=missing!==undefined&&future!==undefined?missing.multiply(Q.of(1n).subtract(future)):undefined,reunion=missing!==undefined&&future!==undefined?missing.multiply(future):undefined;
  const sources=latest?[items(latest,'list')[0]]:[];
