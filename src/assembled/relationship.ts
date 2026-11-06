@@ -31,13 +31,13 @@ export const relationshipHistory=(v:CanonicalValue|undefined):readonly Canonical
 export function relationshipFold(v:CanonicalValue|undefined){let count=0n,rupture=false;for(const o of relationshipHistory(v)){const kind=uint(items(o,'list')[6]);if(kind===1n){count++;rupture=false;}else if(kind===2n)rupture=true;}return {count,rupture,comfort:count>=2n&&!rupture};}
 export function appendRelationship(prior:CanonicalValue|undefined,obs:CanonicalValue){const a=items(obs,'list');return a[4]===true&&a[5]===true&&([1n,2n].includes(uint(a[6]))||a.length===8&&supportTuple(a[7]).length>0)?list([text(REL),list([...relationshipHistory(prior),obs])]):prior;}
 /** Two disjoint evidence classes: preserve the constituents, sum raw strengths, bound once downstream. */
-export function relationshipRaw(raw:CanonicalValue,history:CanonicalValue|undefined,action:CanonicalValue,attachment?:ReturnType<typeof attachmentFold>){
+export function relationshipRaw(raw:CanonicalValue,history:CanonicalValue|undefined,action:CanonicalValue,attachment?:ReturnType<typeof attachmentFold>,extraSources?:readonly CanonicalValue[]){
  const source=rec(raw,403n),options=rec(f(source,2n),398n),fold=relationshipFold(history),offered=items(f(options,3n),'list').map(v=>rec(v,397n)).filter(v=>key(f(rec(f(v,1n),395n),2n))===key(action)),amount=Q.of(fold.rupture?-1n:fold.comfort?1n:0n),original=items(f(source,3n),'set'),signals=[...original],joined:CanonicalValue[]=[];
  const atoms=relationshipHistory(history).filter(o=>!attachment||[1n,2n].includes(uint(items(o,'list')[6]))).map(o=>r(399,[unsigned(1),r(237,[unsigned(1),items(o,'list')[0]])]));
  for(const candidate of offered)for(const origin of items(f(candidate,2n),'set')){const sourceKey=r(401,[f(candidate,1n),f(rec(origin,396n),1n),unsigned(3)]),i=signals.findIndex(v=>key(f(rec(v,402n),1n))===key(sourceKey)),old=i<0?undefined:rec(signals[i],402n),basis=old?f(rec(f(old,3n),400n),1n):map([]);require(typeof basis!=='boolean'&&basis.kind==='map','standing basis');const pairs=(basis as Extract<CanonicalValue,{kind:'map'}>).entries;
-  for(const [atom]of pairs)require(uint(f(rec(atom,399n),1n))===2n,'identity evidence class');
+  for(const [atom]of pairs)require((uint(f(rec(atom,399n),1n))===2n||extraSources!==undefined&&uint(f(rec(atom,399n),1n))===1n),'identity evidence class');
   const weights=new Map(pairs.map(([a,w])=>[key(a),[a,w] as const]));for(const atom of atoms){require(!weights.has(key(atom)),'overlapping standing evidence');weights.set(key(atom),[atom,rational(1,1)]);}
-  const attachmentAtoms=attachment?.qualifying.map(o=>r(399,[unsigned(1),r(237,[unsigned(1),items(o,'list')[0]])]))??[];
+  const attachmentAtoms=[...(attachment?.qualifying.map(o=>items(o,'list')[0])??[]),...(extraSources??[])].map(o=>r(399,[unsigned(1),r(237,[unsigned(1),o])]));
   for(const atom of attachmentAtoms)weights.set(key(atom),[atom,rational(1,1)]);
   const before=old?readQ(f(old,2n)):Q.of(0n),extra=attachment?.missing??Q.of(0n),sum=before.add(amount).add(extra);joined.push(list([sourceKey,old??list([]),qValue(amount),list(atoms),qValue(sum),...(attachment?[attachment.report,qValue(extra),list(attachmentAtoms)]:[])]));
   if(!amount.add(extra).equals(Q.of(0n))){const next=r(402,[sourceKey,qValue(sum),r(400,[map([...weights.values()])])]);if(i<0)signals.push(next);else signals[i]=next;}

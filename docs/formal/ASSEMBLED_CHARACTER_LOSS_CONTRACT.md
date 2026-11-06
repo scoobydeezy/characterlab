@@ -3,7 +3,8 @@
 LOCAL DISPOSITION before implementation,2026-11-05. Rules/registry0.58 add slot41
 [assembled-loss/0.1, [[recognized target, keepsake action],...]]. Each configured
 relationship target appears exactly once, actions belong to the admitted strategy
-and differ from every relationship-contact action; keepsake actions are unique.
+and differ from that target's reunion action. Actions can serve multiple targets:
+union evidence and sum their distinct contributions once.
 Existing relationship bindings provide reunion actions. Same runtime and state.
 HistoryAndFuture is an engineering default, not a claim of psychological superiority.
 GRIEF_PUBLIC_CONTRACT.md and VER-C3-GRIEF-001 supply bounded prior evidence.
@@ -23,6 +24,8 @@ Observe120 admits [] or [code]; existing recognition127 resolves the target.
 Only configured recognized targets learn. No caller target or hidden code becomes
 belief. Unresolved observations cannot fall back to the first configured target.
 Person140 appends the same recognized observation with a ninth field []/[code].
+Its trace input explicitly includes that consumed recognized evidence, alongside
+the authenticated event payload; its source ID joins the original safe observation.
 Root810 remains the sole person owner, capped8 rows, append-only. Receipt grouping
 and immutable observation identities remain; conflicting repeated reports reject.
 A report-only observation is permitted. Binary person means ignore absent binary
@@ -55,6 +58,14 @@ Raw strength, bounded consolidation and quantization stay separate.
 These are selected prospective options, not claims that mourning/search was enacted.
 No expected-relief/current-utility implementation is implied. The existing adequate
 alternative and demand cues stay disclosed; native utility law remains a control.
+
+## Local admission correction before behavioral execution
+The first check rejected the inherited scene because B also serves another
+target's contact. Cross-target action sharing is already admitted; only a single
+target's two orientations must differ. Correct the validator and map the other
+target's keepsake to A. The compared target retains reunion A/keepsake B, and
+the other target has no acquired support or future report. No contrast/calibration
+change. Preserve witness-1 admission failure.
 
 ## Preservation and checks
 0.57 inputs/state semantics remain unchanged; new source/state fields require0.58.

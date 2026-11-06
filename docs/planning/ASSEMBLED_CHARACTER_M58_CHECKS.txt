@@ -1,0 +1,203 @@
+
+=== types-1 ===
+
+M58_CHECK types-1 exit=0 seconds=16.92
+
+=== witness-1 ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledLoss.test.ts (4 tests | 1 failed | 3 skipped) 90819ms
+   × witness: prior future-contact belief changes coupled choice with exact continuation 90818ms
+     → attachment loss target/action
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledLoss.test.ts > witness: prior future-contact belief changes coupled choice with exact continuation
+SchedulerContractError: attachment loss target/action
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ require src/assembled/attachment.ts:8:44
+ ❯ src/assembled/attachment.ts:26:64
+ ❯ Module.compileLoss src/assembled/attachment.ts:26:32
+ ❯ Module.compileCharacterModel src/assembled/model.ts:246:25
+ ❯ Module.prepareCharacterModel src/assembled/character.ts:27:110
+ ❯ src/test/assembledLoss.test.ts:76:24
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 3 skipped (4)
+   Start at  18:12:45
+   Duration  94.96s (transform 2.40s, setup 0ms, collect 3.58s, tests 90.82s, environment 0ms, prepare 247ms)
+
+
+M58_CHECK witness-1 exit=1 seconds=96.2
+
+=== witness-2 ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledLoss.test.ts > witness: prior future-contact belief changes coupled choice with exact continuation
+M58 calibration raw1/2 -> bounded1/3 -> standing+1; other orientation0; prior810/848/cue sources PASS
+M58_CELL {"seed":0,"loss":"definition/protocol-contact-two","return":"definition/protocol-contact-two","shared":2}
+
+stdout | src/test/assembledLoss.test.ts > witness: prior future-contact belief changes coupled choice with exact continuation
+M58_CELL {"seed":1,"loss":"definition/protocol-contact-two","return":"definition/protocol-contact-two","shared":2}
+
+stdout | src/test/assembledLoss.test.ts > witness: prior future-contact belief changes coupled choice with exact continuation
+M58_CELL {"seed":2,"loss":"definition/protocol-contact-two","return":"definition/protocol-contact-one","shared":2}
+
+stdout | src/test/assembledLoss.test.ts > witness: prior future-contact belief changes coupled choice with exact continuation
+M58_CELL {"seed":3,"loss":"definition/protocol-contact-two","return":"definition/protocol-contact-two","shared":2}
+
+stdout | src/test/assembledLoss.test.ts > witness: prior future-contact belief changes coupled choice with exact continuation
+M58_CELL {"seed":4,"loss":"definition/protocol-contact-two","return":"definition/protocol-contact-two","shared":2}
+
+stdout | src/test/assembledLoss.test.ts > witness: prior future-contact belief changes coupled choice with exact continuation
+M58_CELL {"seed":5,"loss":"definition/protocol-contact-two","return":"definition/protocol-contact-two","shared":2}
+
+stdout | src/test/assembledLoss.test.ts > witness: prior future-contact belief changes coupled choice with exact continuation
+M58_CELL {"seed":6,"loss":"definition/protocol-contact-two","return":"definition/protocol-contact-two","shared":2}
+
+stdout | src/test/assembledLoss.test.ts > witness: prior future-contact belief changes coupled choice with exact continuation
+M58_CELL {"seed":7,"loss":"definition/protocol-contact-one","return":"definition/protocol-contact-one","shared":2}
+M58_WITNESS {"changed":[2],"common":16,"conditional":1,"continuation":"exact2-to3"}
+
+ ✓ src/test/assembledLoss.test.ts (4 tests | 3 skipped) 283738ms
+   ✓ witness: prior future-contact belief changes coupled choice with exact continuation 283737ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 3 skipped (4)
+   Start at  18:15:25
+   Duration  287.64s (transform 2.33s, setup 0ms, collect 3.48s, tests 283.74s, environment 0ms, prepare 124ms)
+
+
+M58_CHECK witness-2 exit=0 seconds=288.15
+
+=== controls-native-boundaries-1 ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledLoss.test.ts > controls: report isolation, correction, recognition and no manufactured history
+M58_CONTROLS uncertain/unknown/known0, hidden/denied/unrecognized/foreign, own-history, correction/no-message and immutable history PASS
+
+stdout | src/test/assembledLoss.test.ts > native: original grief contexts and retained alternatives agree on declared projection
+M58_NATIVE five original contexts and six laws PASS; prospective native probes do not claim enacted mourning
+
+stdout | src/test/assembledLoss.test.ts > boundaries: receipt, owner, bootstrap, admission and late person140 rollback
+M58_BOUNDARIES malformed source/state, duplicate/changed receipt, bootstrap, sole owner, append and whole-instant rollback PASS
+
+ ✓ src/test/assembledLoss.test.ts (4 tests | 1 skipped) 254571ms
+   ✓ controls: report isolation, correction, recognition and no manufactured history 238317ms
+   ✓ native: original grief contexts and retained alternatives agree on declared projection 3368ms
+   ✓ boundaries: receipt, owner, bootstrap, admission and late person140 rollback 12885ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 1 skipped (4)
+   Start at  18:20:37
+   Duration  258.43s (transform 2.27s, setup 0ms, collect 3.42s, tests 254.57s, environment 0ms, prepare 122ms)
+
+
+M58_CHECK controls-native-boundaries-1 exit=0 seconds=258.94
+
+=== final-trace-continuation ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledLoss.test.ts > persistence: final learning trace discloses consumed report and restores exactly
+M58_FINAL_TRACE explicit consumed nine-field person evidence, exact repeat/save2/restore/3 PASS
+
+ ✓ src/test/assembledLoss.test.ts (5 tests | 4 skipped) 116994ms
+   ✓ persistence: final learning trace discloses consumed report and restores exactly 116994ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 4 skipped (5)
+   Start at  18:25:29
+   Duration  120.81s (transform 2.27s, setup 0ms, collect 3.41s, tests 116.99s, environment 0ms, prepare 123ms)
+
+
+M58_CHECK final-trace-continuation exit=0 seconds=121.32
+
+=== retained-M57-auto ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAttachment.test.ts > auto control: original two-support comparison retains its automatic branch
+M57_AUTO_CONTROL {"dependent":true,"mode":"1","choice":"definition/protocol-contact-one","draws":0,"attachment":"07060522617373656d626c65642d6174746163686d656e742f302e312f61707072616973616c020206020107010602010706051c617373656d626c65642d6174746163686d656e742f302e312f6375650bdb0802350bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a6563740bea070b8d080b8e08051f636f6e74656e742f617373656d626c65642d736f6369616c2f7461726765740203070300010007020bdb08020f0bdb080225","nuclei":[{"key":"0a9403010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010b9008050a436f6d6d69746d656e7403010bea070b8d080b8e08050e636f6e74656e742f7461736b2d6104010201","roles":"0a96030104010106020202010602020301060001040107020a9503010501010a9103010301010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d610301020102010602010301060001040106020105010602010a9503010501010a9103010301010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61030102030201060201030106000104010602010501060201","relevance":"060201","die":"6","standing":"2","context":"0"},{"key":"0a9403010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f02010b9008050a436f6d6d69746d656e7403010bea070b8d080b8e08050e636f6e74656e742f7461736b2d6204010201","roles":"0a96030104010106020202010600010301060001040107010a9503010501010a9103010301010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f02010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62030102010201060201030106000104010602010501060201","relevance":"060202","die":"6","standing":"0","context":"0"}]}
+
+stdout | src/test/assembledAttachment.test.ts > auto control: original two-support comparison retains its automatic branch
+M57_AUTO_CONTROL {"dependent":false,"mode":"3","choice":"definition/protocol-contact-two","draws":2,"attachment":"07060522617373656d626c65642d6174746163686d656e742f302e312f61707072616973616c020006000107010600010706051c617373656d626c65642d6174746163686d656e742f302e312f6375650bdb0802350bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a6563740bea070b8d080b8e08051f636f6e74656e742f617373656d626c65642d736f6369616c2f746172676574020307030001000700","nuclei":[{"key":"0a9403010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010b9008050a436f6d6d69746d656e7403010bea070b8d080b8e08050e636f6e74656e742f7461736b2d6104010201","roles":"0a96030104010106020202010600010301060001040107010a9503010501010a9103010301010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61030102010201060201030106000104010602010501060201","relevance":"060202","die":"6","standing":"0","context":"0"},{"key":"0a9403010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f02010b9008050a436f6d6d69746d656e7403010bea070b8d080b8e08050e636f6e74656e742f7461736b2d6204010201","roles":"0a96030104010106020202010600010301060001040107010a9503010501010a9103010301010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f02010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62030102010201060201030106000104010602010501060201","relevance":"060202","die":"6","standing":"0","context":"0"}]}
+
+ ✓ src/test/assembledAttachment.test.ts (5 tests | 4 skipped) 111975ms
+   ✓ auto control: original two-support comparison retains its automatic branch 111975ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 4 skipped (5)
+   Start at  18:27:40
+   Duration  115.80s (transform 2.27s, setup 0ms, collect 3.42s, tests 111.98s, environment 0ms, prepare 127ms)
+
+
+M58_CHECK retained-M57-auto exit=0 seconds=116.32
+
+=== retained-M25-people ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledPersonHistory.test.ts > controls: sequential people, receipt isolation, hidden evidence and admission
+M25 isolation/receipt/hidden/denied/order/singleton/admission/authority controls PASS
+
+ ✓ src/test/assembledPersonHistory.test.ts (4 tests | 3 skipped) 38211ms
+   ✓ controls: sequential people, receipt isolation, hidden evidence and admission 38210ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 3 skipped (4)
+   Start at  18:29:44
+   Duration  41.74s (transform 2.05s, setup 0ms, collect 3.11s, tests 38.21s, environment 0ms, prepare 127ms)
+
+
+M58_CHECK retained-M25-people exit=0 seconds=42.25
+
+=== types-final ===
+
+M58_CHECK types-final exit=0 seconds=15.95
+
+=== boundary ===
+Reference boundary check passed.
+
+M58_CHECK boundary exit=0 seconds=2.37
+
+=== research ===
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: CURRENT obligation counts are stale
+    at file:///C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/scripts/check-research-obligations.mjs:75:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.20.0
+
+M58_CHECK research exit=1 seconds=3.39
+
+=== research-corrected-current ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M58_CHECK research-corrected-current exit=0 seconds=3.19
+
+M58 preservation guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and all previous retained tests unchanged; document/evidence caps. seconds=10.39
+M58 validation seconds including guard=975.39
