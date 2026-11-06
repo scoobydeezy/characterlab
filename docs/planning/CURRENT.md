@@ -1,57 +1,52 @@
-# Current work — M59 bounded replacement failed (2026-11-05)
+# Current work — M59 competing-goal comparison prepared (2026-11-06)
 
-Contextual evaluation reports now feed the shared appraisal/reason path. The
-independent controls and post-choice persistence repair pass; M59 is NOT complete.
-[Checkpoint](ASSEMBLED_CHARACTER_M59_RESULT.md) · [Checks](ASSEMBLED_CHARACTER_M59_CHECKS.txt)
+Prior evaluation reports now feed the one character's appraisal/reason path.
+M59 remains incomplete: the required coupled behavioral witness is still open.
+[Result](ASSEMBLED_CHARACTER_M59_RESULT.md) · [Checks](ASSEMBLED_CHARACTER_M59_CHECKS.txt)
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
-## Fixed plan and current evidence
-- Original plan f03e25e0, baseline51109d4a; implementation checkpoint c464f226.
-  One holder, recognized coat evaluator, physical tasks/no binary person
-  dependencies, reserve10 unsensed, workspace6. Reports1/2, choice3.
-- Rules/registry0.59, slot42; Contextual/SplitExposure, feedback OFF.
-  Same person810 owner, independently gated mismatch/awareness/judgment reports;
-  prior evidence and adopted goal importance -> appraisal50 -> existing reason80.
-  No separate emotion state, scheduler, runtime, autonomous partner or UI.
-- Unknown/denied/hidden/unrecognized/foreign/late/correction controls PASS.
-  No base -> no new reason, even with positive affect. Five original native
-  contextual projections agree; original alternatives remain preserved.
-- Wrong writer, append-only state, malformed report, learned bootstrap, changed
-  receipt and reached after-person140 rollback PASS. Retained M58 controls PASS.
-- Real post-choice restore defect repaired: successor cognitive records now pass
-  only in existing state-value/read/mutation containers. Metadata and nested
-  malformed records reject. Exact post-choice restore and whole-save corruption
-  rejection PASS. Types, boundary, research and preservation checks PASS.
+## Authorized amendment and scope
+Owner approved the proposed competing-goal scene2026-11-06. Baseline cb655ec8;
+original plan f03e25e0, original baseline51109d4a. Same rules/registry0.59 and
+assembled-character-embarrassment/0.1-candidate; Contextual/SplitExposure, feedback OFF.
+One holder, recognized coat evaluator, fixed competence incident, physical A/B
+options with no binary person dependencies, unsensed reserve10, workspace6.
+Normal priority display adopts reputation/withdrawal goal importance3/5 and
+completion goal1; urgency1, third goal0. Both arms receive judgment true at1,
+false at2; only mismatch true/false differs. Reports learned1/2, decision3.
+Reputation matters, but completing the task matters more. Ratio3:5 is an engineering
+fixture choice, not an empirically qualified psychological calibration.
+No direct belief injection, new runtime/state owner, law/calibration or UI change.
+Original all-negative and equal-importance mixed scenes remain saturated controls.
 
-## Approved replacement result — FAIL, stop rule applied
-Owner approved one negative report at1 and one nonnegative at2 in BOTH arms,
-recorded before execution in09bf27d2. Laws, goals, seeds0..7 and gates unchanged.
-The mismatch-positive setup run reached Known appraisal with judgment/likelihood/
-E/U1/2, two report records and two reason nuclei. It still selected Auto, failing
-live Roll before map construction or any paired-seed comparison. No shared-dice,
-choice-change or positive-affect continuation claim follows. No second arm ran.
-Original all-negative Auto/persistence control remains. Both failed contrasts and
-all logs retained; no further contrasts, calibration changes or retries authorized.
-## Numerical diagnosis complete — M59 still incomplete
-Owner-authorized unchanged seed0 setup emitted actual definitions/reasons/result;
-112.95s, retained expected Roll failure, no alternate contrast or paired seeds.
-Root cause: earlier prediction used standing unit1/4 instead of situation unit1/10.
-U1/2 -> bounded1/3 -> capped modifier3; original U1 also caps at3. Both bases1
-become1/2/d6, standing0. Scores d6+3 vs d6 -> analytical7/8 vs1/8; contest1/4
-is below ThetaRoll1/2, so Auto takes the leader without draws. Exact36-pair
-arithmetic agrees. Correct dormant modifier assertion1->3; Roll gate unchanged.
-No production changes. Preserve saturated controls. More seeds cannot fix Auto.
-Next: a newly authorized competing-goal scene with explicitly justified stakes
-and complete pre-run calibration arithmetic; no more uncalculated amendments.
-Reference laws/dice/thresholds stay fixed. No new fixture has been implemented.
+## Preflight — exact calculation before code/run
+Using actual retained437/440 definitions: activation37/100, situation unit1/10,
+cap3, ThetaRoll1/2. Base3/5 ->3/8 ->d4; base1 ->1/2 ->d6. Both activate even
+without embarrassment. Positive U=(1/2)*(3/5)=3/10 ->bounded3/13 ->modifier2.
+Scores d4+2 vs d6 give withdrawal2/3; mismatch-false d4 vs d6 gives withdrawal1/3.
+Both contests2/3 exceed1/2, so both Roll.24 exact score pairs per arm, no simulation
+or seed search. Earlier unit confusion and saturated controls remain recorded.
 
-## Package and verification limits
-M59-A used12 source/test files; the c464f226 checkpoint explicitly split M59-B
-before adding codecs.ts. M59-B touches only codecs.ts and the existing new test:
-2 files,13 distinct across both packages. Same1800s cumulative budget including
-all failures,600s/command;20 evidence files/5MiB. All failures retained.
-No completed BRIEF-12.5-4 credit or reconciliation closure. Final21 members,
-15 families,132 clauses and18 conditional obligations remain. Finish this gate
-before choosing another integration area. Diagnostic112.95s, types17.94s and
-preservation10.07s; logged cumulative1549.90s before final staged-size check.
-No budget reset; retained independent controls remain valid (no production edits).
+## Binary gate and implementation
+Edit only existing src/test/assembledEmbarrassment.test.ts in M59-B. Add explicit
+competing-goal option; default controls unchanged. Assert live appraisal, adopted
+importance, raw/bounded strengths, die sizes, modifiers and exact contest/probability
+before behavior. Two identity-only setup runs; seeds0..7, same explicit draw maps.
+Require16 shared reason-face draws with identical values/ranges and full nuclei
+identities; account for conditional ties. At least one changed choice and at least
+one continuation with positive affect. Seed0 positive exact repeat/save2->restore->3
+on state/output/trace/save. No further contrasts if this amended witness fails.
+Passing these gates completes only the bounded M59 connection, not BRIEF-12.5-4.
+
+## Verification and budget — execution NOT yet authorized by budget
+Existing controls, negative/hidden/rollback/native/M58 and post-choice persistence
+checks PASS; untouched production/dependencies do not invalidate them. No reruns.
+Changed-test types, final preservation, applicable research and staged-size only,
+plus this witness. Prior comparable M58 witness288s, M57 witness332s; plan360s cap.
+Logged1549.90s consumed before this preparation;1800s cumulative remains in force.
+Request a single180s extension to1980s (33min total), no reset,600s/command unchanged.
+Do not start the witness until the extension is approved. Finish implementation,
+static preflight/types first so that only this concrete bounded run awaits approval.
+M59-A12 files and M59-B2 overlapping test =13 distinct source/test files;
+20 evidence files/5MiB total, no new evidence directory. No new integration area.
+Final21 members/15 families/132 clauses and18 conditional obligations remain.

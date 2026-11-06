@@ -90,3 +90,14 @@ U1/2 bounds to1/3, quantizes to3 and hits cap3, as does original U1. Both
 bases1 bound to1/2/d6; standing0. Actual d6+3 versus d6 gives probabilities
 7/8 and1/8, contest1/4 below ThetaRoll1/2, hence Auto/no draws. Earlier +1
 prediction was mistaken. No law or scenario changed; M59 behavioral gate open.
+
+Owner continuation2026-11-06 authorizes a competing-goal fixture: reputation/
+withdrawal importance3/5, completion importance1, urgency1, third goal0. Both
+arms keep the two mixed judgment reports; only mismatch differs. Adoption occurs
+through the existing priority display. This ratio is a fixture engineering choice,
+not a change to Contextual/SplitExposure or the reference calibration.
+Preflight: bases3/8 and1/2 activate at37/100, dice4 and6; U3/10 ->3/13 ->+2.
+Positive scores d4+2 vs d6 yield withdrawal2/3; no-mismatch d4 vs d6 yields1/3.
+Both contest2/3 >=ThetaRoll1/2. Same seeds0..7,16 shared reason draws, changed
+choice and positive-affect continuation gates. Original saturated cases retained.
+Witness execution awaits the specific cumulative-budget extension in CURRENT.
