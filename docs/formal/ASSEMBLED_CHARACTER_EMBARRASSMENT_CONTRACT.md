@@ -65,3 +65,10 @@ M59-B admits them only in the canonical value slots of151,144..148, recursively
 validates the nested cognitive records and leaves metadata paths extension-free.
 Canonical schema checks and exact original-prefix replay remain mandatory.
 This repairs representation, not a psychological law or control source.
+
+Independent-check corrections: the direct no-base control passed a JavaScript
+number to the exact BigInt clock; use4n. The save corruption control used the old
+403/1-only test extractor for a valid403/2 output; read the already admitted
+successor record. Post-choice replay equality was reached before that latter
+helper failure. Retain both failures and rerun the affected tests; no laws,
+fixtures, acceptance meanings or production outputs change.

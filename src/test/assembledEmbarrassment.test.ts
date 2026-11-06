@@ -1,5 +1,6 @@
-import {cognitiveSupportedSchemas} from '../assembled/codecs';
-import {canonicalDecode,RecordSchemaRegistry} from '../substrate/canonicalEncoding';
+import {sid} from '../assembled/skill';
+import {cognitiveSupportedSchemas,decodeCognitive} from '../assembled/codecs';
+import {canonicalDecode,RecordSchemaRegistry,record,set} from '../substrate/canonicalEncoding';
 import {receivingRecord as rec,randomDrawRecord} from '../assembled/codecs';
 import {mapIdentities as mapFromDecision} from './fixtures/assembledValueReceiving';
 import {it,expect,vi} from 'vitest';
@@ -96,6 +97,9 @@ it('controls: gated recognition, unknown and timing; original contextual project
  const deniedA=await run({unknown:2,judgment:true}),deniedB=await run({unknown:2,judgment:false});bytes(deniedA.snapshot().outputs,deniedB.snapshot().outputs);bytes(deniedA.snapshot().state,deniedB.snapshot().state);
  const corrected=await run({correction:true}),before=app(corrected);expect(before[6]).toEqual(list([q(1,1)]));await through(corrected,4n);expect(app(corrected,4)[6]).toEqual(list([q(2,3)]));expect(app(corrected)).toEqual(before);
  const zero=await run({zeroBase:true});expect(app(zero)[8]).toEqual(text('Known'));expect(app(zero)[9]).toEqual(list([q(0,1),q(0,1)]));expect(items(reports(zero,EMBARRASSMENT+'/reasons')[0][3],'list')).toHaveLength(0);
+ const model=await compileCharacterModel(fixture().s),component=await compileCharacterState(model),consumer=createEmbarrassment(model.embarrassment!,C,component.stateModel,model.modelIdentity.value,decode(a.runIdentity()));
+ const event={dueAt:simInstant(4n),phase:50n,eventId:99999n,eventSequence:99999n,eventTypeId:sid(1001,'event/task-appraisal'),payload:list([]),dependencies:list([]),causalParentEventIds:[]};expect(items(consumer.appraise(event,state(a)).report,'list')[9]).toEqual(list([q(1,1),q(1,1)]));
+ const raw=rec(items(decode(a.snapshot().outputs),'list').find(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===403n)!,403n),noBase=record(raw.schema,new Map([...raw.fields].map(([n,v])=>[n,n===3n?set(items(v,'set').filter(s=>key(f(rec(f(rec(f(rec(s,402n),1n),401n),1n),395n),2n))!==key(actionA))):v]))),without=consumer.raw({...event,phase:80n,eventTypeId:sid(1001,'event/task-raw-signals')},noBase);expect(without.output).toEqual(noBase);expect(items(items(without.report,'list')[3],'list')).toHaveLength(0);
  for(const [scenario,o]of [['Balanced',{}],['NoMismatch',{mismatch:false}],['Unseen',{seen:false}],['UnknownJudgment',{unknown:2}],['Nonnegative',{judgment:false}]] as const){const native=await nativeRuntime(nativeCase(scenario));for(let i=0;i<3;i++)await native.runtime.settle();const original=nativeRows(native.runtime.snapshot().outputs).at(-1)!,r=scenario==='Balanced'?a:await run(o);expect(items(app(r)[9],'list').map(v=>{const x=readQ(v);return `${x.numerator}/${x.denominator}`;})).toEqual(original.affect);console.info('M59_NATIVE '+scenario+' '+JSON.stringify(original.affect));}
  const mixed=[[{at:1,value:true}],[{at:1,value:true}],[{at:1,value:true},{at:2,value:false}]];expect(estimate(mixed,'Contextual').likelihood).toEqual(readQ(q(1,2)));expect(estimate(mixed,'Latest').likelihood).toEqual(readQ(q(0,1)));mixed[0][0].value=false;expect(estimate(mixed,'Contextual').likelihood).toEqual(readQ(q(0,1)));expect(estimate(mixed,'JudgmentOnly').likelihood).toEqual(readQ(q(1,2)));
  console.info('M59 epistemic/timing/no-base and five native contextual projections PASS; Latest/JudgmentOnly preserved');
@@ -114,5 +118,10 @@ it('boundaries: owner, append-only receipt, admission and reached learning rollb
 it('persistence: post-choice save containing qualified identity restores exactly',async()=>{
  const {s,d}=fixture(),a=await createCharacterRun(await prepareCharacterModel(s),d);await through(a,3n);expect(app(a)[9]).toEqual(list([q(1,1),q(1,1)]));expect(uint(f(rec(f(rec(f(decisions(a)[0],4n),419n),2n),420n),8n))).toBe(1n);
  const b=await restoreCharacterRun(s,{initialState:d.initialState,orderedInputs:d.orderedInputs,save:a.save()});exact(a,b);
- console.info('M59 post-choice full-state save/restore PASS');
+ const canonical=canonicalDecode(a.snapshot().state,new RecordSchemaRegistry(cognitiveSupportedSchemas()));expect(decodeCognitive(a.snapshot().state)).toEqual(canonical);
+ const leaf=items(canonical,'set')[0];
+ const extension=items(decode(a.snapshot().outputs),'list').find(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===403n)!,badLeaf=record(rec(leaf,151n).schema,new Map([[1n,extension],[2n,extension]]));expect(()=>decodeCognitive(enc(badLeaf))).toThrow('unrelated record');
+ const malformed=record(rec(extension,403n).schema,new Map([...rec(extension,403n).fields].map(([n,v])=>[n,n===3n?list([]):v])));expect(()=>decodeCognitive(enc(record(rec(leaf,151n).schema,new Map([[1n,f(rec(leaf,151n),1n)],[2n,malformed]]))))).toThrow();
+ const save=rec(decodeCognitive(a.save()),132n),corrupt=record(save.schema,new Map([...save.fields].map(([n,v])=>[n,n===5n?set([]):v])));await expect(restoreCharacterRun(s,{initialState:d.initialState,orderedInputs:d.orderedInputs,save:enc(corrupt)})).rejects.toThrow('whole-save prefix equality');
+ console.info('M59 post-choice full-state save/restore and malformed metadata/nested record/whole-save corruption PASS');
 },180000);

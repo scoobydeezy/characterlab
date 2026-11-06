@@ -78,7 +78,13 @@ function validate(value:CanonicalValue):void {
   if(typeof v==='boolean')return;
   if(v.kind==='record'){
    const declaration=declarations.get(`${v.schema.typeId}/${[403n,404n,411n].includes(v.schema.typeId)&&v.schema.schemaVersion===2n?1n:v.schema.schemaVersion}`);
-   if(!declaration&&![130n,132n,160n].includes(v.schema.typeId))fail('coupled draw in unrelated record');
+   if(!declaration&&![130n,132n,160n].includes(v.schema.typeId)){
+    // State/save trace wrappers carry arbitrary canonical VALUES, not cognitive
+    // metadata. Admit successor records only in those existing value slots.
+    const slots:Readonly<Record<string,readonly bigint[]>>={'144':[1n],'145':[3n,4n],'146':[2n],'147':[4n],'148':[3n,5n],'151':[2n]};
+    const allowed=slots[String(v.schema.typeId)];
+    if(!allowed||[...v.fields].some(([n,x])=>containsExtension(x)&&!allowed.includes(n)))fail('coupled draw in unrelated record');
+   }
    if(declaration){
     for(const field of declaration.fields){const child=v.fields.get(BigInt(field.id));if(child===undefined){if(field.required)fail('missing required field');}else if(v.schema.typeId===411n&&v.schema.schemaVersion===2n&&field.id===2){
       if(isRecord(child)&&child.schema.typeId===113n){

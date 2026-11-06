@@ -152,3 +152,187 @@ M59_CHECK post-choice-diagnostic-2 exit=1 seconds=104.3
 === types-2 ===
 
 M59_CHECK types-2 exit=0 seconds=16.19
+
+=== independent-controls-repair ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledEmbarrassment.test.ts > controls: gated recognition, unknown and timing; original contextual projections and alternatives
+M59_CONTROL {"o":{"mismatch":false},"status":"Known","amount":0}
+
+stdout | src/test/assembledEmbarrassment.test.ts > controls: gated recognition, unknown and timing; original contextual projections and alternatives
+M59_CONTROL {"o":{"seen":false},"status":"Known","amount":0}
+
+stdout | src/test/assembledEmbarrassment.test.ts > controls: gated recognition, unknown and timing; original contextual projections and alternatives
+M59_CONTROL {"o":{"judgment":false},"status":"Known","amount":0}
+
+stdout | src/test/assembledEmbarrassment.test.ts > controls: gated recognition, unknown and timing; original contextual projections and alternatives
+M59_CONTROL {"o":{"unknown":0},"status":"Unavailable"}
+
+stdout | src/test/assembledEmbarrassment.test.ts > controls: gated recognition, unknown and timing; original contextual projections and alternatives
+M59_CONTROL {"o":{"unknown":1},"status":"Unavailable"}
+
+stdout | src/test/assembledEmbarrassment.test.ts > controls: gated recognition, unknown and timing; original contextual projections and alternatives
+M59_CONTROL {"o":{"unknown":2},"status":"Unavailable"}
+
+stdout | src/test/assembledEmbarrassment.test.ts > controls: gated recognition, unknown and timing; original contextual projections and alternatives
+M59_CONTROL {"o":{"denied":true},"status":"Unavailable"}
+
+stdout | src/test/assembledEmbarrassment.test.ts > controls: gated recognition, unknown and timing; original contextual projections and alternatives
+M59_CONTROL {"o":{"signal":"appearance/stripe"},"status":"Unavailable"}
+
+stdout | src/test/assembledEmbarrassment.test.ts > controls: gated recognition, unknown and timing; original contextual projections and alternatives
+M59_CONTROL {"o":{"signal":"appearance/plain"},"status":"Unavailable"}
+
+stdout | src/test/assembledEmbarrassment.test.ts > controls: gated recognition, unknown and timing; original contextual projections and alternatives
+M59_CONTROL {"o":{"late":true},"status":"Unavailable"}
+
+stdout | src/test/assembledEmbarrassment.test.ts > boundaries: owner, append-only receipt, admission and reached learning rollback
+M59 owner/append-only/report grammar/bootstrap/receipt/after-person140 rollback PASS
+
+ ❯ src/test/assembledEmbarrassment.test.ts (4 tests | 2 failed | 1 skipped) 248772ms
+   × controls: gated recognition, unknown and timing; original contextual projections and alternatives 222543ms
+     → SimInstant must be in [0, Int64.MaxValue]
+   ✓ boundaries: owner, append-only receipt, admission and reached learning rollback 9502ms
+   × persistence: post-choice save containing qualified identity restores exactly 16726ms
+     → requires 403/1
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledEmbarrassment.test.ts > controls: gated recognition, unknown and timing; original contextual projections and alternatives
+TimeContractError: SimInstant must be in [0, Int64.MaxValue]
+ ❯ fail src/substrate/time.ts:234:9
+    232| 
+    233| function fail(code: TimeFailureCode, message: string): never {
+    234|   throw new TimeContractError(code, message);
+       |         ^
+    235| }
+    236| 
+ ❯ Module.simInstant src/substrate/time.ts:93:69
+ ❯ src/test/assembledEmbarrassment.test.ts:101:21
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  src/test/assembledEmbarrassment.test.ts > persistence: post-choice save containing qualified identity restores exactly
+SchedulerContractError: requires 403/1
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataRecord src/campaign2/canonicalData.ts:9:117
+ ❯ src/test/fixtures/assembledComparison.ts:10:172
+ ❯ Module.outputs src/test/fixtures/assembledComparison.ts:10:165
+ ❯ src/test/assembledEmbarrassment.test.ts:123:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+ Test Files  1 failed (1)
+      Tests  2 failed | 1 passed | 1 skipped (4)
+   Start at  19:08:52
+   Duration  252.54s (transform 2.28s, setup 0ms, collect 3.45s, tests 248.77s, environment 0ms, prepare 98ms)
+
+
+M59_CHECK independent-controls-repair exit=1 seconds=253.07
+
+=== types-3 ===
+
+M59_CHECK types-3 exit=0 seconds=16.23
+
+=== independent-controls-corrected ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledEmbarrassment.test.ts > controls: gated recognition, unknown and timing; original contextual projections and alternatives
+M59_CONTROL {"o":{"mismatch":false},"status":"Known","amount":0}
+
+stdout | src/test/assembledEmbarrassment.test.ts > controls: gated recognition, unknown and timing; original contextual projections and alternatives
+M59_CONTROL {"o":{"seen":false},"status":"Known","amount":0}
+
+stdout | src/test/assembledEmbarrassment.test.ts > controls: gated recognition, unknown and timing; original contextual projections and alternatives
+M59_CONTROL {"o":{"judgment":false},"status":"Known","amount":0}
+
+stdout | src/test/assembledEmbarrassment.test.ts > controls: gated recognition, unknown and timing; original contextual projections and alternatives
+M59_CONTROL {"o":{"unknown":0},"status":"Unavailable"}
+
+stdout | src/test/assembledEmbarrassment.test.ts > controls: gated recognition, unknown and timing; original contextual projections and alternatives
+M59_CONTROL {"o":{"unknown":1},"status":"Unavailable"}
+
+stdout | src/test/assembledEmbarrassment.test.ts > controls: gated recognition, unknown and timing; original contextual projections and alternatives
+M59_CONTROL {"o":{"unknown":2},"status":"Unavailable"}
+
+stdout | src/test/assembledEmbarrassment.test.ts > controls: gated recognition, unknown and timing; original contextual projections and alternatives
+M59_CONTROL {"o":{"denied":true},"status":"Unavailable"}
+
+stdout | src/test/assembledEmbarrassment.test.ts > controls: gated recognition, unknown and timing; original contextual projections and alternatives
+M59_CONTROL {"o":{"signal":"appearance/stripe"},"status":"Unavailable"}
+
+stdout | src/test/assembledEmbarrassment.test.ts > controls: gated recognition, unknown and timing; original contextual projections and alternatives
+M59_CONTROL {"o":{"signal":"appearance/plain"},"status":"Unavailable"}
+
+stdout | src/test/assembledEmbarrassment.test.ts > controls: gated recognition, unknown and timing; original contextual projections and alternatives
+M59_CONTROL {"o":{"late":true},"status":"Unavailable"}
+
+stdout | src/test/assembledEmbarrassment.test.ts > controls: gated recognition, unknown and timing; original contextual projections and alternatives
+M59_NATIVE Balanced ["1/1","1/1"]
+
+stdout | src/test/assembledEmbarrassment.test.ts > controls: gated recognition, unknown and timing; original contextual projections and alternatives
+M59_NATIVE NoMismatch ["0/1","0/1"]
+
+stdout | src/test/assembledEmbarrassment.test.ts > controls: gated recognition, unknown and timing; original contextual projections and alternatives
+M59_NATIVE Unseen ["0/1","0/1"]
+
+stdout | src/test/assembledEmbarrassment.test.ts > controls: gated recognition, unknown and timing; original contextual projections and alternatives
+M59_NATIVE UnknownJudgment []
+
+stdout | src/test/assembledEmbarrassment.test.ts > controls: gated recognition, unknown and timing; original contextual projections and alternatives
+M59_NATIVE Nonnegative ["0/1","0/1"]
+M59 epistemic/timing/no-base and five native contextual projections PASS; Latest/JudgmentOnly preserved
+
+stdout | src/test/assembledEmbarrassment.test.ts > persistence: post-choice save containing qualified identity restores exactly
+M59 post-choice full-state save/restore and malformed metadata/nested record/whole-save corruption PASS
+
+ ✓ src/test/assembledEmbarrassment.test.ts (4 tests | 2 skipped) 283045ms
+   ✓ controls: gated recognition, unknown and timing; original contextual projections and alternatives 258687ms
+   ✓ persistence: post-choice save containing qualified identity restores exactly 24358ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 2 skipped (4)
+   Start at  19:14:38
+   Duration  286.88s (transform 2.31s, setup 0ms, collect 3.48s, tests 283.05s, environment 0ms, prepare 104ms)
+
+
+M59_CHECK independent-controls-corrected exit=0 seconds=287.39
+
+=== retained-M58-controls ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledLoss.test.ts > controls: report isolation, correction, recognition and no manufactured history
+M58_CONTROLS uncertain/unknown/known0, hidden/denied/unrecognized/foreign, own-history, correction/no-message and immutable history PASS
+
+ ✓ src/test/assembledLoss.test.ts (5 tests | 4 skipped) 239041ms
+   ✓ controls: report isolation, correction, recognition and no manufactured history 239040ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 4 skipped (5)
+   Start at  19:20:58
+   Duration  242.76s (transform 2.23s, setup 0ms, collect 3.38s, tests 239.04s, environment 0ms, prepare 99ms)
+
+
+M59_CHECK retained-M58-controls exit=0 seconds=243.26
+
+=== boundary ===
+Reference boundary check passed.
+
+M59_CHECK boundary exit=0 seconds=2.27
+
+=== research ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M59_CHECK research exit=0 seconds=3.25
+
+M59 preservation guards PASS:105 frozen HEAD blobs/Git-normalized working bytes; historical trees and all previous retained tests unchanged; document/evidence caps. seconds=9.95
+M59 validation seconds including guard=1261.85
