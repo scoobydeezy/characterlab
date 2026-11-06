@@ -23,14 +23,14 @@ independent controls and post-choice persistence repair pass; M59 is NOT complet
   malformed records reject. Exact post-choice restore and whole-save corruption
   rejection PASS. Types, boundary, research and preservation checks PASS.
 
-## Required owner amendment — unanswered
+## Owner amendment — approved 2026-11-05
 Original all-negative history yields Auto withdrawal. The predeclared Roll gate
 failed before paired-choice claims. Keep that original as an Auto control.
-Proposed: one negative and one nonnegative judgment report in BOTH arms (mean1/2),
+Approved: one negative and one nonnegative judgment report in BOTH arms (mean1/2),
 then the same mismatch-true versus mismatch-false contrast. Laws, goals, seeds0..7,
 coupling and choice-change requirement stay fixed. No further contrast search.
-Do NOT run that changed comparison without the owner's answer. The work order's
-Replay and interpretation rule requires an amendment to predeclared evidence.
+Owner answered ‘go for it’ to this exact bounded amendment. Record before running;
+the original failed scene stays as the Auto/persistence control.
 Still required: live Roll in both arms,16 shared reason-face draws, >=1 changed
 choice, >=1 continuation with positive affect, exact coupled repeat/save2->3.
 

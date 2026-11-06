@@ -72,3 +72,9 @@ number to the exact BigInt clock; use4n. The save corruption control used the ol
 successor record. Post-choice replay equality was reached before that latter
 helper failure. Retain both failures and rerun the affected tests; no laws,
 fixtures, acceptance meanings or production outputs change.
+
+Owner amendment2026-11-05, approved before execution: primary paired evidence now
+contains one negative report at1 and one nonnegative report at2 in BOTH arms.
+Mean judgment1/2; only mismatch differs. Same laws, goals, seeds0..7, coupling,
+choice-change/positive-affect continuation gates and cumulative1800s budget.
+Keep the all-negative original as Auto/persistence control. No further contrasts.
