@@ -119,3 +119,9 @@ never runtime RNG. Keep full-simulation live/reason/coupling/trace/repeat/save a
 negative controls, and original0/8 failure as the sampled regression. This is a
 seam proof plus integration evidence, not a newly observed full-run choice change.
 No laws, scenarios, seeds or final corpus scope change.1980s cumulative remains.
+
+Amended proof PASS2026-11-06:48 coupled cases/96 actual arbitration calls,
+16 changed winners,16 positive-affect continuations,32 neutral continuations.
+Reason compiler reconstructs the live-asserted decision projection; each outcome,
+score, conditional tie, draw count and analytical mode is checked. Original full-run
+0/8 failure remains. M59 bounded connection complete under owner amendment only.

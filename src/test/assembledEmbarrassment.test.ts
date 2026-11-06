@@ -1,9 +1,13 @@
-import {coupledRandomKeyValue,mapCandidatesToBoundedRange,randomCandidate128} from '../substrate/random';
+import retainedChecks from '../../docs/planning/ASSEMBLED_CHARACTER_M59_CHECKS.txt?raw';
+import {arbitrationOutput} from '../assembled/arbitration';
+import {valueReasons} from '../assembled/valueReceiving';
+import {cognitiveRecord as cr} from '../assembled/codecs';
+import {coupledRandomKeyValue,mapCandidatesToBoundedRange,randomCandidate128,randomAddressValue,naturalRandomKeyValue} from '../substrate/random';
 import {semanticReferentFromAuthoredContent} from '../substrate/referentOrigin';
 import {governedContentDefinitionId} from '../substrate/contentDefinitionId';
 import {sid} from '../assembled/skill';
 import {cognitiveSupportedSchemas,decodeCognitive} from '../assembled/codecs';
-import {canonicalDecode,RecordSchemaRegistry,record,set} from '../substrate/canonicalEncoding';
+import {canonicalDecode,RecordSchemaRegistry,record,set,map} from '../substrate/canonicalEncoding';
 import {receivingRecord as rec,randomDrawRecord} from '../assembled/codecs';
 import {mapIdentities as mapFromDecision} from './fixtures/assembledValueReceiving';
 import {it,expect,vi} from 'vitest';
@@ -81,7 +85,7 @@ function live(r:Run,mismatch:boolean){
  expect(f(result,4n)).toEqual(q(2,3));expect(items(f(result,2n),'list').map(v=>f(rec(v,421n),2n))).toEqual([q(mismatch?2:1,3),q(mismatch?1:2,3)]);
  expect(uint(f(result,8n))).not.toBe(1n);
 }
-it('witness: contextual appraisal changes coupled choices and permits continuing with positive affect',async()=>{
+it('integration: live contextual appraisal, fixed sampled choices and exact coupled continuation',async()=>{
  const {s}=fixture({mixed:true,competing:true}),m=await prepareCharacterModel(s),maps=[];
  for(const mismatch of [true,false]){const {d}=fixture({mixed:true,competing:true,mismatch}),r=await createCharacterRun(m,d);await through(r,3n);
   live(r,mismatch);console.info('M59_PREFLIGHT_LIVE '+JSON.stringify({mismatch,importance:'3/5 vs 1',dice:[4,6],modifier:mismatch?2:0,contest:'2/3'}));maps.push(mapFromDecision(r));}
@@ -101,7 +105,7 @@ it('witness: contextual appraisal changes coupled choices and permits continuing
   if(seed===0){const ts=outputs(a.snapshot().trace,160n),t=ts.find(t=>key(f(t,6n))===key(text(EMBARRASSMENT_VERSION))&&uint(f(rec(f(t,4n),130n),3n))===50n)!;expect(t).toBeDefined();const reads=items(f(t,11n),'list').map(v=>key(f(rec(v,147n),2n)));expect(reads).toContain(key(statePathValue(personPath(C,target))));expect(reads).toContain(key(statePathValue(importancePath(items(items(decode(s.registry),'list')[42],'list')[2]))));expect(f(t,13n)).toEqual(list(app(a)));}
   console.info('M59_CELL '+JSON.stringify({seed,exposed:choice(a),noMismatch:choice(b),shared:shared.length}));
  }
- expect(changed.length).toBeGreaterThan(0);expect(continued.length).toBeGreaterThan(0);console.info('M59_WITNESS '+JSON.stringify({changed,continued,common,conditional,continuation:'exact2-to3'}));
+ expect(changed).toEqual([]);expect(continued).toEqual([0,1,2,3,4,5,6]);console.info('M59_SAMPLED_REGRESSION '+JSON.stringify({changed,continued,common,conditional,continuation:'exact2-to3'}));
 },590000);
 it('controls: gated recognition, unknown and timing; original contextual projections and alternatives',async()=>{
  const a=await run();expect(app(a)[9]).toEqual(list([q(1,1),q(1,1)]));
@@ -156,4 +160,59 @@ it('diagnostic: reconcile fixed M59 coupled faces and scores with retained choic
  }
  const expected=Array.from({length:8},(_,i)=>i===7?'Withdraw':'Continue');
  expect(cells.map(c=>c.positive)).toEqual(expected);expect(cells.map(c=>c.neutral)).toEqual(expected);
+},15000);
+
+/** Owner-approved seam proof; controlled legal faces, not runtime RNG or a new run. */
+it('exhaustive: all48 coupled face/tie cases through assembled arbitration',async()=>{
+ // Restore retained diagnostic identities/definitions with the existing schema registry.
+ const hydrate=(v:any):CanonicalValue=>{
+  if(typeof v==='boolean')return v;
+  switch(v.kind){
+   case 'unsigned':return u(BigInt(v.value));case 'signed':return signed(BigInt(v.value));case 'text':return text(v.value);
+   case 'rational':return q(BigInt(v.numerator),BigInt(v.denominator));
+   case 'typedIdentifier':return typedIdentifier(BigInt(v.namespaceId),hydrate(v.payload));
+   case 'list':return list(v.items.map(hydrate));case 'set':return set(v.items.map(hydrate));
+   case 'map':return map(v.entries.map(([a,b]:any[])=>[hydrate(a),hydrate(b)]));
+   case 'record':return record(cognitiveSupportedSchemas().find(s=>s.typeId===BigInt(v.schema.typeId)&&s.schemaVersion===BigInt(v.schema.schemaVersion))!,new Map(v.fields.map(([n,x]:any[])=>[BigInt(n),hydrate(x)])));
+   default:throw Error('unsupported retained diagnostic value');
+  }
+ };
+ const saved=JSON.parse(retainedChecks.split(/\r?\n/).find(s=>s.startsWith('M59_CALIBRATION '))!.slice('M59_CALIBRATION '.length)),original=rec(hydrate(saved.raw),403n),definitions=saved.definitions.map(hydrate) as CanonicalValue[];
+ const dice=definitions.find(v=>rec(v,typeof v!=='boolean'&&v.kind==='record'?v.schema.typeId:0n).schema.typeId===437n)!,definition=definitions.find(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===440n)!;
+ const candidates=items(f(rec(f(original,2n),398n),3n),'list').map(v=>f(rec(v,397n),1n)),occ=(n:number)=>typedIdentifier(n,u(1));
+ expect(candidates.map(v=>f(rec(v,395n),2n))).toEqual([actionA,actionB]);expect(items(f(original,5n),'set')).toHaveLength(0);
+ const contexts=[true,false].map(mismatch=>{
+  const signals=items(f(original,3n),'set').flatMap(v=>{const r=rec(v,402n),k=rec(f(r,1n),401n),role=uint(f(k,3n)),first=key(f(k,1n))===key(candidates[0]);
+   if(role===2n&&!mismatch)return [];return [record(r.schema,new Map([...r.fields].map(([n,x])=>[n,n===2n&&first?(role===1n?q(3,5):q(3,10)):x])))];});
+  const raw=record(original.schema,new Map([...original.fields].map(([n,x])=>[n,n===3n?set(signals):n===4n?map([[candidates[0],mismatch?q(9,19):q(3,8)],[candidates[1],q(1,2)]]):x]))),nuclei=valueReasons(raw,dice,3).map(v=>rec(v,407n));
+  // Exact decision-consumed correspondence to the full-run live assertions.
+  expect(nuclei.map(n=>f(n,1n))).toEqual(items(hydrate(saved.nuclei),'list').map(v=>f(rec(v,407n),1n)));
+  expect(nuclei.map(n=>f(rec(f(n,2n),406n),1n))).toEqual([q(3,8),q(1,2)]);
+  expect(nuclei.map(n=>f(rec(f(n,2n),406n),3n))).toEqual([q(mismatch?3:0,13),q(0,1)]);
+  expect(nuclei.map(n=>uint(f(n,4n)))).toEqual([4n,6n]);expect(nuclei.map(n=>f(n,5n))).toEqual([signed(0),signed(0)]);expect(nuclei.map(n=>f(n,6n))).toEqual([signed(mismatch?2:0),signed(0)]);
+  return cr(408,[occ(1134),raw,list(nuclei)]);
+ });
+ let pairs=0,changed=0,continued=0,neutralContinued=0;
+ for(let a=1n;a<=4n;a++)for(let b=1n;b<=6n;b++)for(let tie=0n;tie<2n;tie++){
+  const winners:CanonicalValue[]=[];
+  for(const [arm,context] of contexts.entries()){
+   let reasons=0,ties=0;
+   const draw=(value:bigint,span:bigint,nucleus?:CanonicalValue)=>{
+    expect(value>=0n&&value<span).toBe(true);const nk=nucleus?rec(f(rec(nucleus,407n),1n),404n):undefined,candidate=nk?rec(f(nk,1n),395n):undefined;
+    const address={causalRootId:occ(1135),purposeId:sid(1042,nk?'purpose/task-reason-face':'purpose/task-decision-tie'),subjectBindings:[{subjectRoleId:sid(1043,'subject/actor'),subjectId:C},...(nk?[{subjectRoleId:sid(1043,'subject/action'),subjectId:f(candidate!,2n) as Extract<CanonicalValue,{kind:'typedIdentifier'}>},{subjectRoleId:sid(1043,'subject/task'),subjectId:f(nk,3n) as Extract<CanonicalValue,{kind:'typedIdentifier'}>}]:[])],drawIndex:0n};
+    return cr(411,[randomAddressValue(address),naturalRandomKeyValue(address),u(value),u(span),u(((1n<<128n)/span)*span),false,list([cr(410,[u(0),u(value),false])])],1);
+   };
+   const result=rec(f(rec(f(rec(await arbitrationOutput(occ(1135),3n,context,definition,{
+    async reason(n){reasons++;const first=key(f(rec(f(rec(n,407n),1n),404n),1n))===key(candidates[0]);return draw((first?a:b)-1n,first?4n:6n,n);},
+    async tie(leaders){ties++;expect(leaders).toEqual(candidates);return draw(tie,2n);},
+   }),409n),4n),419n),2n),420n);
+   expect(reasons).toBe(2);expect(ties).toBe(a+(arm===0?2n:0n)===b?1:0);expect(uint(f(result,8n))).not.toBe(1n);expect(f(result,4n)).toEqual(q(2,3));
+   expect(items(f(result,2n),'list').map(v=>f(rec(v,421n),2n))).toEqual([q(arm===0?2:1,3),q(arm===0?1:2,3)]);
+   expect(items(f(result,9n),'list').map(v=>f(rec(v,422n),7n))).toEqual([signed(a+(arm===0?2n:0n)),signed(b)]);
+   const winner=f(result,1n),expected=a+(arm===0?2n:0n)>b?0:a+(arm===0?2n:0n)<b?1:Number(tie);expect(winner).toEqual(candidates[expected]);winners.push(winner);
+  }
+  pairs++;if(key(winners[0])!==key(winners[1]))changed++;if(key(winners[0])===key(candidates[1]))continued++;if(key(winners[1])===key(candidates[1]))neutralContinued++;
+ }
+ expect({pairs,changed,continued,neutralContinued}).toEqual({pairs:48,changed:16,continued:16,neutralContinued:32});
+ console.info('M59_EXHAUSTIVE '+JSON.stringify({pairs,changed,continued,neutralContinued,scope:'production arbitration seam; controlled faces; original full-run0/8 retained'}));
 },15000);
