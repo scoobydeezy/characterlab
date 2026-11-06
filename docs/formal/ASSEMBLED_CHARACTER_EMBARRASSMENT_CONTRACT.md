@@ -109,3 +109,13 @@ Competing-goal result2026-11-06: numerical/live Roll assertions,16 coupled draws
 trace and exact repeat/restore pass. Seeds0..6 continue in both arms; seed7 withdraws
 in both. Changed choices0/8 fails the unchanged gate. Positive-affect continuation
 is observed7/8 but does not close M59. No further contrasts; failure retained.
+
+Owner proof amendment2026-11-06: exhaustive48 coupled face/tie cases through the
+existing assembled arbitration replace the eight-seed changed-choice requirement.
+Require16 changed winners and16 positive-affect continuations. Reconstruct only the
+decision-consumed projection from retained original identities and live-asserted
+bases/dice/modifiers, using the existing reason compiler; control test draw records,
+never runtime RNG. Keep full-simulation live/reason/coupling/trace/repeat/save and
+negative controls, and original0/8 failure as the sampled regression. This is a
+seam proof plus integration evidence, not a newly observed full-run choice change.
+No laws, scenarios, seeds or final corpus scope change.1980s cumulative remains.
