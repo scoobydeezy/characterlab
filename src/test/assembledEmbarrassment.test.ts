@@ -68,11 +68,16 @@ function live(r:Run,mismatch:boolean){
  expect(personHistory(history(r))).toHaveLength(2);expect(personMean(history(r))).toBeUndefined();
  const nuclei=items(f(rec(f(decisions(r)[0],3n),408n),3n),'list').map(v=>rec(v,407n));expect(nuclei).toHaveLength(2);
  expect(uint(f(rec(f(rec(f(decisions(r)[0],4n),419n),2n),420n),8n))).not.toBe(1n);
- expect(nuclei.map(n=>f(n,6n))).toEqual([signed(mismatch?1:0),signed(0)]);for(const n of nuclei)expect(uint(f(n,4n))).toBeGreaterThan(0n);
+ expect(nuclei.map(n=>f(n,6n))).toEqual([signed(mismatch?3:0),signed(0)]);for(const n of nuclei)expect(uint(f(n,4n))).toBeGreaterThan(0n);
 }
 it('witness: contextual appraisal changes coupled choices and permits continuing with positive affect',async()=>{
  const {s}=fixture({mixed:true}),m=await prepareCharacterModel(s),maps=[];
- for(const mismatch of [true,false]){const {d}=fixture({mixed:true,mismatch}),r=await createCharacterRun(m,d);await through(r,3n);live(r,mismatch);maps.push(mapFromDecision(r));}
+ for(const mismatch of [true,false]){const {d}=fixture({mixed:true,mismatch}),r=await createCharacterRun(m,d);await through(r,3n);
+  // Owner-approved unchanged-scene diagnostic; preserves the live Roll assertion.
+  const reason=rec(f(decisions(r)[0],3n),408n),result=rec(f(rec(f(decisions(r)[0],4n),419n),2n),420n);
+  const definitions=items(items(decode(s.registry),'list')[0],'set').filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n).map(v=>f(rec(v,171n),4n)).filter(v=>typeof v!=='boolean'&&v.kind==='record'&&[437n,440n].includes(v.schema.typeId));
+  console.info('M59_CALIBRATION '+JSON.stringify({mismatch,definitions,nuclei:f(reason,3n),arbitration:result,raw:f(reason,2n)},(_k,v)=>typeof v==='bigint'?v.toString():v instanceof Map?[...v]:v));
+  live(r,mismatch);maps.push(mapFromDecision(r));}
  const changed:number[]=[],continued:number[]=[];let common=0,conditional=0;
  for(let seed=0;seed<8;seed++){
   const rs:Run[]=[];

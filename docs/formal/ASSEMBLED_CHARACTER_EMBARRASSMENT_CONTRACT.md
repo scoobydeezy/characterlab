@@ -84,3 +84,9 @@ setup passed Known judgment/likelihood/E/U1/2, two history rows and two nuclei,
 but arbitration mode remained Auto. No maps or seed-pair claims were produced.
 The approved stop rule now applies: no further contrasts. This result does not
 establish a law failure or completed embarrassment-without-avoidance capability.
+
+Unchanged diagnostic2026-11-05: situational unit is1/10 (standing is1/4).
+U1/2 bounds to1/3, quantizes to3 and hits cap3, as does original U1. Both
+bases1 bound to1/2/d6; standing0. Actual d6+3 versus d6 gives probabilities
+7/8 and1/8, contest1/4 below ThetaRoll1/2, hence Auto/no draws. Earlier +1
+prediction was mistaken. No law or scenario changed; M59 behavioral gate open.

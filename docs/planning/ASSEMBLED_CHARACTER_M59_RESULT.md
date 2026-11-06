@@ -69,12 +69,45 @@ draws, choice difference, continuing with positive affect, and coupled repeat/sa
 were not reached. Earlier independent exact post-choice persistence remains valid.
 The117.63s failed command is retained. No further contrasts or reruns were tried.
 
-Static inspection of assembled/configurationMath.ts and arbitration.ts confirms
-Auto means contest < thetaRoll and bypasses reason draws. Halving appraisal does
-not guarantee a Roll. The failed assertion did not emit actual nucleus distributions
-or threshold operands, so their precise numerical contribution is not established.
-A next step needs bounded analysis of this unchanged calibration before any new
-comparison proposal; neither laws nor the gate should be tuned to manufacture a pass.
+## Numerical diagnosis — owner-authorized unchanged run
+Owner authorized explaining the unchanged decision. Diagnostic card0f2c4489 fixed
+one seed0 positive setup,200s command cap, same1800s cumulative budget. Test-only
+logging emitted actual raw signals, source definitions, nuclei and arbitration
+before the unchanged Roll assertion. The112.95s command reproduced the expected
+failure; it did not execute another contrast, maps, paired seeds or a new scenario.
+
+The earlier amendment prediction confused standing unit1/4 with situational
+unit1/10. Embarrassment contributes to the latter. Actual source and outputs:
+
+| Quantity | Actual |
+|---|---|
+| Appraisal U | 1/2 |
+| Raw situational signal / bounded net | 1/2 / 1/3 |
+| Situational unit / cap | 1/10 / 3 |
+| Modifier | min(3, floor((1/3)/(1/10))) = 3 |
+| Each raw base / bounded base / die | 1 / 1/2 / d6 |
+| Standing modifiers | 0,0 |
+| Withdrawal / continuation scores | d6+3 / d6 |
+| Analytical fair-tie probabilities | 7/8 / 1/8 |
+| Margin / contest / ThetaRoll | 3/4 / 1/4 / 1/2 |
+| Mode / actual reason draws | Auto / none |
+
+Independent exact enumeration of the36 score pairs agrees. Original U1 likewise
+bounds to1/2, divides by1/10 to5, and caps at3. Halving appraisal therefore does
+not soften the decision modifier at all. This is a test-prediction/calibration
+mistake, not evidence of a runtime defect or a failed psychological law.
+The continuation probability1/8 is analytical only: Auto selects the leading
+candidate without sampling it. More seeds cannot repair this failed gate.
+Corrected the dormant modifier expectation from1 to3; the failing Roll assertion
+remains. Actual diagnostic bytes support3; no additional simulation was run.
+
+Recommendation: preserve these as saturated controls. Any new behavioral fixture
+must explicitly justify the competing task/reputation stakes and calculate the
+full raw -> bound -> modifier -> score -> Roll path BEFORE execution. A scene
+where completing the task matters more than protecting reputation is a meaningful
+candidate; changing those goals requires a new owner amendment. Do not change
+reference dice/thresholds or count analytical continuation as observed behavior.
+No replacement fixture or scope amendment is implemented here; M59 stays open.
 
 ## Scope and checks
 Three new tests pass in targeted runs (controls, boundaries, post-choice persistence);
@@ -82,10 +115,11 @@ the required paired witness remains unresolved. Types, reference boundary, resea
 and preservation checks pass:105 frozen dependencies, historical trees and all
 previous tests unchanged. No full historical replay was invalidated. Source/formal
 diffs are whitespace-clean; raw failure logs retain their original excerpt spacing.
-Final changed-test types PASS18.61s; preservation PASS10.85s. Logged cumulative
-verification1408.94s before staged-size validation, including failed commands;
+Latest diagnostic-only test types PASS17.94s; preservation PASS10.07s. Logged
+cumulative verification1549.90s before final staged-size validation, including failures;
 longest command287.39s. Earlier staged-size checks also passed (about2s).
-The1800s cap remains intact; the comparison stop rule, not time, ends this attempt.
+The1800s cap remains intact. Authorized diagnostic is complete; the behavioral
+comparison stop rule remains. No independent regressions rerun: production unchanged.
 Staged-size validation is part of the commit step.
 M59-A12 files and M59-B2 overlap in the new test:13 distinct source/test files.
 The split was committed before the13th file; the original1800s cumulative budget,

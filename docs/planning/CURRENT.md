@@ -32,18 +32,18 @@ live Roll before map construction or any paired-seed comparison. No shared-dice,
 choice-change or positive-affect continuation claim follows. No second arm ran.
 Original all-negative Auto/persistence control remains. Both failed contrasts and
 all logs retained; no further contrasts, calibration changes or retries authorized.
-Code inspection: Auto is selected when analytical contest is below thetaRoll;
-reducing affect does not guarantee crossing that gate. Exact nucleus distributions
-and threshold operands were not emitted; a numerical cause beyond this is unproven.
-## Authorized diagnostic — unchanged scene, 2026-11-05
-Owner approved explaining the numerical decision before any new fixture.
-One existing positive setup run, seed0, identical source/input bytes; emit its
-reason roles, dice/modifiers/distributions and arbitration definition/result before
-the existing failing Roll assertion. No map/pair execution after failure, no changed
-laws, scenario, acceptance or new contrast. Test-only instrumentation, same M59-B
-file. Done when the numerical path is explained and checkpointed, not a M59 pass.
-One diagnostic command capped200s; then types and preservation. Existing1800s
-cumulative budget (1408.94s logged so far) applies; no broad regression reruns.
+## Numerical diagnosis complete — M59 still incomplete
+Owner-authorized unchanged seed0 setup emitted actual definitions/reasons/result;
+112.95s, retained expected Roll failure, no alternate contrast or paired seeds.
+Root cause: earlier prediction used standing unit1/4 instead of situation unit1/10.
+U1/2 -> bounded1/3 -> capped modifier3; original U1 also caps at3. Both bases1
+become1/2/d6, standing0. Scores d6+3 vs d6 -> analytical7/8 vs1/8; contest1/4
+is below ThetaRoll1/2, so Auto takes the leader without draws. Exact36-pair
+arithmetic agrees. Correct dormant modifier assertion1->3; Roll gate unchanged.
+No production changes. Preserve saturated controls. More seeds cannot fix Auto.
+Next: a newly authorized competing-goal scene with explicitly justified stakes
+and complete pre-run calibration arithmetic; no more uncalculated amendments.
+Reference laws/dice/thresholds stay fixed. No new fixture has been implemented.
 
 ## Package and verification limits
 M59-A used12 source/test files; the c464f226 checkpoint explicitly split M59-B
@@ -52,5 +52,6 @@ before adding codecs.ts. M59-B touches only codecs.ts and the existing new test:
 all failures,600s/command;20 evidence files/5MiB. All failures retained.
 No completed BRIEF-12.5-4 credit or reconciliation closure. Final21 members,
 15 families,132 clauses and18 conditional obligations remain. Finish this gate
-before choosing another integration area. No automatic approval or budget reset. Approved witness117.63s; types18.61s and preservation10.85s PASS. Logged
-cumulative1408.94s before staged-size validation. No budget reset; the comparison stop rule applies despite time remaining.
+before choosing another integration area. Diagnostic112.95s, types17.94s and
+preservation10.07s; logged cumulative1549.90s before final staged-size check.
+No budget reset; retained independent controls remain valid (no production edits).
