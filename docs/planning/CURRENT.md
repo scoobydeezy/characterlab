@@ -35,8 +35,15 @@ all logs retained; no further contrasts, calibration changes or retries authoriz
 Code inspection: Auto is selected when analytical contest is below thetaRoll;
 reducing affect does not guarantee crossing that gate. Exact nucleus distributions
 and threshold operands were not emitted; a numerical cause beyond this is unproven.
-Next decision requires a bounded calibration analysis of the unchanged scene,
-not more scenario trials. M59 remains incomplete; no new integration area starts.
+## Authorized diagnostic — unchanged scene, 2026-11-05
+Owner approved explaining the numerical decision before any new fixture.
+One existing positive setup run, seed0, identical source/input bytes; emit its
+reason roles, dice/modifiers/distributions and arbitration definition/result before
+the existing failing Roll assertion. No map/pair execution after failure, no changed
+laws, scenario, acceptance or new contrast. Test-only instrumentation, same M59-B
+file. Done when the numerical path is explained and checkpointed, not a M59 pass.
+One diagnostic command capped200s; then types and preservation. Existing1800s
+cumulative budget (1408.94s logged so far) applies; no broad regression reruns.
 
 ## Package and verification limits
 M59-A used12 source/test files; the c464f226 checkpoint explicitly split M59-B
