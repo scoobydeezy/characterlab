@@ -1,52 +1,46 @@
-# Current work — M59 competing-goal comparison prepared (2026-11-06)
+# Current work — M59 competing-goal witness failed (2026-11-06)
 
-Prior evaluation reports now feed the one character's appraisal/reason path.
-M59 remains incomplete: the required coupled behavioral witness is still open.
+The shared appraisal/reason connection passes its numerical and boundary checks.
+M59 remains incomplete: the required paired final-choice difference did not occur.
 [Result](ASSEMBLED_CHARACTER_M59_RESULT.md) · [Checks](ASSEMBLED_CHARACTER_M59_CHECKS.txt)
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
-## Authorized amendment and scope
-Owner approved the proposed competing-goal scene2026-11-06. Baseline cb655ec8;
-original plan f03e25e0, original baseline51109d4a. Same rules/registry0.59 and
-assembled-character-embarrassment/0.1-candidate; Contextual/SplitExposure, feedback OFF.
-One holder, recognized coat evaluator, fixed competence incident, physical A/B
-options with no binary person dependencies, unsensed reserve10, workspace6.
-Normal priority display adopts reputation/withdrawal goal importance3/5 and
-completion goal1; urgency1, third goal0. Both arms receive judgment true at1,
-false at2; only mismatch true/false differs. Reports learned1/2, decision3.
-Reputation matters, but completing the task matters more. Ratio3:5 is an engineering
-fixture choice, not an empirically qualified psychological calibration.
-No direct belief injection, new runtime/state owner, law/calibration or UI change.
-Original all-negative and equal-importance mixed scenes remain saturated controls.
+## Fixed amendment and result
+Owner approved competing-goal scene2026-11-06, plan e676e852, prepared31db185d.
+Owner approved +180s to1980s cumulative in56e3f19a; witness capped360s.
+Same rules/registry0.59, Contextual/SplitExposure, feedback OFF. One holder,
+recognized coat evaluator, physical A/B options, unsensed reserve10, workspace6.
+Normal priority adoption: reputation/withdrawal3/5, completion1, urgency1, third0.
+Reports1/2 carry judgment true/false in both arms; only mismatch differs. Choice3.
+3:5 is an engineering fixture ratio, not an empirical calibration or settled law.
 
-## Preflight — exact calculation before code/run
-Using actual retained437/440 definitions: activation37/100, situation unit1/10,
-cap3, ThetaRoll1/2. Base3/5 ->3/8 ->d4; base1 ->1/2 ->d6. Both activate even
-without embarrassment. Positive U=(1/2)*(3/5)=3/10 ->bounded3/13 ->modifier2.
-Scores d4+2 vs d6 give withdrawal2/3; mismatch-false d4 vs d6 gives withdrawal1/3.
-Both contests2/3 exceed1/2, so both Roll.24 exact score pairs per arm, no simulation
-or seed search. Earlier unit confusion and saturated controls remain recorded.
+Actual live assertions matched the preflight: both raw/bounded bases3/5 ->3/8
+and1 ->1/2 activate above37/100, dice4/6, standing0. Positive U3/10 ->3/13 ->+2;
+no-mismatch U0 ->modifier0. Scores d4+2 vs d6 and d4 vs d6 give analytical
+withdrawal2/3 and1/3; both contest2/3 >=ThetaRoll1/2 and both actually Roll.
+Two setup runs and all seeds0..7 completed.16 shared reason draws have matching
+values/ranges and full nucleus identities; conditional-tie checks pass. Seed0
+positive exact repeat/save2->restore->3 passes state/output/trace/save equality.
+Prior person810/adopted-importance reads and appraisal output trace assertions pass.
 
-## Binary gate and implementation
-Edit only existing src/test/assembledEmbarrassment.test.ts in M59-B. Add explicit
-competing-goal option; default controls unchanged. Assert live appraisal, adopted
-importance, raw/bounded strengths, die sizes, modifiers and exact contest/probability
-before behavior. Two identity-only setup runs; seeds0..7, same explicit draw maps.
-Require16 shared reason-face draws with identical values/ranges and full nuclei
-identities; account for conditional ties. At least one changed choice and at least
-one continuation with positive affect. Seed0 positive exact repeat/save2->restore->3
-on state/output/trace/save. No further contrasts if this amended witness fails.
-Passing these gates completes only the bounded M59 connection, not BRIEF-12.5-4.
+Observed choices: BOTH arms continue for seeds0..6 and withdraw for seed7.
+Changed choices0/8 FAIL. Continuing with positive affect7/8 is observed but does
+not substitute for the required difference. Terminal witness fails its unchanged
+changed-choice assertion. Witness274.96s, all output/failures retained. No further
+contrasts, seeds, goals, thresholds, laws or acceptance changes; stop rule applied.
+Numerical prediction was correct; the fixed sampled pairs did not supply the
+required behavioral witness. No psychological law failure or completed clause
+is inferred. M59 remains open; no new integration area or UI work starts.
 
-## Verification and budget — extension approved2026-11-06
-Existing controls, negative/hidden/rollback/native/M58 and post-choice persistence
-checks PASS; untouched production/dependencies do not invalidate them. No reruns.
-Changed-test types, final preservation, applicable research and staged-size only,
-plus this witness. Prior comparable M58 witness288s, M57 witness332s; plan360s cap.
-Logged1578.50s including types18.51s/preservation10.09s before approval.
-Owner approved +180s to1980s (33min total), no reset,600s/command unchanged.
-Prepared witness31db185d runs once with360s command cap; only final preservation,
-research and staged-size follow. All failures count. No further contrasts if it fails.
-M59-A12 files and M59-B2 overlapping test =13 distinct source/test files;
-20 evidence files/5MiB total, no new evidence directory. No new integration area.
-Final21 members/15 families/132 clauses and18 conditional obligations remain.
+## Retained checks and limits
+Unknown/denied/unrecognized/hidden/late/correction, no-base, native projections,
+ownership/append-only, after-person140 rollback, M58 controls and post-choice
+persistence PASS from unchanged production. No reruns invalidated by fixture edits.
+Original all-negative and equal-importance mixed Auto scenes remain controls;
+wrong-unit prediction and successor restore repair remain explicitly recorded.
+M59-A12 and M59-B2 files overlap in the test:13 distinct source/test files.
+20 evidence files/5MiB,1980s cumulative including all failures; no reset.
+Final research3.48s/preservation10.04s PASS; logged1866.98s before staged-size.
+Budget1980s intact. No further simulation or checks beyond the final commit step.
+No completed BRIEF-12.5-4 credit/reconciliation closure. Final21 members,
+15 families,132 clauses and18 conditional obligations remain required.

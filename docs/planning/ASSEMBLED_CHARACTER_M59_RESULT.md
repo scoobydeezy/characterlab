@@ -1,4 +1,4 @@
-# M59 checkpoint — contextual appraisal built; behavioral gate pending
+# M59 checkpoint — numerical path passes; paired choice-change gate fails
 
 The character now learns reports about a fixed, self-relevant competence incident
 through its existing recognition/person-belief path. Prior reports and its adopted
@@ -107,34 +107,54 @@ full raw -> bound -> modifier -> score -> Roll path BEFORE execution. A scene
 where completing the task matters more than protecting reputation is a meaningful
 candidate; changing those goals requires a new owner amendment. Do not change
 reference dice/thresholds or count analytical continuation as observed behavior.
-Owner continuation2026-11-06 then authorized that competing-goal scene. Card
-e676e852 precedes its implementation in the existing test. Normal priority input
-adopts reputation/withdrawal3/5 versus completion1, both arms, with mixed judgments
-and mismatch contrast unchanged.3:5 is an engineering fixture ratio, not a verdict.
-Preflight using retained actual definitions: raw bases3/5 and1 ->3/8 and1/2,
-both above37/100 activation; dice4/6. U3/10 ->3/13 ->+2. Scores d4+2 vs d6
-and d4 vs d6 yield withdrawal2/3 and1/3; both contest2/3 >=ThetaRoll1/2.
-Actual-run assertions now require these quantities before comparing behavior.
-Types PASS18.51s; no simulation of the new scene has run. M59 remains open.
-A single180s verification extension (1980s total) is pending owner approval;
-prior witness288-332s exceeds the remaining approximately220s. Proposed command
-cap360s includes two setup runs,16 paired runs and exact seed0 repeat/restore.
-No production changes or additional regression campaign. No new contrast if it fails.
+## Competing-goal amendment — complete run, behavioral FAIL
+Owner continuation2026-11-06 authorized the competing-goal scene. Plan e676e852
+precedes implementation31db185d. Existing priority input adopts reputation/
+withdrawal3/5 versus completion1, both arms, mixed judgments and mismatch contrast
+unchanged.3:5 is an engineering fixture ratio, not a psychological verdict.
+Owner approved180s extension to1980s cumulative in56e3f19a; witness capped360s.
+
+Preflight used actual retained definitions; the simulation then verified each
+quantity in BOTH setup arms and all16 paired runs: bases3/5 and1 ->3/8 and1/2,
+both above37/100 activation; dice4/6, standing0. U3/10 ->3/13 ->+2 versus0.
+Scores d4+2 vs d6 and d4 vs d6 yield analytical withdrawal2/3 and1/3; both
+contest2/3 >=ThetaRoll1/2 and both actually Roll. No liveness/calibration failure.
+
+| Fixed seeds | With mismatch and positive affect | Without mismatch | Shared draws |
+|---|---|---|---|
+| 0,1,2,3,4,5,6 | Continue (protocol-contact-two) | Continue | 2 per pair |
+| 7 | Withdraw (protocol-contact-one) | Withdraw | 2 |
+
+All16 reason-face draws match effective addresses, values and ranges across arms;
+complete nucleus identities agree and conditional tie checks pass. Positive seed0
+repeat/save2->restore->3 gives exact state/output/trace/save equality. Appraisal
+trace reads prior person810 and adopted importance; recorded projection agrees.
+Seven positive-affect continuations are observed. Nevertheless, changed choices
+are0/8: the terminal unchanged acceptance assertion FAILS. The274.96s command and
+all eight cells remain in the log; independent cell parsing confirms these counts.
+The later continuation-count assertion was not reached after the changed-choice
+failure, but the seven printed live cells establish that narrower observation.
+
+This is a failed finite behavioral witness: the numerical path was predicted and
+observed, but these fixed coupled draws did not change the action. It is not proof
+of a runtime defect, law failure, general impossibility or completed BRIEF-12.5-4.
+No additional contrast, seed search, goal tuning, threshold change or acceptance
+waiver follows. Stop rule applied. M59 remains incomplete; no new integration area.
 
 ## Scope and checks
 Three new tests pass in targeted runs (controls, boundaries, post-choice persistence);
-the required paired witness remains unresolved. Types, reference boundary, research
+the required paired witness failed its choice-change gate. Types, reference boundary, research
 and preservation checks pass:105 frozen dependencies, historical trees and all
 previous tests unchanged. No full historical replay was invalidated. Source/formal
 diffs are whitespace-clean; raw failure logs retain their original excerpt spacing.
-Latest diagnostic-only test types PASS17.94s; preservation PASS10.07s. Logged
-cumulative verification1549.90s before final staged-size validation, including failures;
-longest command287.39s. Earlier staged-size checks also passed (about2s).
-The1800s cap remains intact. Authorized diagnostic is complete; the behavioral
-comparison stop rule remains. No independent regressions rerun: production unchanged.
-Staged-size validation is part of the commit step.
+Preparation types PASS18.51s, preservation PASS10.09s; production unchanged.
+Final research PASS3.48s and preservation PASS10.04s. Logged cumulative1866.98s
+before staged-size, including the274.96s failed witness; longest command287.39s.
+All105 frozen dependencies, historical trees/prior tests and document/evidence
+caps remain intact. Previous regressions stay valid. Budget1980s includes failures;
+no reset. Staged-size validation remains the final commit step.
 M59-A12 files and M59-B2 overlap in the new test:13 distinct source/test files.
-The split was committed before the13th file; the original1800s cumulative budget,
+The split was committed before the13th file; the amended1980s cumulative budget,
 600s/command and20 evidence files/5MiB caps apply to both together, including failures.
 No budget reset, new verifier framework, historical-source copy or research reduction.
 
@@ -142,6 +162,3 @@ No whole-clause/family credit is claimed for BRIEF-12.5-4. Episodic recall of th
 reports, natural norm inference, enacted withdrawal/participation, emotional display,
 source trust and general embarrassment remain outside this bounded connection.
 The21 members/15 families/132 clauses and18 conditional obligations remain required.
-
-Competing-fixture preparation checkpoint: types/preservation PASS; logged cumulative
-1578.50s before staged-size. Scene remains unexecuted pending budget approval.

@@ -104,3 +104,8 @@ Witness execution awaits the specific cumulative-budget extension in CURRENT.
 
 Owner approved2026-11-06: +180s verification to1980s cumulative, no reset;
 prepared31db185d witness capped360s, fixed seeds/laws/gates; final checks only.
+
+Competing-goal result2026-11-06: numerical/live Roll assertions,16 coupled draws,
+trace and exact repeat/restore pass. Seeds0..6 continue in both arms; seed7 withdraws
+in both. Changed choices0/8 fails the unchanged gate. Positive-affect continuation
+is observed7/8 but does not close M59. No further contrasts; failure retained.
