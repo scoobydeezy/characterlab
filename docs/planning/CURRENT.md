@@ -43,7 +43,7 @@ Existing controls, negative/hidden/rollback/native/M58 and post-choice persisten
 checks PASS; untouched production/dependencies do not invalidate them. No reruns.
 Changed-test types, final preservation, applicable research and staged-size only,
 plus this witness. Prior comparable M58 witness288s, M57 witness332s; plan360s cap.
-Logged1549.90s consumed before this preparation;1800s cumulative remains in force.
+Logged1578.50s including types18.51s/preservation10.09s;1800s remains in force.
 Request a single180s extension to1980s (33min total), no reset,600s/command unchanged.
 Do not start the witness until the extension is approved. Finish implementation,
 static preflight/types first so that only this concrete bounded run awaits approval.

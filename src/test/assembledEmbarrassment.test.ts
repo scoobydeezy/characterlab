@@ -32,10 +32,11 @@ import {nativeRuntime,nativeCase,nativeRows} from './embarrassmentPublicFixtures
 import {estimate} from '../campaign3/embarrassment';
 /** M59: physical A/B tasks, no person dependency, unsensed reserve10, workspace6.
  * Fixed known competence incident, coat evaluator reports1/2, choice3.
- * Reputation/withdrawal/continuation importance1; no support, bond or loss cue.
+ * Primary reputation/withdrawal importance3/5, completion1 (defaults stay1/1).
+ * Urgency1, third goal0; no support, bond or loss cue.
  * Approved primary: judgment true at1, false at2 in both arms.
  * Only mismatch differs in primary arms. Evidence is independently gated. */
-type Opt={mixed?:boolean;mismatch?:boolean;seen?:boolean;judgment?:boolean;unknown?:number;denied?:boolean;truth?:boolean;signal?:string;late?:boolean;correction?:boolean;zeroBase?:boolean;duplicate?:boolean};
+type Opt={competing?:boolean;mixed?:boolean;mismatch?:boolean;seen?:boolean;judgment?:boolean;unknown?:number;denied?:boolean;truth?:boolean;signal?:string;late?:boolean;correction?:boolean;zeroBase?:boolean;duplicate?:boolean};
 let base:ReturnType<typeof previous>|undefined,frames:CanonicalValue[]|undefined;
 const actionA=typedIdentifier(1027,text('definition/protocol-contact-one')),actionB=typedIdentifier(1027,text('definition/protocol-contact-two'));
 function fixture(o:Opt={},seed=0){
@@ -45,7 +46,7 @@ function fixture(o:Opt={},seed=0){
  b.s={...b.s,rulesVersion:EMBARRASSMENT_RULES,registrySchemaVersion:EMBARRASSMENT_REGISTRY,registry:enc(list(slots))};
  const rows=items(decode(b.d.orderedInputs),'list').filter(v=>{const a=items(v,'list');return signedValue(a[0])<=3n&&![RUMINATION_SOURCE,FATIGUE_SOURCE,CONTROL_SOURCE,SOCIAL_SOURCE].some(t=>key(t)===key(a[2]));}).map(v=>{
   const a=items(v,'list');
-  if(o.zeroBase&&key(a[2])===key(PRIORITY_DISPLAY)){const p=items(a[3],'list');return list([...a.slice(0,3),list([p[0],list(items(p[1],'list').map(v=>{const r=[...items(v,'list')];if(key(r[0])===key(important[0])&&items(r[1],'list').length)r[1]=list([q(0,1)]);return list(r);}))]),a[4]]);}
+  if((o.zeroBase||o.competing)&&key(a[2])===key(PRIORITY_DISPLAY)){const p=items(a[3],'list');return list([...a.slice(0,3),list([p[0],list(items(p[1],'list').map(v=>{const r=[...items(v,'list')];if(key(r[0])===key(important[0])&&items(r[1],'list').length)r[1]=list([o.zeroBase?q(0,1):q(3,5)]);return list(r);}))]),a[4]]);}
   if(key(a[2])!==key(DISPLAY))return v;const p=items(a[3],'list');return list([...a.slice(0,3),list([p[0],list(items(p[1],'list').map(v=>{const r=[...items(v,'list')];r[3]=important.some((t,i)=>key(t)===key(r[0])&&uint(r[1])===BigInt(i));return list(r);}))]),a[4]]);
  });
  frames??=items(decode(peopleData(false,0,[{at:1,signals:[['appearance/coat',true]],kind:0},{at:2,signals:[['appearance/coat',true]],continuity:true,kind:0}]).orderedInputs),'list').filter(v=>key(items(v,'list')[2])===key(SOCIAL_SOURCE));
@@ -64,25 +65,28 @@ const bytes=(a:Uint8Array,b:Uint8Array)=>expect(a.length===b.length&&a.every((v,
 const exact=(a:Run,b:Run)=>{for(const k of ['state','outputs','trace'] as const)bytes(a.snapshot()[k],b.snapshot()[k]);bytes(a.save(),b.save());expect(a.snapshot().clock).toBe(b.snapshot().clock);};
 const run=async(o:Opt={},at=3n)=>{const {s,d}=fixture(o),r=await createCharacterRun(await prepareCharacterModel(s),d);await through(r,at);return r;};
 function live(r:Run,mismatch:boolean){
- const a=app(r);expect(a,'live appraisal').toBeDefined();expect(a[8]).toEqual(text('Known'));expect(a.slice(3,8)).toEqual([list([mismatch]),list([true]),list([q(1,2)]),list([q(mismatch?1:0,2)]),q(1,1)]);expect(a[9]).toEqual(list([q(mismatch?1:0,2),q(mismatch?1:0,2)]));
+ const a=app(r);expect(a,'live appraisal').toBeDefined();expect(a[8]).toEqual(text('Known'));expect(a.slice(3,8)).toEqual([list([mismatch]),list([true]),list([q(1,2)]),list([q(mismatch?1:0,2)]),q(3,5)]);expect(a[9]).toEqual(list([q(mismatch?3:0,10),q(mismatch?3:0,10)]));
  expect(personHistory(history(r))).toHaveLength(2);expect(personMean(history(r))).toBeUndefined();
  const nuclei=items(f(rec(f(decisions(r)[0],3n),408n),3n),'list').map(v=>rec(v,407n));expect(nuclei).toHaveLength(2);
- expect(uint(f(rec(f(rec(f(decisions(r)[0],4n),419n),2n),420n),8n))).not.toBe(1n);
- expect(nuclei.map(n=>f(n,6n))).toEqual([signed(mismatch?3:0),signed(0)]);for(const n of nuclei)expect(uint(f(n,4n))).toBeGreaterThan(0n);
+ const raw=rec(f(rec(f(decisions(r)[0],3n),408n),2n),403n),bases=items(f(raw,3n),'set').map(v=>rec(v,402n)).filter(v=>uint(f(rec(f(v,1n),401n),3n))===1n);
+ expect(bases.map(v=>f(v,2n))).toEqual([q(3,5),q(1,1)]);
+ expect(nuclei.map(n=>f(rec(f(n,2n),406n),1n))).toEqual([q(3,8),q(1,2)]);
+ expect(nuclei.map(n=>f(rec(f(n,2n),406n),3n))).toEqual([q(mismatch?3:0,13),q(0,1)]);
+ expect(nuclei.map(n=>uint(f(n,4n)))).toEqual([4n,6n]);expect(nuclei.map(n=>f(n,5n))).toEqual([signed(0),signed(0)]);
+ expect(nuclei.map(n=>f(n,6n))).toEqual([signed(mismatch?2:0),signed(0)]);
+ const result=rec(f(rec(f(decisions(r)[0],4n),419n),2n),420n);
+ expect(f(result,4n)).toEqual(q(2,3));expect(items(f(result,2n),'list').map(v=>f(rec(v,421n),2n))).toEqual([q(mismatch?2:1,3),q(mismatch?1:2,3)]);
+ expect(uint(f(result,8n))).not.toBe(1n);
 }
 it('witness: contextual appraisal changes coupled choices and permits continuing with positive affect',async()=>{
- const {s}=fixture({mixed:true}),m=await prepareCharacterModel(s),maps=[];
- for(const mismatch of [true,false]){const {d}=fixture({mixed:true,mismatch}),r=await createCharacterRun(m,d);await through(r,3n);
-  // Owner-approved unchanged-scene diagnostic; preserves the live Roll assertion.
-  const reason=rec(f(decisions(r)[0],3n),408n),result=rec(f(rec(f(decisions(r)[0],4n),419n),2n),420n);
-  const definitions=items(items(decode(s.registry),'list')[0],'set').filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n).map(v=>f(rec(v,171n),4n)).filter(v=>typeof v!=='boolean'&&v.kind==='record'&&[437n,440n].includes(v.schema.typeId));
-  console.info('M59_CALIBRATION '+JSON.stringify({mismatch,definitions,nuclei:f(reason,3n),arbitration:result,raw:f(reason,2n)},(_k,v)=>typeof v==='bigint'?v.toString():v instanceof Map?[...v]:v));
-  live(r,mismatch);maps.push(mapFromDecision(r));}
+ const {s}=fixture({mixed:true,competing:true}),m=await prepareCharacterModel(s),maps=[];
+ for(const mismatch of [true,false]){const {d}=fixture({mixed:true,competing:true,mismatch}),r=await createCharacterRun(m,d);await through(r,3n);
+  live(r,mismatch);console.info('M59_PREFLIGHT_LIVE '+JSON.stringify({mismatch,importance:'3/5 vs 1',dice:[4,6],modifier:mismatch?2:0,contest:'2/3'}));maps.push(mapFromDecision(r));}
  const changed:number[]=[],continued:number[]=[];let common=0,conditional=0;
  for(let seed=0;seed<8;seed++){
   const rs:Run[]=[];
   for(const [i,mismatch]of [true,false].entries()){
-   const {d}=fixture({mixed:true,mismatch},seed);d.orderedInputs=enc(list([maps[i].canonicalValue,...items(decode(d.orderedInputs),'list')]));const r=await createCharacterRun(m,d);
+   const {d}=fixture({mixed:true,competing:true,mismatch},seed);d.orderedInputs=enc(list([maps[i].canonicalValue,...items(decode(d.orderedInputs),'list')]));const r=await createCharacterRun(m,d);
    if(seed===0&&mismatch){await through(r,2n);const b=await restoreCharacterRun(s,{initialState:d.initialState,orderedInputs:d.orderedInputs,save:r.save()}),repeat=await createCharacterRun(m,d);await through(repeat,2n);exact(r,b);exact(r,repeat);for(const x of [r,b,repeat])await through(x,3n);exact(r,b);exact(r,repeat);}else await through(r,3n);
    live(r,mismatch);rs.push(r);
   }

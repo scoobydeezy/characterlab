@@ -107,7 +107,19 @@ full raw -> bound -> modifier -> score -> Roll path BEFORE execution. A scene
 where completing the task matters more than protecting reputation is a meaningful
 candidate; changing those goals requires a new owner amendment. Do not change
 reference dice/thresholds or count analytical continuation as observed behavior.
-No replacement fixture or scope amendment is implemented here; M59 stays open.
+Owner continuation2026-11-06 then authorized that competing-goal scene. Card
+e676e852 precedes its implementation in the existing test. Normal priority input
+adopts reputation/withdrawal3/5 versus completion1, both arms, with mixed judgments
+and mismatch contrast unchanged.3:5 is an engineering fixture ratio, not a verdict.
+Preflight using retained actual definitions: raw bases3/5 and1 ->3/8 and1/2,
+both above37/100 activation; dice4/6. U3/10 ->3/13 ->+2. Scores d4+2 vs d6
+and d4 vs d6 yield withdrawal2/3 and1/3; both contest2/3 >=ThetaRoll1/2.
+Actual-run assertions now require these quantities before comparing behavior.
+Types PASS18.51s; no simulation of the new scene has run. M59 remains open.
+A single180s verification extension (1980s total) is pending owner approval;
+prior witness288-332s exceeds the remaining approximately220s. Proposed command
+cap360s includes two setup runs,16 paired runs and exact seed0 repeat/restore.
+No production changes or additional regression campaign. No new contrast if it fails.
 
 ## Scope and checks
 Three new tests pass in targeted runs (controls, boundaries, post-choice persistence);
@@ -130,3 +142,6 @@ No whole-clause/family credit is claimed for BRIEF-12.5-4. Episodic recall of th
 reports, natural norm inference, enacted withdrawal/participation, emotional display,
 source trust and general embarrassment remain outside this bounded connection.
 The21 members/15 families/132 clauses and18 conditional obligations remain required.
+
+Competing-fixture preparation checkpoint: types/preservation PASS; logged cumulative
+1578.50s before staged-size. Scene remains unexecuted pending budget approval.
