@@ -1,36 +1,65 @@
-# Current work — validation performance package complete (2026-11-07)
+# Current work — proposed M61 contextual follow-up (2026-11-07)
 
-The same character now settles the fixed 33-instant witness11.3% faster in one
-measured pair, with exact native bytes. M60 is the latest passed behavioral milestone;
-M61 remains FAILED. This performance package does not close its behavioral gate.
+STATUS: PROPOSED; owner approval required for the changed comparison and new budget.
+User authorized continuation/review; no new behavioral execution or law change yet.
+M60 remains the latest behavioral pass. M61's fixed neutral comparison stays FAILED.
+Performance package15c77fe5 is complete (11.3% measured settlement saving).
 
-Result: [ASSEMBLED_VALIDATION_PERFORMANCE_RESULT.md](ASSEMBLED_VALIDATION_PERFORMANCE_RESULT.md).
-Checks and compressed baseline are beside that result. Pre-code card:f03bf8dc.
-Baseline production:13653060. Two wrappers only: strategy and identityEligibility;
-one test file. Delegated patches avoid duplicate base validation; full validation,
-restore, direct-owner writes and local/cross-state invariants remain intact.
-No model, law, schema, scope, seed or fixture change.
+## Observable connection and basis
+Test whether the SAME significant recalled experience changes competing choice when
+the character also perceives a current bodily/task shortfall. No stronger memory,
+new consumer, direct reason offset, calibration change or extra character capability.
+Baseline: original M61 fixture/tests at15c77fe5; retained null at80681556.
+Saved positive33 evidence shows task forecast3, all task criteria0..10 (Within),
+no current/recalled body operand, and all joint-body appraisal rows Unavailable.
+Saved reserve is0 at33. Action-memory forecasts are Known; the null remains valid.
 
-Settlement 246.173s -> 218.447s; saving 27.726s / 11.263% (gate>=5%).
-Model/run identity, save 32, terminal 33 state/output/full trace/save all byte-equal.
-Optimized restoration of the old save 32 followed by 33 is exact.
-22 rejection cases, reached actual-patch rollback, retained M12/M30 controls,
-types, boundary and research checks pass. One successful timing pair only;
-no general speed guarantee and no fixture-construction speed claim.
+## Exact proposed comparison amendment
+In BOTH history arms, change only task A's target from0..10 to4..6 (the original
+M3 task-A target), and append one ordinary BODY_SAMPLE at33/phase10 using the
+existing source payload. Task B and third-task targets stay0..10.
+Keep history difference end15 x=1/0, seed0, laws, initial body30/rate10/width1,
+all earlier events, priorities, actual A14/A28/B30, query33 and memory capacities.
+No hidden truth enters belief. No social task/stand-in or autonomous partner.
+The two arms share one model; only their original end15 observation differs.
 
-Final frozen-dependency, document/evidence and staged-size checks are in the result.
-Budget remains 30min cumulative validation /600s per command; no extension.
-Exactly 3 production/test files; one compressed byte bundle plus result/check log.
-Initial type/control-construction/runner failures and their bounded repairs retained.
+## Reachability before native runs
+Source-derived prediction, NOT yet native evidence: unchanged forecast3 and target4..6
+give distance1/severity1/10. Depleted body sampled as[0,1] with threshold60 gives
+vulnerability59/60. Gain1/SplitExposure gives situational raw119/1200.
+Absent retained end15: bound119/1319 -> modifier0.
+Retained end15 adds the SAME1/20: raw179/1200, bound179/1379 -> modifier1.
+B stays raw1/10 -> modifier0. Both base1 reasons remain d6.
+Thus predicted A probability is36/72 versus47/72, with11 changed paired winners.
+This tests an interaction with an existing concern, not memory sufficiency in isolation.
+The old null stays as a control; no claim of a new native four-cell factorial replay.
 
-## Next integration boundary
-Return to the significant-memory -> competing-choice gap identified by M61.
-The fixed contrast has live appraisal and genuine consumption but subthreshold
-decision modifiers; its 72 coupled arbitration cases changed 0 winners.
-Do not silently change laws, calibration, seeds, contrast or acceptance criteria.
-Keep that failure and its calibration/cost review; no new behavioral run is
-authorized by this performance pass. The next bounded card must resolve that
-comparison openly under the adopted post-M60 directives before replaying MEMORY.
-No UI, apparatus expansion or autonomous-partner work.
+## Files, contracts and gates (after approval only)
+Zero production/formal changes planned; <=2 test files: existing M61 helpers exported
+without changing old tests, and one contextual follow-up test. No fixture framework.
+Contracts: action-memory/0.1-candidate, interaction/0.1, reason-dice/0.1-candidate,
+existing priority/Value receiving/ordering/epistemic boundaries unchanged.
+Before comparing: both forecasts and current body/task appraisal must be live;
+assert actual forecast3, body[0,1], expected raw amounts and compiled modifiers.
+Require genuine significant retention/recall, actual same-event producer->Value->
+decision joins, executed intent/attempt, and exact captured-input arbitration.
+Enumerate the72 coupled faces/tie cases; native analytical probabilities must match
+weighted counts and differ. No synthetic raw contexts substitute for the native run.
+Preserve reached-patch rollback, denied-observation/denied-performance controls,
+selected-only/context/ownership/annex boundaries, exact repeat and save32->33 restore.
+Reuse the main positive run for checkpoint evidence; no duplicate full fresh run.
+Types/boundary/research,105 frozen dependency hashes, staged Git-size required.
+
+## Budget and stopping
+Request a NEW bounded verification allocation of1800s total,600s/command; the
+old M61 ledger2327.50/2400s remains closed, never reset or relabelled a pass.
+One long job at a time: pair<=580s; restore/boundaries<=400s; privacy/rollback<=500s;
+remaining checks/ordinary test repairs within the same1800s total.
+<=20 evidence files/5MiB; append to existing M61 result/check log, at most one
+compressed exact checkpoint bundle. Preserve all original failures; no source copies.
+Stop on an absent live operand or nonpositive effect, report the actual cause;
+no alternate contrast, parameter/seed search, law change or budget extension.
+Ordinary test bugs may be repaired within scope/budget with the failure retained.
+Only a passed connection permits proposing the pinned MEMORY replay; no UI/breadth.
 
 | Research obligations | **0 active / 18 conditional / 0 unowned** |

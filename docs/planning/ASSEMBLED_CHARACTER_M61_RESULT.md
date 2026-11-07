@@ -233,3 +233,37 @@ Cumulative2323.21s/2400s before closing checks; review remains within its120s ca
 Final review checks: types/research/document/source/evidence/size PASS.
 Review verification96.45s within120s; cumulative2327.50s/2400s (38.79/40min).
 No production edits, calibration change, additional contrast or full rerun.
+
+
+## Proposed contextual follow-up — owner review pending (2026-11-07)
+After the two-wrapper performance package passed at15c77fe5, the owner asked to
+continue. Read-only inspection of its preserved positive terminal33 bytes found:
+forecast380/361 mean3, all task assessments Within their0..10 criteria, empty body
+operand, and three Unavailable joint-body rows. No new simulation was run.
+The saved body anchor is also confirmed as reserve0 at33, consistent with the
+proposed depleted-body sample. The first inspection incorrectly assumed the optional body sample existed and
+rejected it as not461/1; the corrected optional-value read disclosed its absence.
+This is not a correction to the action-memory Known/consumption/null findings.
+
+Proposed comparison amendment: both old history arms use task A's original M3
+target4..6 instead of0..10 and one normal BODY_SAMPLE at33. All memory strengths,
+laws, seeds, early inputs/body and other task declarations remain fixed. The
+historical target is selected from assembledInteraction.ts, not a magnitude sweep.
+Current context must arise through the existing perception/appraisal/concern path.
+
+Analytical reachability under the existing equations: forecast3 yields distance1;
+body bin[0,1], threshold60 and SplitExposure/gain1 yield concern119/1200. Its bounded
+value119/1319 gives modifier0; adding unchanged recalled1/20 yields179/1379 and
+modifier1. Opposing B remains d6 with modifier0. Coupled d6 outcomes therefore
+predict A36/72 without that episode versus47/72 with it (11 changed winners).
+These are pre-run predictions, not reconstructed evidence or a passed experiment.
+Actual native operands, consumed reasons, execution and exact probabilities must
+all satisfy CURRENT's gates. An unavailable operand or a null result stops this
+comparison without another contrast. M61's original null remains required evidence.
+
+CURRENT holds the concrete pending card: zero production changes, at most2 test
+files, new1800s verification allocation, one exact checkpoint bundle at most.
+The2327.50/2400s old ledger remains closed. No new verification allocation or
+comparison amendment is inferred from the performance pass. No MEMORY closure.
+Owner review is required by the work order's Replay and interpretation rule:
+"Comparison/scope changes need owner amendment".
