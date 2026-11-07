@@ -7,3 +7,211 @@
 PASS: Git index contains no files at or above50,000,000 bytes.
 
 VALIDATION_PERF_CHECK plan-staged-size exit=0 seconds=0.73
+
+=== test preparation types ===
+src/test/assembledValidationPerformance.test.ts(68,75): error TS2322: Type '{ kind: "set"; path: stateModule.StatePath; expected: stateModule.StateReadValue; newValue: CanonicalValue; }' is not assignable to type 'PatchOperation'.
+  Types of property 'expected' are incompatible.
+    Type 'StateReadValue' is not assignable to type '{ readonly presence: false; } | { readonly presence: true; readonly value: CanonicalValue; }'.
+      Type 'StateReadValue' is not assignable to type '{ readonly presence: true; readonly value: CanonicalValue; }'.
+        Types of property 'presence' are incompatible.
+          Type 'boolean' is not assignable to type 'true'.
+src/test/assembledValidationPerformance.test.ts(68,94): error TS2322: Type '{ kind: "set"; path: stateModule.StatePath; expected: stateModule.StateReadValue; newValue: CanonicalValue; }' is not assignable to type 'PatchOperation'.
+  Types of property 'expected' are incompatible.
+    Type 'StateReadValue' is not assignable to type '{ readonly presence: false; } | { readonly presence: true; readonly value: CanonicalValue; }'.
+      Type 'StateReadValue' is not assignable to type '{ readonly presence: true; readonly value: CanonicalValue; }'.
+        Types of property 'presence' are incompatible.
+          Type 'boolean' is not assignable to type 'true'.
+
+VALIDATION_PERF_CHECK test preparation types exit=1 seconds=16.66
+Runner preparation: Python placeholder substitution hit environment variable name; syntax rejected before launching any simulation (0.30s). Corrected placeholder match.
+
+=== baseline unchanged native parity controls ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledValidationPerformance.test.ts > validation performance native parity and measured settlement
+VALIDATION_PERF preparation {"fixture":49.7588643,"prepare":1.606150999999998}
+VALIDATION_PERF settled 8
+VALIDATION_PERF settled 16
+VALIDATION_PERF settled 24
+VALIDATION_PERF settled 32
+
+ × src/test/assembledValidationPerformance.test.ts > validation performance native parity and measured settlement 303525ms
+   → task status union payload
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledValidationPerformance.test.ts > validation performance native parity and measured settlement
+SchedulerContractError: task status union payload
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ validateUnions src/campaign2/taskCodecs.ts:20:163
+ ❯ Module.decodeTask src/campaign2/taskCodecs.ts:27:106
+ ❯ visit src/campaign2/cognitiveCodecs.ts:71:29
+ ❯ validate src/campaign2/cognitiveCodecs.ts:86:2
+ ❯ Module.decodeCognitive src/campaign2/cognitiveCodecs.ts:93:111
+ ❯ visit src/campaign3/embodiedCodecs.ts:71:20
+ ❯ validate src/campaign3/embodiedCodecs.ts:75:2
+ ❯ Module.decodeEmbodied src/campaign3/embodiedCodecs.ts:79:110
+ ❯ visit src/assembled/codecs.ts:77:29
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 6 skipped (7)
+   Start at  13:33:03
+   Duration  307.44s (transform 2.32s, setup 0ms, collect 3.47s, tests 303.53s, environment 0ms, prepare 125ms)
+
+
+VALIDATION_PERF_CHECK baseline unchanged native parity controls exit=1 seconds=308.13
+
+=== rejection and rollback preflight after malformed-constructor repair ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledValidationPerformance.test.ts > validation performance rejection preflight
+VALIDATION_PERF rejection preflight [{"label":"inherited delegated","error":"StateContractError: Error: leaf requires a canonical record of type 372"},{"label":"inherited full","error":"StateContractError: Error: leaf requires a canonical record of type 372"},{"label":"inherited restore","error":"StateContractError: Error: leaf requires a canonical record of type 372"},{"label":"plan delegated","error":"SchedulerContractError: strategy plan"},{"label":"plan full","error":"SchedulerContractError: strategy plan"},{"label":"plan restore","error":"SchedulerContractError: strategy plan"},{"label":"strategy journal delegated","error":"SchedulerContractError: strategy journal"},{"label":"strategy journal full","error":"SchedulerContractError: strategy journal"},{"label":"strategy journal restore","error":"SchedulerContractError: strategy journal"},{"label":"identity presence delegated","error":"SchedulerContractError: identity eligibility journal/adapter presence"},{"label":"identity presence full","error":"SchedulerContractError: identity eligibility journal/adapter presence"},{"label":"identity presence restore","error":"SchedulerContractError: identity eligibility journal/adapter presence"},{"label":"foreign strategy delegated","error":"SchedulerContractError: strategy foreign path"},{"label":"foreign strategy full","error":"SchedulerContractError: strategy foreign path"},{"label":"foreign strategy restore","error":"SchedulerContractError: strategy foreign path"},{"label":"foreign identity delegated","error":"SchedulerContractError: identity eligibility foreign path"},{"label":"foreign identity full","error":"SchedulerContractError: identity eligibility foreign path"},{"label":"foreign identity restore","error":"SchedulerContractError: identity eligibility foreign path"},{"label":"foreign writer","error":"StateContractError: mutation authority does not own the proposed path"},{"label":"foreign scope","error":"SchedulerContractError: strategy write scope"},{"label":"mixed strategy","error":"SchedulerContractError: strategy mixed owner patch"},{"label":"mixed identity","error":"SchedulerContractError: identity eligibility joint identity patch"},{"label":"actual-patch rollback","error":"published state/output/trace/clock unchanged; failed status and diagnostic retained"}]
+
+ ✓ src/test/assembledValidationPerformance.test.ts > validation performance rejection preflight 52976ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  13:39:03
+   Duration  56.80s (transform 2.28s, setup 0ms, collect 3.42s, tests 52.98s, environment 0ms, prepare 124ms)
+
+
+VALIDATION_PERF_CHECK rejection and rollback preflight after malformed-constructor repair exit=0 seconds=57.47
+
+=== baseline unchanged native corrected controls ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledValidationPerformance.test.ts > validation performance native parity and measured settlement
+VALIDATION_PERF preparation {"fixture":49.0560576,"prepare":1.5773534}
+VALIDATION_PERF settled 8
+VALIDATION_PERF settled 16
+VALIDATION_PERF settled 24
+VALIDATION_PERF settled 32
+
+stdout | src/test/assembledValidationPerformance.test.ts > validation performance native parity and measured settlement
+VALIDATION_PERF baseline {"times":{"fixture":49.0560576,"prepare":1.5773534,"settle32":226.1304237,"save32":0.6205752000000211,"settle33":20.042725000000036,"terminal":1.5799076999999815,"controls":2.1378482000000076},"compressedBytes":2894916,"controls":23}
+
+ ✓ src/test/assembledValidationPerformance.test.ts > validation performance native parity and measured settlement 301450ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  13:40:13
+   Duration  305.31s (transform 2.29s, setup 0ms, collect 3.43s, tests 301.45s, environment 0ms, prepare 127ms)
+
+
+VALIDATION_PERF_CHECK baseline unchanged native corrected controls exit=0 seconds=305.97
+
+=== optimized source and corrected test types ===
+
+VALIDATION_PERF_CHECK optimized source and corrected test types exit=0 seconds=16.22
+
+=== candidate exact native parity and settlement comparison ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledValidationPerformance.test.ts > validation performance native parity and measured settlement
+VALIDATION_PERF preparation {"fixture":48.9750289,"prepare":1.581346899999997}
+VALIDATION_PERF settled 8
+VALIDATION_PERF settled 16
+VALIDATION_PERF settled 24
+VALIDATION_PERF settled 32
+
+stdout | src/test/assembledValidationPerformance.test.ts > validation performance native parity and measured settlement
+VALIDATION_PERF candidate {"times":{"fixture":48.9750289,"prepare":1.581346899999997,"settle32":200.4819519,"save32":0.6652393000000156,"settle33":17.964749700000016,"terminal":1.5656779000000096,"controls":2.031758700000006},"baselineSettlement":246.17314870000004,"candidateSettlement":218.44670160000004,"reduction":0.11262985929382963,"controls":23}
+
+ ✓ src/test/assembledValidationPerformance.test.ts > validation performance native parity and measured settlement 273530ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  13:46:08
+   Duration  277.43s (transform 2.29s, setup 0ms, collect 3.43s, tests 273.53s, environment 0ms, prepare 121ms)
+
+
+VALIDATION_PERF_CHECK candidate exact native parity and settlement comparison exit=0 seconds=278.1
+
+=== optimized restore of baseline32 and exact continuation33 ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledValidationPerformance.test.ts > validation performance baseline continuation
+VALIDATION_PERF exact baseline32 continuation33 {"seconds":231.0250328}
+
+ ✓ src/test/assembledValidationPerformance.test.ts > validation performance baseline continuation 280700ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  13:51:06
+   Duration  284.61s (transform 2.30s, setup 0ms, collect 3.45s, tests 280.70s, environment 0ms, prepare 127ms)
+
+
+VALIDATION_PERF_CHECK optimized restore of baseline32 and exact continuation33 exit=0 seconds=285.29
+
+=== retained identity and strategy direct-owner controls ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledStrategy.test.ts > M12 assembled strategy > controls: closed references/source/state/ownership, real pending children and whole-instant rollback
+M12 common-stage rollback 40 events; limit39
+
+ ✓ src/test/assembledStrategy.test.ts > M12 assembled strategy > controls: closed references/source/state/ownership, real pending children and whole-instant rollback 8191ms
+stdout | src/test/assembledIdentityEligibility.test.ts > admission: source completeness, owner and joint journal invariants
+M30 source completeness and one-owner full-journal/numeric invariants PASS
+
+ ✓ src/test/assembledIdentityEligibility.test.ts > admission: source completeness, owner and joint journal invariants 13938ms
+
+ Test Files  2 passed (2)
+      Tests  2 passed | 11 skipped (13)
+   Start at  13:56:09
+   Duration  26.64s (transform 2.14s, setup 0ms, collect 3.94s, tests 22.13s, environment 0ms, prepare 190ms)
+
+
+VALIDATION_PERF_CHECK retained identity and strategy direct-owner controls exit=0 seconds=27.32
+
+=== boundary preservation ===
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+VALIDATION_PERF_CHECK boundary preservation exit=0 seconds=2.8
+
+=== research preservation ===
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+VALIDATION_PERF_CHECK research preservation exit=0 seconds=3.62
+VALIDATION_PERF integrity PASS:105 frozen HEAD and Git-normalized working blobs; historical source trees/tests unchanged; 3 source/test files; 3 evidence files; document caps. seconds=11.83
+
+=== final staged Git-size ===
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+VALIDATION_PERF_CHECK final staged Git-size exit=0 seconds=0.74
+
+=== final metadata staged Git-size ===
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+VALIDATION_PERF_CHECK final metadata staged Git-size exit=0 seconds=0.73
