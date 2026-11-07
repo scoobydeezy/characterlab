@@ -7,7 +7,7 @@ Read [CURRENT.md](docs/planning/CURRENT.md), then
 The active direction is assembly of one continuing character.
 Workbench/UI development and Campaign 4 are stopped pending assembly acceptance.
 This is the assembly checkout, based on
-`788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`. M61's contextual connection is complete; the post-M60 review directives remain active. Follow CURRENT.md for the next bounded connection. Do not add UI or multi-character work.
+`788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`. M62's MEMORY replay found an acquisition/accessibility gap; M61's contextual connection remains complete. The post-M60 directives remain active. Follow CURRENT.md for the next bounded connection. Do not add UI or multi-character work.
 Do not execute historical TODOs, resume old audits, or retain/revisit browser tabs.
 Old instructions/evidence remain on tag `archive/workbench-stopped-2026-10-25`.
 

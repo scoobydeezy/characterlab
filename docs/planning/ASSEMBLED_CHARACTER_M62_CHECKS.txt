@@ -1,0 +1,202 @@
+M62_CHECK plan-staged-size exit=0 seconds=0.75
+
+=== M62: types ===
+src/test/assembledMemoryReplay.test.ts(60,106): error TS2345: Argument of type 'Uint8Array<ArrayBuffer>' is not assignable to parameter of type 'CanonicalValue'.
+  Property 'kind' is missing in type 'Uint8Array<ArrayBuffer>' but required in type '{ readonly kind: "map"; readonly entries: readonly (readonly [CanonicalValue, CanonicalValue])[]; }'.
+
+M62_CHECK types exit=1 seconds=16.81
+LOCAL DISPOSITION: type-only test logging defect; model identity is already encoded bytes. Format with bytesToHex; scenario/assertions/production unchanged.
+
+=== M62: types corrected identity formatting ===
+
+M62_CHECK types corrected identity formatting exit=0 seconds=16.3
+
+=== M62: native memory requirement projections ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledMemoryReplay.test.ts > M62 native: recency selective reinforcement decay capacity and canonical tie 49581ms
+   → encoding: declaration
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledMemoryReplay.test.ts > M62 native: recency selective reinforcement decay capacity and canonical tie
+SchedulerContractError: encoding: declaration
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ require src/assembled/encoding.ts:13:46
+ ❯ Module.compileEncoding src/assembled/encoding.ts:14:92
+ ❯ Module.compileCharacterModel src/assembled/model.ts:242:33
+ ❯ Module.prepareCharacterModel src/assembled/character.ts:27:110
+ ❯ create src/test/assembledMemoryReplay.test.ts:32:102
+ ❯ src/test/assembledMemoryReplay.test.ts:58:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  15:46:26
+   Duration  53.47s (transform 2.32s, setup 0ms, collect 3.48s, tests 49.58s, environment 0ms, prepare 126ms)
+
+
+M62_CHECK native memory requirement projections exit=1 seconds=54.17
+LOCAL DISPOSITION: fixture slot-index defect before native execution. Model compiler places affect-memory at zero-based29, encoding30. Correct only graph/metadata slot29 and preserve encoding unchanged; no comparison/law amendment.
+
+=== M62: native corrected fixture slot ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMemoryReplay.test.ts > M62 native: recency selective reinforcement decay capacity and canonical tie
+M62 REFERENCE {"rules":"rules/assembled-character/0.61-candidate","registry":"assembled-character-registry/0.61-candidate","model":"0a6701060101052872756c65732f617373656d626c65642d6368617261637465722f302e36312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420519e82021f41bc3cce56e7b50f2016d36e411c6fb3186d701b92d960f139136b03010a6501020101052263616d706169676e322d706172616d65746572732f302e312d63616e64696461746502010420b0955535cb7e5deedfeb142c17466a5ac83943392f845395636b822320a5a1680401052a6e756d657269632f617373656d626c65642d7461736b2d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101052b617373656d626c65642d6368617261637465722d72656769737472792f302e36312d63616e646964617465020104202b657f157ae1948e8482c2b8cb6925d0bd905f3964412f91b8b47ff6b4bf28e3","slots":44,"retention":["0520617373656d626c65642d657069736f6469632d726574656e74696f6e2f302e31","0208","0210","0201"],"retrieval":["051c617373656d626c65642d626f64792d72657472696576616c2f302e31","0201"],"affect":["051b617373656d626c65642d6166666563742d6d656d6f72792f302e31","0510556e636f6e74726f6c6c65644761696e","0700"],"seed":"0000000000000000000000000000000000000000000000000000000000000000"}
+
+stdout | src/test/assembledMemoryReplay.test.ts > M62 native: recency selective reinforcement decay capacity and canonical tie
+M62 initial {"at":"4","base":["1/3","1/2"],"pull":["0/1","0/1"],"score":["1/3","1/2"],"selected":[1],"history":[["2"],["3","4"]]}
+M62 TRACE {"at":"4","actualReads":2,"selected":["32"],"publicationIds":["49"],"writes":1}
+M62 repeated {"at":"6","base":["1/5","7/12"],"pull":["0/1","0/1"],"score":["1/5","7/12"],"selected":[1],"history":[["2"],["3","4","6"]]}
+M62 unretrieved {"at":"6","base":["1/5","1/4"],"pull":["0/1","0/1"],"score":["1/5","1/4"],"selected":[1],"history":[["2"],["3","6"]]}
+
+ × src/test/assembledMemoryReplay.test.ts > M62 native: recency selective reinforcement decay capacity and canonical tie 58802ms
+   → expected 101n to be 40n // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledMemoryReplay.test.ts > M62 native: recency selective reinforcement decay capacity and canonical tie
+AssertionError: expected 101n to be 40n // Object.is equality
+
+- Expected
++ Received
+
+- 40n
++ 101n
+
+ ❯ finish src/test/assembledMemoryReplay.test.ts:17:109
+     15| async function step(r:Run){snapshots.delete(r);return r.settleNextInst…
+     16| async function through(r:Run,t:bigint){for(let n=0;snap(r).clock<t;n++…
+     17| async function finish(r:Run){for(let n=0;await step(r);n++)expect(n).t…
+       |                                                                                                             ^
+     18| const records=(r:Run)=>restoreAuthoritativeState(decode(snap(r).state)…
+     19| const episodes=(r:Run)=>records(r).map(e=>items(e.value,'list')).sort(…
+ ❯ src/test/assembledMemoryReplay.test.ts:73:23
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  15:48:21
+   Duration  62.64s (transform 2.28s, setup 0ms, collect 3.44s, tests 58.80s, environment 0ms, prepare 119ms)
+
+
+M62_CHECK native corrected fixture slot exit=1 seconds=63.33
+LOCAL DISPOSITION: terminal-clock assertion defect. goalMeaning.ts adopted()/goalBootstrap() schedules existing maintenance expiry101; task deadlines40 are not quiescence. Native recency/reinforcement/decay/trace gates passed before this assertion. Keep the complete run and assert101; no input/law/projection change.
+
+=== M62: native full inherited calendar ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMemoryReplay.test.ts > M62 native: recency selective reinforcement decay capacity and canonical tie
+M62 REFERENCE {"rules":"rules/assembled-character/0.61-candidate","registry":"assembled-character-registry/0.61-candidate","model":"0a6701060101052872756c65732f617373656d626c65642d6368617261637465722f302e36312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420519e82021f41bc3cce56e7b50f2016d36e411c6fb3186d701b92d960f139136b03010a6501020101052263616d706169676e322d706172616d65746572732f302e312d63616e64696461746502010420b0955535cb7e5deedfeb142c17466a5ac83943392f845395636b822320a5a1680401052a6e756d657269632f617373656d626c65642d7461736b2d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101052b617373656d626c65642d6368617261637465722d72656769737472792f302e36312d63616e646964617465020104202b657f157ae1948e8482c2b8cb6925d0bd905f3964412f91b8b47ff6b4bf28e3","slots":44,"retention":["0520617373656d626c65642d657069736f6469632d726574656e74696f6e2f302e31","0208","0210","0201"],"retrieval":["051c617373656d626c65642d626f64792d72657472696576616c2f302e31","0201"],"affect":["051b617373656d626c65642d6166666563742d6d656d6f72792f302e31","0510556e636f6e74726f6c6c65644761696e","0700"],"seed":"0000000000000000000000000000000000000000000000000000000000000000"}
+
+stdout | src/test/assembledMemoryReplay.test.ts > M62 native: recency selective reinforcement decay capacity and canonical tie
+M62 initial {"at":"4","base":["1/3","1/2"],"pull":["0/1","0/1"],"score":["1/3","1/2"],"selected":[1],"history":[["2"],["3","4"]]}
+M62 TRACE {"at":"4","actualReads":2,"selected":["32"],"publicationIds":["49"],"writes":1}
+M62 repeated {"at":"6","base":["1/5","7/12"],"pull":["0/1","0/1"],"score":["1/5","7/12"],"selected":[1],"history":[["2"],["3","4","6"]]}
+M62 unretrieved {"at":"6","base":["1/5","1/4"],"pull":["0/1","0/1"],"score":["1/5","1/4"],"selected":[1],"history":[["2"],["3","6"]]}
+
+stdout | src/test/assembledMemoryReplay.test.ts > M62 native: recency selective reinforcement decay capacity and canonical tie
+M62 K0 {"at":"4","base":["0/1","0/1"],"pull":["0/1","0/1"],"score":["0/1","0/1"],"selected":[],"history":[[],[]]}
+M62 TRACE {"at":"4","actualReads":2,"selected":[],"publicationIds":[],"writes":0}
+
+stdout | src/test/assembledMemoryReplay.test.ts > M62 native: recency selective reinforcement decay capacity and canonical tie
+M62 K2 {"at":"4","base":["5/6","1/2"],"pull":["0/1","0/1"],"score":["5/6","1/2"],"selected":[0,1],"history":[["2","3","4"],["3","4"]]}
+M62 TRACE {"at":"4","actualReads":2,"selected":["15","32"],"publicationIds":["50","51"],"writes":2}
+
+stdout | src/test/assembledMemoryReplay.test.ts > M62 native: recency selective reinforcement decay capacity and canonical tie
+M62 tie {"at":"8","base":["1/2","1/2"],"pull":["0/1","0/1"],"score":["1/2","1/2"],"selected":[0],"history":[["3","6","8"],["7"]]}
+M62 TRACE {"at":"8","actualReads":2,"selected":["15"],"publicationIds":["65"],"writes":1}
+M62 NATIVE PASS recency/reinforcement/idle-decay/K0/K1/K2/tie; all calendars to101; no dice; neutral importance cannot explain distinct histories
+
+ ✓ src/test/assembledMemoryReplay.test.ts > M62 native: recency selective reinforcement decay capacity and canonical tie 81269ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  15:50:42
+   Duration  85.13s (transform 2.29s, setup 0ms, collect 3.44s, tests 81.27s, environment 0ms, prepare 123ms)
+
+
+M62_CHECK native full inherited calendar exit=0 seconds=85.79
+
+=== M62: epistemic and original-read trace boundaries ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMemoryReplay.test.ts > M62 epistemic: hidden truth leaves retained cognition and recall unchanged
+M62 TRACE {"at":"6","actualReads":2,"selected":["32"],"publicationIds":["65"],"writes":1}
+M62 TRACE {"at":"6","actualReads":2,"selected":["32"],"publicationIds":["65"],"writes":1}
+M62 EPISTEMIC PASS same displayed evidence/different hidden truth; original observations and retained/recollection identity joins preserved
+
+ ✓ src/test/assembledMemoryReplay.test.ts > M62 epistemic: hidden truth leaves retained cognition and recall unchanged 62124ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  15:52:40
+   Duration  65.96s (transform 2.29s, setup 0ms, collect 3.44s, tests 62.12s, environment 0ms, prepare 113ms)
+
+
+M62_CHECK epistemic and original-read trace boundaries exit=0 seconds=66.64
+
+=== M62: exact repeat and prefix continuation ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMemoryReplay.test.ts > M62 persistence: exact repeat and complete-prefix continuation after presentation history
+M62 PERSISTENCE PASS exact3 and terminal101 state/output/trace/save/run identity across fresh repeat and restored continuation
+
+ ✓ src/test/assembledMemoryReplay.test.ts > M62 persistence: exact repeat and complete-prefix continuation after presentation history 66748ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  15:54:00
+   Duration  70.58s (transform 2.29s, setup 0ms, collect 3.44s, tests 66.75s, environment 0ms, prepare 122ms)
+
+
+M62_CHECK exact repeat and prefix continuation exit=0 seconds=71.25
+Document guard rejected a proposed reconciliation update at65549 bytes before write; shortened its summary, retaining every key and scope finding. No scope reduction.
+
+=== M62: final types boundaries research ===
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M62_CHECK final types boundaries research exit=0 seconds=23.13
+M62 integrity PASS:105 frozen HEAD and Git-normalized working blobs; historical source trees/tests unchanged; 2 source/test files; 2 evidence files; document caps. seconds=12.16
+M62_CHECK source-document-evidence-integrity exit=0 seconds=12.16
+M62_CHECK final-diff-review exit=0 seconds=0.43
+Reconciliation shortened without dropping IDs/dispositions; both LF and CRLF forms below64KiB.
+
+=== M62: final staged Git size ===
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M62_CHECK final staged Git size exit=0 seconds=0.92
+
+Final verification: 411.68/1800s (6.86/30min), including all retained failures; no extension.
+Three targeted groups plus final types/boundary/research/source/document/staged-size checks PASS.
+All105 frozen dependency blobs and all production/formal sources unchanged. Two new test files; two small evidence files.
+M62 replay/classification complete; PHEN-MEM-001 remains unresolved at GAP-MEM-ACQ.
