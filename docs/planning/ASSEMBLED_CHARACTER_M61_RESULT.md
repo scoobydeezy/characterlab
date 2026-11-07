@@ -153,3 +153,11 @@ were unchanged this turn; earlier types and105-control preservation remain valid
 
 Closing checks PASS; final cumulative verification2231.05s/2400s (37.18/40min).
 Retained evidence:2 files, about165KiB. No additional execution is scheduled.
+
+## Owner-requested calibration/cost review — plan before instrumentation
+Review only; no new behavior or acceptance attempt. Use at most120 additional seconds
+within the existing2400s total (2231.05s already used). One90s diagnostic uses unchanged
+positive seed0, fixture/model/run preparation and instant1 with CPU sampling and one
+snapshot. Report phases/sample counts/sizes in this same log; no raw profile artifact.
+Types cap30s, closing checks only. No retry or full-pair rerun. Prefix1 measurements
+cannot establish late-run cost; recommendations must preserve that distinction.

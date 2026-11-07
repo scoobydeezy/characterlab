@@ -3493,3 +3493,12 @@ M61 closing PASS: source/test byte diff empty vs80681556; previous types/105-con
 PASS: Git index contains no files at or above50,000,000 bytes.
 
 M61_CHECK null-result-staged-size exit=0 seconds=0.74
+
+=== cost-review-plan-size ===
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M61_CHECK cost-review-plan-size exit=0 seconds=0.76
