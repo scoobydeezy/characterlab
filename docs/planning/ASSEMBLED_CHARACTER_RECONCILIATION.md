@@ -1,7 +1,7 @@
 # Assembled Character — M2 reconciliation
 
 Owner approved D1–D5 on2026-10-25 with the D2 condition below.
-M60 remains latest pass. Post-M60 directives adopted; [M61 design checkpoint](CURRENT.md) requires an action-forecast/control ruling before code. M59 amended proof/0-of-8 retained.
+M60 remains latest pass. Post-M60 directives adopted; [M61 design checkpoint](CURRENT.md) owner approved endpoint-mean forecast2026-11-07; implementation pending. M59 amended proof/0-of-8 retained.
 
 ## Decision sheet — adopted 2026-10-25
 

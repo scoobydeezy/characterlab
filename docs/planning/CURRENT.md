@@ -1,77 +1,68 @@
-# Current work — M61 design checkpoint (2026-11-06)
+# Current work — M61 action-outcome memory (2026-11-07)
 
-The character still recalls significant positions without using them to choose an
-action. M60 remains the last completed capability. Owner approved the post-M60
-review directives: close this connection next, then serial reference replay.
-[Last result](ASSEMBLED_CHARACTER_M60_RESULT.md); no new runtime pass claimed.
+Owner approved the bounded action-outcome forecast proposed at2f4334dd.
+M60 is the last completed capability; M61 is active, not yet a pass.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
-## Adopted guardrails
-One simulation; no new apparatus, UI, autonomous partners or unrelated breadth.
-Full-run actual decision consumption plus exact production-input decision proof;
-preserve null/saturated/subthreshold cases, failed samples and fixed dice settings.
-First replay member PHEN-MEM-001; pin executable common laws/calibration/topology
-before running it. Scenario evidence may vary; member-specific tuning may not.
-Existing work order budgets and 21 members / 15 families / 132 clauses remain.
+## Capability and authority
+Close significant recalled experience -> action-conditional forecast -> competing
+choice, with exact continuation. One shared character/state/scheduler/save.
+Contract: ../formal/ASSEMBLED_CHARACTER_ACTION_MEMORY_CONTRACT.md (0.1 candidate).
+Owner selected episodic endpoint means, not progress-to-strategy control.
+Same action, perceived start and recognized context; selected memories only;
+missing match Unknown. No trend extrapolation, authored belief or memory bonus.
+Baseline targets BRIEF-12.3-2 and12.7; PHEN-MEM-001:6/:9 provenance only.
+Full PHEN-MEM-001:2..11 replay follows serially; no whole member closes here.
 
-## M61 readiness finding — action semantics are missing
-M54 uses one history x15=1/0; attribution -> significance -> retention -> recall
--> spatial appraisal MovingFarther/SameDistance. Source: unchanged M53 fixture.
-The position observations are displayed marker events, not enacted action outcomes.
-goalMeaning.ts spatialAppraise compares an accessible span, not a future endpoint.
-Its current contract explicitly disclaims trajectory, causal outcome and physical
-object identity from glyph equality. Existing task forecast361 predicts a diagnostic
-reading; its contract expressly makes no action-efficacy claim. Neither authorizes
-turning MovingFarther into a bonus for a particular candidate.
-Architecture11 permits bounded prospection; it does not select that missing law.
+## Fixed implementation boundary
+Rules/registry0.61: slot43 maps <=2 task/action pairs to the existing spatial goal.
+Use actual permitted performance observations (1000/3), not execution trace,
+to join prior selected position evidence to next-instant position evidence.
+Immutable annex lives on the existing346/1 position episode; no side store.
+Current perceived marker/role/panel glyph context must match the recalled action
+episode's start context. Matching refers to observer evidence, not hidden identity.
+Appraise exact endpoint mean with original goal-distance kernel; expected positive
+progress /10 contributes to existing situational reasons. Existing dice unchanged.
+Unknown/worsening adds no positive contribution; base motives remain independent.
 
-## Concrete proposal — requires a semantic ruling before implementation
-Recommended A: one-step action-conditioned episodic forecast; <=2 actions/one marker.
-Reuse position perception and existing owners; no new channel/panel type or side store.
-Bind actual chosen/executed action to permitted before/after observations and
-observer-side continuing referent/context; never use a hidden effect/trace as evidence.
-Use only matching episodes actually selected into the shared workspace: same action,
-same observed start coordinate and recognized context. Predict the arithmetic mean
-of their observed endpoints, with each original episode counted once. No matching
-episode means Unknown, never zero or an injected prior. No trend extrapolation.
-Assess each predicted endpoint against the same adopted spatial goal using exact
-goal-distance semantics. Specify the task/plan/goal and reason mapping in a versioned
-contract before code; reuse existing reason/arbitration calibration, no memory bonus.
-This is a proposed engineering baseline, NOT an accepted law or inferred causality.
-It needs an action-observation binding absent from the old displayed-position scene;
-the old M54 comparison remains, and cannot itself serve as the new action witness.
+## Planned files (12 production/test maximum)
+src/assembled/actionMemory.ts (new); model.ts; traceBinding.ts; state.ts;
+memory.ts; significance.ts; retention.ts; runtime.ts; execution.ts;
+positionExecution.ts; src/test/fixtures/assembledActionMemory.ts (new);
+src/test/assembledActionMemory.test.ts (new).
+No historical control/dependency edits, new owner/channel/panel/runtime or UI.
+Before code: commit this card and contract. Ordinary bugs repaired with evidence.
 
-Alternative B: use recalled progress to change urgency/persistence of a declared
-strategy, without predicting endpoints. That needs a different progress-to-control
-law; worsening progress alone does not tell us whether to persist or abandon.
-Do not select either by whichever gives a changed choice. Recommend A because it
-exposes the action consequence that is currently missing and retains Unknown.
-Policy escalation5: these are different psychological uses of progress, not equivalent
-adapters. This is my assessment of the unresolved law, not a new owner ruling.
-M61 is NOT implementation-ready; the specific candidate has not been adopted.
+## Predeclared comparison
+Start from M53's four observed trials1..16 and body30/rate10/width1, capacity16,
+recall16/workspace20, SignificanceFirst/BothDirections, seed0, three physical tasks.
+Task diagnostic criteria[0,10], spatial goal[7,7]; task importance1/1/0 fixed.
+Keep original M53/M54 tests unchanged. New arms differ only permitted x15=6 vs0.
+Train actual A at14, A at28, B at30 using perceived single-route availability;
+observe endpoints15 (6/0),29 (0),31 (1), all with prior observed start x0.
+Action body amounts0/delay0, report permission true; no extra bodily delivery.
+The existing four-trial/body goal attribution must earn end15 significance only
+in the moved arm. Shared memory pressure18..30 removes its uncredited counterpart.
+At33 perceive x0, same marker/role/panel glyph; both A/B available.
+Require both action forecasts live in both arms before comparing.
+Expected A mean3 vs0 (end15 plus29 vs29), B mean1 both; progress strengths3/10 vs0
+and1/10. Verify those operands, actual reason consumption, actual chosen execution.
+Use production arbitration payloads captured from the full runs for exact weighted
+choice probabilities; no seed sweep or assertion that seed0 must change.
+Historical x15=1/0 M54 remains its original comparison, not retroactively amended.
 
-## Bounded gate once the semantic choice is settled
-At most3 capabilities: grounded action-memory binding, forecast -> competing choice,
-exact repeat/restore. At most12 production/test files,20 evidence files/5MiB,
-10min per command/30min total verification; no extension or fixture/seed search.
-Predeclare the exact sources/contrasts, production files, trace projections and
-checkpoint points in this card before implementation; commit that card first.
-Both choices available in both arms; both compared forecasts/appraisals live.
-Full run must consume the recalled episode through forecast/reason/actual execution.
-Exact decision proof uses captured production payloads and correctly weighted draws.
-Controls: denied evidence, wrong/unselected episode, no match, same evidence/different
-truth, duplicate consumption, rollback and exact continuation. Reuse original
-goal-distance controls. A missing consumer or live operand is failure, not coverage.
-
-## First replay mapping (read-only; not execution evidence)
-PHEN-MEM-001:2..11 is the pinned recency/reinforcement/decay/topK/tie member.
-M42 has partial :6/:8/:9 evidence; significance is not retrieval reinforcement.
-:2-5/:7-9 still need the exact recency, repeated selected retrieval, idle decay,
-canonical tie, zero-unselected-mutation and trace comparisons; :10/:11 constrain seams.
-BRIEF-12.3-2 is defining memory; do not substitute it for those member requirements.
-No whole key/member closes. No new simulation tests run at this design checkpoint.
-Next after M61: pin one executable reference configuration and run this member
-serially; report unsupported requirements as blockers, not substituted witnesses.
-
-Validation: initial research check rejected plain-text count formatting; restored the
-existing required table/bold format. Counts unchanged; corrected research check PASS. Document limits/links PASS.
+## Checks and limits
+One long check at a time;10min/command,30min cumulative verification including failures.
+20 evidence files/5MiB; one compact result/check log, no source copies or verifier chain.
+Focused native pair + exact arbitration proof; then repeat/save before decision and
+continuation; denial/hidden-evidence, no match, wrong/unselected/duplicate memory,
+immutable annex/foreign owner/version rejection and reached rollback controls.
+Retain M54 witness (shared episode validator/significance paths changed); original
+goal-distance tests; types, boundary, research and105 frozen-dependency guard.
+Inspect original PHEN-MEM requirement mapping; no control pass substitutes replay.
+Full frozen C2 byte suite not invalidated unless dependencies/entry change.
+A failure triggers diagnosis/targeted repair, never new contrasts or retuned laws.
+At budget/file limit checkpoint honestly; no implicit extension or breadth.
+Done only with live consumed memory -> different exact decision distribution,
+actual execution, epistemic/order/ownership controls and exact repeat/restore.
+Then stop; first common-reference MEMORY replay is the next bounded milestone.
