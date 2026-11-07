@@ -3556,3 +3556,149 @@ M61 review integrity:12 source/test files; production unchanged; prior105 contro
 PASS: Git index contains no files at or above50,000,000 bytes.
 
 M61_CHECK review-final-staged-size exit=0 seconds=0.74
+M61_CONTEXT_CHECK approval-stage-size-and-commit exit=0 seconds=1.32
+
+=== M61 context: types before native pair ===
+
+M61_CONTEXT_CHECK types before native pair exit=0 seconds=16.75
+
+=== M61 context: approved fixed contextual native pair ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledActionMemoryContext.test.ts > M61 context pair: unchanged memory has a coupled choice effect
+M61_FORECAST [
+  {
+    action: 'definition/protocol-contact-one',
+    status: 'Known',
+    mean: '060202',
+    progress: '060214',
+    ages: [ 29, 15 ]
+  },
+  {
+    action: 'definition/protocol-contact-two',
+    status: 'Known',
+    mean: '060201',
+    progress: '06020a',
+    ages: [ 31 ]
+  }
+]
+M61_CONTEXT_LIVE {"moved":true,"body":"0..1","forecast":"3","appraisal":["06020a","06763c","06ee01b009","06ee01b009"],"raw":["06ee01b009","060214","06e602b009"],"nuclei":[{"action":"0b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","die":"6","standing":"0","situation":"1"},{"action":"0b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","die":"6","standing":"0","situation":"0"}]}
+
+stdout | src/test/assembledActionMemoryContext.test.ts > M61 context pair: unchanged memory has a coupled choice effect
+M61_FORECAST [
+  {
+    action: 'definition/protocol-contact-one',
+    status: 'Known',
+    mean: '060001',
+    progress: '060001',
+    ages: [ 29 ]
+  },
+  {
+    action: 'definition/protocol-contact-two',
+    status: 'Known',
+    mean: '060201',
+    progress: '06020a',
+    ages: [ 31 ]
+  }
+]
+M61_CONTEXT_LIVE {"moved":false,"body":"0..1","forecast":"3","appraisal":["06020a","06763c","06ee01b009","06ee01b009"],"raw":["06ee01b009","060001","06ee01b009"],"nuclei":[{"action":"0b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","die":"6","standing":"0","situation":"0"},{"action":"0b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","die":"6","standing":"0","situation":"0"}]}
+M61_EXACT {"cases":"72","changed":11,"winnersA":["47","36"],"scope":"actual captured contexts, paired uniform faces and tie choices; no reconstructed reasons"}
+
+stdout | src/test/assembledActionMemoryContext.test.ts > M61 context pair: unchanged memory has a coupled choice effect
+M61_CONTEXT_PAIR PASS original null retained;72 coupled cases; expected A47/72 vs36/72; checkpoint bytes 2901917
+
+ ✓ src/test/assembledActionMemoryContext.test.ts > M61 context pair: unchanged memory has a coupled choice effect 506341ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  14:52:12
+   Duration  510.30s (transform 2.33s, setup 0ms, collect 3.49s, tests 506.34s, environment 0ms, prepare 127ms)
+
+
+M61_CONTEXT_CHECK approved fixed contextual native pair exit=0 seconds=510.97
+
+=== M61 context: exact contextual continuation and boundaries ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledActionMemoryContext.test.ts > M61 context continuation and ownership boundaries
+M61_FORECAST [
+  {
+    action: 'definition/protocol-contact-one',
+    status: 'Known',
+    mean: '060202',
+    progress: '060214',
+    ages: [ 29, 15 ]
+  },
+  {
+    action: 'definition/protocol-contact-two',
+    status: 'Known',
+    mean: '060201',
+    progress: '06020a',
+    ages: [ 31 ]
+  }
+]
+M61_CONTEXT_LIVE {"moved":true,"body":"0..1","forecast":"3","appraisal":["06020a","06763c","06ee01b009","06ee01b009"],"raw":["06ee01b009","060214","06e602b009"],"nuclei":[{"action":"0b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","die":"6","standing":"0","situation":"1"},{"action":"0b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","die":"6","standing":"0","situation":"0"}]}
+
+stdout | src/test/assembledActionMemoryContext.test.ts > M61 context continuation and ownership boundaries
+M61_BOUNDARIES selected-only/no-match/coordinate/context/duplicate/immutable/model-domain/foreign-owner/version PASS
+M61_CONTEXT_CONTINUATION PASS exact repeat prefix32 and continuation33; selected/context/owner/immutable/version boundaries
+
+ ✓ src/test/assembledActionMemoryContext.test.ts > M61 context continuation and ownership boundaries 281273ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  15:01:27
+   Duration  285.21s (transform 2.28s, setup 0ms, collect 3.43s, tests 281.27s, environment 0ms, prepare 123ms)
+
+
+M61_CONTEXT_CHECK exact contextual continuation and boundaries exit=0 seconds=285.89
+
+=== M61 context: contextual privacy and reached rollback ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledActionMemoryContext.test.ts > M61 context privacy and reached formation rollback
+M61_CONTEXT_PRIVACY PASS denied evidence has equal reports; denied perceived performance has no annex; reached patch rollback
+
+ ✓ src/test/assembledActionMemoryContext.test.ts > M61 context privacy and reached formation rollback 266601ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  15:06:24
+   Duration  270.48s (transform 2.29s, setup 0ms, collect 3.44s, tests 266.60s, environment 0ms, prepare 127ms)
+
+
+M61_CONTEXT_CHECK contextual privacy and reached rollback exit=0 seconds=271.16
+
+=== M61 context: final boundary and research ===
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M61_CONTEXT_CHECK final boundary and research exit=0 seconds=6.63
+M61_CONTEXT integrity PASS:105 frozen HEAD and Git-normalized working blobs; production unchanged; original M61 test unchanged except exports; 2 source/test files; 3 evidence files; document caps. seconds=12.08
+M61_CONTEXT_CHECK source-document-evidence-integrity exit=0 seconds=12.08
+M61_CONTEXT_CHECK final-diff-review exit=0 seconds=0.44
+
+=== M61 context: final staged Git size ===
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M61_CONTEXT_CHECK final staged Git size exit=0 seconds=0.92
+
+Final contextual verification: 1106.16/1800s (18.44/30min), no extension.
+Boundary/research/105-control/production-preservation/document/evidence/staged-size PASS.
+Three evidence files total 3089565 bytes before this closing note, below5MiB.
+Checkpoint SHA-256: 829aa077ef5e8b8c93b511ae64fbd581327de872b7865867074d67a3ab81eab0.

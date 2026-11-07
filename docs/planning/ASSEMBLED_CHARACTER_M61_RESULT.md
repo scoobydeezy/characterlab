@@ -1,9 +1,11 @@
-# M61 — action-memory forecast consumed; choice-effect gate failed (2026-11-07)
+# M61 — significant recalled experience changes contextual choice (2026-11-07)
 
-Significant action memory now demonstrably reaches the actual decision and execution
-path, but the approved comparison does not change choice probability. The native pair
-and exact paired arbitration show a null effect. M61 fails; M60 remains latest pass.
-No MEMORY requirement, corpus member or conditional obligation closes.
+The owner-approved contextual follow-up passes: the same significant memory raises
+task A's choice probability from50% to65.28% alongside current body/task concern.
+Exact continuation, evidence-access, ownership and rollback controls pass.
+The original neutral comparison remains a null; the earlier failed gates below are
+preserved history. No MEMORY member, family clause or conditional obligation closes.
+See the final contextual section for the accepted scope and verification accounting.
 
 ## Finding and owner-approved correction
 I made a planning error: the proposed end15 x=6 lies outside the accepted attribution
@@ -274,3 +276,58 @@ Owner explicitly approved the exact two changes and new1800s verification alloca
 in CURRENT. No production edit, stronger memory, law/calibration change, alternate
 contrast or seed search is authorized. The old failed comparison and closed2327.50s
 ledger remain; new checks use the separate M61_CONTEXT_CHECK prefix in the same log.
+
+## Approved contextual comparison — PASS (2026-11-07)
+The same significant remembered experience changes the character's competing choice
+when current bodily/task concern is live. No production, law, memory-strength or
+calibration edit was made for this follow-up. Approval was committed at484fcd3c.
+
+Scenario: three physical tasks, no social dependencies; body30/rate10/width1; seed0.
+Both arms restore task A's historical4..6 target and add the same ordinary body
+sample at33. Other targets stay0..10. The only arm difference is permitted end15
+position x1 versus0. All earlier actions, laws and memory settings remain fixed.
+
+Both full runs pass the live-input gate: forecast3, current body[0,1], severity1/10,
+vulnerability59/60, and original concern119/1200. The significant end15 action
+episode survives/returns only in the positive arm. Its unchanged forecast contribution
+1/20 raises A's raw concern to179/1200 and compiled situational modifier from0 to1.
+B stays unchanged. Actual same-event action-memory output -> Value input -> Value
+output -> decision input and genuine decision/intent/attempt execution joins pass.
+
+Production arbitration on the ACTUAL captured contexts, with identical uniform
+faces and tie values, produces11 changed winners in72 cases. A wins47/72 versus36/72
+(65.28% versus50%); weighted counts exactly equal each native analytical probability.
+This is a probability-change proof, not a claim that seed0's selected action differs.
+LOCAL DISPOSITION: interaction through recalled action outcome -> forecast -> existing
+situational concern -> common reason compiler/arbitration. The retained neutral
+comparison still has0/72 changes and36/72 each. Context makes the unchanged memory
+contribution consequential; neither isolated-memory sufficiency nor a new native
+four-cell factorial is claimed.
+
+Exact restore/replay of prefix32 and continuation33 passes all state/output/trace/
+run-identity/save bytes. Selected-only/no-match/coordinate/context/duplicate,
+foreign-owner/model-domain, immutable annex and version-slot controls pass.
+Denied x1/x0 observations yield identical forecast/reason/significance reports;
+denied perceived performance cannot create an action annex. A forced failure AFTER
+the actual annex patch is reached leaves published state/outputs/trace and clock
+unchanged, sets failed status and exposes a diagnostic.
+
+Checks: paired native/probability gate510.97s; restore/boundaries285.89s;
+privacy/reached rollback271.16s; types16.75s; boundary/research and preservation checks recorded below.
+One new compressed checkpoint bundle preserves exact positive32/33 bytes (2901917
+bytes); the existing result/check log retain failures and new receipts. Only two
+test files changed: old helper exports and the contextual test. Production unchanged.
+All105 frozen dependency blobs and historical trees remain intact; no full frozen
+suite rerun is needed because no dependency or entry changed. No full-suite claim.
+
+This closes the bounded M61 connection, not a MEMORY member or family12.3 clause.
+All original x6/setup failures, the neutral null and old2327.50/2400s ledger remain.
+The new contextual budget is separate; final accounting is below. No extension.
+Next: pin and replay one MEMORY member under the shared reference policy, recording
+each exact requirement and unresolved difference in the existing reconciliation.
+No additional apparatus, UI, autonomous character or corpus coverage is inferred.
+
+Final contextual verification: 1106.16/1800s (18.44/30min), no extension.
+Boundary/research/105-control/production-preservation/document/evidence/staged-size PASS.
+Three evidence files total 3089565 bytes before this closing note, below5MiB.
+Checkpoint SHA-256: 829aa077ef5e8b8c93b511ae64fbd581327de872b7865867074d67a3ab81eab0.

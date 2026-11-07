@@ -239,3 +239,5 @@ it('cost diagnostic: unchanged preparation and first instant',async()=>{
   console.info('M61_COST_PROFILE',JSON.stringify({phases,samples:profile.samples?.length??0,self:top(self),inclusive:top(inclusive),scope:'sampled initialization/prefix1 only; not late-run attribution or speedup'}));
  }
 },85000);
+
+export {advance,snapshot,target,reports,bytes,live,exactProof,seamControls};
