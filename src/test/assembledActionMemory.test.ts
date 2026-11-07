@@ -7,6 +7,7 @@ import {list,set,text,unsigned as u,signed,rational as q,type CanonicalValue} fr
 import {dataItems as items,dataKey as key,dataField as f,dataRecord as rec,dataText as txt,dataUnsigned as uint} from '../campaign2/canonicalData';
 import {ACTION_MEMORY_RULES,ACTION_MEMORY_REGISTRY} from '../assembled/model';
 import {ACTION_MEMORY} from '../assembled/actionMemory';
+import {VALUE_RECEIVING} from '../assembled/valueReceiving';
 import {fixture as spatial,decode,enc} from './fixtures/assembledSpatialMeaning';
 import {actionA,actionB} from './fixtures/assembledContraryCommunication';
 import {FATIGUE} from '../assembled/fatigue';
@@ -90,14 +91,17 @@ import {SIGNIFICANCE,named,directions} from '../assembled/significance';
 import {isPositionEpisodePath} from '../assembled/memory';
 
 import {outputs,type Run} from './fixtures/assembledComparison';
-const reports=(r:Run,tag:string)=>items(decode(r.snapshot().outputs),'list').filter(v=>typeof v!=='boolean'&&v.kind==='list'&&key(v.items[0])===key(text(tag))).map(v=>items(v,'list'));
+// Cache only settled checkpoints; advance invalidates before every mutation attempt.
+const snapshots=new WeakMap<Run,ReturnType<Run['snapshot']>>();
+function snapshot(r:Run){let s=snapshots.get(r);if(!s){s=r.snapshot();snapshots.set(r,s);}return s;}
+const reports=(r:Run,tag:string)=>items(decode(snapshot(r).outputs),'list').filter(v=>typeof v!=='boolean'&&v.kind==='list'&&key(v.items[0])===key(text(tag))).map(v=>items(v,'list'));
 const forecast=(r:Run)=>reports(r,ACTION_MEMORY+'/forecast').find(v=>signedValue(v[1])===33n)!;
 const clocks=new WeakMap<Run,bigint>();
-async function advance(r:Run,to:bigint){const from=clocks.get(r)??0n;for(let n=from;n<to;n++){const ok=await r.settleNextInstant();if(!ok)console.info('M61_DIAGNOSTIC',r.diagnostic());expect(ok).toBe(true);}expect(r.snapshot().clock).toBe(to);clocks.set(r,to);}
-const target=(r:Run)=>restoreAuthoritativeState(decode(r.snapshot().state)).entries().find(e=>isPositionEpisodePath(e.path)&&signedValue(items(e.value,'list')[5])===15n)?.value;
+async function advance(r:Run,to:bigint){const from=clocks.get(r)??0n;for(let n=from;n<to;n++){snapshots.delete(r);const ok=await r.settleNextInstant();if(!ok)console.info('M61_DIAGNOSTIC',r.diagnostic());expect(ok).toBe(true);}expect(snapshot(r).clock).toBe(to);clocks.set(r,to);}
+const target=(r:Run)=>restoreAuthoritativeState(decode(snapshot(r).state)).entries().find(e=>isPositionEpisodePath(e.path)&&signedValue(items(e.value,'list')[5])===15n)?.value;
 const bytes=(a:Uint8Array,b:Uint8Array)=>expect(a.length===b.length&&a.every((v,i)=>v===b[i])).toBe(true);
-const exact=(a:Run,b:Run)=>{for(const k of ['state','outputs','trace'] as const)bytes(a.snapshot()[k],b.snapshot()[k]);bytes(a.save(),b.save());};
-function decision(r:Run){return outputs(r.snapshot().outputs,409n).find(v=>signedValue(f(v,2n))===33n)!;}
+const exact=(a:Run,b:Run)=>{const A=snapshot(a),B=snapshot(b);for(const k of ['state','outputs','trace'] as const)bytes(A[k],B[k]);bytes(a.save(),b.save());};
+function decision(r:Run){return outputs(snapshot(r).outputs,409n).find(v=>signedValue(f(v,2n))===33n)!;}
 function result(v:CanonicalValue){const status=rec(f(rec(v,409n),4n),419n);expect(uint(f(status,1n))).toBe(3n);return rec(f(status,2n),420n);}
 function live(r:Run,moved:boolean){
  const p=forecast(r);expect(p).toBeDefined();const rows=items(p[4],'list').map(v=>items(v,'list'));expect(rows).toHaveLength(2);
@@ -107,11 +111,16 @@ function live(r:Run,moved:boolean){
  expect(a[3]).toEqual(q(moved?1:0,2));expect(a[4]).toEqual(q(moved?1:0,20));expect(b[3]).toEqual(q(1,1));expect(b[4]).toEqual(q(1,10));
  expect(items(a[5],'list').map(v=>signedValue(items(v,'list')[5])).sort()).toEqual(moved?[15n,29n]:[29n]);
  const dec=decision(r),context=rec(f(dec,3n),408n),data=result(dec),nuclei=items(f(context,3n),'list');expect(nuclei).toHaveLength(2);
- const traces=outputs(r.snapshot().trace,160n),reason=traces.find(t=>txt(f(t,6n))===ACTION_MEMORY_VERSION&&uint(f(rec(f(t,4n),130n),3n))===80n&&signedValue(f(rec(f(t,4n),130n),2n))===33n)!;
- expect(reason).toBeDefined();expect(items(f(reason,13n),'list')[0]).toEqual(f(context,2n));
+ const traces=outputs(snapshot(r).trace,160n),reason=traces.find(t=>txt(f(t,6n))===ACTION_MEMORY_VERSION&&uint(f(rec(f(t,4n),130n),3n))===80n&&signedValue(f(rec(f(t,4n),130n),2n))===33n)!;
+ expect(reason).toBeDefined();
+ const receiving=traces.find(t=>txt(f(t,6n))===VALUE_RECEIVING&&key(f(t,4n))===key(f(reason,4n)))!;
+ expect(receiving,'same-event Value receiving trace').toBeDefined();
+ // Exact actual producer -> receiver -> arbitration chain, including schema extension.
+ expect(key(items(f(reason,13n),'list')[0])===key(items(f(receiving,12n),'list')[0]),'action-memory output is actual Value input').toBe(true);
+ expect(key(f(receiving,13n))===key(f(context,2n)),'Value output is actual decision raw context').toBe(true);
  const chosen=f(rec(f(data,1n),395n),2n);
  // Execution is checked through the immutable expression/attempt ancestry below.
- expect(outputs(r.snapshot().outputs,433n).some(o=>{const attempt=rec(f(o,2n),432n),plan=rec(f(attempt,2n),431n),intent=rec(f(plan,2n),425n);return key(f(intent,2n))===key(dec)&&uint(f(o,3n))>0n;})).toBe(true);
+ expect(outputs(snapshot(r).outputs,433n).some(o=>{const attempt=rec(f(o,2n),432n),plan=rec(f(attempt,2n),431n),intent=rec(f(plan,2n),425n);return key(f(intent,2n))===key(dec)&&uint(f(o,3n))>0n;})).toBe(true);
  return {context,dec,data,nuclei,chosen};
 }
 async function exactProof(s:ReturnType<typeof fixture>['s'],runs:Run[]){

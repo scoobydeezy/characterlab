@@ -2,7 +2,7 @@
 
 The character does not yet have a verified significant-memory-to-choice connection.
 The candidate adds perceived action/outcome bindings and forecasts in the one runtime,
-but its planned native witness fails. M60 remains the latest completed capability.
+but the amended native witness stopped on a test assertion. M60 remains latest pass.
 No MEMORY requirement, corpus member or conditional obligation closes.
 
 ## Finding and owner-approved correction
@@ -16,7 +16,7 @@ Do not widen the original law or reinterpret Unavailable as insignificant eviden
 Owner-approved amendment2026-11-07: end15 x=1/0 (the original M54 contrast), predicted A endpoint1/2
 versus0, B endpoint1; progress1/20 versus0 and1/10. Everything else remains fixed,
 including seed0, actual-production-input probability-change proof and existing dice.
-Approved, pending execution within the original cumulative budget. If the effect is subthreshold, retain
+Approved and executed; positive-arm results and test defect recorded below. If the effect is subthreshold, retain
 that result and stop; no replacement contrast, seed search or calibration change.
 Authority: work order Replay and interpretation: comparison changes need owner amendment.
 
@@ -61,12 +61,44 @@ kernel tests PASS; final types, reference boundary and research checks PASS.
 105 frozen dependency blobs match both HEAD and Git-normalized working bytes;
 historical source trees and all prior tests are unchanged.12 source/test files,
 2 evidence files under30KiB; planning/document caps PASS. No source copies or UI.
-Cumulative verification about1317s of1800s, including every failure and integrity
-check; longest370.83s below600s. About8 minutes remain; no extension is authorized.
-The next execution must respect that remaining budget, not restart the clock.
+Before amended execution, cumulative verification was about1317s of1800s.
+The budget continues across turns; no extension is authorized.
 Pending: positive native gate, exact captured-input decision proof, repeat/restore,
 negative/rollback controls and original MEMORY replay. Prepared tests are not passes.
 
 Before amended execution: cache the actual captured decision/context once per arm
 in exact enumeration; preserve all comparisons and log null counts before the gate.
 This removes repeated full-trace serialization, with no proof or scenario change.
+
+## Approved correction executed; verification-only checkpoint
+Amendment committed before execution at11c3a0f8. The approved native check took
+311.25s and reached33 in the positive arm. End15 earned MovingCloser significance
+with its actual perceived-action annex; it survived. Both forecasts were Known:
+A endpoint1/2/progress1/20 from episodes15/29; B endpoint1/progress1/10 from31.
+The actual decision had two reason nuclei. The test then failed before its execution
+assertion and before the negative arm or probability enumeration.
+
+LOCAL DISPOSITION: test defect. The assertion compared action-memory raw context403v1
+directly with decision context403v2, skipping the existing Value receiving stage's
+schema extension. The retained diff shows the extra empty ValueSignals field/version.
+The repaired assertion follows exact same-event action-memory output -> actual Value
+input -> actual Value output -> decision raw input. No reconstructed context, altered
+law, new contrast, or relaxed consumption requirement. Native rerun is still pending.
+
+Verification cost repair: test-local settled snapshots are cached and invalidated
+before every advance mutation; exact enumeration caches actual captured decisions.
+Required full bytes remain compared, and rollback reads fresh snapshots directly.
+No runtime semantics changed; no measured performance improvement claimed yet.
+Types PASS16.41s. About1646s/1800s used before closing checks; not enough for another
+full pair (the positive arm alone just took311s). Preserve remaining budget rather
+than launch a predictably over-budget rerun. No probability-change/subthreshold verdict
+is established, and no M61 capability or corpus clause is accepted.
+
+Next verification-only work: unchanged repaired pair first; if live consumption or
+probability gate fails, diagnose/record without tuning. Only after it passes run exact
+continuation, epistemic/rollback and admission/ownership controls. No added character
+feature, apparatus or MEMORY replay before this gate; any additional verification
+allocation requires an explicit owner budget amendment. Current budget is not reset.
+
+Closing integrity PASS:105 control blobs,12 source/test files,2 evidence files,
+document caps and whitespace. Final cumulative verification about1658s/1800s.

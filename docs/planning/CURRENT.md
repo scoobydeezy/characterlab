@@ -1,8 +1,8 @@
 # Current work — M61 action-outcome memory (2026-11-07)
 
 Owner approved the bounded action-outcome forecast proposed at2f4334dd.
-M60 is the last completed capability; M61 is a failed-gate checkpoint.
-Comparison amendment approved2026-11-07; see ASSEMBLED_CHARACTER_M61_RESULT.md.
+M60 is the last completed capability; M61 remains an incomplete checkpoint.
+Approved1/0 positive forecast reached33; test trace join repaired, rerun pending.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
 ## Capability and authority
@@ -73,7 +73,8 @@ Then stop; first common-reference MEMORY replay is the next bounded milestone.
 ## Approved owner amendment — 2026-11-07
 Original attribution admits only0->1/0->0; x15=6 cannot earn significance.
 Approved x15=1/0, A mean1/2 vs0, B1; all laws/dice/probability gates unchanged.
-Pending execution. No calibration/search if the lawful effect is subthreshold.
+Executed: positive significance/retention/means PASS; trace assertion failed.
+Repair follows actual Value receiver before decision; no calibration/search.
 
 Checkpoint: M54/26 kernels/types/boundary/research/105-blob guards PASS.
-About1317/1800s used;12 source/test files. Native M61 gate/controls remain pending.
+About1658/1800s used;12 source/test files. Repaired pair/controls still pending.
