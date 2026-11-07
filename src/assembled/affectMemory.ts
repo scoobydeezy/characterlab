@@ -8,14 +8,15 @@ import {prepareEventRecollections,publishRecollections,takeEventPresentation} fr
 import {BODY_OBSERVER} from './body';
 import {REAPPRAISAL_APPRAISAL} from './reappraisal';
 export const AFFECT_MEMORY='assembled-affect-memory/0.1',AFFECT_RECALL=AFFECT_MEMORY+'/recall',PRESENTATION=AFFECT_MEMORY+'/presentation';
+export const ACQUISITION_MEMORY_VERSION='assembled-character-affect-memory/0.2-candidate';
 export const AFFECT_MEMORY_VERSION='assembled-character-affect-memory/0.1-candidate';
 const require=(ok:boolean,s:string)=>{if(!ok)invalidModel('affect memory '+s);};
 const eq=(a:CanonicalValue,b:CanonicalValue)=>key(a)===key(b),str=(q:Q)=>`${q.numerator}/${q.denominator}`;
-export function compileAffectMemory(v:CanonicalValue,targets:readonly CanonicalValue[],capacity:number){
+export function compileAffectMemory(v:CanonicalValue,targets:readonly CanonicalValue[],capacity:number,acquisitionPresentation=false){
  const a=items(v,'list');require(a.length===3&&txt(a[0])===AFFECT_MEMORY&&['UncontrolledGain','NoFeedback'].includes(txt(a[1]))&&capacity<=32,'declaration/domain');
  const rows=items(a[2],'list');require(rows.length<=8,'edge capacity');const seen=new Set<string>(),sums=new Map<string,Q>();
  const edges=rows.map(v=>{const e=items(v,'list');require(e.length===5&&targets.some(t=>eq(t,e[0]))&&[1n,2n].includes(uint(e[1]))&&!eq(e[2],e[3])&&[2,3].every(i=>uint(e[i])>=1n&&uint(e[i])<=8n),'edge reference');const w=readQ(e[4]);require(w.compare(Q.of(0n))>=0&&w.compare(Q.of(1n))<=0,'weight');const k=key(list(e.slice(0,4))),row=key(list(e.slice(0,3)));require(!seen.has(k),'duplicate edge');seen.add(k);const sum=(sums.get(row)??Q.of(0n)).add(w);require(sum.compare(Q.of(1n))<=0,'row sum');sums.set(row,sum);return {target:e[0],kind:e[1],from:e[2],to:e[3],weight:w};});
- return {law:txt(a[1]) as 'UncontrolledGain'|'NoFeedback',edges};
+ return {acquisitionPresentation,law:txt(a[1]) as 'UncontrolledGain'|'NoFeedback',edges};
 }
 export type AffectMemory=ReturnType<typeof compileAffectMemory>;
 export interface CompletedAffect {report:CanonicalValue;event:bigint}
@@ -33,7 +34,7 @@ export function rankAffectMemories(config:AffectMemory,C:CanonicalValue,payload:
  const memory=episodes.filter(v=>{const o=items(items(v,'list')[2],'list');return eq(o[2],cue[2])&&eq(o[4],cue[3]);}).map(v=>{const a=items(v,'list'),o=items(a[2],'list'),acquired=a[5];require(typeof acquired!=='boolean'&&acquired.kind==='signed'&&acquired.value<at,'prior episode');const n=uint(id(a[1]).payload);records.set(n,v);return {id:n,acquiredAt:(acquired as {value:bigint}).value,units:[{key:receipt(o[2],o[4],o[5]),views:[enc(v)]}]};});
  const edges=config.edges.filter(e=>eq(e.target,cue[2])&&eq(e.kind,cue[3])),keys:CanonicalValue[]=[];for(const e of edges)for(const k of [receipt(e.target,e.kind,e.from),receipt(e.target,e.kind,e.to)])if(!keys.some(x=>eq(x,k)))keys.push(k);
  const weights=keys.map(a=>keys.map(b=>edges.find(e=>eq(a,receipt(e.target,e.kind,e.from))&&eq(b,receipt(e.target,e.kind,e.to)))?.weight??Q.of(0n)));
- const prepared=prepareEventRecollections({observer:key(BODY_OBSERVER),character:key(C)},{kind:'Present',key:prior.cue},at,{beta:Q.of(1n,2n),scale:1000n,lambda:Q.of(1n),exponent:1,omegaB:Q.of(1n),omegaA:gain,k:slots},()=>({memory,graph:{keys,weights},presentations:new Map(memory.map(m=>[m.id,presentationTimes(items(records.get(m.id)!,'list')[4],m.acquiredAt)]))}));
+ const prepared=prepareEventRecollections({observer:key(BODY_OBSERVER),character:key(C)},{kind:'Present',key:prior.cue},at,{beta:Q.of(1n,2n),scale:1000n,lambda:Q.of(1n),exponent:1,omegaB:Q.of(1n),omegaA:gain,k:slots},()=>({memory,graph:{keys,weights},presentations:new Map(memory.map(m=>[m.id,[...(config.acquisitionPresentation?[m.acquiredAt]:[]),...presentationTimes(items(records.get(m.id)!,'list')[4],m.acquiredAt)]]))}));
  const publication=publishRecollections(prepared.view,allocate),batch=takeEventPresentation(publication),selected=batch.presentations.map(p=>records.get(p.acquisition)!);
  require(batch.observer===key(BODY_OBSERVER)&&batch.character===key(C)&&batch.at===at,'publication subject/time');
  const updates=selected.map(v=>{const a=[...items(v,'list')];a[4]=list([...items(a[4],'list'),signed(at)]);return list(a);});

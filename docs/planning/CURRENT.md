@@ -1,51 +1,40 @@
-# Current work — M63 acquisition-to-accessibility (2026-11-07)
+# Current work — M63 acquisition repair complete (2026-11-07)
 
-Newly retained social experience must be accessible before its first recall.
-M62 found GAP-MEM-ACQ; M63 repairs that handoff in the same episodic owner.
-Base d72d5249. Earlier .61 behavior and M62 evidence remain controls.
+Newly retained social experience now contributes to accessibility before recall.
+Only selected later recalls add reinforcement. No new memory store or owner.
+GAP-MEM-ACQ repaired in rules/registry0.63, affect-memory contract0.2.
+[Result and preserved failures](ASSEMBLED_CHARACTER_M63_RESULT.md).
+PHEN-MEM-001 remains open for original source/comparison correspondence.
 
-## Bounded card — committed before implementation
-One capability: acquisition contributes the original recency term, independently
-of recall capacity; later reinforcement remains actual-publication-only.
-Rules/registry0.63, unchanged44 slots; affect-memory contract0.2 successor.
-Read immutable acquiredAt plus existing later-publication field4 as
-[acquiredAt,...publicationTimes] at the original canonical recall kernel.
-This is a representation mapping, not a second store or a new accessibility law.
-No old version changes; no graph/owner/framework/calibration/dice/UI changes.
-Original kernel permits32 history entries; successor source ceiling31 reserves
-acquisition. Existing input admission already permits at most8 social sources.
-No legal current input is lost; no history truncation.
-Applicable MEC-010/EXP-006, PHEN-MEM-001:2..11, RO-C3-005/006/007/020 preserved.
+## Completed bounded package
+Plan699a8100 before code, base d72d5249; same44-slot composition and law selectors.
+Immutable acquisition time plus actual publication history feed the original kernel.
+First recall4: K0/K1/K2 bases1/4 and1/3, with no prior publications.
+At8 extra recall6 yields B61/84 versus11/28; unselected A13/40 in both.
+Exact direct cue matches at4/5 remain distinct from neutral cue effects at8.
+Actual reads, selection identities and phase140 selected-only patches agree.
+Hidden truth, exact repeat/restore3->101 and after-publication rollback PASS.
+Old0.61 M62 native, including canonical tie and K0 zero-base control, PASS.
+Five production plus one test file; no earlier fixture or control changes.
+Type-command, version-list and predicted direct-cue errors retained/corrected.
+No scenario/law/seed/calibration/gate amendment; no new verdict or clause closure.
 
-## Files and comparisons
-Production: model.ts, affectMemory.ts, memory.ts, runtime.ts (src/assembled).
-Tests: one new assembledAcquisitionMemory.test.ts, reusing M62 fixture.
-Formal: append explicit0.2 successor to existing affect-memory contract.
-Planning: CURRENT, AGENTS, existing register, one result and one check log.
-At most4 production+1 test files; no modification of earlier test fixtures.
-Use M62 main/omitted/hidden source, full current composition, seed0, fixed laws.
-Scenario: one holder, three physical tasks, reserve30/rate10, coat stand-in;
-only perceived social channel, no sensing/choice or initial learned state.
-Set recall delay3, K1; K0/K2 required controls. Acquisition at1/2, cues at3/5.
-Before first recall4: two retained episodes, empty publication histories.
-At4 base A1/4 B1/3 in K0/K1/K2; K1 selects B; K0 publishes none.
-At5 K1 B base1/4+1/2=3/4; K2 reinforces both, K0 remains acquisition-only.
-Main at6 retrieves B; omitted access3 has no recall6.
-At8 B main=1/7+1/5+1/4+1/3=389/420; omitted=1/7+1/5+1/4=83/140.
-A stays acquisition-only1/8 under K1. Same content, selected-only writes.
-Live recall/candidate reads required before comparison. No choice claim.
-Use original kernel on explicit acquisition histories as independent mapping
-control; retain .61 M62 native regression including exact tie.
+## Next bounded integration
+Finish original MEMORY source/comparison correspondence under0.63.
+Use pinned PHEN-MEM-001:2..11 and original GA evidence, not additional requirements.
+Record each exact comparison and any difference before claiming member coverage.
+M63 is acquisition-handoff repair, not full original fixture/source equivalence.
+Canonical tie passed in the older control; successor correspondence still needs
+its original equal-match/tie comparisons. Do not count control as assembled coverage.
+AFFECT/DECISION follow serially after MEMORY; no unrelated breadth or apparatus.
 
-## Checks and stop
-Serial verification1800s total,600s per command; failures count. No extension.
-Types; focused native arithmetic/trace/K controls; hidden truth; exact repeat
-and restore3->101; injected failure after actual publication proves rollback;
-input bound and version rejection; old M62 native; boundary/research checks.
-Check105 frozen dependency blobs and unchanged historical source trees instead
-of re-running full frozen suite. Stage and check git size before commits.
-Evidence <=20 files/5MiB; AGENTS<=120/CURRENT<=80/work order<=250/register64KiB.
-Done iff acquisition mapping, selective later updates, privacy/rollback and
-exact continuation pass. Otherwise retain precise failure; do not change gate.
-MEMORY remains open for original source/comparison correspondence afterward.
-No other area, new verdict, obligation closure or full corpus acceptance.
+## Guardrails
+MEC-010/EXP-006 and RO-C3-005/006/007/020 remain preserved.
+No new graph/reconstruction requirement, UI or autonomous partners.
+One continuing character, one state/scheduler/trace/save; L4 OFF, reference dice.
+Verification1800s cumulative/600s per command; failures included, no extension.
+Final accounting is in M63_RESULT; prior ledgers and M61 neutral null unchanged.
+Evidence <=20 files/5MiB; document budgets unchanged.
+Stop after required closing checks; next package needs a committed bounded card.
+
+| Research obligations | **0 active / 18 conditional / 0 unowned** |

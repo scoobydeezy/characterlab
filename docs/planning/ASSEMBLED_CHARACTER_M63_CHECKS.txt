@@ -1,0 +1,205 @@
+
+=== M63: types ===
+error TS5058: The specified path does not exist: 'tsconfig.app.json'.
+
+M63_CHECK types exit=1 seconds=0.29
+
+=== M63: types-corrected ===
+
+M63_CHECK types-corrected exit=0 seconds=16.33
+
+=== M63: native ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledAcquisitionMemory.test.ts (8 tests | 1 failed | 7 skipped) 50516ms
+   × M63 native acquisition recency and selected-only reinforcement 50515ms
+     → assembled trace requires exact model/run binding
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledAcquisitionMemory.test.ts > M63 native acquisition recency and selected-only reinforcement
+SchedulerContractError: assembled trace requires exact model/run binding
+ ❯ Module.compileCharacterTraceBinding src/assembled/traceBinding.ts:25:1133
+
+ ❯ Module.createCharacterRuntime src/assembled/runtime.ts:101:14
+ ❯ Module.createCharacterRun src/assembled/character.ts:42:122
+ ❯ create src/test/assembledAcquisitionMemory.test.ts:32:149
+ ❯ src/test/assembledAcquisitionMemory.test.ts:92:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  16:28:11
+   Duration  54.29s (transform 2.32s, setup 0ms, collect 3.48s, tests 50.52s, environment 0ms, prepare 102ms)
+
+
+M63_CHECK native exit=1 seconds=54.99
+
+=== M63: native-version-admission-repaired ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledAcquisitionMemory.test.ts (8 tests | 1 failed | 7 skipped) 55224ms
+   × M63 native acquisition recency and selected-only reinforcement 55224ms
+     → expected [ '1/1', '0/1' ] to deeply equal [ '0/1', '0/1' ]
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledAcquisitionMemory.test.ts > M63 native acquisition recency and selected-only reinforcement
+AssertionError: expected [ '1/1', '0/1' ] to deeply equal [ '0/1', '0/1' ]
+
+- Expected
++ Received
+
+  Array [
+-   "0/1",
++   "1/1",
+    "0/1",
+  ]
+
+ ❯ projection src/test/assembledAcquisitionMemory.test.ts:29:17
+
+ ❯ print src/test/assembledAcquisitionMemory.test.ts:31:53
+ ❯ src/test/assembledAcquisitionMemory.test.ts:95:29
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  16:29:33
+   Duration  58.96s (transform 2.29s, setup 0ms, collect 3.44s, tests 55.22s, environment 0ms, prepare 100ms)
+
+
+M63_CHECK native-version-admission-repaired exit=1 seconds=59.66
+
+=== M63: native-direct-cue-prediction-corrected ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAcquisitionMemory.test.ts > M63 native acquisition recency and selected-only reinforcement
+M63 first {"at":"4","base":["1/4","1/3"],"pull":["1/1","0/1"],"score":["5/4","1/3"],"selected":[0],"history":[["4"],[]]}
+M63 TRACE {"at":"4","actualReads":2,"selected":["15"],"publicationIds":["47"],"writes":1}
+M63 reinforced {"at":"5","base":["7/10","1/4"],"pull":["0/1","1/1"],"score":["7/10","5/4"],"selected":[1],"history":[["4"],["5"]]}
+M63 repeated {"at":"8","base":["13/40","61/84"],"pull":["0/1","0/1"],"score":["13/40","61/84"],"selected":[1],"history":[["4"],["5","6","8"]]}
+M63 omitted {"at":"8","base":["13/40","11/28"],"pull":["0/1","0/1"],"score":["13/40","11/28"],"selected":[1],"history":[["4"],["5","8"]]}
+M63 TRACE {"at":"8","actualReads":2,"selected":["31"],"publicationIds":["65"],"writes":1}
+M63 TRACE {"at":"8","actualReads":2,"selected":["31"],"publicationIds":["61"],"writes":1}
+
+stdout | src/test/assembledAcquisitionMemory.test.ts > M63 native acquisition recency and selected-only reinforcement
+M63 K0 {"at":"4","base":["1/4","1/3"],"pull":["1/1","0/1"],"score":["5/4","1/3"],"selected":[],"history":[[],[]]}
+M63 TRACE {"at":"4","actualReads":2,"selected":[],"publicationIds":[],"writes":0}
+M63 K0 later {"at":"5","base":["1/5","1/4"],"pull":["0/1","1/1"],"score":["1/5","5/4"],"selected":[],"history":[[],[]]}
+
+stdout | src/test/assembledAcquisitionMemory.test.ts > M63 native acquisition recency and selected-only reinforcement
+M63 K2 {"at":"4","base":["1/4","1/3"],"pull":["1/1","0/1"],"score":["5/4","1/3"],"selected":[0,1],"history":[["4"],["4"]]}
+M63 TRACE {"at":"4","actualReads":2,"selected":["15","31"],"publicationIds":["47","48"],"writes":2}
+M63 K2 later {"at":"5","base":["7/10","3/4"],"pull":["0/1","1/1"],"score":["7/10","7/4"],"selected":[1,0],"history":[["4","5"],["4","5"]]}
+M63 NATIVE PASS acquisition-independent K0/K1/K2; later selected-only reinforcement; original kernel/formation correspondence; all calendars101
+
+ ✓ src/test/assembledAcquisitionMemory.test.ts (8 tests | 7 skipped) 74000ms
+   ✓ M63 native acquisition recency and selected-only reinforcement 73999ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  16:31:57
+   Duration  77.74s (transform 2.27s, setup 0ms, collect 3.42s, tests 74.00s, environment 0ms, prepare 98ms)
+
+
+M63_CHECK native-direct-cue-prediction-corrected exit=0 seconds=78.41
+
+=== M63: privacy-continuation ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAcquisitionMemory.test.ts > M63 epistemic hidden truth and exact continuation
+M63 PRIVACY/CONTINUATION PASS hidden truth cognition equal; exact repeat/restore3->101 state/output/trace/save/identities
+
+ ✓ src/test/assembledAcquisitionMemory.test.ts (8 tests | 7 skipped) 71792ms
+   ✓ M63 epistemic hidden truth and exact continuation 71791ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  16:33:30
+   Duration  75.53s (transform 2.28s, setup 0ms, collect 3.43s, tests 71.79s, environment 0ms, prepare 99ms)
+
+
+M63_CHECK privacy-continuation exit=0 seconds=76.19
+
+=== M63: rollback-boundaries ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAcquisitionMemory.test.ts > M63 rollback after actual publication and admission boundaries
+M63 TRACE {"at":"4","actualReads":2,"selected":["15"],"publicationIds":["47"],"writes":1}
+
+stdout | src/test/assembledAcquisitionMemory.test.ts > M63 rollback after actual publication and admission boundaries
+M63 ROLLBACK/BOUNDARY PASS actual publication rolled back; restored resumes; mixed version/9 public sources/33 history entries rejected
+
+ ✓ src/test/assembledAcquisitionMemory.test.ts (8 tests | 7 skipped) 60350ms
+   ✓ M63 rollback after actual publication and admission boundaries 60349ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  16:35:00
+   Duration  64.12s (transform 2.30s, setup 0ms, collect 3.47s, tests 60.35s, environment 0ms, prepare 98ms)
+
+
+M63_CHECK rollback-boundaries exit=0 seconds=64.79
+
+=== M63: M62-native-control ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMemoryReplay.test.ts > M62 native: recency selective reinforcement decay capacity and canonical tie
+M62 REFERENCE {"rules":"rules/assembled-character/0.61-candidate","registry":"assembled-character-registry/0.61-candidate","model":"0a6701060101052872756c65732f617373656d626c65642d6368617261637465722f302e36312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420519e82021f41bc3cce56e7b50f2016d36e411c6fb3186d701b92d960f139136b03010a6501020101052263616d706169676e322d706172616d65746572732f302e312d63616e64696461746502010420b0955535cb7e5deedfeb142c17466a5ac83943392f845395636b822320a5a1680401052a6e756d657269632f617373656d626c65642d7461736b2d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101052b617373656d626c65642d6368617261637465722d72656769737472792f302e36312d63616e646964617465020104202b657f157ae1948e8482c2b8cb6925d0bd905f3964412f91b8b47ff6b4bf28e3","slots":44,"retention":["0520617373656d626c65642d657069736f6469632d726574656e74696f6e2f302e31","0208","0210","0201"],"retrieval":["051c617373656d626c65642d626f64792d72657472696576616c2f302e31","0201"],"affect":["051b617373656d626c65642d6166666563742d6d656d6f72792f302e31","0510556e636f6e74726f6c6c65644761696e","0700"],"seed":"0000000000000000000000000000000000000000000000000000000000000000"}
+
+stdout | src/test/assembledMemoryReplay.test.ts > M62 native: recency selective reinforcement decay capacity and canonical tie
+M62 initial {"at":"4","base":["1/3","1/2"],"pull":["0/1","0/1"],"score":["1/3","1/2"],"selected":[1],"history":[["2"],["3","4"]]}
+M62 TRACE {"at":"4","actualReads":2,"selected":["32"],"publicationIds":["49"],"writes":1}
+M62 repeated {"at":"6","base":["1/5","7/12"],"pull":["0/1","0/1"],"score":["1/5","7/12"],"selected":[1],"history":[["2"],["3","4","6"]]}
+M62 unretrieved {"at":"6","base":["1/5","1/4"],"pull":["0/1","0/1"],"score":["1/5","1/4"],"selected":[1],"history":[["2"],["3","6"]]}
+
+stdout | src/test/assembledMemoryReplay.test.ts > M62 native: recency selective reinforcement decay capacity and canonical tie
+M62 K0 {"at":"4","base":["0/1","0/1"],"pull":["0/1","0/1"],"score":["0/1","0/1"],"selected":[],"history":[[],[]]}
+M62 TRACE {"at":"4","actualReads":2,"selected":[],"publicationIds":[],"writes":0}
+
+stdout | src/test/assembledMemoryReplay.test.ts > M62 native: recency selective reinforcement decay capacity and canonical tie
+M62 K2 {"at":"4","base":["5/6","1/2"],"pull":["0/1","0/1"],"score":["5/6","1/2"],"selected":[0,1],"history":[["2","3","4"],["3","4"]]}
+M62 TRACE {"at":"4","actualReads":2,"selected":["15","32"],"publicationIds":["50","51"],"writes":2}
+
+stdout | src/test/assembledMemoryReplay.test.ts > M62 native: recency selective reinforcement decay capacity and canonical tie
+M62 tie {"at":"8","base":["1/2","1/2"],"pull":["0/1","0/1"],"score":["1/2","1/2"],"selected":[0],"history":[["3","6","8"],["7"]]}
+M62 TRACE {"at":"8","actualReads":2,"selected":["15"],"publicationIds":["65"],"writes":1}
+M62 NATIVE PASS recency/reinforcement/idle-decay/K0/K1/K2/tie; all calendars to101; no dice; neutral importance cannot explain distinct histories
+
+ ✓ src/test/assembledMemoryReplay.test.ts (8 tests | 7 skipped) 80245ms
+   ✓ M62 native: recency selective reinforcement decay capacity and canonical tie 80244ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  16:36:31
+   Duration  83.97s (transform 2.28s, setup 0ms, collect 3.42s, tests 80.24s, environment 0ms, prepare 99ms)
+
+
+M63_CHECK M62-native-control exit=0 seconds=84.63
+
+=== M63: final-types ===
+
+M63_CHECK final-types exit=0 seconds=16.15
+
+=== M63: boundary ===
+Reference boundary check passed.
+
+M63_CHECK boundary exit=0 seconds=2.58
+
+=== M63: research ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M63_CHECK research exit=0 seconds=3.59
+M63 integrity PASS:105 frozen HEAD and Git-normalized working blobs; historical source trees/tests unchanged; 6 source/test files; 2 evidence files; document caps. seconds=12.02
+M63_CHECK source-document-evidence-integrity exit=0 seconds=12.02
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+M63_CHECK staged-git-size exit=0 seconds=0.33
