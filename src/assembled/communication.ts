@@ -7,18 +7,19 @@ import {EXPECTATION_TOPIC} from './performanceExpectation';
 import {sid,pattern} from './skill';
 import type {compileCampaign2StateModel} from '../campaign2/stateModel';
 import type {compileStrategy} from './strategy';
+export const CONTRARY='assembled-contrary-communication/0.1',CONTRARY_VERSION='assembled-character-contrary-communication/0.1-candidate';
 export const OUTCOME_TOPIC='assembled-outcome-topic/0.1';
 export const LEARNED_DISCLOSURE='assembled-learned-disclosure/0.1',COMM_OPEN=sid(1001,'event/assembled-communication-open');
 export const COMM='assembled-communication/0.1',PRIVATE=COMM+'/private',PROBE=COMM+'/probe',FROZEN=COMM+'/expression',SIGNAL=COMM+'/execution',RECEIVED=COMM+'/received';
 export const COMM_SOURCE=sid(1001,'event/assembled-communication-source'),COMM_PRIVATE=sid(1001,'event/assembled-communication-private'),COMM_SPEAKER=sid(1001,'event/assembled-communication-speaker'),COMM_PROBE=sid(1001,'event/assembled-communication-probe'),COMM_RECEIVE=sid(1001,'event/assembled-communication-receive'),COMM_UPDATE=sid(1001,'event/assembled-communication-update');
 export const KNOWLEDGE_OWNER=sid(1025,'authority/assembled-communication-knowledge');
 const require=(b:boolean,s:string)=>{if(!b)invalidModel('communication '+s);};
-export function compileCommunication(v:CanonicalValue,strategy:ReturnType<typeof compileStrategy>,people?:readonly CanonicalValue[],allowOutcome=false,allowExpectation=false){
- const a=items(v,'list');require(a.length===(people?4:3)&&txt(a[0])===(people?LEARNED_DISCLOSURE:COMM),'declaration');const recipients=items(a[2],'list');require(recipients.length===2&&new Set(recipients.map(key)).size===2,'recipient identities');
+export function compileCommunication(v:CanonicalValue,strategy:ReturnType<typeof compileStrategy>,people?:readonly CanonicalValue[],allowOutcome=false,allowExpectation=false,allowContrary=false){
+ const a=items(v,'list'),contrary=allowContrary&&people&&a.length===5?a[4]:undefined;require((a.length===(people?4:3)||!!contrary)&&txt(a[0])===(people?LEARNED_DISCLOSURE:COMM),'declaration');const recipients=items(a[2],'list');require(recipients.length===2&&new Set(recipients.map(key)).size===2,'recipient identities');
  for(const h of recipients)require(id(h).namespaceId===1000n&&/^observer\/assembled-communication\/[a-z][a-z0-9-]*$/.test(txt(id(h).payload)),'recipient identity domain');require(strategy.some(x=>x.plans.some(p=>key(p.actionId)===key(a[1]))),'disclosure action');
  const topic:CanonicalValue|undefined=people?a[3]:undefined;let outcome:{task:CanonicalValue;route:bigint}|undefined,expectation=false;
  if(people&&allowOutcome&&typeof topic!=='boolean'&&topic?.kind==='list'){const x=items(topic,'list');require(x.length===3,'outcome topic');expectation=allowExpectation&&txt(x[0])===EXPECTATION_TOPIC;require(txt(x[0])===OUTCOME_TOPIC||expectation,'outcome topic');const route=uint(x[2]);require(route<=1n&&strategy.some(s=>key(s.task)===key(x[1])),'outcome topic task/route');outcome={task:x[1],route};}
- else if(people)require(people.some(p=>key(p)===key(topic!)),'unknown person topic');return {action:a[1],recipients,topic,outcome,expectation};
+ else if(people)require(people.some(p=>key(p)===key(topic!)),'unknown person topic');if(contrary)require(!expectation&&key(contrary)!==key(a[1])&&strategy.some(t=>t.plans.some(p=>key(p.actionId)===key(contrary))),'contrary action/Boolean topic');return {action:a[1],recipients,topic,outcome,expectation,contrary};
 }
 export function communicationSetting(v:CanonicalValue,learned=false){const a=items(v,'list');require(a.length===(learned?4:7)&&txt(a[0])===(learned?LEARNED_DISCLOSURE:COMM)&&a.slice(1).every(v=>typeof v==='boolean'),'source');return learned?{display:false,privateAccess:false,delivery:a[1]===true,access:[a[2]===true,a[3]===true]}:{display:a[2]===true,privateAccess:a[3]===true,delivery:a[4]===true,access:[a[5]===true,a[6]===true]};}
 export const knowledgePath=(holder:CanonicalValue):StatePath=>({rootStateTypeId:1072n,fieldId:1n,selectors:[{kind:'mapKey',key:holder}]});

@@ -1,58 +1,40 @@
-# Current work — M60 chosen contrary communication (2026-11-06)
+# Current work — M60 complete (2026-11-06)
 
-The next connection lets the character deliberately state the contrary of a learned
-Boolean report, with actual action, execution and recipient access governing receipt.
-M59 is complete at5bc7aa48; its amended proof and original0/8 remain preserved.
+The character can deliberately state the opposite of a report learned through normal
+recognition. Only actual delivery and permitted receipt teach the passive recipient;
+failed execution preserves intended content without granting private knowledge.
+[Result](ASSEMBLED_CHARACTER_M60_RESULT.md) · [Checks](ASSEMBLED_CHARACTER_M60_CHECKS.txt)
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
-## Bounded card — before implementation
-Baseline M14/F-12.13: bounded BRIEF-12.13-3/-4 and receipt/learning parts of-8/-9.
-Three capabilities: chosen contrary assertion; failed/denied delivery separation;
-recipient-owned later estimate with deterministic continuation. No full clause closure.
-One shared character, scheduler/state/RNG/save; passive recipients only, no new owner.
-Implement assembled-character-contrary-communication/0.1-candidate (new contract).
-Rules/registry0.60 inherits all0.59. Slot18 optionally adds a contrary action for a
-Boolean topic; all existing four-field declarations retain exactly their semantics.
-No assertion/purpose supplied by an input, no private speaker-history copy or moral trait.
+## Completed connection
+Rules/registry0.60; assembled-character-contrary-communication/0.1-candidate.
+Existing person810 -> actual chosen expression90 -> execution110 -> perception120 ->
+existing recipient1072 learning140 -> later probe40. No new owner/store/runtime.
+Slot18 optional contrary action, Boolean topic only. Old declarations remain lawful;
+unknown stays unknown. Source inputs cannot provide assertions or private beliefs.
+One shared character, passive recipients, same fixed reference laws/calibration.
 
-LOCAL DISPOSITION: Architecture13.4 and lying-public/0.1 determine chosen action ->
-belief-relative assertion -> execution -> recipient evidence. Retain latest admitted
-report (M26), EvidenceMean receiver, existing task/dice laws and all native comparators.
-No new psychological law selected; P3-007 trust remains open. MEC-012..020/022 retained.
+## Evidence and precise limits
+Three physical tasks/no social task dependencies, reserve10 unsensed, workspace6,
+seed0, coat reports1/2, communication3/4. Goals1/1/0 fixed. Perceived availability
+selects truthful A versus contrary B; both resolve Auto/probability1/no draws.
+Same private true report -> actual true/false assertion -> later recipient A mean1/0;
+B denied and unknown. This is chosen content/delivery, not spontaneous deception policy.
+Known false/unknown/denial/hidden/late report/delivery/access/physical/legacy controls PASS.
+Explicit prior810 read and frozen/executed/received joins PASS. Repeat and save2->3->4,
+save3->4 exact state/output/trace/save PASS. Reached receiver140 rollback PASS.
+Original LYING informing/misdirection/failed runs: all4 instants each, assertion and
+receipt means PASS; phase/namespace/recognition differences explicit. No model equivalence.
+Five new tests and two retained M26 tests PASS; types/boundary/research PASS.
+105 frozen dependencies, historical sources and all previous tests unchanged.
+Initial test-array/canonical-list type error retained and repaired; no law/fixture tuning.
 
-## Fixed comparison and liveness
-Current physical three-task character, no social task dependencies, reserve10 unsensed,
-workspace6, seed0. Recognized coat target reports true at1/2; no relationship/support/
-loss/evaluation evidence. Communicative opportunities3/4; recipient A allowed, B denied.
-Action A informs, B asserts contrary. Perceived route availability selects only A vs
-only B in primary arms; unchanged two active adopted task goals/third0. Both must
-have live known person810 report, positive reason and actual chosen/executed action.
-Calibration unchanged: single available action must resolve Auto/probability1/no draws;
-this is a choice-to-content connection, not evidence of spontaneous deceptive preference.
-Expect frozen true vs false, actual delivery and A's later mean1 vs0 at4, B absent.
-No winner-change seed gate: the declared action/content/receiver comparison is the gate.
-
-Controls fixed before run: known false, unknown/denied report, hidden referent change,
-late contradictory report at3 (excluded from expression90), delivery off, both accesses
-OFF, physical execution blocked, plus absent contrary declaration. Empty is not false.
-Compare native LYING main informing/misdirection and failed projections, not model bytes.
-Retain law alternatives/private-copy/intent-as-delivery negative controls in originals.
-Check explicit810 read -> frozen meaning ->110 ->120 ->140 joins and unchanged speaker.
-Repeat seed0; exact save2 ->3 ->4 and save3 ->4; rollback after receiver140 before commit;
-invalid action/same-action/extra-field/rational-topic and legacy-annex rejection.
-
-## Files, verification and stopping
-At most8 production/test files (planned6): communication.ts, communicationExecution.ts,
-model.ts, traceBinding.ts, test/fixtures/assembledContraryCommunication.ts and its test.
-No historical files or existing tests change.20 evidence files/5MiB; one compact result
-and append-only checks log; register updated in place within250lines/64KiB.
-Verification1800s cumulative/600s command, one job at a time, all failures count.
-Checks: types60s; primary+controls600s; persistence/rollback400s; native/admission120s;
-retained M26 positive/admission controls240s; boundaries/research/preservation60s.
-Remaining320s reserved for diagnosed implementation repairs; no fixture/seed search.
-Changed paths invalidate communication expression/delivery and latest version admission,
-not frozen Campaign2 dependencies or M59 appraisal/reasons. Check105 frozen hashes and
-prior tests; no full-control or broad-suite replay without a concrete invalidation.
-Done only if all gates pass within budgets. Ordinary bugs may be repaired transparently;
-comparison/law/scope changes or exhausted budgets require owner ruling. Stop on pass.
-Final21 members/15 families/132 clauses/18 conditional obligations unchanged. No UI.
+## Guardrails and next work
+Plan ced62264 committed before code. Six source/test files;20 evidence files/5MiB cap.
+Logged593.61s including failures/preservation through staged-size against1800s; no extension.
+No full frozen-control replay invalidated, no broad suite or verification campaign.
+Existing M2 register records bounded BRIEF-12.13-3/-4 and receipt/learning parts -8/-9.
+No whole clause/member closes; all21 members/15 families/132 clauses/18 debts remain.
+M59 original0/8 and owner-amended exhaustive proof remain unchanged at5bc7aa48.
+Stop after this pass. Next bounded connection comes from the same register, with a
+committed card before code. No UI, autonomous partners or automatic next milestone.
