@@ -267,3 +267,10 @@ The2327.50/2400s old ledger remains closed. No new verification allocation or
 comparison amendment is inferred from the performance pass. No MEMORY closure.
 Owner review is required by the work order's Replay and interpretation rule:
 "Comparison/scope changes need owner amendment".
+
+
+## Contextual follow-up — owner approved2026-11-07
+Owner explicitly approved the exact two changes and new1800s verification allocation
+in CURRENT. No production edit, stronger memory, law/calibration change, alternate
+contrast or seed search is authorized. The old failed comparison and closed2327.50s
+ledger remain; new checks use the separate M61_CONTEXT_CHECK prefix in the same log.
