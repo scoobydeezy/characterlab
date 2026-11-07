@@ -55,7 +55,7 @@ choice probabilities; no seed sweep or assertion that seed0 must change.
 Historical x15=1/0 M54 remains its original comparison, not retroactively amended.
 
 ## Checks and limits
-One long check at a time;10min/command,30min cumulative verification including failures.
+One long check at a time;10min/command,40min cumulative verification (owner extension approved2026-11-07).
 20 evidence files/5MiB; one compact result/check log, no source copies or verifier chain.
 Focused native pair + exact arbitration proof; then repeat/save before decision and
 continuation; denial/hidden-evidence, no match, wrong/unselected/duplicate memory,
@@ -77,4 +77,4 @@ Executed: positive significance/retention/means PASS; trace assertion failed.
 Repair follows actual Value receiver before decision; no calibration/search.
 
 Checkpoint: M54/26 kernels/types/boundary/research/105-blob guards PASS.
-About1658/1800s used;12 source/test files. Repaired pair/controls still pending.
+About1658/2400s used;12 source/test files. Approved extension: repaired pair + closing checks.

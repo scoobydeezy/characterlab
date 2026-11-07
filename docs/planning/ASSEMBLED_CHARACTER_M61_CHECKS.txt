@@ -3408,3 +3408,12 @@ M61 integrity PASS:105 frozen HEAD and Git-normalized working blobs; historical 
 PASS: Git index contains no files at or above50,000,000 bytes.
 
 M61_CHECK amended-checkpoint-staged-size exit=0 seconds=0.74
+
+=== budget-amendment-staged-size ===
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M61_CHECK budget-amendment-staged-size exit=0 seconds=1.16

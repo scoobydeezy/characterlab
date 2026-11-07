@@ -102,3 +102,12 @@ allocation requires an explicit owner budget amendment. Current budget is not re
 
 Closing integrity PASS:105 control blobs,12 source/test files,2 evidence files,
 document caps and whitespace. Final cumulative verification about1658s/1800s.
+
+## Owner budget amendment — 2026-11-07
+Owner explicitly approved10 additional verification minutes,40 minutes cumulative.
+Allocation: repaired unchanged paired-choice test and closing checks; no new scenario,
+law, seed, calibration, acceptance criterion, file limit or feature. Run the pair once,
+with a580s process cap (under600s/command); stop on a subthreshold result without tuning.
+The existing1658.37s are retained in the cumulative total; no clock reset. Types and
+frozen-control checks remain valid because production and test sources are unchanged
+since80681556. Snapshot-caching performance remains unmeasured until this execution.
