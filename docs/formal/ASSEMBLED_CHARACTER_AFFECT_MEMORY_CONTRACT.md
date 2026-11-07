@@ -69,3 +69,29 @@ a captured earlier report. No absent cue means no recall event, distinct from an
 empty graph (base accessibility still participates). No choice-causality claim or
 global dice change. All21 members/15 families/132 clauses and18 conditional debts
 remain in scope; no full clause/member closure or new Campaign3 verdict.
+
+## Successor — assembled-character-affect-memory/0.2-candidate (M63)
+
+LOCAL DISPOSITION before implementation, 2026-11-07. Rules and registry0.63
+retain the44-slot0.61 composition. Older bundles keep the0.1 handoff exactly.
+This successor repairs GAP-MEM-ACQ, the missing acquisition contribution found
+by M62. It preserves the accepted canonical event accessibility law and selectors.
+
+For each actual retained social acquisition, the kernel presentation history is
+[acquiredAt, ...field4]. acquiredAt is immutable episode field5; field4 still stores
+only strictly later authenticated recall publications. This projection equals
+the original eventPresentationSettlement formation history [acquiredAt], followed
+by actual selected publications. No authored credit, stored duplicate acquisition,
+second owner, archive or belief update is introduced. Empty field4 now means
+never recalled, not never presented. Removal of the episode removes both terms.
+
+The original32-entry kernel domain includes acquisition. The successor rejects
+more than31 social source instants before runtime construction; current public
+input admission already limits that channel to8. Thus no currently legal input
+is narrowed. Each source emits at most one delayed recall; no truncation is allowed.
+Publication updates, common B0 retention, authenticated parents, rollback and
+continuation retain their existing semantics. The episodic trace names0.2;
+its actual episode reads expose acquisition time and later history used for score.
+The model identity/version makes changed semantic outputs explicit.
+L4 remains OFF. Older versions and their evidence remain unchanged controls.
+This repairs a handoff; it is not a new law winner or full MEMORY qualification.

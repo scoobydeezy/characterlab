@@ -1,43 +1,51 @@
-# Current work — M62 replay classified; MEMORY remains open (2026-11-07)
+# Current work — M63 acquisition-to-accessibility (2026-11-07)
 
-Repeated retrieval increases later memory accessibility; decay, K limits,
-canonical ties, selected-only updates, privacy and exact continuation pass.
-M62 found GAP-MEM-ACQ: acquisition itself contributes no accessibility in the
-assembled social path. PHEN-MEM-001 is not accepted.
-[Result, exact keys and evidence](ASSEMBLED_CHARACTER_M62_RESULT.md).
+Newly retained social experience must be accessible before its first recall.
+M62 found GAP-MEM-ACQ; M63 repairs that handoff in the same episodic owner.
+Base d72d5249. Earlier .61 behavior and M62 evidence remain controls.
 
-## Completed bounded package
-Plan aee1ee86; full current rules/registry0.61,44 slots, base04c6f10e.
-Zero production/formal edits; two new test files; no new apparatus.
-Same law selectors, SignificanceFirst, UncontrolledGain and L4 OFF.
-Scenario recall delay1/K1/empty graph; K0/K2 are required capacity controls.
-One holder, physical tasks, reserve30/rate10, perceived coat stand-in, seed0;
-no body sensing/decision opportunity or initial learned state.
-At4 bases1/3 versus1/2. At6 B7/12 after retrieval versus1/4 without;
-unselected A1/5 in both. Exact tie1/2 each selects canonical acquisition.
-K0 bases0 expose missing acquisition history, not a qualified recency control.
-Exact repeat3 and continuation3->101 PASS all state/output/trace/save/identity.
-All native calendars include task40 and maintenance101 deadlines.
-Identity logging, fixture slot and terminal-clock test errors remain recorded.
+## Bounded card — committed before implementation
+One capability: acquisition contributes the original recency term, independently
+of recall capacity; later reinforcement remains actual-publication-only.
+Rules/registry0.63, unchanged44 slots; affect-memory contract0.2 successor.
+Read immutable acquiredAt plus existing later-publication field4 as
+[acquiredAt,...publicationTimes] at the original canonical recall kernel.
+This is a representation mapping, not a second store or a new accessibility law.
+No old version changes; no graph/owner/framework/calibration/dice/UI changes.
+Original kernel permits32 history entries; successor source ceiling31 reserves
+acquisition. Existing input admission already permits at most8 social sources.
+No legal current input is lost; no history truncation.
+Applicable MEC-010/EXP-006, PHEN-MEM-001:2..11, RO-C3-005/006/007/020 preserved.
 
-## Next bounded integration
-Restore acquisition-to-accessibility correspondence in the existing memory owner.
-Original eventPresentationSettlement seeds [acquiredAt] independently of recall K;
-assembled field4 starts empty and currently admits only later presentation times.
-Version the successor contract before changing it; preserve current controls.
-Done when: before any retrieval, K0/K1 have equal base scores and acquisition
-recency is positive; later only selected recall reinforces; privacy/rollback/
-continuation hold. No new store, framework, calibration, seed search or UI.
-Then complete the original MEMORY source/comparison mapping, not another area.
-Do not infer that learned graph/reconstruction are new PHEN-MEM requirements;
-their separately pinned family obligations remain unchanged.
+## Files and comparisons
+Production: model.ts, affectMemory.ts, memory.ts, runtime.ts (src/assembled).
+Tests: one new assembledAcquisitionMemory.test.ts, reusing M62 fixture.
+Formal: append explicit0.2 successor to existing affect-memory contract.
+Planning: CURRENT, AGENTS, existing register, one result and one check log.
+At most4 production+1 test files; no modification of earlier test fixtures.
+Use M62 main/omitted/hidden source, full current composition, seed0, fixed laws.
+Scenario: one holder, three physical tasks, reserve30/rate10, coat stand-in;
+only perceived social channel, no sensing/choice or initial learned state.
+Set recall delay3, K1; K0/K2 required controls. Acquisition at1/2, cues at3/5.
+Before first recall4: two retained episodes, empty publication histories.
+At4 base A1/4 B1/3 in K0/K1/K2; K1 selects B; K0 publishes none.
+At5 K1 B base1/4+1/2=3/4; K2 reinforces both, K0 remains acquisition-only.
+Main at6 retrieves B; omitted access3 has no recall6.
+At8 B main=1/7+1/5+1/4+1/3=389/420; omitted=1/7+1/5+1/4=83/140.
+A stays acquisition-only1/8 under K1. Same content, selected-only writes.
+Live recall/candidate reads required before comparison. No choice claim.
+Use original kernel on explicit acquisition histories as independent mapping
+control; retain .61 M62 native regression including exact tie.
 
-## Guardrails
-All ten PHEN-MEM-001:2..11 dispositions are recorded; no member/clause closes.
-MEC-010/EXP-006 and RO-C3-005/006/007/020 remain preserved.
-New M62 verification budget1800s,600s/command; failures count, no extension.
-Verification 411.68/1800s (6.86/30min), failures included; closing checks PASS.
-Two evidence files,20-file/5MiB cap. M61 neutral null and old ledgers unchanged.
-M62 execution ends at classified results; next package needs its own bounded card.
-
-| Research obligations | **0 active / 18 conditional / 0 unowned** |
+## Checks and stop
+Serial verification1800s total,600s per command; failures count. No extension.
+Types; focused native arithmetic/trace/K controls; hidden truth; exact repeat
+and restore3->101; injected failure after actual publication proves rollback;
+input bound and version rejection; old M62 native; boundary/research checks.
+Check105 frozen dependency blobs and unchanged historical source trees instead
+of re-running full frozen suite. Stage and check git size before commits.
+Evidence <=20 files/5MiB; AGENTS<=120/CURRENT<=80/work order<=250/register64KiB.
+Done iff acquisition mapping, selective later updates, privacy/rollback and
+exact continuation pass. Otherwise retain precise failure; do not change gate.
+MEMORY remains open for original source/comparison correspondence afterward.
+No other area, new verdict, obligation closure or full corpus acceptance.
