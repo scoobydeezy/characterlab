@@ -209,3 +209,33 @@ it('diagnostic17: fixed attribution prerequisites and actual training',async()=>
  console.info('M61_DIAG',JSON.stringify({routes:m.strategy!.map(r=>({task:key(r.task).slice(-40),actions:r.plans.map(p=>txt(id(p.actionId).payload))})),tasks:st.entries().filter(e=>e.path.rootStateTypeId===373n&&e.path.fieldId===1n).map(e=>String(uint(f(rec(e.value,372n),1n)))),episodes:st.entries().filter(e=>e.path.rootStateTypeId===346n&&typeof e.value!=='boolean'&&e.value.kind==='list').map(e=>{const a=items(e.value,'list');return [txt(a[0]),String(signedValue(a[5]))]}),decisions:outputs(snap.outputs,409n).map(v=>({at:String(signedValue(f(v,2n))),status:String(uint(f(rec(f(v,4n),419n),1n)))})),executions:outputs(snap.outputs,433n).length,groups:items(attribution[3],'list').map(g=>txt(named(g,'kind'))),attribution:kind==='Result'?txt(named(named(attribution[4],'result'),'disposition')):kind,annex:items(items(target(r)!,'list')[8],'list').length},(_,v)=>typeof v==='bigint'?String(v):v));
  expect(outputs(snap.outputs,433n).length).toBeGreaterThan(0);expect(items(items(target(r)!,'list')[8],'list')).toHaveLength(3);
 },180000);
+
+// Diagnostic only: unchanged fixture/prefix1, never substitutes the failed gate.
+it('cost diagnostic: unchanged preparation and first instant',async()=>{
+ // Node-only diagnostic; application compilation intentionally has no Node ambient types.
+ const inspectorModule='node:inspector',processModule='node:process';
+ const {Session}=await import(/* @vite-ignore */ inspectorModule),{memoryUsage}=await import(/* @vite-ignore */ processModule);
+ const session=new Session();session.connect();
+ const post=(method:string,params:object={})=>new Promise<any>((resolve,reject)=>session.post(method,params,(error:Error|null,value:unknown)=>error?reject(error):resolve(value)));
+ const phases:{stage:string;ms:number;heapMiB:number}[]=[];
+ async function stage<T>(name:string,work:()=>T|Promise<T>){const start=performance.now(),value=await work();const row={stage:name,ms:Math.round(performance.now()-start),heapMiB:Math.round(memoryUsage().heapUsed/1048576)};phases.push(row);console.info('M61_COST_PHASE',JSON.stringify(row));return value;}
+ await post('Profiler.enable');await post('Profiler.setSamplingInterval',{interval:10000});await post('Profiler.start');
+ try{
+  const {s,d}=await stage('fixture',()=>fixture());
+  const declarations=items(items(decode(s.registry),'list')[0],'set');
+  const dice=rec(f(rec(declarations.find(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n&&key(f(v,1n))===key(sid(1027,'definition/task-reason-dice')))! ,171n),4n),437n);
+  console.info('M61_CALIBRATION',JSON.stringify({situationUnit:key(f(rec(f(dice,4n),439n),1n)),standingUnit:key(f(rec(f(dice,3n),439n),1n)),scope:'actual unchanged model declaration, not reconstructed arbitration'}));
+  const model=await stage('prepare',()=>prepareCharacterModel(s));
+  const run=await stage('create',()=>createCharacterRun(model,d));
+  expect(await stage('instant1',()=>run.settleNextInstant())).toBe(true);
+  const snap=await stage('snapshot1',()=>run.snapshot());expect(snap.clock).toBe(1n);
+  console.info('M61_COST_BYTES',JSON.stringify({registry:s.registry.length,inputs:d.orderedInputs.length,state:snap.state.length,outputs:snap.outputs.length,trace:snap.trace.length}));
+ }finally{
+  const {profile}=await post('Profiler.stop');session.disconnect();
+  const nodes=new Map<number,any>(profile.nodes.map((n:any)=>[n.id,n])),parents=new Map<number,number>(),self=new Map<number,number>(),inclusive=new Map<number,number>();
+  for(const n of profile.nodes)for(const child of n.children??[])parents.set(child,n.id);
+  for(let i=0;i<(profile.samples??[]).length;i++){const id=profile.samples[i],us=profile.timeDeltas[i];self.set(id,(self.get(id)??0)+us);for(let p:number|undefined=id;p!==undefined;p=parents.get(p))inclusive.set(p,(inclusive.get(p)??0)+us);}
+  const top=(values:Map<number,number>)=>[...values].sort((a,b)=>b[1]-a[1]).slice(0,8).map(([id,us])=>{const frame=nodes.get(id).callFrame;return {name:frame.functionName,file:frame.url.replaceAll('\\','/').split('/').slice(-2).join('/'),line:frame.lineNumber+1,sampledMs:Math.round(us/1000)};});
+  console.info('M61_COST_PROFILE',JSON.stringify({phases,samples:profile.samples?.length??0,self:top(self),inclusive:top(inclusive),scope:'sampled initialization/prefix1 only; not late-run attribution or speedup'}));
+ }
+},85000);

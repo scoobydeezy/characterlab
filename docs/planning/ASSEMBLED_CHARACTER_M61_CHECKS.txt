@@ -3502,3 +3502,57 @@ M61_CHECK null-result-staged-size exit=0 seconds=0.74
 PASS: Git index contains no files at or above50,000,000 bytes.
 
 M61_CHECK cost-review-plan-size exit=0 seconds=0.76
+
+=== bounded-cost-prefix1 ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledActionMemory.test.ts > cost diagnostic: unchanged preparation and first instant
+M61_COST_PHASE {"stage":"fixture","ms":50760,"heapMiB":212}
+M61_CALIBRATION {"situationUnit":"06020a","standingUnit":"060204","scope":"actual unchanged model declaration, not reconstructed arbitration"}
+
+stdout | src/test/assembledActionMemory.test.ts > cost diagnostic: unchanged preparation and first instant
+M61_COST_PHASE {"stage":"prepare","ms":1399,"heapMiB":148}
+
+stdout | src/test/assembledActionMemory.test.ts > cost diagnostic: unchanged preparation and first instant
+M61_COST_PHASE {"stage":"create","ms":229,"heapMiB":175}
+M61_COST_PHASE {"stage":"instant1","ms":1607,"heapMiB":328}
+M61_COST_PHASE {"stage":"snapshot1","ms":6,"heapMiB":339}
+M61_COST_BYTES {"registry":95733,"inputs":12442,"state":4458,"outputs":4713,"trace":78227}
+M61_COST_PROFILE {"phases":[{"stage":"fixture","ms":50760,"heapMiB":212},{"stage":"prepare","ms":1399,"heapMiB":148},{"stage":"create","ms":229,"heapMiB":175},{"stage":"instant1","ms":1607,"heapMiB":328},{"stage":"snapshot1","ms":6,"heapMiB":339}],"samples":5215,"self":[{"name":"(garbage collector)","file":"","line":0,"sampledMs":3223},{"name":"(program)","file":"","line":0,"sampledMs":232},{"name":"encodeRecord","file":"substrate/canonicalEncoding.ts","line":181,"sampledMs":53},{"name":"post","file":"node:inspector","line":115,"sampledMs":52},{"name":"encodeRecord","file":"substrate/canonicalEncoding.ts","line":181,"sampledMs":42},{"name":"canonicalEncode","file":"substrate/canonicalEncoding.ts","line":77,"sampledMs":42},{"name":"appendBytes","file":"substrate/canonicalEncoding.ts","line":178,"sampledMs":42},{"name":"encodeRecord","file":"substrate/canonicalEncoding.ts","line":181,"sampledMs":42}],"inclusive":[{"name":"(root)","file":"","line":0,"sampledMs":54122},{"name":"processTicksAndRejections","file":"process/task_queues","line":72,"sampledMs":47618},{"name":"emitAfterScript","file":"node:internal/async_hooks","line":526,"sampledMs":47564},{"name":"","file":"test/assembledActionMemory.test.ts","line":408,"sampledMs":47560},{"name":"stage","file":"test/assembledActionMemory.test.ts","line":413,"sampledMs":47511},{"name":"build","file":"test/assembledActionMemory.test.ts","line":71,"sampledMs":47373},{"name":"fixture","file":"test/assembledActionMemory.test.ts","line":136,"sampledMs":47373},{"name":"","file":"test/assembledActionMemory.test.ts","line":424,"sampledMs":47373}],"scope":"sampled initialization/prefix1 only; not late-run attribution or speedup"}
+
+ ✓ src/test/assembledActionMemory.test.ts > cost diagnostic: unchanged preparation and first instant 54351ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 4 skipped (5)
+   Start at  12:55:58
+   Duration  58.19s (transform 2.29s, setup 0ms, collect 3.45s, tests 54.35s, environment 0ms, prepare 119ms)
+
+
+M61_CHECK bounded-cost-prefix1 exit=0 seconds=58.71
+
+=== cost-diagnostic-types ===
+src/test/assembledActionMemory.test.ts(214,23): error TS2307: Cannot find module 'node:inspector' or its corresponding type declarations.
+src/test/assembledActionMemory.test.ts(217,110): error TS7006: Parameter 'error' implicitly has an 'any' type.
+src/test/assembledActionMemory.test.ts(217,116): error TS7006: Parameter 'value' implicitly has an 'any' type.
+src/test/assembledActionMemory.test.ts(219,190): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+
+M61_CHECK cost-diagnostic-types exit=1 seconds=16.59
+
+=== cost-diagnostic-types-repaired ===
+
+M61_CHECK cost-diagnostic-types-repaired exit=0 seconds=16.1
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M61_CHECK review-closing exit=0 seconds=3.55
+M61 review integrity:12 source/test files; production unchanged; prior105 controls retained;2 evidence files/174172 bytes; document caps/whitespace PASS.
+
+=== review-final-staged-size ===
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M61_CHECK review-final-staged-size exit=0 seconds=0.74

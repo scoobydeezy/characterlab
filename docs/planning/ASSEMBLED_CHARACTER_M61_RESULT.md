@@ -161,3 +161,75 @@ positive seed0, fixture/model/run preparation and instant1 with CPU sampling and
 snapshot. Report phases/sample counts/sizes in this same log; no raw profile artifact.
 Types cap30s, closing checks only. No retry or full-pair rerun. Prefix1 measurements
 cannot establish late-run cost; recommendations must preserve that distinction.
+
+## Calibration/cost review — completed, no law change
+The null is explained by the fixed witness and admitted decision conversion. The
+retained positive-arm raw-context diff contains exactly four signal strengths:
+base1, situation1/20, base1, situation1/10. The short diagnostic reads the actual
+unchanged declaration: situational unit1/10 and standing unit1/4. compileReasonNuclei
+consolidates evidence, bounds each role x/(1+abs(x)), then truncates a modifier by
+its unit. Thus the isolated remembered A contribution1/20 becomes1/21 and B1/10
+becomes1/11; both yield situational modifier0. The negative A contribution is0.
+Base1 becomes1/2, giving the same d6 base. The two d6 expressions explain the actual
+72-case/36-versus36 result. This is a code/evidence derivation, not another replay.
+
+For nonnegative raw situational strength r with no other contribution, the first
+modifier requires r/(1+r)>=1/10, hence r>=1/9. With M61's progress/10 mapping, progress
+must be at least10/9. The fixed0/1 endpoint histories supply at most1, and the actual
+positive A mean is1/2. Its required choice change was infeasible in this neutral
+modifier context. I should have checked that reachability before the long runs.
+This does not prove a global memory/decision impossibility or a general calibration
+defect; other evidence/context can change the total. Keep the actual null and the
+reference law. Do not change the endpoint mean, scale or dice merely to make M61 pass.
+North Star section on arbitration retains the compiler and requires an explicit
+experiment/verdict before replacing thresholds, bands or modifier quantization.
+
+One short measured diagnostic (58.71s command, unchanged seed0/prefix1):
+| Stage | Milliseconds |
+| --- | ---: |
+| Fixture construction |50760|
+| Model preparation |1399|
+| Run creation |229|
+| First instant |1607|
+| First snapshot |6|
+Registry95733 bytes; inputs12442; at1 state4458, outputs4713, trace78227 bytes.
+CPU sampling:5215 samples, approximately54.1s; the reported call-tree ancestors put
+about47.4s inside fixture/build; GC self-time3.223s. Per-node leaf rows are not grouped
+by function across call paths, so they do not establish a single encoder hotspot.
+The prefix result establishes slow construction, not late-run runtime dominance.
+50.76s is only about9% of the570.54s pair, and the work amounts differ; no speedup claim.
+
+Existing evidence supplies the larger target without another broad profile campaign:
+ASSEMBLED_VERIFICATION_PERFORMANCE_RESULT.md already measured M52 settlement295.81s,
+fixture48.86s and GC32.38s, with nested owner validation dominating settlement. Those
+are M52 measurements, not a new timing attribution for M61. Current state.ts still
+builds the same wrapper chain. identityEligibility.ts and strategy.ts each delegate
+applyPatch to base, then call validateState, which traverses base validation again.
+This remains a concrete optimization hypothesis supported by prior measurement and
+current code, not evidence that validation may be dropped.
+
+Recommended next bounded work, before more behavioral integration:
+1. Performance-only package targeting those two wrapper delegation paths. Separate
+   local/cross-state checks from full-state validation; reuse an already-validated
+   base result ONLY after proving the delegated call's validation guarantee.
+   Preserve full validation for ingress, restore and directly owned patches. No
+   owner registry/framework, changed substrate control, psychology or trace schema.
+2. Accept only with identical state/output/trace/save bytes on the same fixed run,
+   identical malformed-state/authority/mixed-patch rejection and reached rollback,
+   plus before/after timing on equivalent work. If guarantees or speedup do not hold,
+   retain the failure and stop this optimization rather than widening it.
+3. Keep the M61 null. Before proposing any new positive behavioral witness, compute
+   reachable die/modifier changes from its declared actual calibration. The later
+   native gate still requires actual consumption/execution and exact probabilities.
+   Any changed contrast or law needs an explicit proposal/ruling; none is selected here.
+
+No production changes in this review. Test instrumentation only, in the existing
+12-file footprint. Initial type check failed because the app tsconfig has no Node
+ambient types; repaired with Node-only diagnostic imports and explicit callback types,
+without adding dependencies. Types then PASS16.10s. The measured diagnostic preceded
+that import-only repair; it was not rerun. No continuation/boundary gate is discharged.
+Cumulative2323.21s/2400s before closing checks; review remains within its120s cap.
+
+Final review checks: types/research/document/source/evidence/size PASS.
+Review verification96.45s within120s; cumulative2327.50s/2400s (38.79/40min).
+No production edits, calibration change, additional contrast or full rerun.
