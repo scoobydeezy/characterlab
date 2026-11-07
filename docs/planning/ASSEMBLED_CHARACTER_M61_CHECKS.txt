@@ -3417,3 +3417,79 @@ M61_CHECK amended-checkpoint-staged-size exit=0 seconds=0.74
 PASS: Git index contains no files at or above50,000,000 bytes.
 
 M61_CHECK budget-amendment-staged-size exit=0 seconds=1.16
+
+=== repaired-pair-approved-budget ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledActionMemory.test.ts > witness: significant action episode reaches exact competing choice
+M61_TARGET17 true 9 [ 'MovingCloser' ] 3
+
+stdout | src/test/assembledActionMemory.test.ts > witness: significant action episode reaches exact competing choice
+M61_FORECAST [
+  {
+    action: 'definition/protocol-contact-one',
+    status: 'Known',
+    mean: '060202',
+    progress: '060214',
+    ages: [ 29, 15 ]
+  },
+  {
+    action: 'definition/protocol-contact-two',
+    status: 'Known',
+    mean: '060201',
+    progress: '06020a',
+    ages: [ 31 ]
+  }
+]
+M61_TARGET17 false 9 [] 3
+
+stdout | src/test/assembledActionMemory.test.ts > witness: significant action episode reaches exact competing choice
+M61_FORECAST [
+  {
+    action: 'definition/protocol-contact-one',
+    status: 'Known',
+    mean: '060001',
+    progress: '060001',
+    ages: [ 29 ]
+  },
+  {
+    action: 'definition/protocol-contact-two',
+    status: 'Known',
+    mean: '060201',
+    progress: '06020a',
+    ages: [ 31 ]
+  }
+]
+M61_EXACT {"cases":"72","changed":0,"winnersA":["36","36"],"scope":"actual captured contexts, paired uniform faces and tie choices; no reconstructed reasons"}
+
+ × src/test/assembledActionMemory.test.ts > witness: significant action episode reaches exact competing choice 564687ms
+   → expected 0 to be greater than 0
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledActionMemory.test.ts > witness: significant action episode reaches exact competing choice
+AssertionError: expected 0 to be greater than 0
+ ❯ exactProof src/test/assembledActionMemory.test.ts:147:18
+
+ ❯ src/test/assembledActionMemory.test.ts:155:2
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 3 skipped (4)
+   Start at  12:16:16
+   Duration  568.99s (transform 2.37s, setup 0ms, collect 3.56s, tests 564.69s, environment 0ms, prepare 342ms)
+
+
+M61_CHECK repaired-pair-approved-budget exit=1 seconds=570.54
+M61 closing PASS: source/test byte diff empty vs80681556; previous types/105-control check retained;12 source/test files;2 evidence files/164375 bytes; document caps/whitespace. seconds=0.24
+
+=== null-result-staged-size ===
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M61_CHECK null-result-staged-size exit=0 seconds=0.74

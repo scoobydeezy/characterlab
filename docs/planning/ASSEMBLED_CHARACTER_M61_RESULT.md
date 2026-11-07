@@ -1,8 +1,8 @@
-# M61 — action-memory candidate, gate not passed (2026-11-07)
+# M61 — action-memory forecast consumed; choice-effect gate failed (2026-11-07)
 
-The character does not yet have a verified significant-memory-to-choice connection.
-The candidate adds perceived action/outcome bindings and forecasts in the one runtime,
-but the amended native witness stopped on a test assertion. M60 remains latest pass.
+Significant action memory now demonstrably reaches the actual decision and execution
+path, but the approved comparison does not change choice probability. The native pair
+and exact paired arbitration show a null effect. M61 fails; M60 remains latest pass.
 No MEMORY requirement, corpus member or conditional obligation closes.
 
 ## Finding and owner-approved correction
@@ -111,3 +111,45 @@ with a580s process cap (under600s/command); stop on a subthreshold result withou
 The existing1658.37s are retained in the cumulative total; no clock reset. Types and
 frozen-control checks remain valid because production and test sources are unchanged
 since80681556. Snapshot-caching performance remains unmeasured until this execution.
+
+## Terminal bounded comparison — NULL, milestone not passed
+Budget amendment committed first at20284ff5; source/test revision80681556 unchanged.
+The repaired native pair finished in570.54s, below its580s cap. Both arms reached33:
+- End15 has its actual perceived-action annex in both arms at17; only positive x1
+  earns MovingCloser significance. It survives only in that arm.
+- Both forecasts are Known: A mean1/2/progress1/20 from15+29 versus mean0/progress0
+  from29; B mean1/progress1/10 from31 in both arms.
+- Exact same-event action-memory output -> Value input -> Value output -> actual
+  decision input joins pass in both arms. Both have two reason nuclei and an actual
+  executed action linked through the original decision/intent/plan/attempt ancestry.
+- Actual captured production contexts were enumerated with identical uniform faces
+  and tie choices:72 cases,0 changed winners, candidate A36/72 in each arm. Every
+  enumerated call's analytical probability output matched its arm's native decision.
+  The positive-effect assertion fails. The later count-to-analytical-probability
+  assertion was not reached; it is not separately reported as a passed check.
+
+LOCAL DISPOSITION: a bounded subthreshold/null comparison under the fixed reference
+laws, not a missing consumer, fixture-liveness defect, global impossibility claim,
+or acceptance of the memory requirement. No corpus/obligation closure. No new
+contrast, seed, magnitude, calibration change or follow-on native control was run.
+Repeat/restore, epistemic/rollback and boundary controls remain unpassed; stopping
+here follows the predeclared stop rule rather than waiving those requirements.
+
+Calibration reading (code-derived explanation, not a new replay): cognitiveMath
+consolidates/ bounds role strength before truncating by the1/10 situational unit
+required by assembled model admission. An isolated1/20 becomes1/21, and1/10 becomes
+1/11; both are below one modifier step. The retained paired result establishes
+insensitivity in this actual comparison; it does not establish that all memory
+contributions are invisible. Review this strength-to-decision mapping before choosing
+any further behavioral work. A new law/calibration or contrast requires an explicit
+ruling; do not manufacture a pass by increasing the signal.
+
+Verification performance is still unresolved: this full pair took570.54s despite
+snapshot caching. The previous311.25s run stopped in its first arm, so those times
+are not an equivalent-work speed comparison. No measured speedup is claimed. Any
+further native work needs a bounded cost diagnosis before another large rerun.
+Cumulative verification2230.07s/2400s before closing checks. Production/test sources
+were unchanged this turn; earlier types and105-control preservation remain valid.
+
+Closing checks PASS; final cumulative verification2231.05s/2400s (37.18/40min).
+Retained evidence:2 files, about165KiB. No additional execution is scheduled.
