@@ -7,7 +7,7 @@ Read [CURRENT.md](docs/planning/CURRENT.md), then
 The active direction is assembly of one continuing character.
 Workbench/UI development and Campaign 4 are stopped pending assembly acceptance.
 This is the assembly checkout, based on
-`788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`. M58 future-contact/loss integration and the bounded restore-performance pass are complete; follow CURRENT.md for limits and next work. Do not add UI or multi-character work.
+`788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`. M60 is complete; the owner adopted the post-M60 review directives. Follow CURRENT.md for the next bounded connection. Do not add UI or multi-character work.
 Do not execute historical TODOs, resume old audits, or retain/revisit browser tabs.
 Old instructions/evidence remain on tag `archive/workbench-stopped-2026-10-25`.
 
@@ -76,14 +76,15 @@ architectural/scope/comparison changes or exhausted budgets; no paperwork bypass
 Keep AGENTS.md <=120 lines, CURRENT.md <=80, the work order <=250.
 Git stores history; keep one baseline, one register, one compact result per milestone.
 
-## Post-M40 review adjustment — 2026-11-03
+## Review adjustments — 2026-11-03 and 2026-11-06
 
-Prioritize affect/reappraisal, then non-body episodic recall, over body/habit refinements.
-Affect is derived; persistence must earn necessity. Keep adopted L4 self-feedback OFF.
+Post-M60 owner direction2026-11-06: close significant-memory -> competing choice next.
+Freeze apparatus expansion; then replay one memory member under a pinned reference configuration.
 Before behavioral runs, expose the strength-to-decision calibration path.
-Retain subthreshold/saturated controls; no magnitude/seed search to manufacture a pass.
-Keep reference dice settings; global changes need measured evidence and an owner ruling.
-Replay original requirements in the assembled model; record exact IDs in the existing register.
+Full run must prove actual consumption; exact production-input arbitration may prove choice effects.
+Retain null/subthreshold/saturated controls; no magnitude/seed search; dice changes need evidence/ruling.
+Affect is derived; persistence must earn necessity. Keep reference dice and L4 self-feedback OFF.
+Replay original requirements serially; record exact IDs/blockers in the existing register.
 Control passes are not assembled coverage; no parallel audit or blanket completion percentage.
 Autonomous partners remain deferred until the single-character experiment succeeds.
 Use perceived stand-ins; explicitly mark requirements needing mutual autonomy.

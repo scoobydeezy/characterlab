@@ -1,8 +1,6 @@
 # Assembled Character work order
 
-2026-10-25. Active preparation directive, authorized by the owner's request to turn
-the reviewed v2 draft into actionable instructions with guardrails. This document incorporates that review. It selects no psychological law and grants no reduction.
-Owner adopted M0/M1 and M2 D1–D5 on 2026-10-25; D2's evidence/first-use condition is in the register.
+Owner authorized2026-10-25; M0/M1, M2 D1-D5 with D2 condition adopted. No law selected or reduction granted.
 
 ## Outcome and authority
 
@@ -87,8 +85,7 @@ archived logs into the assembly branch (they remain on the preserved branch). Ca
   pinned reference to the old evidence; do not import its UI or rewrite historical traces.
   A successor repair must identify its changed trace/version semantics.
 
-No other Workbench implementation, catalog or evidence bundle moves by default.
-Historical controls stay executable and unchanged on the new branch. Reuse tested
+No other Workbench implementation, catalog or evidence bundle moves by default. Historical controls stay executable and unchanged on the new branch. Reuse tested
 mechanism functions where sound; do not redesign mathematics to ease assembly.
 
 The successor model, admission, composition and runtime live under `src/assembled`.
@@ -146,11 +143,9 @@ The M1 no-copy rule does not authorize changing the frozen control in place.
   instantiate a separate factory per phenomenon. Track covered and still-missing
   baseline IDs in the same reconciliation table. Finish with the complete pinned replay.
 
-The existing escalation policy still governs routine choices. For assembly, the owner
-reviews M0/M2 and rules on genuine alternative laws, authority/ontology conflicts,
-baseline changes and changes to completion criteria. Duplicates are reconciled locally
-only after establishing equivalent semantics; sharing an architectural box is not proof
-of duplication. Keep differing valid operations and their proper state owner.
+The escalation policy governs routine choices. Owner rulings cover M0/M2, genuine
+alternative laws, authority/ontology conflicts, baseline/completion changes. Reconcile
+duplicates only with equivalent semantics; shared boxes are not proof. Preserve owners.
 
 ## Replay and interpretation
 
@@ -165,10 +160,17 @@ Use the following classification at the individual finding/requirement level:
 - **Defect:** fix the integration bug; a classification is not acceptance.
 - **Law conflict:** obtain a ruling and implement its resolution; do not waive coverage.
 
-An unclassified difference blocks the affected milestone, not unrelated read-only work.
-Do not retune the comparator after seeing results to manufacture a pass. Changes to
-comparison meaning or required scope need an owner amendment. Ordinary test bugs may
-be corrected transparently while retaining the original failure and expected meaning.
+Owner adopted post-M60 direction2026-11-06: close significance/recall -> competing
+choice before more apparatus or breadth. Then replay MEMORY first, one member at a
+time under a pinned executable reference policy; AFFECT/DECISION follow serially.
+For choice claims, full runs prove live producer -> actual decision consumption and
+execution. Exact enumeration/analysis of production arbitration on captured actual
+inputs may prove a probability change; weight outcomes correctly. Preserve failed
+seed samples, null/subthreshold/saturated controls, ordering/privacy and exact restore.
+No post-result retuning, seed search, reconstructed inputs or missing-consumer substitute.
+Reference dice/calibration and single-character scope remain; autonomous peers deferred.
+Unclassified differences block the affected gate. Comparison/scope changes need owner
+amendment; ordinary bugs may be repaired with the original failure retained.
 
 ## Anti-bloat rules (operational limits, not aspirational advice)
 
@@ -221,15 +223,13 @@ be corrected transparently while retaining the original failure and expected mea
 
 ## Foundation clarification — owner adopted 2026-10-25
 
-The owner adopted the baseline's foundationConstraints section: explicit C0/C1 standing
-constraints, their affected conformance checks/reopen dispositions, the five C2 control
-conditions and Experience integration mapping. This adds no phenomenon denominator.
-Campaign 2 already uses observation/semanticBinding; M2 must locate the actual missing
-capabilities. Historical gate status does not override later accepted closure.
+Adopted foundationConstraints: C0/C1 requirements, affected conformance/reopen checks,
+five C2 conditions and Experience mapping; no new denominator. C2 already uses OBS/SEM;
+identify actual gaps. Historical gate status does not override later accepted closure.
 
 ## Current authorization boundary
-Owner adopted M0/M1, M2 D1-D5 and subsequent bounded continuations. CURRENT names
-one authorized milestone at a time. No UI, publishing or assembly acceptance follows.
+CURRENT names one milestone under adopted M0/M2 and subsequent continuations;
+no UI, publishing or assembly acceptance follows.
 
 ## Owner ruling — unknown factors and live gates (2026-11-02)
 
