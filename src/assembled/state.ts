@@ -78,7 +78,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
   read(state:AuthoritativeState,path:StatePath){structural.validatePath(path);validateEntry(path);const result=structural.read(state,path);if(result.presence)validateEntry(path,result.value!);return result;},
   applyPatch(state:AuthoritativeState,patch:StatePatch,authority:Parameters<typeof structural.applyPatch>[2],scope?:Parameters<typeof structural.applyPatch>[3]){const result=structural.applyPatch(state,patch,authority,scope);validateState(result.state);return result;},
  });
- const episodes=model.memory?withEpisodicState(inheritedState,C,model.body!,!!model.affectMemory,model.encoding,!!model.memoryUse,model.bodyMemoryUse,model.positionMemory,model.retainedAttribution,model.significanceEnabled):inheritedState;
+ const episodes=model.memory?withEpisodicState(inheritedState,C,model.body!,!!model.affectMemory,model.encoding,!!model.memoryUse,model.bodyMemoryUse,model.positionMemory,model.retainedAttribution,model.significanceEnabled,model.actionMemory):inheritedState;
  const embodied=model.body?withBodyState(episodes,C,model.body):episodes;
  const retained=model.retention?withRetentionState(embodied,C):embodied;
  const procedural=model.skill?withSkillState(retained,C,model.procedures,model.formationEnabled):retained;

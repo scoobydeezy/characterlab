@@ -1,7 +1,7 @@
 # Assembled Character — M2 reconciliation
 
 Owner approved D1–D5 on2026-10-25 with the D2 condition below.
-M60 remains latest pass. Post-M60 directives adopted; [M61 design checkpoint](CURRENT.md) owner approved endpoint-mean forecast2026-11-07; implementation pending. M59 amended proof/0-of-8 retained.
+M60 remains latest pass. Post-M60 directives adopted; [M61 checkpoint](ASSEMBLED_CHARACTER_M61_RESULT.md): endpoint mean approved; candidate implemented, significance gate FAILED (planned x6 outside original attribution domain); comparison amendment pending. M59 amended proof/0-of-8 retained.
 
 ## Decision sheet — adopted 2026-10-25
 

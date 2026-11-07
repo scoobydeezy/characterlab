@@ -57,3 +57,7 @@ M54 remains the original spatial-appraisal control. The new action scene is a bo
 integration witness for BRIEF-12.3-2/12.7 and PHEN-MEM-001:6/:9 provenance aspects;
 it does not close the original recency/retrieval-reinforcement/decay/topK/tie member.
 All21/15/132 gates, existing law controls and18 conditional obligations remain.
+
+Admission: rules0.61 permit at most14 visual and22 panel samples, within the
+existing26 position-row cap. Earlier rules retain10/16. This accommodates the
+predeclared training/query timeline; it does not change perception semantics.

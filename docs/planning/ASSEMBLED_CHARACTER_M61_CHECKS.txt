@@ -1,0 +1,385 @@
+
+=== types-initial ===
+src/assembled/actionMemory.ts(12,52): error TS2724: '"../semanticBinding/semanticEvidenceCodecs"' has no exported member named 'PreRecognitionSemanticExperience'. Did you mean 'preRecognitionSemanticExperienceValue'?
+src/assembled/actionMemory.ts(44,61): error TS18048: 'p' is possibly 'undefined'.
+src/assembled/actionMemory.ts(74,232): error TS2345: Argument of type '{ x: bigint; y: bigint; glyph: bigint; role: bigint; panel: bigint; track: CanonicalValue; at: bigint; } | undefined' is not assignable to parameter of type '{ x: bigint; y: bigint; glyph: bigint; role: bigint; panel: bigint; track: CanonicalValue; at: bigint; }'.
+  Type 'undefined' is not assignable to type '{ x: bigint; y: bigint; glyph: bigint; role: bigint; panel: bigint; track: CanonicalValue; at: bigint; }'.
+src/assembled/actionMemory.ts(74,250): error TS18048: 'annex.p' is possibly 'undefined'.
+src/assembled/actionMemory.ts(74,273): error TS18048: 'annex.p' is possibly 'undefined'.
+src/assembled/actionMemory.ts(89,87): error TS18048: 'app' is possibly 'undefined'.
+src/assembled/actionMemory.ts(93,34): error TS2339: Property 'entries' does not exist on type 'CanonicalValue'.
+  Property 'entries' does not exist on type 'false'.
+src/assembled/actionMemory.ts(93,48): error TS7031: Binding element 'k' implicitly has an 'any' type.
+src/assembled/actionMemory.ts(93,50): error TS7031: Binding element 'v' implicitly has an 'any' type.
+src/assembled/actionMemory.ts(95,82): error TS2345: Argument of type 'unknown[]' is not assignable to parameter of type 'readonly (readonly [CanonicalValue, CanonicalValue])[]'.
+  Type 'unknown' is not assignable to type 'readonly [CanonicalValue, CanonicalValue]'.
+src/assembled/actionMemory.ts(99,32): error TS2339: Property 'entries' does not exist on type 'CanonicalValue'.
+  Property 'entries' does not exist on type 'false'.
+src/assembled/actionMemory.ts(99,46): error TS7031: Binding element 'c' implicitly has an 'any' type.
+src/assembled/actionMemory.ts(99,48): error TS7031: Binding element 'v' implicitly has an 'any' type.
+src/assembled/actionMemory.ts(100,179): error TS18048: 'app' is possibly 'undefined'.
+src/assembled/actionMemory.ts(101,59): error TS18048: 'app' is possibly 'undefined'.
+src/assembled/actionMemory.ts(101,79): error TS18048: 'app' is possibly 'undefined'.
+
+M61_CHECK types-initial exit=1 seconds=16.97
+
+=== types-fixture ===
+
+M61_CHECK types-fixture exit=0 seconds=16.3
+
+=== native-witness ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledActionMemory.test.ts > witness: significant action episode reaches exact competing choice 89576ms
+   → requires text
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledActionMemory.test.ts > witness: significant action episode reaches exact competing choice
+SchedulerContractError: requires text
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataText src/campaign2/canonicalData.ts:17:52
+ ❯ src/test/fixtures/assembledActionMemory.ts:25:124
+ ❯ build src/test/fixtures/assembledActionMemory.ts:25:112
+ ❯ Module.fixture src/test/fixtures/assembledActionMemory.ts:52:40
+ ❯ src/test/assembledActionMemory.test.ts:64:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed (1)
+   Start at  08:04:38
+   Duration  93.64s (transform 2.31s, setup 0ms, collect 3.46s, tests 89.58s, environment 0ms, prepare 309ms)
+
+
+M61_CHECK native-witness exit=1 seconds=95.14
+
+=== native-witness-identity-repair ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledActionMemory.test.ts > witness: significant action episode reaches exact competing choice 90844ms
+   → position sampled horizon
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledActionMemory.test.ts > witness: significant action episode reaches exact competing choice
+SchedulerContractError: position sampled horizon
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.compileCharacterInputs src/assembled/inputs.ts:128:39
+ ❯ Module.createCharacterRun src/assembled/character.ts:42:63
+ ❯ src/test/assembledActionMemory.test.ts:66:49
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed (1)
+   Start at  08:06:45
+   Duration  94.63s (transform 2.26s, setup 0ms, collect 3.39s, tests 90.84s, environment 0ms, prepare 121ms)
+
+
+M61_CHECK native-witness-identity-repair exit=1 seconds=95.16
+
+=== native-witness-admission-repair ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledActionMemory.test.ts > witness: significant action episode reaches exact competing choice 109218ms
+   → assembled workspace: episode shape
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledActionMemory.test.ts > witness: significant action episode reaches exact competing choice
+SchedulerContractError: assembled workspace: episode shape
+ ❯ fail src/assembled/workspace.ts:13:37
+     11| export const WORKSPACE='assembled-workspace/0.1';
+     12| export interface BodyRecallDelivery {readonly character:CanonicalValue…
+     13| const fail=(s:string):never=>{throw new SchedulerContractError('INPUT_…
+       |                                     ^
+     14| const eq=(a:CanonicalValue,b:CanonicalValue)=>key(a)===key(b);
+     15| /** The caller supplies only current, completed retrieval deliveries; …
+ ❯ Module.sharedWorkspace src/assembled/workspace.ts:24:317
+ ❯ Object.workspace src/assembled/controlExecution.ts:35:890
+ ❯ Object.execute src/assembled/execution.ts:210:122
+ ❯ src/assembled/runtime.ts:202:33
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:373:26
+ ❯ Object.settleNextInstant src/assembled/character.ts:44:66
+ ❯ advance src/test/assembledActionMemory.test.ts:86:116
+ ❯ src/test/assembledActionMemory.test.ts:134:56
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INPUT_NOT_ADMITTED', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed (1)
+   Start at  08:11:28
+   Duration  113.02s (transform 2.26s, setup 0ms, collect 3.40s, tests 109.22s, environment 0ms, prepare 120ms)
+
+
+M61_CHECK native-witness-admission-repair exit=1 seconds=113.55
+
+=== native-witness-workspace-repair ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledActionMemory.test.ts > witness: significant action episode reaches exact competing choice
+M61_TARGET17 true 9 [] 0
+
+ × src/test/assembledActionMemory.test.ts > witness: significant action episode reaches exact competing choice 119278ms
+   → expected [] to deeply equal [ 'MovingCloser' ]
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledActionMemory.test.ts > witness: significant action episode reaches exact competing choice
+AssertionError: expected [] to deeply equal [ 'MovingCloser' ]
+
+- Expected
++ Received
+
+- Array [
+-   "MovingCloser",
+- ]
++ Array []
+
+ ❯ src/test/assembledActionMemory.test.ts:141:291
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed (1)
+   Start at  08:15:00
+   Duration  123.09s (transform 2.25s, setup 0ms, collect 3.39s, tests 119.28s, environment 0ms, prepare 126ms)
+
+
+M61_CHECK native-witness-workspace-repair exit=1 seconds=123.61
+
+=== diagnostic-attribution17 ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledActionMemory.test.ts > diagnostic17: fixed attribution prerequisites and actual training 118685ms
+   → requires list
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledActionMemory.test.ts > diagnostic17: fixed attribution prerequisites and actual training
+SchedulerContractError: requires list
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataItems src/campaign2/canonicalData.ts:23:50
+ ❯ src/test/assembledActionMemory.test.ts:195:232
+ ❯ src/test/assembledActionMemory.test.ts:195:216
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 3 skipped (4)
+   Start at  08:18:17
+   Duration  122.48s (transform 2.25s, setup 0ms, collect 3.38s, tests 118.69s, environment 0ms, prepare 124ms)
+
+
+M61_CHECK diagnostic-attribution17 exit=1 seconds=123.01
+
+=== types-checkpoint ===
+src/test/assembledActionMemory.test.ts(159,14): error TS2352: Conversion of type '{ eventId: bigint; eventSequence: bigint; dueAt: bigint; phase: bigint; eventTypeId: { readonly kind: "typedIdentifier"; readonly namespaceId: bigint; readonly payload: CanonicalValue; }; payload: CanonicalValue; dependencies: CanonicalValue; causalParentEventIds: never[]; }' to type 'ScheduledEvent' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Types of property 'dueAt' are incompatible.
+    Type 'bigint' is not comparable to type 'SimInstant'.
+      Type 'bigint' is not comparable to type '{ readonly [instantBrand]: true; }'.
+
+M61_CHECK types-checkpoint exit=2 seconds=15.95
+
+=== retained-M54-witness ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledHistoricalMeaning.test.ts > witness: one perceived historical difference crosses the full same-law path
+M54 LIVE17: both four grouped trials,16 consumed operands and Assessed/Qualifies reserve meaning.
+M54 LIVE33: both current spatial appraisals Assessed.
+M54 WITNESS same model/S0/goals/seed/reference SF; only permitted x15=1/0 differs. Supported/Unsupported -> acquired credit/no credit -> end15 survives/lost -> actual recall15,32/31,32 -> Farther/Same. Equal current body/goals and all later inputs; no draws on claimed path.
+
+ ✓ src/test/assembledHistoricalMeaning.test.ts > witness: one perceived historical difference crosses the full same-law path 366572ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 2 skipped (3)
+   Start at  08:22:46
+   Duration  370.32s (transform 2.20s, setup 0ms, collect 3.31s, tests 366.57s, environment 0ms, prepare 123ms)
+
+
+M61_CHECK retained-M54-witness exit=0 seconds=370.83
+
+=== diagnostic-fixed-training17 ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledActionMemory.test.ts > diagnostic17: fixed attribution prerequisites and actual training 48777ms
+   → requires 171/1
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledActionMemory.test.ts > diagnostic17: fixed attribution prerequisites and actual training
+SchedulerContractError: requires 171/1
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataRecord src/campaign2/canonicalData.ts:9:117
+ ❯ src/assembled/strategy.ts:17:111
+ ❯ Module.compileStrategy src/assembled/strategy.ts:17:104
+ ❯ build src/test/assembledActionMemory.test.ts:54:15
+ ❯ fixture src/test/assembledActionMemory.test.ts:68:40
+ ❯ src/test/assembledActionMemory.test.ts:195:14
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 3 skipped (4)
+   Start at  08:29:07
+   Duration  52.57s (transform 2.25s, setup 0ms, collect 3.37s, tests 48.78s, environment 0ms, prepare 147ms)
+
+
+M61_CHECK diagnostic-fixed-training17 exit=1 seconds=53.11
+
+=== diagnostic-route-record-repair ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledActionMemory.test.ts > diagnostic17: fixed attribution prerequisites and actual training
+M61_DIAG {"routes":[{"task":"080b8e08050e636f6e74656e742f7461736b2d61","actions":["definition/protocol-contact-one","definition/protocol-contact-two"]},{"task":"080b8e08050e636f6e74656e742f7461736b2d62","actions":["definition/protocol-contact-one","definition/protocol-contact-two"]},{"task":"2f636f6e666967757261626c652d67617264656e","actions":["definition/protocol-contact-one","definition/protocol-contact-two"]}],"tasks":["1","1","1"],"episodes":[["assembled-body-episode/0.1","1"],["assembled-body-episode/0.1","4"],["assembled-body-episode/0.1","5"],["assembled-body-episode/0.1","8"],["assembled-body-episode/0.1","9"],["assembled-body-episode/0.1","12"],["assembled-body-episode/0.1","13"],["assembled-body-episode/0.1","16"],["assembled-position-episode/0.1","2"],["assembled-position-episode/0.1","3"],["assembled-position-episode/0.1","6"],["assembled-position-episode/0.1","7"],["assembled-position-episode/0.1","10"],["assembled-position-episode/0.1","11"],["assembled-position-episode/0.1","14"],["assembled-position-episode/0.1","15"]],"decisions":[{"at":"14","status":"1"},{"at":"17","status":"1"}],"executions":0,"groups":["Grouped","Grouped","Grouped","Grouped"],"attribution":"Unavailable","annex":0}
+
+ ✓ src/test/assembledActionMemory.test.ts > diagnostic17: fixed attribution prerequisites and actual training 117919ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 3 skipped (4)
+   Start at  08:30:38
+   Duration  121.69s (transform 2.23s, setup 0ms, collect 3.36s, tests 117.92s, environment 0ms, prepare 121ms)
+
+
+M61_CHECK diagnostic-route-record-repair exit=0 seconds=122.19
+
+=== diagnostic-action-role-repair ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledActionMemory.test.ts > diagnostic17: fixed attribution prerequisites and actual training
+M61_DIAG {"routes":[{"task":"080b8e08050e636f6e74656e742f7461736b2d61","actions":["definition/protocol-contact-one","definition/protocol-contact-two"]},{"task":"080b8e08050e636f6e74656e742f7461736b2d62","actions":["definition/protocol-contact-one","definition/protocol-contact-two"]},{"task":"2f636f6e666967757261626c652d67617264656e","actions":["definition/configurable-water","definition/protocol-contact-two"]}],"tasks":["1","1","1"],"episodes":[["assembled-body-episode/0.1","1"],["assembled-body-episode/0.1","4"],["assembled-body-episode/0.1","5"],["assembled-body-episode/0.1","8"],["assembled-body-episode/0.1","9"],["assembled-body-episode/0.1","12"],["assembled-body-episode/0.1","13"],["assembled-body-episode/0.1","16"],["assembled-position-episode/0.1","2"],["assembled-position-episode/0.1","3"],["assembled-position-episode/0.1","6"],["assembled-position-episode/0.1","7"],["assembled-position-episode/0.1","10"],["assembled-position-episode/0.1","11"],["assembled-position-episode/0.1","14"],["assembled-position-episode/0.1","15"]],"decisions":[{"at":"14","status":"3"},{"at":"17","status":"1"}],"executions":1,"groups":["Grouped","Grouped","Grouped","Grouped"],"attribution":"Unavailable","annex":3}
+
+ ✓ src/test/assembledActionMemory.test.ts > diagnostic17: fixed attribution prerequisites and actual training 130794ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 3 skipped (4)
+   Start at  08:34:38
+   Duration  134.66s (transform 2.27s, setup 0ms, collect 3.44s, tests 130.79s, environment 0ms, prepare 119ms)
+
+
+M61_CHECK diagnostic-action-role-repair exit=0 seconds=135.17
+
+=== final-types ===
+
+M61_CHECK final-types exit=0 seconds=15.76
+
+=== original-goal-attribution-kernels ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/contrastiveAttribution.test.ts > contrastive-attribution-component/0.1-candidate > CA-A: replicated separated observed changes support the fallible hypothesis
+ ✓ src/test/contrastiveAttribution.test.ts > contrastive-attribution-component/0.1-candidate > CA-B: removing motion support with identical level evidence removes eligibility
+ ✓ src/test/contrastiveAttribution.test.ts > contrastive-attribution-component/0.1-candidate > CA-C: coarse overlapping evidence does not become an exact effect
+ ✓ src/test/contrastiveAttribution.test.ts > contrastive-attribution-component/0.1-candidate > CA-D: endpoint equality is insufficient, an exact strict gap suffices
+ ✓ src/test/contrastiveAttribution.test.ts > contrastive-attribution-component/0.1-candidate > CA-E: malformed inputs reject rather than become absence evidence
+ ✓ src/test/contrastiveAttribution.test.ts > contrastive-attribution-component/0.1-candidate > CA-F: permutations and caller attempts to mutate result do not change later assessments
+ ✓ src/test/contrastiveAttribution.test.ts > contrastive-attribution-component/0.1-candidate > CA-G: missing, other-motion and baseline-mismatch inputs yield unavailable
+ ✓ src/test/contrastiveAttribution.test.ts > contrastive-attribution-component/0.1-candidate > CA-H: the component cannot distinguish true and confounded causal histories with identical operands
+ ✓ src/test/contrastiveAttribution.test.ts > contrastive-attribution-component/0.1-candidate > CA-I: a contrast without guaranteed positive movement-associated increase gives no support
+ ✓ src/test/goalDistanceRelation.test.ts > conservative goal distance relation > GR-A: equal consequence under different goals changes exact relation
+ ✓ src/test/goalDistanceRelation.test.ts > conservative goal distance relation > GR-B: overlapping evidence is indeterminate, distinct from missing and known equal
+ ✓ src/test/goalDistanceRelation.test.ts > conservative goal distance relation > GR-C: equal distance across opposite sides preserves position
+ ✓ src/test/goalDistanceRelation.test.ts > conservative goal distance relation > GR-D: inclusive endpoints, ambiguous position and violation remain separate
+ ✓ src/test/goalDistanceRelation.test.ts > conservative goal distance relation > GR-E: metric admission and exact signal domain are required
+ ✓ src/test/goalDistanceRelation.test.ts > conservative goal distance relation > GR-F: withdrawal affects future assessment without rewriting past basis
+ ✓ src/test/goalDistanceRelation.test.ts > conservative goal distance relation > GR-G: boundary comparator discards outside-range direction without changing source
+ ✓ src/test/goalDistanceRelation.test.ts > conservative goal distance relation > GR-H: exact range bounds and asserted direction agree with exhaustive half-step witnesses
+ ✓ src/test/retainedAttributionUse.test.ts > retained attribution semantic use > RU-A: actual retained operand changes later survivor, detached equal operand does not
+ ✓ src/test/retainedAttributionUse.test.ts > retained attribution semantic use > RU-B: early unavailable credits read alpha, not merely bound beta or sibling
+ ✓ src/test/retainedAttributionUse.test.ts > retained attribution semantic use > RU-C: evaluation alone and close produce no protection; tokens are session-local and one-shot
+ ✓ src/test/retainedAttributionUse.test.ts > retained attribution semantic use > RU-D: read domain, missing view, missing child and same-instant formation reject
+ ✓ src/test/retainedAttributionUse.test.ts > retained attribution semantic use > RU-E: an earlier missing motion prevents consumption of a bound retained interval
+ ✓ src/test/retainedAttributionUse.test.ts > retained attribution semantic use > RU-F: repeated semantic use of one child yields one address; inputs and bytes are detached
+ ✓ src/test/retainedAttributionUse.test.ts > retained attribution semantic use > RU-G: successor preserves verdicts across missing and complete admissible evidence
+ ✓ src/test/retainedAttributionUse.test.ts > retained attribution semantic use > RU-H: malformed unread operands reject in validation without earning credit
+ ✓ src/test/retainedAttributionUse.test.ts > retained attribution semantic use > RU-I: detached rational objects cannot mutate the validated operation snapshot
+
+ Test Files  3 passed (3)
+      Tests  26 passed (26)
+   Start at  08:38:04
+   Duration  538ms (transform 164ms, setup 0ms, collect 273ms, tests 37ms, environment 0ms, prepare 363ms)
+
+
+M61_CHECK original-goal-attribution-kernels exit=0 seconds=1.02
+
+=== final-boundaries ===
+Reference boundary check passed.
+
+M61_CHECK final-boundaries exit=0 seconds=2.37
+
+=== final-research ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M61_CHECK final-research exit=0 seconds=3.43
+M61 integrity PASS:105 frozen HEAD and Git-normalized working blobs; historical source trees/tests unchanged; 12 source/test files; 2 evidence files; document caps. seconds=11.77
+
+=== staged-git-size ===
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M61_CHECK staged-git-size exit=0 seconds=0.33
+
+=== required-npm-git-size ===
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M61_CHECK required-npm-git-size exit=0 seconds=0.76
+
+M61_CHECK formatting-check exit=2 seconds=0.22
+New log CRLF/CRCRLF output and actionMemory EOF blank line normalized; diagnostic text preserved.
+
+=== final-staged-size ===
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M61_CHECK final-staged-size exit=0 seconds=0.73

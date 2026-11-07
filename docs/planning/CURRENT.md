@@ -1,7 +1,8 @@
 # Current work — M61 action-outcome memory (2026-11-07)
 
 Owner approved the bounded action-outcome forecast proposed at2f4334dd.
-M60 is the last completed capability; M61 is active, not yet a pass.
+M60 is the last completed capability; M61 is a failed-gate checkpoint.
+Comparison amendment pending; see ASSEMBLED_CHARACTER_M61_RESULT.md.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
 ## Capability and authority
@@ -28,8 +29,10 @@ Unknown/worsening adds no positive contribution; base motives remain independent
 ## Planned files (12 production/test maximum)
 src/assembled/actionMemory.ts (new); model.ts; traceBinding.ts; state.ts;
 memory.ts; significance.ts; retention.ts; runtime.ts; execution.ts;
-positionExecution.ts; src/test/fixtures/assembledActionMemory.ts (new);
+workspace.ts; inputs.ts;
 src/test/assembledActionMemory.test.ts (new).
+LOCAL DISPOSITION: combine new fixture/test; version0.61 admits14 visual/22 panel
+samples for the predeclared timeline (old10/16 unchanged). No law/contrast change.
 No historical control/dependency edits, new owner/channel/panel/runtime or UI.
 Before code: commit this card and contract. Ordinary bugs repaired with evidence.
 
@@ -37,7 +40,7 @@ Before code: commit this card and contract. Ordinary bugs repaired with evidence
 Start from M53's four observed trials1..16 and body30/rate10/width1, capacity16,
 recall16/workspace20, SignificanceFirst/BothDirections, seed0, three physical tasks.
 Task diagnostic criteria[0,10], spatial goal[7,7]; task importance1/1/0 fixed.
-Keep original M53/M54 tests unchanged. New arms differ only permitted x15=6 vs0.
+Keep original M53/M54 tests unchanged. Original failed arms differ only permitted x15=6 vs0 (not yet amended).
 Train actual A at14, A at28, B at30 using perceived single-route availability;
 observe endpoints15 (6/0),29 (0),31 (1), all with prior observed start x0.
 Action body amounts0/delay0, report permission true; no extra bodily delivery.
@@ -66,3 +69,11 @@ At budget/file limit checkpoint honestly; no implicit extension or breadth.
 Done only with live consumed memory -> different exact decision distribution,
 actual execution, epistemic/order/ownership controls and exact repeat/restore.
 Then stop; first common-reference MEMORY replay is the next bounded milestone.
+
+## Pending owner amendment
+Original attribution admits only0->1/0->0; x15=6 cannot earn significance.
+Proposed x15=1/0, A mean1/2 vs0, B1; all laws/dice/probability gates unchanged.
+Not executed. No calibration/search if the lawful effect is subthreshold.
+
+Checkpoint: M54/26 kernels/types/boundary/research/105-blob guards PASS.
+About1316/1800s used;12 source/test files. Native M61 gate/controls remain pending.

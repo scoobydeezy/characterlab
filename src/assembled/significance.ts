@@ -13,7 +13,7 @@ export const named=(v:CanonicalValue,k:string)=>{const rows=items(v,'list').filt
 const time=(v:CanonicalValue)=>{if(typeof v==='boolean'||v.kind!=='signed'||v.value<0n)return fail('time');return v.value;};
 export function compileSignificance(v:CanonicalValue){if(!eq(v,list([text(SIGNIFICANCE)])))fail('declaration');}
 export function directions(v:CanonicalValue):SignificanceDirection[]{const a=items(v,'list').map(txt),order=['MovingCloser','MovingFarther'];if(a.length>2||new Set(a).size!==a.length||a.some(x=>!order.includes(x))||a.some((x,i)=>i>0&&order.indexOf(x)<order.indexOf(a[i-1])))fail('direction set');return a as SignificanceDirection[];}
-export function assertSignificanceUpdate(before:CanonicalValue,after:CanonicalValue){const a=validatePositionEpisode(before),b=validatePositionEpisode(after);if(a.length!==8||b.length!==8||a.slice(0,7).some((v,i)=>!eq(v,b[i]))||directions(a[7]).some(d=>!directions(b[7]).includes(d)))fail('immutable episode/monotonic directions');}
+export function assertSignificanceUpdate(before:CanonicalValue,after:CanonicalValue){const a=validatePositionEpisode(before),b=validatePositionEpisode(after);if(![8,9].includes(a.length)||b.length!==a.length||a.length===9&&!eq(a[8],b[8])||a.slice(0,7).some((v,i)=>!eq(v,b[i]))||directions(a[7]).some(d=>!directions(b[7]).includes(d)))fail('immutable episode/monotonic directions');}
 function context(workspace:CanonicalValue,attribution:CanonicalValue){
  const w=items(workspace,'list'),a=items(attribution,'list'),C=f(rec(w[3],381n),2n),at=time(w[1]);
  if(a.length!==5||txt(a[0])!==RETAINED_ATTRIBUTION||time(a[1])!==at)fail('current attribution');
@@ -39,15 +39,15 @@ export function qualifiedSignificance(workspace:CanonicalValue,attribution:Canon
  const targets=items(named(r,'targets'),'list'),consumed=items(named(r,'consumed'),'list');if(targets.length!==1||!consumed.some(c=>eq(c,targets[0])))fail('attributed child');
  const candidates=items(w[4],'list').map(v=>items(v,'list')[1]).filter(v=>{const e=items(v,'list');return txt(e[0])===POSITION_EPISODE&&eq(signed(uint(id(e[1]).payload)),named(targets[0],'acquisition'));});
  if(candidates.length!==1||txt(named(targets[0],'unit'))!=='episode')fail('selected target');
- const episode=candidates[0],e=validatePositionEpisode(episode);if(e.length!==8||time(e[5])>=at||!eq(signed(uint(id(f(rec(e[3],227n),1n)).payload)),named(group,'endExperience')))fail('focal end');
+ const episode=candidates[0],e=validatePositionEpisode(episode);if(![8,9].includes(e.length)||time(e[5])>=at||!eq(signed(uint(id(f(rec(e[3],227n),1n)).payload)),named(group,'endExperience')))fail('focal end');
  return [{episode,direction}];
 }
 export function creditSignificance(episode:CanonicalValue,direction:SignificanceDirection,C:CanonicalValue,at:bigint){
- const a=validatePositionEpisode(episode);if(a.length!==8||time(a[5])>=at)fail('prior versioned episode');
+ const a=validatePositionEpisode(episode);if(![8,9].includes(a.length)||time(a[5])>=at)fail('prior versioned episode');
  const acquisition=uint(id(a[1]).payload),observer=txt(BODY_OBSERVER.payload),character='holder';
  // The exact canonical holder was checked in qualifiedSignificance and the state key.
  // Original algebra accepts short local symbols; this adapter has one scoped holder.
  if(id(C).namespaceId!==1002n)fail('character namespace');
  const memory=[{id:acquisition,acquiredAt:time(a[5]),kind:'EventContinuant' as const,units:[{key:'episode',views:[enc(list(a.slice(0,7)))],useProtection:false,outcomeSignificanceDirections:directions(a[7])}]}];
- const result=applyQualifiedSignificance({observer,character,memory},[{observer,character,direction,targets:[{acquisition,unit:'episode'}]}],at),next=list([...a.slice(0,7),list(result[0].units[0].outcomeSignificanceDirections.map(text))]);assertSignificanceUpdate(episode,next);return next;
+ const result=applyQualifiedSignificance({observer,character,memory},[{observer,character,direction,targets:[{acquisition,unit:'episode'}]}],at),next=list([...a.slice(0,7),list(result[0].units[0].outcomeSignificanceDirections.map(text)),...a.slice(8)]);assertSignificanceUpdate(episode,next);return next;
 }
