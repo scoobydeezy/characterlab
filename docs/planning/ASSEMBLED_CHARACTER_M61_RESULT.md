@@ -5,7 +5,7 @@ The candidate adds perceived action/outcome bindings and forecasts in the one ru
 but its planned native witness fails. M60 remains the latest completed capability.
 No MEMORY requirement, corpus member or conditional obligation closes.
 
-## Finding and correction awaiting the owner
+## Finding and owner-approved correction
 I made a planning error: the proposed end15 x=6 lies outside the accepted attribution
 law's positive-motion category. `retainedAttributionUse.ts` and
 `contrastiveAttribution.ts` admit only0->0 or0->1, not arbitrary positive displacement.
@@ -13,10 +13,10 @@ The full run reached17 with an uncredited end15 episode. This is a defective wit
 plan against an explicit law domain, not evidence that the new endpoint mean is wrong.
 Do not widen the original law or reinterpret Unavailable as insignificant evidence.
 
-Proposed amendment: end15 x=1/0 (the original M54 contrast), predicted A endpoint1/2
+Owner-approved amendment2026-11-07: end15 x=1/0 (the original M54 contrast), predicted A endpoint1/2
 versus0, B endpoint1; progress1/20 versus0 and1/10. Everything else remains fixed,
 including seed0, actual-production-input probability-change proof and existing dice.
-This correction is NOT approved or executed. If the effect is subthreshold, retain
+Approved, pending execution within the original cumulative budget. If the effect is subthreshold, retain
 that result and stop; no replacement contrast, seed search or calibration change.
 Authority: work order Replay and interpretation: comparison changes need owner amendment.
 
@@ -61,8 +61,12 @@ kernel tests PASS; final types, reference boundary and research checks PASS.
 105 frozen dependency blobs match both HEAD and Git-normalized working bytes;
 historical source trees and all prior tests are unchanged.12 source/test files,
 2 evidence files under30KiB; planning/document caps PASS. No source copies or UI.
-Cumulative verification about1316s of1800s, including every failure and integrity
+Cumulative verification about1317s of1800s, including every failure and integrity
 check; longest370.83s below600s. About8 minutes remain; no extension is authorized.
 The next execution must respect that remaining budget, not restart the clock.
 Pending: positive native gate, exact captured-input decision proof, repeat/restore,
 negative/rollback controls and original MEMORY replay. Prepared tests are not passes.
+
+Before amended execution: cache the actual captured decision/context once per arm
+in exact enumeration; preserve all comparisons and log null counts before the gate.
+This removes repeated full-trace serialization, with no proof or scenario change.

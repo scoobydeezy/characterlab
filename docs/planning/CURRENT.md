@@ -2,7 +2,7 @@
 
 Owner approved the bounded action-outcome forecast proposed at2f4334dd.
 M60 is the last completed capability; M61 is a failed-gate checkpoint.
-Comparison amendment pending; see ASSEMBLED_CHARACTER_M61_RESULT.md.
+Comparison amendment approved2026-11-07; see ASSEMBLED_CHARACTER_M61_RESULT.md.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
 
 ## Capability and authority
@@ -40,15 +40,15 @@ Before code: commit this card and contract. Ordinary bugs repaired with evidence
 Start from M53's four observed trials1..16 and body30/rate10/width1, capacity16,
 recall16/workspace20, SignificanceFirst/BothDirections, seed0, three physical tasks.
 Task diagnostic criteria[0,10], spatial goal[7,7]; task importance1/1/0 fixed.
-Keep original M53/M54 tests unchanged. Original failed arms differ only permitted x15=6 vs0 (not yet amended).
+Keep original M53/M54 tests unchanged. Approved arms differ only permitted x15=1 vs0; original x6 failure retained.
 Train actual A at14, A at28, B at30 using perceived single-route availability;
-observe endpoints15 (6/0),29 (0),31 (1), all with prior observed start x0.
+observe endpoints15 (1/0),29 (0),31 (1), all with prior observed start x0.
 Action body amounts0/delay0, report permission true; no extra bodily delivery.
 The existing four-trial/body goal attribution must earn end15 significance only
 in the moved arm. Shared memory pressure18..30 removes its uncredited counterpart.
 At33 perceive x0, same marker/role/panel glyph; both A/B available.
 Require both action forecasts live in both arms before comparing.
-Expected A mean3 vs0 (end15 plus29 vs29), B mean1 both; progress strengths3/10 vs0
+Expected A mean1/2 vs0 (end15 plus29 vs29), B mean1 both; progress strengths1/20 vs0
 and1/10. Verify those operands, actual reason consumption, actual chosen execution.
 Use production arbitration payloads captured from the full runs for exact weighted
 choice probabilities; no seed sweep or assertion that seed0 must change.
@@ -70,10 +70,10 @@ Done only with live consumed memory -> different exact decision distribution,
 actual execution, epistemic/order/ownership controls and exact repeat/restore.
 Then stop; first common-reference MEMORY replay is the next bounded milestone.
 
-## Pending owner amendment
+## Approved owner amendment — 2026-11-07
 Original attribution admits only0->1/0->0; x15=6 cannot earn significance.
-Proposed x15=1/0, A mean1/2 vs0, B1; all laws/dice/probability gates unchanged.
-Not executed. No calibration/search if the lawful effect is subthreshold.
+Approved x15=1/0, A mean1/2 vs0, B1; all laws/dice/probability gates unchanged.
+Pending execution. No calibration/search if the lawful effect is subthreshold.
 
 Checkpoint: M54/26 kernels/types/boundary/research/105-blob guards PASS.
-About1316/1800s used;12 source/test files. Native M61 gate/controls remain pending.
+About1317/1800s used;12 source/test files. Native M61 gate/controls remain pending.

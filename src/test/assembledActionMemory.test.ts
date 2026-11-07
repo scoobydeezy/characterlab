@@ -2,7 +2,7 @@ import {semanticReferentFromAuthoredContent as referent} from '../substrate/refe
 import {governedContentDefinitionId} from '../substrate/contentDefinitionId';
 /** M61 fixed source: three physical tasks; body30/rate10; 16 memories,20 slots.
  * Four original attribution trials, actual A14/A28/B30; query33. Seed0.
- * Same model/history except permitted x15=6/0. All inherited social tasks disabled. */
+ * Same model/history except permitted x15=1/0. All inherited social tasks disabled. */
 import {list,set,text,unsigned as u,signed,rational as q,type CanonicalValue} from '../substrate/canonicalEncoding';
 import {dataItems as items,dataKey as key,dataField as f,dataRecord as rec,dataText as txt,dataUnsigned as uint} from '../campaign2/canonicalData';
 import {ACTION_MEMORY_RULES,ACTION_MEMORY_REGISTRY} from '../assembled/model';
@@ -67,7 +67,7 @@ function build(){
  return {s,d:{...b.d,orderedInputs:enc(list(rows.filter(v=>key(items(v,'list')[2])!==key(HABIT_SOURCE))))},declarations};
 }
 export function fixture(o:Opt={}){
- const b=structuredClone(cache??(cache=build())),rows=items(decode(b.d.orderedInputs),'list').map(v=>{const r=[...items(v,'list')],at=signedValue(r[0]);if(at===15n&&key(r[2])===key(POSITION_SOURCE)){const p=[...items(r[3],'list')],x=[...items(p[1],'list')];x[0]=u(o.moved===false?0:6);if(o.denied)x[4]=false;p[1]=list(x);r[3]=list(p);}
+ const b=structuredClone(cache??(cache=build())),rows=items(decode(b.d.orderedInputs),'list').map(v=>{const r=[...items(v,'list')],at=signedValue(r[0]);if(at===15n&&key(r[2])===key(POSITION_SOURCE)){const p=[...items(r[3],'list')],x=[...items(p[1],'list')];x[0]=u(o.moved===false?0:1);if(o.denied)x[4]=false;p[1]=list(x);r[3]=list(p);}
  if(o.reportDenied&&at===14n&&key(r[2])===key(PERFORMANCE_SETTING)){const p=items(r[3],'list');r[3]=list([p[0],list(items(p[1],'list').map(v=>{const x=[...items(v,'list')];x[1]=false;return list(x);}))]);}
  return list(r);});
  return {...b,d:{...b.d,orderedInputs:enc(list(rows))}};
@@ -104,7 +104,7 @@ function live(r:Run,moved:boolean){
  console.info('M61_FORECAST',rows.map(v=>({action:txt(id(v[1]).payload),status:txt(v[2]),mean:key(v[3]),progress:key(v[4]),ages:items(v[5],'list').map(e=>Number(signedValue(items(e,'list')[5])))})));
  expect(rows.every(v=>txt(v[2])==='Known'),'both forecasts live').toBe(true);
  const a=rows.find(v=>key(v[1])===key(actionA))!,b=rows.find(v=>key(v[1])===key(actionB))!;
- expect(a[3]).toEqual(q(moved?3:0,1));expect(a[4]).toEqual(q(moved?3:0,10));expect(b[3]).toEqual(q(1,1));expect(b[4]).toEqual(q(1,10));
+ expect(a[3]).toEqual(q(moved?1:0,2));expect(a[4]).toEqual(q(moved?1:0,20));expect(b[3]).toEqual(q(1,1));expect(b[4]).toEqual(q(1,10));
  expect(items(a[5],'list').map(v=>signedValue(items(v,'list')[5])).sort()).toEqual(moved?[15n,29n]:[29n]);
  const dec=decision(r),context=rec(f(dec,3n),408n),data=result(dec),nuclei=items(f(context,3n),'list');expect(nuclei).toHaveLength(2);
  const traces=outputs(r.snapshot().trace,160n),reason=traces.find(t=>txt(f(t,6n))===ACTION_MEMORY_VERSION&&uint(f(rec(f(t,4n),130n),3n))===80n&&signedValue(f(rec(f(t,4n),130n),2n))===33n)!;
@@ -116,26 +116,27 @@ function live(r:Run,moved:boolean){
 }
 async function exactProof(s:ReturnType<typeof fixture>['s'],runs:Run[]){
  const rows=items(items(decode(s.registry),'list')[0],'set').filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n).map(v=>rec(v,171n)),definition=f(rows.find(r=>key(f(r,1n))===key(sid(1027,'definition/task-arbitration')))! ,4n);
- const contexts=runs.map(r=>rec(f(decision(r),3n),408n)),ns=contexts.map(c=>items(f(c,3n),'list').map(n=>rec(n,407n)));
+ const resolutions=runs.map(decision),results=resolutions.map(result);
+ const contexts=resolutions.map(d=>rec(f(d,3n),408n)),ns=contexts.map(c=>items(f(c,3n),'list').map(n=>rec(n,407n)));
  expect(ns[0].map(n=>f(n,4n))).toEqual(ns[1].map(n=>f(n,4n)));
  const candidates=ns[0].map(n=>f(rec(f(n,1n),404n),1n)),sizes=ns[0].map(n=>uint(f(n,4n)));
  const counts=[0n,0n],total=sizes[0]*sizes[1]*2n;let changed=0;
  for(let a=0n;a<sizes[0];a++)for(let b=0n;b<sizes[1];b++)for(let t=0n;t<2n;t++){
   const winners:CanonicalValue[]=[];
   for(let arm=0;arm<2;arm++){
-   const resolution=decision(runs[arm]),occ=f(resolution,1n),draw=(value:bigint,span:bigint,n?:CanonicalValue)=>{
+   const resolution=resolutions[arm],occ=f(resolution,1n),draw=(value:bigint,span:bigint,n?:CanonicalValue)=>{
     const k=n?rec(f(rec(n,407n),1n),404n):undefined,c=k?rec(f(k,1n),395n):rec(candidates[0],395n);
     const address={causalRootId:id(occ),purposeId:sid(1042,k?'purpose/task-reason-face':'purpose/task-decision-tie'),subjectBindings:[{subjectRoleId:sid(1043,'subject/actor'),subjectId:id(f(c,1n))},...(k?[{subjectRoleId:sid(1043,'subject/action'),subjectId:id(f(c,2n))},{subjectRoleId:sid(1043,'subject/task'),subjectId:id(f(k,3n))}]:[])],drawIndex:0n};
     return cr(411,[randomAddressValue(address),naturalRandomKeyValue(address),u(value),u(span),u(((1n<<128n)/span)*span),false,list([cr(410,[u(0),u(value),false])])],1);
    };
    const out=await arbitrationOutput(occ,33n,contexts[arm],definition,{async reason(n){const first=key(f(rec(f(rec(n,407n),1n),404n),1n))===key(candidates[0]);return draw(first?a:b,first?sizes[0]:sizes[1],n);},async tie(leader){expect(leader).toHaveLength(2);return draw(t,2n);}},3),data=result(out),winner=f(data,1n);
-   expect(f(data,2n)).toEqual(f(result(resolution),2n));winners.push(winner);if(key(winner)===key(candidates[0]))counts[arm]++;
+   expect(f(data,2n)).toEqual(f(results[arm],2n));winners.push(winner);if(key(winner)===key(candidates[0]))counts[arm]++;
   }
   if(key(winners[0])!==key(winners[1]))changed++;
  }
- expect(changed).toBeGreaterThan(0);expect(counts[0]).not.toBe(counts[1]);
- for(let arm=0;arm<2;arm++){const prob=items(f(result(decision(runs[arm])),2n),'list').find(v=>key(f(rec(v,421n),1n))===key(candidates[0]))!;expect(readQ(f(rec(prob,421n),2n)).equals(Q.of(counts[arm],total))).toBe(true);}
  console.info('M61_EXACT',JSON.stringify({cases:String(total),changed,winnersA:counts.map(String),scope:'actual captured contexts, paired uniform faces and tie choices; no reconstructed reasons'}));
+ expect(changed).toBeGreaterThan(0);expect(counts[0]).not.toBe(counts[1]);
+ for(let arm=0;arm<2;arm++){const prob=items(f(results[arm],2n),'list').find(v=>key(f(rec(v,421n),1n))===key(candidates[0]))!;expect(readQ(f(rec(prob,421n),2n)).equals(Q.of(counts[arm],total))).toBe(true);}
 }
 it('witness: significant action episode reaches exact competing choice',async()=>{
  const A=fixture(),B=fixture({moved:false});expect(A.s).toEqual(B.s);bytes(A.d.initialState,B.d.initialState);bytes(A.d.runSeed,B.d.runSeed);
@@ -190,7 +191,7 @@ it('epistemic and rollback: denied observation, denied performance and atomic fo
  const R=fixture(),r=await createCharacterRun(model,R.d);await advance(r,14n);const before=r.snapshot(),apply=stateModule.applyStatePatch;let reached=false;
  const spy=vi.spyOn(stateModule,'applyStatePatch').mockImplementation((...args)=>{const result=apply(...args);if(args[1].operations.some(o=>o.kind==='set'&&isPositionEpisodePath(o.path)&&items(items(o.newValue,'list')[8],'list').length===3)){reached=true;throw Error('M61 after action episode formation');}return result;});
  try{await expect(r.settleNextInstant()).rejects.toThrow('M61 after action episode formation');expect(reached).toBe(true);for(const k of ['state','outputs','trace'] as const)bytes(r.snapshot()[k],before[k]);expect(r.snapshot().clock).toBe(14n);}finally{spy.mockRestore();}
- console.info('M61_EPISTEMIC hidden x15=6/0 denied: equal cognition; denied actual performance has no annex; reached formation rollback PASS');
+ console.info('M61_EPISTEMIC hidden x15=1/0 denied: equal cognition; denied actual performance has no annex; reached formation rollback PASS');
 },600000);
 
 it('diagnostic17: fixed attribution prerequisites and actual training',async()=>{

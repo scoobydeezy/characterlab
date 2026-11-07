@@ -383,3 +383,12 @@ New log CRLF/CRCRLF output and actionMemory EOF blank line normalized; diagnosti
 PASS: Git index contains no files at or above50,000,000 bytes.
 
 M61_CHECK final-staged-size exit=0 seconds=0.73
+
+=== approved-amendment-staged-size ===
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M61_CHECK approved-amendment-staged-size exit=0 seconds=0.74
