@@ -168,3 +168,42 @@ This is mapped to the slot28 task's one declared conditional threat context;
 multi-threat generalization and original full factorial/response gates remain open.
 Learning is prior-only, append-only and whole-instant transactional. Restore after
 Motion must retain evidence grouping and reproduce later appraisal/recall exactly.
+
+## 0.4 successor — grounded threat response (M69, 2026-11-08)
+
+Model/registry0.69 admits six slot28 fields:
+[assembled-reappraisal/0.1,cognitiveTask,cognitiveAction,cognitiveLaw,
+ threatTask,consequenceValuation].
+The last two are required only in this version. threatTask must be a distinct
+admitted strategy task; all its action alternatives must differ from cognitiveAction.
+consequenceValuation is a governed exact rational in[0,1], not a sensed fact,
+task-distance surrogate, learned estimate or motivation/importance multiplier.
+Original four-field declarations remain exact under older bundles.
+
+At appraisal50 read threatTask's existing adopted commitment root373/field1.
+Known active adoption and a live mapped joint body appraisal permit severity to
+equal the declared consequence valuation; absent/inactive adoption is Unavailable.
+Vulnerability comes from that actual joint row. Conditional likelihood and learned
+relative efficacy keep0.3 semantics. No separate emotion state is written.
+The compatible completed report retains its outer tag/shape; provenance names
+threatTask, original joint report, factors/efficacy and an appended adoption/
+valuation pair. Trace adds the actual adoption read. Seam version is0.4.
+
+At concern55 replace only the mapped threat's response with completed U when
+Known, otherwise Unavailable. Do not multiply by the older task-distance gain.
+The original joint report remains visible as a distinct distance/body assessment.
+At raw80 retain only a situation modifier supported by an existing positive base
+for the same task/candidate. Never manufacture a base, candidate, nucleus or die.
+Replace its role2 support with the actual likelihood/frame, perceived mitigation
+trial and body sources already in the completed appraisal. Include the exact
+completed report and producer ID in the receiving trace, with empty mutation/draws.
+Other tasks retain their old response and reason path. A zero base or unavailable
+candidate cannot acquire a reason from U. Unknown affect removes its modifier.
+
+Cognitive motive/candidate gating and execution remain on cognitiveTask/action,
+which cannot be the mapped physical threat task/action. Its BenefitRelative,
+KnowledgeOnly and NoReappraisal competitors remain unchanged.
+New receiving output uses existing raw403 grammar and inherited reason/arbitration
+calibration. Affect can alter an existing situation modifier; it cannot become a
+direct command, new draw, or danger-learning sample. Later retrieval still consumes
+the same completed report; L4 feedback remains OFF.

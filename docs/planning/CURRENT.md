@@ -1,58 +1,55 @@
-# Current work — M68 comparison complete (2026-11-08)
+# Current work — M69 grounded affect (2026-11-08)
 
-Compare current0.67 with original PHEN-AFFECT-001 :4..13 before more breadth.
-Base a5ae3d7b. This is a bounded comparison, not a claim that AFFECT is complete.
+Complete the missing governed consequence -> affect -> grounded reason connection.
+Base d6814205. Same single character/runtime/state; no new owner or UI.
 
-## Card — commit before test code
-Map original factor meanings, measure their actual receivers, classify all10 keys.
-Production/formal/frozen corpus unchanged. One new test:
-src/test/assembledAffectRequirements.test.ts; reuse M67 fixture unchanged.
-Existing register + one result/check log; no new framework, catalogue or ledger.
-Source authority: AFFECT_PUBLIC_CONTRACT, CAMPAIGN3_AFFECT_QUALIFICATION,
-member13 of pinned corpus, ledger AFFECT intake and RO-C3-011.
-Original severity is governed consequence valuation; current severity is task
-forecast-distance/10. Record this semantic gap; numeric equality is insufficient.
-Original U modifies grounded reasons; current jointConcern uses its separate
-fixed-control calculation. Measure the path, never infer it from changed retrieval.
+## Scope / authority
+PHEN-AFFECT-001 :4..11 partial connection; :12/:13 and RO-C3-011 retained.
+Use AFFECT_PUBLIC_CONTRACT's adopted consequence valuation and situation modifier;
+REFERENCE_MECHANISM_LEDGER AFFECT intake and M68 findings. No new law or reduction.
+Version reappraisal contract0.4 and model/registry0.69 before implementation.
+Slot28 adds one threat task + consequence valuation[0,1], distinct from the
+cognitive reappraisal task/action. All associations validated; old versions unchanged.
+Read existing adopted task state and actual joint body's evidence. No learned
+initial state, new fear ground, new die, new authority or scenario dispatch.
+Completed U replaces the mapped task's old fixed-control concern. Actual raw
+receiving must retain the existing positive base and available candidate; no base
+means no affect-created ground. Other tasks and chosen reappraisal stay distinct.
+Trace the actual completed report, adoption read, factor sources and receiver.
+Six intended production/test files: model.ts, reappraisal.ts, execution.ts,
+traceBinding.ts, fixtures/assembledGroundedAffect.ts, assembledGroundedAffect.test.ts.
+Budget remains12; versioned amendment in existing reappraisal contract.
 
-## Fixed five cases / reference policy
-Same whole0.67 character, SplitExposure, relative efficacy, UncontrolledGain,
-L4 OFF, seed0 and fixed dice. Baseline is unchanged M67 ineffective fixture.
-Control case: original M67 effective. Likelihood case: at7 change only observed
-risk display tofalse, physical risk unchanged. Severity case: goal target[0,10]
-instead of[10,10]. Vulnerability case: initial body100 instead of30, rate10.
-First two tasks social/coat stand-in, mapped third task physical/start8.
-Adoption1 retained; trials1..6; social7/8/cue9; body9/10; appraisal9/recall10.
-All cases first assert live four-factor row, exact actual joint producer and recall.
-Expected p/s/v/c baseline[1,7/10,59/60,0]; one-axis alternatives:
-p0, s0, v49/60, c1 respectively. Other completed factors must stay equal.
-Actual recall scores follow prior report; no winning-memory or choice-change gate.
-Control/likelihood arms must equal baseline state/outputs at3 before first changed
-safe input (control packets first differ4, likelihood7). No trace/run-identity or
-initial-state equality claim across changed model/body. Compare exact actual
-concern388, raw403 and reasons408 at9 for p/c arms; record live ground availability.
-If mapped ground/action is absent, explicitly block matched-response qualification;
-do not use a null from an inactive operand as proof of behavioral equivalence.
-Record severity-source and immediate-receiver differences as missing integration,
-not alternative-law approval, interaction acceptance or full requirement passes.
+## Fixed scenario and acceptance
+Reuse M67 observed trials1..6 (effective/ineffective), risk7, appraisal9/10.
+One holder; three physical tasks; social stand-ins may still be perceived but
+no task depends on them. A is threat, B competing obligation; third cognitive task.
+A/B windows8..20; A target[10,10], B[0,10]; severity1 independent of target distance.
+Body30/rate10, samples9/10. Existing priority adoption1: A/B importance1, third0.
+At9/10 perceive urgency1 for A/B; at8 perceive their actual routes valid9..10.
+Third route remains governed by cognitive reappraisal eligibility; no opportunity.
+Seed0, inherited calibration/dice, SplitExposure/relative efficacy,
+UncontrolledGain, L4 OFF. Full run must first prove live A/B grounds/candidates.
+Main pair changes only observed mitigation effectiveness (physical diagnostics
+follow original M67 modes); pre-change state/output at3 must match.
+Expected p1,s1,v59/60,c0/1 -> U119/120 or0. Exact U must reach the existing
+situation role and compiled reason, with unchanged base/die and competing ground.
+Require changed analytical choice probability and exact production arbitration
+on captured contexts with paired uniform faces/ties; at least two responses under
+the same nonzero affect. No seed search or reconstruction of reason inputs.
+Full simulation must show decision -> actual execution, without claiming its
+seed0 choice alone proves coupling.
 
-## Checks / budgets / done
-One native five-case comparison; repeat and restore baseline8->101 exactly
-(state/output/trace/save/run identity). Original controls retained: no production
-or formal dependency changed, so no broad historical runtime rerun.
-Types, boundary, research;105 frozen dependency hashes and whole production/formal
-diff guard; document/evidence caps; staged size.600s/command,1800s cumulative,
-one long job;20 evidence files/5MiB; one test file. Failures count; no seed/goal tuning.
-Done when fixed comparison and continuation checks run, all10 original keys have
-explicit dispositions, and the next missing causal connection is concrete.
-A diagnostic pass is not acceptance of a missing mechanism or the AFFECT member.
+## Controls / checks / done
+Fixed controls: severity0; A importance0 (no ground despite affect);
+M67 hidden physical perturbation; missing observed mitigation action (unknown).
+Repeat/restore8->101 exact; fail after actual affect computation at9 and verify
+whole-instant rollback. Retain M68 original0.67 comparison and M41 chosen-reappraisal
+witness because their shared code changes. No unrelated historical full suite.
+Negative admission: foreign/same cognitive threat task, out-of-range severity,
+old bundle/new declaration. Types/boundary/research,105 frozen blobs, declared
+source paths, document/evidence caps, staged-size. One long job;600s/command,
+1800s total including failures;20 evidence files/5MiB. No automatic extensions.
+Done: governed source and actual reason/choice consumption with controls, within
+budget. Any remaining original factorial/source-domain gates remain OPEN.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
-
-Pre-execution arithmetic correction: body100 at9 has reserve10, observed upper11;
-v=(60-11)/60=49/60, not0 as first written. The fixed body100 scenario is unchanged.
-
-M68 native comparison and exact continuation PASS; whole AFFECT requirements OPEN.
-See ASSEMBLED_CHARACTER_M68_RESULT.md for all10 keys and actual receiver gaps.
-Next bounded connection: governed consequence valuation -> completed affect ->
-live grounded reason, keeping physical response and cognitive reappraisal distinct.
-No production change in M68; no new breadth before this connection.
