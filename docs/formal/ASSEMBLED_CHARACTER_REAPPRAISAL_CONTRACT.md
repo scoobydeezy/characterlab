@@ -207,3 +207,35 @@ New receiving output uses existing raw403 grammar and inherited reason/arbitrati
 calibration. Affect can alter an existing situation modifier; it cannot become a
 direct command, new draw, or danger-learning sample. Later retrieval still consumes
 the same completed report; L4 feedback remains OFF.
+
+## 0.5 successor — observed current-cue likelihood (M70, 2026-11-08)
+
+Model/registry0.70 retains0.69's six-field slot28 and all existing owners.
+The physical threat likelihood now implements AFFECT_PUBLIC_CONTRACT's glyph0
+current-cue condition. Old versions retain their exact conditional likelihood.
+No new source grammar, event phase, state path, capacity or persistent affect.
+
+Derive from the same validated packets held in root1000/field8. Group by actual
+perceived event file with groupPerceivedTrial. Require exactly one ordered
+Before/Motion/After, all glyph0. After must have observed occurred=true and
+monitored=true; binary risk is its sample. Unknown Motion action is allowed for
+glyph0; glyph1 baseline/mitigation estimates still require observed action1/2.
+Other glyphs do not supply either estimate. Incomplete/ambiguous/denied/censored/
+no-op contexts supply no sample. Each completed context contributes once.
+Use the existing reference MeanAll binary law, unknown for no samples.
+No authored condition selector, hidden action/outcome, relief, or source ordering
+may assign the physical threat's proposition. Observed negative gives known zero.
+
+The declared physical threat uses this prior estimate regardless of cognitive
+frame. Cognitive conditional estimates and chosen-reappraisal motive/frame retain
+their separate meanings and behavior; they cannot substitute for current-cue
+evidence. Learning remains140 and appraisal50 reads prior committed knowledge.
+
+Keep completed report's outer schema. Append current-cue provenance
+[mean-or-empty, supportingTrials] after existing adoption/valuation provenance;
+each supporting trial is the actual three retained packets. Trace0.5 records
+actual knowledge/frame/adoption reads and the completed report. Grounded role2
+basis includes the current-cue panel observation identities as well as existing
+efficacy/body evidence. No new ground, candidate, draw or emotion state.
+Exact rollback and continuation cover incomplete episodes through later choice.
+This restores one source correspondence, not the complete original qualification.
