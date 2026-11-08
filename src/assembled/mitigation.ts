@@ -19,19 +19,20 @@ export function validateMitigationPacket(value:CanonicalValue,at?:bigint){
  return {value,experience:x,role:txt(panel[2]) as 'Before'|'Motion'|'After',glyph:uint(panel[1]),action:uint(safe[0]),outcome,observation:panel[0],producer:uint(a[4])};
 }
 export function relativeEfficacy(b:Q|undefined,t:Q|undefined){const delta=b&&t&&b.compare(ZERO)>0?b.subtract(t).divide(b):undefined;return delta===undefined?undefined:delta.compare(ZERO)<0?ZERO:delta;}
-export function mitigationEstimates(packets:readonly CanonicalValue[],observedThreat=false){
+export function mitigationEstimates(packets:readonly CanonicalValue[],observedThreat=false,interpretedThreat=false){
  const rows=packets.filter(v=>items(v,'list').length).map(v=>validateMitigationPacket(v));
  require(rows.length<=16&&new Set(rows.map(r=>r.experience.experienceId)).size===rows.length,'unique bounded experiences');
  const contexts=[...new Map(rows.map(r=>[key(list(r.experience.perceptualEventReferentIds.map(c=>list([text(c.observerId),{kind:'unsigned',value:c.observerEventSequence}])))),r.experience.perceptualEventReferentIds[0]])).values()];
- const samples:[boolean[],boolean[]]=[[],[]],supports:CanonicalValue[]=[],cueSamples:boolean[]=[],cueSupports:CanonicalValue[]=[];
+ const samples:[boolean[],boolean[]]=[[],[]],supports:CanonicalValue[]=[],cueSamples:boolean[]=[],cueSupports:CanonicalValue[]=[],alternativeSamples:boolean[]=[],alternativeSupports:CanonicalValue[]=[];
  for(const context of contexts){
   const matching=rows.filter(r=>r.experience.perceptualEventReferentIds.some(c=>c.observerId===context.observerId&&c.observerEventSequence===context.observerEventSequence));
   if(matching.length>12)continue; // Overfull contexts are ambiguous, never subsetted.
   const group=groupPerceivedTrial(OBSERVER,context,matching);
   if(group.kind!=='Grouped')continue;
-  const cue=observedThreat&&matching.every(r=>r.glyph===0n);if(!cue&&matching.some(r=>r.glyph!==1n))continue;
+  const cue=observedThreat&&matching.every(r=>r.glyph===0n),alternative=interpretedThreat&&matching.every(r=>r.glyph===2n);if(!cue&&!alternative&&matching.some(r=>r.glyph!==1n))continue;
   const motion=matching.find(r=>r.experience.experienceId===group.motionExperience)!,after=matching.find(r=>r.experience.experienceId===group.afterExperience)!;
-  if((!cue&&!motion.action)||after.outcome.length!==3||after.outcome[0]!==true||after.outcome[1]!==true)continue;
+  if((!cue&&!alternative&&!motion.action)||after.outcome.length!==3||after.outcome[0]!==true||after.outcome[1]!==true)continue;
+  if(alternative){alternativeSamples.push(after.outcome[2]===true);alternativeSupports.push(list(matching.map(r=>r.value)));continue;}
   if(cue){cueSamples.push(after.outcome[2]===true);cueSupports.push(list(matching.map(r=>r.value)));continue;}
   samples[Number(motion.action)-1].push(after.outcome[2]===true);
   supports.push(list([ {kind:'unsigned',value:motion.action},list(matching.map(r=>r.value)) ]));
@@ -39,5 +40,6 @@ export function mitigationEstimates(packets:readonly CanonicalValue[],observedTh
  const means=samples.map(xs=>xs.length?Q.of(BigInt(xs.filter(Boolean).length),BigInt(xs.length)):undefined),[b,t]=means;
  const control=relativeEfficacy(b,t);
  const cueMean=cueSamples.length?Q.of(BigInt(cueSamples.filter(Boolean).length),BigInt(cueSamples.length)):undefined;
- return {cue:observedThreat?{mean:cueMean,supports:cueSupports,provenance:list([cueMean?qValue(cueMean):list([]),list(cueSupports)])}:undefined,means,control,supports,provenance:list([...means.map(v=>v?qValue(v):list([])),control?qValue(control):list([]),list(supports)])};
+ const alternativeMean=alternativeSamples.length?Q.of(BigInt(alternativeSamples.filter(Boolean).length),BigInt(alternativeSamples.length)):undefined;
+ return {alternative:interpretedThreat?{mean:alternativeMean,supports:alternativeSupports}:undefined,cue:observedThreat?{mean:cueMean,supports:cueSupports,provenance:list([cueMean?qValue(cueMean):list([]),list(cueSupports)])}:undefined,means,control,supports,provenance:list([...means.map(v=>v?qValue(v):list([])),control?qValue(control):list([]),list(supports)])};
 }

@@ -1,7 +1,9 @@
-# Current work — M72 chosen threat reinterpretation (2026-11-08)
+# Current work — M72 complete (2026-11-08)
 
-Base47f499bd. Connect perceived conditional threat episodes -> chosen operation ->
-later hypothetical appraisal -> existing grounded choice. One character, no new owner.
+Chosen reinterpretation now changes later grounded choice:36/72 paired winners.
+[Result](ASSEMBLED_CHARACTER_M72_RESULT.md); plan9ede91c8/base47f499bd.
+Next: resume the pinned original AFFECT counterfactual/factorial comparisons.
+One character, no new owner; whole requirements remain open.
 
 ## Authority / bounded correspondence
 CHOSEN_REAPPRAISAL_CONTRACT and REAPPRAISAL_PUBLIC_CONTRACT: protected condition
@@ -32,8 +34,13 @@ Replace panels1..3 with glyph0 risky and4..6 with glyph2 safe; retain glyph0 ris
 Observe catalogue2 and empty mitigation1 at7. Legacy risk report7 stays positive.
 Adopt all three goal importances1. At10 only cognitive goal urgent/eligible;
 at11 only A/B urgent; clone actual required decision contexts10 to11.
+Setup repair before rerun: replace inherited duplicate urgency11; route notices8
+expire11 (inherited10 expired before the declared live gate). Both arms unchanged
+in contrast/laws/calibration. Copy the unchanged procedural setting10 to11 too.
+No-protection body equality is checked at10, before physical action11.
+Original admission/liveness/execution setup failures retained.
 Opportunity10; complete true vs false is the sole primary arm difference.
-No operation affordance11. No new perception after9 except current body.
+No operation affordance11. No new threat episodes after9; current body and declared priority/context inputs remain.
 Before10 state/output equal. At10 same p1,s1/3,v99/100,c0,U199/600; operation
 benefit1 gives base1 -> bounded1/2 -> d6, single eligible candidate, chosen operation.
 Application at140 cannot alter same-instant50. At11 completion selects p0/U0
