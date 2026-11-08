@@ -1,4 +1,4 @@
-# Current work — M70 observed threat likelihood (2026-11-08)
+# Current work — M70 observed threat likelihood complete (2026-11-08)
 
 Connect a perceived threat episode to learned likelihood, appraisal and choice.
 Base0f070f82; M69 complete. Same character/state/scheduler and44-slot composition.
@@ -55,3 +55,15 @@ Done: observed episode -> own estimate -> actual appraisal/reasons/choice plus
 controls within budget. Vulnerability correspondence, full factorial and remaining
 counterfactuals remain explicit; no whole AFFECT acceptance.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
+
+Setup repair: removing deliberation9 also requires removing its identity/self/values
+context declarations (admission forbids orphan decision contexts). Initial admission
+failure retained; same choice10 comparison, laws and evidence remain unchanged.
+
+Review repair: original-selector mean assertion used Object.toString; replace with
+exact rational equality and rerun that affected connection. No simulation change.
+
+M70 connection/controls/exact continuation and retained M69/M67 comparisons PASS.
+See ASSEMBLED_CHARACTER_M70_RESULT.md. Final preservation checks recorded there.
+Next: remaining AFFECT source correspondence (body vulnerability and legitimate
+reinterpretation), then original counterfactuals/factorial. No unrelated breadth.

@@ -1,0 +1,193 @@
+
+=== M70: types-initial ===
+
+M70_CHECK types-initial exit=0 seconds=16.92
+
+=== M70: connection-initial ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledThreatEvidence.test.ts (8 tests | 1 failed | 7 skipped) 55509ms
+   × M70 connection: observed current cue reaches grounded choice 55508ms
+     → identity context time/phase/duplicate/opportunity
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledThreatEvidence.test.ts > M70 connection: observed current cue reaches grounded choice
+SchedulerContractError: identity context time/phase/duplicate/opportunity
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ src/assembled/inputs.ts:89:327
+ ❯ Module.compileCharacterInputs src/assembled/inputs.ts:89:32
+ ❯ Module.createCharacterRun src/assembled/character.ts:42:63
+ ❯ src/test/assembledThreatEvidence.test.ts:108:45
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  11:18:37
+   Duration  59.58s (transform 2.38s, setup 0ms, collect 3.57s, tests 55.51s, environment 0ms, prepare 286ms)
+
+
+M70_CHECK connection-initial exit=1 seconds=61.21
+
+=== M70: connection-context-repair ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledThreatEvidence.test.ts > M70 connection: observed current cue reaches grounded choice
+M70 CALIBRATION {"threshold":"37/100","situationUnit":"1/10","situationCap":"3"}
+
+stdout | src/test/assembledThreatEvidence.test.ts > M70 connection: observed current cue reaches grounded choice
+M70 DIAGNOSTIC {"changed":36,"cases":"72","counts":["72","36"],"modes":["1","3"],"probabilities":[["7/8","1/8"],["1/2","1/2"]],"nuclei":[[{"roles":["1/2","0/1","119/239"],"die":"6","standing":"0","situation":"3"},{"roles":["1/2","0/1","0/1"],"die":"6","standing":"0","situation":"0"}],[{"roles":["1/2","0/1","0/1"],"die":"6","standing":"0","situation":"0"},{"roles":["1/2","0/1","0/1"],"die":"6","standing":"0","situation":"0"}]]}
+M70 EXACT {"cases":"72","changed":36,"firstCandidateWins":["72","36"],"probabilities":["72/72","36/72"],"scope":"captured actual contexts; paired uniform faces and fair ties; no seed-pair claim"}
+M70 CONNECTION PASS observed glyph0 episode -> mean1/0 -> actual affect/grounded reason -> changed execution probability. Original source selector agrees.
+
+ ✓ src/test/assembledThreatEvidence.test.ts (8 tests | 7 skipped) 108603ms
+   ✓ M70 connection: observed current cue reaches grounded choice 108602ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  11:20:27
+   Duration  112.44s (transform 2.35s, setup 0ms, collect 3.51s, tests 108.60s, environment 0ms, prepare 99ms)
+
+
+M70_CHECK connection-context-repair exit=0 seconds=113.12
+
+=== M70: evidence-controls ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledThreatEvidence.test.ts > M70 controls: missing evidence hidden truth and conditional isolation
+M70 CONTROL denied Unavailable
+
+stdout | src/test/assembledThreatEvidence.test.ts > M70 controls: missing evidence hidden truth and conditional isolation
+M70 CONTROL censored Unavailable
+
+stdout | src/test/assembledThreatEvidence.test.ts > M70 controls: missing evidence hidden truth and conditional isolation
+M70 CONTROL noop Unavailable
+
+stdout | src/test/assembledThreatEvidence.test.ts > M70 controls: missing evidence hidden truth and conditional isolation
+M70 CONTROL hidden Known
+
+stdout | src/test/assembledThreatEvidence.test.ts > M70 controls: missing evidence hidden truth and conditional isolation
+M70 CONTROL legacyFalse Known
+
+ ✓ src/test/assembledThreatEvidence.test.ts (8 tests | 7 skipped) 172278ms
+   ✓ M70 controls: missing evidence hidden truth and conditional isolation 172277ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  11:22:31
+   Duration  176.12s (transform 2.35s, setup 0ms, collect 3.52s, tests 172.28s, environment 0ms, prepare 98ms)
+
+
+M70_CHECK evidence-controls exit=0 seconds=176.78
+
+=== M70: exact-source-connection-and-persistence ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledThreatEvidence.test.ts > M70 connection: observed current cue reaches grounded choice
+M70 CALIBRATION {"threshold":"37/100","situationUnit":"1/10","situationCap":"3"}
+
+stdout | src/test/assembledThreatEvidence.test.ts > M70 connection: observed current cue reaches grounded choice
+M70 DIAGNOSTIC {"changed":36,"cases":"72","counts":["72","36"],"modes":["1","3"],"probabilities":[["7/8","1/8"],["1/2","1/2"]],"nuclei":[[{"roles":["1/2","0/1","119/239"],"die":"6","standing":"0","situation":"3"},{"roles":["1/2","0/1","0/1"],"die":"6","standing":"0","situation":"0"}],[{"roles":["1/2","0/1","0/1"],"die":"6","standing":"0","situation":"0"},{"roles":["1/2","0/1","0/1"],"die":"6","standing":"0","situation":"0"}]]}
+M70 EXACT {"cases":"72","changed":36,"firstCandidateWins":["72","36"],"probabilities":["72/72","36/72"],"scope":"captured actual contexts; paired uniform faces and fair ties; no seed-pair claim"}
+M70 CONNECTION PASS observed glyph0 episode -> mean1/0 -> actual affect/grounded reason -> changed execution probability. Original source selector agrees.
+
+stdout | src/test/assembledThreatEvidence.test.ts > M70 persistence and actual learning rollback
+M70 PERSISTENCE PASS exact repeat/restore8->101 and actual cue-learning rollback.
+
+ ✓ src/test/assembledThreatEvidence.test.ts (8 tests | 6 skipped) 184729ms
+   ✓ M70 connection: observed current cue reaches grounded choice 106433ms
+   ✓ M70 persistence and actual learning rollback 78295ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 6 skipped (8)
+   Start at  11:26:02
+   Duration  188.58s (transform 2.35s, setup 0ms, collect 3.52s, tests 184.73s, environment 0ms, prepare 99ms)
+
+
+M70_CHECK exact-source-connection-and-persistence exit=0 seconds=189.27
+
+=== M70: retained-M69-connection-and-M67-source-controls ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledGroundedAffect.test.ts > M69 connection: governed consequence and observed efficacy reach grounded choice
+M69 CALIBRATION {"threshold":"37/100","situationUnit":"1/10","situationCap":"3"}
+
+stdout | src/test/assembledGroundedAffect.test.ts > M69 connection: governed consequence and observed efficacy reach grounded choice
+M69 DIAGNOSTIC {"changed":36,"cases":"72","counts":["72","36"],"modes":["1","3"],"probabilities":[["7/8","1/8"],["1/2","1/2"]],"nuclei":[[{"roles":["1/2","0/1","119/239"],"die":"6","standing":"0","situation":"3"},{"roles":["1/2","0/1","0/1"],"die":"6","standing":"0","situation":"0"}],[{"roles":["1/2","0/1","0/1"],"die":"6","standing":"0","situation":"0"},{"roles":["1/2","0/1","0/1"],"die":"6","standing":"0","situation":"0"}]]}
+M69 EXACT {"cases":"72","changed":36,"firstCandidateWins":["72","36"],"probabilities":["72/72","36/72"],"scope":"captured actual contexts; paired uniform faces and fair ties; no seed-pair claim"}
+M69 CONNECTION PASS actual valuation/learned efficacy -> completed affect -> existing situation role -> compiled reason -> choice distribution -> execution.
+
+ ✓ src/test/assembledGroundedAffect.test.ts (8 tests | 7 skipped) 97479ms
+   ✓ M69 connection: governed consequence and observed efficacy reach grounded choice 97478ms
+stdout | src/test/assembledMitigation.test.ts > M67 unknown and hidden evidence controls preserve epistemic boundaries
+M67 LIVE {"control":1,"factors":["1/1","7/10","59/60","1/1"],"affect":["833/1200","0/1"],"gain":"1/1","scores":["17/24","5/6"],"selected":["8"],"trialSupports":2}
+
+stdout | src/test/assembledMitigation.test.ts > M67 unknown and hidden evidence controls preserve epistemic boundaries
+M67 CONTROL zeroBaseline Unavailable
+
+stdout | src/test/assembledMitigation.test.ts > M67 unknown and hidden evidence controls preserve epistemic boundaries
+M67 CONTROL missingAction Unavailable
+
+stdout | src/test/assembledMitigation.test.ts > M67 unknown and hidden evidence controls preserve epistemic boundaries
+M67 CONTROL deniedMotion Unavailable
+
+stdout | src/test/assembledMitigation.test.ts > M67 unknown and hidden evidence controls preserve epistemic boundaries
+M67 CONTROL censored Unavailable
+
+stdout | src/test/assembledMitigation.test.ts > M67 unknown and hidden evidence controls preserve epistemic boundaries
+M67 CONTROL noop Unavailable
+
+stdout | src/test/assembledMitigation.test.ts > M67 unknown and hidden evidence controls preserve epistemic boundaries
+M67 LIVE {"control":1,"factors":["1/1","7/10","59/60","1/1"],"affect":["833/1200","0/1"],"gain":"1/1","scores":["17/24","5/6"],"selected":["8"],"trialSupports":2}
+M67 CONTROL hidden Known
+
+ ✓ src/test/assembledMitigation.test.ts (8 tests | 7 skipped) 163326ms
+   ✓ M67 unknown and hidden evidence controls preserve epistemic boundaries 163325ms
+
+ Test Files  2 passed (2)
+      Tests  2 passed | 14 skipped (16)
+   Start at  11:29:41
+   Duration  265.71s (transform 2.34s, setup 0ms, collect 4.32s, tests 260.80s, environment 0ms, prepare 190ms)
+
+
+M70_CHECK retained-M69-connection-and-M67-source-controls exit=0 seconds=266.39
+
+=== M70: final-types ===
+
+M70_CHECK final-types exit=0 seconds=16.34
+
+=== M70: reference-boundary ===
+Reference boundary check passed.
+
+M70_CHECK reference-boundary exit=0 seconds=2.64
+
+=== M70: research-obligations ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M70_CHECK research-obligations exit=0 seconds=3.53
+
+=== M70: frozen-dependencies-and-scope ===
+M70 integrity PASS:105 frozen blobs, historical trees unchanged;six planned source/test paths;one versioned formal amendment; document/evidence caps.
+
+M70_CHECK frozen-dependencies-and-scope exit=0 seconds=12.11
+
+=== M70: staged-git-size ===
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M70_CHECK staged-git-size exit=0 seconds=0.93
