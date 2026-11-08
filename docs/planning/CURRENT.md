@@ -57,3 +57,8 @@ Only passed requirements may be marked equivalent in this mapped finite domain;
 10/11 remain standing seam/reopen constraints. No blanket full-family/21-member pass.
 Do not substitute historic controls for current coverage or hide source differences.
 If a gate fails, no new contrast/seed/calibration search. End with the actual gap.
+
+Before implementation: main arms include the existing admitted deliberation
+opportunity at9, copied from M61 with time changed, to exercise actual workspace
+consumption. No route/urgency/body evidence is added; no choice-effect claim.
+All eight social cues originate before9, so this cannot alter their captured affect.
