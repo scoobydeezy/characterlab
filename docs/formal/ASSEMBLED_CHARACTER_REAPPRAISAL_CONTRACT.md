@@ -118,3 +118,53 @@ No fallback to the old constant factors or earlier known report.
 Old seven-field reports and0.2 acquisition ranking remain unchanged controls.
 Whole-instant rollback and exact continuation include the extended safe evidence.
 M66 card pins finite comparisons; original factorial/response/efficacy work remains.
+
+## Successor — observed mitigation efficacy /0.3 (M67, 2026-11-07)
+
+Rules/registry0.67 retain M66 report8 schema and affect-memory0.3; they add a
+versioned producer. Old0.66 remains executable unchanged. Reappraisal trace0.3,
+position-perception trace0.2 identify the changed evidence and learning semantics.
+Reference laws: original AFFECT observed trials, MeanAll binary estimates and
+relative control max(0,(b-t)/b) only when b>0 and both estimates exist.
+No new law selection. Alternative interpretation means are never trial estimates.
+
+The existing position source accepts optional fourth field only in0.67:
+[physicalAction,physicalRisk,observedAction,actionVisible,outcomeVisible,
+occurred,monitored,risk]. Actions0/1/2 mean unknown/baseline/mitigation.
+Physical fields are diagnostic only. Annex requires a panel. Permission and
+visibility gate action and outcome separately. Missing action is0; missing outcome
+is an empty list. Safe outcome is [occurred,monitored,risk], following BELIEF's
+no-op/censored/positive/negative distinctions. The original position observation
+schema stays unchanged. The same Current-lane experience freezes the observed
+panel; no new observer, event allocator, context store or semantic pipeline.
+
+At phase14 publish a transient packet [assembled-mitigation/0.1, observation,
+actual frozen experience, [safeAction,safeOutcome], producerEventId].
+Only an observed panel contributes. Reappraisal's existing source30/observe120
+receives this actual packet and names its producing event as causal parent.
+Its new safe observation tag assembled-reappraisal/0.3/observation has nine
+positions: the old eight plus packet-or-empty. The existing append-only sole
+knowledge owner root1000/field8 stores it at140, capacity16 unchanged.
+Packet-only observations are allowed. No learned initial state is admitted.
+
+Validate the packet's observer, panel observation support, actual time and context.
+Group retained packets by the actual perceived event file, using original
+groupPerceivedTrial; require exactly one Before/Motion/After with glyph1.
+The Motion's observed action selects baseline1 or mitigation2; the After's
+occurred=true AND monitored=true supplies its binary risk. Missing, ambiguous,
+denied, censored or no-op trials produce no sample. Do not infer action from
+dispatch ancestry, physical truth, source filenames or a convenient subset.
+All packets stay as evidence; derive means and supporting packet IDs from them.
+A new Before starts a different perceived event; no cross-trial stitching.
+
+Appraisal reads the same prior knowledge. Observed-empty catalogue still gives0;
+unknown catalogue is Unavailable. Observed options now use derived efficacy:
+missing estimate or baseline0 is Unavailable (unknown), no longer Deferred for
+this integrated component. Observed ineffective/harmful trials give known0.
+Other p/s/v operands and SplitExposure are unchanged. Append efficacy provenance
+[baselineMean-or-empty,mitigationMean-or-empty,efficacy-or-empty,trialSupports]
+to the existing report provenance (not its factor list or outer schema).
+This is mapped to the slot28 task's one declared conditional threat context;
+multi-threat generalization and original full factorial/response gates remain open.
+Learning is prior-only, append-only and whole-instant transactional. Restore after
+Motion must retain evidence grouping and reproduce later appraisal/recall exactly.
