@@ -1,0 +1,152 @@
+
+=== M64: types ===
+
+M64_CHECK types exit=0 seconds=16.55
+
+=== M64: mapped-memory ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledMemoryCorrespondence.test.ts (8 tests | 1 failed | 7 skipped) 50497ms
+   × M64 mapped MEMORY recency reinforcement K and causal counterfactuals 50496ms
+     → identity context missing for opportunity
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledMemoryCorrespondence.test.ts > M64 mapped MEMORY recency reinforcement K and causal counterfactuals
+SchedulerContractError: identity context missing for opportunity
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.compileCharacterInputs src/assembled/inputs.ts:90:74
+ ❯ Module.createCharacterRun src/assembled/character.ts:42:63
+ ❯ create src/test/assembledMemoryCorrespondence.test.ts:32:149
+ ❯ src/test/assembledMemoryCorrespondence.test.ts:103:13
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  18:02:28
+   Duration  54.47s (transform 2.37s, setup 0ms, collect 3.55s, tests 50.50s, environment 0ms, prepare 214ms)
+
+
+M64_CHECK mapped-memory exit=1 seconds=55.76
+
+=== M64: mapped-memory-context-bundle ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMemoryCorrespondence.test.ts > M64 mapped MEMORY recency reinforcement K and causal counterfactuals
+M64 first K2 {"at":"9","base":["1/5","1/4","1/3","1/2"],"pull":["0/1","0/1","0/1","0/1"],"score":["1/5","1/4","1/3","1/2"],"selected":[3,2],"history":[[],[],["9"],["9"]]}
+M64 TRACE {"at":"9","actualReads":4,"selected":["123","107"],"publicationIds":["124","125"],"writes":2}
+M64 ANCESTRY {"at":"9","acquisitions":["75","91","107","123"],"sourceObservationExperienceJoins":4}
+M64 WORKSPACE {"at":"9","count":2,"recallEvent":"29"}
+M64 later K2 {"at":"10","base":["1/6","1/5","3/4","5/6"],"pull":["0/1","0/1","0/1","0/1"],"score":["1/6","1/5","3/4","5/6"],"selected":[3,2],"history":[[],[],["9","10"],["9","10"]]}
+M64 TRACE {"at":"10","actualReads":4,"selected":["123","107"],"publicationIds":["134","135"],"writes":2}
+M64 TRACE {"at":"12","actualReads":4,"selected":["123","107"],"publicationIds":["138","139"],"writes":2}
+
+stdout | src/test/assembledMemoryCorrespondence.test.ts > M64 mapped MEMORY recency reinforcement K and causal counterfactuals
+M64 first K0 {"at":"9","base":["1/5","1/4","1/3","1/2"],"pull":["0/1","0/1","0/1","0/1"],"score":["1/5","1/4","1/3","1/2"],"selected":[],"history":[[],[],[],[]]}
+M64 TRACE {"at":"9","actualReads":4,"selected":[],"publicationIds":[],"writes":0}
+M64 ANCESTRY {"at":"9","acquisitions":["75","91","107","123"],"sourceObservationExperienceJoins":4}
+M64 WORKSPACE {"at":"9","count":0,"recallEvent":"29"}
+M64 later K0 {"at":"10","base":["1/6","1/5","1/4","1/3"],"pull":["0/1","0/1","0/1","0/1"],"score":["1/6","1/5","1/4","1/3"],"selected":[],"history":[[],[],[],[]]}
+M64 TRACE {"at":"10","actualReads":4,"selected":[],"publicationIds":[],"writes":0}
+M64 TRACE {"at":"12","actualReads":4,"selected":[],"publicationIds":[],"writes":0}
+
+stdout | src/test/assembledMemoryCorrespondence.test.ts > M64 mapped MEMORY recency reinforcement K and causal counterfactuals
+M64 first K1 {"at":"9","base":["1/5","1/4","1/3","1/2"],"pull":["0/1","0/1","0/1","0/1"],"score":["1/5","1/4","1/3","1/2"],"selected":[3],"history":[[],[],[],["9"]]}
+M64 TRACE {"at":"9","actualReads":4,"selected":["123"],"publicationIds":["124"],"writes":1}
+M64 ANCESTRY {"at":"9","acquisitions":["75","91","107","123"],"sourceObservationExperienceJoins":4}
+M64 WORKSPACE {"at":"9","count":1,"recallEvent":"29"}
+M64 later K1 {"at":"10","base":["1/6","1/5","1/4","5/6"],"pull":["0/1","0/1","0/1","0/1"],"score":["1/6","1/5","1/4","5/6"],"selected":[3],"history":[[],[],[],["9","10"]]}
+M64 TRACE {"at":"10","actualReads":4,"selected":["123"],"publicationIds":["133"],"writes":1}
+M64 TRACE {"at":"12","actualReads":4,"selected":["123"],"publicationIds":["135"],"writes":1}
+M64 MEMORY :2/:3/:4/:5/:7/:8 mapped comparisons PASS; extra actual self-cues13..16 retained; historical no-decay is component-only
+
+ ✓ src/test/assembledMemoryCorrespondence.test.ts (8 tests | 7 skipped) 93526ms
+   ✓ M64 mapped MEMORY recency reinforcement K and causal counterfactuals 93525ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  18:03:57
+   Duration  97.27s (transform 2.29s, setup 0ms, collect 3.44s, tests 93.53s, environment 0ms, prepare 99ms)
+
+
+M64_CHECK mapped-memory-context-bundle exit=0 seconds=97.94
+
+=== M64: recency-native-tie ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMemoryCorrespondence.test.ts > M64 encoding-time-only intervention and exact native reference-law tie
+M64 recent {"at":"6","base":["1/4","1/2"],"pull":["0/1","0/1"],"score":["1/4","1/2"],"selected":[1],"history":[[],["6"]]}
+M64 older {"at":"6","base":["1/4","1/3"],"pull":["0/1","0/1"],"score":["1/4","1/3"],"selected":[1],"history":[[],["6"]]}
+M64 TRACE {"at":"6","actualReads":2,"selected":["46"],"publicationIds":["47"],"writes":1}
+M64 TRACE {"at":"6","actualReads":2,"selected":["46"],"publicationIds":["47"],"writes":1}
+
+stdout | src/test/assembledMemoryCorrespondence.test.ts > M64 encoding-time-only intervention and exact native reference-law tie
+M64 native tie {"at":"8","base":["1/2","1/2"],"pull":["0/1","0/1"],"score":["1/2","1/2"],"selected":[0],"history":[["6","8"],[]]}
+M64 TRACE {"at":"8","actualReads":2,"selected":["15"],"publicationIds":["48"],"writes":1}
+M64 ANCESTRY {"at":"8","acquisitions":["15","47"],"sourceObservationExperienceJoins":2}
+M64 RECENCY/TIE PASS only encoding timestamp changed; fixed lambda1 actual native tie, canonical winner, zero unselected mutation
+
+ ✓ src/test/assembledMemoryCorrespondence.test.ts (8 tests | 7 skipped) 64694ms
+   ✓ M64 encoding-time-only intervention and exact native reference-law tie 64693ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  18:05:54
+   Duration  68.44s (transform 2.29s, setup 0ms, collect 3.44s, tests 64.69s, environment 0ms, prepare 99ms)
+
+
+M64_CHECK recency-native-tie exit=0 seconds=69.11
+
+=== M64: privacy-exact-continuation ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMemoryCorrespondence.test.ts > M64 retained evidence privacy and full-calendar exact persistence
+M64 ANCESTRY {"at":"12","acquisitions":["75","91","107","123"],"sourceObservationExperienceJoins":4}
+M64 PRIVACY/PERSISTENCE PASS physical truth differs, cognition/recall equal; exact repeat/restore8->101 all state/output/trace/save/identities; :6/:9
+
+ ✓ src/test/assembledMemoryCorrespondence.test.ts (8 tests | 7 skipped) 109245ms
+   ✓ M64 retained evidence privacy and full-calendar exact persistence 109244ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  18:07:33
+   Duration  113.00s (transform 2.29s, setup 0ms, collect 3.44s, tests 109.24s, environment 0ms, prepare 99ms)
+
+
+M64_CHECK privacy-exact-continuation exit=0 seconds=113.68
+
+=== M64: final-types ===
+src/test/fixtures/assembledMemoryCorrespondence.ts(28,198): error TS2339: Property 'payload' does not exist on type 'CanonicalValue'.
+  Property 'payload' does not exist on type 'false'.
+
+M64_CHECK final-types exit=2 seconds=16.18
+
+=== M64: final-types-narrowing-repaired ===
+
+M64_CHECK final-types-narrowing-repaired exit=0 seconds=16.13
+
+=== M64: boundary ===
+Reference boundary check passed.
+
+M64_CHECK boundary exit=0 seconds=2.59
+
+=== M64: research ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M64_CHECK research exit=0 seconds=3.6
+M64 integrity PASS:105 frozen HEAD and Git-normalized working blobs; historical source trees/tests unchanged; 2 source/test files; 2 evidence files; document caps. seconds=12.12
+M64_CHECK source-document-evidence-integrity exit=0 seconds=12.12
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+M64_CHECK staged-git-size exit=0 seconds=0.32
