@@ -269,3 +269,41 @@ base/candidate constraints, evidence support, dice and arbitration calibration.
 Likelihood and efficacy learning do not consume body relief. Older model versions
 retain their previous vulnerability semantics. Cognitive reinterpretation of the
 new physical-threat appraisal and full source/factorial coverage remain open.
+
+## 0.7 successor — chosen conditional threat context (M72, 2026-11-08)
+
+Rules/registry0.72 retains0.71 owners, capacity mapping and admitted source grammar.
+Reuse actual perceived-trial grouping: glyph0 denotes current/unprotected context,
+glyph2 denotes the alternative/protected condition of the same declared threat;
+glyph1 mitigation trials remain distinct. These are bounded apparatus labels as
+in REAPPRAISAL_PUBLIC_CONTRACT, not general semantic inference. At least one ordered,
+permitted, occurred and monitored Before/Motion/After gives each MeanAll estimate.
+No action identity is required for these context episodes. Ambiguous/incomplete
+groups contribute nothing. Existing knowledge rows retain all actual packets.
+
+For this version only, the reported interpretation means, BenefitRelative delta
+and operation eligibility use these two episode-derived means, not legacy condition
+reports. Preserve legacy observations as separate evidence; neither their condition
+number nor displayed Boolean assigns a physical-threat estimate. Catalogue/opportunity
+and completion permissions keep their existing perceived/operational meanings.
+
+Prior frame absent: use current mean and ordinary mitigation estimate. Prior frame
+present: use alternative mean and control0. The latter is explicitly hypothetical
+protected-context appraisal, not current physical protection; control0 avoids
+crediting the same hypothesized protection twice, following the predecessor.
+Severity, observed reserve vulnerability and actual grounded receiver are unchanged.
+Completion still requires the chosen cognitive action, actual attempt/execution,
+eligibility and non-NoReappraisal law. Apply140 affects only later appraisal50.
+No frame operation writes knowledge or fabricates an outcome.
+
+Append completed-report provenance [context label, both means, alternative supports],
+where label is CurrentUnprotected or HypotheticalProtected. Existing cue provenance
+retains current supports. Trace0.7 exposes prior frame, knowledge, completed appraisal,
+actual alternative observations in reason support and selected context. Stored frame
+shape/authority and sole knowledge owner remain unchanged; context identity is the
+versioned mapping, not a caller-supplied frame. Exact rollback/save covers both.
+
+Older versions retain their conditional/cue semantics. This joins the accepted
+conditional-frame operation with grounded physical-threat appraisal; it does not
+establish natural context discovery, actual protection, general planning, extinction,
+or full AFFECT qualification. SplitExposure/BenefitRelative/L4 OFF remain reference.
