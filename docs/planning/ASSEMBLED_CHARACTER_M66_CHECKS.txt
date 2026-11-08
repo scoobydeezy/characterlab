@@ -1,0 +1,204 @@
+
+=== M66: types-initial ===
+
+M66_CHECK types-initial exit=0 seconds=16.72
+
+=== M66: shared-source-connection ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledAffectSources.test.ts (8 tests | 1 failed | 7 skipped) 52508ms
+   × M66 live shared body and goal operands reach actual later retrieval scores 52508ms
+     → assembled trace requires exact model/run binding
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledAffectSources.test.ts > M66 live shared body and goal operands reach actual later retrieval scores
+SchedulerContractError: assembled trace requires exact model/run binding
+ ❯ Module.compileCharacterTraceBinding src/assembled/traceBinding.ts:25:1151
+
+ ❯ Module.createCharacterRuntime src/assembled/runtime.ts:101:14
+ ❯ Module.createCharacterRun src/assembled/character.ts:42:122
+ ❯ create src/test/assembledAffectSources.test.ts:30:133
+ ❯ src/test/assembledAffectSources.test.ts:62:14
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  21:49:46
+   Duration  56.30s (transform 2.33s, setup 0ms, collect 3.49s, tests 52.51s, environment 0ms, prepare 101ms)
+
+
+M66_CHECK shared-source-connection exit=1 seconds=56.99
+
+=== M66: shared-source-connection-after-registration ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledAffectSources.test.ts (8 tests | 1 failed | 7 skipped) 102913ms
+   × M66 live shared body and goal operands reach actual later retrieval scores 102912ms
+     → expected [ { kind: 'unsigned', value: 93n } ] to deep equally contain { kind: 'unsigned', value: 94n }
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledAffectSources.test.ts > M66 live shared body and goal operands reach actual later retrieval scores
+AssertionError: expected [ { kind: 'unsigned', value: 93n } ] to deep equally contain { kind: 'unsigned', value: 94n }
+
+- Expected: 
+Object {
+  "kind": "unsigned",
+  "value": 94n,
+}
+
++ Received: 
+Array [
+  Object {
+    "kind": "unsigned",
+    "value": 93n,
+  },
+]
+
+ ❯ check src/test/assembledAffectSources.test.ts:54:113
+     52|  expect(items(f(source,12n),'list')[2]).toEqual(p.provenance[1]);expec…
+     53|  const recalled=trace(r).find(t=>key(f(event(t),5n))===key(MEMORY_RECA…
+     54|  expect(f(recalled,6n)).toEqual(text(SHARED_AFFECT_MEMORY_VERSION));ex…
+       |                                                                                                                 ^
+     55|  expect(()=>unpackAffectCue(p.query[2],3n)).toThrow('prior');
+     56|  console.info('M66 LIVE '+json({factors:p.factors.map(frac),affect:ite…
+ ❯ src/test/assembledAffectSources.test.ts:63:11
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  21:51:42
+   Duration  106.66s (transform 2.30s, setup 0ms, collect 3.44s, tests 102.91s, environment 0ms, prepare 99ms)
+
+
+M66_CHECK shared-source-connection-after-registration exit=1 seconds=107.36
+
+LOCAL REPAIR: new body sample3 creates a body recall4 as well as social recall4. The trace assertion selected the first event by type/time and compared body parent93 to actual affect source94. Match the exact consumed cue payload as well; no production, scenario or gate change.
+
+=== M66: shared-source-connection-exact-recall ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectSources.test.ts > M66 live shared body and goal operands reach actual later retrieval scores
+M66 LIVE {"factors":["1/1","7/10","59/60","0/1"],"affect":["833/1200","833/1200"],"gain":"2033/1200","score":["7633/9600","5/6"],"selected":["2"],"source":"94"}
+M66 LIVE {"factors":["1/1","7/10","0/1","0/1"],"affect":["7/20","7/20"],"gain":"27/20","score":["361/480","5/6"],"selected":["2"],"source":"94"}
+M66 LIVE {"factors":["1/1","0/1","59/60","0/1"],"affect":["0/1","0/1"],"gain":"1/1","score":["17/24","5/6"],"selected":["2"],"source":"94"}
+
+stdout | src/test/assembledAffectSources.test.ts > M66 live shared body and goal operands reach actual later retrieval scores
+M66 LIVE {"factors":["1/1","7/10","59/60","0/1"],"affect":["833/1200","833/1200"],"gain":"1/1","score":["17/24","5/6"],"selected":["2"],"source":"94"}
+M66 LIVE {"factors":["1/1","7/10","0/1","0/1"],"affect":["7/20","7/20"],"gain":"1/1","score":["17/24","5/6"],"selected":["2"],"source":"94"}
+M66 CONNECTION PASS shared goal/body -> completed affect -> actual score; NoFeedback removes score contrast. Fixed winning memory remains B: null retained.
+
+ ✓ src/test/assembledAffectSources.test.ts (8 tests | 7 skipped) 141505ms
+   ✓ M66 live shared body and goal operands reach actual later retrieval scores 141504ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  21:54:26
+   Duration  145.28s (transform 2.30s, setup 0ms, collect 3.45s, tests 141.50s, environment 0ms, prepare 99ms)
+
+
+M66_CHECK shared-source-connection-exact-recall exit=0 seconds=145.96
+
+=== M66: status-privacy-controls ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectSources.test.ts > M66 unknown deferred denied-body and hidden-truth remain distinct
+M66 STATUS unknown {"status":"Unavailable","reason":"mitigation catalogue (unknown)","gain":"1/1"}
+
+stdout | src/test/assembledAffectSources.test.ts > M66 unknown deferred denied-body and hidden-truth remain distinct
+M66 STATUS present {"status":"Deferred","reason":"mitigation-efficacy (component not integrated)","gain":"1/1"}
+
+stdout | src/test/assembledAffectSources.test.ts > M66 unknown deferred denied-body and hidden-truth remain distinct
+M66 STATUS deniedBody {"status":"Unavailable","reason":"selected goal/body appraisal (unknown)","gain":"1/1"}
+
+stdout | src/test/assembledAffectSources.test.ts > M66 unknown deferred denied-body and hidden-truth remain distinct
+M66 LIVE {"factors":["1/1","7/10","59/60","0/1"],"affect":["833/1200","833/1200"],"gain":"2033/1200","score":["7633/9600","5/6"],"selected":["2"],"source":"94"}
+M66 STATUS hidden {"status":"Known","reason":"KnownEmptyMitigation","gain":"2033/1200"}
+
+ ✓ src/test/assembledAffectSources.test.ts (8 tests | 7 skipped) 137664ms
+   ✓ M66 unknown deferred denied-body and hidden-truth remain distinct 137664ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  21:57:37
+   Duration  141.44s (transform 2.29s, setup 0ms, collect 3.45s, tests 137.66s, environment 0ms, prepare 101ms)
+
+
+M66_CHECK status-privacy-controls exit=0 seconds=142.12
+
+=== M66: persistence-rollback-boundaries ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectSources.test.ts > M66 persistence rollback and version boundaries
+M66 LIVE {"factors":["1/1","7/10","59/60","0/1"],"affect":["833/1200","833/1200"],"gain":"2033/1200","score":["7633/9600","5/6"],"selected":["2"],"source":"94"}
+M66 LIVE {"factors":["1/1","7/10","59/60","0/1"],"affect":["833/1200","833/1200"],"gain":"2033/1200","score":["7633/9600","5/6"],"selected":["2"],"source":"94"}
+M66 LIVE {"factors":["1/1","7/10","59/60","0/1"],"affect":["833/1200","833/1200"],"gain":"2033/1200","score":["7633/9600","5/6"],"selected":["2"],"source":"94"}
+
+stdout | src/test/assembledAffectSources.test.ts > M66 persistence rollback and version boundaries
+M66 PERSISTENCE/BOUNDARIES PASS exact repeat/restore3->101; actual publication rollback; old/new evidence grammar separated; invalid catalogue rejected.
+
+ ✓ src/test/assembledAffectSources.test.ts (8 tests | 7 skipped) 127627ms
+   ✓ M66 persistence rollback and version boundaries 127627ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  22:00:11
+   Duration  131.41s (transform 2.29s, setup 0ms, collect 3.44s, tests 127.63s, environment 0ms, prepare 100ms)
+
+
+M66_CHECK persistence-rollback-boundaries exit=0 seconds=132.08
+
+=== M66: retained-M65-control ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectCorrespondence.test.ts > M65 live paired current-composition affect handoff and consumed judgment
+M65 PAIRED [{"gain":"2/1","scores":[{"at":"1","base":"7/12","pull":"1/8","score":"5/6"},{"at":"2","base":"5/6","pull":"0/1","score":"5/6"}],"winner":["1"],"mean":"1/1"},{"gain":"1/1","scores":[{"at":"1","base":"7/12","pull":"1/8","score":"17/24"},{"at":"2","base":"5/6","pull":"0/1","score":"5/6"}],"winner":["2"],"mean":"0/1"}]
+M65 ANCESTRY {"source":"87","recall":"124","carry":{"at":3,"status":"Known","exposure":"1/1","uncontrolled":"1/1"},"selected":{"kind":"typedIdentifier","namespaceId":"1125","payload":{"kind":"unsigned","value":"30"}}}
+M65 ANCESTRY {"source":"87","recall":"124","carry":{"at":3,"status":"Known","exposure":"1/1","uncontrolled":"1/1"},"selected":{"kind":"typedIdentifier","namespaceId":"1125","payload":{"kind":"unsigned","value":"54"}}}
+M65 CONNECTION PASS current acquisition history causes tie-mediated reference win; historical M43 strict score is not reproduced. No choice or whole-member claim.
+
+ ✓ src/test/assembledAffectCorrespondence.test.ts (8 tests | 7 skipped) 84857ms
+   ✓ M65 live paired current-composition affect handoff and consumed judgment 84856ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  22:03:10
+   Duration  88.61s (transform 2.28s, setup 0ms, collect 3.44s, tests 84.86s, environment 0ms, prepare 100ms)
+
+
+M66_CHECK retained-M65-control exit=0 seconds=89.29
+
+=== M66: types-final ===
+
+M66_CHECK types-final exit=0 seconds=16.13
+
+=== M66: reference-boundary ===
+Reference boundary check passed.
+
+M66_CHECK reference-boundary exit=0 seconds=2.61
+
+=== M66: research ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M66_CHECK research exit=0 seconds=3.52
+
+=== M66: preservation-and-caps ===
+M66 integrity PASS:105 frozen blobs, historical trees unchanged;11 planned source/test paths;1 versioned formal amendment; document/evidence caps.
+
+M66_CHECK preservation-and-caps exit=0 seconds=12.17
+
+=== M66: staged-size ===
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M66_CHECK staged-size exit=0 seconds=0.52
+
+Closing formatting note: git diff --check flags the retained Vitest failure labels "Expected:" and "Received:" because Vitest emits a trailing space. Raw log kept unchanged; source/document whitespace check excludes only this log. Staged size PASS.
