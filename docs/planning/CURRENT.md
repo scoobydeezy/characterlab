@@ -1,55 +1,43 @@
-# Current work — M65 AFFECT handoff replay (2026-11-07)
+# Current work — M65 AFFECT handoff replay complete (2026-11-07)
 
-The current character can derive affect and use it in later retrieval. M65 tests
-that connection in the full0.63 composition, and exposes missing original factors.
-This is a bounded member replay, not whole AFFECT acceptance or new apparatus.
-Base2e0e0f5a; reference laws/dice and L4 self-feedback OFF.
+Earlier affect changes the recalled memory and its actually consumed social
+appraisal in the current assembled character. Retained person belief is unchanged.
+Timing/privacy/access and exact continuation pass. No production mechanism added.
+[Result and requirement blockers](ASSEMBLED_CHARACTER_M65_RESULT.md).
 
-## Committed card — before implementation
-Capabilities: (1) prior derived affect changes an actually consumed recollection;
-(2) distinguish zero, unknown, too-late and hidden truth; (3) exact continuation.
-Requirements PHEN-AFFECT-001:6/:8/:9/:10/:11 subrequirements; :4/:5/:7 and
-remaining subrequirements stay open. :12/:13 standing constraints, RO-C3-011 retained.
-Original source: CAMPAIGN3_AFFECT_QUALIFICATION.md and pinned member13, not a new
-phenomenon. Existing M43 source/controls map its named later-cognition boundary;
-this is NOT original appraisal-feedback equivalence or the original48 factorial runs.
-Contracts unchanged: assembled0.63, affect-memory0.2, reappraisal0.1.
-Two new test files: fixtures/assembledAffectCorrespondence.ts and
-assembledAffectCorrespondence.test.ts. Zero production/formal edits.
+## Completed bounded package
+Plan a96000a9; base2e0e0f5a; rules/registry0.63 unchanged,44 slots.
+Reference gain2 selects A by canonical tie5/6; NoFeedback selects B5/6 over17/24.
+Actual workspace/social/joint appraisal consumes A versus B; contextual mean1/0.
+Global person belief stays1/2. Acquisition-history interaction declared in advance.
+Known zero and unknown are distinct. Late/current evidence cannot replace prior carry.
+Hidden truth changes source traces but not tested cognition.
+Denied cue, empty edge and K0 retain distinct access effects.
+Exact repeat/restore3->101 state/output/trace/save/run identity pass.
+One holder; first2 tasks social to observed coat stand-in; third physical;
+body30/rate10 sampled4, seed0. No authored learned state.
+Copied third-task dependency corrected to committed physical declaration;
+preliminary results retained, both affected groups rerun.
+Two test files, no production/formal changes or new apparatus.
 
-## Fixed scenario and comparison
-Use current44-slot source; source schedules from assembledAffectMemory.ts.
-One holder, observed coat stand-in; first2 tasks social to that observed person,
-third physical. A true1, B false2, neutral cue3; deliberate3/4; body30/rate10,
-sample4; learned risk1; no authored belief, memory, affect or autonomous partner.
-Map old social envelopes with current absent support/loss/evaluation annexes;
-identity/self/values contexts come from current admitted source at same opportunities.
-Retain current remaining owners, calibration and laws; K1, retention8, delay1,
-workspace5, fixed existing edge A->cue weight1/4. Seed0.
-Compare UncontrolledGain reference versus explicit NoFeedback negative control.
-Assert both live recall candidates, known prior affect and consumed social context
-before judging comparison. Full0.63 adds actual acquisition to presentation history:
-A base1/4+1/3=7/12, B1/3+1/2=5/6; pull1/8 versus0.
-Reference gain2 gives tied5/6 and canonical order resolves; NoFeedback gain1
-gives17/24 versus5/6. Require A versus B and consumed judgment1 versus0;
-global person belief remains1/2. Disclose tie-mediated change from M43 strict ranking.
-Zero/unknown/late/current/hidden controls preserve original inputs/meaning.
-Check actual carry event/read ancestry; current affect cannot replace earlier carry.
-No choice/RNG-coupling claim; no seed or calibration search if contrast fails.
+## Requirement limits and next dependency
+PHEN-AFFECT-001:6/:8/:10/:11 have bounded later-retrieval subrequirement evidence;
+:9 partial horizon only. No whole AFFECT key or member newly closed.
+M64 mapped MEMORY remains complete; M61 contextual pass/null retained.
+The completed-affect report still fixes severity/vulnerability/control=1/1/0.
+Shared joint appraisal derives goal/body operands separately and also fixes control0.
+Independent factors (:4/:5/:8/:10/:11) are blocked on this integration, not waived.
+Matched responses and command/extra-die/scalar controls (:6/:7/:9/:10) remain open.
+Next bounded package: reconcile/connect completed affect to legitimate shared
+goal/body sources and observed mitigation efficacy, versioning the changed handoff.
+Do this before DECISION breadth. No authored efficacy, raw-availability substitute,
+new affect store, graph framework, UI or autonomous peers.
+RO-C3-011 and original competitors/trace limitation remain preserved.
 
-## Source gaps already identified
-CompletedAffect fixes severity/vulnerability/control=1/1/0. jointAppraisal derives
-goal-distance severity and sensed reserve vulnerability separately; control is0.
-No assertion of independent-factor, perceived-efficacy or same-affect/action coverage.
-Record exact blocked IDs; missing integration is not external unknown evidence.
-Next dependency is factor-source reconciliation/connection before DECISION breadth.
-
-## Verification and done
-1800s cumulative,600s/command; one long job. <=2 source/test files; evidence<=20/5MiB.
-Three targeted groups: live paired connection; five timing/privacy controls;
-repeat and restore3->full calendar plus denied cue/empty edge/K0.
-Required types, reference boundary, research,105-file frozen closure and staged size.
-Historical/runtime/formal trees unchanged; no full frozen-runtime rerun warranted.
-Failures retained; ordinary setup/type repairs allowed, no comparative retuning.
-Done: declared gates pass, source differences classified, exact requirement blockers
-recorded in existing register; otherwise checkpoint failure without acceptance.
+## Guardrails
+One character/state/scheduler/trace/save; reference laws/dice, L4 self-feedback OFF.
+M65 budget1800s total/600s per command; final accounting in result, no extension.
+Two evidence files within20/5MiB. Historical105-file control closure unchanged.
+Passing checks ends verification. Next package needs a bounded committed card.
+All21 members/15 families/132 clauses remain required at final assembly acceptance.
+| Research obligations | **0 active / 18 conditional / 0 unowned** |
