@@ -41,8 +41,8 @@ Source unknown, known-empty, present/deferred and denied-body controls are disti
 Hidden risk truth preserves cognition. Report3, not current4, must supply recall4.
 
 ## Files, checks and stopping rule
-<=9 production/test files: model,inputs,control,reappraisal,execution,affectMemory,
-runtime and two new affectSources test/fixture files. No new registry slot.
+<=10 production/test files: model,inputs,control,state,reappraisal,execution,
+affectMemory,memory and two new affectSources test/fixture files. No new registry slot.
 Formal amendment and this card committed before code.
 Functional groups: main body/goal/gain controls; missing/deferred/privacy controls;
 exact repeat/restore3->101, publication-fault rollback, version/admission checks.
