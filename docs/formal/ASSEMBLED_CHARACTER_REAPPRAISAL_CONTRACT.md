@@ -239,3 +239,33 @@ basis includes the current-cue panel observation identities as well as existing
 efficacy/body evidence. No new ground, candidate, draw or emotion state.
 Exact rollback and continuation cover incomplete episodes through later choice.
 This restores one source correspondence, not the complete original qualification.
+
+## 0.6 successor — observed reserve fraction (M71, 2026-11-08)
+
+Rules/registry0.71 retains0.70 source grammar, slot28 and sole owners. Model
+compilation supplies the already-governed positive body capacity to reappraisal;
+no second calibration parameter or new state is admitted. Trace version0.6.
+
+The physical threat's vulnerability uses the actual selected sample461 in the
+joint appraisal, with its actual settled experience. Normalize interval462's
+upper endpoint by capacity; vulnerability=1-upper/capacity. Require a rational
+interval0<=lower<=upper<=capacity and positive capacity. Missing sample yields
+unknown, never physical-state fallback. Other joint task rows, need threshold
+and their deficit-pressure calculation retain their separate meanings.
+Upper endpoint is the inherited conservative body-appraisal projection, now with
+capacity units: an engineering convention, not a claim of exact physical reserve.
+
+Use whichever current/recalled context the existing shared workspace selected;
+retain its explicit MEMORY_CONTEXT label, sample and experience. A recalled
+context is never relabelled as a current observation. Original public current-
+context correspondence is only claimed where actual current evidence is consumed.
+
+Completed report outer grammar stays unchanged. After cue provenance append
+[capacity,observedFraction-or-empty,contextAnnotation-or-empty]. Original joint
+report remains nested, exposing its distinct deficit calculation. Existing three
+knowledge/frame/adoption reads remain; no body-anchor read is added to cognition.
+Existing grounded situation receiver consumes the completed U with the same
+base/candidate constraints, evidence support, dice and arbitration calibration.
+Likelihood and efficacy learning do not consume body relief. Older model versions
+retain their previous vulnerability semantics. Cognitive reinterpretation of the
+new physical-threat appraisal and full source/factorial coverage remain open.

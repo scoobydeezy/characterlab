@@ -1,69 +1,60 @@
-# Current work — M70 observed threat likelihood complete (2026-11-08)
+# Current work — M71 observed reserve fraction (2026-11-08)
 
-Connect a perceived threat episode to learned likelihood, appraisal and choice.
-Base0f070f82; M69 complete. Same character/state/scheduler and44-slot composition.
+Connect the existing body observation to AFFECT's reserve-fraction vulnerability.
+Base75f71358; M70 complete. One character/runtime/state, no new owner or channel.
 
-## Scope and authority
-PHEN-AFFECT-001 :4/:5/:8/:9/:10/:11 partial; all whole keys and12.5 clauses open.
-Original AFFECT_PUBLIC_CONTRACT/deriveAffectEvidence current-cue glyph0 supplies
-likelihood; glyph1 action trials supply mitigation. REFERENCE_MECHANISM_LEDGER
-AFFECT intake and RO-C3-011 retained. No new law, state owner or reduction.
-Amend existing reappraisal contract0.5; model/registry0.70 before implementation.
-Use the actual Current-lane panel/experience packets already stored by sole
-knowledge authority. Exact MeanAll of occurred+monitored glyph0 After outcomes,
-only with one ordered Before/Motion/After in the same perceived event file.
-Unknown Motion action is allowed for glyph0, never for glyph1 training.
-Missing/denied/ambiguous/censored/no-op episodes give no sample, not negative risk.
-Mapped physical threat p uses that estimate, never the authored conditional label
-or cognitive frame. Cognitive reappraisal's conditional means remain distinct.
-Include actual cue support in completed report/receiving trace; no fallback.
-Six intended production/test files: model.ts, mitigation.ts, reappraisal.ts,
-traceBinding.ts, fixtures/assembledThreatEvidence.ts, assembledThreatEvidence.test.ts.
-Budget12; one existing formal amendment. Historical versions unchanged.
+## Authority and scope
+PHEN-AFFECT-001 :4/:5/:6/:8/:9/:10/:11 partial; all whole keys/12.5 clauses open.
+AFFECT_PUBLIC_CONTRACT defines v=1-observed reserve fraction. M68 identified the
+threshold-deficit mismatch. REFERENCE_MECHANISM_LEDGER AFFECT intake retained.
+Version model/registry0.71 and existing reappraisal contract0.6 before coding.
+Normalize the actual selected body's interval upper endpoint by declared capacity.
+Upper endpoint retains the existing body-appraisal convention: engineering source
+projection, not an earned psychological law or exact knowledge of physical reserve.
+Do not change body sensing, quantization, need threshold or other task appraisals.
+No body anchor read by appraisal. Missing selected evidence remains unknown.
+Recalled body context retains its existing explicit label; this gate uses current
+evidence and does not qualify recalled context as current sensory evidence.
+Completed report appends capacity, observed fraction and actual context provenance.
+Old versions unchanged. Reinterpretation -> physical-threat meaning remains open.
+Five intended production/test files: model.ts, reappraisal.ts, traceBinding.ts,
+fixtures/assembledReserveAffect.ts, assembledReserveAffect.test.ts. Budget12.
 
-## Pinned scenario / comparison
-Reuse M69 ineffective training1..6, goal/route/body/calibration settings.
-One holder, three physical tasks; A threat/B obligation, third cognitive action.
-Social stand-ins perceived but no social task dependencies. Body30/rate10,
-samples9/10. A/B importance1, consequence1; distinct live action routes.
-Add glyph0 Before7/Motion8/After9 through existing panel channel, unknown action.
-Keep the legacy conditional risk report at7 positive in both arms.
-Only After9 observed risk differs true/false; physical risk follows it.
-Suppress the earlier deliberation9 in both arms so actual compared choice10
-follows learning140 at9. Keep other admitted inputs, source channels and seed0.
-No cognitive opportunity, learned starting state, new calibration or seed search.
-Pre-change state/output at8 equal. At10 require live factors, positive bases,
-two distinct competing candidates and actual decision-to-execution ancestry.
-Predict p1/0, other factors unchanged, nonzero/zero U, changed existing situation
-modifier and analytical execution probability. Enumerate production arbitration
-on captured contexts with paired uniform faces/fair ties; no native coupling claim.
-Original public source selector on semantically mapped actual packets must agree
-on current-cue proposition/outcome and exclude training; no identity-byte claim.
+## Pinned comparison and calibration
+Use M70 risk fixture: training1..6, current-cue7..9, positive conditional report7;
+three physical tasks, no social dependencies, perceived stand-ins, choice10.
+Initial body30, capacity100, rate10, width1, threshold60, samples9/10. A/B importance1,
+distinct routes; no cognitive opportunity. Adopted threat consequence1/3 in both arms.
+At9 deliver0 versus90 through the existing physical owner. Before9 state/output equal.
+At10 sensed intervals[0,1] versus[80,81] give fractions1/100 vs81/100,
+v99/100 vs19/100, p1,s1/3,c0, E=U199/600 vs119/600.
+The consequence is a legal scenario parameter pinned before execution. It exposes
+the inherited rounding boundary without changing reference calibration:
+bounded U199/799 vs119/719 -> situation+2 vs+1 (unit1/10, cap3).
+Same base1 -> bounded1/2 -> d6, standing0, threshold37/100.
+Predict Auto threat vs contested threat probability47/72; exact captured-context
+production arbitration over72 paired uniform face/tie cases must show a change.
+Both grounds/candidates/factors must be live, with actual decision/execution joins.
+Require both responses at fixed positive U in the contested arm. No seed search.
+Seed0, SplitExposure, relative efficacy, UncontrolledGain, L4 OFF.
+Original affectAppraisal receives semantically projected actual reserve fraction:
+require its v to agree. Its frozen severity domain excludes1/3; compare v only,
+not a fabricated original recipe or whole-model output equivalence.
 
-## Controls and checks
-Fixed controls: denied Motion; censored After; no-op After; hidden physical changes;
-legacy conditional false with same risky cue (cognitive evidence cannot replace p).
-Unknown action is already the main glyph0 case; retained glyph1 restrictions remain.
-Check original grouping, observed negative versus absent, support and producer joins.
-Exact repeat/restore8->101 across incomplete trial; actual learning-write rollback.
-Negative version bundle. Retain M69 connection and M67 source/privacy controls
-because shared grouping/receiving code changes. No unrelated full suite.
-Types/boundary/research;105 frozen blobs/historical sources; declared paths,
-document/evidence caps; stage then git-size. One long job;600s/command,
-1800s total including failures,20 evidence files/5MiB. No extensions by default.
-Done: observed episode -> own estimate -> actual appraisal/reasons/choice plus
-controls within budget. Vulnerability correspondence, full factorial and remaining
-counterfactuals remain explicit; no whole AFFECT acceptance.
+## Controls / verification / done
+Fixed controls: high delivery90.5 (distinct physical state, same visible bin);
+body permission denied; capacity200 with delivery90 (legal nondefault calibration);
+severity1 with both0/90 deliveries (expected+3 saturation, no choice change).
+Body relief must leave threat/mitigation knowledge equal. Source trace names actual
+body observation/experience and capacity, not hidden reserve; no added draws/ground.
+Exact repeat/restore9->101; inject after actual normalized appraisal and rollback10.
+Reject mixed version bundle; pure source validation rejects out-of-domain intervals.
+Retain M70 connection/controls and M66 live body-to-retrieval comparison because
+shared reappraisal source code changes. No unrelated full suite.
+Types/boundary/research;105 frozen blobs, historical trees, declared paths,
+document/evidence caps; stage then git-size. One long check;600s/command,
+1800s total including failures;20 evidence files/5MiB. No automatic extension.
+Done: observed fraction -> actual appraisal/reason/choice with named controls and
+preservation within budget. Broader factorial/reinterpretation/counterfactual gates
+remain open; no whole AFFECT acceptance or universal factorization claim.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
-
-Setup repair: removing deliberation9 also requires removing its identity/self/values
-context declarations (admission forbids orphan decision contexts). Initial admission
-failure retained; same choice10 comparison, laws and evidence remain unchanged.
-
-Review repair: original-selector mean assertion used Object.toString; replace with
-exact rational equality and rerun that affected connection. No simulation change.
-
-M70 connection/controls/exact continuation and retained M69/M67 comparisons PASS.
-See ASSEMBLED_CHARACTER_M70_RESULT.md. Final preservation checks recorded there.
-Next: remaining AFFECT source correspondence (body vulnerability and legitimate
-reinterpretation), then original counterfactuals/factorial. No unrelated breadth.
