@@ -1,7 +1,9 @@
-# Current work — M71 observed reserve fraction (2026-11-08)
+# Current work — M71 complete (2026-11-08)
 
-Connect the existing body observation to AFFECT's reserve-fraction vulnerability.
-Base75f71358; M70 complete. One character/runtime/state, no new owner or channel.
+Observed reserve now changes vulnerability, reasons and choice:25/72 paired winners.
+[Result](ASSEMBLED_CHARACTER_M71_RESULT.md); plan4937dd7f/base75f71358.
+Next: resolve chosen reinterpretation's physical-threat meaning before broader replay.
+One character/runtime/state, no new owner/channel; no whole AFFECT closure.
 
 ## Authority and scope
 PHEN-AFFECT-001 :4/:5/:6/:8/:9/:10/:11 partial; all whole keys/12.5 clauses open.

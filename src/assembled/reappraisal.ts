@@ -16,6 +16,7 @@ import {sid,pattern} from './skill';
 import {KNOWLEDGE_OWNER,type Strategy} from './strategy';
 import {importancePath,importanceValue,unit} from './priority';
 import type {compileCampaign2StateModel} from '../campaign2/stateModel';
+export const RESERVE_AFFECT_VERSION='assembled-character-reappraisal/0.6-candidate';
 export const OBSERVED_THREAT_VERSION='assembled-character-reappraisal/0.5-candidate';
 export const GROUNDED_AFFECT_VERSION='assembled-character-reappraisal/0.4-candidate';
 export const MITIGATION_VERSION='assembled-character-reappraisal/0.3-candidate',MITIGATION_OBS='assembled-reappraisal/0.3/observation';
@@ -26,12 +27,20 @@ export const REAPPRAISAL_SOURCE=sid(1001,'event/assembled-reappraisal-source'),R
 export const FRAME_OWNER=sid(1025,'authority/interpretive-frame');
 export const reappraisalPath=(C:CanonicalValue):StatePath=>({rootStateTypeId:1000n,fieldId:8n,selectors:[{kind:'mapKey',key:C}]}),framePath=(C:CanonicalValue):StatePath=>({...reappraisalPath(C),rootStateTypeId:1031n,fieldId:1n});
 const require=(b:boolean,s:string)=>{if(!b)invalidModel('reappraisal '+s);};
-export function compileReappraisal(v:CanonicalValue,routes:Strategy,sharedSources=false,mitigationEnabled=false,grounded=false,observedThreat=false){
+// The selected observation is the only body operand; capacity is governed metadata.
+export function observedReserveFraction(sample:CanonicalValue|undefined,capacity:Q){
+ require(capacity.compare(ZERO)>0,'positive reserve capacity');
+ if(sample===undefined||typeof sample==='boolean'||sample.kind!=='record'||sample.schema.typeId!==461n)return undefined;
+ const interval=rec(f(rec(sample,461n),5n),462n),lower=readQ(f(interval,1n)),upper=readQ(f(interval,2n));
+ require(lower.compare(ZERO)>=0&&lower.compare(upper)<=0&&upper.compare(capacity)<=0,'observed reserve interval');
+ return upper.divide(capacity);
+}
+export function compileReappraisal(v:CanonicalValue,routes:Strategy,sharedSources=false,mitigationEnabled=false,grounded=false,observedThreat=false,reserveCapacity?:Q){
  const a=items(v,'list');require(a.length===(grounded?6:4)&&txt(a[0])===REAPPRAISAL&&['BenefitRelative','KnowledgeOnly','NoReappraisal'].includes(txt(a[3])),'declaration');
  require(routes.some(r=>key(r.task)===key(a[1])&&r.plans.some(p=>key(p.actionId)===key(a[2]))),'task/action reference');
  const threat=grounded?{task:a[4],severity:unit(a[5])}:undefined;
  if(threat){const route=routes.find(r=>key(r.task)===key(threat.task));require(!!route&&key(threat.task)!==key(a[1])&&route.plans.every(p=>key(p.actionId)!==key(a[2])),'distinct threat task/action reference');}
- return {task:a[1],action:a[2],law:txt(a[3]),sharedSources,mitigationEnabled,threat,observedThreat};
+ return {task:a[1],action:a[2],law:txt(a[3]),sharedSources,mitigationEnabled,threat,observedThreat,reserveCapacity};
 }
 export type Reappraisal=ReturnType<typeof compileReappraisal>;
 export function reappraisalSource(v:CanonicalValue,sharedSources=false){const a=items(v,'list');require(a.length===(sharedSources?10:9)&&txt(a[0])===REAPPRAISAL&&uint(a[1])<=2n&&uint(a[5])<=2n&&[2,3,4,6,7,8].every(i=>typeof a[i]==='boolean'),'source grammar');const mitigation=sharedSources?items(a[9],'list'):[unsigned(0),false];require(mitigation.length===2&&uint(mitigation[0])<=2n&&typeof mitigation[1]==='boolean','mitigation catalogue');return {condition:uint(a[1]),physical:a[2],display:a[3]===true,observed:a[4]===true,catalogue:uint(a[5]),catalogueObserved:a[6]===true,opportunity:a[7]===true,complete:a[8]===true,mitigation:mitigation[1]?uint(mitigation[0]):0n};}
@@ -49,7 +58,7 @@ export function createReappraisalExecution(config:Reappraisal,C:CanonicalValue,s
  const pending=new Map<string,ScheduledEvent>();let unbound=0;
  const fail=(s:string):never=>{throw new SchedulerContractError('INPUT_NOT_ADMITTED','reappraisal '+s);};
  const read=(state:AuthoritativeState,path:StatePath)=>{const v=stateModel.read(state,path);return {...v,record:{accessorId:sid(1028,'accessor/reappraisal'),path,presence:v.presence,value:v.value,derivedSources:[]} as ActualReadRecord};};
- const trace=(e:ScheduledEvent,input:CanonicalValue,output:CanonicalValue,reads:readonly ActualReadRecord[]=[],children:readonly ScheduledEvent[]=[],patch:StatePatch={operations:[]},diffs:ReturnType<typeof stateModel.applyPatch>['diffs']=[])=>traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model,runIdentity:run,event:e,seamId:sid(1036,'seam/assembled-reappraisal'),seamVersion:config.observedThreat?OBSERVED_THREAT_VERSION:config.threat?GROUNDED_AFFECT_VERSION:config.mitigationEnabled?MITIGATION_VERSION:config.sharedSources?SHARED_AFFECT_VERSION:REAPPRAISAL_VERSION,recordKind:e.eventTypeId,subjectIds:[C as Extract<CanonicalValue,{kind:'typedIdentifier'}>],sourceRecordIds:app?.sources.map(v=>v as Extract<CanonicalValue,{kind:'typedIdentifier'}>)??[],registeredReadDomain:reads.map(r=>pattern(r.path)),actualReadRecords:reads,inputProjection:input,outputProjection:output,randomDrawRecords:[],quantizationOperations:[],statePatch:patch,structuralMutationDiffs:diffs,emittedEvents:children,invariantResults:[]});
+ const trace=(e:ScheduledEvent,input:CanonicalValue,output:CanonicalValue,reads:readonly ActualReadRecord[]=[],children:readonly ScheduledEvent[]=[],patch:StatePatch={operations:[]},diffs:ReturnType<typeof stateModel.applyPatch>['diffs']=[])=>traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model,runIdentity:run,event:e,seamId:sid(1036,'seam/assembled-reappraisal'),seamVersion:config.reserveCapacity?RESERVE_AFFECT_VERSION:config.observedThreat?OBSERVED_THREAT_VERSION:config.threat?GROUNDED_AFFECT_VERSION:config.mitigationEnabled?MITIGATION_VERSION:config.sharedSources?SHARED_AFFECT_VERSION:REAPPRAISAL_VERSION,recordKind:e.eventTypeId,subjectIds:[C as Extract<CanonicalValue,{kind:'typedIdentifier'}>],sourceRecordIds:app?.sources.map(v=>v as Extract<CanonicalValue,{kind:'typedIdentifier'}>)??[],registeredReadDomain:reads.map(r=>pattern(r.path)),actualReadRecords:reads,inputProjection:input,outputProjection:output,randomDrawRecords:[],quantizationOperations:[],statePatch:patch,structuralMutationDiffs:diffs,emittedEvents:children,invariantResults:[]});
  const plan=(parent:ScheduledEvent,emissions:EventEmission[])=>{let bound=false;unbound++;return {emissions,bind(children:readonly ScheduledEvent[]){if(bound||children.length!==emissions.length)fail('child multiplicity');for(const [i,c]of children.entries()){const e=emissions[i];if(c.eventId===parent.eventId||c.eventSequence<=parent.eventSequence||c.dueAt!==e.dueAt||c.phase!==e.phase||key(c.eventTypeId)!==key(e.eventTypeId)||key(c.payload)!==key(e.payload)||key(c.dependencies)!==key(e.dependencies)||key(list(c.causalParentEventIds.map(unsigned)))!==key(list([...new Set([parent.eventId,...(e.additionalCausalParentEventIds??[])])].sort((a,b)=>a<b?-1:1).map(unsigned)))||pending.has(finger(c)))fail('child association');pending.set(finger(c),structuredClone(c));}bound=true;unbound--;}};};
  const emit=(e:ScheduledEvent,type:CanonicalValue,phase:bigint,payload:CanonicalValue):EventEmission=>({dueAt:e.dueAt,phase,eventTypeId:type as Extract<CanonicalValue,{kind:'typedIdentifier'}>,payload,dependencies:list([])});
  const action=(attempt:CanonicalValue)=>{const p=rec(f(rec(attempt,432n),2n),431n),i=rec(f(p,2n),425n),resolution=rec(f(i,2n),409n),d=rec(f(rec(f(resolution,4n),419n),2n),420n);return f(rec(f(d,1n),395n),2n);};
@@ -70,12 +79,14 @@ export function createReappraisalExecution(config:Reappraisal,C:CanonicalValue,s
  if(!active||appraised||e.phase!==50n||e.dueAt!==at)fail('appraisal lifecycle');appraised=true;
  const knowledge=read(s,kp),frame=read(s,fp),adoption=config.threat?read(s,{...importancePath(config.threat.task),fieldId:1n}):undefined;app=reappraisalKnowledge(knowledge.value,C,config.sharedSources,config.mitigationEnabled,config.observedThreat);const fr=reappraisalFrame(frame.value);
  if(app.at>=at||fr.at>=at)fail('prior-only appraisal');
+ let reserveFraction:Q|undefined;
  const likelihood=config.observedThreat?app.efficacy?.cue?.mean:app.means[fr.at?1:0];let severity:Q|undefined=ONE,vulnerability:Q|undefined=ONE,control:Q|undefined=ZERO,reason='LegacyFixedFactors';
  if(config.sharedSources){
   if(!joint)fail('shared affect requires actual joint appraisal');
   const j=items(joint!,'list');if(txt(j[0])!==JOINT_APPRAISAL)fail('shared affect joint tag');
   const row=items(j[4],'list').map(v=>items(v,'list')).find(v=>key(v[0])===key(config.threat?.task??config.task));
   severity=row?.length===5?(config.threat?(adoption?.value&&uint(f(rec(adoption.value,372n),1n))===1n?config.threat.severity:undefined):readQ(row[1])):undefined;vulnerability=row?.length===5?readQ(row[2]):undefined;
+  if(config.reserveCapacity){reserveFraction=observedReserveFraction(j[2],config.reserveCapacity);vulnerability=reserveFraction?ONE.subtract(reserveFraction):undefined;}
   control=app.mitigation===1n?ZERO:app.mitigation===2n&&config.mitigationEnabled?app.efficacy?.control:undefined;
   reason=app.mitigation===2n?(config.mitigationEnabled?(control===undefined?'mitigation-efficacy (unknown)':'ObservedMitigationEfficacy'):'mitigation-efficacy (component not integrated)'):app.mitigation===0n?'mitigation catalogue (unknown)':likelihood===undefined?'likelihood (unknown)':severity===undefined||vulnerability===undefined?'selected goal/body appraisal (unknown)':'KnownEmptyMitigation';
  }
@@ -83,7 +94,7 @@ export function createReappraisalExecution(config:Reappraisal,C:CanonicalValue,s
  const projected=compareAffectFactors({likelihood,severity,vulnerability,control},'SplitExposure');
  const status=config.sharedSources&&!config.mitigationEnabled&&app.mitigation===2n?'Deferred':projected.status;
  eligible=app.catalogue===2n&&app.means.every(v=>v!==undefined)&&!!setting&&reappraisalSource(setting.payload,config.sharedSources).opportunity;
- const report=list([text(config.sharedSources?SHARED_AFFECT_APPRAISAL:REAPPRAISAL_APPRAISAL),unsigned(at),list(app.means.map(v=>v?qValue(v):list([]))),unsigned(app.catalogue),frame.value??list([]),text(status),list(status==='Known'&&projected.status==='Known'?projected.coordinates.map(qValue):[]),...(config.sharedSources?[list([config.threat?.task??config.task,joint!,unsigned(app.mitigation),text(reason),list([likelihood,severity,vulnerability,control].map(v=>v?qValue(v):list([]))),...(config.mitigationEnabled?[app.efficacy!.provenance]:[]),...(config.threat?[list([adoption?.value??list([]),qValue(config.threat.severity)])]:[]),...(config.observedThreat?[app.efficacy!.cue!.provenance]:[])])]:[])]);
+ const report=list([text(config.sharedSources?SHARED_AFFECT_APPRAISAL:REAPPRAISAL_APPRAISAL),unsigned(at),list(app.means.map(v=>v?qValue(v):list([]))),unsigned(app.catalogue),frame.value??list([]),text(status),list(status==='Known'&&projected.status==='Known'?projected.coordinates.map(qValue):[]),...(config.sharedSources?[list([config.threat?.task??config.task,joint!,unsigned(app.mitigation),text(reason),list([likelihood,severity,vulnerability,control].map(v=>v?qValue(v):list([]))),...(config.mitigationEnabled?[app.efficacy!.provenance]:[]),...(config.threat?[list([adoption?.value??list([]),qValue(config.threat.severity)])]:[]),...(config.observedThreat?[app.efficacy!.cue!.provenance]:[]),...(config.reserveCapacity?[list([qValue(config.reserveCapacity),reserveFraction?qValue(reserveFraction):list([]),items(joint!,'list')[5]??list([])])]:[])])]:[])]);
  completed={report,event:e.eventId};return {report,trace:()=>trace(e,list([knowledge.value??list([]),frame.value??list([]),...(config.sharedSources?[joint!]:[])]),report,[knowledge.record,frame.record,...(adoption?[adoption.record]:[])])};
  },
  concern(e:ScheduledEvent,value:CanonicalValue){
