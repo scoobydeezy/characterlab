@@ -1,43 +1,55 @@
-# Current work — M65 AFFECT handoff replay complete (2026-11-07)
+# Current work — M66 shared goal/body affect sources (2026-11-07)
 
-Earlier affect changes the recalled memory and its actually consumed social
-appraisal in the current assembled character. Retained person belief is unchanged.
-Timing/privacy/access and exact continuation pass. No production mechanism added.
-[Result and requirement blockers](ASSEMBLED_CHARACTER_M65_RESULT.md).
+Connect completed affect to the actual selected-task appraisal and sensed body,
+then prove that its later retrieval consumer uses the changed value. Base18c3304c.
+Three capabilities: shared goal/body operands; observed mitigation-catalogue status;
+strictly later retrieval consumption with explicit unknown versus deferred status.
 
-## Completed bounded package
-Plan a96000a9; base2e0e0f5a; rules/registry0.63 unchanged,44 slots.
-Reference gain2 selects A by canonical tie5/6; NoFeedback selects B5/6 over17/24.
-Actual workspace/social/joint appraisal consumes A versus B; contextual mean1/0.
-Global person belief stays1/2. Acquisition-history interaction declared in advance.
-Known zero and unknown are distinct. Late/current evidence cannot replace prior carry.
-Hidden truth changes source traces but not tested cognition.
-Denied cue, empty edge and K0 retain distinct access effects.
-Exact repeat/restore3->101 state/output/trace/save/run identity pass.
-One holder; first2 tasks social to observed coat stand-in; third physical;
-body30/rate10 sampled4, seed0. No authored learned state.
-Copied third-task dependency corrected to committed physical declaration;
-preliminary results retained, both affected groups rerun.
-Two test files, no production/formal changes or new apparatus.
+## Scope and contract before code
+Rules/registry0.66, same44 slots; older0.63 and M65 remain executable controls.
+Version reappraisal/0.2 and affect-memory/0.3. No new owner/store/factory/RNG ledger.
+PHEN-AFFECT-001:4/:5/:6/:8/:10/:11 partial source/consumer requirements; no full key closure.
+MEC-012..019/RO-C3-011 retained. SplitExposure/reference dice and L4 OFF unchanged.
+Existing conditional distance/10 is the shared task severity interpretation;
+body vulnerability uses the already-admitted interval/threshold calculation.
+This is not original AFFECT consequence-valuation equivalence. Do not blend laws.
+Reappraisal's interpretation catalogue is NOT mitigation efficacy or availability.
+Add a separate observed mitigation-catalogue annex to its existing safe source:
+0 unspecified,1 known empty,2 options present, plus independent visibility.
+Learn the admitted report through existing knowledge owner; never accept efficacy.
+Known empty permits control0. Missing report is Unavailable; options present is
+Deferred (mitigation efficacy not integrated), never a fabricated0/1 estimate.
+Observed baseline/mitigation outcome learning is the immediate next dependency;
+no DECISION/UI/peer breadth between these bounded packages.
 
-## Requirement limits and next dependency
-PHEN-AFFECT-001:6/:8/:10/:11 have bounded later-retrieval subrequirement evidence;
-:9 partial horizon only. No whole AFFECT key or member newly closed.
-M64 mapped MEMORY remains complete; M61 contextual pass/null retained.
-The completed-affect report still fixes severity/vulnerability/control=1/1/0.
-Shared joint appraisal derives goal/body operands separately and also fixes control0.
-Independent factors (:4/:5/:8/:10/:11) are blocked on this integration, not waived.
-Matched responses and command/extra-die/scalar controls (:6/:7/:9/:10) remain open.
-Next bounded package: reconcile/connect completed affect to legitimate shared
-goal/body sources and observed mitigation efficacy, versioning the changed handoff.
-Do this before DECISION breadth. No authored efficacy, raw-availability substitute,
-new affect store, graph framework, UI or autonomous peers.
-RO-C3-011 and original competitors/trace limitation remain preserved.
+## Predeclared scenario and observable gate
+Use M65 full composition, seed0, edge1/4,K1,delay1,retention8,workspace5.
+Two social tasks to perceived coat stand-in; mapped reappraisal task is third/physical.
+Its start becomes2; narrow target[10,10] versus wide[0,10].
+Original probe1 supplies forecast; original risk display1 supplies learned likelihood1.
+Add body sample3 before appraisal3; original sample4 stays. Body rate10, initial
+reserve30 versus100. Same A true1/B false2/neutral cue3; no fabricated memory.
+Catalogue annex1/visible at source1; no reappraisal operation opportunity.
+Require live selected third-task severity and body operands in both main arms.
+Exact affect E=p*s*(1+v)/2,U=E; exact recall gain1+prior U and score=base+gain*pull.
+Low body versus high body must change vulnerability, affect and actual A score;
+wide goal must make severity/affect0 while leaving learned likelihood unchanged.
+Expect B remains selected at fixed calibration; retain that null. No winner/choice
+requirement, no threshold/edge/seed search. This proves a consumed score effect.
+NoFeedback pair must erase the score effect despite different actual affect.
+Source unknown, known-empty, present/deferred and denied-body controls are distinct.
+Hidden risk truth preserves cognition. Report3, not current4, must supply recall4.
 
-## Guardrails
-One character/state/scheduler/trace/save; reference laws/dice, L4 self-feedback OFF.
-M65 budget1800s total/600s per command; final accounting in result, no extension.
-Two evidence files within20/5MiB. Historical105-file control closure unchanged.
-Passing checks ends verification. Next package needs a bounded committed card.
-All21 members/15 families/132 clauses remain required at final assembly acceptance.
-| Research obligations | **0 active / 18 conditional / 0 unowned** |
+## Files, checks and stopping rule
+<=9 production/test files: model,inputs,control,reappraisal,execution,affectMemory,
+runtime and two new affectSources test/fixture files. No new registry slot.
+Formal amendment and this card committed before code.
+Functional groups: main body/goal/gain controls; missing/deferred/privacy controls;
+exact repeat/restore3->101, publication-fault rollback, version/admission checks.
+Retained M65 paired witness checks the changed shared files' old-version behavior.
+Types, boundary, research,105 frozen blobs, document/evidence caps and staged size.
+1800s total/600s per command, one long job; <=20 evidence files/5MiB.
+No full frozen-control suite: historical dependencies/entry remain unchanged.
+Done only when live exact source->report->recall gates and controls pass, blockers
+remain explicit in the one register, with failures retained. Ordinary repairs allowed;
+comparison/law/budget changes require amendment. No unrelated breadth.

@@ -67,3 +67,54 @@ BRIEF-12.5-7 and12.5-1 receive bounded assembled witnesses only; PHEN-AFFECT-001
 relief-not-evidence and:11 trace subrequirements are exercised, not whole-member closure.
 No general emotional syndrome, persistence feedback, affect retrieval/salience,
 embarrassment, autonomous partner or final132-clause acceptance is implied.
+
+## Successor — shared sources /0.2 (M66, 2026-11-07)
+
+Rules/registry0.66 retain44 slots and0.63 acquisition semantics. Old bundles retain
+their exact source grammar, report, state grammar and fixed-factor behavior.
+New source appends [mitigationCatalogue,visible] as tenth field: enum0..2/boolean.
+This is an observer-safe report about physical mitigation options, distinct from
+the original interpretation catalogue; physical truth remains diagnostic only.
+Source30 -> observe120 -> knowledge140 ordering/authentication stays unchanged.
+New observations use tag assembled-reappraisal/0.2/observation and an eighth
+catalogue field. Invisible/unspecified gives0; latest nonzero observed value wins.
+An annex-only observation is allowed. Existing sole root1000/field8 knowledge
+owner appends it; no new state path or learned initial value. Old models reject it.
+Frame/means keep original semantics and cannot stand in for mitigation trials.
+
+Appraisal50 on0.66 runs after the same event has produced its shared joint report.
+Use the slot28 mapped task's actual joint severity and vulnerability (selected
+forecast distance/10, sensed or recalled interval deficit), plus the original
+prior learned likelihood/frame. Missing row/operand is Unavailable, not zero.
+The task's existing selection/goal criterion is authoritative; no independent
+severity knob or physical-state read enters the receiver. This preserves the
+interaction contract's conditional task interpretation, an engineering default,
+not a proof of original AFFECT threat-consequence-valuation equivalence.
+
+Mitigation catalogue1 means observed known-empty and control0, following original
+AFFECT availability semantics. Catalogue0 is Unavailable (unknown). Catalogue2
+requires learned efficacy; until that producer is integrated, report Deferred
+(component not integrated), naming mitigation-efficacy. Do not use the alternative
+interpretation mean, route availability or relief as efficacy. No available-options
+claim can close before observed baseline/mitigation comparisons are connected.
+If known operands exist and control is known, use unchanged SplitExposure.
+No new affect state, motivation, die, action command or belief feedback is added.
+
+Report tag assembled-reappraisal/0.2/appraisal keeps the first seven positions
+and appends [mappedTask,jointReport,mitigationCatalogue,reason,[p,s,v,c]].
+Optional factors use empty lists. Status Known/Unavailable/Deferred; only Known
+has two coordinates. Reason distinguishes unknown versus missing component.
+Trace version assembled-character-reappraisal/0.2-candidate records the exact
+joint producer output in its input, alongside actual prior knowledge/frame reads.
+The nested joint report preserves original task assessment, observation and
+experience identities; no reconstructed or diagnostic current-output carry.
+
+The recall handoff names assembled-character-affect-memory/0.3-candidate.
+Its cue retains the exact prior report and event, including Deferred status.
+Known uses1+U (or explicit NoFeedback1). Unavailable/Deferred both give neutral
+gain1, but remain distinct in the diagnostic carry and source report; kernel-only
+projection maps Deferred to unavailable arithmetic without relabelling evidence.
+No fallback to the old constant factors or earlier known report.
+Old seven-field reports and0.2 acquisition ranking remain unchanged controls.
+Whole-instant rollback and exact continuation include the extended safe evidence.
+M66 card pins finite comparisons; original factorial/response/efficacy work remains.
