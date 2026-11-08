@@ -189,7 +189,7 @@ The compatible completed report retains its outer tag/shape; provenance names
 threatTask, original joint report, factors/efficacy and an appended adoption/
 valuation pair. Trace adds the actual adoption read. Seam version is0.4.
 
-At concern55 replace only the mapped threat's response with completed U when
+At concern50 (after appraisal by event dependency) replace only the mapped threat's response with completed U when
 Known, otherwise Unavailable. Do not multiply by the older task-distance gain.
 The original joint report remains visible as a distinct distance/body assessment.
 At raw80 retain only a situation modifier supported by an existing positive base

@@ -1,4 +1,4 @@
-# Current work — M69 grounded affect (2026-11-08)
+# Current work — M69 grounded affect complete (2026-11-08)
 
 Complete the missing governed consequence -> affect -> grounded reason connection.
 Base d6814205. Same single character/runtime/state; no new owner or UI.
@@ -53,3 +53,18 @@ source paths, document/evidence caps, staged-size. One long job;600s/command,
 Done: governed source and actual reason/choice consumption with controls, within
 budget. Any remaining original factorial/source-domain gates remain OPEN.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
+
+Pre-execution correction: inherited concern runs at50 after appraisal dependency,
+not55; retain that order. No phase-registry change.
+
+Setup repair after retained failure: both route-zero selections pointed to actionA.
+Select A/B routes by their declared action identities, as the competing-action
+card requires; add distinct-candidate liveness. No law, goal, seed or gate change.
+
+Proof repair: Auto uses its chosen response with probability1, not the underlying
+dice probability. Fixed nonzero affect means the full vector; effective arm has
+exposure119/120, U0 and two responses. Ineffective arm stays Auto; record that limit.
+
+M69 connection/controls/continuation, M68/M41 and final preservation checks PASS.
+See ASSEMBLED_CHARACTER_M69_RESULT.md. Next retain the same AFFECT member and
+address remaining source-domain/counterfactual gates; no unrelated breadth.

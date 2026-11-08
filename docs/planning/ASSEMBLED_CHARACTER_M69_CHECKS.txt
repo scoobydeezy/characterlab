@@ -1,0 +1,240 @@
+
+=== M69: initial types ===
+
+M69_CHECK initial types exit=0 seconds=16.16
+
+=== M69: grounded connection ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledGroundedAffect.test.ts > M69 connection: governed consequence and observed efficacy reach grounded choice
+M69 CALIBRATION {"threshold":"37/100","situationUnit":"1/10","situationCap":"3"}
+
+ ❯ src/test/assembledGroundedAffect.test.ts (8 tests | 1 failed | 7 skipped) 94260ms
+   × M69 connection: governed consequence and observed efficacy reach grounded choice 94259ms
+     → expected 0 to be greater than 0
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledGroundedAffect.test.ts > M69 connection: governed consequence and observed efficacy reach grounded choice
+AssertionError: expected 0 to be greater than 0
+ ❯ exactProof src/test/assembledGroundedAffect.test.ts:71:18
+
+ ❯ src/test/assembledGroundedAffect.test.ts:85:2
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  08:56:30
+   Duration  98.05s (transform 2.31s, setup 0ms, collect 3.47s, tests 94.26s, environment 0ms, prepare 100ms)
+
+
+M69_CHECK grounded connection exit=1 seconds=98.75
+
+=== M69: unchanged pair arbitration diagnostic ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledGroundedAffect.test.ts > M69 connection: governed consequence and observed efficacy reach grounded choice
+M69 CALIBRATION {"threshold":"37/100","situationUnit":"1/10","situationCap":"3"}
+M69 DIAGNOSTIC {"changed":0,"cases":"72","counts":["72","72"],"modes":["1","1"],"probabilities":[["1/1"],["1/1"]],"nuclei":[[{"roles":["1/2","0/1","119/239"],"die":"6","standing":"0","situation":"3"},{"roles":["1/2","0/1","0/1"],"die":"6","standing":"0","situation":"0"}],[{"roles":["1/2","0/1","0/1"],"die":"6","standing":"0","situation":"0"},{"roles":["1/2","0/1","0/1"],"die":"6","standing":"0","situation":"0"}]]}
+
+ ❯ src/test/assembledGroundedAffect.test.ts (8 tests | 1 failed | 7 skipped) 95279ms
+   × M69 connection: governed consequence and observed efficacy reach grounded choice 95279ms
+     → expected 0 to be greater than 0
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledGroundedAffect.test.ts > M69 connection: governed consequence and observed efficacy reach grounded choice
+AssertionError: expected 0 to be greater than 0
+ ❯ exactProof src/test/assembledGroundedAffect.test.ts:72:18
+
+ ❯ src/test/assembledGroundedAffect.test.ts:86:2
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  08:58:51
+   Duration  99.04s (transform 2.30s, setup 0ms, collect 3.45s, tests 95.28s, environment 0ms, prepare 98ms)
+
+
+M69_CHECK unchanged pair arbitration diagnostic exit=1 seconds=99.74
+
+=== M69: connection after actual-route setup repair ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledGroundedAffect.test.ts > M69 connection: governed consequence and observed efficacy reach grounded choice
+M69 CALIBRATION {"threshold":"37/100","situationUnit":"1/10","situationCap":"3"}
+
+stdout | src/test/assembledGroundedAffect.test.ts > M69 connection: governed consequence and observed efficacy reach grounded choice
+M69 DIAGNOSTIC {"changed":36,"cases":"72","counts":["72","36"],"modes":["1","3"],"probabilities":[["7/8","1/8"],["1/2","1/2"]],"nuclei":[[{"roles":["1/2","0/1","119/239"],"die":"6","standing":"0","situation":"3"},{"roles":["1/2","0/1","0/1"],"die":"6","standing":"0","situation":"0"}],[{"roles":["1/2","0/1","0/1"],"die":"6","standing":"0","situation":"0"},{"roles":["1/2","0/1","0/1"],"die":"6","standing":"0","situation":"0"}]]}
+
+ ❯ src/test/assembledGroundedAffect.test.ts (8 tests | 1 failed | 7 skipped) 97015ms
+   × M69 connection: governed consequence and observed efficacy reach grounded choice 97015ms
+     → two responses under same nonzero affect: expected false to be true // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledGroundedAffect.test.ts > M69 connection: governed consequence and observed efficacy reach grounded choice
+AssertionError: two responses under same nonzero affect: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ exactProof src/test/assembledGroundedAffect.test.ts:72:155
+
+ ❯ src/test/assembledGroundedAffect.test.ts:86:2
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  09:01:29
+   Duration  100.80s (transform 2.31s, setup 0ms, collect 3.48s, tests 97.02s, environment 0ms, prepare 98ms)
+
+
+M69_CHECK connection after actual-route setup repair exit=1 seconds=101.5
+
+=== M69: fixed comparison with actual Auto policy accounting ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledGroundedAffect.test.ts > M69 connection: governed consequence and observed efficacy reach grounded choice
+M69 CALIBRATION {"threshold":"37/100","situationUnit":"1/10","situationCap":"3"}
+
+stdout | src/test/assembledGroundedAffect.test.ts > M69 connection: governed consequence and observed efficacy reach grounded choice
+M69 DIAGNOSTIC {"changed":36,"cases":"72","counts":["72","36"],"modes":["1","3"],"probabilities":[["7/8","1/8"],["1/2","1/2"]],"nuclei":[[{"roles":["1/2","0/1","119/239"],"die":"6","standing":"0","situation":"3"},{"roles":["1/2","0/1","0/1"],"die":"6","standing":"0","situation":"0"}],[{"roles":["1/2","0/1","0/1"],"die":"6","standing":"0","situation":"0"},{"roles":["1/2","0/1","0/1"],"die":"6","standing":"0","situation":"0"}]]}
+M69 EXACT {"cases":"72","changed":36,"firstCandidateWins":["72","36"],"probabilities":["72/72","36/72"],"scope":"captured actual contexts; paired uniform faces and fair ties; no seed-pair claim"}
+M69 CONNECTION PASS actual valuation/learned efficacy -> completed affect -> existing situation role -> compiled reason -> choice distribution -> execution.
+
+ ✓ src/test/assembledGroundedAffect.test.ts (8 tests | 7 skipped) 95979ms
+   ✓ M69 connection: governed consequence and observed efficacy reach grounded choice 95979ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  09:04:55
+   Duration  99.75s (transform 2.31s, setup 0ms, collect 3.45s, tests 95.98s, environment 0ms, prepare 99ms)
+
+
+M69_CHECK fixed comparison with actual Auto policy accounting exit=0 seconds=100.42
+
+=== M69: negative controls persistence and rollback ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledGroundedAffect.test.ts > M69 controls: no-ground zero-severity unknown and hidden truth
+M69 CONTROL zeroSeverity Known
+
+stdout | src/test/assembledGroundedAffect.test.ts > M69 controls: no-ground zero-severity unknown and hidden truth
+M69 CONTROL noGround Known
+
+stdout | src/test/assembledGroundedAffect.test.ts > M69 controls: no-ground zero-severity unknown and hidden truth
+M69 CONTROL unknown Unavailable
+
+stdout | src/test/assembledGroundedAffect.test.ts > M69 controls: no-ground zero-severity unknown and hidden truth
+M69 CONTROL hidden Known
+
+stdout | src/test/assembledGroundedAffect.test.ts > M69 persistence and actual appraisal rollback
+M69 PERSISTENCE PASS exact repeat/restore8->101 and actual derived-affect failure rollback.
+
+ ✓ src/test/assembledGroundedAffect.test.ts (8 tests | 6 skipped) 256724ms
+   ✓ M69 controls: no-ground zero-severity unknown and hidden truth 170179ms
+   ✓ M69 persistence and actual appraisal rollback 86544ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 6 skipped (8)
+   Start at  09:07:17
+   Duration  260.54s (transform 2.32s, setup 0ms, collect 3.48s, tests 256.72s, environment 0ms, prepare 99ms)
+
+
+M69_CHECK negative controls persistence and rollback exit=0 seconds=261.21
+
+=== M69: retained M68 original0.67 comparison ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectRequirements.test.ts > M68 fixed four-factor correspondence and actual receiver diagnostic
+M68 CASE baseline {"factors":["1/1","7/10","59/60","0/1"],"affect":["833/1200","833/1200"],"gain":"2033/1200","scores":["5/6","7633/9600"],"mappedImportancePresent":true,"mappedSignalRoles":[],"reasonCount":0}
+
+stdout | src/test/assembledAffectRequirements.test.ts > M68 fixed four-factor correspondence and actual receiver diagnostic
+M68 CASE control {"factors":["1/1","7/10","59/60","1/1"],"affect":["833/1200","0/1"],"gain":"1/1","scores":["17/24","5/6"],"mappedImportancePresent":true,"mappedSignalRoles":[],"reasonCount":0}
+
+stdout | src/test/assembledAffectRequirements.test.ts > M68 fixed four-factor correspondence and actual receiver diagnostic
+M68 CASE likelihood {"factors":["0/1","7/10","59/60","0/1"],"affect":["0/1","0/1"],"gain":"1/1","scores":["17/24","5/6"],"mappedImportancePresent":true,"mappedSignalRoles":[],"reasonCount":0}
+
+stdout | src/test/assembledAffectRequirements.test.ts > M68 fixed four-factor correspondence and actual receiver diagnostic
+M68 CASE severity {"factors":["1/1","0/1","59/60","0/1"],"affect":["0/1","0/1"],"gain":"1/1","scores":["17/24","5/6"],"mappedImportancePresent":true,"mappedSignalRoles":[],"reasonCount":0}
+
+stdout | src/test/assembledAffectRequirements.test.ts > M68 fixed four-factor correspondence and actual receiver diagnostic
+M68 CASE vulnerability {"factors":["1/1","7/10","49/60","0/1"],"affect":["763/1200","763/1200"],"gain":"1963/1200","scores":["2521/3200","5/6"],"mappedImportancePresent":true,"mappedSignalRoles":[],"reasonCount":0}
+M68 BLOCKER control: completed affect/retrieval differ, but actual joint concern/raw/reasons9 remain exact. Mapped ground availability reported separately; no matched-response qualification.
+M68 BLOCKER likelihood: completed affect/retrieval differ, but actual joint concern/raw/reasons9 remain exact. Mapped ground availability reported separately; no matched-response qualification.
+M68 SEMANTIC GAP: severity follows goal interval distance, not an independently governed consequence valuation. Original AFFECT :4..13 stay explicit; diagnostic success is not member acceptance.
+
+ ✓ src/test/assembledAffectRequirements.test.ts (7 tests | 6 skipped) 129625ms
+   ✓ M68 fixed four-factor correspondence and actual receiver diagnostic 129624ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  09:11:49
+   Duration  133.39s (transform 2.29s, setup 0ms, collect 3.45s, tests 129.63s, environment 0ms, prepare 98ms)
+
+
+M69_CHECK retained M68 original0.67 comparison exit=0 seconds=134.05
+
+=== M69: retained M41 chosen-reappraisal connection ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReappraisal.test.ts > connection: original SafetyOnly, Interrupted and NoReappraisal share evidence and differ only after completion
+M41 primary/original replay [{"clock":"8","means":["1/1","0/1"],"frame":"4","appraisals":[{"at":"1","known":false,"affect":[]},{"at":"2","known":true,"affect":["1/1","1/1"]},{"at":"3","known":true,"affect":["1/1","1/1"]},{"at":"4","known":true,"affect":["1/1","1/1"]},{"at":"5","known":true,"affect":["0/1","0/1"]},{"at":"6","known":true,"affect":["0/1","0/1"]},{"at":"7","known":true,"affect":["0/1","0/1"]},{"at":"8","known":true,"affect":["0/1","0/1"]}],"motive4":[true,{"kind":"rational","numerator":"1","denominator":"1"},{"kind":"rational","numerator":"1","denominator":"1"},{"kind":"rational","numerator":"1","denominator":"1"}],"choice":"3","draws":0},{"clock":"8","means":["1/1","0/1"],"frame":"0","appraisals":[{"at":"1","known":false,"affect":[]},{"at":"2","known":true,"affect":["1/1","1/1"]},{"at":"3","known":true,"affect":["1/1","1/1"]},{"at":"4","known":true,"affect":["1/1","1/1"]},{"at":"5","known":true,"affect":["1/1","1/1"]},{"at":"6","known":true,"affect":["1/1","1/1"]},{"at":"7","known":true,"affect":["1/1","1/1"]},{"at":"8","known":true,"affect":["1/1","1/1"]}],"motive4":[true,{"kind":"rational","numerator":"1","denominator":"1"},{"kind":"rational","numerator":"1","denominator":"1"},{"kind":"rational","numerator":"1","denominator":"1"}],"choice":"3","draws":0},{"clock":"8","means":["1/1","0/1"],"frame":"0","appraisals":[{"at":"1","known":false,"affect":[]},{"at":"2","known":true,"affect":["1/1","1/1"]},{"at":"3","known":true,"affect":["1/1","1/1"]},{"at":"4","known":true,"affect":["1/1","1/1"]},{"at":"5","known":true,"affect":["1/1","1/1"]},{"at":"6","known":true,"affect":["1/1","1/1"]},{"at":"7","known":true,"affect":["1/1","1/1"]},{"at":"8","known":true,"affect":["1/1","1/1"]}],"motive4":[true,{"kind":"rational","numerator":"1","denominator":"1"},{"kind":"rational","numerator":"1","denominator":"1"},{"kind":"rational","numerator":"1","denominator":"1"}],"choice":"3","draws":0}]
+
+ ✓ src/test/assembledReappraisal.test.ts (8 tests | 7 skipped) 92208ms
+   ✓ connection: original SafetyOnly, Interrupted and NoReappraisal share evidence and differ only after completion 92207ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  09:14:03
+   Duration  95.96s (transform 2.21s, setup 0ms, collect 3.43s, tests 92.21s, environment 0ms, prepare 100ms)
+
+
+M69_CHECK retained M41 chosen-reappraisal connection exit=0 seconds=96.62
+
+=== M69: final types ===
+
+M69_CHECK final types exit=0 seconds=16.33
+
+=== M69: reference boundary ===
+Reference boundary check passed.
+
+M69_CHECK reference boundary exit=0 seconds=2.59
+
+=== M69: research obligations ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M69_CHECK research obligations exit=0 seconds=3.53
+
+=== M69: frozen dependencies and scope ===
+warning: in the working copy of 'src/assembled/execution.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/assembled/model.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/assembled/reappraisal.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/assembled/traceBinding.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/formal/ASSEMBLED_CHARACTER_REAPPRAISAL_CONTRACT.md', LF will be replaced by CRLF the next time Git touches it
+M69 integrity PASS:105 frozen blobs, historical trees unchanged;six planned source/test paths;one versioned formal amendment; document/evidence caps.
+
+M69_CHECK frozen dependencies and scope exit=0 seconds=12.15
+
+=== M69: staged file size ===
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M69_CHECK staged file size exit=0 seconds=0.92
