@@ -1,40 +1,49 @@
-# Current work — M67 observed mitigation efficacy complete (2026-11-07)
+# Current work — M68 AFFECT requirement correspondence (2026-11-08)
 
-Observed baseline/mitigation trials now teach efficacy that changes completed
-affect and an actual later retrieval score in the same continuing character.
-[Result and remaining scope](ASSEMBLED_CHARACTER_M67_RESULT.md).
-Plan e2a6cb0; base8c83b31f; rules/registry0.67,44 slots.
+Compare current0.67 with original PHEN-AFFECT-001 :4..13 before more breadth.
+Base a5ae3d7b. This is a bounded comparison, not a claim that AFFECT is complete.
 
-## Completed bounded connection
-Existing position/context perception -> frozen trial experience -> existing
-knowledge owner -> relative efficacy -> completed affect -> actual recall10.
-Observed baseline risk1 with mitigation risk0 gives control1/U0/gain1/A17/24.
-Mitigation risk1 gives control0/U833/1200/gain2033/1200/A7633/9600.
-B5/6 wins both: retained null, no final-choice claim or calibration adjustment.
-NoFeedback erases the score contrast while affect differs.
-Baseline0, missing action, denied Motion, censored outcome and no-op stay unknown.
-Hidden physical changes do not alter evidence/knowledge/affect/recall.
-Exact repeat/restore5->101 preserves grouping across an incomplete trial;
-fault after knowledge write rolls back the whole instant.
-M66 shared body/goal and M49 original SEM/position controls retained.
+## Card — commit before test code
+Map original factor meanings, measure their actual receivers, classify all10 keys.
+Production/formal/frozen corpus unchanged. One new test:
+src/test/assembledAffectRequirements.test.ts; reuse M67 fixture unchanged.
+Existing register + one result/check log; no new framework, catalogue or ledger.
+Source authority: AFFECT_PUBLIC_CONTRACT, CAMPAIGN3_AFFECT_QUALIFICATION,
+member13 of pinned corpus, ledger AFFECT intake and RO-C3-011.
+Original severity is governed consequence valuation; current severity is task
+forecast-distance/10. Record this semantic gap; numeric equality is insufficient.
+Original U modifies grounded reasons; current jointConcern uses its separate
+fixed-control calculation. Measure the path, never infer it from changed retrieval.
 
-## Next dependency and limits
-Next: bounded original AFFECT requirement correspondence on the live candidate,
-including conditional task-distance versus consequence valuation and remaining
-factor/matched-response gates. No whole AFFECT key/family clause is closed.
-Mitigation learning is now integrated for the one mapped conditional task;
-missing evidence is Unavailable. Historical0.66 keeps its explicit Deferred status.
-No autonomous partner, mitigation planner, generalization or new apparatus implied.
-M64 MEMORY and M61 contextual evidence/nulls retained; final replay remains due.
-All21 members/15 families/132 clauses remain the final denominator.
+## Fixed five cases / reference policy
+Same whole0.67 character, SplitExposure, relative efficacy, UncontrolledGain,
+L4 OFF, seed0 and fixed dice. Baseline is unchanged M67 ineffective fixture.
+Control case: original M67 effective. Likelihood case: at7 change only observed
+risk display tofalse, physical risk unchanged. Severity case: goal target[0,10]
+instead of[10,10]. Vulnerability case: initial body100 instead of30, rate10.
+First two tasks social/coat stand-in, mapped third task physical/start8.
+Adoption1 retained; trials1..6; social7/8/cue9; body9/10; appraisal9/recall10.
+All cases first assert live four-factor row, exact actual joint producer and recall.
+Expected p/s/v/c baseline[1,7/10,59/60,0]; one-axis alternatives:
+p0, s0, v0, c1 respectively. Other completed factors must stay equal.
+Actual recall scores follow prior report; no winning-memory or choice-change gate.
+Control/likelihood arms must equal baseline state/outputs at3 before first changed
+safe input (control packets first differ4, likelihood7). No trace/run-identity or
+initial-state equality claim across changed model/body. Compare exact actual
+concern388, raw403 and reasons408 at9 for p/c arms; record live ground availability.
+If mapped ground/action is absent, explicitly block matched-response qualification;
+do not use a null from an inactive operand as proof of behavioral equivalence.
+Record severity-source and immediate-receiver differences as missing integration,
+not alternative-law approval, interaction acceptance or full requirement passes.
 
-## Guardrails and accounting
-12 production/test files; one formal amendment; two evidence files.
-Retained repairs: unintended validator edit caught by types; illegal adoption
-timestamp caught before simulation. Fixed in both arms; comparison/laws unchanged.
-1800s total/600s per command; all failures counted, no extension.
-Final required checks and exact accounting are in the result/check log.
-Reference dice, SplitExposure, relative efficacy, L4 OFF.
-No UI, autonomous peers, new store/scheduler or verifier chain.
-Next package requires a bounded committed card; passing checks ends this one.
+## Checks / budgets / done
+One native five-case comparison; repeat and restore baseline8->101 exactly
+(state/output/trace/save/run identity). Original controls retained: no production
+or formal dependency changed, so no broad historical runtime rerun.
+Types, boundary, research;105 frozen dependency hashes and whole production/formal
+diff guard; document/evidence caps; staged size.600s/command,1800s cumulative,
+one long job;20 evidence files/5MiB; one test file. Failures count; no seed/goal tuning.
+Done when fixed comparison and continuation checks run, all10 original keys have
+explicit dispositions, and the next missing causal connection is concrete.
+A diagnostic pass is not acceptance of a missing mechanism or the AFFECT member.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
