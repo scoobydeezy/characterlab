@@ -1,0 +1,126 @@
+
+=== M68: M68 initial types ===
+
+M68_CHECK M68 initial types exit=0 seconds=16.52
+
+=== M68: M68 five-case factor and actual receiver comparison ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledAffectRequirements.test.ts (7 tests | 1 failed | 6 skipped) 64321ms
+   × M68 fixed four-factor correspondence and actual receiver diagnostic 64320ms
+     → requires 403/1
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledAffectRequirements.test.ts > M68 fixed four-factor correspondence and actual receiver diagnostic
+SchedulerContractError: requires 403/1
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataRecord src/campaign2/canonicalData.ts:9:117
+ ❯ actual src/test/assembledAffectRequirements.test.ts:45:71
+ ❯ projection src/test/assembledAffectRequirements.test.ts:54:12
+ ❯ src/test/assembledAffectRequirements.test.ts:74:32
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 6 skipped (7)
+   Start at  08:32:09
+   Duration  68.14s (transform 2.34s, setup 0ms, collect 3.51s, tests 64.32s, environment 0ms, prepare 101ms)
+
+
+M68_CHECK M68 five-case factor and actual receiver comparison exit=1 seconds=68.84
+
+=== M68: five-case correspondence after receiving-codec repair ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectRequirements.test.ts > M68 fixed four-factor correspondence and actual receiver diagnostic
+M68 CASE baseline {"factors":["1/1","7/10","59/60","0/1"],"affect":["833/1200","833/1200"],"gain":"2033/1200","scores":["5/6","7633/9600"],"mappedImportance":"[object Object]","mappedSignalRoles":[],"reasonCount":0}
+
+stdout | src/test/assembledAffectRequirements.test.ts > M68 fixed four-factor correspondence and actual receiver diagnostic
+M68 CASE control {"factors":["1/1","7/10","59/60","1/1"],"affect":["833/1200","0/1"],"gain":"1/1","scores":["17/24","5/6"],"mappedImportance":"[object Object]","mappedSignalRoles":[],"reasonCount":0}
+
+stdout | src/test/assembledAffectRequirements.test.ts > M68 fixed four-factor correspondence and actual receiver diagnostic
+M68 CASE likelihood {"factors":["0/1","7/10","59/60","0/1"],"affect":["0/1","0/1"],"gain":"1/1","scores":["17/24","5/6"],"mappedImportance":"[object Object]","mappedSignalRoles":[],"reasonCount":0}
+
+stdout | src/test/assembledAffectRequirements.test.ts > M68 fixed four-factor correspondence and actual receiver diagnostic
+M68 CASE severity {"factors":["1/1","0/1","59/60","0/1"],"affect":["0/1","0/1"],"gain":"1/1","scores":["17/24","5/6"],"mappedImportance":"[object Object]","mappedSignalRoles":[],"reasonCount":0}
+
+stdout | src/test/assembledAffectRequirements.test.ts > M68 fixed four-factor correspondence and actual receiver diagnostic
+M68 CASE vulnerability {"factors":["1/1","7/10","49/60","0/1"],"affect":["763/1200","763/1200"],"gain":"1963/1200","scores":["2521/3200","5/6"],"mappedImportance":"[object Object]","mappedSignalRoles":[],"reasonCount":0}
+M68 BLOCKER control: completed affect/retrieval differ, but actual joint concern/raw/reasons9 remain exact. Mapped ground availability reported separately; no matched-response qualification.
+M68 BLOCKER likelihood: completed affect/retrieval differ, but actual joint concern/raw/reasons9 remain exact. Mapped ground availability reported separately; no matched-response qualification.
+M68 SEMANTIC GAP: severity follows goal interval distance, not an independently governed consequence valuation. Original AFFECT :4..13 stay explicit; diagnostic success is not member acceptance.
+
+ ✓ src/test/assembledAffectRequirements.test.ts (7 tests | 6 skipped) 132484ms
+   ✓ M68 fixed four-factor correspondence and actual receiver diagnostic 132483ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  08:36:28
+   Duration  136.25s (transform 2.30s, setup 0ms, collect 3.45s, tests 132.48s, environment 0ms, prepare 100ms)
+
+
+M68_CHECK five-case correspondence after receiving-codec repair exit=0 seconds=136.91
+
+=== M68: exact baseline repeat and restore ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectRequirements.test.ts > M68 unchanged baseline exact repeat and restore before appraisal
+M68 PERSISTENCE PASS exact repeated/restored state/output/trace/save/run identity8->101.
+
+ ✓ src/test/assembledAffectRequirements.test.ts (7 tests | 6 skipped) 105140ms
+   ✓ M68 unchanged baseline exact repeat and restore before appraisal 105140ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  08:39:15
+   Duration  108.91s (transform 2.31s, setup 0ms, collect 3.46s, tests 105.14s, environment 0ms, prepare 98ms)
+
+
+M68_CHECK exact baseline repeat and restore exit=0 seconds=109.59
+
+=== M68: final types ===
+
+M68_CHECK final types exit=0 seconds=16.32
+
+=== M68: reference boundary ===
+Reference boundary check passed.
+
+M68_CHECK reference boundary exit=0 seconds=2.64
+
+=== M68: research obligations ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M68_CHECK research obligations exit=0 seconds=3.61
+
+=== M68: frozen dependencies and scope ===
+Traceback (most recent call last):
+  File "<string>", line 36, in <module>
+    assert len(register.splitlines())<=250 and len(register.replace('\n','\r\n').encode())<=65536
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+M68_CHECK frozen dependencies and scope exit=1 seconds=12.11
+
+=== M68: preservation after compact status correction ===
+M68 integrity PASS:105 frozen blobs, historical trees unchanged;one planned test;whole production/formal unchanged; document/evidence caps.
+
+M68_CHECK preservation after compact status correction exit=0 seconds=12.03
+
+=== M68: staged file size ===
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M68_CHECK staged file size exit=0 seconds=0.93

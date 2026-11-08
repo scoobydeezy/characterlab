@@ -1,4 +1,4 @@
-# Current work — M68 AFFECT requirement correspondence (2026-11-08)
+# Current work — M68 comparison complete (2026-11-08)
 
 Compare current0.67 with original PHEN-AFFECT-001 :4..13 before more breadth.
 Base a5ae3d7b. This is a bounded comparison, not a claim that AFFECT is complete.
@@ -25,7 +25,7 @@ First two tasks social/coat stand-in, mapped third task physical/start8.
 Adoption1 retained; trials1..6; social7/8/cue9; body9/10; appraisal9/recall10.
 All cases first assert live four-factor row, exact actual joint producer and recall.
 Expected p/s/v/c baseline[1,7/10,59/60,0]; one-axis alternatives:
-p0, s0, v0, c1 respectively. Other completed factors must stay equal.
+p0, s0, v49/60, c1 respectively. Other completed factors must stay equal.
 Actual recall scores follow prior report; no winning-memory or choice-change gate.
 Control/likelihood arms must equal baseline state/outputs at3 before first changed
 safe input (control packets first differ4, likelihood7). No trace/run-identity or
@@ -47,3 +47,12 @@ Done when fixed comparison and continuation checks run, all10 original keys have
 explicit dispositions, and the next missing causal connection is concrete.
 A diagnostic pass is not acceptance of a missing mechanism or the AFFECT member.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
+
+Pre-execution arithmetic correction: body100 at9 has reserve10, observed upper11;
+v=(60-11)/60=49/60, not0 as first written. The fixed body100 scenario is unchanged.
+
+M68 native comparison and exact continuation PASS; whole AFFECT requirements OPEN.
+See ASSEMBLED_CHARACTER_M68_RESULT.md for all10 keys and actual receiver gaps.
+Next bounded connection: governed consequence valuation -> completed affect ->
+live grounded reason, keeping physical response and cognitive reappraisal distinct.
+No production change in M68; no new breadth before this connection.
