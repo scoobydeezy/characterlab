@@ -1,0 +1,222 @@
+
+=== M67: M67 initial types ===
+src/assembled/positionPerception.ts(39,141): error TS2304: Cannot find name 'mitigation'.
+
+M67_CHECK M67 initial types exit=2 seconds=16.68
+
+=== M67: M67 types after validator repair ===
+
+M67_CHECK M67 types after validator repair exit=0 seconds=16.75
+
+=== M67: M67 live efficacy and NoFeedback comparison ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledMitigation.test.ts (8 tests | 1 failed | 7 skipped) 52360ms
+   × M67 observed efficacy changes actual later retrieval with a NoFeedback control 52359ms
+     → priority adoption time/visibility
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledMitigation.test.ts > M67 observed efficacy changes actual later retrieval with a NoFeedback control
+SchedulerContractError: priority adoption time/visibility
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ require src/assembled/priority.ts:15:44
+ ❯ Module.priorityDisplay src/assembled/priority.ts:19:490
+ ❯ src/assembled/inputs.ts:63:457
+ ❯ Module.compileCharacterInputs src/assembled/inputs.ts:63:32
+ ❯ Module.createCharacterRun src/assembled/character.ts:42:63
+ ❯ create src/test/assembledMitigation.test.ts:26:139
+ ❯ src/test/assembledMitigation.test.ts:64:14
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  22:51:22
+   Duration  56.41s (transform 2.37s, setup 0ms, collect 3.55s, tests 52.36s, environment 0ms, prepare 283ms)
+
+
+M67_CHECK M67 live efficacy and NoFeedback comparison exit=1 seconds=58.03
+
+=== M67: M67 live comparison after legal adoption timestamp repair ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMitigation.test.ts > M67 observed efficacy changes actual later retrieval with a NoFeedback control
+M67 LIVE {"control":1,"factors":["1/1","7/10","59/60","1/1"],"affect":["833/1200","0/1"],"gain":"1/1","scores":["17/24","5/6"],"selected":["8"],"trialSupports":2}
+M67 LIVE {"control":0,"factors":["1/1","7/10","59/60","0/1"],"affect":["833/1200","833/1200"],"gain":"2033/1200","scores":["7633/9600","5/6"],"selected":["8"],"trialSupports":2}
+
+stdout | src/test/assembledMitigation.test.ts > M67 observed efficacy changes actual later retrieval with a NoFeedback control
+M67 LIVE {"control":1,"factors":["1/1","7/10","59/60","1/1"],"affect":["833/1200","0/1"],"gain":"1/1","scores":["17/24","5/6"],"selected":["8"],"trialSupports":2}
+M67 LIVE {"control":0,"factors":["1/1","7/10","59/60","0/1"],"affect":["833/1200","833/1200"],"gain":"1/1","scores":["17/24","5/6"],"selected":["8"],"trialSupports":2}
+M67 CONNECTION PASS observed trials -> learned relative efficacy -> completed affect -> actual retrieval score. No final-choice claim.
+
+ ✓ src/test/assembledMitigation.test.ts (8 tests | 7 skipped) 129486ms
+   ✓ M67 observed efficacy changes actual later retrieval with a NoFeedback control 129485ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  22:52:45
+   Duration  133.28s (transform 2.31s, setup 0ms, collect 3.46s, tests 129.49s, environment 0ms, prepare 99ms)
+
+
+M67_CHECK M67 live comparison after legal adoption timestamp repair exit=0 seconds=133.97
+
+=== M67: M67 unknown and hidden-evidence controls ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMitigation.test.ts > M67 unknown and hidden evidence controls preserve epistemic boundaries
+M67 LIVE {"control":1,"factors":["1/1","7/10","59/60","1/1"],"affect":["833/1200","0/1"],"gain":"1/1","scores":["17/24","5/6"],"selected":["8"],"trialSupports":2}
+
+stdout | src/test/assembledMitigation.test.ts > M67 unknown and hidden evidence controls preserve epistemic boundaries
+M67 CONTROL zeroBaseline Unavailable
+
+stdout | src/test/assembledMitigation.test.ts > M67 unknown and hidden evidence controls preserve epistemic boundaries
+M67 CONTROL missingAction Unavailable
+
+stdout | src/test/assembledMitigation.test.ts > M67 unknown and hidden evidence controls preserve epistemic boundaries
+M67 CONTROL deniedMotion Unavailable
+
+stdout | src/test/assembledMitigation.test.ts > M67 unknown and hidden evidence controls preserve epistemic boundaries
+M67 CONTROL censored Unavailable
+
+stdout | src/test/assembledMitigation.test.ts > M67 unknown and hidden evidence controls preserve epistemic boundaries
+M67 CONTROL noop Unavailable
+
+stdout | src/test/assembledMitigation.test.ts > M67 unknown and hidden evidence controls preserve epistemic boundaries
+M67 LIVE {"control":1,"factors":["1/1","7/10","59/60","1/1"],"affect":["833/1200","0/1"],"gain":"1/1","scores":["17/24","5/6"],"selected":["8"],"trialSupports":2}
+M67 CONTROL hidden Known
+
+ ✓ src/test/assembledMitigation.test.ts (8 tests | 7 skipped) 161696ms
+   ✓ M67 unknown and hidden evidence controls preserve epistemic boundaries 161695ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  22:55:17
+   Duration  165.49s (transform 2.32s, setup 0ms, collect 3.48s, tests 161.70s, environment 0ms, prepare 99ms)
+
+
+M67_CHECK M67 unknown and hidden-evidence controls exit=0 seconds=166.16
+
+=== M67: M67 incomplete-trial continuation rollback and version controls ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMitigation.test.ts > M67 persistence across incomplete trial rollback and version boundaries
+M67 LIVE {"control":1,"factors":["1/1","7/10","59/60","1/1"],"affect":["833/1200","0/1"],"gain":"1/1","scores":["17/24","5/6"],"selected":["8"],"trialSupports":2}
+M67 LIVE {"control":1,"factors":["1/1","7/10","59/60","1/1"],"affect":["833/1200","0/1"],"gain":"1/1","scores":["17/24","5/6"],"selected":["8"],"trialSupports":2}
+M67 LIVE {"control":1,"factors":["1/1","7/10","59/60","1/1"],"affect":["833/1200","0/1"],"gain":"1/1","scores":["17/24","5/6"],"selected":["8"],"trialSupports":2}
+
+stdout | src/test/assembledMitigation.test.ts > M67 persistence across incomplete trial rollback and version boundaries
+M67 PERSISTENCE PASS exact repeat/restore5->101; actual learning rollback; old grammar rejected.
+
+ ✓ src/test/assembledMitigation.test.ts (8 tests | 7 skipped) 118092ms
+   ✓ M67 persistence across incomplete trial rollback and version boundaries 118092ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  22:58:21
+   Duration  121.86s (transform 2.31s, setup 0ms, collect 3.46s, tests 118.09s, environment 0ms, prepare 99ms)
+
+
+M67_CHECK M67 incomplete-trial continuation rollback and version controls exit=0 seconds=122.53
+
+=== M67: M67 retained M66 source-to-retrieval control ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectSources.test.ts > M66 live shared body and goal operands reach actual later retrieval scores
+M66 LIVE {"factors":["1/1","7/10","59/60","0/1"],"affect":["833/1200","833/1200"],"gain":"2033/1200","score":["7633/9600","5/6"],"selected":["2"],"source":"94"}
+M66 LIVE {"factors":["1/1","7/10","0/1","0/1"],"affect":["7/20","7/20"],"gain":"27/20","score":["361/480","5/6"],"selected":["2"],"source":"94"}
+M66 LIVE {"factors":["1/1","0/1","59/60","0/1"],"affect":["0/1","0/1"],"gain":"1/1","score":["17/24","5/6"],"selected":["2"],"source":"94"}
+
+stdout | src/test/assembledAffectSources.test.ts > M66 live shared body and goal operands reach actual later retrieval scores
+M66 LIVE {"factors":["1/1","7/10","59/60","0/1"],"affect":["833/1200","833/1200"],"gain":"1/1","score":["17/24","5/6"],"selected":["2"],"source":"94"}
+M66 LIVE {"factors":["1/1","7/10","0/1","0/1"],"affect":["7/20","7/20"],"gain":"1/1","score":["17/24","5/6"],"selected":["2"],"source":"94"}
+M66 CONNECTION PASS shared goal/body -> completed affect -> actual score; NoFeedback removes score contrast. Fixed winning memory remains B: null retained.
+
+ ✓ src/test/assembledAffectSources.test.ts (8 tests | 7 skipped) 142766ms
+   ✓ M66 live shared body and goal operands reach actual later retrieval scores 142765ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  23:00:46
+   Duration  146.54s (transform 2.30s, setup 0ms, collect 3.45s, tests 142.77s, environment 0ms, prepare 99ms)
+
+
+M67_CHECK M67 retained M66 source-to-retrieval control exit=0 seconds=147.22
+
+=== M67: M67 retained M49 SEM owner and source control ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledPositionPerception.test.ts > connection and original controls: actual positions and contexts share native SEM owners
+M49 CONNECTION live typed227 + observed coordinates; same/changed visual glyph and panel glyph match original windows; real shared241/242 mutations and child joins; closure ends panel.
+
+ ✓ src/test/assembledPositionPerception.test.ts (5 tests | 4 skipped) 69744ms
+   ✓ connection and original controls: actual positions and contexts share native SEM owners 69743ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 4 skipped (5)
+   Start at  23:03:41
+   Duration  73.42s (transform 2.24s, setup 0ms, collect 3.36s, tests 69.74s, environment 0ms, prepare 100ms)
+
+
+M67_CHECK M67 retained M49 SEM owner and source control exit=0 seconds=74.09
+
+=== M67: M67 final types boundary research ===
+CHECK node node_modules/typescript/bin/tsc --noEmit
+CHECK node scripts/check-reference-boundary.mjs
+Reference boundary check passed.
+CHECK node scripts/check-research-obligations.mjs
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: CURRENT obligation counts are stale
+    at file:///C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/scripts/check-research-obligations.mjs:75:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.20.0
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+    subprocess.run(command,check=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\scoob\AppData\Local\Python\pythoncore-3.15-64\Lib\subprocess.py", line 692, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command ['node', 'scripts/check-research-obligations.mjs'] returned non-zero exit status 1.
+
+M67_CHECK M67 final types boundary research exit=1 seconds=22.12
+
+=== M67: M67 research after CURRENT count-row repair ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M67_CHECK M67 research after CURRENT count-row repair exit=0 seconds=3.42
+
+=== M67: M67 frozen dependencies file boundary and evidence caps ===
+M67 integrity PASS:105 frozen blobs, historical trees unchanged;12 planned source/test paths;1 versioned formal amendment; document/evidence caps.
+
+M67_CHECK M67 frozen dependencies file boundary and evidence caps exit=0 seconds=12.14
+
+=== M67: M67 staged Git size ===
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M67_CHECK M67 staged Git size exit=0 seconds=0.52

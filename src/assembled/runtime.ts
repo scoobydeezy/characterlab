@@ -68,7 +68,7 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
  const task=Object.freeze({base,content,stateModel,tasks:component.tasks,measurement:component.measurement,deadline:component.deadline,predictionComponent:prediction});
  const maxWork=compileCampaign2Parameters(model.source.parameterSchemaVersion,model.source.parameters).maxWork;
  const modelIdentity=model.modelIdentity.value;
- const position=model.positionEnabled?createPositionExecution(stateModel,inputs.positionEvents,modelIdentity,inputs.runIdentity.value,model.positionMemory):undefined;
+ const position=model.positionEnabled?createPositionExecution(stateModel,inputs.positionEvents,modelIdentity,inputs.runIdentity.value,model.positionMemory,model.mitigationEnabled):undefined;
  const procedure=model.skill?createSkillExecution(component.tasks[0].character,stateModel,inputs.skillEvents,modelIdentity,inputs.runIdentity.value,model.procedures,model.actionBody):undefined;
  const body=model.body?createBodyExecution(model.body,component.tasks[0].character,stateModel,inputs.bodyEvents,modelIdentity,inputs.runIdentity.value,model.actionBody,procedure,model.tolerance,model.retainedAttribution?()=>position!.contextForBody():undefined):undefined;
  if(model.affectMemory&&inputs.socialEvents.length>(model.affectMemory.acquisitionPresentation?31:32))throw new SchedulerContractError('INPUT_NOT_ADMITTED','affect memory presentation capacity including acquisition');
@@ -91,7 +91,7 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
  const social=model.social?createSocialExecution(component.tasks[0].character,model.social,stateModel,inputs.socialEvents,modelIdentity,inputs.runIdentity.value,model.recognition,model.encounterEnabled?relationship:undefined,model.socialMemory,model.encoding,model.memoryUse?(event,operands,report)=>episodes!.qualifyUse(event,operands,report):undefined,model.attachment,!!model.loss,!!model.embarrassment):undefined;
  const reservePriority=priorityCore?(meaning?meaning.extend(priorityCore):priorityCore):undefined;
  const priority=reservePriority?(spatialMeaning?spatialMeaning.extend(reservePriority):reservePriority):undefined;
- const reappraisal=model.reappraisal?createReappraisalExecution(model.reappraisal,component.tasks[0].character,stateModel,inputs.reappraisalEvents,modelIdentity,inputs.runIdentity.value):undefined;
+ const reappraisal=model.reappraisal?createReappraisalExecution(model.reappraisal,component.tasks[0].character,stateModel,inputs.reappraisalEvents,modelIdentity,inputs.runIdentity.value,()=>position?.mitigationEvidence()):undefined;
  let currentPosition:ReturnType<ReturnType<typeof createPositionExecution>['execute']>['memoryEvidence'];
  const actionMemory=model.actionMemory?createActionMemory(component.tasks[0].character,model.actionMemory,model.strategy!,model.spatialMeaning!,stateModel,modelIdentity,inputs.runIdentity.value,()=>currentPosition):undefined;
  const cognitive=createCognitiveExecution(model,component,inputs,()=>body?.evidence(),()=>episodes?.currentRecalls()??[],strategy,priority,habit,control,social,relationship,values,causal,reappraisal,model.bodyMemoryUse?(event,operands,report)=>episodes!.qualifyUse(event,operands,report):undefined,meaning,model.significanceEnabled?(event,workspace,attribution,report)=>episodes!.qualifySignificance(event,workspace,attribution,report):undefined,spatialMeaning,actionMemory);
