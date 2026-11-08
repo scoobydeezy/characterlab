@@ -1,43 +1,55 @@
-# Current work — M64 MEMORY mapped replay complete (2026-11-07)
+# Current work — M65 AFFECT handoff replay (2026-11-07)
 
-The assembled character passes PHEN-MEM-001's eight behavioral requirements
-in the declared mapped domain. Recency, reinforcement, decay, exact K and native
-canonical tie pass; selected memories enter the shared workspace.
-Truth/imprint separation and exact full-calendar continuation pass.
-[Result and exact key dispositions](ASSEMBLED_CHARACTER_M64_RESULT.md).
+The current character can derive affect and use it in later retrieval. M65 tests
+that connection in the full0.63 composition, and exposes missing original factors.
+This is a bounded member replay, not whole AFFECT acceptance or new apparatus.
+Base2e0e0f5a; reference laws/dice and L4 self-feedback OFF.
 
-## Completed bounded package
-Plans e9f9344a/72b7981b; base48c1a44e; rules/registry0.63 unchanged.
-Two new test files; zero production/formal changes or new apparatus.
-Four actual perceived acquisitions5..8; neutral recalls9..12, extra recalls13..16.
-Original formations/cues align by+2; cue-origin and source-shape differences disclosed.
-K0/K1/K2 begin with identical1/5,1/4,1/3,1/2 bases.
-Newest later5/6 after recall versus1/3 without; unselected oldest1/6 unchanged.
-Encoding-time-only intervention changes1/2->1/3; other episode remains1/4.
-Native reference-law tie1/2 each selects canonical15 over47.
-Source/observation/experience/acquisition/recollection joins and patches agree.
-Workspace consumes exactly0/1/2 deliveries; final calendars reach101.
-Hidden truth differs while retained cognition/recall stays equal.
-Exact repeat and restore8->101 pass all state/output/trace/save/run identity.
-Original no-decay remains a component/historical control, not native law coverage.
-Context-bundle admission failure and TypeScript narrowing error retained/repaired.
+## Committed card — before implementation
+Capabilities: (1) prior derived affect changes an actually consumed recollection;
+(2) distinguish zero, unknown, too-late and hidden truth; (3) exact continuation.
+Requirements PHEN-AFFECT-001:6/:8/:9/:10/:11 subrequirements; :4/:5/:7 and
+remaining subrequirements stay open. :12/:13 standing constraints, RO-C3-011 retained.
+Original source: CAMPAIGN3_AFFECT_QUALIFICATION.md and pinned member13, not a new
+phenomenon. Existing M43 source/controls map its named later-cognition boundary;
+this is NOT original appraisal-feedback equivalence or the original48 factorial runs.
+Contracts unchanged: assembled0.63, affect-memory0.2, reappraisal0.1.
+Two new test files: fixtures/assembledAffectCorrespondence.ts and
+assembledAffectCorrespondence.test.ts. Zero production/formal edits.
 
-## Disposition and next member
-PHEN-MEM-001:2..9 EQUIVALENT in the mapped finite replay; :10/:11 TRACKED.
-This does not replay all43 GA models, qualify every memory-family clause,
-or close the final21-member/15-family/132-clause assembled gate.
-Consolidation/reconstruction/indexing changes reopen dependent comparisons.
-MEC-010/EXP-006 and RO-C3-005/006/007/020 remain preserved.
-Next bounded member: AFFECT, then DECISION serially.
-Pin its exact original requirements and source mapping before implementation.
-No UI, autonomous partners, graph framework or other apparatus expansion.
+## Fixed scenario and comparison
+Use current44-slot source; source schedules from assembledAffectMemory.ts.
+One holder, observed coat stand-in; first2 tasks social to that observed person,
+third physical. A true1, B false2, neutral cue3; deliberate3/4; body30/rate10,
+sample4; learned risk1; no authored belief, memory, affect or autonomous partner.
+Map old social envelopes with current absent support/loss/evaluation annexes;
+identity/self/values contexts come from current admitted source at same opportunities.
+Retain current remaining owners, calibration and laws; K1, retention8, delay1,
+workspace5, fixed existing edge A->cue weight1/4. Seed0.
+Compare UncontrolledGain reference versus explicit NoFeedback negative control.
+Assert both live recall candidates, known prior affect and consumed social context
+before judging comparison. Full0.63 adds actual acquisition to presentation history:
+A base1/4+1/3=7/12, B1/3+1/2=5/6; pull1/8 versus0.
+Reference gain2 gives tied5/6 and canonical order resolves; NoFeedback gain1
+gives17/24 versus5/6. Require A versus B and consumed judgment1 versus0;
+global person belief remains1/2. Disclose tie-mediated change from M43 strict ranking.
+Zero/unknown/late/current/hidden controls preserve original inputs/meaning.
+Check actual carry event/read ancestry; current affect cannot replace earlier carry.
+No choice/RNG-coupling claim; no seed or calibration search if contrast fails.
 
-## Guardrails
-One character/state/scheduler/trace/save; reference laws/dice, L4 OFF.
-M64 verification budget1800s total/600s per command, failures counted.
-Final accounting in M64_RESULT; no extension.
-Two evidence files,20-file/5MiB cap. Historical evidence and M61 null preserved.
-Passing required closing checks ends this milestone; no full-suite rerun.
-Next package needs its own bounded committed card.
+## Source gaps already identified
+CompletedAffect fixes severity/vulnerability/control=1/1/0. jointAppraisal derives
+goal-distance severity and sensed reserve vulnerability separately; control is0.
+No assertion of independent-factor, perceived-efficacy or same-affect/action coverage.
+Record exact blocked IDs; missing integration is not external unknown evidence.
+Next dependency is factor-source reconciliation/connection before DECISION breadth.
 
-| Research obligations | **0 active / 18 conditional / 0 unowned** |
+## Verification and done
+1800s cumulative,600s/command; one long job. <=2 source/test files; evidence<=20/5MiB.
+Three targeted groups: live paired connection; five timing/privacy controls;
+repeat and restore3->full calendar plus denied cue/empty edge/K0.
+Required types, reference boundary, research,105-file frozen closure and staged size.
+Historical/runtime/formal trees unchanged; no full frozen-runtime rerun warranted.
+Failures retained; ordinary setup/type repairs allowed, no comparative retuning.
+Done: declared gates pass, source differences classified, exact requirement blockers
+recorded in existing register; otherwise checkpoint failure without acceptance.
