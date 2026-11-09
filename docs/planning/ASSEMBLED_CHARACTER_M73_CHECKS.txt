@@ -1,0 +1,97 @@
+
+=== M73: types ===
+src/test/assembledAffectCounterfactual.test.ts(2,28): error TS2307: Cannot find module 'node:fs' or its corresponding type declarations.
+
+M73_CHECK types exit=2 seconds=19.5
+
+=== M73: counterfactuals-and-controls ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectCounterfactual.test.ts > M73 counterfactuals: command extra-die and relief-evidence fail distinct actual controls
+M73 FearAsCommand FAILS: actual A47/72 B25/72; command A72/72; captured production context,72 uniformly weighted face/tie cases.
+
+stdout | src/test/assembledAffectCounterfactual.test.ts > M73 controls: hidden body and denied perception preserve epistemic boundary
+M73 CONTROLS PASS distinct hidden anchors/equal safe appraisal and reasons; denied body Unavailable, no modifier.
+
+ ❯ src/test/assembledAffectCounterfactual.test.ts (8 tests | 1 failed | 6 skipped) 182329ms
+   × M73 counterfactuals: command extra-die and relief-evidence fail distinct actual controls 121831ms
+     → expected [ 'choice-7-10', 'choice-4-10' ] to deeply equal [ 'choice-4-10', 'choice-7-10' ]
+   ✓ M73 controls: hidden body and denied perception preserve epistemic boundary 60497ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledAffectCounterfactual.test.ts > M73 counterfactuals: command extra-die and relief-evidence fail distinct actual controls
+AssertionError: expected [ 'choice-7-10', 'choice-4-10' ] to deeply equal [ 'choice-4-10', 'choice-7-10' ]
+
+- Expected
++ Received
+
+  Array [
+-   "choice-4-10",
+    "choice-7-10",
++   "choice-4-10",
+  ]
+
+ ❯ src/test/assembledAffectCounterfactual.test.ts:106:44
+    104|  const fsName='node:fs',{readFileSync}=await import(fsName);
+    105|  const original=JSON.parse(readFileSync('docs/planning/AFFECT_PUBLIC_E…
+    106|  expect(original.FearAsCommand.violations).toEqual(['choice-4-10','cho…
+       |                                            ^
+    107|  expect(original.FearAsExtraDie).toMatchObject({actualSafetyProbabilit…
+    108|  expect(original.ReliefAsBeliefEvidence).toMatchObject({actualMean:'1/…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed | 6 skipped (8)
+   Start at  12:50:21
+   Duration  186.66s (transform 2.53s, setup 0ms, collect 3.77s, tests 182.33s, environment 0ms, prepare 315ms)
+
+
+M73_CHECK counterfactuals-and-controls exit=1 seconds=188.43
+
+=== M73: counterfactual-repair-and-persistence ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectCounterfactual.test.ts > M73 counterfactuals: command extra-die and relief-evidence fail distinct actual controls
+M73 FearAsCommand FAILS: actual A47/72 B25/72; command A72/72; captured production context,72 uniformly weighted face/tie cases.
+
+stdout | src/test/assembledAffectCounterfactual.test.ts > M73 counterfactuals: command extra-die and relief-evidence fail distinct actual controls
+M73 FearAsExtraDie FAILS: actual one nucleus/A0; detached d4 oracle A16/48. Original16/96 used d12; current grounded B d6.
+M73 ReliefAsBeliefEvidence FAILS: unchanged actual danger mean1/support history; relief2/15 predicts13/15. Original relief1/2 predicted1/2; changed body/valuation operands, same epistemic invariant.
+
+stdout | src/test/assembledAffectCounterfactual.test.ts > M73 persistence: exact repeat and restored relief and absent-ground continuations
+M73 PERSISTENCE PASS high repeat/restore9->101 and noGround restore9->101; exact state/output/trace/save/identity.
+
+ ✓ src/test/assembledAffectCounterfactual.test.ts (8 tests | 6 skipped) 241056ms
+   ✓ M73 counterfactuals: command extra-die and relief-evidence fail distinct actual controls 121856ms
+   ✓ M73 persistence: exact repeat and restored relief and absent-ground continuations 119199ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 6 skipped (8)
+   Start at  12:54:10
+   Duration  244.96s (transform 2.38s, setup 0ms, collect 3.56s, tests 241.06s, environment 0ms, prepare 100ms)
+
+
+M73_CHECK counterfactual-repair-and-persistence exit=0 seconds=245.63
+
+=== M73: final-types ===
+
+M73_CHECK final-types exit=0 seconds=18.96
+
+=== M73: reference-boundary ===
+Reference boundary check passed.
+
+M73_CHECK reference-boundary exit=0 seconds=2.65
+
+=== M73: research ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M73_CHECK research exit=0 seconds=3.83
+
+=== M73: preservation-and-budgets ===
+M73 integrity PASS:105 frozen blobs, historical trees unchanged;two planned test paths;production/formal unchanged; document/evidence caps.
+
+M73_CHECK preservation-and-budgets exit=0 seconds=12.26
