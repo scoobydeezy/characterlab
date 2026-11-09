@@ -1,7 +1,7 @@
 # Assembled Character — M2 reconciliation
 
 Owner approved D1–D5 on2026-10-25 with the D2 condition below.
-M73: three affect counterfactual controls. [Result](ASSEMBLED_CHARACTER_M73_RESULT.md). AFFECT open.
+M74:16 sourced affect-factor cells. [Result](ASSEMBLED_CHARACTER_M74_RESULT.md). AFFECT open.
 
 ## Decision sheet — adopted 2026-10-25
 
@@ -103,7 +103,7 @@ is not coverage. Foundation constraints and18 conditional obligations remain unc
 | UNRESOLVED | C-ATTN — PHEN-ATTN-001 v1.1.0 | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/10); `src/campaign3/generalFactory.ts`. | Route M1/M3/M4/L2. All 10 requirement keys: `PHEN-ATTN-001:4..13` (inclusive). | Pending reference replay; U1/V4. |
 | UNRESOLVED | C-BODY — PHEN-BODY-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/11); `src/campaign3/receivingFactory.ts`. | Route M2/M3. All 10 requirement keys: `PHEN-BODY-001:4..13` (inclusive). | Pending reference replay; U1/V4. |
 | UNRESOLVED | C-BELIEF — PHEN-BELIEF-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/12); `src/campaign3/beliefFactory.ts`. | Route M5/M6/L3. All 10 requirement keys: `PHEN-BELIEF-001:4..13` (inclusive). | Pending reference replay; U1/V4. |
-| UNRESOLVED | C-AFFECT — PHEN-AFFECT-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/13); src/campaign3/affectFactory.ts. | All10 keys :4..13. M69–72 valuation/cue/reserve/chosen frame; M73 command/extra-die/relief-evidence controls pass on0.72. Prior evidence retained. | No whole key closed; :7 partial. Natural contexts/factorial/scalar open. L4 OFF; :12/:13 tracked; RO-C3-011 retained. |
+| UNRESOLVED | C-AFFECT — PHEN-AFFECT-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/13); src/campaign3/affectFactory.ts. | All10 keys :4..13. M69–72 sources/frame; M73 three counterfactuals; M74 16 native cells/48 arithmetic comparisons on0.72. Prior evidence retained. | No whole key closed. Sensed v differs from original endpoints. Scalar receiving/natural contexts open; L4 OFF; :12/:13 tracked; RO-C3-011 retained. |
 | UNRESOLVED | C-WORK — PHEN-WORK-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/14); `src/campaign3/workFactory.ts`. | Route M8/M9. All 10 requirement keys: `PHEN-WORK-001:3..12` (inclusive). | Pending reference replay; U1/V4. |
 | UNRESOLVED | C-SKILL — PHEN-SKILL-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/15); `src/campaign3/skillFactory.ts`. | Route M10/L5. All 10 requirement keys: `PHEN-SKILL-001:3..12` (inclusive). | Pending reference replay; U1/V4. |
 | UNRESOLVED | C-SOCIAL — PHEN-SOCIAL-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/16); `src/campaign3/socialFactory.ts`. | Route M12/M14/L3. All 10 requirement keys: `PHEN-SOCIAL-001:4..13` (inclusive). | Pending reference replay; U1/V4. |
