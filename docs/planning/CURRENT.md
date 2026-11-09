@@ -1,40 +1,63 @@
-# Current work — M73 complete (2026-11-09)
+# Current work — M74 sourced factor matrix (2026-11-09)
 
-The assembled character preserves three original affect distinctions: threat
-does not command action or create a goal, and relief does not rewrite danger belief.
-[Result](ASSEMBLED_CHARACTER_M73_RESULT.md); plan67006724/base1626aaec.
-Model0.72 unchanged. Next: pin original AFFECT factorial/scalar comparisons.
+M73 completed the three named AFFECT counterfactual controls.
+M74 replays the four-factor matrix through actual model0.72 sources and receivers.
+Basee730ec24; same model/registry0.72, reappraisal0.7. No production/formal edits.
 
-## Completed bounded replay
-PHEN-AFFECT-001:7 three negative controls, supporting :6/:8/:10/:11.
-Positive threat in one captured context admits both responses: threat47/72,
-competing25/72 in exact production arbitration. FearAsCommand predicts72/72.
-With threat-goal importance0, no threat base/modifier/nucleus is created; actual
-probability0 versus the extra-d4 oracle16/48. One existing competing d6 remains.
-Relief2/15 changes appraisal but leaves danger mean1 and support history fixed;
-the relief-as-evidence oracle instead predicts13/15.
-Original d12 and relief1/2 account for different historical oracle numbers.
-Behavioral meaning agrees in bounded scope; full-model equivalence is not claimed.
+## Scope and correspondence
+PHEN-AFFECT-001:4/:5/:8/:11 factor paths; factorial portion of :7/:10.
+AFFECT_FACTOR_COMPARISON and AFFECT_PUBLIC_CONTRACT define E=p*s*(1+v)/2,
+U=E*(1-c), H=E*(2-c)/2. Reference SplitExposure stays selected everywhere.
+HistoricalProduct/ScalarUncontrolled are detached arithmetic comparators only.
+Run all16 native combinations, then all three candidates on their captured factors.
+Require native [E,U], scalar U and historical H exactly; preserve full-control H>0
+beside U0 and equal-U/different-E collisions. This is not scalar receiver equivalence,
+a vector-necessity result, a model reduction or closure of whole :7.
 
-## Scenario and preservation
-Three physical tasks, no social dependencies; perceived stand-ins. Training1..6,
-cue7..9, body delivery0/90 at9, choice10. Body30/capacity100/rate10/width1/
-threshold60, severity1/3, seed0; reference dice, SplitExposure, L4 OFF.
-No alternative frame. Live appraisal/grounds/available choices and actual trace
-consumption/execution checked before comparisons. No same-seed coupling claim.
-Hidden-body and denied-perception controls pass. Exact high repeat and high/
-noGround restore9->101 pass for state/output/trace/save/identity.
-Two retained test defects: Node type import and historical list ordering;
-repaired without changing fixture, law, comparison or acceptance.
-Two test files only; all production/formal sources and105 frozen dependencies
-unchanged. M72 rollback/ordering retained, no invalidating source change.
-Types/boundary/research/preservation/staged-size pass within original budgets.
-600s/check,1800s total;12 source/test files,20 evidence files/5MiB unchanged.
+## Fixed scenario, sources and liveness
+Two new test files: fixtures/assembledAffectFactorial.ts and
+assembledAffectFactorial.test.ts. Reuse M73 high/low on current0.72.
+Three physical tasks, no social dependencies, perceived stand-ins, seed0.
+Body30/capacity100/rate10/width1/threshold60; A/B importance1; reference dice;
+BenefitRelative, L4 OFF; no alternative/frame or cognitive operation affordance.
+p0/1: only perceived risky outcome of glyph0 After at9; physical annex fixed.
+s0/1: only governed consequence slot28[5], adopted goal stays live.
+c0/1: only perceived risky outcome of mitigation glyph1 After at6, true/false;
+observed baseline risk1 and distinct baseline/mitigating actions remain unchanged.
+v99/100 or19/100: physical delivery0/90 at9, ordinary observed interval at10.
+Never inject likelihood/control/body belief/affect or alter body sensor to hit endpoints.
+Compare each input pair differing in one bit before execution: only its declared
+source/declaration changes. Within each p/s cohort state/output equal at3 before c/v.
+All factor estimates, adopted valuation, body evidence and A/B positive grounds
+must be live at10, including known zero cases; unknown is never treated as zero.
+Require actual cue/mitigation supports, current body sample, completed appraisal
+-> concern/raw -> compiled reason -> resolved choice -> actual execution.
+A/B base1, d6, standing0 remain. p*s=0 or c1 gives U0/situation0 and A probability1/2;
+p=s=1,c0 gives U199/200 or119/200, both situation+3/AutoA. Retain saturation null.
+No cross-run same-seed coupling or newly sampled winner-change requirement.
 
-## Remaining scope
-No whole AFFECT key/member closes. Whole :7 still needs scalar/factorial comparison.
-Keep original candidates and conditional obligations; no dimensionality reduction.
-All21 members/15 families/132 clauses and RO-C3-011 remain. No UI or autonomous peers.
-Next card must pin actual factor producers, controls and comparison semantics before
-execution; same reference model/laws, no per-member tuning or new verifier machinery.
+## Original scope and controls
+Original native factorial used authored v0/1. This assembled matrix instead uses
+the two actual sensor-derived fractions above: classify exact operand difference
+at body -> appraisal; preserve same equation and four independent causal paths.
+Run existing affectFactorComparison.test.ts for all16 original binary arithmetic
+boundaries, interior/collision/unknown tests. Kernel checks do not confer native scope.
+At native p1/s1/high reserve/c1, hidden physical report changes must leave factor,
+knowledge and reason projections equal. Deny mitigated Motion5: c unknown and
+appraisal Unavailable, no affect modifier, even if p/s were to make a numerical zero.
+Primary high-reserve/c1 cell repeats and restores9->terminal101 exactly.
+Retain M72 rollback and M73 no-ground/privacy controls; production is unchanged.
+
+## Checks, budgets and stop
+Two serial factorial commands, eight cells each (split by p), <=600s each.
+Controls/persistence <=600s; types/boundary/research and frozen105 dependencies,
+whole production/formal unchanged, doc/evidence caps, staged size.
+Cumulative verification <=1800s including failures; one long-running job.
+<=12 production/test files; <=20 evidence files/5MiB, one result and check log.
+Ordinary setup defects may be repaired with failure retained. No tuning, seed search,
+alternate contrasts, removal of failing cells or budget extension.
+Done iff16 sourced native cells/48 candidate evaluations, live receiving paths,
+declared controls and exact continuation pass with all differences classified.
+Whole corpus/member keys remain open. Next is bounded scalar receiving comparison;
+do not manufacture a consumer just to force discrimination.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
