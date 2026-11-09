@@ -1,0 +1,800 @@
+
+=== M75: types ===
+
+M75_CHECK types exit=0 seconds=19.16
+
+=== M75: primary ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledAffectScalar.test.ts (8 tests | 1 failed | 7 skipped) 102458ms
+   × M75 primary: scalar packets reach actual concern reason choice execution and recall 102457ms
+     → actual ranking trace: expected undefined to be defined
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledAffectScalar.test.ts > M75 primary: scalar packets reach actual concern reason choice execution and recall
+AssertionError: actual ranking trace: expected undefined to be defined
+ ❯ memory src/test/assembledAffectScalar.test.ts:115:35
+    113|  expect(scores,'both eligible memories').toHaveLength(2);expect(scores…
+    114|  const trace=outputs(snap(r).trace,160n),t=trace.find(t=>key(f(t,13n))…
+    115|  expect(t,'actual ranking trace').toBeDefined();const e=event(t);expec…
+       |                                   ^
+    116|  expect(items(f(e,8n),'list')).toContainEqual(u(carry.source!));
+    117|  const producer=trace.find(t=>uint(f(event(t),1n))===carry.source&&key…
+ ❯ equalReceivers src/test/assembledAffectScalar.test.ts:131:11
+ ❯ src/test/assembledAffectScalar.test.ts:143:22
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  16:31:10
+   Duration  106.51s (transform 2.53s, setup 0ms, collect 3.73s, tests 102.46s, environment 0ms, prepare 102ms)
+
+
+M75_CHECK primary exit=1 seconds=107.23
+
+=== M75: primary-trace-repair ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledAffectScalar.test.ts (8 tests | 1 failed | 7 skipped) 101876ms
+   × M75 primary: scalar packets reach actual concern reason choice execution and recall 101876ms
+     → expected [ …(2) ] to deep equally contain { kind: 'list', …(1) }
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledAffectScalar.test.ts > M75 primary: scalar packets reach actual concern reason choice execution and recall
+AssertionError: expected [ …(2) ] to deep equally contain { kind: 'list', …(1) }
+
+- Expected: 
+Object {
+  "items": Array [
+    Object {
+      "kind": "text",
+      "value": "assembled-affect-memory/0.1/recall",
+    },
+    Object {
+      "kind": "signed",
+      "value": 11n,
+    },
+    Object {
+      "items": Array [
+        Object {
+          "kind": "text",
+          "value": "assembled-affect-memory/0.1",
+        },
+        Object {
+          "items": Array [
+            Object {
+              "kind": "text",
+              "value": "assembled-social-episode/0.1",
+            },
+            Object {
+              "kind": "typedIdentifier",
+              "namespaceId": 1002n,
+              "payload": Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1037n,
+                "payload": Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1038n,
+                  "payload": Object {
+                    "kind": "text",
+                    "value": "character/bridge-subject",
+                  },
+                },
+              },
+            },
+            Object {
+              "kind": "typedIdentifier",
+              "namespaceId": 1002n,
+              "payload": Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1037n,
+                "payload": Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1038n,
+                  "payload": Object {
+                    "kind": "text",
+                    "value": "content/assembled-social/target",
+                  },
+                },
+              },
+            },
+            Object {
+              "kind": "unsigned",
+              "value": 1n,
+            },
+            Object {
+              "kind": "unsigned",
+              "value": 3n,
+            },
+          ],
+          "kind": "list",
+        },
+        Object {
+          "items": Array [
+            Object {
+              "kind": "text",
+              "value": "assembled-reappraisal/0.2/appraisal",
+            },
+            Object {
+              "kind": "unsigned",
+              "value": 10n,
+            },
+            Object {
+              "items": Array [
+                Object {
+                  "denominator": 1n,
+                  "kind": "rational",
+                  "numerator": 1n,
+                },
+                Object {
+                  "items": Array [],
+                  "kind": "list",
+                },
+              ],
+              "kind": "list",
+            },
+            Object {
+              "kind": "unsigned",
+              "value": 0n,
+            },
+            Object {
+              "items": Array [],
+              "kind": "list",
+            },
+            Object {
+              "kind": "text",
+              "value": "Known",
+            },
+            Object {
+              "items": Array [
+                Object {
+                  "denominator": 200n,
+                  "kind": "rational",
+                  "numerator": 119n,
+                },
+                Object {
+                  "denominator": 1n,
+                  "kind": "rational",
+                  "numerator": 0n,
+                },
+              ],
+              "kind": "list",
+            },
+            Object {
+              "items": Array [
+                Object {
+                  "fields": Map {
+                    1n => [Object],
+                    2n => [Object],
+                  },
+                  "kind": "record",
+                  "schema": Object {
+                    "fields": [Array],
+                    "name": "TaskCommitmentKey",
+                    "schemaVersion": 1n,
+                    "typeId": 371n,
+                  },
+                },
+                Object {
+                  "items": Array [
+                    [Object],
+                    [Object],
+                    [Object],
+                    [Object],
+                    [Object],
+                    [Object],
+                    [Object],
+                  ],
+                  "kind": "list",
+                },
+                Object {
+                  "kind": "unsigned",
+                  "value": 2n,
+                },
+                Object {
+                  "kind": "text",
+                  "value": "ObservedMitigationEfficacy",
+                },
+                Object {
+                  "items": Array [
+                    [Object],
+                    [Object],
+                    [Object],
+                    [Object],
+                  ],
+                  "kind": "list",
+                },
+                Object {
+                  "items": Array [
+                    [Object],
+                    [Object],
+                    [Object],
+                    [Object],
+                  ],
+                  "kind": "list",
+                },
+                Object {
+                  "items": Array [
+                    [Object],
+                    [Object],
+                  ],
+                  "kind": "list",
+                },
+                Object {
+                  "items": Array [
+                    [Object],
+                    [Object],
+                  ],
+                  "kind": "list",
+                },
+                Object {
+                  "items": Array [
+                    [Object],
+                    [Object],
+                    [Object],
+                  ],
+                  "kind": "list",
+                },
+                Object {
+                  "items": Array [
+                    [Object],
+                    [Object],
+                    [Object],
+                  ],
+                  "kind": "list",
+                },
+              ],
+              "kind": "list",
+            },
+          ],
+          "kind": "list",
+        },
+        Object {
+          "kind": "unsigned",
+          "value": 176n,
+        },
+      ],
+      "kind": "list",
+    },
+    Object {
+      "denominator": 1n,
+      "kind": "rational",
+      "numerator": 1n,
+    },
+    Object {
+      "items": Array [
+        Object {
+          "items": Array [
+            Object {
+              "kind": "unsigned",
+              "value": 57n,
+            },
+            Object {
+              "denominator": 20n,
+              "kind": "rational",
+              "numerator": 9n,
+            },
+            Object {
+              "denominator": 8n,
+              "kind": "rational",
+              "numerator": 1n,
+            },
+            Object {
+              "denominator": 40n,
+              "kind": "rational",
+              "numerator": 23n,
+            },
+          ],
+          "kind": "list",
+        },
+        Object {
+          "items": Array [
+            Object {
+              "kind": "unsigned",
+              "value": 91n,
+            },
+            Object {
+              "denominator": 12n,
+              "kind": "rational",
+              "numerator": 7n,
+            },
+            Object {
+              "denominator": 1n,
+              "kind": "rational",
+              "numerator": 0n,
+            },
+            Object {
+              "denominator": 12n,
+              "kind": "rational",
+              "numerator": 7n,
+            },
+          ],
+          "kind": "list",
+        },
+      ],
+      "kind": "list",
+    },
+    Object {
+      "items": Array [
+        Object {
+          "items": Array [
+            Object {
+              "kind": "unsigned",
+              "value": 91n,
+            },
+            Object {
+              "kind": "unsigned",
+              "value": 149n,
+            },
+          ],
+          "kind": "list",
+        },
+      ],
+      "kind": "list",
+    },
+    Object {
+      "items": Array [
+        Object {
+          "kind": "typedIdentifier",
+          "namespaceId": 1000n,
+          "payload": Object {
+            "kind": "text",
+            "value": "observer/bridge-subject",
+          },
+        },
+        Object {
+          "kind": "typedIdentifier",
+          "namespaceId": 1002n,
+          "payload": Object {
+            "kind": "typedIdentifier",
+            "namespaceId": 1037n,
+            "payload": Object {
+              "kind": "typedIdentifier",
+              "namespaceId": 1038n,
+              "payload": Object {
+                "kind": "text",
+                "value": "character/bridge-subject",
+              },
+            },
+          },
+        },
+      ],
+      "kind": "list",
+    },
+  ],
+  "kind": "list",
+}
+
++ Received: 
+Array [
+  Object {
+    "items": Array [
+      Object {
+        "kind": "text",
+        "value": "assembled-body-recall/0.1",
+      },
+      Object {
+        "kind": "signed",
+        "value": 11n,
+      },
+      Object {
+        "items": Array [
+          Object {
+            "kind": "text",
+            "value": "assembled-body-episode/0.1",
+          },
+          Object {
+            "kind": "typedIdentifier",
+            "namespaceId": 1125n,
+            "payload": Object {
+              "kind": "unsigned",
+              "value": 139n,
+            },
+          },
+          Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1115n,
+                "payload": Object {
+                  "kind": "unsigned",
+                  "value": 103n,
+                },
+              },
+              2n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1000n,
+                "payload": Object {
+                  "kind": "text",
+                  "value": "observer/bridge-subject",
+                },
+              },
+              3n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1005n,
+                "payload": Object {
+                  "kind": "text",
+                  "value": "channel/assembled-body-level",
+                },
+              },
+              4n => Object {
+                "kind": "signed",
+                "value": 10n,
+              },
+              5n => Object {
+                "fields": Map {
+                  1n => Object {
+                    "denominator": 1n,
+                    "kind": "rational",
+                    "numerator": 80n,
+                  },
+                  2n => Object {
+                    "denominator": 1n,
+                    "kind": "rational",
+                    "numerator": 81n,
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    [Object],
+                    [Object],
+                  ],
+                  "name": "FiniteLevelInterval",
+                  "schemaVersion": 1n,
+                  "typeId": 462n,
+                },
+              },
+              6n => Object {
+                "kind": "text",
+                "value": "embodied-level-observation/0.1-candidate",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "ObservationId",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "ObserverId",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "ObservationChannelId",
+                  "required": true,
+                },
+                Object {
+                  "id": 4n,
+                  "name": "OccurredAt",
+                  "required": true,
+                },
+                Object {
+                  "id": 5n,
+                  "name": "FiniteLevelInterval",
+                  "required": true,
+                },
+                Object {
+                  "id": 6n,
+                  "name": "TransformationVersion",
+                  "required": true,
+                },
+              ],
+              "name": "EmbodiedLevelObservation",
+              "schemaVersion": 1n,
+              "typeId": 461n,
+            },
+          },
+          Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1106n,
+                "payload": Object {
+                  "kind": "unsigned",
+                  "value": 104n,
+                },
+              },
+              2n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1000n,
+                "payload": Object {
+                  "kind": "text",
+                  "value": "observer/bridge-subject",
+                },
+              },
+              3n => Object {
+                "kind": "unsigned",
+                "value": 10n,
+              },
+              4n => Object {
+                "items": Array [],
+                "kind": "set",
+              },
+              5n => Object {
+                "items": Array [],
+                "kind": "set",
+              },
+              6n => Object {
+                "items": Array [],
+                "kind": "set",
+              },
+              7n => Object {
+                "items": Array [],
+                "kind": "set",
+              },
+              8n => Object {
+                "items": Array [
+                  Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                ],
+                "kind": "set",
+              },
+              9n => Object {
+                "kind": "text",
+                "value": "semantic-binding/0.1-candidate#SEM-001H",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "ExperienceId",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "ObserverId",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "OccurredAt",
+                  "required": true,
+                },
+                Object {
+                  "id": 4n,
+                  "name": "PerceptualEventReferentIds",
+                  "required": true,
+                },
+                Object {
+                  "id": 5n,
+                  "name": "PerceivedBindings",
+                  "required": true,
+                },
+                Object {
+                  "id": 6n,
+                  "name": "PerceptualClassifications",
+                  "required": true,
+                },
+                Object {
+                  "id": 7n,
+                  "name": "PerceptualEventClassifications",
+                  "required": true,
+                },
+                Object {
+                  "id": 8n,
+                  "name": "SupportingObservationIds",
+                  "required": true,
+                },
+                Object {
+                  "id": 9n,
+                  "name": "TransformationVersion",
+                  "required": true,
+                },
+              ],
+              "name": "PreRecognitionSemanticExperience",
+              "schemaVersion": 1n,
+              "typeId": 227n,
+            },
+          },
+          Object {
+            "items": Array [
+              Object {
+                "kind": "text",
+                "value": "assembled-body-selection/0.1",
+              },
+              Object {
+                "kind": "signed",
+                "value": 10n,
+              },
+              Object {
+                "kind": "unsigned",
+                "value": 1n,
+              },
+              Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1115n,
+                "payload": Object {
+                  "kind": "unsigned",
+                  "value": 103n,
+                },
+              },
+              Object {
+                "kind": "text",
+                "value": "Selected",
+              },
+            ],
+            "kind": "list",
+          },
+          Object {
+            "kind": "signed",
+            "value": 10n,
+          },
+          false,
+        ],
+        "kind": "list",
+      },
+    ],
+    "kind": "list",
+  },
+  Object {
+    "items": Array [
+      Object {
+        "kind": "text",
+        "value": "assembled-body-retrieval/0.1",
+      },
+      Object {
+        "kind": "signed",
+        "value": 11n,
+      },
+      Object {
+        "kind": "typedIdentifier",
+        "namespaceId": 1005n,
+        "payload": Object {
+          "kind": "text",
+          "value": "channel/assembled-body-level",
+        },
+      },
+      Object {
+        "kind": "unsigned",
+        "value": 1n,
+      },
+      Object {
+        "items": Array [
+          Object {
+            "kind": "unsigned",
+            "value": 139n,
+          },
+          Object {
+            "kind": "unsigned",
+            "value": 102n,
+          },
+        ],
+        "kind": "list",
+      },
+      Object {
+        "items": Array [
+          Object {
+            "kind": "unsigned",
+            "value": 139n,
+          },
+        ],
+        "kind": "list",
+      },
+    ],
+    "kind": "list",
+  },
+]
+
+ ❯ memory src/test/assembledAffectScalar.test.ts:115:80
+    113|  expect(scores,'both eligible memories').toHaveLength(2);expect(scores…
+    114|  const trace=outputs(snap(r).trace,160n),t=trace.find(t=>key(f(event(t…
+    115|  expect(t,'actual ranking trace').toBeDefined();expect(items(f(t,13n),…
+       |                                                                                ^
+    116|  expect(items(f(e,8n),'list')).toContainEqual(u(carry.source!));
+    117|  const producer=trace.find(t=>uint(f(event(t),1n))===carry.source&&key…
+ ❯ equalReceivers src/test/assembledAffectScalar.test.ts:131:11
+ ❯ src/test/assembledAffectScalar.test.ts:143:22
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  16:33:20
+   Duration  105.79s (transform 2.39s, setup 0ms, collect 3.58s, tests 101.88s, environment 0ms, prepare 100ms)
+
+
+M75_CHECK primary-trace-repair exit=1 seconds=106.49
+
+=== M75: primary-payload-repair ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectScalar.test.ts > M75 primary: scalar packets reach actual concern reason choice execution and recall
+M75 RECEIVER {"mode":"Native","coords":{"kind":"list","items":[{"kind":"rational","numerator":"119","denominator":"200"},{"kind":"rational","numerator":"0","denominator":"1"}]},"gain":"1/1","scores":[{"at":"7","base":"9/20","pull":"1/8","score":"23/40"},{"at":"8","base":"7/12","pull":"0/1","score":"7/12"}],"selected":["8"],"draws":2,"probabilityA":"1/2","automatic":false}
+M75 RECEIVER {"mode":"ScalarUncontrolled","coords":{"kind":"list","items":[{"kind":"rational","numerator":"0","denominator":"1"},{"kind":"rational","numerator":"0","denominator":"1"}]},"gain":"1/1","scores":[{"at":"7","base":"9/20","pull":"1/8","score":"23/40"},{"at":"8","base":"7/12","pull":"0/1","score":"7/12"}],"selected":["8"],"draws":2,"probabilityA":"1/2","automatic":false}
+
+stdout | src/test/assembledAffectScalar.test.ts > M75 primary: scalar packets reach actual concern reason choice execution and recall
+M75 RECEIVER {"mode":"ScalarExposure","coords":{"kind":"list","items":[{"kind":"rational","numerator":"0","denominator":"1"},{"kind":"rational","numerator":"119","denominator":"200"}]},"gain":"319/200","scores":[{"at":"7","base":"9/20","pull":"1/8","score":"1039/1600"},{"at":"8","base":"7/12","pull":"0/1","score":"7/12"}],"selected":["7"],"draws":0,"probabilityA":"1/1","automatic":true}
+
+stdout | src/test/assembledAffectScalar.test.ts > M75 primary: scalar packets reach actual concern reason choice execution and recall
+M75 RECEIVER {"mode":"HistoricalAverage","coords":{"kind":"list","items":[{"kind":"rational","numerator":"0","denominator":"1"},{"kind":"rational","numerator":"119","denominator":"400"}]},"gain":"519/400","scores":[{"at":"7","base":"9/20","pull":"1/8","score":"1959/3200"},{"at":"8","base":"7/12","pull":"0/1","score":"7/12"}],"selected":["7"],"draws":0,"probabilityA":"1/1","automatic":true}
+M75 PRIMARY PASS scalar U preserves actual receivers/state/draws; E/H change modifier, P(A)>1/2 and recall score. Diagnostic E difference retained; no admitted scalar model.
+
+ ✓ src/test/assembledAffectScalar.test.ts (8 tests | 7 skipped) 160681ms
+   ✓ M75 primary: scalar packets reach actual concern reason choice execution and recall 160680ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  16:35:55
+   Duration  164.63s (transform 2.41s, setup 0ms, collect 3.63s, tests 160.68s, environment 0ms, prepare 98ms)
+
+
+M75_CHECK primary-payload-repair exit=0 seconds=165.3
+
+=== M75: controls ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectScalar.test.ts > M75 controls: positive uncontrolled threat unknown evidence and hidden annex
+M75 CONTROL positive PASS native/U receivers, state, draws and memory equal; gain=319/200
+
+stdout | src/test/assembledAffectScalar.test.ts > M75 controls: positive uncontrolled threat unknown evidence and hidden annex
+M75 CONTROL denied PASS native/U receivers, state, draws and memory equal; gain=1/1
+
+stdout | src/test/assembledAffectScalar.test.ts > M75 controls: positive uncontrolled threat unknown evidence and hidden annex
+M75 HIDDEN PASS perceived knowledge/appraisal/reasons/recall unchanged.
+
+ ✓ src/test/assembledAffectScalar.test.ts (8 tests | 7 skipped) 195127ms
+   ✓ M75 controls: positive uncontrolled threat unknown evidence and hidden annex 195126ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  16:38:55
+   Duration  199.06s (transform 2.40s, setup 0ms, collect 3.60s, tests 195.13s, environment 0ms, prepare 100ms)
+
+
+M75_CHECK controls exit=0 seconds=199.74
+
+=== M75: persistence ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectScalar.test.ts > M75 persistence: native exact repeat and restore10 through queued recall to terminal
+M75 PERSISTENCE PASS native repeat/restore10->11->101 exact state/output/trace/save/identity. No scalar public-checkpoint claim.
+
+ ✓ src/test/assembledAffectScalar.test.ts (8 tests | 7 skipped) 123513ms
+   ✓ M75 persistence: native exact repeat and restore10 through queued recall to terminal 123512ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  16:42:49
+   Duration  127.48s (transform 2.39s, setup 0ms, collect 3.63s, tests 123.51s, environment 0ms, prepare 98ms)
+
+
+M75_CHECK persistence exit=0 seconds=128.16
+
+=== M75: final-types ===
+
+M75_CHECK final-types exit=0 seconds=18.56
+
+=== M75: boundary ===
+Reference boundary check passed.
+
+M75_CHECK boundary exit=0 seconds=2.64
+
+=== M75: research ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M75_CHECK research exit=0 seconds=3.67
+
+=== M75: preservation ===
+M75 integrity PASS:105 frozen blobs, historical trees unchanged;two planned test paths;production/formal unchanged; document/evidence caps.
+
+M75_CHECK preservation exit=0 seconds=12.16
+
+M75 staged whitespace: exit2 at raw diagnostic lines51/373 (Expected/Received labels). Preserved original output; exclude only raw log from whitespace check. Covered by routine-check allowance.

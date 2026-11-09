@@ -1,58 +1,46 @@
-# Current work — M75 scalar receiving comparison (2026-11-09)
+# Current work — M75 complete (2026-11-09)
 
-The character will compare full-pair affect with scalar-only information at its
-existing concern, reason and later memory receivers. Equality stays equality.
-Base44489b30/model0.72; production and formal contracts remain unchanged.
+Uncontrolled threat alone preserves the tested concern, reasons, decision,
+execution and later recall. Exposure-only and HistoricalAverage do not.
+[Result](ASSEMBLED_CHARACTER_M75_RESULT.md); plan683ab6cd/base44489b30.
+Model0.72/interpreted-threat0.7 unchanged; production retains SplitExposure.
 
-## Scope and scenario
-One bounded replay comparison, two test files: fixtures/assembledAffectScalar.ts
-and assembledAffectScalar.test.ts under src/test. No new owner or consumer.
-Implementations: interpreted-threat0.7, shared affect-memory0.3; SplitExposure
-reference, UncontrolledGain, reference dice, L4 OFF. No admitted scalar model.
-Reuse M74 p1/s1/v1/c1: observed cue and mitigation, E119/200,U0 at10.
-Three physical tasks, no social dependencies; perceived stand-ins, histories7/8.
-Move only the existing silent social cue9 to10, so recall11 receives known
-appraisal10. Body30/cap100/rate10/width1/threshold60, delivery90 at9;
-A/B importance1, seed0, no frame. No fabricated estimates, memories or graph.
+## Completed scope
+Bounded scalar receiving comparison for PHEN-AFFECT-001:7/:10/:11.
+Test-only producer packet contains status/one number; adapter supplies[0,value].
+Actual concern/raw reason/decision/execution and prior-affect memory consume it.
+These counterfactual executions are not admitted scalar models/checkpoints.
+Original evidence/provenance remains; no whole-model information reduction.
 
-## Predeclared comparison
-Test-only instrumentation wraps shared reappraisal.appraise synchronously;
-only its SplitExposure producer result crosses a scalar packet boundary.
-Packet contains status and one value: U, E, or HistoricalAverage (E+U)/2.
-The adapter receives only that packet and supplies existing slots [0,value];
-unknown remains Unavailable. No factor reconstruction or E side channel.
-Native production is untouched; altered executions are researcher counterfactuals,
-not admitted models, public checkpoints, or whole-trace equivalence evidence.
-Concern, raw reason/nuclei, actual decision/execution and later memory must
-consume the report. Assert live grounds, two retained episodes and nonzero pull,
-strict prior appraisal10 -> recall11 with actual causal parent before comparisons.
+Full-control native[119/200,0] and scalarU[0,0] agree on authoritative state,
+actual concern/reasons/decision/execution, knowledge, both addressed random draws,
+recall gain1, exact scores, selected episode8 and publication history through11.
+Their diagnostic reports/queued payloads differ explicitly.
+Exposure119/200 and H119/400 change threat-action probability1/2->1 Automatic,
+gain319/200 or519/400, and actual recall to episode7.
+Identical episode7 base9/20/pull1/8 and episode8 score7/12 isolate consumed gain.
 
-Primary: native versus ScalarUncontrolled must have equal authoritative state,
-concern/reasons/decision/execution, actual random records, memory gain/scores,
-selection and publication history through11. Require positive matched draws.
-Appraisal/queued diagnostic payloads differ explicitly: no whole-output/save claim.
-Exposure and HistoricalAverage controls must change actual modifier, choice
-probability and recall gain/score. Memory winner equality is retained if found.
-Positive c0 and denied Motion controls: native/ScalarUncontrolled agree at the
-same receivers; unknown stays unknown. Hidden annex: native perceived cognition
-and recall match primary. Native primary repeat and restore10->101 are byte-exact.
-No new seeds, magnitudes, graph, consumer or replacement contrast after results.
+## Scenario and controls
+M74 observed training1..6/cue7..9; physical choice10. Only existing silent social
+cue moves9->10, yielding recall11 with actual appraisal10 and causal-parent join.
+Three physical tasks, no social dependencies; perceived histories7/8.
+Body30/capacity100/rate10/width1/threshold60, delivery90 at9, importanceA/B1,
+seed0, reference dice, BenefitRelative, L4 OFF; no new memory/graph/consumer.
+Positive c0 and denied Motion: native/U receiver/state/draw equality; unknown
+stays Unavailable. Hidden annex preserves knowledge/appraisal/reasons/recall.
+Native repeat and restore10->11->101 are byte-exact; M72 rollback retained.
+Two trace-lookup test failures repaired and preserved; no contrast or budget change.
+Types, boundary/research,105 frozen dependencies, production/formal preservation,
+document/evidence limits and staged size pass. Two test files/two evidence files;
+600s/check,1800s total;12 files and20 evidence files/5MiB limits unchanged.
 
-## Verification and stop
-Serial groups: primary4 runs; positive/unknown4 runs plus hidden/native2 runs;
-native repeat/restore3 runs. Each <=600s; cumulative <=1800s including failures.
-Use snapshot caching; focused groups, then types, boundary, research, preservation,
-staged size check. Existing M72 rollback retained; unchanged production requires
-no broad regression sweep. Record ordinary setup/instrumentation repairs.
-<=12 production/test files; <=20 evidence files/5MiB; one result and check log.
-Done when receiving comparison and controls pass, limits/preservation pass, and
-equalities/differences are classified in the existing reconciliation register.
-Stop on exhausted budget or unsupported liveness/contrast; do not force a result.
-
-## Limits retained
-PHEN-AFFECT-001:7/:10 reduction questions receive bounded evidence only.
-No production reduction, dimensional necessity, whole member/family closure or
-general equivalence. Keep RO-C3-006/011/020 and other conditional debts; original
-scalar equality remains a meaningful comparator. Full AFFECT/21 members/
-15 families/132 clauses remain open. No UI or autonomous multi-character work.
+## Remaining boundary
+Bounded U equivalence is preserved, not generalized. M74's16 native factorial
+cells/48 formulas are not16 substituted scalar trajectories. No reduction,
+dimensional necessity, whole key/member/family closure or admitted scalar version.
+Continue original AFFECT requirement correspondence on this same character;
+use existing evidence, isolate remaining native gates before moving to DECISION.
+All21 members/15 families/132 clauses and18 conditional obligations remain,
+including RO-C3-006/011/020 and :12/:13 reopening constraints. L4 OFF.
+No UI or autonomous multi-character work.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
