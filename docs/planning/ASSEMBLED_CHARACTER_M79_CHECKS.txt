@@ -1,0 +1,285 @@
+
+=== M79: types ===
+
+M79_CHECK types exit=0 seconds=17.15
+
+=== M79: history ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectControls.test.ts > M79 history: contradictory safe evidence and hidden truth
+M79 HISTORY PASS {"supports":2,"mean":"1/2","latest":"0/1","noLearning":"unknown","referenceProbability":"47/72","contradictionProbability":"1/2","U":"119/1200","hiddenMatchedDraws":2,"recallGain":"1319/1200","selected":["7"]}
+
+ ✓ src/test/assembledAffectControls.test.ts (10 tests | 9 skipped) 116105ms
+   ✓ M79 history: contradictory safe evidence and hidden truth 116105ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 9 skipped (10)
+   Start at  08:48:24
+   Duration  120.35s (transform 2.46s, setup 0ms, collect 3.72s, tests 116.11s, environment 0ms, prepare 290ms)
+
+
+M79_CHECK history exit=0 seconds=122.22
+
+=== M79: boundaries-source ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectControls.test.ts > M79 boundaries source
+M79 BOUNDARY {"mode":"missingAction","status":{"kind":"text","value":"Unavailable"},"efficacy":"unknown","supports":1,"probability":"1/2","recallGain":"1/1"}
+
+stdout | src/test/assembledAffectControls.test.ts > M79 boundaries source
+M79 BOUNDARY {"mode":"deniedMotion","status":{"kind":"text","value":"Unavailable"},"efficacy":"unknown","supports":1,"probability":"1/2","recallGain":"1/1"}
+
+stdout | src/test/assembledAffectControls.test.ts > M79 boundaries source
+M79 BOUNDARY {"mode":"censored","status":{"kind":"text","value":"Unavailable"},"efficacy":"unknown","supports":1,"probability":"1/2","recallGain":"1/1"}
+
+stdout | src/test/assembledAffectControls.test.ts > M79 boundaries source
+M79 BOUNDARY {"mode":"noop","status":{"kind":"text","value":"Unavailable"},"efficacy":"unknown","supports":1,"probability":"1/2","recallGain":"1/1"}
+
+ ✓ src/test/assembledAffectControls.test.ts (10 tests | 9 skipped) 132784ms
+   ✓ M79 boundaries source 132784ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 9 skipped (10)
+   Start at  08:51:08
+   Duration  136.66s (transform 2.38s, setup 0ms, collect 3.57s, tests 132.78s, environment 0ms, prepare 98ms)
+
+
+M79_CHECK boundaries-source exit=0 seconds=137.34
+
+=== M79: boundaries-catalogue ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectControls.test.ts > M79 boundaries catalogue
+M79 BOUNDARY {"mode":"zeroBaseline","status":{"kind":"text","value":"Unavailable"},"efficacy":"unknown","supports":2,"probability":"1/2","recallGain":"1/1"}
+
+stdout | src/test/assembledAffectControls.test.ts > M79 boundaries catalogue
+M79 BOUNDARY {"mode":"unknownCatalogue","status":{"kind":"text","value":"Unavailable"},"efficacy":"0/1","supports":2,"probability":"1/2","recallGain":"1/1"}
+
+stdout | src/test/assembledAffectControls.test.ts > M79 boundaries catalogue
+M79 BOUNDARY {"mode":"emptyCatalogue","status":{"kind":"text","value":"Known"},"efficacy":"0/1","supports":2,"probability":"47/72","recallGain":"719/600"}
+
+stdout | src/test/assembledAffectControls.test.ts > M79 boundaries catalogue
+M79 BOUNDARY {"mode":"ineffective","status":{"kind":"text","value":"Known"},"efficacy":"0/1","supports":2,"probability":"47/72","recallGain":"719/600"}
+
+ ✓ src/test/assembledAffectControls.test.ts (10 tests | 9 skipped) 134480ms
+   ✓ M79 boundaries catalogue 134479ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 9 skipped (10)
+   Start at  08:53:45
+   Duration  138.37s (transform 2.38s, setup 0ms, collect 3.57s, tests 134.48s, environment 0ms, prepare 100ms)
+
+
+M79_CHECK boundaries-catalogue exit=0 seconds=139.03
+
+=== M79: physical ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledAffectControls.test.ts (10 tests | 1 failed | 9 skipped) 63976ms
+   × M79 physical: normal failed attempt cannot rewrite prior reasoning 63975ms
+     → undeclared topology change: references, schemas, phases, ownership and producers are fixed
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledAffectControls.test.ts > M79 physical: normal failed attempt cannot rewrite prior reasoning
+SchedulerContractError: undeclared topology change: references, schemas, phases, ownership and producers are fixed
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.compileCharacterModel src/assembled/model.ts:235:145
+ ❯ Module.prepareCharacterModel src/assembled/character.ts:27:110
+ ❯ create src/test/assembledAffectControls.test.ts:23:65
+ ❯ src/test/assembledAffectControls.test.ts:101:43
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 9 skipped (10)
+   Start at  08:56:42
+   Duration  67.86s (transform 2.39s, setup 0ms, collect 3.58s, tests 63.98s, environment 0ms, prepare 99ms)
+
+
+M79_CHECK physical exit=1 seconds=68.56
+
+=== M79: repair-types ===
+
+M79_CHECK repair-types exit=0 seconds=16.55
+
+=== M79: admission ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledAffectControls.test.ts (11 tests | 1 failed | 10 skipped) 55003ms
+   × M79 admission: versioned Boolean only, no topology widening 55003ms
+     → expected [Function] to throw error including 'permission requires Boolean' but got 'cognitive record grammar: Boolean req…'
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledAffectControls.test.ts > M79 admission: versioned Boolean only, no topology widening
+AssertionError: expected [Function] to throw error including 'permission requires Boolean' but got 'cognitive record grammar: Boolean req…'
+
+Expected: "permission requires Boolean"
+Received: "cognitive record grammar: Boolean required"
+
+ ❯ src/test/assembledAffectControls.test.ts:146:2
+    144|  const current=fixture('ineffective'),oldBlocked=fixture('failed',true…
+    145|  await expect(prepareCharacterModel(oldBlocked.s)).rejects.toThrow('un…
+    146|  await expect(prepareCharacterModel(changeDefinition(current.s,'defini…
+       |  ^
+    147|  await expect(prepareCharacterModel({...current.s,registrySchemaVersio…
+    148|  await expect(prepareCharacterModel(changeDefinition(current.s,'defini…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 10 skipped (11)
+   Start at  09:01:14
+   Duration  58.89s (transform 2.38s, setup 0ms, collect 3.57s, tests 55.00s, environment 0ms, prepare 100ms)
+
+
+M79_CHECK admission exit=1 seconds=59.59
+
+=== M79: admission-error-message-repair ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectControls.test.ts > M79 admission: versioned Boolean only, no topology widening
+M79 ADMISSION PASS old false, wrong type, mismatched version and unrelated closed declaration reject.
+
+ ✓ src/test/assembledAffectControls.test.ts (11 tests | 10 skipped) 54424ms
+   ✓ M79 admission: versioned Boolean only, no topology widening 54423ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 10 skipped (11)
+   Start at  09:02:57
+   Duration  58.28s (transform 2.38s, setup 0ms, collect 3.56s, tests 54.42s, environment 0ms, prepare 100ms)
+
+
+M79_CHECK admission-error-message-repair exit=0 seconds=58.96
+
+=== M79: physical-v073 ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectControls.test.ts > M79 physical: normal failed attempt cannot rewrite prior reasoning
+M79 VERSION PASS0.72/0.73 permitted exact state/output/actual draw equality at10; identity distinct.
+M79 PHYSICAL PASS {"successCount":"1","failureCount":"0","sameEarlierStages":true,"matchedDraws":2,"unchangedThreatSupports":1,"terminal":"101"}
+
+ ✓ src/test/assembledAffectControls.test.ts (11 tests | 10 skipped) 123581ms
+   ✓ M79 physical: normal failed attempt cannot rewrite prior reasoning 123580ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 10 skipped (11)
+   Start at  09:04:15
+   Duration  127.48s (transform 2.37s, setup 0ms, collect 3.56s, tests 123.58s, environment 0ms, prepare 100ms)
+
+
+M79_CHECK physical-v073 exit=0 seconds=128.15
+
+=== M79: history-v073 ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectControls.test.ts > M79 history: contradictory safe evidence and hidden truth
+M79 HISTORY PASS {"supports":2,"mean":"1/2","latest":"0/1","noLearning":"unknown","referenceProbability":"47/72","contradictionProbability":"1/2","U":"119/1200","hiddenMatchedDraws":2,"recallGain":"1319/1200","selected":["7"]}
+
+ ✓ src/test/assembledAffectControls.test.ts (11 tests | 10 skipped) 114895ms
+   ✓ M79 history: contradictory safe evidence and hidden truth 114894ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 10 skipped (11)
+   Start at  09:06:57
+   Duration  118.78s (transform 2.38s, setup 0ms, collect 3.56s, tests 114.89s, environment 0ms, prepare 99ms)
+
+
+M79_CHECK history-v073 exit=0 seconds=119.47
+
+=== M79: boundaries-v073 ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectControls.test.ts > M79 boundaries source
+M79 BOUNDARY {"mode":"missingAction","status":{"kind":"text","value":"Unavailable"},"efficacy":"unknown","supports":1,"probability":"1/2","recallGain":"1/1"}
+
+stdout | src/test/assembledAffectControls.test.ts > M79 boundaries source
+M79 BOUNDARY {"mode":"deniedMotion","status":{"kind":"text","value":"Unavailable"},"efficacy":"unknown","supports":1,"probability":"1/2","recallGain":"1/1"}
+
+stdout | src/test/assembledAffectControls.test.ts > M79 boundaries source
+M79 BOUNDARY {"mode":"censored","status":{"kind":"text","value":"Unavailable"},"efficacy":"unknown","supports":1,"probability":"1/2","recallGain":"1/1"}
+
+stdout | src/test/assembledAffectControls.test.ts > M79 boundaries source
+M79 BOUNDARY {"mode":"noop","status":{"kind":"text","value":"Unavailable"},"efficacy":"unknown","supports":1,"probability":"1/2","recallGain":"1/1"}
+
+stdout | src/test/assembledAffectControls.test.ts > M79 boundaries catalogue
+M79 BOUNDARY {"mode":"zeroBaseline","status":{"kind":"text","value":"Unavailable"},"efficacy":"unknown","supports":2,"probability":"1/2","recallGain":"1/1"}
+
+stdout | src/test/assembledAffectControls.test.ts > M79 boundaries catalogue
+M79 BOUNDARY {"mode":"unknownCatalogue","status":{"kind":"text","value":"Unavailable"},"efficacy":"0/1","supports":2,"probability":"1/2","recallGain":"1/1"}
+
+stdout | src/test/assembledAffectControls.test.ts > M79 boundaries catalogue
+M79 BOUNDARY {"mode":"emptyCatalogue","status":{"kind":"text","value":"Known"},"efficacy":"0/1","supports":2,"probability":"47/72","recallGain":"719/600"}
+
+stdout | src/test/assembledAffectControls.test.ts > M79 boundaries catalogue
+M79 BOUNDARY {"mode":"ineffective","status":{"kind":"text","value":"Known"},"efficacy":"0/1","supports":2,"probability":"47/72","recallGain":"719/600"}
+
+ ✓ src/test/assembledAffectControls.test.ts (11 tests | 9 skipped) 220718ms
+   ✓ M79 boundaries source 134518ms
+   ✓ M79 boundaries catalogue 86199ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 9 skipped (11)
+   Start at  09:09:31
+   Duration  224.60s (transform 2.37s, setup 0ms, collect 3.57s, tests 220.72s, environment 0ms, prepare 100ms)
+
+
+M79_CHECK boundaries-v073 exit=0 seconds=225.27
+
+=== M79: persistence-v073 ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectControls.test.ts > M79 persistence: contradiction and failed execution
+M79 PERSISTENCE contradiction PASS 8->10->11->101 exact state/output/trace/save/identity
+
+stdout | src/test/assembledAffectControls.test.ts > M79 persistence: contradiction and failed execution
+M79 PERSISTENCE failed PASS 9->10->11->101 exact state/output/trace/save/identity
+
+ ✓ src/test/assembledAffectControls.test.ts (11 tests | 10 skipped) 181451ms
+   ✓ M79 persistence: contradiction and failed execution 181451ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 10 skipped (11)
+   Start at  09:13:26
+   Duration  185.35s (transform 2.39s, setup 0ms, collect 3.58s, tests 181.45s, environment 0ms, prepare 98ms)
+
+
+M79_CHECK persistence-v073 exit=0 seconds=186.01
+
+=== M79: final-types ===
+
+M79_CHECK final-types exit=0 seconds=16.54
+
+=== M79: boundary ===
+Reference boundary check passed.
+
+M79_CHECK boundary exit=0 seconds=2.64
+
+=== M79: research ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M79_CHECK research exit=0 seconds=3.43
+
+=== M79: preservation ===
+M79 integrity PASS:105 frozen dependency blobs; historical source/evidence and prior tests unchanged;four planned source-test files, additive versioned contract; document/evidence caps; no baseline or obligation change.
+
+M79_CHECK preservation exit=0 seconds=12.73
+
+Final accounting:1313.64s logged +5s routine Git/document/staged-size allowance =1318.64s; cap1800s. Longest225.27s/cap600s. Both failures retained.
