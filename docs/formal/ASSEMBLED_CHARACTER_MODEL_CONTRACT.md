@@ -131,3 +131,32 @@ D2 evidence condition: M2a uses no R3 choice. L-row selections remain labelled
 engineering default, no verdict establishing superiority; this source retains C2
 semantics as a scaffold, not an asserted realization of the eventual reference laws.
 After pass, stop at the M2a result. M3 must separately implement the early interaction.
+
+## M79 execution admission extension — 2026-11-10
+**assembled-character-model/0.73-candidate**, rules/assembled-character/0.73-candidate
+and assembled-character-registry/0.73-candidate. LOCAL DISPOSITION, written before
+implementation under the owner's bounded repair authorization. M79's first physical
+test exposed a mistaken assumption:0.72 intentionally retains the original fixed
+protocol permission, although its execution kernel already supports both values.
+Keep that historical domain unchanged. This successor removes that one restriction.
+
+Inherit the complete0.72 composition, schema inventory, semantics and invariants.
+Only definition/protocol-execution record434 field1 additionally admits either
+Boolean. This is physical world-adapter permission, never a belief, reason,
+observation permission or cognitive-operation completion flag. Validate its actual
+Boolean type before normalizing this one field for topology comparison. Compare
+against the same normalized reference; every other field/reference/producer remains
+closed. Commit the original supplied Boolean in model identity. No input selector,
+new state owner, event type, RNG call, alternate runtime or psychology is introduced.
+The unchanged bounded-protocol-execution/0.1-candidate adapter receives the setting
+only after actual intent/plan/attempt. False yields completed execution433 count0;
+it does not throw, roll back, rewrite expression, or author a danger observation.
+Outcome perception/learning retain their existing evidence boundaries.
+
+Both success/failure arms use0.73 and the same M79 declarations, seed and tests.
+Add explicit0.72-false rejection, wrong-type and mismatched-version/other-topology
+rejections. A0.72/0.73 permitted comparison must preserve state/output/actual draws
+through choice10; identities may differ. Rerun G1 at0.73 because it is the active
+successor, retaining the successful0.72 logs. Restore the0.73 failed model from9,
+contradiction from8. No physical comparison is replaced by an actuator/exception
+control; the original gate and cumulative1800s/600s limits remain fixed.

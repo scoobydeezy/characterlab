@@ -61,3 +61,12 @@ record exact unresolved failure. No repeated reconciliation milestone or forced 
 All21 members/15 families/132 clauses and18 conditional debts remain.
 RO-C3-011 safeguards apply; no universal scalar equivalence, reduction or debt closure.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
+
+## Local admission repair before implementation
+First G2 attempt rejected false protocol permission at model preparation; no run.
+Add model/registry0.73: same0.72 composition, only434.field1 opens to Boolean;
+older domains stay frozen. Formal amendment in ASSEMBLED_CHARACTER_MODEL_CONTRACT.
+Add model.ts/traceBinding.ts (four source-test files total). Keep exact G2 gate.
+Both arms/new G1 runs use0.73; retain successful0.72 G1 logs. Add old/new permitted
+state/output/draw correspondence and old-version/type/topology rejection checks.
+Rerun affected groups only; unchanged600/1800s limits, no extension or new contrast.
