@@ -1,0 +1,140 @@
+
+=== M76: types ===
+
+M76_CHECK types exit=0 seconds=17.13
+
+=== M76: comparisons ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledAffectResponse.test.ts (9 tests | 1 failed | 8 skipped) 86644ms
+   × M76 comparisons: competing obligation and strictly later NoFeedback ablation 86644ms
+     → live compiled ground: expected [] to have a length of 1 but got +0
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledAffectResponse.test.ts > M76 comparisons: competing obligation and strictly later NoFeedback ablation
+AssertionError: live compiled ground: expected [] to have a length of 1 but got +0
+
+- Expected
++ Received
+
+- 1
++ 0
+
+ ❯ projection src/test/assembledAffectResponse.test.ts:48:48
+     46|   expect(signal(task,1n),'positive base liveness').toHaveLength(1);
+     47|   expect(readQ(f(signal(task,1n)[0],2n)).compare(Q.of(0n))).toBeGreate…
+     48|   expect(nucleus(task),'live compiled ground').toHaveLength(1);
+       |                                                ^
+     49|  }
+     50|  expect(ns).toHaveLength(mode==='weak'?1:2);
+ ❯ src/test/assembledAffectResponse.test.ts:118:33
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  18:50:12
+   Duration  90.70s (transform 2.39s, setup 0ms, collect 3.58s, tests 86.64s, environment 0ms, prepare 235ms)
+
+
+M76_CHECK comparisons exit=1 seconds=92.04
+
+=== M76: comparisons-ground-assertion-repair ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectResponse.test.ts > M76 comparisons: competing obligation and strictly later NoFeedback ablation
+M76 MATCHED RESPONSE strong A47/B25 versus weak A72/B0;25 changed winners in72 uniformly weighted captured-context cases.
+
+stdout | src/test/assembledAffectResponse.test.ts > M76 comparisons: competing obligation and strictly later NoFeedback ablation
+M76 RECALL {"label":"UncontrolledGain/0","gain":"719/600","scores":[{"at":"7","base":"9/20","pull":"1/8","score":"2879/4800"},{"at":"8","base":"7/12","pull":"0/1","score":"7/12"}],"selected":["7"]}
+M76 RECALL {"label":"UncontrolledGain/1","gain":"1/1","scores":[{"at":"7","base":"9/20","pull":"1/8","score":"23/40"},{"at":"8","base":"7/12","pull":"0/1","score":"7/12"}],"selected":["8"]}
+M76 RECALL {"label":"NoFeedback/0","gain":"1/1","scores":[{"at":"7","base":"9/20","pull":"1/8","score":"23/40"},{"at":"8","base":"7/12","pull":"0/1","score":"7/12"}],"selected":["8"]}
+M76 RECALL {"label":"NoFeedback/1","gain":"1/1","scores":[{"at":"7","base":"9/20","pull":"1/8","score":"23/40"},{"at":"8","base":"7/12","pull":"0/1","score":"7/12"}],"selected":["8"]}
+M76 COMPARISONS PASS matching affect/different competing priority; prior-only gain/recall difference disappears under admitted NoFeedback. No L4 change.
+
+ ✓ src/test/assembledAffectResponse.test.ts (9 tests | 8 skipped) 172549ms
+   ✓ M76 comparisons: competing obligation and strictly later NoFeedback ablation 172548ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  18:52:29
+   Duration  176.43s (transform 2.36s, setup 0ms, collect 3.54s, tests 172.55s, environment 0ms, prepare 99ms)
+
+
+M76_CHECK comparisons-ground-assertion-repair exit=0 seconds=177.1
+
+=== M76: privacy ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectResponse.test.ts > M76 privacy: unobserved competing importance remains unknown
+M76 PRIVACY PASS hidden importance1/1 vs1/2 preserves unknown B importance, no B base/nucleus, and equal cognition/decision/state.
+
+ ✓ src/test/assembledAffectResponse.test.ts (9 tests | 8 skipped) 87066ms
+   ✓ M76 privacy: unobserved competing importance remains unknown 87065ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  18:56:17
+   Duration  90.95s (transform 2.38s, setup 0ms, collect 3.56s, tests 87.07s, environment 0ms, prepare 99ms)
+
+
+M76_CHECK privacy exit=0 seconds=91.63
+
+=== M76: persistence-uncontrolled ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectResponse.test.ts > M76 persistence UncontrolledGain: exact repeat and restored queued recall
+M76 PERSISTENCE UncontrolledGain PASS10->11->101 exact state/output/trace/save/identity.
+
+ ✓ src/test/assembledAffectResponse.test.ts (9 tests | 8 skipped) 116542ms
+   ✓ M76 persistence UncontrolledGain: exact repeat and restored queued recall 116542ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  18:57:49
+   Duration  120.49s (transform 2.37s, setup 0ms, collect 3.63s, tests 116.54s, environment 0ms, prepare 99ms)
+
+
+M76_CHECK persistence-uncontrolled exit=0 seconds=121.16
+
+=== M76: persistence-no-feedback ===
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectResponse.test.ts > M76 persistence NoFeedback: exact repeat and restored queued recall
+M76 PERSISTENCE NoFeedback PASS10->11->101 exact state/output/trace/save/identity.
+
+ ✓ src/test/assembledAffectResponse.test.ts (9 tests | 8 skipped) 116003ms
+   ✓ M76 persistence NoFeedback: exact repeat and restored queued recall 116003ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  18:59:50
+   Duration  119.89s (transform 2.35s, setup 0ms, collect 3.57s, tests 116.00s, environment 0ms, prepare 99ms)
+
+
+M76_CHECK persistence-no-feedback exit=0 seconds=120.57
+
+=== M76: final-types ===
+
+M76_CHECK final-types exit=0 seconds=16.53
+
+=== M76: boundary ===
+Reference boundary check passed.
+
+M76_CHECK boundary exit=0 seconds=2.66
+
+=== M76: research ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M76_CHECK research exit=0 seconds=3.6
+
+=== M76: preservation ===
+M76 integrity PASS:105 frozen blobs, historical trees unchanged;two planned test paths;production/formal unchanged; document/evidence caps.
+
+M76_CHECK preservation exit=0 seconds=12.16

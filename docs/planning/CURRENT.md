@@ -1,61 +1,45 @@
-# Current work — M76 competing obligation and later recall (2026-11-09)
+# Current work — M76 complete (2026-11-09)
 
-Test whether the same positive threat permits different responses when a competing
-obligation changes, and whether NoFeedback removes its later recall influence.
-Base46fc5410/model0.72; production/formal code remains unchanged.
+The same positive threat permits different responses when a competing obligation
+changes. Learned mitigation changes later recall; NoFeedback removes that effect.
+[Result](ASSEMBLED_CHARACTER_M76_RESULT.md); plan3e1a07b0/base46fc5410.
+Model0.72/interpreted-threat0.7/shared affect-memory0.3 unchanged.
 
-## Scope, scenario and calibration
-PHEN-AFFECT-001:5/:6/:9/:10/:11; two bounded comparisons in one existing character.
-Two planned test files: src/test/fixtures/assembledAffectResponse.ts and
-src/test/assembledAffectResponse.test.ts. No new owner, law, framework or consumer.
-Start M75 inputs: trials1..6, cue7..9, physical choice10, silent social cue10,
-recall11; retained episodes7/8. Three physical tasks with no person dependencies,
-perceived stand-ins; body30/cap100/rate10/width1/threshold60, delivery90 at9.
-Consequence1/3 (M73 reference contrast), seed0, A importance1, B importance1 or1/2
-adopted through normal priority observation1. Urgency1, reference dice, L4 OFF.
-Factor p1,v19/100,c0 gives E=U119/600; c1 gives same E,U0.
-B raw base1 or1/2 becomes bounded1/2 or1/3. Threshold37/100 keeps the strong
-B d6 but excludes the weak B nucleus. Both retain positive raw motives and
-available physical actions; weak is explicitly subthreshold, never unknown/absent.
-A raw1 -> bounded1/2/d6, U119/600 -> situation+1 under unit1/10/cap3.
-Expected strong P(A)=47/72 versus weak Automatic A; no calibration search.
+## Completed scope
+PHEN-AFFECT-001:5/:6/:9/:10/:11 gain bounded native comparison evidence.
+Observed B importance1/2 versus1 at adoption1 leaves threat factors and E=U119/600
+equal. B has a positive raw motive in both; bounded1/3 falls below threshold37/100,
+whereas bounded1/2 compiles d6. A retains d6 and situation+1.
+Actual reason/decision/execution plus72 uniformly weighted production-arbitration
+cases give strong A47/B25 versus weak A72/B0;25 paired winners differ.
+Captured contexts only; no reconstructed reasons or seed-search claim.
 
-## Predeclared comparisons and liveness
-Primary strong/weak c0: only observed B importance differs. Same model/initial state;
-at0 state/outputs equal, before differing observation1. Require same live factors,
-danger knowledge/support, A raw/base/modifier/nucleus, and B positive known motive.
-Actual compiler must show the stated threshold difference and execution must consume
-its decision. Enumerate production arbitration on captured actual contexts with
-72 uniform A/B d6/fair-tie cases: strong two outcomes, weak A,25 changed winners.
-This supplies controlled choice evidence; seed0 alone is not coupling.
+Strong importance: observed control0/1 crossed with existing UncontrolledGain/
+NoFeedback. Same state/outputs at3 before control evidence; across laws exact
+state/outputs/random records through10 before affected recall11.
+UncontrolledGain gives719/600 or1 and selects episode7 or8.
+NoFeedback preserves differing affect but gain1, equal scores/content/history,
+and episode8 in both. Appraisal10 -> recall11 source/parent/reads are actual.
+The later retrieval edge is distinct from original self-appraisal feedback; L4 OFF.
 
-Later recall: strong importance, c0/c1 crossed with admitted UncontrolledGain/
-NoFeedback. Only observed mitigation After6 and/or existing law declaration vary.
-Within each law, state/outputs match at3 before control intervention. Across laws,
-state/outputs match through10, before affected recall11. Require exact appraisal10
-and producer parent at recall11, two retained episodes and nonzero associative pull.
-UncontrolledGain c0/c1 must change gain/score and selected memory; NoFeedback must
-preserve both differing appraisals but equal gain1/scores/selection/history.
-Do not equate whole traces or identities across different inputs/models.
-Two denied-priority controls (hidden B importance1/1 or1/2 at1) must preserve
-unknown importance and identical perceived cognition/choice, not inject a default.
-Repeat and restore10->11->101 for each recall law on strong c0; byte-exact per model.
-Existing M75 hidden threat/unknown mitigation and M72 rollback retained unchanged.
+## Scenario and controls
+Observed training1..6/current cue7..9, choice10, silent cue10/recall11, episodes7/8.
+Three physical tasks, no person dependencies; perceived stand-ins.
+Body30/cap100/rate10/width1/threshold60/delivery90 at9; severity1/3, seed0,
+A importance1, urgency1, reference dice. Only declared B importance/control/law vary.
+Denied priority stays unknown; hidden1 versus1/2 yields equal cognition/state/choice.
+Each law repeats/restores10->11->101 byte-exact. M75 privacy/M72 rollback retained.
+One reused test assertion demanded the wrong nucleus; corrected without changing
+inputs/laws/calibration/gates. Failure retained. No new owner or production change.
+Types, boundary/research,preservation/document/evidence/size checks pass.
+Two test files/two evidence files;600s/check,1800s total;
+12 files and20 evidence files/5MiB limits unchanged.
 
-## Checks, risks and stop
-Serial functional groups: five comparison runs plus exact arbitration; two denied
-priority runs; six native repeat/restore continuations. <=600s/check, <=1800s total
-including failures. Cache snapshots; types, boundary/research,105-blob preservation,
-document/evidence limits, staged size. No broad historical suite: no dependency edits.
-<=12 production/test files,20 evidence files/5MiB; one result/check log.
-Done when both actual connections and negative/continuation controls pass and their
-bounded correspondence is recorded in the existing register. Retain nulls/failures;
-repair ordinary setup/test defects, never retune importance, laws, seed or gates.
-Exhausted budget or an unsupported contrast is a checkpoint, not a new contrast.
-
-## Limits
-Retrieval is the named later operation; it is not the original self-appraisal
-feedback equation. L4 remains OFF. No scalar equivalence/reduction or whole
-AFFECT/family closure; all21 members/15 families/132 clauses and18 conditional
-debts including RO-C3-011 remain. No UI/autonomous multi-character work.
+## Remaining boundary
+M73 counterfactuals, M74 factorial and M75 scalar receiving equality remain.
+Finish the original candidate-factorial/receiving correspondence on this same
+character before a whole AFFECT member disposition and serial DECISION replay.
+No scalar reduction, new general law, whole family acceptance or broader contexts
+inferred. All21 members/15 families/132 clauses,18 conditional debts and
+RO-C3-011 remain; :12/:13 constraints tracked. No UI/autonomous multi-character work.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |

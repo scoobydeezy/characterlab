@@ -7,7 +7,7 @@ Read [CURRENT.md](docs/planning/CURRENT.md), then
 The active direction is assembly of one continuing character.
 Workbench/UI development and Campaign 4 are stopped pending assembly acceptance.
 This is the assembly checkout, based on
-`788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`. M75 preserves scalarU equality at actual concern/reason/choice/recall receivers in model0.72; no production reduction. Continue original AFFECT requirements; no whole member is closed. M61's contextual connection remains complete. The post-M60 directives remain active. Follow CURRENT.md for the next bounded connection. Do not add UI or multi-character work.
+`788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`. M76 verifies competing response at matched affect and later recall/NoFeedback in model0.72; no production change. Continue original AFFECT requirements; no whole member is closed. M61's contextual connection remains complete. The post-M60 directives remain active. Follow CURRENT.md for the next bounded connection. Do not add UI or multi-character work.
 Do not execute historical TODOs, resume old audits, or retain/revisit browser tabs.
 Old instructions/evidence remain on tag `archive/workbench-stopped-2026-10-25`.
 
