@@ -1,5 +1,4 @@
 # CharacterLab agent directives
-
 ## Start here
 
 Read [CURRENT.md](docs/planning/CURRENT.md), then
@@ -10,7 +9,6 @@ This is the assembly checkout, based on
 `788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`. M79 completes bounded AFFECT correspondence, including learning/source and failed physical execution controls. Next: DECISION reference replay; no repeated AFFECT factorial or new UI. M61's contextual connection remains complete. The post-M60 directives remain active. Follow CURRENT.md for the next bounded connection. Do not add UI or multi-character work.
 Do not execute historical TODOs, resume old audits, or retain/revisit browser tabs.
 Old instructions/evidence remain on tag `archive/workbench-stopped-2026-10-25`.
-
 ## Authority
 
 Resolve conflicts by subject and the following hierarchy:
@@ -27,7 +25,6 @@ The Research Brief governs research method, not an accepted contract's exact mat
 domains, quantization or schema. Formal contracts cannot redefine required phenomena,
 boxes or epistemic boundaries. Resolve cross-scope conflicts by explicit amendment.
 Name the implemented contract version. No primitive becomes authoritative by existing.
-
 ## Assembly boundaries and escalation
 
 Follow the work order's single-model, single-state, single-scheduler requirements.
@@ -48,7 +45,6 @@ deterministic representation choices or differences with an established disposit
 Never silently select the easiest law or average competing laws.
 OD-C3-001 remains ratified within its transient-state-to-attention scope:
 TaskConcern is not general Affect; A/B/C remain candidates, not settled laws.
-
 ## Live comparisons and unknown factors
 
 Follow the work order's2026-11-02 owner ruling: external missing evidence needs a
@@ -57,7 +53,6 @@ are Deferred (component not integrated), with component/clause IDs recorded, dis
 from Unavailable (unknown). New tests declare scenario dependencies/channels/body;
 each behavioral gate first asserts both compared quantities are live. Stop if not.
 Classify deviations with evidence; fixture setup mistakes are not interactions.
-
 ## Work limits
 
 One active milestone and one long-running validation job. Before coding, CURRENT.md
@@ -87,7 +82,12 @@ Affect is derived; persistence must earn necessity. Keep reference dice and L4 s
 Replay original requirements serially; record exact IDs/blockers in the existing register.
 Control passes are not assembled coverage; no parallel audit or blanket completion percentage.
 Autonomous partners remain deferred until the single-character experiment succeeds.
-Use perceived stand-ins; explicitly mark requirements needing mutual autonomy.
+Use perceived stand-ins; recipient perception/learning does not imply autonomous peers.
+2026-11-10 adopted audit guidance: keep all132 clause evidence and mapping limits in
+existing reconciliation F/LIMIT rows; no separate audit campaign or new reduction track.
+Name exact missing requirement/evidence and final-acceptance impact; carry-forward is
+not a waiver. Required comparators remain. DECISION tests native regimes with fixed
+calibration before proposing any change. No completion percentages or date guesses.
 
 ## Research and artifact preservation
 
