@@ -1,0 +1,91 @@
+
+COMMAND types cap=600 ['node', 'node_modules/typescript/bin/tsc', '-b', '--pretty', 'false']
+src/test/assembledDecisionRegimes.test.ts(99,43): error TS2345: Argument of type 'CharacterModel' is not assignable to parameter of type '{ rulesVersion: string; contentSchemaVersion: string; registrySchemaVersion: string; parameterSchemaVersion: string; numericProfileVersion: string; randomAlgorithmVersion: string; content: Uint8Array<...>; registry: Uint8Array<...>; parameters: Uint8Array<...>; }'.
+  Type 'CharacterModel' is missing the following properties from type '{ rulesVersion: string; contentSchemaVersion: string; registrySchemaVersion: string; parameterSchemaVersion: string; numericProfileVersion: string; randomAlgorithmVersion: string; content: Uint8Array<...>; registry: Uint8Array<...>; parameters: Uint8Array<...>; }': rulesVersion, contentSchemaVersion, registrySchemaVersion, parameterSchemaVersion, and 5 more.
+M80_CHECK types exit=1 seconds=17.30 timeout=False
+
+COMMAND regimes cap=600 ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledDecisionRegimes.test.ts', '-t', 'M80 regimes', '--maxWorkers=1', '--minWorkers=1']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledDecisionRegimes.test.ts (8 tests | 1 failed | 7 skipped) 68118ms
+   × M80 regimes: actual sources, probabilities, modes and authoritative draws 68118ms
+     → actual consumed U: expected { kind: 'list', …(1) } to deeply equal { kind: 'list', …(1) }
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledDecisionRegimes.test.ts > M80 regimes: actual sources, probabilities, modes and authoritative draws
+AssertionError: actual consumed U: expected { kind: 'list', …(1) } to deeply equal { kind: 'list', …(1) }
+
+- Expected
++ Received
+
+  Object {
+    "items": Array [
+      Object {
+-       "denominator": 1000n,
++       "denominator": 200n,
+        "kind": "rational",
+-       "numerator": 357n,
++       "numerator": 119n,
+      },
+      Object {
+-       "denominator": 1000n,
++       "denominator": 200n,
+        "kind": "rational",
+-       "numerator": 357n,
++       "numerator": 119n,
+      },
+    ],
+    "kind": "list",
+  }
+
+ ❯ live src/test/assembledDecisionRegimes.test.ts:22:37
+     20|  const i=modes.indexOf(regime),p=projection(r),k=knowledge(r),expected…
+     21|  expect(k.efficacy!.cue!.mean,'live learned cue').toEqual(readQ(expect…
+     22|  expect(p.a[6],'actual consumed U').toEqual(list([q(i===2?0:357,i===1?…
+       |                                     ^
+     23|  const def=definition(s,'task-arbitration');expect(f(def,1n)).toEqual(…
+     24|  const dice=definition(s,'task-reason-dice');expect(f(dice,2n)).toEqua…
+ ❯ src/test/assembledDecisionRegimes.test.ts:79:11
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  13:35:53
+   Duration  72.34s (transform 2.46s, setup 0ms, collect 3.71s, tests 68.12s, environment 0ms, prepare 293ms)
+
+M80_CHECK regimes exit=1 seconds=73.26 timeout=False
+
+COMMAND types-corrected cap=600 ['node', 'node_modules/typescript/bin/tsc', '-b', '--pretty', 'false']
+M80_CHECK types-corrected exit=0 seconds=16.65 timeout=False
+
+COMMAND research cap=600 ['node', 'scripts/check-research-obligations.mjs']
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: CURRENT obligation counts are stale
+    at file:///C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/scripts/check-research-obligations.mjs:75:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.20.0
+M80_CHECK research exit=1 seconds=3.39 timeout=False
+
+COMMAND research-corrected cap=600 ['node', 'scripts/check-research-obligations.mjs']
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+M80_CHECK research-corrected exit=0 seconds=3.20 timeout=False
+
+COMMAND boundaries cap=600 ['node', 'scripts/check-reference-boundary.mjs']
+Reference boundary check passed.
+M80_CHECK boundaries exit=0 seconds=2.39 timeout=False

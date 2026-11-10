@@ -1,4 +1,4 @@
-# Current work — M80 DECISION regimes (2026-11-10)
+# Current work — M80 comparison amendment pending (2026-11-10)
 
 Start from c8a69028. One character, current model/registry0.73; no production change
 planned. M79 and the132-clause evidence index remain preserved, not rerun.
@@ -56,4 +56,15 @@ frozen-control evidence after hash/tree check; no broad suite/build/browser reru
 Done: all three native regimes and named controls/continuation pass, with exact
 original correspondence/gaps recorded in the existing register and one result.
 Otherwise preserve incomplete gate; no automatic extension or weakened acceptance.
-| Research obligations | **0 active /18 conditional /0 unowned** |
+## Checkpoint — original comparison not passed
+First native settled run reached appraisal10; observed U119/200, not predicted357/1000.
+My card incorrectly multiplied the independent threat-severity setting by goal importance.
+Importance still sets the motive base; it does not rescale this threat consequence.
+Unchanged source math consequently predicts original modifiers3,2,0 and modesAuto/Auto/Player;
+these are predictions, not a completed three-run observation. Failure retained in M80_CHECKS.
+Requested owner amendment: severity1->1/2 in ALL arms; then U119/400,119/800,0,
+modifiers2,1,0 and original required Auto/Quiet/Player gate. All other inputs/laws,
+seed/calibration/controls/budgets fixed; no further replacement if it fails.
+Do not execute amended inputs before approval. Original failure remains a control.
+Test restore API corrected; types PASS. See the single incomplete M80 result.
+| Research obligations | **0 active / 18 conditional / 0 unowned** |
