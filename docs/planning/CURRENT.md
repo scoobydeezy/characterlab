@@ -1,47 +1,63 @@
-# Current work — M78 complete (2026-11-10)
+# Current work — M79 planned (2026-11-10)
 
-The main AFFECT behavior is connected and evidenced. Two original control groups
-still block full member disposition: current threat learning/source boundaries
-and failed physical execution. [Review](ASSEMBLED_CHARACTER_M78_RESULT.md).
-Plan7bbaa1ee; base2aec18ba. Documentation only; no new simulation or model change.
+Complete the two AFFECT control groups identified in M78 at7fdd03d0.
+No new psychology: test current model0.72/reappraisal0.7/affect-memory0.3,
+SplitExposure, MeanAll, existing dice, UncontrolledGain and L4 OFF.
 
-## Reconciled scope
-Every PHEN-AFFECT-001:4..13 requirement is mapped to tests, logs and original
-evidence. :4/:5/:6/:7/:11 have bounded semantic evidence; :8/:9/:10 retain the
-G1/G2 control gaps below. :12/:13 are standing constraints, not behavioral passes.
-M74/M77 factorial/receiving comparisons are complete in their declared scope.
-Original48 candidate cells/91 runs/1236 restores are not claimed as native reruns.
-L4 self-feedback OFF is an adopted policy; current later retrieval is a different
-supported edge, not equality with the original self-appraisal equation.
-ScalarU equality remains a bounded finding; no removal of E or new consumer.
-Historical source controls stay labelled by their actual versions.
+## Bounded card
+G1: permitted trial evidence -> retained threat knowledge -> actual appraisal/reasons.
+G2: normally settled unsuccessful physical execution preserves earlier reasoning.
+Baseline PHEN-AFFECT-001:8/:9/:10; retain :4..7/:11 evidence and :12/:13 constraints.
+Two new files: src/test/fixtures/assembledAffectControls.ts and
+src/test/assembledAffectControls.test.ts. Reuse unchanged M76 fixture and M77 helper.
+No production/formal changes planned; ordinary defects repaired within12-file cap.
+
+## Fixed scenarios and comparisons
+All use seed0, three physical tasks/no person dependencies, two live physical
+alternatives, body30/cap100/rate10, observed body9/10 and delivery90 at9,
+severity1/3, A/B importance1, social stand-in memories7/8 and recall11.
+G1 history pair: relabel panels1..3 as current cue(glyph0); preserve their risky
+outcome. Panels7..9 already provide the second current-cue episode. Both arms
+perceive an empty mitigation catalogue. Only permitted After9 risk differs:
+true/true versus true/false. Require equal state/output at8; actual supports2,
+MeanAll1 versus1/2; E=U119/600 versus119/1200 at10. Actual compiled probability
+A47/72 versus1/2 must consume that difference. No changed-seed winner gate.
+Project the actual safe packets through original AFFECT source and belief kernels:
+Mean1/2, Latest0, NoLearning unknown. These are researcher-side competitors,
+not alternate native pipelines or a claim that reference laws are equivalent.
+Flip only hidden physical annexes in a contradiction arm: knowledge and actual
+appraisal/raw/decision/recall must match permitted-evidence counterpart.
+Boundary cases use unchanged M76 baseline/mitigation/current-cue trials:
+missing observed mitigation action; denied Motion5; censored or no-op After6;
+baseline After3 zero; unknown catalogue; observed empty catalogue; known
+ineffective mitigation. Assert unknown != known zero, no fabricated supports,
+actual receiver status/modifiers/probabilities and the completed producer/read joins.
+G2 uses unchanged M76 input and only existing protocol-execution permission true/
+false. Require no earlier physical output before10, equal state/output at9,
+equal actual appraisal/decision/intent/expression/plan/attempt and matched nonempty
+actual draw records; actual433 succeeds versus0 at10, without exception/rollback.
+Both settle normally. Knowledge/support is unchanged by execution10 and remains
+equal through recall11/terminal101; no danger observation is authored afterward.
+Earlier output history stays immutable. Model/run identities may differ.
+
+## Checks, budgets and stopping rule
+Assert live appraisal (or explicit Unavailable control), positive base A/B, two
+compiled alternatives and actual execution before interpreting each comparison.
+Five serial test groups: history+hidden; boundary action/permission/censor/no-op;
+boundary baseline/catalogues/ineffective; physical pair; persistence.
+Persistence: contradiction and failed-execution models, exact repeat and restore
+at8 (before opposite observation) or9 (before physical attempt), respectively;
+continue through10/11/101 and compare state/output/trace/save/identity.
+Types, boundary, research,105 frozen-dependency blobs, unchanged production/formal/
+historical evidence, document caps and staged git-size. No broad factorial rerun:
+production and prior fixtures are unchanged. No frozen full suite rerun.
+600s/command,1800s cumulative including failures; one validation job. No extension,
+retuning, seed search, replacement contrast, new framework or weakened gate.
+At most3 capabilities/12 source-test files; one result+one log,20 files/5MiB.
+Register<=250lines/65536bytes, CURRENT<=80, AGENTS<=120, work order<=250.
+Both groups pass with classified differences -> directly update same AFFECT
+member disposition, then identify DECISION's next bounded comparison. Otherwise
+record exact unresolved failure. No repeated reconciliation milestone or forced pass.
 All21 members/15 families/132 clauses and18 conditional debts remain.
-
-## Next bounded package — AFFECT controls before DECISION
-G1: current0.72 perception -> retained threat history -> actual appraisal/reasons.
-Add opposite current-cue evidence; require MeanAll1/2 versus original Latest0/
-NoLearning-unknown projections on the same admitted evidence.
-Complete current missing-action, denied/censored/no-op, baseline-zero and
-unknown/empty-catalogue controls; distinguish unknown from known ineffective.
-G2: physical success/failure with equal earlier affect/decision/intent/expression/
-plan/attempt and relevant draws. Different settled outcome cannot rewrite earlier
-reasoning or supply danger evidence without an admitted observation.
-Cognitive-operation interruption and rollback exceptions do not substitute.
-
-Pin exact scenarios, liveness, projections and checkpoint before implementation.
-Use existing sources/settings/reference laws; no new psychology or variant runtime.
-At most3 capabilities/12 source-test paths,20 evidence files/5MiB;
-600s/check,1800s total, one long job. No tuning, seed search or broad repeated audit.
-Target actual source/receiver privacy and repeat/restore; retain unchanged controls.
-On G1/G2 pass with classified differences, update this same member disposition
-and proceed to DECISION. Do not rerun M74/M77 without a new invalidation reason.
-
-## Preservation
-M78 changes only this file, AGENTS, the existing register, one result and one log.
-Source/formal/baseline/obligation/historical files unchanged; original hashes,
-ten-key coverage, links, retained successful logs, document/evidence caps,
-research and staged-size checks pass. No production/type/build reruns needed.
-RO-C3-011 triggers reviewed, no universal equivalence/reduction or closure.
-C-AFFECT remains UNRESOLVED for G1/G2; family12.5 remains separate.
-No UI, autonomous partners, owner ruling or new Campaign3 verdict.
+RO-C3-011 safeguards apply; no universal scalar equivalence, reduction or debt closure.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
