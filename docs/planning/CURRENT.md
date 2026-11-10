@@ -1,43 +1,44 @@
-# Current work — M77 complete (2026-11-09)
+# Current work — M78 planned (2026-11-10)
 
-Keeping uncontrolled threat U alone preserves actual state, decision/execution
-and later recall across all16 sourced factor cells. Diagnostic exposure differences
-remain visible. [Result](ASSEMBLED_CHARACTER_M77_RESULT.md); plan e25ec0c0/base29aff7e3.
-Model0.72/interpreted-threat0.7/shared affect-memory0.3 unchanged.
+M77 complete at2aec18ba. Reconcile the original AFFECT member against retained
+assembled evidence before starting DECISION. This package changes no simulation.
 
-## Completed scope
-PHEN-AFFECT-001:4/:5/:7/:11 gain sixteen native/scalar receiving comparisons.
-Existing M75 test adapter receives status/U only, substitutes [0,U] at the same
-producer, and cannot read discarded E or provenance. Source records remain.
-All16 pairs match authoritative state, knowledge/supports, concern, raw/compiled
-reasons, actual decision/execution, actual RNG records and recall score/content/
-publication. Live producer/receiver joins and source evidence are required.
-Twelve zero-E cells also match diagnostic reports; four positive-E cells differ
-there and in carried E. No false full-trace or public-model/save equality claim.
-Fourteen zero-U cells give P(A)=1/2 and recall episode8 with gain1.
-Two positive-U cells give Automatic A and recall episode7, gains399/200 or319/200.
-Matched actual records, not matching seeds, establish RNG agreement.
+## Bounded card
+One deliverable: exact disposition of PHEN-AFFECT-001:4..13, including every
+material comparison in its pinned qualification, and a concrete next-step decision.
+Read baseline/corpus/member qualification, applicable contracts and obligations;
+cross-check M69–77 results against their tests/logs and current production.
+Use earlier source/control evidence only where unchanged dependencies justify it.
+Classify each finding as equivalent, interaction, defect, law conflict or unresolved.
+Do not turn an output count into coverage or broaden the original denominator.
 
-## Scenario and controls
-Unchanged M75 fixture: p/s/c0/1; sensed v99/100 or19/100, seed0.
-Three physical tasks, no person dependency; normal perceived stand-ins.
-Training1..6/current cue7..9, choice10, silent cue10/recall11, episodes7/8.
-Body30/cap100/rate10/width1/threshold60; delivery0/90 at9; importance/urgency1.
-M75 primary native/U/E/H and native repeat/restore10->11->101 pass after extraction.
-Unknown/privacy, M76 competing response/NoFeedback and M72 rollback remain valid.
-Three test paths; extracted helpers/original M75 test bodies checked unchanged.
-One preservation-check delimiter error was corrected; failure retained.
-No production/formal/fixture/law change, retuning or extension.
-Types, boundary/research,105 frozen dependencies, document/evidence/size checks pass.
-Two evidence files;600s/check,1800s total;12 files/20 evidence/5MiB caps unchanged.
+## Scope and limits
+Zero production/test/formal edits, zero new scenarios, zero simulation runs.
+Existing register plus CURRENT/AGENTS, one compact M78 result and one check log.
+Preserve baseline, historical evidence, contracts, law candidates and obligations.
+Reference remains SplitExposure, existing dice and L4 OFF; no reduction or owner
+ruling inferred from scalarU receiving equality. No new Campaign3 verdict.
+RO-C3-011 reopening conditions must be addressed explicitly; historical conditional
+debt cannot be hidden by a bounded pass. Family12.5 and member scope stay distinct.
+Original public48 candidate cells/91 main runs are evidence, not assumed native
+replays; explain each required semantic mapping or identify the missing comparison.
+No UI, autonomous partners, new verifier framework or broad audit campaign.
 
-## Next boundary
-Native/U factorial receiving correspondence is complete in this declared scope.
-Next make the exact original AFFECT requirement-level disposition using M69–77,
-naming any remaining candidate/context requirement before serial DECISION replay.
-Do not infer48 public candidate-runtime replays or repeat completed checks.
-U equality does not establish E necessity or authorize reduction/new consumers.
-No whole AFFECT member/family acceptance; L4 OFF; :12/:13 and RO-C3-011 retained.
-All21 members/15 families/132 clauses and18 conditional debts remain.
-No UI, autonomous multi-character work, or verification framework.
+## Done condition and next-step rule
+All ten original keys have an evidence-backed disposition, with :12/:13 recorded
+as constraints, not behavioral passes. List any remaining concrete source/domain/
+candidate/temporal gaps and whether they block this member or only broader claims.
+If a required comparison is missing, name the smallest next package and keep
+AFFECT open. If the bounded member is satisfied, record its exact scope and choose
+the first bounded DECISION comparison. Do not implement that next package here.
+No open-ended 'more review' milestone or forced closure to advance the sequence.
+
+## Checks and budget
+Up to90 minutes analysis. Verification capped600s/command,1800s cumulative,
+one check at a time. No repeat simulation/type/build tests for documentation only.
+Check source/log references and pinned baseline hashes; exact ten-key coverage,
+unchanged src/formal/baseline/obligation/historical evidence, and document limits.
+Run existing research check and staged git-size; retain any failure and fix locally.
+At most20 evidence files/5MiB (planned2); register<=250 lines/65536 bytes,
+AGENTS<=120, CURRENT<=80, work order<=250. Passing ends verification.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
