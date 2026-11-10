@@ -1,47 +1,59 @@
-# Current work — DECISION preparation (2026-11-10)
+# Current work — M80 DECISION regimes (2026-11-10)
 
-M79 remains complete: the character passes the bounded AFFECT learning/source and
-failed physical execution controls. [Result](ASSEMBLED_CHARACTER_M79_RESULT.md).
-Baseline298e132f; active model/registry0.73, reappraisal0.7, affect-memory0.3.
-Reference laws, dice/calibration and L4 OFF remain unchanged.
+Start from c8a69028. One character, current model/registry0.73; no production change
+planned. M79 and the132-clause evidence index remain preserved, not rerun.
 
-## Owner-adopted audit adjustment applied
-The existing [register](ASSEMBLED_CHARACTER_RECONCILIATION.md) now indexes all132
-clauses against existing M3–79 evidence:41 evidenced,59 partial,17 with no assembled
-evidence found,15 not yet sufficiently assessed. These are version-scoped evidence
-statuses, not accepted clauses or current-model reruns. All15 family gates remain open.
-C-MEM/C-AFFECT remain the two mapped member dispositions; final candidate replay due.
-LIMIT rows distinguish accepted correspondence from missing mandatory phenomena,
-conditional broader research, and recipient perception from autonomous agency.
-Required missing behavior blocks acceptance; carrying a limitation forward cannot waive it.
-No new simulation, formal semantics, baseline, verdict or obligation change.
-No separate audit milestone, repeated AFFECT factorial or new reduction inquiry.
+## Bounded card — commit before test code
+Capabilities (3): earned native decision regimes; authoritative reason/tie resolution
+and exact probability; preserved intent/execution with deterministic continuation.
+Original PHEN-DECISION-001:2..11 and decision-public/0.1-candidate govern comparison.
+MEC012..017/019/022, SUB004/005/008/009, EXP010, RET013 remain; no reduction.
+Read original DECISION contract/qualification and reference ledger before this card.
 
-## Next bounded package — M80 DECISION
-PHEN-DECISION-001:2..11 remains pending. Before test implementation, commit its exact
-native fixture/ground/source/calibration correspondence and checkpoint card here.
-Original regimes: d4+3/d4 Auto; d4/d4 QuietRoll; d4+3/d4+3 PlayerFacingRoll.
-Original thetaRoll1/2, thetaPlayer3/4 are controls; inspect the current declared
-thresholds and actual compiled reasons rather than assuming original numerals.
-Current arbitration already computes exact probability/contest/reason-mass stake/
-authorship, then selects a mode. Source inspection is not behavioral evidence.
-Use live actual reasons from the one character; keep reference calibration fixed.
-Inspect addressed reason/tie draws and authoritative faces; projection draws nothing.
-Preserve intent/expression separately from physical outcome and permitted history.
-Name original requirement for AlwaysRoll/NeverRoll/DecorativeDice/opaque sampling/
-intent-outcome-collapse controls. No extra necessity or simplification investigation.
-If a required regime fails, retain the exact failure and identify its cause;
-no seed/magnitude search, threshold retuning or automatic weaker gate.
-Use normally perceived stand-ins/controlled recipients where needed; no autonomous peers.
-At most3 capabilities/12 source-test files,20 evidence files/5MiB;
-600s/check,1800s cumulative including failures, one validation job.
-Ordinary implementation repairs authorized; scope/law/comparison changes need disposition.
-No UI/Workbench work or full assembly acceptance. Stop after planned checks pass.
+Use M79 historyRisk source as the common scenario: three physical tasks, no person
+dependencies; body30/cap100/rate10, delivery90 at9, live body/position/priority and
+catalogue channels. Two cue trials1..3 and7..9; empty observed mitigation catalogue.
+Same model in all three arms: declared severity1, A/B importance3/5 at1, urgency1
+at10, third task importance0. These are predeclared scenario values, not changed
+laws/dice. Seed0; original full calendar through101,32-settle failure cap.
+Only normally perceived cue outcomes at3/9 differ: true/true (settled), true/false
+(quiet), false/false (balanced). Hidden physical annexes stay fixed in the main arms.
+MeanAll learns p1,1/2,0. No learned initial state or injected psychological value.
+Prediction: live base3/8 ->d4 for both; standing0; native U357/1000,357/2000,0;
+bounded context/U unit1/10 -> A modifiers2,1,0; B modifier0.
+Actual A probabilities7/8,23/32,1/2; contests1/4,9/16,1; stake5/7;
+authorship5/28,45/112,5/7. Native thetaRoll=thetaPlayer=1/2 ->Auto/Quiet/Player.
+Assert these declarations from the model, plus positive base/nucleus/appraisal
+liveness before any comparison. Original thresholds1/2,3/4 are a labelled control,
+never a replacement production definition. Original settled31/32 is not claimed.
 
-## Validation of this documentation update
-PASS:132 unique clause IDs/statuses, evidence links,21 member rows, unchanged8 law/
-6 foundation rows, document limits and research bookkeeping. Register65,182 bytes.
-Initial guard read the wrong table column and failed; corrected column guard passes.
-Staged Git-size check PASS; no oversized tracked artifacts.
-No executable dependency changed; types, simulation and frozen controls are not rerun.
-| Research obligations | **0 active / 18 conditional / 0 unowned** |
+This maps regime existence, not the original significance-only low/high pair:
+balanced d4 at native thetaPlayer1/2 is Player; original3/4 makes it Quiet.
+Record the exact missing original comparison rather than equating unequal contests
+or changing calibration. Do not declare a global impossibility from this domain.
+
+Tests: two new paths, fixtures/assembledDecisionRegimes.ts and
+src/test/assembledDecisionRegimes.test.ts (fixture path under src/test).
+Reuse current snapshot/trace helpers; no framework or standalone simulation.
+1. Three native full runs: actual learned source -> appraisal/raw ->d4 nuclei ->
+arbitration ->intent/expression/plan/attempt/execution; exact independent16-face
+fair-tie enumeration; draw-address/face/contribution/winner checks; no Auto draws.
+Required AlwaysRoll/NeverRoll/DecorativeDice/opaque-sampling controls are exact
+captured-input diagnostics, explicitly not alternative native runtime acceptance.
+2. Quiet hidden-truth and physical-permission controls: same cognitive decision;
+permission changes settled outcome, not frozen earlier intent/expression. This is
+not yet the original safe historical journal/IntentEqualsOutcome comparison.
+3. Quiet exact repeat and restore9->10->11->101; earlier decision output immutable.
+Retain failed comparisons; diagnose ordinary bugs within budget. No new contrast,
+seed hunt, law/calibration edit, autonomous partner or UI. A genuine mismatch stays
+open with evidence. No full member/family closure from this package.
+
+Budget: <=3 capabilities/12 source-test paths (planned2);20 evidence files/5MiB
+(planned result+check log);600s per command/1800s total including failures, one job.
+Run groups separately (expected<=450s each), then types/boundary/research and
+preservation/document/staged-size guards. No control dependency changed, so retain
+frozen-control evidence after hash/tree check; no broad suite/build/browser rerun.
+Done: all three native regimes and named controls/continuation pass, with exact
+original correspondence/gaps recorded in the existing register and one result.
+Otherwise preserve incomplete gate; no automatic extension or weakened acceptance.
+| Research obligations | **0 active /18 conditional /0 unowned** |
