@@ -1,44 +1,47 @@
-# Current work — M78 planned (2026-11-10)
+# Current work — M78 complete (2026-11-10)
 
-M77 complete at2aec18ba. Reconcile the original AFFECT member against retained
-assembled evidence before starting DECISION. This package changes no simulation.
+The main AFFECT behavior is connected and evidenced. Two original control groups
+still block full member disposition: current threat learning/source boundaries
+and failed physical execution. [Review](ASSEMBLED_CHARACTER_M78_RESULT.md).
+Plan7bbaa1ee; base2aec18ba. Documentation only; no new simulation or model change.
 
-## Bounded card
-One deliverable: exact disposition of PHEN-AFFECT-001:4..13, including every
-material comparison in its pinned qualification, and a concrete next-step decision.
-Read baseline/corpus/member qualification, applicable contracts and obligations;
-cross-check M69–77 results against their tests/logs and current production.
-Use earlier source/control evidence only where unchanged dependencies justify it.
-Classify each finding as equivalent, interaction, defect, law conflict or unresolved.
-Do not turn an output count into coverage or broaden the original denominator.
+## Reconciled scope
+Every PHEN-AFFECT-001:4..13 requirement is mapped to tests, logs and original
+evidence. :4/:5/:6/:7/:11 have bounded semantic evidence; :8/:9/:10 retain the
+G1/G2 control gaps below. :12/:13 are standing constraints, not behavioral passes.
+M74/M77 factorial/receiving comparisons are complete in their declared scope.
+Original48 candidate cells/91 runs/1236 restores are not claimed as native reruns.
+L4 self-feedback OFF is an adopted policy; current later retrieval is a different
+supported edge, not equality with the original self-appraisal equation.
+ScalarU equality remains a bounded finding; no removal of E or new consumer.
+Historical source controls stay labelled by their actual versions.
+All21 members/15 families/132 clauses and18 conditional debts remain.
 
-## Scope and limits
-Zero production/test/formal edits, zero new scenarios, zero simulation runs.
-Existing register plus CURRENT/AGENTS, one compact M78 result and one check log.
-Preserve baseline, historical evidence, contracts, law candidates and obligations.
-Reference remains SplitExposure, existing dice and L4 OFF; no reduction or owner
-ruling inferred from scalarU receiving equality. No new Campaign3 verdict.
-RO-C3-011 reopening conditions must be addressed explicitly; historical conditional
-debt cannot be hidden by a bounded pass. Family12.5 and member scope stay distinct.
-Original public48 candidate cells/91 main runs are evidence, not assumed native
-replays; explain each required semantic mapping or identify the missing comparison.
-No UI, autonomous partners, new verifier framework or broad audit campaign.
+## Next bounded package — AFFECT controls before DECISION
+G1: current0.72 perception -> retained threat history -> actual appraisal/reasons.
+Add opposite current-cue evidence; require MeanAll1/2 versus original Latest0/
+NoLearning-unknown projections on the same admitted evidence.
+Complete current missing-action, denied/censored/no-op, baseline-zero and
+unknown/empty-catalogue controls; distinguish unknown from known ineffective.
+G2: physical success/failure with equal earlier affect/decision/intent/expression/
+plan/attempt and relevant draws. Different settled outcome cannot rewrite earlier
+reasoning or supply danger evidence without an admitted observation.
+Cognitive-operation interruption and rollback exceptions do not substitute.
 
-## Done condition and next-step rule
-All ten original keys have an evidence-backed disposition, with :12/:13 recorded
-as constraints, not behavioral passes. List any remaining concrete source/domain/
-candidate/temporal gaps and whether they block this member or only broader claims.
-If a required comparison is missing, name the smallest next package and keep
-AFFECT open. If the bounded member is satisfied, record its exact scope and choose
-the first bounded DECISION comparison. Do not implement that next package here.
-No open-ended 'more review' milestone or forced closure to advance the sequence.
+Pin exact scenarios, liveness, projections and checkpoint before implementation.
+Use existing sources/settings/reference laws; no new psychology or variant runtime.
+At most3 capabilities/12 source-test paths,20 evidence files/5MiB;
+600s/check,1800s total, one long job. No tuning, seed search or broad repeated audit.
+Target actual source/receiver privacy and repeat/restore; retain unchanged controls.
+On G1/G2 pass with classified differences, update this same member disposition
+and proceed to DECISION. Do not rerun M74/M77 without a new invalidation reason.
 
-## Checks and budget
-Up to90 minutes analysis. Verification capped600s/command,1800s cumulative,
-one check at a time. No repeat simulation/type/build tests for documentation only.
-Check source/log references and pinned baseline hashes; exact ten-key coverage,
-unchanged src/formal/baseline/obligation/historical evidence, and document limits.
-Run existing research check and staged git-size; retain any failure and fix locally.
-At most20 evidence files/5MiB (planned2); register<=250 lines/65536 bytes,
-AGENTS<=120, CURRENT<=80, work order<=250. Passing ends verification.
+## Preservation
+M78 changes only this file, AGENTS, the existing register, one result and one log.
+Source/formal/baseline/obligation/historical files unchanged; original hashes,
+ten-key coverage, links, retained successful logs, document/evidence caps,
+research and staged-size checks pass. No production/type/build reruns needed.
+RO-C3-011 triggers reviewed, no universal equivalence/reduction or closure.
+C-AFFECT remains UNRESOLVED for G1/G2; family12.5 remains separate.
+No UI, autonomous partners, owner ruling or new Campaign3 verdict.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |

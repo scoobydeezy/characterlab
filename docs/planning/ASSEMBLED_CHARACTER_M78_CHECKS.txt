@@ -1,0 +1,32 @@
+
+=== M78: reconciliation-and-preservation ===
+Traceback (most recent call last):
+  File "<string>", line 14, in <module>
+    assert hashlib.sha256(git('show','HEAD:'+evidence['path'])).hexdigest()==evidence['sha256'],evidence['path']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: docs/planning/VERDICT_LEDGER.md
+
+M78_CHECK reconciliation-and-preservation exit=1 seconds=1.36
+
+=== M78: reconciliation-historical-ledger ===
+Traceback (most recent call last):
+  File "<string>", line 25, in <module>
+    assert affect_section(data)==affect_section(now)
+           ~~~~~~~~~~~~~~^^^^^^
+  File "<string>", line 15, in affect_section
+    m=re.search(r'^#{1,6} .*VER-C3-AFFECT-001[^\\n]*\\n',s,re.M);assert m
+                                                                        ^
+AssertionError
+
+M78_CHECK reconciliation-historical-ledger exit=1 seconds=1.33
+
+=== M78: reconciliation-ledger-pattern-repair ===
+Ledger digest resolved at c65b507b51d4260ed4250b495ad55ce058fba4bb;current ledger equals adopted baseline;AFFECT verdict section unchanged.
+M78 PASS:8 pinned source hashes;2 original member-evidence hashes;10 exact requirement keys;links/test/log references;only5 permitted documentation paths;source/formal/baseline/obligation/history unchanged;document/evidence caps;21/15/132 preserved.
+
+M78_CHECK reconciliation-ledger-pattern-repair exit=0 seconds=1.88
+
+=== M78: research ===
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M78_CHECK research exit=0 seconds=3.6
