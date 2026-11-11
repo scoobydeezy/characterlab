@@ -1,70 +1,46 @@
-# Current work — M80 approved comparison amendment (2026-11-10)
+# Current work — M80 complete; DECISION replay continues (2026-11-10)
 
-Start from c8a69028. One character, current model/registry0.73; no production change
-planned. M79 and the132-clause evidence index remain preserved, not rerun.
+The shared character demonstrates automatic, quiet-roll and player-facing-roll decisions
+from learned cue evidence under fixed model/registry0.73. Actual independent reason
+draws determine rolled choices; failed execution preserves prior intent/expression.
+[M80 result](ASSEMBLED_CHARACTER_M80_RESULT.md) records the bounded pass and remaining
+original comparison gaps. No production code, law or calibration changed.
 
-## Bounded card — commit before test code
-Capabilities (3): earned native decision regimes; authoritative reason/tie resolution
-and exact probability; preserved intent/execution with deterministic continuation.
-Original PHEN-DECISION-001:2..11 and decision-public/0.1-candidate govern comparison.
-MEC012..017/019/022, SUB004/005/008/009, EXP010, RET013 remain; no reduction.
-Read original DECISION contract/qualification and reference ledger before this card.
+## Completed package
+Plan d072d36a; original failure ff20155c; approved amendment39e6dd44 before execution.
+Owner approved severity1->1/2 in all three arms; every other declaration, seed0,
+law/calibration, control and acceptance gate stayed fixed. Original failed prediction
+and the initial restore-API/type error are retained in the single check log.
+Actual learned p1,1/2,0 -> live U119/400,119/800,0 -> A modifiers2,1,0 on two d4 grounds.
+Analytical A probabilities7/8,23/32,1/2; actual modesAuto/QuietRoll/PlayerFacingRoll.
+Auto deterministically selects A without reason draws; both rolls use two actual draws.
+Hidden-truth/failed-execution controls and exact repeat/restore9->10->11->101 pass.
+Full calendar retained. Two test files; no changed control dependency or production path.
+Final affected checks pass within the original1800s cumulative/600s per-command caps.
+Detailed totals and preserved failures are in the result/log. No budget reset or extension.
 
-Use M79 historyRisk source as the common scenario: three physical tasks, no person
-dependencies; body30/cap100/rate10, delivery90 at9, live body/position/priority and
-catalogue channels. Two cue trials1..3 and7..9; empty observed mitigation catalogue.
-Same model in all three arms: declared severity1/2, A/B importance3/5 at1, urgency1
-at10, third task importance0. These are predeclared scenario values, not changed
-laws/dice. Seed0; original full calendar through101,32-settle failure cap.
-Only normally perceived cue outcomes at3/9 differ: true/true (settled), true/false
-(quiet), false/false (balanced). Hidden physical annexes stay fixed in the main arms.
-MeanAll learns p1,1/2,0. No learned initial state or injected psychological value.
-Prediction: live base3/8 ->d4 for both; standing0; native U119/400,119/800,0;
-bounded context/U unit1/10 -> A modifiers2,1,0; B modifier0.
-Predicted A probabilities7/8,23/32,1/2; contests1/4,9/16,1; stake5/7;
-authorship5/28,45/112,5/7. Native thetaRoll=thetaPlayer=1/2 ->Auto/Quiet/Player.
-Assert these declarations from the model, plus positive base/nucleus/appraisal
-liveness before any comparison. Original thresholds1/2,3/4 are a labelled control,
-never a replacement production definition. Original settled31/32 is not claimed.
+## Next bounded connection — original DECISION gaps
+C-DECISION remains UNRESOLVED for PHEN-DECISION-001:2..11.
+M80 changes reason balance, not significance alone. Next pin and test the original
+near-even low/high-significance correspondence with balance held fixed, and permitted
+decision/attempt/outcome history with its original competitor comparisons.
+Native thetaRoll=thetaPlayer=1/2 stays fixed; original player3/4 remains a labelled
+control. Do not equate unequal contests, retune calibration, or claim global impossibility
+from M80's limited positive-ground domain. Resolve the concrete original mapping first.
+M80's captured-input AlwaysRoll/NeverRoll/DecorativeDice/opaque diagnostics are not
+full alternative-runtime qualification. Safe historical presentation and the
+IntentEqualsOutcome comparator remain; test face projection is not a player UI.
 
-This maps regime existence, not the original significance-only low/high pair:
-balanced d4 at native thetaPlayer1/2 is Player; original3/4 makes it Quiet.
-Record the exact missing original comparison rather than equating unequal contests
-or changing calibration. Do not declare a global impossibility from this domain.
+Commit the next card before implementation: <=3 capabilities/12 source-test paths,
+20 evidence files/5MiB,600s per check/1800s cumulative, one validation job at a time.
+Name exact original requirements, semantic correspondence, live consumers, coupled
+draws where claimed, finite controls and persistence checkpoints before execution.
+Preserve failures; ordinary bug repair stays within scope. No seed hunt, calibration
+change, alternative contrast without authorization, new simplification inquiry or UI.
+Stop at the package's defined outcome; bounded evidence is not whole-member acceptance.
 
-Tests: two new paths, fixtures/assembledDecisionRegimes.ts and
-src/test/assembledDecisionRegimes.test.ts (fixture path under src/test).
-Reuse current snapshot/trace helpers; no framework or standalone simulation.
-1. Three native full runs: actual learned source -> appraisal/raw ->d4 nuclei ->
-arbitration ->intent/expression/plan/attempt/execution; exact independent16-face
-fair-tie enumeration; draw-address/face/contribution/winner checks; no Auto draws.
-Required AlwaysRoll/NeverRoll/DecorativeDice/opaque-sampling controls are exact
-captured-input diagnostics, explicitly not alternative native runtime acceptance.
-2. Quiet hidden-truth and physical-permission controls: same cognitive decision;
-permission changes settled outcome, not frozen earlier intent/expression. This is
-not yet the original safe historical journal/IntentEqualsOutcome comparison.
-3. Quiet exact repeat and restore9->10->11->101; earlier decision output immutable.
-Retain failed comparisons; diagnose ordinary bugs within budget. No new contrast,
-seed hunt, law/calibration edit, autonomous partner or UI. A genuine mismatch stays
-open with evidence. No full member/family closure from this package.
-
-Budget: <=3 capabilities/12 source-test paths (planned2);20 evidence files/5MiB
-(planned result+check log);600s per command/1800s total including failures, one job.
-Run groups separately (expected<=450s each), then types/boundary/research and
-preservation/document/staged-size guards. No control dependency changed, so retain
-frozen-control evidence after hash/tree check; no broad suite/build/browser rerun.
-Done: all three native regimes and named controls/continuation pass, with exact
-original correspondence/gaps recorded in the existing register and one result.
-Otherwise preserve incomplete gate; no automatic extension or weakened acceptance.
-## Checkpoint — original comparison not passed
-First native settled run reached appraisal10; observed U119/200, not predicted357/1000.
-My card incorrectly multiplied the independent threat-severity setting by goal importance.
-Importance still sets the motive base; it does not rescale this threat consequence.
-Unchanged source math consequently predicts original modifiers3,2,0 and modesAuto/Auto/Player;
-these are predictions, not a completed three-run observation. Failure retained in M80_CHECKS.
-Owner approved amendment (current continuation): severity1->1/2 in ALL arms; then U119/400,119/800,0,
-modifiers2,1,0 and original required Auto/Quiet/Player gate. All other inputs/laws,
-seed/calibration/controls/budgets fixed; no further replacement if it fails.
-Approval received; execute this amendment only. Original failure retained at ff20155c.
-Test restore API corrected; prior types PASS. Budget already used121.19/1800s.
+M79's mapped AFFECT correspondence, MEMORY mapping, all132 clause dispositions and
+all prior meaningful controls remain.2/21 mapped members;0/15 full family acceptances.
+Campaigns0–3 still converge into one continuing character, with original models retained
+as controls. Autonomous partners and Campaign4/UI remain deferred.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |

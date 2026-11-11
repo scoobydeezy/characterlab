@@ -89,3 +89,74 @@ M80_CHECK research-corrected exit=0 seconds=3.20 timeout=False
 COMMAND boundaries cap=600 ['node', 'scripts/check-reference-boundary.mjs']
 Reference boundary check passed.
 M80_CHECK boundaries exit=0 seconds=2.39 timeout=False
+
+COMMAND approved-regimes cap=600 ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledDecisionRegimes.test.ts', '-t', 'M80 regimes', '--maxWorkers=1', '--minWorkers=1']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDecisionRegimes.test.ts > M80 regimes: actual sources, probabilities, modes and authoritative draws
+M80 CAPTURED CONTROL {"regime":"settled","uniformCases":32,"reasonLotteryAWins":28,"tieCases":4,"decorativeDisagreements":4,"componentOnly":true}
+M80 NATIVE {"regime":"settled","analyticalA":"7/8","mode":1,"reasonDraws":0,"stake":"5/7","authorship":"5/28"}
+
+stdout | src/test/assembledDecisionRegimes.test.ts > M80 regimes: actual sources, probabilities, modes and authoritative draws
+M80 CAPTURED CONTROL {"regime":"quiet","uniformCases":32,"reasonLotteryAWins":23,"tieCases":6,"decorativeDisagreements":9,"componentOnly":true}
+M80 NATIVE {"regime":"quiet","analyticalA":"23/32","mode":2,"reasonDraws":2,"stake":"5/7","authorship":"45/112"}
+
+stdout | src/test/assembledDecisionRegimes.test.ts > M80 regimes: actual sources, probabilities, modes and authoritative draws
+M80 CAPTURED CONTROL {"regime":"balanced","uniformCases":32,"reasonLotteryAWins":16,"tieCases":8,"decorativeDisagreements":16,"componentOnly":true}
+M80 NATIVE {"regime":"balanced","analyticalA":"1/2","mode":3,"reasonDraws":2,"stake":"5/7","authorship":"5/7"}
+
+ ✓ src/test/assembledDecisionRegimes.test.ts (8 tests | 7 skipped) 123984ms
+   ✓ M80 regimes: actual sources, probabilities, modes and authoritative draws 123983ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  18:36:12
+   Duration  128.17s (transform 2.49s, setup 0ms, collect 3.70s, tests 123.98s, environment 0ms, prepare 240ms)
+
+M80_CHECK approved-regimes exit=0 seconds=128.90 timeout=False
+
+COMMAND approved-boundaries cap=600 ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledDecisionRegimes.test.ts', '-t', 'M80 boundaries', '--maxWorkers=1', '--minWorkers=1']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDecisionRegimes.test.ts > M80 boundaries: hidden truth and failed execution preserve the prior decision
+M80 BOUNDARIES PASS unchanged actual decision/draws/intent/expression; actual physical outcome differs, hidden truth does not. Safe historical-view gate remains separate.
+
+ ✓ src/test/assembledDecisionRegimes.test.ts (8 tests | 7 skipped) 126730ms
+   ✓ M80 boundaries: hidden truth and failed execution preserve the prior decision 126729ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  18:38:44
+   Duration  130.64s (transform 2.39s, setup 0ms, collect 3.59s, tests 126.73s, environment 0ms, prepare 99ms)
+
+M80_CHECK approved-boundaries exit=0 seconds=131.17 timeout=False
+
+COMMAND approved-persistence cap=600 ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledDecisionRegimes.test.ts', '-t', 'M80 persistence', '--maxWorkers=1', '--minWorkers=1']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDecisionRegimes.test.ts > M80 persistence: exact repeat and restore across decision and later recall
+M80 CONTINUATION PASS exact state/output/trace/save/run identity9->10->11->101.
+
+ ✓ src/test/assembledDecisionRegimes.test.ts (8 tests | 7 skipped) 124395ms
+   ✓ M80 persistence: exact repeat and restore across decision and later recall 124395ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  18:41:14
+   Duration  128.37s (transform 2.42s, setup 0ms, collect 3.63s, tests 124.40s, environment 0ms, prepare 102ms)
+
+M80_CHECK approved-persistence exit=0 seconds=128.89 timeout=False
+
+COMMAND final-types cap=600 ['node', 'node_modules/typescript/bin/tsc', '-b', '--pretty', 'false']
+M80_CHECK final-types exit=0 seconds=17.81 timeout=False
+
+COMMAND final-boundaries cap=600 ['node', 'scripts/check-reference-boundary.mjs']
+Reference boundary check passed.
+M80_CHECK final-boundaries exit=0 seconds=2.46 timeout=False
+
+COMMAND final-research cap=600 ['node', 'scripts/check-research-obligations.mjs']
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+M80_CHECK final-research exit=0 seconds=3.45 timeout=False

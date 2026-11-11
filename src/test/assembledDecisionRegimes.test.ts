@@ -20,7 +20,7 @@ async function create(regime:Regime,at=10n,control:'normal'|'hidden'|'failed'='n
 function live(r:Run,regime:Regime,s:ReturnType<typeof fixture>['s']){
  const i=modes.indexOf(regime),p=projection(r),k=knowledge(r),expectedP=[q(1,1),q(1,2),q(0,1)][i];
  expect(k.efficacy!.cue!.mean,'live learned cue').toEqual(readQ(expectedP));expect(k.efficacy!.cue!.supports).toHaveLength(2);
- expect(p.a[6],'actual consumed U').toEqual(list([q(i===2?0:357,i===1?2000:1000),q(i===2?0:357,i===1?2000:1000)]));
+ expect(p.a[6],'actual consumed U').toEqual(list([q(i===2?0:119,i===1?800:400),q(i===2?0:119,i===1?800:400)]));
  const def=definition(s,'task-arbitration');expect(f(def,1n)).toEqual(q(1,2));expect(f(def,2n)).toEqual(q(1,2));
  const dice=definition(s,'task-reason-dice');expect(f(dice,2n)).toEqual(q(37,100));expect(f(rec(f(dice,4n),439n),1n)).toEqual(q(1,10));
  for(const task of [taskA,taskB]){const n=p.nucleus(task)[0];expect(f(n,4n)).toEqual({kind:'unsigned',value:4n});expect(f(n,5n)).toEqual(signed(0));expect(f(rec(f(n,2n),406n),1n)).toEqual(q(3,8));}

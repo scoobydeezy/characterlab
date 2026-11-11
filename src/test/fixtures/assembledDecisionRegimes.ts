@@ -1,6 +1,6 @@
 /** M80: committed card d072d36a. Same0.73 character and reference calibration.
  * Three physical tasks; body30/cap100/rate10, delivery90 at9; no social dependencies.
- * A/B importance3/5, severity1, live channels; seed0; full calendar through101. */
+ * A/B importance3/5, severity1/2 (owner amendment), live channels; seed0; full calendar through101. */
 import {list,rational as q,signed} from '../../substrate/canonicalEncoding';
 import {fixture as prior,taskA,taskB,decode,items,key,enc} from './assembledAffectControls';
 import {PRIORITY_DISPLAY} from '../../assembled/priority';
@@ -8,7 +8,7 @@ import {POSITION_SOURCE} from '../../assembled/positionPerception';
 import {changeDefinition} from './assembledCharacter';
 export type Regime='settled'|'quiet'|'balanced';
 export function fixture(regime:Regime='quiet',control:'normal'|'hidden'|'failed'='normal'){
- const b=prior('historyRisk'),slots=[...items(decode(b.s.registry),'list')],a=[...items(slots[28],'list')];a[5]=q(1,1);slots[28]=list(a);
+ const b=prior('historyRisk'),slots=[...items(decode(b.s.registry),'list')],a=[...items(slots[28],'list')];a[5]=q(1,2);slots[28]=list(a);
  const rows=items(decode(b.d.orderedInputs),'list').map(v=>{
   const x=[...items(v,'list')];
   if(key(x[2])===key(PRIORITY_DISPLAY)&&key(x[0])===key(signed(1))){
