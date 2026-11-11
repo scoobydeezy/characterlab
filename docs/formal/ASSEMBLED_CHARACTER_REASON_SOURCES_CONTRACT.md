@@ -167,3 +167,50 @@ RO-C3-001 remains active through the wider-source qualification; no blanket clos
 0.3 outcome: the approved bounded M86 comparison and controls pass. Original0.76
 Jaccard/source controls and failed expectations remain. General coverage/ordering
 and reference-policy promotion beyond this comparison are not qualified here.
+
+## 0.4 successor — distinct contextual modulation (M88, before implementation)
+
+LOCAL DISPOSITION: port reason-public/0.3 ContextModulating into the shared path,
+as required by MEC-013. Rules/registry0.79 retains0.78 Value citation and original
+Jaccard across every group. SourceCoverage0.77 is not promoted. No new state,
+owner, phase, event, RNG purpose or calibration.
+
+Slot45 additionally admits ['assembled-reason-evidence/0.2',descriptors] in0.79.
+Each descriptor retains fields0..4 and adds required role field5, either1 or4.
+Original0.1/five-field declarations still mean role1. Same3-descriptor, gain,
+label, channel, action/task and candidate bounds. Old models reject0.2.
+The same permitted-sample/Current-SEM producer computes gain*minimum(readings)
+and exact observation support. Role4 requires actual evidence; zero/absent rejects.
+Source trace uses reason-sources/0.4 in0.79; retained0.76/0.77/0.78 bytes unchanged.
+
+Record401/2 retains option/task/role fields; this successor admits role4 only.
+Old401/1 remains roles1/2/3. Existing raw403/3 descriptions preserve the new key.
+Role4 joins its own positive/negative coverage partitions and bounded net total.
+Relevance sums all four absolute totals. Zero base still rejects. Context uses
+the existing situation modifier unit/cap, without merging their meanings.
+Reference unit1/10 and cap3 remain; original control comparisons use the same
+captured native dice; original calibration remains a historical control.
+
+406/2 retains fields1..4 and appends required field5 ContextStrength:q.
+407/2 retains fields1..7 and appends required field8 ContextModifier:i.
+422/2 retains fields1..7 and appends required field8 ContextModifier:i.
+All0.79 compiled nuclei use successor totals/nucleus; sampled draws carry their
+separate context modifier even when0. Other models retain prior schemas.
+Decoding checks exact shapes/role domains; old model admission rejects successor
+records directly and nested. Representation grants no source authority.
+
+The actual sampled score is direction*(face+standing+situation+context), agreeing
+with the exact convolved distribution. Same nucleus identity/address and one die.
+No role4 source creates a separate die. Frozen intent/expression/trace retains
+raw sources, four totals, modifiers and actual resolution. Existing decision
+projections use0.2 when contextual nuclei are present, exposing the separate
+context coordinate/modifier and actual sampled contribution. Old projection bytes
+remain unchanged; these are API projections, not UI work.
+
+Model fixes source/compiler/arbitration version0.4 for the new path. Existing
+Value receiving traces still identify value-receiving/0.2. No source strength
+comes from a trace, authored belief or final action. Original source/compiler
+controls are test-only; no Campaign3 runtime is invoked.
+M88 CURRENT fixes native inputs, comparisons, failure gates and budgets.
+Wider keys, original standing-fold mapping, coverage-law qualification and full
+corpus comparisons remain pending; RO-C3-001/020 are not closed.
