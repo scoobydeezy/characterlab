@@ -77,3 +77,12 @@ does not establish general correlation, identity semantics or psychological adeq
 No Campaign3 verdict changes. RO-C3-001/009/018/020 retain their conditional limits.
 Foundation implications are checked locally: schema/trace extension with exact
 continuation, unchanged phase/ownership/random algorithms, old-model rejection.
+
+## Pre-execution provenance repair
+Source inspection found C2 rawSignalOutput emits empty Commitment base bases too.
+Before the first behavioral run, bind priority-produced bases to their actual
+retained importance/current urgency observation IDs from the generated priority
+report. Never borrow priority support for the reappraisal-replaced task; leave that
+gap explicit and reject repetition if unsupported. Extra labels still require a
+nonempty basis. Strengths, scenarios, calibration and all acceptance gates unchanged.
+This is the missing producer citation repair, within the same five production paths.

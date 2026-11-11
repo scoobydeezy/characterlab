@@ -57,5 +57,10 @@ This is the first source-contract package, not complete C-REASON acceptance.
 - Done: all fixed gates pass and gaps remain explicit; then stop. Same unchanged
   blocker twice stops. No unrelated breadth, UI, peers or original factory dispatch.
 
+Pre-execution repair: Commitment base maps were also empty. Bind eligible bases
+to the generated priority report's actual importance/urgency observation IDs;
+never borrow those for reappraisal-replaced tasks. Unsupported repetition rejects.
+Same scenarios, laws and gates; no behavioral run has occurred yet.
+
 All21 members/15 families/132 clauses remain;3 mapped members,0 full families.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
