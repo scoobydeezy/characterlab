@@ -1,0 +1,144 @@
+
+M84_START types ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.app.json']
+error TS5058: The specified path does not exist: 'tsconfig.app.json'.
+
+M84_CHECK types exit=1 seconds=0.10 timeout=False
+
+M84_START types-correct-config ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+
+M84_CHECK types-correct-config exit=0 seconds=17.32 timeout=False
+
+M84_START functional ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledReasonCorrespondence.test.ts', '-t', 'M84', '--maxWorkers=1', '--minWorkers=1']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReasonCorrespondence.test.ts > M84 independent motives: actual learned sources match original compiler and affect decision probabilities
+M84 SCENARIO {"version":"rules/assembled-character/0.35-candidate","seed":0,"body":{"capacity":{"numerator":"100","denominator":"1"},"rate":{"numerator":"1","denominator":"1"},"width":{"numerator":"10","denominator":"1"},"threshold":{"numerator":"60","denominator":"1"},"permitted":true,"available":true,"selectionCapacity":1},"values":{"task":{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}},"route":"0","routes":[{"task":{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}},"plans":[{"instructionId":{"kind":"typedIdentifier","namespaceId":"1027","payload":{"kind":"text","value":"definition/task-instruction-one"}},"actionId":{"kind":"typedIdentifier","namespaceId":"1027","payload":{"kind":"text","value":"definition/protocol-contact-one"}}},{"instructionId":{"kind":"typedIdentifier","namespaceId":"1027","payload":{"kind":"text","value":"definition/task-instruction-two"}},"actionId":{"kind":"typedIdentifier","namespaceId":"1027","payload":{"kind":"text","value":"definition/protocol-contact-two"}}}]},{"task":{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}},"plans":[{"instructionId":{"kind":"typedIdentifier","namespaceId":"1027","payload":{"kind":"text","value":"definition/task-instruction-two"}},"actionId":{"kind":"typedIdentifier","namespaceId":"1027","payload":{"kind":"text","value":"definition/protocol-contact-two"}}},{"instructionId":{"kind":"typedIdentifier","namespaceId":"1027","payload":{"kind":"text","value":"definition/configurable-watering"}},"actionId":{"kind":"typedIdentifier","namespaceId":"1027","payload":{"kind":"text","value":"definition/configurable-water"}}}]},{"task":{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}},"plans":[{"instructionId":{"kind":"typedIdentifier","namespaceId":"1027","payload":{"kind":"text","value":"definition/configurable-watering"}},"actionId":{"kind":"typedIdentifier","namespaceId":"1027","payload":{"kind":"text","value":"definition/configurable-water"}}},{"instructionId":{"kind":"typedIdentifier","namespaceId":"1027","payload":{"kind":"text","value":"definition/task-instruction-one"}},"actionId":{"kind":"typedIdentifier","namespaceId":"1027","payload":{"kind":"text","value":"definition/protocol-contact-one"}}}]}]},"fixture":"unchanged M34 source/data; controlled social reports; live permitted performance; importance1"}
+
+stdout | src/test/assembledReasonCorrespondence.test.ts > M84 current configuration: original compiler agrees on actual0.74 reasons and restored continuation
+M84 SCENARIO current0.74 quiet: physical A/B/third, body30/cap100/rate10, delivery90 at9; seed0; no social dependency
+
+ ❯ src/test/assembledReasonCorrespondence.test.ts (7 tests | 2 failed | 5 skipped) 113189ms
+   × M84 independent motives: actual learned sources match original compiler and affect decision probabilities 27901ms
+     → REASON_CODEC: id:1002
+   × M84 current configuration: original compiler agrees on actual0.74 reasons and restored continuation 85287ms
+     → REASON_CODEC: id:1002
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledReasonCorrespondence.test.ts > M84 independent motives: actual learned sources match original compiler and affect decision probabilities
+ FAIL  src/test/assembledReasonCorrespondence.test.ts > M84 current configuration: original compiler agrees on actual0.74 reasons and restored continuation
+Error: REASON_CODEC: id:1002
+ ❯ fail src/campaign3/reasonCodecs.ts:11:39
+      9| const schemas=[...generalAttentionSupportedSchemas(),...added],registr…
+     10| const context={admittedVersions:['local-reserve-level-observation/0.1-…
+     11| const fail=(why:string):never=>{throw Error('REASON_CODEC: '+why);};
+       |                                       ^
+     12| function envelope(v:CanonicalValue):CanonicalValue {
+     13|  if(typeof v==='boolean')return v;
+ ❯ typed src/campaign3/reasonCodecs.ts:47:99
+ ❯ validate src/campaign3/reasonCodecs.ts:62:98
+ ❯ decodeReason src/campaign3/reasonCodecs.ts:65:108
+ ❯ Module.reasonRecord src/campaign3/reasonCodecs.ts:67:128
+ ❯ src/test/fixtures/assembledReasonCorrespondence.ts:27:21
+ ❯ src/test/fixtures/assembledReasonCorrespondence.ts:25:25
+ ❯ operands src/test/fixtures/assembledReasonCorrespondence.ts:23:17
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ Test Files  1 failed (1)
+      Tests  2 failed | 5 skipped (7)
+   Start at  10:11:36
+   Duration  117.37s (transform 2.43s, setup 0ms, collect 3.66s, tests 113.19s, environment 0ms, prepare 292ms)
+
+
+M84_CHECK functional exit=1 seconds=118.28 timeout=False
+M84_ABORT: inspection confirmed adapter passed TaskCommitmentKey371 where original916 requires its semantic referent; stop this check to repair the mapping before further runtime work.
+M84_CORRECTION: the check had already finished with two id:1002 adapter failures before the attempted stop; taskkill found no process and killed nothing. Repair unwraps371 referent, verifies shared actor, and reconstructs every402 byte exactly. No scenario, law or acceptance change.
+
+M84_START functional-repaired ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledReasonCorrespondence.test.ts', '-t', 'M84', '--maxWorkers=1', '--minWorkers=1']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReasonCorrespondence.test.ts > M84 independent motives: actual learned sources match original compiler and affect decision probabilities
+M84 SCENARIO {"version":"rules/assembled-character/0.35-candidate","seed":0,"body":{"capacity":{"numerator":"100","denominator":"1"},"rate":{"numerator":"1","denominator":"1"},"width":{"numerator":"10","denominator":"1"},"threshold":{"numerator":"60","denominator":"1"},"permitted":true,"available":true,"selectionCapacity":1},"values":{"task":{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}},"route":"0","routes":[{"task":{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}},"plans":[{"instructionId":{"kind":"typedIdentifier","namespaceId":"1027","payload":{"kind":"text","value":"definition/task-instruction-one"}},"actionId":{"kind":"typedIdentifier","namespaceId":"1027","payload":{"kind":"text","value":"definition/protocol-contact-one"}}},{"instructionId":{"kind":"typedIdentifier","namespaceId":"1027","payload":{"kind":"text","value":"definition/task-instruction-two"}},"actionId":{"kind":"typedIdentifier","namespaceId":"1027","payload":{"kind":"text","value":"definition/protocol-contact-two"}}}]},{"task":{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}},"plans":[{"instructionId":{"kind":"typedIdentifier","namespaceId":"1027","payload":{"kind":"text","value":"definition/task-instruction-two"}},"actionId":{"kind":"typedIdentifier","namespaceId":"1027","payload":{"kind":"text","value":"definition/protocol-contact-two"}}},{"instructionId":{"kind":"typedIdentifier","namespaceId":"1027","payload":{"kind":"text","value":"definition/configurable-watering"}},"actionId":{"kind":"typedIdentifier","namespaceId":"1027","payload":{"kind":"text","value":"definition/configurable-water"}}}]},{"task":{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}},"plans":[{"instructionId":{"kind":"typedIdentifier","namespaceId":"1027","payload":{"kind":"text","value":"definition/configurable-watering"}},"actionId":{"kind":"typedIdentifier","namespaceId":"1027","payload":{"kind":"text","value":"definition/configurable-water"}}},{"instructionId":{"kind":"typedIdentifier","namespaceId":"1027","payload":{"kind":"text","value":"definition/task-instruction-one"}},"actionId":{"kind":"typedIdentifier","namespaceId":"1027","payload":{"kind":"text","value":"definition/protocol-contact-one"}}}]}]},"fixture":"unchanged M34 source/data; controlled social reports; live permitted performance; importance1"}
+
+stdout | src/test/assembledReasonCorrespondence.test.ts > M84 independent motives: actual learned sources match original compiler and affect decision probabilities
+M84 CORRESPONDENCE {"nativeNuclei":2,"nonzero":[2,0],"omittedZero":[0,0],"allProjectedFieldsEqual":true}
+
+stdout | src/test/assembledReasonCorrespondence.test.ts > M84 independent motives: actual learned sources match original compiler and affect decision probabilities
+M84 CORRESPONDENCE {"nativeNuclei":4,"nonzero":[3,1],"omittedZero":[0,0],"allProjectedFieldsEqual":true}
+M84 CORRESPONDENCE {"nativeNuclei":3,"nonzero":[3,0],"omittedZero":[0,0],"allProjectedFieldsEqual":true}
+M84 CORRESPONDENCE {"nativeNuclei":4,"nonzero":[3,1],"omittedZero":[0,0],"allProjectedFieldsEqual":true}
+M84 POOLED original Aggregate groups2 / PooledChannel groups1; active=1/1; grouping-only control, common task calibration
+M84 LIVE learned Value1/2 vs0; other nuclei identical; exact choice probability vectors differ; both choices executed; no seed-choice or shared-draw claim
+M84 CONTINUATION repeat3; exact restore3 at4/5 and each remaining instant through terminal10, including state/output/trace/save/RNG
+
+stdout | src/test/assembledReasonCorrespondence.test.ts > M84 current configuration: original compiler agrees on actual0.74 reasons and restored continuation
+M84 SCENARIO current0.74 quiet: physical A/B/third, body30/cap100/rate10, delivery90 at9; seed0; no social dependency
+
+stdout | src/test/assembledReasonCorrespondence.test.ts > M84 current configuration: original compiler agrees on actual0.74 reasons and restored continuation
+M84 CORRESPONDENCE {"nativeNuclei":2,"nonzero":[3,0],"omittedZero":[0,0],"allProjectedFieldsEqual":true}
+M84 CORRESPONDENCE {"nativeNuclei":2,"nonzero":[3,0],"omittedZero":[0,0],"allProjectedFieldsEqual":true}
+M84 CURRENT PASS 0.74 actual producer/compiler/decision/execution, exact restore9->10; Value lane inactive here, no current-version Value claim
+
+ ✓ src/test/assembledReasonCorrespondence.test.ts (7 tests | 5 skipped) 153818ms
+   ✓ M84 independent motives: actual learned sources match original compiler and affect decision probabilities 68675ms
+   ✓ M84 current configuration: original compiler agrees on actual0.74 reasons and restored continuation 85142ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 5 skipped (7)
+   Start at  10:14:13
+   Duration  157.76s (transform 2.41s, setup 0ms, collect 3.62s, tests 153.82s, environment 0ms, prepare 101ms)
+
+
+M84_CHECK functional-repaired exit=0 seconds=158.28 timeout=False
+M84_REVIEW: make the predeclared same-option/referent liveness gate explicit before the comparison. Correct the scenario description: unchanged M34 has A/garden social, B non-social, no encounter frames, permitted performance/disclosure inputs, initial reserve100/cap100/rate1. Earlier generic social-reports wording was inaccurate; scenario bytes are unchanged. Rerun only the affected M34 test; current0.74 test already passed unchanged.
+
+M84_START final-independent ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledReasonCorrespondence.test.ts', '-t', 'M84 independent', '--maxWorkers=1', '--minWorkers=1']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReasonCorrespondence.test.ts > M84 independent motives: actual learned sources match original compiler and affect decision probabilities
+M84 SCENARIO {"version":"rules/assembled-character/0.35-candidate","seed":0,"body":{"capacity":{"numerator":"100","denominator":"1"},"rate":{"numerator":"1","denominator":"1"},"width":{"numerator":"10","denominator":"1"},"threshold":{"numerator":"60","denominator":"1"},"permitted":true,"available":true,"selectionCapacity":1},"initialReserve":100,"socialTasks":["A","garden"],"nonSocialTasks":["B"],"encounterFrames":0,"fixture":"unchanged M34 source/data; permitted performance/disclosure inputs; importance1"}
+
+stdout | src/test/assembledReasonCorrespondence.test.ts > M84 independent motives: actual learned sources match original compiler and affect decision probabilities
+M84 CORRESPONDENCE {"nativeNuclei":2,"nonzero":[2,0],"omittedZero":[0,0],"allProjectedFieldsEqual":true}
+
+stdout | src/test/assembledReasonCorrespondence.test.ts > M84 independent motives: actual learned sources match original compiler and affect decision probabilities
+M84 CORRESPONDENCE {"nativeNuclei":4,"nonzero":[3,1],"omittedZero":[0,0],"allProjectedFieldsEqual":true}
+M84 CORRESPONDENCE {"nativeNuclei":3,"nonzero":[3,0],"omittedZero":[0,0],"allProjectedFieldsEqual":true}
+M84 CORRESPONDENCE {"nativeNuclei":4,"nonzero":[3,1],"omittedZero":[0,0],"allProjectedFieldsEqual":true}
+M84 POOLED original Aggregate groups2 / PooledChannel groups1; active=1/1; grouping-only control, common task calibration
+M84 LIVE learned Value1/2 vs0; other nuclei identical; exact choice probability vectors differ; both choices executed; no seed-choice or shared-draw claim
+M84 CONTINUATION repeat3; exact restore3 at4/5 and each remaining instant through terminal10, including state/output/trace/save/RNG
+
+ ✓ src/test/assembledReasonCorrespondence.test.ts (7 tests | 6 skipped) 69517ms
+   ✓ M84 independent motives: actual learned sources match original compiler and affect decision probabilities 69516ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  10:18:02
+   Duration  73.45s (transform 2.41s, setup 0ms, collect 3.62s, tests 69.52s, environment 0ms, prepare 100ms)
+
+
+M84_CHECK final-independent exit=0 seconds=73.96 timeout=False
+
+M84_START final-types ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+
+M84_CHECK final-types exit=0 seconds=16.38 timeout=False
+
+M84_START boundaries ['node', 'scripts/check-reference-boundary.mjs']
+Reference boundary check passed.
+
+M84_CHECK boundaries exit=0 seconds=2.45 timeout=False
+
+M84_START research ['node', 'scripts/check-research-obligations.mjs']
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+
+M84_CHECK research exit=0 seconds=3.54 timeout=False
+
+M84_START git-size ['node', 'scripts/check-git-file-sizes.mjs']
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M84_CHECK git-size exit=0 seconds=0.33 timeout=False
