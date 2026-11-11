@@ -8,6 +8,7 @@ import {canonicalEncode as enc,list} from '../substrate/canonicalEncoding';
 import {restoreRunIdentity} from '../substrate/identity';
 import {SaveContractError} from '../substrate/persistence';
 import {failureDiagnosticValue} from '../substrate/trace';
+import {decisionHistoryView,decisionPresentationView} from './decisionView';
 import {compileCharacterModel} from './model';
 import {compileCharacterState} from './state';
 import {compileCognitiveIngress} from './ingress';
@@ -42,6 +43,8 @@ export async function createCharacterRun(handle:CharacterModel,input:{initialSta
  const state=component.initialState(data.initialState),inputs=await compileCharacterInputs(model,component,data),runtime=createCharacterRuntime(model,component,inputs,state);
  let committedTraceCount=0;
  const run=Object.freeze({async settleNextInstant(){const result=await runtime.settleNextInstant();if(result===undefined)return false;committedTraceCount+=result.traceContributions.length;return true;},snapshot(){const s=runtime.snapshot();return Object.freeze({clock:s.clock,status:s.status,state:enc(s.state.canonicalValue()),outputs:enc(list(s.outputs)),trace:enc(list(s.committedTrace))});},
+  decisionHistory(){const s=runtime.snapshot();return enc(decisionHistoryView(s.outputs,s.committedTrace));},
+  decisionPresentation(){return enc(decisionPresentationView(runtime.snapshot().outputs));},
   save:()=>runtime.save(model.modelIdentity,inputs.runIdentity),runIdentity:()=>inputs.runIdentity.canonicalBytes.slice(),diagnostic(){const d=runtime.diagnostic();return d?enc(failureDiagnosticValue(inputs.runIdentity.value,d)):undefined;}});
  traceCounts.set(run,()=>committedTraceCount);
  return run;

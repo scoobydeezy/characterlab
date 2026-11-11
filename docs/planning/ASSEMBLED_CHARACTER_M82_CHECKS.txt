@@ -1,0 +1,143 @@
+
+COMMAND types-initial cap=600 ['node', 'node_modules/typescript/bin/tsc', '-b', '--pretty', 'false']
+M82_CHECK types-initial exit=0 seconds=16.98 timeout=False
+
+COMMAND matrix cap=600 ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledDecisionHistory.test.ts', '-t', 'M82 matrix', '--maxWorkers=1', '--minWorkers=1']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledDecisionHistory.test.ts (8 tests | 1 failed | 7 skipped) 54362ms
+   × M82 matrix: intent meaning survives perceived failure and unseen outcomes 54361ms
+     → assembled trace requires exact model/run binding
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledDecisionHistory.test.ts > M82 matrix: intent meaning survives perceived failure and unseen outcomes
+SchedulerContractError: assembled trace requires exact model/run binding
+ ❯ Module.compileCharacterTraceBinding src/assembled/traceBinding.ts:25:1304
+
+ ❯ Module.createCharacterRuntime src/assembled/runtime.ts:101:14
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:122
+ ❯ create src/test/assembledDecisionHistory.test.ts:15:88
+ ❯ src/test/assembledDecisionHistory.test.ts:59:11
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  21:32:35
+   Duration  58.29s (transform 2.41s, setup 0ms, collect 3.62s, tests 54.36s, environment 0ms, prepare 100ms)
+
+M82_CHECK matrix exit=1 seconds=58.83 timeout=False
+
+COMMAND matrix-repair cap=600 ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledDecisionHistory.test.ts', '-t', 'M82 matrix', '--maxWorkers=1', '--minWorkers=1']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledDecisionHistory.test.ts (8 tests | 1 failed | 7 skipped) 85028ms
+   × M82 matrix: intent meaning survives perceived failure and unseen outcomes 85028ms
+     → expected [Function] to throw an error
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledDecisionHistory.test.ts > M82 matrix: intent meaning survives perceived failure and unseen outcomes
+AssertionError: expected [Function] to throw an error
+
+- Expected: 
+null
+
++ Received: 
+undefined
+
+ ❯ negativeControls src/test/assembledDecisionHistory.test.ts:49:75
+     47|  expect(observation).toBeDefined();
+     48|  const corrupt=(eventField:bigint,value:CanonicalValue)=>ts.map(v=>v==…
+     49|  expect(()=>decisionHistoryView(os,corrupt(8n,list([unsigned(999999)])…
+       |                                                                           ^
+     50|  expect(()=>decisionHistoryView(os,[...ts,observation])).toThrow('ambi…
+     51|  const evidence=f(rec(observation,160n),13n);
+ ❯ src/test/assembledDecisionHistory.test.ts:64:26
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  21:34:01
+   Duration  88.91s (transform 2.37s, setup 0ms, collect 3.57s, tests 85.03s, environment 0ms, prepare 99ms)
+
+M82_CHECK matrix-repair exit=1 seconds=89.43 timeout=False
+
+COMMAND matrix-event-control cap=600 ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledDecisionHistory.test.ts', '-t', 'M82 matrix', '--maxWorkers=1', '--minWorkers=1']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDecisionHistory.test.ts > M82 matrix: intent meaning survives perceived failure and unseen outcomes
+M82 ARM {"physical":true,"observed":true,"at":10,"grounds":2,"outcomes":1}
+
+stdout | src/test/assembledDecisionHistory.test.ts > M82 matrix: intent meaning survives perceived failure and unseen outcomes
+M82 CLOSURE PASS recursive identifier/map/set private-record and version rejection; missing/duplicate/foreign/incorrect-instant joins reject.
+M82 ARM {"physical":false,"observed":true,"at":10,"grounds":2,"outcomes":1}
+
+stdout | src/test/assembledDecisionHistory.test.ts > M82 matrix: intent meaning survives perceived failure and unseen outcomes
+M82 ARM {"physical":true,"observed":false,"at":10,"grounds":2,"outcomes":0}
+
+stdout | src/test/assembledDecisionHistory.test.ts > M82 matrix: intent meaning survives perceived failure and unseen outcomes
+M82 ARM {"physical":false,"observed":false,"at":10,"grounds":2,"outcomes":0}
+M82 MATRIX PASS four live arms; observed zero retains meaning, safe-only IntentEqualsOutcome loses it; absent-observation entry10 equal; all original entries unchanged through101.
+
+ ✓ src/test/assembledDecisionHistory.test.ts (8 tests | 7 skipped) 136744ms
+   ✓ M82 matrix: intent meaning survives perceived failure and unseen outcomes 136743ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  21:35:55
+   Duration  140.64s (transform 2.37s, setup 0ms, collect 3.56s, tests 136.74s, environment 0ms, prepare 99ms)
+
+M82_CHECK matrix-event-control exit=0 seconds=141.15 timeout=False
+
+COMMAND player-hidden cap=600 ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledDecisionHistory.test.ts', '-t', 'M82 player', '--maxWorkers=1', '--minWorkers=1']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDecisionHistory.test.ts > M82 player: authoritative faces are separate, hidden truth leaves views equal
+M82 PLAYER PASS existing authoritative faces/contributions and tie only; Auto/Quiet empty; identical evidence/hidden truth leaves entry10 and player view equal; reads preserve every authoritative byte.
+
+ ✓ src/test/assembledDecisionHistory.test.ts (8 tests | 7 skipped) 121943ms
+   ✓ M82 player: authoritative faces are separate, hidden truth leaves views equal 121942ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  21:38:58
+   Duration  125.81s (transform 2.36s, setup 0ms, collect 3.55s, tests 121.94s, environment 0ms, prepare 99ms)
+
+M82_CHECK player-hidden exit=0 seconds=126.33 timeout=False
+
+COMMAND continuation-admission cap=600 ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledDecisionHistory.test.ts', '-t', 'M82 continuation', '--maxWorkers=1', '--minWorkers=1']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDecisionHistory.test.ts > M82 continuation: exact restore, old-version compatibility and bounded admission
+M82 CONTINUATION PASS exact repeat/restore9->10->11->101 and views;0.73/0.74 state/output/view equality at10; original permission retained in identities; old denied/nonBoolean/version/unrelated-topology controls reject.
+
+ ✓ src/test/assembledDecisionHistory.test.ts (8 tests | 7 skipped) 144176ms
+   ✓ M82 continuation: exact restore, old-version compatibility and bounded admission 144175ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  21:41:27
+   Duration  148.06s (transform 2.37s, setup 0ms, collect 3.55s, tests 144.18s, environment 0ms, prepare 99ms)
+
+M82_CHECK continuation-admission exit=0 seconds=148.56 timeout=False
+
+COMMAND final-types cap=600 ['node', 'node_modules/typescript/bin/tsc', '-b', '--pretty', 'false']
+M82_CHECK final-types exit=0 seconds=16.71 timeout=False
+
+COMMAND final-boundaries cap=600 ['node', 'scripts/check-reference-boundary.mjs']
+Reference boundary check passed.
+M82_CHECK final-boundaries exit=0 seconds=2.43 timeout=False
+
+COMMAND final-research cap=600 ['node', 'scripts/check-research-obligations.mjs']
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+M82_CHECK final-research exit=0 seconds=3.31 timeout=False
+
+M82 PRESERVATION PASS six source/test paths, frozen campaign/foundation sources and baseline/obligation/mechanism ledgers unchanged; caps pass; two evidence files/12779 bytes before this line.
