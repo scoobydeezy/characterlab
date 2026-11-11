@@ -108,3 +108,37 @@ Owner amendment2026-11-01: use importance1 for all primary tasks instead of1/2.
 Laws, threshold, histories, seeds0..7, coupling and choice-change requirement stay
 fixed. Retain importance1/2 as the NoReasons control. Stop if the amended comparison
 fails; no further contrast or seed search. This supersedes the pending-fixture note.
+
+## 0.2 successor — Value receipt provenance (M87, before implementation)
+
+LOCAL DISPOSITION: architecture Values -> Motives -> Reasons and MEC-012/013
+require source traceability. Rules/registry0.78,46 slots; same shared composition.
+This version uses original Jaccard in every group; it does not promote the M86
+SourceCoverage candidate. All0.35..0.77 source/control behavior remains unchanged.
+
+At50 the existing Value owner returns its validated prior linked receipts alongside
+the unchanged appraisal report and state-read trace. At60 the generated0.2 motive
+retains fields0..7 of the0.1 list and appends those exact receipts as field8.
+The receiver verifies task/action, chronological distinct receipt identities before
+the appraisal instant, linked status and exact Accumulated preference from receipts.
+Empty receipts require zero preference; no nonzero unsupported source may be emitted.
+Forecast is not a Value-strength input, and receives no borrowed citation.
+
+At80 the one Value source has unit-weight atoms for every consumed linked receipt,
+including negative outcomes in a mixed history. Unlinked receipts never contribute.
+Atom399/2 is a closed receipt-only successor: field1 tag3, field2
+PerformanceObservationId typed1164 with positive unsigned ordinal. It is not an
+ObservationId/1115 or a qualification occurrence. Old399/1 is unchanged.
+Receiving basis400 may contain either admitted atom version; older model content
+admission rejects399/2 even when nested. Decoding is not producer authorization.
+Runtime creates the atom only from the authenticated Value owner's returned state.
+The basis records causal support, not a claim that every receipt is independent.
+One source per Value ground remains; no additional dice or coverage comparison.
+
+Trace names assembled-character-value-receiving/0.2-candidate for the new motive
+and raw receiving boundary, and records exact motive/support in actual source input.
+Compiler retains its existing described-source version and mathematical report.
+No durable source cache, owner, allocator or event changes. Transient support resets
+per instant and rollback; deterministic restore regenerates it from the same inputs.
+M87 CURRENT fixes the live two-instant comparison and controls before implementation.
+All C-REASON/C-VALUES wider requirements, RO-C3-001/010/020 and final replay remain.
