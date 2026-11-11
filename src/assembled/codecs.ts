@@ -7,15 +7,16 @@ import {canonicalDecode,canonicalEncode,record,RecordSchemaRegistry,type Canonic
 import {embodiedSupportedSchemas,decodeEmbodied} from '../campaign3/embodiedCodecs';
 import {compileComparison} from './comparison';
 import {randomSchemas} from '../substrate/random';
-import {list} from '../substrate/canonicalEncoding';
-import {invalidModel} from '../campaign2/canonicalData';
+import {list,set} from '../substrate/canonicalEncoding';
+import {invalidModel,dataKey as key} from '../campaign2/canonicalData';
 
 // 411/1 stays natural-only; 411/2 receives the C0 effective-key union.
 const predecessor=embodiedSupportedSchemas(),drawV1=predecessor.find(s=>s.typeId===411n)!;
 const rawV1=predecessor.find(s=>s.typeId===403n)!,nucleusV1=predecessor.find(s=>s.typeId===404n)!;
 const added:readonly RecordSchema[]=[{...drawV1,schemaVersion:2n},{...rawV1,schemaVersion:2n,fields:[...rawV1.fields,{id:5n,name:'ValueSignals',required:true}]},{...nucleusV1,schemaVersion:2n}];
-const schemas=[...predecessor,...added],registry=new RecordSchemaRegistry(schemas);
-const current=new Map<bigint,RecordSchema>();for(const schema of schemas)if(!([403n,404n].includes(schema.typeId)&&schema.schemaVersion===2n))current.set(schema.typeId,schema);
+const described:RecordSchema={...rawV1,schemaVersion:3n,fields:[...rawV1.fields,{id:5n,name:'ValueSignals',required:true},{id:6n,name:'Descriptions',required:true}]};
+const schemas=[...predecessor,...added,described],registry=new RecordSchemaRegistry(schemas);
+const current=new Map<bigint,RecordSchema>();for(const schema of schemas)if(!(schema.typeId===403n&&schema.schemaVersion>=2n||schema.typeId===404n&&schema.schemaVersion===2n))current.set(schema.typeId,schema);
 const byName=new Map(schemas.map(s=>[s.name,s]));
 const declarations=new Map([...allocation.records,...allocation.schemaSuccessors].map(r=>[`${r.typeId}/${r.schemaVersion}`,r]));
 const identityNamespaces=allocation.identifierAliases as Readonly<Record<string,number>>;
@@ -36,7 +37,7 @@ function checkType(value:CanonicalValue,grammar:string):void {
  }
  if(kind==='r'){
   const schema=/^\d+$/.test(body)?current.get(BigInt(body)):byName.get(body);
-  if(!schema||!isRecord(value)||value.schema.typeId!==schema.typeId||(value.schema.schemaVersion!==schema.schemaVersion&&!([403n,404n,411n].includes(schema.typeId)&&[1n,2n].includes(value.schema.schemaVersion))))fail('wrong nested record schema');return;
+  if(!schema||!isRecord(value)||value.schema.typeId!==schema.typeId||(value.schema.schemaVersion!==schema.schemaVersion&&!([403n,404n,411n].includes(schema.typeId)&&(schema.typeId===403n?[1n,2n,3n]:[1n,2n]).includes(value.schema.schemaVersion))))fail('wrong nested record schema');return;
  }
  if(kind==='id'){
   const namespace=identityNamespaces[body];if(namespace===undefined||typeof value==='boolean'||value.kind!=='typedIdentifier'||value.namespaceId!==BigInt(namespace))fail('wrong identifier family');
@@ -60,6 +61,24 @@ function checkType(value:CanonicalValue,grammar:string):void {
  fail('unknown type constructor');
 }
 
+function validateDescriptions(raw:RecordValue):void {
+ const value=raw.fields.get(6n);
+ if(!value||typeof value==='boolean'||value.kind!=='list'||value.items.length>46)fail('described source list/capacity');
+ const seen=new Set<string>(),goals=new Map<string,CanonicalValue>(),values=new Map<string,CanonicalValue>();let valueCount=0;
+ for(const row of (value as Extract<CanonicalValue,{kind:'list'}>).items){
+  if(typeof row==='boolean'||row.kind!=='list'||row.items.length!==3)return fail('description tuple');
+  const [label,motive,signal]=row.items;
+  if(typeof label==='boolean'||label.kind!=='text'||!/^[A-Za-z][A-Za-z0-9_-]{0,63}$/.test(label.value))fail('description label');
+  if(typeof motive==='boolean'||motive.kind!=='typedIdentifier'||motive.namespaceId!==1040n||typeof motive.payload==='boolean'||motive.payload.kind!=='text'||!['Commitment','Value'].includes(motive.payload.value))return fail('description motive');
+  checkType(signal,'r(TaskRawSignal)');if(!isRecord(signal))return fail('description signal');
+  const source=signal.fields.get(1n);if(!source||!isRecord(source))return fail('description source key');
+  const identity=key(list([label,motive,source]));if(seen.has(identity))fail('duplicate description identity');seen.add(identity);
+  if(motive.payload.value==='Value'){valueCount++;values.set(key(signal),signal);}else goals.set(key(signal),signal);
+ }
+ if(valueCount>1)fail('one Value description');
+ if(key(set([...goals.values()]))!==key(raw.fields.get(3n)!)||key(set([...values.values()]))!==key(raw.fields.get(5n)!))fail('description projection mismatch');
+}
+
 function validate(value:CanonicalValue):void {
  // Delegate maximal unchanged subtrees to the accepted predecessor decoder. An old
  // envelope such as171 may contain new records, so delegating by root TypeId fails.
@@ -67,7 +86,7 @@ function validate(value:CanonicalValue):void {
  function containsExtension(v:CanonicalValue):boolean {
   if(typeof v==='boolean')return false;const known=extended.get(v);if(known!==undefined)return known;
   let result=false;
-  if(v.kind==='record')result=[403n,404n,411n].includes(v.schema.typeId)&&v.schema.schemaVersion===2n||[...v.fields.values()].some(containsExtension);
+  if(v.kind==='record')result=[403n,404n,411n].includes(v.schema.typeId)&&(v.schema.schemaVersion===2n||v.schema.typeId===403n&&v.schema.schemaVersion===3n)||[...v.fields.values()].some(containsExtension);
   else if(v.kind==='list'||v.kind==='set')result=v.items.some(containsExtension);
   else if(v.kind==='map')result=v.entries.some(([a,b])=>containsExtension(a)||containsExtension(b));
   else if(v.kind==='typedIdentifier')result=containsExtension(v.payload);
@@ -77,7 +96,7 @@ function validate(value:CanonicalValue):void {
   if(!containsExtension(v)){decodeEmbodied(canonicalEncode(v));return;}
   if(typeof v==='boolean')return;
   if(v.kind==='record'){
-   const declaration=declarations.get(`${v.schema.typeId}/${[403n,404n,411n].includes(v.schema.typeId)&&v.schema.schemaVersion===2n?1n:v.schema.schemaVersion}`);
+   const declaration=declarations.get(`${v.schema.typeId}/${[403n,404n,411n].includes(v.schema.typeId)&&(v.schema.schemaVersion===2n||v.schema.typeId===403n&&v.schema.schemaVersion===3n)?1n:v.schema.schemaVersion}`);
    if(!declaration&&![130n,132n,160n].includes(v.schema.typeId)){
     // State/save trace wrappers carry arbitrary canonical VALUES, not cognitive
     // metadata. Admit successor records only in those existing value slots.
@@ -92,11 +111,12 @@ function validate(value:CanonicalValue):void {
        compileComparison(record(randomSchemas.drawMap,new Map([[1n,list([entry])]])));
       }else checkType(child,field.type);
      }else if(v.schema.typeId===404n&&v.schema.schemaVersion===2n&&field.id===2){if(typeof child==='boolean'||child.kind!=='typedIdentifier'||child.namespaceId!==1040n||typeof child.payload==='boolean'||child.payload.kind!=='text'||child.payload.value!=='Value')fail('fixed Value motive required');}else checkType(child,field.type);}
-    if(v.schema.typeId===403n&&v.schema.schemaVersion===2n){
+    if(v.schema.typeId===403n&&[2n,3n].includes(v.schema.schemaVersion)){
      const extra=v.fields.get(5n)??fail('Value signals required');checkType(extra,'set(TaskRawSignal)');
      if(typeof extra==='boolean'||extra.kind!=='set'||extra.items.length>1)return fail('one Value source');
      for(const signal of extra.items){if(!isRecord(signal))return fail('Value source');const source=signal.fields.get(1n);if(!source||!isRecord(source))return fail('Value source key');const role=source.fields.get(3n);if(!role||typeof role==='boolean'||role.kind!=='unsigned'||role.value!==1n)fail('Value base only');}
     }
+    if(v.schema.typeId===403n&&v.schema.schemaVersion===3n)validateDescriptions(v);
     const variants=allocation.unionVariants.filter(u=>BigInt(u.recordTypeId)===v.schema.typeId);
     if(variants.length){const tag=v.fields.get(1n);if(!tag||typeof tag==='boolean'||tag.kind!=='unsigned')fail('union discriminator');const variant=variants.find(u=>BigInt(u.tag)===(tag as {value:bigint}).value);
      if(!variant||variant.requiredFields.some(i=>v.fields.get(BigInt(i))===undefined)||variant.forbiddenFields.some(i=>v.fields.get(BigInt(i))!==undefined))fail('closed union payload');}
@@ -116,7 +136,7 @@ export function cognitiveSchemaByType(typeId:bigint,version?:bigint):RecordSchem
 export function decodeCognitive(bytes:Uint8Array):CanonicalValue {const value=canonicalDecode(bytes,registry);validate(value);return value;}
 export const cloneCognitive=(value:CanonicalValue)=>decodeCognitive(canonicalEncode(value));
 export const cognitiveSupportedSchemas=()=>schemas.map(s=>({...s,fields:s.fields.map(f=>({...f}))}));
-export const cognitiveAddedSchemas=()=>added.map(s=>({...s,fields:s.fields.map(f=>({...f}))}));
+export const cognitiveAddedSchemas=()=>[...added,described].map(s=>({...s,fields:s.fields.map(f=>({...f}))}));
 export function cognitiveRecord(typeId:number,values:readonly CanonicalValue[],version?:number):CanonicalValue {
  const schema=cognitiveSchemaByType(BigInt(typeId),version===undefined?undefined:BigInt(version));if(values.length>schema.fields.length)fail('extra field');
  return cloneCognitive(record(schema,new Map(values.map((v,i)=>[schema.fields[i].id,v]))));
@@ -132,10 +152,10 @@ export function randomDrawRecord(value:CanonicalValue):Extract<CanonicalValue,{k
 }
 
 /** Same scalar-role traversal as the accepted task content validator, using successor decoding. */
-export function validateCharacterRecordRoles(content:{recordRole:(type:bigint,field:bigint)=>Uint8Array|undefined;validateRole:(value:Uint8Array,role:Uint8Array)=>void},bytes:Uint8Array,valueReceiving=false){
+export function validateCharacterRecordRoles(content:{recordRole:(type:bigint,field:bigint)=>Uint8Array|undefined;validateRole:(value:Uint8Array,role:Uint8Array)=>void},bytes:Uint8Array,valueReceiving=false,reasonDescriptions=false){
  function visit(v:CanonicalValue):void {
   if(typeof v==='boolean')return;
-  if(v.kind==='record'){const added=[403n,404n].includes(v.schema.typeId)&&v.schema.schemaVersion===2n;if(added&&!valueReceiving)fail('Value receiving requires successor model');for(const [field,value] of v.fields){if(v.schema.typeId===404n&&v.schema.schemaVersion===2n&&field===2n)continue;const role=content.recordRole(v.schema.typeId,field);if(role)content.validateRole(canonicalEncode(value),role);}for(const value of v.fields.values())visit(value);}
+  if(v.kind==='record'){if(v.schema.typeId===403n&&v.schema.schemaVersion===3n&&!reasonDescriptions)fail('reason descriptions require successor model');const added=[403n,404n].includes(v.schema.typeId)&&v.schema.schemaVersion===2n;if(added&&!valueReceiving)fail('Value receiving requires successor model');for(const [field,value] of v.fields){if(v.schema.typeId===404n&&v.schema.schemaVersion===2n&&field===2n)continue;const role=content.recordRole(v.schema.typeId,field);if(role)content.validateRole(canonicalEncode(value),role);}for(const value of v.fields.values())visit(value);}
   else if(v.kind==='list'||v.kind==='set')v.items.forEach(visit);else if(v.kind==='map')for(const [k,value] of v.entries){visit(k);visit(value);}
  }
  visit(decodeCognitive(bytes));
@@ -143,6 +163,6 @@ export function validateCharacterRecordRoles(content:{recordRole:(type:bigint,fi
 
 /** Strict reader for already admitted predecessor and receiving records. */
 export function receivingRecord(value:CanonicalValue,typeId:bigint):RecordValue {
- if(!isRecord(value)||value.schema.typeId!==typeId||!(value.schema.schemaVersion===1n||[403n,404n].includes(typeId)&&value.schema.schemaVersion===2n))return fail('unsupported receiving record version');
+ if(!isRecord(value)||value.schema.typeId!==typeId||!(value.schema.schemaVersion===1n||[403n,404n].includes(typeId)&&value.schema.schemaVersion===2n||typeId===403n&&value.schema.schemaVersion===3n))return fail('unsupported receiving record version');
  return value;
 }

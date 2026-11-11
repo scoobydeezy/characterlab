@@ -1,66 +1,41 @@
-# Current work — M85 active (2026-11-11)
+# Current work — M85 complete (2026-11-11)
 
-Give descriptions of an existing reason distinct identities without treating a
-restatement of the same evidence as another reason. One shared character/runtime.
-This is the first source-contract package, not complete C-REASON acceptance.
+The character now distinguishes descriptions of a generated task reason without
+counting the same evidence twice. Restatement adds zero decision weight; actual
+probabilities, two matched draws and execution are preserved in the fixed witness.
+One shared character/runtime; this is partial REASON integration, not acceptance.
 
-## M85 bounded card
-- Capability: actual generated Commitment sources acquire distinct description
-  labels; repeated descriptions sharing the same permitted basis add zero weight.
-  The shared compiler/arbitration/execution consume the new representation.
-- Scope: partial C-REASON:2/4/5/6/8/9, MEC-012..016, M18/L8. Original collective
-  {1},{2},{1,2}, broader keys, role4 and Value citation remain required next.
-  This split avoids changing all source producers plus downstream roles at once.
-- Before code: adopt ASSEMBLED_CHARACTER_REASON_SOURCES_CONTRACT.md v0.1,
-  successor rules/registry0.75 with45 slots; older versions retain their behavior.
-- Representation: raw403/v3 adds required field6 described sources
-  [label,motive,402]. Identity is label+motive+401, separate from the shared nucleus.
-  Original fields1..5 retained; source projections must agree. Closed roles1..3
-  and Commitment/Value remain; no future role admitted without its consumer.
-- Registry slot44 supplies0..2 distinct additional Commitment-base labels.
-  Labels only describe the already generated source; no strength, evidence or
-  psychology is caller-authored. Empty basis must never be repeated; reject it.
-- Compiler: bounded port of original aggregate coverage to description identities,
-  same role/sign partition, magnitude/key ordering, raw union, bound once, threshold,
-  dice/modifier/sign equations. Existing task/Value calibrations unchanged.
-  Keep complete description-linked coverage/rejection in the actual trace.
-  No new state owner, event type, phase, allocator, RNG purpose or extra die.
-- Paths <=10 production/test: assembled/{codecs,reasons,model,execution,traceBinding}.ts;
-  test/fixtures/assembledReasonSources.ts; test/assembledReasonSources.test.ts;
-  optional second focused test/helper (<=9 total). No frozen-control source edits.
-- Native fixture: unchanged M82 current0.74 quiet inputs, seed0; three physical
-  tasks, no person dependency; body30/cap100/rate10, delivery90 at9; importance3/5,
-  urgency1, threat1/2. Compare0.75 with no extra labels vs one 'restatement' label.
-  Use same fixed laws and inputs. Old0.74 source provides semantic control.
-- Predeclared live gate at10: two active Commitment nuclei, positive actual base
-  with nonempty basis, real non-Auto draws, decision reaches execution. Repeated
-  descriptions must appear in actual raw input and coverage with zero added weight.
-  Native nucleus meaning/dice/distributions and exact choice probabilities equal.
-  Require nonzero matched natural random addresses/results, not seed alone.
-- Original Aggregate and PerFactDie run test-only on captured actual operands;
-  Aggregate agrees with new compilation, PerFactDie produces extra base dice.
-  Exact analytical arbitration on those distributions must differ from native.
-  No alternative-law full simulation or changed-choice cohort claim.
-- Privacy: fixed evidence/hidden diagnostic contrast from M82 hidden fixture keeps
-  semantic source and decision projections. Reject malformed/duplicate IDs, mismatched
-  projections, unsupported role/motive, empty-basis repetition, old-model new records.
-- Persistence/ownership: repeat through9, exact restore9->10->11->101 for duplicate
-  configuration; actual trace input/output/coverage linkage, sole existing scheduler.
-  Retain M84 tests for shared codec compatibility; no full frozen C2 rerun (no
-  dependency in its frozen closure changes).
-- Checks serial: focused Vitest one worker (native/control; persistence/privacy;
-  grammar/math negatives), retained M84, TypeScript, boundaries, research, git-size.
-  Failure risks: duplicate weight, dropped evidence, codec/version leak, draw or
-  continuation change. Run affected checks once; targeted repair reruns only.
-- Budgets:600s/command,1800s cumulative incl failures plus15s final Git/doc allowance;
-  <=20 evidence files/5MiB, one result/log. No seed/calibration/contrast search.
-- Done: all fixed gates pass and gaps remain explicit; then stop. Same unchanged
-  blocker twice stops. No unrelated breadth, UI, peers or original factory dispatch.
+Result: [M85](ASSEMBLED_CHARACTER_M85_RESULT.md).
+Evidence: [single check log](ASSEMBLED_CHARACTER_M85_CHECKS.txt).
+Plan/contract:07d69c0; pre-execution citation amendment:17b8b346.
+Contract: assembled-character-reason-sources/0.1-candidate; rules/registry0.75.
+Reference extra labels remain empty; no law/calibration change.
 
-Pre-execution repair: Commitment base maps were also empty. Bind eligible bases
-to the generated priority report's actual importance/urgency observation IDs;
-never borrow those for reappraisal-replaced tasks. Unsupported repetition rejects.
-Same scenarios, laws and gates; no behavioral run has occurred yet.
+## Completed bounded package
 
+- raw403/3 gives source descriptions distinct identities, with exact projection
+  back to the existing Commitment/Value signals and closed old-model admission.
+- Actual priority observation support is cited for eligible Commitment bases.
+  Reappraisal-replaced bases do not borrow that support; empty-basis repetition
+  rejects. Value citation remains pending.
+- Shared aggregate coverage consumes actual descriptions; restatements contribute0.
+  Both live native probabilities stay23/32 and9/32 with two matched natural draws.
+  Original PerFactDie control on captured inputs yields four versus two nuclei;
+  this is an alternative-law comparison, not a full alternative simulation.
+- Exact repeat/restore9->10->11->101, hidden-truth control, grammar negatives,
+  Value/domain component comparisons, retained M84 and repository checks pass.
+  Five production/two test paths; failures retained; no budget extension.
+
+## Next bounded connection
+
+Continue C-REASON before unrelated breadth: genuine distinct/overlapping permitted
+support from shared producers, then original collective {1},{2},{1,2} comparison
+through the actual decision. Write its card before code. Identical restatements
+do not close collective overlap or independent same-role production.
+Remaining: role4, broader keys, Value evidence, original standing-fold mapping,
+PairwiseOnly/IdentityIndependentDie controls and full member classification.
+Retained0.35 Value receiving evidence is not current0.75 native Value acceptance.
+Preserve fixed reference laws/calibration and original controls. No source
+injection, alternate runtime, seed search, UI or autonomous peers.
 All21 members/15 families/132 clauses remain;3 mapped members,0 full families.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
