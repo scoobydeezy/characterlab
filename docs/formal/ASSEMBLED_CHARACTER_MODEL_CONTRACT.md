@@ -160,3 +160,20 @@ through choice10; identities may differ. Rerun G1 at0.73 because it is the activ
 successor, retaining the successful0.72 logs. Restore the0.73 failed model from9,
 contradiction from8. No physical comparison is replaced by an actuator/exception
 control; the original gate and cumulative1800s/600s limits remain fixed.
+
+## Outcome visibility admission — model/registry0.74-candidate
+
+Version: rules/assembled-character/0.74-candidate and
+assembled-character-registry/0.74-candidate; retain0.73 and earlier exactly.
+Inherit all0.73 composition and semantics. Additionally admit either Boolean for
+definition/protocol-observation record451 field4, the existing observer permission.
+Validate actual Boolean before normalizing only that field to true for the topology
+comparison. Original supplied permission remains committed in model identity.
+No other references, channels, phases, mathematics, ownership or schema changes.
+False exercises the existing protocol bridge's no-emission branch: no protocol
+observation or consequent SEM lane is generated. It does not alter physical execution,
+frozen intent/expression, body channels or unrelated evidence. Unknown stays unknown.
+Physical execution permission434/1 remains independent. Older versions still reject
+observer false; no migration or silent expansion of their admitted domain.
+The read-only decision views use assembled-decision-view/0.1-candidate and do not
+change simulation save identity/bytes for any previously admitted source.

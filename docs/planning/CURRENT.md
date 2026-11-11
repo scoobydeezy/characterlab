@@ -1,50 +1,61 @@
-# Current work — M81 complete; DECISION history next (2026-11-10)
+# Current work — M82 permitted decision history (2026-11-10)
 
-The character's retained personal encounters now demonstrate a matched significance
-comparison: both options remain50/50 with the same coupled faces/winner, while the
-native reason-mass measure changes QuietRoll to PlayerFacingRoll. One shared model,
-state, scheduler, RNG, trace and save; no production or formal change.
-[M81 result](ASSEMBLED_CHARACTER_M81_RESULT.md) records exact correspondence/limits.
-Plan85727519 preceded tests; source baseline bdfe2eea; model/registry0.73.
+Start77ef3f14. M80/M81 native regime/significance evidence stays preserved.
+Next: original PHEN-DECISION-001:4..9 safe history/presentation and IntentEqualsOutcome.
+Read original qualification, work order and MEC015/017/019/022 before implementation.
 
-## Completed connection
-Two recognized stand-ins; both contact actions have one active physical d4 ground.
-Personal participation in the same perceived breaches earns two separate own histories.
-Standing-1 -> bounded-1/2 -> modifier-2 on both grounds, versus0 when witnessing.
-At fixed native thresholds1/2: stake/authorship1/3 ->5/7, contest1 and probability1/2
-unchanged. Explicit comparison keys couple two reason draws and any conditional tie.
-All32 weighted face/tie cases preserve winners. Actual same-seed coincidence is not
-the coupling proof. Hidden-truth and exact repeat/restore9->10->11->101 pass.
-Original calendar retained; no stored psychological state supplied by the scenario.
-Five failed test runs are retained: missing declared encounters, inherited helper's
-last-stage assumption, map-order assertion, and coupled-draw reader/version mismatch
-with one incorrect diagnosis/repeated failure. All repairs were test-only.
-Final affected checks pass within1800s cumulative/600s per command, including failures.
-No extension, changed law, seed search or replacement contrast.
+## Card — commit before implementation
+Three capabilities: closed character-facing decision history; authoritative player
+face projection separate from cognition; visible/absent outcome evidence after intent.
+Add read-only methods over existing committed expression/output/trace records, no
+new state store, history writer, scheduler, RNG call, UI or psychological consumer.
+Exact versioned grammar/closure/join in ASSEMBLED_CHARACTER_DECISION_VIEW_CONTRACT.md.
+Extend model0.74 from0.73 only to admit Boolean protocol-observation permission,
+record451 field4. Older models retain fixed true. Versioned formal amendment first.
+Physical permission remains independent record434 field1. No law/calibration changes.
 
-## Correspondence and remaining scope
-This is the current reason-mass proxy: negative standing moves expected contribution
-toward zero. It does not show that personally experienced breaches are unimportant.
-Original DECISION used balanced d4 then d4+3 at player threshold3/4; M81 uses balanced
-d4-2 then d4 at native1/2. Same-balance/different-mode/identical-resolution property
-is now evidenced under that disclosed mapping. General significance/calibration
-adequacy remains conditional under RO-C3-020. No threshold retuning or scalar claim.
-M80's other three-regime/intent/failed-execution evidence is preserved, not rerun.
+Main source: unchanged M80 quiet fixture, body30/cap100/rate10, delivery90 at9,
+three physical tasks/no social dependencies, A/B importance3/5, urgency1, threat1/2,
+cue true/false, seed0, original full calendar through101;32-settle failure cap.
+Four0.74 runs cross physical execution permitted/blocked with consequence observation
+permitted/absent. Liveness: two grounds, actual decision10/intent/expression/attempt;
+permitted observations must join their actual generating execution via trace parent.
+Historical entry contains projected frozen expression and only the admitted203 evidence,
+never execution433, hidden200/payloads, model/run/seed identity or raw random records.
+Known observation of zero is distinct from absent observation. No use of hidden
+execution count to construct or classify the character history.
+In visible arms, expression/intent unchanged, observed result differs. In absent arms,
+entry10 equal, comparator also equal. Preserve entry10 through101; later decisions
+may legitimately reflect other permitted bodily evidence, so do not claim whole
+cognition is blind to all physical consequences. Record this scope distinction.
+IntentEqualsOutcome test control consumes ONLY that safe entry: delete expression
+only after a present observed zero. It must lose meaning in visible-failure case;
+it cannot branch on permission/truth and cannot differ in absent-observation arms.
+No alternate production runtime or law selector.
 
-Next bounded package: PHEN-DECISION-001:2..11 still requires the original permitted
-post-attempt history/presentation and competitor comparisons, including IntentEqualsOutcome.
-Pin the exact existing expression/observation/history producers and reader boundary
-before code. A raw research snapshot is not a character-safe view; a mode label is
-not player presentation. Do not substitute a new side store or full-output filter
-without proving closure and persistence from the existing shared character.
-Keep frozen intent distinct from what execution achieved and what was observed.
-Use original safe-history comparison as the control, with visibility absent as well
-as present; exact IDs/inputs/checkpoints belong in the next committed card.
-M80's captured competitor diagnostics stay partial until their required scope is met.
+Character view flattens declared fields; fail closed on unsupported nested types or
+inconsistent joins. Player view returns only existing reason faces/contributions and
+tie winner for PlayerFacingRoll, empty for Auto/Quiet. No reroll; reading either view
+must leave exact state/output/trace/save and identity unchanged.
+Use one extra M80 balanced run for player projection; current quiet for suppression.
+One M80 hidden-truth quiet run must match entry10 and player view with identical evidence.
+Captured malformed/foreign record and wrong causal-parent controls reject.
+Repeat/restore visible-failure from9 ->10 ->11 ->101, exact full bytes plus views.
+0.73/0.74 true-permission state/output equivalence at10 and0.73 denied rejection;
+wrong Boolean, version mismatch and unrelated topology rejection. No calibration change.
 
-Budgets remain <=3 capabilities/12 source-test paths;20 evidence files/5MiB;
-600s per check/1800s cumulative, one job. No UI, autonomous partners, new reduction
-inquiry, additional ledger or repeated AFFECT matrix. Stop at the declared package gate.
-C-DECISION remains UNRESOLVED;2/21 mapped members,0/15 full family acceptances.
-All132 clause dispositions and prior evidence remain; integration of Campaigns0–3 continues.
+Planned source/test paths: assembled/character.ts, model.ts, decisionView.ts;
+test/fixtures/assembledDecisionHistory.ts; test/assembledDecisionHistory.test.ts.
+Formal: new read-view contract plus additive0.74 section in existing model contract.
+Existing C2/control dependencies untouched; read-only successor API does not replace
+the frozen M1 entry. No full frozen suite: exact0.73/0.74 compatibility check covers
+the changed successor entry/admission; full frozen controls still required at final gate.
+Budget<=3 capabilities/12 source-test paths,20 evidence files/5MiB (result+log);
+600s per command/1800s cumulative including failures; one validation job.
+Targeted groups: outcome/privacy matrix (<450s), player/hidden (<250s), continuation/
+compatibility/admission (<400s), then types/boundary/research/preservation/staged-size.
+No new contrasts, seed hunt or acceptance weakening; ordinary repairs retain failures.
+Done only if closed views, real causal joins, visibility/collapse control, authoritative
+presentation, compatibility and exact continuation pass. Stop then; C-DECISION remains
+open for remaining original competitors/full mapped scope. No family closure.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
