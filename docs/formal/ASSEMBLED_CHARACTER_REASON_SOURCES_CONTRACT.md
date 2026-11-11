@@ -86,3 +86,50 @@ report. Never borrow priority support for the reappraisal-replaced task; leave t
 gap explicit and reject repetition if unsupported. Extra labels still require a
 nonempty basis. Strengths, scenarios, calibration and all acceptance gates unchanged.
 This is the missing producer citation repair, within the same five production paths.
+
+## 0.2 successor — permitted independent readings (M86, before implementation)
+
+LOCAL DISPOSITION: assembled-character-reason-sources/0.2-candidate;
+rules/registry0.76,46 slots. All0.75 behavior and controls remain unchanged.
+The0.76 source stage ports the existing reason-public/0.3 ordinary producer.
+It joins the same character's raw/compilation/arbitration path, never its runtime.
+
+Registry slot45: ['assembled-reason-evidence/0.1', list(descriptors)].
+Each descriptor is [label,actionDefinitionId,task371,gain,channelSet].
+At most3; unique ASCII labels, distinct from primary and slot44 labels; gain in[-1,1],
+channels a nonempty subset of{1,2}. Action/task must belong to this character.
+Commitment role1 only. No caller supplies observation IDs, evidence or raw strength.
+
+World input [reading1,reading2,permit1,permit2,hiddenDiagnostic] admits signed-unit
+readings, boolean permissions and unit diagnostic. At most16 instants1..100, phase10.
+The source allocates two observation IDs, projects only permitted readings, reserves
+and freezes Current SEM at14 using the existing observer and substrate protocols.
+Denied values and hidden diagnostic never enter its cognitive projection.
+No recognition claim: these are the original governed physical-channel mappings.
+
+At common raw80 each descriptor uses only its frozen admitted samples. Missing
+samples, zero strength and absent selected option/task produce explicit rejection.
+Strength = gain*minimum(required readings); basis = exact unit-weight observation
+atoms; support keeps the exact consumed samples. This is the original producer law,
+not a gain inferred from desired outcomes. Existing priority/Value/appraisal sources
+remain present. Add labelled402 sources to field6 and field3's exact set projection
+of raw403/3. Duplicate labels/identities and the existing capacities still reject.
+Compiler mathematics/calibration are unchanged, including max-union retention of
+fully discounted sources. No private die or persistent source store is created.
+
+The source and freeze handlers authenticate originals/children and use the shared
+allocator, scheduler and transaction. Transient evidence resets on rollback and at
+each instant; normal save/replay regenerates it. Trace identifies exact frozen
+samples, source support/rejections, raw input and compilation output.
+Source/report/compile traces name0.2 for0.76; earlier models keep0.1.
+Original producer/compiler controls remain test-only imports. Foundation FND3/FND6
+reopen implications (new phase-registry entry and evidence projection) are explicit:
+check parent binding, SEM settlement, rollback, exact continuation and privacy.
+No ordering-law or epistemic authority change, no new psychological state owner.
+
+M86 compares the predeclared original3/4,2/3,1/4 collective inputs in the existing
+native quiet scenario. The third description must add zero weight, while permitted
+versus denied readings must affect actual probabilities. Original panel-only
+Aggregate/PairwiseOnly retains its17/29 vs37/61 and d6 vsd8 witness under original dice;
+native reference dice remain fixed. Role4, broader keys, Value citation, standing
+fold and full C-REASON acceptance remain open. No obligation or verdict is closed.
