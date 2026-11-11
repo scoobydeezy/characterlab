@@ -214,3 +214,9 @@ controls are test-only; no Campaign3 runtime is invoked.
 M88 CURRENT fixes native inputs, comparisons, failure gates and budgets.
 Wider keys, original standing-fold mapping, coverage-law qualification and full
 corpus comparisons remain pending; RO-C3-001/020 are not closed.
+
+0.4 outcome: M88 passes the fixed single-reading comparison, original source/compiler
+correspondence, real matched reason draws, privacy/admission, every-instant
+continuation/rollback and affected M87/M86 controls. Player projection of context
+is component-tested; the native comparison remains QuietRoll. No broader REASON
+closure, reference coverage-law promotion or calibration change follows.

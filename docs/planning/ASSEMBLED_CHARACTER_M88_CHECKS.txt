@@ -1,0 +1,238 @@
+
+M88_START types ['node', 'node_modules/typescript/bin/tsc', '--noEmit']
+src/assembled/codecs.ts(123,112): error TS2345: Argument of type 'CanonicalValue | undefined' is not assignable to parameter of type 'CanonicalValue'.
+  Type 'undefined' is not assignable to type 'CanonicalValue'.
+src/assembled/codecs.ts(124,59): error TS18048: 'extra' is possibly 'undefined'.
+
+M88_CHECK types exit=2 seconds=17.32 timeout=False
+
+M88_START types-after-tests ['node', 'node_modules/typescript/bin/tsc', '--noEmit']
+
+M88_CHECK types-after-tests exit=0 seconds=16.61 timeout=False
+
+M88_START native ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledContextReasons.test.ts', '-t', 'M88 native', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledContextReasons.test.ts > M88 native: distinct context changes exact probabilities and actual coupled sampled scores 87201ms
+   → requires list
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledContextReasons.test.ts > M88 native: distinct context changes exact probabilities and actual coupled sampled scores
+SchedulerContractError: requires list
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataItems src/campaign2/canonicalData.ts:23:50
+ ❯ src/test/fixtures/assembledContextReasons.ts:62:77
+ ❯ Module.traces src/test/fixtures/assembledContextReasons.ts:62:12
+ ❯ src/test/assembledContextReasons.test.ts:16:100
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  17:31:39
+   Duration  91.63s (transform 2.60s, setup 0ms, collect 3.88s, tests 87.20s, environment 0ms, prepare 232ms)
+
+
+M88_CHECK native exit=1 seconds=92.36 timeout=False
+
+M88_START native-trace-guard-repair ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledContextReasons.test.ts', '-t', 'M88 native', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledContextReasons.test.ts > M88 native: distinct context changes exact probabilities and actual coupled sampled scores 85355ms
+   → expected false to be true // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledContextReasons.test.ts > M88 native: distinct context changes exact probabilities and actual coupled sampled scores
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ Module.traces src/test/fixtures/assembledContextReasons.ts:62:206
+
+ ❯ src/test/assembledContextReasons.test.ts:16:100
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  17:33:35
+   Duration  89.53s (transform 2.51s, setup 0ms, collect 3.77s, tests 85.36s, environment 0ms, prepare 125ms)
+
+
+M88_CHECK native-trace-guard-repair exit=1 seconds=90.06 timeout=False
+
+M88_START native-source-trace-version-repair ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledContextReasons.test.ts', '-t', 'M88 native', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledContextReasons.test.ts > M88 native: distinct context changes exact probabilities and actual coupled sampled scores
+M88 NATIVE {"probabilities":["061220","062e20"],"zeroProbabilities":["062e20","061220"],"modes":[2,2],"draws":[2,3],"sharedReasonDraws":2,"changedSampledScores":1,"winnerChanged":true}
+
+ ✓ src/test/assembledContextReasons.test.ts > M88 native: distinct context changes exact probabilities and actual coupled sampled scores 86469ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  17:35:27
+   Duration  90.65s (transform 2.52s, setup 0ms, collect 3.76s, tests 86.47s, environment 0ms, prepare 120ms)
+
+
+M88_CHECK native-source-trace-version-repair exit=0 seconds=91.17 timeout=False
+
+M88_START controls ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledContextReasons.test.ts', '-t', 'M88 controls', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledContextReasons.test.ts > M88 controls: privacy, old admission and original weak-context/zero-base boundaries
+M88 CONTROLS PASS hidden truth identical; denied evidence absent; zero-context0.78 numeric semantics retained; old direct/nested admission rejects; original weak base rescued / zero base rejected / weak alone inactive
+
+ ✓ src/test/assembledContextReasons.test.ts > M88 controls: privacy, old admission and original weak-context/zero-base boundaries 134782ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  17:37:11
+   Duration  139.01s (transform 2.54s, setup 0ms, collect 3.80s, tests 134.78s, environment 0ms, prepare 130ms)
+
+
+M88_CHECK controls exit=0 seconds=139.52 timeout=False
+
+M88_START persistence-rollback-projection ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledContextReasons.test.ts', '-t', 'M88 persistence', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledContextReasons.test.ts > M88 persistence and rollback: exact context continuation and atomic failure
+M88 PROJECTION PASS native QuietRoll remains hidden from player rows; component-only displayed actual rolls preserve separate context and contribution
+
+stdout | src/test/assembledContextReasons.test.ts > M88 persistence and rollback: exact context continuation and atomic failure
+M88 PERSISTENCE PASS repeat9/restore9->10 and every checkpoint 11,12,13,14,20,40,101; whole-instant rollback after actual context compilation
+
+ ✓ src/test/assembledContextReasons.test.ts > M88 persistence and rollback: exact context continuation and atomic failure 135621ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  17:39:51
+   Duration  139.82s (transform 2.51s, setup 0ms, collect 3.78s, tests 135.62s, environment 0ms, prepare 122ms)
+
+
+M88_CHECK persistence-rollback-projection exit=0 seconds=140.33 timeout=False
+
+M88_START single-reading-repair-native-controls ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledContextReasons.test.ts', '-t', 'M88 native|M88 controls', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledContextReasons.test.ts > M88 native: distinct context changes exact probabilities and actual coupled sampled scores
+M88 NATIVE {"probabilities":["061220","062e20"],"zeroProbabilities":["062e20","061220"],"modes":[2,2],"draws":[2,3],"sharedReasonDraws":2,"changedSampledScores":1,"winnerChanged":true}
+
+ ✓ src/test/assembledContextReasons.test.ts > M88 native: distinct context changes exact probabilities and actual coupled sampled scores 86449ms
+stdout | src/test/assembledContextReasons.test.ts > M88 controls: privacy, old admission and original weak-context/zero-base boundaries
+M88 CONTROLS PASS hidden truth identical; denied evidence absent; zero-context0.78 numeric semantics retained; old direct/nested admission rejects; original weak base rescued / zero base rejected / weak alone inactive
+
+ ✓ src/test/assembledContextReasons.test.ts > M88 controls: privacy, old admission and original weak-context/zero-base boundaries 50863ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 6 skipped (8)
+   Start at  17:42:21
+   Duration  141.53s (transform 2.52s, setup 0ms, collect 3.78s, tests 137.31s, environment 0ms, prepare 122ms)
+
+
+M88_CHECK single-reading-repair-native-controls exit=0 seconds=142.05 timeout=False
+
+M88_START retained-m87 ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledValueProvenance.test.ts', '-t', 'M87', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledValueProvenance.test.ts > M87 native: actual learned receipts support the later Value and change probabilities
+M87 NATIVE {"probabilities":["06f6058003","060a8003"],"unlinked":["066e40","061240"],"mode":1,"draws":0,"unlinkedDraws":0,"legacyEqual":true,"receiptCount":1}
+
+ ✓ src/test/assembledValueProvenance.test.ts > M87 native: actual learned receipts support the later Value and change probabilities 129060ms
+stdout | src/test/assembledValueProvenance.test.ts > M87 privacy and grammar: absent evidence stays absent; only exact prior receipts are cited
+M87 PRIVACY/GRAMMAR PASS hidden diagnostic equality; denied report no Value; exact prior linked/task/fold/identity support; old nested admission rejects
+
+ ✓ src/test/assembledValueProvenance.test.ts > M87 privacy and grammar: absent evidence stays absent; only exact prior receipts are cited 53866ms
+stdout | src/test/assembledValueProvenance.test.ts > M87 persistence and rollback: cited evidence survives exact continuation without partial source commits
+M87 exact remaining settled checkpoints 13,14,20,40,101
+
+stdout | src/test/assembledValueProvenance.test.ts > M87 persistence and rollback: cited evidence survives exact continuation without partial source commits
+M87 PERSISTENCE PASS repeat11/restore11->12->terminal101 exact state/output/trace/save; post-source failure rolls whole instant back
+
+ ✓ src/test/assembledValueProvenance.test.ts > M87 persistence and rollback: cited evidence survives exact continuation without partial source commits 121955ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 5 skipped (8)
+   Start at  17:44:54
+   Duration  309.16s (transform 2.53s, setup 0ms, collect 3.81s, tests 304.88s, environment 0ms, prepare 122ms)
+
+
+M88_CHECK retained-m87 exit=0 seconds=309.68 timeout=False
+
+M88_START retained-m86-native-coverage ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledReasonEvidence.test.ts', '-t', 'M86 native|M86 coverage', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReasonEvidence.test.ts > M86 native: collective support joins the actual decision without double counting
+M86 ORIGINAL PASS actual producer strengths/bases/support; all-source Aggregate matches native; panel-only Aggregate17/29,d6 vs Pairwise37/61,d8 under original dice
+
+stdout | src/test/assembledReasonEvidence.test.ts > M86 native: collective support joins the actual decision without double counting
+M86 NATIVE PASS same/collective probabilities equal; independent permitted evidence changes probabilities; automatic zero draws; matched0.76 source bytes retain residual1/8; candidate0.77 residual0; denied agrees with retained0.75 probabilities
+
+stdout | src/test/assembledReasonEvidence.test.ts > M86 coverage: weighted partial overlap, empty evidence and sign partitions
+M86 COMPONENT PASS weighted partial contributions3/4,1/3,1/8; empty basis overlap0; negative partition remains independent; component operands never enter a character
+
+ ✓ src/test/assembledReasonEvidence.test.ts > M86 native: collective support joins the actual decision without double counting 138537ms
+ ✓ src/test/assembledReasonEvidence.test.ts > M86 coverage: weighted partial overlap, empty evidence and sign partitions 1314ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 8 skipped (10)
+   Start at  17:50:28
+   Duration  144.08s (transform 2.53s, setup 0ms, collect 3.80s, tests 139.85s, environment 0ms, prepare 120ms)
+
+
+M88_CHECK retained-m86-native-coverage exit=0 seconds=144.60 timeout=False
+
+M88_START final-types ['node', 'node_modules/typescript/bin/tsc', '--noEmit']
+
+M88_CHECK final-types exit=0 seconds=16.68 timeout=False
+
+M88_START final-boundaries ['npm.cmd', 'run', 'check:boundaries']
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+M88_CHECK final-boundaries exit=0 seconds=3.08 timeout=False
+
+M88_START final-research ['npm.cmd', 'run', 'check:research']
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":1,"conditional":17,"closed":4,"unowned":0,"verdicts":103,"reports":4321}
+
+M88_CHECK final-research exit=0 seconds=3.98 timeout=False
+
+M88_START final-staged-size ['npm.cmd', 'run', 'check:git-size']
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M88_CHECK final-staged-size exit=0 seconds=0.74 timeout=False
+
+M88_FINAL_BOUNDS production_test_files=11 evidence_files=2 evidence_bytes=19442 measured_seconds=1208.18 reserved_bookkeeping_seconds=15 total=1223.18/1800 line_and_register_limits=PASS

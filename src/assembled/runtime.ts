@@ -69,7 +69,7 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
  const task=Object.freeze({base,content,stateModel,tasks:component.tasks,measurement:component.measurement,deadline:component.deadline,predictionComponent:prediction});
  const maxWork=compileCampaign2Parameters(model.source.parameterSchemaVersion,model.source.parameters).maxWork;
  const modelIdentity=model.modelIdentity.value;
- const reasonEvidence=model.reasonEvidence?createReasonEvidence(model.reasonEvidence,inputs.reasonEvidenceEvents,modelIdentity,inputs.runIdentity.value,txt(BODY_OBSERVER.payload)):undefined;
+ const reasonEvidence=model.reasonEvidence?createReasonEvidence(model.reasonEvidence,inputs.reasonEvidenceEvents,modelIdentity,inputs.runIdentity.value,txt(BODY_OBSERVER.payload),model.contextReasons):undefined;
  const position=model.positionEnabled?createPositionExecution(stateModel,inputs.positionEvents,modelIdentity,inputs.runIdentity.value,model.positionMemory,model.mitigationEnabled):undefined;
  const procedure=model.skill?createSkillExecution(component.tasks[0].character,stateModel,inputs.skillEvents,modelIdentity,inputs.runIdentity.value,model.procedures,model.actionBody):undefined;
  const body=model.body?createBodyExecution(model.body,component.tasks[0].character,stateModel,inputs.bodyEvents,modelIdentity,inputs.runIdentity.value,model.actionBody,procedure,model.tolerance,model.retainedAttribution?()=>position!.contextForBody():undefined):undefined;

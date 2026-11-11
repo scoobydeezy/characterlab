@@ -18,10 +18,10 @@ export async function arbitrationOutput(occurrence:CanonicalValue,at:bigint,reas
  if(analytical.mode!=='Auto'){
   const scores=new Map(candidates.map(c=>[key(c),0n]));
   for(const value of nuclei){const n=rec(value,407n),nk=rec(f(n,1n),404n),draw=randomDrawRecord(await draws.reason(value)),face=uint(f(draw,3n))+1n;
-   const h=f(n,5n),x=f(n,6n);if(typeof h==='boolean'||h.kind!=='signed'||typeof x==='boolean'||x.kind!=='signed')invalidModel('signed modifiers');
-   const contribution=(uint(f(nk,4n))===1n?1n:-1n)*(face+h.value+x.value),candidate=key(f(nk,1n));
+   const h=f(n,5n),x=f(n,6n),c=n.schema.schemaVersion===2n?f(n,8n):signed(0);if(typeof h==='boolean'||h.kind!=='signed'||typeof x==='boolean'||x.kind!=='signed'||typeof c==='boolean'||c.kind!=='signed')invalidModel('signed modifiers');
+   const contribution=(uint(f(nk,4n))===1n?1n:-1n)*(face+h.value+x.value+c.value),candidate=key(f(nk,1n));
    if(!scores.has(candidate))invalidModel('nucleus outside candidate domain');scores.set(candidate,scores.get(candidate)!+contribution);
-   reasonDraws.push(r(422,[nk,f(n,4n),h,x,draw,u(face),signed(contribution)]));
+   reasonDraws.push(r(422,[nk,f(n,4n),h,x,draw,u(face),signed(contribution),...(n.schema.schemaVersion===2n?[c]:[])],n.schema.schemaVersion===2n?2:1));
   }
   const top=[...scores.values()].reduce((a,b)=>a>b?a:b),leaders=candidates.filter(c=>scores.get(key(c))===top).sort((a,b)=>key(a)<key(b)?-1:1);
   chosen=leaders[0];if(leaders.length>1){const draw=randomDrawRecord(await draws.tie(leaders));chosen=leaders[Number(uint(f(draw,3n)))];tie=r(423,[u(2),list(leaders),draw,chosen]);}
