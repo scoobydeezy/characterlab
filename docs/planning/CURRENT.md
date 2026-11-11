@@ -1,40 +1,67 @@
-# Current work — M82 complete (2026-11-10)
+# Current work — M83 original DECISION competitors (2026-11-11)
 
-The character retains the meaning of its choice independently of execution success
-and exposes only normally perceived outcomes alongside it. Player reason faces are
-a separate read-only view. No state store, psychology, RNG, scheduler or UI was added.
+Baseline7704b202. M80–M82 retained; implement PHEN-DECISION-001:5 comparison
+on actual assembled operands, with supporting:2/:4/:8/:9. One test-only package.
 
-[M82 result](ASSEMBLED_CHARACTER_M82_RESULT.md) and its single check log retain
-the four outcome/visibility arms, closed-history negatives, player/hidden controls,
-exact repeat/restore9/10/11/101 and0.73/0.74 compatibility/admission checks.
-Model0.74 admits existing Boolean observer permission; old versions remain fixed.
-Plan d4490ed8, closure clarification cdb59af8; ordinary repair added traceBinding.ts.
-Two failed runs retained; no scenario/calibration/seed/gate change or budget extension.
+## Card — commit before implementation
+Capabilities: execute the four original alternative resolvers on actual native
+reason contexts; compare exact outcome distributions and authoritative draw use.
+No production change, new model/law selector, runtime, state store or UI.
+Use unchanged campaign3/decisionMath.resolveDecision laws1..5 and existing assembled
+arbitrationOutput. Import original comparator only from tests; no alternate runtime.
+MEC015/016/017/019/022 preserved. No new verdict/reduction or obligation disposition.
 
-## Next bounded package
+Sources: unchanged M82 model0.74 with M80 settled/quiet/balanced scenarios, seed0;
+three physical tasks/no social dependencies; body30/cap100/rate10, delivery90 at9;
+A/B importance3/5, urgency1, threat1/2; original inputs through101,32-settle cap.
+At10 require two actual d4 motive nuclei/options, live appraisal consumption,
+probabilities7/8,23/32,1/2 and Auto/Quiet/Player. Freeze actual context/definition.
+Reference thresholds remain1/2,1/2; original player3/4 remains a mapped difference.
 
-Continue C-DECISION serially: remaining original AlwaysRoll, NeverRoll,
-DecorativeDice and OpaqueWeightedChoice comparisons and their mapped disposition.
-Read original qualification/fixtures and LIMIT-DECISION before writing the next card.
-Use actual captured decision inputs and declared original comparator semantics;
-no new phenomenon runtime, law selector, seed search or calibration adjustment.
-M80 finite diagnostics remain partial; M81 matched significance and M82
-safe-history/IntentEqualsOutcome results are retained, not rerun by habit.
-Reconcile exact remaining original clauses before claiming member acceptance.
-Keep native reference player threshold1/2; original3/4 remains a mapped difference.
-The signed reason-mass proxy is not general significance adequacy (RO-C3-020).
+Original reader admits403/1 only. Test-only compatibility image may remove field5
+and use403/1 ONLY if native403/2 field5 is empty and all nuclei are schema1.
+All first four fields, context identity, complete nuclei/options/distributions,
+source evidence and numeric values remain byte-identical. Assert round-trip back to
+the original403/2; nonempty value lane rejects. No fabricated cognitive operands.
+Use the actual decision occurrence as RNG causal root and original seed0 with
+createCognitiveRandomSession. Compare exact draw records/addresses/results to native
+reference; same seed alone is not coupling. Never inject these records into a run.
 
-Entry10 privacy does not suppress later permitted body signals. The read view is
-not a general memory law or new behavioral consumer. Autonomous peers/UI stay deferred.
-No repeated AFFECT matrix or speculative reduction/audit track.
+For each context, execute original reference and current arbitration with this
+provider and require all ten chosen-data fields equal to the live native decision.
+Execute AlwaysRoll (2) and NeverRoll (3) at all three regimes, DecorativeDice (4)
+at all three, OpaqueWeightedChoice (5) at settled/balanced; quiet must reject its
+nonbalanced domain. AlwaysRoll draws in settled; NeverRoll suppresses unresolved
+dice; DecorativeDice has the exact same transcript but deterministic leader;
+Opaque balanced uses one addressed draw, exact1/2 marginal and no reason faces.
+Require actual source context unchanged across all comparisons.
 
-## Standing limits
+Enumerate the32 uniform (4 faces x4 faces x2 tie outcomes) for each captured
+context, executing current arbitration and original laws on identical diagnostic
+draw tokens. Tokens expose declared span/result only via411 to these pure kernels;
+they are enumeration controls, not claimed seed outputs or committed run traces.
+Aggregate exact winner counts, not unweighted tie branches. Require original/current
+reference equality in every case; DecorativeDice differs in unresolved cases;
+opaque balanced16/32 each with zero independent reason faces. Record Auto's
+deterministic winner separately from its analytical counterfactual lottery.
+No extra seeds/scenarios, no calibration or expectation changes after results.
 
-One active card, written/committed before code; <=3 capabilities/12 source-test files,
-20 evidence files/5MiB,600s per command/1800s cumulative including failures.
-Only affected checks; exact repeat/continuation and live comparisons required.
-Retain failures. Ordinary implementation repairs stay local within the card.
-Stop on pass; budget exhaustion or actual law/scope conflict is not a waiver.
-All21 members/15 families/132 clauses retained;2 mapped member dispositions,
-0 full family acceptances. C-DECISION remains UNRESOLVED.
+Restore balanced native run from9, compare exact state/output/trace/save/identity
+at9/10/11/101 and the captured-comparator results. Repeat component calls exactly.
+For other regimes finish the full calendar; no claims about alternative runtime
+continuation. Existing M82 history/privacy evidence stays valid: production unchanged.
+Tests catch context rewriting, wrong address mapping, domain extension, decorative
+authority and invented presentation. No broad M80/M81/M82 or frozen-control reruns.
+
+Planned code: test/fixtures/assembledDecisionAlternatives.ts and
+test/assembledDecisionAlternatives.test.ts (two paths; <=12). No formal change.
+Budget600s/command,1800s total incl failures; one check job;20 evidence files/5MiB
+(one result/log). Target native+kernel matrix<450s, continuation<250s, then types,
+boundaries/research/preservation/caps/staged-size. Retain failures; stop after pass.
+Two attempts at same unchanged blocker or five unchanged-disposition revisions:
+stop and explain; do not add paperwork. Ordinary repairs must change the diagnosed cause.
+Done when all four original competitor distinctions pass on actual operands with
+exact reference correspondence and continuation. Reconcile:5 in existing rows;
+whole C-DECISION acceptance needs explicit final mapping, not inference from this test.
+All21 members/15 families/132 clauses,2 mapped members/0 full families retained.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
