@@ -29,7 +29,7 @@ probabilities retain421 [candidate,probability]; meaning channels retain427
 No draw/address/seed, actual outcome, execution permission, hidden source payload,
 model/run identity, research trace or player face presentation appears in this view.
 Allow only the structural record types needed by those selected fields:
-237,371,395,399,400,404,424,428 and permitted evidence203/204/205.
+237,371,395,399,400,401,404,424,428 and permitted evidence203/204/205.
 Every nested record must have an admitted schema version (404 allows1/2; others1);
 traverse lists/sets/maps AND typed-identifier payloads. Unknown types/versions reject.
 Scalar schema/role validation already occurs at model execution; projection adds this
