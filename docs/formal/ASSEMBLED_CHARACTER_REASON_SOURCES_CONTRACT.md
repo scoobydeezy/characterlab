@@ -137,3 +137,29 @@ fold and full C-REASON acceptance remain open. No obligation or verdict is close
 M86 outcome: source/compiler correspondence confirmed, native collective gate failed.
 The larger-union subset residual remains;0.76 is unaccepted pending explicit amendment.
 See ASSEMBLED_CHARACTER_M86_RESULT.md. No coverage law was changed.
+
+## 0.3 candidate — owner-approved M86 amendment (2026-11-11)
+
+Owner approved the bounded comparison proposed in checkpoint56ce3f7b.
+Rules/registry0.77 retain0.76's46 slots, source/perception/description schemas and
+all producers. Earlier model versions retain exact Jaccard semantics.
+
+For each existing role/sign partition, SourceCoverage uses
+overlap=sum_a min(current[a],priorUnion[a]) / sum_a current[a].
+If current has no atoms, overlap0. Positive-weight basis domain is unchanged.
+Effective magnitude remains abs(raw)*(1-overlap). Keep canonical ordering and the
+max-weight union of ALL previous raw bases, including discounted descriptions.
+Bound once after signed summation; unchanged calibration, dice and activation.
+This is directional evidence coverage, not a general statistical-correlation law.
+
+Model version fixes the candidate for all groups; no member/scenario dispatch.
+The compiler trace names assembled-character-reason-sources/0.3-candidate.
+The existing compilation report appends SourceCoverage as field4 only in0.77.
+The unchanged source/SEM/raw trace keeps0.2. Historical0.75/0.76 report bytes remain.
+
+Native same/collective gates now require exact automatic mode and zero draws,
+with unchanged probabilities and zero collective effective weight. Original failed
+nucleus and nonzero-draw expectations stay preserved; this amendment does not
+retroactively pass them. The prior Jaccard full run remains a named control.
+All other gates, source inputs, gains, seed, budget and final scope are unchanged.
+RO-C3-001 remains active through the wider-source qualification; no blanket closure.

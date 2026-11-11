@@ -1,35 +1,51 @@
-# Current work — M86 stopped; owner amendment needed (2026-11-11)
+# Current work — M86 approved amendment active (2026-11-11)
 
-The new permitted-reading sources reach the shared character's actual decision.
-The collective-redundancy gate fails under the inherited overlap law.
-M86 is NOT complete;0.76 is an unaccepted candidate. M85/0.75 remains completed.
+Owner approved the proposed bounded law comparison and automatic-decision gate
+amendment after checkpoint56ce3f7b. Preserve both failed runs and original contracts.
+One character/runtime; same M86 source inputs, gains, seed and calibration.
 
-Result/decision: [M86](ASSEMBLED_CHARACTER_M86_RESULT.md).
-Evidence: [single log](ASSEMBLED_CHARACTER_M86_CHECKS.txt).
-Pre-implementation plan/contract:720af08f; original card remains in Git.
-
-## Confirmed finding
-- Original producer and all-source original Aggregate match the native result.
-- The existing priority source contributes two other evidence atoms. The combined
-  {1,2} description then receives overlap1/2 and extra strength1/8, despite both
-  atoms already being covered. Base changes121/181 ->257/377.
-- Native probabilities remain55/64,9/64 (same d8/d4), but exact meaning changes.
-  Both permitted arms select automatically: zero draws. Denied readings yield
- 23/32,9/32. No claimed coupled-draw or complete collective-redundancy pass.
-- This is the known larger-union subset residual, now exposed by shared assembly.
-  RO-C3-001's wider-source-domain trigger is ACTIVE, not deferred.
-- Two unchanged failures are retained. No third contrast or seed/calibration search.
-  Remaining controls are unrun; no source-law correction or gate waiver authorized.
-
-## Proposed amendment, pending owner decision
-Compare the current law against directional weighted coverage: intersection weight
-divided by current-source weight, retaining all partitions/order/raw-union/bounding.
-Keep source inputs, gains, seed and calibration fixed; preserve original controls.
-For this actual automatic case, use exact probability/mode and zero-draw checks
-instead of requiring nonexistent draws. Retain genuine stochastic controls.
-This changes a law/comparison and needs explicit amendment; do not implement it
-from a generic continuation without resolving that decision.
-No new milestone, UI, autonomous peers or unrelated breadth in the meantime.
+## Revised bounded card — before implementation
+- Observable capability: wholly covered collective evidence contributes zero even
+  when an existing independent Commitment source enlarges the aggregate basis.
+  Genuine new permitted evidence still changes the actual decision probabilities.
+- Scope: unchanged C-REASON:2/4/5/6/8/9, MEC-012..016. RO-C3-001 stays ACTIVE.
+  This authorizes the bounded comparison, not universal coverage-law superiority,
+  full REASON acceptance, or a new per-phenomenon reference selection.
+- Contract0.3-candidate, rules/registry0.77; same46 slots and source/perception schema.
+  Add SourceCoverage candidate to the SAME compiler: overlap=sum(min(current,prior))
+  /sum(current weights), empty current basis ->0. Preserve role/sign partition,
+  order, raw max-union, bound-once, thresholds/dice/modifiers and all source owners.
+  Keep0.75/0.76 Jaccard behavior byte-compatible; no alternate source pipeline.
+- Compiler trace0.3/report names SourceCoverage; source trace remains0.2 because
+  producer/perception are unchanged. Rule is fixed by model version, not scenario.
+- Same fixture: quiet M85 inputs, three physical tasks/no people, body30/cap100/rate10,
+  delivery90 at9, importance3/5, urgency1, threat1/2, seed0. At10 readings1/1,
+  permissions true/true; A/taskA gains3/4 on{1},2/3 on{2},1/4 on{1,2}.
+- Native0.77 first-two vs all-three: actual samples/SEM/sources/reasons/decision
+  execution live; combined overlap1/effective0; same base121/181, nuclei meaning
+  and full distributions/probabilities55/64,9/64. Automatic mode and zero draws.
+  Denied control retains23/32,9/32; no changed-choice or paired-roll claim here.
+- Retain0.76 full all-three control: identical actual source bytes, original
+  producer and original Aggregate correspondence, combined residual1/8 and
+  base257/377. Difference is explicit law effect, not reclassified equivalence.
+  Original panel-only Aggregate17/29,d6 versus Pairwise37/61,d8 remains.
+- Candidate also compiles the captured M85 stochastic/no-extra sources with exact
+  original nuclei/distributions; retain M85 genuine matched-draw regression.
+  Test weighted/partial/empty/sign partition source coverage with bounded component
+  operands; none may become character inputs.
+- Finish pending hidden-truth, missing-one-channel, zero, old-model/admission,
+  actual-source trace and repeat/restore9->10->11->101/rollback controls.
+- Paths: existing M86 six production/two test paths plus reasons.ts (9 total);
+  no new owner, new source, state, law calibration, fixture/seed search or UI.
+- Serial checks: types; native plus original control; remaining focused controls;
+  retained M85; boundaries/research/git-size. One long job, stop when checks pass.
+  No frozen dependency/entry changed; prior full-control results retained.
+- Original limits remain600s/check,1800s cumulative verification including prior
+  failures, plus15s final bookkeeping allowance (not reset). Prior elapsed321.01s
+  including that allowance. <=20 evidence files/5MiB, one result/log, <=12 code paths.
+- Done: revised fixed gates and pending controls pass, differences/remaining gaps
+  recorded; then stop. Ordinary repairs retain evidence. No unapproved gate change.
+  Role4/broader keys, Value citation, standing fold and full mapping remain open.
 
 All21 members/15 families/132 clauses remain;3 mapped members,0 full families.
 | Research obligations | **1 active / 17 conditional / 0 unowned** |
