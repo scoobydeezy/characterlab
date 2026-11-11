@@ -1,58 +1,50 @@
-# Current work — M81 matched significance comparison (2026-11-10)
+# Current work — M81 complete; DECISION history next (2026-11-10)
 
-One character integrates Campaigns0–3. M80 completed three native regimes, not the
-original significance-only comparison. Start bdfe2eea; model/registry0.73 unchanged.
-Read work order, original DECISION qualification and MEC012..017/019/022 before code.
+The character's retained personal encounters now demonstrate a matched significance
+comparison: both options remain50/50 with the same coupled faces/winner, while the
+native reason-mass measure changes QuietRoll to PlayerFacingRoll. One shared model,
+state, scheduler, RNG, trace and save; no production or formal change.
+[M81 result](ASSEMBLED_CHARACTER_M81_RESULT.md) records exact correspondence/limits.
+Plan85727519 preceded tests; source baseline bdfe2eea; model/registry0.73.
 
-## Card — commit before implementation
-Capabilities (2): equal-balance low/high significance from actual remembered experience;
-same authoritative reason faces/winner despite QuietRoll vs PlayerFacingRoll.
-Original PHEN-DECISION-001:2..4/:8/:9; decision-public/0.1-candidate correspondence.
-Use existing relationship/recognition/reason-dice/arbitration seams; no production or
-formal change. M80 remains preserved. Safe history and remaining competitors stay next.
+## Completed connection
+Two recognized stand-ins; both contact actions have one active physical d4 ground.
+Personal participation in the same perceived breaches earns two separate own histories.
+Standing-1 -> bounded-1/2 -> modifier-2 on both grounds, versus0 when witnessing.
+At fixed native thresholds1/2: stake/authorship1/3 ->5/7, contest1 and probability1/2
+unchanged. Explicit comparison keys couple two reason draws and any conditional tie.
+All32 weighted face/tie cases preserve winners. Actual same-seed coincidence is not
+the coupling proof. Hidden-truth and exact repeat/restore9->10->11->101 pass.
+Original calendar retained; no stored psychological state supplied by the scenario.
+Five failed test runs are retained: missing declared encounters, inherited helper's
+last-stage assumption, map-order assertion, and coupled-draw reader/version mismatch
+with one incorrect diagnosis/repeated failure. All repairs were test-only.
+Final affected checks pass within1800s cumulative/600s per command, including failures.
+No extension, changed law, seed search or replacement contrast.
 
-Scenario: M80 balanced source, full calendar through101, seed0, two physical alternatives
-at10. Three physical tasks/no person-dependent appraisal; body30/cap100/rate10,
-delivery90 at9, importanceA/B3/5, urgency1, third importance0, threat severity1/2.
-Two existing recognized stand-ins bind respectively to contact-one/contact-two.
-At1/2, normal recognition sees coat/plain and an observed breach, with no continuity
-claim between different people. All subsequent encounters are nonparticipating.
-Low-significance arm personally participates in both breaches; high arm witnesses
-the same events. No stored belief/relationship state is authored. Inputs otherwise
-identical. Existing cue false/false keeps learned threat likelihood and context zero.
-Known physical appraisals and both active d4 grounds are preconditions.
+## Correspondence and remaining scope
+This is the current reason-mass proxy: negative standing moves expected contribution
+toward zero. It does not show that personally experienced breaches are unimportant.
+Original DECISION used balanced d4 then d4+3 at player threshold3/4; M81 uses balanced
+d4-2 then d4 at native1/2. Same-balance/different-mode/identical-resolution property
+is now evidenced under that disclosed mapping. General significance/calibration
+adequacy remains conditional under RO-C3-020. No threshold retuning or scalar claim.
+M80's other three-regime/intent/failed-execution evidence is preserved, not rerun.
 
-Prediction: one own rupture per person -> raw standing-1 -> bounded-1/2 ->h=-2
-with unchanged standing unit1/4, versus h0 without participation; context0 both.
-Each option has one d4: low scores-1..2, mean1/2, stake1/3; high1..4, mean5/2,
-stake5/7. Both A/B probabilities1/2, contest1; native thetaRoll/thetaPlayer1/2:
-QuietRoll low, PlayerFacingRoll high. Common shift preserves tie sets and winner.
-This is signed-ground semantic correspondence, not original d4 vs d4+3 numerals.
-Assert raw source provenance, learned owners, modifiers, exact distributions and modes.
-If liveness/prediction fails, retain and diagnose; no alternate contrast, retuning or
-seed search. Missing correspondence stays open; do not infer global impossibility.
+Next bounded package: PHEN-DECISION-001:2..11 still requires the original permitted
+post-attempt history/presentation and competitor comparisons, including IntentEqualsOutcome.
+Pin the exact existing expression/observation/history producers and reader boundary
+before code. A raw research snapshot is not a character-safe view; a mode label is
+not player presentation. Do not substitute a new side store or full-output filter
+without proving closure and persistence from the existing shared character.
+Keep frozen intent distinct from what execution achieved and what was observed.
+Use original safe-history comparison as the control, with visibility absent as well
+as present; exact IDs/inputs/checkpoints belong in the next committed card.
+M80's captured competitor diagnostics stay partial until their required scope is met.
 
-Two identity-only setup runs to10 generate explicit ComparisonDrawMaps for all
-reason addresses plus conditional tie. They read occurrence/nucleus identity only,
-never use outcomes to choose mapping. Two mapped runs use seed0 and identical
-comparison keys; require exact shared draw records/keys/results, faces/tie and winner.
-Independent16 face pairs x2 fair ties must give16/32 A and identical winners under
-the common score shift. No unchanged-seed shortcut or invented native output.
-Hidden control changes only hidden social identity/truth; same observed inputs and
-draw map must preserve cognition. Actual recognized source/standing liveness required.
-Repeat and restore low arm at9, compare exact state/output/trace/save/run identity
-at9/10/11/101; finish both mapped arms and hidden control to101 without truncation.
-Preserve historical expressions; no claim of safe character history from raw outputs.
-
-Planned paths: src/test/fixtures/assembledDecisionSignificance.ts and
-src/test/assembledDecisionSignificance.test.ts; existing snapshot/fixture helpers reused.
-No production tests broadened; <=3 capabilities/12 source-test paths,20 evidence files/
-5MiB (one result + one log),600s/check,1800s cumulative including failures, one job.
-Three groups: coupled pair (2 setups+2 full runs, expected<450s), hidden (<200s),
-persistence (<250s); then types, boundary, research, preservation and staged-size.
-No changed simulation/control dependency: retain earlier frozen-control evidence.
-Done only if native live sources earn both modes with equal probabilities and shared
-draws/winner, hidden control and exact continuation pass. Stop at that outcome.
-C-DECISION still unresolved pending safe permitted history and original competitors;
-no family acceptance or obligation closure. No UI, autonomous peers or reduction.
+Budgets remain <=3 capabilities/12 source-test paths;20 evidence files/5MiB;
+600s per check/1800s cumulative, one job. No UI, autonomous partners, new reduction
+inquiry, additional ledger or repeated AFFECT matrix. Stop at the declared package gate.
+C-DECISION remains UNRESOLVED;2/21 mapped members,0/15 full family acceptances.
+All132 clause dispositions and prior evidence remain; integration of Campaigns0–3 continues.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
