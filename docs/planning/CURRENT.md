@@ -1,4 +1,4 @@
-# Current work — M80 comparison amendment pending (2026-11-10)
+# Current work — M80 approved comparison amendment (2026-11-10)
 
 Start from c8a69028. One character, current model/registry0.73; no production change
 planned. M79 and the132-clause evidence index remain preserved, not rerun.
@@ -13,15 +13,15 @@ Read original DECISION contract/qualification and reference ledger before this c
 Use M79 historyRisk source as the common scenario: three physical tasks, no person
 dependencies; body30/cap100/rate10, delivery90 at9, live body/position/priority and
 catalogue channels. Two cue trials1..3 and7..9; empty observed mitigation catalogue.
-Same model in all three arms: declared severity1, A/B importance3/5 at1, urgency1
+Same model in all three arms: declared severity1/2, A/B importance3/5 at1, urgency1
 at10, third task importance0. These are predeclared scenario values, not changed
 laws/dice. Seed0; original full calendar through101,32-settle failure cap.
 Only normally perceived cue outcomes at3/9 differ: true/true (settled), true/false
 (quiet), false/false (balanced). Hidden physical annexes stay fixed in the main arms.
 MeanAll learns p1,1/2,0. No learned initial state or injected psychological value.
-Prediction: live base3/8 ->d4 for both; standing0; native U357/1000,357/2000,0;
+Prediction: live base3/8 ->d4 for both; standing0; native U119/400,119/800,0;
 bounded context/U unit1/10 -> A modifiers2,1,0; B modifier0.
-Actual A probabilities7/8,23/32,1/2; contests1/4,9/16,1; stake5/7;
+Predicted A probabilities7/8,23/32,1/2; contests1/4,9/16,1; stake5/7;
 authorship5/28,45/112,5/7. Native thetaRoll=thetaPlayer=1/2 ->Auto/Quiet/Player.
 Assert these declarations from the model, plus positive base/nucleus/appraisal
 liveness before any comparison. Original thresholds1/2,3/4 are a labelled control,
@@ -62,9 +62,9 @@ My card incorrectly multiplied the independent threat-severity setting by goal i
 Importance still sets the motive base; it does not rescale this threat consequence.
 Unchanged source math consequently predicts original modifiers3,2,0 and modesAuto/Auto/Player;
 these are predictions, not a completed three-run observation. Failure retained in M80_CHECKS.
-Requested owner amendment: severity1->1/2 in ALL arms; then U119/400,119/800,0,
+Owner approved amendment (current continuation): severity1->1/2 in ALL arms; then U119/400,119/800,0,
 modifiers2,1,0 and original required Auto/Quiet/Player gate. All other inputs/laws,
 seed/calibration/controls/budgets fixed; no further replacement if it fails.
-Do not execute amended inputs before approval. Original failure remains a control.
-Test restore API corrected; types PASS. See the single incomplete M80 result.
+Approval received; execute this amendment only. Original failure retained at ff20155c.
+Test restore API corrected; prior types PASS. Budget already used121.19/1800s.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |

@@ -45,3 +45,7 @@ test files touch executable paths. Production/formal/baseline/obligations unchan
 Document/evidence caps PASS. Recorded verification 116.19s plus5s routine
 guard allowance (121.19/1800s); no extension. Remaining budget is retained
 for the same M80 package, not reset by this checkpoint. Staged-size check before commit.
+
+Owner approved the severity1/2 amendment in the next continuation. The unchanged
+remaining budget applies; implementation and results follow below. Original failed
+fixture and assertions are retained in ff20155c, with the raw failure in this log.
