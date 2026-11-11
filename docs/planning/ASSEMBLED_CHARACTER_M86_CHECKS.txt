@@ -1,0 +1,135 @@
+
+M86_START plan-size ['npm.cmd', 'run', 'check:git-size']
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M86_CHECK plan-size exit=0 seconds=0.75 timeout=False
+
+M86_START types-production ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+
+M86_CHECK types-production exit=0 seconds=16.83 timeout=False
+
+M86_START types-tests ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+src/test/assembledReasonEvidence.test.ts(22,185): error TS2345: Argument of type 'CanonicalValue' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+src/test/assembledReasonEvidence.test.ts(23,11): error TS2345: Argument of type 'CanonicalValue' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+src/test/assembledReasonEvidence.test.ts(40,139): error TS2345: Argument of type 'CanonicalValue' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+src/test/fixtures/assembledReasonEvidence.ts(51,103): error TS2345: Argument of type 'CanonicalValue' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+src/test/fixtures/assembledReasonEvidence.ts(51,136): error TS2345: Argument of type 'CanonicalValue' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+src/test/fixtures/assembledReasonEvidence.ts(51,175): error TS2345: Argument of type 'CanonicalValue' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+
+M86_CHECK types-tests exit=2 seconds=16.81 timeout=False
+
+M86_REPAIR: test type check requires explicit record readers for canonical values. Added the known record schema readers; no scenario/gate/production change.
+
+M86_START types-repaired ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+
+M86_CHECK types-repaired exit=0 seconds=16.63 timeout=False
+
+M86_START native ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledReasonEvidence.test.ts', '-t', 'M86 native', '--maxWorkers=1', '--minWorkers=1']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledReasonEvidence.test.ts (9 tests | 1 failed | 8 skipped) 102597ms
+   × M86 native: collective support joins the actual decision without double counting 102596ms
+     → expected '0902070b07040a8b03010201010bea070b8d0…' to be '0902070b07040a8b03010201010bea070b8d0…' // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledReasonEvidence.test.ts > M86 native: collective support joins the actual decision without double counting
+AssertionError: expected '0902070b07040a8b03010201010bea070b8d0…' to be '0902070b07040a8b03010201010bea070b8d0…' // Object.is equality
+
+Expected: "0902070b07040a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e650b9008050a436f6d6d69746d656e740bea070b8d080b8e08050e636f6e74656e742f7461736b2d610201068204f90206000106ee01970706000106aca722df921502080300030203000aa803010101010808030406020803060602080308060208030a060208030c060208030e06020803100602080312060208070b07040a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f0b9008050a436f6d6d69746d656e740bea070b8d080b8e08050e636f6e74656e742f7461736b2d62020106060806000106000106000106060802040300030003000aa8030101010108040302060204030406020403060602040308060204"
+Received: "0902070b07040a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e650b9008050a436f6d6d69746d656e740bea070b8d080b8e08050e636f6e74656e742f7461736b2d61020106f201b50106000106ee01970706000106849a10c3930a02080300030203000aa803010101010808030406020803060602080308060208030a060208030c060208030e06020803100602080312060208070b07040a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f0b9008050a436f6d6d69746d656e740bea070b8d080b8e08050e636f6e74656e742f7461736b2d62020106060806000106000106000106060802040300030003000aa8030101010108040302060204030406020403060602040308060204"
+
+ ❯ src/test/assembledReasonEvidence.test.ts:15:47
+     13|  expect(a.produced).toHaveLength(2);expect(b.produced).toHaveLength(3)…
+     14|  expect(b.samples).toHaveLength(2);expect(typeof b.frozen[3]!=='boolea…
+     15|  expect(key(set(a.ns.map(nativeProjection)))).toBe(key(set(b.ns.map(na…
+       |                                               ^
+     16|  expect(f(b.data,2n),'permitted evidence changes native probabilities'…
+     17|  const draws=transcript(a.data);expect(draws.length,'live shared non-A…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  11:19:06
+   Duration  106.69s (transform 2.52s, setup 0ms, collect 3.76s, tests 102.60s, environment 0ms, prepare 102ms)
+
+
+M86_CHECK native exit=1 seconds=107.22 timeout=False
+
+M86_DIAGNOSTIC_PLAN: native source/SEM/execution liveness passed, but same/collective nuclei differ. Existing priority basis enlarges the aggregate: expected subset-residual interaction under unchanged weighted Jaccard. Move the already planned original-producer/compiler comparison before the unchanged failing assertion and print actual coverage/base/dice/probability projections. Repeat only the identical three fixed runs; no changed inputs/gates/laws. Stop after diagnosis if the original compiler agrees. Remaining controls do not establish acceptance of a failed gate.
+
+M86_START native-diagnosis ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledReasonEvidence.test.ts', '-t', 'M86 native', '--maxWorkers=1', '--minWorkers=1']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReasonEvidence.test.ts > M86 native: collective support joins the actual decision without double counting
+M86 ORIGINAL PASS actual producer strengths/bases/support; all-source Aggregate matches native; panel-only Aggregate17/29,d6 vs Pairwise37/61,d8 under original dice
+M86 DIAGNOSTIC {"same":{"bases":["121/181","3/8"],"dice":["8","4"],"probabilities":"07020aa503010201010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e650201066e400aa503010201010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f0201061240","drawCount":0,"coverage":[{"label":{"kind":"text","value":"reading1"},"role":"1","magnitude":"3/4","overlap":"0/1","effective":"3/4","atoms":1},{"label":{"kind":"text","value":"reading2"},"role":"1","magnitude":"2/3","overlap":"0/1","effective":"2/3","atoms":1},{"label":{"kind":"text","value":"primary"},"role":"1","magnitude":"3/5","overlap":"0/1","effective":"3/5","atoms":2},{"label":{"kind":"text","value":"primary"},"role":"2","magnitude":"119/800","overlap":"0/1","effective":"119/800","atoms":19},{"label":{"kind":"text","value":"primary"},"role":"1","magnitude":"3/5","overlap":"0/1","effective":"3/5","atoms":2}]},"collective":{"bases":["257/377","3/8"],"dice":["8","4"],"probabilities":"07020aa503010201010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e650201066e400aa503010201010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f0201061240","drawCount":0,"coverage":[{"label":{"kind":"text","value":"reading1"},"role":"1","magnitude":"3/4","overlap":"0/1","effective":"3/4","atoms":1},{"label":{"kind":"text","value":"reading2"},"role":"1","magnitude":"2/3","overlap":"0/1","effective":"2/3","atoms":1},{"label":{"kind":"text","value":"primary"},"role":"1","magnitude":"3/5","overlap":"0/1","effective":"3/5","atoms":2},{"label":{"kind":"text","value":"combined"},"role":"1","magnitude":"1/4","overlap":"1/2","effective":"1/8","atoms":2},{"label":{"kind":"text","value":"primary"},"role":"2","magnitude":"119/800","overlap":"0/1","effective":"119/800","atoms":19},{"label":{"kind":"text","value":"primary"},"role":"1","magnitude":"3/5","overlap":"0/1","effective":"3/5","atoms":2}]},"deniedProbabilities":"07020aa503010201010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e650201062e200aa503010201010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f0201061220","nativeProbabilitiesSame":true,"permittedChangesProbabilities":true}
+
+ ❯ src/test/assembledReasonEvidence.test.ts (9 tests | 1 failed | 8 skipped) 103575ms
+   × M86 native: collective support joins the actual decision without double counting 103574ms
+     → expected '0902070b07040a8b03010201010bea070b8d0…' to be '0902070b07040a8b03010201010bea070b8d0…' // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledReasonEvidence.test.ts > M86 native: collective support joins the actual decision without double counting
+AssertionError: expected '0902070b07040a8b03010201010bea070b8d0…' to be '0902070b07040a8b03010201010bea070b8d0…' // Object.is equality
+
+Expected: "0902070b07040a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e650b9008050a436f6d6d69746d656e740bea070b8d080b8e08050e636f6e74656e742f7461736b2d610201068204f90206000106ee01970706000106aca722df921502080300030203000aa803010101010808030406020803060602080308060208030a060208030c060208030e06020803100602080312060208070b07040a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f0b9008050a436f6d6d69746d656e740bea070b8d080b8e08050e636f6e74656e742f7461736b2d62020106060806000106000106000106060802040300030003000aa8030101010108040302060204030406020403060602040308060204"
+Received: "0902070b07040a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e650b9008050a436f6d6d69746d656e740bea070b8d080b8e08050e636f6e74656e742f7461736b2d61020106f201b50106000106ee01970706000106849a10c3930a02080300030203000aa803010101010808030406020803060602080308060208030a060208030c060208030e06020803100602080312060208070b07040a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f0b9008050a436f6d6d69746d656e740bea070b8d080b8e08050e636f6e74656e742f7461736b2d62020106060806000106000106000106060802040300030003000aa8030101010108040302060204030406020403060602040308060204"
+
+ ❯ src/test/assembledReasonEvidence.test.ts:20:47
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  11:22:14
+   Duration  107.65s (transform 2.50s, setup 0ms, collect 3.76s, tests 103.58s, environment 0ms, prepare 100ms)
+
+
+M86_CHECK native-diagnosis exit=1 seconds=108.16 timeout=False
+
+M86_START checkpoint-types ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+src/test/assembledReasonEvidence.test.ts(18,508): error TS2352: Conversion of type 'boolean | { readonly kind: "unsigned"; readonly value: bigint; } | { readonly kind: "signed"; readonly value: bigint; } | { readonly kind: "bytes"; readonly value: Uint8Array<ArrayBufferLike>; } | ... 6 more ... | { ...; }' to type '{ entries: unknown[]; }' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Property 'entries' is missing in type '{ readonly kind: "typedIdentifier"; readonly namespaceId: bigint; readonly payload: CanonicalValue; }' but required in type '{ entries: unknown[]; }'.
+
+M86_CHECK checkpoint-types exit=2 seconds=16.59 timeout=False
+
+M86_CHECKPOINT_REPAIR: diagnostic map-size assertion used a mutable array cast. Replace with a strict canonical map kind check; diagnostic semantics unchanged, no behavioral rerun.
+
+M86_START checkpoint-types-repaired ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+
+M86_CHECK checkpoint-types-repaired exit=0 seconds=16.44 timeout=False
+
+M86_START checkpoint-boundaries ['node', 'scripts/check-reference-boundary.mjs']
+Reference boundary check passed.
+
+M86_CHECK checkpoint-boundaries exit=0 seconds=2.46 timeout=False
+
+M86_START checkpoint-research ['node', 'scripts/check-research-obligations.mjs']
+PASS: research obligation references and dispositions {"active":1,"conditional":17,"closed":4,"unowned":0,"verdicts":103,"reports":4319}
+
+M86_CHECK checkpoint-research exit=0 seconds=3.38 timeout=False
+
+M86_START checkpoint-size ['npm.cmd', 'run', 'check:git-size']
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M86_CHECK checkpoint-size exit=0 seconds=0.74 timeout=False

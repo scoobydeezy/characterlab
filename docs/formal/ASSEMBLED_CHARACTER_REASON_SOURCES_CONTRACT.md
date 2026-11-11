@@ -133,3 +133,7 @@ versus denied readings must affect actual probabilities. Original panel-only
 Aggregate/PairwiseOnly retains its17/29 vs37/61 and d6 vsd8 witness under original dice;
 native reference dice remain fixed. Role4, broader keys, Value citation, standing
 fold and full C-REASON acceptance remain open. No obligation or verdict is closed.
+
+M86 outcome: source/compiler correspondence confirmed, native collective gate failed.
+The larger-union subset residual remains;0.76 is unaccepted pending explicit amendment.
+See ASSEMBLED_CHARACTER_M86_RESULT.md. No coverage law was changed.
