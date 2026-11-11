@@ -1,0 +1,105 @@
+
+COMMAND types cap=600 ['node', 'node_modules/typescript/bin/tsc', '-b', '--pretty', 'false']
+M83_CHECK types exit=0 seconds=17.97 timeout=False
+
+COMMAND native-comparisons cap=600 ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledDecisionAlternatives.test.ts', '-t', 'M83 native', '--maxWorkers=1', '--minWorkers=1']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledDecisionAlternatives.test.ts (7 tests | 1 failed | 6 skipped) 68323ms
+   × M83 native operands: execute all original decision alternatives and exact outcome enumeration 68323ms
+     → expected [Function] to throw error including 'empty Values lane' but got 'requires 403/1'
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledDecisionAlternatives.test.ts > M83 native operands: execute all original decision alternatives and exact outcome enumeration
+AssertionError: expected [Function] to throw error including 'empty Values lane' but got 'requires 403/1'
+
+Expected: "empty Values lane"
+Received: "requires 403/1"
+
+ ❯ capture src/test/assembledDecisionAlternatives.test.ts:23:100
+     21|  // Zero/positive current affect is actually consumed by the inherited…
+     22|  expect(f(p.ns.find(n=>key(f(rec(f(n,1n),404n),1n))===key(p.A))!,6n)).…
+     23|  expect(()=>legacyContext(replace(context,2n,replace(f(rec(context,408…
+       |                                                                                                    ^
+     24|  return {p,context,old,definition,root:f(p.d,1n)};
+     25| }
+ ❯ matrix src/test/assembledDecisionAlternatives.test.ts:27:10
+ ❯ src/test/assembledDecisionAlternatives.test.ts:68:68
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 6 skipped (7)
+   Start at  07:58:13
+   Duration  72.58s (transform 2.50s, setup 0ms, collect 3.71s, tests 68.32s, environment 0ms, prepare 310ms)
+
+M83_CHECK native-comparisons exit=1 seconds=73.67 timeout=False
+
+COMMAND native-version-control cap=600 ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledDecisionAlternatives.test.ts', '-t', 'M83 native', '--maxWorkers=1', '--minWorkers=1']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDecisionAlternatives.test.ts > M83 native operands: execute all original decision alternatives and exact outcome enumeration
+M83 ADDRESSED {"regime":"settled","nativeMode":1,"nativeDraws":0,"exactReference":true,"alternative":[{"law":2,"draws":2,"mode":2},{"law":3,"draws":0,"mode":1},{"law":4,"draws":0,"mode":1},{"law":5,"draws":0,"mode":1}]}
+
+stdout | src/test/assembledDecisionAlternatives.test.ts > M83 native operands: execute all original decision alternatives and exact outcome enumeration
+M83 ENUMERATED {"regime":"settled","uniformCases":32,"AWins":{"1":32,"2":28,"3":32,"4":32,"5":32},"drawCalls":{"1":0,"2":68,"3":0,"4":0,"5":0},"decorativeDisagreements":0,"diagnosticTokensNotSeedOutputs":true}
+
+stdout | src/test/assembledDecisionAlternatives.test.ts > M83 native operands: execute all original decision alternatives and exact outcome enumeration
+M83 ADDRESSED {"regime":"quiet","nativeMode":2,"nativeDraws":2,"exactReference":true,"alternative":[{"law":2,"draws":2,"mode":2},{"law":3,"draws":0,"mode":1},{"law":4,"draws":2,"mode":2}]}
+
+stdout | src/test/assembledDecisionAlternatives.test.ts > M83 native operands: execute all original decision alternatives and exact outcome enumeration
+M83 ENUMERATED {"regime":"quiet","uniformCases":32,"AWins":{"1":23,"2":23,"3":32,"4":32},"drawCalls":{"1":70,"2":70,"3":0,"4":70},"decorativeDisagreements":9,"diagnosticTokensNotSeedOutputs":true}
+
+stdout | src/test/assembledDecisionAlternatives.test.ts > M83 native operands: execute all original decision alternatives and exact outcome enumeration
+M83 ADDRESSED {"regime":"balanced","nativeMode":3,"nativeDraws":2,"exactReference":true,"alternative":[{"law":2,"draws":2,"mode":3},{"law":3,"draws":0,"mode":1},{"law":4,"draws":2,"mode":3},{"law":5,"draws":1,"mode":3}]}
+
+stdout | src/test/assembledDecisionAlternatives.test.ts > M83 native operands: execute all original decision alternatives and exact outcome enumeration
+M83 ENUMERATED {"regime":"balanced","uniformCases":32,"AWins":{"1":16,"2":16,"3":32,"4":32,"5":16},"drawCalls":{"1":72,"2":72,"3":0,"4":72,"5":32},"decorativeDisagreements":16,"diagnosticTokensNotSeedOutputs":true}
+M83 COMPARISONS PASS original comparator code on live native inputs; no alternate production runtime or seed hunt.
+
+ ✓ src/test/assembledDecisionAlternatives.test.ts (7 tests | 6 skipped) 126890ms
+   ✓ M83 native operands: execute all original decision alternatives and exact outcome enumeration 126890ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  08:00:20
+   Duration  130.88s (transform 2.46s, setup 0ms, collect 3.68s, tests 126.89s, environment 0ms, prepare 101ms)
+
+M83_CHECK native-version-control exit=0 seconds=131.40 timeout=False
+
+COMMAND continuation cap=600 ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledDecisionAlternatives.test.ts', '-t', 'M83 continuation', '--maxWorkers=1', '--minWorkers=1']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDecisionAlternatives.test.ts > M83 continuation: balanced source and original comparator replay exactly after restore
+M83 ADDRESSED {"regime":"balanced","nativeMode":3,"nativeDraws":2,"exactReference":true,"alternative":[{"law":2,"draws":2,"mode":3},{"law":3,"draws":0,"mode":1},{"law":4,"draws":2,"mode":3},{"law":5,"draws":1,"mode":3}]}
+
+stdout | src/test/assembledDecisionAlternatives.test.ts > M83 continuation: balanced source and original comparator replay exactly after restore
+M83 ADDRESSED {"regime":"balanced","nativeMode":3,"nativeDraws":2,"exactReference":true,"alternative":[{"law":2,"draws":2,"mode":3},{"law":3,"draws":0,"mode":1},{"law":4,"draws":2,"mode":3},{"law":5,"draws":1,"mode":3}]}
+M83 CONTINUATION PASS exact state/output/trace/save/run identity9->10->11->101 and original comparator replay; frozen controls untouched.
+
+ ✓ src/test/assembledDecisionAlternatives.test.ts (7 tests | 6 skipped) 117371ms
+   ✓ M83 continuation: balanced source and original comparator replay exactly after restore 117370ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  08:03:13
+   Duration  121.35s (transform 2.44s, setup 0ms, collect 3.66s, tests 117.37s, environment 0ms, prepare 102ms)
+
+M83_CHECK continuation exit=0 seconds=121.86 timeout=False
+
+COMMAND final-types cap=600 ['node', 'node_modules/typescript/bin/tsc', '-b', '--pretty', 'false']
+M83_CHECK final-types exit=0 seconds=16.78 timeout=False
+
+COMMAND final-boundaries cap=600 ['node', 'scripts/check-reference-boundary.mjs']
+Reference boundary check passed.
+M83_CHECK final-boundaries exit=0 seconds=2.48 timeout=False
+
+COMMAND final-research cap=600 ['node', 'scripts/check-research-obligations.mjs']
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4318}
+M83_CHECK final-research exit=0 seconds=3.61 timeout=False
+
+M83 PRESERVATION PASS two test paths only; all production/formal/baseline/obligation/mechanism sources unchanged; caps pass; three mapped members, zero full families; two evidence files/14438 bytes before this line.
