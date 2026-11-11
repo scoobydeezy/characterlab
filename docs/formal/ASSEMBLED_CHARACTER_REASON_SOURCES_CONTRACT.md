@@ -163,3 +163,7 @@ nucleus and nonzero-draw expectations stay preserved; this amendment does not
 retroactively pass them. The prior Jaccard full run remains a named control.
 All other gates, source inputs, gains, seed, budget and final scope are unchanged.
 RO-C3-001 remains active through the wider-source qualification; no blanket closure.
+
+0.3 outcome: the approved bounded M86 comparison and controls pass. Original0.76
+Jaccard/source controls and failed expectations remain. General coverage/ordering
+and reference-policy promotion beyond this comparison are not qualified here.

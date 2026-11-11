@@ -2,7 +2,7 @@
 import {expect} from 'vitest';
 import {list,set,text,unsigned as u,signed,rational as q,canonicalEncode as enc,typedIdentifier,type CanonicalValue} from '../../substrate/canonicalEncoding';
 import {prepareCharacterModel,createCharacterRun} from '../../assembled/character';
-import {REASON_EVIDENCE_RULES,REASON_EVIDENCE_REGISTRY} from '../../assembled/model';
+import {REASON_EVIDENCE_RULES,REASON_EVIDENCE_REGISTRY,SOURCE_COVERAGE_RULES,SOURCE_COVERAGE_REGISTRY} from '../../assembled/model';
 import {REASON_EVIDENCE,REASON_READING,REASON_SAMPLE,REASON_PRODUCED,REASON_EVIDENCE_VERSION} from '../../assembled/reasonEvidence';
 import {REASON_SOURCE_REPORT,descriptionIdentity} from '../../assembled/reasons';
 import {fixture as prior} from './assembledReasonSources';
@@ -18,15 +18,15 @@ import {reasonRaw,compileJoinedReasons} from '../../campaign3/reasonMath';
 import {reasonRecipe} from '../../campaign3/reasonModel';
 import {decodeReason} from '../../campaign3/reasonCodecs';
 import {definition,originalNuclei,nativeProjection,originalProjection,compile} from './assembledReasonCorrespondence';
-export function fixture(count=3,permissions=[true,true],hidden=false,zero=false){
+export function fixture(count=3,permissions=[true,true],hidden=false,zero=false,coverage=true){
  const b=prior(),action=sid(1027,'definition/protocol-contact-one');
  const descriptions=[list([text('reading1'),action,taskA,q(3,4),set([u(1)])]),list([text('reading2'),action,taskA,q(2,3),set([u(2)])]),list([text('combined'),action,taskA,q(1,4),set([u(1),u(2)])])].slice(0,count);
- const s={...b.s,rulesVersion:REASON_EVIDENCE_RULES,registrySchemaVersion:REASON_EVIDENCE_REGISTRY,registry:enc(list([...items(decode(b.s.registry),'list'),list([text(REASON_EVIDENCE),list(descriptions)])]))};
+ const s={...b.s,rulesVersion:coverage?SOURCE_COVERAGE_RULES:REASON_EVIDENCE_RULES,registrySchemaVersion:coverage?SOURCE_COVERAGE_REGISTRY:REASON_EVIDENCE_REGISTRY,registry:enc(list([...items(decode(b.s.registry),'list'),list([text(REASON_EVIDENCE),list(descriptions)])]))};
  const rows=items(decode(b.d.orderedInputs),'list'),event=list([signed(10),u(10),REASON_READING,list([q(zero?0:1,1),q(zero?0:1,1),permissions[0],permissions[1],q(hidden?1:0,1)]),list([])]);
  return {s,d:{...b.d,orderedInputs:enc(list([...rows,event]))},old:b,descriptions,event};
 }
-export async function create(count=3,permissions=[true,true],hidden=false,zero=false,at=10n){
- const b=fixture(count,permissions,hidden,zero),run=await createCharacterRun(await prepareCharacterModel(b.s),b.d);await through(run,at);return {b,run};
+export async function create(count=3,permissions=[true,true],hidden=false,zero=false,at=10n,coverage=true){
+ const b=fixture(count,permissions,hidden,zero,coverage),run=await createCharacterRun(await prepareCharacterModel(b.s),b.d);await through(run,at);return {b,run};
 }
 export function capture(run:Run){
  const all=items(decode(snap(run).outputs),'list'),d=outputs(snap(run).outputs,409n).find(v=>signedValue(f(v,2n))===10n)!;expect(d).toBeDefined();

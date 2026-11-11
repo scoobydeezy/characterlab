@@ -6,7 +6,7 @@ Read [CURRENT.md](docs/planning/CURRENT.md), then
 The active direction is assembly of one continuing character.
 Workbench/UI development and Campaign 4 are stopped pending assembly acceptance.
 This is the assembly checkout, based on
-`788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`. M86 is stopped on a confirmed inherited reason-law limit; M85 remains the last complete milestone. Follow CURRENT.md for the explicit amendment needed. No unrelated breadth, UI or multi-character work.
+`788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`. M86 completes the owner-approved bounded SourceCoverage comparison; C-REASON remains unresolved. Follow CURRENT.md for remaining reference-policy and integration scope. No unrelated breadth, UI or multi-character work.
 Do not execute historical TODOs, resume old audits, or retain/revisit browser tabs.
 Old instructions/evidence remain on tag `archive/workbench-stopped-2026-10-25`.
 ## Authority

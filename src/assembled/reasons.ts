@@ -19,6 +19,7 @@ import {cognitiveRecord as r,receivingRecord,cloneCognitive} from './codecs';
 import {ExactRational as Q} from '../substrate/exactMath';
 import {ZERO,ONE,absolute,bounded,readQ,qValue,distributionValue} from '../campaign2/cognitiveMath';
 
+export const SOURCE_COVERAGE_VERSION='assembled-character-reason-sources/0.3-candidate';
 export const REASON_SOURCES='assembled-reason-sources/0.1';
 export const REASON_SOURCES_VERSION='assembled-character-reason-sources/0.1-candidate';
 export const REASON_SOURCE_REPORT=REASON_SOURCES+'/compilation';
@@ -53,7 +54,8 @@ const valueCalibration=()=>{const m=r(439,[rational(1,1),unsigned(3)]);return r(
 const min=(a:Q,b:Q)=>a.compare(b)<0?a:b,max=(a:Q,b:Q)=>a.compare(b)>0?a:b;
 /** Port of the accepted role/sign aggregate kernel with explicit description IDs.
  * No world/state/RNG reader. Only authenticated raw input arrives from execution. */
-export function compileDescribedReasons(value:CanonicalValue,taskDice:CanonicalValue,maxDomain=3){
+export function compileDescribedReasons(value:CanonicalValue,taskDice:CanonicalValue,maxDomain=3,coverageLaw:'Jaccard'|'SourceCoverage'='Jaccard'){
+ if(coverageLaw!=='Jaccard'&&coverageLaw!=='SourceCoverage')reject('coverage law');
  const raw=receivingRecord(cloneCognitive(value),403n);if(raw.schema.schemaVersion!==3n)reject('requires described raw403/3');
  const descriptions=items(f(raw,6n),'list'),actions=new Set<string>(),tasks=new Set<string>();
  const rows=descriptions.map(value=>{
@@ -84,7 +86,8 @@ export function compileDescribedReasons(value:CanonicalValue,taskDice:CanonicalV
     for(const row of selected){
      let intersection=ZERO,union=ZERO;
      for(const k of new Set([...aggregate.keys(),...row.weights.keys()])){const a=aggregate.get(k)??ZERO,b=row.weights.get(k)??ZERO;intersection=intersection.add(min(a,b));union=union.add(max(a,b));}
-     const overlap=union.equals(ZERO)?ZERO:intersection.divide(union),independent=ONE.subtract(overlap),magnitude=absolute(row.strength),effective=magnitude.multiply(independent);
+     const denominator=coverageLaw==='SourceCoverage'?[...row.weights.values()].reduce((a,b)=>a.add(b),ZERO):union;
+     const overlap=denominator.equals(ZERO)?ZERO:intersection.divide(denominator),independent=ONE.subtract(overlap),magnitude=absolute(row.strength),effective=magnitude.multiply(independent);
      total=total.add(effective.multiply(Q.of(BigInt(sign))));
      traces.push(r(405,[row.source,qValue(magnitude),qValue(overlap),qValue(independent),qValue(effective)]));
      coverage.push(list([row.id,unsigned(n),signed(sign),qValue(magnitude),qValue(overlap),qValue(independent),qValue(effective),f(row.signal,3n)]));
@@ -106,7 +109,7 @@ export function compileDescribedReasons(value:CanonicalValue,taskDice:CanonicalV
  }
  nuclei.sort((a,b)=>key(f(rec(a,407n),1n))<key(f(rec(b,407n),1n))?-1:1);
  reports.sort((a,b)=>key(items(a,'list')[0])<key(items(b,'list')[0])?-1:1);
- return {nuclei,report:list([text(REASON_SOURCE_REPORT),list(reports),list(rows.filter(v=>v.strength.equals(ZERO)).map(v=>v.id))])};
+ return {nuclei,report:list([text(REASON_SOURCE_REPORT),list(reports),list(rows.filter(v=>v.strength.equals(ZERO)).map(v=>v.id)),...(coverageLaw==='SourceCoverage'?[text(coverageLaw)]:[])])};
 }
 
 

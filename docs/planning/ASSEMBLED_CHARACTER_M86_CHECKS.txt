@@ -133,3 +133,191 @@ M86_START checkpoint-size ['npm.cmd', 'run', 'check:git-size']
 PASS: Git index contains no files at or above50,000,000 bytes.
 
 M86_CHECK checkpoint-size exit=0 seconds=0.74 timeout=False
+
+M86_START amendment-size ['npm.cmd', 'run', 'check:git-size']
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M86_CHECK amendment-size exit=0 seconds=1.16 timeout=False
+
+M86_START coverage-types ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+src/assembled/reasons.ts(89,24): error TS2367: This comparison appears to be unintentional because the types 'CanonicalValue[]' and 'string' have no overlap.
+
+M86_CHECK coverage-types exit=2 seconds=17.32 timeout=False
+
+M86_REPAIR: type check caught new law parameter shadowed by existing coverage-witness array. Rename parameter coverageLaw; no behavioral run occurred or gates changed.
+
+M86_START coverage-types-repaired ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+
+M86_CHECK coverage-types-repaired exit=0 seconds=16.59 timeout=False
+
+M86_START coverage-native ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledReasonEvidence.test.ts', '-t', 'M86 native', '--maxWorkers=1', '--minWorkers=1']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReasonEvidence.test.ts > M86 native: collective support joins the actual decision without double counting
+M86 ORIGINAL PASS actual producer strengths/bases/support; all-source Aggregate matches native; panel-only Aggregate17/29,d6 vs Pairwise37/61,d8 under original dice
+
+stdout | src/test/assembledReasonEvidence.test.ts > M86 native: collective support joins the actual decision without double counting
+M86 NATIVE PASS same/collective probabilities equal; independent permitted evidence changes probabilities; automatic zero draws; matched0.76 source bytes retain residual1/8; candidate0.77 residual0; denied agrees with retained0.75 probabilities
+
+ ✓ src/test/assembledReasonEvidence.test.ts (10 tests | 9 skipped) 138806ms
+   ✓ M86 native: collective support joins the actual decision without double counting 138806ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 9 skipped (10)
+   Start at  12:23:25
+   Duration  143.18s (transform 2.55s, setup 0ms, collect 3.83s, tests 138.81s, environment 0ms, prepare 288ms)
+
+
+M86_CHECK coverage-native exit=0 seconds=144.07 timeout=False
+
+M86_START coverage-controls ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledReasonEvidence.test.ts', '-t', 'M86 (privacy|persistence|admission|coverage)', '--maxWorkers=1', '--minWorkers=1']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReasonEvidence.test.ts > M86 privacy and missing support: denied/absent/zero sources never become motivation
+M86 PRIVACY PASS hidden diagnostic unchanged cognition; absent second channel suppresses dependent descriptions; zero samples reject all three sources
+
+stdout | src/test/assembledReasonEvidence.test.ts > M86 persistence and rollback: one transaction and exact continued save
+M86 PERSISTENCE PASS repeat9/restore9->10->11->101; failure after actual source compilation rolls whole instant back
+
+stdout | src/test/assembledReasonEvidence.test.ts > M86 admission: governed descriptions and original evidence domain stay closed
+M86 ADMISSION PASS old model rejects reading input; duplicate/reserved labels and invalid channels/readings reject
+
+stdout | src/test/assembledReasonEvidence.test.ts > M86 coverage: weighted partial overlap, empty evidence and sign partitions
+M86 COMPONENT PASS weighted partial contributions3/4,1/3,1/8; empty basis overlap0; negative partition remains independent; component operands never enter a character
+
+ ✓ src/test/assembledReasonEvidence.test.ts (10 tests | 6 skipped) 216662ms
+   ✓ M86 privacy and missing support: denied/absent/zero sources never become motivation 120528ms
+   ✓ M86 persistence and rollback: one transaction and exact continued save 76844ms
+   ✓ M86 admission: governed descriptions and original evidence domain stay closed 1869ms
+   ✓ M86 coverage: weighted partial overlap, empty evidence and sign partitions 17420ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed | 6 skipped (10)
+   Start at  12:26:30
+   Duration  220.76s (transform 2.52s, setup 0ms, collect 3.77s, tests 216.66s, environment 0ms, prepare 100ms)
+
+
+M86_CHECK coverage-controls exit=0 seconds=221.26 timeout=False
+
+M86_START retained-m85 ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledReasonSources.test.ts', '-t', 'M85', '--maxWorkers=1', '--minWorkers=1']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledReasonSources.test.ts (0 test)
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledReasonSources.test.ts [ src/test/assembledReasonSources.test.ts ]
+TypeError: bodyId is not a function
+ ❯ src/assembled/memory.ts:35:29
+
+ ❯ src/assembled/retainedAttribution.ts:10:31
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  no tests
+   Start at  12:30:20
+   Duration  2.41s (transform 1.38s, setup 0ms, collect 0ms, tests 0ms, environment 0ms, prepare 101ms)
+
+
+M86_CHECK retained-m85 exit=1 seconds=2.94 timeout=False
+
+M86_REPAIR: retained M85 failed during module collection (bodyId undefined), before tests. New model -> reasonEvidence -> recognition -> body -> retainedAttribution -> memory created an early initialization cycle. Remove reasonEvidence recognition import; runtime passes the exact existing BODY_OBSERVER string when constructing the handler, after module initialization. No identifier/schema/law/fixture change. Rerun retained M85 and M86 functional/continuation checks because the shared constructor changed; original budget remains.
+
+M86_START observer-types ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+
+M86_CHECK observer-types exit=0 seconds=16.46 timeout=False
+
+M86_START retained-m85-repaired ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledReasonSources.test.ts', '-t', 'M85', '--maxWorkers=1', '--minWorkers=1']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReasonSources.test.ts > M85 native: duplicate descriptions carry real evidence but no extra decision weight
+M85 ORIGINAL {"aggregateNuclei":2,"perFactNuclei":4,"aggregateProb":["23/32","9/32"],"perFactProb":["1/2","1/2"],"actualCapturedSources":true}
+M85 NATIVE PASS source0.74->0.75: same strengths/nuclei/probabilities; real repeated descriptions discounted; matched natural draws=2; chosen intent reaches execution
+
+stdout | src/test/assembledReasonSources.test.ts > M85 grammar: closed descriptions, producer support and prior admission
+M85 GRAMMAR PASS closed tuples/identities/roles/projections/old admission; empty-basis repetition rejected, no invented citation
+
+stdout | src/test/assembledReasonSources.test.ts > M85 continuation and privacy: exact replay and hidden truth cannot alter source meaning
+M85 CONTINUATION/PRIVACY PASS exact repeat9/restore9->10->11->101; identical evidence/reasons/probabilities and draws under hidden diagnostic change
+
+stdout | src/test/assembledReasonSources.test.ts > M85 math: the shared compiler preserves existing Value and native strength domains
+M85 MATH PASS actual retained Value/Commitment operands and raw strength4 preserve old compilation; no authored operand entered a run
+
+ ✓ src/test/assembledReasonSources.test.ts (9 tests | 5 skipped) 219225ms
+   ✓ M85 native: duplicate descriptions carry real evidence but no extra decision weight 104971ms
+   ✓ M85 grammar: closed descriptions, producer support and prior admission 3473ms
+   ✓ M85 continuation and privacy: exact replay and hidden truth cannot alter source meaning 89832ms
+   ✓ M85 math: the shared compiler preserves existing Value and native strength domains 20948ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed | 5 skipped (9)
+   Start at  12:32:00
+   Duration  223.30s (transform 2.50s, setup 0ms, collect 3.74s, tests 219.23s, environment 0ms, prepare 102ms)
+
+
+M86_CHECK retained-m85-repaired exit=0 seconds=223.80 timeout=False
+
+M86_START final-m86 ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledReasonEvidence.test.ts', '-t', 'M86', '--maxWorkers=1', '--minWorkers=1']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReasonEvidence.test.ts > M86 native: collective support joins the actual decision without double counting
+M86 ORIGINAL PASS actual producer strengths/bases/support; all-source Aggregate matches native; panel-only Aggregate17/29,d6 vs Pairwise37/61,d8 under original dice
+
+stdout | src/test/assembledReasonEvidence.test.ts > M86 native: collective support joins the actual decision without double counting
+M86 NATIVE PASS same/collective probabilities equal; independent permitted evidence changes probabilities; automatic zero draws; matched0.76 source bytes retain residual1/8; candidate0.77 residual0; denied agrees with retained0.75 probabilities
+
+stdout | src/test/assembledReasonEvidence.test.ts > M86 privacy and missing support: denied/absent/zero sources never become motivation
+M86 PRIVACY PASS hidden diagnostic unchanged cognition; absent second channel suppresses dependent descriptions; zero samples reject all three sources
+
+stdout | src/test/assembledReasonEvidence.test.ts > M86 persistence and rollback: one transaction and exact continued save
+M86 PERSISTENCE PASS repeat9/restore9->10->11->101; failure after actual source compilation rolls whole instant back
+
+stdout | src/test/assembledReasonEvidence.test.ts > M86 admission: governed descriptions and original evidence domain stay closed
+M86 ADMISSION PASS old model rejects reading input; duplicate/reserved labels and invalid channels/readings reject
+
+stdout | src/test/assembledReasonEvidence.test.ts > M86 coverage: weighted partial overlap, empty evidence and sign partitions
+M86 COMPONENT PASS weighted partial contributions3/4,1/3,1/8; empty basis overlap0; negative partition remains independent; component operands never enter a character
+
+ ✓ src/test/assembledReasonEvidence.test.ts (10 tests | 5 skipped) 270838ms
+   ✓ M86 native: collective support joins the actual decision without double counting 137860ms
+   ✓ M86 privacy and missing support: denied/absent/zero sources never become motivation 52641ms
+   ✓ M86 persistence and rollback: one transaction and exact continued save 77114ms
+   ✓ M86 admission: governed descriptions and original evidence domain stay closed 1891ms
+   ✓ M86 coverage: weighted partial overlap, empty evidence and sign partitions 1331ms
+
+ Test Files  1 passed (1)
+      Tests  5 passed | 5 skipped (10)
+   Start at  12:35:53
+   Duration  274.94s (transform 2.51s, setup 0ms, collect 3.76s, tests 270.84s, environment 0ms, prepare 102ms)
+
+
+M86_CHECK final-m86 exit=0 seconds=275.44 timeout=False
+
+M86_START final-boundaries ['node', 'scripts/check-reference-boundary.mjs']
+Reference boundary check passed.
+
+M86_CHECK final-boundaries exit=0 seconds=2.47 timeout=False
+
+M86_START final-research ['node', 'scripts/check-research-obligations.mjs']
+PASS: research obligation references and dispositions {"active":1,"conditional":17,"closed":4,"unowned":0,"verdicts":103,"reports":4319}
+
+M86_CHECK final-research exit=0 seconds=3.48 timeout=False
+
+M86_START final-size ['npm.cmd', 'run', 'check:git-size']
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M86_CHECK final-size exit=0 seconds=0.75 timeout=False

@@ -1,99 +1,98 @@
-# M86 — collective-source integration stopped on a law limit
+# M86 — independent evidence and collective coverage in one character
 
-The three permitted-reading sources now reach the shared character's reason
-compiler and actual execution. The fixed collective-redundancy gate fails.
-M86 is NOT complete;0.76 is an unaccepted candidate. M85/0.75 remains the last
-completed milestone. No additional member or family is accepted.
+The character's independently perceived readings now join its existing task reasons.
+Under the owner-approved SourceCoverage candidate, a description whose evidence is
+already covered contributes zero, even with other Commitment evidence present.
+Genuinely new permitted evidence changes actual decision probabilities and reaches
+execution. The amended bounded M86 gates pass; full C-REASON remains UNRESOLVED.
 
-Plan/contract committed before implementation:720af08f.
-Evidence: [one check log](ASSEMBLED_CHARACTER_M86_CHECKS.txt).
-Six production paths, two test/helper paths. No new state owner, second scheduler,
-private die, standalone factory or frozen-control change.
+Original plan:720af08f; failed-law checkpoint:56ce3f7b; owner amendment:f6b91722.
+Contract: [reason-sources0.3 candidate](../formal/ASSEMBLED_CHARACTER_REASON_SOURCES_CONTRACT.md),
+rules/registry0.77,46 slots. One compiler/runtime/state/scheduler/save.
+Seven production paths plus two test/helper paths across the entire M86 package.
+Evidence: [one cumulative log](ASSEMBLED_CHARACTER_M86_CHECKS.txt).
+Historical0.75/0.76 laws, original Campaign3 compiler and source controls remain.
 
-## What the actual comparison shows
+## Fixed native witness and actual connection
 
-The unchanged M85 quiet scenario adds two physical readings at10, both1, seed0;
-three physical tasks/no people, body30/cap100/rate10, delivery90 at9,
-importance3/5, urgency1, threat1/2. Same reference laws/dice throughout.
-Descriptors for optionA/taskA use original gains3/4 on{1},2/3 on{2},1/4 on{1,2}.
-Compare first two against all three; both-denied is the causal control.
+Unchanged M85 quiet scenario, seed0: three physical tasks/no people; body30/cap100/
+rate10, delivery90 at9, importance3/5, urgency1, threat1/2.
+At10 two physical readings are1/1. The governed original producer supplies
+3/4 on{1},2/3 on{2},1/4 on{1,2}, for optionA/taskA.
+Original input contains readings/permissions/hidden diagnostic, never source
+strengths, observation IDs or psychological state. Source10 projects permitted
+samples; shared Current SEM freezes14; common raw80 produces descriptions and
+passes them to the existing compiler/decision/intent/execution. No C3 factory.
 
-Both permitted arms have actual samples, Current SEM, selected alternatives,
-generated descriptions, compiler consumption and a choice reaching execution.
-The existing priority producer also supplies a genuine3/5 base with TWO other
-observation atoms. It remains present in the same role/sign/semantic group.
+- Both first-two and all-three arms have live samples, SEM, source support,
+  selected alternatives, actual compiler consumption and executed decisions.
+- With SourceCoverage, the first two sources retain nonzero contributions and
+  the combined source has overlap1/effective0. Base remains121/181 in both arms;
+  exact nucleus meaning and full distributions agree. Probabilities55/64,9/64.
+- Denying both channels suppresses all three sources and yields23/32,9/32.
+  This establishes an actual decision-probability effect of independent evidence.
+- Permitted arms are Auto with zero draws, as explicitly authorized in the revised
+  gate. No changed-seed-choice or paired-roll claim is made for this comparison.
+- The0.76 full control receives IDENTICAL actual source/report bytes. Its residual
+  remains1/8 and base257/377. SourceCoverage therefore changes the receiving law,
+  not source meaning, scenario or calibration. Both laws happen to retain d8/d4
+  here; unchanged probability alone would have hidden the original failed gate.
+- Actual source strengths, bases and exact sample support match original reasonRaw.
+  The retained0.76 all-source Aggregate matches the unchanged original compiler.
+  Original panel-only Aggregate17/29,d6 vs PairwiseOnly37/61,d8 remains reproduced.
+  No claim that the new candidate is mathematically identical to original Jaccard.
+- Captured actual0.75 stochastic operands compile identically under SourceCoverage;
+  the retained M85 comparison still exercises two matched natural draws.
+  This is a component correspondence plus retained runtime control, not a new
+  candidate-runtime stochastic coupling claim.
 
-| Actual source | Raw | Prior-overlap | Effective |
-|---|---:|---:|---:|
-| reading1, basis{1} |3/4|0|3/4|
-| reading2, basis{2} |2/3|0|2/3|
-| existing priority, basis{3,4} |3/5|0|3/5|
-| combined, basis{1,2} |1/4|1/2|1/8|
+## Preserved failure and explicit amendment
 
-The accepted weighted Jaccard law divides intersection weight2 by the whole
-prior/current union weight4. Thus already-covered evidence adds1/8.
-Bounded base changes from121/181 to257/377. This fails the exact semantic gate.
-Both stay d8 versus the other option's d4, so exact probabilities remain55/64
-versus9/64. Denied readings yield23/32 versus9/32: the new evidence has a genuine
-decision effect, while this extra residual happens not to cross a die boundary.
-Both permitted arms select automatically and have ZERO draws, separately failing
-the card's nonzero matched-draw requirement. No sampled-choice/coupling pass.
+Initial M86 expected zero collective weight under Jaccard. Both attempts failed:
+the existing priority source adds two other atoms, so intersection2/union4 gives
+overlap1/2 and effective1/8. Base121/181 becomes257/377. Original/native agreement
+confirmed this known larger-union subset residual. The fixed arms also had zero
+draws, failing the earlier nonzero-draw gate. Those failures are retained unchanged.
+The owner approved a bounded candidate comparison and an Auto/zero-draw gate;
+there was no deletion of priority evidence, gain/seed search or retroactive pass.
 
-## Original controls and classification
+SourceCoverage divides intersection by incoming-source weight instead. Empty
+basis ->0; role/sign partitions, source ordering, raw max-union (including
+discounted rows), bound-once, thresholds and dice/modifier rules remain.
+The compiler trace names0.3 and its report names SourceCoverage. The unchanged
+source/SEM/raw trace remains0.2; earlier model versions keep their exact behavior.
 
-The diagnostic repeats only the same three fixed runs, moving the already planned
-original comparison before the unchanged failing assertion. No retuning.
-The unchanged original reasonRaw agrees on the actual produced strengths, bases
-and consumed sample support. Original Aggregate on ALL captured sources agrees
-exactly with native nuclei, including the unwanted residual.
-On panel-only captured sources, the original bounded witness still holds:
-Aggregate17/29,d6 versus PairwiseOnly37/61,d8.
+## Controls, limits and remaining work
 
-Classification: the priority -> aggregate-basis connection exposes the known
-larger-union subset residual. This is not a port defect or evidence permission
-failure. It is a carried-forward law limitation that blocks the declared assembly
-gate; the required zero-redundancy phenomenon has not been shown in this combined
-domain. The source contract and reference law have NOT been silently revised.
-REFERENCE_MECHANISM_LEDGER.md's Joined REASON disposition explicitly retained this
-limit under RO-C3-001/020. North Star5.12 forbids repeated counting solely because
-several systems describe the same fact. M86 cannot be relabelled PASS because dice
-happen not to change. Removing the existing priority source would hide the issue.
+Five M86 tests pass: native law comparison, privacy/missing/zero support,
+repeat/restore/rollback, closed admission, and weighted/empty/sign components.
+The component cases retain exact effective contributions3/4,1/3,1/8, empty-basis
+overlap0 and negative-partition independence; altered operands never enter a run.
+Repeat/restore at9,10,11 and terminal101 matches state/output/trace/run identity/save.
+An injected failure after actual source compilation rolls the whole instant back.
+Four retained M85 tests pass, including two actual matched natural draws and exact
+continuation. Five imported historical tests per file are skipped, not counted.
+TypeScript, reference-boundary, research bookkeeping, staged Git-size and whitespace
+checks pass. The final M86 suite reran after the constructor repair described below.
+Verification:1246.75s including all failed checks and the single15s final
+bookkeeping allowance;600s/check and1800s cumulative. No budget reset
+or extension. Two evidence files below20 files/5MiB; one result/log.
+Type repairs included explicit record readers, strict map diagnostics and a law
+parameter name collision with the coverage-witness array. No repair changed the
+approved scenario, gain, seed, source law or calibration.
+The first retained-M85 command failed before collecting tests: new source admission
+imported recognition early, exposing the body/retained-attribution/memory cycle.
+The runtime now passes the exact existing observer string to the source constructor,
+removing that import dependency. No observer bytes or source law changed.
+Types, all retained M85 tests and all M86 tests passed after this repair.
+No frozen-control dependency/entry changed; prior full-byte results retained.
+No full historical/corpus suite claimed, new Campaign3 verdict or global law claim.
 
-RO-C3-001 is now ACTIVE: its wider-source-domain trigger has reached this frontier.
-Its historical qualification remains intact; evidence/owner are recorded in the
-canonical index. RO-C3-020 retains its conditional scope. No new Campaign3 verdict,
-reduction, general correlation claim or completion waiver.
-
-## Concrete proposed amendment — NOT authorized or implemented
-
-Keep the same sources, gains, scenarios, seed and calibration. Compare the retained
-Jaccard law with directional weighted coverage:
-sum(min(currentWeight,priorUnionWeight)) / sum(currentWeight), empty basis ->0.
-Retain role/sign partitions, ordering, raw max-union, bound-once and all other math.
-This candidate makes a wholly covered source contribute0 even when the prior
-union contains unrelated atoms. It is a proposed law comparison, not accepted
-psychology. Preserve original Jaccard/Pairwise/PerFact controls and M85 regressions.
-
-For this unchanged automatic-selection scenario, replace the impossible nonzero
-draw gate with exact native probability/mode checks and zero unintended draws.
-Keep genuine coupled stochastic comparisons as retained controls, without seed or
-gain search to manufacture a roll. No wider scope or denominator change.
-Changing an accepted law/reference choice and a predeclared comparison requires
-an explicit owner amendment under the work order and AGENTS authority rules.
-
-## Checks and checkpoint limits
-
-Production types pass. Test types initially failed on missing explicit record
-readers; repaired and passed before behavioral execution. Both native runs fail
-the SAME unchanged nucleus-equality gate. The second establishes original-law
-agreement and prints actual coverage; no third attempt or replacement contrast.
-Final diagnostic types, reference boundary and research bookkeeping pass.
-The diagnostic-only map-size cast needed a strict map reader; repaired without
-a behavioral rerun. Staged Git-size/whitespace checks pass before checkpoint commit.
-Verification total:321.01s including failures and15s final bookkeeping allowance;
-limits600s/command,1800s cumulative. No extension. One log/result below20 files/5MiB.
-The remaining privacy/missing/zero/admission/rollback/continuation tests and retained
-M85 run are prepared but NOT executed; they cannot turn the failed gate into a pass.
-The no-event0.75 semantic control after the failed assertion was not reached.
-No full frozen/historical/corpus suite is claimed. All original bytes remain.
+This bounded comparison addresses the native collective case only. General
+correlation, arbitrary ordering, broader receiving/source domains and reference
+policy promotion beyond this approved comparison remain unqualified.
+RO-C3-001 stays ACTIVE; RO-C3-020 remains conditional. Do not close them on this pass.
+Remaining C-REASON work: role4/broader keys, Value evidence, original standing-fold
+mapping and remaining competitor/requirement mappings, with final replay under one
+resolved reference policy. No unrelated breadth or alternate phenomenon runtime.
 3/21 mapped members,0/15 full families; all132 clauses remain required.

@@ -1,51 +1,40 @@
-# Current work — M86 approved amendment active (2026-11-11)
+# Current work — M86 bounded comparison complete (2026-11-11)
 
-Owner approved the proposed bounded law comparison and automatic-decision gate
-amendment after checkpoint56ce3f7b. Preserve both failed runs and original contracts.
-One character/runtime; same M86 source inputs, gains, seed and calibration.
+Independent perceived readings now join the existing task reasons in one character.
+The approved SourceCoverage candidate gives wholly covered collective evidence zero
+extra weight, while new evidence changes actual decision probabilities/execution.
+Full C-REASON remains unresolved; this is a bounded comparison, not assembly acceptance.
 
-## Revised bounded card — before implementation
-- Observable capability: wholly covered collective evidence contributes zero even
-  when an existing independent Commitment source enlarges the aggregate basis.
-  Genuine new permitted evidence still changes the actual decision probabilities.
-- Scope: unchanged C-REASON:2/4/5/6/8/9, MEC-012..016. RO-C3-001 stays ACTIVE.
-  This authorizes the bounded comparison, not universal coverage-law superiority,
-  full REASON acceptance, or a new per-phenomenon reference selection.
-- Contract0.3-candidate, rules/registry0.77; same46 slots and source/perception schema.
-  Add SourceCoverage candidate to the SAME compiler: overlap=sum(min(current,prior))
-  /sum(current weights), empty current basis ->0. Preserve role/sign partition,
-  order, raw max-union, bound-once, thresholds/dice/modifiers and all source owners.
-  Keep0.75/0.76 Jaccard behavior byte-compatible; no alternate source pipeline.
-- Compiler trace0.3/report names SourceCoverage; source trace remains0.2 because
-  producer/perception are unchanged. Rule is fixed by model version, not scenario.
-- Same fixture: quiet M85 inputs, three physical tasks/no people, body30/cap100/rate10,
-  delivery90 at9, importance3/5, urgency1, threat1/2, seed0. At10 readings1/1,
-  permissions true/true; A/taskA gains3/4 on{1},2/3 on{2},1/4 on{1,2}.
-- Native0.77 first-two vs all-three: actual samples/SEM/sources/reasons/decision
-  execution live; combined overlap1/effective0; same base121/181, nuclei meaning
-  and full distributions/probabilities55/64,9/64. Automatic mode and zero draws.
-  Denied control retains23/32,9/32; no changed-choice or paired-roll claim here.
-- Retain0.76 full all-three control: identical actual source bytes, original
-  producer and original Aggregate correspondence, combined residual1/8 and
-  base257/377. Difference is explicit law effect, not reclassified equivalence.
-  Original panel-only Aggregate17/29,d6 versus Pairwise37/61,d8 remains.
-- Candidate also compiles the captured M85 stochastic/no-extra sources with exact
-  original nuclei/distributions; retain M85 genuine matched-draw regression.
-  Test weighted/partial/empty/sign partition source coverage with bounded component
-  operands; none may become character inputs.
-- Finish pending hidden-truth, missing-one-channel, zero, old-model/admission,
-  actual-source trace and repeat/restore9->10->11->101/rollback controls.
-- Paths: existing M86 six production/two test paths plus reasons.ts (9 total);
-  no new owner, new source, state, law calibration, fixture/seed search or UI.
-- Serial checks: types; native plus original control; remaining focused controls;
-  retained M85; boundaries/research/git-size. One long job, stop when checks pass.
-  No frozen dependency/entry changed; prior full-control results retained.
-- Original limits remain600s/check,1800s cumulative verification including prior
-  failures, plus15s final bookkeeping allowance (not reset). Prior elapsed321.01s
-  including that allowance. <=20 evidence files/5MiB, one result/log, <=12 code paths.
-- Done: revised fixed gates and pending controls pass, differences/remaining gaps
-  recorded; then stop. Ordinary repairs retain evidence. No unapproved gate change.
-  Role4/broader keys, Value citation, standing fold and full mapping remain open.
+Result: [M86](ASSEMBLED_CHARACTER_M86_RESULT.md).
+Evidence: [cumulative log](ASSEMBLED_CHARACTER_M86_CHECKS.txt).
+Original plan720af08f; failed-law checkpoint56ce3f7b; approved amendmentf6b91722.
+Candidate contract reason-sources/0.3; rules/registry0.77,46 slots.
+Historical0.75/0.76 and original Campaign3 laws remain executable controls.
+
+## Completed connection
+- Physical readings -> permitted observations -> shared Current SEM -> generated
+  source strength/support -> shared compiler -> actual decision and execution.
+- Candidate combined-source overlap1/effective0; first-two and all-three base121/181
+  and probabilities55/64,9/64 agree. Both are Auto with zero draws.
+- Denying both channels suppresses sources and yields23/32,9/32.
+- Identical source bytes under0.76 retain effective1/8 and base257/377.
+  Original source/compiler correspondence and Aggregate/Pairwise controls remain.
+- Privacy, missing/zero evidence, exact repeat/restore9->10->11->101, rollback,
+  admission and weighted/empty/sign controls pass; retained M85 passes.
+  No native paired-roll claim for the Auto witness. Captured stochastic operands
+  retain compiler equivalence and M85's actual matched-draw evidence.
+- Prior failed gates and ordinary repairs retained; no inputs/gains/seeds/calibration
+  changed; no budget extension, new state owner or separate runtime.
+
+## Remaining direction
+Continue the same REASON integration sequence: role4/broader keys, Value provenance,
+original standing-fold mapping and remaining competitor/requirement mappings.
+The candidate is qualified only for the declared M86 comparison. Reference-policy
+promotion beyond that comparison and final replay under ONE resolved law remain
+explicit decisions; never choose a law separately to make a corpus member pass.
+RO-C3-001 stays ACTIVE for wider-source qualification; no blanket correlation,
+ordering invariance, reduction or completed member claim. No unrelated breadth,
+UI or autonomous peers. Write the next bounded card before new implementation.
 
 All21 members/15 families/132 clauses remain;3 mapped members,0 full families.
 | Research obligations | **1 active / 17 conditional / 0 unowned** |

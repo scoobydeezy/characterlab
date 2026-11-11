@@ -10,7 +10,6 @@ import {dataItems as items,dataField as f,dataKey as key,dataText as txt,dataUns
 import {readQ,qValue,ZERO,ONE} from '../campaign2/cognitiveMath';
 import {cognitiveRecord as r,receivingRecord as rec} from './codecs';
 import {sid} from './skill';
-import {OBSERVER} from './recognition';
 import type {compileStrategy} from './strategy';
 export const REASON_EVIDENCE='assembled-reason-evidence/0.1',REASON_EVIDENCE_VERSION='assembled-character-reason-sources/0.2-candidate';
 export const REASON_READING=sid(1001,'event/assembled-reason-reading'),REASON_FREEZE=sid(1001,'event/assembled-reason-freeze');
@@ -34,7 +33,7 @@ export function reasonReading(value:CanonicalValue){
  const a=items(value,'list');if(a.length!==5||typeof a[2]!=='boolean'||typeof a[3]!=='boolean')invalid('physical reading shape');
  unit(a[0],true);unit(a[1],true);unit(a[4]);return a;
 }
-export function createReasonEvidence(settings:ReturnType<typeof compileReasonEvidence>,originals:readonly ScheduledEvent[],model:CanonicalValue,run:CanonicalValue){
+export function createReasonEvidence(settings:ReturnType<typeof compileReasonEvidence>,originals:readonly ScheduledEvent[],model:CanonicalValue,run:CanonicalValue,OBSERVER:string){
  let active=false,at=0n,used=false,consumed=false,unbound=false,pending:string|undefined,reservation:ExperienceReservation|undefined,frozen:CanonicalValue|undefined;
  let samples:CanonicalValue[]=[],staged:StagedSemanticExperience[]=[];
  const trace=(event:ScheduledEvent,input:CanonicalValue,outputs:CanonicalValue[],children:readonly ScheduledEvent[])=>traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model,runIdentity:run,event,seamId:sid(1036,'seam/assembled-reason-evidence'),seamVersion:REASON_EVIDENCE_VERSION,recordKind:event.eventTypeId,subjectIds:[sid(1000,OBSERVER)],sourceRecordIds:[],registeredReadDomain:[],actualReadRecords:[],inputProjection:input,outputProjection:list(outputs),randomDrawRecords:[],quantizationOperations:[],statePatch:{operations:[]},structuralMutationDiffs:[],emittedEvents:children,invariantResults:[]});
