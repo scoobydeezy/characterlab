@@ -1,39 +1,59 @@
-# Current work — M90 complete (2026-11-11)
+# Current work — M91 semantic reason keys (2026-11-12)
 
-Earned disposition makes a weak reason eligible in the character's actual
-decision. Its pre-roll probability changes from 0 to 9/64. Both native arms
-still choose the same action automatically: changed executed choice is not claimed.
+M90 established standing-to-activation. M91 now tests whether one action can
+retain reasons about different tasks, with signed evidence and zero-base
+exclusion, through the same source/compiler/decision path.
 
-## Completed bounded connection
-- [Result](ASSEMBLED_CHARACTER_M90_RESULT.md);
-  [checks](ASSEMBLED_CHARACTER_M90_CHECKS.txt).
-- Plan 833ea0d1; fixed probe cb62db16 before behavioral execution.
-- One unchanged M89 setup, then one analytically chosen probe: B urgency
-  19/20 at instant12; all other M89 scenario settings stay fixed.
-- Eligible versus pressure-excluded acquisition10: same first decision,
-  same later non-standing sources, meanings and candidates. Actual qualification
-  -> formation -> standing -> compiler -> decision/execution is traced.
-- B base117/317 is below threshold37/100; earned standing crosses that
-  threshold. Two versus one active nuclei; probabilities55/64 vs9/64
-  versus1 vs0. Both Auto, same chosen action, zero draws.
-- Original compiler correspondence and hidden-diagnostic control pass.
-- Repeat/restore10 is byte-exact at every remaining settlement through101;
-  failure after standing-source production rolls back the whole instant.
-- One test-helper mistake read a cached instant10 snapshot at12. Repaired
-  to inspect current outputs; original failure retained, no scenario change.
-- Fixed rules/registry0.79, formation/0.1, reason-sources/0.4, Jaccard.
-  One new test file, no production, contract or calibration changes.
-- Four M90 tests (including setup) and final checks pass: 589.97s /1800s.
-  Two evidence files; 600s/check and1800s cumulative budget unchanged.
+## Bounded card — before implementation
+- At most three connected capabilities: distinct task referents for one action;
+  negative base evidence resolves a negative direction; context without a base
+  is rejected instead of becoming an extra die.
+- C-REASON PHEN-REASON-001:2/3/4/5/6/8/9, with :10/11 retained constraints.
+  MEC-012..017/022; RO-C3-001 active, RO-C3-020 conditional. No closure/reduction.
+- Fixed rules/registry0.79, reason-sources/0.4, Jaccard and all reference dice.
+  Reuse M88 seed0: three physical tasks/no people; body30/cap100/rate10,
+  delivery90 at9, A/B importance3/5, urgency1, threat1/2, terminal101.
+- Two permitted readings at10, both1, gains3/4 and2/3; both map to action A,
+  Commitment. Only their governed descriptor task differs:
+  SAME: both task A; SPLIT: second task B. All other source/input bytes fixed.
+  This is governed mapping, not learned semantic interpretation.
+- NEGATIVE: SPLIT with only physical reading2 changed to-1.
+  MODIFIER: SPLIT with only second descriptor's role changed1->4.
+  No intervention enters psychological state or selects a replacement runtime.
+- Live gate before each comparison: actual two candidates/decision/execution,
+  selected task origins, two permitted observations and their generated sources.
+  Expected active nucleus counts SAME2, SPLIT3, NEGATIVE3, MODIFIER2.
+  SPLIT has two Commitment nuclei for action A with distinct task referents.
+  NEGATIVE retains the new task B key with resolved negative direction.
+  MODIFIER has nonzero context but ZeroBase rejection for that group.
+- Require exact actual probability differences for SAME/SPLIT, SPLIT/NEGATIVE
+  and SPLIT/MODIFIER. Match all unaffected source operands; no sampled-choice
+  or RNG-coupling claim. Native probabilities are pre-roll in Auto cases.
+- Execute original reasonRaw on the actual admitted samples/descriptors;
+  Aggregate compiler on ALL actual nonzero sources, comparing keys, roles,
+  coverage/support, distributions and rejections. <=6 source envelope asserted.
+  Original PooledChannel on identical SPLIT sources must merge distinct
+  referents and differ in exact analyzed probabilities. Comparator never runs
+  inside the character. No Safety/Value relabeling or coverage-law promotion.
+- Controls: SPLIT hidden diagnostic equality and denied channel2 suppression;
+  exact repeat/restore9 at every remaining settlement through101, plus injected
+  post-compiler rollback10. Same production inputs/laws/seeds throughout.
+- Scope: two new test/helper files assembledReasonKeys; no planned production,
+  contract, state, owner, scheduler or RNG changes; <=3 test files/12 total cap.
+  Preserve M84 motive, M85 duplicate, M86 collective, M87 Value, M88 context,
+  M89 mapping and M90 activation evidence; no unnecessary unchanged reruns.
+- Serial checks: types; native key/sign/role + original controls; privacy;
+  persistence/rollback; boundaries/research/Git-size/document/evidence guards.
+  Each addresses the matching source, grouping, privacy or transaction risk.
+- Budget600s/check,1800s cumulative including failures plus15s bookkeeping
+  within that total; two evidence files <=5MiB; CURRENT<=80, register<=64KiB.
+- Done only when all fixed gates pass. Ordinary defects may be repaired with
+  failure retained; no alternate fixtures, seed search or changed gates.
+  At a genuine conflict or exhausted budget, checkpoint the exact blocker.
 
-## Remaining direction
-- Continue REASON's required source-key/motive/referent coverage and competitor
-  comparisons under one reference policy; predeclare the next bounded card.
-- M90 demonstrates activation and pre-roll probabilities only. Nonzero standing
-  dice modifiers, changed executed choices and general biography remain unproved.
-- [Reconciliation](ASSEMBLED_CHARACTER_RECONCILIATION.md) keeps C-REASON unresolved.
-  No new verdict, reduction, corpus-member acceptance or obligation closure.
-- One continuing character integrates Campaigns0–3; full21/15/132 remains.
-  Three mapped members, no fully accepted family; UI and autonomous peers deferred.
+## Preserved status
+- One character integrates Campaigns0–3. No new area, UI or autonomous partners.
+- C-REASON unresolved; final21 members/15 families/132 clauses remain required.
+  Three mapped members, no fully accepted family; no obligation closure.
 
 | Research obligations | **1 active / 17 conditional / 0 unowned** |
