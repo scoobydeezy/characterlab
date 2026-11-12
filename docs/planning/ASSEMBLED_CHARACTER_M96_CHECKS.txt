@@ -1,0 +1,116 @@
+
+M96_START native-lifecycle ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledCommitmentExpiry.test.ts', '-t', 'M96 lifecycle', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledCommitmentExpiry.test.ts > M96 lifecycle: expiry removes pressure and changes the real decision without erasing earned identity 123506ms
+   → expected 0 to be greater than 0
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledCommitmentExpiry.test.ts > M96 lifecycle: expiry removes pressure and changes the real decision without erasing earned identity
+AssertionError: expected 0 to be greater than 0
+ ❯ src/test/assembledCommitmentExpiry.test.ts:36:58
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 6 skipped (7)
+   Start at  17:44:37
+   Duration  128.26s (transform 2.72s, setup 0ms, collect 4.02s, tests 123.51s, environment 0ms, prepare 379ms)
+
+
+M96_CHECK native-lifecycle exit=1 seconds=129.33 timeout=False
+
+M96 REPAIR before rerun: the added nonzero-draw assertion was invalid for the unchanged Auto training gate. Both actual earned histories already matched. Check exact actual draw lists and explicitly require Auto when empty; do not claim stochastic coupling for zero draws. No scenario, law, seed or acceptance-gate change.
+
+M96_START native-lifecycle-repaired ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledCommitmentExpiry.test.ts', '-t', 'M96 lifecycle', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCommitmentExpiry.test.ts > M96 lifecycle: expiry removes pressure and changes the real decision without erasing earned identity
+M96 LIFECYCLE PASS {"trainingDraws":0,"activeNuclei":2,"expiredNuclei":1,"activeProbability":["066e40","061240"],"expiredProbability":["060201"],"identityUnchanged":true,"terminalCause":"deadline11","sampledChoiceClaim":false}
+
+stdout | src/test/assembledCommitmentExpiry.test.ts > M96 lifecycle: expiry removes pressure and changes the real decision without erasing earned identity
+M96 PRIVACY PASS hidden truth cannot revive expired commitment or change cognition
+
+ ✓ src/test/assembledCommitmentExpiry.test.ts > M96 lifecycle: expiry removes pressure and changes the real decision without erasing earned identity 177441ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  17:47:26
+   Duration  181.69s (transform 2.54s, setup 0ms, collect 3.79s, tests 177.44s, environment 0ms, prepare 139ms)
+
+
+M96_CHECK native-lifecycle-repaired exit=0 seconds=182.23 timeout=False
+
+M96_START native-persistence ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledCommitmentExpiry.test.ts', '-t', 'M96 persistence', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCommitmentExpiry.test.ts > M96 persistence: terminal record and identity survive every continuation; expiry is atomic
+M96 CONTINUATION PASS10 -> 11,12,13,14,20,40,101
+
+stdout | src/test/assembledCommitmentExpiry.test.ts > M96 persistence: terminal record and identity survive every continuation; expiry is atomic
+M96 ROLLBACK PASS terminal write, identity, other owners, queue, outputs and trace rolled back
+
+ ✓ src/test/assembledCommitmentExpiry.test.ts > M96 persistence: terminal record and identity survive every continuation; expiry is atomic 170914ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  17:50:37
+   Duration  175.14s (transform 2.52s, setup 0ms, collect 3.78s, tests 170.91s, environment 0ms, prepare 136ms)
+
+
+M96_CHECK native-persistence exit=0 seconds=175.69 timeout=False
+
+M96_START original-commit-controls ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/commitPublic.test.ts', '-t', 'earns strong identity|preserves terminal|distinguishes CoreNeed', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/commitPublic.test.ts > earns strong identity then keeps it fixed across exact lifecycle pressure and active decisions 487ms
+ ✓ src/test/commitPublic.test.ts > preserves terminal A/version/cause while recurrence creates distinct B 406ms
+ ✓ src/test/commitPublic.test.ts > distinguishes CoreNeed, Immortal and ReusedId under identical actual learned identity 1694ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 24 skipped (27)
+   Start at  17:53:43
+   Duration  4.20s (transform 804ms, setup 0ms, collect 1.21s, tests 2.59s, environment 0ms, prepare 136ms)
+
+
+M96_CHECK original-commit-controls exit=0 seconds=4.73 timeout=False
+
+M96 DISCLOSURE correction: rollback assertion compares the public snapshot (clock, all state, outputs and trace), excluding Failed status. It does not directly expose the private queue. Successful continuation compares exact full saves including queue/RNG/allocators. Removed the overbroad word queue from the test console message only; no assertion or behavior changed and no functional rerun is warranted.
+
+M96_START types ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+
+M96_CHECK types exit=0 seconds=17.57 timeout=False
+
+M96_START reference-boundary ['node', 'scripts/check-reference-boundary.mjs']
+Reference boundary check passed.
+
+M96_CHECK reference-boundary exit=0 seconds=2.54 timeout=False
+
+M96_START research ['node', 'scripts/check-research-obligations.mjs']
+PASS: research obligation references and dispositions {"active":1,"conditional":17,"closed":4,"unowned":0,"verdicts":103,"reports":4329}
+
+M96_CHECK research exit=0 seconds=3.66 timeout=False
+
+M96_START documentation ['python', '-c', "from pathlib import Path\nimport re,json,subprocess\nfor name,limit in [('AGENTS.md',120),('docs/planning/CURRENT.md',80),('docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md',250),('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md',250)]:\n p=Path(name);n=len(p.read_text().splitlines());assert n<=limit,(name,n,limit)\n print(name,n,'lines',len(p.read_bytes()),'bytes')\nreg=Path('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md');assert len(reg.read_bytes())<=65536\nfor p in [Path('docs/planning/CURRENT.md'),reg,Path('docs/planning/ASSEMBLED_CHARACTER_M96_RESULT.md')]:\n for link in re.findall(r'\\]\\(([^)]+)\\)',p.read_text()):\n  dest=link.split('#')[0].strip('<>')\n  if not dest or '://' in dest:continue\n  assert (p.parent/dest).exists(),(str(p),link)\nrows=[r for r in reg.read_text().splitlines() if '| C-' in r and re.search(r'EQUIVALENT \\(mapped(?: domain)?\\)',r)]\nassert len(rows)==4,len(rows)\nassert '| UNRESOLVED | C-COMMIT' in reg.read_text()\nfiles=[Path('docs/planning/ASSEMBLED_CHARACTER_M96_RESULT.md'),Path('docs/planning/ASSEMBLED_CHARACTER_M96_CHECKS.txt')]\nassert sum(p.stat().st_size for p in files)<5*1024*1024\nchanged=subprocess.check_output(['git','diff','b103f62f','--name-only'],text=True).splitlines()\nchanged+=subprocess.check_output(['git','ls-files','--others','--exclude-standard'],text=True).splitlines()\ncode=sorted(set(p for p in changed if p.startswith('src/')))\nassert code==['src/test/assembledCommitmentExpiry.test.ts'],code\nx=json.loads(Path('docs/planning/RESEARCH_OBLIGATIONS.json').read_text())\nassert sum(o['status']=='ACTIVE' for o in x['obligations'])==1\nassert sum(o['status']=='CONDITIONAL' for o in x['obligations'])==17\np='docs/planning/ASSEMBLED_CHARACTER_M96_RESULT.md'\nassert next(r for r in x['reportReviews'] if r['path']==p)['obligations']==['RO-C3-001','RO-C3-009','RO-C3-014','RO-C3-020']\nprint('PASS links, four mapped members/COMMIT unresolved, obligations unchanged, one test/no production edits, two evidence files under5MiB')\n"]
+AGENTS.md 120 lines 8422 bytes
+docs/planning/CURRENT.md 35 lines 2286 bytes
+docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md 250 lines 18781 bytes
+docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md 149 lines 65522 bytes
+PASS links, four mapped members/COMMIT unresolved, obligations unchanged, one test/no production edits, two evidence files under5MiB
+
+M96_CHECK documentation exit=0 seconds=0.52 timeout=False
+
+M96_START git-size ['node', 'scripts/check-git-file-sizes.mjs']
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M96_CHECK git-size exit=0 seconds=0.36 timeout=False
+
+M96_START whitespace ['git', 'diff', '--cached', '--check']
+
+M96_CHECK whitespace exit=0 seconds=0.07 timeout=False
