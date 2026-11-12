@@ -1,4 +1,4 @@
-# M89 — standing-source mapping; comparison amendment pending
+# M89 — standing-source mapping; comparison amendment approved
 
 M89 is checking acquired standing on the current0.79 character. No production
 code or law has changed. The historical K1/100 identity fold and adopted M32
@@ -36,7 +36,7 @@ including state/output/trace/identity/save. An injected exception after the actu
 standing producer rolls back the entire instant. These passes do not authorize
 replacement of the blocked feedback comparison.
 
-## Concrete proposed amendment — not yet approved
+## Owner-approved amendment —2026-11-11, before execution
 
 Replace only the inadmissible second character run with a test-side control:
 
@@ -61,10 +61,10 @@ standing sources; it does not exclude relevance-threshold rescue or combined
 standing. No claim of new native choice influence follows.
 
 Same scenario, seed0, laws, calibration, scope, two-file limit and original time
-budget. This changes the comparison method; the work order's Replay and
-interpretation rule requires an owner amendment before executing it.
+budget. Owner approved this comparison-method amendment after checkpoint f1c8d65d.
+No other comparison or acceptance change is authorized.
 
-## Incomplete checkpoint
+## Preserved checkpoint at f1c8d65d
 
 Two independent tests pass; the original native on/off test remains blocked by
 admission and is not a PASS. Its failed case remains executable and recorded;

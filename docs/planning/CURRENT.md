@@ -1,12 +1,11 @@
-# Current work — M89 pending comparison amendment (2026-11-11)
+# Current work — M89 approved captured-input comparison (2026-11-11)
 
 M88 connected context to actual choices. M89 checks the remaining acquired-standing
 source/history mapping on the current0.79 character before any further port.
 The source already exists: M32's adopted development-aware P, not the old fold.
-Source/history/privacy/continuation checks PASS; native feedback comparison blocked.
-Standing-disabled model is inadmissible. Owner amendment requested for captured-input
-compiler/arbitration control; see [checkpoint](ASSEMBLED_CHARACTER_M89_RESULT.md). Do not rerun the rejected comparison.
-No production change or capability pass. Keep current laws and admission fixed.
+Source/history/privacy/continuation checks PASS. Owner approved the captured-input
+compiler/arbitration comparison after checkpoint f1c8d65d. The inadmissible disabled
+model remains a rejection control. No production, law, calibration or budget change.
 
 ## Card committed before implementation
 - Scope: C-REASON:7 and related:2/4/6/8; MEC-012..018, EXP-011/012.
@@ -25,16 +24,18 @@ No production change or capability pass. Keep current laws and admission fixed.
 - Start from M87's two-opportunity scenario, upgrade only to current0.79.
   Three physical tasks/no people; body30/cap100/rate10; delivery90 at9; seed0.
   Two permitted reading channels at10/12, original gains3/4 and2/3; no role4.
-- In BOTH arms adopt A importance1 (B remains3/5) at the existing first adoption;
+- In the fixed native scenario adopt A importance1 (B remains3/5) at the existing first adoption;
   later frames retain that importance. Re-adoption at later times is not admitted.
   First identity context10 significance1, pressure0, no instruction; later context12
   significance0. Disable Value linkage/reports to isolate standing sources.
   Other inherited calendar/settings stay fixed; print actual qualification/phase.
-- Compare existing standing-feedback enable true versus false; both still learn.
-  First choice/expression/qualification/history/draws must match exactly.
+- Owner amendment: capture actual12 raw/context/dice/resolution. In a test-only
+  control remove role3 signals and matching descriptions, then use unchanged
+  compiler/arbitration and captured draws. Never feed derived inputs into a run.
+  Keep the disabled-model rejection; prior exact repeat10 preserves first history.
 - At12 require two live reasons, real execution, one accepted prior qualification,
-  nonzero acquired P and nonzero formation sources in enabled arm; none in disabled.
-  No authored learned S0 or replaced source operand enters either run.
+  nonzero acquired P and nonzero native formation sources; none in the ablated input.
+  Both compilations must retain two live bases. No authored learned S0 enters a run.
 - Trace actual formation read, raw source, P*choiceAlignment, qualification basis,
   source -> described compiler -> frozen decision. Other raw source strengths,
   meaning, base/situation/context totals and dice must agree.
