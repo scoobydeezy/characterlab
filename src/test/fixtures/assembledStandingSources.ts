@@ -2,7 +2,8 @@
  * Body30/cap100/rate10, delivery90 at9; A importance1/B3/5, seed0.
  * Permitted reading channels at10/12, original gains3/4 and2/3.
  * Identity10 significant/unpressured, identity12 insignificant; Values unlinked.
- * Only standing feedback varies; authentic formation/history remain in both arms. */
+ * Owner-approved control removes standing only from captured compiler/arbitration
+ * operands; no modified operand enters a character. Disabled model rejects. */
 import {expect} from 'vitest';
 import {record,typedIdentifier,type CanonicalValue} from '../../substrate/canonicalEncoding';
 import {fixture as prior} from './assembledValueProvenance';
@@ -24,7 +25,8 @@ import {ExactRational as Q} from '../../substrate/exactMath';
 import {reasonRaw} from '../../campaign3/reasonMath';
 import {reasonRecord as rr} from '../../campaign3/reasonCodecs';
 import {compile,originalNuclei,originalProjection} from './assembledReasonCorrespondence';
-import {descriptionIdentity} from '../../assembled/reasons';
+import {descriptionIdentity,compileDescribedReasons} from '../../assembled/reasons';
+import {arbitrationOutput} from '../../assembled/arbitration';
 export function fixture(enabled=true,pressure=false,hidden=false){
  const b=prior(false,false,hidden),s=changeDefinition({...b.s,rulesVersion:CONTEXT_REASON_RULES,registrySchemaVersion:CONTEXT_REASON_REGISTRY},'definition/task-reason-source',1n,enabled);
  const rows=items(decode(b.d.orderedInputs),'list').map(v=>{
@@ -48,12 +50,19 @@ export function capture(run:Parameters<typeof snap>[0],at=12n){
  if(typeof meaning==='boolean'||meaning.kind!=='map')throw Error('meaning');
  return {...p,trace,input,source:out[0],report:out[1],semantics:new Map(meaning.entries.map(([k,v])=>[key(k),readQ(v)])),traces};
 }
-export function correspondence(p:ReturnType<typeof capture>,source:{registry:Uint8Array}){
- const rows=items(f(p.raw,6n),'list').filter(v=>!readQ(f(rec(items(v,'list')[2],402n),2n)).equals(ZERO)).map(v=>{
+export function correspondence(p:{raw:CanonicalValue;ns:readonly CanonicalValue[]},source:{registry:Uint8Array}){
+ const rows=items(f(rec(p.raw,403n),6n),'list').filter(v=>!readQ(f(rec(items(v,'list')[2],402n),2n)).equals(ZERO)).map(v=>{
   const d=items(v,'list'),s=rec(d[2],402n),k=rec(f(s,1n),401n);
   return rr(919,[rr(916,[sid(1027,'M89/'+key(descriptionIdentity(v))),f(k,1n),d[1],f(rec(f(k,2n),371n),2n),f(k,3n),q(1,1),set([])]),f(s,2n),f(s,3n),list([])]);
  });
- expect(key(set(originalNuclei(compile(rows,definition(source))).map(originalProjection)))).toBe(key(set(p.ns.map(projection))));
+ // The old envelope admits six sources total. Aggregate has no cross-group
+ // operation: compile each complete option/motive/referent group, never truncate.
+ const groups=new Map<string,typeof rows>();
+ for(const row of rows){const d=rec(f(row,1n),916n),k=key(list([f(d,2n),f(d,3n),f(d,4n)]));groups.set(k,[...(groups.get(k)??[]),row]);}
+ expect([...groups.values()].reduce((n,g)=>n+g.length,0)).toBe(rows.length);
+ const original=[...groups.values()].flatMap(group=>{expect(group.length).toBeLessThanOrEqual(6);return originalNuclei(compile(group,definition(source)));});
+ expect(key(set(original.map(originalProjection)))).toBe(key(set(p.ns.map(projection))));
+ console.info('M89 ORIGINAL GROUPS '+JSON.stringify({sources:rows.length,groupSizes:[...groups.values()].map(g=>g.length),nativeNuclei:p.ns.length,allSourcesRetained:true}));
 }
 export function mapping(run:Parameters<typeof snap>[0]){
  const p=capture(run),l=learned(run);expect(l.journal).toHaveLength(1);expect(l.formation.entries).toHaveLength(1);expect(l.formation.P.equals(ZERO)).toBe(false);
@@ -75,3 +84,31 @@ export function mapping(run:Parameters<typeof snap>[0]){
  return {...p,...l,qualification,control,originalFold};
 }
 export {snap,through,state,decode,items,key,enc,rec,f,uint,q,list,set,text,u,signed,sid,r,definition,projection,choiceAlignment,readQ,qValue,Q,formationSignals,formationValue,fp as formationStatePath};
+
+/** Approved M89 comparison only. Derived operands never enter a character. */
+export async function ablateStanding(p:ReturnType<typeof capture>,source:{registry:Uint8Array}){
+ const descriptions=items(f(p.raw,6n),'list').filter(v=>uint(f(rec(f(rec(items(v,'list')[2],402n),1n),401n),3n))!==3n);
+ const raw=r(403,[f(p.raw,1n),f(p.raw,2n),withoutStanding(p.raw),f(p.raw,4n),f(p.raw,5n),list(descriptions)],3);
+ for(const field of [1n,2n,4n,5n])expect(f(rec(raw,403n),field)).toEqual(f(p.raw,field));
+ const dice=definition(source);
+ expect(compileDescribedReasons(p.raw,dice,3,'Jaccard',true).nuclei).toEqual(p.ns);
+ const ns=compileDescribedReasons(raw,dice,3,'Jaccard',true).nuclei;
+ const context=r(408,[f(p.context,1n),raw,list(ns)]);
+ const definitionRow=items(items(decode(source.registry),'list')[0],'set').find(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n&&key(f(v,1n))===key(sid(1027,'definition/task-arbitration')))!;
+ expect(definitionRow).toBeDefined();const arb=f(rec(definitionRow,171n),4n);
+ const captured=items(f(p.data,9n),'list').map(v=>rec(v,422n)),used=new Set<string>(),tie=rec(f(p.data,10n),423n);let tieUsed=false;
+ const d=rec(await arbitrationOutput(f(p.d,1n),12n,context,arb,{
+  async reason(n){
+   const nucleus=rec(n,407n),k=key(f(nucleus,1n)),draw=captured.find(v=>key(f(v,1n))===k);
+   if(!draw||used.has(k))throw Error('M89 no matching unused native reason draw');
+   expect(f(draw,2n)).toEqual(f(nucleus,4n));used.add(k);return f(draw,5n);
+  },
+  async tie(leaders){
+   if(tieUsed||uint(f(tie,1n))!==2n)throw Error('M89 no matching unused native tie draw');
+   expect(list(leaders)).toEqual(f(tie,2n));tieUsed=true;return f(tie,3n);
+  }
+ },3),409n);
+ const status=rec(f(d,4n),419n);expect(uint(f(status,1n)),'live captured-input decision').toBe(3n);
+ expect(used.size).toBe(captured.length);expect(tieUsed).toBe(uint(f(tie,1n))===2n);
+ return {raw:rec(raw,403n),context,ns,d,data:rec(f(status,2n),420n),value:items(f(rec(raw,403n),5n),'set'),usedDraws:used.size+(tieUsed?1:0)};
+}

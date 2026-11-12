@@ -130,3 +130,99 @@ PASS: Git index contains no files at or above50,000,000 bytes.
 M89_CHECK checkpoint-staged-size exit=0 seconds=0.75 timeout=False
 
 M89_CHECKPOINT measured_seconds=440.84 bookkeeping_allowance=15 total=455.84/1800 source_files=2 production_changes=0 evidence_files=2 status=COMPARISON_AMENDMENT_PENDING
+
+M89_START amended-types ['node', 'node_modules/typescript/bin/tsc', '--noEmit']
+src/test/fixtures/assembledStandingSources.ts(54,21): error TS2345: Argument of type 'CanonicalValue' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+
+M89_CHECK amended-types exit=2 seconds=17.22 timeout=False
+
+M89_START amended-types-repair ['node', 'node_modules/typescript/bin/tsc', '--noEmit']
+
+M89_CHECK amended-types-repair exit=0 seconds=16.55 timeout=False
+
+M89_START approved-captured-input ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledStandingSources.test.ts', '-t', 'M89 native', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledStandingSources.test.ts > M89 native mapping: earned standing reaches the current decision but its sampled modifier is zero 81118ms
+   → REASON_CODEC: list bound
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledStandingSources.test.ts > M89 native mapping: earned standing reaches the current decision but its sampled modifier is zero
+Error: REASON_CODEC: list bound
+ ❯ fail src/campaign3/reasonCodecs.ts:11:39
+      9| const schemas=[...generalAttentionSupportedSchemas(),...added],registr…
+     10| const context={admittedVersions:['local-reserve-level-observation/0.1-…
+     11| const fail=(why:string):never=>{throw Error('REASON_CODEC: '+why);};
+       |                                       ^
+     12| function envelope(v:CanonicalValue):CanonicalValue {
+     13|  if(typeof v==='boolean')return v;
+ ❯ typed src/campaign3/reasonCodecs.ts:41:88
+ ❯ validate src/campaign3/reasonCodecs.ts:62:98
+ ❯ decodeReason src/campaign3/reasonCodecs.ts:65:108
+ ❯ Module.reasonRecord src/campaign3/reasonCodecs.ts:67:128
+ ❯ Module.compile src/test/fixtures/assembledReasonCorrespondence.ts:39:12
+ ❯ Module.correspondence src/test/fixtures/assembledStandingSources.ts:58:32
+ ❯ src/test/assembledStandingSources.test.ts:18:2
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  21:10:08
+   Duration  85.62s (transform 2.59s, setup 0ms, collect 3.88s, tests 81.12s, environment 0ms, prepare 297ms)
+
+
+M89_CHECK approved-captured-input exit=1 seconds=86.54 timeout=False
+
+M89_START captured-input-original-group-repair ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledStandingSources.test.ts', '-t', 'M89 native', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledStandingSources.test.ts > M89 native mapping: earned standing reaches the current decision but its sampled modifier is zero
+M89 ORIGINAL GROUPS {"sources":7,"groupSizes":[5,2],"nativeNuclei":2,"allSourcesRetained":true}
+M89 ORIGINAL GROUPS {"sources":5,"groupSizes":[4,1],"nativeNuclei":2,"allSourcesRetained":true}
+M89 APPROVED CAPTURED-INPUT {"qualification":"98775/3572128","phase":"0","P":"98775/3572128","oldFold":"6913/9413","nativeStanding":["226688625/57893478496","-226688625/57893478496"],"originalStanding":["15865335/152556491","-15865335/152556491"],"probabilities":["55/64","9/64"],"mode":"1","draws":0,"firstDraws":0,"standingModifier":0,"choiceEffect":false,"controlKind":"captured-input-only","disabledModelRejected":true}
+
+ ✓ src/test/assembledStandingSources.test.ts > M89 native mapping: earned standing reaches the current decision but its sampled modifier is zero 81235ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  21:12:27
+   Duration  85.49s (transform 2.58s, setup 0ms, collect 3.84s, tests 81.24s, environment 0ms, prepare 127ms)
+
+
+M89_CHECK captured-input-original-group-repair exit=0 seconds=86.00 timeout=False
+
+M89_START final-types ['node', 'node_modules/typescript/bin/tsc', '--noEmit']
+
+M89_CHECK final-types exit=0 seconds=16.75 timeout=False
+
+M89_START final-boundaries ['npm.cmd', 'run', 'check:boundaries']
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+M89_CHECK final-boundaries exit=0 seconds=2.94 timeout=False
+
+M89_START final-research ['npm.cmd', 'run', 'check:research']
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":1,"conditional":17,"closed":4,"unowned":0,"verdicts":103,"reports":4322}
+
+M89_CHECK final-research exit=0 seconds=3.91 timeout=False
+
+M89_START final-staged-size ['npm.cmd', 'run', 'check:git-size']
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M89_CHECK final-staged-size exit=0 seconds=0.74 timeout=False

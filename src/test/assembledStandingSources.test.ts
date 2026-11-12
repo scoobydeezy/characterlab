@@ -1,19 +1,21 @@
 import {it,expect,vi} from 'vitest';
-import {restoreCharacterRun} from '../assembled/character';
+import {restoreCharacterRun,prepareCharacterModel} from '../assembled/character';
 import {statePathValue} from '../substrate/state';
 import {absolute,bounded} from '../campaign2/cognitiveMath';
 import * as formation from '../assembled/formation';
 import {exact,bytes} from './fixtures/assembledAffectReceiving';
 import {transcript} from './fixtures/assembledDecisionAlternatives';
-import {create,capture,mapping,learned,standing,withoutStanding,correspondence,snap,through,rec,f,uint,q,list,set,text,u,signed,key,items,Q,readQ,qValue,definition,fp,jp} from './fixtures/assembledStandingSources';
-let enabled:Awaited<ReturnType<typeof create>>,disabled:Awaited<ReturnType<typeof create>>;
+import {fixture,ablateStanding,create,capture,mapping,learned,standing,withoutStanding,correspondence,snap,through,rec,f,uint,q,list,set,text,u,signed,key,items,Q,readQ,qValue,definition,fp,jp} from './fixtures/assembledStandingSources';
+let enabled:Awaited<ReturnType<typeof create>>;
 it('M89 native mapping: earned standing reaches the current decision but its sampled modifier is zero',async()=>{
- enabled=await create();disabled=await create(false);
- const a=mapping(enabled.run),b=capture(disabled.run),la=learned(enabled.run),lb=learned(disabled.run);
- expect(la).toEqual(lb);expect(standing(b.raw)).toHaveLength(0);expect(withoutStanding(a.raw)).toEqual(withoutStanding(b.raw));expect(f(a.raw,4n)).toEqual(f(b.raw,4n));
- const firstA=capture(enabled.run,10n),firstB=capture(disabled.run,10n);expect(firstA.d).toEqual(firstB.d);expect(standing(firstA.raw)).toHaveLength(0);expect(transcript(firstA.data)).toEqual(transcript(firstB.data));
+ enabled=await create();const a=mapping(enabled.run),la=learned(enabled.run),before=enabled.run.snapshot(),save=enabled.run.save();
+ const b=await ablateStanding(a,enabled.b.s);
+ const after=enabled.run.snapshot();for(const k of ['state','outputs','trace'] as const)bytes(before[k],after[k]);bytes(save,enabled.run.save());
+ await expect(prepareCharacterModel(fixture(false).s)).rejects.toThrow('undeclared topology change');
+ expect(standing(b.raw)).toHaveLength(0);expect(withoutStanding(a.raw)).toEqual(withoutStanding(b.raw));expect(f(a.raw,4n)).toEqual(f(b.raw,4n));
+ const firstA=capture(enabled.run,10n);expect(standing(firstA.raw)).toHaveLength(0);
  expect(a.value).toHaveLength(0);expect(b.value).toHaveLength(0);expect(a.ns).toHaveLength(2);expect(b.ns).toHaveLength(2);
- correspondence(a,enabled.b.s);correspondence(b,disabled.b.s);
+ correspondence(a,enabled.b.s);correspondence(b,enabled.b.s);
  const dice=rec(definition(enabled.b.s),437n);expect(f(rec(f(dice,3n),439n),1n)).toEqual(q(1,4));
  expect(absolute(la.formation.P).compare(Q.of(1n,2n))).toBeLessThanOrEqual(0);
  for(const meaning of a.semantics.values())expect(absolute(meaning).compare(Q.of(1n))).toBeLessThan(0);
@@ -24,12 +26,12 @@ it('M89 native mapping: earned standing reaches the current decision but its sam
   expect(readQ(f(n,3n)).compare(readQ(f(other,3n)))).toBeGreaterThan(0);
   for(const field of [4n,5n,6n,7n,8n])expect(f(n,field)).toEqual(f(other,field));expect(f(n,5n)).toEqual(signed(0));
  }
- expect(f(a.data,2n)).toEqual(f(b.data,2n));expect(f(a.data,1n)).toEqual(f(b.data,1n));expect(transcript(a.data)).toEqual(transcript(b.data));
+ expect(b.data).toEqual(a.data);expect(uint(f(a.data,8n))).toBe(1n);expect(b.usedDraws).toBe(0);expect(transcript(a.data)).toEqual(transcript(b.data));
  expect(items(f(a.trace,11n),'list').map(v=>f(rec(v,147n),2n))).toEqual([statePathValue(fp)]);
  for(const t of a.traces.filter(t=>key(f(rec(f(t,4n),130n),2n))===key(signed(12))&&uint(f(rec(f(t,4n),130n),3n))===80n))
   expect(items(f(t,11n),'list').some(v=>key(f(rec(v,147n),2n))===key(statePathValue({...jp,fieldId:1n})))).toBe(false);
  const frac=(v:ReturnType<typeof readQ>)=>v.numerator+'/'+v.denominator;
- console.info('M89 NATIVE '+JSON.stringify({qualification:frac(readQ(a.qualification.contribution)),phase:String(uint(items(a.formation.entries[0],'list')[3])),P:frac(a.formation.P),oldFold:frac(a.originalFold.strength),nativeStanding:standing(a.raw).map(v=>frac(readQ(f(rec(v,402n),2n)))),originalStanding:a.control.map(v=>frac(readQ(v))),probabilities:a.probabilities.map(v=>frac(readQ(v))),mode:String(uint(f(a.data,8n))),draws:transcript(a.data).length,firstDraws:transcript(firstA.data).length,standingModifier:0,choiceEffect:false}));
+ console.info('M89 APPROVED CAPTURED-INPUT '+JSON.stringify({qualification:frac(readQ(a.qualification.contribution)),phase:String(uint(items(a.formation.entries[0],'list')[3])),P:frac(a.formation.P),oldFold:frac(a.originalFold.strength),nativeStanding:standing(a.raw).map(v=>frac(readQ(f(rec(v,402n),2n)))),originalStanding:a.control.map(v=>frac(readQ(v))),probabilities:a.probabilities.map(v=>frac(readQ(v))),mode:String(uint(f(a.data,8n))),draws:transcript(a.data).length,firstDraws:transcript(firstA.data).length,standingModifier:0,choiceEffect:false,controlKind:'captured-input-only',disabledModelRejected:true}));
 },570000);
 it('M89 controls: pressure and hidden diagnostics preserve qualification authority and original history mapping',async()=>{
  const a=enabled??await create(),hidden=await create(true,false,true),pressured=await create(true,true),p=mapping(a.run),h=mapping(hidden.run),z=capture(pressured.run);
