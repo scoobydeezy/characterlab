@@ -1,43 +1,51 @@
-# Current work — M89 reconciliation complete (2026-11-11)
+# Current work — M90 standing activation (2026-11-11)
 
-Earned disposition reaches the current character's standing reasons and decision
-compiler. M89 makes its source/history mapping explicit and preserves the old
-identity fold as a control under the existing D3 ruling. The fixed comparison
-has no choice effect: standing increases relevance but its dice modifier is0.
+M89 proved that earned disposition reaches standing reasons, but its fixed
+comparison changed neither probabilities nor choice. M90 targets the remaining
+connection: standing makes a weak existing reason eligible, changing a later
+decision in the same character.
 
-## Completed bounded reconciliation
-- [Result](ASSEMBLED_CHARACTER_M89_RESULT.md);
-  [checks](ASSEMBLED_CHARACTER_M89_CHECKS.txt).
-- Plan2a0ed0cf; checkpoint f1c8d65d; approved amendment b5267bd3.
-- Current0.79,46 slots; formation/0.1, reason-sources/0.4, Jaccard unchanged.
-  No production, state, owner, scheduler, law or calibration changes.
-- Native qualification10 -> acquired P -> standing sources12 -> real decision.
-  Original producer support/history agrees; old-fold strength differs under
-  already-adopted D3. No second feedback fold is added.
-- Approved control removes only standing from captured inputs, then uses the
-  unchanged compiler/arbitration. Both retain two live bases and identical
-  probabilities55/64 vs9/64, Auto, same choice, zero draws.
-- This is component ablation, not a standing-disabled native run. That model
-  is inadmissible and remains a negative admission control.
-- Two-meaning bound: |P|<=1/2 and |alignment|<2/3 give bounded standing<1/4.
-  Modifier0 with unit1/4; does not exclude activation rescue or combined standing.
-- Pressure/hidden/empty-history controls and exact repeat/restore at every
-  remaining instant10->11->12->13->14->20->40->101 plus rollback pass.
-- All3 distinct M89 tests and final repository checks pass; 686.49s /1800s.
-  Two test/helper paths, two evidence files; original cumulative budget unchanged.
-- Preserve late-adoption, inadmissible-control, type and comparator-envelope
-  failures. Original comparison retains every source in complete semantic groups.
+## Bounded card — before implementation
+- One capability: earned qualification -> acquired disposition -> standing
+  relevance -> live reason -> actual decision/execution.
+- Baseline C-REASON (PHEN-REASON-001:2..11); MEC-014/015/018/022,
+  RO-C3-001 active and RO-C3-009/020 conditional. No corpus/obligation closure.
+- Fixed current rules/registry0.79, formation/0.1, reason-sources/0.4,
+  Jaccard, dice bands/threshold/units and D3 remain unchanged.
+- First, ONE unchanged M89 seed0 setup run, through12 only, records exact
+  base/situation/standing/context totals and fixed calibration. It diagnoses
+  a lawful activation route; no parameter sweep or behavioral acceptance.
+- From those operands and existing equations, declare and commit ONE probe
+  scenario before executing it. Only permitted probe urgency/readings may
+  change from M89. Acquisition10, laws, seed0, body and calendar stay fixed.
+  If fixed calibration rules activation out, record the blocker and stop.
+- Main contrast: actual eligible history versus pressure-excluded history10,
+  same later probe12. Both have live candidates and an actual decision.
+  Assert equal first choices/draw records, equal later non-standing sources,
+  meanings and candidate sets, genuine qualification support, actual compiler
+  and execution consumption. The compared weak base exists in both arms;
+  its nucleus is allowed to be absent in the excluded arm by this hypothesis.
+- Acceptance: different exact decision probabilities (or deterministic choice)
+  attributable to crossing the unchanged relevance threshold. No requirement
+  to find a lucky sampled seed. Compare actual distributions, not equal seeds.
+- Exact repeat and restore at10, then every remaining settled instant through
+  terminal101; hidden-diagnostic equality and whole-instant rollback at12.
+  Retain M89 null, original kernels and excluded/empty-history controls.
+- Scope: new src/test/assembledStandingActivation.test.ts (helper if needed),
+  <=3 test files, zero planned production/contract changes; existing helpers
+  reused. No UI, new owner/runtime, independent pipeline or broader domains.
+- Checks, serial: setup; typecheck; affected M90 tests; boundaries/research;
+  staged Git size and document/evidence limits. Failures kept; targeted repairs.
+  Unchanged historical dependencies do not justify full frozen-control replay.
+- Budget:600s/check,1800s cumulative including failures and15s bookkeeping;
+  <=2 evidence files/5MiB, <=12 production/test files; CURRENT<=80 lines.
+- Done only when behavioral gate and controls pass. Otherwise checkpoint
+  incomplete with exact failure; no alternate contrasts, tuning or new seeds.
+  Ordinary implementation repairs remain authorized within these limits.
 
-## Next direction
-- Next bounded target: a native standing-to-choice witness under the fixed
-  reference policy; first examine the existing relevance-activation route.
-  Predeclare lawful scenario and liveness/comparison before execution.
-- No dice tuning, old-fold addition or variant-only closure is implied.
-- C-REASON remains unresolved; broader keys, coverage/correlation qualification
-  and competitor/corpus replay remain. M89 adds no new behavioral capability.
-- One continuing character integrates Campaigns0–3. No UI, autonomous partners,
-  unrelated breadth or additional checks after this package passes.
-- [Reconciliation](ASSEMBLED_CHARACTER_RECONCILIATION.md) keeps all21/15/132.
-  Three mapped members, no accepted complete family; no obligation closure.
+## Preserved status
+- [M89](ASSEMBLED_CHARACTER_M89_RESULT.md) complete as reconciliation only.
+- One continuing character integrates Campaigns0–3; full21/15/132 stays required.
+- Three mapped members, no accepted complete family. C-REASON unresolved.
 
 | Research obligations | **1 active / 17 conditional / 0 unowned** |
