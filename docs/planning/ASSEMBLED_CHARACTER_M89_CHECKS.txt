@@ -1,0 +1,132 @@
+
+M89_START types ['node', 'node_modules/typescript/bin/tsc', '--noEmit']
+
+M89_CHECK types exit=0 seconds=17.44 timeout=False
+
+M89_START native-mapping ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledStandingSources.test.ts', '-t', 'M89 native', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledStandingSources.test.ts > M89 native mapping: earned standing reaches the current decision but its sampled modifier is zero 54886ms
+   → priority adoption time/visibility
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledStandingSources.test.ts > M89 native mapping: earned standing reaches the current decision but its sampled modifier is zero
+SchedulerContractError: priority adoption time/visibility
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ require src/assembled/priority.ts:15:44
+ ❯ Module.priorityDisplay src/assembled/priority.ts:19:490
+ ❯ src/assembled/inputs.ts:64:457
+ ❯ Module.compileCharacterInputs src/assembled/inputs.ts:64:32
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:63
+ ❯ Module.create src/test/fixtures/assembledStandingSources.ts:39:124
+ ❯ src/test/assembledStandingSources.test.ts:11:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  18:48:58
+   Duration  59.25s (transform 2.65s, setup 0ms, collect 3.95s, tests 54.89s, environment 0ms, prepare 132ms)
+
+
+M89_CHECK native-mapping exit=1 seconds=59.83 timeout=False
+
+M89_START native-adoption-shape-repair ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledStandingSources.test.ts', '-t', 'M89 native', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledStandingSources.test.ts > M89 native mapping: earned standing reaches the current decision but its sampled modifier is zero 76379ms
+   → undeclared topology change: references, schemas, phases, ownership and producers are fixed
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledStandingSources.test.ts > M89 native mapping: earned standing reaches the current decision but its sampled modifier is zero
+SchedulerContractError: undeclared topology change: references, schemas, phases, ownership and producers are fixed
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.compileCharacterModel src/assembled/model.ts:256:145
+ ❯ Module.prepareCharacterModel src/assembled/character.ts:28:110
+ ❯ Module.create src/test/fixtures/assembledStandingSources.ts:39:149
+ ❯ src/test/assembledStandingSources.test.ts:11:34
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  18:50:19
+   Duration  80.61s (transform 2.55s, setup 0ms, collect 3.81s, tests 76.38s, environment 0ms, prepare 121ms)
+
+
+M89_CHECK native-adoption-shape-repair exit=1 seconds=81.14 timeout=False
+
+M89_START allowed-controls-continuation ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledStandingSources.test.ts', '-t', 'M89 controls|M89 persistence', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledStandingSources.test.ts > M89 controls: pressure and hidden diagnostics preserve qualification authority and original history mapping
+M89 SOURCE {"qualification":"06ae870ca083da01","phase":"0","P":"06ae870ca083da01","oldFold":"06826cc549","standing":["06e2f997d801e0c0e1d5d701","06e1f997d801e0c0e1d5d701"],"modifiers":["0300","0300"],"probabilities":["066e40","061240"],"mode":"1"}
+M89 CONTROLS PASS hidden diagnostic equality; pressure excludes formation despite same first choice; empty original history rejects. Conditional bound excludes sampled modifier, NOT relevance rescue or another standing source.
+
+ ✓ src/test/assembledStandingSources.test.ts > M89 controls: pressure and hidden diagnostics preserve qualification authority and original history mapping 136591ms
+stdout | src/test/assembledStandingSources.test.ts > M89 persistence: source correspondence survives exact continuation and atomic rollback
+M89 PERSISTENCE PASS repeat10; restore10 every settled instant 11,12,13,14,20,40,101; post-source whole-instant rollback
+
+ ✓ src/test/assembledStandingSources.test.ts > M89 persistence: source correspondence survives exact continuation and atomic rollback 116889ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 6 skipped (8)
+   Start at  18:52:56
+   Duration  257.77s (transform 2.55s, setup 0ms, collect 3.82s, tests 253.48s, environment 0ms, prepare 127ms)
+
+
+M89_CHECK allowed-controls-continuation exit=0 seconds=258.29 timeout=False
+
+M89_START checkpoint-types ['node', 'node_modules/typescript/bin/tsc', '--noEmit']
+
+M89_CHECK checkpoint-types exit=0 seconds=16.56 timeout=False
+
+M89_START checkpoint-boundaries ['npm.cmd', 'run', 'check:boundaries']
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+M89_CHECK checkpoint-boundaries exit=0 seconds=2.89 timeout=False
+
+M89_START checkpoint-research ['npm.cmd', 'run', 'check:research']
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":1,"conditional":17,"closed":4,"unowned":0,"verdicts":103,"reports":4322}
+
+M89_CHECK checkpoint-research exit=0 seconds=3.94 timeout=False
+
+M89_START checkpoint-staged-size ['npm.cmd', 'run', 'check:git-size']
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M89_CHECK checkpoint-staged-size exit=0 seconds=0.75 timeout=False
+
+M89_CHECKPOINT measured_seconds=440.84 bookkeeping_allowance=15 total=455.84/1800 source_files=2 production_changes=0 evidence_files=2 status=COMPARISON_AMENDMENT_PENDING

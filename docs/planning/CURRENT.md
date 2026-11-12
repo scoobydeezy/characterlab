@@ -1,9 +1,12 @@
-# Current work — M89 standing-source reconciliation (2026-11-11)
+# Current work — M89 pending comparison amendment (2026-11-11)
 
 M88 connected context to actual choices. M89 checks the remaining acquired-standing
 source/history mapping on the current0.79 character before any further port.
 The source already exists: M32's adopted development-aware P, not the old fold.
-This is a bounded reconciliation/diagnostic package, not a new capability claim.
+Source/history/privacy/continuation checks PASS; native feedback comparison blocked.
+Standing-disabled model is inadmissible. Owner amendment requested for captured-input
+compiler/arbitration control; see [checkpoint](ASSEMBLED_CHARACTER_M89_RESULT.md). Do not rerun the rejected comparison.
+No production change or capability pass. Keep current laws and admission fixed.
 
 ## Card committed before implementation
 - Scope: C-REASON:7 and related:2/4/6/8; MEC-012..018, EXP-011/012.
@@ -22,7 +25,8 @@ This is a bounded reconciliation/diagnostic package, not a new capability claim.
 - Start from M87's two-opportunity scenario, upgrade only to current0.79.
   Three physical tasks/no people; body30/cap100/rate10; delivery90 at9; seed0.
   Two permitted reading channels at10/12, original gains3/4 and2/3; no role4.
-- In BOTH arms set A importance1 (B remains3/5) in every priority frame.
+- In BOTH arms adopt A importance1 (B remains3/5) at the existing first adoption;
+  later frames retain that importance. Re-adoption at later times is not admitted.
   First identity context10 significance1, pressure0, no instruction; later context12
   significance0. Disable Value linkage/reports to isolate standing sources.
   Other inherited calendar/settings stay fixed; print actual qualification/phase.
