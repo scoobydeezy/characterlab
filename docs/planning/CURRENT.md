@@ -1,40 +1,54 @@
-# Current work — REASON integration complete (M95,2026-11-12)
+# Current work — M96 commitment expiry reaches the decision
 
-The character keeps distinct motives and task referents, avoids multiplying
-repeated evidence, cancels opposing evidence before dice, and lets learned Values,
-context and genuine earned standing affect actual decisions in the same runtime.
-REASON is complete as a bounded mapped member on one reference policy.
+Owner continuation2026-11-12 follows bounded REASON completion at b103f62f.
+One character still integrates Campaigns0–3; no UI or autonomous peers.
 
-## Completed result
-- [M95 full mapping and amendments](ASSEMBLED_CHARACTER_M95_RESULT.md),
-  [checks](ASSEMBLED_CHARACTER_M95_CHECKS.txt); plan42da61f1.
-- [M94 integration](ASSEMBLED_CHARACTER_M94_RESULT.md), commit ce65b37f:
-  rules/registry0.80, reason-sources0.5, SourceCoverage for every group.
-- Every PHEN-REASON-001:2..9 mapped; :10/11 constraints tracked. All four original
-  competitors distinguish on current captured inputs. No per-scenario law switch.
-- Native key/role/sign/duplicate, collective/context, learned-Value and acquired-
-  standing gates pass. Value receipt changes A probability55/64 ->379/384 with
-  non-Value signals fixed; weak standing changes B0 ->9/64. Probability claims,
-  not observed Auto frequencies or new cross-run stochastic-choice claims.
-- Isolated motive/basis controls stay test-only. Original receipt codec required
-  a reversible opaque evidence-atom bijection; native provenance remains literal.
-  Canonical set ordering and receipt-reader repairs retained all failed receipts.
-- Six M95 tests plus three original controls pass; every-settlement repeat/restore
-  for Value/cancellation to101 and post-compiler rollback pass. M94 controls retained.
-  Types/boundaries/research/document/link/size/whitespace pass.
-  Verification 1132.14s /1800s, including failures and bookkeeping.
-- M95 adds one test file, no production/calibration changes. Each package kept
- 600s/check,1800s total,12 production/test paths,2 evidence files/5MiB. No extension.
+## Bounded card (before implementation)
+- Capability: an expired concrete commitment loses its reasons and decision
+  influence without erasing genuinely acquired identity. Existing shared owners.
+- Scope: partial PHEN-COMMIT-001:2/3/4/7/8/9/10/11; not cancellation, creation,
+  recurrence or full COMMIT mapping. Original :5 competitors and :6 social
+  requirements remain mandatory. Four mapped members/zero full families unchanged.
+- Reference: rules/registry0.80, reason-sources0.5 SourceCoverage; existing
+  task-commitment0.2 and D3 formation. No law, calibration or production changes
+  planned. MEC020/EXP013 port; RET010/011 controls; MEC017/018/022 preserved.
+- Scenario: M94 standingProbe, three physical tasks/no social dependencies;
+  body30/cap100/rate10, delivery90 at9; actual qualification10, probe12,
+  no initial learned state; same seed0, readings, task settings and laws.
+  Change only task A deadline to11 versus its original deadline. At10 both
+  A and B must be live; at12 actual decision must be live in both arms.
+- Two setup runs through10 read ONLY decision identities to construct existing
+  explicit comparison maps. Rerun both arms with those maps; compare actual
+  effective addresses/draws, qualification and acquired history at10 exactly.
+  No setup outcome selects parameters/seeds. No sampled-choice causality claim
+  at12: compare exact native pre-roll probabilities and actual execution.
+- Gate: A Open in both at10; one genuine nonzero formation entry; identical
+  learned history. At11 expiry writes terminal A via prospective owner and
+  preserves identity. At12 expired arm has zero A commitment signals/nuclei,
+  rejected A reading sources and no stale A pressure; active arm has A pressure.
+  B remains live, exact probability differs, execution consumes actual decision.
+  Identity remains unchanged across retirement. No requirement to erase memory.
+- Controls: hidden truth with identical permitted evidence; stored terminal A;
+  repeat and restore before11, exact every subsequent settlement through101;
+  fault after expiry patch calculation rolls back the entire instant.
+  Retain original COMMIT lifecycle and CoreNeed/Immortal/ReusedId tests unchanged.
+- Files: one new src/test/assembledCommitmentExpiry.test.ts (maximum2 test paths
+  if fixture separation is needed); no production or frozen-control edits.
+  Existing contracts only. CURRENT/register/AGENTS/result/log bookkeeping.
+- Checks: targeted native gate/privacy; native persistence/rollback; original
+  COMMIT lifecycle/competitors (not entire frozen C2 suite); types, boundary,
+  research, document links/limits, git size/whitespace. Each catches the named
+  lifecycle/source/identity/privacy/atomicity risk, not general regression breadth.
+- Budget:600s per command,1800s cumulative verification including failures and
+  15s bookkeeping; <=12 production/test paths;2 evidence files/5MiB. One job.
+- Done iff all gates/controls pass with classified differences and remaining
+  explicit cancellation/new-instance adoption/social requirements recorded.
+  Failure does not license comparison substitution or an enlarged proof claim.
 
-## Scope and requested review
-Owner2026-11-12 approved M93 and delegated amendments through REASON completion.
-That bounded work is finished; stop here for the owner's requested review.
-Four mapped corpus members, zero full families accepted. General correlation,
-arbitrary identifier/tie behavior, nonparticipant referents, broader formation
-and calibration remain disclosed limits/conditional debts. No required phenomenon
-was waived. Original controls, Jaccard failures and D3 differences remain visible.
-Final21 members/15 families/132 clauses and whole-candidate replay remain required;
-earlier mappings also need that final replay. One character integrates Campaigns0–3.
-No UI, autonomous peers, reduction or unrelated next milestone started.
-
+## Preserved completion
+[M95](ASSEMBLED_CHARACTER_M95_RESULT.md) maps bounded REASON on one reference;
+its source correlation/calibration limits and earlier final-candidate replays remain.
+No baseline reduction:21 members/15 families/132 clauses still required.
+RO001 active; RO009 identity, RO014 commitment lifecycle/social limits and RO020
+calibration remain conditional. No new verdict, closure or family acceptance.
 | Research obligations | **1 active / 17 conditional / 0 unowned** |
