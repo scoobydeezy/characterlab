@@ -1,0 +1,116 @@
+
+M92_START types ['node', 'node_modules/typescript/bin/tsc', '--noEmit']
+src/test/fixtures/assembledReasonKeys.ts(117,47): error TS2345: Argument of type 'CanonicalValue' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+src/test/fixtures/assembledReasonKeys.ts(117,110): error TS2345: Argument of type 'CanonicalValue' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+
+M92_CHECK types exit=2 seconds=17.19 timeout=False
+
+M92_START types-record-narrowing ['node', 'node_modules/typescript/bin/tsc', '--noEmit']
+
+M92_CHECK types-record-narrowing exit=0 seconds=16.61 timeout=False
+
+M92_START cancellation-privacy ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledReasonCancellation.test.ts', '-t', 'M92 cancellation|M92 privacy', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReasonCancellation.test.ts > M92 cancellation: signed raw evidence cancels before bounding and die creation
+M92 CANCELLATION PASS [{"case":"positive","nuclei":3,"probabilities":["187/192","5/192"],"mode":"1","draws":0},{"case":"cancel","nuclei":2,"probabilities":["23/32","9/32"],"mode":"2","draws":2},{"case":"negative","nuclei":3,"probabilities":["5/32","27/32"],"mode":"1","draws":0}]
+M92 PERFACT {"sources":5,"active":[2,4],"reference":["23/32","9/32"],"alternative":["1/2","1/2"],"alsoSeparatesModifiers":true}
+
+ ✓ src/test/assembledReasonCancellation.test.ts > M92 cancellation: signed raw evidence cancels before bounding and die creation 107014ms
+stdout | src/test/assembledReasonCancellation.test.ts > M92 privacy: hidden truth is inert and denial removes opposing evidence
+M92 PRIVACY PASS exact hidden raw/decision; denied negative sample removes its source and restores live base
+
+ ✓ src/test/assembledReasonCancellation.test.ts > M92 privacy: hidden truth is inert and denial removes opposing evidence 36399ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 7 skipped (9)
+   Start at  08:35:09
+   Duration  147.74s (transform 2.60s, setup 0ms, collect 3.89s, tests 143.41s, environment 0ms, prepare 128ms)
+
+
+M92_CHECK cancellation-privacy exit=0 seconds=148.27 timeout=False
+
+M92_START standing ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledReasonCancellation.test.ts', '-t', 'M92 standing', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReasonCancellation.test.ts > M92 standing: original independent-die alternative loses actual weak-base rescue
+M89 ORIGINAL GROUPS {"sources":7,"groupSizes":[5,2],"nativeNuclei":2,"allSourcesRetained":true}
+M92 IDENTITY CONTROL PASS {"sources":7,"groups":[5,2],"reference":[2,"55/64","9/64"],"independent":[1,"1/1","0/1"],"separateStandingRejected":2,"lostWeakRescue":true,"nativeMutated":false}
+
+ ✓ src/test/assembledReasonCancellation.test.ts > M92 standing: original independent-die alternative loses actual weak-base rescue 79364ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  08:37:50
+   Duration  83.56s (transform 2.53s, setup 0ms, collect 3.78s, tests 79.37s, environment 0ms, prepare 130ms)
+
+
+M92_CHECK standing exit=0 seconds=84.07 timeout=False
+
+M92_START persistence ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledReasonCancellation.test.ts', '-t', 'M92 persistence', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReasonCancellation.test.ts > M92 persistence: exact cancelled-reason continuation and atomic rollback
+M92 PERSISTENCE PASS repeat9/restore9 every settlement 10,11,12,13,14,20,40,101; cancelled-reason post-compiler rollback
+
+ ✓ src/test/assembledReasonCancellation.test.ts > M92 persistence: exact cancelled-reason continuation and atomic rollback 135213ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  08:39:37
+   Duration  139.44s (transform 2.54s, setup 0ms, collect 3.80s, tests 135.21s, environment 0ms, prepare 124ms)
+
+
+M92_CHECK persistence exit=0 seconds=139.95 timeout=False
+
+M92_START retained-m91 ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledReasonKeys.test.ts', '-t', 'M91 native', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReasonKeys.test.ts > M91 native: referent, sign and source role survive one shared decision
+M91 POOLED {"allSources":5,"nuclei":[3,2],"reference":["283/288","5/288"],"pooled":["55/64","9/64"]}
+
+stdout | src/test/assembledReasonKeys.test.ts > M91 native: referent, sign and source role survive one shared decision
+M91 NATIVE PASS [{"kind":"same","nuclei":2,"probabilities":["55/64","9/64"],"mode":"1","draws":0},{"kind":"split","nuclei":3,"probabilities":["283/288","5/288"],"mode":"1","draws":0},{"kind":"negative","nuclei":3,"probabilities":["43/144","101/144"],"mode":"2","draws":3},{"kind":"modifier","nuclei":2,"probabilities":["13/16","3/16"],"mode":"1","draws":0}]
+
+ ✓ src/test/assembledReasonKeys.test.ts > M91 native: referent, sign and source role survive one shared decision 125671ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  08:42:09
+   Duration  129.88s (transform 2.51s, setup 0ms, collect 3.77s, tests 125.67s, environment 0ms, prepare 126ms)
+
+
+M92_CHECK retained-m91 exit=0 seconds=130.40 timeout=False
+
+M92_START boundaries ['npm.cmd', 'run', 'check:boundaries']
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+M92_CHECK boundaries exit=0 seconds=2.91 timeout=False
+
+M92_START research ['npm.cmd', 'run', 'check:research']
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":1,"conditional":17,"closed":4,"unowned":0,"verdicts":103,"reports":4325}
+
+M92_CHECK research exit=0 seconds=3.82 timeout=False
+
+M92_START staged-size ['npm.cmd', 'run', 'check:git-size']
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M92_CHECK staged-size exit=0 seconds=0.75 timeout=False

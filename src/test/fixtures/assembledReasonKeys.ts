@@ -67,13 +67,17 @@ export function sourceCorrespondence(p:ReturnType<typeof capture>){
  return sources;
 }
 const semanticKey=(n:CanonicalValue,type:bigint)=>{const k=rec(n,type);return list([1n,2n,3n,4n].map(i=>f(k,i)));};
-export function originalComparison(p:ReturnType<typeof capture>,source:{registry:Uint8Array},pooled=false){
- const actual=items(f(p.raw,6n),'list').filter(v=>!readQ(f(rec(items(v,'list')[2],402n),2n)).equals(ZERO));
+export function originalOperands(raw:CanonicalValue){
+ const actual=items(f(rec(raw,403n),6n),'list').filter(v=>!readQ(f(rec(items(v,'list')[2],402n),2n)).equals(ZERO));
  const rows=actual.map(v=>{
   const d=items(v,'list'),signal=rec(d[2],402n),sk=rec(f(signal,1n),401n),task=rec(f(sk,2n),371n);
   expect(f(rec(f(sk,1n),395n),1n)).toEqual(f(task,1n));
   return rr(919,[rr(916,[sid(1027,'M91/'+key(descriptionIdentity(v))),f(sk,1n),d[1],f(task,2n),f(sk,3n),q(1,1),set([])]),f(signal,2n),f(signal,3n),list([])]);
  });
+ return {actual,rows};
+}
+export function originalComparison(p:ReturnType<typeof capture>,source:{registry:Uint8Array},pooled=false){
+ const {actual,rows}=originalOperands(p.raw);
  expect(rows.length).toBeLessThanOrEqual(6);expect(rows).toHaveLength(5);
  const result=compile(rows,definition(source)),ns=originalNuclei(result),rejected=items(f(rec(result,924n),4n),'list');
  expect(key(set(ns.map(originalProjection)))).toBe(key(set(p.ns.map(projection))));
@@ -94,14 +98,7 @@ export function originalComparison(p:ReturnType<typeof capture>,source:{registry
   for(const [a,b] of [[3n,2n],[4n,3n],[6n,4n]] as const)expect(n[Number(a)]).toEqual(f(v,b));
   expect(n[7]).toEqual(f(rec(rows[index],919n),3n));
  }
- const candidates=items(f(rec(f(p.raw,2n),398n),3n),'list').map(v=>f(rec(v,397n),1n));
- const registry=items(items(decode(source.registry),'list')[0],'set');
- const arb=f(rec(registry.find(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n&&key(f(v,1n))===key(sid(1027,'definition/task-arbitration')))!,171n),4n);
- const analyze=(nuclei:typeof ns)=>analyzeOptions(candidates.map(candidate=>{
-  let distribution=new Map([[0n,ONE]]),reasonMass=ZERO;
-  for(const n of nuclei.filter(n=>key(f(rec(f(n,1n),922n),1n))===key(candidate))){const d=readDistribution(f(n,11n));distribution=convolve(distribution,d);reasonMass=reasonMass.add(absolute(expectation(d)));}
-  return {key:candidate,distribution,reasonMass};
- }),readQ(f(rec(arb,440n),1n)),readQ(f(rec(arb,440n),2n)),3).probabilities.map(v=>v.probability);
+ const analyze=(nuclei:readonly CanonicalValue[])=>analyzeOriginal(p.raw,source,nuclei);
  expect(analyze(ns)).toEqual(p.probabilities.map(readQ));
  if(pooled){
   const alternative=originalNuclei(compile(rows,definition(source),2));
@@ -109,6 +106,17 @@ export function originalComparison(p:ReturnType<typeof capture>,source:{registry
   expect(analyze(alternative)).not.toEqual(analyze(ns));
   console.info('M91 POOLED '+JSON.stringify({allSources:rows.length,nuclei:[ns.length,alternative.length],reference:analyze(ns).map(frac),pooled:analyze(alternative).map(frac)}));
  }
+ return {rows,ns,analyze,result};
+}
+export function analyzeOriginal(raw:CanonicalValue,source:{registry:Uint8Array},nuclei:readonly CanonicalValue[]){
+ const candidates=items(f(rec(f(rec(raw,403n),2n),398n),3n),'list').map(v=>f(rec(v,397n),1n));
+ const registry=items(items(decode(source.registry),'list')[0],'set');
+ const arb=f(rec(registry.find(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n&&key(f(v,1n))===key(sid(1027,'definition/task-arbitration')))!,171n),4n);
+ return analyzeOptions(candidates.map(candidate=>{
+  let distribution=new Map([[0n,ONE]]),reasonMass=ZERO;
+  for(const n of nuclei.map(v=>rec(v,923n)).filter(n=>key(f(rec(f(n,1n),922n),1n))===key(candidate))){const d=readDistribution(f(n,11n));distribution=convolve(distribution,d);reasonMass=reasonMass.add(absolute(expectation(d)));}
+  return {key:candidate,distribution,reasonMass};
+ }),readQ(f(rec(arb,440n),1n)),readQ(f(rec(arb,440n),2n)),3).probabilities.map(v=>v.probability);
 }
 export const frac=(v:ReturnType<typeof readQ>)=>v.numerator+'/'+v.denominator;
 export {snap,through,decode,enc,items,key,rec,r,f,uint,q,list,set,text,u,signed,taskA,taskB,readQ};

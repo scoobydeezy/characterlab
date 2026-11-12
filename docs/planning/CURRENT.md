@@ -1,56 +1,41 @@
-# Current work — M92 signed cancellation and standing control (2026-11-12)
+# Current work — M92 complete (2026-11-12)
 
-M92 tests whether opposing evidence cancels within one reason, and executes
-the remaining IdentityIndependentDie competitor on genuine learned standing.
-Both use the same current character; alternatives remain test-only controls.
+Equal opposing evidence now has a verified native cancellation witness: both
+sources remain recorded, but their zero net motive creates no die. The original
+separate-standing-die competitor loses a weak reason that earned disposition
+activates in the shared character.
 
-## Bounded card — before implementation
-- Two connected gates: signed consolidation before die creation; discriminate
-  the original separate-standing-die control on actual native decision inputs.
-- C-REASON PHEN-REASON-001:2/3/4/5/6/7/8/9; :10/11 remain constraints.
-  MEC-012..018/022; RO-C3-001 active, RO-C3-009/020 conditional.
-- Fixed rules/registry0.79, reason-sources/0.4, formation/0.1, Jaccard,
-  reference dice/thresholds/units. No production or formal changes planned.
-- Cancellation scenario derives M91 SPLIT seed0: three physical tasks/no people;
-  body30/cap100/rate10, delivery90 at9, importanceA/B3/5, urgency1, threat1/2.
-  Both channel descriptors now target action A/task B, gain2/3 each.
-  Same model for three runs; physical readings at10 only:
-  POSITIVE(+1,+1), CANCEL(+1,-1), NEGATIVE(-1,-1).
-  Each adjacent comparison changes exactly one reading; no psychological input.
-- Live gate: two permitted samples, both nonzero produced contributions,
-  same option/motive/referent, unaffected primary sources/candidates/meanings,
-  actual compiler consumption and decision/execution.
-  Predict extra-group bounded base+4/7,0,-4/7; active nuclei3,2,3.
-  CANCEL retains both signed coverage rows but rejects ZeroBase with zero
-  relevance. Require changed exact probabilities for both adjacent comparisons.
-- Original reasonRaw and full Aggregate agree on all actual source/support,
-  keys, totals, distributions and rejection/coverage fields. Original PerFactDie
-  on identical CANCEL operands must retain separate signed dice and differ in
-  analyzed probability. No alternative law enters the character.
-- Standing case reproduces M90's eligible scenario: M89 inputs plus B urgency
-  19/20 only at12; P98775/3572128, actual probabilities55/64 and9/64.
-  All7 captured sources retained in complete option/motive/referent groups5/2
-  to respect original6-source envelope. Aggregate must match native; original
-  law5 IdentityIndependentDie must remove weak-base rescue, leaving1 active
-  reason and probabilities1/0. Its separate standing bases remain subthreshold.
-  This is a changed-probability control, not a spurious-extra-die claim.
-  Preserve exact qualifications/support and unchanged native snapshot/save.
-- Privacy: CANCEL hidden-diagnostic equality; denying channel2 removes its
-  opposing source and restores a nonzero reason. No seed/coupling choice claim.
-- Persistence: CANCEL repeat/restore9 at every remaining settlement through101;
-  post-compiler rollback10. M90 continuation remains retained for its unchanged
-  standing scenario; component controls cannot mutate the live run.
-- Files: new assembledReasonCancellation.test.ts; extract/reuse the existing
-  original operand adapter in fixtures/assembledReasonKeys.ts and expose its
-  existing comparison result. <=3 test paths, no production;12-file outer cap.
-- Checks serial: types; cancellation/privacy; standing competitor; persistence;
-  retained M91 native (shared adapter regression); boundaries/research/Git size.
-  No unrelated historical reruns. Finish with document/evidence limits.
-- Budget600s/check,1800s cumulative including failures and15s bookkeeping;
-  two evidence files<=5MiB. CURRENT<=80; register<=250 lines/64KiB.
-- All fixed gates must pass. Retain ordinary failures and repair locally;
-  no retuning, alternate contrasts or expanded seed set. Stop at limits/conflict.
-- C-REASON remains unresolved until collective coverage/reference-policy and
-  whole-member correspondence are resolved; this card does not select a new law.
+## Completed bounded comparisons
+- [Result](ASSEMBLED_CHARACTER_M92_RESULT.md);
+  [checks](ASSEMBLED_CHARACTER_M92_CHECKS.txt). Plan1a9ca3a1 before implementation.
+- Same current0.79 model, seed0; two gain2/3 permitted readings target the
+  same action/task/motive. Readings(+1,+1),(+1,-1),(-1,-1) resolve bases
+  +4/7,0,-4/7 and active nuclei3,2,3. Balanced coverage retains both signs.
+- Actual probability vectors:187/192 vs5/192;23/32 vs9/32;5/32 vs27/32.
+  All source/compiler/provenance and execution gates pass. No paired-choice claim.
+- Original Aggregate matches every compared field. PerFactDie on the balanced
+  actual sources makes4 rather than2 active dice, yielding1/2 vs1/2; modifier
+  handling also differs, so this is the full original-law contrast.
+- Reproduced M90 standing inputs: actual2 reasons give55/64 vs9/64.
+  IdentityIndependentDie leaves1 reason and1 vs0: two separate standing bases
+  remain subthreshold and the weak B base loses its rescue. No extra-die claim.
+- All7 standing sources retained in complete groups5/2. No component result
+  enters cognition; live snapshot/save unchanged.
+- Hidden truth/denial controls, exact repeat/restore9 through every settlement
+  to101, post-compiler rollback, and retained M91 native comparison pass.
+- Four M92 tests, retained M91 and final checks pass; 558.97s /1800s.
+  Initial test-helper type narrowing failure repaired and retained.
+- Two test paths, two evidence files; no production, contract or calibration
+  changes. Fixed Jaccard and shared owners/runtime; no candidate promotion.
+
+## Remaining direction
+- C-REASON remains unresolved: collective coverage/reference-policy resolution
+  and complete requirement mapping come next, within a separately bounded card.
+  M86's original failure and approved candidate comparison stay preserved.
+- Wider source/order/identifier domains remain unqualified. No verdict,
+  reduction, corpus-member acceptance or obligation closure.
+- [Reconciliation](ASSEMBLED_CHARACTER_RECONCILIATION.md) retains21/15/132.
+  Three mapped members, no fully accepted family. One character integrates
+  Campaigns0–3; no UI, autonomous peers or unrelated breadth.
 
 | Research obligations | **1 active / 17 conditional / 0 unowned** |
