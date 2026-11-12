@@ -1,0 +1,2038 @@
+
+M94_START types ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+
+M94_CHECK types exit=0 seconds=16.96 timeout=False
+
+M94_START native ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledReasonReference.test.ts', '-t', 'M94 collective|M94 connected|M94 boundaries', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledReasonReference.test.ts > M94 collective: one reference retains full support without redundant weight 52773ms
+   → assembled trace requires exact model/run binding
+ × src/test/assembledReasonReference.test.ts > M94 connected: context and earned standing still influence the actual decision 1718ms
+   → assembled trace requires exact model/run binding
+ × src/test/assembledReasonReference.test.ts > M94 boundaries: hidden truth, denied evidence and version bundles 1604ms
+   → assembled trace requires exact model/run binding
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledReasonReference.test.ts > M94 collective: one reference retains full support without redundant weight
+SchedulerContractError: assembled trace requires exact model/run binding
+ ❯ Module.compileCharacterTraceBinding src/assembled/traceBinding.ts:27:1438
+
+ ❯ Module.createCharacterRuntime src/assembled/runtime.ts:103:14
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:122
+ ❯ Module.create src/test/fixtures/assembledReasonReference.ts:21:12
+ ❯ src/test/assembledReasonReference.test.ts:12:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/3]⎯
+
+ FAIL  src/test/assembledReasonReference.test.ts > M94 connected: context and earned standing still influence the actual decision
+SchedulerContractError: assembled trace requires exact model/run binding
+ ❯ Module.compileCharacterTraceBinding src/assembled/traceBinding.ts:27:1438
+
+ ❯ Module.createCharacterRuntime src/assembled/runtime.ts:103:14
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:122
+ ❯ Module.create src/test/fixtures/assembledReasonReference.ts:21:12
+ ❯ src/test/assembledReasonReference.test.ts:26:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/3]⎯
+
+ FAIL  src/test/assembledReasonReference.test.ts > M94 boundaries: hidden truth, denied evidence and version bundles
+SchedulerContractError: assembled trace requires exact model/run binding
+ ❯ Module.compileCharacterTraceBinding src/assembled/traceBinding.ts:27:1438
+
+ ❯ Module.createCharacterRuntime src/assembled/runtime.ts:103:14
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:122
+ ❯ Module.create src/test/fixtures/assembledReasonReference.ts:21:12
+ ❯ src/test/assembledReasonReference.test.ts:36:22
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/3]⎯
+
+ Test Files  1 failed (1)
+      Tests  3 failed | 6 skipped (9)
+   Start at  10:30:59
+   Duration  60.34s (transform 2.55s, setup 0ms, collect 3.83s, tests 56.10s, environment 0ms, prepare 118ms)
+
+
+M94_CHECK native exit=1 seconds=60.88 timeout=False
+
+M94_START native-repaired ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledReasonReference.test.ts', '-t', 'M94 collective|M94 connected|M94 boundaries', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledReasonReference.test.ts > M94 collective: one reference retains full support without redundant weight 87007ms
+   → REASON_CODEC: occurrence
+stdout | src/test/assembledReasonReference.test.ts > M94 connected: context and earned standing still influence the actual decision
+M94 CONNECTED PASS context distinct -1/5/-2 changes probability; genuine D3 standing rescues weak reason, B0 ->9/64
+
+ ✓ src/test/assembledReasonReference.test.ts > M94 connected: context and earned standing still influence the actual decision 89844ms
+stdout | src/test/assembledReasonReference.test.ts > M94 boundaries: hidden truth, denied evidence and version bundles
+M94 BOUNDARIES PASS hidden cognition exact; denial changes probability; closed0.80 bundle
+
+ ✓ src/test/assembledReasonReference.test.ts > M94 boundaries: hidden truth, denied evidence and version bundles 36613ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledReasonReference.test.ts > M94 collective: one reference retains full support without redundant weight
+Error: REASON_CODEC: occurrence
+ ❯ fail src/campaign3/reasonCodecs.ts:11:39
+      9| const schemas=[...generalAttentionSupportedSchemas(),...added],registr…
+     10| const context={admittedVersions:['local-reserve-level-observation/0.1-…
+     11| const fail=(why:string):never=>{throw Error('REASON_CODEC: '+why);};
+       |                                       ^
+     12| function envelope(v:CanonicalValue):CanonicalValue {
+     13|  if(typeof v==='boolean')return v;
+ ❯ typed src/campaign3/reasonCodecs.ts:47:251
+ ❯ validate src/campaign3/reasonCodecs.ts:62:98
+ ❯ decodeReason src/campaign3/reasonCodecs.ts:65:108
+ ❯ Module.reasonRecord src/campaign3/reasonCodecs.ts:67:128
+ ❯ Module.reasonRaw src/campaign3/reasonMath.ts:20:17
+ ❯ Module.sourceCorrespondence src/test/fixtures/assembledReasonReference.ts:46:12
+ ❯ src/test/assembledReasonReference.test.ts:13:72
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 2 passed | 6 skipped (9)
+   Start at  10:32:28
+   Duration  217.69s (transform 2.51s, setup 0ms, collect 3.77s, tests 213.46s, environment 0ms, prepare 123ms)
+
+
+M94_CHECK native-repaired exit=1 seconds=218.22 timeout=False
+
+M94_START collective-adapter-repaired ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledReasonReference.test.ts', '-t', 'M94 collective', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledReasonReference.test.ts > M94 collective: one reference retains full support without redundant weight 86443ms
+   → expected { kind: 'set', …(1) } to deeply equal { kind: 'set', …(1) }
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledReasonReference.test.ts > M94 collective: one reference retains full support without redundant weight
+AssertionError: expected { kind: 'set', …(1) } to deeply equal { kind: 'set', …(1) }
+
+- Expected
++ Received
+
+  Object {
+    "items": Array [
+      Object {
+        "fields": Map {
+          1n => Object {
+            "fields": Map {
+              1n => Object {
+                "fields": Map {
+                  1n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1037n,
+                      "payload": Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1038n,
+                        "payload": Object {
+                          "kind": "text",
+                          "value": "character/bridge-subject",
+                        },
+                      },
+                    },
+                  },
+                  2n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1027n,
+                    "payload": Object {
+                      "kind": "text",
+                      "value": "definition/protocol-contact-one",
+                    },
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    Object {
+                      "id": 1n,
+                      "name": "CharacterId",
+                      "required": true,
+                    },
+                    Object {
+                      "id": 2n,
+                      "name": "ProtocolActionDefinitionId",
+                      "required": true,
+                    },
+                  ],
+                  "name": "ProceduralCandidateKey",
+                  "schemaVersion": 1n,
+                  "typeId": 395n,
+                },
+              },
+              2n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1040n,
+                "payload": Object {
+                  "kind": "text",
+                  "value": "Commitment",
+                },
+              },
+              3n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1002n,
+                "payload": Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1037n,
+                  "payload": Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1038n,
+                    "payload": Object {
+                      "kind": "text",
+                      "value": "content/task-a",
+                    },
+                  },
+                },
+              },
+              4n => Object {
+                "kind": "unsigned",
+                "value": 1n,
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "CandidateKey",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "MotiveChannel",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "TaskReferent",
+                  "required": true,
+                },
+                Object {
+                  "id": 4n,
+                  "name": "Direction",
+                  "required": true,
+                },
+              ],
+              "name": "ReasonNucleusKey",
+              "schemaVersion": 1n,
+              "typeId": 404n,
+            },
+          },
+          2n => Object {
+            "fields": Map {
+              1n => Object {
+                "denominator": 181n,
+                "kind": "rational",
+                "numerator": 121n,
+              },
+              2n => Object {
+                "denominator": 1n,
+                "kind": "rational",
+                "numerator": 0n,
+              },
+              3n => Object {
+                "denominator": 919n,
+                "kind": "rational",
+                "numerator": 119n,
+              },
+              4n => Object {
+                "items": Array [
+                  Object {
+                    "fields": Map {
+                      1n => Object {
+                        "fields": Map {
+                          1n => Object {
+                            "fields": Map {
+                              1n => Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1002n,
+                                "payload": Object {
+                                  "kind": "typedIdentifier",
+                                  "namespaceId": 1037n,
+                                  "payload": Object {
+                                    "kind": "typedIdentifier",
+                                    "namespaceId": 1038n,
+                                    "payload": Object {
+                                      "kind": "text",
+                                      "value": "character/bridge-subject",
+                                    },
+                                  },
+                                },
+                              },
+                              2n => Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1027n,
+                                "payload": Object {
+                                  "kind": "text",
+                                  "value": "definition/protocol-contact-one",
+                                },
+                              },
+                            },
+                            "kind": "record",
+                            "schema": Object {
+                              "fields": Array [
+                                Object {
+                                  "id": 1n,
+                                  "name": "CharacterId",
+                                  "required": true,
+                                },
+                                Object {
+                                  "id": 2n,
+                                  "name": "ProtocolActionDefinitionId",
+                                  "required": true,
+                                },
+                              ],
+                              "name": "ProceduralCandidateKey",
+                              "schemaVersion": 1n,
+                              "typeId": 395n,
+                            },
+                          },
+                          2n => Object {
+                            "fields": Map {
+                              1n => Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1002n,
+                                "payload": Object {
+                                  "kind": "typedIdentifier",
+                                  "namespaceId": 1037n,
+                                  "payload": Object {
+                                    "kind": "typedIdentifier",
+                                    "namespaceId": 1038n,
+                                    "payload": Object {
+                                      "kind": "text",
+                                      "value": "character/bridge-subject",
+                                    },
+                                  },
+                                },
+                              },
+                              2n => Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1002n,
+                                "payload": Object {
+                                  "kind": "typedIdentifier",
+                                  "namespaceId": 1037n,
+                                  "payload": Object {
+                                    "kind": "typedIdentifier",
+                                    "namespaceId": 1038n,
+                                    "payload": Object {
+                                      "kind": "text",
+                                      "value": "content/task-a",
+                                    },
+                                  },
+                                },
+                              },
+                            },
+                            "kind": "record",
+                            "schema": Object {
+                              "fields": Array [
+                                Object {
+                                  "id": 1n,
+                                  "name": "CharacterId",
+                                  "required": true,
+                                },
+                                Object {
+                                  "id": 2n,
+                                  "name": "TaskReferent",
+                                  "required": true,
+                                },
+                              ],
+                              "name": "TaskCommitmentKey",
+                              "schemaVersion": 1n,
+                              "typeId": 371n,
+                            },
+                          },
+                          3n => Object {
+                            "kind": "unsigned",
+                            "value": 1n,
+                          },
+                        },
+                        "kind": "record",
+                        "schema": Object {
+                          "fields": Array [
+                            Object {
+                              "id": 1n,
+                              "name": "CandidateKey",
+                              "required": true,
+                            },
+                            Object {
+                              "id": 2n,
+                              "name": "TaskCommitmentKey",
+                              "required": true,
+                            },
+                            Object {
+                              "id": 3n,
+                              "name": "SourceRole",
+                              "required": true,
+                            },
+                          ],
+                          "name": "TaskRawSignalKey",
+                          "schemaVersion": 1n,
+                          "typeId": 401n,
+                        },
+                      },
+                      2n => Object {
+                        "denominator": 4n,
+                        "kind": "rational",
+                        "numerator": 3n,
+                      },
+                      3n => Object {
+                        "denominator": 1n,
+                        "kind": "rational",
+                        "numerator": 0n,
+                      },
+                      4n => Object {
+                        "denominator": 1n,
+                        "kind": "rational",
+                        "numerator": 1n,
+                      },
+                      5n => Object {
+                        "denominator": 4n,
+                        "kind": "rational",
+                        "numerator": 3n,
+                      },
+                    },
+                    "kind": "record",
+                    "schema": Object {
+                      "fields": Array [
+                        Object {
+                          "id": 1n,
+                          "name": "SourceKey",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 2n,
+                          "name": "RawMagnitude",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 3n,
+                          "name": "OverlapWithPrior",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 4n,
+                          "name": "IndependentFraction",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 5n,
+                          "name": "EffectiveMagnitude",
+                          "required": true,
+                        },
+                      ],
+                      "name": "CoverageResult",
+                      "schemaVersion": 1n,
+                      "typeId": 405n,
+                    },
+                  },
+                  Object {
+                    "fields": Map {
+                      1n => Object {
+                        "fields": Map {
+                          1n => Object {
+                            "fields": Map {
+                              1n => Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1002n,
+                                "payload": Object {
+                                  "kind": "typedIdentifier",
+                                  "namespaceId": 1037n,
+                                  "payload": Object {
+                                    "kind": "typedIdentifier",
+                                    "namespaceId": 1038n,
+                                    "payload": Object {
+                                      "kind": "text",
+                                      "value": "character/bridge-subject",
+                                    },
+                                  },
+                                },
+                              },
+                              2n => Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1027n,
+                                "payload": Object {
+                                  "kind": "text",
+                                  "value": "definition/protocol-contact-one",
+                                },
+                              },
+                            },
+                            "kind": "record",
+                            "schema": Object {
+                              "fields": Array [
+                                Object {
+                                  "id": 1n,
+                                  "name": "CharacterId",
+                                  "required": true,
+                                },
+                                Object {
+                                  "id": 2n,
+                                  "name": "ProtocolActionDefinitionId",
+                                  "required": true,
+                                },
+                              ],
+                              "name": "ProceduralCandidateKey",
+                              "schemaVersion": 1n,
+                              "typeId": 395n,
+                            },
+                          },
+                          2n => Object {
+                            "fields": Map {
+                              1n => Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1002n,
+                                "payload": Object {
+                                  "kind": "typedIdentifier",
+                                  "namespaceId": 1037n,
+                                  "payload": Object {
+                                    "kind": "typedIdentifier",
+                                    "namespaceId": 1038n,
+                                    "payload": Object {
+                                      "kind": "text",
+                                      "value": "character/bridge-subject",
+                                    },
+                                  },
+                                },
+                              },
+                              2n => Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1002n,
+                                "payload": Object {
+                                  "kind": "typedIdentifier",
+                                  "namespaceId": 1037n,
+                                  "payload": Object {
+                                    "kind": "typedIdentifier",
+                                    "namespaceId": 1038n,
+                                    "payload": Object {
+                                      "kind": "text",
+                                      "value": "content/task-a",
+                                    },
+                                  },
+                                },
+                              },
+                            },
+                            "kind": "record",
+                            "schema": Object {
+                              "fields": Array [
+                                Object {
+                                  "id": 1n,
+                                  "name": "CharacterId",
+                                  "required": true,
+                                },
+                                Object {
+                                  "id": 2n,
+                                  "name": "TaskReferent",
+                                  "required": true,
+                                },
+                              ],
+                              "name": "TaskCommitmentKey",
+                              "schemaVersion": 1n,
+                              "typeId": 371n,
+                            },
+                          },
+                          3n => Object {
+                            "kind": "unsigned",
+                            "value": 1n,
+                          },
+                        },
+                        "kind": "record",
+                        "schema": Object {
+                          "fields": Array [
+                            Object {
+                              "id": 1n,
+                              "name": "CandidateKey",
+                              "required": true,
+                            },
+                            Object {
+                              "id": 2n,
+                              "name": "TaskCommitmentKey",
+                              "required": true,
+                            },
+                            Object {
+                              "id": 3n,
+                              "name": "SourceRole",
+                              "required": true,
+                            },
+                          ],
+                          "name": "TaskRawSignalKey",
+                          "schemaVersion": 1n,
+                          "typeId": 401n,
+                        },
+                      },
+                      2n => Object {
+                        "denominator": 3n,
+                        "kind": "rational",
+                        "numerator": 2n,
+                      },
+                      3n => Object {
+                        "denominator": 1n,
+                        "kind": "rational",
+                        "numerator": 0n,
+                      },
+                      4n => Object {
+                        "denominator": 1n,
+                        "kind": "rational",
+                        "numerator": 1n,
+                      },
+                      5n => Object {
+                        "denominator": 3n,
+                        "kind": "rational",
+                        "numerator": 2n,
+                      },
+                    },
+                    "kind": "record",
+                    "schema": Object {
+                      "fields": Array [
+                        Object {
+                          "id": 1n,
+                          "name": "SourceKey",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 2n,
+                          "name": "RawMagnitude",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 3n,
+                          "name": "OverlapWithPrior",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 4n,
+                          "name": "IndependentFraction",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 5n,
+                          "name": "EffectiveMagnitude",
+                          "required": true,
+                        },
+                      ],
+                      "name": "CoverageResult",
+                      "schemaVersion": 1n,
+                      "typeId": 405n,
+                    },
+                  },
+                  Object {
+                    "fields": Map {
+                      1n => Object {
+                        "fields": Map {
+                          1n => Object {
+                            "fields": Map {
+                              1n => Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1002n,
+                                "payload": Object {
+                                  "kind": "typedIdentifier",
+                                  "namespaceId": 1037n,
+                                  "payload": Object {
+                                    "kind": "typedIdentifier",
+                                    "namespaceId": 1038n,
+                                    "payload": Object {
+                                      "kind": "text",
+                                      "value": "character/bridge-subject",
+                                    },
+                                  },
+                                },
+                              },
+                              2n => Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1027n,
+                                "payload": Object {
+                                  "kind": "text",
+                                  "value": "definition/protocol-contact-one",
+                                },
+                              },
+                            },
+                            "kind": "record",
+                            "schema": Object {
+                              "fields": Array [
+                                Object {
+                                  "id": 1n,
+                                  "name": "CharacterId",
+                                  "required": true,
+                                },
+                                Object {
+                                  "id": 2n,
+                                  "name": "ProtocolActionDefinitionId",
+                                  "required": true,
+                                },
+                              ],
+                              "name": "ProceduralCandidateKey",
+                              "schemaVersion": 1n,
+                              "typeId": 395n,
+                            },
+                          },
+                          2n => Object {
+                            "fields": Map {
+                              1n => Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1002n,
+                                "payload": Object {
+                                  "kind": "typedIdentifier",
+                                  "namespaceId": 1037n,
+                                  "payload": Object {
+                                    "kind": "typedIdentifier",
+                                    "namespaceId": 1038n,
+                                    "payload": Object {
+                                      "kind": "text",
+                                      "value": "character/bridge-subject",
+                                    },
+                                  },
+                                },
+                              },
+                              2n => Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1002n,
+                                "payload": Object {
+                                  "kind": "typedIdentifier",
+                                  "namespaceId": 1037n,
+                                  "payload": Object {
+                                    "kind": "typedIdentifier",
+                                    "namespaceId": 1038n,
+                                    "payload": Object {
+                                      "kind": "text",
+                                      "value": "content/task-a",
+                                    },
+                                  },
+                                },
+                              },
+                            },
+                            "kind": "record",
+                            "schema": Object {
+                              "fields": Array [
+                                Object {
+                                  "id": 1n,
+                                  "name": "CharacterId",
+                                  "required": true,
+                                },
+                                Object {
+                                  "id": 2n,
+                                  "name": "TaskReferent",
+                                  "required": true,
+                                },
+                              ],
+                              "name": "TaskCommitmentKey",
+                              "schemaVersion": 1n,
+                              "typeId": 371n,
+                            },
+                          },
+                          3n => Object {
+                            "kind": "unsigned",
+                            "value": 1n,
+                          },
+                        },
+                        "kind": "record",
+                        "schema": Object {
+                          "fields": Array [
+                            Object {
+                              "id": 1n,
+                              "name": "CandidateKey",
+                              "required": true,
+                            },
+                            Object {
+                              "id": 2n,
+                              "name": "TaskCommitmentKey",
+                              "required": true,
+                            },
+                            Object {
+                              "id": 3n,
+                              "name": "SourceRole",
+                              "required": true,
+                            },
+                          ],
+                          "name": "TaskRawSignalKey",
+                          "schemaVersion": 1n,
+                          "typeId": 401n,
+                        },
+                      },
+                      2n => Object {
+                        "denominator": 5n,
+                        "kind": "rational",
+                        "numerator": 3n,
+                      },
+                      3n => Object {
+                        "denominator": 1n,
+                        "kind": "rational",
+                        "numerator": 0n,
+                      },
+                      4n => Object {
+                        "denominator": 1n,
+                        "kind": "rational",
+                        "numerator": 1n,
+                      },
+                      5n => Object {
+                        "denominator": 5n,
+                        "kind": "rational",
+                        "numerator": 3n,
+                      },
+                    },
+                    "kind": "record",
+                    "schema": Object {
+                      "fields": Array [
+                        Object {
+                          "id": 1n,
+                          "name": "SourceKey",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 2n,
+                          "name": "RawMagnitude",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 3n,
+                          "name": "OverlapWithPrior",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 4n,
+                          "name": "IndependentFraction",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 5n,
+                          "name": "EffectiveMagnitude",
+                          "required": true,
+                        },
+                      ],
+                      "name": "CoverageResult",
+                      "schemaVersion": 1n,
+                      "typeId": 405n,
+                    },
+                  },
+                  Object {
+                    "fields": Map {
+                      1n => Object {
+                        "fields": Map {
+                          1n => Object {
+                            "fields": Map {
+                              1n => Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1002n,
+                                "payload": Object {
+                                  "kind": "typedIdentifier",
+                                  "namespaceId": 1037n,
+                                  "payload": Object {
+                                    "kind": "typedIdentifier",
+                                    "namespaceId": 1038n,
+                                    "payload": Object {
+                                      "kind": "text",
+                                      "value": "character/bridge-subject",
+                                    },
+                                  },
+                                },
+                              },
+                              2n => Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1027n,
+                                "payload": Object {
+                                  "kind": "text",
+                                  "value": "definition/protocol-contact-one",
+                                },
+                              },
+                            },
+                            "kind": "record",
+                            "schema": Object {
+                              "fields": Array [
+                                Object {
+                                  "id": 1n,
+                                  "name": "CharacterId",
+                                  "required": true,
+                                },
+                                Object {
+                                  "id": 2n,
+                                  "name": "ProtocolActionDefinitionId",
+                                  "required": true,
+                                },
+                              ],
+                              "name": "ProceduralCandidateKey",
+                              "schemaVersion": 1n,
+                              "typeId": 395n,
+                            },
+                          },
+                          2n => Object {
+                            "fields": Map {
+                              1n => Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1002n,
+                                "payload": Object {
+                                  "kind": "typedIdentifier",
+                                  "namespaceId": 1037n,
+                                  "payload": Object {
+                                    "kind": "typedIdentifier",
+                                    "namespaceId": 1038n,
+                                    "payload": Object {
+                                      "kind": "text",
+                                      "value": "character/bridge-subject",
+                                    },
+                                  },
+                                },
+                              },
+                              2n => Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1002n,
+                                "payload": Object {
+                                  "kind": "typedIdentifier",
+                                  "namespaceId": 1037n,
+                                  "payload": Object {
+                                    "kind": "typedIdentifier",
+                                    "namespaceId": 1038n,
+                                    "payload": Object {
+                                      "kind": "text",
+                                      "value": "content/task-a",
+                                    },
+                                  },
+                                },
+                              },
+                            },
+                            "kind": "record",
+                            "schema": Object {
+                              "fields": Array [
+                                Object {
+                                  "id": 1n,
+                                  "name": "CharacterId",
+                                  "required": true,
+                                },
+                                Object {
+                                  "id": 2n,
+                                  "name": "TaskReferent",
+                                  "required": true,
+                                },
+                              ],
+                              "name": "TaskCommitmentKey",
+                              "schemaVersion": 1n,
+                              "typeId": 371n,
+                            },
+                          },
+                          3n => Object {
+                            "kind": "unsigned",
+-                           "value": 1n,
+-                         },
+-                       },
+-                       "kind": "record",
+-                       "schema": Object {
+-                         "fields": Array [
+-                           Object {
+-                             "id": 1n,
+-                             "name": "CandidateKey",
+-                             "required": true,
+-                           },
+-                           Object {
+-                             "id": 2n,
+-                             "name": "TaskCommitmentKey",
+-                             "required": true,
+-                           },
+-                           Object {
+-                             "id": 3n,
+-                             "name": "SourceRole",
+-                             "required": true,
+-                           },
+-                         ],
+-                         "name": "TaskRawSignalKey",
+-                         "schemaVersion": 1n,
+-                         "typeId": 401n,
+-                       },
+-                     },
+-                     2n => Object {
+-                       "denominator": 4n,
+-                       "kind": "rational",
+-                       "numerator": 1n,
+-                     },
+-                     3n => Object {
+-                       "denominator": 1n,
+-                       "kind": "rational",
+-                       "numerator": 1n,
+-                     },
+-                     4n => Object {
+-                       "denominator": 1n,
+-                       "kind": "rational",
+-                       "numerator": 0n,
+-                     },
+-                     5n => Object {
+-                       "denominator": 1n,
+-                       "kind": "rational",
+-                       "numerator": 0n,
+-                     },
+-                   },
+-                   "kind": "record",
+-                   "schema": Object {
+-                     "fields": Array [
+-                       Object {
+-                         "id": 1n,
+-                         "name": "SourceKey",
+-                         "required": true,
+-                       },
+-                       Object {
+-                         "id": 2n,
+-                         "name": "RawMagnitude",
+-                         "required": true,
+-                       },
+-                       Object {
+-                         "id": 3n,
+-                         "name": "OverlapWithPrior",
+-                         "required": true,
+-                       },
+-                       Object {
+-                         "id": 4n,
+-                         "name": "IndependentFraction",
+-                         "required": true,
+-                       },
+-                       Object {
+-                         "id": 5n,
+-                         "name": "EffectiveMagnitude",
+-                         "required": true,
+-                       },
+-                     ],
+-                     "name": "CoverageResult",
+-                     "schemaVersion": 1n,
+-                     "typeId": 405n,
+-                   },
+-                 },
+-                 Object {
+-                   "fields": Map {
+-                     1n => Object {
+-                       "fields": Map {
+-                         1n => Object {
+-                           "fields": Map {
+-                             1n => Object {
+-                               "kind": "typedIdentifier",
+-                               "namespaceId": 1002n,
+-                               "payload": Object {
+-                                 "kind": "typedIdentifier",
+-                                 "namespaceId": 1037n,
+-                                 "payload": Object {
+-                                   "kind": "typedIdentifier",
+-                                   "namespaceId": 1038n,
+-                                   "payload": Object {
+-                                     "kind": "text",
+-                                     "value": "character/bridge-subject",
+-                                   },
+-                                 },
+-                               },
+-                             },
+-                             2n => Object {
+-                               "kind": "typedIdentifier",
+-                               "namespaceId": 1027n,
+-                               "payload": Object {
+-                                 "kind": "text",
+-                                 "value": "definition/protocol-contact-one",
+-                               },
+-                             },
+-                           },
+-                           "kind": "record",
+-                           "schema": Object {
+-                             "fields": Array [
+-                               Object {
+-                                 "id": 1n,
+-                                 "name": "CharacterId",
+-                                 "required": true,
+-                               },
+-                               Object {
+-                                 "id": 2n,
+-                                 "name": "ProtocolActionDefinitionId",
+-                                 "required": true,
+-                               },
+-                             ],
+-                             "name": "ProceduralCandidateKey",
+-                             "schemaVersion": 1n,
+-                             "typeId": 395n,
+-                           },
+-                         },
+-                         2n => Object {
+-                           "fields": Map {
+-                             1n => Object {
+-                               "kind": "typedIdentifier",
+-                               "namespaceId": 1002n,
+-                               "payload": Object {
+-                                 "kind": "typedIdentifier",
+-                                 "namespaceId": 1037n,
+-                                 "payload": Object {
+-                                   "kind": "typedIdentifier",
+-                                   "namespaceId": 1038n,
+-                                   "payload": Object {
+-                                     "kind": "text",
+-                                     "value": "character/bridge-subject",
+-                                   },
+-                                 },
+-                               },
+-                             },
+-                             2n => Object {
+-                               "kind": "typedIdentifier",
+-                               "namespaceId": 1002n,
+-                               "payload": Object {
+-                                 "kind": "typedIdentifier",
+-                                 "namespaceId": 1037n,
+-                                 "payload": Object {
+-                                   "kind": "typedIdentifier",
+-                                   "namespaceId": 1038n,
+-                                   "payload": Object {
+-                                     "kind": "text",
+-                                     "value": "content/task-a",
+-                                   },
+-                                 },
+-                               },
+-                             },
+-                           },
+-                           "kind": "record",
+-                           "schema": Object {
+-                             "fields": Array [
+-                               Object {
+-                                 "id": 1n,
+-                                 "name": "CharacterId",
+-                                 "required": true,
+-                               },
+-                               Object {
+-                                 "id": 2n,
+-                                 "name": "TaskReferent",
+-                                 "required": true,
+-                               },
+-                             ],
+-                             "name": "TaskCommitmentKey",
+-                             "schemaVersion": 1n,
+-                             "typeId": 371n,
+-                           },
+-                         },
+-                         3n => Object {
+-                           "kind": "unsigned",
+                            "value": 2n,
+                          },
+                        },
+                        "kind": "record",
+                        "schema": Object {
+                          "fields": Array [
+                            Object {
+                              "id": 1n,
+                              "name": "CandidateKey",
+                              "required": true,
+                            },
+                            Object {
+                              "id": 2n,
+                              "name": "TaskCommitmentKey",
+                              "required": true,
+                            },
+                            Object {
+                              "id": 3n,
+                              "name": "SourceRole",
+                              "required": true,
+                            },
+                          ],
+                          "name": "TaskRawSignalKey",
+                          "schemaVersion": 1n,
+                          "typeId": 401n,
+                        },
+                      },
+                      2n => Object {
+                        "denominator": 800n,
+                        "kind": "rational",
+                        "numerator": 119n,
+                      },
+                      3n => Object {
+                        "denominator": 1n,
+                        "kind": "rational",
+                        "numerator": 0n,
+                      },
+                      4n => Object {
+                        "denominator": 1n,
+                        "kind": "rational",
+                        "numerator": 1n,
+                      },
+                      5n => Object {
+                        "denominator": 800n,
+                        "kind": "rational",
+                        "numerator": 119n,
+                      },
+                    },
+                    "kind": "record",
+                    "schema": Object {
+                      "fields": Array [
+                        Object {
+                          "id": 1n,
+                          "name": "SourceKey",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 2n,
+                          "name": "RawMagnitude",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 3n,
+                          "name": "OverlapWithPrior",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 4n,
+                          "name": "IndependentFraction",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 5n,
+                          "name": "EffectiveMagnitude",
+                          "required": true,
+                        },
+                      ],
+                      "name": "CoverageResult",
+                      "schemaVersion": 1n,
+                      "typeId": 405n,
+                    },
+                  },
+                ],
+                "kind": "list",
+              },
+              5n => Object {
+                "denominator": 1n,
+                "kind": "rational",
+                "numerator": 0n,
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "BaseNet",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "StandingNet",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "SituationalNet",
+                  "required": true,
+                },
+                Object {
+                  "id": 4n,
+                  "name": "CoverageResults",
+                  "required": true,
+                },
+                Object {
+                  "id": 5n,
+                  "name": "ContextStrength",
+                  "required": true,
+                },
+              ],
+              "name": "ReasonRoleSummaryWithContext",
+              "schemaVersion": 2n,
+              "typeId": 406n,
+            },
+          },
+          3n => Object {
+            "denominator": 166339n,
+            "kind": "rational",
+            "numerator": 132738n,
+          },
+          4n => Object {
+            "kind": "unsigned",
+            "value": 8n,
+          },
+          5n => Object {
+            "kind": "signed",
+            "value": 0n,
+          },
+          6n => Object {
+            "kind": "signed",
+            "value": 1n,
+          },
+          7n => Object {
+            "fields": Map {
+              1n => Object {
+                "entries": Array [
+                  Array [
+                    Object {
+                      "kind": "signed",
+                      "value": 2n,
+                    },
+                    Object {
+                      "denominator": 8n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "kind": "signed",
+                      "value": 3n,
+                    },
+                    Object {
+                      "denominator": 8n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "kind": "signed",
+                      "value": 4n,
+                    },
+                    Object {
+                      "denominator": 8n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "kind": "signed",
+                      "value": 5n,
+                    },
+                    Object {
+                      "denominator": 8n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "kind": "signed",
+                      "value": 6n,
+                    },
+                    Object {
+                      "denominator": 8n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "kind": "signed",
+                      "value": 7n,
+                    },
+                    Object {
+                      "denominator": 8n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "kind": "signed",
+                      "value": 8n,
+                    },
+                    Object {
+                      "denominator": 8n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "kind": "signed",
+                      "value": 9n,
+                    },
+                    Object {
+                      "denominator": 8n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                ],
+                "kind": "map",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "Masses",
+                  "required": true,
+                },
+              ],
+              "name": "ExactScoreDistribution",
+              "schemaVersion": 1n,
+              "typeId": 424n,
+            },
+          },
+          8n => Object {
+            "kind": "signed",
+            "value": 0n,
+          },
+        },
+        "kind": "record",
+        "schema": Object {
+          "fields": Array [
+            Object {
+              "id": 1n,
+              "name": "Key",
+              "required": true,
+            },
+            Object {
+              "id": 2n,
+              "name": "RoleSummary",
+              "required": true,
+            },
+            Object {
+              "id": 3n,
+              "name": "Relevance",
+              "required": true,
+            },
+            Object {
+              "id": 4n,
+              "name": "BaseDie",
+              "required": true,
+            },
+            Object {
+              "id": 5n,
+              "name": "StandingModifier",
+              "required": true,
+            },
+            Object {
+              "id": 6n,
+              "name": "SituationalModifier",
+              "required": true,
+            },
+            Object {
+              "id": 7n,
+              "name": "Distribution",
+              "required": true,
+            },
+            Object {
+              "id": 8n,
+              "name": "ContextModifier",
+              "required": true,
+            },
+          ],
+          "name": "CompiledReasonNucleusWithContext",
+          "schemaVersion": 2n,
+          "typeId": 407n,
+        },
+      },
+      Object {
+        "fields": Map {
+          1n => Object {
+            "fields": Map {
+              1n => Object {
+                "fields": Map {
+                  1n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1037n,
+                      "payload": Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1038n,
+                        "payload": Object {
+                          "kind": "text",
+                          "value": "character/bridge-subject",
+                        },
+                      },
+                    },
+                  },
+                  2n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1027n,
+                    "payload": Object {
+                      "kind": "text",
+                      "value": "definition/protocol-contact-two",
+                    },
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    Object {
+                      "id": 1n,
+                      "name": "CharacterId",
+                      "required": true,
+                    },
+                    Object {
+                      "id": 2n,
+                      "name": "ProtocolActionDefinitionId",
+                      "required": true,
+                    },
+                  ],
+                  "name": "ProceduralCandidateKey",
+                  "schemaVersion": 1n,
+                  "typeId": 395n,
+                },
+              },
+              2n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1040n,
+                "payload": Object {
+                  "kind": "text",
+                  "value": "Commitment",
+                },
+              },
+              3n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1002n,
+                "payload": Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1037n,
+                  "payload": Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1038n,
+                    "payload": Object {
+                      "kind": "text",
+                      "value": "content/task-b",
+                    },
+                  },
+                },
+              },
+              4n => Object {
+                "kind": "unsigned",
+                "value": 1n,
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "CandidateKey",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "MotiveChannel",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "TaskReferent",
+                  "required": true,
+                },
+                Object {
+                  "id": 4n,
+                  "name": "Direction",
+                  "required": true,
+                },
+              ],
+              "name": "ReasonNucleusKey",
+              "schemaVersion": 1n,
+              "typeId": 404n,
+            },
+          },
+          2n => Object {
+            "fields": Map {
+              1n => Object {
+                "denominator": 8n,
+                "kind": "rational",
+                "numerator": 3n,
+              },
+              2n => Object {
+                "denominator": 1n,
+                "kind": "rational",
+                "numerator": 0n,
+              },
+              3n => Object {
+                "denominator": 1n,
+                "kind": "rational",
+                "numerator": 0n,
+              },
+              4n => Object {
+                "items": Array [
+                  Object {
+                    "fields": Map {
+                      1n => Object {
+                        "fields": Map {
+                          1n => Object {
+                            "fields": Map {
+                              1n => Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1002n,
+                                "payload": Object {
+                                  "kind": "typedIdentifier",
+                                  "namespaceId": 1037n,
+                                  "payload": Object {
+                                    "kind": "typedIdentifier",
+                                    "namespaceId": 1038n,
+                                    "payload": Object {
+                                      "kind": "text",
+                                      "value": "character/bridge-subject",
+                                    },
+                                  },
+                                },
+                              },
+                              2n => Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1027n,
+                                "payload": Object {
+                                  "kind": "text",
+                                  "value": "definition/protocol-contact-two",
+                                },
+                              },
+                            },
+                            "kind": "record",
+                            "schema": Object {
+                              "fields": Array [
+                                Object {
+                                  "id": 1n,
+                                  "name": "CharacterId",
+                                  "required": true,
+                                },
+                                Object {
+                                  "id": 2n,
+                                  "name": "ProtocolActionDefinitionId",
+                                  "required": true,
+                                },
+                              ],
+                              "name": "ProceduralCandidateKey",
+                              "schemaVersion": 1n,
+                              "typeId": 395n,
+                            },
+                          },
+                          2n => Object {
+                            "fields": Map {
+                              1n => Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1002n,
+                                "payload": Object {
+                                  "kind": "typedIdentifier",
+                                  "namespaceId": 1037n,
+                                  "payload": Object {
+                                    "kind": "typedIdentifier",
+                                    "namespaceId": 1038n,
+                                    "payload": Object {
+                                      "kind": "text",
+                                      "value": "character/bridge-subject",
+                                    },
+                                  },
+                                },
+                              },
+                              2n => Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1002n,
+                                "payload": Object {
+                                  "kind": "typedIdentifier",
+                                  "namespaceId": 1037n,
+                                  "payload": Object {
+                                    "kind": "typedIdentifier",
+                                    "namespaceId": 1038n,
+                                    "payload": Object {
+                                      "kind": "text",
+                                      "value": "content/task-b",
+                                    },
+                                  },
+                                },
+                              },
+                            },
+                            "kind": "record",
+                            "schema": Object {
+                              "fields": Array [
+                                Object {
+                                  "id": 1n,
+                                  "name": "CharacterId",
+                                  "required": true,
+                                },
+                                Object {
+                                  "id": 2n,
+                                  "name": "TaskReferent",
+                                  "required": true,
+                                },
+                              ],
+                              "name": "TaskCommitmentKey",
+                              "schemaVersion": 1n,
+                              "typeId": 371n,
+                            },
+                          },
+                          3n => Object {
+                            "kind": "unsigned",
+                            "value": 1n,
+                          },
+                        },
+                        "kind": "record",
+                        "schema": Object {
+                          "fields": Array [
+                            Object {
+                              "id": 1n,
+                              "name": "CandidateKey",
+                              "required": true,
+                            },
+                            Object {
+                              "id": 2n,
+                              "name": "TaskCommitmentKey",
+                              "required": true,
+                            },
+                            Object {
+                              "id": 3n,
+                              "name": "SourceRole",
+                              "required": true,
+                            },
+                          ],
+                          "name": "TaskRawSignalKey",
+                          "schemaVersion": 1n,
+                          "typeId": 401n,
+                        },
+                      },
+                      2n => Object {
+                        "denominator": 5n,
+                        "kind": "rational",
+                        "numerator": 3n,
+                      },
+                      3n => Object {
+                        "denominator": 1n,
+                        "kind": "rational",
+                        "numerator": 0n,
+                      },
+                      4n => Object {
+                        "denominator": 1n,
+                        "kind": "rational",
+                        "numerator": 1n,
+                      },
+                      5n => Object {
+                        "denominator": 5n,
+                        "kind": "rational",
+                        "numerator": 3n,
+                      },
+                    },
+                    "kind": "record",
+                    "schema": Object {
+                      "fields": Array [
+                        Object {
+                          "id": 1n,
+                          "name": "SourceKey",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 2n,
+                          "name": "RawMagnitude",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 3n,
+                          "name": "OverlapWithPrior",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 4n,
+                          "name": "IndependentFraction",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 5n,
+                          "name": "EffectiveMagnitude",
+                          "required": true,
+                        },
+                      ],
+                      "name": "CoverageResult",
+                      "schemaVersion": 1n,
+                      "typeId": 405n,
+                    },
+                  },
+                ],
+                "kind": "list",
+              },
+              5n => Object {
+                "denominator": 1n,
+                "kind": "rational",
+                "numerator": 0n,
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "BaseNet",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "StandingNet",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "SituationalNet",
+                  "required": true,
+                },
+                Object {
+                  "id": 4n,
+                  "name": "CoverageResults",
+                  "required": true,
+                },
+                Object {
+                  "id": 5n,
+                  "name": "ContextStrength",
+                  "required": true,
+                },
+              ],
+              "name": "ReasonRoleSummaryWithContext",
+              "schemaVersion": 2n,
+              "typeId": 406n,
+            },
+          },
+          3n => Object {
+            "denominator": 8n,
+            "kind": "rational",
+            "numerator": 3n,
+          },
+          4n => Object {
+            "kind": "unsigned",
+            "value": 4n,
+          },
+          5n => Object {
+            "kind": "signed",
+            "value": 0n,
+          },
+          6n => Object {
+            "kind": "signed",
+            "value": 0n,
+          },
+          7n => Object {
+            "fields": Map {
+              1n => Object {
+                "entries": Array [
+                  Array [
+                    Object {
+                      "kind": "signed",
+                      "value": 1n,
+                    },
+                    Object {
+                      "denominator": 4n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "kind": "signed",
+                      "value": 2n,
+                    },
+                    Object {
+                      "denominator": 4n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "kind": "signed",
+                      "value": 3n,
+                    },
+                    Object {
+                      "denominator": 4n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "kind": "signed",
+                      "value": 4n,
+                    },
+                    Object {
+                      "denominator": 4n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                ],
+                "kind": "map",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "Masses",
+                  "required": true,
+                },
+              ],
+              "name": "ExactScoreDistribution",
+              "schemaVersion": 1n,
+              "typeId": 424n,
+            },
+          },
+          8n => Object {
+            "kind": "signed",
+            "value": 0n,
+          },
+        },
+        "kind": "record",
+        "schema": Object {
+          "fields": Array [
+            Object {
+              "id": 1n,
+              "name": "Key",
+              "required": true,
+            },
+            Object {
+              "id": 2n,
+              "name": "RoleSummary",
+              "required": true,
+            },
+            Object {
+              "id": 3n,
+              "name": "Relevance",
+              "required": true,
+            },
+            Object {
+              "id": 4n,
+              "name": "BaseDie",
+              "required": true,
+            },
+            Object {
+              "id": 5n,
+              "name": "StandingModifier",
+              "required": true,
+            },
+            Object {
+              "id": 6n,
+              "name": "SituationalModifier",
+              "required": true,
+            },
+            Object {
+              "id": 7n,
+              "name": "Distribution",
+              "required": true,
+            },
+            Object {
+              "id": 8n,
+              "name": "ContextModifier",
+              "required": true,
+            },
+          ],
+          "name": "CompiledReasonNucleusWithContext",
+          "schemaVersion": 2n,
+          "typeId": 407n,
+        },
+      },
+    ],
+    "kind": "set",
+  }
+
+ ❯ src/test/assembledReasonReference.test.ts:15:20
+     13|  const b=capture(collective.run,collective.b.s),p=capture(a.run,a.b.s)…
+     14|  expect(b.samples).toHaveLength(2);expect(b.produced).toHaveLength(3);…
+     15|  expect(set(p.ns)).toEqual(set(b.ns));expect(p.probabilities).toEqual(…
+       |                    ^
+     16|  const coverage=b.groups.flatMap(g=>items(g[3],'list').map(v=>items(v,…
+     17|  expect(combined).toBeDefined();expect(combined[4]).toEqual(q(1,1));ex…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  10:36:15
+   Duration  90.66s (transform 2.52s, setup 0ms, collect 3.78s, tests 86.44s, environment 0ms, prepare 117ms)
+
+
+M94_CHECK collective-adapter-repaired exit=1 seconds=91.19 timeout=False
+
+M94_START collective-semantic-projection ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledReasonReference.test.ts', '-t', 'M94 collective', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReasonReference.test.ts > M94 collective: one reference retains full support without redundant weight
+M94 COLLECTIVE PASS residual0 base121/181; old0.79 base257/377 on identical sources; ordinary input permutation exact
+
+ ✓ src/test/assembledReasonReference.test.ts > M94 collective: one reference retains full support without redundant weight 102420ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  10:38:05
+   Duration  106.61s (transform 2.51s, setup 0ms, collect 3.77s, tests 102.42s, environment 0ms, prepare 120ms)
+
+
+M94_CHECK collective-semantic-projection exit=0 seconds=107.12 timeout=False
+
+M94_START continuation ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledReasonReference.test.ts', '-t', 'M94 persistence', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReasonReference.test.ts > M94 persistence: every settlement and whole-instant rollback
+M94 CONTINUATION 9 -> 10,11,12,13,14,20,40,101
+
+stdout | src/test/assembledReasonReference.test.ts > M94 persistence: every settlement and whole-instant rollback
+M94 CONTINUATION 10 -> 11,12,13,14,20,40,101
+
+stdout | src/test/assembledReasonReference.test.ts > M94 persistence: every settlement and whole-instant rollback
+M94 ROLLBACK PASS complete instant
+
+ ✓ src/test/assembledReasonReference.test.ts > M94 persistence: every settlement and whole-instant rollback 230962ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  10:40:01
+   Duration  235.19s (transform 2.52s, setup 0ms, collect 3.78s, tests 230.96s, environment 0ms, prepare 133ms)
+
+
+M94_CHECK continuation exit=0 seconds=235.70 timeout=False
+
+M94_START retained-context ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledContextReasons.test.ts', '-t', 'M88 native', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledContextReasons.test.ts > M88 native: distinct context changes exact probabilities and actual coupled sampled scores
+M88 NATIVE {"probabilities":["061220","062e20"],"zeroProbabilities":["062e20","061220"],"modes":[2,2],"draws":[2,3],"sharedReasonDraws":2,"changedSampledScores":1,"winnerChanged":true}
+
+ ✓ src/test/assembledContextReasons.test.ts > M88 native: distinct context changes exact probabilities and actual coupled sampled scores 86258ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  10:44:05
+   Duration  90.48s (transform 2.55s, setup 0ms, collect 3.81s, tests 86.26s, environment 0ms, prepare 126ms)
+
+
+M94_CHECK retained-context exit=0 seconds=90.99 timeout=False
+
+M94_START final-types ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+
+M94_CHECK final-types exit=0 seconds=16.77 timeout=False
+
+M94_START boundaries ['node', 'scripts/check-reference-boundaries.mjs']
+node:internal/modules/cjs/loader:1568
+  throw err;
+  ^
+
+Error: Cannot find module 'C:\Users\scoob\.codex\worktrees\assembled-character\characterlab\scripts\check-reference-boundaries.mjs'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1564:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1118:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1142:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1169:12)
+    at Module._load (node:internal/modules/cjs/loader:1341:5)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v24.20.0
+
+M94_CHECK boundaries exit=1 seconds=0.05 timeout=False
+
+M94_START research ['node', 'scripts/check-research-obligations.mjs']
+PASS: research obligation references and dispositions {"active":1,"conditional":17,"closed":4,"unowned":0,"verdicts":103,"reports":4327}
+
+M94_CHECK research exit=0 seconds=3.41 timeout=False
+
+M94_START boundaries-corrected ['node', 'scripts/check-reference-boundary.mjs']
+Reference boundary check passed.
+
+M94_CHECK boundaries-corrected exit=0 seconds=2.51 timeout=False
+
+M94_START git-size ['node', 'scripts/check-git-file-sizes.mjs']
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M94_CHECK git-size exit=0 seconds=0.32 timeout=False
+
+Document check first caught work order251 lines; removed one blank line; all budgets PASS.
+AGENTS.md: 120 lines
+docs/planning/CURRENT.md: 33 lines
+docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md: 250 lines
+docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md: 149 lines
+Final verification 859.12s /1800s including all failures and15s bookkeeping; longest 235.70s /600s.

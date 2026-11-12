@@ -1,5 +1,4 @@
 # Assembled Character work order
-
 Owner authorized2026-10-25; M0/M1, M2 D1-D5 with D2 condition adopted. No law selected or reduction granted.
 
 ## Outcome and authority
