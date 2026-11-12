@@ -1,0 +1,1013 @@
+
+M95_START types ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+
+M95_CHECK types exit=0 seconds=16.85 timeout=False
+
+M95_START isolated-competitors ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledReasonReplay.test.ts', '-t', 'M95 isolated|M95 standing competitor', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReasonReplay.test.ts > M95 isolated: motive and basis interventions; native-source PairwiseOnly
+M95 ISOLATED PASS motive-only keys1 ->2; basis-only17/29 ->3/7; all native collective sources retained, original Pairwise residual1/8 vs0 with unchanged quantized probability
+
+ ✓ src/test/assembledReasonReplay.test.ts > M95 isolated: motive and basis interventions; native-source PairwiseOnly 69940ms
+stdout | src/test/assembledReasonReplay.test.ts > M95 standing competitor: whole acquired input and separate-die alternative
+M95 IDENTITY PASS all7 sources/groups5+2; separate standing bases subthreshold, weak rescue lost; probabilities55/64,9/64 ->1,0
+
+ ✓ src/test/assembledReasonReplay.test.ts > M95 standing competitor: whole acquired input and separate-die alternative 29663ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 9 skipped (11)
+   Start at  10:51:30
+   Duration  103.85s (transform 2.56s, setup 0ms, collect 3.84s, tests 99.60s, environment 0ms, prepare 123ms)
+
+
+M95_CHECK isolated-competitors exit=0 seconds=104.37 timeout=False
+
+M95_START native-keys-signs ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledReasonReplay.test.ts', '-t', 'M95 keys|M95 cancellation', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReasonReplay.test.ts > M95 keys: reference preserves referent, sign, role and duplicate semantics
+M95 KEYS PASS counts2/3/3/2; probabilities retained; pooled loses task key; duplicate descriptions exact zero
+
+ ✓ src/test/assembledReasonReplay.test.ts > M95 keys: reference preserves referent, sign, role and duplicate semantics 157688ms
+stdout | src/test/assembledReasonReplay.test.ts > M95 cancellation: opposing sources resolve before dice; PerFactDie differs
+M95 CANCELLATION PASS signed counts3/2/3; exact zero retains both sources; original PerFactDie4 gives1/2,1/2
+
+ ✓ src/test/assembledReasonReplay.test.ts > M95 cancellation: opposing sources resolve before dice; PerFactDie differs 53941ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 9 skipped (11)
+   Start at  10:53:28
+   Duration  215.91s (transform 2.55s, setup 0ms, collect 3.84s, tests 211.63s, environment 0ms, prepare 128ms)
+
+
+M95_CHECK native-keys-signs exit=0 seconds=216.43 timeout=False
+
+M95_START learned-value ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledReasonReplay.test.ts', '-t', 'M95 Value', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledReasonReplay.test.ts > M95 Value: genuine learned motive cites receipts and changes probabilities 104688ms
+   → unknown record schema 399/2
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledReasonReplay.test.ts > M95 Value: genuine learned motive cites receipts and changes probabilities
+CanonicalEncodingError: unknown record schema 399/2
+ ❯ fail src/substrate/canonicalEncoding.ts:430:9
+    428|
+    429| function fail(message: string): never {
+    430|   throw new CanonicalEncodingError(message);
+       |         ^
+    431| }
+    432|
+ ❯ Reader.readRecord src/substrate/canonicalEncoding.ts:348:18
+ ❯ Reader.readValue src/substrate/canonicalEncoding.ts:257:36
+ ❯ Reader.readMap src/substrate/canonicalEncoding.ts:320:24
+ ❯ Reader.readValue src/substrate/canonicalEncoding.ts:255:33
+ ❯ Reader.readRecord src/substrate/canonicalEncoding.ts:359:34
+ ❯ Reader.readValue src/substrate/canonicalEncoding.ts:257:36
+ ❯ Reader.readRecord src/substrate/canonicalEncoding.ts:359:34
+ ❯ Reader.readValue src/substrate/canonicalEncoding.ts:257:36
+ ❯ Module.canonicalDecode src/substrate/canonicalEncoding.ts:107:24
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 10 skipped (11)
+   Start at  10:57:37
+   Duration  108.93s (transform 2.55s, setup 0ms, collect 3.82s, tests 104.69s, environment 0ms, prepare 120ms)
+
+
+M95_CHECK learned-value exit=1 seconds=109.47 timeout=False
+
+M95_START value-adapter-types ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+
+M95_CHECK value-adapter-types exit=0 seconds=16.55 timeout=False
+
+M95_START learned-value-bijection ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledReasonReplay.test.ts', '-t', 'M95 Value', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReasonReplay.test.ts > M95 Value: genuine learned motive cites receipts and changes probabilities
+M95 EVIDENCE BIJECTION 26 distinct atoms; inverse/weights exact; diagnostic only
+
+ × src/test/assembledReasonReplay.test.ts > M95 Value: genuine learned motive cites receipts and changes probabilities 104989ms
+   → expected { kind: 'set', …(1) } to deeply equal { kind: 'set', …(1) }
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledReasonReplay.test.ts > M95 Value: genuine learned motive cites receipts and changes probabilities
+AssertionError: expected { kind: 'set', …(1) } to deeply equal { kind: 'set', …(1) }
+
+- Expected
++ Received
+
+  Object {
+    "items": Array [
+      Object {
+        "items": Array [
+          Object {
+            "items": Array [
+              Object {
+                "fields": Map {
+                  1n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1037n,
+                      "payload": Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1038n,
+                        "payload": Object {
+                          "kind": "text",
+                          "value": "character/bridge-subject",
+                        },
+                      },
+                    },
+                  },
+                  2n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1027n,
+                    "payload": Object {
+                      "kind": "text",
+                      "value": "definition/protocol-contact-one",
+                    },
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    Object {
+                      "id": 1n,
+                      "name": "CharacterId",
+                      "required": true,
+                    },
+                    Object {
+                      "id": 2n,
+                      "name": "ProtocolActionDefinitionId",
+                      "required": true,
+                    },
+                  ],
+                  "name": "ProceduralCandidateKey",
+                  "schemaVersion": 1n,
+                  "typeId": 395n,
+                },
+              },
+              Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1040n,
+                "payload": Object {
+                  "kind": "text",
+-                 "value": "Commitment",
++                 "value": "Value",
+                },
+              },
+              Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1002n,
+                "payload": Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1037n,
+                  "payload": Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1038n,
+                    "payload": Object {
+                      "kind": "text",
+                      "value": "content/task-a",
+                    },
+                  },
+                },
+              },
+              Object {
+                "kind": "unsigned",
+                "value": 1n,
+              },
+            ],
+            "kind": "list",
+          },
+          Object {
+-           "denominator": 181n,
++           "denominator": 3n,
+            "kind": "rational",
+-           "numerator": 121n,
++           "numerator": 1n,
+          },
+          Object {
+            "denominator": 1n,
+            "kind": "rational",
+            "numerator": 0n,
+          },
+          Object {
+-           "denominator": 939n,
++           "denominator": 1n,
+            "kind": "rational",
+-           "numerator": 139n,
++           "numerator": 0n,
+          },
+          Object {
+            "denominator": 1n,
+            "kind": "rational",
+            "numerator": 0n,
+          },
+          Object {
+-           "denominator": 169959n,
++           "denominator": 3n,
+            "kind": "rational",
+-           "numerator": 138778n,
++           "numerator": 1n,
+          },
+          Object {
+            "kind": "unsigned",
+-           "value": 8n,
++           "value": 6n,
+          },
+          Object {
+            "kind": "signed",
+            "value": 0n,
+          },
+          Object {
+            "kind": "signed",
+-           "value": 1n,
++           "value": 0n,
+          },
+          Object {
+            "kind": "signed",
+            "value": 0n,
+          },
+          Object {
+            "fields": Map {
+              1n => Object {
+                "entries": Array [
+                  Array [
+                    Object {
+                      "kind": "signed",
+-                     "value": 2n,
+-                   },
+-                   Object {
+-                     "denominator": 8n,
+-                     "kind": "rational",
+-                     "numerator": 1n,
+-                   },
+-                 ],
+-                 Array [
+-                   Object {
+-                     "kind": "signed",
+-                     "value": 3n,
++                     "value": 1n,
+                    },
+                    Object {
+-                     "denominator": 8n,
++                     "denominator": 6n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "kind": "signed",
+-                     "value": 4n,
++                     "value": 2n,
+                    },
+                    Object {
+-                     "denominator": 8n,
++                     "denominator": 6n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "kind": "signed",
+-                     "value": 5n,
+-                   },
+-                   Object {
+-                     "denominator": 8n,
+-                     "kind": "rational",
+-                     "numerator": 1n,
+-                   },
+-                 ],
+-                 Array [
+-                   Object {
+-                     "kind": "signed",
+-                     "value": 6n,
++                     "value": 3n,
+                    },
+                    Object {
+-                     "denominator": 8n,
++                     "denominator": 6n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "kind": "signed",
+-                     "value": 7n,
++                     "value": 4n,
+                    },
+                    Object {
+-                     "denominator": 8n,
++                     "denominator": 6n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "kind": "signed",
+-                     "value": 8n,
++                     "value": 5n,
+                    },
+                    Object {
+-                     "denominator": 8n,
++                     "denominator": 6n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "kind": "signed",
+-                     "value": 9n,
++                     "value": 6n,
+                    },
+                    Object {
+-                     "denominator": 8n,
++                     "denominator": 6n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                ],
+                "kind": "map",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "Masses",
+                  "required": true,
+                },
+              ],
+              "name": "ExactScoreDistribution",
+              "schemaVersion": 1n,
+              "typeId": 424n,
+            },
+          },
+        ],
+        "kind": "list",
+      },
+      Object {
+        "items": Array [
+          Object {
+            "items": Array [
+              Object {
+                "fields": Map {
+                  1n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1037n,
+                      "payload": Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1038n,
+                        "payload": Object {
+                          "kind": "text",
+                          "value": "character/bridge-subject",
+                        },
+                      },
+                    },
+                  },
+                  2n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1027n,
+                    "payload": Object {
+                      "kind": "text",
+-                     "value": "definition/protocol-contact-two",
++                     "value": "definition/protocol-contact-one",
+                    },
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    Object {
+                      "id": 1n,
+                      "name": "CharacterId",
+                      "required": true,
+                    },
+                    Object {
+                      "id": 2n,
+                      "name": "ProtocolActionDefinitionId",
+                      "required": true,
+                    },
+                  ],
+                  "name": "ProceduralCandidateKey",
+                  "schemaVersion": 1n,
+                  "typeId": 395n,
+                },
+              },
+              Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1040n,
+                "payload": Object {
+                  "kind": "text",
+                  "value": "Commitment",
+                },
+              },
+              Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1002n,
+                "payload": Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1037n,
+                  "payload": Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1038n,
+                    "payload": Object {
+                      "kind": "text",
+-                     "value": "content/task-b",
++                     "value": "content/task-a",
+                    },
+                  },
+                },
+              },
+              Object {
+                "kind": "unsigned",
+                "value": 1n,
+              },
+            ],
+            "kind": "list",
+          },
+          Object {
+-           "denominator": 8n,
++           "denominator": 181n,
+            "kind": "rational",
+-           "numerator": 3n,
++           "numerator": 121n,
+          },
+          Object {
+            "denominator": 1n,
+            "kind": "rational",
+            "numerator": 0n,
+          },
+          Object {
+-           "denominator": 1n,
++           "denominator": 939n,
+            "kind": "rational",
+-           "numerator": 0n,
++           "numerator": 139n,
+          },
+          Object {
+            "denominator": 1n,
+            "kind": "rational",
+            "numerator": 0n,
+          },
+          Object {
+-           "denominator": 8n,
++           "denominator": 169959n,
+            "kind": "rational",
+-           "numerator": 3n,
++           "numerator": 138778n,
+          },
+          Object {
+            "kind": "unsigned",
+-           "value": 4n,
++           "value": 8n,
+          },
+          Object {
+            "kind": "signed",
+            "value": 0n,
+          },
+          Object {
+            "kind": "signed",
+-           "value": 0n,
++           "value": 1n,
+          },
+          Object {
+            "kind": "signed",
+            "value": 0n,
+          },
+          Object {
+            "fields": Map {
+              1n => Object {
+                "entries": Array [
+                  Array [
+                    Object {
+                      "kind": "signed",
+-                     "value": 1n,
++                     "value": 2n,
+                    },
+                    Object {
+-                     "denominator": 4n,
++                     "denominator": 8n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "kind": "signed",
+-                     "value": 2n,
++                     "value": 3n,
+                    },
+                    Object {
+-                     "denominator": 4n,
++                     "denominator": 8n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "kind": "signed",
+-                     "value": 3n,
++                     "value": 4n,
+                    },
+                    Object {
+-                     "denominator": 4n,
++                     "denominator": 8n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "kind": "signed",
+-                     "value": 4n,
++                     "value": 5n,
++                   },
++                   Object {
++                     "denominator": 8n,
++                     "kind": "rational",
++                     "numerator": 1n,
++                   },
++                 ],
++                 Array [
++                   Object {
++                     "kind": "signed",
++                     "value": 6n,
++                   },
++                   Object {
++                     "denominator": 8n,
++                     "kind": "rational",
++                     "numerator": 1n,
++                   },
++                 ],
++                 Array [
++                   Object {
++                     "kind": "signed",
++                     "value": 7n,
++                   },
++                   Object {
++                     "denominator": 8n,
++                     "kind": "rational",
++                     "numerator": 1n,
++                   },
++                 ],
++                 Array [
++                   Object {
++                     "kind": "signed",
++                     "value": 8n,
++                   },
++                   Object {
++                     "denominator": 8n,
++                     "kind": "rational",
++                     "numerator": 1n,
++                   },
++                 ],
++                 Array [
++                   Object {
++                     "kind": "signed",
++                     "value": 9n,
+                    },
+                    Object {
+-                     "denominator": 4n,
++                     "denominator": 8n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                ],
+                "kind": "map",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "Masses",
+                  "required": true,
+                },
+              ],
+              "name": "ExactScoreDistribution",
+              "schemaVersion": 1n,
+              "typeId": 424n,
+            },
+          },
+        ],
+        "kind": "list",
+      },
+      Object {
+        "items": Array [
+          Object {
+            "items": Array [
+              Object {
+                "fields": Map {
+                  1n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1037n,
+                      "payload": Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1038n,
+                        "payload": Object {
+                          "kind": "text",
+                          "value": "character/bridge-subject",
+                        },
+                      },
+                    },
+                  },
+                  2n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1027n,
+                    "payload": Object {
+                      "kind": "text",
+-                     "value": "definition/protocol-contact-one",
++                     "value": "definition/protocol-contact-two",
+                    },
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    Object {
+                      "id": 1n,
+                      "name": "CharacterId",
+                      "required": true,
+                    },
+                    Object {
+                      "id": 2n,
+                      "name": "ProtocolActionDefinitionId",
+                      "required": true,
+                    },
+                  ],
+                  "name": "ProceduralCandidateKey",
+                  "schemaVersion": 1n,
+                  "typeId": 395n,
+                },
+              },
+              Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1040n,
+                "payload": Object {
+                  "kind": "text",
+-                 "value": "Value",
++                 "value": "Commitment",
+                },
+              },
+              Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1002n,
+                "payload": Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1037n,
+                  "payload": Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1038n,
+                    "payload": Object {
+                      "kind": "text",
+-                     "value": "content/task-a",
++                     "value": "content/task-b",
+                    },
+                  },
+                },
+              },
+              Object {
+                "kind": "unsigned",
+                "value": 1n,
+              },
+            ],
+            "kind": "list",
+          },
+          Object {
+-           "denominator": 3n,
++           "denominator": 8n,
+            "kind": "rational",
+-           "numerator": 1n,
++           "numerator": 3n,
+          },
+          Object {
+            "denominator": 1n,
+            "kind": "rational",
+            "numerator": 0n,
+          },
+          Object {
+            "denominator": 1n,
+            "kind": "rational",
+            "numerator": 0n,
+          },
+          Object {
+            "denominator": 1n,
+            "kind": "rational",
+            "numerator": 0n,
+          },
+          Object {
+-           "denominator": 3n,
++           "denominator": 8n,
+            "kind": "rational",
+-           "numerator": 1n,
++           "numerator": 3n,
+          },
+          Object {
+            "kind": "unsigned",
+-           "value": 6n,
++           "value": 4n,
+          },
+          Object {
+            "kind": "signed",
+            "value": 0n,
+          },
+          Object {
+            "kind": "signed",
+            "value": 0n,
+          },
+          Object {
+            "kind": "signed",
+            "value": 0n,
+          },
+          Object {
+            "fields": Map {
+              1n => Object {
+                "entries": Array [
+                  Array [
+                    Object {
+                      "kind": "signed",
+                      "value": 1n,
+                    },
+                    Object {
+-                     "denominator": 6n,
++                     "denominator": 4n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "kind": "signed",
+                      "value": 2n,
+                    },
+                    Object {
+-                     "denominator": 6n,
++                     "denominator": 4n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "kind": "signed",
+                      "value": 3n,
+                    },
+                    Object {
+-                     "denominator": 6n,
++                     "denominator": 4n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "kind": "signed",
+                      "value": 4n,
+                    },
+                    Object {
+-                     "denominator": 6n,
+-                     "kind": "rational",
+-                     "numerator": 1n,
+-                   },
+-                 ],
+-                 Array [
+-                   Object {
+-                     "kind": "signed",
+-                     "value": 5n,
+-                   },
+-                   Object {
+-                     "denominator": 6n,
+-                     "kind": "rational",
+-                     "numerator": 1n,
+-                   },
+-                 ],
+-                 Array [
+-                   Object {
+-                     "kind": "signed",
+-                     "value": 6n,
+-                   },
+-                   Object {
+-                     "denominator": 6n,
++                     "denominator": 4n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                ],
+                "kind": "map",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "Masses",
+                  "required": true,
+                },
+              ],
+              "name": "ExactScoreDistribution",
+              "schemaVersion": 1n,
+              "typeId": 424n,
+            },
+          },
+        ],
+        "kind": "list",
+      },
+    ],
+    "kind": "set",
+  }
+
+ ❯ agreement src/test/assembledReasonReplay.test.ts:51:158
+
+ ❯ src/test/assembledReasonReplay.test.ts:75:191
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 10 skipped (11)
+   Start at  11:01:37
+   Duration  109.23s (transform 2.55s, setup 0ms, collect 3.82s, tests 104.99s, environment 0ms, prepare 119ms)
+
+
+M95_CHECK learned-value-bijection exit=1 seconds=109.77 timeout=False
+
+M95_START learned-value-canonical-sets ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledReasonReplay.test.ts', '-t', 'M95 Value', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReasonReplay.test.ts > M95 Value: genuine learned motive cites receipts and changes probabilities
+M95 EVIDENCE BIJECTION 26 distinct atoms; inverse/weights exact; diagnostic only
+
+ × src/test/assembledReasonReplay.test.ts > M95 Value: genuine learned motive cites receipts and changes probabilities 111029ms
+   → cognitive record grammar: unsupported receiving record version
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledReasonReplay.test.ts > M95 Value: genuine learned motive cites receipts and changes probabilities
+SchedulerContractError: cognitive record grammar: unsupported receiving record version
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ fail src/assembled/codecs.ts:28:36
+ ❯ Module.receivingRecord src/assembled/codecs.ts:178:222
+ ❯ src/test/assembledReasonReplay.test.ts:80:210
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 10 skipped (11)
+   Start at  11:04:39
+   Duration  115.27s (transform 2.55s, setup 0ms, collect 3.82s, tests 111.03s, environment 0ms, prepare 121ms)
+
+
+M95_CHECK learned-value-canonical-sets exit=1 seconds=115.80 timeout=False
+
+M95_START learned-value-receipt-reader ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledReasonReplay.test.ts', '-t', 'M95 Value', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReasonReplay.test.ts > M95 Value: genuine learned motive cites receipts and changes probabilities
+M95 EVIDENCE BIJECTION 26 distinct atoms; inverse/weights exact; diagnostic only
+
+stdout | src/test/assembledReasonReplay.test.ts > M95 Value: genuine learned motive cites receipts and changes probabilities
+M95 VALUE PASS actual receipt10 supports distinct Value/Commitment same referent; A55/64 ->379/384; hidden exact, denied acquisition absent
+
+ ✓ src/test/assembledReasonReplay.test.ts > M95 Value: genuine learned motive cites receipts and changes probabilities 161420ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 10 skipped (11)
+   Start at  11:07:35
+   Duration  165.67s (transform 2.54s, setup 0ms, collect 3.80s, tests 161.42s, environment 0ms, prepare 124ms)
+
+
+M95_CHECK learned-value-receipt-reader exit=0 seconds=166.18 timeout=False
+
+M95_START continuation ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledReasonReplay.test.ts', '-t', 'M95 continuation', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReasonReplay.test.ts > M95 continuation: learned Value and cancellation survive every settlement
+M95 CONTINUATION 10 -> 11,12,13,14,20,40,101
+
+stdout | src/test/assembledReasonReplay.test.ts > M95 continuation: learned Value and cancellation survive every settlement
+M95 CONTINUATION 9 -> 10,11,12,13,14,20,40,101
+
+stdout | src/test/assembledReasonReplay.test.ts > M95 continuation: learned Value and cancellation survive every settlement
+M95 ROLLBACK PASS complete cancelled-reason instant
+
+ ✓ src/test/assembledReasonReplay.test.ts > M95 continuation: learned Value and cancellation survive every settlement 230068ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 10 skipped (11)
+   Start at  11:10:30
+   Duration  234.33s (transform 2.55s, setup 0ms, collect 3.83s, tests 230.07s, environment 0ms, prepare 129ms)
+
+
+M95_CHECK continuation exit=0 seconds=234.84 timeout=False
+
+M95_START retained-original-controls ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/reasonPublic.test.ts', '-t', 'acquires standing|keeps situation/context|resolves opposing', '--testTimeout=30000', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/reasonPublic.test.ts > acquires standing from actual qualification and distinguishes zero-base from weak-motive rescue 833ms
+ ✓ src/test/reasonPublic.test.ts > keeps situation/context roles separate and permits rescue without creating base motives 424ms
+ ✓ src/test/reasonPublic.test.ts > resolves opposing base signs before threshold and applies Avoid to the whole expression 535ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 18 skipped (21)
+   Start at  11:15:43
+   Duration  3.39s (transform 800ms, setup 0ms, collect 1.21s, tests 1.79s, environment 0ms, prepare 119ms)
+
+
+M95_CHECK retained-original-controls exit=0 seconds=3.90 timeout=False
+
+M95_START final-types ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+
+M95_CHECK final-types exit=0 seconds=16.45 timeout=False
+
+M95_START boundaries ['node', 'scripts/check-reference-boundary.mjs']
+Reference boundary check passed.
+
+M95_CHECK boundaries exit=0 seconds=2.44 timeout=False
+
+M95_START research ['node', 'scripts/check-research-obligations.mjs']
+PASS: research obligation references and dispositions {"active":1,"conditional":17,"closed":4,"unowned":0,"verdicts":103,"reports":4328}
+
+M95_CHECK research exit=0 seconds=3.47 timeout=False
+
+M95_START mapping-documents ['python', '-c', "from pathlib import Path\nimport json,re\nroot=Path('docs/planning');r=(root/'ASSEMBLED_CHARACTER_M95_RESULT.md').read_text(encoding='utf-8')\nc=json.loads((root/'campaign3-hq012-exit-review-rev1/corpus.json').read_text(encoding='utf-8-sig'))\nexpected=[x['key'].split(':')[1] for x in c['members'][6]['requirements']]\nassert re.findall(r'^\\| :(\\d+) \\|',r,re.M)==expected\nfor link in re.findall(r'\\]\\(([^)]+)\\)',r):assert (root/link.split('#')[0]).is_file(),link\nfor file,limit in [('AGENTS.md',120),('docs/planning/CURRENT.md',80),('docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md',250),('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md',250)]:\n n=len(Path(file).read_text(encoding='utf-8').splitlines());assert n<=limit,(file,n);print(file,n,'lines')\ns=(root/'ASSEMBLED_CHARACTER_RECONCILIATION.md').read_text(encoding='utf-8');size=len(s.replace('\\n','\\r\\n').encode('utf-8'));assert size<=65536,size\nmapped=[l for l in s.splitlines() if l.startswith('| EQUIVALENT (mapped) | C-')];assert len(mapped)==4,len(mapped)\nfiles=list(root.glob('ASSEMBLED_CHARACTER_M95_*'));assert len(files)==2\nsizeEvidence=sum(p.stat().st_size for p in files);assert sizeEvidence<5*1024*1024\nprint('PASS all10 pinned keys and links;4 mapped members; register CRLF bytes',size,';2 evidence files bytes',sizeEvidence)\n"]
+Traceback (most recent call last):
+  File "<string>", line 11, in <module>
+    mapped=[l for l in s.splitlines() if l.startswith('| EQUIVALENT (mapped) | C-')];assert len(mapped)==4,len(mapped)
+                                                                                            ^^^^^^^^^^^^^^
+AssertionError: 2
+AGENTS.md 120 lines
+docs/planning/CURRENT.md 39 lines
+docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md 250 lines
+docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md 149 lines
+
+M95_CHECK mapping-documents exit=1 seconds=0.11 timeout=False
+
+M95_START mapping-documents-labels-corrected ['python', '-c', "from pathlib import Path\nimport json,re\nroot=Path('docs/planning');r=(root/'ASSEMBLED_CHARACTER_M95_RESULT.md').read_text(encoding='utf-8')\nc=json.loads((root/'campaign3-hq012-exit-review-rev1/corpus.json').read_text(encoding='utf-8-sig'))\nexpected=[x['key'].split(':')[1] for x in c['members'][6]['requirements']]\nassert re.findall(r'^\\| :(\\d+) \\|',r,re.M)==expected\nfor link in re.findall(r'\\]\\(([^)]+)\\)',r):assert (root/link.split('#')[0]).is_file(),link\nfor file,limit in [('AGENTS.md',120),('docs/planning/CURRENT.md',80),('docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md',250),('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md',250)]:\n n=len(Path(file).read_text(encoding='utf-8').splitlines());assert n<=limit,(file,n);print(file,n,'lines')\ns=(root/'ASSEMBLED_CHARACTER_RECONCILIATION.md').read_text(encoding='utf-8');size=len(s.replace('\\n','\\r\\n').encode('utf-8'));assert size<=65536,size\nmapped=[l for l in s.splitlines() if re.match(r'^\\| EQUIVALENT \\(mapped(?: domain)?\\) \\| C-',l)];assert {re.search(r'\\| (C-[A-Z]+) ',l).group(1) for l in mapped}=={'C-MEM','C-REASON','C-DECISION','C-AFFECT'}\nfiles=list(root.glob('ASSEMBLED_CHARACTER_M95_*'));assert len(files)==2\nsizeEvidence=sum(p.stat().st_size for p in files);assert sizeEvidence<5*1024*1024\nprint('PASS all10 pinned keys and links;4 mapped members; register CRLF bytes',size,';2 evidence files bytes',sizeEvidence)\n"]
+AGENTS.md 120 lines
+docs/planning/CURRENT.md 39 lines
+docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md 250 lines
+docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md 149 lines
+PASS all10 pinned keys and links;4 mapped members; register CRLF bytes 65493 ;2 evidence files bytes 48886
+
+M95_CHECK mapping-documents-labels-corrected exit=0 seconds=0.07 timeout=False
+
+M95_START git-size ['node', 'scripts/check-git-file-sizes.mjs']
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M95_CHECK git-size exit=0 seconds=0.32 timeout=False
+
+M95_START staged-whitespace ['git', 'diff', '--cached', '--check']
+docs/planning/ASSEMBLED_CHARACTER_M95_CHECKS.txt:60: trailing whitespace.
++    428|
+docs/planning/ASSEMBLED_CHARACTER_M95_CHECKS.txt:65: trailing whitespace.
++    432|
+
+M95_CHECK staged-whitespace exit=2 seconds=0.06 timeout=False
+
+Reporter excerpt trailing whitespace normalized; every failure/content line retained.
+
+M95_START staged-whitespace-normalized ['git', 'diff', '--cached', '--check']
+
+M95_CHECK staged-whitespace-normalized exit=0 seconds=0.06 timeout=False
+
+Final verification: 1132.14s /1800s including every failed check and15s bookkeeping; longest command 234.84s /600s. No extension.
