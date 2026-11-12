@@ -220,3 +220,21 @@ correspondence, real matched reason draws, privacy/admission, every-instant
 continuation/rollback and affected M87/M86 controls. Player projection of context
 is component-tested; the native comparison remains QuietRoll. No broader REASON
 closure, reference coverage-law promotion or calibration change follows.
+
+## 0.5 successor — unified reference coverage (M94, owner adopted2026-11-12)
+
+Rules/registry0.80 retains all0.79 domains,46 slots and record schemas. Every
+semantic group, motive and role uses SourceCoverage as defined in0.3, with0.79
+Value citations and separate context role enabled together. No fixture switch.
+Old0.79 Jaccard and0.77 candidate keep exact behavior. No calibration/RNG/state change.
+The shared described-source raw/compiler/decision traces identify reason-sources/0.5;
+the compiler report retains its explicit SourceCoverage field. Other producer traces
+keep their own versions, including Value receiving/0.2. The source-perception
+producer is unchanged; its context-capable trace remains0.4. Consumers disclose0.5.
+This resolves M86's larger-union collective-zero conflict as a reference policy,
+not a universal correlation claim. Role/sign partition, canonical magnitude/ID
+ordering, raw max-union retention, bound-once, zero-base exclusion and one die per
+active semantic key remain. Empty incoming basis overlap0. Older saves are never
+reinterpreted under0.80. Current card fixes evidence, comparisons and budgets.
+Owner delegates local comparison/amendment decisions through REASON completion;
+no waiver of pinned phenomena, preservation or final21/15/132 acceptance gates.
