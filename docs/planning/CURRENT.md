@@ -1,36 +1,33 @@
-# Current work — M93 reference-policy decision (2026-11-12)
+# Current work — M93 review complete; policy ruling pending (2026-11-12)
 
-M92 completed signed cancellation and the standing-die comparison. M93 resolves
-what evidence remains before REASON can be mapped under one reference policy.
-This is a bounded review/decision package, not new simulation capability.
+The current character gives extra weight to fully covered evidence in M86's
+larger evidence union. The bounded SourceCoverage candidate fixes that case.
+M93 maps all ten REASON requirement keys and recommends one successor reference;
+it adds no simulation behavior and does not accept the corpus member.
 
-## Card before changes
-- Scope: PHEN-REASON-001:2..11, M84–M92 evidence, R2/L8 and RO-C3-001/009/020.
-- Deliverable: one compact result with every requirement mapped, unresolved
-  comparisons explicit, and one concrete reference-law recommendation.
-- Existing law conflict: Jaccard gives residual1/8 to fully covered collective
-  evidence in M86; owner-approved SourceCoverage0.77 gives0. Current0.79 retains
-  Jaccard. Earlier approval explicitly did not authorize reference promotion.
-- Read source/candidate contracts, original corpus/qualification, affected test
-  assertions and mechanism ledger. No new behavioral comparisons or reruns.
-- Allowed edits: CURRENT, existing reconciliation, AGENTS status, obligation
-  evidence links, one result and one checks log. Zero production/test files.
-- Preserve old laws/model identities, failures, calibration and 21/15/132 scope.
-  No new acceptance, variant-only closure, runtime switch or autonomous peer.
-- Proposed follow-up must name version boundary, retained controls, exact native
-  witnesses and finite checkpoints. No implementation before required law ruling.
-- Checks: requirement-key/link/document-budget validation (omission/stale link);
-  research bookkeeping (unowned claims); staged size/whitespace (preservation).
-  No types/runtime tests: executable sources and their dependencies are unchanged.
-- Budget: 30 minutes source review; 180s/check, 300s total checks including15s
-  final bookkeeping; one job. Two evidence files /128KiB; no verifier framework.
-- Done when all ten keys have evidence/limits and the required decision is
-  concrete, checks pass, and the review is committed. Stop at the policy ruling;
-  the current law conflict keeps C-REASON unresolved.
+## Completed review
+- [Result and concrete decision](ASSEMBLED_CHARACTER_M93_RESULT.md);
+  [checks](ASSEMBLED_CHARACTER_M93_CHECKS.txt). Plan fad7e0df precedes edits.
+- Recommend SourceCoverage for every group in successor0.80/reason-sources0.5;
+  retain old Jaccard versions, role/sign separation, calibration and owners.
+- Earlier approval was bounded to0.77. Current0.79 explicitly keeps Jaccard.
+  Work-order alternative-law ruling and R2 policy change remain pending.
+- M84–M92 evidence is mapped to PHEN-REASON-001:2..11 with explicit limits.
+  Genuine Value learning is not an isolated motive-identity intervention.
+  Original panel PairwiseOnly is not a current-source successor comparison.
+- No production/test/contract edits, new behavior, verdict or obligation closure.
+  All ten keys/links, document budgets and research references checked.
+  Staged size/whitespace and final accounting appear in the result/log.
+- Two evidence files below128KiB; review check cap180s, total300s including15s
+  bookkeeping. No runtime/types/frozen-control reruns on unchanged dependencies.
 
-## Preserved direction
-One continuing character integrates Campaigns0–3. No UI or unrelated breadth.
-Three mapped members, zero fully accepted families; final full replay remains.
-[M92 result](ASSEMBLED_CHARACTER_M92_RESULT.md) and all controls remain preserved.
+## Next authorized boundary
+The result proposes a bounded version seam and affected native replay, followed
+by outstanding isolated motive/basis and comparator checks on the same reference.
+Each implementation package needs its card; law promotion awaits owner ruling.
+No acceptance by combining passes from different policies. No unrelated breadth,
+UI or autonomous peers. One continuing character integrates Campaigns0–3.
+C-REASON unresolved; three mapped members, zero fully accepted families.
+Final21 members/15 families/132 clauses and full candidate replay unchanged.
 
 | Research obligations | **1 active / 17 conditional / 0 unowned** |

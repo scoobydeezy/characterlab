@@ -1,0 +1,28 @@
+M93 documentation-only review. No runtime checks executed.
+Plan commit fad7e0df; initial plan size/whitespace/commit command elapsed1.51s.
+
+M93_START document-budget ['python', '-c', "from pathlib import Path\nimport json,re\nroot=Path('docs/planning')\nr=(root/'ASSEMBLED_CHARACTER_M93_RESULT.md').read_text(encoding='utf-8')\nc=json.loads((root/'campaign3-hq012-exit-review-rev1/corpus.json').read_text(encoding='utf-8-sig'))\nexpected=[x['key'].split(':')[1] for x in c['members'][6]['requirements']]\nactual=re.findall(r'^\\| :(\\d+) \\|',r,re.M)\nassert actual==expected,(actual,expected)\nfor link in re.findall(r'\\]\\(([^)]+)\\)',r):\n p=root/link.split('#')[0]\n assert p.is_file(),str(p)\nfor file,limit in [('AGENTS.md',120),('docs/planning/CURRENT.md',80),('docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md',250),('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md',250)]:\n p=Path(file); n=len(p.read_text(encoding='utf-8').splitlines());assert n<=limit,(file,n);print(file,n,'lines')\np=root/'ASSEMBLED_CHARACTER_RECONCILIATION.md';content=p.read_text(encoding='utf-8');size=len(content.replace('\\n','\\r\\n').encode('utf-8'));assert size<=65536,size;print('register CRLF bytes',size)\nfiles=list(root.glob('ASSEMBLED_CHARACTER_M93_*'));assert len(files)==2,len(files)\nassert sum(x.stat().st_size for x in files)<131072\nprint('PASS ten exact requirement keys; all result links; document/evidence budgets')\n"]
+AGENTS.md 120 lines
+docs/planning/CURRENT.md 36 lines
+docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md 250 lines
+docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md 149 lines
+register CRLF bytes 65422
+PASS ten exact requirement keys; all result links; document/evidence budgets
+
+M93_CHECK document-budget exit=0 seconds=0.10 timeout=False
+
+M93_START research ['node', 'scripts/check-research-obligations.mjs']
+PASS: research obligation references and dispositions {"active":1,"conditional":17,"closed":4,"unowned":0,"verdicts":103,"reports":4326}
+
+M93_CHECK research exit=0 seconds=3.49 timeout=False
+
+M93_START git-size ['node', 'scripts/check-git-file-sizes.mjs']
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M93_CHECK git-size exit=0 seconds=0.32 timeout=False
+
+M93_START staged-whitespace ['git', 'diff', '--cached', '--check']
+
+M93_CHECK staged-whitespace exit=0 seconds=0.06 timeout=False
+
+Final verification: 20.48s /300s, including1.51s plan checks and15s final bookkeeping. All four review checks pass; no behavioral tests run.
