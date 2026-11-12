@@ -1,0 +1,72 @@
+
+M91_START types ['node', 'node_modules/typescript/bin/tsc', '--noEmit']
+
+M91_CHECK types exit=0 seconds=17.56 timeout=False
+
+M91_START native-privacy ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledReasonKeys.test.ts', '-t', 'M91 native|M91 privacy', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReasonKeys.test.ts > M91 native: referent, sign and source role survive one shared decision
+M91 POOLED {"allSources":5,"nuclei":[3,2],"reference":["283/288","5/288"],"pooled":["55/64","9/64"]}
+
+stdout | src/test/assembledReasonKeys.test.ts > M91 native: referent, sign and source role survive one shared decision
+M91 NATIVE PASS [{"kind":"same","nuclei":2,"probabilities":["55/64","9/64"],"mode":"1","draws":0},{"kind":"split","nuclei":3,"probabilities":["283/288","5/288"],"mode":"1","draws":0},{"kind":"negative","nuclei":3,"probabilities":["43/144","101/144"],"mode":"2","draws":3},{"kind":"modifier","nuclei":2,"probabilities":["13/16","3/16"],"mode":"1","draws":0}]
+
+ ✓ src/test/assembledReasonKeys.test.ts > M91 native: referent, sign and source role survive one shared decision 122935ms
+stdout | src/test/assembledReasonKeys.test.ts > M91 privacy: hidden diagnostic is inert and denied evidence cannot create the extra reason
+M91 PRIVACY PASS hidden raw/decision equality; denied channel2 suppresses its source and extra reason
+
+ ✓ src/test/assembledReasonKeys.test.ts > M91 privacy: hidden diagnostic is inert and denied evidence cannot create the extra reason 36415ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 6 skipped (8)
+   Start at  07:16:45
+   Duration  164.04s (transform 2.67s, setup 0ms, collect 4.03s, tests 159.35s, environment 0ms, prepare 305ms)
+
+
+M91_CHECK native-privacy exit=0 seconds=164.94 timeout=False
+
+M91_START persistence ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledReasonKeys.test.ts', '-t', 'M91 persistence', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReasonKeys.test.ts > M91 persistence: exact continuation and post-compiler atomic rollback
+M91 PERSISTENCE PASS repeat9/restore9 every settlement 10,11,12,13,14,20,40,101; post-compiler whole-instant rollback
+
+ ✓ src/test/assembledReasonKeys.test.ts > M91 persistence: exact continuation and post-compiler atomic rollback 135070ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  07:19:38
+   Duration  139.25s (transform 2.51s, setup 0ms, collect 3.76s, tests 135.07s, environment 0ms, prepare 125ms)
+
+
+M91_CHECK persistence exit=0 seconds=139.77 timeout=False
+
+M91_START boundaries ['npm.cmd', 'run', 'check:boundaries']
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+M91_CHECK boundaries exit=0 seconds=2.90 timeout=False
+
+M91_START research ['npm.cmd', 'run', 'check:research']
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":1,"conditional":17,"closed":4,"unowned":0,"verdicts":103,"reports":4324}
+
+M91_CHECK research exit=0 seconds=3.97 timeout=False
+
+M91_START staged-size ['npm.cmd', 'run', 'check:git-size']
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M91_CHECK staged-size exit=0 seconds=0.75 timeout=False
