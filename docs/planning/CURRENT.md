@@ -43,6 +43,20 @@ decision in the same character.
   incomplete with exact failure; no alternate contrasts, tuning or new seeds.
   Ordinary implementation repairs remain authorized within these limits.
 
+## Fixed probe — declared after the one setup, before behavioral execution
+- Setup passed: threshold37/100, standing unit1/4, B has no other modifiers.
+- At12 only, B's permitted urgency becomes19/20 in both arms; all other
+  declarations/readings remain M89. B importance stays3/5, acquired at1.
+- Exact prediction: B raw base117/200 -> bounded117/317 <37/100.
+  Eligible P stays98775/3572128; B standing is negative with magnitude
+ 1163075625/288209556908 -> bounded1163075625/289372632533.
+  The sum exceeds37/100; pressure-excluded P0 leaves B below threshold.
+- Both have an actual live decision; B's nonzero raw base is live in both.
+  Eligible has2 nuclei, excluded1. Predict probabilities55/64 vs9/64
+  versus1 vs0 (Auto in both), not a changed executed action or sampled coupling.
+- No settings other than probe B urgency change from M89; pressure10 is the
+  history contrast already named. Failure is retained without another probe.
+
 ## Preserved status
 - [M89](ASSEMBLED_CHARACTER_M89_RESULT.md) complete as reconciliation only.
 - One continuing character integrates Campaigns0–3; full21/15/132 stays required.
