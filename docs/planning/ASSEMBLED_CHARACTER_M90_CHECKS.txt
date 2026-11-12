@@ -15,3 +15,109 @@ M90 SETUP {"threshold":"37/100","standingUnit":"1/4","meanings":["939/1739","3/8
 
 
 M90_CHECK setup exit=0 seconds=82.77 timeout=False
+
+M90_START types ['node', 'node_modules/typescript/bin/tsc', '--noEmit']
+
+M90_CHECK types exit=0 seconds=16.85 timeout=False
+
+M90_START native-hidden ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledStandingActivation.test.ts', '-t', 'M90 native|M90 hidden', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledStandingActivation.test.ts > M90 native: earned standing activates a weak reason and changes exact probabilities
+M89 ORIGINAL GROUPS {"sources":7,"groupSizes":[5,2],"nativeNuclei":2,"allSourcesRetained":true}
+M89 ORIGINAL GROUPS {"sources":5,"groupSizes":[4,1],"nativeNuclei":1,"allSourcesRetained":true}
+M90 NATIVE PASS {"P":"98775/3572128","base":"117/317","eligibleRelevance":"34225292979486/91731124512961","threshold":"37/100","nuclei":[2,1],"probabilities":[["55/64","9/64"],["1/1","0/1"]],"mode":"Auto","sameChosen":true,"draws":0,"negativeStandingActivates":true,"allOtherRawSourcesEqual":true}
+
+ ✓ src/test/assembledStandingActivation.test.ts > M90 native: earned standing activates a weak reason and changes exact probabilities 106858ms
+stdout | src/test/assembledStandingActivation.test.ts > M90 hidden diagnostic: unchanged evidence preserves learning and decisions
+M90 HIDDEN PASS actual qualification, disposition, sources and decision unchanged
+
+ ✓ src/test/assembledStandingActivation.test.ts > M90 hidden diagnostic: unchanged evidence preserves learning and decisions 27560ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 7 skipped (9)
+   Start at  22:48:24
+   Duration  138.68s (transform 2.55s, setup 0ms, collect 3.82s, tests 134.42s, environment 0ms, prepare 122ms)
+
+
+M90_CHECK native-hidden exit=0 seconds=139.20 timeout=False
+
+M90_START persistence ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledStandingActivation.test.ts', '-t', 'M90 persistence', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledStandingActivation.test.ts > M90 persistence: exact continuation and post-standing atomic rollback 129188ms
+   → actual decision: expected undefined to be defined
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledStandingActivation.test.ts > M90 persistence: exact continuation and post-standing atomic rollback
+AssertionError: actual decision: expected undefined to be defined
+ ❯ Module.capture src/test/fixtures/assembledValueProvenance.ts:47:106
+     45| export const reports=(run:Run,label:string)=>items(decode(snap(run).ou…
+     46| export function capture(run:Run,at=12n){
+     47|  const d=outputs(snap(run).outputs,409n).find(v=>signedValue(f(v,2n))=…
+       |                                                                                                          ^
+     48|  const status=rec(f(d,4n),419n);expect(uint(f(status,1n)),'live choice…
+     49|  const data=rec(f(status,2n),420n),context=rec(f(d,3n),408n),raw=rec(f…
+ ❯ Module.capture src/test/fixtures/assembledStandingSources.ts:47:10
+ ❯ src/test/assembledStandingActivation.test.ts:118:43
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  22:50:52
+   Duration  133.42s (transform 2.53s, setup 0ms, collect 3.79s, tests 129.19s, environment 0ms, prepare 125ms)
+
+
+M90_CHECK persistence exit=1 seconds=133.96 timeout=False
+
+M90_START persistence-current-snapshot ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledStandingActivation.test.ts', '-t', 'M90 persistence', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledStandingActivation.test.ts > M90 persistence: exact continuation and post-standing atomic rollback
+M90 PERSISTENCE PASS repeat10 and restore10 every settlement 11,12,13,14,20,40,101; post-standing atomic rollback
+
+ ✓ src/test/assembledStandingActivation.test.ts > M90 persistence: exact continuation and post-standing atomic rollback 173506ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  22:53:57
+   Duration  177.77s (transform 2.54s, setup 0ms, collect 3.81s, tests 173.51s, environment 0ms, prepare 116ms)
+
+
+M90_CHECK persistence-current-snapshot exit=0 seconds=178.27 timeout=False
+
+M90_START final-types ['node', 'node_modules/typescript/bin/tsc', '--noEmit']
+
+M90_CHECK final-types exit=0 seconds=16.48 timeout=False
+
+M90_START boundaries ['npm.cmd', 'run', 'check:boundaries']
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+M90_CHECK boundaries exit=0 seconds=2.86 timeout=False
+
+M90_START research ['npm.cmd', 'run', 'check:research']
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":1,"conditional":17,"closed":4,"unowned":0,"verdicts":103,"reports":4323}
+
+M90_CHECK research exit=0 seconds=3.83 timeout=False
+
+M90_START staged-size ['npm.cmd', 'run', 'check:git-size']
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M90_CHECK staged-size exit=0 seconds=0.75 timeout=False
