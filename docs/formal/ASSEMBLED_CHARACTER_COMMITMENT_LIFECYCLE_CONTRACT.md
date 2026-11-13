@@ -127,3 +127,36 @@ M99 delegated amendment2026-11-13: provisional four-task witness had one-option
 training and correctly earned zero identity. Preserve that failed checkpoint;
 final0.83 admits five tasks so original two-option training remains intact. No
 new law, calibrated gain, seed search or mutable series identity is introduced.
+
+## 0.4-candidate — controlled selective witnesses (M100, before implementation)
+Rules/registry0.84 extends0.83 without changing lifecycle, identity or reason laws.
+Use the existing two declared communication recipients as controlled witnesses.
+Source event/assembled-commitment-witness-source at30, time1..100, payload
+[declared task371, Boolean recipient0, Boolean recipient1, Boolean hidden].
+At most16 packets and one per instant; cancellation may occur in the same instant.
+A packet provides access only, never a status or belief. Generated ingress rejects.
+
+Source allocates one occurrence1168 per recipient regardless of access. Probe40
+reads only each recipient's prior knowledge. Message110 reads actual373/1 under
+the selected task and derives metadata [version,status,cause]: absent[0,0,0],
+Open[1,1,0], terminal[2,2,cause], cause2 Satisfied/3 Expired/4 Cancelled. This
+version is the immutable create/terminal transition index, not a new state field.
+No current-instant140 write is visible to110. Permitted observations120 contain
+[occurrence,recipient,time,task,metadata]; inaccessible recipients emit no
+observation and receive no evidence. Evidence130 carries the same authenticated
+observation; learning140 writes LastObservation under1072/2 keyed[recipient,task].
+Use the existing communication knowledge authority and expected-value patches.
+Unknown is an absent leaf; observed absence is metadata[0,0,0]. No deletion,
+same-time replacement, initial knowledge or foreign task/recipient is admitted.
+LastObservation may remain stale; private lifecycle changes never update it.
+
+The new events execute inside the existing communication stage/scheduler/atomic
+instant. Full event/parent/payload/time/sequence binding rejects forged children.
+Trace discloses actual reads, observed supports, patches/diffs and phase causality.
+Observer projection includes only that observer's probes and admitted observations,
+evidence and updates; excludes truth packets, actor decisions/history/RNG and
+research traces. Probe contains all and only prior known rows, no private topic.
+Permitted observations retain their real support IDs; no-message probes contain
+no allocation ordinals. Hidden input is never used by evaluation/knowledge.
+This is the original bounded truthful witness path, not autonomous peers or
+unrestricted communication. Broader lying/delegation/series obligations are unchanged.
