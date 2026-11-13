@@ -227,8 +227,8 @@ five C2 conditions and Experience mapping; no new denominator. C2 already uses O
 identify actual gaps. Historical gate status does not override later accepted closure.
 
 ## Current authorization boundary
-Owner2026-11-13 authorizes M103 continuation and necessary comparison amendments.
-M103 urgency0 repair passes bounded gates; failed controls retained; reference0.84 awaits explicit adoption.
+Owner2026-11-13 requests0.85 reference review then continued work under existing guardrails.
+M104 prepares recommendation and affected integer-standing check; reference0.84 awaits explicit adoption.
 No new member replay, UI, publishing or whole-assembly acceptance follows.
 
 ## Owner ruling — unknown factors and live gates (2026-11-02)

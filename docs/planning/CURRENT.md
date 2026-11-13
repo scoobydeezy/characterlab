@@ -1,64 +1,43 @@
-# Current work — M103 candidate comparison passed
-Acquired standing changes exact rolling choice probabilities in the same character.
-Candidate0.85 passes native/sampler/coupling/control/continuation gates; reference0.84
-remains unchanged pending explicit adoption. No family or whole-assembly acceptance.
-Owner delegated necessary amendments2026-11-13; plan2be6a2fb precedes urgency0 repair.
-Original urgency1 and failed4/5 comparisons, and all test failures, remain recorded.
-Same laws/training/importance/seed/gates; actual priority/band arithmetic preflight.
-Package A stopped incomplete at12 paths; B used3; no new production change this repair.
-Validation ends after final types/metadata/research/size checks; no new contrast.
-See ASSEMBLED_CHARACTER_M103_RESULT.md and its cumulative check receipt.
-Next decision: retain reference0.84 or explicitly adopt candidate0.85; no automatic promotion.
+# Current work — M104 reference-adoption review
+Review whether0.85 should replace0.84, then continue under the same guardrails.
+Reference0.84 remains until an explicit owner ruling. M103 bounded pass is retained.
+No inference of adoption from a request to review; no new corpus/family acceptance.
 
-## Completed bounded card — original scope with delegated amendment
-- Capability: genuinely acquired standing changes signed probabilities between
-  already-live reasons, with analytical mixture and actual sampled scores agreeing.
-  Shared owners/scheduler/state/save; no new motive, psychological state or runtime.
-- Contract: ASSEMBLED_CHARACTER_STANDING_ROUNDING_CONTRACT.md /0.1-candidate.
-  Keep D3/Ramp, SourceCoverage0.5, relevance/zero-base, unit1/4/cap3, base dice,
-  context/situation, thresholds and Auto. Candidate global across standing sources.
-- Exactly12 production/test paths planned: assembled/{standingRounding,codecs,
-  reasons,arbitration,random,comparison,model,inputs,execution,decisionView}.ts;
-  test/fixtures/assembledStandingRounding.ts; test/assembledStandingRounding.test.ts.
-  Package A stops before13th path. B admits ROUNDING_RULES in existing trace binder
-  while retaining exact model/run match; same native comparisons and controls.
-  No changes to frozen controls/dependencies.
-- Scenario: M89 acquired-history fixture; three physical/nonsocial tasks, existing
-  permitted body/reading channels; body30/cap100/rate10/delivery90@9, seed0.
-  Training10 unchanged (A importance1/B3/5, genuine qualification; Values unlinked).
-  At12 both reading values become0 and A urgency0 (delegated amendment),
-  permission true; all other declarations
-  and complete calendar retained. This removes extra evidence pressure in both
-  arms; prior urgency1 and4/5 failed. New predicted contest9/16. Liveness/rolling/
-  nonzero-standing preconditions remain mandatory before the probability gate.
-- Primary: candidate learned versus removal of standing from captured12 raw only;
-  operands never enter live state. Current0.84 on same calendar is truncation control.
-  Actual pressure-at10 control excludes formation; hidden diagnostic control leaves
-  permitted evidence equal. Native runs prove real producer -> decision -> execution.
-- Two identity-only setup runs (old/candidate) build injective comparison maps for
-  common face/tie addresses and candidate rounding addresses; no outcome/seed search.
-  Replay seed0 with maps. Compare matched face draws; rounding is independent purpose.
-  Captured-input ablation reuses faces/tie class; probability proof exhaustively
-  weights score/rounding/tie outcome classes, not2^32 enumerated random words.
-- Controls: zero/integer/cap/sign/Avoid; absent/pressure-excluded history; zero-base;
-  malformed plans/draws/old bundles and maps; Auto draws none; public views disclose
-  realized rounding without exposing seed/key; exact repeat and restore11 through
-  every remaining instant/exhaustion; post-round-draw fault rolls back public state.
-- Risk/checks: targeted new tests for math/sampler/capability/provenance; unchanged
-  random.test.ts C0 vectors; M94 connected regression; types, boundary/research,
-  preservation, document/evidence budgets, size/whitespace. No full frozen suite:
-  entry and transitive old dependencies unchanged. No new source/perception law;
-  native hidden-truth and denied-history controls cover receiving epistemic boundary.
-- RO009/020: triggered bounded receiving/dice comparison, retained history/meaning
-  and old law controls; broader claims remain conditional. RO001 source law unchanged.
-  Ledger SUB004/005/009, MEC012–018/022 PORT; EXP009–012 CORPUS; RET008 CONTROL,
-  never independent standing motive. No reduction or original verdict edits.
-- Budget:600s/command,1800s cumulative verification incl failures+15s bookkeeping;
-  at most2 evidence files/5MiB. One validation job. No gain/threshold amendments,
-  seed search or extension. Owner delegates justified fixture repairs with receipts.
-- Done: native causal consumption and signed probability gate, exact sampler law,
-  coupling/negative/continuation checks pass; otherwise checkpoint failed/incomplete.
-  Report candidate evidence for owner promotion decision, no automatic new reference.
+## Bounded card — before implementation
+- Capability: validate the proposed receiver across acquired integer relationship
+  standing, preserving the existing same-character decision/significance connection.
+  Review M103 fractional evidence and cost before a concrete adoption recommendation.
+- Existing contract: standing-rounding/0.1-candidate, model/registry0.85;
+  control0.84. No formal/production mathematics, source, owner or scheduler changes.
+- Scope:1 new test path src/test/assembledRoundingReference.test.ts; at most2
+  source/test paths if a helper is needed. Existing fixtures remain unchanged.
+- Scenario: unchanged M81 personal-breach arm. Two recognized perceived stand-ins;
+  physical/nonsocial tasks; seed0; body30/cap100/rate10,delivery90@9;
+  importance3/5,urgency1,known-zero threat. Both personal histories acquired normally.
+  Only model/registry versions vary. No importance/gain/threshold/fixture tuning.
+- Predeclared native comparison at10: two live d4 reasons; each real relationship
+  source-1 -> bounded-1/2 -> modifier-2. Both probabilities1/2, contest1,
+  stake/authorship1/3, QuietRoll. Candidate threshold0, upper-2, no rounding draw.
+  Compare all unchanged nucleus/decision semantics; successor fields explicit.
+- Two identity-only setup runs construct face/tie coupling; two mapped runs
+  compare effective keys/results/contributions/winner. Inputs/calendar unchanged,
+  through exhaustion101; no seed/outcome search. Prove history -> raw -> consumed
+  nucleus -> decision -> actual execution, and actual trace draw disclosure.
+- Risk: integer endpoint could accidentally draw, change significance, lose a
+  relationship source, or mismatch score/distribution despite M103 kernel pass.
+  This affected adoption check is not a broad M103 rerun or new phenomenon.
+- Retain M103 fractional/zero/cap/Avoid,pressure/privacy/RNG/repeat/restore/rollback
+  and C0 tests; unchanged implementation means those passes remain valid.
+  Run targeted new test,types,research,preservation,metadata,size/whitespace once.
+- Ledger MEC012..018/022 PORT, SUB004/005/009 foundations, EXP009..012 CORPUS,
+  RET008 CONTROL retained. No reduction;009/020 wider claims stay conditional.
+- Budget:1800s cumulative verification,600s/command including failures and15s
+  bookkeeping;2 evidence files/5MiB (M104_RESULT.md and M104_CHECKS.txt).
+  One validation job. No UI,new member,autonomous peer,framework or broad audit.
+- Done: concrete adoption recommendation/limits and affected check pass; explicit
+  owner ruling before changing R2 reference. If rejected/failed, record and retain0.84.
+  Next after adoption: one affected member at a time, beginning DECISION receiving
+  correspondence on the adopted reference; no immediate unrelated mechanism breadth.
 
-Five members mapped/zero accepted families;21/15/132 final scope unchanged.
-| Research obligations | **0 active / 18 conditional / 0 unowned** |
+Five members mapped/zero accepted families;21/15/132 unchanged.
+Research obligations:0 active /18 conditional /0 unowned.

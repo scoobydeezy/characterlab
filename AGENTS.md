@@ -6,7 +6,7 @@ Read [CURRENT.md](docs/planning/CURRENT.md), then
 The active direction is assembly of one continuing character.
 Workbench/UI development and Campaign 4 are stopped pending assembly acceptance.
 This is the assembly checkout, based on
-`788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`. M103 candidate0.85 passes its bounded gates; reference0.84 retained pending adoption. Both failed comparisons preserved. Five members mapped; full assembly open. Follow CURRENT.md for remaining integration and reference-policy scope. No unrelated breadth, UI or multi-character work.
+`788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`. M104 reviews candidate0.85 adoption with one affected integer-standing check; reference0.84 retained pending owner ruling. M103 failures/pass preserved. Five members mapped; full assembly open. Follow CURRENT.md for remaining integration and reference-policy scope. No unrelated breadth, UI or multi-character work.
 Do not execute historical TODOs, resume old audits, or retain/revisit browser tabs.
 Old instructions/evidence remain on tag `archive/workbench-stopped-2026-10-25`.
 ## Authority
