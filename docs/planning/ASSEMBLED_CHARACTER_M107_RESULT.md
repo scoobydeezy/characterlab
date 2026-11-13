@@ -1,9 +1,9 @@
 # M107 — repeated biography and frozen historical meaning
 
-The eight native histories and pressure/hidden-truth controls pass. Repeated
-experience can weaken or reverse acquired disposition and affect a later decision
-without rewriting earlier expressions. Full repeat/restore is still pending: this
-is a checkpoint, not a completed milestone or BIO mapping.
+M107 passes. Repeated experience can weaken or reverse acquired disposition and
+affect a later decision without rewriting earlier expressions. All eight native
+histories, pressure/hidden-truth controls, exact repeat and public save/restore pass.
+This completes the bounded milestone, not the full BIO member or family mapping.
 Plan888a5cc9; [all check attempts](ASSEMBLED_CHARACTER_M107_CHECKS.txt).
 
 ## Scope and fixed scenario
@@ -130,3 +130,32 @@ Package B has600s total including10s bookkeeping, one native command capped570s,
 and metadata/preservation/size checks afterward. Combined hard ceiling2255.219s;
 the log's CHARGED total carries forward. No blanket budget reset, new verifier or
 owner-law ruling is inferred. Stop after this attempt and report any remaining gap.
+
+## Package B result — exact continuation PASS
+
+Planbbc76bd preceded execution. The one prepared repeat/restore command passed
+in296.358s/570s. Save12 contains two actual acquisitions. Independent repeat and
+public restore match the uninterrupted character at13,14,16,18,20,22,24,26,40,101
+and exhaustion, including every state/output/trace/save/run-identity byte. No
+checkpoint, settlement, assertion or original evidence was dropped. The32-settle
+cap was not hit. No replacement comparison or retry was needed.
+
+Package A1655.219s stayed below1800s. Package B has its own600s cap, carries the
+original total forward, and includes10s bookkeeping. The split is recorded above
+under the work order, not represented as an original-budget pass. A console-tail
+printing error after package B's successful Git-size check was repaired; the
+check's output and timing had already been retained, and it was not rerun for that
+error. No production/formal/control/reference/baseline/corpus bytes changed.
+
+All six native test groups and the all-roster audit pass. Type and boundary checks
+apply to the final unchanged test/source files. Final research/preservation/size
+checks cover these metadata updates. Imported tests skipped by targeted filters
+are not claimed. C-BIO remains UNRESOLVED; no family/obligation closure or source
+retirement follows. Verification ends here. Next work is the explicitly pending
+original longer biography and meaningful-competitor correspondence, with one
+reference policy and all historical evidence retained.
+
+Final verification: package A1655.219s/1800s; package B312.628s/600s; combined
+1967.847s/2255.219s (32.80 minutes). Longest command458.236s. Final research,
+preservation/document/evidence caps, staged Git-size and whitespace checks pass.
+Two test/helper paths; two evidence files, under5MiB. No remaining M107 gate.

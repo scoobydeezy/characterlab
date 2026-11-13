@@ -252,3 +252,53 @@ PASS: Git index contains no files at or above50,000,000 bytes.
 
 EXIT 0; elapsed 0.822s
 CHARGED 1666.041
+ORCHESTRATION RECEIPT: package-B git-size passed and was charged before its console-tail print raised TypeError (noninteger slice after runner text substitution). Corrected only the console-tail bound; no check result or elapsed time was lost; no rerun of the passed size check.
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledBiographyHistory.test.ts", "-t", "M107 repeat and restore", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledBiographyHistory.test.ts > M107 repeat and restore preserve acquired history through later changes
+M107 PERSISTENCE PASS save12, all subsequent settlements 13,14,16,18,20,22,24,26,40,101 and exhaustion
+
+ ✓ src/test/assembledBiographyHistory.test.ts > M107 repeat and restore preserve acquired history through later changes 290356ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 12 skipped (13)
+   Start at  17:06:11
+   Duration  294.75s (transform 2.59s, setup 0ms, collect 3.86s, tests 290.36s, environment 0ms, prepare 136ms)
+
+
+EXIT 0; elapsed 296.358s
+CHARGED 1962.399
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:research"]
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4334}
+
+EXIT 0; elapsed 3.868s
+CHARGED 1966.267
+
+COMMAND ["C:\\Users\\scoob\\AppData\\Local\\Python\\pythoncore-3.15-64\\python.exe", "-c", "from pathlib import Path\nimport subprocess,json,re\nbase='e58ba7d9'\ndef old(p):return subprocess.check_output(['git','show',base+':'+p]).decode('utf-8')\nallowed={'AGENTS.md','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md','docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md','docs/planning/RESEARCH_OBLIGATIONS.json','docs/planning/ASSEMBLED_CHARACTER_M107_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M107_CHECKS.txt','src/test/assembledBiographyHistory.test.ts','src/test/fixtures/assembledBiographyHistory.ts'}\nchanged=set(subprocess.check_output(['git','diff',base,'--name-only']).decode().splitlines())|set(subprocess.check_output(['git','ls-files','--others','--exclude-standard']).decode().splitlines())\nassert changed==allowed, (changed-allowed,allowed-changed)\nassert len([p for p in changed if p.startswith('src/')])==2\ncaps={'AGENTS.md':120,'docs/planning/CURRENT.md':80,'docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md':250,'docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md':250}\nfor p,cap in caps.items():\n s=Path(p).read_text(encoding='utf-8');assert len(s.splitlines())<=cap,(p,len(s.splitlines()))\np='docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md'\ns=Path(p).read_text(encoding='utf-8');assert len(s.replace('\\n','\\r\\n').encode())<=65536\nfor marker in [' | F-',' | C-']:\n prior=[line for line in old(p).splitlines() if marker in line and 'C-BIO' not in line]\n now=[line for line in s.splitlines() if marker in line and 'C-BIO' not in line]\n assert prior==now,marker\np='docs/planning/RESEARCH_OBLIGATIONS.json';a=json.loads(old(p));b=json.loads(Path(p).read_text(encoding='utf-8'))\nassert a.keys()==b.keys()\nfor k in a:\n if k!='obligations':assert a[k]==b[k],k\nfor x,y in zip(a['obligations'],b['obligations']):\n assert x['id']==y['id']\n if x['id'] not in ['RO-C3-009','RO-C3-020']:assert x==y\n else:\n  for k in x:\n   if k not in ['unresolved','evidence']:assert x[k]==y[k],(x['id'],k)\n  assert y['unresolved'].startswith(x['unresolved'])\n  assert y['evidence']==x['evidence']+['docs/planning/ASSEMBLED_CHARACTER_M107_RESULT.md']\npaths=list(Path('docs/planning').glob('ASSEMBLED_CHARACTER_M107_*'))\nassert sorted(p.suffix for p in paths)==['.md','.txt']\nsize=sum(p.stat().st_size for p in paths);assert size<5*1024*1024,size\nprint('PASS exact9 intended paths;2 test/helper and2 evidence files/'+str(size)+' bytes; no production/formal/control/reference/baseline/corpus changes. All F rows and other C rows unchanged;21/15/132 and E43/P57/N17/U15 preserved. Obligation statuses/triggers/closure requirements unchanged. Document caps including CRLF bytes pass.')\n"]
+PASS exact9 intended paths;2 test/helper and2 evidence files/70918 bytes; no production/formal/control/reference/baseline/corpus changes. All F rows and other C rows unchanged;21/15/132 and E43/P57/N17/U15 preserved. Obligation statuses/triggers/closure requirements unchanged. Document caps including CRLF bytes pass.
+
+EXIT 0; elapsed 0.703s
+CHARGED 1966.970
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:git-size"]
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.808s
+CHARGED 1967.778
+
+COMMAND ["git", "diff", "--cached", "--check"]
+
+EXIT 0; elapsed 0.069s
+CHARGED 1967.847
