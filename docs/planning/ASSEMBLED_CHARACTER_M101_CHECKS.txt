@@ -1,0 +1,21 @@
+
+M101_START types ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+
+M101_CHECK types exit=0 seconds=17.17 timeout=False
+
+M101_START native-correspondence ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledCommitmentCorrespondence.test.ts', '-t', 'M101', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCommitmentCorrespondence.test.ts > M101 closes native COMMIT lifecycle, fixed-state counterfactuals, strong-domain and trace correspondence
+M101 PASS native/controlled 0,1,0,1,1; CoreNeed 1,1,1,1,1; Immortal 0,1,1,2,2; ReusedId repeats C and actual owner rejects. Earned P=98775/3572128; fixed history; positive standing/native modifier0; conservative1/2 standing cannot revive zero base. All metadata/pressure/ref/execution joins pass; captured controls never enter run/save.
+
+ ✓ src/test/assembledCommitmentCorrespondence.test.ts > M101 closes native COMMIT lifecycle, fixed-state counterfactuals, strong-domain and trace correspondence 126079ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  01:33:59
+   Duration  130.44s (transform 2.62s, setup 0ms, collect 3.91s, tests 126.08s, environment 0ms, prepare 142ms)
+
+
+M101_CHECK native-correspondence exit=0 seconds=130.99 timeout=False
