@@ -1,21 +1,36 @@
-# Current work — COMMIT integration complete
-The character adopts, acts on, retires and replaces concrete commitments while
-keeping earned identity. Each recurrence has a distinct stable referent.
-Controlled witnesses learn only permitted reports; private changes leave stale
-knowledge. [M101 complete mapping](ASSEMBLED_CHARACTER_M101_RESULT.md) covers every
-bounded PHEN-COMMIT-001 requirement with the preserved original controls.
+# Current work — M102 coverage, obligation and calibration review
+Owner authorizes the post-COMMIT review steps2026-11-13. Five bounded members are
+mapped; no further member replay or simulation-law change is started.
 
-Rules/registry0.84, lifecycle0.4, witness0.1; same single model/state/scheduler/save.
-Native and strict fixed-input reason counts0/1/0/1/1 pass; CoreNeed, Immortal and
-ReusedId fail. Actual identity remains fixed; trace/ownership/epistemic boundaries
-and exact continuation pass. Original strong+3 vs native0 is the adopted D3 and
-calibration difference, addressed by actual learning plus the legal-standing bound.
-Counterfactual component records never enter a character; no alternative-runtime
-continuation or numerical parity is claimed.
+## Bounded card
+- Three outputs: refresh existing132-clause F rows from M80–101 evidence; add
+  REASON/COMMIT limits in the existing register; reconcile RO001 and recommend
+  a specific receiving/calibration comparison with explicit unresolved decisions.
+- Zero production/test/fixture/contract changes. Files: CURRENT, work order,
+  reconciliation register, RESEARCH_OBLIGATIONS.json, AGENTS status line and one
+  compact M102 result plus check log. No separate ledger or dashboard.
+- Read all M80–101 results and relevant tests/contracts against pinned family
+  clauses; retain E/P/N/U meanings and final denominator21/15/132. Upgrade only
+  clauses directly demonstrated; assess all15 rows, name new evidence and blockers.
+  E means scoped evidence, never family acceptance or final-candidate qualification.
+- Reconcile RO001's M86 trigger against M94 promotion/M95 controls. Separate
+  discharged local comparisons from remaining triggered gaps and future conditional
+  claims; no blanket closure or new universal-proof requirement. Correct stale text.
+- Expose D3 -> alignment -> role bounding -> unit -> truncation -> score/arbitration.
+  Compare existing dead zone with a concrete proposed receiver, retaining D3,
+  thresholds/base dice/caps/source laws. Recommendation only, not a law adoption.
+  If useful, one exact rational illustrative arithmetic check; no scenario/seed
+  search, new simulations, schema implementation or repeated full regression.
+- Budget:90 minutes analysis;600s/check and1800s cumulative verification including
+  failures+15s bookkeeping;2 evidence files/5MiB. One long job.
+- Checks: all132 pinned clause IDs classified once; evidence links exist; document
+  line/byte budgets; unchanged source/fixtures/contracts/baseline; research index
+  counts/references; Git size/whitespace. Types/native reruns unnecessary for docs.
+- Done: refreshed single register, concrete RO001 disposition and finite remaining
+  work, calibration recommendation with acceptance gates and tradeoffs, checks pass.
+  Return the actual law decision for review; do not begin the proposed experiment.
 
-Owner2026-11-13 delegated work through COMMIT completion; that bounded gate ends
-here for review. No further integration area, UI, reduction or autonomous partner
-work has started. Final whole-character replay and broader family acceptance remain.
-Five mapped members/zero full families;21 members/15 families/132 clauses fixed.
-RO001 ACTIVE;009/014/020 conditional; historical018 closed. No debt closure.
+Current model0.84/SourceCoverage0.5/D3 remains unchanged; COMMIT mapping retained.
+Five members mapped/zero full families;21 members/15 families/132 clauses fixed.
+RO001 initially ACTIVE;009/014/020 conditional, historical018 closed.
 | Research obligations | **1 active / 17 conditional / 0 unowned** |
