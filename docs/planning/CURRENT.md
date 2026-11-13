@@ -1,53 +1,40 @@
-# Current work — M97 explicit commitment cancellation
+# Current work — M97 complete: explicit commitment cancellation
 
-Owner continuation2026-11-12 follows M96 expiry (83472585).
-Cancel a live concrete commitment without erasing learned identity; its reasons
-must disappear from the next decision in the same continuing character.
+The character can cancel a concrete commitment while preserving earned identity.
+Its current decision remains intact; later decisions lose the cancelled instance's
+reasons. One continuing model/state/scheduler/save, existing prospective owner.
 
-## Bounded card before code
-- Scope: PHEN-COMMIT-001:2/3/4/7/8/9/10 partial; :5/6/11 preserved/pending.
-  Cancellation is distinct from expiry. Fresh adoption/recurrence follows without
-  unrelated breadth: it also requires instruction and importance source admission.
-  No empty Open record or authored psychological value substitutes for that source.
-- Contract: assembled-character-commitment-lifecycle/0.1-candidate, model/registry
-  0.81. Existing SourceCoverage0.5/D3/calibration unchanged. New372/2 is Cancelled
-  only (tag4,time,source-event ordinal); existing373/1 and prospective owner remain.
-  Original372/1, all prior models and C2 dependency closure remain unchanged.
-- Controlled lifecycle request30 -> authenticated child140. This is the original
-  COMMIT intervention precedent, not autonomous adoption/choice or general language.
-  Prior committed state governs the current decision; terminal state governs later
-  decisions. Denied requests do nothing; hidden scalar never influences cognition.
-- One package: <=9 production/test paths: assembled/{commitment,codecs,model,state,
-  inputs,runtime,traceBinding}.ts; test/assembledCommitmentCancellation.test.ts;
-  optional fixture. No new state root, scheduler, factory, law, calibration or UI.
-- Predeclared fixture: M94 standingProbe, promoted0.81, three physical tasks/no
-  social dependencies; body30/cap100/rate10, delivery90@9; seed0. Original calendar
-  through101. Add one request for A at10, permitted versus denied. Both decision10
-  inputs stay live and equal; actual qualification10 earns the same nonzero history.
-  Request settles140 after decision10. Probe12 stays live in both arms; A signals/
-  nuclei disappear only after cancellation; B remains live with retained standing.
-  Require exact probability change and actual execution, unchanged learned history.
-  Training Auto requires zero draws; otherwise shared actual draws must be proven.
-  No post-result fixture/calibration/seed search or sampled-choice-causality claim.
-- Controls: request hidden scalar; no-request0.80/0.81 relevant semantic equality;
-  denied request cannot cancel; terminal records persist; illegal source/generated
-  ingress, wrong owners, initial cancelled state and resurrection reject. Closed
-  version bundle and successor schema preserve old codec/model rejection.
-  Repeat/restore before10, compare exact every later full save through101; injected
-  failure after cancellation patch calculation rolls back the public snapshot.
-  Original COMMIT lifecycle/competitor controls remain executable unchanged.
-- Checks: native behavior/privacy, state/admission/ordering negatives, persistence/
-  rollback, retained current REASON gate (compiler unchanged but version/wiring
-  touched), original COMMIT controls; types/boundary/research/docs/links/git-size.
-  Risks: terminal-schema leakage, forged commands, early visibility, extra writers,
-  lost learning, stale reasons, persistence and version-routing regressions.
-- Budget600s/check,1800s total incl failures and15s bookkeeping; one validation
-  job;2 evidence files/5MiB; <=12 production/test paths hard limit.
-- Done iff all gates pass and classified result records remaining COMMIT gaps.
-  No full corpus/family closure. Preserve failures; fix ordinary bugs within budget.
+## Result
+- [M97 result](ASSEMBLED_CHARACTER_M97_RESULT.md), [checks](ASSEMBLED_CHARACTER_M97_CHECKS.txt),
+  [contract](../formal/ASSEMBLED_CHARACTER_COMMITMENT_LIFECYCLE_CONTRACT.md); plan554f4331.
+- Rules/registry0.81; SourceCoverage0.5/D3/calibration unchanged. Request30 produces
+  authenticated cancellation140, writing distinct372/2 Cancelled under373/1.
+  Earlier versions and the frozen control remain unchanged.
+- Actual decision10 and nonzero earned history match permitted/denied arms.
+  Auto has zero draws. Probe12 loses A signals/nucleus after cancellation;
+  probabilities A55/64,B9/64 become only B1; actual execution and identity preserved.
+- Hidden truth cannot change cognition; denied request cannot cancel. No-request
+  0.80/0.81 state/output exact. Old-version, initial-state, owner, source, terminal
+  resurrection and edited-restore negatives pass.
+- Repeat/restore before10: exact full saves at10,11,12,13,14,20,40,101. Cancellation
+  persists; injected owner-write failure restores the public snapshot.
+- Three native tests, retained REASON connection, three original COMMIT controls,
+  types, reference boundaries and research pass. Final docs/size/timing in result.
+- Failures retained: prepared-output typing, strict old status reader, trace-selector
+  mistake. Bounded75-line settlement port changes only reader/trace semantics.
+  M96's original deadline description corrected100 ->20; executed inputs unchanged.
+- Twelve production/test paths (one comment-only);2 new evidence files/5MiB;
+ 600s/check,1800s total; actual858.92s including failures/bookkeeping.
+  Document/link/budget, Git size and whitespace checks pass. No extension.
 
+## Next bounded integration
+Fresh concrete-instance adoption needs actual instruction and importance sources,
+then distinct-ID recurrence and the complete lifecycle/competitor/observer mapping.
+No bare Open record or authored pressure substitutes for a missing causal producer.
+COMMIT stays UNRESOLVED. Next package gets its own bounded card, with no unrelated
+breadth, autonomous peers or UI.
 [M96](ASSEMBLED_CHARACTER_M96_RESULT.md) preserves expiry; [M95](ASSEMBLED_CHARACTER_M95_RESULT.md)
-completes bounded REASON. MEC020/EXP013 PORT; RET010/011 CONTROL; MEC017/018/022
-preserved. RO001 active; RO009/014/020 conditional. One model/state/scheduler/save.
-Four mapped members/zero full families;21 members/15 families/132 clauses unchanged.
+remains bounded REASON completion. Four mapped members/zero full families;
+21 members/15 families/132 clauses and final current-candidate replay still required.
+RO001 ACTIVE; RO009/014/020 conditional; no debt closure, new verdict or reduction.
 | Research obligations | **1 active / 17 conditional / 0 unowned** |

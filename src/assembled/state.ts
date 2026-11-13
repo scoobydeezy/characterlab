@@ -1,3 +1,4 @@
+import {receivingRecord as statusRecord} from './codecs';
 import {withQualifiedIdentityState} from './identityEligibility';
 import {withRecognitionState} from './recognitionState';
 // assembled-character-model/0.1-candidate: bounded successor of cognitiveState at db0ca7a8.
@@ -58,11 +59,13 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
   if(path.fieldId!==1n&&path.fieldId!==2n)invalidModel('task field outside successor');
   if(value===undefined)return;
   if(path.fieldId===2n){rec(f(row(f(rec(value,390n),1n)),4n),389n);return;}
-  const status=rec(value,372n),tag=u(f(status,1n));
+  const status=statusRecord(value,372n),tag=u(f(status,1n));
   if(tag===2n){
    const reference=rec(f(status,2n),237n),at=f(status,3n),occurrence=id(f(reference,2n));
    if(u(f(reference,1n))!==1n||occurrence.namespaceId!==1115n||typeof occurrence.payload==='boolean'||occurrence.payload.kind!=='unsigned')invalidModel('satisfied task requires observation');
    if(typeof at==='boolean'||at.kind!=='signed'||at.value<task.activeFrom||at.value>=task.deadline)invalidModel('task satisfaction outside active window');
+  }else if(tag===4n){
+   const at=f(status,2n);if(!model.commitmentLifecycle||status.schema.schemaVersion!==2n||typeof at==='boolean'||at.kind!=='signed'||at.value>=task.deadline)invalidModel('cancelled task domain/version');
   }else if(tag!==1n&&tag!==3n)invalidModel('task status variant');
  }
  function validateState(state:AuthoritativeState){
@@ -76,7 +79,11 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
   validatePath(path:StatePath){structural.validatePath(path);validateEntry(path);},
   restoreState(bytes:Uint8Array){const state=structural.restoreState(bytes);validateState(state);return state;},
   read(state:AuthoritativeState,path:StatePath){structural.validatePath(path);validateEntry(path);const result=structural.read(state,path);if(result.presence)validateEntry(path,result.value!);return result;},
-  applyPatch(state:AuthoritativeState,patch:StatePatch,authority:Parameters<typeof structural.applyPatch>[2],scope?:Parameters<typeof structural.applyPatch>[3]){const result=structural.applyPatch(state,patch,authority,scope);validateState(result.state);return result;},
+  applyPatch(state:AuthoritativeState,patch:StatePatch,authority:Parameters<typeof structural.applyPatch>[2],scope?:Parameters<typeof structural.applyPatch>[3]){if(model.commitmentLifecycle)for(const op of patch.operations)if(op.path.rootStateTypeId===373n&&op.path.fieldId===1n){
+    const before=state.read(op.path),tag=before.presence?u(f(statusRecord(before.value!,372n),1n)):0n;
+    if(tag!==0n&&tag!==1n)invalidModel('terminal commitment cannot change');
+    if(op.kind==='set'&&u(f(statusRecord(op.newValue,372n),1n))===4n&&tag!==1n)invalidModel('cancellation requires Open commitment');
+   }const result=structural.applyPatch(state,patch,authority,scope);validateState(result.state);return result;},
  });
  const episodes=model.memory?withEpisodicState(inheritedState,C,model.body!,!!model.affectMemory,model.encoding,!!model.memoryUse,model.bodyMemoryUse,model.positionMemory,model.retainedAttribution,model.significanceEnabled,model.actionMemory):inheritedState;
  const embodied=model.body?withBodyState(episodes,C,model.body):episodes;
@@ -114,7 +121,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
    if(model.skill&&[785n,1500n].includes(e.path.rootStateTypeId))invalidModel('initial skill/development must be absent');
    if(e.path.rootStateTypeId===455n){const at=f(rec(e.value,454n),2n);if(typeof at==='boolean'||at.kind!=='signed'||at.value!==0n)invalidModel('initial body anchor must be at0');}
    if([346n,362n,415n].includes(e.path.rootStateTypeId))invalidModel('initial learned memory, prediction and identity must be empty');
-   if(e.path.rootStateTypeId===373n&&e.path.fieldId===1n&&u(f(rec(e.value,372n),1n))!==1n)invalidModel('initial tasks must be Open');
+   if(e.path.rootStateTypeId===373n&&e.path.fieldId===1n&&u(f(statusRecord(e.value,372n),1n))!==1n)invalidModel('initial tasks must be Open');
   }
   prior.base.domains.validateStatic(state);prior.base.domains.validateReferences(state,0n);return state;
  }

@@ -14,7 +14,7 @@ REASON is not extended. [Checks](ASSEMBLED_CHARACTER_M96_CHECKS.txt).
 Rules/registry0.80, reason-sources0.5 SourceCoverage, task-commitment0.2 and D3
 formation stay fixed. Three physical tasks, no social dependencies; body30,
 capacity100/rate10, delivery90 at9; actual qualification10, probe12; seed0.
-Only task A's deadline changes to11 from its original100. No learned initial
+Only task A's deadline changes to11 from its original20. No learned initial
 state, authored identity, source strength, calibration or scenario dispatch.
 Two outcome-blind setup runs construct existing comparison maps from identities.
 The actual training decisions are Auto with zero draws: identical acquired
@@ -87,3 +87,8 @@ One new test file, zero production/contract edits;2 evidence files/5MiB,
 
 Final verification: **531.70s /1800s**, including the failed run and15s
 bookkeeping; longest command182.23s /600s. No budget extension.
+
+M97 source-review correction: this report previously called the unchanged A
+deadline100. The inherited assembledGroundedAffect fixture declares20. The M96
+test always used that original source and compared it with11; no executed input,
+assertion or result changed. Its introductory comment is corrected too.

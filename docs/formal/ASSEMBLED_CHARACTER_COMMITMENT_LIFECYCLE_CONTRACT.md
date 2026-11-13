@@ -48,3 +48,15 @@ RO001 source correlation remains active; RO009/014/020 conditional limits remain
 Creation/recurrence, series identity, partial fulfillment, delegation, beneficiaries
 and selective observer knowledge are not proved by cancellation. They remain
 mandatory where pinned; this package cannot mark COMMIT complete.
+
+## Receiving-reader clarification before bounded port
+
+The first native run found that inherited strict readers require372/1. Under
+0.81, the unchanged Open-tag selection equation uses the successor status reader.
+Port only the75-line task settlement handler from Campaign2 taskExecution.ts at
+83472585 into assembled/taskSettlement.ts: same measurement/deadline equations,
+authentication, owned patches and rollback; successor status reader and trace
+version. The original handler and all older model routing remain unchanged.
+Workspace/priority readers likewise receive the new terminal schema. No alias
+to Expired, hidden status projection or new psychology is permitted. No-request
+0.80/0.81 state/output agreement and retained REASON tests check correspondence.

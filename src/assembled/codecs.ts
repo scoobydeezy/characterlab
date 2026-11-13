@@ -18,8 +18,9 @@ const described:RecordSchema={...rawV1,schemaVersion:3n,fields:[...rawV1.fields,
 const receiptAtom:RecordSchema={typeId:399n,schemaVersion:2n,name:'ValueReceiptEvidenceAtom',fields:[{id:1n,name:'VariantTag',required:true},{id:2n,name:'PerformanceObservationId',required:true}]};
 const contextTypes=[401n,406n,407n,422n];
 const contextual:RecordSchema[]=contextTypes.map(typeId=>{const old=predecessor.find(s=>s.typeId===typeId)!;return {...old,name:old.name+'WithContext',schemaVersion:2n,fields:[...old.fields,...(typeId===401n?[]:[{id:typeId===406n?5n:8n,name:typeId===406n?'ContextStrength':'ContextModifier',required:true}])]};});
-const schemas=[...predecessor,...added,described,receiptAtom,...contextual],registry=new RecordSchemaRegistry(schemas);
-const current=new Map<bigint,RecordSchema>();for(const schema of schemas)if(!(contextTypes.includes(schema.typeId)&&schema.schemaVersion===2n||schema.typeId===399n&&schema.schemaVersion===2n||schema.typeId===403n&&schema.schemaVersion>=2n||schema.typeId===404n&&schema.schemaVersion===2n))current.set(schema.typeId,schema);
+const cancelled:RecordSchema={typeId:372n,schemaVersion:2n,name:'CancelledTaskStatus',fields:[{id:1n,name:'VariantTag',required:true},{id:2n,name:'CancelledAt',required:true},{id:3n,name:'RequestEventId',required:true}]};
+const schemas=[...predecessor,...added,described,receiptAtom,...contextual,cancelled],registry=new RecordSchemaRegistry(schemas);
+const current=new Map<bigint,RecordSchema>();for(const schema of schemas)if(!(schema.typeId===372n&&schema.schemaVersion===2n||contextTypes.includes(schema.typeId)&&schema.schemaVersion===2n||schema.typeId===399n&&schema.schemaVersion===2n||schema.typeId===403n&&schema.schemaVersion>=2n||schema.typeId===404n&&schema.schemaVersion===2n))current.set(schema.typeId,schema);
 const byName=new Map(schemas.map(s=>[s.name,s]));
 const declarations=new Map([...allocation.records,...allocation.schemaSuccessors].map(r=>[`${r.typeId}/${r.schemaVersion}`,r]));
 const identityNamespaces=allocation.identifierAliases as Readonly<Record<string,number>>;
@@ -89,7 +90,7 @@ function validate(value:CanonicalValue):void {
  function containsExtension(v:CanonicalValue):boolean {
   if(typeof v==='boolean')return false;const known=extended.get(v);if(known!==undefined)return known;
   let result=false;
-  if(v.kind==='record')result=[...contextTypes,399n,403n,404n,411n].includes(v.schema.typeId)&&(v.schema.schemaVersion===2n||v.schema.typeId===403n&&v.schema.schemaVersion===3n)||[...v.fields.values()].some(containsExtension);
+  if(v.kind==='record')result=[372n,...contextTypes,399n,403n,404n,411n].includes(v.schema.typeId)&&(v.schema.schemaVersion===2n||v.schema.typeId===403n&&v.schema.schemaVersion===3n)||[...v.fields.values()].some(containsExtension);
   else if(v.kind==='list'||v.kind==='set')result=v.items.some(containsExtension);
   else if(v.kind==='map')result=v.entries.some(([a,b])=>containsExtension(a)||containsExtension(b));
   else if(v.kind==='typedIdentifier')result=containsExtension(v.payload);
@@ -99,6 +100,10 @@ function validate(value:CanonicalValue):void {
   if(!containsExtension(v)){decodeEmbodied(canonicalEncode(v));return;}
   if(typeof v==='boolean')return;
   if(v.kind==='record'){
+   if(v.schema.typeId===372n&&v.schema.schemaVersion===2n){
+    const tag=v.fields.get(1n),at=v.fields.get(2n),source=v.fields.get(3n);
+    if(v.fields.size!==3||!tag||typeof tag==='boolean'||tag.kind!=='unsigned'||tag.value!==4n||!at||typeof at==='boolean'||at.kind!=='signed'||at.value<1n||at.value>100n||!source||typeof source==='boolean'||source.kind!=='unsigned'||source.value<1n)fail('cancelled task grammar');return;
+   }
    if(v.schema.typeId===399n&&v.schema.schemaVersion===2n){
     const tag=v.fields.get(1n),receipt=v.fields.get(2n);
     if(v.fields.size!==2||!tag||typeof tag==='boolean'||tag.kind!=='unsigned'||tag.value!==3n||!receipt||typeof receipt==='boolean'||receipt.kind!=='typedIdentifier'||receipt.namespaceId!==1164n||typeof receipt.payload==='boolean'||receipt.payload.kind!=='unsigned'||receipt.payload.value<=0n)fail('Value receipt atom');
@@ -148,7 +153,7 @@ export function cognitiveSchemaByType(typeId:bigint,version?:bigint):RecordSchem
 export function decodeCognitive(bytes:Uint8Array):CanonicalValue {const value=canonicalDecode(bytes,registry);validate(value);return value;}
 export const cloneCognitive=(value:CanonicalValue)=>decodeCognitive(canonicalEncode(value));
 export const cognitiveSupportedSchemas=()=>schemas.map(s=>({...s,fields:s.fields.map(f=>({...f}))}));
-export const cognitiveAddedSchemas=()=>[...added,described,receiptAtom,...contextual].map(s=>({...s,fields:s.fields.map(f=>({...f}))}));
+export const cognitiveAddedSchemas=()=>[...added,described,receiptAtom,...contextual,cancelled].map(s=>({...s,fields:s.fields.map(f=>({...f}))}));
 export function cognitiveRecord(typeId:number,values:readonly CanonicalValue[],version?:number):CanonicalValue {
  const schema=cognitiveSchemaByType(BigInt(typeId),version===undefined?undefined:BigInt(version));if(values.length>schema.fields.length)fail('extra field');
  return cloneCognitive(record(schema,new Map(values.map((v,i)=>[schema.fields[i].id,v]))));
@@ -164,10 +169,10 @@ export function randomDrawRecord(value:CanonicalValue):Extract<CanonicalValue,{k
 }
 
 /** Same scalar-role traversal as the accepted task content validator, using successor decoding. */
-export function validateCharacterRecordRoles(content:{recordRole:(type:bigint,field:bigint)=>Uint8Array|undefined;validateRole:(value:Uint8Array,role:Uint8Array)=>void},bytes:Uint8Array,valueReceiving=false,reasonDescriptions=false,valueProvenance=false,contextReasons=false){
+export function validateCharacterRecordRoles(content:{recordRole:(type:bigint,field:bigint)=>Uint8Array|undefined;validateRole:(value:Uint8Array,role:Uint8Array)=>void},bytes:Uint8Array,valueReceiving=false,reasonDescriptions=false,valueProvenance=false,contextReasons=false,commitmentLifecycle=false){
  function visit(v:CanonicalValue):void {
   if(typeof v==='boolean')return;
-  if(v.kind==='record'){if(v.schema.schemaVersion===2n&&contextTypes.includes(v.schema.typeId)&&!contextReasons)fail('context reasons require successor model');if(v.schema.typeId===399n&&v.schema.schemaVersion===2n){if(!valueProvenance)fail('Value provenance requires successor model');return;}if(v.schema.typeId===403n&&v.schema.schemaVersion===3n&&!reasonDescriptions)fail('reason descriptions require successor model');const added=[403n,404n].includes(v.schema.typeId)&&v.schema.schemaVersion===2n;if(added&&!valueReceiving)fail('Value receiving requires successor model');for(const [field,value] of v.fields){if(v.schema.schemaVersion===2n&&(v.schema.typeId===404n&&field===2n||v.schema.typeId===401n&&field===3n))continue;const role=content.recordRole(v.schema.typeId,field);if(role)content.validateRole(canonicalEncode(value),role);}for(const value of v.fields.values())visit(value);}
+  if(v.kind==='record'){if(v.schema.typeId===372n&&v.schema.schemaVersion===2n){if(!commitmentLifecycle)fail('commitment lifecycle requires successor model');return;}if(v.schema.schemaVersion===2n&&contextTypes.includes(v.schema.typeId)&&!contextReasons)fail('context reasons require successor model');if(v.schema.typeId===399n&&v.schema.schemaVersion===2n){if(!valueProvenance)fail('Value provenance requires successor model');return;}if(v.schema.typeId===403n&&v.schema.schemaVersion===3n&&!reasonDescriptions)fail('reason descriptions require successor model');const added=[403n,404n].includes(v.schema.typeId)&&v.schema.schemaVersion===2n;if(added&&!valueReceiving)fail('Value receiving requires successor model');for(const [field,value] of v.fields){if(v.schema.schemaVersion===2n&&(v.schema.typeId===404n&&field===2n||v.schema.typeId===401n&&field===3n))continue;const role=content.recordRole(v.schema.typeId,field);if(role)content.validateRole(canonicalEncode(value),role);}for(const value of v.fields.values())visit(value);}
   else if(v.kind==='typedIdentifier')visit(v.payload);else if(v.kind==='list'||v.kind==='set')v.items.forEach(visit);else if(v.kind==='map')for(const [k,value] of v.entries){visit(k);visit(value);}
  }
  visit(decodeCognitive(bytes));
@@ -175,6 +180,6 @@ export function validateCharacterRecordRoles(content:{recordRole:(type:bigint,fi
 
 /** Strict reader for already admitted predecessor and receiving records. */
 export function receivingRecord(value:CanonicalValue,typeId:bigint):RecordValue {
- if(!isRecord(value)||value.schema.typeId!==typeId||!(value.schema.schemaVersion===1n||[...contextTypes,403n,404n].includes(typeId)&&value.schema.schemaVersion===2n||typeId===403n&&value.schema.schemaVersion===3n))return fail('unsupported receiving record version');
+ if(!isRecord(value)||value.schema.typeId!==typeId||!(value.schema.schemaVersion===1n||[372n,...contextTypes,403n,404n].includes(typeId)&&value.schema.schemaVersion===2n||typeId===403n&&value.schema.schemaVersion===3n))return fail('unsupported receiving record version');
  return value;
 }

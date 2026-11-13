@@ -1,6 +1,6 @@
 /** M96: three physical tasks, no social dependencies; live inherited body,
  * position/catalogue and two reason-reading channels. Body30/cap100/rate10,
- * delivery90@9; seed0. Only A deadline differs (11 versus original100).
+ * delivery90@9; seed0. Only A deadline differs (11 versus original20).
  * Same current0.80 SourceCoverage and D3; no authored psychological state. */
 import {it,expect,vi} from 'vitest';
 import {prepareCharacterModel,createCharacterRun,restoreCharacterRun} from '../assembled/character';

@@ -1,3 +1,4 @@
+import {receivingRecord as statusRecord} from './codecs';
 /** configuration0.1: same ordered task/forecast selection, domain up to3 tasks. */
 import {list,unsigned as u,type CanonicalValue} from '../substrate/canonicalEncoding';
 import {cognitiveRecord as r} from '../campaign2/cognitiveCodecs';
@@ -7,7 +8,7 @@ export function workspaceOutput(occurrence:CanonicalValue,character:CanonicalVal
  const d=rec(definition,378n),capacity=uint(f(d,2n));if(capacity>4n||tasks.length>3)invalidModel('workspace finite domain');
  const eligible=f(d,3n)===true?[...tasks].sort((a,b)=>key(a.key)<key(b.key)?-1:1).filter(task=>{
   if(key(f(rec(task.key,371n),1n))!==key(character))invalidModel('workspace foreign task');
-  const prior=reads.status(task.key);return prior!==undefined&&uint(f(rec(prior,372n),1n))===1n&&task.activeFrom<=at&&at<task.deadline;
+  const prior=reads.status(task.key);return prior!==undefined&&uint(f(statusRecord(prior,372n),1n))===1n&&task.activeFrom<=at&&at<task.deadline;
  }).sort((a,b)=>a.deadline<b.deadline?-1:a.deadline>b.deadline?1:key(a.key)<key(b.key)?-1:1):[];
  const selected=capacity===0n?[]:eligible.slice(0,capacity>=2n?Number(capacity-1n):1);
  let forecast=r(380,[u(1)]),unavailable:'NoSelectedTask'|'CapacityExcluded'|'AccessDisabled'|'PriorAbsent'|undefined;

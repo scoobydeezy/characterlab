@@ -1,0 +1,208 @@
+
+M97_START types-first ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+src/assembled/commitment.ts(35,536): error TS18048: 'source' is possibly 'undefined'.
+src/assembled/runtime.ts(101,131): error TS2345: Argument of type 'Readonly<{ eventTypes: () => { readonly kind: "typedIdentifier"; readonly namespaceId: bigint; readonly payload: CanonicalValue; }[]; isLearning: (e: ScheduledEvent) => boolean; ... 6 more ...; prepare(events: readonly ScheduledEvent[], B0: AuthoritativeState): { ...; }; }> | { ...; } | undefined' is not assignable to parameter of type 'Readonly<{ eventTypes: () => { readonly kind: "typedIdentifier"; readonly namespaceId: bigint; readonly payload: CanonicalValue; }[]; isLearning: (e: ScheduledEvent) => boolean; ... 6 more ...; prepare(events: readonly ScheduledEvent[], B0: AuthoritativeState): { ...; }; }> | undefined'.
+  Type '{ eventTypes: () => { readonly kind: "typedIdentifier"; readonly namespaceId: bigint; readonly payload: CanonicalValue; }[]; isLearning: (e: ScheduledEvent) => boolean; ... 6 more ...; motive: (event: ScheduledEvent, state: AuthoritativeState, concern: CanonicalValue, occurrence: CanonicalValue) => { ...; }; }' is not assignable to type 'Readonly<{ eventTypes: () => { readonly kind: "typedIdentifier"; readonly namespaceId: bigint; readonly payload: CanonicalValue; }[]; isLearning: (e: ScheduledEvent) => boolean; ... 6 more ...; prepare(events: readonly ScheduledEvent[], B0: AuthoritativeState): { ...; }; }>'.
+    The types of 'prepare(...).execute(...).outputs' are incompatible between these types.
+      Type 'CanonicalValue[]' is not assignable to type 'never[]'.
+        Type 'CanonicalValue' is not assignable to type 'never'.
+          Type 'false' is not assignable to type 'never'.
+
+M97_CHECK types-first exit=2 seconds=17.07 timeout=False
+
+M97 REPAIR: static check caught nullable source capture and prepared-stage output-type mismatch. Keep terminal result in the existing trace output projection, as the goal owner does; guarded source is explicitly narrowed. No comparison/law changes.
+
+M97_START types-tests ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+
+M97_CHECK types-tests exit=0 seconds=16.74 timeout=False
+
+M97_START native-behavior ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledCommitmentCancellation.test.ts', '-t', 'M97 behavior', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledCommitmentCancellation.test.ts > M97 behavior: cancellation settles after the current decision and removes later pressure 76797ms
+   → requires 372/1
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledCommitmentCancellation.test.ts > M97 behavior: cancellation settles after the current decision and removes later pressure
+SchedulerContractError: requires 372/1
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataRecord src/campaign2/canonicalData.ts:9:117
+ ❯ Object.applyPatch src/assembled/state.ts:84:29
+ ❯ Object.applyPatch src/assembled/memory.ts:78:22
+ ❯ Object.applyPatch src/assembled/body.ts:57:22
+ ❯ Object.applyPatch src/assembled/retention.ts:40:127
+ ❯ Object.applyPatch src/assembled/skill.ts:46:22
+ ❯ Object.applyPatch src/assembled/strategy.ts:42:600
+ ❯ Object.applyPatch src/assembled/priority.ts:29:830
+ ❯ Object.applyPatch src/assembled/horizon.ts:25:817
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  18:24:55
+   Duration  81.03s (transform 2.54s, setup 0ms, collect 3.81s, tests 76.80s, environment 0ms, prepare 143ms)
+
+
+M97_CHECK native-behavior exit=1 seconds=81.60 timeout=False
+
+M97 REPAIR before port: native failure requires372/1 is a receiver/schema integration defect. Extend successor status reads and port the small task settlement handler with unchanged equations/ownership, original version routing retained. Declare11 production/test paths (under12); no law or comparison amendment.
+
+M97_START native-behavior-repaired ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledCommitmentCancellation.test.ts', '-t', 'M97 behavior', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledCommitmentCancellation.test.ts > M97 behavior: cancellation settles after the current decision and removes later pressure 90860ms
+   → expected [] to have a length of 1 but got +0
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledCommitmentCancellation.test.ts > M97 behavior: cancellation settles after the current decision and removes later pressure
+AssertionError: expected [] to have a length of 1 but got +0
+
+- Expected
++ Received
+
+- 1
++ 0
+
+ ❯ src/test/assembledCommitmentCancellation.test.ts:37:275
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  18:28:07
+   Duration  95.11s (transform 2.56s, setup 0ms, collect 3.82s, tests 90.86s, environment 0ms, prepare 138ms)
+
+
+M97_CHECK native-behavior-repaired exit=1 seconds=95.67 timeout=False
+
+M97 REPAIR: cancellation and equal current decision/history passed; the trace selector matched an earlier settlement with the same seam version. Select exact cancellation event/type/time10, preserving read/patch/parent assertions. No fixture, mechanism or gate changes. Corrected original handler line count75.
+
+M97_START native-behavior-trace-fixed ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledCommitmentCancellation.test.ts', '-t', 'M97 behavior', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCommitmentCancellation.test.ts > M97 behavior: cancellation settles after the current decision and removes later pressure
+M97 BEHAVIOR PASS choice10 live/equal Auto0draws; cancellation140; unchanged genuine identity; probability12 A55/64,B9/64 -> only B1; hidden/denied controls; actual executions.
+
+ ✓ src/test/assembledCommitmentCancellation.test.ts > M97 behavior: cancellation settles after the current decision and removes later pressure 137517ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  18:30:09
+   Duration  141.77s (transform 2.55s, setup 0ms, collect 3.81s, tests 137.52s, environment 0ms, prepare 136ms)
+
+
+M97_CHECK native-behavior-trace-fixed exit=0 seconds=142.31 timeout=False
+
+M97_START native-boundaries ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledCommitmentCancellation.test.ts', '-t', 'M97 boundaries', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCommitmentCancellation.test.ts > M97 boundaries: old versions stay closed, terminal identity cannot be forged or reused
+M97 BOUNDARIES PASS no-command0.80/0.81 exact state/output; old codec/model rejects new status; wrong owner, invented initial state, resurrection, duplicate/generated/malformed/versioned input and edited restore rejected
+
+ ✓ src/test/assembledCommitmentCancellation.test.ts > M97 boundaries: old versions stay closed, terminal identity cannot be forged or reused 135459ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  18:33:03
+   Duration  139.74s (transform 2.56s, setup 0ms, collect 3.82s, tests 135.46s, environment 0ms, prepare 135ms)
+
+
+M97_CHECK native-boundaries exit=0 seconds=140.29 timeout=False
+
+M97_START native-persistence ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledCommitmentCancellation.test.ts', '-t', 'M97 persistence', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCommitmentCancellation.test.ts > M97 persistence: every settlement preserves cancellation; a failed owner write rolls back
+M97 CONTINUATION PASS9 -> 10,11,12,13,14,20,40,101; exact full saves; cancellation-patch fault restores public snapshot
+
+ ✓ src/test/assembledCommitmentCancellation.test.ts > M97 persistence: every settlement preserves cancellation; a failed owner write rolls back 169089ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  18:35:40
+   Duration  173.37s (transform 2.56s, setup 0ms, collect 3.83s, tests 169.09s, environment 0ms, prepare 141ms)
+
+
+M97_CHECK native-persistence exit=0 seconds=173.91 timeout=False
+
+M97_START retained-reason ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledReasonReference.test.ts', '-t', 'M94 connected', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReasonReference.test.ts > M94 connected: context and earned standing still influence the actual decision
+M94 CONNECTED PASS context distinct -1/5/-2 changes probability; genuine D3 standing rescues weak reason, B0 ->9/64
+
+ ✓ src/test/assembledReasonReference.test.ts > M94 connected: context and earned standing still influence the actual decision 142783ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  18:38:43
+   Duration  147.12s (transform 2.59s, setup 0ms, collect 3.87s, tests 142.78s, environment 0ms, prepare 137ms)
+
+
+M97_CHECK retained-reason exit=0 seconds=147.67 timeout=False
+
+M97_START original-commit ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/commitPublic.test.ts', '-t', 'earns strong identity|preserves terminal|distinguishes CoreNeed', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/commitPublic.test.ts > earns strong identity then keeps it fixed across exact lifecycle pressure and active decisions 497ms
+ ✓ src/test/commitPublic.test.ts > preserves terminal A/version/cause while recurrence creates distinct B 400ms
+ ✓ src/test/commitPublic.test.ts > distinguishes CoreNeed, Immortal and ReusedId under identical actual learned identity 1682ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 24 skipped (27)
+   Start at  18:41:22
+   Duration  4.18s (transform 804ms, setup 0ms, collect 1.21s, tests 2.58s, environment 0ms, prepare 136ms)
+
+
+M97_CHECK original-commit exit=0 seconds=4.72 timeout=False
+
+M97_START types-final ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+
+M97_CHECK types-final exit=0 seconds=16.92 timeout=False
+
+M97_START reference-boundary ['node', 'scripts/check-reference-boundary.mjs']
+Reference boundary check passed.
+
+M97_CHECK reference-boundary exit=0 seconds=2.48 timeout=False
+
+M97_START research ['node', 'scripts/check-research-obligations.mjs']
+PASS: research obligation references and dispositions {"active":1,"conditional":17,"closed":4,"unowned":0,"verdicts":103,"reports":4330}
+
+M97_CHECK research exit=0 seconds=3.48 timeout=False
+
+M97_START documentation ['python', '-c', "from pathlib import Path\nimport re,json,subprocess\nfor name,limit in [('AGENTS.md',120),('docs/planning/CURRENT.md',80),('docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md',250),('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md',250)]:\n p=Path(name);n=len(p.read_text().splitlines());assert n<=limit,(name,n);print(name,n,'lines',len(p.read_bytes()),'bytes')\nreg=Path('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md');assert len(reg.read_bytes())<=65536\nfor name in ['CURRENT.md','ASSEMBLED_CHARACTER_RECONCILIATION.md','ASSEMBLED_CHARACTER_M97_RESULT.md','ASSEMBLED_CHARACTER_M96_RESULT.md']:\n p=Path('docs/planning')/name\n for link in re.findall(r'\\]\\(([^)]+)\\)',p.read_text()):\n  dest=link.split('#')[0].strip('<>')\n  if dest and '://' not in dest:assert (p.parent/dest).exists(),(str(p),link)\nassert len([r for r in reg.read_text().splitlines() if '| C-' in r and re.search(r'EQUIVALENT \\(mapped(?: domain)?\\)',r)])==4\nassert '| UNRESOLVED | C-COMMIT' in reg.read_text()\nassert 'successor0.81 (SourceCoverage)' in reg.read_text()\nchanged=subprocess.check_output(['git','diff','83472585','--name-only'],text=True).splitlines()+subprocess.check_output(['git','ls-files','--others','--exclude-standard'],text=True).splitlines()\ncode=sorted(set(p for p in changed if p.startswith('src/')))\nassert len(code)==12,code\nassert all(p.startswith('src/assembled/') or p in ['src/test/assembledCommitmentCancellation.test.ts','src/test/assembledCommitmentExpiry.test.ts'] for p in code)\nold=subprocess.check_output(['git','show','83472585:src/test/assembledCommitmentExpiry.test.ts'],text=True)\nassert Path('src/test/assembledCommitmentExpiry.test.ts').read_text()==old.replace('original100','original20')\nassert not subprocess.check_output(['git','diff','83472585','--name-only','--','src/campaign2','src/campaign3','src/substrate','src/observation','src/semanticBinding','reference'],text=True).strip()\nfiles=[Path('docs/planning/ASSEMBLED_CHARACTER_M97_RESULT.md'),Path('docs/planning/ASSEMBLED_CHARACTER_M97_CHECKS.txt')]\nassert sum(p.stat().st_size for p in files)<5*1024*1024\nx=json.loads(Path('docs/planning/RESEARCH_OBLIGATIONS.json').read_text())\nassert sum(o['status']=='ACTIVE' for o in x['obligations'])==1\nassert sum(o['status']=='CONDITIONAL' for o in x['obligations'])==17\nassert len([r for r in x['reportReviews'] if r['path']=='docs/planning/ASSEMBLED_CHARACTER_M97_RESULT.md'])==1\nprint('PASS docs/links;12 code paths including one comment-only; original simulation/control trees unchanged;2 evidence files under5MiB;4 mapped/COMMIT unresolved; obligation statuses unchanged')\n"]
+AGENTS.md 120 lines 8423 bytes
+docs/planning/CURRENT.md 39 lines 2757 bytes
+docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md 250 lines 18781 bytes
+docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md 149 lines 65522 bytes
+PASS docs/links;12 code paths including one comment-only; original simulation/control trees unchanged;2 evidence files under5MiB;4 mapped/COMMIT unresolved; obligation statuses unchanged
+
+M97_CHECK documentation exit=0 seconds=0.63 timeout=False
+
+M97_START git-size ['node', 'scripts/check-git-file-sizes.mjs']
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M97_CHECK git-size exit=0 seconds=0.36 timeout=False
+
+M97_START whitespace ['git', 'diff', '--cached', '--check']
+
+M97_CHECK whitespace exit=0 seconds=0.07 timeout=False
