@@ -1,14 +1,15 @@
-# Current work — M103 stopped incomplete
-Reference0.84 remains; experimental0.85 is unqualified and not promoted.
-Owner approved the sole at12 task A urgency1 ->4/5 amendment2026-11-13,
-recorded before execution at c1e9940a. It also failed: both arms Auto despite
-two live reasons and nonzero acquired standing. No further contrast is authorized.
-Original and amended failures remain. My predicted4/9/d4 was wrong: actual
-priority is I*(1+U)/2 and d6 starts2/5. The configuration diagnostic passes;
-the native sampling/coupling/continuation gates remain unpassed.
-Package A stopped INCOMPLETE at twelve paths; B changed three source/test paths.
-Same1800s budget, no reset/extension. Final charged time is in M103_RESULT/CHECKS.
-Review the experiment design against actual equations before any new comparison.
+# Current work — M103 authorized repair
+Owner2026-11-13 authorizes continued diagnosis and necessary comparison amendments.
+This supersedes the prior no-further-contrast stop, not laws/reference or final gates.
+Reference0.84 remains; experimental0.85 is not promoted. Both Auto failures retained.
+Predeclare at12 A urgency0 in both arms; original1 and failed4/5 remain controls.
+Actual I*(1+U)/2 gives1/2, bounded1/3, hence d4. Existing situation+1 vs B d4
+gives reference P(A)=23/32, contest9/16>1/2. Tiny standing rounding must remain
+inside that rolling region; assert using production math before native execution.
+No seed/magnitude search, changed training/importance, gain, threshold or law.
+Package A incomplete at12 paths; B remains3 paths. Same1800s budget resumes809.766s.
+Run primary+controls, then full continuation/rollback, types and metadata checks;
+retain unaffected arithmetic/C0/M94/boundary passes. Repair concrete failures only.
 
 ## Bounded card — before implementation
 - Capability: genuinely acquired standing changes signed probabilities between
@@ -26,10 +27,10 @@ Review the experiment design against actual equations before any new comparison.
 - Scenario: M89 acquired-history fixture; three physical/nonsocial tasks, existing
   permitted body/reading channels; body30/cap100/rate10/delivery90@9, seed0.
   Training10 unchanged (A importance1/B3/5, genuine qualification; Values unlinked).
-  At12 both reading values become0 and A urgency4/5 (approved amendment),
+  At12 both reading values become0 and A urgency0 (delegated amendment),
   permission true; all other declarations
   and complete calendar retained. This removes extra evidence pressure in both
-  arms; the expected rolling regime failed in both comparisons. Liveness/rolling/
+  arms; prior urgency1 and4/5 failed. New predicted contest9/16. Liveness/rolling/
   nonzero-standing preconditions remain mandatory before the probability gate.
 - Primary: candidate learned versus removal of standing from captured12 raw only;
   operands never enter live state. Current0.84 on same calendar is truncation control.
@@ -55,7 +56,7 @@ Review the experiment design against actual equations before any new comparison.
   never independent standing motive. No reduction or original verdict edits.
 - Budget:600s/command,1800s cumulative verification incl failures+15s bookkeeping;
   at most2 evidence files/5MiB. One validation job. No gain/threshold amendments,
-  further replacement contrast, seed search or extension. Bugs repaired with receipts.
+  seed search or extension. Owner delegates justified fixture repairs with receipts.
 - Done: native causal consumption and signed probability gate, exact sampler law,
   coupling/negative/continuation checks pass; otherwise checkpoint failed/incomplete.
   Report candidate evidence for owner promotion decision, no automatic new reference.
