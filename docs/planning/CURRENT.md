@@ -1,9 +1,14 @@
-# Current work — M106 native biography connection
+# Current work — M106 native biography connection passes
 Owner continuation2026-11-13: continue integration after M105 on adopted0.85.
 One reference assembled-reference/0.3; standing-rounding/0.1-candidate globally.
 Engineering default/no superiority verdict;0.84 and original controls preserved.
 
-## Active bounded card — before implementation
+Eight fixed lanes, all28 pair comparisons, pressure/privacy and exact continuation pass.
+See ASSEMBLED_CHARACTER_M106_RESULT.md. Types/boundary/research/preservation pass.
+Verification about1480s/1800s; no extension or production change.
+Full BIO remains open: repeated acquisition, contradiction and original competitors.
+
+## Completed bounded card — plan384da0c5
 - Capability1: early addressed choices produce distinct frozen expressions and
   acquired disposition, which changes later native decision probabilities.
 - Capability2: later face/rounding/tie addresses are explicitly shared across all
@@ -29,7 +34,10 @@ Engineering default/no superiority verdict;0.84 and original controls preserved.
   and below2/5, so both live d4. Unadapted meaning differs, enabling nonzero
   frozen alignment; equal dice/no situational imbalance must be checked natively.
 - Comparison protocol: run seed0 fixed. One identity-only setup extracts complete
-  roots/candidate identities at10/12. Eight early lanes0..7 use fixed keys
+  roots/candidate identities at10/12. Verify each lane; if local roots differ,
+  one identity-only rebind/replay uses unchanged keys. No outcome-based routing.
+  Split lanes0..3/4..7 by command; compare all28 pairs from completed receipts.
+  Eight early lanes0..7 use fixed keys
   M106/early/<lane>/10; common later key M106/probe/12. Include all face, rounding
   and tie purposes. Maps use no outcomes/scores/probabilities; no replacement lane.
   All ordinary inputs/models identical. Compare all eight, not a selected cohort.
@@ -44,6 +52,9 @@ Engineering default/no superiority verdict;0.84 and original controls preserved.
   actual raw12, recompiles with current production compiler/arbitration and checks
   unchanged non-standing operands. No counterfactual operand enters native state.
   It must remove the history-dependent probability effect. Keep raw/history intact.
+- Diagnostic correction: different choices shift priority observation IDs. Match
+  actual producer/time/task/permitted values, retaining every provenance weight;
+  compare the reversible semantic image, never discard basis or edit native input.
 - Controls: fixed lane0 pressure1/2, hidden diagnostic truth, repeat/save9/restore
   all remaining settlements10/11/12/13/14/20/40/101 with exact state/output/trace/
   identity/save. Original expression10 remains unchanged; no outcome-based rewrite.

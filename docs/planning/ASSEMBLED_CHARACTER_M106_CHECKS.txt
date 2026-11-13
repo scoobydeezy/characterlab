@@ -1,0 +1,2144 @@
+M106 plan384da0c5; cumulative verification limit1800s, command600s.
+Bookkeeping allowance15s includes plan checks. All attempts retained.
+CHARGED 15.000
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "-b", "--pretty", "false"]
+src/test/fixtures/assembledBiography.ts(60,65): error TS2339: Property 'input' does not exist on type '{ d: { readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }; data: { readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<...>; }; ... 4 more ...; probabilities: CanonicalValue[]; }'.
+src/test/fixtures/assembledBiography.ts(61,27): error TS2339: Property 'report' does not exist on type '{ d: { readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }; data: { readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<...>; }; ... 4 more ...; probabilities: CanonicalValue[]; }'.
+src/test/fixtures/assembledBiography.ts(61,95): error TS2339: Property 'report' does not exist on type '{ d: { readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }; data: { readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<...>; }; ... 4 more ...; probabilities: CanonicalValue[]; }'.
+src/test/fixtures/assembledBiography.ts(62,68): error TS2339: Property 'source' does not exist on type '{ d: { readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }; data: { readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<...>; }; ... 4 more ...; probabilities: CanonicalValue[]; }'.
+
+EXIT 1; elapsed 18.782s
+CHARGED 33.782
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledBiography.test.ts", "-t", "M106 eight", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledBiography.test.ts > M106 eight fixed early lanes cause acquired biography and later probability differences
+M106 LANE {"lane":0,"earlyWinner":"0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","contribution":"-25/1883","P":"-25/1883","probeProbabilities":["147446538708035353313/295147905179352825856","147701366471317472543/295147905179352825856"],"probeDraws":5}
+
+stdout | src/test/assembledBiography.test.ts > M106 eight fixed early lanes cause acquired biography and later probability differences
+M106 LANE {"lane":1,"earlyWinner":"0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","contribution":"-25/1883","P":"-25/1883","probeProbabilities":["147446538708035353313/295147905179352825856","147701366471317472543/295147905179352825856"],"probeDraws":5}
+
+stdout | src/test/assembledBiography.test.ts > M106 eight fixed early lanes cause acquired biography and later probability differences
+M106 LANE {"lane":2,"earlyWinner":"0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","contribution":"-25/1883","P":"-25/1883","probeProbabilities":["147446538708035353313/295147905179352825856","147701366471317472543/295147905179352825856"],"probeDraws":5}
+
+ × src/test/assembledBiography.test.ts > M106 eight fixed early lanes cause acquired biography and later probability differences 187500ms
+   → expected { kind: 'set', …(1) } to deeply equal { kind: 'set', …(1) }
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  14:34:02
+   Duration  191.92s (transform 2.61s, setup 0ms, collect 3.90s, tests 187.50s, environment 0ms, prepare 136ms)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledBiography.test.ts > M106 eight fixed early lanes cause acquired biography and later probability differences
+AssertionError: expected { kind: 'set', …(1) } to deeply equal { kind: 'set', …(1) }
+
+- Expected
++ Received
+
+  Object {
+    "items": Array [
+      Object {
+        "fields": Map {
+          1n => Object {
+            "fields": Map {
+              1n => Object {
+                "fields": Map {
+                  1n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1037n,
+                      "payload": Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1038n,
+                        "payload": Object {
+                          "kind": "text",
+                          "value": "character/bridge-subject",
+                        },
+                      },
+                    },
+                  },
+                  2n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1027n,
+                    "payload": Object {
+                      "kind": "text",
+                      "value": "definition/protocol-contact-one",
+                    },
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    Object {
+                      "id": 1n,
+                      "name": "CharacterId",
+                      "required": true,
+                    },
+                    Object {
+                      "id": 2n,
+                      "name": "ProtocolActionDefinitionId",
+                      "required": true,
+                    },
+                  ],
+                  "name": "ProceduralCandidateKey",
+                  "schemaVersion": 1n,
+                  "typeId": 395n,
+                },
+              },
+              2n => Object {
+                "fields": Map {
+                  1n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1037n,
+                      "payload": Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1038n,
+                        "payload": Object {
+                          "kind": "text",
+                          "value": "character/bridge-subject",
+                        },
+                      },
+                    },
+                  },
+                  2n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1037n,
+                      "payload": Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1038n,
+                        "payload": Object {
+                          "kind": "text",
+                          "value": "content/task-a",
+                        },
+                      },
+                    },
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    Object {
+                      "id": 1n,
+                      "name": "CharacterId",
+                      "required": true,
+                    },
+                    Object {
+                      "id": 2n,
+                      "name": "TaskReferent",
+                      "required": true,
+                    },
+                  ],
+                  "name": "TaskCommitmentKey",
+                  "schemaVersion": 1n,
+                  "typeId": 371n,
+                },
+              },
+              3n => Object {
+                "kind": "unsigned",
+                "value": 1n,
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "CandidateKey",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "TaskCommitmentKey",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "SourceRole",
+                  "required": true,
+                },
+              ],
+              "name": "TaskRawSignalKey",
+              "schemaVersion": 1n,
+              "typeId": 401n,
+            },
+          },
+          2n => Object {
+            "denominator": 20n,
+            "kind": "rational",
+            "numerator": 13n,
+          },
+          3n => Object {
+            "fields": Map {
+              1n => Object {
+                "entries": Array [
+                  Array [
+                    Object {
+                      "fields": Map {
+                        1n => Object {
+                          "kind": "unsigned",
+                          "value": 1n,
+                        },
+                        2n => Object {
+                          "fields": Map {
+                            1n => Object {
+                              "kind": "unsigned",
+                              "value": 1n,
+                            },
+                            2n => Object {
+                              "kind": "typedIdentifier",
+                              "namespaceId": 1164n,
+                              "payload": Object {
+                                "kind": "unsigned",
+                                "value": 3n,
+                              },
+                            },
+                          },
+                          "kind": "record",
+                          "schema": Object {
+                            "fields": Array [
+                              Object {
+                                "id": 1n,
+                                "name": "VariantTag",
+                                "required": true,
+                              },
+                              Object {
+                                "id": 2n,
+                                "name": "ObservationId",
+                                "required": false,
+                              },
+                              Object {
+                                "id": 3n,
+                                "name": "FeatureObservationId",
+                                "required": false,
+                              },
+                              Object {
+                                "id": 4n,
+                                "name": "EventFeatureObservationId",
+                                "required": false,
+                              },
+                              Object {
+                                "id": 5n,
+                                "name": "PerceivedBindingId",
+                                "required": false,
+                              },
+                              Object {
+                                "id": 6n,
+                                "name": "ClassificationEvidenceId",
+                                "required": false,
+                              },
+                              Object {
+                                "id": 7n,
+                                "name": "EventClassificationEvidenceId",
+                                "required": false,
+                              },
+                              Object {
+                                "id": 8n,
+                                "name": "RecognitionCueEvidenceId",
+                                "required": false,
+                              },
+                              Object {
+                                "id": 9n,
+                                "name": "RecognitionResolutionId",
+                                "required": false,
+                              },
+                              Object {
+                                "id": 10n,
+                                "name": "CausalRoleEvidenceId",
+                                "required": false,
+                              },
+                            ],
+                            "name": "CharacterEvidenceRef",
+                            "schemaVersion": 1n,
+                            "typeId": 237n,
+                          },
+                        },
+                      },
+                      "kind": "record",
+                      "schema": Object {
+                        "fields": Array [
+                          Object {
+                            "id": 1n,
+                            "name": "VariantTag",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 2n,
+                            "name": "ObservationReference",
+                            "required": false,
+                          },
+                          Object {
+                            "id": 3n,
+                            "name": "QualificationOccurrenceId",
+                            "required": false,
+                          },
+                        ],
+                        "name": "ReasonEvidenceAtom",
+                        "schemaVersion": 1n,
+                        "typeId": 399n,
+                      },
+                    },
+                    Object {
+                      "denominator": 1n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "fields": Map {
+                        1n => Object {
+                          "kind": "unsigned",
+                          "value": 1n,
+                        },
+                        2n => Object {
+                          "fields": Map {
+                            1n => Object {
+                              "kind": "unsigned",
+                              "value": 1n,
+                            },
+                            2n => Object {
+                              "kind": "typedIdentifier",
+                              "namespaceId": 1164n,
+                              "payload": Object {
+                                "kind": "unsigned",
+-                               "value": 157n,
++                               "value": 160n,
+                              },
+                            },
+                          },
+                          "kind": "record",
+                          "schema": Object {
+                            "fields": Array [
+                              Object {
+                                "id": 1n,
+                                "name": "VariantTag",
+                                "required": true,
+                              },
+                              Object {
+                                "id": 2n,
+                                "name": "ObservationId",
+                                "required": false,
+                              },
+                              Object {
+                                "id": 3n,
+                                "name": "FeatureObservationId",
+                                "required": false,
+                              },
+                              Object {
+                                "id": 4n,
+                                "name": "EventFeatureObservationId",
+                                "required": false,
+                              },
+                              Object {
+                                "id": 5n,
+                                "name": "PerceivedBindingId",
+                                "required": false,
+                              },
+                              Object {
+                                "id": 6n,
+                                "name": "ClassificationEvidenceId",
+                                "required": false,
+                              },
+                              Object {
+                                "id": 7n,
+                                "name": "EventClassificationEvidenceId",
+                                "required": false,
+                              },
+                              Object {
+                                "id": 8n,
+                                "name": "RecognitionCueEvidenceId",
+                                "required": false,
+                              },
+                              Object {
+                                "id": 9n,
+                                "name": "RecognitionResolutionId",
+                                "required": false,
+                              },
+                              Object {
+                                "id": 10n,
+                                "name": "CausalRoleEvidenceId",
+                                "required": false,
+                              },
+                            ],
+                            "name": "CharacterEvidenceRef",
+                            "schemaVersion": 1n,
+                            "typeId": 237n,
+                          },
+                        },
+                      },
+                      "kind": "record",
+                      "schema": Object {
+                        "fields": Array [
+                          Object {
+                            "id": 1n,
+                            "name": "VariantTag",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 2n,
+                            "name": "ObservationReference",
+                            "required": false,
+                          },
+                          Object {
+                            "id": 3n,
+                            "name": "QualificationOccurrenceId",
+                            "required": false,
+                          },
+                        ],
+                        "name": "ReasonEvidenceAtom",
+                        "schemaVersion": 1n,
+                        "typeId": 399n,
+                      },
+                    },
+                    Object {
+                      "denominator": 1n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                ],
+                "kind": "map",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "Weights",
+                  "required": true,
+                },
+              ],
+              "name": "ReasonEvidenceBasis",
+              "schemaVersion": 1n,
+              "typeId": 400n,
+            },
+          },
+        },
+        "kind": "record",
+        "schema": Object {
+          "fields": Array [
+            Object {
+              "id": 1n,
+              "name": "Key",
+              "required": true,
+            },
+            Object {
+              "id": 2n,
+              "name": "SignedStrength",
+              "required": true,
+            },
+            Object {
+              "id": 3n,
+              "name": "EvidenceBasis",
+              "required": true,
+            },
+          ],
+          "name": "TaskRawSignal",
+          "schemaVersion": 1n,
+          "typeId": 402n,
+        },
+      },
+      Object {
+        "fields": Map {
+          1n => Object {
+            "fields": Map {
+              1n => Object {
+                "fields": Map {
+                  1n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1037n,
+                      "payload": Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1038n,
+                        "payload": Object {
+                          "kind": "text",
+                          "value": "character/bridge-subject",
+                        },
+                      },
+                    },
+                  },
+                  2n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1027n,
+                    "payload": Object {
+                      "kind": "text",
+                      "value": "definition/protocol-contact-two",
+                    },
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    Object {
+                      "id": 1n,
+                      "name": "CharacterId",
+                      "required": true,
+                    },
+                    Object {
+                      "id": 2n,
+                      "name": "ProtocolActionDefinitionId",
+                      "required": true,
+                    },
+                  ],
+                  "name": "ProceduralCandidateKey",
+                  "schemaVersion": 1n,
+                  "typeId": 395n,
+                },
+              },
+              2n => Object {
+                "fields": Map {
+                  1n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1037n,
+                      "payload": Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1038n,
+                        "payload": Object {
+                          "kind": "text",
+                          "value": "character/bridge-subject",
+                        },
+                      },
+                    },
+                  },
+                  2n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1037n,
+                      "payload": Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1038n,
+                        "payload": Object {
+                          "kind": "text",
+                          "value": "content/task-b",
+                        },
+                      },
+                    },
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    Object {
+                      "id": 1n,
+                      "name": "CharacterId",
+                      "required": true,
+                    },
+                    Object {
+                      "id": 2n,
+                      "name": "TaskReferent",
+                      "required": true,
+                    },
+                  ],
+                  "name": "TaskCommitmentKey",
+                  "schemaVersion": 1n,
+                  "typeId": 371n,
+                },
+              },
+              3n => Object {
+                "kind": "unsigned",
+                "value": 1n,
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "CandidateKey",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "TaskCommitmentKey",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "SourceRole",
+                  "required": true,
+                },
+              ],
+              "name": "TaskRawSignalKey",
+              "schemaVersion": 1n,
+              "typeId": 401n,
+            },
+          },
+          2n => Object {
+            "denominator": 5n,
+            "kind": "rational",
+            "numerator": 3n,
+          },
+          3n => Object {
+            "fields": Map {
+              1n => Object {
+                "entries": Array [
+                  Array [
+                    Object {
+                      "fields": Map {
+                        1n => Object {
+                          "kind": "unsigned",
+                          "value": 1n,
+                        },
+                        2n => Object {
+                          "fields": Map {
+                            1n => Object {
+                              "kind": "unsigned",
+                              "value": 1n,
+                            },
+                            2n => Object {
+                              "kind": "typedIdentifier",
+                              "namespaceId": 1164n,
+                              "payload": Object {
+                                "kind": "unsigned",
+                                "value": 4n,
+                              },
+                            },
+                          },
+                          "kind": "record",
+                          "schema": Object {
+                            "fields": Array [
+                              Object {
+                                "id": 1n,
+                                "name": "VariantTag",
+                                "required": true,
+                              },
+                              Object {
+                                "id": 2n,
+                                "name": "ObservationId",
+                                "required": false,
+                              },
+                              Object {
+                                "id": 3n,
+                                "name": "FeatureObservationId",
+                                "required": false,
+                              },
+                              Object {
+                                "id": 4n,
+                                "name": "EventFeatureObservationId",
+                                "required": false,
+                              },
+                              Object {
+                                "id": 5n,
+                                "name": "PerceivedBindingId",
+                                "required": false,
+                              },
+                              Object {
+                                "id": 6n,
+                                "name": "ClassificationEvidenceId",
+                                "required": false,
+                              },
+                              Object {
+                                "id": 7n,
+                                "name": "EventClassificationEvidenceId",
+                                "required": false,
+                              },
+                              Object {
+                                "id": 8n,
+                                "name": "RecognitionCueEvidenceId",
+                                "required": false,
+                              },
+                              Object {
+                                "id": 9n,
+                                "name": "RecognitionResolutionId",
+                                "required": false,
+                              },
+                              Object {
+                                "id": 10n,
+                                "name": "CausalRoleEvidenceId",
+                                "required": false,
+                              },
+                            ],
+                            "name": "CharacterEvidenceRef",
+                            "schemaVersion": 1n,
+                            "typeId": 237n,
+                          },
+                        },
+                      },
+                      "kind": "record",
+                      "schema": Object {
+                        "fields": Array [
+                          Object {
+                            "id": 1n,
+                            "name": "VariantTag",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 2n,
+                            "name": "ObservationReference",
+                            "required": false,
+                          },
+                          Object {
+                            "id": 3n,
+                            "name": "QualificationOccurrenceId",
+                            "required": false,
+                          },
+                        ],
+                        "name": "ReasonEvidenceAtom",
+                        "schemaVersion": 1n,
+                        "typeId": 399n,
+                      },
+                    },
+                    Object {
+                      "denominator": 1n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "fields": Map {
+                        1n => Object {
+                          "kind": "unsigned",
+                          "value": 1n,
+                        },
+                        2n => Object {
+                          "fields": Map {
+                            1n => Object {
+                              "kind": "unsigned",
+                              "value": 1n,
+                            },
+                            2n => Object {
+                              "kind": "typedIdentifier",
+                              "namespaceId": 1164n,
+                              "payload": Object {
+                                "kind": "unsigned",
+-                               "value": 158n,
++                               "value": 161n,
+                              },
+                            },
+                          },
+                          "kind": "record",
+                          "schema": Object {
+                            "fields": Array [
+                              Object {
+                                "id": 1n,
+                                "name": "VariantTag",
+                                "required": true,
+                              },
+                              Object {
+                                "id": 2n,
+                                "name": "ObservationId",
+                                "required": false,
+                              },
+                              Object {
+                                "id": 3n,
+                                "name": "FeatureObservationId",
+                                "required": false,
+                              },
+                              Object {
+                                "id": 4n,
+                                "name": "EventFeatureObservationId",
+                                "required": false,
+                              },
+                              Object {
+                                "id": 5n,
+                                "name": "PerceivedBindingId",
+                                "required": false,
+                              },
+                              Object {
+                                "id": 6n,
+                                "name": "ClassificationEvidenceId",
+                                "required": false,
+                              },
+                              Object {
+                                "id": 7n,
+                                "name": "EventClassificationEvidenceId",
+                                "required": false,
+                              },
+                              Object {
+                                "id": 8n,
+                                "name": "RecognitionCueEvidenceId",
+                                "required": false,
+                              },
+                              Object {
+                                "id": 9n,
+                                "name": "RecognitionResolutionId",
+                                "required": false,
+                              },
+                              Object {
+                                "id": 10n,
+                                "name": "CausalRoleEvidenceId",
+                                "required": false,
+                              },
+                            ],
+                            "name": "CharacterEvidenceRef",
+                            "schemaVersion": 1n,
+                            "typeId": 237n,
+                          },
+                        },
+                      },
+                      "kind": "record",
+                      "schema": Object {
+                        "fields": Array [
+                          Object {
+                            "id": 1n,
+                            "name": "VariantTag",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 2n,
+                            "name": "ObservationReference",
+                            "required": false,
+                          },
+                          Object {
+                            "id": 3n,
+                            "name": "QualificationOccurrenceId",
+                            "required": false,
+                          },
+                        ],
+                        "name": "ReasonEvidenceAtom",
+                        "schemaVersion": 1n,
+                        "typeId": 399n,
+                      },
+                    },
+                    Object {
+                      "denominator": 1n,
+                      "kind": "rational",
+                      "numerator": 1n,
+                    },
+                  ],
+                ],
+                "kind": "map",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "Weights",
+                  "required": true,
+                },
+              ],
+              "name": "ReasonEvidenceBasis",
+              "schemaVersion": 1n,
+              "typeId": 400n,
+            },
+          },
+        },
+        "kind": "record",
+        "schema": Object {
+          "fields": Array [
+            Object {
+              "id": 1n,
+              "name": "Key",
+              "required": true,
+            },
+            Object {
+              "id": 2n,
+              "name": "SignedStrength",
+              "required": true,
+            },
+            Object {
+              "id": 3n,
+              "name": "EvidenceBasis",
+              "required": true,
+            },
+          ],
+          "name": "TaskRawSignal",
+          "schemaVersion": 1n,
+          "typeId": 402n,
+        },
+      },
+    ],
+    "kind": "set",
+  }
+
+ ❯ src/test/assembledBiography.test.ts:19:106
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+EXIT 1; elapsed 193.572s
+CHARGED 227.354
+
+DIAGNOSIS: first native failure compares raw priority observation IDs158/161 (allocation) across different early choices. Add actual producer/time/task/permitted-values correspondence; retain full basis/weights. No scenario, law, map, seed or required probability gate change.
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledBiography.test.ts", "-t", "M106 eight", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledBiography.test.ts > M106 eight fixed early lanes cause acquired biography and later probability differences
+M106 LANE {"lane":0,"earlyWinner":"0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","contribution":"-25/1883","P":"-25/1883","probeProbabilities":["147446538708035353313/295147905179352825856","147701366471317472543/295147905179352825856"],"probeDraws":5}
+
+stdout | src/test/assembledBiography.test.ts > M106 eight fixed early lanes cause acquired biography and later probability differences
+M106 LANE {"lane":1,"earlyWinner":"0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","contribution":"-25/1883","P":"-25/1883","probeProbabilities":["147446538708035353313/295147905179352825856","147701366471317472543/295147905179352825856"],"probeDraws":5}
+
+stdout | src/test/assembledBiography.test.ts > M106 eight fixed early lanes cause acquired biography and later probability differences
+M106 LANE {"lane":2,"earlyWinner":"0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","contribution":"-25/1883","P":"-25/1883","probeProbabilities":["147446538708035353313/295147905179352825856","147701366471317472543/295147905179352825856"],"probeDraws":5}
+
+ × src/test/assembledBiography.test.ts > M106 eight fixed early lanes cause acquired biography and later probability differences 207058ms
+   → expected [ …(5) ] to deeply equal [ …(5) ]
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  14:38:41
+   Duration  211.46s (transform 2.61s, setup 0ms, collect 3.90s, tests 207.06s, environment 0ms, prepare 135ms)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledBiography.test.ts > M106 eight fixed early lanes cause acquired biography and later probability differences
+AssertionError: expected [ …(5) ] to deeply equal [ …(5) ]
+
+- Expected
++ Received
+
+  Array [
+    Object {
+      "items": Array [
+        Object {
+          "fields": Map {
+            1n => Object {
+              "fields": Map {
+                1n => Object {
+                  "kind": "typedIdentifier",
+-                 "namespaceId": 10006n,
++                 "namespaceId": 1135n,
++                 "payload": Object {
++                   "kind": "unsigned",
++                   "value": 170n,
++                 },
++               },
++               2n => Object {
++                 "kind": "typedIdentifier",
++                 "namespaceId": 1042n,
+                  "payload": Object {
+                    "kind": "text",
+-                   "value": "0703050d4d3130362f70726f62652f31320b92080518707572706f73652f7461736b2d726561736f6e2d66616365070307020b9308050d7375626a6563742f6163746f720bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637407020b9308050e7375626a6563742f616374696f6e0b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6507020b9308050c7375626a6563742f7461736b0bea070b8d080b8e08050e636f6e74656e742f7461736b2d61",
++                   "value": "purpose/task-reason-face",
++                 },
++               },
++               3n => Object {
++                 "items": Array [
++                   Object {
++                     "fields": Map {
++                       1n => Object {
++                         "kind": "typedIdentifier",
++                         "namespaceId": 1043n,
++                         "payload": Object {
++                           "kind": "text",
++                           "value": "subject/task",
+                          },
+                        },
+                        2n => Object {
++                         "kind": "typedIdentifier",
++                         "namespaceId": 1002n,
++                         "payload": Object {
++                           "kind": "typedIdentifier",
++                           "namespaceId": 1037n,
++                           "payload": Object {
+                              "kind": "typedIdentifier",
+-                 "namespaceId": 10005n,
++                             "namespaceId": 1038n,
+                              "payload": Object {
+                                "kind": "text",
+-                   "value": "assembled/task-reason-face",
++                               "value": "content/task-a",
++                             },
++                           },
+                          },
+                        },
+                      },
+                      "kind": "record",
+                      "schema": Object {
+                        "fields": Array [
+                          Object {
+                            "id": 1n,
+-                   "name": "KeyId",
++                           "name": "SubjectRoleId",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 2n,
+-                   "name": "ComparisonRoleId",
++                           "name": "SubjectId",
+                            "required": true,
+                          },
+                        ],
+-               "name": "ComparisonDrawKey",
++                       "name": "SubjectBinding",
+                        "schemaVersion": 1n,
+-               "typeId": 117n,
++                       "typeId": 111n,
++                     },
++                   },
++                   Object {
++                     "fields": Map {
++                       1n => Object {
++                         "kind": "typedIdentifier",
++                         "namespaceId": 1043n,
++                         "payload": Object {
++                           "kind": "text",
++                           "value": "subject/actor",
++                         },
++                       },
++                       2n => Object {
++                         "kind": "typedIdentifier",
++                         "namespaceId": 1002n,
++                         "payload": Object {
++                           "kind": "typedIdentifier",
++                           "namespaceId": 1037n,
++                           "payload": Object {
++                             "kind": "typedIdentifier",
++                             "namespaceId": 1038n,
++                             "payload": Object {
++                               "kind": "text",
++                               "value": "character/bridge-subject",
+                              },
+                            },
+                          },
++                       },
++                     },
+                      "kind": "record",
+                      "schema": Object {
+                        "fields": Array [
+                          Object {
+                            "id": 1n,
+-               "name": "ComparisonDrawKey",
++                           "name": "SubjectRoleId",
++                           "required": true,
++                         },
++                         Object {
++                           "id": 2n,
++                           "name": "SubjectId",
+                            "required": true,
+                          },
+                        ],
+-           "name": "CoupledRandomKey",
++                       "name": "SubjectBinding",
+                        "schemaVersion": 1n,
+-           "typeId": 113n,
++                       "typeId": 111n,
++                     },
++                   },
++                   Object {
++                     "fields": Map {
++                       1n => Object {
++                         "kind": "typedIdentifier",
++                         "namespaceId": 1043n,
++                         "payload": Object {
++                           "kind": "text",
++                           "value": "subject/action",
++                         },
++                       },
++                       2n => Object {
++                         "kind": "typedIdentifier",
++                         "namespaceId": 1027n,
++                         "payload": Object {
++                           "kind": "text",
++                           "value": "definition/protocol-contact-one",
++                         },
++                       },
+                      },
++                     "kind": "record",
++                     "schema": Object {
++                       "fields": Array [
++                         Object {
++                           "id": 1n,
++                           "name": "SubjectRoleId",
++                           "required": true,
+                          },
+                          Object {
++                           "id": 2n,
++                           "name": "SubjectId",
++                           "required": true,
++                         },
++                       ],
++                       "name": "SubjectBinding",
++                       "schemaVersion": 1n,
++                       "typeId": 111n,
++                     },
++                   },
++                 ],
++                 "kind": "list",
++               },
++               4n => Object {
+                  "kind": "unsigned",
+-         "value": 2n,
++                 "value": 0n,
++               },
++             },
++             "kind": "record",
++             "schema": Object {
++               "fields": Array [
++                 Object {
++                   "id": 1n,
++                   "name": "CausalRootId",
++                   "required": true,
++                 },
++                 Object {
++                   "id": 2n,
++                   "name": "PurposeId",
++                   "required": true,
++                 },
++                 Object {
++                   "id": 3n,
++                   "name": "SubjectBindings",
++                   "required": true,
++                 },
++                 Object {
++                   "id": 4n,
++                   "name": "DrawIndex",
++                   "required": true,
+                  },
++               ],
++               "name": "RandomAddress",
++               "schemaVersion": 1n,
++               "typeId": 110n,
++             },
++           },
++         },
++         "kind": "record",
++         "schema": Object {
++           "fields": Array [
+              Object {
++               "id": 1n,
++               "name": "RandomAddress",
++               "required": true,
++             },
++           ],
++           "name": "NaturalRandomKey",
++           "schemaVersion": 1n,
++           "typeId": 112n,
++         },
++       },
++       Object {
+          "kind": "unsigned",
++         "value": 1n,
++       },
++       Object {
++         "kind": "unsigned",
+          "value": 4n,
+        },
+      ],
+      "kind": "list",
+    },
+    Object {
+      "items": Array [
+        Object {
+          "fields": Map {
+            1n => Object {
+              "fields": Map {
+                1n => Object {
+                  "kind": "typedIdentifier",
+-                 "namespaceId": 10006n,
++                 "namespaceId": 1135n,
++                 "payload": Object {
++                   "kind": "unsigned",
++                   "value": 170n,
++                 },
++               },
++               2n => Object {
++                 "kind": "typedIdentifier",
++                 "namespaceId": 1042n,
++                 "payload": Object {
++                   "kind": "text",
++                   "value": "purpose/task-standing-rounding",
++                 },
++               },
++               3n => Object {
++                 "items": Array [
++                   Object {
++                     "fields": Map {
++                       1n => Object {
++                         "kind": "typedIdentifier",
++                         "namespaceId": 1043n,
++                         "payload": Object {
++                           "kind": "text",
++                           "value": "subject/task",
++                         },
++                       },
++                       2n => Object {
++                         "kind": "typedIdentifier",
++                         "namespaceId": 1002n,
++                         "payload": Object {
++                           "kind": "typedIdentifier",
++                           "namespaceId": 1037n,
++                           "payload": Object {
++                             "kind": "typedIdentifier",
++                             "namespaceId": 1038n,
+                              "payload": Object {
+                                "kind": "text",
+-                   "value": "0703050d4d3130362f70726f62652f31320b9208051e707572706f73652f7461736b2d7374616e64696e672d726f756e64696e67070307020b9308050d7375626a6563742f6163746f720bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637407020b9308050e7375626a6563742f616374696f6e0b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6507020b9308050c7375626a6563742f7461736b0bea070b8d080b8e08050e636f6e74656e742f7461736b2d61",
++                               "value": "content/task-a",
++                             },
++                           },
++                         },
++                       },
++                     },
++                     "kind": "record",
++                     "schema": Object {
++                       "fields": Array [
++                         Object {
++                           "id": 1n,
++                           "name": "SubjectRoleId",
++                           "required": true,
++                         },
++                         Object {
++                           "id": 2n,
++                           "name": "SubjectId",
++                           "required": true,
++                         },
++                       ],
++                       "name": "SubjectBinding",
++                       "schemaVersion": 1n,
++                       "typeId": 111n,
++                     },
++                   },
++                   Object {
++                     "fields": Map {
++                       1n => Object {
++                         "kind": "typedIdentifier",
++                         "namespaceId": 1043n,
++                         "payload": Object {
++                           "kind": "text",
++                           "value": "subject/actor",
+                          },
+                        },
+                        2n => Object {
+                          "kind": "typedIdentifier",
+-                 "namespaceId": 10005n,
++                         "namespaceId": 1002n,
++                         "payload": Object {
++                           "kind": "typedIdentifier",
++                           "namespaceId": 1037n,
++                           "payload": Object {
++                             "kind": "typedIdentifier",
++                             "namespaceId": 1038n,
+                              "payload": Object {
+                                "kind": "text",
+-                   "value": "assembled/task-standing-rounding",
++                               "value": "character/bridge-subject",
++                             },
++                           },
+                          },
+                        },
+                      },
+                      "kind": "record",
+                      "schema": Object {
+                        "fields": Array [
+                          Object {
+                            "id": 1n,
+-                   "name": "KeyId",
++                           "name": "SubjectRoleId",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 2n,
+-                   "name": "ComparisonRoleId",
++                           "name": "SubjectId",
+                            "required": true,
+                          },
+                        ],
+-               "name": "ComparisonDrawKey",
++                       "name": "SubjectBinding",
+                        "schemaVersion": 1n,
+-               "typeId": 117n,
++                       "typeId": 111n,
++                     },
++                   },
++                   Object {
++                     "fields": Map {
++                       1n => Object {
++                         "kind": "typedIdentifier",
++                         "namespaceId": 1043n,
++                         "payload": Object {
++                           "kind": "text",
++                           "value": "subject/action",
++                         },
+                        },
++                       2n => Object {
++                         "kind": "typedIdentifier",
++                         "namespaceId": 1027n,
++                         "payload": Object {
++                           "kind": "text",
++                           "value": "definition/protocol-contact-one",
+                          },
+                        },
++                     },
+                      "kind": "record",
+                      "schema": Object {
+                        "fields": Array [
+                          Object {
+                            "id": 1n,
+-               "name": "ComparisonDrawKey",
++                           "name": "SubjectRoleId",
++                           "required": true,
++                         },
++                         Object {
++                           "id": 2n,
++                           "name": "SubjectId",
+                            "required": true,
+                          },
+                        ],
+-           "name": "CoupledRandomKey",
++                       "name": "SubjectBinding",
+                        "schemaVersion": 1n,
+-           "typeId": 113n,
++                       "typeId": 111n,
++                     },
+                    },
++                 ],
++                 "kind": "list",
++               },
++               4n => Object {
++                 "kind": "unsigned",
++                 "value": 0n,
++               },
++             },
++             "kind": "record",
++             "schema": Object {
++               "fields": Array [
++                 Object {
++                   "id": 1n,
++                   "name": "CausalRootId",
++                   "required": true,
++                 },
++                 Object {
++                   "id": 2n,
++                   "name": "PurposeId",
++                   "required": true,
++                 },
++                 Object {
++                   "id": 3n,
++                   "name": "SubjectBindings",
++                   "required": true,
++                 },
++                 Object {
++                   "id": 4n,
++                   "name": "DrawIndex",
++                   "required": true,
++                 },
++               ],
++               "name": "RandomAddress",
++               "schemaVersion": 1n,
++               "typeId": 110n,
++             },
++           },
++         },
++         "kind": "record",
++         "schema": Object {
++           "fields": Array [
++             Object {
++               "id": 1n,
++               "name": "RandomAddress",
++               "required": true,
++             },
++           ],
++           "name": "NaturalRandomKey",
++           "schemaVersion": 1n,
++           "typeId": 112n,
++         },
+        },
+        Object {
+          "kind": "unsigned",
+-         "value": 3342842124n,
++         "value": 1687445218n,
+        },
+        Object {
+          "kind": "unsigned",
+          "value": 4294967296n,
+        },
+      ],
+      "kind": "list",
+    },
+    Object {
+      "items": Array [
+        Object {
+          "fields": Map {
+            1n => Object {
+              "fields": Map {
+                1n => Object {
+                  "kind": "typedIdentifier",
+-                 "namespaceId": 10006n,
++                 "namespaceId": 1135n,
++                 "payload": Object {
++                   "kind": "unsigned",
++                   "value": 170n,
++                 },
++               },
++               2n => Object {
++                 "kind": "typedIdentifier",
++                 "namespaceId": 1042n,
++                 "payload": Object {
++                   "kind": "text",
++                   "value": "purpose/task-reason-face",
++                 },
++               },
++               3n => Object {
++                 "items": Array [
++                   Object {
++                     "fields": Map {
++                       1n => Object {
++                         "kind": "typedIdentifier",
++                         "namespaceId": 1043n,
++                         "payload": Object {
++                           "kind": "text",
++                           "value": "subject/task",
++                         },
++                       },
++                       2n => Object {
++                         "kind": "typedIdentifier",
++                         "namespaceId": 1002n,
++                         "payload": Object {
++                           "kind": "typedIdentifier",
++                           "namespaceId": 1037n,
++                           "payload": Object {
++                             "kind": "typedIdentifier",
++                             "namespaceId": 1038n,
++                             "payload": Object {
++                               "kind": "text",
++                               "value": "content/task-b",
++                             },
++                           },
++                         },
++                       },
++                     },
++                     "kind": "record",
++                     "schema": Object {
++                       "fields": Array [
++                         Object {
++                           "id": 1n,
++                           "name": "SubjectRoleId",
++                           "required": true,
++                         },
++                         Object {
++                           "id": 2n,
++                           "name": "SubjectId",
++                           "required": true,
++                         },
++                       ],
++                       "name": "SubjectBinding",
++                       "schemaVersion": 1n,
++                       "typeId": 111n,
++                     },
++                   },
++                   Object {
++                     "fields": Map {
++                       1n => Object {
++                         "kind": "typedIdentifier",
++                         "namespaceId": 1043n,
+                          "payload": Object {
+                            "kind": "text",
+-                   "value": "0703050d4d3130362f70726f62652f31320b92080518707572706f73652f7461736b2d726561736f6e2d66616365070307020b9308050d7375626a6563742f6163746f720bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637407020b9308050e7375626a6563742f616374696f6e0b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f07020b9308050c7375626a6563742f7461736b0bea070b8d080b8e08050e636f6e74656e742f7461736b2d62",
++                           "value": "subject/actor",
+                          },
+                        },
+                        2n => Object {
+                          "kind": "typedIdentifier",
+-                 "namespaceId": 10005n,
++                         "namespaceId": 1002n,
++                         "payload": Object {
++                           "kind": "typedIdentifier",
++                           "namespaceId": 1037n,
++                           "payload": Object {
++                             "kind": "typedIdentifier",
++                             "namespaceId": 1038n,
+                              "payload": Object {
+                                "kind": "text",
+-                   "value": "assembled/task-reason-face",
++                               "value": "character/bridge-subject",
++                             },
++                           },
+                          },
+                        },
+                      },
+                      "kind": "record",
+                      "schema": Object {
+                        "fields": Array [
+                          Object {
+                            "id": 1n,
+-                   "name": "KeyId",
++                           "name": "SubjectRoleId",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 2n,
+-                   "name": "ComparisonRoleId",
++                           "name": "SubjectId",
+                            "required": true,
+                          },
+                        ],
+-               "name": "ComparisonDrawKey",
++                       "name": "SubjectBinding",
+                        "schemaVersion": 1n,
+-               "typeId": 117n,
++                       "typeId": 111n,
++                     },
++                   },
++                   Object {
++                     "fields": Map {
++                       1n => Object {
++                         "kind": "typedIdentifier",
++                         "namespaceId": 1043n,
++                         "payload": Object {
++                           "kind": "text",
++                           "value": "subject/action",
++                         },
++                       },
++                       2n => Object {
++                         "kind": "typedIdentifier",
++                         "namespaceId": 1027n,
++                         "payload": Object {
++                           "kind": "text",
++                           "value": "definition/protocol-contact-two",
+                          },
+                        },
+                      },
+                      "kind": "record",
+                      "schema": Object {
+                        "fields": Array [
+                          Object {
+                            "id": 1n,
+-               "name": "ComparisonDrawKey",
++                           "name": "SubjectRoleId",
++                           "required": true,
++                         },
++                         Object {
++                           "id": 2n,
++                           "name": "SubjectId",
+                            "required": true,
+                          },
+                        ],
+-           "name": "CoupledRandomKey",
++                       "name": "SubjectBinding",
+                        "schemaVersion": 1n,
+-           "typeId": 113n,
++                       "typeId": 111n,
++                     },
++                   },
++                 ],
++                 "kind": "list",
++               },
++               4n => Object {
++                 "kind": "unsigned",
++                 "value": 0n,
++               },
++             },
++             "kind": "record",
++             "schema": Object {
++               "fields": Array [
++                 Object {
++                   "id": 1n,
++                   "name": "CausalRootId",
++                   "required": true,
++                 },
++                 Object {
++                   "id": 2n,
++                   "name": "PurposeId",
++                   "required": true,
++                 },
++                 Object {
++                   "id": 3n,
++                   "name": "SubjectBindings",
++                   "required": true,
++                 },
++                 Object {
++                   "id": 4n,
++                   "name": "DrawIndex",
++                   "required": true,
++                 },
++               ],
++               "name": "RandomAddress",
++               "schemaVersion": 1n,
++               "typeId": 110n,
++             },
++           },
++         },
++         "kind": "record",
++         "schema": Object {
++           "fields": Array [
++             Object {
++               "id": 1n,
++               "name": "RandomAddress",
++               "required": true,
++             },
++           ],
++           "name": "NaturalRandomKey",
++           "schemaVersion": 1n,
++           "typeId": 112n,
+          },
+        },
+        Object {
+          "kind": "unsigned",
+-         "value": 2n,
++         "value": 1n,
+        },
+        Object {
+          "kind": "unsigned",
+          "value": 4n,
+        },
+      ],
+      "kind": "list",
+    },
+    Object {
+      "items": Array [
+        Object {
+          "fields": Map {
+            1n => Object {
++             "fields": Map {
++               1n => Object {
++                 "kind": "typedIdentifier",
++                 "namespaceId": 1135n,
++                 "payload": Object {
++                   "kind": "unsigned",
++                   "value": 170n,
++                 },
++               },
++               2n => Object {
++                 "kind": "typedIdentifier",
++                 "namespaceId": 1042n,
++                 "payload": Object {
++                   "kind": "text",
++                   "value": "purpose/task-standing-rounding",
++                 },
++               },
++               3n => Object {
++                 "items": Array [
++                   Object {
+                      "fields": Map {
+                        1n => Object {
+                          "kind": "typedIdentifier",
+-                 "namespaceId": 10006n,
++                         "namespaceId": 1043n,
++                         "payload": Object {
++                           "kind": "text",
++                           "value": "subject/task",
++                         },
++                       },
++                       2n => Object {
++                         "kind": "typedIdentifier",
++                         "namespaceId": 1002n,
++                         "payload": Object {
++                           "kind": "typedIdentifier",
++                           "namespaceId": 1037n,
++                           "payload": Object {
++                             "kind": "typedIdentifier",
++                             "namespaceId": 1038n,
++                             "payload": Object {
++                               "kind": "text",
++                               "value": "content/task-b",
++                             },
++                           },
++                         },
++                       },
++                     },
++                     "kind": "record",
++                     "schema": Object {
++                       "fields": Array [
++                         Object {
++                           "id": 1n,
++                           "name": "SubjectRoleId",
++                           "required": true,
++                         },
++                         Object {
++                           "id": 2n,
++                           "name": "SubjectId",
++                           "required": true,
++                         },
++                       ],
++                       "name": "SubjectBinding",
++                       "schemaVersion": 1n,
++                       "typeId": 111n,
++                     },
++                   },
++                   Object {
++                     "fields": Map {
++                       1n => Object {
++                         "kind": "typedIdentifier",
++                         "namespaceId": 1043n,
++                         "payload": Object {
++                           "kind": "text",
++                           "value": "subject/actor",
++                         },
++                       },
++                       2n => Object {
++                         "kind": "typedIdentifier",
++                         "namespaceId": 1002n,
++                         "payload": Object {
++                           "kind": "typedIdentifier",
++                           "namespaceId": 1037n,
++                           "payload": Object {
++                             "kind": "typedIdentifier",
++                             "namespaceId": 1038n,
++                             "payload": Object {
++                               "kind": "text",
++                               "value": "character/bridge-subject",
++                             },
++                           },
++                         },
++                       },
++                     },
++                     "kind": "record",
++                     "schema": Object {
++                       "fields": Array [
++                         Object {
++                           "id": 1n,
++                           "name": "SubjectRoleId",
++                           "required": true,
++                         },
++                         Object {
++                           "id": 2n,
++                           "name": "SubjectId",
++                           "required": true,
++                         },
++                       ],
++                       "name": "SubjectBinding",
++                       "schemaVersion": 1n,
++                       "typeId": 111n,
++                     },
++                   },
++                   Object {
++                     "fields": Map {
++                       1n => Object {
++                         "kind": "typedIdentifier",
++                         "namespaceId": 1043n,
+                          "payload": Object {
+                            "kind": "text",
+-                   "value": "0703050d4d3130362f70726f62652f31320b9208051e707572706f73652f7461736b2d7374616e64696e672d726f756e64696e67070307020b9308050d7375626a6563742f6163746f720bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637407020b9308050e7375626a6563742f616374696f6e0b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f07020b9308050c7375626a6563742f7461736b0bea070b8d080b8e08050e636f6e74656e742f7461736b2d62",
++                           "value": "subject/action",
+                          },
+                        },
+                        2n => Object {
+                          "kind": "typedIdentifier",
+-                 "namespaceId": 10005n,
++                         "namespaceId": 1027n,
+                          "payload": Object {
+                            "kind": "text",
+-                   "value": "assembled/task-standing-rounding",
++                           "value": "definition/protocol-contact-two",
+                          },
+                        },
+                      },
+                      "kind": "record",
+                      "schema": Object {
+                        "fields": Array [
+                          Object {
+                            "id": 1n,
+-                   "name": "KeyId",
++                           "name": "SubjectRoleId",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 2n,
+-                   "name": "ComparisonRoleId",
++                           "name": "SubjectId",
+                            "required": true,
+                          },
+                        ],
+-               "name": "ComparisonDrawKey",
++                       "name": "SubjectBinding",
+                        "schemaVersion": 1n,
+-               "typeId": 117n,
++                       "typeId": 111n,
+                      },
+                    },
++                 ],
++                 "kind": "list",
+                },
++               4n => Object {
++                 "kind": "unsigned",
++                 "value": 0n,
++               },
++             },
+              "kind": "record",
+              "schema": Object {
+                "fields": Array [
+                  Object {
+                    "id": 1n,
+-               "name": "ComparisonDrawKey",
++                   "name": "CausalRootId",
++                   "required": true,
++                 },
++                 Object {
++                   "id": 2n,
++                   "name": "PurposeId",
+                    "required": true,
+                  },
++                 Object {
++                   "id": 3n,
++                   "name": "SubjectBindings",
++                   "required": true,
++                 },
++                 Object {
++                   "id": 4n,
++                   "name": "DrawIndex",
++                   "required": true,
++                 },
+                ],
+-           "name": "CoupledRandomKey",
++               "name": "RandomAddress",
+                "schemaVersion": 1n,
+-           "typeId": 113n,
++               "typeId": 110n,
++             },
++           },
++         },
++         "kind": "record",
++         "schema": Object {
++           "fields": Array [
++             Object {
++               "id": 1n,
++               "name": "RandomAddress",
++               "required": true,
++             },
++           ],
++           "name": "NaturalRandomKey",
++           "schemaVersion": 1n,
++           "typeId": 112n,
+          },
+        },
+        Object {
+          "kind": "unsigned",
+-         "value": 3341276716n,
++         "value": 2133140204n,
+        },
+        Object {
+          "kind": "unsigned",
+          "value": 4294967296n,
+        },
+      ],
+      "kind": "list",
+    },
+    Object {
+      "items": Array [
+        Object {
+          "fields": Map {
+            1n => Object {
+              "fields": Map {
+                1n => Object {
+                  "kind": "typedIdentifier",
+-                 "namespaceId": 10006n,
++                 "namespaceId": 1135n,
++                 "payload": Object {
++                   "kind": "unsigned",
++                   "value": 170n,
++                 },
++               },
++               2n => Object {
++                 "kind": "typedIdentifier",
++                 "namespaceId": 1042n,
+                  "payload": Object {
+                    "kind": "text",
+-                   "value": "0703050d4d3130362f70726f62652f31320b92080519707572706f73652f7461736b2d6465636973696f6e2d746965070107020b9308050d7375626a6563742f6163746f720bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a656374",
++                   "value": "purpose/task-decision-tie",
++                 },
++               },
++               3n => Object {
++                 "items": Array [
++                   Object {
++                     "fields": Map {
++                       1n => Object {
++                         "kind": "typedIdentifier",
++                         "namespaceId": 1043n,
++                         "payload": Object {
++                           "kind": "text",
++                           "value": "subject/actor",
+                          },
+                        },
+                        2n => Object {
++                         "kind": "typedIdentifier",
++                         "namespaceId": 1002n,
++                         "payload": Object {
+                            "kind": "typedIdentifier",
+-                 "namespaceId": 10005n,
++                           "namespaceId": 1037n,
++                           "payload": Object {
++                             "kind": "typedIdentifier",
++                             "namespaceId": 1038n,
+                              "payload": Object {
+                                "kind": "text",
+-                   "value": "assembled/task-decision-tie",
++                               "value": "character/bridge-subject",
++                             },
++                           },
+                          },
+                        },
+                      },
+                      "kind": "record",
+                      "schema": Object {
+                        "fields": Array [
+                          Object {
+                            "id": 1n,
+-                   "name": "KeyId",
++                           "name": "SubjectRoleId",
+                            "required": true,
+                          },
+                          Object {
+                            "id": 2n,
+-                   "name": "ComparisonRoleId",
++                           "name": "SubjectId",
+                            "required": true,
+                          },
+                        ],
+-               "name": "ComparisonDrawKey",
++                       "name": "SubjectBinding",
++                       "schemaVersion": 1n,
++                       "typeId": 111n,
++                     },
++                   },
++                 ],
++                 "kind": "list",
++               },
++               4n => Object {
++                 "kind": "unsigned",
++                 "value": 0n,
++               },
++             },
++             "kind": "record",
++             "schema": Object {
++               "fields": Array [
++                 Object {
++                   "id": 1n,
++                   "name": "CausalRootId",
++                   "required": true,
++                 },
++                 Object {
++                   "id": 2n,
++                   "name": "PurposeId",
++                   "required": true,
++                 },
++                 Object {
++                   "id": 3n,
++                   "name": "SubjectBindings",
++                   "required": true,
++                 },
++                 Object {
++                   "id": 4n,
++                   "name": "DrawIndex",
++                   "required": true,
++                 },
++               ],
++               "name": "RandomAddress",
+                "schemaVersion": 1n,
+-               "typeId": 117n,
++               "typeId": 110n,
+              },
+            },
+          },
+          "kind": "record",
+          "schema": Object {
+            "fields": Array [
+              Object {
+                "id": 1n,
+-               "name": "ComparisonDrawKey",
++               "name": "RandomAddress",
+                "required": true,
+              },
+            ],
+-           "name": "CoupledRandomKey",
++           "name": "NaturalRandomKey",
+            "schemaVersion": 1n,
+-           "typeId": 113n,
++           "typeId": 112n,
+          },
+        },
+        Object {
+          "kind": "unsigned",
+          "value": 0n,
+        },
+        Object {
+          "kind": "unsigned",
+          "value": 2n,
+        },
+      ],
+      "kind": "list",
+    },
+  ]
+
+ ❯ src/test/assembledBiography.test.ts:19:295
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+EXIT 1; elapsed 213.104s
+CHARGED 440.458
+
+DIAGNOSIS: second native failure is an unbound probe root170 versus167; comparison keys themselves unchanged. Identity-only local-address rebinding, at most once per affected lane, preserves early draws/scenario/model. Split full roster into two bounded command batches; compare all28 pairs from completed native receipts. No roster or gate reduction.
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "-b", "--pretty", "false"]
+src/test/assembledBiography.test.ts(1,26): error TS2307: Cannot find module 'node:crypto' or its corresponding type declarations.
+src/test/assembledBiography.test.ts(45,109): error TS2339: Property 'modelIdentity' does not exist on type 'Readonly<{ settleNextInstant(): Promise<boolean>; snapshot(): Readonly<{ clock: SimInstant; status: RunStatus; state: Uint8Array<ArrayBufferLike>; outputs: Uint8Array<...>; trace: Uint8Array<...>; }>; ... 4 more ...; diagnostic(): Uint8Array<...> | undefined; }>'.
+
+EXIT 1; elapsed 18.804s
+CHARGED 459.262
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledBiography.test.ts", "-t", "M106 lanes 0", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledBiography.test.ts > M106 lanes 0..3 cause acquired biography and later probability differences
+M106 LANE {"lane":0,"earlyWinner":"0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","contribution":"-25/1883","P":"-25/1883","probeProbabilities":["147446538708035353313/295147905179352825856","147701366471317472543/295147905179352825856"],"probeDraws":5}
+
+stdout | src/test/assembledBiography.test.ts > M106 lanes 0..3 cause acquired biography and later probability differences
+M106 LANE {"lane":1,"earlyWinner":"0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","contribution":"-25/1883","P":"-25/1883","probeProbabilities":["147446538708035353313/295147905179352825856","147701366471317472543/295147905179352825856"],"probeDraws":5}
+
+stdout | src/test/assembledBiography.test.ts > M106 lanes 0..3 cause acquired biography and later probability differences
+M106 LANE {"lane":2,"earlyWinner":"0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","contribution":"-25/1883","P":"-25/1883","probeProbabilities":["147446538708035353313/295147905179352825856","147701366471317472543/295147905179352825856"],"probeDraws":5}
+
+stdout | src/test/assembledBiography.test.ts > M106 lanes 0..3 cause acquired biography and later probability differences
+M106 LANE {"lane":3,"earlyWinner":"0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","contribution":"25/1883","P":"25/1883","probeProbabilities":["147701366471317472543/295147905179352825856","147446538708035353313/295147905179352825856"],"probeDraws":5}
+
+stdout | src/test/assembledBiography.test.ts > M106 lanes 0..3 cause acquired biography and later probability differences
+M106 COMPLETED LANE {"lane":0,"rebound":false,"model":"3913e198529de83de57f4324550e4fb07d10bd792b7d8d647916e0230d169c9c","before":"34dd52cf7c71e0e60920d8f02dbee71fbbde7ab91e0261d76739b33106c0dc01","beforeOutputs":"47ee55fac45a5e15334ff9fcb373fd845880631b0b60629c4646be7d528a299a","earlyContext":"99072771e5b0be12ae99c354465b5e26935197c82f925bf8deea4004ea493b25","earlyWinner":"0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","contribution":"-25/1883","P":"-25/1883","nonStanding":"d5a390365ae87c30caf53a98e7794b9ac5cd7efbe7bfcaece81ee30e2bb4637b","meaning":"f7d0a18639a91e5ea51488e67e10af1fa9e5bb936572159fc57ec62fd40f2b99","probeDraws":"a2376ae18f55e2aa4bd726a61b9e4993d4f65444d89e72e5dd8d1cf085df3980","probabilities":["147446538708035353313/295147905179352825856","147701366471317472543/295147905179352825856"]}
+M106 COMPLETED LANE {"lane":1,"rebound":false,"model":"3913e198529de83de57f4324550e4fb07d10bd792b7d8d647916e0230d169c9c","before":"34dd52cf7c71e0e60920d8f02dbee71fbbde7ab91e0261d76739b33106c0dc01","beforeOutputs":"47ee55fac45a5e15334ff9fcb373fd845880631b0b60629c4646be7d528a299a","earlyContext":"99072771e5b0be12ae99c354465b5e26935197c82f925bf8deea4004ea493b25","earlyWinner":"0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","contribution":"-25/1883","P":"-25/1883","nonStanding":"d5a390365ae87c30caf53a98e7794b9ac5cd7efbe7bfcaece81ee30e2bb4637b","meaning":"f7d0a18639a91e5ea51488e67e10af1fa9e5bb936572159fc57ec62fd40f2b99","probeDraws":"a2376ae18f55e2aa4bd726a61b9e4993d4f65444d89e72e5dd8d1cf085df3980","probabilities":["147446538708035353313/295147905179352825856","147701366471317472543/295147905179352825856"]}
+M106 COMPLETED LANE {"lane":2,"rebound":false,"model":"3913e198529de83de57f4324550e4fb07d10bd792b7d8d647916e0230d169c9c","before":"34dd52cf7c71e0e60920d8f02dbee71fbbde7ab91e0261d76739b33106c0dc01","beforeOutputs":"47ee55fac45a5e15334ff9fcb373fd845880631b0b60629c4646be7d528a299a","earlyContext":"99072771e5b0be12ae99c354465b5e26935197c82f925bf8deea4004ea493b25","earlyWinner":"0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","contribution":"-25/1883","P":"-25/1883","nonStanding":"d5a390365ae87c30caf53a98e7794b9ac5cd7efbe7bfcaece81ee30e2bb4637b","meaning":"f7d0a18639a91e5ea51488e67e10af1fa9e5bb936572159fc57ec62fd40f2b99","probeDraws":"a2376ae18f55e2aa4bd726a61b9e4993d4f65444d89e72e5dd8d1cf085df3980","probabilities":["147446538708035353313/295147905179352825856","147701366471317472543/295147905179352825856"]}
+M106 COMPLETED LANE {"lane":3,"rebound":true,"model":"3913e198529de83de57f4324550e4fb07d10bd792b7d8d647916e0230d169c9c","before":"34dd52cf7c71e0e60920d8f02dbee71fbbde7ab91e0261d76739b33106c0dc01","beforeOutputs":"47ee55fac45a5e15334ff9fcb373fd845880631b0b60629c4646be7d528a299a","earlyContext":"99072771e5b0be12ae99c354465b5e26935197c82f925bf8deea4004ea493b25","earlyWinner":"0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","contribution":"25/1883","P":"25/1883","nonStanding":"d5a390365ae87c30caf53a98e7794b9ac5cd7efbe7bfcaece81ee30e2bb4637b","meaning":"f7d0a18639a91e5ea51488e67e10af1fa9e5bb936572159fc57ec62fd40f2b99","probeDraws":"a2376ae18f55e2aa4bd726a61b9e4993d4f65444d89e72e5dd8d1cf085df3980","probabilities":["147701366471317472543/295147905179352825856","147446538708035353313/295147905179352825856"]}
+M106 BATCH PASS 0..3; exact receiving cases=320; all calendars101
+
+ ✓ src/test/assembledBiography.test.ts > M106 lanes 0..3 cause acquired biography and later probability differences 292265ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  14:44:24
+   Duration  296.68s (transform 2.61s, setup 0ms, collect 3.89s, tests 292.27s, environment 0ms, prepare 140ms)
+
+
+EXIT 0; elapsed 298.291s
+CHARGED 757.553
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledBiography.test.ts", "-t", "M106 lanes 4", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledBiography.test.ts > M106 lanes 4..7 cause acquired biography and later probability differences
+M106 LANE {"lane":4,"earlyWinner":"0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","contribution":"25/1883","P":"25/1883","probeProbabilities":["147701366471317472543/295147905179352825856","147446538708035353313/295147905179352825856"],"probeDraws":5}
+
+stdout | src/test/assembledBiography.test.ts > M106 lanes 4..7 cause acquired biography and later probability differences
+M106 LANE {"lane":5,"earlyWinner":"0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","contribution":"-25/1883","P":"-25/1883","probeProbabilities":["147446538708035353313/295147905179352825856","147701366471317472543/295147905179352825856"],"probeDraws":5}
+
+stdout | src/test/assembledBiography.test.ts > M106 lanes 4..7 cause acquired biography and later probability differences
+M106 LANE {"lane":6,"earlyWinner":"0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","contribution":"25/1883","P":"25/1883","probeProbabilities":["147701366471317472543/295147905179352825856","147446538708035353313/295147905179352825856"],"probeDraws":5}
+
+stdout | src/test/assembledBiography.test.ts > M106 lanes 4..7 cause acquired biography and later probability differences
+M106 LANE {"lane":7,"earlyWinner":"0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","contribution":"25/1883","P":"25/1883","probeProbabilities":["147701366471317472543/295147905179352825856","147446538708035353313/295147905179352825856"],"probeDraws":5}
+
+stdout | src/test/assembledBiography.test.ts > M106 lanes 4..7 cause acquired biography and later probability differences
+M106 COMPLETED LANE {"lane":4,"rebound":true,"model":"3913e198529de83de57f4324550e4fb07d10bd792b7d8d647916e0230d169c9c","before":"34dd52cf7c71e0e60920d8f02dbee71fbbde7ab91e0261d76739b33106c0dc01","beforeOutputs":"47ee55fac45a5e15334ff9fcb373fd845880631b0b60629c4646be7d528a299a","earlyContext":"99072771e5b0be12ae99c354465b5e26935197c82f925bf8deea4004ea493b25","earlyWinner":"0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","contribution":"25/1883","P":"25/1883","nonStanding":"d5a390365ae87c30caf53a98e7794b9ac5cd7efbe7bfcaece81ee30e2bb4637b","meaning":"f7d0a18639a91e5ea51488e67e10af1fa9e5bb936572159fc57ec62fd40f2b99","probeDraws":"a2376ae18f55e2aa4bd726a61b9e4993d4f65444d89e72e5dd8d1cf085df3980","probabilities":["147701366471317472543/295147905179352825856","147446538708035353313/295147905179352825856"]}
+M106 COMPLETED LANE {"lane":5,"rebound":false,"model":"3913e198529de83de57f4324550e4fb07d10bd792b7d8d647916e0230d169c9c","before":"34dd52cf7c71e0e60920d8f02dbee71fbbde7ab91e0261d76739b33106c0dc01","beforeOutputs":"47ee55fac45a5e15334ff9fcb373fd845880631b0b60629c4646be7d528a299a","earlyContext":"99072771e5b0be12ae99c354465b5e26935197c82f925bf8deea4004ea493b25","earlyWinner":"0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","contribution":"-25/1883","P":"-25/1883","nonStanding":"d5a390365ae87c30caf53a98e7794b9ac5cd7efbe7bfcaece81ee30e2bb4637b","meaning":"f7d0a18639a91e5ea51488e67e10af1fa9e5bb936572159fc57ec62fd40f2b99","probeDraws":"a2376ae18f55e2aa4bd726a61b9e4993d4f65444d89e72e5dd8d1cf085df3980","probabilities":["147446538708035353313/295147905179352825856","147701366471317472543/295147905179352825856"]}
+M106 COMPLETED LANE {"lane":6,"rebound":true,"model":"3913e198529de83de57f4324550e4fb07d10bd792b7d8d647916e0230d169c9c","before":"34dd52cf7c71e0e60920d8f02dbee71fbbde7ab91e0261d76739b33106c0dc01","beforeOutputs":"47ee55fac45a5e15334ff9fcb373fd845880631b0b60629c4646be7d528a299a","earlyContext":"99072771e5b0be12ae99c354465b5e26935197c82f925bf8deea4004ea493b25","earlyWinner":"0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","contribution":"25/1883","P":"25/1883","nonStanding":"d5a390365ae87c30caf53a98e7794b9ac5cd7efbe7bfcaece81ee30e2bb4637b","meaning":"f7d0a18639a91e5ea51488e67e10af1fa9e5bb936572159fc57ec62fd40f2b99","probeDraws":"a2376ae18f55e2aa4bd726a61b9e4993d4f65444d89e72e5dd8d1cf085df3980","probabilities":["147701366471317472543/295147905179352825856","147446538708035353313/295147905179352825856"]}
+M106 COMPLETED LANE {"lane":7,"rebound":true,"model":"3913e198529de83de57f4324550e4fb07d10bd792b7d8d647916e0230d169c9c","before":"34dd52cf7c71e0e60920d8f02dbee71fbbde7ab91e0261d76739b33106c0dc01","beforeOutputs":"47ee55fac45a5e15334ff9fcb373fd845880631b0b60629c4646be7d528a299a","earlyContext":"99072771e5b0be12ae99c354465b5e26935197c82f925bf8deea4004ea493b25","earlyWinner":"0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","contribution":"25/1883","P":"25/1883","nonStanding":"d5a390365ae87c30caf53a98e7794b9ac5cd7efbe7bfcaece81ee30e2bb4637b","meaning":"f7d0a18639a91e5ea51488e67e10af1fa9e5bb936572159fc57ec62fd40f2b99","probeDraws":"a2376ae18f55e2aa4bd726a61b9e4993d4f65444d89e72e5dd8d1cf085df3980","probabilities":["147701366471317472543/295147905179352825856","147446538708035353313/295147905179352825856"]}
+M106 BATCH PASS 4..7; exact receiving cases=320; all calendars101
+
+ ✓ src/test/assembledBiography.test.ts > M106 lanes 4..7 cause acquired biography and later probability differences 347111ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  14:49:33
+   Duration  351.55s (transform 2.61s, setup 0ms, collect 3.90s, tests 347.11s, environment 0ms, prepare 149ms)
+
+
+EXIT 0; elapsed 353.179s
+CHARGED 1110.732
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledBiography.test.ts", "-t", "M106 pressure", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledBiography.test.ts > M106 pressure and hidden truth preserve the evidence boundary
+M106 CONTROLS PASS significance live; pressure excludes acquisition, hidden truth preserves cognition; full calendars101
+
+ ✓ src/test/assembledBiography.test.ts > M106 pressure and hidden truth preserve the evidence boundary 164519ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  14:55:43
+   Duration  169.02s (transform 2.69s, setup 0ms, collect 4.01s, tests 164.52s, environment 0ms, prepare 140ms)
+
+
+EXIT 0; elapsed 170.664s
+CHARGED 1281.396
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledBiography.test.ts", "-t", "M106 exact", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledBiography.test.ts > M106 exact repeat and continuation retain frozen biography
+M106 PERSISTENCE PASS save9 and every remaining settlement through101; exact state/output/trace/save/identity
+
+ ✓ src/test/assembledBiography.test.ts > M106 exact repeat and continuation retain frozen biography 163999ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  14:58:41
+   Duration  168.50s (transform 2.72s, setup 0ms, collect 4.04s, tests 164.00s, environment 0ms, prepare 143ms)
+
+
+EXIT 0; elapsed 170.153s
+CHARGED 1451.549
+
+COMMAND ["C:\\Users\\scoob\\AppData\\Local\\Python\\pythoncore-3.15-64\\python.exe", "-c", "from pathlib import Path\nfrom fractions import Fraction\nimport json,itertools\ns=Path('docs/planning/ASSEMBLED_CHARACTER_M106_CHECKS.txt').read_text(encoding='utf-8')\nrows=[json.loads(line.split('M106 COMPLETED LANE ',1)[1]) for line in s.splitlines() if line.startswith('M106 COMPLETED LANE ')]\nassert sorted(r['lane'] for r in rows)==list(range(8)), 'exact complete roster'\nassert len(set(r['earlyWinner'] for r in rows))==2\nassert len(set(r['P'] for r in rows))==2\nequal=['model','before','beforeOutputs','earlyContext','nonStanding','meaning','probeDraws']\ndifferent=0\nfor a,b in itertools.combinations(rows,2):\n for k in equal: assert a[k]==b[k], (a['lane'],b['lane'],k)\n changed=a['earlyWinner']!=b['earlyWinner']\n assert (a['P']!=b['P'])==changed\n assert (a['contribution']!=b['contribution'])==changed\n assert (a['probabilities']!=b['probabilities'])==changed\n different+=int(changed)\nfor r in rows:\n assert Fraction(r['P'])==Fraction(r['contribution'])\n ps=list(map(Fraction,r['probabilities']))\n assert sum(ps)==1 and ps[0]!=Fraction(1,2)\n assert (ps[0]>Fraction(1,2))==(Fraction(r['P'])>0)\nprint('PASS all8 completed native lanes; all28 pairs; '+str(different)+' different-winner pairs; shared model/pre-roll inputs/non-standing sources/meaning/probe dice; signed probability directions; four A/four B.')\n"]
+PASS all8 completed native lanes; all28 pairs; 16 different-winner pairs; shared model/pre-roll inputs/non-standing sources/meaning/probe dice; signed probability directions; four A/four B.
+
+EXIT 0; elapsed 0.062s
+CHARGED 1451.611
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "-b", "--pretty", "false"]
+
+EXIT 0; elapsed 19.171s
+CHARGED 1470.782
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:boundaries"]
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+EXIT 0; elapsed 2.981s
+CHARGED 1473.763
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:research"]
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4334}
+
+EXIT 0; elapsed 3.866s
+CHARGED 1477.629
+
+COMMAND ["C:\\Users\\scoob\\AppData\\Local\\Python\\pythoncore-3.15-64\\python.exe", "-c", "from pathlib import Path\nimport subprocess,json,re\nbase='97ec4d1e'\ndef old(p):return subprocess.check_output(['git','show',base+':'+p]).decode('utf-8')\nallowed={'AGENTS.md','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md','docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md','docs/planning/RESEARCH_OBLIGATIONS.json','docs/planning/ASSEMBLED_CHARACTER_M106_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M106_CHECKS.txt','src/test/assembledBiography.test.ts','src/test/fixtures/assembledBiography.ts'}\nchanged=set(subprocess.check_output(['git','diff',base,'--name-only']).decode().splitlines())|set(subprocess.check_output(['git','ls-files','--others','--exclude-standard']).decode().splitlines())\nassert changed==allowed, (changed-allowed,allowed-changed)\nassert len([p for p in changed if p.startswith('src/')])==2\ncaps={'AGENTS.md':120,'docs/planning/CURRENT.md':80,'docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md':250,'docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md':250}\nfor p,cap in caps.items():\n s=Path(p).read_text(encoding='utf-8');assert len(s.splitlines())<=cap,(p,len(s.splitlines()))\np='docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md'\ns=Path(p).read_text(encoding='utf-8');assert len(s.replace('\\n','\\r\\n').encode())<=65536\nfor marker in [' | F-',' | C-']:\n prior=[line for line in old(p).splitlines() if marker in line and 'C-BIO' not in line]\n now=[line for line in s.splitlines() if marker in line and 'C-BIO' not in line]\n assert prior==now,marker\np='docs/planning/RESEARCH_OBLIGATIONS.json';a=json.loads(old(p));b=json.loads(Path(p).read_text(encoding='utf-8'))\nassert a.keys()==b.keys()\nfor k in a:\n if k!='obligations':assert a[k]==b[k],k\nfor x,y in zip(a['obligations'],b['obligations']):\n assert x['id']==y['id']\n if x['id'] not in ['RO-C3-009','RO-C3-020']:assert x==y\n else:\n  for k in x:\n   if k not in ['unresolved','evidence']:assert x[k]==y[k],(x['id'],k)\n  assert y['unresolved'].startswith(x['unresolved'])\n  assert y['evidence']==x['evidence']+['docs/planning/ASSEMBLED_CHARACTER_M106_RESULT.md']\npaths=list(Path('docs/planning').glob('ASSEMBLED_CHARACTER_M106_*'))\nassert sorted(p.suffix for p in paths)==['.md','.txt']\nsize=sum(p.stat().st_size for p in paths);assert size<5*1024*1024,size\nprint('PASS exact9 intended paths;2 test/helper and2 evidence files/'+str(size)+' bytes; no production/formal/control/reference/baseline/corpus changes. All F rows and other C rows unchanged;21/15/132 and E43/P57/N17/U15 preserved. Obligation statuses/triggers/closure requirements unchanged. Document caps including CRLF bytes pass.')\n"]
+PASS exact9 intended paths;2 test/helper and2 evidence files/105827 bytes; no production/formal/control/reference/baseline/corpus changes. All F rows and other C rows unchanged;21/15/132 and E43/P57/N17/U15 preserved. Obligation statuses/triggers/closure requirements unchanged. Document caps including CRLF bytes pass.
+
+EXIT 0; elapsed 0.651s
+CHARGED 1478.280
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:git-size"]
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.827s
+CHARGED 1479.107
+
+COMMAND ["git", "diff", "--cached", "--check"]
+
+EXIT 0; elapsed 0.072s
+CHARGED 1479.179
