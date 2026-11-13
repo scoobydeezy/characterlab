@@ -6,7 +6,7 @@ import {withRecognitionState} from './recognitionState';
  * Structural history validity never authenticates a caller-supplied learning history.
  * Public S0 excludes it; restore must additionally prove the complete executed prefix. */
 import {canonicalEncode as enc,text,typedIdentifier,type CanonicalValue} from '../substrate/canonicalEncoding';
-import {AuthoritativeState,type StatePath,type StatePatch} from '../substrate/state';
+import {AuthoritativeState,StateAuthorityRegistry,applyStatePatch,statePathValue,type StatePath,type StatePatch} from '../substrate/state';
 import {semanticReferentFromAuthoredContent} from '../substrate/referentOrigin';
 import {compilePredictionModel} from '../campaign2/predictionModel';
 import {predictionModelReviewSource} from '../campaign2/predictionModelReview';
@@ -20,7 +20,8 @@ import {withControlState} from './control';
 import {withHabitState} from './habit';
 import {withPerformanceState} from './performance';
 import {withHorizonState} from './horizon';
-import {withPriorityState} from './priority';
+import {withPriorityState,GOAL_OWNER} from './priority';
+import {pattern} from './skill';
 import {withStrategyState} from './strategy';
 import {withSkillState} from './skill';
 import {withRetentionState} from './retention';
@@ -58,7 +59,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
   const task=byKey.get(key(selector.key));if(!task)invalidModel('task key outside declared holder/instance');
   if(path.fieldId!==1n&&path.fieldId!==2n)invalidModel('task field outside successor');
   if(value===undefined)return;
-  if(path.fieldId===2n){rec(f(row(f(rec(value,390n),1n)),4n),389n);return;}
+  if(path.fieldId===2n){const instruction=f(rec(value,390n),1n);rec(f(row(instruction),4n),389n);if(model.commitmentAdoption&&!model.strategy!.find(t=>key(t.task)===key(task.key))?.plans.some(p=>key(p.instructionId)===key(instruction)))invalidModel('adopted instruction/task reference');return;}
   const status=statusRecord(value,372n),tag=u(f(status,1n));
   if(tag===2n){
    const reference=rec(f(status,2n),237n),at=f(status,3n),occurrence=id(f(reference,2n));
@@ -75,6 +76,8 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
   for(const e of entries){validateEntry(e.path,e.value);if(e.path.rootStateTypeId===373n&&e.path.fieldId===1n)adopted.add(key((e.path.selectors[0] as {kind:'mapKey';key:CanonicalValue}).key));}
   for(const e of entries)if(e.path.rootStateTypeId===373n&&e.path.fieldId===2n&&!adopted.has(key((e.path.selectors[0] as {kind:'mapKey';key:CanonicalValue}).key)))invalidModel('instruction requires actually adopted task');
  }
+ const instructionPaths=tasks.map(t=>({...t.path,fieldId:2n}));
+ const instructionAuthority=model.commitmentAdoption?new StateAuthorityRegistry(instructionPaths.map(path=>({pattern:pattern(path),validateValue:(value:CanonicalValue)=>{structural.validatePath(path);model.content.validateRecordRoles(enc(value));validateEntry(path,value);},removalAllowed:false})),[{mutationAuthorityId:GOAL_OWNER,patterns:instructionPaths.map(pattern)}]):undefined;
  const inheritedState=Object.freeze({...structural,validateState,
   validatePath(path:StatePath){structural.validatePath(path);validateEntry(path);},
   restoreState(bytes:Uint8Array){const state=structural.restoreState(bytes);validateState(state);return state;},
@@ -83,14 +86,16 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
     const before=state.read(op.path),tag=before.presence?u(f(statusRecord(before.value!,372n),1n)):0n;
     if(tag!==0n&&tag!==1n)invalidModel('terminal commitment cannot change');
     if(op.kind==='set'&&u(f(statusRecord(op.newValue,372n),1n))===4n&&tag!==1n)invalidModel('cancellation requires Open commitment');
-   }const result=structural.applyPatch(state,patch,authority,scope);validateState(result.state);return result;},
+   }const instructions=model.commitmentAdoption?patch.operations.filter(o=>o.path.rootStateTypeId===373n&&o.path.fieldId===2n):[];
+   for(const op of instructions){if(op.kind!=='set'||state.read(op.path).presence||state.read({...op.path,fieldId:1n}).presence)invalidModel('adopted instruction is immutable');if(!patch.operations.some(p=>p.kind==='set'&&key(statePathValue(p.path))===key(statePathValue({...op.path,fieldId:1n}))&&key(p.newValue)===key(r(372,[{kind:'unsigned',value:1n}]))))invalidModel('instruction requires joint fresh Open adoption');if(scope&&(!scope.writableRoots.includes(373n)||!scope.targetPaths.some(p=>key(statePathValue(p))===key(statePathValue(op.path)))))invalidModel('instruction write scope');}
+   const basePatch={operations:patch.operations.filter(o=>!instructions.includes(o))},base=structural.applyPatch(state,basePatch,authority,scope),result=instructions.length?applyStatePatch(base.state,{operations:instructions},authority,instructionAuthority!):{state:base.state,diffs:[]};validateState(result.state);return {state:result.state,diffs:[...base.diffs,...result.diffs]};},
  });
  const episodes=model.memory?withEpisodicState(inheritedState,C,model.body!,!!model.affectMemory,model.encoding,!!model.memoryUse,model.bodyMemoryUse,model.positionMemory,model.retainedAttribution,model.significanceEnabled,model.actionMemory):inheritedState;
  const embodied=model.body?withBodyState(episodes,C,model.body):episodes;
  const retained=model.retention?withRetentionState(embodied,C):embodied;
  const procedural=model.skill?withSkillState(retained,C,model.procedures,model.formationEnabled):retained;
  const planned=model.strategy?withStrategyState(procedural,C,model.strategy):procedural;
- const prioritized=model.priority?withPriorityState(planned,tasks.map(t=>t.key),model.goalMeaning?{C,settings:model.goalMeaning}:undefined,model.spatialMeaning?{C,settings:model.spatialMeaning}:undefined):planned;
+ const prioritized=model.priority?withPriorityState(planned,tasks.map(t=>t.key),model.goalMeaning?{C,settings:model.goalMeaning}:undefined,model.spatialMeaning?{C,settings:model.spatialMeaning}:undefined,model.commitmentAdoption):planned;
  const forecasted=model.horizon?withHorizonState(prioritized,tasks.map(t=>t.key)):prioritized;
  const monitored=model.performance?withPerformanceState(forecasted,model.strategy!,model.expectationEnabled,model.selfBeliefEnabled?C:undefined,model.values,model.causalEnabled,model.interferenceEnabled):forecasted;
  const habitual=model.habit?withHabitState(monitored,C):monitored;

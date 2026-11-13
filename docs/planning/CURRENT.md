@@ -1,4 +1,4 @@
-# Current work — M98: perceived fresh commitment adoption
+# Current work — M98: adoption implemented; comparison amendment pending
 
 The next connection lets an observed instruction and importance adopt a previously
 absent concrete task in the shared prospective owner, then influence a later choice.
@@ -11,7 +11,7 @@ M97 cancellation remains intact. COMMIT is not complete; recurrence remains pend
   [lifecycle contract](../formal/ASSEMBLED_CHARACTER_COMMITMENT_LIFECYCLE_CONTRACT.md)
   adds0.2; rules/registry0.82. SourceCoverage0.5, D3 and calibration unchanged.
 - Scope: priority.ts, priorityExecution.ts, model.ts, state.ts, inputs.ts,
-  runtime.ts, traceBinding.ts, one adoption test (8 planned; hard12 paths).
+  runtime.ts, traceBinding.ts, reasons.ts, one adoption test (9 paths; hard12).
   No frozen control changes, new scheduler, autonomous peers, UI or unrelated breadth.
 - Fixed scenario: M94 standingProbe seed0, three declared tasks, no person dependency,
   body30/cap100/rate10, delivery90@9; existing observation/route/reason channels.
@@ -36,6 +36,20 @@ M97 cancellation remains intact. COMMIT is not complete; recurrence remains pend
   reference boundary, research, docs/budgets/links, Git size and whitespace.
 - Budget600s/command,1800s cumulative including failures +15s bookkeeping;2 new
   evidence files/5MiB (result/checks). No extensions or contrast replacement assumed.
+- First native failure: reason evidence reader required six-field observation0.1;
+  receive versioned seven-field0.2 without changing source weights/laws/comparison.
+- Second native failure: inherited instruction leaf was initialization-only;0.82
+  adds same-owner joint fresh adoption with immutable instructions and write scope.
+- Boundary controls pass, including cancelled-ID reuse and old-version admission.
+  Repeat/restore11 ->12,13,14,15,20,40,101 exact; injected write failure rolls back.
+- M97 behavioral regression and three original COMMIT controls pass; types pass.
+  [M98 checkpoint](ASSEMBLED_CHARACTER_M98_RESULT.md), [checks](ASSEMBLED_CHARACTER_M98_CHECKS.txt).
+- Checkpoint checks846.96s /1800s including failures/bookkeeping; remaining953.04s.
+  Boundary/research/docs/size/whitespace pass; no extension or M98 pass.
+- Current behavioral gate STOPPED: original A-absent/B-I=3/5 frame12 returns
+  NoChoice (status2), so the live comparison cannot be claimed. Owner amendment
+  requested: B initial I=1 in both arms, all other settings/budget/gates fixed;
+  retain original null, no second replacement. Independent controls continue.
 - Done only when adoption changes actual captured arbitration probabilities through
   the shared path and all controls pass; otherwise retain failure and report blocker.
 

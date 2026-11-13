@@ -1,3 +1,4 @@
+import {PRIORITY_ADOPTION_OBS} from './priority';
 /** assembled-character-habit/0.1: two actions x two tasks, unchanged per-group mathematics. */
 import {list,type CanonicalValue} from '../substrate/canonicalEncoding';
 import {SchedulerContractError} from '../substrate/scheduler';
@@ -133,7 +134,7 @@ export function prioritySourceBasis(value:CanonicalValue,report:CanonicalValue|u
   if(key(row[3])!==key(f(signal,2n)))reject('priority source strength association');
   const observation=items(row[4],'list'),supports:CanonicalValue[]=[];
   if(typeof row[5]!=='boolean'&&row[5].kind==='typedIdentifier')supports.push(row[5]);
-  if(observation.length){if(observation.length!==6||txt(observation[0])!==PRIORITY_OBS||key(observation[3])!==key(task))reject('priority observation association');supports.push(observation[1]);}
+  if(observation.length){if(!(observation.length===6&&txt(observation[0])===PRIORITY_OBS||observation.length===7&&txt(observation[0])===PRIORITY_ADOPTION_OBS)||key(observation[3])!==key(task))reject('priority observation association');supports.push(observation[1]);}
   if(row[6]){const horizon=items(row[6],'list');if(horizon.length!==7||txt(horizon[0])!==HORIZON_EVAL||key(horizon[2])!==key(task))reject('horizon association');if(items(horizon[3],'list').length)supports.push(forecastValue(horizon[3]).support);}
   const basis=f(rec(f(signal,3n),400n),1n);if(typeof basis==='boolean'||basis.kind!=='map')return reject('source evidence map');
   const merged=new Map(basis.entries.map(([a,w])=>[key(a),[a,w] as readonly [CanonicalValue,CanonicalValue]]));

@@ -91,3 +91,16 @@ not another source. SourceCoverage/D3/dice stay fixed. This is bounded controlle
 instruction perception, not natural-language interpretation or autonomous adoption.
 M98 fixes the comparison in CURRENT before execution. Recurrence/series identity,
 observers, metadata and full native competitor replay remain COMMIT requirements.
+
+Receiving clarification: reason source provenance accepts the authenticated seven-field
+observation0.2 alongside six-field0.1, retaining the same occurrence support atom
+and unit source weight. The first native failure identified this missing consumer
+shape admission; no extra source or scoring law is introduced.
+
+Instruction ownership clarification: inherited structural373/2 was initialization-only.
+The0.82 composition declares its existing instruction leaves writable by the same
+prospective owner only for joint fresh Open adoption. Instructions must match that
+task's strategy, be absent, and accompany a fresh status in the same patch. Every
+subsequent overwrite/removal rejects. Existing structural shape/role validation and
+write scopes still apply; older model authority is unchanged. This fixes the second
+native failure (undeclared writable leaf), without a scenario or law amendment.

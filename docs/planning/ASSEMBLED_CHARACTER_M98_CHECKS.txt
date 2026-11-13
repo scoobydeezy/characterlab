@@ -1,0 +1,230 @@
+
+M98_START types ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+src/test/assembledCommitmentAdoption.test.ts(43,269): error TS2345: Argument of type '{ s: { rulesVersion: string; registrySchemaVersion: string; registry: Uint8Array<ArrayBufferLike>; contentSchemaVersion: string; parameterSchemaVersion: string; numericProfileVersion: string; randomAlgorithmVersion: string; content: Uint8Array; parameters: Uint8Array; }; d: { ...; }; }' is not assignable to parameter of type '{ s: { rulesVersion: string; registrySchemaVersion: string; registry: Uint8Array<ArrayBufferLike>; contentSchemaVersion: string; parameterSchemaVersion: string; numericProfileVersion: string; randomAlgorithmVersion: string; content: Uint8Array; parameters: Uint8Array; }; d: { ...; }; instruction: CanonicalValue; }'.
+  Property 'instruction' is missing in type '{ s: { rulesVersion: string; registrySchemaVersion: string; registry: Uint8Array<ArrayBufferLike>; contentSchemaVersion: string; parameterSchemaVersion: string; numericProfileVersion: string; randomAlgorithmVersion: string; content: Uint8Array; parameters: Uint8Array; }; d: { ...; }; }' but required in type '{ s: { rulesVersion: string; registrySchemaVersion: string; registry: Uint8Array<ArrayBufferLike>; contentSchemaVersion: string; parameterSchemaVersion: string; numericProfileVersion: string; randomAlgorithmVersion: string; content: Uint8Array; parameters: Uint8Array; }; d: { ...; }; instruction: CanonicalValue; }'.
+src/test/assembledCommitmentAdoption.test.ts(43,296): error TS2345: Argument of type '{ s: { rulesVersion: string; registrySchemaVersion: string; registry: Uint8Array<ArrayBufferLike>; contentSchemaVersion: string; parameterSchemaVersion: string; numericProfileVersion: string; randomAlgorithmVersion: string; content: Uint8Array; parameters: Uint8Array; }; d: { ...; }; }' is not assignable to parameter of type '{ s: { rulesVersion: string; registrySchemaVersion: string; registry: Uint8Array<ArrayBufferLike>; contentSchemaVersion: string; parameterSchemaVersion: string; numericProfileVersion: string; randomAlgorithmVersion: string; content: Uint8Array; parameters: Uint8Array; }; d: { ...; }; instruction: CanonicalValue; }'.
+  Property 'instruction' is missing in type '{ s: { rulesVersion: string; registrySchemaVersion: string; registry: Uint8Array<ArrayBufferLike>; contentSchemaVersion: string; parameterSchemaVersion: string; numericProfileVersion: string; randomAlgorithmVersion: string; content: Uint8Array; parameters: Uint8Array; }; d: { ...; }; }' but required in type '{ s: { rulesVersion: string; registrySchemaVersion: string; registry: Uint8Array<ArrayBufferLike>; contentSchemaVersion: string; parameterSchemaVersion: string; numericProfileVersion: string; randomAlgorithmVersion: string; content: Uint8Array; parameters: Uint8Array; }; d: { ...; }; instruction: CanonicalValue; }'.
+src/test/assembledCommitmentAdoption.test.ts(44,217): error TS2345: Argument of type '{ operations: { kind: "set"; path: { fieldId: bigint; rootStateTypeId: bigint; selectors: readonly stateKernel.StateSelector[]; }; expected: { presence: boolean; }; newValue: CanonicalValue; }[]; }' is not assignable to parameter of type 'StatePatch'.
+  Types of property 'operations' are incompatible.
+    Type '{ kind: "set"; path: { fieldId: bigint; rootStateTypeId: bigint; selectors: readonly StateSelector[]; }; expected: { presence: boolean; }; newValue: CanonicalValue; }[]' is not assignable to type 'readonly PatchOperation[]'.
+      Type '{ kind: "set"; path: { fieldId: bigint; rootStateTypeId: bigint; selectors: readonly stateKernel.StateSelector[]; }; expected: { presence: boolean; }; newValue: CanonicalValue; }' is not assignable to type 'PatchOperation'.
+        Type '{ kind: "set"; path: { fieldId: bigint; rootStateTypeId: bigint; selectors: readonly stateKernel.StateSelector[]; }; expected: { presence: boolean; }; newValue: CanonicalValue; }' is not assignable to type 'SetPatchOperation'.
+          Types of property 'expected' are incompatible.
+            Type '{ presence: boolean; }' is not assignable to type '{ readonly presence: false; } | { readonly presence: true; readonly value: CanonicalValue; }'.
+              Property 'value' is missing in type '{ presence: boolean; }' but required in type '{ readonly presence: true; readonly value: CanonicalValue; }'.
+
+M98_CHECK types exit=2 seconds=17.47 timeout=False
+
+M98_START types-repair ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+
+M98_CHECK types-repair exit=0 seconds=16.87 timeout=False
+
+M98_START behavior ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledCommitmentAdoption.test.ts', '-t', 'M98 behavior', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledCommitmentAdoption.test.ts > M98 behavior: perceived adoption settles after the current decision and changes later arbitration 84279ms
+   → reason descriptions: priority observation association
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledCommitmentAdoption.test.ts > M98 behavior: perceived adoption settles after the current decision and changes later arbitration
+SchedulerContractError: reason descriptions: priority observation association
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ reject src/assembled/reasons.ts:29:32
+ ❯ src/assembled/reasons.ts:136:121
+ ❯ Module.prioritySourceBasis src/assembled/reasons.ts:129:39
+ ❯ Object.execute src/assembled/execution.ts:252:205
+ ❯ src/assembled/runtime.ts:209:33
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:373:26
+ ❯ Object.settleNextInstant src/assembled/character.ts:45:66
+ ❯ Module.through src/test/fixtures/assembledAffectReceiving.ts:21:107
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  18:59:38
+   Duration  88.60s (transform 2.59s, setup 0ms, collect 3.88s, tests 84.28s, environment 0ms, prepare 137ms)
+
+
+M98_CHECK behavior exit=1 seconds=89.16 timeout=False
+
+M98_START behavior-reader-repair ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledCommitmentAdoption.test.ts', '-t', 'M98 behavior', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledCommitmentAdoption.test.ts > M98 behavior: perceived adoption settles after the current decision and changes later arbitration 84930ms
+   → path is not a declared writable leaf
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledCommitmentAdoption.test.ts > M98 behavior: perceived adoption settles after the current decision and changes later arbitration
+SchedulerContractError: path is not a declared writable leaf
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:470:11
+    468|       const contractError = error instanceof SchedulerContractError
+    469|         ? error
+    470|         : new SchedulerContractError('TRANSITION_FAILURE', errorMessag…
+       |           ^
+    471|       this.#status = 'Failed';
+    472|       this.#diagnostic = {
+ ❯ Object.settleNextInstant src/assembled/character.ts:45:66
+ ❯ Module.through src/test/fixtures/assembledAffectReceiving.ts:21:107
+ ❯ src/test/assembledCommitmentAdoption.test.ts:34:2
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'TRANSITION_FAILURE', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  19:01:58
+   Duration  89.19s (transform 2.57s, setup 0ms, collect 3.83s, tests 84.93s, environment 0ms, prepare 133ms)
+
+
+M98_CHECK behavior-reader-repair exit=1 seconds=89.76 timeout=False
+
+M98_START types-authority-repair ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+
+M98_CHECK types-authority-repair exit=0 seconds=17.00 timeout=False
+
+M98_START behavior-authority-repair ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledCommitmentAdoption.test.ts', '-t', 'M98 behavior', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledCommitmentAdoption.test.ts > M98 behavior: perceived adoption settles after the current decision and changes later arbitration 89894ms
+   → live choice: expected 2n to be 3n // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledCommitmentAdoption.test.ts > M98 behavior: perceived adoption settles after the current decision and changes later arbitration
+AssertionError: live choice: expected 2n to be 3n // Object.is equality
+
+- Expected
++ Received
+
+- 3n
++ 2n
+
+ ❯ Module.capture src/test/fixtures/assembledValueProvenance.ts:48:74
+     46| export function capture(run:Run,at=12n){
+     47|  const d=outputs(snap(run).outputs,409n).find(v=>signedValue(f(v,2n))=…
+     48|  const status=rec(f(d,4n),419n);expect(uint(f(status,1n)),'live choice…
+       |                                                                          ^
+     49|  const data=rec(f(status,2n),420n),context=rec(f(d,3n),408n),raw=rec(f…
+     50|  expect(outputs(snap(run).outputs,433n).some(o=>key(f(rec(f(rec(f(rec(…
+ ❯ Module.capture src/test/fixtures/assembledReasonReference.ts:34:10
+ ❯ src/test/assembledCommitmentAdoption.test.ts:34:52
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  19:05:40
+   Duration  94.17s (transform 2.56s, setup 0ms, collect 3.84s, tests 89.89s, environment 0ms, prepare 136ms)
+
+
+M98_CHECK behavior-authority-repair exit=1 seconds=94.73 timeout=False
+
+M98_START boundaries ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledCommitmentAdoption.test.ts', '-t', 'M98 boundaries', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCommitmentAdoption.test.ts > M98 boundaries: version, owned immutable sources and instance identity remain enforced
+M98 BOUNDARIES PASS old version/foreign or missing instruction rejected; no-adoption0.81/0.82 exact state/output; wrong owner, immutable/duplicate importance and edited restore rejected.
+
+ ✓ src/test/assembledCommitmentAdoption.test.ts > M98 boundaries: version, owned immutable sources and instance identity remain enforced 173018ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  19:09:06
+   Duration  177.35s (transform 2.57s, setup 0ms, collect 3.86s, tests 173.02s, environment 0ms, prepare 137ms)
+
+
+M98_CHECK boundaries exit=0 seconds=177.89 timeout=False
+
+M98_START persistence ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledCommitmentAdoption.test.ts', '-t', 'M98 persistence', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCommitmentAdoption.test.ts > M98 persistence: adoption survives every settlement and two-patch failure is atomic
+M98 CONTINUATION PASS11 -> 12,13,14,15,20,40,101; exact full saves; failure after both adoption patches restores public snapshot.
+
+ ✓ src/test/assembledCommitmentAdoption.test.ts > M98 persistence: adoption survives every settlement and two-patch failure is atomic 169777ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  19:12:18
+   Duration  174.05s (transform 2.55s, setup 0ms, collect 3.82s, tests 169.78s, environment 0ms, prepare 138ms)
+
+
+M98_CHECK persistence exit=0 seconds=174.59 timeout=False
+
+M98_START retained-cancellation ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledCommitmentCancellation.test.ts', '-t', 'M97 behavior', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCommitmentCancellation.test.ts > M97 behavior: cancellation settles after the current decision and removes later pressure
+M97 BEHAVIOR PASS choice10 live/equal Auto0draws; cancellation140; unchanged genuine identity; probability12 A55/64,B9/64 -> only B1; hidden/denied controls; actual executions.
+
+ ✓ src/test/assembledCommitmentCancellation.test.ts > M97 behavior: cancellation settles after the current decision and removes later pressure 137873ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  19:15:39
+   Duration  142.16s (transform 2.56s, setup 0ms, collect 3.82s, tests 137.87s, environment 0ms, prepare 137ms)
+
+
+M98_CHECK retained-cancellation exit=0 seconds=142.72 timeout=False
+
+M98_START original-commit ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/commitPublic.test.ts', '-t', 'earns strong identity|preserves terminal|distinguishes CoreNeed', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/commitPublic.test.ts > earns strong identity then keeps it fixed across exact lifecycle pressure and active decisions 489ms
+ ✓ src/test/commitPublic.test.ts > preserves terminal A/version/cause while recurrence creates distinct B 405ms
+ ✓ src/test/commitPublic.test.ts > distinguishes CoreNeed, Immortal and ReusedId under identical actual learned identity 1683ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 24 skipped (27)
+   Start at  19:18:15
+   Duration  4.19s (transform 802ms, setup 0ms, collect 1.21s, tests 2.58s, environment 0ms, prepare 136ms)
+
+
+M98_CHECK original-commit exit=0 seconds=4.72 timeout=False
+
+M98_START reference-boundary ['node', 'scripts/check-reference-boundary.mjs']
+Reference boundary check passed.
+
+M98_CHECK reference-boundary exit=0 seconds=2.53 timeout=False
+
+M98_START research ['node', 'scripts/check-research-obligations.mjs']
+PASS: research obligation references and dispositions {"active":1,"conditional":17,"closed":4,"unowned":0,"verdicts":103,"reports":4331}
+
+M98_CHECK research exit=0 seconds=3.52 timeout=False
+
+M98_START documentation ['python', '-c', "from pathlib import Path\nimport re,json,subprocess\nfor name,limit in [('AGENTS.md',120),('docs/planning/CURRENT.md',80),('docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md',250),('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md',250)]:\n p=Path(name);n=len(p.read_text().splitlines());assert n<=limit,(name,n);print(name,n,'lines',len(p.read_bytes()),'bytes')\nreg=Path('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md');assert len(reg.read_bytes())<=65536\nfor name in ['CURRENT.md','ASSEMBLED_CHARACTER_RECONCILIATION.md','ASSEMBLED_CHARACTER_M98_RESULT.md']:\n p=Path('docs/planning')/name\n for link in re.findall(r'\\]\\(([^)]+)\\)',p.read_text()):\n  dest=link.split('#')[0].strip('<>')\n  if dest and '://' not in dest:assert (p.parent/dest).exists(),(str(p),link)\nassert len([r for r in reg.read_text().splitlines() if '| C-' in r and re.search(r'EQUIVALENT \\(mapped(?: domain)?\\)',r)])==4\nassert '| UNRESOLVED | C-COMMIT' in reg.read_text()\nassert 'successor0.81 (SourceCoverage)' in reg.read_text()\nchanged=subprocess.check_output(['git','diff','27feff90','--name-only'],text=True).splitlines()+subprocess.check_output(['git','ls-files','--others','--exclude-standard'],text=True).splitlines()\ncode=sorted(set(p for p in changed if p.startswith('src/')))\nassert len(code)==9,code\nassert all(p.startswith('src/assembled/') or p=='src/test/assembledCommitmentAdoption.test.ts' for p in code)\nassert not subprocess.check_output(['git','diff','27feff90','--name-only','--','src/campaign2','src/campaign3','src/substrate','src/observation','src/semanticBinding','reference'],text=True).strip()\nfiles=[Path('docs/planning/ASSEMBLED_CHARACTER_M98_RESULT.md'),Path('docs/planning/ASSEMBLED_CHARACTER_M98_CHECKS.txt')]\nassert sum(p.stat().st_size for p in files)<5*1024*1024\nx=json.loads(Path('docs/planning/RESEARCH_OBLIGATIONS.json').read_text())\nassert sum(o['status']=='ACTIVE' for o in x['obligations'])==1\nassert sum(o['status']=='CONDITIONAL' for o in x['obligations'])==17\nassert len([r for r in x['reportReviews'] if r['path']=='docs/planning/ASSEMBLED_CHARACTER_M98_RESULT.md'])==1\nassert 'Owner approval is pending' in files[0].read_text()\nprint('PASS docs/links;9 code paths; original simulation/control trees unchanged;2 evidence files under5MiB;4 mapped/COMMIT unresolved; no behavioral pass or owner amendment asserted')\n"]
+AGENTS.md 120 lines 8440 bytes
+docs/planning/CURRENT.md 58 lines 4564 bytes
+docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md 250 lines 18781 bytes
+docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md 149 lines 65471 bytes
+PASS docs/links;9 code paths; original simulation/control trees unchanged;2 evidence files under5MiB;4 mapped/COMMIT unresolved; no behavioral pass or owner amendment asserted
+
+M98_CHECK documentation exit=0 seconds=0.57 timeout=False
+
+M98_START git-size ['node', 'scripts/check-git-file-sizes.mjs']
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M98_CHECK git-size exit=0 seconds=0.36 timeout=False
+
+M98_START whitespace ['git', 'diff', '--cached', '--check']
+
+M98_CHECK whitespace exit=0 seconds=0.07 timeout=False
