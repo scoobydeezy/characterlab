@@ -1,10 +1,12 @@
-# Current work — M105 affected DECISION refresh
+# Current work — M105 DECISION refresh complete
 Owner adopted0.85 after M104 and authorized continuation2026-11-13.
+All five M105 groups pass: regimes/competitors, coupled significance, history,
+player privacy and full continuation. See ASSEMBLED_CHARACTER_M105_RESULT.md.
 One reference: assembled-reference/0.3, rules/registry0.85-candidate;
 standing-rounding/0.1-candidate globally, engineering default/no superiority verdict.
 SourceCoverage/D3 and all other choices/calibration unchanged.0.84 remains control.
 
-## Bounded card — before implementation
+## Completed bounded card — plan13ae0ca5
 - Capability1: same character retains Auto/Quiet/Player regimes and the four
   original resolver counterexamples under the adopted reference.
 - Capability2: acquired relationship significance changes mode without changing

@@ -1,2 +1,178 @@
 M105 adopted reference0.85 affected DECISION refresh. Budget1800s cumulative/600s command;2 evidence files/5MiB. Initial15s bookkeeping. Prior M103/M104 receipts retained, not reset.
 CHARGED 15.000
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:git-size"]
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.842s
+CHARGED 15.842
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "-b", "--pretty", "false"]
+
+EXIT 0; elapsed 21.586s
+CHARGED 37.428
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledDecisionReference.test.ts", "-t", "M105 regimes", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledDecisionReference.test.ts > M105 regimes and original alternatives retain exact receiving correspondence on0.85 68853ms
+   → requires 403/1
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 6 skipped (7)
+   Start at  13:57:11
+   Duration  73.33s (transform 2.58s, setup 0ms, collect 3.85s, tests 68.85s, environment 0ms, prepare 319ms)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledDecisionReference.test.ts > M105 regimes and original alternatives retain exact receiving correspondence on0.85
+SchedulerContractError: requires 403/1
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataRecord src/campaign2/canonicalData.ts:9:117
+ ❯ Module.replace src/test/fixtures/assembledCharacter.ts:8:80
+ ❯ src/test/assembledDecisionReference.test.ts:21:34
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+EXIT 1; elapsed 75.354s
+CHARGED 112.782
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledDecisionReference.test.ts", "-t", "M105 regimes", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDecisionReference.test.ts > M105 regimes and original alternatives retain exact receiving correspondence on0.85
+M105 REGIME PASS {"regime":"settled","mode":1,"AProbability":"7/8","uniformCases":32,"AWins":{"1":32,"2":28,"3":32,"4":32,"5":32},"decorativeDifferences":0,"authoritativeDraws":0,"fullCalendar101":true}
+
+stdout | src/test/assembledDecisionReference.test.ts > M105 regimes and original alternatives retain exact receiving correspondence on0.85
+M105 REGIME PASS {"regime":"quiet","mode":2,"AProbability":"23/32","uniformCases":32,"AWins":{"1":23,"2":23,"3":32,"4":32},"decorativeDifferences":9,"authoritativeDraws":2,"fullCalendar101":true}
+
+stdout | src/test/assembledDecisionReference.test.ts > M105 regimes and original alternatives retain exact receiving correspondence on0.85
+M105 REGIME PASS {"regime":"balanced","mode":3,"AProbability":"1/2","uniformCases":32,"AWins":{"1":16,"2":16,"3":32,"4":32,"5":16},"decorativeDifferences":16,"authoritativeDraws":2,"fullCalendar101":true}
+
+ ✓ src/test/assembledDecisionReference.test.ts > M105 regimes and original alternatives retain exact receiving correspondence on0.85 130826ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  13:58:44
+   Duration  135.05s (transform 2.54s, setup 0ms, collect 3.79s, tests 130.83s, environment 0ms, prepare 132ms)
+
+
+EXIT 0; elapsed 136.687s
+CHARGED 249.469
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledDecisionReference.test.ts", "-t", "M105 significance", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDecisionReference.test.ts > M105 significance preserves matched dice and winner while changing presentation mode
+M105 SIGNIFICANCE PASS acquired personal history vs witnessed;standing-2/0;P1/2 both;stake1/3 vs5/7;Quiet/Player;matched2 face draws and winner;no rounding;full calendars101
+
+ ✓ src/test/assembledDecisionReference.test.ts > M105 significance preserves matched dice and winner while changing presentation mode 161330ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  14:01:12
+   Duration  165.58s (transform 2.54s, setup 0ms, collect 3.80s, tests 161.33s, environment 0ms, prepare 141ms)
+
+
+EXIT 0; elapsed 167.213s
+CHARGED 416.682
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledDecisionReferenceHistory.test.ts", "-t", "M105 history|M105 player", "--reporter=verbose", "--bail=1"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDecisionReferenceHistory.test.ts > M105 history keeps frozen intent separate from visible and unknown outcomes
+M105 HISTORY PASS all4 permission cells;frozen meaning identical;visible failure differs from unknown;IntentEqualsOutcome fails;hidden entry equal;closure/join negatives;all calendars101
+
+ ✓ src/test/assembledDecisionReferenceHistory.test.ts > M105 history keeps frozen intent separate from visible and unknown outcomes 173882ms
+stdout | src/test/assembledDecisionReferenceHistory.test.ts > M105 player view exposes authoritative faces without private draw records
+M105 PLAYER PASS exact native0.3 faces/modifiers/contributions/tie;private draw rejected;Auto/Quiet suppressed;read-only;calendar101
+
+ ✓ src/test/assembledDecisionReferenceHistory.test.ts > M105 player view exposes authoritative faces without private draw records 26219ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 6 skipped (8)
+   Start at  14:04:12
+   Duration  204.35s (transform 2.50s, setup 0ms, collect 3.74s, tests 200.10s, environment 0ms, prepare 137ms)
+
+
+EXIT 0; elapsed 205.981s
+CHARGED 622.663
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledDecisionReferenceHistory.test.ts", "-t", "M105 continuation", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDecisionReferenceHistory.test.ts > M105 continuation preserves every settled byte and public view after save9
+M105 CONTINUATION PASS9 -> 10,11,12,13,14,20,40,101;state/output/trace/save/identity/history/player exact;exhausted
+
+ ✓ src/test/assembledDecisionReferenceHistory.test.ts > M105 continuation preserves every settled byte and public view after save9 170682ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  14:07:48
+   Duration  174.94s (transform 2.49s, setup 0ms, collect 3.74s, tests 170.68s, environment 0ms, prepare 136ms)
+
+
+EXIT 0; elapsed 176.571s
+CHARGED 799.234
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "-b", "--pretty", "false"]
+
+EXIT 0; elapsed 18.677s
+CHARGED 817.911
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:boundaries"]
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+EXIT 0; elapsed 3.064s
+CHARGED 820.975
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:research"]
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4334}
+
+EXIT 0; elapsed 3.992s
+CHARGED 824.967
+
+M105 METADATA/PRESERVATION PASS:3 new test/helper paths; no production/frozen/source/baseline/corpus edits; only formal adoption header changed, law bytes identical; all132 F clauses/other C mappings unchanged; RO009/020 evidence/current routing only, all statuses/triggers/closure requirements unchanged; lines/CRLF bytes/links/2 evidence file caps.
+{"AGENTS.md": [120, 8515], "docs/planning/CURRENT.md": [59, 4486], "docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md": [250, 18840], "docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md": [205, 65479]}
+CHARGED 825.413
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:git-size"]
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.830s
+CHARGED 826.243
+
+COMMAND ["git", "diff", "--cached", "--check"]
+
+EXIT 0; elapsed 0.071s
+CHARGED 826.314
