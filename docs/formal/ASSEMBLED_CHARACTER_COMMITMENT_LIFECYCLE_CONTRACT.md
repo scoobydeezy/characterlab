@@ -60,3 +60,34 @@ version. The original handler and all older model routing remain unchanged.
 Workspace/priority readers likewise receive the new terminal schema. No alias
 to Expired, hidden status projection or new psychology is permitted. No-request
 0.80/0.81 state/output agreement and retained REASON tests check correspondence.
+
+## 0.2-candidate — perceived fresh adoption (M98, before implementation)
+
+Rules/registry0.82 extends0.81, preserving cancellation and every reference law.
+Reuse priority source10 -> observation20 -> evidence130 -> learning140. New payload
+assembled-goal-priority/0.2 has rows [task, optional I, visible, optional U,
+urgencyVisible, optional instruction]. Each optional is a list of zero or one.
+I and instruction are jointly present or absent. I/U remain exact units; task is
+unique/declared and instruction must be one of that task's governed strategy plans.
+Only0.82 admits the new tag. Source instants remain1..100. Old0.1 remains unchanged.
+Visibility masks both I and instruction; denied values cannot reach cognition.
+Safe observation0.2 appends optional instruction to the existing six fields; source
+occurrence1164 and actual adoption instant remain in immutable retained importance.
+Readers understand the versioned value, but only0.82 state validation admits it.
+
+At common B0, adoption requires absent status, instruction and importance, and
+instant strictly before the declared deadline. A task may be adopted before its
+activeFrom; existing active-window selection still controls when it produces reasons.
+Duplicate or terminal reuse rejects; no resurrection or overwrite. The prospective
+owner writes Open372/1 under373/1 and instruction390 under373/2 in one patch,
+then immutable importance373/3 tagged0.2. Both patches form one atomic settlement;
+trace discloses all three expected-absent reads, writes and diffs, with observed
+support. No current-instant motive sees the new state. Failed settlement rolls back
+both patches. No identity, belief or auxiliary goal store is authored by adoption.
+
+Priority trace0.2 identifies the successor handler; existing outputs keep their
+original shape for old payloads. Reappraisal/embarrassment read the same retained I,
+not another source. SourceCoverage/D3/dice stay fixed. This is bounded controlled
+instruction perception, not natural-language interpretation or autonomous adoption.
+M98 fixes the comparison in CURRENT before execution. Recurrence/series identity,
+observers, metadata and full native competitor replay remain COMMIT requirements.

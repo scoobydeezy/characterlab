@@ -1,40 +1,46 @@
-# Current work — M97 complete: explicit commitment cancellation
+# Current work — M98: perceived fresh commitment adoption
 
-The character can cancel a concrete commitment while preserving earned identity.
-Its current decision remains intact; later decisions lose the cancelled instance's
-reasons. One continuing model/state/scheduler/save, existing prospective owner.
+The next connection lets an observed instruction and importance adopt a previously
+absent concrete task in the shared prospective owner, then influence a later choice.
+M97 cancellation remains intact. COMMIT is not complete; recurrence remains pending.
 
-## Result
-- [M97 result](ASSEMBLED_CHARACTER_M97_RESULT.md), [checks](ASSEMBLED_CHARACTER_M97_CHECKS.txt),
-  [contract](../formal/ASSEMBLED_CHARACTER_COMMITMENT_LIFECYCLE_CONTRACT.md); plan554f4331.
-- Rules/registry0.81; SourceCoverage0.5/D3/calibration unchanged. Request30 produces
-  authenticated cancellation140, writing distinct372/2 Cancelled under373/1.
-  Earlier versions and the frozen control remain unchanged.
-- Actual decision10 and nonzero earned history match permitted/denied arms.
-  Auto has zero draws. Probe12 loses A signals/nucleus after cancellation;
-  probabilities A55/64,B9/64 become only B1; actual execution and identity preserved.
-- Hidden truth cannot change cognition; denied request cannot cancel. No-request
-  0.80/0.81 state/output exact. Old-version, initial-state, owner, source, terminal
-  resurrection and edited-restore negatives pass.
-- Repeat/restore before10: exact full saves at10,11,12,13,14,20,40,101. Cancellation
-  persists; injected owner-write failure restores the public snapshot.
-- Three native tests, retained REASON connection, three original COMMIT controls,
-  types, reference boundaries and research pass. Final docs/size/timing in result.
-- Failures retained: prepared-output typing, strict old status reader, trace-selector
-  mistake. Bounded75-line settlement port changes only reader/trace semantics.
-  M96's original deadline description corrected100 ->20; executed inputs unchanged.
-- Twelve production/test paths (one comment-only);2 new evidence files/5MiB;
- 600s/check,1800s total; actual858.92s including failures/bookkeeping.
-  Document/link/budget, Git size and whitespace checks pass. No extension.
+## Bounded card (before implementation)
+- One capability: admitted perception -> immutable instruction/importance + Open
+  instance at140 -> later live motive/reason/arbitration/execution. No new state owner.
+- Baseline COMMIT; MEC020/EXP013 port/corpus, RET010/011 retained competitors.
+  [lifecycle contract](../formal/ASSEMBLED_CHARACTER_COMMITMENT_LIFECYCLE_CONTRACT.md)
+  adds0.2; rules/registry0.82. SourceCoverage0.5, D3 and calibration unchanged.
+- Scope: priority.ts, priorityExecution.ts, model.ts, state.ts, inputs.ts,
+  runtime.ts, traceBinding.ts, one adoption test (8 planned; hard12 paths).
+  No frozen control changes, new scheduler, autonomous peers, UI or unrelated breadth.
+- Fixed scenario: M94 standingProbe seed0, three declared tasks, no person dependency,
+  body30/cap100/rate10, delivery90@9; existing observation/route/reason channels.
+  A starts absent (remove only its status/instruction; omit its initial importance).
+  B stays live. Keep third task's existing reappraisal role and all laws/settings.
+- At12 the existing priority channel offers A's declared first instruction and I=1;
+  permitted vs denied visibility masks both. Current decision12 must match, since
+  adoption settles140. Clone frame12 to14 (replace matching original event types,
+  retain unrelated events), with no repeated adoption. Keep all future inputs to101.
+- Liveness before behavioral assertion: B has an actual reason/decision in both arms;
+  A absent before adoption, live only in permitted arm at14. Require actual A motive,
+  reason and execution consumption, and changed exact native choice probabilities.
+  No requirement that seed0 selects different winners; no seed/parameter search.
+- Hidden denied instruction/importance variation must leave cognition unchanged.
+  Native source support, three owned writes and phase140 trace must be explicit.
+- Check admission/authority/version, immutable importance, duplicate/terminal reuse,
+  denied evidence, same-instant ordering; exact repeat and restore before12 through
+  every remaining settlement to101. Inject failure between owned writes for rollback.
+- Affected regressions: M97 behavior and original COMMIT controls. Older no-adoption
+  0.81/0.82 state/output comparison. Frozen dependency closure unchanged: no full C2 run.
+- Checks one job at a time: types, three native adoption tests, selected regressions,
+  reference boundary, research, docs/budgets/links, Git size and whitespace.
+- Budget600s/command,1800s cumulative including failures +15s bookkeeping;2 new
+  evidence files/5MiB (result/checks). No extensions or contrast replacement assumed.
+- Done only when adoption changes actual captured arbitration probabilities through
+  the shared path and all controls pass; otherwise retain failure and report blocker.
 
-## Next bounded integration
-Fresh concrete-instance adoption needs actual instruction and importance sources,
-then distinct-ID recurrence and the complete lifecycle/competitor/observer mapping.
-No bare Open record or authored pressure substitutes for a missing causal producer.
-COMMIT stays UNRESOLVED. Next package gets its own bounded card, with no unrelated
-breadth, autonomous peers or UI.
-[M96](ASSEMBLED_CHARACTER_M96_RESULT.md) preserves expiry; [M95](ASSEMBLED_CHARACTER_M95_RESULT.md)
-remains bounded REASON completion. Four mapped members/zero full families;
-21 members/15 families/132 clauses and final current-candidate replay still required.
-RO001 ACTIVE; RO009/014/020 conditional; no debt closure, new verdict or reduction.
+[M97](ASSEMBLED_CHARACTER_M97_RESULT.md) at27feff90 preserves cancellation;
+[M95](ASSEMBLED_CHARACTER_M95_RESULT.md) remains bounded REASON completion.
+Four mapped members/zero full families;21 members/15 families/132 clauses fixed.
+RO001 ACTIVE; RO009/014/020 conditional. No debt closure, new verdict or reduction.
 | Research obligations | **1 active / 17 conditional / 0 unowned** |
