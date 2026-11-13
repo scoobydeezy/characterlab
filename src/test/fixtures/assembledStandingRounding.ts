@@ -1,5 +1,6 @@
+import {randomDrawRecord} from '../../assembled/codecs';
 /** M103 declared in plan8f663faf. Native M89 training; current permitted readings0/0 at12.
- * Owner amendment c1e9940a: A observed urgency4/5 at12 only; original Auto control retained.
+ * Delegated amendment2be6a2fb: A urgency0 at12; original1 and c1e9940a4/5 controls retained.
  * Three nonsocial physical tasks; body30/cap100/rate10/delivery90@9; seed0. */
 import {expect} from 'vitest';
 import {outputs,signedValue} from './assembledComparison';
@@ -21,7 +22,7 @@ import {record,type CanonicalValue} from '../../substrate/canonicalEncoding';
 import {readQ,qValue,ZERO,ONE,readDistribution} from '../../campaign2/cognitiveMath';
 import {ExactRational as Q} from '../../substrate/exactMath';
 import {ROUNDING_SPAN} from '../../assembled/standingRounding';
-export function fixture(candidate=true,pressure=false,hidden=false,amended=true){
+export function fixture(candidate=true,pressure=false,hidden=false,amended:boolean|'rolling'='rolling'){
  const b=history(true,pressure,hidden);let changed=0,urgencyChanged=0;
  const rows=items(decode(b.d.orderedInputs),'list').map(v=>{
   const row=[...items(v,'list')];
@@ -29,13 +30,13 @@ export function fixture(candidate=true,pressure=false,hidden=false,amended=true)
    const p=[...items(row[3],'list')];expect(p.slice(0,4)).toEqual([q(1,1),q(1,1),true,true]);p[0]=q(0,1);p[1]=q(0,1);row[3]=list(p);changed++;
   }
   if(amended&&key(row[0])===key(signed(12))&&key(row[2])===key(PRIORITY_DISPLAY)){
-   const p=items(row[3],'list');row[3]=list([p[0],list(items(p[1],'list').map(v=>{const t=[...items(v,'list')];if(key(t[0])===key(taskA)){expect(t[3]).toEqual(list([q(1,1)]));t[3]=list([q(4,5)]);urgencyChanged++;}return list(t);}))]);
+   const p=items(row[3],'list');row[3]=list([p[0],list(items(p[1],'list').map(v=>{const t=[...items(v,'list')];if(key(t[0])===key(taskA)){expect(t[3]).toEqual(list([q(1,1)]));t[3]=list([amended==='rolling'?q(0,1):q(4,5)]);urgencyChanged++;}return list(t);}))]);
   }return list(row);
  });expect(changed).toBe(1);expect(urgencyChanged).toBe(amended?1:0);
  return {s:{...b.s,rulesVersion:candidate?ROUNDING_RULES:WITNESS_RULES,registrySchemaVersion:candidate?ROUNDING_REGISTRY:WITNESS_REGISTRY},d:{...b.d,orderedInputs:enc(list(rows))}};
 }
 export async function create(b=fixture(),at=12n){const run=await createCharacterRun(await prepareCharacterModel(b.s),b.d);await through(run,at);return {b,run};}
-export const replace=(v:CanonicalValue,n:bigint,x:CanonicalValue)=>{const a=rec(v,(v as Extract<CanonicalValue,{kind:'record'}>).schema.typeId);return record(a.schema,new Map([...a.fields].map(([i,old])=>[i,i===n?x:old])));};
+export const replace=(v:CanonicalValue,n:bigint,x:CanonicalValue)=>{const type=(v as Extract<CanonicalValue,{kind:'record'}>).schema.typeId,a=type===411n?randomDrawRecord(v):rec(v,type);return record(a.schema,new Map([...a.fields].map(([i,old])=>[i,i===n?x:old])));};
 export function coupling(run:Awaited<ReturnType<typeof create>>['run'],candidate=true){
  // ONLY context/occurrence identities; no probabilities, sampled scores or chosen action.
  const d=outputs(run.snapshot().outputs,409n).find(v=>signedValue(f(v,2n))===12n)!,root=id(f(d,1n)),ns=items(f(rec(f(d,3n),408n),3n),'list'),addresses:RandomAddress[]=[];

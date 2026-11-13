@@ -228,7 +228,7 @@ identify actual gaps. Historical gate status does not override later accepted cl
 
 ## Current authorization boundary
 Owner2026-11-13 authorizes M103 continuation and necessary comparison amendments.
-Retain both failed contrasts; delegated at12 A urgency0 repair, unchanged laws/gates/budget/reference0.84.
+M103 urgency0 repair passes bounded gates; failed controls retained; reference0.84 awaits explicit adoption.
 No new member replay, UI, publishing or whole-assembly acceptance follows.
 
 ## Owner ruling — unknown factors and live gates (2026-11-02)

@@ -1,3 +1,4 @@
+import {analyzeOptions} from '../assembled/configurationMath';
 import {factoredPriority} from '../assembled/priority';
 import {bounded} from '../campaign2/cognitiveMath';
 import {it,expect,vi} from 'vitest';
@@ -31,6 +32,15 @@ it('M103 exact law: symmetric bounded rounding retains integer and zero endpoint
  console.info('M103 KERNEL PASS signed mean error<2^-32, normalization, integer/cap/zero/Avoid and threshold boundaries');
 });
 it('M103 native gate: acquired standing changes rolling probabilities between already-live reasons',async()=>{
+ // Equation preflight before native runs; fixed observed-urgency endpoint, no outcome search.
+ expect(bounded(factoredPriority(ONE,ZERO))).toEqual(Q.of(1n,3n));
+ const h=Q.of(226688625n,58120167121n),plan=standingPlan(h,Q.of(1n,4n),3n);
+ expect(plan.threshold).toBe(67007393n);
+ const preflight=(round:boolean)=>analyzeOptions([1n,-1n].map(sign=>({key:text(String(sign)),reasonMass:ONE,distribution:standingDistribution(4n,1n,sign===1n?1n:0n,0n,round?standingPlan(h.multiply(Q.of(sign)),Q.of(1n,4n),3n):standingPlan(ZERO,Q.of(1n,4n),3n))})),Q.of(1n,2n),ONE);
+ const legacy=preflight(false),successor=preflight(true);
+ expect(legacy.probabilities[0].probability).toEqual(Q.of(23n,32n));expect(legacy.contest).toEqual(Q.of(9n,16n));
+ expect(legacy.mode).not.toBe('Auto');expect(successor.mode).not.toBe('Auto');
+ console.info('M103 PREFLIGHT PASS urgency0 -> bounded1/3 -> d4; reference23/32, contest9/16; candidate also rolling');
  const a=await create(),b=await create(fixture(false)); // outcomes are not used to select a contrast/map
  const ca=coupling(a.run),cb=coupling(b.run,false);
  candidate=await create(mapped(a.b,ca));control=await create(mapped(b.b,cb));
@@ -44,7 +54,7 @@ it('M103 native gate: acquired standing changes rolling probabilities between al
  expect(compileDescribedReasons(p.raw,definition(candidate.b.s),3,'SourceCoverage',true,true).nuclei).toEqual(p.ns);
  for(let i=0;i<2;i++){
   const n=rec(p.ns[i],407n),o=rec(old.ns[i],407n),z=rec(absent.ns[i],407n),roles=rec(f(n,2n),406n);
-  expect(n.schema.schemaVersion).toBe(3n);expect(uint(f(n,10n))).toBeGreaterThan(0n);expect(f(n,5n)).toEqual(signed(0));
+  expect(uint(f(n,4n))).toBe(4n);expect(n.schema.schemaVersion).toBe(3n);expect(uint(f(n,10n))).toBeGreaterThan(0n);expect(f(n,5n)).toEqual(signed(0));
   for(const field of [1n,4n,5n,6n,8n])expect(f(n,field)).toEqual(f(o,field));
   expect(readQ(f(roles,2n)).numerator).not.toBe(0n);for(const field of [1n,3n,5n])expect(f(roles,field)).toEqual(f(rec(f(z,2n),406n),field));
   expect(f(o,7n)).toEqual(f(rec(oldAbsent.ns[i],407n),7n));expect(f(n,7n)).not.toEqual(f(z,7n));
@@ -115,7 +125,7 @@ it('M103 diagnostic unchanged failed frame: report consumed operands without ano
 },570000);
 
 it('M103 configured-boundary diagnosis: approved urgency change cannot reach the predicted die band',()=>{
- const amended=fixture(),original=fixture(true,false,false,false);
+ const amended=fixture(true,false,false,true),original=fixture(true,false,false,false);
  const aa=items(decode(amended.d.orderedInputs),'list'),oo=items(decode(original.d.orderedInputs),'list');
  expect(aa.length).toBe(oo.length);const changed=aa.map((v,i)=>key(v)!==key(oo[i])?i:-1).filter(i=>i>=0);
  expect(changed).toHaveLength(1);const a=items(aa[changed[0]],'list'),o=items(oo[changed[0]],'list');

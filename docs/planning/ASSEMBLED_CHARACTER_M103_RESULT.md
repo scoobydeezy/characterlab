@@ -1,9 +1,11 @@
-# M103 — standing-rounding experiment blocked at its rolling precondition
+# M103 — acquired standing changes rolling choice probabilities
 
-The candidate receives genuinely learned standing, but the chosen comparison
-still resolves automatically. It therefore does not qualify sampled rounding.
-Reference0.84 remains unchanged; experimental0.85 is not promoted. M103 is
-incomplete, with its failed gate and unrun controls preserved for review.
+The character's acquired standing now changes exact choice probabilities under
+candidate0.85, even when truncation under reference0.84 erased that influence.
+Native consumption, exhaustive sampler agreement, coupled draws, negative controls
+and full continuation/rollback pass. This is bounded candidate evidence, not
+reference promotion, superior-psychology proof or whole-assembly acceptance.
+Reference0.84 remains. Both failed comparison designs below are preserved.
 
 Owner approved the M102 comparison2026-11-13. Plan/contract8f663faf preceded code.
 [Checks](ASSEMBLED_CHARACTER_M103_CHECKS.txt) retain every attempted validation.
@@ -61,7 +63,7 @@ Its contest is27191955171594514027/73786976294838206464, below thetaRoll1/2;
 Auto consequently makes zero draws. This is a failed test-design precondition,
 not evidence that the candidate sampling law succeeds or fails.
 
-## Sole approved amendment also failed — stop
+## First approved amendment also failed — historical stop
 
 Owner approval was recorded at c1e9940a before the fixture changed. At12 only,
 task A's normally observed urgency changed1 ->4/5 in both arms. Importance,
@@ -70,7 +72,7 @@ The original case is still available as fixture(..., amended=false).
 
 The replacement again produced two live reasons, acquired P=98775/3572128,
 and Auto in both arms. It failed the same precondition before the probability,
-sampling and coupling assertions. No third contrast was attempted or authorized.
+sampling and coupling assertions. At checkpoint e9570569 no third contrast was authorized; the later delegation below supersedes that stop.
 
 My amendment prediction was wrong in two ways: priority is I*(1+U)/2, not I*U,
 and the configured die bands begin at1/5,2/5,3/5,4/5,1; d6 begins at2/5.
@@ -83,42 +85,78 @@ checks those equations against production priority/bounding functions and the
 actual configured bands. It passes without another native simulation.
 The9/19 calculation is source/configuration arithmetic, not an amended native
 operand capture. Native evidence establishes the repeated Auto precondition.
-The next experiment needs review from the actual equations before another run;
-this checkpoint does not authorize a further fixture search or gate substitution.
+Checkpoint e9570569 stopped for review. The subsequent owner delegation and
+equation-derived comparison below preserve this failed prediction and its evidence.
 
-## Checks, failures and remaining evidence
+## Delegated repair and successful comparison
 
-Passed: exact arithmetic normalization/sign symmetry, integer/zero/cap/Avoid and
-threshold boundaries; all8 unchanged C0 randomness tests; unchanged M94 connected
-context/earned-standing regression. The diagnostic reproduces Auto, not a gate pass.
-Type/static/research/preservation outcomes and charged time are appended below.
+Owner subsequently authorized continued work and necessary amendments. Plan
+2be6a2fb was committed before changing the fixture: at12 only, A observed urgency0
+in both arms. No importance/training, gain/unit/cap, threshold, law, seed or gate
+changed. Original1 and first-amendment4/5 fixtures remain selectable controls.
+Production priority gives I*(1+U)/2=1/2, bounded1/3, so A now uses d4.
+With its existing situation+1 versus B's d4, old P(A)=23/32, contest9/16>1/2.
+Production mathematical preflight also proves the candidate remains rolling.
+This is a legal endpoint of current urgency, not zero retained importance or a
+standing-only motive. No outcome/seed search or model-calibration repair occurred.
 
-Retained repairs: canonical-value narrowing errors; missing test-spy this type;
-a diagnostic record narrowing error; source review found an overbroad schema3
-description-validator branch before native execution. Native version admission
-failure is retained with its bounded package split. The sole approved replacement
-failed; its configuration diagnostic initially had a missing closure, repaired
-and rerun successfully. That syntax failure remains in the checks log.
+Native runs confirm QuietRoll in both arms, two live d4 reasons and acquired
+P=98775/3572128; training10 remains Auto with no standing/no draws.
+Actual captured-input removal of standing preserves base/situation/context.
+Old truncation with/without standing agrees. Candidate probabilities are:
 
-Still unpassed: the primary rolling/ablation/exhaustive sampled comparison,
-native matched face/rounding coupling, candidate pressure/privacy/admission/view
-controls, and candidate full repeat/restore/post-round-draw rollback.
-Those tests remain present; no assertions are weakened and an unfiltered run
-is not claimed green. Production candidate is experimental and not qualified.
-RO009/020 remain ACTIVE for this receiving experiment; broader claims retain
-their limits. RO001 stays conditional. Five bounded members/zero accepted
-families and the final21 members/15 families/132 clauses remain unchanged.
+| Same actual receiving frame | A | B |
+|---|---|---|
+| Without standing / old law |23/32|9/32|
+| Candidate with learned standing |53102651944423378975/73786976294838206464|20684324350414827489/73786976294838206464|
 
-Latest types pass after the fixture/diagnostic edits. Prior arithmetic, C0,
-M94 and boundary checks remain applicable: production code did not change in
-this amendment. Research/preservation/metadata and staged size/whitespace
-receipts follow in the checks log. No full-suite pass is claimed.
-Verification remains within1800s cumulative and600s per command, including
-all failures and15s bookkeeping; no reset or extension. Final charge follows.
+A rises from71.875% to about71.968%; B decreases by the same amount.
+This is a signed probability claim, not a changed seed0 winner claim.
+All192 weighted production-sampler outcome classes match analytical probabilities.
+Native paired draws share both face keys/results; two additional rounding draws
+have distinct purposes. Realized modifiers/scores and trace ordering agree.
+Frozen expression/history and player projections admit the successor without
+exposing full draw records; player-mode projection uses a declared test record.
 
-Final independent research/preservation/metadata/size checks pass. Receipt trailing
-spaces flagged by staged whitespace validation were rendered as literal hex escapes;
-no failed diagnostic content was removed. Final whitespace recheck is in the log.
-Cumulative verification is **about810s /1800s**, including failures and15s
-bookkeeping; about990s unused. Longest command162.071s /600s. Verification stops
-here with M103 incomplete; unused time does not authorize another contrast.
+The first rolling run exposed a test-helper defect: token editing used the
+receiving-record reader for coupled411/2 draws. The fixture now uses the strict
+random-draw reader for411; production behavior did not change. Failure retained.
+
+## Validation and scope
+
+Passed new primary/control checks: pressure-excluded history, equal-evidence
+hidden truth, zero-base suppression, successor grammar/version/map admission,
+foreign/repeated/expired/disabled RNG capabilities, aborted-ledger replay.
+Fresh/repeated/restored runs match full save/state/output/trace/identity at
+12,13,14,20,40,101 after save11, through exhaustion. A fault after an actual
+rounding draw rolls back public state; the separate session check proves private
+ledger abort/replay. No fixture/calendar/checkpoint truncation.
+
+Retain earlier exact arithmetic sign/mean/normalization/integer/zero/cap/Avoid
+checks,8 unchanged C0 randomness tests and M94 connected reference regression.
+Production did not change in this repair, so their passes and boundary check
+remain applicable. Latest types/research/preservation/size receipts are in the log;
+no unfiltered whole-repository suite is claimed.
+
+Other preserved repairs: canonical narrowing, missing test-spy this type,
+diagnostic record narrowing, pre-native schema-validator review repair, missing
+trace-binder version admission and configuration-diagnostic missing closure.
+Original/4/5 Auto failures and all corrections remain in this result and checks.
+
+RO009/020 return to CONDITIONAL: this bounded comparison is discharged, while
+their wider biography/control/calibration triggers and closure requirements remain.
+No obligation is globally closed. RO001 stays conditional. Five mapped members,
+zero accepted families and final21 members/15 families/132 clauses are unchanged.
+Candidate0.85 still needs an explicit reference-adoption ruling. No UI, new corpus
+replay, source retirement or broader calibration claim follows from this pass.
+
+Package A remains an incomplete12-path checkpoint at14586785; completed package B
+uses3 source/test paths (traceBinding and two M103 tests). No frozen Campaign2,
+Campaign3, substrate, perception, reference, baseline or corpus bytes changed.
+Same1800s cumulative/600s command budget, including all failures and15s bookkeeping;
+no reset or extension. Final charge is appended after final checks.
+
+Final types, research, preservation, document/evidence limits and staged size/
+whitespace checks pass (receipts in CHECKS). Cumulative verification **about1435s
+/1800s**, including every failure and15s bookkeeping; about365s unused. Longest
+command259.874s /600s. No extension; verification ends on the bounded pass.

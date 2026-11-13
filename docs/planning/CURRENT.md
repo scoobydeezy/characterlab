@@ -1,17 +1,16 @@
-# Current work — M103 authorized repair
-Owner2026-11-13 authorizes continued diagnosis and necessary comparison amendments.
-This supersedes the prior no-further-contrast stop, not laws/reference or final gates.
-Reference0.84 remains; experimental0.85 is not promoted. Both Auto failures retained.
-Predeclare at12 A urgency0 in both arms; original1 and failed4/5 remain controls.
-Actual I*(1+U)/2 gives1/2, bounded1/3, hence d4. Existing situation+1 vs B d4
-gives reference P(A)=23/32, contest9/16>1/2. Tiny standing rounding must remain
-inside that rolling region; assert using production math before native execution.
-No seed/magnitude search, changed training/importance, gain, threshold or law.
-Package A incomplete at12 paths; B remains3 paths. Same1800s budget resumes809.766s.
-Run primary+controls, then full continuation/rollback, types and metadata checks;
-retain unaffected arithmetic/C0/M94/boundary passes. Repair concrete failures only.
+# Current work — M103 candidate comparison passed
+Acquired standing changes exact rolling choice probabilities in the same character.
+Candidate0.85 passes native/sampler/coupling/control/continuation gates; reference0.84
+remains unchanged pending explicit adoption. No family or whole-assembly acceptance.
+Owner delegated necessary amendments2026-11-13; plan2be6a2fb precedes urgency0 repair.
+Original urgency1 and failed4/5 comparisons, and all test failures, remain recorded.
+Same laws/training/importance/seed/gates; actual priority/band arithmetic preflight.
+Package A stopped incomplete at12 paths; B used3; no new production change this repair.
+Validation ends after final types/metadata/research/size checks; no new contrast.
+See ASSEMBLED_CHARACTER_M103_RESULT.md and its cumulative check receipt.
+Next decision: retain reference0.84 or explicitly adopt candidate0.85; no automatic promotion.
 
-## Bounded card — before implementation
+## Completed bounded card — original scope with delegated amendment
 - Capability: genuinely acquired standing changes signed probabilities between
   already-live reasons, with analytical mixture and actual sampled scores agreeing.
   Shared owners/scheduler/state/save; no new motive, psychological state or runtime.
@@ -62,4 +61,4 @@ retain unaffected arithmetic/C0/M94/boundary passes. Repair concrete failures on
   Report candidate evidence for owner promotion decision, no automatic new reference.
 
 Five members mapped/zero accepted families;21/15/132 final scope unchanged.
-| Research obligations | **2 active / 16 conditional / 0 unowned** |
+| Research obligations | **0 active / 18 conditional / 0 unowned** |

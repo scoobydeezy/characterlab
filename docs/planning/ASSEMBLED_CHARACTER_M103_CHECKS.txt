@@ -336,3 +336,137 @@ COMMAND ["git", "diff", "--cached", "--check"]
 
 EXIT 0; elapsed 0.071s
 CHARGED 809.766
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:git-size"]
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.835s
+CHARGED 810.601
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledStandingRounding.test.ts", "-t", "M103 native gate|M103 controls", "--reporter=verbose", "--bail=1"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledStandingRounding.test.ts > M103 native gate: acquired standing changes rolling probabilities between already-live reasons
+M103 PREFLIGHT PASS urgency0 -> bounded1/3 -> d4; reference23/32, contest9/16; candidate also rolling
+
+stdout | src/test/assembledStandingRounding.test.ts > M103 native gate: acquired standing changes rolling probabilities between already-live reasons
+M103 PRECONDITION {"mode":"2","oldMode":"2","nuclei":2,"oldNuclei":2,"P":"98775/3572128"}
+
+ × src/test/assembledStandingRounding.test.ts > M103 native gate: acquired standing changes rolling probabilities between already-live reasons 156532ms
+   → cognitive record grammar: unsupported receiving record version
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 9 skipped (11)
+   Start at  12:11:27
+   Duration  161.02s (transform 2.71s, setup 0ms, collect 4.04s, tests 156.53s, environment 0ms, prepare 136ms)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledStandingRounding.test.ts > M103 native gate: acquired standing changes rolling probabilities between already-live reasons
+SchedulerContractError: cognitive record grammar: unsupported receiving record version
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ fail src/assembled/codecs.ts:30:36
+ ❯ Module.receivingRecord src/assembled/codecs.ts:190:247
+ ❯ replace src/test/fixtures/assembledStandingRounding.ts:38:77
+ ❯ token src/test/fixtures/assembledStandingRounding.ts:59:8
+ ❯ Object.reason src/test/fixtures/assembledStandingRounding.ts:69:103
+ ❯ Module.arbitrationOutput src/assembled/arbitration.ts:21:109
+ ❯ Module.enumerate src/test/fixtures/assembledStandingRounding.ts:72:22
+ ❯ src/test/assembledStandingRounding.test.ts:62:17
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+EXIT 1; elapsed 162.697s
+CHARGED 973.298
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledStandingRounding.test.ts", "-t", "M103 native gate|M103 controls", "--reporter=verbose", "--bail=1"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledStandingRounding.test.ts > M103 native gate: acquired standing changes rolling probabilities between already-live reasons
+M103 PREFLIGHT PASS urgency0 -> bounded1/3 -> d4; reference23/32, contest9/16; candidate also rolling
+
+stdout | src/test/assembledStandingRounding.test.ts > M103 native gate: acquired standing changes rolling probabilities between already-live reasons
+M103 PRECONDITION {"mode":"2","oldMode":"2","nuclei":2,"oldNuclei":2,"P":"98775/3572128"}
+M103 NATIVE PASS {"withStanding":["53102651944423378975/73786976294838206464","20684324350414827489/73786976294838206464"],"withoutStanding":["23/32","9/32"],"classes":192,"matchedFaces":2,"roundingDraws":2,"fullProducerConsumer":true,"sampledChoiceClaim":false}
+
+ ✓ src/test/assembledStandingRounding.test.ts > M103 native gate: acquired standing changes rolling probabilities between already-live reasons 174169ms
+stdout | src/test/assembledStandingRounding.test.ts > M103 controls: pressure exclusion, hidden truth, model admission and RNG capabilities
+M103 CONTROLS PASS pressure/hidden/zero-base, successor grammar/map, foreign/repeated/expired/disabled capability and aborted-ledger replay
+
+ ✓ src/test/assembledStandingRounding.test.ts > M103 controls: pressure exclusion, hidden truth, model admission and RNG capabilities 79713ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 9 skipped (11)
+   Start at  12:14:37
+   Duration  258.26s (transform 2.61s, setup 0ms, collect 3.90s, tests 253.88s, environment 0ms, prepare 143ms)
+
+
+EXIT 0; elapsed 259.874s
+CHARGED 1233.172
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledStandingRounding.test.ts", "-t", "M103 continuation and rollback", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledStandingRounding.test.ts > M103 continuation and rollback retain every rounding draw and frozen expression
+M103 CONTINUATION PASS11 -> 12,13,14,20,40,101; full saves/state/output/trace/identity; public rollback after actual rounding draw (private ledger covered separately)
+
+ ✓ src/test/assembledStandingRounding.test.ts > M103 continuation and rollback retain every rounding draw and frozen expression 171848ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 10 skipped (11)
+   Start at  12:19:09
+   Duration  176.19s (transform 2.60s, setup 0ms, collect 3.88s, tests 171.85s, environment 0ms, prepare 140ms)
+
+
+EXIT 0; elapsed 177.850s
+CHARGED 1411.022
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "-b", "--pretty", "false"]
+
+EXIT 0; elapsed 18.633s
+CHARGED 1429.655
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:research"]
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4334}
+
+EXIT 0; elapsed 3.911s
+CHARGED 1433.566
+
+FINAL METADATA/PRESERVATION PASS: package A12/B3; no production edits in delegated repair; frozen trees/baseline/corpus unchanged; all132 F classifications unchanged E43/P57/N17/U15; only RO009/020 updated, wider triggers/closure requirements unchanged,18conditional/4closed; line/CRLF byte/link/2 evidence file caps.
+{"AGENTS.md": [120, 8496], "docs/planning/CURRENT.md": [64, 5074], "docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md": [250, 18827], "docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md": [205, 65443]}
+CHARGED 1434.044
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:git-size"]
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.832s
+CHARGED 1434.876
+
+COMMAND ["git", "diff", "--cached", "--check"]
+
+EXIT 0; elapsed 0.071s
+CHARGED 1434.947
