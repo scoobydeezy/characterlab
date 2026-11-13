@@ -4,8 +4,8 @@ import {list,unsigned as u,type CanonicalValue} from '../substrate/canonicalEnco
 import {cognitiveRecord as r} from '../campaign2/cognitiveCodecs';
 import {dataRecord as rec,dataField as f,dataKey as key,dataUnsigned as uint,invalidModel} from '../campaign2/canonicalData';
 import type {WorkspaceTask,WorkspaceReads} from '../campaign2/cognitiveTransforms';
-export function workspaceOutput(occurrence:CanonicalValue,character:CanonicalValue,agendaId:CanonicalValue,definition:CanonicalValue,tasks:readonly WorkspaceTask[],at:bigint,reads:WorkspaceReads){
- const d=rec(definition,378n),capacity=uint(f(d,2n));if(capacity>4n||tasks.length>3)invalidModel('workspace finite domain');
+export function workspaceOutput(occurrence:CanonicalValue,character:CanonicalValue,agendaId:CanonicalValue,definition:CanonicalValue,tasks:readonly WorkspaceTask[],at:bigint,reads:WorkspaceReads,taskLimit=3){
+ const d=rec(definition,378n),capacity=uint(f(d,2n));if(capacity>BigInt(taskLimit+1)||tasks.length>taskLimit)invalidModel('workspace finite domain');
  const eligible=f(d,3n)===true?[...tasks].sort((a,b)=>key(a.key)<key(b.key)?-1:1).filter(task=>{
   if(key(f(rec(task.key,371n),1n))!==key(character))invalidModel('workspace foreign task');
   const prior=reads.status(task.key);return prior!==undefined&&uint(f(statusRecord(prior,372n),1n))===1n&&task.activeFrom<=at&&at<task.deadline;

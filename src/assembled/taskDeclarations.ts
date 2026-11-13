@@ -23,8 +23,8 @@ export async function compileTaskDeclarations(contentBytes:Uint8Array,registryBy
 }
 
 /** Internal receiving-profile composition. Public factories never accept a codec or predicate. */
-export async function compileTaskContentDeclarations(contentBytes:Uint8Array,registryBytes:Uint8Array,profile:'task'|'cognitive'){
- return compileTaskContentContext(contentBytes,registryBytes,profile);
+export async function compileTaskContentDeclarations(contentBytes:Uint8Array,registryBytes:Uint8Array,profile:'task'|'cognitive',taskLimit=3){
+ return compileTaskContentContext(contentBytes,registryBytes,profile,taskLimit);
 }
 
 /** embodied-task-source/0.1-candidate: the same task/content/VAL semantics in an
@@ -33,7 +33,7 @@ export async function compileReceivingTaskContentDeclarations(contentBytes:Uint8
  return compileTaskContentContext(contentBytes,registryBytes,'embodied-receiving');
 }
 
-async function compileTaskContentContext(contentBytes:Uint8Array,registryBytes:Uint8Array,profile:'task'|'cognitive'|'embodied-receiving'){
+async function compileTaskContentContext(contentBytes:Uint8Array,registryBytes:Uint8Array,profile:'task'|'cognitive'|'embodied-receiving',taskLimit=3){
  const decode=profile==='embodied-receiving'?decodeReceiving:profile==='cognitive'?decodeCognitive:decodeTask;
  const schemas=profile==='embodied-receiving'?receivingSupportedSchemas():profile==='cognitive'?cognitiveSupportedSchemas():taskSupportedSchemas();
  const contentValues=items(decode(contentBytes),'set'),registryValue=decode(registryBytes),slots=items(registryValue,'list');
@@ -58,7 +58,7 @@ async function compileTaskContentContext(contentBytes:Uint8Array,registryBytes:U
  for(const content of contents){namespace(f(content,1n),1038n);const stable=key(f(content,1n));if(contentKinds.has(stable))invalidModel('duplicate content StableId');
   if(!same(f(content,2n),characterKind)&&!same(f(content,2n),taskKind))invalidModel('unsupported task-profile content kind');contentKinds.set(stable,key(f(content,2n)));}
  const characters=contents.filter(r=>same(f(r,2n),characterKind)),tasks=contents.filter(r=>same(f(r,2n),taskKind));
- if(characters.length!==1||tasks.length<1||tasks.length>3)invalidModel('task profile requires one character and one to three tasks');
+ if(characters.length!==1||tasks.length<1||tasks.length>taskLimit)invalidModel('task profile requires one character and one to '+taskLimit+' tasks');
  const specs=allRows.filter(r=>same(f(r,2n),identity(1023,'registry/task-commitment-spec'))),usedSpecs=new Set<string>();
  let selectedCriterion:string|undefined;
  if(specs.length!==tasks.length)invalidModel('task/spec cardinality mismatch');

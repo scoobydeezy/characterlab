@@ -13,11 +13,11 @@ export const PLAN_OWNER=sid(1025,'authority/selected-plan'),KNOWLEDGE_OWNER=sid(
 export const planPath=(task:CanonicalValue):StatePath=>({rootStateTypeId:996n,fieldId:1n,selectors:[{kind:'mapKey',key:task}]});
 export const knowledgePath=(C:CanonicalValue):StatePath=>({...planPath(C),rootStateTypeId:1000n});
 const require=(b:boolean,s:string)=>{if(!b)invalidModel('strategy '+s);};
-export function compileStrategy(v:CanonicalValue,registry:CanonicalValue[],content:CanonicalValue){
+export function compileStrategy(v:CanonicalValue,registry:CanonicalValue[],content:CanonicalValue,taskLimit=3){
  const a=items(v,'list');require(a.length===2&&txt(a[0])===STRATEGY,'declaration');const rows=registry.map(v=>rec(v,171n));
  const tasks=items(content,'set').map(v=>rec(v,170n)).filter(v=>txt(id(f(v,2n)).payload)==='semantic-kind/task-commitment').map(v=>{const spec=rec(f(rows.find(r=>key(f(r,1n))===key(items(f(v,16n),'list')[0]))!,4n),370n);return {task:record(371,[referent(id(f(spec,1n))),referent(id(f(v,1n)))])};});
  const routes=items(a[1],'list').map(v=>{const x=items(v,'list');require(x.length===3&&tasks.some(t=>key(t.task)===key(x[0]))&&key(x[1])!==key(x[2]),'task/routes');const plans=x.slice(1).map(instruction=>{const row=rows.find(r=>key(f(r,1n))===key(instruction));require(!!row,'instruction reference');const action=f(rec(f(row!,4n),389n),1n),definition=rows.find(r=>key(f(r,1n))===key(action));require(!!definition,'action reference');rec(f(definition!,4n),391n);return {instructionId:instruction,actionId:action};});return {task:x[0],plans};});
- require(tasks.length>=1&&tasks.length<=3&&routes.length===tasks.length&&new Set(routes.map(r=>key(r.task))).size===tasks.length,'complete task mappings');return routes;
+ require(tasks.length>=1&&tasks.length<=taskLimit&&routes.length===tasks.length&&new Set(routes.map(r=>key(r.task))).size===tasks.length,'complete task mappings');return routes;
 }
 export type Strategy=ReturnType<typeof compileStrategy>;
 export function display(v:CanonicalValue,at:bigint,routes:Strategy){const a=items(v,'list');require(a.length===2&&txt(a[0])===STRATEGY,'display');const seen=new Set<string>();const rows=items(a[1],'list');require(rows.length<=routes.length*2,'display size');for(const row of rows){const x=items(row,'list');require(x.length===7&&routes.some(r=>key(r.task)===key(x[0])),'display task');const r=uint(x[1]),receipt=uint(x[2]),issued=uint(x[4]),until=uint(x[5]),k=key(x[0])+'/'+r;require(r<=1n&&receipt>=1n&&receipt<=16n&&typeof x[3]==='boolean'&&typeof x[6]==='boolean'&&issued>=1n&&issued<=at&&issued<=until&&until<=100n&&!seen.has(k),'display domain');seen.add(k);}return rows;}

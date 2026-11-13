@@ -20,8 +20,8 @@ const referenceFields:Readonly<Record<string,number>>={
  '442/2':435,'443/2':436,'444/2':437,'445/2':440,'446/2':434,
 };
 
-export async function compileCognitiveDeclarations(contentBytes:Uint8Array,registryBytes:Uint8Array){
- const content=await compileTaskContentDeclarations(contentBytes,registryBytes,'cognitive');
+export async function compileCognitiveDeclarations(contentBytes:Uint8Array,registryBytes:Uint8Array,taskLimit=3){
+ const content=await compileTaskContentDeclarations(contentBytes,registryBytes,'cognitive',taskLimit);
  const slots=items(decodeCognitive(registryBytes),'list');
  const rows=items(slots[0],'set').filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n).map(v=>rec(v,171n));
  const byId=new Map(rows.map(row=>[key(f(row,1n)),row]));

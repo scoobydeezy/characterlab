@@ -1,0 +1,49 @@
+
+M99_START types-source ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+
+M99_CHECK types-source exit=0 seconds=17.36 timeout=False
+
+M99_START types-tests ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+
+M99_CHECK types-tests exit=0 seconds=16.86 timeout=False
+
+M99_START admission ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledCommitmentRecurrence.test.ts', '-t', 'M99 admission', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCommitmentRecurrence.test.ts > M99 admission keeps old task bounds and governed mappings closed
+M99 ADMISSION PASS fourth governed task accepted only0.83; missing/duplicate strategy and version bundle reject
+
+ ✓ src/test/assembledCommitmentRecurrence.test.ts > M99 admission keeps old task bounds and governed mappings closed 53619ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  00:33:14
+   Duration  58.03s (transform 2.63s, setup 0ms, collect 3.93s, tests 53.62s, environment 0ms, prepare 128ms)
+
+
+M99_CHECK admission exit=0 seconds=58.58 timeout=False
+
+M99_START native-recurrence ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledCommitmentRecurrence.test.ts', '-t', 'M99 native', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledCommitmentRecurrence.test.ts > M99 native recurrence preserves earned identity and terminal predecessors with exact new referents 67186ms
+   → expected 0 to be greater than 0
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledCommitmentRecurrence.test.ts > M99 native recurrence preserves earned identity and terminal predecessors with exact new referents
+AssertionError: expected 0 to be greater than 0
+ ❯ src/test/assembledCommitmentRecurrence.test.ts:31:163
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  00:34:55
+   Duration  71.45s (transform 2.56s, setup 0ms, collect 3.84s, tests 67.19s, environment 0ms, prepare 137ms)
+
+
+M99_CHECK native-recurrence exit=1 seconds=71.99 timeout=False
