@@ -227,9 +227,9 @@ five C2 conditions and Experience mapping; no new denominator. C2 already uses O
 identify actual gaps. Historical gate status does not override later accepted closure.
 
 ## Current authorization boundary
-Owner2026-11-13 adopts0.85 as engineering reference and authorizes affected DECISION continuation.
-M105 refreshes mapped DECISION on0.85; retain0.84 controls, all laws/calibration limits and final scope.
-No new member replay, UI, publishing or whole-assembly acceptance follows.
+Owner2026-11-13 adopts0.85; after M105 authorizes continued character integration.
+M106 starts native biography correspondence; retain0.84 controls, laws/calibration and final scope.
+Full BIO mapping remains gated on its original comparisons; no UI, publishing or assembly acceptance.
 
 ## Owner ruling — unknown factors and live gates (2026-11-02)
 

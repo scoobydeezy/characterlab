@@ -1,59 +1,64 @@
-# Current work — M105 DECISION refresh complete
-Owner adopted0.85 after M104 and authorized continuation2026-11-13.
-All five M105 groups pass: regimes/competitors, coupled significance, history,
-player privacy and full continuation. See ASSEMBLED_CHARACTER_M105_RESULT.md.
-One reference: assembled-reference/0.3, rules/registry0.85-candidate;
-standing-rounding/0.1-candidate globally, engineering default/no superiority verdict.
-SourceCoverage/D3 and all other choices/calibration unchanged.0.84 remains control.
+# Current work — M106 native biography connection
+Owner continuation2026-11-13: continue integration after M105 on adopted0.85.
+One reference assembled-reference/0.3; standing-rounding/0.1-candidate globally.
+Engineering default/no superiority verdict;0.84 and original controls preserved.
 
-## Completed bounded card — plan13ae0ca5
-- Capability1: same character retains Auto/Quiet/Player regimes and the four
-  original resolver counterexamples under the adopted reference.
-- Capability2: acquired relationship significance changes mode without changing
-  paired authoritative faces/winner; no new source/peer or authored history.
-- Capability3: frozen intent/expression survives prevented execution, visible
-  versus absent outcomes stay distinct, views and exact continuation preserve it.
-- Scope: PHEN-DECISION-001:2..9 affected refresh; :10/:11 remain tracked.
-  Source fixtures M80/M81/M82 and original M83 competitor kernels unchanged.
-  C-DECISION mapping combines M105 with retained M103/M104, no full family claim.
-- Three new source/test paths: test/fixtures/assembledDecisionReference.ts,
-  test/assembledDecisionReference.test.ts,test/assembledDecisionReferenceHistory.test.ts.
-  No production change planned. No new standalone runtime or copied source tree.
-- Native scenarios: physical/nonsocial tasks, seed0, body30/cap100/rate10,
-  delivery90@9, importance3/5,urgency1,threat1/2. Existing full calendar101.
-  Append identical empty source-label/evidence declarations to original44 registry
-  slots, then bind0.85. Inputs/calibration unchanged; known zero standing for regimes.
-  Personal-significance pair retains M81's two recognized stand-ins and encounters.
-- Liveness first: two d4 grounds, actual appraisal/raw consumption/execution.
-  Regimes expected P(A)=7/8,23/32,1/2; modes1/2/3; Auto draws0. No rounding draw
-  for zero/integer standing. Raw-source citation augmentation is explicitly joined.
-- Original comparison: bounded compatibility image of captured actual context,
-  preserving keys/strengths/bases/distributions/metrics and reversible sidecar for
-  description/provenance and zero context/rounding extensions. Reject nonzero
-  removed fields/nonempty Values; never inject this image into native state.
-  Couple old kernel faces/ties to authenticated current nuclei by exact key.
-  All32 weighted face/face/tie classes per regime; original reference agrees.
-  AlwaysRoll/NeverRoll/Decorative/Opaque fail their same M83 obligations.
-- Significance: two identity-only setup runs, two mapped0.85 runs; own breach
-  vs witness only. Standing-2 vs0, P1/2 both, stake1/3 vs5/7, mode2 vs3,
-  matched base/tie keys/results and winner. All calendars through101.
-- History: original four physical/observation permission cells on quiet scenario;
-  same decision/expression, differing actual permitted outcomes, unknown stays absent.
-  Safe-only IntentEqualsOutcome loses visible-failure expression. Hidden truth,
-  public-view closure/no private draw records; exact authoritative face presentation.
-- Persistence: visible-failure repeat/save9/restore through every remaining instant,
-  including views, state/output/trace/save/identity and exhaustion. Retain M103
-  reached rollback and M104 integer comparison; dependencies unchanged.
-- Budget:3 capabilities,3 source/test paths,2 evidence files/5MiB;600s/command,
-  1800s cumulative verification incl failures+15s bookkeeping; one validation job.
-  Split commands by comparison/history/significance. No seed/threshold/gain search.
-- Checks: targeted new tests,types,boundary/research,preservation,doc/evidence/size.
-  Retain frozen suites and unaffected M103/M104 passes; no verification chain.
-- Ledger MEC012..018/022 PORT; EXP009..012 CORPUS; RET008 CONTROL; C0/C1
-  invariants retained. RO018 stays closed;020 broader grammar/calibration conditional.
-- Done: exact mapped obligations hold or every difference classified with evidence;
-  no silent downgrade, missing-consumer substitute or retuning. Stop on pass.
-  No UI, autonomous peer, new corpus member or whole-assembly acceptance.
+## Active bounded card — before implementation
+- Capability1: early addressed choices produce distinct frozen expressions and
+  acquired disposition, which changes later native decision probabilities.
+- Capability2: later face/rounding/tie addresses are explicitly shared across all
+  eight fixed early comparison lanes; captured-input feedback ablation isolates P.
+- Capability3: pressure exclusion, hidden truth and exact continuation retain the
+  evidence boundary and frozen choice meaning through the complete calendar101.
+- Scope: first native connection toward PHEN-BIO-001:2/3/4/6/8/9. BIO means
+  biography, not physiology. Correct C-BIO's erroneous biologyPublicFactory route
+  to the pinned bioComparison.ts composed experiment. Original source pin unchanged.
+  Multiple acquisition, sustained contradiction and original six-candidate replay
+  remain pending; this package cannot map the full BIO member or accept a family.
+- Contracts: identity-eligibility/0.1,formation/0.1 (adopted D3/Ramp),
+  reason-sources/0.5,standing-rounding/0.1; no production or contract change planned.
+- Two new paths: src/test/fixtures/assembledBiography.ts and
+  src/test/assembledBiography.test.ts. At most3 capabilities/12 source-test files.
+- Scenario: M103 full calendar, three physical/nonsocial tasks; body30/cap100/rate10,
+  world delivery90@9; A importance13/20,B3/5, urgency1; balanced threat evidence
+  (cue3/9 absent); both reading values0 at10/12. Values unlinked. Execution blocked
+  and outcome observation denied identically, preventing outcome learning from
+  replacing authorship. Identity10 significant,pressure0;12 insignificant.
+  No authored traits, learned S0, synthetic qualifications or native state injection.
+- Preflight arithmetic: bounded13/20=13/33 and bounded3/5=3/8; both above37/100
+  and below2/5, so both live d4. Unadapted meaning differs, enabling nonzero
+  frozen alignment; equal dice/no situational imbalance must be checked natively.
+- Comparison protocol: run seed0 fixed. One identity-only setup extracts complete
+  roots/candidate identities at10/12. Eight early lanes0..7 use fixed keys
+  M106/early/<lane>/10; common later key M106/probe/12. Include all face, rounding
+  and tie purposes. Maps use no outcomes/scores/probabilities; no replacement lane.
+  All ordinary inputs/models identical. Compare all eight, not a selected cohort.
+- Liveness before effect: first contexts/raw/nuclei equal, two rolling alternatives,
+  nonzero accepted contributions; no prior learned P. State/output equality at9;
+  first differing cognitive event descends from differing addressed draw10.
+  Require at least two early winners, distinct P, actual P consumption at12,
+  distinct actual probabilities, and matching effective probe keys/results/spans.
+  Compare non-standing sources/meaning at12 explicitly; any difference must be
+  traced/classified, never silently attributed to P. No sampled probe winner gate.
+- Component ablation removes only standing descriptions/signals from captured
+  actual raw12, recompiles with current production compiler/arbitration and checks
+  unchanged non-standing operands. No counterfactual operand enters native state.
+  It must remove the history-dependent probability effect. Keep raw/history intact.
+- Controls: fixed lane0 pressure1/2, hidden diagnostic truth, repeat/save9/restore
+  all remaining settlements10/11/12/13/14/20/40/101 with exact state/output/trace/
+  identity/save. Original expression10 remains unchanged; no outcome-based rewrite.
+  All eight native calendars and identity setup exhaust101. No full frozen rerun:
+  dependency closure unchanged; existing reached rollback retained.
+- Checks: targeted connection/controls/persistence,types,boundaries,research,
+  frozen-source/pinned-denominator preservation,document/evidence/size/whitespace.
+- Budget600s/command,1800s cumulative verification incl failures+15s bookkeeping;
+  one validation job;2 evidence files/5MiB. Ordinary adapter bugs may be repaired;
+  a substantive null/law conflict stays recorded, no input/seed/threshold search.
+- Ledger MEC015..018/022 PORT/CONTRACT,EXP011/012 CORPUS; no retired distinctions.
+  RO009/020 remain conditional unless the comparison exposes a triggering defect.
+- Done: causal connection and controls pass, or checkpoint the exact blocking
+  requirement with preserved evidence. Full BIO remains unresolved either way.
+  No UI, autonomous peers, new runtime, scope reduction or whole-assembly claim.
 
 Five mapped members/zero accepted families;21/15/132 unchanged.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
