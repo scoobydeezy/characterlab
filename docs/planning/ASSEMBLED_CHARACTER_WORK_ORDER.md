@@ -228,7 +228,7 @@ identify actual gaps. Historical gate status does not override later accepted cl
 
 ## Current authorization boundary
 Owner2026-11-13 adopts0.85; after M105 authorizes continued character integration.
-M106 native biography connection passes; retain0.84 controls, laws/calibration and final scope.
+M107 extends repeated biography/frozen meaning after M106; retain0.84 controls and final scope.
 Full BIO mapping remains gated on its original comparisons; no UI, publishing or assembly acceptance.
 
 ## Owner ruling — unknown factors and live gates (2026-11-02)

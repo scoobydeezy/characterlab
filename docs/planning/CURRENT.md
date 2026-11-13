@@ -1,75 +1,69 @@
-# Current work — M106 native biography connection passes
-Owner continuation2026-11-13: continue integration after M105 on adopted0.85.
-One reference assembled-reference/0.3; standing-rounding/0.1-candidate globally.
-Engineering default/no superiority verdict;0.84 and original controls preserved.
+# Current work — M107 repeated biography and frozen meaning
+Owner continuation2026-11-13 after M106; adopted reference0.85 remains fixed.
+One model/state/scheduler/trace/save; no UI or autonomous partner work.
 
-Eight fixed lanes, all28 pair comparisons, pressure/privacy and exact continuation pass.
-See ASSEMBLED_CHARACTER_M106_RESULT.md. Types/boundary/research/preservation pass.
-Verification about1480s/1800s; no extension or production change.
-Full BIO remains open: repeated acquisition, contradiction and original competitors.
+## Active bounded card — before implementation
+- Capability1: repeated actual qualified choices accumulate acquired disposition;
+  contrary experience weakens it and can reverse it, with later live receiving.
+- Capability2: a changed current task meaning does not reinterpret old expressions;
+  refold from frozen qualifications preserves P; retrospective reinterpretation fails.
+- Capability3: pressure exclusion, hidden truth and exact continuation preserve
+  ownership, evidence boundaries and the complete retained biography.
+- Scope PHEN-BIO-001:4/6/7/8/9 and bounded Refold/RecomputedHistory distinction:5.
+  Not full BIO mapping: original four-positive/twelve-high-authorship horizon,
+  seed6/0/255 protocol and remaining original competitors stay explicit pending.
+- Contracts unchanged: reference0.3/rules0.85; eligibility/formation0.1,
+  reason-sources0.5,standing-rounding0.1. D3/Ramp is the single P feedback law.
+  Ledger MEC015..018/022 PORT/CONTRACT,EXP011/012 CORPUS; no reduction/retirement.
+- Two new files: src/test/fixtures/assembledBiographyHistory.ts and
+  src/test/assembledBiographyHistory.test.ts. No production/formal change planned.
+- Native scenario: extend M106 ordinary calendar with repeated admitted frame12
+  at14/16/18/20/22/24/26. Keep original unrelated events through101. For collisions,
+  replace only matching source type/time with the explicitly declared repeated frame.
+  All eight learning opportunities10..24 are significant/unpressured;26 insignificant.
+  Physical/nonsocial tasks; body30/cap100/rate10, world delivery90@9; no new body
+  samples or external people. A importance13/20,B3/5; urgency1 through24; reading
+  values0; balanced threat evidence. Values unlinked, execution blocked, outcome
+  observation denied. No learned S0, authored contributions or trait bonus.
+- Current-meaning probe26 changes only A urgency to5/6 in all runs. Its base
+ 143/383 remains above37/100 and below2/5; B3/8 is now stronger. Both remain d4.
+  This is predeclared permitted evidence, not a change of law/bands/calibration.
+- Fixed natural seeds0..7, all retained, no comparison map or seed search. These
+  are continuing-history witnesses, not paired sampled-choice causal claims.
+  Actual current raw -> production compiler/arbitration probability is compared
+  with captured-input standing ablation; no altered operand enters native state.
+  M106's shared-dice evidence remains unchanged and is not rerun.
+- Before each effect: two genuine live rolling options, accepted qualification at
+  every learning opportunity, actual qualification -> formation -> later standing
+  consumption and execution. Record all eight contributions/P values per seed.
+  Check exact event-time gains/deltas and every earlier expression at each append.
+- Roster gate: at least one contrary step reduces magnitude without erasing sign,
+  and at least one accumulated-sign reversal after contrary evidence. Retain every
+  trajectory; no selective cohort acceptance. Nulls stay null; no replacement seed.
+- Probe26: actual learned P is unchanged by the insignificant probe, original
+  expressions stay identical despite reversed current meaning. For each live
+  nonzero P, standing ablation restores equal d4 probabilities; actual probability
+  direction agrees with current P*alignment. Exact weighted sampler comparison on
+  captured operands for fixed seed0; no sampled-winner gate or population claim.
+- Refold: rebuild P from actual frozen qualification contributions and their
+  event-time phase, checking provenance/entries. No original expression is lost.
+  RecomputedHistory diagnostic substitutes current meaning into old resolutions,
+  recomputes expression/qualification and fails immutable-history correspondence;
+  it never enters native state. No full original alternative-runtime claim.
+- Controls fixed seed0: hidden diagnostics preserve all cognition/history; pressure
+ 1/2 at all learning opportunities excludes acquired P, first choice unchanged.
+  Repeat/restore after12 (two real acquisitions), compare every remaining settled
+  instant through101 and exhaustion, including state/output/trace/save/identity.
+- Checks: type/admission preflight; four fixed two-seed native batches, controls,
+  persistence, all-roster receipt comparison; boundary/research/preservation/size.
+  One active validation job. Split by batch, never truncate the calendar.
+- Budget3 capabilities/2 planned source-test files (max12),2 evidence files/5MiB;
+ 600s/command,1800s cumulative including failures and15s bookkeeping. No extension
+  assumed. Existing rollback/frozen controls retained: no dependency changes.
+- Ordinary fixture/adapter bugs may be repaired with failures retained. Stop on
+  genuine law conflict, failed substantive roster gate or exhausted budget; do not
+  retune inputs or weaken required effects. Done only when the bounded gates pass;
+  otherwise checkpoint exact missing evidence. Final21/15/132 remains unchanged.
 
-## Completed bounded card — plan384da0c5
-- Capability1: early addressed choices produce distinct frozen expressions and
-  acquired disposition, which changes later native decision probabilities.
-- Capability2: later face/rounding/tie addresses are explicitly shared across all
-  eight fixed early comparison lanes; captured-input feedback ablation isolates P.
-- Capability3: pressure exclusion, hidden truth and exact continuation retain the
-  evidence boundary and frozen choice meaning through the complete calendar101.
-- Scope: first native connection toward PHEN-BIO-001:2/3/4/6/8/9. BIO means
-  biography, not physiology. Correct C-BIO's erroneous biologyPublicFactory route
-  to the pinned bioComparison.ts composed experiment. Original source pin unchanged.
-  Multiple acquisition, sustained contradiction and original six-candidate replay
-  remain pending; this package cannot map the full BIO member or accept a family.
-- Contracts: identity-eligibility/0.1,formation/0.1 (adopted D3/Ramp),
-  reason-sources/0.5,standing-rounding/0.1; no production or contract change planned.
-- Two new paths: src/test/fixtures/assembledBiography.ts and
-  src/test/assembledBiography.test.ts. At most3 capabilities/12 source-test files.
-- Scenario: M103 full calendar, three physical/nonsocial tasks; body30/cap100/rate10,
-  world delivery90@9; A importance13/20,B3/5, urgency1; balanced threat evidence
-  (cue3/9 absent); both reading values0 at10/12. Values unlinked. Execution blocked
-  and outcome observation denied identically, preventing outcome learning from
-  replacing authorship. Identity10 significant,pressure0;12 insignificant.
-  No authored traits, learned S0, synthetic qualifications or native state injection.
-- Preflight arithmetic: bounded13/20=13/33 and bounded3/5=3/8; both above37/100
-  and below2/5, so both live d4. Unadapted meaning differs, enabling nonzero
-  frozen alignment; equal dice/no situational imbalance must be checked natively.
-- Comparison protocol: run seed0 fixed. One identity-only setup extracts complete
-  roots/candidate identities at10/12. Verify each lane; if local roots differ,
-  one identity-only rebind/replay uses unchanged keys. No outcome-based routing.
-  Split lanes0..3/4..7 by command; compare all28 pairs from completed receipts.
-  Eight early lanes0..7 use fixed keys
-  M106/early/<lane>/10; common later key M106/probe/12. Include all face, rounding
-  and tie purposes. Maps use no outcomes/scores/probabilities; no replacement lane.
-  All ordinary inputs/models identical. Compare all eight, not a selected cohort.
-- Liveness before effect: first contexts/raw/nuclei equal, two rolling alternatives,
-  nonzero accepted contributions; no prior learned P. State/output equality at9;
-  first differing cognitive event descends from differing addressed draw10.
-  Require at least two early winners, distinct P, actual P consumption at12,
-  distinct actual probabilities, and matching effective probe keys/results/spans.
-  Compare non-standing sources/meaning at12 explicitly; any difference must be
-  traced/classified, never silently attributed to P. No sampled probe winner gate.
-- Component ablation removes only standing descriptions/signals from captured
-  actual raw12, recompiles with current production compiler/arbitration and checks
-  unchanged non-standing operands. No counterfactual operand enters native state.
-  It must remove the history-dependent probability effect. Keep raw/history intact.
-- Diagnostic correction: different choices shift priority observation IDs. Match
-  actual producer/time/task/permitted values, retaining every provenance weight;
-  compare the reversible semantic image, never discard basis or edit native input.
-- Controls: fixed lane0 pressure1/2, hidden diagnostic truth, repeat/save9/restore
-  all remaining settlements10/11/12/13/14/20/40/101 with exact state/output/trace/
-  identity/save. Original expression10 remains unchanged; no outcome-based rewrite.
-  All eight native calendars and identity setup exhaust101. No full frozen rerun:
-  dependency closure unchanged; existing reached rollback retained.
-- Checks: targeted connection/controls/persistence,types,boundaries,research,
-  frozen-source/pinned-denominator preservation,document/evidence/size/whitespace.
-- Budget600s/command,1800s cumulative verification incl failures+15s bookkeeping;
-  one validation job;2 evidence files/5MiB. Ordinary adapter bugs may be repaired;
-  a substantive null/law conflict stays recorded, no input/seed/threshold search.
-- Ledger MEC015..018/022 PORT/CONTRACT,EXP011/012 CORPUS; no retired distinctions.
-  RO009/020 remain conditional unless the comparison exposes a triggering defect.
-- Done: causal connection and controls pass, or checkpoint the exact blocking
-  requirement with preserved evidence. Full BIO remains unresolved either way.
-  No UI, autonomous peers, new runtime, scope reduction or whole-assembly claim.
-
-Five mapped members/zero accepted families;21/15/132 unchanged.
+Five mapped members/zero accepted families; E43/P57/N17/U15 unchanged.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
