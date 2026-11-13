@@ -22,7 +22,7 @@ The boundary test passes: no-adoption0.81/0.82 state/output exact; wrong owners,
 foreign/missing instructions, orphan instruction, instruction/importance overwrites,
 duplicate adoption, cancelled-instance reuse, old model/tag and edited restore reject.
 
-## Failures, repairs and pending owner amendment
+## Failures, repairs and owner amendment
 
 1. Type check: test helper demanded an unused instruction field from old fixtures;
    expected-absence literal widened. Narrowed the helper type and literal only.
@@ -37,9 +37,9 @@ duplicate adoption, cancelled-instance reuse, old model/tag and edited restore r
 The fixed scenario removed A's initial adoption but retained B importance3/5.
 Source inspection shows the inherited fixture depended on earlier A choices to
 learn standing support. Without A, B does not produce a live choice at12. The
-proposed bounded amendment is B initial importance1 in both arms, with all laws,
+approved bounded amendment is B initial importance1 in both arms, with all laws,
 seed0, A adoption12, probe14, hidden control and probability-change gate unchanged.
-Owner approval is pending; that replacement has not been implemented or run.
+Owner approved2026-11-12 before the replacement is implemented or run.
 No second replacement is authorized. Original inputs/failures remain in Git/log.
 The work order requires an owner amendment; prior delegated authority ended at
 REASON completion. Independent controls do not replace the behavioral gate.
@@ -66,5 +66,7 @@ RO001 ACTIVE; RO009/014/020 conditional; no debt closure, UI or autonomous peers
 
 Checkpoint verification: **846.96s /1800s**, including every failed command
 and15s bookkeeping; longest177.89s /600s. Remaining budget953.04s.
-No extension, no approved comparison change, no milestone pass. Resume only after
-the pending owner ruling, within this remaining budget; do not reset the ledger.
+This was the pre-amendment checkpoint: no extension or milestone pass. The owner
+has since approved only the importance change above. Continue within953.04s;
+do not reset the ledger. Recheck the shared amended fixture (behavior, boundary,
+exact restore/rollback) and types; retain regressions of unchanged production.

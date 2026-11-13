@@ -1,4 +1,4 @@
-# Current work — M98: adoption implemented; comparison amendment pending
+# Current work — M98: adoption implemented; approved comparison amendment
 
 The next connection lets an observed instruction and importance adopt a previously
 absent concrete task in the shared prospective owner, then influence a later choice.
@@ -16,7 +16,7 @@ M97 cancellation remains intact. COMMIT is not complete; recurrence remains pend
 - Fixed scenario: M94 standingProbe seed0, three declared tasks, no person dependency,
   body30/cap100/rate10, delivery90@9; existing observation/route/reason channels.
   A starts absent (remove only its status/instruction; omit its initial importance).
-  B stays live. Keep third task's existing reappraisal role and all laws/settings.
+  Owner-approved B initial I=1 (was3/5) in both arms. Keep third task's existing reappraisal role and all laws/settings.
 - At12 the existing priority channel offers A's declared first instruction and I=1;
   permitted vs denied visibility masks both. Current decision12 must match, since
   adoption settles140. Clone frame12 to14 (replace matching original event types,
@@ -46,10 +46,11 @@ M97 cancellation remains intact. COMMIT is not complete; recurrence remains pend
   [M98 checkpoint](ASSEMBLED_CHARACTER_M98_RESULT.md), [checks](ASSEMBLED_CHARACTER_M98_CHECKS.txt).
 - Checkpoint checks846.96s /1800s including failures/bookkeeping; remaining953.04s.
   Boundary/research/docs/size/whitespace pass; no extension or M98 pass.
-- Current behavioral gate STOPPED: original A-absent/B-I=3/5 frame12 returns
-  NoChoice (status2), so the live comparison cannot be claimed. Owner amendment
-  requested: B initial I=1 in both arms, all other settings/budget/gates fixed;
-  retain original null, no second replacement. Independent controls continue.
+- Owner approved the bounded replacement2026-11-12: B initial I=1 in both arms.
+  Original B-I=3/5 NoChoice at12 remains in16030538 and the log. Laws, seed0,
+  A adoption12/probe14, hidden control and probability gate stay fixed; no second
+  replacement. Rerun behavioral gate first, then affected fixture boundary/restore
+  tests and types. Retain unchanged production regressions; budget is not reset.
 - Done only when adoption changes actual captured arbitration probabilities through
   the shared path and all controls pass; otherwise retain failure and report blocker.
 
