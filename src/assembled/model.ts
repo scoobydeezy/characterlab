@@ -251,7 +251,7 @@ export async function compileCharacterModel(input:Campaign2ModelSource){
  const body=interaction?Object.freeze({...compileBodyDeclaration(allSlots[6]),selectionCapacity}):undefined,slots=allSlots.slice(0,6),baseRegistry=enc(list(slots));
  // Validate open slots before generic declarations, giving specific domain errors.
  const shape=topology(configurationEnabled?configurationTopology(list(slots)):list(slots),calibrated,memoryContext,relationshipEnabled,configurationEnabled,workspaceLimit,physicalPermission,outcomeVisibility);
- const taskLimit=recurrenceDomain?4:configurationEnabled?3:2;
+ const taskLimit=recurrenceDomain?5:configurationEnabled?3:2;
  const originalContent=await (configurationEnabled?compileConfigurationDeclarations(source.content,baseRegistry,taskLimit):compileCognitiveDeclarations(source.content,baseRegistry));
  const content=comparisonEnabled?Object.freeze({...originalContent,validateRecordRoles:(bytes:Uint8Array)=>validateCharacterRecordRoles(originalContent,bytes,valueReceiving,describedSources,valueProvenance,contextReasons,commitmentLifecycle)}):originalContent;
  const structuralState=compileCampaign2StateModel(enc(slots[2]),enc(slots[3]),enc(slots[4]),content,{decode:decodeCognitive,schema:cognitiveSchemaByType});

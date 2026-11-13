@@ -47,3 +47,167 @@ AssertionError: expected 0 to be greater than 0
 
 
 M99_CHECK native-recurrence exit=1 seconds=71.99 timeout=False
+
+M99_START types-training-amendment ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+
+M99_CHECK types-training-amendment exit=0 seconds=16.91 timeout=False
+
+M99_START native-training-amended ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledCommitmentRecurrence.test.ts', '-t', 'M99 native', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledCommitmentRecurrence.test.ts > M99 native recurrence preserves earned identity and terminal predecessors with exact new referents 84151ms
+   → expected 0 to be greater than 0
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledCommitmentRecurrence.test.ts > M99 native recurrence preserves earned identity and terminal predecessors with exact new referents
+AssertionError: expected 0 to be greater than 0
+ ❯ probe src/test/assembledCommitmentRecurrence.test.ts:26:180
+
+ ❯ src/test/assembledCommitmentRecurrence.test.ts:32:137
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  00:40:09
+   Duration  88.40s (transform 2.56s, setup 0ms, collect 3.83s, tests 84.15s, environment 0ms, prepare 136ms)
+
+
+M99_CHECK native-training-amended exit=1 seconds=88.96 timeout=False
+
+M99_START native-standing-correspondence ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledCommitmentRecurrence.test.ts', '-t', 'M99 native', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledCommitmentRecurrence.test.ts > M99 native recurrence preserves earned identity and terminal predecessors with exact new referents 83315ms
+   → cognitive record grammar: description projection mismatch
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledCommitmentRecurrence.test.ts > M99 native recurrence preserves earned identity and terminal predecessors with exact new referents
+SchedulerContractError: cognitive record grammar: description projection mismatch
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ fail src/assembled/codecs.ts:29:36
+ ❯ validateDescriptions src/assembled/codecs.ts:83:121
+ ❯ visit src/assembled/codecs.ts:136:60
+ ❯ validate src/assembled/codecs.ts:146:2
+ ❯ decodeCognitive src/assembled/codecs.ts:153:111
+ ❯ cloneCognitive src/assembled/codecs.ts:154:53
+ ❯ Module.cognitiveRecord src/assembled/codecs.ts:159:9
+ ❯ src/test/assembledCommitmentRecurrence.test.ts:32:581
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  00:44:58
+   Duration  87.59s (transform 2.56s, setup 0ms, collect 3.84s, tests 83.32s, environment 0ms, prepare 135ms)
+
+
+M99_CHECK native-standing-correspondence exit=1 seconds=88.15 timeout=False
+
+M99_START native-projection-repaired ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledCommitmentRecurrence.test.ts', '-t', 'M99 native', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCommitmentRecurrence.test.ts > M99 native recurrence preserves earned identity and terminal predecessors with exact new referents
+M99 RECURRENCE PASS counts 0,1,0,1,1; actual C then distinct D decision/execution; fixed earned identity; standing 0,0,0; immutable cancelled training A/B and predecessor C.
+
+ ✓ src/test/assembledCommitmentRecurrence.test.ts > M99 native recurrence preserves earned identity and terminal predecessors with exact new referents 108769ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  00:51:51
+   Duration  113.05s (transform 2.56s, setup 0ms, collect 3.83s, tests 108.77s, environment 0ms, prepare 137ms)
+
+
+M99_CHECK native-projection-repaired exit=0 seconds=113.60 timeout=False
+
+M99_START continuation-admission ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledCommitmentRecurrence.test.ts', '-t', 'M99 continuation|M99 admission', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCommitmentRecurrence.test.ts > M99 continuation preserves all instances and actual addressed history across every remaining instant
+M99 CONTINUATION PASS11 -> 12,13,14,15,16,17,18,19,20,40,101; full saves/state/outputs/trace/run identity exact
+
+ ✓ src/test/assembledCommitmentRecurrence.test.ts > M99 continuation preserves all instances and actual addressed history across every remaining instant 236644ms
+stdout | src/test/assembledCommitmentRecurrence.test.ts > M99 admission keeps old task bounds and governed mappings closed
+M99 ADMISSION PASS five governed tasks accepted only0.83; missing/duplicate strategy and version bundle reject
+
+ ✓ src/test/assembledCommitmentRecurrence.test.ts > M99 admission keeps old task bounds and governed mappings closed 2503ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 6 skipped (8)
+   Start at  00:53:59
+   Duration  243.44s (transform 2.56s, setup 0ms, collect 3.83s, tests 239.15s, environment 0ms, prepare 142ms)
+
+
+M99_CHECK continuation-admission exit=0 seconds=243.99 timeout=False
+
+M99_START adoption-regression ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledCommitmentAdoption.test.ts', '-t', 'M98 behavior', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCommitmentAdoption.test.ts > M98 behavior: perceived adoption settles after the current decision and changes later arbitration
+M98 BEHAVIOR PASS observed instruction/I -> three owned writes140; decision12 equal; actual live B both/A only admitted14; probabilities 71/96,25/96 versus 1/1; draws14 3/0 (no coupling claim); denied-hidden cognition equal.
+
+ ✓ src/test/assembledCommitmentAdoption.test.ts > M98 behavior: perceived adoption settles after the current decision and changes later arbitration 143529ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  00:58:14
+   Duration  147.81s (transform 2.56s, setup 0ms, collect 3.84s, tests 143.53s, environment 0ms, prepare 142ms)
+
+
+M99_CHECK adoption-regression exit=0 seconds=148.37 timeout=False
+
+M99_START original-commit-controls ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/commitPublic.test.ts', '-t', 'earns strong|preserves terminal|distinguishes CoreNeed', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/commitPublic.test.ts > earns strong identity then keeps it fixed across exact lifecycle pressure and active decisions 493ms
+ ✓ src/test/commitPublic.test.ts > preserves terminal A/version/cause while recurrence creates distinct B 407ms
+ ✓ src/test/commitPublic.test.ts > distinguishes CoreNeed, Immortal and ReusedId under identical actual learned identity 1708ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 24 skipped (27)
+   Start at  01:01:25
+   Duration  4.22s (transform 801ms, setup 0ms, collect 1.21s, tests 2.61s, environment 0ms, prepare 129ms)
+
+
+M99_CHECK original-commit-controls exit=0 seconds=4.75 timeout=False
+
+M99_START types-final ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+
+M99_CHECK types-final exit=0 seconds=17.02 timeout=False
+
+M99_START reference-boundary ['node', 'scripts/check-reference-boundary.mjs']
+Reference boundary check passed.
+
+M99_CHECK reference-boundary exit=0 seconds=2.56 timeout=False
+
+M99_START research ['node', 'scripts/check-research-obligations.mjs']
+PASS: research obligation references and dispositions {"active":1,"conditional":17,"closed":4,"unowned":0,"verdicts":103,"reports":4332}
+
+M99_CHECK research exit=0 seconds=3.56 timeout=False
+
+M99 DOCS/BUDGET/PRESERVATION PASS; nine production/test paths; two evidence files.
+
+M99_START git-size ['npm.cmd', 'run', 'check:git-size']
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M99_CHECK git-size exit=0 seconds=0.82 timeout=False
