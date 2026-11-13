@@ -228,3 +228,80 @@ M98_CHECK git-size exit=0 seconds=0.36 timeout=False
 M98_START whitespace ['git', 'diff', '--cached', '--check']
 
 M98_CHECK whitespace exit=0 seconds=0.07 timeout=False
+
+M98_START behavior-approved-importance ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledCommitmentAdoption.test.ts', '-t', 'M98 behavior', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCommitmentAdoption.test.ts > M98 behavior: perceived adoption settles after the current decision and changes later arbitration
+M98 BEHAVIOR PASS observed instruction/I -> three owned writes140; decision12 equal; actual live B both/A only admitted14; probabilities 71/96,25/96 versus 1/1; draws14 3/0 (no coupling claim); denied-hidden cognition equal.
+
+ ✓ src/test/assembledCommitmentAdoption.test.ts > M98 behavior: perceived adoption settles after the current decision and changes later arbitration 150489ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  19:54:12
+   Duration  154.95s (transform 2.67s, setup 0ms, collect 3.97s, tests 150.49s, environment 0ms, prepare 151ms)
+
+
+M98_CHECK behavior-approved-importance exit=0 seconds=155.50 timeout=False
+
+M98_START boundaries-approved-importance ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledCommitmentAdoption.test.ts', '-t', 'M98 boundaries', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCommitmentAdoption.test.ts > M98 boundaries: version, owned immutable sources and instance identity remain enforced
+M98 BOUNDARIES PASS old version/foreign or missing instruction rejected; no-adoption0.81/0.82 exact state/output; wrong owner, immutable/duplicate importance and edited restore rejected.
+
+ ✓ src/test/assembledCommitmentAdoption.test.ts > M98 boundaries: version, owned immutable sources and instance identity remain enforced 176442ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  19:56:57
+   Duration  180.86s (transform 2.63s, setup 0ms, collect 3.94s, tests 176.44s, environment 0ms, prepare 139ms)
+
+
+M98_CHECK boundaries-approved-importance exit=0 seconds=181.41 timeout=False
+
+M98_START persistence-approved-importance ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledCommitmentAdoption.test.ts', '-t', 'M98 persistence', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCommitmentAdoption.test.ts > M98 persistence: adoption survives every settlement and two-patch failure is atomic
+M98 CONTINUATION PASS11 -> 12,13,14,15,20,40,101; exact full saves; failure after both adoption patches restores public snapshot.
+
+ ✓ src/test/assembledCommitmentAdoption.test.ts > M98 persistence: adoption survives every settlement and two-patch failure is atomic 182112ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  20:00:08
+   Duration  186.51s (transform 2.63s, setup 0ms, collect 3.95s, tests 182.11s, environment 0ms, prepare 138ms)
+
+
+M98_CHECK persistence-approved-importance exit=0 seconds=187.06 timeout=False
+
+M98_START types-approved-importance ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+
+M98_CHECK types-approved-importance exit=0 seconds=17.26 timeout=False
+
+M98_START documentation-final ['python', '-c', "from pathlib import Path\nimport re,json,subprocess\nfor name,limit in [('AGENTS.md',120),('docs/planning/CURRENT.md',80),('docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md',250),('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md',250)]:\n p=Path(name);n=len(p.read_text().splitlines());assert n<=limit,(name,n);print(name,n,'lines',len(p.read_bytes()),'bytes')\nreg=Path('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md');assert len(reg.read_bytes())<=65536\nfor name in ['CURRENT.md','ASSEMBLED_CHARACTER_RECONCILIATION.md','ASSEMBLED_CHARACTER_M98_RESULT.md']:\n p=Path('docs/planning')/name\n for link in re.findall(r'\\]\\(([^)]+)\\)',p.read_text()):\n  dest=link.split('#')[0].strip('<>')\n  if dest and '://' not in dest:assert (p.parent/dest).exists(),(str(p),link)\nassert len([r for r in reg.read_text().splitlines() if '| C-' in r and re.search(r'EQUIVALENT \\(mapped(?: domain)?\\)',r)])==4\nassert '| UNRESOLVED | C-COMMIT' in reg.read_text()\nassert 'successor0.82 (SourceCoverage)' in reg.read_text()\nchanged=subprocess.check_output(['git','diff','27feff90','--name-only'],text=True).splitlines()+subprocess.check_output(['git','ls-files','--others','--exclude-standard'],text=True).splitlines()\ncode=sorted(set(p for p in changed if p.startswith('src/')))\nassert len(code)==9,code\nassert not subprocess.check_output(['git','diff','16030538','--name-only','--','src/assembled'],text=True).strip()\nassert not subprocess.check_output(['git','diff','27feff90','--name-only','--','src/campaign2','src/campaign3','src/substrate','src/observation','src/semanticBinding','reference'],text=True).strip()\nfiles=[Path('docs/planning/ASSEMBLED_CHARACTER_M98_RESULT.md'),Path('docs/planning/ASSEMBLED_CHARACTER_M98_CHECKS.txt')]\nassert sum(p.stat().st_size for p in files)<5*1024*1024\nx=json.loads(Path('docs/planning/RESEARCH_OBLIGATIONS.json').read_text())\nassert sum(o['status']=='ACTIVE' for o in x['obligations'])==1\nassert sum(o['status']=='CONDITIONAL' for o in x['obligations'])==17\nassert len([r for r in x['reportReviews'] if r['path']=='docs/planning/ASSEMBLED_CHARACTER_M98_RESULT.md'])==1\nassert 'c8b080db' in files[0].read_text()\nprint('PASS docs/links;9 code paths; production unchanged since checkpoint;2 evidence files under5MiB;4 mapped/COMMIT unresolved; approved comparison and failed original retained')\n"]
+AGENTS.md 120 lines 8423 bytes
+docs/planning/CURRENT.md 40 lines 2860 bytes
+docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md 250 lines 18781 bytes
+docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md 149 lines 65458 bytes
+PASS docs/links;9 code paths; production unchanged since checkpoint;2 evidence files under5MiB;4 mapped/COMMIT unresolved; approved comparison and failed original retained
+
+M98_CHECK documentation-final exit=0 seconds=0.63 timeout=False
+
+M98_START git-size-final ['npm.cmd', 'run', 'check:git-size']
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M98_CHECK git-size-final exit=0 seconds=1.30 timeout=False
+
+M98_START whitespace-final ['git', 'diff', '--cached', '--check']
+
+M98_CHECK whitespace-final exit=0 seconds=0.05 timeout=False

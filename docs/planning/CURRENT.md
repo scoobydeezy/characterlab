@@ -1,61 +1,41 @@
-# Current work — M98: adoption implemented; approved comparison amendment
+# Current work — M98 complete: perceived fresh commitment adoption
 
-The next connection lets an observed instruction and importance adopt a previously
-absent concrete task in the shared prospective owner, then influence a later choice.
-M97 cancellation remains intact. COMMIT is not complete; recurrence remains pending.
+The character can adopt a fresh commitment through observed instruction and
+importance, then use it in a later decision. One model/state/scheduler/save and
+existing prospective owner. COMMIT is still incomplete; recurrence is next.
 
-## Bounded card (before implementation)
-- One capability: admitted perception -> immutable instruction/importance + Open
-  instance at140 -> later live motive/reason/arbitration/execution. No new state owner.
-- Baseline COMMIT; MEC020/EXP013 port/corpus, RET010/011 retained competitors.
-  [lifecycle contract](../formal/ASSEMBLED_CHARACTER_COMMITMENT_LIFECYCLE_CONTRACT.md)
-  adds0.2; rules/registry0.82. SourceCoverage0.5, D3 and calibration unchanged.
-- Scope: priority.ts, priorityExecution.ts, model.ts, state.ts, inputs.ts,
-  runtime.ts, traceBinding.ts, reasons.ts, one adoption test (9 paths; hard12).
-  No frozen control changes, new scheduler, autonomous peers, UI or unrelated breadth.
-- Fixed scenario: M94 standingProbe seed0, three declared tasks, no person dependency,
-  body30/cap100/rate10, delivery90@9; existing observation/route/reason channels.
-  A starts absent (remove only its status/instruction; omit its initial importance).
-  Owner-approved B initial I=1 (was3/5) in both arms. Keep third task's existing reappraisal role and all laws/settings.
-- At12 the existing priority channel offers A's declared first instruction and I=1;
-  permitted vs denied visibility masks both. Current decision12 must match, since
-  adoption settles140. Clone frame12 to14 (replace matching original event types,
-  retain unrelated events), with no repeated adoption. Keep all future inputs to101.
-- Liveness before behavioral assertion: B has an actual reason/decision in both arms;
-  A absent before adoption, live only in permitted arm at14. Require actual A motive,
-  reason and execution consumption, and changed exact native choice probabilities.
-  No requirement that seed0 selects different winners; no seed/parameter search.
-- Hidden denied instruction/importance variation must leave cognition unchanged.
-  Native source support, three owned writes and phase140 trace must be explicit.
-- Check admission/authority/version, immutable importance, duplicate/terminal reuse,
-  denied evidence, same-instant ordering; exact repeat and restore before12 through
-  every remaining settlement to101. Inject failure between owned writes for rollback.
-- Affected regressions: M97 behavior and original COMMIT controls. Older no-adoption
-  0.81/0.82 state/output comparison. Frozen dependency closure unchanged: no full C2 run.
-- Checks one job at a time: types, three native adoption tests, selected regressions,
-  reference boundary, research, docs/budgets/links, Git size and whitespace.
-- Budget600s/command,1800s cumulative including failures +15s bookkeeping;2 new
-  evidence files/5MiB (result/checks). No extensions or contrast replacement assumed.
-- First native failure: reason evidence reader required six-field observation0.1;
-  receive versioned seven-field0.2 without changing source weights/laws/comparison.
-- Second native failure: inherited instruction leaf was initialization-only;0.82
-  adds same-owner joint fresh adoption with immutable instructions and write scope.
-- Boundary controls pass, including cancelled-ID reuse and old-version admission.
-  Repeat/restore11 ->12,13,14,15,20,40,101 exact; injected write failure rolls back.
-- M97 behavioral regression and three original COMMIT controls pass; types pass.
-  [M98 checkpoint](ASSEMBLED_CHARACTER_M98_RESULT.md), [checks](ASSEMBLED_CHARACTER_M98_CHECKS.txt).
-- Checkpoint checks846.96s /1800s including failures/bookkeeping; remaining953.04s.
-  Boundary/research/docs/size/whitespace pass; no extension or M98 pass.
-- Owner approved the bounded replacement2026-11-12: B initial I=1 in both arms.
-  Original B-I=3/5 NoChoice at12 remains in16030538 and the log. Laws, seed0,
-  A adoption12/probe14, hidden control and probability gate stay fixed; no second
-  replacement. Rerun behavioral gate first, then affected fixture boundary/restore
-  tests and types. Retain unchanged production regressions; budget is not reset.
-- Done only when adoption changes actual captured arbitration probabilities through
-  the shared path and all controls pass; otherwise retain failure and report blocker.
+## Result
+- [M98 result](ASSEMBLED_CHARACTER_M98_RESULT.md), [checks](ASSEMBLED_CHARACTER_M98_CHECKS.txt),
+  [lifecycle0.2](../formal/ASSEMBLED_CHARACTER_COMMITMENT_LIFECYCLE_CONTRACT.md).
+  Rules/registry0.82; SourceCoverage0.5, D3, laws/calibration unchanged.
+- Plan dd81707d; checkpoint16030538 preserves the failed original. Owner approved
+  B initial importance3/5 ->1 in both arms; amendment c8b080db precedes execution.
+  Seed0, A adoption12/probe14, hidden control and acceptance gates stay fixed.
+- Decision12 remains equal/live before adoption settles140. A's observed instruction
+  and importance create three owned records. At14 B is live in both arms; only the
+  admitted arm has A's reason. Actual probabilities [1] ->[71/96,25/96], consumed
+  by real execution. Draws3/0: exact probability proof, no shared-dice claim.
+- Denied hidden instruction/importance cannot change cognition. Wrong ownership,
+  foreign/orphan instruction, immutable overwrite, duplicate/terminal reuse,
+  old-model input and edited restore reject. No-adoption0.81/0.82 state/output exact.
+- Original and amended repeat/restore11 ->12,13,14,15,20,40,101 match full saves;
+  fault after adoption patches rolls back the public snapshot.
+- All three amended native tests/types pass. Prior M97 behavior, three original
+  COMMIT controls, reference boundary/research remain valid: production unchanged
+  since16030538. No frozen control dependencies changed; no full C2 rerun warranted.
+- Preserve repaired observation-reader/instruction-authority defects and original
+  NoChoice scenario. One approved replacement; no further contrast or gain tuning.
+- Nine production/test paths;2 new evidence files/5MiB;600s/check,1800s total.
+  Final verification1390.17s /1800s including all failures/bookkeeping; no extension.
+  Documents/links/budgets, Git size and whitespace pass. Stop M98 verification.
 
-[M97](ASSEMBLED_CHARACTER_M97_RESULT.md) at27feff90 preserves cancellation;
+## Next bounded integration
+Distinct-ID recurrence must preserve the retired instance and demonstrate pressure
+from the newly adopted one. Complete lifecycle metadata, selective observer knowledge
+and native competitors remain. No bare Open or authored pressure replaces a producer.
+COMMIT remains UNRESOLVED; next package needs its own bounded card.
+[M97](ASSEMBLED_CHARACTER_M97_RESULT.md) preserves cancellation;
 [M95](ASSEMBLED_CHARACTER_M95_RESULT.md) remains bounded REASON completion.
 Four mapped members/zero full families;21 members/15 families/132 clauses fixed.
-RO001 ACTIVE; RO009/014/020 conditional. No debt closure, new verdict or reduction.
+RO001 ACTIVE; RO009/014/020 conditional; no debt closure, reduction, UI or peers.
 | Research obligations | **1 active / 17 conditional / 0 unowned** |
