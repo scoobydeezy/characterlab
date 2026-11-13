@@ -104,3 +104,21 @@ task's strategy, be absent, and accompany a fresh status in the same patch. Ever
 subsequent overwrite/removal rejects. Existing structural shape/role validation and
 write scopes still apply; older model authority is unchanged. This fixes the second
 native failure (undeclared writable leaf), without a scenario or law amendment.
+
+## 0.3-candidate — independent recurrence domain (M99,2026-11-13)
+
+Rules/registry0.83 admits one to four governed concrete task instances, retaining
+one holder, one shared prediction criterion and one to three actions/up to six
+instructions. Earlier models keep their prior limits. No new laws, event kinds,
+state roots or lifecycle transitions. Closed declarations, task/spec bijection,
+content references, strategy mappings and instruction roles apply to every task.
+The existing workspace/description receiver and addressed-draw capacity accept the
+four-task bound; selection order, evidence grouping, dice and action limits do not
+change. The fourth task is independent authored configuration, not a fixture key.
+
+Recurrence uses existing observed fresh adoption under a new371 referent; terminal
+old instances cannot reopen. Training and the two recurring instances may have
+separate keys while the existing reappraisal task keeps its role. No shared mutable
+series identity is introduced; series, partial fulfillment, beneficiaries/delegation
+remain conditional. M99's predeclared causal witness is in CURRENT; no general
+COMMIT completion is inferred from it. Selective witnesses and competitors follow.

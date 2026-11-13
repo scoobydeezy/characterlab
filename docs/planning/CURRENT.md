@@ -1,41 +1,50 @@
-# Current work — M98 complete: perceived fresh commitment adoption
+# Current work — M99: independent recurrence after earned identity
 
-The character can adopt a fresh commitment through observed instruction and
-importance, then use it in a later decision. One model/state/scheduler/save and
-existing prospective owner. COMMIT is still incomplete; recurrence is next.
+Owner2026-11-13 delegates comparison/amendment judgments through COMMIT completion.
+M98 adoption is complete. Next connect training, retirement and two distinct fresh
+instances in one continuing character; then selective observer knowledge and final
+COMMIT replay/classification. No wider conditional lifecycle theory is added.
 
-## Result
-- [M98 result](ASSEMBLED_CHARACTER_M98_RESULT.md), [checks](ASSEMBLED_CHARACTER_M98_CHECKS.txt),
-  [lifecycle0.2](../formal/ASSEMBLED_CHARACTER_COMMITMENT_LIFECYCLE_CONTRACT.md).
-  Rules/registry0.82; SourceCoverage0.5, D3, laws/calibration unchanged.
-- Plan dd81707d; checkpoint16030538 preserves the failed original. Owner approved
-  B initial importance3/5 ->1 in both arms; amendment c8b080db precedes execution.
-  Seed0, A adoption12/probe14, hidden control and acceptance gates stay fixed.
-- Decision12 remains equal/live before adoption settles140. A's observed instruction
-  and importance create three owned records. At14 B is live in both arms; only the
-  admitted arm has A's reason. Actual probabilities [1] ->[71/96,25/96], consumed
-  by real execution. Draws3/0: exact probability proof, no shared-dice claim.
-- Denied hidden instruction/importance cannot change cognition. Wrong ownership,
-  foreign/orphan instruction, immutable overwrite, duplicate/terminal reuse,
-  old-model input and edited restore reject. No-adoption0.81/0.82 state/output exact.
-- Original and amended repeat/restore11 ->12,13,14,15,20,40,101 match full saves;
-  fault after adoption patches rolls back the public snapshot.
-- All three amended native tests/types pass. Prior M97 behavior, three original
-  COMMIT controls, reference boundary/research remain valid: production unchanged
-  since16030538. No frozen control dependencies changed; no full C2 rerun warranted.
-- Preserve repaired observation-reader/instruction-authority defects and original
-  NoChoice scenario. One approved replacement; no further contrast or gain tuning.
-- Nine production/test paths;2 new evidence files/5MiB;600s/check,1800s total.
-  Final verification1390.17s /1800s including all failures/bookkeeping; no extension.
-  Documents/links/budgets, Git size and whitespace pass. Stop M98 verification.
+## Bounded card before implementation
+- Two capabilities: admit1..4 governed task instances (same1..3 actions); retain
+  actual earned identity through absent -> new B -> retired B -> distinct new C.
+- Rules/registry0.83 version-gates task capacity4. Old versions remain1..3. Same
+  task/spec bijection, instruction/action validation, workspace order, owner, RNG
+  addresses, SourceCoverage0.5/D3/calibration. No per-scenario runtime/selector.
+- Read MEC020/EXP013 PORT/CORPUS, RET010/011 controls and COMMIT_PUBLIC_CONTRACT.
+  PHEN-COMMIT-001:2/3/4/7/8/9 partial witness; :5/6/10/11 still require mapping.
+- Source scope: model, cognitiveDeclarations, taskDeclarations, strategy,
+  configurationWorkspace, execution, traceBinding; one fixture and one test
+  (9 planned, hard12 production/test files). Existing owners; no source-tree copy.
+- Scenario: extend M94 standingProbe with one declared physical recurrence C,
+  sharing B's plans/action/criterion but a distinct governed content/spec identity.
+  A is training only; B/C and the declared reappraisal task start absent. All tasks
+  nonsocial; body30/cap100/rate10, delivery90@9; seed0; existing channels remain.
+- A initial I=1, choice10 earns actual positive identity then cancellation10 retires
+  training A. At12 probe none before observed B instruction/I=1 adoption140.
+  At14 probe active B before cancellation140. At16 probe none before observed C
+  instruction/I=1 adoption140. At18/19 probe active C. Clone ordinary frame12 to
+  later probe instants; replace matching event types, retain unrelated/future inputs.
+  B/C U=1; no early importance, no initial learned state, no cognitive-task repurpose.
+- Require liveness at14/18/19, exact task reason counts0/1/0/1/1 at12/14/16/18/19,
+  correct B then C referents, nonzero matching standing, actual decision/execution,
+  fixed earned identity/history after10; retired A/B remain immutable. Record actual
+  standing scale; original+3 correspondence remains for final COMMIT classification.
+- Checks: old0.82 rejects fourth task, malformed mapping/duplicate IDs, native trace
+  causes/owned records, exact repeat+restore after training through every settlement,
+  full future calendar to101; full-cardinality workspace/reason receiving bound.
+  No source changes to lifecycle handlers: retain M97/M98 rollback/boundary receipts.
+- Selected regression: M98 behavioral gate; original three COMMIT controls. Types,
+  reference boundary/research as applicable, docs/budgets/links, Git size/whitespace.
+- Budget600s/command,1800s cumulative including failures+15s bookkeeping;2 new
+  evidence files/5MiB. One long job. Amend before rerun, retain failures; no blind
+  retries. At repeated unchanged blocker or budget, checkpoint rather than expand.
+- Done: observed fresh recurrence changes the actual active reason/choice referent,
+  preserves terminal predecessor and fixed learned identity, and all checks pass.
 
-## Next bounded integration
-Distinct-ID recurrence must preserve the retired instance and demonstrate pressure
-from the newly adopted one. Complete lifecycle metadata, selective observer knowledge
-and native competitors remain. No bare Open or authored pressure replaces a producer.
-COMMIT remains UNRESOLVED; next package needs its own bounded card.
-[M97](ASSEMBLED_CHARACTER_M97_RESULT.md) preserves cancellation;
-[M95](ASSEMBLED_CHARACTER_M95_RESULT.md) remains bounded REASON completion.
-Four mapped members/zero full families;21 members/15 families/132 clauses fixed.
-RO001 ACTIVE; RO009/014/020 conditional; no debt closure, reduction, UI or peers.
+[Lifecycle contract](../formal/ASSEMBLED_CHARACTER_COMMITMENT_LIFECYCLE_CONTRACT.md)
+adds0.3 receiving-domain clarification before coding. [M98](ASSEMBLED_CHARACTER_M98_RESULT.md)
+at7baf9a0a remains retained control. Four mapped members/zero full families;
+21 members/15 families/132 clauses fixed. COMMIT UNRESOLVED. RO001 ACTIVE;
+RO009/014/020 conditional; no debt closure, reduction, UI or autonomous peers.
 | Research obligations | **1 active / 17 conditional / 0 unowned** |

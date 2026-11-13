@@ -227,8 +227,8 @@ five C2 conditions and Experience mapping; no new denominator. C2 already uses O
 identify actual gaps. Historical gate status does not override later accepted closure.
 
 ## Current authorization boundary
-Owner2026-11-12 adopts M93 SourceCoverage and delegates comparison/amendment
-judgments through REASON completion; record before execution, preserve scope/evidence.
+Owner2026-11-13 delegates judgments/amendments through COMMIT completion, following
+REASON; record before execution, preserve laws, scope/evidence and bounded budgets.
 No UI, publishing or whole-assembly acceptance follows.
 
 ## Owner ruling — unknown factors and live gates (2026-11-02)
