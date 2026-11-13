@@ -19,3 +19,85 @@ M101 PASS native/controlled 0,1,0,1,1; CoreNeed 1,1,1,1,1; Immortal 0,1,1,2,2; R
 
 
 M101_CHECK native-correspondence exit=0 seconds=130.99 timeout=False
+
+M101_START strict-fixed-input-correspondence ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledCommitmentCorrespondence.test.ts', '-t', 'M101', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCommitmentCorrespondence.test.ts > M101 closes native COMMIT lifecycle, fixed-state counterfactuals, strong-domain and trace correspondence
+M101 PASS native/controlled 0,1,0,1,1; CoreNeed 1,1,1,1,1; Immortal 0,1,1,2,2; ReusedId repeats C and actual owner rejects. Earned P=98775/3572128; fixed history; positive standing/native modifier0; conservative1/2 standing cannot revive zero base. All metadata/pressure/ref/execution joins pass; captured controls never enter run/save.
+
+ ✓ src/test/assembledCommitmentCorrespondence.test.ts > M101 closes native COMMIT lifecycle, fixed-state counterfactuals, strong-domain and trace correspondence 123650ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  01:37:00
+   Duration  127.93s (transform 2.59s, setup 0ms, collect 3.86s, tests 123.65s, environment 0ms, prepare 133ms)
+
+
+M101_CHECK strict-fixed-input-correspondence exit=0 seconds=128.48 timeout=False
+
+M101_START original-full-commit ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/commitPublic.test.ts', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/commitPublic.test.ts > earns strong identity then keeps it fixed across exact lifecycle pressure and active decisions 487ms
+ ✓ src/test/commitPublic.test.ts > preserves terminal A/version/cause while recurrence creates distinct B 401ms
+ ✓ src/test/commitPublic.test.ts > distinguishes CoreNeed, Immortal and ReusedId under identical actual learned identity 1668ms
+ ✓ src/test/commitPublic.test.ts > positive selective witnesses learn actual concrete instances; nonrecipients remain unknown 375ms
+ ✓ src/test/commitPublic.test.ts > swapped/both recipients and observed retirement change only admitted observer knowledge 1162ms
+ ✓ src/test/commitPublic.test.ts > private lifecycle changes cannot become observer knowledge; hidden scalar does not affect behavior 1763ms
+ ✓ src/test/commitPublic.test.ts > rolls back reached source boundary without losing prior identity, instances, knowledge or RNG
+ ✓ src/test/commitPublic.test.ts > rolls back reached context boundary without losing prior identity, instances, knowledge or RNG
+ ✓ src/test/commitPublic.test.ts > rolls back reached probe-a boundary without losing prior identity, instances, knowledge or RNG
+ ✓ src/test/commitPublic.test.ts > rolls back reached probe-b boundary without losing prior identity, instances, knowledge or RNG
+ ✓ src/test/commitPublic.test.ts > rolls back reached raw boundary without losing prior identity, instances, knowledge or RNG
+ ✓ src/test/commitPublic.test.ts > rolls back reached reasons boundary without losing prior identity, instances, knowledge or RNG
+ ✓ src/test/commitPublic.test.ts > rolls back reached decision boundary without losing prior identity, instances, knowledge or RNG
+ ✓ src/test/commitPublic.test.ts > rolls back reached expression boundary without losing prior identity, instances, knowledge or RNG
+ ✓ src/test/commitPublic.test.ts > rolls back reached communication boundary without losing prior identity, instances, knowledge or RNG
+ ✓ src/test/commitPublic.test.ts > rolls back reached observe-a boundary without losing prior identity, instances, knowledge or RNG
+ ✓ src/test/commitPublic.test.ts > rolls back reached observe-b boundary without losing prior identity, instances, knowledge or RNG
+ ✓ src/test/commitPublic.test.ts > rolls back reached qualification boundary without losing prior identity, instances, knowledge or RNG
+ ✓ src/test/commitPublic.test.ts > rolls back reached evidence-a boundary without losing prior identity, instances, knowledge or RNG
+ ✓ src/test/commitPublic.test.ts > rolls back reached evidence-b boundary without losing prior identity, instances, knowledge or RNG
+ ✓ src/test/commitPublic.test.ts > rolls back reached identity boundary without losing prior identity, instances, knowledge or RNG
+ ✓ src/test/commitPublic.test.ts > rolls back reached lifecycle boundary without losing prior identity, instances, knowledge or RNG
+ ✓ src/test/commitPublic.test.ts > rolls back reached update-a boundary without losing prior identity, instances, knowledge or RNG
+ ✓ src/test/commitPublic.test.ts > rolls back reached update-b boundary without losing prior identity, instances, knowledge or RNG
+ ✓ src/test/commitPublic.test.ts > rolls back reached commit boundary without losing prior identity, instances, knowledge or RNG
+ ✓ src/test/commitPublic.test.ts > rejects illegal transitions, foreign schemas, wrong owners and invented initial identity
+ ✓ src/test/commitPublic.test.ts > restores accumulated lifecycle and observer state and rejects edited RNG ledger or original commands 6156ms
+
+ Test Files  1 passed (1)
+      Tests  27 passed (27)
+   Start at  01:39:19
+   Duration  16.99s (transform 801ms, setup 0ms, collect 1.20s, tests 15.39s, environment 0ms, prepare 136ms)
+
+
+M101_CHECK original-full-commit exit=0 seconds=17.51 timeout=False
+
+M101_START types-final ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+
+M101_CHECK types-final exit=0 seconds=16.97 timeout=False
+
+M101_START reference-boundary ['node', 'scripts/check-reference-boundary.mjs']
+Reference boundary check passed.
+
+M101_CHECK reference-boundary exit=0 seconds=2.50 timeout=False
+
+M101_START research ['node', 'scripts/check-research-obligations.mjs']
+PASS: research obligation references and dispositions {"active":1,"conditional":17,"closed":4,"unowned":0,"verdicts":103,"reports":4334}
+
+M101_CHECK research exit=0 seconds=3.36 timeout=False
+
+M101 DOCS/LINKS/PRESERVATION/BUDGET PASS; one test path; zero production/fixture/control changes; two evidence files; five mapped members, zero full families; obligations unchanged.
+
+M101_START git-size ['npm.cmd', 'run', 'check:git-size']
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M101_CHECK git-size exit=0 seconds=0.81 timeout=False

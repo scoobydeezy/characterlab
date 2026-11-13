@@ -36,7 +36,7 @@ it('M101 closes native COMMIT lifecycle, fixed-state counterfactuals, strong-dom
  }
  expect(counts).toEqual([0,1,0,1,1]);expect(refs[0]).not.toEqual(refs[1]);expect(refs[1]).toEqual(refs[2]);
  await through(run,20n);expect(history()).toEqual(earned);const before=run.save(),after=state(),frozen=frozen13!,rawC=native.get(14n)!.raw,rawD=native.get(18n)!.raw,ws=records(rawC,381n)[0],wd=component.definition('task-workspace'),forecast=rec(f(ws,5n),380n),prediction=same(f(forecast,1n),u(2))?f(forecast,2n):undefined;
- expect(ws).toBeDefined();const sourceFor=(t:CanonicalValue)=>same(t,taskC)?rawC:rawD;
+ expect(ws).toBeDefined();const fixedD=walk(rawC,x=>same(x,taskC)?taskD:x);expect(walk(fixedD,x=>same(x,taskD)?taskC:x)).toEqual(rawC);const sourceFor=(t:CanonicalValue)=>same(t,taskC)?rawC:fixedD;
  const descriptions=(v:CanonicalValue)=>items(f(rec(v,403n),6n),'list');
  function bundle(raws:readonly CanonicalValue[],edit:(d:CanonicalValue)=>CanonicalValue=(d=>d)){const ds=raws.flatMap(v=>descriptions(v).map(edit));expect(items(f(rawC,5n),'set')).toHaveLength(0);return r(403,[f(rawC,1n),f(rawC,2n),set(ds.map(d=>items(d,'list')[2])),f(rawC,4n),set([]),list(ds)],3);}
  const compile=(raw:CanonicalValue)=>compileDescribedReasons(raw,definition(b.s),5,'SourceCoverage',true).nuclei;
