@@ -1,3 +1,4 @@
+import {createCommitmentWitness,W_SOURCE} from './commitmentWitness';
 import {createCommitmentTaskExecution} from './taskSettlement';
 import {createCommitmentLifecycle,COMMITMENT_REQUEST} from './commitment';
 import {createReasonEvidence,REASON_READING} from './reasonEvidence';
@@ -90,12 +91,13 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
  const controlBase=model.control?createControlExecution(component.tasks[0].character,model.habit!,stateModel,inputs.controlEvents,modelIdentity,inputs.runIdentity.value,model.workspaceLimit,model.fatigue,rumination?{settings:model.rumination!,instruction:rumination.instruction}:undefined):undefined;
  const fatiguedControl=controlBase&&model.fatigue?createFatigueExecution(component.tasks[0].character,stateModel,inputs.fatigueEvents,modelIdentity,inputs.runIdentity.value).extend(controlBase):controlBase;
  const control=rumination?rumination.extend(fatiguedControl!):fatiguedControl;
- const communication=model.communication?createCommunicationExecution(component.tasks[0].character,model.communication,stateModel,inputs.communicationEvents,modelIdentity,inputs.runIdentity.value,model.delayedBody):undefined;
+ const communicationBase=model.communication?createCommunicationExecution(component.tasks[0].character,model.communication,stateModel,inputs.communicationEvents,modelIdentity,inputs.runIdentity.value,model.delayedBody):undefined;
+ const communication=model.commitmentWitness?createCommitmentWitness(component.tasks[0].character,component.tasks.map(t=>t.key),model.communication!.recipients,stateModel,inputs.commitmentEvents.filter(e=>key(e.eventTypeId)===key(W_SOURCE)),modelIdentity,inputs.runIdentity.value).extend(communicationBase!):communicationBase;
  const relationship=model.relationship?createRelationshipExecution(component.tasks[0].character,model.relationship,stateModel,inputs.relationshipEvents,modelIdentity,inputs.runIdentity.value,model.encounterEnabled,model.attachment,inputs.attachmentEvents,model.loss):undefined;
  const social=model.social?createSocialExecution(component.tasks[0].character,model.social,stateModel,inputs.socialEvents,modelIdentity,inputs.runIdentity.value,model.recognition,model.encounterEnabled?relationship:undefined,model.socialMemory,model.encoding,model.memoryUse?(event,operands,report)=>episodes!.qualifyUse(event,operands,report):undefined,model.attachment,!!model.loss,!!model.embarrassment):undefined;
  const reservePriority=priorityCore?(meaning?meaning.extend(priorityCore):priorityCore):undefined;
  const lifecyclePriority=reservePriority?(spatialMeaning?spatialMeaning.extend(reservePriority):reservePriority):undefined;
- const priority=model.commitmentLifecycle?createCommitmentLifecycle(component.tasks[0].character,component.tasks,stateModel,inputs.commitmentEvents,modelIdentity,inputs.runIdentity.value).extend(lifecyclePriority!):lifecyclePriority;
+ const priority=model.commitmentLifecycle?createCommitmentLifecycle(component.tasks[0].character,component.tasks,stateModel,inputs.commitmentEvents.filter(e=>key(e.eventTypeId)===key(COMMITMENT_REQUEST)),modelIdentity,inputs.runIdentity.value).extend(lifecyclePriority!):lifecyclePriority;
  const reappraisal=model.reappraisal?createReappraisalExecution(model.reappraisal,component.tasks[0].character,stateModel,inputs.reappraisalEvents,modelIdentity,inputs.runIdentity.value,()=>position?.mitigationEvidence()):undefined;
  let currentPosition:ReturnType<ReturnType<typeof createPositionExecution>['execute']>['memoryEvidence'];
  const actionMemory=model.actionMemory?createActionMemory(component.tasks[0].character,model.actionMemory,model.strategy!,model.spatialMeaning!,stateModel,modelIdentity,inputs.runIdentity.value,()=>currentPosition):undefined;

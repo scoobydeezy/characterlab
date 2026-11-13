@@ -100,7 +100,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  const monitored=model.performance?withPerformanceState(forecasted,model.strategy!,model.expectationEnabled,model.selfBeliefEnabled?C:undefined,model.values,model.causalEnabled,model.interferenceEnabled):forecasted;
  const habitual=model.habit?withHabitState(monitored,C):monitored;
  const controlled=model.control?withControlState(habitual,C,model.mitigationEnabled?3:model.sharedAffectSources?2:model.reappraisal!==undefined,model.fatigue!==undefined,model.rumination):habitual;
- const communicating=model.communication?withCommunicationState(controlled,[...(model.communication.topic?[]:[C]),...model.communication.recipients],model.communication.topic,model.communication.expectation):controlled;
+ const communicating=model.communication?withCommunicationState(controlled,[...(model.communication.topic?[]:[C]),...model.communication.recipients],model.communication.topic,model.communication.expectation,model.commitmentWitness?tasks.map(t=>t.key):[]):controlled;
  const socialized=model.social?withSocialState(communicating,C,model.social.target,model.social.targets,!!model.loss,!!model.embarrassment):communicating;
  const related=model.relationship?withRelationshipState(socialized,C,model.relationship.target,model.relationship.bindings.map(b=>b.target),model.attachment):socialized;
  const recognized=model.recognition?withRecognitionState(related,model.recognition,!!model.encoding,model.positionEnabled):related;

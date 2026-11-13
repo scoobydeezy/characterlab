@@ -1,0 +1,147 @@
+
+M100_START types-source ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+
+M100_CHECK types-source exit=0 seconds=16.96 timeout=False
+
+M100_START types-tests ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+
+M100_CHECK types-tests exit=0 seconds=16.99 timeout=False
+
+M100_START native-witness ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledCommitmentWitness.test.ts', '-t', 'M100 native', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCommitmentWitness.test.ts > M100 native witnesses distinguish unknown, observed absence, stale active and observed retirement
+M100 NATIVE PASS actual C/D decisions; observed absence; selective unknown/stale knowledge; distinct keys; later Cancelled/version2; exact observation/evidence/update counts and trace phases
+
+ ✓ src/test/assembledCommitmentWitness.test.ts > M100 native witnesses distinguish unknown, observed absence, stale active and observed retirement 117385ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  01:08:59
+   Duration  121.69s (transform 2.58s, setup 0ms, collect 3.86s, tests 117.39s, environment 0ms, prepare 143ms)
+
+
+M100_CHECK native-witness exit=0 seconds=122.23 timeout=False
+
+M100_START types-boundaries ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+src/test/assembledCommitmentWitnessBoundaries.test.ts(15,239): error TS2353: Object literal may only specify known properties, and 'expected' does not exist in type 'RemovePatchOperation'.
+
+M100_CHECK types-boundaries exit=2 seconds=16.93 timeout=False
+
+M100_START boundaries-rollback ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledCommitmentWitnessBoundaries.test.ts', '-t', 'M100', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCommitmentWitnessBoundaries.test.ts > M100 boundaries reject invented knowledge, foreign authority, rewrites and generated ingress
+M100 BOUNDARIES PASS prior versions/generated ingress, duplicate/malformed source, invented initial knowledge, foreign writer, rewrite/remove, bad target/status and observer selector reject
+
+ ✓ src/test/assembledCommitmentWitnessBoundaries.test.ts > M100 boundaries reject invented knowledge, foreign authority, rewrites and generated ingress 55705ms
+stdout | src/test/assembledCommitmentWitnessBoundaries.test.ts > M100 rollback preserves the whole instant after a witness knowledge write fails
+M100 ROLLBACK PASS reached knowledge patch; prior lifecycle/knowledge/state/output/trace/clock preserved
+
+ ✓ src/test/assembledCommitmentWitnessBoundaries.test.ts > M100 rollback preserves the whole instant after a witness knowledge write fails 29541ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 5 skipped (7)
+   Start at  01:12:19
+   Duration  89.49s (transform 2.55s, setup 0ms, collect 3.82s, tests 85.25s, environment 0ms, prepare 135ms)
+
+
+M100_CHECK boundaries-rollback exit=0 seconds=90.03 timeout=False
+
+M100_START persistence ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledCommitmentWitness.test.ts', '-t', 'M100 persistence', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCommitmentWitness.test.ts > M100 persistence repeats and restores witness knowledge through the full calendar
+M100 PERSISTENCE PASS14 -> 15,16,17,18,19,20,40,101; every full save/state/output/trace/run identity exact
+
+ ✓ src/test/assembledCommitmentWitness.test.ts > M100 persistence repeats and restores witness knowledge through the full calendar 238894ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  01:14:06
+   Duration  243.18s (transform 2.55s, setup 0ms, collect 3.81s, tests 238.90s, environment 0ms, prepare 133ms)
+
+
+M100_CHECK persistence exit=0 seconds=243.72 timeout=False
+
+M100_START final-native-access ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledCommitmentWitness.test.ts', '-t', 'M100 native|M100 access', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCommitmentWitness.test.ts > M100 native witnesses distinguish unknown, observed absence, stale active and observed retirement
+M100 NATIVE PASS actual C/D decisions; observed absence; selective unknown/stale knowledge; distinct keys; later Cancelled/version2; exact observation/evidence/update counts and trace phases
+
+ ✓ src/test/assembledCommitmentWitness.test.ts > M100 native witnesses distinguish unknown, observed absence, stale active and observed retirement 118532ms
+stdout | src/test/assembledCommitmentWitness.test.ts > M100 access controls swap or share actual reports without changing actor cognition
+M100 ACCESS PASS swapped/both recipients; same actual decisions
+
+ ✓ src/test/assembledCommitmentWitness.test.ts > M100 access controls swap or share actual reports without changing actor cognition 116779ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 7 skipped (9)
+   Start at  01:18:17
+   Duration  239.57s (transform 2.55s, setup 0ms, collect 3.81s, tests 235.31s, environment 0ms, prepare 133ms)
+
+
+M100_CHECK final-native-access exit=0 seconds=240.11 timeout=False
+
+M100_START privacy ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/assembledCommitmentWitness.test.ts', '-t', 'M100 privacy', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCommitmentWitness.test.ts > M100 privacy keeps absent and private instances indistinguishable; hidden truth is inert
+M100 PRIVACY PASS no-message views equal despite different actor reasons; hidden scalar changes trace only
+
+ ✓ src/test/assembledCommitmentWitness.test.ts > M100 privacy keeps absent and private instances indistinguishable; hidden truth is inert 271846ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  01:22:24
+   Duration  276.13s (transform 2.54s, setup 0ms, collect 3.80s, tests 271.85s, environment 0ms, prepare 137ms)
+
+
+M100_CHECK privacy exit=0 seconds=276.69 timeout=False
+
+M100_START original-witness-controls ['node', 'node_modules/vitest/vitest.mjs', 'run', 'src/test/commitPublic.test.ts', '-t', 'positive selective|swapped/both|private lifecycle', '--reporter=verbose']
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/commitPublic.test.ts > positive selective witnesses learn actual concrete instances; nonrecipients remain unknown 494ms
+ ✓ src/test/commitPublic.test.ts > swapped/both recipients and observed retirement change only admitted observer knowledge 1221ms
+ ✓ src/test/commitPublic.test.ts > private lifecycle changes cannot become observer knowledge; hidden scalar does not affect behavior 1772ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 24 skipped (27)
+   Start at  01:27:13
+   Duration  5.32s (transform 800ms, setup 0ms, collect 1.21s, tests 3.49s, environment 0ms, prepare 340ms)
+
+
+M100_CHECK original-witness-controls exit=0 seconds=6.32 timeout=False
+
+M100_START types-final ['node', 'node_modules/typescript/bin/tsc', '--noEmit', '-p', 'tsconfig.json']
+
+M100_CHECK types-final exit=0 seconds=16.95 timeout=False
+
+M100_START reference-boundary ['node', 'scripts/check-reference-boundary.mjs']
+Reference boundary check passed.
+
+M100_CHECK reference-boundary exit=0 seconds=2.50 timeout=False
+
+M100_START research ['node', 'scripts/check-research-obligations.mjs']
+PASS: research obligation references and dispositions {"active":1,"conditional":17,"closed":4,"unowned":0,"verdicts":103,"reports":4333}
+
+M100_CHECK research exit=0 seconds=3.46 timeout=False
+
+M100 DOCS/LINKS/PRESERVATION/BUDGET PASS; ten production/test paths; two evidence files.
+
+M100_START git-size ['npm.cmd', 'run', 'check:git-size']
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M100_CHECK git-size exit=0 seconds=1.21 timeout=False
