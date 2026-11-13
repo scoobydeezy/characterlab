@@ -1,4 +1,4 @@
-# Current work — M107 checkpoint, continuation pending
+# Current work — M107 package B: exact continuation
 Owner continuation2026-11-13 after M106; adopted reference0.85 remains fixed.
 One model/state/scheduler/trace/save; no UI or autonomous partner work.
 
@@ -24,15 +24,28 @@ One model/state/scheduler/trace/save; no UI or autonomous partner work.
 - Test-only cost repair reuses immutable fixture/model and decoded snapshot values;
   assertions/calendars/roster are unchanged. Repository checks complete the checkpoint.
 
-## Required next package, before execution
-- Only the already-written exact repeat/restore gate, save12 after two actual
+## Active bounded package B — before execution
+- Observable capability: acquired biography continues exactly across checkpoint.
+  Only the already-written exact repeat/restore gate, save12 after two actual
   acquisitions. Repeat and public restore must agree at every subsequent settled
   instant through101 and exhaustion: state, outputs, trace, save and run identity.
 - Same seed0, laws, corrected declarations, full calendar and32-settle failure cap.
   No new production change, contrast, scenario, seed or acceptance amendment.
-- Work order slow-check provision permits a bounded split before execution. Commit
-  its explicit runtime budget first; carry the cumulative total, never reset history.
-  One active validation job. No new breadth until this gate passes.
+- Authority: work order slow-check split provision (line206), not a new owner ruling.
+  Package A checkpoint02509c4e used1655.219s; retain it and all failed evidence.
+- No production/test edits planned; execute existing assembledBiographyHistory.test.ts
+  case "M107 repeat and restore" once. Same contracts and mechanism dispositions.
+- Failure risks: history/journal loss or rewrite, nondeterministic continuation,
+  save omission, replay divergence or stale snapshot comparisons. Snapshots are
+  freshly read after each direct settlement; reference save encoded once/instant.
+- Budget600s cumulative for package B, including10s bookkeeping;570s maximum for
+  the one native command, then result/preservation/research/size checks only.
+  Combined A+B hard ceiling2255.219s; all CHARGED totals carry forward, no reset.
+  One active validation job; same two evidence files/5MiB; no new scenario or seed.
+- Stop on pass, timeout, substantive failure or spent budget. No replacement contrast,
+  retry chain or silent extension. Done: every unchanged native byte gate passes,
+  repository metadata checks pass, and both package costs remain explicit.
+  M107 remains incomplete until then; full BIO stays UNRESOLVED afterward.
 
 Five mapped members/zero accepted families; final21/15/132 and E43/P57/N17/U15 unchanged.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |

@@ -118,3 +118,15 @@ incomplete until that gate passes, and full BIO remains open afterward.
 Package A checkpoint:1655.219s/1800s cumulative; longest458.236s/600s. All
 repository checks above pass. Terminal trailing whitespace in receipts is preserved
 as literal hex escapes. Exact continuation remains unrun; no M107 completion claim.
+
+## Package B — predeclared slow-check split
+
+Checkpoint02509c4e preserves package A within its original cap. Work order line206
+explicitly permits splitting an expected slow check before execution. This package
+runs only the existing exact repeat/restore test once; no scenarios, assertions or
+production code change. Save12 follows two actual acquisitions. All later settled
+instants through101 and exhaustion compare full state/output/trace/save/identity.
+Package B has600s total including10s bookkeeping, one native command capped570s,
+and metadata/preservation/size checks afterward. Combined hard ceiling2255.219s;
+the log's CHARGED total carries forward. No blanket budget reset, new verifier or
+owner-law ruling is inferred. Stop after this attempt and report any remaining gap.

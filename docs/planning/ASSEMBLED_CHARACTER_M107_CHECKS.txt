@@ -239,3 +239,16 @@ COMMAND ["git", "diff", "--cached", "--check"]
 
 EXIT 0; elapsed 0.070s
 CHARGED 1655.219
+
+PACKAGE B PLAN: work-order slow-check split, checkpoint02509c4e; existing exact repeat/restore once. Package A1655.219s retained; B600s including10s bookkeeping, native command570s. Combined ceiling2255.219s. No new source, seed, scenario, acceptance criterion or evidence path.
+CHARGED 1665.219
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:git-size"]
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.822s
+CHARGED 1666.041
