@@ -227,8 +227,8 @@ five C2 conditions and Experience mapping; no new denominator. C2 already uses O
 identify actual gaps. Historical gate status does not override later accepted closure.
 
 ## Current authorization boundary
-Owner2026-11-13 authorized M102 coverage/obligation review and calibration proposal;
-M102 complete. Existing laws remain fixed pending explicit comparison/adoption ruling.
+Owner2026-11-13 approves M103 standing-rounding comparison proposed by M102.
+Candidate0.85 is experimental; reference0.84 remains pending a later adoption ruling.
 No new member replay, UI, publishing or whole-assembly acceptance follows.
 
 ## Owner ruling — unknown factors and live gates (2026-11-02)

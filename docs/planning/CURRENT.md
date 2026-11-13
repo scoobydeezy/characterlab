@@ -1,39 +1,53 @@
-# Current work — M102 review complete
-The post-COMMIT evidence/calibration review is complete; model0.84 is unchanged.
-[M102 result](ASSEMBLED_CHARACTER_M102_RESULT.md) records the recommendation.
-No new member replay, simulation-law adoption or implementation has begun.
+# Current work — M103 standing-rounding comparison
+Owner2026-11-13 approves the M102 proposed experiment; not reference promotion.
+Current reference remains0.84; candidate rules/registry0.85. One active package.
 
-## Bounded card and outcome
-- Owner2026-11-13 authorized three outputs: refresh the existing132-clause index
-  through M101; add REASON/COMMIT mapping limits; reconcile RO001 and recommend
-  a concrete receiving comparison. Plan d25f5fce preceded edits.
-- All15 F rows reassessed:12.2-5 and12.13-8 move P -> E. Counts E43/P57/N17/U15.
-  Other130 classifications unchanged; E is scoped evidence, not final acceptance.
-- LIMIT-REASON/COMMIT now distinguish bounded mapping from required missing
-  behavior and broader conditional claims. Same register; no separate ledger.
-- M94/M95 discharged RO001's M86 current trigger/reference promotion. RO001 is
-  CONDITIONAL, not closed; wider domains/correlation/renaming triggers remain.
-- Proposed signed stochastic standing rounding keeps D3, unit/cap, base dice,
-  relevance and thresholds. It needs a versioned receiving/draw contract and
-  explicit owner ruling before implementation; it is not a numeric bug fix.
-- Zero production/test/fixture/contract edits. Files: CURRENT, work order,
-  reconciliation, obligations JSON, AGENTS status, M102 result/check receipt.
-- Budget90 minutes analysis;600s/check,1800s verification including failures
-  and15s bookkeeping;2 evidence files/5MiB. One arithmetic illustration only.
-- Checks:132 IDs classified exactly once; link/document budgets; unchanged
-  source/fixtures/contracts/baseline; obligation counts/references; Git size and
-  whitespace. No native suite needed for this documentation-only change.
-- Done: the three outputs are recorded and checks pass; return the law comparison
-  decision for review. No further integration is authorized by this review.
+## Bounded card — before implementation
+- Capability: genuinely acquired standing changes signed probabilities between
+  already-live reasons, with analytical mixture and actual sampled scores agreeing.
+  Shared owners/scheduler/state/save; no new motive, psychological state or runtime.
+- Contract: ASSEMBLED_CHARACTER_STANDING_ROUNDING_CONTRACT.md /0.1-candidate.
+  Keep D3/Ramp, SourceCoverage0.5, relevance/zero-base, unit1/4/cap3, base dice,
+  context/situation, thresholds and Auto. Candidate global across standing sources.
+- Exactly12 production/test paths planned: assembled/{standingRounding,codecs,
+  reasons,arbitration,random,comparison,model,inputs,execution,decisionView}.ts;
+  test/fixtures/assembledStandingRounding.ts; test/assembledStandingRounding.test.ts.
+  No changes to frozen controls/dependencies. Split before any13th path.
+- Scenario: M89 acquired-history fixture; three physical/nonsocial tasks, existing
+  permitted body/reading channels; body30/cap100/rate10/delivery90@9, seed0.
+  Training10 unchanged (A importance1/B3/5, genuine qualification; Values unlinked).
+  At12 only both reading values become0, permission true, all other declarations
+  and complete calendar retained. This removes extra evidence pressure in both
+  arms; expected rolling regime and two already-live reasons, without calibration
+  tuning. Assert liveness/rolling/nonzero signed standing before probability gate.
+- Primary: candidate learned versus removal of standing from captured12 raw only;
+  operands never enter live state. Current0.84 on same calendar is truncation control.
+  Actual pressure-at10 control excludes formation; hidden diagnostic control leaves
+  permitted evidence equal. Native runs prove real producer -> decision -> execution.
+- Two identity-only setup runs (old/candidate) build injective comparison maps for
+  common face/tie addresses and candidate rounding addresses; no outcome/seed search.
+  Replay seed0 with maps. Compare matched face draws; rounding is independent purpose.
+  Captured-input ablation reuses faces/tie class; probability proof exhaustively
+  weights score/rounding/tie outcome classes, not2^32 enumerated random words.
+- Controls: zero/integer/cap/sign/Avoid; absent/pressure-excluded history; zero-base;
+  malformed plans/draws/old bundles and maps; Auto draws none; public views disclose
+  realized rounding without exposing seed/key; exact repeat and restore11 through
+  every remaining instant/exhaustion; post-round-draw fault rolls back public state.
+- Risk/checks: targeted new tests for math/sampler/capability/provenance; unchanged
+  random.test.ts C0 vectors; M94 connected regression; types, boundary/research,
+  preservation, document/evidence budgets, size/whitespace. No full frozen suite:
+  entry and transitive old dependencies unchanged. No new source/perception law;
+  native hidden-truth and denied-history controls cover receiving epistemic boundary.
+- RO009/020: triggered bounded receiving/dice comparison, retained history/meaning
+  and old law controls; broader claims remain conditional. RO001 source law unchanged.
+  Ledger SUB004/005/009, MEC012–018/022 PORT; EXP009–012 CORPUS; RET008 CONTROL,
+  never independent standing motive. No reduction or original verdict edits.
+- Budget:600s/command,1800s cumulative verification incl failures+15s bookkeeping;
+  at most2 evidence files/5MiB. One validation job. No gain/threshold amendments,
+  replacement contrast, seed search or extension. Ordinary bugs repaired with receipts.
+- Done: native causal consumption and signed probability gate, exact sampler law,
+  coupling/negative/continuation checks pass; otherwise checkpoint failed/incomplete.
+  Report candidate evidence for owner promotion decision, no automatic new reference.
 
-Next proposed gate: one predeclared current-truncation versus rounding comparison,
-with genuinely learned history, already-live reasons and a rolling regime.
-Check signed probabilities, actual sampling, coupling, zero/integer/role controls,
-hidden truth and exact continuation. No gain/threshold retuning or seed search;
-the M102 result names costs, foundation checks and unchanged package budgets.
-Reference promotion is a separate explicit decision after that evidence.
-
-Five bounded members mapped/zero full families;21 members/15 families/132 clauses
-and final current-candidate replay remain required. Autonomous peers/UI stay out.
-RO009/014/020 conditional; historical018 closed;4 closed total.
-| Research obligations | **0 active / 18 conditional / 0 unowned** |
+Five members mapped/zero accepted families;21/15/132 final scope unchanged.
+| Research obligations | **2 active / 16 conditional / 0 unowned** |
