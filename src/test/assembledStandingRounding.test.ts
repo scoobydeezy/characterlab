@@ -104,3 +104,10 @@ it('M103 continuation and rollback retain every rounding draw and frozen express
  expect(hit).toBe(true);expect({...fault.run.snapshot(),status:before.status}).toEqual(before);
  console.info('M103 CONTINUATION PASS11 -> '+clocks.join(',')+'; full saves/state/output/trace/identity; public rollback after actual rounding draw (private ledger covered separately)');
 },570000);
+
+it('M103 diagnostic unchanged failed frame: report consumed operands without another contrast',async()=>{
+ const a=await create(),p=capture(a.run),rows=p.ns.map(v=>{const n=rec(v,407n),roles=rec(f(n,2n),406n);return {key:key(f(n,1n)).slice(-32),die:String(uint(f(n,4n))),strengths:[1n,2n,3n,5n].map(i=>{const x=readQ(f(roles,i));return x.numerator+'/'+x.denominator;}),h:String(si(f(n,5n))),x:String(si(f(n,6n))),c:String(si(f(n,8n))),threshold:String(uint(f(n,10n)))};});
+ const arb=items(items(decode(a.b.s.registry),'list')[0],'set').find(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n&&key(f(v,1n))===key({kind:'typedIdentifier',namespaceId:1027n,payload:text('definition/task-arbitration')}))!;
+ console.info('M103 UNCHANGED FAILED-FRAME DIAGNOSTIC '+JSON.stringify({rows,probabilities:p.probabilities.map(v=>{const x=readQ(v);return x.numerator+'/'+x.denominator;}),mode:String(uint(f(p.data,8n))),contest:(()=>{const x=readQ(f(p.data,4n));return x.numerator+'/'+x.denominator;})(),rollThreshold:(()=>{const x=readQ(f(rec(f(rec(arb,171n),4n),440n),1n));return x.numerator+'/'+x.denominator;})(),draws:items(f(p.data,9n),'list').length}));
+ expect(uint(f(p.data,8n))).toBe(1n);expect(p.ns).toHaveLength(2);
+},570000);

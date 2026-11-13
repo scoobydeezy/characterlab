@@ -1,9 +1,16 @@
-# Current work — M103 standing-rounding comparison
+# Current work — M103 comparison incomplete
 Owner2026-11-13 approves the M102 proposed experiment; not reference promotion.
-Current reference remains0.84; candidate rules/registry0.85. One active package.
+Current reference remains0.84; experimental0.85 is not promoted. Package B active.
+[Result](ASSEMBLED_CHARACTER_M103_RESULT.md): owner urgency amendment pending; no
+dependent run/fixture change until approved. All original failed gates remain.
 Package A checkpoint INCOMPLETE: twelve paths; native start rejects0.85 at trace binding.
 Package B follows with traceBinding.ts plus fixes/tests within twelve changed paths;
-no comparison/budget reset or breadth. Existing130s approximate charge remains cumulative.
+no comparison/budget reset or breadth. Verification charge remains cumulative.
+
+Behavioral gate FAILED: candidate/reference both Auto with two live reasons.
+No replacement contrast. One unchanged candidate replay may disclose the consumed
+roles/modifiers/probabilities/threshold for diagnosis; no acceptance change.
+Independent types/C0/boundary/research checks finish; native gates remain unpassed.
 
 ## Bounded card — before implementation
 - Capability: genuinely acquired standing changes signed probabilities between

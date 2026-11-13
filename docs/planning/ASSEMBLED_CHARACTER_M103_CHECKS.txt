@@ -72,3 +72,136 @@ Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: unde
 
 EXIT 1; elapsed 59.552s
 CHARGED 126.207
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledStandingRounding.test.ts", "-t", "M103 native gate|M103 controls", "--reporter=verbose", "--bail=1"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledStandingRounding.test.ts > M103 native gate: acquired standing changes rolling probabilities between already-live reasons
+M103 PRECONDITION {"mode":"1","oldMode":"1","nuclei":2,"oldNuclei":2,"P":"98775/3572128"}
+
+ × src/test/assembledStandingRounding.test.ts > M103 native gate: acquired standing changes rolling probabilities between already-live reasons 151267ms
+   → expected 1n not to be 1n // Object.is equality
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (9)
+   Start at  10:11:22
+   Duration  155.66s (transform 2.62s, setup 0ms, collect 3.93s, tests 151.27s, environment 0ms, prepare 140ms)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledStandingRounding.test.ts > M103 native gate: acquired standing changes rolling probabilities between already-live reasons
+AssertionError: expected 1n not to be 1n // Object.is equality
+ ❯ src/test/assembledStandingRounding.test.ts:37:93
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+EXIT 1; elapsed 157.324s
+CHARGED 283.531
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledStandingRounding.test.ts", "-t", "M103 diagnostic unchanged", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledStandingRounding.test.ts > M103 diagnostic unchanged failed frame: report consumed operands without another contrast
+M103 UNCHANGED FAILED-FRAME DIAGNOSTIC {"rows":[{"key":"6e74656e742f7461736b2d6104010201","die":"6","strengths":["1/2","226688625/58120167121","139/939","0/1"],"h":"0","x":"1","c":"0","threshold":"67007393"},{"key":"6e74656e742f7461736b2d6204010201","die":"4","strengths":["3/8","-226688625/58120167121","0/1","0/1"],"h":"0","x":"0","c":"0","threshold":"67007393"}],"probabilities":["120381997418081898901/147573952589676412928","27191955171594514027/147573952589676412928"],"mode":"1","contest":"27191955171594514027/73786976294838206464","rollThreshold":"1/2","draws":0}
+
+ ✓ src/test/assembledStandingRounding.test.ts > M103 diagnostic unchanged failed frame: report consumed operands without another contrast 77132ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 9 skipped (10)
+   Start at  10:15:28
+   Duration  81.44s (transform 2.58s, setup 0ms, collect 3.87s, tests 77.13s, environment 0ms, prepare 136ms)
+
+
+EXIT 0; elapsed 83.055s
+CHARGED 366.586
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "-b", "--pretty", "false"]
+src/test/assembledStandingRounding.test.ts(111,331): error TS2345: Argument of type 'CanonicalValue' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+
+EXIT 1; elapsed 18.803s
+CHARGED 385.389
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/random.test.ts", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/random.test.ts > Campaign 0B addressed randomness > CV-RNG-001: has checked-in candidate-input, SHA-256, and first-128-bit vectors
+ ✓ src/test/random.test.ts > Campaign 0B addressed randomness > canonicalizes subject bindings and rejects duplicate pairs
+ ✓ src/test/random.test.ts > Campaign 0B addressed randomness > CV-RNG-002: maps every span boundary and rejects values outside the contract
+ ✓ src/test/random.test.ts > Campaign 0B addressed randomness > CV-RNG-003: records index-0, index-1, and fresh index-2 fallback paths exactly
+ ✓ src/test/random.test.ts > Campaign 0B addressed randomness > CV-RNG-004: verifies threshold uniformity and the published integer bounds
+ ✓ src/test/random.test.ts > Campaign 0B addressed randomness > CV-RNG-005: selects exact cumulative intervals in canonical item-ID order
+ ✓ src/test/random.test.ts > Campaign 0B addressed randomness > CV-RNG-006/007: unrelated draws and model identity cannot shift an address
+ ✓ src/test/random.test.ts > Campaign 0B addressed randomness > CV-RNG-008: explicitly couples different addresses and rejects invalid maps
+
+ Test Files  1 passed (1)
+      Tests  8 passed (8)
+   Start at  10:19:08
+   Duration  508ms (transform 74ms, setup 0ms, collect 87ms, tests 37ms, environment 0ms, prepare 139ms)
+
+
+EXIT 0; elapsed 2.101s
+CHARGED 387.490
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledReasonReference.test.ts", "-t", "M94 connected", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReasonReference.test.ts > M94 connected: context and earned standing still influence the actual decision
+M94 CONNECTED PASS context distinct -1/5/-2 changes probability; genuine D3 standing rescues weak reason, B0 ->9/64
+
+ ✓ src/test/assembledReasonReference.test.ts > M94 connected: context and earned standing still influence the actual decision 142707ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  10:19:19
+   Duration  147.02s (transform 2.58s, setup 0ms, collect 3.85s, tests 142.71s, environment 0ms, prepare 135ms)
+
+
+EXIT 0; elapsed 148.652s
+CHARGED 536.142
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "-b", "--pretty", "false"]
+
+EXIT 0; elapsed 18.685s
+CHARGED 554.827
+METADATA/PRESERVATION PASS: package A12/B2 source/test paths; no frozen trees/baseline changes;132 classifications unchanged;2 active/16 conditional/4 closed; line/CRLF byte/link/evidence caps. Native gate remains FAILED, not an acceptance pass. 0.297s
+CHARGED 555.124
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:boundaries"]
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+EXIT 0; elapsed 3.006s
+CHARGED 558.130
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:research"]
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":2,"conditional":16,"closed":4,"unowned":0,"verdicts":103,"reports":4334}
+
+EXIT 0; elapsed 3.936s
+CHARGED 562.066
+COMMAND ['cmd.exe', '/d', '/c', 'npm.cmd', 'run', 'check:git-size']
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.821s
+CHARGED 562.887
+COMMAND ['git', 'diff', '--cached', '--check']
+
+EXIT 0; elapsed 0.070s
+CHARGED 562.957
