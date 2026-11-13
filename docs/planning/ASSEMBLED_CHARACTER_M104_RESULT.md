@@ -116,3 +116,10 @@ size/whitespace checks pass; approximately426s/1800s verification including all
 failures and15s bookkeeping, longest162.339s/600s. No extension or production change.
 Diagnostic terminal trailing whitespace is preserved as literal hex escapes in
 CHECKS. Review complete; adoption remains the explicit owner decision above.
+
+## Owner adoption — 2026-11-13
+Owner approved the concrete ruling above and continuation. Reference is now
+assembled-reference/0.3, rules/registry0.85-candidate, globally. The earlier
+pending wording records the review state before this ruling.0.84 remains a control.
+All other policies/calibration/owners and limitations remain; M105 performs the
+affected DECISION refresh. No scientific superiority or family acceptance implied.

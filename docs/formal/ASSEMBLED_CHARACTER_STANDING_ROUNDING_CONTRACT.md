@@ -1,7 +1,7 @@
 # Standing modifier rounding — candidate0.1
-Owner-approved comparison2026-11-13, M103; not reference adoption.
+Owner adopted2026-11-13 after M103/M104: assembled-reference/0.3 engineering default, no superiority verdict.
 Contract assembled-character-standing-rounding/0.1-candidate.
-Candidate rules/registry0.85; old0.84 and earlier mathematics remain controls.
+Reference rules/registry0.85-candidate; old0.84 and earlier mathematics remain controls.
 
 ## Law and boundaries
 After existing SourceCoverage role/sign consolidation and one role bound, let
