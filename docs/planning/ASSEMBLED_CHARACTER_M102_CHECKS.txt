@@ -1,0 +1,83 @@
+M102 documentation/evidence review; plan d25f5fce; model0.84 unchanged.
+Budget600s/check;1800s total;2 evidence files/5MiB.
+Initial size/whitespace plan checks passed. Conservatively charge10s for initial size/guard work, plus15s bookkeeping.
+Two rejected in-memory drafts: AssertionError (66691, register byte cap), then AssertionError at65839 bytes. Neither wrote files. Compact shared link definitions/prose gave65486 bytes/205 lines; all evidence destinations retained. No budget amendment.
+No native runs, type tests or production edits authorized/performed.
+
+ONE permitted arithmetic command (Python Fraction; full source follows):
+
+from fractions import Fraction as F
+from collections import defaultdict
+from time import perf_counter
+from pathlib import Path
+start=perf_counter()
+Q=2**32
+def modifier(h):
+ h=max(F(-3),min(F(3),h)); sign=1 if h>=0 else -1
+ a=abs(h); n=a.numerator//a.denominator; residue=a-n
+ p=F((residue*Q).numerator//(residue*Q).denominator,Q)
+ return {sign*n:1-p, sign*(n+1):p} if p else {sign*n:F(1)}
+def score(h,direction=1):
+ out=defaultdict(F)
+ for m,p in modifier(h).items():
+  for face in range(1,5):out[direction*(face+m)]+=p/4
+ return out
+def win(a,b):
+ return sum(pa*pb*(F(1) if x>y else F(1,2) if x==y else F(0)) for x,pa in a.items() for y,pb in b.items())
+for h in [F(0),F(1,64),F(-1,64),F(1),F(-1),F(3),F(-3),F(4),F(-4),F(1,3),F(-1,3)]:
+ d=modifier(h); mean=sum(k*p for k,p in d.items()); target=max(F(-3),min(F(3),h))
+ assert sum(d.values())==1 and abs(target-mean)<F(1,Q)
+ assert d=={-k:p for k,p in modifier(-h).items()}
+ assert set(d).issubset(range(-3,4))
+p0=win(score(F(0)),score(F(0))); pp=win(score(F(1,64)),score(F(0))); pn=win(score(F(-1,64)),score(F(0)))
+assert (p0,pp,pn)==(F(1,2),F(1031,2048),F(1017,2048))
+assert win(score(F(1)),score(F(0)))==F(23,32)
+# The actual M89 source magnitude divided by its role bound and unit:
+raw=F(226688625,57893478496); h=(raw/(1+raw))/F(1,4)
+assert int(h)==0 and modifier(h)[1]>0
+# Direction is applied to the whole score; positive standing strengthens Avoid too.
+assert win(score(F(1,64),-1),score(F(0),-1))<F(1,2)
+elapsed=perf_counter()-start
+msg=(f'Illustrative arithmetic PASS: baseline {p0}; h=+1/64 {pp}; h=-1/64 {pn}; h=+1 {F(23,32)}.\n'
+     f'Actual M89 magnitude h={h}; old truncation0, proposed upper-step mass={modifier(h)[1]}.\n'
+     'Normalization, odd symmetry, integer endpoints, clamp and direction controls pass; mean error<2^-32 modifier units.\n'
+     'These are component arithmetic illustrations, not native runs, measured choice frequencies or law qualification.\n'
+     f'Arithmetic time {elapsed:.6f}s.\n')
+path=Path('docs/planning/ASSEMBLED_CHARACTER_M102_CHECKS.txt')
+header='M102 documentation/evidence review; plan d25f5fce; model0.84 unchanged.\nBudget600s/check;1800s total;2 evidence files/5MiB.\nInitial size/whitespace plan checks passed. Conservatively charge10s for initial size/guard work, plus15s bookkeeping.\nTwo rejected in-memory drafts: AssertionError (66691, register byte cap), then AssertionError at65839 bytes. Neither wrote files. Compact shared link definitions/prose gave65486 bytes/205 lines; all evidence destinations retained. No budget amendment.\nNo native runs, type tests or production edits authorized/performed.\n\nONE permitted arithmetic command (Python Fraction; full source follows):\n'
+# Source inserted by the caller; avoid creating a third evidence artifact.
+path.write_text(header,encoding='utf-8')
+print(msg)
+
+OUTPUT: PASS. d4: h0=1/2; h+1/64=1031/2048; h-1/64=1017/2048; h+1=23/32. M89 magnitude h=906754500/58120167121; upper-step mass67007393/4294967296. Normalization/sign/integer/cap/direction passed. Arithmetic wall command0.303s (kernel0.000955s).
+Document/preservation PASS in 0.644s:132 unique pinned clauses; E43/P57/N17/U15; only two P->E changes;21 members/5 mapped; all prior evidence link destinations/runtime names retained; links+JSON pointers resolve; line/byte limits; only7 planned paths; source/contracts/fixtures/baseline and historical reports unchanged; only RO001 edited;0 active/18 conditional/4 closed.
+COMMAND: cmd.exe /d /c npm.cmd run check:research
+EXIT:0; elapsed:4.206s
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4334}
+
+COMMAND: cmd.exe /d /c npm.cmd run check:git-size
+EXIT:0; elapsed:0.827s
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+COMMAND: git diff --check
+EXIT:0; elapsed:0.193s
+
+Cumulative verification charged 31.172s /1800s, including initial10s allowance, arithmetic0.303s and15s bookkeeping. One validation job; no native reruns.
+FINAL STAGED CHECK git diff --cached --check exit0 0.068s
+
+FINAL STAGED CHECK cmd.exe /d /c npm.cmd run check:git-size exit0 0.827s
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+Final charged verification 32.067s /1800s; longest command4.206s /600s. Analysis completed about16 minutes after plan (90-minute cap). No extension. Final receipt staging/whitespace covered by15s bookkeeping allowance.
