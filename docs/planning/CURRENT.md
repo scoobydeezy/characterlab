@@ -1,5 +1,6 @@
-# Current work — M104 reference-adoption review
-Review whether0.85 should replace0.84, then continue under the same guardrails.
+# Current work — M104 recommends0.85; owner adoption pending
+Review complete: recommend0.85 engineering reference. Native integer-standing
+comparison passes, including coupled decision semantics and complete calendars.
 Reference0.84 remains until an explicit owner ruling. M103 bounded pass is retained.
 No inference of adoption from a request to review; no new corpus/family acceptance.
 
@@ -14,7 +15,9 @@ No inference of adoption from a request to review; no new corpus/family acceptan
 - Scenario: unchanged M81 personal-breach arm. Two recognized perceived stand-ins;
   physical/nonsocial tasks; seed0; body30/cap100/rate10,delivery90@9;
   importance3/5,urgency1,known-zero threat. Both personal histories acquired normally.
-  Only model/registry versions vary. No importance/gain/threshold/fixture tuning.
+  Both arms add identical empty source-label/evidence declarations required by
+  registry46; original44 slots and input bytes unchanged. Only versions vary.
+  No importance/gain/threshold/fixture tuning. Admission failure retained.
 - Predeclared native comparison at10: two live d4 reasons; each real relationship
   source-1 -> bounded-1/2 -> modifier-2. Both probabilities1/2, contest1,
   stake/authorship1/3, QuietRoll. Candidate threshold0, upper-2, no rounding draw.
@@ -40,4 +43,4 @@ No inference of adoption from a request to review; no new corpus/family acceptan
   correspondence on the adopted reference; no immediate unrelated mechanism breadth.
 
 Five members mapped/zero accepted families;21/15/132 unchanged.
-Research obligations:0 active /18 conditional /0 unowned.
+| Research obligations | **0 active / 18 conditional / 0 unowned** |
