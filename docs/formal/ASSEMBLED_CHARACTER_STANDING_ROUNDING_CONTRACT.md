@@ -58,4 +58,6 @@ No ordering/perception/source-owner change; no second scheduler or state store.
 RO009 retained identity/provenance and RO020 dice/control grammar apply to the
 bounded candidate; broader biography/control/significance adequacy is not claimed.
 Current SourceCoverage/RO001 domain and pinned corpus/clauses remain unchanged.
+Trace binding admits rules0.85 under the existing exact model/run match; no phase
+matrix or authority changes. M103 package B repairs this omitted version admission.
 Comparison/card and failure limits are committed in CURRENT before code.

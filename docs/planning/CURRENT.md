@@ -1,6 +1,9 @@
 # Current work — M103 standing-rounding comparison
 Owner2026-11-13 approves the M102 proposed experiment; not reference promotion.
 Current reference remains0.84; candidate rules/registry0.85. One active package.
+Package A checkpoint INCOMPLETE: twelve paths; native start rejects0.85 at trace binding.
+Package B follows with traceBinding.ts plus fixes/tests within twelve changed paths;
+no comparison/budget reset or breadth. Existing130s approximate charge remains cumulative.
 
 ## Bounded card — before implementation
 - Capability: genuinely acquired standing changes signed probabilities between
@@ -12,7 +15,9 @@ Current reference remains0.84; candidate rules/registry0.85. One active package.
 - Exactly12 production/test paths planned: assembled/{standingRounding,codecs,
   reasons,arbitration,random,comparison,model,inputs,execution,decisionView}.ts;
   test/fixtures/assembledStandingRounding.ts; test/assembledStandingRounding.test.ts.
-  No changes to frozen controls/dependencies. Split before any13th path.
+  Package A stops before13th path. B admits ROUNDING_RULES in existing trace binder
+  while retaining exact model/run match; same native comparisons and controls.
+  No changes to frozen controls/dependencies.
 - Scenario: M89 acquired-history fixture; three physical/nonsocial tasks, existing
   permitted body/reading channels; body30/cap100/rate10/delivery90@9, seed0.
   Training10 unchanged (A importance1/B3/5, genuine qualification; Values unlinked).

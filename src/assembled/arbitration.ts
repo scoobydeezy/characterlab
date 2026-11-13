@@ -5,9 +5,10 @@ import {cognitiveRecord as r,randomDrawRecord} from './codecs';
 import {ZERO,ONE,absolute,convolve,expectation,readDistribution,readQ,qValue} from '../campaign2/cognitiveMath';
 import {dataField as f,dataItems as items,dataKey as key,dataUnsigned as uint,invalidModel} from '../campaign2/canonicalData';
 import {analyzeOptions} from './configurationMath';
-import type {ArbitrationDraws} from '../campaign2/cognitiveArbitration';
+import type {StandingDraws} from './random';
+import {standingSample,ROUNDING_SPAN} from './standingRounding';
 function context(value:CanonicalValue){const reason=rec(value,408n),raw=rec(f(reason,2n),403n),options=rec(f(raw,2n),398n);return {nuclei:items(f(reason,3n),'list'),candidates:items(f(options,3n),'list').map(v=>f(rec(v,397n),1n))};}
-export async function arbitrationOutput(occurrence:CanonicalValue,at:bigint,reasonContext:CanonicalValue,definition:CanonicalValue,draws:ArbitrationDraws,maxCandidates=2){
+export async function arbitrationOutput(occurrence:CanonicalValue,at:bigint,reasonContext:CanonicalValue,definition:CanonicalValue,draws:StandingDraws,maxCandidates=2){
  if(at<=0n)invalidModel('positive resolution time required');
  const {nuclei,candidates}=context(reasonContext),def=rec(definition,440n);
  if(!candidates.length||!nuclei.length)return r(409,[occurrence,signed(at),reasonContext,r(419,[u(candidates.length?2:1)])]);
@@ -18,10 +19,17 @@ export async function arbitrationOutput(occurrence:CanonicalValue,at:bigint,reas
  if(analytical.mode!=='Auto'){
   const scores=new Map(candidates.map(c=>[key(c),0n]));
   for(const value of nuclei){const n=rec(value,407n),nk=rec(f(n,1n),404n),draw=randomDrawRecord(await draws.reason(value)),face=uint(f(draw,3n))+1n;
-   const h=f(n,5n),x=f(n,6n),c=n.schema.schemaVersion===2n?f(n,8n):signed(0);if(typeof h==='boolean'||h.kind!=='signed'||typeof x==='boolean'||x.kind!=='signed'||typeof c==='boolean'||c.kind!=='signed')invalidModel('signed modifiers');
-   const contribution=(uint(f(nk,4n))===1n?1n:-1n)*(face+h.value+x.value+c.value),candidate=key(f(nk,1n));
+   const h=f(n,5n),x=f(n,6n),c=n.schema.schemaVersion>=2n?f(n,8n):signed(0);if(typeof h==='boolean'||h.kind!=='signed'||typeof x==='boolean'||x.kind!=='signed'||typeof c==='boolean'||c.kind!=='signed')invalidModel('signed modifiers');
+   let realized=h.value;const rounding:CanonicalValue[]=[];
+   if(n.schema.schemaVersion===3n){
+    if(uint(f(draw,4n))!==uint(f(n,4n))||face<1n||face>uint(f(n,4n)))invalidModel('reason draw span/result');
+    const upper=f(n,9n),threshold=uint(f(n,10n));if(typeof upper==='boolean'||upper.kind!=='signed')invalidModel('standing upper');
+    let word:bigint|undefined;if(threshold){if(!draws.rounding)invalidModel('missing standing draw capability');const rd=randomDrawRecord(await draws.rounding!(value));if(uint(f(rd,4n))!==ROUNDING_SPAN)invalidModel('standing draw span');word=uint(f(rd,3n));rounding.push(rd);}
+    realized=standingSample(h.value,upper.value,threshold,word);
+   }
+   const contribution=(uint(f(nk,4n))===1n?1n:-1n)*(face+realized+x.value+c.value),candidate=key(f(nk,1n));
    if(!scores.has(candidate))invalidModel('nucleus outside candidate domain');scores.set(candidate,scores.get(candidate)!+contribution);
-   reasonDraws.push(r(422,[nk,f(n,4n),h,x,draw,u(face),signed(contribution),...(n.schema.schemaVersion===2n?[c]:[])],n.schema.schemaVersion===2n?2:1));
+   reasonDraws.push(r(422,[nk,f(n,4n),h,x,draw,u(face),signed(contribution),...(n.schema.schemaVersion>=2n?[c]:[]),...(n.schema.schemaVersion===3n?[list(rounding),signed(realized)]:[])],Number(n.schema.schemaVersion)));
   }
   const top=[...scores.values()].reduce((a,b)=>a>b?a:b),leaders=candidates.filter(c=>scores.get(key(c))===top).sort((a,b)=>key(a)<key(b)?-1:1);
   chosen=leaders[0];if(leaders.length>1){const draw=randomDrawRecord(await draws.tie(leaders));chosen=leaders[Number(uint(f(draw,3n)))];tie=r(423,[u(2),list(leaders),draw,chosen]);}

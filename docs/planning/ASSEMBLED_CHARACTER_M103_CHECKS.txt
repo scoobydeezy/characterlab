@@ -1,0 +1,74 @@
+M103 plan8f663faf. Candidate0.85; reference0.84 retained. Budget1800s total/600s command;2 evidence files/5MiB. Initial plan size/whitespace allowance5s plus15s bookkeeping. One job. Failures preserved.
+CHARGED 20.000
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "-b", "--pretty", "false"]
+src/assembled/codecs.ts(135,266): error TS2551: Property 'value' does not exist on type 'CanonicalValue'. Did you mean 'valueOf'?
+  Property 'value' does not exist on type 'false'.
+src/assembled/codecs.ts(135,293): error TS2551: Property 'value' does not exist on type 'CanonicalValue'. Did you mean 'valueOf'?
+  Property 'value' does not exist on type 'false'.
+src/assembled/codecs.ts(135,308): error TS2551: Property 'value' does not exist on type 'CanonicalValue'. Did you mean 'valueOf'?
+  Property 'value' does not exist on type 'false'.
+src/assembled/codecs.ts(135,338): error TS2551: Property 'value' does not exist on type 'CanonicalValue'. Did you mean 'valueOf'?
+  Property 'value' does not exist on type 'false'.
+src/assembled/codecs.ts(135,353): error TS2551: Property 'value' does not exist on type 'CanonicalValue'. Did you mean 'valueOf'?
+  Property 'value' does not exist on type 'false'.
+src/assembled/random.ts(14,118): error TS2339: Property 'kind' does not exist on type 'CanonicalValue'.
+  Property 'kind' does not exist on type 'false'.
+
+EXIT 1; elapsed 21.337s
+CHARGED 41.337
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "-b", "--pretty", "false"]
+src/test/assembledStandingRounding.test.ts(102,141): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+
+EXIT 1; elapsed 18.694s
+CHARGED 60.031
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledStandingRounding.test.ts", "-t", "M103 exact law", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledStandingRounding.test.ts > M103 exact law: symmetric bounded rounding retains integer and zero endpoints
+M103 KERNEL PASS signed mean error<2^-32, normalization, integer/cap/zero/Avoid and threshold boundaries
+
+ ✓ src/test/assembledStandingRounding.test.ts > M103 exact law: symmetric bounded rounding retains integer and zero endpoints
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  10:08:16
+   Duration  4.59s (transform 2.66s, setup 0ms, collect 3.98s, tests 7ms, environment 0ms, prepare 311ms)
+
+
+EXIT 0; elapsed 6.624s
+CHARGED 66.655
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledStandingRounding.test.ts", "-t", "M103 native gate|M103 controls", "--reporter=verbose", "--bail=1"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledStandingRounding.test.ts > M103 native gate: acquired standing changes rolling probabilities between already-live reasons 53601ms
+   → assembled trace requires exact model/run binding
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (9)
+   Start at  10:08:42
+   Duration  57.91s (transform 2.59s, setup 0ms, collect 3.88s, tests 53.60s, environment 0ms, prepare 140ms)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledStandingRounding.test.ts > M103 native gate: acquired standing changes rolling probabilities between already-live reasons
+SchedulerContractError: assembled trace requires exact model/run binding
+ ❯ Module.compileCharacterTraceBinding src/assembled/traceBinding.ts:27:1524
+
+ ❯ Module.createCharacterRuntime src/assembled/runtime.ts:108:14
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:122
+ ❯ Module.create src/test/fixtures/assembledStandingRounding.ts:31:60
+ ❯ src/test/assembledStandingRounding.test.ts:32:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+EXIT 1; elapsed 59.552s
+CHARGED 126.207

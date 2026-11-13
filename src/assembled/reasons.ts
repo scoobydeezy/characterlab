@@ -1,3 +1,4 @@
+import {standingPlan,standingDistribution} from './standingRounding';
 import {PRIORITY_ADOPTION_OBS} from './priority';
 /** assembled-character-habit/0.1: two actions x two tasks, unchanged per-group mathematics. */
 import {list,type CanonicalValue} from '../substrate/canonicalEncoding';
@@ -57,7 +58,7 @@ const valueCalibration=()=>{const m=r(439,[rational(1,1),unsigned(3)]);return r(
 const min=(a:Q,b:Q)=>a.compare(b)<0?a:b,max=(a:Q,b:Q)=>a.compare(b)>0?a:b;
 /** Port of the accepted role/sign aggregate kernel with explicit description IDs.
  * No world/state/RNG reader. Only authenticated raw input arrives from execution. */
-export function compileDescribedReasons(value:CanonicalValue,taskDice:CanonicalValue,maxDomain=3,coverageLaw:'Jaccard'|'SourceCoverage'='Jaccard',contextReasons=false){
+export function compileDescribedReasons(value:CanonicalValue,taskDice:CanonicalValue,maxDomain=3,coverageLaw:'Jaccard'|'SourceCoverage'='Jaccard',contextReasons=false,rounding=false){
  if(coverageLaw!=='Jaccard'&&coverageLaw!=='SourceCoverage')reject('coverage law');
  const raw=receivingRecord(cloneCognitive(value),403n);if(raw.schema.schemaVersion!==3n)reject('requires described raw403/3');
  const descriptions=items(f(raw,6n),'list'),actions=new Set<string>(),tasks=new Set<string>();
@@ -108,8 +109,10 @@ export function compileDescribedReasons(value:CanonicalValue,taskDice:CanonicalV
   const modifier=(v:Q,field:bigint)=>{const d=rec(f(def,field),439n),unit=readQ(f(d,1n)),cap=uint(f(d,2n));if(unit.compare(ZERO)<=0||cap>3n)reject('modifier calibration');const scaled=v.divide(unit),raw=scaled.numerator/scaled.denominator;return raw>cap?cap:raw< -cap?-cap:raw;};
   let die=4n;cutoffs.forEach((cutoff,i)=>{if(absolute(base.net).compare(cutoff)>=0)die=[4n,6n,8n,10n,12n][i];});
   const h=modifier(standing.net,3n),x=modifier(situation.net,4n),c=modifier(context.net,4n),distribution=new Map<bigint,Q>();
-  for(let face=1n;face<=die;face++)distribution.set(direction*(face+h+x+c),Q.of(1n,die));
-  nuclei.push(r(407,[nk,r(406,[qValue(base.net),qValue(standing.net),qValue(situation.net),list([...base.traces,...standing.traces,...situation.traces,...context.traces]),...(contextReasons?[qValue(context.net)]:[])],contextReasons?2:1),qValue(relevance),unsigned(die),signed(h),signed(x),distributionValue(distribution),...(contextReasons?[signed(c)]:[])],contextReasons?2:1));
+  const hd=rec(f(def,3n),439n),plan=standingPlan(standing.net,readQ(f(hd,1n)),uint(f(hd,2n)));
+  if(rounding&&!contextReasons)reject('rounding requires context successor');
+  for(const [score,mass] of rounding?standingDistribution(die,direction,x,c,plan):Array.from({length:Number(die)},(_,i)=>[direction*(BigInt(i+1)+h+x+c),Q.of(1n,die)] as const))distribution.set(score,mass);
+  nuclei.push(r(407,[nk,r(406,[qValue(base.net),qValue(standing.net),qValue(situation.net),list([...base.traces,...standing.traces,...situation.traces,...context.traces]),...(contextReasons?[qValue(context.net)]:[])],contextReasons?2:1),qValue(relevance),unsigned(die),signed(h),signed(x),distributionValue(distribution),...(contextReasons?[signed(c)]:[]),...(rounding?[signed(plan.upper),unsigned(plan.threshold)]:[])],rounding?3:contextReasons?2:1));
  }
  nuclei.sort((a,b)=>key(f(rec(a,407n),1n))<key(f(rec(b,407n),1n))?-1:1);
  reports.sort((a,b)=>key(items(a,'list')[0])<key(items(b,'list')[0])?-1:1);

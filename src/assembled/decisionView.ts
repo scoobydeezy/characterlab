@@ -2,8 +2,9 @@
  * Only character.ts exposes this over its own committed runtime records. */
 import {list,text,typedIdentifier,type CanonicalValue} from '../substrate/canonicalEncoding';
 import {dataField as f,dataItems as items,dataKey as key,dataUnsigned as uint,dataText as txt,invalidModel} from '../campaign2/canonicalData';
-import {receivingRecord as rec} from './codecs';
+import {receivingRecord as rec,randomDrawRecord} from './codecs';
 import {PROTOCOL_OBSERVATION_VERSION,validatePermittedEvidenceRecordClosure} from '../observation/observation';
+export const ROUNDING_DECISION_VIEW_VERSION='assembled-decision-view/0.3-candidate';
 export const CONTEXT_DECISION_VIEW_VERSION='assembled-decision-view/0.2-candidate';
 export const DECISION_VIEW_VERSION='assembled-decision-view/0.1-candidate';
 const allowed=new Set([237n,371n,395n,399n,400n,401n,404n,424n,428n,203n,204n,205n]);
@@ -27,10 +28,10 @@ function chosen(decision:CanonicalValue){
 function expression(value:CanonicalValue){
  const e=rec(value,426n),intent=rec(f(e,2n),425n),d=rec(f(intent,2n),409n),data=chosen(d),context=rec(f(d,3n),408n),raw=rec(f(context,2n),403n);
  const reasons=items(f(raw,3n),'set').map(v=>{const r=rec(v,402n);return list([f(r,1n),f(r,2n),f(r,3n)]);});
- const nuclei=items(f(context,3n),'list').map(v=>{const n=rec(v,407n),roles=rec(f(n,2n),406n);return list([f(n,1n),list([f(roles,1n),f(roles,2n),f(roles,3n),...(n.schema.schemaVersion===2n?[f(roles,5n)]:[])]),f(n,4n),f(n,5n),f(n,6n),f(n,7n),...(n.schema.schemaVersion===2n?[f(n,8n)]:[])]);});
+ const nuclei=items(f(context,3n),'list').map(v=>{const n=rec(v,407n),roles=rec(f(n,2n),406n);return list([f(n,1n),list([f(roles,1n),f(roles,2n),f(roles,3n),...(n.schema.schemaVersion>=2n?[f(roles,5n)]:[])]),f(n,4n),f(n,5n),f(n,6n),f(n,7n),...(n.schema.schemaVersion>=2n?[f(n,8n)]:[]),...(n.schema.schemaVersion===3n?[f(n,9n),f(n,10n)]:[])]);});
  const probabilities=items(f(data,2n),'list').map(v=>{const p=rec(v,421n);return list([f(p,1n),f(p,2n)]);});
  const channels=items(f(e,3n),'list').map(v=>{const c=rec(v,427n);return list([f(c,1n),f(c,2n)]);});
- return {e,intent,d,contextual:items(f(context,3n),'list').some(v=>rec(v,407n).schema.schemaVersion===2n),value:list([f(e,1n),f(data,1n),list(reasons),list(nuclei),list(probabilities),...([3n,4n,5n,6n,7n,8n].map(n=>f(data,n))),list(channels),f(e,4n)])};
+ return {e,intent,d,rounding:items(f(context,3n),'list').some(v=>rec(v,407n).schema.schemaVersion===3n),contextual:items(f(context,3n),'list').some(v=>rec(v,407n).schema.schemaVersion>=2n),value:list([f(e,1n),f(data,1n),list(reasons),list(nuclei),list(probabilities),...([3n,4n,5n,6n,7n,8n].map(n=>f(data,n))),list(channels),f(e,4n)])};
 }
 const eventType=(name:string)=>key(typedIdentifier(1001,text('event/'+name)));
 export function decisionHistoryView(outputs:readonly CanonicalValue[],traces:readonly CanonicalValue[]):CanonicalValue {
@@ -61,19 +62,20 @@ export function decisionHistoryView(outputs:readonly CanonicalValue[],traces:rea
   const ek=key(f(evidence,1n));if(seen.has(ek))fail('ambiguous observation');seen.add(ek);
   observed.set(k,[...(observed.get(k)??[]),evidence]);
  }
- const view=list([text((expressions.some(e=>e.contextual)?CONTEXT_DECISION_VIEW_VERSION:DECISION_VIEW_VERSION)+'/history'),list(expressions.map(e=>list([f(e.d,1n),f(e.d,2n),f(e.intent,1n),e.value,list(observed.get(key(f(e.d,1n)))??[])])))]);
+ const view=list([text((expressions.some(e=>e.rounding)?ROUNDING_DECISION_VIEW_VERSION:expressions.some(e=>e.contextual)?CONTEXT_DECISION_VIEW_VERSION:DECISION_VIEW_VERSION)+'/history'),list(expressions.map(e=>list([f(e.d,1n),f(e.d,2n),f(e.intent,1n),e.value,list(observed.get(key(f(e.d,1n)))??[])])))]);
  validateDecisionView(view);return view;
 }
 export function decisionPresentationView(outputs:readonly CanonicalValue[]):CanonicalValue {
- const rows:CanonicalValue[]=[];let contextual=false;
+ const rows:CanonicalValue[]=[];let contextual=false,rounding=false;
  for(const value of outputs.filter(v=>is(v,409n))){
   const decision=rec(value,409n),result=rec(f(decision,4n),419n);
   if(uint(f(result,1n))!==3n)continue;
-  contextual ||= items(f(rec(f(decision,3n),408n),3n),'list').some(v=>rec(v,407n).schema.schemaVersion===2n);
+  rounding ||= items(f(rec(f(decision,3n),408n),3n),'list').some(v=>rec(v,407n).schema.schemaVersion===3n);
+  contextual ||= items(f(rec(f(decision,3n),408n),3n),'list').some(v=>rec(v,407n).schema.schemaVersion>=2n);
   const data=chosen(decision);if(uint(f(data,8n))!==3n)continue;
-  const faces=items(f(data,9n),'list').map(v=>{const d=rec(v,422n);return list([f(d,1n),f(d,2n),f(d,3n),f(d,4n),f(d,6n),f(d,7n),...(d.schema.schemaVersion===2n?[f(d,8n)]:[])]);});
+  const faces=items(f(data,9n),'list').map(v=>{const d=rec(v,422n);return list([f(d,1n),f(d,2n),f(d,3n),f(d,4n),f(d,6n),f(d,7n),...(d.schema.schemaVersion>=2n?[f(d,8n)]:[]),...(d.schema.schemaVersion===3n?[list(items(f(d,9n),'list').map(v=>f(randomDrawRecord(v),3n))),f(d,10n)]:[])]);});
   const tie=rec(f(data,10n),423n);
   rows.push(list([f(decision,1n),f(data,1n),list(faces),list(uint(f(tie,1n))===2n?[f(tie,4n)]:[])]));
  }
- const view=list([text((contextual?CONTEXT_DECISION_VIEW_VERSION:DECISION_VIEW_VERSION)+'/player'),list(rows)]);validateDecisionView(view);return view;
+ const view=list([text((rounding?ROUNDING_DECISION_VIEW_VERSION:contextual?CONTEXT_DECISION_VIEW_VERSION:DECISION_VIEW_VERSION)+'/player'),list(rows)]);validateDecisionView(view);return view;
 }
