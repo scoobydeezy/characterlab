@@ -1,9 +1,12 @@
 /** M103 declared in plan8f663faf. Native M89 training; current permitted readings0/0 at12.
+ * Owner amendment c1e9940a: A observed urgency4/5 at12 only; original Auto control retained.
  * Three nonsocial physical tasks; body30/cap100/rate10/delivery90@9; seed0. */
 import {expect} from 'vitest';
 import {outputs,signedValue} from './assembledComparison';
 import {fixture as history,learned,standing,withoutStanding} from './assembledStandingSources';
 import {ROUNDING_RULES,ROUNDING_REGISTRY,WITNESS_RULES,WITNESS_REGISTRY} from '../../assembled/model';
+import {PRIORITY_DISPLAY} from '../../assembled/priority';
+import {taskA} from './assembledDecisionRegimes';
 import {REASON_READING} from '../../assembled/reasonEvidence';
 import {prepareCharacterModel,createCharacterRun} from '../../assembled/character';
 import {compileDescribedReasons} from '../../assembled/reasons';
@@ -18,14 +21,17 @@ import {record,type CanonicalValue} from '../../substrate/canonicalEncoding';
 import {readQ,qValue,ZERO,ONE,readDistribution} from '../../campaign2/cognitiveMath';
 import {ExactRational as Q} from '../../substrate/exactMath';
 import {ROUNDING_SPAN} from '../../assembled/standingRounding';
-export function fixture(candidate=true,pressure=false,hidden=false){
- const b=history(true,pressure,hidden);let changed=0;
+export function fixture(candidate=true,pressure=false,hidden=false,amended=true){
+ const b=history(true,pressure,hidden);let changed=0,urgencyChanged=0;
  const rows=items(decode(b.d.orderedInputs),'list').map(v=>{
   const row=[...items(v,'list')];
   if(key(row[0])===key(signed(12))&&key(row[2])===key(REASON_READING)){
    const p=[...items(row[3],'list')];expect(p.slice(0,4)).toEqual([q(1,1),q(1,1),true,true]);p[0]=q(0,1);p[1]=q(0,1);row[3]=list(p);changed++;
+  }
+  if(amended&&key(row[0])===key(signed(12))&&key(row[2])===key(PRIORITY_DISPLAY)){
+   const p=items(row[3],'list');row[3]=list([p[0],list(items(p[1],'list').map(v=>{const t=[...items(v,'list')];if(key(t[0])===key(taskA)){expect(t[3]).toEqual(list([q(1,1)]));t[3]=list([q(4,5)]);urgencyChanged++;}return list(t);}))]);
   }return list(row);
- });expect(changed).toBe(1);
+ });expect(changed).toBe(1);expect(urgencyChanged).toBe(amended?1:0);
  return {s:{...b.s,rulesVersion:candidate?ROUNDING_RULES:WITNESS_RULES,registrySchemaVersion:candidate?ROUNDING_REGISTRY:WITNESS_REGISTRY},d:{...b.d,orderedInputs:enc(list(rows))}};
 }
 export async function create(b=fixture(),at=12n){const run=await createCharacterRun(await prepareCharacterModel(b.s),b.d);await through(run,at);return {b,run};}

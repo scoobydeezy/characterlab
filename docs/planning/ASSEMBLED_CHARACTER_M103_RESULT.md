@@ -61,20 +61,30 @@ Its contest is27191955171594514027/73786976294838206464, below thetaRoll1/2;
 Auto consequently makes zero draws. This is a failed test-design precondition,
 not evidence that the candidate sampling law succeeds or fails.
 
-## Pending concrete amendment
+## Sole approved amendment also failed — stop
 
-Requested, not applied: at12 only, change task A's normally observed urgency
-from1 to4/5 in both arms. Retained importance and all training stay unchanged.
-Expected base4/9 moves A to d4 while preserving unequal motivational meaning;
-the existing situation+1 then supplies a rolling comparison against B's d4.
-That expectation still must pass native liveness/rolling/nonzero-standing gates.
+Owner approval was recorded at c1e9940a before the fixture changed. At12 only,
+task A's normally observed urgency changed1 ->4/5 in both arms. Importance,
+training, laws, thresholds, seed0, coupling and the acceptance gate stayed fixed.
+The original case is still available as fixture(..., amended=false).
 
-Keep the original Auto case as a control. No changes to laws, threshold, unit,
-gain, seed0, coupling, continuation or signed-probability requirement; no further
-replacement if this amendment fails. No dependent implementation/run proceeds
-without owner approval. The work order's Replay and interpretation rule requires
-a comparison amendment; the approved M102 gate also prohibits substituting a
-failed contrast.
+The replacement again produced two live reasons, acquired P=98775/3572128,
+and Auto in both arms. It failed the same precondition before the probability,
+sampling and coupling assertions. No third contrast was attempted or authorized.
+
+My amendment prediction was wrong in two ways: priority is I*(1+U)/2, not I*U,
+and the configured die bands begin at1/5,2/5,3/5,4/5,1; d6 begins at2/5.
+For I=1,U=4/5 the priority formula gives9/10 and bounded base9/19, still in
+the d6 band. Even the incorrectly predicted4/9 would be in that band.
+This is a test-design/analysis error, not evidence against the candidate law.
+
+A configuration-only diagnostic verifies exactly one input field changed and
+checks those equations against production priority/bounding functions and the
+actual configured bands. It passes without another native simulation.
+The9/19 calculation is source/configuration arithmetic, not an amended native
+operand capture. Native evidence establishes the repeated Auto precondition.
+The next experiment needs review from the actual equations before another run;
+this checkpoint does not authorize a further fixture search or gate substitution.
 
 ## Checks, failures and remaining evidence
 
@@ -86,7 +96,9 @@ Type/static/research/preservation outcomes and charged time are appended below.
 Retained repairs: canonical-value narrowing errors; missing test-spy this type;
 a diagnostic record narrowing error; source review found an overbroad schema3
 description-validator branch before native execution. Native version admission
-failure is retained with its bounded package split. No fixture replacement ran.
+failure is retained with its bounded package split. The sole approved replacement
+failed; its configuration diagnostic initially had a missing closure, repaired
+and rerun successfully. That syntax failure remains in the checks log.
 
 Still unpassed: the primary rolling/ablation/exhaustive sampled comparison,
 native matched face/rounding coupling, candidate pressure/privacy/admission/view
@@ -97,7 +109,16 @@ RO009/020 remain ACTIVE for this receiving experiment; broader claims retain
 their limits. RO001 stays conditional. Five bounded members/zero accepted
 families and the final21 members/15 families/132 clauses remain unchanged.
 
-Independent types, boundary, research, preservation, document/evidence limits and
-staged size/whitespace checks pass. Cumulative verification **562.96s /1800s**
-including failures and15s bookkeeping; remaining **1237.04s** carries forward.
-Longest command157.32s /600s. No budget extension. Native gates remain unpassed.
+Latest types pass after the fixture/diagnostic edits. Prior arithmetic, C0,
+M94 and boundary checks remain applicable: production code did not change in
+this amendment. Research/preservation/metadata and staged size/whitespace
+receipts follow in the checks log. No full-suite pass is claimed.
+Verification remains within1800s cumulative and600s per command, including
+all failures and15s bookkeeping; no reset or extension. Final charge follows.
+
+Final independent research/preservation/metadata/size checks pass. Receipt trailing
+spaces flagged by staged whitespace validation were rendered as literal hex escapes;
+no failed diagnostic content was removed. Final whitespace recheck is in the log.
+Cumulative verification is **about810s /1800s**, including failures and15s
+bookkeeping; about990s unused. Longest command162.071s /600s. Verification stops
+here with M103 incomplete; unused time does not authorize another contrast.

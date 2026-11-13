@@ -228,7 +228,7 @@ identify actual gaps. Historical gate status does not override later accepted cl
 
 ## Current authorization boundary
 Owner2026-11-13 approves M103 and its sole at12 A urgency1 ->4/5 amendment.
-Candidate0.85 is experimental; reference0.84 remains pending a later adoption ruling.
+Both contrasts failed rolling; no further replacement. Candidate0.85 unqualified; reference0.84 remains.
 No new member replay, UI, publishing or whole-assembly acceptance follows.
 
 ## Owner ruling — unknown factors and live gates (2026-11-02)

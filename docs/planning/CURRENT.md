@@ -1,17 +1,14 @@
-# Current work — M103 approved amendment
-Owner2026-11-13 approves the M102 proposed experiment; not reference promotion.
-Current reference remains0.84; experimental0.85 is not promoted. Package B active.
-Owner approved the bounded urgency amendment2026-11-13: at12 only, task A
-observed urgency1 ->4/5 in both arms. Training/importance/laws/seed/gates unchanged.
-Original Auto case remains a control; no further replacement if this fails.
-Verification resumes at562.957s charged;1237.043s remain of the same1800s.
-Package A checkpoint INCOMPLETE: twelve paths; native start rejects0.85 at trace binding.
-Package B follows with traceBinding.ts plus fixes/tests within twelve changed paths;
-no comparison/budget reset or breadth. Verification charge remains cumulative.
-
-Behavioral gate FAILED: candidate/reference both Auto with two live reasons.
-That original failure and its unchanged diagnostic are retained in the result/log.
-The one owner-approved amendment now proceeds; native gates still must pass.
+# Current work — M103 stopped incomplete
+Reference0.84 remains; experimental0.85 is unqualified and not promoted.
+Owner approved the sole at12 task A urgency1 ->4/5 amendment2026-11-13,
+recorded before execution at c1e9940a. It also failed: both arms Auto despite
+two live reasons and nonzero acquired standing. No further contrast is authorized.
+Original and amended failures remain. My predicted4/9/d4 was wrong: actual
+priority is I*(1+U)/2 and d6 starts2/5. The configuration diagnostic passes;
+the native sampling/coupling/continuation gates remain unpassed.
+Package A stopped INCOMPLETE at twelve paths; B changed three source/test paths.
+Same1800s budget, no reset/extension. Final charged time is in M103_RESULT/CHECKS.
+Review the experiment design against actual equations before any new comparison.
 
 ## Bounded card — before implementation
 - Capability: genuinely acquired standing changes signed probabilities between
@@ -32,8 +29,8 @@ The one owner-approved amendment now proceeds; native gates still must pass.
   At12 both reading values become0 and A urgency4/5 (approved amendment),
   permission true; all other declarations
   and complete calendar retained. This removes extra evidence pressure in both
-  arms; expected rolling regime and two already-live reasons, without calibration
-  tuning. Assert liveness/rolling/nonzero signed standing before probability gate.
+  arms; the expected rolling regime failed in both comparisons. Liveness/rolling/
+  nonzero-standing preconditions remain mandatory before the probability gate.
 - Primary: candidate learned versus removal of standing from captured12 raw only;
   operands never enter live state. Current0.84 on same calendar is truncation control.
   Actual pressure-at10 control excludes formation; hidden diagnostic control leaves

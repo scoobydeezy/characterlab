@@ -205,3 +205,134 @@ COMMAND ['git', 'diff', '--cached', '--check']
 
 EXIT 0; elapsed 0.070s
 CHARGED 562.957
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledStandingRounding.test.ts", "-t", "M103 native gate|M103 controls", "--reporter=verbose", "--bail=1"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledStandingRounding.test.ts > M103 native gate: acquired standing changes rolling probabilities between already-live reasons
+M103 PRECONDITION {"mode":"1","oldMode":"1","nuclei":2,"oldNuclei":2,"P":"98775/3572128"}
+
+ × src/test/assembledStandingRounding.test.ts > M103 native gate: acquired standing changes rolling probabilities between already-live reasons 155892ms
+   → expected 1n not to be 1n // Object.is equality
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (10)
+   Start at  11:09:01
+   Duration  160.42s (transform 2.71s, setup 0ms, collect 4.05s, tests 155.90s, environment 0ms, prepare 144ms)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledStandingRounding.test.ts > M103 native gate: acquired standing changes rolling probabilities between already-live reasons
+AssertionError: expected 1n not to be 1n // Object.is equality
+ ❯ src/test/assembledStandingRounding.test.ts:37:93
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+EXIT 1; elapsed 162.071s
+CHARGED 725.028
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledStandingRounding.test.ts", "-t", "M103 configured-boundary diagnosis", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+
+ Test Files  1 failed (1)
+      Tests  no tests
+   Start at  11:13:29
+   Duration  382ms (transform 12ms, setup 0ms, collect 0ms, tests 0ms, environment 0ms, prepare 141ms)
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledStandingRounding.test.ts [ src/test/assembledStandingRounding.test.ts ]
+Error: Transform failed with 1 error:
+C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/src/test/assembledStandingRounding.test.ts:133:0: ERROR: Unexpected end of file
+  Plugin: vite:esbuild
+  File: C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/src/test/assembledStandingRounding.test.ts:133:0
+\x20\x20
+  Unexpected end of file
+  131|   console.info('M103 CONFIGURATION DIAGNOSIS: only approved urgency changed; actual priority I*(1+U)/2 gives9/10, bounded9/19; d6 begins2/5. Predicted4/9/d4 was wrong in both equation and band. No new simulation/contrast.');
+  132|  });
+  133|\x20\x20
+     |  ^
+\x20\x20
+ ❯ failureErrorWithLog ../../../../Documents/GitHub/characterlab/node_modules/esbuild/lib/main.js:1472:15
+ ❯ ../../../../Documents/GitHub/characterlab/node_modules/esbuild/lib/main.js:755:50
+ ❯ responseCallbacks.<computed> ../../../../Documents/GitHub/characterlab/node_modules/esbuild/lib/main.js:622:9
+ ❯ handleIncomingPacket ../../../../Documents/GitHub/characterlab/node_modules/esbuild/lib/main.js:677:12
+ ❯ Socket.readFromStdout ../../../../Documents/GitHub/characterlab/node_modules/esbuild/lib/main.js:600:7
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { __vitest_rollup_error__: { plugin: 'vite:esbuild', id: 'C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/src/test/assembledStandingRounding.test.ts', loc: { column: +0, file: 'C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/src/test/assembledStandingRounding.test.ts', length: +0, line: 133, lineText: '', namespace: '', suggestion: '' }, frame: '\nUnexpected end of file\n131|   console.info(\'M103 CONFIGURATION DIAGNOSIS: only approved urgency changed; actual priority I*(1+U)/2 gives9/10, bounded9/19; d6 begins2/5. Predicted4/9/d4 was wrong in both equation and band. No new simulation/contrast.\');\n132|  });\n133|  \n   |  ^\n' } }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+EXIT 1; elapsed 1.985s
+CHARGED 727.013
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledStandingRounding.test.ts", "-t", "M103 configured-boundary diagnosis", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledStandingRounding.test.ts > M103 configured-boundary diagnosis: approved urgency change cannot reach the predicted die band
+M103 CONFIGURATION DIAGNOSIS: only approved urgency changed; actual priority I*(1+U)/2 gives9/10, bounded9/19; d6 begins2/5. Predicted4/9/d4 was wrong in both equation and band. No new simulation/contrast.
+
+ ✓ src/test/assembledStandingRounding.test.ts > M103 configured-boundary diagnosis: approved urgency change cannot reach the predicted die band 52556ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 10 skipped (11)
+   Start at  11:13:47
+   Duration  56.90s (transform 2.63s, setup 0ms, collect 3.93s, tests 52.56s, environment 0ms, prepare 134ms)
+
+
+EXIT 0; elapsed 58.517s
+CHARGED 785.530
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "-b", "--pretty", "false"]
+
+EXIT 0; elapsed 18.955s
+CHARGED 804.485
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:research"]
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":2,"conditional":16,"closed":4,"unowned":0,"verdicts":103,"reports":4334}
+
+EXIT 0; elapsed 3.891s
+CHARGED 808.376
+
+METADATA/PRESERVATION PASS: package A12/B3; only declared source/test paths; frozen trees/baseline/corpus unchanged; all F rows and E43/P57/N17/U15 unchanged; only RO009/020 amended, counts2active/16conditional/4closed; line/CRLF byte/link/evidence caps. Native gate remains FAILED.
+{"AGENTS.md": [120, 8516], "docs/planning/CURRENT.md": [64, 4956], "docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md": [250, 18817], "docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md": [205, 65422]}
+CHARGED 808.801
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:git-size"]
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.823s
+CHARGED 809.624
+
+COMMAND ["git", "diff", "--cached", "--check"]
+docs/planning/ASSEMBLED_CHARACTER_M103_CHECKS.txt:254: trailing whitespace.
++\x20\x20
+docs/planning/ASSEMBLED_CHARACTER_M103_CHECKS.txt:258: trailing whitespace.
++  133|\x20\x20
+docs/planning/ASSEMBLED_CHARACTER_M103_CHECKS.txt:260: trailing whitespace.
++\x20\x20
+
+EXIT 2; elapsed 0.071s
+CHARGED 809.695
+
+Receipt formatting: terminal diagnostic trailing spaces are represented losslessly as literal \x20 (tabs as \x09) after staged whitespace check flagged them. No error content or failed result removed.
+
+COMMAND ["git", "diff", "--cached", "--check"]
+
+EXIT 0; elapsed 0.071s
+CHARGED 809.766

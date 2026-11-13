@@ -1,3 +1,5 @@
+import {factoredPriority} from '../assembled/priority';
+import {bounded} from '../campaign2/cognitiveMath';
 import {it,expect,vi} from 'vitest';
 import {standingPlan,standingDistribution,standingSample,ROUNDING_SPAN,STANDING_ROUNDING_VERSION} from '../assembled/standingRounding';
 import {createAssembledRandomSession} from '../assembled/random';
@@ -106,8 +108,25 @@ it('M103 continuation and rollback retain every rounding draw and frozen express
 },570000);
 
 it('M103 diagnostic unchanged failed frame: report consumed operands without another contrast',async()=>{
- const a=await create(),p=capture(a.run),rows=p.ns.map(v=>{const n=rec(v,407n),roles=rec(f(n,2n),406n);return {key:key(f(n,1n)).slice(-32),die:String(uint(f(n,4n))),strengths:[1n,2n,3n,5n].map(i=>{const x=readQ(f(roles,i));return x.numerator+'/'+x.denominator;}),h:String(si(f(n,5n))),x:String(si(f(n,6n))),c:String(si(f(n,8n))),threshold:String(uint(f(n,10n)))};});
+ const a=await create(fixture(true,false,false,false)),p=capture(a.run),rows=p.ns.map(v=>{const n=rec(v,407n),roles=rec(f(n,2n),406n);return {key:key(f(n,1n)).slice(-32),die:String(uint(f(n,4n))),strengths:[1n,2n,3n,5n].map(i=>{const x=readQ(f(roles,i));return x.numerator+'/'+x.denominator;}),h:String(si(f(n,5n))),x:String(si(f(n,6n))),c:String(si(f(n,8n))),threshold:String(uint(f(n,10n)))};});
  const arb=items(items(decode(a.b.s.registry),'list')[0],'set').find(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n&&key(f(v,1n))===key({kind:'typedIdentifier',namespaceId:1027n,payload:text('definition/task-arbitration')}))!;
  console.info('M103 UNCHANGED FAILED-FRAME DIAGNOSTIC '+JSON.stringify({rows,probabilities:p.probabilities.map(v=>{const x=readQ(v);return x.numerator+'/'+x.denominator;}),mode:String(uint(f(p.data,8n))),contest:(()=>{const x=readQ(f(p.data,4n));return x.numerator+'/'+x.denominator;})(),rollThreshold:(()=>{const x=readQ(f(rec(f(rec(arb,171n),4n),440n),1n));return x.numerator+'/'+x.denominator;})(),draws:items(f(p.data,9n),'list').length}));
  expect(uint(f(p.data,8n))).toBe(1n);expect(p.ns).toHaveLength(2);
 },570000);
+
+it('M103 configured-boundary diagnosis: approved urgency change cannot reach the predicted die band',()=>{
+ const amended=fixture(),original=fixture(true,false,false,false);
+ const aa=items(decode(amended.d.orderedInputs),'list'),oo=items(decode(original.d.orderedInputs),'list');
+ expect(aa.length).toBe(oo.length);const changed=aa.map((v,i)=>key(v)!==key(oo[i])?i:-1).filter(i=>i>=0);
+ expect(changed).toHaveLength(1);const a=items(aa[changed[0]],'list'),o=items(oo[changed[0]],'list');
+ for(const i of [0,1,2,4])expect(a[i]).toEqual(o[i]);expect(a[0]).toEqual(signed(12));
+ const ap=items(a[3],'list'),op=items(o[3],'list');expect(ap[0]).toEqual(op[0]);
+ const ar=items(ap[1],'list'),or=items(op[1],'list');let changes=0;
+ ar.forEach((row,i)=>{const r=items(row,'list'),before=items(or[i],'list');r.forEach((v,j)=>{if(key(v)!==key(before[j])){expect(j).toBe(3);expect(v).toEqual(list([q(4,5)]));expect(before[j]).toEqual(list([q(1,1)]));changes++;}});});expect(changes).toBe(1);
+ const dice=rec(definition(amended.s),437n),cuts=[1n,2n,3n,4n,5n].map(i=>readQ(f(rec(f(dice,1n),438n),i)));
+ expect(cuts).toEqual([Q.of(1n,5n),Q.of(2n,5n),Q.of(3n,5n),Q.of(4n,5n),ONE]);
+ const motive=factoredPriority(ONE,Q.of(4n,5n)),base=bounded(motive);
+ expect(motive).toEqual(Q.of(9n,10n));expect(base).toEqual(Q.of(9n,19n));
+ expect(base.compare(cuts[1])).toBeGreaterThan(0);expect(base.compare(cuts[2])).toBeLessThan(0);
+ console.info('M103 CONFIGURATION DIAGNOSIS: only approved urgency changed; actual priority I*(1+U)/2 gives9/10, bounded9/19; d6 begins2/5. Predicted4/9/d4 was wrong in both equation and band. No new simulation/contrast.');
+});
