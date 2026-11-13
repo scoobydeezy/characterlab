@@ -1,16 +1,17 @@
-# Current work — M103 comparison incomplete
+# Current work — M103 approved amendment
 Owner2026-11-13 approves the M102 proposed experiment; not reference promotion.
 Current reference remains0.84; experimental0.85 is not promoted. Package B active.
-[Result](ASSEMBLED_CHARACTER_M103_RESULT.md): owner urgency amendment pending; no
-dependent run/fixture change until approved. All original failed gates remain.
+Owner approved the bounded urgency amendment2026-11-13: at12 only, task A
+observed urgency1 ->4/5 in both arms. Training/importance/laws/seed/gates unchanged.
+Original Auto case remains a control; no further replacement if this fails.
+Verification resumes at562.957s charged;1237.043s remain of the same1800s.
 Package A checkpoint INCOMPLETE: twelve paths; native start rejects0.85 at trace binding.
 Package B follows with traceBinding.ts plus fixes/tests within twelve changed paths;
 no comparison/budget reset or breadth. Verification charge remains cumulative.
 
 Behavioral gate FAILED: candidate/reference both Auto with two live reasons.
-No replacement contrast. One unchanged candidate replay may disclose the consumed
-roles/modifiers/probabilities/threshold for diagnosis; no acceptance change.
-Independent types/C0/boundary/research checks finish; native gates remain unpassed.
+That original failure and its unchanged diagnostic are retained in the result/log.
+The one owner-approved amendment now proceeds; native gates still must pass.
 
 ## Bounded card — before implementation
 - Capability: genuinely acquired standing changes signed probabilities between
@@ -28,7 +29,8 @@ Independent types/C0/boundary/research checks finish; native gates remain unpass
 - Scenario: M89 acquired-history fixture; three physical/nonsocial tasks, existing
   permitted body/reading channels; body30/cap100/rate10/delivery90@9, seed0.
   Training10 unchanged (A importance1/B3/5, genuine qualification; Values unlinked).
-  At12 only both reading values become0, permission true, all other declarations
+  At12 both reading values become0 and A urgency4/5 (approved amendment),
+  permission true; all other declarations
   and complete calendar retained. This removes extra evidence pressure in both
   arms; expected rolling regime and two already-live reasons, without calibration
   tuning. Assert liveness/rolling/nonzero signed standing before probability gate.
@@ -56,7 +58,7 @@ Independent types/C0/boundary/research checks finish; native gates remain unpass
   never independent standing motive. No reduction or original verdict edits.
 - Budget:600s/command,1800s cumulative verification incl failures+15s bookkeeping;
   at most2 evidence files/5MiB. One validation job. No gain/threshold amendments,
-  replacement contrast, seed search or extension. Ordinary bugs repaired with receipts.
+  further replacement contrast, seed search or extension. Bugs repaired with receipts.
 - Done: native causal consumption and signed probability gate, exact sampler law,
   coupling/negative/continuation checks pass; otherwise checkpoint failed/incomplete.
   Report candidate evidence for owner promotion decision, no automatic new reference.
