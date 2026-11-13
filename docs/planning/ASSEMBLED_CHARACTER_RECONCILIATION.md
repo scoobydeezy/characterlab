@@ -1,7 +1,7 @@
 # Assembled Character — reconciliation and requirement evidence
 
 Owner approved D1–D5 on2026-10-25 with the D2 condition below.
-Reference0.85; M107 passed.5 mapped/0 families; RO001/009/020 conditional.
+Reference0.85; M108 active.5 mapped/0 families; RO001/009/020 conditional.
 
 ## Decision sheet — adopted 2026-10-25
 
