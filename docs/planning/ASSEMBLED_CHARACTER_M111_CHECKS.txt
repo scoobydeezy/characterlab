@@ -1,2 +1,25 @@
 M111 verification — original cumulative cap1800 seconds; serial commands.
 CHARGED 15.000
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "-b", "--pretty", "false"]
+
+EXIT 0; elapsed 18.613s
+CHARGED 33.613
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledBiographyFeedback.test.ts", "-t", "M111 feedback admission", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledBiographyFeedback.test.ts > M111 feedback admission preserves old domains and model binding
+M111 ADMISSION PASS:0.88 Boolean admitted/identity committed;0.87 false, mixed version, malformed Boolean and changed frozen field reject.
+
+ ✓ src/test/assembledBiographyFeedback.test.ts > M111 feedback admission preserves old domains and model binding 56339ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  10:50:50
+   Duration  60.71s (transform 2.63s, setup 0ms, collect 3.95s, tests 56.34s, environment 0ms, prepare 132ms)
+
+
+EXIT 0; elapsed 62.319s
+CHARGED 95.932
