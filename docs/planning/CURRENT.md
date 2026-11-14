@@ -1,8 +1,13 @@
-# Current work — M110 full biography calendar correspondence
+# Current work — M110 incomplete: calendar admission limit
 Owner continuation after M109. Reference0.85 remains adopted; candidate0.86 supplies
 the proven comparison protocol. One character; no new production code or law.
 
-## Bounded card — before code
+M110 STOP:19 opportunities exceed16-source caps for identity/self/Values/reasons.
+[Result and concrete next step](ASSEMBLED_CHARACTER_M110_RESULT.md). No native
+instant executed; no cohort/paired/continuation success. Widen via a bounded
+versioned successor before resuming unchanged comparison; old limits preserved.
+
+## Original bounded card — committed before code
 - Capability1: sixteen actual acquisitions over the original19-opportunity layout,
   with early-biography differences followed by common experimental draws.
 - Capability2: authenticate retained qualifications/refold, frozen historical meaning

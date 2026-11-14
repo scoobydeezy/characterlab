@@ -1,0 +1,111 @@
+M110 plan df526263.1800s cumulative incl15s bookkeeping; all attempts retained. No production changes or witness search.
+CHARGED 15.000
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "-b", "--pretty", "false"]
+
+EXIT 0; elapsed 19.505s
+CHARGED 34.505
+
+Pre-execution code review: inherited snapshot helper caches by run handle. Use a fresh observational handle per settled frame after direct lockstep stepping, so assertions cannot read stale cached snapshots. No production/source/comparison change.
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledBiographyCalendar.test.ts", "-t", "M110 arm 6", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledBiographyCalendar.test.ts > M110 arm 6 full calendar and exact continuation 54463ms
+   → identity context source domain
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledBiographyCalendar.test.ts > M110 arm 6 full calendar and exact continuation
+SchedulerContractError: identity context source domain
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.compileCharacterInputs src/assembled/inputs.ts:94:76
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:63
+ ❯ Module.create src/test/fixtures/assembledBiographyHistory.ts:42:156
+ ❯ src/test/assembledBiographyCalendar.test.ts:9:29
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  20:14:38
+   Duration  59.05s (transform 2.75s, setup 0ms, collect 4.16s, tests 54.46s, environment 0ms, prepare 145ms)
+
+
+EXIT 1; elapsed 60.705s
+CHARGED 95.210
+
+STOP: first admission rejects19 identity contexts against accepted max16. No simulation ran. Read-only source diagnosis added to identify all calendar capacities together; no unchanged admission retry. Code review also corrects the initial absent-formation sentinel to undefined and reads final snapshot once. These prepared behavioral branches remain unexecuted. No gate, scenario or production change.
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledBiographyCalendar.test.ts", "-t", "M110 source declaration", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledBiographyCalendar.test.ts > M110 source declaration diagnosis after admission failure
+M110 SOURCE COUNTS [["event/assembled-priority-display",22],["event/assembled-practice-setting",20],["event/assembled-strategy-display",2],["event/assembled-social-source",3],["event/regulatory-diagnostic-probe",1],["event/assembled-body-sample",3],["event/assembled-reappraisal-source",9],["event/assembled-position-source",9],["event/assembled-body-delivery",1],["event/assembled-performance-setting",1],["event/deliberation-opportunity",19],["event/assembled-identity-context",19],["event/assembled-self-context",19],["event/assembled-values-context",19],["event/assembled-reason-reading",19]]
+
+ ✓ src/test/assembledBiographyCalendar.test.ts > M110 source declaration diagnosis after admission failure 53034ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  20:17:05
+   Duration  57.36s (transform 2.61s, setup 0ms, collect 3.92s, tests 53.03s, environment 0ms, prepare 139ms)
+
+
+EXIT 0; elapsed 58.984s
+CHARGED 154.194
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "-b", "--pretty", "false"]
+
+EXIT 0; elapsed 18.598s
+CHARGED 172.792
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:boundaries"]
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+EXIT 0; elapsed 3.040s
+CHARGED 175.832
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:research"]
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4334}
+
+EXIT 0; elapsed 4.120s
+CHARGED 179.952
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,json,re\nbase='3daada9b'\ndef old(p):return subprocess.check_output(['git','show',base+':'+p]).decode('utf-8')\nallowed={'AGENTS.md','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md','docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md','docs/planning/ASSEMBLED_CHARACTER_M110_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M110_CHECKS.txt','docs/planning/ASSEMBLED_CHARACTER_M110_RECEIPTS.json','src/test/assembledBiographyCalendar.test.ts','src/test/fixtures/assembledBiographyCalendar.ts'}\nchanged=set(subprocess.check_output(['git','diff',base,'--name-only']).decode().splitlines())|set(subprocess.check_output(['git','ls-files','--others','--exclude-standard']).decode().splitlines())\nassert changed==allowed,(changed-allowed,allowed-changed)\nassert len([p for p in changed if p.startswith('src/')])==2\nfor p,cap in {'AGENTS.md':120,'docs/planning/CURRENT.md':80,'docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md':250,'docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md':250}.items():\n s=Path(p).read_text(encoding='utf-8');assert len(s.splitlines())<=cap,(p,len(s.splitlines()))\np='docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md';s=Path(p).read_text(encoding='utf-8')\nassert len(s.replace('\\n','\\r\\n').encode())<=65536\nfor marker in [' | F-',' | C-']:\n assert [l for l in old(p).splitlines() if marker in l and 'C-BIO' not in l]==[l for l in s.splitlines() if marker in l and 'C-BIO' not in l]\nfor p in ['docs/planning/RESEARCH_OBLIGATIONS.json','docs/planning/ASSEMBLED_CHARACTER_BASELINE.json']:\n assert json.loads(old(p))==json.loads(Path(p).read_text(encoding='utf-8'))\npaths=list(Path('docs/planning').glob('ASSEMBLED_CHARACTER_M110_*'));assert sorted(p.suffix for p in paths)==['.json','.md','.txt']\nsize=sum(p.stat().st_size for p in paths);assert size<5*1024*1024\nr=json.loads(Path('docs/planning/ASSEMBLED_CHARACTER_M110_RECEIPTS.json').read_text(encoding='utf-8'));assert r['arms']=={} and r['status'].startswith('BLOCKED')\nlog=Path('docs/planning/ASSEMBLED_CHARACTER_M110_CHECKS.txt').read_text(encoding='utf-8')\nassert 'EXIT 1;' in log and 'identity context source domain' in log and 'M110 SOURCE COUNTS' in log\nprint('PASS exact9 intended paths;2 new test/helper paths;3 evidence files/'+str(size)+' bytes. No production/formal/old tests/reference/baseline changes. C-BIO remains unresolved; all other C/F rows and obligation metadata unchanged. Native failure retained, no completed receipt or claimed simulation gate. Document and final21/15/132 scope preserved.')\n"]
+PASS exact9 intended paths;2 new test/helper paths;3 evidence files/9538 bytes. No production/formal/old tests/reference/baseline changes. C-BIO remains unresolved; all other C/F rows and obligation metadata unchanged. Native failure retained, no completed receipt or claimed simulation gate. Document and final21/15/132 scope preserved.
+
+EXIT 0; elapsed 0.725s
+CHARGED 180.677
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:git-size"]
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.826s
+CHARGED 181.503
+
+COMMAND ["git", "diff", "--cached", "--check"]
+
+EXIT 0; elapsed 0.052s
+CHARGED 181.555
