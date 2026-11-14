@@ -29,11 +29,11 @@ export function altered(p:ReturnType<typeof live>,strength:(signal:CanonicalValu
  const change=(signal:CanonicalValue)=>role(signal)!==3n?signal:r(402,[f(rec(signal,402n),1n),qValue(strength(signal)),authored?r(400,[map([])]):f(rec(signal,402n),3n)]);
  return rec(replace(replace(p.raw,3n,set(items(f(p.raw,3n),'set').map(change))),6n,list(items(f(p.raw,6n),'list').map(v=>{const d=items(v,'list');return list([d[0],d[1],change(d[2])]);}))),403n);
 }
-export function alternatives(run:Run,p:ReturnType<typeof live>,source:ReturnType<typeof fixture>['s'],at:bigint){
+export function alternatives(run:Run,p:ReturnType<typeof live>,source:ReturnType<typeof fixture>['s'],at:bigint,reversedAt=26n){
  const before=prefix(run,at);expect(formationValue(before.value)).toEqual(formationValue(p.input[1]));expect(formationSignals(p.input[0],before.value).output).toEqual(p.source);
- const absent=ablation(p,source),wrong=at===26n?reinterpret(run,p):before.P;
+ const absent=ablation(p,source),wrong=at===reversedAt?reinterpret(run,p):before.P;
  return laws.map(law=>{
-  const raw=law==='DisplayOnly'||law==='HistoryOnly'?absent.raw:law==='AuthoredTrait'?altered(p,s=>action(f(rec(f(rec(s,402n),1n),401n),1n))==='A'?Q.of(1n,2n):Q.of(-1n,2n),true):law==='RecomputedHistory'&&at===26n?altered(p,s=>readQ(f(rec(s,402n),2n)).multiply(wrong).divide(before.P)):p.raw;
+  const raw=law==='DisplayOnly'||law==='HistoryOnly'?absent.raw:law==='AuthoredTrait'?altered(p,s=>action(f(rec(f(rec(s,402n),1n),401n),1n))==='A'?Q.of(1n,2n):Q.of(-1n,2n),true):law==='RecomputedHistory'&&at===reversedAt?altered(p,s=>readQ(f(rec(s,402n),2n)).multiply(wrong).divide(before.P)):p.raw;
   expect(nonstanding(raw)).toEqual(nonstanding(p.raw));for(const n of [1n,2n,4n,5n])expect(f(raw,n)).toEqual(f(p.raw,n));
   expect(set(items(f(raw,3n),'set').filter(v=>role(v)!==3n))).toEqual(set(items(f(p.raw,3n),'set').filter(v=>role(v)!==3n)));
   const ns=compileDescribedReasons(raw,definition(source),3,'SourceCoverage',true,true).nuclei;expect(ns).toHaveLength(2);for(const n of ns)expect(uint(f(rec(n,407n),4n))).toBe(4n);
