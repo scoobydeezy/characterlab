@@ -1,7 +1,7 @@
 # Assembled Character — reconciliation and requirement evidence
 
-Owner approved D1–D5 on2026-10-25 with the D2 condition below.
-Reference0.89, feedback TRUE; M114 maps EPI.7 mapped/0 families; wider debts conditional.
+D1–D5 adopted2026-10-25; D2 condition below.
+Reference0.89; feedback TRUE.8 mapped/0 families; wider debts conditional.
 
 ## Decision sheet — adopted 2026-10-25
 
@@ -17,7 +17,7 @@ Reference0.89, feedback TRUE; M114 maps EPI.7 mapped/0 families; wider debts con
 4. **D4 YES:** M3's early interaction gate precedes breadth, per SEQ/W1/W2.
 5. **D5 YES:** O1–O6 consolidation; no framework or separate cleanup milestone.
 
-No winner, completion, corpus closure or reduction inferred.
+No law victory, corpus closure or reduction inferred.
 
 One register <=250 lines/65,536 CRLF bytes. M2: db0ca7a8/abe7a3ce; M1:60b8fd2b.
 Basenames: src/campaign3. C rows map members; F rows index all pinned clauses.
@@ -37,7 +37,7 @@ E is version-scoped evidence, NOT clause acceptance or a current-model rerun. Pr
 all cited result limits; P/N/U remain open. Final candidate replay/classification is
 required even for E. This index promotes no historical result to a broader claim.
 Evidence index: E43/P57/N17/U15 =132. Not a completion percentage. Mapped members:
-7/21; accepted complete families:0/15. Denominator unchanged.
+8/21; accepted complete families:0/15. Denominator unchanged.
 [M102] reassesses all15 rows: only12.2-5 and12.13-8
 move P to E; other130 classifications remain. Cited evidence stays version-scoped.
 
@@ -106,7 +106,7 @@ move P to E; other130 classifications remain. Cited evidence stays version-scope
 | DISTINCT OPERATION | V3 — changed ownership/perception seams | Existing `src/test/{semanticPhaseOrdering,semanticPhaseRollbackCause,semanticStateAuthority,semanticNegativeControls,evidenceProvenance,phenSem001Binding,observationIntegration,campaign2AdaptRollbackStages}.test.ts`; FND3–6. | Select affected vector cases before coding: hidden truth/same evidence; wrong observer/reference; absent/zero; no current-feedback read; conflicting write; whole-instant rollback. Add a successor join witness only where old tests cannot exercise the new edge. | Catches epistemic leaks, two writers and partial commits. Invalidators: owner declarations, evidence/binding/recognition, phase/schema, source or trace. Old test passage alone does not qualify new joins; no runtime checks executed in M2. |
 | DISTINCT OPERATION | V4 — incremental and final replay | C/F rows and [baseline][ref3] pin scope;18 conditional obligations remain. | Post-M60: MEMORY first, then AFFECT/DECISION serially. Pin executable R2 and original fixtures/projections/checkpoints/IDs; record covered/blocked requirements here. Witness/control passes are not member closure. | Invalidate on mapped producer/consumer/state/law/source change. One affected member per milestone; no parallel audit.10min/check30min total,20files/5MiB; split/amend before execution. Missing producers stay open. |
 | UNRESOLVED | C-ADAPT — PHEN-ADAPT-001 v1.11.0 | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/0); `src/campaign2/factory.ts`. | Route M2/FND2/FND4. Required `PHEN-ADAPT-001:3..19` (inclusive). | Replay pending; U1/V4. |
-| UNRESOLVED | C-DET — PHEN-DET-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/1); `src/campaign2/cognitiveFactory.ts`. | Route S1/V1/FND1/FND3/FND4. Required `PHEN-DET-001:2..11` (inclusive). | Replay pending; U1/V4. |
+| EQUIVALENT (mapped domain) | C-DET — PHEN-DET-001 v1.0.0-draft | [M115](ASSEMBLED_CHARACTER_M115_RESULT.md); originals. | :2..9 mapped0.89; :10/11 tracked. Insertion/key/replay/no-draw/failure. | Test-only insertion/local-index control; native effective-key change. Final replay required. |
 | EQUIVALENT (mapped domain) | C-EPI — PHEN-EPI-001 v1.3.0-draft | [M114](ASSEMBLED_CHARACTER_M114_RESULT.md); original controls. | :2..9 mapped on0.89; :10/11 tracked. Safe effect/SEM/learning/encoding/later read; shared owners/retention; restore/rollback. | One perfect effect sensor; original leak/lattice controls retained. Retention/identity correspondence explicit; RO007/010 limits; final replay required. |
 | UNRESOLVED | C-SEM — PHEN-SEM-001 v1.12.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/3); `src/test/phenSem001Binding.test.ts`. | Route M1/FND3/FND6. Required `PHEN-SEM-001:2..13` (inclusive). | Replay pending; U1/V4. |
 | UNRESOLVED | C-LEARN — PHEN-LEARN-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/4); `src/campaign3/learnFactory.ts`. | Route M5/L3. Required `PHEN-LEARN-001:2..11` (inclusive). | Replay pending; U1/V4. |

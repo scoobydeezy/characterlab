@@ -161,3 +161,39 @@ PASS: Git index contains no files at or above50,000,000 bytes.
 
 EXIT 0; elapsed 0.847s
 CHARGED 648.475
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:boundaries"]
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+EXIT 0; elapsed 3.182s
+CHARGED 651.657
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:research"]
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4336}
+
+EXIT 0; elapsed 4.054s
+CHARGED 655.711
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,json\nbase='875b29c0'\ndef old(p):return subprocess.check_output(['git','show',base+':'+p],text=True,encoding='utf8')\nallowed={'AGENTS.md','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_M115_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M115_CHECKS.txt','docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md','docs/planning/RESEARCH_OBLIGATIONS.json','src/test/assembledDeterminism.test.ts'}\nchanged=set(subprocess.check_output(['git','diff',base,'--name-only'],text=True).splitlines())|set(subprocess.check_output(['git','ls-files','--others','--exclude-standard'],text=True).splitlines())\nassert changed==allowed,(changed-allowed,allowed-changed)\nfor p,n in {'AGENTS.md':120,'docs/planning/CURRENT.md':80,'docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md':250,'docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md':250}.items():assert len(Path(p).read_text(encoding='utf8').splitlines())<=n,p\np='docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md';s=Path(p).read_text(encoding='utf8');assert len(s.replace('\\n','\\r\\n').encode())<=65536\nfor marker in [' | C-',' | F-']:\n assert [x for x in old(p).splitlines() if marker in x and 'C-DET' not in x]==[x for x in s.splitlines() if marker in x and 'C-DET' not in x]\nassert len([x for x in s.splitlines() if x.startswith('| EQUIVALENT') and ' | C-' in x])==8\nassert 'E43/P57/N17/U15' in s\np='docs/planning/RESEARCH_OBLIGATIONS.json';a=json.loads(old(p));b=json.loads(Path(p).read_text(encoding='utf8'))\nfor k in a:\n if k!='reportReviews':assert a[k]==b[k],k\nassert b['reportReviews'][:-1]==a['reportReviews']\nr=b['reportReviews'][-1];assert r['path']=='docs/planning/ASSEMBLED_CHARACTER_M115_RESULT.md' and r['obligations']==[] and r['noneRemainingReason']\nassert subprocess.check_output(['git','diff','2179f7e5','--','src/test/assembledDeterminism.test.ts'],text=True)==''\nlog=Path('docs/planning/ASSEMBLED_CHARACTER_M115_CHECKS.txt').read_text(encoding='utf8')\ndef receipt(name):\n rows=[json.loads(x.split(name+' ',1)[1]) for x in log.splitlines() if x.startswith(name+' ')]\n assert len(rows)==1,(name,len(rows))\n return rows[0]\nx=receipt('M115 INSERTION PASS');y=receipt('M115 KEY PASS');z=receipt('M115 NO-DRAW FAILURE PASS')\nassert x['draws']==x['insertions']==7 and x['localWord']!=x['changedIndexWord']\nassert x['settlements']==['10','11','12','13','14','20','40','101','101:end']\nassert y['firstDivergence']==215 and y['at']=='10' and y['phase']==80 and y['wordA']!=y['wordB']\nassert y['faceA']=='1' and y['faceB']=='0' and y['continuation']=='9->101 exact'\nassert z=={'noDrawFinal':'101','draws':0,'matchedFaults':2,'failedAt':'10','priorClock':'9'}\nfor item in ['unsupported receiving record version','TEST READER REPAIR','25 passed (25)','Reference boundary check passed.','PASS: research obligation references']:assert item in log,item\npaths=list(Path('docs/planning').glob('ASSEMBLED_CHARACTER_M115_*'));size=sum(p.stat().st_size for p in paths)\nassert len(paths)==2 and size<5*1024*1024\nprint('PASS: seven intended paths; one test, zero production/formal/frozen-control/baseline changes. Native7/7 insertion invariance, phase80 key divergence, complete no-draw/failure/continuation receipts and25 foundation tests preserved; reader failure retained. Eight mapped members, all other C/F rows and132-clause evidence index unchanged. Obligations unchanged except explicit foundation report rationale. Document caps and two evidence files/'+str(size)+' bytes pass.')\n"]
+PASS: seven intended paths; one test, zero production/formal/frozen-control/baseline changes. Native7/7 insertion invariance, phase80 key divergence, complete no-draw/failure/continuation receipts and25 foundation tests preserved; reader failure retained. Eight mapped members, all other C/F rows and132-clause evidence index unchanged. Obligations unchanged except explicit foundation report rationale. Document caps and two evidence files/18817 bytes pass.
+
+EXIT 0; elapsed 0.760s
+CHARGED 656.471
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:git-size"]
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.836s
+CHARGED 657.307
