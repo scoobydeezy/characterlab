@@ -1,20 +1,18 @@
-# Current work — M110 control repair; native verification pending
-One character;0.85 adopted;0.87 candidate; full BIO/continuation incomplete.
-Owner continuation2026-11-14 authorizes next identified repair, not extra runtime.
-[Prior timing](ASSEMBLED_CHARACTER_M110_RESULT.md): inspection47% lower; restore43.364s.
-Three code paths: control.ts, ControlValidation test, existing BiographyCalendar test.
-Keep control/0.1 semantics; delegated base validates once, then all local/cross-state
-checks run. Owned patches/full validation/restore retain full checks; no new framework.
-Base proof: state.ts inheritedState and each intervening owner validate patch results;
-retention validates removals, strategy retains local validation. Habit/performance
-are the immediate base alternatives. Identity uses this same composition contract.
-Focused checks: real habit owner plus validating test base; unchanged state/diffs,
-invalid base/local/foreign/frame evidence, owner/scope/mixed/lifecycle and no-op cases.
-Six focused tests pass; types/native pending. Charged1968.518/1980s.
-Timing-only flag preserves existing CPU evidence; same phase marks and stop rules.
-Prepared next checks: types30s, existing0.85 full-save240s, one M110 diagnostic160s,
-control native rollback150s, final checks20s; require explicit budget before running.
-Done: bounded repair verified with no byte/acceptance change; no BIO closure claim.
+# Current work — M110 autonomous completion, owner-authorized
+Owner2026-11-14 authorizes local amendments/repairs until M110 is completed. Record
+scope/budget changes before execution; preserve scenarios, laws, seeds and all gates.
+One active package/job;12 production/test paths;4 evidence files/5MiB. No new breadth.
+First verification tranche: cumulative cap3780s (prior1968.518); command max600s.
+Types30s;0.85 exact full-save240s;control native rollback150s;timing160s; final30s.
+Then original arm6+every-settlement continuation570s, arm0 400s, paired gate120s.
+Passing checks stop; failed checks require concrete diagnosis/repair, no blind retry.
+Measured targets remain original570s/400s, not relaxed timeouts. Further bounded
+amendments may be made locally under this owner instruction, with evidence retained.
+[Prior repair/profile](ASSEMBLED_CHARACTER_M110_RESULT.md): six focused tests pass;
+control's validated-base contract established, local/cross-state checks retained.
+Current code paths: control.ts, ControlValidation test, BiographyCalendar timing flag.
+Full0.85 native compatibility/types pending after production edit. No gain claimed.
+Keep reference0.85 adopted;0.87 candidate; no full BIO mapping/assembly acceptance.
 
 ## Bounded card — original comparison plus approved admission repair
 - Capability1: sixteen actual acquisitions over the original19-opportunity layout,
