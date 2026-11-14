@@ -1,0 +1,130 @@
+M108 plan3fd6003c. Original600s command ceiling narrowed to240s original/540s native;1800s cumulative. Fifteen seconds bookkeeping includes plan checks. All attempts retained.
+CHARGED 15.000
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "-b", "--pretty", "false"]
+src/test/assembledBiographyAlternatives.test.ts(36,9): error TS7034: Variable 'outcomes' implicitly has type 'any[]' in some locations where its type cannot be determined.
+src/test/assembledBiographyAlternatives.test.ts(40,80): error TS7005: Variable 'outcomes' implicitly has an 'any[]' type.
+src/test/assembledBiographyAlternatives.test.ts(44,88): error TS7006: Parameter 'x' implicitly has an 'any' type.
+
+EXIT 1; elapsed 20.572s
+CHARGED 35.572
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "-b", "--pretty", "false"]
+
+EXIT 0; elapsed 18.678s
+CHARGED 54.250
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledBiographyAlternatives.test.ts", "-t", "M108 original alternatives", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledBiographyAlternatives.test.ts > M108 original alternatives and adopted D3 on actual original evidence
+M108 ORIGINAL {"law":"Earned","earlySeed":6,"choices":"AAAAABBBBBBBBBBBBBB","probes":[{"at":"5","modifiers":["3","-3"],"probabilities":["1/1","0/1"],"strength":"111111/361111"},{"at":"18","modifiers":["-3","3"],"probabilities":["0/1","1/1"],"strength":"-111111/347222"},{"at":"19","modifiers":["-3","3"],"probabilities":["0/1","1/1"],"strength":"-111111/347222"}]}
+
+stdout | src/test/assembledBiographyAlternatives.test.ts > M108 original alternatives and adopted D3 on actual original evidence
+M108 ORIGINAL {"law":"Earned","earlySeed":0,"choices":"BABBBBBBBBBBBBBBBBB","probes":[{"at":"5","modifiers":["-2","2"],"probabilities":["1/18","17/18"],"strength":"-111111/722222"},{"at":"18","modifiers":["-3","3"],"probabilities":["0/1","1/1"],"strength":"-777777/1388888"},{"at":"19","modifiers":["-3","3"],"probabilities":["0/1","1/1"],"strength":"-777777/1388888"}]}
+
+stdout | src/test/assembledBiographyAlternatives.test.ts > M108 original alternatives and adopted D3 on actual original evidence
+M108 ORIGINAL {"law":"AuthoredTrait","earlySeed":6,"choices":"AAAAABBBBBBBBBBBBAA","probes":[{"at":"5","modifiers":["3","-3"],"probabilities":["1/1","0/1"],"strength":"111111/361111"},{"at":"18","modifiers":["3","-3"],"probabilities":["1/1","0/1"],"strength":"-111111/347222"},{"at":"19","modifiers":["3","-3"],"probabilities":["1/1","0/1"],"strength":"-111111/347222"}]}
+
+stdout | src/test/assembledBiographyAlternatives.test.ts > M108 original alternatives and adopted D3 on actual original evidence
+M108 ORIGINAL {"law":"AuthoredTrait","earlySeed":0,"choices":"BABBABBBBBBBBBBBBAA","probes":[{"at":"5","modifiers":["3","-3"],"probabilities":["1/1","0/1"],"strength":"-111111/722222"},{"at":"18","modifiers":["3","-3"],"probabilities":["1/1","0/1"],"strength":"-777777/1388888"},{"at":"19","modifiers":["3","-3"],"probabilities":["1/1","0/1"],"strength":"-777777/1388888"}]}
+
+stdout | src/test/assembledBiographyAlternatives.test.ts > M108 original alternatives and adopted D3 on actual original evidence
+M108 ORIGINAL {"law":"DisplayOnly","earlySeed":6,"choices":"AAAAABBBBBBBBBBBBAB","probes":[{"at":"5","modifiers":["0","0"],"probabilities":["1/2","1/2"],"strength":"111111/361111"},{"at":"18","modifiers":["0","0"],"probabilities":["1/2","1/2"],"strength":"-111111/347222"},{"at":"19","modifiers":["0","0"],"probabilities":["1/2","1/2"],"strength":"-111111/347222"}]}
+
+stdout | src/test/assembledBiographyAlternatives.test.ts > M108 original alternatives and adopted D3 on actual original evidence
+M108 ORIGINAL {"law":"DisplayOnly","earlySeed":0,"choices":"BABBABBBBBBBBBBBBAB","probes":[{"at":"5","modifiers":["0","0"],"probabilities":["1/2","1/2"],"strength":"-111111/722222"},{"at":"18","modifiers":["0","0"],"probabilities":["1/2","1/2"],"strength":"-777777/1388888"},{"at":"19","modifiers":["0","0"],"probabilities":["1/2","1/2"],"strength":"-777777/1388888"}]}
+
+stdout | src/test/assembledBiographyAlternatives.test.ts > M108 original alternatives and adopted D3 on actual original evidence
+M108 ORIGINAL {"law":"HistoryOnly","earlySeed":6,"choices":"AAAAABBBBBBBBBBBBAB","probes":[{"at":"5","modifiers":["0","0"],"probabilities":["1/2","1/2"],"strength":"111111/361111"},{"at":"18","modifiers":["0","0"],"probabilities":["1/2","1/2"],"strength":"-111111/347222"},{"at":"19","modifiers":["0","0"],"probabilities":["1/2","1/2"],"strength":"-111111/347222"}]}
+
+stdout | src/test/assembledBiographyAlternatives.test.ts > M108 original alternatives and adopted D3 on actual original evidence
+M108 ORIGINAL {"law":"HistoryOnly","earlySeed":0,"choices":"BABBABBBBBBBBBBBBAB","probes":[{"at":"5","modifiers":["0","0"],"probabilities":["1/2","1/2"],"strength":"-111111/722222"},{"at":"18","modifiers":["0","0"],"probabilities":["1/2","1/2"],"strength":"-777777/1388888"},{"at":"19","modifiers":["0","0"],"probabilities":["1/2","1/2"],"strength":"-777777/1388888"}]}
+
+stdout | src/test/assembledBiographyAlternatives.test.ts > M108 original alternatives and adopted D3 on actual original evidence
+M108 ORIGINAL {"law":"RecomputedHistory","earlySeed":6,"choices":"AAAAABBBBBBBBBBBBBB","probes":[{"at":"5","modifiers":["3","-3"],"probabilities":["1/1","0/1"],"strength":"111111/361111"},{"at":"18","modifiers":["-3","3"],"probabilities":["0/1","1/1"],"strength":"-111111/347222"},{"at":"19","modifiers":["-3","3"],"probabilities":["0/1","1/1"],"strength":"111111/347222"}]}
+
+stdout | src/test/assembledBiographyAlternatives.test.ts > M108 original alternatives and adopted D3 on actual original evidence
+M108 ORIGINAL {"law":"RecomputedHistory","earlySeed":0,"choices":"BABBBBBBBBBBBBBBBBB","probes":[{"at":"5","modifiers":["-2","2"],"probabilities":["1/18","17/18"],"strength":"-111111/722222"},{"at":"18","modifiers":["-3","3"],"probabilities":["0/1","1/1"],"strength":"-777777/1388888"},{"at":"19","modifiers":["-3","3"],"probabilities":["0/1","1/1"],"strength":"777777/1388888"}]}
+
+stdout | src/test/assembledBiographyAlternatives.test.ts > M108 original alternatives and adopted D3 on actual original evidence
+M108 ORIGINAL {"law":"Refold","earlySeed":6,"choices":"AAAAABBBBBBBBBBBBBB","probes":[{"at":"5","modifiers":["3","-3"],"probabilities":["1/1","0/1"],"strength":"111111/361111"},{"at":"18","modifiers":["-3","3"],"probabilities":["0/1","1/1"],"strength":"-111111/347222"},{"at":"19","modifiers":["-3","3"],"probabilities":["0/1","1/1"],"strength":"-111111/347222"}]}
+
+ ✓ src/test/assembledBiographyAlternatives.test.ts > M108 original alternatives and adopted D3 on actual original evidence 29897ms
+stdout | src/test/assembledBiographyAlternatives.test.ts > M108 original alternatives and adopted D3 on actual original evidence
+M108 ORIGINAL {"law":"Refold","earlySeed":0,"choices":"BABBBBBBBBBBBBBBBBB","probes":[{"at":"5","modifiers":["-2","2"],"probabilities":["1/18","17/18"],"strength":"-111111/722222"},{"at":"18","modifiers":["-3","3"],"probabilities":["0/1","1/1"],"strength":"-777777/1388888"},{"at":"19","modifiers":["-3","3"],"probabilities":["0/1","1/1"],"strength":"-777777/1388888"}]}
+M108 D3 CONTROL CORRESPONDENCE [{"at":1,"c":"1/9","P":"1/9","gain":"4/1","delta":"1/9"},{"at":2,"c":"1/9","P":"2/9","gain":"4/1","delta":"1/9"},{"at":3,"c":"1/9","P":"1/3","gain":"4/1","delta":"1/9"},{"at":4,"c":"1/9","P":"4/9","gain":"4/1","delta":"1/9"},{"at":6,"c":"-1/9","P":"1/3","gain":"4/1","delta":"-1/9"},{"at":7,"c":"-1/9","P":"2/9","gain":"4/1","delta":"-1/9"},{"at":8,"c":"-1/9","P":"1/9","gain":"4/1","delta":"-1/9"},{"at":9,"c":"-1/9","P":"0/1","gain":"4/1","delta":"-1/9"},{"at":10,"c":"-1/9","P":"-1/9","gain":"4/1","delta":"-1/9"},{"at":11,"c":"-1/9","P":"-2/9","gain":"4/1","delta":"-1/9"},{"at":12,"c":"-1/9","P":"-1/3","gain":"4/1","delta":"-1/9"},{"at":13,"c":"-1/9","P":"-4/9","gain":"4/1","delta":"-1/9"},{"at":14,"c":"-1/9","P":"-1/2","gain":"4/1","delta":"-1/18"},{"at":15,"c":"-1/9","P":"-1/2","gain":"4/1","delta":"0/1"},{"at":16,"c":"-1/9","P":"-1/2","gain":"4/1","delta":"0/1"},{"at":17,"c":"-1/9","P":"-1/2","gain":"4/1","delta":"0/1"}]
+
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  17:55:56
+   Duration  34.44s (transform 2.65s, setup 0ms, collect 3.95s, tests 29.90s, environment 0ms, prepare 230ms)
+
+
+EXIT 0; elapsed 36.329s
+CHARGED 90.579
+
+ORDER CLARIFICATION before native comparison: original RecomputedHistory rewrites archive/history after arbitration19, so its decision19 remains Earned. The planned native captured-input propagation of reinterpreted P is a subsequent-receiving diagnostic, never a claim about original decision19 or a native state update. Same operands/gates; no chronological rewrite of evidence.
+TYPE REPAIR: added explicit outcome-receipt array type after initial TS7034/7005/7006 errors; successful type check retained.
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledBiographyAlternatives.test.ts", "-t", "M108 six alternatives", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledBiographyAlternatives.test.ts > M108 six alternatives on actual native history and reversed meaning
+M108 NATIVE ALTERNATIVES [{"at":"12","P":"-25/1883","outcomes":[{"law":"Earned","mode":"PlayerFacingRoll","probabilities":[["A","147446538708035353313/295147905179352825856"],["B","147701366471317472543/295147905179352825856"]],"resolved":[["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","147446538708035353313/295147905179352825856"],["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","147701366471317472543/295147905179352825856"]],"cases":128},{"law":"AuthoredTrait","mode":"Auto","probabilities":[["A","274651522871890571719/295147905179352825856"],["B","20496382307462254137/295147905179352825856"]],"resolved":[["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","1/1"]],"cases":128},{"law":"DisplayOnly","mode":"PlayerFacingRoll","probabilities":[["A","1/2"],["B","1/2"]],"resolved":[["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","1/2"],["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","1/2"]],"cases":32},{"law":"HistoryOnly","mode":"PlayerFacingRoll","probabilities":[["A","1/2"],["B","1/2"]],"resolved":[["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","1/2"],["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","1/2"]],"cases":32},{"law":"RecomputedHistory","mode":"PlayerFacingRoll","probabilities":[["A","147446538708035353313/295147905179352825856"],["B","147701366471317472543/295147905179352825856"]],"resolved":[["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","147446538708035353313/295147905179352825856"],["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","147701366471317472543/295147905179352825856"]],"cases":128},{"law":"Refold","mode":"PlayerFacingRoll","probabilities":[["A","147446538708035353313/295147905179352825856"],["B","147701366471317472543/295147905179352825856"]],"resolved":[["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","147446538708035353313/295147905179352825856"],["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","147701366471317472543/295147905179352825856"]],"cases":128}]},{"at":"16","P":"59474439994713846805049911276523356220925/4483995966027098025827375132090900269760512","outcomes":[{"law":"Earned","mode":"PlayerFacingRoll","probabilities":[["A","9231327625511700639/18446744073709551616"],["B","9215416448197850977/18446744073709551616"]],"resolved":[["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","9231327625511700639/18446744073709551616"],["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","9215416448197850977/18446744073709551616"]],"cases":128},{"law":"AuthoredTrait","mode":"Auto","probabilities":[["A","274651522871890571719/295147905179352825856"],["B","20496382307462254137/295147905179352825856"]],"resolved":[["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","1/1"]],"cases":128},{"law":"DisplayOnly","mode":"PlayerFacingRoll","probabilities":[["A","1/2"],["B","1/2"]],"resolved":[["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","1/2"],["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","1/2"]],"cases":32},{"law":"HistoryOnly","mode":"PlayerFacingRoll","probabilities":[["A","1/2"],["B","1/2"]],"resolved":[["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","1/2"],["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","1/2"]],"cases":32},{"law":"RecomputedHistory","mode":"PlayerFacingRoll","probabilities":[["A","9231327625511700639/18446744073709551616"],["B","9215416448197850977/18446744073709551616"]],"resolved":[["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","9231327625511700639/18446744073709551616"],["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","9215416448197850977/18446744073709551616"]],"cases":128},{"law":"Refold","mode":"PlayerFacingRoll","probabilities":[["A","9231327625511700639/18446744073709551616"],["B","9215416448197850977/18446744073709551616"]],"resolved":[["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","9231327625511700639/18446744073709551616"],["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","9215416448197850977/18446744073709551616"]],"cases":128}]},{"at":"26","P":"100659094851730004883862922905546020878457167240422983048209653662947814264458587856253/3790828735728522081079384422735597171023791421556797995896066083694102667001913210306560","outcomes":[{"law":"Earned","mode":"PlayerFacingRoll","probabilities":[["A","36887902416388551449/73786976294838206464"],["B","36899073878449655015/73786976294838206464"]],"resolved":[["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","36887902416388551449/73786976294838206464"],["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","36899073878449655015/73786976294838206464"]],"cases":128},{"law":"AuthoredTrait","mode":"Auto","probabilities":[["A","274651522871890571719/295147905179352825856"],["B","20496382307462254137/295147905179352825856"]],"resolved":[["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","1/1"]],"cases":128},{"law":"DisplayOnly","mode":"PlayerFacingRoll","probabilities":[["A","1/2"],["B","1/2"]],"resolved":[["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","1/2"],["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","1/2"]],"cases":32},{"law":"HistoryOnly","mode":"PlayerFacingRoll","probabilities":[["A","1/2"],["B","1/2"]],"resolved":[["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","1/2"],["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","1/2"]],"cases":32},{"law":"RecomputedHistory","mode":"PlayerFacingRoll","probabilities":[["A","36893977766187526247/73786976294838206464"],["B","36892998528650680217/73786976294838206464"]],"resolved":[["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","36893977766187526247/73786976294838206464"],["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","36892998528650680217/73786976294838206464"]],"cases":128},{"law":"Refold","mode":"PlayerFacingRoll","probabilities":[["A","36887902416388551449/73786976294838206464"],["B","36899073878449655015/73786976294838206464"]],"resolved":[["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","36887902416388551449/73786976294838206464"],["0a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","36899073878449655015/73786976294838206464"]],"cases":128}]}]
+M108 native calendar101; unchanged save after all diagnostic controls; all6 alternatives at3 live frames PASS
+
+ ✓ src/test/assembledBiographyAlternatives.test.ts > M108 six alternatives on actual native history and reversed meaning 162500ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  17:57:26
+   Duration  166.94s (transform 2.63s, setup 0ms, collect 3.93s, tests 162.50s, environment 0ms, prepare 139ms)
+
+
+EXIT 0; elapsed 168.568s
+CHARGED 259.147
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:boundaries"]
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+EXIT 0; elapsed 3.037s
+CHARGED 262.184
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:research"]
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4334}
+
+EXIT 0; elapsed 4.024s
+CHARGED 266.208
+
+COMMAND ["C:\\Users\\scoob\\AppData\\Local\\Python\\pythoncore-3.15-64\\python.exe", "-c", "from pathlib import Path\nimport subprocess,json,re\nbase='da749a1d'\ndef old(p):return subprocess.check_output(['git','show',base+':'+p]).decode('utf-8')\nallowed={'AGENTS.md','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md','docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md','docs/planning/RESEARCH_OBLIGATIONS.json','docs/planning/ASSEMBLED_CHARACTER_M108_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M108_CHECKS.txt','src/test/assembledBiographyAlternatives.test.ts','src/test/fixtures/assembledBiographyAlternatives.ts'}\nchanged=set(subprocess.check_output(['git','diff',base,'--name-only']).decode().splitlines())|set(subprocess.check_output(['git','ls-files','--others','--exclude-standard']).decode().splitlines())\nassert changed==allowed, (changed-allowed,allowed-changed)\nassert len([p for p in changed if p.startswith('src/')])==2\ncaps={'AGENTS.md':120,'docs/planning/CURRENT.md':80,'docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md':250,'docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md':250}\nfor p,cap in caps.items():\n s=Path(p).read_text(encoding='utf-8');assert len(s.splitlines())<=cap,(p,len(s.splitlines()))\np='docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md'\ns=Path(p).read_text(encoding='utf-8');assert len(s.replace('\\n','\\r\\n').encode())<=65536\nfor marker in [' | F-',' | C-']:\n prior=[line for line in old(p).splitlines() if marker in line and 'C-BIO' not in line]\n now=[line for line in s.splitlines() if marker in line and 'C-BIO' not in line]\n assert prior==now,marker\np='docs/planning/RESEARCH_OBLIGATIONS.json';a=json.loads(old(p));b=json.loads(Path(p).read_text(encoding='utf-8'))\nassert a.keys()==b.keys()\nfor k in a:\n if k!='obligations':assert a[k]==b[k],k\nfor x,y in zip(a['obligations'],b['obligations']):\n assert x['id']==y['id']\n if x['id'] not in ['RO-C3-009','RO-C3-020']:assert x==y\n else:\n  for k in x:\n   if k not in ['unresolved','evidence']:assert x[k]==y[k],(x['id'],k)\n  assert y['unresolved'].startswith(x['unresolved'])\n  assert y['evidence']==x['evidence']+['docs/planning/ASSEMBLED_CHARACTER_M108_RESULT.md']\npaths=list(Path('docs/planning').glob('ASSEMBLED_CHARACTER_M108_*'))\nassert sorted(p.suffix for p in paths)==['.md','.txt']\nsize=sum(p.stat().st_size for p in paths);assert size<5*1024*1024,size\nprint('PASS exact9 intended paths;2 test/helper and2 evidence files/'+str(size)+' bytes; no production/formal/control/reference/baseline/corpus changes. All F rows and other C rows unchanged;21/15/132 and E43/P57/N17/U15 preserved. Obligation statuses/triggers/closure requirements unchanged. Document caps including CRLF bytes pass.')\n"]
+PASS exact9 intended paths;2 test/helper and2 evidence files/29028 bytes; no production/formal/control/reference/baseline/corpus changes. All F rows and other C rows unchanged;21/15/132 and E43/P57/N17/U15 preserved. Obligation statuses/triggers/closure requirements unchanged. Document caps including CRLF bytes pass.
+
+EXIT 0; elapsed 0.670s
+CHARGED 266.878
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:git-size"]
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.810s
+CHARGED 267.688
+
+COMMAND ["git", "diff", "--cached", "--check"]
+
+EXIT 0; elapsed 0.071s
+CHARGED 267.759
