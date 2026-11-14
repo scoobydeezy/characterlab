@@ -1,7 +1,7 @@
 # Assembled Character — reconciliation and requirement evidence
 
 Owner approved D1–D5 on2026-10-25 with the D2 condition below.
-Reference0.85; M110 incomplete;0.87 candidate.5 mapped/0 families; RO001/009/020 conditional.
+Reference0.85; M110 declared gates pass;0.87 candidate.5 mapped/0 families; RO001/009/020 conditional.
 
 ## Decision sheet — adopted 2026-10-25
 
@@ -114,7 +114,7 @@ move P to E; other130 classifications remain. Cited evidence stays version-scope
 | EQUIVALENT (mapped domain) | C-MEM — PHEN-MEM-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/5); generalFactory.ts. | [M64],0.63: :2..9 PASS; :10/:11 TRACKED. | Actual recency/K/reinforcement/tie/privacy/trace/workspace. Source/time mapping explicit; original no-decay component control retained. No full GA/family/corpus closure; reopen constraints preserved. |
 | EQUIVALENT (mapped) | C-REASON — PHEN-REASON-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/6); [M95 complete mapping][ref31]. | :2..9 mapped on0.80 SourceCoverage; :10/11 tracked. All4 competitors; native Value/standing/keys/signs and isolated motive/basis evidence. | Adopted coverage/D3 differences explicit; receipt bijection diagnostic only. General correlation, ID ties/nonparticipants and calibration limits retained;001 conditional. Final candidate replay required. |
 | EQUIVALENT (mapped) | C-DECISION — PHEN-DECISION-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/7); decisionFactory.ts. | [M105](ASSEMBLED_CHARACTER_M105_RESULT.md) refreshes M80–83 on0.85:2..9;:10/:11 tracked. | Native regimes/coupled significance/frozen history, all5 competitor distinctions, exact continuation. Source/parameter mappings and LIMIT-DECISION retained; final replay required. |
-| UNRESOLVED | C-BIO — PHEN-BIO-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/8); bioComparison.ts (composed). | [M110](ASSEMBLED_CHARACTER_M110_RESULT.md):0.87 admission passes; continuation timed out. | Required:2..11; full replay pending. |
+| UNRESOLVED | C-BIO — PHEN-BIO-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/8); bioComparison.ts (composed). | [M110](ASSEMBLED_CHARACTER_M110_RESULT.md):0.87 admission/native/continuation/paired gates pass; original choice witness absent. | Required:2..11; full replay pending. |
 | EQUIVALENT (mapped domain) | C-COMMIT — PHEN-COMMIT-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/9); [M101]. | :2..9 mapped on0.84; :10/11 tracked. Native lifecycle/witnesses,3 failed controls; D3/strong-bound correspondence explicit. | Component counterfactuals, not native alternate runtimes;009/014/020 conditional,018 closed. Final replay required. |
 | UNRESOLVED | C-ATTN — PHEN-ATTN-001 v1.1.0 | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/10); `src/campaign3/generalFactory.ts`. | Route M1/M3/M4/L2. Required `PHEN-ATTN-001:4..13` (inclusive). | Replay pending; U1/V4. |
 | UNRESOLVED | C-BODY — PHEN-BODY-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/11); `src/campaign3/receivingFactory.ts`. | Route M2/M3. Required `PHEN-BODY-001:4..13` (inclusive). | Replay pending; U1/V4. |
