@@ -228,7 +228,7 @@ identify actual gaps. Historical gate status does not override later accepted cl
 
 ## Current authorization boundary
 Owner2026-11-13 adopts0.85; after M105 authorizes continued character integration.
-M108 bounded biography alternatives passed; full BIO/native long-horizon mapping remains open.
+M109 timed-coupling foundation candidate;0.85 remains adopted and full BIO mapping stays open.
 Full BIO mapping remains gated on its original comparisons; no UI, publishing or assembly acceptance.
 
 ## Owner ruling — unknown factors and live gates (2026-11-02)
