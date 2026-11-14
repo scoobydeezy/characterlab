@@ -1,15 +1,19 @@
-# Current work — M110 inspection gain measured; continuation incomplete
-One character; reference0.85 adopted; candidate0.87 admission passes.
-[Result and CPU profile](ASSEMBLED_CHARACTER_M110_RESULT.md): inspection/extraction
-19.597->10.298s across five checkpoints (~47%); prefix113.374->104.069s (~8%).
-One approved run on2511dfd3 stopped after restore18 at147.879s; command154.775s.
-Save18 took0.446s, restore43.364s including internal full-save equality. External
-exact18/later continuation/full BIO remain unverified; no extra run authorized.
-Charged1957.743/1980s after owner +180s. No production/test/fixture/law changes.
-Next candidate: control's duplicate base-state validation after delegated patches;
-establish validated-base contract and retain local/cross-owner/negative controls.
-No new milestone or framework; broad C0-C3 integration scope and gates unchanged.
-Evidence4 files/5MiB; profile source field3e86ffa5 is original base, actual2511dfd3.
+# Current work — M110 bounded control-validation repair
+One character;0.85 adopted;0.87 candidate; full BIO/continuation incomplete.
+Owner continuation2026-11-14 authorizes next identified repair, not extra runtime.
+[Prior timing](ASSEMBLED_CHARACTER_M110_RESULT.md): inspection47% lower; restore43.364s.
+Two code paths only: assembled/control.ts and test/assembledControlValidation.test.ts.
+Keep control/0.1 semantics; delegated base validates once, then all local/cross-state
+checks run. Owned patches/full validation/restore retain full checks; no new framework.
+Base proof: state.ts inheritedState and each intervening owner validate patch results;
+retention validates removals, strategy retains local validation. Habit/performance
+are the immediate base alternatives. Identity uses this same composition contract.
+Focused checks: real habit owner plus validating test base; unchanged state/diffs,
+invalid base/local/foreign/frame evidence, owner/scope/mixed/lifecycle and no-op cases.
+Original remaining22.257s for focused checks/checkpoint. No native run authorized.
+Prepared next checks: types30s, existing0.85 full-save240s, one M110 diagnostic160s,
+control native rollback150s, final checks20s; require explicit budget before running.
+Done: bounded repair verified with no byte/acceptance change; no BIO closure claim.
 
 ## Bounded card — original comparison plus approved admission repair
 - Capability1: sixteen actual acquisitions over the original19-opportunity layout,
