@@ -35,3 +35,15 @@ MEC015..018/022, EXP011/012 and original BIO0.2 alternatives remain preserved.
 RO009/020 retain wider source, coercion, direction, calibration, compression and
 public-protocol triggers. This bounded explicit receiving comparison supplies no
 full BIO, general model or assembly acceptance. M111 CURRENT pins exact gates.
+
+## M112 admission-only reference adoption — 2026-11-14
+
+Under the owner's delegated BIO completion/amendment authority, rules/registry0.88
+is adopted as the global admission successor after M111 compatibility and M112
+full native comparison/continuation pass. Reference task-reason-source field1 is
+TRUE. False remains an explicitly labelled ablation, never a per-member default.
+Psychology remains assembled-reference/0.3: D3/Ramp, SourceCoverage, unit1/4/cap3
+and standing-rounding0.1. No equation, selector or calibration is changed here.
+Earlier0.85 status above records M111's historical adoption boundary. Preserve
+old models/save bytes and all controls. Final current-candidate replay remains
+required; this admission adoption grants no family/whole-assembly acceptance.
