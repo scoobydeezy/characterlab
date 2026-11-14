@@ -19,7 +19,7 @@ authority/belief-expectation; encoding independently joins the existing episodic
 owner's formation and SignificanceFirst retention at140. Both use frozen prior.
 No same-instant read of new belief into encoding; no precision from salience.
 
-Shared belief root362/field2, key901(character,proposition), holds902. Unknown is
+Shared belief root362/field2, key[character semantic referent,proposition definition ID], holds902. Unknown is
 absence. Episodic root346/field1 uses effect-episode/0.1 key(character,observation),
 value [tag, acquisition1125, sample900, SEM227, encoding910, signed time].
 No new state owner, scheduler, allocator, save, independent history or latest slot.
@@ -29,8 +29,8 @@ belief presence from encoding, nor rewrite original sample/encoding prior.
 It runs at the existing task-appraisal phase50 and preserves decision semantics.
 No extra psychological edge from an effect estimate into a task is selected here.
 
-Registry slot46: [effect-evidence/0.1, proposition semantic referent].
-Proposition must be valid; holder/observer are existing character/body observer.
+Registry slot46: [effect-evidence/0.1, proposition definition ID1027].
+Proposition must be a nonempty definition ID; holder/observer are existing character/body observer.
 On0.89 only, BODY_DELIVERY payload is [character, amount, permitted:boolean].
 No authored effect, belief, salience or encoding is admitted. Original and generated
 events are authenticated; same-instant children consume exactly once; rollback
@@ -45,3 +45,9 @@ MEC003/006/007 port; original Safe/PotentialLeak/OverflowLeak and exact/lattice
 controls retained. Existing SignificanceFirst replaces only original latest-slot
 retention; no simplification or universal salience/learning claim follows.
 RO007/010 cover broader consumers, evidence classes, uncertainty and horizons.
+
+Representation correction before execution: original sample900 uses proposition1027
+and diagnostic key901 uses holder1000. Native state uses actual semantic holder C
+in its canonical list key. Probe906 uses fixed entity alias
+character/assembled-effect-holder, bound to that sole C by composition; trace reads
+name the actual C path. No alias is an input or a substitute psychological owner.

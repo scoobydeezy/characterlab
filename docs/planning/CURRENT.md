@@ -25,7 +25,7 @@ strength raw/(1+raw). Unknown stays absent; informative bound prior.01 ->.03;
 compatible prior.4 stays.4. Encoding uses prior before phase140 learning.
 Shared memory uses existing SignificanceFirst/body capacity, immutable acquisitions;
 retention difference from original latest slot is explicit, not another memory store.
-Effect belief uses root362/field2 keyed by character/proposition, same belief owner.
+Effect belief uses root362/field2 keyed by actual character/proposition definition, same belief owner.
 Samples900 and encodings910 retain original schemas; original meaning unchanged.
 At task appraisal50, read retained belief and encoding separately; no forced new
 effect-to-choice law. Existing body appraisal/decision remain same unified run.
@@ -50,3 +50,13 @@ same-event prior ordering tested. No broader confidence/censoring law or debt cl
 MEC003/006/007, EXP002/007/008 and retired truth shortcuts retain ledger dispositions.
 Pinned21 members/15 families/132 clauses; six mapped so far; final replay required.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
+
+Repair before native rerun: extract unchanged body identifiers to bodyIdentifiers.ts
+to remove the new import cycle;12 production/test files, same contract and gates.
+
+Representation correction: use original proposition1027 and explicit diagnostic
+holder1000 alias; state key retains actual semantic holder. See amended contract.
+
+Package A checkpoint:12 code files; NOT qualified (trace guard rejects0.89).
+Package B begins from the next checkpoint commit: traceBinding.ts plus affected
+repairs/tests only, <=12 files. Same M114 gates and cumulative1800s, no reset.

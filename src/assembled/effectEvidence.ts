@@ -14,19 +14,20 @@ import {epiRecord as r} from '../campaign3/epiCodecs';
 import {classifyEpiSample,encodingOperands,applyEpiEvidence} from '../campaign3/epiMath';
 import {validateEstimate} from '../campaign3/epiModel';
 import {decodeCognitive as decode} from './codecs';
-import {BODY_OBSERVER,BODY_DELIVERY,bodyId} from './body';
+import {BODY_OBSERVER,BODY_DELIVERY,bodyId} from './bodyIdentifiers';
 import {pattern} from './skill';
 import type {compileCampaign2StateModel} from '../campaign2/stateModel';
 import type {ExactRational} from '../substrate/exactMath';
 
 export const EFFECT='effect-evidence/0.1',EFFECT_EPISODE='effect-episode/0.1';
 export const EFFECT_OBSERVE=bodyId(1001,'event/effect-observe'),EFFECT_FREEZE=bodyId(1001,'event/effect-freeze'),EFFECT_EVIDENCE=bodyId(1001,'event/effect-evidence'),EFFECT_APPLY=bodyId(1001,'event/effect-apply');
+export const EFFECT_HOLDER=bodyId(1000,'character/assembled-effect-holder');
 const BELIEF=bodyId(1025,'authority/belief-expectation');
 const fail=(s:string):never=>{throw new SchedulerContractError('INPUT_NOT_ADMITTED','effect evidence: '+s);};
 const eq=(a:CanonicalValue,b:CanonicalValue)=>key(a)===key(b);
-export function compileEffect(v:CanonicalValue){const a=items(v,'list');if(a.length!==2||txt(a[0])!==EFFECT)invalidModel('effect declaration');validateSemanticReferent(a[1]);return Object.freeze({proposition:a[1]});}
+export function compileEffect(v:CanonicalValue){const a=items(v,'list');if(a.length!==2||txt(a[0])!==EFFECT)invalidModel('effect declaration');const proposition=id(a[1]);if(proposition.namespaceId!==1027n||typeof proposition.payload==='boolean'||proposition.payload.kind!=='text'||!proposition.payload.value)invalidModel('effect proposition definition');return Object.freeze({proposition:a[1]});}
 export type Effect=ReturnType<typeof compileEffect>;
-export const effectBeliefPath=(C:CanonicalValue,p:CanonicalValue):StatePath=>({rootStateTypeId:362n,fieldId:2n,selectors:[{kind:'mapKey',key:r(901,[C,p])}]});
+export const effectBeliefPath=(C:CanonicalValue,p:CanonicalValue):StatePath=>({rootStateTypeId:362n,fieldId:2n,selectors:[{kind:'mapKey',key:list([C,p])}]});
 export const effectEpisodePath=(C:CanonicalValue,observation:CanonicalValue):StatePath=>({rootStateTypeId:346n,fieldId:1n,selectors:[{kind:'mapKey',key:list([text(EFFECT_EPISODE),C,observation])}]});
 export function isEffectEpisodePath(p:StatePath){const k=p.selectors[0];return p.rootStateTypeId===346n&&p.fieldId===1n&&k?.kind==='mapKey'&&typeof k.key!=='boolean'&&k.key.kind==='list'&&eq(k.key.items[0],text(EFFECT_EPISODE));}
 export function validateEffectEpisode(v:CanonicalValue,C?:CanonicalValue,p?:CanonicalValue){
@@ -104,7 +105,7 @@ export function createEffectEvidence(C:CanonicalValue,d:Effect,capacity:ExactRat
   probe(context:EventHandlerContext<AuthoritativeState>){
    if(!active||context.event.phase!==50n||context.event.dueAt!==at)fail('probe phase');
    const reads:ActualReadRecord[]=[],prior=read(context.state,belief,reads),episodes=context.state.entries().filter(e=>isEffectEpisodePath(e.path)).map(e=>({e,a:validateEffectEpisode(read(context.state,e.path,reads)!,C,d.proposition)})).sort((a,b)=>{const x=f(rec(a.a[2],900n),4n),y=f(rec(b.a[2],900n),4n);if(typeof x==='boolean'||x.kind!=='signed'||typeof y==='boolean'||y.kind!=='signed')return fail('episode time');return x.value>y.value?-1:1;});
-   const fields=new Map<bigint,CanonicalValue>([[1n,typedIdentifier(1159,unsigned(context.allocateRuntimeId()))],[2n,r(901,[C,d.proposition])],[3n,unsigned(1)]]);
+   const fields=new Map<bigint,CanonicalValue>([[1n,typedIdentifier(1159,unsigned(context.allocateRuntimeId()))],[2n,r(901,[EFFECT_HOLDER,d.proposition])],[3n,unsigned(1)]]);
    if(prior){fields.set(4n,prior);fields.set(5n,f(rec(prior,902n),1n));fields.set(6n,f(rec(prior,902n),2n));}
    if(episodes.length)fields.set(7n,episodes[0].a[4]);
    const output=r(906,fields);return {output,trace:()=>trace(context.event,[output],[],reads)};

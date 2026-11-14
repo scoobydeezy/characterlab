@@ -21,3 +21,102 @@ COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "-b", "--pretty", "false"]
 
 EXIT 0; elapsed 19.189s
 CHARGED 72.597
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledEffectEvidence.test.ts", "-t", "M114 informative", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledEffectEvidence.test.ts [ src/test/assembledEffectEvidence.test.ts ]
+TypeError: Cannot read properties of undefined (reading 'payload')
+ ❯ src/assembled/recognition.ts:10:81
+      8| import {BODY_OBSERVER} from './body';
+      9| import {socialSetting} from './social';
+     10| export const RECOGNITION='assembled-recognition/0.1',OBSERVER=txt(BODY…
+       |                                                                                 ^
+     11| export {VERSION};
+     12| export const demand=(b:boolean,s:string)=>{if(!b)invalidModel('recogni…
+ ❯ src/assembled/mitigation.ts:8:31
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  no tests
+   Start at  14:05:56
+   Duration  2.58s (transform 1.40s, setup 0ms, collect 0ms, tests 0ms, environment 0ms, prepare 152ms)
+
+
+EXIT 1; elapsed 4.272s
+CHARGED 76.869
+
+REPAIR: first native collection failed on BODY_OBSERVER initialization. Moved unchanged body constants into a dependency-free module;12-code-file package limit reached. No semantics/calibration change.
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledEffectEvidence.test.ts", "-t", "M114 informative", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledEffectEvidence.test.ts > M114 informative saturation and shared continuation 53561ms
+   → semantic referent requires namespace 1002
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledEffectEvidence.test.ts > M114 informative saturation and shared continuation
+CanonicalEncodingError: semantic referent requires namespace 1002
+ ❯ Module.validateSemanticReferent src/substrate/referentOrigin.ts:25:41
+     23| export function validateSemanticReferent(value:CanonicalValue):asserts…
+     24|   const referent=id(value);
+     25|   if(referent.namespaceId!==1002n)throw new CanonicalEncodingError('se…
+       |                                         ^
+     26|   validateReferentOrigin(referent.payload);
+     27| }
+ ❯ Module.compileEffect src/assembled/effectEvidence.ts:27:144
+ ❯ Module.compileCharacterModel src/assembled/model.ts:264:37
+ ❯ Module.prepareCharacterModel src/assembled/character.ts:28:116
+ ❯ src/test/assembledEffectEvidence.test.ts:47:16
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  14:07:18
+   Duration  58.09s (transform 2.73s, setup 0ms, collect 4.10s, tests 53.56s, environment 0ms, prepare 139ms)
+
+
+EXIT 1; elapsed 59.764s
+CHARGED 136.633
+
+CORRECTION before rerun: original EPI proposition1027 is not semantic referent1002. Native belief key uses [actual C, proposition]; diagnostic901 uses explicitly bound holder1000 alias. Original schema unchanged.
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledEffectEvidence.test.ts", "-t", "M114 informative", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledEffectEvidence.test.ts > M114 informative saturation and shared continuation 54930ms
+   → assembled trace requires exact model/run binding
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledEffectEvidence.test.ts > M114 informative saturation and shared continuation
+SchedulerContractError: assembled trace requires exact model/run binding
+ ❯ Module.compileCharacterTraceBinding src/assembled/traceBinding.ts:27:1603
+
+ ❯ Module.createCharacterRuntime src/assembled/runtime.ts:110:14
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:122
+ ❯ src/test/assembledEffectEvidence.test.ts:47:48
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  14:09:39
+   Duration  59.46s (transform 2.73s, setup 0ms, collect 4.10s, tests 54.93s, environment 0ms, prepare 150ms)
+
+
+EXIT 1; elapsed 61.150s
+CHARGED 197.783
+
+PACKAGE SPLIT BEFORE 13th FILE: A contains12 code files, unqualified trace-version blocker. B admits0.89 in traceBinding and completes affected repairs/tests, <=12 files. Same cumulative1800s, no gate or scope change.

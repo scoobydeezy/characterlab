@@ -1,3 +1,5 @@
+import {bodyId,BODY_SAMPLE,BODY_DELIVERY,BODY_SELECTION,BODY_SELECTION_REPORT,BODY_OWNER,BODY_OBSERVER,BODY_CHANNEL,BODY_DEFINITION} from './bodyIdentifiers';
+export {bodyId,BODY_SAMPLE,BODY_DELIVERY,BODY_SELECTION,BODY_SELECTION_REPORT,BODY_OWNER,BODY_OBSERVER,BODY_CHANNEL,BODY_DEFINITION} from './bodyIdentifiers';
 import {BODY_CONTEXT,ATTRIBUTION_VERSION,readBodyContext,bindBodyContext} from './retainedAttribution';
 import {deliveredPotential,TOLERANCE_VERSION,type ToleranceDeclaration} from './tolerance';
 /** assembled-character-interaction/0.1: one physical owner and current evidence lane.
@@ -20,14 +22,6 @@ import {dataItems as items,dataField as f,dataRecord as rec,dataKey as key,dataI
 import {ACTION_BODY,ACTION_BODY_EVENT,ACTION_BODY_RECEIPT,ACTION_BODY_RECEIPT_EVENT,DELAYED_BODY_VERSION,selectedBodyEffect,type ActionBodyDeclaration} from './actionBody';
 import type {createSkillExecution} from './skillExecution';
 import type {compileCampaign2StateModel} from '../campaign2/stateModel';
-export const bodyId=(ns:number,name:string)=>typedIdentifier(ns,text(name));
-export const BODY_SAMPLE=bodyId(1001,'event/assembled-body-sample'),BODY_DELIVERY=bodyId(1001,'event/assembled-body-delivery');
-export const BODY_SELECTION=bodyId(1001,'event/assembled-body-selection');
-export const BODY_SELECTION_REPORT='assembled-body-selection/0.1';
-export const BODY_OWNER=bodyId(1025,'authority/embodied-reserve');
-export const BODY_OBSERVER=bodyId(1000,'observer/bridge-subject');
-export const BODY_CHANNEL=bodyId(1005,'channel/assembled-body-level');
-export const BODY_DEFINITION=bodyId(1027,'definition/assembled-body-level');
 const SEM='semantic-binding/0.1-candidate#SEM-001H';
 const fail=(s:string):never=>{throw new SchedulerContractError('INPUT_NOT_ADMITTED',s);};
 export function compileBodyDeclaration(value:CanonicalValue){
