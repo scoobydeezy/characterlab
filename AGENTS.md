@@ -66,7 +66,7 @@ browser qualification or speculative audit tracks. Passing checks ends verificat
 unless a new change/failure supplies a concrete reason to rerun.
 Owner amendment2026-10-29: diagnose and repair ordinary implementation bugs
 autonomously within the declared scope/budgets; retain failures and target reruns.
-Repeated unchanged failures require analysis, not blind retries. Escalate only
+M110 owner2026-11-14 permits bounded local budget/repair amendments to completion. Repeated unchanged failures need analysis. Escalate only
 architectural/scope/comparison changes or exhausted budgets; no paperwork bypass.
 Keep AGENTS.md <=120 lines, CURRENT.md <=80, the work order <=250.
 Git stores history; keep one baseline, one register, one compact result per milestone.

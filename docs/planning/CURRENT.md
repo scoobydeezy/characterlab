@@ -1,18 +1,19 @@
-# Current work — M110 autonomous completion, owner-authorized
-Owner2026-11-14 authorizes local amendments/repairs until M110 is completed. Record
-scope/budget changes before execution; preserve scenarios, laws, seeds and all gates.
-One active package/job;12 production/test paths;4 evidence files/5MiB. No new breadth.
-First verification tranche: cumulative cap3780s (prior1968.518); command max600s.
-Types30s;0.85 exact full-save240s;control native rollback150s;timing160s; final30s.
-Then original arm6+every-settlement continuation570s, arm0 400s, paired gate120s.
-Passing checks stop; failed checks require concrete diagnosis/repair, no blind retry.
-Measured targets remain original570s/400s, not relaxed timeouts. Further bounded
-amendments may be made locally under this owner instruction, with evidence retained.
-[Prior repair/profile](ASSEMBLED_CHARACTER_M110_RESULT.md): six focused tests pass;
-control's validated-base contract established, local/cross-state checks retained.
-Current code paths: control.ts, ControlValidation test, BiographyCalendar timing flag.
-Full0.85 native compatibility/types pending after production edit. No gain claimed.
-Keep reference0.85 adopted;0.87 candidate; no full BIO mapping/assembly acceptance.
+# Current work — M110 owner-validation group repair
+Owner2026-11-14 authorizes local amendments to completion; retain original gates.
+Arm6 still timed out570.135s after inspection/control repairs; failure retained.
+Profile identifies repeated validation through outer communication/social/relationship/
+recognition owners. Apply same validated-base/local-check split to those four only.
+Seven code paths this package: five owners, ControlValidation test, BiographyCalendar
+phase logger. Preserve each original local body, owned-patch/full/restore validation.
+Base induction extends control through those wrappers; no scheduler/law/schema edit.
+Add native progress marks only (no sampler/soft stop); all assertions remain unchanged.
+Focused tests: valid delegated state/diffs/no-op, bad inherited/local/foreign/catalog/
+track closure through delegated/full/restore paths. Existing four owner/rollback tests.
+Amend cumulative cap5580s before code; one job;<=600s/command;4 evidence files/5MiB.
+Checks: types30s, focused20s, four native owner/rollback checks150s each,0.85 save240s;
+original arm6 continuation570s, arm0 400s, pair120s, final30s. No timing-only retry.
+Performance targets stay570/400s. Stop verifying on pass; diagnose concrete failures.
+Reference0.85 adopted;0.87 candidate; no full BIO mapping/assembly acceptance.
 
 ## Bounded card — original comparison plus approved admission repair
 - Capability1: sixteen actual acquisitions over the original19-opportunity layout,
