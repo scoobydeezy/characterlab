@@ -1,6 +1,6 @@
 import {it,expect} from 'vitest';
 import recorded from '../../docs/planning/ASSEMBLED_CHARACTER_M110_RECEIPTS.json';
-import {fixture,header,times,learning,actualDraws,snapshotView,create,live,refold,learned,standing,ablation,rec,f,uint,items,key,decode,readQ,ZERO,snap,through,finish,exact,bytes,qualificationParts,fraction,Q,formationSignals,enumerate,type Run,type CanonicalValue} from './fixtures/assembledBiographyCalendar';
+import {fixture,header,times,learning,actualDraws,snapshotView,createTraceReader,create,live,refold,learned,standing,ablation,rec,f,uint,items,key,decode,readQ,ZERO,snap,through,finish,exact,bytes,qualificationParts,fraction,Q,formationSignals,enumerate,type Run,type CanonicalValue} from './fixtures/assembledBiographyCalendar';
 import {restoreCharacterRun} from '../assembled/character';
 import {analysis,action} from './fixtures/assembledBiographyAlternatives';
 type Row={i:number;at:string;chosen:string;contribution:string;before:string;after:string;authorship:string;probabilities:string[];draws:ReturnType<typeof actualDraws>};
@@ -32,7 +32,7 @@ async function startM110Profile(){
 }
 
 for(const arm of [6,0])it('M110 arm '+arm+' full calendar'+(arm===6?' and exact continuation':''),async()=>{
- const prof=await startM110Profile();try{prof?.mark('fixture');
+ const prof=await startM110Profile(),readTrace=createTraceReader();try{prof?.mark('fixture');
  const b=fixture(arm);prof?.mark('prepare/create/advance9');const {run}=await create(b);prof?.mark('initial snapshot');const rows:Row[]=[],frozen:CanonicalValue[]=[],settlements:string[]=[];let restored:Run|undefined,prior=ZERO,normalMeaning:CanonicalValue|undefined,frame=snap(run);
  async function advance(at?:bigint){
   if(!restored){prof?.mark('advance single '+String(at));if(at!==undefined)await through(run,at);else await finish(run);prof?.mark('snapshot single');frame=snap(run);return;}
@@ -45,7 +45,7 @@ for(const arm of [6,0])it('M110 arm '+arm+' full calendar'+(arm===6?' and exact 
   }throw Error('M110 settlement cap');
  }
  for(const [index,at]of times.entries()){
-  await advance(at);prof?.mark('inspect/refold '+String(at));const observedFrame=frame,observed:Run={...run,snapshot:()=>observedFrame};const view=snapshotView(observedFrame),i=index+1,p=live(observed,at,view),l=refold(observed);expect(readQ(items(p.report,'list')[1])).toEqual(prior);
+  await advance(at);prof?.mark('inspect/refold '+String(at));const observedFrame=frame,observed:Run={...run,snapshot:()=>observedFrame};const view=snapshotView(observedFrame,readTrace),i=index+1,p=live(observed,at,view),l=refold(observed);expect(readQ(items(p.report,'list')[1])).toEqual(prior);
   prof?.mark('formation check '+String(at));expect(formationSignals(p.input[0],i===1?undefined:p.input[1]).output).toEqual(p.source);expect(standing(p.raw)).toEqual(standing(p.source));
   prof?.mark('qualification/probe checks '+String(at));let contribution='None';if(learning(i)){
    expect(l.journal).toHaveLength(frozen.length+1);const qual=qualificationParts(l.journal[frozen.length]);expect(qual.accepted).toBe(true);expect(qual.at.value).toBe(at);expect(qual.resolution).toEqual(p.d);expect(readQ(qual.contribution).equals(ZERO)).toBe(false);contribution=fraction(readQ(qual.contribution));frozen.push(qual.expression);
@@ -125,4 +125,23 @@ it('M110 inspection views preserve extraction and isolate successive snapshots',
  expect(selectOutputs(one.outputs,391n)).toEqual([a]);expect(selectOutputs(two.outputs,391n)).toEqual([c,a]);
  expect(selectOutputs(one.trace,391n)).toEqual([t]);expect(selectOutputs(two.trace,391n)).toEqual([t,u]);
  expect([...first.outputs,...first.trace,...last.outputs,...last.trace]).toEqual(before);
+});
+
+import {cognitiveSchemaByType} from '../assembled/codecs';
+import {record as uncheckedRecord,typedIdentifier as inspectionId} from '../substrate/canonicalEncoding';
+it('M110 trace prefix reuse agrees with full validation across append, edits and failures',()=>{
+ const a=diagnosticRecord(391,[diagnosticUnsigned(1)]),b=diagnosticRecord(434,[true]);
+ const extension=diagnosticRecord(399,[diagnosticUnsigned(3),inspectionId(1164,diagnosticUnsigned(1))],2);
+ const read=createTraceReader(),cases=[[],[a],[a],[a,b],[a,b,extension],[b,a,extension],[extension],[extension,a]];
+ for(const rows of cases){const bytes=encode(sequence(rows)),before=bytes.slice(),actual=read(bytes);expect(actual).toEqual(decode(bytes));expect(encode(actual)).toEqual(bytes);expect(bytes).toEqual(before);}
+ // Canonically encoded but semantically invalid records must reject in BOTH prefix and tail.
+ const invalid=uncheckedRecord(cognitiveSchemaByType(391n),new Map([[1n,true]]));
+ for(const rows of [[extension,a,invalid],[invalid,a]]){const bytes=encode(sequence(rows));expect(()=>decode(bytes)).toThrow();expect(()=>read(bytes)).toThrow();}
+ const good=encode(sequence([extension,a,b]));expect(read(good)).toEqual(decode(good));
+ expect(()=>read(new Uint8Array([255]))).toThrow();expect(read(good)).toEqual(decode(good));
+ // Mutating bytes or returned objects cannot forge the next prefix-validation proof.
+ const input=encode(sequence([a])),reader=createTraceReader(),parsed=reader(input);input.fill(255);
+ const item=items(parsed,'list')[0];if(typeof item==='boolean'||item.kind!=='record')throw Error('record');(item.fields as Map<bigint,CanonicalValue>).set(1n,true);
+ const appended=encode(sequence([a,b]));expect(reader(appended)).toEqual(decode(appended));
+ const forged=encode(sequence([invalid,b]));expect(()=>reader(forged)).toThrow();
 });

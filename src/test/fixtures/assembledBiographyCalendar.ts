@@ -1,5 +1,7 @@
 /** M110 plan df526263: fixed19-opportunity mapping, no seed/key search. */
 import {expect} from 'vitest';
+import {canonicalDecode,RecordSchemaRegistry} from '../../substrate/canonicalEncoding';
+import {cognitiveSupportedSchemas} from '../../assembled/codecs';
 import plan from '../../../docs/planning/BIO_COMPARISON_PLAN_REV3.json';
 import {fixture as prior,create,live,refold,learned,standing,ablation,rec,f,uint,items,key,decode,enc,list,text,signed,q,readQ,ZERO,signedValue,snap,through,finish,exact,bytes,qualificationParts,fraction,Q,formationSignals,enumerate,type Run,type CanonicalValue} from './assembledBiographyHistory';
 import {changeDefinition} from './assembledCharacter';
@@ -39,12 +41,30 @@ export function fixture(arm:number){
  let s=b.s;for(const n of ['definition/task-a','definition/task-b'])s=changeDefinition(s,n,6n,signed(60));
  value={s:{...s,rulesVersion:OPPORTUNITY_CONTEXT_RULES,registrySchemaVersion:OPPORTUNITY_CONTEXT_REGISTRY},d:{...b.d,runSeed:new Uint8Array(32),orderedInputs:enc(list([header(arm),...keep,...generated]))}};cache.set(arm,value);return value;
 }
-/** Read-only diagnostic views. Each instance belongs to ONE captured snapshot.
- * No global byte cache: later snapshots (even from the same run) decode independently.
- * State already has a snapshot-keyed cache in BiographyHistory.learned. */
-export function snapshotView(frame:Pick<ReturnType<Run['snapshot']>,'outputs'|'trace'>){
+/** Trace-list validation is elementwise in assembled/codecs and its predecessors.
+ * Only a byte-identical, previously fully validated prefix can reuse validation.
+ * Private byte copies prevent input mutation; decoded objects are never cached across frames.
+ * Full state/output/trace/save equality remains a separate native gate at every settlement. */
+export function createTraceReader(){
+ const registry=new RecordSchemaRegistry(cognitiveSupportedSchemas());let prior:{bytes:Uint8Array;count:number}|undefined;
+ return (bytes:Uint8Array):CanonicalValue=>{
+  let value:CanonicalValue;
+  if(!prior)value=decode(bytes);
+  else {
+   const parsed=canonicalDecode(bytes,registry),rows=items(parsed,'list');
+   const prefix=rows.length>=prior.count?enc(list(rows.slice(0,prior.count))):undefined;
+   if(prefix&&prefix.length===prior.bytes.length&&prefix.every((v,i)=>v===prior!.bytes[i])){
+    decode(enc(list(rows.slice(prior.count))));value=parsed;
+   }else value=decode(bytes);
+  }
+  const count=items(value,'list').length;prior={bytes:bytes.slice(),count};return value;
+ };
+}
+/** Read-only views belong to ONE snapshot. The optional per-run reader retains
+ * validated prefix bytes only; state already has a snapshot-keyed cache. */
+export function snapshotView(frame:Pick<ReturnType<Run['snapshot']>,'outputs'|'trace'>,readTrace:(bytes:Uint8Array)=>CanonicalValue=decode){
  let output:CanonicalValue|undefined,trace:CanonicalValue|undefined;
- return {get outputs(){return output??=decode(frame.outputs);},get trace(){return trace??=decode(frame.trace);}};
+ return {get outputs(){return output??=decode(frame.outputs);},get trace(){return trace??=readTrace(frame.trace);}};
 }
 export function actualDraws(run:Run,at:bigint,arm:number,decodedTrace?:CanonicalValue){
  const schedule=compileTimedComparison(header(arm)),rows=draws(run,at,decodedTrace);expect(rows.length).toBeGreaterThanOrEqual(2);
