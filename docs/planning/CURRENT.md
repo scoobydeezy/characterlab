@@ -13,8 +13,8 @@ One character; no UI, autonomous peers, seed routing or witness search.
   SUB004/009, MEC015..018/022, EXP011/012 retain ledger port/control/corpus roles.
   FND1/3/4 affected checks are explicit; original contracts/controls stay unchanged.
 - Proposed production paths: new timedComparison.ts, model.ts, inputs.ts, random.ts,
-  execution.ts. Two new test/helper paths assembledTimedComparison.test.ts and
-  fixtures/assembledTimedComparison.ts. Max7 production/test paths, max3 capabilities.
+  execution.ts, traceBinding.ts. Two new test/helper paths assembledTimedComparison.test.ts and
+  fixtures/assembledTimedComparison.ts. Max8 production/test paths, max3 capabilities.
 - Header is canonical list metadata, no new record allocation. Existing static116
   map is mutually exclusive. At most1000 entries, time1..100 at declared deliberation,
   exact existing purpose/subject/key domains, canonical order, globally injective keys.
@@ -47,6 +47,9 @@ One character; no UI, autonomous peers, seed routing or witness search.
   boundaries/research/control/document/size. Cumulative1800s incl15s bookkeeping.
   Three evidence files/5MiB: compact result, complete check log, compressed control.
   No automatic extension/split; stop at substantive failure/budget, retain all evidence.
+- Local repair after native admission failure: traceBinding.ts omitted0.86; add its
+  exact version to the existing guard. Eight paths remain within work-order12;
+  no comparison/law/time-budget change. Preserve failure and rerun affected checks.
 - Done only on all declared gates; no promotion of0.86 or full BIO closure. All
   original model sources/control dependencies stay unchanged; broad frozen suite
   only if actual S1 control closure changes. No new framework or verifier chain.
