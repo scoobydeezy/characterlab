@@ -131,3 +131,25 @@ all timeouts. No claim that this alone brings the full run under570s; measure fi
 No production change, extra acceptance run, source-law change or new coverage claim.
 Final type, boundary, preservation/document/evidence and Git-size checks pass.
 Final charged verification: 1761.373/1800s; this diagnostic package added 183.893s. The original budget is preserved. M110 remains incomplete; no continuation or BIO acceptance claim.
+
+## Inspection repair — 2026-11-14
+
+Plan d6116823 precedes the seven-test-file repair. M110 now decodes each captured
+output stream once for decision/execution queries and each trace once for formation
+and draw queries. Lazy views are local to that snapshot; later snapshots get new
+views. Existing snapshot-keyed learned-state decoding is unchanged. Uncached helper
+defaults remain available. No production, model, scenario, seed, law or gate changes.
+Save and restore at18 now have separate timing regions; continuation save generation
+and byte comparison are also timed separately. All original byte comparisons remain.
+
+Types, focused cache/extraction test, boundaries and preservation pass. The focused
+test proves encoded/decoded extraction agreement, stable ordering, independent later
+snapshots, lazy decoding, canonical round-trip bytes and no byte mutation. Its first
+attempt used an incomplete record schema; corrected to existing admitted schemas,
+with that failure retained. These are diagnostic records, not authored psychology.
+Source checks retain every native assertion (save temporaries normalized), and the
+calendar/header bytes-producing code is unchanged. No native run followed the repair.
+No measured speedup or continuation claim; C-BIO and all coverage counts stay open.
+Final charged verification1798.586/1800s; this repair/checkpoint added37.213s.
+Staged Git-size and whitespace pass. Original budget retained; measurement awaits
+an explicit bounded amendment. M110 remains incomplete.

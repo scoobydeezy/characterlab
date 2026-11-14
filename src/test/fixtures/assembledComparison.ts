@@ -7,7 +7,7 @@ import {canonicalEncode as enc,list,text,unsigned,typedIdentifier,type Canonical
 import {dataItems as items,dataRecord as rec,dataField as f,dataKey as key,dataIdentity as id,dataUnsigned as uint,dataText as txt} from '../../campaign2/canonicalData';
 import {decodeCognitive as decode,randomDrawRecord} from '../../assembled/codecs';
 import {relationshipSource,relationshipData} from './assembledRelationship';
-export function outputs(bytes:Uint8Array,type:bigint){return items(decode(bytes),'list').filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===type).map(v=>rec(v,type));}
+export function outputs(bytes:Uint8Array|CanonicalValue,type:bigint){return items(bytes instanceof Uint8Array?decode(bytes):bytes,'list').filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===type).map(v=>rec(v,type));}
 export const source=()=>({...relationshipSource(),rulesVersion:COMPARISON_RULES,registrySchemaVersion:COMPARISON_REGISTRY});
 export type Run=Awaited<ReturnType<typeof createCharacterRun>>;
 export const atom=(n:number,s:string)=>typedIdentifier(n,text(s));

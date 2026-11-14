@@ -44,8 +44,8 @@ const learnedCache=new WeakMap<ReturnType<typeof snap>,ReturnType<typeof oldLear
 export function learned(run:Run){const snapshot=snap(run),cached=learnedCache.get(snapshot);if(cached)return cached;
  const state=restoreAuthoritativeState(decode(snapshot.state)),value={formation:formationValue(state.read(fp).value),journal:identityJournal(state.read(jp).value),history:state.read({...jp,fieldId:1n}).value};learnedCache.set(snapshot,value);return value;
 }
-export function live(run:Run,at:bigint){
- let p:ReturnType<typeof capture>;try{p=capture(run,at);}catch(error){const d=outputs(snap(run).outputs,409n).find(v=>signedValue(f(v,2n))===at),states=restoreAuthoritativeState(decode(snap(run).state)).entries().filter(e=>e.path.rootStateTypeId===373n&&e.path.fieldId===1n);console.info('M107 LIVENESS FAILURE '+JSON.stringify({at:String(at),status:d?String(uint(f(rec(f(d,4n),419n),1n))):'absent',tasks:states},(_,v)=>typeof v==='bigint'?String(v):v));throw error;}
+export function live(run:Run,at:bigint,streams?:{outputs:CanonicalValue;trace:CanonicalValue}){
+ let p:ReturnType<typeof capture>;try{p=capture(run,at,streams);}catch(error){const d=outputs(snap(run).outputs,409n).find(v=>signedValue(f(v,2n))===at),states=restoreAuthoritativeState(decode(snap(run).state)).entries().filter(e=>e.path.rootStateTypeId===373n&&e.path.fieldId===1n);console.info('M107 LIVENESS FAILURE '+JSON.stringify({at:String(at),status:d?String(uint(f(rec(f(d,4n),419n),1n))):'absent',tasks:states},(_,v)=>typeof v==='bigint'?String(v):v));throw error;}
  expect(p.ns).toHaveLength(2);expect(uint(f(p.data,8n))).not.toBe(1n);for(const n of p.ns)expect(uint(f(rec(n,407n),4n))).toBe(4n);return p;
 }
 export function refold(run:Run){

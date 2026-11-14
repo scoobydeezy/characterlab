@@ -43,11 +43,12 @@ export function fixture(linked=true,permitted=true,hidden=false,legacy=false){
 }
 export async function create(linked=true,permitted=true,hidden=false,legacy=false,at=12n){const b=fixture(linked,permitted,hidden,legacy),run=await createCharacterRun(await prepareCharacterModel(b.s),b.d);await through(run,at);return {b,run};}
 export const reports=(run:Run,label:string)=>items(decode(snap(run).outputs),'list').filter(v=>typeof v!=='boolean'&&v.kind==='list'&&key(v.items[0])===key(text(label))).map(v=>items(v,'list'));
-export function capture(run:Run,at=12n){
- const d=outputs(snap(run).outputs,409n).find(v=>signedValue(f(v,2n))===at)!;expect(d,'actual decision').toBeDefined();
+export function capture(run:Run,at=12n,decodedOutputs?:CanonicalValue){
+ const output=decodedOutputs??snap(run).outputs;
+ const d=outputs(output,409n).find(v=>signedValue(f(v,2n))===at)!;expect(d,'actual decision').toBeDefined();
  const status=rec(f(d,4n),419n);expect(uint(f(status,1n)),'live choice').toBe(3n);
  const data=rec(f(status,2n),420n),context=rec(f(d,3n),408n),raw=rec(f(context,2n),403n),ns=items(f(context,3n),'list'),value=items(f(raw,5n),'set');
- expect(outputs(snap(run).outputs,433n).some(o=>key(f(rec(f(rec(f(rec(f(o,2n),432n),2n),431n),2n),425n),2n))===key(d)),'actual decision execution').toBe(true);
+ expect(outputs(output,433n).some(o=>key(f(rec(f(rec(f(rec(f(o,2n),432n),2n),431n),2n),425n),2n))===key(d)),'actual decision execution').toBe(true);
  return {d,data,context,raw,ns,value,probabilities:items(f(data,2n),'list').map(v=>f(rec(v,421n),2n))};
 }
 export function citation(run:Run){

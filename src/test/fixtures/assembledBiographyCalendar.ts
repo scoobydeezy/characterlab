@@ -39,8 +39,15 @@ export function fixture(arm:number){
  let s=b.s;for(const n of ['definition/task-a','definition/task-b'])s=changeDefinition(s,n,6n,signed(60));
  value={s:{...s,rulesVersion:OPPORTUNITY_CONTEXT_RULES,registrySchemaVersion:OPPORTUNITY_CONTEXT_REGISTRY},d:{...b.d,runSeed:new Uint8Array(32),orderedInputs:enc(list([header(arm),...keep,...generated]))}};cache.set(arm,value);return value;
 }
-export function actualDraws(run:Run,at:bigint,arm:number){
- const schedule=compileTimedComparison(header(arm)),rows=draws(run,at);expect(rows.length).toBeGreaterThanOrEqual(2);
+/** Read-only diagnostic views. Each instance belongs to ONE captured snapshot.
+ * No global byte cache: later snapshots (even from the same run) decode independently.
+ * State already has a snapshot-keyed cache in BiographyHistory.learned. */
+export function snapshotView(frame:Pick<ReturnType<Run['snapshot']>,'outputs'|'trace'>){
+ let output:CanonicalValue|undefined,trace:CanonicalValue|undefined;
+ return {get outputs(){return output??=decode(frame.outputs);},get trace(){return trace??=decode(frame.trace);}};
+}
+export function actualDraws(run:Run,at:bigint,arm:number,decodedTrace?:CanonicalValue){
+ const schedule=compileTimedComparison(header(arm)),rows=draws(run,at,decodedTrace);expect(rows.length).toBeGreaterThanOrEqual(2);
  return rows.map(d=>{const a=comparisonAddress(f(d,1n)),expected=schedule.bind(at,a.causalRootId).resolve(a);expect(expected).toBeDefined();expect(f(d,2n)).toEqual(coupledRandomKeyValue(expected!));return {local:key(f(d,1n)),effective:key(f(d,2n)),span:String(uint(f(d,4n))),result:String(uint(f(d,3n))),attempts:key(f(d,7n))};});
 }
 export {create,live,refold,learned,standing,ablation,rec,f,uint,items,key,decode,enc,list,text,signed,q,readQ,ZERO,signedValue,snap,through,finish,exact,bytes,qualificationParts,fraction,Q,formationSignals,enumerate};

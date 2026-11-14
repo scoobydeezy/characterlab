@@ -23,7 +23,7 @@ export function header(lane:number){const entries:TimedEntry[]=[];
  return timedComparisonValue(entries);
 }
 export function fixture(lane=0){let value=cache.get(lane);if(!value){const b=prior(0);value={s:{...b.s,rulesVersion:TIMED_COMPARISON_RULES,registrySchemaVersion:TIMED_COMPARISON_REGISTRY},d:{...b.d,orderedInputs:enc(list([header(lane),...items(decode(b.d.orderedInputs),'list')]))}};cache.set(lane,value);}return value;}
-export function draws(run:Run,at:bigint){return outputs(snap(run).trace,160n).filter(t=>signedValue(f(rec(f(t,4n),130n),2n))===at&&uint(f(rec(f(t,4n),130n),3n))===80n).flatMap(t=>items(f(t,14n),'list')).map(randomDrawRecord);}
+export function draws(run:Run,at:bigint,decodedTrace?:CanonicalValue){return outputs(decodedTrace??snap(run).trace,160n).filter(t=>signedValue(f(rec(f(t,4n),130n),2n))===at&&uint(f(rec(f(t,4n),130n),3n))===80n).flatMap(t=>items(f(t,14n),'list')).map(randomDrawRecord);}
 export function bound(run:Run,at:bigint,lane:number){const rows=draws(run,at),schedule=compileTimedComparison(header(lane));expect(rows.length).toBeGreaterThanOrEqual(2);
  for(const d of rows){const address=comparisonAddress(f(d,1n)),expected=schedule.bind(at,address.causalRootId).resolve(address);expect(expected,'actual draw has predeclared mapping').toBeDefined();expect(f(d,2n)).toEqual(coupledRandomKeyValue(expected!));}
  return rows;

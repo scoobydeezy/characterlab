@@ -1,4 +1,4 @@
-# Current work — M110 bounded inspection repair
+# Current work — M110 inspection repaired; native measurement pending
 One character; M110 native biography/continuation still incomplete. Reference0.85
 adopted; candidate0.87 admission passes. [Result](ASSEMBLED_CHARACTER_M110_RESULT.md).
 Owner continuation2026-11-14 authorizes the proposed parsing repair, not extra time.
@@ -9,8 +9,8 @@ Defaults keep uncached helpers; no production/fixture/contract/receipt changes.
 Split save, restore, snapshot, byte equality timings; preserve every native gate.
 Checks: decoded/uncached extraction equality, changed-snapshot isolation, lazy reuse,
 byte nonmutation; types, boundaries, preservation and staged-size. All serial.
-Original charged1761.373/1800s leaves38.627s; no native run or automatic extension.
-Repair done only if checks pass; speedup/continuation require separately budgeted run.
+Final charged1798.586/1800s; no native run or automatic extension.
+Repair checks pass; speedup/continuation require separately budgeted run.
 
 ## Bounded card — original comparison plus approved admission repair
 - Capability1: sixteen actual acquisitions over the original19-opportunity layout,

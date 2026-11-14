@@ -1,6 +1,6 @@
 import {it,expect} from 'vitest';
 import recorded from '../../docs/planning/ASSEMBLED_CHARACTER_M110_RECEIPTS.json';
-import {fixture,header,times,learning,actualDraws,create,live,refold,learned,standing,ablation,rec,f,uint,items,key,decode,readQ,ZERO,snap,through,finish,exact,bytes,qualificationParts,fraction,Q,formationSignals,enumerate,type Run,type CanonicalValue} from './fixtures/assembledBiographyCalendar';
+import {fixture,header,times,learning,actualDraws,snapshotView,create,live,refold,learned,standing,ablation,rec,f,uint,items,key,decode,readQ,ZERO,snap,through,finish,exact,bytes,qualificationParts,fraction,Q,formationSignals,enumerate,type Run,type CanonicalValue} from './fixtures/assembledBiographyCalendar';
 import {restoreCharacterRun} from '../assembled/character';
 import {analysis,action} from './fixtures/assembledBiographyAlternatives';
 type Row={i:number;at:string;chosen:string;contribution:string;before:string;after:string;authorship:string;probabilities:string[];draws:ReturnType<typeof actualDraws>};
@@ -35,12 +35,12 @@ for(const arm of [6,0])it('M110 arm '+arm+' full calendar'+(arm===6?' and exact 
    if(at!==undefined&&frame.clock>=at)return;
    prof?.mark('settle original '+String(at));const next=await run.settleNextInstant();prof?.mark('settle restored '+String(at));expect(await restored.settleNextInstant()).toBe(next);prof?.mark('snapshot pair');
    const x=run.snapshot(),y=restored.snapshot();frame=x;expect([y.clock,y.status]).toEqual([x.clock,x.status]);
-   prof?.mark('compare snapshot bytes');for(const k of ['state','outputs','trace'] as const)bytes(x[k],y[k]);prof?.mark('save pair and compare');bytes(run.save(),restored.save());prof?.mark('identity pair and compare');bytes(run.runIdentity(),restored.runIdentity());settlements.push(String(x.clock)+(next?'':':exhausted'));
+   prof?.mark('compare snapshot bytes');for(const k of ['state','outputs','trace'] as const)bytes(x[k],y[k]);prof?.mark('save original');const originalSave=run.save();prof?.mark('save restored');const restoredSave=restored.save();prof?.mark('compare save bytes');bytes(originalSave,restoredSave);prof?.mark('identity pair and compare');bytes(run.runIdentity(),restored.runIdentity());settlements.push(String(x.clock)+(next?'':':exhausted'));
    if(!next){expect(at).toBeUndefined();expect(x.clock).toBe(101n);return;}
   }throw Error('M110 settlement cap');
  }
  for(const [index,at]of times.entries()){
-  await advance(at);prof?.mark('inspect/refold '+String(at));const observedFrame=frame,observed:Run={...run,snapshot:()=>observedFrame};const i=index+1,p=live(observed,at),l=refold(observed);expect(readQ(items(p.report,'list')[1])).toEqual(prior);
+  await advance(at);prof?.mark('inspect/refold '+String(at));const observedFrame=frame,observed:Run={...run,snapshot:()=>observedFrame};const view=snapshotView(observedFrame),i=index+1,p=live(observed,at,view),l=refold(observed);expect(readQ(items(p.report,'list')[1])).toEqual(prior);
   prof?.mark('formation check '+String(at));expect(formationSignals(p.input[0],i===1?undefined:p.input[1]).output).toEqual(p.source);expect(standing(p.raw)).toEqual(standing(p.source));
   prof?.mark('qualification/probe checks '+String(at));let contribution='None';if(learning(i)){
    expect(l.journal).toHaveLength(frozen.length+1);const qual=qualificationParts(l.journal[frozen.length]);expect(qual.accepted).toBe(true);expect(qual.at.value).toBe(at);expect(qual.resolution).toEqual(p.d);expect(readQ(qual.contribution).equals(ZERO)).toBe(false);contribution=fraction(readQ(qual.contribution));frozen.push(qual.expression);
@@ -50,8 +50,8 @@ for(const arm of [6,0])it('M110 arm '+arm+' full calendar'+(arm===6?' and exact 
    if(i===19){expect(f(p.raw,4n)).not.toEqual(normalMeaning);const exactActual=await enumerate(p,b.s),exactAbsent=await enumerate(p,b.s,absent.context);expect([...exactAbsent.sum.values()]).toEqual([Q.of(1n,2n),Q.of(1n,2n)]);for(const v of items(f(p.data,2n),'list'))expect(exactActual.sum.get(key(f(rec(v,421n),1n)))).toEqual(readQ(f(rec(v,421n),2n)));}
   }
   prof?.mark('historical immutability '+String(at));for(const [j,x]of frozen.entries())expect(qualificationParts(l.journal[j]).expression).toEqual(x);
-  prof?.mark('draw receipts '+String(at));rows.push({i,at:String(at),chosen:action(f(p.data,1n)),contribution,before:fraction(prior),after:fraction(l.formation.P),authorship:fraction(readQ(f(p.data,7n))),probabilities:p.probabilities.map(v=>fraction(readQ(v))),draws:actualDraws(observed,at,arm)});prior=l.formation.P;
-  if(i===5&&arm===6){prof?.mark('save18/restore/exact');restored=await restoreCharacterRun(b.s,{initialState:b.d.initialState,orderedInputs:b.d.orderedInputs,save:run.save()});exact(run,restored);}
+  prof?.mark('draw receipts '+String(at));rows.push({i,at:String(at),chosen:action(f(p.data,1n)),contribution,before:fraction(prior),after:fraction(l.formation.P),authorship:fraction(readQ(f(p.data,7n))),probabilities:p.probabilities.map(v=>fraction(readQ(v))),draws:actualDraws(observed,at,arm,view.trace)});prior=l.formation.P;
+  if(i===5&&arm===6){prof?.mark('save18');const save=run.save();prof?.mark('restore18');restored=await restoreCharacterRun(b.s,{initialState:b.d.initialState,orderedInputs:b.d.orderedInputs,save});prof?.mark('exact18');exact(run,restored);}
  }
  await advance();const final=learned({...run,snapshot:()=>frame});expect(final.journal).toHaveLength(16);expect(final.formation.P).toEqual(prior);for(const [i,x]of frozen.entries())expect(qualificationParts(final.journal[i]).expression).toEqual(x);
  const receipt:Receipt={arm,rows,terminal:101,qualifications:16,originalWitness:rows.slice(0,4).every(v=>v.chosen==='A')&&rows.slice(5,17).every(v=>v.chosen==='B'),settlements};
@@ -98,3 +98,26 @@ it('M110 versioned opportunity admission and rejection boundaries',async()=>{
  }
  console.info('M110 ADMISSION PASS0.87:19 original and100 opportunity inputs;0.86:16 admitted/19 rejected; each source duplicate/101st/out-of-time; mandatory missing; mixed bundle rejected. No100-update runtime claim.');
 },170000);
+
+import {outputs as selectOutputs} from './fixtures/assembledComparison';
+import {cognitiveRecord as diagnosticRecord} from '../assembled/codecs';
+import {unsigned as diagnosticUnsigned} from '../substrate/canonicalEncoding';
+it('M110 inspection views preserve extraction and isolate successive snapshots',()=>{
+ const row=(type:number,value:number)=>diagnosticRecord(type,[type===391?diagnosticUnsigned(value):true]);
+ const a=row(391,1),b=row(434,2),c=row(391,3),t=row(391,4),u=row(391,5);
+ const first={outputs:encode(sequence([a,b])),trace:encode(sequence([t]))};
+ const last={outputs:encode(sequence([c,b,a])),trace:encode(sequence([t,u]))};
+ const before=[...first.outputs,...first.trace,...last.outputs,...last.trace],one=snapshotView(first),two=snapshotView(last);
+ // A broken unused stream must not be parsed eagerly.
+ const lazy=snapshotView({outputs:first.outputs,trace:new Uint8Array()});expect(selectOutputs(lazy.outputs,391n)).toEqual([a]);expect(()=>lazy.trace).toThrow();
+ expect(one.outputs).toBe(one.outputs);expect(one.trace).toBe(one.trace);
+ expect(two.outputs).not.toBe(one.outputs);expect(two.trace).not.toBe(one.trace);
+ for(const [frame,view]of [[first,one],[last,two]] as const){
+  for(const type of [391n,434n,999n])expect(selectOutputs(view.outputs,type)).toEqual(selectOutputs(frame.outputs,type));
+  expect(selectOutputs(view.trace,391n)).toEqual(selectOutputs(frame.trace,391n));
+  bytes(encode(view.outputs),frame.outputs);bytes(encode(view.trace),frame.trace);
+ }
+ expect(selectOutputs(one.outputs,391n)).toEqual([a]);expect(selectOutputs(two.outputs,391n)).toEqual([c,a]);
+ expect(selectOutputs(one.trace,391n)).toEqual([t]);expect(selectOutputs(two.trace,391n)).toEqual([t,u]);
+ expect([...first.outputs,...first.trace,...last.outputs,...last.trace]).toEqual(before);
+});

@@ -43,8 +43,8 @@ export const fp=formationPath(C),jp=journalPath(r(412,[C,sid(1041,'CommitmentFid
 export const learned=(run:Parameters<typeof snap>[0])=>({formation:formationValue(state(run).read(fp).value),journal:identityJournal(state(run).read(jp).value),history:state(run).read({...jp,fieldId:1n}).value});
 export const standing=(raw:CanonicalValue)=>items(f(rec(raw,403n),3n),'set').filter(v=>uint(f(rec(f(rec(v,402n),1n),401n),3n))===3n);
 export const withoutStanding=(raw:CanonicalValue)=>set(items(f(rec(raw,403n),3n),'set').filter(v=>uint(f(rec(f(rec(v,402n),1n),401n),3n))!==3n));
-export function capture(run:Parameters<typeof snap>[0],at=12n){
- const p=priorCapture(run,at),traces=items(decode(snap(run).trace),'list').map(v=>rec(v,160n));
+export function capture(run:Parameters<typeof snap>[0],at=12n,streams?:{outputs:CanonicalValue;trace:CanonicalValue}){
+ const p=priorCapture(run,at,streams?.outputs),traces=items(streams?.trace??decode(snap(run).trace),'list').map(v=>rec(v,160n));
  const trace=traces.find(t=>txt(f(t,6n))===FORMATION_VERSION&&key(f(rec(f(t,4n),130n),2n))===key(signed(at))&&uint(f(rec(f(t,4n),130n),3n))===80n)!;expect(trace).toBeDefined();
  const input=items(f(trace,12n),'list'),out=items(f(trace,13n),'list'),meaning=f(rec(input[0],403n),4n);
  if(typeof meaning==='boolean'||meaning.kind!=='map')throw Error('meaning');
