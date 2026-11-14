@@ -6,7 +6,7 @@ Read [CURRENT.md](docs/planning/CURRENT.md), then
 The active direction is assembly of one continuing character.
 Workbench/UI development and Campaign 4 are stopped pending assembly acceptance.
 This is the assembly checkout, based on
-`788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`. Reference0.85 remains adopted. M110 native calendar, exact continuation and paired gates pass within original command limits;0.87 remains candidate. Original BIO choice witness and native alternatives remain open. Five members mapped; full assembly open. Follow CURRENT.md; no unrelated breadth, UI or multi-character work.
+`788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`. Reference0.85 remains adopted. M111 native feedback-off comparison/continuation passes;0.88 is a comparison candidate. BIO original contrary witness and remaining comparison limits stay open. Five members mapped; full assembly open. Follow CURRENT.md; no unrelated breadth, UI or multi-character work.
 Do not execute historical TODOs, resume old audits, or retain/revisit browser tabs.
 Old instructions/evidence remain on tag `archive/workbench-stopped-2026-10-25`.
 ## Authority
