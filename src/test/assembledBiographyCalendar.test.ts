@@ -9,7 +9,12 @@ const liveReceipts:Record<string,Receipt>={};
 
 /** Owner-approved diagnostic only; never substitutes a completed M110 gate. */
 async function startM110Profile(){
- const pn='node:process',process=await import(/* @vite-ignore */ pn),timingOnly=process.env.M110_TIMING==='1';if(!timingOnly&&process.env.M110_PROFILE!=='1')return undefined;
+ const pn='node:process',process=await import(/* @vite-ignore */ pn),timingOnly=process.env.M110_TIMING==='1';
+ if(process.env.M110_PROGRESS==='1'){
+  const start=performance.now();let previous=start,stage='setup';
+  return {mark(next:string){const now=performance.now();process.stdout.write('M110 BENCHMARK PHASE '+JSON.stringify({stage,ms:Math.round(now-previous),elapsed:Math.round(now-start),next})+'\n');previous=now;stage=next;},async finish(){process.stdout.write('M110 BENCHMARK END '+JSON.stringify({elapsed:Math.round(performance.now()-start),lastStage:stage})+'\n');}};
+ }
+ if(!timingOnly&&process.env.M110_PROFILE!=='1')return undefined;
  const sn='node:inspector',fn='node:fs',zn='node:zlib';
  const [{Session},fs,z]=await Promise.all([import(/* @vite-ignore */ sn),import(/* @vite-ignore */ fn),import(/* @vite-ignore */ zn)]);
  const session=new Session();session.connect();

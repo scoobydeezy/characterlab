@@ -73,3 +73,33 @@ it('control-owned patches retain full validation, writer/scope, mixed-patch and 
  const released=sm.applyPatch(adopted,{operations:[{kind:'set',path:goal,expected:{presence:true,value:value(1)},newValue:value(2,2)}]},GOAL_OWNER).state;
  expect(released.read(goal).value).toEqual(value(2,2));expect(initial.read(goal).presence).toBe(false);expect(adopted.read(goal).value).toEqual(value(1));
 });
+
+import {withCommunicationState,knowledgePath as communicationPath} from '../assembled/communication';
+import {withSocialState,personPath,SOCIAL} from '../assembled/social';
+import {withRelationshipState,relationshipPath,REL} from '../assembled/relationship';
+import {withRecognitionState} from '../assembled/recognitionState';
+import {catalogEntries,OBSERVER} from '../assembled/recognition';
+import {semanticReferentFromAuthoredContent} from '../substrate/referentOrigin';
+import {governedContentDefinitionId} from '../substrate/contentDefinitionId';
+import {nextTrackSequencePath} from '../semanticBinding/semanticStateAuthority';
+import {signed} from '../substrate/canonicalEncoding';
+const target=semanticReferentFromAuthoredContent(governedContentDefinitionId('validation-target'));
+const recognition={candidates:[target],templates:['shape'],bindings:[{candidate:target,template:'shape'}]};
+const wrappers=[
+ {name:'communication',wrap:(base:Model)=>withCommunicationState(base,[C]),entries:[{path:communicationPath(C),value:list([list([typedIdentifier(1168,u(1)),C,signed(1),list([true])])])}]},
+ {name:'social',wrap:(base:Model)=>withSocialState(base,C,target),entries:[{path:personPath(C,target),value:list([text(SOCIAL),list([list([typedIdentifier(1115,u(1)),C,target,signed(1),u(1),u(1),list([true]),list([false])])])])}]},
+ {name:'relationship',wrap:(base:Model)=>withRelationshipState(base,C,target),entries:[{path:relationshipPath(C,target),value:list([text(REL),list([list([typedIdentifier(1115,u(1)),C,target,signed(1),true,true,u(1)])])])}]},
+ {name:'recognition',wrap:(base:Model)=>withRecognitionState(base,recognition),entries:catalogEntries(recognition)}
+];
+for(const spec of wrappers)it('outer '+spec.name+' keeps delegated equality and all inherited/local rejection paths',()=>{
+ const {sm:base,initial,validateState}=setup(),full=vi.fn(base.validateState),sm=spec.wrap({...base,validateState:full});
+ const s=new AuthoritativeState([...initial.entries(),...spec.entries]),patch:StatePatch={operations:[{kind:'set',path,expected:{presence:true,value:u(0)},newValue:u(1)}]};
+ const result=sm.applyPatch(s,patch,owner),expected=base.applyPatch(initial,patch,owner);
+ expect(enc(result.state.canonicalValue())).toEqual(enc(new AuthoritativeState([...expected.state.entries(),...spec.entries]).canonicalValue()));expect(result.diffs).toEqual(expected.diffs);
+ expect(validateState).toHaveBeenCalled();expect(full).not.toHaveBeenCalled();
+ expect(enc(sm.applyPatch(s,noOp,owner).state.canonicalValue())).toEqual(enc(s.canonicalValue()));expect(full).not.toHaveBeenCalled();
+ sm.validateState(s);expect(full).toHaveBeenCalledTimes(1);expect(enc(sm.restoreState(enc(s.canonicalValue())).canonicalValue())).toEqual(enc(s.canonicalValue()));
+ const bad=[plus(s,path,u(2)),plus(s,spec.entries[0].path,true),plus(s,{...spec.entries[0].path,selectors:[]},spec.entries[0].value)];
+ if(spec.name==='recognition')bad.push(initial,plus(s,nextTrackSequencePath(OBSERVER),u(1)));
+ for(const invalid of bad)for(const check of [()=>sm.applyPatch(invalid,noOp,owner),()=>sm.validateState(invalid),()=>sm.restoreState(enc(invalid.canonicalValue()))])rejectsWithoutMutation(invalid,check);
+});
