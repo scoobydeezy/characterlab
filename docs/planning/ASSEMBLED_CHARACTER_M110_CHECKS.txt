@@ -259,3 +259,89 @@ COMMAND ["git", "diff", "--cached", "--check"]
 
 EXIT 0; elapsed 0.054s
 CHARGED 1577.480
+
+Owner-approved diagnostic plan9a5b9abd. One instrumented original arm6 test, same source/seed/keys/assertions. Soft120s phase-boundary stop, hard160s command cap, original1800s cumulative. V8 sampling10ms and phase times; no acceptance retry.
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledBiographyCalendar.test.ts", "-t", "M110 arm 6", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+M110 PROFILE PHASE {"stage":"profile setup","ms":0,"elapsed":0,"next":"fixture"}
+M110 PROFILE PHASE {"stage":"fixture","ms":53927,"elapsed":53927,"next":"prepare/create/advance9"}
+M110 PROFILE PHASE {"stage":"prepare/create/advance9","ms":10031,"elapsed":63958,"next":"initial snapshot"}
+M110 PROFILE PHASE {"stage":"initial snapshot","ms":0,"elapsed":63959,"next":"advance single 10"}
+M110 PROFILE PHASE {"stage":"advance single 10","ms":6557,"elapsed":70515,"next":"snapshot single"}
+M110 PROFILE PHASE {"stage":"snapshot single","ms":0,"elapsed":70515,"next":"inspect/refold 10"}
+M110 PROFILE PHASE {"stage":"inspect/refold 10","ms":761,"elapsed":71276,"next":"formation check 10"}
+M110 PROFILE PHASE {"stage":"formation check 10","ms":3,"elapsed":71279,"next":"qualification/probe checks 10"}
+M110 PROFILE PHASE {"stage":"qualification/probe checks 10","ms":4,"elapsed":71284,"next":"historical immutability 10"}
+M110 PROFILE PHASE {"stage":"historical immutability 10","ms":2,"elapsed":71285,"next":"draw receipts 10"}
+M110 PROFILE PHASE {"stage":"draw receipts 10","ms":729,"elapsed":72015,"next":"advance single 12"}
+M110 PROFILE PHASE {"stage":"advance single 12","ms":6087,"elapsed":78102,"next":"snapshot single"}
+M110 PROFILE PHASE {"stage":"snapshot single","ms":0,"elapsed":78102,"next":"inspect/refold 12"}
+M110 PROFILE PHASE {"stage":"inspect/refold 12","ms":1365,"elapsed":79467,"next":"formation check 12"}
+M110 PROFILE PHASE {"stage":"formation check 12","ms":3,"elapsed":79470,"next":"qualification/probe checks 12"}
+M110 PROFILE PHASE {"stage":"qualification/probe checks 12","ms":4,"elapsed":79475,"next":"historical immutability 12"}
+M110 PROFILE PHASE {"stage":"historical immutability 12","ms":8,"elapsed":79483,"next":"draw receipts 12"}
+M110 PROFILE PHASE {"stage":"draw receipts 12","ms":1222,"elapsed":80704,"next":"advance single 14"}
+M110 PROFILE PHASE {"stage":"advance single 14","ms":5664,"elapsed":86368,"next":"snapshot single"}
+M110 PROFILE PHASE {"stage":"snapshot single","ms":0,"elapsed":86368,"next":"inspect/refold 14"}
+M110 PROFILE PHASE {"stage":"inspect/refold 14","ms":2145,"elapsed":88513,"next":"formation check 14"}
+M110 PROFILE PHASE {"stage":"formation check 14","ms":4,"elapsed":88517,"next":"qualification/probe checks 14"}
+M110 PROFILE PHASE {"stage":"qualification/probe checks 14","ms":5,"elapsed":88522,"next":"historical immutability 14"}
+M110 PROFILE PHASE {"stage":"historical immutability 14","ms":9,"elapsed":88530,"next":"draw receipts 14"}
+M110 PROFILE PHASE {"stage":"draw receipts 14","ms":1790,"elapsed":90321,"next":"advance single 16"}
+M110 PROFILE PHASE {"stage":"advance single 16","ms":5329,"elapsed":95650,"next":"snapshot single"}
+M110 PROFILE PHASE {"stage":"snapshot single","ms":0,"elapsed":95650,"next":"inspect/refold 16"}
+M110 PROFILE PHASE {"stage":"inspect/refold 16","ms":2906,"elapsed":98556,"next":"formation check 16"}
+M110 PROFILE PHASE {"stage":"formation check 16","ms":6,"elapsed":98562,"next":"qualification/probe checks 16"}
+M110 PROFILE PHASE {"stage":"qualification/probe checks 16","ms":4,"elapsed":98566,"next":"historical immutability 16"}
+M110 PROFILE PHASE {"stage":"historical immutability 16","ms":13,"elapsed":98580,"next":"draw receipts 16"}
+M110 PROFILE PHASE {"stage":"draw receipts 16","ms":2353,"elapsed":100933,"next":"advance single 18"}
+M110 PROFILE PHASE {"stage":"advance single 18","ms":5912,"elapsed":106845,"next":"snapshot single"}
+M110 PROFILE PHASE {"stage":"snapshot single","ms":0,"elapsed":106845,"next":"inspect/refold 18"}
+M110 PROFILE PHASE {"stage":"inspect/refold 18","ms":3499,"elapsed":110344,"next":"formation check 18"}
+M110 PROFILE PHASE {"stage":"formation check 18","ms":4,"elapsed":110348,"next":"qualification/probe checks 18"}
+M110 PROFILE PHASE {"stage":"qualification/probe checks 18","ms":183,"elapsed":110532,"next":"historical immutability 18"}
+M110 PROFILE PHASE {"stage":"historical immutability 18","ms":15,"elapsed":110547,"next":"draw receipts 18"}
+M110 PROFILE PHASE {"stage":"draw receipts 18","ms":2827,"elapsed":113374,"next":"save18/restore/exact"}
+
+TIMEOUT; stopped this validation process tree
+EXIT 124; elapsed 160.139s
+CHARGED 1737.619
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "-b", "--pretty", "false"]
+
+EXIT 0; elapsed 19.219s
+CHARGED 1756.838
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:boundaries"]
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+EXIT 0; elapsed 3.068s
+CHARGED 1759.906
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,re\nbase='3e86ffa5'\nallowed={'AGENTS.md','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md','docs/planning/ASSEMBLED_CHARACTER_M110_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M110_CHECKS.txt','src/test/assembledBiographyCalendar.test.ts'}\nchanged=set(subprocess.check_output(['git','diff',base,'--name-only']).decode().splitlines())|set(subprocess.check_output(['git','ls-files','--others','--exclude-standard']).decode().splitlines());assert changed==allowed,(changed-allowed,allowed-changed)\np='src/test/assembledBiographyCalendar.test.ts';a=subprocess.check_output(['git','show',base+':'+p]).decode();b=Path(p).read_text(encoding='utf-8')\nfor marker in ['expect','bytes']:\n assert re.findall(marker+r'\\([^;\\n]+',a)==re.findall(marker+r'\\([^;\\n]+',b),marker\nfor p,cap in {'AGENTS.md':120,'docs/planning/CURRENT.md':80,'docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md':250}.items():assert len(Path(p).read_text(encoding='utf-8').splitlines())<=cap,p\npaths=list(Path('docs/planning').glob('ASSEMBLED_CHARACTER_M110_*'));assert sorted(p.suffix for p in paths)==['.json','.md','.txt'];size=sum(p.stat().st_size for p in paths);assert size<5*1024*1024\ns=Path('docs/planning/ASSEMBLED_CHARACTER_M110_CHECKS.txt').read_text(encoding='utf-8');assert sum(l.startswith('TIMEOUT;') for l in s.splitlines())==3\nprint('PASS6 intended paths;1 instrumented test, zero production/helper/scenario/formal/control/obligation/register changes. Original expect/byte-check expressions unchanged.3 evidence files/'+str(size)+' bytes; CPU artifact absent and explicitly unclaimed. Prior failures, scope and document caps preserved.')\n"]
+PASS6 intended paths;1 instrumented test, zero production/helper/scenario/formal/control/obligation/register changes. Original expect/byte-check expressions unchanged.3 evidence files/33489 bytes; CPU artifact absent and explicitly unclaimed. Prior failures, scope and document caps preserved.
+
+EXIT 0; elapsed 0.569s
+CHARGED 1760.475
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:git-size"]
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.846s
+CHARGED 1761.321
+
+COMMAND ["git", "diff", "--cached", "--check"]
+
+EXIT 0; elapsed 0.052s
+CHARGED 1761.373

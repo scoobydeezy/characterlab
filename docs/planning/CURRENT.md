@@ -1,14 +1,10 @@
-# Current work — M110 bounded continuation profile
-Owner approves profiling after3e86ffa5 on2026-11-14. Original charge1577.480s
-leaves222.520s under1800s; no reset/extension. Reference0.85 remains adopted.
-One arm6 diagnostic: unchanged fixture/keys/seed/assertions; test-only phase marks
-and V8 CPU sampling10ms. Soft stop120s at phase boundary; hard command cap160s.
-No behavioral pass or acceptance retry. Record full profile losslessly gzip plus
-phase timing in existing log; four evidence files total/5MiB. One test file changes;
-zero production changes. Final types/preservation/size within remaining budget.
-Done: inspect samples and phase times, identify measured bottleneck or explicit
-coverage limit, and name a bounded next repair. No additional native run this package.
-[Existing result](ASSEMBLED_CHARACTER_M110_RESULT.md); original comparison below.
+# Current work — M110 diagnostic findings; continuation incomplete
+One approved profile hit160s hard cap inside save18/restore/exact; CPU sample did
+not flush. Emitted prefix timings are retained: fixture53.927s, growing diagnostic
+inspection/extraction1.490->6.326s/frame. [Findings](ASSEMBLED_CHARACTER_M110_RESULT.md).
+Next: reuse decoded immutable snapshot views; separate save/restore/equality timing.
+No further run in this package. Keep original gates, failures and1800s total.
+Reference0.85 adopted;0.87 admission passes; no full BIO or continuation pass.
 
 ## Bounded card — original comparison plus approved admission repair
 - Capability1: sixteen actual acquisitions over the original19-opportunity layout,

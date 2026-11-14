@@ -92,3 +92,42 @@ UI or multi-character work. Timeout evidence and all earlier failures remain.
 Charged1577.480s/1800s (26.29 minutes), including all earlier attempts,
 both570-second timeouts and15s bookkeeping.
 No budget reset or extension. Stop native retries at this incomplete checkpoint.
+
+
+## Owner-approved diagnostic — 2026-11-14
+
+Plan9a5b9abd uses the remaining original budget: one arm6 diagnostic, unchanged
+scenario/keys/seed/assertions, phase marks and V8 sampling10ms. It is not an
+acceptance retry. The120s soft stop is checked only at phase boundaries; the160s
+hard cap terminated the process while the combined save18/restore/exact phase
+was still running. The CPU profile could not flush, so there is NO saved CPU
+sample or function-level attribution. Complete emitted phase timings remain in
+the existing log; actual evidence remains three files, not the planned maximum4.
+The instrumented test remains opt-in through M110_PROFILE=1; normal gates remain.
+
+| Measured region through first probe18 | Seconds |
+|---|---:|
+| Fixture construction |53.927|
+| Prepare/create/advance to9 |10.031|
+| Five advance calls10..18, including helper snapshots |29.549|
+| Inspection/refold |10.676|
+| Draw receipt extraction |8.921|
+| Formation/qualification/probe/immutability checks combined |0.267|
+
+Inspection plus draw extraction rises from1.490s at10 to6.326s at18. Source
+inspection confirms outputs() decodes the complete supplied byte stream each call;
+StandingSources.capture separately decodes the whole trace, and the draw extractor
+calls outputs(trace). Repeated full-trace decoding is therefore a concrete growing
+cost to target. Timings do not isolate decoder CPU from all work in those regions.
+The near-zero cached snapshot lookup does not show that encoding is free: advance
+already invokes snapshots. This prefix is not a late-run CPU or save/restore profile.
+The last completed boundary was113.374s; save18/restore/exact did not complete before
+the watchdog. Its individual subcosts and all later continuation costs remain unknown.
+
+Next repair: reuse decoded read-only state/output/trace views per immutable snapshot
+in the M110 diagnostic path, keeping every original gate and canonical byte check.
+Separate save, restore and equality timings before another full attempt. Preserve
+all timeouts. No claim that this alone brings the full run under570s; measure first.
+No production change, extra acceptance run, source-law change or new coverage claim.
+Final type, boundary, preservation/document/evidence and Git-size checks pass.
+Final charged verification: 1761.373/1800s; this diagnostic package added 183.893s. The original budget is preserved. M110 remains incomplete; no continuation or BIO acceptance claim.
