@@ -228,7 +228,7 @@ identify actual gaps. Historical gate status does not override later accepted cl
 
 ## Current authorization boundary
 Owner2026-11-13 adopts0.85; after M105 authorizes continued character integration.
-M110 blocked by context admission;0.85 adopted,0.86 candidate; versioned widening precedes full BIO replay.
+Owner approves M110 versioned context widening on0.87 then unchanged replay;0.85 adopted; full BIO open.
 Full BIO mapping remains gated on its original comparisons; no UI, publishing or assembly acceptance.
 
 ## Owner ruling — unknown factors and live gates (2026-11-02)
