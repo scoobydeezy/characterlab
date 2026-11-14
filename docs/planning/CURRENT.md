@@ -1,40 +1,50 @@
-# Current work — BIO integration complete (M112)
+# Current work — M113 native EPI boundary
 
-BIO PHEN-BIO-001:2..9 are mapped; :10/11 remain tracked. One continuing character
-acquires biography, uses it in later choice probabilities, weakens after one actual
-contrary choice and reverses after sustained contrary choices. Old meaning stays
-frozen. All6 comparisons across3 full-history probes and exact continuation pass.
+One continuing character must not think differently because an unobserved delivery
+overflow differs. M112 BIO is complete; reference0.88/assembled-reference0.3 remains
+adopted with feedback TRUE. M113 adds no law, owner, factory or UI.
 
-[Result and complete requirement mapping](ASSEMBLED_CHARACTER_M112_RESULT.md);
-[actual check evidence](ASSEMBLED_CHARACTER_M112_CHECKS.txt).
-Plan/amendment f4d96821; test source0e60c686. No production changes this milestone.
-19 opportunities/16 actual qualifications;18 comparisons/1728 exact weighted cases.
-Save18 matches every later state/output/trace/save/identity byte through101/exhaustion.
-Native command529.301/570 seconds. Final verification 571.986/1800 seconds.
-No extension or failed check. Two test/helper files; two evidence files below5MiB.
+## Bounded card — approved under owner delegation2026-11-14
 
-## Explicit scope and reference disposition
+Capability: expand the saturation privacy witness through current perception,
+attention, memory, appraisal, reasons, decisions, expression/execution and formation.
+Scope: PHEN-EPI-001:2..9 bounded native correspondence; :10/11 tracked.
+Full EPI mapping remains pending original evidence-kind/surprise/belief consumer
+correspondence; a level sensor is not an applied-effect sensor.
+MEC003/006/007, EXP002/007/008, RET003/004/006/014 and SUB008/009/011 retain original
+port/control/corpus roles. RO007/010 wider consumer/inference triggers remain;
+this is a named assembled regression, no new source, reduction or general verdict.
 
-Owner delegated full BIO completion/local amendments. The pinned member accepts
-the original composed comparison; no six alternate native runtimes/public seed
-routing requirement is added. Original4-positive/12-contrary remains an executed
-component control; native4/12 remains false. Actual native2-positive/3-contrary
-proves the required one-versus-sustained contradiction distinction under adopted
-D3/calibration. No old failure, numerical difference or comparator is erased.
-AuthoredTrait/RecomputedHistory stay explicit external counterfactuals; no fake
-traits or historical rewrites enter reference state. Full details in result.
+Scenario: existing M106 nonsocial two-choice history; fixed seed0, same channels
+and reference mechanisms, body capacity100/rate0/grid10/threshold unchanged.
+Initial reserve95. Replace only existing delivery9 amount10 vs80.
+Exact normalized before19/20, potential1/10 vs4/5, applied1/20,
+overflow1/20 vs3/4. Sample and ordinary decision frames retained through101.
+Reference remains global; scenario parameters are admitted configuration.
+Positive control: initial30 in both arms, same delivery10 vs80; later body samples
+must differ and live body appraisal must differ. No final-choice effect claimed.
+No stochastic outcome search; actual random addresses/results must match in the
+saturated pair. If topology differs, diagnose before claiming coupled equality.
 
-Reference0.88 is adopted as admission-only successor to0.85, feedback TRUE globally.
-All psychology/selectors/calibration remain assembled-reference/0.3; false is only
-a labelled ablation. Old0.85 full-save control and M106–111 preserved checks remain.
-No automatic reduction, family acceptance, UI or autonomous-peer work follows.
+Compare identical model/initial/seed and manifests differing only amount; all
+authoritative state and all outputs except the identified physical receipt479
+must match at every settlement. Receipt5 fields checked exactly; trace differences
+permitted only run identity and the delivery event's payload/input/output.
+Audit every other event's read/input/output/draw/patch equality; prohibit physical
+receipt479 in cognitive input/output. Assert live samples, SEM, memory, appraisal,
+reason/decision/execution and actual retained learning before claiming coverage.
+Repeat baseline through10; save10 restore to101/exhaustion with full-byte equality.
+Positive control identifies the first permitted sample divergence and live appraisal.
+Original EPI component controls remain unchanged, not relabelled native consumers.
 
-## Next work boundary
-
-BIO member integration is done. Continue remaining pinned corpus members under
-the one reference; write a bounded next-milestone card before implementation.
-Broader identity/longitudinal family clauses, other members and final full-candidate
-replay remain required. Do not reopen completed BIO checks without an affected
-change, new failure or its explicit reopen trigger.
-Pinned21 members/15 families/132 clauses;6 mapped/0 families; E43/P57/N17/U15.
-| Research obligations | **0 active / 18 conditional / 0 unowned** |
+Files: new src/test/assembledEpistemicBoundary.test.ts and at most one helper;
+existing production only for a demonstrated defect, versioning before semantics.
+Budget<=3 capabilities/12 production-test files; 2 evidence files/5MiB.
+Checks serial: types<=120s; native saturation/repeat/restore<=570s;
+positive evidence control<=570s; boundary/research/preservation/git-size<=30s each.
+Cumulative1800s including15s bookkeeping. No unchanged retries/extensions by habit.
+Keep failures and record bounded fixture corrections before rerun under delegation.
+Done: both contrasts, liveness/audit, exact continuation and required checks PASS;
+otherwise record concrete blocker without claiming EPI or family completion.
+No frozen-control rerun: no dependency change unless a defect requires one.
+Final whole-candidate replay remains mandatory;21 members/15 families/132 clauses.
