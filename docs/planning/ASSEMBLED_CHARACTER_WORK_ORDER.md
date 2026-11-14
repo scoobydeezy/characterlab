@@ -228,7 +228,7 @@ identify actual gaps. Historical gate status does not override later accepted cl
 
 ## Current authorization boundary
 Owner2026-11-13 adopts0.85; after M105 authorizes continued character integration.
-M111 continues authorized integration: native feedback control/continuation passes; reference0.85 unchanged.
+Owner2026-11-14 delegates full BIO completion/local amendments; M112 pins scope correction and admission adoption.
 Full BIO mapping remains gated on its original comparisons; no UI, publishing or assembly acceptance.
 
 ## Owner ruling — unknown factors and live gates (2026-11-02)
