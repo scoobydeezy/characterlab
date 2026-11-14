@@ -1,19 +1,20 @@
-# Current work — M110 owner-validation group repair
-Owner2026-11-14 authorizes local amendments to completion; retain original gates.
-Arm6 still timed out570.135s after inspection/control repairs; failure retained.
-Profile identifies repeated validation through outer communication/social/relationship/
-recognition owners. Apply same validated-base/local-check split to those four only.
-Seven code paths this package: five owners, ControlValidation test, BiographyCalendar
-phase logger. Preserve each original local body, owned-patch/full/restore validation.
-Base induction extends control through those wrappers; no scheduler/law/schema edit.
-Add native progress marks only (no sampler/soft stop); all assertions remain unchanged.
-Focused tests: valid delegated state/diffs/no-op, bad inherited/local/foreign/catalog/
-track closure through delegated/full/restore paths. Existing four owner/rollback tests.
-Amend cumulative cap5580s before code; one job;<=600s/command;4 evidence files/5MiB.
-Checks: types30s, focused20s, four native owner/rollback checks150s each,0.85 save240s;
-original arm6 continuation570s, arm0 400s, pair120s, final30s. No timing-only retry.
-Performance targets stay570/400s. Stop verifying on pass; diagnose concrete failures.
-Reference0.85 adopted;0.87 candidate; no full BIO mapping/assembly acceptance.
+# Current work — M110 append-only trace inspection repair
+Owner authorizes bounded local amendments to completion; original gates remain.
+Latest run timed out570.136s in inspect46, after byte equality through46;149.343s
+completed inspection versus2.974s byte comparison. Keep this failure and phase log.
+Eight code paths total: prior seven plus existing BiographyCalendar helper. Production
+owner repair types/10 focused/four native rollback/0.85 full-save passes retained.
+Test-only reader uses canonical schema parse; re-encodes the current prefix and
+compares every byte with a private copy of the previously fully validated trace.
+Only equal prefixes reuse validation. Fully decode/validate every appended record;
+changed/shortened prefix falls back to full decode. No cached decoded values trusted.
+Proof: codecs validate top-level list elements independently; no cross-element rule.
+Full trace bytes still compared at every settlement; no record/checkpoint omitted.
+Checks: full-decoder parity, repeat/append/replacement/shrink, invalid old/new records,
+input-mutation isolation and recovery after failure; types30s and focused20s.
+Then original arm6 570s, arm0 400s, paired120s, final30s; cap5580s remains.
+One job;<=12 code paths;4 evidence files/5MiB; no native law/source/seed/fixture edits.
+Reference0.85 adopted;0.87 candidate; no full BIO/assembly acceptance.
 
 ## Bounded card — original comparison plus approved admission repair
 - Capability1: sixteen actual acquisitions over the original19-opportunity layout,
