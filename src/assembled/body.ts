@@ -36,7 +36,7 @@ export function compileBodyDeclaration(value:CanonicalValue){
  if(capacity.compare(zero)<=0||rate.compare(zero)<0||width.compare(zero)<=0||width.compare(capacity)>0||capacity.divide(width).denominator!==1n||threshold.compare(zero)<=0||threshold.compare(capacity)>0)invalidModel('body capacity/rate/grid/threshold domain');
  return Object.freeze({capacity,rate,width,threshold,permitted:a[5] as boolean,available:a[6] as boolean});
 }
-export type BodyDeclaration=ReturnType<typeof compileBodyDeclaration>&{readonly selectionCapacity?:number};
+export type BodyDeclaration=ReturnType<typeof compileBodyDeclaration>&{readonly selectionCapacity?:number;readonly effectEvidence?:boolean};
 export const bodyPath=(C:CanonicalValue):StatePath=>({rootStateTypeId:455n,fieldId:1n,selectors:[{kind:'mapKey',key:C}]});
 const exactPattern=(path:StatePath):StatePathPattern=>({...path,selectors:path.selectors.map(selector=>({kind:'exact',selector}))});
 /** Extend the single authoritative state, preserving the inherited validator/owners. */
@@ -87,7 +87,7 @@ export function createBodyExecution(d:BodyDeclaration,C:CanonicalValue,stateMode
    if(event.phase===110n){
     const receipt=key(event.eventTypeId)===key(ACTION_BODY_RECEIPT_EVENT),generated=key(event.eventTypeId)===key(ACTION_BODY_EVENT)||receipt;if(!generated&&key(event.eventTypeId)!==key(BODY_DELIVERY)||generated&&!actionBody||receipt&&!actionBody?.delayed)fail('body delivery event');
     const effect=generated?selectedBodyEffect(event.payload,C,actionBody!):undefined,payload=generated?undefined:items(event.payload,'list');
-    if(payload&&(payload.length!==2||key(payload[0])!==key(C)))fail('body delivery target');
+    if(payload&&(payload.length!==(d.effectEvidence?3:2)||d.effectEvidence&&typeof payload[2]!=='boolean'||key(payload[0])!==key(C)))fail('body delivery target');
     const amount=effect?.requested??exact(payload![1]),assessment=effect&&!receipt&&procedure?procedure.assess(context,effect.applied):undefined,applies=assessment?assessment.allowed:effect?.applied;let physical:CanonicalValue=list([]),toleranceReport:CanonicalValue|undefined;const queued=!!effect&&!receipt&&!!applies&&effect.delay>0n;
     if(receipt&&(!effect!.applied||effect!.delay===0n))fail('invalid delayed body receipt');
     if(queued)emissions=[{dueAt:checkedAddDuration(event.dueAt,simDuration(effect!.delay)),phase:110n,eventTypeId:ACTION_BODY_RECEIPT_EVENT,payload:structuredClone(event.payload),dependencies:list([])}];

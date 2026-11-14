@@ -1,3 +1,4 @@
+import {withEffectBelief} from './effectEvidence';
 import {receivingRecord as statusRecord} from './codecs';
 import {withQualifiedIdentityState} from './identityEligibility';
 import {withRecognitionState} from './recognitionState';
@@ -90,7 +91,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
    for(const op of instructions){if(op.kind!=='set'||state.read(op.path).presence||state.read({...op.path,fieldId:1n}).presence)invalidModel('adopted instruction is immutable');if(!patch.operations.some(p=>p.kind==='set'&&key(statePathValue(p.path))===key(statePathValue({...op.path,fieldId:1n}))&&key(p.newValue)===key(r(372,[{kind:'unsigned',value:1n}]))))invalidModel('instruction requires joint fresh Open adoption');if(scope&&(!scope.writableRoots.includes(373n)||!scope.targetPaths.some(p=>key(statePathValue(p))===key(statePathValue(op.path)))))invalidModel('instruction write scope');}
    const basePatch={operations:patch.operations.filter(o=>!instructions.includes(o))},base=structural.applyPatch(state,basePatch,authority,scope),result=instructions.length?applyStatePatch(base.state,{operations:instructions},authority,instructionAuthority!):{state:base.state,diffs:[]};validateState(result.state);return {state:result.state,diffs:[...base.diffs,...result.diffs]};},
  });
- const episodes=model.memory?withEpisodicState(inheritedState,C,model.body!,!!model.affectMemory,model.encoding,!!model.memoryUse,model.bodyMemoryUse,model.positionMemory,model.retainedAttribution,model.significanceEnabled,model.actionMemory):inheritedState;
+ const episodes=model.memory?withEpisodicState(inheritedState,C,model.body!,!!model.affectMemory,model.encoding,!!model.memoryUse,model.bodyMemoryUse,model.positionMemory,model.retainedAttribution,model.significanceEnabled,model.actionMemory,model.effectEvidence?.proposition):inheritedState;
  const embodied=model.body?withBodyState(episodes,C,model.body):episodes;
  const retained=model.retention?withRetentionState(embodied,C):embodied;
  const procedural=model.skill?withSkillState(retained,C,model.procedures,model.formationEnabled):retained;
@@ -105,7 +106,8 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  const related=model.relationship?withRelationshipState(socialized,C,model.relationship.target,model.relationship.bindings.map(b=>b.target),model.attachment):socialized;
  const recognized=model.recognition?withRecognitionState(related,model.recognition,!!model.encoding,model.positionEnabled):related;
  const identityRegistration=rec(f(rows.find(v=>key(f(v,1n))===key(typedIdentifier(1009,text('TaskIdentityApplicationTransition'))))!,4n),450n);
- const stateModel=model.eligibilityEnabled?withQualifiedIdentityState(recognized,identityKey,id(f(rec(f(identityRegistration,6n),322n),2n))):recognized;
+ const qualified=model.eligibilityEnabled?withQualifiedIdentityState(recognized,identityKey,id(f(rec(f(identityRegistration,6n),322n),2n))):recognized;
+ const stateModel=model.effectEvidence?withEffectBelief(qualified,C,model.effectEvidence):qualified;
  function initialState(bytes:Uint8Array){
   const state=stateModel.restoreState(bytes);
   for(const e of state.entries()){
