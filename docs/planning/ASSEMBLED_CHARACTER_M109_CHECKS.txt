@@ -1,0 +1,213 @@
+M109 plan862a28a5;1800s cumulative incl15s bookkeeping. All attempts retained; compressed pre-edit0.85 control is a separate lossless evidence file.
+CHARGED 15.000
+Orchestration correction: initial capture wrapper had a Python syntax error from JavaScript replacement-string dollar expansion. No native command executed. Rebuilt wrapper with literal replacement callback; bookkeeping allowance covers setup.
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledTimedComparison.test.ts", "-t", "M109 frozen085", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledTimedComparison.test.ts > M109 frozen085 full public save
+M109 BASELINE losslessly stored in docs\planning\ASSEMBLED_CHARACTER_M109_CONTROL.json; bytes 2347200; sha256 bf43c248a0e160b1dde27bdb46b229f50bcd2c0fa495bedf765ecf8118b7c08a
+
+ ✓ src/test/assembledTimedComparison.test.ts > M109 frozen085 full public save 79073ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  18:36:18
+   Duration  83.52s (transform 2.60s, setup 0ms, collect 3.89s, tests 79.07s, environment 0ms, prepare 137ms)
+
+
+EXIT 0; elapsed 85.168s
+CHARGED 100.168
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "-b", "--pretty", "false"]
+
+EXIT 0; elapsed 18.814s
+CHARGED 118.982
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/random.test.ts", "src/test/assembledTimedComparison.test.ts", "-t", "CV-RNG|M109 unit", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/random.test.ts > Campaign 0B addressed randomness > CV-RNG-001: has checked-in candidate-input, SHA-256, and first-128-bit vectors
+ ✓ src/test/random.test.ts > Campaign 0B addressed randomness > CV-RNG-002: maps every span boundary and rejects values outside the contract
+ ✓ src/test/random.test.ts > Campaign 0B addressed randomness > CV-RNG-003: records index-0, index-1, and fresh index-2 fallback paths exactly
+ ✓ src/test/random.test.ts > Campaign 0B addressed randomness > CV-RNG-004: verifies threshold uniformity and the published integer bounds
+ ✓ src/test/random.test.ts > Campaign 0B addressed randomness > CV-RNG-005: selects exact cumulative intervals in canonical item-ID order
+ ✓ src/test/random.test.ts > Campaign 0B addressed randomness > CV-RNG-006/007: unrelated draws and model identity cannot shift an address
+ ✓ src/test/random.test.ts > Campaign 0B addressed randomness > CV-RNG-008: explicitly couples different addresses and rejects invalid maps
+stdout | src/test/assembledTimedComparison.test.ts > M109 unit C0 correspondence admission and atomic binding
+M109 UNIT PASS distinct actual roots/shared candidates; natural fallback; admission/injectivity/purpose/time/order; abort/retry/expired/reused ledger
+
+ ✓ src/test/assembledTimedComparison.test.ts > M109 unit C0 correspondence admission and atomic binding 56615ms
+
+ Test Files  2 passed (2)
+      Tests  8 passed | 9 skipped (17)
+   Start at  18:44:22
+   Duration  60.99s (transform 2.72s, setup 0ms, collect 4.08s, tests 56.65s, environment 0ms, prepare 277ms)
+
+
+EXIT 0; elapsed 62.649s
+CHARGED 181.631
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledTimedComparison.test.ts", "-t", "M109 frozen085", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledTimedComparison.test.ts > M109 frozen085 full public save
+M109 frozen085 exact full save 2347200 bytes PASS
+
+ ✓ src/test/assembledTimedComparison.test.ts > M109 frozen085 full public save 77871ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  18:45:33
+   Duration  82.27s (transform 2.64s, setup 0ms, collect 3.96s, tests 77.87s, environment 0ms, prepare 132ms)
+
+
+EXIT 0; elapsed 83.909s
+CHARGED 265.540
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledTimedComparison.test.ts", "-t", "M109 native", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledTimedComparison.test.ts > M109 native paired timed coupling through complete histories 55480ms
+   → assembled trace requires exact model/run binding
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledTimedComparison.test.ts > M109 native paired timed coupling through complete histories
+SchedulerContractError: assembled trace requires exact model/run binding
+ ❯ Module.compileCharacterTraceBinding src/assembled/traceBinding.ts:27:1539
+
+ ❯ Module.createCharacterRuntime src/assembled/runtime.ts:108:14
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:122
+ ❯ Module.create src/test/fixtures/assembledBiographyHistory.ts:42:156
+ ❯ src/test/assembledTimedComparison.test.ts:40:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  18:47:10
+   Duration  59.84s (transform 2.63s, setup 0ms, collect 3.94s, tests 55.48s, environment 0ms, prepare 138ms)
+
+
+EXIT 1; elapsed 61.489s
+CHARGED 327.029
+
+LOCAL REPAIR: native construction rejected candidate0.86 at traceBinding.ts version allowlist. Routine version-admission omission, not a coupling/law failure. Before repair CURRENT declares eighth source/test path within work-order12; comparison/laws/1800s unchanged. Recheck affected native and old0.85 bytes.
+One-time capture branch removed after successful full-byte comparison; final regression rejects an empty control rather than capturing a new one. Metadata repair commit2e791028 mistakenly omitted its precommit size command; check immediately now and again before final commit.
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:git-size"]
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.823s
+CHARGED 327.852
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledTimedComparison.test.ts", "-t", "M109 native", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledTimedComparison.test.ts > M109 native paired timed coupling through complete histories
+M109 NATIVE PASS {"common":30,"differentRoots":30,"calendars":[101,101],"preflights":0,"rebindings":0,"seeds":[0,0]}
+
+ ✓ src/test/assembledTimedComparison.test.ts > M109 native paired timed coupling through complete histories 313833ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  18:49:12
+   Duration  318.32s (transform 2.65s, setup 0ms, collect 3.97s, tests 313.83s, environment 0ms, prepare 134ms)
+
+
+EXIT 0; elapsed 319.939s
+CHARGED 647.791
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledTimedComparison.test.ts", "-t", "M109 public", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledTimedComparison.test.ts > M109 public repeat and restore timed inputs at every later settlement
+M109 PERSISTENCE PASS save12; 13,14,16,18,20,22,24,26,40,101 and exhaustion
+
+ ✓ src/test/assembledTimedComparison.test.ts > M109 public repeat and restore timed inputs at every later settlement 299961ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  18:54:39
+   Duration  304.62s (transform 2.77s, setup 0ms, collect 4.13s, tests 299.96s, environment 0ms, prepare 137ms)
+
+
+EXIT 0; elapsed 306.290s
+CHARGED 954.081
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledTimedComparison.test.ts", "-t", "M109 frozen085", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledTimedComparison.test.ts > M109 frozen085 full public save
+M109 frozen085 exact full save 2347200 bytes PASS
+
+ ✓ src/test/assembledTimedComparison.test.ts > M109 frozen085 full public save 78348ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  18:59:54
+   Duration  82.79s (transform 2.69s, setup 0ms, collect 4.00s, tests 78.35s, environment 0ms, prepare 148ms)
+
+
+EXIT 0; elapsed 84.441s
+CHARGED 1038.522
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "-b", "--pretty", "false"]
+
+EXIT 0; elapsed 19.102s
+CHARGED 1057.624
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:boundaries"]
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+EXIT 0; elapsed 3.286s
+CHARGED 1060.910
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:research"]
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4334}
+
+EXIT 0; elapsed 4.076s
+CHARGED 1064.986
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,json,re,gzip,base64,hashlib\nbase='74914c5c'\ndef old(p):return subprocess.check_output(['git','show',base+':'+p]).decode('utf-8')\nallowed={'AGENTS.md','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md','docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md','docs/formal/ASSEMBLED_CHARACTER_TIMED_COMPARISON_CONTRACT.md','docs/planning/ASSEMBLED_CHARACTER_M109_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M109_CHECKS.txt','docs/planning/ASSEMBLED_CHARACTER_M109_CONTROL.json','src/assembled/timedComparison.ts','src/assembled/model.ts','src/assembled/inputs.ts','src/assembled/random.ts','src/assembled/execution.ts','src/assembled/traceBinding.ts','src/test/assembledTimedComparison.test.ts','src/test/fixtures/assembledTimedComparison.ts'}\nchanged=set(subprocess.check_output(['git','diff',base,'--name-only']).decode().splitlines())|set(subprocess.check_output(['git','ls-files','--others','--exclude-standard']).decode().splitlines())\nassert changed==allowed,(changed-allowed,allowed-changed)\nassert len([p for p in changed if p.startswith('src/')])==8\nfor p,cap in {'AGENTS.md':120,'docs/planning/CURRENT.md':80,'docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md':250,'docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md':250}.items():\n s=Path(p).read_text(encoding='utf-8');assert len(s.splitlines())<=cap,(p,len(s.splitlines()))\np='docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md';s=Path(p).read_text(encoding='utf-8')\nassert len(s.replace('\\n','\\r\\n').encode())<=65536\nfor marker in [' | F-',' | C-']:\n assert [l for l in old(p).splitlines() if marker in l]==[l for l in s.splitlines() if marker in l],marker\nfor p in ['docs/planning/RESEARCH_OBLIGATIONS.json','docs/planning/ASSEMBLED_CHARACTER_BASELINE.json']:\n assert json.loads(old(p))==json.loads(Path(p).read_text(encoding='utf-8')),p\npaths=list(Path('docs/planning').glob('ASSEMBLED_CHARACTER_M109_*'))\nassert sorted(p.suffix for p in paths)==['.json','.md','.txt']\nsize=sum(p.stat().st_size for p in paths);assert size<5*1024*1024,size\nc=json.loads(Path('docs/planning/ASSEMBLED_CHARACTER_M109_CONTROL.json').read_text(encoding='utf-8'))\ndata=gzip.decompress(base64.b64decode(c['gzip']))\nassert len(data)==c['uncompressedBytes']==2347200\nassert hashlib.sha256(data).hexdigest()==c['sha256']=='bf43c248a0e160b1dde27bdb46b229f50bcd2c0fa495bedf765ecf8118b7c08a'\nassert c['sourceCommit']=='74914c5c'\nhistorical=['src/campaign2','src/campaign3','src/observation','src/semanticBinding','src/substrate','reference']\nassert not subprocess.check_output(['git','diff',base,'--name-only','--',*historical]).strip()\nprint('PASS exact16 intended paths;8 production/test paths;3 lossless evidence files/'+str(size)+' bytes. Pre-edit control size/hash/source verified. Historical C0-C3/control/reference sources and old contracts unchanged; baseline, all F/C rows, obligations unchanged;21/15/132,E43/P57/N17/U15 and document caps preserved. No broad control rerun: S1 historical closure unchanged; assembled0.85 affected successor covered by actual full-byte control test.')\n"]
+PASS exact16 intended paths;8 production/test paths;3 lossless evidence files/134840 bytes. Pre-edit control size/hash/source verified. Historical C0-C3/control/reference sources and old contracts unchanged; baseline, all F/C rows, obligations unchanged;21/15/132,E43/P57/N17/U15 and document caps preserved. No broad control rerun: S1 historical closure unchanged; assembled0.85 affected successor covered by actual full-byte control test.
+
+EXIT 0; elapsed 0.792s
+CHARGED 1065.778
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:git-size"]
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.831s
+CHARGED 1066.609
+
+COMMAND ["git", "diff", "--cached", "--check"]
+
+EXIT 0; elapsed 0.056s
+CHARGED 1066.665

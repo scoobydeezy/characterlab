@@ -89,7 +89,7 @@ export function createCognitiveExecution(model:Model,component:State,inputs:Awai
  const registration=(name:string)=>f(rows.find(v=>key(f(v,1n))===key(atom(1009,name)))!,4n);
  const definition=(name:string)=>cloneCognitive(component.definition(name));
  const seed=f(rec(inputs.runIdentity.value,104n),4n);if(typeof seed==='boolean'||seed.kind!=='bytes')fail('run seed required');
- const random=model.habit?createAssembledRandomSession(seed.value,inputs.comparison,model.taskLimit,model.valueReceiving,model.standingRounding):createCognitiveRandomSession(seed.value);
+ const random=model.habit?createAssembledRandomSession(seed.value,inputs.comparison,model.taskLimit,model.valueReceiving,model.standingRounding,inputs.timedComparison):createCognitiveRandomSession(seed.value);
  const protocol=compileProtocolBridge(definition('protocol-observation'));let protocolInstant:ReturnType<typeof protocol.begin>|undefined;
  let pending=new Map<string,ScheduledEvent>(),checkpoint=new Map<string,ScheduledEvent>(),active=false,instant=0n,sealed=false,unbound=0,chosen=false;
  let source:ReturnType<typeof beginCognitiveSourceInstant>|undefined;
@@ -123,7 +123,7 @@ export function createCognitiveExecution(model:Model,component:State,inputs:Awai
   protocolEventTypes:()=>protocol.eventTypes(),
   identityEventType:()=>atom(1001,'event/task-identity-application'),
   executeProtocol(event:ScheduledEvent,allocator:{allocateRuntimeId():bigint}){if(!active||sealed||!protocolInstant)stageFail('protocol outside live cognitive instant');const result=protocolInstant.execute(event,allocator);return {...result,trace:(children:readonly ScheduledEvent[])=>protocolTraceRecord(model.modelIdentity.value,inputs.runIdentity.value,event,result.outputs,children)};},
-  begin(at:bigint){embarrassment?.reset();cognitiveOperation=false;valueProjection=undefined;valueMotivation=undefined;valueSupport=undefined;priorityEvidence=undefined;self?.begin(at);contextEvent=undefined;contextPending=new Set(inputs.identityEvents.filter(e=>e.dueAt===at).map(eventKey));activeWorkspace=undefined;activeAttribution=undefined;joint=undefined;if(active)stageFail('cognitive instant already active');active=true;sealed=false;unbound=0;chosen=false;identityPlan=undefined;identitySealed=false;instant=at;checkpoint=new Map(pending);source=beginCognitiveSourceInstant(inputs.base,at);random.begin();protocolInstant=protocol.begin(at);},
+  begin(at:bigint){embarrassment?.reset();cognitiveOperation=false;valueProjection=undefined;valueMotivation=undefined;valueSupport=undefined;priorityEvidence=undefined;self?.begin(at);contextEvent=undefined;contextPending=new Set(inputs.identityEvents.filter(e=>e.dueAt===at).map(eventKey));activeWorkspace=undefined;activeAttribution=undefined;joint=undefined;if(active)stageFail('cognitive instant already active');active=true;sealed=false;unbound=0;chosen=false;identityPlan=undefined;identitySealed=false;instant=at;checkpoint=new Map(pending);source=beginCognitiveSourceInstant(inputs.base,at);random.begin(at);protocolInstant=protocol.begin(at);},
   validateParticipants(events:readonly ScheduledEvent[]){
    if(!active||sealed)stageFail('participant check outside instant');
    const count=(name:string)=>events.filter(e=>key(e.eventTypeId)===key(atom(1001,'event/'+name))).length;

@@ -1,3 +1,4 @@
+import type {TimedComparison} from './timedComparison';
 import {ROUNDING_SPAN} from './standingRounding';
 import {receivingRecord as rec} from './codecs';
 /** assembled-character-habit/0.1: successor of the fixed cognitive RNG capability.
@@ -13,15 +14,17 @@ export type StandingDraws=ArbitrationDraws & {rounding?(nucleus:CanonicalValue):
 const atom=(n:number,s:string)=>typedIdentifier(n,text(s));
 function drawValue(draw:RandomDrawRecord){return (draw.comparisonDrawKey||String(typeof draw.localAddress.purposeId.payload!=='boolean'&&draw.localAddress.purposeId.payload.kind==='text'?draw.localAddress.purposeId.payload.value:'').endsWith('-standing-rounding')?successorRecord:r)(411,[randomAddressValue(draw.localAddress),draw.effectiveKey,u(draw.result),u(draw.span),u(draw.limit),draw.fallback,list(draw.attempts.map(a=>r(410,[u(a.internalCandidateIndex),u(a.candidate),a.rejected])))]);}
 function context(value:CanonicalValue){const reason=rec(value,408n),raw=rec(f(reason,2n),403n),options=rec(f(raw,2n),398n);return {nuclei:items(f(reason,3n),'list'),candidates:items(f(options,3n),'list').map(v=>f(rec(v,397n),1n))};}
-export function createAssembledRandomSession(seed:Uint8Array,comparison?:ComparisonDrawMap,maxDomain=2,valueReceiving=false,standingRounding=false){
- const runSeed=seed.slice(),committed=new Set<string>();let oracle:RandomRunOracle|undefined,staged=new Set<string>(),sealed=false,generation=0,inFlight=0;
+export function createAssembledRandomSession(seed:Uint8Array,comparison?:ComparisonDrawMap,maxDomain=2,valueReceiving=false,standingRounding=false,timedComparison?:TimedComparison){
+ if(comparison&&timedComparison)invalidModel('static and timed comparison are mutually exclusive');
+ const runSeed=seed.slice(),committed=new Set<string>();let instant:bigint|undefined,bound=false;let oracle:RandomRunOracle|undefined,staged=new Set<string>(),sealed=false,generation=0,inFlight=0;
  function stage(message:string):never{throw new SchedulerContractError('COGNITIVE_STAGE_VIOLATION',message);}
  return Object.freeze({
-  begin(){if(oracle)stage('random instant already active');oracle=new RandomRunOracle(runSeed,comparison);staged=new Set();sealed=false;generation++;},
+  begin(at?:bigint){if(oracle)stage('random instant already active');if(timedComparison&&at===undefined)stage('timed comparison requires authenticated instant');instant=at;bound=false;oracle=new RandomRunOracle(runSeed,comparison);staged=new Set();sealed=false;generation++;},
   forResolution(root:CanonicalValue,reasonContext:CanonicalValue):StandingDraws {
    if(!oracle||sealed)stage('random capability requires live instant');
    const epoch=generation,{nuclei,candidates}=context(cloneCognitive(reasonContext)),rootId=id(cloneCognitive(root));
    if(rootId.namespaceId!==1135n||typeof rootId.payload==='boolean'||rootId.payload.kind!=='unsigned')invalidModel('resolution root family');
+   if(timedComparison){if(bound)stage('timed resolution already bound');oracle!.installComparisonDrawMap(timedComparison.bind(instant!,rootId));bound=true;}
    const actor=candidates.length?f(rec(candidates[0],395n),1n):undefined;
    async function draw(purpose:string,bindings:RandomAddress['subjectBindings'],span:bigint){
     if(!oracle||sealed||generation!==epoch)stage('expired random capability');
@@ -49,7 +52,7 @@ export function createAssembledRandomSession(seed:Uint8Array,comparison?:Compari
   },
   prepareCommit(){if(!oracle||sealed||inFlight)stage('random instant cannot seal');sealed=true;},
   commit(){if(!oracle||!sealed)stage('random commit not prepared');for(const address of staged)committed.add(address);},
-  close(){if(inFlight)stage('random instant still executing');oracle=undefined;staged=new Set();sealed=false;generation++;},
+  close(){if(inFlight)stage('random instant still executing');oracle=undefined;instant=undefined;bound=false;staged=new Set();sealed=false;generation++;},
   committedAddressKeys(){if(oracle)stage('random ledger requires quiescence');return [...committed].sort();},
  });
 }

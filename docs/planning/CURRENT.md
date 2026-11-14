@@ -1,8 +1,9 @@
-# Current work — M109 timed comparison foundation
-Owner continuation after M108. Adopted reference0.85 remains; candidate0.86 protocol only.
+# Current work — M109 timed comparison foundation complete
+M109 PASS: [result](ASSEMBLED_CHARACTER_M109_RESULT.md). Reference0.85 remains adopted;
+candidate0.86 protocol only.30 later draws coupled despite different runtime IDs.
 One character; no UI, autonomous peers, seed routing or witness search.
 
-## Bounded card — before code
+## Completed bounded card — committed before code
 - Capability1: declare correspondence by decision instant/purpose/subjects once,
   without predicting or repeatedly rebinding allocated resolution IDs.
 - Capability2: keep injective keys, one RNG ledger, natural fallback, immutable run
@@ -54,5 +55,7 @@ One character; no UI, autonomous peers, seed routing or witness search.
   original model sources/control dependencies stay unchanged; broad frozen suite
   only if actual S1 control closure changes. No new framework or verifier chain.
 
+Next: remaining native BIO long-history/original RNG correspondence and alternatives.
+No witness/seed/key search or0.86 promotion was performed or authorized by M109.
 Five mapped members/zero families; final21/15/132,E43/P57/N17/U15 unchanged.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
