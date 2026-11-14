@@ -1,2 +1,13 @@
 M113 verification ledger. Baseline c9c951f9.
 CHARGED 15.000
+
+COMMAND ["cmd.exe", "/d", "/c", "node_modules\\\\.bin\\\\tsc.cmd", "--noEmit", "--project", "tsconfig.app.json"]
+error TS5058: The specified path does not exist: 'tsconfig.app.json'.
+
+EXIT 1; elapsed 0.135s
+CHARGED 15.135
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "-b", "--pretty", "false"]
+
+EXIT 0; elapsed 19.707s
+CHARGED 34.842
