@@ -68,12 +68,12 @@ COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledE
  FAIL  src/test/assembledEpistemicBoundary.test.ts > M113 saturated hidden overflow cannot reach current-character cognition
 CanonicalEncodingError: required field RunIdentity is absent
  ❯ fail src/substrate/canonicalEncoding.ts:430:9
-    428| 
+    428|\x20
     429| function fail(message: string): never {
     430|   throw new CanonicalEncodingError(message);
        |         ^
     431| }
-    432| 
+    432|\x20
  ❯ encodeRecord src/substrate/canonicalEncoding.ts:214:27
  ❯ encodeValue src/substrate/canonicalEncoding.ts:182:7
  ❯ Module.canonicalEncode src/substrate/canonicalEncoding.ts:101:3
@@ -98,3 +98,130 @@ COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "-b", "--pretty", "false"]
 
 EXIT 0; elapsed 19.261s
 CHARGED 176.587
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledEpistemicBoundary.test.ts", "-t", "M113 saturated", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledEpistemicBoundary.test.ts > M113 saturated hidden overflow cannot reach current-character cognition
+M113 equality {"at":"1","next":true,"events":14,"draws":0}
+M113 equality {"at":"2","next":true,"events":22,"draws":0}
+M113 equality {"at":"3","next":true,"events":30,"draws":0}
+M113 equality {"at":"4","next":true,"events":38,"draws":0}
+M113 equality {"at":"5","next":true,"events":46,"draws":0}
+M113 equality {"at":"6","next":true,"events":54,"draws":0}
+M113 equality {"at":"7","next":true,"events":94,"draws":0}
+M113 equality {"at":"8","next":true,"events":129,"draws":0}
+M113 equality {"at":"9","next":true,"events":155,"draws":0}
+
+stdout | src/test/assembledEpistemicBoundary.test.ts > M113 saturated hidden overflow cannot reach current-character cognition
+M113 equality {"at":"10","next":true,"events":238,"draws":2}
+M113 equality {"at":"11","next":true,"events":246,"draws":2}
+
+stdout | src/test/assembledEpistemicBoundary.test.ts > M113 saturated hidden overflow cannot reach current-character cognition
+M113 equality {"at":"12","next":true,"events":313,"draws":7}
+M113 LIVE {"samples":3,"experiences":16,"appraisals":2,"decisions":2,"qualifications":1,"stateRoots":["268","415","810","302","455","346","1500","1503","996","1000","362","241","242","243","244","373","1014"],"sampleIntervals":[["9","0ace030102010106be0101020106c00101"],["10","0ace030102010106c60101020106c80101"],["12","0ace030102010106c60101020106c80101"]]}
+M113 equality {"at":"13","next":true,"events":319,"draws":7}
+M113 equality {"at":"14","next":true,"events":323,"draws":7}
+M113 equality {"at":"20","next":true,"events":325,"draws":7}
+M113 equality {"at":"40","next":true,"events":326,"draws":7}
+M113 equality {"at":"101","next":true,"events":328,"draws":7}
+M113 equality {"at":"101","next":false,"events":328,"draws":7}
+M113 SATURATION PASS {"settlements":["1","2","3","4","5","6","7","8","9","10","11","12","13","14","20","40","101","101:exhausted"],"left":["95/1","10/1","5/1","5/1","100/1"],"right":["95/1","80/1","5/1","75/1","100/1"],"events":328,"draws":7}
+
+ ✓ src/test/assembledEpistemicBoundary.test.ts > M113 saturated hidden overflow cannot reach current-character cognition 166482ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  13:39:19
+   Duration  170.96s (transform 2.66s, setup 0ms, collect 3.99s, tests 166.48s, environment 0ms, prepare 133ms)
+
+
+EXIT 0; elapsed 172.637s
+CHARGED 349.224
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledEpistemicBoundary.test.ts", "-t", "M113 permitted", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledEpistemicBoundary.test.ts > M113 permitted evidence control changes live body appraisal
+M113 PERMITTED PASS {"firstSample":"10","left":{"samples":3,"experiences":16,"appraisals":2,"decisions":2,"qualifications":1,"stateRoots":["268","415","810","302","455","346","1500","1503","996","1000","362","241","242","243","244","373","1014"],"sampleIntervals":[["9","0ace0301020101063c010201063e01"],["10","0ace03010201010650010201065201"],["12","0ace03010201010650010201065201"]]},"right":{"samples":3,"experiences":16,"appraisals":2,"decisions":2,"qualifications":1,"stateRoots":["268","415","810","302","455","346","1500","1503","996","1000","362","241","242","243","244","373","1014"],"sampleIntervals":[["9","0ace0301020101063c010201063e01"],["10","0ace030102010106c60101020106c80101"],["12","0ace030102010106c60101020106c80101"]]},"appraisalLeft":"070307050af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61060e0a06263c06d208b00906d208b00907050af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d6206000106263c06000106000107050af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08051b636f6e74656e742f636f6e666967757261626c652d67617264656e060e0a06263c06d208b00906d208b009","appraisalRight":"070307050af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61060e0a060001060e14060e1407050af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d6206000106000106000106000107050af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08051b636f6e74656e742f636f6e666967757261626c652d67617264656e060e0a060001060e14060e14"}
+
+ ✓ src/test/assembledEpistemicBoundary.test.ts > M113 permitted evidence control changes live body appraisal 90236ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  13:42:24
+   Duration  94.67s (transform 2.66s, setup 0ms, collect 3.98s, tests 90.24s, environment 0ms, prepare 151ms)
+
+
+EXIT 0; elapsed 96.350s
+CHARGED 445.574
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:boundaries"]
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+EXIT 0; elapsed 3.156s
+CHARGED 448.730
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:research"]
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: CURRENT obligation counts are stale
+    at file:///C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/scripts/check-research-obligations.mjs:75:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.20.0
+
+EXIT 1; elapsed 4.119s
+CHARGED 452.849
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:research"]
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4334}
+
+EXIT 0; elapsed 3.998s
+CHARGED 456.847
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,json\nbase='c9c951f9'\ndef old(p):return subprocess.check_output(['git','show',base+':'+p],text=True)\nallowed={'AGENTS.md','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md','docs/planning/ASSEMBLED_CHARACTER_M113_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M113_CHECKS.txt','src/test/assembledEpistemicBoundary.test.ts'}\nchanged=set(subprocess.check_output(['git','diff',base,'--name-only'],text=True).splitlines())|set(subprocess.check_output(['git','ls-files','--others','--exclude-standard'],text=True).splitlines())\nassert changed==allowed,(changed-allowed,allowed-changed)\nfor p,cap in {'AGENTS.md':120,'docs/planning/CURRENT.md':80,'docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md':250,'docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md':250}.items():\n assert len(Path(p).read_text(encoding='utf8').splitlines())<=cap,p\np='docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md';s=Path(p).read_text(encoding='utf8');assert len(s.replace('\\n','\\r\\n').encode())<=65536\nfor marker in [' | C-',' | F-']:\n assert [x for x in old(p).splitlines() if marker in x and 'C-EPI' not in x]==[x for x in s.splitlines() if marker in x and 'C-EPI' not in x]\nassert len([x for x in s.splitlines() if x.startswith('| EQUIVALENT') and ' | C-' in x])==6\nassert '| UNRESOLVED | C-EPI' in s\nassert subprocess.check_output(['git','diff','cc866962','--','src/test/assembledEpistemicBoundary.test.ts'],text=True)==''\nlog=Path('docs/planning/ASSEMBLED_CHARACTER_M113_CHECKS.txt').read_text(encoding='utf8')\ndef receipt(label):\n rows=[json.loads(x.split(label+' ',1)[1]) for x in log.splitlines() if x.startswith(label+' ')]\n assert len(rows)==1,(label,len(rows))\n return rows[0]\na=receipt('M113 SATURATION PASS');b=receipt('M113 PERMITTED PASS');live=receipt('M113 LIVE')\nassert a['events']==328 and a['draws']==7\nassert a['settlements']==[str(x) for x in range(1,15)]+['20','40','101','101:exhausted']\nassert a['left']==['95/1','10/1','5/1','5/1','100/1'] and a['right']==['95/1','80/1','5/1','75/1','100/1']\nassert live['samples']==3 and live['experiences']==16 and live['decisions']==2 and live['qualifications']==1 and len(live['stateRoots'])==17\nassert b['firstSample']=='10' and b['appraisalLeft']!=b['appraisalRight']\nfor arm in ['left','right']:assert b[arm]['decisions']==2 and b[arm]['qualifications']==1\nfor failure in ['tsconfig.app.json','required field RunIdentity is absent','CURRENT obligation counts are stale','numerator']:assert failure in log\nassert 'Reference boundary check passed.' in log and 'PASS: research obligation references' in log\npaths=list(Path('docs/planning').glob('ASSEMBLED_CHARACTER_M113_*'));size=sum(p.stat().st_size for p in paths)\nassert len(paths)==2 and size<5*1024*1024\nprint('PASS: six intended paths, one test, zero production/contract/original-control changes. Six mapped members unchanged; EPI unresolved; every other member/family row preserved. Saturation328 events/7 draws,17 state roots,2 decisions/1 qualification,18 settlements, positive evidence10 confirmed. All failures retained. Document limits and2 evidence files/'+str(size)+' bytes pass.')\n"]
+PASS: six intended paths, one test, zero production/contract/original-control changes. Six mapped members unchanged; EPI unresolved; every other member/family row preserved. Saturation328 events/7 draws,17 state roots,2 decisions/1 qualification,18 settlements, positive evidence10 confirmed. All failures retained. Document limits and2 evidence files/19494 bytes pass.
+
+EXIT 0; elapsed 0.632s
+CHARGED 457.479
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:git-size"]
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.836s
+CHARGED 458.315
+
+COMMAND ["git", "diff", "--cached", "--check"]
+
+EXIT 0; elapsed 0.052s
+CHARGED 458.367

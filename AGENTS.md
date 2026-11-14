@@ -6,7 +6,7 @@ Read [CURRENT.md](docs/planning/CURRENT.md), then
 The active direction is assembly of one continuing character.
 Workbench/UI development and Campaign 4 are stopped pending assembly acceptance.
 This is the assembly checkout, based on
-`788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`. M112 completes BIO mapping under delegated authority; reference0.88 is the admission-only successor, feedback TRUE, unchanged0.85 psychology. Six members mapped; full assembly/families remain open. Follow CURRENT.md; no unrelated breadth, UI or multi-character work.
+`788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`. M112 maps BIO; M113 checks native saturation privacy, full EPI remains open. Reference0.88, feedback TRUE, unchanged psychology. Six members mapped; full assembly/families remain open. Follow CURRENT.md; no unrelated breadth, UI or multi-character work.
 Do not execute historical TODOs, resume old audits, or retain/revisit browser tabs.
 Old instructions/evidence remain on tag `archive/workbench-stopped-2026-10-25`.
 ## Authority
@@ -66,7 +66,7 @@ browser qualification or speculative audit tracks. Passing checks ends verificat
 unless a new change/failure supplies a concrete reason to rerun.
 Owner amendment2026-10-29: diagnose and repair ordinary implementation bugs
 autonomously within the declared scope/budgets; retain failures and target reruns.
-Owner2026-11-14 delegates full BIO completion and bounded local amendments. Repeated unchanged failures need analysis. Escalate only
+Owner2026-11-14 continues integration with bounded self-approved amendments. Repeated unchanged failures need analysis. Escalate only
 architectural/scope/comparison changes or exhausted budgets; no paperwork bypass.
 Keep AGENTS.md <=120 lines, CURRENT.md <=80, the work order <=250.
 Git stores history; keep one baseline, one register, one compact result per milestone.
