@@ -39,7 +39,9 @@ Source amount/body units normalize by admitted positive capacity. For this sourc
 amount cannot exceed capacity; precision/support follow original EPI domains.
 Generated observation/freezing/evidence/application events cannot be supplied as
 original inputs. Multiple deliveries at one instant targeting the same proposition
-are rejected before execution; evidence support capacity64 remains unchanged.
+are rejected before execution; at most64 permitted deliveries are admitted, so
+the original evidence-support capacity64 cannot be exceeded. Denied deliveries
+do not consume this support budget; existing total body-source capacity100 applies.
 
 MEC003/006/007 port; original Safe/PotentialLeak/OverflowLeak and exact/lattice
 controls retained. Existing SignificanceFirst replaces only original latest-slot

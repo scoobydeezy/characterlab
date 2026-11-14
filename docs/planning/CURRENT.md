@@ -60,3 +60,19 @@ holder1000 alias; state key retains actual semantic holder. See amended contract
 Package A checkpoint:12 code files; NOT qualified (trace guard rejects0.89).
 Package B begins from the next checkpoint commit: traceBinding.ts plus affected
 repairs/tests only, <=12 files. Same M114 gates and cumulative1800s, no reset.
+
+Trace comparison correction: differing physical receipt is carried by delivery110
+to observer120; check exact child association, keep every cognitive payload equal.
+
+Pending guard checks explicitly audit forbidden truth records/read roots and the
+one-field manifest; original Safe/PotentialLeak/OverflowLeak use both numerics.
+
+Retention correction: capacity changes occurrence allocation; compare exact belief
+mean/precision plus each support's actual sample correspondence, not opaque IDs.
+
+Rollback correction: earlier instant needs38 events, exceeding9's29; a global
+cap cannot target9. Use existing test spy after actual effect-memory patch9,
+asserting belief already updated; check full scheduler snapshot and dice rollback.
+
+Admission review: enforce original64-support bound as <=64 permitted deliveries
+before execution; deny65, admit64 and80 denied. Same0.89 contract, no law change.
