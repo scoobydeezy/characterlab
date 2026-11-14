@@ -1,10 +1,16 @@
-# Current work — M110 diagnostic findings; continuation incomplete
-One approved profile hit160s hard cap inside save18/restore/exact; CPU sample did
-not flush. Emitted prefix timings are retained: fixture53.927s, growing diagnostic
-inspection/extraction1.490->6.326s/frame. [Findings](ASSEMBLED_CHARACTER_M110_RESULT.md).
-Next: reuse decoded immutable snapshot views; separate save/restore/equality timing.
-No further run in this package. Keep original gates, failures and1800s total.
-Reference0.85 adopted;0.87 admission passes; no full BIO or continuation pass.
+# Current work — M110 bounded inspection repair
+One character; M110 native biography/continuation still incomplete. Reference0.85
+adopted; candidate0.87 admission passes. [Result](ASSEMBLED_CHARACTER_M110_RESULT.md).
+Owner continuation2026-11-14 authorizes the proposed parsing repair, not extra time.
+Repair: one lazy decoded output/trace view per captured snapshot; state cache retained.
+Seven test paths: Comparison, ValueProvenance, StandingSources, BiographyHistory,
+TimedComparison, BiographyCalendar helpers and existing BiographyCalendar test.
+Defaults keep uncached helpers; no production/fixture/contract/receipt changes.
+Split save, restore, snapshot, byte equality timings; preserve every native gate.
+Checks: decoded/uncached extraction equality, changed-snapshot isolation, lazy reuse,
+byte nonmutation; types, boundaries, preservation and staged-size. All serial.
+Original charged1761.373/1800s leaves38.627s; no native run or automatic extension.
+Repair done only if checks pass; speedup/continuation require separately budgeted run.
 
 ## Bounded card — original comparison plus approved admission repair
 - Capability1: sixteen actual acquisitions over the original19-opportunity layout,
