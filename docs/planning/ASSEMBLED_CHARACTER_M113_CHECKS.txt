@@ -55,3 +55,46 @@ EXIT 1; elapsed 59.114s
 CHARGED 93.956
 
 AMENDMENT before rerun: actual inherited sensor grid1 retained; mistaken grid10 assertion corrected. No simulation had executed. Gate and laws unchanged.
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledEpistemicBoundary.test.ts", "-t", "M113 saturated", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledEpistemicBoundary.test.ts > M113 saturated hidden overflow cannot reach current-character cognition 57263ms
+   → required field RunIdentity is absent
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledEpistemicBoundary.test.ts > M113 saturated hidden overflow cannot reach current-character cognition
+CanonicalEncodingError: required field RunIdentity is absent
+ ❯ fail src/substrate/canonicalEncoding.ts:430:9
+    428| 
+    429| function fail(message: string): never {
+    430|   throw new CanonicalEncodingError(message);
+       |         ^
+    431| }
+    432| 
+ ❯ encodeRecord src/substrate/canonicalEncoding.ts:214:27
+ ❯ encodeValue src/substrate/canonicalEncoding.ts:182:7
+ ❯ Module.canonicalEncode src/substrate/canonicalEncoding.ts:101:3
+ ❯ same src/test/assembledEpistemicBoundary.test.ts:37:55
+ ❯ compare src/test/assembledEpistemicBoundary.test.ts:59:3
+ ❯ src/test/assembledEpistemicBoundary.test.ts:96:16
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 6 skipped (7)
+   Start at  13:37:10
+   Duration  61.64s (transform 2.63s, setup 0ms, collect 3.95s, tests 57.26s, environment 0ms, prepare 137ms)
+
+
+EXIT 1; elapsed 63.370s
+CHARGED 157.326
+
+REPAIR before rerun: diagnostic trace projection must be a list of field-ID/value pairs, not an incomplete schema160/130 record. Required RunIdentity rejected the incomplete encoding. Same compared fields/exclusions; no production or acceptance change.
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "-b", "--pretty", "false"]
+
+EXIT 0; elapsed 19.261s
+CHARGED 176.587

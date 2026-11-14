@@ -6,7 +6,7 @@ import {fixture as prior,learned,rec,f,uint,items,key,decode,enc,list,text,signe
 import {prepareCharacterModel,createCharacterRun,restoreCharacterRun} from '../assembled/character';
 import {FEEDBACK_RULES,FEEDBACK_REGISTRY} from '../assembled/model';
 import {AuthoritativeState,restoreAuthoritativeState} from '../substrate/state';
-import {record} from '../substrate/canonicalEncoding';
+import {unsigned} from '../substrate/canonicalEncoding';
 import {BODY_DELIVERY,BODY_SELECTION_REPORT} from '../assembled/body';
 import {JOINT_APPRAISAL} from '../assembled/appraisal';
 import {isBodyEpisodePath} from '../assembled/memory';
@@ -49,7 +49,7 @@ function projection(t:CanonicalValue){
  const r=rec(t,160n),delivery=key(f(event(r),5n))===key(BODY_DELIVERY);
  // Only the common run-identity field and the declared truth source projections
  // differ. Every read, RNG record, state patch, owner and child remains compared.
- return record(r.schema,new Map([...r.fields].filter(([k])=>k!==3n&&!(delivery&&[4n,12n,13n].includes(k)))));
+ return list([...r.fields].filter(([k])=>k!==3n&&!(delivery&&[4n,12n,13n].includes(k))).map(([k,v])=>list([unsigned(k),v])));
 }
 function compare(a:Run,b:Run){
  const x=a.snapshot(),y=b.snapshot();expect([x.clock,x.status]).toEqual([y.clock,y.status]);bytes(x.state,y.state);
@@ -58,7 +58,7 @@ function compare(a:Run,b:Run){
  for(let i=0;i<ta.length;i++){
   same(projection(ta[i]),projection(tb[i]));
   if(key(f(event(ta[i]),5n))===key(BODY_DELIVERY)){
-   const e=event(ta[i]),other=event(tb[i]);same(record(e.schema,new Map([...e.fields].filter(([k])=>k!==6n))),record(other.schema,new Map([...other.fields].filter(([k])=>k!==6n))));
+   const e=event(ta[i]),other=event(tb[i]);same(list([...e.fields].filter(([k])=>k!==6n).map(([k,v])=>list([unsigned(k),v]))),list([...other.fields].filter(([k])=>k!==6n).map(([k,v])=>list([unsigned(k),v]))));
    expect(f(e,6n)).toEqual(list([C,q(10,1)]));expect(f(other,6n)).toEqual(list([C,q(80,1)]));
   }else for(const k of [12n,13n]){noPhysicalReceipt(f(ta[i],k));noPhysicalReceipt(f(tb[i],k));}
  }
