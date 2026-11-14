@@ -1,16 +1,16 @@
-# Current work — M110 inspection repaired; native measurement pending
+# Current work — M110 approved timing run
 One character; M110 native biography/continuation still incomplete. Reference0.85
 adopted; candidate0.87 admission passes. [Result](ASSEMBLED_CHARACTER_M110_RESULT.md).
-Owner continuation2026-11-14 authorizes the proposed parsing repair, not extra time.
-Repair: one lazy decoded output/trace view per captured snapshot; state cache retained.
-Seven test paths: Comparison, ValueProvenance, StandingSources, BiographyHistory,
-TimedComparison, BiographyCalendar helpers and existing BiographyCalendar test.
-Defaults keep uncached helpers; no production/fixture/contract/receipt changes.
-Split save, restore, snapshot, byte equality timings; preserve every native gate.
-Checks: decoded/uncached extraction equality, changed-snapshot isolation, lazy reuse,
-byte nonmutation; types, boundaries, preservation and staged-size. All serial.
-Final charged1798.586/1800s; no native run or automatic extension.
-Repair checks pass; speedup/continuation require separately budgeted run.
+Owner approved2026-11-14: +180s, cumulative cap1980s; baseline charge1798.586s.
+One unchanged arm6 diagnostic on repair2511dfd3, M110_PROFILE=1; hard160s,
+existing phase-boundary soft120s. No acceptance retry or second diagnostic.
+Compare prefix phase timings with cbbddd2c; separate save18, restore18 and exact18.
+No production/test/fixture/law/seed/assertion changes. Remaining20s for final checks.
+One process; retain failure/timeout and all emitted phases; no outcome search.
+Evidence: existing result/log/receipt plus optional existing profiler output, <=5MiB.
+Profiler field source3e86ffa5 names original instrumented base; actual run2511dfd3.
+Done: classify measured prefix cost and remaining bottleneck, preserve all gates,
+check source/evidence/document caps and staged-size; then stop. No full BIO claim.
 
 ## Bounded card — original comparison plus approved admission repair
 - Capability1: sixteen actual acquisitions over the original19-opportunity layout,
