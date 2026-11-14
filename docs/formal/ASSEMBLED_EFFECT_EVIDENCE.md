@@ -1,5 +1,5 @@
 # Assembled applied-effect evidence —0.1
-Construction amendment2026-11-14 under delegated EPI completion; qualification pending.
+Construction amendment2026-11-14; M114 qualifies its declared EPI source/consumer scope.
 Rules/registry0.89 adds one declared effect proposition and a permitted sensor flag
 per original BODY_DELIVERY. Old0.88 admission and behavior remain unchanged.
 

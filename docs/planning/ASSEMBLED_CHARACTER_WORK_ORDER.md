@@ -228,8 +228,8 @@ identify actual gaps. Historical gate status does not override later accepted cl
 
 ## Current authorization boundary
 Owner2026-11-13 adopts0.85; after M105 authorizes continued character integration.
-Delegated M112 completes BIO mapping; adopts0.88 admission successor with feedback TRUE and unchanged psychology.
-Original BIO controls/limits remain; final whole-candidate replay required. No UI, publishing or assembly acceptance.
+Delegated M114 completes bounded EPI; adopts0.89/effect-evidence0.1 with feedback TRUE and existing laws unchanged.
+Original BIO/EPI controls/limits remain; final whole-candidate replay required. No UI, publishing or assembly acceptance.
 
 ## Owner ruling — unknown factors and live gates (2026-11-02)
 

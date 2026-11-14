@@ -578,3 +578,39 @@ PASS: Git index contains no files at or above50,000,000 bytes.
 
 EXIT 0; elapsed 0.837s
 CHARGED 1502.175
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:boundaries"]
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+EXIT 0; elapsed 3.038s
+CHARGED 1505.213
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:research"]
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4335}
+
+EXIT 0; elapsed 3.971s
+CHARGED 1509.184
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,json\nbase='badd5813'\ndef old(p):return subprocess.check_output(['git','show',base+':'+p],text=True,encoding='utf8')\nsrc={'src/assembled/'+n+'.ts' for n in ['body','bodyIdentifiers','codecs','effectEvidence','inputs','memory','model','retention','runtime','state','traceBinding']}|{'src/test/assembledEffectEvidence.test.ts','src/test/fixtures/assembledEffectEvidence.ts'}\ndocs={'AGENTS.md','docs/formal/ASSEMBLED_EFFECT_EVIDENCE.md','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md','docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md','docs/planning/RESEARCH_OBLIGATIONS.json','docs/planning/ASSEMBLED_CHARACTER_M114_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M114_CHECKS.txt'}\nchanged=set(subprocess.check_output(['git','diff',base,'--name-only'],text=True).splitlines())|set(subprocess.check_output(['git','ls-files','--others','--exclude-standard'],text=True).splitlines())\nassert changed==src|docs,(changed-(src|docs),(src|docs)-changed)\nfor p,cap in {'AGENTS.md':120,'docs/planning/CURRENT.md':80,'docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md':250,'docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md':250}.items():assert len(Path(p).read_text(encoding='utf8').splitlines())<=cap,p\np='docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md';s=Path(p).read_text(encoding='utf8');assert len(s.replace('\\n','\\r\\n').encode())<=65536\nfor marker in [' | C-',' | F-']:\n assert [x for x in old(p).splitlines() if marker in x and 'C-EPI' not in x]==[x for x in s.splitlines() if marker in x and 'C-EPI' not in x]\nassert len([x for x in s.splitlines() if x.startswith('| EQUIVALENT') and ' | C-' in x])==7\nassert '| EQUIVALENT (mapped domain) | C-EPI' in s and 'E43/P57/N17/U15' in s\na=set(subprocess.check_output(['git','diff','d2993282','34a18ea9','--name-only','--','src'],text=True).splitlines())\nb=set(subprocess.check_output(['git','diff','34a18ea9','--name-only','--','src'],text=True).splitlines())\nassert len(a)==12 and b=={'src/assembled/traceBinding.ts','src/assembled/inputs.ts','src/test/assembledEffectEvidence.test.ts'}\np='docs/planning/RESEARCH_OBLIGATIONS.json';prior=json.loads(old(p));current=json.loads(Path(p).read_text(encoding='utf8'))\nfor x,y in zip(prior['obligations'],current['obligations']):\n expected=dict(x)\n if x['id'] in ['RO-C3-007','RO-C3-010']:expected['evidence']=x['evidence']+['docs/planning/ASSEMBLED_CHARACTER_M114_RESULT.md','docs/formal/ASSEMBLED_EFFECT_EVIDENCE.md']\n assert expected==y,x['id']\nassert current['reportReviews']==prior['reportReviews']+[{'path':'docs/planning/ASSEMBLED_CHARACTER_M114_RESULT.md','obligations':['RO-C3-007','RO-C3-010']}]\nfor k in prior:\n if k not in ['obligations','reportReviews']:assert prior[k]==current[k],k\nlog=Path('docs/planning/ASSEMBLED_CHARACTER_M114_CHECKS.txt').read_text(encoding='utf8')\nfor value in ['M114 INFORMATIVE PASS','M114 CONTROL PASS established','M114 CONTROL PASS fresh','M114 CONTROL PASS zero','M114 CONTROL PASS denied','M114 CONTROL PASS point','M114 OWNERS RETENTION ROLLBACK PASS','M114 SOURCE ADMISSION PASS','16 passed (16)','M113 SATURATION PASS','Reference boundary check passed.','PASS: research obligation references']:\n assert value in log,value\nassert log.count('M114 ORIGINAL CONTROL PASS {')==6\nr=json.loads(next(x.split('M114 INFORMATIVE PASS ',1)[1] for x in log.splitlines() if x.startswith('M114 INFORMATIVE PASS ')))\nassert r['events']==343 and r['draws']==7\nassert r['settlements']==[str(x) for x in range(1,15)]+['20','40','101','101:end']\nfor failure in ['TRACE COMPARISON AMENDMENT','RETENTION COMPARISON CORRECTION','ROLLBACK METHOD CORRECTION','ROLLBACK SPY REPAIR','CONSTRUCTION REPAIR','ADMISSION REVIEW']:assert failure in log\nassert not any('Factory' in line or 'Runtime' in line for p in Path('src/assembled').glob('*.ts') for line in p.read_text(encoding='utf8').splitlines() if \"from '../campaign3/\" in line)\npaths=list(Path('docs/planning').glob('ASSEMBLED_CHARACTER_M114_*'));size=sum(p.stat().st_size for p in paths)\nassert len(paths)==2 and size<5*1024*1024\nprint('PASS:21 intended paths;12/3 code package limits; two evidence files/'+str(size)+' bytes; planning limits; seven mapped members/zero families, unchanged132-clause classifications. All other member/family rows and frozen implementation/controls/baseline preserved. RO007/010 evidence only, statuses unchanged. No C3 factory/runtime imports. Native343 trace rows/7 draws and complete continuation,5 controls, owner/retention/rollback,64-support admission,6 original model contrasts,16 original tests and old0.88 regression receipts preserved with every failed attempt.')\n"]
+PASS:21 intended paths;12/3 code package limits; two evidence files/39720 bytes; planning limits; seven mapped members/zero families, unchanged132-clause classifications. All other member/family rows and frozen implementation/controls/baseline preserved. RO007/010 evidence only, statuses unchanged. No C3 factory/runtime imports. Native343 trace rows/7 draws and complete continuation,5 controls, owner/retention/rollback,64-support admission,6 original model contrasts,16 original tests and old0.88 regression receipts preserved with every failed attempt.
+
+EXIT 0; elapsed 1.631s
+CHARGED 1510.815
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:git-size"]
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.829s
+CHARGED 1511.644

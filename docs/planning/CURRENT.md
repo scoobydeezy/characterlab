@@ -1,78 +1,45 @@
-# Current work — M114 EPI integration
-Owner2026-11-14 delegates EPI completion and bounded local amendments.
-Reference0.88 remains adopted until successor checks pass; BIO/M113 preserved.
+# Current work — EPI integration complete
 
-## Bounded card before implementation
-Capability: actual body delivery -> permitted applied-effect observation -> SEM ->
-Gated scalar belief and evidence-aware surprise/encoding -> retained shared memory
-and later cognitive readout. One scheduler/state; existing belief-expectation and
-episodic owners. No separate EPI runtime, latest-slot store or scenario pipeline.
-Scope PHEN-EPI-001:2..9; :10/11 tracked; RO007/010 extension named below.
-Original epi-public/0.1 and LEARN Gated exact equations reused; old controls frozen.
-Successor rules/registry0.89, effect-evidence/0.1 contract committed before code.
-Safe sensor alone in production; PotentialLeak/OverflowLeak stay negative controls.
+The continuing character now turns permitted applied effects into evidence,
+Gated belief learning and retained episodic encoding. Later cognition reads belief
+and surviving memory independently. Hidden excess leaves cognition unchanged.
 
-Data: nonsocial M106 current character, seed0, fixed laws; capacity100/rate0.
-Effect observation per delivery has explicit permitted boolean; no injected belief.
-At1 acquire permitted point40 (established) or1 (informative); at2 unpermitted
-top-up55 or94 gives95; at9 potential10 vs80 -> applied5, overflow5 vs75.
-Normalized values reproduce original tuples. Initial body0; prior learned normally.
-Unknown/zero controls start without acquisition; zero reaches100 before bound0.
-Denied controls emit no effect sample/SEM/learning/encoding. Point controls10/80
-from empty body differ at permitted sample. Existing body-level sensor unchanged.
-Effect precision2; point surprise abs(x-mu), bound max(0,x-mu); raw1+surprise,
-strength raw/(1+raw). Unknown stays absent; informative bound prior.01 ->.03;
-compatible prior.4 stays.4. Encoding uses prior before phase140 learning.
-Shared memory uses existing SignificanceFirst/body capacity, immutable acquisitions;
-retention difference from original latest slot is explicit, not another memory store.
-Effect belief uses root362/field2 keyed by actual character/proposition definition, same belief owner.
-Samples900 and encodings910 retain original schemas; original meaning unchanged.
-At task appraisal50, read retained belief and encoding separately; no forced new
-effect-to-choice law. Existing body appraisal/decision remain same unified run.
+M114 PASS in the pinned C-EPI domain. See [result](ASSEMBLED_CHARACTER_M114_RESULT.md)
+and [checks](ASSEMBLED_CHARACTER_M114_CHECKS.txt). Owner2026-11-14 delegated bounded
+amendments and EPI completion; all failures/corrections are retained.
+Reference0.89/effect-evidence0.1 adopted under that authority; feedback TRUE and
+existing psychological laws/calibration unchanged. Old0.88 remains supported.
 
-Files<=12: model,inputs,body,state,codecs,runtime,memory,retention,effectEvidence.ts,
-new effect integration test and optional fixture. No frozen dependencies edited.
-Formal contract/new result/check log <=4 evidence/docs files, <=5MiB.
-Compare exact native state/all safe outputs and effective draws, excluding only
-physical receipt/trace/run identity differences. Original controls use declared
-field/identity/time correspondence; compare actual samples, prior/posterior,
-surprise/strength and independent later reads. Assert every compared consumer live.
-Native repeat/restore; forged origins/permissions/initial learned state, owner
-cross-writes, retention and whole-instant rollback; old0.88 M113 regression.
-Checks serial: types120s; native/control commands<=570s; original EPI<=120s;
-boundary/research/preservation/git-size<=30s. Total1800s including15s bookkeeping.
-Keep failures; diagnose before amendments; no seed/calibration search or gate waiver.
-Done only when original EPI requirements mapped with controls, native producer/
-consumer/retention/continuation pass and remaining differences classified.
-If package boundary needed, checkpoint honestly and continue EPI only.
-RO007 new consumer roster is explicitly exercised; RO010 exact admitted source/
-same-event prior ordering tested. No broader confidence/censoring law or debt closure.
-MEC003/006/007, EXP002/007/008 and retired truth shortcuts retain ledger dispositions.
-Pinned21 members/15 families/132 clauses; six mapped so far; final replay required.
+## What passed
+- Native saturation pair: learned prior1/100, bound1/20, posterior3/100,
+  surprise1/25, strength26/51. Full safe state/output equality through101.
+- Actual trace reads/writes/children and all7 addressed draws match;343 trace rows.
+- Exact repeat and save10 continuation; unknown/compatible/zero/denied/point controls.
+- Shared finite memory can lose encoding while preserving the belief and its
+  actual evidence support. Owner isolation and forbidden-read audits pass.
+- Reached fault after both belief/episode writes rolls back state,queue,allocators,
+  outputs,trace,clock and committed random-address records.
+- Original six projection/numeric comparisons and16 EPI tests; old0.88 M113,
+  source64-support/permission admission, types and repository checks pass.
+
+## Scope and next handoff
+C-EPI :2..9 mapped; :10/11 standing constraints tracked. Original controls stay
+frozen. One admitted effect proposition/channel, perfect permitted applied-effect
+sensor, exact Gated math and finite shared retention; no general censored inference,
+hedonic signal, opaque-handle safety or effect-to-choice law inferred.
+RO007/010 broader source/horizon/inference debts remain conditional.
+One model/state/scheduler/save; no standalone phenomenon runtime in production.
+Seven of21 members mapped, zero of15 complete families; E43/P57/N17/U15 unchanged.
+Every132 clause and final whole-candidate replay remain required. Earlier mappings
+retain their versioned evidence; they are not silently promoted to0.89.
+No active milestone after this pass. Continue the remaining member reconciliation
+under a bounded card before code; no unrelated breadth, UI or autonomous partners.
+
+## Guardrails retained
+One milestone/job; <=3 capabilities and12 code files per package; <=20 evidence
+files/5MiB; <=10 minutes per command and30 minutes cumulative verification.
+M114 split packageA12/packageB3 code paths before crossing the package limit;
+same1800-second budget, no reset or extension. Charged 1511.644 seconds.
+Stop verification on pass. Preserve original failures and meaningful comparators.
+No new verifier chain, catalog, reduction or final-acceptance waiver.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
-
-Repair before native rerun: extract unchanged body identifiers to bodyIdentifiers.ts
-to remove the new import cycle;12 production/test files, same contract and gates.
-
-Representation correction: use original proposition1027 and explicit diagnostic
-holder1000 alias; state key retains actual semantic holder. See amended contract.
-
-Package A checkpoint:12 code files; NOT qualified (trace guard rejects0.89).
-Package B begins from the next checkpoint commit: traceBinding.ts plus affected
-repairs/tests only, <=12 files. Same M114 gates and cumulative1800s, no reset.
-
-Trace comparison correction: differing physical receipt is carried by delivery110
-to observer120; check exact child association, keep every cognitive payload equal.
-
-Pending guard checks explicitly audit forbidden truth records/read roots and the
-one-field manifest; original Safe/PotentialLeak/OverflowLeak use both numerics.
-
-Retention correction: capacity changes occurrence allocation; compare exact belief
-mean/precision plus each support's actual sample correspondence, not opaque IDs.
-
-Rollback correction: earlier instant needs38 events, exceeding9's29; a global
-cap cannot target9. Use existing test spy after actual effect-memory patch9,
-asserting belief already updated; check full scheduler snapshot and dice rollback.
-
-Admission review: enforce original64-support bound as <=64 permitted deliveries
-before execution; deny65, admit64 and80 denied. Same0.89 contract, no law change.

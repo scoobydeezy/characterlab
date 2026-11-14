@@ -1,7 +1,7 @@
 # Assembled Character — reconciliation and requirement evidence
 
 Owner approved D1–D5 on2026-10-25 with the D2 condition below.
-Reference0.88 admission successor, feedback TRUE; M112 maps BIO.6 mapped/0 families; RO001/009/020 conditional.
+Reference0.89, feedback TRUE; M114 maps EPI.7 mapped/0 families; wider debts conditional.
 
 ## Decision sheet — adopted 2026-10-25
 
@@ -19,10 +19,9 @@ Reference0.88 admission successor, feedback TRUE; M112 maps BIO.6 mapped/0 famil
 
 No winner, completion, corpus closure or reduction inferred.
 
-One register, <=250 lines/65,536 bytes including CRLF; Git retains the M2 review.
-Original analysis: db0ca7a8/abe7a3ce; M1 criteria60b8fd2b. Basenames are src/campaign3
-unless prefixed. C rows track member correspondence; F rows index existing assembly
-evidence against every pinned clause. Historical controls alone never count.
+One register <=250 lines/65,536 CRLF bytes. M2: db0ca7a8/abe7a3ce; M1:60b8fd2b.
+Basenames: src/campaign3. C rows map members; F rows index all pinned clauses.
+Historical controls alone never count.
 
 Owner directions: required gaps block acceptance; broader research adds no gate without
 authority. Limits name IDs/evidence/impact; preserve competitors/factorials, no reduction.
@@ -37,8 +36,8 @@ F-row suffixes expand to BRIEF-<family>-<suffix>; each clause appears once.
 E is version-scoped evidence, NOT clause acceptance or a current-model rerun. Preserve
 all cited result limits; P/N/U remain open. Final candidate replay/classification is
 required even for E. This index promotes no historical result to a broader claim.
-Evidence index: E43/P57/N17/U15 =132. Counts are not a completion percentage. Mapped members:
-5/21; accepted complete families:0/15. Denominator unchanged.
+Evidence index: E43/P57/N17/U15 =132. Not a completion percentage. Mapped members:
+7/21; accepted complete families:0/15. Denominator unchanged.
 [M102] reassesses all15 rows: only12.2-5 and12.13-8
 move P to E; other130 classifications remain. Cited evidence stays version-scoped.
 
@@ -46,7 +45,7 @@ move P to E; other130 classifications remain. Cited evidence stays version-scope
 |---|---|---|---|---|
 | DISTINCT OPERATION | R0 — adopted authority | [Work order][ref2], [baseline][ref3]. | D1–D5/D2 condition govern; preserve historical controls. | Final scope unchanged; no approval inferred from a review. |
 | DISTINCT OPERATION | R1 — operation-level consolidation | M1–M19 inventory; O1–O6. | Two narrowly proved primitives, shared kernels, distinct semantic producers and non-equivalent lifecycle/codec wrappers. | Consolidate only when needed in the successor; preserve meanings/controls. No whole-runtime equivalence, framework or cleanup milestone. |
-| DISTINCT OPERATION | R2 — one reference policy | D2/L1–L8; assembled-reference/0.3,0.88 (M112), feedback TRUE. | Fix global selectors/calibration/owners before replay. Vary admitted traits/S0/events/interventions only. Label controls; variant-only success cannot close reference failure. | All21 members/132 clauses and final replay required. No member branches/defaults/gain tuning/producer swaps. Reference changes need ruling and affected reruns. |
+| DISTINCT OPERATION | R2 — one reference policy | D2/L1–L8; assembled-reference/0.3,0.89 (M114), feedback TRUE. | Fix global selectors/calibration/owners before replay. Vary admitted traits/S0/events/interventions only. Label controls; variant-only success cannot close reference failure. | All21 members/132 clauses and final replay required. No member branches/defaults/gain tuning/producer swaps. Reference changes need ruling and affected reruns. |
 | DISTINCT OPERATION | O1 — appraisal operations | cognitiveTransforms.ts appraisalOutput (C2); affectMath.ts affectAppraisal; embarrassmentPublicMath.ts appraisal/nativeReasons; embarrassment.ts estimate; affectFactorComparison.ts. | Task-interval distance, physical p/s/v/c and social-context likelihood are distinct calculations; E/U already shares a kernel. One appraisal stage, explicit operands, one factor call per actual appraisal. | Embarrassment's disabled C2 scaffolding is packaging, not required psychology. Remove redundant successor packaging only with declared output/parent mapping; preserve old records/controls. No whole-appraisal duplicate. |
 | DUPLICATE (equivalence established) | O2 — binary mean only | beliefMath.ts applyBeliefEvidence; socialMath.ts updateSocial; skillMath.ts learnSkill. | Common mean branch: x in {0,1}, n=1..7, mu in[0,1], returns (n*mu+x)/(n+1); n=0 returns x. Identical exact arithmetic, no state/RNG/ordering effect. | Do not merge learners: belief cap32/reject repeats, social cap8/ignore repeated keys, skill cap8/reject repeats. Eligibility/support/owner/trace stay distinct. L5 may leave skill mean control-only; no reduction. |
 | DISTINCT OPERATION | O3 — shared reason kernel | src/campaign2/cognitiveMath.ts compileReasonNuclei; affectMath.ts, skillMath.ts, embarrassmentPublicMath.ts nativeReasons; multisourceComparison.ts. | Share compilation, join sources once, consolidate grounds, one reason/arbitration path. Raw sources, grounds, calibration and envelopes differ. | No duplicate wrapper bases or subsystem-specific extra reasons. Declare exact source/ground/role/support/calibration before a join; equal strengths do not prove duplicate evidence. Preserve wrapper controls. |
@@ -108,7 +107,7 @@ move P to E; other130 classifications remain. Cited evidence stays version-scope
 | DISTINCT OPERATION | V4 — incremental and final replay | C/F rows and [baseline][ref3] pin scope;18 conditional obligations remain. | Post-M60: MEMORY first, then AFFECT/DECISION serially. Pin executable R2 and original fixtures/projections/checkpoints/IDs; record covered/blocked requirements here. Witness/control passes are not member closure. | Invalidate on mapped producer/consumer/state/law/source change. One affected member per milestone; no parallel audit.10min/check30min total,20files/5MiB; split/amend before execution. Missing producers stay open. |
 | UNRESOLVED | C-ADAPT — PHEN-ADAPT-001 v1.11.0 | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/0); `src/campaign2/factory.ts`. | Route M2/FND2/FND4. Required `PHEN-ADAPT-001:3..19` (inclusive). | Replay pending; U1/V4. |
 | UNRESOLVED | C-DET — PHEN-DET-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/1); `src/campaign2/cognitiveFactory.ts`. | Route S1/V1/FND1/FND3/FND4. Required `PHEN-DET-001:2..11` (inclusive). | Replay pending; U1/V4. |
-| UNRESOLVED | C-EPI — PHEN-EPI-001 v1.3.0-draft | [M113](ASSEMBLED_CHARACTER_M113_RESULT.md); epiFactory.ts. | Native saturation/privacy/restore. | :2..9 partial: effect evidence/surprise/learning consumers pending; :10/11 tracked. |
+| EQUIVALENT (mapped domain) | C-EPI — PHEN-EPI-001 v1.3.0-draft | [M114](ASSEMBLED_CHARACTER_M114_RESULT.md); original controls. | :2..9 mapped on0.89; :10/11 tracked. Safe effect/SEM/learning/encoding/later read; shared owners/retention; restore/rollback. | One perfect effect sensor; original leak/lattice controls retained. Retention/identity correspondence explicit; RO007/010 limits; final replay required. |
 | UNRESOLVED | C-SEM — PHEN-SEM-001 v1.12.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/3); `src/test/phenSem001Binding.test.ts`. | Route M1/FND3/FND6. Required `PHEN-SEM-001:2..13` (inclusive). | Replay pending; U1/V4. |
 | UNRESOLVED | C-LEARN — PHEN-LEARN-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/4); `src/campaign3/learnFactory.ts`. | Route M5/L3. Required `PHEN-LEARN-001:2..11` (inclusive). | Replay pending; U1/V4. |
 | EQUIVALENT (mapped domain) | C-MEM — PHEN-MEM-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/5); generalFactory.ts. | [M64],0.63: :2..9 PASS; :10/:11 TRACKED. | Actual recency/K/reinforcement/tie/privacy/trace/workspace. Source/time mapping explicit; original no-decay component control retained. No full GA/family/corpus closure; reopen constraints preserved. |
