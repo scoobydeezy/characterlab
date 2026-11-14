@@ -1,7 +1,9 @@
-# Current work — M110 resumed: versioned calendar admission
-Owner approves widening after5a929088. Reference0.85 remains adopted; candidate0.87
-extends0.86 admission only. Failed181.555s stays charged to original1800s budget.
-One character; no search, new psychological law or reference promotion.
+# Current work — M110 admission repaired; continuation incomplete
+Candidate0.87 admits19/100 opportunity inputs; old0.86 limits and0.85 save preserved.
+Both full-history/continuation attempts timed out at570s; no completed native receipt.
+[Result](ASSEMBLED_CHARACTER_M110_RESULT.md). Stop native retries. Next: bounded
+profile of this exact continuation test before another acceptance attempt.
+Reference0.85 remains adopted. All failures stay charged to original1800s budget.
 
 ## Bounded card — original comparison plus approved admission repair
 - Capability1: sixteen actual acquisitions over the original19-opportunity layout,

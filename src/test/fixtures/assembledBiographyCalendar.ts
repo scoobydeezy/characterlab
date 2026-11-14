@@ -4,7 +4,7 @@ import plan from '../../../docs/planning/BIO_COMPARISON_PLAN_REV3.json';
 import {fixture as prior,create,live,refold,learned,standing,ablation,rec,f,uint,items,key,decode,enc,list,text,signed,q,readQ,ZERO,signedValue,snap,through,finish,exact,bytes,qualificationParts,fraction,Q,formationSignals,enumerate,type Run,type CanonicalValue} from './assembledBiographyHistory';
 import {changeDefinition} from './assembledCharacter';
 import {header as oldHeader,draws} from './assembledTimedComparison';
-import {TIMED_COMPARISON_RULES,TIMED_COMPARISON_REGISTRY} from '../../assembled/model';
+import {OPPORTUNITY_CONTEXT_RULES,OPPORTUNITY_CONTEXT_REGISTRY} from '../../assembled/model';
 import {compileTimedComparison,timedComparisonValue,type TimedEntry} from '../../assembled/timedComparison';
 import {comparisonAddress} from '../../assembled/comparison';
 import {coupledRandomKeyValue} from '../../substrate/random';
@@ -37,7 +37,7 @@ export function fixture(arm:number){
   return list(x);
  }));
  let s=b.s;for(const n of ['definition/task-a','definition/task-b'])s=changeDefinition(s,n,6n,signed(60));
- value={s:{...s,rulesVersion:TIMED_COMPARISON_RULES,registrySchemaVersion:TIMED_COMPARISON_REGISTRY},d:{...b.d,runSeed:new Uint8Array(32),orderedInputs:enc(list([header(arm),...keep,...generated]))}};cache.set(arm,value);return value;
+ value={s:{...s,rulesVersion:OPPORTUNITY_CONTEXT_RULES,registrySchemaVersion:OPPORTUNITY_CONTEXT_REGISTRY},d:{...b.d,runSeed:new Uint8Array(32),orderedInputs:enc(list([header(arm),...keep,...generated]))}};cache.set(arm,value);return value;
 }
 export function actualDraws(run:Run,at:bigint,arm:number){
  const schedule=compileTimedComparison(header(arm)),rows=draws(run,at);expect(rows.length).toBeGreaterThanOrEqual(2);

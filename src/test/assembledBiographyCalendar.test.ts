@@ -7,19 +7,19 @@ type Row={i:number;at:string;chosen:string;contribution:string;before:string;aft
 type Receipt={arm:number;rows:Row[];terminal:number;qualifications:number;originalWitness:boolean;settlements:string[]};
 const liveReceipts:Record<string,Receipt>={};
 for(const arm of [6,0])it('M110 arm '+arm+' full calendar'+(arm===6?' and exact continuation':''),async()=>{
- const b=fixture(arm),{run}=await create(b),rows:Row[]=[],frozen:CanonicalValue[]=[],settlements:string[]=[];let restored:Run|undefined,prior=ZERO,normalMeaning:CanonicalValue|undefined;
+ const b=fixture(arm),{run}=await create(b),rows:Row[]=[],frozen:CanonicalValue[]=[],settlements:string[]=[];let restored:Run|undefined,prior=ZERO,normalMeaning:CanonicalValue|undefined,frame=snap(run);
  async function advance(at?:bigint){
-  if(!restored){if(at!==undefined)await through(run,at);else await finish(run);return;}
+  if(!restored){if(at!==undefined)await through(run,at);else await finish(run);frame=snap(run);return;}
   for(let n=0;n<40;n++){
-   if(at!==undefined&&run.snapshot().clock>=at)return;
+   if(at!==undefined&&frame.clock>=at)return;
    const next=await run.settleNextInstant();expect(await restored.settleNextInstant()).toBe(next);
-   const x=run.snapshot(),y=restored.snapshot();expect([y.clock,y.status]).toEqual([x.clock,x.status]);
+   const x=run.snapshot(),y=restored.snapshot();frame=x;expect([y.clock,y.status]).toEqual([x.clock,x.status]);
    for(const k of ['state','outputs','trace'] as const)bytes(x[k],y[k]);bytes(run.save(),restored.save());bytes(run.runIdentity(),restored.runIdentity());settlements.push(String(x.clock)+(next?'':':exhausted'));
    if(!next){expect(at).toBeUndefined();expect(x.clock).toBe(101n);return;}
   }throw Error('M110 settlement cap');
  }
  for(const [index,at]of times.entries()){
-  await advance(at);const observed:Run={...run};const i=index+1,p=live(observed,at),l=refold(observed);expect(readQ(items(p.report,'list')[1])).toEqual(prior);
+  await advance(at);const observedFrame=frame,observed:Run={...run,snapshot:()=>observedFrame};const i=index+1,p=live(observed,at),l=refold(observed);expect(readQ(items(p.report,'list')[1])).toEqual(prior);
   expect(formationSignals(p.input[0],i===1?undefined:p.input[1]).output).toEqual(p.source);expect(standing(p.raw)).toEqual(standing(p.source));
   let contribution='None';if(learning(i)){
    expect(l.journal).toHaveLength(frozen.length+1);const qual=qualificationParts(l.journal[frozen.length]);expect(qual.accepted).toBe(true);expect(qual.at.value).toBe(at);expect(qual.resolution).toEqual(p.d);expect(readQ(qual.contribution).equals(ZERO)).toBe(false);contribution=fraction(readQ(qual.contribution));frozen.push(qual.expression);
@@ -32,7 +32,7 @@ for(const arm of [6,0])it('M110 arm '+arm+' full calendar'+(arm===6?' and exact 
   rows.push({i,at:String(at),chosen:action(f(p.data,1n)),contribution,before:fraction(prior),after:fraction(l.formation.P),authorship:fraction(readQ(f(p.data,7n))),probabilities:p.probabilities.map(v=>fraction(readQ(v))),draws:actualDraws(observed,at,arm)});prior=l.formation.P;
   if(i===5&&arm===6){restored=await restoreCharacterRun(b.s,{initialState:b.d.initialState,orderedInputs:b.d.orderedInputs,save:run.save()});exact(run,restored);}
  }
- await advance();const final=learned({...run});expect(final.journal).toHaveLength(16);expect(final.formation.P).toEqual(prior);for(const [i,x]of frozen.entries())expect(qualificationParts(final.journal[i]).expression).toEqual(x);
+ await advance();const final=learned({...run,snapshot:()=>frame});expect(final.journal).toHaveLength(16);expect(final.formation.P).toEqual(prior);for(const [i,x]of frozen.entries())expect(qualificationParts(final.journal[i]).expression).toEqual(x);
  const receipt:Receipt={arm,rows,terminal:101,qualifications:16,originalWitness:rows.slice(0,4).every(v=>v.chosen==='A')&&rows.slice(5,17).every(v=>v.chosen==='B'),settlements};
  liveReceipts[String(arm)]=receipt;console.info('M110 RECEIPT '+JSON.stringify(receipt));
 },arm===6?550000:380000);
@@ -53,3 +53,26 @@ it("M110 source declaration diagnosis after admission failure",()=>{
  for(const row of rows){const a=items(row,"list"),event=a[2];if(typeof event==='boolean'||event.kind!=='typedIdentifier'||typeof event.payload==='boolean'||event.payload.kind!=='text')throw Error('source type');const name=event.payload.value;counts.set(name,(counts.get(name)??0)+1);}
  expect(times).toHaveLength(19);console.info('M110 SOURCE COUNTS '+JSON.stringify([...counts]));
 },110000);
+
+import {prepareCharacterModel,createCharacterRun} from '../assembled/character';
+import {TIMED_COMPARISON_RULES,TIMED_COMPARISON_REGISTRY} from '../assembled/model';
+import {canonicalEncode as encode,list as sequence,signed as atValue} from '../substrate/canonicalEncoding';
+it('M110 versioned opportunity admission and rejection boundaries',async()=>{
+ const b=fixture(6),model=await prepareCharacterModel(b.s),oldSource={...b.s,rulesVersion:TIMED_COMPARISON_RULES,registrySchemaVersion:TIMED_COMPARISON_REGISTRY},old=await prepareCharacterModel(oldSource);
+ const rows=items(decode(b.d.orderedInputs),'list').slice(1),names=['event/assembled-identity-context','event/assembled-self-context','event/assembled-values-context','event/assembled-reason-reading'];
+ const name=(v:CanonicalValue)=>{const t=items(v,'list')[2];if(typeof t==='boolean'||t.kind!=='typedIdentifier'||typeof t.payload==='boolean'||t.payload.kind!=='text')throw Error('event');return t.payload.value;};
+ const all=[...names,'event/deliberation-opportunity'],templates=all.map(n=>rows.find(v=>name(v)===n)!);
+ const calendar=(count:number)=>[...rows.filter(v=>!all.includes(name(v))&&name(v)!=='event/regulatory-diagnostic-probe'),...Array.from({length:count},(_,i)=>templates.map(v=>{const a=[...items(v,'list')];a[0]=atValue(i+1);return sequence(a);})).flat()];
+ const data=(xs:CanonicalValue[])=>({...b.d,orderedInputs:encode(sequence(xs))});
+ await createCharacterRun(model,b.d);await createCharacterRun(old,data(calendar(16)));
+ await expect(createCharacterRun(old,b.d)).rejects.toThrow('identity context source domain');
+ await expect(prepareCharacterModel({...b.s,registrySchemaVersion:TIMED_COMPARISON_REGISTRY})).rejects.toThrow('version bundle');
+ const full=calendar(100);await createCharacterRun(model,data(full));
+ for(const [i,n]of names.entries()){
+  const row=rows.find(v=>name(v)===n)!,duplicates=[...rows,row];await expect(createCharacterRun(model,data(duplicates))).rejects.toThrow('duplicate');
+  const over=[...full,full.find(v=>name(v)===n)!];await expect(createCharacterRun(model,data(over))).rejects.toThrow(i===3?'reason evidence version/capacity':n.includes('identity')?'identity context source domain':n.includes('self')?'self context source domain':'values context source domain');
+  const moved=rows.map(v=>{if(v!==row)return v;const a=[...items(v,'list')];a[0]=atValue(101);return sequence(a);});await expect(createCharacterRun(model,data(moved))).rejects.toThrow(i===3?'reason evidence time':'context time');
+  if(i<3)await expect(createCharacterRun(model,data(rows.filter(v=>v!==row)))).rejects.toThrow('context missing');
+ }
+ console.info('M110 ADMISSION PASS0.87:19 original and100 opportunity inputs;0.86:16 admitted/19 rejected; each source duplicate/101st/out-of-time; mandatory missing; mixed bundle rejected. No100-update runtime claim.');
+},170000);
