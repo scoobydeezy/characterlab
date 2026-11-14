@@ -19,7 +19,7 @@ function fixture(reserve:number,amount:number){
  const b=prior(),slots=[...items(decode(b.s.registry),'list')];
  const index=slots.findIndex(v=>typeof v!=='boolean'&&v.kind==='list'&&key(v.items[0])===key(text('assembled-body/0.1')));
  expect(index).toBeGreaterThanOrEqual(0);
- const body=[...items(slots[index],'list')];expect(body[1]).toEqual(q(100,1));expect(body[3]).toEqual(q(10,1));body[2]=q(0,1);slots[index]=list(body);
+ const body=[...items(slots[index],'list')];expect(body[1]).toEqual(q(100,1));expect(body[3]).toEqual(q(1,1));body[2]=q(0,1);slots[index]=list(body);
  let count=0;
  const rows=items(decode(b.d.orderedInputs),'list').map(v=>{
   const row=[...items(v,'list')];

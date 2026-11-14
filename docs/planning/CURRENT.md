@@ -16,7 +16,7 @@ port/control/corpus roles. RO007/010 wider consumer/inference triggers remain;
 this is a named assembled regression, no new source, reduction or general verdict.
 
 Scenario: existing M106 nonsocial two-choice history; fixed seed0, same channels
-and reference mechanisms, body capacity100/rate0/grid10/threshold unchanged.
+and reference mechanisms, body capacity100/rate0/grid1/threshold unchanged.
 Initial reserve95. Replace only existing delivery9 amount10 vs80.
 Exact normalized before19/20, potential1/10 vs4/5, applied1/20,
 overflow1/20 vs3/4. Sample and ordinary decision frames retained through101.
@@ -48,3 +48,6 @@ Done: both contrasts, liveness/audit, exact continuation and required checks PAS
 otherwise record concrete blocker without claiming EPI or family completion.
 No frozen-control rerun: no dependency change unless a defect requires one.
 Final whole-candidate replay remains mandatory;21 members/15 families/132 clauses.
+
+Delegated correction after fe2d75e7: inherited grid is1, not10. Retain the
+pre-simulation assertion failure; keep actual grid1, same comparisons and gates.
