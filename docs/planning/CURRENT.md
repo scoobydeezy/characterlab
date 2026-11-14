@@ -13,7 +13,8 @@ Actual decisions10/12 and learned effects/identity remain in one continuing run.
 No new RNG, factory, owner, state, production hook, law or reference revision.
 Contracts: substrate/0.2-candidate, existing comparison0.1 and Save132.
 SUB003/004/008/009 PORT, SUB011 CONTRACT retained; original random/scheduler/
-persistence controls remain unchanged. FND1/3/4 and no new psychological debt.
+persistence controls remain unchanged. Include phenDeterminism.test.ts as the
+original pinned continuation control. FND1/3/4; no new psychological debt.
 
 1. Baseline and exact duplicate through9 (no draws), save9 immediately before
 first actual arbitration10. Continue baseline/repeat/restored to exhaustion101.
@@ -37,7 +38,8 @@ Native map save9/restore and wrong-input restore rejection. Component local draw
 through exhaustion, repeat/restore. If later scheduled arbitration exists, diagnose
 and amend source explicitly, never waive zero-draw requirement. Repeat a reached
 test-only failure at the first native draw on two identical runs; same diagnostic/
-pre-state/outputs/trace, failed-save refusal; no production fault switch.
+pre-state/outputs/trace/queue/allocators/committed RNG ledger, failed-save refusal.
+Use the public entry's actual compiled runtime for the failure snapshot; no new hook.
 
 Files<=2 new test/helpers; production changes not planned; repairs require reason.
 No whole frozen C2 replay: its dependency closure unchanged. Original random,

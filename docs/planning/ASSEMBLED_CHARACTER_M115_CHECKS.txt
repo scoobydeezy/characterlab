@@ -8,3 +8,156 @@ EXIT 0; elapsed 19.664s
 CHARGED 34.664
 
 Source review before functional execution: task arbitration is existing phase80; test numeric expectation corrected from70. No runtime or contract change.
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledDeterminism.test.ts", "-t", "M115 unrelated", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDeterminism.test.ts > M115 unrelated draws preserve the complete native continuation
+M115 INSERTION PASS {"settlements":["10","11","12","13","14","20","40","101","101:end"],"draws":7,"insertions":7,"localWord":"242113971435066562359352889177162113341","changedIndexWord":"218882618817792309634518830412068998887","sequentialControl":"fails insertion invariance"}
+
+ ✓ src/test/assembledDeterminism.test.ts > M115 unrelated draws preserve the complete native continuation 169663ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  16:19:50
+   Duration  174.23s (transform 2.71s, setup 0ms, collect 4.07s, tests 169.66s, environment 0ms, prepare 158ms)
+
+
+EXIT 0; elapsed 175.933s
+CHARGED 210.597
+
+Pending failure-check refinement: public snapshot omits pending queue/allocator state. Construct the identical production runtime through the same compiled model/component/inputs and initial-state validator, then compare its complete snapshot and committed RNG ledger after the reached fault. No production changes; passed insertion function unchanged.
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "-b", "--pretty", "false"]
+
+EXIT 0; elapsed 19.221s
+CHARGED 229.818
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledDeterminism.test.ts", "-t", "M115 effective-key", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledDeterminism.test.ts > M115 effective-key intervention starts at the actual target arbitration 116646ms
+   → cognitive record grammar: unsupported receiving record version
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledDeterminism.test.ts > M115 effective-key intervention starts at the actual target arbitration
+SchedulerContractError: cognitive record grammar: unsupported receiving record version
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ fail src/assembled/codecs.ts:32:36
+ ❯ Module.receivingRecord src/assembled/codecs.ts:193:247
+ ❯ word src/test/assembledDeterminism.test.ts:68:52
+ ❯ src/test/assembledDeterminism.test.ts:68:97
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  16:24:25
+   Duration  121.13s (transform 2.67s, setup 0ms, collect 4.02s, tests 116.65s, environment 0ms, prepare 149ms)
+
+
+EXIT 1; elapsed 122.812s
+CHARGED 352.630
+
+TEST READER REPAIR before rerun: mapped native draws are411/schema2. The test wrongly sent that already-validated record through receivingRecord default-version reader. Use existing randomDrawRecord for its version-aware field access; no production, inputs, keys, seeds, gates or comparison change. Failure retained.
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledDeterminism.test.ts", "-t", "M115 effective-key", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDeterminism.test.ts > M115 effective-key intervention starts at the actual target arbitration
+M115 KEY PASS {"firstDivergence":215,"at":"10","phase":80,"wordA":"220128460617839596115238973454804857861","wordB":"165028394649550604332098899052364784872","faceA":"1","faceB":"0","continuation":"9->101 exact"}
+
+ ✓ src/test/assembledDeterminism.test.ts > M115 effective-key intervention starts at the actual target arbitration 150943ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  16:27:33
+   Duration  155.46s (transform 2.67s, setup 0ms, collect 4.04s, tests 150.94s, environment 0ms, prepare 142ms)
+
+
+EXIT 0; elapsed 157.136s
+CHARGED 509.766
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledDeterminism.test.ts", "-t", "M115 no-draw", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDeterminism.test.ts > M115 no-draw replay and deterministic reached failure
+M115 NO-DRAW FAILURE PASS {"noDrawFinal":"101","draws":0,"matchedFaults":2,"failedAt":"10","priorClock":"9"}
+
+ ✓ src/test/assembledDeterminism.test.ts > M115 no-draw replay and deterministic reached failure 106815ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  16:30:17
+   Duration  111.34s (transform 2.67s, setup 0ms, collect 4.06s, tests 106.82s, environment 0ms, prepare 142ms)
+
+
+EXIT 0; elapsed 113.023s
+CHARGED 622.789
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/random.test.ts", "src/test/scheduler.test.ts", "src/test/persistence.test.ts", "src/test/phenDeterminism.test.ts", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-ORD-001: queue insertion order cannot override DueAt, Phase, EventSequence
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-ORD-002: same-phase and later-phase emissions order correctly; earlier phase fails atomically
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-ORD-003: drains a newly emitted chain before external observation
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-ORD-004: cascade overflow restores everything and leaves no deferrable remainder
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > snapshots mutable canonical payloads and committed artifacts at every authority boundary
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-TXN-001: injected failure at before-state-validation restores state, queue, allocators, trace, and outputs
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-TXN-001: injected failure at after-state-validation restores state, queue, allocators, trace, and outputs
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-TXN-001: injected failure at before-event-validation restores state, queue, allocators, trace, and outputs
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-TXN-001: injected failure at after-event-validation restores state, queue, allocators, trace, and outputs
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-TXN-001: injected failure at before-trace-validation restores state, queue, allocators, trace, and outputs
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-TXN-001: injected failure at after-trace-validation restores state, queue, allocators, trace, and outputs
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-TXN-001: injected failure at before-invariant-validation restores state, queue, allocators, trace, and outputs
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-TXN-001: injected failure at after-invariant-validation restores state, queue, allocators, trace, and outputs
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-TXN-001: injected failure at before-commit restores state, queue, allocators, trace, and outputs
+ ✓ src/test/persistence.test.ts > Campaign 0D canonical persistence > CV-SAVE-001/002: preserves full structure and continuation exactly
+ ✓ src/test/persistence.test.ts > Campaign 0D canonical persistence > CV-SAVE-002: rejects mid-transition saves and unresolved handler registries
+ ✓ src/test/random.test.ts > Campaign 0B addressed randomness > CV-RNG-001: has checked-in candidate-input, SHA-256, and first-128-bit vectors
+ ✓ src/test/random.test.ts > Campaign 0B addressed randomness > canonicalizes subject bindings and rejects duplicate pairs
+ ✓ src/test/random.test.ts > Campaign 0B addressed randomness > CV-RNG-002: maps every span boundary and rejects values outside the contract
+ ✓ src/test/random.test.ts > Campaign 0B addressed randomness > CV-RNG-003: records index-0, index-1, and fresh index-2 fallback paths exactly
+ ✓ src/test/random.test.ts > Campaign 0B addressed randomness > CV-RNG-004: verifies threshold uniformity and the published integer bounds
+ ✓ src/test/random.test.ts > Campaign 0B addressed randomness > CV-RNG-005: selects exact cumulative intervals in canonical item-ID order
+ ✓ src/test/random.test.ts > Campaign 0B addressed randomness > CV-RNG-006/007: unrelated draws and model identity cannot shift an address
+ ✓ src/test/random.test.ts > Campaign 0B addressed randomness > CV-RNG-008: explicitly couples different addresses and rejects invalid maps
+ ✓ src/test/phenDeterminism.test.ts > PHEN-DET-001 integrated deterministic substrate > preserves canonical state, event allocation, outputs, and committed traces across save/load continuation
+
+ Test Files  4 passed (4)
+      Tests  25 passed (25)
+   Start at  16:32:50
+   Duration  879ms (transform 310ms, setup 0ms, collect 622ms, tests 96ms, environment 1ms, prepare 1.43s)
+
+
+EXIT 0; elapsed 5.243s
+CHARGED 628.032
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "-b", "--pretty", "false"]
+
+EXIT 0; elapsed 19.596s
+CHARGED 647.628
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:git-size"]
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.847s
+CHARGED 648.475

@@ -3,6 +3,10 @@ import {it,expect,vi} from 'vitest';
 import {prepareCharacterModel,createCharacterRun,restoreCharacterRun} from '../assembled/character';
 import {fixture,exact,rec,f,uint,items,key,decode,enc,list,text,signed,bytes,outputs,type Run,type CanonicalValue} from './fixtures/assembledEffectEvidence';
 import {randomDrawRecord} from '../assembled/codecs';
+import {compileCharacterModel} from '../assembled/model';
+import {compileCharacterState} from '../assembled/state';
+import {compileCharacterInputs} from '../assembled/inputs';
+import {createCharacterRuntime} from '../assembled/runtime';
 import {comparisonAddress,comparisonRoles} from '../assembled/comparison';
 import {RandomRunOracle,ComparisonDrawMap,randomAddressValue,randomCandidate128,naturalRandomKeyValue,type RandomAddress,type RandomDrawRecord} from '../substrate/random';
 import {typedIdentifier,unsigned} from '../substrate/canonicalEncoding';
@@ -61,7 +65,7 @@ it('M115 effective-key intervention starts at the actual target arbitration',asy
  await expect(restoreCharacterRun(b.s,{initialState:db.initialState,orderedInputs:db.orderedInputs,save:a.save()})).rejects.toThrow('commitments differ');
  const prefix=traces(a).length;await through(a,10n);await through(other,10n);await through(restored,10n);exact(a,restored);
  const x=draws(a)[0],y=draws(other)[0];expect(f(x,1n)).toEqual(f(first,1n));expect(f(y,1n)).toEqual(f(first,1n));expect(rec(f(x,2n),113n)).toBeDefined();expect(f(x,2n)).not.toEqual(f(y,2n));
- const word=(d:CanonicalValue)=>uint(f(rec(items(f(rec(d,411n),7n),'list')[0],410n),2n));expect(word(x)).not.toBe(word(y));
+ const word=(d:CanonicalValue)=>uint(f(rec(items(f(randomDrawRecord(d),7n),'list')[0],410n),2n));expect(word(x)).not.toBe(word(y));
  const ta=items(semanticTrace(a),'list'),tb=items(semanticTrace(other),'list'),diff=ta.findIndex((t,i)=>key(t)!==key(tb[i]));expect(diff).toBeGreaterThanOrEqual(prefix);const ev=event(traces(a)[diff]);expect(at(f(ev,2n))).toBe(10n);expect(uint(f(ev,3n))).toBe(80n);
  for(let i=0;i<32;i++){const next=await a.settleNextInstant();expect(await restored.settleNextInstant()).toBe(next);exact(a,restored);if(!next)break;expect(i).toBeLessThan(31);}await finish(other);
  expect(a.snapshot().clock).toBe(101n);
@@ -73,9 +77,14 @@ it('M115 no-draw replay and deterministic reached failure',async()=>{
  const d={...b.d,orderedInputs:enc(list(items(decode(b.d.orderedInputs),'list').filter(v=>at(items(v,'list')[0])<10n)))};
  const a=await createCharacterRun(m,d),repeat=await createCharacterRun(m,d);await through(a,9n);
  const restored=await restoreCharacterRun(b.s,{initialState:d.initialState,orderedInputs:d.orderedInputs,save:a.save()});await finish(a);await finish(repeat);await finish(restored);exact(a,repeat);exact(a,restored);expect(draws(a)).toHaveLength(0);expect(outputs(a.snapshot().outputs,409n)).toHaveLength(0);
- const failA=await createCharacterRun(m,b.d),failB=await createCharacterRun(m,b.d);await through(failA,9n);await through(failB,9n);exact(failA,failB);const before=failA.snapshot();let reached=0;
+ const model=await compileCharacterModel(b.s),component=await compileCharacterState(model),inputs=await compileCharacterInputs(model,component,b.d);
+ const make=()=>createCharacterRuntime(model,component,inputs,component.initialState(b.d.initialState)),failA=make(),failB=make();
+ const snapshot=(r:ReturnType<typeof make>)=>{const v=r.snapshot();return {...v,state:enc(v.state.canonicalValue())};};
+ for(const r of [failA,failB]){for(let i=0;r.snapshot().clock<9n;i++){expect(i).toBeLessThan(32);expect(await r.settleNextInstant()).toBeDefined();}expect(r.snapshot().clock).toBe(9n);}
+ expect(snapshot(failA)).toEqual(snapshot(failB));const before=snapshot(failA),ledger=failA.committedRandomAddressKeys();let reached=0;
  const spy=vi.spyOn(RandomRunOracle.prototype,'drawBounded').mockImplementation(async()=>{reached++;throw Error('M115 deterministic target fault');});
- try{for(const r of [failA,failB]){await expect(r.settleNextInstant()).rejects.toThrow('M115 deterministic target fault');expect({...r.snapshot(),status:before.status}).toEqual(before);expect(()=>r.save()).toThrow('active quiescent');}}finally{spy.mockRestore();}
- expect(reached).toBe(2);expect(failA.snapshot()).toEqual(failB.snapshot());expect(failA.diagnostic()).toEqual(failB.diagnostic());expect(failA.diagnostic()).toBeDefined();
+ try{for(const r of [failA,failB]){await expect(r.settleNextInstant()).rejects.toThrow('M115 deterministic target fault');expect({...snapshot(r),status:before.status}).toEqual(before);expect(r.committedRandomAddressKeys()).toEqual(ledger);expect(()=>r.save(model.modelIdentity,inputs.runIdentity)).toThrow('active quiescent');}}finally{spy.mockRestore();}
+ expect(reached).toBe(2);expect(snapshot(failA)).toEqual(snapshot(failB));expect(failA.diagnostic()).toEqual(failB.diagnostic());expect(failA.diagnostic()).toBeDefined();
+
  console.info('M115 NO-DRAW FAILURE PASS '+JSON.stringify({noDrawFinal:'101',draws:0,matchedFaults:reached,failedAt:'10',priorClock:'9'}));
 },550000);
