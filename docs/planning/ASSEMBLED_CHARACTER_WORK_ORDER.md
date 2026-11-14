@@ -228,7 +228,7 @@ identify actual gaps. Historical gate status does not override later accepted cl
 
 ## Current authorization boundary
 Owner2026-11-13 adopts0.85; after M105 authorizes continued character integration.
-Owner2026-11-14 approves one160s M110 repair timing run plus20s checks; total cap1980s.
+M110 approved timing run finished; inspection gain measured, continuation open; cap1980s.
 Full BIO mapping remains gated on its original comparisons; no UI, publishing or assembly acceptance.
 
 ## Owner ruling — unknown factors and live gates (2026-11-02)

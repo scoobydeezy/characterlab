@@ -1,16 +1,15 @@
-# Current work — M110 approved timing run
-One character; M110 native biography/continuation still incomplete. Reference0.85
-adopted; candidate0.87 admission passes. [Result](ASSEMBLED_CHARACTER_M110_RESULT.md).
-Owner approved2026-11-14: +180s, cumulative cap1980s; baseline charge1798.586s.
-One unchanged arm6 diagnostic on repair2511dfd3, M110_PROFILE=1; hard160s,
-existing phase-boundary soft120s. No acceptance retry or second diagnostic.
-Compare prefix phase timings with cbbddd2c; separate save18, restore18 and exact18.
-No production/test/fixture/law/seed/assertion changes. Remaining20s for final checks.
-One process; retain failure/timeout and all emitted phases; no outcome search.
-Evidence: existing result/log/receipt plus optional existing profiler output, <=5MiB.
-Profiler field source3e86ffa5 names original instrumented base; actual run2511dfd3.
-Done: classify measured prefix cost and remaining bottleneck, preserve all gates,
-check source/evidence/document caps and staged-size; then stop. No full BIO claim.
+# Current work — M110 inspection gain measured; continuation incomplete
+One character; reference0.85 adopted; candidate0.87 admission passes.
+[Result and CPU profile](ASSEMBLED_CHARACTER_M110_RESULT.md): inspection/extraction
+19.597->10.298s across five checkpoints (~47%); prefix113.374->104.069s (~8%).
+One approved run on2511dfd3 stopped after restore18 at147.879s; command154.775s.
+Save18 took0.446s, restore43.364s including internal full-save equality. External
+exact18/later continuation/full BIO remain unverified; no extra run authorized.
+Charged1957.743/1980s after owner +180s. No production/test/fixture/law changes.
+Next candidate: control's duplicate base-state validation after delegated patches;
+establish validated-base contract and retain local/cross-owner/negative controls.
+No new milestone or framework; broad C0-C3 integration scope and gates unchanged.
+Evidence4 files/5MiB; profile source field3e86ffa5 is original base, actual2511dfd3.
 
 ## Bounded card — original comparison plus approved admission repair
 - Capability1: sixteen actual acquisitions over the original19-opportunity layout,

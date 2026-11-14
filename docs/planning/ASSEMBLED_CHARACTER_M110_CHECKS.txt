@@ -442,3 +442,127 @@ COMMAND ["git", "diff", "--cached", "--check"]
 
 EXIT 0; elapsed 0.052s
 CHARGED 1798.586
+
+OWNER AMENDMENT2026-11-14: +180s, cumulative cap1980s. One diagnostic hard160s / soft120s, source2511dfd3; M110_PROFILE=1. No source/scenario/seed/law/gate changes; remaining20s final checks. Profiler source field3e86ffa5 is original base, not the current run revision.
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:git-size"]
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.817s
+CHARGED 1799.403
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledBiographyCalendar.test.ts", "-t", "M110 arm 6", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+M110 PROFILE PHASE {"stage":"profile setup","ms":0,"elapsed":0,"next":"fixture"}
+M110 PROFILE PHASE {"stage":"fixture","ms":54042,"elapsed":54042,"next":"prepare/create/advance9"}
+M110 PROFILE PHASE {"stage":"prepare/create/advance9","ms":10105,"elapsed":64147,"next":"initial snapshot"}
+M110 PROFILE PHASE {"stage":"initial snapshot","ms":0,"elapsed":64147,"next":"advance single 10"}
+M110 PROFILE PHASE {"stage":"advance single 10","ms":6526,"elapsed":70673,"next":"snapshot single"}
+M110 PROFILE PHASE {"stage":"snapshot single","ms":0,"elapsed":70673,"next":"inspect/refold 10"}
+M110 PROFILE PHASE {"stage":"inspect/refold 10","ms":681,"elapsed":71354,"next":"formation check 10"}
+M110 PROFILE PHASE {"stage":"formation check 10","ms":3,"elapsed":71357,"next":"qualification/probe checks 10"}
+M110 PROFILE PHASE {"stage":"qualification/probe checks 10","ms":4,"elapsed":71361,"next":"historical immutability 10"}
+M110 PROFILE PHASE {"stage":"historical immutability 10","ms":4,"elapsed":71365,"next":"draw receipts 10"}
+M110 PROFILE PHASE {"stage":"draw receipts 10","ms":166,"elapsed":71531,"next":"advance single 12"}
+M110 PROFILE PHASE {"stage":"advance single 12","ms":6190,"elapsed":77721,"next":"snapshot single"}
+M110 PROFILE PHASE {"stage":"snapshot single","ms":0,"elapsed":77721,"next":"inspect/refold 12"}
+M110 PROFILE PHASE {"stage":"inspect/refold 12","ms":1214,"elapsed":78934,"next":"formation check 12"}
+M110 PROFILE PHASE {"stage":"formation check 12","ms":3,"elapsed":78937,"next":"qualification/probe checks 12"}
+M110 PROFILE PHASE {"stage":"qualification/probe checks 12","ms":4,"elapsed":78941,"next":"historical immutability 12"}
+M110 PROFILE PHASE {"stage":"historical immutability 12","ms":6,"elapsed":78947,"next":"draw receipts 12"}
+M110 PROFILE PHASE {"stage":"draw receipts 12","ms":166,"elapsed":79113,"next":"advance single 14"}
+M110 PROFILE PHASE {"stage":"advance single 14","ms":5510,"elapsed":84622,"next":"snapshot single"}
+M110 PROFILE PHASE {"stage":"snapshot single","ms":0,"elapsed":84622,"next":"inspect/refold 14"}
+M110 PROFILE PHASE {"stage":"inspect/refold 14","ms":1833,"elapsed":86455,"next":"formation check 14"}
+M110 PROFILE PHASE {"stage":"formation check 14","ms":4,"elapsed":86458,"next":"qualification/probe checks 14"}
+M110 PROFILE PHASE {"stage":"qualification/probe checks 14","ms":4,"elapsed":86463,"next":"historical immutability 14"}
+M110 PROFILE PHASE {"stage":"historical immutability 14","ms":11,"elapsed":86473,"next":"draw receipts 14"}
+M110 PROFILE PHASE {"stage":"draw receipts 14","ms":167,"elapsed":86641,"next":"advance single 16"}
+M110 PROFILE PHASE {"stage":"advance single 16","ms":5321,"elapsed":91962,"next":"snapshot single"}
+M110 PROFILE PHASE {"stage":"snapshot single","ms":0,"elapsed":91962,"next":"inspect/refold 16"}
+M110 PROFILE PHASE {"stage":"inspect/refold 16","ms":2553,"elapsed":94515,"next":"formation check 16"}
+M110 PROFILE PHASE {"stage":"formation check 16","ms":4,"elapsed":94519,"next":"qualification/probe checks 16"}
+M110 PROFILE PHASE {"stage":"qualification/probe checks 16","ms":4,"elapsed":94523,"next":"historical immutability 16"}
+M110 PROFILE PHASE {"stage":"historical immutability 16","ms":13,"elapsed":94536,"next":"draw receipts 16"}
+M110 PROFILE PHASE {"stage":"draw receipts 16","ms":166,"elapsed":94703,"next":"advance single 18"}
+M110 PROFILE PHASE {"stage":"advance single 18","ms":5849,"elapsed":100552,"next":"snapshot single"}
+M110 PROFILE PHASE {"stage":"snapshot single","ms":0,"elapsed":100552,"next":"inspect/refold 18"}
+M110 PROFILE PHASE {"stage":"inspect/refold 18","ms":3187,"elapsed":103739,"next":"formation check 18"}
+M110 PROFILE PHASE {"stage":"formation check 18","ms":6,"elapsed":103744,"next":"qualification/probe checks 18"}
+M110 PROFILE PHASE {"stage":"qualification/probe checks 18","ms":143,"elapsed":103887,"next":"historical immutability 18"}
+M110 PROFILE PHASE {"stage":"historical immutability 18","ms":16,"elapsed":103904,"next":"draw receipts 18"}
+M110 PROFILE PHASE {"stage":"draw receipts 18","ms":165,"elapsed":104069,"next":"save18"}
+M110 PROFILE PHASE {"stage":"save18","ms":446,"elapsed":104514,"next":"restore18"}
+M110 PROFILE PHASE {"stage":"restore18","ms":43364,"elapsed":147879,"next":"exact18"}
+M110 PROFILE STORED {"elapsed":147879,"samples":14213,"bytes":999827,"lastStage":"exact18"}
+ × src/test/assembledBiographyCalendar.test.ts > M110 arm 6 full calendar and exact continuation 148682ms
+   → M110 diagnostic stop120s; no behavioral gate claim
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledBiographyCalendar.test.ts > M110 arm 6 full calendar and exact continuation
+Error: M110 diagnostic stop120s; no behavioral gate claim
+ ❯ Object.mark src/test/assembledBiographyCalendar.test.ts:21:223
+
+ ❯ src/test/assembledBiographyCalendar.test.ts:54:204
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 10 skipped (11)
+   Start at  09:15:15
+   Duration  153.12s (transform 2.63s, setup 0ms, collect 3.94s, tests 148.68s, environment 0ms, prepare 134ms)
+
+
+EXIT 1; elapsed 154.775s
+CHARGED 1954.178
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport gzip,json,collections\np=Path('docs/planning/ASSEMBLED_CHARACTER_M110_PROFILE.json.gz');d=json.loads(gzip.decompress(p.read_bytes()));q=d['profile'];nodes={n['id']:n for n in q['nodes']};parents={c:n['id'] for n in q['nodes'] for c in n.get('children',[])}\ndef label(i):\n f=nodes[i]['callFrame'];u=f.get('url','').replace('file:///','');u=u[u.find('/src/'):] if '/src/' in u else u\n return str(f.get('functionName',''))+' '+u+':'+str(f.get('lineNumber',-1)+1)\nelapsed=0;rows=[]\nfor i,dt in zip(q['samples'],q['timeDeltas']):\n elapsed+=dt;rows.append((elapsed/1000,i,dt))\nprint('PROFILE actual source2511dfd3; embedded source3e86ffa5 denotes original base; bytes',p.stat().st_size,'samples',len(rows))\nfor name,lo,hi in [('all',0,148000),('fixture',0,54042),('restore18',104514,147879)]:\n own=collections.Counter();inclusive=collections.Counter()\n for t,i,dt in rows:\n  if lo<=t<hi:\n   own[label(i)]+=dt\n   j=i;seen=set()\n   while j in nodes:\n    k=label(j)\n    if k not in seen:inclusive[k]+=dt;seen.add(k)\n    if j not in parents:break\n    j=parents[j]\n print(name,'top self seconds',[(k,round(v/1e6,3)) for k,v in own.most_common(10)])\n print(name,'source inclusive seconds',[(k,round(v/1e6,3)) for k,v in inclusive.most_common() if '/src/' in k][:12])\n"]
+PROFILE actual source2511dfd3; embedded source3e86ffa5 denotes original base; bytes 999827 samples 14213
+all top self seconds [('encodeRecord /src/substrate/canonicalEncoding.ts:181', 19.522), ('encodeValue /src/substrate/canonicalEncoding.ts:120', 16.324), ('encodeUnsigned /src/substrate/canonicalEncoding.ts:355', 11.882), ('bytesToHex /src/substrate/canonicalEncoding.ts:90', 11.448), ('encode node:internal/encoding:355', 10.227), ('(garbage collector) :0', 9.499), ('cloneCanonicalValue /src/substrate/canonicalEncoding.ts:94', 6.752), ('canonicalEncode /src/substrate/canonicalEncoding.ts:77', 6.009), (' /src/substrate/canonicalEncoding.ts:91', 5.678), ('decodeUTF8 :0', 3.848)]
+all source inclusive seconds [('canonicalEncode /src/substrate/canonicalEncoding.ts:77', 70.812), ('encodeValue /src/substrate/canonicalEncoding.ts:120', 66.234), ('#settleNextInstant /src/substrate/scheduler.ts:163', 66.018), (' /src/test/assembledBiographyCalendar.test.ts:65', 62.638), ('encodeRecord /src/substrate/canonicalEncoding.ts:181', 57.32), ('fixture /src/test/fixtures/assembledBiographyCalendar.ts:44', 50.502), ('fixture /src/test/fixtures/assembledBiographyHistory.ts:44', 50.323), ('fixture /src/test/fixtures/assembledBiography.ts:33', 50.239), ('fixture /src/test/fixtures/assembledStandingRounding.ts:43', 50.165), ('fixture /src/test/fixtures/assembledStandingSources.ts:47', 50.155), ('fixture /src/test/fixtures/assembledValueProvenance.ts:35', 50.113), ('fixture /src/test/fixtures/assembledReasonEvidence.ts:39', 50.039)]
+fixture top self seconds [('encodeRecord /src/substrate/canonicalEncoding.ts:181', 11.047), ('encodeValue /src/substrate/canonicalEncoding.ts:120', 6.765), ('encodeUnsigned /src/substrate/canonicalEncoding.ts:355', 5.39), ('encode node:internal/encoding:355', 4.226), ('(garbage collector) :0', 3.27), ('readRecord /src/substrate/canonicalEncoding.ts:328', 2.93), ('decodeUTF8 :0', 2.716), ('canonicalEncode /src/substrate/canonicalEncoding.ts:77', 2.587), ('containsExtension /src/campaign2/cognitiveCodecs.ts:84', 2.031), ('appendBytes /src/substrate/canonicalEncoding.ts:178', 1.672)]
+fixture source inclusive seconds [('fixture /src/test/fixtures/assembledBiographyCalendar.ts:44', 50.439), (' /src/test/assembledBiographyCalendar.test.ts:65', 50.439), ('fixture /src/test/fixtures/assembledBiographyHistory.ts:44', 50.323), ('fixture /src/test/fixtures/assembledBiography.ts:33', 50.239), ('fixture /src/test/fixtures/assembledStandingRounding.ts:43', 50.165), ('fixture /src/test/fixtures/assembledStandingSources.ts:47', 50.155), ('fixture /src/test/fixtures/assembledValueProvenance.ts:35', 50.113), ('fixture /src/test/fixtures/assembledReasonEvidence.ts:39', 50.039), ('fixture /src/test/fixtures/assembledReasonSources.ts:35', 49.976), ('fixture /src/test/fixtures/assembledDecisionRegimes.ts:11', 49.903), ('fixture /src/test/fixtures/assembledDecisionHistory.ts:8', 49.903), ('fixture /src/test/fixtures/assembledAffectResponse.ts:9', 49.829)]
+restore18 top self seconds [('bytesToHex /src/substrate/canonicalEncoding.ts:90', 5.413), ('encodeValue /src/substrate/canonicalEncoding.ts:120', 4.044), ('encodeRecord /src/substrate/canonicalEncoding.ts:181', 3.776), ('cloneCanonicalValue /src/substrate/canonicalEncoding.ts:94', 3.162), ('(garbage collector) :0', 3.062), ('encodeUnsigned /src/substrate/canonicalEncoding.ts:355', 2.955), ('encode node:internal/encoding:355', 2.937), (' /src/substrate/canonicalEncoding.ts:91', 2.405), ('canonicalEncode /src/substrate/canonicalEncoding.ts:77', 1.469), ('copies /src/assembled/character.ts:39', 1.358)]
+restore18 source inclusive seconds [('#settleNextInstant /src/substrate/scheduler.ts:163', 32.977), ('applyPatch /src/assembled/identityEligibility.ts:142', 18.93), ('applyPatch /src/assembled/recognitionState.ts:100', 17.866), ('canonicalEncode /src/substrate/canonicalEncoding.ts:77', 16.751), ('encodeValue /src/substrate/canonicalEncoding.ts:120', 15.419), ('applyPatch /src/assembled/relationship.ts:157', 15.23), ('validateState /src/assembled/control.ts:74', 15.02), ('validateState /src/assembled/performance.ts:106', 14.183), ('validateState /src/assembled/communication.ts:118', 13.967), ('validateState /src/assembled/priority.ts:89', 13.591), ('validateState /src/assembled/habit.ts:112', 13.579), ('encodeRecord /src/substrate/canonicalEncoding.ts:181', 13.203)]
+
+EXIT 0; elapsed 1.517s
+CHARGED 1955.695
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport gzip,json,collections\nq=json.loads(gzip.decompress(Path('docs/planning/ASSEMBLED_CHARACTER_M110_PROFILE.json.gz').read_bytes()))['profile'];nodes={n['id']:n for n in q['nodes']};parents={c:n['id'] for n in q['nodes'] for c in n.get('children',[])}\ndef url(i):return nodes[i]['callFrame'].get('url','')\ndef lab(i):\n f=nodes[i]['callFrame'];u=f.get('url','');return f.get('functionName','')+' '+(u[u.find('/src/'):] if '/src/' in u else u)\nfor name,lo,hi in [('fixture',0,54042),('restore18',104514,147879)]:\n elapsed=0;groups=collections.Counter()\n for i,dt in zip(q['samples'],q['timeDeltas']):\n  elapsed+=dt\n  if not lo<=elapsed/1000<hi:continue\n  j=i;hit=False\n  while j in nodes:\n   if '/substrate/canonicalEncoding.ts' in url(j):hit=True\n   elif hit and '/src/' in url(j):\n    groups[lab(j)]+=dt;break\n   if j not in parents:break\n   j=parents[j]\n print(name,'nearest source caller above sampled canonical-codec stack seconds',[(k,round(v/1e6,3)) for k,v in groups.most_common(10)])\n"]
+fixture nearest source caller above sampled canonical-codec stack seconds [('decodeCognitive /src/campaign2/cognitiveCodecs.ts', 10.482), ('visit /src/campaign2/cognitiveCodecs.ts', 6.688), ('decodeEmbodied /src/campaign3/embodiedCodecs.ts', 5.684), ('decodeTask /src/campaign2/taskCodecs.ts', 5.088), ('visit /src/campaign3/embodiedCodecs.ts', 4.227), ('changeDefinition /src/test/fixtures/assembledCharacter.ts', 3.451), ('decodeCognitive /src/assembled/codecs.ts', 2.168), ('visit /src/assembled/codecs.ts', 1.494), ('dataKey /src/campaign2/canonicalData.ts', 0.395), ('horizonSource /src/test/fixtures/assembledHorizon.ts', 0.242)]
+restore18 nearest source caller above sampled canonical-codec stack seconds [('dataKey /src/campaign2/canonicalData.ts', 11.539), ('statePathKey /src/substrate/state.ts', 3.781), ('validatePath /src/substrate/state.ts', 3.34), (' /src/substrate/state.ts', 2.873), ('AuthoritativeState /src/substrate/state.ts', 0.954), ('visit /src/campaign2/cognitiveCodecs.ts', 0.848), ('decodeCognitive /src/campaign2/cognitiveCodecs.ts', 0.814), ('visit /src/assembled/codecs.ts', 0.791), ('decodeEmbodied /src/campaign3/embodiedCodecs.ts', 0.638), ('visit /src/campaign3/embodiedCodecs.ts', 0.593)]
+
+EXIT 0; elapsed 0.464s
+CHARGED 1956.159
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,gzip,json\nbase='2511dfd3';root=Path('docs/planning')\nallowed={str(root/n).replace('\\\\','/') for n in ['CURRENT.md','ASSEMBLED_CHARACTER_WORK_ORDER.md','ASSEMBLED_CHARACTER_M110_RESULT.md','ASSEMBLED_CHARACTER_M110_CHECKS.txt','ASSEMBLED_CHARACTER_M110_PROFILE.json.gz']}\nchanged=set(subprocess.check_output(['git','diff',base,'--name-only']).decode().splitlines())|set(subprocess.check_output(['git','ls-files','--others','--exclude-standard']).decode().splitlines());assert changed==allowed,(changed-allowed,allowed-changed)\nfor p,cap in {'AGENTS.md':120,'docs/planning/CURRENT.md':80,'docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md':250}.items():assert len(Path(p).read_text(encoding='utf-8').splitlines())<=cap,p\npaths=list(root.glob('ASSEMBLED_CHARACTER_M110_*'));assert len(paths)==4;size=sum(p.stat().st_size for p in paths);assert size<5*1024*1024\nprofile=json.loads(gzip.decompress((root/'ASSEMBLED_CHARACTER_M110_PROFILE.json.gz').read_bytes()));q=profile['profile'];assert len(q['samples'])==len(q['timeDeltas'])==14213;assert profile['phases'][-2]['stage']=='restore18';assert profile['phases'][-1]['stage']=='exact18'\nprint('PASS: production/tests/fixtures/controls/contracts/receipts/coverage/obligations unchanged from2511dfd3; no additional native run. Profile structurally readable; source-field provenance explicit;4 evidence files/'+str(size)+' bytes; document caps preserved. Type/boundary/functional passes retained because code is unchanged.')\n"]
+warning: in the working copy of 'docs/planning/ASSEMBLED_CHARACTER_M110_CHECKS.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/planning/ASSEMBLED_CHARACTER_M110_RESULT.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/planning/CURRENT.md', LF will be replaced by CRLF the next time Git touches it
+PASS: production/tests/fixtures/controls/contracts/receipts/coverage/obligations unchanged from2511dfd3; no additional native run. Profile structurally readable; source-field provenance explicit;4 evidence files/1060113 bytes; document caps preserved. Type/boundary/functional passes retained because code is unchanged.
+
+EXIT 0; elapsed 0.710s
+CHARGED 1956.869
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:git-size"]
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.820s
+CHARGED 1957.689
+
+COMMAND ["git", "diff", "--cached", "--check"]
+
+EXIT 0; elapsed 0.054s
+CHARGED 1957.743

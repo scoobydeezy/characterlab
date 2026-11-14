@@ -153,3 +153,49 @@ No measured speedup or continuation claim; C-BIO and all coverage counts stay op
 Final charged verification1798.586/1800s; this repair/checkpoint added37.213s.
 Staged Git-size and whitespace pass. Original budget retained; measurement awaits
 an explicit bounded amendment. M110 remains incomplete.
+
+## Repair measurement — owner-approved +180s, 2026-11-14
+
+Plan b19e824d records cumulative cap1980s. One unchanged arm6 diagnostic ran on
+2511dfd3 with the existing120s phase-boundary stop and160s hard watchdog. It stopped
+at147.879s diagnostic elapsed, immediately AFTER restore returned, before exact18.
+The command used154.775s. This is the declared diagnostic stop, not a behavioral
+failure or acceptance pass. No second run followed. The full emitted log is retained.
+
+| Region | Before repair (s) | After repair (s) |
+|---|---:|---:|
+| Fixture |53.927|54.042|
+| Prepare/create/advance9 |10.031|10.105|
+| Five advances10..18, including snapshots |29.549|29.396|
+| Inspection/refold |10.676|9.468|
+| Draw extraction |8.921|0.830|
+| Prefix before save18 |113.374|104.069|
+| Save18 |not isolated|0.446|
+| Restore18, including its internal complete-save equality |not isolated|43.364|
+
+Inspection/extraction fell19.597->10.298s (~47%); draw extraction is now165..167ms
+per frame versus729..2827ms. Prefix elapsed fell~8%. These are two single-run phase
+measurements, not a statistical benchmark or a forecast for later settlements.
+The first four learning frames and first nonlearning probe retained their live gates.
+Restore's production full-save equality completed; external exact18 and every later
+continuation settlement remain unverified. No full-history receipt was produced.
+
+[Saved CPU sample](ASSEMBLED_CHARACTER_M110_PROFILE.json.gz):999827 bytes/14213
+samples. Embedded source3e86ffa5 denotes the original instrumentation base; actual
+measured source is2511dfd3. V8 frame line numbers are transformed, not source anchors.
+Approximate sampled inclusive time in restore: scheduler33.0s, control.validateState
+15.0s, canonical encoding16.8s. These overlap and must NOT be added. Encoding-stack
+samples attributed to dataKey total11.5s; state-path work is also substantial.
+Fixture construction still spends54s in its inherited codec/fixture chain.
+
+Concrete next candidate: control.ts delegated patches revalidate the entire base
+slice after base.applyPatch. identityEligibility.ts already uses validateLocal on
+that path under an explicit validated-base composition contract. Establish that
+contract for the control base, then reuse the pattern while preserving all local,
+cross-owner, invalid-state, scope and rollback checks. No generic framework, frozen
+substrate edit or validation removal is authorized by this timing finding. This is
+a production repair candidate, not an implemented change or promised speedup.
+Types/boundary/functional repair passes carry forward: no source changed this turn.
+Final preservation/profile/document/evidence, Git-size and whitespace checks pass.
+Charged1957.743/1980s cumulative; this approved package used159.157s. Four evidence
+files total about1.06MB, retaining every earlier failure. M110 remains incomplete.
