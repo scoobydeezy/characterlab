@@ -9,7 +9,7 @@ const liveReceipts:Record<string,Receipt>={};
 
 /** Owner-approved diagnostic only; never substitutes a completed M110 gate. */
 async function startM110Profile(){
- const pn='node:process',process=await import(/* @vite-ignore */ pn);if(process.env.M110_PROFILE!=='1')return undefined;
+ const pn='node:process',process=await import(/* @vite-ignore */ pn),timingOnly=process.env.M110_TIMING==='1';if(!timingOnly&&process.env.M110_PROFILE!=='1')return undefined;
  const sn='node:inspector',fn='node:fs',zn='node:zlib';
  const [{Session},fs,z]=await Promise.all([import(/* @vite-ignore */ sn),import(/* @vite-ignore */ fn),import(/* @vite-ignore */ zn)]);
  const session=new Session();session.connect();
@@ -19,7 +19,7 @@ async function startM110Profile(){
  const emit=(label:string,value:unknown)=>process.stdout.write(label+' '+JSON.stringify(value)+'\n');
  return {
   mark(next:string){const now=performance.now(),row={stage,ms:Math.round(now-previous),elapsed:Math.round(now-start),next};phases.push(row);emit('M110 PROFILE PHASE',row);previous=now;stage=next;if(now-start>=120000)throw Error('M110 diagnostic stop120s; no behavioral gate claim');},
-  async finish(){const now=performance.now();phases.push({stage,ms:Math.round(now-previous),elapsed:Math.round(now-start),next:'finish'});const {profile}=await post('Profiler.stop');session.disconnect();
+  async finish(){const now=performance.now();phases.push({stage,ms:Math.round(now-previous),elapsed:Math.round(now-start),next:'finish'});const {profile}=await post('Profiler.stop');session.disconnect();if(timingOnly){emit('M110 TIMING STOP',{elapsed:Math.round(now-start),lastStage:stage,samples:profile.samples?.length});return;}
    const bytes=z.gzipSync(JSON.stringify({source:'3e86ffa5',diagnostic:'unchanged M110 arm6, instrumented, not acceptance',phases,profile}),{level:9});if(bytes.length>5*1024*1024)throw Error('M110 profile evidence cap');fs.writeFileSync('docs/planning/ASSEMBLED_CHARACTER_M110_PROFILE.json.gz',bytes);
    emit('M110 PROFILE STORED',{elapsed:Math.round(now-start),samples:profile.samples?.length,bytes:bytes.length,lastStage:stage});
   }

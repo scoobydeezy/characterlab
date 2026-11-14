@@ -199,3 +199,39 @@ Types/boundary/functional repair passes carry forward: no source changed this tu
 Final preservation/profile/document/evidence, Git-size and whitespace checks pass.
 Charged1957.743/1980s cumulative; this approved package used159.157s. Four evidence
 files total about1.06MB, retaining every earlier failure. M110 remains incomplete.
+
+## Control validation repair — prepared, native verification pending
+
+Plan6d263864 precedes control.ts and focused ControlValidation test edits. Plan
+c1d2e183 adds a timing-only flag in the existing BiographyCalendar test so the
+next measurement cannot overwrite the retained CPU sample (three code paths). Delegated patches now perform validateLocal
+after the validated base returns; control-owned patches, validateState and restore
+still perform complete base plus local validation. The entire former local loop and
+frame-to-evidence condition are preserved verbatim. No validation result is cached.
+
+Composition proof: state.ts inheritedState validates every returned patch result.
+Memory/body/skill/priority/horizon/performance/habit wrappers validate results;
+retention validates removals and otherwise delegates; strategy's optimized path
+validates local state after its validated base. Optional omissions preserve that
+induction. Control's immediate base is habit or an earlier validated member of this
+chain. This is an assembled composition contract, not a generic Campaign2 type promise.
+The identity and strategy wrappers already use the same pattern. No substrate or
+frozen Campaign2 dependency changes. Control/0.1 semantics and model identities stay.
+
+All six focused tests pass (4.246s command). They use real C0 authority/patch logic,
+the real habit owner and an explicitly validating structural test base: canonical
+state/diff equality, no-op validation, invalid inherited/control/habit/fatigue/
+rumination state, foreign selectors, four reappraisal modes, dangling and retained
+frame evidence, full validate/restore, writer/scope/mixed/lifecycle rejection and
+input immutability. These structural operands are not psychological witnesses.
+
+No native run followed this production edit. Previous native0.85 compatibility is
+now pending recheck, not carried forward as a pass for this repair. Types are pending.
+Prepared checks: types30s; M109 frozen085 full public save240s; M17 admission/owners/
+authentic-children/trace/atomic-rollback150s; one unchanged M110 diagnostic160s;
+final checks20s. M110_TIMING=1 retains the sampler for comparability but skips artifact writing;
+phase marks and soft/hard stop rules stay fixed. Total600s requires owner amendment before execution. No acceptance
+retry, seed change, calendar truncation, profile chain or wider owner refactor.
+Boundary, exact source-preservation, evidence/document caps, Git-size and whitespace
+checks pass. Charged1968.518/1980s; this repair checkpoint added10.775s. Native
+verification and types remain pending; no production performance gain or M110 pass.

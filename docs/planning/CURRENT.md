@@ -10,7 +10,7 @@ retention validates removals, strategy retains local validation. Habit/performan
 are the immediate base alternatives. Identity uses this same composition contract.
 Focused checks: real habit owner plus validating test base; unchanged state/diffs,
 invalid base/local/foreign/frame evidence, owner/scope/mixed/lifecycle and no-op cases.
-Six focused tests pass; types/native checks pending. Cap1980s remains.
+Six focused tests pass; types/native pending. Charged1968.518/1980s.
 Timing-only flag preserves existing CPU evidence; same phase marks and stop rules.
 Prepared next checks: types30s, existing0.85 full-save240s, one M110 diagnostic160s,
 control native rollback150s, final checks20s; require explicit budget before running.

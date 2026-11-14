@@ -566,3 +566,88 @@ COMMAND ["git", "diff", "--cached", "--check"]
 
 EXIT 0; elapsed 0.054s
 CHARGED 1957.743
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:git-size"]
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.821s
+CHARGED 1958.564
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledControlValidation.test.ts", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledControlValidation.test.ts > control delegated validation preserves state/diffs and validates the base without a second full pass
+ ✓ src/test/assembledControlValidation.test.ts > control rejects invalid inherited/local states through no-op/full/restore mode false
+ ✓ src/test/assembledControlValidation.test.ts > control rejects invalid inherited/local states through no-op/full/restore mode true
+ ✓ src/test/assembledControlValidation.test.ts > control rejects invalid inherited/local states through no-op/full/restore mode 2
+ ✓ src/test/assembledControlValidation.test.ts > control rejects invalid inherited/local states through no-op/full/restore mode 3
+ ✓ src/test/assembledControlValidation.test.ts > control-owned patches retain full validation, writer/scope, mixed-patch and lifecycle checks
+
+ Test Files  1 passed (1)
+      Tests  6 passed (6)
+   Start at  09:29:57
+   Duration  2.63s (transform 1.40s, setup 0ms, collect 2.17s, tests 61ms, environment 0ms, prepare 139ms)
+
+
+EXIT 0; elapsed 4.246s
+CHARGED 1962.810
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess\nbase='bfa288ed';p='src/assembled/control.ts';old=subprocess.check_output(['git','show',base+':'+p]).decode();new=Path(p).read_text(encoding='utf-8')\na='function validateState(s:AuthoritativeState){base.validateState(without(s));for(const e';expected=old.replace(a,'function validateLocal(s:AuthoritativeState){for(const e')\nanchor=' return Object.freeze({...base,validateState,validatePath'\nexpected=expected.replace(anchor,\" // state.ts supplies a base that validates returned slices, including no-op patches:\\n // inheritedState validates, and every optional wrapper through habit preserves that contract.\\n // Generic compileCampaign2StateModel alone does not provide this guarantee.\\n function validateState(s:AuthoritativeState){base.validateState(without(s));validateLocal(s);}\\n\"+anchor)\nexpected=expected.replace('...s.entries().filter(e=>fresh(e.path))]);validateState(state);return {...result,state};','...s.entries().filter(e=>fresh(e.path))]);validateLocal(state);return {...result,state};')\nassert new==expected,'unexpected control semantic edit'\nallowed={p,'src/test/assembledControlValidation.test.ts','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_M110_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M110_CHECKS.txt'}\nchanged=set(subprocess.check_output(['git','diff',base,'--name-only']).decode().splitlines())|set(subprocess.check_output(['git','ls-files','--others','--exclude-standard']).decode().splitlines());assert changed==allowed,(changed-allowed,allowed-changed)\nfor p,cap in {'AGENTS.md':120,'docs/planning/CURRENT.md':80,'docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md':250}.items():assert len(Path(p).read_text(encoding='utf-8').splitlines())<=cap,p\nps=list(Path('docs/planning').glob('ASSEMBLED_CHARACTER_M110_*'));assert len(ps)==4;assert sum(p.stat().st_size for p in ps)<5*1024*1024\nprint('PASS: exact validateLocal extraction/delegated-call substitution only; full owned/restore checks unchanged.2 code paths; fixture/contracts/laws/model/identity/scheduler/receipts/controls/obligations unchanged.4 evidence files under5MiB; document caps preserved. Types/native verification explicitly pending.')\n"]
+warning: in the working copy of 'docs/planning/ASSEMBLED_CHARACTER_M110_CHECKS.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/planning/ASSEMBLED_CHARACTER_M110_RESULT.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/planning/CURRENT.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/assembled/control.ts', LF will be replaced by CRLF the next time Git touches it
+PASS: exact validateLocal extraction/delegated-call substitution only; full owned/restore checks unchanged.2 code paths; fixture/contracts/laws/model/identity/scheduler/receipts/controls/obligations unchanged.4 evidence files under5MiB; document caps preserved. Types/native verification explicitly pending.
+
+EXIT 0; elapsed 0.504s
+CHARGED 1963.314
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:boundaries"]
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+EXIT 0; elapsed 3.005s
+CHARGED 1966.319
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:git-size"]
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.811s
+CHARGED 1967.130
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,re\nbase='bfa288ed';allowed={'src/assembled/control.ts','src/test/assembledControlValidation.test.ts','src/test/assembledBiographyCalendar.test.ts','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_M110_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M110_CHECKS.txt'}\nchanged=set(subprocess.check_output(['git','diff',base,'--name-only']).decode().splitlines())|set(subprocess.check_output(['git','ls-files','--others','--exclude-standard']).decode().splitlines());assert changed==allowed,(changed-allowed,allowed-changed)\np='src/test/assembledBiographyCalendar.test.ts';a=subprocess.check_output(['git','show',base+':'+p]).decode();b=Path(p).read_text(encoding='utf-8');assert a[a.index('for(const arm of'):]==b[b.index('for(const arm of'):]\nassert \"await post('Profiler.setSamplingInterval',{interval:10000})\" in b and 'now-start>=120000' in b\nfor p,cap in {'AGENTS.md':120,'docs/planning/CURRENT.md':80,'docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md':250}.items():assert len(Path(p).read_text(encoding='utf-8').splitlines())<=cap,p\nps=list(Path('docs/planning').glob('ASSEMBLED_CHARACTER_M110_*'));assert len(ps)==4;assert sum(p.stat().st_size for p in ps)<5*1024*1024\nprint('PASS: three intended code paths. Native test bodies exactly unchanged; timing-only retains sampler/stop and skips file write. Existing CPU evidence, receipts, laws, models, fixtures, frozen controls, obligations unchanged.4 evidence files under5MiB; docs within caps. Types/native checks remain pending.')\n"]
+warning: in the working copy of 'docs/planning/ASSEMBLED_CHARACTER_M110_CHECKS.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/planning/ASSEMBLED_CHARACTER_M110_RESULT.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/assembled/control.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/test/assembledBiographyCalendar.test.ts', LF will be replaced by CRLF the next time Git touches it
+PASS: three intended code paths. Native test bodies exactly unchanged; timing-only retains sampler/stop and skips file write. Existing CPU evidence, receipts, laws, models, fixtures, frozen controls, obligations unchanged.4 evidence files under5MiB; docs within caps. Types/native checks remain pending.
+
+EXIT 0; elapsed 0.510s
+CHARGED 1967.640
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:git-size"]
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.825s
+CHARGED 1968.465
+
+COMMAND ["git", "diff", "--cached", "--check"]
+
+EXIT 0; elapsed 0.053s
+CHARGED 1968.518
