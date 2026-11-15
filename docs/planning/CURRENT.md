@@ -1,43 +1,52 @@
-# Current work — M127 workspace access-to-choice comparison complete
-The character retains an excluded task without letting it supply a reason or
-executable plan. One extra workspace slot admits that task and changes its action's
-actual probability from0 to1/2. No production change was needed for this connection.
+# Current work — M128 observed workspace maintenance integration
+One character must protect a retained plan against observed distraction, recover it
+from a later reminder, and refuse recovery after expiry. M127 access evidence stays.
+Baseline feea1d19; current0.93 becomes versioned successor0.94; no law/calibration change.
 
-Reference0.93; all laws/calibration/shared UnitBudget and feedback TRUE unchanged.
-Planf5a71991; source e76dd917; baseline06bc0d1e.
-[Result](ASSEMBLED_CHARACTER_M127_RESULT.md); [checks](ASSEMBLED_CHARACTER_M127_CHECKS.txt).
+## Bounded card (before code)
+Capabilities (3): observed priority/protection -> working access -> actual reasons/
+choice; reminder recovery without adoption; expiry/cancellation prevents recovery.
+C-WORK PHEN-WORK-001:3..12; MEC011/EXP004, MEC020/EXP013 and MEC012..016;
+RO-C3-012 remains conditional outside the compared finite domain.
+Implement original rank/protect/reminder operation in the existing workspace path.
+No Campaign3 factory/runtime import. Preserve originals and old version behavior.
+One shared state/scheduler/capacity; existing knowledge/workspace owners gain fields.
+Safe board110 -> observation120 -> knowledge140; workspace40 reads earlier evidence.
+Current goal status/window gates access. No memory/recognition/attention reduction.
+StoredSet selection retained; compare original IndexedReplay only in its fixed-
+deadline/full-safe-history domain. No general indexing equivalence claim.
 
-## What passed
-- Three retained Open tasks +live forecast compete for capacities2/3/4.
-  Selected tasks1/2/3; exact total occupancy never exceeds capacity.
-- Task B's retained bytes stay identical before/after the comparison. At2 it has
-  no joint-appraisal row, positive base, compiled ground or executable candidate.
-  At3/4 the actual selected task is live through appraisal/reasons/arbitration.
-- Actual probability(action two):0 /1/2 /1/2; Auto correctly counted as deterministic,
-  larger arms mode3. No inference from unmatched sampled winners.
-- One holder/recognized stand-in; body10/samples6+7, seed0; A/B importance1, third0,
-  deadlines20/25/30. Normal route displays choose distinct A/B actions. Physical
-  execution cannot succeed in any arm; actual intent/attempt/outcome still execute.
-- Full queues; exact repeat/save5 continuation; hidden-world whole safe state/output
-  equality at every settled boundary. Original WORK controls preserved.
-- Types, three native comparisons and 12 preserved WORK tests pass. Reference boundary passes. Research, preservation and Git size checks pass; final whitespace check is included in prepaid bookkeeping.
-- 826.714/1800s including failures/15s bookkeeping; no extension.
-  Two test/helper files, zero production/formal edits; two evidence files below5MiB.
-- Retained helper failures: union narrowing; canonical Map membership; registered
-  action versus executable candidate. Common fixture amendment resolves inherited
-  same-action alias using normal route evidence in all arms, without law/seed tuning.
+Scope: new workMaintenance.ts; model.ts, inputs.ts, state.ts, runtime.ts, execution.ts,
+controlExecution.ts; fixtures/assembledWorkMaintenance.ts, assembledWorkMaintenance.test.ts.
+At most12 production/test files,3 capabilities,20 evidence files/5MiB.
+Formal ASSEMBLED_CHARACTER_WORK_MAINTENANCE_CONTRACT.md written before code.
+Declaration0.94 adds observed-card bindings and support; empty bindings retain
+ordinary deadline/key access. Capacity remains one total shared budget.
+Card priority is not importance and creates no reason. Neutral card consumes space.
+Other goals, recalled memory, habit control and forecast retain their existing owners.
 
-C-WORK remains UNRESOLVED: native capacity/access/choice is partial evidence,
-not original distraction/protection, reminder recovery or expiry qualification.
-14/21 mapped,0/15 families,E46/P54/N17/U15=132 unchanged. Final replay mandatory.
+## Predeclared comparison
+Same common model policy, seed0, laws and A/B importance1; no physical task success.
+Start from M127 body10/recognized stand-in; declare A/B social, third unknown.
+Permitted priority displays: initial A2/B1/C0; distract B3 only; cue promotes A4;
+then expiry and a later cue. Compare support off/on; isolated distract B1/B3;
+total capacities2/3 (one slot reserved for live forecast), retained task bytes.
+A/B distinct allowed routes; actual selected task appraisal must be live.
+Show selected access -> actual grounded reason/candidate -> changed actual choice
+probability (Auto chosen-only, exact production lottery otherwise), no seed search.
+Unselected/expired A cannot acquire a base reason; reminder never adopts a goal.
+Cross-model relevance projections, not arbitrary identity normalization.
+No same-seed shared-dice claim.
 
-Next bounded package: integrate the original observed-priority/protection policy
-into the existing task/workspace path; show isolated distraction with support off/on,
-later reminder recovery and an inert reminder after expiry. Preserve original
-StoredSet/IndexedReplay and negative controls. Current deadline/key ordering and
-spare-slot habit inhibition are distinct semantics, not substitutes for this gate.
-Write/commit that card and any versioned contract before implementation.
-One milestone/job,3 capabilities,12 code/test files,20 evidence/5MiB,
-1800s cumulative/600s command. Delegated diagnosis/amendments remain authorized;
-record first, preserve failures/laws/scope; passing ends checks. No UI/autonomous peers.
-| Research obligations | **0 active / 18 conditional / 0 unowned** |
+## Checks and budget
+One serial job;600s/command,1800s cumulative including failures,15s prepaid bookkeeping.
+Fast: types, exhaustive finite selector comparison to original kernel, original
+StoredSet/IndexedReplay and named negative controls; admission/owner/source checks.
+Native: full queues support/distraction/capacity/cue/expiry; exact repeat and save
+before displacement/restore at every later boundary; hidden/invisible source control;
+rollback source/observation/selection/consolidation; old0.93 M127 primary regression.
+Research/boundary/size/preservation checks. No frozen C2 rerun: dependencies unchanged.
+Binary done: connections/controls pass in bounds; otherwise retain evidence and
+checkpoint the precise remaining gate. No blanket WORK mapping without all requirements.
+Self-approved amendments recorded before runs; no retuning laws or scope waiver.
+No unrelated breadth/UI/autonomous partners. Final21/15/132 replay remains mandatory.
