@@ -1,3 +1,4 @@
+import {withAssociationState} from './learnedAssociation';
 import {withEffectBelief} from './effectEvidence';
 import {receivingRecord as statusRecord} from './codecs';
 import {withQualifiedIdentityState} from './identityEligibility';
@@ -107,10 +108,12 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  const recognized=model.recognition?withRecognitionState(related,model.recognition,!!model.encoding,model.positionEnabled):related;
  const identityRegistration=rec(f(rows.find(v=>key(f(v,1n))===key(typedIdentifier(1009,text('TaskIdentityApplicationTransition'))))!,4n),450n);
  const qualified=model.eligibilityEnabled?withQualifiedIdentityState(recognized,identityKey,id(f(rec(f(identityRegistration,6n),322n),2n))):recognized;
- const stateModel=model.effectEvidence?withEffectBelief(qualified,C,model.effectEvidence):qualified;
+ const believed=model.effectEvidence?withEffectBelief(qualified,C,model.effectEvidence):qualified;
+ const stateModel=model.affectMemory?.learned?withAssociationState(believed,C,model.affectMemory.learned):believed;
  function initialState(bytes:Uint8Array){
   const state=stateModel.restoreState(bytes);
   for(const e of state.entries()){
+   if(e.path.rootStateTypeId===631n)invalidModel('initial learned association must be absent');
    if(model.reappraisal&&(e.path.rootStateTypeId===1031n||e.path.rootStateTypeId===1000n&&e.path.fieldId===8n))invalidModel('initial reappraisal knowledge/frame must be absent');
    if(model.recognition&&[241n,242n,244n].includes(e.path.rootStateTypeId))invalidModel('initial recognition tracks/resolutions must be absent');
    if(model.relationship&&e.path.rootStateTypeId===848n)invalidModel('initial relationship history must be absent');
