@@ -150,7 +150,7 @@ TypeError: Cannot read properties of undefined (reading 'kind')
      23|   if(typeof value==='boolean'||value.kind!==kind)invalidModel(`require…
        |                                      ^
      24| }
-     25| 
+     25|\x20
  ❯ personHistory src/assembled/social.ts:32:101
  ❯ Module.personMean src/assembled/social.ts:33:65
  ❯ learningTrace src/test/assembledBeliefReceiving.test.ts:49:9
@@ -168,3 +168,86 @@ EXIT 1; elapsed 264.110s
 CHARGED 711.601
 
 REPAIR before controls rerun: learned person state remains mean1/support7 under denial, but no recognized target means SOCIAL_UPDATE emits a no-op receipt with empty prior for its default read path. Helper incorrectly fed [] into personMean. Preserve empty unknown; assert no learned target, actual absent810 read, zero diffs and exact prior==next. Separate state assertion still requires original person history unchanged. No input/production/criterion changes; primary and continuation unaffected and retained.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledBeliefReceiving.test.ts", "-t", "controls125", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledBeliefReceiving.test.ts > controls125: hidden truth cannot correct belief and silence or denial is no negative evidence
+M125 CONTROLS hidden truth same learned/appraisal bytes; silent and denied final sources retain mean1/support7 through full queue; no qualifying-opportunity claim
+
+ ✓ src/test/assembledBeliefReceiving.test.ts > controls125: hidden truth cannot correct belief and silence or denial is no negative evidence 182562ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  15:05:40
+   Duration  187.29s (transform 2.83s, setup 0ms, collect 4.23s, tests 182.56s, environment 0ms, prepare 156ms)
+
+
+EXIT 0; elapsed 187.862s
+CHARGED 899.463
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 18.148s
+CHARGED 917.611
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/beliefPublic.test.ts", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/beliefPublic.test.ts > learns confidently wrong belief from misleading displays then corrects from permitted contrary evidence
+ ✓ src/test/beliefPublic.test.ts > same world truth with different displays yields different beliefs; altered hidden truth preserves all safe bytes
+ ✓ src/test/beliefPublic.test.ts > goal-only intervention leaves exact belief state unchanged and changes later appraisal
+ ✓ src/test/beliefPublic.test.ts > safe absence updates; censored and absent opportunity do not reinforce; denied display has no observation
+ ✓ src/test/beliefPublic.test.ts > retains absence as unknown rather than a known zero and freezes phase50 before140 update
+ ✓ src/test/beliefPublic.test.ts > last-observation and no-learning are genuine distinct frozen competitors
+ ✓ src/test/beliefPublic.test.ts > restores every complete prefix, continues identically, and rejects altered saved state or trace 504ms
+ ✓ src/test/beliefPublic.test.ts > rejects duplicate targets before runtime, generated originals, nonempty initial state and accessor inputs
+ ✓ src/test/beliefPublic.test.ts > independent target permutation preserves safe outputs and exact learned state
+ ✓ src/test/beliefPublic.test.ts > rolls back all six stages and final commit, with faults proven reached
+ ✓ src/test/beliefPublic.test.ts > rejects repeated evidence, fabricated class and malformed precision/support
+ ✓ src/test/beliefPublic.test.ts > preserves exact weighted/prediction-error equivalence and resistance to one contradiction
+ ✓ src/test/beliefPublic.test.ts > prevents new records being smuggled into inherited or newly typed Boolean slots
+ ✓ src/test/beliefPublic.test.ts > records exclusive belief reads and writes, safe evidence ancestry, and experience reservation
+ ✓ src/test/beliefPublic.test.ts > rejects model-byte changes and exceeds neither finite input nor support limits
+ ✓ src/test/beliefPublic.test.ts > preserves earlier committed learning when a later contradictory update fails at commit
+ ✓ src/test/beliefPublic.test.ts > rejects writes through an unrelated mutation authority
+
+ Test Files  1 passed (1)
+      Tests  17 passed (17)
+   Start at  15:09:16
+   Duration  2.68s (transform 683ms, setup 0ms, collect 1.02s, tests 1.24s, environment 0ms, prepare 148ms)
+
+
+EXIT 0; elapsed 3.228s
+CHARGED 920.839
+
+COMMAND ["node", "scripts/check-reference-boundary.mjs"]
+Reference boundary check passed.
+
+EXIT 0; elapsed 2.720s
+CHARGED 923.559
+
+COMMAND ["node", "scripts/check-research-obligations.mjs"]
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4346}
+
+EXIT 0; elapsed 3.500s
+CHARGED 927.059
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,json\nbase='33f8d836'\ncode={'src/test/assembledBeliefReceiving.test.ts','src/test/fixtures/assembledBeliefReceiving.ts'}\nallowed=code|{'AGENTS.md','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md','docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md','docs/planning/RESEARCH_OBLIGATIONS.json','docs/planning/ASSEMBLED_CHARACTER_M125_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M125_CHECKS.txt'}\ngit=lambda *a:subprocess.check_output(['git',*a],text=True,encoding='utf-8')\nchanged=set(git('diff','--name-only',base).splitlines())|set(git('ls-files','--others','--exclude-standard').splitlines())\nassert changed<=allowed,changed-allowed\nassert changed&code==code\nassert git('diff','802df072','--','src')=='','tested source changed'\nassert all(p.startswith('src/test/') for p in changed if p.startswith('src/'))\nold=git('show',base+':docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md')\nnew=Path('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md').read_text(encoding='utf-8')\nrows=lambda s:[x for x in s.splitlines() if ('| C-' in x or '| F-' in x) and '| C-BELIEF ' not in x]\nassert rows(old)==rows(new),'other C/F rows changed'\nassert '| UNRESOLVED | C-BELIEF ' in new\nassert 'E46/P54/N17/U15' in new and '13/21' in new and 'families:0/15' in new\nassert len(new.splitlines())<=250 and len(new.replace('\\n','\\r\\n').encode())<=65536\nbefore=json.loads(git('show',base+':docs/planning/RESEARCH_OBLIGATIONS.json'))\nafter=json.loads(Path('docs/planning/RESEARCH_OBLIGATIONS.json').read_text(encoding='utf-8-sig'))\nassert before['obligations']==after['obligations']\nassert after['reportReviews'][:-1]==before['reportReviews']\nassert after['reportReviews'][-1]['path']=='docs/planning/ASSEMBLED_CHARACTER_M125_RESULT.md'\nfor path,cap in [('AGENTS.md',120),('docs/planning/CURRENT.md',80),('docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md',250)]:\n assert len(Path(path).read_text(encoding='utf-8').splitlines())<=cap,path\nevidence=[Path('docs/planning/ASSEMBLED_CHARACTER_M125_'+s) for s in ['RESULT.md','CHECKS.txt']]\nassert sum(p.stat().st_size for p in evidence)<5*1024*1024\nlog=evidence[1].read_text(encoding='utf-8')\ncharge=float([l.split()[1] for l in log.splitlines() if l.startswith('CHARGED ')][-1])\nassert charge<1800\nfor token in ['M125 PRIMARY','M125 CAPTURED','M125 CONTROLS','M125 CONTINUATION','src/test/beliefPublic.test.ts','Reference boundary check passed.','PASS: research obligation references']:\n assert token in log,token\ncurrent=Path('docs/planning/CURRENT.md').read_text()\nassert '(ASSEMBLED_CHARACTER_M125_CHECKS.txt)' in current and '{{' not in current\nprint('PASS M125 preservation:source802df072;2 new test/helper files; production/formal/control dependencies unchanged; C-BELIEF unresolved, other C/F unchanged;13/21,0/15,E46/P54/N17/U15; obligation statuses/document/evidence caps retained; charge',charge)\n"]
+PASS M125 preservation:source802df072;2 new test/helper files; production/formal/control dependencies unchanged; C-BELIEF unresolved, other C/F unchanged;13/21,0/15,E46/P54/N17/U15; obligation statuses/document/evidence caps retained; charge 927.059
+
+EXIT 0; elapsed 0.693s
+CHARGED 927.752
+
+COMMAND ["node", "scripts/check-git-file-sizes.mjs"]
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.373s
+CHARGED 928.125
+
+COMMAND ["git", "diff", "--cached", "--check"]
+
+EXIT 0; elapsed 0.069s
+CHARGED 928.194

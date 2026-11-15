@@ -228,7 +228,7 @@ identify actual gaps. Historical gate status does not override later accepted cl
 
 ## Current authorization boundary
 Owner2026-11-13 adopts0.85; after M105 authorizes continued character integration.
-Delegated M124 maps the pinned ATTN member on0.92; shared/UnitBudget. Wider attention debts retained; feedback TRUE; existing laws unchanged.
+Delegated M125 verifies bounded belief correction/goal separation on0.92; C-BELIEF remains open. Shared/UnitBudget; feedback TRUE; existing laws unchanged.
 Original BIO/EPI controls/limits remain; final whole-candidate replay required. No UI, publishing or assembly acceptance.
 
 ## Owner ruling — unknown factors and live gates (2026-11-02)
