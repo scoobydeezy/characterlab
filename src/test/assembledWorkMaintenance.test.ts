@@ -70,7 +70,13 @@ it('primary128: actual distraction/protection, independent capacity, cue recover
 it('continuation128: exact repeat and save before displacement, all settled boundaries',async()=>{
  const {b,m,r}=await create(true),duplicate=await createCharacterRun(m,b.d);await through(r,6n);await through(duplicate,6n);exact(r,duplicate);
  const restored=await restoreCharacterRun(b.s,{initialState:b.d.initialState,orderedInputs:b.d.orderedInputs,save:r.save()});exact(r,restored);await finish(r,[duplicate,restored]);
- console.info('M128 CONTINUATION PASS repeat and complete saved prefix; exact every later boundary/full queue');
+ const p=projection(r,7),shared=reports(r,WORKSPACE).find(a=>key(a[1])===key(signed(7)))!;
+ expect(items(p.report[2],'list').length,'genuine overload').toBeGreaterThan(Number(uint(shared[2])));
+ const wt=outputs(r.snapshot().trace,160n).find(t=>key(f(t,6n))===key(text(WORK))&&key(f(rec(f(t,4n),130n),2n))===key(signed(7))&&uint(f(rec(f(t,4n),130n),3n))===40n)!;
+ expect(wt,'actual maintenance trace').toBeDefined();const reads=items(f(wt,11n),'list').map(v=>rec(v,147n));
+ expect(reads).toHaveLength(5);expect(reads.filter(v=>uint(f(rec(f(v,2n),140n),1n))===373n)).toHaveLength(3);
+ expect(key(f(wt,13n))).toBe(key(list([p.report])));
+ console.info('M128 CONTINUATION PASS repeat and complete saved prefix; exact every later boundary/full queue; actual source/cache/three goal reads and overload');
 },590000);
 it('privacy128: hidden actual world, truth bit and physical card order cannot change cognition',async()=>{
  const a=await create(),b=await create(false,3,2,true);
