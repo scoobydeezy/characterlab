@@ -64,3 +64,5 @@ it('continuation120: full-byte duplicate and save3 continuation',async()=>{
  const restored=await restoreCharacterRun(b.s,{initialState:b.d.initialState,orderedInputs:b.d.orderedInputs,save:a.save()});exact(a,restored);
  await finish(a,[duplicate,restored]);console.info('M120 CONTINUATION exact run identity/state/outputs/trace/save at every settled boundary through full queue');
 },400000);
+
+it('admission120: inspect inherited reference declarations before another behavioral run',()=>{const b=fixture();const slots=items(decode(b.s.registry),'list');const brief=(v:CanonicalValue):unknown=>typeof v==='boolean'?v:v.kind==='typedIdentifier'?{id:v.namespaceId.toString(),value:brief(v.payload)}:v.kind==='record'?{type:v.schema.typeId.toString(),version:v.schema.schemaVersion.toString(),fields:[...v.fields].map(([k,x])=>[k.toString(),brief(x)])}:v.kind==='list'||v.kind==='set'?v.items.map(brief):v.kind==='map'?'map':v.kind==='bytes'?'bytes':v.kind==='rational'?String(v.numerator)+'/'+String(v.denominator):String(v.value);for(const n of [12,19,20,28,32,37,41,42,43,45])console.info('DECL'+n,JSON.stringify(brief(slots[n])));});
