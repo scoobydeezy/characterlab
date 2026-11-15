@@ -1,43 +1,52 @@
-# Current work — M117 body trajectory and pressure complete
+# Current work — M118 habit acquisition and reversal
+The next comparison tests whether experienced reward leaves a tendency after a
+perceived correction, and whether further unrewarded action removes that tendency.
+This uses the continuing reference0.89 character, its existing history/expectation
+owners and real action-to-body-to-observation path. No alternate psychology.
+M117 complete at4ead5110; ten members mapped, zero families; final replay remains.
 
-The continuing character now passes the bounded BODY trajectory, perception and
-receiving comparisons. Real body evidence changes an actual Situation reason;
-hidden body differences remain private until a permitted observation reveals them.
-Reference0.89/effect-evidence0.1, feedback TRUE and all existing laws unchanged.
-No production/formal changes. Plan05d59396; tested source0436621c.
-[Result](ASSEMBLED_CHARACTER_M117_RESULT.md) and [checks](ASSEMBLED_CHARACTER_M117_CHECKS.txt).
+## Bounded card (before implementation)
+- Observable capability: acquired action availability persists under corrected
+  negative expectation; subsequent negative experience reduces it below threshold
+  and changes the actual offered options/probability at a live decision.
+- Scope: C-HABIT :3..10; :11/12 tracked. No addiction/dependence or law qualification.
+  Original acquisition/reversal matrix and derived/cache/belief/truth controls stay.
+- Contracts: habit-public/0.1-candidate; assembled-character-habit/0.1;
+  assembled-character-delivery-reward/0.1; reference0.89/effect-evidence0.1.
+  Residual law, threshold1/2 and all reference psychological calibration unchanged.
+  Ledger bounded HABIT: preserve EXP003/P3-012, separate expectation, both cues,
+  original candidate alternatives and RO015 limitations; no representation reduction.
+- Files: new fixtures/assembledHabitReversal.ts and assembledHabitReversal.test.ts.
+  Existing owners/runtime changed only for an evidenced defect, recorded first.
+  <=3 capabilities/12 code-test files; one compact result/check log;20 files/5MiB.
+- Scenario: nonsocial tasks, no person dependency, ordinary perceived task/route/cue
+  channels; initial reserve10, rate0, same physical actions/actuation in each arm.
+  No preloaded learning. Use current source definitions; declare target availability
+  through normal route displays and keep shared receiving inputs live.
+- Predeclared comparison: seed0, forced target attempts10/12/14; trained receives
+  positive/positive/hidden, untrained negative/negative/hidden, reversed receives
+  positive/positive/negative. Information-only negative correction15 in every arm;
+  route B alone16 then both18, with B retained. Probe18 cue true; outcome hidden.
+  Expected strengths3/4,0,3/8; negative expectation equal; target offered only trained.
+  Require live decision/reasons before exact probability comparison, not sampled
+  winner attribution. Repeated original probes retained as control, no seed search.
+- Controls: different/unseen cue; hidden physical reward with equal admitted reports;
+  actual execution/evidence/learning provenance; no body/identity confound at probe.
+  Compare actual reference options/probabilities, not an authored output.
+  Duplicate and checkpoint15 restore compare state/output/trace/save bytes through
+  full queue exhaustion (settle cap64 fails). No production change assumed.
+- Checks: native primary<=570s; native controls<=570s; persistence<=400s;
+  original habitPublic/habitBoundary<=120s; types<=90s; boundary/research/preservation/
+  git-size<=60s each. Single job; cumulative1800s,15s prepaid; <=600s per command.
+  Smaller diagnosis allowed only for concrete failure within remaining budget.
+- Risks: inherited inactive goals/route receipts, newer receiving requirements,
+  real action suppression or other state changes. Inspect prerequisites and retain
+  failures; delegated scenario corrections recorded before rerun, never law tuning.
+- Done: native causal chain and all listed controls pass; map only demonstrated
+  clauses. If whole member needs more integration, leave C-HABIT partial and name it.
+  Ten mapped/0 families and E43/P57/N17/U15 stay unless earned correspondence changes.
+  Preserve other C/F dispositions and obligation statuses; final21/15/132 unchanged.
 
-## What passed
-- Equal reserve80, rates1 and1/2, delivery30 at31; native trajectories and pressures
-  match original controls. Sample31 precedes relief. At41 delivered/unrelieved
-  actual Situation contributions7/27 versus7/22, integer modifiers2 versus3.
-- Duplicate and save31/restored continuation match all bytes through exhaustion101.
-- Hidden41/49 share width20 evidence and pressure0. Non-body state/output/trace
-  equality precedes first differing permitted sample12;226 rows/zero draws at10.
-  Width10 reveals pressure1/6 on the same body. No stochastic choice claim.
-- Denied/unavailable channels do not read body or manufacture known zero.
-- Original16 sources/79 prefix continuations and29 affected control tests pass.
-  Native paired cognition stays within one model; alternate ownerships are controls.
-
-## Repair and limits
-Original scenario had task A urgency0 and task B satisfied[0,10]; both exact and
-integer receiving were zero. Two nulls pinned at c93710a3, old kinetic setup
-retained by fixture(profile,false). Delegated positive witness sets B minimum10
-in every arm. Alias probes moved after activation8 to10/12 with matching reserves.
-No source/law/seed search. Verification 1394.214/1800s; no cumulative extension.
-Original-matrix command cap120->300s was amended before execution; actual41.130s.
-
-C-BODY :4..11 mapped; :12/13 tracked. Ten members mapped/zero families.
-E43/P57/N17/U15 unchanged. All21 members/15 families/132 clauses and final
-whole-candidate replay remain. General physiology, nonlinear adaptation, broader
-receiving/inference and representation reduction are not qualified.
-RO008/019/020 and all existing dispositions/statuses remain unchanged.
-
-Continue from unresolved C rows in the existing reconciliation. Write the next
-bounded card first; use existing shared owners and real consumers with live scenarios.
-One milestone/job;3 capabilities/12 code-test files;20 evidence files/5MiB.
-Default1800s cumulative/600s per command; scoped affected checks only.
-Delegated routine diagnosis and comparison amendments remain authorized.
-Record before rerun; preserve failures; never retune laws or waive final requirements.
-No UI, unrelated breadth, autonomous multi-character dependency or duplicate runtime.
-| Research obligations | **0 active / 18 conditional / 0 unowned** |
+Owner self-approval covers routine diagnosis/amendments; scope/law conflicts escalate.
+No UI, standalone factories, autonomous partners or unrelated breadth.
+| Research obligations | **0 active /18 conditional /0 unowned** |
