@@ -1,0 +1,17 @@
+M124 plan8a03a53d baselineafd4f563;15 seconds bookkeeping prepaid.
+CHARGED 15.000
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+src/test/assembledAttentionOriginalReplay.test.ts(2,28): error TS2307: Cannot find module 'node:fs' or its corresponding type declarations.
+src/test/assembledAttentionOriginalReplay.test.ts(3,26): error TS2307: Cannot find module 'node:crypto' or its corresponding type declarations.
+src/test/assembledAttentionOriginalReplay.test.ts(12,181): error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+
+EXIT 2; elapsed 18.585s
+CHARGED 33.585
+
+REPAIR before rerun: test-only Node imports unavailable under repository TS config; use existing Vite raw fixture loading and substrate SHA256. No acceptance/input/law changes.
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 17.955s
+CHARGED 51.540
