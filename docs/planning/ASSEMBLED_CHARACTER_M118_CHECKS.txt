@@ -150,3 +150,219 @@ M118 primary reversed exhausted 101
 
 EXIT 0; elapsed 274.216s
 CHARGED 795.019
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledHabitReversal.test.ts", "-t", "cues118|hidden118", "--reporter=verbose"]
+'hidden118' is not recognized as an internal or external command,
+operable program or batch file.
+
+EXIT 255; elapsed 0.042s
+CHARGED 795.061
+
+Shell correction: cmd.exe interpreted regex pipe; no surviving Vitest/node process found. Run cue and hidden tests separately within the same cumulative budget; no test/model changes.
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledHabitReversal.test.ts", "-t", "cues118", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledHabitReversal.test.ts > cues118: untrained or unseen cue cannot retrieve the trained habit
+M118 observed {"at":"18","history":[{"at":"10","positive":true},{"at":"12","positive":true}],"strength":"0/1","admitted":false,"offered":0,"nuclei":2,"targetProbability":"0/1"}
+
+stdout | src/test/assembledHabitReversal.test.ts > cues118: untrained or unseen cue cannot retrieve the trained habit
+M118 observed {"at":"18","history":[{"at":"10","positive":true},{"at":"12","positive":true}],"strength":"0/1","admitted":false,"offered":0,"nuclei":2,"targetProbability":"0/1"}
+
+ ✓ src/test/assembledHabitReversal.test.ts > cues118: untrained or unseen cue cannot retrieve the trained habit 159653ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 9 skipped (10)
+   Start at  21:05:12
+   Duration  164.14s (transform 2.68s, setup 0ms, collect 4.04s, tests 159.65s, environment 0ms, prepare 142ms)
+
+
+EXIT 0; elapsed 165.809s
+CHARGED 960.870
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledHabitReversal.test.ts", "-t", "hidden118", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledHabitReversal.test.ts > hidden118: physical reward cannot bypass identical permitted reports
+M118 observed {"at":"18","history":[{"at":"10","positive":true},{"at":"12","positive":true}],"strength":"3/4","admitted":true,"offered":2,"nuclei":4,"targetProbability":"1/2"}
+
+stdout | src/test/assembledHabitReversal.test.ts > hidden118: physical reward cannot bypass identical permitted reports
+M118 observed {"at":"18","history":[{"at":"10","positive":true},{"at":"12","positive":true}],"strength":"3/4","admitted":true,"offered":2,"nuclei":4,"targetProbability":"1/2"}
+M118 hidden matched draws 4
+
+stdout | src/test/assembledHabitReversal.test.ts > hidden118: physical reward cannot bypass identical permitted reports
+M118 hidden truth: distinct physical gains; equal observations/history/all resolutions
+
+ ✓ src/test/assembledHabitReversal.test.ts > hidden118: physical reward cannot bypass identical permitted reports 147516ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 9 skipped (10)
+   Start at  21:08:08
+   Duration  152.01s (transform 2.69s, setup 0ms, collect 4.03s, tests 147.52s, environment 0ms, prepare 146ms)
+
+
+EXIT 0; elapsed 153.678s
+CHARGED 1114.548
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledHabitReversal.test.ts", "-t", "persistence118", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledHabitReversal.test.ts > persistence118: exact repeat and restore15 preserve whole continuation
+M118 observed {"at":"18","history":[{"at":"10","positive":true},{"at":"12","positive":true},{"at":"14","positive":false}],"strength":"3/8","admitted":false,"offered":0,"nuclei":2,"targetProbability":"0/1"}
+M118 repeat/restore15 whole state/output/trace/save/identity through 101
+
+ ✓ src/test/assembledHabitReversal.test.ts > persistence118: exact repeat and restore15 preserve whole continuation 214006ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 9 skipped (10)
+   Start at  21:10:50
+   Duration  218.55s (transform 2.70s, setup 0ms, collect 4.05s, tests 214.01s, environment 0ms, prepare 144ms)
+
+
+EXIT 0; elapsed 220.213s
+CHARGED 1334.761
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledHabitReversal.test.ts", "-t", "original118", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledHabitReversal.test.ts > original118: matched histories preserve the original alternative candidates
+M118 ORIGINAL matched matrix PASS {"1/1/trained":["1/2","1/2"],"1/1/untrained":["0/1","0/1"],"1/1/reversed":["0/1","0/1"],"1/2/trained":["1/2","1/2"],"1/2/untrained":["0/1","0/1"],"1/2/reversed":["0/1","0/1"],"1/3/trained":["0/1","0/1"],"1/3/untrained":["0/1","0/1"],"1/3/reversed":["0/1","0/1"],"1/4/trained":["1/2","1/2"],"1/4/untrained":["1/2","1/2"],"1/4/reversed":["1/2","1/2"],"2/1/trained":["1/2","1/2"],"2/1/untrained":["0/1","0/1"],"2/1/reversed":["0/1","0/1"],"2/2/trained":["1/2","1/2"],"2/2/untrained":["0/1","0/1"],"2/2/reversed":["0/1","0/1"],"2/3/trained":["0/1","0/1"],"2/3/untrained":["0/1","0/1"],"2/3/reversed":["0/1","0/1"],"2/4/trained":["1/2","1/2"],"2/4/untrained":["1/2","1/2"],"2/4/reversed":["1/2","1/2"],"3/1/trained":["0/1","0/1"],"3/1/untrained":["0/1","0/1"],"3/1/reversed":["0/1","0/1"],"3/2/trained":["0/1","0/1"],"3/2/untrained":["0/1","0/1"],"3/2/reversed":["0/1","0/1"],"3/3/trained":["0/1","0/1"],"3/3/untrained":["0/1","0/1"],"3/3/reversed":["0/1","0/1"],"3/4/trained":["1/2","1/2"],"3/4/untrained":["1/2","1/2"],"3/4/reversed":["1/2","1/2"]}
+
+ ✓ src/test/assembledHabitReversal.test.ts > original118: matched histories preserve the original alternative candidates 28531ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 9 skipped (10)
+   Start at  21:14:40
+   Duration  33.01s (transform 2.70s, setup 0ms, collect 4.04s, tests 28.53s, environment 0ms, prepare 151ms)
+
+
+EXIT 0; elapsed 34.686s
+CHARGED 1369.447
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/habitPublic.test.ts", "src/test/habitBoundary.test.ts", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/habitBoundary.test.ts > retains unknown versus known negative and excludes unobserved action from learning 737ms
+ ✓ src/test/habitBoundary.test.ts > keeps cue folds independent and exhibits different bounded extinction laws
+ ✓ src/test/habitBoundary.test.ts > does not widen inherited typed fields or summary unit domains
+ ✓ src/test/habitPublic.test.ts > preserves separate expectation and acquired availability through correction and reversal 2754ms
+ ✓ src/test/habitPublic.test.ts > replays stored summaries as exactly the same cognitive outputs as derived history 7911ms
+ ✓ src/test/habitPublic.test.ts > audits full state reads, fixed contributors and observation-only mutation routes 1329ms
+ ✓ src/test/habitPublic.test.ts > rejects invalid ingress, duplicate history and forged complete saves 6417ms
+ ✓ src/test/habitPublic.test.ts > rolls back all fourteen stages and commit, including random draws and cached history 11473ms
+
+ Test Files  2 passed (2)
+      Tests  8 passed (8)
+   Start at  21:15:26
+   Duration  31.37s (transform 858ms, setup 0ms, collect 2.02s, tests 30.62s, environment 0ms, prepare 282ms)
+
+
+EXIT 0; elapsed 33.018s
+CHARGED 1402.465
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledHabit.test.ts", "-t", "original full habit horizon", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledHabit.test.ts > M16 assembled habit > controls: original full habit horizon, alternative laws and derived/cache/belief/truth comparisons 14144ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  21:16:12
+   Duration  17.95s (transform 2.23s, setup 0ms, collect 3.38s, tests 14.15s, environment 0ms, prepare 142ms)
+
+
+EXIT 0; elapsed 19.616s
+CHARGED 1422.081
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "-b", "--pretty", "false"]
+
+EXIT 0; elapsed 19.292s
+CHARGED 1441.373
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:boundaries"]
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+EXIT 0; elapsed 3.165s
+CHARGED 1444.538
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:research"]
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: CURRENT obligation counts are stale
+    at file:///C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/scripts/check-research-obligations.mjs:75:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.20.0
+
+EXIT 1; elapsed 3.941s
+CHARGED 1448.479
+
+Research-check repair: CURRENT counts were numerically unchanged but lacked the exact spaces required by checker75. Restored standard formatting; no obligation status change.
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:research"]
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4339}
+
+EXIT 0; elapsed 3.887s
+CHARGED 1452.366
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,json,re\nbase='4ead5110'\ndef old(p):return subprocess.check_output(['git','show',base+':'+p],text=True,encoding='utf8')\nallowed={'AGENTS.md','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_M118_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M118_CHECKS.txt','docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md','docs/planning/RESEARCH_OBLIGATIONS.json','src/test/assembledHabitReversal.test.ts','src/test/fixtures/assembledHabitReversal.ts'}\nchanged=set(subprocess.check_output(['git','diff',base,'--name-only'],text=True).splitlines())|set(subprocess.check_output(['git','ls-files','--others','--exclude-standard'],text=True).splitlines())\nassert changed==allowed,(changed-allowed,allowed-changed)\nfor p,n in {'AGENTS.md':120,'docs/planning/CURRENT.md':80,'docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md':250,'docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md':250}.items():assert len(Path(p).read_text(encoding='utf8').splitlines())<=n,p\np='docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md';s=Path(p).read_text(encoding='utf8');assert len(s.replace('\\n','\\r\\n').encode())<=65536\nfor marker in [' | C-',' | F-']:\n assert [x for x in old(p).splitlines() if marker in x and 'C-HABIT' not in x]==[x for x in s.splitlines() if marker in x and 'C-HABIT' not in x]\nassert len([x for x in s.splitlines() if x.startswith('| EQUIVALENT') and ' | C-' in x])==11\nassert 'E43/P57/N17/U15' in s\np='docs/planning/RESEARCH_OBLIGATIONS.json';a=json.loads(old(p));b=json.loads(Path(p).read_text(encoding='utf8'))\nfor k in a:\n if k!='reportReviews':assert a[k]==b[k],k\nassert b['reportReviews'][:-1]==a['reportReviews']\nassert b['reportReviews'][-1]=={'path':'docs/planning/ASSEMBLED_CHARACTER_M118_RESULT.md','obligations':['RO-C3-015']}\nlog=Path('docs/planning/ASSEMBLED_CHARACTER_M118_CHECKS.txt').read_text(encoding='utf8')\nfor item in ['M118 hidden matched draws 4','M118 repeat/restore15 whole state/output/trace/save/identity through 101','8 passed (8)','original full habit horizon','Reference boundary check passed.','PASS: research obligation references','expected +0 to be 3','TS2345','not recognized as an internal','Research-check repair']:assert item in log,item\nreceipts=[json.loads(x.split('M118 observed ',1)[1]) for x in log.splitlines() if x.startswith('M118 observed ')]\nfor strength,p in [('3/4','1/2'),('0/1','0/1'),('3/8','0/1')]:\n for at in ['18','20']:assert any(x.get('at')==at and x['strength']==strength and x['targetProbability']==p for x in receipts),(strength,at)\nmatrix=[json.loads(x.split('M118 ORIGINAL matched matrix PASS ',1)[1]) for x in log.splitlines() if x.startswith('M118 ORIGINAL matched matrix PASS ')];assert len(matrix)==1 and len(matrix[0])==36\nfor profile in ['trained','untrained','reversed']:assert 'M118 primary '+profile+' exhausted 101' in log\nfor p in ['src/test/assembledHabitReversal.test.ts','src/test/fixtures/assembledHabitReversal.ts']:\n assert subprocess.check_output(['git','diff','79a4fc15','--',p],text=True)==''\npaths=list(Path('docs/planning').glob('ASSEMBLED_CHARACTER_M118_*'));size=sum(p.stat().st_size for p in paths);assert len(paths)==2 and size<5*1024*1024\nassert max(float(x) for x in re.findall(r'cumulative ([0-9.]+)/1800s',log))<1800\nprint('PASS: eight intended paths; two new test/helper files; no production/formal/baseline/control changes. Native acquisition/reversal/repeated probes, hidden truth with4 common draws, exact continuation and36 original matched images retained. Eleven mapped members; all other C/F rows,132-clause index and obligation statuses unchanged. Document/evidence caps pass: '+str(size)+' bytes.')\n"]
+Traceback (most recent call last):
+  File "<string>", line 29, in <module>
+    assert max(float(x) for x in re.findall(r'cumulative ([0-9.]+)/1800s',log))<1800
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: max() iterable argument is empty
+
+EXIT 1; elapsed 0.834s
+CHARGED 1453.200
+
+Preservation-reader repair: use the actual CHARGED receipt rows, not the terminal-only cumulative label; measure CRLF bytes using explicit newline codepoints. Limits/dispositions unchanged.
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,json,re\nbase='4ead5110'\ndef old(p):return subprocess.check_output(['git','show',base+':'+p],text=True,encoding='utf8')\nallowed={'AGENTS.md','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_M118_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M118_CHECKS.txt','docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md','docs/planning/RESEARCH_OBLIGATIONS.json','src/test/assembledHabitReversal.test.ts','src/test/fixtures/assembledHabitReversal.ts'}\nchanged=set(subprocess.check_output(['git','diff',base,'--name-only'],text=True).splitlines())|set(subprocess.check_output(['git','ls-files','--others','--exclude-standard'],text=True).splitlines())\nassert changed==allowed,(changed-allowed,allowed-changed)\nfor p,n in {'AGENTS.md':120,'docs/planning/CURRENT.md':80,'docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md':250,'docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md':250}.items():assert len(Path(p).read_text(encoding='utf8').splitlines())<=n,p\np='docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md';s=Path(p).read_text(encoding='utf8');assert len(s.replace(chr(10),chr(13)+chr(10)).encode())<=65536\nfor marker in [' | C-',' | F-']:\n assert [x for x in old(p).splitlines() if marker in x and 'C-HABIT' not in x]==[x for x in s.splitlines() if marker in x and 'C-HABIT' not in x]\nassert len([x for x in s.splitlines() if x.startswith('| EQUIVALENT') and ' | C-' in x])==11\nassert 'E43/P57/N17/U15' in s\np='docs/planning/RESEARCH_OBLIGATIONS.json';a=json.loads(old(p));b=json.loads(Path(p).read_text(encoding='utf8'))\nfor k in a:\n if k!='reportReviews':assert a[k]==b[k],k\nassert b['reportReviews'][:-1]==a['reportReviews']\nassert b['reportReviews'][-1]=={'path':'docs/planning/ASSEMBLED_CHARACTER_M118_RESULT.md','obligations':['RO-C3-015']}\nlog=Path('docs/planning/ASSEMBLED_CHARACTER_M118_CHECKS.txt').read_text(encoding='utf8')\nfor item in ['M118 hidden matched draws 4','M118 repeat/restore15 whole state/output/trace/save/identity through 101','8 passed (8)','original full habit horizon','Reference boundary check passed.','PASS: research obligation references','expected +0 to be 3','TS2345','not recognized as an internal','Research-check repair']:assert item in log,item\nreceipts=[json.loads(x.split('M118 observed ',1)[1]) for x in log.splitlines() if x.startswith('M118 observed ')]\nfor strength,p in [('3/4','1/2'),('0/1','0/1'),('3/8','0/1')]:\n for at in ['18','20']:assert any(x.get('at')==at and x['strength']==strength and x['targetProbability']==p for x in receipts),(strength,at)\nmatrix=[json.loads(x.split('M118 ORIGINAL matched matrix PASS ',1)[1]) for x in log.splitlines() if x.startswith('M118 ORIGINAL matched matrix PASS ')];assert len(matrix)==1 and len(matrix[0])==36\nfor profile in ['trained','untrained','reversed']:assert 'M118 primary '+profile+' exhausted 101' in log\nfor p in ['src/test/assembledHabitReversal.test.ts','src/test/fixtures/assembledHabitReversal.ts']:\n assert subprocess.check_output(['git','diff','79a4fc15','--',p],text=True)==''\npaths=list(Path('docs/planning').glob('ASSEMBLED_CHARACTER_M118_*'));size=sum(p.stat().st_size for p in paths);assert len(paths)==2 and size<5*1024*1024\nassert float([x.split()[1] for x in log.splitlines() if x.startswith('CHARGED ')][-1])<1800\nprint('PASS: eight intended paths; two new test/helper files; no production/formal/baseline/control changes. Native acquisition/reversal/repeated probes, hidden truth with4 common draws, exact continuation and36 original matched images retained. Eleven mapped members; all other C/F rows,132-clause index and obligation statuses unchanged. Document/evidence caps pass: '+str(size)+' bytes.')\n"]
+PASS: eight intended paths; two new test/helper files; no production/formal/baseline/control changes. Native acquisition/reversal/repeated probes, hidden truth with4 common draws, exact continuation and36 original matched images retained. Eleven mapped members; all other C/F rows,132-clause index and obligation statuses unchanged. Document/evidence caps pass: 32344 bytes.
+
+EXIT 0; elapsed 0.786s
+CHARGED 1453.986
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:git-size"]
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.841s
+CHARGED 1454.827
+
+COMMAND ["git", "diff", "--cached", "--check"]
+
+EXIT 0; elapsed 0.070s
+CHARGED 1454.897
