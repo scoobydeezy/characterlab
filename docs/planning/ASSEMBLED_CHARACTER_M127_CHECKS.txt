@@ -228,3 +228,138 @@ EXIT 1; elapsed 118.034s
 CHARGED 385.772
 
 Delegated common-fixture amendment before rerun:384a45e9 passes A/B live appraisal, positive bases and distinct grounds under capacity3, but both routes collapse to one executable action. The inherited source uses the shared one/two route order, and its displays select the same route for both tasks. Preserve this action-alias case. Make the common scenario explicit: A route0/action one; B route1/action two, with those availability bits delivered by ordinary DISPLAY records. Existing instruction definitions/owners/laws, capacities2/3/4, seed0 and actual probability-change gate unchanged. This is source setup, not a new decision mechanism or seed/calibration search.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledWorkspaceReceiving.test.ts", "-t", "primary127", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledWorkspaceReceiving.test.ts > primary127: retained unselected task supplies no reason; larger workspace changes actual choice probability
+M127 captured modes/probabilities 1 actual=0/1 lottery=0/1; 3 actual=1/2 lottery=1/2; 3 actual=1/2 lottery=1/2
+M127 PRIMARY actual probability(action two) 0/1 / 1/2 / 1/2; selected counts1/2/3 plus forecast; task B retained but no base/ground at capacity2
+
+stdout | src/test/assembledWorkspaceReceiving.test.ts > primary127: retained unselected task supplies no reason; larger workspace changes actual choice probability
+M127 PRIMARY PASS full queues; capacity/access is not task erasure; original protection/reminder gates remain open
+
+ ✓ src/test/assembledWorkspaceReceiving.test.ts > primary127: retained unselected task supplies no reason; larger workspace changes actual choice probability 150074ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  16:26:22
+   Duration  154.76s (transform 2.80s, setup 0ms, collect 4.21s, tests 150.08s, environment 0ms, prepare 145ms)
+
+
+EXIT 0; elapsed 155.332s
+CHARGED 541.104
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 18.020s
+CHARGED 559.124
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledWorkspaceReceiving.test.ts", "-t", "continuation127|privacy127", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledWorkspaceReceiving.test.ts > continuation127: exact repeat and save5 restore preserve working access and later execution
+M127 CONTINUATION PASS exact state/outputs/trace/save through every settled continuation and full queue
+
+ ✓ src/test/assembledWorkspaceReceiving.test.ts > continuation127: exact repeat and save5 restore preserve working access and later execution 163847ms
+stdout | src/test/assembledWorkspaceReceiving.test.ts > privacy127: hidden world facts cannot change working access or its reasons
+M127 PRIVACY PASS whole safe state/outputs every boundary/full queue
+
+ ✓ src/test/assembledWorkspaceReceiving.test.ts > privacy127: hidden world facts cannot change working access or its reasons 70591ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 6 skipped (8)
+   Start at  16:29:49
+   Duration  239.04s (transform 2.74s, setup 0ms, collect 4.12s, tests 234.44s, environment 0ms, prepare 140ms)
+
+
+EXIT 0; elapsed 239.604s
+CHARGED 798.728
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/workPublic.test.ts", "src/test/workBoundary.test.ts", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/workBoundary.test.ts > only the declared owner can write each leaf and indexed models reject workspace state 352ms
+ ✓ src/test/workBoundary.test.ts > closed codecs forbid new records in typed slots and malformed priority/identity data
+ ✓ src/test/workBoundary.test.ts > exact input data rejects excess history, nonmonotone times, unexpected fields and forged model bytes
+ ✓ src/test/workPublic.test.ts > displaces or protects under actual overload, preserves retained status, and restores only unexpired intention 1385ms
+ ✓ src/test/workBoundary.test.ts > gaps, deadline-only instants and removed cards preserve stored/indexed equivalence 808ms
+ ✓ src/test/workBoundary.test.ts > records actual cache reads only in StoredSet and preserves the strictly later source boundary 469ms
+ ✓ src/test/workPublic.test.ts > stored and indexed maintenance agree exactly without indexed cache reads or writes 1445ms
+ ✓ src/test/workPublic.test.ts > hidden truth, invisible alternatives, board visibility and physical ordering respect the source cut 2882ms
+ ✓ src/test/workPublic.test.ts > named negative controls fail distinct capacity, access, maintenance and expiry contrasts 2687ms
+ ✓ src/test/workPublic.test.ts > rejects forged source, duplicate identities, foreign S0, getters and invalid model handles
+ ✓ src/test/workPublic.test.ts > restores whole prefixes including addressed draws and rejects forged save state/trace/output 2855ms
+ ✓ src/test/workPublic.test.ts > rolls back every stage and commit, including deadline retirement and allocated draws 6474ms
+
+ Test Files  2 passed (2)
+      Tests  12 passed (12)
+   Start at  16:33:49
+   Duration  19.51s (transform 770ms, setup 0ms, collect 2.28s, tests 19.81s, environment 0ms, prepare 290ms)
+
+
+EXIT 0; elapsed 20.054s
+CHARGED 818.782
+
+COMMAND ["node", "scripts/check-reference-boundary.mjs"]
+Reference boundary check passed.
+
+EXIT 0; elapsed 2.773s
+CHARGED 821.555
+
+COMMAND ["node", "scripts/check-research-obligations.mjs"]
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4348}
+
+EXIT 0; elapsed 3.483s
+CHARGED 825.038
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,json\nbase='06bc0d1e'\ncode={'src/test/assembledWorkspaceReceiving.test.ts','src/test/fixtures/assembledWorkspaceReceiving.ts'}\nallowed=code|{'AGENTS.md','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md','docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md','docs/planning/RESEARCH_OBLIGATIONS.json','docs/planning/ASSEMBLED_CHARACTER_M127_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M127_CHECKS.txt'}\ngit=lambda *a:subprocess.check_output(['git',*a],text=True,encoding='utf-8')\nchanged=set(git('diff','--name-only',base).splitlines())|set(git('ls-files','--others','--exclude-standard').splitlines())\nassert changed<=allowed,changed-allowed\nassert changed&code==code\nassert git('diff','e76dd917','--','src')=='','tested source changed'\nassert all(p.startswith('src/test/') for p in changed if p.startswith('src/'))\nold=git('show',base+':docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md')\nnew=Path('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md').read_text(encoding='utf-8')\nrows=lambda s:[x for x in s.splitlines() if ('| C-' in x or '| F-' in x) and '| C-WORK ' not in x]\nassert rows(old)==rows(new),'other C/F rows changed'\nassert '| UNRESOLVED | C-WORK ' in new\nassert 'E46/P54/N17/U15' in new and '14/21' in new and 'families:0/15' in new\nassert len(new.splitlines())<=250 and len(new.replace('\\n','\\r\\n').encode())<=65536\nbefore=json.loads(git('show',base+':docs/planning/RESEARCH_OBLIGATIONS.json'))\nafter=json.loads(Path('docs/planning/RESEARCH_OBLIGATIONS.json').read_text(encoding='utf-8-sig'))\nassert before['obligations']==after['obligations']\nassert after['reportReviews'][:-1]==before['reportReviews']\nassert after['reportReviews'][-1]['path']=='docs/planning/ASSEMBLED_CHARACTER_M127_RESULT.md'\nfor path,cap in [('AGENTS.md',120),('docs/planning/CURRENT.md',80),('docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md',250)]:\n assert len(Path(path).read_text(encoding='utf-8').splitlines())<=cap,path\nevidence=[Path('docs/planning/ASSEMBLED_CHARACTER_M127_'+s) for s in ['RESULT.md','CHECKS.txt']]\nassert sum(p.stat().st_size for p in evidence)<5*1024*1024\nlog=evidence[1].read_text(encoding='utf-8')\ncharge=float([l.split()[1] for l in log.splitlines() if l.startswith('CHARGED ')][-1])\nassert charge<1800\nfor token in ['M127 PRIMARY PASS','M127 captured modes/probabilities','M127 PRIVACY PASS','M127 CONTINUATION PASS','src/test/workPublic.test.ts','src/test/workBoundary.test.ts','Reference boundary check passed.','PASS: research obligation references']:\n assert token in log,token\ncurrent=Path('docs/planning/CURRENT.md').read_text()\nassert '(ASSEMBLED_CHARACTER_M127_CHECKS.txt)' in current and '{{' not in current\nprint('PASS M127 preservation:sourcee76dd917;2 new test/helper files; production/formal/control dependencies unchanged; C-WORK unresolved, other C/F unchanged;14/21,0/15,E46/P54/N17/U15; obligation statuses/document/evidence caps retained; charge',charge)\n"]
+PASS M127 preservation:sourcee76dd917;2 new test/helper files; production/formal/control dependencies unchanged; C-WORK unresolved, other C/F unchanged;14/21,0/15,E46/P54/N17/U15; obligation statuses/document/evidence caps retained; charge 825.038
+
+EXIT 0; elapsed 0.705s
+CHARGED 825.743
+
+COMMAND ["node", "scripts/check-git-size.mjs"]
+node:internal/modules/cjs/loader:1568
+  throw err;
+  ^
+
+Error: Cannot find module 'C:\Users\scoob\.codex\worktrees\assembled-character\characterlab\scripts\check-git-size.mjs'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1564:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1118:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1142:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1169:12)
+    at Module._load (node:internal/modules/cjs/loader:1341:5)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v24.20.0
+
+EXIT 1; elapsed 0.053s
+CHARGED 825.796
+
+COMMAND ["git", "diff", "--cached", "--check"]
+docs/planning/ASSEMBLED_CHARACTER_M127_RESULT.md:113: new blank line at EOF.
+docs/planning/CURRENT.md:44: new blank line at EOF.
+
+EXIT 2; elapsed 0.070s
+CHARGED 825.866
+
+Final bookkeeping correction: attempted absent check-git-size.mjs; use package check:git-size. Removed extra template EOF blank lines. No source change.
+
+COMMAND ["cmd", "/c", "npm", "run", "check:git-size"]
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.848s
+CHARGED 826.714

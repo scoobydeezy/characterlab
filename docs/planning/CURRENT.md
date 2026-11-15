@@ -1,58 +1,43 @@
-# Current work — M127 retained plans need working access
-The next connection is retained task -> finite workspace -> live reasons -> choice.
-M127 tests this on the current character before adding protection/reminder semantics.
-C-WORK remains open: the current deadline/key task selection is not the original
-displayed-priority/maintenance/reminder policy. No substitution or closure by analogy.
+# Current work — M127 workspace access-to-choice comparison complete
+The character retains an excluded task without letting it supply a reason or
+executable plan. One extra workspace slot admits that task and changes its action's
+actual probability from0 to1/2. No production change was needed for this connection.
 
-## Bounded card (before code)
-Baseline06bc0d1e; reference0.93, feedback TRUE, all laws/calibration unchanged.
-Two capabilities: overload excludes a retained plan from reasons; increasing shared
-capacity admits that same plan and changes actual arbitration probability.
-Contracts: current configuration/task workspace, assembled-workspace0.6 and
-workspace-control0.1-candidate as original comparator (not a new native law).
-Consulted WORK ledger MEC011/EXP004, MEC020/EXP013, MEC012..016 and RO-C3-012.
-Attention/memory/recognition remain distinct. One model/state/scheduler; no new store.
-Source inspection: native task selection orders by deadline/key, reserves a forecast
-slot, then shares remaining capacity with control and actual memory deliveries.
-Original protection/cue/expiry policy needs a later explicit seam; no blind port here.
+Reference0.93; all laws/calibration/shared UnitBudget and feedback TRUE unchanged.
+Planf5a71991; source e76dd917; baseline06bc0d1e.
+[Result](ASSEMBLED_CHARACTER_M127_RESULT.md); [checks](ASSEMBLED_CHARACTER_M127_CHECKS.txt).
 
-## Files and comparison
-Initially two test/helper files: assembledWorkspaceReceiving.test.ts and
-fixtures/assembledWorkspaceReceiving.ts. No production/formal edits planned.
-Three-capability/12-code-file ceiling applies if a real defect requires repair.
-Use M126 current fixture: one holder/recognized stand-in, two social tasks A/B,
-third task with unknown appraisal; body10, seed0, normal body samples6/7.
-Fixed false world; six independent permitted trials, no learned S0.
-Set A/B deadlines20/25, third30, importance1 for A/B/zero third, and disable
-physical execution success in every arm so choices cannot fulfill tasks early.
-Common amended plan context: A route0/action one, B route1/action two via normal
-permitted route displays; retain the failed inherited same-action case.
-Capacities2/3/4 are the only between-arm model difference; identical input/S0/seed.
-At probe6 all3 tasks remain Open; forecast is live. Candidate load4 exceeds2/3.
-Capacity2 selects A+forecast;3 admits A/B+forecast;4 also admits third task.
-Before comparison, assert actual selected A/B appraisal/base/nucleus liveness in
-the arm where each is admitted. Excluded B must retain exact task bytes but supply
-no appraisal row, base, ground or plan access. The same action definitions remain registered; executable candidates are access-
-gated (one versus two). Actual probability, including Auto handling, must change
-for B; an absent candidate has probability0, never an invented option.
-No claim from unmatched sampled winners; no seed search or calibration change.
-Trace must show actual task reads, selected operands and receiving reasons/decision.
-Run full queues, inspect expiry/later access if naturally observed; no cue/protection
-claim without their dedicated controls. Original WORK tests preserve the distinctions.
+## What passed
+- Three retained Open tasks +live forecast compete for capacities2/3/4.
+  Selected tasks1/2/3; exact total occupancy never exceeds capacity.
+- Task B's retained bytes stay identical before/after the comparison. At2 it has
+  no joint-appraisal row, positive base, compiled ground or executable candidate.
+  At3/4 the actual selected task is live through appraisal/reasons/arbitration.
+- Actual probability(action two):0 /1/2 /1/2; Auto correctly counted as deterministic,
+  larger arms mode3. No inference from unmatched sampled winners.
+- One holder/recognized stand-in; body10/samples6+7, seed0; A/B importance1, third0,
+  deadlines20/25/30. Normal route displays choose distinct A/B actions. Physical
+  execution cannot succeed in any arm; actual intent/attempt/outcome still execute.
+- Full queues; exact repeat/save5 continuation; hidden-world whole safe state/output
+  equality at every settled boundary. Original WORK controls preserved.
+- Types, three native comparisons and 12 preserved WORK tests pass. Reference boundary passes. Research, preservation and Git size checks pass; final whitespace check is included in prepaid bookkeeping.
+- 826.714/1800s including failures/15s bookkeeping; no extension.
+  Two test/helper files, zero production/formal edits; two evidence files below5MiB.
+- Retained helper failures: union narrowing; canonical Map membership; registered
+  action versus executable candidate. Common fixture amendment resolves inherited
+  same-action alias using normal route evidence in all arms, without law/seed tuning.
 
-## Checks / failure risks / stop
-Primary capacities2/3/4; hidden-world safe-output/state control; exact repeat and
-save5 continuation through full queues; original workPublic/workBoundary tests;
-types/boundaries/research/preservation/Git size/staged whitespace.
-One long job,1800s cumulative including15s bookkeeping,600s command max.
-20 evidence files/5MiB; retain failed inputs/assertions and record amendments before
-rerun under delegated self-approval. No broad unchanged C2/GA/BELIEF rerun.
-Risks: wrong task order or inherited inactive/unknown settings; no live base;
-candidate action aliasing; workspace exclusion confused with erasure; expiry
-or execution confounds; zero probability effect. Diagnose before any amendment.
-Done when access/retention/arbitration and continuation/privacy checks pass with
-original controls preserved, or report the specific unclosed gap without relabeling.
-C-WORK stays partial;14/21 mapped,0/15 families,E46/P54/N17/U15=132 unchanged.
-Next integration must address original distraction/protection and cue/expiry,
-not add unrelated areas or more access-only paperwork. Full21/15/132 remains.
+C-WORK remains UNRESOLVED: native capacity/access/choice is partial evidence,
+not original distraction/protection, reminder recovery or expiry qualification.
+14/21 mapped,0/15 families,E46/P54/N17/U15=132 unchanged. Final replay mandatory.
+
+Next bounded package: integrate the original observed-priority/protection policy
+into the existing task/workspace path; show isolated distraction with support off/on,
+later reminder recovery and an inert reminder after expiry. Preserve original
+StoredSet/IndexedReplay and negative controls. Current deadline/key ordering and
+spare-slot habit inhibition are distinct semantics, not substitutes for this gate.
+Write/commit that card and any versioned contract before implementation.
+One milestone/job,3 capabilities,12 code/test files,20 evidence/5MiB,
+1800s cumulative/600s command. Delegated diagnosis/amendments remain authorized;
+record first, preserve failures/laws/scope; passing ends checks. No UI/autonomous peers.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
