@@ -1,2 +1,11 @@
 M127 baseline06bc0d1e. Card committed before tests. 1800s total/600s command;15s bookkeeping prepaid.
 CHARGED 15.000
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+src/test/assembledWorkspaceReceiving.test.ts(41,153): error TS2339: Property 'kind' does not exist on type 'CanonicalValue'.
+  Property 'kind' does not exist on type 'false'.
+
+EXIT 2; elapsed 18.545s
+CHARGED 33.545
+
+Type repair: bind trace output to a local CanonicalValue before narrowing its union. Joint liveness assertion follows the actual384->381 workspace binding. No production/scenario changes.
