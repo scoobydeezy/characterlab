@@ -46,7 +46,9 @@ function controlsOnActualClaims(r:Run){
 function learningTrace(r:Run,applied:boolean){
  const t=trace(r).find(t=>{const e=rec(f(t,4n),130n);return key(f(e,2n))===key(signed(8))&&key(f(e,5n))===key(SOCIAL_UPDATE);})!;expect(t).toBeDefined();
  const report8=report(r,SOCIAL_LEARNING).find(a=>key(a[1])===key(signed(8)))!;expect(report8[2]).toBe(applied);
- expect(personMean(report8[3])).toEqual({numerator:1n,denominator:1n});
+ if(items(report8[3],'list').length)expect(personMean(report8[3])).toEqual({numerator:1n,denominator:1n});
+ else {expect(applied).toBe(false);expect(items(items(f(t,12n),'list')[1],'list')).toHaveLength(0);const reads=items(f(t,11n),'list').map(v=>rec(v,147n));expect(reads.some(v=>uint(f(rec(f(v,2n),140n),1n))===810n&&f(v,3n)===false)).toBe(true);}
+
  const diffs=items(f(t,17n),'list').map(v=>rec(v,148n));expect(diffs).toHaveLength(applied?1:0);if(applied){expect(f(diffs[0],6n)).toEqual(PERSON_OWNER);expect(uint(f(rec(f(diffs[0],1n),140n),1n))).toBe(810n);expect(personMean(report8[4])).toEqual({numerator:7n,denominator:8n});}
  else expect(report8[4]).toEqual(report8[3]);return report8;
 }

@@ -109,3 +109,62 @@ EXIT 1; elapsed 131.566s
 CHARGED 291.005
 
 DELEGATED FIXTURE AMENDMENT before rerun: source f14c973b reached correct person mean7/8 and social probe9, but failed joint-row liveness. contextAppraisal requires current sample or selected earlier body episode; source only supplied sample8 and no recall occurs until21. Add identical normal body sample9 to ALL arms, reserve10 and all laws, reports, goals, seed, correction and exact-belief requirements unchanged. This is a setup error, not a mechanism/law failure or interaction. No liveness gate removed.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledBeliefReceiving.test.ts", "-t", "primary125", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledBeliefReceiving.test.ts > primary125: wrong learned belief corrects through permitted contradiction; goals change appraisal not belief
+M125 CAPTURED actual8 claims: weighted7/8, LastObservation0, NoLearning unknown; support-derived confidence8/9 diagnostic only
+M125 PRIMARY fixed false truth: mean1 vs0 at7; contradiction8 gives7/8 vs0; current8 reads1, current9 reads7/8; goal-only exact belief equality and failure likelihood0/1 then1/8 vs7/8; full queues
+
+ ✓ src/test/assembledBeliefReceiving.test.ts > primary125: wrong learned belief corrects through permitted contradiction; goals change appraisal not belief 151205ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  14:57:35
+   Duration  155.90s (transform 2.81s, setup 0ms, collect 4.21s, tests 151.21s, environment 0ms, prepare 153ms)
+
+
+EXIT 0; elapsed 156.486s
+CHARGED 447.491
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledBeliefReceiving.test.ts", "-t", "controls125|continuation125", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledBeliefReceiving.test.ts > controls125: hidden truth cannot correct belief and silence or denial is no negative evidence 155210ms
+   → Cannot read properties of undefined (reading 'kind')
+stdout | src/test/assembledBeliefReceiving.test.ts > continuation125: exact repeat and save7 continuation preserve correction and later recall
+M125 CONTINUATION duplicate/save7 restored exact at every settled boundary through queue exhaustion
+
+ ✓ src/test/assembledBeliefReceiving.test.ts > continuation125: exact repeat and save7 continuation preserve correction and later recall 103753ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledBeliefReceiving.test.ts > controls125: hidden truth cannot correct belief and silence or denial is no negative evidence
+TypeError: Cannot read properties of undefined (reading 'kind')
+ ❯ Module.dataItems src/campaign2/canonicalData.ts:23:38
+     21| }
+     22| export function dataItems(value:CanonicalValue,kind:'set'|'list'):read…
+     23|   if(typeof value==='boolean'||value.kind!==kind)invalidModel(`require…
+       |                                      ^
+     24| }
+     25| 
+ ❯ personHistory src/assembled/social.ts:32:101
+ ❯ Module.personMean src/assembled/social.ts:33:65
+ ❯ learningTrace src/test/assembledBeliefReceiving.test.ts:49:9
+ ❯ src/test/assembledBeliefReceiving.test.ts:75:73
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed | 6 skipped (8)
+   Start at  15:00:36
+   Duration  263.53s (transform 2.74s, setup 0ms, collect 4.11s, tests 258.96s, environment 0ms, prepare 142ms)
+
+
+EXIT 1; elapsed 264.110s
+CHARGED 711.601
+
+REPAIR before controls rerun: learned person state remains mean1/support7 under denial, but no recognized target means SOCIAL_UPDATE emits a no-op receipt with empty prior for its default read path. Helper incorrectly fed [] into personMean. Preserve empty unknown; assert no learned target, actual absent810 read, zero diffs and exact prior==next. Separate state assertion still requires original person history unchanged. No input/production/criterion changes; primary and continuation unaffected and retained.
