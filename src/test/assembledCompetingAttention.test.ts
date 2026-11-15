@@ -1,10 +1,12 @@
+import {fixture as effectFixture} from './fixtures/assembledEffectEvidence';
+import {MULTI_UNIT_RULES,MULTI_UNIT_REGISTRY} from '../assembled/model';
 import {it,expect,vi} from 'vitest';
 import {prepareCharacterModel,createCharacterRun,restoreCharacterRun} from '../assembled/character';
 import {fixture,rec,f,uint,items,key,decode,enc,list,text,signed,q,bytes,outputs,C,exact,target,type Run,type CanonicalValue,type Mode} from './fixtures/assembledCompetingAttention';
 import {MULTI_ENCODING,validateEncoding} from '../assembled/encoding';
 import * as encoder from '../assembled/encoding';
-import {isSocialEpisodePath,MEMORY_FORMATION} from '../assembled/memory';
-import {personPath,personHistory,personMean,SOCIAL_SOURCE} from '../assembled/social';
+import {isSocialEpisodePath,MEMORY_FORMATION,POSITION_EPISODE} from '../assembled/memory';
+import {personPath,personHistory,personMean,SOCIAL_SOURCE,SOCIAL_STAGES} from '../assembled/social';
 import {WORKSPACE} from '../assembled/workspace';
 import {JOINT_APPRAISAL} from '../assembled/appraisal';
 import {dataIdentity as id} from '../campaign2/canonicalData';
@@ -32,10 +34,10 @@ function assessment(r:Run,count:number,selected:number,focal:boolean){
  expect(audit.every(v=>key(v[2])===key(text('Eligible')))).toBe(true);expect(audit.filter(v=>v[3]===true)).toHaveLength(selected);
  const targetRow=audit.find(v=>items(v[1],'list').some(x=>key(x)===key(text('causal-role/target'))))!;expect(targetRow).toBeDefined();expect(targetRow[3]).toBe(focal);
  expect(validateEncoding(list(a),a[4]),'a positive distractor cannot authorize focal memory').toBe(focal);
- const full=outputs(out(r),227n).find(v=>uint(f(v,3n))===1n)!;expect(full).toBeDefined();expect(items(f(full,5n),'set')).toHaveLength(count);expect(validateEncoding(list(a),full)).toBe(focal);
+ const full=outputs(out(r),227n).find(v=>key(f(v,1n))===key(f(rec(a[4],227n),1n)))!;expect(full).toBeDefined();expect(items(f(full,5n),'set')).toHaveLength(count);expect(validateEncoding(list(a),full)).toBe(focal);
  const ids=items(a[3],'list').map(uint);expect(new Set(ids).size).toBe(count);
  const bindingIds=items(f(full,5n),'set').map(v=>uint(id(f(rec(v,224n),1n)).payload));expect(new Set([...bindingIds,...ids]).size).toBe(count*2);
- const first=trace(r).find(t=>key(f(rec(f(t,4n),130n),2n))===key(signed(1))&&uint(f(rec(f(t,4n),130n),3n))===121n)!;
+ const first=trace(r).find(t=>key(f(rec(f(t,4n),130n),2n))===key(signed(1))&&key(f(rec(f(t,4n),130n),5n))===key(SOCIAL_STAGES[0]))!;
  expect(first).toBeDefined();expect(f(first,6n)).toEqual(text('assembled-character-encoding/0.2-candidate'));
  const ops=items(f(rec(f(first,16n),144n),1n),'list').map(v=>rec(v,145n));
  const members=ops.filter(o=>{const p=rec(f(o,1n),140n);return uint(f(p,1n))===241n&&uint(f(p,2n))===2n;});expect(members).toHaveLength(count);
@@ -60,7 +62,7 @@ it('primary121: two permitted candidates compete and selected focal memory chang
  for(const {r}of [a,b])await finish(r);
  console.info('M121 PRIMARY Target vs Participant selects focal; Target vs Actor excludes focal; actual2 eligible/K1; equal belief1/2, recalled judgment1/0; full queue');
 },400000);
-it('controls121: capacity permission truth and lower-priority footprint',async()=>{
+it('remaining121 controls121: capacity permission truth and lower-priority footprint',async()=>{
  const low=await create(),hidden=await create('hidden'),dense=await create('dense'),denied=await create('denied'),none=await create('none');
  for(const {r}of [low,hidden,dense,denied,none])await through(r,1n);
  const a=assessment(low.r,2,1,true),c=assessment(dense.r,3,1,true);assessment(denied.r,1,1,true);assessment(none.r,1,1,true);
@@ -71,7 +73,7 @@ it('controls121: capacity permission truth and lower-priority footprint',async()
  for(const {r}of [low,hidden,dense,denied,none]){await through(r,4n);live(r);expect(mean(r)).toEqual(q(1,1));await finish(r);}
  console.info('M121 CONTROLS K0/2; denied==absent; hidden truth identical; third unselected unit leaves focal factors and later judgment unchanged');
 },500000);
-it('continuation121: multi-unit atomic rollback repeat and full save continuation',async()=>{
+it('remaining121 continuation121: multi-unit atomic rollback repeat and full save continuation',async()=>{
  const b=fixture(),m=await prepareCharacterModel(b.s),a=await createCharacterRun(m,b.d),duplicate=await createCharacterRun(m,b.d);
  await through(a,1n);await through(duplicate,1n);exact(a,duplicate);
  const restored=await restoreCharacterRun(b.s,{initialState:b.d.initialState,orderedInputs:b.d.orderedInputs,save:a.save()});exact(a,restored);await finish(a,[duplicate,restored]);
@@ -81,7 +83,7 @@ it('continuation121: multi-unit atomic rollback repeat and full save continuatio
  const recovered=await restoreCharacterRun(b.s,{initialState:b.d.initialState,orderedInputs:b.d.orderedInputs,save:saved}),clean=await createCharacterRun(m,b.d);exact(recovered,clean);await finish(recovered,[clean]);exact(a,recovered);
  console.info('M121 CONTINUATION exact repeat/save1/full queues; injected post-perception failure rolls back whole instant and restores exact clean continuation');
 },500000);
-it('boundaries121: no extra-source or version bypass and focal selection is mandatory',async()=>{
+it('remaining121 boundaries121: no extra-source or version bypass and focal selection is mandatory',async()=>{
  const b=fixture(),m=await prepareCharacterModel(b.s),rows=items(decode(b.d.orderedInputs),'list');
  const bad=rows.map(v=>{const a=[...items(v,'list')];if(key(a[2])===key(SOCIAL_SOURCE)&&key(a[0])===key(signed(1))){const p=[...items(a[3],'list')],role=[...items(p[7],'list')],one=items(role[2],'list')[0];role[2]=list([one,one,one]);p[7]=list(role);a[3]=list(p);}return list(a);});
  await expect(createCharacterRun(m,{...b.d,orderedInputs:enc(list(bad))})).rejects.toThrow('additional detection capacity');
@@ -89,3 +91,13 @@ it('boundaries121: no extra-source or version bypass and focal selection is mand
  const r=await createCharacterRun(m,b.d);await through(r,1n);const a=report(r,MULTI_ENCODING)[0],tampered=[...a];tampered[3]=list([items(a[3],'list')[0],items(a[3],'list')[0]]);expect(()=>validateEncoding(list(tampered),a[4])).toThrow('reserved claim identities');
  console.info('M121 BOUNDARIES source>2, old-version new grammar, duplicate reserved claims reject');
 },180000);
+
+it('single121: current position/effect path still uses the shared encoder under0.90',async()=>{
+ const b=effectFixture('point',10),slots=[...items(decode(b.s.registry),'list')],setting=items(slots[30],'list');slots[30]=list([text(MULTI_ENCODING),...setting.slice(1)]);
+ const rows=items(decode(b.d.orderedInputs),'list').map(v=>{const a=[...items(v,'list')];if(key(a[2])===key(SOCIAL_SOURCE)){const p=[...items(a[3],'list')];p[7]=list([...items(p[7],'list'),list([])]);a[3]=list(p);}return list(a);});
+ const s={...b.s,rulesVersion:MULTI_UNIT_RULES,registrySchemaVersion:MULTI_UNIT_REGISTRY,registry:enc(list(slots))},d={...b.d,orderedInputs:enc(list(rows))},r=await createCharacterRun(await prepareCharacterModel(s),d);
+ await finish(r);const positions=state(r).entries().filter(e=>e.path.rootStateTypeId===346n&&typeof e.value!=='boolean'&&e.value.kind==='list'&&key(e.value.items[0])===key(text(POSITION_EPISODE)));
+ expect(positions.length,'actual position acquisition under current single-unit source').toBeGreaterThan(0);
+ for(const e of positions){const a=items(e.value,'list');expect(items(a[6],'list')[0]).toEqual(text(MULTI_ENCODING));expect(validateEncoding(a[6],a[3])).toBe(true);expect(items(items(a[6],'list')[3],'list')).toHaveLength(1);}
+ console.info('M121 SINGLE actual position/effect scenario exhausts with validated encoding0.2 position episodes='+positions.length);
+},240000);
