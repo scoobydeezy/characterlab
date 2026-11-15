@@ -25,8 +25,8 @@ Retained M120 full six-test suite checks legacy0.89 behavior; source closure unc
 ## Implementation/authority
 Before code: new formal assembled multi-unit encoding0.2 contract, ledger MEC005/007/
 010 and CTL004/RET001 consulted; original selector0.1/budget0.2 math unchanged.
-At most9 production/test files: model,encoding,recognition,recognitionState,
-recognitionExecution,encounter,socialExecution; new test and fixture.
+At most10 production/test files: model,encoding,recognition,recognitionState,
+recognitionExecution,encounter,socialExecution,traceBinding; new test and fixture.
 Shared SEM241/242 Perception owner; single121/122/124/130/140 path. Batched track
 counter increments match exact new memberships; old versions still require+1.
 Only permitted observations reach tracking/binding; never author selected candidates.

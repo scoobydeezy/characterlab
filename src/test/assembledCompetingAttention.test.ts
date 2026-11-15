@@ -7,6 +7,8 @@ import {isSocialEpisodePath,MEMORY_FORMATION} from '../assembled/memory';
 import {personPath,personHistory,personMean,SOCIAL_SOURCE} from '../assembled/social';
 import {WORKSPACE} from '../assembled/workspace';
 import {JOINT_APPRAISAL} from '../assembled/appraisal';
+import {dataIdentity as id} from '../campaign2/canonicalData';
+import {SemanticMutationAuthority as OWNER} from '../semanticBinding/semanticStateAuthority';
 import {restoreAuthoritativeState} from '../substrate/state';
 const cache=new WeakMap<Run,{snap:ReturnType<Run['snapshot']>;state?:ReturnType<typeof restoreAuthoritativeState>;out?:CanonicalValue;trace?:ReturnType<typeof outputs>}>();
 function view(r:Run){let v=cache.get(r);if(!v){v={snap:r.snapshot()};cache.set(r,v);}return v;}
@@ -26,15 +28,18 @@ async function create(mode:Mode='low',capacity=1){const b=fixture(mode,capacity)
 function live(r:Run){expect(personHistory(belief(r))).toHaveLength(2);expect(personMean(belief(r))).toEqual({numerator:1n,denominator:2n});expect(items(social(r)[4],'list')).toHaveLength(1);expect(items(report(r,JOINT_APPRAISAL).at(-1)![4],'list').some(v=>items(v,'list').length===5)).toBe(true);}
 function assessment(r:Run,count:number,selected:number,focal:boolean){
  const a=report(r,MULTI_ENCODING)[0];expect(a).toBeDefined();const audit=items(a[6],'list').map(v=>items(v,'list'));
- expect(audit).toHaveLength(count);expect(audit.filter(v=>v[2]===text('Eligible'))).toHaveLength(0); // Compare canonical values below.
+ expect(audit).toHaveLength(count);
  expect(audit.every(v=>key(v[2])===key(text('Eligible')))).toBe(true);expect(audit.filter(v=>v[3]===true)).toHaveLength(selected);
  const targetRow=audit.find(v=>items(v[1],'list').some(x=>key(x)===key(text('causal-role/target'))))!;expect(targetRow).toBeDefined();expect(targetRow[3]).toBe(focal);
  expect(validateEncoding(list(a),a[4]),'a positive distractor cannot authorize focal memory').toBe(focal);
  const full=outputs(out(r),227n).find(v=>uint(f(v,3n))===1n)!;expect(full).toBeDefined();expect(items(f(full,5n),'set')).toHaveLength(count);expect(validateEncoding(list(a),full)).toBe(focal);
  const ids=items(a[3],'list').map(uint);expect(new Set(ids).size).toBe(count);
- const bindingIds=items(f(full,5n),'set').map(v=>f(rec(v,224n),1n));expect(new Set([...bindingIds.map(key),...ids.map(x=>key({kind:'typedIdentifier',namespaceId:1103n,payload:{kind:'unsigned',value:x}}))]).size).toBe(count*2);
+ const bindingIds=items(f(full,5n),'set').map(v=>uint(id(f(rec(v,224n),1n)).payload));expect(new Set([...bindingIds,...ids]).size).toBe(count*2);
  const first=trace(r).find(t=>key(f(rec(f(t,4n),130n),2n))===key(signed(1))&&uint(f(rec(f(t,4n),130n),3n))===121n)!;
- expect(first).toBeDefined();expect(items(f(first,18n),'list').length).toBeGreaterThanOrEqual(0);
+ expect(first).toBeDefined();expect(f(first,6n)).toEqual(text('assembled-character-encoding/0.2-candidate'));
+ const ops=items(f(rec(f(first,16n),144n),1n),'list').map(v=>rec(v,145n));
+ const members=ops.filter(o=>{const p=rec(f(o,1n),140n);return uint(f(p,1n))===241n&&uint(f(p,2n))===2n;});expect(members).toHaveLength(count);
+ for(const d of items(f(first,17n),'list'))expect(f(rec(d,148n),6n)).toEqual(OWNER.Perception);
  return a;
 }
 function joins(r:Run){

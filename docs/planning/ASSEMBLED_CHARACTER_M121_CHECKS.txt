@@ -36,3 +36,47 @@ Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: unde
 
 EXIT 1; elapsed 65.238s
 CHARGED 99.962
+
+Pre-run repair after0e15f0c0: add0.90 to traceBinding's admitted model versions;
+retain exact model/run equality check. Tenth code/test file, within12-file cap.
+Before rerun replace two vacuous diagnostic assertions with actual Perception-owned
+SEM241 membership patches and numeric binding/claim allocation disjointness.
+No scenario, law or acceptance amendment; initial failure retained.
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledCompetingAttention.test.ts", "-t", "primary121", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledCompetingAttention.test.ts > primary121: two permitted candidates compete and selected focal memory changes actual appraisal 64871ms
+   → a positive distractor cannot authorize focal memory: expected false to be true // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledCompetingAttention.test.ts > primary121: two permitted candidates compete and selected focal memory changes actual appraisal
+AssertionError: a positive distractor cannot authorize focal memory: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ assessment src/test/assembledCompetingAttention.test.ts:34:95
+     32|  expect(audit.every(v=>key(v[2])===key(text('Eligible')))).toBe(true);…
+     33|  const targetRow=audit.find(v=>items(v[1],'list').some(x=>key(x)===key…
+     34|  expect(validateEncoding(list(a),a[4]),'a positive distractor cannot a…
+       |                                                                                               ^
+     35|  const full=outputs(out(r),227n).find(v=>uint(f(v,3n))===1n)!;expect(f…
+     36|  const ids=items(a[3],'list').map(uint);expect(new Set(ids).size).toBe…
+ ❯ src/test/assembledCompetingAttention.test.ts:56:2
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  10:53:04
+   Duration  69.46s (transform 2.75s, setup 0ms, collect 4.12s, tests 64.87s, environment 0ms, prepare 144ms)
+
+
+EXIT 1; elapsed 71.197s
+CHARGED 171.159
