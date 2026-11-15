@@ -98,3 +98,77 @@ EXIT 1; elapsed 158.127s
 CHARGED 424.296
 
 REPAIR before controls rerun: formation() already asserts zero episodes/selection/graph for K0, then wrongly dereferences absent Actor factor. Return empty factor vector after those assertions. Production/fixture/criteria unchanged; primary and continuation unaffected.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledAttentionFootprint.test.ts", "-t", "controls124", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAttentionFootprint.test.ts > controls124: hidden and excluded evidence cannot set learned attention while K and modulation remain separate
+M124 CONTROLS hidden==main; denied==sparse through full cognitive queues; K0/K1 graph empty; disabled attention participant9/50 independently changes magnitude
+
+ ✓ src/test/assembledAttentionFootprint.test.ts > controls124: hidden and excluded evidence cannot set learned attention while K and modulation remain separate 160933ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  12:58:19
+   Duration  165.62s (transform 2.80s, setup 0ms, collect 4.20s, tests 160.93s, environment 0ms, prepare 159ms)
+
+
+EXIT 0; elapsed 166.215s
+CHARGED 590.511
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledAttentionOriginalReplay.test.ts", "src/test/attentionSelection.test.ts", "src/test/selectedEncoding.test.ts", "src/test/selectedEncodingBudgetControl.test.ts", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-D: canonical evidence index crosses decimal occurrence boundaries
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-A: exact roles, capacities and empty component pool
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-B: observed role swap and honest alternative components
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-C: missing, unsupported and multiple roles do not receive fallback priorities
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-D: actual derivation rejects missing, forged, foreign and duplicated claims
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-E: rejects invalid capacity and more than three units
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-F: order invariance, canonical ties and strict-priority renaming
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-G: exact selected bytes succeed while unselected and observation lookup fail
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-H: forged, reused, closed and failed capabilities cannot read
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-I: source, audit and result mutations cannot change private authority
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-J: duplicate requests and duplicate semantic binding cannot enlarge selection
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-K: source history remains unchanged across selection and consumption
+ ✓ src/test/selectedEncodingBudgetControl.test.ts > selected-encoding/0.2-candidate > SBC-A: all eight exact two/three-Actor comparisons include active shared normalization
+ ✓ src/test/selectedEncodingBudgetControl.test.ts > selected-encoding/0.2-candidate > SBC-B: important hybrid rows stay independent while low footprint shares a zero remainder floor
+ ✓ src/test/selectedEncodingBudgetControl.test.ts > selected-encoding/0.2-candidate > SBC-C: budget interventions do not change selected evidence or raw factors
+ ✓ src/test/selectedEncodingBudgetControl.test.ts > selected-encoding/0.2-candidate > SBC-D: invalid budget cannot leave a reusable selected capability
+ ✓ src/test/selectedEncodingBudgetControl.test.ts > selected-encoding/0.2-candidate > SBC-E: unselected footprint remains absent from both budget denominators
+ ✓ src/test/selectedEncoding.test.ts > selected-encoding/0.1-candidate > SEC-A: actual selected claims drive exact factors and original bytes
+ ✓ src/test/selectedEncoding.test.ts > selected-encoding/0.1-candidate > SEC-B: adding unselected footprint cannot affect selected encoding
+ ✓ src/test/selectedEncoding.test.ts > selected-encoding/0.1-candidate > SEC-C: selected footprint differences are recorded without conflating budget laws
+ ✓ src/test/selectedEncoding.test.ts > selected-encoding/0.1-candidate > SEC-D: disabling continuous attention preserves causal-role evidence and changes target strength
+ ✓ src/test/selectedEncoding.test.ts > selected-encoding/0.1-candidate > SEC-E: forged, consumed and failed-law attempts cannot reuse a live view
+ ✓ src/test/selectedEncoding.test.ts > selected-encoding/0.1-candidate > SEC-F: empty selection invents no observer, experience, owner or episode
+ ✓ src/test/selectedEncoding.test.ts > selected-encoding/0.1-candidate > SEC-G: mutations of returned evidence cannot rewrite source or another consumption
+ ✓ src/test/selectedEncoding.test.ts > selected-encoding/0.1-candidate > SEC-H: each row cites one actual selected claim with its existing binding provenance
+ × src/test/assembledAttentionOriginalReplay.test.ts > original124: all frozen GA histories and their36 comparisons preserve exact original bytes
+   → expected '63783c0f8027ec6e7df9c11ef04226d235bb6…' to be '5c654071c043dfaea72e4a142e97120ea1405…' // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledAttentionOriginalReplay.test.ts > original124: all frozen GA histories and their36 comparisons preserve exact original bytes
+AssertionError: expected '63783c0f8027ec6e7df9c11ef04226d235bb6…' to be '5c654071c043dfaea72e4a142e97120ea1405…' // Object.is equality
+
+Expected: "5c654071c043dfaea72e4a142e97120ea140572c74f7e1786c061c75345e3377"
+Received: "63783c0f8027ec6e7df9c11ef04226d235bb61a89ac4ddd97f38fd059a5f29a4"
+
+ ❯ src/test/assembledAttentionOriginalReplay.test.ts:11:97
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed | 3 passed (4)
+      Tests  1 failed | 25 passed (26)
+   Start at  13:01:29
+   Duration  2.71s (transform 1.66s, setup 0ms, collect 2.99s, tests 176ms, environment 1ms, prepare 589ms)
+
+
+EXIT 1; elapsed 3.281s
+CHARGED 593.792
+
+DIAGNOSIS/REPAIR before frozen replay: 00.json expected5c654071c043dfaea72e4a142e97120ea140572c74f7e1786c061c75345e3377 equals exact Git blob and LF-normalized checkout; working CRLF hash63783c0f8027ec6e7df9c11ef04226d235bb61a89ac4ddd97f38fd059a5f29a4 (436 CRLF). Normalize text-report transport only. Six canonical simulation hashes remain exact, no changes to source/hash pins. Preservation also checks all43 original Git report blobs. Passed25 component tests unaffected and not rerun.

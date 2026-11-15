@@ -8,7 +8,8 @@ const files=import.meta.glob('../../docs/planning/general-attention-public-compa
 it('original124: all frozen GA histories and their36 comparisons preserve exact original bytes',async()=>{
  expect(results.runs).toHaveLength(43);expect(results.comparisons).toHaveLength(36);
  for(const entry of results.runs){
-  const raw=files['../../'+entry.file.path];expect(await digest(new TextEncoder().encode(raw))).toBe(entry.file.sha256);const expected=JSON.parse(raw);
+  // Frozen JSON hashes name LF Git blobs; Windows checkout CRLF is transport only.
+  const raw=files['../../'+entry.file.path].replace(/\r\n/g,'\n');expect(await digest(new TextEncoder().encode(raw))).toBe(entry.file.sha256);const expected=JSON.parse(raw);
   const model=await prepare(source(entry.name)),initialState=initial(model),orderedInputs=originals(model),r=await create(model,{initialState,orderedInputs,runSeed:Uint8Array.from(freeze.seed.match(/../g)!,s=>parseInt(s,16))});
   let n=0;while(await r.settleNextInstant()){expect(++n).toBeLessThan(96);}
   const s=r.snapshot();expect(n).toBe(expected.instants);expect(String(s.clock)).toBe(expected.finalClock);
