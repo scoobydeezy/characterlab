@@ -7,7 +7,7 @@ Bounded prerequisite to C-ATTN, NOT its multi-unit competition/footprint complet
 ## Predeclared comparison
 Rebase the retained M44 scenario into current0.89, preserving its source declarations:
 one holder, two social tasks/one unknown; recognized coat stand-in; no autonomous peer.
-A true1/B false2/silent cue3; risk1; judgment3/4; reserve10/sample4; seed0.
+A true1/B false2/silent A reminder3; risk1; judgment3/4; reserve10/sample4; seed0.
 Use M44 first31 registry slots/content/configuration and its unlearned initial roots;
 current0.89 suffix and required additional unlearned roots; append neutral required
 encounter fields. No cognition is authored. Explicitly inspect admission differences.
@@ -19,6 +19,9 @@ encounter fields. No cognition is authored. Explicitly inspect admission differe
    tag-count competition. Hidden physical role and denied source controls remain.
 3. Capacity0 vs1 separates admitted person learning from episodic acquisition;
    Target/disabled-attention factors remain243/1000 vs27/100 in actual assessment.
+
+Indirect Q3 reminder retained as null after actual0/0; explicit A reminder amendment
+recorded before rerun, with laws and same causal gate fixed.
 
 ## Files, contracts and risks
 At most2 new test/fixture files; no planned production/formal edits. If an integration

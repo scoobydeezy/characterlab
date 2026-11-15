@@ -163,3 +163,91 @@ AssertionError: expected { kind: 'rational', …(2) } to deeply equal { kind: 'r
 
 EXIT 1; elapsed 87.750s
 CHARGED 293.383
+
+Pre-run delegated comparison amendment: source da584435 admits and runs but produces
+contextual0 in the reference arm despite both episodes being retained. Preserve that
+indirect Q3 cue as a two-arm null control, with actual recall score/gain/selection.
+Current acquisition-presentation ranking and grounded affect differ from M44's older
+composition. The amended gate changes only silent cue3's receipt key to A's key1
+in BOTH arms, through ordinary perception. No authored memory, changed association
+weight, salience, gain, retention, seed, law, or acceptance requirement. Require the
+same actual1-vs0 receiving proof; record the null as an interaction, not equivalence.
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledAttentionReceiving.test.ts", "-t", "primary120", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAttentionReceiving.test.ts > primary120: current selected encoding changes later actual judgment with semantic belief fixed
+M120 PRIMARY native0.89 selected A/B vs B-only; global1/2; actual contextual1/0; acquisition->recall->workspace->appraisal; full queues exhausted
+
+ ✓ src/test/assembledAttentionReceiving.test.ts > primary120: current selected encoding changes later actual judgment with semantic belief fixed 88185ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 10 skipped (11)
+   Start at  07:55:54
+   Duration  92.74s (transform 2.71s, setup 0ms, collect 4.08s, tests 88.19s, environment 0ms, prepare 146ms)
+
+
+EXIT 0; elapsed 94.399s
+CHARGED 387.782
+
+Primary passes. Batch the four remaining native gates into one570s-capped command
+so the immutable fixture is built once. Gates and individual caps stay unchanged;
+no rerun of passing primary or diagnostic. This saves repeated55s setup cost.
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledAttentionReceiving.test.ts", "-t", "gate120", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAttentionReceiving.test.ts > gate120 facet120: permitted appearance classification differs without changing role encoding or judgment
+M120 FACET native perceived classification present/absent; exact encoding factors, later judgment1 unchanged
+
+ ✓ src/test/assembledAttentionReceiving.test.ts > gate120 facet120: permitted appearance classification differs without changing role encoding or judgment 90046ms
+ × src/test/assembledAttentionReceiving.test.ts > gate120 controls120: permission selection hidden role and disabled attention remain distinct 64620ms
+   → ContinuesPriorTrack requires a prior continuant-file
+stdout | src/test/assembledAttentionReceiving.test.ts > gate120 continuation120: full-byte duplicate and save3 continuation
+M120 CONTINUATION exact run identity/state/outputs/trace/save at every settled boundary through full queue
+
+ ✓ src/test/assembledAttentionReceiving.test.ts > gate120 continuation120: full-byte duplicate and save3 continuation 56585ms
+stdout | src/test/assembledAttentionReceiving.test.ts > gate120 inherited120: retain original indirect reminder null with actual recall operands
+M120 inherited recall mode=main at=0304 gain=060201 scores=07010704021e060202060201060602 selected=07010702021e0222
+M120 inherited recall mode=main at=0306 gain=060201 scores=07020704021e060a06060001060a0607040236060202060201060602 selected=0701070202360237
+M120 inherited recall mode=main at=0308 gain=060201 scores=07020704021e060e0c06020806221807040236060a06060001060a06 selected=0701070202360265
+
+stdout | src/test/assembledAttentionReceiving.test.ts > gate120 inherited120: retain original indirect reminder null with actual recall operands
+M120 inherited recall mode=unknown at=0304 gain=060201 scores=0700 selected=0700
+M120 inherited recall mode=unknown at=0306 gain=060201 scores=070107040234060202060201060602 selected=0701070202340235
+M120 inherited recall mode=unknown at=0308 gain=060201 scores=070107040234060a06060001060a06 selected=0701070202340263
+M120 INHERITED actual recency/association rank selects B in both histories; original null preserved
+
+ ✓ src/test/assembledAttentionReceiving.test.ts > gate120 inherited120: retain original indirect reminder null with actual recall operands 34452ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledAttentionReceiving.test.ts > gate120 controls120: permission selection hidden role and disabled attention remain distinct
+SchedulerContractError: ContinuesPriorTrack requires a prior continuant-file
+ ❯ fail src/substrate/scheduler.ts:667:9
+    665| 
+    666| function fail(code: SchedulerFailureCode, message: string): never {
+    667|   throw new SchedulerContractError(code, message);
+       |         ^
+    668| }
+    669| 
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:390:11
+ ❯ Object.settleNextInstant src/assembled/character.ts:45:66
+ ❯ advance src/test/assembledAttentionReceiving.test.ts:22:42
+ ❯ finish src/test/assembledAttentionReceiving.test.ts:24:78
+ ❯ src/test/assembledAttentionReceiving.test.ts:58:46
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'TRANSITION_FAILURE', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 3 passed | 7 skipped (11)
+   Start at  07:57:54
+   Duration  250.23s (transform 2.72s, setup 0ms, collect 4.07s, tests 245.70s, environment 0ms, prepare 146ms)
+
+
+EXIT 1; elapsed 251.937s
+CHARGED 639.719
