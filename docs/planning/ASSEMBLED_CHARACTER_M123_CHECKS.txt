@@ -6,3 +6,23 @@ COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "--noEmit"]
 
 EXIT 0; elapsed 19.661s
 CHARGED 34.661
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledLearnedAssociation.test.ts", "-t", "primary123", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledLearnedAssociation.test.ts > primary123: selected strengths learn exact edges and change real recalled judgment
+M123 PRIMARY reference edges .090->.045/.032; actual pulls .512/.5085 => A/judgment1; graph loss .5/.5 => B/0; independent .053->.026/.022 gives .5065/.5055 => B/0; mean1/2 and original captured kernel; full queues
+
+ ✓ src/test/assembledLearnedAssociation.test.ts > primary123: selected strengths learn exact edges and change real recalled judgment 101099ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  12:21:13
+   Duration  105.78s (transform 2.81s, setup 0ms, collect 4.22s, tests 101.10s, environment 0ms, prepare 147ms)
+
+
+EXIT 0; elapsed 107.473s
+CHARGED 142.134
+
+REVIEW before remaining checks: isolate forbidden learned S0 with a valid empty graph, rather than an earlier recognition-state rejection; assert planned lattice/row/capacity boundaries and actual direct-only contextual judgment. Primary inputs/expected values and all production bytes unchanged.

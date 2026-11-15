@@ -42,7 +42,7 @@ function probe(r:Run,expected:number,expectedPulls:CanonicalValue[],nodes=30){
  const kernel=recallCanonicalEventAcquisitions({cue:{kind:'Present',key:cue.track!},now:21n,graph:g,memory:mem.map(a=>({id:uint(id(a[1]).payload),acquiredAt:(a[5] as {value:bigint}).value,units:associationUnits(a[6],a[3]).map(x=>({key:x.key,views:[enc(list(a))]}))})),presentations:new Map(mem.map(a=>[uint(id(a[1]).payload),[(a[5] as {value:bigint}).value,...items(a[4],'list').map(v=>(v as {value:bigint}).value)]])),calibration:{beta:Q.of(1n,2n),scale:1000n,lambda:Q.of(1n),exponent:1,omegaB:Q.of(1n),omegaA:readQ(audit[3]),k:1}});
  expect(list(kernel.scores.map(s=>list([u(s.acquisition),qValue(s.base),qValue(s.pull),qValue(s.score)])))).toEqual(audit[4]);
  expect(items(audit[5],'list').map(v=>uint(items(v,'list')[0]))).toEqual(kernel.recalled.map(w=>w.id));
- expect(items(audit[7],'list')).toHaveLength(nodes?3:3); // Direct-only keys remain accessible after graph loss.
+ expect(items(audit[7],'list')).toHaveLength(3); // Direct-only keys remain accessible after graph loss.
  expect(items(social[4],'list')[0]).toEqual(q(expected,1));
  const selected=items(report(r,WORKSPACE).at(-1)![4],'list');expect(selected).toHaveLength(1);expect(items(social[6],'list')[3]).toEqual(list([items(selected[0],'list')[0]]));expect(items(joint[6],'list').slice(1)).toContainEqual(list(social));
  return audit;
@@ -65,7 +65,7 @@ it('remaining123 controls: permission hidden truth and selection do not acquire 
  for(const [a,b]of [[hidden,main],[denied,absent]]){bytes(snap(a.r).state,snap(b.r).state);bytes(snap(a.r).outputs,snap(b.r).outputs);}
  expect(graph(one.r)).toEqual({keys:[],weights:[],lastUpdatedAt:2n});expect(graph(denied.r).keys).toHaveLength(0);
  for(const {r}of[hidden,main]){await through(r,21n);probe(r,1,[q(64,125),q(1017,2000)]);await finish(r);}
- for(const {r}of[denied,absent,one]){await through(r,21n);expect(report(r,AFFECT_RECALL).find(a=>key(a[1])===key(signed(21)))).toBeDefined();const belief=state(r).read(personPath(C,target)).value;expect(personMean(belief)).toEqual({numerator:1n,denominator:2n});await finish(r);}
+ for(const {r}of[denied,absent,one]){await through(r,21n);expect(report(r,AFFECT_RECALL).find(a=>key(a[1])===key(signed(21)))).toBeDefined();const belief=state(r).read(personPath(C,target)).value;expect(personMean(belief)).toEqual({numerator:1n,denominator:2n});const social=report(r,'assembled-social-people/0.1/appraisal').at(-1)!.slice(1).map(v=>items(v,'list')).find(a=>key(a[2])===key(target))!;expect(items(social[4],'list')).toEqual([q(0,1)]);expect(items(report(r,WORKSPACE).at(-1)![4],'list')).toHaveLength(1);await finish(r);}
  console.info('M123 CONTROLS hidden==main and denied==absent at state/output; unselected/denied extra cannot create graph; empty graph preserves direct recall');
 },500000);
 it('remaining123 continuation: learned graph shares exact persistence and transaction rollback',async()=>{
@@ -81,8 +81,8 @@ it('remaining123 boundaries: only selected observed keys and one graph authority
  const x=await create();await through(x.r,2n);const component=await compileCharacterState(await compileCharacterModel(x.b.s)),p=associationPath(C),prior=state(x.r).read(p),g=graph(x.r);
  const same={operations:[{kind:'set' as const,path:p,expected:{presence:true as const,value:prior.value!},newValue:prior.value!}]};
  expect(()=>component.stateModel.applyPatch(state(x.r),same,EPISODIC_OWNER,{writableRoots:[631n],targetPaths:[p]})).toThrow();
- const initial=restoreAuthoritativeState(decode(x.b.d.initialState)),injected=new AuthoritativeState([...initial.entries(),...state(x.r).entries().filter(e=>[241n,242n,244n,631n].includes(e.path.rootStateTypeId))]);
- expect(()=>component.initialState(enc(injected.canonicalValue()))).toThrow(/initial/);
+ const initial=restoreAuthoritativeState(decode(x.b.d.initialState)),injected=new AuthoritativeState([...initial.entries(),{path:p,value:list([text(ASSOCIATION),list([]),list([]),u(1)])}]);
+ expect(()=>component.initialState(enc(injected.canonicalValue()))).toThrow('initial learned association must be absent');
  const old=await compileCharacterState(await compileCharacterModel(x.b.legacy.s));expect(()=>old.stateModel.validateState(state(x.r))).toThrow();
  await expect(prepareCharacterModel({...x.b.s,rulesVersion:x.b.legacy.s.rulesVersion,registrySchemaVersion:x.b.legacy.s.registrySchemaVersion})).rejects.toThrow('affect memory declaration/domain');
  const value=items(prior.value!,'list'),bad=[...value],rows=items(value[2],'list').map(v=>[...items(v,'list')]);rows[0][0]=q(1,1);bad[2]=list(rows.map(list));expect(()=>associationGraph(list(bad),{nodes:30,edges:870})).toThrow();
@@ -91,6 +91,8 @@ it('remaining123 boundaries: only selected observed keys and one graph authority
   const diffs=items(f(t,17n),'list').map(v=>rec(v,148n)),gd=diffs.filter(v=>uint(f(rec(f(v,1n),140n),1n))===631n);
   if(gd.length){expect(gd).toHaveLength(1);expect(f(gd[0],6n)).toEqual(ASSOCIATION_OWNER);expect(items(f(t,13n),'list').some(v=>key(items(v,'list')[0])===key(text(ASSOCIATION)))).toBe(true);}
  }
+ for(const kind of ['lattice','mass']){const changed=[...value],matrix=items(value[2],'list').map(v=>[...items(v,'list')]);matrix[0][1]=kind==='lattice'?q(1,3):q(1,1);if(kind==='mass')matrix[0][2]=q(1,1);changed[2]=list(matrix.map(list));expect(()=>associationGraph(list(changed),{nodes:30,edges:870})).toThrow();}
+ expect(()=>associationGraph(prior.value!,{nodes:2,edges:2})).toThrow();
  expect(report(x.r,ASSOCIATION)).toHaveLength(2);expect(g.keys).toHaveLength(3);await finish(x.r);
  console.info('M123 BOUNDARIES graph S0, old grammar/state, wrong owner, self edges and foreign observer reject; actual graph diffs have one owner and selected source receipts');
 },200000);
