@@ -36,7 +36,10 @@ Appraisal50 reads prior committed belief, never the later same-instant source.
 
 ## State and version bounds
 Reference0.93 admits at most32 distinct social source instants in existing1..100,
-receipt1..32, person history at most32. Older versions retain8 in model/input/state
+receipt1..32, person history at most32. The inherited acquisition-inclusive memory
+presentation bound further limits public runs to31 social encounters:32 must fail
+that admission, not truncate a history. M126 retains this independently necessary
+memory bound; native17-report comparisons are unaffected. Older versions retain8 in model/input/state
 admission. Structural social-episode decoding accepts the union up to32; model-bound
 episode paths/values enforce their version's8/32 limit. There is no save migration.
 The existing source-group deduplication, recognized-person key, append-only owner,

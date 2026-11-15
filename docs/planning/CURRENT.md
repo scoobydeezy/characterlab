@@ -19,7 +19,8 @@ Production: model.ts, social.ts, socialExecution.ts, inputs.ts, state.ts,
 traceBinding.ts, memory.ts under src/assembled (seven files).
 Tests: fixtures/assembledBeliefTrials.ts and assembledBeliefTrials.test.ts.
 At most twelve production/test files; no UI, factory or parallel psychology.
-New version admits32 social sources/receipts/history rows, old versions retain8.
+New input/state grammar permits32; existing memory presentation cap limits public
+runs to31 social encounters (acquisition +31). Old versions retain8.
 Structural episode decoding accepts32; model-bound state admission preserves8/32.
 New source exposes only permitted opportunity/monitor/report to observation120;
 actual world opportunity/outcome stay outside cognition. Existing C1 recognition,
@@ -41,7 +42,8 @@ Researcher-only TruthLookup/GoalAsBelief/UnconditionalAbsence controls must fail
 their required distinction, never enter the reference character.
 All behavioral comparisons require live social/joint rows before numeric comparison.
 Malformed sources, old-version rejection,32/33 admission boundary, owner/state
-limits and rollback checks cover changed domains. No generated evidence as input.
+limits and rollback checks cover changed domains. Boundary amendment: retain the
+failed all32 run, require its memory-cap rejection, and admit31; original17 unchanged. No generated evidence as input.
 
 ## Verification / stop
 One job;1800s cumulative including15s bookkeeping;600s max command.

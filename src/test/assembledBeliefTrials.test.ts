@@ -110,7 +110,7 @@ it('boundaries126: original classification, version bounds, owner and rollback r
  expect(qualifySocialTrial(list([]))).toEqual({classification:undefined,claim:undefined});
  const b=fixture(),m=await prepareCharacterModel(b.s),old=await prepareCharacterModel(b.legacy);
  await expect(createCharacterRun(old,b.d)).rejects.toThrow('trial requires reference0.93');
- const max=fixture('qualified',false,32);await createCharacterRun(m,max.d);
+ const max=fixture('qualified',false,32);await expect(createCharacterRun(m,max.d)).rejects.toThrow('affect memory presentation capacity including acquisition');await createCharacterRun(m,fixture('qualified',false,31).d);
  await expect(createCharacterRun(m,fixture('qualified',false,33).d)).rejects.toThrow('social source domain');
  const source=items(items(items(decode(b.d.orderedInputs),'list').find(v=>key(items(v,'list')[2])===key(SOCIAL_SOURCE))!,'list')[3],'list')[1];
  for(const [i,v]of[[3,u(1)],[4,u(33)],[8,u(1)]] as const){const a=[...items(source,'list')];a[i]=v;expect(()=>socialSetting(list(a))).toThrow();}

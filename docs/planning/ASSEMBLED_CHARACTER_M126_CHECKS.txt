@@ -14,3 +14,34 @@ COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit", "-p", "tsconfig.
 
 EXIT 0; elapsed 18.142s
 CHARGED 33.240
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledBeliefTrials.test.ts", "-t", "boundaries126", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledBeliefTrials.test.ts > boundaries126: original classification, version bounds, owner and rollback remain enforced 59996ms
+   → affect memory presentation capacity including acquisition
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledBeliefTrials.test.ts > boundaries126: original classification, version bounds, owner and rollback remain enforced
+SchedulerContractError: affect memory presentation capacity including acquisition
+ ❯ Module.createCharacterRuntime src/assembled/runtime.ts:81:109
+
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:122
+ ❯ src/test/assembledBeliefTrials.test.ts:113:42
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INPUT_NOT_ADMITTED', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  15:27:05
+   Duration  64.57s (transform 2.76s, setup 0ms, collect 4.15s, tests 60.00s, environment 0ms, prepare 140ms)
+
+
+EXIT 1; elapsed 65.154s
+CHARGED 98.394
+
+Delegated boundary amendment before rerun:6a0b75e2 all32 source run reached the unchanged memory acquisition-inclusive presentation cap31. Keep that rejection, add31 accepted public admission, retain32/33 input/state grammar checks. Native8+9 and1+5 comparisons/laws unchanged. This discloses a nested restriction, not a32-report native pass. No production repair or wider memory semantics.
