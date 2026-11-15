@@ -93,3 +93,48 @@ EXIT 0; elapsed 309.869s
 CHARGED 442.556
 
 Primary57c91f25 PASS, no production changes. Remaining continuation check explicitly inspects captured overload and source/cache/goal trace fields (:3/:9/:10); same declared run and no primary rerun needed.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledWorkMaintenance.test.ts", "-t", "continuation128|privacy128", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledWorkMaintenance.test.ts > continuation128: exact repeat and save before displacement, all settled boundaries 197728ms
+   → expected '0701070a051e617373656d626c65642d776f7…' to be '0701' // Object.is equality
+stdout | src/test/assembledWorkMaintenance.test.ts > privacy128: hidden actual world, truth bit and physical card order cannot change cognition
+M128 PRIVACY PASS whole safe state/outputs through full queue
+
+ ✓ src/test/assembledWorkMaintenance.test.ts > privacy128: hidden actual world, truth bit and physical card order cannot change cognition 89341ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledWorkMaintenance.test.ts > continuation128: exact repeat and save before displacement, all settled boundaries
+AssertionError: expected '0701070a051e617373656d626c65642d776f7…' to be '0701' // Object.is equality
+
+Expected: "0701"
+Received: "0701070a051e617373656d626c65642d776f726b2d6d61696e74656e616e63652f302e3102070704070202010202070202020203070202030200070202040200070102010701020102010705051e617373656d626c65642d776f726b2d6d61696e74656e616e63652f302e310b8c090286010206070307020201020207020202020307020203020000070307020af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d610af4020103010102010200030007020af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d620af4020103010102010200030007020af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08051b636f6e74656e742f636f6e666967757261626c652d67617264656e0af4020103010102010200030002000afd02010501010be80802a50102010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637403010b83080519646566696e6974696f6e2f7461736b2d776f726b7370616365040107010afb02010201010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d6102010b83080511646566696e6974696f6e2f7461736b2d6105010afc0201020101020202010ae90201020101060601020109010aed01010a0101020102010bdb08020b03000400050006000700080009000a00"
+
+ ❯ src/test/assembledWorkMaintenance.test.ts:78:25
+     76|  expect(wt,'actual maintenance trace').toBeDefined();const reads=items…
+     77|  expect(reads).toHaveLength(5);expect(reads.filter(v=>uint(f(rec(f(v,2…
+     78|  expect(key(f(wt,13n))).toBe(key(list([p.report])));
+       |                         ^
+     79|  console.info('M128 CONTINUATION PASS repeat and complete saved prefix…
+     80| },590000);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed | 8 skipped (10)
+   Start at  17:09:35
+   Duration  291.73s (transform 2.77s, setup 0ms, collect 4.17s, tests 287.07s, environment 0ms, prepare 137ms)
+
+
+EXIT 1; elapsed 292.327s
+CHARGED 734.883
+
+Source3d8115c4: privacy PASS; continuation reached full-queue equality and actual trace checks, then failed test-only final encoding because parsed fields were not wrapped as a CanonicalValue list. Correct assertion, no production/input change. Rerun continuation only; privacy unchanged.
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 18.316s
+CHARGED 753.199
