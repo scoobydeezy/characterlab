@@ -1,2 +1,38 @@
 M121 baseline16a85c93; plan/contract before code; fifteen seconds prepaid bookkeeping.
 CHARGED 15.000
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "--noEmit"]
+
+EXIT 0; elapsed 19.724s
+CHARGED 34.724
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledCompetingAttention.test.ts", "-t", "primary121", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledCompetingAttention.test.ts > primary121: two permitted candidates compete and selected focal memory changes actual appraisal 57638ms
+   → assembled trace requires exact model/run binding
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledCompetingAttention.test.ts > primary121: two permitted candidates compete and selected focal memory changes actual appraisal
+SchedulerContractError: assembled trace requires exact model/run binding
+ ❯ Module.compileCharacterTraceBinding src/assembled/traceBinding.ts:27:1616
+
+ ❯ Module.createCharacterRuntime src/assembled/runtime.ts:110:14
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:122
+ ❯ create src/test/assembledCompetingAttention.test.ts:25:119
+ ❯ src/test/assembledCompetingAttention.test.ts:50:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  10:50:48
+   Duration  63.49s (transform 3.42s, setup 0ms, collect 5.37s, tests 57.64s, environment 0ms, prepare 179ms)
+
+
+EXIT 1; elapsed 65.238s
+CHARGED 99.962
