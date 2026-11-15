@@ -50,3 +50,9 @@ M117 complete at4ead5110; ten members mapped, zero families; final replay remain
 Owner self-approval covers routine diagnosis/amendments; scope/law conflicts escalate.
 No UI, standalone factories, autonomous partners or unrelated breadth.
 | Research obligations | **0 active /18 conditional /0 unowned** |
+
+M118 delegated scenario repair before rerun: first native run learned3/4, but
+no habitual origin was added. Displays16/18 arrive after those decisions;
+announce B-only15/both17 for decisions16/18. Laws/training/threshold unchanged.
+Offered-origin cardinality is live eligible tasks, not an assumed three; require
+positive actual addition only in trained arm. Original null retained in Git/log.
