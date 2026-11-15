@@ -54,17 +54,17 @@ it('kernel128: exact original rank/protect/cue and fixed-history representations
  console.info('M128 KERNEL PASS '+count+' original selector comparisons; fixed-history StoredSet/IndexedReplay and closed source projection');
 });
 it('primary128: actual distraction/protection, independent capacity, cue recovery and inert expired cue',async()=>{
- const off=await create(false,3),on=await create(true,3),low=await create(false,1),wide=await create(false,3,3);
- for(const x of[off,on,low,wide])await through(x.r,6n);
- const before=retained(off.r);for(const x of[off,on,low,wide]){expect(retained(x.r)).toBe(before);expect(projection(x.r,6).selected).toContain(1);}
- for(const x of[off,on,low,wide])await through(x.r,7n);
- const p=[off,on,low,wide].map(x=>projection(x.r,7));
- expect(p[0].selected).toEqual([2]);expect(p[1].selected).toEqual([1]);expect(p[2].selected).toEqual([1]);expect(p[3].selected).toEqual([2,1]);
- for(const x of[off,on,low,wide])expect(retained(x.r),'retained bytes while displaced').toBe(before);
+ const off=await create(false,3),on=await create(true,3),low=await create(false,1),wide=await create(false,3,3),onLow=await create(true,1);
+ for(const x of[off,on,low,wide,onLow])await through(x.r,6n);
+ const before=retained(off.r);for(const x of[off,on,low,wide,onLow]){expect(retained(x.r)).toBe(before);expect(projection(x.r,6).selected).toContain(1);}
+ for(const x of[off,on,low,wide,onLow])await through(x.r,7n);
+ const p=[off,on,low,wide,onLow].map(x=>projection(x.r,7));
+ expect(p[0].selected).toEqual([2]);expect(p[1].selected).toEqual([1]);expect(p[2].selected).toEqual([1]);expect(p[3].selected).toEqual([2,1]);expect(p[4].selected).toEqual([1]);
+ for(const x of[off,on,low,wide,onLow])expect(retained(x.r),'retained bytes while displaced').toBe(before);
  expect(p[0].base(off.b.taskA)).toHaveLength(0);expect(p[1].base(on.b.taskA)).toHaveLength(1);
  expect(p[0].probability.equals(p[1].probability),'actual choice probability changes').toBe(false);
- console.info('M128 probability(action two), support off/on/low distract/capacity3: '+p.map(v=>v.probability.numerator+'/'+v.probability.denominator).join(' / '));
- for(const x of[off,on,low,wide]){await through(x.r,8n);expect(projection(x.r,8).selected).toContain(1);expect(retained(x.r)).toBe(before);await through(x.r,10n);const expired=projection(x.r,10);expect(expired.selected).toEqual([3]);expect(expired.base(x.b.taskA)).toHaveLength(0);expect(expired.grounds).toHaveLength(0);await finish(x.r);}
+ console.info('M128 probability(action two), support off/on/low distract/capacity3/protected low: '+p.map(v=>v.probability.numerator+'/'+v.probability.denominator).join(' / '));
+ for(const x of[off,on,low,wide,onLow]){await through(x.r,8n);expect(projection(x.r,8).selected).toContain(1);expect(retained(x.r)).toBe(before);await through(x.r,10n);const expired=projection(x.r,10);expect(expired.selected).toEqual([3]);expect(expired.base(x.b.taskA)).toHaveLength(0);expect(expired.grounds).toHaveLength(0);await finish(x.r);}
  console.info('M128 PRIMARY PASS overload/displacement/protection/capacity; retained task -> cue -> live appraisal/reason/choice/attempt; expired cue inert; full queues');
 },590000);
 it('continuation128: exact repeat and save before displacement, all settled boundaries',async()=>{

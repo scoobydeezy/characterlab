@@ -33,3 +33,40 @@ COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
 
 EXIT 0; elapsed 18.129s
 CHARGED 69.846
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledWorkMaintenance.test.ts", "-t", "kernel128|primary128", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledWorkMaintenance.test.ts > kernel128: exact original rank/protect/cue and fixed-history representations; admission
+M128 KERNEL PASS 4096 original selector comparisons; fixed-history StoredSet/IndexedReplay and closed source projection
+
+ ✓ src/test/assembledWorkMaintenance.test.ts > kernel128: exact original rank/protect/cue and fixed-history representations; admission
+ × src/test/assembledWorkMaintenance.test.ts > primary128: actual distraction/protection, independent capacity, cue recovery and inert expired cue 57419ms
+   → assembled trace requires exact model/run binding
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledWorkMaintenance.test.ts > primary128: actual distraction/protection, independent capacity, cue recovery and inert expired cue
+SchedulerContractError: assembled trace requires exact model/run binding
+ ❯ Module.compileCharacterTraceBinding src/assembled/traceBinding.ts:27:1692
+
+ ❯ Module.createCharacterRuntime src/assembled/runtime.ts:112:14
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:122
+ ❯ create src/test/assembledWorkMaintenance.test.ts:22:121
+ ❯ src/test/assembledWorkMaintenance.test.ts:57:12
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed | 8 skipped (10)
+   Start at  17:01:48
+   Duration  62.26s (transform 2.78s, setup 0ms, collect 4.19s, tests 57.66s, environment 0ms, prepare 148ms)
+
+
+EXIT 1; elapsed 62.841s
+CHARGED 132.687
+
+Source d40d25ad: kernel4096 PASS; native startup rejected because traceBinding version list omitted0.94. Add exact version only (10th production/test file); preserve old bindings. Before rerun add protected-low arm to complete predeclared independent distraction x support2x2. Same fixtures/laws/seed and budget, no calibration change.

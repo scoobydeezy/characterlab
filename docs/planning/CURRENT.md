@@ -17,7 +17,7 @@ StoredSet selection retained; compare original IndexedReplay only in its fixed-
 deadline/full-safe-history domain. No general indexing equivalence claim.
 
 Scope: new workMaintenance.ts; model.ts, inputs.ts, state.ts, runtime.ts, execution.ts,
-controlExecution.ts; fixtures/assembledWorkMaintenance.ts, assembledWorkMaintenance.test.ts.
+controlExecution.ts, traceBinding.ts; fixtures/assembledWorkMaintenance.ts, assembledWorkMaintenance.test.ts.
 At most12 production/test files,3 capabilities,20 evidence files/5MiB.
 Formal ASSEMBLED_CHARACTER_WORK_MAINTENANCE_CONTRACT.md written before code.
 Declaration0.94 adds observed-card bindings and support; empty bindings retain
