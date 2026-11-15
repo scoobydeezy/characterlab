@@ -1,74 +1,42 @@
-# Current work — M119 competence, confidence and temporary impairment
-The next gate checks that the continuing character can learn a procedure without
-believing it improved, and that temporary impairment changes execution without
-erasing that skill. Use reference0.89, one runtime/state/scheduler and real actions.
-M118 complete05e30283;11 members mapped/zero families; final21/15/132 unchanged.
+# Current work — M119 skill, confidence and impairment complete
 
-## Bounded card (before code)
-- Capability1: hidden practice improves actual execution with stale negative belief;
-  misleading observed feedback supports confident failure without competence.
-- Capability2: a world-only impairment changes execution under byte-identical intent,
-  expression and plan, then recovery uses exactly the same retained skill.
-- Capability3: observed engaged performance corrects belief through its existing owner,
-  while hidden/blocked/no-practice controls cannot manufacture learning.
-- Scope C-SKILL :3..10; :11/12 tracked. No rust/general skill/causal inference closure.
-  Ledger bounded SKILL: preserve MEC019/P3009 intent-attempt-outcome and actual/believed
-  competence separation; observed opportunity/ownership controls and RO013 remain.
-- Contracts: skill-public/0.1-candidate; assembled-character-procedures/0.1;
-  assembled-character-performance-expectation/0.1; reference0.89/effect-evidence0.1.
-  L5/L6/D3 development-aware practice K'=min(1,K+RampGain/8) and report filter fixed.
-  Multiplicative temporary impairment fixed. Original Linear/Residual, EvidenceMean/
-  LastObservation and conflation candidates stay controls; annotate approved numerical
-  differences, never switch native laws to reproduce a source.
-- Files: new fixtures/assembledSkillIntegration.ts and assembledSkillIntegration.test.ts.
-  Existing owner repairs only for evidenced defects; record/version before changes.
-  <=3 capabilities/12 code-test files;20 evidence files/5MiB; one compact result/log.
-- Scenario: M118 current reference, three nonsocial tasks/two eligible; route A only
-  throughout. Body10/rate0, actuator10/no delay; body and habit reports absent equally.
-  Empty learned skill/belief S0. Seed0, normal task/priority/reason/route channels.
-  Real target opportunities10/12/14/16/18/20/22; difficulty1/2.
-  Preprobe10 fails, training12 phase0 gains1/2 when eligible; phase4 from14 onward.
-  Trained-negative, trained-positive and untrained-positive receive a single
-  negative/positive/positive performance report10; all intermediate outcomes hidden.
-  Impaired trained-negative has impairment3/4 at16 only; others have0.
-  Actual permitted report20 corrects expectation;22 reads its established support.
-- Predeclared comparisons: trained K1/2 vs untrained0; belief0 vs1 through18.
-  Normal trained success14/16/18; impaired failure16/recovery18 with unchanged skill.
-  Untrained-positive fails despite belief1. Compare actual425/426/431 bytes in
-  world-only trained/impairment pair; compare fixed action/plan semantics for
-  evidence-changing pairs. Require live chosen action and actual engaged assessment.
-  At20 trained-negative belief0->1/8, untrained-positive1->7/8 under phase4 filter.
-  No sampled-choice claim: the instructed single option holds intent fixed.
-- Controls: hidden reporting leaves unknown; blocked training and no practice retain0;
-  actual skill/procedure reads, original performer evidence and exclusive owners.
-  Exact duplicate plus save12 restore through whole queue;64-settle cap fails.
-  Original skillPublic/skillBoundary suite and existing M11 Development arithmetic
-  comparator retained. Original execution math compared on native actual operands;
-  original practice/belief numerical differences recorded under adopted D3.
-- Checks: native primary<=570s; controls<=400s; repeat/restore<=400s; originals<=180s
-  total with each command<=120s; types<=90s; boundary/research/preservation/size<=60s.
-  Cumulative1800s including15s prepaid; one validation job, <=600s per command.
-  Targeted repairs within remaining budget; no unchanged retries or seed search.
-- Risks: inherited route/goal/report visibility; native performance report modes differ
-  from old controls; actual engagement separate from outcome. Unknown stays unknown.
-  Source at20 must not be consumed before phase140; no direct psychological injection.
-- Done: all native connection/equality/epistemic/continuation gates and affected controls
-  pass. Map only earned requirements; unresolved differences keep C-SKILL open.
-  F-row clause counts/other C rows and obligation statuses unchanged; no reduction.
+The continuing character learns a procedure without reassurance, can fail despite
+positive feedback, and recovers from temporary impairment without erasing skill.
+Reference0.89/effect-evidence0.1, feedback TRUE and existing L5/L6/D3 laws unchanged.
+No production/formal changes. Plan cd68abab; tested source d7c3ff3e.
+[Result](ASSEMBLED_CHARACTER_M119_RESULT.md) and [checks](ASSEMBLED_CHARACTER_M119_CHECKS.txt).
 
-Self-approved bounded scenario repairs remain authorized; record before rerun and
-retain failed source/evidence. No UI, autonomous peers, new factory or unrelated scope.
+## What passed
+- Real practice12 raises competence0->1/2; negative belief0 remains until report20.
+  Skilled/insecure succeeds; unpracticed/confident fails. Authentic feedback20
+  updates beliefs0->1/8 or1->7/8; actual appraisal22 reads the result.
+- Same confidence1 and exact intent/expression/plan bytes, different competence and
+  execution. Temporary impairment3/4 at16 blocks success; recovery18 uses unchanged
+  skill with matching whole intent/expression/plan in the world-only pair.
+- Hidden reports preserve unknown belief; blocked/no practice cannot manufacture skill.
+  Shared owners and actual procedure reads; no direct authored cognition.
+- Duplicate/save12/restored continuation match full bytes through exhaustion101.
+  All28 actual operand comparisons,13 original/control tests and scoped checks pass.
+  Original practice/belief numerical differences are recorded under adopted D3.
+
+## Verification and scope
+Initial slow reader stopped after323.189s with one passing case; sourcefc697a7b retained.
+Immutable settled-snapshot caching, invalidated after every settle, preserved assertions.
+The full four-case primary then passed in260.467s. No scenario/law retuning.
+Explicit competence-only comparison and earned clause promotions were recorded before
+their use. All checks passed; charged1135.043/1800s, without extension.
+
+C-SKILL :3..10 mapped; :11/12 tracked. Twelve members mapped/zero complete families.
+BRIEF12.8-1/2/3 move P->E; E46/P54/N17/U15 =132, version-scoped evidence only.
+Rust, explicit-memory-loss performance and general capability inference remain open.
+Other C/F dispositions and obligation statuses unchanged. All21/15/132 and final
+whole-candidate replay remain; no assembly acceptance or reduction earned.
+
+Continue from unresolved C rows in the existing reconciliation; write the next card.
+One model/state/scheduler; use existing owners and live actual consumers.
+One milestone/job;3 capabilities/12 code-test files;20 evidence files/5MiB.
+Default1800s cumulative/600s per command; scoped affected checks only.
+Delegated routine diagnosis/comparison amendments remain authorized; record before
+rerun, retain failures, never retune laws or waive final requirements.
+No UI, unrelated breadth, autonomous peers or duplicate runtime.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
-
-M119 verification repair before rerun: stopped own primary process after323.189s;
-first native trained-negative case passed, remainder unqualified. Reader repeatedly
-serialized/decoded identical complete snapshots in assertions. Cache one immutable
-settled snapshot plus decoded streams; invalidate in finally after every settlement.
-All assertions, scenarios, laws, horizons and1800s budget unchanged; originalfc697a7b.
-
-M119 delegated correspondence clarification before execution: add paired trained-
-positive/untrained-positive check at16, same confidence1, exact425/426/431 bytes
-and different actual outcomes. <=400s, within existing1800s. No scenario/law change.
-Earned mapping may promote BRIEF12.8:1/2/3 from partial to evidenced; all132 remain,
-other clause dispositions unchanged, rust/recollection still open. This supersedes
-the card's blanket unchanged F-count expectation, not its final completion rule.

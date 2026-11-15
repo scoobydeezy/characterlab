@@ -83,3 +83,126 @@ and different actual outcomes. <=400s, within existing1800s. No scenario/law cha
 Earned mapping may promote BRIEF12.8:1/2/3 from partial to evidenced; all132 remain,
 other clause dispositions unchanged, rust/recollection still open. This supersedes
 the card's blanket unchanged F-count expectation, not its final completion rule.
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledSkillIntegration.test.ts", "-t", "intent119", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSkillIntegration.test.ts > intent119: private competence changes outcome under identical confidence and intent bytes
+M119 COMPETENCE INTENT PASS: same confidence1 and whole intent/expression/plan bytes; success versus failure
+
+ ✓ src/test/assembledSkillIntegration.test.ts > intent119: private competence changes outcome under identical confidence and intent bytes 129392ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  21:45:35
+   Duration  133.97s (transform 2.73s, setup 0ms, collect 4.10s, tests 129.39s, environment 0ms, prepare 144ms)
+
+
+EXIT 0; elapsed 135.648s
+CHARGED 891.038
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledSkillIntegration.test.ts", "-t", "persistence119", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSkillIntegration.test.ts > persistence119: repeat and restore12 preserve trained impairment and recovery
+M119 PERSISTENCE PASS: full state/output/trace/save/identity through101
+
+ ✓ src/test/assembledSkillIntegration.test.ts > persistence119: repeat and restore12 preserve trained impairment and recovery 178259ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  21:48:02
+   Duration  182.98s (transform 2.81s, setup 0ms, collect 4.19s, tests 178.26s, environment 0ms, prepare 154ms)
+
+
+EXIT 0; elapsed 184.653s
+CHARGED 1075.691
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/skillPublic.test.ts", "src/test/skillBoundary.test.ts", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/skillBoundary.test.ts > observes exact registered reads and separate adaptation/learning owners 505ms
+ ✓ src/test/skillBoundary.test.ts > rejects duplicate performance support without weakening unknown versus zero
+ ✓ src/test/skillBoundary.test.ts > new schema grammar does not widen inherited typed fields or physical unit domains
+ ✓ src/test/skillBoundary.test.ts > original admission rejects nonmonotone opportunities and uncommitted model content
+ ✓ src/test/skillPublic.test.ts > holds intent/expression/plan fixed while actual competence or impairment changes execution 1129ms
+ ✓ src/test/skillPublic.test.ts > practice changes only later execution and can improve competence with stale self-belief 947ms
+ ✓ src/test/skillPublic.test.ts > misleading feedback supports skilled/insecure and incompetent/confident without rewriting skill 1314ms
+ ✓ src/test/skillPublic.test.ts > separates blocked opportunity, invisible evidence, observed zero and NoLearning 2007ms
+ ✓ src/test/skillPublic.test.ts > discriminates serious practice/impairment laws and the three conflation controls 3418ms
+ ✓ src/test/skillPublic.test.ts > protects state ownership and rejects foreign state, generated ingress, getter data and bounds
+ ✓ src/test/skillPublic.test.ts > restores complete prefixes and rejects corrupted output/state/trace 3956ms
+ ✓ src/test/skillPublic.test.ts > rolls back every stage and commit after a learned prefix, including both update authorities 4112ms
+
+ Test Files  2 passed (2)
+      Tests  12 passed (12)
+   Start at  21:51:16
+   Duration  18.60s (transform 761ms, setup 0ms, collect 2.16s, tests 17.81s, environment 0ms, prepare 290ms)
+
+
+EXIT 0; elapsed 20.241s
+CHARGED 1095.932
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledSkill.test.ts", "-t", "accepted Development arithmetic", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledSkill.test.ts > M11 procedural integration > controls: accepted Development arithmetic, saturation and retained serious laws remain distinguishable 5411ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  21:52:03
+   Duration  9.14s (transform 2.18s, setup 0ms, collect 3.29s, tests 5.41s, environment 0ms, prepare 140ms)
+
+
+EXIT 0; elapsed 10.801s
+CHARGED 1106.733
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "-b", "--pretty", "false"]
+
+EXIT 0; elapsed 19.416s
+CHARGED 1126.149
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:boundaries"]
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+EXIT 0; elapsed 3.188s
+CHARGED 1129.337
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:research"]
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4340}
+
+EXIT 0; elapsed 3.902s
+CHARGED 1133.239
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,json\nbase='05e30283'\ndef old(p):return subprocess.check_output(['git','show',base+':'+p],text=True,encoding='utf8')\nallowed={'AGENTS.md','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_M119_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M119_CHECKS.txt','docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md','docs/planning/RESEARCH_OBLIGATIONS.json','src/test/assembledSkillIntegration.test.ts','src/test/fixtures/assembledSkillIntegration.ts'}\nchanged=set(subprocess.check_output(['git','diff',base,'--name-only'],text=True).splitlines())|set(subprocess.check_output(['git','ls-files','--others','--exclude-standard'],text=True).splitlines())\nassert changed==allowed,(changed-allowed,allowed-changed)\nfor p,n in {'AGENTS.md':120,'docs/planning/CURRENT.md':80,'docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md':250,'docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md':250}.items():assert len(Path(p).read_text(encoding='utf8').splitlines())<=n,p\np='docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md';s=Path(p).read_text(encoding='utf8');assert len(s.replace(chr(10),chr(13)+chr(10)).encode())<=65536\nfor marker,excepted in [(' | C-','C-SKILL'),(' | F-','F-12.8')]:\n assert [x for x in old(p).splitlines() if marker in x and excepted not in x]==[x for x in s.splitlines() if marker in x and excepted not in x]\na=next(x for x in old(p).splitlines() if ' | F-12.8 ' in x);b=next(x for x in s.splitlines() if ' | F-12.8 ' in x)\nassert a.split('|')[4].strip()=='E:6,7,8; P:1,2,3,5; N:4; U:none.'\nassert b.split('|')[4].strip()=='E:1,2,3,6,7,8; P:5; N:4; U:none.'\nassert 'E43/P57/N17/U15' in old(p) and 'E46/P54/N17/U15' in s and '12/21; accepted complete families:0/15.' in s\nassert len([x for x in s.splitlines() if x.startswith('| EQUIVALENT') and ' | C-' in x])==12\np='docs/planning/RESEARCH_OBLIGATIONS.json';a=json.loads(old(p));b=json.loads(Path(p).read_text(encoding='utf8'))\nfor k in a:\n if k!='reportReviews':assert a[k]==b[k],k\nassert b['reportReviews'][:-1]==a['reportReviews']\nassert b['reportReviews'][-1]=={'path':'docs/planning/ASSEMBLED_CHARACTER_M119_RESULT.md','obligations':['RO-C3-013','RO-C3-019']}\nlog=Path('docs/planning/ASSEMBLED_CHARACTER_M119_CHECKS.txt').read_text(encoding='utf8')\nfor item in ['M119 PRIMARY PASS','M119 CONTROL PASS hidden','M119 CONTROL PASS blocked','M119 COMPETENCE INTENT PASS','M119 PERSISTENCE PASS','12 passed (12)','accepted Development arithmetic','Reference boundary check passed.','PASS: research obligation references','elapsed 323.189s']:assert item in log,item\nrecords=[json.loads(x.split('M119 native ',1)[1]) for x in log.splitlines() if x.startswith('M119 native ')]\nlatest={x['profile']:x for x in records}\nexpected={'trained-negative':('1/2','0/1','1/8',[False,False,True,True,True,True,True]),'trained-positive':('1/2','1/1','1/1',[False,False,True,True,True,True,True]),'untrained-positive':('0/1','1/1','7/8',[False]*7),'impaired':('1/2','0/1','1/8',[False,False,True,False,True,True,True])}\nassert set(latest)==set(expected)\nfor name,(k,b,a,success) in expected.items():\n r=latest[name];assert (r['K'],r['before'],r['after'],r['success'],r['terminal'])==(k,b,a,success,'101'),name\nassert log.count('M119 ORIGINAL EXECUTION PASS: seven actual native operand rows')==5\nfor p in ['src/test/assembledSkillIntegration.test.ts','src/test/fixtures/assembledSkillIntegration.ts']:\n assert subprocess.check_output(['git','diff','d7c3ff3e','--',p],text=True)==''\ncode=Path('src/test/assembledSkillIntegration.test.ts').read_text()\nassert 'finally{cached.delete(r);}' in code and code.count('.settleNextInstant(')==1\npaths=list(Path('docs/planning').glob('ASSEMBLED_CHARACTER_M119_*'));size=sum(p.stat().st_size for p in paths);assert len(paths)==2 and size<5*1024*1024\nassert float([x.split()[1] for x in log.splitlines() if x.startswith('CHARGED ')][-1])<1800\nprint('PASS: eight intended paths; two test/helper files; no production/formal/baseline/frozen-control changes. Four native gates,28 execution correspondences,13 retained controls and interrupted-reader evidence preserved. Twelve mapped members; only F12.8-1/2/3 promoted P to E, E46/P54/N17/U15=132. Other dispositions and all obligation statuses unchanged. Source pin, document and evidence caps pass: '+str(size)+' bytes.')\n"]
+PASS: eight intended paths; two test/helper files; no production/formal/baseline/frozen-control changes. Four native gates,28 execution correspondences,13 retained controls and interrupted-reader evidence preserved. Twelve mapped members; only F12.8-1/2/3 promoted P to E, E46/P54/N17/U15=132. Other dispositions and all obligation statuses unchanged. Source pin, document and evidence caps pass: 16914 bytes.
+
+EXIT 0; elapsed 0.900s
+CHARGED 1134.139
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:git-size"]
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.835s
+CHARGED 1134.974
+
+COMMAND ["git", "diff", "--cached", "--check"]
+
+EXIT 0; elapsed 0.069s
+CHARGED 1135.043
