@@ -105,3 +105,60 @@ CHARGED 385.016
 
 Repair after ef951d15 long126: all native17-report learning/live probes and exact prefixes passed before the trial-audit helper assumed every unrelated trace output is a list. Guard its actual CanonicalValue union; evidence assertions unchanged.
 Before further verification, strengthen the already-declared goal/fixed-truth check on current0.93 (in addition to retained0.92): same six trials/S0/seed, only desired goal false or all reports false. Compare actual goal-independent belief and live failure5/6 versus1/6; accurate mean0. No production or law changes, unchanged1800s budget. Absence arms also compare exact safe state/outputs after common first acquisition.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledBeliefTrials.test.ts", "-t", "absence126", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledBeliefTrials.test.ts > absence126: only fully observed opportunities make non-occurrence evidence
+M126 ABSENCE PASS qualified1/6/support6 versus no-opportunity/censored/denied1/support1; all-uninformative unknown; no-op zero diffs; live appraisal, four original classes/C1 links; full queues
+
+ ✓ src/test/assembledBeliefTrials.test.ts > absence126: only fully observed opportunities make non-occurrence evidence 148930ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  15:35:14
+   Duration  153.55s (transform 2.76s, setup 0ms, collect 4.15s, tests 148.93s, environment 0ms, prepare 148ms)
+
+
+EXIT 0; elapsed 154.102s
+CHARGED 539.118
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledBeliefTrials.test.ts", "-t", "long126", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledBeliefTrials.test.ts > long126: original eight-plus-nine history corrects live appraisal and survives exact continuation
+M126 LONG prefix8 mean1/support8; contradiction9 mean8/9; live next probe10 failure1/9; exact repeat/restore8
+M126 LONG PASS17 distinct supports:1 ->8/9 ->8/17; live failure0 ->1/9 ->9/17; captured LastObservation0/NoLearning unknown; confidence17/18 diagnostic; full queues exact
+
+ ✓ src/test/assembledBeliefTrials.test.ts > long126: original eight-plus-nine history corrects live appraisal and survives exact continuation 282558ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  15:37:57
+   Duration  287.26s (transform 2.79s, setup 0ms, collect 4.20s, tests 282.56s, environment 0ms, prepare 143ms)
+
+
+EXIT 0; elapsed 287.809s
+CHARGED 826.927
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledBeliefTrials.test.ts", "-t", "privacy126", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledBeliefTrials.test.ts > privacy126: hidden actual opportunity and outcome cannot alter safe state or outputs
+M126 PRIVACY PASS exact safe outputs/state under hidden opportunity+outcome flip; goal-only exact belief with live failure5/6 vs1/6; fixed-false-truth accurate evidence mean0; every settled boundary/full queues
+
+ ✓ src/test/assembledBeliefTrials.test.ts > privacy126: hidden actual opportunity and outcome cannot alter safe state or outputs 161237ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  15:42:54
+   Duration  166.25s (transform 3.04s, setup 0ms, collect 4.55s, tests 161.24s, environment 0ms, prepare 142ms)
+
+
+EXIT 0; elapsed 166.815s
+CHARGED 993.742
+
+Final source review repair: new parser read the tag before rejecting an empty list, producing an accidental TypeError instead of the existing domain error. Validate7/10-field shape first; add empty-source negative assertion. Only malformed inputs change. Targeted boundary/type and0.92 regression rerun; valid0.93 long/absence/privacy paths and all their bytes are unchanged by this always-true guard. No new scenario or law.

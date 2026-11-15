@@ -110,6 +110,7 @@ it('boundaries126: original classification, version bounds, owner and rollback r
   expect(qualifySocialTrial(safe)).toEqual({classification:BigInt(c),claim:c===1?true:c===2?false:undefined});
  }
  expect(qualifySocialTrial(list([]))).toEqual({classification:undefined,claim:undefined});
+ expect(()=>socialSetting(list([]))).toThrow('social source shape');
  const b=fixture(),m=await prepareCharacterModel(b.s),old=await prepareCharacterModel(b.legacy);
  await expect(createCharacterRun(old,b.d)).rejects.toThrow('trial requires reference0.93');
  const max=fixture('qualified',false,32);await expect(createCharacterRun(m,max.d)).rejects.toThrow('affect memory presentation capacity including acquisition');await createCharacterRun(m,fixture('qualified',false,31).d);

@@ -28,7 +28,7 @@ export function compileSocial(v:CanonicalValue,strategy:Strategy,multiple=false,
  return {target:targets[0],targets,tasks,multiple,beliefTrials};
 }
 export function socialSetting(v:CanonicalValue){
- const a=items(v,'list'),trial=txt(a[0])===SOCIAL_TRIAL;
+ const a=items(v,'list');require(a.length===7||a.length===10,'source shape');const trial=txt(a[0])===SOCIAL_TRIAL;
  require(a.length===(trial?10:7)&&(trial||txt(a[0])===SOCIAL)&&typeof a[1]==='boolean'&&[1n,2n].includes(uint(a[2]))&&uint(a[3])<=4n&&uint(a[4])<=(trial?32n:8n)&&typeof a[5]==='boolean'&&typeof a[6]==='boolean','source');
  const mode=uint(a[3]);if(trial)require([3n,4n].includes(mode)&&uint(a[4])>=1n&&[7,8,9].every(i=>typeof a[i]==='boolean'),'trial source');
  // Actual outcome a[1] and opportunity a[7] never enter the safe trial.
