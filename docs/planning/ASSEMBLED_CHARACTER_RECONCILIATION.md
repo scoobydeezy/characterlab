@@ -1,7 +1,7 @@
 # Assembled Character — reconciliation and requirement evidence
 
 D1–D5 adopted2026-10-25; D2 condition below.
-Reference0.92; feedback TRUE.12 mapped/0 families; wider debts conditional.
+Reference0.92; feedback TRUE.13 mapped/0 families; wider debts conditional.
 
 ## Decision sheet — adopted 2026-10-25
 
@@ -37,7 +37,7 @@ E is version-scoped evidence, NOT clause acceptance or a current-model rerun. Pr
 all cited result limits; P/N/U remain open. Final candidate replay/classification is
 required even for E. This index promotes no historical result to a broader claim.
 Evidence index: E46/P54/N17/U15 =132. Not a completion percentage. Mapped members:
-12/21; accepted complete families:0/15. Denominator unchanged.
+13/21; accepted complete families:0/15. Denominator unchanged.
 [M102] promoted12.2-5/12.13-8. M119 promotes12.8-1/2/3; other129 unchanged.
 Cited evidence stays version-scoped; all final-candidate requirements remain.
 
@@ -115,7 +115,7 @@ Cited evidence stays version-scoped; all final-candidate requirements remain.
 | EQUIVALENT (mapped) | C-DECISION — PHEN-DECISION-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/7); decisionFactory.ts. | [M105](ASSEMBLED_CHARACTER_M105_RESULT.md) refreshes M80–83 on0.85:2..9;:10/:11 tracked. | Native regimes/coupled significance/frozen history, all5 competitor distinctions, exact continuation. Source/parameter mappings and LIMIT-DECISION retained; final replay required. |
 | EQUIVALENT (mapped domain) | C-BIO — PHEN-BIO-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/8); [M112](ASSEMBLED_CHARACTER_M112_RESULT.md). | :2..9 mapped on0.88; :10/11 tracked. Native learning/feedback/contradiction/frozen meaning/continuation; all6 comparisons. | Original4/12 retained; native2/3 correspondence explicit. Component/captured alternatives are not native alternate continuations. D3/calibration/routing limits preserved; no family or compression closure. Final replay required. |
 | EQUIVALENT (mapped domain) | C-COMMIT — PHEN-COMMIT-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/9); [M101]. | :2..9 mapped on0.84; :10/11 tracked. Native lifecycle/witnesses,3 failed controls; D3/strong-bound correspondence explicit. | Component counterfactuals, not native alternate runtimes;009/014/020 conditional,018 closed. Final replay required. |
-| UNRESOLVED | C-ATTN — PHEN-ATTN-001 v1.1.0 | [M123](ASSEMBLED_CHARACTER_M123_RESULT.md); original10. | :4..13 open.0.92 selected tracks -> learned graph -> judgment. | Native footprint replay/global scope pending. |
+| EQUIVALENT (mapped) | C-ATTN — PHEN-ATTN-001 v1.1.0 | [M124](ASSEMBLED_CHARACTER_M124_RESULT.md); original10. | :4..11 mapped0.92;:12/13 tracked. | Native footprint/graph/recall; original43 controls; wider scope/final replay remain. |
 | EQUIVALENT (mapped domain) | C-BODY — PHEN-BODY-001 v1.0.0-draft | [M117](ASSEMBLED_CHARACTER_M117_RESULT.md). | :4..11 mapped0.89; :12/13 tracked. | Native kinetics/alias/receiving; original controls; limits/final replay remain. |
 | UNRESOLVED | C-BELIEF — PHEN-BELIEF-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/12); `src/campaign3/beliefFactory.ts`. | Route M5/M6/L3. Required `PHEN-BELIEF-001:4..13` (inclusive). | Replay pending; U1/V4. |
 | EQUIVALENT (mapped) | C-AFFECT — PHEN-AFFECT-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/13); affectFactory.ts. | [M78] mapping; [M79] completes G1/G2 in0.73. :4..11 bounded semantic evidence. | :12/:13/RO-C3-011 tracked; no scalar reduction; L4 OFF; family12.5 separate. |
