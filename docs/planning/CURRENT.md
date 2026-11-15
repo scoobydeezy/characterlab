@@ -51,3 +51,9 @@ Final21 members/15 families/132 clauses replay remains mandatory. Current12/21 m
 0/15 families; E46/P54/N17/U15. Wider spatial/Need/surprise/modality coverage is not
 implied by the footprint gate. No UI or assembly acceptance.
 | Research obligations | **0 active /18 conditional /0 unowned** |
+
+Delegated execution amendment before further frozen runs: the initial command was
+stopped after five complete six-hash receipts (indices0..4), before its300s cap.
+Retain those successful cases; unchanged assertion body becomes43 named test cases.
+Run remaining5..17,18..30,31..42 in fixed batches<=500s each, not more models.
+Total1800s/command600s unchanged. No completed native/component case is rerun.

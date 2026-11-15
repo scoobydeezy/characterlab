@@ -172,3 +172,28 @@ EXIT 1; elapsed 3.281s
 CHARGED 593.792
 
 DIAGNOSIS/REPAIR before frozen replay: 00.json expected5c654071c043dfaea72e4a142e97120ea140572c74f7e1786c061c75345e3377 equals exact Git blob and LF-normalized checkout; working CRLF hash63783c0f8027ec6e7df9c11ef04226d235bb61a89ac4ddd97f38fd059a5f29a4 (436 CRLF). Normalize text-report transport only. Six canonical simulation hashes remain exact, no changes to source/hash pins. Preservation also checks all43 original Git report blobs. Passed25 component tests unaffected and not rerun.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledAttentionOriginalReplay.test.ts", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAttentionOriginalReplay.test.ts > original124: all frozen GA histories and their36 comparisons preserve exact original bytes
+M124 FROZEN baseline 11 all six original hashes exact
+
+stdout | src/test/assembledAttentionOriginalReplay.test.ts > original124: all frozen GA histories and their36 comparisons preserve exact original bytes
+M124 FROZEN budget-Independent-1/1 11 all six original hashes exact
+
+stdout | src/test/assembledAttentionOriginalReplay.test.ts > original124: all frozen GA histories and their36 comparisons preserve exact original bytes
+M124 FROZEN budget-HistoricalShared-1/5 11 all six original hashes exact
+
+stdout | src/test/assembledAttentionOriginalReplay.test.ts > original124: all frozen GA histories and their36 comparisons preserve exact original bytes
+M124 FROZEN budget-HistoricalShared-1/1 11 all six original hashes exact
+
+stdout | src/test/assembledAttentionOriginalReplay.test.ts > original124: all frozen GA histories and their36 comparisons preserve exact original bytes
+M124 FROZEN budget-HistoricalHybrid-1/5 11 all six original hashes exact
+
+
+EXIT 1; elapsed 150.688s
+CHARGED 744.480
+
+DELEGATED BATCH AMENDMENT: stopped only verified own Vitest PID7280 tree after150.688s; enclosing EXIT1 is intentional interruption, not a hash mismatch. Complete original six-hash receipts indices0..4 retained (baseline, Independent1/1, Shared1/5, Shared1/1, Hybrid1/5). Convert identical assertion body to named cases; run5..17,18..30,31..42 once in fixed<=500s commands. Same43 models/36 comparisons/six hashes, total1800 and command600 limits unchanged. Partial in-flight case gets no credit.
