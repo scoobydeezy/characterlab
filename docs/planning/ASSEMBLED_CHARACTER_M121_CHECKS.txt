@@ -80,3 +80,47 @@ AssertionError: a positive distractor cannot authorize focal memory: expected fa
 
 EXIT 1; elapsed 71.197s
 CHARGED 171.159
+
+Pre-run defect repair afterf1f0b9ef: original compilePerceivedBindings sorts batch
+requests before assigning IDs. That contradicted the declared focal-first producer
+mapping. Compile each actual unit with its own reserved ID, focal first; freeze and
+selection still use their original canonical ordering. No scenario/law/gate change.
+The failed positive-focal assertion is preserved; test caught lost focal admission.
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledCompetingAttention.test.ts", "-t", "primary121", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledCompetingAttention.test.ts > primary121: two permitted candidates compete and selected focal memory changes actual appraisal 63918ms
+   → expected [] to have a length of 2 but got +0
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledCompetingAttention.test.ts > primary121: two permitted candidates compete and selected focal memory changes actual appraisal
+AssertionError: expected [] to have a length of 2 but got +0
+
+- Expected
++ Received
+
+- 2
++ 0
+
+ ❯ assessment src/test/assembledCompetingAttention.test.ts:35:122
+     33|  const targetRow=audit.find(v=>items(v[1],'list').some(x=>key(x)===key…
+     34|  expect(validateEncoding(list(a),a[4]),'a positive distractor cannot a…
+     35|  const full=outputs(out(r),227n).find(v=>uint(f(v,3n))===1n)!;expect(f…
+       |                                                                                                                          ^
+     36|  const ids=items(a[3],'list').map(uint);expect(new Set(ids).size).toBe…
+     37|  const bindingIds=items(f(full,5n),'set').map(v=>uint(id(f(rec(v,224n)…
+ ❯ src/test/assembledCompetingAttention.test.ts:56:2
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  10:55:05
+   Duration  68.52s (transform 2.80s, setup 0ms, collect 4.16s, tests 63.92s, environment 0ms, prepare 147ms)
+
+
+EXIT 1; elapsed 70.227s
+CHARGED 241.386
