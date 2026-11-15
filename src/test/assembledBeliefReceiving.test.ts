@@ -1,6 +1,6 @@
 import {it,expect} from 'vitest';
 import {prepareCharacterModel,createCharacterRun,restoreCharacterRun} from '../assembled/character';
-import {personPath,personMean,personHistory,SOCIAL_LEARNING,SOCIAL_UPDATE,PERSON_OWNER} from '../assembled/social';
+import {personPath,personMean,personHistory,SOCIAL_LEARNING,SOCIAL_UPDATE,SOCIAL_SOURCE,PERSON_OWNER} from '../assembled/social';
 import {importancePath} from '../assembled/priority';
 import {JOINT_APPRAISAL} from '../assembled/appraisal';
 import {restoreAuthoritativeState} from '../substrate/state';
@@ -29,7 +29,7 @@ function probe(r:Run,task:CanonicalValue,at:number,mean:CanonicalValue,likelihoo
  expect(items(items(row[6],'list')[3],'list')).toHaveLength(0); // No recalled episode authors these probes.
  const joint=report(r,JOINT_APPRAISAL).find(a=>items(a[6],'list').slice(1).some(v=>key(v)===key(list(row))))!;expect(joint,'joint consumer of actual social appraisal').toBeDefined();
  expect(items(joint[4],'list').some(v=>items(v,'list').length===5)).toBe(true);
- expect(state(r).read(importancePath(task)).value).toEqual(q(0,1));return row;
+ expect(items(state(r).read(importancePath(task)).value!,'list')[1]).toEqual(q(0,1));return row;
 }
 function controlsOnActualClaims(r:Run){
  const history=personHistory(belief(r));let mean:CanonicalValue|undefined,last:CanonicalValue|undefined,none:CanonicalValue|undefined;
@@ -65,6 +65,10 @@ it('primary125: wrong learned belief corrects through permitted contradiction; g
 },550000);
 it('controls125: hidden truth cannot correct belief and silence or denial is no negative evidence',async()=>{
  const main=await create(),hidden=await create('hidden'),silent=await create('silent'),denied=await create('denied');
+ // Check the authored intervention premise independently of the runtime result.
+ const normalized=(data:typeof main.b.d,field:number)=>list(items(decode(data.orderedInputs),'list').map(v=>{const a=[...items(v,'list')];if(key(a[2])===key(SOCIAL_SOURCE)){const p=[...items(a[3],'list')],o=[...items(p[1],'list')];o[field]=field===1?false:u(0);p[1]=list(o);a[3]=list(p);}return list(a);}));
+ const accurate=fixture('accurate');expect(normalized(main.b.d,3)).toEqual(normalized(accurate.d,3));expect(normalized(main.b.d,1)).toEqual(normalized(hidden.b.d,1));
+ const truth=items(decode(main.b.d.orderedInputs),'list').filter(v=>key(items(v,'list')[2])===key(SOCIAL_SOURCE)).map(v=>items(items(items(v,'list')[3],'list')[1],'list')[1]);expect(truth).toEqual(Array(8).fill(false));
  for(const x of[main,hidden,silent,denied])await through(x.r,7n);
  const prior=belief(silent.r);for(const x of[main,hidden,silent,denied])await through(x.r,9n);
  expect(belief(hidden.r)).toEqual(belief(main.r));expect(report(hidden.r,SOCIAL_LEARNING)).toEqual(report(main.r,SOCIAL_LEARNING));expect(report(hidden.r,'assembled-social-people/0.1/appraisal')).toEqual(report(main.r,'assembled-social-people/0.1/appraisal'));

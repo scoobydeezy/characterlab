@@ -5,3 +5,67 @@ COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
 
 EXIT 0; elapsed 18.622s
 CHARGED 33.622
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledBeliefReceiving.test.ts", "-t", "primary125", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledBeliefReceiving.test.ts > primary125: wrong learned belief corrects through permitted contradiction; goals change appraisal not belief 120419ms
+   → expected { kind: 'list', …(1) } to deeply equal { kind: 'rational', …(2) }
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledBeliefReceiving.test.ts > primary125: wrong learned belief corrects through permitted contradiction; goals change appraisal not belief
+AssertionError: expected { kind: 'list', …(1) } to deeply equal { kind: 'rational', …(2) }
+
+- Expected
++ Received
+
+  Object {
++   "items": Array [
++     Object {
++       "kind": "text",
++       "value": "assembled-goal-priority/0.1",
++     },
++     Object {
+        "denominator": 1n,
+        "kind": "rational",
+        "numerator": 0n,
++     },
++     Object {
++       "kind": "typedIdentifier",
++       "namespaceId": 1164n,
++       "payload": Object {
++         "kind": "unsigned",
++         "value": 0n,
++       },
++     },
++     Object {
++       "kind": "unsigned",
++       "value": 1n,
++     },
++   ],
++   "kind": "list",
+  }
+
+ ❯ probe src/test/assembledBeliefReceiving.test.ts:32:52
+     30|  const joint=report(r,JOINT_APPRAISAL).find(a=>items(a[6],'list').slic…
+     31|  expect(items(joint[4],'list').some(v=>items(v,'list').length===5)).to…
+     32|  expect(state(r).read(importancePath(task)).value).toEqual(q(0,1));ret…
+       |                                                    ^
+     33| }
+     34| function controlsOnActualClaims(r:Run){
+ ❯ src/test/assembledBeliefReceiving.test.ts:60:2
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  14:51:15
+   Duration  125.21s (transform 2.88s, setup 0ms, collect 4.32s, tests 120.42s, environment 0ms, prepare 166ms)
+
+
+EXIT 1; elapsed 125.817s
+CHARGED 159.439
+
+REPAIR before rerun: primary passed belief/goal equality and live8 appraisal, then importance assertion compared full [tag,value,source,version] record to bare0. Read its value field; actual importance remains0. No production/fixture/criterion changes. Before first controls run add exact manifest checks for fixed false truth, report-only and hidden-truth-only interventions.
