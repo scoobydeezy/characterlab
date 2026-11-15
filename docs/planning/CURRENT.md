@@ -59,3 +59,9 @@ M118 complete05e30283;11 members mapped/zero families; final21/15/132 unchanged.
 Self-approved bounded scenario repairs remain authorized; record before rerun and
 retain failed source/evidence. No UI, autonomous peers, new factory or unrelated scope.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
+
+M119 verification repair before rerun: stopped own primary process after323.189s;
+first native trained-negative case passed, remainder unqualified. Reader repeatedly
+serialized/decoded identical complete snapshots in assertions. Cache one immutable
+settled snapshot plus decoded streams; invalidate in finally after every settlement.
+All assertions, scenarios, laws, horizons and1800s budget unchanged; originalfc697a7b.

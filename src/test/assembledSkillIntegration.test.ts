@@ -8,20 +8,27 @@ import {expectationPath,expectationValue} from '../assembled/performanceExpectat
 import {VALUES_APPRAISAL} from '../assembled/values';
 import {restoreAuthoritativeState,statePathValue} from '../substrate/state';
 import {ExactRational as Q} from '../substrate/exactMath';
-const state=(r:Run)=>restoreAuthoritativeState(decode(r.snapshot().state));
-const traces=(r:Run)=>outputs(r.snapshot().trace,160n),event=(t:CanonicalValue)=>rec(f(rec(t,160n),4n),130n);
+// One immutable settled snapshot per run. Invalidate after EVERY settlement, including failure.
+const cached=new WeakMap<Run,{snapshot:ReturnType<Run['snapshot']>;state?:ReturnType<typeof restoreAuthoritativeState>;out?:CanonicalValue;trace?:ReturnType<typeof outputs>}>();
+function view(r:Run){let v=cached.get(r);if(!v){v={snapshot:r.snapshot()};cached.set(r,v);}return v;}
+const snap=(r:Run)=>view(r).snapshot;
+const state=(r:Run)=>{const v=view(r);return v.state??=(restoreAuthoritativeState(decode(v.snapshot.state)));};
+const out=(r:Run)=>{const v=view(r);return v.out??=decode(v.snapshot.outputs);};
+const traces=(r:Run)=>{const v=view(r);return v.trace??=outputs(v.snapshot.trace,160n);};
+const event=(t:CanonicalValue)=>rec(f(rec(t,160n),4n),130n);
+async function advance(r:Run){try{return await r.settleNextInstant();}finally{cached.delete(r);}}
 const projection=(t:CanonicalValue)=>{const v=f(rec(t,160n),13n);return typeof v!=='boolean'&&v.kind==='list'?v.items:[v];};
-const reports=(r:Run,label:string)=>items(decode(r.snapshot().outputs),'list').filter(v=>typeof v!=='boolean'&&v.kind==='list'&&v.items.length&&key(v.items[0])===key(text(label))).map(v=>items(v,'list'));
+const reports=(r:Run,label:string)=>items(out(r),'list').filter(v=>typeof v!=='boolean'&&v.kind==='list'&&v.items.length&&key(v.items[0])===key(text(label))).map(v=>items(v,'list'));
 const atRows=(r:Run,at:number)=>traces(r).filter(t=>time(f(event(t),2n))===BigInt(at));
 const reported=(r:Run,at:number,label:string)=>atRows(r,at).flatMap(projection).filter(v=>typeof v!=='boolean'&&v.kind==='list'&&v.items.length&&key(v.items[0])===key(text(label))).map(v=>items(v,'list'));
 const fraction=(v:Q|undefined)=>v?v.numerator+'/'+v.denominator:'unknown';
 const belief=(r:Run,task:CanonicalValue)=>expectationValue(state(r).read(expectationPath(task,0n)).value);
-async function through(r:Run,at:bigint){for(let i=0;r.snapshot().clock<at;i++){expect(i).toBeLessThan(64);expect(await r.settleNextInstant()).toBe(true);}expect(r.snapshot().clock).toBe(at);}
-async function finish(a:Run,b?:Run){for(let i=0;i<64;i++){const more=await a.settleNextInstant();if(b){expect(await b.settleNextInstant()).toBe(more);exact(a,b);}if(!more){expect(a.snapshot().clock).toBe(101n);expect(a.diagnostic()).toBeUndefined();return;}}throw Error('settle cap64');}
+async function through(r:Run,at:bigint){for(let i=0;snap(r).clock<at;i++){expect(i).toBeLessThan(64);expect(await advance(r)).toBe(true);}expect(snap(r).clock).toBe(at);}
+async function finish(a:Run,b?:Run){for(let i=0;i<64;i++){const more=await advance(a);if(b){expect(await advance(b)).toBe(more);exact(a,b);}if(!more){expect(snap(a).clock).toBe(101n);expect(a.diagnostic()).toBeUndefined();return;}}throw Error('settle cap64');}
 function actual(r:Run,at:number){
  const matches=reported(r,at,SKILL_ACTUAL);expect(matches.length,'live actual skill assessment').toBeGreaterThan(0);
  const a=matches[0];for(const v of matches)expect(v).toEqual(a);
- const d=outputs(r.snapshot().outputs,409n).find(v=>time(f(v,2n))===BigInt(at))!;expect(d,'actual decision').toBeDefined();
+ const d=outputs(out(r),409n).find(v=>time(f(v,2n))===BigInt(at))!;expect(d,'actual decision').toBeDefined();
  const status=rec(f(d,4n),419n);expect(uint(f(status,1n)),'live chosen intent').toBe(3n);
  expect(f(rec(f(rec(f(status,2n),420n),1n),395n),2n)).toEqual(target);
  const body=reported(r,at,ACTION_BODY)[0];expect(body,'actual physical consumer').toBeDefined();expect(body[3]).toEqual(target);
@@ -56,7 +63,7 @@ it('primary119: competence and confidence separate; temporary impairment recover
   await through(r,22n);checkProbe(r,22,K,profile!=='untrained-positive');
   const values=reports(r,VALUES_APPRAISAL).find(v=>uint(v[2])===22n)!;expect(values,'later actual appraisal consumer').toBeDefined();expect(values[6]).toEqual(q(belief(r,b.tasks[0]).mean!.numerator,belief(r,b.tasks[0]).mean!.denominator));
   await finish(r);await originalCorrespondence(r);runs.set(profile,r);
-  console.info('M119 native '+JSON.stringify({profile,K:fraction(K),before:fraction(confidence),after:fraction(belief(r,b.tasks[0]).mean),success:times.map(t=>actual(r,t)[7]),terminal:String(r.snapshot().clock)}));
+  console.info('M119 native '+JSON.stringify({profile,K:fraction(K),before:fraction(confidence),after:fraction(belief(r,b.tasks[0]).mean),success:times.map(t=>actual(r,t)[7]),terminal:String(snap(r).clock)}));
  }
  expect(snapshots.get('trained-negative'),'world-only intervention preserves whole intent/expression/plan bytes').toEqual(snapshots.get('impaired'));
  for(const profile of ['trained-negative','trained-positive','untrained-positive','impaired'] as const)expect(reports(runs.get(profile)!,PERFORMANCE_OBS).every(v=>[10n,20n].includes(uint(v[2])))).toBe(true);
