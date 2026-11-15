@@ -1,43 +1,61 @@
-# Current work — native determinism mapped
+# Current work — M116 censored learning in the continuing character
 
-The continuing character's complete trajectory survives unrelated addressed draws
-and exact save/load. An explicit public random-key change first appears at its
-actual arbitration. Complete no-draw runs and reached failures replay identically.
+Owner continuation authorizes bounded local amendments and the next integration.
+Reference0.89, Gated exact law, feedback TRUE and existing psychology stay fixed.
+Capability: repeated compatible censoring adds no confidence; contradictory bounds
+and later point evidence change the shared belief; acquired high-precision priors
+and unknown/zero/denied cases retain their meanings. Scope C-LEARN :2..9; :10/11 tracked.
+No production changes planned. Original learn-public/0.1-candidate and
+effect-evidence/0.1 kernels/control sources remain unchanged.
 
-M115 PASS. See [result](ASSEMBLED_CHARACTER_M115_RESULT.md) and
-[checks](ASSEMBLED_CHARACTER_M115_CHECKS.txt). Reference0.89, feedback TRUE,
-all existing psychological laws and RNG semantics remain unchanged.
-No production or formal-contract files changed.
+## Native source and comparison before code
+Use M114 nonsocial M106 fixture/seed0, existing channels and blocked execution/
+outcome-report settings. No injected beliefs, samples, posteriors or body resets.
+Repeated case: body100/capacity100/rate10. Permitted deliveries at1..6 with
+potential10 versus80 each apply10 and restore100; hidden overflow0 versus70.
+At11, after ordinary depletion to50, permitted42 gives point21/50. Read at12.
+Belief after first bound=1/10,2; next five preserve the WHOLE leaf; final=13/50,4.
+Compare both native arms' full state/all safe outputs at every settlement through101;
+trace comparison excludes only declared physical delivery/observer payload and
+RunIdentity differences, as M114. Compare actual addressed draws, not seed alone.
+Repeat and restore6 (before final point) must match all later bytes.
+Original repeated timing1..7 maps to native1..6,11; original read8 maps to12.
 
-## Evidence
-- Seven extra draws on the same oracle leave all7 authentic draws and the entire
-  state/output/trace/save/identity trajectory unchanged through101.
-- Save9 immediately precedes actual arbitration10. Repeat and restored continuation
-  match every later settled byte, including queue and allocators.
-- Public key A/B changes the actual raw word and face1->0. First semantic trace
-  divergence is arbitration10/phase80; earlier cognition is identical.
-- Local-index and deliberately sequential ordinal-stream controls discriminate.
-- A complete no-draw source variant settles all pending work to101.
-- Repeated reached faults preserve the full scheduler snapshot and committed RNG
-  ledger and produce identical diagnostics; failed saves are rejected.
-- Three native tests and25 original foundation tests pass. One test-reader failure
-  is retained and repaired using the existing version-aware draw reader.
-Types, boundaries, research, preservation, Git size and staged whitespace pass.
+High priors: body0/cap100/rate10;25 permitted point40 or5 at1,5,...97 acquire
+exact(2/5,50) or(1/20,50). Denied top-up98:70 or100 respectively reaches100.
+At99 permitted10 applies10; at100 a copied ordinary time12 opportunity reads it.
+Extend task-a/b deadlines to101 via existing admitted parameters, keeping laws.
+Native compatible whole leaf unchanged; inconsistent posterior27/520,52.
+Each training/application must be live and have the exact original mean/precision
+and support count. Priors come from actual observations; no confidence shortcut.
+Duplicate/restore97 for inconsistent case includes100 read and exhaustion101.
 
-## Scope and handoff
-C-DET :2..9 mapped on0.89; :10/11 standing constraints tracked.
-Inserted draws and faults are test instrumentation, not new production inputs.
-Native effective-key change and component local-index control remain distinct.
-Original controls, baseline, obligations and all other member/family rows preserved.
-Eight of21 members mapped; zero of15 complete families; E43/P57/N17/U15 unchanged.
-Every132 clause and final whole-candidate replay remain required; earlier evidence
-retains its versioned scope. This is not blanket qualification of future consumers.
-No active milestone after this pass. Select the next remaining member requirement
-from the existing register and commit a bounded card before code.
+Zero: existing M114 zero source (rate0/full body) preserves unknown with bound0.
+Positive-zero source acquires point40 at1, denied60 at2 fills100, bound0 at9.
+Its precision2 differs from original positiveZero50; preserve original50 control
+and classify this explicit nonnegative-prior correspondence, not byte equality.
+Denied repeated arm withholds six samples, final genuine point remains42/100,2.
+No claim of changed sampled choice; the original LEARN gate concerns exact belief
+updates and later reads. Existing tasks/decisions remain in the unified run.
 
-## Guardrails
-One milestone/job, <=3 capabilities and12 code files/package;20 evidence files/5MiB.
-M115 used one test file and two evidence files. Charged 657.307/1800s including
-15s bookkeeping; no extension. Stop verification on pass. No UI, autonomous peers,
-reduction, verifier chain, catalog or final-scope waiver.
+## Controls, files, checks and done
+Run original compatible/inconsistent/zero/repeated cases under all3 laws x2 numeric
+profiles; retain positiveZero, missing, repeatedEstablished and twoTargets controls.
+On actual native samples, replay pure existing EPI/LEARN laws as explicitly labelled
+component counterfactuals, never substitute native runtime branches. Preserve exact/
+lattice distinction and established-below-bound repeated-credit limitation.
+MEC001/002 CONTROL+CORPUS, MEC003 CONTROL+CONTRACT, MEC006 existing bounded port;
+EXP002/005 and RET003..006 retain dispositions. RO010 broader inference/precision
+approximation remains conditional; RO007 existing consumer/source limits preserved.
+<=2 new test/helper files; <=12 code paths if a concrete integration defect arises.
+One result/check log, <=5MiB; no new framework/catalog, UI or autonomous partners.
+Types120s; each native invocation<=570s; original LEARN suite/controls120s each;
+boundary/research/preservation/git-size30s each; cumulative1800s incl15s bookkeeping.
+One active validation job. Settle cap64, reaching it is failure; never truncate.
+Failure risks: physical source cannot produce declared evidence, prior manufactured,
+confidence over-credit, hidden leakage, wrong prior ordering, unsupported new probe.
+Diagnose and record amendments before rerun; no seed search, law retune or gate waiver.
+Done only with all native cases/controls/continuations and exact correspondence
+classified. If a real missing mechanism prevents the gate, report it honestly.
+Eight members mapped so far; pinned21/15/132 and final whole-candidate replay remain.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
