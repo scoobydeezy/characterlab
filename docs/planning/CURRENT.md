@@ -1,52 +1,44 @@
-# Current work — M128 observed workspace maintenance integration
-One character must protect a retained plan against observed distraction, recover it
-from a later reminder, and refuse recovery after expiry. M127 access evidence stays.
-Baseline feea1d19; current0.93 becomes versioned successor0.94; no law/calibration change.
+# Current work — M128 bounded WORK integration complete
+The character protects a selected plan against distraction, recovers a displaced
+but retained plan from a later observed reminder, and refuses recovery after expiry.
+These operations feed the one workspace/appraisal/reason/choice/execution path.
 
-## Bounded card (before code)
-Capabilities (3): observed priority/protection -> working access -> actual reasons/
-choice; reminder recovery without adoption; expiry/cancellation prevents recovery.
-C-WORK PHEN-WORK-001:3..12; MEC011/EXP004, MEC020/EXP013 and MEC012..016;
-RO-C3-012 remains conditional outside the compared finite domain.
-Implement original rank/protect/reminder operation in the existing workspace path.
-No Campaign3 factory/runtime import. Preserve originals and old version behavior.
-One shared state/scheduler/capacity; existing knowledge/workspace owners gain fields.
-Safe board110 -> observation120 -> knowledge140; workspace40 reads earlier evidence.
-Current goal status/window gates access. No memory/recognition/attention reduction.
-StoredSet selection retained; compare original IndexedReplay only in its fixed-
-deadline/full-safe-history domain. No general indexing equivalence claim.
+Reference0.94; unchanged laws, dice/calibration, feedback TRUE and shared UnitBudget.
+Plan cf435940; final tested source d0ca93f3; baseline feea1d19.
+[Result](ASSEMBLED_CHARACTER_M128_RESULT.md); [checks](ASSEMBLED_CHARACTER_M128_CHECKS.txt).
 
-Scope: new workMaintenance.ts; model.ts, inputs.ts, state.ts, runtime.ts, execution.ts,
-controlExecution.ts, traceBinding.ts; fixtures/assembledWorkMaintenance.ts, assembledWorkMaintenance.test.ts.
-At most12 production/test files,3 capabilities,20 evidence files/5MiB.
-Formal ASSEMBLED_CHARACTER_WORK_MAINTENANCE_CONTRACT.md written before code.
-Declaration0.94 adds observed-card bindings and support; empty bindings retain
-ordinary deadline/key access. Capacity remains one total shared budget.
-Card priority is not importance and creates no reason. Neutral card consumes space.
-Other goals, recalled memory, habit control and forecast retain their existing owners.
+## What passed
+- Full distraction x support2x2 plus independent capacity: at7 B probability is
+  1 unsupported/high,0 supported/high,0 unsupported/low,0 supported/low,
+  and1/2 with room for both tasks. Actual live appraisal/grounds/attempts.
+- Exact retained goal bytes while displaced; reminder restores A at8; after
+  expiry9, cue cannot supply a base/ground or recreate an intention at10.
+- Source110 -> safe120 -> retained140 -> later workspace40; one capacity pays
+  for tasks, forecast, neutral distraction, existing control and recalled memory.
+-4096 original selector comparisons; original StoredSet/IndexedReplay and named
+  negative controls; native whole-safe-state/output privacy and complete queues.
+- Exact repeat/save-before-displacement continuation at every later boundary;
+  actual source/cache/three task reads; wrong owner/learned S0/old input rejection;
+  source, observation, selection and consolidation faults roll back whole instants.
+- 18 targeted tests and types pass. Reference boundary, research, preservation, Git size and staged whitespace checks pass.
+- 1180.822/1800s including failures/15s bookkeeping; no extension.
+  Ten production/test files; two evidence files below5MiB.
+- Failures preserved: canonical observation/trace wrapping; test's assumed standalone
+  fault API; missing exact0.94 trace admission. Protected-low arm completed the
+  predeclared2x2 before rerun. No laws/seed/threshold tuning.
 
-## Predeclared comparison
-Same common model policy, seed0, laws and A/B importance1; no physical task success.
-Start from M127 body10/recognized stand-in; declare A/B social, third unknown.
-Permitted priority displays: initial A2/B1/C0; distract B3 only; cue promotes A4;
-then expiry and a later cue. Compare support off/on; isolated distract B1/B3;
-total capacities2/3 (one slot reserved for live forecast), retained task bytes.
-A/B distinct allowed routes; actual selected task appraisal must be live.
-Show selected access -> actual grounded reason/candidate -> changed actual choice
-probability (Auto chosen-only, exact production lottery otherwise), no seed search.
-Unselected/expired A cannot acquire a base reason; reminder never adopts a goal.
-Cross-model relevance projections, not arbitrary identity normalization.
-No same-seed shared-dice claim.
+C-WORK :3..10 mapped in the bounded controlled-card domain; :11/12 tracked.
+15/21 mapped,0/15 accepted complete families,E46/P54/N17/U15=132 unchanged.
+This does not close broader Brief12.6 or claim ordinary reminder recognition.
+Latest-safe-source + selected-set cache uses existing knowledge/workspace owners.
+Original indexed reconstruction stays confined to fixed deadlines/full safe history;
+no cache-reduction claim for assembled cancellation, fulfillment or history loss.
+RO-C3-012's wider triggers remain conditional; final whole-candidate replay mandatory.
 
-## Checks and budget
-One serial job;600s/command,1800s cumulative including failures,15s prepaid bookkeeping.
-Fast: types, exhaustive finite selector comparison to original kernel, original
-StoredSet/IndexedReplay and named negative controls; admission/owner/source checks.
-Native: full queues support/distraction/capacity/cue/expiry; exact repeat and save
-before displacement/restore at every later boundary; hidden/invisible source control;
-rollback source/observation/selection/consolidation; old0.93 M127 primary regression.
-Research/boundary/size/preservation checks. No frozen C2 rerun: dependencies unchanged.
-Binary done: connections/controls pass in bounds; otherwise retain evidence and
-checkpoint the precise remaining gate. No blanket WORK mapping without all requirements.
-Self-approved amendments recorded before runs; no retuning laws or scope waiver.
-No unrelated breadth/UI/autonomous partners. Final21/15/132 replay remains mandatory.
+Remaining unmapped members: ADAPT, SEM, SOCIAL, MULTI, REL, LONG.
+Next card should address the next receiving gap in causal order; no extra WORK audit
+or unchanged regression. Preserve all original controls and previous mapped limits.
+One milestone/job,3 capabilities,12 code/test files,20 evidence/5MiB,
+1800s cumulative/600s command. Delegated diagnosis/amendments remain authorized;
+record first, preserve failures/laws/scope; passing ends checks. No UI/autonomous peers.
+| Research obligations | **0 active / 18 conditional / 0 unowned** |

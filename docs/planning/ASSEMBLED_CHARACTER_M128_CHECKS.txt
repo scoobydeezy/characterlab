@@ -138,3 +138,106 @@ COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
 
 EXIT 0; elapsed 18.316s
 CHARGED 753.199
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledWorkMaintenance.test.ts", "-t", "continuation128|boundaries128", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledWorkMaintenance.test.ts > continuation128: exact repeat and save before displacement, all settled boundaries
+M128 CONTINUATION PASS repeat and complete saved prefix; exact every later boundary/full queue; actual source/cache/three goal reads and overload
+
+ ✓ src/test/assembledWorkMaintenance.test.ts > continuation128: exact repeat and save before displacement, all settled boundaries 197452ms
+stdout | src/test/assembledWorkMaintenance.test.ts > boundaries128: wrong owner, forged S0, malformed/old input; complete rollback of new seams
+M128 BOUNDARIES PASS old/malformed inputs and owner/S0 rejection; source/observation/selection/consolidation rollback
+
+ ✓ src/test/assembledWorkMaintenance.test.ts > boundaries128: wrong owner, forged S0, malformed/old input; complete rollback of new seams 39797ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 8 skipped (10)
+   Start at  17:15:43
+   Duration  241.89s (transform 2.76s, setup 0ms, collect 4.16s, tests 237.25s, environment 0ms, prepare 151ms)
+
+
+EXIT 0; elapsed 242.469s
+CHARGED 995.668
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/workPublic.test.ts", "src/test/workBoundary.test.ts", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/workBoundary.test.ts > only the declared owner can write each leaf and indexed models reject workspace state 352ms
+ ✓ src/test/workBoundary.test.ts > closed codecs forbid new records in typed slots and malformed priority/identity data
+ ✓ src/test/workBoundary.test.ts > exact input data rejects excess history, nonmonotone times, unexpected fields and forged model bytes
+ ✓ src/test/workPublic.test.ts > displaces or protects under actual overload, preserves retained status, and restores only unexpired intention 1389ms
+ ✓ src/test/workBoundary.test.ts > gaps, deadline-only instants and removed cards preserve stored/indexed equivalence 802ms
+ ✓ src/test/workBoundary.test.ts > records actual cache reads only in StoredSet and preserves the strictly later source boundary 516ms
+ ✓ src/test/workPublic.test.ts > stored and indexed maintenance agree exactly without indexed cache reads or writes 1502ms
+ ✓ src/test/workPublic.test.ts > hidden truth, invisible alternatives, board visibility and physical ordering respect the source cut 2865ms
+ ✓ src/test/workPublic.test.ts > named negative controls fail distinct capacity, access, maintenance and expiry contrasts 2700ms
+ ✓ src/test/workPublic.test.ts > rejects forged source, duplicate identities, foreign S0, getters and invalid model handles
+ ✓ src/test/workPublic.test.ts > restores whole prefixes including addressed draws and rejects forged save state/trace/output 2877ms
+ ✓ src/test/workPublic.test.ts > rolls back every stage and commit, including deadline retirement and allocated draws 6502ms
+
+ Test Files  2 passed (2)
+      Tests  12 passed (12)
+   Start at  17:20:22
+   Duration  19.58s (transform 745ms, setup 0ms, collect 2.17s, tests 19.96s, environment 0ms, prepare 292ms)
+
+
+EXIT 0; elapsed 20.127s
+CHARGED 1015.795
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledWorkspaceReceiving.test.ts", "-t", "primary127", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledWorkspaceReceiving.test.ts > primary127: retained unselected task supplies no reason; larger workspace changes actual choice probability
+M127 captured modes/probabilities 1 actual=0/1 lottery=0/1; 3 actual=1/2 lottery=1/2; 3 actual=1/2 lottery=1/2
+M127 PRIMARY actual probability(action two) 0/1 / 1/2 / 1/2; selected counts1/2/3 plus forecast; task B retained but no base/ground at capacity2
+
+stdout | src/test/assembledWorkspaceReceiving.test.ts > primary127: retained unselected task supplies no reason; larger workspace changes actual choice probability
+M127 PRIMARY PASS full queues; capacity/access is not task erasure; original protection/reminder gates remain open
+
+ ✓ src/test/assembledWorkspaceReceiving.test.ts > primary127: retained unselected task supplies no reason; larger workspace changes actual choice probability 151858ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  17:21:01
+   Duration  156.58s (transform 2.83s, setup 0ms, collect 4.25s, tests 151.86s, environment 0ms, prepare 150ms)
+
+
+EXIT 0; elapsed 157.137s
+CHARGED 1172.932
+
+COMMAND ["node", "scripts/check-reference-boundary.mjs"]
+Reference boundary check passed.
+
+EXIT 0; elapsed 2.695s
+CHARGED 1175.627
+
+COMMAND ["node", "scripts/check-research-obligations.mjs"]
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4349}
+
+EXIT 0; elapsed 3.433s
+CHARGED 1179.060
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,json\ngit=lambda *a:subprocess.check_output(['git',*a],text=True,encoding='utf-8')\nbase='feea1d19'\ncode={'src/assembled/'+p for p in ['workMaintenance.ts','model.ts','state.ts','inputs.ts','runtime.ts','execution.ts','controlExecution.ts','traceBinding.ts']}|{'src/test/assembledWorkMaintenance.test.ts','src/test/fixtures/assembledWorkMaintenance.ts'}\nallowed=code|{'AGENTS.md','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md','docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md','docs/planning/RESEARCH_OBLIGATIONS.json','docs/planning/ASSEMBLED_CHARACTER_M128_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M128_CHECKS.txt','docs/formal/ASSEMBLED_CHARACTER_WORK_MAINTENANCE_CONTRACT.md'}\nchanged=set(git('diff','--name-only',base).splitlines())|set(git('ls-files','--others','--exclude-standard').splitlines())\nassert changed<=allowed,changed-allowed\nassert changed&code==code\nassert git('diff','d0ca93f3','--','src')=='','tested source changed'\nassert git('diff',base,'--','src/campaign2','src/campaign3','src/substrate','src/observation','src/semanticBinding','reference')=='','frozen dependency changed'\nfor p in code:\n s=Path(p).read_text(encoding='utf-8')\n if p.startswith('src/assembled/'):assert not any(\"campaign3/\"+x in s for x in ['workFactory','workRuntime']),'separate pipeline'\nold=git('show',base+':docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md')\nnew=Path('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md').read_text(encoding='utf-8')\nrows=lambda s:[x for x in s.splitlines() if ('| C-' in x or '| F-' in x) and '| C-WORK ' not in x]\nassert rows(old)==rows(new),'other C/F rows changed'\nassert '| EQUIVALENT (mapped domain) | C-WORK ' in new\nassert 'E46/P54/N17/U15' in new and '15/21' in new and 'families:0/15' in new\nassert len(new.splitlines())<=250 and len(new.replace('\\n','\\r\\n').encode())<=65536\nbefore=json.loads(git('show',base+':docs/planning/RESEARCH_OBLIGATIONS.json'))\nafter=json.loads(Path('docs/planning/RESEARCH_OBLIGATIONS.json').read_text(encoding='utf-8-sig'))\nassert before['obligations']==after['obligations']\nassert after['reportReviews'][:-1]==before['reportReviews']\nassert after['reportReviews'][-1]=={'path':'docs/planning/ASSEMBLED_CHARACTER_M128_RESULT.md','obligations':['RO-C3-012']}\nfor path,cap in [('AGENTS.md',120),('docs/planning/CURRENT.md',80),('docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md',250)]:\n assert len(Path(path).read_text(encoding='utf-8').splitlines())<=cap,path\nevidence=[Path('docs/planning/ASSEMBLED_CHARACTER_M128_'+s) for s in ['RESULT.md','CHECKS.txt']]\nassert sum(p.stat().st_size for p in evidence)<5*1024*1024\nlog=evidence[1].read_text(encoding='utf-8')\ncharge=float([l.split()[1] for l in log.splitlines() if l.startswith('CHARGED ')][-1]);assert charge<1800\nfor token in ['M128 KERNEL PASS 4096','M128 PRIMARY PASS','M128 PRIVACY PASS','M128 CONTINUATION PASS','M128 BOUNDARIES PASS','M127 PRIMARY PASS','src/test/workPublic.test.ts','src/test/workBoundary.test.ts','Reference boundary check passed.','PASS: research obligation references']:\n assert token in log,token\ncurrent=Path('docs/planning/CURRENT.md').read_text(encoding='utf-8')\nassert '(ASSEMBLED_CHARACTER_M128_CHECKS.txt)' in current and '{{' not in current\nprint('PASS M128 preservation: source d0ca93f3;10 production/test files; old Campaign0-3/reference dependencies unchanged; C-WORK bounded mapped, other C/F unchanged;15/21,0/15,E46/P54/N17/U15; statuses/document/evidence caps retained; charge',charge)\n"]
+PASS M128 preservation: source d0ca93f3;10 production/test files; old Campaign0-3/reference dependencies unchanged; C-WORK bounded mapped, other C/F unchanged;15/21,0/15,E46/P54/N17/U15; statuses/document/evidence caps retained; charge 1179.06
+
+EXIT 0; elapsed 0.835s
+CHARGED 1179.895
+
+COMMAND ["cmd", "/c", "npm", "run", "check:git-size"]
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.857s
+CHARGED 1180.752
+
+COMMAND ["git", "diff", "--cached", "--check"]
+
+EXIT 0; elapsed 0.070s
+CHARGED 1180.822
