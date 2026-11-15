@@ -1,49 +1,44 @@
-# Current work — M121 competing perceived units
-Baseline16a85c93. Extend the same character to an observed social event with one focal
-person and up to2 additional perceived objects. No peer character or new runtime.
-Candidate rules/registry0.90, encoding0.2; existing reference laws/feedback TRUE.
-C-ATTN :4..13 prerequisite; final21/15/132 and current E/P/N/U counts unchanged.
+# Current work — M121 competing perceived units complete
 
-## Observable gate and declared scenario
-Use M120's one holder, two social tasks/third unknown, body10/sample4, seed0,
-A true1/B false2/silent A reminder3/judgment4. No learned starting state.
-Focal A is observed Target in BOTH arms. At1 an additional permitted object is Actor
-versus Participant, with the same capacity1 and original role priorities.
-Both must have2 eligible candidates; selection must exclude/include the focal Target.
-Semantic person belief remains1/2; episodic A absent/present; actual recall/workspace
-must produce contextual judgment0/1 consumed by the same joint appraisal.
-No choice/dice-effect claim. Extra objects carry role evidence, not claims or people.
+Multiple objects in one perceived encounter now compete for attention in the shared
+character. Losing selection prevents focal episodic acquisition and changes later
+remembered judgment, while general person belief remains fixed.
+Reference0.90/encoding0.2; feedback TRUE and existing psychological laws unchanged.
+Plan/contract36e3d13f; tested source6ab9c390.
+[Result](ASSEMBLED_CHARACTER_M121_RESULT.md) and [checks](ASSEMBLED_CHARACTER_M121_CHECKS.txt).
 
-Controls: capacity0/2; absent/denied additional detection; hidden physical role;
-third lower-priority unit cannot change selected focal strength; observed role
-rather than truth determines competition. Invalid over-capacity source/schema rejects.
-Selected-only original capability and all four budget alternatives stay controls.
-Exact repeat and save1/restore through full queue exhaustion; injected failure after
-new perception writes must roll back state/output/trace/queue/IDs and then continue.
-Retained M120 full six-test suite checks legacy0.89 behavior; source closure unchanged.
+## What passed
+- Two eligible observations/K1: focal Target vs Participant selects focal; Target vs
+  Actor excludes it. A/B vs B-only episodes, equal global belief1/2, actual recalled
+  judgment1/0. Exact SEM/provenance/formation/workspace/appraisal joins.
+- K0/2; denied detection equals absence; hidden physical-role invariance; third
+  lower-priority item leaves focal strength and later judgment unchanged.
+- Shared SEM241/242 Perception owner and common allocator. A selected distractor
+  cannot authorize focal memory. Old model rejects new-version memory annex.
+- Exact repeat/save1/restored full queue continuation and post-perception fault
+  rollback. A real single-item position episode forms through the same0.2 encoder.
+- Five final native tests, six unchanged M120 tests and 66 original foundation/
+  component controls pass, plus types/boundaries/research/preservation.
+  Charged 1485.077/1800s including failures; no extension.
 
-## Implementation/authority
-Before code: new formal assembled multi-unit encoding0.2 contract, ledger MEC005/007/
-010 and CTL004/RET001 consulted; original selector0.1/budget0.2 math unchanged.
-At most10 production/test files: model,encoding,recognition,recognitionState,
-recognitionExecution,encounter,socialExecution,traceBinding; new test and fixture.
-Shared SEM241/242 Perception owner; single121/122/124/130/140 path. Batched track
-counter increments match exact new memberships; old versions still require+1.
-Only permitted observations reach tracking/binding; never author selected candidates.
-Reserve each actual claim ID through the shared allocator. Existing selected capability
-determines focal admission; never let a selected distractor authorize focal memory.
-The original full SEM/selection audit remains provenance, not a new recalled content
-store: only the selected focal person's already-observed claim may form an episode.
-No invented association weights or extra perception lookup from recall.
+## Repairs and limits
+Retained trace-version omission, batch-binding identity defect and wrong-channel
+test-reader failure. Fixed declarations, reserved each focal/extra binding explicitly,
+and joined exact ExperienceIds. Auxiliary EPI fixture had no position formation;
+retained both nulls and replaced it with the existing permitted M50 marker/panel.
+Model-version validation strengthened before rerunning all native gates.
 
-## Verification and stop
-One job;1800s cumulative incl15s bookkeeping;600s/command. Expected native gate320s,
-controls250s,continuation/rollback250s,legacy500s,original60s,types120s,other100s.
-Use cached immutable snapshots invalidated after settlement. No truncated scenarios.
-<=3 capabilities,12 production/test files,20 evidence files/5MiB. CURRENT<=80;
-register<=250lines/65536CRLF bytes. One compact result/log, Git retains failures.
-Done iff actual selection->memory->appraisal and controls/continuation/affected checks
-pass. Wider footprint/association/Need/surprise and C-ATTN mapping remain open.
-Routine amendments self-approved and recorded before reruns; no scope/law waiver.
-No UI, unrelated breadth, alternate psychology or autonomous partners.
+Eleven production/test files; one new formal contract; two evidence files.
+C-ATTN remains UNRESOLVED: current competition is within one encounter. Native
+selected-footprint budget alternatives, graded strength/association and broader
+cross-modal/source coverage remain. No member/clause promotion:12/21 mapped,
+0/15 families; E46/P54/N17/U15=132. Final whole-candidate21/15/132 replay remains.
+All obligation statuses unchanged. Old0.89 behavior and Campaign0–3 controls preserved.
+
+Write the next bounded card before code; same model/state/scheduler/owners.
+One milestone/job;3 capabilities/12 code-test files;20 evidence files/5MiB.
+Default1800s cumulative/600s per command; rerun only affected checks.
+Delegated routine diagnosis/comparison amendments remain authorized; record before
+rerun, preserve failures, never retune laws or waive final requirements.
+No UI, unrelated breadth, autonomous peers or alternate psychology.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |

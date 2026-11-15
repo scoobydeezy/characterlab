@@ -6,7 +6,7 @@ Read [CURRENT.md](docs/planning/CURRENT.md), then
 The active direction is assembly of one continuing character.
 Workbench/UI development and Campaign 4 are stopped pending assembly acceptance.
 This is the assembly checkout, based on
-`788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`. M120 verifies attention/encoding -> recalled judgment in the current character; multi-unit attention remains open. Reference0.89, feedback TRUE, existing psychological laws unchanged. Twelve members mapped; full assembly/families remain open. Follow CURRENT.md; no unrelated breadth, UI or multi-character work.
+`788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`. M121 integrates competing perceived units -> focal memory -> later judgment. Wider attention budgets remain open. Reference0.90, feedback TRUE, existing psychological laws unchanged. Twelve members mapped; full assembly/families remain open. Follow CURRENT.md; no unrelated breadth, UI or multi-character work.
 Do not execute historical TODOs, resume old audits, or retain/revisit browser tabs.
 Old instructions/evidence remain on tag `archive/workbench-stopped-2026-10-25`.
 ## Authority
