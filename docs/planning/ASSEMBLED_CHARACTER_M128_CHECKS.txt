@@ -1,2 +1,35 @@
 M128 plan before implementation; baseline feea1d19; 1800s cap; 15s prepaid bookkeeping.
 CHARGED 15.000
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+src/assembled/workMaintenance.ts(95,154): error TS2322: Type 'CanonicalValue | readonly CanonicalValue[]' is not assignable to type 'CanonicalValue'.
+  Type 'readonly CanonicalValue[]' is not assignable to type 'CanonicalValue'.
+    Property 'kind' is missing in type 'readonly CanonicalValue[]' but required in type '{ readonly kind: "map"; readonly entries: readonly (readonly [CanonicalValue, CanonicalValue])[]; }'.
+src/assembled/workMaintenance.ts(98,88): error TS2322: Type 'CanonicalValue | readonly CanonicalValue[]' is not assignable to type 'CanonicalValue'.
+  Type 'readonly CanonicalValue[]' is not assignable to type 'CanonicalValue'.
+    Property 'kind' is missing in type 'readonly CanonicalValue[]' but required in type '{ readonly kind: "map"; readonly entries: readonly (readonly [CanonicalValue, CanonicalValue])[]; }'.
+
+EXIT 2; elapsed 18.703s
+CHARGED 33.703
+
+Type correction: safe observation parser returns fields; report/input retain original canonical value. No semantic/input amendment.
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+src/test/assembledWorkMaintenance.test.ts(89,117): error TS2339: Property 'settle' does not exist on type 'Readonly<{ taskPendingFacts: () => readonly TaskPendingFact[]; memoryPendingFacts: () => readonly MemoryPendingFact[]; predictionPendingFacts: () => readonly PredictionPendingFact[]; ... 4 more ...; diagnostic: () => FailureDiagnostic | undefined; }>'.
+src/test/assembledWorkMaintenance.test.ts(91,23): error TS2339: Property 'settleForConformance' does not exist on type 'Readonly<{ taskPendingFacts: () => readonly TaskPendingFact[]; memoryPendingFacts: () => readonly MemoryPendingFact[]; predictionPendingFacts: () => readonly PredictionPendingFact[]; ... 4 more ...; diagnostic: () => FailureDiagnostic | undefined; }>'.
+src/test/assembledWorkMaintenance.test.ts(91,56): error TS7006: Parameter 'boundary' implicitly has an 'any' type.
+src/test/assembledWorkMaintenance.test.ts(91,65): error TS7006: Parameter 'event' implicitly has an 'any' type.
+src/test/assembledWorkMaintenance.test.ts(92,217): error TS7053: Element implicitly has an 'any' type because expression of type '"outputs" | "trace" | "allocators" | "queue"' can't be used to index type 'SchedulerSnapshot<AuthoritativeState>'.
+  Property 'trace' does not exist on type 'SchedulerSnapshot<AuthoritativeState>'.
+src/test/assembledWorkMaintenance.test.ts(92,235): error TS7053: Element implicitly has an 'any' type because expression of type '"outputs" | "trace" | "allocators" | "queue"' can't be used to index type 'SchedulerSnapshot<AuthoritativeState>'.
+  Property 'trace' does not exist on type 'SchedulerSnapshot<AuthoritativeState>'.
+
+EXIT 2; elapsed 18.014s
+CHARGED 51.717
+
+Type correction: original standalone runtime exposes conformance hooks; assembled runtime intentionally does not. Test injects faults through the existing module seam and checks public whole-snapshot rollback, without adding an injection API.
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 18.129s
+CHARGED 69.846

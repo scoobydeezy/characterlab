@@ -1,3 +1,4 @@
+import {withWorkMaintenanceState} from './workMaintenance';
 import {withAssociationState} from './learnedAssociation';
 import {withEffectBelief} from './effectEvidence';
 import {receivingRecord as statusRecord} from './codecs';
@@ -109,7 +110,8 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  const identityRegistration=rec(f(rows.find(v=>key(f(v,1n))===key(typedIdentifier(1009,text('TaskIdentityApplicationTransition'))))!,4n),450n);
  const qualified=model.eligibilityEnabled?withQualifiedIdentityState(recognized,identityKey,id(f(rec(f(identityRegistration,6n),322n),2n))):recognized;
  const believed=model.effectEvidence?withEffectBelief(qualified,C,model.effectEvidence):qualified;
- const stateModel=model.affectMemory?.learned?withAssociationState(believed,C,model.affectMemory.learned):believed;
+ const associated=model.affectMemory?.learned?withAssociationState(believed,C,model.affectMemory.learned):believed;
+ const stateModel=model.workMaintenance?withWorkMaintenanceState(associated,C,model.workMaintenance,tasks.length):associated;
  function initialState(bytes:Uint8Array){
   const state=stateModel.restoreState(bytes);
   for(const e of state.entries()){
