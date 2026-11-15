@@ -103,3 +103,13 @@ async function originalCorrespondence(r:Run){
  }
  console.info('M119 ORIGINAL EXECUTION PASS: seven actual native operand rows; time10..22 maps1..7; no native state injection');
 }
+
+it('intent119: private competence changes outcome under identical confidence and intent bytes',async()=>{
+ const runs:Run[]=[];
+ for(const profile of ['trained-positive','untrained-positive'] as const){const b=fixture(profile),r=await createCharacterRun(await prepareCharacterModel(b.s),b.d);await through(r,16n);
+  expect(belief(r,b.tasks[0]).mean).toEqual(Q.of(1n));checkProbe(r,16,profile==='trained-positive'?Q.of(1n,2n):Q.of(0n),profile==='trained-positive');runs.push(r);
+ }
+ for(const type of [425n,426n,431n]){const a=typedAt(runs[0],16,type),b=typedAt(runs[1],16,type);expect(a.length).toBeGreaterThan(0);bytes(enc(list(a)),enc(list(b)));}
+ for(const r of runs)await finish(r);
+ console.info('M119 COMPETENCE INTENT PASS: same confidence1 and whole intent/expression/plan bytes; success versus failure');
+},390000);

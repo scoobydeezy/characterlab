@@ -65,3 +65,10 @@ first native trained-negative case passed, remainder unqualified. Reader repeate
 serialized/decoded identical complete snapshots in assertions. Cache one immutable
 settled snapshot plus decoded streams; invalidate in finally after every settlement.
 All assertions, scenarios, laws, horizons and1800s budget unchanged; originalfc697a7b.
+
+M119 delegated correspondence clarification before execution: add paired trained-
+positive/untrained-positive check at16, same confidence1, exact425/426/431 bytes
+and different actual outcomes. <=400s, within existing1800s. No scenario/law change.
+Earned mapping may promote BRIEF12.8:1/2/3 from partial to evidenced; all132 remain,
+other clause dispositions unchanged, rust/recollection still open. This supersedes
+the card's blanket unchanged F-count expectation, not its final completion rule.
