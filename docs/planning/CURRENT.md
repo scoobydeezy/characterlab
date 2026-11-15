@@ -1,44 +1,55 @@
-# Current work — M128 bounded WORK integration complete
-The character protects a selected plan against distraction, recovers a displaced
-but retained plan from a later observed reminder, and refuses recovery after expiry.
-These operations feed the one workspace/appraisal/reason/choice/execution path.
+# Current work — M129 same-continuant role binding and receiving memory
+One perceived person can occupy several roles in one event without being split into
+new perceived people. Preserve each binding occurrence through attention/memory and
+show the resulting remembered appraisal/choice in the same continuing character.
+Baseline f87e99d8; successor0.95, unchanged reference laws/UnitBudget/feedback TRUE.
 
-Reference0.94; unchanged laws, dice/calibration, feedback TRUE and shared UnitBudget.
-Plan cf435940; final tested source d0ca93f3; baseline feea1d19.
-[Result](ASSEMBLED_CHARACTER_M128_RESULT.md); [checks](ASSEMBLED_CHARACTER_M128_CHECKS.txt).
+## Bounded card, before code
+Three capabilities: represent repeated/multiple roles on the focal continuant;
+derive causal companions once per actual carrier without duplicate claims;
+consume admitted/excluded focal episode through later shared recall/appraisal/choice.
+C-SEM partial :2/:3/:6/:7/:8/:9/:10; :4/:5/:11..13 remain standing requirements.
+No full SEM mapping: three observers, full facets/event patterns, retirement,
+symbol mapping and further provenance/lane controls still require integration.
+MEC004 boundary-corrected port; MEC005/007/010 and RO003/004/005/006/007 preserved.
+Original C1 factories/control tests and old assembled versions stay unchanged.
+No new store, owner, scheduler, law, latent confidence or direct identity source.
 
-## What passed
-- Full distraction x support2x2 plus independent capacity: at7 B probability is
-  1 unsupported/high,0 supported/high,0 unsupported/low,0 supported/low,
-  and1/2 with room for both tasks. Actual live appraisal/grounds/attempts.
-- Exact retained goal bytes while displaced; reminder restores A at8; after
-  expiry9, cue cannot supply a base/ground or recreate an intention at10.
-- Source110 -> safe120 -> retained140 -> later workspace40; one capacity pays
-  for tasks, forecast, neutral distraction, existing control and recalled memory.
--4096 original selector comparisons; original StoredSet/IndexedReplay and named
-  negative controls; native whole-safe-state/output privacy and complete queues.
-- Exact repeat/save-before-displacement continuation at every later boundary;
-  actual source/cache/three task reads; wrong owner/learned S0/old input rejection;
-  source, observation, selection and consolidation faults roll back whole instants.
-- 18 targeted tests and types pass. Reference boundary, research, preservation, Git size and staged whitespace checks pass.
-- 1180.822/1800s including failures/15s bookkeeping; no extension.
-  Ten production/test files; two evidence files below5MiB.
-- Failures preserved: canonical observation/trace wrapping; test's assumed standalone
-  fault API; missing exact0.94 trace admission. Protected-low arm completed the
-  predeclared2x2 before rerun. No laws/seed/threshold tuning.
+Files (<=12): model.ts, traceBinding.ts, recognition.ts, encounter.ts,
+recognitionExecution.ts, socialExecution.ts, encoding.ts;
+fixtures/assembledRoleBinding.ts, assembledRoleBinding.test.ts (nine planned).
+Versioned ASSEMBLED_CHARACTER_ROLE_BINDING_CONTRACT.md precedes implementation.
+Source adds one permitted observed co-carrier Boolean to each extra role.
+It may be wrong; never infer continuity from hidden truth. Existing focal track
+is reused only from that permitted relation. Each role retains a binding occurrence.
+Keep current finite attention law: multiple different causal roles on one unit
+produce explicit MultipleRoles exclusion; do not choose a convenient winning role.
+Duplicate same-role bindings produce one companion with both supporting refs.
 
-C-WORK :3..10 mapped in the bounded controlled-card domain; :11/12 tracked.
-15/21 mapped,0/15 accepted complete families,E46/P54/N17/U15=132 unchanged.
-This does not close broader Brief12.6 or claim ordinary reminder recognition.
-Latest-safe-source + selected-set cache uses existing knowledge/workspace owners.
-Original indexed reconstruction stays confined to fixed deadlines/full safe history;
-no cache-reduction claim for assembled cancellation, fulfillment or history loss.
-RO-C3-012's wider triggers remain conditional; final whole-candidate replay mandatory.
+## Comparison and liveness
+Same seed0, body10, recognized person, true encounter1/false encounter2, silent cue3,
+recall/current body at21; A/B importance1, distinct routes; physical task success off.
+Only encounter2's observed same-continuant Boolean differs:
+separate Target/Participant -> focal negative episode admitted;
+one Target+Participant carrier -> explicit MultipleRoles exclusion -> no negative
+episode. Common earlier positive episode remains. Person belief must remain1/2.
+Later recall should select negative vs positive and actual live appraisal/reasons/
+choice probability differ. Assert live appraisal before numeric comparison.
+Use actual production distributions/Auto probabilities, no uncoupled winner claim.
+Same-role co-carrier control preserves two bindings, one claim and one selected unit.
+Hidden world/physical roles with identical permitted evidence must not affect cognition.
 
-Remaining unmapped members: ADAPT, SEM, SOCIAL, MULTI, REL, LONG.
-Next card should address the next receiving gap in causal order; no extra WORK audit
-or unchanged regression. Preserve all original controls and previous mapped limits.
-One milestone/job,3 capabilities,12 code/test files,20 evidence/5MiB,
-1800s cumulative/600s command. Delegated diagnosis/amendments remain authorized;
-record first, preserve failures/laws/scope; passing ends checks. No UI/autonomous peers.
-| Research obligations | **0 active / 18 conditional / 0 unowned** |
+## Checks and limits
+One job,600s/command,1800s cumulative incl failures,15s prepaid bookkeeping.
+<=3 capabilities,12 production/test files,20 evidence files/5MiB.
+Types before native runs. Fast original C1 binding/attention controls and targeted
+co-carrier derivation/canonical validation. Native complete primary queues; repeat/
+save after encounter2 through every boundary; hidden-source equality; old grammar/
+wrong type/annex/collision rejection; fault after new binding/encoding rolls back
+whole instant. Retain affected prior encoding witness on unchanged old version.
+Reference-boundary/research/size/preservation checks; no unchanged full C2 rerun.
+Binary done: structural multiplicity and actual downstream connection/control pass
+in budget, otherwise checkpoint missing gate without extending final scope.
+Self-approve bounded fixes/amendments before reruns; preserve failures/laws/scope.
+No seed search, no MultipleRoles law change, no UI/autonomous peers.
+15/21 mapped and all21/15/132 final obligations remain; SEM stays partial here.
