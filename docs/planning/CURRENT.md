@@ -1,41 +1,57 @@
-# Current work — M125 belief correction and goal separation complete
-The character acquires a wrong person belief from misleading reports, revises it
-after contrary evidence, and keeps that belief unchanged when a task's goal changes.
-Actual social and joint appraisal consume the old belief before correction and
-the updated belief afterward. C-BELIEF remains open for the missing comparisons.
+# Current work — M126 qualifying absence and longer belief histories
+The character will learn from a visibly available, fully monitored opportunity
+whose outcome does not occur, while silence, censoring and denied evidence stay inert.
+It will retain the original eight-positive/nine-contrary evidence history.
 
-Reference0.92; feedback TRUE; existing laws and encoding/association policy unchanged.
-Plan66f62107; final source802df072; primary/continuation4239cc76.
-[Result](ASSEMBLED_CHARACTER_M125_RESULT.md); [checks](ASSEMBLED_CHARACTER_M125_CHECKS.txt).
+## Bounded card (before code)
+Baseline d1d9895e; delegated self-approval applies to routine repairs/amendments.
+Three capabilities: safe opportunity admission; longer same-owner histories;
+live appraisal/trace/persistence correspondence for the BELIEF member.
+Reference0.93 successor; feedback TRUE; shared/UnitBudget and all existing laws fixed.
+Formal: ASSEMBLED_CHARACTER_BELIEF_TRIAL_CONTRACT.md (0.1-candidate).
+Port BELIEF_PUBLIC_CONTRACT.md four classes and equal-weight mean; no trust,
+correlation, calibration, decay or new belief owner. Consulted BELIEF ledger
+MEC001/EXP001, MEC002/EXP002/005, MEC006 and conditional RO-C3-010.
+One model/state/scheduler/save. Campaign0–3 and0.92 controls remain preserved.
 
-## What passed
-- Fixed false truth: seven misleading reports -> mean1/support7; accurate reports ->0.
-  Contrary report8 revises the former to7/8. Probe8 reads prior1; probe9 reads7/8.
-- Goal-only change preserves exact person history/state, while actual failure
-  likelihood changes0 versus1, then1/8 versus7/8. Both compared rows are live.
-- One holder/recognized stand-in, two social tasks/third unknown; body10/samples8+9,
-  importance0, seed0, unique receipts1..8. No learned S0 or authored intermediate.
-- Hidden truth cannot correct belief; silent/denied final source leaves history
-  unchanged. An unknown denied-source trace stays unknown and has zero writes.
-- Exact repeat/save7 continuation through full queue. Original weighted mean,
-  LastObservation and NoLearning on actual claims give7/8,0,unknown respectively.
-- Three native tests and17 original BELIEF controls pass; types/boundaries pass.
-  Research, preservation, Git size and staged whitespace checks also pass.
-- 928.194/1800s including failures/15s bookkeeping; no extension.
-  Two test/helper files, zero production/formal edits; two evidence files.
-- Retained failures: importance-record helper; missing sample9 made joint appraisal
-  unavailable (matched sample added under delegated amendment); empty denied prior
-  decoded as known (helper repaired, actual unknown preserved). M124 status link fixed.
+## Scope / files
+Production: model.ts, social.ts, socialExecution.ts, inputs.ts, state.ts,
+traceBinding.ts, memory.ts under src/assembled (seven files).
+Tests: fixtures/assembledBeliefTrials.ts and assembledBeliefTrials.test.ts.
+At most twelve production/test files; no UI, factory or parallel psychology.
+New version admits32 social sources/receipts/history rows, old versions retain8.
+Structural episode decoding accepts32; model-bound state admission preserves8/32.
+New source exposes only permitted opportunity/monitor/report to observation120;
+actual world opportunity/outcome stay outside cognition. Existing C1 recognition,
+person owner810/1, episodic owner and appraisal50 remain the consumers.
 
-Next bounded integration must address a qualifying negative opportunity versus mere
-silence/censoring, and the original longer support histories, through shared owners.
-M125's native7+1 does not relabel original8+1/8+9 as natively replayed.
-Confidence8/9 is a captured-kernel diagnostic, not a new native confidence consumer.
-No entire BELIEF member or F-clause promotion.13/21 mapped,0/15 families;
-E46/P54/N17/U15=132. All21/15/132 and final whole-candidate replay remain mandatory.
+## Predeclared comparisons
+One holder/recognized stand-in, two social tasks/third unknown; body10, importance0,
+seed0, no learned S0. Normal body samples and live probes accompany comparisons.
+A: eight misleading positives then nine contrary trials ->1,8/9,8/17 at8/9/17;
+current probes read prior, later probes read correction. Full queues, save8/restore
+and exact repeat at every continuation boundary. Captured original kernels
+check mean/support, LastObservation/NoLearning and confidence diagnostic.
+B: one positive then five qualified absences ->1/6; matched no-opportunity,
+censored and denied arms ->1/support1; entirely uninformative arm stays unknown.
+Hidden actual outcome/opportunity perturbation must preserve safe outputs/state.
+All named classes and zero-write cases disclosed with actual observation/C1 links.
+Goal-only and truth/evidence separation retained from M125 with targeted0.92 replay.
+Researcher-only TruthLookup/GoalAsBelief/UnconditionalAbsence controls must fail
+their required distinction, never enter the reference character.
+All behavioral comparisons require live social/joint rows before numeric comparison.
+Malformed sources, old-version rejection,32/33 admission boundary, owner/state
+limits and rollback checks cover changed domains. No generated evidence as input.
 
-Write/commit the next card before code. One milestone/job,3 capabilities,
-12 code/test files,20 evidence/5MiB,1800s cumulative/600s command.
-Passing ends verification. Delegated diagnosis/amendments remain authorized:
-record first, retain failures and laws/final scope. No UI or autonomous peers.
+## Verification / stop
+One job;1800s cumulative including15s bookkeeping;600s max command.
+Native long-history/continuation and opportunity/privacy controls separately bounded;
+original BELIEF kernels/public controls, targeted M125 regression, types/boundaries,
+research/preservation/Git size/staged whitespace. No unchanged broad GA/C2 rerun.
+20 evidence files/5MiB, one result/check log. Retain failures; amendments recorded
+before rerun; passing ends checks. Two unchanged attempts trigger decision stop.
+Done: declared witnesses/controls pass, exact continuation and preserved controls,
+honest C-BELIEF mapping decision. A failure or remaining required comparison stays
+open; no completion by narrowing. Final all21/15/132 replay remains mandatory.
+Before result:13/21 mapped,0/15 families; E46/P54/N17/U15=132 unchanged.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
