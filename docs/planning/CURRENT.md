@@ -19,7 +19,7 @@ Use existing person owner810/1, social/C1 evidence and shared appraisal.
 No production/formal changes planned; <=3 new test/helper files.
 
 Scenario before execution: one holder, same recognized coat stand-in; two social
-tasks/third unknown, body10 sampled8, seed0. No learned S0. Eight sources1..8,
+tasks/third unknown, body10 sampled8/9, seed0. No learned S0. Eight sources1..8,
 unique receipts1..8, continuing track after1. All actual truth flags false.
 Seven permitted true claims then false8; first probe8 precedes its consequence
 update140, second probe9 sees it. Accurate control reports false throughout.
@@ -57,3 +57,8 @@ No C/F promotion this package.13/21 mapped,0/15 families; E46/P54/N17/U15=132.
 Final21/15/132 replay remains mandatory. Delegated repairs/comparison amendments
 authorized: record before rerun, retain failures; no law retuning or scope reduction.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
+
+Delegated fixture amendment before rerun: probe9 had no current body observation
+and no recalled context, so joint appraisal correctly stayed Unavailable. Add the
+same normal sample9 in every arm; initial body10/laws/histories/goals unchanged.
+Keep liveness assertions. Source f14c973b and failed receipt retain the setup error.

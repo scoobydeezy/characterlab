@@ -69,3 +69,43 @@ EXIT 1; elapsed 125.817s
 CHARGED 159.439
 
 REPAIR before rerun: primary passed belief/goal equality and live8 appraisal, then importance assertion compared full [tag,value,source,version] record to bare0. Read its value field; actual importance remains0. No production/fixture/criterion changes. Before first controls run add exact manifest checks for fixed false truth, report-only and hidden-truth-only interventions.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledBeliefReceiving.test.ts", "-t", "primary125", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledBeliefReceiving.test.ts > primary125: wrong learned belief corrects through permitted contradiction; goals change appraisal not belief 126243ms
+   → expected false to be true // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledBeliefReceiving.test.ts > primary125: wrong learned belief corrects through permitted contradiction; goals change appraisal not belief
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ probe src/test/assembledBeliefReceiving.test.ts:31:69
+     29|  expect(items(items(row[6],'list')[3],'list')).toHaveLength(0); // No …
+     30|  const joint=report(r,JOINT_APPRAISAL).find(a=>items(a[6],'list').slic…
+     31|  expect(items(joint[4],'list').some(v=>items(v,'list').length===5)).to…
+       |                                                                     ^
+     32|  expect(items(state(r).read(importancePath(task)).value!,'list')[1]).t…
+     33| }
+ ❯ src/test/assembledBeliefReceiving.test.ts:62:2
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  14:54:30
+   Duration  130.95s (transform 2.81s, setup 0ms, collect 4.22s, tests 126.24s, environment 0ms, prepare 158ms)
+
+
+EXIT 1; elapsed 131.566s
+CHARGED 291.005
+
+DELEGATED FIXTURE AMENDMENT before rerun: source f14c973b reached correct person mean7/8 and social probe9, but failed joint-row liveness. contextAppraisal requires current sample or selected earlier body episode; source only supplied sample8 and no recall occurs until21. Add identical normal body sample9 to ALL arms, reserve10 and all laws, reports, goals, seed, correction and exact-belief requirements unchanged. This is a setup error, not a mechanism/law failure or interaction. No liveness gate removed.
