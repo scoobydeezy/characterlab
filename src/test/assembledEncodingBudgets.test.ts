@@ -90,7 +90,7 @@ it('boundaries122: declaration and memory bind the exact fixed law and calibrati
  await expect(prepareCharacterModel({...b.s,rulesVersion:b.legacy.s.rulesVersion,registrySchemaVersion:b.legacy.s.registrySchemaVersion})).rejects.toThrow('encoding: declaration');
  const r=await createCharacterRun(await prepareCharacterModel(b.s),b.d);await through(r,1n);const a=assessment(r,2,2,'historical-shared','SmallBudget');
  const modified=[...a],rows=[...items(a[8],'list')],row=[...items(rows[0],'list')];row[6]=q(1,7);rows[0]=list(row);modified[8]=list(rows);expect(()=>validateEncoding(list(modified),a[4])).toThrow('canonical factors/refs');
- for(const args of [['dense','historical-shared','UnitBudget'],['dense','independent','SmallBudget']] as const){const other=fixture(...args),s=await compileCharacterState(await compileCharacterModel(other.s));expect(()=>s.stateModel.validateState(state(r))).toThrow('encoding model binding');}
+ for(const args of [['dense','historical-shared','UnitBudget'],['dense','independent','SmallBudget']] as const){const other=fixture(args[0],args[1],args[2]),s=await compileCharacterState(await compileCharacterModel(other.s));expect(()=>s.stateModel.validateState(state(r))).toThrow('encoding model binding');}
  const old=await compileCharacterState(await compileCharacterModel(b.legacy.s));expect(()=>old.stateModel.validateState(state(r))).toThrow('encoding model binding');await finish(r);
  console.info('M122 BOUNDARIES unknown policies, old grammar/annex, different-law or calibration state and forged strength rejected');
 },180000);
