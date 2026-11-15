@@ -228,7 +228,7 @@ identify actual gaps. Historical gate status does not override later accepted cl
 
 ## Current authorization boundary
 Owner2026-11-13 adopts0.85; after M105 authorizes continued character integration.
-Delegated M114 adopts0.89/effect-evidence0.1; M121 adds0.90/encoding0.2 competition. Feedback TRUE; existing laws unchanged.
+Delegated M122 adds0.91/encoding0.3 budget comparisons; reference shared/UnitBudget. Feedback TRUE; existing laws unchanged.
 Original BIO/EPI controls/limits remain; final whole-candidate replay required. No UI, publishing or assembly acceptance.
 
 ## Owner ruling — unknown factors and live gates (2026-11-02)

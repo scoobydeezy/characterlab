@@ -63,3 +63,193 @@ EXIT 0; elapsed 286.869s
 CHARGED 321.246
 
 Native primary PASS at b46f9505. Remaining tests grouped with name-only prefix to reuse one fixture setup; no primary rerun or assertion change.
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledEncodingBudgets.test.ts", "-t", "remaining122", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledEncodingBudgets.test.ts > remaining122 controls122: permission capacity hidden truth and attention operand stay separate
+M122 CONTROLS denied==absent, hidden truth invariant, K1 excluded footprint strength1, K0 no episodes/fallback1/2, disabled attention preserves causal role
+
+ ✓ src/test/assembledEncodingBudgets.test.ts > remaining122 controls122: permission capacity hidden truth and attention operand stay separate 182047ms
+stdout | src/test/assembledEncodingBudgets.test.ts > remaining122 continuation122: nonreference budget exact repeat restore and atomic failure
+M122 CONTINUATION exact repeat/save1/restore/full queues; post-encoding failure restores visible preinstant snapshot and saved prefix matches clean continuation
+
+ ✓ src/test/assembledEncodingBudgets.test.ts > remaining122 continuation122: nonreference budget exact repeat restore and atomic failure 71786ms
+stdout | src/test/assembledEncodingBudgets.test.ts > remaining122 boundaries122: declaration and memory bind the exact fixed law and calibration
+M122 BOUNDARIES unknown policies, old grammar/annex, different-law or calibration state and forged strength rejected
+
+ ✓ src/test/assembledEncodingBudgets.test.ts > remaining122 boundaries122: declaration and memory bind the exact fixed law and calibration 27233ms
+stdout | src/test/assembledEncodingBudgets.test.ts > remaining122 position122: existing position channel uses and validates the same budget encoder
+M122 POSITION actual formation uses same independent3/13 encoder and rejects other-model policy
+
+ ✓ src/test/assembledEncodingBudgets.test.ts > remaining122 position122: existing position channel uses and validates the same budget encoder 19920ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed | 6 skipped (10)
+   Start at  11:43:44
+   Duration  305.54s (transform 2.72s, setup 0ms, collect 4.08s, tests 300.99s, environment 0ms, prepare 147ms)
+
+
+EXIT 0; elapsed 307.236s
+CHARGED 628.482
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledCompetingAttention.test.ts", "-t", "121", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCompetingAttention.test.ts > primary121: two permitted candidates compete and selected focal memory changes actual appraisal
+M121 PRIMARY Target vs Participant selects focal; Target vs Actor excludes focal; actual2 eligible/K1; equal belief1/2, recalled judgment1/0; full queue
+
+ ✓ src/test/assembledCompetingAttention.test.ts > primary121: two permitted candidates compete and selected focal memory changes actual appraisal 88358ms
+stdout | src/test/assembledCompetingAttention.test.ts > remaining121 controls121: capacity permission truth and lower-priority footprint
+M121 CONTROLS K0/2; denied==absent; hidden truth identical; third unselected unit leaves focal factors and later judgment unchanged
+
+ ✓ src/test/assembledCompetingAttention.test.ts > remaining121 controls121: capacity permission truth and lower-priority footprint 122504ms
+stdout | src/test/assembledCompetingAttention.test.ts > remaining121 continuation121: multi-unit atomic rollback repeat and full save continuation
+M121 CONTINUATION exact repeat/save1/full queues; injected post-perception failure rolls back whole instant and restores exact clean continuation
+
+ ✓ src/test/assembledCompetingAttention.test.ts > remaining121 continuation121: multi-unit atomic rollback repeat and full save continuation 88038ms
+stdout | src/test/assembledCompetingAttention.test.ts > remaining121 boundaries121: no extra-source or version bypass and focal selection is mandatory
+M121 BOUNDARIES source>2, old-version new grammar/state annex, duplicate reserved claims reject
+
+ ✓ src/test/assembledCompetingAttention.test.ts > remaining121 boundaries121: no extra-source or version bypass and focal selection is mandatory 6975ms
+stdout | src/test/assembledCompetingAttention.test.ts > single121: current position path still uses the shared encoder under0.90
+M121 SINGLE actual position/social scenario exhausts; committed formations=1, retained=1; every lost acquisition has a removal diff
+
+ ✓ src/test/assembledCompetingAttention.test.ts > single121: current position path still uses the shared encoder under0.90 19375ms
+
+ Test Files  1 passed (1)
+      Tests  5 passed | 5 skipped (10)
+   Start at  11:49:00
+   Duration  329.95s (transform 2.82s, setup 0ms, collect 4.22s, tests 325.25s, environment 0ms, prepare 143ms)
+
+
+EXIT 0; elapsed 331.645s
+CHARGED 960.127
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/attentionSelection.test.ts", "src/test/selectedEncoding.test.ts", "src/test/selectedEncodingBudgetControl.test.ts", "src/test/state.test.ts", "src/test/scheduler.test.ts", "src/test/persistence.test.ts", "src/test/semanticStateAuthority.test.ts", "src/test/semanticPhaseOrdering.test.ts", "src/test/semanticPhaseRollbackCause.test.ts", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/state.test.ts > Campaign 0E ownership and read-domain contracts > CV-OWN-001 rejects ownership overlap and uncovered writable families
+ ✓ src/test/state.test.ts > Campaign 0E ownership and read-domain contracts > CV-READ-001 rejects bindings and forged accessors outside the declared interface
+ ✓ src/test/state.test.ts > Campaign 0E ownership and read-domain contracts > CV-READ-002 records only actual reads and preserves derived-source provenance
+ ✓ src/test/state.test.ts > Campaign 0E canonical patches > CV-PATCH-001 canonicalizes construction order and emits exact structural diffs
+ ✓ src/test/state.test.ts > Campaign 0E canonical patches > CV-PATCH-002 rejects authority, precondition, overlap, domain, and mutable-alias failures
+ ✓ src/test/state.test.ts > Campaign 0E canonical patches > CV-PATCH-003 isolates deep counterfactual copies and encodings
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-ORD-001: queue insertion order cannot override DueAt, Phase, EventSequence
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-ORD-002: same-phase and later-phase emissions order correctly; earlier phase fails atomically
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-ORD-003: drains a newly emitted chain before external observation
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-ORD-004: cascade overflow restores everything and leaves no deferrable remainder
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > snapshots mutable canonical payloads and committed artifacts at every authority boundary
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-TXN-001: injected failure at before-state-validation restores state, queue, allocators, trace, and outputs
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-TXN-001: injected failure at after-state-validation restores state, queue, allocators, trace, and outputs
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-TXN-001: injected failure at before-event-validation restores state, queue, allocators, trace, and outputs
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-TXN-001: injected failure at after-event-validation restores state, queue, allocators, trace, and outputs
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-TXN-001: injected failure at before-trace-validation restores state, queue, allocators, trace, and outputs
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-TXN-001: injected failure at after-trace-validation restores state, queue, allocators, trace, and outputs
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-TXN-001: injected failure at before-invariant-validation restores state, queue, allocators, trace, and outputs
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-TXN-001: injected failure at after-invariant-validation restores state, queue, allocators, trace, and outputs
+ ✓ src/test/scheduler.test.ts > Campaign 0D ordering and whole-instant transaction > CV-TXN-001: injected failure at before-commit restores state, queue, allocators, trace, and outputs
+ ✓ src/test/persistence.test.ts > Campaign 0D canonical persistence > CV-SAVE-001/002: preserves full structure and continuation exactly
+ ✓ src/test/persistence.test.ts > Campaign 0D canonical persistence > CV-SAVE-002: rejects mid-transition saves and unresolved handler registries
+ ✓ src/test/semanticPhaseRollbackCause.test.ts > distinguishes the retained assertion false-positive from an orphan-envelope rollback
+ ✓ src/test/semanticPhaseOrdering.test.ts > SEM-001H two-lane semantic phase conformance > CV-SEM-081 registers the exact two-lane phases and non-schedulable settlement sentinel
+ ✓ src/test/semanticPhaseOrdering.test.ts > SEM-001H two-lane semantic phase conformance > CV-SEM-082 fixes the current lane chain and rejects truth at or after its entry cutoff
+ ✓ src/test/semanticPhaseOrdering.test.ts > SEM-001H two-lane semantic phase conformance > CV-SEM-083 fixes the consequence lane, admits phase-110 truth, and prevents reopening after phase 120
+ ✓ src/test/semanticPhaseOrdering.test.ts > SEM-001H two-lane semantic phase conformance > CV-SEM-084 conditionally reserves ExperienceId and forbids successful orphan or duplicate envelopes
+ ✓ src/test/semanticPhaseOrdering.test.ts > SEM-001H two-lane semantic phase conformance > CV-SEM-085 freezes one immutable envelope before separate companion causal-role evidence
+ ✓ src/test/semanticPhaseOrdering.test.ts > SEM-001H two-lane semantic phase conformance > CV-SEM-086 canonically schedules independent same-phase classifier work without creating a read edge
+ ✓ src/test/semanticPhaseOrdering.test.ts > SEM-001H two-lane semantic phase conformance > CV-SEM-087 freezes recognition inputs and permits consequence correction without rewriting phase-21 history
+ ✓ src/test/semanticPhaseOrdering.test.ts > SEM-001H two-lane semantic phase conformance > CV-SEM-088 keeps phase-130 perceived-outcome learning separate from truth-side automatic adaptation
+ ✓ src/test/semanticPhaseOrdering.test.ts > SEM-001H two-lane semantic phase conformance > CV-SEM-089 proves temporal availability without granting ORD-001 belief permission
+ ✓ src/test/semanticPhaseOrdering.test.ts > SEM-001H two-lane semantic phase conformance > CV-SEM-090 rejects barrier events and rolls reservations/allocators back on settlement failure
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > registers exactly one owner for every writable leaf of roots 241..244
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > rejects a second owner for an already-owned family and an uncovered leaf
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > projects both perceptual file states onto their registered leaves
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > keeps the membership leaf a mutation projection of the canonical set
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > admits writes only from the owning authority
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > enforces the accepted lifecycle in removal permission and leaf values
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > carries ownership, removal, and leaf grammar into ModelIdentity
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > addresses recognition knowledge by its accepted uniqueness keys
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-D: canonical evidence index crosses decimal occurrence boundaries
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-A: exact roles, capacities and empty component pool
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-B: observed role swap and honest alternative components
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-C: missing, unsupported and multiple roles do not receive fallback priorities
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-D: actual derivation rejects missing, forged, foreign and duplicated claims
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-E: rejects invalid capacity and more than three units
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-F: order invariance, canonical ties and strict-priority renaming
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-G: exact selected bytes succeed while unselected and observation lookup fail
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-H: forged, reused, closed and failed capabilities cannot read
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-I: source, audit and result mutations cannot change private authority
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-J: duplicate requests and duplicate semantic binding cannot enlarge selection
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-K: source history remains unchanged across selection and consumption
+ ✓ src/test/selectedEncoding.test.ts > selected-encoding/0.1-candidate > SEC-A: actual selected claims drive exact factors and original bytes
+ ✓ src/test/selectedEncoding.test.ts > selected-encoding/0.1-candidate > SEC-B: adding unselected footprint cannot affect selected encoding
+ ✓ src/test/selectedEncoding.test.ts > selected-encoding/0.1-candidate > SEC-C: selected footprint differences are recorded without conflating budget laws
+ ✓ src/test/selectedEncoding.test.ts > selected-encoding/0.1-candidate > SEC-D: disabling continuous attention preserves causal-role evidence and changes target strength
+ ✓ src/test/selectedEncoding.test.ts > selected-encoding/0.1-candidate > SEC-E: forged, consumed and failed-law attempts cannot reuse a live view
+ ✓ src/test/selectedEncoding.test.ts > selected-encoding/0.1-candidate > SEC-F: empty selection invents no observer, experience, owner or episode
+ ✓ src/test/selectedEncoding.test.ts > selected-encoding/0.1-candidate > SEC-G: mutations of returned evidence cannot rewrite source or another consumption
+ ✓ src/test/selectedEncoding.test.ts > selected-encoding/0.1-candidate > SEC-H: each row cites one actual selected claim with its existing binding provenance
+ ✓ src/test/selectedEncodingBudgetControl.test.ts > selected-encoding/0.2-candidate > SBC-A: all eight exact two/three-Actor comparisons include active shared normalization
+ ✓ src/test/selectedEncodingBudgetControl.test.ts > selected-encoding/0.2-candidate > SBC-B: important hybrid rows stay independent while low footprint shares a zero remainder floor
+ ✓ src/test/selectedEncodingBudgetControl.test.ts > selected-encoding/0.2-candidate > SBC-C: budget interventions do not change selected evidence or raw factors
+ ✓ src/test/selectedEncodingBudgetControl.test.ts > selected-encoding/0.2-candidate > SBC-D: invalid budget cannot leave a reusable selected capability
+ ✓ src/test/selectedEncodingBudgetControl.test.ts > selected-encoding/0.2-candidate > SBC-E: unselected footprint remains absent from both budget denominators
+
+ Test Files  9 passed (9)
+      Tests  66 passed (66)
+   Start at  11:54:46
+   Duration  934ms (transform 1.01s, setup 0ms, collect 2.30s, tests 351ms, environment 2ms, prepare 1.52s)
+
+
+EXIT 0; elapsed 2.588s
+CHARGED 962.715
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "--noEmit"]
+
+EXIT 0; elapsed 19.580s
+CHARGED 982.295
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:boundaries"]
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+EXIT 0; elapsed 3.216s
+CHARGED 985.511
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:research"]
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4343}
+
+EXIT 0; elapsed 3.895s
+CHARGED 989.406
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,json,re\nbase='af5a94f4'\nproduction=['encoding','model','socialExecution','traceBinding','memory']\ncode={'src/assembled/'+x+'.ts' for x in production}|{'src/test/assembledEncodingBudgets.test.ts','src/test/fixtures/assembledEncodingBudgets.ts'}\nallowed=code|{'AGENTS.md','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md','docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md','docs/planning/RESEARCH_OBLIGATIONS.json','docs/planning/ASSEMBLED_CHARACTER_M122_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M122_CHECKS.txt','docs/formal/ASSEMBLED_ENCODING_BUDGET_CONTRACT.md'}\ngit=lambda *a: subprocess.check_output(['git',*a],text=True,encoding='utf-8')\nchanged=set(git('diff','--name-only',base).splitlines())|set(git('ls-files','--others','--exclude-standard').splitlines())\nassert changed<=allowed,(changed-allowed)\nassert len(changed&code)==7\nassert git('diff','caa2b4b6','--','src')=='','source changed after tests'\nold=git('show',base+':docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md')\nnew=Path('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md').read_text(encoding='utf-8')\nrows=lambda s:[x for x in s.splitlines() if ('| C-' in x or '| F-' in x) and '| C-ATTN ' not in x]\nassert rows(old)==rows(new),'other C/F dispositions changed'\nassert 'E46/P54/N17/U15' in new and '12/21' in new and 'families:0/15' in new\nassert len(new.splitlines())<=250 and len(new.replace(chr(10),chr(13)+chr(10)).encode())<=65536\nbefore=json.loads(git('show',base+':docs/planning/RESEARCH_OBLIGATIONS.json'))\nafter=json.loads(Path('docs/planning/RESEARCH_OBLIGATIONS.json').read_text(encoding='utf-8-sig'))\nassert before['obligations']==after['obligations']\nassert after['reportReviews'][:-1]==before['reportReviews']\nassert after['reportReviews'][-1]['path']=='docs/planning/ASSEMBLED_CHARACTER_M122_RESULT.md'\nfor path,cap in [('AGENTS.md',120),('docs/planning/CURRENT.md',80),('docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md',250)]:\n assert len(Path(path).read_text(encoding='utf-8').splitlines())<=cap,path\nevidence=[Path('docs/planning/ASSEMBLED_CHARACTER_M122_'+suffix) for suffix in ['RESULT.md','CHECKS.txt']]\nassert len(evidence)<=20 and sum(p.stat().st_size for p in evidence)<5*1024*1024\nlog=evidence[1].read_text(encoding='utf-8')\ncharge=float([l.split()[1] for l in log.splitlines() if l.startswith('CHARGED ')][-1])\nassert charge<1800\nfor token in ['M122 ROW','M122 CONTROLS','M122 CONTINUATION','M122 BOUNDARIES','M122 POSITION','M121 PRIMARY','M121 CONTROLS','M121 CONTINUATION','M121 BOUNDARIES','M121 SINGLE','Reference boundary check passed.','PASS: research obligation references']:\n assert token in log,token\nassert 'sourcecaa2b4b6' in Path('docs/planning/CURRENT.md').read_text()\nprint('PASS M122 preservation: sourcecaa2b4b6;7 production/test files; only15 allowed paths; original Campaign0-3/control dependencies unchanged; other C/F and all obligations unchanged;12/21,0/15,E46/P54/N17/U15; document/evidence caps; charge',charge)\n"]
+PASS M122 preservation: sourcecaa2b4b6;7 production/test files; only15 allowed paths; original Campaign0-3/control dependencies unchanged; other C/F and all obligations unchanged;12/21,0/15,E46/P54/N17/U15; document/evidence caps; charge 989.406
+
+EXIT 0; elapsed 0.710s
+CHARGED 990.116
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:git-size"]
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.842s
+CHARGED 990.958
+
+COMMAND ["git", "diff", "--cached", "--check"]
+
+EXIT 0; elapsed 0.070s
+CHARGED 991.028
