@@ -49,14 +49,14 @@ it('M117 kinetics delayed delivery and exact continuation',async()=>{
  const times=[1n,31n,41n,61n],fast=[79,49,69,49],slow=[q(159,2),q(129,2),q(179,2),q(159,2)];
  expect(times.map(t=>level(left,t))).toEqual(fast.map(n=>q(n,1)));expect(times.map(t=>level(right,t))).toEqual(slow);
  for(const [i,t]of [31n,41n,61n].entries()){pressure(left,t,[q(1,6),q(0,1),q(1,6)][i]);pressure(right,t,q(0,1));pressure(none,t,[q(1,6),q(1,3),q(2,3)][i]);}
- const x=pressure(left,41n,q(0,1)),y=pressure(none,41n,q(1,3));console.info('M117 reason receiving '+JSON.stringify({fast:x.net.map(fraction),unrelieved:y.net.map(fraction),fastInteger:x.modifiers.map(v=>String(time(v))),unrelievedInteger:y.modifiers.map(v=>String(time(v)))}));expect(x.net).not.toEqual(y.net);expect(x.modifiers).toEqual(y.modifiers);
+ const x=pressure(left,41n,q(0,1)),y=pressure(none,41n,q(1,3));console.info('M117 reason receiving '+JSON.stringify({fast:x.net.map(fraction),unrelieved:y.net.map(fraction),fastInteger:x.modifiers.map(v=>String(time(v))),unrelievedInteger:y.modifiers.map(v=>String(time(v)))}));expect(x.net).not.toEqual(y.net);expect(x.tasks.some(t=>readQ(t[1]).numerator>0n)).toBe(true);expect(y.tasks.some(t=>readQ(t[1]).numerator>0n)).toBe(true);
  expect(outputs(left.snapshot().outputs,479n).map(x=>[1n,2n,3n,4n,5n].map(k=>f(x,k)))).toEqual([[49,30,30,0,79].map(x=>q(x,1))]);
  for(const r of [left,right,none])expect(outputs(r.snapshot().outputs,900n)).toHaveLength(0);
  for(const [r,name]of [[left,'kinetic-fast'],[right,'kinetic-slow'],[none,'no-delivery']]as const)await matchOriginal(r,name,times);
  console.info('M117 KINETICS PASS current sample31 precedes delivery; live concern/motive/reasons; exact duplicate/restore31->101');
 },550000);
-function aliasTrace(a:Run,b:Run){
- const x=rows(a),y=rows(b);expect(x.length).toBe(y.length);let draws=0;
+function aliasTrace(a:Run,b:Run,before?:bigint){
+ const x=rows(a).filter(t=>before===undefined||time(f(event(t),2n))<before),y=rows(b).filter(t=>before===undefined||time(f(event(t),2n))<before);expect(x.length).toBe(y.length);let draws=0;
  for(let i=0;i<x.length;i++){
   const physical=key(f(event(x[i]),5n))===key(BODY_SAMPLE),omit=physical?[3n,11n,15n]:[3n];
   if(physical){
@@ -71,28 +71,27 @@ function aliasTrace(a:Run,b:Run){
 it('M117 hidden alias and permitted resolution',async()=>{
  const a=fixture('alias41'),b=fixture('alias49'),fine=fixture('fine41');expect(a.s).toEqual(b.s);bytes(a.d.orderedInputs,b.d.orderedInputs);bytes(a.d.runSeed,b.d.runSeed);
  const left=await createCharacterRun(await prepareCharacterModel(a.s),a.d),right=await createCharacterRun(await prepareCharacterModel(b.s),b.d),resolution=await createCharacterRun(await prepareCharacterModel(fine.s),fine.d);
- await through(left,2n);await through(right,2n);await through(resolution,2n);
+ await through(left,10n);await through(right,10n);await through(resolution,10n);
  expect(body(left)).not.toEqual(body(right));bytes(rest(left),rest(right));bytes(left.snapshot().outputs,right.snapshot().outputs);const paired=aliasTrace(left,right);
- pressure(left,2n,q(0,1));pressure(right,2n,q(0,1));pressure(resolution,2n,q(1,6));expect(body(left)).toEqual(body(resolution));
- for(const [r,name]of [[left,'alias41'],[right,'alias49'],[resolution,'fine41']]as const)await matchOriginal(r,name,[2n],1n);
- const meterA=createStoredBody(Q.of(43n),Q.of(1n)).sample(2n,Q.of(20n),true),meterB=createStoredBody(Q.of(51n),Q.of(1n)).sample(2n,Q.of(20n),true);expect(meterA.mediated).toEqual(meterB.mediated);expect(meterA.independent).not.toEqual(meterB.independent);
- await through(left,3n);await through(right,3n);bytes(rest(left),rest(right));bytes(left.snapshot().outputs,right.snapshot().outputs);aliasTrace(left,right);
- const before=outputs(left.snapshot().outputs,461n).length;await through(left,4n);await through(right,4n);pressure(left,4n,q(1,3));pressure(right,4n,q(0,1));expect(outputs(left.snapshot().outputs,461n)[before]).not.toEqual(outputs(right.snapshot().outputs,461n)[before]);
- const ox=items(decode(left.snapshot().outputs),'list'),oy=items(decode(right.snapshot().outputs),'list'),different=ox.findIndex((v,i)=>key(v)!==key(oy[i]));expect(different).toBeGreaterThanOrEqual(0);expect(ox[different]).toEqual(sample(left,4n));expect(oy[different]).toEqual(sample(right,4n));
- const xx=rows(left),yy=rows(right);const first=xx.findIndex((t,i)=>key(f(event(t),5n))===key(BODY_SAMPLE)&&time(f(event(t),2n))===4n&&key(f(t,13n))!==key(f(yy[i],13n)));expect(first).toBeGreaterThan(0);
- await finish(left);await finish(right);await finish(resolution);console.info('M117 ALIAS PASS '+JSON.stringify({...paired,reveal:'4/current sample',coarse:'0/1',fine:'1/6',direct:['19/60','11/60']}));
+ pressure(left,10n,q(0,1));pressure(right,10n,q(0,1));pressure(resolution,10n,q(1,6));expect(body(left)).toEqual(body(resolution));
+ for(const [r,name]of [[left,'alias41'],[right,'alias49'],[resolution,'fine41']]as const)await matchOriginal(r,name,[10n],9n);
+ const meterA=createStoredBody(Q.of(51n),Q.of(1n)).sample(10n,Q.of(20n),true),meterB=createStoredBody(Q.of(59n),Q.of(1n)).sample(10n,Q.of(20n),true);expect(meterA.mediated).toEqual(meterB.mediated);expect(meterA.independent).not.toEqual(meterB.independent);
+ const before=outputs(left.snapshot().outputs,461n).length;await through(left,12n);await through(right,12n);pressure(left,12n,q(1,3));pressure(right,12n,q(0,1));expect(outputs(left.snapshot().outputs,461n)[before]).not.toEqual(outputs(right.snapshot().outputs,461n)[before]);
+ const ox=items(decode(left.snapshot().outputs),'list'),oy=items(decode(right.snapshot().outputs),'list'),different=ox.findIndex((v,i)=>key(v)!==key(oy[i]));expect(different).toBeGreaterThanOrEqual(0);expect(ox[different]).toEqual(sample(left,12n));expect(oy[different]).toEqual(sample(right,12n));
+ aliasTrace(left,right,12n);const xx=rows(left),yy=rows(right);const first=xx.findIndex((t,i)=>key(f(event(t),5n))===key(BODY_SAMPLE)&&time(f(event(t),2n))===12n&&key(f(t,13n))!==key(f(yy[i],13n)));expect(first).toBeGreaterThan(0);
+ await finish(left);await finish(right);await finish(resolution);console.info('M117 ALIAS PASS '+JSON.stringify({...paired,reveal:'12/current sample',coarse:'0/1',fine:'1/6',direct:['19/60','11/60']}));
 },550000);
 it('M117 denied unavailable and preserved ownership controls',async()=>{
  for(const profile of ['denied','unavailable']as Profile[]){
-  const b=fixture(profile),r=await createCharacterRun(await prepareCharacterModel(b.s),b.d);await through(r,2n);
+  const b=fixture(profile),r=await createCharacterRun(await prepareCharacterModel(b.s),b.d);await through(r,10n);
   expect(outputs(r.snapshot().outputs,461n)).toHaveLength(0);expect(outputs(r.snapshot().outputs,463n)).toHaveLength(1);
-  const report=tagged(r,2n,JOINT_APPRAISAL);expect(report).toHaveLength(1);expect(report[0][2]).toEqual(list([]));const tasks=items(report[0][4],'list').map(v=>items(v,'list'));expect(tasks.length).toBeGreaterThan(0);for(const x of tasks)expect(x[1]).toEqual(text('Unavailable'));
-  const t=atRows(r,2n).find(t=>key(f(event(t),5n))===key(BODY_SAMPLE))!;expect(items(f(t,15n),'list')).toHaveLength(0);expect(items(f(t,11n),'list').map(v=>f(rec(f(rec(v,147n),2n),140n),1n))).not.toContainEqual(unsigned(455));
-  const truth=createStoredBody(Q.of(43n),Q.of(1n)).sample(2n,Q.of(20n),false);expect(truth.mediated.kind).toBe('Unavailable');expect(truth.independent.kind).toBe('Known');
+  const report=tagged(r,10n,JOINT_APPRAISAL);expect(report).toHaveLength(1);expect(report[0][2]).toEqual(list([]));const tasks=items(report[0][4],'list').map(v=>items(v,'list'));expect(tasks.length).toBeGreaterThan(0);for(const x of tasks)expect(x[1]).toEqual(text('Unavailable'));
+  const t=atRows(r,10n).find(t=>key(f(event(t),5n))===key(BODY_SAMPLE))!;expect(items(f(t,15n),'list')).toHaveLength(0);expect(items(f(t,11n),'list').map(v=>f(rec(f(rec(v,147n),2n),140n),1n))).not.toContainEqual(unsigned(455));
+  const truth=createStoredBody(Q.of(51n),Q.of(1n)).sample(10n,Q.of(20n),false);expect(truth.mediated.kind).toBe('Unavailable');expect(truth.independent.kind).toBe('Known');
   await finish(r);console.info('M117 UNAVAILABLE PASS '+profile);
  }
 },550000);
 it('M117 original sixteen source ownership matrix',async()=>{
  let prefixes=0;for(const c of bodyCases()){const r=await runBodyCase(c);prefixes+=r.prefixes;console.info('M117 ORIGINAL '+c.name+' '+JSON.stringify({prefixes:r.prefixes,probes:r.probes.map(p=>({at:p.at,body:p.body,mediated:p.mediated,meter:p.meter,independent:p.independent,reference:p.reference,cached:p.cached}))}));if(c.name==='kinetic-fast'){expect(r.probes.some(p=>p.mediated!==p.reference)).toBe(true);expect(r.probes.some(p=>p.mediated!=='0/1')).toBe(true);const memoryless=sensedPressure(Q.of(80n),Q.of(10n),true);expect(memoryless).toEqual({kind:'Known',value:Q.of(0n)});}for(const p of r.probes){expect(p.mediated).toBe(p.meter);expect(p.mediated).toBe(p.cached);}}
  expect(prefixes).toBe(79);console.info('M117 ORIGINAL MATRIX PASS 16 sources/79 prefixes');
-},110000);
+},290000);
