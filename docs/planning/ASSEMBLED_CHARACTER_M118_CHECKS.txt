@@ -1,2 +1,42 @@
 M118 verification receipts. Plan precedes code. Budget1800 seconds; prepaid15 bookkeeping.
 CHARGED 15.000
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledHabitReversal.test.ts", "-t", "primary118", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledHabitReversal.test.ts > primary118: current reference acquires, retains and reverses a real habit
+M118 observed {"history":[{"at":"10","positive":true},{"at":"12","positive":true}],"strength":"060604","admitted":true,"offered":0,"nuclei":2,"status":"3","effects":[{"action":"0b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","status":"05074170706c696564"},{"action":"0b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","status":"05074170706c696564"},{"action":"0b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","status":"05074170706c696564"},{"action":"0b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65","status":"05074170706c696564"},{"action":"0b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f","status":"05074170706c696564"}]}
+
+ × src/test/assembledHabitReversal.test.ts > primary118: current reference acquires, retains and reverses a real habit 91740ms
+   → expected +0 to be 3 // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledHabitReversal.test.ts > primary118: current reference acquires, retains and reverses a real habit
+AssertionError: expected +0 to be 3 // Object.is equality
+
+- Expected
++ Received
+
+- 3
++ 0
+
+ ❯ src/test/assembledHabitReversal.test.ts:31:80
+     29|   const b=fixture(profile),r=await createCharacterRun(await prepareCha…
+     30|   expect(cueStrength(journal(r),true)).toEqual(profile==='trained'?Q.o…
+     31|   expect(p.h[5]).toBe(profile==='trained');expect(items(p.h[6],'list')…
+       |                                                                                ^
+     32|   expect(rewardValue(state(r).read(rewardPath(C)).value)).toMatchObjec…
+     33|   runs.push(r);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 5 skipped (6)
+   Start at  20:47:06
+   Duration  96.53s (transform 2.92s, setup 0ms, collect 4.35s, tests 91.74s, environment 0ms, prepare 148ms)
+
+
+EXIT 1; elapsed 98.230s
+CHARGED 113.230
