@@ -10,3 +10,56 @@ EXIT 2; elapsed 19.377s
 CHARGED 34.377
 
 REPAIR before rerun: TypeScript inferred the union of a tuple spread as a single argument domain. Pass the three indexed literal arguments; no scenario or gate change.
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledEncodingBudgets.test.ts", "-t", "primary122", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledEncodingBudgets.test.ts > primary122: exact budget competitors reach real stored memory and later live judgment
+M122 ROW historical-shared UnitBudget sparse focal {"kind":"rational","numerator":"3","denominator":"10"} belief1/2 judgment1, full queue
+
+stdout | src/test/assembledEncodingBudgets.test.ts > primary122: exact budget competitors reach real stored memory and later live judgment
+M122 ROW historical-shared UnitBudget dense focal {"kind":"rational","numerator":"3","denominator":"10"} belief1/2 judgment1, full queue
+
+stdout | src/test/assembledEncodingBudgets.test.ts > primary122: exact budget competitors reach real stored memory and later live judgment
+M122 ROW independent UnitBudget sparse focal {"kind":"rational","numerator":"3","denominator":"13"} belief1/2 judgment1, full queue
+
+stdout | src/test/assembledEncodingBudgets.test.ts > primary122: exact budget competitors reach real stored memory and later live judgment
+M122 ROW independent UnitBudget dense focal {"kind":"rational","numerator":"3","denominator":"13"} belief1/2 judgment1, full queue
+
+stdout | src/test/assembledEncodingBudgets.test.ts > primary122: exact budget competitors reach real stored memory and later live judgment
+M122 ROW historical-hybrid UnitBudget sparse focal {"kind":"rational","numerator":"3","denominator":"13"} belief1/2 judgment1, full queue
+
+stdout | src/test/assembledEncodingBudgets.test.ts > primary122: exact budget competitors reach real stored memory and later live judgment
+M122 ROW historical-hybrid UnitBudget dense focal {"kind":"rational","numerator":"3","denominator":"13"} belief1/2 judgment1, full queue
+
+stdout | src/test/assembledEncodingBudgets.test.ts > primary122: exact budget competitors reach real stored memory and later live judgment
+M122 ROW retired-flat UnitBudget sparse focal {"kind":"rational","numerator":"1","denominator":"1"} belief1/2 judgment1, full queue
+
+stdout | src/test/assembledEncodingBudgets.test.ts > primary122: exact budget competitors reach real stored memory and later live judgment
+M122 ROW retired-flat UnitBudget dense focal {"kind":"rational","numerator":"1","denominator":"1"} belief1/2 judgment1, full queue
+
+stdout | src/test/assembledEncodingBudgets.test.ts > primary122: exact budget competitors reach real stored memory and later live judgment
+M122 ROW historical-shared SmallBudget sparse focal {"kind":"rational","numerator":"1","denominator":"1"} belief1/2 judgment1, full queue
+
+stdout | src/test/assembledEncodingBudgets.test.ts > primary122: exact budget competitors reach real stored memory and later live judgment
+M122 ROW historical-shared SmallBudget dense focal {"kind":"rational","numerator":"25","denominator":"34"} belief1/2 judgment1, full queue
+
+stdout | src/test/assembledEncodingBudgets.test.ts > primary122: exact budget competitors reach real stored memory and later live judgment
+M122 ROW historical-hybrid SmallBudget sparse focal {"kind":"rational","numerator":"3","denominator":"13"} belief1/2 judgment1, full queue
+
+stdout | src/test/assembledEncodingBudgets.test.ts > primary122: exact budget competitors reach real stored memory and later live judgment
+M122 ROW historical-hybrid SmallBudget dense focal {"kind":"rational","numerator":"3","denominator":"13"} belief1/2 judgment1, full queue
+
+ ✓ src/test/assembledEncodingBudgets.test.ts > primary122: exact budget competitors reach real stored memory and later live judgment 280682ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 9 skipped (10)
+   Start at  11:38:39
+   Duration  285.20s (transform 2.71s, setup 0ms, collect 4.07s, tests 280.68s, environment 0ms, prepare 148ms)
+
+
+EXIT 0; elapsed 286.869s
+CHARGED 321.246
+
+Native primary PASS at b46f9505. Remaining tests grouped with name-only prefix to reuse one fixture setup; no primary rerun or assertion change.

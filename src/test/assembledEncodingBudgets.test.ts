@@ -65,7 +65,7 @@ it('primary122: exact budget competitors reach real stored memory and later live
  }
  expect(models.size).toBe(6);
 },550000);
-it('controls122: permission capacity hidden truth and attention operand stay separate',async()=>{
+it('remaining122 controls122: permission capacity hidden truth and attention operand stay separate',async()=>{
  const a=await create('dense','historical-shared','SmallBudget'),hidden=await create('hidden','historical-shared','SmallBudget'),denied=await create('denied','historical-shared','SmallBudget'),sparse=await create('sparse','historical-shared','SmallBudget');
  for(const {r}of[a,hidden,denied,sparse])await through(r,1n);
  assessment(a.r,2,2,'historical-shared','SmallBudget');assessment(hidden.r,2,2,'historical-shared','SmallBudget');assessment(denied.r,1,1,'historical-shared','SmallBudget');assessment(sparse.r,1,1,'historical-shared','SmallBudget');
@@ -75,7 +75,7 @@ it('controls122: permission capacity hidden truth and attention operand stay sep
  const disabled=await create('dense','historical-shared','UnitBudget',2,'disabled-attention');await through(disabled.r,1n);const e=assessment(disabled.r,2,2,'historical-shared','UnitBudget'),p=factorRows(e).find(v=>key(v[1])===key(text('causal-role/participant')))!;expect(p.slice(2)).toEqual([q(3,10),q(3,5),q(1,1),q(9,50),q(9,50)]);await through(disabled.r,4n);probe(disabled.r);await finish(disabled.r);
  console.info('M122 CONTROLS denied==absent, hidden truth invariant, K1 excluded footprint strength1, K0 no episodes/fallback1/2, disabled attention preserves causal role');
 },500000);
-it('continuation122: nonreference budget exact repeat restore and atomic failure',async()=>{
+it('remaining122 continuation122: nonreference budget exact repeat restore and atomic failure',async()=>{
  const b=fixture('dense','historical-shared','SmallBudget'),m=await prepareCharacterModel(b.s),a=await createCharacterRun(m,b.d),duplicate=await createCharacterRun(m,b.d);
  await through(a,1n);await through(duplicate,1n);exact(a,duplicate);const restored=await restoreCharacterRun(b.s,{initialState:b.d.initialState,orderedInputs:b.d.orderedInputs,save:a.save()});exact(a,restored);await finish(a,[duplicate,restored]);
  const fault=await createCharacterRun(m,b.d),before=fault.snapshot(),saved=fault.save(),original=encoder.encodeExperience;let reached=false;
@@ -84,7 +84,7 @@ it('continuation122: nonreference budget exact repeat restore and atomic failure
  const recovered=await restoreCharacterRun(b.s,{initialState:b.d.initialState,orderedInputs:b.d.orderedInputs,save:saved});await finish(recovered);exact(a,recovered);
  console.info('M122 CONTINUATION exact repeat/save1/restore/full queues; post-encoding failure restores visible preinstant snapshot and saved prefix matches clean continuation');
 },500000);
-it('boundaries122: declaration and memory bind the exact fixed law and calibration',async()=>{
+it('remaining122 boundaries122: declaration and memory bind the exact fixed law and calibration',async()=>{
  const b=fixture('dense','historical-shared','SmallBudget'),s=items(decode(b.s.registry),'list');
  for(const [index,value]of [[3,text('unknown')],[4,text('UnknownBudget')]] as const){const declaration=[...items(s[30],'list')];declaration[index]=value;const slots=[...s];slots[30]=list(declaration);await expect(prepareCharacterModel({...b.s,registry:enc(list(slots))})).rejects.toThrow('encoding: budget domain');}
  await expect(prepareCharacterModel({...b.s,rulesVersion:b.legacy.s.rulesVersion,registrySchemaVersion:b.legacy.s.registrySchemaVersion})).rejects.toThrow('encoding: declaration');
@@ -94,7 +94,7 @@ it('boundaries122: declaration and memory bind the exact fixed law and calibrati
  const old=await compileCharacterState(await compileCharacterModel(b.legacy.s));expect(()=>old.stateModel.validateState(state(r))).toThrow('encoding model binding');await finish(r);
  console.info('M122 BOUNDARIES unknown policies, old grammar/annex, different-law or calibration state and forged strength rejected');
 },180000);
-it('position122: existing position channel uses and validates the same budget encoder',async()=>{
+it('remaining122 position122: existing position channel uses and validates the same budget encoder',async()=>{
  const b=fixture('dense','independent','UnitBudget'),rows=items(decode(b.d.orderedInputs),'list');expect(rows.some(v=>key(items(v,'list')[2])===key(POSITION_SOURCE))).toBe(false);
  const frame=list([signed(1),u(10),POSITION_SOURCE,list([text(POSITION),list([u(0),u(0),u(1),true,true,u(1)]),list([u(1),text('Before'),true,true])]),list([])]);
  const r=await createCharacterRun(await prepareCharacterModel(b.s),{...b.d,orderedInputs:enc(list([...rows,frame]))});await finish(r);
