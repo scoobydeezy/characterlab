@@ -24,7 +24,7 @@ function projection(r:Run,b:ReturnType<typeof fixture>,at=6){
  const shared=report(r,WORKSPACE).find(a=>key(a[1])===key(signed(at)))!;expect(shared,'actual workspace').toBeDefined();
  const w=rec(shared[3],381n),selected=items(f(w,4n),'list').map(v=>f(rec(v,379n),1n));
  expect(selected).toHaveLength(b.capacity-1);expect(uint(f(rec(f(w,5n),380n),1n)),'live forecast').toBe(2n);
- expect(selected).toContainEqual(b.taskA);if(b.capacity>=3)expect(selected).toContainEqual(b.taskB);else expect(selected).not.toContainEqual(b.taskB);
+ expect(selected.map(key)).toContain(key(b.taskA));if(b.capacity>=3)expect(selected.map(key)).toContain(key(b.taskB));else expect(selected.map(key)).not.toContain(key(b.taskB));
  expect(selected.length+1+items(shared[4],'list').length).toBeLessThanOrEqual(b.capacity);
  const joint=report(r,JOINT_APPRAISAL).find(a=>key(f(rec(a[1],384n),2n))===key(shared[3]))!;expect(joint,'actual joint consumer').toBeDefined();
  const rows=items(joint[4],'list').map(v=>items(v,'list'));
@@ -51,10 +51,10 @@ it('primary127: retained unselected task supplies no reason; larger workspace ch
  const narrow=await create(2),wide=await create(3),all=await create(4);
  expect(narrow.b.d).toEqual(wide.b.d);expect(wide.b.d).toEqual(all.b.d);
  for(const x of[narrow,wide,all])await through(x.r,5n);
- const before=retained(narrow.r);expect(before).toHaveLength(3);expect(retained(wide.r)).toEqual(before);expect(retained(all.r)).toEqual(before);
+ const canonicalTasks=(r:Run)=>key(list(retained(r).map(e=>list([taskKey(e),e.value])))),before=canonicalTasks(narrow.r);expect(retained(narrow.r)).toHaveLength(3);expect(canonicalTasks(wide.r)).toBe(before);expect(canonicalTasks(all.r)).toBe(before);
  for(const x of[narrow,wide,all])await through(x.r,6n);
  const a=projection(narrow.r,narrow.b),b=projection(wide.r,wide.b),c=projection(all.r,all.b);
- for(const x of[narrow,wide,all])expect(retained(x.r)).toEqual(before);
+ for(const x of[narrow,wide,all])expect(canonicalTasks(x.r)).toBe(before);
  expect(4).toBeGreaterThan(narrow.b.capacity);expect(4).toBeGreaterThan(wide.b.capacity);
  expect(a.pB.equals(b.pB),'actual arbitration probability changes').toBe(false);expect(c.pB).toEqual(b.pB);
  console.info('M127 PRIMARY actual probability(action two) '+[a,b,c].map(p=>p.pB.numerator+'/'+p.pB.denominator).join(' / ')+'; selected counts1/2/3 plus forecast; task B retained but no base/ground at capacity2');

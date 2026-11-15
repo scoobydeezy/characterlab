@@ -9,3 +9,152 @@ EXIT 2; elapsed 18.545s
 CHARGED 33.545
 
 Type repair: bind trace output to a local CanonicalValue before narrowing its union. Joint liveness assertion follows the actual384->381 workspace binding. No production/scenario changes.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledWorkspaceReceiving.test.ts", "-t", "primary127", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledWorkspaceReceiving.test.ts > primary127: retained unselected task supplies no reason; larger workspace changes actual choice probability 111987ms
+   → expected [ { kind: 'record', …(2) } ] to not deep equally contain { kind: 'record', …(2) }
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledWorkspaceReceiving.test.ts > primary127: retained unselected task supplies no reason; larger workspace changes actual choice probability
+AssertionError: expected [ { kind: 'record', …(2) } ] to not deep equally contain { kind: 'record', …(2) }
+
+- Expected:\x20
+Object {
+  "fields": Map {
+    1n => Object {
+      "kind": "typedIdentifier",
+      "namespaceId": 1002n,
+      "payload": Object {
+        "kind": "typedIdentifier",
+        "namespaceId": 1037n,
+        "payload": Object {
+          "kind": "typedIdentifier",
+          "namespaceId": 1038n,
+          "payload": Object {
+            "kind": "text",
+            "value": "character/bridge-subject",
+          },
+        },
+      },
+    },
+    2n => Object {
+      "kind": "typedIdentifier",
+      "namespaceId": 1002n,
+      "payload": Object {
+        "kind": "typedIdentifier",
+        "namespaceId": 1037n,
+        "payload": Object {
+          "kind": "typedIdentifier",
+          "namespaceId": 1038n,
+          "payload": Object {
+            "kind": "text",
+            "value": "content/task-b",
+          },
+        },
+      },
+    },
+  },
+  "kind": "record",
+  "schema": Object {
+    "fields": Array [
+      Object {
+        "id": 1n,
+        "name": "CharacterId",
+        "required": true,
+      },
+      Object {
+        "id": 2n,
+        "name": "TaskReferent",
+        "required": true,
+      },
+    ],
+    "name": "TaskCommitmentKey",
+    "schemaVersion": 1n,
+    "typeId": 371n,
+  },
+}
+
++ Received:\x20
+Array [
+  Object {
+    "fields": Map {
+      1n => Object {
+        "kind": "typedIdentifier",
+        "namespaceId": 1002n,
+        "payload": Object {
+          "kind": "typedIdentifier",
+          "namespaceId": 1037n,
+          "payload": Object {
+            "kind": "typedIdentifier",
+            "namespaceId": 1038n,
+            "payload": Object {
+              "kind": "text",
+              "value": "character/bridge-subject",
+            },
+          },
+        },
+      },
+      2n => Object {
+        "kind": "typedIdentifier",
+        "namespaceId": 1002n,
+        "payload": Object {
+          "kind": "typedIdentifier",
+          "namespaceId": 1037n,
+          "payload": Object {
+            "kind": "typedIdentifier",
+            "namespaceId": 1038n,
+            "payload": Object {
+              "kind": "text",
+              "value": "content/task-a",
+            },
+          },
+        },
+      },
+    },
+    "kind": "record",
+    "schema": Object {
+      "fields": Array [
+        Object {
+          "id": 1n,
+          "name": "CharacterId",
+          "required": true,
+        },
+        Object {
+          "id": 2n,
+          "name": "TaskReferent",
+          "required": true,
+        },
+      ],
+      "name": "TaskCommitmentKey",
+      "schemaVersion": 1n,
+      "typeId": 371n,
+    },
+  },
+]
+
+ ❯ projection src/test/assembledWorkspaceReceiving.test.ts:27:127
+     25|  const w=rec(shared[3],381n),selected=items(f(w,4n),'list').map(v=>f(r…
+     26|  expect(selected).toHaveLength(b.capacity-1);expect(uint(f(rec(f(w,5n)…
+     27|  expect(selected).toContainEqual(b.taskA);if(b.capacity>=3)expect(sele…
+       |                                                                                                                               ^
+     28|  expect(selected.length+1+items(shared[4],'list').length).toBeLessThan…
+     29|  const joint=report(r,JOINT_APPRAISAL).find(a=>key(f(rec(a[1],384n),2n…
+ ❯ src/test/assembledWorkspaceReceiving.test.ts:56:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  16:17:07
+   Duration  116.70s (transform 2.81s, setup 0ms, collect 4.22s, tests 111.99s, environment 0ms, prepare 171ms)
+
+
+EXIT 1; elapsed 117.284s
+CHARGED 150.829
+
+Helper repair after94f63902: toContainEqual treated nested canonical Map records for task-a and task-b as equal (failure shows distinct text payloads). Use exact canonical keys for membership and entire retained task projection. No scenario, production or acceptance change.
+Evidence trailing display whitespace escaped losslessly as \x20/\x09 before commit. Source test already running unchanged during this metadata normalization.
