@@ -25,9 +25,9 @@ export function fixture(profile:Profile,amount=10,concealedBody=false){
  const tasks=items(slots[12],'list');const taskIds=items(tasks[1],'list').map(v=>items(v,'list')[0]);
  const display=(at:number,available:boolean[],receipt:number)=>list([signed(at),unsigned(30),DISPLAY,list([text(STRATEGY),list(taskIds.flatMap(task=>available.map((yes,route)=>list([task,unsigned(route),unsigned(receipt+route),yes,unsigned(at),unsigned(25),true]))))]),list([])]);
  rows.push(display(1,[true,false],1),display(15,[false,true],3),display(17,[true,true],5));
- for(const at of [10,12,14,16,18])rows.push(...template.map(v=>list([signed(at),...items(v,'list').slice(1)])));
+ for(const at of [10,12,14,16,18,20])rows.push(...template.map(v=>list([signed(at),...items(v,'list').slice(1)])));
  for(const at of [10,12])rows.push(habitFrame(at,true,{report:profile==='untrained'?2:1}));
- rows.push(habitFrame(14,false,{visible:profile==='reversed',report:2}),habitFrame(15,false,{information:true}),habitFrame(18,false,{visible:false,cue:profile!=='other-cue',cueVisible:profile!=='unseen-cue'}));
+ rows.push(habitFrame(14,false,{visible:profile==='reversed',report:2}),habitFrame(15,false,{information:true}),...([18,20].map(at=>habitFrame(at,false,{visible:false,cue:profile!=='other-cue',cueVisible:profile!=='unseen-cue'}))));
  let s=changeDefinition({...b.s,registry:enc(list(slots))},'definition/protocol-execution',1n,true);
  for(const name of ['definition/task-a','definition/task-b','definition/task-c'])s=changeDefinition(s,name,6n,signed(25));
  s=changeDefinition(s,'definition/task-b',3n,q(10,1));

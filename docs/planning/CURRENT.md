@@ -56,3 +56,10 @@ no habitual origin was added. Displays16/18 arrive after those decisions;
 announce B-only15/both17 for decisions16/18. Laws/training/threshold unchanged.
 Offered-origin cardinality is live eligible tasks, not an assumed three; require
 positive actual addition only in trained arm. Original null retained in Git/log.
+
+M118 corpus-horizon amendment before rerun: append ordinary probe20 with the same
+visible cue and hidden outcome as18, all three fixed histories unchanged. Require
+live probability/admission again, then exhaust the original queue. This supplies
+native repeated later probes for :8; no threshold/law/calibration or seed change.
+Original fixed12-opportunity matrix remains; add its matched10/12/14/15/18/20
+control image (three laws/four candidates), never alternate native psychology.
