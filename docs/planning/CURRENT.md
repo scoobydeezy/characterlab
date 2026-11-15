@@ -1,49 +1,41 @@
-# Current work — M120 attention/encoding receiving gate
-M120 checks selected social evidence -> retained episode -> later live judgment in
-the current0.89 character, with perception and encoding observably separate.
-Baseline88fd66ea; reference0.89/effect-evidence0.1, feedback TRUE; L5/L6/D3 unchanged.
-Bounded prerequisite to C-ATTN, NOT its multi-unit competition/footprint completion.
+# Current work — M120 attention/encoding receiving gate complete
 
-## Predeclared comparison
-Rebase the retained M44 scenario into current0.89, preserving its source declarations:
-one holder, two social tasks/one unknown; recognized coat stand-in; no autonomous peer.
-A true1/B false2/silent A reminder3; risk1; judgment3/4; reserve10/sample4; seed0.
-Use M44 first31 registry slots/content/configuration and its unlearned initial roots;
-current0.89 suffix and required additional unlearned roots; append neutral required
-encounter fields. No cognition is authored. Explicitly inspect admission differences.
-1. Actor A vs unresolved A, all else equal: live global person mean1/2 in both,
-   A/B vs B-only formation; actual recall/workspace -> contextual judgment1 vs0.
-2. Permitted person-form cue present vs absent, same role/identity signals:
-   actual full SEM classifications differ, exact role projection/factors unchanged;
-   later remembered judgment unchanged. This is one irrelevant facet, not arbitrary
-   tag-count competition. Hidden physical role and denied source controls remain.
-3. Capacity0 vs1 separates admitted person learning from episodic acquisition;
-   Target/disabled-attention factors remain243/1000 vs27/100 in actual assessment.
+The current character's selective encoding changes later recalled judgment while
+its general person belief stays fixed. A permitted appearance classification changes
+perception without changing exact causal encoding or the later judgment.
+Reference0.89/effect-evidence0.1, feedback TRUE; existing L5/L6/D3 laws unchanged.
+No production/formal changes. Plan ecd3ae36; tested source a360b893.
+[Result](ASSEMBLED_CHARACTER_M120_RESULT.md) and [checks](ASSEMBLED_CHARACTER_M120_CHECKS.txt).
 
-Indirect Q3 reminder retained as null after actual0/0; explicit A reminder amendment
-recorded before rerun, with laws and same causal gate fixed.
+## What passed
+- Actual Actor vs unresolved role: A/B vs B-only memory, same person belief1/2;
+  later perceived A reminder -> recall -> workspace -> contextual judgment1 vs0.
+  Actual formation/provenance and joint appraisal consumption are joined.
+- Present/absent permitted person-form classification changes SEM225, with identical
+  role encoding and remembered judgment. Capacity0 preserves semantic learning but
+  prevents episodes; denied/hidden role and disabled-attention controls pass.
+- Duplicate/save3/restored continuation matches full bytes through queue exhaustion;
+  all control arms also exhaust. Original indirect-reminder0/0 remains a control.
+- Six final native/reference tests,25 original controls,types/boundary/research and
+  preservation checks pass. Charged 891.723/1800s including failures; no extension.
 
-## Files, contracts and risks
-At most2 new test/fixture files; no planned production/formal edits. If an integration
-defect needs repair, record exact cause and affected contract before mutation/rerun.
-Read encoding0.1 contract, original selector/budget contracts, ledger MEC005/007/010,
-CTL004/RET001. Original independent/shared/hybrid/flat alternatives remain controls.
-Current role projection explicitly excludes classifications; don't equate unknown
-role with zero, recognition with attention, or encoding strength with recall weight.
-Actual trace/evidence and stored annex must join; do not manufacture consumer inputs.
-Within-model duplicate and save3/restored full continuation through queue exhaustion
-must match all snapshot/save/run identity bytes. No choice-effect claim or dice search.
+## Preserved corrections and limits
+Old appraisal declaration/route mismatch corrected to current input contracts.
+Indirect reminder's actual recall scores17/24 vs5/6 explain its null. Self-approved
+amendment gives both histories the same explicit A reminder; no law/calibration change.
+Denied first encounter requires NewTrack next; failed continuity claim is retained.
+One-time setup and settled-snapshot caching keep validation bounded.
 
-## Checks and budget
-One job,1800s cumulative including failures and15s prepaid bookkeeping;600s/command.
-Native primary<=500s; controls<=400s; exact continuation<=400s; original selector/
-budget controls<=120s; types<=120s; boundary/research/preservation/Git<=100s.
-Use settled-snapshot caching invalidated after every settlement, never truncate runs.
-One milestone;<=3 capabilities/12 code-test files;20 evidence files/5MiB.
-Original runtime/control closure unchanged: preserve prior frozen-byte checks.
-Done iff live causal gate, controls, full continuation and affected checks pass;
-else retain exact blocker. C-ATTN and all F dispositions stay open/unchanged.
-No new member/family/clauses counted. Final21/15/132 remains.
-Routine diagnosis/comparison amendments self-approved, recorded BEFORE reruns;
-no law retuning, acceptance waiver, UI, unrelated breadth or substitute runtime.
+C-ATTN stays UNRESOLVED. One perceived unit/one irrelevant facet does not qualify
+multi-unit competition or wider footprint/budget/association comparisons.
+Those are the next attention integration gap; no new unrelated area is needed.
+No C member/F clause promotion:12/21 mapped,0/15 families; E46/P54/N17/U15=132.
+All21/15/132 and final whole-candidate replay remain. Obligation statuses unchanged.
+
+Write the next bounded card before code. One model/state/scheduler, existing owners.
+One milestone/job;3 capabilities/12 code-test files;20 evidence files/5MiB.
+Default1800s cumulative/600s per command; scoped affected checks only.
+Delegated routine diagnosis/comparison amendments remain authorized; record before
+rerun, retain failures, never retune laws or waive final requirements.
+No UI, unrelated breadth, autonomous peers or duplicate runtime.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |

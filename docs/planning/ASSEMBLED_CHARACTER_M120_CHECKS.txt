@@ -227,12 +227,12 @@ M120 INHERITED actual recency/association rank selects B in both histories; orig
  FAIL  src/test/assembledAttentionReceiving.test.ts > gate120 controls120: permission selection hidden role and disabled attention remain distinct
 SchedulerContractError: ContinuesPriorTrack requires a prior continuant-file
  ❯ fail src/substrate/scheduler.ts:667:9
-    665| 
+    665|\x20
     666| function fail(code: SchedulerFailureCode, message: string): never {
     667|   throw new SchedulerContractError(code, message);
        |         ^
     668| }
-    669| 
+    669|\x20
  ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:390:11
  ❯ Object.settleNextInstant src/assembled/character.ts:45:66
  ❯ advance src/test/assembledAttentionReceiving.test.ts:22:42
@@ -251,3 +251,136 @@ Serialized Error: { code: 'TRANSITION_FAILURE', candidateTransitionData: undefin
 
 EXIT 1; elapsed 251.937s
 CHARGED 639.719
+
+Pre-run denial repair: first encounter1 is inaccessible, so there is no prior
+social continuant at2. Declare NewTrack at2 in denied mode only. Preserve the failed
+ContinuesPriorTrack rejection above; other modes/accepted gates unchanged. Re-run
+only controls120, including full continuation in every control arm.
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledAttentionReceiving.test.ts", "-t", "controls120", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAttentionReceiving.test.ts > gate120 controls120: permission selection hidden role and disabled attention remain distinct
+M120 CONTROLS admitted belief1/2 with capacity0/no episodes; denied no encoding; hidden role invariant; actual Target243/1000 vs27/100
+
+ ✓ src/test/assembledAttentionReceiving.test.ts > gate120 controls120: permission selection hidden role and disabled attention remain distinct 152373ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 10 skipped (11)
+   Start at  08:02:34
+   Duration  156.89s (transform 2.71s, setup 0ms, collect 4.06s, tests 152.37s, environment 0ms, prepare 147ms)
+
+
+EXIT 0; elapsed 158.569s
+CHARGED 798.288
+
+All five native behavioral/control/continuation gates now pass. Remove only the
+one-off declaration dump test (source/output retained in fbd3584e); retain a small
+reference assertion because rebasing the earlier registry could otherwise obscure
+the adopted feedback Boolean/version. No passing behavioral scenario changes.
+Original selector/encoding/budget controls catch accidental reference drift; types,
+boundaries and research check final artifacts. Production/control closure untouched.
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledAttentionReceiving.test.ts", "-t", "reference120", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAttentionReceiving.test.ts > reference120: current version and adopted feedback remain explicit
+M120 REFERENCE0.89/47slots; formation feedback TRUE; native encoder0.1 unchanged
+
+ ✓ src/test/assembledAttentionReceiving.test.ts > reference120: current version and adopted feedback remain explicit 55748ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 10 skipped (11)
+   Start at  08:05:58
+   Duration  60.24s (transform 2.71s, setup 0ms, collect 4.05s, tests 55.75s, environment 0ms, prepare 151ms)
+
+
+EXIT 0; elapsed 61.918s
+CHARGED 860.206
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/attentionSelection.test.ts", "src/test/selectedEncoding.test.ts", "src/test/selectedEncodingBudgetControl.test.ts", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-D: canonical evidence index crosses decimal occurrence boundaries
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-A: exact roles, capacities and empty component pool
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-B: observed role swap and honest alternative components
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-C: missing, unsupported and multiple roles do not receive fallback priorities
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-D: actual derivation rejects missing, forged, foreign and duplicated claims
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-E: rejects invalid capacity and more than three units
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-F: order invariance, canonical ties and strict-priority renaming
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-G: exact selected bytes succeed while unselected and observation lookup fail
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-H: forged, reused, closed and failed capabilities cannot read
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-I: source, audit and result mutations cannot change private authority
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-J: duplicate requests and duplicate semantic binding cannot enlarge selection
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-K: source history remains unchanged across selection and consumption
+ ✓ src/test/selectedEncodingBudgetControl.test.ts > selected-encoding/0.2-candidate > SBC-A: all eight exact two/three-Actor comparisons include active shared normalization
+ ✓ src/test/selectedEncodingBudgetControl.test.ts > selected-encoding/0.2-candidate > SBC-B: important hybrid rows stay independent while low footprint shares a zero remainder floor
+ ✓ src/test/selectedEncodingBudgetControl.test.ts > selected-encoding/0.2-candidate > SBC-C: budget interventions do not change selected evidence or raw factors
+ ✓ src/test/selectedEncodingBudgetControl.test.ts > selected-encoding/0.2-candidate > SBC-D: invalid budget cannot leave a reusable selected capability
+ ✓ src/test/selectedEncodingBudgetControl.test.ts > selected-encoding/0.2-candidate > SBC-E: unselected footprint remains absent from both budget denominators
+ ✓ src/test/selectedEncoding.test.ts > selected-encoding/0.1-candidate > SEC-A: actual selected claims drive exact factors and original bytes
+ ✓ src/test/selectedEncoding.test.ts > selected-encoding/0.1-candidate > SEC-B: adding unselected footprint cannot affect selected encoding
+ ✓ src/test/selectedEncoding.test.ts > selected-encoding/0.1-candidate > SEC-C: selected footprint differences are recorded without conflating budget laws
+ ✓ src/test/selectedEncoding.test.ts > selected-encoding/0.1-candidate > SEC-D: disabling continuous attention preserves causal-role evidence and changes target strength
+ ✓ src/test/selectedEncoding.test.ts > selected-encoding/0.1-candidate > SEC-E: forged, consumed and failed-law attempts cannot reuse a live view
+ ✓ src/test/selectedEncoding.test.ts > selected-encoding/0.1-candidate > SEC-F: empty selection invents no observer, experience, owner or episode
+ ✓ src/test/selectedEncoding.test.ts > selected-encoding/0.1-candidate > SEC-G: mutations of returned evidence cannot rewrite source or another consumption
+ ✓ src/test/selectedEncoding.test.ts > selected-encoding/0.1-candidate > SEC-H: each row cites one actual selected claim with its existing binding provenance
+
+ Test Files  3 passed (3)
+      Tests  25 passed (25)
+   Start at  08:07:09
+   Duration  724ms (transform 288ms, setup 0ms, collect 634ms, tests 158ms, environment 0ms, prepare 438ms)
+
+
+EXIT 0; elapsed 2.367s
+CHARGED 862.573
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "--noEmit"]
+
+EXIT 0; elapsed 20.116s
+CHARGED 882.689
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:boundaries"]
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+EXIT 0; elapsed 3.184s
+CHARGED 885.873
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:research"]
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4341}
+
+EXIT 0; elapsed 4.154s
+CHARGED 890.027
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,json,re\nbase='88fd66ea'\nallowed={'AGENTS.md','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md','docs/planning/RESEARCH_OBLIGATIONS.json','docs/planning/ASSEMBLED_CHARACTER_M120_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M120_CHECKS.txt','src/test/assembledAttentionReceiving.test.ts','src/test/fixtures/assembledAttentionReceiving.ts'}\ngit=lambda *a: subprocess.check_output(['git',*a],text=True,encoding='utf-8')\nchanged=set(git('diff','--name-only',base).splitlines())|set(git('ls-files','--others','--exclude-standard').splitlines())\nassert changed<=allowed,(changed-allowed)\nfor path in ['src/test/assembledAttentionReceiving.test.ts','src/test/fixtures/assembledAttentionReceiving.ts']:\n assert git('diff','a360b893','--',path)=='',path\nold=git('show',base+':docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md')\nnew=Path('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md').read_text(encoding='utf-8')\nrows=lambda s:[x for x in s.splitlines() if ('| C-' in x or '| F-' in x) and '| C-ATTN ' not in x]\nassert rows(old)==rows(new),'other member/family dispositions changed'\nassert 'E46/P54/N17/U15' in new and '12/21' in new and 'families:0/15' in new\nassert len(new.splitlines())<=250 and len(new.replace(chr(10),chr(13)+chr(10)).encode())<=65536\nbefore=json.loads(git('show',base+':docs/planning/RESEARCH_OBLIGATIONS.json'))\nafter=json.loads(Path('docs/planning/RESEARCH_OBLIGATIONS.json').read_text(encoding='utf-8-sig'))\nassert before['obligations']==after['obligations'],'obligations changed'\nassert after['reportReviews'][:-1]==before['reportReviews']\nassert after['reportReviews'][-1]['path']=='docs/planning/ASSEMBLED_CHARACTER_M120_RESULT.md'\nfor path,cap in [('AGENTS.md',120),('docs/planning/CURRENT.md',80),('docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md',250)]:\n assert len(Path(path).read_text(encoding='utf-8').splitlines())<=cap,path\nevidence=[Path('docs/planning/ASSEMBLED_CHARACTER_M120_'+suffix) for suffix in ['RESULT.md','CHECKS.txt']]\nassert len(evidence)<=20 and sum(p.stat().st_size for p in evidence)<5*1024*1024\nlog=evidence[1].read_text(encoding='utf-8')\ncharge=float([l.split()[1] for l in log.splitlines() if l.startswith('CHARGED ')][-1])\nassert charge<1800\nfor token in ['M120 PRIMARY','M120 FACET','M120 CONTROLS','M120 CONTINUATION','M120 INHERITED','M120 REFERENCE0.89','25 passed','Reference boundary check passed.','PASS: research obligation references']:\n assert token in log,token\nassert '17/24' in evidence[0].read_text(encoding='utf-8')\nprint('PASS M120 preservation: sourcea360b893; only8 allowed paths; original production/control bytes unchanged; other C/F rows and all obligations unchanged;12/21,0/15,E46/P54/N17/U15; document/evidence caps; charge',charge)\n"]
+PASS M120 preservation: sourcea360b893; only8 allowed paths; original production/control bytes unchanged; other C/F rows and all obligations unchanged;12/21,0/15,E46/P54/N17/U15; document/evidence caps; charge 890.027
+
+EXIT 0; elapsed 0.786s
+CHARGED 890.813
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:git-size"]
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.839s
+CHARGED 891.652
+
+COMMAND ["git", "diff", "--cached", "--check"]
+
+EXIT 0; elapsed 0.071s
+CHARGED 891.723
