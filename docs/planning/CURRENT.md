@@ -20,6 +20,8 @@ has the same zero-amount delivery31, preserving topology. Expected fast pressure
 Pressure comes from actual safe upper bound, and live actual task rows must carry
 it into concern/motive/reason trace. Classify task-conditioned receiving differences
 from original unit-importance motive; do not claim sampled action effects.
+Predeclared gate is rational receiving, not a changed integer modifier. First run
+retains equal zero modifiers; repaired assertion compares actual406 SituationNet.
 Duplicate fast and restore31 compare all bytes at every remaining settlement to101.
 Initial state equal across rates; body truth/time/rate separate from adaptations.
 Adaptation/constitution inputs unchanged; this does not qualify broader physiology.

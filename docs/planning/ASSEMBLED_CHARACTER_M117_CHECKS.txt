@@ -1,3 +1,84 @@
 M117 verification; baseline4eac7884.
 Prepaid15s bookkeeping;1800s cumulative cap.
 CHARGED 15.000
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "-b", "--pretty", "false"]
+
+EXIT 0; elapsed 20.386s
+CHARGED 35.386
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledBodyTrajectory.test.ts", "-t", "kinetics delayed", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledBodyTrajectory.test.ts > M117 kinetics delayed delivery and exact continuation 322245ms
+   → expected [ { kind: 'signed', value: 0n }, …(1) ] to not deeply equal [ { kind: 'signed', value: 0n }, …(1) ]
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledBodyTrajectory.test.ts > M117 kinetics delayed delivery and exact continuation
+AssertionError: expected [ { kind: 'signed', value: 0n }, …(1) ] to not deeply equal [ { kind: 'signed', value: 0n }, …(1) ]
+
+Compared values have no visual difference.
+
+ ❯ src/test/assembledBodyTrajectory.test.ts:52:88
+     50|  expect(times.map(t=>level(left,t))).toEqual(fast.map(n=>q(n,1)));expe…
+     51|  for(const [i,t]of [31n,41n,61n].entries()){pressure(left,t,[q(1,6),q(…
+     52|  const x=pressure(left,41n,q(0,1)),y=pressure(none,41n,q(1,3));expect(…
+       |                                                                                        ^
+     53|  expect(outputs(left.snapshot().outputs,479n).map(x=>[1n,2n,3n,4n,5n].…
+     54|  for(const r of [left,right,none])expect(outputs(r.snapshot().outputs,…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  19:15:50
+   Duration  327.51s (transform 3.05s, setup 0ms, collect 4.70s, tests 322.25s, environment 0ms, prepare 151ms)
+
+
+EXIT 1; elapsed 329.312s
+CHARGED 364.698
+
+RECEIVING COMPARISON REPAIR: first kinetic run completed all trajectories, duplicate/restore, and live body/concern/motive/reason checks. Extra assertion on407 field6 failed: integer Situation modifier arrays remain zero. Existing reasons.ts records exact Situation net at406 field3 before converting to integer x at407 field6. Preserve zero-modifier null and require different actual rational Situation contributions, consistent with predeclared pressure/receiving gate; no changed-choice claim or calibration change. Sources, seeds, laws and original/body equality gates unchanged.
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledBodyTrajectory.test.ts", "-t", "kinetics delayed", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledBodyTrajectory.test.ts > M117 kinetics delayed delivery and exact continuation
+M117 reason receiving {"fast":["0/1","0/1"],"unrelieved":["0/1","0/1"],"fastInteger":["0","0"],"unrelievedInteger":["0","0"]}
+
+ × src/test/assembledBodyTrajectory.test.ts > M117 kinetics delayed delivery and exact continuation 327062ms
+   → expected [ { kind: 'rational', …(2) }, …(1) ] to not deeply equal [ { kind: 'rational', …(2) }, …(1) ]
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledBodyTrajectory.test.ts > M117 kinetics delayed delivery and exact continuation
+AssertionError: expected [ { kind: 'rational', …(2) }, …(1) ] to not deeply equal [ { kind: 'rational', …(2) }, …(1) ]
+
+Compared values have no visual difference.
+
+ ❯ src/test/assembledBodyTrajectory.test.ts:52:297
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  19:22:37
+   Duration  332.18s (transform 2.96s, setup 0ms, collect 4.58s, tests 327.06s, environment 0ms, prepare 140ms)
+
+
+EXIT 1; elapsed 333.904s
+CHARGED 698.602
+
+COMMAND ["cmd.exe", "/d", "/c", "npm.cmd", "run", "check:git-size"]
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.838s
+CHARGED 699.440
