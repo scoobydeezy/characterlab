@@ -8,9 +8,9 @@ import {SOCIAL_SOURCE,SOCIAL_TRIAL} from '../../assembled/social';
 import {BODY_SAMPLE} from '../../assembled/body';
 import {sid} from '../../assembled/skill';
 import {unsigned as u} from '../../substrate/canonicalEncoding';
-export type Mode='qualified'|'no-opportunity'|'censored'|'denied'|'hidden'|'unknown';
-export function fixture(mode:Mode='qualified',long=false,count=long?17:6){
- const b=prior(),originals=items(decode(b.d.orderedInputs),'list'),rows:CanonicalValue[]=[];
+export type Mode='qualified'|'no-opportunity'|'censored'|'denied'|'hidden'|'unknown'|'accurate';
+export function fixture(mode:Mode='qualified',long=false,count=long?17:6,flipGoal=false){
+ const b=prior('corrected',flipGoal),originals=items(decode(b.d.orderedInputs),'list'),rows:CanonicalValue[]=[];
  const template=items(originals.find(v=>key(items(v,'list')[2])===key(SOCIAL_SOURCE))!,'list');
  const probes=long?[9,10,18]:[6,7];
  for(const v of originals){const a=[...items(v,'list')];if(key(a[2])===key(SOCIAL_SOURCE))continue;
@@ -19,7 +19,7 @@ export function fixture(mode:Mode='qualified',long=false,count=long?17:6){
   rows.push(list(a));
  }
  for(let at=1;at<=count;at++){const p=[...items(template[3],'list')],o=[...items(p[1],'list')],positive=at<=(long?8:1),controlled=!positive||mode==='unknown';
-  o[0]=text(SOCIAL_TRIAL);o[1]=mode==='hidden';o[3]=u(positive?3:4);o[4]=u(at);o[5]=!(controlled&&mode==='denied');
+  o[0]=text(SOCIAL_TRIAL);o[1]=mode==='hidden';o[3]=u(positive&&mode!=='accurate'?3:4);o[4]=u(at);o[5]=!(controlled&&mode==='denied');
   o.push(mode==='hidden',!(controlled&&(mode==='no-opportunity'||mode==='unknown')),!(controlled&&mode==='censored'));
   p[1]=list(o);p[3]=at>1;rows.push(list([signed(at),...template.slice(1,3),list(p),template[4]]));
  }

@@ -54,7 +54,7 @@ function trialAudit(r:Run,classes:(number|undefined)[]){
   mean=applyBeliefEvidence(mean,e,1).next;last=applyBeliefEvidence(last,e,2).next;none=applyBeliefEvidence(none,e,3).next;
   const x=experiences.find(x=>key(f(x,1n))===key(items(a[4],'list')[0]))!;expect(x,'actual frozen C1 experience').toBeDefined();
   expect(items(f(x,8n),'set').map(v=>f(rec(v,216n),2n))).toContainEqual(a[1]);
-  const t=trace(r).find(t=>items(f(t,13n),'list').some(v=>key(v)===key(list(a))))!;expect(t).toBeDefined();expect(f(t,6n)).toEqual(text(BELIEF_TRIAL_VERSION));
+  const t=trace(r).find(t=>{const output=f(t,13n);return typeof output!=='boolean'&&output.kind==='list'&&output.items.some(v=>key(v)===key(list(a)));})!;expect(t).toBeDefined();expect(f(t,6n)).toEqual(text(BELIEF_TRIAL_VERSION));
   expect(items(f(t,9n),'list')).toContainEqual(a[1]);
  }
  if(mean){expect(f(rec(mean,739n),1n)).toEqual(qValue(personMean(belief(r))!));expect(uint(f(rec(mean,739n),2n))).toBe(BigInt(personHistory(belief(r)).length));}
@@ -82,6 +82,8 @@ it('long126: original eight-plus-nine history corrects live appraisal and surviv
 },550000);
 it('absence126: only fully observed opportunities make non-occurrence evidence',async()=>{
  const qualified=await create(),no=await create('no-opportunity'),censored=await create('censored'),denied=await create('denied'),unknown=await create('unknown');
+ for(const x of[qualified,no,censored,denied])await through(x.r,1n);
+ for(const x of[no,censored,denied]){bytes(snap(qualified.r).state,snap(x.r).state);bytes(snap(qualified.r).outputs,snap(x.r).outputs);}
  for(const x of[qualified,no,censored,denied,unknown])await through(x.r,7n);
  learned(qualified.r,6,1,6);probe(qualified.r,qualified.b.task,6,q(1,5),q(4,5));probe(qualified.r,qualified.b.task,7,q(1,6),q(5,6));
  trialAudit(qualified.r,[1,2,2,2,2,2]);
@@ -96,10 +98,10 @@ it('absence126: only fully observed opportunities make non-occurrence evidence',
  console.info('M126 ABSENCE PASS qualified1/6/support6 versus no-opportunity/censored/denied1/support1; all-uninformative unknown; no-op zero diffs; live appraisal, four original classes/C1 links; full queues');
 },550000);
 it('privacy126: hidden actual opportunity and outcome cannot alter safe state or outputs',async()=>{
- const a=await create(),b=await create('hidden');
+ const a=await create(),b=await create('hidden'),goal=await create('qualified',false,6,true),accurate=await create('accurate');
  const normalized=(data:typeof a.b.d)=>list(items(decode(data.orderedInputs),'list').map(v=>{const x=[...items(v,'list')];if(key(x[2])===key(SOCIAL_SOURCE)){const p=[...items(x[3],'list')],s=[...items(p[1],'list')];s[1]=false;s[7]=false;p[1]=list(s);x[3]=list(p);}return list(x);}));
- expect(normalized(a.b.d)).toEqual(normalized(b.b.d));expect(a.b.s).toEqual(b.b.s);
- for(let i=0;i<96;i++){const more=await advance(a.r);expect(await advance(b.r)).toBe(more);bytes(snap(a.r).state,snap(b.r).state);bytes(snap(a.r).outputs,snap(b.r).outputs);if(!more){learned(a.r,6,1,6);learned(b.r,6,1,6);console.info('M126 PRIVACY PASS exact safe outputs/state at every settled boundary/full queue under hidden opportunity+outcome flip');return;}}
+ expect(normalized(a.b.d)).toEqual(normalized(b.b.d));expect(a.b.s).toEqual(b.b.s);expect(a.b.d).toEqual(goal.b.d);expect(a.b.s).toEqual(accurate.b.s);
+ for(let i=0;i<96;i++){const more=await advance(a.r);expect(await advance(b.r)).toBe(more);bytes(snap(a.r).state,snap(b.r).state);bytes(snap(a.r).outputs,snap(b.r).outputs);for(const x of[goal,accurate])expect(await advance(x.r)).toBe(more);expect(belief(goal.r)).toEqual(belief(a.r));if(snap(a.r).clock===1n){learned(a.r,1,1);learned(accurate.r,1,0);}if(snap(a.r).clock===7n){probe(a.r,a.b.task,7,q(1,6),q(5,6));probe(goal.r,goal.b.task,7,q(1,6),q(1,6));probe(accurate.r,accurate.b.task,7,q(0,1),q(1,1));}if(!more){learned(a.r,6,1,6);learned(b.r,6,1,6);console.info('M126 PRIVACY PASS exact safe outputs/state under hidden opportunity+outcome flip; goal-only exact belief with live failure5/6 vs1/6; fixed-false-truth accurate evidence mean0; every settled boundary/full queues');return;}}
  throw Error('privacy queue did not exhaust');
 },550000);
 it('boundaries126: original classification, version bounds, owner and rollback remain enforced',async()=>{

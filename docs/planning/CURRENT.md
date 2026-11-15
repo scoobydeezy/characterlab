@@ -37,7 +37,8 @@ B: one positive then five qualified absences ->1/6; matched no-opportunity,
 censored and denied arms ->1/support1; entirely uninformative arm stays unknown.
 Hidden actual outcome/opportunity perturbation must preserve safe outputs/state.
 All named classes and zero-write cases disclosed with actual observation/C1 links.
-Goal-only and truth/evidence separation retained from M125 with targeted0.92 replay.
+Goal-only and truth/evidence separation retained by targeted0.92 replay and a
+matched0.93 goal/accurate-display comparison (same six trials, no new laws).
 Researcher-only TruthLookup/GoalAsBelief/UnconditionalAbsence controls must fail
 their required distinction, never enter the reference character.
 All behavioral comparisons require live social/joint rows before numeric comparison.
