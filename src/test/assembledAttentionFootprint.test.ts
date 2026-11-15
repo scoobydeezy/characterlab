@@ -39,6 +39,7 @@ function formation(r:Run,count:number,capacity=2){
  }
  expect(graph(r)).toEqual(g);expect(report(r,ASSOCIATION)).toHaveLength(es.length);
  const belief=state(r).read(personPath(C,target)).value;expect(personHistory(belief)).toHaveLength(2);expect(personMean(belief)).toEqual({numerator:1n,denominator:2n});
+ if(capacity===0)return [];
  return rows.map(a=>items(a[8],'list').map(v=>items(v,'list')).find(v=>key(v[1])===key(text('causal-role/actor')))!.at(6)!);
 }
 function probe(r:Run){
