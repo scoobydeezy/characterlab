@@ -25,6 +25,8 @@ third task with unknown appraisal; body10, seed0, normal body samples6/7.
 Fixed false world; six independent permitted trials, no learned S0.
 Set A/B deadlines20/25, third30, importance1 for A/B/zero third, and disable
 physical execution success in every arm so choices cannot fulfill tasks early.
+Common amended plan context: A route0/action one, B route1/action two via normal
+permitted route displays; retain the failed inherited same-action case.
 Capacities2/3/4 are the only between-arm model difference; identical input/S0/seed.
 At probe6 all3 tasks remain Open; forecast is live. Candidate load4 exceeds2/3.
 Capacity2 selects A+forecast;3 admits A/B+forecast;4 also admits third task.

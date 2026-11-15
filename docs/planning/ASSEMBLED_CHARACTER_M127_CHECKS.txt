@@ -193,3 +193,38 @@ EXIT 1; elapsed 116.909s
 CHARGED 267.738
 
 Comparison clarification before rerun:110c9d38 passed selection, liveness and excluded-B base/ground checks, then expected two executable candidates in the narrow arm. The runtime correctly gates the unselected plan, leaving one candidate. Physical definitions and access are different; preserve this result and require one/two accessible candidates. Absent B has actual probability0. Read Auto as deterministic chosen-only, otherwise the actual420 distribution; do not call its latent lottery probability an Auto choice probability. No model/scenario/calibration change.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledWorkspaceReceiving.test.ts", "-t", "primary127", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledWorkspaceReceiving.test.ts > primary127: retained unselected task supplies no reason; larger workspace changes actual choice probability 112886ms
+   → accessible executable alternatives: expected [ { kind: 'record', …(2) } ] to have a length of 2 but got 1
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledWorkspaceReceiving.test.ts > primary127: retained unselected task supplies no reason; larger workspace changes actual choice probability
+AssertionError: accessible executable alternatives: expected [ { kind: 'record', …(2) } ] to have a length of 2 but got 1
+
+- Expected
++ Received
+
+- 2
++ 1
+
+ ❯ projection src/test/assembledWorkspaceReceiving.test.ts:39:141
+
+ ❯ src/test/assembledWorkspaceReceiving.test.ts:58:42
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  16:23:01
+   Duration  117.46s (transform 2.74s, setup 0ms, collect 4.12s, tests 112.89s, environment 0ms, prepare 151ms)
+
+
+EXIT 1; elapsed 118.034s
+CHARGED 385.772
+
+Delegated common-fixture amendment before rerun:384a45e9 passes A/B live appraisal, positive bases and distinct grounds under capacity3, but both routes collapse to one executable action. The inherited source uses the shared one/two route order, and its displays select the same route for both tasks. Preserve this action-alias case. Make the common scenario explicit: A route0/action one; B route1/action two, with those availability bits delivered by ordinary DISPLAY records. Existing instruction definitions/owners/laws, capacities2/3/4, seed0 and actual probability-change gate unchanged. This is source setup, not a new decision mechanism or seed/calibration search.
