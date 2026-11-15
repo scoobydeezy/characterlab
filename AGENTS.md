@@ -6,7 +6,7 @@ Read [CURRENT.md](docs/planning/CURRENT.md), then
 The active direction is assembly of one continuing character.
 Workbench/UI development and Campaign 4 are stopped pending assembly acceptance.
 This is the assembly checkout, based on
-`788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`. M122 integrates native selected encoding-budget controls; graded association/access remains open. Reference0.91, feedback TRUE, existing psychological laws unchanged. Twelve members mapped; full assembly/families remain open. Follow CURRENT.md; no unrelated breadth, UI or multi-character work.
+`788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`. M123 integrates selected-track association learning -> recall -> changed judgment. Attention footprint replay remains open. Reference0.92, feedback TRUE, existing psychological laws unchanged. Twelve members mapped; full assembly/families remain open. Follow CURRENT.md; no unrelated breadth, UI or multi-character work.
 Do not execute historical TODOs, resume old audits, or retain/revisit browser tabs.
 Old instructions/evidence remain on tag `archive/workbench-stopped-2026-10-25`.
 ## Authority
