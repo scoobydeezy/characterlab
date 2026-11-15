@@ -1,41 +1,49 @@
-# Current work — M120 attention/encoding receiving gate complete
+# Current work — M121 competing perceived units
+Baseline16a85c93. Extend the same character to an observed social event with one focal
+person and up to2 additional perceived objects. No peer character or new runtime.
+Candidate rules/registry0.90, encoding0.2; existing reference laws/feedback TRUE.
+C-ATTN :4..13 prerequisite; final21/15/132 and current E/P/N/U counts unchanged.
 
-The current character's selective encoding changes later recalled judgment while
-its general person belief stays fixed. A permitted appearance classification changes
-perception without changing exact causal encoding or the later judgment.
-Reference0.89/effect-evidence0.1, feedback TRUE; existing L5/L6/D3 laws unchanged.
-No production/formal changes. Plan ecd3ae36; tested source a360b893.
-[Result](ASSEMBLED_CHARACTER_M120_RESULT.md) and [checks](ASSEMBLED_CHARACTER_M120_CHECKS.txt).
+## Observable gate and declared scenario
+Use M120's one holder, two social tasks/third unknown, body10/sample4, seed0,
+A true1/B false2/silent A reminder3/judgment4. No learned starting state.
+Focal A is observed Target in BOTH arms. At1 an additional permitted object is Actor
+versus Participant, with the same capacity1 and original role priorities.
+Both must have2 eligible candidates; selection must exclude/include the focal Target.
+Semantic person belief remains1/2; episodic A absent/present; actual recall/workspace
+must produce contextual judgment0/1 consumed by the same joint appraisal.
+No choice/dice-effect claim. Extra objects carry role evidence, not claims or people.
 
-## What passed
-- Actual Actor vs unresolved role: A/B vs B-only memory, same person belief1/2;
-  later perceived A reminder -> recall -> workspace -> contextual judgment1 vs0.
-  Actual formation/provenance and joint appraisal consumption are joined.
-- Present/absent permitted person-form classification changes SEM225, with identical
-  role encoding and remembered judgment. Capacity0 preserves semantic learning but
-  prevents episodes; denied/hidden role and disabled-attention controls pass.
-- Duplicate/save3/restored continuation matches full bytes through queue exhaustion;
-  all control arms also exhaust. Original indirect-reminder0/0 remains a control.
-- Six final native/reference tests,25 original controls,types/boundary/research and
-  preservation checks pass. Charged 891.723/1800s including failures; no extension.
+Controls: capacity0/2; absent/denied additional detection; hidden physical role;
+third lower-priority unit cannot change selected focal strength; observed role
+rather than truth determines competition. Invalid over-capacity source/schema rejects.
+Selected-only original capability and all four budget alternatives stay controls.
+Exact repeat and save1/restore through full queue exhaustion; injected failure after
+new perception writes must roll back state/output/trace/queue/IDs and then continue.
+Retained M120 full six-test suite checks legacy0.89 behavior; source closure unchanged.
 
-## Preserved corrections and limits
-Old appraisal declaration/route mismatch corrected to current input contracts.
-Indirect reminder's actual recall scores17/24 vs5/6 explain its null. Self-approved
-amendment gives both histories the same explicit A reminder; no law/calibration change.
-Denied first encounter requires NewTrack next; failed continuity claim is retained.
-One-time setup and settled-snapshot caching keep validation bounded.
+## Implementation/authority
+Before code: new formal assembled multi-unit encoding0.2 contract, ledger MEC005/007/
+010 and CTL004/RET001 consulted; original selector0.1/budget0.2 math unchanged.
+At most9 production/test files: model,encoding,recognition,recognitionState,
+recognitionExecution,encounter,socialExecution; new test and fixture.
+Shared SEM241/242 Perception owner; single121/122/124/130/140 path. Batched track
+counter increments match exact new memberships; old versions still require+1.
+Only permitted observations reach tracking/binding; never author selected candidates.
+Reserve each actual claim ID through the shared allocator. Existing selected capability
+determines focal admission; never let a selected distractor authorize focal memory.
+The original full SEM/selection audit remains provenance, not a new recalled content
+store: only the selected focal person's already-observed claim may form an episode.
+No invented association weights or extra perception lookup from recall.
 
-C-ATTN stays UNRESOLVED. One perceived unit/one irrelevant facet does not qualify
-multi-unit competition or wider footprint/budget/association comparisons.
-Those are the next attention integration gap; no new unrelated area is needed.
-No C member/F clause promotion:12/21 mapped,0/15 families; E46/P54/N17/U15=132.
-All21/15/132 and final whole-candidate replay remain. Obligation statuses unchanged.
-
-Write the next bounded card before code. One model/state/scheduler, existing owners.
-One milestone/job;3 capabilities/12 code-test files;20 evidence files/5MiB.
-Default1800s cumulative/600s per command; scoped affected checks only.
-Delegated routine diagnosis/comparison amendments remain authorized; record before
-rerun, retain failures, never retune laws or waive final requirements.
-No UI, unrelated breadth, autonomous peers or duplicate runtime.
+## Verification and stop
+One job;1800s cumulative incl15s bookkeeping;600s/command. Expected native gate320s,
+controls250s,continuation/rollback250s,legacy500s,original60s,types120s,other100s.
+Use cached immutable snapshots invalidated after settlement. No truncated scenarios.
+<=3 capabilities,12 production/test files,20 evidence files/5MiB. CURRENT<=80;
+register<=250lines/65536CRLF bytes. One compact result/log, Git retains failures.
+Done iff actual selection->memory->appraisal and controls/continuation/affected checks
+pass. Wider footprint/association/Need/surprise and C-ATTN mapping remain open.
+Routine amendments self-approved and recorded before reruns; no scope/law waiver.
+No UI, unrelated breadth, alternate psychology or autonomous partners.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
