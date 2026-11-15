@@ -97,7 +97,10 @@ it('single121: current position/effect path still uses the shared encoder under0
  const rows=items(decode(b.d.orderedInputs),'list').map(v=>{const a=[...items(v,'list')];if(key(a[2])===key(SOCIAL_SOURCE)){const p=[...items(a[3],'list')];p[7]=list([...items(p[7],'list'),list([])]);a[3]=list(p);}return list(a);});
  const s={...b.s,rulesVersion:MULTI_UNIT_RULES,registrySchemaVersion:MULTI_UNIT_REGISTRY,registry:enc(list(slots))},d={...b.d,orderedInputs:enc(list(rows))},r=await createCharacterRun(await prepareCharacterModel(s),d);
  await finish(r);const positions=state(r).entries().filter(e=>e.path.rootStateTypeId===346n&&typeof e.value!=='boolean'&&e.value.kind==='list'&&key(e.value.items[0])===key(text(POSITION_EPISODE)));
- expect(positions.length,'actual position acquisition under current single-unit source').toBeGreaterThan(0);
- for(const e of positions){const a=items(e.value,'list');expect(items(a[6],'list')[0]).toEqual(text(MULTI_ENCODING));expect(validateEncoding(a[6],a[3])).toBe(true);expect(items(items(a[6],'list')[3],'list')).toHaveLength(1);}
- console.info('M121 SINGLE actual position/effect scenario exhausts with validated encoding0.2 position episodes='+positions.length);
+ const formed=trace(r).filter(t=>key(f(rec(f(t,4n),130n),5n))===key(MEMORY_FORMATION)).map(t=>items(f(rec(f(t,4n),130n),6n),'list')).filter(a=>key(a[0])===key(text(POSITION_EPISODE)));
+ expect(formed.length,'actual committed position formation').toBeGreaterThan(0);
+ for(const a of formed){expect(items(a[6],'list')[0]).toEqual(text(MULTI_ENCODING));expect(validateEncoding(a[6],a[3])).toBe(true);expect(items(items(a[6],'list')[3],'list')).toHaveLength(1);
+  if(!positions.some(e=>key(items(e.value,'list')[1])===key(a[1])))expect(trace(r).flatMap(t=>items(f(t,17n),'list')).some(v=>{const d=rec(v,148n),old=f(d,3n);return f(d,2n)===true&&f(d,4n)===false&&typeof old!=='boolean'&&old.kind==='list'&&old.items.length>1&&key(old.items[1])===key(a[1]);}),'lost position has an actual removal diff').toBe(true);
+ }
+ console.info('M121 SINGLE actual position/effect scenario exhausts; committed formations='+formed.length+', retained='+positions.length+'; every lost acquisition has a removal diff');
 },240000);

@@ -214,3 +214,35 @@ AssertionError: actual position acquisition under current single-unit source: ex
 
 EXIT 1; elapsed 81.396s
 CHARGED 715.815
+
+Pre-run single-consumer reader amendment after1f27e1ad: final retained count0 does
+not distinguish missing encoding from later retention. Check actual committed
+MEMORY_FORMATION records/encoding0.2 and require an explicit removal diff for every
+formed acquisition absent at exhaustion. Scenario unchanged. This gate concerns the
+encoder's existing position consumer, not guaranteed survival; preserve final0 failure.
+If no positive formation exists, retain that as the remaining liveness blocker.
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "vitest", "run", "src/test/assembledCompetingAttention.test.ts", "-t", "single121", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledCompetingAttention.test.ts > single121: current position/effect path still uses the shared encoder under0.90 76718ms
+   → actual committed position formation: expected 0 to be greater than 0
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledCompetingAttention.test.ts > single121: current position/effect path still uses the shared encoder under0.90
+AssertionError: actual committed position formation: expected 0 to be greater than 0
+ ❯ src/test/assembledCompetingAttention.test.ts:101:62
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 9 skipped (10)
+   Start at  11:08:22
+   Duration  81.27s (transform 2.73s, setup 0ms, collect 4.09s, tests 76.72s, environment 0ms, prepare 144ms)
+
+
+EXIT 1; elapsed 82.951s
+CHARGED 798.766
