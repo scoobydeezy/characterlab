@@ -1,3 +1,10 @@
 M122 selected encoding budgets; baseline af5a94f4.
 Plan and formal amendment precede implementation. One job,1800s total/600s command.
 CHARGED 15.000
+
+COMMAND ["cmd.exe", "/d", "/c", "npx.cmd", "tsc", "--noEmit"]
+src/test/assembledEncodingBudgets.test.ts(93,133): error TS2345: Argument of type '"independent" | "historical-shared" | "UnitBudget" | "SmallBudget" | "dense"' is not assignable to parameter of type 'Mode | undefined'.
+  Type '"independent"' is not assignable to type 'Mode | undefined'.
+
+EXIT 2; elapsed 19.377s
+CHARGED 34.377
