@@ -1,3 +1,16 @@
 M126 baseline d1d9895e. Plan/card and contract written before implementation.
 Verification budget1800s, command600s,15s bookkeeping prepaid.
 CHARGED 15.000
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit", "-p", "tsconfig.app.json"]
+error TS5058: The specified path does not exist: 'tsconfig.app.json'.
+
+EXIT 1; elapsed 0.098s
+CHARGED 15.098
+
+Repair: initial type command named nonexistent tsconfig.app.json; use repository tsconfig.json. No source/acceptance change.
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit", "-p", "tsconfig.json"]
+
+EXIT 0; elapsed 18.142s
+CHARGED 33.240

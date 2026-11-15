@@ -92,7 +92,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
    for(const op of instructions){if(op.kind!=='set'||state.read(op.path).presence||state.read({...op.path,fieldId:1n}).presence)invalidModel('adopted instruction is immutable');if(!patch.operations.some(p=>p.kind==='set'&&key(statePathValue(p.path))===key(statePathValue({...op.path,fieldId:1n}))&&key(p.newValue)===key(r(372,[{kind:'unsigned',value:1n}]))))invalidModel('instruction requires joint fresh Open adoption');if(scope&&(!scope.writableRoots.includes(373n)||!scope.targetPaths.some(p=>key(statePathValue(p))===key(statePathValue(op.path)))))invalidModel('instruction write scope');}
    const basePatch={operations:patch.operations.filter(o=>!instructions.includes(o))},base=structural.applyPatch(state,basePatch,authority,scope),result=instructions.length?applyStatePatch(base.state,{operations:instructions},authority,instructionAuthority!):{state:base.state,diffs:[]};validateState(result.state);return {state:result.state,diffs:[...base.diffs,...result.diffs]};},
  });
- const episodes=model.memory?withEpisodicState(inheritedState,C,model.body!,!!model.affectMemory,model.encoding,!!model.memoryUse,model.bodyMemoryUse,model.positionMemory,model.retainedAttribution,model.significanceEnabled,model.actionMemory,model.effectEvidence?.proposition):inheritedState;
+ const episodes=model.memory?withEpisodicState(inheritedState,C,model.body!,!!model.affectMemory,model.encoding,!!model.memoryUse,model.bodyMemoryUse,model.positionMemory,model.retainedAttribution,model.significanceEnabled,model.actionMemory,model.effectEvidence?.proposition,model.social?.beliefTrials?32n:8n):inheritedState;
  const embodied=model.body?withBodyState(episodes,C,model.body):episodes;
  const retained=model.retention?withRetentionState(embodied,C):embodied;
  const procedural=model.skill?withSkillState(retained,C,model.procedures,model.formationEnabled):retained;
@@ -103,7 +103,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  const habitual=model.habit?withHabitState(monitored,C):monitored;
  const controlled=model.control?withControlState(habitual,C,model.mitigationEnabled?3:model.sharedAffectSources?2:model.reappraisal!==undefined,model.fatigue!==undefined,model.rumination):habitual;
  const communicating=model.communication?withCommunicationState(controlled,[...(model.communication.topic?[]:[C]),...model.communication.recipients],model.communication.topic,model.communication.expectation,model.commitmentWitness?tasks.map(t=>t.key):[]):controlled;
- const socialized=model.social?withSocialState(communicating,C,model.social.target,model.social.targets,!!model.loss,!!model.embarrassment):communicating;
+ const socialized=model.social?withSocialState(communicating,C,model.social.target,model.social.targets,!!model.loss,!!model.embarrassment,model.social.beliefTrials):communicating;
  const related=model.relationship?withRelationshipState(socialized,C,model.relationship.target,model.relationship.bindings.map(b=>b.target),model.attachment):socialized;
  const recognized=model.recognition?withRecognitionState(related,model.recognition,!!model.encoding,model.positionEnabled):related;
  const identityRegistration=rec(f(rows.find(v=>key(f(v,1n))===key(typedIdentifier(1009,text('TaskIdentityApplicationTransition'))))!,4n),450n);
