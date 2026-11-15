@@ -30,8 +30,9 @@ At probe6 all3 tasks remain Open; forecast is live. Candidate load4 exceeds2/3.
 Capacity2 selects A+forecast;3 admits A/B+forecast;4 also admits third task.
 Before comparison, assert actual selected A/B appraisal/base/nucleus liveness in
 the arm where each is admitted. Excluded B must retain exact task bytes but supply
-no appraisal row, base, ground or plan access. Both physical alternatives stay
-available; exact probability from actual decision records must change for B.
+no appraisal row, base, ground or plan access. The same action definitions remain registered; executable candidates are access-
+gated (one versus two). Actual probability, including Auto handling, must change
+for B; an absent candidate has probability0, never an invented option.
 No claim from unmatched sampled winners; no seed search or calibration change.
 Trace must show actual task reads, selected operands and receiving reasons/decision.
 Run full queues, inspect expiry/later access if naturally observed; no cue/protection

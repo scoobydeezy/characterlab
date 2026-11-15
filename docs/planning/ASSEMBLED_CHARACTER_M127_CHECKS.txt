@@ -158,3 +158,38 @@ CHARGED 150.829
 
 Helper repair after94f63902: toContainEqual treated nested canonical Map records for task-a and task-b as equal (failure shows distinct text payloads). Use exact canonical keys for membership and entire retained task projection. No scenario, production or acceptance change.
 Evidence trailing display whitespace escaped losslessly as \x20/\x09 before commit. Source test already running unchanged during this metadata normalization.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledWorkspaceReceiving.test.ts", "-t", "primary127", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledWorkspaceReceiving.test.ts > primary127: retained unselected task supplies no reason; larger workspace changes actual choice probability 111776ms
+   → both physical alternatives: expected [ { kind: 'record', …(2) } ] to have a length of 2 but got 1
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledWorkspaceReceiving.test.ts > primary127: retained unselected task supplies no reason; larger workspace changes actual choice probability
+AssertionError: both physical alternatives: expected [ { kind: 'record', …(2) } ] to have a length of 2 but got 1
+
+- Expected
++ Received
+
+- 2
++ 1
+
+ ❯ projection src/test/assembledWorkspaceReceiving.test.ts:39:133
+
+ ❯ src/test/assembledWorkspaceReceiving.test.ts:56:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  16:19:38
+   Duration  116.34s (transform 2.73s, setup 0ms, collect 4.12s, tests 111.78s, environment 0ms, prepare 139ms)
+
+
+EXIT 1; elapsed 116.909s
+CHARGED 267.738
+
+Comparison clarification before rerun:110c9d38 passed selection, liveness and excluded-B base/ground checks, then expected two executable candidates in the narrow arm. The runtime correctly gates the unselected plan, leaving one candidate. Physical definitions and access are different; preserve this result and require one/two accessible candidates. Absent B has actual probability0. Read Auto as deterministic chosen-only, otherwise the actual420 distribution; do not call its latent lottery probability an Auto choice probability. No model/scenario/calibration change.

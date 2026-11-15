@@ -36,16 +36,18 @@ function projection(r:Run,b:ReturnType<typeof fixture>,at=6){
  const signals=items(f(raw,3n),'set').map(v=>rec(v,402n)),base=(task:CanonicalValue)=>signals.filter(v=>{const k=rec(f(v,1n),401n);return key(f(k,2n))===key(task)&&uint(f(k,3n))===1n;}),grounds=(task:CanonicalValue)=>nuclei.filter(v=>key(f(rec(f(v,1n),404n),3n))===key(f(rec(task,371n),2n)));
  for(const task of[b.taskA,...(b.capacity>=3?[b.taskB]:[])]){expect(base(task),'selected task positive base').toHaveLength(1);expect(readQ(f(base(task)[0],2n)).compare(Q.of(0n))).toBeGreaterThan(0);expect(grounds(task),'compiled selected ground').toHaveLength(1);}
  if(b.capacity===2){expect(base(b.taskB)).toHaveLength(0);expect(grounds(b.taskB)).toHaveLength(0);}
- const candidates=items(f(rec(f(raw,2n),398n),3n),'list').map(v=>f(rec(v,397n),1n));expect(candidates,'both physical alternatives').toHaveLength(2);
- const actionB=candidates.find(v=>key(f(rec(v,395n),2n))===key(sid(1027,'definition/protocol-contact-two')))!;expect(actionB).toBeDefined();
- const probability=(candidate:CanonicalValue)=>{const row=items(f(data,2n),'list').map(v=>rec(v,421n)).find(v=>key(f(v,1n))===key(candidate));return row?readQ(f(row,2n)):Q.of(0n);};
+ const candidates=items(f(rec(f(raw,2n),398n),3n),'list').map(v=>f(rec(v,397n),1n));expect(candidates,'accessible executable alternatives').toHaveLength(b.capacity===2?1:2);
+ const isB=(v:CanonicalValue)=>key(f(rec(v,395n),2n))===key(sid(1027,'definition/protocol-contact-two'));
+ if(b.capacity===2)expect(candidates.some(isB)).toBe(false);else expect(candidates.some(isB)).toBe(true);
+ const row=items(f(data,2n),'list').map(v=>rec(v,421n)).find(v=>isB(f(v,1n))),lotteryB=row?readQ(f(row,2n)):Q.of(0n);
+ const pB=uint(f(data,8n))===1n?Q.of(isB(f(data,1n))?1n:0n):lotteryB;
  const wt=trace(r).find(t=>{const e=rec(f(t,4n),130n),output=f(t,13n);return key(f(e,2n))===key(signed(at))&&uint(f(e,3n))===40n&&typeof output!=='boolean'&&output.kind==='list'&&output.items.some(x=>key(x)===key(shared[3]));})!;
  expect(wt,'workspace producer trace').toBeDefined();
  const taskReads=items(f(wt,11n),'list').map(v=>rec(v,147n)).filter(v=>{const p=rec(f(v,2n),140n);return uint(f(p,1n))===373n&&uint(f(p,2n))===1n;});expect(taskReads).toHaveLength(3);
  expect(taskReads.every(v=>f(v,3n)===true&&uint(f(rec(f(v,4n),372n),1n))===1n)).toBe(true);
  const intent=outputs(snap(r).outputs,425n).find(v=>key(f(v,2n))===key(d))!;expect(intent,'chosen intent').toBeDefined();
  const plan=outputs(snap(r).outputs,431n).find(v=>key(f(v,2n))===key(intent))!,attempt=outputs(snap(r).outputs,432n).find(v=>key(f(v,2n))===key(plan))!,outcome=outputs(snap(r).outputs,433n).find(v=>key(f(v,2n))===key(attempt))!;expect(outcome,'actual execution outcome').toBeDefined();
- return {selected,shared,nuclei,base,grounds,data,actionB,pB:probability(actionB),taskReads};
+ return {selected,shared,nuclei,base,grounds,data,pB,lotteryB,taskReads};
 }
 it('primary127: retained unselected task supplies no reason; larger workspace changes actual choice probability',async()=>{
  const narrow=await create(2),wide=await create(3),all=await create(4);
@@ -56,6 +58,7 @@ it('primary127: retained unselected task supplies no reason; larger workspace ch
  const a=projection(narrow.r,narrow.b),b=projection(wide.r,wide.b),c=projection(all.r,all.b);
  for(const x of[narrow,wide,all])expect(canonicalTasks(x.r)).toBe(before);
  expect(4).toBeGreaterThan(narrow.b.capacity);expect(4).toBeGreaterThan(wide.b.capacity);
+ console.info('M127 captured modes/probabilities '+[a,b,c].map(p=>uint(f(p.data,8n))+' actual='+p.pB.numerator+'/'+p.pB.denominator+' lottery='+p.lotteryB.numerator+'/'+p.lotteryB.denominator).join('; '));
  expect(a.pB.equals(b.pB),'actual arbitration probability changes').toBe(false);expect(c.pB).toEqual(b.pB);
  console.info('M127 PRIMARY actual probability(action two) '+[a,b,c].map(p=>p.pB.numerator+'/'+p.pB.denominator).join(' / ')+'; selected counts1/2/3 plus forecast; task B retained but no base/ground at capacity2');
  for(const x of[narrow,wide,all])await finish(x.r);
