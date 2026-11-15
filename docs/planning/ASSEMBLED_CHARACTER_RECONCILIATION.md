@@ -1,7 +1,7 @@
 # Assembled Character — reconciliation and requirement evidence
 
 D1–D5 adopted2026-10-25; D2 condition below.
-Reference0.89; feedback TRUE.8 mapped/0 families; wider debts conditional.
+Reference0.89; feedback TRUE.9 mapped/0 families; wider debts conditional.
 
 ## Decision sheet — adopted 2026-10-25
 
@@ -109,7 +109,7 @@ move P to E; other130 classifications remain. Cited evidence stays version-scope
 | EQUIVALENT (mapped domain) | C-DET — PHEN-DET-001 v1.0.0-draft | [M115](ASSEMBLED_CHARACTER_M115_RESULT.md); originals. | :2..9 mapped0.89; :10/11 tracked. Insertion/key/replay/no-draw/failure. | Test-only insertion/local-index control; native effective-key change. Final replay required. |
 | EQUIVALENT (mapped domain) | C-EPI — PHEN-EPI-001 v1.3.0-draft | [M114](ASSEMBLED_CHARACTER_M114_RESULT.md); original controls. | :2..9 mapped on0.89; :10/11 tracked. Safe effect/SEM/learning/encoding/later read; shared owners/retention; restore/rollback. | One perfect effect sensor; original leak/lattice controls retained. Retention/identity correspondence explicit; RO007/010 limits; final replay required. |
 | UNRESOLVED | C-SEM — PHEN-SEM-001 v1.12.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/3); `src/test/phenSem001Binding.test.ts`. | Route M1/FND3/FND6. Required `PHEN-SEM-001:2..13` (inclusive). | Replay pending; U1/V4. |
-| UNRESOLVED | C-LEARN — PHEN-LEARN-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/4); `src/campaign3/learnFactory.ts`. | Route M5/L3. Required `PHEN-LEARN-001:2..11` (inclusive). | Replay pending; U1/V4. |
+| EQUIVALENT (mapped domain) | C-LEARN — PHEN-LEARN-001 v1.0.0-draft | [M116](ASSEMBLED_CHARACTER_M116_RESULT.md). | :2..9 mapped0.89; :10/11 tracked. | Acquired priors/censoring/point; controls/limits in result; final replay required. |
 | EQUIVALENT (mapped domain) | C-MEM — PHEN-MEM-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/5); generalFactory.ts. | [M64],0.63: :2..9 PASS; :10/:11 TRACKED. | Actual recency/K/reinforcement/tie/privacy/trace/workspace. Source/time mapping explicit; original no-decay component control retained. No full GA/family/corpus closure; reopen constraints preserved. |
 | EQUIVALENT (mapped) | C-REASON — PHEN-REASON-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/6); [M95 complete mapping][ref31]. | :2..9 mapped on0.80 SourceCoverage; :10/11 tracked. All4 competitors; native Value/standing/keys/signs and isolated motive/basis evidence. | Adopted coverage/D3 differences explicit; receipt bijection diagnostic only. General correlation, ID ties/nonparticipants and calibration limits retained;001 conditional. Final candidate replay required. |
 | EQUIVALENT (mapped) | C-DECISION — PHEN-DECISION-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/7); decisionFactory.ts. | [M105](ASSEMBLED_CHARACTER_M105_RESULT.md) refreshes M80–83 on0.85:2..9;:10/:11 tracked. | Native regimes/coupled significance/frozen history, all5 competitor distinctions, exact continuation. Source/parameter mappings and LIMIT-DECISION retained; final replay required. |
