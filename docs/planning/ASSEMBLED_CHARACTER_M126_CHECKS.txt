@@ -162,3 +162,107 @@ EXIT 0; elapsed 166.815s
 CHARGED 993.742
 
 Final source review repair: new parser read the tag before rejecting an empty list, producing an accidental TypeError instead of the existing domain error. Validate7/10-field shape first; add empty-source negative assertion. Only malformed inputs change. Targeted boundary/type and0.92 regression rerun; valid0.93 long/absence/privacy paths and all their bytes are unchanged by this always-true guard. No new scenario or law.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledBeliefTrials.test.ts", "-t", "boundaries126", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledBeliefTrials.test.ts > boundaries126: original classification, version bounds, owner and rollback remain enforced
+M126 BOUNDARIES PASS8 original classifications;32/33 source/history; old version/malformed/wrong owner/learned S0 reject; full instant rollback and exact saved recovery
+
+ ✓ src/test/assembledBeliefTrials.test.ts > boundaries126: original classification, version bounds, owner and rollback remain enforced 74162ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  15:46:25
+   Duration  78.81s (transform 2.80s, setup 0ms, collect 4.21s, tests 74.16s, environment 0ms, prepare 138ms)
+
+
+EXIT 0; elapsed 79.366s
+CHARGED 1073.108
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 18.257s
+CHARGED 1091.365
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledBeliefReceiving.test.ts", "-t", "primary125", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledBeliefReceiving.test.ts > primary125: wrong learned belief corrects through permitted contradiction; goals change appraisal not belief
+M125 CAPTURED actual8 claims: weighted7/8, LastObservation0, NoLearning unknown; support-derived confidence8/9 diagnostic only
+M125 PRIMARY fixed false truth: mean1 vs0 at7; contradiction8 gives7/8 vs0; current8 reads1, current9 reads7/8; goal-only exact belief equality and failure likelihood0/1 then1/8 vs7/8; full queues
+
+ ✓ src/test/assembledBeliefReceiving.test.ts > primary125: wrong learned belief corrects through permitted contradiction; goals change appraisal not belief 148322ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  15:48:02
+   Duration  152.90s (transform 2.75s, setup 0ms, collect 4.12s, tests 148.32s, environment 0ms, prepare 140ms)
+
+
+EXIT 0; elapsed 153.459s
+CHARGED 1244.824
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/beliefPublic.test.ts", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/beliefPublic.test.ts > learns confidently wrong belief from misleading displays then corrects from permitted contrary evidence
+ ✓ src/test/beliefPublic.test.ts > same world truth with different displays yields different beliefs; altered hidden truth preserves all safe bytes
+ ✓ src/test/beliefPublic.test.ts > goal-only intervention leaves exact belief state unchanged and changes later appraisal
+ ✓ src/test/beliefPublic.test.ts > safe absence updates; censored and absent opportunity do not reinforce; denied display has no observation
+ ✓ src/test/beliefPublic.test.ts > retains absence as unknown rather than a known zero and freezes phase50 before140 update
+ ✓ src/test/beliefPublic.test.ts > last-observation and no-learning are genuine distinct frozen competitors
+ ✓ src/test/beliefPublic.test.ts > restores every complete prefix, continues identically, and rejects altered saved state or trace 526ms
+ ✓ src/test/beliefPublic.test.ts > rejects duplicate targets before runtime, generated originals, nonempty initial state and accessor inputs
+ ✓ src/test/beliefPublic.test.ts > independent target permutation preserves safe outputs and exact learned state
+ ✓ src/test/beliefPublic.test.ts > rolls back all six stages and final commit, with faults proven reached
+ ✓ src/test/beliefPublic.test.ts > rejects repeated evidence, fabricated class and malformed precision/support
+ ✓ src/test/beliefPublic.test.ts > preserves exact weighted/prediction-error equivalence and resistance to one contradiction
+ ✓ src/test/beliefPublic.test.ts > prevents new records being smuggled into inherited or newly typed Boolean slots
+ ✓ src/test/beliefPublic.test.ts > records exclusive belief reads and writes, safe evidence ancestry, and experience reservation
+ ✓ src/test/beliefPublic.test.ts > rejects model-byte changes and exceeds neither finite input nor support limits
+ ✓ src/test/beliefPublic.test.ts > preserves earlier committed learning when a later contradictory update fails at commit
+ ✓ src/test/beliefPublic.test.ts > rejects writes through an unrelated mutation authority
+
+ Test Files  1 passed (1)
+      Tests  17 passed (17)
+   Start at  15:50:36
+   Duration  2.77s (transform 717ms, setup 0ms, collect 1.06s, tests 1.28s, environment 0ms, prepare 140ms)
+
+
+EXIT 0; elapsed 3.311s
+CHARGED 1248.135
+
+COMMAND ["node", "scripts/check-reference-boundary.mjs"]
+Reference boundary check passed.
+
+EXIT 0; elapsed 2.830s
+CHARGED 1250.965
+
+COMMAND ["node", "scripts/check-research-obligations.mjs"]
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4347}
+
+EXIT 0; elapsed 3.420s
+CHARGED 1254.385
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,json\nbase='d1d9895e'\ncode={'src/assembled/'+n+'.ts' for n in ['model','social','socialExecution','inputs','state','traceBinding','memory']}|{'src/test/assembledBeliefTrials.test.ts','src/test/fixtures/assembledBeliefTrials.ts'}\nallowed=code|{'docs/formal/ASSEMBLED_CHARACTER_BELIEF_TRIAL_CONTRACT.md','AGENTS.md','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md','docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md','docs/planning/RESEARCH_OBLIGATIONS.json','docs/planning/ASSEMBLED_CHARACTER_M126_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M126_CHECKS.txt'}\ngit=lambda *a:subprocess.check_output(['git',*a],text=True,encoding='utf-8')\nchanged=set(git('diff','--name-only',base).splitlines())|set(git('ls-files','--others','--exclude-standard').splitlines())\nassert changed<=allowed,changed-allowed\nassert changed&code==code\nassert git('diff','2fd36aa7','--','src')=='','tested source changed'\nassert len(code)==9\nassert all(p in code for p in changed if p.startswith('src/'))\nold=git('show',base+':docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md')\nnew=Path('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md').read_text(encoding='utf-8')\nrows=lambda s:[x for x in s.splitlines() if ('| C-' in x or '| F-' in x) and '| C-BELIEF ' not in x]\nassert rows(old)==rows(new),'other C/F rows changed'\nassert '| EQUIVALENT (mapped) | C-BELIEF ' in new\nassert 'E46/P54/N17/U15' in new and '14/21' in new and 'families:0/15' in new\nassert len(new.splitlines())<=250 and len(new.replace('\\n','\\r\\n').encode())<=65536\nbefore=json.loads(git('show',base+':docs/planning/RESEARCH_OBLIGATIONS.json'))\nafter=json.loads(Path('docs/planning/RESEARCH_OBLIGATIONS.json').read_text(encoding='utf-8-sig'))\nassert before['obligations']==after['obligations']\nassert after['reportReviews'][:-1]==before['reportReviews']\nassert after['reportReviews'][-1]['path']=='docs/planning/ASSEMBLED_CHARACTER_M126_RESULT.md'\nfor path,cap in [('AGENTS.md',120),('docs/planning/CURRENT.md',80),('docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md',250)]:\n assert len(Path(path).read_text(encoding='utf-8').splitlines())<=cap,path\nevidence=[Path('docs/planning/ASSEMBLED_CHARACTER_M126_'+s) for s in ['RESULT.md','CHECKS.txt']]\nassert sum(p.stat().st_size for p in evidence)<5*1024*1024\nlog=evidence[1].read_text(encoding='utf-8')\ncharge=float([l.split()[1] for l in log.splitlines() if l.startswith('CHARGED ')][-1])\nassert charge<1800\nfor token in ['M126 LONG PASS17','M126 ABSENCE PASS','M126 PRIVACY PASS','M126 BOUNDARIES PASS','M125 PRIMARY','src/test/beliefPublic.test.ts','Reference boundary check passed.','PASS: research obligation references']:\n assert token in log,token\ncurrent=Path('docs/planning/CURRENT.md').read_text()\nassert '(ASSEMBLED_CHARACTER_M126_CHECKS.txt)' in current and '{{' not in current\nprint('PASS M126 preservation:source2fd36aa7;7 production+2 test/helper files; original control dependencies unchanged; C-BELIEF mapped, other C/F unchanged;14/21,0/15,E46/P54/N17/U15; obligation statuses/document/evidence caps retained; charge',charge)\n"]
+PASS M126 preservation:source2fd36aa7;7 production+2 test/helper files; original control dependencies unchanged; C-BELIEF mapped, other C/F unchanged;14/21,0/15,E46/P54/N17/U15; obligation statuses/document/evidence caps retained; charge 1254.385
+
+EXIT 0; elapsed 0.720s
+CHARGED 1255.105
+
+COMMAND ["node", "scripts/check-git-file-sizes.mjs"]
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.374s
+CHARGED 1255.479
+
+COMMAND ["git", "diff", "--cached", "--check"]
+
+EXIT 0; elapsed 0.071s
+CHARGED 1255.550
+
+M126 COMPLETE:22 targeted tests, types/boundaries/research/preservation/index checks pass. Final source2fd36aa7; long/absence/privacy7b3621aa. Total1255.550/1800s including15s bookkeeping. Metadata finalization only; no further functional verification. Trailing display whitespace escaped losslessly as \x20/\x09.
