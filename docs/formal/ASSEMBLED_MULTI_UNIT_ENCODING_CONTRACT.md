@@ -6,6 +6,8 @@ Old0.89 and encoding0.1 retain their grammars and byte behavior. No Campaign0–
 control dependency or accepted component math changes.
 
 Registry slot30: [assembled-encoding/0.2, capacity0..2, role-calibrated|disabled-attention].
+Episode model validation requires its declared0.1/0.2 label as well as capacity/law;
+a new-version annex is not admissible under the old model.
 All other47-slot declarations and feedback admission remain0.89. The encounter role
 channel becomes [physicalFocalRole, observedFocalRole, additionalDetections].
 At most2 additional detections, each [permitted:boolean, physicalRole0..4,

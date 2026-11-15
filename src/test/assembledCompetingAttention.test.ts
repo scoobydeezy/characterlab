@@ -1,5 +1,7 @@
-import {fixture as effectFixture} from './fixtures/assembledEffectEvidence';
-import {MULTI_UNIT_RULES,MULTI_UNIT_REGISTRY} from '../assembled/model';
+import {compileCharacterModel} from '../assembled/model';
+import {compileCharacterState} from '../assembled/state';
+import {POSITION,POSITION_SOURCE} from '../assembled/positionPerception';
+import {unsigned as u} from '../substrate/canonicalEncoding';
 import {it,expect,vi} from 'vitest';
 import {prepareCharacterModel,createCharacterRun,restoreCharacterRun} from '../assembled/character';
 import {fixture,rec,f,uint,items,key,decode,enc,list,text,signed,q,bytes,outputs,C,exact,target,type Run,type CanonicalValue,type Mode} from './fixtures/assembledCompetingAttention';
@@ -89,18 +91,20 @@ it('remaining121 boundaries121: no extra-source or version bypass and focal sele
  await expect(createCharacterRun(m,{...b.d,orderedInputs:enc(list(bad))})).rejects.toThrow('additional detection capacity');
  await expect(prepareCharacterModel({...b.s,rulesVersion:b.legacy.s.rulesVersion,registrySchemaVersion:b.legacy.s.registrySchemaVersion})).rejects.toThrow('encoding: declaration');
  const r=await createCharacterRun(m,b.d);await through(r,1n);const a=report(r,MULTI_ENCODING)[0],tampered=[...a];tampered[3]=list([items(a[3],'list')[0],items(a[3],'list')[0]]);expect(()=>validateEncoding(list(tampered),a[4])).toThrow('reserved claim identities');
- console.info('M121 BOUNDARIES source>2, old-version new grammar, duplicate reserved claims reject');
+ const oldState=await compileCharacterState(await compileCharacterModel(b.legacy.s));expect(()=>oldState.stateModel.validateState(state(r))).toThrow('encoding model binding');
+ console.info('M121 BOUNDARIES source>2, old-version new grammar/state annex, duplicate reserved claims reject');
 },180000);
 
-it('single121: current position/effect path still uses the shared encoder under0.90',async()=>{
- const b=effectFixture('point',10),slots=[...items(decode(b.s.registry),'list')],setting=items(slots[30],'list');slots[30]=list([text(MULTI_ENCODING),...setting.slice(1)]);
- const rows=items(decode(b.d.orderedInputs),'list').map(v=>{const a=[...items(v,'list')];if(key(a[2])===key(SOCIAL_SOURCE)){const p=[...items(a[3],'list')];p[7]=list([...items(p[7],'list'),list([])]);a[3]=list(p);}return list(a);});
- const s={...b.s,rulesVersion:MULTI_UNIT_RULES,registrySchemaVersion:MULTI_UNIT_REGISTRY,registry:enc(list(slots))},d={...b.d,orderedInputs:enc(list(rows))},r=await createCharacterRun(await prepareCharacterModel(s),d);
+it('single121: current position path still uses the shared encoder under0.90',async()=>{
+ const b=fixture(),rows=items(decode(b.d.orderedInputs),'list');expect(rows.some(v=>key(items(v,'list')[2])===key(POSITION_SOURCE))).toBe(false);
+ // Unchanged M50 admitted Actor marker/panel grammar, now alongside the current social scene.
+ const frame=list([signed(1),u(10),POSITION_SOURCE,list([text(POSITION),list([u(0),u(0),u(1),true,true,u(1)]),list([u(1),text('Before'),true,true])]),list([])]);
+ const r=await createCharacterRun(await prepareCharacterModel(b.s),{...b.d,orderedInputs:enc(list([...rows,frame]))});
  await finish(r);const positions=state(r).entries().filter(e=>e.path.rootStateTypeId===346n&&typeof e.value!=='boolean'&&e.value.kind==='list'&&key(e.value.items[0])===key(text(POSITION_EPISODE)));
  const formed=trace(r).filter(t=>key(f(rec(f(t,4n),130n),5n))===key(MEMORY_FORMATION)).map(t=>items(f(rec(f(t,4n),130n),6n),'list')).filter(a=>key(a[0])===key(text(POSITION_EPISODE)));
  expect(formed.length,'actual committed position formation').toBeGreaterThan(0);
  for(const a of formed){expect(items(a[6],'list')[0]).toEqual(text(MULTI_ENCODING));expect(validateEncoding(a[6],a[3])).toBe(true);expect(items(items(a[6],'list')[3],'list')).toHaveLength(1);
   if(!positions.some(e=>key(items(e.value,'list')[1])===key(a[1])))expect(trace(r).flatMap(t=>items(f(t,17n),'list')).some(v=>{const d=rec(v,148n),old=f(d,3n);return f(d,2n)===true&&f(d,4n)===false&&typeof old!=='boolean'&&old.kind==='list'&&old.items.length>1&&key(old.items[1])===key(a[1]);}),'lost position has an actual removal diff').toBe(true);
  }
- console.info('M121 SINGLE actual position/effect scenario exhausts; committed formations='+formed.length+', retained='+positions.length+'; every lost acquisition has a removal diff');
+ console.info('M121 SINGLE actual position/social scenario exhausts; committed formations='+formed.length+', retained='+positions.length+'; every lost acquisition has a removal diff');
 },240000);
