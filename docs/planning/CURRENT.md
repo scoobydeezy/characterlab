@@ -1,58 +1,53 @@
-# Current work — M130 initial recognition knowledge in one model
-The character can begin with different learned familiarity without selecting a
-different psychology. Same permitted observations must then affect recognition,
-belief/appraisal and actual choice through the existing continuing simulation.
-Baseline bde1c1fd; successor0.96. C-SEM :5/:6/:8/:9/:10 partial, no member mapping.
+# Current work — M130 complete; SEM integration remains partial
+Initial familiarity now belongs to the character's run state within one permitted
+recognition domain. The same observations can yield different recognition,
+person belief and choice; later identification cannot rewrite past attribution.
+Result: [M130](ASSEMBLED_CHARACTER_M130_RESULT.md);
+[checks](ASSEMBLED_CHARACTER_M130_CHECKS.txt).
+Rules/registry0.96; reference laws/threshold/feedback TRUE/UnitBudget unchanged.
 
-## Bounded card before code
-Three capabilities: separate permitted catalog domain from initial knowledge;
-derive cues only from actual observer-owned initial templates;
-show one-model/fixed-input familiarity -> recognition -> live belief/appraisal/choice.
-MEC-004 PORT; accepted SEM-001F/I knowledge ownership and unique-support rule.
-RO-C3-014/016/020 retained; no new law, identity oracle, store, owner or scheduler.
-Original catalogs and assembled0.95 behavior remain frozen comparison controls.
+## Completed package
+Plan1b921218; baseline bde1c1fd; production3f82d659; tested source f357f55a.
+Eight production/test files, no new state owner/store/scheduler/factory.
+Slot21 declares permitted candidate/template pairs; initial243 catalog stores
+actual known subsets. Empty familiarity is valid, absent catalog entries are not.
+126 reads actual seed knowledge; fixed cue reservations and the accepted C1
+recognition law remain. Existing belief/appraisal/reason/choice consumes the result.
+Same model/input/seed, target coat+voice versus voice only: first voice establishes
+belief; new-track coat report is assigned only when recognized; later voice cannot
+backfill that report. At4 means1/2 versus1 yield actual action-B P47/72 versus1.
+Live appraisal/reasons, actual execution and complete queues pass.
+26 targeted tests/types and reference/research/preservation/size checks pass.
+Verification584.430/1800s (9m44s), incl failures/15s bookkeeping; no extension.
 
-Files <=12: model.ts, traceBinding.ts, recognition.ts, recognitionState.ts,
-recognitionExecution.ts, socialExecution.ts; fixtures/assembledRecognitionSeed.ts,
-assembledRecognitionSeed.test.ts (eight planned).
-Formal ASSEMBLED_CHARACTER_RECOGNITION_SEED_CONTRACT.md precedes code.
-Slot21 declares allowed candidate/template pairs; S0 supplies an exact catalog
-with any subset (including empty templates) per candidate. Same declared catalog
-keys/observer/domain/version; no missing/foreign/duplicate entry or undeclared pair.
-Existing243 knowledge remains immutable in-run. No symbol mapping or learning yet.
-Fixed reservations for every permitted pair; emit cues only for actual retained pairs.
-ModelIdentity commits rules/domain; RunIdentity commits initial knowledge.
-Schema/domain changes must still change model identity.
+## Preserved controls and correction
+Canonical template permutation keeps initial bytes/run identity; different S0/seed
+changes RunIdentity, allowed-domain change changes ModelIdentity.
+Missing/foreign/duplicate/schema/domain/template entries and wrong-S0 restore reject.
+No run-time catalog mutation, even by knowledge authority. Old0.95 admission stays.
+Actual trace reads, frozen pre-recognition/earlier resolution history, repeat/save2,
+full later prefixes, hidden truth/denied encounter and whole-instant rollback pass.
+Retain original C1 controls and M1290.95 native role/memory/choice comparison.
+Initial probe migration collided with inherited urgency4; keep one declared
+urgency1 display equally in both arms. Failed admission retained, no values/laws changed.
+Review replaced a vacuous singleton permutation with an actual two-template reversal.
 
-## Predeclared comparison and liveness
-M129 separate-carrier fixture; one holder/recognized stand-in, two social tasks,
-third unknown, body10, seed0, importance1/urgency1, distinct routes valid through30.
-First positive encounter1 shows voice (known in both); negative encounter2 shows
-coat on a new track. Third silent encounter3 shows voice on that continuing track.
-Same model/source inputs/seed: familiar S0 target owns coat+voice; unfamiliar owns
-voice only. All other initial entries equal. No synthetic initial belief/memory.
-Probe/current body/current urgency move21 ->4, before delayed recall21.
-Expect negative evidence assigned only when coat is known; later voice recognition
-must not backfill earlier person belief. Both current means/appraisals must be live.
-Require a difference in actual produced choice probabilities and actual execution,
-not uncoupled sampled winners. Complete queues; unchanged threshold/reference laws.
-Compare every frozen earlier observation/recognition prefix around later resolution.
+## Remaining scope and next step
+C-SEM stays UNRESOLVED/partial.15/21 mapped,0/15 complete families;
+E46/P54/N17/U15=132; all final whole-candidate replay remains required.
+MEC-004 port and RO-C3-014/016/020 retained; no obligation status/reduction changes.
+Candidate membership/Person-domain metadata still model-constrained; online knowledge
+learning, symbol mappings/replacement, full facets/events/observer domains,
+retirement and complete provenance/ordinal/lane combinations remain open.
+Continue remaining SEM receiving connections in causal order; read :2..13/original
+C1 contracts before the next bounded card. No full SEM or family closure inferred.
 
-## Checks, risks and done
-One job;600s/command;1800s cumulative incl failures and15s prepaid bookkeeping.
-<=3 capabilities,12 code/test files,20 evidence files/5MiB. No budget extension.
-Types; original recognition/semantic-state controls; actual one-model comparison.
-Repeat/save after2 through full later boundaries; swapped initial-state restore
-rejects; different seeds change RunIdentity, changed domain changes ModelIdentity.
-Hidden truth and denied signal controls; exact frozen experience under different
-recognition; actual trace reads seed catalog; fault during recognition rolls back.
-Boundary cases empty templates, canonical permutations, missing/foreign/wrong
-schema/domain/template entries and in-run knowledge writes reject as appropriate.
-Retain M129 primary on0.95 as affected old-version witness.
-Reference/research/size/preservation checks; no unchanged full C2 replay.
-Done only when the causal/identity/control gates pass within budget; otherwise
-checkpoint the missing gate. Self-approve bounded repairs before reruns, retain
-failures, no seed/law search or weakened final scope.
-SEM stays partial;15/21 mapped,0/15 complete families,E46/P54/N17/U15=132.
-No UI, autonomous peers or unrelated breadth.
+## Standing guardrails
+No milestone active. Next finite card before code. One validation job;
+600s/command,1800s cumulative including failures/15s bookkeeping;
+<=3 capabilities,12 code/test files,20 evidence files/5MiB; existing document caps.
+Self-approve bounded repairs before reruns; preserve failures/laws/21-15-132 scope.
+No seed search, authored psychological intermediates, alternate pipelines, hidden
+truth shortcuts, weakened gates, UI/Campaign4 or autonomous peer dependency.
+Passing ends verification unless a source change/failure identifies a concrete risk.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
