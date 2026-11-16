@@ -31,7 +31,9 @@ export function roleChannel(v:CanonicalValue,multiUnit=false,sharedBindings=fals
  const a=items(v,'list');require(a.length===(multiUnit?3:2),'role channel');
  const physical=uint(a[0]),observed=uint(a[1]);require(physical<=4n&&observed<=4n,'role codes');
  const additional=multiUnit?items(a[2],'list').map(v=>{const x=items(v,'list');require(x.length===(sharedBindings?4:3)&&typeof x[0]==='boolean'&&(!sharedBindings||typeof x[3]==='boolean'),'additional detector');const physical=uint(x[1]),observed=uint(x[2]);require(physical<=4n&&observed<=4n,'additional role codes');return {permitted:x[0]===true,physical,observed,sameFocal:sharedBindings&&x[3]===true};}):[];
- require(additional.length<=2,'additional detection capacity');return {physical,observed,additional};
+ require(additional.length<=2,'additional detection capacity');
+ if(sharedBindings){const focalRoles=[observed,...additional.filter(x=>x.permitted&&x.sameFocal).map(x=>x.observed)];require(new Set(focalRoles).size===focalRoles.length,'duplicate observed event/carrier/role');}
+ return {physical,observed,additional};
 }
 export function observedRole(code:bigint):EventRoleEvidence{require(code>=0n&&code<=4n,'observed role');return code===0n?{kind:'unresolved'}:{kind:'exact',eventRoleId:[R.Actor,R.Target,R.Participant,R.Recipient][Number(code)-1]};}
 const G='semantic-binding/0.1-candidate#SEM-001G';

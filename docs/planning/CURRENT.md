@@ -29,6 +29,8 @@ Same event/carrier/role duplicates reject; same role on distinct carriers is leg
 ## Comparison and liveness
 Same seed0, body10, recognized person, true encounter1/false encounter2, silent cue3,
 recall/current body at21; A/B importance1, distinct routes; physical task success off.
+129-B/C: routes valid through30; current visible urgency1 at21 in both arms.
+Retain expired-route NoCandidates and urgency0/base1/2 BelowThreshold controls.
 Only encounter2's observed same-continuant Boolean differs:
 separate Target/Participant -> focal negative episode admitted;
 one Target+Participant carrier -> explicit MultipleRoles exclusion -> no negative

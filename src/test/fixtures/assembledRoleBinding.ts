@@ -1,4 +1,4 @@
-/** M1292435908e. Two social goals, third unknown; body10; seed0; no successful execution.
+/** M1292435908e. Two social goals, third unknown; body10; routes through30/current urgency21; seed0; no successful execution.
  * Positive1, negative2, silent cue3. Only perceived co-carrier relation at2 differs. */
 import {fixture as prior,rec,f,uint,items,key,decode,enc,list,text,signed,q,bytes,outputs,C,exact,target,type Run,type CanonicalValue} from './assembledLearnedAssociation';
 import {ROLE_BINDING_RULES,ROLE_BINDING_REGISTRY} from '../../assembled/model';
@@ -11,7 +11,7 @@ import {sid} from '../../assembled/skill';
 import {unsigned as u} from '../../substrate/canonicalEncoding';
 import {changeDefinition} from './assembledCharacter';
 export type Mode='separate'|'shared'|'duplicate'|'hidden'|'denied';
-export function fixture(mode:Mode='separate'){
+export function fixture(mode:Mode='separate',liveChoice=true,urgency=1){
  const b=prior(30,'absent',1),slots=[...items(decode(b.s.registry),'list')],encoding=items(slots[30],'list');slots[30]=list([text(ROLE_ENCODING),...encoding.slice(1)]);
  slots.push(list([text(WORK),false,list([])]));
  const mapping=items(items(slots[19],'list')[1],'list').flatMap(v=>items(items(v,'list')[1],'list').map(v=>items(v,'list')[0])),taskA=mapping[0],taskB=mapping[1];if(!taskB)throw Error('M129 two social tasks');
@@ -25,8 +25,10 @@ export function fixture(mode:Mode='separate'){
   if(mode==='hidden'){p[2]=target;const o=[...items(p[1],'list')];o[1]=!(o[1]===true);p[1]=list(o);}a[3]=list(p);
  }
  if(key(a[2])===key(PRIORITY_DISPLAY)){const p=[...items(a[3],'list')];p[1]=list(items(p[1],'list').map(v=>{const g=[...items(v,'list')];if(items(g[1],'list').length)g[1]=list([q([taskA,taskB].some(t=>key(t)===key(g[0]))?1:0,1)]);return list(g);}));a[3]=list(p);}
- if(key(a[2])===key(DISPLAY)){const p=[...items(a[3],'list')];p[1]=list(items(p[1],'list').map(v=>{const g=[...items(v,'list')];if(key(g[0])===key(taskA))g[3]=uint(g[1])===0n;if(key(g[0])===key(taskB))g[3]=uint(g[1])===1n;return list(g);}));a[3]=list(p);}
+ if(key(a[2])===key(DISPLAY)){const p=[...items(a[3],'list')];p[1]=list(items(p[1],'list').map(v=>{const g=[...items(v,'list')];if(liveChoice)g[5]=u(30);if(key(g[0])===key(taskA))g[3]=uint(g[1])===0n;if(key(g[0])===key(taskB))g[3]=uint(g[1])===1n;return list(g);}));a[3]=list(p);}
  return list(a);});
+ if(liveChoice){const source=items(rows.find(v=>key(items(v,'list')[2])===key(PRIORITY_DISPLAY))!,'list'),p=items(source[3],'list');
+ rows.push(list([signed(21),...source.slice(1,3),list([p[0],list(items(p[1],'list').map(v=>{const g=[...items(v,'list')];g[1]=list([]);g[3]=list([q(urgency,1)]);g[4]=true;if(g.length===6)g[5]=list([]);return list(g);}))]),source[4]]));}
  return {s,d:{...b.d,orderedInputs:enc(list(rows))},taskA,taskB,legacy:b,mode};
 }
 export {rec,f,uint,items,key,decode,enc,list,text,signed,q,bytes,outputs,C,exact,target};
