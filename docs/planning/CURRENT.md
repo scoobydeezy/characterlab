@@ -1,53 +1,59 @@
-# Current work — M132 complete; SEM integration remains partial
-The character now distinguishes a visible contradiction from a hidden cue.
-That can withdraw identification and change belief/choice. Later correction
-preserves earlier evidence and the original recipients of reports.
-Result: [M132](ASSEMBLED_CHARACTER_M132_RESULT.md);
-[checks](ASSEMBLED_CHARACTER_M132_CHECKS.txt).
-Rules/registry0.98; reference laws/threshold/feedback TRUE/UnitBudget unchanged.
+# Current work — SEM completion; M133 full appearance evidence active
+Owner2026-11-16 delegates work toward SEM completion with self-approved bounded
+repairs/amendments. Preserve the21/15/132 denominator and final acceptance gate.
+Next: all six accepted continuant facets and all three event-pattern facets must
+reach frozen experience, existing memory and later use in the one character.
 
-## Completed package
-Plan b457c8bb; baseline c916ba4e; tested source a416de2a.
-Six production/test files (four production), no new owner/store/scheduler/factory.
-0.98 [kind,token,support,permitted] cues validate then filter before observation.
-Global encounter denial remains; old0.97 grammar unchanged.
-Original126/127 recognition and130/140 belief/relationship consumers remain.
-One holder/stand-in, two social tasks/third unknown; body10/seed0/importance+urgency1.
-Voice-positive1; same-track negative report2 with name support/voice contradiction;
-voice-silent3; actual choice4 before recall21. Only contradiction permission differs.
-Visible contradiction withdraws; hidden contradiction maintains identification.
-Actual person means1 versus1/2, action-B P1 versus47/72; live reasons/actual attempt/
-full queues pass. Later recognition cannot backfill the previously unassigned report.
+## Completion route
+Finish rich perception and its receiving path; then address file/event lifecycle,
+knowledge replacement and observer/phase/provenance correspondence; finally replay
+SEM:2..13 with explicit classifications. Original controls alone cannot prove a
+native connection. Online name acquisition is beyond C1's existing seed contract;
+any producer needs a versioned grounded rule, never an unknown-name identity oracle.
+No other architecture breadth or UI between these packages.
 
-## Verification
-41 targeted tests/types and reference/research/preservation/size checks pass.
-Under7 minutes/1800s including15s bookkeeping, no extensions or comparison changes.
-No-cue persistence and unique replacement/correction pass on the same track;
-original report recipient and exact historical/revision records remain immutable.
-Actual126/127/130 ordering, repeat/save2/every later prefix/rollback/recovery pass.
-Hidden cue polarity and physical identity/outcome/roles inert in all safe prefixes;
-global denial earns no report or withdrawal. Strict domain/tuple/permission checks.
-Original C1 recognition/knowledge identity/codecs/ownership/persistence and M131
-native witness retained. No original C0-C3 control/dependency files changed.
-Use explicit test filters: imported fixture helpers register older tests.
+## M133 bounded card before code
+Baseline7275cf71; rules/registry0.99, semantic-appearance/0.1-candidate.
+Capabilities: full C1 continuant/event feature classification; lossless frozen
+experience to shared episodic memory/recall; retained recognition-to-choice receiver.
+Formal: docs/formal/ASSEMBLED_CHARACTER_SEMANTIC_APPEARANCE_CONTRACT.md.
+MEC-004 PORT; C1 SEM-001D/E/F/H, original classifiers/phase assembly; RO014/016/020.
+Same laws/threshold/feedback TRUE/UnitBudget, no classification-to-identity/pressure.
+At most8 production/test files: model,traceBinding,recognition,socialExecution,
+recognitionExecution,new semanticAppearance; new test and fixture.
 
-## Remaining scope and next step
-C-SEM UNRESOLVED/partial;15/21 mapped,0/15 complete families;
-E46/P54/N17/U15=132; final whole-candidate replay required.
-MEC-004 PORT; RO-C3-014/016/020 statuses unchanged; no reduction.
-Original C1 explicitly leaves mapping acquisition to later memory/learning.
-Online mapping learning/replacement therefore needs a grounded producer and
-versioned learning contract, not an inferred write from an unfamiliar name.
-Rich facets/events, candidate/observer domains, retirement and complete provenance/
-ordinal/lane combinations remain. Continue remaining causal SEM receivers;
-consult original C1/:2..13 before next card. No full SEM/family closure inferred.
+## Contract/risks
+0.99 source appearance becomes two lists of [feature,value,permitted] tuples,
+six continuant and five event features. Validate exact Boolean/domain/uniqueness,
+then mask before observation. Existing actual continuant/event carriers/support.
+Reserve full-domain feature and classification IDs through the shared allocator.
+Call original classifiers; record original221/222/225/226 schemas and same-window
+support. Freeze both classification sets at124. Original canonical helper drops
+event classifications: add a bounded assembled successor encoder, preserve old bytes.
+Memory/encoding consumes the original frozen envelope; role projection remains
+classification-free. No new owner/store or fake learned action identity.
 
-## Standing guardrails
-No active milestone. Next card before code; one validation job.
-600s/command,1800s cumulative incl failures/15s bookkeeping;<=3 capabilities,
-12 code/test files,20 evidence/5MiB; existing document caps.
-Self-approve bounded repairs before reruns; preserve failures/laws/21-15-132 scope.
-No seed search, authored psychological intermediates, alternate pipelines, hidden
-truth shortcuts, weaker gates, UI/Campaign4 or autonomous-peer dependency.
-Passing ends checks absent a concrete change/failure.
+## Comparisons/checks
+M132 holder/stand-in; two social tasks/third unknown; body10/seed0/importance+urgency1,
+routes/deadlines30, unsuccessful execution. Positive1, negative2, silent3, choice4,
+recall21. Keep contradiction hidden for feature contrasts; rich versus explicit
+negative versus withheld required event feature: true/false/no assertion exactly.
+Hold recognition/person mean and actual choice probability equal. All six facets
+coexist independently; chosen episode retains full classifications through recall
+and actual appraisal use. Expose all actual source/ref/phase joins.
+Rich visible-vs-hidden identity contradiction must retain M132 live probability
+difference and execution/full queues. No sampled-winner/shared-dice claim.
+Exact repeat/save2/every later prefix, post-classifier rollback/recovery; hidden
+feature/truth and global denial; malformed/domain/duplicate rejection and old grammar.
+Original continuant/event classification, codecs/phase controls and M132 primary.
+Explicit test-name filters; types/boundary/research/preservation/size checks.
+
+## Budget/done
+One job;600s/command,1800s cumulative incl failures/15s bookkeeping;
+<=3 capabilities,12 code/test files,20 evidence/5MiB; current document caps.
+Finish only on full native evidence/memory/choice connection and named controls.
+Record failures and bounded repairs before reruns; passing ends verification.
+Then continue next SEM package under existing delegation, not a new approval loop.
+SEM remains partial until mapped comparisons pass;15/21 mapped,0/15 families,
+E46/P54/N17/U15=132. No UI/Campaign4/autonomous-peer scope or weakened gate.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
