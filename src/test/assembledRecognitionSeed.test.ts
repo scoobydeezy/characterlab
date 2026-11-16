@@ -60,12 +60,12 @@ it('boundaries130: closed seeded domain, canonical identity, immutable owner and
  for(const value of[{...v,schema:{...v.schema,schemaVersion:2n}},changed(4n,set([badTemplate])),changed(4n,list([])),changed(3n,u(2)),changed(5n,text('foreign/version')),changed(1n,sid(1000,'foreign-observer'))])expect(()=>component.initialState(withValue(value))).toThrow();
  expect(()=>component.initialState(enc(new AuthoritativeState(s.entries().filter(e=>!(e.path.rootStateTypeId===243n&&key(f(rec(e.value,228n),2n))===key(target)))).canonicalValue()))).toThrow('missing initial catalog');
  expect(()=>new AuthoritativeState([...s.entries(),{path:targetEntry.path,value:targetEntry.value}])).toThrow();
- const permutation=withValue(changed(4n,set([...items(f(v,4n),'set')].reverse())));bytes(permutation,b.d.initialState);
+ const familiar=fixture(true),permutation=withValue(changed(4n,set([...allowed].reverse())));expect(allowed.length).toBeGreaterThan(1);bytes(permutation,familiar.d.initialState);
  const old=await compileCharacterState(await compileCharacterModel(b.legacy.s));expect(()=>old.initialState(b.d.initialState)).toThrow('bound initial catalog');
  const patch={operations:[{kind:'set' as const,path:targetEntry.path,expected:{presence:true as const,value:original},newValue:targetEntry.value}]};
  for(const owner of[OWNER.Perception,OWNER.RecognitionResolution,OWNER.RecognitionKnowledge])expect(()=>component.stateModel.applyPatch(s,patch,owner,{writableRoots:[243n],targetPaths:[targetEntry.path]})).toThrow('immutable knowledge');
  const m=await prepareCharacterModel(b.s),r=await createCharacterRun(m,b.d),seed=b.d.runSeed.slice();seed[31]^=1;const seeded=await createCharacterRun(m,{...b.d,runSeed:seed});expect(seeded.runIdentity()).not.toEqual(r.runIdentity());
- const same=await createCharacterRun(m,{...b.d,initialState:permutation});bytes(same.runIdentity(),r.runIdentity());
+ const same=await createCharacterRun(m,{...b.d,initialState:permutation}),normal=await createCharacterRun(m,familiar.d);bytes(same.runIdentity(),normal.runIdentity());
  const slots=[...items(decode(b.s.registry),'list')],domain=[...items(slots[21],'list')];domain[1]=list(items(domain[1],'list').map(x=>{const row=items(x,'list');return key(row[0])===key(target)?list([row[0],list(items(row[1],'list').filter(t=>key(t)!==key(text('appearance/coat'))))]):x;}));slots[21]=list(domain);
  expect(characterModelIdentity(await prepareCharacterModel({...b.s,registry:enc(list(slots))}))).not.toEqual(characterModelIdentity(m));
  await expect(restoreCharacterRun(b.s,{initialState:fixture(true).d.initialState,orderedInputs:b.d.orderedInputs,save:r.save()})).rejects.toThrow('commitments differ');

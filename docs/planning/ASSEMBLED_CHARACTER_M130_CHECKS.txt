@@ -72,3 +72,85 @@ COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
 
 EXIT 0; elapsed 18.518s
 CHARGED 225.820
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledRecognitionSeed.test.ts", "-t", "boundaries130|continuation130|privacy130", "--maxWorkers=1", "--no-file-parallelism"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRecognitionSeed.test.ts > boundaries130: closed seeded domain, canonical identity, immutable owner and initial-state restore binding
+M130 BOUNDARIES PASS empty/permuted knowledge; missing/foreign/schema/domain/template rejection; all in-run knowledge writes blocked; seed/S0 changes run, domain changes model; wrong-S0 restore rejects
+
+stdout | src/test/assembledRecognitionSeed.test.ts > continuation130: seed knowledge is traced, persists exactly and rolls back with recognition
+M130 CONTINUATION PASS actual seed reads; repeat/save2/every later boundary/full queue; post-evaluation fault rolls whole instant back; recovered prefix exact
+
+stdout | src/test/assembledRecognitionSeed.test.ts > privacy130: hidden truth cannot supply familiarity; denied encounter cannot earn belief
+M130 PRIVACY PASS hidden outcomes/physical roles inert in all future safe states/outputs; denied encounter emits no learning credit
+
+ ✓ src/test/assembledRecognitionSeed.test.ts (9 tests | 6 skipped) 166206ms
+   ✓ boundaries130: closed seeded domain, canonical identity, immutable owner and initial-state restore binding 63845ms
+   ✓ continuation130: seed knowledge is traced, persists exactly and rolls back with recognition 58761ms
+   ✓ privacy130: hidden truth cannot supply familiarity; denied encounter cannot earn belief 43599ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 6 skipped (9)
+   Start at  18:59:59
+   Duration  170.92s (transform 2.92s, setup 0ms, collect 4.37s, tests 166.21s, environment 0ms, prepare 104ms)
+
+
+EXIT 0; elapsed 171.474s
+CHARGED 397.294
+
+TEST REVIEW: the permutation assertion had reversed unfamiliar singleton voice, a vacuous ordering check. Use familiar coat+voice in reversed construction order and assert cardinality>1; compare canonical initial bytes and full run identity with the normal familiar seed. No production or behavioral comparison changed; rerun boundaries only.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledRecognitionSeed.test.ts", "src/test/recognition.test.ts", "src/test/semanticStateAuthority.test.ts", "src/test/semanticStatePersistence.test.ts", "-t", "boundaries130|CV-SEM|semantic", "--maxWorkers=1", "--no-file-parallelism"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/recognition.test.ts (10 tests) 28ms
+ ✓ src/test/semanticStateAuthority.test.ts (8 tests) 23ms
+ ✓ src/test/semanticStatePersistence.test.ts (3 tests) 16ms
+stdout | src/test/assembledRecognitionSeed.test.ts > boundaries130: closed seeded domain, canonical identity, immutable owner and initial-state restore binding
+M130 BOUNDARIES PASS empty/permuted knowledge; missing/foreign/schema/domain/template rejection; all in-run knowledge writes blocked; seed/S0 changes run, domain changes model; wrong-S0 restore rejects
+
+ ✓ src/test/assembledRecognitionSeed.test.ts (9 tests | 8 skipped) 63748ms
+   ✓ boundaries130: closed seeded domain, canonical identity, immutable owner and initial-state restore binding 63747ms
+
+ Test Files  4 passed (4)
+      Tests  22 passed | 8 skipped (30)
+   Start at  19:03:22
+   Duration  69.32s (transform 2.86s, setup 0ms, collect 4.39s, tests 63.82s, environment 1ms, prepare 398ms)
+
+
+EXIT 0; elapsed 69.865s
+CHARGED 467.159
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledRoleBinding.test.ts", "-t", "primary129", "--maxWorkers=1", "--no-file-parallelism"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRoleBinding.test.ts > primary129: co-carrier exclusion changes retained experience and live choice with identical current belief
+M129 probability(action two), separate/shared: 1/2 / 1/1
+M129 PRIMARY PASS actual bindings -> attention -> episode -> recall -> live appraisal/reasons/distribution/attempt; belief1/2; complete queues
+
+ ✓ src/test/assembledRoleBinding.test.ts (10 tests | 9 skipped) 85837ms
+   ✓ primary129: co-carrier exclusion changes retained experience and live choice with identical current belief 85836ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 9 skipped (10)
+   Start at  19:05:29
+   Duration  90.35s (transform 2.79s, setup 0ms, collect 4.17s, tests 85.84s, environment 0ms, prepare 103ms)
+
+
+EXIT 0; elapsed 90.905s
+CHARGED 558.064
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 18.622s
+CHARGED 576.686
+
+COMMAND ["node", "scripts/check-git-file-sizes.mjs"]
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.379s
+CHARGED 577.065
