@@ -1,2 +1,15 @@
 M134 baseline b2f9f53a;1800s total/600 command;15s prepaid bookkeeping.
 CHARGED 15.000
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+src/assembled/recognitionExecution.ts(43,289): error TS2322: Type 'PerceptualContinuantFileState' is not assignable to type '{ nextTrackSequenceByObserver: Map<string, bigint>; activePerceptualReferentIds: PerceptualReferentId[]; }'.
+  Types of property 'nextTrackSequenceByObserver' are incompatible.
+    Type 'ReadonlyMap<string, bigint>' is missing the following properties from type 'Map<string, bigint>': clear, delete, set, [Symbol.toStringTag]
+src/assembled/recognitionExecution.ts(43,491): error TS2353: Object literal may only specify known properties, and 'expected' does not exist in type 'RemovePatchOperation'.
+src/assembled/recognitionExecution.ts(56,282): error TS2322: Type 'PerceptualEventFileState' is not assignable to type '{ nextEventSequenceByObserver: Map<string, bigint>; activeEventFiles: PerceptualEventReferentId[]; }'.
+  Types of property 'nextEventSequenceByObserver' are incompatible.
+    Type 'ReadonlyMap<string, bigint>' is missing the following properties from type 'Map<string, bigint>': clear, delete, set, [Symbol.toStringTag]
+src/assembled/recognitionExecution.ts(56,416): error TS2353: Object literal may only specify known properties, and 'expected' does not exist in type 'RemovePatchOperation'.
+
+EXIT 2; elapsed 18.492s
+CHARGED 33.492
