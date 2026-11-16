@@ -1,53 +1,55 @@
-# Current work — M130 complete; SEM integration remains partial
-Initial familiarity now belongs to the character's run state within one permitted
-recognition domain. The same observations can yield different recognition,
-person belief and choice; later identification cannot rewrite past attribution.
-Result: [M130](ASSEMBLED_CHARACTER_M130_RESULT.md);
-[checks](ASSEMBLED_CHARACTER_M130_CHECKS.txt).
-Rules/registry0.96; reference laws/threshold/feedback TRUE/UnitBudget unchanged.
+# Current work — M131 identity-symbol recognition
+A perceived name can identify a person through the character's retained mapping,
+then change person belief, appraisal and actual choice under the same model.
+Baseline c7793b79; M130 remains preserved. SEM remains partial.
 
-## Completed package
-Plan1b921218; baseline bde1c1fd; production3f82d659; tested source f357f55a.
-Eight production/test files, no new state owner/store/scheduler/factory.
-Slot21 declares permitted candidate/template pairs; initial243 catalog stores
-actual known subsets. Empty familiarity is valid, absent catalog entries are not.
-126 reads actual seed knowledge; fixed cue reservations and the accepted C1
-recognition law remain. Existing belief/appraisal/reason/choice consumes the result.
-Same model/input/seed, target coat+voice versus voice only: first voice establishes
-belief; new-track coat report is assigned only when recognized; later voice cannot
-backfill that report. At4 means1/2 versus1 yield actual action-B P47/72 versus1.
-Live appraisal/reasons, actual execution and complete queues pass.
-26 targeted tests/types and reference/research/preservation/size checks pass.
-Verification584.430/1800s (9m44s), incl failures/15s bookkeeping; no extension.
+## Bounded card — written before code
+Capabilities: (1) admitted run-owned symbol mappings, (2) normal perceived symbol
+claims through C1 recognition, (3) existing person-belief/choice receiver.
+Rules/registry0.97; recognition-symbol/0.1-candidate. Formal amendment:
+docs/formal/ASSEMBLED_CHARACTER_RECOGNITION_SYMBOL_CONTRACT.md.
+Keep SEM-001F unique-uncontradicted support, all reference laws, threshold,
+feedback TRUE and UnitBudget. MEC-004 PORT; RO-C3-014/016/020 reviewed, no reduction.
+One state/scheduler/save; existing243 knowledge owner, no separate pipeline/store.
 
-## Preserved controls and correction
-Canonical template permutation keeps initial bytes/run identity; different S0/seed
-changes RunIdentity, allowed-domain change changes ModelIdentity.
-Missing/foreign/duplicate/schema/domain/template entries and wrong-S0 restore reject.
-No run-time catalog mutation, even by knowledge authority. Old0.95 admission stays.
-Actual trace reads, frozen pre-recognition/earlier resolution history, repeat/save2,
-full later prefixes, hidden truth/denied encounter and whole-instant rollback pass.
-Retain original C1 controls and M1290.95 native role/memory/choice comparison.
-Initial probe migration collided with inherited urgency4; keep one declared
-urgency1 display equally in both arms. Failed admission retained, no values/laws changed.
-Review replaced a vacuous singleton permutation with an actual two-template reversal.
+## Files and scope
+At most10 production/test files: assembled recognitionSymbols(new), recognition,
+recognitionState, recognitionExecution, socialExecution, model, traceBinding,
+inputs; test assembledRecognitionSymbol and its fixture. No C0-C3 control edits.
+New finite symbol domain in slot21; actual mapping subset in S0 at243/2.
+Allocate reserved mapping occurrences from the initial global runtime sequence,
+including unused slots; validate exact IDs and advance the same allocator.
+No IDs hashed from names, no truth-derived recognition, no online mapping mutation.
+Freeze actual catalog/mappings at126; original C1 evaluates at127; existing130/140
+consumers assign only currently recognized reports. No retrospective attribution.
 
-## Remaining scope and next step
-C-SEM stays UNRESOLVED/partial.15/21 mapped,0/15 complete families;
-E46/P54/N17/U15=132; all final whole-candidate replay remains required.
-MEC-004 port and RO-C3-014/016/020 retained; no obligation status/reduction changes.
-Candidate membership/Person-domain metadata still model-constrained; online knowledge
-learning, symbol mappings/replacement, full facets/events/observer domains,
-retirement and complete provenance/ordinal/lane combinations remain open.
-Continue remaining SEM receiving connections in causal order; read :2..13/original
-C1 contracts before the next bounded card. No full SEM or family closure inferred.
+## Predeclared comparison and scenario
+Adapt M130: one holder/stand-in, two social tasks and third unknown, body10,
+importance/urgency1, seed0, routes/deadlines30, unsuccessful physical execution.
+Voice-positive1; new-track name-negative2; continuing voice-silent3; choice/body4,
+before delayed recall21. Same model, inputs and seed; S0 knows name versus no map.
+Both arms know the voice. Require live compared appraisals/reasons, different
+actual action probabilities, actual intent/attempt/outcome, completed queues.
+Check exact mapping occurrence/support observation in cues and actual243 reads;
+frozen experience/earlier resolution history immutable, later identity no backfill.
+No final winner or shared-dice claim; use actual Auto/distribution semantics.
 
-## Standing guardrails
-No milestone active. Next finite card before code. One validation job;
-600s/command,1800s cumulative including failures/15s bookkeeping;
-<=3 capabilities,12 code/test files,20 evidence files/5MiB; existing document caps.
-Self-approve bounded repairs before reruns; preserve failures/laws/21-15-132 scope.
-No seed search, authored psychological intermediates, alternate pipelines, hidden
-truth shortcuts, weakened gates, UI/Campaign4 or autonomous peer dependency.
-Passing ends verification unless a source change/failure identifies a concrete risk.
+## Checks, risks and budgets
+Targeted tests: primary, admission/ownership/identity, repeat/restore/rollback,
+hidden truth/denied source; original C1 recognition/authority/persistence and
+retained M130 primary. Types, boundaries, research, preservation and Git size.
+Risks: allocation collision/renumbering across knowledge arms; symbol/template
+aliasing; denied symbols leaking; invalid mapping ownership/schema/occurrence;
+old0.96 behavior changes; actual choice gate may be inactive.
+One job;600s/command;1800s total including failures and15s bookkeeping.
+At most20 evidence files/5MiB; one result/check log; existing document caps.
+Record and self-approve bounded repairs before rerun; no seed search/law changes.
+Passing ends verification absent a concrete new change/failure.
+
+## Done and limits
+Done only when complete symbol->recognition->belief->choice witness and controls
+pass within budget, evidence reviewed and committed. No full SEM/family closure.
+Online mapping learning/replacement, broader facets/events/observers/retirement
+and final whole-candidate replay remain.15/21 mapped,0/15 complete;
+E46/P54/N17/U15=132. No UI/Campaign4/autonomous-peer dependency.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
