@@ -32,6 +32,8 @@ P(B) should differ through bound vs unbound negative report, not different dice.
 Independently continue vs split event and explicit event end: same reports/choice,
 different actual file grouping. Retired IDs not reused; old histories immutable.
 Recall of earlier full experience must still reach existing actual appraisal.
+Scoped test correction: require episode1 specifically for retired/reacquired track;
+continued controls may select newer same-track memory under unchanged retrieval.
 
 ## Checks, risks and done
 Native lifecycle/grouping/provenance and actual causal chain; exact repeat/save2/

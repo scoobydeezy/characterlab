@@ -69,10 +69,10 @@ function structure(r:Run,b:ReturnType<typeof fixture>,earlier:CanonicalValue[]){
  // Exact end support cites the current permitted observation, never a truth handle.
  for(const end of [...outputs(snap(r).outputs,218n),...outputs(snap(r).outputs,220n)])expect(f(end,3n)).toEqual(f(frozenAt(r,2n),8n));
 }
-async function retainedUse(r:Run){
+async function retainedUse(r:Run,retired:boolean){
  await through(r,21n);const selected=items(reports(r,WORKSPACE).at(-1)![4],'list').map(v=>items(v,'list'));
- const old=selected.map(a=>items(a[1],'list')).find(a=>key(a[0])===key(text(SOCIAL_EPISODE))&&key(a[5])===key(signed(1)))!;
- expect(old,'retired-file experience actually recalled').toBeDefined();expect(old[3]).toEqual(frozenAt(r,1n));
+ const recalled=selected.map(a=>items(a[1],'list')).filter(a=>key(a[0])===key(text(SOCIAL_EPISODE)));console.info('M134 selected acquisition times retired='+retired+': '+recalled.map(a=>String((a[5] as {value:bigint}).value)).join(','));const old=recalled.find(a=>!retired||key(a[5])===key(signed(1)))!;
+ expect(old,'retired-file experience actually recalled').toBeDefined();expect(old[3]).toEqual(frozenAt(r,(old[5] as {value:bigint}).value));
  const row=reports(r,'assembled-social-people/0.1/appraisal').at(-1)!.slice(1).map(v=>items(v,'list')).find(a=>key(a[2])===key(target))!;
  expect(items(items(row[6],'list')[3],'list'),'actual memory consumer').toContainEqual(old[1]);
 }
@@ -84,7 +84,7 @@ it('primary134: explicit lifecycle preserves history and changes later choice on
   const known=mode==='continued'||mode==='eventSplit';results.push(judgment(r,b,known));
   const reportsNow=personHistory(state(r).read(personPath(C,target)).value);expect(reportsNow).toHaveLength(known?2:1);
   expect(key(trackAt(r,3n))).toBe(key(trackAt(r,2n)));
-  await retainedUse(r);await finish(r);
+  await retainedUse(r,mode==='reacquire'||mode==='split');await finish(r);
  }
  expect(results[0].equals(Q.of(47n,72n))).toBe(true);expect(results[1].equals(Q.of(1n))).toBe(true);
  expect(results[2].equals(results[1])).toBe(true);expect(results[3].equals(results[0])).toBe(true);
