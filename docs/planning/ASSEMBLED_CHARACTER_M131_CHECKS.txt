@@ -1,3 +1,208 @@
 M131 verification ledger; baseline c7793b79; 1800s total/600s command.
 Prepaid bookkeeping 15s. No verification run yet.
 CHARGED 15.000
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+src/test/assembledControlValidation.test.ts(92,67): error TS2345: Argument of type '{ candidates: { readonly kind: "typedIdentifier"; readonly namespaceId: bigint; readonly payload: CanonicalValue; }[]; templates: string[]; bindings: { candidate: { readonly kind: "typedIdentifier"; readonly namespaceId: bigint; readonly payload: CanonicalValue; }; template: string; }[]; }' is not assignable to parameter of type 'RecognitionSettings'.
+  Property 'symbols' is missing in type '{ candidates: { readonly kind: "typedIdentifier"; readonly namespaceId: bigint; readonly payload: CanonicalValue; }[]; templates: string[]; bindings: { candidate: { readonly kind: "typedIdentifier"; readonly namespaceId: bigint; readonly payload: CanonicalValue; }; template: string; }[]; }' but required in type '{ candidates: CanonicalValue[]; templates: string[]; bindings: { candidate: CanonicalValue; template: string; }[]; seededKnowledge?: boolean | undefined; symbols: string[]; }'.
+src/test/assembledControlValidation.test.ts(92,103): error TS2345: Argument of type '{ candidates: { readonly kind: "typedIdentifier"; readonly namespaceId: bigint; readonly payload: CanonicalValue; }[]; templates: string[]; bindings: { candidate: { readonly kind: "typedIdentifier"; readonly namespaceId: bigint; readonly payload: CanonicalValue; }; template: string; }[]; }' is not assignable to parameter of type 'RecognitionSettings'.
+  Property 'symbols' is missing in type '{ candidates: { readonly kind: "typedIdentifier"; readonly namespaceId: bigint; readonly payload: CanonicalValue; }[]; templates: string[]; bindings: { candidate: { readonly kind: "typedIdentifier"; readonly namespaceId: bigint; readonly payload: CanonicalValue; }; template: string; }[]; }' but required in type '{ candidates: CanonicalValue[]; templates: string[]; bindings: { candidate: CanonicalValue; template: string; }[]; seededKnowledge?: boolean | undefined; symbols: string[]; }'.
+
+EXIT 2; elapsed 19.351s
+CHARGED 34.351
+REPAIR: types found old direct RecognitionSettings constructors without symbols. Keep symbols optional for old versions; new0.97 compilation still requires the declared domain. No control edits or comparison change.
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 18.452s
+CHARGED 52.803
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledRecognitionSymbol.test.ts", "--maxWorkers=1", "--minWorkers=1", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRecognitionSymbol.test.ts > witness: significant action episode reaches exact competing choice
+M61_TARGET17 true 9 [ 'MovingCloser' ] 3
+
+
+EXIT 1; elapsed 241.023s
+CHARGED 293.826
+REPAIR: stop unfiltered Vitest invocation after inherited M61 test registered through a fixture import; elapsed fully charged. All following native jobs explicitly select primary131/boundaries131/continuation131/privacy131. Review corrects test-only assumption: raw registry lists commit order in ModelIdentity; sorting the allocation domain gives identical reservations, not identical raw manifests. Add direct initial save allocator=2 in both knowledge arms. No fixture/law/gate changes.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledRecognitionSymbol.test.ts", "-t", "primary131|boundaries131|continuation131|privacy131", "--maxWorkers=1", "--minWorkers=1", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRecognitionSymbol.test.ts > primary131: same observed name, retained mapping changes recognition and actual choice
+M131 P(action B), mapped/unmapped: 47/72 / 1/1
+M131 PRIMARY PASS one model/fixed input/seed; S0 changes run identity; actual name mapping -> cue -> recognition -> belief -> appraisal/reasons/choice/attempt; later recognition never backfills; immutable history/full queues
+
+ ✓ src/test/assembledRecognitionSymbol.test.ts > primary131: same observed name, retained mapping changes recognition and actual choice 84572ms
+stdout | src/test/assembledRecognitionSymbol.test.ts > boundaries131: symbol admission, allocated knowledge, immutable owner and run identity
+M131 BOUNDARIES PASS allocated prefix/domain/schema/observer/occurrence/candidate; duplicate/foreign/cross-kind signals; immutable mappings; old0.96 rejects; S0 run binding; fixed sorted allocation domain; raw manifest identity
+
+ ✓ src/test/assembledRecognitionSymbol.test.ts > boundaries131: symbol admission, allocated knowledge, immutable owner and run identity 8984ms
+ × src/test/assembledRecognitionSymbol.test.ts > continuation131: mapping knowledge is traced, persists exactly and rolls back with recognition 12768ms
+   → expected [ { kind: 'record', …(2) }, …(1) ] to have a length of 1 but got 2
+stdout | src/test/assembledRecognitionSymbol.test.ts > privacy131: hidden truth cannot supply familiarity; denied encounter cannot earn belief
+M131 PRIVACY PASS hidden outcomes/physical roles inert in all future safe states/outputs; denied encounter emits no learning credit
+
+ ✓ src/test/assembledRecognitionSymbol.test.ts > privacy131: hidden truth cannot supply familiarity; denied encounter cannot earn belief 44679ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledRecognitionSymbol.test.ts > continuation131: mapping knowledge is traced, persists exactly and rolls back with recognition
+AssertionError: expected [ { kind: 'record', …(2) }, …(1) ] to have a length of 1 but got 2
+
+- Expected
++ Received
+
+- 1
++ 2
+
+ ❯ src/test/assembledRecognitionSymbol.test.ts:91:76
+     89|  const path=identitySymbolMappingPath(OBSERVER,symbol);
+     90|  expect(reads).toHaveLength(6);const absent=reads.filter(x=>uint(f(rec…
+     91|  expect(absent).toHaveLength(2);expect(absent.filter(x=>x.fields.has(4…
+       |                                                                            ^
+     92|  expect(state(r).read(path).presence).toBe(false);
+     93|  await finish(r,[repeat,restored]);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 3 passed | 5 skipped (9)
+   Start at  20:23:03
+   Duration  155.64s (transform 2.82s, setup 0ms, collect 4.30s, tests 151.00s, environment 0ms, prepare 104ms)
+
+
+EXIT 1; elapsed 156.222s
+CHARGED 450.048
+REPAIR: continuation assertion confused fixed ActualReadRecord.Value field with presence. C0 state.ts encodes absence as Presence=false, Value=false. Assert exact presence and actual known alias mapping value; rerun only incomplete continuation plus required controls. Production/inputs/laws/gates unchanged.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledRecognitionSymbol.test.ts", "src/test/recognition.test.ts", "src/test/semanticStateAuthority.test.ts", "src/test/semanticStatePersistence.test.ts", "-t", "continuation131|CV-SEM|semantic", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-061 traces unfamiliar, contradicted, and ambiguous evaluations without fake identities
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-062 permits correct, wrong, or unresolved recognition over identical immutable perception
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-063 implements exact unique uncontradicted support without order-based ties
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-064 requires observer-owned catalog and symbol mapping without truth-kind filtering
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-065 appends replacement and withdrawal while no-cue and same-candidate evaluations preserve current resolution
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-066 preserves false continuity and false discontinuity under recognition changes
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-067 enforces typed same-track, same-experience evidence closure
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-068 enforces sole rule authority and continuant-only recognition
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-069 preserves semantic opacity, replay, history closure, and allocator rollback
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-070 emits only append-only recognition resolution and no downstream mutation
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > registers exactly one owner for every writable leaf of roots 241..244
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > rejects a second owner for an already-owned family and an uncovered leaf
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > projects both perceptual file states onto their registered leaves
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > keeps the membership leaf a mutation projection of the canonical set
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > admits writes only from the owning authority
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > enforces the accepted lifecycle in removal permission and leaf values
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > carries ownership, removal, and leaf grammar into ModelIdentity
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > addresses recognition knowledge by its accepted uniqueness keys
+ ✓ src/test/semanticStatePersistence.test.ts > SEM-001I.3 semantic state persistence and observer isolation > CV-SEM-097 saves, loads, and replays semantic state roots byte-identically
+ ✓ src/test/semanticStatePersistence.test.ts > SEM-001I.3 semantic state persistence and observer isolation > CV-SEM-097 rolls state, allocators, trace, and outputs back together on staged failure
+ ✓ src/test/semanticStatePersistence.test.ts > SEM-001I.3 semantic state persistence and observer isolation > CV-SEM-098 lets another observer perturb global ordinals without changing this observer
+stdout | src/test/assembledRecognitionSymbol.test.ts > continuation131: mapping knowledge is traced, persists exactly and rolls back with recognition
+M131 CONTINUATION PASS actual mapping reads including absence; repeat/save2/every later boundary/full queue; post-evaluation fault rolls whole instant back; recovered prefix exact
+
+ ✓ src/test/assembledRecognitionSymbol.test.ts > continuation131: mapping knowledge is traced, persists exactly and rolls back with recognition 116002ms
+
+ Test Files  4 passed (4)
+      Tests  22 passed | 8 skipped (30)
+   Start at  20:26:04
+   Duration  121.55s (transform 2.84s, setup 0ms, collect 4.36s, tests 116.07s, environment 1ms, prepare 404ms)
+
+
+EXIT 0; elapsed 122.103s
+CHARGED 572.151
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledRecognitionSeed.test.ts", "src/test/semanticRecognitionState.test.ts", "src/test/semanticCodecs.test.ts", "-t", "primary130|CV-SEM", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRecognitionSeed.test.ts > primary130: same model, observations and seed; initial familiarity changes later actual choice
+M130 P(action B), familiar/unfamiliar: 47/72 / 1/1
+M130 PRIMARY PASS one model/fixed input/seed; S0 changes run identity; actual seed -> cue -> recognition -> belief -> appraisal/reasons/choice/attempt; later recognition never backfills; immutable history/full queues
+
+ ✓ src/test/assembledRecognitionSeed.test.ts > primary130: same model, observations and seed; initial familiarity changes later actual choice 84467ms
+ ✓ src/test/semanticCodecs.test.ts > SEM-001I.3 canonical semantic codecs > CV-SEM-096 enforces the accepted type and field registry
+ ✓ src/test/semanticCodecs.test.ts > SEM-001I.3 canonical semantic codecs > CV-SEM-096 rejects unadmitted contract versions before emission
+ ✓ src/test/semanticCodecs.test.ts > SEM-001I.3 canonical semantic codecs > CV-SEM-096 refuses to decode a record schema version the registry does not admit
+ ✓ src/test/semanticCodecs.test.ts > SEM-001I.3 canonical semantic codecs > CV-SEM-096 validates every union tag/payload contract before the record is built
+ ✓ src/test/semanticCodecs.test.ts > SEM-001I.3 canonical semantic codecs > CV-SEM-096 enforces multi-field and mutually exclusive union payloads
+ ✓ src/test/semanticCodecs.test.ts > SEM-001I.3 canonical semantic codecs > CV-SEM-096 gives CharacterEvidenceRef exactly one payload field per reference kind
+ ✓ src/test/semanticCodecs.test.ts > SEM-001I.3 canonical semantic codecs > CV-SEM-096 round-trips every lifecycle record byte-identically
+ ✓ src/test/semanticCodecs.test.ts > SEM-001I.3 canonical semantic codecs > CV-SEM-096 encodes state roots independently of map and set construction order
+ ✓ src/test/semanticCodecs.test.ts > SEM-001I.3 canonical semantic codecs > CV-SEM-096 keeps equal ordinals in different occurrence namespaces distinct
+ ✓ src/test/semanticCodecs.test.ts > SEM-001I.3 canonical semantic codecs > CV-SEM-096 keeps observer ownership inside the canonical identity value
+ ✓ src/test/semanticRecognitionState.test.ts > SEM-001I.3 recognition-knowledge state identity > CV-SEM-099 permits at most one active mapping per (ObserverId, PerceivedIdentitySymbolId)
+ ✓ src/test/semanticRecognitionState.test.ts > SEM-001I.3 recognition-knowledge state identity > CV-SEM-099 replaces mapping A with B without remapping or mutating A
+ ✓ src/test/semanticRecognitionState.test.ts > SEM-001I.3 recognition-knowledge state identity > CV-SEM-099 carries an allocated mapping occurrence rather than a derived key
+ ✓ src/test/semanticRecognitionState.test.ts > SEM-001I.3 recognition-knowledge state identity > CV-SEM-100 permits at most one active catalog entry per (ObserverId, CandidateSemanticReferentId)
+
+ Test Files  3 passed (3)
+      Tests  15 passed | 9 skipped (24)
+   Start at  20:28:19
+   Duration  89.60s (transform 2.82s, setup 0ms, collect 4.27s, tests 84.50s, environment 0ms, prepare 295ms)
+
+
+EXIT 0; elapsed 90.152s
+CHARGED 662.303
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 18.601s
+CHARGED 680.904
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledControlValidation.test.ts", "-t", "outer recognition", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledControlValidation.test.ts > outer recognition keeps delegated equality and all inherited/local rejection paths
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 9 skipped (10)
+   Start at  20:30:55
+   Duration  2.75s (transform 1.58s, setup 0ms, collect 2.43s, tests 26ms, environment 0ms, prepare 102ms)
+
+
+EXIT 0; elapsed 3.297s
+CHARGED 684.201
+
+COMMAND ["node", "scripts/check-git-file-sizes.mjs"]
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.379s
+CHARGED 684.580
+
+COMMAND ["node", "scripts/check-reference-boundary.mjs"]
+Reference boundary check passed.
+
+EXIT 0; elapsed 2.753s
+CHARGED 687.333
+
+COMMAND ["node", "scripts/check-research-obligations.mjs"]
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4352}
+
+EXIT 0; elapsed 3.587s
+CHARGED 690.920
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,json\ngit=lambda *a:subprocess.check_output(['git',*a],text=True,encoding='utf-8')\nbase='c7793b79'\ncode={'src/assembled/'+p for p in ['model.ts','traceBinding.ts','recognition.ts','recognitionState.ts','recognitionExecution.ts','socialExecution.ts','recognitionSymbols.ts','inputs.ts']}|{'src/test/assembledRecognitionSymbol.test.ts','src/test/fixtures/assembledRecognitionSymbol.ts'}\nallowed=code|{'AGENTS.md','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md','docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md','docs/planning/RESEARCH_OBLIGATIONS.json','docs/planning/ASSEMBLED_CHARACTER_M131_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M131_CHECKS.txt','docs/formal/ASSEMBLED_CHARACTER_RECOGNITION_SYMBOL_CONTRACT.md'}\nchanged=set(git('diff','--name-only',base).splitlines())|set(git('ls-files','--others','--exclude-standard').splitlines())\nassert changed<=allowed,changed-allowed\nassert changed&code==code\nassert git('diff','28f170c4','--','src')=='','tested source changed'\nassert git('diff',base,'--','src/campaign2','src/campaign3','src/substrate','src/observation','src/semanticBinding','reference')=='','frozen dependency changed'\nfor p in code:\n s=Path(p).read_text(encoding='utf-8')\n if p.startswith('src/assembled/'):assert not any(\"campaign3/\"+x in s for x in ['attentionFactory','attentionRuntime','generalAttentionFactory','generalAttentionRuntime']),'separate pipeline'\nold=git('show',base+':docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md')\nnew=Path('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md').read_text(encoding='utf-8')\nrows=lambda s:[x for x in s.splitlines() if ('| C-' in x or '| F-' in x) and '| C-SEM ' not in x]\nassert rows(old)==rows(new),'other C/F rows changed'\nassert '| UNRESOLVED | C-SEM ' in new\nassert 'E46/P54/N17/U15' in new and '15/21' in new and 'families:0/15' in new\nassert len(new.splitlines())<=250 and len(new.replace('\\n','\\r\\n').encode())<=65536\nbefore=json.loads(git('show',base+':docs/planning/RESEARCH_OBLIGATIONS.json'))\nafter=json.loads(Path('docs/planning/RESEARCH_OBLIGATIONS.json').read_text(encoding='utf-8-sig'))\nassert before['obligations']==after['obligations']\nassert after['reportReviews'][:-1]==before['reportReviews']\nassert after['reportReviews'][-1]=={'path':'docs/planning/ASSEMBLED_CHARACTER_M131_RESULT.md','obligations':['RO-C3-014','RO-C3-016','RO-C3-020']}\nfor path,cap in [('AGENTS.md',120),('docs/planning/CURRENT.md',80),('docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md',250)]:\n assert len(Path(path).read_text(encoding='utf-8').splitlines())<=cap,path\nevidence=[Path('docs/planning/ASSEMBLED_CHARACTER_M131_'+s) for s in ['RESULT.md','CHECKS.txt']]\nassert sum(p.stat().st_size for p in evidence)<5*1024*1024\nlog=evidence[1].read_text(encoding='utf-8')\ncharge=float([l.split()[1] for l in log.splitlines() if l.startswith('CHARGED ')][-1]);assert charge<1800\nfor token in ['M131 PRIMARY PASS','M131 PRIVACY PASS','M131 CONTINUATION PASS','M131 BOUNDARIES PASS','M130 PRIMARY PASS','src/test/recognition.test.ts','src/test/semanticStateAuthority.test.ts','src/test/semanticStatePersistence.test.ts','Reference boundary check passed.','PASS: research obligation references']:\n assert token in log,token\ncurrent=Path('docs/planning/CURRENT.md').read_text(encoding='utf-8')\nassert '(ASSEMBLED_CHARACTER_M131_CHECKS.txt)' in current and '{{' not in current\nprint('PASS M131 preservation: source 28f170c4;10 production/test files; old Campaign0-3/reference dependencies unchanged; C-SEM remains unresolved/partial, other C/F unchanged;15/21,0/15,E46/P54/N17/U15; statuses/document/evidence caps retained; charge',charge)\n"]
+PASS M131 preservation: source 28f170c4;10 production/test files; old Campaign0-3/reference dependencies unchanged; C-SEM remains unresolved/partial, other C/F unchanged;15/21,0/15,E46/P54/N17/U15; statuses/document/evidence caps retained; charge 690.92
+
+EXIT 0; elapsed 0.845s
+CHARGED 691.765
+
+COMMAND ["node", "scripts/check-git-file-sizes.mjs"]
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.380s
+CHARGED 692.145
+
+COMMAND ["git", "diff", "--cached", "--check"]
+
+EXIT 0; elapsed 0.071s
+CHARGED 692.216

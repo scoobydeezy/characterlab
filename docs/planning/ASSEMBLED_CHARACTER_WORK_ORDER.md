@@ -228,7 +228,7 @@ identify actual gaps. Historical gate status does not override later accepted cl
 
 ## Current authorization boundary
 Owner2026-11-13 adopts0.85; after M105 authorizes continued character integration.
-Delegated M130 connects run-owned initial familiarity through recognition/belief/choice on0.96; SEM partial,15 members mapped. Shared/UnitBudget; feedback TRUE; existing laws unchanged.
+Delegated M131 connects observed names through retained mappings/recognition/belief/choice on0.97; SEM partial,15 members mapped. Shared/UnitBudget; feedback TRUE; existing laws unchanged.
 Original BIO/EPI controls/limits remain; final whole-candidate replay required. No UI, publishing or assembly acceptance.
 
 ## Owner ruling — unknown factors and live gates (2026-11-02)
