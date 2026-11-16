@@ -49,7 +49,7 @@ reserved IDs; unchanged native earlier-version witness; hidden identity/roles,
 denied evidence, exact repeat/restore and whole-instant rollback. No original
 Campaign0–3 source or contract is edited. Ordinary multi-modal linking, all C-SEM
 facets/lanes/multi-observer domain and broad salience adequacy remain open.
-MEC004/005/007/010 and RO003/004/005/006/007 retain their scope and controls.
+MEC004/005/007/010 and RO003/004/005/006/007/020 retain their scope and controls.
 MultipleRoles exclusion is exposed, not endorsed as a general psychology law.
 
 Amendment129-A after original-kernel failure: the initial same-carrier/same-role

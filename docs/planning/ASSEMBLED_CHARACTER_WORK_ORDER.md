@@ -228,7 +228,7 @@ identify actual gaps. Historical gate status does not override later accepted cl
 
 ## Current authorization boundary
 Owner2026-11-13 adopts0.85; after M105 authorizes continued character integration.
-Delegated M128 maps bounded WORK on0.94: protection/distraction, reminder recovery and expiry through shared choice;15 members mapped. Shared/UnitBudget; feedback TRUE; existing laws unchanged.
+Delegated M129 connects observed co-carrier bindings through attention/memory/choice on0.95; SEM partial,15 members mapped. Shared/UnitBudget; feedback TRUE; existing laws unchanged.
 Original BIO/EPI controls/limits remain; final whole-candidate replay required. No UI, publishing or assembly acceptance.
 
 ## Owner ruling — unknown factors and live gates (2026-11-02)

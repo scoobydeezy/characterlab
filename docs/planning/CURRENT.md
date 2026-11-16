@@ -1,58 +1,52 @@
-# Current work — M129 same-continuant role binding and receiving memory
-One perceived person can occupy several roles in one event without being split into
-new perceived people. Preserve each binding occurrence through attention/memory and
-show the resulting remembered appraisal/choice in the same continuing character.
-Baseline f87e99d8; successor0.95, unchanged reference laws/UnitBudget/feedback TRUE.
+# Current work — M129 complete; SEM integration remains partial
+One perceived person can hold two different event roles without becoming two
+perceived people. The existing attention rule then changes retained experience,
+later appraisal and actual choice in the same continuing character.
+Result: [M129](ASSEMBLED_CHARACTER_M129_RESULT.md);
+[checks](ASSEMBLED_CHARACTER_M129_CHECKS.txt).
+Rules/registry0.95, encoding0.4; reference laws/feedback TRUE/UnitBudget unchanged.
 
-## Bounded card, before code
-Three capabilities: represent repeated/multiple roles on the focal continuant;
-derive causal companions once per actual carrier without duplicate claims;
-consume admitted/excluded focal episode through later shared recall/appraisal/choice.
-C-SEM partial :2/:3/:6/:7/:8/:9/:10; :4/:5/:11..13 remain standing requirements.
-No full SEM mapping: three observers, full facets/event patterns, retirement,
-symbol mapping and further provenance/lane controls still require integration.
-MEC004 boundary-corrected port; MEC005/007/010 and RO003/004/005/006/007 preserved.
-Original C1 factories/control tests and old assembled versions stay unchanged.
-No new store, owner, scheduler, law, latent confidence or direct identity source.
+## Completed bounded package
+Plan2435908e; baseline f87e99d8; source bceab9f3. Nine production/test files.
+One model/state/scheduler/trace/save; no new owner/store or alternate pipeline.
+Observation120 -> track121 -> bindings122 -> frozen experience/recognition ->
+encoding130 -> existing episodic memory -> recall/workspace/appraisal/choice.
+Same-current-belief1/2, different perceived carrier grouping: negative vs positive
+recall at21 changes actual action-B probability1/2 ->1; both full queues execute.
+Canonical grouping/reserved IDs, old-version witness, hidden truth/denied evidence,
+repeat/save2/full later prefixes, old annex rejection and whole-instant rollback pass.
+38 targeted tests/types and reference/research/preservation/size checks pass.
+Verification819.099/1800s (13m39s), incl failures/15s bookkeeping; no extension.
 
-Files (<=12): model.ts, traceBinding.ts, recognition.ts, encounter.ts,
-recognitionExecution.ts, socialExecution.ts, encoding.ts;
-fixtures/assembledRoleBinding.ts, assembledRoleBinding.test.ts (nine planned).
-Versioned ASSEMBLED_CHARACTER_ROLE_BINDING_CONTRACT.md precedes implementation.
-Source adds one permitted observed co-carrier Boolean to each extra role.
-It may be wrong; never infer continuity from hidden truth. Existing focal track
-is reused only from that permitted relation. Each role retains a binding occurrence.
-Keep current finite attention law: multiple different causal roles on one unit
-produce explicit MultipleRoles exclusion; do not choose a convenient winning role.
-Same event/carrier/role duplicates reject; same role on distinct carriers is legal.
+## Corrections retained
+129-A: original C1 rejects same event/carrier/role duplicates; preserve that
+rejection instead of admitting the mistakenly planned positive duplicate control.
+Same role on different carriers and different roles on one carrier remain legal.
+Interleaved-ID harness corrected canonical order assumption; no allocator shortcut.
+129-B: original late probe had expired routes (NoCandidates); extend declared
+windows through30 and supply current urgency.129-C: urgency0 gives base1/2 and
+NoReasons under unchanged threshold; urgency1 in both arms makes choice live.
+Original fixture and urgency0 capture remain available; no laws/seeds/gates changed.
+Cold setup inspection timeout retained/charged. No verification extension.
 
-## Comparison and liveness
-Same seed0, body10, recognized person, true encounter1/false encounter2, silent cue3,
-recall/current body at21; A/B importance1, distinct routes; physical task success off.
-129-B/C: routes valid through30; current visible urgency1 at21 in both arms.
-Retain expired-route NoCandidates and urgency0/base1/2 BelowThreshold controls.
-Only encounter2's observed same-continuant Boolean differs:
-separate Target/Participant -> focal negative episode admitted;
-one Target+Participant carrier -> explicit MultipleRoles exclusion -> no negative
-episode. Common earlier positive episode remains. Person belief must remain1/2.
-Later recall should select negative vs positive and actual live appraisal/reasons/
-choice probability differ. Assert live appraisal before numeric comparison.
-Use actual production distributions/Auto probabilities, no uncoupled winner claim.
-129-A: same-role co-carrier is a C1-rejected input, not a positive control.
-Preserve initial mistaken kernel failure; test legal repeated roles across carriers.
-Hidden world/physical roles with identical permitted evidence must not affect cognition.
+## Scope and next step
+C-SEM remains UNRESOLVED/partial; no new member/family mapping.
+15/21 mapped,0/15 accepted families,E46/P54/N17/U15=132; final whole replay required.
+MEC004/005/007/010 and RO003/004/005/006/007/020 preserved; no obligation closes.
+Continue SEM's required recognition/perceptual domain and receiving connections
+before unrelated breadth. Remaining: full appearance/event facets and groupings,
+observer domains, both-lane combinations, correction/retirement, symbol mappings,
+seeded-knowledge identity and full provenance/ordinal controls. No autonomous peers.
+Read pinned C-SEM :2..13 and original C1 contracts before the next bounded card.
+Do not infer full SEM or broader salience adequacy from MultipleRoles exclusion.
 
-## Checks and limits
-One job,600s/command,1800s cumulative incl failures,15s prepaid bookkeeping.
-<=3 capabilities,12 production/test files,20 evidence files/5MiB.
-Types before native runs. Fast original C1 binding/attention controls and targeted
-co-carrier derivation/canonical validation. Native complete primary queues; repeat/
-save after encounter2 through every boundary; hidden-source equality; old grammar/
-wrong type/annex/collision rejection; fault after new binding/encoding rolls back
-whole instant. Retain affected prior encoding witness on unchanged old version.
-Reference-boundary/research/size/preservation checks; no unchanged full C2 rerun.
-Binary done: structural multiplicity and actual downstream connection/control pass
-in budget, otherwise checkpoint missing gate without extending final scope.
-Self-approve bounded fixes/amendments before reruns; preserve failures/laws/scope.
-No seed search, no MultipleRoles law change, no UI/autonomous peers.
-15/21 mapped and all21/15/132 final obligations remain; SEM stays partial here.
+## Standing guardrails
+No milestone active. Before coding, write the next finite capability/comparison card.
+One job,600s/command,1800s cumulative incl failures/15s bookkeeping;
+<=3 capabilities,12 production/test files,20 evidence/5MiB; existing document caps.
+Self-approve bounded fixture/representation repairs, record before rerun and retain
+failures. Preserve reference laws, alternatives, frozen controls and21/15/132 scope.
+No scenario pipelines, authored psychological intermediates, truth shortcuts,
+seed search or silent acceptance weakening. Behavioral gates require live operands.
+No UI/Campaign4, autonomous multi-character dependency or unchanged broad reruns.
+| Research obligations | **0 active / 18 conditional / 0 unowned** |
