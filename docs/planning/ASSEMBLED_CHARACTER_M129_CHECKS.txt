@@ -16,3 +16,42 @@ PASS: Git index contains no files at or above50,000,000 bytes.
 
 EXIT 0; elapsed 0.381s
 CHARGED 52.644
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledRoleBinding.test.ts", "src/test/phenSem001Binding.test.ts", "src/test/evidenceProvenance.test.ts", "src/test/attentionSelection.test.ts", "-t", "kernel129|SEM|AC-|causal|Causal|provenance|Provenance|binding|Binding", "--maxWorkers=1", "--no-file-parallelism"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/evidenceProvenance.test.ts (10 tests) 13ms
+ ✓ src/test/phenSem001Binding.test.ts (10 tests) 20ms
+ ❯ src/test/assembledRoleBinding.test.ts (9 tests | 1 failed | 8 skipped) 6ms
+   × kernel129: distinct occurrences, one causal companion per role/carrier and actual nonconsecutive reserved identities 5ms
+     → duplicate perceived event/object/role binding
+ ✓ src/test/attentionSelection.test.ts (12 tests) 45ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledRoleBinding.test.ts > kernel129: distinct occurrences, one causal companion per role/carrier and actual nonconsecutive reserved identities
+PerceptualEventFileContractError: duplicate perceived event/object/role binding
+ ❯ fail src/semanticBinding/perceptualEventFiles.ts:493:9
+    491| 
+    492| function fail(code: PerceptualEventFileFailureCode, message: string): …
+    493|   throw new PerceptualEventFileContractError(code, message);
+       |         ^
+    494| }
+    495| 
+ ❯ Module.compilePerceivedBindings src/semanticBinding/perceptualEventFiles.ts:220:30
+ ❯ Module.attentionFixture src/test/attentionFixtures.ts:9:22
+ ❯ src/test/assembledRoleBinding.test.ts:61:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed | 3 passed (4)
+      Tests  1 failed | 32 passed | 8 skipped (41)
+   Start at  18:00:36
+   Duration  5.70s (transform 2.85s, setup 0ms, collect 4.39s, tests 85ms, environment 1ms, prepare 549ms)
+
+
+EXIT 1; elapsed 6.586s
+CHARGED 59.230
+
+AMENDMENT129-A: original C1 rejects identical event/carrier/role bindings. Initial kernel failed before native runs. Correct the successor contract and planned positive duplicate control to admission rejection; retain legal repeated roles across carriers and interleaved different roles. Primary observed relation/seed/laws/choice gate unchanged. No original law/contract edited.

@@ -24,7 +24,7 @@ It may be wrong; never infer continuity from hidden truth. Existing focal track
 is reused only from that permitted relation. Each role retains a binding occurrence.
 Keep current finite attention law: multiple different causal roles on one unit
 produce explicit MultipleRoles exclusion; do not choose a convenient winning role.
-Duplicate same-role bindings produce one companion with both supporting refs.
+Same event/carrier/role duplicates reject; same role on distinct carriers is legal.
 
 ## Comparison and liveness
 Same seed0, body10, recognized person, true encounter1/false encounter2, silent cue3,
@@ -36,7 +36,8 @@ episode. Common earlier positive episode remains. Person belief must remain1/2.
 Later recall should select negative vs positive and actual live appraisal/reasons/
 choice probability differ. Assert live appraisal before numeric comparison.
 Use actual production distributions/Auto probabilities, no uncoupled winner claim.
-Same-role co-carrier control preserves two bindings, one claim and one selected unit.
+129-A: same-role co-carrier is a C1-rejected input, not a positive control.
+Preserve initial mistaken kernel failure; test legal repeated roles across carriers.
 Hidden world/physical roles with identical permitted evidence must not affect cognition.
 
 ## Checks and limits
