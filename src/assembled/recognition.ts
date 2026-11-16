@@ -11,12 +11,13 @@ export const RECOGNITION='assembled-recognition/0.1',OBSERVER=txt(BODY_OBSERVER.
 export {VERSION};
 export const demand=(b:boolean,s:string)=>{if(!b)invalidModel('recognition '+s);};
 export const RECOGNITION_DOMAIN='assembled-recognition-domain/0.1',RECOGNITION_SEED_VERSION='assembled-character-recognition-seed/0.1-candidate';
+export const RECOGNITION_SYMBOL_DOMAIN='assembled-recognition-symbol-domain/0.1',RECOGNITION_SYMBOL_VERSION='assembled-character-recognition-symbol/0.1-candidate';
 export const RECOGNITION_CATALOG='assembled-recognition-catalog/0.1';
-export function compileRecognition(v:CanonicalValue,target:CanonicalValue,configurable=false,seededKnowledge=false){
+export function compileRecognition(v:CanonicalValue,target:CanonicalValue,configurable=false,seededKnowledge=false,symbolKnowledge=false){
  const a=items(v,'list');let entries:{candidate:CanonicalValue;templates:string[]}[];
  const validTemplates=(xs:string[])=>xs.every(x=>x.length>0&&x.length<=80)&&new Set(xs).size===xs.length;
  if(configurable){
-  demand(a.length===3&&txt(a[0])===(seededKnowledge?RECOGNITION_DOMAIN:RECOGNITION_CATALOG),'catalog declaration');
+  demand(a.length===(symbolKnowledge?4:3)&&txt(a[0])===(symbolKnowledge?RECOGNITION_SYMBOL_DOMAIN:seededKnowledge?RECOGNITION_DOMAIN:RECOGNITION_CATALOG),'catalog declaration');
   demand(key(a[2])===key(semanticStateAuthorityRegistryValue()),'authority manifest');
   entries=items(a[1],'list').map(v=>{const x=items(v,'list');demand(x.length===2,'catalog entry');validateSemanticReferent(x[0]);const templates=items(x[1],'list').map(txt);demand(templates.length>=1&&templates.length<=4&&validTemplates(templates),'catalog templates');return {candidate:x[0],templates:[...templates].sort()};});
   demand(entries.length>=1&&entries.length<=8,'catalog capacity');demand(new Set(entries.map(e=>key(e.candidate))).size===entries.length,'duplicate candidate');demand(entries.some(e=>key(e.candidate)===key(target)),'missing target');
@@ -25,11 +26,22 @@ export function compileRecognition(v:CanonicalValue,target:CanonicalValue,config
   demand(a.length===4&&txt(a[0])===RECOGNITION,'declaration');validateSemanticReferent(a[1]);demand(key(a[1])!==key(target),'distinct candidates');const templates=items(a[2],'list').map(txt);demand(templates.length===2&&validTemplates(templates),'templates');demand(key(a[3])===key(semanticStateAuthorityRegistryValue()),'authority manifest');
   entries=[{candidate:target,templates:[templates[0]]},{candidate:a[1],templates:[templates[1]]}];
  }
+ const symbols=symbolKnowledge?items(a[3],'list').map(txt).sort():[];
+ demand(!symbolKnowledge||symbols.length>=1&&symbols.length<=8&&validTemplates(symbols),'symbol domain');
  const bindings=entries.flatMap(e=>e.templates.map(template=>({candidate:e.candidate,template})));
- return {...(seededKnowledge?{seededKnowledge:true}:{}),candidates:entries.map(e=>e.candidate),templates:[...new Set(bindings.map(e=>e.template))],bindings};
+ return {...(symbolKnowledge?{symbols}:{}),...(seededKnowledge?{seededKnowledge:true}:{}),candidates:entries.map(e=>e.candidate),templates:[...new Set(bindings.map(e=>e.template))],bindings};
 }
 export type RecognitionSettings=ReturnType<typeof compileRecognition>&{readonly sharedFiles?:boolean;readonly multiUnit?:boolean;readonly sharedBindings?:boolean};
-export function recognitionSource(v:CanonicalValue,settings:RecognitionSettings){const a=items(v,'list');demand(a.length===6&&txt(a[0])===RECOGNITION,'source grammar');socialSetting(a[1]);validateSemanticReferent(a[2]);demand(typeof a[3]==='boolean','continuity');const form=items(a[4],'list');demand(form.length<=1&&form.every(x=>typeof x==='boolean'),'appearance');const signals=items(a[5],'list').map(v=>{const x=items(v,'list');demand(x.length===2&&typeof x[1]==='boolean'&&settings.templates.includes(txt(x[0])),'template signal');return {template:txt(x[0]),support:x[1]===true};});demand(signals.length<=settings.templates.length&&new Set(signals.map(x=>x.template)).size===signals.length,'duplicate/excess signal');return {social:a[1],continuity:a[3]===true,form:form[0] as boolean|undefined,signals};}
+export function recognitionSource(v:CanonicalValue,settings:RecognitionSettings){
+ const a=items(v,'list');demand(a.length===6&&txt(a[0])===RECOGNITION,'source grammar');socialSetting(a[1]);validateSemanticReferent(a[2]);demand(typeof a[3]==='boolean','continuity');
+ const form=items(a[4],'list');demand(form.length<=1&&form.every(x=>typeof x==='boolean'),'appearance');
+ const all=items(a[5],'list').map(v=>{const x=items(v,'list'),typed=(settings.symbols?.length??0)>0;demand(x.length===(typed?3:2),'signal grammar');
+ const kind=typed?uint(x[0]):1n,token=txt(x[typed?1:0]),support=x[typed?2:1];demand(typeof support==='boolean'&&[1n,2n].includes(kind)&&(kind===1n?settings.templates:(settings.symbols??[])).includes(token),'signal domain');return {kind,token,support:support===true};});
+ demand(new Set(all.map(x=>x.kind+'/'+x.token)).size===all.length,'duplicate signal');
+ return {social:a[1],continuity:a[3]===true,form:form[0] as boolean|undefined,
+ signals:all.filter(x=>x.kind===1n).map(x=>({template:x.token,support:x.support})),
+ symbols:all.filter(x=>x.kind===2n).map(x=>({symbol:x.token,support:x.support}))};
+}
 export function catalogEntries(settings:RecognitionSettings){return settings.candidates.map(candidate=>({path:candidateCatalogEntryPath(OBSERVER,key(candidate)),value:sr('RecognitionCandidateCatalogEntry',{ObserverId:observerIdValue(OBSERVER),CandidateSemanticReferentId:candidate,CandidateDomain:u(1),RecognitionTemplateIds:set(settings.bindings.filter(b=>key(b.candidate)===key(candidate)).map(b=>semanticTypedId('RecognitionTemplateId',text(b.template)))),CatalogEntryVersion:text(VERSION)})}));}
 export function readCatalog(v:CanonicalValue):RecognitionCandidateCatalogEntry{const x=rec(v,228n);return {observerId:txt(id(f(x,1n)).payload),candidateSemanticReferentId:key(f(x,2n)),candidateDomain:'Person',recognitionTemplateIds:items(f(x,4n),'set').map(v=>txt(id(v).payload)).sort(),catalogEntryVersion:txt(f(x,5n))};}
 const ordinal=(v:CanonicalValue)=>uint(id(v).payload);

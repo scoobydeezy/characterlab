@@ -1,3 +1,4 @@
+import {reserveSymbolMappings,validateSymbolKnowledge} from './recognitionSymbols';
 import {isWindow,windowAuthority,readWindow,socialWindow} from './positionPerception';
 /** Canonical SEM241/243/244 leaves inside the single assembled state. */
 import {AuthoritativeState,applyStatePatch,restoreAuthoritativeState,statePathValue,type StatePath,type StatePatch} from '../substrate/state';
@@ -16,12 +17,12 @@ export function withRecognitionState(base:ReturnType<typeof compileCampaign2Stat
  const windows=windowAuthority(OBSERVER);
  const catalog=catalogEntries(settings),authority=createSemanticStateAuthorityRegistry(),without=(s:AuthoritativeState)=>new AuthoritativeState(s.entries().filter(e=>!semanticRoot(e.path)));
  function path(p:StatePath){if(sharedFiles&&isWindow(p)){windows.check(p);return;}demand(p.selectors.length===1&&p.selectors[0].kind==='mapKey','path');const k=(p.selectors[0] as {key:Parameters<typeof key>[0]}).key;
-  if(p.rootStateTypeId===243n)demand(catalog.some(e=>key(statePathValue(e.path))===key(statePathValue(p))),'catalog path');
+  if(p.rootStateTypeId===243n)demand([...catalog,...reserveSymbolMappings(settings).slots].some(e=>key(statePathValue(e.path))===key(statePathValue(p))),'catalog/mapping path');
   else if(p.rootStateTypeId===241n){demand([1n,2n].includes(p.fieldId),'track field');if(p.fieldId===1n)demand(key(k)===key(observerIdValue(OBSERVER)),'foreign observer');else demand(restorePerceptualReferentId(k).observerId===OBSERVER,'foreign track');}
   else if(p.rootStateTypeId===242n){demand(encoding&&[1n,2n].includes(p.fieldId),'event field');if(p.fieldId===1n)demand(key(k)===key(observerIdValue(OBSERVER)),'event observer');else demand(restorePerceptualEventReferentId(k).observerId===OBSERVER,'event observer');}
   else demand(p.rootStateTypeId===244n&&p.fieldId===1n,'resolution path');authority.resolveWritableLeaf(p);
  }
- function validateLocal(s:AuthoritativeState){for(const e of s.entries().filter(e=>semanticRoot(e.path)))path(e.path);
+ function validateLocal(s:AuthoritativeState){validateSymbolKnowledge(s,settings);for(const e of s.entries().filter(e=>semanticRoot(e.path)))path(e.path);
   for(const e of catalog){const value=s.read(e.path).value;if(settings.seededKnowledge){demand(value!==undefined,'missing initial catalog');validateSeedCatalog(value!,e.value);}else demand(key(value??false)===key(e.value),'bound initial catalog');}const t=trackState(s),next=t.nextTrackSequenceByObserver.get(OBSERVER)??0n;demand(next<=(sharedFiles?64n:8n)&&t.activePerceptualReferentIds.length===Number(next)&&t.activePerceptualReferentIds.every(x=>x.observerTrackSequence<next),'track state closure');
   for(const e of s.entries().filter(e=>e.path.rootStateTypeId===241n&&!isWindow(e.path)))demand(e.path.fieldId===1n||e.value===true,'track membership');
   const ev=eventState(s),en=ev.nextEventSequenceByObserver.get(OBSERVER)??0n;demand(en<=(sharedFiles?64n:8n)&&(sharedFiles?ev.activeEventFiles.length<=Number(en):ev.activeEventFiles.length===Number(en))&&ev.activeEventFiles.every(x=>x.observerEventSequence<en),'event state closure');for(const e of s.entries().filter(e=>e.path.rootStateTypeId===242n))demand(e.path.fieldId===1n||e.value===true,'event membership');
