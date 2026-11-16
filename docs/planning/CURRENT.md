@@ -36,7 +36,8 @@ classification-free. No new owner/store or fake learned action identity.
 ## Comparisons/checks
 M132 holder/stand-in; two social tasks/third unknown; body10/seed0/importance+urgency1,
 routes/deadlines30, unsuccessful execution. Positive1, negative2, silent3, choice4,
-recall21. Keep contradiction hidden for feature contrasts; rich versus explicit
+recall21 with matched deliberation/body sample21 (recorded pre-run amendment).
+Keep contradiction hidden for feature contrasts; rich versus explicit
 negative versus withheld required event feature: true/false/no assertion exactly.
 Hold recognition/person mean and actual choice probability equal. All six facets
 coexist independently; chosen episode retains full classifications through recall
