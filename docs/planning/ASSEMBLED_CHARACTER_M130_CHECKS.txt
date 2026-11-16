@@ -10,3 +10,65 @@ COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
 
 EXIT 0; elapsed 18.440s
 CHARGED 52.012
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledRecognitionSeed.test.ts", "-t", "primary130", "--maxWorkers=1", "--no-file-parallelism"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledRecognitionSeed.test.ts (9 tests | 1 failed | 8 skipped) 59948ms
+   × primary130: same model, observations and seed; initial familiarity changes later actual choice 59947ms
+     → duplicate priority display
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledRecognitionSeed.test.ts > primary130: same model, observations and seed; initial familiarity changes later actual choice
+SchedulerContractError: duplicate priority display
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ src/assembled/inputs.ts:71:390
+ ❯ Module.compileCharacterInputs src/assembled/inputs.ts:71:32
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:63
+ ❯ src/test/assembledRecognitionSeed.test.ts:42:17
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  18:55:08
+   Duration  64.53s (transform 2.83s, setup 0ms, collect 4.25s, tests 59.95s, environment 0ms, prepare 104ms)
+
+
+EXIT 1; elapsed 65.126s
+CHARGED 117.138
+
+FIXTURE REPAIR before rerun: moved current urgency21 collided with inherited priority display4. Remove the inherited4 display, retaining exactly the declared moved importance-empty/urgency1 display in both arms. No laws, seeds, familiarity or comparison values changed. Failed admission retained.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledRecognitionSeed.test.ts", "-t", "primary130", "--maxWorkers=1", "--no-file-parallelism"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRecognitionSeed.test.ts > primary130: same model, observations and seed; initial familiarity changes later actual choice
+M130 P(action B), familiar/unfamiliar: 47/72 / 1/1
+M130 PRIMARY PASS one model/fixed input/seed; S0 changes run identity; actual seed -> cue -> recognition -> belief -> appraisal/reasons/choice/attempt; later recognition never backfills; immutable history/full queues
+
+ ✓ src/test/assembledRecognitionSeed.test.ts (9 tests | 8 skipped) 85097ms
+   ✓ primary130: same model, observations and seed; initial familiarity changes later actual choice 85096ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  18:56:58
+   Duration  89.62s (transform 2.79s, setup 0ms, collect 4.18s, tests 85.10s, environment 0ms, prepare 104ms)
+
+
+EXIT 0; elapsed 90.164s
+CHARGED 207.302
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 18.518s
+CHARGED 225.820

@@ -4,6 +4,7 @@
 import {fixture as prior,rec,f,uint,items,key,decode,enc,list,text,signed,q,bytes,outputs,C,exact,target,type Run,type CanonicalValue} from './assembledRoleBinding';
 import {RECOGNITION_SEED_RULES,RECOGNITION_SEED_REGISTRY} from '../../assembled/model';
 import {RECOGNITION_DOMAIN} from '../../assembled/recognition';
+import {PRIORITY_DISPLAY} from '../../assembled/priority';
 import {SOCIAL_SOURCE} from '../../assembled/social';
 import {AuthoritativeState,restoreAuthoritativeState} from '../../substrate/state';
 import {set,unsigned as u} from '../../substrate/canonicalEncoding';
@@ -16,7 +17,7 @@ export function fixture(known=true,mode:'main'|'hidden'|'denied'='main'){
   if(e.path.rootStateTypeId!==243n||key(f(rec(e.value,228n),2n))!==key(target)||known)return e;
   const v=rec(e.value,228n);return {...e,value:{...v,fields:new Map([...v.fields].map(([n,x])=>[n,n===4n?set(items(x,'set').filter(t=>key(id(t).payload)!==key(text('appearance/coat')))):x]))}};
  }));
- const rows=items(decode(b.d.orderedInputs),'list').map(v=>{const a=[...items(v,'list')];if(key(a[0])===key(signed(21)))a[0]=signed(4);
+ const rows=items(decode(b.d.orderedInputs),'list').filter(v=>{const a=items(v,'list');return !(key(a[0])===key(signed(4))&&key(a[2])===key(PRIORITY_DISPLAY));}).map(v=>{const a=[...items(v,'list')];if(key(a[0])===key(signed(21)))a[0]=signed(4);
  if(key(a[2])===key(SOCIAL_SOURCE)){const p=[...items(a[3],'list')],second=key(a[0])===key(signed(2));p[3]=key(a[0])===key(signed(3));p[5]=list([list([text(second?'appearance/coat':'appearance/voice'),true])]);
  const o=[...items(p[1],'list')];if(mode==='hidden'){o[1]=!(o[1]===true);const role=[...items(p[7],'list')];role[0]=u(4);p[7]=list(role);}if(mode==='denied'&&second)o[5]=false;p[1]=list(o);a[3]=list(p);}
  return list(a);});

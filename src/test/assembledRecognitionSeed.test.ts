@@ -57,8 +57,9 @@ it('boundaries130: closed seeded domain, canonical identity, immutable owner and
  const withValue=(value:CanonicalValue)=>enc(new AuthoritativeState(s.entries().map(e=>e.path.rootStateTypeId===243n&&key(f(rec(e.value,228n),2n))===key(target)?{...e,value}:e)).canonicalValue());
  expect(()=>component.initialState(withValue(changed(4n,set([]))))).not.toThrow();
  const allowed=items(f(rec(targetEntry.value,228n),4n),'set'),badTemplate={...id(allowed[0]),payload:text('appearance/unadmitted')};
- for(const value of[changed(4n,set([badTemplate])),changed(4n,list([])),changed(3n,u(2)),changed(5n,text('foreign/version')),changed(1n,sid(1000,'foreign-observer'))])expect(()=>component.initialState(withValue(value))).toThrow();
+ for(const value of[{...v,schema:{...v.schema,schemaVersion:2n}},changed(4n,set([badTemplate])),changed(4n,list([])),changed(3n,u(2)),changed(5n,text('foreign/version')),changed(1n,sid(1000,'foreign-observer'))])expect(()=>component.initialState(withValue(value))).toThrow();
  expect(()=>component.initialState(enc(new AuthoritativeState(s.entries().filter(e=>!(e.path.rootStateTypeId===243n&&key(f(rec(e.value,228n),2n))===key(target)))).canonicalValue()))).toThrow('missing initial catalog');
+ expect(()=>new AuthoritativeState([...s.entries(),{path:targetEntry.path,value:targetEntry.value}])).toThrow();
  const permutation=withValue(changed(4n,set([...items(f(v,4n),'set')].reverse())));bytes(permutation,b.d.initialState);
  const old=await compileCharacterState(await compileCharacterModel(b.legacy.s));expect(()=>old.initialState(b.d.initialState)).toThrow('bound initial catalog');
  const patch={operations:[{kind:'set' as const,path:targetEntry.path,expected:{presence:true as const,value:original},newValue:targetEntry.value}]};
