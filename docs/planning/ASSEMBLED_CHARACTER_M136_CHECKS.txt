@@ -9,3 +9,117 @@ src/assembled/socialExecution.ts(51,446): error TS2345: Argument of type 'Canoni
 
 EXIT 2; elapsed 18.514s
 CHARGED 33.514
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 18.364s
+CHARGED 51.878
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSemanticRoles.test.ts", "-t", "primary136|continuation136|boundaries136|privacy136", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSemanticRoles.test.ts > primary136: actual lane companions drive selected encoding, remembered appraisal and choice
+M136 PRIMARY PASS actual15/125 claims and exact basis; same125 IDs/records consumed130; immutable envelopes; role grouping -> selected encoding -> recall -> live appraisal/reasons/decision/execution P1/2 vs1 with belief1/2; full queues
+
+ ✓ src/test/assembledSemanticRoles.test.ts > primary136: actual lane companions drive selected encoding, remembered appraisal and choice 91809ms
+stdout | src/test/assembledSemanticRoles.test.ts > continuation136: causal companions and actual consumer survive exact restore and role-stage rollback
+M136 CONTINUATION PASS repeat/save2/all later boundaries; failure after125 rolls both lanes/allocators back; exact recovered queue
+
+ ✓ src/test/assembledSemanticRoles.test.ts > continuation136: causal companions and actual consumer survive exact restore and role-stage rollback 69667ms
+stdout | src/test/assembledSemanticRoles.test.ts > boundaries136: actual native requests enforce exact provenance and reject stale or forged companions
+M136 BOUNDARIES PASS captured actual provenance: schema/seam/observer/time/experience/window/carrier/recursive-ref/truth-field reject; immutable roles; current/forged IDs/role claims reject; native zero-role companion
+
+ ✓ src/test/assembledSemanticRoles.test.ts > boundaries136: actual native requests enforce exact provenance and reject stale or forged companions 37255ms
+stdout | src/test/assembledSemanticRoles.test.ts > privacy136: hidden roles and truth cannot change causal companions and denied bindings stay absent
+M136 PRIVACY PASS hidden physical roles/truth inert in all safe prefixes; denied extra gives one actual binding/claim, no exclusion, negative recalled judgment
+
+ ✓ src/test/assembledSemanticRoles.test.ts > privacy136: hidden roles and truth cannot change causal companions and denied bindings stay absent 54592ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed | 5 skipped (9)
+   Start at  11:39:58
+   Duration  257.92s (transform 2.83s, setup 0ms, collect 4.24s, tests 253.32s, environment 0ms, prepare 104ms)
+
+
+EXIT 0; elapsed 258.473s
+CHARGED 310.351
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/evidenceProvenance.test.ts", "src/test/attentionSelection.test.ts", "src/test/assembledRoleBinding.test.ts", "src/test/assembledSemanticLanes.test.ts", "-t", "CV-SEM-07|CV-SEM-080|AC-|kernel129|primary135", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/evidenceProvenance.test.ts > SEM-001G character-accessible provenance and admissibility conformance > CV-SEM-071 uses a closed evidence-reference union and keeps scopes/referents out of proof identity
+ ✓ src/test/evidenceProvenance.test.ts > SEM-001G character-accessible provenance and admissibility conformance > CV-SEM-072 admits an exact audited schema/seam and rejects truth handles even when opaque or hashed
+ ✓ src/test/evidenceProvenance.test.ts > SEM-001G character-accessible provenance and admissibility conformance > CV-SEM-073 makes evidence admissibility consumer-, observer-, window-, modality-, feature-, and carrier-relative
+ ✓ src/test/evidenceProvenance.test.ts > SEM-001G character-accessible provenance and admissibility conformance > CV-SEM-074 permits explicit perceptual co-reference but creates no hidden equality across false discontinuity
+ ✓ src/test/evidenceProvenance.test.ts > SEM-001G character-accessible provenance and admissibility conformance > CV-SEM-075 exposes explicitly shared observer evidence but never shared hidden ancestry
+ ✓ src/test/evidenceProvenance.test.ts > SEM-001G character-accessible provenance and admissibility conformance > CV-SEM-076 makes occurrence IDs fresh and ordinal-opaque while preserving equal causal semantics
+ ✓ src/test/evidenceProvenance.test.ts > SEM-001G character-accessible provenance and admissibility conformance > CV-SEM-077 preserves missing versus explicit evidence and permits future exact quality schemas without generic confidence
+ ✓ src/test/evidenceProvenance.test.ts > SEM-001G character-accessible provenance and admissibility conformance > CV-SEM-078 enforces the evidence-to-interpretation ladder through narrow ReadDomains
+ ✓ src/test/evidenceProvenance.test.ts > SEM-001G character-accessible provenance and admissibility conformance > CV-SEM-079 derives zero or more independent character-relative causal roles without rewriting event roles
+ ✓ src/test/evidenceProvenance.test.ts > SEM-001G character-accessible provenance and admissibility conformance > CV-SEM-080 preserves deterministic replay, safe ancestry, and allocator rollback on failed commit
+stdout | src/test/assembledSemanticLanes.test.ts > primary135: current recognition controls consequence report attribution and same-instant correction is append-only
+M135 PRIMARY PASS same kernels/owners across current and consequence; distinct immutable envelopes; actual126 read of21 resolution; ordered21->127 correction; current cue -> report recipient -> live actual choice/execution P47/72 vs1; full queues
+
+ ✓ src/test/assembledSemanticLanes.test.ts > primary135: current recognition controls consequence report attribution and same-instant correction is append-only 118586ms
+stdout | src/test/assembledRoleBinding.test.ts > kernel129: distinct occurrences, one causal companion per role/carrier and actual nonconsecutive reserved identities
+M129 KERNEL PASS interleaved carriers actual IDs101/301/501; repeated roles on distinct carriers; duplicate same-carrier roles reject under unchanged C1; collisions/forged factors/old grammar reject
+
+ ✓ src/test/assembledRoleBinding.test.ts > kernel129: distinct occurrences, one causal companion per role/carrier and actual nonconsecutive reserved identities
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-D: canonical evidence index crosses decimal occurrence boundaries
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-A: exact roles, capacities and empty component pool
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-B: observed role swap and honest alternative components
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-C: missing, unsupported and multiple roles do not receive fallback priorities
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-D: actual derivation rejects missing, forged, foreign and duplicated claims
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-E: rejects invalid capacity and more than three units
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-F: order invariance, canonical ties and strict-priority renaming
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-G: exact selected bytes succeed while unselected and observation lookup fail
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-H: forged, reused, closed and failed capabilities cannot read
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-I: source, audit and result mutations cannot change private authority
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-J: duplicate requests and duplicate semantic binding cannot enlarge selection
+ ✓ src/test/attentionSelection.test.ts > attention-selection-component/0.1-candidate > AC-K: source history remains unchanged across selection and consumption
+
+ Test Files  4 passed (4)
+      Tests  24 passed | 17 skipped (41)
+   Start at  11:44:25
+   Duration  125.15s (transform 2.88s, setup 0ms, collect 5.38s, tests 118.67s, environment 1ms, prepare 389ms)
+
+
+EXIT 0; elapsed 125.701s
+CHARGED 436.052
+
+COMMAND ["node", "scripts/check-git-file-sizes.mjs"]
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.362s
+CHARGED 436.414
+
+COMMAND ["node", "scripts/check-reference-boundary.mjs"]
+Reference boundary check passed.
+
+EXIT 0; elapsed 2.697s
+CHARGED 439.111
+
+COMMAND ["node", "scripts/check-research-obligations.mjs"]
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4357}
+
+EXIT 0; elapsed 3.434s
+CHARGED 442.545
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,json\ngit=lambda *a:subprocess.check_output(['git',*a],text=True,encoding='utf-8')\nbase='a9238daa'\ncode={'src/assembled/'+p for p in ['model.ts','traceBinding.ts','recognition.ts','semanticLanes.ts','recognitionExecution.ts','socialExecution.ts','encoding.ts']}|{'src/test/assembledSemanticRoles.test.ts','src/test/fixtures/assembledSemanticRoles.ts'}\nallowed=code|{'AGENTS.md','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md','docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md','docs/planning/RESEARCH_OBLIGATIONS.json','docs/planning/ASSEMBLED_CHARACTER_M136_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M136_CHECKS.txt','docs/formal/ASSEMBLED_CHARACTER_SEMANTIC_ROLES_CONTRACT.md'}\nchanged=set(git('diff','--name-only',base).splitlines())|set(git('ls-files','--others','--exclude-standard').splitlines())\nassert changed<=allowed,changed-allowed\nassert changed&code==code\nassert git('diff','b5fc2051','--','src')=='','tested source changed'\nassert git('diff',base,'--','src/campaign2','src/campaign3','src/substrate','src/observation','src/semanticBinding','reference')=='','frozen dependency changed'\nfor p in code:\n s=Path(p).read_text(encoding='utf-8')\n if p.startswith('src/assembled/'):assert not any(\"campaign3/\"+x in s for x in ['attentionFactory','attentionRuntime','generalAttentionFactory','generalAttentionRuntime']),'separate pipeline'\nold=git('show',base+':docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md')\nnew=Path('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md').read_text(encoding='utf-8')\nrows=lambda s:[x for x in s.splitlines() if ('| C-' in x or '| F-' in x) and '| C-SEM ' not in x]\nassert rows(old)==rows(new),'other C/F rows changed'\nassert '| UNRESOLVED | C-SEM ' in new\nassert 'E46/P54/N17/U15' in new and '15/21' in new and 'families:0/15' in new\nassert len(new.splitlines())<=250 and len(new.replace('\\n','\\r\\n').encode())<=65536\nbefore=json.loads(git('show',base+':docs/planning/RESEARCH_OBLIGATIONS.json'))\nafter=json.loads(Path('docs/planning/RESEARCH_OBLIGATIONS.json').read_text(encoding='utf-8-sig'))\nassert before['obligations']==after['obligations']\nassert after['reportReviews'][:-1]==before['reportReviews']\nassert after['reportReviews'][-1]=={'path':'docs/planning/ASSEMBLED_CHARACTER_M136_RESULT.md','obligations':['RO-C3-003','RO-C3-004','RO-C3-005','RO-C3-006','RO-C3-007','RO-C3-014','RO-C3-016','RO-C3-020']}\nfor path,cap in [('AGENTS.md',120),('docs/planning/CURRENT.md',80),('docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md',250)]:\n assert len(Path(path).read_text(encoding='utf-8').splitlines())<=cap,path\nevidence=[Path('docs/planning/ASSEMBLED_CHARACTER_M136_'+s) for s in ['RESULT.md','CHECKS.txt']]\nassert sum(p.stat().st_size for p in evidence)<5*1024*1024\nlog=evidence[1].read_text(encoding='utf-8')\ncharge=float([l.split()[1] for l in log.splitlines() if l.startswith('CHARGED ')][-1]);assert charge<1800\nfor token in ['M136 PRIMARY PASS','M136 PRIVACY PASS','M136 CONTINUATION PASS','M136 BOUNDARIES PASS','M135 PRIMARY PASS','src/test/evidenceProvenance.test.ts','src/test/attentionSelection.test.ts','kernel129','Reference boundary check passed.','PASS: research obligation references']:\n assert token in log,token\ncurrent=Path('docs/planning/CURRENT.md').read_text(encoding='utf-8')\nassert '(ASSEMBLED_CHARACTER_M136_CHECKS.txt)' in current and '{{' not in current\nprint('PASS M136 preservation: source b5fc2051;9 production/test files; old Campaign0-3/reference dependencies unchanged; C-SEM remains unresolved/partial, other C/F unchanged;15/21,0/15,E46/P54/N17/U15; statuses/document/evidence caps retained; charge',charge)\n"]
+warning: in the working copy of 'AGENTS.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/planning/CURRENT.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/planning/RESEARCH_OBLIGATIONS.json', LF will be replaced by CRLF the next time Git touches it
+PASS M136 preservation: source b5fc2051;9 production/test files; old Campaign0-3/reference dependencies unchanged; C-SEM remains unresolved/partial, other C/F unchanged;15/21,0/15,E46/P54/N17/U15; statuses/document/evidence caps retained; charge 442.545
+
+EXIT 0; elapsed 0.810s
+CHARGED 443.355
+
+COMMAND ["node", "scripts/check-git-file-sizes.mjs"]
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.365s
+CHARGED 443.720
