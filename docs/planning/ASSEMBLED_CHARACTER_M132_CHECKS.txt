@@ -1,3 +1,132 @@
 M132 baseline c916ba4e; 1800s cumulative/600s command; explicit test names.
 Prepaid bookkeeping15s.
 CHARGED 15.000
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 19.425s
+CHARGED 34.425
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledRecognitionAccess.test.ts", "-t", "primary132|histories132|boundaries132|continuation132|privacy132", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRecognitionAccess.test.ts > primary132: partial cue access drives withdrawal, unchanged history and actual choice
+M132 P(action B), visible/hidden contradiction: 1/1 / 47/72
+M132 PRIMARY PASS partial permission -> explicit withdrawal -> withheld report attribution -> actual probability/execution; later correction preserves earlier evidence/history; full queues
+
+ ✓ src/test/assembledRecognitionAccess.test.ts > primary132: partial cue access drives withdrawal, unchanged history and actual choice 84074ms
+stdout | src/test/assembledRecognitionAccess.test.ts > histories132: no-cue persistence and unique replacement preserve the original report recipients
+M132 HISTORIES PASS absent cues retain identification; unique replacement and correction keep one track and exact revision chain; earlier wrongly attributed report never transfers; live choice/full queues
+
+ ✓ src/test/assembledRecognitionAccess.test.ts > histories132: no-cue persistence and unique replacement preserve the original report recipients 31489ms
+stdout | src/test/assembledRecognitionAccess.test.ts > boundaries132: strict per-cue admission and versioned observed projection
+M132 BOUNDARIES PASS strict permission boolean/tuple/domain/duplicate; denied cue removed not negated; old0.97 grammar preserved
+
+ ✓ src/test/assembledRecognitionAccess.test.ts > boundaries132: strict per-cue admission and versioned observed projection 2335ms
+stdout | src/test/assembledRecognitionAccess.test.ts > continuation132: withdrawal is ordered, persists exactly and rolls back with recognition
+M132 CONTINUATION PASS actual mapping reads and126/127/130 ordering; repeat/save2/every later boundary/full queue; post-evaluation fault rolls whole instant back; recovered prefix exact
+
+ ✓ src/test/assembledRecognitionAccess.test.ts > continuation132: withdrawal is ordered, persists exactly and rolls back with recognition 60727ms
+stdout | src/test/assembledRecognitionAccess.test.ts > privacy132: withheld polarity and hidden truth are inert, global denial earns no report
+M132 PRIVACY PASS withheld polarity/hidden identity/outcome/roles inert in all safe prefixes; whole-encounter denial earns no report or withdrawal
+
+ ✓ src/test/assembledRecognitionAccess.test.ts > privacy132: withheld polarity and hidden truth are inert, global denial earns no report 45036ms
+
+ Test Files  1 passed (1)
+      Tests  5 passed | 5 skipped (10)
+   Start at  09:49:13
+   Duration  228.61s (transform 2.87s, setup 0ms, collect 4.41s, tests 223.66s, environment 0ms, prepare 291ms)
+
+
+EXIT 0; elapsed 229.550s
+CHARGED 263.975
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledRecognitionSymbol.test.ts", "src/test/recognition.test.ts", "src/test/semanticStateAuthority.test.ts", "src/test/semanticStatePersistence.test.ts", "src/test/semanticRecognitionState.test.ts", "src/test/semanticCodecs.test.ts", "-t", "primary131|CV-SEM|semantic", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-061 traces unfamiliar, contradicted, and ambiguous evaluations without fake identities
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-062 permits correct, wrong, or unresolved recognition over identical immutable perception
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-063 implements exact unique uncontradicted support without order-based ties
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-064 requires observer-owned catalog and symbol mapping without truth-kind filtering
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-065 appends replacement and withdrawal while no-cue and same-candidate evaluations preserve current resolution
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-066 preserves false continuity and false discontinuity under recognition changes
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-067 enforces typed same-track, same-experience evidence closure
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-068 enforces sole rule authority and continuant-only recognition
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-069 preserves semantic opacity, replay, history closure, and allocator rollback
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-070 emits only append-only recognition resolution and no downstream mutation
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > registers exactly one owner for every writable leaf of roots 241..244
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > rejects a second owner for an already-owned family and an uncovered leaf
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > projects both perceptual file states onto their registered leaves
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > keeps the membership leaf a mutation projection of the canonical set
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > admits writes only from the owning authority
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > enforces the accepted lifecycle in removal permission and leaf values
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > carries ownership, removal, and leaf grammar into ModelIdentity
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > addresses recognition knowledge by its accepted uniqueness keys
+ ✓ src/test/semanticStatePersistence.test.ts > SEM-001I.3 semantic state persistence and observer isolation > CV-SEM-097 saves, loads, and replays semantic state roots byte-identically
+ ✓ src/test/semanticStatePersistence.test.ts > SEM-001I.3 semantic state persistence and observer isolation > CV-SEM-097 rolls state, allocators, trace, and outputs back together on staged failure
+ ✓ src/test/semanticStatePersistence.test.ts > SEM-001I.3 semantic state persistence and observer isolation > CV-SEM-098 lets another observer perturb global ordinals without changing this observer
+stdout | src/test/assembledRecognitionSymbol.test.ts > primary131: same observed name, retained mapping changes recognition and actual choice
+M131 P(action B), mapped/unmapped: 47/72 / 1/1
+M131 PRIMARY PASS one model/fixed input/seed; S0 changes run identity; actual name mapping -> cue -> recognition -> belief -> appraisal/reasons/choice/attempt; later recognition never backfills; immutable history/full queues
+
+ ✓ src/test/assembledRecognitionSymbol.test.ts > primary131: same observed name, retained mapping changes recognition and actual choice 87264ms
+ ✓ src/test/semanticCodecs.test.ts > SEM-001I.3 canonical semantic codecs > CV-SEM-096 enforces the accepted type and field registry
+ ✓ src/test/semanticCodecs.test.ts > SEM-001I.3 canonical semantic codecs > CV-SEM-096 rejects unadmitted contract versions before emission
+ ✓ src/test/semanticCodecs.test.ts > SEM-001I.3 canonical semantic codecs > CV-SEM-096 refuses to decode a record schema version the registry does not admit
+ ✓ src/test/semanticCodecs.test.ts > SEM-001I.3 canonical semantic codecs > CV-SEM-096 validates every union tag/payload contract before the record is built
+ ✓ src/test/semanticCodecs.test.ts > SEM-001I.3 canonical semantic codecs > CV-SEM-096 enforces multi-field and mutually exclusive union payloads
+ ✓ src/test/semanticCodecs.test.ts > SEM-001I.3 canonical semantic codecs > CV-SEM-096 gives CharacterEvidenceRef exactly one payload field per reference kind
+ ✓ src/test/semanticCodecs.test.ts > SEM-001I.3 canonical semantic codecs > CV-SEM-096 round-trips every lifecycle record byte-identically
+ ✓ src/test/semanticCodecs.test.ts > SEM-001I.3 canonical semantic codecs > CV-SEM-096 encodes state roots independently of map and set construction order
+ ✓ src/test/semanticCodecs.test.ts > SEM-001I.3 canonical semantic codecs > CV-SEM-096 keeps equal ordinals in different occurrence namespaces distinct
+ ✓ src/test/semanticCodecs.test.ts > SEM-001I.3 canonical semantic codecs > CV-SEM-096 keeps observer ownership inside the canonical identity value
+ ✓ src/test/semanticRecognitionState.test.ts > SEM-001I.3 recognition-knowledge state identity > CV-SEM-099 permits at most one active mapping per (ObserverId, PerceivedIdentitySymbolId)
+ ✓ src/test/semanticRecognitionState.test.ts > SEM-001I.3 recognition-knowledge state identity > CV-SEM-099 replaces mapping A with B without remapping or mutating A
+ ✓ src/test/semanticRecognitionState.test.ts > SEM-001I.3 recognition-knowledge state identity > CV-SEM-099 carries an allocated mapping occurrence rather than a derived key
+ ✓ src/test/semanticRecognitionState.test.ts > SEM-001I.3 recognition-knowledge state identity > CV-SEM-100 permits at most one active catalog entry per (ObserverId, CandidateSemanticReferentId)
+
+ Test Files  6 passed (6)
+      Tests  36 passed | 9 skipped (45)
+   Start at  09:53:12
+   Duration  93.45s (transform 2.86s, setup 0ms, collect 4.46s, tests 87.36s, environment 1ms, prepare 609ms)
+
+
+EXIT 0; elapsed 93.997s
+CHARGED 357.972
+
+COMMAND ["node", "scripts/check-git-file-sizes.mjs"]
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.370s
+CHARGED 358.342
+
+COMMAND ["node", "scripts/check-reference-boundary.mjs"]
+Reference boundary check passed.
+
+EXIT 0; elapsed 2.857s
+CHARGED 361.199
+
+COMMAND ["node", "scripts/check-research-obligations.mjs"]
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4353}
+
+EXIT 0; elapsed 3.700s
+CHARGED 364.899
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,json\ngit=lambda *a:subprocess.check_output(['git',*a],text=True,encoding='utf-8')\nbase='c916ba4e'\ncode={'src/assembled/'+p for p in ['model.ts','traceBinding.ts','recognition.ts','socialExecution.ts']}|{'src/test/assembledRecognitionAccess.test.ts','src/test/fixtures/assembledRecognitionAccess.ts'}\nallowed=code|{'AGENTS.md','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md','docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md','docs/planning/RESEARCH_OBLIGATIONS.json','docs/planning/ASSEMBLED_CHARACTER_M132_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M132_CHECKS.txt','docs/formal/ASSEMBLED_CHARACTER_RECOGNITION_ACCESS_CONTRACT.md'}\nchanged=set(git('diff','--name-only',base).splitlines())|set(git('ls-files','--others','--exclude-standard').splitlines())\nassert changed<=allowed,changed-allowed\nassert changed&code==code\nassert git('diff','a416de2a','--','src')=='','tested source changed'\nassert git('diff',base,'--','src/campaign2','src/campaign3','src/substrate','src/observation','src/semanticBinding','reference')=='','frozen dependency changed'\nfor p in code:\n s=Path(p).read_text(encoding='utf-8')\n if p.startswith('src/assembled/'):assert not any(\"campaign3/\"+x in s for x in ['attentionFactory','attentionRuntime','generalAttentionFactory','generalAttentionRuntime']),'separate pipeline'\nold=git('show',base+':docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md')\nnew=Path('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md').read_text(encoding='utf-8')\nrows=lambda s:[x for x in s.splitlines() if ('| C-' in x or '| F-' in x) and '| C-SEM ' not in x]\nassert rows(old)==rows(new),'other C/F rows changed'\nassert '| UNRESOLVED | C-SEM ' in new\nassert 'E46/P54/N17/U15' in new and '15/21' in new and 'families:0/15' in new\nassert len(new.splitlines())<=250 and len(new.replace('\\n','\\r\\n').encode())<=65536\nbefore=json.loads(git('show',base+':docs/planning/RESEARCH_OBLIGATIONS.json'))\nafter=json.loads(Path('docs/planning/RESEARCH_OBLIGATIONS.json').read_text(encoding='utf-8-sig'))\nassert before['obligations']==after['obligations']\nassert after['reportReviews'][:-1]==before['reportReviews']\nassert after['reportReviews'][-1]=={'path':'docs/planning/ASSEMBLED_CHARACTER_M132_RESULT.md','obligations':['RO-C3-014','RO-C3-016','RO-C3-020']}\nfor path,cap in [('AGENTS.md',120),('docs/planning/CURRENT.md',80),('docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md',250)]:\n assert len(Path(path).read_text(encoding='utf-8').splitlines())<=cap,path\nevidence=[Path('docs/planning/ASSEMBLED_CHARACTER_M132_'+s) for s in ['RESULT.md','CHECKS.txt']]\nassert sum(p.stat().st_size for p in evidence)<5*1024*1024\nlog=evidence[1].read_text(encoding='utf-8')\ncharge=float([l.split()[1] for l in log.splitlines() if l.startswith('CHARGED ')][-1]);assert charge<1800\nfor token in ['M132 HISTORIES PASS','M132 PRIMARY PASS','M132 PRIVACY PASS','M132 CONTINUATION PASS','M132 BOUNDARIES PASS','M131 PRIMARY PASS','src/test/recognition.test.ts','src/test/semanticStateAuthority.test.ts','src/test/semanticStatePersistence.test.ts','Reference boundary check passed.','PASS: research obligation references']:\n assert token in log,token\ncurrent=Path('docs/planning/CURRENT.md').read_text(encoding='utf-8')\nassert '(ASSEMBLED_CHARACTER_M132_CHECKS.txt)' in current and '{{' not in current\nprint('PASS M132 preservation: source a416de2a;6 production/test files; old Campaign0-3/reference dependencies unchanged; C-SEM remains unresolved/partial, other C/F unchanged;15/21,0/15,E46/P54/N17/U15; statuses/document/evidence caps retained; charge',charge)\n"]
+PASS M132 preservation: source a416de2a;6 production/test files; old Campaign0-3/reference dependencies unchanged; C-SEM remains unresolved/partial, other C/F unchanged;15/21,0/15,E46/P54/N17/U15; statuses/document/evidence caps retained; charge 364.899
+
+EXIT 0; elapsed 0.803s
+CHARGED 365.702
+
+COMMAND ["node", "scripts/check-git-file-sizes.mjs"]
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.378s
+CHARGED 366.080
+
+COMMAND ["git", "diff", "--cached", "--check"]
+
+EXIT 0; elapsed 0.072s
+CHARGED 366.152
