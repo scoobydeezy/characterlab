@@ -1,2 +1,18 @@
 M129 baseline f87e99d8; plan before code;1800s cap/600 per command;15s prepaid bookkeeping.
 CHARGED 15.000
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 18.615s
+CHARGED 33.615
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 18.648s
+CHARGED 52.263
+
+COMMAND ["node", "scripts/check-git-file-sizes.mjs"]
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.381s
+CHARGED 52.644
