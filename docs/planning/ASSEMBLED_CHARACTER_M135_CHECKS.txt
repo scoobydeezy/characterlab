@@ -8,3 +8,32 @@ src/assembled/socialExecution.ts(48,314): error TS2345: Argument of type 'Recogn
 
 EXIT 2; elapsed 18.280s
 CHARGED 33.280
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 18.015s
+CHARGED 51.295
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSemanticLanes.test.ts", "-t", "primary135", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSemanticLanes.test.ts [ src/test/assembledSemanticLanes.test.ts ]
+TypeError: bodyId is not a function
+ ❯ src/assembled/memory.ts:37:29
+
+ ❯ src/assembled/retainedAttribution.ts:10:31
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  no tests
+   Start at  11:14:45
+   Duration  2.47s (transform 1.41s, setup 0ms, collect 0ms, tests 0ms, environment 0ms, prepare 102ms)
+
+
+EXIT 1; elapsed 3.035s
+CHARGED 54.330
