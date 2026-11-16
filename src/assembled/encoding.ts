@@ -4,8 +4,8 @@ import {dataItems as items,dataText as txt,dataUnsigned as uint,dataKey as key,d
 import {EventRoleId as R,type EventRoleEvidence} from '../semanticBinding/eventBindings';
 import {assemblePreRecognitionExperience,type PreRecognitionSemanticExperience} from '../semanticBinding/perceptualEventFiles';
 import {compileCausalRoleModel,deriveCausalRoleEvidence,INITIAL_CAUSAL_ROLE_RULE,characterEvidenceRefKey,type ObserverSafeEvidenceOccurrence} from '../semanticBinding/evidenceProvenance';
-import {preRecognitionSemanticExperienceValue,causalRoleEvidenceValue} from '../semanticBinding/semanticEvidenceCodecs';
-import {decodeSemanticValue,restorePerceptualReferentId,restorePerceptualEventReferentId,perceptualReferentIdValue} from '../semanticBinding/semanticCodecs';
+import {preRecognitionSemanticExperienceValue,causalRoleEvidenceValue,characterEvidenceRefValue} from '../semanticBinding/semanticEvidenceCodecs';
+import {decodeSemanticValue,restorePerceptualReferentId,restorePerceptualEventReferentId,perceptualReferentIdValue,perceptualEventReferentIdValue,observerIdValue} from '../semanticBinding/semanticCodecs';
 import {prepareAttentionPool,selectAttention} from '../campaign3/attentionSelection';
 import type {EncodingBudget} from '../campaign3/encodingAccessMath';
 import type {SelectedBudgetCalibration} from '../campaign3/selectedEncodingBudgetControl';
@@ -38,7 +38,7 @@ export function roleChannel(v:CanonicalValue,multiUnit=false,sharedBindings=fals
 export function observedRole(code:bigint):EventRoleEvidence{require(code>=0n&&code<=4n,'observed role');return code===0n?{kind:'unresolved'}:{kind:'exact',eventRoleId:[R.Actor,R.Target,R.Participant,R.Recipient][Number(code)-1]};}
 const G='semantic-binding/0.1-candidate#SEM-001G';
 /** Classification-free role projection; original frozen experience is never changed. */
-export function encodeExperience(full:PreRecognitionSemanticExperience,settings:EncodingSettings,claimId:bigint|readonly bigint[]){
+export function deriveEncodingRoles(full:PreRecognitionSemanticExperience,settings:EncodingSettings,claimId:bigint|readonly bigint[]){
  const experience=assemblePreRecognitionExperience({...full,perceptualClassifications:[],perceptualEventClassifications:[]});
  const bindings=[...experience.perceivedBindings].sort((a,b)=>a.perceivedBindingId<b.perceivedBindingId?-1:1),ids=typeof claimId==='bigint'?[claimId]:[...claimId];
  require(bindings.length>=1&&bindings.length<=(settings.multiUnit?3:1)&&experience.perceptualEventReferentIds.length===1,'observed unit domain');
@@ -47,16 +47,33 @@ export function encodeExperience(full:PreRecognitionSemanticExperience,settings:
  occurrences.sort((a,b)=>characterEvidenceRefKey(a.ref).localeCompare(characterEvidenceRefKey(b.ref)));
  //0.4 groups actual carriers; each emitted role uses an actually reserved ID.
  const groups=settings.sharedBindings?[...bindings.reduce((m,b,i)=>{const k=key(perceptualReferentIdValue(b.perceptualReferentId)),g=m.get(k)??[];g.push(i);m.set(k,g);return m;},new Map<string,number[]>()).values()]:bindings.map((_,i)=>[i]);
+ const requests:Parameters<typeof deriveCausalRoleEvidence>[1][]=[];
  const claims=groups.flatMap(group=>{const i=group[0],b=bindings[i];
-  const derived=deriveCausalRoleEvidence(compileCausalRoleModel(ENCODING,[INITIAL_CAUSAL_ROLE_RULE]),{experience,perceptualEventReferentId:b.perceptualEventReferentId,perceptualReferentId:b.perceptualReferentId,evidenceOccurrences:occurrences,readDomain:{transitionKindId:'transition/derive-character-causal-role',permittedEvidenceSchemas:[{refKind:'perceived-binding',recordSchemaVersion:'perceived-binding/0.1-candidate',producingEpistemicSeamVersion:b.transformationVersion}],temporalScope:'SameExperience'},transformationVersion:G},ids[i]);
+  const request:Parameters<typeof deriveCausalRoleEvidence>[1]={experience,perceptualEventReferentId:b.perceptualEventReferentId,perceptualReferentId:b.perceptualReferentId,evidenceOccurrences:occurrences,readDomain:{transitionKindId:'transition/derive-character-causal-role',permittedEvidenceSchemas:[{refKind:'perceived-binding',recordSchemaVersion:'perceived-binding/0.1-candidate',producingEpistemicSeamVersion:b.transformationVersion}],temporalScope:'SameExperience'},transformationVersion:G};requests.push(request);const derived=deriveCausalRoleEvidence(compileCausalRoleModel(ENCODING,[INITIAL_CAUSAL_ROLE_RULE]),request,ids[i]);
   require(derived.evidence.length<=group.length,'reserved claims per carrier');return settings.sharedBindings?derived.evidence.map((claim,j)=>({...claim,causalRoleEvidenceId:ids[group[j]]})):[...derived.evidence];
  });
+ return freezeRoles({experience,ids,claims,requests});
+}
+function freezeRoles<T>(value:T):T{if(value&&typeof value==='object'&&!Object.isFrozen(value)){Object.values(value).forEach(freezeRoles);Object.freeze(value);}return value;}
+export type PreparedEncodingRoles=ReturnType<typeof deriveEncodingRoles>;
+export function roleInput(p:PreparedEncodingRoles){return list([text('assembled-causal-role-input/0.1'),preRecognitionSemanticExperienceValue(p.experience),list(p.ids.map(u)),list(p.requests.map(r=>list([
+ perceptualEventReferentIdValue(r.perceptualEventReferentId),perceptualReferentIdValue(r.perceptualReferentId),text(r.readDomain.transitionKindId),text(r.readDomain.temporalScope),
+ list(r.readDomain.permittedEvidenceSchemas.map(s=>list([text(s.refKind),text(s.recordSchemaVersion),text(s.producingEpistemicSeamVersion)]))),
+ list(r.evidenceOccurrences.map(o=>list([characterEvidenceRefValue(o.ref),observerIdValue(o.observerId),u(o.occurredAt),text(o.recordSchemaVersion),text(o.producingEpistemicSeamVersion),u(o.scope.experienceId!),o.scope.carrier?.kind==='continuant-in-event'?list([perceptualEventReferentIdValue(o.scope.carrier.perceptualEventReferentId),perceptualReferentIdValue(o.scope.carrier.perceptualReferentId)]):list([])])))
+ ])))]);}
+export function encodeExperienceFromRoles(full:PreRecognitionSemanticExperience,settings:EncodingSettings,prepared:PreparedEncodingRoles){
+ require(!!prepared,'actual causal companions required');const {experience,ids,claims}=prepared;
+ const expected=assemblePreRecognitionExperience({...full,perceptualClassifications:[],perceptualEventClassifications:[]});
+ require(key(preRecognitionSemanticExperienceValue(experience))===key(preRecognitionSemanticExperienceValue(expected)),'companion experience binding');
+ const bindings=[...experience.perceivedBindings].sort((a,b)=>a.perceivedBindingId<b.perceivedBindingId?-1:1);
+ require(bindings.length>=1&&bindings.length<=(settings.multiUnit?3:1)&&experience.perceptualEventReferentIds.length===1&&ids.length===bindings.length&&new Set(ids).size===ids.length&&ids.every(x=>x>=0n)&&claims.every(c=>ids.includes(c.causalRoleEvidenceId)),'companion reserved identities/domain');
  const selection=selectAttention(prepareAttentionPool(experience,claims),settings.capacity),result=encodeSelectedBudgetControl(selection.view,settings.budgetLaw??'historical-shared',settings.attention,settings.budgetCalibration??'UnitBudget');
  const value=list([text(encodingLabel(settings)),u(settings.capacity),text(settings.attention),settings.multiUnit?list(ids.map(u)):u(ids[0]),preRecognitionSemanticExperienceValue(experience),list(claims.map(causalRoleEvidenceValue)),list(selection.audit.map(a=>list([text(a.key),list(a.roles.map(text)),text(a.exclusion??'Eligible'),a.selected]))),list(result.evidence.map(e=>decodeSemanticValue(e.bytes))),list(result.rows.map(r=>list([text(r.continuantKey),text(r.roleId),...[r.base,r.role,r.attention,r.raw,r.strength].map(x=>q(x.numerator,x.denominator))]))),...(settings.budgetLaw?[text(settings.budgetLaw),text(settings.budgetCalibration!)]:[])]);
  // The focal binding is reserved first by the actual perception producer.
  const focal=key(perceptualReferentIdValue(bindings[0].perceptualReferentId));
  return {value,positive:result.rows.some(r=>r.continuantKey===focal&&r.strength.numerator>0n)};
 }
+export function encodeExperience(full:PreRecognitionSemanticExperience,settings:EncodingSettings,claimId:bigint|readonly bigint[]){return encodeExperienceFromRoles(full,settings,deriveEncodingRoles(full,settings,claimId));}
 /** Decode the original role projection for structural validation, never as live input. */
 function roleProjection(v:CanonicalValue):PreRecognitionSemanticExperience{
  const x=rec(v,227n),observerId=txt(id(f(x,2n)).payload),experienceId=uint(id(f(x,1n)).payload),occurredAt=uint(f(x,3n));

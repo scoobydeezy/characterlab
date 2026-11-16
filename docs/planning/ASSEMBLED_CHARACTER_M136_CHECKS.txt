@@ -1,2 +1,11 @@
 M136 baseline a9238daa;1800s total/600 command;15s prepaid bookkeeping.
 CHARGED 15.000
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+src/assembled/socialExecution.ts(51,296): error TS2345: Argument of type 'CanonicalValue | undefined' is not assignable to parameter of type 'CanonicalValue'.
+  Type 'undefined' is not assignable to type 'CanonicalValue'.
+src/assembled/socialExecution.ts(51,446): error TS2345: Argument of type 'CanonicalValue | undefined' is not assignable to parameter of type 'CanonicalValue'.
+  Type 'undefined' is not assignable to type 'CanonicalValue'.
+
+EXIT 2; elapsed 18.514s
+CHARGED 33.514
