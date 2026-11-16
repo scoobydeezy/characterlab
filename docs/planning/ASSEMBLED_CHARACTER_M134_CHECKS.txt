@@ -78,7 +78,7 @@ COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSem
 TypeError: Cannot read properties of undefined (reading 'kind')
  ❯ isRecord src/assembled/codecs.ts:34:101
      32| const fail=(message:string):never=>invalidModel('cognitive record gram…
-     33| 
+     33|\x20
      34| function isRecord(value:CanonicalValue):value is RecordValue{return ty…
        |                                                                                                     ^
      35| function checkType(value:CanonicalValue,grammar:string):void {
@@ -133,3 +133,133 @@ AssertionError: retired-file experience actually recalled: expected undefined to
 
 EXIT 1; elapsed 78.853s
 CHARGED 217.895
+
+SELF-APPROVED COMPARISON CORRECTION: strict first-episode recall applies to retired/reacquired (and split) track arms. In continued/event-only arms unchanged shared retrieval can prefer newer same-track episodes. Record actual selected acquisition times, require actual consumer/full historical envelope in every arm, retain exact retired-file episode1 gate in reacquired arm. No input/law/seed/budget change. First-episode-in-every-arm failure preserved in preceding commit.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSemanticLifecycle.test.ts", "-t", "primary134", "--minWorkers=1", "--maxWorkers=1", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSemanticLifecycle.test.ts > primary134: explicit lifecycle preserves history and changes later choice only through current recognition
+M134 selected acquisition times retired=false: 2
+
+stdout | src/test/assembledSemanticLifecycle.test.ts > primary134: explicit lifecycle preserves history and changes later choice only through current recognition
+M134 selected acquisition times retired=true: 1
+
+stdout | src/test/assembledSemanticLifecycle.test.ts > primary134: explicit lifecycle preserves history and changes later choice only through current recognition
+M134 selected acquisition times retired=true: 1
+
+stdout | src/test/assembledSemanticLifecycle.test.ts > primary134: explicit lifecycle preserves history and changes later choice only through current recognition
+M134 selected acquisition times retired=false: 2
+M134 PRIMARY PASS explicit track/event ends; fresh ordinals; event continuation/split; exact support; old recognition/memory retained and actually consumed; live actual P(B)47/72 vs1; split-only/retirement equivalence; complete queues
+
+ ✓ src/test/assembledSemanticLifecycle.test.ts > primary134: explicit lifecycle preserves history and changes later choice only through current recognition 132480ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  10:52:26
+   Duration  137.05s (transform 2.83s, setup 0ms, collect 4.24s, tests 132.48s, environment 0ms, prepare 103ms)
+
+
+EXIT 0; elapsed 137.605s
+CHARGED 355.500
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSemanticLifecycle.test.ts", "-t", "continuation134|boundaries134|privacy134", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSemanticLifecycle.test.ts > continuation134: retirement and continuation restore exactly and a later fault rolls back endings
+M134 CONTINUATION PASS repeat/save2/all later prefixes; post-retirement rollback and recovered whole continuation
+
+ ✓ src/test/assembledSemanticLifecycle.test.ts > continuation134: retirement and continuation restore exactly and a later fault rolls back endings 136991ms
+stdout | src/test/assembledSemanticLifecycle.test.ts > boundaries134: malformed or contradictory lifecycle and foreign/future/reused/absent files reject
+M134 BOUNDARIES PASS strict flags; retired/future/foreign files; no end twice/reuse/wrong owner; immutable attachment; absent prior and old grammar
+
+ ✓ src/test/assembledSemanticLifecycle.test.ts > boundaries134: malformed or contradictory lifecycle and foreign/future/reused/absent files reject 18883ms
+stdout | src/test/assembledSemanticLifecycle.test.ts > privacy134: hidden truth and denied ending cannot mutate perception or recognition
+M134 PRIVACY PASS hidden truth/feature inert; globally denied endings cannot retire files or credit reports
+
+ ✓ src/test/assembledSemanticLifecycle.test.ts > privacy134: hidden truth and denied ending cannot mutate perception or recognition 50373ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 6 skipped (9)
+   Start at  10:55:21
+   Duration  211.02s (transform 2.97s, setup 0ms, collect 4.41s, tests 206.25s, environment 0ms, prepare 105ms)
+
+
+EXIT 0; elapsed 211.580s
+CHARGED 567.080
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/perceptualContinuantFiles.test.ts", "src/test/perceptualEventFiles.test.ts", "src/test/semanticStateAuthority.test.ts", "src/test/assembledSemanticAppearance.test.ts", "-t", "primary133|CV-SEM|registers exactly|rejects a second|projects both|keeps the membership|admits writes|enforces the accepted|carries ownership|addresses recognition", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > registers exactly one owner for every writable leaf of roots 241..244
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > rejects a second owner for an already-owned family and an uncovered leaf
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > projects both perceptual file states onto their registered leaves
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > keeps the membership leaf a mutation projection of the canonical set
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > admits writes only from the owning authority
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > enforces the accepted lifecycle in removal permission and leaf values
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > carries ownership, removal, and leaf grammar into ModelIdentity
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > addresses recognition knowledge by its accepted uniqueness keys
+ ✓ src/test/perceptualContinuantFiles.test.ts > SEM-001A perceptual continuant-file lifecycle > CV-SEM-013 allocates observer-scoped ordinals monotonically and never reuses one
+ ✓ src/test/perceptualContinuantFiles.test.ts > SEM-001A perceptual continuant-file lifecycle > CV-SEM-013 persists allocator state across a structural save/load boundary
+ ✓ src/test/perceptualContinuantFiles.test.ts > SEM-001A perceptual continuant-file lifecycle > CV-SEM-013 keeps allocation independent per observer under interleaving
+ ✓ src/test/perceptualContinuantFiles.test.ts > SEM-001A perceptual continuant-file lifecycle > CV-SEM-019 false continuity keeps one unchanged track across two truth entities
+ ✓ src/test/perceptualContinuantFiles.test.ts > SEM-001A perceptual continuant-file lifecycle > CV-SEM-019 false discontinuity allocates two immutable tracks for one truth entity
+ ✓ src/test/perceptualContinuantFiles.test.ts > SEM-001A perceptual continuant-file lifecycle > CV-SEM-021 derives transitions solely from permitted observer-side evidence
+ ✓ src/test/perceptualContinuantFiles.test.ts > SEM-001A perceptual continuant-file lifecycle > CV-SEM-021 rejects forged, cross-observer, and inactive prior continuant-files
+ ✓ src/test/perceptualContinuantFiles.test.ts > SEM-001A perceptual continuant-file lifecycle > CV-SEM-022 keeps track ordinals psychologically inert under renaming
+ ✓ src/test/perceptualContinuantFiles.test.ts > SEM-001A perceptual continuant-file lifecycle > CV-SEM-022 leaves this observer’s semantic view unchanged by another observer’s tracks
+ ✓ src/test/perceptualEventFiles.test.ts > SEM-001C observer-relative perceptual event-file conformance > CV-SEM-031 preserves two simultaneous event groupings that an ungrouped role bag loses
+ ✓ src/test/perceptualEventFiles.test.ts > SEM-001C observer-relative perceptual event-file conformance > CV-SEM-032 permits one event-file to persist across distinct experiences
+ ✓ src/test/perceptualEventFiles.test.ts > SEM-001C observer-relative perceptual event-file conformance > CV-SEM-033 permits false event continuity without truth-side correction
+ ✓ src/test/perceptualEventFiles.test.ts > SEM-001C observer-relative perceptual event-file conformance > CV-SEM-034 permits false event discontinuity without truth-side merging
+ ✓ src/test/perceptualEventFiles.test.ts > SEM-001C observer-relative perceptual event-file conformance > CV-SEM-035 rejects truth-keyed segmentation inputs and keeps sensory IDs observer-side
+ ✓ src/test/perceptualEventFiles.test.ts > SEM-001C observer-relative perceptual event-file conformance > CV-SEM-036 forbids using a continuant-file as the Action carrier
+ ✓ src/test/perceptualEventFiles.test.ts > SEM-001C observer-relative perceptual event-file conformance > CV-SEM-037 preserves concurrent participation and distinct same-object role occurrences
+ ✓ src/test/perceptualEventFiles.test.ts > SEM-001C observer-relative perceptual event-file conformance > CV-SEM-038 preserves event-file state across save/load and isolates observer allocators
+ ✓ src/test/perceptualEventFiles.test.ts > SEM-001C observer-relative perceptual event-file conformance > CV-SEM-039 gives event-file ordinals no semantic or psychological magnitude
+ ✓ src/test/perceptualEventFiles.test.ts > SEM-001C observer-relative perceptual event-file conformance > CV-SEM-040 rolls event-file state and runtime allocation back after staged failure
+stdout | src/test/assembledSemanticAppearance.test.ts > primary133: full appearance evidence reaches memory and actual later use without becoming identity or pressure
+M133 PRIMARY PASS six continuant/three event facets; true/false/absent conjunction; actual allocated support; full experience -> episode -> recall -> appraisal; feature-only P=47/72; rich withdrawal P=1/1; full queues
+
+ ✓ src/test/assembledSemanticAppearance.test.ts > primary133: full appearance evidence reaches memory and actual later use without becoming identity or pressure 130133ms
+
+ Test Files  4 passed (4)
+      Tests  28 passed | 10 skipped (38)
+   Start at  10:59:11
+   Duration  135.65s (transform 2.84s, setup 0ms, collect 4.34s, tests 130.18s, environment 1ms, prepare 398ms)
+
+
+EXIT 0; elapsed 136.204s
+CHARGED 703.284
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 18.335s
+CHARGED 721.619
+
+COMMAND ["node", "scripts/check-reference-boundary.mjs"]
+Reference boundary check passed.
+
+EXIT 0; elapsed 2.724s
+CHARGED 724.343
+
+COMMAND ["node", "scripts/check-research-obligations.mjs"]
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4355}
+
+EXIT 0; elapsed 3.542s
+CHARGED 727.885
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,json\ngit=lambda *a:subprocess.check_output(['git',*a],text=True,encoding='utf-8')\nbase='b2f9f53a'\ncode={'src/assembled/'+p for p in ['model.ts','traceBinding.ts','recognition.ts','socialExecution.ts','recognitionExecution.ts','recognitionState.ts','positionPerception.ts','semanticLifecycle.ts']}|{'src/test/assembledSemanticLifecycle.test.ts','src/test/fixtures/assembledSemanticLifecycle.ts'}\nallowed=code|{'AGENTS.md','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md','docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md','docs/planning/RESEARCH_OBLIGATIONS.json','docs/planning/ASSEMBLED_CHARACTER_M134_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M134_CHECKS.txt','docs/formal/ASSEMBLED_CHARACTER_SEMANTIC_LIFECYCLE_CONTRACT.md'}\nchanged=set(git('diff','--name-only',base).splitlines())|set(git('ls-files','--others','--exclude-standard').splitlines())\nassert changed<=allowed,changed-allowed\nassert changed&code==code\nassert git('diff','350ea8d1','--','src')=='','tested source changed'\nassert git('diff',base,'--','src/campaign2','src/campaign3','src/substrate','src/observation','src/semanticBinding','reference')=='','frozen dependency changed'\nfor p in code:\n s=Path(p).read_text(encoding='utf-8')\n if p.startswith('src/assembled/'):assert not any(\"campaign3/\"+x in s for x in ['attentionFactory','attentionRuntime','generalAttentionFactory','generalAttentionRuntime']),'separate pipeline'\nold=git('show',base+':docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md')\nnew=Path('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md').read_text(encoding='utf-8')\nrows=lambda s:[x for x in s.splitlines() if ('| C-' in x or '| F-' in x) and '| C-SEM ' not in x]\nassert rows(old)==rows(new),'other C/F rows changed'\nassert '| UNRESOLVED | C-SEM ' in new\nassert 'E46/P54/N17/U15' in new and '15/21' in new and 'families:0/15' in new\nassert len(new.splitlines())<=250 and len(new.replace('\\n','\\r\\n').encode())<=65536\nbefore=json.loads(git('show',base+':docs/planning/RESEARCH_OBLIGATIONS.json'))\nafter=json.loads(Path('docs/planning/RESEARCH_OBLIGATIONS.json').read_text(encoding='utf-8-sig'))\nassert before['obligations']==after['obligations']\nassert after['reportReviews'][:-1]==before['reportReviews']\nassert after['reportReviews'][-1]=={'path':'docs/planning/ASSEMBLED_CHARACTER_M134_RESULT.md','obligations':['RO-C3-014','RO-C3-016','RO-C3-020']}\nfor path,cap in [('AGENTS.md',120),('docs/planning/CURRENT.md',80),('docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md',250)]:\n assert len(Path(path).read_text(encoding='utf-8').splitlines())<=cap,path\nevidence=[Path('docs/planning/ASSEMBLED_CHARACTER_M134_'+s) for s in ['RESULT.md','CHECKS.txt']]\nassert sum(p.stat().st_size for p in evidence)<5*1024*1024\nlog=evidence[1].read_text(encoding='utf-8')\ncharge=float([l.split()[1] for l in log.splitlines() if l.startswith('CHARGED ')][-1]);assert charge<1800\nfor token in ['M134 PRIMARY PASS','M134 PRIVACY PASS','M134 CONTINUATION PASS','M134 BOUNDARIES PASS','M133 PRIMARY PASS','src/test/perceptualContinuantFiles.test.ts','src/test/semanticStateAuthority.test.ts','src/test/perceptualEventFiles.test.ts','Reference boundary check passed.','PASS: research obligation references']:\n assert token in log,token\ncurrent=Path('docs/planning/CURRENT.md').read_text(encoding='utf-8')\nassert '(ASSEMBLED_CHARACTER_M134_CHECKS.txt)' in current and '{{' not in current\nprint('PASS M134 preservation: source 350ea8d1;10 production/test files; old Campaign0-3/reference dependencies unchanged; C-SEM remains unresolved/partial, other C/F unchanged;15/21,0/15,E46/P54/N17/U15; statuses/document/evidence caps retained; charge',charge)\n"]
+PASS M134 preservation: source 350ea8d1;10 production/test files; old Campaign0-3/reference dependencies unchanged; C-SEM remains unresolved/partial, other C/F unchanged;15/21,0/15,E46/P54/N17/U15; statuses/document/evidence caps retained; charge 727.885
+
+EXIT 0; elapsed 0.844s
+CHARGED 728.729
+
+COMMAND ["node", "scripts/check-git-file-sizes.mjs"]
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.374s
+CHARGED 729.103
