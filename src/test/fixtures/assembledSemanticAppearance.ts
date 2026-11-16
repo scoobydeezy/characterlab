@@ -5,6 +5,9 @@ import {SEMANTIC_APPEARANCE_RULES,SEMANTIC_APPEARANCE_REGISTRY} from '../../asse
 import {CONTINUANT_FEATURES,EVENT_FEATURES} from '../../assembled/semanticAppearance';
 import {PerceptualEventFeatureId as EF} from '../../semanticBinding/perceptualEventClassification';
 import {DELIBERATION_EVENT} from '../../campaign2/orderedInputs';
+import {IDENTITY_CONTEXT} from '../../assembled/identityEligibility';
+import {SELF_CONTEXT} from '../../assembled/selfBelief';
+import {VALUES_CONTEXT} from '../../assembled/values';
 import {BODY_SAMPLE} from '../../assembled/body';
 import {SOCIAL_SOURCE} from '../../assembled/social';
 export type Mode='full'|'negative'|'missing'|'hidden'|'denied';
@@ -15,7 +18,7 @@ export function fixture(mode:Mode='full',withdraw=false){
  p[4]=list([list(CONTINUANT_FEATURES.map(feature=>list([text(feature),true,true]))),
  list(EVENT_FEATURES.map(feature=>{const affected=second&&feature===EF.ObservedCyclicFlexibleContinuantArc;return list([text(feature),!(affected&&(mode==='negative'||mode==='hidden')),!(affected&&(mode==='missing'||mode==='hidden'))]);}))]);
  a[3]=list(p);return list(a);});
- for(const type of[DELIBERATION_EVENT,BODY_SAMPLE]){
+ for(const type of[DELIBERATION_EVENT,BODY_SAMPLE,IDENTITY_CONTEXT,SELF_CONTEXT,VALUES_CONTEXT]){
  const row=rows.find(v=>key(items(v,'list')[0])===key(signed(4))&&key(items(v,'list')[2])===key(type));if(!row)throw Error('M133 live probe source missing');
  const a=[...items(row,'list')];a[0]=signed(21);rows.push(list(a));
  }
