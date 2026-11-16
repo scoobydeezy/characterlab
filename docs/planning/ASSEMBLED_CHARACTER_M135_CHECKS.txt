@@ -37,3 +37,127 @@ TypeError: bodyId is not a function
 
 EXIT 1; elapsed 3.035s
 CHARGED 54.330
+
+DIAGNOSIS: new source imports recognition before the body runtime initializes; body -> retainedAttribution -> memory -> body re-export cycle exposes uninitialized bodyId. Import the exact existing BODY_OBSERVER directly from dependency-free bodyIdentifiers in recognition. No new file/identifier/behavior/law.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSemanticLanes.test.ts", "-t", "primary135", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSemanticLanes.test.ts > primary135: current recognition controls consequence report attribution and same-instant correction is append-only
+M135 PRIMARY PASS same kernels/owners across current and consequence; distinct immutable envelopes; actual126 read of21 resolution; ordered21->127 correction; current cue -> report recipient -> live actual choice/execution P47/72 vs1; full queues
+
+ ✓ src/test/assembledSemanticLanes.test.ts > primary135: current recognition controls consequence report attribution and same-instant correction is append-only 116381ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  11:16:05
+   Duration  120.90s (transform 2.81s, setup 0ms, collect 4.20s, tests 116.38s, environment 0ms, prepare 102ms)
+
+
+EXIT 0; elapsed 121.454s
+CHARGED 175.784
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSemanticLanes.test.ts", "-t", "continuation135|boundaries135|privacy135", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSemanticLanes.test.ts > continuation135: same-instant corrections survive restore and later-lane failure rolls back both lanes
+M135 CONTINUATION PASS exact repeat/save2/all later boundaries; failed consequence restores both lanes and same-instant history; exact recovered finish
+
+ ✓ src/test/assembledSemanticLanes.test.ts > continuation135: same-instant corrections survive restore and later-lane failure rolls back both lanes 149121ms
+stdout | src/test/assembledSemanticLanes.test.ts > boundaries135: current source cannot smuggle reports, wrong cutoffs, duplicate lanes or incompatible windows
+M135 BOUNDARIES PASS exact sensory grammar; no authored report/receipt; strict0/110 cutoffs; duplicate/source-version and same-clock window-generation protection
+
+ ✓ src/test/assembledSemanticLanes.test.ts > boundaries135: current source cannot smuggle reports, wrong cutoffs, duplicate lanes or incompatible windows 21830ms
+stdout | src/test/assembledSemanticLanes.test.ts > privacy135: denied current evidence allocates no experience and hidden truth is inert in both lanes
+M135 PRIVACY PASS identical permitted evidence despite hidden truth; denied current has zero ExperienceId allocation/envelope and no recognition effect; consequence remains live
+
+ ✓ src/test/assembledSemanticLanes.test.ts > privacy135: denied current evidence allocates no experience and hidden truth is inert in both lanes 62041ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 6 skipped (9)
+   Start at  11:18:21
+   Duration  237.53s (transform 2.80s, setup 0ms, collect 4.20s, tests 232.99s, environment 0ms, prepare 101ms)
+
+
+EXIT 0; elapsed 238.085s
+CHARGED 413.869
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSemanticLifecycle.test.ts", "src/test/semanticPhaseOrdering.test.ts", "src/test/recognition.test.ts", "src/test/semanticPhaseRollbackCause.test.ts", "-t", "primary134|CV-SEM|distinguishes the retained assertion", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-061 traces unfamiliar, contradicted, and ambiguous evaluations without fake identities
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-062 permits correct, wrong, or unresolved recognition over identical immutable perception
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-063 implements exact unique uncontradicted support without order-based ties
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-064 requires observer-owned catalog and symbol mapping without truth-kind filtering
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-065 appends replacement and withdrawal while no-cue and same-candidate evaluations preserve current resolution
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-066 preserves false continuity and false discontinuity under recognition changes
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-067 enforces typed same-track, same-experience evidence closure
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-068 enforces sole rule authority and continuant-only recognition
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-069 preserves semantic opacity, replay, history closure, and allocator rollback
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-070 emits only append-only recognition resolution and no downstream mutation
+ ✓ src/test/semanticPhaseOrdering.test.ts > SEM-001H two-lane semantic phase conformance > CV-SEM-081 registers the exact two-lane phases and non-schedulable settlement sentinel
+ ✓ src/test/semanticPhaseOrdering.test.ts > SEM-001H two-lane semantic phase conformance > CV-SEM-082 fixes the current lane chain and rejects truth at or after its entry cutoff
+ ✓ src/test/semanticPhaseOrdering.test.ts > SEM-001H two-lane semantic phase conformance > CV-SEM-083 fixes the consequence lane, admits phase-110 truth, and prevents reopening after phase 120
+ ✓ src/test/semanticPhaseOrdering.test.ts > SEM-001H two-lane semantic phase conformance > CV-SEM-084 conditionally reserves ExperienceId and forbids successful orphan or duplicate envelopes
+ ✓ src/test/semanticPhaseOrdering.test.ts > SEM-001H two-lane semantic phase conformance > CV-SEM-085 freezes one immutable envelope before separate companion causal-role evidence
+ ✓ src/test/semanticPhaseOrdering.test.ts > SEM-001H two-lane semantic phase conformance > CV-SEM-086 canonically schedules independent same-phase classifier work without creating a read edge
+ ✓ src/test/semanticPhaseOrdering.test.ts > SEM-001H two-lane semantic phase conformance > CV-SEM-087 freezes recognition inputs and permits consequence correction without rewriting phase-21 history
+ ✓ src/test/semanticPhaseOrdering.test.ts > SEM-001H two-lane semantic phase conformance > CV-SEM-088 keeps phase-130 perceived-outcome learning separate from truth-side automatic adaptation
+ ✓ src/test/semanticPhaseOrdering.test.ts > SEM-001H two-lane semantic phase conformance > CV-SEM-089 proves temporal availability without granting ORD-001 belief permission
+ ✓ src/test/semanticPhaseOrdering.test.ts > SEM-001H two-lane semantic phase conformance > CV-SEM-090 rejects barrier events and rolls reservations/allocators back on settlement failure
+stdout | src/test/assembledSemanticLifecycle.test.ts > primary134: explicit lifecycle preserves history and changes later choice only through current recognition
+M134 selected acquisition times retired=false: 2
+
+stdout | src/test/assembledSemanticLifecycle.test.ts > primary134: explicit lifecycle preserves history and changes later choice only through current recognition
+M134 selected acquisition times retired=true: 1
+
+stdout | src/test/assembledSemanticLifecycle.test.ts > primary134: explicit lifecycle preserves history and changes later choice only through current recognition
+M134 selected acquisition times retired=true: 1
+
+stdout | src/test/assembledSemanticLifecycle.test.ts > primary134: explicit lifecycle preserves history and changes later choice only through current recognition
+M134 selected acquisition times retired=false: 2
+M134 PRIMARY PASS explicit track/event ends; fresh ordinals; event continuation/split; exact support; old recognition/memory retained and actually consumed; live actual P(B)47/72 vs1; split-only/retirement equivalence; complete queues
+
+ ✓ src/test/assembledSemanticLifecycle.test.ts > primary134: explicit lifecycle preserves history and changes later choice only through current recognition 132458ms
+ ✓ src/test/semanticPhaseRollbackCause.test.ts > distinguishes the retained assertion false-positive from an orphan-envelope rollback
+
+ Test Files  4 passed (4)
+      Tests  22 passed | 8 skipped (30)
+   Start at  11:22:32
+   Duration  138.10s (transform 2.92s, setup 0ms, collect 4.48s, tests 132.51s, environment 1ms, prepare 400ms)
+
+
+EXIT 0; elapsed 138.651s
+CHARGED 552.520
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 19.108s
+CHARGED 571.628
+
+COMMAND ["node", "scripts/check-reference-boundary.mjs"]
+Reference boundary check passed.
+
+EXIT 0; elapsed 2.715s
+CHARGED 574.343
+
+COMMAND ["node", "scripts/check-research-obligations.mjs"]
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4356}
+
+EXIT 0; elapsed 3.564s
+CHARGED 577.907
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,json\ngit=lambda *a:subprocess.check_output(['git',*a],text=True,encoding='utf-8')\nbase='8e84a960'\ncode={'src/assembled/'+p for p in ['model.ts','traceBinding.ts','recognition.ts','socialExecution.ts','recognitionExecution.ts','recognitionState.ts','positionPerception.ts','semanticLanes.ts','inputs.ts','runtime.ts']}|{'src/test/assembledSemanticLanes.test.ts','src/test/fixtures/assembledSemanticLanes.ts'}\nallowed=code|{'AGENTS.md','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md','docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md','docs/planning/RESEARCH_OBLIGATIONS.json','docs/planning/ASSEMBLED_CHARACTER_M135_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M135_CHECKS.txt','docs/formal/ASSEMBLED_CHARACTER_SEMANTIC_LANES_CONTRACT.md'}\nchanged=set(git('diff','--name-only',base).splitlines())|set(git('ls-files','--others','--exclude-standard').splitlines())\nassert changed<=allowed,changed-allowed\nassert changed&code==code\nassert git('diff','003a08de','--','src')=='','tested source changed'\nassert git('diff',base,'--','src/campaign2','src/campaign3','src/substrate','src/observation','src/semanticBinding','reference')=='','frozen dependency changed'\nfor p in code:\n s=Path(p).read_text(encoding='utf-8')\n if p.startswith('src/assembled/'):assert not any(\"campaign3/\"+x in s for x in ['attentionFactory','attentionRuntime','generalAttentionFactory','generalAttentionRuntime']),'separate pipeline'\nold=git('show',base+':docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md')\nnew=Path('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md').read_text(encoding='utf-8')\nrows=lambda s:[x for x in s.splitlines() if ('| C-' in x or '| F-' in x) and '| C-SEM ' not in x]\nassert rows(old)==rows(new),'other C/F rows changed'\nassert '| UNRESOLVED | C-SEM ' in new\nassert 'E46/P54/N17/U15' in new and '15/21' in new and 'families:0/15' in new\nassert len(new.splitlines())<=250 and len(new.replace('\\n','\\r\\n').encode())<=65536\nbefore=json.loads(git('show',base+':docs/planning/RESEARCH_OBLIGATIONS.json'))\nafter=json.loads(Path('docs/planning/RESEARCH_OBLIGATIONS.json').read_text(encoding='utf-8-sig'))\nassert before['obligations']==after['obligations']\nassert after['reportReviews'][:-1]==before['reportReviews']\nassert after['reportReviews'][-1]=={'path':'docs/planning/ASSEMBLED_CHARACTER_M135_RESULT.md','obligations':['RO-C3-014','RO-C3-016','RO-C3-020']}\nfor path,cap in [('AGENTS.md',120),('docs/planning/CURRENT.md',80),('docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md',250)]:\n assert len(Path(path).read_text(encoding='utf-8').splitlines())<=cap,path\nevidence=[Path('docs/planning/ASSEMBLED_CHARACTER_M135_'+s) for s in ['RESULT.md','CHECKS.txt']]\nassert sum(p.stat().st_size for p in evidence)<5*1024*1024\nlog=evidence[1].read_text(encoding='utf-8')\ncharge=float([l.split()[1] for l in log.splitlines() if l.startswith('CHARGED ')][-1]);assert charge<1800\nfor token in ['M135 PRIMARY PASS','M135 PRIVACY PASS','M135 CONTINUATION PASS','M135 BOUNDARIES PASS','M134 PRIMARY PASS','src/test/semanticPhaseOrdering.test.ts','src/test/recognition.test.ts','src/test/semanticPhaseRollbackCause.test.ts','Reference boundary check passed.','PASS: research obligation references']:\n assert token in log,token\ncurrent=Path('docs/planning/CURRENT.md').read_text(encoding='utf-8')\nassert '(ASSEMBLED_CHARACTER_M135_CHECKS.txt)' in current and '{{' not in current\nprint('PASS M135 preservation: source 003a08de;12 production/test files; old Campaign0-3/reference dependencies unchanged; C-SEM remains unresolved/partial, other C/F unchanged;15/21,0/15,E46/P54/N17/U15; statuses/document/evidence caps retained; charge',charge)\n"]
+PASS M135 preservation: source 003a08de;12 production/test files; old Campaign0-3/reference dependencies unchanged; C-SEM remains unresolved/partial, other C/F unchanged;15/21,0/15,E46/P54/N17/U15; statuses/document/evidence caps retained; charge 577.907
+
+EXIT 0; elapsed 0.862s
+CHARGED 578.769
+
+COMMAND ["node", "scripts/check-git-file-sizes.mjs"]
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.369s
+CHARGED 579.138
