@@ -51,7 +51,7 @@ function judgment(r:Run,b:ReturnType<typeof fixture>,known:boolean){
 
 
 
-const frozenAt=(r:Run,at:bigint)=>outputs(snap(r).outputs,227n).find(x=>uint(f(x,3n))===at)!;
+const frozenAt=(r:Run,at:bigint)=>outputs(snap(r).outputs,227n).find(x=>uint(f(x,3n))===at&&items(f(x,6n),'set').length===6)!;
 const trackAt=(r:Run,at:bigint)=>f(rec(items(f(frozenAt(r,at),5n),'set')[0],224n),4n);
 const eventAt=(r:Run,at:bigint)=>items(f(frozenAt(r,at),4n),'set')[0];
 function structure(r:Run,b:ReturnType<typeof fixture>,earlier:CanonicalValue[]){

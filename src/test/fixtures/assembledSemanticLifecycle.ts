@@ -10,6 +10,7 @@ export function fixture(mode:Mode='reacquire'){
  const p=[...items(a[3],'list')],first=key(a[0])===key(signed(1)),second=key(a[0])===key(signed(2)),retire=['reacquire','hidden','denied'].includes(mode);
  p[3]=list(first?[false,false,false,false]:second?[!(retire||mode==='split'),retire,mode==='continued',retire||mode==='eventSplit']:[true,false,true,false]);
  if(second)p[5]=list([]);
+ if(mode==='hidden')p[4]=list(items(p[4],'list').map(group=>list(items(group,'list').map(v=>list([items(v,'list')[0],true,true])))));
  a[3]=list(p);return list(a);});
  return {s,d:{...b.d,orderedInputs:enc(list(rows))},taskA:b.taskA,taskB:b.taskB,mode,legacy:b};
 }
