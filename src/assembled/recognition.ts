@@ -7,7 +7,7 @@ import {dataItems as items,dataRecord as rec,dataField as f,dataIdentity as id,d
 import {semanticRecordValue as sr,semanticTypedId,observerIdValue,restorePerceptualReferentId} from '../semanticBinding/semanticCodecs';
 import {semanticStateAuthorityRegistryValue,candidateCatalogEntryPath} from '../semanticBinding/semanticStateAuthority';
 import {RECOGNITION_CONTRACT_VERSION as VERSION,type RecognitionResolutionRecord,type RecognitionCandidateCatalogEntry} from '../semanticBinding/recognition';
-import {BODY_OBSERVER} from './body';
+import {BODY_OBSERVER} from './bodyIdentifiers';
 import {socialSetting} from './social';
 export const RECOGNITION='assembled-recognition/0.1',OBSERVER=txt(BODY_OBSERVER.payload);
 export {VERSION};
