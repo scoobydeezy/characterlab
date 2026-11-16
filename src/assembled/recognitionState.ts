@@ -6,7 +6,7 @@ import {decodeCognitive as decode} from './codecs';
 import {restorePerceptualReferentId,restorePerceptualEventReferentId,observerIdValue} from '../semanticBinding/semanticCodecs';
 import {createSemanticStateAuthorityRegistry,nextTrackSequencePath,resolutionRecordPath} from '../semanticBinding/semanticStateAuthority';
 import {validateResolutionHistory} from '../semanticBinding/recognition';
-import {catalogEntries,readResolution,demand,OBSERVER,type RecognitionSettings} from './recognition';
+import {catalogEntries,validateSeedCatalog,readResolution,demand,OBSERVER,type RecognitionSettings} from './recognition';
 import type {compileCampaign2StateModel} from '../campaign2/stateModel';
 export const semanticRoot=(p:StatePath)=>[241n,242n,243n,244n].includes(p.rootStateTypeId);
 export const resolutionHistory=(s:AuthoritativeState)=>s.entries().filter(e=>e.path.rootStateTypeId===244n).map(e=>readResolution(e.value)).sort((a,b)=>a.recognitionResolutionId<b.recognitionResolutionId?-1:1);
@@ -22,7 +22,7 @@ export function withRecognitionState(base:ReturnType<typeof compileCampaign2Stat
   else demand(p.rootStateTypeId===244n&&p.fieldId===1n,'resolution path');authority.resolveWritableLeaf(p);
  }
  function validateLocal(s:AuthoritativeState){for(const e of s.entries().filter(e=>semanticRoot(e.path)))path(e.path);
-  for(const e of catalog)demand(key(s.read(e.path).value??false)===key(e.value),'bound initial catalog');const t=trackState(s),next=t.nextTrackSequenceByObserver.get(OBSERVER)??0n;demand(next<=(sharedFiles?64n:8n)&&t.activePerceptualReferentIds.length===Number(next)&&t.activePerceptualReferentIds.every(x=>x.observerTrackSequence<next),'track state closure');
+  for(const e of catalog){const value=s.read(e.path).value;if(settings.seededKnowledge){demand(value!==undefined,'missing initial catalog');validateSeedCatalog(value!,e.value);}else demand(key(value??false)===key(e.value),'bound initial catalog');}const t=trackState(s),next=t.nextTrackSequenceByObserver.get(OBSERVER)??0n;demand(next<=(sharedFiles?64n:8n)&&t.activePerceptualReferentIds.length===Number(next)&&t.activePerceptualReferentIds.every(x=>x.observerTrackSequence<next),'track state closure');
   for(const e of s.entries().filter(e=>e.path.rootStateTypeId===241n&&!isWindow(e.path)))demand(e.path.fieldId===1n||e.value===true,'track membership');
   const ev=eventState(s),en=ev.nextEventSequenceByObserver.get(OBSERVER)??0n;demand(en<=(sharedFiles?64n:8n)&&(sharedFiles?ev.activeEventFiles.length<=Number(en):ev.activeEventFiles.length===Number(en))&&ev.activeEventFiles.every(x=>x.observerEventSequence<en),'event state closure');for(const e of s.entries().filter(e=>e.path.rootStateTypeId===242n))demand(e.path.fieldId===1n||e.value===true,'event membership');
   for(const e of s.entries().filter(e=>isWindow(e.path))){demand(sharedFiles,'window version');windows.validate(e.path,e.value);if(windows.check(e.path)){const w=socialWindow(e.value,OBSERVER)!;demand(t.activePerceptualReferentIds.some(f=>f.observerTrackSequence===w.file.observerTrackSequence),'social window track');}else{const w=readWindow(e.value,OBSERVER);demand(!w.marker||t.activePerceptualReferentIds.some(f=>f.observerTrackSequence===w.marker!.file.observerTrackSequence),'visual window track');demand(!w.panel||ev.activeEventFiles.some(f=>f.observerEventSequence===w.panel!.file.observerEventSequence),'panel window event');}}
