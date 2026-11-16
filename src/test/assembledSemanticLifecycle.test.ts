@@ -101,7 +101,7 @@ it('continuation134: retirement and continuation restore exactly and a later fau
 },590000);
 it('boundaries134: malformed or contradictory lifecycle and foreign/future/reused/absent files reject',async()=>{
  for(const v of[true,list([]),list([true,true,false,false]),list([false,false,true,true]),list([false,false,false,u(0)])])expect(()=>lifecycleSource(v)).toThrow();
- const {b,m,r}=await create();await through(r,2n);const settings=compileCharacterModel(b.s),model=compileCharacterState(settings),s=state(r),old=restorePerceptualReferentId(trackAt(r,1n)),p=activeContinuantFilePath(old);
+ const {b,m,r}=await create();await through(r,2n);const settings=await compileCharacterModel(b.s),model=(await compileCharacterState(settings)).stateModel,s=state(r),old=restorePerceptualReferentId(trackAt(r,1n)),p=activeContinuantFilePath(old);
  expect(()=>model.applyPatch(s,{operations:[{kind:'set',path:p,expected:{presence:false},newValue:true}]},OWNER.Perception,{writableRoots:[241n],targetPaths:[p]})).toThrow('retired sequence reuse');
  expect(()=>model.applyPatch(s,{operations:[{kind:'remove',path:p,expectedOldValue:true}]},OWNER.Perception,{writableRoots:[241n],targetPaths:[p]})).toThrow();
  const current=activeContinuantFilePath(restorePerceptualReferentId(trackAt(r,2n)));
