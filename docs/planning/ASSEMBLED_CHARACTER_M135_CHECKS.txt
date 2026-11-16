@@ -1,2 +1,10 @@
 M135 baseline8e84a960;1800s total/600 command;15s prepaid bookkeeping.
 CHARGED 15.000
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+src/assembled/socialExecution.ts(48,314): error TS2345: Argument of type 'RecognitionSettings | undefined' is not assignable to parameter of type 'RecognitionSettings'.
+  Type 'undefined' is not assignable to type 'RecognitionSettings'.
+    Type 'undefined' is not assignable to type '{ candidates: CanonicalValue[]; templates: string[]; bindings: { candidate: CanonicalValue; template: string; }[]; seededKnowledge?: boolean | undefined; symbols?: string[] | undefined; cueAccess?: boolean | undefined; richAppearance?: boolean | undefined; semanticLifecycle?: boolean | undefined; twoLanes?: boolean ...'.
+
+EXIT 2; elapsed 18.280s
+CHARGED 33.280
