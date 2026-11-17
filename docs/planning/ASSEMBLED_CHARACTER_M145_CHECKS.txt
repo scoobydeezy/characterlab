@@ -1,2 +1,9 @@
 M145 baseline b019a04e; verification cap1800s/600s command.
 CHARGED 0.000
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+src/test/assembledSemanticFinal.test.ts(225,117): error TS2339: Property 'observerSymbolCandidateMappingId' does not exist on type 'RecognitionCueSource'.
+  Property 'observerSymbolCandidateMappingId' does not exist on type '{ readonly kind: "retained-template-match"; readonly recognitionTemplateId: string; }'.
+
+EXIT 2; elapsed 18.768s
+CHARGED 18.768
