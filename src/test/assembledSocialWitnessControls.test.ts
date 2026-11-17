@@ -11,7 +11,8 @@ import {fixture,rec,f,uint,items,key,decode,enc,list,text,signed,q,exact,u,type 
 type Run=Awaited<ReturnType<typeof createCharacterRun>>;
 async function through(r:Run,at:bigint){for(let n=0;r.snapshot().clock<at;n++){expect(n).toBeLessThan(96);expect(await r.settleNextInstant()).toBe(true);}expect(r.snapshot().clock).toBe(at);}
 const state=(r:Run)=>restoreAuthoritativeState(decode(r.snapshot().state)),out=(r:Run)=>items(decode(r.snapshot().outputs),'list');
-async function setup(privateCommitment=true){const b=fixture('main',privateCommitment),compiled=await compileCharacterModel(b.s),m=await prepareCharacterModel(b.s);return {b,m,s:compiled.socialWitness!,stateModel:(await compileCharacterState(compiled)).stateModel};}
+let prepared:Promise<{m:Awaited<ReturnType<typeof prepareCharacterModel>>;s:ReturnType<typeof witness.compileSocialWitness>;stateModel:Awaited<ReturnType<typeof compileCharacterState>>['stateModel']}>|undefined;
+async function setup(privateCommitment=true){const b=fixture('main',privateCommitment);prepared??=(async()=>{const compiled=await compileCharacterModel(b.s);return {m:await prepareCharacterModel(b.s),s:compiled.socialWitness!,stateModel:(await compileCharacterState(compiled)).stateModel};})();return {b,...await prepared};}
 it('violations149: native global copying and direct private readers break observer isolation; duplicate write is rejected',async()=>{
  const b=await setup(),baseline=await createCharacterRun(b.m,b.b.d);await through(baseline,6n);
  const original=witness.createSocialWitness;
@@ -29,7 +30,7 @@ it('violations149: native global copying and direct private readers break observ
  const person=social.personUpdate,duplicate=vi.spyOn(social,'personUpdate').mockImplementation((prior,o)=>{
   const a=items(o,'list');if(b.s.observers.some(x=>key(x.holder)===key(a[1]))&&social.personHistory(prior).some(v=>key(items(v,'list')[4])===key(a[4])&&key(items(v,'list')[5])===key(a[5])))return list([text(social.SOCIAL),list([...social.personHistory(prior),o])]);return person(prior,o);
  });
- try{const bad=fixture('duplicate'),r=await createCharacterRun(b.m,bad.d);await through(r,3n);const before=r.snapshot();await expect(through(r,5n)).rejects.toThrow('source grouping');expect({...r.snapshot(),status:before.status}).not.toEqual(before);expect(social.personHistory(state(r).read(social.personPath(b.s.observers[0].holder,b.s.observers[0].target)).value)).toHaveLength(2);}finally{duplicate.mockRestore();}
+ try{const bad=fixture('duplicate'),r=await createCharacterRun(b.m,bad.d);await through(r,4n);const before=r.snapshot();await expect(through(r,5n)).rejects.toThrow('source grouping');expect({...r.snapshot(),status:before.status}).toEqual(before);expect(social.personHistory(state(r).read(social.personPath(b.s.observers[0].holder,b.s.observers[0].target)).value)).toHaveLength(2);}finally{duplicate.mockRestore();}
  console.info('M149 VIOLATIONS PASS deliberately untraced global copy contaminates B; private read changes fixed-evidence probes; presentation-counting write rejected by shared source-group owner. Test-only corruptions are never model options.');
 },590000);
 it.each(['observation','learning'])('rollback149: both observer branches and shared work roll back after %s',async boundary=>{
@@ -47,10 +48,11 @@ it('admission149: ownership, learned S0, foreign proposition/observer, malformed
  const b=await setup(),rows=items(decode(b.b.d.orderedInputs),'list'),sourceRows=rows.filter(v=>key(items(v,'list')[2])===key(witness.SW_SOURCE));
  const edit=(index:number,payload:CanonicalValue)=>enc(list(rows.map(v=>v===sourceRows[index]?list([...items(v,'list').slice(0,3),payload,list([])]):v)));
  for(const payload of[list([]),list([text('foreign'),...items(items(sourceRows[0],'list')[3],'list').slice(1)]),list([b.b.taskA,u(3),u(4),u(1),true,true,true])])await expect(createCharacterRun(b.m,{...b.b.d,orderedInputs:edit(0,payload)})).rejects.toThrow();
- const r=await createCharacterRun(b.m,b.b.d);await through(r,3n);await expect(createCharacterRun(b.m,{...b.b.d,initialState:r.snapshot().state})).rejects.toThrow();
+ const r=await createCharacterRun(b.m,b.b.d);await through(r,3n);const learned=state(r).entries().filter(e=>e.path.rootStateTypeId===810n);await expect(createCharacterRun(b.m,{...b.b.d,initialState:enc(new AuthoritativeState([...restoreAuthoritativeState(decode(b.b.d.initialState)).entries(),...learned]).canonicalValue())})).rejects.toThrow('initial person belief');
  const o=b.s.observers[0],path=social.personPath(o.holder,o.target),value=state(r).read(path).value!;
  expect(()=>b.stateModel.read(state(r),social.personPath(o.holder,b.s.observers[1].target))).toThrow('foreign path');
- expect(()=>b.stateModel.applyPatch(state(r),{operations:[{kind:'set',path,expected:{presence:true,value},newValue:list([text(social.SOCIAL),list([...social.personHistory(value),...social.personHistory(value)])])}]},sid(1025,'authority/wrong'))).toThrow();
+ const extra=[...items(social.personHistory(value).at(-1)!,'list')];extra[0]={kind:'typedIdentifier',namespaceId:1115n,payload:u(999999)};extra[3]=signed(4);extra[5]=u(3);
+ expect(()=>b.stateModel.applyPatch(state(r),{operations:[{kind:'set',path,expected:{presence:true,value},newValue:list([text(social.SOCIAL),list([...social.personHistory(value),list(extra)])])}]},sid(1025,'authority/wrong'))).toThrow(expect.objectContaining({code:'UNKNOWN_AUTHORITY'}));
  expect(()=>witness.socialObserverView(out(r),b.s,-1)).toThrow();
  const slots=items(decode(b.b.s.registry),'list'),decl=items(slots[50],'list'),os=items(decl[3],'list');
  await expect(prepareCharacterModel({...b.b.s,registry:enc(list([...slots.slice(0,50),list([...decl.slice(0,3),list([os[0],os[0]])])]))})).rejects.toThrow('observer mapping');

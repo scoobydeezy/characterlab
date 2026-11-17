@@ -37,7 +37,7 @@ causal source -> observation -> evidence -> learning and patches140.
 Original socialPublic suite retained; original C0-C3 trees/baseline frozen.
 
 Files (<=10): model, inputs, state, runtime, social, new socialWitness;
-new fixture and two tests; M148 fixture version promotion if needed.
+traceBinding, new fixture and two tests (10 total); no M148 source edits.
 Contract ASSEMBLED_SOCIAL_WITNESS_V0_111.md written/committed before code.
 Ledger P3-006 CONTRACT+CORPUS; MEC-012/013 preserved; RO-C3-014/020 reviewed.
 Controlled identity channel matches pinned SOCIAL; not rich autonomous peer cognition.

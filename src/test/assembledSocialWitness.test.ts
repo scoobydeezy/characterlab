@@ -7,7 +7,7 @@ import {readQ} from '../campaign2/cognitiveMath';
 import {sid} from '../assembled/skill';
 import {personPath,personMean,personHistory,SOCIAL_PEOPLE} from '../assembled/social';
 import {JOINT_APPRAISAL} from '../assembled/appraisal';
-import {SW,SW_PROBE,SW_OBS,SW_UPDATE,socialObserverView} from '../assembled/socialWitness';
+import {compileSocialWitness,SW,SW_PROBE,SW_OBS,SW_UPDATE,socialObserverView} from '../assembled/socialWitness';
 import {fixture,promote,prior,rec,f,uint,items,key,decode,list,text,signed,q,outputs,bytes,exact,C,target,type Mode,type CanonicalValue} from './fixtures/assembledSocialWitness';
 type Run=Awaited<ReturnType<typeof createCharacterRun>>;
 const cache=new WeakMap<Run,ReturnType<Run['snapshot']>>();
@@ -17,7 +17,8 @@ async function advance(r:Run){try{return await r.settleNextInstant();}finally{ca
 async function through(r:Run,at:bigint){for(let n=0;snap(r).clock<at;n++){expect(n).toBeLessThan(96);expect(await advance(r)).toBe(true);}expect(snap(r).clock).toBe(at);}
 async function finish(r:Run,peers:Run[]=[]){for(let n=0;n<96;n++){const more=await advance(r);for(const p of peers){expect(await advance(p)).toBe(more);exact(r,p);}if(!more)return;}throw Error('M149 settle cap');}
 const tagged=(r:Run,tag:string)=>out(r).filter(v=>typeof v!=='boolean'&&v.kind==='list'&&key(v.items[0])===key(text(tag))).map(v=>items(v,'list'));
-async function start(mode:Mode='main',privateCommitment=true,reverse=false){const b=fixture(mode,privateCommitment,reverse),compiled=await compileCharacterModel(b.s),r=await createCharacterRun(await prepareCharacterModel(b.s),b.d);return {b,r,s:compiled.socialWitness!};}
+const prepared=new Map<string,ReturnType<typeof prepareCharacterModel>>();
+async function start(mode:Mode='main',privateCommitment=true,reverse=false){const b=fixture(mode,privateCommitment,reverse),slots=items(decode(b.s.registry),'list'),s=compileSocialWitness(slots[50],items(items(slots[18],'list')[2],'list'),[b.taskA]),k=key(decode(b.s.registry));let m=prepared.get(k);if(!m){m=prepareCharacterModel(b.s);prepared.set(k,m);}const r=await createCharacterRun(await m,b.d);return {b,r,s};}
 const mean=(x:Awaited<ReturnType<typeof start>>,i:number)=>{const o=x.s.observers[i];return personMean(state(x.r).read(personPath(o.holder,o.target)).value);};
 const view=(x:Awaited<ReturnType<typeof start>>,i:number)=>socialObserverView(out(x.r),x.s,i);
 it('primary149: real commitment and two independent observers share native state, causal trace and continuing decisions',async()=>{
