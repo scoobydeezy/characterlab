@@ -222,7 +222,8 @@ it('knowledge145: actual frozen knowledge admits exact replacement operations an
  expect(request).toBeDefined();const originalRequest=structuredClone(request),oldOutputs=snap(r).outputs.slice(),oldHistory=resolutionHistory(state(r));
  const cue=request.cueEvidence.find(c=>c.recognitionCueSource.kind==='identity-claim-mapping')!;
  expect(cue).toBeDefined();if(cue.recognitionCueSource.kind!=='identity-claim-mapping')throw Error('mapping cue required');
- const mapping=request.identitySymbolMappings.find(x=>x.observerSymbolCandidateMappingId===cue.recognitionCueSource.observerSymbolCandidateMappingId)!;
+ const mappingId=cue.recognitionCueSource.observerSymbolCandidateMappingId;
+ const mapping=request.identitySymbolMappings.find(x=>x.observerSymbolCandidateMappingId===mappingId)!;
  const other=request.candidateCatalog.find(c=>c.candidateSemanticReferentId!==mapping.candidateSemanticReferentId)!;
  // CV-SEM-099 is a state-operation correspondence on actual operands. It does not
  // assert that the runtime has an online acquisition producer or mutate its knowledge.
