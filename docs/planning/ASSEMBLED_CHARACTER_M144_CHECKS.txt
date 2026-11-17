@@ -1,2 +1,9 @@
 M144 baseline0d0c8cb3; serial1800s/600s budget.
 CHARGED 15.000
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+src/test/assembledSemanticReplay.test.ts(71,79): error TS2345: Argument of type 'string' is not assignable to parameter of type '"character/mina" | "character/darius" | "character/glen"'.
+src/test/assembledSemanticReplay.test.ts(71,129): error TS2345: Argument of type 'string' is not assignable to parameter of type '"character/mina" | "character/darius" | "character/glen"'.
+
+EXIT 2; elapsed 19.059s
+CHARGED 34.059
