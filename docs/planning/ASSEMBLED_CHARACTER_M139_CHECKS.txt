@@ -1,2 +1,93 @@
 M139 baseline496cbb93;1800s cumulative/600s command;15s prepaid bookkeeping.
 CHARGED 15.000
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 20.770s
+CHARGED 35.770
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSceneWidth.test.ts", "-t", "correspondence139", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSceneWidth.test.ts > correspondence139: exact original-domain attention and encoding with global ingress controls
+M139 CORRESPONDENCE PASS 777 exact original audits/selected refs/evidence bytes/factors; six-unit global selection; global duplicate/correspondence/forged/expired controls; old4/new7 domain rejection
+
+ ✓ src/test/assembledSceneWidth.test.ts > correspondence139: exact original-domain attention and encoding with global ingress controls 2337ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  09:25:40
+   Duration  7.02s (transform 2.92s, setup 0ms, collect 4.37s, tests 2.34s, environment 0ms, prepare 103ms)
+
+
+EXIT 0; elapsed 7.577s
+CHARGED 43.347
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSceneWidth.test.ts", "-t", "primary139|continuation139|privacy139", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSceneWidth.test.ts > primary139: five-file global competition reaches actual memory, appraisal and choice
+M139 PRIMARY PASS actual five-file competition; exact125->130; focal Target vs other Actor -> negative vs positive recall -> live choice/execution P1/2 vs1 with belief1/2; immutable envelopes/full queues
+
+ ✓ src/test/assembledSceneWidth.test.ts > primary139: five-file global competition reaches actual memory, appraisal and choice 102497ms
+stdout | src/test/assembledSceneWidth.test.ts > continuation139: six-file scene exact repeat, save and whole-instant rollback
+M139 CONTINUATION PASS six-file native choice; repeat/save2/every later boundary/full queue; post125 rollback files/counters/both lanes; exact recovery
+
+ ✓ src/test/assembledSceneWidth.test.ts > continuation139: six-file scene exact repeat, save and whole-instant rollback 104281ms
+stdout | src/test/assembledSceneWidth.test.ts > privacy139: wider scenes preserve hidden truth and binding-specific permissions
+M139 PRIVACY PASS hidden truth/physical roles inert every safe prefix; denied extra produces no binding/file/companion; actual retained recall/choice/full queues
+
+ ✓ src/test/assembledSceneWidth.test.ts > privacy139: wider scenes preserve hidden truth and binding-specific permissions 67879ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 6 skipped (9)
+   Start at  09:26:07
+   Duration  279.39s (transform 2.93s, setup 0ms, collect 4.36s, tests 274.66s, environment 0ms, prepare 104ms)
+
+
+EXIT 0; elapsed 279.973s
+CHARGED 323.320
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledRoleDomain.test.ts", "-t", "primary138", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRoleDomain.test.ts > primary138: accepted Companion versus Instrument reaches actual memory, appraisal and choice
+M138 PRIMARY PASS actual six-binding/three-file current matrix; original5 causal claims and unused Beneficiary slot; exact125->130; Companion eligible vs Instrument UnsupportedRole -> negative vs positive recall -> live choice/execution P1/2 vs1 with belief1/2; immutable envelopes/full queues
+
+ ✓ src/test/assembledRoleDomain.test.ts > primary138: accepted Companion versus Instrument reaches actual memory, appraisal and choice 97674ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  09:31:06
+   Duration  102.50s (transform 3.03s, setup 0ms, collect 4.48s, tests 97.67s, environment 0ms, prepare 105ms)
+
+
+EXIT 0; elapsed 103.063s
+CHARGED 426.383
+
+COMMAND ["node", "scripts/check-reference-boundary.mjs"]
+Reference boundary check passed.
+
+EXIT 0; elapsed 2.798s
+CHARGED 429.181
+
+COMMAND ["node", "scripts/check-research-obligations.mjs"]
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4360}
+
+EXIT 0; elapsed 3.453s
+CHARGED 432.634
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,json\ngit=lambda *a:subprocess.check_output(['git',*a],text=True,encoding='utf-8')\nbase='496cbb93'\ncode={'src/assembled/'+p for p in ['model.ts','traceBinding.ts','recognition.ts','encoding.ts','recognitionState.ts','encounter.ts','semanticLanes.ts','socialExecution.ts','wideAttention.ts']}|{'src/test/assembledSceneWidth.test.ts','src/test/fixtures/assembledSceneWidth.ts'}\nallowed=code|{'AGENTS.md','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md','docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md','docs/planning/RESEARCH_OBLIGATIONS.json','docs/planning/ASSEMBLED_CHARACTER_M139_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M139_CHECKS.txt','docs/formal/ASSEMBLED_CHARACTER_SCENE_WIDTH_CONTRACT.md'}\nchanged=set(git('diff','--name-only',base).splitlines())|set(git('ls-files','--others','--exclude-standard').splitlines())\nassert changed<=allowed,changed-allowed\nassert changed&code==code\nassert git('diff','769ff4f3','--','src')=='','tested source changed'\nassert git('diff',base,'--','src/campaign2','src/campaign3','src/substrate','src/observation','src/semanticBinding','reference')=='','frozen dependency changed'\nfor p in code:\n s=Path(p).read_text(encoding='utf-8')\n if p.startswith('src/assembled/'):assert not any(\"campaign3/\"+x in s for x in ['attentionFactory','attentionRuntime','generalAttentionFactory','generalAttentionRuntime']),'separate pipeline'\nold=git('show',base+':docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md')\nnew=Path('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md').read_text(encoding='utf-8')\nrows=lambda s:[x for x in s.splitlines() if ('| C-' in x or '| F-' in x) and '| C-SEM ' not in x]\nassert rows(old)==rows(new),'other C/F rows changed'\nassert '| UNRESOLVED | C-SEM ' in new\nassert 'E46/P54/N17/U15' in new and '15/21' in new and 'families:0/15' in new\nassert len(new.splitlines())<=250 and len(new.replace('\\n','\\r\\n').encode())<=65536\nbefore=json.loads(git('show',base+':docs/planning/RESEARCH_OBLIGATIONS.json'))\nafter=json.loads(Path('docs/planning/RESEARCH_OBLIGATIONS.json').read_text(encoding='utf-8-sig'))\nassert before['obligations']==after['obligations']\nassert after['reportReviews'][:-1]==before['reportReviews']\nassert after['reportReviews'][-1]=={'path':'docs/planning/ASSEMBLED_CHARACTER_M139_RESULT.md','obligations':['RO-C3-003','RO-C3-004','RO-C3-005','RO-C3-006','RO-C3-007','RO-C3-014','RO-C3-016','RO-C3-020']}\nfor path,cap in [('AGENTS.md',120),('docs/planning/CURRENT.md',80),('docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md',250)]:\n assert len(Path(path).read_text(encoding='utf-8').splitlines())<=cap,path\nevidence=[Path('docs/planning/ASSEMBLED_CHARACTER_M139_'+s) for s in ['RESULT.md','CHECKS.txt']]\nassert sum(p.stat().st_size for p in evidence)<5*1024*1024\nlog=evidence[1].read_text(encoding='utf-8')\ncharge=float([l.split()[1] for l in log.splitlines() if l.startswith('CHARGED ')][-1]);assert charge<1800\nfor token in ['M139 PRIMARY PASS','M139 PRIVACY PASS','M139 CONTINUATION PASS','M139 CORRESPONDENCE PASS','M138 PRIMARY PASS','Reference boundary check passed.','PASS: research obligation references']:\n assert token in log,token\ncurrent=Path('docs/planning/CURRENT.md').read_text(encoding='utf-8')\nassert '(ASSEMBLED_CHARACTER_M139_CHECKS.txt)' in current and '{{' not in current\nprint('PASS M139 preservation: source 769ff4f3;11 production/test files; old Campaign0-3/reference dependencies unchanged; C-SEM remains unresolved/partial, other C/F unchanged;15/21,0/15,E46/P54/N17/U15; statuses/document/evidence caps retained; charge',charge)\n"]
+PASS M139 preservation: source 769ff4f3;11 production/test files; old Campaign0-3/reference dependencies unchanged; C-SEM remains unresolved/partial, other C/F unchanged;15/21,0/15,E46/P54/N17/U15; statuses/document/evidence caps retained; charge 432.634
+
+EXIT 0; elapsed 0.805s
+CHARGED 433.439
+
+COMMAND ["node", "scripts/check-git-file-sizes.mjs"]
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.362s
+CHARGED 433.801

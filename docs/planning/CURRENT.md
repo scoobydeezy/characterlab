@@ -1,51 +1,22 @@
-# Current work — M139 six-entity semantic scenes
-Remove the three-continuant input ceiling while retaining one selection and its
-existing capacity/priorities. Owner2026-11-17 authorizes work until SEM completion.
+# Current work — M139 passed; continue SEM
+The character handles six perceived entities in one event, with one attention
+capacity. Competition changes retained memory and a later actual decision.
 
-## Bounded card (before code)
-Baseline496cbb93; rules/registry0.105; scene-width/0.1; encoding0.6.
-Capabilities: up to six distinct observed files/bindings; unchanged global
-attention over them; competition in a five-file scene changes memory/later choice.
-C-SEM :2/3/6/8/9/10 partial; MEC-004 PORT, C3 attention kernels CONTROL/reuse.
-No new psychological law, owner, store, scheduler, confidence or runtime.
+Baseline496cbb93; plan577e616d; source769ff4f3; rules/registry0.105;
+scene-width/0.1-candidate, encoding0.6. Eleven production/test files.
+[Result](ASSEMBLED_CHARACTER_M139_RESULT.md) and [checks](ASSEMBLED_CHARACTER_M139_CHECKS.txt).
+Five-file Target/Companion -> Target/Actor: belief1/2 both, actual P(B)1/2 vs1;
+actual125->130, memory/recall/appraisal/grounds/decision/execution/full queues.
+Six-file/denied/hidden-truth/repeat/save2/every-boundary/rollback controls pass.
+777 old-domain cases preserve original audits/selected evidence/factors.
+Original C0-3 dependencies, priorities, exclusions, capacity and budgets unchanged.
+No failures, retuning, new law, owner, store, runtime or budget extension.
 
-## Files and implementation
-Eleven production/test files: model.ts, traceBinding.ts, recognition.ts, encoding.ts,
-recognitionState.ts, encounter.ts, semanticLanes.ts, socialExecution.ts,
-wideAttention.ts under assembled; test/assembledSceneWidth.test.ts and fixture.
-Formal ASSEMBLED_CHARACTER_SCENE_WIDTH_CONTRACT.md before code.
-Existing six-binding/claim cap remains; remove nonfocal-two restriction for0.105.
-Perception owner permits up to six newly allocated tracks per transition.
-Use original attention kernel to validate each unit and obtain its audit priority;
-rank those authoritative priorities globally with unchanged canonical ties.
-Prepare one final original SelectedView over selected units (capacity<=2).
-Keep global duplicate-ID, exact schema/experience/observer/carrier checks. No
-batch-local capacity, separate cognitive pipeline or copied selection mathematics.
-Original selected encoding/budget consumers remain unchanged; old versions intact.
-
-## Comparison and scenario
-M138 body10/seed0/goals+urgency1, two social tasks/third unknown; one stand-in.
-Same current2 six-binding matrix. Positive1/negative2/silent3; choice/recall21.
-Consequence2: five distinct files with focal Target, another Companion, Location,
-Instrument and Beneficiary. Compare only other's observed Companion vs Actor.
-Capacity1 unchanged. Target outranks Companion: focal negative episode retained;
-Actor outranks Target: selected nonfocal cannot create a focal social episode.
-Prediction: belief1/2 both; negative vs positive recall; live actual P(B)=1/2 vs1,
-with actual appraisal/reasons/intent/plan/attempt/outcome and full queues.
-Six-file control adds Recipient. Empty/unsupported/multiple roles remain distinct.
-
-## Checks and stop
-Original-domain correspondence: up to three units from Actor/Target/Participant/
-Instrument/Beneficiary/Actor+Target; capacities0..2, exact audits, selected bytes/
-refs and original encoded factors under fixed shared UnitBudget.
-Native five-file comparison/six-file control, trace actual claims/consumer;
-privacy/denied-extra; repeat/save2/every later boundary; post125 rollback/recovery.
-Global ID/correspondence, forged/expired selection, fourth-old/seventh-new input
-rejection, types/reference/research/preservation/size; retained M138 primary.
-One job;600s/command,1800s cumulative incl failures/15s bookkeeping;20 files/5MiB;
-12-code-file ceiling. Stop tests on pass. No input/seed/law/calibration retuning.
-RO003/004/005/006/007/014/016/020 reviewed/statuses unchanged.
-C-SEM UNRESOLVED;15/21 mapped,0/15 families,E46/P54/N17/U15=132.
-Remaining: governed truth projection, multiple events, observer/provenance/ordinal/
-knowledge-lifecycle correspondence and complete pinned SEM replay. No UI/peers.
+## Continue under owner self-approval
+Owner2026-11-17: work independently until SEM complete; bounded repairs/amendments
+self-approved with evidence preserved. Next: governed truth-event projection into
+the same perception lanes. Then event/observer/provenance/ordinal/knowledge-lifecycle
+correspondence and complete pinned replay. Write bounded card before next code.
+C-SEM remains UNRESOLVED;15/21 mapped,0/15 families,E46/P54/N17/U15=132.
+Final whole-candidate replay remains required; no UI, Campaign4 or autonomous peers.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
