@@ -1,2 +1,39 @@
 M143 baseline4446b205; serial1800s/600s budget.
 CHARGED 15.000
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSemanticProvenance.test.ts", "-t", "permission143", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledSemanticProvenance.test.ts > permission143: incoming binding cannot nominate its consumer permission
+   → expected [Function] to throw an error
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSemanticProvenance.test.ts > permission143: incoming binding cannot nominate its consumer permission
+AssertionError: expected [Function] to throw an error
+
+- Expected: 
+null
+
++ Received: 
+undefined
+
+ ❯ src/test/assembledSemanticProvenance.test.ts:10:62
+      8|  expect(deriveEncodingRoles(full,settings,[100n,101n]).claims).toHaveL…
+      9|  const wrong={...full,perceivedBindings:full.perceivedBindings.map(b=>…
+     10|  expect(()=>deriveEncodingRoles(wrong,settings,[100n,101n])).toThrow('…
+       |                                                              ^
+     11|  console.info('M143 PERMISSION PASS fixed consumer SEM-001C rejects co…
+     12| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed (1)
+   Start at  10:50:39
+   Duration  588ms (transform 194ms, setup 0ms, collect 275ms, tests 11ms, environment 0ms, prepare 103ms)
+
+
+EXIT 1; elapsed 1.149s
+CHARGED 16.149
