@@ -11,6 +11,7 @@ import {sid,pattern} from './skill';
 import {PERSON_OWNER,personPath,personHistory,personMean,personUpdate} from './social';
 import {qValue} from '../campaign2/cognitiveMath';
 import type {compileCampaign2StateModel} from '../campaign2/stateModel';
+import type {createCommitmentWitness} from './commitmentWitness';
 import type {createCommunicationExecution} from './communicationExecution';
 export const SW='assembled-social-witness/0.1',SW_OBS=SW+'/observation',SW_EVID=SW+'/evidence',SW_PROBE=SW+'/probe',SW_UPDATE=SW+'/update';
 export const SW_SOURCE=sid(1001,'event/assembled-social-witness-source'),SW_MESSAGE=sid(1001,'event/assembled-social-witness-message'),SW_OBSERVE=sid(1001,'event/assembled-social-witness-observe'),SW_EVIDENCE=sid(1001,'event/assembled-social-witness-evidence'),SW_LEARN=sid(1001,'event/assembled-social-witness-learn'),SW_QUERY=sid(1001,'event/assembled-social-witness-query');
@@ -51,7 +52,7 @@ export function createSocialWitness(C:CanonicalValue,s:SocialWitness,stateModel:
    const o=items(a[0],'list'),h=s.observers[i];if(o.length!==8||!eq(o[0],occurrences[i])||!eq(o[1],h.holder)||!eq(o[2],h.target)||!eq(o[3],signed(at)))fail('observation association');return [a[0]];
   });
  }
- return {extend(base:ReturnType<typeof createCommunicationExecution>){return {...base,
+ return {extend(base:ReturnType<typeof createCommunicationExecution>|ReturnType<ReturnType<typeof createCommitmentWitness>['extend']>){return {...base,
  eventTypes:()=>[...base.eventTypes(),...kinds],isLearning:(e:ScheduledEvent)=>eq(e.eventTypeId,SW_LEARN)||base.isLearning(e),
  begin(t:bigint){base.begin(t);active=true;at=t;used=false;unbound=0;setting=undefined;occurrences=[];pending.clear();},
  close(){base.close();active=false;pending.clear();setting=undefined;occurrences=[];unbound=0;},
