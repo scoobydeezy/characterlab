@@ -16,7 +16,7 @@ hiddenExposure, factory if restore requires it, test and fixture. Frozen trees u
 Versioned formal amendment committed with this card before implementation.
 
 Comparison: same current49-slot model/S0/seed0, controlled exposure2 count0 vs1,
-probe4. Strip unrelated input events; initial tasks retain their declared dependencies,
+probe4. Explicit canonical regulatory baseline (all302 leaves absent). Strip unrelated input events; initial tasks retain their declared dependencies,
 but no choice or social stimulus is scheduled. Body10; diagnostic channel live.
 Liveness: four applicable evaluations in both arms, zero is NoStateChange; one
 changes exactly tolerance/sensitization/displacement/load, never cognitive roots.
@@ -42,3 +42,8 @@ No family closure, altered laws, UI, Campaign4 or autonomous partners.
 
 M145 SEM result remains valid:16/21 mapped,0/15 families;E46/P54/N17/U15=132.
 Research obligations0 active/18 conditional/4 closed/0 unowned; none retired here.
+
+Self-approved setup correction: b80ed9aa retains failed inherited nonzero D fixture.
+Remove its initial302 leaf in BOTH arms to meet declared baseline prediction; no
+law/count/seed/timing/gate change. Correct StatePath type140, normalized rational
+assertion and rollback boundary1 before injected exposure2 failure.
