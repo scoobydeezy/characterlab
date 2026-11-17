@@ -68,7 +68,7 @@ function featureGrid(context:Parameters<typeof appearance.classifyAppearance>[1]
 }
 it('profiles144: pinned observer and multi-role views run through one character',async()=>{
  const controls=projectAllObservers(),reverse=projectAllObservers({order:[GLEN,DARIUS,MINA],allocator:createRunAllocator(20000n)});
- for(const name of[MINA,DARIUS,GLEN])expect(observerSemanticView(controls.get(name)!)).toEqual(observerSemanticView(reverse.get(name)!));
+ for(const name of[MINA,DARIUS,GLEN] as const)expect(observerSemanticView(controls.get(name)!)).toEqual(observerSemanticView(reverse.get(name)!));
  let identity:Uint8Array|undefined;
  for(const profile of[MINA,DARIUS,GLEN,'multi','repeat'] as const){
   const x=await create(profile),captured=await capture(x.r);compare(x,captured.full);

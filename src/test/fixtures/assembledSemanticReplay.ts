@@ -1,6 +1,6 @@
 /** M144343bd61a: original C1 affordances on one unchanged assembled character. */
 import {fixture as prior,rec,f,uint,items,key,decode,enc,list,text,signed,q,bytes,outputs,C,exact,target,type Run,type CanonicalValue} from './assembledCarrierObservation';
-import {MINA,DARIUS,GLEN,OBSERVER_AFFORDANCES,MULTI_ROLE_AFFORDANCES,REPEATED_ROLE_AFFORDANCES,TRACK_FEATURES,CANONICAL_BINDING_REQUESTS,MULTI_ROLE_BINDING_REQUESTS,REPEATED_ROLE_BINDING_REQUESTS,SKIP_ROPE_SCHEMA,type ObserverId} from './phenSem001';
+import {MINA,DARIUS,GLEN,OBSERVER_AFFORDANCES,MULTI_ROLE_AFFORDANCES,REPEATED_ROLE_AFFORDANCES,TRACK_FEATURES,CANONICAL_BINDING_REQUESTS,MULTI_ROLE_BINDING_REQUESTS,REPEATED_ROLE_BINDING_REQUESTS,SKIP_ROPE_SCHEMA,REFERENT,type ObserverId} from './phenSem001';
 import {CURRENT_SEM_SOURCE} from '../../assembled/semanticLanes';
 import {TRUTH_SCENE} from '../../assembled/semanticTruth';
 import {channel,schema,rule} from './assembledSemanticTruth';
@@ -16,7 +16,7 @@ export function fixture(profile:Profile=MINA,padding=false){
  // Same declaration for every profile; only world/source facts and affordances vary.
  const refs=new Map(items(content[1],'list').map(v=>[key(items(v,'list')[0]),v]));
  for(const r of [...CANONICAL_BINDING_REQUESTS,...MULTI_ROLE_BINDING_REQUESTS,...REPEATED_ROLE_BINDING_REQUESTS]){
-  const value=semanticReferentValue(r.semanticReferent.semanticReferentId),old=refs.get(key(value)),tags=[...new Set([...r.semanticReferent.domainTags,...(old?items(items(old,'list')[1],'list').map(v=>(v as {value:string}).value):[])])].sort();
+  const value=semanticReferentValue(r.semanticReferent.semanticReferentId),old=refs.get(key(value)),tags=[...new Set([...r.semanticReferent.domainTags,...(r.semanticReferent.semanticReferentId===REFERENT.leadPipe.semanticReferentId?['object','metal','blunt']:r.semanticReferent.semanticReferentId===REFERENT.library.semanticReferentId?['interior-space']:[]),...(old?items(items(old,'list')[1],'list').map(v=>(v as {value:string}).value):[])])].sort();
   refs.set(key(value),list([value,list(tags.map(text))]));
  }
  const pinned=schema(SKIP_ROPE_SCHEMA.eventTypeId,SKIP_ROPE_SCHEMA.roleCardinalityRules.map(r=>rule(roles.indexOf(r.eventRoleId)+1,r.minOccurrences,r.maxOccurrences.kind==='unbounded'?null:r.maxOccurrences.value)));
