@@ -47,7 +47,7 @@ function compare(x:Awaited<ReturnType<typeof create>>,full:Full){
  const safe=new Set(full.supportingObservationIds.map(o=>o.observerId+'/'+o.observationId));
  for(const value of [...full.perceivedBindings,...full.perceptualClassifications])for(const o of value.supportingObservationIds)expect(safe.has(o.observerId+'/'+o.observationId)).toBe(true);
  const worlds=outputs(snap(x.r).trace,160n).filter(t=>{const e=rec(f(t,4n),130n);return key(f(e,2n))===key(signed(2))&&uint(f(e,3n))===0n;}).flatMap(t=>items(f(t,13n),'list')).filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===210n).map(v=>rec(v,210n));
- const world=worlds.find(w=>key(f(w,2n))===key(text('event-type/skip-rope')))!;expect(world).toBeDefined();
+ const world=worlds.find(w=>key(id(f(w,2n)).payload)===key(text('event-type/skip-rope')))!;expect(world).toBeDefined();
  const truth=items(f(world,4n),'set').map(v=>rec(v,211n)).map(v=>key(f(v,2n))+'|'+key(f(v,3n))).sort();
  expect(truth).toEqual(truthBindings(x.b.requests).map(b=>rec(eventBindingValue(b),211n)).map(v=>key(f(v,2n))+'|'+key(f(v,3n))).sort());
  return {original,labels};
