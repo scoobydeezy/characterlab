@@ -21,6 +21,6 @@ export function currentProjection(v:CanonicalValue,settings:RecognitionSettings)
  return list([u(visible?s.kind:1n),u(0),list([]),list(visible?[s.physical]:[]),list([
  visible?x.lifecycle!:list([false,false,false,false]),visible?x.appearance!:list([list([]),list([])]),
  list(visible?x.signals.map(s=>list([text(s.template),s.support])):[]),u(visible?x.role.observed:0n),
- list(visible?x.role.additional.filter(r=>r.permitted).map(r=>list([u(r.observed),r.sameFocal])):[]),
+ list(visible?x.role.additional.filter(r=>r.permitted).map(r=>list([u(r.observed),r.sameFocal,...(settings.multiEvents?[u(r.eventGroup??0n)]:[])])):[]),
  list(visible?x.symbols.map(s=>list([text(s.symbol),s.support])):[])])]);
 }

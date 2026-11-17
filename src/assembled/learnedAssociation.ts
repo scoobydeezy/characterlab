@@ -10,6 +10,7 @@ import {restorePerceptualReferentId} from '../semanticBinding/semanticCodecs';
 import {canonicalOperationKeyIndex} from '../campaign3/canonicalChildKeys';
 import {settleEventAssociation} from '../campaign3/eventAssociationSettlement';
 import {normalizeGraphZeroState} from '../campaign3/graphZeroState';
+import {characterEvidenceRefValue} from '../semanticBinding/semanticEvidenceCodecs';
 import {validateEncoding} from './encoding';
 import type {compileCampaign2StateModel} from '../campaign2/stateModel';
 export const ASSOCIATION='assembled-learned-association/0.1',LEARNED_MEMORY_VERSION='assembled-character-affect-memory/0.4-candidate';
@@ -32,7 +33,7 @@ export function focalAssociationCue(full:CanonicalValue,wideRoles=false){
 /** Only actual selected rows, never every binding in the frozen provenance. */
 export function associationUnits(assessment:CanonicalValue,full:CanonicalValue){
  require(validateEncoding(assessment,full),'positive selected formation');const a=items(assessment,'list'),claims=items(a[5],'list').map(v=>rec(v,240n));
- return items(a[8],'list').map(v=>{const r=items(v,'list'),matches=claims.filter(c=>key(f(c,5n))===txt(r[0]));require(matches.length===1,'selected claim correspondence');const strength=readQ(r[6]);require(strength.compare(Q.of(0n))>0&&strength.compare(Q.of(1n))<=0,'positive unit');return {key:observedAssociationKey(f(matches[0],5n)),strength};});
+ return items(a[8],'list').map(v=>{const r=items(v,'list'),matches=claims.filter(c=>key(f(c,5n))===txt(r[0])&&(r.length!==8||key(characterEvidenceRefValue({kind:'causal-role',causalRoleEvidenceId:uint(id(f(c,1n)).payload)}))===key(r[7])));require(matches.length===1,'selected claim correspondence');const strength=readQ(r[6]);require(strength.compare(Q.of(0n))>0&&strength.compare(Q.of(1n))<=0,'positive unit');return {key:observedAssociationKey(f(matches[0],5n)),strength};});
 }
 export function associationGraph(value:CanonicalValue|undefined,settings:AssociationSettings){
  if(value===undefined)return {keys:[] as CanonicalValue[],weights:[] as Q[][],lastUpdatedAt:0n};

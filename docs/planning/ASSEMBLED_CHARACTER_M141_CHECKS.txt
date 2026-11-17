@@ -1,3 +1,14 @@
 M141 baselinebec62cc0;1800s cumulative,600s command cap.
 Prepaid bookkeeping15s.
 CHARGED 15.000
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 20.930s
+CHARGED 35.930
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+src/test/assembledSemanticEvents.test.ts(60,225): error TS1005: ',' expected.
+
+EXIT 2; elapsed 3.406s
+CHARGED 39.336
