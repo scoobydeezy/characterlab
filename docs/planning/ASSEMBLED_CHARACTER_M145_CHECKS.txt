@@ -209,3 +209,40 @@ EXIT 1; elapsed 73.951s
 CHARGED 783.018
 
 M145 self-approved test repair: AuthoritativeState.entries returns fresh copied leaves. Comparing object identity across separate enumerations injected no mutation. Reuse one enumeration and assert the intended leaf changes before each rejection check. Preserve0fd21853; no production/schema/acceptance change. Rerun only knowledge145 and final types.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSemanticFinal.test.ts", "-t", "knowledge145", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledSemanticFinal.test.ts > knowledge145: actual frozen knowledge admits exact replacement operations and rejects stale or foreign authority 98198ms
+   → expected { kind: 'no-update', …(1) } to deeply equal { kind: 'no-update', …(1) }
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSemanticFinal.test.ts > knowledge145: actual frozen knowledge admits exact replacement operations and rejects stale or foreign authority
+SchedulerContractError: expected { kind: 'no-update', …(1) } to deeply equal { kind: 'no-update', …(1) }
+ ❯ fail src/substrate/scheduler.ts:667:9
+    665|\x20
+    666| function fail(code: SchedulerFailureCode, message: string): never {
+    667|   throw new SchedulerContractError(code, message);
+       |         ^
+    668| }
+    669|\x20
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:390:11
+ ❯ Object.settleNextInstant src/assembled/character.ts:45:66
+ ❯ advance src/test/assembledSemanticFinal.test.ts:36:42
+ ❯ through src/test/assembledSemanticFinal.test.ts:37:109
+ ❯ src/test/assembledSemanticFinal.test.ts:278:6
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'TRANSITION_FAILURE', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 14 skipped (15)
+   Start at  11:43:35
+   Duration  102.90s (transform 2.90s, setup 0ms, collect 4.35s, tests 98.20s, environment 0ms, prepare 102ms)
+
+
+EXIT 1; elapsed 103.480s
+CHARGED 886.498
