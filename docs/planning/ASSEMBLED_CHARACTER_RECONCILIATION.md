@@ -37,7 +37,7 @@ E is version-scoped evidence, NOT clause acceptance or a current-model rerun. Pr
 all cited result limits; P/N/U remain open. Final candidate replay/classification is
 required even for E. This index promotes no historical result to a broader claim.
 Evidence index: E46/P54/N17/U15 =132. Not a completion percentage. Mapped members:
-19/21; accepted complete families:0/15. Denominator unchanged.
+20/21; accepted complete families:0/15. Denominator unchanged.
 [M102] promoted12.2-5/12.13-8. M119 promotes12.8-1/2/3; other129 unchanged.
 Cited evidence stays version-scoped; all final-candidate requirements remain.
 
@@ -124,7 +124,7 @@ Cited evidence stays version-scoped; all final-candidate requirements remain.
 | EQUIVALENT | C-SOCIAL — PHEN-SOCIAL-001 v1.0.0-draft | [M149](ASSEMBLED_CHARACTER_M149_RESULT.md). | :4..11 mapped0.111;:12/13 tracked. | Controlled identity/reports; passive observers; final replay remains. |
 | EQUIVALENT (mapped; adopted coverage difference) | C-MULTI — PHEN-MULTI-001 v1.0.0-draft | [M150](ASSEMBLED_CHARACTER_M150_RESULT.md). | :4..11 mapped0.112;:12/13 tracked. | Acquired Commitment/Value receipts; SourceCoverage; preserved alternatives; final replay. |
 | EQUIVALENT (mapped domain) | C-HABIT — PHEN-HABIT-001 v1.0.0-draft | [M118](ASSEMBLED_CHARACTER_M118_RESULT.md). | :3..10 mapped0.89; :11/12 tracked. | Acquisition/reversal, privacy, alternatives; bounded receiving; final replay. |
-| UNRESOLVED | C-REL — PHEN-REL-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/19); `src/campaign3/relationshipFactory.ts`. | Route M13/L8. Required `PHEN-REL-001:3..12` (inclusive). | Replay pending; U1/V4. |
+| MAPPED | C-REL — PHEN-REL-001 | [M151](ASSEMBLED_CHARACTER_M151_RESULT.md),0.112. | :3..10 own history/equal estimate, rupture/repair/contact, representation controls; :11/12 tracked. | LatestInteraction; original two-observer controls retained; RO-C3-016. |
 | UNRESOLVED | C-LONG — PHEN-LONG-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/20); `src/campaign3/longitudinalFactory.ts`. | Route M19/M15/M16/M17. Required `PHEN-LONG-001:3..12` (inclusive). | Replay pending; U1/V4. |
 | UNRESOLVED | F-12.1 — Embodiment and regulation | [clauses](campaign3-hq012-exit-review-rev1/families.json#/families/0/clauses); [M3], [M10](ASSEMBLED_CHARACTER_M10_RESULT.md), [M38](ASSEMBLED_CHARACTER_M38_RESULT.md), [M39]. | E:3,5; P:4,8; N:6,7; U:1,2. | Delayed delivery and hidden-body boundary demonstrated; uncertainty/tolerance bounded. Constitutional trajectories need assessment; no assembled sleep/intoxication witness found. Sensitization is not established by tolerance. |
 | UNRESOLVED | F-12.2 — Need and motivational ownership | [clauses](campaign3-hq012-exit-review-rev1/families.json#/families/1/clauses); [M13](ASSEMBLED_CHARACTER_M13_RESULT.md), [M34], [M76]. [M95][ref31]. | E:2,4,5; P:1,3,6; N:none; U:none. | M95 actual learned Value and Commitment support the same action/referent with distinct motives. Importance/urgency remain separate. Full Need ontology and one motive offering several actions remain partial; multiple motives for one action does not prove the inverse. |

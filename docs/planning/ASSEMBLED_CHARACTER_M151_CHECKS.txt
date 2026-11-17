@@ -1,0 +1,123 @@
+M151 baselinead9e2270; pland1101358.1800s/600s; unchanged0.112 semantics.
+CHARGED 0
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledRelationshipCompletion.test.ts", "-t", "primary151", "--maxWorkers=1", "--minWorkers=1"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRelationshipCompletion.test.ts > primary151: own history with exactly matched person belief changes the live decision; rupture/explanation/repair/absence retain their distinctions
+M151 matched4 [ '47/72', '25/72' ] [ '25/72', '47/72' ] modes PlayerFacingRoll PlayerFacingRoll
+
+stdout | src/test/assembledRelationshipCompletion.test.ts > primary151: own history with exactly matched person belief changes the live decision; rupture/explanation/repair/absence retain their distinctions
+M151 PRIMARY PASS exact person2/3 with own history2 vs0; effective response differs; explanation3/4 does not repair breach; later cooperation clears; absence preserves4 receipts and selects alternative
+
+ ✓ src/test/assembledRelationshipCompletion.test.ts (7 tests | 6 skipped) 109215ms
+   ✓ primary151: own history with exactly matched person belief changes the live decision; rupture/explanation/repair/absence retain their distinctions 109214ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  15:31:52
+   Duration  113.95s (transform 2.91s, setup 0ms, collect 4.39s, tests 109.22s, environment 0ms, prepare 104ms)
+
+
+EXIT 0; elapsed 114.500s
+CHARGED 114.500
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 18.743s
+CHARGED 133.243
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledRelationshipCompletionControls.test.ts", "-t", "comparison151|boundary151", "--maxWorkers=1", "--minWorkers=1"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRelationshipCompletionControls.test.ts > comparison151: native owned receipts preserve original fold, cache/refold equivalence and person-only failure
+M151 COMPARISON PASS actual history -> original LatestInteraction fold; cached/refold same native nuclei/probability; person-only fails all3 probes; StickyRupture retained; authority/foreign/S0 rejected
+
+stdout | src/test/assembledRelationshipCompletionControls.test.ts > boundary151: hidden kind, denied participation, explanation and contact controls retain distinct causes
+M151 BOUNDARY PASS hidden full state/native decisions exact; denied history absent/person equal; explanation changes belief not rupture; contact-only changes feasibility/missing signal
+
+ ✓ src/test/assembledRelationshipCompletionControls.test.ts (11 tests | 9 skipped) 266555ms
+   ✓ comparison151: native owned receipts preserve original fold, cache/refold equivalence and person-only failure 93031ms
+   ✓ boundary151: hidden kind, denied participation, explanation and contact controls retain distinct causes 173524ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 9 skipped (11)
+   Start at  15:36:57
+   Duration  271.37s (transform 2.95s, setup 0ms, collect 4.43s, tests 266.55s, environment 0ms, prepare 103ms)
+
+
+EXIT 0; elapsed 271.920s
+CHARGED 405.163
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledRelationshipCompletionControls.test.ts", "-t", "persistence151|rollback151", "--maxWorkers=1", "--minWorkers=1"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRelationshipCompletionControls.test.ts > persistence151: exact repeat and acquired/ruptured saves continue with every owned history through101
+M151 PERSISTENCE PASS repeat/save2/save7; full state/output/trace/save through101; own history retained
+
+stdout | src/test/assembledRelationshipCompletionControls.test.ts > rollback151: failed receipt adoption leaves the whole prior instant and history unchanged
+M151 ROLLBACK PASS full instant5, earlier owned cooperation retained
+
+ ✓ src/test/assembledRelationshipCompletionControls.test.ts (11 tests | 9 skipped) 262483ms
+   ✓ persistence151: exact repeat and acquired/ruptured saves continue with every owned history through101 248807ms
+   ✓ rollback151: failed receipt adoption leaves the whole prior instant and history unchanged 13675ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 9 skipped (11)
+   Start at  15:42:04
+   Duration  267.24s (transform 2.93s, setup 0ms, collect 4.40s, tests 262.48s, environment 0ms, prepare 101ms)
+
+
+EXIT 0; elapsed 267.785s
+CHARGED 672.948
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/relationshipPublic.test.ts", "--maxWorkers=1", "--minWorkers=1"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/relationshipPublic.test.ts (7 tests) 58106ms
+   ✓ keeps person estimates equal while history changes contact, rupture and absence responses 4660ms
+   ✓ preserves exact nonrecipient and hidden-truth views and rejects global/truth shortcuts 11563ms
+   ✓ derived and stored relationships produce identical views under both rupture laws 8543ms
+   ✓ audits own-key read domains and fixed nonrelationship contributors 2139ms
+   ✓ authenticates whole saves and rejects malformed original inputs and view identifiers 2822ms
+   ✓ rolls back every stage and commit after shared history, including both observer views 20622ms
+   ✓ preserves the failed zero-modifier cohort as an executable non-discriminating control 7756ms
+
+ Test Files  1 passed (1)
+      Tests  7 passed (7)
+   Start at  15:49:07
+   Duration  59.53s (transform 728ms, setup 0ms, collect 1.10s, tests 58.11s, environment 0ms, prepare 101ms)
+
+
+EXIT 0; elapsed 60.054s
+CHARGED 733.002
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 18.812s
+CHARGED 751.814
+
+COMMAND ["node", "scripts/check-reference-boundary.mjs"]
+Reference boundary check passed.
+
+EXIT 0; elapsed 2.688s
+CHARGED 754.502
+
+COMMAND ["node", "scripts/check-research-obligations.mjs"]
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4372}
+
+EXIT 0; elapsed 3.433s
+CHARGED 757.935
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,json\ngit=lambda *a:subprocess.check_output(['git',*a],text=True,encoding='utf-8').strip()\nbase='ad9e2270'\nexpected={'src/test/assembledRelationshipCompletion.test.ts','src/test/assembledRelationshipCompletionControls.test.ts','src/test/fixtures/assembledRelationshipComparison.ts','src/test/fixtures/assembledRelationshipCompletion.ts'}\nassert set(git('diff','--name-only',base,'--','src').splitlines())==expected\nassert not git('diff','--name-only',base,'--','src/campaign2','src/campaign3','src/substrate','src/observation','src/semanticBinding','reference','docs/planning/ASSEMBLED_CHARACTER_BASELINE.json')\nfor path,cap in [('AGENTS.md',120),('docs/planning/CURRENT.md',80),('docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md',250),('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md',250)]:\n s=Path(path).read_text(encoding='utf-8-sig');assert len(s.splitlines())<=cap\n if 'RECONCILIATION' in path:\n  assert len(s.replace('\\r\\n','\\n').replace('\\n','\\r\\n').encode('utf-8'))<=65536\n  assert '20/21; accepted complete families:0/15' in s\nbefore=json.loads(git('show',base+':docs/planning/RESEARCH_OBLIGATIONS.json'))\nafter=json.loads(Path('docs/planning/RESEARCH_OBLIGATIONS.json').read_text())\nassert before['obligations']==after['obligations']\nassert after['reportReviews'][:-1]==before['reportReviews']\nassert after['reportReviews'][-1]=={'path':'docs/planning/ASSEMBLED_CHARACTER_M151_RESULT.md','obligations':['RO-C3-016']}\nevidence=list(Path('docs/planning').glob('ASSEMBLED_CHARACTER_M151*'))\nassert len(evidence)<=20 and sum(p.stat().st_size for p in evidence)<=5*1024*1024\nprint('M151 PRESERVATION PASS: four test-helper/no production files; six frozen trees and pinned baseline unchanged; planning caps;20/21 mapped,0/15 accepted families; obligations unchanged; evidence '+str(len(evidence))+' files/'+str(sum(p.stat().st_size for p in evidence))+' bytes.')\n"]
+M151 PRESERVATION PASS: four test-helper/no production files; six frozen trees and pinned baseline unchanged; planning caps;20/21 mapped,0/15 accepted families; obligations unchanged; evidence 2 files/10634 bytes.
+
+EXIT 0; elapsed 0.306s
+CHARGED 758.241
+
+Final bookkeeping charge15s; total773.241s /1800; longest271.920s.
+CHARGED 773.241
