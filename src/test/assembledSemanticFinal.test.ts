@@ -250,17 +250,22 @@ it('knowledge145: actual frozen knowledge admits exact replacement operations an
  const component=await compileCharacterState(await compileCharacterModel(b.s)),s=state(r),knowledge=s.entries().find(e=>e.path.rootStateTypeId===243n&&e.path.fieldId===1n)!;
  const patch={operations:[{kind:'set' as const,path:knowledge.path,expected:{presence:true as const,value:knowledge.value},newValue:knowledge.value}]};
  for(const owner of[OWNER.Perception,OWNER.RecognitionResolution,OWNER.RecognitionKnowledge])expect(()=>component.stateModel.applyPatch(s,patch,owner,{writableRoots:[243n],targetPaths:[knowledge.path]})).toThrow('immutable knowledge');
- for(const entry of s.entries().filter(e=>e.path.rootStateTypeId===243n)){
+ const stateEntries=s.entries();
+ for(const entry of stateEntries.filter(e=>e.path.rootStateTypeId===243n)){
   const v=rec(entry.value,entry.path.fieldId===1n?228n:229n);
   for(const invalid of[{...v,schema:{...v.schema,schemaVersion:2n}},{...v,fields:new Map([...v.fields].map(([n,x])=>[n,n===(entry.path.fieldId===1n?1n:2n)?sid(1000,'foreign-observer'):x]))}]){
-   expect(()=>component.stateModel.validateState(new AuthoritativeState(s.entries().map(e=>e===entry?{...e,value:invalid}:e)))).toThrow();
+   const corrupt=new AuthoritativeState(stateEntries.map(e=>e===entry?{...e,value:invalid}:e));
+   expect(key(corrupt.read(entry.path).value!),'counterexample changes its intended leaf').not.toBe(key(entry.value));
+   expect(()=>component.stateModel.validateState(corrupt)).toThrow();
   }
  }
- const historyEntries=s.entries().filter(e=>e.path.rootStateTypeId===244n);
+ const historyEntries=stateEntries.filter(e=>e.path.rootStateTypeId===244n);
  expect(historyEntries.length).toBeGreaterThan(0);
  for(const entry of historyEntries){
   const v=rec(entry.value,236n),cycle={...v,fields:new Map([...v.fields,[8n,f(v,1n)]])};
-  expect(()=>component.stateModel.validateState(new AuthoritativeState(s.entries().map(e=>e===entry?{...e,value:cycle}:e)))).toThrow('cycle');
+  const corrupt=new AuthoritativeState(stateEntries.map(e=>e===entry?{...e,value:cycle}:e));
+  expect(key(corrupt.read(entry.path).value!),'cycle counterexample is injected').not.toBe(key(entry.value));
+  expect(()=>component.stateModel.validateState(corrupt)).toThrow('cycle');
  }
  await finish(r);await finish(different);
  const catalog=items(items(items(decode(b.s.registry),'list')[21],'list')[1],'list').map(v=>items(v,'list')),otherTemplate=items(catalog.find(v=>key(v[0])===key(b.other))![1],'list')[0];

@@ -207,3 +207,5 @@ AssertionError: expected [Function] to throw an error
 
 EXIT 1; elapsed 73.951s
 CHARGED 783.018
+
+M145 self-approved test repair: AuthoritativeState.entries returns fresh copied leaves. Comparing object identity across separate enumerations injected no mutation. Reuse one enumeration and assert the intended leaf changes before each rejection check. Preserve0fd21853; no production/schema/acceptance change. Rerun only knowledge145 and final types.
