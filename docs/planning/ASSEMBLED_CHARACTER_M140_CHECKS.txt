@@ -40,12 +40,12 @@ COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSem
  FAIL  src/test/assembledSemanticTruth.test.ts > boundaries140: repeatable/multi-role, omission and unresolved evidence stay distinct natively
 EventBindingContractError: event-role/companion count 2 violates declared cardinality
  ❯ fail src/semanticBinding/eventBindings.ts:394:9
-    392| 
+    392|\x20
     393| function fail(code: EventBindingFailureCode, message: string): never {
     394|   throw new EventBindingContractError(code, message);
        |         ^
     395| }
-    396| 
+    396|\x20
  ❯ Module.compileEventBindings src/semanticBinding/eventBindings.ts:178:7
  ❯ declared src/assembled/semanticTruth.ts:45:65
  ❯ Module.sourceRole src/assembled/semanticTruth.ts:53:62
@@ -67,3 +67,106 @@ Serialized Error: { code: 'ROLE_CARDINALITY_VIOLATION' }
 
 EXIT 1; elapsed 70.460s
 CHARGED 171.859
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSemanticTruth.test.ts", "-t", "primary140|boundaries140", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSemanticTruth.test.ts > primary140: governed event precision changes retained experience and actual choice
+M140 PRIMARY PASS governed six-binding current truth -> five perceived files; actual shared allocated truth210/211 only in trace; coarsened vs preserved other Actor -> focal negative vs positive recall -> live P1/2 vs1 with belief1/2; actual execution/full queues
+
+ ✓ src/test/assembledSemanticTruth.test.ts > primary140: governed event precision changes retained experience and actual choice 103437ms
+stdout | src/test/assembledSemanticTruth.test.ts > boundaries140: repeatable/multi-role, omission and unresolved evidence stay distinct natively
+M140 BOUNDARIES PASS native same referent Actor/Companion distinct bindings/shared file; repeatable Companions; omitted vs unresolved evidence; actual memory/choice/full queues
+
+ ✓ src/test/assembledSemanticTruth.test.ts > boundaries140: repeatable/multi-role, omission and unresolved evidence stay distinct natively 77216ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 8 skipped (10)
+   Start at  09:42:53
+   Duration  185.44s (transform 2.97s, setup 0ms, collect 4.42s, tests 180.65s, environment 0ms, prepare 105ms)
+
+
+EXIT 0; elapsed 186.002s
+CHARGED 357.861
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSemanticTruth.test.ts", "-t", "privacy140|continuation140", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSemanticTruth.test.ts > privacy140: changed hidden truth is absent from every character prefix
+M140 PRIVACY PASS hidden Action/referent changes alter truth trace and preserve every safe state/output prefix and both envelopes; no truth identity copied
+
+ ✓ src/test/assembledSemanticTruth.test.ts > privacy140: changed hidden truth is absent from every character prefix 108989ms
+stdout | src/test/assembledSemanticTruth.test.ts > continuation140: governed truth allocation and both perception lanes restore and roll back exactly
+M140 CONTINUATION PASS repeat/save2/every later boundary/full queue; post110 truth allocation failure rolls current lane/state/files/trace/global IDs back; exact recovery
+
+ ✓ src/test/assembledSemanticTruth.test.ts > continuation140: governed truth allocation and both perception lanes restore and roll back exactly 98567ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 8 skipped (10)
+   Start at  09:46:53
+   Duration  212.30s (transform 2.95s, setup 0ms, collect 4.39s, tests 207.56s, environment 0ms, prepare 103ms)
+
+
+EXIT 0; elapsed 212.854s
+CHARGED 570.715
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSemanticTruth.test.ts", "src/test/assembledSceneWidth.test.ts", "src/test/eventBindings.test.ts", "-t", "grammar140|primary139|SEM-001B", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSceneWidth.test.ts > primary139: five-file global competition reaches actual memory, appraisal and choice
+M139 PRIMARY PASS actual five-file competition; exact125->130; focal Target vs other Actor -> negative vs positive recall -> live choice/execution P1/2 vs1 with belief1/2; immutable envelopes/full queues
+
+ ✓ src/test/assembledSceneWidth.test.ts > primary139: five-file global competition reaches actual memory, appraisal and choice 103020ms
+stdout | src/test/assembledSemanticTruth.test.ts > grammar140: governed domain/cardinality and role precision match accepted SEM
+M140 GRAMMAR PASS all40 role/precision cases including5 rejection controls; original governed broad AND narrow domains/cardinality/duplicates/fixed Action/undeclared/qualifier/old-version controls; real typed allocation
+
+ ✓ src/test/assembledSemanticTruth.test.ts > grammar140: governed domain/cardinality and role precision match accepted SEM 62157ms
+ ✓ src/test/eventBindings.test.ts > SEM-001B event-binding occurrence and role conformance > CV-SEM-023 preserves one referent in several roles as distinct occurrences
+ ✓ src/test/eventBindings.test.ts > SEM-001B event-binding occurrence and role conformance > CV-SEM-024 preserves several referents in one repeatable role without overwrite
+ ✓ src/test/eventBindings.test.ts > SEM-001B event-binding occurrence and role conformance > CV-SEM-025 makes cardinality and referent-domain narrowing event-type specific and never widening
+ ✓ src/test/eventBindings.test.ts > SEM-001B event-binding occurrence and role conformance > CV-SEM-026 rejects invalid inputs before allocation and rolls successful allocation back on later instant failure
+ ✓ src/test/eventBindings.test.ts > SEM-001B event-binding occurrence and role conformance > CV-SEM-027 preserves allocated occurrence identity across replay while ordinals remain semantically opaque
+ ✓ src/test/eventBindings.test.ts > SEM-001B event-binding occurrence and role conformance > CV-SEM-028 keeps event roles separate from causal roles and gives registry order no weight
+ ✓ src/test/eventBindings.test.ts > SEM-001B event-binding occurrence and role conformance > CV-SEM-029 exposes only permitted role evidence, never truth binding identity or automatic specificity
+ ✓ src/test/eventBindings.test.ts > SEM-001B event-binding occurrence and role conformance > CV-SEM-030 rejects duplicate opaque occurrences, qualifiers, and redundant Action bindings
+
+ Test Files  3 passed (3)
+      Tests  10 passed | 17 skipped (27)
+   Start at  09:51:39
+   Duration  171.52s (transform 2.98s, setup 0ms, collect 5.46s, tests 165.19s, environment 0ms, prepare 294ms)
+
+
+EXIT 0; elapsed 172.076s
+CHARGED 742.791
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 21.330s
+CHARGED 764.121
+
+COMMAND ["node", "scripts/check-reference-boundary.mjs"]
+Reference boundary check passed.
+
+EXIT 0; elapsed 2.832s
+CHARGED 766.953
+
+COMMAND ["node", "scripts/check-research-obligations.mjs"]
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4361}
+
+EXIT 0; elapsed 3.486s
+CHARGED 770.439
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,json\ngit=lambda *a:subprocess.check_output(['git',*a],text=True,encoding='utf-8')\nbase='5c73b0c7'\ncode={'src/assembled/'+p for p in ['model.ts','traceBinding.ts','recognition.ts','encounter.ts','semanticLanes.ts','socialExecution.ts','semanticTruth.ts']}|{'src/test/assembledSemanticTruth.test.ts','src/test/fixtures/assembledSemanticTruth.ts'}\nallowed=code|{'AGENTS.md','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md','docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md','docs/planning/RESEARCH_OBLIGATIONS.json','docs/planning/ASSEMBLED_CHARACTER_M140_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M140_CHECKS.txt','docs/formal/ASSEMBLED_CHARACTER_SEMANTIC_TRUTH_CONTRACT.md'}\nchanged=set(git('diff','--name-only',base).splitlines())|set(git('ls-files','--others','--exclude-standard').splitlines())\nassert changed<=allowed,changed-allowed\nassert changed&code==code\nassert git('diff','1faf2ee3','--','src')=='','tested source changed'\nassert git('diff',base,'--','src/campaign2','src/campaign3','src/substrate','src/observation','src/semanticBinding','reference')=='','frozen dependency changed'\nfor p in code:\n s=Path(p).read_text(encoding='utf-8')\n if p.startswith('src/assembled/'):assert not any(\"campaign3/\"+x in s for x in ['attentionFactory','attentionRuntime','generalAttentionFactory','generalAttentionRuntime']),'separate pipeline'\nold=git('show',base+':docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md')\nnew=Path('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md').read_text(encoding='utf-8')\nrows=lambda s:[x for x in s.splitlines() if ('| C-' in x or '| F-' in x) and '| C-SEM ' not in x]\nassert rows(old)==rows(new),'other C/F rows changed'\nassert '| UNRESOLVED | C-SEM ' in new\nassert 'E46/P54/N17/U15' in new and '15/21' in new and 'families:0/15' in new\nassert len(new.splitlines())<=250 and len(new.replace('\\n','\\r\\n').encode())<=65536\nbefore=json.loads(git('show',base+':docs/planning/RESEARCH_OBLIGATIONS.json'))\nafter=json.loads(Path('docs/planning/RESEARCH_OBLIGATIONS.json').read_text(encoding='utf-8-sig'))\nassert before['obligations']==after['obligations']\nassert after['reportReviews'][:-1]==before['reportReviews']\nassert after['reportReviews'][-1]=={'path':'docs/planning/ASSEMBLED_CHARACTER_M140_RESULT.md','obligations':['RO-C3-003','RO-C3-004','RO-C3-005','RO-C3-006','RO-C3-007','RO-C3-014','RO-C3-016','RO-C3-020']}\nfor path,cap in [('AGENTS.md',120),('docs/planning/CURRENT.md',80),('docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md',250)]:\n assert len(Path(path).read_text(encoding='utf-8').splitlines())<=cap,path\nevidence=[Path('docs/planning/ASSEMBLED_CHARACTER_M140_'+s) for s in ['RESULT.md','CHECKS.txt']]\nassert sum(p.stat().st_size for p in evidence)<5*1024*1024\nlog=evidence[1].read_text(encoding='utf-8')\ncharge=float([l.split()[1] for l in log.splitlines() if l.startswith('CHARGED ')][-1]);assert charge<1800\nfor token in ['M140 PRIMARY PASS','M140 PRIVACY PASS','M140 CONTINUATION PASS','M140 BOUNDARIES PASS','M140 GRAMMAR PASS','M139 PRIMARY PASS','src/test/eventBindings.test.ts','Reference boundary check passed.','PASS: research obligation references']:\n assert token in log,token\ncurrent=Path('docs/planning/CURRENT.md').read_text(encoding='utf-8')\nassert '(ASSEMBLED_CHARACTER_M140_CHECKS.txt)' in current and '{{' not in current\nprint('PASS M140 preservation: source 1faf2ee3;9 production/test files; old Campaign0-3/reference dependencies unchanged; C-SEM remains unresolved/partial, other C/F unchanged;15/21,0/15,E46/P54/N17/U15; statuses/document/evidence caps retained; charge',charge)\n"]
+PASS M140 preservation: source 1faf2ee3;9 production/test files; old Campaign0-3/reference dependencies unchanged; C-SEM remains unresolved/partial, other C/F unchanged;15/21,0/15,E46/P54/N17/U15; statuses/document/evidence caps retained; charge 770.439
+
+EXIT 0; elapsed 0.843s
+CHARGED 771.282
+
+COMMAND ["node", "scripts/check-git-file-sizes.mjs"]
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.374s
+CHARGED 771.656

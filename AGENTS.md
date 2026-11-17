@@ -6,7 +6,7 @@ Read [CURRENT.md](docs/planning/CURRENT.md), then
 The active direction is assembly of one continuing character.
 Workbench/UI development and Campaign 4 are stopped pending assembly acceptance.
 This is the assembly checkout, based on
-`788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`. M139 joins six-file scenes to one attention/memory/actual-choice path on0.105. SEM partial;15 mapped, full families/assembly open. Follow CURRENT.md; no unrelated breadth, UI or autonomous peer work.
+`788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`. M140 joins governed truth/projection to one perception/memory/choice path on0.106. SEM partial;15 mapped, full families/assembly open. Follow CURRENT.md; no unrelated breadth, UI or autonomous peer work.
 Do not execute historical TODOs, resume old audits, or retain/revisit browser tabs.
 Old instructions/evidence remain on tag `archive/workbench-stopped-2026-10-25`.
 ## Authority
