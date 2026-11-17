@@ -27,6 +27,8 @@ No-probe control remains cognitively equal. Exact repeat and save after2, every 
 boundary continuation, failed-instant rollback; malformed/wrong-holder/version and
 pending-input tamper rejection. Source truth cannot become a cognitive read capability.
 Affected controls: original parent-pair plus current SEM retained witness (no source).
+Also run that witness on0.109: live47/72 vs1 decision and actual protocol307 ->
+original regulatory evaluator, with no authored consumer. This catches route diversion.
 Types, boundary, research, file-size and frozen-tree checks; no full C2 byte rerun:
 its dependency closure is unchanged. Risks: source authenticity, route identity,
 phase140 target collisions, probe allocation, restore and unchanged-version behavior.
@@ -47,3 +49,6 @@ Self-approved setup correction: b80ed9aa retains failed inherited nonzero D fixt
 Remove its initial302 leaf in BOTH arms to meet declared baseline prediction; no
 law/count/seed/timing/gate change. Correct StatePath type140, normalized rational
 assertion and rollback boundary1 before injected exposure2 failure.
+The corrected pair passed live four-rule/hidden-state assertions; restore test
+passed forbidden runSeed via object spread. Correct only restore call fields to
+initialState/orderedInputs/save; public data-only boundary correctly rejected it.

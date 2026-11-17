@@ -81,3 +81,64 @@ Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: unde
 
 EXIT 1; elapsed 63.723s
 CHARGED 165.737
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledHiddenExposure.test.ts", "-t", "native146", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledHiddenExposure.test.ts > native146: hidden exposure reaches later permitted observation and actual episodic memory
+M146 NATIVE PASS count0/1; four live rules; cognitive state equal before reveal; later5 vs51/10 actual observation/intake/episode/recall; matched topology; repeat/save2/every later boundary exact
+
+ ✓ src/test/assembledHiddenExposure.test.ts > native146: hidden exposure reaches later permitted observation and actual episodic memory 76814ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  12:21:46
+   Duration  81.47s (transform 2.88s, setup 0ms, collect 4.32s, tests 76.81s, environment 0ms, prepare 101ms)
+
+
+EXIT 0; elapsed 82.014s
+CHARGED 247.751
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledHiddenExposure.test.ts", "-t", "boundary146|rollback146|retained146", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledHiddenExposure.test.ts > boundary146: hidden-without-probe equality, admission, source authenticity and restore tampering
+M146 BOUNDARY PASS absent probe does not teach; wrong phase/time/holder/count/duplicate/version and changed manifest reject
+
+ ✓ src/test/assembledHiddenExposure.test.ts > boundary146: hidden-without-probe equality, admission, source authenticity and restore tampering 65402ms
+stdout | src/test/assembledHiddenExposure.test.ts > rollback146: phase140 failure publishes no exposure or partial state and recovers exactly
+M146 ROLLBACK PASS full instant atomic; canonical saved continuation exact
+
+ ✓ src/test/assembledHiddenExposure.test.ts > rollback146: phase140 failure publishes no exposure or partial state and recovers exactly 9150ms
+ × src/test/assembledHiddenExposure.test.ts > retained146: the same model keeps recognition-driven choices and protocol adaptation 33582ms
+   → expected [ '1/1', '47/72' ] to deeply equal [ '47/72', '1/1' ]
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledHiddenExposure.test.ts > retained146: the same model keeps recognition-driven choices and protocol adaptation
+AssertionError: expected [ '1/1', '47/72' ] to deeply equal [ '47/72', '1/1' ]
+
+- Expected
++ Received
+
+  Array [
+-   "47/72",
+    "1/1",
++   "47/72",
+  ]
+
+ ❯ src/test/assembledHiddenExposure.test.ts:82:24
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 2 passed | 6 skipped (9)
+   Start at  12:24:08
+   Duration  112.82s (transform 2.89s, setup 0ms, collect 4.35s, tests 108.14s, environment 0ms, prepare 103ms)
+
+
+EXIT 1; elapsed 113.374s
+CHARGED 361.125

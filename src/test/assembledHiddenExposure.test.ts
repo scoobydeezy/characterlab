@@ -1,3 +1,8 @@
+import {historyFixture,target} from './fixtures/assembledSemanticFinal';
+import {HIDDEN_EXPOSURE_RULES,HIDDEN_EXPOSURE_REGISTRY} from '../assembled/model';
+import {personPath,personMean} from '../assembled/social';
+import {ExactRational as Q} from '../substrate/exactMath';
+import {readQ} from '../campaign2/cognitiveMath';
 import {compileCharacterModel} from '../assembled/model';
 import {compileCharacterState} from '../assembled/state';
 import {compileCharacterInputs} from '../assembled/inputs';
@@ -34,7 +39,7 @@ it('native146: hidden exposure reaches later permitted observation and actual ep
   const source=named(r,'authored-adaptation-fact')[0],adapt=named(r,'authored-regulatory-adaptation')[0];expect(items(f(source,11n),'list')).toHaveLength(0);expect(items(f(source,17n),'list')).toHaveLength(0);expect(items(f(adapt,17n),'list')).toHaveLength(i?4:0);expect(key(f(event(adapt),8n))).toBe(key(list([f(event(source),1n)])));
  }
  const repeat=await Promise.all(bs.map(b=>createCharacterRun(m,b.d)));for(const r of repeat)await through(r,2n);
- const restored=await Promise.all(bs.map((b,i)=>restoreCharacterRun(b.s,{...b.d,save:runs[i].save()})));
+ const restored=await Promise.all(bs.map((b,i)=>restoreCharacterRun(b.s,{initialState:b.d.initialState,orderedInputs:b.d.orderedInputs,save:runs[i].save()})));
  for(let i=0;i<2;i++){equal(runs[i],repeat[i]);equal(runs[i],restored[i]);for(const r of [runs[i],repeat[i],restored[i]])await through(r,4n);equal(runs[i],repeat[i]);equal(runs[i],restored[i]);
   const obs=of(runs[i],203n);expect(obs).toHaveLength(1);expect(key(f(rec(f(rec(obs[0],203n),6n),204n),2n))).toBe(key(rational(BigInt(50+i),10n)));
   const intake=of(runs[i],337n),m1=of(runs[i],342n);expect(intake).toHaveLength(1);expect(m1).toHaveLength(1);expect(key(f(rec(intake[0],337n),2n))).toBe(key(obs[0]));expect(key(f(rec(m1[0],342n),2n))).toBe(key(intake[0]));
@@ -52,7 +57,7 @@ it('boundary146: hidden-without-probe equality, admission, source authenticity a
  for(const row of bad)await expect(createCharacterRun(m,{...b.d,orderedInputs:enc(list([row]))})).rejects.toThrow();
  await expect(createCharacterRun(m,{...b.d,orderedInputs:enc(list([rows[0],rows[0]]))})).rejects.toThrow();
  const old=await prepareCharacterModel({...b.s,rulesVersion:CARRIER_OBSERVATION_RULES,registrySchemaVersion:CARRIER_OBSERVATION_REGISTRY});await expect(createCharacterRun(old,b.d)).rejects.toThrow();
- const saved=await createCharacterRun(m,fixture(0).d);await through(saved,2n);await expect(restoreCharacterRun(b.s,{...fixture(1).d,save:saved.save()})).rejects.toThrow('commitments differ');
+ const saved=await createCharacterRun(m,fixture(0).d);await through(saved,2n);await expect(restoreCharacterRun(b.s,{initialState:fixture(1).d.initialState,orderedInputs:fixture(1).d.orderedInputs,save:saved.save()})).rejects.toThrow('commitments differ');
  const model=await compileCharacterModel(b.s),component=await compileCharacterState(model),inputs=await compileCharacterInputs(model,component,b.d),source=inputs.hiddenExposure!,event=source.events[0],instant=source.begin(2n);let allocations=0;const allocator={allocateRuntimeId:()=>BigInt(allocations++)};
  expect(()=>instant.execute({...event,eventId:event.eventId+1n},allocator)).toThrow();expect(()=>instant.execute({...event,eventSequence:event.eventSequence+1n},allocator)).toThrow();expect(allocations).toBe(0);instant.execute(event,allocator);expect(allocations).toBe(1);expect(()=>instant.execute(event,allocator)).toThrow();instant.close();expect(()=>instant.execute(event,allocator)).toThrow();
  console.info('M146 BOUNDARY PASS absent probe does not teach; wrong phase/time/holder/count/duplicate/version and changed manifest reject');
@@ -62,5 +67,17 @@ it('rollback146: phase140 failure publishes no exposure or partial state and rec
  const spy=vi.spyOn(adaptation,'compileAdaptationEvaluator').mockImplementation((...args)=>{const engine=original(...args);return {...engine,prepare(...p:Parameters<typeof engine.prepare>){const prepared=engine.prepare(...p);return {...prepared,begin(...a:Parameters<typeof prepared.begin>){const batch=prepared.begin(...a);return {...batch,execute(...e:Parameters<typeof batch.execute>){batch.execute(...e);throw Error('M146 after genuine adaptation evaluation');}};}};}};});
  let before:ReturnType<Run['snapshot']>,save:Uint8Array;
  try{const r=await createCharacterRun(m,b.d);await through(r,1n);before=r.snapshot();save=r.save();await expect(r.settleNextInstant()).rejects.toThrow('M146 after genuine adaptation evaluation');expect({...r.snapshot(),status:before.status}).toEqual(before);}finally{spy.mockRestore();}
- const restored=await restoreCharacterRun(b.s,{...b.d,save:save!}),clean=await createCharacterRun(m,b.d);await through(clean,1n);equal(clean,restored);await finish(clean,[restored]);console.info('M146 ROLLBACK PASS full instant atomic; canonical saved continuation exact');
+ const restored=await restoreCharacterRun(b.s,{initialState:b.d.initialState,orderedInputs:b.d.orderedInputs,save:save!}),clean=await createCharacterRun(m,b.d);await through(clean,1n);equal(clean,restored);await finish(clean,[restored]);console.info('M146 ROLLBACK PASS full instant atomic; canonical saved continuation exact');
+},590000);
+
+it('retained146: the same model keeps recognition-driven choices and protocol adaptation',async()=>{
+ const probabilities:string[]=[];
+ for(const visible of [true,false]){const b=historyFixture(visible),m=await prepareCharacterModel({...b.s,rulesVersion:HIDDEN_EXPOSURE_RULES,registrySchemaVersion:HIDDEN_EXPOSURE_REGISTRY}),r=await createCharacterRun(m,b.d);await through(r,4n);
+  expect(personMean(state(r).read(personPath(C,target)).value)).toEqual(visible?Q.of(1n):Q.of(1n,2n));
+  const decision=of(r,409n).find(v=>key(f(rec(v,409n),2n))===key(signed(4)))!;expect(decision).toBeDefined();const result=rec(f(rec(decision,409n),4n),419n);expect(key(f(result,1n))).toBe(key(u(3)));
+  const data=rec(f(result,2n),420n),isB=(v:CanonicalValue)=>key(f(rec(v,395n),2n))===key(tid(1027,text('definition/protocol-contact-two'))),row=items(f(data,2n),'list').map(v=>rec(v,421n)).find(v=>isB(f(v,1n))),probability=key(f(data,8n))===key(u(1))?Q.of(isB(f(data,1n))?1n:0n):row?readQ(f(row,2n)):Q.of(0n);probabilities.push(probability.numerator+'/'+probability.denominator);
+  const intent=of(r,425n).find(v=>key(f(rec(v,425n),2n))===key(decision))!,plan=of(r,431n).find(v=>key(f(rec(v,431n),2n))===key(intent))!,attempt=of(r,432n).find(v=>key(f(rec(v,432n),2n))===key(plan))!;expect(of(r,433n).some(v=>key(f(rec(v,433n),2n))===key(attempt))).toBe(true);
+  expect(of(r,307n)).toHaveLength(1);expect(of(r,324n)).toHaveLength(1);expect(named(r,'regulatory-adaptation')).toHaveLength(1);expect(named(r,'authored-regulatory-adaptation')).toHaveLength(0);await finish(r);
+ }
+ expect(probabilities).toEqual(['47/72','1/1']);console.info('M146 RETAINED PASS current0.109 SEM choice probabilities47/72 vs1; actual intent/plan/attempt/outcome; protocol adaptation remains sole actual-action consumer');
 },590000);
