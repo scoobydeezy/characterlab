@@ -1,54 +1,32 @@
-# Current work — M146 hidden exposure and later evidence
-One character will adapt to an unobserved physical exposure; only a later permitted
-probe can carry its effect into episodic memory. This is a bounded ADAPT package,
-not completion of the member or whole assembly. Owner continuation follows M145.
+# Current work — hidden exposure reaches later perceived memory
+The character now adapts to a controlled physical exposure without learning about
+it directly. A later permitted probe carries the effect into existing episodic
+memory and recall. Without the probe, cognition stays equal across the histories.
 
-## Card (before implementation)
-Baseline5439ba8e; rules/registry0.109 successor of0.108; encoding0.7 unchanged.
-Pinned PHEN-ADAPT-001v1.11.0:3/4/8/9/12..16 partial incorporation.
-Capabilities: admit regulatory exposure; evaluate original four rules in shared140;
-carry later diagnostic effect through accepted perception/intake into shared memory.
-Source uses304/305/307 and existing input roles/domains. Derived authored registration
-shares the unchanged regulatory evaluator/state, alongside existing protocol producer.
-One shared scheduler/allocator/save; no Campaign2/3 factory or alternate runtime.
-Scope <=9 production/test files: model, inputs, ingress, runtime, traceBinding,
-hiddenExposure, factory if restore requires it, test and fixture. Frozen trees unchanged.
-Versioned formal amendment committed with this card before implementation.
+M146 bounded package passes on rules/registry0.109, encoding0.7.
+Baseline5439ba8e; plan0d9951f0; final source d5e138d7.
+[Result](ASSEMBLED_CHARACTER_M146_RESULT.md); [checks](ASSEMBLED_CHARACTER_M146_CHECKS.txt).
+Six production/two test files. Seven targeted tests, types and preservation checks.
+Count0/1: four live no-change/change evaluations; exact four regulatory target keys.
+At4 actual measurement5 vs51/10 -> intake -> episode -> recall. Exact repeat,
+save2/every later boundary, atomic rollback, source authenticity and save tamper denial.
+Existing protocol adaptation and SEM probability1 vs47/72 remain; original controls pass.
+Three test-setup failures plus initial type error preserved; laws and gates unchanged.
+Verification596.702s charged (9m57s), longest113.374s; no extension.
 
-Comparison: same current49-slot model/S0/seed0, controlled exposure2 count0 vs1,
-probe4. Explicit canonical regulatory baseline (all302 leaves absent). Strip unrelated input events; initial tasks retain their declared dependencies,
-but no choice or social stimulus is scheduled. Body10; diagnostic channel live.
-Liveness: four applicable evaluations in both arms, zero is NoStateChange; one
-changes exactly tolerance/sensitization/displacement/load, never cognitive roots.
-Before4, all state except those four exact semantic paths equal. At4 require live
-permitted measurement5 vs51/10 and actual intake/episode consumer, not authored memory.
-No RNG claim: source/probe have no draws. Same event topology/allocator positions.
-No-probe control remains cognitively equal. Exact repeat and save after2, every later
-boundary continuation, failed-instant rollback; malformed/wrong-holder/version and
-pending-input tamper rejection. Source truth cannot become a cognitive read capability.
-Affected controls: original parent-pair plus current SEM retained witness (no source).
-Also run that witness on0.109: live47/72 vs1 decision and actual protocol307 ->
-original regulatory evaluator, with no authored consumer. This catches route diversion.
-Types, boundary, research, file-size and frozen-tree checks; no full C2 byte rerun:
-its dependency closure is unchanged. Risks: source authenticity, route identity,
-phase140 target collisions, probe allocation, restore and unchanged-version behavior.
+## Exact stopping point
+ADAPT is PARTIAL, not mapped complete.16/21 members mapped;0/15 families accepted;
+E46/P54/N17/U15=132 unchanged. SEM M145 remains complete in its pinned domain.
+Next bounded card: SAME exposure root independently produces accepted consequence
+SEM/EVID while its actual count changes adaptation; complete assembled learning
+route/state/output closure, including later owners, must remain explicit. Preserve
+wrong-route, collisions/frozen-B0 and all PHEN-ADAPT-001:3..19 comparison requirements.
+Do not substitute separate authored learning inputs or broaden to unrelated areas.
+M146 admits regulatory exposure only; no authored procedural source or same-instant
+original probe/deliberation. One evaluator/state/scheduler/save; no new runtime.
 
-Verification <=1800s cumulative including failures, <=600s/command, one job;
-<=20 evidence files/5MiB; <=12 production/test files hard limit. No verifier framework.
-Routine setup/implementation repairs self-approved before rerun; preserve failures.
-Done iff the declared native connection and controls pass within limits. Stop checks
-on pass. Commit one result, update register without exceeding64KiB, report limitations.
-Same-root immediate consequence/EVID branch, full assembled route/output closure,
-wrong-learning-route and complete member replay remain explicitly pending ADAPT work.
-No family closure, altered laws, UI, Campaign4 or autonomous partners.
-
-M145 SEM result remains valid:16/21 mapped,0/15 families;E46/P54/N17/U15=132.
-Research obligations0 active/18 conditional/4 closed/0 unowned; none retired here.
-
-Self-approved setup correction: b80ed9aa retains failed inherited nonzero D fixture.
-Remove its initial302 leaf in BOTH arms to meet declared baseline prediction; no
-law/count/seed/timing/gate change. Correct StatePath type140, normalized rational
-assertion and rollback boundary1 before injected exposure2 failure.
-The corrected pair passed live four-rule/hidden-state assertions; restore test
-passed forbidden runSeed via object spread. Correct only restore call fields to
-initialState/orderedInputs/save; public data-only boundary correctly rejected it.
+Owner continuation2026-11-17 applied after SEM. No next implementation package active;
+write bounded card before code. Final whole-candidate replay and family gaps remain.
+Frozen C0-C3/reference trees unchanged. No UI, Campaign4, autonomous-peer expansion,
+publishing, reductions or assembly acceptance.
+| Research obligations | **0 active / 18 conditional / 0 unowned** |

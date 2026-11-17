@@ -142,3 +142,94 @@ AssertionError: expected [ '1/1', '47/72' ] to deeply equal [ '47/72', '1/1' ]
 
 EXIT 1; elapsed 113.374s
 CHARGED 361.125
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/campaign2AdaptParentPair.test.ts", "src/test/assembledSemanticFinal.test.ts", "-t", "ADAPT-9b|primary145", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSemanticFinal.test.ts > primary145: partial cue access drives withdrawal, unchanged history and actual choice
+M145 P(action B), visible/hidden contradiction: 1/1 / 47/72
+M145 PRIMARY PASS partial permission -> explicit withdrawal -> withheld report attribution -> actual probability/execution; later correction preserves earlier evidence/history; full queues
+
+ ✓ src/test/assembledSemanticFinal.test.ts > primary145: partial cue access drives withdrawal, unchanged history and actual choice 85587ms
+ ✓ src/test/campaign2AdaptParentPair.test.ts > ADAPT-9b: same-S0 authored count intervention joins adaptation, observation, episode and restored recall 2427ms
+
+ Test Files  2 passed (2)
+      Tests  2 passed | 14 skipped (16)
+   Start at  12:26:20
+   Duration  93.22s (transform 2.95s, setup 0ms, collect 4.60s, tests 88.02s, environment 0ms, prepare 201ms)
+
+
+EXIT 0; elapsed 93.773s
+CHARGED 454.898
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledHiddenExposure.test.ts", "-t", "retained146|save146", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledHiddenExposure.test.ts > retained146: the same model keeps recognition-driven choices and protocol adaptation
+M146 RETAINED PASS current0.109 SEM visible/hidden contradiction P(B)=1 vs47/72; actual intent/plan/attempt/outcome; protocol adaptation remains sole actual-action consumer
+
+ ✓ src/test/assembledHiddenExposure.test.ts > retained146: the same model keeps recognition-driven choices and protocol adaptation 88561ms
+stdout | src/test/assembledHiddenExposure.test.ts > save146: pending source tamper rejects and actual mutation keys are the four governed targets
+M146 SAVE/KEYS PASS tampered pending source rejects before continuation; actual state/evaluated paths equal all four exact semantic targets
+
+ ✓ src/test/assembledHiddenExposure.test.ts > save146: pending source tamper rejects and actual mutation keys are the four governed targets 3643ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 8 skipped (10)
+   Start at  12:28:16
+   Duration  96.90s (transform 2.91s, setup 0ms, collect 4.36s, tests 92.20s, environment 0ms, prepare 104ms)
+
+
+EXIT 0; elapsed 97.451s
+CHARGED 552.349
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 18.786s
+CHARGED 571.135
+
+COMMAND ["python", "-c", "import subprocess\ncommands=[[\"node\",\"scripts/check-reference-boundary.mjs\"],[\"node\",\"scripts/check-research-obligations.mjs\"],[\"python\",\"-c\",\"from pathlib import Path\\nimport subprocess,json\\ngit=lambda *a:subprocess.check_output(['git',*a],text=True,encoding='utf-8').strip()\\nbase='5439ba8e'\\nallowed={'src/assembled/model.ts','src/assembled/inputs.ts','src/assembled/ingress.ts','src/assembled/runtime.ts','src/assembled/traceBinding.ts','src/assembled/hiddenExposure.ts','src/test/assembledHiddenExposure.test.ts','src/test/fixtures/assembledHiddenExposure.ts'}\\nchanged=set(git('diff','--name-only',base,'--','src').splitlines())\\nassert changed==allowed,(changed,allowed)\\nassert not git('diff','--name-only',base,'--','src/campaign2','src/campaign3','src/substrate','src/observation','src/semanticBinding','reference')\\nfor path,cap in [('AGENTS.md',120),('docs/planning/CURRENT.md',80),('docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md',250),('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md',250)]:\\n s=Path(path).read_text(encoding='utf-8-sig');assert len(s.splitlines())<=cap\\n if path.endswith('RECONCILIATION.md'):assert len(s.replace('\\\\r\\\\n','\\\\n').replace('\\\\n','\\\\r\\\\n').encode('utf-8'))<=65536\\npaths=list(Path('docs/planning').glob('ASSEMBLED_CHARACTER_M146*'))+[Path('docs/formal/ASSEMBLED_HIDDEN_EXPOSURE_V0_109.md')]\\nassert len(paths)<=20 and sum(p.stat().st_size for p in paths)<=5*1024*1024\\nbefore=json.loads(git('show',base+':docs/planning/RESEARCH_OBLIGATIONS.json'))\\nafter=json.loads(Path('docs/planning/RESEARCH_OBLIGATIONS.json').read_text())\\nassert before['obligations']==after['obligations']\\nassert after['reportReviews'][:-1]==before['reportReviews']\\nassert after['reportReviews'][-1]=={'path':'docs/planning/ASSEMBLED_CHARACTER_M146_RESULT.md','obligations':['RO-C3-020']}\\nprint('M146 PRESERVATION PASS: eight production/test files; six frozen trees byte-unchanged; planning caps; evidence '+str(len(paths))+' files/'+str(sum(p.stat().st_size for p in paths))+' bytes; original obligations/statuses unchanged.')\\n\"],[\"node\",\"scripts/check-git-file-sizes.mjs\"]]\nfor command in commands:\n subprocess.run(command,check=True)\n"]
+Reference boundary check passed.
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: CURRENT obligation counts are stale
+    at file:///C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/scripts/check-research-obligations.mjs:75:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.20.0
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+    subprocess.run(command,check=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\scoob\AppData\Local\Python\pythoncore-3.15-64\Lib\subprocess.py", line 692, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command ['node', 'scripts/check-research-obligations.mjs'] returned non-zero exit status 1.
+
+EXIT 1; elapsed 6.394s
+CHARGED 577.529
+
+COMMAND ["python", "-c", "import subprocess\ncommands=[[\"node\",\"scripts/check-research-obligations.mjs\"],[\"python\",\"-c\",\"from pathlib import Path\\nimport subprocess,json\\ngit=lambda *a:subprocess.check_output(['git',*a],text=True,encoding='utf-8').strip()\\nbase='5439ba8e'\\nallowed={'src/assembled/model.ts','src/assembled/inputs.ts','src/assembled/ingress.ts','src/assembled/runtime.ts','src/assembled/traceBinding.ts','src/assembled/hiddenExposure.ts','src/test/assembledHiddenExposure.test.ts','src/test/fixtures/assembledHiddenExposure.ts'}\\nchanged=set(git('diff','--name-only',base,'--','src').splitlines())\\nassert changed==allowed,(changed,allowed)\\nassert not git('diff','--name-only',base,'--','src/campaign2','src/campaign3','src/substrate','src/observation','src/semanticBinding','reference')\\nfor path,cap in [('AGENTS.md',120),('docs/planning/CURRENT.md',80),('docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md',250),('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md',250)]:\\n s=Path(path).read_text(encoding='utf-8-sig');assert len(s.splitlines())<=cap\\n if path.endswith('RECONCILIATION.md'):assert len(s.replace('\\\\r\\\\n','\\\\n').replace('\\\\n','\\\\r\\\\n').encode('utf-8'))<=65536\\npaths=list(Path('docs/planning').glob('ASSEMBLED_CHARACTER_M146*'))+[Path('docs/formal/ASSEMBLED_HIDDEN_EXPOSURE_V0_109.md')]\\nassert len(paths)<=20 and sum(p.stat().st_size for p in paths)<=5*1024*1024\\nbefore=json.loads(git('show',base+':docs/planning/RESEARCH_OBLIGATIONS.json'))\\nafter=json.loads(Path('docs/planning/RESEARCH_OBLIGATIONS.json').read_text())\\nassert before['obligations']==after['obligations']\\nassert after['reportReviews'][:-1]==before['reportReviews']\\nassert after['reportReviews'][-1]=={'path':'docs/planning/ASSEMBLED_CHARACTER_M146_RESULT.md','obligations':['RO-C3-020']}\\nprint('M146 PRESERVATION PASS: eight production/test files; six frozen trees byte-unchanged; planning caps; evidence '+str(len(paths))+' files/'+str(sum(p.stat().st_size for p in paths))+' bytes; original obligations/statuses unchanged.')\\n\"],[\"node\",\"scripts/check-git-file-sizes.mjs\"]]\nfor command in commands:\n subprocess.run(command,check=True)\n"]
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4367}
+M146 PRESERVATION PASS: eight production/test files; six frozen trees byte-unchanged; planning caps; evidence 3 files/22625 bytes; original obligations/statuses unchanged.
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 4.173s
+CHARGED 581.702
+
+BOOKKEEPING allowance15.000s charged; no extra validation.
+CHARGED 596.702
+FINAL PASS M146: seven targeted tests, types, boundary, research, preservation, size; no extension.
