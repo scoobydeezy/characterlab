@@ -1,0 +1,3889 @@
+M152 verification. Runner initial invocation failed before launching tsc: missing new log. Initialized here; no simulation run.
+Runner initialization also required CHARGED marker; failed before launching tsc. CHARGED 0
+CHARGED 0
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 18.755s
+CHARGED 18.755
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledLongitudinalCompletion.test.ts", "-t", "primary152", "--maxWorkers=1", "--minWorkers=1"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledLongitudinalCompletion.test.ts (7 tests | 1 failed | 6 skipped) 57403ms
+   × primary152: acquired biography, skill and relationship coexist across memory loss, interference and actual relearning 57402ms
+     → duplicate priority display
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledLongitudinalCompletion.test.ts > primary152: acquired biography, skill and relationship coexist across memory loss, interference and actual relearning
+SchedulerContractError: duplicate priority display
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ src/assembled/inputs.ts:76:390
+ ❯ Module.compileCharacterInputs src/assembled/inputs.ts:76:32
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:63
+ ❯ start src/test/assembledLongitudinalCompletion.test.ts:11:106
+ ❯ src/test/assembledLongitudinalCompletion.test.ts:17:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 6 skipped (7)
+   Start at  15:56:08
+   Duration  62.08s (transform 2.90s, setup 0ms, collect 4.36s, tests 57.40s, environment 0ms, prepare 101ms)
+
+
+EXIT 1; elapsed 62.660s
+CHARGED 81.415
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledLongitudinalCompletion.test.ts", "-t", "declaration152", "--maxWorkers=1", "--minWorkers=1"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledLongitudinalCompletion.test.ts > declaration152: report duplicate original source declarations before admission
+M152 duplicate { kind: 'signed', value: 6n } {
+  kind: 'typedIdentifier',
+  namespaceId: 1001n,
+  payload: { kind: 'text', value: 'event/assembled-priority-display' }
+}
+M152 frame4 [
+  {
+    kind: 'typedIdentifier',
+    namespaceId: 1001n,
+    payload: { kind: 'text', value: 'event/deliberation-opportunity' }
+  },
+  {
+    kind: 'typedIdentifier',
+    namespaceId: 1001n,
+    payload: { kind: 'text', value: 'event/assembled-identity-context' }
+  },
+  {
+    kind: 'typedIdentifier',
+    namespaceId: 1001n,
+    payload: { kind: 'text', value: 'event/assembled-self-context' }
+  },
+  {
+    kind: 'typedIdentifier',
+    namespaceId: 1001n,
+    payload: { kind: 'text', value: 'event/assembled-values-context' }
+  },
+  {
+    kind: 'typedIdentifier',
+    namespaceId: 1001n,
+    payload: { kind: 'text', value: 'event/assembled-practice-setting' }
+  },
+  {
+    kind: 'typedIdentifier',
+    namespaceId: 1001n,
+    payload: { kind: 'text', value: 'event/assembled-body-sample' }
+  },
+  {
+    kind: 'typedIdentifier',
+    namespaceId: 1001n,
+    payload: { kind: 'text', value: 'event/assembled-priority-display' }
+  }
+]
+
+ ✓ src/test/assembledLongitudinalCompletion.test.ts (8 tests | 7 skipped) 55222ms
+   ✓ declaration152: report duplicate original source declarations before admission 55221ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  15:57:25
+   Duration  59.91s (transform 2.91s, setup 0ms, collect 4.37s, tests 55.22s, environment 0ms, prepare 103ms)
+
+
+EXIT 0; elapsed 60.458s
+CHARGED 141.873
+
+Setup repair: original priority-display6 collided with cloned full opportunity6. Replace only that inherited display with the explicit declared A-only display. No runtime executed in failed admission. Same laws, seeds, stages and gate. Cache immutable source fixture construction; no scenario/check removed.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledLongitudinalCompletion.test.ts", "src/test/assembledProceduralInterference.test.ts", "-t", "primary152|kernel152|grammar152|declaration152", "--maxWorkers=1", "--minWorkers=1"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledLongitudinalCompletion.test.ts > primary152: acquired biography, skill and relationship coexist across memory loss, interference and actual relearning
+M152 BIO 1 -25/972
+
+ ❯ src/test/assembledLongitudinalCompletion.test.ts (8 tests | 1 failed | 6 skipped) 89195ms
+   × primary152: acquired biography, skill and relationship coexist across memory loss, interference and actual relearning 89183ms
+     → Cannot read properties of undefined (reading 'kind')
+stdout | src/test/assembledLongitudinalCompletion.test.ts > declaration152: report duplicate original source declarations before admission
+M152 frame4 [
+  {
+    kind: 'typedIdentifier',
+    namespaceId: 1001n,
+    payload: { kind: 'text', value: 'event/deliberation-opportunity' }
+  },
+  {
+    kind: 'typedIdentifier',
+    namespaceId: 1001n,
+    payload: { kind: 'text', value: 'event/assembled-identity-context' }
+  },
+  {
+    kind: 'typedIdentifier',
+    namespaceId: 1001n,
+    payload: { kind: 'text', value: 'event/assembled-self-context' }
+  },
+  {
+    kind: 'typedIdentifier',
+    namespaceId: 1001n,
+    payload: { kind: 'text', value: 'event/assembled-values-context' }
+  },
+  {
+    kind: 'typedIdentifier',
+    namespaceId: 1001n,
+    payload: { kind: 'text', value: 'event/assembled-practice-setting' }
+  },
+  {
+    kind: 'typedIdentifier',
+    namespaceId: 1001n,
+    payload: { kind: 'text', value: 'event/assembled-body-sample' }
+  },
+  {
+    kind: 'typedIdentifier',
+    namespaceId: 1001n,
+    payload: { kind: 'text', value: 'event/assembled-priority-display' }
+  }
+]
+
+ ❯ src/test/assembledProceduralInterference.test.ts (2 tests | 1 failed) 8ms
+   × kernel152: quarter loss, floor, ordering and counts match original; D3 practice remains distinct 5ms
+     → LONGITUDINAL_CODEC: id:1157
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledLongitudinalCompletion.test.ts > primary152: acquired biography, skill and relationship coexist across memory loss, interference and actual relearning
+TypeError: Cannot read properties of undefined (reading 'kind')
+ ❯ encodeValue src/substrate/canonicalEncoding.ts:136:17
+    134|   if (value === true) return output.push(Tag.True), undefined;
+    135|\x20
+    136|   switch (value.kind) {
+       |                 ^
+    137|     case 'unsigned':
+    138|       output.push(Tag.Unsigned, ...encodeUnsigned(value.value));
+ ❯ Module.canonicalEncode src/substrate/canonicalEncoding.ts:101:3
+ ❯ Module.dataKey src/campaign2/canonicalData.ts:6:57
+ ❯ src/test/assembledLongitudinalCompletion.test.ts:14:346
+ ❯ report src/test/assembledLongitudinalCompletion.test.ts:14:297
+ ❯ actual src/test/assembledLongitudinalCompletion.test.ts:15:95
+ ❯ src/test/assembledLongitudinalCompletion.test.ts:20:217
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  src/test/assembledProceduralInterference.test.ts > kernel152: quarter loss, floor, ordering and counts match original; D3 practice remains distinct
+Error: LONGITUDINAL_CODEC: id:1157
+ ❯ fail src/campaign3/longitudinalCodecs.ts:10:39
+      8| const added:RecordSchema[]=allocation.records.map(d=>({typeId:BigInt(d…
+      9| const schemas=[...relationshipSupportedSchemas(),...added],registry=ne…
+     10| const fail=(why:string):never=>{throw Error('LONGITUDINAL_CODEC: '+why…
+       |                                       ^
+     11| function envelope(v:CanonicalValue):CanonicalValue {
+     12|  if(typeof v==='boolean')return v;
+ ❯ typed src/campaign3/longitudinalCodecs.ts:46:99
+ ❯ validate src/campaign3/longitudinalCodecs.ts:61:98
+ ❯ decodeLongitudinal src/campaign3/longitudinalCodecs.ts:64:114
+ ❯ Module.longitudinalRecord src/campaign3/longitudinalCodecs.ts:66:134
+ ❯ src/test/assembledProceduralInterference.test.ts:12:44
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+ Test Files  2 failed (2)
+      Tests  2 failed | 2 passed | 6 skipped (10)
+   Start at  15:58:54
+   Duration  94.64s (transform 2.95s, setup 0ms, collect 4.83s, tests 89.20s, environment 0ms, prepare 200ms)
+
+
+EXIT 1; elapsed 95.200s
+CHARGED 237.073
+
+Test-helper repairs: trace search must skip empty output lists; original LONG source needs occurrence1157 with unsigned payload. Native acquisition/quarter-loss/non-target/episode assertions already reached before helper failure. No production/scenario/law change.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledLongitudinalCompletion.test.ts", "src/test/assembledProceduralInterference.test.ts", "-t", "primary152|kernel152", "--maxWorkers=1", "--minWorkers=1"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledLongitudinalCompletion.test.ts > primary152: acquired biography, skill and relationship coexist across memory loss, interference and actual relearning
+M152 BIO 1 -25/972
+M152 PRIMARY PASS BIO qualified; K1/2->1/4->3/8; REL count2; actual32 fails/36 succeeds; non-target histories byte-identical; recent episodes lost
+
+ ✓ src/test/assembledLongitudinalCompletion.test.ts (8 tests | 7 skipped) 120619ms
+   ✓ primary152: acquired biography, skill and relationship coexist across memory loss, interference and actual relearning 120618ms
+ ❯ src/test/assembledProceduralInterference.test.ts (2 tests | 1 failed | 1 skipped) 5ms
+   × kernel152: quarter loss, floor, ordering and counts match original; D3 practice remains distinct 5ms
+     → LONGITUDINAL_CODEC: boolean
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledProceduralInterference.test.ts > kernel152: quarter loss, floor, ordering and counts match original; D3 practice remains distinct
+Error: LONGITUDINAL_CODEC: boolean
+ ❯ fail src/campaign3/longitudinalCodecs.ts:10:39
+      8| const added:RecordSchema[]=allocation.records.map(d=>({typeId:BigInt(d…
+      9| const schemas=[...relationshipSupportedSchemas(),...added],registry=ne…
+     10| const fail=(why:string):never=>{throw Error('LONGITUDINAL_CODEC: '+why…
+       |                                       ^
+     11| function envelope(v:CanonicalValue):CanonicalValue {
+     12|  if(typeof v==='boolean')return v;
+ ❯ typed src/campaign3/longitudinalCodecs.ts:43:41
+ ❯ validate src/campaign3/longitudinalCodecs.ts:61:98
+ ❯ decodeLongitudinal src/campaign3/longitudinalCodecs.ts:64:114
+ ❯ Module.longitudinalRecord src/campaign3/longitudinalCodecs.ts:66:134
+ ❯ src/test/assembledProceduralInterference.test.ts:12:44
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 1 passed | 8 skipped (10)
+   Start at  16:00:47
+   Duration  126.23s (transform 3.08s, setup 0ms, collect 5.01s, tests 120.62s, environment 0ms, prepare 199ms)
+
+
+EXIT 1; elapsed 126.794s
+CHARGED 363.867
+
+Kernel adapter correction: original source field7 is participation:boolean, not display enum. Ramp phase2 is5/2 gain, so no phase exactly equals original linear1/4; compare original loss projection then unchanged D3 practice, with early/late numerical differences explicit. No model math changes. Native primary passed through36.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledProceduralInterference.test.ts", "--maxWorkers=1", "--minWorkers=1"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledProceduralInterference.test.ts > kernel152: quarter loss, floor, ordering and counts match original; D3 practice remains distinct
+M152 KERNEL PASS 24 original loss correspondence plus adopted D3 composition; D3 early/late differences retained
+
+ ✓ src/test/assembledProceduralInterference.test.ts (2 tests) 9ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  16:03:18
+   Duration  1.76s (transform 905ms, setup 0ms, collect 1.46s, tests 9ms, environment 0ms, prepare 102ms)
+
+
+EXIT 0; elapsed 2.294s
+CHARGED 366.161
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 19.067s
+CHARGED 385.228
+
+Pre-execution comparison amendment: add encoded-encounter control with normal positive reports at cooperation8/9 (receipts4/5; later35 receipt6). Main and all existing contrasts unchanged. Must show actual social episode presence at9 and later removal with relationship history retained. Never-encoded is not forgetting. Same law, model parameters, seed, capacity, loss/practice and budget.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledLongitudinalCompletionControls.test.ts", "-t", "comparisons152|boundaries152", "--maxWorkers=1", "--minWorkers=1"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledLongitudinalCompletionControls.test.ts > comparisons152: isolated owners agree; loss and fresh practice affect real execution; storage alternatives preserve only named queries
+M152 COMPARISONS PASS isolated BIO exact with identical actual natural draws; skill/REL projections equal; no-loss32 succeeds, untrained36 fails; compact fold equal/overwrite loses families/episodic-only loses acquired detail
+
+stdout | src/test/assembledLongitudinalCompletionControls.test.ts > boundaries152: fixed-display hidden truth and later false claims preserve historical learning; owner and initial-state checks reject shortcuts
+M152 BOUNDARIES PASS fixed-evidence hidden full state; later false belief cannot revise historical expression/relationship; wrong owner/foreign/learned S0 reject
+
+ ✓ src/test/assembledLongitudinalCompletionControls.test.ts (12 tests | 10 skipped) 442841ms
+   ✓ comparisons152: isolated owners agree; loss and fresh practice affect real execution; storage alternatives preserve only named queries 300819ms
+   ✓ boundaries152: fixed-display hidden truth and later false claims preserve historical learning; owner and initial-state checks reject shortcuts 142021ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 10 skipped (12)
+   Start at  16:04:14
+   Duration  447.64s (transform 2.94s, setup 0ms, collect 4.42s, tests 442.84s, environment 0ms, prepare 103ms)
+
+
+EXIT 0; elapsed 448.192s
+CHARGED 833.420
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledLongitudinalCompletionControls.test.ts", "-t", "persistence152|rollback152|encoding152|version152", "--maxWorkers=1", "--minWorkers=1"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledLongitudinalCompletionControls.test.ts > persistence152: repeat and saves before and after loss preserve all bytes at every settlement
+M152 PERSISTENCE PASS repeat/save9/save30 all bytes every settlement; terminal 101
+
+ ❯ src/test/assembledLongitudinalCompletionControls.test.ts (14 tests | 3 failed | 10 skipped) 378316ms
+   ✓ persistence152: repeat and saves before and after loss preserve all bytes at every settlement 331583ms
+   × rollback152: fault after computed loss rolls back whole instant and all learned owners 27609ms
+     → expected 30n to be 29n // Object.is equality
+   × encoding152: actually encoded encounters disappear while owned relationship remains; episodic-only receipt retention loses comfort 17502ms
+     → expected [] to have a length of 2 but got +0
+   × version152: retained zero is valid only in successor; old bundle rejects new source grammar 1621ms
+     → expected { kind: 'set', …(1) } to deeply equal { kind: 'set', …(1) }
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledLongitudinalCompletionControls.test.ts > rollback152: fault after computed loss rolls back whole instant and all learned owners
+AssertionError: expected 30n to be 29n // Object.is equality
+
+- Expected
++ Received
+
+- 29n
++ 30n
+
+ ❯ Module.through src/test/assembledMultiReceipts.test.ts:13:189
+
+ ❯ src/test/assembledLongitudinalCompletionControls.test.ts:53:24
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/3]⎯
+
+ FAIL  src/test/assembledLongitudinalCompletionControls.test.ts > encoding152: actually encoded encounters disappear while owned relationship remains; episodic-only receipt retention loses comfort
+AssertionError: expected [] to have a length of 2 but got +0
+
+- Expected
++ Received
+
+- 2
++ 0
+
+ ❯ src/test/assembledLongitudinalCompletionControls.test.ts:58:238
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/3]⎯
+
+ FAIL  src/test/assembledLongitudinalCompletionControls.test.ts > version152: retained zero is valid only in successor; old bundle rejects new source grammar
+AssertionError: expected { kind: 'set', …(1) } to deeply equal { kind: 'set', …(1) }
+
+- Expected
++ Received
+
+  Object {
+    "items": Array [
+      Object {
+        "fields": Map {
+          1n => Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "unsigned",
+                "value": 268n,
+              },
+              2n => Object {
+                "kind": "unsigned",
+                "value": 1n,
+              },
+              3n => Object {
+                "items": Array [
+                  Object {
+                    "fields": Map {
+                      1n => Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1000n,
+                        "payload": Object {
+                          "kind": "text",
+                          "value": "observer/bridge-subject",
+                        },
+                      },
+                    },
+                    "kind": "record",
+                    "schema": Object {
+                      "fields": Array [
+                        Object {
+                          "id": 1n,
+                          "name": "CanonicalMapKey",
+                          "required": true,
+                        },
+                      ],
+                      "name": "CanonicalMapKeySelector",
+                      "schemaVersion": 1n,
+                      "typeId": 142n,
+                    },
+                  },
+                ],
+                "kind": "list",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "RootStateTypeId",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "FieldId",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "Selectors",
+                  "required": true,
+                },
+              ],
+              "name": "StatePath",
+              "schemaVersion": 1n,
+              "typeId": 140n,
+            },
+          },
+          2n => Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1002n,
+                "payload": Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1037n,
+                  "payload": Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1038n,
+                    "payload": Object {
+                      "kind": "text",
+                      "value": "character/bridge-subject",
+                    },
+                  },
+                },
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "CharacterId",
+                  "required": true,
+                },
+              ],
+              "name": "CharacterObserverBindingValue",
+              "schemaVersion": 1n,
+              "typeId": 267n,
+            },
+          },
+        },
+        "kind": "record",
+        "schema": Object {
+          "fields": Array [
+            Object {
+              "id": 1n,
+              "name": "Path",
+              "required": true,
+            },
+            Object {
+              "id": 2n,
+              "name": "Value",
+              "required": true,
+            },
+          ],
+          "name": "StateLeaf",
+          "schemaVersion": 1n,
+          "typeId": 151n,
+        },
+      },
+      Object {
+        "fields": Map {
+          1n => Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "unsigned",
+-               "value": 302n,
++               "value": 785n,
+              },
+              2n => Object {
+                "kind": "unsigned",
+-               "value": 3n,
++               "value": 1n,
+              },
+              3n => Object {
+                "items": Array [
+                  Object {
+                    "fields": Map {
+                      1n => Object {
+-                       "fields": Map {
+-                         1n => Object {
++                       "items": Array [
++                         Object {
+                            "kind": "typedIdentifier",
+                            "namespaceId": 1002n,
+                            "payload": Object {
+                              "kind": "typedIdentifier",
+                              "namespaceId": 1037n,
+                              "payload": Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1038n,
+                                "payload": Object {
+                                  "kind": "text",
+                                  "value": "character/bridge-subject",
+                                },
+                              },
+                            },
+                          },
+-                         2n => Object {
++                         Object {
+                            "kind": "typedIdentifier",
+-                           "namespaceId": 1029n,
++                           "namespaceId": 1027n,
+                            "payload": Object {
+                              "kind": "text",
+-                             "value": "variable/fixture-regulation",
+-                           },
+-                         },
++                             "value": "definition/procedure/a",
+                            },
+-                       "kind": "record",
+-                       "schema": Object {
+-                         "fields": Array [
+-                           Object {
+-                             "id": 1n,
+-                             "name": "CharacterId",
+-                             "required": true,
+                          },
+-                           Object {
+-                             "id": 2n,
+-                             "name": "RegulatoryVariableId",
+-                             "required": true,
+-                           },
+                        ],
+-                         "name": "RegulatoryAdaptationKey",
+-                         "schemaVersion": 1n,
+-                         "typeId": 294n,
++                       "kind": "list",
+                      },
+                    },
+-                   },
+                    "kind": "record",
+                    "schema": Object {
+                      "fields": Array [
+                        Object {
+                          "id": 1n,
+                          "name": "CanonicalMapKey",
+                          "required": true,
+                        },
+                      ],
+                      "name": "CanonicalMapKeySelector",
+                      "schemaVersion": 1n,
+                      "typeId": 142n,
+                    },
+                  },
+                ],
+                "kind": "list",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "RootStateTypeId",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "FieldId",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "Selectors",
+                  "required": true,
+                },
+              ],
+              "name": "StatePath",
+              "schemaVersion": 1n,
+              "typeId": 140n,
+            },
+          },
+          2n => Object {
+-           "fields": Map {
+-             1n => Object {
+-               "kind": "signed",
+-               "value": -20n,
++           "items": Array [
++             Object {
++               "kind": "text",
++               "value": "assembled-procedures/0.1",
+              },
++             Object {
++               "denominator": 1n,
++               "kind": "rational",
++               "numerator": 0n,
+              },
+-           "kind": "record",
+-           "schema": Object {
+-             "fields": Array [
++             Object {
++               "kind": "unsigned",
++               "value": 1n,
++             },
+              Object {
+-                 "id": 1n,
+-                 "name": "Magnitude",
+-                 "required": true,
++               "kind": "typedIdentifier",
++               "namespaceId": 1027n,
++               "payload": Object {
++                 "kind": "text",
++                 "value": "definition/procedure/a",
++               },
+              },
+            ],
+-             "name": "RegulatoryAdaptationValue",
+-             "schemaVersion": 1n,
+-             "typeId": 299n,
++           "kind": "list",
+          },
+        },
+-       },
+        "kind": "record",
+        "schema": Object {
+          "fields": Array [
+            Object {
+              "id": 1n,
+              "name": "Path",
+              "required": true,
+            },
+            Object {
+              "id": 2n,
+              "name": "Value",
+              "required": true,
+            },
+          ],
+          "name": "StateLeaf",
+          "schemaVersion": 1n,
+          "typeId": 151n,
+        },
+      },
+      Object {
+        "fields": Map {
+          1n => Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "unsigned",
+-               "value": 455n,
++               "value": 302n,
+              },
+              2n => Object {
+                "kind": "unsigned",
+-               "value": 1n,
++               "value": 3n,
+              },
+              3n => Object {
+                "items": Array [
+                  Object {
++                   "fields": Map {
++                     1n => Object {
+                        "fields": Map {
+                          1n => Object {
+                            "kind": "typedIdentifier",
+                            "namespaceId": 1002n,
+                            "payload": Object {
+                              "kind": "typedIdentifier",
+                              "namespaceId": 1037n,
+                              "payload": Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1038n,
+                                "payload": Object {
+                                  "kind": "text",
+                                  "value": "character/bridge-subject",
+                                },
+                              },
+                            },
+                          },
++                         2n => Object {
++                           "kind": "typedIdentifier",
++                           "namespaceId": 1029n,
++                           "payload": Object {
++                             "kind": "text",
++                             "value": "variable/fixture-regulation",
+                            },
++                         },
++                       },
+                        "kind": "record",
+                        "schema": Object {
+                          "fields": Array [
+                            Object {
+                              "id": 1n,
++                             "name": "CharacterId",
++                             "required": true,
++                           },
++                           Object {
++                             "id": 2n,
++                             "name": "RegulatoryVariableId",
++                             "required": true,
++                           },
++                         ],
++                         "name": "RegulatoryAdaptationKey",
++                         "schemaVersion": 1n,
++                         "typeId": 294n,
++                       },
++                     },
++                   },
++                   "kind": "record",
++                   "schema": Object {
++                     "fields": Array [
++                       Object {
++                         "id": 1n,
+                          "name": "CanonicalMapKey",
+                          "required": true,
+                        },
+                      ],
+                      "name": "CanonicalMapKeySelector",
+                      "schemaVersion": 1n,
+                      "typeId": 142n,
+                    },
+                  },
+                ],
+                "kind": "list",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "RootStateTypeId",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "FieldId",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "Selectors",
+                  "required": true,
+                },
+              ],
+              "name": "StatePath",
+              "schemaVersion": 1n,
+              "typeId": 140n,
+            },
+          },
+          2n => Object {
+            "fields": Map {
+              1n => Object {
+-               "denominator": 1n,
+-               "kind": "rational",
+-               "numerator": 10n,
+-             },
+-             2n => Object {
+                "kind": "signed",
+-               "value": 0n,
++               "value": -20n,
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+-                 "name": "AmountAtAnchor",
+-                 "required": true,
+-               },
+-               Object {
+-                 "id": 2n,
+-                 "name": "AnchorInstant",
++                 "name": "Magnitude",
+                  "required": true,
+                },
+              ],
+-             "name": "ReserveAnchor",
++             "name": "RegulatoryAdaptationValue",
+              "schemaVersion": 1n,
+-             "typeId": 454n,
++             "typeId": 299n,
+            },
+          },
+        },
+        "kind": "record",
+        "schema": Object {
+          "fields": Array [
+            Object {
+              "id": 1n,
+              "name": "Path",
+              "required": true,
+            },
+            Object {
+              "id": 2n,
+              "name": "Value",
+              "required": true,
+            },
+          ],
+          "name": "StateLeaf",
+          "schemaVersion": 1n,
+          "typeId": 151n,
+        },
+      },
+      Object {
+        "fields": Map {
+          1n => Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "unsigned",
+-               "value": 373n,
++               "value": 455n,
+              },
+              2n => Object {
+                "kind": "unsigned",
+                "value": 1n,
+              },
+              3n => Object {
+                "items": Array [
+                  Object {
+                    "fields": Map {
+                      1n => Object {
+-                       "fields": Map {
+-                         1n => Object {
+                        "kind": "typedIdentifier",
+                        "namespaceId": 1002n,
+                        "payload": Object {
+                          "kind": "typedIdentifier",
+                          "namespaceId": 1037n,
+                          "payload": Object {
+                            "kind": "typedIdentifier",
+                            "namespaceId": 1038n,
+                            "payload": Object {
+                              "kind": "text",
+                              "value": "character/bridge-subject",
+-                               },
+-                             },
+-                           },
+-                         },
+-                         2n => Object {
+-                           "kind": "typedIdentifier",
+-                           "namespaceId": 1002n,
+-                           "payload": Object {
+-                             "kind": "typedIdentifier",
+-                             "namespaceId": 1037n,
+-                             "payload": Object {
+-                               "kind": "typedIdentifier",
+-                               "namespaceId": 1038n,
+-                               "payload": Object {
+-                                 "kind": "text",
+-                                 "value": "content/task-a",
+-                               },
+-                             },
+-                           },
+-                         },
+-                       },
+-                       "kind": "record",
+-                       "schema": Object {
+-                         "fields": Array [
+-                           Object {
+-                             "id": 1n,
+-                             "name": "CharacterId",
+-                             "required": true,
+                            },
+-                           Object {
+-                             "id": 2n,
+-                             "name": "TaskReferent",
+-                             "required": true,
+                          },
+-                         ],
+-                         "name": "TaskCommitmentKey",
+-                         "schemaVersion": 1n,
+-                         "typeId": 371n,
+                        },
+                      },
+                    },
+                    "kind": "record",
+                    "schema": Object {
+                      "fields": Array [
+                        Object {
+                          "id": 1n,
+                          "name": "CanonicalMapKey",
+                          "required": true,
+                        },
+                      ],
+                      "name": "CanonicalMapKeySelector",
+                      "schemaVersion": 1n,
+                      "typeId": 142n,
+                    },
+                  },
+                ],
+                "kind": "list",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "RootStateTypeId",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "FieldId",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "Selectors",
+                  "required": true,
+                },
+              ],
+              "name": "StatePath",
+              "schemaVersion": 1n,
+              "typeId": 140n,
+            },
+          },
+          2n => Object {
+            "fields": Map {
+              1n => Object {
+-               "kind": "unsigned",
+-               "value": 1n,
++               "denominator": 1n,
++               "kind": "rational",
++               "numerator": 10n,
++             },
++             2n => Object {
++               "kind": "signed",
++               "value": 0n,
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+-                 "name": "VariantTag",
++                 "name": "AmountAtAnchor",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+-                 "name": "ObservationRef",
+-                 "required": false,
+-               },
+-               Object {
+-                 "id": 3n,
+-                 "name": "ObservedAt",
+-                 "required": false,
++                 "name": "AnchorInstant",
++                 "required": true,
+                },
+              ],
+-             "name": "TaskCommitmentStatus",
++             "name": "ReserveAnchor",
+              "schemaVersion": 1n,
+-             "typeId": 372n,
++             "typeId": 454n,
+            },
+          },
+        },
+        "kind": "record",
+        "schema": Object {
+          "fields": Array [
+            Object {
+              "id": 1n,
+              "name": "Path",
+              "required": true,
+            },
+            Object {
+              "id": 2n,
+              "name": "Value",
+              "required": true,
+            },
+          ],
+          "name": "StateLeaf",
+          "schemaVersion": 1n,
+          "typeId": 151n,
+        },
+      },
+      Object {
+        "fields": Map {
+          1n => Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "unsigned",
+-               "value": 373n,
++               "value": 243n,
+              },
+              2n => Object {
+                "kind": "unsigned",
+                "value": 1n,
+              },
+              3n => Object {
+                "items": Array [
+                  Object {
+-                   "fields": Map {
+-                     1n => Object {
+                    "fields": Map {
+                      1n => Object {
+-                           "kind": "typedIdentifier",
+-                           "namespaceId": 1002n,
+-                           "payload": Object {
++                       "items": Array [
++                         Object {
+                            "kind": "typedIdentifier",
+-                             "namespaceId": 1037n,
++                           "namespaceId": 1000n,
+                            "payload": Object {
+-                               "kind": "typedIdentifier",
+-                               "namespaceId": 1038n,
+-                               "payload": Object {
+                              "kind": "text",
+-                                 "value": "character/bridge-subject",
+-                               },
+-                             },
++                             "value": "observer/bridge-subject",
+                            },
+                          },
+-                         2n => Object {
++                         Object {
+                            "kind": "typedIdentifier",
+                            "namespaceId": 1002n,
+                            "payload": Object {
+                              "kind": "typedIdentifier",
+                              "namespaceId": 1037n,
+                              "payload": Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1038n,
+                                "payload": Object {
+                                  "kind": "text",
+-                                 "value": "content/task-b",
+-                               },
+-                             },
++                                 "value": "content/catalog/person-2",
+                                },
+                              },
+                            },
+-                       "kind": "record",
+-                       "schema": Object {
+-                         "fields": Array [
+-                           Object {
+-                             "id": 1n,
+-                             "name": "CharacterId",
+-                             "required": true,
+                          },
+-                           Object {
+-                             "id": 2n,
+-                             "name": "TaskReferent",
+-                             "required": true,
+-                           },
+                        ],
+-                         "name": "TaskCommitmentKey",
+-                         "schemaVersion": 1n,
+-                         "typeId": 371n,
++                       "kind": "list",
+                      },
+                    },
+-                   },
+                    "kind": "record",
+                    "schema": Object {
+                      "fields": Array [
+                        Object {
+                          "id": 1n,
+                          "name": "CanonicalMapKey",
+                          "required": true,
+                        },
+                      ],
+                      "name": "CanonicalMapKeySelector",
+                      "schemaVersion": 1n,
+                      "typeId": 142n,
+                    },
+                  },
+                ],
+                "kind": "list",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "RootStateTypeId",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "FieldId",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "Selectors",
+                  "required": true,
+                },
+              ],
+              "name": "StatePath",
+              "schemaVersion": 1n,
+              "typeId": 140n,
+            },
+          },
+          2n => Object {
+            "fields": Map {
+              1n => Object {
++               "kind": "typedIdentifier",
++               "namespaceId": 1000n,
++               "payload": Object {
++                 "kind": "text",
++                 "value": "observer/bridge-subject",
++               },
++             },
++             2n => Object {
++               "kind": "typedIdentifier",
++               "namespaceId": 1002n,
++               "payload": Object {
++                 "kind": "typedIdentifier",
++                 "namespaceId": 1037n,
++                 "payload": Object {
++                   "kind": "typedIdentifier",
++                   "namespaceId": 1038n,
++                   "payload": Object {
++                     "kind": "text",
++                     "value": "content/catalog/person-2",
++                   },
++                 },
++               },
++             },
++             3n => Object {
+                "kind": "unsigned",
+                "value": 1n,
++             },
++             4n => Object {
++               "items": Array [
++                 Object {
++                   "kind": "typedIdentifier",
++                   "namespaceId": 1016n,
++                   "payload": Object {
++                     "kind": "text",
++                     "value": "appearance/stripe",
++                   },
++                 },
++               ],
++               "kind": "set",
++             },
++             5n => Object {
++               "kind": "text",
++               "value": "semantic-binding/0.1-candidate#SEM-001F",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+-                 "name": "VariantTag",
++                 "name": "ObserverId",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+-                 "name": "ObservationRef",
+-                 "required": false,
++                 "name": "CandidateSemanticReferentId",
++                 "required": true,
+                },
+                Object {
+                  "id": 3n,
+-                 "name": "ObservedAt",
+-                 "required": false,
++                 "name": "CandidateDomain",
++                 "required": true,
++               },
++               Object {
++                 "id": 4n,
++                 "name": "RecognitionTemplateIds",
++                 "required": true,
++               },
++               Object {
++                 "id": 5n,
++                 "name": "CatalogEntryVersion",
++                 "required": true,
+                },
+              ],
+-             "name": "TaskCommitmentStatus",
++             "name": "RecognitionCandidateCatalogEntry",
+              "schemaVersion": 1n,
+-             "typeId": 372n,
++             "typeId": 228n,
+            },
+          },
+        },
+        "kind": "record",
+        "schema": Object {
+          "fields": Array [
+            Object {
+              "id": 1n,
+              "name": "Path",
+              "required": true,
+            },
+            Object {
+              "id": 2n,
+              "name": "Value",
+              "required": true,
+            },
+          ],
+          "name": "StateLeaf",
+          "schemaVersion": 1n,
+          "typeId": 151n,
+        },
+      },
+      Object {
+        "fields": Map {
+          1n => Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "unsigned",
+-               "value": 373n,
++               "value": 243n,
+              },
+              2n => Object {
+                "kind": "unsigned",
+                "value": 1n,
+              },
+              3n => Object {
+                "items": Array [
+                  Object {
+                    "fields": Map {
+                      1n => Object {
+-                       "fields": Map {
+-                         1n => Object {
+-                           "kind": "typedIdentifier",
+-                           "namespaceId": 1002n,
+-                           "payload": Object {
+-                             "kind": "typedIdentifier",
+-                             "namespaceId": 1037n,
+-                             "payload": Object {
++                       "items": Array [
++                         Object {
+                            "kind": "typedIdentifier",
+-                               "namespaceId": 1038n,
++                           "namespaceId": 1000n,
+                            "payload": Object {
+                              "kind": "text",
+-                                 "value": "character/bridge-subject",
+-                               },
++                             "value": "observer/bridge-subject",
+                            },
+                          },
+-                         },
+-                         2n => Object {
++                         Object {
+                            "kind": "typedIdentifier",
+                            "namespaceId": 1002n,
+                            "payload": Object {
+                              "kind": "typedIdentifier",
+                              "namespaceId": 1037n,
+                              "payload": Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1038n,
+                                "payload": Object {
+                                  "kind": "text",
+-                                 "value": "content/configurable-garden",
+-                               },
+-                             },
+-                           },
++                                 "value": "content/catalog/person-3",
+                                },
+                              },
+-                       "kind": "record",
+-                       "schema": Object {
+-                         "fields": Array [
+-                           Object {
+-                             "id": 1n,
+-                             "name": "CharacterId",
+-                             "required": true,
+                            },
+-                           Object {
+-                             "id": 2n,
+-                             "name": "TaskReferent",
+-                             "required": true,
+                          },
+                        ],
+-                         "name": "TaskCommitmentKey",
+-                         "schemaVersion": 1n,
+-                         "typeId": 371n,
+-                       },
++                       "kind": "list",
+                      },
+                    },
+                    "kind": "record",
+                    "schema": Object {
+                      "fields": Array [
+                        Object {
+                          "id": 1n,
+                          "name": "CanonicalMapKey",
+                          "required": true,
+                        },
+                      ],
+                      "name": "CanonicalMapKeySelector",
+                      "schemaVersion": 1n,
+                      "typeId": 142n,
+                    },
+                  },
+                ],
+                "kind": "list",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "RootStateTypeId",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "FieldId",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "Selectors",
+                  "required": true,
+                },
+              ],
+              "name": "StatePath",
+              "schemaVersion": 1n,
+              "typeId": 140n,
+            },
+          },
+          2n => Object {
+            "fields": Map {
+              1n => Object {
++               "kind": "typedIdentifier",
++               "namespaceId": 1000n,
++               "payload": Object {
++                 "kind": "text",
++                 "value": "observer/bridge-subject",
++               },
++             },
++             2n => Object {
++               "kind": "typedIdentifier",
++               "namespaceId": 1002n,
++               "payload": Object {
++                 "kind": "typedIdentifier",
++                 "namespaceId": 1037n,
++                 "payload": Object {
++                   "kind": "typedIdentifier",
++                   "namespaceId": 1038n,
++                   "payload": Object {
++                     "kind": "text",
++                     "value": "content/catalog/person-3",
++                   },
++                 },
++               },
++             },
++             3n => Object {
+                "kind": "unsigned",
+                "value": 1n,
++             },
++             4n => Object {
++               "items": Array [
++                 Object {
++                   "kind": "typedIdentifier",
++                   "namespaceId": 1016n,
++                   "payload": Object {
++                     "kind": "text",
++                     "value": "appearance/hat",
++                   },
++                 },
++               ],
++               "kind": "set",
++             },
++             5n => Object {
++               "kind": "text",
++               "value": "semantic-binding/0.1-candidate#SEM-001F",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+-                 "name": "VariantTag",
++                 "name": "ObserverId",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+-                 "name": "ObservationRef",
+-                 "required": false,
++                 "name": "CandidateSemanticReferentId",
++                 "required": true,
+                },
+                Object {
+                  "id": 3n,
+-                 "name": "ObservedAt",
+-                 "required": false,
++                 "name": "CandidateDomain",
++                 "required": true,
++               },
++               Object {
++                 "id": 4n,
++                 "name": "RecognitionTemplateIds",
++                 "required": true,
++               },
++               Object {
++                 "id": 5n,
++                 "name": "CatalogEntryVersion",
++                 "required": true,
+                },
+              ],
+-             "name": "TaskCommitmentStatus",
++             "name": "RecognitionCandidateCatalogEntry",
+              "schemaVersion": 1n,
+-             "typeId": 372n,
++             "typeId": 228n,
+            },
+          },
+        },
+        "kind": "record",
+        "schema": Object {
+          "fields": Array [
+            Object {
+              "id": 1n,
+              "name": "Path",
+              "required": true,
+            },
+            Object {
+              "id": 2n,
+              "name": "Value",
+              "required": true,
+            },
+          ],
+          "name": "StateLeaf",
+          "schemaVersion": 1n,
+          "typeId": 151n,
+        },
+      },
+      Object {
+        "fields": Map {
+          1n => Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "unsigned",
+-               "value": 373n,
++               "value": 243n,
+              },
+              2n => Object {
+                "kind": "unsigned",
+-               "value": 2n,
++               "value": 1n,
+              },
+              3n => Object {
+                "items": Array [
+                  Object {
+                    "fields": Map {
+                      1n => Object {
+-                       "fields": Map {
+-                         1n => Object {
+-                           "kind": "typedIdentifier",
+-                           "namespaceId": 1002n,
+-                           "payload": Object {
+-                             "kind": "typedIdentifier",
+-                             "namespaceId": 1037n,
+-                             "payload": Object {
++                       "items": Array [
++                         Object {
+                            "kind": "typedIdentifier",
+-                               "namespaceId": 1038n,
++                           "namespaceId": 1000n,
+                            "payload": Object {
+                              "kind": "text",
+-                                 "value": "character/bridge-subject",
+-                               },
+-                             },
++                             "value": "observer/bridge-subject",
+                            },
+                          },
+-                         2n => Object {
++                         Object {
+                            "kind": "typedIdentifier",
+                            "namespaceId": 1002n,
+                            "payload": Object {
+                              "kind": "typedIdentifier",
+                              "namespaceId": 1037n,
+                              "payload": Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1038n,
+                                "payload": Object {
+                                  "kind": "text",
+-                                 "value": "content/task-a",
+-                               },
+-                             },
++                                 "value": "content/recognition/other",
+                                },
+                              },
+-                       },
+-                       "kind": "record",
+-                       "schema": Object {
+-                         "fields": Array [
+-                           Object {
+-                             "id": 1n,
+-                             "name": "CharacterId",
+-                             "required": true,
+                            },
+-                           Object {
+-                             "id": 2n,
+-                             "name": "TaskReferent",
+-                             "required": true,
+                          },
+                        ],
+-                         "name": "TaskCommitmentKey",
+-                         "schemaVersion": 1n,
+-                         "typeId": 371n,
+-                       },
++                       "kind": "list",
+                      },
+                    },
+                    "kind": "record",
+                    "schema": Object {
+                      "fields": Array [
+                        Object {
+                          "id": 1n,
+                          "name": "CanonicalMapKey",
+                          "required": true,
+                        },
+                      ],
+                      "name": "CanonicalMapKeySelector",
+                      "schemaVersion": 1n,
+                      "typeId": 142n,
+                    },
+                  },
+                ],
+                "kind": "list",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "RootStateTypeId",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "FieldId",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "Selectors",
+                  "required": true,
+                },
+              ],
+              "name": "StatePath",
+              "schemaVersion": 1n,
+              "typeId": 140n,
+            },
+          },
+          2n => Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "typedIdentifier",
+-               "namespaceId": 1027n,
++               "namespaceId": 1000n,
+                "payload": Object {
+                  "kind": "text",
+-                 "value": "definition/task-instruction-one",
++                 "value": "observer/bridge-subject",
++               },
++             },
++             2n => Object {
++               "kind": "typedIdentifier",
++               "namespaceId": 1002n,
++               "payload": Object {
++                 "kind": "typedIdentifier",
++                 "namespaceId": 1037n,
++                 "payload": Object {
++                   "kind": "typedIdentifier",
++                   "namespaceId": 1038n,
++                   "payload": Object {
++                     "kind": "text",
++                     "value": "content/recognition/other",
++                   },
++                 },
++               },
++             },
++             3n => Object {
++               "kind": "unsigned",
++               "value": 1n,
++             },
++             4n => Object {
++               "items": Array [
++                 Object {
++                   "kind": "typedIdentifier",
++                   "namespaceId": 1016n,
++                   "payload": Object {
++                     "kind": "text",
++                     "value": "appearance/plain",
++                   },
++                 },
++               ],
++               "kind": "set",
+              },
++             5n => Object {
++               "kind": "text",
++               "value": "semantic-binding/0.1-candidate#SEM-001F",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+-                 "name": "PlanInstructionDefinitionId",
++                 "name": "ObserverId",
++                 "required": true,
++               },
++               Object {
++                 "id": 2n,
++                 "name": "CandidateSemanticReferentId",
++                 "required": true,
++               },
++               Object {
++                 "id": 3n,
++                 "name": "CandidateDomain",
++                 "required": true,
++               },
++               Object {
++                 "id": 4n,
++                 "name": "RecognitionTemplateIds",
++                 "required": true,
++               },
++               Object {
++                 "id": 5n,
++                 "name": "CatalogEntryVersion",
+                  "required": true,
+                },
+              ],
+-             "name": "AdoptedTaskInstruction",
++             "name": "RecognitionCandidateCatalogEntry",
+              "schemaVersion": 1n,
+-             "typeId": 390n,
++             "typeId": 228n,
+            },
+          },
+        },
+        "kind": "record",
+        "schema": Object {
+          "fields": Array [
+            Object {
+              "id": 1n,
+              "name": "Path",
+              "required": true,
+            },
+            Object {
+              "id": 2n,
+              "name": "Value",
+              "required": true,
+            },
+          ],
+          "name": "StateLeaf",
+          "schemaVersion": 1n,
+          "typeId": 151n,
+        },
+      },
+      Object {
+        "fields": Map {
+          1n => Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "unsigned",
+-               "value": 373n,
++               "value": 243n,
+              },
+              2n => Object {
+                "kind": "unsigned",
+-               "value": 2n,
++               "value": 1n,
+              },
+              3n => Object {
+                "items": Array [
+                  Object {
+                    "fields": Map {
+                      1n => Object {
+-                       "fields": Map {
+-                         1n => Object {
++                       "items": Array [
++                         Object {
+                            "kind": "typedIdentifier",
+-                           "namespaceId": 1002n,
+-                           "payload": Object {
+-                             "kind": "typedIdentifier",
+-                             "namespaceId": 1037n,
+-                             "payload": Object {
+-                               "kind": "typedIdentifier",
+-                               "namespaceId": 1038n,
++                           "namespaceId": 1000n,
+                            "payload": Object {
+                              "kind": "text",
+-                                 "value": "character/bridge-subject",
+-                               },
++                             "value": "observer/bridge-subject",
+                            },
+                          },
+-                         },
+-                         2n => Object {
++                         Object {
+                            "kind": "typedIdentifier",
+                            "namespaceId": 1002n,
+                            "payload": Object {
+                              "kind": "typedIdentifier",
+                              "namespaceId": 1037n,
+                              "payload": Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1038n,
+                                "payload": Object {
+                                  "kind": "text",
+-                                 "value": "content/task-b",
+-                               },
++                                 "value": "content/assembled-social/target",
+                                },
+                              },
+                            },
+                          },
+-                       "kind": "record",
+-                       "schema": Object {
+-                         "fields": Array [
+-                           Object {
+-                             "id": 1n,
+-                             "name": "CharacterId",
+-                             "required": true,
+-                           },
+-                           Object {
+-                             "id": 2n,
+-                             "name": "TaskReferent",
+-                             "required": true,
+-                           },
+                        ],
+-                         "name": "TaskCommitmentKey",
+-                         "schemaVersion": 1n,
+-                         "typeId": 371n,
+-                       },
++                       "kind": "list",
+                      },
+                    },
+                    "kind": "record",
+                    "schema": Object {
+                      "fields": Array [
+                        Object {
+                          "id": 1n,
+                          "name": "CanonicalMapKey",
+                          "required": true,
+                        },
+                      ],
+                      "name": "CanonicalMapKeySelector",
+                      "schemaVersion": 1n,
+                      "typeId": 142n,
+                    },
+                  },
+                ],
+                "kind": "list",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "RootStateTypeId",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "FieldId",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "Selectors",
+                  "required": true,
+                },
+              ],
+              "name": "StatePath",
+              "schemaVersion": 1n,
+              "typeId": 140n,
+            },
+          },
+          2n => Object {
+            "fields": Map {
+              1n => Object {
++               "kind": "typedIdentifier",
++               "namespaceId": 1000n,
++               "payload": Object {
++                 "kind": "text",
++                 "value": "observer/bridge-subject",
++               },
++             },
++             2n => Object {
++               "kind": "typedIdentifier",
++               "namespaceId": 1002n,
++               "payload": Object {
+                  "kind": "typedIdentifier",
+-               "namespaceId": 1027n,
++                 "namespaceId": 1037n,
++                 "payload": Object {
++                   "kind": "typedIdentifier",
++                   "namespaceId": 1038n,
++                   "payload": Object {
++                     "kind": "text",
++                     "value": "content/assembled-social/target",
++                   },
++                 },
++               },
++             },
++             3n => Object {
++               "kind": "unsigned",
++               "value": 1n,
++             },
++             4n => Object {
++               "items": Array [
++                 Object {
++                   "kind": "typedIdentifier",
++                   "namespaceId": 1016n,
++                   "payload": Object {
++                     "kind": "text",
++                     "value": "appearance/coat",
++                   },
++                 },
++                 Object {
++                   "kind": "typedIdentifier",
++                   "namespaceId": 1016n,
+                    "payload": Object {
+                      "kind": "text",
+-                 "value": "definition/task-instruction-two",
++                     "value": "appearance/voice",
++                   },
++                 },
++               ],
++               "kind": "set",
+              },
++             5n => Object {
++               "kind": "text",
++               "value": "semantic-binding/0.1-candidate#SEM-001F",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+-                 "name": "PlanInstructionDefinitionId",
++                 "name": "ObserverId",
++                 "required": true,
++               },
++               Object {
++                 "id": 2n,
++                 "name": "CandidateSemanticReferentId",
++                 "required": true,
++               },
++               Object {
++                 "id": 3n,
++                 "name": "CandidateDomain",
++                 "required": true,
++               },
++               Object {
++                 "id": 4n,
++                 "name": "RecognitionTemplateIds",
++                 "required": true,
++               },
++               Object {
++                 "id": 5n,
++                 "name": "CatalogEntryVersion",
+                  "required": true,
+                },
+              ],
+-             "name": "AdoptedTaskInstruction",
++             "name": "RecognitionCandidateCatalogEntry",
+              "schemaVersion": 1n,
+-             "typeId": 390n,
++             "typeId": 228n,
+            },
+          },
+        },
+        "kind": "record",
+        "schema": Object {
+          "fields": Array [
+            Object {
+              "id": 1n,
+              "name": "Path",
+              "required": true,
+            },
+            Object {
+              "id": 2n,
+              "name": "Value",
+              "required": true,
+            },
+          ],
+          "name": "StateLeaf",
+          "schemaVersion": 1n,
+          "typeId": 151n,
+        },
+      },
+      Object {
+        "fields": Map {
+          1n => Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "unsigned",
+-               "value": 373n,
++               "value": 243n,
+              },
+              2n => Object {
+                "kind": "unsigned",
+                "value": 2n,
+              },
+              3n => Object {
+                "items": Array [
+                  Object {
+                    "fields": Map {
+                      1n => Object {
+-                       "fields": Map {
+-                         1n => Object {
+-                           "kind": "typedIdentifier",
+-                           "namespaceId": 1002n,
+-                           "payload": Object {
++                       "items": Array [
++                         Object {
+                            "kind": "typedIdentifier",
+-                             "namespaceId": 1037n,
+-                             "payload": Object {
+-                               "kind": "typedIdentifier",
+-                               "namespaceId": 1038n,
++                           "namespaceId": 1000n,
+                            "payload": Object {
+                              "kind": "text",
+-                                 "value": "character/bridge-subject",
++                             "value": "observer/bridge-subject",
+                            },
+                          },
+-                           },
+-                         },
+-                         2n => Object {
+-                           "kind": "typedIdentifier",
+-                           "namespaceId": 1002n,
+-                           "payload": Object {
++                         Object {
+                            "kind": "typedIdentifier",
+-                             "namespaceId": 1037n,
+-                             "payload": Object {
+-                               "kind": "typedIdentifier",
+-                               "namespaceId": 1038n,
++                           "namespaceId": 1017n,
+                            "payload": Object {
+                              "kind": "text",
+-                                 "value": "content/configurable-garden",
+-                               },
+-                             },
+-                           },
+-                         },
+-                       },
+-                       "kind": "record",
+-                       "schema": Object {
+-                         "fields": Array [
+-                           Object {
+-                             "id": 1n,
+-                             "name": "CharacterId",
+-                             "required": true,
++                             "value": "name/alias",
+                            },
+-                           Object {
+-                             "id": 2n,
+-                             "name": "TaskReferent",
+-                             "required": true,
+                          },
+                        ],
+-                         "name": "TaskCommitmentKey",
+-                         "schemaVersion": 1n,
+-                         "typeId": 371n,
+-                       },
++                       "kind": "list",
+                      },
+                    },
+                    "kind": "record",
+                    "schema": Object {
+                      "fields": Array [
+                        Object {
+                          "id": 1n,
+                          "name": "CanonicalMapKey",
+                          "required": true,
+                        },
+                      ],
+                      "name": "CanonicalMapKeySelector",
+                      "schemaVersion": 1n,
+                      "typeId": 142n,
+                    },
+                  },
+                ],
+                "kind": "list",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "RootStateTypeId",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "FieldId",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "Selectors",
+                  "required": true,
+                },
+              ],
+              "name": "StatePath",
+              "schemaVersion": 1n,
+              "typeId": 140n,
+            },
+          },
+          2n => Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "typedIdentifier",
+-               "namespaceId": 1027n,
++               "namespaceId": 1107n,
++               "payload": Object {
++                 "kind": "unsigned",
++                 "value": 0n,
++               },
++             },
++             2n => Object {
++               "kind": "typedIdentifier",
++               "namespaceId": 1000n,
+                "payload": Object {
+                  "kind": "text",
+-                 "value": "definition/configurable-watering",
++                 "value": "observer/bridge-subject",
++               },
++             },
++             3n => Object {
++               "kind": "typedIdentifier",
++               "namespaceId": 1017n,
++               "payload": Object {
++                 "kind": "text",
++                 "value": "name/alias",
++               },
++             },
++             4n => Object {
++               "kind": "typedIdentifier",
++               "namespaceId": 1002n,
++               "payload": Object {
++                 "kind": "typedIdentifier",
++                 "namespaceId": 1037n,
++                 "payload": Object {
++                   "kind": "typedIdentifier",
++                   "namespaceId": 1038n,
++                   "payload": Object {
++                     "kind": "text",
++                     "value": "content/assembled-social/target",
++                   },
+                  },
+                },
+              },
++             5n => Object {
++               "kind": "text",
++               "value": "assembled-character-recognition-symbol/0.1-candidate",
++             },
++           },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+-                 "name": "PlanInstructionDefinitionId",
++                 "name": "ObserverSymbolCandidateMappingId",
++                 "required": true,
++               },
++               Object {
++                 "id": 2n,
++                 "name": "ObserverId",
++                 "required": true,
++               },
++               Object {
++                 "id": 3n,
++                 "name": "PerceivedIdentitySymbolId",
++                 "required": true,
++               },
++               Object {
++                 "id": 4n,
++                 "name": "CandidateSemanticReferentId",
++                 "required": true,
++               },
++               Object {
++                 "id": 5n,
++                 "name": "MappingVersion",
+                  "required": true,
+                },
+              ],
+-             "name": "AdoptedTaskInstruction",
++             "name": "ObserverIdentitySymbolMapping",
+              "schemaVersion": 1n,
+-             "typeId": 390n,
++             "typeId": 229n,
+            },
+          },
+        },
+        "kind": "record",
+        "schema": Object {
+          "fields": Array [
+            Object {
+              "id": 1n,
+              "name": "Path",
+              "required": true,
+            },
+            Object {
+              "id": 2n,
+              "name": "Value",
+              "required": true,
+            },
+          ],
+          "name": "StateLeaf",
+          "schemaVersion": 1n,
+          "typeId": 151n,
+        },
+      },
+      Object {
+        "fields": Map {
+          1n => Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "unsigned",
+-               "value": 785n,
++               "value": 243n,
+              },
+              2n => Object {
+                "kind": "unsigned",
+-               "value": 1n,
++               "value": 2n,
+              },
+              3n => Object {
+                "items": Array [
+                  Object {
+                    "fields": Map {
+                      1n => Object {
+                        "items": Array [
+                          Object {
+                            "kind": "typedIdentifier",
+-                           "namespaceId": 1002n,
+-                           "payload": Object {
+-                             "kind": "typedIdentifier",
+-                             "namespaceId": 1037n,
+-                             "payload": Object {
+-                               "kind": "typedIdentifier",
+-                               "namespaceId": 1038n,
++                           "namespaceId": 1000n,
+                            "payload": Object {
+                              "kind": "text",
+-                                 "value": "character/bridge-subject",
+-                               },
+-                             },
++                             "value": "observer/bridge-subject",
+                            },
+                          },
+                          Object {
+                            "kind": "typedIdentifier",
+-                           "namespaceId": 1027n,
++                           "namespaceId": 1017n,
+                            "payload": Object {
+                              "kind": "text",
+-                             "value": "definition/procedure/a",
++                             "value": "name/visitor",
+                            },
+                          },
+                        ],
+                        "kind": "list",
+                      },
+                    },
+                    "kind": "record",
+                    "schema": Object {
+                      "fields": Array [
+                        Object {
+                          "id": 1n,
+                          "name": "CanonicalMapKey",
+                          "required": true,
+                        },
+                      ],
+                      "name": "CanonicalMapKeySelector",
+                      "schemaVersion": 1n,
+                      "typeId": 142n,
+                    },
+                  },
+                ],
+                "kind": "list",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "RootStateTypeId",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "FieldId",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "Selectors",
+                  "required": true,
+                },
+              ],
+              "name": "StatePath",
+              "schemaVersion": 1n,
+              "typeId": 140n,
+            },
+          },
+          2n => Object {
+-           "items": Array [
+-             Object {
++           "fields": Map {
++             1n => Object {
++               "kind": "typedIdentifier",
++               "namespaceId": 1107n,
++               "payload": Object {
++                 "kind": "unsigned",
++                 "value": 1n,
++               },
++             },
++             2n => Object {
++               "kind": "typedIdentifier",
++               "namespaceId": 1000n,
++               "payload": Object {
+                  "kind": "text",
+-               "value": "assembled-procedures/0.1",
++                 "value": "observer/bridge-subject",
++               },
+              },
+-             Object {
+-               "denominator": 1n,
+-               "kind": "rational",
+-               "numerator": 0n,
++             3n => Object {
++               "kind": "typedIdentifier",
++               "namespaceId": 1017n,
++               "payload": Object {
++                 "kind": "text",
++                 "value": "name/visitor",
+                },
+-             Object {
+-               "kind": "unsigned",
+-               "value": 1n,
+              },
+-             Object {
++             4n => Object {
++               "kind": "typedIdentifier",
++               "namespaceId": 1002n,
++               "payload": Object {
++                 "kind": "typedIdentifier",
++                 "namespaceId": 1037n,
++                 "payload": Object {
+                    "kind": "typedIdentifier",
+-               "namespaceId": 1027n,
++                   "namespaceId": 1038n,
+                    "payload": Object {
+                      "kind": "text",
+-                 "value": "definition/procedure/a",
++                     "value": "content/assembled-social/target",
++                   },
++                 },
++               },
+              },
++             5n => Object {
++               "kind": "text",
++               "value": "assembled-character-recognition-symbol/0.1-candidate",
++             },
++           },
++           "kind": "record",
++           "schema": Object {
++             "fields": Array [
++               Object {
++                 "id": 1n,
++                 "name": "ObserverSymbolCandidateMappingId",
++                 "required": true,
++               },
++               Object {
++                 "id": 2n,
++                 "name": "ObserverId",
++                 "required": true,
++               },
++               Object {
++                 "id": 3n,
++                 "name": "PerceivedIdentitySymbolId",
++                 "required": true,
++               },
++               Object {
++                 "id": 4n,
++                 "name": "CandidateSemanticReferentId",
++                 "required": true,
+                },
++               Object {
++                 "id": 5n,
++                 "name": "MappingVersion",
++                 "required": true,
++               },
+              ],
+-           "kind": "list",
++             "name": "ObserverIdentitySymbolMapping",
++             "schemaVersion": 1n,
++             "typeId": 229n,
+            },
+          },
++       },
+        "kind": "record",
+        "schema": Object {
+          "fields": Array [
+            Object {
+              "id": 1n,
+              "name": "Path",
+              "required": true,
+            },
+            Object {
+              "id": 2n,
+              "name": "Value",
+              "required": true,
+            },
+          ],
+          "name": "StateLeaf",
+          "schemaVersion": 1n,
+          "typeId": 151n,
+        },
+      },
+      Object {
+        "fields": Map {
+          1n => Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "unsigned",
+-               "value": 243n,
++               "value": 373n,
+              },
+              2n => Object {
+                "kind": "unsigned",
+                "value": 1n,
+              },
+              3n => Object {
+                "items": Array [
+                  Object {
+                    "fields": Map {
+                      1n => Object {
+-                       "items": Array [
+-                         Object {
++                       "fields": Map {
++                         1n => Object {
+                            "kind": "typedIdentifier",
+-                           "namespaceId": 1000n,
++                           "namespaceId": 1002n,
++                           "payload": Object {
++                             "kind": "typedIdentifier",
++                             "namespaceId": 1037n,
+                              "payload": Object {
++                               "kind": "typedIdentifier",
++                               "namespaceId": 1038n,
++                               "payload": Object {
+                                  "kind": "text",
+-                             "value": "observer/bridge-subject",
++                                 "value": "character/bridge-subject",
++                               },
++                             },
+                            },
+                          },
+-                         Object {
++                         2n => Object {
+                            "kind": "typedIdentifier",
+                            "namespaceId": 1002n,
+                            "payload": Object {
+                              "kind": "typedIdentifier",
+                              "namespaceId": 1037n,
+                              "payload": Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1038n,
+                                "payload": Object {
+                                  "kind": "text",
+-                                 "value": "content/catalog/person-2",
++                                 "value": "content/task-a",
++                               },
++                             },
+                            },
+                          },
+                        },
++                       "kind": "record",
++                       "schema": Object {
++                         "fields": Array [
++                           Object {
++                             "id": 1n,
++                             "name": "CharacterId",
++                             "required": true,
++                           },
++                           Object {
++                             "id": 2n,
++                             "name": "TaskReferent",
++                             "required": true,
+                            },
+                          ],
+-                       "kind": "list",
++                         "name": "TaskCommitmentKey",
++                         "schemaVersion": 1n,
++                         "typeId": 371n,
++                       },
+                      },
+                    },
+                    "kind": "record",
+                    "schema": Object {
+                      "fields": Array [
+                        Object {
+                          "id": 1n,
+                          "name": "CanonicalMapKey",
+                          "required": true,
+                        },
+                      ],
+                      "name": "CanonicalMapKeySelector",
+                      "schemaVersion": 1n,
+                      "typeId": 142n,
+                    },
+                  },
+                ],
+                "kind": "list",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "RootStateTypeId",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "FieldId",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "Selectors",
+                  "required": true,
+                },
+              ],
+              "name": "StatePath",
+              "schemaVersion": 1n,
+              "typeId": 140n,
+            },
+          },
+          2n => Object {
+            "fields": Map {
+              1n => Object {
+-               "kind": "typedIdentifier",
+-               "namespaceId": 1000n,
+-               "payload": Object {
+-                 "kind": "text",
+-                 "value": "observer/bridge-subject",
+-               },
+-             },
+-             2n => Object {
+-               "kind": "typedIdentifier",
+-               "namespaceId": 1002n,
+-               "payload": Object {
+-                 "kind": "typedIdentifier",
+-                 "namespaceId": 1037n,
+-                 "payload": Object {
+-                   "kind": "typedIdentifier",
+-                   "namespaceId": 1038n,
+-                   "payload": Object {
+-                     "kind": "text",
+-                     "value": "content/catalog/person-2",
+-                   },
+-                 },
+-               },
+-             },
+-             3n => Object {
+                "kind": "unsigned",
+                "value": 1n,
+-             },
+-             4n => Object {
+-               "items": Array [
+-                 Object {
+-                   "kind": "typedIdentifier",
+-                   "namespaceId": 1016n,
+-                   "payload": Object {
+-                     "kind": "text",
+-                     "value": "appearance/stripe",
+-                   },
+-                 },
+-               ],
+-               "kind": "set",
+-             },
+-             5n => Object {
+-               "kind": "text",
+-               "value": "semantic-binding/0.1-candidate#SEM-001F",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+-                 "name": "ObserverId",
++                 "name": "VariantTag",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+-                 "name": "CandidateSemanticReferentId",
+-                 "required": true,
++                 "name": "ObservationRef",
++                 "required": false,
+                },
+                Object {
+                  "id": 3n,
+-                 "name": "CandidateDomain",
+-                 "required": true,
+-               },
+-               Object {
+-                 "id": 4n,
+-                 "name": "RecognitionTemplateIds",
+-                 "required": true,
+-               },
+-               Object {
+-                 "id": 5n,
+-                 "name": "CatalogEntryVersion",
+-                 "required": true,
++                 "name": "ObservedAt",
++                 "required": false,
+                },
+              ],
+-             "name": "RecognitionCandidateCatalogEntry",
++             "name": "TaskCommitmentStatus",
+              "schemaVersion": 1n,
+-             "typeId": 228n,
++             "typeId": 372n,
+            },
+          },
+        },
+        "kind": "record",
+        "schema": Object {
+          "fields": Array [
+            Object {
+              "id": 1n,
+              "name": "Path",
+              "required": true,
+            },
+            Object {
+              "id": 2n,
+              "name": "Value",
+              "required": true,
+            },
+          ],
+          "name": "StateLeaf",
+          "schemaVersion": 1n,
+          "typeId": 151n,
+        },
+      },
+      Object {
+        "fields": Map {
+          1n => Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "unsigned",
+-               "value": 243n,
++               "value": 373n,
+              },
+              2n => Object {
+                "kind": "unsigned",
+                "value": 1n,
+              },
+              3n => Object {
+                "items": Array [
+                  Object {
+                    "fields": Map {
+                      1n => Object {
+-                       "items": Array [
+-                         Object {
++                       "fields": Map {
++                         1n => Object {
++                           "kind": "typedIdentifier",
++                           "namespaceId": 1002n,
++                           "payload": Object {
++                             "kind": "typedIdentifier",
++                             "namespaceId": 1037n,
++                             "payload": Object {
+                                "kind": "typedIdentifier",
+-                           "namespaceId": 1000n,
++                               "namespaceId": 1038n,
+                                "payload": Object {
+                                  "kind": "text",
+-                             "value": "observer/bridge-subject",
++                                 "value": "character/bridge-subject",
++                               },
++                             },
+                            },
+                          },
+-                         Object {
++                         2n => Object {
+                            "kind": "typedIdentifier",
+                            "namespaceId": 1002n,
+                            "payload": Object {
+                              "kind": "typedIdentifier",
+                              "namespaceId": 1037n,
+                              "payload": Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1038n,
+                                "payload": Object {
+                                  "kind": "text",
+-                                 "value": "content/catalog/person-3",
++                                 "value": "content/task-b",
++                               },
+                              },
+                            },
+                          },
+                        },
++                       "kind": "record",
++                       "schema": Object {
++                         "fields": Array [
++                           Object {
++                             "id": 1n,
++                             "name": "CharacterId",
++                             "required": true,
++                           },
++                           Object {
++                             "id": 2n,
++                             "name": "TaskReferent",
++                             "required": true,
++                           },
+                          ],
+-                       "kind": "list",
++                         "name": "TaskCommitmentKey",
++                         "schemaVersion": 1n,
++                         "typeId": 371n,
++                       },
+                      },
+                    },
+                    "kind": "record",
+                    "schema": Object {
+                      "fields": Array [
+                        Object {
+                          "id": 1n,
+                          "name": "CanonicalMapKey",
+                          "required": true,
+                        },
+                      ],
+                      "name": "CanonicalMapKeySelector",
+                      "schemaVersion": 1n,
+                      "typeId": 142n,
+                    },
+                  },
+                ],
+                "kind": "list",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "RootStateTypeId",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "FieldId",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "Selectors",
+                  "required": true,
+                },
+              ],
+              "name": "StatePath",
+              "schemaVersion": 1n,
+              "typeId": 140n,
+            },
+          },
+          2n => Object {
+            "fields": Map {
+              1n => Object {
+-               "kind": "typedIdentifier",
+-               "namespaceId": 1000n,
+-               "payload": Object {
+-                 "kind": "text",
+-                 "value": "observer/bridge-subject",
+-               },
+-             },
+-             2n => Object {
+-               "kind": "typedIdentifier",
+-               "namespaceId": 1002n,
+-               "payload": Object {
+-                 "kind": "typedIdentifier",
+-                 "namespaceId": 1037n,
+-                 "payload": Object {
+-                   "kind": "typedIdentifier",
+-                   "namespaceId": 1038n,
+-                   "payload": Object {
+-                     "kind": "text",
+-                     "value": "content/catalog/person-3",
+-                   },
+-                 },
+-               },
+-             },
+-             3n => Object {
+                "kind": "unsigned",
+                "value": 1n,
+-             },
+-             4n => Object {
+-               "items": Array [
+-                 Object {
+-                   "kind": "typedIdentifier",
+-                   "namespaceId": 1016n,
+-                   "payload": Object {
+-                     "kind": "text",
+-                     "value": "appearance/hat",
+-                   },
+-                 },
+-               ],
+-               "kind": "set",
+-             },
+-             5n => Object {
+-               "kind": "text",
+-               "value": "semantic-binding/0.1-candidate#SEM-001F",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+-                 "name": "ObserverId",
++                 "name": "VariantTag",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+-                 "name": "CandidateSemanticReferentId",
+-                 "required": true,
++                 "name": "ObservationRef",
++                 "required": false,
+                },
+                Object {
+                  "id": 3n,
+-                 "name": "CandidateDomain",
+-                 "required": true,
+-               },
+-               Object {
+-                 "id": 4n,
+-                 "name": "RecognitionTemplateIds",
+-                 "required": true,
++                 "name": "ObservedAt",
++                 "required": false,
+                },
+-               Object {
+-                 "id": 5n,
+-                 "name": "CatalogEntryVersion",
+-                 "required": true,
+-               },
+              ],
+-             "name": "RecognitionCandidateCatalogEntry",
++             "name": "TaskCommitmentStatus",
+              "schemaVersion": 1n,
+-             "typeId": 228n,
++             "typeId": 372n,
+            },
+          },
+        },
+        "kind": "record",
+        "schema": Object {
+          "fields": Array [
+            Object {
+              "id": 1n,
+              "name": "Path",
+              "required": true,
+            },
+            Object {
+              "id": 2n,
+              "name": "Value",
+              "required": true,
+            },
+          ],
+          "name": "StateLeaf",
+          "schemaVersion": 1n,
+          "typeId": 151n,
+        },
+      },
+      Object {
+        "fields": Map {
+          1n => Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "unsigned",
+-               "value": 243n,
++               "value": 373n,
+              },
+              2n => Object {
+                "kind": "unsigned",
+                "value": 1n,
+              },
+              3n => Object {
+                "items": Array [
+                  Object {
++                   "fields": Map {
++                     1n => Object {
+                        "fields": Map {
+                          1n => Object {
+-                       "items": Array [
+-                         Object {
++                           "kind": "typedIdentifier",
++                           "namespaceId": 1002n,
++                           "payload": Object {
+                              "kind": "typedIdentifier",
+-                           "namespaceId": 1000n,
++                             "namespaceId": 1037n,
+                              "payload": Object {
++                               "kind": "typedIdentifier",
++                               "namespaceId": 1038n,
++                               "payload": Object {
+                                  "kind": "text",
+-                             "value": "observer/bridge-subject",
++                                 "value": "character/bridge-subject",
++                               },
++                             },
+                            },
+                          },
+-                         Object {
++                         2n => Object {
+                            "kind": "typedIdentifier",
+                            "namespaceId": 1002n,
+                            "payload": Object {
+                              "kind": "typedIdentifier",
+                              "namespaceId": 1037n,
+                              "payload": Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1038n,
+                                "payload": Object {
+                                  "kind": "text",
+-                                 "value": "content/recognition/other",
++                                 "value": "content/configurable-garden",
++                               },
+                              },
+                            },
+                          },
+                        },
++                       "kind": "record",
++                       "schema": Object {
++                         "fields": Array [
++                           Object {
++                             "id": 1n,
++                             "name": "CharacterId",
++                             "required": true,
++                           },
++                           Object {
++                             "id": 2n,
++                             "name": "TaskReferent",
++                             "required": true,
++                           },
+                          ],
+-                       "kind": "list",
++                         "name": "TaskCommitmentKey",
++                         "schemaVersion": 1n,
++                         "typeId": 371n,
++                       },
+                      },
+                    },
+                    "kind": "record",
+                    "schema": Object {
+                      "fields": Array [
+                        Object {
+                          "id": 1n,
+                          "name": "CanonicalMapKey",
+                          "required": true,
+                        },
+                      ],
+                      "name": "CanonicalMapKeySelector",
+                      "schemaVersion": 1n,
+                      "typeId": 142n,
+                    },
+                  },
+                ],
+                "kind": "list",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "RootStateTypeId",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "FieldId",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "Selectors",
+                  "required": true,
+                },
+              ],
+              "name": "StatePath",
+              "schemaVersion": 1n,
+              "typeId": 140n,
+            },
+          },
+          2n => Object {
+            "fields": Map {
+              1n => Object {
+-               "kind": "typedIdentifier",
+-               "namespaceId": 1000n,
+-               "payload": Object {
+-                 "kind": "text",
+-                 "value": "observer/bridge-subject",
+-               },
+-             },
+-             2n => Object {
+-               "kind": "typedIdentifier",
+-               "namespaceId": 1002n,
+-               "payload": Object {
+-                 "kind": "typedIdentifier",
+-                 "namespaceId": 1037n,
+-                 "payload": Object {
+-                   "kind": "typedIdentifier",
+-                   "namespaceId": 1038n,
+-                   "payload": Object {
+-                     "kind": "text",
+-                     "value": "content/recognition/other",
+-                   },
+-                 },
+-               },
+-             },
+-             3n => Object {
+                "kind": "unsigned",
+                "value": 1n,
+-             },
+-             4n => Object {
+-               "items": Array [
+-                 Object {
+-                   "kind": "typedIdentifier",
+-                   "namespaceId": 1016n,
+-                   "payload": Object {
+-                     "kind": "text",
+-                     "value": "appearance/plain",
+-                   },
+              },
+-               ],
+-               "kind": "set",
+            },
+-             5n => Object {
+-               "kind": "text",
+-               "value": "semantic-binding/0.1-candidate#SEM-001F",
+-             },
+-           },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+-                 "name": "ObserverId",
++                 "name": "VariantTag",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+-                 "name": "CandidateSemanticReferentId",
+-                 "required": true,
++                 "name": "ObservationRef",
++                 "required": false,
+                },
+                Object {
+                  "id": 3n,
+-                 "name": "CandidateDomain",
+-                 "required": true,
+-               },
+-               Object {
+-                 "id": 4n,
+-                 "name": "RecognitionTemplateIds",
+-                 "required": true,
+-               },
+-               Object {
+-                 "id": 5n,
+-                 "name": "CatalogEntryVersion",
+-                 "required": true,
++                 "name": "ObservedAt",
++                 "required": false,
+                },
+              ],
+-             "name": "RecognitionCandidateCatalogEntry",
++             "name": "TaskCommitmentStatus",
+              "schemaVersion": 1n,
+-             "typeId": 228n,
++             "typeId": 372n,
+            },
+          },
+        },
+        "kind": "record",
+        "schema": Object {
+          "fields": Array [
+            Object {
+              "id": 1n,
+              "name": "Path",
+              "required": true,
+            },
+            Object {
+              "id": 2n,
+              "name": "Value",
+              "required": true,
+            },
+          ],
+          "name": "StateLeaf",
+          "schemaVersion": 1n,
+          "typeId": 151n,
+        },
+      },
+      Object {
+        "fields": Map {
+          1n => Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "unsigned",
+-               "value": 243n,
++               "value": 373n,
+              },
+              2n => Object {
+                "kind": "unsigned",
+-               "value": 1n,
++               "value": 2n,
+              },
+              3n => Object {
+                "items": Array [
+                  Object {
+                    "fields": Map {
+                      1n => Object {
+-                       "items": Array [
+-                         Object {
++                       "fields": Map {
++                         1n => Object {
++                           "kind": "typedIdentifier",
++                           "namespaceId": 1002n,
++                           "payload": Object {
++                             "kind": "typedIdentifier",
++                             "namespaceId": 1037n,
++                             "payload": Object {
+                                "kind": "typedIdentifier",
+-                           "namespaceId": 1000n,
++                               "namespaceId": 1038n,
+                                "payload": Object {
+                                  "kind": "text",
+-                             "value": "observer/bridge-subject",
++                                 "value": "character/bridge-subject",
++                               },
+                              },
+                            },
+-                         Object {
++                         },
++                         2n => Object {
+                            "kind": "typedIdentifier",
+                            "namespaceId": 1002n,
+                            "payload": Object {
+                              "kind": "typedIdentifier",
+                              "namespaceId": 1037n,
+                              "payload": Object {
+                                "kind": "typedIdentifier",
+                                "namespaceId": 1038n,
+                                "payload": Object {
+                                  "kind": "text",
+-                                 "value": "content/assembled-social/target",
++                                 "value": "content/task-a",
++                               },
+                              },
+                            },
+                          },
+                        },
++                       "kind": "record",
++                       "schema": Object {
++                         "fields": Array [
++                           Object {
++                             "id": 1n,
++                             "name": "CharacterId",
++                             "required": true,
++                           },
++                           Object {
++                             "id": 2n,
++                             "name": "TaskReferent",
++                             "required": true,
++                           },
+                          ],
+-                       "kind": "list",
++                         "name": "TaskCommitmentKey",
++                         "schemaVersion": 1n,
++                         "typeId": 371n,
++                       },
+                      },
+                    },
+                    "kind": "record",
+                    "schema": Object {
+                      "fields": Array [
+                        Object {
+                          "id": 1n,
+                          "name": "CanonicalMapKey",
+                          "required": true,
+                        },
+                      ],
+                      "name": "CanonicalMapKeySelector",
+                      "schemaVersion": 1n,
+                      "typeId": 142n,
+                    },
+                  },
+                ],
+                "kind": "list",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "RootStateTypeId",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "FieldId",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "Selectors",
+                  "required": true,
+                },
+              ],
+              "name": "StatePath",
+              "schemaVersion": 1n,
+              "typeId": 140n,
+            },
+          },
+          2n => Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "typedIdentifier",
+-               "namespaceId": 1000n,
++               "namespaceId": 1027n,
+                "payload": Object {
+                  "kind": "text",
+-                 "value": "observer/bridge-subject",
+-               },
+-             },
+-             2n => Object {
+-               "kind": "typedIdentifier",
+-               "namespaceId": 1002n,
+-               "payload": Object {
+-                 "kind": "typedIdentifier",
+-                 "namespaceId": 1037n,
+-                 "payload": Object {
+-                   "kind": "typedIdentifier",
+-                   "namespaceId": 1038n,
+-                   "payload": Object {
+-                     "kind": "text",
+-                     "value": "content/assembled-social/target",
+-                   },
+-                 },
+-               },
+-             },
+-             3n => Object {
+-               "kind": "unsigned",
+-               "value": 1n,
+-             },
+-             4n => Object {
+-               "items": Array [
+-                 Object {
+-                   "kind": "typedIdentifier",
+-                   "namespaceId": 1016n,
+-                   "payload": Object {
+-                     "kind": "text",
+-                     "value": "appearance/coat",
++                 "value": "definition/task-instruction-one",
+                },
+              },
+-                 Object {
+-                   "kind": "typedIdentifier",
+-                   "namespaceId": 1016n,
+-                   "payload": Object {
+-                     "kind": "text",
+-                     "value": "appearance/voice",
+-                   },
+-                 },
+-               ],
+-               "kind": "set",
+            },
+-             5n => Object {
+-               "kind": "text",
+-               "value": "semantic-binding/0.1-candidate#SEM-001F",
+-             },
+-           },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+-                 "name": "ObserverId",
++                 "name": "PlanInstructionDefinitionId",
+                  "required": true,
+                },
+-               Object {
+-                 "id": 2n,
+-                 "name": "CandidateSemanticReferentId",
+-                 "required": true,
+-               },
+-               Object {
+-                 "id": 3n,
+-                 "name": "CandidateDomain",
+-                 "required": true,
+-               },
+-               Object {
+-                 "id": 4n,
+-                 "name": "RecognitionTemplateIds",
+-                 "required": true,
+-               },
+-               Object {
+-                 "id": 5n,
+-                 "name": "CatalogEntryVersion",
+-                 "required": true,
+-               },
+              ],
+-             "name": "RecognitionCandidateCatalogEntry",
++             "name": "AdoptedTaskInstruction",
+              "schemaVersion": 1n,
+-             "typeId": 228n,
++             "typeId": 390n,
+            },
+          },
+        },
+        "kind": "record",
+        "schema": Object {
+          "fields": Array [
+            Object {
+              "id": 1n,
+              "name": "Path",
+              "required": true,
+            },
+            Object {
+              "id": 2n,
+              "name": "Value",
+              "required": true,
+            },
+          ],
+          "name": "StateLeaf",
+          "schemaVersion": 1n,
+          "typeId": 151n,
+        },
+      },
+      Object {
+        "fields": Map {
+          1n => Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "unsigned",
+-               "value": 243n,
++               "value": 373n,
+              },
+              2n => Object {
+                "kind": "unsigned",
+                "value": 2n,
+              },
+              3n => Object {
+                "items": Array [
+                  Object {
++                   "fields": Map {
++                     1n => Object {
+                        "fields": Map {
+                          1n => Object {
+-                       "items": Array [
+-                         Object {
++                           "kind": "typedIdentifier",
++                           "namespaceId": 1002n,
++                           "payload": Object {
++                             "kind": "typedIdentifier",
++                             "namespaceId": 1037n,
++                             "payload": Object {
+                                "kind": "typedIdentifier",
+-                           "namespaceId": 1000n,
++                               "namespaceId": 1038n,
+                                "payload": Object {
+                                  "kind": "text",
+-                             "value": "observer/bridge-subject",
++                                 "value": "character/bridge-subject",
++                               },
++                             },
+                            },
+                          },
+-                         Object {
++                         2n => Object {
+                            "kind": "typedIdentifier",
+-                           "namespaceId": 1017n,
++                           "namespaceId": 1002n,
++                           "payload": Object {
++                             "kind": "typedIdentifier",
++                             "namespaceId": 1037n,
++                             "payload": Object {
++                               "kind": "typedIdentifier",
++                               "namespaceId": 1038n,
+                                "payload": Object {
+                                  "kind": "text",
+-                             "value": "name/alias",
++                                 "value": "content/task-b",
++                               },
++                             },
++                           },
++                         },
+                        },
++                       "kind": "record",
++                       "schema": Object {
++                         "fields": Array [
++                           Object {
++                             "id": 1n,
++                             "name": "CharacterId",
++                             "required": true,
+                            },
++                           Object {
++                             "id": 2n,
++                             "name": "TaskReferent",
++                             "required": true,
++                           },
+                          ],
+-                       "kind": "list",
++                         "name": "TaskCommitmentKey",
++                         "schemaVersion": 1n,
++                         "typeId": 371n,
++                       },
+                      },
+                    },
+                    "kind": "record",
+                    "schema": Object {
+                      "fields": Array [
+                        Object {
+                          "id": 1n,
+                          "name": "CanonicalMapKey",
+                          "required": true,
+                        },
+                      ],
+                      "name": "CanonicalMapKeySelector",
+                      "schemaVersion": 1n,
+                      "typeId": 142n,
+                    },
+                  },
+                ],
+                "kind": "list",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "RootStateTypeId",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "FieldId",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "Selectors",
+                  "required": true,
+                },
+              ],
+              "name": "StatePath",
+              "schemaVersion": 1n,
+              "typeId": 140n,
+            },
+          },
+          2n => Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "typedIdentifier",
+-               "namespaceId": 1107n,
+-               "payload": Object {
+-                 "kind": "unsigned",
+-                 "value": 0n,
+-               },
+-             },
+-             2n => Object {
+-               "kind": "typedIdentifier",
+-               "namespaceId": 1000n,
+-               "payload": Object {
+-                 "kind": "text",
+-                 "value": "observer/bridge-subject",
+-               },
+-             },
+-             3n => Object {
+-               "kind": "typedIdentifier",
+-               "namespaceId": 1017n,
+-               "payload": Object {
+-                 "kind": "text",
+-                 "value": "name/alias",
+-               },
+-             },
+-             4n => Object {
+-               "kind": "typedIdentifier",
+-               "namespaceId": 1002n,
+-               "payload": Object {
+-                 "kind": "typedIdentifier",
+-                 "namespaceId": 1037n,
+-                 "payload": Object {
+-                   "kind": "typedIdentifier",
+-                   "namespaceId": 1038n,
++               "namespaceId": 1027n,
+                "payload": Object {
+                  "kind": "text",
+-                     "value": "content/assembled-social/target",
+-                   },
++                 "value": "definition/task-instruction-two",
+                },
+              },
+            },
+-             5n => Object {
+-               "kind": "text",
+-               "value": "assembled-character-recognition-symbol/0.1-candidate",
+-             },
+-           },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+-                 "name": "ObserverSymbolCandidateMappingId",
+-                 "required": true,
+-               },
+-               Object {
+-                 "id": 2n,
+-                 "name": "ObserverId",
++                 "name": "PlanInstructionDefinitionId",
+                  "required": true,
+                },
+-               Object {
+-                 "id": 3n,
+-                 "name": "PerceivedIdentitySymbolId",
+-                 "required": true,
+-               },
+-               Object {
+-                 "id": 4n,
+-                 "name": "CandidateSemanticReferentId",
+-                 "required": true,
+-               },
+-               Object {
+-                 "id": 5n,
+-                 "name": "MappingVersion",
+-                 "required": true,
+-               },
+              ],
+-             "name": "ObserverIdentitySymbolMapping",
++             "name": "AdoptedTaskInstruction",
+              "schemaVersion": 1n,
+-             "typeId": 229n,
++             "typeId": 390n,
+            },
+          },
+        },
+        "kind": "record",
+        "schema": Object {
+          "fields": Array [
+            Object {
+              "id": 1n,
+              "name": "Path",
+              "required": true,
+            },
+            Object {
+              "id": 2n,
+              "name": "Value",
+              "required": true,
+            },
+          ],
+          "name": "StateLeaf",
+          "schemaVersion": 1n,
+          "typeId": 151n,
+        },
+      },
+      Object {
+        "fields": Map {
+          1n => Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "unsigned",
+-               "value": 243n,
++               "value": 373n,
+              },
+              2n => Object {
+                "kind": "unsigned",
+                "value": 2n,
+              },
+              3n => Object {
+                "items": Array [
+                  Object {
+                    "fields": Map {
+                      1n => Object {
+-                       "items": Array [
+-                         Object {
++                       "fields": Map {
++                         1n => Object {
++                           "kind": "typedIdentifier",
++                           "namespaceId": 1002n,
++                           "payload": Object {
+                              "kind": "typedIdentifier",
+-                           "namespaceId": 1000n,
++                             "namespaceId": 1037n,
++                             "payload": Object {
++                               "kind": "typedIdentifier",
++                               "namespaceId": 1038n,
+                                "payload": Object {
+                                  "kind": "text",
+-                             "value": "observer/bridge-subject",
++                                 "value": "character/bridge-subject",
++                               },
++                             },
+                            },
+                          },
+-                         Object {
++                         2n => Object {
++                           "kind": "typedIdentifier",
++                           "namespaceId": 1002n,
++                           "payload": Object {
++                             "kind": "typedIdentifier",
++                             "namespaceId": 1037n,
++                             "payload": Object {
+                                "kind": "typedIdentifier",
+-                           "namespaceId": 1017n,
++                               "namespaceId": 1038n,
+                                "payload": Object {
+                                  "kind": "text",
+-                             "value": "name/visitor",
++                                 "value": "content/configurable-garden",
++                               },
++                             },
++                           },
++                         },
++                       },
++                       "kind": "record",
++                       "schema": Object {
++                         "fields": Array [
++                           Object {
++                             "id": 1n,
++                             "name": "CharacterId",
++                             "required": true,
+                            },
++                           Object {
++                             "id": 2n,
++                             "name": "TaskReferent",
++                             "required": true,
+                            },
+                          ],
+-                       "kind": "list",
++                         "name": "TaskCommitmentKey",
++                         "schemaVersion": 1n,
++                         "typeId": 371n,
+                        },
+                      },
++                   },
+                    "kind": "record",
+                    "schema": Object {
+                      "fields": Array [
+                        Object {
+                          "id": 1n,
+                          "name": "CanonicalMapKey",
+                          "required": true,
+                        },
+                      ],
+                      "name": "CanonicalMapKeySelector",
+                      "schemaVersion": 1n,
+                      "typeId": 142n,
+                    },
+                  },
+                ],
+                "kind": "list",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "RootStateTypeId",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "FieldId",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "Selectors",
+                  "required": true,
+                },
+              ],
+              "name": "StatePath",
+              "schemaVersion": 1n,
+              "typeId": 140n,
+            },
+          },
+          2n => Object {
+            "fields": Map {
+              1n => Object {
+-               "kind": "typedIdentifier",
+-               "namespaceId": 1107n,
+-               "payload": Object {
+-                 "kind": "unsigned",
+-                 "value": 1n,
+-               },
+-             },
+-             2n => Object {
+-               "kind": "typedIdentifier",
+-               "namespaceId": 1000n,
+-               "payload": Object {
+-                 "kind": "text",
+-                 "value": "observer/bridge-subject",
+-               },
+-             },
+-             3n => Object {
+                "kind": "typedIdentifier",
+-               "namespaceId": 1017n,
+-               "payload": Object {
+-                 "kind": "text",
+-                 "value": "name/visitor",
+-               },
+-             },
+-             4n => Object {
+-               "kind": "typedIdentifier",
+-               "namespaceId": 1002n,
+-               "payload": Object {
+-                 "kind": "typedIdentifier",
+-                 "namespaceId": 1037n,
++               "namespaceId": 1027n,
+                "payload": Object {
+-                   "kind": "typedIdentifier",
+-                   "namespaceId": 1038n,
+-                   "payload": Object {
+                  "kind": "text",
+-                     "value": "content/assembled-social/target",
++                 "value": "definition/configurable-watering",
+                },
+              },
+            },
+-             },
+-             5n => Object {
+-               "kind": "text",
+-               "value": "assembled-character-recognition-symbol/0.1-candidate",
+-             },
+-           },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+-                 "name": "ObserverSymbolCandidateMappingId",
+-                 "required": true,
+-               },
+-               Object {
+-                 "id": 2n,
+-                 "name": "ObserverId",
+-                 "required": true,
+-               },
+-               Object {
+-                 "id": 3n,
+-                 "name": "PerceivedIdentitySymbolId",
+-                 "required": true,
+-               },
+-               Object {
+-                 "id": 4n,
+-                 "name": "CandidateSemanticReferentId",
+-                 "required": true,
+-               },
+-               Object {
+-                 "id": 5n,
+-                 "name": "MappingVersion",
++                 "name": "PlanInstructionDefinitionId",
+                  "required": true,
+                },
+              ],
+-             "name": "ObserverIdentitySymbolMapping",
++             "name": "AdoptedTaskInstruction",
+              "schemaVersion": 1n,
+-             "typeId": 229n,
++             "typeId": 390n,
+            },
+          },
+        },
+        "kind": "record",
+        "schema": Object {
+          "fields": Array [
+            Object {
+              "id": 1n,
+              "name": "Path",
+              "required": true,
+            },
+            Object {
+              "id": 2n,
+              "name": "Value",
+              "required": true,
+            },
+          ],
+          "name": "StateLeaf",
+          "schemaVersion": 1n,
+          "typeId": 151n,
+        },
+      },
+    ],
+    "kind": "set",
+  }
+
+ ❯ src/test/assembledLongitudinalCompletionControls.test.ts:66:291
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/3]⎯
+
+ Test Files  1 failed (1)
+      Tests  3 failed | 1 passed | 10 skipped (14)
+   Start at  16:12:17
+   Duration  383.18s (transform 2.98s, setup 0ms, collect 4.48s, tests 378.32s, environment 0ms, prepare 105ms)
+
+
+EXIT 1; elapsed 383.772s
+CHARGED 1217.192
+
+Control repairs: actual previous boundary is26, not29 (silent encounter has no delayed report recall); compare restored canonical set bytes, not incidental array ordering. Extra encoded-encounter precondition failed: no retained social episodes8/9 at9. Diagnose encoding/retention before changing any comparison; original primary already proves committed episode loss. No production/fixture/law change.
+
+Additional-control diagnosis before correction: source3 comes from assembledEncoding.ts silent cue, observed role0. Normal reports8/9 alone do not make its encoding footprint positive. Keep that exact unencodedReports control. Correct ONLY encodedEpisodes to a normally observed Actor role1 for encounters8/9. No capacity/law/threshold/seed change; main and isolated/hidden/persistence comparisons unchanged. Delayed-episode assertion remains two present then removed.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledLongitudinalCompletionControls.test.ts", "-t", "rollback152|version152|encodingDiagnostic152", "--maxWorkers=1", "--minWorkers=1"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledLongitudinalCompletionControls.test.ts > rollback152: fault after computed loss rolls back whole instant and all learned owners
+M152 ROLLBACK PASS loss140, whole state/queue/allocations/draws/output/trace
+
+stdout | src/test/assembledLongitudinalCompletionControls.test.ts > version152: retained zero is valid only in successor; old bundle rejects new source grammar
+M152 VERSION PASS successor zero validates/restores; predecessor rejects zero and new source; structural permission does not admit learned S0
+
+stdout | src/test/assembledLongitudinalCompletionControls.test.ts > encodingDiagnostic152: disclose admission and retention at the failed encounter-memory precondition
+M152 retained episode shapes [
+  [
+    { kind: 'text', value: 'assembled-body-episode/0.1' },
+    { kind: 'signed', value: 4n },
+    false
+  ],
+  [
+    { kind: 'text', value: 'assembled-body-episode/0.1' },
+    { kind: 'signed', value: 6n },
+    false
+  ],
+  [ { kind: 'record', schema: [Object], fields: [Map] } ]
+]
+
+ ✓ src/test/assembledLongitudinalCompletionControls.test.ts (15 tests | 12 skipped) 114660ms
+   ✓ rollback152: fault after computed loss rolls back whole instant and all learned owners 90174ms
+   ✓ version152: retained zero is valid only in successor; old bundle rejects new source grammar 4321ms
+   ✓ encodingDiagnostic152: disclose admission and retention at the failed encounter-memory precondition 20164ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 12 skipped (15)
+   Start at  16:19:54
+   Duration  119.50s (transform 2.95s, setup 0ms, collect 4.44s, tests 114.66s, environment 0ms, prepare 102ms)
+
+
+EXIT 0; elapsed 120.053s
+CHARGED 1337.245
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledLongitudinalCompletionControls.test.ts", "-t", "encoding152|unknownRole152", "--maxWorkers=1", "--minWorkers=1"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledLongitudinalCompletionControls.test.ts > encoding152: actually encoded encounters disappear while owned relationship remains; episodic-only receipt retention loses comfort
+M152 ENCODING PASS two native encounter episodes8/9 present then removed; own relationship remains; diagnostic receipt retention keyed to actual episode survival loses comfort. No report-to-cooperation inference or production reduction.
+
+stdout | src/test/assembledLongitudinalCompletionControls.test.ts > unknownRole152: reports with unknown event role update belief but do not create qualifying encounter episodes
+M152 UNKNOWN ROLE CONTROL PASS reports8/9 admitted, own relation retained, no qualifying episodic encoding; original failed precondition preserved
+
+ ✓ src/test/assembledLongitudinalCompletionControls.test.ts (15 tests | 13 skipped) 111195ms
+   ✓ encoding152: actually encoded encounters disappear while owned relationship remains; episodic-only receipt retention loses comfort 91598ms
+   ✓ unknownRole152: reports with unknown event role update belief but do not create qualifying encounter episodes 19596ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 13 skipped (15)
+   Start at  16:22:15
+   Duration  115.93s (transform 2.92s, setup 0ms, collect 4.39s, tests 111.20s, environment 0ms, prepare 104ms)
+
+
+EXIT 0; elapsed 116.468s
+CHARGED 1453.713
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/longitudinalPublic.test.ts", "--maxWorkers=1", "--minWorkers=1"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/longitudinalPublic.test.ts (8 tests) 147886ms
+   ✓ acquires all three families publicly and retains learned state after actual episode expiry 12002ms
+   ✓ full and compact history match learned projections under both laws; episodic-only and shared-slot fail 51100ms
+   ✓ matches isolated family projections and preserves target-only interference and later relearning 36943ms
+   ✓ keeps fixed displays independent of truth and distinguishes absence, false claims and denied participation 15412ms
+   ✓ standing changes effective later choice while the preserved predecessor fails that gate 6090ms
+   ✓ audits every declared read and sole owner, and restores an authenticated complete prefix 3445ms
+   ✓ rejects forged saves, injected learned state, malformed originals and getters 2937ms
+   ✓ rolls back every reached stage and commit, including actual practice/memory writes and RNG 19955ms
+
+ Test Files  1 passed (1)
+      Tests  8 passed (8)
+   Start at  16:24:37
+   Duration  149.35s (transform 758ms, setup 0ms, collect 1.15s, tests 147.89s, environment 0ms, prepare 103ms)
+
+
+EXIT 0; elapsed 149.883s
+CHARGED 1603.596
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSkill.test.ts", "-t", "controls:", "--maxWorkers=1", "--minWorkers=1"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSkill.test.ts > M11 procedural integration > controls: late common-stage failure rolls back practice; private forged children reject
+M11 rollback 35 events; limit34
+
+ ✓ src/test/assembledSkill.test.ts (7 tests | 1 skipped) 90341ms
+   ✓ M11 procedural integration > controls: unsensed skill/body differences cannot enter cognition through old recalled context 8683ms
+   ✓ M11 procedural integration > controls: no/blocked practice and absent choice cannot manufacture skill; impairment recovers without unlearning 13947ms
+   ✓ M11 procedural integration > controls: accepted Development arithmetic, saturation and retained serious laws remain distinguishable 5020ms
+   ✓ M11 procedural integration > controls: repeat and restore after practice preserve every later whole boundary and actual RNG 51435ms
+   ✓ M11 procedural integration > controls: malformed sources, phase reversal, foreign writers and supplied acquired state reject 4846ms
+   ✓ M11 procedural integration > controls: late common-stage failure rolls back practice; private forged children reject 6409ms
+
+ Test Files  1 passed (1)
+      Tests  6 passed | 1 skipped (7)
+   Start at  16:27:28
+   Duration  94.14s (transform 2.28s, setup 0ms, collect 3.42s, tests 90.34s, environment 0ms, prepare 102ms)
+
+
+EXIT 0; elapsed 94.686s
+CHARGED 1698.282
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 19.096s
+CHARGED 1717.378
+
+COMMAND ["node", "scripts/check-reference-boundary.mjs"]
+Reference boundary check passed.
+
+EXIT 0; elapsed 2.759s
+CHARGED 1720.137
+
+COMMAND ["node", "scripts/check-research-obligations.mjs"]
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4373}
+
+EXIT 0; elapsed 3.510s
+CHARGED 1723.647
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,json\ngit=lambda *a:subprocess.check_output(['git',*a],text=True,encoding='utf-8').strip()\nbase='7c35d5db'\nexpected={'src/assembled/model.ts','src/assembled/inputs.ts','src/assembled/runtime.ts','src/assembled/state.ts','src/assembled/skill.ts','src/assembled/skillExecution.ts','src/assembled/traceBinding.ts','src/test/assembledLongitudinalCompletion.test.ts','src/test/assembledLongitudinalCompletionControls.test.ts','src/test/assembledProceduralInterference.test.ts','src/test/fixtures/assembledLongitudinalCompletion.ts'}\nassert set(git('diff','--name-only',base,'--','src').splitlines())==expected\nassert not git('diff','--name-only',base,'--','src/campaign2','src/campaign3','src/substrate','src/observation','src/semanticBinding','reference','docs/planning/ASSEMBLED_CHARACTER_BASELINE.json')\nfor path,cap in [('AGENTS.md',120),('docs/planning/CURRENT.md',80),('docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md',250),('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md',250)]:\n s=Path(path).read_text(encoding='utf-8-sig');assert len(s.splitlines())<=cap\n if 'RECONCILIATION' in path:\n  assert len(s.replace('\\r\\n','\\n').replace('\\n','\\r\\n').encode('utf-8'))<=65536\n  assert '21/21; accepted complete families:0/15' in s\nbefore=json.loads(git('show',base+':docs/planning/RESEARCH_OBLIGATIONS.json'))\nafter=json.loads(Path('docs/planning/RESEARCH_OBLIGATIONS.json').read_text())\nassert before['obligations']==after['obligations']\nassert after['reportReviews'][:-1]==before['reportReviews']\nassert after['reportReviews'][-1]=={'path':'docs/planning/ASSEMBLED_CHARACTER_M152_RESULT.md','obligations':['RO-C3-009','RO-C3-013','RO-C3-016','RO-C3-017','RO-C3-019']}\nevidence=list(Path('docs/planning').glob('ASSEMBLED_CHARACTER_M152*'))+[Path('docs/formal/ASSEMBLED_PROCEDURAL_INTERFERENCE_V0_113.md')]\nassert len(evidence)<=20 and sum(p.stat().st_size for p in evidence)<=5*1024*1024\nprint('M152 PRESERVATION PASS: seven production/four test-helper files; six frozen trees and pinned baseline unchanged; planning caps;21/21 mapped,0/15 accepted families; obligations unchanged; evidence '+str(len(evidence))+' files/'+str(sum(p.stat().st_size for p in evidence))+' bytes.')\n"]
+M152 PRESERVATION PASS: seven production/four test-helper files; six frozen trees and pinned baseline unchanged; planning caps;21/21 mapped,0/15 accepted families; obligations unchanged; evidence 3 files/154432 bytes.
+
+EXIT 0; elapsed 0.295s
+CHARGED 1723.942
+
+Final bookkeeping charge15s; total1738.942s /1800; longest448.192s. No budget extension.
+CHARGED 1738.942
