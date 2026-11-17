@@ -1,0 +1,321 @@
+M150 validation ledger
+CHARGED 0
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit", "-p", "tsconfig.app.json"]
+error TS5058: The specified path does not exist: 'tsconfig.app.json'.
+
+EXIT 1; elapsed 0.095s
+CHARGED 0.095
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 19.385s
+CHARGED 19.480
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledMultiReceipts.test.ts", "-t", "primary150", "--maxWorkers=1", "--minWorkers=1"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMultiReceipts.test.ts > primary150: acquired distinct producers reach actual decision
+M150 RECEIPTS [
+  {
+    kind: 'list',
+    items: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      true,     false
+    ]
+  },
+  {
+    kind: 'list',
+    items: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      true,     false
+    ]
+  }
+]
+M150 PRODUCERS [
+  { kind: 'list', items: [ [Object], [Object], [Object], [Object] ] },
+  { kind: 'list', items: [ [Object], [Object], [Object], [Object] ] },
+  { kind: 'list', items: [ [Object], [Object], [Object], [Object] ] }
+]
+M150 DECISIONS [
+  [
+    { kind: 'signed', value: 4n },
+    { kind: 'record', schema: [Object], fields: [Map] }
+  ],
+  [
+    { kind: 'signed', value: 6n },
+    { kind: 'record', schema: [Object], fields: [Map] }
+  ],
+  [
+    { kind: 'signed', value: 8n },
+    { kind: 'record', schema: [Object], fields: [Map] }
+  ]
+]
+
+ ✓ src/test/assembledMultiReceipts.test.ts (6 tests | 5 skipped) 79901ms
+   ✓ primary150: acquired distinct producers reach actual decision 79900ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  14:59:50
+   Duration  84.80s (transform 3.05s, setup 0ms, collect 4.57s, tests 79.90s, environment 0ms, prepare 104ms)
+
+
+EXIT 0; elapsed 85.357s
+CHARGED 104.837
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+src/test/assembledMultiReceipts.test.ts(20,31): error TS2345: Argument of type 'readonly CanonicalValue[]' is not assignable to parameter of type 'CanonicalValue[]'.
+  The type 'readonly CanonicalValue[]' is 'readonly' and cannot be assigned to the mutable type 'CanonicalValue[]'.
+src/test/fixtures/assembledMultiComparison.ts(11,77): error TS2554: Expected 2 arguments, but got 1.
+
+EXIT 2; elapsed 19.303s
+CHARGED 124.140
+
+Repair: use repository tsconfig; comparator helper preserves readonly nuclei and narrows canonical records before replacement. No model law changed.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledMultiReceipts.test.ts", "-t", "primary150", "--maxWorkers=1", "--minWorkers=1"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledMultiReceipts.test.ts (6 tests | 1 failed | 5 skipped) 81468ms
+   × primary150: genuine families cite acquired shared or independent receipts and reach native decision/action 81467ms
+     → cognitive record grammar: description projection mismatch
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledMultiReceipts.test.ts > primary150: genuine families cite acquired shared or independent receipts and reach native decision/action
+SchedulerContractError: cognitive record grammar: description projection mismatch
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ fail src/assembled/codecs.ts:32:36
+ ❯ validateDescriptions src/assembled/codecs.ts:86:121
+ ❯ visit src/assembled/codecs.ts:146:60
+ ❯ validate src/assembled/codecs.ts:156:2
+ ❯ decodeCognitive src/assembled/codecs.ts:163:111
+ ❯ Module.cloneCognitive src/assembled/codecs.ts:164:53
+ ❯ Module.compileDescribedReasons src/assembled/reasons.ts:63:28
+ ❯ compare src/test/fixtures/assembledMultiComparison.ts:29:17
+ ❯ Module.originalCorrespondence src/test/fixtures/assembledMultiComparison.ts:45:117
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 5 skipped (6)
+   Start at  15:05:40
+   Duration  86.31s (transform 3.00s, setup 0ms, collect 4.50s, tests 81.47s, environment 0ms, prepare 106ms)
+
+
+EXIT 1; elapsed 86.881s
+CHARGED 211.021
+
+Diagnostic repair: complete descriptions and their deduplicated Commitment/Value projections must be replaced together. Native first-arm acquisition/provenance/consumer checks passed before comparator grammar rejection; preserve the failure.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledMultiReceipts.test.ts", "-t", "primary150", "--maxWorkers=1", "--minWorkers=1"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMultiReceipts.test.ts > primary150: genuine families cite acquired shared or independent receipts and reach native decision/action
+M150 first reference [ '[object Object]', '[object Object]' ] alternatives [
+  [ 'GroundAggregate', [ '[object Object]', '[object Object]' ], [] ],
+  [ 'GroundPairwise', [ '[object Object]', '[object Object]' ], [] ],
+  [ 'GroundUncovered', [ '[object Object]', '[object Object]' ], [] ],
+  [ 'FamilyNormalized', [ '[object Object]', '[object Object]' ], [] ]
+] descriptionDice 4 [ '[object Object]', '[object Object]' ]
+
+stdout | src/test/assembledMultiReceipts.test.ts > primary150: genuine families cite acquired shared or independent receipts and reach native decision/action
+M150 last reference [ '[object Object]', '[object Object]' ] alternatives [
+  [ 'GroundAggregate', [ '[object Object]', '[object Object]' ], [] ],
+  [ 'GroundPairwise', [ '[object Object]', '[object Object]' ], [] ],
+  [ 'GroundUncovered', [ '[object Object]', '[object Object]' ], [] ],
+  [ 'FamilyNormalized', [ '[object Object]', '[object Object]' ], [] ]
+] descriptionDice 4 [ '[object Object]', '[object Object]' ]
+
+stdout | src/test/assembledMultiReceipts.test.ts > primary150: genuine families cite acquired shared or independent receipts and reach native decision/action
+M150 collective reference [ '[object Object]', '[object Object]' ] alternatives [
+  [
+    'GroundAggregate',
+    [ '[object Object]', '[object Object]' ],
+    [ '[object Object]' ]
+  ],
+  [
+    'GroundPairwise',
+    [ '[object Object]', '[object Object]' ],
+    [ '[object Object]' ]
+  ],
+  [
+    'GroundUncovered',
+    [ '[object Object]', '[object Object]' ],
+    [ '[object Object]' ]
+  ],
+  [
+    'FamilyNormalized',
+    [ '[object Object]', '[object Object]' ],
+    [ '[object Object]' ]
+  ]
+] descriptionDice 5 [ '[object Object]', '[object Object]' ]
+
+stdout | src/test/assembledMultiReceipts.test.ts > primary150: genuine families cite acquired shared or independent receipts and reach native decision/action
+M150 duplicate reference [ '[object Object]', '[object Object]' ] alternatives [
+  [ 'GroundAggregate', [ '[object Object]', '[object Object]' ], [] ],
+  [ 'GroundPairwise', [ '[object Object]', '[object Object]' ], [] ],
+  [ 'GroundUncovered', [ '[object Object]', '[object Object]' ], [] ],
+  [ 'FamilyNormalized', [ '[object Object]', '[object Object]' ], [] ]
+] descriptionDice 5 [ '[object Object]', '[object Object]' ]
+M150 PRIMARY PASS two genuine producers; actual source/decision/action; independent/shared coverage; collective and duplicate zero; all complete-input alternatives
+
+ ✓ src/test/assembledMultiReceipts.test.ts (6 tests | 5 skipped) 163158ms
+   ✓ primary150: genuine families cite acquired shared or independent receipts and reach native decision/action 163157ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  15:07:54
+   Duration  167.93s (transform 2.93s, setup 0ms, collect 4.41s, tests 163.16s, environment 0ms, prepare 105ms)
+
+
+EXIT 0; elapsed 168.486s
+CHARGED 379.507
+
+Primary passes all four native cases. Q has no string formatter; repaired informational fraction formatting (prior logs show object strings), without rerunning passed primary. Boundary check explicitly requires common-domain comparison containing both families, preventing vacuous comparator correspondence.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledMultiReceiptsControls.test.ts", "-t", "boundary150|admission150", "--maxWorkers=1", "--minWorkers=1"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMultiReceiptsControls.test.ts > boundary150: denied and hidden evidence, opposite sign and zero remain distinct
+M150 BOUNDARY PASS hidden raw/decision exact; denied missing; knownZero separate; opposite sign reaches probability [ '485/576', '91/576' ] [ '0/1', '1/1' ] [ '341/432', '91/432' ]
+
+stdout | src/test/assembledMultiReceiptsControls.test.ts > admission150: closed source grammar, prior-time provenance and retained SOCIAL on successor
+M150 ADMISSION/SOCIAL PASS invalid declarations rejected; same0.112 recipient2/3 vs0; actual main decisions retained
+
+ ✓ src/test/assembledMultiReceiptsControls.test.ts (10 tests | 8 skipped) 187670ms
+   ✓ boundary150: denied and hidden evidence, opposite sign and zero remain distinct 172828ms
+   ✓ admission150: closed source grammar, prior-time provenance and retained SOCIAL on successor 14841ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 8 skipped (10)
+   Start at  15:11:22
+   Duration  192.43s (transform 2.92s, setup 0ms, collect 4.39s, tests 187.67s, environment 0ms, prepare 102ms)
+
+
+EXIT 0; elapsed 192.977s
+CHARGED 572.484
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledMultiReceiptsControls.test.ts", "-t", "continuation150|rollback150", "--maxWorkers=1", "--minWorkers=1"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMultiReceiptsControls.test.ts > continuation150: repeat and save6 preserve all settled bytes through the full calendar
+M150 CONTINUATION PASS repeat/save6, every state/output/trace/save through101
+
+stdout | src/test/assembledMultiReceiptsControls.test.ts > rollback150: raw-source and receiving faults restore the whole instant
+M150 ROLLBACK PASS both raw and receiver boundaries
+
+ ✓ src/test/assembledMultiReceiptsControls.test.ts (10 tests | 8 skipped) 214696ms
+   ✓ continuation150: repeat and save6 preserve all settled bytes through the full calendar 155785ms
+   ✓ rollback150: raw-source and receiving faults restore the whole instant 58910ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 8 skipped (10)
+   Start at  15:15:16
+   Duration  219.49s (transform 2.92s, setup 0ms, collect 4.40s, tests 214.70s, environment 0ms, prepare 102ms)
+
+
+EXIT 0; elapsed 220.040s
+CHARGED 792.524
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledMultiReceiptsControls.test.ts", "-t", "family150", "--maxWorkers=1", "--minWorkers=1"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMultiReceiptsControls.test.ts > family150: only acquired Value linkage changes the second family, never the shared fact
+M150 FAMILY PASS identical permitted receipts and Commitment signals; Value only present/absent; native probabilities [ '485/576', '91/576' ] [ '1/2', '1/2' ] modes Auto PlayerFacingRoll
+
+ ✓ src/test/assembledMultiReceiptsControls.test.ts (11 tests | 10 skipped) 104149ms
+   ✓ family150: only acquired Value linkage changes the second family, never the shared fact 104148ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 10 skipped (11)
+   Start at  15:19:41
+   Duration  108.98s (transform 2.98s, setup 0ms, collect 4.48s, tests 104.15s, environment 0ms, prepare 106ms)
+
+
+EXIT 0; elapsed 109.538s
+CHARGED 902.062
+
+Final review: make owner-mandated appraisal-row liveness explicit in shared capture, before comparisons (previously live producers/decision were checked). Rerun only family-presence pair to exercise both arms and prove effective Auto vs roll distinction; source mechanism/input/laws unchanged. Other contrasts change only raw-source inputs downstream of this same appraisal.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledMultiReceiptsControls.test.ts", "-t", "family150", "--maxWorkers=1", "--minWorkers=1"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMultiReceiptsControls.test.ts > family150: only acquired Value linkage changes the second family, never the shared fact
+M150 FAMILY PASS identical permitted receipts and Commitment signals; Value only present/absent; native probabilities [ '485/576', '91/576' ] [ '1/2', '1/2' ] modes Auto PlayerFacingRoll
+
+ ✓ src/test/assembledMultiReceiptsControls.test.ts (11 tests | 10 skipped) 106150ms
+   ✓ family150: only acquired Value linkage changes the second family, never the shared fact 106149ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 10 skipped (11)
+   Start at  15:23:10
+   Duration  110.89s (transform 2.92s, setup 0ms, collect 4.39s, tests 106.15s, environment 0ms, prepare 103ms)
+
+
+EXIT 0; elapsed 111.442s
+CHARGED 1013.504
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/multisourceComparison.test.ts", "src/test/multisourceSourceJoin.test.ts", "src/test/multisourceSelectedSource.test.ts", "src/test/multisourceSelectedDescriptions.test.ts", "src/test/multisourcePublic.test.ts", "--maxWorkers=1", "--minWorkers=1"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/multisourceSelectedSource.test.ts (13 tests) 188ms
+ ✓ src/test/multisourceSourceJoin.test.ts (11 tests) 137ms
+ ✓ src/test/multisourcePublic.test.ts (6 tests) 16873ms
+   ✓ rejects the preserved first cohort and data accessors without evaluating them 4580ms
+   ✓ retains equal safe outputs under hidden within-bin reserve variation 2511ms
+   ✓ replenishes B through its owner while A evidence remains fixed 2110ms
+   ✓ rejects locally valid save tampering by exact prefix reexecution 5278ms
+   ✓ authorizes no physical anchor reads when every channel is denied 1355ms
+   ✓ settles no-option status without fabricating a chosen action 1038ms
+ ✓ src/test/multisourceSelectedDescriptions.test.ts (8 tests) 33ms
+ ✓ src/test/multisourceComparison.test.ts (11 tests) 9ms
+
+ Test Files  5 passed (5)
+      Tests  49 passed (49)
+   Start at  15:25:25
+   Duration  20.89s (transform 877ms, setup 0ms, collect 2.31s, tests 17.24s, environment 1ms, prepare 489ms)
+
+
+EXIT 0; elapsed 21.418s
+CHARGED 1034.922
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 18.965s
+CHARGED 1053.887
+
+COMMAND ["node", "scripts/check-reference-boundary.mjs"]
+Reference boundary check passed.
+
+EXIT 0; elapsed 2.801s
+CHARGED 1056.688
+
+COMMAND ["node", "scripts/check-research-obligations.mjs"]
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4371}
+
+EXIT 0; elapsed 3.482s
+CHARGED 1060.170
+
+M150 PRESERVATION PASS: four production/four test-helper files; six frozen trees/pinned baseline unchanged; planning line/CRLF-byte caps;19/21 mapped/0 families; obligation rows unchanged;3 evidence files/27662 bytes.
+Bookkeeping allowance15s covers preservation, size and final record checks.
+CHARGED 1075.170
