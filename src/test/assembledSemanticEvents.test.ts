@@ -57,7 +57,7 @@ function judgment(r:Run,b:ReturnType<typeof fixture>,expected:number){
 type Mode='merged'|'split'|'worlds'|'worldOrder'|'hiddenWorlds';
 function fixture(mode:Mode='merged'){
  const b=priorFixture(mode==='hiddenWorlds'?'hidden':'coarsened'),slots=[...items(decode(b.s.registry),'list')],config=items(slots[30],'list');slots[30]=list([text(SEMANTIC_EVENTS_ENCODING),...config.slice(1)]);
- const content=items(slots[48],'list');slots[48]=list([content[0],content[1],list([...items(content[2],'list'),schema('event-type/social-focal',[rule(2)]),schema('event-type/social-other',[rule(1),rule(7),rule(6),rule(8)])]);
+ const content=items(slots[48],'list');slots[48]=list([content[0],content[1],list([...items(content[2],'list'),schema('event-type/social-focal',[rule(2)]),schema('event-type/social-other',[rule(1),rule(7),rule(6),rule(8)])])]);
  const s={...b.s,rulesVersion:SEMANTIC_EVENTS_RULES,registrySchemaVersion:SEMANTIC_EVENTS_REGISTRY,registry:enc(list(slots))};
  const rows=items(decode(b.d.orderedInputs),'list').map(v=>{const a=[...items(v,'list')];if(key(a[2])===key(CURRENT_SEM_SOURCE)&&['worlds','worldOrder','hiddenWorlds'].includes(mode)){const p=[...items(a[3],'list')],c=items(p[6],'list');p[6]=channel('event-type/action-occurrence',items(c[2],'list').map(v=>{const r=items(v,'list');return uint(r[0])===5n&&uint(r[3])===1n?list([...r,u(1)]):v;}));a[3]=list(p);return list(a);}
  if(key(a[2])!==key(SOCIAL_SOURCE)||key(a[0])!==key(signed(2)))return v;
