@@ -1,0 +1,65 @@
+M147 baseline8653cfab plan57432271;1800s cumulative/600s command.
+CHARGED 0
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 18.796s
+CHARGED 18.796
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledAdaptBoundary.test.ts", "-t", "pair147", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAdaptBoundary.test.ts > pair147: one root branches into equal permitted learning and unequal hidden adaptation, later evidence mediates memory
+M147 PAIR PASS exact count-only manifests/model/S0/seed; same110 root -> independent ADAPT and120..124..130 learning; protected closure equal;4 live rules; later D-only5/5.1 ->actual episode/recall; no dice; frozen<=130 records unchanged; matched topology; repeat/save2/save4/every later boundary exact
+
+ ✓ src/test/assembledAdaptBoundary.test.ts > pair147: one root branches into equal permitted learning and unequal hidden adaptation, later evidence mediates memory 89757ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  12:44:24
+   Duration  94.46s (transform 2.90s, setup 0ms, collect 4.35s, tests 89.76s, environment 0ms, prepare 103ms)
+
+
+EXIT 0; elapsed 95.018s
+CHARGED 113.814
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledAdaptBoundaryControls.test.ts", "-t", "closure147|outcomes147|route147|collision147|rollback147", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledAdaptBoundaryControls.test.ts [ src/test/assembledAdaptBoundaryControls.test.ts ]
+Error: Transform failed with 1 error:
+C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/src/test/assembledAdaptBoundaryControls.test.ts:23:242: ERROR: Expected "]" but found "await"
+  Plugin: vite:esbuild
+  File: C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/src/test/assembledAdaptBoundaryControls.test.ts:23:242
+\x20\x20
+  Expected "]" but found "await"
+  21 |   const original=decode(runs[0].snapshot().state),state=restoreAuthoritativeState(original),extra=new AuthoritativeState([...state.entries(),{path:{rootStateTypeId:999999n,fieldId:1n,selectors:[]},value:text('future owner')}]);expect(key(closure.state(extra.canonicalValue()))).not.toBe(key(closure.state(original)));
+  22 |   const outputs=decode(runs[0].snapshot().outputs),base=items(outputs,'list');for(const extra of [list([text('future-learning-owner/record'),u(1)]),record({typeId:999999n,schemaVersion:1n,name:'future',fields:[{id:1n,name:'value',required:true}]},new Map([[1n,u(1)]]))])expect(key(closure.outputs(list([...base,extra])))).not.toBe(key(closure.outputs(outputs)));
+  23 |   const slots=items(decode(b.s.registry),'list'),policy=items(slots[49],'list');for(const weakened of [list([policy[0],policy[1],list([u(302),u(346)]),policy[3]]),list([policy[0],policy[1],policy[2],list([u(307),u(324),u(325),u(334),u(270)])])await expect(prepareCharacterModel({...b.s,registry:enc(list([...slots.slice(0,49),weakened]))})).rejects.toThrow('protection');
+     |                                                                                                                                                                                                                                                    ^
+  24 |   console.info('M147 CLOSURE PASS inherited8 families/nonempty EVID outputs plus all later/future state/list/record outputs protected; narrowed policy rejects; with pulse but no diagnostic reveal cognition remains equal');
+  25 |  },590000);
+\x20\x20
+ ❯ failureErrorWithLog ../../../../Documents/GitHub/characterlab/node_modules/esbuild/lib/main.js:1472:15
+ ❯ ../../../../Documents/GitHub/characterlab/node_modules/esbuild/lib/main.js:755:50
+ ❯ responseCallbacks.<computed> ../../../../Documents/GitHub/characterlab/node_modules/esbuild/lib/main.js:622:9
+ ❯ handleIncomingPacket ../../../../Documents/GitHub/characterlab/node_modules/esbuild/lib/main.js:677:12
+ ❯ Socket.readFromStdout ../../../../Documents/GitHub/characterlab/node_modules/esbuild/lib/main.js:600:7
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { __vitest_rollup_error__: { plugin: 'vite:esbuild', id: 'C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/src/test/assembledAdaptBoundaryControls.test.ts', loc: { column: 242, file: 'C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/src/test/assembledAdaptBoundaryControls.test.ts', length: 5, line: 23, lineText: ' const slots=items(decode(b.s.registry),\'list\'),policy=items(slots[49],\'list\');for(const weakened of [list([policy[0],policy[1],list([u(302),u(346)]),policy[3]]),list([policy[0],policy[1],policy[2],list([u(307),u(324),u(325),u(334),u(270)])])await expect(prepareCharacterModel({...b.s,registry:enc(list([...slots.slice(0,49),weakened]))})).rejects.toThrow(\'protection\');', namespace: '', suggestion: ']' }, frame: '\nExpected "]" but found "await"\n21 |   const original=decode(runs[0].snapshot().state),state=restoreAuthoritativeState(original),extra=new AuthoritativeState([...state.entries(),{path:{rootStateTypeId:999999n,fieldId:1n,selectors:[]},value:text(\'future owner\')}]);expect(key(closure.state(extra.canonicalValue()))).not.toBe(key(closure.state(original)));\n22 |   const outputs=decode(runs[0].snapshot().outputs),base=items(outputs,\'list\');for(const extra of [list([text(\'future-learning-owner/record\'),u(1)]),record({typeId:999999n,schemaVersion:1n,name:\'future\',fields:[{id:1n,name:\'value\',required:true}]},new Map([[1n,u(1)]]))])expect(key(closure.outputs(list([...base,extra])))).not.toBe(key(closure.outputs(outputs)));\n23 |   const slots=items(decode(b.s.registry),\'list\'),policy=items(slots[49],\'list\');for(const weakened of [list([policy[0],policy[1],list([u(302),u(346)]),policy[3]]),list([policy[0],policy[1],policy[2],list([u(307),u(324),u(325),u(334),u(270)])])await expect(prepareCharacterModel({...b.s,registry:enc(list([...slots.slice(0,49),weakened]))})).rejects.toThrow(\'protection\');\n   |                                                                                                                                                                                                                                                    ^\n24 |   console.info(\'M147 CLOSURE PASS inherited8 families/nonempty EVID outputs plus all later/future state/list/record outputs protected; narrowed policy rejects; with pulse but no diagnostic reveal cognition remains equal\');\n25 |  },590000);\n' } }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  no tests
+   Start at  12:46:35
+   Duration  302ms (transform 11ms, setup 0ms, collect 0ms, tests 0ms, environment 0ms, prepare 103ms)
+
+
+EXIT 1; elapsed 0.826s
+CHARGED 114.640
