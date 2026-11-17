@@ -21,7 +21,7 @@ HalfAtGap and original linear practice remain explicit controls, not new selecto
 
 Scenario seed0/body10/rate0; two social tasks/third unknown. Reports1..3 establish
 normal perception. BIO opportunity4 has A importance13/20,B1, significance1,
-pressure0; later significance0. Actual A practice6 phase0, cooperation8/9; delay30.
+pressure0; later significance0. Actual A practice6 phase0, cooperation8/9; delay30 with ordinary body samples10..13, fixed body-memory capacity2 to crowd recent memory.
 Forced A opportunities30/32/34/36: loss30, read-only probe32, phase4 practice34,
 probe36; difficulty3/8. Loss and late practice are distinct. No loss/untrained and
 isolated BIO/skill/REL contrasts vary only named update eligibility. Hidden truth
@@ -29,6 +29,8 @@ with fixed displays and later false claims cannot rewrite historical expressions
 Full ordinary calendar retained; adjust task/route deadlines to admit late probes.
 Assert live actual attempts/skill assessment and eligible BIO before comparisons.
 
+Pre-run correction: retention is capacity/SignificanceFirst, not age expiry.
+The intervening samples test actual loss; original expiry remains a comparator.
 Required projections: coexisting learned leaves after9; real recent-episode loss
 by30 while learned history remains; quarter loss then D3 relearning; failed probe32
 and successful36, actual producer->attempt->execution. Non-target BIO/REL bytes
