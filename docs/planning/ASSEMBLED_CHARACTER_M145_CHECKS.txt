@@ -7,3 +7,51 @@ src/test/assembledSemanticFinal.test.ts(225,117): error TS2339: Property 'observ
 
 EXIT 2; elapsed 18.768s
 CHARGED 18.768
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 18.680s
+CHARGED 37.448
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSemanticFinal.test.ts", "-t", "primary145|histories145|lanes145|lifecycle145", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSemanticFinal.test.ts > primary145: partial cue access drives withdrawal, unchanged history and actual choice
+M145 P(action B), visible/hidden contradiction: 1/1 / 47/72
+M145 PRIMARY PASS partial permission -> explicit withdrawal -> withheld report attribution -> actual probability/execution; later correction preserves earlier evidence/history; full queues
+
+ ✓ src/test/assembledSemanticFinal.test.ts > primary145: partial cue access drives withdrawal, unchanged history and actual choice 84034ms
+stdout | src/test/assembledSemanticFinal.test.ts > histories145: no-cue persistence and unique replacement preserve the original report recipients
+M145 HISTORIES PASS absent cues retain identification; unique replacement and correction keep one track and exact revision chain; earlier wrongly attributed report never transfers; live choice/full queues
+
+ ✓ src/test/assembledSemanticFinal.test.ts > histories145: no-cue persistence and unique replacement preserve the original report recipients 32706ms
+stdout | src/test/assembledSemanticFinal.test.ts > lanes145: current recognition controls consequence report attribution and same-instant correction is append-only
+M145 PRIMARY PASS same kernels/owners across current and consequence; distinct immutable envelopes; actual126 read of21 resolution; ordered21->127 correction; current cue -> report recipient -> live actual choice/execution P47/72 vs1; full queues
+
+ ✓ src/test/assembledSemanticFinal.test.ts > lanes145: current recognition controls consequence report attribution and same-instant correction is append-only 65658ms
+stdout | src/test/assembledSemanticFinal.test.ts > lifecycle145: explicit lifecycle preserves history and changes later choice only through current recognition
+M145 selected acquisition times retired=false: 2
+
+stdout | src/test/assembledSemanticFinal.test.ts > lifecycle145: explicit lifecycle preserves history and changes later choice only through current recognition
+M145 selected acquisition times retired=true: 1
+
+stdout | src/test/assembledSemanticFinal.test.ts > lifecycle145: explicit lifecycle preserves history and changes later choice only through current recognition
+M145 selected acquisition times retired=true: 1
+
+stdout | src/test/assembledSemanticFinal.test.ts > lifecycle145: explicit lifecycle preserves history and changes later choice only through current recognition
+M145 selected acquisition times retired=false: 2
+M145 PRIMARY PASS explicit track/event ends; fresh ordinals; event continuation/split; exact support; old recognition/memory retained and actually consumed; live actual P(B)47/72 vs1; split-only/retirement equivalence; complete queues
+
+ ✓ src/test/assembledSemanticFinal.test.ts > lifecycle145: explicit lifecycle preserves history and changes later choice only through current recognition 76327ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed | 11 skipped (15)
+   Start at  11:28:21
+   Duration  263.42s (transform 2.90s, setup 0ms, collect 4.35s, tests 258.73s, environment 0ms, prepare 103ms)
+
+
+EXIT 0; elapsed 263.967s
+CHARGED 301.415
+
+Pre-execution test review: use a well-typed self-revision for the cycle negative, not a malformed optional value; assert phase130 zero actual state reads and exact consequence envelope instead of an unrelated root number. Enforce shared ModelIdentity across adapted scenarios. Add the already-declared ambiguity case as a native run, not only a captured-request control. No production/law/input changes to the four passed comparisons.

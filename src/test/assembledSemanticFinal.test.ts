@@ -244,6 +244,7 @@ it('knowledge145: actual frozen knowledge admits exact replacement operations an
  expect(request).toEqual(originalRequest);bytes(snap(r).outputs,oldOutputs);expect(resolutionHistory(state(r))).toEqual(oldHistory);
  const changed=historyFixture(false,'replacement'),changedModel=await prepareCharacterModel(changed.s);
  bytes(characterModelIdentity(m),characterModelIdentity(changedModel));
+ for(const source of[lanesFixture().s,lifecycleFixture().s])bytes(characterModelIdentity(m),characterModelIdentity(await prepareCharacterModel(source)));
  const different=await createCharacterRun(changedModel,changed.d);expect(different.runIdentity()).not.toEqual(r.runIdentity());
  await expect(restoreCharacterRun(b.s,{initialState:changed.d.initialState,orderedInputs:b.d.orderedInputs,save:r.save()})).rejects.toThrow('commitments differ');
  const component=await compileCharacterState(await compileCharacterModel(b.s)),s=state(r),knowledge=s.entries().find(e=>e.path.rootStateTypeId===243n&&e.path.fieldId===1n)!;
@@ -258,10 +259,19 @@ it('knowledge145: actual frozen knowledge admits exact replacement operations an
  const historyEntries=s.entries().filter(e=>e.path.rootStateTypeId===244n);
  expect(historyEntries.length).toBeGreaterThan(0);
  for(const entry of historyEntries){
-  const v=rec(entry.value,236n),cycle={...v,fields:new Map([...v.fields].map(([n,x])=>[n,n===8n?list([f(v,1n)]):x]))};
-  expect(()=>component.stateModel.validateState(new AuthoritativeState(s.entries().map(e=>e===entry?{...e,value:cycle}:e)))).toThrow();
+  const v=rec(entry.value,236n),cycle={...v,fields:new Map([...v.fields,[8n,f(v,1n)]])};
+  expect(()=>component.stateModel.validateState(new AuthoritativeState(s.entries().map(e=>e===entry?{...e,value:cycle}:e)))).toThrow('cycle');
  }
  await finish(r);await finish(different);
+ const catalog=items(items(items(decode(b.s.registry),'list')[21],'list')[1],'list').map(v=>items(v,'list')),otherTemplate=items(catalog.find(v=>key(v[0])===key(b.other))![1],'list')[0];
+ const ambiguousInputs=items(decode(b.d.orderedInputs),'list').map(v=>{
+  const row=[...items(v,'list')];if(key(row[0])!==key(signed(2))||key(row[2])!==key(SOCIAL_SOURCE))return v;
+  const p=[...items(row[3],'list')];p[5]=list([list([u(1),text('appearance/voice'),true,true]),list([u(1),otherTemplate,true,true])]);row[3]=list(p);return list(row);
+ });
+ const unresolved=await createCharacterRun(m,{...b.d,orderedInputs:enc(list(ambiguousInputs))});let ambiguousSeen=false;
+ const ambiguitySpy=vi.spyOn(recognition,'evaluateContinuantRecognition').mockImplementation((...args)=>{const result=original(...args);if(args[1].experience.occurredAt===2n){expect(result.evaluation.result).toEqual({kind:'no-update',reason:'AmbiguousCandidates'});ambiguousSeen=true;}return result;});
+ try{await through(unresolved,4n);}finally{ambiguitySpy.mockRestore();}
+ expect(ambiguousSeen).toBe(true);expect(resolutionHistory(state(unresolved))).toHaveLength(1);expect(judgment(unresolved,b,true).equals(Q.of(47n,72n))).toBe(true);await finish(unresolved);
  const empty=new AuthoritativeState(restoreAuthoritativeState(decode(b.d.initialState)).entries().filter(e=>e.path.rootStateTypeId!==243n));
  const unfamiliar=await createCharacterRun(m,{...b.d,initialState:enc(empty.canonicalValue())});await finish(unfamiliar);
  expect(outputs(snap(unfamiliar).outputs,232n)).toHaveLength(0);expect(resolutionHistory(state(unfamiliar))).toHaveLength(0);
@@ -292,7 +302,8 @@ it('contracts145: native freeze operands, strict lane cutoffs and public source 
  expect(()=>ordering.assertOutcomeEvaluationRead('authoritative-world-outcome')).toThrow();
  expect(()=>ordering.assertAutomaticAdaptationOutput('character-learning-evidence')).toThrow();
  const evaluation=phaseAt(r,130n);
- expect(items(f(evaluation,11n),'list').some(v=>uint(f(rec(f(rec(v,147n),2n),140n),1n))===240n),'phase130 has no truth owner read').toBe(false);
+ expect(items(f(evaluation,11n),'list'),'phase130 performs no authoritative-state reads').toHaveLength(0);
+ const perceived=items(f(evaluation,12n),'list');expect(perceived).toHaveLength(2);expect(perceived[1]).toEqual(projection(r,124n,227n)[0]);
  await finish(r);
  expect(outputs(snap(r).trace,160n).some(v=>uint(f(rec(f(v,4n),130n),3n))===150n)).toBe(false);
  console.info('M145 CONTRACTS PASS actual frozen current/consequence operands immutable; strict before/at/after cutoffs; public late/sentinel/duplicate rejection; phase130 safe/150 non-schedulable');
