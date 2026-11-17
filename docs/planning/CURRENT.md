@@ -1,31 +1,44 @@
-# Current work — SEM incorporation complete in pinned domain
-The character perceives roles/events and recognizes continuants through permitted
-evidence. Recognition and perceived grouping change memory, appraisal and choice;
-later correction and file retirement preserve the earlier evidence and history.
+# Current work — M146 hidden exposure and later evidence
+One character will adapt to an unobserved physical exposure; only a later permitted
+probe can carry its effect into episodic memory. This is a bounded ADAPT package,
+not completion of the member or whole assembly. Owner continuation follows M145.
 
-M145 closes C-SEM's pinned domain on rules0.108/encoding0.7. Baseline b019a04e,
-plan ebacbc81, final source ccd63f46. Two test/fixture files, zero production edits.
-[Result](ASSEMBLED_CHARACTER_M145_RESULT.md); [checks](ASSEMBLED_CHARACTER_M145_CHECKS.txt).
-62 targeted tests (10 native/52 original), types and preservation checks pass.
-Fixed-scenario probabilities47/72 vs1; actual intent/plan/attempt/outcome and
-later memory consumers. Repeat/save2/every later boundary, both-lane rollback,
-denial/hidden truth, exact schema/ownership and actual frozen inputs pass.
-Three test-construction failures and initial type diagnostic retained/corrected.
-M139-144 broadened real scene/event/carrier paths; M143 fixed self-authorizing seams.
+## Card (before implementation)
+Baseline5439ba8e; rules/registry0.109 successor of0.108; encoding0.7 unchanged.
+Pinned PHEN-ADAPT-001v1.11.0:3/4/8/9/12..16 partial incorporation.
+Capabilities: admit regulatory exposure; evaluate original four rules in shared140;
+carry later diagnostic effect through accepted perception/intake into shared memory.
+Source uses304/305/307 and existing input roles/domains. Derived authored registration
+shares the unchanged regulatory evaluator/state, alongside existing protocol producer.
+One shared scheduler/allocator/save; no Campaign2/3 factory or alternate runtime.
+Scope <=9 production/test files: model, inputs, ingress, runtime, traceBinding,
+hiddenExposure, factory if restore requires it, test and fixture. Frozen trees unchanged.
+Versioned formal amendment committed with this card before implementation.
 
-## Exact stopping point
-C-SEM:2..11 EQUIVALENT in mapped domain;:12/13 TRACKED, not behavioral passes.
-16/21 members mapped;0/15 complete families;E46/P54/N17/U15=132 unchanged.
-Original three observers map to three single-holder perspectives; native shared
-observation support is explicit. No multi-holder/autonomous-partner claim.
-Catalog acquisition/forgetting is outside accepted finite SEM scope. Mapping
-replacement is verified as the original state-operation/consumer contract on
-actual inputs; no online learning producer is claimed. Encoding limits stay visible.
-No production or frozen C0-C3/reference dependency changed in M145.
-Final whole-candidate replay and required family gaps remain before acceptance.
+Comparison: same current49-slot model/S0/seed0, controlled exposure2 count0 vs1,
+probe4. Strip unrelated input events; initial tasks retain their declared dependencies,
+but no choice or social stimulus is scheduled. Body10; diagnostic channel live.
+Liveness: four applicable evaluations in both arms, zero is NoStateChange; one
+changes exactly tolerance/sensitization/displacement/load, never cognitive roots.
+Before4, all state except those four exact semantic paths equal. At4 require live
+permitted measurement5 vs51/10 and actual intake/episode consumer, not authored memory.
+No RNG claim: source/probe have no draws. Same event topology/allocator positions.
+No-probe control remains cognitively equal. Exact repeat and save after2, every later
+boundary continuation, failed-instant rollback; malformed/wrong-holder/version and
+pending-input tamper rejection. Source truth cannot become a cognitive read capability.
+Affected controls: original parent-pair plus current SEM retained witness (no source).
+Types, boundary, research, file-size and frozen-tree checks; no full C2 byte rerun:
+its dependency closure is unchanged. Risks: source authenticity, route identity,
+phase140 target collisions, probe allocation, restore and unchanged-version behavior.
 
-Owner2026-11-17 self-approval through SEM completion fulfilled; M145 passed.
-No next implementation package active. Remaining member mappings: ADAPT, SOCIAL,
-MULTI, REL, LONG. Select the next bounded card before code; no extra SEM audit loop.
-No UI, Campaign4, autonomous-peer expansion or reduction.
-| Research obligations | **0 active / 18 conditional / 0 unowned** |
+Verification <=1800s cumulative including failures, <=600s/command, one job;
+<=20 evidence files/5MiB; <=12 production/test files hard limit. No verifier framework.
+Routine setup/implementation repairs self-approved before rerun; preserve failures.
+Done iff the declared native connection and controls pass within limits. Stop checks
+on pass. Commit one result, update register without exceeding64KiB, report limitations.
+Same-root immediate consequence/EVID branch, full assembled route/output closure,
+wrong-learning-route and complete member replay remain explicitly pending ADAPT work.
+No family closure, altered laws, UI, Campaign4 or autonomous partners.
+
+M145 SEM result remains valid:16/21 mapped,0/15 families;E46/P54/N17/U15=132.
+Research obligations0 active/18 conditional/4 closed/0 unowned; none retired here.
