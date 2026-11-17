@@ -7,3 +7,34 @@ src/test/assembledSemanticReplay.test.ts(71,129): error TS2345: Argument of type
 
 EXIT 2; elapsed 19.059s
 CHARGED 34.059
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 18.697s
+CHARGED 52.756
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSemanticReplay.test.ts", "-t", "profiles144", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledSemanticReplay.test.ts > profiles144: pinned observer and multi-role views run through one character 62481ms
+   → expected undefined to be defined
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSemanticReplay.test.ts > profiles144: pinned observer and multi-role views run through one character
+AssertionError: expected undefined to be defined
+ ❯ compare src/test/assembledSemanticReplay.test.ts:50:94
+
+ ❯ src/test/assembledSemanticReplay.test.ts:74:61
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 6 skipped (7)
+   Start at  11:06:39
+   Duration  67.12s (transform 2.87s, setup 0ms, collect 4.31s, tests 62.48s, environment 0ms, prepare 103ms)
+
+
+EXIT 1; elapsed 67.707s
+CHARGED 120.463
