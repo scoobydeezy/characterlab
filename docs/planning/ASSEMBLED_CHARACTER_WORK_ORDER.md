@@ -228,7 +228,7 @@ identify actual gaps. Historical gate status does not override later accepted cl
 
 ## Current authorization boundary
 Owner2026-11-13 adopts0.85; after M105 authorizes continued character integration.
-Owner2026-11-17 continued after SEM completion: M146 ADAPT exposure package;16/21 members mapped. Family/final acceptance open. Shared/UnitBudget; feedback TRUE; laws unchanged.
+Owner2026-11-17 authorizes self-approval until ADAPT complete after M146;16/21 mapped. Preserve failures/laws/scope. Family/final acceptance open. Shared/UnitBudget; feedback TRUE.
 Original BIO/EPI controls/limits remain; final whole-candidate replay required. No UI, publishing or assembly acceptance.
 
 ## Owner ruling — unknown factors and live gates (2026-11-02)
