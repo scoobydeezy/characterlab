@@ -28,6 +28,8 @@ At8 both tasks live, compare first versus last receipt support; three descriptio
 of first/last/union with fixed gains3/4,2/3,1/4. Positive/negative and duplicate
 description controls remain fixed declarations; no seed/calibration search.
 Assert both producers/live appraisal, source ancestry and actual decision consumption.
+Self-amendment: vary only Value link at acquisition6; same receipts/Commitment inputs
+and linked probe8. This supplies :5 source-family presence control; no law/seed changes.
 Probability analysis of actual production inputs, not uncoupled winner claims.
 FamilyNormalized, GroundPairwise, GroundUncovered and DescriptionDice diagnostic
 comparisons preserve complete captured inputs; original controls/limits retained.

@@ -54,3 +54,9 @@ its exclusions are that comparator's hypothesis, not truncated reference inputs.
 Compare adapter with unchanged original kernel over its complete common domain.
 Analytical consumer uses full native candidate set/current arbitration thresholds.
 These are diagnostic counterfactuals only; never admitted sources or native runs.
+
+M150 bounded comparison amendment: toggle only existing VALUES_CONTEXT linked flag
+at acquisition6, preserving permitted reports4/6, all Commitment descriptors and
+linked probe8. Required: identical acquired receipts and Commitment raw projection,
+Value present/absent, exact response-distribution difference. This fills :5 family
+presence contrast; no seed search, changed law, new state or acceptance weakening.
