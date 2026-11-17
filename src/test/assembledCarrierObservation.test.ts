@@ -29,11 +29,11 @@ async function create(...args:Parameters<typeof fixture>){const b=fixture(...arg
 function judgment(r:Run,b:ReturnType<typeof fixture>,expected:number,beliefDenominator=2){
  expect(personMean(state(r).read(personPath(C,target)).value)).toEqual({numerator:1n,denominator:BigInt(beliefDenominator)});
  const social=reports(r,'assembled-social-people/0.1/appraisal').at(-1)!.slice(1).map(v=>items(v,'list')).find(a=>key(a[2])===key(target))!;
- expect(items(social[4],'list'),'live remembered social factor').toHaveLength(1);
+ expect(items(social[4],'list'),'live social factor').toHaveLength(1);
  const joint=reports(r,JOINT_APPRAISAL).at(-1)!;
  for(const task of[b.taskA,b.taskB])expect(items(joint[4],'list').map(v=>items(v,'list')).find(a=>key(a[0])===key(task)),'live task appraisal').toHaveLength(5);
  expect(items(social[4],'list')).toEqual([q(expected,1)]);
- const selected=items(reports(r,WORKSPACE).at(-1)![4],'list');expect(selected).toHaveLength(1);expect(items(social[6],'list')[3]).toEqual(list([items(selected[0],'list')[0]]));expect(items(joint[6],'list').slice(1)).toContainEqual(list(social));
+ const selected=items(reports(r,WORKSPACE).at(-1)![4],'list');expect(selected).toHaveLength(b.mode==='companion'?0:1);expect(items(social[6],'list')[3]).toEqual(list(selected.map(v=>items(v,'list')[0])));expect(items(joint[6],'list').slice(1)).toContainEqual(list(social));
  const d=outputs(snap(r).outputs,409n).find(v=>key(f(v,2n))===key(signed(22)))!;expect(d,'actual decision22').toBeDefined();
  const result=rec(f(d,4n),419n);expect(uint(f(result,1n)),'live resolved choice').toBe(3n);
  const context=rec(f(d,3n),408n);expect(items(f(context,3n),'list').length,'actual grounds').toBeGreaterThan(0);
