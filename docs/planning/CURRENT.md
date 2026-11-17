@@ -1,50 +1,30 @@
-# Current work — M149 SOCIAL completion
-One continuing character's actual private commitment becomes a fallible public display;
-two passive observers learn different person beliefs from their permitted reports.
-Owner authorizes work through SOCIAL completion with bounded self-approved amendments.
-Baseline1a2ea5bb; no autonomous partners or alternative psychological runtimes.
+# Current work — SOCIAL incorporation complete in pinned domain
+The continuing character's real private commitment can be misunderstood by two
+passive observers. Selective corrections change A's person belief0 ->1/2 ->2/3;
+B stays0. Both use the same authoritative state, scheduler, trace and save.
+Main-character rich perception -> appraisal -> decision/action remains intact.
 
-## Bounded card — before implementation
-Capabilities: real373 commitment -> fallible display; two observer-owned810 histories;
-private/access/correlation isolation with exact persistence in the one scheduler.
-Successor rules/registry0.111 adds one governed observer-pair declaration (slot51).
-Reuse personUpdate/personMean and PERSON_OWNER; observation/evidence/update120/130/140.
-Existing single-holder recognition/appraisal/decision witness M148 must still pass
-on0.111. Passive observers have no autonomous choices, body or private pipeline.
-Declare source task, expression/explanation, mode, receipt, delivered outcome and
-independent permissions. Only110 reads the target's real Open/absent373 status.
-Observer projections exclude task/private truth/mode/global IDs/other observers.
-Reserve two occurrence slots per original source before runtime allocation, regardless
-of access. Probe40 reads prior history; only140 may update person beliefs.
-Keep source-grouped reference law; truthful lifecycle witness remains distinct.
-Single state, owner, scheduler, run identity, ordered trace and save.
+M149 maps C-SOCIAL on rules/registry0.111, encoding0.7.
+Baseline1a2ea5bb; plans5adad813/50d0eb05; final sourcee3f44b53.
+[Result](ASSEMBLED_CHARACTER_M149_RESULT.md); [checks](ASSEMBLED_CHARACTER_M149_CHECKS.txt).
+Seven production/three test files;13 distinct targeted tests and types pass.
+Private/access/explanation whole-view isolation; original alternatives retained.
+Occurrence reservations prevent private activity shifting visible observer records.
+Repeated receipts add no credit; missing evidence stays unknown; false reports mislead.
+Both-observer120/140 rollback and repeat/save3/save5 through101 are exact.
+Native P(B)47/72 vs1/2 preserves M148's live consumer on the same reference model.
+Two integration errors and strengthened fault/horizon tests retained in evidence.
+Verification905.171s +15s bookkeeping=920.171s (15m20s); longest334.405s. No extension.
 
-Native predeclared comparison: current M148 scenario (body10/seed0/two social tasks,
-third unknown), plus negative expression2 to both; positive explanations3/5 to A;
-silent/no-access6 probe. S0 task A Open versus absent for private-only comparison;
-same task declaration, fixed displays, public outcome and recipient identities.
-A0 ->1/2 ->2/3; B0 unchanged. Deny/change explanation A only: B whole view unchanged.
-Duplicate receipt stays1/2; missing receipt/no display stays unknown; false report0.
-Swapped observer order: semantic equality with the same two independent owner keys.
-Native bad global-copy/private-reader/presentation-counting diagnostic controls must
-fail the relevant equality; serious LastStatement/NoLearning retained original-only.
-Live M148 producer/decision/action chain must retain changed exact probability.
-No sampled winner claim; no seed search or post-result law tuning.
-Repeat/save3/save5 exact continuation; rollback120 and140; malformed sources,
-contradictory receipts, foreign owner/path, learned S0, invalid view handle reject.
-Trace check: only110 reads373, recipient learning reads its own810 leaf; actual
-causal source -> observation -> evidence -> learning and patches140.
-Original socialPublic suite retained; original C0-C3 trees/baseline frozen.
+## Exact stopping point
+C-SOCIAL:4..11 EQUIVALENT in controlled identity/report domain;:12/13 TRACKED.
+18/21 members mapped;0/15 families accepted;E46/P54/N17/U15=132 unchanged.
+Passive observers have person beliefs, not autonomous actor pipelines.
+No general language, credibility, nested belief or cross-observer recognition claim.
+The original two-observer comparison now runs natively; final candidate replay remains.
 
-Files (<=10): model, inputs, state, runtime, social, new socialWitness;
-traceBinding, new fixture and two tests (10 total); no M148 source edits.
-Contract ASSEMBLED_SOCIAL_WITNESS_V0_111.md written/committed before code.
-Ledger P3-006 CONTRACT+CORPUS; MEC-012/013 preserved; RO-C3-014/020 reviewed.
-Controlled identity channel matches pinned SOCIAL; not rich autonomous peer cognition.
-Budget1800s cumulative checks,600s command;20 evidence files/5MiB;96 instants/run.
-Types, affected native tests, original SOCIAL, reference/research/size/preservation.
-Done iff C-SOCIAL:4..11 native mapped with all stated controls;:12/13 tracked,
-and current character behavior retained. Otherwise record exact gap, never waive.
-Stop verification after passing; if further package needed, card first, no breadth.
-17/21 mapped;0/15 families accepted;132 clauses unchanged; final candidate replay due.
+Owner self-approval through SOCIAL completion fulfilled. No active package.
+Remaining member mappings: MULTI, REL, LONG; choose next bounded card by dependency.
+RO-C3-014/020 broader conditional debts retained; no reduction or acceptance.
+All original C0-C3/reference trees unchanged. No UI/Campaign4/autonomous peers.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |

@@ -1,0 +1,220 @@
+M149 baseline1a2ea5bb; plan5adad813/50d0eb05. 1800s cumulative/600s command.
+CHARGED 0
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+src/assembled/runtime.ts(102,276): error TS2345: Argument of type 'Readonly<{ eventTypes: () => { readonly kind: "typedIdentifier"; readonly namespaceId: bigint; readonly payload: CanonicalValue; }[]; isLearning: (e: ScheduledEvent) => boolean; ... 6 more ...; prepare(events: readonly ScheduledEvent[], B0: AuthoritativeState): { ...; }; }> | { ...; }' is not assignable to parameter of type 'Readonly<{ eventTypes: () => { readonly kind: "typedIdentifier"; readonly namespaceId: bigint; readonly payload: CanonicalValue; }[]; isLearning: (e: ScheduledEvent) => boolean; ... 6 more ...; prepare(events: readonly ScheduledEvent[], B0: AuthoritativeState): { ...; }; }>'.
+  Type '{ eventTypes: () => { readonly kind: "typedIdentifier"; readonly namespaceId: bigint; readonly payload: CanonicalValue; }[]; isLearning: (e: ScheduledEvent) => boolean; ... 6 more ...; observeEffect: (event: ScheduledEvent, outputs: readonly CanonicalValue[]) => { ...; } | undefined; }' is not assignable to type 'Readonly<{ eventTypes: () => { readonly kind: "typedIdentifier"; readonly namespaceId: bigint; readonly payload: CanonicalValue; }[]; isLearning: (e: ScheduledEvent) => boolean; ... 6 more ...; prepare(events: readonly ScheduledEvent[], B0: AuthoritativeState): { ...; }; }>'.
+    The types of 'prepare(...).execute(...).outputs' are incompatible between these types.
+      Type 'CanonicalValue[]' is not assignable to type 'never[]'.
+        Type 'CanonicalValue' is not assignable to type 'never'.
+          Type 'false' is not assignable to type 'never'.
+
+EXIT 2; elapsed 18.844s
+CHARGED 18.844
+
+Repair: extension parameter must admit the existing commitment-witness wrapper (its prepared outputs are CanonicalValue[], not inferred never[]). Widened structural union; no semantics changed.
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 18.740s
+CHARGED 37.584
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSocialWitness.test.ts", "-t", "primary149", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledSocialWitness.test.ts > primary149: real commitment and two independent observers share native state, causal trace and continuing decisions 57330ms
+   → assembled trace requires exact model/run binding
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSocialWitness.test.ts > primary149: real commitment and two independent observers share native state, causal trace and continuing decisions
+SchedulerContractError: assembled trace requires exact model/run binding
+ ❯ Module.compileCharacterTraceBinding src/assembled/traceBinding.ts:33:2076
+
+ ❯ Module.createCharacterRuntime src/assembled/runtime.ts:116:14
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:122
+ ❯ start src/test/assembledSocialWitness.test.ts:20:169
+ ❯ src/test/assembledSocialWitness.test.ts:24:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 9 skipped (10)
+   Start at  14:20:23
+   Duration  61.99s (transform 2.89s, setup 0ms, collect 4.33s, tests 57.33s, environment 0ms, prepare 102ms)
+
+
+EXIT 1; elapsed 62.560s
+CHARGED 100.144
+
+Repair before native rerun: register successor0.111 in existing trace model-version list; no binding bypass. Ten source files total including traceBinding. Test preparation now reuses immutable prepared handles for identical models; each run still has independent S0/inputs/state and restores still replay. No scenario/proof changes.
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 18.868s
+CHARGED 119.012
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSocialWitness.test.ts", "-t", "primary149|privacy149|correlation149|persistence149|consumer149", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSocialWitness.test.ts > primary149: real commitment and two independent observers share native state, causal trace and continuing decisions
+M149 PRIMARY PASS real Open373; misleading0, independent corrections1/2,2/3; other observer0; prior-time probes; shared810; native action present;24 witness trace stages
+
+ ✓ src/test/assembledSocialWitness.test.ts > primary149: real commitment and two independent observers share native state, causal trace and continuing decisions 70736ms
+stdout | src/test/assembledSocialWitness.test.ts > privacy149: hidden commitment, access and explanations preserve entire nonrecipient views through full continuation
+M149 PRIVACY PASS opposite real commitment; denied/false explanations; complete own views equal through101 despite divergent actor cognition; no dice in recipient path
+
+ ✓ src/test/assembledSocialWitness.test.ts > privacy149: hidden commitment, access and explanations preserve entire nonrecipient views through full continuation 65982ms
+stdout | src/test/assembledSocialWitness.test.ts > correlation149: repeated/missing/silent/swapped/both and reverse processing retain source and ownership semantics
+M149 CORRELATION PASS duplicate1/2, receipt0 and silence unknown, swapped/both access, reversed update order with exact views/state
+
+ ✓ src/test/assembledSocialWitness.test.ts > correlation149: repeated/missing/silent/swapped/both and reverse processing retain source and ownership semantics 89347ms
+stdout | src/test/assembledSocialWitness.test.ts > persistence149: exact repeat and two observer checkpoints survive every later boundary
+M149 PERSISTENCE PASS complete snapshots/save exact at3/5 and every later instant through101
+
+ ✓ src/test/assembledSocialWitness.test.ts > persistence149: exact repeat and two observer checkpoints survive every later boundary 82787ms
+stdout | src/test/assembledSocialWitness.test.ts > consumer149: rich perception and live native social appraisal still change exact production decision probability on0.111
+M149 CONSUMER PASS same0.111 reference law; recognized evidence -> live appraisal -> exact P(B)47/72 vs1/2 ->intent/attempt/outcome
+
+ ✓ src/test/assembledSocialWitness.test.ts > consumer149: rich perception and live native social appraisal still change exact production decision probability on0.111 20289ms
+
+ Test Files  1 passed (1)
+      Tests  5 passed | 5 skipped (10)
+   Start at  14:23:33
+   Duration  333.85s (transform 2.91s, setup 0ms, collect 4.36s, tests 329.14s, environment 0ms, prepare 104ms)
+
+
+EXIT 0; elapsed 334.405s
+CHARGED 453.417
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSocialWitnessControls.test.ts", "-t", "violations149|rollback149|admission149", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSocialWitnessControls.test.ts > violations149: native global copying and direct private readers break observer isolation; duplicate write is rejected
+M149 VIOLATIONS PASS deliberately untraced global copy contaminates B; private read changes fixed-evidence probes; presentation-counting write rejected by shared source-group owner. Test-only corruptions are never model options.
+
+ ✓ src/test/assembledSocialWitnessControls.test.ts > violations149: native global copying and direct private readers break observer isolation; duplicate write is rejected 108497ms
+stdout | src/test/assembledSocialWitnessControls.test.ts > rollback149: both observer branches and shared work roll back after observation
+M149 ROLLBACK observation all snapshots unchanged; valid prefix resumes exact
+
+ ✓ src/test/assembledSocialWitnessControls.test.ts > rollback149: both observer branches and shared work roll back after observation 31745ms
+stdout | src/test/assembledSocialWitnessControls.test.ts > rollback149: both observer branches and shared work roll back after learning
+M149 ROLLBACK learning all snapshots unchanged; valid prefix resumes exact
+
+ ✓ src/test/assembledSocialWitnessControls.test.ts > rollback149: both observer branches and shared work roll back after learning 32726ms
+stdout | src/test/assembledSocialWitnessControls.test.ts > admission149: ownership, learned S0, foreign proposition/observer, malformed and contradictory receipts reject
+M149 ADMISSION PASS malformed/versioned source/proposition, unknown observer, forbidden own-key access, acquired S0, duplicate identity and contradictory receipt all reject; conflicting instant rolls back
+
+ ✓ src/test/assembledSocialWitnessControls.test.ts > admission149: ownership, learned S0, foreign proposition/observer, malformed and contradictory receipts reject 19605ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed | 5 skipped (9)
+   Start at  14:29:17
+   Duration  197.32s (transform 2.93s, setup 0ms, collect 4.40s, tests 192.57s, environment 0ms, prepare 103ms)
+
+
+EXIT 0; elapsed 197.879s
+CHARGED 651.296
+
+Bounded test repair after review: fault fixture now delivers to BOTH observers, so the declared two-write rollback is exercised rather than only A. Added explicit whole-view forbidden-key traversal (private task/actual target, other observer identity/local target, run identity). Benchmark scenarios/laws unchanged; only the two affected fault tests rerun. Earlier passing one-recipient fault result remains above.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSocialWitnessControls.test.ts", "-t", "rollback149", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSocialWitnessControls.test.ts > rollback149: both observer branches and shared work roll back after observation
+M149 ROLLBACK observation BOTH observer updates: all snapshots unchanged; prefix resumes exact to both2/3; private task/target, other observer and run identity absent from whole views
+
+ ✓ src/test/assembledSocialWitnessControls.test.ts > rollback149: both observer branches and shared work roll back after observation 90837ms
+stdout | src/test/assembledSocialWitnessControls.test.ts > rollback149: both observer branches and shared work roll back after learning
+M149 ROLLBACK learning BOTH observer updates: all snapshots unchanged; prefix resumes exact to both2/3; private task/target, other observer and run identity absent from whole views
+
+ ✓ src/test/assembledSocialWitnessControls.test.ts > rollback149: both observer branches and shared work roll back after learning 33575ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 7 skipped (9)
+   Start at  14:33:23
+   Duration  129.11s (transform 2.92s, setup 0ms, collect 4.37s, tests 124.41s, environment 0ms, prepare 103ms)
+
+
+EXIT 0; elapsed 129.683s
+CHARGED 780.979
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/socialPublic.test.ts", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/socialPublic.test.ts > isolates private truth, access, explanation and correlation under public interventions 1161ms
+ ✓ src/test/socialPublic.test.ts > preserves unknown, zero, causal probe timing, alternative learning and denied privacy 412ms
+ ✓ src/test/socialPublic.test.ts > authenticates complete save prefixes and rejects malformed ingress and receipts 365ms
+ ✓ src/test/socialPublic.test.ts > rolls back all nine stages and commit after an observer has learned 553ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed (4)
+   Start at  14:35:53
+   Duration  3.81s (transform 673ms, setup 0ms, collect 1.01s, tests 2.49s, environment 0ms, prepare 103ms)
+
+
+EXIT 0; elapsed 4.350s
+CHARGED 785.329
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 18.781s
+CHARGED 804.110
+
+Final correspondence review: primary previously asserted actual Open only at the first misleading expression. Require Open at ALL source instants2/3/5/6 so the continuing character cannot silently change the proposition during correction. This strengthens the original fixed-commitment comparison; rerun primary only, no fixture/law amendment.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSocialWitness.test.ts", "-t", "primary149", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSocialWitness.test.ts > primary149: real commitment and two independent observers share native state, causal trace and continuing decisions
+M149 PRIMARY PASS real Open373; misleading0, independent corrections1/2,2/3; other observer0; prior-time probes; shared810; native action present;24 witness trace stages
+
+ ✓ src/test/assembledSocialWitness.test.ts > primary149: real commitment and two independent observers share native state, causal trace and continuing decisions 70196ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 9 skipped (10)
+   Start at  14:37:06
+   Duration  74.86s (transform 2.89s, setup 0ms, collect 4.34s, tests 70.20s, environment 0ms, prepare 104ms)
+
+
+EXIT 0; elapsed 75.410s
+CHARGED 879.520
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 18.814s
+CHARGED 898.334
+
+COMMAND ["node", "scripts/check-reference-boundary.mjs"]
+Reference boundary check passed.
+
+EXIT 0; elapsed 2.713s
+CHARGED 901.047
+
+COMMAND ["node", "scripts/check-research-obligations.mjs"]
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4370}
+
+EXIT 0; elapsed 3.430s
+CHARGED 904.477
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,json\ngit=lambda *a:subprocess.check_output(['git',*a],text=True,encoding='utf-8').strip()\nbase='1a2ea5bb'\nexpected={'src/assembled/model.ts','src/assembled/inputs.ts','src/assembled/state.ts','src/assembled/runtime.ts','src/assembled/social.ts','src/assembled/socialWitness.ts','src/assembled/traceBinding.ts','src/test/assembledSocialWitness.test.ts','src/test/assembledSocialWitnessControls.test.ts','src/test/fixtures/assembledSocialWitness.ts'}\nassert set(git('diff','--name-only',base,'--','src').splitlines())==expected\nassert not git('diff','--name-only',base,'--','src/campaign2','src/campaign3','src/substrate','src/observation','src/semanticBinding','reference','docs/planning/ASSEMBLED_CHARACTER_BASELINE.json')\nfor path,cap in [('AGENTS.md',120),('docs/planning/CURRENT.md',80),('docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md',250),('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md',250)]:\n s=Path(path).read_text(encoding='utf-8-sig');assert len(s.splitlines())<=cap\n if 'RECONCILIATION' in path:\n  assert len(s.replace('\\r\\n','\\n').replace('\\n','\\r\\n').encode('utf-8'))<=65536\n  assert '18/21; accepted complete families:0/15' in s\nbefore=json.loads(git('show',base+':docs/planning/RESEARCH_OBLIGATIONS.json'))\nafter=json.loads(Path('docs/planning/RESEARCH_OBLIGATIONS.json').read_text())\nassert before['obligations']==after['obligations']\nassert after['reportReviews'][:-1]==before['reportReviews']\nassert after['reportReviews'][-1]=={'path':'docs/planning/ASSEMBLED_CHARACTER_M149_RESULT.md','obligations':['RO-C3-014','RO-C3-020']}\nevidence=list(Path('docs/planning').glob('ASSEMBLED_CHARACTER_M149*'))+[Path('docs/formal/ASSEMBLED_SOCIAL_WITNESS_V0_111.md')]\nassert len(evidence)<=20 and sum(p.stat().st_size for p in evidence)<=5*1024*1024\nprint('M149 PRESERVATION PASS: seven production/three test files; six frozen trees and pinned baseline unchanged; planning caps;18/21 mapped,0/15 accepted families; obligations unchanged; evidence '+str(len(evidence))+' files/'+str(sum(p.stat().st_size for p in evidence))+' bytes.')\n"]
+M149 PRESERVATION PASS: seven production/three test files; six frozen trees and pinned baseline unchanged; planning caps;18/21 mapped,0/15 accepted families; obligations unchanged; evidence 3 files/26029 bytes.
+
+EXIT 0; elapsed 0.326s
+CHARGED 904.803
+
+COMMAND ["node", "scripts/check-git-file-sizes.mjs"]
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.368s
+CHARGED 905.171
+
+Bookkeeping allowance15s; final charged920.171s/1800s (15m20s), longest334.405s. No extension.

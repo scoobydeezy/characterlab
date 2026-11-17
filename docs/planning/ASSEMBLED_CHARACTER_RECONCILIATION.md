@@ -1,7 +1,7 @@
 # Assembled Character — reconciliation and requirement evidence
 
 D1–D5 adopted2026-10-25; D2 condition below.
-Reference0.108; feedback TRUE.16 mapped/0 families; wider debts conditional.
+Reference0.111; feedback TRUE.18 mapped/0 families; wider debts conditional.
 
 ## Decision sheet — adopted 2026-10-25
 
@@ -37,7 +37,7 @@ E is version-scoped evidence, NOT clause acceptance or a current-model rerun. Pr
 all cited result limits; P/N/U remain open. Final candidate replay/classification is
 required even for E. This index promotes no historical result to a broader claim.
 Evidence index: E46/P54/N17/U15 =132. Not a completion percentage. Mapped members:
-17/21; accepted complete families:0/15. Denominator unchanged.
+18/21; accepted complete families:0/15. Denominator unchanged.
 [M102] promoted12.2-5/12.13-8. M119 promotes12.8-1/2/3; other129 unchanged.
 Cited evidence stays version-scoped; all final-candidate requirements remain.
 
@@ -121,7 +121,7 @@ Cited evidence stays version-scoped; all final-candidate requirements remain.
 | EQUIVALENT (mapped) | C-AFFECT — PHEN-AFFECT-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/13); affectFactory.ts. | [M78] mapping; [M79] completes G1/G2 in0.73. :4..11 bounded semantic evidence. | :12/:13/RO-C3-011 tracked; no scalar reduction; L4 OFF; family12.5 separate. |
 | EQUIVALENT (mapped domain) | C-WORK — PHEN-WORK-001 v1.0.0-draft | [M128](ASSEMBLED_CHARACTER_M128_RESULT.md). | :3..10 mapped0.94; :11/12 tracked. | Controlled cards; protection/cue/expiry to choice. Wider12.6/indexing and final replay remain. |
 | EQUIVALENT (mapped domain) | C-SKILL — PHEN-SKILL-001 v1.0.0-draft | [M119](ASSEMBLED_CHARACTER_M119_RESULT.md). | :3..10 mapped0.89; :11/12 tracked. | Competence/confidence/recovery; D3 numerical differences preserved; final replay. |
-| PARTIAL | C-SOCIAL — PHEN-SOCIAL-001 v1.0.0-draft | [M148](ASSEMBLED_CHARACTER_M148_RESULT.md). | :4..11 partial;:7 original-only;:12/13 tracked. | Actual target commitment/two-observer isolation pending; U1/V4. |
+| EQUIVALENT | C-SOCIAL — PHEN-SOCIAL-001 v1.0.0-draft | [M149](ASSEMBLED_CHARACTER_M149_RESULT.md). | :4..11 mapped0.111;:12/13 tracked. | Controlled identity/reports; passive observers; final replay remains. |
 | UNRESOLVED | C-MULTI — PHEN-MULTI-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/17); `src/campaign3/multisourceFactory.ts`. | Route M2/M3/M18/L8. Required `PHEN-MULTI-001:4..13` (inclusive). | Replay pending; U1/V4. |
 | EQUIVALENT (mapped domain) | C-HABIT — PHEN-HABIT-001 v1.0.0-draft | [M118](ASSEMBLED_CHARACTER_M118_RESULT.md). | :3..10 mapped0.89; :11/12 tracked. | Acquisition/reversal, privacy, alternatives; bounded receiving; final replay. |
 | UNRESOLVED | C-REL — PHEN-REL-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/19); `src/campaign3/relationshipFactory.ts`. | Route M13/L8. Required `PHEN-REL-001:3..12` (inclusive). | Replay pending; U1/V4. |
