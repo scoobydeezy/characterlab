@@ -6,6 +6,7 @@ import {assemblePreRecognitionExperience,type PreRecognitionSemanticExperience} 
 import {compileCausalRoleModel,deriveCausalRoleEvidence,INITIAL_CAUSAL_ROLE_RULE,characterEvidenceRefKey,type ObserverSafeEvidenceOccurrence} from '../semanticBinding/evidenceProvenance';
 import {preRecognitionSemanticExperienceValue,causalRoleEvidenceValue,characterEvidenceRefValue} from '../semanticBinding/semanticEvidenceCodecs';
 import {decodeSemanticValue,restorePerceptualReferentId,restorePerceptualEventReferentId,perceptualReferentIdValue,perceptualEventReferentIdValue,observerIdValue} from '../semanticBinding/semanticCodecs';
+import {selectWideAttention} from './wideAttention';
 import {prepareAttentionPool,selectAttention} from '../campaign3/attentionSelection';
 import type {EncodingBudget} from '../campaign3/encodingAccessMath';
 import type {SelectedBudgetCalibration} from '../campaign3/selectedEncodingBudgetControl';
@@ -15,26 +16,27 @@ export const MULTI_ENCODING='assembled-encoding/0.2',MULTI_ENCODING_VERSION='ass
 export const BUDGET_ENCODING='assembled-encoding/0.3',BUDGET_ENCODING_VERSION='assembled-character-encoding/0.3-candidate';
 export const ROLE_ENCODING='assembled-encoding/0.4',ROLE_ENCODING_VERSION='assembled-character-encoding/0.4-candidate';
 export const ROLE_DOMAIN_ENCODING='assembled-encoding/0.5',ROLE_DOMAIN_VERSION='assembled-character-role-domain/0.1-candidate';
+export const SCENE_WIDTH_ENCODING='assembled-encoding/0.6',SCENE_WIDTH_VERSION='assembled-character-scene-width/0.1-candidate';
 const CONTINUANT_ROLES=[R.Actor,R.Target,R.Participant,R.Recipient,R.Companion,R.Instrument,R.Location,R.Beneficiary,R.AffectedEntity] as const;
-export interface EncodingSettings {wideRoles?:boolean;capacity:number;attention:'role-calibrated'|'disabled-attention';multiUnit?:boolean;sharedBindings?:boolean;budgetLaw?:EncodingBudget;budgetCalibration?:SelectedBudgetCalibration}
-export const encodingLabel=(s:EncodingSettings)=>s.wideRoles?ROLE_DOMAIN_ENCODING:s.sharedBindings?ROLE_ENCODING:s.budgetLaw?BUDGET_ENCODING:s.multiUnit?MULTI_ENCODING:ENCODING;
+export interface EncodingSettings {wideUnits?:boolean;wideRoles?:boolean;capacity:number;attention:'role-calibrated'|'disabled-attention';multiUnit?:boolean;sharedBindings?:boolean;budgetLaw?:EncodingBudget;budgetCalibration?:SelectedBudgetCalibration}
+export const encodingLabel=(s:EncodingSettings)=>s.wideUnits?SCENE_WIDTH_ENCODING:s.wideRoles?ROLE_DOMAIN_ENCODING:s.sharedBindings?ROLE_ENCODING:s.budgetLaw?BUDGET_ENCODING:s.multiUnit?MULTI_ENCODING:ENCODING;
 export function encodingMatchesModel(v:CanonicalValue,s:EncodingSettings){
  const a=items(v,'list');return a.length===(s.budgetLaw?11:9)&&txt(a[0])===encodingLabel(s)&&uint(a[1])===BigInt(s.capacity)&&txt(a[2])===s.attention&&(!s.budgetLaw||txt(a[9])===s.budgetLaw&&txt(a[10])===s.budgetCalibration);
 }
 const require=(ok:unknown,s:string)=>{if(!ok)invalidModel('encoding: '+s);};
-export function compileEncoding(v:CanonicalValue,multiUnit=false,budgets=false,sharedBindings=false,wideRoles=false):EncodingSettings{
- const a=items(v,'list');require(a.length===(budgets?5:3)&&txt(a[0])===(wideRoles?ROLE_DOMAIN_ENCODING:sharedBindings?ROLE_ENCODING:budgets?BUDGET_ENCODING:multiUnit?MULTI_ENCODING:ENCODING)&&(!budgets||multiUnit)&&(!sharedBindings||budgets)&&(!wideRoles||sharedBindings),'declaration');
+export function compileEncoding(v:CanonicalValue,multiUnit=false,budgets=false,sharedBindings=false,wideRoles=false,wideUnits=false):EncodingSettings{
+ const a=items(v,'list');require(a.length===(budgets?5:3)&&txt(a[0])===(wideUnits?SCENE_WIDTH_ENCODING:wideRoles?ROLE_DOMAIN_ENCODING:sharedBindings?ROLE_ENCODING:budgets?BUDGET_ENCODING:multiUnit?MULTI_ENCODING:ENCODING)&&(!budgets||multiUnit)&&(!sharedBindings||budgets)&&(!wideRoles||sharedBindings)&&(!wideUnits||wideRoles),'declaration');
  const capacity=Number(uint(a[1])),attention=txt(a[2]);require(capacity<=2&&['role-calibrated','disabled-attention'].includes(attention),'domain');
  const budgetLaw=budgets?txt(a[3]) as EncodingBudget:undefined,budgetCalibration=budgets?txt(a[4]) as SelectedBudgetCalibration:undefined;
  if(budgets)require(['independent','historical-shared','historical-hybrid','retired-flat'].includes(budgetLaw!)&&['UnitBudget','SmallBudget'].includes(budgetCalibration!),'budget domain');
- return {capacity,...(wideRoles?{wideRoles:true}:{}),...(sharedBindings?{sharedBindings:true}:{}),attention:attention as EncodingSettings['attention'],...(multiUnit?{multiUnit:true}:{}),...(budgets?{budgetLaw,budgetCalibration}:{})};
+ return {capacity,...(wideUnits?{wideUnits:true}:{}),...(wideRoles?{wideRoles:true}:{}),...(sharedBindings?{sharedBindings:true}:{}),attention:attention as EncodingSettings['attention'],...(multiUnit?{multiUnit:true}:{}),...(budgets?{budgetLaw,budgetCalibration}:{})};
 }
-export function roleChannel(v:CanonicalValue,multiUnit=false,sharedBindings=false,wideRoles=false){
+export function roleChannel(v:CanonicalValue,multiUnit=false,sharedBindings=false,wideRoles=false,wideUnits=false){
  const a=items(v,'list');require(a.length===(multiUnit?3:2),'role channel');
  const physical=uint(a[0]),observed=uint(a[1]);require(physical<=(wideRoles?9n:4n)&&observed<=(wideRoles?9n:4n),'role codes');
  const additional=multiUnit?items(a[2],'list').map(v=>{const x=items(v,'list');require(x.length===(sharedBindings?4:3)&&typeof x[0]==='boolean'&&(!sharedBindings||typeof x[3]==='boolean'),'additional detector');const physical=uint(x[1]),observed=uint(x[2]);require(physical<=(wideRoles?9n:4n)&&observed<=(wideRoles?9n:4n),'additional role codes');return {permitted:x[0]===true,physical,observed,sameFocal:sharedBindings&&x[3]===true};}):[];
  require(additional.length<=(wideRoles?5:2)&&(!wideRoles||multiUnit&&sharedBindings),'additional detection capacity');
- require(!wideRoles||additional.filter(x=>x.permitted&&!x.sameFocal).length<=2,'at most three continuant files');
+ require(wideUnits||!wideRoles||additional.filter(x=>x.permitted&&!x.sameFocal).length<=2,'at most three continuant files');
  if(sharedBindings){const focalRoles=[observed,...additional.filter(x=>x.permitted&&x.sameFocal).map(x=>x.observed)];require(new Set(focalRoles).size===focalRoles.length,'duplicate observed event/carrier/role');}
  return {physical,observed,additional};
 }
@@ -70,7 +72,7 @@ export function encodeExperienceFromRoles(full:PreRecognitionSemanticExperience,
  require(key(preRecognitionSemanticExperienceValue(experience))===key(preRecognitionSemanticExperienceValue(expected)),'companion experience binding');
  const bindings=[...experience.perceivedBindings].sort((a,b)=>a.perceivedBindingId<b.perceivedBindingId?-1:1);
  require(bindings.length>=1&&bindings.length<=(settings.wideRoles?6:settings.multiUnit?3:1)&&experience.perceptualEventReferentIds.length===1&&ids.length===bindings.length&&new Set(ids).size===ids.length&&ids.every(x=>x>=0n)&&claims.every(c=>ids.includes(c.causalRoleEvidenceId)),'companion reserved identities/domain');
- const selection=selectAttention(prepareAttentionPool(experience,claims),settings.capacity),result=encodeSelectedBudgetControl(selection.view,settings.budgetLaw??'historical-shared',settings.attention,settings.budgetCalibration??'UnitBudget');
+ const selection=settings.wideUnits?selectWideAttention(experience,claims,settings.capacity):selectAttention(prepareAttentionPool(experience,claims),settings.capacity),result=encodeSelectedBudgetControl(selection.view,settings.budgetLaw??'historical-shared',settings.attention,settings.budgetCalibration??'UnitBudget');
  const value=list([text(encodingLabel(settings)),u(settings.capacity),text(settings.attention),settings.multiUnit?list(ids.map(u)):u(ids[0]),preRecognitionSemanticExperienceValue(experience),list(claims.map(causalRoleEvidenceValue)),list(selection.audit.map(a=>list([text(a.key),list(a.roles.map(text)),text(a.exclusion??'Eligible'),a.selected]))),list(result.evidence.map(e=>decodeSemanticValue(e.bytes))),list(result.rows.map(r=>list([text(r.continuantKey),text(r.roleId),...[r.base,r.role,r.attention,r.raw,r.strength].map(x=>q(x.numerator,x.denominator))]))),...(settings.budgetLaw?[text(settings.budgetLaw),text(settings.budgetCalibration!)]:[])]);
  // The focal binding is reserved first by the actual perception producer.
  const focal=key(perceptualReferentIdValue(bindings[0].perceptualReferentId));
@@ -84,7 +86,7 @@ function roleProjection(v:CanonicalValue):PreRecognitionSemanticExperience{
  return {observerId,experienceId,occurredAt,perceptualEventReferentIds:items(f(x,4n),'set').map(restorePerceptualEventReferentId),perceivedBindings:items(f(x,5n),'set').map(v=>{const b=rec(v,224n),r=rec(f(b,5n),223n);return {perceivedBindingId:uint(id(f(b,1n)).payload),observerId:txt(id(f(b,2n)).payload),perceptualEventReferentId:restorePerceptualEventReferentId(f(b,3n)),perceptualReferentId:restorePerceptualReferentId(f(b,4n)),eventRoleEvidence:uint(f(r,1n))===2n?{kind:'unresolved' as const}:{kind:'exact' as const,eventRoleId:txt(id(f(r,2n)).payload) as typeof R.Actor},supportingObservationIds:support(f(b,6n)),occurredAt:uint(f(b,7n)),transformationVersion:txt(f(b,8n))};}),perceptualClassifications:[],perceptualEventClassifications:[],supportingObservationIds:support(f(x,8n)),transformationVersion:txt(f(x,9n))};
 }
 export function validateEncoding(value:CanonicalValue,full:CanonicalValue){
- const a=items(value,'list');require([ENCODING,MULTI_ENCODING,BUDGET_ENCODING,ROLE_ENCODING,ROLE_DOMAIN_ENCODING].includes(txt(a[0]))&&a.length===([BUDGET_ENCODING,ROLE_ENCODING,ROLE_DOMAIN_ENCODING].includes(txt(a[0]))?11:9),'assessment shape');const budgets=[BUDGET_ENCODING,ROLE_ENCODING,ROLE_DOMAIN_ENCODING].includes(txt(a[0])),settings=compileEncoding(list([...a.slice(0,3),...(budgets?a.slice(9):[])]),budgets||txt(a[0])===MULTI_ENCODING,budgets,[ROLE_ENCODING,ROLE_DOMAIN_ENCODING].includes(txt(a[0])),txt(a[0])===ROLE_DOMAIN_ENCODING),projection=roleProjection(a[4]);
+ const a=items(value,'list');require([ENCODING,MULTI_ENCODING,BUDGET_ENCODING,ROLE_ENCODING,ROLE_DOMAIN_ENCODING,SCENE_WIDTH_ENCODING].includes(txt(a[0]))&&a.length===([BUDGET_ENCODING,ROLE_ENCODING,ROLE_DOMAIN_ENCODING,SCENE_WIDTH_ENCODING].includes(txt(a[0]))?11:9),'assessment shape');const budgets=[BUDGET_ENCODING,ROLE_ENCODING,ROLE_DOMAIN_ENCODING,SCENE_WIDTH_ENCODING].includes(txt(a[0])),settings=compileEncoding(list([...a.slice(0,3),...(budgets?a.slice(9):[])]),budgets||txt(a[0])===MULTI_ENCODING,budgets,[ROLE_ENCODING,ROLE_DOMAIN_ENCODING,SCENE_WIDTH_ENCODING].includes(txt(a[0])),[ROLE_DOMAIN_ENCODING,SCENE_WIDTH_ENCODING].includes(txt(a[0])),txt(a[0])===SCENE_WIDTH_ENCODING),projection=roleProjection(a[4]);
  const original=rec(full,227n),projected=rec(a[4],227n);for(const field of [1n,2n,3n,4n,5n,8n,9n])require(key(f(original,field))===key(f(projected,field)),'original evidence binding');
  const expected=encodeExperience(projection,settings,settings.multiUnit?items(a[3],'list').map(uint):uint(a[3]));require(key(value)===key(expected.value),'canonical factors/refs');return expected.positive;
 }

@@ -14,7 +14,7 @@ export function currentSource(v:CanonicalValue,settings:RecognitionSettings){
  const a=items(v,'list');if(a.length!==7||!settings.twoLanes)invalidModel('current semantic source version/grammar');
  const x=recognitionSource(list(a.slice(0,6)),settings),s=socialSetting(x.social);
  if(s.claim!==undefined||s.receipt!==0n||s.trial)invalidModel('current semantic source is sensory, not report learning');
- return {...x,s,role:roleChannel(a[6],!!settings.multiUnit,!!settings.sharedBindings,!!settings.wideRoles)};
+ return {...x,s,role:roleChannel(a[6],!!settings.multiUnit,!!settings.sharedBindings,!!settings.wideRoles,!!settings.wideUnits)};
 }
 export function currentProjection(v:CanonicalValue,settings:RecognitionSettings){
  const x=currentSource(v,settings),s=x.s,visible=s.access;

@@ -18,7 +18,7 @@ export const RECOGNITION_SYMBOL_DOMAIN='assembled-recognition-symbol-domain/0.1'
 export const RECOGNITION_KNOWLEDGE_VERSION='assembled-character-recognition-knowledge/0.1-candidate';
 const CANDIDATE_DOMAINS=['Person','DiscreteObject','PlaceOrRegion'] as const;
 export const RECOGNITION_CATALOG='assembled-recognition-catalog/0.1';
-export function compileRecognition(v:CanonicalValue,target:CanonicalValue,configurable=false,seededKnowledge=false,symbolKnowledge=false,cueAccess=false,richAppearance=false,semanticLifecycle=false,twoLanes=false,causalCompanions=false,openCatalog=false,wideRoles=false){
+export function compileRecognition(v:CanonicalValue,target:CanonicalValue,configurable=false,seededKnowledge=false,symbolKnowledge=false,cueAccess=false,richAppearance=false,semanticLifecycle=false,twoLanes=false,causalCompanions=false,openCatalog=false,wideRoles=false,wideUnits=false){
  const a=items(v,'list');let entries:{candidate:CanonicalValue;templates:string[]}[];
  const validTemplates=(xs:string[])=>xs.every(x=>x.length>0&&x.length<=80)&&new Set(xs).size===xs.length;
  if(configurable){
@@ -34,7 +34,7 @@ export function compileRecognition(v:CanonicalValue,target:CanonicalValue,config
  const symbols=symbolKnowledge?items(a[3],'list').map(txt).sort():[];
  demand(!symbolKnowledge||symbols.length>=1&&symbols.length<=8&&validTemplates(symbols),'symbol domain');
  const bindings=entries.flatMap(e=>e.templates.map(template=>({candidate:e.candidate,template})));
- return {...(wideRoles?{wideRoles:true}:{}),...(openCatalog?{openCatalog:true}:{}),...(causalCompanions?{causalCompanions:true}:{}),...(twoLanes?{twoLanes:true}:{}),...(semanticLifecycle?{semanticLifecycle:true}:{}),...(richAppearance?{richAppearance:true}:{}),...(cueAccess?{cueAccess:true}:{}),...(symbolKnowledge?{symbols}:{}),...(seededKnowledge?{seededKnowledge:true}:{}),candidates:entries.map(e=>e.candidate),templates:[...new Set(bindings.map(e=>e.template))],bindings};
+ return {...(wideUnits?{wideUnits:true}:{}),...(wideRoles?{wideRoles:true}:{}),...(openCatalog?{openCatalog:true}:{}),...(causalCompanions?{causalCompanions:true}:{}),...(twoLanes?{twoLanes:true}:{}),...(semanticLifecycle?{semanticLifecycle:true}:{}),...(richAppearance?{richAppearance:true}:{}),...(cueAccess?{cueAccess:true}:{}),...(symbolKnowledge?{symbols}:{}),...(seededKnowledge?{seededKnowledge:true}:{}),candidates:entries.map(e=>e.candidate),templates:[...new Set(bindings.map(e=>e.template))],bindings};
 }
 export type RecognitionSettings=ReturnType<typeof compileRecognition>&{readonly sharedFiles?:boolean;readonly multiUnit?:boolean;readonly sharedBindings?:boolean};
 export function recognitionSource(v:CanonicalValue,settings:RecognitionSettings){
