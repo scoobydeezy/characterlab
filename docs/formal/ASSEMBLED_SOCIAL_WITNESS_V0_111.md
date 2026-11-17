@@ -5,7 +5,9 @@ Preserves social-public/0.1-candidate SourceGroupedMean and current one-characte
 reference policy; no alternative law is selected or new phenomenon added.
 
 ## Composition and domains
-Append slot51 [tag, reverseProcessing:Boolean, observer rows]. Exactly two rows
+Append slot51 [tag, task371, reverseProcessing:Boolean, observer rows].
+The declared task fixes the attributed commitment proposition for the entire run;
+every source must name that same task, preventing unrelated commitments from mixing. Exactly two rows
 [existing communication observer1000, distinct semantic holder, local target referent].
 Rows correspond to the existing two communication recipients. Holder and target
 referents are distinct, observer-local, governed identities; holder cannot be the
