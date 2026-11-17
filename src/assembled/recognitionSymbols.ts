@@ -2,7 +2,7 @@
 import {type AuthoritativeState,statePathValue} from '../substrate/state';
 import {text,type CanonicalValue} from '../substrate/canonicalEncoding';
 import {dataRecord as rec,dataField as f,dataIdentity as id,dataText as txt,dataUnsigned as uint,dataKey as key} from '../campaign2/canonicalData';
-import {identitySymbolMappingPath} from '../semanticBinding/semanticStateAuthority';
+import {identitySymbolMappingPath,candidateCatalogEntryPath} from '../semanticBinding/semanticStateAuthority';
 import {semanticRecordValue as sr,semanticOccurrenceId as occ,semanticTypedId as tid,observerIdValue} from '../semanticBinding/semanticCodecs';
 import type {ObserverIdentitySymbolMapping} from '../semanticBinding/recognition';
 import {OBSERVER,RECOGNITION_SYMBOL_VERSION,demand,type RecognitionSettings} from './recognition';
@@ -21,6 +21,7 @@ export function validateSymbolKnowledge(state:AuthoritativeState,settings:Recogn
  for(const e of state.entries().filter(e=>e.path.rootStateTypeId===243n&&e.path.fieldId===2n)){
   const slot=reserved.find(x=>key(statePathValue(x.path))===key(statePathValue(e.path)));demand(!!slot,'mapping path');
   const v=rec(e.value,229n),candidate=f(v,4n);demand(settings.candidates.some(c=>key(c)===key(candidate)),'mapping candidate');
+  demand(!settings.openCatalog||state.read(candidateCatalogEntryPath(OBSERVER,key(candidate))).presence,'mapping candidate absent from actual catalog');
   demand(key(e.value)===key(symbolMappingValue(slot!.symbol,candidate,slot!.occurrence)),'mapping schema/observer/occurrence/version');
  }
 }

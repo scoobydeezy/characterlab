@@ -15,8 +15,10 @@ export const demand=(b:boolean,s:string)=>{if(!b)invalidModel('recognition '+s);
 export const RECOGNITION_DOMAIN='assembled-recognition-domain/0.1',RECOGNITION_SEED_VERSION='assembled-character-recognition-seed/0.1-candidate';
 export const RECOGNITION_ACCESS_VERSION='assembled-character-recognition-access/0.1-candidate';
 export const RECOGNITION_SYMBOL_DOMAIN='assembled-recognition-symbol-domain/0.1',RECOGNITION_SYMBOL_VERSION='assembled-character-recognition-symbol/0.1-candidate';
+export const RECOGNITION_KNOWLEDGE_VERSION='assembled-character-recognition-knowledge/0.1-candidate';
+const CANDIDATE_DOMAINS=['Person','DiscreteObject','PlaceOrRegion'] as const;
 export const RECOGNITION_CATALOG='assembled-recognition-catalog/0.1';
-export function compileRecognition(v:CanonicalValue,target:CanonicalValue,configurable=false,seededKnowledge=false,symbolKnowledge=false,cueAccess=false,richAppearance=false,semanticLifecycle=false,twoLanes=false,causalCompanions=false){
+export function compileRecognition(v:CanonicalValue,target:CanonicalValue,configurable=false,seededKnowledge=false,symbolKnowledge=false,cueAccess=false,richAppearance=false,semanticLifecycle=false,twoLanes=false,causalCompanions=false,openCatalog=false){
  const a=items(v,'list');let entries:{candidate:CanonicalValue;templates:string[]}[];
  const validTemplates=(xs:string[])=>xs.every(x=>x.length>0&&x.length<=80)&&new Set(xs).size===xs.length;
  if(configurable){
@@ -32,7 +34,7 @@ export function compileRecognition(v:CanonicalValue,target:CanonicalValue,config
  const symbols=symbolKnowledge?items(a[3],'list').map(txt).sort():[];
  demand(!symbolKnowledge||symbols.length>=1&&symbols.length<=8&&validTemplates(symbols),'symbol domain');
  const bindings=entries.flatMap(e=>e.templates.map(template=>({candidate:e.candidate,template})));
- return {...(causalCompanions?{causalCompanions:true}:{}),...(twoLanes?{twoLanes:true}:{}),...(semanticLifecycle?{semanticLifecycle:true}:{}),...(richAppearance?{richAppearance:true}:{}),...(cueAccess?{cueAccess:true}:{}),...(symbolKnowledge?{symbols}:{}),...(seededKnowledge?{seededKnowledge:true}:{}),candidates:entries.map(e=>e.candidate),templates:[...new Set(bindings.map(e=>e.template))],bindings};
+ return {...(openCatalog?{openCatalog:true}:{}),...(causalCompanions?{causalCompanions:true}:{}),...(twoLanes?{twoLanes:true}:{}),...(semanticLifecycle?{semanticLifecycle:true}:{}),...(richAppearance?{richAppearance:true}:{}),...(cueAccess?{cueAccess:true}:{}),...(symbolKnowledge?{symbols}:{}),...(seededKnowledge?{seededKnowledge:true}:{}),candidates:entries.map(e=>e.candidate),templates:[...new Set(bindings.map(e=>e.template))],bindings};
 }
 export type RecognitionSettings=ReturnType<typeof compileRecognition>&{readonly sharedFiles?:boolean;readonly multiUnit?:boolean;readonly sharedBindings?:boolean};
 export function recognitionSource(v:CanonicalValue,settings:RecognitionSettings){
@@ -47,15 +49,15 @@ export function recognitionSource(v:CanonicalValue,settings:RecognitionSettings)
  symbols:visible.filter(x=>x.kind===2n).map(x=>({symbol:x.token,support:x.support}))};
 }
 export function catalogEntries(settings:RecognitionSettings){return settings.candidates.map(candidate=>({path:candidateCatalogEntryPath(OBSERVER,key(candidate)),value:sr('RecognitionCandidateCatalogEntry',{ObserverId:observerIdValue(OBSERVER),CandidateSemanticReferentId:candidate,CandidateDomain:u(1),RecognitionTemplateIds:set(settings.bindings.filter(b=>key(b.candidate)===key(candidate)).map(b=>semanticTypedId('RecognitionTemplateId',text(b.template)))),CatalogEntryVersion:text(VERSION)})}));}
-export function readCatalog(v:CanonicalValue):RecognitionCandidateCatalogEntry{const x=rec(v,228n);return {observerId:txt(id(f(x,1n)).payload),candidateSemanticReferentId:key(f(x,2n)),candidateDomain:'Person',recognitionTemplateIds:items(f(x,4n),'set').map(v=>txt(id(v).payload)).sort(),catalogEntryVersion:txt(f(x,5n))};}
+export function readCatalog(v:CanonicalValue):RecognitionCandidateCatalogEntry{const x=rec(v,228n),domain=uint(f(x,3n));demand(domain>=1n&&domain<=3n,'candidate domain');return {observerId:txt(id(f(x,1n)).payload),candidateSemanticReferentId:key(f(x,2n)),candidateDomain:CANDIDATE_DOMAINS[Number(domain)-1],recognitionTemplateIds:items(f(x,4n),'set').map(v=>txt(id(v).payload)).sort(),catalogEntryVersion:txt(f(x,5n))};}
 const ordinal=(v:CanonicalValue)=>uint(id(v).payload);
 export function readResolution(v:CanonicalValue):RecognitionResolutionRecord{const x=rec(v,236n),resolution=rec(f(x,5n),235n);return {recognitionResolutionId:ordinal(f(x,1n)),experienceId:ordinal(f(x,2n)),observerId:txt(id(f(x,3n)).payload),perceptualReferentId:restorePerceptualReferentId(f(x,4n)),resolution:uint(f(resolution,1n))===1n?{kind:'asserted-candidate',candidateSemanticReferentId:key(f(resolution,2n))}:{kind:'withdrawn'},recognitionRuleId:txt(id(f(x,6n)).payload),evaluatedRecognitionCueEvidenceIds:items(f(x,7n),'set').map(ordinal),revisesRecognitionResolutionId:x.fields.has(8n)?ordinal(f(x,8n)):undefined,occurredAt:uint(f(x,9n)),recognitionVersion:txt(f(x,10n))};}
 export const resolvedValue=(r:RecognitionResolutionRecord|undefined)=>r?.resolution.kind==='asserted-candidate'?semanticReferentValue(r.resolution.candidateSemanticReferentId):list([]);
 
 /** The domain limits seed knowledge; it never supplies absent learned templates. */
-export function validateSeedCatalog(value:CanonicalValue,allowed:CanonicalValue){
+export function validateSeedCatalog(value:CanonicalValue,allowed:CanonicalValue,openCatalog=false){
  const actual=rec(value,228n),domain=rec(allowed,228n),templates=f(actual,4n),permitted=new Set(items(f(domain,4n),'set').map(key));
- demand(key(value)===key({...domain,fields:new Map([...domain.fields].map(([n,v])=>[n,n===4n?templates:v]))}),'seed catalog identity/schema');
+ demand(key(value)===key({...domain,fields:new Map([...domain.fields].map(([n,v])=>[n,n===4n?templates:n===3n&&openCatalog?f(actual,3n):v]))}),'seed catalog identity/schema');
  const known=items(templates,'set');demand(known.every(t=>permitted.has(key(t)))&&new Set(known.map(key)).size===known.length,'seed catalog template domain');
  return readCatalog(value);
 }
