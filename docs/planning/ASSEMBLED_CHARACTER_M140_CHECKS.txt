@@ -1,3 +1,69 @@
 M140 baseline5c73b0c7; 1800s cumulative,600s command cap.
 Prepaid bookkeeping15s.
 CHARGED 15.000
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 20.817s
+CHARGED 35.817
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSemanticTruth.test.ts", "-t", "grammar140", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSemanticTruth.test.ts > grammar140: governed domain/cardinality and role precision match accepted SEM
+M140 GRAMMAR PASS all40 role/precision cases including5 rejection controls; original governed broad AND narrow domains/cardinality/duplicates/fixed Action/undeclared/qualifier/old-version controls; real typed allocation
+
+ ✓ src/test/assembledSemanticTruth.test.ts > grammar140: governed domain/cardinality and role precision match accepted SEM 60342ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 9 skipped (10)
+   Start at  09:39:13
+   Duration  65.03s (transform 2.93s, setup 0ms, collect 4.36s, tests 60.34s, environment 0ms, prepare 101ms)
+
+
+EXIT 0; elapsed 65.582s
+CHARGED 101.399
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSemanticTruth.test.ts", "-t", "primary140|boundaries140", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledSemanticTruth.test.ts > primary140: governed event precision changes retained experience and actual choice 60660ms
+   → event-role/companion count 2 violates declared cardinality
+ × src/test/assembledSemanticTruth.test.ts > boundaries140: repeatable/multi-role, omission and unresolved evidence stay distinct natively 4484ms
+   → event-role/companion count 2 violates declared cardinality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSemanticTruth.test.ts > primary140: governed event precision changes retained experience and actual choice
+ FAIL  src/test/assembledSemanticTruth.test.ts > boundaries140: repeatable/multi-role, omission and unresolved evidence stay distinct natively
+EventBindingContractError: event-role/companion count 2 violates declared cardinality
+ ❯ fail src/semanticBinding/eventBindings.ts:394:9
+    392| 
+    393| function fail(code: EventBindingFailureCode, message: string): never {
+    394|   throw new EventBindingContractError(code, message);
+       |         ^
+    395| }
+    396| 
+ ❯ Module.compileEventBindings src/semanticBinding/eventBindings.ts:178:7
+ ❯ declared src/assembled/semanticTruth.ts:45:65
+ ❯ Module.sourceRole src/assembled/semanticTruth.ts:53:62
+ ❯ Module.currentSource src/assembled/semanticLanes.ts:17:22
+ ❯ src/assembled/inputs.ts:92:628
+ ❯ Module.compileCharacterInputs src/assembled/inputs.ts:92:27
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:63
+ ❯ create src/test/assembledSemanticTruth.test.ts:42:121
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'ROLE_CARDINALITY_VIOLATION' }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ Test Files  1 failed (1)
+      Tests  2 failed | 8 skipped (10)
+   Start at  09:40:49
+   Duration  69.86s (transform 2.94s, setup 0ms, collect 4.39s, tests 65.15s, environment 0ms, prepare 105ms)
+
+
+EXIT 1; elapsed 70.460s
+CHARGED 171.859

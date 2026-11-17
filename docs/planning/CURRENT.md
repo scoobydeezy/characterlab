@@ -47,3 +47,9 @@ RO003/004/005/006/007/014/016/020 reviewed; no law/debt/denominator changes.
 SEM still UNRESOLVED:15/21 mapped,0/15 families,E46/P54/N17/U15=132.
 Then multiple events/observer/provenance/ordinal/lifecycle/full SEM replay. No UI/peers.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
+
+## Self-approved fixture repair before rerun
+Sourceaa1e9bb0 native primary/boundaries rejected two Companions because the fixture
+helper defaulted explicit undefined to max1. This is a test-setup defect; replace
+that sentinel with null to encode the planned unbounded Companion cardinality.
+Retain both failures; no law/input contrast/seed/proof/budget change.
