@@ -12,3 +12,108 @@ src/test/assembledSemanticEvents.test.ts(60,225): error TS1005: ',' expected.
 
 EXIT 2; elapsed 3.406s
 CHARGED 39.336
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 20.617s
+CHARGED 59.953
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSemanticEvents.test.ts", "-t", "correspondence141|admission141", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSemanticEvents.test.ts > correspondence141: original selection and globally shared factors with exact event provenance
+M141 CORRESPONDENCE PASS777 original audits/selected references/bytes/raw/final factors; two-event cap2 has one SmallBudget total1; exact event provenance; duplicate selected carrier and old/third-event guards
+
+ ✓ src/test/assembledSemanticEvents.test.ts > correspondence141: original selection and globally shared factors with exact event provenance 2248ms
+stdout | src/test/assembledSemanticEvents.test.ts > admission141: event groups, version and capacity constraints are explicit before execution
+M141 ADMISSION PASS explicit source event0/1, world count, old-version and capacity2 shared-carrier restrictions; no duplicate-strength law introduced
+
+ ✓ src/test/assembledSemanticEvents.test.ts > admission141: event groups, version and capacity constraints are explicit before execution 60881ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 8 skipped (10)
+   Start at  10:09:06
+   Duration  67.89s (transform 2.99s, setup 0ms, collect 4.44s, tests 63.13s, environment 0ms, prepare 104ms)
+
+
+EXIT 0; elapsed 68.449s
+CHARGED 128.402
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSemanticEvents.test.ts", "-t", "primary141|privacy141|continuation141", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSemanticEvents.test.ts > primary141: perceived event merge versus split changes actual memory and choice
+M141 PRIMARY PASS same truth/roles/shared carrier; merged MultipleRoles vs split event-scoped Target; exact125->130 selected claim -> graph/memory/recall -> live P1 vs1/2 with belief1/2; actual execution/full queues
+
+ ✓ src/test/assembledSemanticEvents.test.ts > primary141: perceived event merge versus split changes actual memory and choice 100457ms
+stdout | src/test/assembledSemanticEvents.test.ts > privacy141: two world events do not dictate perceived grouping or character provenance
+M141 PRIVACY PASS two governed worlds; reordered truth event allocation and hidden Action/referents alter trace only; identical safe prefixes/two-file envelopes/actual choice/full queues
+
+ ✓ src/test/assembledSemanticEvents.test.ts > privacy141: two world events do not dictate perceived grouping or character provenance 76871ms
+stdout | src/test/assembledSemanticEvents.test.ts > continuation141: two event files and exact selected claim survive repeat, restore and rollback
+M141 CONTINUATION PASS two-event repeat/save2/every later boundary/full queues; post122+125 fault rolls both event allocations/state/lanes back; exact recovery
+
+ ✓ src/test/assembledSemanticEvents.test.ts > continuation141: two event files and exact selected claim survive repeat, restore and rollback 98169ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 7 skipped (10)
+   Start at  10:11:13
+   Duration  280.26s (transform 2.95s, setup 0ms, collect 4.40s, tests 275.50s, environment 0ms, prepare 103ms)
+
+
+EXIT 0; elapsed 280.836s
+CHARGED 409.238
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSemanticTruth.test.ts", "src/test/perceptualEventFiles.test.ts", "-t", "primary140|SEM-001C", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSemanticTruth.test.ts > primary140: governed event precision changes retained experience and actual choice
+M140 PRIMARY PASS governed six-binding current truth -> five perceived files; actual shared allocated truth210/211 only in trace; coarsened vs preserved other Actor -> focal negative vs positive recall -> live P1/2 vs1 with belief1/2; actual execution/full queues
+
+ ✓ src/test/assembledSemanticTruth.test.ts > primary140: governed event precision changes retained experience and actual choice 101870ms
+ ✓ src/test/perceptualEventFiles.test.ts > SEM-001C observer-relative perceptual event-file conformance > CV-SEM-031 preserves two simultaneous event groupings that an ungrouped role bag loses
+ ✓ src/test/perceptualEventFiles.test.ts > SEM-001C observer-relative perceptual event-file conformance > CV-SEM-032 permits one event-file to persist across distinct experiences
+ ✓ src/test/perceptualEventFiles.test.ts > SEM-001C observer-relative perceptual event-file conformance > CV-SEM-033 permits false event continuity without truth-side correction
+ ✓ src/test/perceptualEventFiles.test.ts > SEM-001C observer-relative perceptual event-file conformance > CV-SEM-034 permits false event discontinuity without truth-side merging
+ ✓ src/test/perceptualEventFiles.test.ts > SEM-001C observer-relative perceptual event-file conformance > CV-SEM-035 rejects truth-keyed segmentation inputs and keeps sensory IDs observer-side
+ ✓ src/test/perceptualEventFiles.test.ts > SEM-001C observer-relative perceptual event-file conformance > CV-SEM-036 forbids using a continuant-file as the Action carrier
+ ✓ src/test/perceptualEventFiles.test.ts > SEM-001C observer-relative perceptual event-file conformance > CV-SEM-037 preserves concurrent participation and distinct same-object role occurrences
+ ✓ src/test/perceptualEventFiles.test.ts > SEM-001C observer-relative perceptual event-file conformance > CV-SEM-038 preserves event-file state across save/load and isolates observer allocators
+ ✓ src/test/perceptualEventFiles.test.ts > SEM-001C observer-relative perceptual event-file conformance > CV-SEM-039 gives event-file ordinals no semantic or psychological magnitude
+ ✓ src/test/perceptualEventFiles.test.ts > SEM-001C observer-relative perceptual event-file conformance > CV-SEM-040 rolls event-file state and runtime allocation back after staged failure
+
+ Test Files  2 passed (2)
+      Tests  11 passed | 9 skipped (20)
+   Start at  10:16:36
+   Duration  106.92s (transform 2.97s, setup 0ms, collect 4.45s, tests 101.88s, environment 0ms, prepare 199ms)
+
+
+EXIT 0; elapsed 107.479s
+CHARGED 516.717
+
+COMMAND ["node", "scripts/check-reference-boundary.mjs"]
+Reference boundary check passed.
+
+EXIT 0; elapsed 2.704s
+CHARGED 519.421
+
+COMMAND ["node", "scripts/check-research-obligations.mjs"]
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4362}
+
+EXIT 0; elapsed 3.607s
+CHARGED 523.028
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,json\ngit=lambda *a:subprocess.check_output(['git',*a],text=True,encoding='utf-8')\nbase='bec62cc0'\ncode={'src/assembled/'+p for p in ['model.ts','traceBinding.ts','recognition.ts','recognitionExecution.ts','recognitionState.ts','encoding.ts','wideAttention.ts','semanticTruth.ts','semanticLanes.ts','socialExecution.ts','learnedAssociation.ts']}|{'src/test/assembledSemanticEvents.test.ts'}\nallowed=code|{'AGENTS.md','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md','docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md','docs/planning/RESEARCH_OBLIGATIONS.json','docs/planning/ASSEMBLED_CHARACTER_M141_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M141_CHECKS.txt','docs/formal/ASSEMBLED_CHARACTER_SEMANTIC_EVENTS_CONTRACT.md'}\nchanged=set(git('diff','--name-only',base).splitlines())|set(git('ls-files','--others','--exclude-standard').splitlines())\nassert changed<=allowed,changed-allowed\nassert changed&code==code\nassert git('diff','027960ed','--','src')=='','tested source changed'\nassert git('diff',base,'--','src/campaign2','src/campaign3','src/substrate','src/observation','src/semanticBinding','reference')=='','frozen dependency changed'\nfor p in code:\n s=Path(p).read_text(encoding='utf-8')\n if p.startswith('src/assembled/'):assert not any(\"campaign3/\"+x in s for x in ['attentionFactory','attentionRuntime','generalAttentionFactory','generalAttentionRuntime']),'separate pipeline'\nold=git('show',base+':docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md')\nnew=Path('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md').read_text(encoding='utf-8')\nrows=lambda s:[x for x in s.splitlines() if ('| C-' in x or '| F-' in x) and '| C-SEM ' not in x]\nassert rows(old)==rows(new),'other C/F rows changed'\nassert '| UNRESOLVED | C-SEM ' in new\nassert 'E46/P54/N17/U15' in new and '15/21' in new and 'families:0/15' in new\nassert len(new.splitlines())<=250 and len(new.replace('\\n','\\r\\n').encode())<=65536\nbefore=json.loads(git('show',base+':docs/planning/RESEARCH_OBLIGATIONS.json'))\nafter=json.loads(Path('docs/planning/RESEARCH_OBLIGATIONS.json').read_text(encoding='utf-8-sig'))\nassert before['obligations']==after['obligations']\nassert after['reportReviews'][:-1]==before['reportReviews']\nassert after['reportReviews'][-1]=={'path':'docs/planning/ASSEMBLED_CHARACTER_M141_RESULT.md','obligations':['RO-C3-003','RO-C3-004','RO-C3-005','RO-C3-006','RO-C3-007','RO-C3-014','RO-C3-016','RO-C3-020']}\nfor path,cap in [('AGENTS.md',120),('docs/planning/CURRENT.md',80),('docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md',250)]:\n assert len(Path(path).read_text(encoding='utf-8').splitlines())<=cap,path\nevidence=[Path('docs/planning/ASSEMBLED_CHARACTER_M141_'+s) for s in ['RESULT.md','CHECKS.txt']]\nassert sum(p.stat().st_size for p in evidence)<5*1024*1024\nlog=evidence[1].read_text(encoding='utf-8')\ncharge=float([l.split()[1] for l in log.splitlines() if l.startswith('CHARGED ')][-1]);assert charge<1800\nfor token in ['M141 PRIMARY PASS','M141 PRIVACY PASS','M141 CONTINUATION PASS','M141 ADMISSION PASS','M141 CORRESPONDENCE PASS','M140 PRIMARY PASS','src/test/perceptualEventFiles.test.ts','Reference boundary check passed.','PASS: research obligation references']:\n assert token in log,token\ncurrent=Path('docs/planning/CURRENT.md').read_text(encoding='utf-8')\nassert '(ASSEMBLED_CHARACTER_M141_CHECKS.txt)' in current and '{{' not in current\nprint('PASS M141 preservation: source 027960ed;12 production/test files; old Campaign0-3/reference dependencies unchanged; C-SEM remains unresolved/partial, other C/F unchanged;15/21,0/15,E46/P54/N17/U15; statuses/document/evidence caps retained; charge',charge)\n"]
+PASS M141 preservation: source 027960ed;12 production/test files; old Campaign0-3/reference dependencies unchanged; C-SEM remains unresolved/partial, other C/F unchanged;15/21,0/15,E46/P54/N17/U15; statuses/document/evidence caps retained; charge 523.028
+
+EXIT 0; elapsed 0.866s
+CHARGED 523.894
+
+COMMAND ["node", "scripts/check-git-file-sizes.mjs"]
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.366s
+CHARGED 524.260
