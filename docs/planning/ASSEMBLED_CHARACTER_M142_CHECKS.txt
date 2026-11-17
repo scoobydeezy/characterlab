@@ -49,3 +49,45 @@ AssertionError: expected [ { kind: 'rational', …(2) } ] to deeply equal [ { ki
 
 EXIT 1; elapsed 103.171s
 CHARGED 159.910
+
+DIAGNOSTIC: retained failed recall0 prediction159e0d9d. Same two runs/laws/inputs; inspect actual probabilities with observed recall1, retaining nonzero probability gate. No fixture amendment.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledCarrierObservation.test.ts", "-t", "primary142", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCarrierObservation.test.ts > primary142: cue carrier isolates recognition and changes live focal report decision
+M142 DIAGNOSTIC 1/1 1/1
+
+ × src/test/assembledCarrierObservation.test.ts > primary142: cue carrier isolates recognition and changes live focal report decision 96975ms
+   → required live probability difference: expected true to be false // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledCarrierObservation.test.ts > primary142: cue carrier isolates recognition and changes live focal report decision
+AssertionError: required live probability difference: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ src/test/assembledCarrierObservation.test.ts:64:63
+     62|  const a=await create(),b=await create('companion');for(const x of[a,b…
+     63|  const pa=judgment(a.r,a.b,1),pb=judgment(b.r,b.b,1,1);console.info('M…
+     64|  expect(pa.equals(pb),'required live probability difference').toBe(fal…
+       |                                                               ^
+     65|  for(const x of[a,b])await finish(x.r);
+     66|  console.info('M142 PRIMARY PASS per-carrier features/recognition -> f…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  10:33:49
+   Duration  101.67s (transform 2.93s, setup 0ms, collect 4.36s, tests 96.98s, environment 0ms, prepare 102ms)
+
+
+EXIT 1; elapsed 102.253s
+CHARGED 262.163

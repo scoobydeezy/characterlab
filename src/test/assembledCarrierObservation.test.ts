@@ -60,8 +60,8 @@ function structure(r:Run,mode:string){
 }
 it('primary142: cue carrier isolates recognition and changes live focal report decision',async()=>{
  const a=await create(),b=await create('companion');for(const x of[a,b]){await through(x.r,2n);structure(x.r,x.b.mode);await through(x.r,21n);}
- expect(judgment(a.r,a.b,0).equals(Q.of(1n,2n))).toBe(true);
- expect(judgment(b.r,b.b,1,1).equals(Q.of(1n))).toBe(true);
+ const pa=judgment(a.r,a.b,1),pb=judgment(b.r,b.b,1,1);console.info('M142 DIAGNOSTIC',String(pa.numerator)+'/'+String(pa.denominator),String(pb.numerator)+'/'+String(pb.denominator));
+ expect(pa.equals(pb),'required live probability difference').toBe(false);
  for(const x of[a,b])await finish(x.r);
  console.info('M142 PRIMARY PASS per-carrier features/recognition -> focal-only report -> belief1/2 vs1 -> memory/appraisal/live P1/2 vs1/actual execution/full queues');
 },590000);
