@@ -1,7 +1,7 @@
 # Assembled Character — reconciliation and requirement evidence
 
 D1–D5 adopted2026-10-25; D2 condition below.
-Reference0.101; feedback TRUE.15 mapped/0 families; wider debts conditional.
+Reference0.108; feedback TRUE.16 mapped/0 families; wider debts conditional.
 
 ## Decision sheet — adopted 2026-10-25
 
@@ -37,7 +37,7 @@ E is version-scoped evidence, NOT clause acceptance or a current-model rerun. Pr
 all cited result limits; P/N/U remain open. Final candidate replay/classification is
 required even for E. This index promotes no historical result to a broader claim.
 Evidence index: E46/P54/N17/U15 =132. Not a completion percentage. Mapped members:
-15/21; accepted complete families:0/15. Denominator unchanged.
+16/21; accepted complete families:0/15. Denominator unchanged.
 [M102] promoted12.2-5/12.13-8. M119 promotes12.8-1/2/3; other129 unchanged.
 Cited evidence stays version-scoped; all final-candidate requirements remain.
 
@@ -108,7 +108,7 @@ Cited evidence stays version-scoped; all final-candidate requirements remain.
 | UNRESOLVED | C-ADAPT — PHEN-ADAPT-001 v1.11.0 | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/0); `src/campaign2/factory.ts`. | Route M2/FND2/FND4. Required `PHEN-ADAPT-001:3..19` (inclusive). | Replay pending; U1/V4. |
 | EQUIVALENT (mapped domain) | C-DET — PHEN-DET-001 v1.0.0-draft | [M115](ASSEMBLED_CHARACTER_M115_RESULT.md); originals. | :2..9 mapped0.89; :10/11 tracked. Insertion/key/replay/no-draw/failure. | Test-only insertion/local-index control; native effective-key change. Final replay required. |
 | EQUIVALENT (mapped domain) | C-EPI — PHEN-EPI-001 v1.3.0-draft | [M114](ASSEMBLED_CHARACTER_M114_RESULT.md); original controls. | :2..9 mapped on0.89; :10/11 tracked. Safe effect/SEM/learning/encoding/later read; shared owners/retention; restore/rollback. | One perfect effect sensor; original leak/lattice controls retained. Retention/identity correspondence explicit; RO007/010 limits; final replay required. |
-| UNRESOLVED | C-SEM — PHEN-SEM-001 v1.12.0-draft | [M143](ASSEMBLED_CHARACTER_M143_RESULT.md); [M144](ASSEMBLED_CHARACTER_M144_RESULT.md). | :2..13 partial0.108: pinned views/native ordinals. | Knowledge/phase/final mapping open. |
+| EQUIVALENT (mapped domain) | C-SEM — PHEN-SEM-001 v1.12.0-draft | [M145](ASSEMBLED_CHARACTER_M145_RESULT.md). | :2..11 mapped0.108;:12/13 tracked. | Native roles/files/recognition/provenance to choice; observer/knowledge/encoding limits in result. Final replay remains. |
 | EQUIVALENT (mapped domain) | C-LEARN — PHEN-LEARN-001 v1.0.0-draft | [M116](ASSEMBLED_CHARACTER_M116_RESULT.md). | :2..9 mapped0.89; :10/11 tracked. | Acquired priors/censoring/point; controls/limits in result; final replay required. |
 | EQUIVALENT (mapped domain) | C-MEM — PHEN-MEM-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/5); generalFactory.ts. | [M64],0.63: :2..9 PASS; :10/:11 TRACKED. | Actual recency/K/reinforcement/tie/privacy/trace/workspace. Source/time mapping explicit; original no-decay component control retained. No full GA/family/corpus closure; reopen constraints preserved. |
 | EQUIVALENT (mapped) | C-REASON — PHEN-REASON-001 v1.0.0-draft | [original](campaign3-hq012-exit-review-rev1/corpus.json#/members/6); [M95 complete mapping][ref31]. | :2..9 mapped on0.80 SourceCoverage; :10/11 tracked. All4 competitors; native Value/standing/keys/signs and isolated motive/basis evidence. | Adopted coverage/D3 differences explicit; receipt bijection diagnostic only. General correlation, ID ties/nonparticipants and calibration limits retained;001 conditional. Final candidate replay required. |

@@ -248,3 +248,58 @@ EXIT 1; elapsed 103.480s
 CHARGED 886.498
 
 M145 scoped ambiguity assertion: current0.108 evaluates every perceived carrier. Only the declared focal track receives two cues; additional carriers correctly have no qualifying candidates. Compare focal by its actual captured track, require two cues and ambiguity there, and require NoQualifyingCandidate on the others. Preserve failed all-carriers assertion; no source evidence/parameters/laws/gate changed. Raw-log trailing spaces escaped losslessly as literal x20/x09 tokens.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSemanticFinal.test.ts", "-t", "knowledge145", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSemanticFinal.test.ts > knowledge145: actual frozen knowledge admits exact replacement operations and rejects stale or foreign authority
+M145 native recognition carrier focal cues 2 result { kind: 'no-update', reason: 'AmbiguousCandidates' }
+M145 native recognition carrier additional cues 0 result { kind: 'no-update', reason: 'NoQualifyingCandidate' }
+
+stdout | src/test/assembledSemanticFinal.test.ts > knowledge145: actual frozen knowledge admits exact replacement operations and rejects stale or foreign authority
+M145 KNOWLEDGE PASS actual request replacement/stale/duplicate/ambiguity/foreign controls; original cue/history immutable; S0 changes run not model; wrong-S0 restore rejects; live empty knowledge stays unknown; no online acquisition claim
+
+ ✓ src/test/assembledSemanticFinal.test.ts > knowledge145: actual frozen knowledge admits exact replacement operations and rejects stale or foreign authority 115820ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 14 skipped (15)
+   Start at  11:46:24
+   Duration  120.53s (transform 2.91s, setup 0ms, collect 4.36s, tests 115.82s, environment 0ms, prepare 104ms)
+
+
+EXIT 0; elapsed 121.097s
+CHARGED 1007.595
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 18.795s
+CHARGED 1026.390
+
+Bookkeeping allowance15s covers intermediate Git-size/whitespace and document-cap checks.
+CHARGED 1041.390
+
+COMMAND ["node", "scripts/check-reference-boundary.mjs"]
+Reference boundary check passed.
+
+EXIT 0; elapsed 2.709s
+CHARGED 1044.099
+
+COMMAND ["node", "scripts/check-research-obligations.mjs"]
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4366}
+
+EXIT 0; elapsed 3.424s
+CHARGED 1047.523
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,json\ngit=lambda *a:subprocess.check_output(['git',*a],text=True,encoding='utf-8')\nbase='b019a04e'\ncode={'src/test/assembledSemanticFinal.test.ts','src/test/fixtures/assembledSemanticFinal.ts'}\nallowed=code|{'AGENTS.md','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md','docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md','docs/planning/RESEARCH_OBLIGATIONS.json','docs/planning/ASSEMBLED_CHARACTER_M145_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M145_CHECKS.txt','docs/formal/ASSEMBLED_CHARACTER_CARRIER_OBSERVATION_CONTRACT.md'}\nchanged=set(git('diff','--name-only',base).splitlines())|set(git('ls-files','--others','--exclude-standard').splitlines())\nassert changed<=allowed,changed-allowed\nassert changed&code==code\nassert git('diff','ccd63f46','--','src')=='','tested source changed'\nassert git('diff',base,'--','src/assembled','src/campaign2','src/campaign3','src/substrate','src/observation','src/semanticBinding','reference')=='','frozen dependency changed'\nfor p in code:\n s=Path(p).read_text(encoding='utf-8')\n if p.startswith('src/assembled/'):assert not any(\"campaign3/\"+x in s for x in ['attentionFactory','attentionRuntime','generalAttentionFactory','generalAttentionRuntime']),'separate pipeline'\nold=git('show',base+':docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md')\nnew=Path('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md').read_text(encoding='utf-8')\nrows=lambda s:[x for x in s.splitlines() if ('| C-' in x or '| F-' in x) and '| C-SEM ' not in x]\nassert rows(old)==rows(new),'other C/F rows changed'\nassert '| EQUIVALENT (mapped domain) | C-SEM ' in new\nassert 'E46/P54/N17/U15' in new and '16/21' in new and 'families:0/15' in new\nassert len(new.splitlines())<=250 and len(new.replace('\\n','\\r\\n').encode())<=65536\nbefore=json.loads(git('show',base+':docs/planning/RESEARCH_OBLIGATIONS.json'))\nafter=json.loads(Path('docs/planning/RESEARCH_OBLIGATIONS.json').read_text(encoding='utf-8-sig'))\nassert before['obligations']==after['obligations']\nassert after['reportReviews'][:-1]==before['reportReviews']\nassert after['reportReviews'][-1]=={'path':'docs/planning/ASSEMBLED_CHARACTER_M145_RESULT.md','obligations':['RO-C3-003','RO-C3-004','RO-C3-005','RO-C3-006','RO-C3-007','RO-C3-014','RO-C3-016','RO-C3-020']}\nfor path,cap in [('AGENTS.md',120),('docs/planning/CURRENT.md',80),('docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md',250)]:\n assert len(Path(path).read_text(encoding='utf-8').splitlines())<=cap,path\nevidence=[Path('docs/planning/ASSEMBLED_CHARACTER_M145_'+s) for s in ['RESULT.md','CHECKS.txt']]\nassert sum(p.stat().st_size for p in evidence)<5*1024*1024\nlog=evidence[1].read_text(encoding='utf-8')\ncharge=float([l.split()[1] for l in log.splitlines() if l.startswith('CHARGED ')][-1]);assert charge<1800\nfor token in ['M145 PRIMARY PASS','M145 HISTORIES PASS','M145 CONTINUATION PASS','M145 PRIVACY PASS','M145 BOUNDARIES PASS','M145 KNOWLEDGE PASS','M145 CONTRACTS PASS','src/test/semanticRecognitionState.test.ts','src/test/semanticStatePersistence.test.ts','src/test/semanticPhaseOrdering.test.ts','Reference boundary check passed.','PASS: research obligation references']:\n assert token in log,token\ncurrent=Path('docs/planning/CURRENT.md').read_text(encoding='utf-8')\nassert '(ASSEMBLED_CHARACTER_M145_CHECKS.txt)' in current and '{{' not in current\nprint('PASS M145 preservation: source ccd63f46;2 production/test files; old Campaign0-3/reference dependencies unchanged; C-SEM mapped finite domain, other C/F unchanged;16/21,0/15,E46/P54/N17/U15; statuses/document/evidence caps retained; charge',charge)\n\nfinal=Path('src/test/assembledSemanticFinal.test.ts').read_text(encoding='utf-8')\nearly=git('show','663cc955:src/test/assembledSemanticFinal.test.ts')\nassert final.split(\"it('knowledge145\")[0]==early.split(\"it('knowledge145\")[0],'passed native test prefix changed'\nphase=git('show','e62eea20:src/test/assembledSemanticFinal.test.ts')\nassert final.split(\"it('contracts145\")[1]==phase.split(\"it('contracts145\")[1],'passed phase test changed'\nassert Path('src/test/fixtures/assembledSemanticFinal.ts').read_text(encoding='utf-8')==git('show','663cc955:src/test/fixtures/assembledSemanticFinal.ts'),'passed fixture changed'\nprint('PASS source correspondence: eight passed native cases/shared helpers/fixture unchanged from663cc955; phase case unchanged frome62eea20; final knowledge case independently rerun.')\n"]
+PASS M145 preservation: source ccd63f46;2 production/test files; old Campaign0-3/reference dependencies unchanged; C-SEM mapped finite domain, other C/F unchanged;16/21,0/15,E46/P54/N17/U15; statuses/document/evidence caps retained; charge 1047.523
+PASS source correspondence: eight passed native cases/shared helpers/fixture unchanged from663cc955; phase case unchanged frome62eea20; final knowledge case independently rerun.
+
+EXIT 0; elapsed 0.906s
+CHARGED 1048.429
+
+COMMAND ["node", "scripts/check-git-file-sizes.mjs"]
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.364s
+CHARGED 1048.793
