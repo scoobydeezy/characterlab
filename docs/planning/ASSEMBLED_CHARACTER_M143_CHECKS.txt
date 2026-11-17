@@ -37,3 +37,9 @@ undefined
 
 EXIT 1; elapsed 1.149s
 CHARGED 16.149
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+src/test/assembledSemanticProvenance.test.ts(50,109): error TS2322: Type '"causal-role"' is not assignable to type '"perceived-binding"'.
+
+EXIT 2; elapsed 18.749s
+CHARGED 34.898
