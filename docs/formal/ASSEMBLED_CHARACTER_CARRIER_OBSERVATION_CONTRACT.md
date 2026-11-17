@@ -32,3 +32,9 @@ closes per-carrier operation coverage, not the complete SEM pinned replay by its
 M142 timing amendment: reacquisition isolates negative2 from positive1's cue21.
 Both arms' original decision/body/context/priority inputs move21 to22 so the
 negative2 cue can arrive first. Original null retained; no law/calibration change.
+
+M143 implementation clarification: a causal-role consumer admits only the existing
+perceived-binding/0.1-candidate schema produced by SEM-001C. The actual binding's
+version remains occurrence provenance, never authority to widen consumer permission.
+Another codec-admitted SEM version is still forbidden for this producing seam.
+This is the original exact ReadDomain rule; valid0.108 records and laws do not change.
