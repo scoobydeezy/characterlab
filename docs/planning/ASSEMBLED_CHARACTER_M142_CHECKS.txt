@@ -126,3 +126,124 @@ EXIT 1; elapsed 103.203s
 CHARGED 365.366
 
 ASSERTION REPAIR after0d8cd1d7: at22 known-focal negative memory is selected. Unknown focal emits no report/cue, so companion arm has EMPTY workspace and socialExecution.appraise uses prior belief1. Both live appraisals already passed. Correct the copied assertion requiring a selected memory in both arms; exact source list must equal actual selected list (one vs zero). Same fixtures/probability gate, no new contrast.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledCarrierObservation.test.ts", "-t", "primary142", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCarrierObservation.test.ts > primary142: cue carrier isolates recognition and changes live focal report decision
+M142 PRIMARY PASS per-carrier features/recognition -> focal-only report -> belief1/2 vs1 -> memory/appraisal/live P1/2 vs1/actual execution/full queues
+
+ ✓ src/test/assembledCarrierObservation.test.ts > primary142: cue carrier isolates recognition and changes live focal report decision 103465ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  10:38:53
+   Duration  108.18s (transform 2.92s, setup 0ms, collect 4.37s, tests 103.47s, environment 0ms, prepare 115ms)
+
+
+EXIT 0; elapsed 108.751s
+CHARGED 474.117
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledCarrierObservation.test.ts", "-t", "privacy142|continuation142|admission142", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCarrierObservation.test.ts > privacy142: denied carrier features and cues plus hidden truth preserve safe prefixes
+M142 PRIVACY PASS denied per-carrier feature/cue and hidden truth changes preserve all safe prefixes/full queues
+
+ ✓ src/test/assembledCarrierObservation.test.ts > privacy142: denied carrier features and cues plus hidden truth preserve safe prefixes 134985ms
+stdout | src/test/assembledCarrierObservation.test.ts > continuation142: all carrier records survive repeat restore and recognition rollback
+M142 CONTINUATION PASS exact repeat/save2/every later boundary/full queues; second-lane recognition failure rolls all carrier state/allocations back; exact recovery
+
+ ✓ src/test/assembledCarrierObservation.test.ts > continuation142: all carrier records survive repeat restore and recognition rollback 103236ms
+stdout | src/test/assembledCarrierObservation.test.ts > admission142: carrier feature and cue ownership are explicit before execution
+M142 ADMISSION PASS distinct carrier/event feature authority and old-version guards
+
+ ✓ src/test/assembledCarrierObservation.test.ts > admission142: carrier feature and cue ownership are explicit before execution 3629ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 6 skipped (9)
+   Start at  10:40:57
+   Duration  246.59s (transform 2.95s, setup 0ms, collect 4.39s, tests 241.85s, environment 0ms, prepare 103ms)
+
+
+EXIT 0; elapsed 247.151s
+CHARGED 721.268
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/perceptualClassification.test.ts", "src/test/perceptualEventClassification.test.ts", "src/test/recognition.test.ts", "src/test/assembledSemanticEvents.test.ts", "-t", "SEM-001D|SEM-001E|SEM-001F|primary141", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-061 traces unfamiliar, contradicted, and ambiguous evaluations without fake identities
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-062 permits correct, wrong, or unresolved recognition over identical immutable perception
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-063 implements exact unique uncontradicted support without order-based ties
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-064 requires observer-owned catalog and symbol mapping without truth-kind filtering
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-065 appends replacement and withdrawal while no-cue and same-candidate evaluations preserve current resolution
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-066 preserves false continuity and false discontinuity under recognition changes
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-067 enforces typed same-track, same-experience evidence closure
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-068 enforces sole rule authority and continuant-only recognition
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-069 preserves semantic opacity, replay, history closure, and allocator rollback
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-070 emits only append-only recognition resolution and no downstream mutation
+ ✓ src/test/perceptualEventClassification.test.ts > SEM-001E typed perceptual event-pattern classification conformance > CV-SEM-051 keeps event and continuant carriers and facet namespaces non-substitutable
+ ✓ src/test/perceptualEventClassification.test.ts > SEM-001E typed perceptual event-pattern classification conformance > CV-SEM-052 depends only on permitted event features, never hidden Action or EventType identity
+ ✓ src/test/perceptualEventClassification.test.ts > SEM-001E typed perceptual event-pattern classification conformance > CV-SEM-053 implements the exact necessary-feature conjunction without default false or hierarchy
+ ✓ src/test/perceptualEventClassification.test.ts > SEM-001E typed perceptual event-pattern classification conformance > CV-SEM-054 scopes every feature to one observer, event-file, detection window, and observer-side support
+ ✓ src/test/perceptualEventClassification.test.ts > SEM-001E typed perceptual event-pattern classification conformance > CV-SEM-055 preserves false-merge contradictions and false-split equivalence without repair
+ ✓ src/test/perceptualEventClassification.test.ts > SEM-001E typed perceptual event-pattern classification conformance > CV-SEM-056 appends across experiences and rejects duplicate or conflicting assertions within one
+ ✓ src/test/perceptualEventClassification.test.ts > SEM-001E typed perceptual event-pattern classification conformance > CV-SEM-057 enforces sole facet authority per model and allows explicit competing models
+ ✓ src/test/perceptualEventClassification.test.ts > SEM-001E typed perceptual event-pattern classification conformance > CV-SEM-058 requires executable registered rules and complete typed provenance
+ ✓ src/test/perceptualEventClassification.test.ts > SEM-001E typed perceptual event-pattern classification conformance > CV-SEM-059 preserves replay and ordinal opacity and rolls allocation back atomically
+ ✓ src/test/perceptualEventClassification.test.ts > SEM-001E typed perceptual event-pattern classification conformance > CV-SEM-060 makes action appearance an event pattern only and blocks every direct bypass
+ ✓ src/test/perceptualClassification.test.ts > SEM-001D typed continuant-classification conformance > CV-SEM-041 classifies continuants independently and rejects event-files as carriers
+ ✓ src/test/perceptualClassification.test.ts > SEM-001D typed continuant-classification conformance > CV-SEM-042 responds only to permitted evidence and keeps truth/perceptual namespaces distinct
+ ✓ src/test/perceptualClassification.test.ts > SEM-001D typed continuant-classification conformance > CV-SEM-043 distinguishes NoAssertion, Assert(false), MissingAsFalse, and invalid Unknown
+ ✓ src/test/perceptualClassification.test.ts > SEM-001D typed continuant-classification conformance > CV-SEM-044 distinguishes missing features from explicit negative sensory evidence
+ ✓ src/test/perceptualClassification.test.ts > SEM-001D typed continuant-classification conformance > CV-SEM-045 enforces exact booleans while independent appearance facets coexist
+ ✓ src/test/perceptualClassification.test.ts > SEM-001D typed continuant-classification conformance > CV-SEM-046 requires exact observer-side feature and observation provenance
+ ✓ src/test/perceptualClassification.test.ts > SEM-001D typed continuant-classification conformance > CV-SEM-047 enforces sole facet authority per model while allowing competing models
+ ✓ src/test/perceptualClassification.test.ts > SEM-001D typed continuant-classification conformance > CV-SEM-048 rejects duplicate or conflicting referent/facet assertions within one experience
+ ✓ src/test/perceptualClassification.test.ts > SEM-001D typed continuant-classification conformance > CV-SEM-049 preserves replay and ordinal opacity and rolls allocation back on failure
+ ✓ src/test/perceptualClassification.test.ts > SEM-001D typed continuant-classification conformance > CV-SEM-050 permits experience assembly and rejects recognition/psychology bypasses and prose logic
+stdout | src/test/assembledSemanticEvents.test.ts > primary141: perceived event merge versus split changes actual memory and choice
+M141 PRIMARY PASS same truth/roles/shared carrier; merged MultipleRoles vs split event-scoped Target; exact125->130 selected claim -> graph/memory/recall -> live P1 vs1/2 with belief1/2; actual execution/full queues
+
+ ✓ src/test/assembledSemanticEvents.test.ts > primary141: perceived event merge versus split changes actual memory and choice 98651ms
+
+ Test Files  4 passed (4)
+      Tests  31 passed | 9 skipped (40)
+   Start at  10:45:16
+   Duration  104.37s (transform 3.01s, setup 0ms, collect 4.55s, tests 98.72s, environment 1ms, prepare 393ms)
+
+
+EXIT 0; elapsed 104.920s
+CHARGED 826.188
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 18.605s
+CHARGED 844.793
+
+COMMAND ["node", "scripts/check-reference-boundary.mjs"]
+Reference boundary check passed.
+
+EXIT 0; elapsed 2.735s
+CHARGED 847.528
+
+COMMAND ["node", "scripts/check-research-obligations.mjs"]
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4363}
+
+EXIT 0; elapsed 3.437s
+CHARGED 850.965
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,json\ngit=lambda *a:subprocess.check_output(['git',*a],text=True,encoding='utf-8')\nbase='a856fcd2'\ncode={'src/assembled/'+p for p in ['model.ts','traceBinding.ts','recognition.ts','recognitionExecution.ts','recognitionState.ts','encoding.ts','semanticTruth.ts','semanticLanes.ts','socialExecution.ts']}|{'src/test/assembledCarrierObservation.test.ts','src/test/fixtures/assembledCarrierObservation.ts'}\nallowed=code|{'AGENTS.md','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md','docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md','docs/planning/RESEARCH_OBLIGATIONS.json','docs/planning/ASSEMBLED_CHARACTER_M142_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M142_CHECKS.txt','docs/formal/ASSEMBLED_CHARACTER_CARRIER_OBSERVATION_CONTRACT.md'}\nchanged=set(git('diff','--name-only',base).splitlines())|set(git('ls-files','--others','--exclude-standard').splitlines())\nassert changed<=allowed,changed-allowed\nassert changed&code==code\nassert git('diff','52bb8ddc','--','src')=='','tested source changed'\nassert git('diff',base,'--','src/campaign2','src/campaign3','src/substrate','src/observation','src/semanticBinding','reference')=='','frozen dependency changed'\nfor p in code:\n s=Path(p).read_text(encoding='utf-8')\n if p.startswith('src/assembled/'):assert not any(\"campaign3/\"+x in s for x in ['attentionFactory','attentionRuntime','generalAttentionFactory','generalAttentionRuntime']),'separate pipeline'\nold=git('show',base+':docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md')\nnew=Path('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md').read_text(encoding='utf-8')\nrows=lambda s:[x for x in s.splitlines() if ('| C-' in x or '| F-' in x) and '| C-SEM ' not in x]\nassert rows(old)==rows(new),'other C/F rows changed'\nassert '| UNRESOLVED | C-SEM ' in new\nassert 'E46/P54/N17/U15' in new and '15/21' in new and 'families:0/15' in new\nassert len(new.splitlines())<=250 and len(new.replace('\\n','\\r\\n').encode())<=65536\nbefore=json.loads(git('show',base+':docs/planning/RESEARCH_OBLIGATIONS.json'))\nafter=json.loads(Path('docs/planning/RESEARCH_OBLIGATIONS.json').read_text(encoding='utf-8-sig'))\nassert before['obligations']==after['obligations']\nassert after['reportReviews'][:-1]==before['reportReviews']\nassert after['reportReviews'][-1]=={'path':'docs/planning/ASSEMBLED_CHARACTER_M142_RESULT.md','obligations':['RO-C3-003','RO-C3-004','RO-C3-005','RO-C3-006','RO-C3-007','RO-C3-014','RO-C3-016','RO-C3-020']}\nfor path,cap in [('AGENTS.md',120),('docs/planning/CURRENT.md',80),('docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md',250)]:\n assert len(Path(path).read_text(encoding='utf-8').splitlines())<=cap,path\nevidence=[Path('docs/planning/ASSEMBLED_CHARACTER_M142_'+s) for s in ['RESULT.md','CHECKS.txt']]\nassert sum(p.stat().st_size for p in evidence)<5*1024*1024\nlog=evidence[1].read_text(encoding='utf-8')\ncharge=float([l.split()[1] for l in log.splitlines() if l.startswith('CHARGED ')][-1]);assert charge<1800\nfor token in ['M142 PRIMARY PASS','M142 PRIVACY PASS','M142 CONTINUATION PASS','M142 ADMISSION PASS','M141 PRIMARY PASS','src/test/perceptualClassification.test.ts','src/test/perceptualEventClassification.test.ts','src/test/recognition.test.ts','Reference boundary check passed.','PASS: research obligation references']:\n assert token in log,token\ncurrent=Path('docs/planning/CURRENT.md').read_text(encoding='utf-8')\nassert '(ASSEMBLED_CHARACTER_M142_CHECKS.txt)' in current and '{{' not in current\nprint('PASS M142 preservation: source 52bb8ddc;11 production/test files; old Campaign0-3/reference dependencies unchanged; C-SEM remains unresolved/partial, other C/F unchanged;15/21,0/15,E46/P54/N17/U15; statuses/document/evidence caps retained; charge',charge)\n"]
+PASS M142 preservation: source 52bb8ddc;11 production/test files; old Campaign0-3/reference dependencies unchanged; C-SEM remains unresolved/partial, other C/F unchanged;15/21,0/15,E46/P54/N17/U15; statuses/document/evidence caps retained; charge 850.965
+
+EXIT 0; elapsed 0.831s
+CHARGED 851.796
+
+COMMAND ["node", "scripts/check-git-file-sizes.mjs"]
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.363s
+CHARGED 852.159
