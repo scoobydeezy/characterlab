@@ -1,0 +1,47 @@
+M146 baseline5439ba8e plan0d9951f0; cap1800s/600s per command. CHARGED excludes planning/git bookkeeping (<=15s).
+CHARGED 0
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+src/assembled/runtime.ts(153,68): error TS2345: Argument of type '(context: EventHandlerContext<AuthoritativeState>) => { nextState: AuthoritativeState; outputs: CanonicalValue[]; emittedEvents: EventEmission[]; traceFactory: (children: readonly ScheduledEvent[]) => CanonicalValue[]; }' is not assignable to parameter of type 'EventHandler<AuthoritativeState>'.
+  Type '{ nextState: AuthoritativeState; outputs: CanonicalValue[]; emittedEvents: EventEmission[]; traceFactory: (children: readonly ScheduledEvent[]) => CanonicalValue[]; }' is not assignable to type 'TransitionResult<AuthoritativeState> | Promise<TransitionResult<AuthoritativeState>>'.
+    Property 'traceContributions' is missing in type '{ nextState: AuthoritativeState; outputs: CanonicalValue[]; emittedEvents: EventEmission[]; traceFactory: (children: readonly ScheduledEvent[]) => CanonicalValue[]; }' but required in type 'TransitionResult<AuthoritativeState>'.
+
+EXIT 2; elapsed 19.324s
+CHARGED 19.324
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 18.698s
+CHARGED 38.022
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledHiddenExposure.test.ts", "-t", "native146", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledHiddenExposure.test.ts > native146: hidden exposure reaches later permitted observation and actual episodic memory 58685ms
+   → expected 1 to be +0 // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledHiddenExposure.test.ts > native146: hidden exposure reaches later permitted observation and actual episodic memory
+AssertionError: expected 1 to be +0 // Object.is equality
+
+- Expected
++ Received
+
+- 0
++ 1
+
+ ❯ src/test/assembledHiddenExposure.test.ts:27:130
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  12:18:12
+   Duration  63.41s (transform 2.95s, setup 0ms, collect 4.41s, tests 58.69s, environment 0ms, prepare 106ms)
+
+
+EXIT 1; elapsed 63.992s
+CHARGED 102.014

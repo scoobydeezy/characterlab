@@ -45,11 +45,20 @@ export function compileCognitiveIngress(model:Awaited<ReturnType<typeof compileC
   }else if(key(current)!==key(old))invalidModel('retained procedural ADAPT changed');
   replacements.set(key(f(old,1n)),enc(r));return current;
  });
+ // Version-bound additional input to the same evaluator; never replaces protocol semantics.
+ if(model.hiddenExposure){
+  const old=oldRows.find(r=>key(f(r,1n))===key(atom(1009,'transition/regulatory-adaptation')))!;
+  const r=rec(f(old,4n),318n),transition=atom(1009,'transition/authored-regulatory-adaptation');
+  const derived=replace(r,4n,replace(f(r,4n),1n,atom(1001,'event/authored-regulatory-adaptation')));
+  adaptedRows.push(rec(replace(replace(old,1n,transition),4n,derived),171n));
+  replacements.set(key(transition),enc(derived));routes.set(key(transition),routes.get(key(f(old,1n)))!);
+ }
  const ruleRows=rows.filter(r=>key(f(r,2n))===key(atom(1023,'registry/adaptation-rule')));
  if(ruleRows.length!==base.adaptation.ruleCount)invalidModel('changed ADAPT rule inventory');
  for(const r of ruleRows){const old=base.adaptation.ruleDefinition(f(r,1n));if(!old||key(old)!==key(f(r,4n)))invalidModel('changed retained ADAPT rule');}
  const adaptation=Object.freeze({...base.adaptation,registrationBytes:()=>enc(set(adaptedRows)).slice()});
  const registrations=base.admission.registrations().map(r=>({...r,registration:replacements.get(r.transitionKey)??r.registration}));
+ if(model.hiddenExposure){const original=registrations.find(r=>r.transitionKey===key(atom(1009,'transition/regulatory-adaptation')))!;const transitionKey=key(atom(1009,'transition/authored-regulatory-adaptation'));registrations.push({...original,transitionKey,registration:replacements.get(transitionKey)!});}
  const admission=Object.freeze({...base.admission,decode:decodeCognitive,
   registrations:()=>registrations.map(r=>({...r,registration:r.registration.slice()})),
   occurrenceIdentity:(bytes:Uint8Array)=>occurrences.extract(bytes),
