@@ -36,3 +36,21 @@ Comparators cannot enter the reference model or close native producer requiremen
 RO-C3-001 new incoming source proof is discharged only by named source/receiver,
 shared/independent/collective contrasts and actual consumer evidence. Wider source,
 unit/ground ontology and reduction obligations remain conditional.
+
+## Complete-input comparison correspondence (before diagnostic implementation)
+Native envelopes may contain Standing/Context and more than5 sources/4 atoms.
+A test-only comparison adapter extends the four old exact formulas to <=64
+sources/64 atoms and four existing roles, each role/sign independently. Family
+normalization still counts distinct families across ALL roles/signs of one option,
+as the original does. No row/basis truncation, original tests/limits unchanged.
+Canonical source/ground/evidence IDs are bijectively labelled; Commitment/Value
+are opaque distinct families, not claims to be the original Task/Body producers.
+GroundAggregate/Pairwise/Uncovered use original weighted Jaccard/max/zero;
+FamilyNormalized scales by mean inverse supporting-family count before Jaccard.
+Recompile effective signed strengths with empty diagnostic bases to obtain exactly
+one bounded sum per role and current unchanged calibration/standing rounding.
+DescriptionDice intentionally uses original Base-only one-die-per-description law;
+its exclusions are that comparator's hypothesis, not truncated reference inputs.
+Compare adapter with unchanged original kernel over its complete common domain.
+Analytical consumer uses full native candidate set/current arbitration thresholds.
+These are diagnostic counterfactuals only; never admitted sources or native runs.
