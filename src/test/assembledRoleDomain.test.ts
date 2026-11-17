@@ -115,6 +115,12 @@ it('boundaries138: role grammar, six-binding consumer and Beneficiary missing-ro
  const config=items(items(decode(b.s.registry),'list')[30],'list');expect(()=>compileEncoding(list(config),true,true,true)).toThrow();
  for(const mode of['beneficiary','matrix'] as const){
   const x=await create(mode);await through(x.r,2n);const {a,full}=structure(x.r,mode);
+  if(mode==='matrix'){
+   const {focalAssociationCue}=await import('../assembled/learnedAssociation');
+   expect(()=>focalAssociationCue(full)).toThrow('focal binding');
+   const first=items(f(full,5n),'set').map(b=>rec(b,224n)).sort((a,b)=>uint(id(f(a,1n)).payload)<uint(id(f(b,1n)).payload)?-1:1)[0];
+   expect(focalAssociationCue(full,true)).toEqual(f(first,4n));
+  }
   expect(encodingMatchesModel(list(a),model.encoding!)).toBe(true);
   const bad=[...a];bad[3]=list(items(a[3],'list').map(()=>u(0)));if(mode==='matrix')expect(()=>validateEncoding(list(bad),full)).toThrow();
   const old=[...a];old[0]=text(ROLE_ENCODING);expect(encodingMatchesModel(list(old),model.encoding!)).toBe(false);

@@ -121,7 +121,7 @@ export function createEpisodicExtension(C:CanonicalValue,d:BodyDeclaration,state
    const o=items(observation,'list');if(o.length!==8||!eq(o[1],C)||time(o[3])!==at)fail('social source holder/time');
    if(!uint(o[5])||items(o[7],'list').length!==1)return undefined;
    validateSemanticReferent(o[2]);const path=socialEpisodePath(C,observation),prior=stateModel.read(state,path),cue=(path.selectors[0] as {key:CanonicalValue}).key;
-   const affect=affectMemory?completedAffect?.():undefined,recall=emit(event,MEMORY_RECALL,20n,affectMemory?affectCue(cue,affect,affectMemory.learned?focalAssociationCue(experience):undefined):cue,checkedAddDuration(event.dueAt,simDuration(recallDelay??1n)));
+   const affect=affectMemory?completedAffect?.():undefined,recall=emit(event,MEMORY_RECALL,20n,affectMemory?affectCue(cue,affect,affectMemory.learned?focalAssociationCue(experience,!!encoding?.wideRoles):undefined):cue,checkedAddDuration(event.dueAt,simDuration(recallDelay??1n)));
    if(affect){unpackAffectCue(recall.payload,recall.dueAt);}
    const emissions:EventEmission[]=[{...recall,...(affect?{additionalCausalParentEventIds:[affect.event]}:{})}],outputs:CanonicalValue[]=[];
    if(!prior.presence&&items(o[6],'list').length===1&&(!encoding||assessment!.positive)){const episode=list([text(SOCIAL_EPISODE),typedIdentifier(1125,unsigned(allocate())),observation,experience,list([]),signed(at),...(encoding?[assessment!.value]:[]),...(memoryUse?[false]:[])]);validateSocialEpisode(episode,C);emissions.unshift(emit(event,MEMORY_FORMATION,140n,episode));outputs.push(episode);}

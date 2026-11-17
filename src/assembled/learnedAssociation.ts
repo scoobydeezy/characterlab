@@ -25,9 +25,9 @@ export function compileAssociation(v:CanonicalValue):AssociationSettings{
  const nodes=Number(uint(a[4])),edges=Number(uint(a[5]));require(nodes<=30&&edges<=nodes*(nodes-1),'capacity');return {nodes,edges};
 }
 export function observedAssociationKey(v:CanonicalValue){const r=restorePerceptualReferentId(v);require(r.observerId===txt(BODY_OBSERVER.payload),'foreign observer');return v;}
-export function focalAssociationCue(full:CanonicalValue){
+export function focalAssociationCue(full:CanonicalValue,wideRoles=false){
  const b=items(f(rec(full,227n),5n),'set').map(v=>rec(v,224n)).sort((a,b)=>uint(id(f(a,1n)).payload)<uint(id(f(b,1n)).payload)?-1:1);
- require(b.length>=1&&b.length<=3,'focal binding');return observedAssociationKey(f(b[0],4n));
+ require(b.length>=1&&b.length<=(wideRoles?6:3),'focal binding');return observedAssociationKey(f(b[0],4n));
 }
 /** Only actual selected rows, never every binding in the frozen provenance. */
 export function associationUnits(assessment:CanonicalValue,full:CanonicalValue){
