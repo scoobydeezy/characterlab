@@ -43,7 +43,7 @@ Current maximal-role matrix must survive exact trace/input/claim correspondence.
 ## Checks, budgets and stop
 Native matrix/behavior; hidden truth/physical-role invariance; denied extra
 binding; zero-role Beneficiary; duplicate/unknown/Action/Context/capacity/old-version
-admission; canonical encoding restore and forged assessment negatives.
+admission; canonical encoding restore/forged negatives, plus actual six-binding consequence assessment.
 Repeat/save2/every later boundary; fault after125 rolls whole instant back/recovery.
 Original event-binding/provenance/attention controls and retained M137 primary;
 types/reference/research/preservation/size. One job;600s/command,1800s cumulative
