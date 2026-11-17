@@ -235,7 +235,7 @@ it('knowledge145: actual frozen knowledge admits exact replacement operations an
  expect(original(model,{...base,identitySymbolMappings:activeB,cueEvidence:[newCue]},next).resolutionRecord!.resolution).toEqual({kind:'asserted-candidate',candidateSemanticReferentId:other.candidateSemanticReferentId});
  expect(()=>original(model,{...base,identitySymbolMappings:activeB},next)).toThrow('mapping');
  expect(()=>original(model,{...base,identitySymbolMappings:[...request.identitySymbolMappings,replacement]},next)).toThrow('more than one active mapping');
- expect(()=>original(model,{...base,candidateCatalog:[...request.candidateCatalog,request.candidateCatalog[0]]},next)).toThrow('duplicate candidate');
+ expect(()=>original(model,{...base,candidateCatalog:[...request.candidateCatalog,request.candidateCatalog[0]].sort((a,b)=>a.candidateSemanticReferentId<b.candidateSemanticReferentId?-1:a.candidateSemanticReferentId>b.candidateSemanticReferentId?1:0)},next)).toThrow('duplicate candidate');
  expect(()=>original(model,{...base,cueEvidence:[{...cue,observerId:'foreign'}]},next)).toThrow();
  expect(()=>original(model,{...base,identitySymbolMappings:request.identitySymbolMappings.map(x=>({...x,observerId:'foreign'}))},next)).toThrow();
  const ambiguous={...newCue,recognitionCueEvidenceId:cue.recognitionCueEvidenceId+1000n,recognitionCueSource:{kind:'retained-template-match' as const,recognitionTemplateId:other.recognitionTemplateIds[0]}};
