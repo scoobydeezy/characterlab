@@ -9,7 +9,7 @@ import {semanticReferentValue} from '../../substrate/referentOrigin';
 import {authoredReferentKey} from './referentOrigin';
 export const ref=(n:string)=>semanticReferentValue(authoredReferentKey(n));
 export const binding=(role:number,name:string,precision=1,group=0)=>list([u(role),ref(name),u(precision),u(group)]);
-export const rule=(role:number,min=1,max:number|undefined=1,tag?:string)=>list([u(role),u(min),list(max===undefined?[]:[u(max)]),list(tag?[text(tag)]:[])]);
+export const rule=(role:number,min=1,max:number|null=1,tag?:string)=>list([u(role),u(min),list(max===null?[]:[u(max)]),list(tag?[text(tag)]:[])]);
 export const schema=(name:string,rules:CanonicalValue[],fixed?:string)=>list([text(name),list(rules),list(fixed?[ref(fixed)]:[])]);
 export const channel=(type:string,bindings:CanonicalValue[])=>list([text(TRUTH_CHANNEL),text(type),list(bindings)]);
 export const content=()=>list([text(SEMANTIC_TRUTH),list([
@@ -17,7 +17,7 @@ export const content=()=>list([text(SEMANTIC_TRUTH),list([
  ['location.library',['interior-space','location']],['object.lead-pipe',['blunt','entity','metal','striking-capable','usable-entity']],
  ['object.cup',['drink-container','entity','usable-entity']],['object.decorative-hammer',['entity','striking-capable']]
  ].map(([n,tags])=>list([ref(n as string),list((tags as string[]).map(text))]))),list([
- schema('event-type/action-occurrence',[rule(10),rule(1),rule(5,1,undefined),rule(7),rule(6)]),
+ schema('event-type/action-occurrence',[rule(10),rule(1),rule(5,1,null),rule(7),rule(6)]),
  schema('event-type/social-scene',[rule(2),rule(1),rule(7),rule(6),rule(8)]),
  schema('event-type/strike',[rule(6,1,1,'striking-capable')]),schema('event-type/drink',[rule(6,1,2,'drink-container')]),
  schema('event-type/fixed-action',[rule(1)],'action.walk')
