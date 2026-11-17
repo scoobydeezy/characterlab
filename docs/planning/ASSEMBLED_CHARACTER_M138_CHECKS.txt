@@ -13,3 +13,60 @@ src/test/assembledRoleDomain.test.ts(102,230): error TS1005: ',' expected.
 
 EXIT 2; elapsed 3.520s
 CHARGED 37.209
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 21.096s
+CHARGED 58.305
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledRoleDomain.test.ts", "-t", "primary138|boundaries138|continuation138|privacy138", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRoleDomain.test.ts > primary138: accepted Companion versus Instrument reaches actual memory, appraisal and choice
+M138 PRIMARY PASS actual six-binding/three-file current matrix; original5 causal claims and unused Beneficiary slot; exact125->130; Companion eligible vs Instrument UnsupportedRole -> negative vs positive recall -> live choice/execution P1/2 vs1 with belief1/2; immutable envelopes/full queues
+
+ ✓ src/test/assembledRoleDomain.test.ts > primary138: accepted Companion versus Instrument reaches actual memory, appraisal and choice 103075ms
+ × src/test/assembledRoleDomain.test.ts > boundaries138: role grammar, six-binding consumer and Beneficiary missing-role control 33326ms
+   → learned association: focal binding
+ × src/test/assembledRoleDomain.test.ts > continuation138: six-binding consequence preserves exact repeat, save and whole-instant rollback 8261ms
+   → learned association: focal binding
+stdout | src/test/assembledRoleDomain.test.ts > privacy138: role-domain widening never exposes physical roles or denied binding records
+M138 PRIVACY PASS hidden truth/physical role changes inert at every safe prefix; denied extra creates no binding/file/companion; remaining Companion -> retained negative -> actual choice/full queues
+
+ ✓ src/test/assembledRoleDomain.test.ts > privacy138: role-domain widening never exposes physical roles or denied binding records 66939ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledRoleDomain.test.ts > boundaries138: role grammar, six-binding consumer and Beneficiary missing-role control
+ FAIL  src/test/assembledRoleDomain.test.ts > continuation138: six-binding consequence preserves exact repeat, save and whole-instant rollback
+SchedulerContractError: learned association: focal binding
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ fail src/assembled/learnedAssociation.ts:18:30
+ ❯ require src/assembled/learnedAssociation.ts:19:46
+ ❯ Module.focalAssociationCue src/assembled/learnedAssociation.ts:30:2
+ ❯ Object.observeSocial src/assembled/memory.ts:124:151
+ ❯ src/assembled/runtime.ts:131:172
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:373:26
+ ❯ Object.settleNextInstant src/assembled/character.ts:45:66
+ ❯ advance src/test/assembledRoleDomain.test.ts:34:42
+ ❯ through src/test/assembledRoleDomain.test.ts:35:109
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ Test Files  1 failed (1)
+      Tests  2 failed | 2 passed | 5 skipped (9)
+   Start at  08:59:48
+   Duration  216.38s (transform 2.96s, setup 0ms, collect 4.41s, tests 211.60s, environment 0ms, prepare 108ms)
+
+
+EXIT 1; elapsed 216.999s
+CHARGED 275.304

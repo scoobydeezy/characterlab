@@ -12,8 +12,9 @@ Original C1 kernels and C3 six-binding/three-unit attention component unchanged.
 No new role, priority, fallback, state store, scheduler or factory.
 
 ## Files and semantics
-Ten production/test files: assembled/model.ts, traceBinding.ts, recognition.ts,
-encoding.ts, recognitionExecution.ts, encounter.ts, semanticLanes.ts, socialExecution.ts;
+Twelve production/test files (amended after the first native run): assembled/model.ts, traceBinding.ts, recognition.ts,
+encoding.ts, recognitionExecution.ts, encounter.ts, semanticLanes.ts, socialExecution.ts,
+learnedAssociation.ts, memory.ts;
 test/assembledRoleDomain.test.ts and fixtures/assembledRoleDomain.ts.
 Formal ASSEMBLED_CHARACTER_ROLE_DOMAIN_CONTRACT.md committed before code.
 Keep existing codes0..4; add5 Companion,6 Instrument,7 Location,8 Beneficiary,
@@ -48,6 +49,10 @@ Repeat/save2/every later boundary; fault after125 rolls whole instant back/recov
 Original event-binding/provenance/attention controls and retained M137 primary;
 types/reference/research/preservation/size. One job;600s/command,1800s cumulative
 incl failures/15s bookkeeping;20 evidence/5MiB;12-code-file ceiling.
+First native run: primary/privacy pass; six-binding consequence trips the inherited
+three-record focalAssociationCue guard. Repair its versioned bound and pass it from
+memory; same focal-ID ordering/observed-track semantics. Preserve failures/source;
+rerun affected native tests/types. No scenario/law/acceptance change or extension.
 Stop verification on pass; no seed/law/calibration or denominator change.
 RO003/004/005/006/007/014/016/020 reviewed/statuses unchanged. No reduction.
 Still open: full governed truth-event cardinality/domain projection, simultaneous

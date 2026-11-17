@@ -40,3 +40,12 @@ causal role separately. Exact trace correspondence, complete continuations, priv
 authority/admission negatives and original controls required.
 This does not close the full governed truth-event cardinality/domain projection,
 multi-event/observer matrix or pinned SEM replay. No new psychological law/reduction.
+
+## Native integration repair — before implementation
+The first native six-binding consequence failed in the inherited recall-cue helper:
+it independently limited frozen experiences to three binding records. In0.104 the
+memory caller passes the six-record domain to that helper; old callers retain
+the three-record default. Focal selection remains the earliest actual allocated
+binding, yielding the same observed file. No new graph key, co-reference inference,
+selection rule, learning or recall law. This adds memory.ts and learnedAssociation.ts
+to the package (12 production/test files total); existing verification budget holds.

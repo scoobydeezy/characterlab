@@ -99,7 +99,12 @@ it('boundaries138: role grammar, six-binding consumer and Beneficiary missing-ro
  for(const [i,name]of names.entries())expect(observedRole(BigInt(i+1),true)).toEqual({kind:'exact',eventRoleId:name});
  for(const n of[-1n,10n,11n])expect(()=>observedRole(n,true)).toThrow();expect(()=>observedRole(5n)).toThrow();
  expect(()=>roleChannel(matrix(),true,true,true)).not.toThrow();expect(()=>roleChannel(matrix(),true,true)).toThrow();
- for(const bad of[list([u(10),u(5),list([])]),list([u(2),u(10),list([])]),list([u(2),text('event-role/context'),list([])]),list([u(2),u(5),list([list([true,u(2),u(5),true])])])expect(()=>roleChannel(bad,true,true,true)).toThrow();
+ const invalidChannels=[
+  list([u(10),u(5),list([])]), list([u(2),u(10),list([])]),
+  list([u(2),text('event-role/context'),list([])]),
+  list([u(2),u(5),list([list([true,u(2),u(5),true])])])
+ ];
+ for(const bad of invalidChannels)expect(()=>roleChannel(bad,true,true,true)).toThrow();
  const a=items(matrix(),'list'),extra=items(a[2],'list');
  expect(()=>roleChannel(list([a[0],a[1],list([...extra,list([true,u(2),u(4),true])])]),true,true,true)).toThrow('capacity');
  const separate=list([u(2),u(5),list([list([true,u(2),u(7),false]),list([true,u(2),u(6),false]),list([true,u(2),u(8),false])])]);
