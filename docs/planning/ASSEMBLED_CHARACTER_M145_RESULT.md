@@ -97,10 +97,10 @@ M144's typed-ID assertion error and all earlier failed/corrected evidence remain
 ## Verification and preservation
 62 targeted tests (10 native/52 original), types, reference boundary, research,
 preservation and Git-size checks pass. M145's first type check needed a stable narrowed mapping
-ID inside a callback (diagnostic2b47a212). Before pending boundary execution, review
+ID inside a callback (diagnostic2b47a212). Before those boundary checks, review
 replaced a malformed cycle with a valid self-link, an unrelated root assertion
 with exact130 reads/input, and added native ambiguity/model equality.
-Three later test-construction failures remain: noncanonical duplicate-catalog order
+Three corrected test-construction failures are preserved: noncanonical duplicate-catalog order
 (3973aaff), then a no-op corruption caused by comparing copies from different state
 enumerations (0fd21853). Canonicalize the first counterexample; reuse one enumeration
 and prove the second changes its intended leaf. Both intended guards now pass.
