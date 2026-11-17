@@ -177,3 +177,33 @@ EXIT 1; elapsed 89.814s
 CHARGED 709.067
 
 M145 self-approved test repair: the duplicate-catalog counterexample was noncanonical and correctly failed the earlier ordering guard. Sort the same entries so the intended duplicate guard is reached. Preserve3973aaff; rerun only knowledge145, whose later assertions had not run. Other53 checks passed unchanged.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSemanticFinal.test.ts", "-t", "knowledge145", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledSemanticFinal.test.ts > knowledge145: actual frozen knowledge admits exact replacement operations and rejects stale or foreign authority 68642ms
+   → expected [Function] to throw an error
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSemanticFinal.test.ts > knowledge145: actual frozen knowledge admits exact replacement operations and rejects stale or foreign authority
+AssertionError: expected [Function] to throw an error
+ ❯ src/test/assembledSemanticFinal.test.ts:256:129
+    254|   const v=rec(entry.value,entry.path.fieldId===1n?228n:229n);
+    255|   for(const invalid of[{...v,schema:{...v.schema,schemaVersion:2n}},{.…
+    256|    expect(()=>component.stateModel.validateState(new AuthoritativeStat…
+       |                                                                                                                                 ^
+    257|   }
+    258|  }
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 14 skipped (15)
+   Start at  11:41:17
+   Duration  73.35s (transform 2.90s, setup 0ms, collect 4.36s, tests 68.64s, environment 0ms, prepare 115ms)
+
+
+EXIT 1; elapsed 73.951s
+CHARGED 783.018
