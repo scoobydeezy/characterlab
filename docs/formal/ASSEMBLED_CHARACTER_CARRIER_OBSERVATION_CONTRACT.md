@@ -28,3 +28,7 @@ Both lanes, transaction rollback, exact continuation and immutable old history a
 No new catalog learning, entity matching, semantic aggregation or attention law.
 Encoding0.7, capacities, calibration and graph keys remain unchanged. This package
 closes per-carrier operation coverage, not the complete SEM pinned replay by itself.
+
+M142 timing amendment: reacquisition isolates negative2 from positive1's cue21.
+Both arms' original decision/body/context/priority inputs move21 to22 so the
+negative2 cue can arrive first. Original null retained; no law/calibration change.

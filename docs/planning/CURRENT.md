@@ -19,10 +19,10 @@ semanticTruth,semanticLanes,socialExecution,recognitionExecution,recognitionStat
 optional semanticAppearance helper; one new test and one fixture.
 Existing owner/scheduler/save; per-carrier safe feature/cue annex, no new store.
 Fixed M140 body10/seed0/goals+urgency1/two social tasks/third unknown;
-positive1, current2, negative2, silent3, recall/body/choice21, capacity1.
+positive1, current2, negative2, silent3, recall/body/choice22, capacity1 (amendment below).
 Both arms reacquire focal at consequence2. Same positive target-template cue goes
 to focal vs companion; shared truth/roles/appearance/laws/history otherwise.
-Precondition: live appraisals and actual resolved decision21 in both arms.
+Precondition: live appraisals and actual resolved decision22 in both arms.
 Expected focal-known report updates target belief1/2 and negative memory; companion-
 known leaves focal unknown, target belief1, positive prior memory. Require actual
 consumption and exact production probability difference, not seed search.
@@ -45,3 +45,11 @@ C-SEM remains UNRESOLVED until remaining observer/provenance/ordinal/knowledge
 correspondence and pinned replay;15/21 mapped,0/15 families,E46/P54/N17/U15.
 Final whole-candidate replay remains. No UI, Campaign4 or autonomous peers.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
+
+## Self-approved timing amendment after retained null
+At21 both arms recall positive1 and P(B)=1. Reacquisition gives negative2 its own
+track; its scheduled cue reaches recall at22, not21. Move both arms' existing
+body/context/priority/deliberation inputs21 to22, after that actual producer. No
+history/cue/law/capacity/seed/threshold changes. Keep original21 prediction/null
+in Git/log; require live negative recall and probability difference at22. One
+bounded timing correction; no further contrast search if this also fails.

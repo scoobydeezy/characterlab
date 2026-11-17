@@ -12,8 +12,8 @@ export function fixture(mode:Mode='focal'){
  slots[30]=list([text(SEMANTIC_EVENTS_ENCODING),...config.slice(1)]);
  const s={...b.s,rulesVersion:CARRIER_OBSERVATION_RULES,registrySchemaVersion:CARRIER_OBSERVATION_REGISTRY,registry:enc(list(slots))};
  const original=items(decode(b.d.orderedInputs),'list'),first=original.map(v=>items(v,'list')).find(a=>key(a[2])===key(SOCIAL_SOURCE)&&key(a[0])===key(signed(1)))!,cue=items(items(first[3],'list')[5],'list')[0];
- const rows=original.map(v=>{const a=[...items(v,'list')],current=key(a[2])===key(CURRENT_SEM_SOURCE);
- if(!current&&!(key(a[2])===key(SOCIAL_SOURCE)&&key(a[0])===key(signed(2))))return v;
+ const rows=original.map(v=>{const a=[...items(v,'list')];if(key(a[0])===key(signed(21)))a[0]=signed(22);const current=key(a[2])===key(CURRENT_SEM_SOURCE);
+ if(!current&&!(key(a[2])===key(SOCIAL_SOURCE)&&key(a[0])===key(signed(2))))return list(a);
  const p=[...items(a[3],'list')],source=items(p[current?6:7],'list');
  if(!current){p[3]=list([false,true,false,false]);p[5]=list(mode==='companion'?[]:[cue]);}
  p[current?6:7]=channel((source[1] as {value:string}).value,items(source[2],'list').map(v=>{

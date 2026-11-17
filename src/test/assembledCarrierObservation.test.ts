@@ -34,7 +34,7 @@ function judgment(r:Run,b:ReturnType<typeof fixture>,expected:number,beliefDenom
  for(const task of[b.taskA,b.taskB])expect(items(joint[4],'list').map(v=>items(v,'list')).find(a=>key(a[0])===key(task)),'live task appraisal').toHaveLength(5);
  expect(items(social[4],'list')).toEqual([q(expected,1)]);
  const selected=items(reports(r,WORKSPACE).at(-1)![4],'list');expect(selected).toHaveLength(1);expect(items(social[6],'list')[3]).toEqual(list([items(selected[0],'list')[0]]));expect(items(joint[6],'list').slice(1)).toContainEqual(list(social));
- const d=outputs(snap(r).outputs,409n).find(v=>key(f(v,2n))===key(signed(21)))!;expect(d,'actual decision21').toBeDefined();
+ const d=outputs(snap(r).outputs,409n).find(v=>key(f(v,2n))===key(signed(22)))!;expect(d,'actual decision22').toBeDefined();
  const result=rec(f(d,4n),419n);expect(uint(f(result,1n)),'live resolved choice').toBe(3n);
  const context=rec(f(d,3n),408n);expect(items(f(context,3n),'list').length,'actual grounds').toBeGreaterThan(0);
  const data=rec(f(result,2n),420n),isB=(v:CanonicalValue)=>key(f(rec(v,395n),2n))===key(sid(1027,'definition/protocol-contact-two')),row=items(f(data,2n),'list').map(v=>rec(v,421n)).find(v=>isB(f(v,1n))),p=uint(f(data,8n))===1n?Q.of(isB(f(data,1n))?1n:0n):row?readQ(f(row,2n)):Q.of(0n);
@@ -59,9 +59,9 @@ function structure(r:Run,mode:string){
  return full;
 }
 it('primary142: cue carrier isolates recognition and changes live focal report decision',async()=>{
- const a=await create(),b=await create('companion');for(const x of[a,b]){await through(x.r,2n);structure(x.r,x.b.mode);await through(x.r,21n);}
- const pa=judgment(a.r,a.b,1),pb=judgment(b.r,b.b,1,1);console.info('M142 DIAGNOSTIC',String(pa.numerator)+'/'+String(pa.denominator),String(pb.numerator)+'/'+String(pb.denominator));
- expect(pa.equals(pb),'required live probability difference').toBe(false);
+ const a=await create(),b=await create('companion');for(const x of[a,b]){await through(x.r,2n);structure(x.r,x.b.mode);await through(x.r,22n);}
+ expect(judgment(a.r,a.b,0).equals(Q.of(1n,2n))).toBe(true);
+ expect(judgment(b.r,b.b,1,1).equals(Q.of(1n))).toBe(true);
  for(const x of[a,b])await finish(x.r);
  console.info('M142 PRIMARY PASS per-carrier features/recognition -> focal-only report -> belief1/2 vs1 -> memory/appraisal/live P1/2 vs1/actual execution/full queues');
 },590000);
