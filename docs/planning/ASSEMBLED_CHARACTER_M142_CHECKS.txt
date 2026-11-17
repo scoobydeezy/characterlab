@@ -5,3 +5,47 @@ COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
 
 EXIT 0; elapsed 20.931s
 CHARGED 35.931
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 20.808s
+CHARGED 56.739
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledCarrierObservation.test.ts", "-t", "primary142", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledCarrierObservation.test.ts > primary142: cue carrier isolates recognition and changes live focal report decision 97793ms
+   → expected [ { kind: 'rational', …(2) } ] to deeply equal [ { kind: 'rational', …(2) } ]
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledCarrierObservation.test.ts > primary142: cue carrier isolates recognition and changes live focal report decision
+AssertionError: expected [ { kind: 'rational', …(2) } ] to deeply equal [ { kind: 'rational', …(2) } ]
+
+- Expected
++ Received
+
+  Array [
+    Object {
+      "denominator": 1n,
+      "kind": "rational",
+-     "numerator": 0n,
++     "numerator": 1n,
+    },
+  ]
+
+ ❯ judgment src/test/assembledCarrierObservation.test.ts:35:34
+
+ ❯ src/test/assembledCarrierObservation.test.ts:63:9
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  10:30:53
+   Duration  102.58s (transform 2.99s, setup 0ms, collect 4.45s, tests 97.79s, environment 0ms, prepare 104ms)
+
+
+EXIT 1; elapsed 103.171s
+CHARGED 159.910

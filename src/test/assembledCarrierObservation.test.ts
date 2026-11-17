@@ -46,14 +46,14 @@ function judgment(r:Run,b:ReturnType<typeof fixture>,expected:number,beliefDenom
 const traceAt=(r:Run,p:bigint)=>outputs(snap(r).trace,160n).find(v=>{const e=rec(f(v,4n),130n);return key(f(v,6n))===key(text(CARRIER_OBSERVATION_VERSION))&&key(f(e,2n))===key(signed(2))&&uint(f(e,3n))===p;})!;
 const projected=(r:Run,p:bigint,t:bigint)=>items(f(traceAt(r,p),13n),'list').filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===t).map(v=>rec(v,t));
 function structure(r:Run,mode:string){
- const full=projected(r,124n,227n)[0],bindings=items(f(full,5n),'set').map(v=>rec(v,224n)),focal=f(bindings.find(b=>{const role=rec(f(b,5n),223n);return [...role.fields.values()].some(v=>key(v).includes('target'));})??bindings[0],4n);
- const c=items(f(full,6n),'set').map(v=>rec(v,221n)),events=items(f(full,7n),'set');
+ const full=projected(r,124n,227n)[0],focal=f(projected(r,121n,217n)[0],3n);
+ const c=items(f(full,6n),'set').map(v=>rec(v,225n)),events=items(f(full,7n),'set');
  expect(new Set(c.map(v=>key(f(v,4n)))).size).toBe(4);expect(c.some(v=>f(v,6n)===false)).toBe(true);expect(events).toHaveLength(6);
  const evaluations=projected(r,127n,234n),resolutions=projected(r,127n,236n),cues=projected(r,126n,232n);
  expect(evaluations).toHaveLength(5);expect(resolutions).toHaveLength(1);expect(cues).toHaveLength(1);
  expect(f(resolutions[0],4n)).toEqual(f(cues[0],4n));
  // Exact carrier, not referent equality or a nearby recognized companion, binds the report.
- const primary=projected(r,121n,204n)[0];void primary;void focal;
+ expect(key(f(resolutions[0],4n))===key(focal)).toBe(mode!=='companion');
  expect(resolutionHistory(state(r)).filter(x=>x.occurredAt===2n&&x.resolution.kind==='asserted-candidate').length).toBeGreaterThan(0);
  expect(episodes(r).map(v=>v[5])).toEqual((mode==='companion'?[1]:[1,2]).map(signed));
  return full;
