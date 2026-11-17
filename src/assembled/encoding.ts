@@ -2,7 +2,7 @@
 import {list,text,unsigned as u,rational as q,type CanonicalValue} from '../substrate/canonicalEncoding';
 import {dataItems as items,dataText as txt,dataUnsigned as uint,dataKey as key,dataRecord as rec,dataField as f,dataIdentity as id,invalidModel} from '../campaign2/canonicalData';
 import {EventRoleId as R,type EventRoleEvidence} from '../semanticBinding/eventBindings';
-import {assemblePreRecognitionExperience,type PreRecognitionSemanticExperience} from '../semanticBinding/perceptualEventFiles';
+import {PERCEPTUAL_EVENT_FILE_CONTRACT_VERSION,assemblePreRecognitionExperience,type PreRecognitionSemanticExperience} from '../semanticBinding/perceptualEventFiles';
 import {compileCausalRoleModel,deriveCausalRoleEvidence,INITIAL_CAUSAL_ROLE_RULE,characterEvidenceRefKey,type ObserverSafeEvidenceOccurrence} from '../semanticBinding/evidenceProvenance';
 import {preRecognitionSemanticExperienceValue,causalRoleEvidenceValue,characterEvidenceRefValue} from '../semanticBinding/semanticEvidenceCodecs';
 import {decodeSemanticValue,restorePerceptualReferentId,restorePerceptualEventReferentId,perceptualReferentIdValue,perceptualEventReferentIdValue,observerIdValue} from '../semanticBinding/semanticCodecs';
@@ -55,7 +55,7 @@ export function deriveEncodingRoles(full:PreRecognitionSemanticExperience,settin
  const groups=settings.sharedBindings?[...bindings.reduce((m,b,i)=>{const k=key(settings.multiEvents?list([perceptualEventReferentIdValue(b.perceptualEventReferentId),perceptualReferentIdValue(b.perceptualReferentId)]):perceptualReferentIdValue(b.perceptualReferentId)),g=m.get(k)??[];g.push(i);m.set(k,g);return m;},new Map<string,number[]>()).values()]:bindings.map((_,i)=>[i]);
  const requests:Parameters<typeof deriveCausalRoleEvidence>[1][]=[];
  const claims=groups.flatMap(group=>{const i=group[0],b=bindings[i];
-  const request:Parameters<typeof deriveCausalRoleEvidence>[1]={experience,perceptualEventReferentId:b.perceptualEventReferentId,perceptualReferentId:b.perceptualReferentId,evidenceOccurrences:occurrences,readDomain:{transitionKindId:'transition/derive-character-causal-role',permittedEvidenceSchemas:[{refKind:'perceived-binding',recordSchemaVersion:'perceived-binding/0.1-candidate',producingEpistemicSeamVersion:b.transformationVersion}],temporalScope:'SameExperience'},transformationVersion:G};requests.push(request);const derived=deriveCausalRoleEvidence(compileCausalRoleModel(ENCODING,[INITIAL_CAUSAL_ROLE_RULE]),request,ids[i]);
+  const request:Parameters<typeof deriveCausalRoleEvidence>[1]={experience,perceptualEventReferentId:b.perceptualEventReferentId,perceptualReferentId:b.perceptualReferentId,evidenceOccurrences:occurrences,readDomain:{transitionKindId:'transition/derive-character-causal-role',permittedEvidenceSchemas:[{refKind:'perceived-binding',recordSchemaVersion:'perceived-binding/0.1-candidate',producingEpistemicSeamVersion:PERCEPTUAL_EVENT_FILE_CONTRACT_VERSION}],temporalScope:'SameExperience'},transformationVersion:G};requests.push(request);const derived=deriveCausalRoleEvidence(compileCausalRoleModel(ENCODING,[INITIAL_CAUSAL_ROLE_RULE]),request,ids[i]);
   require(derived.evidence.length<=group.length,'reserved claims per carrier');return settings.sharedBindings?derived.evidence.map((claim,j)=>({...claim,causalRoleEvidenceId:ids[group[j]]})):[...derived.evidence];
  });
  return freezeRoles({experience,ids,claims,requests});
