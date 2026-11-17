@@ -228,7 +228,7 @@ identify actual gaps. Historical gate status does not override later accepted cl
 
 ## Current authorization boundary
 Owner2026-11-13 adopts0.85; after M105 authorizes continued character integration.
-Owner2026-11-17 continues SEM; M137 actual catalog/domain/recognition/choice on0.103, still partial/15 mapped. Shared/UnitBudget; feedback TRUE; laws unchanged.
+Owner2026-11-17 continues SEM; M138 role-domain/encoding/recall/choice on0.104, still partial/15 mapped. Shared/UnitBudget; feedback TRUE; laws unchanged.
 Original BIO/EPI controls/limits remain; final whole-candidate replay required. No UI, publishing or assembly acceptance.
 
 ## Owner ruling — unknown factors and live gates (2026-11-02)
