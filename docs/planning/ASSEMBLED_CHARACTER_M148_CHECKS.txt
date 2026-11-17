@@ -1,0 +1,77 @@
+M148 baseline9263b760; plan2875fa1a; 1800s cumulative /600s command.
+CHARGED 0
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 19.151s
+CHARGED 19.151
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSocialCorrection.test.ts", "-t", "primary148|controls148|persistence148", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSocialCorrection.test.ts > primary148: selective correction changes live appraisal and exact production choice probability
+M148 PRIMARY {"mean":["0 -> 1/2 -> 2/3","0 -> 0 -> 0"],"probabilityB":["47/72","1/2"],"proof":"exact production probability, no sampled-winner claim","actionChains":2}
+
+ ✓ src/test/assembledSocialCorrection.test.ts > primary148: selective correction changes live appraisal and exact production choice probability 75212ms
+stdout | src/test/assembledSocialCorrection.test.ts > controls148: hidden truth, repeated receipts, false explanations and missing receipts
+M148 CONTROLS hidden truth ALL state/output bytes equal1/2/3 and same exact probability4; duplicate1/2 vs independent2/3; false explanations remain0 despite true private commitment; receipt0 cannot teach
+
+ ✓ src/test/assembledSocialCorrection.test.ts > controls148: hidden truth, repeated receipts, false explanations and missing receipts 51275ms
+stdout | src/test/assembledSocialCorrection.test.ts > persistence148: repeat, save2/save4 and correction rollback preserve one continuing character
+M148 PERSISTENCE repeat/save2/save4 exact at every later boundary; actual phase140 finish fault rolls back all state/output/trace/queue changes; terminal 101
+
+ ✓ src/test/assembledSocialCorrection.test.ts > persistence148: repeat, save2/save4 and correction rollback preserve one continuing character 80715ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 5 skipped (8)
+   Start at  14:00:21
+   Duration  211.96s (transform 2.93s, setup 0ms, collect 4.40s, tests 207.20s, environment 0ms, prepare 105ms)
+
+
+EXIT 0; elapsed 212.530s
+CHARGED 231.681
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/socialPublic.test.ts", "-t", "isolates private truth|preserves unknown", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/socialPublic.test.ts > isolates private truth, access, explanation and correlation under public interventions 1144ms
+ ✓ src/test/socialPublic.test.ts > preserves unknown, zero, causal probe timing, alternative learning and denied privacy 403ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 2 skipped (4)
+   Start at  14:04:05
+   Duration  2.85s (transform 665ms, setup 0ms, collect 1.01s, tests 1.55s, environment 0ms, prepare 104ms)
+
+
+EXIT 0; elapsed 3.388s
+CHARGED 235.069
+
+Editorial correction after passing tests: console wording "true private commitment" -> "source private truth=true". This native fixture supplies private source truth, not an actual target371/373 commitment. No assertion or executable behavior changed; original output retained above.
+
+COMMAND ["node", "scripts/check-reference-boundary.mjs"]
+Reference boundary check passed.
+
+EXIT 0; elapsed 2.788s
+CHARGED 237.857
+
+COMMAND ["node", "scripts/check-research-obligations.mjs"]
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4369}
+
+EXIT 0; elapsed 3.577s
+CHARGED 241.434
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,json\ngit=lambda *a:subprocess.check_output(['git',*a],text=True,encoding='utf-8').strip()\nbase='9263b760'\nexpected={'src/test/assembledSocialCorrection.test.ts','src/test/fixtures/assembledSocialCorrection.ts'}\nassert set(git('diff','--name-only',base,'--','src').splitlines())==expected\nassert not git('diff','--name-only',base,'--','src/campaign2','src/campaign3','src/substrate','src/observation','src/semanticBinding','reference','docs/planning/ASSEMBLED_CHARACTER_BASELINE.json')\nfor path,cap in [('AGENTS.md',120),('docs/planning/CURRENT.md',80),('docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md',250),('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md',250)]:\n s=Path(path).read_text(encoding='utf-8-sig');assert len(s.splitlines())<=cap\n if 'RECONCILIATION' in path:\n  assert len(s.replace('\\r\\n','\\n').replace('\\n','\\r\\n').encode('utf-8'))<=65536\n  assert '17/21; accepted complete families:0/15' in s\nbefore=json.loads(git('show',base+':docs/planning/RESEARCH_OBLIGATIONS.json'))\nafter=json.loads(Path('docs/planning/RESEARCH_OBLIGATIONS.json').read_text())\nassert before['obligations']==after['obligations']\nassert after['reportReviews'][:-1]==before['reportReviews']\nassert after['reportReviews'][-1]=={'path':'docs/planning/ASSEMBLED_CHARACTER_M148_RESULT.md','obligations':['RO-C3-014','RO-C3-020']}\nevidence=list(Path('docs/planning').glob('ASSEMBLED_CHARACTER_M148*'))\nassert len(evidence)<=20 and sum(p.stat().st_size for p in evidence)<=5*1024*1024\nprint('M148 PRESERVATION PASS: two test/fixture files, zero production changes; six frozen trees and pinned baseline unchanged; planning caps;17/21 mapped,0/15 accepted families; obligations unchanged; evidence '+str(len(evidence))+' files/'+str(sum(p.stat().st_size for p in evidence))+' bytes.')\n"]
+M148 PRESERVATION PASS: two test/fixture files, zero production changes; six frozen trees and pinned baseline unchanged; planning caps;17/21 mapped,0/15 accepted families; obligations unchanged; evidence 2 files/8424 bytes.
+
+EXIT 0; elapsed 0.320s
+CHARGED 241.754
+
+COMMAND ["node", "scripts/check-git-file-sizes.mjs"]
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.368s
+CHARGED 242.122
+
+Bookkeeping allowance15s; final charged257.122s/1800s (4m17s), longest212.530s. No extension.
