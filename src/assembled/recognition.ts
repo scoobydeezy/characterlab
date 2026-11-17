@@ -1,3 +1,4 @@
+import type {SemanticTruthSettings} from './semanticTruth';
 import {lifecycleSource} from './semanticLifecycle';
 import {appearanceSource} from './semanticAppearance';
 /** assembled-recognition/0.1: governed finite cue channel; no selected identity input. */
@@ -36,7 +37,7 @@ export function compileRecognition(v:CanonicalValue,target:CanonicalValue,config
  const bindings=entries.flatMap(e=>e.templates.map(template=>({candidate:e.candidate,template})));
  return {...(wideUnits?{wideUnits:true}:{}),...(wideRoles?{wideRoles:true}:{}),...(openCatalog?{openCatalog:true}:{}),...(causalCompanions?{causalCompanions:true}:{}),...(twoLanes?{twoLanes:true}:{}),...(semanticLifecycle?{semanticLifecycle:true}:{}),...(richAppearance?{richAppearance:true}:{}),...(cueAccess?{cueAccess:true}:{}),...(symbolKnowledge?{symbols}:{}),...(seededKnowledge?{seededKnowledge:true}:{}),candidates:entries.map(e=>e.candidate),templates:[...new Set(bindings.map(e=>e.template))],bindings};
 }
-export type RecognitionSettings=ReturnType<typeof compileRecognition>&{readonly sharedFiles?:boolean;readonly multiUnit?:boolean;readonly sharedBindings?:boolean};
+export type RecognitionSettings=ReturnType<typeof compileRecognition>&{readonly truth?:SemanticTruthSettings;readonly sharedFiles?:boolean;readonly multiUnit?:boolean;readonly sharedBindings?:boolean};
 export function recognitionSource(v:CanonicalValue,settings:RecognitionSettings){
  const a=items(v,'list');demand(a.length===6&&txt(a[0])===RECOGNITION,'source grammar');socialSetting(a[1]);validateSemanticReferent(a[2]);const lifecycle=settings.semanticLifecycle?lifecycleSource(a[3]):undefined;demand(!!lifecycle||typeof a[3]==='boolean','continuity');
  const appearance=settings.richAppearance?appearanceSource(a[4]):undefined,form=settings.richAppearance?[]:items(a[4],'list');demand(form.length<=1&&form.every(x=>typeof x==='boolean'),'appearance');
