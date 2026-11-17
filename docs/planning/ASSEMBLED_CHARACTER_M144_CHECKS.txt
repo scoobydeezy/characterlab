@@ -38,3 +38,137 @@ AssertionError: expected undefined to be defined
 
 EXIT 1; elapsed 67.707s
 CHARGED 120.463
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSemanticReplay.test.ts", "-t", "profiles144", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSemanticReplay.test.ts > profiles144: pinned observer and multi-role views run through one character
+M144 PROFILES PASS same model; pinned Mina/Darius/Glen and multi/repeat views/roles/facets/truth multiplicity; original reversed observer allocation; explicit native support;27 event conjunctions/18 continuant cases; repeat/save2/full queues
+
+ ✓ src/test/assembledSemanticReplay.test.ts > profiles144: pinned observer and multi-role views run through one character 215332ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  11:08:16
+   Duration  219.99s (transform 2.88s, setup 0ms, collect 4.31s, tests 215.33s, environment 0ms, prepare 103ms)
+
+
+EXIT 0; elapsed 220.555s
+CHARGED 341.018
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSemanticReplay.test.ts", "-t", "ordinals144", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSemanticReplay.test.ts > ordinals144: unobserved world allocations cannot alter semantic structure or live probability
+M144 ORDINAL PASS extra hidden governed world changes raw allocation; consistent typed bijection preserves all native SEM through correction3, belief and live exact choice probability22; full queues; no equal-draw claim
+
+ ✓ src/test/assembledSemanticReplay.test.ts > ordinals144: unobserved world allocations cannot alter semantic structure or live probability 103775ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  11:12:18
+   Duration  108.41s (transform 2.86s, setup 0ms, collect 4.30s, tests 103.78s, environment 0ms, prepare 104ms)
+
+
+EXIT 0; elapsed 108.955s
+CHARGED 449.973
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/eventBindings.test.ts", "src/test/perceptualContinuantFiles.test.ts", "src/test/perceptualEventFiles.test.ts", "src/test/perceptualClassification.test.ts", "src/test/perceptualEventClassification.test.ts", "src/test/semanticOccurrenceIdentity.test.ts", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/perceptualEventClassification.test.ts > SEM-001E typed perceptual event-pattern classification conformance > CV-SEM-051 keeps event and continuant carriers and facet namespaces non-substitutable
+ ✓ src/test/perceptualEventClassification.test.ts > SEM-001E typed perceptual event-pattern classification conformance > CV-SEM-052 depends only on permitted event features, never hidden Action or EventType identity
+ ✓ src/test/perceptualEventClassification.test.ts > SEM-001E typed perceptual event-pattern classification conformance > CV-SEM-053 implements the exact necessary-feature conjunction without default false or hierarchy
+ ✓ src/test/perceptualEventClassification.test.ts > SEM-001E typed perceptual event-pattern classification conformance > CV-SEM-054 scopes every feature to one observer, event-file, detection window, and observer-side support
+ ✓ src/test/perceptualEventClassification.test.ts > SEM-001E typed perceptual event-pattern classification conformance > CV-SEM-055 preserves false-merge contradictions and false-split equivalence without repair
+ ✓ src/test/perceptualEventClassification.test.ts > SEM-001E typed perceptual event-pattern classification conformance > CV-SEM-056 appends across experiences and rejects duplicate or conflicting assertions within one
+ ✓ src/test/perceptualEventClassification.test.ts > SEM-001E typed perceptual event-pattern classification conformance > CV-SEM-057 enforces sole facet authority per model and allows explicit competing models
+ ✓ src/test/perceptualEventClassification.test.ts > SEM-001E typed perceptual event-pattern classification conformance > CV-SEM-058 requires executable registered rules and complete typed provenance
+ ✓ src/test/perceptualEventClassification.test.ts > SEM-001E typed perceptual event-pattern classification conformance > CV-SEM-059 preserves replay and ordinal opacity and rolls allocation back atomically
+ ✓ src/test/perceptualEventClassification.test.ts > SEM-001E typed perceptual event-pattern classification conformance > CV-SEM-060 makes action appearance an event pattern only and blocks every direct bypass
+ ✓ src/test/perceptualClassification.test.ts > SEM-001D typed continuant-classification conformance > CV-SEM-041 classifies continuants independently and rejects event-files as carriers
+ ✓ src/test/perceptualClassification.test.ts > SEM-001D typed continuant-classification conformance > CV-SEM-042 responds only to permitted evidence and keeps truth/perceptual namespaces distinct
+ ✓ src/test/perceptualClassification.test.ts > SEM-001D typed continuant-classification conformance > CV-SEM-043 distinguishes NoAssertion, Assert(false), MissingAsFalse, and invalid Unknown
+ ✓ src/test/perceptualClassification.test.ts > SEM-001D typed continuant-classification conformance > CV-SEM-044 distinguishes missing features from explicit negative sensory evidence
+ ✓ src/test/perceptualClassification.test.ts > SEM-001D typed continuant-classification conformance > CV-SEM-045 enforces exact booleans while independent appearance facets coexist
+ ✓ src/test/perceptualClassification.test.ts > SEM-001D typed continuant-classification conformance > CV-SEM-046 requires exact observer-side feature and observation provenance
+ ✓ src/test/perceptualClassification.test.ts > SEM-001D typed continuant-classification conformance > CV-SEM-047 enforces sole facet authority per model while allowing competing models
+ ✓ src/test/perceptualClassification.test.ts > SEM-001D typed continuant-classification conformance > CV-SEM-048 rejects duplicate or conflicting referent/facet assertions within one experience
+ ✓ src/test/perceptualClassification.test.ts > SEM-001D typed continuant-classification conformance > CV-SEM-049 preserves replay and ordinal opacity and rolls allocation back on failure
+ ✓ src/test/perceptualClassification.test.ts > SEM-001D typed continuant-classification conformance > CV-SEM-050 permits experience assembly and rejects recognition/psychology bypasses and prose logic
+ ✓ src/test/perceptualContinuantFiles.test.ts > SEM-001A perceptual continuant-file lifecycle > CV-SEM-013 allocates observer-scoped ordinals monotonically and never reuses one
+ ✓ src/test/perceptualContinuantFiles.test.ts > SEM-001A perceptual continuant-file lifecycle > CV-SEM-013 persists allocator state across a structural save/load boundary
+ ✓ src/test/perceptualContinuantFiles.test.ts > SEM-001A perceptual continuant-file lifecycle > CV-SEM-013 keeps allocation independent per observer under interleaving
+ ✓ src/test/perceptualContinuantFiles.test.ts > SEM-001A perceptual continuant-file lifecycle > CV-SEM-019 false continuity keeps one unchanged track across two truth entities
+ ✓ src/test/perceptualContinuantFiles.test.ts > SEM-001A perceptual continuant-file lifecycle > CV-SEM-019 false discontinuity allocates two immutable tracks for one truth entity
+ ✓ src/test/perceptualContinuantFiles.test.ts > SEM-001A perceptual continuant-file lifecycle > CV-SEM-021 derives transitions solely from permitted observer-side evidence
+ ✓ src/test/perceptualContinuantFiles.test.ts > SEM-001A perceptual continuant-file lifecycle > CV-SEM-021 rejects forged, cross-observer, and inactive prior continuant-files
+ ✓ src/test/perceptualContinuantFiles.test.ts > SEM-001A perceptual continuant-file lifecycle > SEM-001I.1 keys exactly one track transition per continuant detection
+ ✓ src/test/perceptualContinuantFiles.test.ts > SEM-001A perceptual continuant-file lifecycle > SEM-001I.1 permits exactly one retirement occurrence per continuant-file
+ ✓ src/test/perceptualContinuantFiles.test.ts > SEM-001A perceptual continuant-file lifecycle > CV-SEM-022 keeps track ordinals psychologically inert under renaming
+ ✓ src/test/perceptualContinuantFiles.test.ts > SEM-001A perceptual continuant-file lifecycle > CV-SEM-022 leaves this observer’s semantic view unchanged by another observer’s tracks
+ ✓ src/test/eventBindings.test.ts > SEM-001B event-binding occurrence and role conformance > CV-SEM-023 preserves one referent in several roles as distinct occurrences
+ ✓ src/test/eventBindings.test.ts > SEM-001B event-binding occurrence and role conformance > CV-SEM-024 preserves several referents in one repeatable role without overwrite
+ ✓ src/test/eventBindings.test.ts > SEM-001B event-binding occurrence and role conformance > CV-SEM-025 makes cardinality and referent-domain narrowing event-type specific and never widening
+ ✓ src/test/eventBindings.test.ts > SEM-001B event-binding occurrence and role conformance > CV-SEM-026 rejects invalid inputs before allocation and rolls successful allocation back on later instant failure
+ ✓ src/test/eventBindings.test.ts > SEM-001B event-binding occurrence and role conformance > CV-SEM-027 preserves allocated occurrence identity across replay while ordinals remain semantically opaque
+ ✓ src/test/eventBindings.test.ts > SEM-001B event-binding occurrence and role conformance > CV-SEM-028 keeps event roles separate from causal roles and gives registry order no weight
+ ✓ src/test/eventBindings.test.ts > SEM-001B event-binding occurrence and role conformance > CV-SEM-029 exposes only permitted role evidence, never truth binding identity or automatic specificity
+ ✓ src/test/eventBindings.test.ts > SEM-001B event-binding occurrence and role conformance > CV-SEM-030 rejects duplicate opaque occurrences, qualifiers, and redundant Action bindings
+ ✓ src/test/perceptualEventFiles.test.ts > SEM-001C observer-relative perceptual event-file conformance > CV-SEM-031 preserves two simultaneous event groupings that an ungrouped role bag loses
+ ✓ src/test/perceptualEventFiles.test.ts > SEM-001C observer-relative perceptual event-file conformance > CV-SEM-032 permits one event-file to persist across distinct experiences
+ ✓ src/test/perceptualEventFiles.test.ts > SEM-001C observer-relative perceptual event-file conformance > CV-SEM-033 permits false event continuity without truth-side correction
+ ✓ src/test/perceptualEventFiles.test.ts > SEM-001C observer-relative perceptual event-file conformance > CV-SEM-034 permits false event discontinuity without truth-side merging
+ ✓ src/test/perceptualEventFiles.test.ts > SEM-001C observer-relative perceptual event-file conformance > CV-SEM-035 rejects truth-keyed segmentation inputs and keeps sensory IDs observer-side
+ ✓ src/test/perceptualEventFiles.test.ts > SEM-001C observer-relative perceptual event-file conformance > CV-SEM-036 forbids using a continuant-file as the Action carrier
+ ✓ src/test/perceptualEventFiles.test.ts > SEM-001C observer-relative perceptual event-file conformance > CV-SEM-037 preserves concurrent participation and distinct same-object role occurrences
+ ✓ src/test/perceptualEventFiles.test.ts > SEM-001C observer-relative perceptual event-file conformance > CV-SEM-038 preserves event-file state across save/load and isolates observer allocators
+ ✓ src/test/perceptualEventFiles.test.ts > SEM-001C observer-relative perceptual event-file conformance > CV-SEM-039 gives event-file ordinals no semantic or psychological magnitude
+ ✓ src/test/perceptualEventFiles.test.ts > SEM-001C observer-relative perceptual event-file conformance > CV-SEM-040 rolls event-file state and runtime allocation back after staged failure
+ ✓ src/test/semanticOccurrenceIdentity.test.ts > SEM-001J occurrence identity boundary > allocates ExperienceId from the run-scoped allocator without restringifying it
+ ✓ src/test/semanticOccurrenceIdentity.test.ts > SEM-001J occurrence identity boundary > rejects malformed detection and observation occurrence ordinals
+ ✓ src/test/semanticOccurrenceIdentity.test.ts > SEM-001J occurrence identity boundary > orders supporting occurrence ordinals numerically inside emitted evidence
+ ✓ src/test/semanticOccurrenceIdentity.test.ts > SEM-001J occurrence identity boundary > flags when continuant support ordering becomes observable
+ ✓ src/test/semanticOccurrenceIdentity.test.ts > SEM-001J occurrence identity boundary > carries the typed continuant-file identity into perceived role projection
+ ✓ src/test/semanticOccurrenceIdentity.test.ts > SEM-001J occurrence identity boundary > keeps every occurrence namespace distinct under the accepted allocation
+
+ Test Files  6 passed (6)
+      Tests  55 passed (55)
+   Start at  11:14:42
+   Duration  1.99s (transform 190ms, setup 0ms, collect 374ms, tests 75ms, environment 1ms, prepare 585ms)
+
+
+EXIT 0; elapsed 2.515s
+CHARGED 452.488
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 18.883s
+CHARGED 471.371
+
+COMMAND ["node", "scripts/check-reference-boundary.mjs"]
+Reference boundary check passed.
+
+EXIT 0; elapsed 2.765s
+CHARGED 474.136
+
+COMMAND ["node", "scripts/check-research-obligations.mjs"]
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4365}
+
+EXIT 0; elapsed 3.448s
+CHARGED 477.584
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,json\ngit=lambda *a:subprocess.check_output(['git',*a],text=True,encoding='utf-8')\nbase='0d0c8cb3'\ncode={'src/test/assembledSemanticReplay.test.ts','src/test/fixtures/assembledSemanticReplay.ts'}\nallowed=code|{'AGENTS.md','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md','docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md','docs/planning/RESEARCH_OBLIGATIONS.json','docs/planning/ASSEMBLED_CHARACTER_M144_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M144_CHECKS.txt','docs/formal/ASSEMBLED_CHARACTER_CARRIER_OBSERVATION_CONTRACT.md'}\nchanged=set(git('diff','--name-only',base).splitlines())|set(git('ls-files','--others','--exclude-standard').splitlines())\nassert changed<=allowed,changed-allowed\nassert changed&code==code\nassert git('diff','c78dbdf5','--','src')=='','tested source changed'\nassert git('diff',base,'--','src/assembled','src/campaign2','src/campaign3','src/substrate','src/observation','src/semanticBinding','reference')=='','frozen dependency changed'\nfor p in code:\n s=Path(p).read_text(encoding='utf-8')\n if p.startswith('src/assembled/'):assert not any(\"campaign3/\"+x in s for x in ['attentionFactory','attentionRuntime','generalAttentionFactory','generalAttentionRuntime']),'separate pipeline'\nold=git('show',base+':docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md')\nnew=Path('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md').read_text(encoding='utf-8')\nrows=lambda s:[x for x in s.splitlines() if ('| C-' in x or '| F-' in x) and '| C-SEM ' not in x]\nassert rows(old)==rows(new),'other C/F rows changed'\nassert '| UNRESOLVED | C-SEM ' in new\nassert 'E46/P54/N17/U15' in new and '15/21' in new and 'families:0/15' in new\nassert len(new.splitlines())<=250 and len(new.replace('\\n','\\r\\n').encode())<=65536\nbefore=json.loads(git('show',base+':docs/planning/RESEARCH_OBLIGATIONS.json'))\nafter=json.loads(Path('docs/planning/RESEARCH_OBLIGATIONS.json').read_text(encoding='utf-8-sig'))\nassert before['obligations']==after['obligations']\nassert after['reportReviews'][:-1]==before['reportReviews']\nassert after['reportReviews'][-1]=={'path':'docs/planning/ASSEMBLED_CHARACTER_M144_RESULT.md','obligations':['RO-C3-003','RO-C3-004','RO-C3-005','RO-C3-006','RO-C3-007','RO-C3-014','RO-C3-016','RO-C3-020']}\nfor path,cap in [('AGENTS.md',120),('docs/planning/CURRENT.md',80),('docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md',250)]:\n assert len(Path(path).read_text(encoding='utf-8').splitlines())<=cap,path\nevidence=[Path('docs/planning/ASSEMBLED_CHARACTER_M144_'+s) for s in ['RESULT.md','CHECKS.txt']]\nassert sum(p.stat().st_size for p in evidence)<5*1024*1024\nlog=evidence[1].read_text(encoding='utf-8')\ncharge=float([l.split()[1] for l in log.splitlines() if l.startswith('CHARGED ')][-1]);assert charge<1800\nfor token in ['M144 PROFILES PASS','M144 ORDINAL PASS','src/test/eventBindings.test.ts','src/test/perceptualContinuantFiles.test.ts','src/test/semanticOccurrenceIdentity.test.ts','Reference boundary check passed.','PASS: research obligation references']:\n assert token in log,token\ncurrent=Path('docs/planning/CURRENT.md').read_text(encoding='utf-8')\nassert '(ASSEMBLED_CHARACTER_M144_CHECKS.txt)' in current and '{{' not in current\nprint('PASS M144 preservation: source c78dbdf5;2 production/test files; old Campaign0-3/reference dependencies unchanged; C-SEM remains unresolved/partial, other C/F unchanged;15/21,0/15,E46/P54/N17/U15; statuses/document/evidence caps retained; charge',charge)\n"]
+PASS M144 preservation: source c78dbdf5;2 production/test files; old Campaign0-3/reference dependencies unchanged; C-SEM remains unresolved/partial, other C/F unchanged;15/21,0/15,E46/P54/N17/U15; statuses/document/evidence caps retained; charge 477.584
+
+EXIT 0; elapsed 0.787s
+CHARGED 478.371
+
+COMMAND ["node", "scripts/check-git-file-sizes.mjs"]
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.363s
+CHARGED 478.734
