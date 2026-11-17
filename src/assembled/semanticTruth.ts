@@ -4,6 +4,8 @@ import {validateSemanticReferent} from '../substrate/referentOrigin';
 import {dataItems as items,dataText as txt,dataUnsigned as uint,dataKey as key,invalidModel} from '../campaign2/canonicalData';
 import {EventRoleId as R,compileEventBindings,materializeEventBindings,type EventRoleId,type EventTypeBindingSchema,type ReferentDomainValidator,type EventBindingRequest} from '../semanticBinding/eventBindings';
 import {worldEventTruthValue} from '../semanticBinding/semanticEvidenceCodecs';
+import {appearanceSource} from './semanticAppearance';
+import {recognitionSignals,type RecognitionSettings} from './recognition';
 import {roleChannel} from './encoding';
 export const TRUTH_SCENE='assembled-truth-scene/0.1';
 export const SEMANTIC_TRUTH='assembled-semantic-truth/0.1',TRUTH_CHANNEL='assembled-truth-role-channel/0.1',SEMANTIC_TRUTH_VERSION='assembled-character-semantic-truth/0.1-candidate';
@@ -38,19 +40,26 @@ export function compileSemanticTruth(v:CanonicalValue){
  return {referents,schemas,validators};
 }
 export type SemanticTruthSettings=ReturnType<typeof compileSemanticTruth>;
-type Settings={multiEvents?:boolean;selectionCapacity?:number;truth?:SemanticTruthSettings;multiUnit?:boolean;sharedBindings?:boolean;wideRoles?:boolean;wideUnits?:boolean};
+type Settings=Partial<RecognitionSettings>;
+function carrierDetails(v:CanonicalValue,settings:Settings){
+ const a=items(v,'list');need(a.length===0||settings.carrierDetails&&a.length===2,'carrier detail version/shape');
+ if(!a.length)return list([list([list([]),list([])]),list([]),list([])]);
+ const cues=recognitionSignals(a[1],settings as RecognitionSettings);
+ return list([appearanceSource(a[0]),list(cues.signals.map(c=>list([text(c.template),c.support]))),list(cues.symbols.map(c=>list([text(c.symbol),c.support])))]);
+}
 const isScene=(v:CanonicalValue)=>{const a=items(v,'list');return a.length>0&&typeof a[0]!=='boolean'&&a[0].kind==='text'&&a[0].value===TRUTH_SCENE;};
 const isTruth=(v:CanonicalValue)=>{const a=items(v,'list');return a.length>0&&typeof a[0]!=='boolean'&&a[0].kind==='text'&&a[0].value===TRUTH_CHANNEL;};
-function declared(v:CanonicalValue,settings:SemanticTruthSettings,multiEvents=false){
+function declared(v:CanonicalValue,settings:SemanticTruthSettings,multiEvents=false,details=false){
  const a=items(v,'list');need(a.length===3&&txt(a[0])===TRUTH_CHANNEL,'source channel');const schema=settings.schemas.find(s=>s.eventTypeId===txt(a[1]));need(schema,'undeclared event type');
- const rows=items(a[2],'list').map(v=>{const x=items(v,'list');need(x.length===4||multiEvents&&x.length===5,'binding source fields');const code=uint(x[0]),eventRoleId=truthRole(code),referent=settings.referents.find(r=>r.semanticReferentId===key(x[1]));need(referent,'undeclared referent');const precision=uint(x[2]),group=uint(x[3]);const eventGroup=x.length===5?uint(x[4]):0n;need(group<=5n&&eventGroup<=(multiEvents?1n:0n),'perceived group/event');return {eventGroup,request:{eventRoleId,semanticReferent:referent!} satisfies EventBindingRequest,code,precision,group,observed:permittedRoleCode(code,precision)};});
+ const rows=items(a[2],'list').map(v=>{const x=items(v,'list');need(x.length===4||multiEvents&&x.length===5||details&&x.length===6,'binding source fields');const code=uint(x[0]),eventRoleId=truthRole(code),referent=settings.referents.find(r=>r.semanticReferentId===key(x[1]));need(referent,'undeclared referent');const precision=uint(x[2]),group=uint(x[3]);const eventGroup=x.length>=5?uint(x[4]):0n;need(group<=5n&&eventGroup<=(multiEvents?1n:0n),'perceived group/event');return {rawDetails:x.length===6?x[5]:list([]),eventGroup,request:{eventRoleId,semanticReferent:referent!} satisfies EventBindingRequest,code,precision,group,observed:permittedRoleCode(code,precision)};});
  need(rows.length>=1&&rows.length<=16,'truth binding capacity');compileEventBindings(schema!,rows.map(r=>r.request),0n,settings.validators);
  return {schema:schema!,rows};
 }
 function scene(v:CanonicalValue,settings:Settings){
  need(settings.truth,'truth source version');let parts=[v];
  if(isScene(v)){const a=items(v,'list');need(settings.multiEvents&&a.length===2,'scene version/shape');parts=[...items(a[1],'list')];need(parts.length>=1&&parts.length<=2,'world event count');}
- const events=parts.map(v=>declared(v,settings.truth!,!!settings.multiEvents));
+ const events=parts.map(v=>declared(v,settings.truth!,!!settings.multiEvents,!!settings.carrierDetails));
+ for(const row of events.flatMap(e=>e.rows))carrierDetails(row.rawDetails,settings);
  const visible=events.flatMap(e=>e.rows).filter(r=>r.observed!==undefined).sort((a,b)=>a.group<b.group?-1:a.group>b.group?1:a.eventGroup<b.eventGroup?-1:a.eventGroup>b.eventGroup?1:a.observed!<b.observed!?-1:1);
  need(visible.length>=1&&visible.length<=6&&visible[0].group===0n&&visible[0].eventGroup===0n,'permitted focal binding/capacity');
  const groups=visible.filter(r=>r.group!==0n).map(r=>r.group);need(new Set(groups).size===groups.length,'only focal group may repeat');
@@ -68,9 +77,19 @@ function capacityDomain(role:ReturnType<typeof roleChannel>,settings:Settings){
  return role;
 }
 export function sourceRole(v:CanonicalValue,settings:Settings){
- if(!isTruth(v)&&!isScene(v))return capacityDomain(roleChannel(v,!!settings.multiUnit,!!settings.sharedBindings,!!settings.wideRoles,!!settings.wideUnits,!!settings.multiEvents),settings);
- const {visible}=scene(v,settings),first=visible[0];
- return capacityDomain(roleChannel(list([u(first.code),u(first.observed!),list(visible.slice(1).map(r=>list([true,u(r.code),u(r.observed!),r.group===0n,...(settings.multiEvents?[u(r.eventGroup)]:[])])))]),true,true,true,true,!!settings.multiEvents),settings);
+ let source=v;
+ if(isTruth(v)||isScene(v)){
+  const {visible}=scene(v,settings),first=visible[0];need(items(first.rawDetails,'list').length===0,'primary details belong in source header');
+  source=list([u(first.code),u(first.observed!),list(visible.slice(1).map(r=>list([true,u(r.code),u(r.observed!),r.group===0n,...(settings.multiEvents?[u(r.eventGroup)]:[]),...(settings.carrierDetails?[r.rawDetails]:[])])))]);
+ }
+ const role=capacityDomain(roleChannel(source,!!settings.multiUnit,!!settings.sharedBindings,!!settings.wideRoles,!!settings.wideUnits,!!settings.multiEvents,!!settings.carrierDetails),settings),eventFeatures=new Set<bigint>();
+ const additional=role.additional.map(r=>{
+  const safeDetails=carrierDetails(r.rawDetails,settings),raw=items(r.rawDetails,'list'),appearance=raw.length?items(raw[0],'list'):[],continuant=appearance.length?items(appearance[0],'list'):[],events=appearance.length?items(appearance[1],'list'):[],cues=raw.length?items(raw[1],'list'):[];
+  need(!r.sameFocal||!continuant.length&&!cues.length,'shared carrier has one feature/cue authority');
+  if(events.length){need(r.eventGroup===1n&&!eventFeatures.has(r.eventGroup),'one secondary-event feature authority');eventFeatures.add(r.eventGroup!);}
+  return {...r,safeDetails};
+ });
+ return {...role,additional};
 }
 /** Truth products are returned only to the source handler's trace projection. */
 export function materializeTruth(v:CanonicalValue,settings:Settings,allocate:()=>bigint,at:bigint):CanonicalValue[]{
