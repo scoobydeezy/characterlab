@@ -13,10 +13,10 @@ COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSem
  FAIL  src/test/assembledSemanticProvenance.test.ts > permission143: incoming binding cannot nominate its consumer permission
 AssertionError: expected [Function] to throw an error
 
-- Expected: 
+- Expected:\x20
 null
 
-+ Received: 
++ Received:\x20
 undefined
 
  ❯ src/test/assembledSemanticProvenance.test.ts:10:62
@@ -43,3 +43,120 @@ src/test/assembledSemanticProvenance.test.ts(50,109): error TS2322: Type '"causa
 
 EXIT 2; elapsed 18.749s
 CHARGED 34.898
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 18.658s
+CHARGED 53.556
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSemanticProvenance.test.ts", "-t", "permission143|native143", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSemanticProvenance.test.ts > permission143: incoming binding cannot nominate its consumer permission
+M143 PERMISSION PASS fixed consumer SEM-001C rejects codec-admitted foreign producing seam
+
+ ✓ src/test/assembledSemanticProvenance.test.ts > permission143: incoming binding cannot nominate its consumer permission
+stdout | src/test/assembledSemanticProvenance.test.ts > native143: actual two-lane provenance matches original contracts and rolls forged seams back
+M143 NATIVE PASS actual two-lane125->130 claims match original; exact permission/schema/observer/time/window/carrier/modality/feature/reference controls; typed ordinal bijection; save2/full queues/forged producer rollback and exact recovery
+
+ ✓ src/test/assembledSemanticProvenance.test.ts > native143: actual two-lane provenance matches original contracts and rolls forged seams back 125878ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 5 skipped (7)
+   Start at  10:53:35
+   Duration  130.57s (transform 2.90s, setup 0ms, collect 4.33s, tests 125.88s, environment 0ms, prepare 102ms)
+
+
+EXIT 0; elapsed 131.130s
+CHARGED 184.686
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledCarrierObservation.test.ts", "src/test/evidenceProvenance.test.ts", "src/test/semanticNegativeControls.test.ts", "src/test/semanticOccurrenceIdentity.test.ts", "-t", "primary142|SEM-001G|SEM-001 negative|SEM-001J occurrence", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/semanticNegativeControls.test.ts > SEM-001 negative controls — truth leakage > TruthIdentityCopy fails closure
+ ✓ src/test/semanticNegativeControls.test.ts > SEM-001 negative controls — truth leakage > OpaqueButLinkableTruthHandle fails closure
+ ✓ src/test/semanticNegativeControls.test.ts > SEM-001 negative controls — truth leakage > SlotWideVisibility fails closure
+ ✓ src/test/semanticNegativeControls.test.ts > SEM-001 negative controls — truth leakage > VisibleBindingRevealsTruthRole fails closure
+ ✓ src/test/semanticNegativeControls.test.ts > SEM-001 negative controls — truth leakage > TruthCorrectedTracking fails closure
+ ✓ src/test/semanticNegativeControls.test.ts > SEM-001 negative controls — truth leakage > TruthFacetCopy fails closure
+ ✓ src/test/semanticNegativeControls.test.ts > SEM-001 negative controls — binding identity > ReferentKeyedBinding fails closure
+ ✓ src/test/semanticNegativeControls.test.ts > SEM-001 negative controls — binding identity > RoleKeyedBinding fails closure
+ ✓ src/test/semanticNegativeControls.test.ts > SEM-001 negative controls — binding identity > DuplicateOpaqueOccurrence fails closure
+ ✓ src/test/semanticNegativeControls.test.ts > SEM-001 negative controls — binding identity > FreeformBindingQualifier fails closure
+ ✓ src/test/semanticNegativeControls.test.ts > SEM-001 negative controls — binding identity > GlobalRoleCardinality fails closure
+ ✓ src/test/semanticNegativeControls.test.ts > SEM-001 negative controls — binding identity > RoleOrdinalPriority fails closure
+ ✓ src/test/semanticNegativeControls.test.ts > SEM-001 negative controls — binding identity > EventRoleEqualsCausalRole fails closure
+ ✓ src/test/semanticNegativeControls.test.ts > SEM-001 negative controls — classification > FreeformTagBag fails closure
+ ✓ src/test/semanticNegativeControls.test.ts > SEM-001 negative controls — classification > ClassificationToPressure fails closure
+ ✓ src/test/semanticNegativeControls.test.ts > SEM-001 negative controls — classification > SharedTruthPerceptualFacetId fails closure
+ ✓ src/test/semanticNegativeControls.test.ts > SEM-001 negative controls — classification > WrongTypedFacetValue fails closure
+ ✓ src/test/semanticNegativeControls.test.ts > SEM-001 negative controls — classification > CategoryStringValue fails closure
+ ✓ src/test/semanticNegativeControls.test.ts > SEM-001 negative controls — classification > UnknownSentinel fails closure
+ ✓ src/test/semanticNegativeControls.test.ts > SEM-001 negative controls — classification > MissingAsFalse fails closure
+ ✓ src/test/semanticNegativeControls.test.ts > SEM-001 negative controls — classification > ExclusivePrimaryKind fails closure
+ ✓ src/test/semanticNegativeControls.test.ts > SEM-001 negative controls — classification > DuplicateFacetAssertion fails closure
+ ✓ src/test/semanticNegativeControls.test.ts > SEM-001 negative controls — classification > LLMClassifier fails closure
+ ✓ src/test/semanticNegativeControls.test.ts > SEM-001 negative controls — classification > AuthoritativeProse fails closure
+ ✓ src/test/semanticNegativeControls.test.ts > SEM-001 negative controls — recognition > RecognitionRewrite fails closure
+ ✓ src/test/semanticNegativeControls.test.ts > SEM-001 negative controls — recognition > RecognitionFromClassificationIdentity fails closure
+ ✓ src/test/semanticNegativeControls.test.ts > SEM-001 negative controls — ordinal opacity > GlobalTrackAllocator fails closure
+ ✓ src/test/semanticNegativeControls.test.ts > SEM-001 negative controls — ordinal opacity > TrackOrdinalPsychology fails closure
+ ✓ src/test/semanticNegativeControls.test.ts > SEM-001 negative controls — ordinal opacity > BindingOrdinalPsychology fails closure
+ ✓ src/test/semanticNegativeControls.test.ts > SEM-001 negative controls — ordinal opacity > ClassificationOrdinalPsychology fails closure
+ ✓ src/test/semanticNegativeControls.test.ts > SEM-001 negative controls — causal derivation > hidden-truth causal-role derivation fails closure
+ ✓ src/test/semanticNegativeControls.test.ts > SEM-001 negative-control ledger completeness > discharges every control the acceptance gate names
+ ✓ src/test/evidenceProvenance.test.ts > SEM-001G character-accessible provenance and admissibility conformance > CV-SEM-071 uses a closed evidence-reference union and keeps scopes/referents out of proof identity
+ ✓ src/test/evidenceProvenance.test.ts > SEM-001G character-accessible provenance and admissibility conformance > CV-SEM-072 admits an exact audited schema/seam and rejects truth handles even when opaque or hashed
+ ✓ src/test/evidenceProvenance.test.ts > SEM-001G character-accessible provenance and admissibility conformance > CV-SEM-073 makes evidence admissibility consumer-, observer-, window-, modality-, feature-, and carrier-relative
+ ✓ src/test/evidenceProvenance.test.ts > SEM-001G character-accessible provenance and admissibility conformance > CV-SEM-074 permits explicit perceptual co-reference but creates no hidden equality across false discontinuity
+ ✓ src/test/evidenceProvenance.test.ts > SEM-001G character-accessible provenance and admissibility conformance > CV-SEM-075 exposes explicitly shared observer evidence but never shared hidden ancestry
+ ✓ src/test/evidenceProvenance.test.ts > SEM-001G character-accessible provenance and admissibility conformance > CV-SEM-076 makes occurrence IDs fresh and ordinal-opaque while preserving equal causal semantics
+ ✓ src/test/evidenceProvenance.test.ts > SEM-001G character-accessible provenance and admissibility conformance > CV-SEM-077 preserves missing versus explicit evidence and permits future exact quality schemas without generic confidence
+ ✓ src/test/evidenceProvenance.test.ts > SEM-001G character-accessible provenance and admissibility conformance > CV-SEM-078 enforces the evidence-to-interpretation ladder through narrow ReadDomains
+ ✓ src/test/evidenceProvenance.test.ts > SEM-001G character-accessible provenance and admissibility conformance > CV-SEM-079 derives zero or more independent character-relative causal roles without rewriting event roles
+ ✓ src/test/evidenceProvenance.test.ts > SEM-001G character-accessible provenance and admissibility conformance > CV-SEM-080 preserves deterministic replay, safe ancestry, and allocator rollback on failed commit
+stdout | src/test/assembledCarrierObservation.test.ts > primary142: cue carrier isolates recognition and changes live focal report decision
+M142 PRIMARY PASS per-carrier features/recognition -> focal-only report -> belief1/2 vs1 -> memory/appraisal/live P1/2 vs1/actual execution/full queues
+
+ ✓ src/test/assembledCarrierObservation.test.ts > primary142: cue carrier isolates recognition and changes live focal report decision 97324ms
+ ✓ src/test/semanticOccurrenceIdentity.test.ts > SEM-001J occurrence identity boundary > allocates ExperienceId from the run-scoped allocator without restringifying it
+ ✓ src/test/semanticOccurrenceIdentity.test.ts > SEM-001J occurrence identity boundary > rejects malformed detection and observation occurrence ordinals
+ ✓ src/test/semanticOccurrenceIdentity.test.ts > SEM-001J occurrence identity boundary > orders supporting occurrence ordinals numerically inside emitted evidence
+ ✓ src/test/semanticOccurrenceIdentity.test.ts > SEM-001J occurrence identity boundary > flags when continuant support ordering becomes observable
+ ✓ src/test/semanticOccurrenceIdentity.test.ts > SEM-001J occurrence identity boundary > carries the typed continuant-file identity into perceived role projection
+ ✓ src/test/semanticOccurrenceIdentity.test.ts > SEM-001J occurrence identity boundary > keeps every occurrence namespace distinct under the accepted allocation
+
+ Test Files  4 passed (4)
+      Tests  49 passed | 8 skipped (57)
+   Start at  10:55:56
+   Duration  102.94s (transform 2.90s, setup 0ms, collect 4.45s, tests 97.38s, environment 1ms, prepare 400ms)
+
+
+EXIT 0; elapsed 103.494s
+CHARGED 288.180
+
+COMMAND ["node", "scripts/check-reference-boundary.mjs"]
+Reference boundary check passed.
+
+EXIT 0; elapsed 2.881s
+CHARGED 291.061
+
+COMMAND ["node", "scripts/check-research-obligations.mjs"]
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4364}
+
+EXIT 0; elapsed 3.477s
+CHARGED 294.538
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,json\ngit=lambda *a:subprocess.check_output(['git',*a],text=True,encoding='utf-8')\nbase='4446b205'\ncode={'src/assembled/encoding.ts','src/test/assembledSemanticProvenance.test.ts'}\nallowed=code|{'AGENTS.md','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md','docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md','docs/planning/RESEARCH_OBLIGATIONS.json','docs/planning/ASSEMBLED_CHARACTER_M143_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M143_CHECKS.txt','docs/formal/ASSEMBLED_CHARACTER_CARRIER_OBSERVATION_CONTRACT.md'}\nchanged=set(git('diff','--name-only',base).splitlines())|set(git('ls-files','--others','--exclude-standard').splitlines())\nassert changed<=allowed,changed-allowed\nassert changed&code==code\nassert git('diff','7d984909','--','src')=='','tested source changed'\nassert git('diff',base,'--','src/campaign2','src/campaign3','src/substrate','src/observation','src/semanticBinding','reference')=='','frozen dependency changed'\nfor p in code:\n s=Path(p).read_text(encoding='utf-8')\n if p.startswith('src/assembled/'):assert not any(\"campaign3/\"+x in s for x in ['attentionFactory','attentionRuntime','generalAttentionFactory','generalAttentionRuntime']),'separate pipeline'\nold=git('show',base+':docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md')\nnew=Path('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md').read_text(encoding='utf-8')\nrows=lambda s:[x for x in s.splitlines() if ('| C-' in x or '| F-' in x) and '| C-SEM ' not in x]\nassert rows(old)==rows(new),'other C/F rows changed'\nassert '| UNRESOLVED | C-SEM ' in new\nassert 'E46/P54/N17/U15' in new and '15/21' in new and 'families:0/15' in new\nassert len(new.splitlines())<=250 and len(new.replace('\\n','\\r\\n').encode())<=65536\nbefore=json.loads(git('show',base+':docs/planning/RESEARCH_OBLIGATIONS.json'))\nafter=json.loads(Path('docs/planning/RESEARCH_OBLIGATIONS.json').read_text(encoding='utf-8-sig'))\nassert before['obligations']==after['obligations']\nassert after['reportReviews'][:-1]==before['reportReviews']\nassert after['reportReviews'][-1]=={'path':'docs/planning/ASSEMBLED_CHARACTER_M143_RESULT.md','obligations':['RO-C3-003','RO-C3-004','RO-C3-005','RO-C3-006','RO-C3-007','RO-C3-014','RO-C3-016','RO-C3-020']}\nfor path,cap in [('AGENTS.md',120),('docs/planning/CURRENT.md',80),('docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md',250)]:\n assert len(Path(path).read_text(encoding='utf-8').splitlines())<=cap,path\nevidence=[Path('docs/planning/ASSEMBLED_CHARACTER_M143_'+s) for s in ['RESULT.md','CHECKS.txt']]\nassert sum(p.stat().st_size for p in evidence)<5*1024*1024\nlog=evidence[1].read_text(encoding='utf-8')\ncharge=float([l.split()[1] for l in log.splitlines() if l.startswith('CHARGED ')][-1]);assert charge<1800\nfor token in ['M143 PERMISSION PASS','M143 NATIVE PASS','M142 PRIMARY PASS','src/test/evidenceProvenance.test.ts','src/test/semanticNegativeControls.test.ts','src/test/semanticOccurrenceIdentity.test.ts','Reference boundary check passed.','PASS: research obligation references']:\n assert token in log,token\ncurrent=Path('docs/planning/CURRENT.md').read_text(encoding='utf-8')\nassert '(ASSEMBLED_CHARACTER_M143_CHECKS.txt)' in current and '{{' not in current\nprint('PASS M143 preservation: source 7d984909;2 production/test files; old Campaign0-3/reference dependencies unchanged; C-SEM remains unresolved/partial, other C/F unchanged;15/21,0/15,E46/P54/N17/U15; statuses/document/evidence caps retained; charge',charge)\n"]
+PASS M143 preservation: source 7d984909;2 production/test files; old Campaign0-3/reference dependencies unchanged; C-SEM remains unresolved/partial, other C/F unchanged;15/21,0/15,E46/P54/N17/U15; statuses/document/evidence caps retained; charge 294.538
+
+EXIT 0; elapsed 0.779s
+CHARGED 295.317
+
+COMMAND ["node", "scripts/check-git-file-sizes.mjs"]
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.361s
+CHARGED 295.678
