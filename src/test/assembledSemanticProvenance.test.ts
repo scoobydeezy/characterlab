@@ -47,9 +47,9 @@ function correspondence(p:Prepared){
  expect(errorCode(()=>resolve(occurrence,consumer,{...domain,permittedFeatureScopeIds:['required-feature']}))).toBe('INVALID_APPLICABILITY_SCOPE');
  expect(errorCode(()=>resolveAdmissibleEvidenceReference(occurrence.ref,[occurrence,occurrence],domain,consumer))).toBe('INVALID_EVIDENCE_REFERENCE');
  expect(errorCode(()=>resolveAdmissibleEvidenceReference({kind:'causal-role',causalRoleEvidenceId:b.perceivedBindingId},[occurrence],domain,consumer))).toBe('UNKNOWN_EVIDENCE_REFERENCE');
- expect(errorCode(()=>compileCausalRoleModel('recursive',[{...INITIAL_CAUSAL_ROLE_RULE,permittedBasisKinds:['causal-role']}]))).toBe('INVALID_CAUSAL_ROLE_MODEL');
+ expect(errorCode(()=>compileCausalRoleModel('recursive',[{...INITIAL_CAUSAL_ROLE_RULE,permittedBasisKinds:['causal-role']} as never]))).toBe('INVALID_CAUSAL_ROLE_MODEL');
  // Explicit same-observer references may be reused by two consumers; hidden ancestry is not a reference.
- expect(resolve(occurrence)).toEqual(resolve(occurrence));expect(errorCode(()=>resolve({...occurrence,hiddenAncestor:'world/private'} as ObserverSafeEvidenceOccurrence))).toBe('FORBIDDEN_TRUTH_LINKAGE');
+ expect(resolveAdmissibleEvidenceReference(occurrence.ref,[occurrence],{...domain,transitionKindId:'transition/other-explicit-safe-consumer'},consumer)).toEqual(resolve(occurrence));expect(errorCode(()=>resolve({...occurrence,hiddenSource:'world/private'} as ObserverSafeEvidenceOccurrence))).toBe('FORBIDDEN_TRUTH_LINKAGE');
 }
 function renamed(p:Prepared){
  const track=(t:typeof p.experience.perceivedBindings[number]['perceptualReferentId'])=>({...t,observerTrackSequence:t.observerTrackSequence+71n});
