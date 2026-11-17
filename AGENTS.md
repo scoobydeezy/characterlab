@@ -6,7 +6,7 @@ Read [CURRENT.md](docs/planning/CURRENT.md), then
 The active direction is assembly of one continuing character.
 Workbench/UI development and Campaign 4 are stopped pending assembly acceptance.
 This is the assembly checkout, based on
-`788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`. M136 joins actual causal roles to encoding, recalled appraisal and choice on0.102. SEM partial;15 mapped, full families/assembly open. Follow CURRENT.md; no unrelated breadth, UI or autonomous peer work.
+`788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`. M137 joins run-owned catalog membership/domains to recognition and actual choice on0.103. SEM partial;15 mapped, full families/assembly open. Follow CURRENT.md; no unrelated breadth, UI or autonomous peer work.
 Do not execute historical TODOs, resume old audits, or retain/revisit browser tabs.
 Old instructions/evidence remain on tag `archive/workbench-stopped-2026-10-25`.
 ## Authority
@@ -66,7 +66,7 @@ browser qualification or speculative audit tracks. Passing checks ends verificat
 unless a new change/failure supplies a concrete reason to rerun.
 Owner amendment2026-10-29: diagnose and repair ordinary implementation bugs
 autonomously within the declared scope/budgets; retain failures and target reruns.
-Owner2026-11-16 delegates work toward SEM completion with bounded self-approved amendments. Repeated unchanged failures need analysis. Escalate only
+Owner2026-11-17 continues work toward SEM completion with bounded self-approved amendments. Repeated unchanged failures need analysis. Escalate only
 architectural/scope/comparison changes or exhausted budgets; no paperwork bypass.
 Keep AGENTS.md <=120 lines, CURRENT.md <=80, the work order <=250.
 Git stores history; keep one baseline, one register, one compact result per milestone.

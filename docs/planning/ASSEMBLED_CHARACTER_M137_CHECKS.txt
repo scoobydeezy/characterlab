@@ -1,3 +1,109 @@
 M137 verification; baseline40ff8ae1; 1800s cumulative/600s command.
 15s prepaid final bookkeeping; commands and failed output retained.
 CHARGED 15.000
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 23.711s
+CHARGED 38.711
+
+COMMAND ["node", "node_modules/typescript/bin/tsc", "--noEmit"]
+
+EXIT 0; elapsed 21.532s
+CHARGED 60.243
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledRecognitionKnowledge.test.ts", "-t", "primary137|boundaries137|continuation137|privacy137", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRecognitionKnowledge.test.ts > primary137: actual catalog availability changes choice; all three candidate domains preserve cue-based recognition
+M137 PRIMARY PASS same model/input/seed, four run-owned catalogs; actual20/126 presence/absence; Person/Object/Place preserve outputs despite appearance; absent candidate cannot earn cue; no-cue persistence -> actual report recipient/belief/appraisal/reasons/choice/execution P1 vs47/72; immutable history/full queues
+
+ ✓ src/test/assembledRecognitionKnowledge.test.ts > primary137: actual catalog availability changes choice; all three candidate domains preserve cue-based recognition 160215ms
+stdout | src/test/assembledRecognitionKnowledge.test.ts > boundaries137: closed catalog domains and actual mapping membership; no synthesized knowledge or runtime writes
+M137 BOUNDARIES PASS zero/subset/full catalogs and zero templates; exact enum/schema/observer/template and dangling mapping rejection; duplicate/old-version/wrong-S0 rejection; model/run separation; runtime writes prohibited; native empty catalog remains unknown/full queue
+
+ ✓ src/test/assembledRecognitionKnowledge.test.ts > boundaries137: closed catalog domains and actual mapping membership; no synthesized knowledge or runtime writes 23059ms
+stdout | src/test/assembledRecognitionKnowledge.test.ts > continuation137: missing catalog knowledge survives exact continuation and whole-instant rollback
+M137 CONTINUATION PASS repeat/save2/all later boundaries; missing knowledge not synthesized; post127 failure rolls both lanes/IDs back; exact recovery
+
+ ✓ src/test/assembledRecognitionKnowledge.test.ts > continuation137: missing catalog knowledge survives exact continuation and whole-instant rollback 109722ms
+stdout | src/test/assembledRecognitionKnowledge.test.ts > privacy137: hidden truth cannot filter candidate domains or supply an absent cue
+M137 PRIVACY PASS hidden physical truth/identity inert in all safe prefixes; denied current cue cannot select catalog candidate; live retained target judgment and execution/full queues
+
+ ✓ src/test/assembledRecognitionKnowledge.test.ts > privacy137: hidden truth cannot filter candidate domains or supply an absent cue 64163ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed | 5 skipped (9)
+   Start at  08:30:39
+   Duration  362.41s (transform 3.15s, setup 0ms, collect 4.68s, tests 357.16s, environment 0ms, prepare 297ms)
+
+
+EXIT 0; elapsed 363.365s
+CHARGED 423.608
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/recognition.test.ts", "src/test/semanticStateAuthority.test.ts", "src/test/assembledSemanticRoles.test.ts", "-t", "CV-SEM-06|CV-SEM-070|SEM-001I.3|primary136", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-061 traces unfamiliar, contradicted, and ambiguous evaluations without fake identities
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-062 permits correct, wrong, or unresolved recognition over identical immutable perception
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-063 implements exact unique uncontradicted support without order-based ties
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-064 requires observer-owned catalog and symbol mapping without truth-kind filtering
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-065 appends replacement and withdrawal while no-cue and same-candidate evaluations preserve current resolution
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-066 preserves false continuity and false discontinuity under recognition changes
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-067 enforces typed same-track, same-experience evidence closure
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-068 enforces sole rule authority and continuant-only recognition
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-069 preserves semantic opacity, replay, history closure, and allocator rollback
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-070 emits only append-only recognition resolution and no downstream mutation
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > registers exactly one owner for every writable leaf of roots 241..244
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > rejects a second owner for an already-owned family and an uncovered leaf
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > projects both perceptual file states onto their registered leaves
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > keeps the membership leaf a mutation projection of the canonical set
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > admits writes only from the owning authority
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > enforces the accepted lifecycle in removal permission and leaf values
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > carries ownership, removal, and leaf grammar into ModelIdentity
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > addresses recognition knowledge by its accepted uniqueness keys
+stdout | src/test/assembledSemanticRoles.test.ts > primary136: actual lane companions drive selected encoding, remembered appraisal and choice
+M136 PRIMARY PASS actual15/125 claims and exact basis; same125 IDs/records consumed130; immutable envelopes; role grouping -> selected encoding -> recall -> live appraisal/reasons/decision/execution P1/2 vs1 with belief1/2; full queues
+
+ ✓ src/test/assembledSemanticRoles.test.ts > primary136: actual lane companions drive selected encoding, remembered appraisal and choice 101935ms
+
+ Test Files  3 passed (3)
+      Tests  19 passed | 8 skipped (27)
+   Start at  08:37:04
+   Duration  107.32s (transform 2.97s, setup 0ms, collect 4.49s, tests 101.99s, environment 1ms, prepare 299ms)
+
+
+EXIT 0; elapsed 107.876s
+CHARGED 531.484
+
+COMMAND ["node", "scripts/check-git-file-sizes.mjs"]
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.363s
+CHARGED 531.847
+
+COMMAND ["node", "scripts/check-reference-boundary.mjs"]
+Reference boundary check passed.
+
+EXIT 0; elapsed 2.899s
+CHARGED 534.746
+
+COMMAND ["node", "scripts/check-research-obligations.mjs"]
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4358}
+
+EXIT 0; elapsed 3.798s
+CHARGED 538.544
+
+COMMAND ["python", "-c", "from pathlib import Path\nimport subprocess,json\ngit=lambda *a:subprocess.check_output(['git',*a],text=True,encoding='utf-8')\nbase='40ff8ae1'\ncode={'src/assembled/'+p for p in ['model.ts','traceBinding.ts','recognition.ts','recognitionState.ts','recognitionSymbols.ts','recognitionExecution.ts','socialExecution.ts']}|{'src/test/assembledRecognitionKnowledge.test.ts','src/test/fixtures/assembledRecognitionKnowledge.ts'}\nallowed=code|{'AGENTS.md','docs/planning/CURRENT.md','docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md','docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md','docs/planning/RESEARCH_OBLIGATIONS.json','docs/planning/ASSEMBLED_CHARACTER_M137_RESULT.md','docs/planning/ASSEMBLED_CHARACTER_M137_CHECKS.txt','docs/formal/ASSEMBLED_CHARACTER_RECOGNITION_KNOWLEDGE_CONTRACT.md'}\nchanged=set(git('diff','--name-only',base).splitlines())|set(git('ls-files','--others','--exclude-standard').splitlines())\nassert changed<=allowed,changed-allowed\nassert changed&code==code\nassert git('diff','88ecb754','--','src')=='','tested source changed'\nassert git('diff',base,'--','src/campaign2','src/campaign3','src/substrate','src/observation','src/semanticBinding','reference')=='','frozen dependency changed'\nfor p in code:\n s=Path(p).read_text(encoding='utf-8')\n if p.startswith('src/assembled/'):assert not any(\"campaign3/\"+x in s for x in ['attentionFactory','attentionRuntime','generalAttentionFactory','generalAttentionRuntime']),'separate pipeline'\nold=git('show',base+':docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md')\nnew=Path('docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md').read_text(encoding='utf-8')\nrows=lambda s:[x for x in s.splitlines() if ('| C-' in x or '| F-' in x) and '| C-SEM ' not in x]\nassert rows(old)==rows(new),'other C/F rows changed'\nassert '| UNRESOLVED | C-SEM ' in new\nassert 'E46/P54/N17/U15' in new and '15/21' in new and 'families:0/15' in new\nassert len(new.splitlines())<=250 and len(new.replace('\\n','\\r\\n').encode())<=65536\nbefore=json.loads(git('show',base+':docs/planning/RESEARCH_OBLIGATIONS.json'))\nafter=json.loads(Path('docs/planning/RESEARCH_OBLIGATIONS.json').read_text(encoding='utf-8-sig'))\nassert before['obligations']==after['obligations']\nassert after['reportReviews'][:-1]==before['reportReviews']\nassert after['reportReviews'][-1]=={'path':'docs/planning/ASSEMBLED_CHARACTER_M137_RESULT.md','obligations':['RO-C3-014','RO-C3-016','RO-C3-020']}\nfor path,cap in [('AGENTS.md',120),('docs/planning/CURRENT.md',80),('docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md',250)]:\n assert len(Path(path).read_text(encoding='utf-8').splitlines())<=cap,path\nevidence=[Path('docs/planning/ASSEMBLED_CHARACTER_M137_'+s) for s in ['RESULT.md','CHECKS.txt']]\nassert sum(p.stat().st_size for p in evidence)<5*1024*1024\nlog=evidence[1].read_text(encoding='utf-8')\ncharge=float([l.split()[1] for l in log.splitlines() if l.startswith('CHARGED ')][-1]);assert charge<1800\nfor token in ['M137 PRIMARY PASS','M137 PRIVACY PASS','M137 CONTINUATION PASS','M137 BOUNDARIES PASS','M136 PRIMARY PASS','src/test/recognition.test.ts','src/test/semanticStateAuthority.test.ts','Reference boundary check passed.','PASS: research obligation references']:\n assert token in log,token\ncurrent=Path('docs/planning/CURRENT.md').read_text(encoding='utf-8')\nassert '(ASSEMBLED_CHARACTER_M137_CHECKS.txt)' in current and '{{' not in current\nprint('PASS M137 preservation: source 88ecb754;9 production/test files; old Campaign0-3/reference dependencies unchanged; C-SEM remains unresolved/partial, other C/F unchanged;15/21,0/15,E46/P54/N17/U15; statuses/document/evidence caps retained; charge',charge)\n"]
+PASS M137 preservation: source 88ecb754;9 production/test files; old Campaign0-3/reference dependencies unchanged; C-SEM remains unresolved/partial, other C/F unchanged;15/21,0/15,E46/P54/N17/U15; statuses/document/evidence caps retained; charge 538.544
+
+EXIT 0; elapsed 0.854s
+CHARGED 539.398
+
+COMMAND ["node", "scripts/check-git-file-sizes.mjs"]
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+EXIT 0; elapsed 0.359s
+CHARGED 539.757
