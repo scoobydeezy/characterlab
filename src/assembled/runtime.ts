@@ -1,3 +1,4 @@
+import {createSocialWitness,SW_SOURCE} from './socialWitness';
 import {CURRENT_SEM_SOURCE} from './semanticLanes';
 import {createWorkMaintenance,WORK_SOURCE} from './workMaintenance';
 import {createEffectEvidence} from './effectEvidence';
@@ -97,7 +98,8 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
  const fatiguedControl=controlBase&&model.fatigue?createFatigueExecution(component.tasks[0].character,stateModel,inputs.fatigueEvents,modelIdentity,inputs.runIdentity.value).extend(controlBase):controlBase;
  const control=rumination?rumination.extend(fatiguedControl!):fatiguedControl;
  const communicationBase=model.communication?createCommunicationExecution(component.tasks[0].character,model.communication,stateModel,inputs.communicationEvents,modelIdentity,inputs.runIdentity.value,model.delayedBody):undefined;
- const communication=model.commitmentWitness?createCommitmentWitness(component.tasks[0].character,component.tasks.map(t=>t.key),model.communication!.recipients,stateModel,inputs.commitmentEvents.filter(e=>key(e.eventTypeId)===key(W_SOURCE)),modelIdentity,inputs.runIdentity.value).extend(communicationBase!):communicationBase;
+ const witnessedCommunication=model.commitmentWitness?createCommitmentWitness(component.tasks[0].character,component.tasks.map(t=>t.key),model.communication!.recipients,stateModel,inputs.commitmentEvents.filter(e=>key(e.eventTypeId)===key(W_SOURCE)),modelIdentity,inputs.runIdentity.value).extend(communicationBase!):communicationBase;
+ const communication=model.socialWitness?createSocialWitness(component.tasks[0].character,model.socialWitness,stateModel,inputs.commitmentEvents.filter(e=>key(e.eventTypeId)===key(SW_SOURCE)),inputs.socialWitnessFirstOccurrence,modelIdentity,inputs.runIdentity.value).extend(witnessedCommunication!):witnessedCommunication;
  const relationship=model.relationship?createRelationshipExecution(component.tasks[0].character,model.relationship,stateModel,inputs.relationshipEvents,modelIdentity,inputs.runIdentity.value,model.encounterEnabled,model.attachment,inputs.attachmentEvents,model.loss):undefined;
  const social=model.social?createSocialExecution(component.tasks[0].character,model.social,stateModel,inputs.socialEvents,modelIdentity,inputs.runIdentity.value,model.recognition,model.encounterEnabled?relationship:undefined,model.socialMemory,model.encoding,model.memoryUse?(event,operands,report)=>episodes!.qualifyUse(event,operands,report):undefined,model.attachment,!!model.loss,!!model.embarrassment):undefined;
  const reservePriority=priorityCore?(meaning?meaning.extend(priorityCore):priorityCore):undefined;
