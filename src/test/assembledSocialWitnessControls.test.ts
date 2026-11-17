@@ -1,3 +1,4 @@
+import {walk} from './fixtures/campaign2Cognitive';
 import {it,expect,vi} from 'vitest';
 import {prepareCharacterModel,createCharacterRun,restoreCharacterRun} from '../assembled/character';
 import {compileCharacterModel} from '../assembled/model';
@@ -34,7 +35,7 @@ it('violations149: native global copying and direct private readers break observ
  console.info('M149 VIOLATIONS PASS deliberately untraced global copy contaminates B; private read changes fixed-evidence probes; presentation-counting write rejected by shared source-group owner. Test-only corruptions are never model options.');
 },590000);
 it.each(['observation','learning'])('rollback149: both observer branches and shared work roll back after %s',async boundary=>{
- const b=await setup(),original=witness.createSocialWitness;let hit=0;
+ const base=await setup(),b={...base,b:fixture('both')},original=witness.createSocialWitness;let hit=0;
  const spy=vi.spyOn(witness,'createSocialWitness').mockImplementation((...args)=>{const factory=original(...args);return {extend(base){const h=factory.extend(base);return {...h,
  execute(context){const result=h.execute(context);if(boundary==='observation'&&context.event.dueAt===3n&&key(context.event.eventTypeId)===key(witness.SW_OBSERVE)){hit++;throw Error('M149 fault');}return result;},
  prepare(...xs:Parameters<typeof h.prepare>){const p=h.prepare(...xs);if(boundary!=='learning'||!xs[0].some(e=>e.dueAt===3n&&key(e.eventTypeId)===key(witness.SW_LEARN)))return p;return {...p,finish(...ys:Parameters<typeof p.finish>){p.finish(...ys);hit++;throw Error('M149 fault');}};}
@@ -42,7 +43,12 @@ it.each(['observation','learning'])('rollback149: both observer branches and sha
  let save:Uint8Array;
  try{const r=await createCharacterRun(b.m,b.b.d);await through(r,2n);save=r.save();const before=r.snapshot();await expect(r.settleNextInstant()).rejects.toThrow('M149 fault');expect(hit).toBe(1);expect({...r.snapshot(),status:before.status}).toEqual(before);}finally{spy.mockRestore();}
  const restored=await restoreCharacterRun(b.b.s,{initialState:b.b.d.initialState,orderedInputs:b.b.d.orderedInputs,save:save!}),clean=await createCharacterRun(b.m,b.b.d);for(const r of[restored,clean])await through(r,6n);exact(clean,restored);
- console.info('M149 ROLLBACK '+boundary+' all snapshots unchanged; valid prefix resumes exact');
+ for(let i=0;i<2;i++){
+  const o=b.s.observers[i],other=b.s.observers[1-i];expect(social.personMean(state(clean).read(social.personPath(o.holder,o.target)).value)).toEqual(Q.of(2n,3n));
+  const forbidden=[b.s.task,f(rec(b.s.task,371n),1n),other.observer,other.holder,other.target,decode(clean.runIdentity())];
+  walk(witness.socialObserverView(out(clean),b.s,i),v=>{expect(forbidden.some(x=>key(x)===key(v)),'forbidden observer view field').toBe(false);return v;});
+ }
+ console.info('M149 ROLLBACK '+boundary+' BOTH observer updates: all snapshots unchanged; prefix resumes exact to both2/3; private task/target, other observer and run identity absent from whole views');
 },590000);
 it('admission149: ownership, learned S0, foreign proposition/observer, malformed and contradictory receipts reject',async()=>{
  const b=await setup(),rows=items(decode(b.b.d.orderedInputs),'list'),sourceRows=rows.filter(v=>key(items(v,'list')[2])===key(witness.SW_SOURCE));

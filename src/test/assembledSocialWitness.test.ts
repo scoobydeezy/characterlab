@@ -26,7 +26,7 @@ it('primary149: real commitment and two independent observers share native state
  expect(state(x.r).read({rootStateTypeId:373n,fieldId:1n,selectors:[{kind:'mapKey',key:x.b.taskA}]}).presence).toBe(true);
  for(const [at,n,d]of [[2n,0n,1n],[3n,1n,2n],[5n,2n,3n]] as const){await through(x.r,at);expect(mean(x,0)).toEqual(Q.of(n,d));expect(mean(x,1)).toEqual(Q.of(0n));}
  await through(x.r,6n);
- const truth=tagged(x.r,SW+'/truth');expect(truth[0][3]).toBe(true);expect(truth.every(t=>t[4]===true)).toBe(true);
+ const truth=tagged(x.r,SW+'/truth');expect(truth.every(t=>t[3]===true),'actual commitment remains Open throughout correction horizon').toBe(true);expect(truth.every(t=>t[4]===true)).toBe(true);
  const probe=tagged(x.r,SW_PROBE);for(const [at,expected]of [[2,undefined],[3,Q.of(0n)],[5,Q.of(1n,2n)],[6,Q.of(2n,3n)]] as const){
   const row=probe.find(p=>key(p[1])===key(signed(at))&&key(p[2])===key(x.s.observers[0].holder))!;
   expect(row[3]).toEqual(expected?q(expected.numerator,expected.denominator):list([]));
