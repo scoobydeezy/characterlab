@@ -228,7 +228,7 @@ identify actual gaps. Historical gate status does not override later accepted cl
 
 ## Current authorization boundary
 Owner2026-11-13 adopts0.85; after M105 authorizes continued character integration.
-Owner2026-11-17 continuation: M148 SOCIAL partial after ADAPT0.110;17/21 mapped. Self-approved routine repairs; laws/scope unchanged; family/final acceptance open. Shared/UnitBudget; feedback TRUE.
+Owner2026-11-17 authorizes SOCIAL completion with bounded self-approved amendments after M148;17/21 mapped. Laws/scope unchanged; family/final acceptance open. Shared/UnitBudget; feedback TRUE.
 Original BIO/EPI controls/limits remain; final whole-candidate replay required. No UI, publishing or assembly acceptance.
 
 ## Owner ruling — unknown factors and live gates (2026-11-02)
