@@ -1,3 +1,5 @@
+import {campaign2Record} from '../campaign2/codecs';
+import {AUTHORED_FACT_EVENT} from '../campaign2/orderedInputs';
 import {historyFixture,target} from './fixtures/assembledSemanticFinal';
 import {HIDDEN_EXPOSURE_RULES,HIDDEN_EXPOSURE_REGISTRY} from '../assembled/model';
 import {personPath,personMean} from '../assembled/social';
@@ -79,5 +81,15 @@ it('retained146: the same model keeps recognition-driven choices and protocol ad
   const intent=of(r,425n).find(v=>key(f(rec(v,425n),2n))===key(decision))!,plan=of(r,431n).find(v=>key(f(rec(v,431n),2n))===key(intent))!,attempt=of(r,432n).find(v=>key(f(rec(v,432n),2n))===key(plan))!;expect(of(r,433n).some(v=>key(f(rec(v,433n),2n))===key(attempt))).toBe(true);
   expect(of(r,307n)).toHaveLength(1);expect(of(r,324n)).toHaveLength(1);expect(named(r,'regulatory-adaptation')).toHaveLength(1);expect(named(r,'authored-regulatory-adaptation')).toHaveLength(0);await finish(r);
  }
- expect(probabilities).toEqual(['47/72','1/1']);console.info('M146 RETAINED PASS current0.109 SEM choice probabilities47/72 vs1; actual intent/plan/attempt/outcome; protocol adaptation remains sole actual-action consumer');
+ expect(probabilities).toEqual(['1/1','47/72']);console.info('M146 RETAINED PASS current0.109 SEM visible/hidden contradiction P(B)=1 vs47/72; actual intent/plan/attempt/outcome; protocol adaptation remains sole actual-action consumer');
+},590000);
+
+it('save146: pending source tamper rejects and actual mutation keys are the four governed targets',async()=>{
+ const b=fixture(1),m=await prepareCharacterModel(b.s),r=await createCharacterRun(m,b.d),save=rec(decode(r.save()),132n),queue=items(f(save,7n),'list');let altered=0;
+ const tampered=queue.map(v=>{const e=rec(v,130n);if(key(f(e,5n))!==key(AUTHORED_FACT_EVENT))return v;altered++;const payload=f(e,6n),fact=f(rec(payload,304n),1n);return replace(e,6n,replace(payload,1n,replace(fact,3n,u(0))));});expect(altered).toBe(1);
+ await expect(restoreCharacterRun(b.s,{initialState:b.d.initialState,orderedInputs:b.d.orderedInputs,save:enc(replace(save,7n,list(tampered)))})).rejects.toThrow('whole-save prefix equality');
+ await through(r,2n);const variable=tid(1029,text('variable/fixture-regulation')),load=tid(1033,text('load/fixture-load'));
+ const expected=[campaign2Record('ToleranceKey',{CharacterId:C,ExposureReferentId:C,RegulatoryVariableId:variable}),campaign2Record('SensitizationKey',{CharacterId:C,ExposureReferentId:C,RegulatoryVariableId:variable}),campaign2Record('RegulatoryAdaptationKey',{CharacterId:C,RegulatoryVariableId:variable}),campaign2Record('AccumulatedLoadKey',{CharacterId:C,LoadDomainId:load})].map((key,i)=>statePathValue({rootStateTypeId:302n,fieldId:BigInt(i+1),selectors:[{kind:'mapKey',key}]}));
+ expect(key(set(state(r).entries().filter(e=>e.path.rootStateTypeId===302n).map(e=>statePathValue(e.path))))).toBe(key(set(expected)));
+ expect(key(set(of(r,325n).map(v=>f(rec(v,325n),4n))))).toBe(key(set(expected)));console.info('M146 SAVE/KEYS PASS tampered pending source rejects before continuation; actual state/evaluated paths equal all four exact semantic targets');
 },590000);

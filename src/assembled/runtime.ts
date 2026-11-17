@@ -17,7 +17,8 @@ import {createValuesExecution,VALUES_CONTEXT} from './values';
 import {KNOWLEDGE_OWNER} from './strategy';
 /** assembled-character-model/0.1-candidate. One fixed composition and scheduler.
  * Bounded port of the reachable cognitive wiring in C2 adaptationRuntime; no optional
- * model selection, authored-fact/consequence bridge branch (the generated protocol bridge remains) or imported continuation. */
+ * model selection, authored consequence bridge branch or imported continuation.
+ * The protocol bridge remains;0.109 adds authenticated actual exposure to the same evaluator. */
 import {canonicalEncode,text,list,record,type CanonicalValue} from '../substrate/canonicalEncoding';
 import {AuthoritativeState} from '../substrate/state';
 import {DeterministicScheduler,SchedulerContractError,type ScheduledEvent,type EventHandlerContext,type EventHandler} from '../substrate/scheduler';
