@@ -55,3 +55,123 @@ EXIT 0; elapsed 263.967s
 CHARGED 301.415
 
 Pre-execution test review: use a well-typed self-revision for the cycle negative, not a malformed optional value; assert phase130 zero actual state reads and exact consequence envelope instead of an unrelated root number. Enforce shared ModelIdentity across adapted scenarios. Add the already-declared ambiguity case as a native run, not only a captured-request control. No production/law/input changes to the four passed comparisons.
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSemanticFinal.test.ts", "-t", "continuation145|retirement145|privacy145|files145", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSemanticFinal.test.ts > continuation145: same-instant corrections survive restore and later-lane failure rolls back both lanes
+M145 CONTINUATION PASS exact repeat/save2/all later boundaries; failed consequence restores both lanes and same-instant history; exact recovered finish
+
+ ✓ src/test/assembledSemanticFinal.test.ts > continuation145: same-instant corrections survive restore and later-lane failure rolls back both lanes 154289ms
+stdout | src/test/assembledSemanticFinal.test.ts > privacy145: denied current evidence allocates no experience and hidden truth is inert in both lanes
+M145 PRIVACY PASS identical permitted evidence despite hidden truth; denied current has zero ExperienceId allocation/envelope and no recognition effect; consequence remains live
+
+ ✓ src/test/assembledSemanticFinal.test.ts > privacy145: denied current evidence allocates no experience and hidden truth is inert in both lanes 64463ms
+stdout | src/test/assembledSemanticFinal.test.ts > retirement145: retirement and continuation restore exactly and a later fault rolls back endings
+M145 CONTINUATION PASS repeat/save2/all later prefixes; post-retirement rollback and recovered whole continuation
+
+ ✓ src/test/assembledSemanticFinal.test.ts > retirement145: retirement and continuation restore exactly and a later fault rolls back endings 76506ms
+stdout | src/test/assembledSemanticFinal.test.ts > files145: malformed or contradictory lifecycle and foreign/future/reused/absent files reject
+M145 BOUNDARIES PASS strict flags; retired/future/foreign files; no end twice/reuse/wrong owner; immutable attachment; absent prior
+
+ ✓ src/test/assembledSemanticFinal.test.ts > files145: malformed or contradictory lifecycle and foreign/future/reused/absent files reject 17288ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed | 11 skipped (15)
+   Start at  11:33:41
+   Duration  317.27s (transform 2.89s, setup 0ms, collect 4.36s, tests 312.55s, environment 0ms, prepare 107ms)
+
+
+EXIT 0; elapsed 317.838s
+CHARGED 619.253
+
+COMMAND ["node", "node_modules/vitest/vitest.mjs", "run", "src/test/assembledSemanticFinal.test.ts", "src/test/recognition.test.ts", "src/test/semanticRecognitionState.test.ts", "src/test/semanticPhaseOrdering.test.ts", "src/test/semanticPhaseRollbackCause.test.ts", "src/test/semanticStatePersistence.test.ts", "src/test/semanticStateAuthority.test.ts", "src/test/semanticSchemaRegistry.test.ts", "src/test/semanticCodecs.test.ts", "-t", "knowledge145|contracts145|SEM-001|CV-SEM|distinguishes", "--maxWorkers=1", "--no-file-parallelism", "--reporter=verbose"]
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledSemanticFinal.test.ts > knowledge145: actual frozen knowledge admits exact replacement operations and rejects stale or foreign authority 60412ms
+   → expected [Function] to throw error including 'duplicate candidate' but got 'recognition candidate catalog must be…'
+stdout | src/test/assembledSemanticFinal.test.ts > contracts145: native freeze operands, strict lane cutoffs and public source phase boundary
+M145 CONTRACTS PASS actual frozen current/consequence operands immutable; strict before/at/after cutoffs; public late/sentinel/duplicate rejection; phase130 safe/150 non-schedulable
+
+ ✓ src/test/assembledSemanticFinal.test.ts > contracts145: native freeze operands, strict lane cutoffs and public source phase boundary 21605ms
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-061 traces unfamiliar, contradicted, and ambiguous evaluations without fake identities
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-062 permits correct, wrong, or unresolved recognition over identical immutable perception
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-063 implements exact unique uncontradicted support without order-based ties
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-064 requires observer-owned catalog and symbol mapping without truth-kind filtering
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-065 appends replacement and withdrawal while no-cue and same-candidate evaluations preserve current resolution
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-066 preserves false continuity and false discontinuity under recognition changes
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-067 enforces typed same-track, same-experience evidence closure
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-068 enforces sole rule authority and continuant-only recognition
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-069 preserves semantic opacity, replay, history closure, and allocator rollback
+ ✓ src/test/recognition.test.ts > SEM-001F append-only recognition-resolution conformance > CV-SEM-070 emits only append-only recognition resolution and no downstream mutation
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > registers exactly one owner for every writable leaf of roots 241..244
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > rejects a second owner for an already-owned family and an uncovered leaf
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > projects both perceptual file states onto their registered leaves
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > keeps the membership leaf a mutation projection of the canonical set
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > admits writes only from the owning authority
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > enforces the accepted lifecycle in removal permission and leaf values
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > carries ownership, removal, and leaf grammar into ModelIdentity
+ ✓ src/test/semanticStateAuthority.test.ts > SEM-001I.3 semantic mutation authority > addresses recognition knowledge by its accepted uniqueness keys
+ ✓ src/test/semanticPhaseOrdering.test.ts > SEM-001H two-lane semantic phase conformance > CV-SEM-081 registers the exact two-lane phases and non-schedulable settlement sentinel
+ ✓ src/test/semanticPhaseOrdering.test.ts > SEM-001H two-lane semantic phase conformance > CV-SEM-082 fixes the current lane chain and rejects truth at or after its entry cutoff
+ ✓ src/test/semanticPhaseOrdering.test.ts > SEM-001H two-lane semantic phase conformance > CV-SEM-083 fixes the consequence lane, admits phase-110 truth, and prevents reopening after phase 120
+ ✓ src/test/semanticPhaseOrdering.test.ts > SEM-001H two-lane semantic phase conformance > CV-SEM-084 conditionally reserves ExperienceId and forbids successful orphan or duplicate envelopes
+ ✓ src/test/semanticPhaseOrdering.test.ts > SEM-001H two-lane semantic phase conformance > CV-SEM-085 freezes one immutable envelope before separate companion causal-role evidence
+ ✓ src/test/semanticPhaseOrdering.test.ts > SEM-001H two-lane semantic phase conformance > CV-SEM-086 canonically schedules independent same-phase classifier work without creating a read edge
+ ✓ src/test/semanticPhaseOrdering.test.ts > SEM-001H two-lane semantic phase conformance > CV-SEM-087 freezes recognition inputs and permits consequence correction without rewriting phase-21 history
+ ✓ src/test/semanticPhaseOrdering.test.ts > SEM-001H two-lane semantic phase conformance > CV-SEM-088 keeps phase-130 perceived-outcome learning separate from truth-side automatic adaptation
+ ✓ src/test/semanticPhaseOrdering.test.ts > SEM-001H two-lane semantic phase conformance > CV-SEM-089 proves temporal availability without granting ORD-001 belief permission
+ ✓ src/test/semanticPhaseOrdering.test.ts > SEM-001H two-lane semantic phase conformance > CV-SEM-090 rejects barrier events and rolls reservations/allocators back on settlement failure
+ ✓ src/test/semanticStatePersistence.test.ts > SEM-001I.3 semantic state persistence and observer isolation > CV-SEM-097 saves, loads, and replays semantic state roots byte-identically
+ ✓ src/test/semanticStatePersistence.test.ts > SEM-001I.3 semantic state persistence and observer isolation > CV-SEM-097 rolls state, allocators, trace, and outputs back together on staged failure
+ ✓ src/test/semanticStatePersistence.test.ts > SEM-001I.3 semantic state persistence and observer isolation > CV-SEM-098 lets another observer perturb global ordinals without changing this observer
+ ✓ src/test/semanticCodecs.test.ts > SEM-001I.3 canonical semantic codecs > CV-SEM-096 enforces the accepted type and field registry
+ ✓ src/test/semanticCodecs.test.ts > SEM-001I.3 canonical semantic codecs > CV-SEM-096 rejects unadmitted contract versions before emission
+ ✓ src/test/semanticCodecs.test.ts > SEM-001I.3 canonical semantic codecs > CV-SEM-096 refuses to decode a record schema version the registry does not admit
+ ✓ src/test/semanticCodecs.test.ts > SEM-001I.3 canonical semantic codecs > CV-SEM-096 validates every union tag/payload contract before the record is built
+ ✓ src/test/semanticCodecs.test.ts > SEM-001I.3 canonical semantic codecs > CV-SEM-096 enforces multi-field and mutually exclusive union payloads
+ ✓ src/test/semanticCodecs.test.ts > SEM-001I.3 canonical semantic codecs > CV-SEM-096 gives CharacterEvidenceRef exactly one payload field per reference kind
+ ✓ src/test/semanticCodecs.test.ts > SEM-001I.3 canonical semantic codecs > CV-SEM-096 round-trips every lifecycle record byte-identically
+ ✓ src/test/semanticCodecs.test.ts > SEM-001I.3 canonical semantic codecs > CV-SEM-096 encodes state roots independently of map and set construction order
+ ✓ src/test/semanticCodecs.test.ts > SEM-001I.3 canonical semantic codecs > CV-SEM-096 keeps equal ordinals in different occurrence namespaces distinct
+ ✓ src/test/semanticCodecs.test.ts > SEM-001I.3 canonical semantic codecs > CV-SEM-096 keeps observer ownership inside the canonical identity value
+ ✓ src/test/semanticRecognitionState.test.ts > SEM-001I.3 recognition-knowledge state identity > CV-SEM-099 permits at most one active mapping per (ObserverId, PerceivedIdentitySymbolId)
+ ✓ src/test/semanticRecognitionState.test.ts > SEM-001I.3 recognition-knowledge state identity > CV-SEM-099 replaces mapping A with B without remapping or mutating A
+ ✓ src/test/semanticRecognitionState.test.ts > SEM-001I.3 recognition-knowledge state identity > CV-SEM-099 carries an allocated mapping occurrence rather than a derived key
+ ✓ src/test/semanticRecognitionState.test.ts > SEM-001I.3 recognition-knowledge state identity > CV-SEM-100 permits at most one active catalog entry per (ObserverId, CandidateSemanticReferentId)
+ ✓ src/test/semanticRecognitionState.test.ts > SEM-001I.3 recognition-knowledge state identity > SEM-001I.1 keeps persistent resolution state self-sufficient
+ ✓ src/test/semanticSchemaRegistry.test.ts > accepted SEM-001I.2 allocation closure > CV-SEM-091 allocates one append-only collision-free record range
+ ✓ src/test/semanticSchemaRegistry.test.ts > accepted SEM-001I.2 allocation closure > CV-SEM-092 gives every schema positive unique fields and explicit optionality
+ ✓ src/test/semanticSchemaRegistry.test.ts > accepted SEM-001I.2 allocation closure > CV-SEM-093 separates every typed namespace even when ordinals match
+ ✓ src/test/semanticSchemaRegistry.test.ts > accepted SEM-001I.2 allocation closure > CV-SEM-094 closes finite registries without renumbering causal roles
+ ✓ src/test/semanticSchemaRegistry.test.ts > accepted SEM-001I.2 allocation closure > CV-SEM-095 governs each tagged union and commits its matrix into manifest identity
+ ✓ src/test/semanticPhaseRollbackCause.test.ts > distinguishes the retained assertion false-positive from an orphan-envelope rollback
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSemanticFinal.test.ts > knowledge145: actual frozen knowledge admits exact replacement operations and rejects stale or foreign authority
+AssertionError: expected [Function] to throw error including 'duplicate candidate' but got 'recognition candidate catalog must be…'
+
+Expected: "duplicate candidate"
+Received: "recognition candidate catalog must be canonical"
+
+ ❯ src/test/assembledSemanticFinal.test.ts:238:120
+    236|  expect(()=>original(model,{...base,identitySymbolMappings:activeB},ne…
+    237|  expect(()=>original(model,{...base,identitySymbolMappings:[...request…
+    238|  expect(()=>original(model,{...base,candidateCatalog:[...request.candi…
+       |                                                                                                                        ^
+    239|  expect(()=>original(model,{...base,cueEvidence:[{...cue,observerId:'f…
+    240|  expect(()=>original(model,{...base,identitySymbolMappings:request.ide…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed | 8 passed (9)
+      Tests  1 failed | 53 passed | 13 skipped (67)
+   Start at  11:39:10
+   Duration  89.24s (transform 2.99s, setup 0ms, collect 4.75s, tests 82.16s, environment 2ms, prepare 867ms)
+
+
+EXIT 1; elapsed 89.814s
+CHARGED 709.067
