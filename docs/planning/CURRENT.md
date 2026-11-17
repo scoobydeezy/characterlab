@@ -1,24 +1,47 @@
-# Current work — M141 passed; continue SEM
-Perceived roles can belong to two events inside one experience. Their grouping
-changes shared attention, retained memory and a later actual decision.
+# Current work — M142 carrier-scoped classification and recognition
+Owner2026-11-17: continue until SEM complete with bounded self-approved amendments.
+Baselinea856fcd2; M141 passed. One active package; no unrelated breadth.
 
-Baselinebec62cc0; plan9b2dcd0f; source027960ed; rules/registry0.107;
-semantic-events/0.1-candidate, encoding0.7. Twelve production/test files.
-[Result](ASSEMBLED_CHARACTER_M141_RESULT.md) and [checks](ASSEMBLED_CHARACTER_M141_CHECKS.txt).
-Same focal Target/Participant: merged MultipleRoles vs split scoped Target;
-belief1/2 both, actual P(B)1 vs1/2; actual125->130 selected claim/graph/memory/
-recall/appraisal/grounds/decision/execution/full queues. Both lanes admit two files.
-Truth order/hidden facts preserve safe prefixes; repeat/save2/every-boundary and
-post-allocation/125 rollback pass.777 original-domain comparisons are exact;
-two-event capacity2 uses one budget. Duplicate-selected-carrier restriction stays
-explicit; no new aggregation law. First fixture bracket error retained/corrected.
-All16 targeted tests, types/reference/research/preservation checks pass; verification
-under9 minutes including the retained syntax failure.
+## Bounded card (before implementation)
+Capability1: each observed continuant receives its own original C1 classifications
+and frozen recognition evaluation; secondary event features retain their own scope.
+Capability2: a recognized companion cannot supply identity for an unknown focal
+person. A fixed cue-carrier comparison must reach live belief/appraisal/decision.
+Capability3: full envelopes/history survive denial/hidden truth, restore and rollback.
+Rules/registry0.108; carrier-observation/0.1-candidate; encoding0.7 unchanged.
+Contract: ../formal/ASSEMBLED_CHARACTER_CARRIER_OBSERVATION_CONTRACT.md.
+MEC-004 PORT: reuse original C1 classifiers, recognition, owners and phase functions.
+Original controls/frozen trees unchanged; no mapping-acquisition or new law.
 
-## Continue under owner self-approval
-Owner2026-11-17: work until SEM complete. Next: classification/recognition on each
-perceived carrier, then observer/provenance/ordinal/knowledge-lifecycle correspondence
-and full pinned replay. Write bounded card before further implementation.
-C-SEM remains UNRESOLVED;15/21 mapped,0/15 families,E46/P54/N17/U15=132.
-Final whole-candidate replay remains; no UI, Campaign4 or autonomous peers.
+## Scope and comparison
+At most12 production/test files: model,traceBinding,recognition,encoding,
+semanticTruth,semanticLanes,socialExecution,recognitionExecution,recognitionState;
+optional semanticAppearance helper; one new test and one fixture.
+Existing owner/scheduler/save; per-carrier safe feature/cue annex, no new store.
+Fixed M140 body10/seed0/goals+urgency1/two social tasks/third unknown;
+positive1, current2, negative2, silent3, recall/body/choice21, capacity1.
+Both arms reacquire focal at consequence2. Same positive target-template cue goes
+to focal vs companion; shared truth/roles/appearance/laws/history otherwise.
+Precondition: live appraisals and actual resolved decision21 in both arms.
+Expected focal-known report updates target belief1/2 and negative memory; companion-
+known leaves focal unknown, target belief1, positive prior memory. Require actual
+consumption and exact production probability difference, not seed search.
+Additional object/place features and secondary-event features retain actual carriers.
+Denied feature/cue changes and hidden truth must preserve every safe prefix.
+No fabricated belief or learned memory. Original knowledge is owned S0 catalog.
+
+## Checks, risks and budgets
+Serial types; new primary/structure/privacy/continuation/admission tests; original
+continuant/event classification and recognition controls; retained M141 primary.
+Exact repeat/save2/every later boundary; fault after recognition freezes and before
+commit rolls back; full queues. Validate mixed/duplicate/foreign carrier rejection,
+old-version gates and missing/false/true features. Full-byte within unchanged model;
+cross-arm semantic comparison as above; no same-seed coupling claim.
+Reference/research/preservation/Git-size checks; frozen C0-C3 dependencies untouched.
+1800s cumulative including failures/15s bookkeeping,600s command;20 evidence files/
+5MiB. Stop passing checks. Failure source/log retained before bounded repair.
+Done: all checks pass with complete causal witness, result/register updated.
+C-SEM remains UNRESOLVED until remaining observer/provenance/ordinal/knowledge
+correspondence and pinned replay;15/21 mapped,0/15 families,E46/P54/N17/U15.
+Final whole-candidate replay remains. No UI, Campaign4 or autonomous peers.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
