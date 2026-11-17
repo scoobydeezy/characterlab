@@ -1,47 +1,34 @@
-# Current work — M147 ADAPT completion
-Owner authorizes independent work through ADAPT completion; routine repairs and
-comparison amendments self-approved, failures retained. Laws/final scope unchanged.
+# Current work — ADAPT incorporation complete in pinned domain
+One exposure independently changes physical adaptation and produces permitted
+consequence evidence in the same character. Equal observations leave learning
+equal; only later permitted evidence reveals the difference, enters memory and
+is recalled. Existing recognition-driven choice/action remains intact.
 
-## Card before implementation
-Baseline8653cfab; rules/registry0.110 successor0.109, encoding0.7 unchanged.
-Observable capabilities: the same exposure root independently produces permitted
-consequence SEM/EVID and physical adaptation; later D-only evidence reaches memory.
-Closure: a committed protection policy compares all state outside explicit ADAPT
-storage and all outputs outside explicit private adaptation/probe truth records.
-It queries inherited registered learning members and protects a strict superset,
-including every later owner, list-tag output and future unclassified family. This
-comparison guard does not reassign mutation ownership or pretend truth is learning.
-Unrecognized outputs default protected; no silently omitted ninth learning family.
+M147 maps C-ADAPT on rules/registry0.110, encoding0.7.
+Baseline8653cfab; plan57432271; final tested source4287ae8d.
+[Result](ASSEMBLED_CHARACTER_M147_RESULT.md); [checks](ASSEMBLED_CHARACTER_M147_CHECKS.txt).
+Four production/three test files;71 targeted tests and types pass.
+Actual same110 root -> independent ADAPT140 and consequence120..124 -> EVID130.
+Committed protection policy queries legacy membership and compares ALL non-private
+state/outputs, including later/future owners. Exact regulatory keys checked separately.
+Count0/1 produce four no-change/change results; first protected difference is the
+permitted5/5.1 observation at4 -> intake/episode/recall. No private truth handles.
+Repeat/save2/save4/full continuation,124/140 rollback, wrong-route/collision-before-read,
+no-rule/no-dispatch, canonical baseline/removal and original controls pass.
+One test syntax failure retained; no law/scenario/seed/gate amendments required.
+Verification587.557s charged (9m48s), longest232.459s; no extension.
 
-Pinned PHEN-ADAPT-001v1.11.0:3..19. Same M146 model/S0/seed0/count0-vs1 at2/probe4;
-canonical regulatory baseline/body10, task dependencies unchanged, no social/choice
-sources. Both arms now get identical fixed-pulse consequence observation from THAT
-110 root via original accepted bridge and common allocator,124 freeze,130 EVID.
-Later reveal independently omitted; immediate pulse remains. Four live evaluations
-and exact changed paths required. Paired topology/allocation equality, no random draws.
-Original frozen parent pair is correspondence control; original bridge/domain/batch/
-route/mutation/rollback controls retained. Compare semantic values/paths/ancestry;
-raw original/current IDs may differ due existing assembled clocks, never within pair.
+## Exact stopping point
+C-ADAPT:3..16 EQUIVALENT in mapped domain;:17 contracts mapped;:18/19 TRACKED.
+17/21 members mapped;0/15 families accepted;E46/P54/N17/U15=132 unchanged.
+Reference witness is four-rule regulatory exposure. Generic negative-step/gate,
+procedural and permutation controls remain controls, not additional source modes.
+Fixed pulse has no continuants; existing rich recognition remains intact.
+M146 admission limits remain explicit. No full physiology/universal adaptation claim.
 
-Scope <=9 production/test files: model, runtime, traceBinding, protection policy,
-ingress if needed, new test/fixture and bounded internal-control helper if needed.
-One scheduler/state/owner/save; reuse bridge component, never a standalone factory.
-Versioned contract and card committed first. Bridge is fixed pulse, not hidden-count
-projection. Slot50 commits protection policy; invalid/weak policy rejected.
-Checks: live203/227/269/270 equality before reveal; actual5/5.1 ->337/342/345/352;
-registered+superset state/output closure, exact whole manifests/identity/topology;
-pre140 frozen records unchanged, repeat/save2/all later boundaries,124/140 faults;
-wrong route/basis/no-rule/no-dispatch distinctions, exact semantic keys and absent
-baseline, batch collision-before-read/frozenB0/permutation controls. Query the same
-compiled native admission/evaluator, not substitute psychology. Adversarial closure
-injection of new state/output must be detected. Retained M146 and SEM witnesses;
-types/boundary/research/frozen-byte/size checks. No untouched full C2 rerun.
-
-<=1800s cumulative verification including failures, <=600s/command, one job;
-<=20 evidence files/5MiB,12 production/test hard cap; no broad audit/framework/UI.
-Done iff all17 pinned requirements have evidence or explicit inherited contract
-mapping and no unresolved defect/conflict. If scope exceeds package, checkpoint
-and continue next dependency-only bounded card under same authority; do not waive.
-One compact result with per-key disposition; no denominator/family closure claim.
-M146 retained;16/21 members mapped,0/15 accepted families;E46/P54/N17/U15=132.
+Owner self-approval through ADAPT completion fulfilled; no next package active.
+Remaining member mappings: SOCIAL, MULTI, REL, LONG. Choose next bounded card by
+causal dependency before coding. Final whole-candidate replay and family gaps remain.
+All original C0-C3/reference trees unchanged. No UI, Campaign4, autonomous peers,
+reductions, publishing or assembly acceptance.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
