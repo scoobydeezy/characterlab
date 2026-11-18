@@ -1,0 +1,149 @@
+
+M158 PREEDIT native baseline exit=1 elapsed=98.720s cap=540
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledTimeDomainNative.test.ts (6 tests | 1 failed | 5 skipped) 93162ms
+   × native158: unchanged current model retains every canonical boundary with actual performance learning 93161ms
+     → expected false to be true // Object.is equality
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 5 skipped (6)
+   Start at  09:01:59
+   Duration  98.13s (transform 2.98s, setup 0ms, collect 4.48s, tests 93.16s, environment 0ms, prepare 148ms)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledTimeDomainNative.test.ts > native158: unchanged current model retains every canonical boundary with actual performance learning
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ src/test/assembledTimeDomainNative.test.ts:26:87
+     24|  expect(done).toBe(true);expect(save).toBeDefined();const snap=r.snaps…
+     25|  const observations=out.filter(v=>typeof v!=='boolean'&&v.kind==='list…
+     26|  expect(state.entries().some(e=>e.path.rootStateTypeId===1000n&&e.path…
+       |                                                                                       ^
+     27|  const receipt={baseline:'bc812f71',fixture:'assembledMultiReceipts co…
+     28|  if(env.M158_CAPTURE==='1')writeFileSync(path,JSON.stringify(receipt,n…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+M158 PREEDIT corrected baseline exit=0 elapsed=96.142s cap=540
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledTimeDomainNative.test.ts > native158: unchanged current model retains every canonical boundary with actual performance learning
+M158 BASELINE PASS 18 canonical boundaries;2 actual performance observations, unengaged expectation null/learned value state; full queues101
+
+ ✓ src/test/assembledTimeDomainNative.test.ts (6 tests | 5 skipped) 89929ms
+   ✓ native158: unchanged current model retains every canonical boundary with actual performance learning 89928ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  09:05:03
+   Duration  95.07s (transform 2.99s, setup 0ms, collect 4.47s, tests 89.93s, environment 0ms, prepare 333ms)
+
+
+M158 types exit=0 elapsed=19.657s cap=120
+
+M158 component owners and handlers exit=0 elapsed=65.225s cap=240
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledTimeDomain.test.ts > domain158: actual late handlers bind children, publish knowledge and consume prior learning
+M158 component PASS: actual bound strategy/forecast learning at4000, performance visit and prior value appraisal4001; no public late-model claim
+
+ ✓ src/test/assembledTimeDomain.test.ts (8 tests | 5 skipped) 59764ms
+   ✓ domain158: explicit domains preserve boundaries, laws, provenance and owner restore 788ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 5 skipped (8)
+   Start at  09:11:34
+   Duration  64.67s (transform 2.97s, setup 0ms, collect 4.46s, tests 59.76s, environment 0ms, prepare 145ms)
+
+
+M158 POSTEDIT exact native baseline and continuation exit=0 elapsed=135.351s cap=540
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledTimeDomainNative.test.ts > native158: unchanged current model retains every canonical boundary with actual performance learning
+M158 NATIVE PASS 18 canonical boundaries;2 actual performance observations, unengaged expectation null/learned value state; full queues101; exact save6 continuation
+
+ ✓ src/test/assembledTimeDomainNative.test.ts (6 tests | 5 skipped) 129837ms
+   ✓ native158: unchanged current model retains every canonical boundary with actual performance learning 129836ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  09:12:52
+   Duration  134.79s (transform 2.98s, setup 0ms, collect 4.47s, tests 129.84s, environment 0ms, prepare 158ms)
+
+
+M158 legacy strategy performance horizon controls exit=0 elapsed=271.956s cap=540
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledPerformance.test.ts > M15 assembled performance > controls: admission, exact read paths, owners, real children and late atomic rollback
+M15 common-stage rollback 44 events; limit43
+
+ ✓ src/test/assembledPerformance.test.ts (7 tests | 1 skipped) 103360ms
+   ✓ M15 assembled performance > controls: original full-horizon monitoring correspondence and retained alternatives 900ms
+   ✓ M15 assembled performance > controls: missing feedback, success reset and unavailable alternatives preserve the goal 16332ms
+   ✓ M15 assembled performance > controls: false and denied feedback exclude hidden physical performance from cognition 22327ms
+   ✓ M15 assembled performance > controls: repeat and restore at5 preserve all later whole boundaries 42527ms
+   ✓ M15 assembled performance > controls: no attempt, unmatched selected route and expired goals cannot gain feedback 10743ms
+   ✓ M15 assembled performance > controls: admission, exact read paths, owners, real children and late atomic rollback 10530ms
+stdout | src/test/assembledHorizon.test.ts > M14 assembled horizon > controls: closed admission, knowledge ownership, authenticated children and atomic late fault
+M14 common-stage rollback 25 events; limit24
+
+ ✓ src/test/assembledHorizon.test.ts (7 tests | 1 skipped) 92426ms
+   ✓ M14 assembled horizon > controls: original eight-frame valuation and retained lifecycle diagnostics 448ms
+   ✓ M14 assembled horizon > controls: prior-only correction, missing retention, nonpreset boundary and actual read provenance 14086ms
+   ✓ M14 assembled horizon > controls: denied forecasts preserve cognition, zero and missing urgency stay inert 14610ms
+   ✓ M14 assembled horizon > controls: repeat and prefix restore preserve every later whole boundary 50102ms
+   ✓ M14 assembled horizon > controls: forecast cannot supply a missing route or revive expired goals 7482ms
+   ✓ M14 assembled horizon > controls: closed admission, knowledge ownership, authenticated children and atomic late fault 5697ms
+stdout | src/test/assembledStrategy.test.ts > M12 assembled strategy > controls: closed references/source/state/ownership, real pending children and whole-instant rollback
+M12 common-stage rollback 40 events; limit39
+
+ ✓ src/test/assembledStrategy.test.ts (6 tests | 1 skipped) 69148ms
+   ✓ M12 assembled strategy > controls: no-option gap preserves goals and resumes without readoption; denied changes are private 11658ms
+   ✓ M12 assembled strategy > controls: repeat and restore after learned switch preserve every later whole boundary 39935ms
+   ✓ M12 assembled strategy > controls: false availability does not erase goals; legal reversed mapping; terminal goals stop planning 9503ms
+   ✓ M12 assembled strategy > controls: closed references/source/state/ownership, real pending children and whole-instant rollback 8045ms
+
+ Test Files  3 passed (3)
+      Tests  17 passed | 3 skipped (20)
+   Start at  09:16:01
+   Duration  271.41s (transform 2.50s, setup 0ms, collect 5.41s, tests 264.93s, environment 0ms, prepare 304ms)
+
+
+M158 reference boundary exit=0 elapsed=2.888s cap=120
+Reference boundary check passed.
+
+M158 research bookkeeping exit=0 elapsed=3.494s cap=120
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4378}
+
+M158 frozen scope and artifact limits exit=0 elapsed=0.533s cap=120
+M158 PRESERVATION PASS: six frozen trees, baseline and corpus unchanged;11 declared production/test paths;132 unique clauses with E61/P45/N13/U13
+M158 LIMITS PASS: register 210 lines/64914 CRLF bytes; evidence 3 files/22907 bytes; planning caps retained
+warning: in the working copy of 'src/assembled/horizonExecution.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/assembled/performanceExecution.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/assembled/strategyExecution.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/assembled/values.ts', LF will be replaced by CRLF the next time Git touches it
+
+M158 staged Git size exit=0 elapsed=0.844s cap=120
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M158 staged whitespace exit=0 elapsed=0.074s cap=120
+
+M158 BUDGET: recorded checks694.884s/1800s including failed baseline; longest271.956s. No extension.

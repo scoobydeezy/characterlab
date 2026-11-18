@@ -1062,3 +1062,9 @@ retention dispositions; no new memory law or defining credit. MEC-022 historical
 content remains CONTRACT. Original defining four-law/meaning/use controls stay
 CONTROL+CORPUS. Late4000 appraisal remains blocked by source/downstream time100.
 RO-C3-005/006/007/009/010/017/019/020/021 remain conditional; no reduction/closure.
+
+M158 — [explicit component clocks](ASSEMBLED_CHARACTER_M158_RESULT.md), contract0.1.
+MEC-019 execution/report/learning boundaries and MEC-022 absolute historical
+provenance retain their dispositions; MEC-007/010 laws remain unchanged.
+Extended planning/performance owners are component-ready only; public0.117 stays
+on legacy defaults. No late-memory acceptance, reduction or new research verdict.
