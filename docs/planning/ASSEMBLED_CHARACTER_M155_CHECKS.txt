@@ -1,0 +1,209 @@
+
+M155 TYPES initial exit=0 elapsed=20.190s cap=120
+
+M155 PRIMARY native exit=1 elapsed=76.816s cap=540
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledRecollection.test.ts (9 tests | 1 failed | 8 skipped) 70589ms
+   × primary155: real detail loss produces wrong tagged reconstruction then new evidence repairs it without double credit 70588ms
+     → requires list
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  20:48:06
+   Duration  75.85s (transform 3.09s, setup 0ms, collect 4.63s, tests 70.59s, environment 0ms, prepare 312ms)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledRecollection.test.ts > primary155: real detail loss produces wrong tagged reconstruction then new evidence repairs it without double credit
+SchedulerContractError: requires list
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataItems src/campaign2/canonicalData.ts:23:50
+ ❯ src/test/assembledRecollection.test.ts:23:57
+ ❯ compareOriginal155 src/test/assembledRecollection.test.ts:23:49
+ ❯ src/test/assembledRecollection.test.ts:42:17
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+M155 TYPES all controls exit=0 elapsed=19.557s cap=120
+
+M155 PRIMARY trace adapter repair exit=0 elapsed=89.661s cap=540
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRecollection.test.ts > primary155: real detail loss produces wrong tagged reconstruction then new evidence repairs it without double credit
+M155 PRIMARY PASS actual C1/attention->summary; retainedtrue->fragment->reconstructedfalse->reconstructedtrue; exactly5 observation credits/no recall credits; original ModalFill correspondence
+
+ ✓ src/test/assembledRecollection.test.ts (9 tests | 8 skipped) 84166ms
+   ✓ primary155: real detail loss produces wrong tagged reconstruction then new evidence repairs it without double credit 84165ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  20:50:12
+   Duration  89.10s (transform 3.00s, setup 0ms, collect 4.50s, tests 84.17s, environment 0ms, prepare 139ms)
+
+
+M155 CONTRASTS and PRIVACY exit=0 elapsed=224.766s cap=540
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRecollection.test.ts > contrasts155: missing tie other category eviction and denied history remain distinct
+M155 CONTRASTS PASS absent/false/tie/category isolation/eviction/denied source; actual-input ModalFill correspondence
+
+stdout | src/test/assembledRecollection.test.ts > privacy155: hidden truth and target identity cannot change any safe state or output
+M155 PRIVACY PASS full safe state/output equality throughout both complete queues
+
+ ✓ src/test/assembledRecollection.test.ts (9 tests | 7 skipped) 219293ms
+   ✓ contrasts155: missing tie other category eviction and denied history remain distinct 177494ms
+   ✓ privacy155: hidden truth and target identity cannot change any safe state or output 41798ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 7 skipped (9)
+   Start at  20:51:53
+   Duration  224.21s (transform 2.99s, setup 0ms, collect 4.46s, tests 219.29s, environment 0ms, prepare 142ms)
+
+
+M155 CONTINUATION full boundaries exit=1 elapsed=68.301s cap=540
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledRecollection.test.ts (9 tests | 1 failed | 8 skipped) 62802ms
+   × continuation155: repeat and saves before and after fragmentation match every later settled byte 62801ms
+     → exact data-only run fields required
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  20:55:55
+   Duration  67.73s (transform 2.99s, setup 0ms, collect 4.50s, tests 62.80s, environment 0ms, prepare 144ms)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledRecollection.test.ts > continuation155: repeat and saves before and after fragmentation match every later settled byte
+SchedulerContractError: exact data-only run fields required
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ copies src/assembled/character.ts:34:117
+ ❯ Module.restoreCharacterRun src/assembled/character.ts:55:13
+ ❯ src/test/assembledRecollection.test.ts:49:164
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+M155 CONTINUATION restore argument repair exit=0 elapsed=152.797s cap=540
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRecollection.test.ts > continuation155: repeat and saves before and after fragmentation match every later settled byte
+M155 CONTINUATION PASS repeat/save1/save4 every later state/output/trace/save/identity through natural queue exhaustion
+
+ ✓ src/test/assembledRecollection.test.ts (9 tests | 8 skipped) 147274ms
+   ✓ continuation155: repeat and saves before and after fragmentation match every later settled byte 147274ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  20:57:32
+   Duration  152.24s (transform 3.00s, setup 0ms, collect 4.50s, tests 147.27s, environment 0ms, prepare 143ms)
+
+
+M155 BOUNDARIES and PREDECESSOR exit=0 elapsed=285.044s cap=540
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRecollectionControls.test.ts > boundaries155: source-bound summary ownership and actual summary-plus-fragment rollback preserve whole continuation
+M155 BOUNDARIES PASS summary credit/owner/holder/count/version/S0/guess guards; fault after actual summary+fragment writes; exact rollback and full recovered continuation
+
+stdout | src/test/assembledRecollectionControls.test.ts > preservation155: previous familiarity and claim-memory state remain unchanged apart from the declared summary
+M155 PRESERVATION PASS0.114 familiarity/all other learned state at every instant; claim path whole state/no duplicate summary
+
+ ✓ src/test/assembledRecollectionControls.test.ts (11 tests | 9 skipped) 279466ms
+   ✓ boundaries155: source-bound summary ownership and actual summary-plus-fragment rollback preserve whole continuation 112511ms
+   ✓ preservation155: previous familiarity and claim-memory state remain unchanged apart from the declared summary 166954ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 9 skipped (11)
+   Start at  21:00:15
+   Duration  284.49s (transform 3.04s, setup 0ms, collect 4.54s, tests 279.47s, environment 0ms, prepare 142ms)
+
+
+M155 PRIMARY explicit source truth exit=0 elapsed=87.804s cap=540
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRecollection.test.ts > primary155: real detail loss produces wrong tagged reconstruction then new evidence repairs it without double credit
+M155 PRIMARY PASS actual C1/attention->summary; retainedtrue->fragment->reconstructedfalse->reconstructedtrue; exactly5 observation credits/no recall credits; original ModalFill correspondence
+
+ ✓ src/test/assembledRecollection.test.ts (9 tests | 8 skipped) 82318ms
+   ✓ primary155: real detail loss produces wrong tagged reconstruction then new evidence repairs it without double credit 82317ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  21:05:08
+   Duration  87.24s (transform 3.00s, setup 0ms, collect 4.50s, tests 82.32s, environment 0ms, prepare 140ms)
+
+
+M155 ORIGINAL recollection controls exit=0 elapsed=3.688s cap=120
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/recollectionPublic.test.ts (15 tests) 1552ms
+   ✓ preserves full later observer views under hidden/denied sources and detects the truth-restoring oracle 409ms
+
+ Test Files  1 passed (1)
+      Tests  15 passed (15)
+   Start at  21:06:44
+   Duration  3.15s (transform 784ms, setup 0ms, collect 1.19s, tests 1.55s, environment 0ms, prepare 140ms)
+
+
+M155 TYPES final exit=0 elapsed=19.172s cap=120
+
+M155 PLAN index and whitespace validation exit=0 elapsed=1.403s cap=120
+Initial plan commit0cff0274: Git-size and diff--check PASS; charged conservatively using the whole combined plan-command elapsed time.
+
+M155 REFERENCE boundary exit=0 elapsed=2.887s cap=120
+Reference boundary check passed.
+
+M155 RESEARCH obligations exit=1 elapsed=3.589s cap=120
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: CURRENT obligation counts are stale
+    at file:///C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/scripts/check-research-obligations.mjs:75:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.20.0
+
+M155 PRESERVATION and limits exit=0 elapsed=0.470s cap=120
+Frozen six trees/baseline/corpus unchanged;10 declared source paths;132 unique clauses E60/P46/N13/U13; register64630bytes;planning/evidence limits PASS.
+
+M155 RESEARCH count-line formatting repair exit=0 elapsed=3.401s cap=120
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4375}
+
+M155 GIT staged size exit=0 elapsed=1.262s cap=120
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.

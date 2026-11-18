@@ -1035,3 +1035,13 @@ alternatives and missing/hidden-truth violation controls remain CONTROL+CORPUS.
 MEC-022 frozen source/provenance remains CONTRACT. Neutral claim-free imprints only:
 full claim-memory fragmentation and general reconstruction remain unqualified.
 RO-C3-005/006/007/017/019/020 stay conditional; no reduction or historical rewrite.
+
+M155 — shared reconstructed recollection (rules0.115), [result](ASSEMBLED_CHARACTER_M155_RESULT.md).
+MEC-004 observer/identity boundary stays PORT; similarity access is not identity.
+MEC-008/009 association/access CONTROL remains; earliest positive familiar support is
+an explicit bounded receiving rule. MEC-010 adds ModalFill PORT with distinct346/2
+category counts/source refs and346/1 fragments under the existing episodic authority.
+Original FragmentOnly/KeepDetail and TruthRestore/ReencodeGuess remain CONTROL+CORPUS.
+MEC-022 immutable historical meaning remains CONTRACT; guesses never gain acquisition
+credit or become retained detail. Neutral claim-free scope; no reduction or general
+reconstruction consumer. RO-C3-005/006/007/017/019/020 remain conditional.
