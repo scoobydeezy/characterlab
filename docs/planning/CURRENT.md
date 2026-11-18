@@ -1,33 +1,36 @@
-# Current work — M153 acceptance-gap reconciliation
-Owner continuation after MULTI/REL/LONG completion; baseline dd441759.
-One character remains the objective.21/21 member mappings are version-scoped;
-all132 family clauses and final current-candidate replay remain required.
+# Current work — M153 complete; memory familiarity next
 
-## Bounded card — before work
-Outcome: replace stale family-gap descriptions with evidence through M152;
-distinguish demonstrated behavior, partial connection, missing evidence and
-unassessed requirements; choose one concrete next integration capability.
-No simulation implementation, new law, calibration, reduction or acceptance claim.
+All21 pinned corpus members are mapped in version-scoped domains.
+The character still has required family gaps;0/15 complete families accepted.
+[M153 result](ASSEMBLED_CHARACTER_M153_RESULT.md) reviews the existing15 rows:
+E55/P47/N17/U13=132. Nine new direct-evidence classifications,123 unchanged.
+This is not a completion percentage or final current-candidate replay.
 
-Compare each of132 pinned clauses against its existing F-row, relevant M102–152
-results and their concrete source/test assertions. Old M3–101 evidence is retained.
-Promote only when an integrated witness directly demonstrates the named requirement.
-Named limitations survive newer member completion. U is not silently counted N.
-Version-scoped evidence is not a rerun on0.113 or whole-family acceptance.
-Check relevant accepted mechanism/contracts before recommending implementation.
+## Completed bounded card
+Plan276d4f41; baseline dd441759. Reviewed evidence through M152 and affected assertions.
+Updated only the existing F/LIMIT/SEQ rows, this file and one compact result.
+No simulation, source/test change, law/calibration change or new verification track.
+Budget:90 minutes analysis; mechanical checks600s total/120s each;20 files/5MiB.
+All132 unique clause IDs/counts, cited paths, frozen controls/baseline/corpus,
+planning/evidence caps, research metadata and Git size checked before completion.
+Original failures and controls remain. No broader qualification or obligation closes.
 
-Edit only existing reconciliation F/LIMIT/SEQ rows, CURRENT and one compact M153
-result; obligation report linkage if required. No separate ledger/catalog/dashboard.
-At most90 minutes analysis, zero production/test edits, zero simulation runs.
-Mechanical checks <=600s total/120s each: all132 unique clause IDs exactly once,
-valid evidence paths, stated counts, unchanged pinned baseline/frozen source trees,
-planning/evidence caps, research references and Git index size.20 files/5MiB.
-No historical audit replay, new verifier, browser work or speculative validation.
+## Next bounded capability — prepare M154 card before code
+Familiarity after actual peripheral-detail loss: BRIEF-12.3-6/7.
+Use existing perceived SEM features and episodic346 authority; derive event-local
+Familiar/FamiliarDifferent from surviving fragments. No second store or runtime.
+First-use versioned contract maps familiarity-public/0.1 PartialMax semantics,
+missing-feature/identity boundary and fragmentation before implementation.
+Compare recent/intact, faded detail, partial/disjoint/missing signatures, person/place,
+no self-match and hidden identity. Check actual retained reads, removed detail,
+original immutable observations, exact repeat/restore and rollback.
+No invented familiarity-to-liking/action bonus. Deterministic recognition is the claim.
+<=3 capabilities/12 production-test files;600s/check,1800s cumulative;20 files/5MiB.
+Split before exceeding scope; no unrelated breadth or automatic budget extension.
 
-Done: all15 F-rows reviewed with accurate citations and residual gaps; totals agree;
-next package names exact missing behavior, existing owner and proposed comparison.
-Stop this reconciliation on that deliverable; no rolling audit or automatic replay
-of already-passing witnesses. Final candidate replay waits until required gaps close.
-Reference0.113/encoding0.7, Shared/UnitBudget, feedback TRUE remain unchanged.
-No autonomous peers, UI or Campaign4. Self-approved routine corrections remain.
+Reference0.113/encoding0.7; Shared/UnitBudget; BIO feedback TRUE.
+L4 affect-feedback OFF is a different policy. All existing laws/calibration retained.
+NoRust does not satisfy skill-rust requirement; later explicit disposition needed.
+21 members/15 families/132 clauses and final full-candidate replay remain required.
+No UI, Campaign4 or autonomous peers. Self-approval applies to routine bounded repairs.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
