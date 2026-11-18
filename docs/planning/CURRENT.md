@@ -1,32 +1,49 @@
-# Current work — M155 complete
-The character recalls a detail while it survives, then reconstructs a missing detail
-from learned category regularities. A reconstruction can be wrong about the actual
-displayed appearance, and later observations change the guess. Provenance stays
-explicit: reconstructed detail never becomes retained fact or earns learning credit.
+# Current work — M156 sensory fidelity in actual recollection
+Baseline e5f558d0; one active milestone. No UI/autonomous peers.
+Three connected capabilities: permitted sensory clarity -> retained fidelity;
+clear versus weak current recollection; genuine fidelity loss while familiarity/
+reconstructed semantic detail remain distinct. Bounded BRIEF-12.3-1.
+Rules/registry0.116. Existing laws/calibration, ModalFill/PartialMax and age3 stay.
+PerceptualFidelity first-use engineering default from vivid-recollection/0.1;
+DetailCount/AccessOnly/KeepRich controls retained, no superiority verdict.
 
-[Result](ASSEMBLED_CHARACTER_M155_RESULT.md) ·
-[Checks](ASSEMBLED_CHARACTER_M155_CHECKS.txt) ·
-[Contract](../formal/ASSEMBLED_RECOLLECTION_V0_115.md)
-Rules/registry0.115; encoding0.7; existing reference laws/calibration unchanged.
-One episodic owner, shared state/scheduler/save; separate episode and category-summary
-leaves. Capacity limits episodes; summary counts contain no per-episode detail map.
-ModalFill is a bounded engineering default; alternatives and violations preserved.
+Source: optional third appearance lane on primary consequence sources only:
+[feature, clarity1/2, permitted]. Only metallic/elongated/blunt; unique existing
+feature required. Quality and feature must both be permitted to project quality.
+Old sources remain legal with no invented fidelity; old versions reject new lane.
+Values pass unchanged C1 classifiers; actual observation output carries safe clarity.
+Existing episodic346 owner appends three optional clarity cells to appearance
+imprints. At age3 retain metallic fidelity only, alongside M154 blunt detail loss.
+Stable semantic signatures remain: losing sensory fidelity is not erasing all
+factual feature knowledge. No full sensory cache, second owner/store or new scheduler.
 
-Native retained/fragment/reconstructed states, wrong displayed-detail recollection,
-changed regularity, ties/missingness/category isolation/denied history/eviction and
-hidden-truth controls pass. Exact repeat/save1/save4 continuation, real summary+
-fragment rollback, ownership/credit guards and predecessor preservation pass.
-10 production/test files; verification within1800s; both test setup failures retained.
+Current130 recollection selects the same prior imprint as M155. Publish only actual
+retained feature/value/clarity cells. >=2 clear => Vivid; else >=2 present => Weak;
+one => Fragmentary; zero => Empty; no selected imprint => Unavailable.
+These are three visual facets, not claims of native auditory/spatial recollection.
+Reconstructed detail cannot supply lost sensory fidelity or rewrite old reports.
+No confidence/importance/choice or phenomenology claim.
 
-## Remaining integration
-E60/P46/N13/U13=132 version-scoped dispositions;21 member mappings,0/15 accepted
-families. Final whole-candidate replay and acceptance remain required.
-M154/155 add bounded neutral appearance evidence for memory3/6/7/8/10.
-Recent vivid and old defining-memory breadth remain partial. Next work should address
-those required memory gaps and their receiving limits, with a bounded card before code.
-Full claim-memory reconstruction, downstream guessed-belief/action effects and lifelong
-summary compression remain unqualified; no claim of general autobiographical memory.
-Other required gaps stay in the single reconciliation register.
-No UI/Campaign4, autonomous peers, new research gate or denominator change.
-Owner self-approval continues for bounded integration and repairs.
+Fixed seed0/body10; neutral claim-free person appearance1, identical cue2/4/5.
+Main pair: same values, histories, selection/cue, laws and model; clarity2 vs1 only.
+Recent2: three facets, Vivid vs Weak.4 still rich;140 actually drops two fidelity
+cells.5: one facet/Fragmentary, while familiar signature still matches.
+Controls: partial/missing/denied clarity, denied first exposure, hidden truth,
+malformed/foreign quality and old-version admission; no truth-to-clarity shortcut.
+Original readout on captured vectors; DetailCount/AccessOnly discriminate; original
+vivid suite retains KeepRich/full publication controls. Not a general recall-rank claim.
+
+Production10: semanticAppearance.ts, recognition.ts, model.ts, socialExecution.ts,
+memory.ts, familiarity.ts, retention.ts, state.ts, runtime.ts, traceBinding.ts.
+Tests2: assembledVivid.test.ts (fixture included), assembledVividControls.test.ts.
+12 maximum;20 evidence files/5MiB; one result/log. Formal committed before code.
+MEC004 observation boundary,008/009 access,010 lifecycle,022 frozen history preserved.
+Serial checks: types120s; primary/contrasts/continuation/rollback/predecessor jobs
+each<=540s; original vivid/familiarity/recollection suites120s; metadata120s.
+1800s cumulative including failures, no extensions. Full queue exhaustion96 failurecap;
+independent repeat, saves before/after fragmentation, every later canonical boundary.
+Fault after real fidelity removal => whole rollback and exact recovered continuation.
+Frozen source/baseline/corpus unchanged; affected0.115 correspondence required.
+Done with observed-quality path, current rich/weak/fragmentary publication, guards,
+continuation and preservation. Remaining defining-memory/full-family gates stay open.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
