@@ -39,3 +39,12 @@ frame time, and fatigue/rumination observations and their consumers. Counts, IDs
 capacity, immutable importance, original adoption-at1, deadlines, learned-history
 folds, prior-only gates and frame support remain unchanged. All public construction
 still defaults to100; no extended model admission or new law is authorized here.
+
+M160 extends this contract to qualified identity decision times, formation history
+and self-belief evidence tickets (qualification timestamps). The same explicit limit
+flows through their owners, folds, shared cognitive handler and self-appraisal.
+Qualification correspondence, atomic journal/numeric ownership, append-only history,
+capacity, event-time developmental gains and prior-only self evidence remain intact.
+Practice counts are not timestamps and retain their original100 bound. Existing
+Threshold eligibility, Ramp development and Mean self-belief laws are unchanged.
+No public extended model admission, source retiming or late-choice claim follows.
