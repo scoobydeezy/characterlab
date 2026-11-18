@@ -1,3 +1,4 @@
+import {LEGACY_TIME_LIMIT,assertTimeLimit,timeDomainVersion,type TimeLimit} from './timeDomain';
 /** assembled-work-maintenance/0.1. Controlled evidence feeds the one workspace. */
 import {list,text,unsigned as u,typedIdentifier,record,type CanonicalValue} from '../substrate/canonicalEncoding';
 import {AuthoritativeState,StateAuthorityRegistry,applyStatePatch,restoreAuthoritativeState,statePathValue,type StatePath,type StatePatch,type ActualReadRecord} from '../substrate/state';
@@ -42,16 +43,16 @@ export function selectMaintained(cards:readonly WorkCard[],prior:readonly number
  return {selected,control:capacity===0?0:protect?1:cue&&cards.some(c=>c.id===1)?2:0};
 }
 export const workKnowledgePath=(C:CanonicalValue):StatePath=>({rootStateTypeId:1000n,fieldId:10n,selectors:[{kind:'mapKey',key:C}]}),workAccessPath=(C:CanonicalValue):StatePath=>({...workKnowledgePath(C),rootStateTypeId:1014n,fieldId:2n});
-function observation(v:CanonicalValue,s:WorkMaintenance){
- const a=items(v,'list');require(a.length===5&&txt(a[0])===WORK&&uint(a[2])>=1n&&uint(a[2])<=100n&&typeof a[4]==='boolean','safe observation');
+function observation(v:CanonicalValue,s:WorkMaintenance,timeLimit:TimeLimit=LEGACY_TIME_LIMIT){assertTimeLimit(timeLimit);
+ const a=items(v,'list');require(a.length===5&&txt(a[0])===WORK&&uint(a[2])>=1n&&uint(a[2])<=timeLimit&&typeof a[4]==='boolean','safe observation');
  const occurrence=id(a[1]);require(occurrence.namespaceId===1164n&&typeof occurrence.payload!=='boolean'&&occurrence.payload.kind==='unsigned','occurrence');
  let prev=0n;for(const c of items(a[3],'list')){const x=items(c,'list'),n=uint(x[0]);require(x.length===2&&n>prev&&n<=BigInt(s.bindings.length+1)&&uint(x[1])<=3n,'safe cards');prev=n;}return a;
 }
-function access(v:CanonicalValue|undefined,s:WorkMaintenance,taskCount:number){if(v===undefined)return [];const a=items(v,'list');require(a.length===3&&txt(a[0])===WORK&&uint(a[1])>=1n&&uint(a[1])<=100n,'cache');const ns=items(a[2],'list').map(v=>Number(uint(v)));require(ns.length<=taskCount+1&&new Set(ns).size===ns.length&&ns.every(n=>n>=1&&n<=taskCount+1),'cache identities');return ns;}
-export function withWorkMaintenanceState(base:ReturnType<typeof compileCampaign2StateModel>,C:CanonicalValue,s:WorkMaintenance,taskCount:number){
+function access(v:CanonicalValue|undefined,s:WorkMaintenance,taskCount:number,timeLimit:TimeLimit=LEGACY_TIME_LIMIT){assertTimeLimit(timeLimit);if(v===undefined)return [];const a=items(v,'list');require(a.length===3&&txt(a[0])===WORK&&uint(a[1])>=1n&&uint(a[1])<=timeLimit,'cache');const ns=items(a[2],'list').map(v=>Number(uint(v)));require(ns.length<=taskCount+1&&new Set(ns).size===ns.length&&ns.every(n=>n>=1&&n<=taskCount+1),'cache identities');return ns;}
+export function withWorkMaintenanceState(base:ReturnType<typeof compileCampaign2StateModel>,C:CanonicalValue,s:WorkMaintenance,taskCount:number,timeLimit:TimeLimit=LEGACY_TIME_LIMIT){assertTimeLimit(timeLimit);
  const paths=[workKnowledgePath(C),workAccessPath(C)],fresh=(p:StatePath)=>p.rootStateTypeId===1000n&&p.fieldId===10n||p.rootStateTypeId===1014n&&p.fieldId===2n;
  const checkPath=(p:StatePath)=>require(paths.some(x=>eq(statePathValue(x),statePathValue(p))),'foreign path');
- const check=(p:StatePath,v:CanonicalValue)=>{checkPath(p);if(p.rootStateTypeId===1000n)observation(v,s);else access(v,s,taskCount);};
+ const check=(p:StatePath,v:CanonicalValue)=>{checkPath(p);if(p.rootStateTypeId===1000n)observation(v,s,timeLimit);else access(v,s,taskCount,timeLimit);};
  const authority=new StateAuthorityRegistry(paths.map(p=>({pattern:pattern(p),validateValue:(v:CanonicalValue)=>check(p,v),removalAllowed:false})),[{mutationAuthorityId:KNOWLEDGE_OWNER,patterns:[pattern(paths[0])]},{mutationAuthorityId:WORKSPACE_OWNER,patterns:[pattern(paths[1])]}]);
  const without=(state:AuthoritativeState)=>new AuthoritativeState(state.entries().filter(e=>!fresh(e.path)));
  function local(state:AuthoritativeState){for(const e of state.entries().filter(e=>fresh(e.path)))check(e.path,e.value);}
@@ -64,11 +65,11 @@ export function withWorkMaintenanceState(base:ReturnType<typeof compileCampaign2
  const result=base.applyPatch(without(state),p,owner,scope),next=new AuthoritativeState([...result.state.entries(),...state.entries().filter(e=>fresh(e.path))]);local(next);return {...result,state:next};
  }});
 }
-export function createWorkMaintenance(C:CanonicalValue,s:WorkMaintenance,tasks:readonly (WorkspaceTask&{path:StatePath})[],stateModel:ReturnType<typeof compileCampaign2StateModel>,originals:readonly ScheduledEvent[],model:CanonicalValue,run:CanonicalValue){
+export function createWorkMaintenance(C:CanonicalValue,s:WorkMaintenance,tasks:readonly (WorkspaceTask&{path:StatePath})[],stateModel:ReturnType<typeof compileCampaign2StateModel>,originals:readonly ScheduledEvent[],model:CanonicalValue,run:CanonicalValue,timeLimit:TimeLimit=LEGACY_TIME_LIMIT){assertTimeLimit(timeLimit);
  let active=false,at=0n,unbound=0,selected=false;const used=new Set<bigint>(),pending=new Set<string>();
  const read=(state:AuthoritativeState,p:StatePath)=>{const value=stateModel.read(state,p);return {...value,record:{accessorId:sid(1028,'accessor/work-maintenance'),path:p,presence:value.presence,value:value.value,derivedSources:[]} as ActualReadRecord};};
  function trace(event:ScheduledEvent,input:CanonicalValue,outputs:CanonicalValue[],children:readonly ScheduledEvent[],reads:ActualReadRecord[]=[],patch:StatePatch={operations:[]},diffs:ReturnType<typeof stateModel.applyPatch>['diffs']=[]){
- return traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model,runIdentity:run,event,seamId:sid(1036,'seam/assembled-work-maintenance'),seamVersion:WORK,recordKind:event.eventTypeId,subjectIds:[id(C)],sourceRecordIds:[],registeredReadDomain:reads.map(x=>pattern(x.path)),actualReadRecords:reads,inputProjection:input,outputProjection:list(outputs),randomDrawRecords:[],quantizationOperations:[],statePatch:patch,structuralMutationDiffs:diffs,emittedEvents:children,invariantResults:[]});}
+ return traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model,runIdentity:run,event,seamId:sid(1036,'seam/assembled-work-maintenance'),seamVersion:timeDomainVersion(WORK,timeLimit),recordKind:event.eventTypeId,subjectIds:[id(C)],sourceRecordIds:[],registeredReadDomain:reads.map(x=>pattern(x.path)),actualReadRecords:reads,inputProjection:input,outputProjection:list(outputs),randomDrawRecords:[],quantizationOperations:[],statePatch:patch,structuralMutationDiffs:diffs,emittedEvents:children,invariantResults:[]});}
  function children(parent:ScheduledEvent,emissions:EventEmission[]){let bound=false;unbound++;return (allocated:readonly ScheduledEvent[])=>{if(!active||bound||allocated.length!==emissions.length)fail('child lifecycle');for(const [i,e]of allocated.entries()){const wanted={...emissions[i],eventId:e.eventId,eventSequence:e.eventSequence,causalParentEventIds:[parent.eventId]};if(e.eventId===parent.eventId||e.eventSequence<=parent.eventSequence||fp(e)!==fp(wanted)||pending.has(fp(e)))fail('child mismatch');}for(const e of allocated)pending.add(fp(e));bound=true;unbound--;};}
  const admit=(e:ScheduledEvent,phase:bigint)=>{if(!active||e.dueAt!==at||e.phase!==phase||!pending.delete(fp(e)))fail('unbound child');};
  return Object.freeze({
@@ -82,7 +83,7 @@ export function createWorkMaintenance(C:CanonicalValue,s:WorkMaintenance,tasks:r
  else fail('learning stage required');const bind=children(event,emissions);return {nextState:state,outputs,emittedEvents:emissions,traceContributions:[],traceFactory(xs:readonly ScheduledEvent[]){bind(xs);return [trace(event,event.payload,outputs,xs)];}};},
  workspace(event:ScheduledEvent,state:AuthoritativeState,base:CanonicalValue,definition:CanonicalValue){
  if(!active||selected||event.phase!==40n||event.dueAt!==at)fail('selection lifecycle');selected=true;
- const k=read(state,workKnowledgePath(C)),a=read(state,workAccessPath(C)),safe=k.presence?observation(k.value!,s):undefined;
+ const k=read(state,workKnowledgePath(C)),a=read(state,workAccessPath(C)),safe=k.presence?observation(k.value!,s,timeLimit):undefined;
  if(safe&&uint(safe[2])>=at)fail('strictly later source');
  const reads=[k.record,a.record],statuses=tasks.map(t=>{const v=read(state,t.path);reads.push(v.record);return v.value;});
  const eligible=(i:number)=>statuses[i]!==undefined&&uint(f(rec(statuses[i]!,372n),1n))===1n&&tasks[i].activeFrom<=at&&at<tasks[i].deadline;
@@ -90,7 +91,7 @@ export function createWorkMaintenance(C:CanonicalValue,s:WorkMaintenance,tasks:r
  const ordinary=tasks.map((t,i)=>({t,i})).filter(x=>!s.bindings.some(t=>eq(t,x.t.key))).sort((a,b)=>a.t.deadline<b.t.deadline?-1:a.t.deadline>b.t.deadline?1:key(a.t.key)<key(b.t.key)?-1:1);
  const byId=new Map(s.bindings.map((t,i)=>[i+1,t]));for(const [j,x]of ordinary.entries()){const n=s.bindings.length+2+j;byId.set(n,x.t.key);if(eligible(x.i))cards.push({id:n,priority:0});}
  const d=rec(definition,378n),capacity=Number(uint(f(d,2n))),reserved=capacity>=2&&f(d,4n)===true?1:0,enabled=f(d,3n)===true;
- const prior=access(a.value,s,tasks.length),choice=selectMaintained(enabled?cards:[],prior,Math.max(0,capacity-reserved),s.support,safe?.[4]===true),selectedTasks=choice.selected.filter(n=>byId.has(n)).map(n=>tasks.find(t=>eq(t.key,byId.get(n)!))!),neutral=choice.selected.filter(n=>!byId.has(n)).length;
+ const prior=access(a.value,s,tasks.length,timeLimit),choice=selectMaintained(enabled?cards:[],prior,Math.max(0,capacity-reserved),s.support,safe?.[4]===true),selectedTasks=choice.selected.filter(n=>byId.has(n)).map(n=>tasks.find(t=>eq(t.key,byId.get(n)!))!),neutral=choice.selected.filter(n=>!byId.has(n)).length;
  const w=rec(base,381n),output=r(381,[f(w,1n),C,f(w,3n),list(selectedTasks.map(t=>r(379,[t.key,t.specId]))),selectedTasks.length?f(w,5n):r(380,[u(1)])]);
  const report=list([text(WORK),u(at),list(cards.map(c=>list([u(c.id),u(c.priority)]))),list(prior.map(u)),list(choice.selected.map(u)),u(choice.control),k.value??list([]),list(tasks.map((t,i)=>list([t.key,statuses[i]??list([])]))),u(neutral),output]);
  const patch:StatePatch={operations:[{kind:'set',path:workAccessPath(C),expected:a.presence?{presence:true,value:a.value!}:{presence:false},newValue:list([text(WORK),u(at),list(choice.selected.map(u))])}]};
@@ -98,8 +99,8 @@ export function createWorkMaintenance(C:CanonicalValue,s:WorkMaintenance,tasks:r
  return {output,report,neutral,nextState:result.state,trace:()=>trace(event,list([base,k.value??list([])]),[report],[],reads,patch,result.diffs)};
  },
  prepare(events:readonly ScheduledEvent[],B0:AuthoritativeState){
- if(events.length!==1)fail('learning multiplicity');const event=events[0];admit(event,140n);observation(event.payload,s);
- const p=workKnowledgePath(C),before=read(B0,p);if(before.presence&&uint(observation(before.value!,s)[2])>=at)fail('observation order');
+ if(events.length!==1)fail('learning multiplicity');const event=events[0];admit(event,140n);observation(event.payload,s,timeLimit);
+ const p=workKnowledgePath(C),before=read(B0,p);if(before.presence&&uint(observation(before.value!,s,timeLimit)[2])>=at)fail('observation order');
  const patch:StatePatch={operations:[{kind:'set',path:p,expected:before.presence?{presence:true,value:before.value!}:{presence:false},newValue:event.payload}]};let executed=false,finished=false;let rows:CanonicalValue[]=[];
  return {execute(context:EventHandlerContext<AuthoritativeState>){if(executed||finished||fp(context.event)!==fp(event))fail('learn lifecycle');executed=true;return {nextState:B0,outputs:[],emittedEvents:[],traceContributions:[]};},finish(state:AuthoritativeState){if(!executed||finished)fail('learn finish');finished=true;const result=stateModel.applyPatch(state,patch,KNOWLEDGE_OWNER,{writableRoots:[1000n],targetPaths:[p]});rows=[trace(event,event.payload,[],[],[before.record],patch,result.diffs)];return result.state;},traces(){if(!finished)fail('trace before finish');return rows;}};
  }

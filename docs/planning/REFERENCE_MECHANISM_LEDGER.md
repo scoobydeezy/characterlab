@@ -1090,3 +1090,10 @@ boundary; MEC019/020/022 intent/outcome, commitment lifecycle and frozen histori
 provenance retain their dispositions. Six component tests, unchanged M158 native
 receipt and five legacy controls; no autonomous peer or public late activation.
 No mechanism retired/family promoted. [Result](ASSEMBLED_CHARACTER_M161_RESULT.md).
+
+M162 explicit internal clocks reach causal/interference joins, workspace evidence,
+maintenance activation and hidden-source/timed-comparison adapters. MEC004/015/019/
+020/022 retain evidence, goal/control, original outcome, commitment and historical
+provenance distinctions. Six component gates pass; no new psychology, state owner,
+source retiming, retired mechanism or family credit. Public activation remains open.
+[Bounded result](ASSEMBLED_CHARACTER_M162_RESULT.md).
