@@ -1,9 +1,15 @@
 import {it,expect,vi} from 'vitest';
+// @ts-ignore Node-only timing receipt, never imported by production.
+import {stderr,env} from 'node:process';
+// @ts-ignore Node-only lossless handoff of the actual checkpoint under test.
+import {readFileSync,writeFileSync,existsSync} from 'node:fs';
+// @ts-ignore No production codec or saved semantics change.
+import {gzipSync,gunzipSync} from 'node:zlib';
 import {simInstant} from '../substrate/time';
 import {changeDefinition} from './fixtures/assembledCharacter';
 import {BODY_SAMPLE} from '../assembled/body';
 import {current,items,key,enc,list,decode} from './fixtures/assembledDefiningControls';
-import {C,text,signed,u,exact,rec,f,outputs,type CanonicalValue} from './fixtures/assembledDefining';
+import {C,text,signed,u,exact,bytes,rec,f,outputs,type CanonicalValue} from './fixtures/assembledDefining';
 import {REHEARSAL_RULES,REHEARSAL_REGISTRY,compileCharacterModel} from '../assembled/model';
 import {prepareCharacterModel,createCharacterRun,restoreCharacterRun} from '../assembled/character';
 import {state,through,finish,reports,report,type Run} from './assembledDefining.test';
@@ -74,7 +80,15 @@ it('primary167: authentic carried rehearsal protects consumed memories and chang
  for(const x of [a,b]){await finish(x.run);expect(x.run.snapshot().clock).toBe(5001n);}
  console.info('M167 PRIMARY PASS actual cue16 carried from17 into19/20/21; Supported16 consumed children/use receipts per rehearsal; original use algebra; old memories survive, late fresh memories rejected by protected saturation; live2/15 Farther vs3998/3999 Same at4000/equal body; full queues5001.');
 },590000);
-it('boundary167: authentic pending cues restore exactly and rehearsal writes roll back',async()=>{
+// Same complete quiescent projection; avoid generic recursion over typed-array indices.
+function exactSnapshot(a:ReturnType<Run['snapshot']>,b:ReturnType<Run['snapshot']>){
+ expect(Object.keys(a).sort()).toEqual(Object.keys(b).sort());
+ expect([a.clock,a.status]).toEqual([b.clock,b.status]);
+ for(const field of ['state','outputs','trace'] as const){expect(Object.getPrototypeOf(a[field])).toBe(Object.getPrototypeOf(b[field]));bytes(a[field],b[field]);}
+}
+const recoveryPath='docs/planning/ASSEMBLED_CHARACTER_M167_RECOVERY_SAVE.gz';
+it('rollback167: authentic negative controls and actual rehearsal rollback',async()=>{
+ const began=performance.now();let last=began;const phase=(name:string)=>{const now=performance.now();stderr.write('M167 RECOVERY '+JSON.stringify({phase:name,elapsedMs:now-began,phaseMs:now-last})+'\n');last=now;};
  let fault=false,hit=false,forgery=false,capture:{event:ScheduledEvent;workspace:CanonicalValue;attribution:CanonicalValue;deliveries:readonly BodyRecallDelivery[]}|undefined;
  const make=memoryModule.createEpisodicExtension,spy=vi.spyOn(memoryModule,'createEpisodicExtension').mockImplementation((...args)=>{const x=make(...args);let ws:CanonicalValue,attr:CanonicalValue;return {...x,
   observeRehearsal(event,results){const p=x.observeRehearsal(event,results);if(event.dueAt===19n&&event.phase===40n){ws=results.find(v=>typeof v!=='boolean'&&v.kind==='list'&&key(v.items[0])===key(text(WORKSPACE)))!;attr=results.find(v=>typeof v!=='boolean'&&v.kind==='list'&&key(v.items[0])===key(text(RETAINED_ATTRIBUTION)))!;}
@@ -84,7 +98,7 @@ it('boundary167: authentic pending cues restore exactly and rehearsal writes rol
    const p=x.prepare(events,B0);return {...p,finish(s){const next=p.finish(s);if(fault&&event){const old=next.entries().find(e=>isPositionEpisodePath(e.path)&&key(items(e.value,'list')[5])===key(signed(2)))!;expect(used(old.value)).toBe(true);expect(positionHistory(old.value).at(-1)).toBe(19n);hit=true;throw Error('167 after rehearsal use write');}return next;}};
   }};});
  try{
-  const a=await start();await through(a.run,19n);rehearsal(a.run,19);expect(forgery).toBe(true);const c=capture!;
+  const a=await start();phase('prepared clean run');await through(a.run,19n);phase('clean prefix19');rehearsal(a.run,19);phase('live rehearsal assertions');expect(forgery).toBe(true);const c=capture!;
   expect(rehearsalOperands(c.event,c.workspace,c.attribution,c.deliveries,C)).toHaveLength(16);
   expect(()=>rehearsalOperands({...c.event,dueAt:simInstant(20n)},c.workspace,c.attribution,c.deliveries,C)).toThrow();
   expect(()=>rehearsalOperands(c.event,c.workspace,c.attribution,[],C)).toThrow('delivery');
@@ -98,11 +112,13 @@ it('boundary167: authentic pending cues restore exactly and rehearsal writes rol
   expect(compileRehearsal(list([text(REHEARSAL),signed(17),list([signed(999999),signed(1000000)])])).destinations).toEqual([999999n,1000000n]);
   const slots=[...items(decode(a.b.s.registry),'list')];slots[52]=list([text(REHEARSAL),signed(17),list([signed(18),signed(23)])]);expect((await compileCharacterModel({...a.b.s,registry:enc(list(slots))})).rehearsal!.destinations).toEqual([18n,23n]);
   const forged={...a.b.d,orderedInputs:enc(list([...items(decode(a.b.d.orderedInputs),'list'),list([signed(19),u(20),MEMORY_RECALL,cue,list([])])]))};await expect(createCharacterRun(a.m,forged)).rejects.toThrow();
-  fault=true;const broken=await createCharacterRun(a.m,a.b.d);await through(broken,17n);const before=broken.snapshot(),save=broken.save();
-  await expect(broken.settleNextInstant()).rejects.toThrow('167 after rehearsal use write');expect(hit).toBe(true);expect({...broken.snapshot(),status:before.status}).toEqual(before);fault=false;
-  const restored=await restoreCharacterRun(a.b.s,{initialState:a.b.d.initialState,orderedInputs:a.b.d.orderedInputs,save});await through(restored,19n);exact(a.run,restored);
-  await finish(a.run,[restored]);expect(a.run.snapshot().clock).toBe(5001n);live(a.run,true);live(restored,true);
-  console.info('M167 BOUNDARY PASS authenticated/foreign/stale/duplicate/forged-source guards; actual incomplete/ambiguous component attribution no use; generalized schedule; post-write use/history rollback; public save17 reconstructs pending queries and every later canonical boundary through5001 exactly.');
+  phase('negative controls');fault=true;const broken=await createCharacterRun(a.m,a.b.d);await through(broken,17n);const before=broken.snapshot(),save=broken.save();phase('broken prefix17 and save');
+  await expect(broken.settleNextInstant()).rejects.toThrow('167 after rehearsal use write');expect(hit).toBe(true);exactSnapshot({...broken.snapshot(),status:before.status},before);fault=false;phase('actual fault and exact rollback');
+  const packed=gzipSync(save);bytes(new Uint8Array(gunzipSync(packed)),save);
+  expect(packed.length+readFileSync('docs/planning/ASSEMBLED_CHARACTER_M167_CHECKS.txt').length+readFileSync('docs/planning/ASSEMBLED_CHARACTER_M167_RESULT.md').length).toBeLessThan(5*1024*1024);
+  if(existsSync(recoveryPath))bytes(new Uint8Array(gunzipSync(readFileSync(recoveryPath))),save);else writeFileSync(recoveryPath,packed);
+  phase('actual checkpoint persisted losslessly');
+  console.info('M167 ROLLBACK PASS all original authenticated/foreign/stale/duplicate/forged-source, incomplete/ambiguous and schedule controls; actual post-write fault and every rollback snapshot byte; original pre-fault save17 persisted '+save.length+' bytes/'+packed.length+' gzip bytes. Continuation remains a separate required gate.');
  }finally{spy.mockRestore();}
 },590000);
 
@@ -123,3 +139,33 @@ it('overlap167: attribution consumes authentic operands from the shared recall u
   console.info('M167 OVERLAP PASS same character/workspace: genuine ordinary body recall supplies old1 omitted by carried top8; Supported attribution consumes16 original children, receipt join admits their current delivery union; ordinary new18 earns no rehearsal credit. Native overlap prefix19 only, no final-family capacity claim.');
  }finally{spy.mockRestore();}
 },240000);
+
+// Explicit diagnostic only; do not add a full prefix replay to routine regressions.
+(env.M167_PROFILE==='1'?it:it.skip)('profile167: measure snapshot and equality costs on the unchanged genuine prefix',async()=>{
+ const a=await start(),times={settlement:0,snapshot:0,snapshotCalls:0};
+ const measured={...a.run,async settleNextInstant(){const t=performance.now();try{return await a.run.settleNextInstant();}finally{times.settlement+=performance.now()-t;}},snapshot(){const t=performance.now();try{return a.run.snapshot();}finally{times.snapshot+=performance.now()-t;times.snapshotCalls++;}}};
+ await through(measured,5n);
+ const before=measured.snapshot(),after=measured.snapshot(),begin=performance.now();
+ expect(after).toEqual(before);const deepMs=performance.now()-begin,rawStart=performance.now();
+ expect([after.clock,after.status,Object.keys(after).sort()]).toEqual([before.clock,before.status,Object.keys(before).sort()]);
+ exactSnapshot(after,before);
+ const byteMs=performance.now()-rawStart;
+ const accepts=(fn:()=>void)=>{try{fn();return true;}catch{return false;}};
+ const changes=[{...after,clock:simInstant(after.clock+1n)},...(['state','outputs','trace'] as const).flatMap(field=>{
+  const changed=after[field].slice();changed[0]^=1;return [{...after,[field]:changed},{...after,[field]:after[field].subarray(1)}];
+ })];
+ for(const changed of changes){const deep=accepts(()=>expect(changed).toEqual(before)),direct=accepts(()=>exactSnapshot(changed,before));expect(deep).toBe(false);expect(direct).toBe(deep);}
+
+ console.info('M167 PROFILE '+JSON.stringify({...times,deepMs,byteMs,encodedBytes:before.state.length+before.outputs.length+before.trace.length,clock:String(before.clock)}));
+},110000);
+
+it('continuation167: restore the actual fault-test checkpoint and compare every later boundary',async()=>{
+ const began=performance.now();const phase=(name:string)=>stderr.write('M167 CONTINUATION '+JSON.stringify({phase:name,elapsedMs:performance.now()-began})+'\n');
+ const save=new Uint8Array(gunzipSync(readFileSync(recoveryPath))),a=await start();phase('independent clean run prepared');
+ await through(a.run,19n);rehearsal(a.run,19);phase('independent clean prefix19');
+ const restored=await restoreCharacterRun(a.b.s,{initialState:a.b.d.initialState,orderedInputs:a.b.d.orderedInputs,save});phase('public restore actual save17');
+ await through(restored,19n);exact(a.run,restored);phase('restored prefix19 exact');
+ await finish(a.run,[restored]);phase('every-boundary tail5001');
+ expect(a.run.snapshot().clock).toBe(5001n);live(a.run,true);live(restored,true);
+ console.info('M167 CONTINUATION PASS exact original fault-test save17 reconstructed pending queries; independent clean19 and every later state/output/trace/save/identity through natural exhaustion5001; both actual late appraisals remain live.');
+},590000);

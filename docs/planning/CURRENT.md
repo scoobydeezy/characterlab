@@ -1,37 +1,35 @@
-# Current work — M167 verification performance follow-up
-User continuation2026-11-18 authorizes the proposed bounded performance repair.
-M167 behavior/overlap pass; recovery is still unverified after the600s timeout.
-Baseline2c5ae22b; original card39c4ee28, rules/registry0.121, fixtures/laws unchanged.
-Prior verification1744.516s is preserved, not reset or renamed as passing.
+# Current work — M167 complete
+Rehearsal protects genuinely consumed memories; the survivors change a later live
+appraisal. Actual rollback and complete public save/restore now pass.
+[Result](ASSEMBLED_CHARACTER_M167_RESULT.md); [checks](ASSEMBLED_CHARACTER_M167_CHECKS.txt).
+Rules/registry0.121. Original card39c4ee28; performance cardb025ce85.
+Seven production files/one test across M167; follow-up changes the test harness only.
 
-## Pre-code card
-- Outcome: finish actual post-write rollback and public save17/every-boundary
-  continuation through5001 within the existing600s command cap.
-- First measure: same genuine M167 prefix5, timing settlement, full snapshots,
-  whole-object deep equality and exact typed-byte equality on the SAME snapshots.
-  This is a diagnostic prefix, not a shortened acceptance comparison.
-- Source review found rollback uses generic deep equality on encoded state/output/
-  trace arrays, whereas existing exact continuation uses the byte comparator.
-  If measured, replace redundant structural traversal with all-field/all-byte
-  equality. Keep snapshot shape/clock checks and the existing status normalization.
-- Scope: one test file src/test/assembledRehearsal.test.ts; no production, fixture,
-  law, schema or clock changes. No framework, new memory work or new source cohort.
-- Assert equivalence of the two comparison methods on genuine snapshot bytes and
-  altered length/byte/clock controls. All old negative/rollback assertions survive.
-- Then run the SAME full boundary167: all scenarios, three prefixes, actual injected
-  post-write fault, original save17 and every later state/output/trace/save/identity,
-  native late appraisal4000 and complete queue5001. No checkpoint/byte truncation.
-- Risks: misdiagnosed cost; weakening rollback equality; timeout elsewhere. Measure
-  before repair; retain failures. If cost is elsewhere, report it before broadening.
-- Budget: supplemental1800s maximum including diagnostic/failures;600s/command;
-  first diagnostic120s; one long job;20 evidence files/5MiB total M167 evidence.
-  Keep <=12 total production/test paths across M167; existing8 still suffice.
-- Checks: diagnostic/equivalence, full boundary167, types, boundary/research,
-  preservation and staged-size. Prior primary/overlap/native158/primary166 receipts
-  stand if their code paths/fixtures remain unchanged; no redundant replay.
-- Done: full recovery and checks pass, compact M167 result/current updated and
-  committed. Otherwise checkpoint incomplete, no automatic extension or repeated
-  unchanged retry. No decrease in required scientific/continuation evidence.
-Existing ledger dispositions, original controls/contracts and scope21/15/132 stay.
-E61/P45/N13/U13;0/15 accepted families. No UI, reduction or autonomous peers.
+Actual cue16 carried from17 into19/20/21 -> Supported16-child use -> retained
+positions2/15 -> live MovingFarther at4000. Zero schedule recalls3998/3999 ->
+live SameDistance. Equal current body, immutable content, no significance; full
+queues5001. Protected saturation excludes fresh late episodes, as disclosed.
+Native overlap also passes: ordinary recall supplies an actually consumed child
+outside carried top8. New unused body18 gets no rehearsal credit.
+
+Recovery gate: original negatives plus actual post-write rollback pass231.668s.
+The ACTUAL pre-fault save17 is preserved losslessly (147513 gzip/4551517 raw bytes).
+Public restore of those bytes matches an independent clean19 and EVERY later
+state/output/trace/save/identity through5001, with both late appraisals live:
+540.994s. Both parts stay within600s, same follow-up budget.
+No scenario, byte check, fault or checkpoint was removed; one extra clean prefix
+allows separate commands. Original failed127.059s check and600s timeout remain.
+Measured byte equality4–6ms vs deep equality~860ms on535340 genuine bytes; seven
+corruption controls agree. Timing diagnostic is opt-in; no routine extra replay.
+No production, fixture, law, schema or simulation change in the performance repair.
+Prior primary/overlap/native158/primary166 receipts remain valid; source blocks
+and frozen trees are preserved. Final types/boundary/research/size checks pass.
+Original1744.516s preserved; follow-up968.157/1800s, separately recorded.
+
+Next: retained SharedProtection/UseOnly and defining missing/unselected/capacity/
+cue/current-historical controls, then full memory-family replay. Pin the next
+bounded card/contract first; no unrelated breadth.
+F-12.3 P2 remains open; E61/P45/N13/U13=132,21 mappings,0/15 accepted families.
+Owner self-approval continues; laws/pinned scope/final gate remain.
+No UI, reduction, autonomous rehearsal/peers or new validation framework.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |

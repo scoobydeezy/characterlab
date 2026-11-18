@@ -1124,6 +1124,7 @@ kernels stay frozen. Retained-attribution rehearsal and family replay remain ope
 M167 candidate carries an actual perceived cue through the existing shared recall,
 workspace and attribution stages. MEC004/007/008/009/010/015/019/020/022 retain
 their dispositions; Supported consumed-child use changes survival/appraisal4000.
-One native shared-recall overlap also passes. Recovery timed out: M167 is incomplete,
-not family acceptance. No law/owner/store change or retired control.
-[Incomplete checkpoint](ASSEMBLED_CHARACTER_M167_RESULT.md).
+Native shared-recall overlap and full recovery now pass after bounded test-only
+performance repair; prior timeout remains. Actual pre-fault save17 restores every
+later boundary5001. No law/owner/store change, retired control or family acceptance.
+[Bounded result](ASSEMBLED_CHARACTER_M167_RESULT.md).
