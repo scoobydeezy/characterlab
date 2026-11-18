@@ -106,7 +106,7 @@ export function createCognitiveExecution(model:Model,component:State,inputs:Awai
  const formationTrace=(event:ScheduledEvent,output:CanonicalValue,input:CanonicalValue,reads:readonly ActualReadRecord[],patch:StatePatch={operations:[]},diffs:readonly StructuralMutationDiff[]=[])=>{const original=rec(identityTrace(event,output,[],[],{input,domain:reads.map(r=>pattern(r.path)),reads,patch,diffs}),160n);return record(original.schema,new Map([...original.fields].map(([n,v])=>[n,n===5n?atom(1036,'seam/assembled-formation'):n===6n?text(timeDomainVersion(FORMATION_VERSION,timeLimit)):v])));};
  let cognitiveOperation=false;
  const self=model.selfBeliefEnabled?createSelfBeliefExecution(component.tasks[0].character,component.stateModel,inputs.selfEvents,model.modelIdentity.value,inputs.runIdentity.value,timeLimit):undefined;
- const embarrassment=model.embarrassment?createEmbarrassment(model.embarrassment,component.tasks[0].character,component.stateModel,model.modelIdentity.value,inputs.runIdentity.value):undefined;
+ const embarrassment=model.embarrassment?createEmbarrassment(model.embarrassment,component.tasks[0].character,component.stateModel,model.modelIdentity.value,inputs.runIdentity.value,timeLimit):undefined;
  const index=(event:ScheduledEvent)=>stages.findIndex(s=>key(event.eventTypeId)===key(atom(1001,'event/'+s[0])));
  return Object.freeze({
   automaticParticipantCount:()=>cognitiveOperation?0:1,

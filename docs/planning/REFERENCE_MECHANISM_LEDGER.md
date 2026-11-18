@@ -1082,3 +1082,11 @@ stay CONTRACT/CORPUS in their existing scopes. Four component controls, immutabl
 M158 native receipt and seven selected legacy controls; no source remapping or
 public late-model activation. No mechanism retired or family promoted. See
 [bounded result](ASSEMBLED_CHARACTER_M160_RESULT.md); memory appraisal4000 remains blocked.
+
+M161 explicit internal clock reaches existing person/relationship, communication
+and witness owners and their consumers; expectation disclosure and priority-based
+embarrassment retain exact laws. MEC004 perceived evidence stays PORT with its
+boundary; MEC019/020/022 intent/outcome, commitment lifecycle and frozen historical
+provenance retain their dispositions. Six component tests, unchanged M158 native
+receipt and five legacy controls; no autonomous peer or public late activation.
+No mechanism retired/family promoted. [Result](ASSEMBLED_CHARACTER_M161_RESULT.md).

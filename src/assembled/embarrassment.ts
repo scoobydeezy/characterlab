@@ -1,3 +1,4 @@
+import {LEGACY_TIME_LIMIT,assertTimeLimit,timeDomainVersion,type TimeLimit} from './timeDomain';
 /** Contextual self-relevant social appraisal; one person's admitted evidence, no mood store. */
 import {list,map,set,text,unsigned,record,type CanonicalValue} from '../substrate/canonicalEncoding';
 import {dataItems as items,dataKey as key,dataText as txt,dataField as f,dataUnsigned as uint,dataIdentity as id,invalidModel} from '../campaign2/canonicalData';
@@ -26,16 +27,16 @@ export function evaluationFold(rows:readonly CanonicalValue[]){
  const sources=[...new Map([...(groups[0].slice(-1)),...(groups[1].slice(-1)),...groups[2]].map(x=>[key(x.source),x.source])).values()];
  return {mismatch,seen,judgment,likelihood,sources};
 }
-export function createEmbarrassment(config:ReturnType<typeof compileEmbarrassment>,C:CanonicalValue,stateModel:ReturnType<typeof compileCampaign2StateModel>,model:CanonicalValue,run:CanonicalValue){
+export function createEmbarrassment(config:ReturnType<typeof compileEmbarrassment>,C:CanonicalValue,stateModel:ReturnType<typeof compileCampaign2StateModel>,model:CanonicalValue,run:CanonicalValue,timeLimit:TimeLimit=LEGACY_TIME_LIMIT){assertTimeLimit(timeLimit);
  let current:{at:bigint;report:CanonicalValue;amount:Q|undefined;sources:CanonicalValue[];event:bigint}|undefined;
  const fail=(s:string):never=>{throw new SchedulerContractError('INPUT_NOT_ADMITTED','embarrassment '+s);};
- const trace=(e:ScheduledEvent,input:CanonicalValue,output:CanonicalValue,sources:CanonicalValue[],reads:ActualReadRecord[]=[])=>traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model,runIdentity:run,event:e,seamId:sid(1036,'seam/assembled-embarrassment'),seamVersion:EMBARRASSMENT_VERSION,recordKind:e.eventTypeId,subjectIds:[id(C),id(config.target)],sourceRecordIds:sources.map(id),registeredReadDomain:reads.map(x=>pattern(x.path)),actualReadRecords:reads,inputProjection:input,outputProjection:output,randomDrawRecords:[],quantizationOperations:[],statePatch:{operations:[]},structuralMutationDiffs:[],emittedEvents:[],invariantResults:[]});
+ const trace=(e:ScheduledEvent,input:CanonicalValue,output:CanonicalValue,sources:CanonicalValue[],reads:ActualReadRecord[]=[])=>traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model,runIdentity:run,event:e,seamId:sid(1036,'seam/assembled-embarrassment'),seamVersion:timeDomainVersion(EMBARRASSMENT_VERSION,timeLimit),recordKind:e.eventTypeId,subjectIds:[id(C),id(config.target)],sourceRecordIds:sources.map(id),registeredReadDomain:reads.map(x=>pattern(x.path)),actualReadRecords:reads,inputProjection:input,outputProjection:output,randomDrawRecords:[],quantizationOperations:[],statePatch:{operations:[]},structuralMutationDiffs:[],emittedEvents:[],invariantResults:[]});
  return {reset(){current=undefined;},
  appraise(e:ScheduledEvent,state:AuthoritativeState){if(e.phase!==50n||current)fail('appraisal lifecycle');const reads:ActualReadRecord[]=[];
  const read=(path:StatePath)=>{const v=stateModel.read(state,path);reads.push({accessorId:sid(1028,'accessor/embarrassment'),path,presence:v.presence,value:v.value,derivedSources:[]});return v.value;};
  const history=read(personPath(C,config.target)),importance=read(importancePath(config.task)),rows=personHistory(history);
  for(const row of rows){const at=items(row,'list')[3];if(typeof at==='boolean'||at.kind!=='signed'||at.value>=e.dueAt)fail('prior-only knowledge');}
- const estimate=evaluationFold(rows),severity=importance?importanceValue(importance).I:ZERO,affect=compareAffectFactors({likelihood:estimate.likelihood,severity,vulnerability:ONE,control:ZERO},'SplitExposure');
+ const estimate=evaluationFold(rows),severity=importance?importanceValue(importance,true,timeLimit).I:ZERO,affect=compareAffectFactors({likelihood:estimate.likelihood,severity,vulnerability:ONE,control:ZERO},'SplitExposure');
  const report=list([text(EMBARRASSMENT+'/appraisal'),unsigned(e.dueAt),config.target,...[estimate.mismatch,estimate.seen].map(x=>list(x===undefined?[]:[x])),list(estimate.judgment?[qValue(estimate.judgment)]:[]),list(estimate.likelihood?[qValue(estimate.likelihood)]:[]),qValue(severity),text(affect.status),list(affect.status==='Known'?affect.coordinates.map(qValue):[]),list(estimate.sources)]);
  current={at:e.dueAt,report,amount:affect.status==='Known'?affect.coordinates.at(-1):undefined,sources:estimate.sources,event:e.eventId};
  return {report,trace:()=>trace(e,list([history??list([]),importance??list([])]),report,estimate.sources,reads)};
