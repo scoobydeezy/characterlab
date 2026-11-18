@@ -67,3 +67,25 @@ The work-board producer retains its existing pure projection; its owner and cons
 validate the selected domain. Extended consumer traces disclose the same suffix.
 Public constructors still default to100. Cancellation codecs and atomic public
 activation remain pending. Detached late probes do not earn native memory coverage.
+
+M163 activates these components as rules/assembled-character/0.118-candidate and
+assembled-character-registry/0.118-candidate, with the same0.117 registry shape.
+The version selects one shared absolute-field limit1000000 at model compilation;
+older versions select100. All previously domain-parameterized owners, producers and
+consumers receive it. This is an engineering admission bound, not an ageing law.
+
+The narrow successor original-source adapter preserves the C2 cognitive/probe
+grammar, manifest commitment, allocation ordering, exclusive original instants and
+capacity100. Deliberations admit1..limit; probes1..limit-1 for their later follow-up.
+It authenticates exact admitted events through private instant-scoped capabilities.
+There is no time remapping or post-admission rewrite. Older models use the original
+C2 adapter unchanged. Deadline allocation and all psychology use the existing queue.
+
+CancelledTaskStatus372/3 has the same three fields/tag4 as372/2, with CancelledAt
+in1..1000000. Schema372/2 keeps1..100. New-model cancellation emits372/3 and model
+validation admits that version only under0.118; all prior source/goal/terminal rules
+remain. Generic decoding grants no model authority; restore still replays and checks
+the exact complete save. Current model/run identity and trace bindings include0.118.
+Derived queue clocks retain their accepted exact SimInstant domain; finite counts
+and recall delays are not enlarged by the source-field domain.
+No original law, fixture bytes, historical verdict or final scope is rewritten.
