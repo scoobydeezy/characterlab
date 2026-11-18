@@ -7,10 +7,11 @@ Rules/registry0.116. Existing laws/calibration, ModalFill/PartialMax and age3 st
 PerceptualFidelity first-use engineering default from vivid-recollection/0.1;
 DetailCount/AccessOnly/KeepRich controls retained, no superiority verdict.
 
-Source: optional third appearance lane on primary consequence sources only:
+Source: optional third appearance lane on the shared primary-source grammar:
 [feature, clarity1/2, permitted]. Only metallic/elongated/blunt; unique existing
 feature required. Quality and feature must both be permitted to project quality.
 Old sources remain legal with no invented fidelity; old versions reject new lane.
+Both lanes share source validation; this memory consumer remains consequence130.
 Values pass unchanged C1 classifiers; actual observation output carries safe clarity.
 Existing episodic346 owner appends three optional clarity cells to appearance
 imprints. At age3 retain metallic fidelity only, alongside M154 blunt detail loss.

@@ -5,11 +5,13 @@ not a superiority verdict. Architecture8 distinguishes encoded content, access,
 current recollection and truth. Rules/registry0.116; unchanged52-slot topology.
 
 ## Observer-safe quality
-The existing primary consequence appearance source may have a third lane of unique
+The existing primary appearance source may have a third lane of unique
 [featureId, unsigned clarity1|2, Boolean permitted] rows. Only the existing metallic,
 elongated and blunt source features qualify. Each quality row must name a declared
 feature. The source compiler admits this lane only under0.116; old two-lane sources
-remain unchanged. Additional carriers/current-lane quality are not added here.
+remain unchanged. Both current and consequence lanes inherit this shared primary-source grammar.
+Additional-carrier quality is not admitted. The new memory consumer remains at
+consequence130; current-lane quality-to-memory integration is not qualified here.
 A quality value projects only when its own gate AND the corresponding feature gate
 are permitted. No quality follows merely from knowing a Boolean feature value.
 Clarity is channel-provided sensory fidelity, not truth confidence, importance,
@@ -52,3 +54,9 @@ same display/different hidden truth, exact repeat/save and real rollback require
 MEC004/008/009/010/022 retained; RO005/006/007/017/019/020/021 remain conditional.
 No reduction, whole-family acceptance or general autobiographical-memory claim.
 Default12 production/test files,1800s verification,20 artifacts/5MiB; card fixes caps.
+
+Pre-verification source review: both lanes already use the same source compiler.
+Keep that shared grammar instead of adding a lane-specific parser or hidden dispatch.
+Admit/project primary quality in both; qualify the declared consequence-memory path
+only. Test current projection as a grammar/boundary control, not native memory proof.
+The native comparison, laws, file and verification budgets remain unchanged.
