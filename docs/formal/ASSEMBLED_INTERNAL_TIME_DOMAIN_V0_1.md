@@ -48,3 +48,11 @@ capacity, event-time developmental gains and prior-only self evidence remain int
 Practice counts are not timestamps and retain their original100 bound. Existing
 Threshold eligibility, Ramp development and Mean self-belief laws are unchanged.
 No public extended model admission, source retiming or late-choice claim follows.
+
+M161 extends the same explicit domain to person/relationship and communication
+histories, commitment-witness timestamps and the corresponding handlers. Learned
+expectation disclosure and embarrassment's priority reader use the same limit.
+Source grouping, recipient/holder isolation, participation, unknown observations,
+append-only/capacity rules and prior-only appraisal remain unchanged. Counts and
+receipt IDs are not timestamps. Extended traces retain the existing domain suffix.
+No autonomous partner, new psychological law, source retiming or public activation.
