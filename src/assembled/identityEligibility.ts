@@ -1,3 +1,4 @@
+import {LEGACY_TIME_LIMIT,assertTimeLimit,type TimeLimit} from './timeDomain';
 /** assembled-character-identity-eligibility/0.1-candidate. One existing identity owner. */
 import {list,text,unsigned,type CanonicalValue} from '../substrate/canonicalEncoding';
 import {AuthoritativeState,StateAuthorityRegistry,applyStatePatch,restoreAuthoritativeState,statePathValue,type StatePath,type StatePatch} from '../substrate/state';
@@ -26,20 +27,20 @@ export function qualifyIdentity(occurrence:CanonicalValue,envelope:CanonicalValu
  if(status!=='Accepted')contribution=ZERO;
  return list([text(QUALIFICATION),occurrence,envelope,text(status),qValue(contribution)]);
 }
-export function qualificationParts(v:CanonicalValue){
+export function qualificationParts(v:CanonicalValue,timeLimit:TimeLimit=LEGACY_TIME_LIMIT){assertTimeLimit(timeLimit);
  const a=items(v,'list');require(a.length===5&&txt(a[0])===QUALIFICATION&&key(v)===key(qualifyIdentity(a[1],a[2])),'qualification correspondence');
- const x=items(a[2],'list'),expression=rec(x[1],426n),resolution=rec(f(rec(f(expression,2n),425n),2n),409n),at=f(resolution,2n);require(typeof at!=='boolean'&&at.kind==='signed'&&at.value>=1n&&at.value<=100n,'decision time');
+ const x=items(a[2],'list'),expression=rec(x[1],426n),resolution=rec(f(rec(f(expression,2n),425n),2n),409n),at=f(resolution,2n);require(typeof at!=='boolean'&&at.kind==='signed'&&at.value>=1n&&at.value<=timeLimit,'decision time');
  return {id:a[1],expression,resolution,at:at as Extract<CanonicalValue,{kind:'signed'}>,subject:cognitiveTraceSubject(expression),accepted:txt(a[3])==='Accepted',contribution:a[4],numeric:r(413,[a[1],f(resolution,1n),at,a[4]])};
 }
 export const journalPath=(identityKey:CanonicalValue):StatePath=>({rootStateTypeId:415n,fieldId:2n,selectors:[{kind:'mapKey',key:identityKey}]});
 export function identityJournal(v?:CanonicalValue){if(v===undefined)return [] as CanonicalValue[];const a=items(v,'list');require(a.length===2&&txt(a[0])===ELIGIBILITY,'journal');return [...items(a[1],'list')];}
-export function withQualifiedIdentityState(base:ReturnType<typeof compileCampaign2StateModel>,identityKey:CanonicalValue,owner:ReturnType<typeof id>){
+export function withQualifiedIdentityState(base:ReturnType<typeof compileCampaign2StateModel>,identityKey:CanonicalValue,owner:ReturnType<typeof id>,timeLimit:TimeLimit=LEGACY_TIME_LIMIT){assertTimeLimit(timeLimit);
  const jp=journalPath(identityKey),np={...jp,fieldId:1n},paths=[np,jp],fresh=(p:StatePath)=>p.rootStateTypeId===415n&&p.fieldId===2n,owned=(p:StatePath)=>p.rootStateTypeId===415n;
  const checkPath=(p:StatePath)=>require(paths.some(x=>key(statePathValue(x))===key(statePathValue(p))),'foreign path');
- const check=(p:StatePath,v:CanonicalValue)=>{checkPath(p);if(p.fieldId===1n){validateIdentityHistory(items(f(rec(v,414n),1n),'list'));return;}const rows=identityJournal(v);require(rows.length>0&&rows.length<=16,'journal size');let last=0n;const ids=new Set<string>();for(const row of rows){const q=qualificationParts(row);require(q.accepted&&q.at.value>last&&key(q.subject)===key(f(rec(identityKey,412n),1n)),'journal subject/order/acceptance');last=q.at.value;for(const x of [q.id,f(q.expression,1n),f(q.resolution,1n)]){require(!ids.has(key(x)),'duplicate occurrence');ids.add(key(x));}}};
+ const check=(p:StatePath,v:CanonicalValue)=>{checkPath(p);if(p.fieldId===1n){validateIdentityHistory(items(f(rec(v,414n),1n),'list'));return;}const rows=identityJournal(v);require(rows.length>0&&rows.length<=16,'journal size');let last=0n;const ids=new Set<string>();for(const row of rows){const q=qualificationParts(row,timeLimit);require(q.accepted&&q.at.value>last&&key(q.subject)===key(f(rec(identityKey,412n),1n)),'journal subject/order/acceptance');last=q.at.value;for(const x of [q.id,f(q.expression,1n),f(q.resolution,1n)]){require(!ids.has(key(x)),'duplicate occurrence');ids.add(key(x));}}};
  const authority=new StateAuthorityRegistry(paths.map(path=>({pattern:pattern(path),validateValue:(v:CanonicalValue)=>check(path,v),removalAllowed:false})),[{mutationAuthorityId:owner,patterns:paths.map(pattern)}]);
  const without=(s:AuthoritativeState)=>new AuthoritativeState(s.entries().filter(e=>!fresh(e.path)));
- function validateLocal(s:AuthoritativeState){for(const e of s.entries().filter(e=>fresh(e.path)))checkPath(e.path);const j=s.read(jp),n=s.read(np);require(j.presence===n.presence,'journal/adapter presence');if(j.presence){check(jp,j.value!);require(key(f(rec(n.value!,414n),1n))===key(list(identityJournal(j.value!).map(v=>qualificationParts(v).numeric))),'journal/adapter equality');}}
+ function validateLocal(s:AuthoritativeState){for(const e of s.entries().filter(e=>fresh(e.path)))checkPath(e.path);const j=s.read(jp),n=s.read(np);require(j.presence===n.presence,'journal/adapter presence');if(j.presence){check(jp,j.value!);require(key(f(rec(n.value!,414n),1n))===key(list(identityJournal(j.value!).map(v=>qualificationParts(v,timeLimit).numeric))),'journal/adapter equality');}}
  // state.ts supplies a base whose applyPatch validates its returned slice, including no-ops.
  // This is an assembled-composition contract, not a guarantee of the generic state-model type.
  function validateState(s:AuthoritativeState){base.validateState(without(s));validateLocal(s);}

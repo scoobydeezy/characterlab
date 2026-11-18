@@ -1,0 +1,125 @@
+
+M160 types exit=0 elapsed=20.131s cap=180
+
+M160 identity-time-components exit=0 elapsed=18.674s cap=240
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledIdentityTimeDomain.test.ts > clock160: permitted late self evidence reaches live later appraisal with exact continuation
+M160 self4000 permitted/withheld -> live appraisal4001, unknown preserved, same-instant rejected, exact restored consumer/trace PASS
+
+stdout | src/test/assembledIdentityTimeDomain.test.ts > clock160: late event-time formation changes existing reasons with original support
+M160 formation4000 -> exact existing standing, frozen support and disabled-zero control; restore PASS
+
+ ✓ src/test/assembledIdentityTimeDomain.test.ts (4 tests) 13887ms
+   ✓ clock160: exact qualification/formation/self history boundaries and owner restore 640ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed (4)
+   Start at  10:13:33
+   Duration  18.11s (transform 2.51s, setup 0ms, collect 3.78s, tests 13.89s, environment 0ms, prepare 144ms)
+
+
+M160 unchanged-native-receipt exit=0 elapsed=134.265s cap=300
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledTimeDomainNative.test.ts > native158: unchanged current model retains every canonical boundary with actual performance learning
+M158 NATIVE PASS 18 canonical boundaries;2 actual performance observations, unengaged expectation null/learned value state; full queues101; exact save6 continuation
+
+ ✓ src/test/assembledTimeDomainNative.test.ts (6 tests | 5 skipped) 128791ms
+   ✓ native158: unchanged current model retains every canonical boundary with actual performance learning 128790ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  10:14:17
+   Duration  133.70s (transform 2.96s, setup 0ms, collect 4.45s, tests 128.79s, environment 0ms, prepare 138ms)
+
+
+M160 legacy-identity exit=0 elapsed=19.598s cap=240
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledIdentityEligibility.test.ts > math: original qualification laws and restricted safe operands
+M30 original Threshold oracle 18 exact safe-context cases; retained alternatives differ
+
+stdout | src/test/assembledIdentityEligibility.test.ts > admission: source completeness, owner and joint journal invariants
+M30 source completeness and one-owner full-journal/numeric invariants PASS
+
+ ✓ src/test/assembledIdentityEligibility.test.ts (7 tests | 5 skipped) 14900ms
+   ✓ math: original qualification laws and restricted safe operands 1534ms
+   ✓ admission: source completeness, owner and joint journal invariants 13366ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 5 skipped (7)
+   Start at  10:16:40
+   Duration  19.05s (transform 2.48s, setup 0ms, collect 3.72s, tests 14.90s, environment 0ms, prepare 152ms)
+
+
+M160 legacy-formation exit=0 elapsed=140.733s cap=360
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledFormation.test.ts > math: original Development rows, saturation, contrary evidence and direction mapping
+M32 original Ramp oracle 80 rows; saturation/contrary/retained alternative and two-option signs PASS
+
+stdout | src/test/assembledFormation.test.ts > privacy: pressure, execution and self-knowledge stay distinct from formation
+M32 pressure excludes; physical success and self-report do not author formation PASS
+
+stdout | src/test/assembledFormation.test.ts > persistence: exact repeat and restore retain original event-time weights
+M32 repeat3/restore3 every remaining snapshot/save PASS
+
+ ✓ src/test/assembledFormation.test.ts (6 tests | 3 skipped) 135869ms
+   ✓ math: original Development rows, saturation, contrary evidence and direction mapping 19454ms
+   ✓ privacy: pressure, execution and self-knowledge stay distinct from formation 32308ms
+   ✓ persistence: exact repeat and restore retain original event-time weights 84106ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 3 skipped (6)
+   Start at  10:17:43
+   Duration  140.18s (transform 2.49s, setup 0ms, collect 3.74s, tests 135.87s, environment 0ms, prepare 143ms)
+
+
+M160 legacy-self-belief exit=0 elapsed=17.935s cap=240
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSelfBelief.test.ts > math: exact original Mean and prospective appraisal with retained alternatives
+M31 original math oracle 128 appraisal cases; Mean/Latest/NoLearning and unknown/neutral retained
+
+stdout | src/test/assembledSelfBelief.test.ts > admission: safe grammar, original source, single authority and immutable belief history
+M31 admission/owner/safe evidence/append and source substitution negatives PASS
+
+ ✓ src/test/assembledSelfBelief.test.ts (6 tests | 4 skipped) 13151ms
+   ✓ admission: safe grammar, original source, single authority and immutable belief history 13126ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 4 skipped (6)
+   Start at  10:20:21
+   Duration  17.38s (transform 2.53s, setup 0ms, collect 3.79s, tests 13.15s, environment 0ms, prepare 140ms)
+
+
+M160 boundary exit=0 elapsed=3.290s cap=60
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+M160 research exit=0 elapsed=4.098s cap=120
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4380}
+
+M160 preservation exit=0 elapsed=0.531s cap=60
+M160 PRESERVATION PASS: six frozen trees, baseline and corpus unchanged;7 declared production/test paths;132 unique clauses with E61/P45/N13/U13
+M160 LIMITS PASS: register 213 lines/65027 CRLF bytes; evidence 2 files/9990 bytes; planning caps retained
+warning: in the working copy of 'src/assembled/execution.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/assembled/formation.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/assembled/identityEligibility.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/assembled/selfBelief.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/assembled/skill.ts', LF will be replaced by CRLF the next time Git touches it
+
+M160 verification total through preservation: 359.255s / 1800s; all checks passed.

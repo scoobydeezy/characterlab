@@ -1074,3 +1074,11 @@ MEC-007/010 distinctions and MEC-019/022 execution/provenance remain preserved.
 Existing habit, reappraisal, fatigue and recurrence laws/candidates remain unchanged;
 late component evidence does not qualify public late runs or broader memory.
 RO-C3-011/012/015 remain conditional; no affect/control/habit reduction.
+
+M160 explicit internal identity/formation/self clock domain extends existing owners
+and consumers; Threshold/Ramp/Mean remain unchanged. MEC018 earned identity and
+feedback stay PORT; MEC019 attempt/outcome and MEC022 frozen event-time provenance
+stay CONTRACT/CORPUS in their existing scopes. Four component controls, immutable
+M158 native receipt and seven selected legacy controls; no source remapping or
+public late-model activation. No mechanism retired or family promoted. See
+[bounded result](ASSEMBLED_CHARACTER_M160_RESULT.md); memory appraisal4000 remains blocked.
