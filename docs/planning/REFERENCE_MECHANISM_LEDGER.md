@@ -1120,3 +1120,10 @@ controls. Use/significance/history coalesce; no graph reduction or new owner.
 Generic direct-channel projection and1024-domain extension are explicit; original
 kernels stay frozen. Retained-attribution rehearsal and family replay remain open.
 [Bounded result](ASSEMBLED_CHARACTER_M166_RESULT.md).
+
+M167 candidate carries an actual perceived cue through the existing shared recall,
+workspace and attribution stages. MEC004/007/008/009/010/015/019/020/022 retain
+their dispositions; Supported consumed-child use changes survival/appraisal4000.
+One native shared-recall overlap also passes. Recovery timed out: M167 is incomplete,
+not family acceptance. No law/owner/store change or retired control.
+[Incomplete checkpoint](ASSEMBLED_CHARACTER_M167_RESULT.md).

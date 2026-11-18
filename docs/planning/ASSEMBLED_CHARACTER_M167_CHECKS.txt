@@ -1,0 +1,131 @@
+M167 pre-code plan39c4ee28 baseline2f02c127; plan/check allowance2s.
+
+M167 types-initial exit=1 elapsed=20.243s cap=600
+src/assembled/memory.ts(118,154): error TS2345: Argument of type 'bigint' is not assignable to parameter of type 'SimInstant'.
+  Type 'bigint' is not assignable to type '{ readonly [instantBrand]: true; }'.
+src/test/assembledRehearsal.test.ts(86,44): error TS2322: Type 'bigint' is not assignable to type 'SimInstant'.
+  Type 'bigint' is not assignable to type '{ readonly [instantBrand]: true; }'.
+
+M167 types-branded-clock-repair exit=0 elapsed=19.867s cap=600
+
+M167 primary-carried-versus-zero exit=0 elapsed=548.957s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRehearsal.test.ts > primary167: authentic carried rehearsal protects consumed memories and changes live late appraisal
+M167 PRIMARY PASS actual cue16 carried from17 into19/20/21; Supported16 consumed children/use receipts per rehearsal; original use algebra; old memories survive, late fresh memories rejected by protected saturation; live2/15 Farther vs3998/3999 Same at4000/equal body; full queues5001.
+
+ ✓ src/test/assembledRehearsal.test.ts > primary167: authentic carried rehearsal protects consumed memories and changes live late appraisal 543267ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  15:25:56
+   Duration  548.38s (transform 3.07s, setup 0ms, collect 4.60s, tests 543.27s, environment 0ms, prepare 146ms)
+
+
+Review: removed an unused optional rehearsal parameter accidentally added to withEpisodicState; no call site or executed statement changes. Actual runtime extension alone receives the schedule. Primary behavior remains valid; final types and selected original controls follow.
+
+M167 pending-cue-restore-and-boundaries exit=1 elapsed=127.059s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledRehearsal.test.ts > boundary167: authentic pending cues restore exactly and rehearsal writes roll back 121439ms
+   → expected [Function] to throw an error
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  15:35:58
+   Duration  126.48s (transform 3.07s, setup 0ms, collect 4.58s, tests 121.44s, environment 0ms, prepare 143ms)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledRehearsal.test.ts > boundary167: authentic pending cues restore exactly and rehearsal writes roll back
+SchedulerContractError: expected [Function] to throw an error
+ ❯ fail src/substrate/scheduler.ts:667:9
+    665|\x20
+    666| function fail(code: SchedulerFailureCode, message: string): never {
+    667|   throw new SchedulerContractError(code, message);
+       |         ^
+    668| }
+    669|\x20
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:390:11
+ ❯ Object.settleNextInstant src/assembled/character.ts:45:66
+ ❯ Module.through src/test/assembledDefining.test.ts:15:126
+ ❯ src/test/assembledRehearsal.test.ts:85:25
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'TRANSITION_FAILURE', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+Before rerun: boundary127.059s failed because spy intercepted both task-appraisal and task-concern at50 and demanded duplicate-use rejection on the latter no-op. Fix exact event filter. Review also found consumed-use guard wrongly restricted eligible operands to the carried delivery rather than the actual shared workspace recall union. Repair per existing contract, add one native overlap prefix19 (sample18; capacity17/workspace32) to catch a real cross-delivery operand; primary scenarios/laws/acceptance and1800s budget unchanged. Pure single-delivery primary projections are unchanged; full active continuation below runs final guard.
+
+M167 boundary-exact-event-repair exit=124 elapsed=600.133s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+
+TIMEOUT (full process tree stopped)
+
+Boundary retry hit600s command cap; process tree stopped. M167 remains incomplete. No budget extension or continuation-gate relaxation. Remaining budget is for the already declared overlap, original controls and static/preservation checks, not another long retry.
+
+M167 shared-recall-union exit=0 elapsed=165.390s cap=180
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRehearsal.test.ts > overlap167: attribution consumes authentic operands from the shared recall union
+M167 OVERLAP PASS same character/workspace: genuine ordinary body recall supplies old1 omitted by carried top8; Supported attribution consumes16 original children, receipt join admits their current delivery union; ordinary new18 earns no rehearsal credit. Native overlap prefix19 only, no final-family capacity claim.
+
+ ✓ src/test/assembledRehearsal.test.ts > overlap167: attribution consumes authentic operands from the shared recall union 159762ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 9 skipped (10)
+   Start at  15:50:27
+   Duration  164.83s (transform 3.05s, setup 0ms, collect 4.59s, tests 159.76s, environment 0ms, prepare 132ms)
+
+
+M167 final-types exit=0 elapsed=20.043s cap=60
+
+M167 immutable-native158 exit=0 elapsed=135.458s cap=160
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledTimeDomainNative.test.ts > native158: unchanged current model retains every canonical boundary with actual performance learning
+M158 NATIVE PASS 18 canonical boundaries;2 actual performance observations, unengaged expectation null/learned value state; full queues101; exact save6 continuation
+
+ ✓ src/test/assembledTimeDomainNative.test.ts > native158: unchanged current model retains every canonical boundary with actual performance learning 129935ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  15:54:39
+   Duration  134.89s (transform 3.00s, setup 0ms, collect 4.50s, tests 129.94s, environment 0ms, prepare 146ms)
+
+
+M167 original-primary166 exit=0 elapsed=97.520s cap=120
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledPositionPresentation.test.ts > primary166: actual presentation frequency changes recall and live spatial appraisal
+M166 PRIMARY PASS actual histories -> original-kernel exact rank ->1/10 Farther vs10/11 Same at12; unselected11 retained/uncredited; actual publication receipts; immutable content/equal body; save11 exact full tail101
+
+ ✓ src/test/assembledPositionPresentation.test.ts > primary166: actual presentation frequency changes recall and live spatial appraisal 91948ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 9 skipped (10)
+   Start at  15:57:07
+   Duration  96.95s (transform 3.03s, setup 0ms, collect 4.55s, tests 91.95s, environment 0ms, prepare 141ms)
+
+
+M167 boundary-research-metadata exit=0 elapsed=6.583s cap=30
+Reference boundary check passed.
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4387}
+
+M167 preservation exit=0 elapsed=0.532s cap=20
+M167 PRESERVATION PASS: six frozen trees, baseline and corpus unchanged;8 declared production/test paths;132 unique clauses with E61/P45/N13/U13
+M167 LIMITS PASS: register 226 lines/65299 CRLF bytes; evidence 2 files/13330 bytes; planning caps retained
+
+M167 staged-size-scope exit=0 elapsed=0.731s cap=20
+PASS: Git index contains no files at or above50,000,000 bytes.
+M167 exact staged scope14 files; whitespace and Git size PASS
+
+M167 final timed verification 1744.516/1800s including2s plan/check allowance. INCOMPLETE: primary/overlap and selected regressions pass; candidate recovery command timed out at600s. No extension or candidate recovery PASS.
