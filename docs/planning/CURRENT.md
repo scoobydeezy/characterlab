@@ -19,6 +19,7 @@ Formal mapping committed before implementation; existing ledger dispositions rem
 Current130 consumes actual frozen SEM classifications and positive shared encoding;
 prior-only recognition before140 formation/fragmentation. No independent channel,
 store, runtime or authored familiarity. Appearance imprints share existing capacity.
+No second imprint when an encounter already qualifies for claim-memory encoding.
 Existing claim-bearing episodes remain exact controls/consumers; initial witness
 uses neutral appearances with no claim episode, so detail loss has no retained copy.
 No claim of erasing all incidental copies from arbitrary claim-bearing experiences.

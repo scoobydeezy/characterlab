@@ -55,3 +55,13 @@ MEC022 immutable history remain. No reduction or retired owner. RO005/006/007/01
 019/020 retain broader natural features, reconstruction, general retention and future
 consumer claims. This integration addresses only bounded12.3-6/7, not full family.
 Default12 production/test files,1800s verification/600s command,20 artifacts/5MiB.
+
+## Pre-verification amendment: one encoding per encounter
+Review identified a duplicate-capacity risk. When the existing social path admits a
+claim episode, do not also acquire an appearance imprint from that encounter.
+Familiarity can still query earlier appearance imprints. The new imprint domain is
+selected encounters without that claim encoding; full claim-memory fragmentation
+and familiarity from its overlapping retained content remain unqualified.
+This preserves the old memory footprint rather than charging twice for one event.
+The neutral native comparison, laws, budgets and acceptance criteria are unchanged.
+Add a current-successor claim-path control for no duplicate appearance acquisition.
