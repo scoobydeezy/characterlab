@@ -32,3 +32,10 @@ correctly stays absent. Preserve that null and actual learned values in the nati
 comparison; engagement-qualified expectation is checked through its component owner.
 Extended trace versions append +time-domain/0.1-candidate to the original seam
 version; legacy trace bytes stay unchanged. No current model selects the extension.
+
+M159 extends this same internal contract to retained priority/adoption time, habit
+observation/reward history, control goal/maintenance time, reappraisal knowledge/
+frame time, and fatigue/rumination observations and their consumers. Counts, IDs,
+capacity, immutable importance, original adoption-at1, deadlines, learned-history
+folds, prior-only gates and frame support remain unchanged. All public construction
+still defaults to100; no extended model admission or new law is authorized here.

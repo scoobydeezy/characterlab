@@ -1,35 +1,47 @@
-# Current work — M158 component time domains complete
-Planning, forecast, performance and values components now carry an explicit clock
-bound through their existing owners and handlers. Current native behavior remains
-exactly preserved on rules/registry0.117.
-[Result](ASSEMBLED_CHARACTER_M158_RESULT.md), [checks](ASSEMBLED_CHARACTER_M158_CHECKS.txt).
-Contract: [internal time-domain0.1](../formal/ASSEMBLED_INTERNAL_TIME_DOMAIN_V0_1.md).
+# Current work — M159 control and goal clock domains
+Baseline ba406f6c; one active dependency package. Public rules/registry stay0.117.
+Extend M158's explicit100/1000000 time domain through the goal/control group.
+Three capabilities: (1) retained importance and habit/reward history at extended
+times; (2) control, reappraisal, fatigue and rumination owners/consumers share that
+bound; (3) unchanged current native bytes and affected legacy controls remain valid.
 
-M158 passes as a dependency package, not late-character or defining-memory closure.
-Default100 remains; extended1000000 is component-only until model/source activation.
-No added owner, runtime, state store, scheduler, law or scenario-specific pipeline.
-Original source IDs, absolute times, counts, caps, ownership and history remain.
-Three component tests cover100/101/4000/1000000, invalid domains, folds/support,
-write/read/restore, authority, authenticated children and late prior consumption.
-The unchanged M150 collective-receipt current run matches18 complete canonical
-boundaries against pre-edit baseline, including exact save6 continuation.
-Its two unengaged reports correctly leave expectations absent; learned values remain.
-Qualified expectation is a detached component control, not a native producer claim.
-Seventeen legacy controls pass; skipped matrices/imported tests are not passes.
-Types, boundaries, research, frozen preservation and Git size pass.
-Eleven production/test files; evidence and verification remain within fixed budgets.
-The first baseline assumption failure and its pre-edit correction remain recorded.
+Production9: priority.ts, priorityExecution.ts, habit.ts, habitExecution.ts,
+control.ts, controlExecution.ts, reappraisal.ts, fatigue.ts, rumination.ts.
+One new test: assembledControlTimeDomain.test.ts. Max12 production/test files.
+Use existing internal time-domain0.1 contract, with this group added before code.
+No new owner/state/scheduler, public activation, timestamp shift or psychology law.
+Only absolute time bounds change; count, capacity, ID, route, historical adoption-at1
+and deadline rules remain. Default arguments preserve100 and old trace versions.
+Explicit extended traces use the same +time-domain/0.1-candidate suffix.
 
-Next required integration (write a bounded card before code):
-- Reconcile remaining control/identity/formation and observer/social/communication
-  time validators in dependent packages, preserving their actual authority/consumers.
-- Activate one versioned clock domain atomically with source admission only once
-  all affected owners are ready. Do not bypass ingress or remap timestamps.
-- Then rerun the unchanged old-memory appraisal4000 benchmark, still BLOCKED after
-  M157's time100 admission failure. No replacement comparison or coverage credit.
+Predeclared comparison:
+- Production validators/owners at100,101,4000,1000000: exact provenance and folds,
+  write/read/restore; default rejects late; limit+1 and forged limits reject.
+- Actual control/fatigue/rumination source -> bound observation -> shared learning;
+  retained late evidence consumed by control/workspace or unchanged kernel predicates.
+  Priority/habit/reappraisal retain their producer/consumer plumbing and are checked
+  through actual owner state and applicable handlers. Detached component controls
+  are not full late-character runs and cannot close the memory benchmark.
+- Wrong authority, mixed patch, rewrite/order, missing frame support, capacities,
+  current/prior separation, denied evidence and child-binding controls.
+- Reuse M158's immutable native baseline and native158 test once: current M150
+  collective receipts0.117/seed0/body10, no learned start, full queues192 failurecap,
+  all18 canonical boundaries and save6 continuation. Do not regenerate the receipt.
+- Legacy group A: priority/habit/control tests matching
+  controls:.*(original|finite|admission) (six controls).
+  Group B: fatigue/rumination/reappraisal matching
+  original:|boundaries:|admission:|persistence:|hidden:|epistemic: (nine controls).
+  These cover old math, privacy, real consumers, authority, rollback and continuation.
+  Seed matrices are not repeated for this representation-only change.
 
-F-12.3 P2 defining breadth remains open. E61/P45/N13/U13=132 unchanged;
-21 version-scoped corpus mappings,0/15 families accepted. Final current replay remains.
-MEC007/010 distinctions, MEC019 execution/report and MEC022 historical provenance
-retain their dispositions. No UI, autonomous peer, reduction or new Campaign3 verdict.
+Serial checks only;1800s cumulative including failures, no extension.
+Component240s; native300s; legacy A360s/B480s; types120s; metadata120s.
+20 evidence files/5MiB; one compact result/log, no new baseline/verifier/catalog.
+Done when component controls, exact current native baseline/restore, affected legacy
+checks, types/boundary/research/frozen/size all pass. Stop verification on that pass.
+MEC007/010,019/022 distinctions and relevant conditional obligations retained.
+F-12.3 P2 remains open; E61/P45/N13/U13,21 mappings/0families unchanged.
+After this group, identity/formation and observer/social/communication/other guards
+still require bounded reconciliation, then atomic activation and unchanged4000
+memory appraisal. No unrelated breadth, UI, autonomous peers or reduction.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
