@@ -29,3 +29,11 @@ This witness alone does not qualify general biography, autonomous rehearsal, nat
 position-use counters, continuous ageing, current reports about historical truth,
 or original public rank/publication magnitudes. No reduction or final family closure.
 MEC004/007/008/009/010/022; RO005/006/007/009/010/017/019/020/021 remain conditional.
+
+## Bounded package split after source admission failure
+M157 implements/qualifies maintenance lifetimes only. The described4000 memory
+comparison remains blocked, unchanged and unqualified. Ordinary source admission
+and downstream journals still enforce100; no such field is widened by this version.
+The native foundation witness compares expiry101/5001 using early inputs, real goal
+adoption/expiry, immutable acquired history and exact continuation/rollback.
+A later package must reconcile the full time domain before the memory comparison.

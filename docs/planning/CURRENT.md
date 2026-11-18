@@ -1,47 +1,42 @@
-# Current work — M157 old significant memory at a later appraisal
-Baseline f3192b40. One active package; no UI/autonomous peers.
-Capabilities: configurable maintenance horizon; significance protects an acquired
-old episode; actual later recollection changes current spatial assessment.
-BRIEF-12.3-2 bounded native witness, not autobiographical identity or family acceptance.
-Use existing owners346/373, scheduler/trace/save, current0.116 composition.
-Successor rules/registry0.117. No new root, selector, retention or appraisal law.
+# Current work — M157 maintenance lifetime foundation (split package)
+Baseline f3192b40; initial card8e99331d. One active milestone.
+The planned old-memory appraisal4000 failed admission: strategy planning time1..100.
+Read-through found that input times, plan/forecast journals, performance provenance
+and identity eligibility also retain100 bounds. Changing only admission is unsound.
+Do not shorten the memory benchmark or mark BRIEF-12.3-2 complete.
+Split here under the work-order file/scope rule. Original failed test stays skipped
+with an explicit blocked label and its failure log; it is not a passed test.
 
-Maintenance declarations optionally append unsigned expiry (activeFrom<expiry<=1000000)
-in0.117 only. Omission preserves101; old versions reject new field. Both reserve and
-spatial adoption/deadline/validation use declared expiry. First-use engineering domain.
-Original defining-public/0.1 horizons/control semantics remain reference, not imported
-factory. Original SignificanceFirst/SharedProtection/UseOnly/AgeOnly retained controls.
-MEC004 evidence,007 outcome relevance,008/009 access,010 retention,022 history preserved.
+M157 now completes the necessary maintenance-lifetime foundation only:
+(1) versioned configurable expiry, (2) actual Open->Expired at declared deadline,
+(3) history-preserving repeat/restore/rollback. Memory integration gate stays open.
+Rules/registry0.117; existing goal owner373,52 slots, shared model/state/scheduler.
+Optional unsigned expiry after existing reserve/spatial declaration; omission101.
+Require activeFrom<expiry<=1000000, old versions reject extra fields.
+No new law, source clock widening, owner, store or dormant alternate pipeline.
 
-Scenario: one holder/three physical tasks, body30/rate10/width1, seed0, no learned S0.
-Current52-slot composition, shared UnitBudget/reference calibration/feedback TRUE.
-Four observed position/body trials1..16; live attribution/goal assessment17.
-Same observed history and current spatial goal[0,0]; historical reserve High/Wide
-makes significance/no significance. Low gives deterioration; absent stays unavailable.
-Reference SignificanceFirst in main arms. Capacity16/recall16/workspace20.
-Pressure18..30 plus fresh x2 observations3998/3999; actual query/appraisal4000.
-Maintenance expiry5001; tasks5000. Full natural queue exhaustion,192-instant failurecap.
-Sparse time is disclosed: no inference of4000 active cognitive cycles.
-At17 require Supported attribution/Assessed meaning except declared absent control.
-At4000 require live spatial appraisal both main arms: old x1/new x2 => Farther,
-only new x2/x2 => Same. Equal current goal and body; history/credit/content separated.
-No final-choice/dice claim; causal appraisal path must disclose zero random draws.
-High/Low old original observation content must stay immutable through later recall.
+Native foundation comparison uses current M156-era normal appearance/decision
+fixture, body10/seed0, normal existing evidence, no learned S0. Same desired
+reserve[30,31]/spatial[0,0], early inputs, reference laws; expiry101 vs5001 only.
+Require actual live Open goals before101; short Expired/long Open at101; long
+Expired at5001 through natural queue exhaustion. No late planning/source input.
+Historical observations/episodes before expiry must remain unchanged.
+Default101 successor preserves prior0.116 state/output each settled instant.
+Exact independent repeat/save5/save101 every later canonical boundary; forced
+failure after real5001 expiry rolls back whole instant, recovered continuation exact.
+Admission: both declarations, old-version/expiry bounds. No choice/old-memory claim.
 
-Production scope2: goalMeaning.ts, model.ts. Tests up to3: fixture/assembledDefining.ts,
-assembledDefining.test.ts, assembledDefiningControls.test.ts. Maximum12 if ordinary
-current-composition integration repairs are needed, named before edits.
-Predeclare native AgeOnly and recall0 controls; original four-law kernels on captured
-retention operands. Hidden reserve30/30.5 must yield identical perceived history,
-assessment/credit; no source truth used as defining flag.
-Admission old-version/expiry bounds, default101 preservation, exact repeat/save17/
-save3999 every later canonical boundary, deadline lifecycle/rollback, types,
-original defining/retention controls, boundary/research/preservation/staged-size.
-Serial jobs only. Native groups<=540s; types120s; original suites120s; metadata120s.
-1800s cumulative including failures;20 evidence files/5MiB; one compact result/log.
-No seed search, law tuning, acceptance weakening or verification extension.
-Done when native acquired credit->old survival->actual recall->different live
-appraisal, immutable history, continuation/rollback and current default preservation
-pass. Full defining reinterpretation/use-count breadth stays explicit if unexercised.
-E61/P45/N13/U13 remains until evidence. All21/15/132 final replay gates unchanged.
+Production2: goalMeaning.ts/model.ts. Tests3: fixtures/assembledDefining.ts,
+assembledDefining.test.ts, assembledDefiningControls.test.ts. Max12.
+Original defining meaning, significance retention, use protection/recency tests
+retain comparator/control status; no whole historical public-suite rerun warranted.
+Serial types120s/native groups540s/original suites120s/metadata120s.
+1800s cumulative INCLUDING original type/admission failures;20 evidence files/5MiB.
+One compact result/log; preserve all failures. No verification extension.
+MEC004/007/008/009/010/022; obligations remain conditional; no reduction.
+Done when foundation comparison, default preservation, continuation/rollback,
+types/boundary/research/frozen preservation/size pass. Explicitly not old-memory closure.
+Next bounded work: reconcile the source and downstream time domain before rerunning
+the unchanged4000 memory benchmark. Keep original law/reference/seed and comparison.
+E61/P45/N13/U13 unchanged;21 mappings/0acceptedfamilies; final21/15/132 gates remain.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
