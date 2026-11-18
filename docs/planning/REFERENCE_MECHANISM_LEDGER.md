@@ -1097,3 +1097,11 @@ maintenance activation and hidden-source/timed-comparison adapters. MEC004/015/0
 provenance distinctions. Six component gates pass; no new psychology, state owner,
 source retiming, retired mechanism or family credit. Public activation remains open.
 [Bounded result](ASSEMBLED_CHARACTER_M162_RESULT.md).
+
+M163 activates the assembled0.118 clock across the existing owners and one runtime.
+MEC004/007/008/009/010/015/019/020/022 retain their dispositions. Acquired significant
+old15 survives pressure and changes native appraisal4000; cancellation4000 remains
+atomic. Independent repeat/save17 continuation is exact through5001. Legacy source
+shape migrates explicitly with effect-evidence permission false in the new test only;
+frozen controls remain. No new law, store, retired mechanism or family promotion.
+[Bounded result](ASSEMBLED_CHARACTER_M163_RESULT.md).

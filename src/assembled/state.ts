@@ -1,3 +1,5 @@
+import {decodeCognitive as decodeSuccessor} from './codecs';
+import {restoreAuthoritativeState} from '../substrate/state';
 import {withWorkMaintenanceState} from './workMaintenance';
 import {withAssociationState} from './learnedAssociation';
 import {withEffectBelief} from './effectEvidence';
@@ -69,7 +71,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
    if(u(f(reference,1n))!==1n||occurrence.namespaceId!==1115n||typeof occurrence.payload==='boolean'||occurrence.payload.kind!=='unsigned')invalidModel('satisfied task requires observation');
    if(typeof at==='boolean'||at.kind!=='signed'||at.value<task.activeFrom||at.value>=task.deadline)invalidModel('task satisfaction outside active window');
   }else if(tag===4n){
-   const at=f(status,2n);if(!model.commitmentLifecycle||status.schema.schemaVersion!==2n||typeof at==='boolean'||at.kind!=='signed'||at.value>=task.deadline)invalidModel('cancelled task domain/version');
+   const at=f(status,2n);if(!model.commitmentLifecycle||status.schema.schemaVersion!==(model.extendedTime?3n:2n)||typeof at==='boolean'||at.kind!=='signed'||at.value<1n||at.value>model.timeLimit||at.value>=task.deadline)invalidModel('cancelled task domain/version');
   }else if(tag!==1n&&tag!==3n)invalidModel('task status variant');
  }
  function validateState(state:AuthoritativeState){
@@ -96,22 +98,23 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  const episodes=model.memory?withEpisodicState(inheritedState,C,model.body!,!!model.affectMemory,model.encoding,!!model.memoryUse,model.bodyMemoryUse,model.positionMemory,model.retainedAttribution,model.significanceEnabled,model.actionMemory,model.effectEvidence?.proposition,model.social?.beliefTrials?32n:8n,model.familiarity,model.recollection,model.vivid):inheritedState;
  const embodied=model.body?withBodyState(episodes,C,model.body):episodes;
  const retained=model.retention?withRetentionState(embodied,C):embodied;
- const procedural=model.skill?withSkillState(retained,C,model.procedures,model.formationEnabled,model.skillInterference):retained;
- const planned=model.strategy?withStrategyState(procedural,C,model.strategy):procedural;
- const prioritized=model.priority?withPriorityState(planned,tasks.map(t=>t.key),model.goalMeaning?{C,settings:model.goalMeaning}:undefined,model.spatialMeaning?{C,settings:model.spatialMeaning}:undefined,model.commitmentAdoption):planned;
- const forecasted=model.horizon?withHorizonState(prioritized,tasks.map(t=>t.key)):prioritized;
- const monitored=model.performance?withPerformanceState(forecasted,model.strategy!,model.expectationEnabled,model.selfBeliefEnabled?C:undefined,model.values,model.causalEnabled,model.interferenceEnabled):forecasted;
- const habitual=model.habit?withHabitState(monitored,C):monitored;
- const controlled=model.control?withControlState(habitual,C,model.mitigationEnabled?3:model.sharedAffectSources?2:model.reappraisal!==undefined,model.fatigue!==undefined,model.rumination):habitual;
- const communicating=model.communication?withCommunicationState(controlled,[...(model.communication.topic?[]:[C]),...model.communication.recipients],model.communication.topic,model.communication.expectation,model.commitmentWitness?tasks.map(t=>t.key):[]):controlled;
- const socialized=model.social?withSocialState(communicating,C,model.social.target,model.social.targets,!!model.loss,!!model.embarrassment,model.social.beliefTrials,model.socialWitness?.observers):communicating;
- const related=model.relationship?withRelationshipState(socialized,C,model.relationship.target,model.relationship.bindings.map(b=>b.target),model.attachment):socialized;
+ const procedural=model.skill?withSkillState(retained,C,model.procedures,model.formationEnabled,model.skillInterference,model.timeLimit):retained;
+ const planned=model.strategy?withStrategyState(procedural,C,model.strategy,model.timeLimit):procedural;
+ const prioritized=model.priority?withPriorityState(planned,tasks.map(t=>t.key),model.goalMeaning?{C,settings:model.goalMeaning}:undefined,model.spatialMeaning?{C,settings:model.spatialMeaning}:undefined,model.commitmentAdoption,model.timeLimit):planned;
+ const forecasted=model.horizon?withHorizonState(prioritized,tasks.map(t=>t.key),model.timeLimit):prioritized;
+ const monitored=model.performance?withPerformanceState(forecasted,model.strategy!,model.expectationEnabled,model.selfBeliefEnabled?C:undefined,model.values,model.causalEnabled,model.interferenceEnabled,model.timeLimit):forecasted;
+ const habitual=model.habit?withHabitState(monitored,C,model.timeLimit):monitored;
+ const controlled=model.control?withControlState(habitual,C,model.mitigationEnabled?3:model.sharedAffectSources?2:model.reappraisal!==undefined,model.fatigue!==undefined,model.rumination,model.timeLimit):habitual;
+ const communicating=model.communication?withCommunicationState(controlled,[...(model.communication.topic?[]:[C]),...model.communication.recipients],model.communication.topic,model.communication.expectation,model.commitmentWitness?tasks.map(t=>t.key):[],model.timeLimit):controlled;
+ const socialized=model.social?withSocialState(communicating,C,model.social.target,model.social.targets,!!model.loss,!!model.embarrassment,model.social.beliefTrials,model.socialWitness?.observers,model.timeLimit):communicating;
+ const related=model.relationship?withRelationshipState(socialized,C,model.relationship.target,model.relationship.bindings.map(b=>b.target),model.attachment,model.timeLimit):socialized;
  const recognized=model.recognition?withRecognitionState(related,model.recognition,!!model.encoding,model.positionEnabled):related;
  const identityRegistration=rec(f(rows.find(v=>key(f(v,1n))===key(typedIdentifier(1009,text('TaskIdentityApplicationTransition'))))!,4n),450n);
- const qualified=model.eligibilityEnabled?withQualifiedIdentityState(recognized,identityKey,id(f(rec(f(identityRegistration,6n),322n),2n))):recognized;
+ const qualified=model.eligibilityEnabled?withQualifiedIdentityState(recognized,identityKey,id(f(rec(f(identityRegistration,6n),322n),2n)),model.timeLimit):recognized;
  const believed=model.effectEvidence?withEffectBelief(qualified,C,model.effectEvidence):qualified;
  const associated=model.affectMemory?.learned?withAssociationState(believed,C,model.affectMemory.learned):believed;
- const stateModel=model.workMaintenance?withWorkMaintenanceState(associated,C,model.workMaintenance,tasks.length):associated;
+ const ownedState=model.workMaintenance?withWorkMaintenanceState(associated,C,model.workMaintenance,tasks.length,model.timeLimit):associated;
+ const stateModel=model.extendedTime?Object.freeze({...ownedState,restoreState(bytes:Uint8Array){const s=restoreAuthoritativeState(decodeSuccessor(bytes));ownedState.validateState(s);return s;}}):ownedState;
  function initialState(bytes:Uint8Array){
   const state=stateModel.restoreState(bytes);
   for(const e of state.entries()){
