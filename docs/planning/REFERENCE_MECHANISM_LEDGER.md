@@ -1105,3 +1105,10 @@ atomic. Independent repeat/save17 continuation is exact through5001. Legacy sour
 shape migrates explicitly with effect-evidence permission false in the new test only;
 frozen controls remain. No new law, store, retired mechanism or family promotion.
 [Bounded result](ASSEMBLED_CHARACTER_M163_RESULT.md).
+
+M165 ports actual spatial-consumer binary use into existing episodic346/1.
+MEC004/007/008/009/010/015/019/020/022 preserve perception/content/retention/access/
+meaning and outcome distinctions. Use and significance coalesce under one owner;
+B0 ranking, original kernels and immutable historical controls remain. Actual
+use changes survival and later appraisal; presentation/rehearsal and full family
+replay stay open. No mechanism retired. [Result](ASSEMBLED_CHARACTER_M165_RESULT.md).

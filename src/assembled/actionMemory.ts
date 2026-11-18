@@ -72,7 +72,7 @@ export function createActionMemory(C:CanonicalValue,config:Config,routes:Strateg
   const unique=new Map<string,CanonicalValue>();
   for(const slot of items(w[4],'list')){const a=items(slot,'list'),v=items(a[1],'list');if(txt(v[0])!==POSITION_EPISODE)continue;validatePositionEpisode(a[1]);if(!eq(a[0],v[1])||time(v[5])>=event.dueAt||unique.has(key(v[1])))fail('workspace identity/time/duplicate');unique.set(key(v[1]),a[1]);}
   const reports:CanonicalValue[]=[],rows=config.map(c=>{
-   const operands=[...unique.values()].filter(v=>{const a=items(v,'list');if(a.length!==9)return false;const annex=validateActionAnnex(a[8],a);return !!(annex&&present&&present.glyph===goal.glyph&&eq(annex.action,c.action)&&eq(annex.task,c.task)&&sameContext(annex.p,present)&&annex.p.x===present.x&&annex.p.y===present.y);});
+   const operands=[...unique.values()].filter(v=>{const a=items(v,'list');if(![9,10].includes(a.length))return false;const annex=validateActionAnnex(a[8],a);return !!(annex&&present&&present.glyph===goal.glyph&&eq(annex.action,c.action)&&eq(annex.task,c.task)&&sameContext(annex.p,present)&&annex.p.x===present.x&&annex.p.y===present.y);});
    const mean=operands.length?operands.reduce((n,v)=>n.add(Q.of(uint(items(items(items(v,'list')[2],'list')[4],'list')[1]))),zero).divide(Q.of(BigInt(operands.length))):undefined;
    const point=(x:Q)=>({lower:x,upper:x});
    const assessment=assessGoalDistance({state:rawGoal?[rawGoal]:[],character:'holder',goal:goal.goal,signal:goal.signal,now:event.dueAt,before:present?point(Q.of(present.x)):null,after:mean?point(mean):null,domains:new Map([[goal.signal,{kind:'MetricInterval',bounds:goal.bounds}]])});
