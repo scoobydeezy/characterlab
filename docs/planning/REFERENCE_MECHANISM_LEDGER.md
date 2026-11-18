@@ -1025,3 +1025,13 @@ Brief12.15-1 bounded; AuditREV84:112 bounded/20 partial/0 blocked;91 verdicts.
 No universal gain/calendar-age claim. RO008/009/010/013/017/019/020/021/022.
 Evidence CAMPAIGN3_DEVELOPMENT_PUBLIC_QUALIFICATION.md and DEVELOPMENT_PUBLIC_CLOSURE_REV1.json.
 Next CAMPAIGN3_PARTIAL_COVERAGE_READINESS.md; no owner ruling; Campaign3 NOT EXIT-READY.
+
+M154 — shared appearance familiarity (rules0.114), [result](ASSEMBLED_CHARACTER_M154_RESULT.md).
+MEC-004 observer-safe classification remains PORT with its identity boundary; familiarity
+adds no identity claim. MEC-008/009 association/retrieval CONTROL dispositions remain.
+MEC-010 gains a bounded PORT of prior-only PartialMax and age3 peripheral attrition
+inside episodic346; shared capacity/authority, no new store. Original familiarity
+alternatives and missing/hidden-truth violation controls remain CONTROL+CORPUS.
+MEC-022 frozen source/provenance remains CONTRACT. Neutral claim-free imprints only:
+full claim-memory fragmentation and general reconstruction remain unqualified.
+RO-C3-005/006/007/017/019/020 stay conditional; no reduction or historical rewrite.

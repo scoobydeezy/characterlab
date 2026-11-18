@@ -35,7 +35,7 @@ import {executeMeasurementIntake} from '../campaign2/measurementExecution';
 import {compileOrderedInputProfile,beginProbeSourceInstant,PROBE_SOURCE_EVENT,AUTHORED_FACT_EVENT,DELIBERATION_EVENT} from '../campaign2/orderedInputs';
 import {beginTransitionIngressV04} from '../campaign2/transitionIngressV04';
 import {adaptationExecutionDiffs} from '../campaign2/adaptationEvaluation';
-import {dataKey as key,dataRecord as rec,dataField as f,dataIdentity as id,dataText as txt} from '../campaign2/canonicalData';
+import {dataItems as items,dataKey as key,dataRecord as rec,dataField as f,dataIdentity as id,dataText as txt} from '../campaign2/canonicalData';
 import {decodeCampaign2} from '../campaign2/codecs';
 import {admittedInputFacts} from '../campaign2/admittedInput';
 import {evidOperands,executeEvid} from '../campaign2/evidExecution';
@@ -83,7 +83,7 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
  const procedure=model.skill?createSkillExecution(component.tasks[0].character,stateModel,inputs.skillEvents,modelIdentity,inputs.runIdentity.value,model.procedures,model.actionBody,model.skillInterference):undefined;
  const body=model.body?createBodyExecution(model.body,component.tasks[0].character,stateModel,inputs.bodyEvents,modelIdentity,inputs.runIdentity.value,model.actionBody,procedure,model.tolerance,model.retainedAttribution?()=>position!.contextForBody():undefined):undefined;
  if(model.affectMemory&&inputs.socialEvents.length>(model.affectMemory.acquisitionPresentation?31:32))throw new SchedulerContractError('INPUT_NOT_ADMITTED','affect memory presentation capacity including acquisition');
- const episodes=model.memory?createEpisodicExtension(component.tasks[0].character,model.body!,stateModel,modelIdentity,inputs.runIdentity.value,model.retention?.recallDelay,model.retrieval,model.workspace,model.socialMemory,model.affectMemory,()=>reappraisal?.completedAffect(),model.encoding,model.memoryUse,model.bodyMemoryUse,model.positionMemory,model.retainedAttribution,model.significanceEnabled,!!model.actionMemory,model.effectEvidence?.proposition):undefined;
+ const episodes=model.memory?createEpisodicExtension(component.tasks[0].character,model.body!,stateModel,modelIdentity,inputs.runIdentity.value,model.retention?.recallDelay,model.retrieval,model.workspace,model.socialMemory,model.affectMemory,()=>reappraisal?.completedAffect(),model.encoding,model.memoryUse,model.bodyMemoryUse,model.positionMemory,model.retainedAttribution,model.significanceEnabled,!!model.actionMemory,model.effectEvidence?.proposition,model.familiarity):undefined;
  const causal=model.causalEnabled?createCausalExecution(component.tasks[0].character,model.strategy!,stateModel,inputs.causalEvents,modelIdentity,inputs.runIdentity.value,model.interferenceEnabled,model.causalOpportunities):undefined;
  const values=model.values?createValuesExecution(component.tasks[0].character,model.values,stateModel,inputs.valuesEvents,modelIdentity,inputs.runIdentity.value):undefined;
  const performance=model.performance?createPerformanceExecution(component.tasks[0].character,model.strategy!,stateModel,inputs.performanceEvents,modelIdentity,inputs.runIdentity.value,model.actionBody!,model.expectationEnabled,values):undefined;
@@ -133,7 +133,16 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
   for(const eventType of reasonEvidence?.eventTypes()??[])registerHandler(key(eventType),context=>reasonEvidence!.execute(context));
   for(const eventType of position?.eventTypes()??[])registerHandler(key(eventType),context=>{const result=position!.execute(context);const extra=result.memoryEvidence?episodes!.observePosition(context.event,result.memoryEvidence,()=>context.allocateRuntimeId(),actionMemory?.capture(context.state,result.memoryEvidence)):undefined;if(result.memoryEvidence&&extra?.emissions.length)currentPosition=result.memoryEvidence;if(!extra)return result;const own=result.emittedEvents.length;return {...result,outputs:[...result.outputs,...extra.outputs],emittedEvents:[...result.emittedEvents,...extra.emissions],traceFactory(children:readonly ScheduledEvent[]){const trace=result.traceFactory(children.slice(0,own)),tail=children.slice(own);extra.bind(tail);return [...trace,extra.trace(tail)];}};});
   for(const eventType of relationship?.eventTypes()??[])registerHandler(key(eventType),context=>relationship!.execute(context));
-  for(const eventType of social?.eventTypes()??[])registerHandler(key(eventType),context=>{const result=social!.execute(context),e=result.memoryEvidence,extra=e?episodes?.observeSocial(context.event,e.observation,e.experience,context.state,()=>context.allocateRuntimeId(),e.encoding):undefined;if(!extra)return result;const own=result.emittedEvents.length;return {...result,outputs:[...result.outputs,...extra.outputs],emittedEvents:[...result.emittedEvents,...extra.emissions],traceFactory(children){const tail=children.slice(own);extra.bind(tail);return [...result.traceFactory(children.slice(0,own)),extra.trace(tail)];}};});
+  for(const eventType of social?.eventTypes()??[])registerHandler(key(eventType),context=>{
+   const result=social!.execute(context),e=result.memoryEvidence;
+   const plans=[e?episodes?.observeSocial(context.event,e.observation,e.experience,context.state,()=>context.allocateRuntimeId(),e.encoding):undefined,
+    episodes?.observeAppearance(context.event,result.appearanceEvidence,context.state,()=>context.allocateRuntimeId(),!(e&&e.encoding?.positive&&items(items(e.observation,'list')[6],'list').length===1))].filter((p):p is NonNullable<typeof p>=>!!p);
+   if(!plans.length)return result;const own=result.emittedEvents.length;
+   return {...result,outputs:[...result.outputs,...plans.flatMap(p=>p.outputs)],emittedEvents:[...result.emittedEvents,...plans.flatMap(p=>p.emissions)],traceFactory(children:readonly ScheduledEvent[]){
+    const traces=result.traceFactory(children.slice(0,own));let offset=own;
+    for(const p of plans){const tail=children.slice(offset,offset+p.emissions.length);offset+=p.emissions.length;p.bind(tail);traces.push(p.trace(tail));}return traces;
+   }};
+  });
   for(const eventType of communication?.eventTypes()??[])registerHandler(key(eventType),context=>communication!.execute(context));
   for(const eventType of control?.eventTypes()??[])registerHandler(key(eventType),context=>control!.execute(context));
   for(const eventType of habit?.eventTypes()??[])registerHandler(key(eventType),context=>habit!.execute(context));

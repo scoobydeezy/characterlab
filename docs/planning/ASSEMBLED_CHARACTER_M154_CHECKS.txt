@@ -1,0 +1,232 @@
+
+M154 TYPES exit=2 elapsed=4.704s cap120
+src/assembled/familiarity.ts(44,337): error TS1005: ';' expected.
+
+M154 TYPES repair exit=0 elapsed=19.222s cap=120
+
+M154 PRIMARY exit=1 elapsed=70.684s cap=540
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledFamiliarity.test.ts (8 tests | 1 failed | 7 skipped) 64390ms
+   × primary154: selected neutral appearance loses actual detail and later remains familiar without identity 64389ms
+     → assembled retention: formed episode union mismatch
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  19:35:34
+   Duration  69.62s (transform 3.05s, setup 0ms, collect 4.56s, tests 64.39s, environment 0ms, prepare 346ms)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledFamiliarity.test.ts > primary154: selected neutral appearance loses actual detail and later remains familiar without identity
+SchedulerContractError: assembled retention: formed episode union mismatch
+ ❯ fail src/assembled/retention.ts:22:37
+
+ ❯ Object.finish src/assembled/retention.ts:73:320
+ ❯ Object.finish src/assembled/runtime.ts:423:36
+ ❯ Object.finish src/assembled/runtime.ts:428:209
+ ❯ Object.finish src/assembled/runtime.ts:437:586
+ ❯ Object.finish src/assembled/runtime.ts:461:570
+ ❯ Object.finish src/assembled/runtime.ts:465:618
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:436:51
+ ❯ Object.settleNextInstant src/assembled/character.ts:45:66
+ ❯ through src/test/assembledFamiliarity.test.ts:12:121
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+M154 TYPES full implementation exit=2 elapsed=19.433s cap=120
+src/test/assembledFamiliarityControls.test.ts(25,44): error TS2345: Argument of type 'readonly CanonicalValue[]' is not assignable to parameter of type 'CanonicalValue[]'.
+  The type 'readonly CanonicalValue[]' is 'readonly' and cannot be assigned to the mutable type 'CanonicalValue[]'.
+src/test/assembledFamiliarityControls.test.ts(26,33): error TS2345: Argument of type 'readonly CanonicalValue[]' is not assignable to parameter of type 'CanonicalValue[]'.
+  The type 'readonly CanonicalValue[]' is 'readonly' and cannot be assigned to the mutable type 'CanonicalValue[]'.
+
+M154 PRIMARY retention repair exit=0 elapsed=75.511s cap=540
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledFamiliarity.test.ts > primary154: selected neutral appearance loses actual detail and later remains familiar without identity
+M154 PRIMARY PASS actual C1/attention ->346 appearance; age3 detail removal; later Familiar; no claim-memory copy; prior-only reads/full queue
+
+ ✓ src/test/assembledFamiliarity.test.ts (8 tests | 7 skipped) 70082ms
+   ✓ primary154: selected neutral appearance loses actual detail and later remains familiar without identity 70081ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  19:38:38
+   Duration  74.95s (transform 2.97s, setup 0ms, collect 4.44s, tests 70.08s, environment 0ms, prepare 142ms)
+
+
+M154 CONTINUATION exit=0 elapsed=118.554s cap=540
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledFamiliarity.test.ts > continuation154: independent repeats and saves before and after fragmentation match all later bytes
+M154 CONTINUATION PASS full state/output/trace/save/identity after saves1/4 through queue exhaustion
+
+ ✓ src/test/assembledFamiliarity.test.ts (8 tests | 7 skipped) 113089ms
+   ✓ continuation154: independent repeats and saves before and after fragmentation match all later bytes 113088ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  19:40:27
+   Duration  117.99s (transform 2.96s, setup 0ms, collect 4.44s, tests 113.09s, environment 0ms, prepare 140ms)
+
+
+M154 SIGNATURES exit=1 elapsed=74.858s cap=540
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledFamiliarityControls.test.ts (10 tests | 1 failed | 9 skipped) 69334ms
+   × signatures154: actual partial disjoint missing and category contrasts match original controls 69333ms
+     → FAMILIARITY_CODEC: id:1167
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 9 skipped (10)
+   Start at  19:43:25
+   Duration  74.28s (transform 3.02s, setup 0ms, collect 4.51s, tests 69.33s, environment 0ms, prepare 148ms)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledFamiliarityControls.test.ts > signatures154: actual partial disjoint missing and category contrasts match original controls
+Error: FAMILIARITY_CODEC: id:1167
+ ❯ fail src/campaign3/familiarityCodecs.ts:10:39
+      8| const added:RecordSchema[]=allocation.records.map(d=>({typeId:BigInt(d…
+      9| const schemas=[...controlSupportedSchemas(),...added],registry=new Rec…
+     10| const fail=(why:string):never=>{throw Error('FAMILIARITY_CODEC: '+why)…
+       |                                       ^
+     11| function envelope(v:CanonicalValue):CanonicalValue {
+     12|  if(typeof v==='boolean')return v;
+ ❯ typed src/campaign3/familiarityCodecs.ts:46:99
+ ❯ validate src/campaign3/familiarityCodecs.ts:61:98
+ ❯ decodeFamiliarity src/campaign3/familiarityCodecs.ts:64:113
+ ❯ Module.familiarityRecord src/campaign3/familiarityCodecs.ts:66:133
+ ❯ original src/test/assembledFamiliarityControls.test.ts:17:12
+ ❯ src/test/assembledFamiliarityControls.test.ts:26:31
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+M154 ADAPTER preflight exit=0 elapsed=5.513s cap=120
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledFamiliarityControls.test.ts (12 tests | 11 skipped) 4ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 11 skipped (12)
+   Start at  19:45:23
+   Duration  4.94s (transform 3.02s, setup 0ms, collect 4.52s, tests 4ms, environment 0ms, prepare 134ms)
+
+
+M154 SIGNATURES namespace repair exit=0 elapsed=134.629s cap=540
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledFamiliarityControls.test.ts > signatures154: actual partial disjoint missing and category contrasts match original controls
+M154 SIGNATURES PASS person/place/partial/disjoint/missing/category isolation; original kernels on actual trace operands; ExactOnly/DetailRequired/MissingAsFalse discriminated
+
+ ✓ src/test/assembledFamiliarityControls.test.ts (12 tests | 11 skipped) 129092ms
+   ✓ signatures154: actual partial disjoint missing and category contrasts match original controls 129092ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 11 skipped (12)
+   Start at  19:45:36
+   Duration  134.06s (transform 3.01s, setup 0ms, collect 4.50s, tests 129.09s, environment 0ms, prepare 141ms)
+
+
+M154 TYPES final source exit=0 elapsed=19.141s cap=120
+
+M154 FINAL primary continuation privacy exit=0 elapsed=171.263s cap=540
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledFamiliarity.test.ts > primary154: selected neutral appearance loses actual detail and later remains familiar without identity
+M154 PRIMARY PASS actual C1/attention ->346 appearance; age3 detail removal; later Familiar; no claim-memory copy; prior-only reads/full queue
+
+stdout | src/test/assembledFamiliarity.test.ts > continuation154: independent repeats and saves before and after fragmentation match all later bytes
+M154 CONTINUATION PASS full state/output/trace/save/identity after saves1/4 through queue exhaustion
+
+stdout | src/test/assembledFamiliarity.test.ts > privacy154: hidden truth and denied old exposure cannot supply familiarity
+M154 PRIVACY PASS hidden truth full safe state/output equality; denied first encounter leaves no history
+
+ ✓ src/test/assembledFamiliarity.test.ts (8 tests | 5 skipped) 165800ms
+   ✓ primary154: selected neutral appearance loses actual detail and later remains familiar without identity 69885ms
+   ✓ continuation154: independent repeats and saves before and after fragmentation match all later bytes 56387ms
+   ✓ privacy154: hidden truth and denied old exposure cannot supply familiarity 39527ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 5 skipped (8)
+   Start at  19:49:54
+   Duration  170.70s (transform 2.97s, setup 0ms, collect 4.44s, tests 165.80s, environment 0ms, prepare 150ms)
+
+
+M154 BOUNDARIES and CLAIM preservation exit=0 elapsed=240.525s cap=540
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledFamiliarityControls.test.ts > boundaries154: real fragment rollback and exact recovered continuation; wrong owners versions and forged learned starts reject
+M154 BOUNDARIES PASS reached actual detail-removal rollback, restored exact full continuation; foreign owner/holder, illegal rewrite, old version and learned S0 rejected
+
+stdout | src/test/assembledFamiliarityControls.test.ts > claimMemory154: current successor preserves the old claim-memory footprint and whole learned state
+M154 CLAIM MEMORY PASS whole state at every settlement equals0.113; no second appearance acquisition; actual current familiarity queries/full queues
+
+ ✓ src/test/assembledFamiliarityControls.test.ts (12 tests | 10 skipped) 234941ms
+   ✓ boundaries154: real fragment rollback and exact recovered continuation; wrong owners versions and forged learned starts reject 105181ms
+   ✓ claimMemory154: current successor preserves the old claim-memory footprint and whole learned state 129759ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 10 skipped (12)
+   Start at  19:52:58
+   Duration  239.95s (transform 3.01s, setup 0ms, collect 4.51s, tests 234.94s, environment 0ms, prepare 138ms)
+
+
+M154 CONTINUATION every boundary exit=0 elapsed=118.330s cap=540
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledFamiliarity.test.ts > continuation154: independent repeats and saves before and after fragmentation match all later bytes
+M154 CONTINUATION PASS full state/output/trace/save/identity after saves1/4 through queue exhaustion
+
+ ✓ src/test/assembledFamiliarity.test.ts (8 tests | 7 skipped) 112850ms
+   ✓ continuation154: independent repeats and saves before and after fragmentation match all later bytes 112849ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  19:59:43
+   Duration  117.76s (transform 2.98s, setup 0ms, collect 4.45s, tests 112.85s, environment 0ms, prepare 150ms)
+
+
+M154 TYPES completion exit=0 elapsed=19.216s cap=120
+
+M154 ORIGINAL public controls exit=0 elapsed=2.806s cap=180
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/familiarityPublic.test.ts (16 tests) 654ms
+
+ Test Files  1 passed (1)
+      Tests  16 passed (16)
+   Start at  20:02:29
+   Duration  2.27s (transform 798ms, setup 0ms, collect 1.20s, tests 654ms, environment 0ms, prepare 149ms)
+
+
+M154 REFERENCE boundary exit=0 elapsed=2.876s cap=120
+Reference boundary check passed.
+
+M154 RESEARCH obligations exit=0 elapsed=3.501s cap=120
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4374}
+
+M154 PRESERVATION initial exit=1 elapsed=0.811s cap=120
+AssertionError: loose family-row filter also selected the SEQ row mentioning F-12.3. No model failure; match the table identifier column instead.
+
+M154 PRESERVATION and limits exit=0 elapsed=0.446s cap=120
+Frozen six trees/baseline/corpus unchanged;11 declared source paths;132 unique clauses E57/P47/N15/U13; register64532bytes;planning/evidence limits PASS.
+
+M154 GIT size exit=0 elapsed=3.379s cap=120
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
