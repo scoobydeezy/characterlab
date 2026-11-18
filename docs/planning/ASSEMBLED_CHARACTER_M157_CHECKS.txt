@@ -1,0 +1,165 @@
+
+M157 TYPES initial exit=2 elapsed=19.802s cap=120
+src/assembled/model.ts(1,14): error TS2451: Cannot redeclare block-scoped variable 'HORIZON_RULES'.
+src/assembled/model.ts(1,72): error TS2451: Cannot redeclare block-scoped variable 'HORIZON_REGISTRY'.
+src/assembled/model.ts(191,14): error TS2451: Cannot redeclare block-scoped variable 'HORIZON_RULES'.
+src/assembled/model.ts(192,14): error TS2451: Cannot redeclare block-scoped variable 'HORIZON_REGISTRY'.
+src/assembled/model.ts(279,8): error TS2451: Cannot redeclare block-scoped variable 'horizon'.
+src/assembled/model.ts(280,2534): error TS2451: Cannot redeclare block-scoped variable 'horizon'.
+
+M157 PRIMARY old memory exit=1 elapsed=64.085s cap=540
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledDefining.test.ts (6 tests | 1 failed | 5 skipped) 58519ms
+   × primary157: acquired significance preserves an old episode that changes actual later appraisal 58518ms
+     → strategy planning time1..100
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 5 skipped (6)
+   Start at  08:24:57
+   Duration  63.50s (transform 3.02s, setup 0ms, collect 4.54s, tests 58.52s, environment 0ms, prepare 142ms)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledDefining.test.ts > primary157: acquired significance preserves an old episode that changes actual later appraisal
+SchedulerContractError: strategy planning time1..100
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.compileCharacterInputs src/assembled/inputs.ts:57:202
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:69
+ ❯ start src/test/assembledDefining.test.ts:17:212
+ ❯ src/test/assembledDefining.test.ts:32:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+M157 TYPES split package exit=0 elapsed=19.235s cap=120
+
+M157 FOUNDATION lifetime comparison exit=1 elapsed=64.127s cap=540
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledDefining.test.ts (7 tests | 1 failed | 6 skipped) 58647ms
+   × foundation157: declared expiry changes real goal lifetime without rewriting acquired history 58646ms
+     → assembled trace requires exact model/run binding
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 6 skipped (7)
+   Start at  08:29:56
+   Duration  63.55s (transform 2.98s, setup 0ms, collect 4.47s, tests 58.65s, environment 0ms, prepare 142ms)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledDefining.test.ts > foundation157: declared expiry changes real goal lifetime without rewriting acquired history
+SchedulerContractError: assembled trace requires exact model/run binding
+ ❯ Module.compileCharacterTraceBinding src/assembled/traceBinding.ts:33:2189
+
+ ❯ Module.createCharacterRuntime src/assembled/runtime.ts:116:14
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:122
+ ❯ foundationRun src/test/assembledDefining.test.ts:43:120
+ ❯ src/test/assembledDefining.test.ts:47:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+M157 FOUNDATION repaired binding exit=0 elapsed=90.910s cap=540
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDefining.test.ts > foundation157: declared expiry changes real goal lifetime without rewriting acquired history
+M157 FOUNDATION PASS both goals live Open before101; short Expired/long Open101; actual5001 expiry preserves acquired episode/history bytes. Original4000 appraisal remains BLOCKED, not passed.
+
+ ✓ src/test/assembledDefining.test.ts (7 tests | 6 skipped) 85438ms
+   ✓ foundation157: declared expiry changes real goal lifetime without rewriting acquired history 85437ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  08:31:57
+   Duration  90.36s (transform 2.98s, setup 0ms, collect 4.48s, tests 85.44s, environment 0ms, prepare 140ms)
+
+
+M157 ADMISSION and default preservation exit=0 elapsed=92.104s cap=540
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDefiningControls.test.ts > admission157: expiry is explicit versioned configuration and existing deadlines remain101
+M157 ADMISSION PASS old-version rejection, expiry bounds, both bootstrap deadlines, omitted default101.
+
+stdout | src/test/assembledDefiningControls.test.ts > preservation157: default horizon retains predecessor state and outputs at every settlement
+M157 PRESERVATION PASS0.116/0.117 default101 every settled state/output through full queues.
+
+ ✓ src/test/assembledDefiningControls.test.ts (11 tests | 9 skipped) 86617ms
+   ✓ admission157: expiry is explicit versioned configuration and existing deadlines remain101 59798ms
+   ✓ preservation157: default horizon retains predecessor state and outputs at every settlement 26818ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 9 skipped (11)
+   Start at  08:33:35
+   Duration  91.55s (transform 2.99s, setup 0ms, collect 4.47s, tests 86.62s, environment 0ms, prepare 153ms)
+
+
+M157 CONTINUATION and deadline rollback exit=0 elapsed=163.555s cap=540
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDefiningControls.test.ts > continuation157: repeat and both early/late saves preserve each later canonical boundary
+M157 CONTINUATION PASS independent repeat/save5/save101 every later state/output/trace/save/identity through expiry5001.
+
+stdout | src/test/assembledDefiningControls.test.ts > rollback157: real extended deadline transition is atomic and old history survives expiry
+M157 ROLLBACK PASS after actual extended expiry whole instant restored; acquired history unchanged by deadline; recovery reaches both Expired goals.
+
+ ✓ src/test/assembledDefiningControls.test.ts (11 tests | 9 skipped) 158045ms
+   ✓ continuation157: repeat and both early/late saves preserve each later canonical boundary 117825ms
+   ✓ rollback157: real extended deadline transition is atomic and old history survives expiry 40219ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 9 skipped (11)
+   Start at  08:35:21
+   Duration  163.00s (transform 2.98s, setup 0ms, collect 4.47s, tests 158.05s, environment 0ms, prepare 148ms)
+
+
+M157 ORIGINAL meaning retention lifetime controls exit=0 elapsed=16.335s cap=120
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/bodilyMaintenanceGoal.test.ts (6 tests) 8ms
+ ✓ src/test/recencyRetention.test.ts (8 tests) 10ms
+ ✓ src/test/useProtectedRetention.test.ts (8 tests) 10ms
+ ✓ src/test/significanceFirstRetention.test.ts (8 tests) 11ms
+ ✓ src/test/definingMeaning.test.ts (15 tests) 13454ms
+   ✓ defining meaning from acquired recalled evidence > every frozen-roster case repeats all stages without mutating acquired history 12637ms
+
+ Test Files  5 passed (5)
+      Tests  45 passed (45)
+   Start at  08:38:25
+   Duration  15.78s (transform 1.39s, setup 0ms, collect 2.38s, tests 13.49s, environment 1ms, prepare 743ms)
+
+
+M157 TYPES final exit=0 elapsed=19.300s cap=120
+
+M157 REFERENCE boundary exit=0 elapsed=2.868s cap=120
+Reference boundary check passed.
+
+M157 RESEARCH bookkeeping exit=0 elapsed=3.420s cap=120
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4377}
+
+M157 PRESERVATION and limits exit=0 elapsed=0.459s cap=120
+Frozen six trees/baseline/corpus unchanged;6 declared source paths;132 unique clauses E61/P45/N13/U13; register64839bytes;planning/evidence limits PASS.
+
+M157 PLAN checks exit=0 elapsed=3.066s cap=120
+Both preimplementation/split index-size and whitespace checks included conservatively.
+
+M157 STAGED Git size exit=0 elapsed=0.839s cap=120
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M157 STAGED diff check exit=0 elapsed=0.081s cap=120

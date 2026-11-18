@@ -37,3 +37,8 @@ and downstream journals still enforce100; no such field is widened by this versi
 The native foundation witness compares expiry101/5001 using early inputs, real goal
 adoption/expiry, immutable acquired history and exact continuation/rollback.
 A later package must reconcile the full time domain before the memory comparison.
+
+Implementation repair: register0.117 in the existing exact trace-identity guard.
+The foundation fixture includes one normal body sample at101 minus its declared
+recall delay, within source1..100, to observe both runs at an actual101 settlement.
+This adds no late source admission or memory-completion claim.

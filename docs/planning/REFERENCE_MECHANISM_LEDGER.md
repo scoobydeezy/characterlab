@@ -1054,3 +1054,11 @@ remain CONTROL+CORPUS. MEC-022 historical source and prior presentations CONTRAC
 reconstructed semantic detail cannot gain fidelity. Three visual facets only; no
 native auditory/spatial or full claim-memory qualification. RO-C3-005/006/007/017/
 019/020/021 remain conditional; no reduction or historical rewrite.
+
+M157 — maintenance horizon foundation (rules0.117), [result](ASSEMBLED_CHARACTER_M157_RESULT.md).
+Existing373 goal owner gains explicit expiry; MEC-007 outcome meaning remains PORT,
+with old101 default preserved. MEC-004/008/009/010 retain their evidence/access/
+retention dispositions; no new memory law or defining credit. MEC-022 historical
+content remains CONTRACT. Original defining four-law/meaning/use controls stay
+CONTROL+CORPUS. Late4000 appraisal remains blocked by source/downstream time100.
+RO-C3-005/006/007/009/010/017/019/020/021 remain conditional; no reduction/closure.
