@@ -1068,3 +1068,9 @@ MEC-019 execution/report/learning boundaries and MEC-022 absolute historical
 provenance retain their dispositions; MEC-007/010 laws remain unchanged.
 Extended planning/performance owners are component-ready only; public0.117 stays
 on legacy defaults. No late-memory acceptance, reduction or new research verdict.
+
+M159 — [goal/control clock domains](ASSEMBLED_CHARACTER_M159_RESULT.md).
+MEC-007/010 distinctions and MEC-019/022 execution/provenance remain preserved.
+Existing habit, reappraisal, fatigue and recurrence laws/candidates remain unchanged;
+late component evidence does not qualify public late runs or broader memory.
+RO-C3-011/012/015 remain conditional; no affect/control/habit reduction.

@@ -1,0 +1,160 @@
+
+M159 production types exit=0 elapsed=19.887s cap=120
+
+M159 component types exit=2 elapsed=19.524s cap=120
+src/test/assembledControlTimeDomain.test.ts(84,81): error TS2345: Argument of type 'bigint' is not assignable to parameter of type 'TimeLimit | undefined'.
+src/test/assembledControlTimeDomain.test.ts(85,89): error TS2345: Argument of type 'bigint' is not assignable to parameter of type 'TimeLimit | undefined'.
+src/test/assembledControlTimeDomain.test.ts(86,107): error TS2345: Argument of type 'bigint' is not assignable to parameter of type 'TimeLimit | undefined'.
+src/test/assembledControlTimeDomain.test.ts(87,99): error TS2345: Argument of type 'bigint' is not assignable to parameter of type 'TimeLimit | undefined'.
+src/test/assembledControlTimeDomain.test.ts(91,62): error TS2345: Argument of type 'bigint' is not assignable to parameter of type 'TimeLimit'.
+
+M159 component ownership and late control exit=0 elapsed=65.238s cap=240
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledControlTimeDomain.test.ts > clock159: actual joined observation/learning4000 affects live shared control4001
+M159 late component PASS: authenticated joined140 control/fatigue/concern; live next-instant inhibition differs on permitted evidence; hidden truth equal; exact owner restore
+
+ ✓ src/test/assembledControlTimeDomain.test.ts (9 tests | 5 skipped) 59663ms
+   ✓ clock159: all affected owners preserve exact late records, derived laws and restore 707ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed | 5 skipped (9)
+   Start at  09:32:38
+   Duration  64.67s (transform 3.06s, setup 0ms, collect 4.58s, tests 59.66s, environment 0ms, prepare 142ms)
+
+
+M159 unchanged native baseline and continuation exit=0 elapsed=133.914s cap=300
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledTimeDomainNative.test.ts > native158: unchanged current model retains every canonical boundary with actual performance learning
+M158 NATIVE PASS 18 canonical boundaries;2 actual performance observations, unengaged expectation null/learned value state; full queues101; exact save6 continuation
+
+ ✓ src/test/assembledTimeDomainNative.test.ts (6 tests | 5 skipped) 128416ms
+   ✓ native158: unchanged current model retains every canonical boundary with actual performance learning 128416ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  09:33:53
+   Duration  133.35s (transform 2.98s, setup 0ms, collect 4.47s, tests 128.42s, environment 0ms, prepare 141ms)
+
+
+M159 legacy A priority habit control exit=0 elapsed=106.027s cap=360
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledHabit.test.ts > M16 assembled habit > controls: closed admission, owners, real child authentication and late atomic rollback
+M16 common-stage rollback 49 events; limit48
+
+ ✓ src/test/assembledHabit.test.ts (7 tests | 5 skipped) 27050ms
+   ✓ M16 assembled habit > controls: original full habit horizon, alternative laws and derived/cache/belief/truth comparisons 14039ms
+   ✓ M16 assembled habit > controls: closed admission, owners, real child authentication and late atomic rollback 13010ms
+stdout | src/test/assembledPriority.test.ts > M13 assembled priority > controls: admission, immutable same-owner fields, authenticated children and late rollback
+M13 common-stage rollback 21 events; limit20
+
+ ✓ src/test/assembledPriority.test.ts (7 tests | 5 skipped) 5865ms
+   ✓ M13 assembled priority > controls: admission, immutable same-owner fields, authenticated children and late rollback 5718ms
+stdout | src/test/assembledControl.test.ts > M17 assembled control > controls: original CONTROL horizons and mapped shared maintenance predicate
+M17 original CONTROL 254 frames,37 full runs; six candidates and Linear retained
+
+ ✓ src/test/assembledControl.test.ts (5 tests | 3 skipped) 66189ms
+   ✓ M17 assembled control > controls: original CONTROL horizons and mapped shared maintenance predicate 50514ms
+   ✓ M17 assembled control > controls: admission, single owners, authentic children, trace reads and atomic rollback 15674ms
+stdout | src/test/assembledControl.test.ts > M17 assembled control > controls: admission, single owners, authentic children, trace reads and atomic rollback
+M17 rollback 52 events, limit51; goal adoption/memory/body/history rolled back at3
+
+
+ Test Files  3 passed (3)
+      Tests  6 passed | 13 skipped (19)
+   Start at  09:36:19
+   Duration  105.47s (transform 2.53s, setup 0ms, collect 5.46s, tests 99.10s, environment 0ms, prepare 295ms)
+
+
+M159 legacy B fatigue rumination reappraisal exit=124 elapsed=480.033s cap=480
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRumination.test.ts > original: native concern observations and all four recurrence laws retain exact predicates
+M56 ORIGINAL 160 native frames: four laws x main/denied/nonrecipient/board-denied/external-load, exact retained evidence, access/interruption/load and observation projection.
+
+stdout | src/test/assembledRumination.test.ts > epistemic: hidden truth, denied onset/resolution/instruction and external load remain distinct
+M56 EPISTEMIC cognitive state/output bytes unaffected by private truth; denied onset unknown; denied resolution persists; denied instruction recurs; external card consumes its own slot.
+
+stdout | src/test/assembledRumination.test.ts > boundaries: one journal authority, authenticated stages, domain checks and atomic late rollback
+M56 BOUNDARIES version/source/bootstrap, unique owner, append, child authentication and late140 whole-instant rollback PASS.
+
+ ✓ src/test/assembledRumination.test.ts (6 tests | 3 skipped) 134015ms
+   ✓ original: native concern observations and all four recurrence laws retain exact predicates 40287ms
+   ✓ epistemic: hidden truth, denied onset/resolution/instruction and external load remain distinct 85310ms
+   ✓ boundaries: one journal authority, authenticated stages, domain checks and atomic late rollback 8417ms
+stdout | src/test/assembledFatigue.test.ts > original: native fatigue observations and control candidates retain exact predicates
+M55 ORIGINAL 72 native observation/control comparisons; MotorOnly forced execution failure retained
+
+stdout | src/test/assembledFatigue.test.ts > epistemic: fixed evidence hides physical truth; denied and mild onsets preserve control
+M55 EPISTEMIC fixed display3 with physical0/2 gives exact cognitive outputs/state through7; denied/absent unknown, mild known but unimpaired
+
+stdout | src/test/assembledFatigue.test.ts > boundaries: admission, one journal authority, authenticated stages and atomic late rollback
+M55 BOUNDARIES version/source/bootstrap, unique owner, append, child authentication and late140 whole-instant rollback PASS
+
+ ✓ src/test/assembledFatigue.test.ts (4 tests | 1 skipped) 182179ms
+   ✓ original: native fatigue observations and control candidates retain exact predicates 19783ms
+   ✓ epistemic: fixed evidence hides physical truth; denied and mild onsets preserve control 153747ms
+   ✓ boundaries: admission, one journal authority, authenticated stages and atomic late rollback 8648ms
+stdout | src/test/assembledReappraisal.test.ts > hidden: physical truth cannot change safe knowledge, interpretation or cognition
+M41 hidden truth PASS
+
+
+TIMEOUT
+
+M159 remaining B reappraisal persistence and admission exit=0 elapsed=106.233s cap=240
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReappraisal.test.ts > persistence: exact repeat4 and whole-save continuation4 through terminal deadlines
+M41 repeat4/restore4..terminal PASS
+
+stdout | src/test/assembledReappraisal.test.ts > admission: learned starts, forged source, direct frame injection and wrong owner reject
+M41 admission/authority PASS
+
+ ✓ src/test/assembledReappraisal.test.ts (8 tests | 6 skipped) 101302ms
+   ✓ persistence: exact repeat4 and whole-save continuation4 through terminal deadlines 88597ms
+   ✓ admission: learned starts, forged source, direct frame injection and wrong owner reject 12705ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 6 skipped (8)
+   Start at  09:47:07
+   Duration  105.68s (transform 2.59s, setup 0ms, collect 3.89s, tests 101.30s, environment 0ms, prepare 145ms)
+
+
+M159 final types exit=0 elapsed=19.499s cap=120
+
+M159 reference boundary exit=0 elapsed=2.908s cap=120
+Reference boundary check passed.
+
+M159 research bookkeeping exit=0 elapsed=3.465s cap=120
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4379}
+
+M159 frozen scope and artifact limits exit=0 elapsed=0.520s cap=120
+M159 PRESERVATION PASS: six frozen trees, baseline and corpus unchanged;10 declared production/test paths;132 unique clauses with E61/P45/N13/U13
+M159 LIMITS PASS: register 211 lines/64981 CRLF bytes; evidence 2 files/14208 bytes; planning caps retained
+warning: in the working copy of 'src/assembled/control.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/assembled/controlExecution.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/assembled/fatigue.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/assembled/habit.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/assembled/habitExecution.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/assembled/priority.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/assembled/priorityExecution.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/assembled/reappraisal.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/assembled/rumination.ts', LF will be replaced by CRLF the next time Git touches it
+
+M159 staged Git size exit=0 elapsed=0.839s cap=120
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M159 staged whitespace exit=0 elapsed=0.073s cap=120
+
+M159 BUDGET: recorded verification958.160s/1800s includes failed typing and grouped-suite timeout. Two unfinished controls completed separately; no passed case rerun.
