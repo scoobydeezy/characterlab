@@ -1,6 +1,6 @@
 /** Governed C1 feature projection, unchanged classifiers and lossless successor encoder. */
 import {list,set,text,unsigned as u,type CanonicalValue} from '../substrate/canonicalEncoding';
-import {dataItems as items,dataText as txt,invalidModel} from '../campaign2/canonicalData';
+import {dataItems as items,dataText as txt,dataUnsigned as uint,invalidModel} from '../campaign2/canonicalData';
 import {PerceptualFeatureId as CF,compilePerceptualClassificationModel,classifyContinuant,INITIAL_PERCEPTUAL_FACET_DEFINITIONS,INITIAL_PERCEPTUAL_CLASSIFICATION_RULES,INITIAL_CLASSIFICATION_DERIVATIONS,PERCEPTUAL_CLASSIFICATION_CONTRACT_VERSION as CV} from '../semanticBinding/perceptualClassification';
 import {PerceptualEventFeatureId as EF,compilePerceptualEventClassificationModel,classifyPerceptualEvent,INITIAL_PERCEPTUAL_EVENT_FACET_DEFINITIONS,INITIAL_PERCEPTUAL_EVENT_CLASSIFICATION_RULES,INITIAL_EVENT_CLASSIFICATION_DERIVATIONS,PERCEPTUAL_EVENT_CLASSIFICATION_CONTRACT_VERSION as EV,type PerceptualEventClassificationEvidence} from '../semanticBinding/perceptualEventClassification';
 import type {PreRecognitionSemanticExperience} from '../semanticBinding/perceptualEventFiles';
@@ -9,11 +9,12 @@ import {perceptualClassificationEvidenceValue,preRecognitionSemanticExperienceVa
 export const APPEARANCE_VERSION='assembled-character-semantic-appearance/0.1-candidate';
 export const CONTINUANT_FEATURES=Object.values(CF).sort(),EVENT_FEATURES=Object.values(EF).sort();
 const demand=(ok:boolean,message:string)=>{if(!ok)invalidModel('semantic appearance '+message);};
-export function appearanceSource(v:CanonicalValue){
- const lanes=items(v,'list');demand(lanes.length===2,'two feature lists');
- return list(lanes.map((lane,i)=>{const domain=i?EVENT_FEATURES:CONTINUANT_FEATURES,rows=items(lane,'list').map(v=>{const a=items(v,'list');demand(a.length===3&&typeof a[1]==='boolean'&&typeof a[2]==='boolean','feature grammar');const feature=txt(a[0]);demand((domain as string[]).includes(feature),'feature domain');return {feature,value:a[1],permitted:a[2]};});
- demand(new Set(rows.map(r=>r.feature)).size===rows.length,'duplicate feature');
- return list(rows.filter(r=>r.permitted).sort((a,b)=>a.feature<b.feature?-1:1).map(r=>list([text(r.feature),r.value])));}));
+export function appearanceSource(v:CanonicalValue,qualityAllowed=false){
+ const lanes=items(v,'list');demand(lanes.length===2||qualityAllowed&&lanes.length===3,'appearance lane version');
+ const declared=lanes.slice(0,2).map((lane,i)=>{const domain=i?EVENT_FEATURES:CONTINUANT_FEATURES,rows=items(lane,'list').map(v=>{const a=items(v,'list');demand(a.length===3&&typeof a[1]==='boolean'&&typeof a[2]==='boolean','feature grammar');const feature=txt(a[0]);demand((domain as string[]).includes(feature),'feature domain');return {feature,value:a[1],permitted:a[2]};});demand(new Set(rows.map(r=>r.feature)).size===rows.length,'duplicate feature');return rows;});
+ const safe=declared.map(rows=>list(rows.filter(r=>r.permitted).sort((a,b)=>a.feature<b.feature?-1:1).map(r=>list([text(r.feature),r.value]))));
+ if(lanes.length===3){const quality=items(lanes[2],'list').map(v=>{const a=items(v,'list');demand(a.length===3&&typeof a[2]==='boolean','quality grammar');const feature=txt(a[0]),clarity=uint(a[1]),source=declared[0].find(r=>r.feature===feature);demand([CF.ObservedMetallicSurface,CF.ObservedElongatedForm,CF.ObservedBluntForm].includes(feature as typeof CF.ObservedMetallicSurface)&&!!source,'quality feature');demand(clarity===1n||clarity===2n,'quality clarity');return {feature,clarity,permitted:a[2]&&source!.permitted};});demand(new Set(quality.map(r=>r.feature)).size===quality.length,'duplicate quality');safe.push(list(quality.filter(r=>r.permitted).sort((a,b)=>a.feature<b.feature?-1:1).map(r=>list([text(r.feature),u(r.clarity)]))));}
+ return list(safe);
 }
 const continuantModel=compilePerceptualClassificationModel(APPEARANCE_VERSION,INITIAL_PERCEPTUAL_FACET_DEFINITIONS,INITIAL_PERCEPTUAL_CLASSIFICATION_RULES,INITIAL_CLASSIFICATION_DERIVATIONS);
 const eventModel=compilePerceptualEventClassificationModel(APPEARANCE_VERSION,INITIAL_PERCEPTUAL_EVENT_FACET_DEFINITIONS,INITIAL_PERCEPTUAL_EVENT_CLASSIFICATION_RULES,INITIAL_EVENT_CLASSIFICATION_DERIVATIONS);

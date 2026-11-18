@@ -1,0 +1,50 @@
+import {RECOGNITION} from '../assembled/recognition';
+import {it,expect,vi} from 'vitest';
+import {fixture156,start156,state156,imprints156,report156,tagged156,through156,finish156,items,decode,key,enc,list,text,signed,u,exact,bytes,outputs,rec,f,uint,C,target,CF,type CanonicalValue} from './assembledVivid.test';
+import {createCharacterRun,prepareCharacterModel,restoreCharacterRun} from '../assembled/character';
+import {compileCharacterModel,RECOLLECTION_RULES,RECOLLECTION_REGISTRY} from '../assembled/model';
+import {compileCharacterState} from '../assembled/state';
+import {appearanceSource} from '../assembled/semanticAppearance';
+import {currentProjection} from '../assembled/semanticLanes';
+import {SOCIAL_SOURCE} from '../assembled/social';
+import {FAMILIARITY,appearanceEpisode,appearancePath,fragmentAppearance,retainedClarity} from '../assembled/familiarity';
+import {RECOLLECTION} from '../assembled/recollection';
+import {AuthoritativeState} from '../substrate/state';
+import {typedIdentifier} from '../substrate/canonicalEncoding';
+import * as memory from '../assembled/memory';
+it('admission156: quality gates and versioned source grammar reject fabricated or foreign fidelity',async()=>{
+ const b=fixture156(),model=await compileCharacterModel(b.s),rows=items(decode(b.d.orderedInputs),'list'),source=items(rows.find(v=>key(items(v,'list')[2])===key(SOCIAL_SOURCE))!,'list'),p=items(source[3],'list'),appearance=items(p[4],'list'),qualities=items(appearance[2],'list');
+ expect(()=>appearanceSource(p[4])).toThrow('version');expect(items(appearanceSource(p[4],true),'list')).toHaveLength(3);
+ const bad=(v:CanonicalValue)=>list([appearance[0],appearance[1],list([v])]);
+ expect(()=>appearanceSource(bad(list([text(CF.ObservedBluntForm),u(0),true])),true)).toThrow('clarity');
+ expect(()=>appearanceSource(bad(list([text('unknown-feature'),u(2),true])),true)).toThrow('feature');
+ expect(()=>appearanceSource(list([appearance[0],appearance[1],list([qualities[0],qualities[0]])]),true)).toThrow('duplicate');
+ const denied=items(appearance[0],'list').map(v=>{const a=[...items(v,'list')];if(key(a[0])===key(text(CF.ObservedBluntForm)))a[2]=false;return list(a);});
+ const safe=items(appearanceSource(list([list(denied),appearance[1],appearance[2]]),true),'list');expect(items(safe[2],'list')).toHaveLength(2);
+ const social=[...items(p[1],'list')];social[3]=u(0);social[4]=u(0);
+ const current=list([text(RECOGNITION),list(social),...p.slice(2,6),p[7]]),projection=items(currentProjection(current,model.recognition!),'list');expect(items(items(items(projection[4],'list')[1],'list')[2],'list')).toHaveLength(3);
+ const old={...b.s,rulesVersion:RECOLLECTION_RULES,registrySchemaVersion:RECOLLECTION_REGISTRY};await expect(createCharacterRun(await prepareCharacterModel(old),b.d)).rejects.toThrow('version');
+ const modified=[...p];modified[4]=bad(list([text('foreign-feature'),u(2),true]));const badRows=rows.map(v=>key(v)===key(list(source))?list([...source.slice(0,3),list(modified),source[4]]):v);
+ await expect(createCharacterRun(await prepareCharacterModel(b.s),{...b.d,orderedInputs:enc(list(badRows))})).rejects.toThrow('feature');
+ console.info('M156 ADMISSION PASS old version/malformed/duplicate/foreign clarity; feature AND quality permissions; shared current source projection only, no current-memory claim');
+});
+it('rollback156: true fidelity removal is atomic and sensory content cannot be forged or reintroduced',async()=>{
+ const x=await start156();await through156(x.run,1n);const first=imprints156(x.run)[0],a=appearanceEpisode(first.value),c=await compileCharacterState(await compileCharacterModel(x.b.s));
+ const patch={operations:[{kind:'set' as const,path:first.path,expected:{presence:true as const,value:first.value},newValue:fragmentAppearance(first.value)}]};
+ expect(()=>c.stateModel.applyPatch(state156(x.run),patch,typedIdentifier(1025,text('authority/wrong')))).toThrow();
+ const old=await compileCharacterState(await compileCharacterModel({...x.b.s,rulesVersion:RECOLLECTION_RULES,registrySchemaVersion:RECOLLECTION_REGISTRY}));expect(()=>old.stateModel.validateState(state156(x.run))).toThrow('fidelity version');
+ const initial=c.initialState(x.b.d.initialState);await expect(createCharacterRun(x.m,{...x.b.d,initialState:enc(new AuthoritativeState([...initial.entries(),first]).canonicalValue())})).rejects.toThrow('initial');
+ const percept=list([a[2],a[3],a[5],a[4],...a.slice(6,9)]);expect(()=>retainedClarity(percept,list([typedIdentifier(1115,u(999999)),list([])]))).toThrow('binding');
+ const fake=[...a];fake[9]=list([list([u(1)]),list([u(2)]),list([u(2)])]);expect(()=>c.stateModel.applyPatch(state156(x.run),{operations:[{...patch.operations[0],newValue:list(fake)}]},memory.EPISODIC_OWNER)).toThrow('only peripheral');
+ const make=memory.createEpisodicExtension;let reached=false;const spy=vi.spyOn(memory,'createEpisodicExtension').mockImplementation((...args)=>{const component=make(...args);return Object.freeze({...component,prepare(...xs){const stage=component.prepare(...xs);return {...stage,finish(s){const next=stage.finish(s);if(xs[0].some(e=>e.dueAt===4n)){const v=next.read(first.path);expect(v.presence).toBe(true);expect(items(appearanceEpisode(v.value!)[9],'list')).toEqual([list([u(2)]),list([]),list([])]);reached=true;throw Error('M156 fidelity rollback');}return next;}};}});});
+ let saved:Uint8Array|undefined;try{const fault=await createCharacterRun(x.m,x.b.d);for(let i=0;i<96;i++){const before=fault.snapshot();saved=fault.save();try{await fault.settleNextInstant();}catch(e){expect(String(e)).toContain('M156 fidelity rollback');expect(reached).toBe(true);expect({...fault.snapshot(),status:before.status}).toEqual(before);break;}}expect(reached).toBe(true);}finally{spy.mockRestore();}
+ const restored=await restoreCharacterRun(x.b.s,{initialState:x.b.d.initialState,orderedInputs:x.b.d.orderedInputs,save:saved!});await finish156(x.run);await finish156(restored);exact(x.run,restored);const fragment=state156(x.run).read(first.path);
+ expect(()=>c.stateModel.applyPatch(state156(x.run),{operations:[{kind:'set',path:first.path,expected:{presence:true,value:fragment.value!},newValue:first.value}]},memory.EPISODIC_OWNER)).toThrow('only peripheral');
+ const guess=tagged156(x.run,RECOLLECTION).find(v=>key(v[1])===key(signed(5)))!;expect(uint(guess[2])).toBe(3n);expect(guess[5]).toEqual(list([true]));expect(report156(x.run,5)[4]).toEqual(text('Fragmentary'));
+ console.info('M156 ROLLBACK PASS actual fidelity-loss failure restores whole instant; exact recovered continuation; owner/version/S0/binding/content guards and no sensory reencoding');
+},540000);
+it('preservation156: legacy source preserves all prior learned state and semantic recollection on the successor',async()=>{
+ const b=fixture156('unspecified'),old=await createCharacterRun(await prepareCharacterModel({...b.s,rulesVersion:RECOLLECTION_RULES,registrySchemaVersion:RECOLLECTION_REGISTRY}),b.d),now=await createCharacterRun(await prepareCharacterModel(b.s),b.d);
+ const stripped=(run:typeof now)=>state156(run).entries().map(e=>typeof e.value!=='boolean'&&e.value.kind==='list'&&key(e.value.items[0])===key(text('assembled-appearance-episode/0.1'))?{...e,value:list(e.value.items.slice(0,9))}:e);
+ for(let i=0;i<96;i++){const more=await old.settleNextInstant();expect(await now.settleNextInstant()).toBe(more);expect(stripped(now)).toEqual(state156(old).entries());for(const tag of[FAMILIARITY,RECOLLECTION])expect(tagged156(now,tag)).toEqual(tagged156(old,tag));if(!more){expect(report156(now,2)[4]).toEqual(text('Empty'));console.info('M156 PRESERVATION PASS0.115 entire learned state after explicit fidelity-annex projection; exact familiarity/reconstruction each settlement; absent quality never inferred');return;}}throw Error('M156 preservation queue cap');
+},540000);

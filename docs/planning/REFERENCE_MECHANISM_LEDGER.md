@@ -1045,3 +1045,12 @@ Original FragmentOnly/KeepDetail and TruthRestore/ReencodeGuess remain CONTROL+C
 MEC-022 immutable historical meaning remains CONTRACT; guesses never gain acquisition
 credit or become retained detail. Neutral claim-free scope; no reduction or general
 reconstruction consumer. RO-C3-005/006/007/017/019/020 remain conditional.
+
+M156 — retained sensory fidelity (rules0.116), [result](ASSEMBLED_CHARACTER_M156_RESULT.md).
+MEC-004 observer-safe quality PORT; no truth/confidence shortcut. MEC-008/009 access
+remains unchanged. MEC-010 fidelity attrition/current PerceptualFidelity presentation
+PORT stays inside346; DetailCount/AccessOnly/KeepRich and original publication rules
+remain CONTROL+CORPUS. MEC-022 historical source and prior presentations CONTRACT:
+reconstructed semantic detail cannot gain fidelity. Three visual facets only; no
+native auditory/spatial or full claim-memory qualification. RO-C3-005/006/007/017/
+019/020/021 remain conditional; no reduction or historical rewrite.
