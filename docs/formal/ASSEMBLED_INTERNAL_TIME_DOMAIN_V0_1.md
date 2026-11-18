@@ -56,3 +56,14 @@ Source grouping, recipient/holder isolation, participation, unknown observations
 append-only/capacity rules and prior-only appraisal remain unchanged. Counts and
 receipt IDs are not timestamps. Extended traces retain the existing domain suffix.
 No autonomous partner, new psychological law, source retiming or public activation.
+
+M162 extends the explicit internal domain to causal/interference source tickets,
+observations, original-support joins, owners and appraisal; workspace observations,
+access cache and consumers; maintenance-goal activeFrom; authenticated hidden-fact
+source instants; and timed experimental RNG correspondence. Exact times are retained.
+Receipt IDs, history capacities, task identities, lifecycle/expiry, source fingerprints,
+prior-only gates, comparison injectivity and original validators remain unchanged.
+The work-board producer retains its existing pure projection; its owner and consumers
+validate the selected domain. Extended consumer traces disclose the same suffix.
+Public constructors still default to100. Cancellation codecs and atomic public
+activation remain pending. Detached late probes do not earn native memory coverage.
