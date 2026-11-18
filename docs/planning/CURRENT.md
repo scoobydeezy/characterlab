@@ -1,39 +1,37 @@
-# Current work — M167 incomplete checkpoint
-Rehearsal now demonstrably protects genuinely used memories and changes a later
-live appraisal. M167 is NOT complete: recovery verification timed out at600s.
-[Result](ASSEMBLED_CHARACTER_M167_RESULT.md); [checks](ASSEMBLED_CHARACTER_M167_CHECKS.txt).
-Baseline2f02c127; pre-code card/contract39c4ee28. Rules/registry0.121.
-Seven production files/one test; same model/state/scheduler/episodic346 owner.
+# Current work — M167 verification performance follow-up
+User continuation2026-11-18 authorizes the proposed bounded performance repair.
+M167 behavior/overlap pass; recovery is still unverified after the600s timeout.
+Baseline2c5ae22b; original card39c4ee28, rules/registry0.121, fixtures/laws unchanged.
+Prior verification1744.516s is preserved, not reset or renamed as passing.
 
-Passed fixed comparison: actual cue16 carried into19/20/21 -> Supported16-child
-use receipts -> old positions2/15 survive -> live MovingFarther at4000.
-Zero-schedule control recalls3998/3999 -> live SameDistance; equal current body,
-immutable content, no significance. Both full queues5001; protected saturation
-rejects fresh late episodes. No choice/RNG or autonomous-rehearsal claim.
-Passed extra native prefix19: ordinary recall supplies old1 omitted by carried top8;
-Supported consumption credits16 original children, not new18.
-
-Retained failures: two clock-type errors; duplicate-use test also matched task-concern.
-Fixed exact event filter. Review repaired use guard to accept the authentic current
-recall union. Corrected boundary command hit600s; no completed recovery receipt.
-Candidate rollback, save17/every-boundary continuation through5001 and grouped
-negative controls remain UNVERIFIED. Do not count assertions as passed checks.
-Original comparison/laws/seeds/full gate remain; no extension or automatic retry.
-Selected historical controls/types/metadata pass; verification 1744.516/1800s.
-
-## Active bounded package and next action
-M167 scope: carried query, consumed-child use, late live appraisal; F-12.3 P2.
-Contract ASSEMBLED_REHEARSAL_V0_121.md; max12 source/test paths,3 capabilities,
-20 evidence files/5MiB,1800s cumulative/600s command. No new memory breadth.
-Primary fixture/gate remains pinned in39c4ee28 and the result; no relaxation.
-Next: a bounded performance investigation/repair for this recovery check before
-another long retry. Profile repeated full snapshot/save serialization and three
-prefix replays; retain every scenario, byte comparison, checkpoint and actual fault.
-No budget reset by renaming an unchanged retry. M167 closes only after that gate
-and applicable checks pass. This checkpoint is progress, not a bounded PASS.
-Then retained SharedProtection/UseOnly and defining missing/unselected/capacity/cue/
-current-historical controls, followed by full memory-family replay.
-F-12.3 P2 remains open; E61/P45/N13/U13=132,21 mappings,0/15 accepted families.
-Owner2026-11-18 self-approval continues; laws/pinned scope/final gate remain.
-No UI, autonomous peers, new audit track or reduction.
+## Pre-code card
+- Outcome: finish actual post-write rollback and public save17/every-boundary
+  continuation through5001 within the existing600s command cap.
+- First measure: same genuine M167 prefix5, timing settlement, full snapshots,
+  whole-object deep equality and exact typed-byte equality on the SAME snapshots.
+  This is a diagnostic prefix, not a shortened acceptance comparison.
+- Source review found rollback uses generic deep equality on encoded state/output/
+  trace arrays, whereas existing exact continuation uses the byte comparator.
+  If measured, replace redundant structural traversal with all-field/all-byte
+  equality. Keep snapshot shape/clock checks and the existing status normalization.
+- Scope: one test file src/test/assembledRehearsal.test.ts; no production, fixture,
+  law, schema or clock changes. No framework, new memory work or new source cohort.
+- Assert equivalence of the two comparison methods on genuine snapshot bytes and
+  altered length/byte/clock controls. All old negative/rollback assertions survive.
+- Then run the SAME full boundary167: all scenarios, three prefixes, actual injected
+  post-write fault, original save17 and every later state/output/trace/save/identity,
+  native late appraisal4000 and complete queue5001. No checkpoint/byte truncation.
+- Risks: misdiagnosed cost; weakening rollback equality; timeout elsewhere. Measure
+  before repair; retain failures. If cost is elsewhere, report it before broadening.
+- Budget: supplemental1800s maximum including diagnostic/failures;600s/command;
+  first diagnostic120s; one long job;20 evidence files/5MiB total M167 evidence.
+  Keep <=12 total production/test paths across M167; existing8 still suffice.
+- Checks: diagnostic/equivalence, full boundary167, types, boundary/research,
+  preservation and staged-size. Prior primary/overlap/native158/primary166 receipts
+  stand if their code paths/fixtures remain unchanged; no redundant replay.
+- Done: full recovery and checks pass, compact M167 result/current updated and
+  committed. Otherwise checkpoint incomplete, no automatic extension or repeated
+  unchanged retry. No decrease in required scientific/continuation evidence.
+Existing ledger dispositions, original controls/contracts and scope21/15/132 stay.
+E61/P45/N13/U13;0/15 accepted families. No UI, reduction or autonomous peers.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
