@@ -1112,3 +1112,11 @@ meaning and outcome distinctions. Use and significance coalesce under one owner;
 B0 ranking, original kernels and immutable historical controls remain. Actual
 use changes survival and later appraisal; presentation/rehearsal and full family
 replay stay open. No mechanism retired. [Result](ASSEMBLED_CHARACTER_M165_RESULT.md).
+
+M166 ports MEC009/010 exact presentation accessibility into positional recall:
+actual publications update episodic346 history; B0 frequency changes later live
+appraisal. MEC004/007/008/015/019/020/022 keep their distinctions and original
+controls. Use/significance/history coalesce; no graph reduction or new owner.
+Generic direct-channel projection and1024-domain extension are explicit; original
+kernels stay frozen. Retained-attribution rehearsal and family replay remain open.
+[Bounded result](ASSEMBLED_CHARACTER_M166_RESULT.md).

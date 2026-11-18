@@ -7,7 +7,7 @@ import {BODY_CHANNEL,bodyId} from './body';
 import {isBodyEpisodePath,RECALL,EPISODE} from './memory';
 import type {compileCampaign2StateModel} from '../campaign2/stateModel';
 export const RETRIEVAL='assembled-body-retrieval/0.1';
-export function compileRetrievalDeclaration(v:CanonicalValue){const a=items(v,'list');if(a.length!==2||txt(a[0])!==RETRIEVAL||uint(a[1])>32n)invalidModel('retrieval requires slots0..32');return Object.freeze({slots:Number(uint(a[1]))});}
+export function compileRetrievalDeclaration(v:CanonicalValue,positionPresentation=false){const a=items(v,'list');if(a.length!==(positionPresentation?3:2)||txt(a[0])!==RETRIEVAL||uint(a[1])>32n)invalidModel('retrieval requires slots0..32');const positionLaw=positionPresentation?txt(a[2]):undefined;if(positionPresentation&&!['PresentationFrequency','RecencyOnly'].includes(positionLaw!))invalidModel('position access law');return Object.freeze({slots:Number(uint(a[1])),positionLaw:positionLaw as import('./positionPresentation').PositionAccessLaw|undefined});}
 export type RetrievalDeclaration=ReturnType<typeof compileRetrievalDeclaration>;
 const fail=(s:string):never=>{throw new SchedulerContractError('INPUT_NOT_ADMITTED','assembled retrieval: '+s);};
 const compare=(a:Uint8Array,b:Uint8Array)=>{for(let i=0;i<Math.min(a.length,b.length);i++)if(a[i]!==b[i])return a[i]-b[i];return a.length-b.length;};
