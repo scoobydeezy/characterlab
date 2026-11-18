@@ -26,3 +26,9 @@ digests on a pre-edit fixed current-character run with real performance/learning
 Late component probes cannot discharge a native late-character or memory requirement.
 Original meaning laws and meaningful comparators remain authoritative in their scope.
 No new research verdict, reduction, final-family acceptance or obligation closure.
+
+Pre-edit baseline correction: M150 reports are unengaged, so expectation state
+correctly stays absent. Preserve that null and actual learned values in the native
+comparison; engagement-qualified expectation is checked through its component owner.
+Extended trace versions append +time-domain/0.1-candidate to the original seam
+version; legacy trace bytes stay unchanged. No current model selects the extension.

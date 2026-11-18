@@ -20,7 +20,8 @@ one baseline digest receipt. No additional verifier/framework/cleanup campaign.
 
 Before production edits capture every settled state/output/trace/save/identity
 SHA256 digest for fixed M150 collective-receipt source promoted to0.117, seed0.
-Require actual performance observations and learned expectation/value evidence.
+Require actual performance observations/value evidence. This source is unengaged:
+expectation stays absent; engagement-qualified expectation is a component witness.
 After edits reproduce all digests exactly through full natural queue exhaustion.
 Source remains git-addressable and unchanged; digests compare full canonical bytes,
 not selected fields. No whole-source copies or full frozen suite required.
