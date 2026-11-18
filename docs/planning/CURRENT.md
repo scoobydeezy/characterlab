@@ -1,33 +1,47 @@
-# Current work — M154 complete
-The character recognizes a familiar person/place appearance after peripheral
-episode detail has actually faded. Partial matches remain distinguishable from
-full matches; absent features remain unknown. One shared episodic owner/state,
-scheduler and save; no separate familiarity store or true-identity shortcut.
+# Current work — M155 reconstructed recollection from shared memory
+Baseline193c64b6. One active milestone; no UI/autonomous peers.
+## Bounded card — before implementation
+Three connected capabilities: observed appearance -> category summary; recent
+retained versus faded fragment recollection; tagged reconstruction without double
+credit or rewriting source history. BRIEF-12.3-3/8/10 bounded neutral appearance domain.
+Same model/state/scheduler/save/EPISODIC_OWNER; rules/registry0.115 successor.
+ModalFill from recollection-public/0.1 is the first engineering default, no superiority
+verdict. FragmentOnly/KeepDetail/TruthRestore/ReencodeGuess controls remain.
+M154 PartialMax, age3, shared capacity, laws and calibration unchanged.
 
-[Result](ASSEMBLED_CHARACTER_M154_RESULT.md) ·
-[Checks](ASSEMBLED_CHARACTER_M154_CHECKS.txt) ·
-[Contract](../formal/ASSEMBLED_FAMILIARITY_V0_114.md)
-Reference rules/registry0.114; encoding0.7; BIO feedback TRUE.
-Existing laws, calibration, shared UnitBudget and L4 self-feedback OFF remain.
+Receiving: current130 selected appearance cues earliest acquisition among positive
+maximizing M154 matches; no identity claim. Missing match => Missing, never stereotype.
+Retained detail wins; otherwise prior category strict majority fills as Reconstructed;
+ties/no samples => FragmentOnly. Current source cannot supply its own history.
+At140 each fresh admitted known detail credits one category once. Summary is a separate
+346/2 leaf under the existing episodic owner: counts/source refs, no per-event detail
+map. Recall/fragmentation never credit or reencode; memory capacity remains346/1 only.
+Claim-memory paths remain excluded as M154; no general/full-claim fragmentation claim.
 
-Actual C1/attention -> appearance acquisition -> detail loss -> later familiarity
-passes for neutral claim-free appearances. PartialMax/age3 are bounded engineering
-defaults, not superiority verdicts. Full claim-memory fragmentation and familiarity
-remain unqualified; the existing claim path preserves whole learned-state bytes
-and receives no duplicate appearance imprint/capacity charge.
+Production: recollection.ts(new), memory.ts, retention.ts, model.ts, state.ts,
+runtime.ts, traceBinding.ts (7). Tests: assembledRecollection.test.ts,
+assembledRecollectionControls.test.ts, fixtures/assembledRecollection.ts (3).
+12-file maximum,20 evidence files/5MiB; one result/log. Formal committed first.
+Ledger MEC004 observer boundary,008/009 access,010 lifecycle,022 provenance preserved.
 
-Native continuation, rollback, privacy, missing/partial/category and capacity
-controls pass. Original familiarity public controls and types pass.
-11 production/test files; verification stays within1800s; failures retained.
+Scenario: seed0/body10; neutral claim-free C1 appearance, no social-task decision
+comparison. At1 target signature true/true/detailtrue; at2/3 distinct false/false
+appearances with detailfalse. At4 target cue has no detail: recall retainedtrue before
+actual140 attrition. At5 same cue reconstructsfalse from prior1true/2false.
+At6/7 new category evidence detailtrue; at8 target reconstructstrue. Immutable source.
+Controls: missing/denied detail, category isolation, ties, hidden truth/identity,
+capacity eviction => no phantom episode, repeated cues => no summary credit.
+Original ModalFill on captured native operands; named alternatives discriminate.
+Liveness asserted before all comparisons. No seed search or stochastic choice claim.
 
-## Remaining integration
-E57/P47/N15/U13=132 version-scoped clause dispositions;21 member mappings,
-0/15 families accepted. No final assembly acceptance or whole-candidate replay yet.
-Familiarity closes the bounded12.3-6/7 witness gaps only. Next required memory work:
-fuzzy/reconstructed recollection and episode/summary consolidation without
-double counting. Write a bounded first-use card before implementation.
-Other required gaps remain in the single reconciliation register; no UI/Campaign4,
-autonomous peers, new research gate or denominator change.
-
-Owner self-approval continues for bounded integration and repairs.
+Checks serial: types<=120s; native primary+controls jobs<=540s each; exact repeat/
+save before and after fragmentation and full continuation<=540s; fault after actual
+summary+fragment commit -> whole rollback/restore<=540s; predecessor affected
+familiarity/claim path<=540s; original recollection suite<=120s; boundary/research/
+preservation/index size<=120s.1800s cumulative including failures; no extensions.
+Check no unauthorized summary writer, foreign holder/category, duplicate credit,
+old-version/forged learned S0 and guess reencoding. Frozen trees/baseline untouched.
+Done with live retained->fragment->reconstructed path, wrong reconstruction and
+later evidence repair, no double credit, exact continuation and negative controls.
+Final whole-candidate132 replay and family acceptance remain required.
 | Research obligations | **0 active /18 conditional /0 unowned** |
