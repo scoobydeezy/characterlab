@@ -83,9 +83,9 @@ function stress(r:Run,p:ReturnType<typeof live>,level:number){
 it('final184 contradictory evidence and hidden physical truth',async()=>{
  const a=await startMemory(fixture('historyRisk')),b=await startMemory(fixture('contradiction')),h=await startMemory(fixture('hidden'));for(const x of[a,b,h])declarations(x.b);
  expect(a.b.s).toEqual(b.b.s);expect(b.b.s).toEqual(h.b.s);bytes(a.b.d.initialState,b.b.d.initialState);
- for(const r of[a.run,b.run,h.run])await through(r,8n);for(const r of[b.run,h.run]){bytes(a.run.snapshot().state,r.snapshot().state);bytes(a.run.snapshot().outputs,r.snapshot().outputs);}
+ for(let n=0;a.run.snapshot().clock<8n;n++){expect(n).toBeLessThan(96);for(const r of[a.run,b.run,h.run])expect(await r.settleNextInstant()).toBe(true);for(const r of[b.run,h.run]){expect(r.snapshot().clock).toBe(a.run.snapshot().clock);bytes(a.run.snapshot().state,r.snapshot().state);bytes(a.run.snapshot().outputs,r.snapshot().outputs);}}expect(a.run.snapshot().clock).toBe(8n);
  expect(knowledge(a.run).efficacy!.cue!.mean).toEqual(Q.of(1n));expect(knowledge(a.run).efficacy!.cue!.supports).toHaveLength(1);
- for(const r of[a.run,b.run,h.run])await through(r,10n);
+ for(let n=0;a.run.snapshot().clock<10n;n++){expect(n).toBeLessThan(96);for(const r of[a.run,b.run,h.run])expect(await r.settleNextInstant()).toBe(true);expect(b.run.snapshot().clock).toBe(h.run.snapshot().clock);bytes(b.run.snapshot().state,h.run.snapshot().state);bytes(b.run.snapshot().outputs,h.run.snapshot().outputs);}expect(a.run.snapshot().clock).toBe(10n);
  const pa=live(a.run,'Known',q(7,20)),pb=live(b.run,'Known',q(7,40));live(h.run,'Known',q(7,40));
  for(const [r,mean]of[[a.run,Q.of(1n)],[b.run,Q.of(1n,2n)],[h.run,Q.of(1n,2n)]] as const){const s=sourceProof(r);expect(s.k.efficacy!.cue!.mean).toEqual(mean);expect(s.k.efficacy!.cue!.supports).toHaveLength(2);expect(s.samples).toHaveLength(2);expect(learnedProjection(s.samples,1)).toEqual(mean);}
  const samples=sourceProof(b.run).samples;expect(samples.map(s=>f(rec(s,737n),7n))).toEqual([true,false]);expect(learnedProjection(samples,2)).toEqual(Q.of(0n));expect(learnedProjection(samples,3)).toBeUndefined();
@@ -97,7 +97,7 @@ it('final184 contradictory evidence and hidden physical truth',async()=>{
  }
  expect(reached).toBe(true);expect(key(decode(b.run.snapshot().trace))).not.toBe(key(decode(h.run.snapshot().trace)));
  for(const r of[a.run,b.run,h.run]){expect(r.snapshot().clock).toBe(101n);expect(r.diagnostic()).toBeUndefined();}
- console.info('M184 HISTORY PASS exact safe prefix8; two actual cue supports Mean1/1 vs1/2 -> U7/20 vs7/40 -> stress175/88. Original Mean1/2 Latest0 NoLearning unknown on exact admitted packets. Hidden truth preserves all state/output through101; later stress adds no danger evidence.');
+ console.info('M184 HISTORY PASS every settled safe prefix through8, every hidden pair instant through101; two actual cue supports Mean1/1 vs1/2 -> U7/20 vs7/40 -> stress175/88. Original Mean1/2 Latest0 NoLearning unknown on exact admitted packets. Hidden truth preserves all state/output through101; later stress adds no danger evidence.');
 },550000);
 for(const [group,modes]of[
  ['source',['missingAction','deniedMotion','censored','noop']],
