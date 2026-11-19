@@ -1143,3 +1143,10 @@ no episode; only actual publication updates history. Exact continuation/rollback
 pass after a disclosed workspace admission repair. Original kind-budget comparison
 and current/historical meaning stay open; no mechanism retired or family accepted.
 [Bounded result](ASSEMBLED_CHARACTER_M169_RESULT.md).
+
+M170 restores original independent event/body budgets in episodic346.
+MEC004/007/008/009/010/015/019/020/022 remain distinct: schema-derived kinds,
+unchanged tier laws, actual retained significance changes live appraisal4000.
+Actual event-only loss/rollback/continuation preserve bodily memories. Original
+pure pressure/current meaning and final family replay remain open; no retirement.
+[Bounded result](ASSEMBLED_CHARACTER_M170_RESULT.md).
