@@ -53,14 +53,13 @@ queued appraisal10/gain/winner. All original equations, goals and seeds remain f
 Independent repeat/public original-input save12 compare EVERY later canonical byte;
 actual post-publication failure at26 must restore preinstant state and recover exactly.
 
-Setup correction: first67.271s run rejected late legacy importance adoption.
-Adopt importance1 through its normal source at1;10/26 display urgency only.
-No scenario meaning/law/gate changes. NoReasons checks canonical419 status2.
-
-Self-amendment after81.185s: no candidates because route availability was omitted
-with the old early frames. Supply normal route0-available/route1-unavailable display
-at1, window1..30 for declared routes; keep zero urgency10 and unchanged gate.
-No production/law/calibration edits; both failed attempts remain.
+Setup corrections:67.271s late legacy adoption rejected; adopt importance at1.
+81.185s NoCandidates: omitted route display restored (193d55f), window1..30.
+122.393s trace assertion exposed Unavailable severity;72.957s diagnostic identified
+person dependency entries as [task,polarity], not task alone. Correct that filter,
+and restore original normal diagnostic probe1 for conditional forecast evidence.
+Trace joins select the actual affect report contribution among same-event traces.
+No laws/calibration/gates changed; all failures retained; assert Known before ranking.
 
 ## Budget, preservation and done
 Every behavioral gate has actual producer/consumer liveness. Retain all failed
