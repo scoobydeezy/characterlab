@@ -63,3 +63,11 @@ missing receipt or less than600s remaining. Preserve each child output/duration.
 The earlier orchestration rejection launched nothing; its cell ended, and the old
 process inventory was empty before direct serial batches resumed. This replaces
 manual launches with ONE coordinator, rather than introducing a second launcher.
+
+Self-approved suspension amendment2026-11-19, before remaining44..67:
+Windows event1 proves sleep08:25:37.8659665Z..12:47:32.6295602Z (15714.7635937s).
+All00..43 PASS; raw23276.479s retained, awake7561.7154063s plus staging/checks.
+Preserve INTERRUPTION.json and coordinator exit1; no passed case is rerun.
+Apply600s child/14400s total to awake time, preserving raw wall time alongside it.
+One replacement driver44..67 has6600s awake cap, stops on first failure, and uses
+thread-scoped system-awake request released at exit; no persistent power change.

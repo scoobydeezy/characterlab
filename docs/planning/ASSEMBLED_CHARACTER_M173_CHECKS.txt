@@ -148,3 +148,391 @@ M173 CASE PASS {"index":11,"historical":{"kind":"Qualifies","direction":"MovingC
 
 
 M173 scheduling amendment: cases00..11 observed PASS; cumulative2055.507s; no validation alive after session90080 exit0. Sole finite serial driver12..67 authorized in CURRENT before execution; child600s/2cases, driver12300s, total14400s unchanged; stop first failure, no retries.
+
+M173 coordinator preflight/staging1.734s; baseline cumulative2057.241s; finite driver12..67 starts.
+
+M173 cases12-13 exit=0 elapsed=335.186s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDefiningFinal.test.ts > defining173 12 High SignificanceFirst
+M173 case12 historical PASS {"kind":"Qualifies","direction":"MovingCloser"}; actual early3 and16 consumed.
+M173 case12 retention/current PASS {"retained":[3],"current":{"kind":"Qualifies","direction":"MovingCloser"}}
+M173 CASE PASS {"index":12,"historical":{"kind":"Qualifies","direction":"MovingCloser"},"current":{"kind":"Qualifies","direction":"MovingCloser"},"retained":[3],"selected":[3],"elapsedMs":194185}
+
+stdout | src/test/assembledDefiningFinal.test.ts > defining173 13 High SignificanceFirst
+M173 case13 historical PASS {"kind":"Qualifies","direction":"MovingCloser"}; actual early3 and16 consumed.
+M173 case13 retention/current PASS {"retained":[3],"current":{"kind":"QualificationUnavailable","reason":"IndeterminateRelation"}}
+M173 CASE PASS {"index":13,"historical":{"kind":"Qualifies","direction":"MovingCloser"},"current":{"kind":"QualificationUnavailable","reason":"IndeterminateRelation"},"retained":[3],"selected":[3],"elapsedMs":135205}
+
+ ✓ src/test/assembledDefiningFinal.test.ts (84 tests | 82 skipped) 329396ms
+   ✓ defining173 12 High SignificanceFirst 194188ms
+   ✓ defining173 13 High SignificanceFirst 135207ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 82 skipped (84)
+   Start at  00:54:12
+   Duration  334.63s (transform 3.18s, setup 0ms, collect 4.76s, tests 329.40s, environment 0ms, prepare 138ms)
+
+
+M173 cases14-15 exit=0 elapsed=357.700s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDefiningFinal.test.ts > defining173 14 High SignificanceFirst
+M173 case14 historical PASS {"kind":"Qualifies","direction":"MovingCloser"}; actual early3 and16 consumed.
+M173 case14 retention/current PASS {"retained":[3],"current":{"kind":"Qualifies","direction":"MovingCloser"}}
+M173 CASE PASS {"index":14,"historical":{"kind":"Qualifies","direction":"MovingCloser"},"current":{"kind":"Qualifies","direction":"MovingCloser"},"retained":[3],"selected":[3],"elapsedMs":228627}
+
+stdout | src/test/assembledDefiningFinal.test.ts > defining173 15 High SignificanceFirst
+M173 case15 historical PASS {"kind":"Qualifies","direction":"MovingCloser"}; actual early3 and16 consumed.
+M173 case15 retention/current PASS {"retained":[],"current":{"kind":"QualificationUnavailable","reason":"IndeterminateRelation"}}
+M173 CASE PASS {"index":15,"historical":{"kind":"Qualifies","direction":"MovingCloser"},"current":{"kind":"QualificationUnavailable","reason":"IndeterminateRelation"},"retained":[],"selected":[],"elapsedMs":123176}
+
+ ✓ src/test/assembledDefiningFinal.test.ts (84 tests | 82 skipped) 351808ms
+   ✓ defining173 14 High SignificanceFirst 228629ms
+   ✓ defining173 15 High SignificanceFirst 123178ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 82 skipped (84)
+   Start at  00:59:47
+   Duration  357.14s (transform 3.18s, setup 0ms, collect 4.84s, tests 351.81s, environment 0ms, prepare 143ms)
+
+
+M173 cases16-17 exit=0 elapsed=365.629s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDefiningFinal.test.ts > defining173 16 High SignificanceFirst
+M173 case16 historical PASS {"kind":"Qualifies","direction":"MovingCloser"}; actual early3 and16 consumed.
+M173 case16 retention/current PASS {"retained":[2,3,6,7,10,11,14,15],"current":{"kind":"Qualifies","direction":"MovingCloser"}}
+M173 CASE PASS {"index":16,"historical":{"kind":"Qualifies","direction":"MovingCloser"},"current":{"kind":"Qualifies","direction":"MovingCloser"},"retained":[2,3,6,7,10,11,14,15],"selected":[15],"elapsedMs":233411}
+
+stdout | src/test/assembledDefiningFinal.test.ts > defining173 17 Low SignificanceFirst
+M173 case17 historical PASS {"kind":"Qualifies","direction":"MovingFarther"}; actual early3 and16 consumed.
+M173 case17 retention/current PASS {"retained":[3],"current":{"kind":"Qualifies","direction":"MovingFarther"}}
+M173 CASE PASS {"index":17,"historical":{"kind":"Qualifies","direction":"MovingFarther"},"current":{"kind":"Qualifies","direction":"MovingFarther"},"retained":[3],"selected":[3],"elapsedMs":126408}
+
+ ✓ src/test/assembledDefiningFinal.test.ts (84 tests | 82 skipped) 359821ms
+   ✓ defining173 16 High SignificanceFirst 233414ms
+   ✓ defining173 17 Low SignificanceFirst 126406ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 82 skipped (84)
+   Start at  01:05:45
+   Duration  365.07s (transform 3.17s, setup 0ms, collect 4.75s, tests 359.82s, environment 0ms, prepare 147ms)
+
+
+M173 cases18-19 exit=0 elapsed=339.209s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDefiningFinal.test.ts > defining173 18 Low SharedProtection
+M173 case18 historical PASS {"kind":"Qualifies","direction":"MovingFarther"}; actual early3 and16 consumed.
+M173 case18 retention/current PASS {"retained":[15],"current":{"kind":"Qualifies","direction":"MovingFarther"}}
+M173 CASE PASS {"index":18,"historical":{"kind":"Qualifies","direction":"MovingFarther"},"current":{"kind":"Qualifies","direction":"MovingFarther"},"retained":[15],"selected":[15],"elapsedMs":196246}
+
+stdout | src/test/assembledDefiningFinal.test.ts > defining173 19 Low UseOnly
+M173 case19 historical PASS {"kind":"Qualifies","direction":"MovingFarther"}; actual early3 and16 consumed.
+M173 case19 retention/current PASS {"retained":[15],"current":{"kind":"Qualifies","direction":"MovingFarther"}}
+M173 CASE PASS {"index":19,"historical":{"kind":"Qualifies","direction":"MovingFarther"},"current":{"kind":"Qualifies","direction":"MovingFarther"},"retained":[15],"selected":[15],"elapsedMs":137035}
+
+ ✓ src/test/assembledDefiningFinal.test.ts (84 tests | 82 skipped) 333311ms
+   ✓ defining173 18 Low SharedProtection 196244ms
+   ✓ defining173 19 Low UseOnly 137066ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 82 skipped (84)
+   Start at  01:11:51
+   Duration  338.65s (transform 3.24s, setup 0ms, collect 4.87s, tests 333.31s, environment 0ms, prepare 145ms)
+
+
+M173 cases20-21 exit=0 elapsed=371.760s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDefiningFinal.test.ts > defining173 20 Low AgeOnly
+M173 case20 historical PASS {"kind":"Qualifies","direction":"MovingFarther"}; actual early3 and16 consumed.
+M173 case20 retention/current PASS {"retained":[15],"current":{"kind":"Qualifies","direction":"MovingFarther"}}
+M173 CASE PASS {"index":20,"historical":{"kind":"Qualifies","direction":"MovingFarther"},"current":{"kind":"Qualifies","direction":"MovingFarther"},"retained":[15],"selected":[15],"elapsedMs":194479}
+
+stdout | src/test/assembledDefiningFinal.test.ts > defining173 21 Low SignificanceFirst
+M173 case21 historical PASS {"kind":"Qualifies","direction":"MovingFarther"}; actual early3 and16 consumed.
+M173 case21 retention/current PASS {"retained":[3],"current":{"kind":"Qualifies","direction":"MovingFarther"}}
+M173 CASE PASS {"index":21,"historical":{"kind":"Qualifies","direction":"MovingFarther"},"current":{"kind":"Qualifies","direction":"MovingFarther"},"retained":[3],"selected":[3],"elapsedMs":171425}
+
+ ✓ src/test/assembledDefiningFinal.test.ts (84 tests | 82 skipped) 365899ms
+   ✓ defining173 20 Low AgeOnly 194476ms
+   ✓ defining173 21 Low SignificanceFirst 171421ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 82 skipped (84)
+   Start at  01:17:30
+   Duration  371.20s (transform 3.21s, setup 0ms, collect 4.80s, tests 365.90s, environment 0ms, prepare 144ms)
+
+
+M173 cases22-23 exit=0 elapsed=325.536s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDefiningFinal.test.ts > defining173 22 Low SignificanceFirst
+M173 case22 historical PASS {"kind":"Qualifies","direction":"MovingFarther"}; actual early3 and16 consumed.
+M173 case22 retention/current PASS {"retained":[3],"current":{"kind":"Qualifies","direction":"MovingFarther"}}
+M173 CASE PASS {"index":22,"historical":{"kind":"Qualifies","direction":"MovingFarther"},"current":{"kind":"Qualifies","direction":"MovingFarther"},"retained":[3],"selected":[3],"elapsedMs":194232}
+
+stdout | src/test/assembledDefiningFinal.test.ts > defining173 23 Low SignificanceFirst
+M173 case23 historical PASS {"kind":"Qualifies","direction":"MovingFarther"}; actual early3 and16 consumed.
+M173 case23 retention/current PASS {"retained":[3],"current":{"kind":"Qualifies","direction":"MovingFarther"}}
+M173 CASE PASS {"index":23,"historical":{"kind":"Qualifies","direction":"MovingFarther"},"current":{"kind":"Qualifies","direction":"MovingFarther"},"retained":[3],"selected":[3],"elapsedMs":125495}
+
+ ✓ src/test/assembledDefiningFinal.test.ts (84 tests | 82 skipped) 319725ms
+   ✓ defining173 22 Low SignificanceFirst 194230ms
+   ✓ defining173 23 Low SignificanceFirst 125494ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 82 skipped (84)
+   Start at  01:23:42
+   Duration  324.97s (transform 3.18s, setup 0ms, collect 4.77s, tests 319.72s, environment 0ms, prepare 142ms)
+
+
+M173 cases24-25 exit=0 elapsed=335.997s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDefiningFinal.test.ts > defining173 24 Low SignificanceFirst
+M173 case24 historical PASS {"kind":"Qualifies","direction":"MovingFarther"}; actual early3 and16 consumed.
+M173 case24 retention/current PASS {"retained":[],"current":{"kind":"Qualifies","direction":"MovingFarther"}}
+M173 CASE PASS {"index":24,"historical":{"kind":"Qualifies","direction":"MovingFarther"},"current":{"kind":"Qualifies","direction":"MovingFarther"},"retained":[],"selected":[],"elapsedMs":192705}
+
+stdout | src/test/assembledDefiningFinal.test.ts > defining173 25 Low SignificanceFirst
+M173 case25 historical PASS {"kind":"Qualifies","direction":"MovingFarther"}; actual early3 and16 consumed.
+M173 case25 retention/current PASS {"retained":[2,3,6,7,10,11,14,15],"current":{"kind":"Qualifies","direction":"MovingFarther"}}
+M173 CASE PASS {"index":25,"historical":{"kind":"Qualifies","direction":"MovingFarther"},"current":{"kind":"Qualifies","direction":"MovingFarther"},"retained":[2,3,6,7,10,11,14,15],"selected":[15],"elapsedMs":137308}
+
+ ✓ src/test/assembledDefiningFinal.test.ts (84 tests | 82 skipped) 330012ms
+   ✓ defining173 24 Low SignificanceFirst 192703ms
+   ✓ defining173 25 Low SignificanceFirst 137308ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 82 skipped (84)
+   Start at  01:29:07
+   Duration  335.44s (transform 3.32s, setup 0ms, collect 4.95s, tests 330.01s, environment 0ms, prepare 143ms)
+
+
+M173 cases26-27 exit=0 elapsed=333.003s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDefiningFinal.test.ts > defining173 26 Low SignificanceFirst
+M173 case26 historical PASS {"kind":"Qualifies","direction":"MovingFarther"}; actual early3 and16 consumed.
+M173 case26 retention/current PASS {"retained":[3],"current":{"kind":"Qualifies","direction":"MovingFarther"}}
+M173 CASE PASS {"index":26,"historical":{"kind":"Qualifies","direction":"MovingFarther"},"current":{"kind":"Qualifies","direction":"MovingFarther"},"retained":[3],"selected":[],"elapsedMs":192469}
+
+stdout | src/test/assembledDefiningFinal.test.ts > defining173 27 Low SignificanceFirst
+M173 case27 historical PASS {"kind":"Qualifies","direction":"MovingFarther"}; actual early3 and16 consumed.
+M173 case27 retention/current PASS {"retained":[3],"current":{"kind":"DoesNotQualify","reason":"SameDistance"}}
+M173 CASE PASS {"index":27,"historical":{"kind":"Qualifies","direction":"MovingFarther"},"current":{"kind":"DoesNotQualify","reason":"SameDistance"},"retained":[3],"selected":[3],"elapsedMs":134662}
+
+ ✓ src/test/assembledDefiningFinal.test.ts (84 tests | 82 skipped) 327131ms
+   ✓ defining173 26 Low SignificanceFirst 192468ms
+   ✓ defining173 27 Low SignificanceFirst 134662ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 82 skipped (84)
+   Start at  01:34:43
+   Duration  332.45s (transform 3.22s, setup 0ms, collect 4.83s, tests 327.13s, environment 0ms, prepare 156ms)
+
+
+M173 cases28-29 exit=0 elapsed=324.135s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDefiningFinal.test.ts > defining173 28 Low SignificanceFirst
+M173 case28 historical PASS {"kind":"Qualifies","direction":"MovingFarther"}; actual early3 and16 consumed.
+M173 case28 retention/current PASS {"retained":[3],"current":{"kind":"QualificationUnavailable","reason":"AssessmentUnavailable","cause":"MissingEvidence"}}
+M173 CASE PASS {"index":28,"historical":{"kind":"Qualifies","direction":"MovingFarther"},"current":{"kind":"QualificationUnavailable","reason":"AssessmentUnavailable","cause":"MissingEvidence"},"retained":[3],"selected":[3],"elapsedMs":194194}
+
+stdout | src/test/assembledDefiningFinal.test.ts > defining173 29 Low SignificanceFirst
+M173 case29 historical PASS {"kind":"Qualifies","direction":"MovingFarther"}; actual early3 and16 consumed.
+M173 case29 retention/current PASS {"retained":[3],"current":{"kind":"Qualifies","direction":"MovingFarther"}}
+M173 CASE PASS {"index":29,"historical":{"kind":"Qualifies","direction":"MovingFarther"},"current":{"kind":"Qualifies","direction":"MovingFarther"},"retained":[3],"selected":[3],"elapsedMs":123917}
+
+ ✓ src/test/assembledDefiningFinal.test.ts (84 tests | 82 skipped) 318113ms
+   ✓ defining173 28 Low SignificanceFirst 194193ms
+   ✓ defining173 29 Low SignificanceFirst 123918ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 82 skipped (84)
+   Start at  01:40:16
+   Duration  323.56s (transform 3.26s, setup 0ms, collect 4.94s, tests 318.11s, environment 0ms, prepare 150ms)
+
+
+M173 cases30-31 exit=0 elapsed=357.365s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDefiningFinal.test.ts > defining173 30 Low SignificanceFirst
+M173 case30 historical PASS {"kind":"Qualifies","direction":"MovingFarther"}; actual early3 and16 consumed.
+M173 case30 retention/current PASS {"retained":[3],"current":{"kind":"DoesNotQualify","reason":"SameDistance"}}
+M173 CASE PASS {"index":30,"historical":{"kind":"Qualifies","direction":"MovingFarther"},"current":{"kind":"DoesNotQualify","reason":"SameDistance"},"retained":[3],"selected":[3],"elapsedMs":194475}
+
+stdout | src/test/assembledDefiningFinal.test.ts > defining173 31 Low SignificanceFirst
+M173 case31 historical PASS {"kind":"Qualifies","direction":"MovingFarther"}; actual early3 and16 consumed.
+M173 case31 retention/current PASS {"retained":[3],"current":{"kind":"Qualifies","direction":"MovingFarther"}}
+M173 CASE PASS {"index":31,"historical":{"kind":"Qualifies","direction":"MovingFarther"},"current":{"kind":"Qualifies","direction":"MovingFarther"},"retained":[3],"selected":[3],"elapsedMs":157039}
+
+ ✓ src/test/assembledDefiningFinal.test.ts (84 tests | 82 skipped) 351515ms
+   ✓ defining173 30 Low SignificanceFirst 194475ms
+   ✓ defining173 31 Low SignificanceFirst 157039ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 82 skipped (84)
+   Start at  01:45:40
+   Duration  356.81s (transform 3.20s, setup 0ms, collect 4.80s, tests 351.52s, environment 0ms, prepare 148ms)
+
+
+M173 cases32-33 exit=0 elapsed=359.597s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDefiningFinal.test.ts > defining173 32 Low SignificanceFirst
+M173 case32 historical PASS {"kind":"Qualifies","direction":"MovingFarther"}; actual early3 and16 consumed.
+M173 case32 retention/current PASS {"retained":[],"current":{"kind":"DoesNotQualify","reason":"SameDistance"}}
+M173 CASE PASS {"index":32,"historical":{"kind":"Qualifies","direction":"MovingFarther"},"current":{"kind":"DoesNotQualify","reason":"SameDistance"},"retained":[],"selected":[],"elapsedMs":192099}
+
+stdout | src/test/assembledDefiningFinal.test.ts > defining173 33 Low SignificanceFirst
+M173 case33 historical PASS {"kind":"Qualifies","direction":"MovingFarther"}; actual early3 and16 consumed.
+M173 case33 retention/current PASS {"retained":[2,3,6,7,10,11,14,15],"current":{"kind":"Qualifies","direction":"MovingFarther"}}
+M173 CASE PASS {"index":33,"historical":{"kind":"Qualifies","direction":"MovingFarther"},"current":{"kind":"Qualifies","direction":"MovingFarther"},"retained":[2,3,6,7,10,11,14,15],"selected":[15],"elapsedMs":161528}
+
+ ✓ src/test/assembledDefiningFinal.test.ts (84 tests | 82 skipped) 353628ms
+   ✓ defining173 32 Low SignificanceFirst 192098ms
+   ✓ defining173 33 Low SignificanceFirst 161529ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 82 skipped (84)
+   Start at  01:51:38
+   Duration  359.03s (transform 3.30s, setup 0ms, collect 4.93s, tests 353.63s, environment 0ms, prepare 150ms)
+
+
+M173 cases34-35 exit=0 elapsed=324.395s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDefiningFinal.test.ts > defining173 34 Wide SignificanceFirst
+M173 case34 historical PASS {"kind":"DoesNotQualify","reason":"SameDistance"}; actual early3 and16 consumed.
+M173 case34 retention/current PASS {"retained":[15],"current":{"kind":"DoesNotQualify","reason":"SameDistance"}}
+M173 CASE PASS {"index":34,"historical":{"kind":"DoesNotQualify","reason":"SameDistance"},"current":{"kind":"DoesNotQualify","reason":"SameDistance"},"retained":[15],"selected":[15],"elapsedMs":192673}
+
+stdout | src/test/assembledDefiningFinal.test.ts > defining173 35 Wide SharedProtection
+M173 case35 historical PASS {"kind":"DoesNotQualify","reason":"SameDistance"}; actual early3 and16 consumed.
+M173 case35 retention/current PASS {"retained":[15],"current":{"kind":"DoesNotQualify","reason":"SameDistance"}}
+M173 CASE PASS {"index":35,"historical":{"kind":"DoesNotQualify","reason":"SameDistance"},"current":{"kind":"DoesNotQualify","reason":"SameDistance"},"retained":[15],"selected":[15],"elapsedMs":125679}
+
+ ✓ src/test/assembledDefiningFinal.test.ts (84 tests | 82 skipped) 318355ms
+   ✓ defining173 34 Wide SignificanceFirst 192673ms
+   ✓ defining173 35 Wide SharedProtection 125681ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 82 skipped (84)
+   Start at  01:57:37
+   Duration  323.84s (transform 3.21s, setup 0ms, collect 5.02s, tests 318.36s, environment 0ms, prepare 146ms)
+
+
+M173 cases36-37 exit=0 elapsed=333.398s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDefiningFinal.test.ts > defining173 36 Wide UseOnly
+M173 case36 historical PASS {"kind":"DoesNotQualify","reason":"SameDistance"}; actual early3 and16 consumed.
+M173 case36 retention/current PASS {"retained":[15],"current":{"kind":"DoesNotQualify","reason":"SameDistance"}}
+M173 CASE PASS {"index":36,"historical":{"kind":"DoesNotQualify","reason":"SameDistance"},"current":{"kind":"DoesNotQualify","reason":"SameDistance"},"retained":[15],"selected":[15],"elapsedMs":192938}
+
+stdout | src/test/assembledDefiningFinal.test.ts > defining173 37 Wide AgeOnly
+M173 case37 historical PASS {"kind":"DoesNotQualify","reason":"SameDistance"}; actual early3 and16 consumed.
+M173 case37 retention/current PASS {"retained":[15],"current":{"kind":"DoesNotQualify","reason":"SameDistance"}}
+M173 CASE PASS {"index":37,"historical":{"kind":"DoesNotQualify","reason":"SameDistance"},"current":{"kind":"DoesNotQualify","reason":"SameDistance"},"retained":[15],"selected":[15],"elapsedMs":134658}
+
+ ✓ src/test/assembledDefiningFinal.test.ts (84 tests | 82 skipped) 327599ms
+   ✓ defining173 36 Wide UseOnly 192939ms
+   ✓ defining173 37 Wide AgeOnly 134659ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 82 skipped (84)
+   Start at  02:03:02
+   Duration  332.84s (transform 3.17s, setup 0ms, collect 4.77s, tests 327.60s, environment 0ms, prepare 143ms)
+
+
+M173 cases38-39 exit=0 elapsed=367.310s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDefiningFinal.test.ts > defining173 38 Wide SignificanceFirst
+M173 case38 historical PASS {"kind":"DoesNotQualify","reason":"SameDistance"}; actual early3 and16 consumed.
+M173 case38 retention/current PASS {"retained":[15],"current":{"kind":"DoesNotQualify","reason":"SameDistance"}}
+M173 CASE PASS {"index":38,"historical":{"kind":"DoesNotQualify","reason":"SameDistance"},"current":{"kind":"DoesNotQualify","reason":"SameDistance"},"retained":[15],"selected":[15],"elapsedMs":227407}
+
+stdout | src/test/assembledDefiningFinal.test.ts > defining173 39 Wide SignificanceFirst
+M173 case39 historical PASS {"kind":"DoesNotQualify","reason":"SameDistance"}; actual early3 and16 consumed.
+M173 case39 retention/current PASS {"retained":[15],"current":{"kind":"DoesNotQualify","reason":"SameDistance"}}
+M173 CASE PASS {"index":39,"historical":{"kind":"DoesNotQualify","reason":"SameDistance"},"current":{"kind":"DoesNotQualify","reason":"SameDistance"},"retained":[15],"selected":[15],"elapsedMs":134087}
+
+ ✓ src/test/assembledDefiningFinal.test.ts (84 tests | 82 skipped) 361497ms
+   ✓ defining173 38 Wide SignificanceFirst 227408ms
+   ✓ defining173 39 Wide SignificanceFirst 134088ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 82 skipped (84)
+   Start at  02:08:35
+   Duration  366.75s (transform 3.19s, setup 0ms, collect 4.77s, tests 361.50s, environment 0ms, prepare 151ms)
+
+
+M173 cases40-41 exit=0 elapsed=334.338s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDefiningFinal.test.ts > defining173 40 Wide SignificanceFirst
+M173 case40 historical PASS {"kind":"DoesNotQualify","reason":"SameDistance"}; actual early3 and16 consumed.
+M173 case40 retention/current PASS {"retained":[15],"current":{"kind":"DoesNotQualify","reason":"SameDistance"}}
+M173 CASE PASS {"index":40,"historical":{"kind":"DoesNotQualify","reason":"SameDistance"},"current":{"kind":"DoesNotQualify","reason":"SameDistance"},"retained":[15],"selected":[15],"elapsedMs":193881}
+
+stdout | src/test/assembledDefiningFinal.test.ts > defining173 41 Wide SignificanceFirst
+M173 case41 historical PASS {"kind":"DoesNotQualify","reason":"SameDistance"}; actual early3 and16 consumed.
+M173 case41 retention/current PASS {"retained":[],"current":{"kind":"DoesNotQualify","reason":"SameDistance"}}
+M173 CASE PASS {"index":41,"historical":{"kind":"DoesNotQualify","reason":"SameDistance"},"current":{"kind":"DoesNotQualify","reason":"SameDistance"},"retained":[],"selected":[],"elapsedMs":134537}
+
+ ✓ src/test/assembledDefiningFinal.test.ts (84 tests | 82 skipped) 328459ms
+   ✓ defining173 40 Wide SignificanceFirst 193918ms
+   ✓ defining173 41 Wide SignificanceFirst 134539ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 82 skipped (84)
+   Start at  02:14:43
+   Duration  333.78s (transform 3.23s, setup 0ms, collect 4.85s, tests 328.46s, environment 0ms, prepare 144ms)
+
+
+M173 cases42-43 exit=0 elapsed=16056.414s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDefiningFinal.test.ts > defining173 42 Wide SignificanceFirst
+M173 case42 historical PASS {"kind":"DoesNotQualify","reason":"SameDistance"}; actual early3 and16 consumed.
+M173 case42 retention/current PASS {"retained":[2,3,6,7,10,11,14,15],"current":{"kind":"DoesNotQualify","reason":"SameDistance"}}
+M173 CASE PASS {"index":42,"historical":{"kind":"DoesNotQualify","reason":"SameDistance"},"current":{"kind":"DoesNotQualify","reason":"SameDistance"},"retained":[2,3,6,7,10,11,14,15],"selected":[15],"elapsedMs":196764}
+
+stdout | src/test/assembledDefiningFinal.test.ts > defining173 43 Wide SignificanceFirst
+M173 case43 historical PASS {"kind":"DoesNotQualify","reason":"SameDistance"}; actual early3 and16 consumed.
+M173 case43 retention/current PASS {"retained":[15],"current":{"kind":"DoesNotQualify","reason":"SameDistance"}}
+M173 CASE PASS {"index":43,"historical":{"kind":"DoesNotQualify","reason":"SameDistance"},"current":{"kind":"DoesNotQualify","reason":"SameDistance"},"retained":[15],"selected":[],"elapsedMs":15853758}
+
+ ✓ src/test/assembledDefiningFinal.test.ts (84 tests | 82 skipped) 16050544ms
+   ✓ defining173 42 Wide SignificanceFirst 196765ms
+   ✓ defining173 43 Wide SignificanceFirst 15853778ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 82 skipped (84)
+   Start at  02:20:17
+   Duration  16055.84s (transform 3.22s, setup 0ms, collect 4.81s, tests 16050.54s, environment 0ms, prepare 142ms)
+
+
+M173 EXTERNAL SUSPENSION: coordinator14550 exited1 after cases42-43 both PASS. Windows event1 proves15714.7635937s host sleep. Raw batch16056.414s and case43 15853.758s remain unchanged; awake341.6504063s /138.9944063s. Raw recorded commands23276.479s => awake7561.7154063s; previous staging1.734s and diagnosis1.614s also charged. Self-approved CURRENT amendment:600s child/14400s cumulative awake time, raw preserved; remaining44..67 only,6600s coordinator. Temporary thread system-awake request, released on exit. No simulation failure or repeated passed case.
