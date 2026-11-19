@@ -1,0 +1,74 @@
+
+M186 types exit=0 elapsed=20.606s cap=600
+
+M186 current-retrieval-and-source-controls exit=0 elapsed=234.042s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectMemoryCurrent.test.ts > final186 primary affect changes learned retrieval and actual appraisal
+M186 PRIOR [{"kind":"text","value":"Known"},{"kind":"list","items":[{"kind":"rational","numerator":"199","denominator":"400"},{"kind":"rational","numerator":"199","denominator":"400"}]}]
+M186 PRIOR [{"kind":"text","value":"Known"},{"kind":"list","items":[{"kind":"rational","numerator":"0","denominator":"1"},{"kind":"rational","numerator":"0","denominator":"1"}]}]
+M186 PRIOR [{"kind":"text","value":"Known"},{"kind":"list","items":[{"kind":"rational","numerator":"199","denominator":"400"},{"kind":"rational","numerator":"199","denominator":"400"}]}]
+M186 RANK {"gain":"599/400","scores":[{"acquisition":"138","base":{"numerator":"1","denominator":"17"},"pull":{"numerator":"64","denominator":"125"},"score":{"numerator":"43857","denominator":"53125"}},{"acquisition":"206","base":{"numerator":"1","denominator":"16"},"pull":{"numerator":"1017","denominator":"2000"},"score":{"numerator":"659183","denominator":"800000"}}],"winner":"10"}
+M186 PROBE {"law":"UncontrolledGain","carry":{"at":10,"status":"Known","exposure":"199/400","uncontrolled":"199/400"},"gain":"599/400","scores":[{"at":"10","base":{"numerator":"1","denominator":"17"},"pull":{"numerator":"64","denominator":"125"},"score":{"numerator":"43857","denominator":"53125"}},{"at":"11","base":{"numerator":"1","denominator":"16"},"pull":{"numerator":"1017","denominator":"2000"},"score":{"numerator":"659183","denominator":"800000"}}],"winner":"10","mean":"1/1"}
+M186 RANK {"gain":"1/1","scores":[{"acquisition":"138","base":{"numerator":"1","denominator":"17"},"pull":{"numerator":"64","denominator":"125"},"score":{"numerator":"1213","denominator":"2125"}},{"acquisition":"206","base":{"numerator":"1","denominator":"16"},"pull":{"numerator":"1017","denominator":"2000"},"score":{"numerator":"571","denominator":"1000"}}],"winner":"11"}
+M186 PROBE {"law":"UncontrolledGain","carry":{"at":10,"status":"Known","exposure":"0/1","uncontrolled":"0/1"},"gain":"1/1","scores":[{"at":"10","base":{"numerator":"1","denominator":"17"},"pull":{"numerator":"64","denominator":"125"},"score":{"numerator":"1213","denominator":"2125"}},{"at":"11","base":{"numerator":"1","denominator":"16"},"pull":{"numerator":"1017","denominator":"2000"},"score":{"numerator":"571","denominator":"1000"}}],"winner":"11","mean":"0/1"}
+M186 RANK {"gain":"1/1","scores":[{"acquisition":"138","base":{"numerator":"1","denominator":"17"},"pull":{"numerator":"64","denominator":"125"},"score":{"numerator":"1213","denominator":"2125"}},{"acquisition":"206","base":{"numerator":"1","denominator":"16"},"pull":{"numerator":"1017","denominator":"2000"},"score":{"numerator":"571","denominator":"1000"}}],"winner":"11"}
+M186 PROBE {"law":"NoFeedback","carry":{"at":10,"status":"Known","exposure":"199/400","uncontrolled":"199/400"},"gain":"1/1","scores":[{"at":"10","base":{"numerator":"1","denominator":"17"},"pull":{"numerator":"64","denominator":"125"},"score":{"numerator":"1213","denominator":"2125"}},{"at":"11","base":{"numerator":"1","denominator":"16"},"pull":{"numerator":"1017","denominator":"2000"},"score":{"numerator":"571","denominator":"1000"}}],"winner":"11","mean":"0/1"}
+M186 PRIMARY PASS current0.129; matched actual history/graph, prior-only gain599/400 vs1, social/joint appraisal1 vs0; zero-calibration observation0.2; stress11=249/0/249 without danger evidence; all queues101
+
+stdout | src/test/assembledAffectMemoryCurrent.test.ts > final186 controls distinguish unknown denied and later evidence
+M186 PRIOR [{"kind":"text","value":"Unavailable"},{"kind":"list","items":[]}]
+M186 PRIOR [{"kind":"text","value":"Known"},{"kind":"list","items":[{"kind":"rational","numerator":"199","denominator":"400"},{"kind":"rational","numerator":"199","denominator":"400"}]}]
+M186 PRIOR [{"kind":"text","value":"Known"},{"kind":"list","items":[{"kind":"rational","numerator":"199","denominator":"400"},{"kind":"rational","numerator":"199","denominator":"400"}]}]
+M186 RANK {"gain":"1/1","scores":[{"acquisition":"135","base":{"numerator":"1","denominator":"17"},"pull":{"numerator":"64","denominator":"125"},"score":{"numerator":"1213","denominator":"2125"}},{"acquisition":"203","base":{"numerator":"1","denominator":"16"},"pull":{"numerator":"1017","denominator":"2000"},"score":{"numerator":"571","denominator":"1000"}}],"winner":"11"}
+M186 PROBE {"law":"UncontrolledGain","carry":{"at":10,"status":"Unavailable","exposure":null,"uncontrolled":null},"gain":"1/1","scores":[{"at":"10","base":{"numerator":"1","denominator":"17"},"pull":{"numerator":"64","denominator":"125"},"score":{"numerator":"1213","denominator":"2125"}},{"at":"11","base":{"numerator":"1","denominator":"16"},"pull":{"numerator":"1017","denominator":"2000"},"score":{"numerator":"571","denominator":"1000"}}],"winner":"11","mean":"0/1"}
+M186 RANK {"gain":"599/400","scores":[{"acquisition":"138","base":{"numerator":"1","denominator":"17"},"pull":{"numerator":"64","denominator":"125"},"score":{"numerator":"43857","denominator":"53125"}},{"acquisition":"206","base":{"numerator":"1","denominator":"16"},"pull":{"numerator":"1017","denominator":"2000"},"score":{"numerator":"659183","denominator":"800000"}}],"winner":"10"}
+M186 PROBE {"law":"UncontrolledGain","carry":{"at":10,"status":"Known","exposure":"199/400","uncontrolled":"199/400"},"gain":"599/400","scores":[{"at":"10","base":{"numerator":"1","denominator":"17"},"pull":{"numerator":"64","denominator":"125"},"score":{"numerator":"43857","denominator":"53125"}},{"at":"11","base":{"numerator":"1","denominator":"16"},"pull":{"numerator":"1017","denominator":"2000"},"score":{"numerator":"659183","denominator":"800000"}}],"winner":"10","mean":"1/1"}
+M186 CONTROLS PASS unknown != known-zero; source denied gives no social recall26; current changed appraisal cannot rewrite authentic prior10; full queues101
+
+ ✓ src/test/assembledAffectMemoryCurrent.test.ts (8 tests | 6 skipped) 228345ms
+   ✓ final186 primary affect changes learned retrieval and actual appraisal 144724ms
+   ✓ final186 controls distinguish unknown denied and later evidence 83620ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 6 skipped (8)
+   Start at  17:28:42
+   Duration  233.47s (transform 3.16s, setup 0ms, collect 4.75s, tests 228.34s, environment 0ms, prepare 106ms)
+
+
+M186 current-continuation-privacy-rollback exit=0 elapsed=223.435s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectMemoryCurrent.test.ts > final186 exact continuation privacy and post-publication rollback
+M186 RANK {"gain":"599/400","scores":[{"acquisition":"138","base":{"numerator":"1","denominator":"17"},"pull":{"numerator":"64","denominator":"125"},"score":{"numerator":"43857","denominator":"53125"}},{"acquisition":"206","base":{"numerator":"1","denominator":"16"},"pull":{"numerator":"1017","denominator":"2000"},"score":{"numerator":"659183","denominator":"800000"}}],"winner":"10"}
+M186 PROBE {"law":"UncontrolledGain","carry":{"at":10,"status":"Known","exposure":"199/400","uncontrolled":"199/400"},"gain":"599/400","scores":[{"at":"10","base":{"numerator":"1","denominator":"17"},"pull":{"numerator":"64","denominator":"125"},"score":{"numerator":"43857","denominator":"53125"}},{"at":"11","base":{"numerator":"1","denominator":"16"},"pull":{"numerator":"1017","denominator":"2000"},"score":{"numerator":"659183","denominator":"800000"}}],"winner":"10","mean":"1/1"}
+M186 PERSISTENCE PASS every later state/output/trace/save/run byte repeat and public save12 through101; hidden safe state/output equal; actual publication fault rolls back and recovers exactly
+
+ ✓ src/test/assembledAffectMemoryCurrent.test.ts (8 tests | 7 skipped) 217864ms
+   ✓ final186 exact continuation privacy and post-publication rollback 217864ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  17:33:02
+   Duration  222.88s (transform 3.10s, setup 0ms, collect 4.63s, tests 217.86s, environment 0ms, prepare 104ms)
+
+
+M186 preservation-boundary-research exit=0 elapsed=7.144s cap=600
+Reference boundary check passed.
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4406}
+M186 PRESERVATION PASS zero production/formal/prior-test/evidence changes; exactly2 new test paths;21/15/132 unchanged; register237lines/65499CRLFbytes; evidence2files/13896bytes.
+M186 measured preclosing seconds 478.083
+
+M186 staged-size-whitespace exit=0 elapsed=0.845s cap=600
+PASS: Git index contains no files at or above50,000,000 bytes.
+ docs/planning/ASSEMBLED_CHARACTER_M186_CHECKS.txt  |  62 +++++++++++
+ docs/planning/ASSEMBLED_CHARACTER_M186_RESULT.md   |  79 +++++++++++++
+ .../planning/ASSEMBLED_CHARACTER_RECONCILIATION.md |   9 +-
+ docs/planning/CURRENT.md                           | 101 +++++++----------
+ docs/planning/RESEARCH_OBLIGATIONS.json            |  16 +++
+ src/test/assembledAffectMemoryCurrent.test.ts      | 123 +++++++++++++++++++++
+ src/test/fixtures/assembledAffectMemoryCurrent.ts  |  14 +++
+ 7 files changed, 339 insertions(+), 65 deletions(-)
+M186 STAGED PASS exactly7 intended paths; no production/formal/prior-test edits; size and whitespace pass.

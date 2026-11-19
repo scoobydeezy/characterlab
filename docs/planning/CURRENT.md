@@ -1,69 +1,48 @@
-# Current work — M186: current prior-affect retrieval and cognition
-Prior affect must still change learned recall and the appraisal that consumes it,
-after stress and calibrated sensing joined the one character. No new mechanism.
-Baseb4852ccc; current rules/registry0.129-candidate, reference psychology/bias0.
+# Current work — M186 complete; AFFECT cognitive comparisons remain
+Prior affect changes which acquired experience the current character recalls and
+the social appraisal that consumes it. Ordinary person belief and learned danger
+stay unchanged. The same prior affect separately reaches strictly later bodily stress.
 
-## Bounded card before implementation
-Owner's AFFECT self-approval continues. BRIEF12.5-6, PHEN-AFFECT-001:6/:9/:10/:11;
-:12/:13 remain standing seam/reopen conditions, not behavioral passes.
-Two new paths: src/test/fixtures/assembledAffectMemoryCurrent.ts and
-src/test/assembledAffectMemoryCurrent.test.ts. No production/formal/old-test edits.
-Promote M176's exact sources to0.129: append the existing stress declaration/anchor,
-body declaration0.2/calibration0. Keep original settings/input evidence unchanged.
-Use the shared public runtime, original gain/recall kernels on actual consumed data;
-no Campaign3 runtime, authored memory, graph or affect output in the character.
+[M186 result](ASSEMBLED_CHARACTER_M186_RESULT.md);
+[checks](ASSEMBLED_CHARACTER_M186_CHECKS.txt). Plans e6d71665/90a68d2c; baseb4852ccc.
+Rules/registry0.129-candidate; reference psychology and calibration0 unchanged.
+Two new test/fixture paths, zero production/formal/prior-test changes.
 
-## Scenario and comparisons
-One holder/seed0; body30/cap100/rate10/grid1/threshold from M176, stress0, bias0.
-Threat task nonsocial; remaining social tasks have normal passive-target evidence.
-Perceived trials1..9; true reportA10, falseB11, silent12; learned graph capacity2;
-memory32/delay16/K1 and workspace6. Importance1 at1, urgency0 at10/1 at26.
-Routes closed1/open25; no early expression/execution. All queues exhaust101.
-Keep these original physical settings to compare the same earned memory witness;
-M185's body51/grid20 belongs to its separate response/execution scenario.
-Reference laws are shared, not selected to make individual members pass.
+## Passed comparison
+Preserved M176 sources: one holder/seed0, body30/cap100/rate10/grid1, stress0/bias0.
+Threat nonsocial; normal passive-target evidence; acquired episodes10/11 and graph.
+Memory32/delay16/K1/workspace6; routes closed1/open25, no early execution.
+Current observation0.2 discloses zero calibration before[0,1] quantization.
+Risk prior199/400 -> gain599/400 -> olderA10; known-zero and labelled NoFeedback
+gain1 -> newerB11. Exact original kernels agree on actual reads, scores and IDs.
+Authentic prior10 -> query26 -> shared workspace -> social/joint appraisal1/0;
+ordinary person belief remains1/2. Stress11=249/0/249 consumes that same prior report.
+NoFeedback is the original retrieval ablation, not a substitute acceptance law.
+Episodes, presentation histories and graph agree before recall. Danger knowledge
+stays fixed after its last evidence through101 despite stress and recall.
 
-Primary: Risk/Safe/labelled NoFeedback. Preserve original Risk/Safe evidence and
-matching physical diagnostic; the separate hidden alias must prove it inert. Same
-initial bytes and safe prefix through8. NoFeedback changes
-only the existing retrieval-law declaration as a retained ablation, never acceptance.
-Actual episodes, encoding/presentation history and learned graph agree before recall.
-Assert live authentic prior10 appraisal and both recall candidates26. Risk prior
-U199/400 -> gain599/400 selects olderA10; known-zero/NoFeedback gain1 selects newerB11.
-Original gain/recall kernels must agree on exact native operands/scores/winners.
-Trace prior report/event -> query26 -> published/acquired workspace -> consumed
-social/joint appraisal1 versus0; ordinary person belief stays1/2. No random-choice claim.
-Current observation must disclose version0.2 and zero calibration before binning.
-Current stress receiver must consume the actual prior report strictly later11;
-this physical consequence cannot replace danger evidence or alter recalled history.
+Denied Motion leaves prior Unavailable/gain1; known zero remains distinct.
+Later evidence changes current appraisal26, not the frozen prior10 or older recall.
+Denied first encounter prevents query26 and preserves only the permitted episode11.
+Hidden diagnostic aliases leave every settled safe state/output identical.
+Independent repeat and public save12 continue with every later full byte equal.
+Actual post-publication26 fault rolls back; public recovery from25 exactly matches.
+All scenarios exhaust101 without diagnostics. No random-choice claim.
 
-Controls: denied Motion8 leaves prior Unavailable/gain1; later safe trials14..16
-change current appraisal26 without rewriting captured prior10/gain/olderA; denied
-first social encounter yields no query26 and only the permitted episode11.
-NoFeedback and known-zero remain separate. Primary danger knowledge stays unchanged
-after its last evidence despite later stress and recall.
+Three native gates, types, boundary/research, preservation and staged-size checks
+pass. Verification 486.072 seconds<1800, each command<600; one job.
+Two evidence files<5MiB; no failed check or budget extension. The pre-code
+clarification discloses the original physical diagnostic; inputs were preserved.
 
-Privacy: hidden physical annex leaves safe state/output equal at EVERY instant.
-Independent repeat/public original-input save12 reproduce every later full
-state/output/trace/save/run byte through101. Fault after actual publication26 rolls
-back the whole instant; public recovery from25 equals clean continuation throughout.
-No truncation or output-only persistence. Every compared source/consumer asserts live.
-
-## Checks, risks and stop
-Types; primary/source controls; privacy/repeat/restore/rollback; boundary/research;
-preserve original sources/receipts/baseline; staged size/whitespace. One long job.
-Risks: current schema/owner mismatch, wrong prior/current carry, unselected memory,
-false epistemic credit, altered queue timing or partial rollback.
-600s/command;1800s total including failures;20 evidence files/5MiB;2 source/test paths.
-One result/log; CURRENT<=80/register<=250/64KiB. Done iff all declared gates pass;
-then stop verification. Record bounded repairs before rerunning affected gates.
-MEC004/007/008/009/010/022 preserve perception/access/learning/retention/historical
-meaning. FND4/6; RO005/006/007/009/010/011/017/019/020/021/022 stay scoped.
-No law retuning, seed search, family promotion, unrelated breadth or new pipeline.
-Next remain current cognitive reappraisal/embarrassment comparisons and the compact
-eight-clause AFFECT acceptance map, with affected factor transfer explicitly resolved.
-Pinned21/15/132 and E64/P42/N13/U13 unchanged; memory12.3 accepted on0.126 only.
-Wider BIO/stress sensing and final whole-candidate replay remain whole-character work.
+## Remaining direction
+Next bounded work: current cognitive reappraisal/embarrassment comparisons, then
+compact eight-clause AFFECT map with affected factor transfer explicitly resolved.
+M184 source, M185 response/execution and M186 retrieval current checks are complete;
+do not rerun passing checks without a concrete invalidating change.
+No family/clause promotion here. Pinned21/15/132 and E64/P42/N13/U13 unchanged.
+Memory12.3 accepted0.126; only its affected retrieval transfer is renewed here.
+Wider BIO/stress sensing, final whole-candidate replay and assembly acceptance remain.
+Continue AFFECT bounded self-approval. No UI, new pipeline, reduction or debt closure.
 
 | Record | Status |
 |---|---|
