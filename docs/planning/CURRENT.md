@@ -48,6 +48,12 @@ Independent repeat and public save25 restore of the successful arm must match
 every subsequent full state/output/trace/save/run byte through101 across execution,
 observation28 and stress29. All native runs exhaust101 without diagnostics.
 
+## Recorded setup correction before rerun
+The first native gate found inherited protocol execution disabled (engagement false).
+Enable protocol execution in BOTH arms; keep its observation hidden. Restore the
+copied permission28 to true in both; assert exactly one input difference, at26.
+This implements the declared contrast; laws, seed, effects and gates remain fixed.
+
 ## Files, checks, budgets, stop
 At most2 new test/fixture paths; zero production/formal/old-test edits planned.
 If a production defect appears, record it and amend this card before repair.

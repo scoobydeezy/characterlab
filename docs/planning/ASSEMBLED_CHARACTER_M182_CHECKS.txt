@@ -1,0 +1,41 @@
+
+M182 implementation-types exit=2 elapsed=20.655s cap=600
+src/test/assembledExecutedAffect.test.ts(73,137): error TS4104: The type 'readonly CanonicalValue[]' is 'readonly' and cannot be assigned to the mutable type 'CanonicalValue[]'.
+src/test/assembledExecutedAffect.test.ts(73,145): error TS4104: The type 'readonly CanonicalValue[]' is 'readonly' and cannot be assigned to the mutable type 'CanonicalValue[]'.
+
+M182 type repair: original-execution comparator accepts immutable canonical arrays. No runtime, fixture or assertion change.
+
+M182 corrected-types exit=0 elapsed=20.040s cap=600
+
+M182 primary-execution-affect exit=1 elapsed=109.593s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledExecutedAffect.test.ts (8 tests | 1 failed | 7 skipped) 103931ms
+   × final182 primary executed outcome reaches later affect 103930ms
+     → expected false to be true // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledExecutedAffect.test.ts > final182 primary executed outcome reaches later affect
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ actual src/test/assembledExecutedAffect.test.ts:42:102
+
+ ❯ pair src/test/assembledExecutedAffect.test.ts:73:65
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  13:20:42
+   Duration  109.01s (transform 3.10s, setup 0ms, collect 4.63s, tests 103.93s, environment 0ms, prepare 147ms)
+
+
+M182 setup correction before rerun: inherited definition/protocol-execution is false (retained from earlier neutral-memory source); actual engagement26 was false despite requested permission. Enable the common protocol definition in both arms, retain hidden protocol observation, and reset cloned permission28 true in both. Assert exactly one ordered-input difference at26. No laws/seed/effect/acceptance change.
