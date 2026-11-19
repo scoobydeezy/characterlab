@@ -23,8 +23,9 @@ Keep these original physical settings to compare the same earned memory witness;
 M185's body51/grid20 belongs to its separate response/execution scenario.
 Reference laws are shared, not selected to make individual members pass.
 
-Primary: Risk/Safe/labelled NoFeedback. Risk/Safe differ only in ordinary permitted
-source evidence; same initial bytes and safe prefix through8. NoFeedback changes
+Primary: Risk/Safe/labelled NoFeedback. Preserve original Risk/Safe evidence and
+matching physical diagnostic; the separate hidden alias must prove it inert. Same
+initial bytes and safe prefix through8. NoFeedback changes
 only the existing retrieval-law declaration as a retained ablation, never acceptance.
 Actual episodes, encoding/presentation history and learned graph agree before recall.
 Assert live authentic prior10 appraisal and both recall candidates26. Risk prior
