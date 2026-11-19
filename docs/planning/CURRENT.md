@@ -57,6 +57,8 @@ this card commit follows test edits/start, before comparison outcome. No conceal
 132.980s: retrieval ran but body recall plus task/forecast focus crowded out social
 recall. Self-amendment: shared workspace6 (from5), for3 tasks+forecast+2 memories;
 retain body channel, both live appraisals and all other gates. No law change.
+121.004s control setup: denying first encounter leaves no prior track. In that
+arm only, encounter11 opens a new normal file instead of claiming continuity.
 ## Budget, preservation and done
 Every behavioral gate has actual producer/consumer liveness. Retain all failed
 attempts; diagnose before bounded self-amendments. No seed search or law tuning.
