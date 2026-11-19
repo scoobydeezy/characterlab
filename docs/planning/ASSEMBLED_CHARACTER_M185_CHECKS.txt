@@ -1,0 +1,108 @@
+
+M185 types exit=0 elapsed=21.007s cap=600
+
+M185 current-response-controls exit=0 elapsed=313.589s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectResponseCurrent.test.ts > final185 response same affect different response with exact coupled arbitration
+M185 RESPONSE LIVE {"urgency":{"kind":"list","items":[{"kind":"rational","numerator":"1","denominator":"1"}]},"motive":{"kind":"rational","numerator":"1","denominator":"1"},"affect":{"kind":"list","items":[{"kind":"rational","numerator":"2","denominator":"5"},{"kind":"rational","numerator":"2","denominator":"5"}]},"nuclei":[{"die":"6","standing":"0"},{"die":"6","standing":"0"}],"mode":"3","probabilities":["1/2","1/2"]}
+M185 RESPONSE LIVE {"urgency":{"kind":"list","items":[{"kind":"rational","numerator":"0","denominator":"1"}]},"motive":{"kind":"rational","numerator":"1","denominator":"2"},"affect":{"kind":"list","items":[{"kind":"rational","numerator":"2","denominator":"5"},{"kind":"rational","numerator":"2","denominator":"5"}]},"nuclei":[{"die":"6","standing":"0"},{"die":"4","standing":"0"}],"mode":"3","probabilities":["2/3","1/3"]}
+M185 RESPONSE COUPLED {"total":"144","changed":"24","counts":[["72","72"],["96","48"]]}
+M185 RESPONSE PRIMARY PASS same positive complete appraisal/knowledge/memory, only competing current urgency changes actual reason and exact response mass; FearAsCommand/constant-affect-only response fail; full101.
+
+stdout | src/test/assembledAffectResponseCurrent.test.ts > final185 response denied urgency stays unknown and cannot change response
+M185 RESPONSE LIVE {"urgency":{"kind":"list","items":[]},"motive":{"kind":"rational","numerator":"0","denominator":"1"},"affect":{"kind":"list","items":[{"kind":"rational","numerator":"2","denominator":"5"},{"kind":"rational","numerator":"2","denominator":"5"}]},"nuclei":[{"die":"6","standing":"0"}],"mode":"1","probabilities":["1/1","0/1"]}
+M185 RESPONSE LIVE {"urgency":{"kind":"list","items":[]},"motive":{"kind":"rational","numerator":"0","denominator":"1"},"affect":{"kind":"list","items":[{"kind":"rational","numerator":"2","denominator":"5"},{"kind":"rational","numerator":"2","denominator":"5"}]},"nuclei":[{"die":"6","standing":"0"}],"mode":"1","probabilities":["1/1","0/1"]}
+M185 RESPONSE DENIED PASS different unpermitted urgency displays, identical unknown evidence and actual response; full101.
+
+stdout | src/test/assembledAffectResponseCurrent.test.ts > final185 response privacy independent repeat and exact public continuation
+M185 RESPONSE PERSISTENCE PASS every remaining state/output/trace/save/run byte after25; hidden physical truth changes no safe state/output; complete101.
+
+ ✓ src/test/assembledAffectResponseCurrent.test.ts (8 tests | 5 skipped) 307100ms
+   ✓ final185 response same affect different response with exact coupled arbitration 123966ms
+   ✓ final185 response denied urgency stays unknown and cannot change response 61903ms
+   ✓ final185 response privacy independent repeat and exact public continuation 121230ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 5 skipped (8)
+   Start at  17:00:38
+   Duration  312.57s (transform 3.25s, setup 0ms, collect 4.86s, tests 307.10s, environment 0ms, prepare 316ms)
+
+
+M185 current-execution-controls exit=0 elapsed=319.952s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledExecutedAffectCurrent.test.ts > final185 execution primary executed outcome reaches later affect
+M185 EXECUTION PRIMARY PASS same full intent/expression/plan; actual Applied75/Overflow5 vs Blocked; samples98/23, U1/4 vs2/5, stress29=176/251; original execution/reserve/factor controls; complete101; draws=0/0.
+
+stdout | src/test/assembledExecutedAffectCurrent.test.ts > final185 execution withheld observation cannot infer success
+M185 EXECUTION WITHHELD PASS same full intent/expression/plan; actual Applied75/Overflow5 vs Blocked; no sample28, Unavailable appraisals, zero dose, stress29=51/51; original execution/reserve/factor controls; complete101; draws=0/0.
+
+stdout | src/test/assembledExecutedAffectCurrent.test.ts > final185 execution exact repeat and public execution continuation
+M185 EXECUTION CONTINUATION PASS independent repeat and public save25 restore, every later full state/output/trace/save/run byte through101 across execution26, sensing28 and stress29.
+
+stdout | src/test/assembledExecutedAffectCurrent.test.ts > final185 execution declared protocol and report permissions
+M185 EXECUTION DECLARATIONS PASS common protocol enabled, protocol observation hidden in both arms.
+
+ ✓ src/test/assembledExecutedAffectCurrent.test.ts (9 tests | 5 skipped) 314335ms
+   ✓ final185 execution primary executed outcome reaches later affect 132119ms
+   ✓ final185 execution withheld observation cannot infer success 71968ms
+   ✓ final185 execution exact repeat and public execution continuation 106829ms
+   ✓ final185 execution declared protocol and report permissions 3418ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed | 5 skipped (9)
+   Start at  17:06:05
+   Duration  319.39s (transform 3.18s, setup 0ms, collect 4.67s, tests 314.34s, environment 0ms, prepare 103ms)
+
+
+M185 preservation-boundary-research exit=1 elapsed=7.338s cap=600
+Reference boundary check passed.
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: CURRENT obligation counts are stale
+    at file:///C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/scripts/check-research-obligations.mjs:75:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.20.0
+Traceback (most recent call last):
+  File "<string>", line 28, in <module>
+    subprocess.run(cmd,check=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\scoob\AppData\Local\Python\pythoncore-3.15-64\Lib\subprocess.py", line 692, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command ['node', 'scripts/check-research-obligations.mjs'] returned non-zero exit status 1.
+M185 PRESERVATION PASS zero production/formal/prior-test/evidence changes; exactly3 new test paths;21/15/132 unchanged; register236lines/65510CRLFbytes; evidence2files/11386bytes.
+M185 measured preclosing seconds 654.548
+
+M185 final-preservation-research exit=0 elapsed=4.181s cap=600
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4405}
+M185 PRESERVATION PASS zero production/formal/prior-test/evidence changes; exactly3 new test paths;21/15/132 unchanged; register236lines/65510CRLFbytes; evidence2files/13096bytes.
+M185 measured preclosing seconds 661.886
+
+M185 staged-size-whitespace exit=0 elapsed=0.847s cap=600
+PASS: Git index contains no files at or above50,000,000 bytes.
+ docs/planning/ASSEMBLED_CHARACTER_M185_CHECKS.txt  |  95 ++++++++++++++++
+ docs/planning/ASSEMBLED_CHARACTER_M185_RESULT.md   |  90 +++++++++++++++
+ .../planning/ASSEMBLED_CHARACTER_RECONCILIATION.md |  11 +-
+ docs/planning/CURRENT.md                           | 104 ++++++++---------
+ docs/planning/RESEARCH_OBLIGATIONS.json            |  13 +++
+ src/test/assembledAffectResponseCurrent.test.ts    | 123 +++++++++++++++++++++
+ src/test/assembledExecutedAffectCurrent.test.ts    | 112 +++++++++++++++++++
+ src/test/fixtures/assembledAffectCurrent.ts        |  17 +++
+ 8 files changed, 502 insertions(+), 63 deletions(-)
+M185 STAGED PASS exactly8 intended paths; no production/formal/prior-test edits; size and whitespace pass.
