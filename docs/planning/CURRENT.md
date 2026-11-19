@@ -25,6 +25,9 @@ M167 fault save and six frozen trees preserved. Passing checks end verification.
 Failed setup attempts, actual cross-system interactions and self-approved repairs
 are recorded. df14992a also records a failed card write followed by test start:
 that card commit followed edits/start, before result; not presented as pre-code.
+Final staged diff flagged raw-log trailing spaces; orchestration still committed.
+Correction preserves raw bytes and checks code/docs normally, raw logs with only
+blank-at-eol disabled for that command. Both sequencing errors remain recorded.
 
 ## Remaining scope
 Accepted complete families: **1/15 (memory12.3)**.21 members remain mapped.

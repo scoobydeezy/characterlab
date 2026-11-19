@@ -106,12 +106,18 @@ law/calibration/seed tuning, acceptance reduction or production edits.
 A card update exceeded80lines and its shell write failed; the following tool call
 mistakenly proceeded with edits/test start. df14992a immediately records this
 sequencing error and the amendment before its result. It is not claimed as a
-pre-code commit. Subsequent writes explicitly stop on command failure.
+pre-code commit. Shell writes subsequently stop on failure, but final orchestration
+made a second sequencing error: the1.228s staged diff check flagged four literal
+trailing spaces in preserved test output and the following tool still committed
+9beff5d6. Its failed check remains intact. The correction checks code/documents with
+normal whitespace rules and the raw CHECKS log with only blank-at-eol disabled
+for that command. No repository setting or raw evidence byte is rewritten.
 
 Three final behavioral tests pass (primary, source/temporal controls, and combined
 privacy/continuation/rollback). The earlier bounded factor diagnostic is preserved,
 not counted as a completed scenario. Final types, boundary/research, preservation,
-document/evidence budgets and staged size/diff checks are recorded in the checks.
+document/evidence budgets, staged size and the corrected scoped diff checks pass.
+The original staged-format failure is preserved alongside its correction.
 Verification:1260 seconds (rounded upward, including finalization)/1800.
 Every command remains below600s; all failures included. Two evidence files/<5MiB.
 Production/formal trees, six frozen trees, all prior test files, original68 receipts,
