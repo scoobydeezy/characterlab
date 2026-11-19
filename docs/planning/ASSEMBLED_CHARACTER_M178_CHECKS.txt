@@ -1,0 +1,180 @@
+
+M178 plan-size-diff exit=0 elapsed=1.025s cap=600
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M178 types-declarations exit=0 elapsed=133.693s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectFactorialFinal.test.ts > final178 declarations preserve all32 single-factor edges
+M178 DECLARATIONS PASS32 edges; all other source/model fields and initial bytes fixed.
+
+ ✓ src/test/assembledAffectFactorialFinal.test.ts (9 tests | 8 skipped) 107769ms
+   ✓ final178 declarations preserve all32 single-factor edges 107768ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  10:21:46
+   Duration  112.83s (transform 3.08s, setup 0ms, collect 4.61s, tests 107.77s, environment 0ms, prepare 131ms)
+
+
+M178 matrix-p0 exit=0 elapsed=212.177s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectFactorialFinal.test.ts > final178 matrix p0
+M178 CELL {"cell":{"p":0,"s":0,"v":0,"c":0},"denied":false,"E":"0/1","U":"0/1","H":"0/1","dice":["6","6"],"situation":"0","mode":"1","analytical":["2/9","7/9"]}
+
+stdout | src/test/assembledAffectFactorialFinal.test.ts > final178 matrix p0
+M178 CELL {"cell":{"p":0,"s":0,"v":0,"c":1},"denied":false,"E":"0/1","U":"0/1","H":"0/1","dice":["6","6"],"situation":"0","mode":"1","analytical":["2/9","7/9"]}
+
+stdout | src/test/assembledAffectFactorialFinal.test.ts > final178 matrix p0
+M178 CELL {"cell":{"p":0,"s":0,"v":1,"c":0},"denied":false,"E":"0/1","U":"0/1","H":"0/1","dice":["6","6"],"situation":"0","mode":"3","analytical":["25/72","47/72"]}
+
+stdout | src/test/assembledAffectFactorialFinal.test.ts > final178 matrix p0
+M178 CELL {"cell":{"p":0,"s":0,"v":1,"c":1},"denied":false,"E":"0/1","U":"0/1","H":"0/1","dice":["6","6"],"situation":"0","mode":"3","analytical":["25/72","47/72"]}
+
+stdout | src/test/assembledAffectFactorialFinal.test.ts > final178 matrix p0
+M178 CELL {"cell":{"p":0,"s":1,"v":0,"c":0},"denied":false,"E":"0/1","U":"0/1","H":"0/1","dice":["6","6"],"situation":"0","mode":"1","analytical":["2/9","7/9"]}
+
+stdout | src/test/assembledAffectFactorialFinal.test.ts > final178 matrix p0
+M178 CELL {"cell":{"p":0,"s":1,"v":0,"c":1},"denied":false,"E":"0/1","U":"0/1","H":"0/1","dice":["6","6"],"situation":"0","mode":"1","analytical":["2/9","7/9"]}
+
+stdout | src/test/assembledAffectFactorialFinal.test.ts > final178 matrix p0
+M178 CELL {"cell":{"p":0,"s":1,"v":1,"c":0},"denied":false,"E":"0/1","U":"0/1","H":"0/1","dice":["6","6"],"situation":"0","mode":"3","analytical":["25/72","47/72"]}
+
+stdout | src/test/assembledAffectFactorialFinal.test.ts > final178 matrix p0
+M178 CELL {"cell":{"p":0,"s":1,"v":1,"c":1},"denied":false,"E":"0/1","U":"0/1","H":"0/1","dice":["6","6"],"situation":"0","mode":"3","analytical":["25/72","47/72"]}
+M178 MATRIX p0 PASS8 complete101 cells/24 original formulas; source, appraisal, concern, reasons, choice and expression/execution live.
+
+ ✓ src/test/assembledAffectFactorialFinal.test.ts (9 tests | 8 skipped) 206605ms
+   ✓ final178 matrix p0 206604ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  10:23:49
+   Duration  211.62s (transform 3.07s, setup 0ms, collect 4.58s, tests 206.60s, environment 0ms, prepare 150ms)
+
+
+M178 matrix-p1 exit=1 elapsed=74.854s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledAffectFactorialFinal.test.ts (9 tests | 1 failed | 8 skipped) 69255ms
+   × final178 matrix p1 69255ms
+     → expected { kind: 'rational', …(2) } to deeply equal { kind: 'rational', …(2) }
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledAffectFactorialFinal.test.ts > final178 matrix p1
+AssertionError: expected { kind: 'rational', …(2) } to deeply equal { kind: 'rational', …(2) }
+
+- Expected
++ Received
+
+  Object {
+-   "denominator": 300n,
++   "denominator": 419n,
+    "kind": "rational",
+    "numerator": 119n,
+  }
+
+ ❯ projection src/test/assembledAffectFactorialFinal.test.ts:89:115
+
+ ❯ src/test/assembledAffectFactorialFinal.test.ts:106:316
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  10:28:11
+   Duration  74.28s (transform 3.06s, setup 0ms, collect 4.59s, tests 69.26s, environment 0ms, prepare 154ms)
+
+
+M178 matrix-p1-bounded-role exit=0 elapsed=215.818s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectFactorialFinal.test.ts > final178 matrix p1
+M178 BODY INTERACTION {"cell":{"p":1,"s":0,"v":0,"c":0},"jointSeverity":"2/5","jointVulnerability":"59/60","consumedConcern":"119/300","compiledModifier":"2"}
+M178 CELL {"cell":{"p":1,"s":0,"v":0,"c":0},"denied":false,"E":"0/1","U":"0/1","H":"0/1","dice":["6","6"],"situation":"0","mode":"1","analytical":["2/9","7/9"]}
+
+stdout | src/test/assembledAffectFactorialFinal.test.ts > final178 matrix p1
+M178 BODY INTERACTION {"cell":{"p":1,"s":0,"v":0,"c":1},"jointSeverity":"2/5","jointVulnerability":"59/60","consumedConcern":"119/300","compiledModifier":"2"}
+M178 CELL {"cell":{"p":1,"s":0,"v":0,"c":1},"denied":false,"E":"0/1","U":"0/1","H":"0/1","dice":["6","6"],"situation":"0","mode":"1","analytical":["2/9","7/9"]}
+
+stdout | src/test/assembledAffectFactorialFinal.test.ts > final178 matrix p1
+M178 BODY INTERACTION {"cell":{"p":1,"s":0,"v":1,"c":0},"jointSeverity":"2/5","jointVulnerability":"0/1","consumedConcern":"1/5","compiledModifier":"1"}
+M178 CELL {"cell":{"p":1,"s":0,"v":1,"c":0},"denied":false,"E":"0/1","U":"0/1","H":"0/1","dice":["6","6"],"situation":"0","mode":"3","analytical":["25/72","47/72"]}
+
+stdout | src/test/assembledAffectFactorialFinal.test.ts > final178 matrix p1
+M178 BODY INTERACTION {"cell":{"p":1,"s":0,"v":1,"c":1},"jointSeverity":"2/5","jointVulnerability":"0/1","consumedConcern":"1/5","compiledModifier":"1"}
+M178 CELL {"cell":{"p":1,"s":0,"v":1,"c":1},"denied":false,"E":"0/1","U":"0/1","H":"0/1","dice":["6","6"],"situation":"0","mode":"3","analytical":["25/72","47/72"]}
+
+stdout | src/test/assembledAffectFactorialFinal.test.ts > final178 matrix p1
+M178 BODY INTERACTION {"cell":{"p":1,"s":1,"v":0,"c":0},"jointSeverity":"2/5","jointVulnerability":"59/60","consumedConcern":"119/300","compiledModifier":"2"}
+M178 CELL {"cell":{"p":1,"s":1,"v":0,"c":0},"denied":false,"E":"199/200","U":"199/200","H":"199/200","dice":["6","6"],"situation":"3","mode":"3","analytical":["47/72","25/72"]}
+
+stdout | src/test/assembledAffectFactorialFinal.test.ts > final178 matrix p1
+M178 BODY INTERACTION {"cell":{"p":1,"s":1,"v":0,"c":1},"jointSeverity":"2/5","jointVulnerability":"59/60","consumedConcern":"119/300","compiledModifier":"2"}
+M178 CELL {"cell":{"p":1,"s":1,"v":0,"c":1},"denied":false,"E":"199/200","U":"0/1","H":"199/400","dice":["6","6"],"situation":"0","mode":"1","analytical":["2/9","7/9"]}
+
+stdout | src/test/assembledAffectFactorialFinal.test.ts > final178 matrix p1
+M178 BODY INTERACTION {"cell":{"p":1,"s":1,"v":1,"c":0},"jointSeverity":"2/5","jointVulnerability":"0/1","consumedConcern":"1/5","compiledModifier":"1"}
+M178 CELL {"cell":{"p":1,"s":1,"v":1,"c":0},"denied":false,"E":"119/200","U":"119/200","H":"119/200","dice":["6","6"],"situation":"3","mode":"1","analytical":["7/9","2/9"]}
+
+stdout | src/test/assembledAffectFactorialFinal.test.ts > final178 matrix p1
+M178 BODY INTERACTION {"cell":{"p":1,"s":1,"v":1,"c":1},"jointSeverity":"2/5","jointVulnerability":"0/1","consumedConcern":"1/5","compiledModifier":"1"}
+M178 CELL {"cell":{"p":1,"s":1,"v":1,"c":1},"denied":false,"E":"119/200","U":"0/1","H":"119/400","dice":["6","6"],"situation":"0","mode":"3","analytical":["25/72","47/72"]}
+M178 MATRIX p1 PASS8 complete101 cells/24 original formulas; source, appraisal, concern, reasons, choice and expression/execution live.
+
+ ✓ src/test/assembledAffectFactorialFinal.test.ts (9 tests | 8 skipped) 210210ms
+   ✓ final178 matrix p1 210209ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  10:30:20
+   Duration  215.26s (transform 3.08s, setup 0ms, collect 4.60s, tests 210.21s, environment 0ms, prepare 146ms)
+
+
+M178 controls-continuation exit=0 elapsed=159.829s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectFactorialFinal.test.ts > final178 controls and every-instant continuation
+M178 BODY INTERACTION {"cell":{"p":1,"s":1,"v":1,"c":1},"jointSeverity":"2/5","jointVulnerability":"0/1","consumedConcern":"1/5","compiledModifier":"1"}
+M178 CELL {"cell":{"p":1,"s":1,"v":1,"c":1},"denied":true,"E":"Unknown","U":"Unknown","H":"Unknown","dice":["6","6"],"situation":"0","mode":"3","analytical":["25/72","47/72"]}
+
+stdout | src/test/assembledAffectFactorialFinal.test.ts > final178 controls and every-instant continuation
+M178 BODY INTERACTION {"cell":{"p":1,"s":1,"v":1,"c":1},"jointSeverity":"2/5","jointVulnerability":"0/1","consumedConcern":"1/5","compiledModifier":"1"}
+M178 CELL {"cell":{"p":1,"s":1,"v":1,"c":1},"denied":false,"E":"119/200","U":"0/1","H":"119/400","dice":["6","6"],"situation":"0","mode":"3","analytical":["25/72","47/72"]}
+M178 CONTROLS PASS unknown control != zero; hidden truth invariant; repeat/restore9 every remaining byte through101.
+
+ ✓ src/test/assembledAffectFactorialFinal.test.ts (9 tests | 8 skipped) 154117ms
+   ✓ final178 controls and every-instant continuation 154116ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  10:34:03
+   Duration  159.26s (transform 3.08s, setup 0ms, collect 4.67s, tests 154.12s, environment 0ms, prepare 140ms)
+
+
+M178 final-types exit=0 elapsed=19.776s cap=600
+
+M178 preservation-boundary-research exit=0 elapsed=6.925s cap=600
+Reference boundary check passed.
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4398}
+M178 PRESERVATION PASS unchanged0.126 production/formal/six frozen trees/all earlier tests, original controls/M17368 receipts/M158/M167 and21/15/132; exactly1 new test path; register229lines/65301CRLFbytes; evidence2files/17334bytes.
+M178 measured preclosing seconds 817.172
+
+M178 staged-size-diff exit=0 elapsed=1.212s cap=600
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+M178 intended six paths staged; size and scoped whitespace checks PASS. Budget under1000/1800s.
