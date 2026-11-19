@@ -29,8 +29,9 @@ person belief. Both alternatives must be available and the compared reason live.
 Actual current priority report -> raw/compiled reason -> arbitration -> intent,
 expression, plan, physical attempt/outcome must be traced in each arm.
 Require different actual choice probability; no seed-selected winner claim.
-Enumerate production arbitration on captured actual contexts with identical faces
-per semantic nucleus and equal tie indices. At most4096 uniformly weighted cases.
+Enumerate captured production arbitration with shared uniform quantiles per semantic
+nucleus (identical faces for equal spans); LCM grids preserve each marginal when
+die/tie spans differ. At most4096 uniformly weighted cases.
 Prove standing-rounding thresholds0 before using uniform enumeration; otherwise
 diagnose rather than silently dropping that randomness. Cover the union of live
 nuclei, including unused draws in one arm. Exact empirical mass must match the
