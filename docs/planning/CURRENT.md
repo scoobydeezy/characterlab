@@ -1,48 +1,66 @@
-# Current work — M179 physical stress connection
-Learned affect now changes physical stress one instant later in the same character.
-Identical prior body history/current sensation yields stress249 versus0; NoImpulse
-keeps the positive appraisal and removes its physical effect. Native tests pass.
-M179 COMPLETE; no full affect-family/assembly acceptance.
+# Current work — M180: goal absence and missing outcome evidence
+Base54ac2bd1. Continue one character; M179's physical receiver stays unchanged.
+Before-code card: three capabilities at most: known absent threat goal yields
+known-zero affect/stress; missing outcome evidence stays Unknown; ordinary later
+goal adoption restores positive affect and later stress from retained knowledge.
+No full family acceptance or stress interoception in this bounded package.
 
-[Result](ASSEMBLED_CHARACTER_M179_RESULT.md) /
-[checks](ASSEMBLED_CHARACTER_M179_CHECKS.txt).
-Plan/contract f93254f4; base190dad33; rules/registry0.127-candidate.
-One existing body owner, common scheduler/state/trace/save; no biological runtime.
-Eight production/test paths of9 allowed; one additive formal contract.
-Comparison: seed0, normal learned trial panels, body30/cap100/rate10/stress0;
-same physical455 history and selected sensation through10; live U199/400 vs0;
-next-instant stress249 vs0; NoImpulse, denied cue, hidden truth, full queues101.
-Original64 full12-instant cases preserve Full/ScalarThreat64 and body-only
-Stress56/Pain48/RewardDeviation56. Source/unit correspondence is explicit.
-Repeat/public save10/recovered continuation match every later byte; actual
-post-physical-patch failure rolls back. Previous0.126 M177 primary still passes.
-27 exactMath/state/scheduler/trace vectors, types, boundary/research and preservation pass.
-Verification 754.978/1800s; size/whitespace pass. Failures retained; no law/contrast amendment.
+## Authority and versioned scope
+Original affect-regulatory-reduction/0.1 NoGoal/NoReceipt/DeniedHarm comparisons;
+commitment-lifecycle/0.2 already admits unadopted tasks and perceived later adoption.
+Current reappraisal maps absent373/1 to undefined severity. That conflates an
+exact own-state absence with missing external evidence: a source/receiver defect.
+Add rules/registry0.128 and reappraisal0.8; retain0.127 behavior as a control.
+No new parameter, owner, state root, event, queue, registry slot or law alternative.
+Only absent threat-task status supplies known severity0; present/terminal statuses
+keep existing behavior. Do not turn missing likelihood/body/control into zero.
+Use the already traced actual373/1 read; reason discloses KnownAbsentThreatGoal.
+Original pure factor kernel and stress conversion/decay remain unchanged.
+See additive ASSEMBLED_AFFECT_GOAL_ABSENCE_CONTRACT.md committed before code.
+MEC001/002/004/012..019/022; P3-001/004/005/008/011 retain ports/controls/corpus.
+FND4/5 changed receiving semantics/model binding need targeted requalification;
+FND3 phase/atomicity unchanged, FND6 source privacy remains. RO011 wider limits stay.
 
-## Scope and standing constraints
-E64/P42/N13/U13=132;21 mapped;21 members/15 families/132 clauses pinned.
-Memory12.3 accepted on0.126 (1/15); successor0.127 transfer remains pending
-affected memory/dice replay because model identity/event allocation changed.
-Original contracts, controls, all prior tests and receipts remain unchanged.
-FND3/4/5 new event/state/model grammar requalified in this seam by the additive
-contract and targeted checks; FND6 privacy retained. RO011 broader claims remain.
-L4 appraisal self-persistence stays OFF; M112 biography feedback remains TRUE.
-No scalar retirement, new affect primitive, UI or autonomous peer dependency.
-One active milestone/job;600s/command,1800s cumulative including failed checks;
-20 evidence files/5MiB; CURRENT80/work order250/register250lines/64KiB.
+## Predeclared comparison
+Seed0; M179 source, body30/cap100/rate10/stress0, normal visual trials1..9.
+Three nonsocial tasks; physical body/visual/priority channels live, no autonomous peer.
+Closed early routes; all compared appraisal10 rows live, no physical action10.
+Same governed threat severity1, laws, initial physical state and permitted danger.
+NoGoal removes only threat task's initial373/1 and /2 plus its priority adoption1;
+keep task definition, normal evidence and all other goals. No learned state injected.
+NoReceipt omits current cue's After9 source; Before7/Motion8 stay. DeniedHarm uses
+existing denied Motion8 control. Known-zero uses safe After9 evidence as in M179.
+Expected10: risk U199/400; safe/NoGoal Known0; NoReceipt/Denied and NoGoal+NoReceipt
+Unavailable with empty coordinates. Expected11 stress249 versus0 in other arms.
+NoGoal keeps retained danger/mitigation estimates; compare actual evidence semantics
+and counts, not arbitrary cross-model identifier bytes. Physical455 history and
+selected body evidence match through10. Actual queue consumes exact prior report.
+NoGoal does not manufacture a zero likelihood; missing inputs still block appraisal.
+LaterGoal starts NoGoal, then ordinary permitted fresh priority adoption at12 with
+declared instruction/importance1. It must not alter appraisal10/stress11; actual
+owned Open status must feed live positive appraisal26 and stress27.
+Every case exhausts its entire101 queue; no prefix is a completed run.
+One0.127 NoGoal run preserves old Unavailable as the classified defect comparator.
+Original seed0 NoGoal/NoReceipt/Denied controls run all12 instants; other original
+64-case receivers retained from M179 since kernels/fixtures have not changed.
+Independent repeat and public save11 restore of LaterGoal match every later full
+byte through101, crossing actual adoption12 and later physical consequence27.
+No sampled winner claim; fixed deterministic source/state comparisons need no
+cross-model random attribution. Current memory/dice acceptance transfer stays open.
+
+## Files, verification and done
+At most6 production/test paths: model,reappraisal,traceBinding; new test+fixture,
+one spare only for a discovered dependent defect. One additive formal contract.
+600s/command,1800s cumulative inclfailures;20 evidence files/5MiB. One active job.
+Types; new native gates/negative controls/repeat/restore; unchanged M179 primary
+on0.127 for shared-reader compatibility; boundary/research, preservation,size/diff.
+No old full corpus rerun: its dependency semantics retained; final current replay stays.
+Done iff goal/evidence distinctions reach actual physical consumer, later adoption
+works, old control and full continuation pass. Keep all failures and source gaps.
+Self-approve bounded setup repairs, not laws/scope changes. Stop on budget/blocker.
+CURRENT80/work order250/register250lines/64KiB. Pinned21/15/132; E64/P42/N13/U13.
+Memory12.3 acceptance stays0.126; no automatic promotion to0.128 or clause12.5-8.
 
 | Record | Status |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
-
-## Next dependency
-Finish current native regulatory source/control correspondence before full
-BRIEF-12.5-8 acceptance: original NoGoal/NoReceipt/biological sensing cases and
-remaining original AFFECT source/failed-execution comparisons stay required.
-The stress channel has no cognitive/interoceptive consumer yet. Any later sensing
-must use normal perception; raw physical stress cannot become a belief directly.
-Original component projection matches are not native whole-character qualification.
-Requalify affected memory/dice claims for0.127 before transferring0.126 acceptance;
-final whole-candidate replay remains required. No unrelated breadth between gates.
-Self-approval permits bounded setup repairs, not laws/ontology/pinned scope changes.
-Write and commit the next bounded card before coding.
