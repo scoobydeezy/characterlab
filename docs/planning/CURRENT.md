@@ -1,52 +1,62 @@
-# Current work — M184 complete: current AFFECT evidence controls
-Contradictory perceived experience changes learned danger, actual appraisal and later
-stress. Unknown mitigation stays unknown; hidden truth and stress never become
-substitute danger evidence. All comparisons run in the same continuing character.
+# Current work — M185: current AFFECT response and execution controls
+The same live affect must allow different responses when a competing goal changes.
+The same chosen meaning must survive a blocked physical action; later affect may
+change only through admitted outcome evidence. One continuing character handles both.
+Basef0d9fd48; rules/registry0.129-candidate, reference psychology and calibration0.
 
-[M184 result](ASSEMBLED_CHARACTER_M184_RESULT.md);
-[checks](ASSEMBLED_CHARACTER_M184_CHECKS.txt). Plan e0a9aeae; review8fc563dc.
-Basef72efa19; rules/registry0.129-candidate unchanged; reference calibration0.
-Two new test/fixture paths; zero production/formal/prior-test changes.
+## Bounded card (before implementation)
+Owner's AFFECT self-approval continues. PHEN-AFFECT-001:6/:9/:10/:11 and
+BRIEF12.5-2/-3 receiving checks; no family promotion or new production behavior.
+Three new test/fixture paths: src/test/assembledAffectResponseCurrent.test.ts,
+src/test/assembledExecutedAffectCurrent.test.ts,
+src/test/fixtures/assembledAffectCurrent.ts. Zero production/formal/prior-test edits.
+Use M177's response checks/actual arbitration and M182's execution comparison with
+current0.129 observations. Original sources remain preserved and executable.
 
-## Current comparison
-Seed0; threat task nonsocial, existing passive-target encounters10..12 retained.
-Other social appraisals are not asserted Known. Position panels1..9/body10/26 live;
-reserve51/capacity100/rate1/grid20/threshold60, stress0. Early routes closed,
-protocol execution disabled. Same laws/model/initial state; no learned threat start.
-Two current-cue episodes give MeanAll1 versus1/2 under changed perceived After9 only.
-Safe state/output match at every settled instant through8. Live U7/20 versus7/40
-reaches actual reason stage and authenticated stress11=175/88; full queues finish101.
-Original source/belief kernels on the exact safe packets agree: Mean1/2, Latest0,
-NoLearning unknown. These remain controls, never alternate running psychology.
+## Scenarios and fixed comparisons
+Both use seed0, reserve51/cap100/rate1/grid20/threshold60, initial stress0 and bias0.
+Normal position trials1..9/body10/26; threat nonsocial, passive-target encounters
+10..12 remain. Other inherited social appraisals are not asserted Known.
+Response: M183 current model, protocol execution disabled. Threat route0 and the
+existing target-dependent competitor route1 become available25. Only permitted
+competing urgency26 differs1/0. Initial/model and every safe settled prefix through25
+match. Assert live positive shared appraisal26 U2/5 in both, two actual grounds,
+identical learned danger/person evidence and recall. Follow exact appraisal -> raw
+source -> described/compiled contribution -> actual decision/expression/attempt.
+Require unequal exact response probabilities and a positive competing response
+under positive affect. Compute coupled production-arbitration winners on captured
+actual contexts using semantic-nucleus LCM quantiles and common ties, <=4096 cases;
+weighted counts must match each native marginal, including Auto. No seed search,
+reconstructed contexts or attribution from an uncoupled sampled winner.
+Denied urgency1/0: actual unknown evidence/motive and response remain identical.
+Hidden physical annexes preserve every safe state/output instant through101.
 
-Missing action, denied Motion, censored After and no opportunity retain danger1
-but no qualified mitigation sample. Zero baseline keeps both samples without
-inventing efficacy. Unknown catalogue stays distinct from observed empty catalogue
-and known ineffective mitigation. Six unavailable cases have no coordinates or new
-impulse; the two known cases retain U7/20/stress175. All eight complete101.
-Hidden truth preserves every state/output byte at every instant through101.
-Knowledge stays fixed after its last evidence despite later bodily stress.
-Independent repeat/public save8 restore match every later full byte through101.
+Execution: unchanged M182 admitted physical setup, promoted only to0.129/bias0.
+Common protocol enabled, protocol/performance observations hidden; only one non-threat
+route is open26, actuator80/no delay, phase4/K0/difficulty0/impairment0/no practice.
+Only private permission26 differs. Full intent/expression/plan/attempt and appraisal
+remain equal before actual Applied75/Overflow5 versus Blocked. Later sample28 of
+actual reserves98/23 publishes[80,100]/[20,40], yields U1/4 versus2/5 and stress29
+176/251. Withheld sample28: Unavailable/no new dose, stress51/51 in both. Later
+routes close27. Current calibration operation must disclose zero offset and true
+value unchanged before quantization; no raw truth reaches cognitive reads.
+Compare original skill execution/reserve/factor kernels on actual consumed operands.
+These are declared physical contexts, never different psychological law selectors.
 
-## Review, checks and remaining work
-The first causal pass omitted explicit privacy state checks at1..7/9. Its source
-and receipt remain at8fc563dc; stronger per-instant assertions and exact continuation
-passed before final qualification. No scenario/law/seed/gate change or failed run.
-Types, boundary/research, preservation and staged size/whitespace are in the log.
-One job,600s/command,1800s cumulative; recorded verification 806.046 seconds.
-Two evidence files<5MiB; no extension. FND4/6 and RO003/006/008/010/011/019/020/021
-retain their scopes; MEC003/004/007/008/010/012..019/022 retain their dispositions.
-
-Owner2026-11-19 delegates bounded AFFECT completion. The pinned requirements and
-BRIEF12.5-8 REV111 qualify body-history insufficiency, not arbitrary scalar
-impossibility. Wider BIO/stress sensing remain whole-character obligations, not
-extra AFFECT-family gates. M179's collision and M183's calibration retain limits.
-Next: current response/execution controls and affected cognitive-clause replay,
-then the compact eight-clause acceptance map. AFFECT is not yet accepted.
-Memory12.3 remains accepted0.126; current transfer/final whole-candidate replay open.
-Pinned21/15/132 and E64/P42/N13/U13 unchanged; no clause/family promotion here.
-No UI, reduction, new pipeline or unrelated biological breadth.
-
-| Record | Status |
-|---|---|
-| Research obligations | **0 active / 18 conditional / 0 unowned** |
+## Checks and completion condition
+All source/consumer gates assert liveness first; every scenario exhausts101.
+Independent repeat/public save25 continuation for response and executed scenario:
+full state/output/trace/save/run bytes at every later settled instant. Hidden-truth
+and equal-prefix controls compare every settled instant, not only endpoints.
+Types, boundary/research, frozen source/evidence/baseline and staged-size checks.
+No unchanged original suites rerun: no production/dependency change. Prior failures
+and original M177/M182 source comparisons stay preserved, not rewritten.
+One long job,600s/command,1800s total including failures;20 evidence files/5MiB.
+At most3 production/test paths; one result/log, CURRENT<=80/register<=250/64KiB.
+Done iff every declared gate passes; stop verification then. Record repairs before
+rerunning affected checks; no law/seed/calibration retuning to select a winner.
+MEC003/004/012..019/022 retain physical/evidence/reason/intent/execution distinctions.
+FND4/6; RO003/006/008/010/011/019/020/021 retain scoped obligations.
+Pinned21/15/132 and E64/P42/N13/U13 unchanged. Current cognitive-clause replay and
+compact acceptance map remain before AFFECT acceptance. Wider BIO/stress sensing
+remain whole-character work, not added AFFECT gates. No UI/reduction/new pipeline.
