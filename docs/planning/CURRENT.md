@@ -59,3 +59,8 @@ Done iff all declared gates pass; retain failures and record repairs before reru
 No scenarios/seeds/laws retuned to select favorable outcomes; no UI/new framework.
 FND4/6; RO003/006/008/010/011/019/020/021 retain scopes and conditional statuses.
 Pinned21/15/132 and E64/P42/N13/U13 unchanged; no family/clause promotion here.
+
+Review amendment before final rerun: the first history gate passed its causal claim,
+but privacy checked prefix8 and10 onward, omitting explicit settled-state checks
+at1..7/9. Strengthen the same comparison to check every instant; retain the earlier
+receipt as preliminary. No source, expected value, law, seed or budget change.
