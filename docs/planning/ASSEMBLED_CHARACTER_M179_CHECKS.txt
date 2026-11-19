@@ -1,0 +1,151 @@
+
+M179 plan-contract-size-diff exit=0 elapsed=1.032s cap=600
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M179 implementation-types exit=2 elapsed=20.431s cap=600
+src/assembled/regulatoryStress.ts(81,38): error TS2322: Type 'bigint' is not assignable to type 'SimInstant'.
+  Type 'bigint' is not assignable to type '{ readonly [instantBrand]: true; }'.
+src/assembled/regulatoryStress.ts(88,169): error TS2314: Generic type 'ContractReadProjection<Bindings>' requires 1 type argument(s).
+src/assembled/regulatoryStress.ts(89,25): error TS2322: Type 'bigint' is not assignable to type 'SimInstant'.
+  Type 'bigint' is not assignable to type '{ readonly [instantBrand]: true; }'.
+
+M179 types-complete-implementation exit=2 elapsed=20.083s cap=600
+src/test/assembledRegulatoryStress.test.ts(82,74): error TS2345: Argument of type 'readonly CanonicalValue[]' is not assignable to parameter of type 'CanonicalValue[]'.
+  The type 'readonly CanonicalValue[]' is 'readonly' and cannot be assigned to the mutable type 'CanonicalValue[]'.
+src/test/assembledRegulatoryStress.test.ts(82,98): error TS2345: Argument of type 'readonly CanonicalValue[]' is not assignable to parameter of type 'CanonicalValue[]'.
+  The type 'readonly CanonicalValue[]' is 'readonly' and cannot be assigned to the mutable type 'CanonicalValue[]'.
+src/test/assembledRegulatoryStress.test.ts(82,119): error TS2345: Argument of type 'readonly CanonicalValue[]' is not assignable to parameter of type 'CanonicalValue[]'.
+  The type 'readonly CanonicalValue[]' is 'readonly' and cannot be assigned to the mutable type 'CanonicalValue[]'.
+src/test/assembledRegulatoryStress.test.ts(88,186): error TS2345: Argument of type 'readonly CanonicalValue[]' is not assignable to parameter of type 'CanonicalValue[]'.
+  The type 'readonly CanonicalValue[]' is 'readonly' and cannot be assigned to the mutable type 'CanonicalValue[]'.
+
+M179 original-comparator-admission exit=0 elapsed=69.905s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRegulatoryStress.test.ts > final179 original64 sources and five receiving projections
+M179 ORIGINAL PASS64 full12 sources; Full/ScalarThreat64, Stress56, Pain48, RewardDeviation56; clamp and unknown/zero retained.
+
+stdout | src/test/assembledRegulatoryStress.test.ts > final179 admission ownership and generated-child rejection
+M179 ADMISSION PASS version/domain/required anchor/internal-source/foreign owner/forged child rejection.
+
+ ✓ src/test/assembledRegulatoryStress.test.ts (9 tests | 7 skipped) 64188ms
+   ✓ final179 original64 sources and five receiving projections 1330ms
+   ✓ final179 admission ownership and generated-child rejection 62857ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 7 skipped (9)
+   Start at  11:20:00
+   Duration  69.34s (transform 3.16s, setup 0ms, collect 4.70s, tests 64.19s, environment 0ms, prepare 151ms)
+
+
+M179 native-physical-connection exit=0 elapsed=146.788s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRegulatoryStress.test.ts > final179 native learned affect changes only later physical stress
+M179 NATIVE PASS identical complete physical455 histories/sensation through10; U199/400 vs0 -> stress249 vs0 at11; NoImpulse retains affect/removes physical effect; full101.
+
+ ✓ src/test/assembledRegulatoryStress.test.ts (9 tests | 8 skipped) 141141ms
+   ✓ final179 native learned affect changes only later physical stress 141140ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  11:21:21
+   Duration  146.22s (transform 3.07s, setup 0ms, collect 4.60s, tests 141.14s, environment 0ms, prepare 142ms)
+
+
+M179 controls-continuation exit=0 elapsed=244.782s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRegulatoryStress.test.ts > final179 unknown privacy repeat continuation and physical-publication rollback
+M179 CONTROLS PASS unknown!=zero, hidden diagnostics invariant, reached physical-patch rollback, repeat/public restore10/recovery exact every instant through101.
+
+ ✓ src/test/assembledRegulatoryStress.test.ts (9 tests | 8 skipped) 239061ms
+   ✓ final179 unknown privacy repeat continuation and physical-publication rollback 239060ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  11:24:01
+   Duration  244.21s (transform 3.10s, setup 0ms, collect 4.62s, tests 239.06s, environment 0ms, prepare 146ms)
+
+
+M179 foundations-legacy-response exit=1 elapsed=92.514s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/exactMath.test.ts (3 tests) 4ms
+ ✓ src/test/state.test.ts (6 tests) 13ms
+ ✓ src/test/scheduler.test.ts (14 tests) 15ms
+ ✓ src/test/trace.test.ts (4 tests) 29ms
+
+M179 legacy-response-exact-selection exit=0 elapsed=124.351s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectResponseFinal.test.ts > final177 same affect different response with exact coupled arbitration
+M177 LIVE {"urgency":{"kind":"list","items":[{"kind":"rational","numerator":"1","denominator":"1"}]},"motive":{"kind":"rational","numerator":"1","denominator":"1"},"affect":{"kind":"list","items":[{"kind":"rational","numerator":"199","denominator":"400"},{"kind":"rational","numerator":"199","denominator":"400"}]},"nuclei":[{"die":"6","standing":"0"},{"die":"6","standing":"0"}],"mode":"3","probabilities":["47/72","25/72"]}
+M177 LIVE {"urgency":{"kind":"list","items":[{"kind":"rational","numerator":"0","denominator":"1"}]},"motive":{"kind":"rational","numerator":"1","denominator":"2"},"affect":{"kind":"list","items":[{"kind":"rational","numerator":"199","denominator":"400"},{"kind":"rational","numerator":"199","denominator":"400"}]},"nuclei":[{"die":"6","standing":"0"},{"die":"4","standing":"0"}],"mode":"1","probabilities":["1/1","0/1"]}
+M177 COUPLED {"total":"144","changed":"50","counts":[["94","50"],["144","0"]]}
+M177 PRIMARY PASS same positive complete appraisal/knowledge/memory, only competing current urgency changes actual reason and exact response mass; FearAsCommand/constant-affect-only response fail; full101.
+
+ ✓ src/test/assembledAffectResponseFinal.test.ts (8 tests | 7 skipped) 118695ms
+   ✓ final177 same affect different response with exact coupled arbitration 118695ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  11:30:03
+   Duration  123.79s (transform 3.09s, setup 0ms, collect 4.63s, tests 118.70s, environment 0ms, prepare 132ms)
+
+
+M179 final-types exit=0 elapsed=20.298s cap=600
+
+M179 preservation-boundary-research exit=1 elapsed=6.751s cap=600
+Reference boundary check passed.
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: CURRENT obligation counts are stale
+    at file:///C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/scripts/check-research-obligations.mjs:75:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.20.0
+Traceback (most recent call last):
+  File "<string>", line 25, in <module>
+    subprocess.run(cmd,check=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\scoob\AppData\Local\Python\pythoncore-3.15-64\Lib\subprocess.py", line 692, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command ['node', 'scripts/check-research-obligations.mjs'] returned non-zero exit status 1.
+M179 PRESERVATION PASS additive0.127; original formal/frozen source/all earlier tests unchanged, original controls/M17368 receipts/M158/M167 and21/15/132; exactly8 production/test paths; register230lines/65289CRLFbytes; evidence2files/14802bytes.
+M179 measured preclosing seconds 740.184
+
+M179 final-preservation-research exit=0 elapsed=6.797s cap=600
+Reference boundary check passed.
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4399}
+M179 PRESERVATION PASS additive0.127; original formal/frozen source/all earlier tests unchanged, original controls/M17368 receipts/M158/M167 and21/15/132; exactly8 production/test paths; register230lines/65289CRLFbytes; evidence2files/16501bytes.
+M179 measured preclosing seconds 746.935
+
+M179 staged-size-diff exit=0 elapsed=1.246s cap=600
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+M179 intended 13 paths staged; size and scoped whitespace checks PASS. Budget under900/1800s.
