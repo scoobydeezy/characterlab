@@ -46,3 +46,9 @@ admission and legacy checks pass. Then pin final candidate all ten memory clause
 and all68 selected defining cases/required member comparisons in finite replay.
 F-12.3 P2 remains open until that gate; no UI or autonomous peer/rehearsal.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
+
+Self-approved pre-control amendment: denied-report/cap8 arm also receives one
+normal body sample22 to exercise concurrent pressure+formation. Other0/8 arms
+still prove pure pressure. Require both events traced and one retained union.
+Pressure owns the retention trace when present, ordered with the same140 batch;
+other formation traces remain. No source/law/gate change in the primary.

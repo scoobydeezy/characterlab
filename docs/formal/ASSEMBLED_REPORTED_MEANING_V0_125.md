@@ -46,3 +46,7 @@ kind, authority or arbitrary target is admitted. All old versions retain their
 formation-triggered pressure behavior. New trace retention seam0.8-candidate.
 This restores original defining42 pressure with assembled correspondence22.
 No other psychological law or completion requirement changes.
+
+For concurrent pressure/formation, pressure anchors the sole retention trace;
+all formation traces remain, ordered by actual scheduled event sequence.
+The entire140 batch commits atomically; no pressure event disappears from trace.
