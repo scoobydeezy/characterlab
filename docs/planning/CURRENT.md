@@ -1,24 +1,49 @@
-# Current work — M168 complete
-All four retained memory laws are admitted in0.122. SignificanceFirst stays the
-reference. Actual significant but unused old15 survives SharedProtection/reference
-and changes live appraisal4000; UseOnly loses15 and gives SameDistance.
-[Result](ASSEMBLED_CHARACTER_M168_RESULT.md); [checks](ASSEMBLED_CHARACTER_M168_CHECKS.txt).
-Pre-code card/contract96dc974e; baseline5b45f419. Four production files/one test.
-One existing episodic owner/state/scheduler/save, no alternative pipeline.
-Public SharedProtection save17 matches EVERY later state/output/trace/save/identity
-through full queue5001. All three native arms finish5001. Actual B0 metadata checked.
-2048 exact original-kernel comparisons; admission/fresh-credit/capacity negatives.
-Native158 original18 boundary receipt/save6 continuation passes without regeneration.
-Initial wrong tsconfig path and60.165s policy timeout are retained. Same cases pass
-63.372s after bounded180s cap amendment; cumulative1800s unchanged.
-Pre-execution spatial-activeFrom18 in every arm isolates significance from new use17.
-Final types/boundary/research/preservation/staged-size pass.
-Verification 1385.006/1800s, all failures included; no extension.
+# Current work — M169 memory loss and query boundaries
+M168 complete f6f662a3. Continue under owner self-approval toward full memory-family
+acceptance. This package makes acquired loss, nonselection and absent cue observable
+through the existing episodic owner and recall handler; F-12.3 P2 remains open.
+MEC004/007/008/009/010/015/019/020/022 and original defining controls remain preserved.
 
-Next: acquired-then-lost capacity, retained-but-unselected and missing-cue controls;
-later current assessment versus historical significance; then final family replay.
-Pin each bounded card/contract before code. Owner self-approval continues to full
-memory-family acceptance; preserve laws, meaningful controls and final21/15/132 gate.
-F-12.3 P2 remains open; E61/P45/N13/U13=132;21 mappings,0/15 accepted families.
-No UI, reduction, autonomous rehearsal/peers or new validation framework.
+## Pre-code card
+Two capabilities: declared later retention pressure removes genuinely acquired
+episodes; a carried final query selects a bounded number of positions or explicitly
+has no cue, without rewriting retained content or granting use by scheduling.
+Contracts: ASSEMBLED_MEMORY_LIMITS_V0_123; original defining-native-rehearsal,
+significance/use/recency, positive recall and presentation contracts unchanged.
+Rules/registry0.123 successor; existing53 slots,346 owner, MEMORY_RECALL event.
+Production/test paths(6): model.ts, traceBinding.ts, retention.ts, rehearsal.ts,
+memory.ts, src/test/assembledMemoryLimits.test.ts. No new runtime/store/framework.
+No existing test/fixture edits. No alternate psychology, law or reference change.
+
+Comparison: reuse M168 High four physical trials, body30/rate10/width1, seed0,
+spatial activeFrom18, no social task dependencies or learned S0. Empty rehearsals.
+Initial sensory budget32 preserves training. Ordinary pressure18..30 stays.
+At18 declared budget becomes0,1 or32; compare actual17 significance with real loss.
+Remove late3998/3999 position sources in EVERY arm so the carried query is the
+only position query4000; original task opportunities and full tail5001 stay.
+Final query4000 K1 matching versus absent; initial training recall remains16.
+Capacity0: old15 exists/significant17, genuinely removed18, no final publication.
+Capacity1: old15 survives, final authentic publication and history append4000.
+Capacity32: old15 retained but K1 selects a more accessible competitor; unselected
+history unchanged. Absent query reads no episodic state, publishes nothing and
+gives no presentation credit. Compare actual publication to original access math.
+These are memory boundary gates: missing/two-operand-insufficient appraisal must
+be explicitly Unavailable, never counted as a live behavioral-choice comparison.
+M167/M168 keep the positive memory-to-live-appraisal witnesses.
+
+Checks serial: types60s; loss<=300s; selection/absent<=500s; capacity1 save17 exact
+every-boundary continuation<=600s; actual post-loss rollback and negatives<=250s;
+immutable native158<=200s; boundary/research/preservation/size<=40s.
+Total<=1800s, command<=600s, failures included; no routine extensions.
+Evidence<=20 files/5MiB; existing doc limits. Each failure gets diagnosis and bounded
+repair, not unchanged retries. Source controls remain frozen; final replay still due.
+Risks: early loss invalidating training; absent query secretly reading memory;
+unselected credit; forged carried source; new capacity applied before its time;
+save omitting pending query or rollback losing metadata. Checks above target each.
+Done: acquired loss, genuine final selection/nonselection/absence, exact continuation
+and post-removal rollback pass; original receipt, types and preservation pass.
+Cap8 and complete goal/law/horizon matrix remain final defining replay requirements;
+this package supplies the controls, not full68-case or family acceptance.
+Next: current reported meaning versus historical significance, then final family
+candidate replay covering all ten clauses and pinned member comparisons.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
