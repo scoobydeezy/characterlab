@@ -2,7 +2,6 @@
 M175 complete34c02b13,815/1800s. Current memory clauses1..8/10 pass; defining68,
 perceptual, access and actual remembered appraisal remain valid on ba92eef0/0.126.
 Owner self-approval continues until full pinned memory-family acceptance.
-
 ## Card before implementation
 Three capabilities: actual prior affect changes learned-memory retrieval; selected
 experience changes shared social/joint appraisal; source/temporal/privacy/recovery
@@ -10,7 +9,6 @@ controls preserve boundaries. BRIEF-12.3-9; retain all ten clauses and PHEN-MEM:
 No production/formal edits planned; one runtime/state/scheduler/trace/save.
 At most3 new test/fixture paths;20 evidence files/5MiB. Original M43/M123 controls
 remain unchanged. Current learned graph must be genuinely acquired, not authored.
-
 ## Scenario and comparison, fixed before execution
 Current54-slot composition/currentMemory base; seed0, body30/rate10/width1/cap100.
 Use observed ThreatEvidence trial sources1..9 only (position/reappraisal channels):
@@ -27,7 +25,6 @@ Body samples and complete normal context/opportunity frames10/26. All task
 urgencies0 at10 (importance1), closed routes, must give NoCandidates with live affect;
 urgencies1 at26. Routes reopen25. This prevents pre-B execution differences.
 Full queues101, including later automatic recalls. No endpoint truncation.
-
 Reference UncontrolledGain Risk versus Safe must have identical actual episodes,
 encoding strengths, graph, acquisition/presentation histories and cue geometry before26.
 Affect10 must be Known positive versus Known zero from actual consumed operands.
@@ -38,13 +35,11 @@ selects newer B. Labelled NoFeedback Risk control selects B with otherwise same 
 Old M43 static graph/numerical scores remain controls, not current receiving inputs.
 Original M123 two-unit pulls motivate the discriminating delay, but exact current
 scores must come from actual acquired units/graph; no hardcoded psychological output.
-
 At26 actual social memory delivery must enter shared workspace and social/joint
 appraisal, giving contextual claim1 versus0 while ordinary person belief remains1/2.
 Assert live consumers first, link actual published IDs and retain immutable sources.
 Body recall may share that instant; identify social query by its actual audit output,
 not by taking the first memory event. No stochastic final-choice claim.
-
 Controls: denied Motion8 yields unknown likelihood/Unavailable prior, distinct from
 Safe Known zero; both gain1. Hidden trial truth preserves cognition. Denied social
 source10 yields no social recall26 (source-boundary control, not equal-history contrast).
@@ -52,7 +47,6 @@ A later normal safe trial14..16 changes current appraisal26 but cannot rewrite t
 queued appraisal10/gain/winner. All original equations, goals and seeds remain fixed.
 Independent repeat/public original-input save12 compare EVERY later canonical byte;
 actual post-publication failure at26 must restore preinstant state and recover exactly.
-
 Setup failures retained: late importance adoption67.271s; missing route81.185s;
 bad task/polarity filter and trace join122.393s; factor diagnostic72.957s.
 Restored normal probe1, corrected task filter/trace contribution; Known now live.
@@ -60,7 +54,9 @@ Restored normal probe1, corrected task filter/trace contribution; Known now live
 route0 reopens25; NoCandidates/no expression replaces NoReasons. Other gates fixed.
 Card line-limit write failed; next shell mistakenly proceeded. Recorded immediately;
 this card commit follows test edits/start, before comparison outcome. No concealment.
-
+132.980s: retrieval ran but body recall plus task/forecast focus crowded out social
+recall. Self-amendment: shared workspace6 (from5), for3 tasks+forecast+2 memories;
+retain body channel, both live appraisals and all other gates. No law change.
 ## Budget, preservation and done
 Every behavioral gate has actual producer/consumer liveness. Retain all failed
 attempts; diagnose before bounded self-amendments. No seed search or law tuning.
@@ -75,5 +71,4 @@ whole-character gate stay open. No UI, reduction or universal memory claim.
 MEC004/007/008/009/010/022; RO005/006/007/010/017/019/020/021/022 retain scoped
 dispositions and wider triggers. No new Campaign3 verdict or generic debt closure.
 E62/P44/N13/U13=132;21 mapped/0 accepted families until this gate passes.
-
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
