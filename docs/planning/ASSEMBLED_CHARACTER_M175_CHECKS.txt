@@ -1,0 +1,175 @@
+
+M175 types exit=0 elapsed=19.756s cap=120
+
+M175 mapped-access exit=1 elapsed=73.773s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledMemoryAccessFinal.test.ts (8 tests | 1 failed | 7 skipped) 68155ms
+   × M175 mapped MEMORY recency reinforcement K and causal counterfactuals 68155ms
+     → expected [ '1/1', '1/1', '1/1', '1/1' ] to deeply equal [ '1/2', '1/2', '1/2', '1/2' ]
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledMemoryAccessFinal.test.ts > M175 mapped MEMORY recency reinforcement K and causal counterfactuals
+AssertionError: expected [ '1/1', '1/1', '1/1', '1/1' ] to deeply equal [ '1/2', '1/2', '1/2', '1/2' ]
+
+- Expected
++ Received
+
+  Array [
+-   "1/2",
+-   "1/2",
+-   "1/2",
+-   "1/2",
++   "1/1",
++   "1/1",
++   "1/1",
++   "1/1",
+  ]
+
+ ❯ projection src/test/assembledMemoryAccessFinal.test.ts:50:17
+
+ ❯ print src/test/assembledMemoryAccessFinal.test.ts:52:53
+ ❯ src/test/assembledMemoryAccessFinal.test.ts:125:35
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  08:29:48
+   Duration  73.20s (transform 3.07s, setup 0ms, collect 4.59s, tests 68.16s, environment 0ms, prepare 140ms)
+
+
+M175 mapped-access-corrected exit=1 elapsed=75.029s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledMemoryAccessFinal.test.ts (8 tests | 1 failed | 7 skipped) 69452ms
+   × M175 mapped MEMORY recency reinforcement K and causal counterfactuals 69451ms
+     → expected [] to have a length of 1 but got +0
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledMemoryAccessFinal.test.ts > M175 mapped MEMORY recency reinforcement K and causal counterfactuals
+AssertionError: expected [] to have a length of 1 but got +0
+
+- Expected
++ Received
+
+- 1
++ 0
+
+ ❯ kernel175 src/test/assembledMemoryAccessFinal.test.ts:21:21
+     19|  expect(gread,'actual learned graph read').toBeDefined();
+     20|  const graph=associationGraph(f(gread!,4n),{nodes:30,edges:870});
+     21|  expect(graph.keys).toHaveLength(1);expect(graph.weights.every(row=>ro…
+       |                     ^
+     22|  const mem=reads.map(v=>f(v,4n)).filter(v=>typeof v!=='boolean'&&v.kin…
+     23|  const cue=unpackAffectCue(a[2],t);expect(cue.track).toBeDefined();
+ ❯ projection src/test/assembledMemoryAccessFinal.test.ts:50:45
+ ❯ print src/test/assembledMemoryAccessFinal.test.ts:52:53
+ ❯ src/test/assembledMemoryAccessFinal.test.ts:125:35
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  08:31:52
+   Duration  74.46s (transform 3.05s, setup 0ms, collect 4.57s, tests 69.45s, environment 0ms, prepare 141ms)
+
+
+M175 mapped-access-normalized exit=0 elapsed=121.705s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMemoryAccessFinal.test.ts > M175 mapped MEMORY recency reinforcement K and causal counterfactuals
+M175 first K2 {"at":"9","base":["1/5","1/4","1/3","1/2"],"pull":["1/1","1/1","1/1","1/1"],"score":["6/5","5/4","4/3","3/2"],"selected":[3,2],"history":[[],[],["9"],["9"]]}
+M175 TRACE {"at":"9","actualReads":4,"selected":["289","253"],"publicationIds":["290","291"],"writes":2}
+M175 ANCESTRY {"at":"9","acquisitions":["181","217","253","289"],"sourceObservationExperienceJoins":4}
+M175 WORKSPACE {"at":"9","count":2,"recallEvent":"31"}
+M175 later K2 {"at":"10","base":["1/6","1/5","3/4","5/6"],"pull":["1/1","1/1","1/1","1/1"],"score":["7/6","6/5","7/4","11/6"],"selected":[3,2],"history":[[],[],["9","10"],["9","10"]]}
+M175 TRACE {"at":"10","actualReads":4,"selected":["289","253"],"publicationIds":["301","302"],"writes":2}
+M175 TRACE {"at":"12","actualReads":4,"selected":["289","253"],"publicationIds":["305","306"],"writes":2}
+
+stdout | src/test/assembledMemoryAccessFinal.test.ts > M175 mapped MEMORY recency reinforcement K and causal counterfactuals
+M175 first K0 {"at":"9","base":["1/5","1/4","1/3","1/2"],"pull":["1/1","1/1","1/1","1/1"],"score":["6/5","5/4","4/3","3/2"],"selected":[],"history":[[],[],[],[]]}
+M175 TRACE {"at":"9","actualReads":4,"selected":[],"publicationIds":[],"writes":0}
+M175 ANCESTRY {"at":"9","acquisitions":["181","217","253","289"],"sourceObservationExperienceJoins":4}
+M175 WORKSPACE {"at":"9","count":0,"recallEvent":"31"}
+M175 later K0 {"at":"10","base":["1/6","1/5","1/4","1/3"],"pull":["1/1","1/1","1/1","1/1"],"score":["7/6","6/5","5/4","4/3"],"selected":[],"history":[[],[],[],[]]}
+M175 TRACE {"at":"10","actualReads":4,"selected":[],"publicationIds":[],"writes":0}
+M175 TRACE {"at":"12","actualReads":4,"selected":[],"publicationIds":[],"writes":0}
+
+stdout | src/test/assembledMemoryAccessFinal.test.ts > M175 mapped MEMORY recency reinforcement K and causal counterfactuals
+M175 first K1 {"at":"9","base":["1/5","1/4","1/3","1/2"],"pull":["1/1","1/1","1/1","1/1"],"score":["6/5","5/4","4/3","3/2"],"selected":[3],"history":[[],[],[],["9"]]}
+M175 TRACE {"at":"9","actualReads":4,"selected":["289"],"publicationIds":["290"],"writes":1}
+M175 ANCESTRY {"at":"9","acquisitions":["181","217","253","289"],"sourceObservationExperienceJoins":4}
+M175 WORKSPACE {"at":"9","count":1,"recallEvent":"31"}
+M175 later K1 {"at":"10","base":["1/6","1/5","1/4","5/6"],"pull":["1/1","1/1","1/1","1/1"],"score":["7/6","6/5","5/4","11/6"],"selected":[3],"history":[[],[],[],["9","10"]]}
+M175 TRACE {"at":"10","actualReads":4,"selected":["289"],"publicationIds":["300"],"writes":1}
+M175 TRACE {"at":"12","actualReads":4,"selected":["289"],"publicationIds":["302"],"writes":1}
+M175 MEMORY :2/:3/:4/:5/:7/:8 mapped comparisons PASS; extra actual self-cues13..16 retained; historical no-decay is component-only
+
+ ✓ src/test/assembledMemoryAccessFinal.test.ts (8 tests | 7 skipped) 116219ms
+   ✓ M175 mapped MEMORY recency reinforcement K and causal counterfactuals 116218ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  08:34:18
+   Duration  121.15s (transform 3.01s, setup 0ms, collect 4.50s, tests 116.22s, environment 0ms, prepare 140ms)
+
+
+M175 recency-tie-persistence exit=0 elapsed=164.555s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMemoryAccessFinal.test.ts > M175 encoding-time-only intervention and exact native reference-law tie
+M175 recent {"at":"6","base":["1/4","1/2"],"pull":["1/1","1/1"],"score":["5/4","3/2"],"selected":[1],"history":[[],["6"]]}
+M175 older {"at":"6","base":["1/4","1/3"],"pull":["1/1","1/1"],"score":["5/4","4/3"],"selected":[1],"history":[[],["6"]]}
+M175 TRACE {"at":"6","actualReads":2,"selected":["109"],"publicationIds":["110"],"writes":1}
+M175 TRACE {"at":"6","actualReads":2,"selected":["109"],"publicationIds":["110"],"writes":1}
+
+stdout | src/test/assembledMemoryAccessFinal.test.ts > M175 encoding-time-only intervention and exact native reference-law tie
+M175 native tie {"at":"8","base":["1/2","1/2"],"pull":["1/1","1/1"],"score":["3/2","3/2"],"selected":[0],"history":[["6","8"],[]]}
+M175 TRACE {"at":"8","actualReads":2,"selected":["37"],"publicationIds":["111"],"writes":1}
+M175 ANCESTRY {"at":"8","acquisitions":["37","110"],"sourceObservationExperienceJoins":2}
+M175 RECENCY/TIE PASS only encoding timestamp changed; fixed lambda1 actual native tie, canonical winner, zero unselected mutation
+
+stdout | src/test/assembledMemoryAccessFinal.test.ts > M175 retained evidence privacy and full-calendar exact persistence
+M175 ANCESTRY {"at":"12","acquisitions":["181","217","253","289"],"sourceObservationExperienceJoins":4}
+M175 PRIVACY/PERSISTENCE PASS physical truth differs, cognition/recall equal; exact repeat/restore8->101 all state/output/trace/save/identities; :6/:9
+
+ ✓ src/test/assembledMemoryAccessFinal.test.ts (8 tests | 6 skipped) 159053ms
+   ✓ M175 encoding-time-only intervention and exact native reference-law tie 74478ms
+   ✓ M175 retained evidence privacy and full-calendar exact persistence 84574ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 6 skipped (8)
+   Start at  08:36:34
+   Duration  164.01s (transform 3.01s, setup 0ms, collect 4.50s, tests 159.05s, environment 0ms, prepare 145ms)
+
+
+M175 appraisal-connection exit=0 elapsed=320.956s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMemoryAppraisalFinal.test.ts > connection175: early significant retained history changes actual later spatial appraisal
+M175 CONNECTION PASS same current body/spatial goal; actual High3/15 recalled ->MovingCloser versus Wide14/15 ->SameDistance; real consumed memory, same reference laws, full5001. No random-choice claim.
+
+ ✓ src/test/assembledMemoryAppraisalFinal.test.ts (17 tests | 16 skipped) 315321ms
+   ✓ connection175: early significant retained history changes actual later spatial appraisal 315320ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 16 skipped (17)
+   Start at  08:39:26
+   Duration  320.39s (transform 3.05s, setup 0ms, collect 4.56s, tests 315.32s, environment 0ms, prepare 139ms)
+
+
+M175 types-final exit=0 elapsed=20.009s cap=120
+
+M175 closing exit=0 elapsed=6.832s cap=120
+Reference boundary check passed.
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4395}
+M175 PRESERVATION PASS unchanged0.126 production/formal/six frozen trees/all earlier tests, original controls/M17368 receipts/M158/M167 and21/15/132; exactly3 new test paths; register226lines/65184CRLFbytes; evidence2files/14464bytes.
+M175 measured preclosing seconds 795.783
