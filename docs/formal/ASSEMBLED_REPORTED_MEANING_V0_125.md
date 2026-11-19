@@ -50,3 +50,7 @@ No other psychological law or completion requirement changes.
 For concurrent pressure/formation, pressure anchors the sole retention trace;
 all formation traces remain, ordered by actual scheduled event sequence.
 The entire140 batch commits atomically; no pressure event disappears from trace.
+
+Unknown historical baseline: an actual appraisal with no body pair carries the
+empty pair. The later qualification receives Before=null and stays Unavailable;
+no retrospective evidence is invented and a legal sparse history need not abort.

@@ -52,3 +52,7 @@ normal body sample22 to exercise concurrent pressure+formation. Other0/8 arms
 still prove pure pressure. Require both events traced and one retained union.
 Pressure owns the retention trace when present, ordered with the same140 batch;
 other formation traces remain. No source/law/gate change in the primary.
+
+Standing unknown-factor repair: accept an actual empty historical pair as unknown,
+not an exception. Component negative uses the same producer/delivery/consumer
+with null Before; primary acquired-history gate stays fixed.
