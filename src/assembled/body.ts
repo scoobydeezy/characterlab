@@ -13,7 +13,7 @@ import {traceRecordValue} from '../substrate/trace';
 import {scheduledEventValue} from '../substrate/persistence';
 import {ExactRational as Q} from '../substrate/exactMath';
 import {decodeEmbodied as decode,embodiedRecord as r} from '../campaign3/embodiedCodecs';
-import {selectInteroceptiveSamples,consumeInteroceptiveSelection,closeInteroceptiveSelection} from '../campaign3/interoceptiveSelection';
+import {selectInteroceptiveSamples,consumeInteroceptiveSelection,closeInteroceptiveSelection} from './interoceptiveSelection';
 import {exact,atom,materializeReserve,reserveBin} from '../campaign3/embodiedMath';
 import {proposeEmbodiedReplenishment} from '../campaign3/embodiedReplenishment';
 import {admitObservationLane,freezeAndStageSemanticExperience,validateSuccessfulExperienceSettlement,type ExperienceReservation,type StagedSemanticExperience} from '../semanticBinding/phaseOrdering';
@@ -25,11 +25,19 @@ import type {createSkillExecution} from './skillExecution';
 import type {compileCampaign2StateModel} from '../campaign2/stateModel';
 const SEM='semantic-binding/0.1-candidate#SEM-001H';
 const fail=(s:string):never=>{throw new SchedulerContractError('INPUT_NOT_ADMITTED',s);};
-export function compileBodyDeclaration(value:CanonicalValue){
- const a=items(value,'list');if(a.length!==7||txt(a[0])!=='assembled-body/0.1'||typeof a[5]!=='boolean'||typeof a[6]!=='boolean')invalidModel('body declaration requires seven typed fields');
+export const CALIBRATED_SENSING='assembled-calibrated-sensing/0.1-candidate';
+export const bodyObservationVersion=(d:{readonly calibration?:bigint})=>d.calibration===undefined?'embodied-level-observation/0.1-candidate':'embodied-level-observation/0.2-candidate';
+export function calibratedReserve(level:Q,capacity:Q,bias:bigint){
+ const offset=capacity.multiply(Q.of(bias,1000n)),shifted=level.add(offset),zero=Q.of(0n);
+ return {offset,level:shifted.compare(zero)<0?zero:shifted.compare(capacity)>0?capacity:shifted};
+}
+export function compileBodyDeclaration(value:CanonicalValue,calibrated=false){
+ const a=items(value,'list');if(a.length!==(calibrated?8:7)||txt(a[0])!==(calibrated?'assembled-body/0.2':'assembled-body/0.1')||typeof a[5]!=='boolean'||typeof a[6]!=='boolean')invalidModel('body declaration version/field count/types');
+ const bias=calibrated?a[7]:undefined;if(bias!==undefined&&(typeof bias==='boolean'||bias.kind!=='signed'||bias.value< -1000n||bias.value>1000n))invalidModel('body calibration requires signed integer in [-1000,1000]');
+ const calibration=calibrated?(bias as {value:bigint}).value:undefined;
  const [capacity,rate,width,threshold]=a.slice(1,5).map(exact),zero=Q.of(0n);
  if(capacity.compare(zero)<=0||rate.compare(zero)<0||width.compare(zero)<=0||width.compare(capacity)>0||capacity.divide(width).denominator!==1n||threshold.compare(zero)<=0||threshold.compare(capacity)>0)invalidModel('body capacity/rate/grid/threshold domain');
- return Object.freeze({capacity,rate,width,threshold,permitted:a[5] as boolean,available:a[6] as boolean});
+ return Object.freeze({capacity,rate,width,threshold,calibration,permitted:a[5] as boolean,available:a[6] as boolean});
 }
 export type BodyDeclaration=ReturnType<typeof compileBodyDeclaration>&{readonly selectionCapacity?:number;readonly effectEvidence?:boolean;readonly stress?:StressDeclaration};
 export const bodyPath=(C:CanonicalValue):StatePath=>({rootStateTypeId:455n,fieldId:1n,selectors:[{kind:'mapKey',key:C}]});
@@ -102,15 +110,15 @@ export function createBodyExecution(d:BodyDeclaration,C:CanonicalValue,stateMode
     const binding=read(state,roster,'ResolvedCharacterSubject');if(key(f(rec(binding.value,267n),1n))!==key(C))fail('body IDN target mismatch');reads=[...binding.reads];domain=[exactPattern(roster),exactPattern(path)];
     const occurrence=typedIdentifier(1115,unsigned(context.allocateRuntimeId()));let sample:CanonicalValue,carrier:CanonicalValue;
     if(d.permitted&&d.available){const prior=read(state,path,'accessor/embodied-reserve-anchor'),anchor=rec(prior.value,454n),anchorAt=f(anchor,2n);if(typeof anchorAt==='boolean'||anchorAt.kind!=='signed')fail('body anchor');reads.push(...prior.reads);
-     const level=materializeReserve(exact(f(anchor,1n)),(anchorAt as {value:bigint}).value,d.capacity,d.rate,at),bin=reserveBin(level,d.capacity,d.width);
-     sample=r(461,[occurrence,BODY_OBSERVER,BODY_CHANNEL,signed(at),r(462,[atom(bin.lower),atom(bin.upper)]),text('embodied-level-observation/0.1-candidate')]);quantization=[r(484,[atom(level),atom(d.capacity),atom(d.width),unsigned(bin.index)])];
+     const level=materializeReserve(exact(f(anchor,1n)),(anchorAt as {value:bigint}).value,d.capacity,d.rate,at),calibration=d.calibration===undefined?undefined:calibratedReserve(level,d.capacity,d.calibration),sensed=calibration?.level??level,bin=reserveBin(sensed,d.capacity,d.width);
+     sample=r(461,[occurrence,BODY_OBSERVER,BODY_CHANNEL,signed(at),r(462,[atom(bin.lower),atom(bin.upper)]),text(bodyObservationVersion(d))]);quantization=[...(calibration?[list([text(CALIBRATED_SENSING),atom(level),signed(d.calibration!),atom(calibration.offset),atom(sensed)])]:[]),r(484,[atom(sensed),atom(d.capacity),atom(d.width),unsigned(bin.index)])];
      const reservation=admitObservationLane({observerId:txt(BODY_OBSERVER.payload),lane:'Current',dueAt:at,emitsCharacterAccessibleEvidence:true},()=>context.allocateRuntimeId()).reservation!;reservations.push(reservation);carrier=r(482,[unsigned(1),sample,typedIdentifier(1106,unsigned(reservation.experienceId))]);
-    }else{sample=r(463,[occurrence,BODY_OBSERVER,BODY_CHANNEL,signed(at),text('embodied-level-observation/0.1-candidate')]);context.allocateRuntimeId();carrier=r(482,[unsigned(2),sample]);}
+    }else{sample=r(463,[occurrence,BODY_OBSERVER,BODY_CHANNEL,signed(at),text(bodyObservationVersion(d))]);context.allocateRuntimeId();carrier=r(482,[unsigned(2),sample]);}
     outputs=[sample];emit(11n,internal[0],carrier);
    }else if(event.phase===20n){
     if(d.selectionCapacity===undefined||key(event.eventTypeId)!==key(BODY_SELECTION))fail('body selection event');
     const payload=items(event.payload,'list');if(payload.length!==2&&!(contextForBody&&payload.length===3))fail('body selection payload');
-    const selected=selectInteroceptiveSamples([payload[0]],d.selectionCapacity!);
+    const selected=selectInteroceptiveSamples([payload[0]],d.selectionCapacity!,bodyObservationVersion(d));
     try{
      const samples=consumeInteroceptiveSelection(selected.view),sample=rec(payload[0],(payload[0] as {schema:{typeId:bigint}}).schema.typeId);
      const report=list([text(BODY_SELECTION_REPORT),signed(at),unsigned(d.selectionCapacity!),f(sample,1n),text(selected.audit[0].disposition),...(payload.length===3?[payload[2]]:[])]);
@@ -129,7 +137,7 @@ export function createBodyExecution(d:BodyDeclaration,C:CanonicalValue,stateMode
    }
    return {nextState,outputs,emittedEvents:emissions,traceContributions:[],traceFactory(children:readonly ScheduledEvent[]){
     if(children.length!==emissions.length)fail('body child multiplicity');for(const [i,child] of children.entries()){const e=emissions[i],expected={...e,eventId:child.eventId,eventSequence:child.eventSequence,causalParentEventIds:[...new Set([event.eventId,...(e.additionalCausalParentEventIds??[])])].sort((a,b)=>a<b?-1:1)};if(child.eventSequence<=event.eventSequence||pending.has(key(scheduledEventValue(child)))||key(scheduledEventValue(child))!==key(scheduledEventValue(expected)))fail('body child differs from generated plan');pending.set(key(scheduledEventValue(child)),structuredClone(child));}
-    return [traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model,runIdentity:run,event,seamId:bodyId(1036,'seam/assembled-body'),seamVersion:contextForBody&&event.phase<=20n?ATTRIBUTION_VERSION:tolerance&&[ACTION_BODY_EVENT,ACTION_BODY_RECEIPT_EVENT].some(t=>key(t)===key(event.eventTypeId))?TOLERANCE_VERSION:actionBody?.delayed&&[ACTION_BODY_EVENT,ACTION_BODY_RECEIPT_EVENT].some(t=>key(t)===key(event.eventTypeId))?DELAYED_BODY_VERSION:key(event.eventTypeId)===key(ACTION_BODY_EVENT)?(procedure?procedure.contractVersion:'assembled-character-action-body/0.1-candidate'):d.selectionCapacity===undefined?'assembled-character-interaction/0.1-candidate':'assembled-character-attention/0.1-candidate',recordKind:event.eventTypeId,subjectIds:[id(C),BODY_OBSERVER],sourceRecordIds:sources,registeredReadDomain:domain,actualReadRecords:reads,inputProjection:event.payload,outputProjection:list(outputs),randomDrawRecords:[],quantizationOperations:quantization,statePatch:patch,structuralMutationDiffs:diffs,emittedEvents:children,invariantResults:[]})];
+    return [traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model,runIdentity:run,event,seamId:bodyId(1036,'seam/assembled-body'),seamVersion:d.calibration!==undefined&&event.phase<=20n?CALIBRATED_SENSING:contextForBody&&event.phase<=20n?ATTRIBUTION_VERSION:tolerance&&[ACTION_BODY_EVENT,ACTION_BODY_RECEIPT_EVENT].some(t=>key(t)===key(event.eventTypeId))?TOLERANCE_VERSION:actionBody?.delayed&&[ACTION_BODY_EVENT,ACTION_BODY_RECEIPT_EVENT].some(t=>key(t)===key(event.eventTypeId))?DELAYED_BODY_VERSION:key(event.eventTypeId)===key(ACTION_BODY_EVENT)?(procedure?procedure.contractVersion:'assembled-character-action-body/0.1-candidate'):d.selectionCapacity===undefined?'assembled-character-interaction/0.1-candidate':'assembled-character-attention/0.1-candidate',recordKind:event.eventTypeId,subjectIds:[id(C),BODY_OBSERVER],sourceRecordIds:sources,registeredReadDomain:domain,actualReadRecords:reads,inputProjection:event.payload,outputProjection:list(outputs),randomDrawRecords:[],quantizationOperations:quantization,statePatch:patch,structuralMutationDiffs:diffs,emittedEvents:children,invariantResults:[]})];
    }};
   },
   prepareCommit(){if(!active||unboundEffects||[...pending.values()].some(e=>e.dueAt<=at)||originals.some(e=>e.dueAt===at&&!used.has(e.eventId)))fail('unfinished body instant');validateSuccessfulExperienceSettlement(reservations,staged);},

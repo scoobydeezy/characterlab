@@ -33,7 +33,7 @@ import type {BodyRecallDelivery} from './workspace';
 import {retrieveBodyEpisodes,rankBodyEpisodes,type RetrievalDeclaration} from './retrieval';
 import {exact} from '../campaign3/embodiedMath';
 import {dataItems as items,dataField as f,dataRecord as rec,dataKey as key,dataIdentity as id,dataText as txt,dataUnsigned as uint} from '../campaign2/canonicalData';
-import {BODY_SELECTION,BODY_SELECTION_REPORT,BODY_OBSERVER,BODY_CHANNEL,bodyId,type BodyEvidence,type BodyDeclaration} from './body';
+import {bodyObservationVersion,BODY_SELECTION,BODY_SELECTION_REPORT,BODY_OBSERVER,BODY_CHANNEL,bodyId,type BodyEvidence,type BodyDeclaration} from './body';
 import type {compileCampaign2StateModel} from '../campaign2/stateModel';
 export const ACCESS='assembled-episode-access/0.1';
 export const SOCIAL_EPISODE='assembled-social-episode/0.1',SOCIAL_RECALL='assembled-social-recall/0.1';
@@ -55,7 +55,7 @@ export function validateSocialEpisode(v:CanonicalValue,C?:CanonicalValue,maxRece
 function validateEvidence(sample:CanonicalValue,experience:CanonicalValue,audit:CanonicalValue,at:bigint,d:BodyDeclaration,contextualBody=false){
  const s=rec(decode(enc(sample)),461n),x=rec(decode(enc(experience)),227n),a=items(audit,'list');occurrence(f(s,1n),1115n);occurrence(f(x,1n),1106n);
  if(!eq(f(s,2n),BODY_OBSERVER)||!eq(f(s,3n),BODY_CHANNEL)||time(f(s,4n))!==at||!eq(f(x,2n),BODY_OBSERVER)||uint(f(x,3n))!==at)fail('sample/experience binding');
- if(txt(f(s,6n))!=='embodied-level-observation/0.1-candidate'||txt(f(x,9n))!=='semantic-binding/0.1-candidate#SEM-001H')fail('evidence version');
+ if(txt(f(s,6n))!==bodyObservationVersion(d)||txt(f(x,9n))!=='semantic-binding/0.1-candidate#SEM-001H')fail('evidence version');
  const companion=a.length===6&&contextualBody?bindBodyContext(a[5],x):undefined;
  const support=items(f(x,8n),'set'),expected=[f(s,1n),...(companion?[typedIdentifier(1115,unsigned(companion.panel.observation))]:[])];if(support.length!==expected.length||support.some(v=>!eq(f(rec(v,216n),1n),BODY_OBSERVER)||!expected.some(e=>eq(e,f(rec(v,216n),2n)))))fail('experience observation support');
  if(items(f(x,4n),'set').length!==(companion?1:0))fail('body context membership');
