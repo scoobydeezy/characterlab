@@ -48,6 +48,10 @@ state/output/trace/save/run byte through full queue101. Original failures retain
 M176 publication rollback and memory checks remain valid: production unchanged.
 No probability or behavioral comparison proceeds without live operands/consumers.
 
+Setup repair after109.583s: both inherited route0 plans resolved to one action.
+At25 open the competing task's existing route1 in BOTH arms; threat keeps route0.
+Retain the failed one-action test; no law/calibration/urgency/gate change.
+
 ## Budget and done
 One test command at a time; <=600s/command,1800s total including failures.
 At most20 evidence files/5MiB; CURRENT<=80, register<=250lines/65536CRLFbytes.
