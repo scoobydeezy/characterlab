@@ -46,9 +46,20 @@ coverage checks close this package. Other memory clauses still require final rep
 Owner-delegated self-amendment BEFORE execution:14400s cumulative verification cap
 for this finite68-case gate (measured M172 cases159–228s; previous1800s package limit
 cannot contain it). No production expansion; one new test file,20 evidence files/5MiB.
-At most2 cases/command, <=600s/command, one job. No every-prefix68 restore grid,
+At most2 cases/validation command, <=600s each, one job. No every-prefix68 restore grid,
 browser work, verifier chain or repeated passed cases absent an invalidating change.
 Done iff all68 pass their fixed gates/classification and required closing checks pass.
 MEC004/007/008/009/010/015/019/020/022 and conditional debts retain scope.
 F-12.3 P2 open until completion; E61/P45/N13/U13=132,21 mapped,0/15 families.
 Then continue remaining current-candidate memory clauses under existing self-approval.
+
+Self-approved scheduling amendment2026-11-19, after cases00..11 all pass:
+one finite Python driver may serially run cases12..67 in the same two-case batches.
+Driver-only wall cap12300s; every child <=600s; cumulative14400s still applies.
+This explicitly permits the coordinator shell to outlive600s, not a validation child.
+No background second launcher, overlapping batch, retry, changed input or new test.
+Start only after observed exit0 of cases10..11; stop on any child failure/timeout,
+missing receipt or less than600s remaining. Preserve each child output/duration.
+The earlier orchestration rejection launched nothing; its cell ended, and the old
+process inventory was empty before direct serial batches resumed. This replaces
+manual launches with ONE coordinator, rather than introducing a second launcher.
