@@ -21,7 +21,8 @@ true/false. Delay8 produces queries9..16. Event/body capacity32, reference K2,
 K0/K1 capacity controls. Ordinary complete context/opportunity frame at9.
 Full queue101 includes later automatic queries; never truncate at acceptance9.
 Original M64 source/time mapping retained; current rich observation identities differ.
-Current learned graph remains enabled. A sole focal key has no self-edge and gives
+Current learned graph remains enabled. Isolated zero nodes normalize away; the
+sole retained focal key has no self-edge and gives
 equal direct pull1 versus old fixed empty-graph pull0: declare this common score
 offset before execution. Compare original canonical kernel on actual graph/histories,
 plus original strict ordering/cardinality/mutation rules, not old whole-model bytes.
@@ -69,3 +70,6 @@ Self-approved numerical correspondence correction before rerun: initial73.773s
 failed at expected pull1/2. Original rankAccessibleEpisodes averages unit access;
 one matching unit gives1 (the old two-unit example gave1/2). Thus native tie score
 is3/2, not1. Inputs/laws/bases/order/K/gates unchanged; original failure retained.
+Second75.029s failure was an extra graph-shape assertion: normalizeGraphZeroState
+removes isolated nodes. Assert the actual empty graph (capacity30 remains enabled),
+actual single retained units and direct access; no source/semantic comparison changes.
