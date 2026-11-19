@@ -53,6 +53,9 @@ The first native gate found inherited protocol execution disabled (engagement fa
 Enable protocol execution in BOTH arms; keep its observation hidden. Restore the
 copied permission28 to true in both; assert exactly one input difference, at26.
 This implements the declared contrast; laws, seed, effects and gates remain fixed.
+Final metadata inspection found protocol observation actually true, contradicting
+the hidden-observation declaration. Preserve the visible-protocol passes as controls,
+set observation false explicitly in both arms, and rerun all3 affected native gates.
 
 ## Files, checks, budgets, stop
 At most2 new test/fixture paths; zero production/formal/old-test edits planned.
