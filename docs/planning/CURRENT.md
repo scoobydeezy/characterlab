@@ -9,9 +9,10 @@ One active package; rules/registry0.129-candidate; 55 slots, one model/state/sch
 Contract: ../formal/ASSEMBLED_CALIBRATED_SENSING_CONTRACT.md, version0.1-candidate.
 Capabilities: admitted calibration; observed difference reaches affect/stress;
 permission/availability and hidden physical truth remain separate from cognition.
-Production: body.ts, model.ts, memory.ts, traceBinding.ts under src/assembled.
+Production: body.ts, model.ts, memory.ts, traceBinding.ts and
+interoceptiveSelection.ts under src/assembled.
 Tests: assembledCalibratedSensing.test.ts and fixtures/assembledCalibratedSensing.ts.
-At most6 production/test paths; no runtime copies, owners or state families added.
+At most7 production/test paths; no runtime copies, owners or state families added.
 
 ## Predeclared comparison
 M181 scenario unchanged: seed0; three tasks, threat task nonsocial, remaining
@@ -56,3 +57,8 @@ MEC003/004/005/007/008/009/010/012..019/022 retained per mechanism ledger.
 RO003/006/008/010/011/019/020/021 retain their scopes; no new verdict or reduction.
 Pinned21/15/132, E64/P42/N13/U13 unchanged. Full BIO/AFFECT, stress perception,
 current-version memory transfer and final whole-candidate replay remain open.
+
+Repair before rerun: native admission hit the original selector's0.1-only producer
+check. Preserve that Campaign3 file; port its33-line selector with an explicit
+expected observation version. Compare original/successor selection and reject
+mixed producer versions. This is the same capacity/order law, not a new pipeline.

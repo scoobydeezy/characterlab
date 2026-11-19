@@ -48,3 +48,12 @@ hidden truth must preserve cognition. Exact continuation crosses calibrated memo
 and queued stress. Old0.128 replay protects its original observation semantics.
 No final action probability, full biological channel coverage or family acceptance
 is inferred. FND4/5/6 conformance and RO003/006/008/010/011/019/020/021 remain scoped.
+
+## Selection boundary amendment (after first native failure, before repair)
+The frozen Campaign3 selector intentionally accepts only observation0.1. Preserve
+it as control; a bounded assembled successor keeps the exact batch/capacity/order,
+occurrence uniqueness, observer/instant binding and single-use view behavior.
+It takes the model's expected observation version (0.1 or0.2) explicitly and rejects
+all mixed/mismatched producers. Old models still receive identical selection bytes.
+No other selector domain or psychological operation changes. Direct controls cover
+capacity0/1/2, unavailable samples, one-use views and cross-version rejection.
