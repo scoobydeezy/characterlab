@@ -1150,3 +1150,10 @@ unchanged tier laws, actual retained significance changes live appraisal4000.
 Actual event-only loss/rollback/continuation preserve bodily memories. Original
 pure pressure/current meaning and final family replay remain open; no retirement.
 [Bounded result](ASSEMBLED_CHARACTER_M170_RESULT.md).
+
+M171 preserves MEC004/007/008/009/010/015/019/020/022: actual current reported
+evidence changes assessment while historical significance remains immutable.
+Pure/concurrent capacity pressure uses the same346 batch; no new acquisition.
+In-flight baseline is explicit, not recall after loss. Unknown Before remains
+unknown. Original laws/controls remain; family replay is next, not yet acceptance.
+[Bounded result](ASSEMBLED_CHARACTER_M171_RESULT.md).

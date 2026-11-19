@@ -1,0 +1,142 @@
+
+M171 implementation-types exit=2 elapsed=3.466s cap=60
+src/assembled/retention.ts(76,189): error TS1109: Expression expected.
+
+M171 corrected-implementation-types exit=2 elapsed=19.335s cap=60
+src/assembled/reportedMeaning.ts(75,315): error TS2551: Property 'value' does not exist on type 'CanonicalValue'. Did you mean 'valueOf'?
+  Property 'value' does not exist on type 'false'.
+
+M171 implementation-and-test-types exit=0 elapsed=19.622s cap=60
+
+M171 live-current-reports-historical-credit exit=1 elapsed=41.125s cap=400
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+
+REVIEW REPAIR: interrupted first native run at41.125s before known clone mismatch; scheduler.ts375 passes cloneEvent(currentEvent). Match pressure context by full canonical scheduled event, not JS object identity. Same original comparison/gate; compile failures3.466s syntax and19.335s narrowing retained.
+
+M171 corrected-current-reports-historical-credit exit=1 elapsed=211.089s cap=400
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledReportedMeaning.test.ts (15 tests | 1 failed | 14 skipped) 205474ms
+   × primary171: perceived contrary report changes current meaning without revising historical significance 205473ms
+     → Cannot read properties of undefined (reading 'finish')
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledReportedMeaning.test.ts > primary171: perceived contrary report changes current meaning without revising historical significance
+SchedulerContractError: Cannot read properties of undefined (reading 'finish')
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:470:11
+    468|       const contractError = error instanceof SchedulerContractError
+    469|         ? error
+    470|         : new SchedulerContractError('TRANSITION_FAILURE', errorMessag…
+       |           ^
+    471|       this.#status = 'Failed';
+    472|       this.#diagnostic = {
+ ❯ Object.settleNextInstant src/assembled/character.ts:45:66
+ ❯ Module.finish src/test/assembledDefining.test.ts:16:88
+ ❯ src/test/assembledReportedMeaning.test.ts:25:24
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 14 skipped (15)
+   Start at  22:58:36
+   Duration  210.51s (transform 3.05s, setup 0ms, collect 4.58s, tests 205.47s, environment 0ms, prepare 137ms)
+
+
+REPAIR: primary reached both live current assessments and unchanged memory checks, then full-tail goal expiry required the inherited empty140 identity stage. Restore unconditional joinedStage() for the filtered events, as before M171; no source/law/gate change. Failed211.089s retained.
+
+M171 repaired-full-tail-current-reports exit=0 elapsed=215.339s cap=400
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReportedMeaning.test.ts > primary171: perceived contrary report changes current meaning without revising historical significance
+M171 PRIMARY PASS both genuine historical MovingFarther17; pure1 pressure22,8body remain; actual current reports23 yield MovingFarther vs SameDistance, exact memory bytes unchanged at23; goal-only read/support parents; full5001.
+
+ ✓ src/test/assembledReportedMeaning.test.ts (15 tests | 14 skipped) 209679ms
+   ✓ primary171: perceived contrary report changes current meaning without revising historical significance 209678ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 14 skipped (15)
+   Start at  23:02:56
+   Duration  214.78s (transform 3.10s, setup 0ms, collect 4.62s, tests 209.68s, environment 0ms, prepare 146ms)
+
+
+Concurrent trace repair after616cc18c: pressure anchors retention when present; preserve all actual formation traces in event order. Denied/cap8 control adds normal body sample22. Pure pressure-only primary path is unchanged (same sole trigger/trace); no redundant primary rerun. Include3s amendment/readback checks allowance at close.
+
+M171 missing-denied-hidden-pure-and-concurrent-pressure exit=0 elapsed=372.807s cap=550
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReportedMeaning.test.ts > controls171: missing and denied evidence, diagnostic truth and pure0/8 capacities
+M171 CONTROLS PASS actual acquired event0 loss/body8 retained; pure8 preserves all8 positions; missing/denied -> Unavailable without fallback, historical memory unchanged; diagnostic20/30 gives exact equal baseline/perceived report/current assessment/memory; full5001.
+
+ ✓ src/test/assembledReportedMeaning.test.ts (15 tests | 14 skipped) 367163ms
+   ✓ controls171: missing and denied evidence, diagnostic truth and pure0/8 capacities 367163ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 14 skipped (15)
+   Start at  23:07:14
+   Duration  372.25s (transform 3.08s, setup 0ms, collect 4.60s, tests 367.16s, environment 0ms, prepare 138ms)
+
+
+Unknown baseline repair per d8e9abc4: actual empty prior body pair becomes Before=null. Recovery component negative reuses actual native Unavailable appraisal50 plus a known perceived report through the same authenticated handler. Immutable-goal domain now rejects report times at/after declared expiry during model preparation. Existing known-pair behaviors unchanged.
+
+M171 recovery-and-unknown-types exit=0 elapsed=19.407s cap=60
+
+M171 full-recovery-rollback-unknown-admission exit=0 elapsed=281.052s cap=550
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReportedMeaning.test.ts > recovery171: authentic carried baseline restores every boundary and actual assessment fault rolls back
+M171 RECOVERY PASS original-input save17 and EVERY later canonical state/output/trace/save/run byte through5001 including assessment after actual event loss; actual post-assessment rollback, illegal reports and forged delivery/assessment/pressure rejected.
+
+ ✓ src/test/assembledReportedMeaning.test.ts (15 tests | 14 skipped) 275467ms
+   ✓ recovery171: authentic carried baseline restores every boundary and actual assessment fault rolls back 275466ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 14 skipped (15)
+   Start at  23:15:02
+   Duration  280.50s (transform 3.06s, setup 0ms, collect 4.57s, tests 275.47s, environment 0ms, prepare 141ms)
+
+
+M171 unchanged-memory-kinds170 exit=0 elapsed=224.436s cap=300
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMemoryKinds.test.ts > primary170: event pressure retains meaningful history without displacing bodily memories
+M170 PRIMARY PASS actual8body/8position acquisitions17; pressure23 leaves8body/2position each; live4000 High15/23 MovingFarther vs Wide22/23 SameDistance, actual recalled operands and equal body; full5001.
+
+ ✓ src/test/assembledMemoryKinds.test.ts (15 tests | 14 skipped) 218862ms
+   ✓ primary170: event pressure retains meaningful history without displacing bodily memories 218861ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 14 skipped (15)
+   Start at  23:19:56
+   Duration  223.89s (transform 3.05s, setup 0ms, collect 4.56s, tests 218.86s, environment 0ms, prepare 137ms)
+
+
+M171 immutable-legacy158 exit=0 elapsed=131.843s cap=200
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledTimeDomainNative.test.ts > native158: unchanged current model retains every canonical boundary with actual performance learning
+M158 NATIVE PASS 18 canonical boundaries;2 actual performance observations, unengaged expectation null/learned value state; full queues101; exact save6 continuation
+
+ ✓ src/test/assembledTimeDomainNative.test.ts (6 tests | 5 skipped) 126367ms
+   ✓ native158: unchanged current model retains every canonical boundary with actual performance learning 126366ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  23:23:48
+   Duration  131.29s (transform 2.99s, setup 0ms, collect 4.47s, tests 126.37s, environment 0ms, prepare 139ms)
+
+
+M171 boundary-research-preservation exit=0 elapsed=6.755s cap=40
+Reference boundary check passed.
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4391}
+M171 PRESERVATION PASS six frozen trees, original controls/checkpoint, baseline/corpus; exactly8 production/test paths; register222 lines/65447 CRLF bytes; evidence2 files/13513 bytes;21/15/132 unchanged.
+
+M171 staged-whitespace-size-scope exit=0 elapsed=0.654s cap=40
