@@ -1,50 +1,66 @@
-# Current work — M181 complete: physical truth/perception boundary
-The current character hides unobserved reserve/stress differences from cognition.
-Finer permitted reserve sensing changes actual appraisal and later physical stress.
-Denied/unavailable samples remain unknown. Stress still has no perceptual consumer.
+# Current work — M182: executed bodily outcome reaches later affect
+Base0f266816; rules/registry0.128 stays fixed. Close a current execution-to-affect
+comparison inside the existing character; no new mechanism or model version.
+One model/state/scheduler/trace/save; no stress-to-fatigue substitution.
 
-[M181 result](ASSEMBLED_CHARACTER_M181_RESULT.md);
-[raw checks](ASSEMBLED_CHARACTER_M181_CHECKS.txt). Plan ce82ada5, base18d47174.
-Rules/registry0.128-candidate unchanged; qualification, zero production/formal edits.
-Exactly2 new test/fixture paths. One model/state/scheduler/trace/save remains.
+## Capability, authority, scope
+Two capabilities: identical intent can yield Applied/Blocked physical outcomes;
+only later permitted bodily evidence changes live appraisal and subsequent stress.
+MEC003/004/017/019 preserve truth/evidence and intent/execution distinctions.
+Original skill-public execution, embodied replenishment, affect-factor and
+biological-dynamics/0.1 stress kernels remain controls, never runtime substitutes.
+Current contracts: action-body0.1/delayed-body0.1, procedural0.2, goal-absence0.8,
+regulatory-stress0.1; C-AFFECT/F12.5 remain partial, no new clause promotion.
+FND4/6 and RO003/006/008/010/011/019/020/021 govern this receiving boundary.
+Stress sensing needs its own admitted channel/consumer; full original BIO still open.
 
-## What passed and what it means
-Seed0; three nonsocial tasks, visual trials1..9, body samples10/26, adopted goals,
-early routes closed/later routes unchanged; body cap100/rate1/threshold60.
-Reserve51/59,width20 -> true41/49 at10 -> same observed[40,60] -> U7/20 ->
-actual stress175 at11. Every safe cognitive state/output/nonphysical trace agrees
-through101. Fine51,width10 -> [40,50] -> U3/8 -> actual stress188.
-Actual selected sample/SEM, concern/reason stage, appraisal producer and exact
-prior report consumed by stress are checked. Zero actual draws; no choice claim.
+## Predeclared scenario and gates
+Use M181 alias51 current recipe: seed0, reserve51/cap100/rate1/width20/threshold60,
+initial stress0, three nonsocial tasks, observed visual trials1..9, adopted goals,
+body samples10/26 and normal late opportunity26. No learned starting state.
+All early routes stay closed. At25 open only route0 of the first task that is
+not the configured threat task. Urgency26 is1 only for that task; all others0.
+Action effect80/no delay; difficulty0, impairment0, phase4, no practice.
+Both arms retain the same model/settings/input ordering except current physical
+execution permission at26 (true/false). Performance reports are hidden in both.
+At27 close routes; add ordinary sample/opportunity28 and keep queue through101.
 
-Initial stress0/200 -> physical175/176 at11, same whole safe cognition through101.
-Denied reserve51/stress0 vs59/stress200 -> Unknown appraisal, stress0/1.
-Unavailable control has same safe view. Every denied/unavailable sample10/26
-has no455 read or quantization and publishes actual Unavailable evidence.
-Projection excludes only physical455 state and declared physical output fields,
-with every output exclusion tied to its actual producer. Cognitive traces never
-read455. No recursive masking or whole-world/save equality across different truth.
-Original HiddenA/B8 seeds/full12 preserve whole observer histories/different worlds;
-original reserve kernels match actual observed intervals. Fine51 repeat/public
-save10 restore match every remaining full byte through101, crossing stress11.
+Before comparing: actual chosen action/intent/expression/plan26 must exist and
+match in full; live shared appraisal26 and its selected evidence must match.
+Actual procedure/body traces must prove engagement/success vs blocked execution.
+Expected reserve25 ->100 (Applied75/Overflow5) vs unchanged anchor/materialized25.
+No protocol success flag or requested80 can serve as the later body observation.
+At28 expected measured98 vs23 -> observed[80,100] vs[20,40]; selected C1/SEM
+samples must actually reach live Known appraisals. Threat goal stays Open.
+Use actual factors with original SplitExposure kernel; expected U1/4 vs2/5.
+Actual stress29 consumes exact appraisal28 packets, same prior stress; dose125
+vs200, with exact original decay/receiver arithmetic. Earlier appraisals frozen.
+Full original skill execution comparator on captured operands, and original
+reserve replenishment/bin kernels on actual physical operands, must agree.
+No free-choice/dice-coupling claim: report actual draws and complete chosen meaning.
 
-All gates pass. Explicit all-sample denial checks were added after review and only
-that group repeated; its earlier pass remains recorded. No fixture/law amendment,
-seed search, failure or budget extension. Validation stays below600s/command and
-1800s total. Source/control/evidence preservation, types/boundary/research and
-staged size/whitespace pass; two evidence files below5MiB.
-FND4/6; MEC003/004/012..019/022; P3-001/004/005/008/011 remain scoped.
-RO003/006/008/010/011/019/020/021 retain distinctions and conditional debts.
+Withheld-observation control removes only sample28 in both arms. Actual execution
+still differs, but current appraisal28 must be Unavailable, not invented success
+or zero; actual stress29 must receive those unknown packets with no new dose.
+Original observations10/26, choices and physics remain; no cognition reads455.
+Compare controlled operands/status/consumers, not whole-world or all-output equality.
+Independent repeat and public save25 restore of the successful arm must match
+every subsequent full state/output/trace/save/run byte through101 across execution,
+observation28 and stress29. All native runs exhaust101 without diagnostics.
 
-## Remaining integration gates
-E64/P42/N13/U13=132;21 members/15 families pinned. No acceptance promotion.
-12.5-8/family12.5 still need native original biological sensing, remaining AFFECT
-source/failed-execution correspondence and stress perception; NoImpulse and
-ScalarThreat/body-only controls remain. This qualification supplies no stress sensor.
-Memory12.3 acceptance stays on0.126; affected memory/dice replay is needed before
-transfer to0.128. Final whole-candidate replay remains mandatory.
-Continue these dependencies under bounded self-approval; laws and final scope stay.
-No UI, autonomous partners, reduction or unrelated breadth.
+## Files, checks, budgets, stop
+At most2 new test/fixture paths; zero production/formal/old-test edits planned.
+If a production defect appears, record it and amend this card before repair.
+Types; primary/original comparators; withheld-source; exact repeat/public restore;
+source/evidence preservation; boundary/research; explicit staged size/whitespace.
+One job;600s/command and1800s cumulative including failures;20 evidence files/5MiB.
+No unchanged frozen suites repeated; changed dependency would invalidate that choice.
+Done iff actual choice/execution divergence, sensed appraisal/stress divergence,
+withheld-source and exact continuation all pass. No acceptance reduction.
+Self-approved setup repairs must name cause before rerun; retain failures.
+CURRENT80/work order250/register250lines/64KiB; one compact result only.
+Pinned21/15/132, E64/P42/N13/U13. Memory12.3 accepted0.126 only; current transfer open.
+Full BIO sensing/AFFECT source correspondence/stress perception/final replay open.
 
 | Record | Status |
 |---|---|
