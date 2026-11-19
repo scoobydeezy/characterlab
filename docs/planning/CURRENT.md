@@ -22,7 +22,7 @@ K0/K1 capacity controls. Ordinary complete context/opportunity frame at9.
 Full queue101 includes later automatic queries; never truncate at acceptance9.
 Original M64 source/time mapping retained; current rich observation identities differ.
 Current learned graph remains enabled. A sole focal key has no self-edge and gives
-equal direct pull1/2 versus old fixed empty-graph pull0: declare this common score
+equal direct pull1 versus old fixed empty-graph pull0: declare this common score
 offset before execution. Compare original canonical kernel on actual graph/histories,
 plus original strict ordering/cardinality/mutation rules, not old whole-model bytes.
 
@@ -35,7 +35,7 @@ Retain constant-importance/canonical counterfactual; no narrative importance rew
 Recency-only sources neutral1/claim3/claim5 versus claim4, delay5: at6 older A1/4,
 B1/2 versus1/3, only one input timestamp differs and model is identical.
 Tie sources claim3/neutral5/claim7, delay3: old history6 yields base1/6+1/3=1/2
-at8 versus new1/2; common pull1/2, exact canonical acquisition winner.
+at8 versus new1/2; common pull1, exact canonical acquisition winner.
 Hidden truth flips only world truth; actual retained evidence/recall stays identical.
 Trace original source->observation->experience->acquisition and actual recall reads,
 graph operands, scores, publication IDs, phase140 selected-only writes and workspace.
@@ -64,3 +64,8 @@ Then current affect-biased learned retrieval remains before memory-family accept
 E62/P44/N13/U13=132;21 mapped/0 families; no UI or whole-character acceptance.
 
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
+
+Self-approved numerical correspondence correction before rerun: initial73.773s
+failed at expected pull1/2. Original rankAccessibleEpisodes averages unit access;
+one matching unit gives1 (the old two-unit example gave1/2). Thus native tie score
+is3/2, not1. Inputs/laws/bases/order/K/gates unchanged; original failure retained.
