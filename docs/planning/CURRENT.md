@@ -1,57 +1,58 @@
-# Current work — M182 complete: executed outcome to later affect
-Identical chosen intent can produce an applied or blocked bodily effect. Later
-permitted sensing carries the difference into threat appraisal and physical stress.
-With that observation withheld, current appraisal stays unknown and adds no impulse.
+# Current work — M183: calibrated bodily sensing
+The same reserve will be sensed differently under explicit sensor calibration.
+The shifted evidence must reach actual appraisal and next-instant physical stress
+through existing C1/SEM, attention and memory. Stress itself remains unsensed.
 
-[M182 result](ASSEMBLED_CHARACTER_M182_RESULT.md);
-[checks](ASSEMBLED_CHARACTER_M182_CHECKS.txt). Plan95c30585; corrections2cfe6c1b/a0e5f613.
-Base0f266816; rules/registry0.128-candidate unchanged. Two new test/fixture files;
-zero production/formal/prior-test changes. One model/state/scheduler/trace/save.
+## Bounded card (before implementation)
+Base6648ee56; M182 complete. Self-approved next dependency under owner continuation.
+One active package; rules/registry0.129-candidate; 55 slots, one model/state/scheduler.
+Contract: ../formal/ASSEMBLED_CALIBRATED_SENSING_CONTRACT.md, version0.1-candidate.
+Capabilities: admitted calibration; observed difference reaches affect/stress;
+permission/availability and hidden physical truth remain separate from cognition.
+Production: body.ts, model.ts, memory.ts, traceBinding.ts under src/assembled.
+Tests: assembledCalibratedSensing.test.ts and fixtures/assembledCalibratedSensing.ts.
+At most6 production/test paths; no runtime copies, owners or state families added.
 
-## Completed comparison
-Seed0, three tasks; threat task nonsocial, remaining social bindings use existing
-passive-target encounters10..12. Visual trials1..9, adopted goals, reserve51,
-capacity100/rate1/width20/threshold60, initial stress0. Early routes closed.
-Only a non-threat task has an open route/urgency1 at26; threat goal stays Open.
-Protocol execution enabled in both; protocol/performance observations hidden.
-Actuator80/no delay, K0/difficulty0/impairment0, phase4/no practice. Routes close27.
+## Predeclared comparison
+M181 scenario unchanged: seed0; three tasks, threat task nonsocial, remaining
+social dependencies supplied by normal passive-target encounters10..12. Visual
+trials1..9; body10/26; reserve51, capacity100/rate1/width20/threshold60, stress0.
+Protocol execution remains disabled; inherited declarations asserted before runs.
+Both laws and all inputs fixed. Only signed normalized sensor bias +200/-200 differs.
+At10 actual reserve41 is identical. Calibrated61/21 gives intervals[60,80]/[20,40],
+live exposure U3/10 versus2/5, authenticated impulse150/200 and physical stress11.
+Trace must disclose actual read, exact calibration and quantization; memory stores
+only the versioned observation, never true level or calibration metadata.
+Original senseBiology comparison uses normalized scalar arithmetic, not an assertion
+that reserve is stress: clipping/bias/floor agree below capacity; the existing
+reserve interval convention maps exact capacity to its final closed bin.
+Exact rational non-lattice and saturation cases are specified independently.
+Bias0 is an engineering default, no verdict; old0.128 source remains unchanged.
 
-Same model/initial state; every input identical except private execution permission26.
-Complete chosen intent/expression/plan26 match. Actual procedure/body traces show
-Applied75/Overflow5 versus Blocked. Appraisal26 is the same Known U2/5 in both.
-Normal sample28 measures98/23 but publishes intervals[80,100]/[20,40]. Actual
-selected C1/SEM evidence yields U1/4 versus2/5. Authenticated stress29 consumes
-those exact reports: dose125/200, same prior/decay, resulting stress176/251.
-Original execution/replenishment/bin/factor controls agree on actual operands.
-No draws occur; this is a deterministic execution/perception/affect comparison.
+## Controls and checks, selected for affected risks
+1. Typed/domain/version rejection and original arithmetic including zero/clipping:
+   wrong bias representation, outside[-1000,1000], old/new declaration mismatch.
+2. Native +/-200 gate through101; assert actual sample, selection, appraisal and
+   exact queued report consumed by physical stress. No final choice claim or dice
+   inference; assert no draws for the causal comparison through11.
+3. Same +200 calibration, reserve51/59: identical safe cognition through101.
+   Projection excludes only physical455 state and actual physical producer rows;
+   body trace hides raw read/calibration operands only, retaining published interval.
+4. Denied and unavailable +/-200: no physical read, calibration or quantization,
+   Unavailable appraisal, empty coordinates and no new stress impulse through101.
+5. Independent repeat and public save10 restore: exact full bytes thereafter to101,
+   including pending stress11 and calibrated evidence in the shared episodic owner.
+6. Existing M181 alias/resolution gate unchanged: modified versioned code must keep
+   old behavior. Types/boundary/research/frozen-source preservation/git-size.
+Only affected old assembled gate reruns; frozen Campaign2 dependency closure untouched.
 
-Withheld sample28 leaves actual outcomes different but both appraisals Unavailable,
-empty coordinates and zero new dose; stress29=51/51 is prior decay. Cognition does
-not infer a bodily outcome from protocol success or intent. All runs exhaust101.
-Independent repeat/public save25 restore match every subsequent complete
-state/output/trace/save/run byte through101, crossing execution26/sensing28/stress29.
-
-## Repairs, checks and limits
-Initial types needed immutable helper annotations. First native comparison found
-inherited protocol execution disabled; common setup corrected before rerun.
-Copied follow-up permission28 normalized true in both; single-input-difference
-assertion added. Syntax and model-metadata reader errors in tests were repaired. Failures retained.
-The corrected inspection found protocol observation enabled. a0e5f613 preserves
-visible-protocol controls; final fixture explicitly hides it in both arms.
-All3 affected native gates and the declaration check are rerun on that final model.
-Inherited three-nonsocial shorthand corrected from M176; actual social inputs unchanged.
-No laws/seeds/effects/gates changed; no budget extension or seed search.
-Final gates/types/boundary/research/preservation/staged size/whitespace pass.
-One job; every command<600s, cumulative<1800s; two evidence files<5MiB.
-MEC003/004/017/019; FND4/6; RO003/006/008/010/011/019/020/021 preserve their scopes.
-
-Pinned21/15/132 and E64/P42/N13/U13 unchanged. No clause/family promotion.
-Native original BIO sensing, remaining AFFECT source/execution correspondence and
-stress perception still gate12.5-8/family12.5. Stress remains unsensed.
-Memory12.3 acceptance stays on0.126; current0.128 memory/dice transfer still needs
-affected replay. Final whole-candidate replay remains mandatory.
-Continue bounded dependencies under self-approval; no UI, reduction or breadth.
-
-| Record | Status |
-|---|---|
-| Research obligations | **0 active / 18 conditional / 0 unowned** |
+## Limits and done condition
+One job; max600s/command, cumulative1800s including failures;20 evidence files/5MiB.
+One compact result and raw checks; CURRENT<=80, register<=250 lines/64KiB.
+Done iff all declared checks pass; retain failures and record repairs before reruns.
+No retuning laws/seeds; stop at passing checks. No clause/family promotion.
+FND4/5/6 affected conformance: domain, source provenance, restore and unknown controls.
+MEC003/004/005/007/008/009/010/012..019/022 retained per mechanism ledger.
+RO003/006/008/010/011/019/020/021 retain their scopes; no new verdict or reduction.
+Pinned21/15/132, E64/P42/N13/U13 unchanged. Full BIO/AFFECT, stress perception,
+current-version memory transfer and final whole-candidate replay remain open.
