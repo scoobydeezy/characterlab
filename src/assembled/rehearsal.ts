@@ -6,6 +6,7 @@ import {RETAINED_ATTRIBUTION,validateAttributionCue,isAttributionCue} from './re
 import {named} from './significance';
 import {BODY_OBSERVER} from './body';
 import {WORKSPACE,type BodyRecallDelivery} from './workspace';
+export const ATTRIBUTION_USE='assembled-attribution-use/0.1';
 export const REHEARSAL='assembled-rehearsal/0.1',REHEARSAL_USE='assembled-rehearsal-use/0.1',REHEARSAL_VERSION='assembled-character-rehearsal/0.1-candidate';
 export interface Rehearsal {readonly anchor:bigint;readonly destinations:readonly bigint[];readonly final?:Readonly<{at:bigint;slots:number;cue:boolean}>}
 const fail=(s:string):never=>{throw new SchedulerContractError('INPUT_NOT_ADMITTED','rehearsal '+s);};
@@ -34,12 +35,12 @@ export function rehearsalContext(event:ScheduledEvent,outputs:readonly Canonical
  return {workspace:ws[0],attribution:as[0],delivery:matches[0]};
 }
 /** Addresses are actual semantic reads of a Supported result, never its target list. */
-export function rehearsalOperands(event:ScheduledEvent,workspace:CanonicalValue,attribution:CanonicalValue,deliveries:readonly BodyRecallDelivery[],C:CanonicalValue){
+export function rehearsalOperands(event:ScheduledEvent,workspace:CanonicalValue,attribution:CanonicalValue,deliveries:readonly BodyRecallDelivery[],C:CanonicalValue,natural=false){
  if(event.phase!==50n||txt(event.eventTypeId.payload)!=='event/task-appraisal')fail('consumer lifecycle');
  const w=items(workspace,'list'),a=items(attribution,'list');
  if(a.length!==5||txt(a[0])!==RETAINED_ATTRIBUTION||!eq(w[1],signed(event.dueAt))||!eq(a[1],w[1])||!eq(f(rec(w[3],381n),2n),C))fail('consumer subject/time');
  if(!items(a[2],'list').length)return [];
- if(!isCarriedCue(a[2]))return [];
+ if(!natural&&!isCarriedCue(a[2]))return [];
  const cue=validateAttributionCue(a[2],C,event.dueAt);
  const actual=deliveries.filter(d=>eq(d.character,C)&&d.event.dueAt===event.dueAt&&d.event.phase===20n&&eq(d.event.payload,a[2]));
  if(actual.length!==1)fail('consumer current delivery');

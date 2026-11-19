@@ -1157,3 +1157,10 @@ Pure/concurrent capacity pressure uses the same346 batch; no new acquisition.
 In-flight baseline is explicit, not recall after loss. Unknown Before remains
 unknown. Original laws/controls remain; family replay is next, not yet acceptance.
 [Bounded result](ASSEMBLED_CHARACTER_M171_RESULT.md).
+
+M172 ports the original defining acquisition's actual consumed-attribution use
+into the existing346 owner for natural as well as carried cues (rules0.126).
+MEC004/007/008/009/010/015/019/020/022 stay distinct: early significance, actual
+use, immutable acquisition, publication frequency, retention and current judgment.
+Original35/139 map to actual3/15; all16 consumed records receive use. No source
+factory, owner, law or original control is replaced. Full defining replay remains.
