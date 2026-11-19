@@ -25,5 +25,5 @@ export function fixture(permitted=true,observed=true){
  const display=items(rows.find(v=>at(items(v,'list')[0])===25n&&key(items(v,'list')[2])===key(DISPLAY))!,'list'),p=items(display[3],'list');
  rows.push(list([signed(27),...display.slice(1,3),list([p[0],list(items(p[1],'list').map(v=>{const r=[...items(v,'list')];r[2]=u(key(r[1])===key(u(0))?5:6);r[3]=false;r[4]=u(27);return list(r);}))]),display[4]]));
  if(!observed)rows=rows.filter(v=>!(at(items(v,'list')[0])===28n&&key(items(v,'list')[2])===key(BODY_SAMPLE)));
- return {s:changeDefinition({...b.s,registry:enc(list(slots))},'definition/protocol-execution',1n,true),d:{...b.d,orderedInputs:enc(list(rows))},target,threat};
+ return {s:changeDefinition(changeDefinition({...b.s,registry:enc(list(slots))},'definition/protocol-execution',1n,true),'definition/protocol-observation',4n,false),d:{...b.d,orderedInputs:enc(list(rows))},target,threat};
 }
