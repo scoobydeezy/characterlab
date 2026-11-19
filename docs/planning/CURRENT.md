@@ -24,8 +24,8 @@ Participant at11. Shared/UnitBudget encoding capacity2 admits both original M123
 units; graph capacity30/870, event/body capacity32, recall K1, delay16.
 No learned starting memory/graph. Current registry/calibration/laws remain fixed.
 Body samples and complete normal context/opportunity frames10/26. All task
-urgencies0 at10 (importance1) must give NoReasons while physical appraisal is live;
-urgencies1 at26. This prevents pre-B execution differences masquerading as encoding.
+urgencies0 at10 (importance1), closed routes, must give NoCandidates with live affect;
+urgencies1 at26. Routes reopen25. This prevents pre-B execution differences.
 Full queues101, including later automatic recalls. No endpoint truncation.
 
 Reference UncontrolledGain Risk versus Safe must have identical actual episodes,
@@ -53,13 +53,13 @@ queued appraisal10/gain/winner. All original equations, goals and seeds remain f
 Independent repeat/public original-input save12 compare EVERY later canonical byte;
 actual post-publication failure at26 must restore preinstant state and recover exactly.
 
-Setup corrections:67.271s late legacy adoption rejected; adopt importance at1.
-81.185s NoCandidates: omitted route display restored (193d55f), window1..30.
-122.393s trace assertion exposed Unavailable severity;72.957s diagnostic identified
-person dependency entries as [task,polarity], not task alone. Correct that filter,
-and restore original normal diagnostic probe1 for conditional forecast evidence.
-Trace joins select the actual affect report contribution among same-event traces.
-No laws/calibration/gates changed; all failures retained; assert Known before ranking.
+Setup failures retained: late importance adoption67.271s; missing route81.185s;
+bad task/polarity filter and trace join122.393s; factor diagnostic72.957s.
+Restored normal probe1, corrected task filter/trace contribution; Known now live.
+86.617s showed concern can choose at zero urgency. Self-amendment: closed routes1,
+route0 reopens25; NoCandidates/no expression replaces NoReasons. Other gates fixed.
+Card line-limit write failed; next shell mistakenly proceeded. Recorded immediately;
+this card commit follows test edits/start, before comparison outcome. No concealment.
 
 ## Budget, preservation and done
 Every behavioral gate has actual producer/consumer liveness. Retain all failed
