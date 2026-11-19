@@ -7,15 +7,17 @@ import {named} from './significance';
 import {BODY_OBSERVER} from './body';
 import {WORKSPACE,type BodyRecallDelivery} from './workspace';
 export const REHEARSAL='assembled-rehearsal/0.1',REHEARSAL_USE='assembled-rehearsal-use/0.1',REHEARSAL_VERSION='assembled-character-rehearsal/0.1-candidate';
-export interface Rehearsal {readonly anchor:bigint;readonly destinations:readonly bigint[]}
+export interface Rehearsal {readonly anchor:bigint;readonly destinations:readonly bigint[];readonly final?:Readonly<{at:bigint;slots:number;cue:boolean}>}
 const fail=(s:string):never=>{throw new SchedulerContractError('INPUT_NOT_ADMITTED','rehearsal '+s);};
 const eq=(a:CanonicalValue,b:CanonicalValue)=>key(a)===key(b);
 const time=(v:CanonicalValue)=>{if(typeof v==='boolean'||v.kind!=='signed'||v.value<0n)return fail('time');return v.value;};
-export function compileRehearsal(v:CanonicalValue):Rehearsal{
- const a=items(v,'list');if(a.length!==3||txt(a[0])!==REHEARSAL)fail('declaration');
+export function compileRehearsal(v:CanonicalValue,finalEnabled=false):Rehearsal{
+ const a=items(v,'list');if(a.length!==(finalEnabled?4:3)||txt(a[0])!==REHEARSAL)fail('declaration');
  const anchor=time(a[1]),destinations=items(a[2],'list').map(time);
  if(anchor>=1000000n||destinations.length>3||destinations.some((d,i)=>d<=(i?destinations[i-1]:anchor)||d>1000000n))fail('schedule domain/order');
- return Object.freeze({anchor,destinations:Object.freeze(destinations)});
+ const final=finalEnabled?items(a[3],'list'):[];
+ if(final.length&&(final.length!==3||time(final[0])<=(destinations.at(-1)??anchor)||time(final[0])>1000000n||uint(final[1])>32n||typeof final[2]!=='boolean'))fail('final query domain/order');
+ return Object.freeze({anchor,destinations:Object.freeze(destinations),...(final.length?{final:Object.freeze({at:time(final[0]),slots:Number(uint(final[1])),cue:final[2] as boolean})}:{})});
 }
 export const isCarriedCue=(v:CanonicalValue)=>isAttributionCue(v)&&items(v,'list').length===5;
 export function rehearsalContext(event:ScheduledEvent,outputs:readonly CanonicalValue[],deliveries:readonly BodyRecallDelivery[],C:CanonicalValue){
@@ -54,4 +56,12 @@ export function rehearsalOperands(event:ScheduledEvent,workspace:CanonicalValue,
   const e=items(slots[0],'list');if(!['assembled-position-episode/0.1','assembled-body-episode/0.1'].includes(txt(e[0]))||time(e[5])>=event.dueAt)fail('consumed prior episode');
   return slots[0];
  });
+}
+
+export const FINAL_RECALL='assembled-final-position-recall/0.1';
+export const isFinalQuery=(v:CanonicalValue)=>typeof v!=='boolean'&&v.kind==='list'&&v.items.length>0&&eq(v.items[0],text(FINAL_RECALL));
+export function readFinalQuery(v:CanonicalValue,C:CanonicalValue,at:bigint){
+ const a=items(v,'list');if(a.length!==4||!isFinalQuery(v)||!eq(a[1],C)||uint(a[3])>32n)fail('final query payload');
+ const present=items(a[2],'list').length>0;if(present){validateAttributionCue(a[2],C,at);if(isCarriedCue(a[2]))fail('final requires natural cue');}
+ return {present,slots:Number(uint(a[3]))};
 }

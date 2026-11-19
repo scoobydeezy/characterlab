@@ -1135,3 +1135,11 @@ match2048 cases; native significance-only survival changes later appraisal under
 SharedProtection versus UseOnly. Reference SignificanceFirst remains fixed.
 No new state owner, retired comparison or family acceptance.
 [Bounded result](ASSEMBLED_CHARACTER_M168_RESULT.md).
+
+M169 keeps MEC004/007/008/009/010/015/019/020/022 distinctions in one owner:
+acquired significant memory can be removed by later declared pressure, retained
+without selection, or published by an authentic carried final query. Absence reads
+no episode; only actual publication updates history. Exact continuation/rollback
+pass after a disclosed workspace admission repair. Original kind-budget comparison
+and current/historical meaning stay open; no mechanism retired or family accepted.
+[Bounded result](ASSEMBLED_CHARACTER_M169_RESULT.md).

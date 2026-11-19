@@ -1,0 +1,127 @@
+
+M169 initial-types exit=0 elapsed=19.772s cap=60
+
+M169 actual-loss exit=1 elapsed=142.859s cap=300
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledMemoryLimits.test.ts > loss169: genuinely acquired significant memory can be lost under later zero capacity 137225ms
+   → assembled workspace: foreign/stale/unordered recall delivery
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledMemoryLimits.test.ts > loss169: genuinely acquired significant memory can be lost under later zero capacity
+SchedulerContractError: assembled workspace: foreign/stale/unordered recall delivery
+ ❯ fail src/assembled/workspace.ts:13:37
+     11| export const WORKSPACE='assembled-workspace/0.1';
+     12| export interface BodyRecallDelivery {readonly character:CanonicalValue…
+     13| const fail=(s:string):never=>{throw new SchedulerContractError('INPUT_…
+       |                                     ^
+     14| const eq=(a:CanonicalValue,b:CanonicalValue)=>key(a)===key(b);
+     15| /** The caller supplies only current, completed retrieval deliveries; …
+ ❯ Module.sharedWorkspace src/assembled/workspace.ts:23:420
+ ❯ Object.workspace src/assembled/controlExecution.ts:36:950
+ ❯ Object.execute src/assembled/execution.ts:219:122
+ ❯ src/assembled/runtime.ts:244:33
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:373:26
+ ❯ Object.settleNextInstant src/assembled/character.ts:45:66
+ ❯ Module.through src/test/assembledDefining.test.ts:15:126
+ ❯ src/test/assembledMemoryLimits.test.ts:39:2
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INPUT_NOT_ADMITTED', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 15 skipped (16)
+   Start at  22:01:57
+   Duration  142.28s (transform 3.07s, setup 0ms, collect 4.59s, tests 137.23s, environment 0ms, prepare 151ms)
+
+
+M169 workspace-repair-types exit=0 elapsed=19.786s cap=60
+
+M169 actual-loss-workspace-repair exit=0 elapsed=148.192s cap=300
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMemoryLimits.test.ts > loss169: genuinely acquired significant memory can be lost under later zero capacity
+M169 LOSS PASS actual significant old15 present17, removed18 under zero budget; no final publication4000; full5001.
+
+ ✓ src/test/assembledMemoryLimits.test.ts > loss169: genuinely acquired significant memory can be lost under later zero capacity 142576ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 15 skipped (16)
+   Start at  22:06:12
+   Duration  147.63s (transform 3.07s, setup 0ms, collect 4.59s, tests 142.58s, environment 0ms, prepare 143ms)
+
+
+M169 selection-absence exit=0 elapsed=483.759s cap=500
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMemoryLimits.test.ts > selection169: retained unselected and absent-cue memories receive no presentation credit
+M169 SELECTION PASS actual significant old15 retained but unselected; genuine K1 winner matches access law; only published history updates. Absent query zero actual memory reads/emissions/publications, all old bytes retained; full5001.
+
+ ✓ src/test/assembledMemoryLimits.test.ts > selection169: retained unselected and absent-cue memories receive no presentation credit 478111ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 15 skipped (16)
+   Start at  22:09:12
+   Duration  483.20s (transform 3.07s, setup 0ms, collect 4.59s, tests 478.11s, environment 0ms, prepare 139ms)
+
+
+M169 continuation exit=0 elapsed=256.123s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMemoryLimits.test.ts > continuation169: one-slot pressure and authentic final query survive every restored boundary
+M169 CONTINUATION PASS acquired significance -> real one-slot pressure -> actual old15 final publication; independent original-input save17 and EVERY later byte through5001.
+
+ ✓ src/test/assembledMemoryLimits.test.ts > continuation169: one-slot pressure and authentic final query survive every restored boundary 250515ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 15 skipped (16)
+   Start at  22:17:43
+   Duration  255.57s (transform 3.06s, setup 0ms, collect 4.57s, tests 250.52s, environment 0ms, prepare 142ms)
+
+
+M169 rollback-boundaries exit=0 elapsed=129.435s cap=250
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMemoryLimits.test.ts > boundaries169: schedule/authentication negatives and actual post-removal rollback
+M169 BOUNDARIES PASS pressure/final domains, old bundle rejection, caller-forged query rejection; actual post-removal fault restores full prior state/output/trace/clock. Continuation separately proves pending-query reconstruction.
+
+ ✓ src/test/assembledMemoryLimits.test.ts > boundaries169: schedule/authentication negatives and actual post-removal rollback 123914ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 15 skipped (16)
+   Start at  22:22:08
+   Duration  128.87s (transform 3.03s, setup 0ms, collect 4.51s, tests 123.91s, environment 0ms, prepare 140ms)
+
+
+M169 immutable-native158 exit=0 elapsed=132.668s cap=200
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledTimeDomainNative.test.ts > native158: unchanged current model retains every canonical boundary with actual performance learning
+M158 NATIVE PASS 18 canonical boundaries;2 actual performance observations, unengaged expectation null/learned value state; full queues101; exact save6 continuation
+
+ ✓ src/test/assembledTimeDomainNative.test.ts > native158: unchanged current model retains every canonical boundary with actual performance learning 127184ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  22:24:30
+   Duration  132.12s (transform 2.99s, setup 0ms, collect 4.47s, tests 127.18s, environment 0ms, prepare 139ms)
+
+
+M169 final-types exit=0 elapsed=19.510s cap=60
+
+M169 boundary-research-preservation exit=0 elapsed=6.668s cap=40
+Reference boundary check passed.
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4389}
+M169 PRESERVATION PASS six frozen trees, original controls/checkpoint, baseline/corpus; exactly9 production/test paths; register220 lines/65356 CRLF bytes; evidence2 files/11196 bytes;21/15/132 unchanged.
+
+M169 staged-size-scope exit=0 elapsed=0.652s cap=40
+Exact16 staged files, whitespace and Git-size PASS.
+M169 COMPLETE 1361.424/1800s including2s plan allowance and failed first run. Four selected new tests plus immutable native158 pass. No family acceptance claimed.

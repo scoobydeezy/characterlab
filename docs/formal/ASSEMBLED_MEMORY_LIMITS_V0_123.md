@@ -50,3 +50,7 @@ capacity8 cases, goal directions, all meaningful competitors and current-vs-hist
 assessment comparisons stay required in the final defining mapping/replay.
 A one-record recollection may be live while a two-position appraisal is Unavailable;
 this negative boundary is not claimed as a completed decision-effect witness.
+
+Corrective clarification: the shared workspace admits final-query deliveries only
+when the compiled model enables them. Validate holder/time, slot bound, absent
+zero episodes and position-only content. Legacy default remains rejection.
