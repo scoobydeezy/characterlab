@@ -1,0 +1,4259 @@
+
+M176 types exit=0 elapsed=19.874s cap=600
+
+M176 primary exit=1 elapsed=67.271s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledAffectMemoryFinal.test.ts (6 tests | 1 failed | 5 skipped) 61419ms
+   × final176 primary affect changes learned retrieval and actual appraisal 61418ms
+     → priority adoption time/visibility
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledAffectMemoryFinal.test.ts > final176 primary affect changes learned retrieval and actual appraisal
+SchedulerContractError: priority adoption time/visibility
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ require src/assembled/priority.ts:18:44
+ ❯ Module.priorityDisplay src/assembled/priority.ts:24:228
+ ❯ src/assembled/inputs.ts:79:468
+ ❯ Module.compileCharacterInputs src/assembled/inputs.ts:79:32
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:63
+ ❯ Module.startMemory src/test/fixtures/assembledMemoryFinal.ts:21:122
+ ❯ src/test/assembledAffectMemoryFinal.test.ts:62:13
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 5 skipped (6)
+   Start at  08:53:46
+   Duration  66.69s (transform 3.25s, setup 0ms, collect 4.82s, tests 61.42s, environment 0ms, prepare 140ms)
+
+
+M176 primary-source-correction exit=1 elapsed=81.185s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledAffectMemoryFinal.test.ts (6 tests | 1 failed | 5 skipped) 75569ms
+   × final176 primary affect changes learned retrieval and actual appraisal 75568ms
+     → expected 1n to be 2n // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledAffectMemoryFinal.test.ts > final176 primary affect changes learned retrieval and actual appraisal
+AssertionError: expected 1n to be 2n // Object.is equality
+
+- Expected
++ Received
+
+- 2n
++ 1n
+
+ ❯ prior src/test/assembledAffectMemoryFinal.test.ts:34:48
+     32|  const a=reports(r,SHARED_AFFECT_APPRAISAL).find(a=>uint(a[1])===10n);…
+     33|  const decision=outputs(r.snapshot().outputs,409n).find(v=>at(f(v,2n))…
+     34|  expect(uint(f(rec(f(decision!,4n),419n),1n))).toBe(2n);expect(outputs…
+       |                                                ^
+     35|  console.info('M176 PRIOR '+json(a!.slice(5,7)));return a!;
+     36| }
+ ❯ src/test/assembledAffectMemoryFinal.test.ts:63:58
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 5 skipped (6)
+   Start at  08:55:36
+   Duration  80.59s (transform 3.07s, setup 0ms, collect 4.58s, tests 75.57s, environment 0ms, prepare 146ms)
+
+
+M176 primary-route-evidence exit=1 elapsed=122.393s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectMemoryFinal.test.ts > final176 primary affect changes learned retrieval and actual appraisal
+M176 EARLY [{"kind":"text","value":"Unavailable"},{"kind":"list","items":[]}]
+M176 PRIOR [{"kind":"text","value":"Unavailable"},{"kind":"list","items":[]}]
+M176 EARLY [{"kind":"text","value":"Unavailable"},{"kind":"list","items":[]}]
+M176 PRIOR [{"kind":"text","value":"Unavailable"},{"kind":"list","items":[]}]
+M176 EARLY [{"kind":"text","value":"Unavailable"},{"kind":"list","items":[]}]
+M176 PRIOR [{"kind":"text","value":"Unavailable"},{"kind":"list","items":[]}]
+
+ ❯ src/test/assembledAffectMemoryFinal.test.ts (6 tests | 1 failed | 5 skipped) 116741ms
+   × final176 primary affect changes learned retrieval and actual appraisal 116741ms
+     → expected [ { kind: 'record', …(2) }, …(5) ] to deep equally contain { kind: 'list', …(1) }
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledAffectMemoryFinal.test.ts > final176 primary affect changes learned retrieval and actual appraisal
+AssertionError: expected [ { kind: 'record', …(2) }, …(5) ] to deep equally contain { kind: 'list', …(1) }
+
+- Expected: 
+Object {
+  "items": Array [
+    Object {
+      "kind": "text",
+      "value": "assembled-reappraisal/0.2/appraisal",
+    },
+    Object {
+      "kind": "unsigned",
+      "value": 10n,
+    },
+    Object {
+      "items": Array [
+        Object {
+          "denominator": 1n,
+          "kind": "rational",
+          "numerator": 1n,
+        },
+        Object {
+          "items": Array [],
+          "kind": "list",
+        },
+      ],
+      "kind": "list",
+    },
+    Object {
+      "kind": "unsigned",
+      "value": 0n,
+    },
+    Object {
+      "items": Array [],
+      "kind": "list",
+    },
+    Object {
+      "kind": "text",
+      "value": "Unavailable",
+    },
+    Object {
+      "items": Array [],
+      "kind": "list",
+    },
+    Object {
+      "items": Array [
+        Object {
+          "fields": Map {
+            1n => Object {
+              "kind": "typedIdentifier",
+              "namespaceId": 1002n,
+              "payload": Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1037n,
+                "payload": Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1038n,
+                  "payload": Object {
+                    "kind": "text",
+                    "value": "character/bridge-subject",
+                  },
+                },
+              },
+            },
+            2n => Object {
+              "kind": "typedIdentifier",
+              "namespaceId": 1002n,
+              "payload": Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1037n,
+                "payload": Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1038n,
+                  "payload": Object {
+                    "kind": "text",
+                    "value": "content/task-a",
+                  },
+                },
+              },
+            },
+          },
+          "kind": "record",
+          "schema": Object {
+            "fields": Array [
+              Object {
+                "id": 1n,
+                "name": "CharacterId",
+                "required": true,
+              },
+              Object {
+                "id": 2n,
+                "name": "TaskReferent",
+                "required": true,
+              },
+            ],
+            "name": "TaskCommitmentKey",
+            "schemaVersion": 1n,
+            "typeId": 371n,
+          },
+        },
+        Object {
+          "items": Array [
+            Object {
+              "kind": "text",
+              "value": "assembled-body-appraisal/0.1",
+            },
+            Object {
+              "fields": Map {
+                1n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1129n,
+                  "payload": Object {
+                    "kind": "unsigned",
+                    "value": 53n,
+                  },
+                },
+                2n => Object {
+                  "fields": Map {
+                    1n => [Object],
+                    2n => [Object],
+                    3n => [Object],
+                    4n => [Object],
+                    5n => [Object],
+                  },
+                  "kind": "record",
+                  "schema": Object {
+                    "fields": [Array],
+                    "name": "TaskWorkspace",
+                    "schemaVersion": 1n,
+                    "typeId": 381n,
+                  },
+                },
+                3n => Object {
+                  "items": Array [
+                    [Object],
+                    [Object],
+                    [Object],
+                  ],
+                  "kind": "list",
+                },
+              },
+              "kind": "record",
+              "schema": Object {
+                "fields": Array [
+                  Object {
+                    "id": 1n,
+                    "name": "AppraisalOccurrenceId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 2n,
+                    "name": "Workspace",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 3n,
+                    "name": "Assessments",
+                    "required": true,
+                  },
+                ],
+                "name": "TaskAppraisal",
+                "schemaVersion": 1n,
+                "typeId": 384n,
+              },
+            },
+            Object {
+              "fields": Map {
+                1n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1115n,
+                  "payload": Object {
+                    "kind": "unsigned",
+                    "value": 47n,
+                  },
+                },
+                2n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1000n,
+                  "payload": Object {
+                    "kind": "text",
+                    "value": "observer/bridge-subject",
+                  },
+                },
+                3n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1005n,
+                  "payload": Object {
+                    "kind": "text",
+                    "value": "channel/assembled-body-level",
+                  },
+                },
+                4n => Object {
+                  "kind": "signed",
+                  "value": 10n,
+                },
+                5n => Object {
+                  "fields": Map {
+                    1n => [Object],
+                    2n => [Object],
+                  },
+                  "kind": "record",
+                  "schema": Object {
+                    "fields": [Array],
+                    "name": "FiniteLevelInterval",
+                    "schemaVersion": 1n,
+                    "typeId": 462n,
+                  },
+                },
+                6n => Object {
+                  "kind": "text",
+                  "value": "embodied-level-observation/0.1-candidate",
+                },
+              },
+              "kind": "record",
+              "schema": Object {
+                "fields": Array [
+                  Object {
+                    "id": 1n,
+                    "name": "ObservationId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 2n,
+                    "name": "ObserverId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 3n,
+                    "name": "ObservationChannelId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 4n,
+                    "name": "OccurredAt",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 5n,
+                    "name": "FiniteLevelInterval",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 6n,
+                    "name": "TransformationVersion",
+                    "required": true,
+                  },
+                ],
+                "name": "EmbodiedLevelObservation",
+                "schemaVersion": 1n,
+                "typeId": 461n,
+              },
+            },
+            Object {
+              "fields": Map {
+                1n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1106n,
+                  "payload": Object {
+                    "kind": "unsigned",
+                    "value": 48n,
+                  },
+                },
+                2n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1000n,
+                  "payload": Object {
+                    "kind": "text",
+                    "value": "observer/bridge-subject",
+                  },
+                },
+                3n => Object {
+                  "kind": "unsigned",
+                  "value": 10n,
+                },
+                4n => Object {
+                  "items": Array [],
+                  "kind": "set",
+                },
+                5n => Object {
+                  "items": Array [],
+                  "kind": "set",
+                },
+                6n => Object {
+                  "items": Array [],
+                  "kind": "set",
+                },
+                7n => Object {
+                  "items": Array [],
+                  "kind": "set",
+                },
+                8n => Object {
+                  "items": Array [
+                    [Object],
+                  ],
+                  "kind": "set",
+                },
+                9n => Object {
+                  "kind": "text",
+                  "value": "semantic-binding/0.1-candidate#SEM-001H",
+                },
+              },
+              "kind": "record",
+              "schema": Object {
+                "fields": Array [
+                  Object {
+                    "id": 1n,
+                    "name": "ExperienceId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 2n,
+                    "name": "ObserverId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 3n,
+                    "name": "OccurredAt",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 4n,
+                    "name": "PerceptualEventReferentIds",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 5n,
+                    "name": "PerceivedBindings",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 6n,
+                    "name": "PerceptualClassifications",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 7n,
+                    "name": "PerceptualEventClassifications",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 8n,
+                    "name": "SupportingObservationIds",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 9n,
+                    "name": "TransformationVersion",
+                    "required": true,
+                  },
+                ],
+                "name": "PreRecognitionSemanticExperience",
+                "schemaVersion": 1n,
+                "typeId": 227n,
+              },
+            },
+            Object {
+              "items": Array [
+                Object {
+                  "items": Array [
+                    [Object],
+                    [Object],
+                  ],
+                  "kind": "list",
+                },
+                Object {
+                  "items": Array [
+                    [Object],
+                    [Object],
+                  ],
+                  "kind": "list",
+                },
+                Object {
+                  "items": Array [
+                    [Object],
+                    [Object],
+                  ],
+                  "kind": "list",
+                },
+              ],
+              "kind": "list",
+            },
+            Object {
+              "items": Array [
+                Object {
+                  "kind": "text",
+                  "value": "assembled-memory-context/0.1",
+                },
+                Object {
+                  "kind": "text",
+                  "value": "Current",
+                },
+                Object {
+                  "items": Array [],
+                  "kind": "list",
+                },
+              ],
+              "kind": "list",
+            },
+            Object {
+              "items": Array [
+                Object {
+                  "kind": "text",
+                  "value": "assembled-social-people/0.1/appraisal",
+                },
+                Object {
+                  "items": Array [
+                    [Object],
+                    [Object],
+                    [Object],
+                    [Object],
+                    [Object],
+                    [Object],
+                    [Object],
+                  ],
+                  "kind": "list",
+                },
+                Object {
+                  "items": Array [
+                    [Object],
+                    [Object],
+                    [Object],
+                    [Object],
+                    [Object],
+                    [Object],
+                    [Object],
+                  ],
+                  "kind": "list",
+                },
+              ],
+              "kind": "list",
+            },
+          ],
+          "kind": "list",
+        },
+        Object {
+          "kind": "unsigned",
+          "value": 2n,
+        },
+        Object {
+          "kind": "text",
+          "value": "ObservedMitigationEfficacy",
+        },
+        Object {
+          "items": Array [
+            Object {
+              "denominator": 1n,
+              "kind": "rational",
+              "numerator": 1n,
+            },
+            Object {
+              "items": Array [],
+              "kind": "list",
+            },
+            Object {
+              "denominator": 100n,
+              "kind": "rational",
+              "numerator": 99n,
+            },
+            Object {
+              "denominator": 1n,
+              "kind": "rational",
+              "numerator": 0n,
+            },
+          ],
+          "kind": "list",
+        },
+        Object {
+          "items": Array [
+            Object {
+              "denominator": 1n,
+              "kind": "rational",
+              "numerator": 1n,
+            },
+            Object {
+              "denominator": 1n,
+              "kind": "rational",
+              "numerator": 1n,
+            },
+            Object {
+              "denominator": 1n,
+              "kind": "rational",
+              "numerator": 0n,
+            },
+            Object {
+              "items": Array [
+                Object {
+                  "items": Array [
+                    [Object],
+                    [Object],
+                  ],
+                  "kind": "list",
+                },
+                Object {
+                  "items": Array [
+                    [Object],
+                    [Object],
+                  ],
+                  "kind": "list",
+                },
+              ],
+              "kind": "list",
+            },
+          ],
+          "kind": "list",
+        },
+        Object {
+          "items": Array [
+            Object {
+              "fields": Map {
+                1n => Object {
+                  "kind": "unsigned",
+                  "value": 1n,
+                },
+              },
+              "kind": "record",
+              "schema": Object {
+                "fields": Array [
+                  Object {
+                    "id": 1n,
+                    "name": "VariantTag",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 2n,
+                    "name": "ObservationRef",
+                    "required": false,
+                  },
+                  Object {
+                    "id": 3n,
+                    "name": "ObservedAt",
+                    "required": false,
+                  },
+                ],
+                "name": "TaskCommitmentStatus",
+                "schemaVersion": 1n,
+                "typeId": 372n,
+              },
+            },
+            Object {
+              "denominator": 2n,
+              "kind": "rational",
+              "numerator": 1n,
+            },
+          ],
+          "kind": "list",
+        },
+        Object {
+          "items": Array [
+            Object {
+              "denominator": 1n,
+              "kind": "rational",
+              "numerator": 1n,
+            },
+            Object {
+              "items": Array [
+                Object {
+                  "items": Array [
+                    [Object],
+                    [Object],
+                    [Object],
+                  ],
+                  "kind": "list",
+                },
+              ],
+              "kind": "list",
+            },
+          ],
+          "kind": "list",
+        },
+        Object {
+          "items": Array [
+            Object {
+              "denominator": 1n,
+              "kind": "rational",
+              "numerator": 100n,
+            },
+            Object {
+              "denominator": 100n,
+              "kind": "rational",
+              "numerator": 1n,
+            },
+            Object {
+              "items": Array [
+                Object {
+                  "kind": "text",
+                  "value": "assembled-memory-context/0.1",
+                },
+                Object {
+                  "kind": "text",
+                  "value": "Current",
+                },
+                Object {
+                  "items": Array [],
+                  "kind": "list",
+                },
+              ],
+              "kind": "list",
+            },
+          ],
+          "kind": "list",
+        },
+        Object {
+          "items": Array [
+            Object {
+              "kind": "text",
+              "value": "CurrentUnprotected",
+            },
+            Object {
+              "items": Array [
+                Object {
+                  "denominator": 1n,
+                  "kind": "rational",
+                  "numerator": 1n,
+                },
+                Object {
+                  "items": Array [],
+                  "kind": "list",
+                },
+              ],
+              "kind": "list",
+            },
+            Object {
+              "items": Array [],
+              "kind": "list",
+            },
+          ],
+          "kind": "list",
+        },
+      ],
+      "kind": "list",
+    },
+  ],
+  "kind": "list",
+}
+
++ Received: 
+Array [
+  Object {
+    "fields": Map {
+      1n => Object {
+        "kind": "typedIdentifier",
+        "namespaceId": 1129n,
+        "payload": Object {
+          "kind": "unsigned",
+          "value": 53n,
+        },
+      },
+      2n => Object {
+        "fields": Map {
+          1n => Object {
+            "kind": "typedIdentifier",
+            "namespaceId": 1128n,
+            "payload": Object {
+              "kind": "unsigned",
+              "value": 52n,
+            },
+          },
+          2n => Object {
+            "kind": "typedIdentifier",
+            "namespaceId": 1002n,
+            "payload": Object {
+              "kind": "typedIdentifier",
+              "namespaceId": 1037n,
+              "payload": Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1038n,
+                "payload": Object {
+                  "kind": "text",
+                  "value": "character/bridge-subject",
+                },
+              },
+            },
+          },
+          3n => Object {
+            "kind": "typedIdentifier",
+            "namespaceId": 1027n,
+            "payload": Object {
+              "kind": "text",
+              "value": "definition/task-workspace",
+            },
+          },
+          4n => Object {
+            "items": Array [
+              Object {
+                "fields": Map {
+                  1n => Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                  2n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1027n,
+                    "payload": [Object],
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    [Object],
+                    [Object],
+                  ],
+                  "name": "WorkspaceTaskItem",
+                  "schemaVersion": 1n,
+                  "typeId": 379n,
+                },
+              },
+              Object {
+                "fields": Map {
+                  1n => Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                  2n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1027n,
+                    "payload": [Object],
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    [Object],
+                    [Object],
+                  ],
+                  "name": "WorkspaceTaskItem",
+                  "schemaVersion": 1n,
+                  "typeId": 379n,
+                },
+              },
+              Object {
+                "fields": Map {
+                  1n => Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                  2n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1027n,
+                    "payload": [Object],
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    [Object],
+                    [Object],
+                  ],
+                  "name": "WorkspaceTaskItem",
+                  "schemaVersion": 1n,
+                  "typeId": 379n,
+                },
+              },
+            ],
+            "kind": "list",
+          },
+          5n => Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "unsigned",
+                "value": 1n,
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "VariantTag",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "PredictionValue",
+                  "required": false,
+                },
+              ],
+              "name": "WorkspaceForecast",
+              "schemaVersion": 1n,
+              "typeId": 380n,
+            },
+          },
+        },
+        "kind": "record",
+        "schema": Object {
+          "fields": Array [
+            Object {
+              "id": 1n,
+              "name": "WorkspaceOccurrenceId",
+              "required": true,
+            },
+            Object {
+              "id": 2n,
+              "name": "CharacterId",
+              "required": true,
+            },
+            Object {
+              "id": 3n,
+              "name": "AgendaDefinitionId",
+              "required": true,
+            },
+            Object {
+              "id": 4n,
+              "name": "Tasks",
+              "required": true,
+            },
+            Object {
+              "id": 5n,
+              "name": "Forecast",
+              "required": true,
+            },
+          ],
+          "name": "TaskWorkspace",
+          "schemaVersion": 1n,
+          "typeId": 381n,
+        },
+      },
+      3n => Object {
+        "items": Array [
+          Object {
+            "fields": Map {
+              1n => Object {
+                "fields": Map {
+                  1n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": [Object],
+                  },
+                  2n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": [Object],
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    [Object],
+                    [Object],
+                  ],
+                  "name": "TaskCommitmentKey",
+                  "schemaVersion": 1n,
+                  "typeId": 371n,
+                },
+              },
+              2n => Object {
+                "fields": Map {
+                  1n => Object {
+                    "kind": "unsigned",
+                    "value": 1n,
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    [Object],
+                    [Object],
+                  ],
+                  "name": "TaskAssessment",
+                  "schemaVersion": 1n,
+                  "typeId": 382n,
+                },
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "TaskCommitmentKey",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "Assessment",
+                  "required": true,
+                },
+              ],
+              "name": "TaskAppraisalItem",
+              "schemaVersion": 1n,
+              "typeId": 383n,
+            },
+          },
+          Object {
+            "fields": Map {
+              1n => Object {
+                "fields": Map {
+                  1n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": [Object],
+                  },
+                  2n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": [Object],
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    [Object],
+                    [Object],
+                  ],
+                  "name": "TaskCommitmentKey",
+                  "schemaVersion": 1n,
+                  "typeId": 371n,
+                },
+              },
+              2n => Object {
+                "fields": Map {
+                  1n => Object {
+                    "kind": "unsigned",
+                    "value": 1n,
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    [Object],
+                    [Object],
+                  ],
+                  "name": "TaskAssessment",
+                  "schemaVersion": 1n,
+                  "typeId": 382n,
+                },
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "TaskCommitmentKey",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "Assessment",
+                  "required": true,
+                },
+              ],
+              "name": "TaskAppraisalItem",
+              "schemaVersion": 1n,
+              "typeId": 383n,
+            },
+          },
+          Object {
+            "fields": Map {
+              1n => Object {
+                "fields": Map {
+                  1n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": [Object],
+                  },
+                  2n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": [Object],
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    [Object],
+                    [Object],
+                  ],
+                  "name": "TaskCommitmentKey",
+                  "schemaVersion": 1n,
+                  "typeId": 371n,
+                },
+              },
+              2n => Object {
+                "fields": Map {
+                  1n => Object {
+                    "kind": "unsigned",
+                    "value": 1n,
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    [Object],
+                    [Object],
+                  ],
+                  "name": "TaskAssessment",
+                  "schemaVersion": 1n,
+                  "typeId": 382n,
+                },
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "TaskCommitmentKey",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "Assessment",
+                  "required": true,
+                },
+              ],
+              "name": "TaskAppraisalItem",
+              "schemaVersion": 1n,
+              "typeId": 383n,
+            },
+          },
+        ],
+        "kind": "list",
+      },
+    },
+    "kind": "record",
+    "schema": Object {
+      "fields": Array [
+        Object {
+          "id": 1n,
+          "name": "AppraisalOccurrenceId",
+          "required": true,
+        },
+        Object {
+          "id": 2n,
+          "name": "Workspace",
+          "required": true,
+        },
+        Object {
+          "id": 3n,
+          "name": "Assessments",
+          "required": true,
+        },
+      ],
+      "name": "TaskAppraisal",
+      "schemaVersion": 1n,
+      "typeId": 384n,
+    },
+  },
+  Object {
+    "items": Array [
+      Object {
+        "kind": "text",
+        "value": "assembled-body-appraisal/0.1",
+      },
+      Object {
+        "fields": Map {
+          1n => Object {
+            "kind": "typedIdentifier",
+            "namespaceId": 1129n,
+            "payload": Object {
+              "kind": "unsigned",
+              "value": 53n,
+            },
+          },
+          2n => Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1128n,
+                "payload": Object {
+                  "kind": "unsigned",
+                  "value": 52n,
+                },
+              },
+              2n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1002n,
+                "payload": Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1037n,
+                  "payload": Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1038n,
+                    "payload": [Object],
+                  },
+                },
+              },
+              3n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1027n,
+                "payload": Object {
+                  "kind": "text",
+                  "value": "definition/task-workspace",
+                },
+              },
+              4n => Object {
+                "items": Array [
+                  Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                  Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                  Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                ],
+                "kind": "list",
+              },
+              5n => Object {
+                "fields": Map {
+                  1n => Object {
+                    "kind": "unsigned",
+                    "value": 1n,
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    [Object],
+                    [Object],
+                  ],
+                  "name": "WorkspaceForecast",
+                  "schemaVersion": 1n,
+                  "typeId": 380n,
+                },
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "WorkspaceOccurrenceId",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "CharacterId",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "AgendaDefinitionId",
+                  "required": true,
+                },
+                Object {
+                  "id": 4n,
+                  "name": "Tasks",
+                  "required": true,
+                },
+                Object {
+                  "id": 5n,
+                  "name": "Forecast",
+                  "required": true,
+                },
+              ],
+              "name": "TaskWorkspace",
+              "schemaVersion": 1n,
+              "typeId": 381n,
+            },
+          },
+          3n => Object {
+            "items": Array [
+              Object {
+                "fields": Map {
+                  1n => Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                  2n => Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    [Object],
+                    [Object],
+                  ],
+                  "name": "TaskAppraisalItem",
+                  "schemaVersion": 1n,
+                  "typeId": 383n,
+                },
+              },
+              Object {
+                "fields": Map {
+                  1n => Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                  2n => Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    [Object],
+                    [Object],
+                  ],
+                  "name": "TaskAppraisalItem",
+                  "schemaVersion": 1n,
+                  "typeId": 383n,
+                },
+              },
+              Object {
+                "fields": Map {
+                  1n => Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                  2n => Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    [Object],
+                    [Object],
+                  ],
+                  "name": "TaskAppraisalItem",
+                  "schemaVersion": 1n,
+                  "typeId": 383n,
+                },
+              },
+            ],
+            "kind": "list",
+          },
+        },
+        "kind": "record",
+        "schema": Object {
+          "fields": Array [
+            Object {
+              "id": 1n,
+              "name": "AppraisalOccurrenceId",
+              "required": true,
+            },
+            Object {
+              "id": 2n,
+              "name": "Workspace",
+              "required": true,
+            },
+            Object {
+              "id": 3n,
+              "name": "Assessments",
+              "required": true,
+            },
+          ],
+          "name": "TaskAppraisal",
+          "schemaVersion": 1n,
+          "typeId": 384n,
+        },
+      },
+      Object {
+        "fields": Map {
+          1n => Object {
+            "kind": "typedIdentifier",
+            "namespaceId": 1115n,
+            "payload": Object {
+              "kind": "unsigned",
+              "value": 47n,
+            },
+          },
+          2n => Object {
+            "kind": "typedIdentifier",
+            "namespaceId": 1000n,
+            "payload": Object {
+              "kind": "text",
+              "value": "observer/bridge-subject",
+            },
+          },
+          3n => Object {
+            "kind": "typedIdentifier",
+            "namespaceId": 1005n,
+            "payload": Object {
+              "kind": "text",
+              "value": "channel/assembled-body-level",
+            },
+          },
+          4n => Object {
+            "kind": "signed",
+            "value": 10n,
+          },
+          5n => Object {
+            "fields": Map {
+              1n => Object {
+                "denominator": 1n,
+                "kind": "rational",
+                "numerator": 0n,
+              },
+              2n => Object {
+                "denominator": 1n,
+                "kind": "rational",
+                "numerator": 1n,
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "Lower",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "Upper",
+                  "required": true,
+                },
+              ],
+              "name": "FiniteLevelInterval",
+              "schemaVersion": 1n,
+              "typeId": 462n,
+            },
+          },
+          6n => Object {
+            "kind": "text",
+            "value": "embodied-level-observation/0.1-candidate",
+          },
+        },
+        "kind": "record",
+        "schema": Object {
+          "fields": Array [
+            Object {
+              "id": 1n,
+              "name": "ObservationId",
+              "required": true,
+            },
+            Object {
+              "id": 2n,
+              "name": "ObserverId",
+              "required": true,
+            },
+            Object {
+              "id": 3n,
+              "name": "ObservationChannelId",
+              "required": true,
+            },
+            Object {
+              "id": 4n,
+              "name": "OccurredAt",
+              "required": true,
+            },
+            Object {
+              "id": 5n,
+              "name": "FiniteLevelInterval",
+              "required": true,
+            },
+            Object {
+              "id": 6n,
+              "name": "TransformationVersion",
+              "required": true,
+            },
+          ],
+          "name": "EmbodiedLevelObservation",
+          "schemaVersion": 1n,
+          "typeId": 461n,
+        },
+      },
+      Object {
+        "fields": Map {
+          1n => Object {
+            "kind": "typedIdentifier",
+            "namespaceId": 1106n,
+            "payload": Object {
+              "kind": "unsigned",
+              "value": 48n,
+            },
+          },
+          2n => Object {
+            "kind": "typedIdentifier",
+            "namespaceId": 1000n,
+            "payload": Object {
+              "kind": "text",
+              "value": "observer/bridge-subject",
+            },
+          },
+          3n => Object {
+            "kind": "unsigned",
+            "value": 10n,
+          },
+          4n => Object {
+            "items": Array [],
+            "kind": "set",
+          },
+          5n => Object {
+            "items": Array [],
+            "kind": "set",
+          },
+          6n => Object {
+            "items": Array [],
+            "kind": "set",
+          },
+          7n => Object {
+            "items": Array [],
+            "kind": "set",
+          },
+          8n => Object {
+            "items": Array [
+              Object {
+                "fields": Map {
+                  1n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1000n,
+                    "payload": [Object],
+                  },
+                  2n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1115n,
+                    "payload": [Object],
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    [Object],
+                    [Object],
+                  ],
+                  "name": "SupportingObservationId",
+                  "schemaVersion": 1n,
+                  "typeId": 216n,
+                },
+              },
+            ],
+            "kind": "set",
+          },
+          9n => Object {
+            "kind": "text",
+            "value": "semantic-binding/0.1-candidate#SEM-001H",
+          },
+        },
+        "kind": "record",
+        "schema": Object {
+          "fields": Array [
+            Object {
+              "id": 1n,
+              "name": "ExperienceId",
+              "required": true,
+            },
+            Object {
+              "id": 2n,
+              "name": "ObserverId",
+              "required": true,
+            },
+            Object {
+              "id": 3n,
+              "name": "OccurredAt",
+              "required": true,
+            },
+            Object {
+              "id": 4n,
+              "name": "PerceptualEventReferentIds",
+              "required": true,
+            },
+            Object {
+              "id": 5n,
+              "name": "PerceivedBindings",
+              "required": true,
+            },
+            Object {
+              "id": 6n,
+              "name": "PerceptualClassifications",
+              "required": true,
+            },
+            Object {
+              "id": 7n,
+              "name": "PerceptualEventClassifications",
+              "required": true,
+            },
+            Object {
+              "id": 8n,
+              "name": "SupportingObservationIds",
+              "required": true,
+            },
+            Object {
+              "id": 9n,
+              "name": "TransformationVersion",
+              "required": true,
+            },
+          ],
+          "name": "PreRecognitionSemanticExperience",
+          "schemaVersion": 1n,
+          "typeId": 227n,
+        },
+      },
+      Object {
+        "items": Array [
+          Object {
+            "items": Array [
+              Object {
+                "fields": Map {
+                  1n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": [Object],
+                  },
+                  2n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": [Object],
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    [Object],
+                    [Object],
+                  ],
+                  "name": "TaskCommitmentKey",
+                  "schemaVersion": 1n,
+                  "typeId": 371n,
+                },
+              },
+              Object {
+                "kind": "text",
+                "value": "Unavailable",
+              },
+            ],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [
+              Object {
+                "fields": Map {
+                  1n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": [Object],
+                  },
+                  2n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": [Object],
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    [Object],
+                    [Object],
+                  ],
+                  "name": "TaskCommitmentKey",
+                  "schemaVersion": 1n,
+                  "typeId": 371n,
+                },
+              },
+              Object {
+                "kind": "text",
+                "value": "Unavailable",
+              },
+            ],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [
+              Object {
+                "fields": Map {
+                  1n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": [Object],
+                  },
+                  2n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": [Object],
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    [Object],
+                    [Object],
+                  ],
+                  "name": "TaskCommitmentKey",
+                  "schemaVersion": 1n,
+                  "typeId": 371n,
+                },
+              },
+              Object {
+                "kind": "text",
+                "value": "Unavailable",
+              },
+            ],
+            "kind": "list",
+          },
+        ],
+        "kind": "list",
+      },
+      Object {
+        "items": Array [
+          Object {
+            "kind": "text",
+            "value": "assembled-memory-context/0.1",
+          },
+          Object {
+            "kind": "text",
+            "value": "Current",
+          },
+          Object {
+            "items": Array [],
+            "kind": "list",
+          },
+        ],
+        "kind": "list",
+      },
+      Object {
+        "items": Array [
+          Object {
+            "kind": "text",
+            "value": "assembled-social-people/0.1/appraisal",
+          },
+          Object {
+            "items": Array [
+              Object {
+                "kind": "text",
+                "value": "assembled-social/0.1/appraisal",
+              },
+              Object {
+                "kind": "signed",
+                "value": 10n,
+              },
+              Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1002n,
+                "payload": Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1037n,
+                  "payload": Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1038n,
+                    "payload": [Object],
+                  },
+                },
+              },
+              Object {
+                "items": Array [],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                ],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "kind": "text",
+                    "value": "assembled-social-memory-context/0.1",
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                ],
+                "kind": "list",
+              },
+            ],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [
+              Object {
+                "kind": "text",
+                "value": "assembled-social/0.1/appraisal",
+              },
+              Object {
+                "kind": "signed",
+                "value": 10n,
+              },
+              Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1002n,
+                "payload": Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1037n,
+                  "payload": Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1038n,
+                    "payload": [Object],
+                  },
+                },
+              },
+              Object {
+                "items": Array [],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                ],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "kind": "text",
+                    "value": "assembled-social-memory-context/0.1",
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                ],
+                "kind": "list",
+              },
+            ],
+            "kind": "list",
+          },
+        ],
+        "kind": "list",
+      },
+    ],
+    "kind": "list",
+  },
+  Object {
+    "items": Array [
+      Object {
+        "kind": "text",
+        "value": "assembled-social-people/0.1/appraisal",
+      },
+      Object {
+        "items": Array [
+          Object {
+            "kind": "text",
+            "value": "assembled-social/0.1/appraisal",
+          },
+          Object {
+            "kind": "signed",
+            "value": 10n,
+          },
+          Object {
+            "kind": "typedIdentifier",
+            "namespaceId": 1002n,
+            "payload": Object {
+              "kind": "typedIdentifier",
+              "namespaceId": 1037n,
+              "payload": Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1038n,
+                "payload": Object {
+                  "kind": "text",
+                  "value": "content/recognition/other",
+                },
+              },
+            },
+          },
+          Object {
+            "items": Array [],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [
+              Object {
+                "items": Array [
+                  Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                  true,
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                ],
+                "kind": "list",
+              },
+            ],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [
+              Object {
+                "kind": "text",
+                "value": "assembled-social-memory-context/0.1",
+              },
+              Object {
+                "items": Array [],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [],
+                "kind": "list",
+              },
+            ],
+            "kind": "list",
+          },
+        ],
+        "kind": "list",
+      },
+      Object {
+        "items": Array [
+          Object {
+            "kind": "text",
+            "value": "assembled-social/0.1/appraisal",
+          },
+          Object {
+            "kind": "signed",
+            "value": 10n,
+          },
+          Object {
+            "kind": "typedIdentifier",
+            "namespaceId": 1002n,
+            "payload": Object {
+              "kind": "typedIdentifier",
+              "namespaceId": 1037n,
+              "payload": Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1038n,
+                "payload": Object {
+                  "kind": "text",
+                  "value": "content/assembled-social/target",
+                },
+              },
+            },
+          },
+          Object {
+            "items": Array [],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [
+              Object {
+                "items": Array [
+                  Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                  true,
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                ],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                  false,
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                ],
+                "kind": "list",
+              },
+            ],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [
+              Object {
+                "kind": "text",
+                "value": "assembled-social-memory-context/0.1",
+              },
+              Object {
+                "items": Array [],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [],
+                "kind": "list",
+              },
+            ],
+            "kind": "list",
+          },
+        ],
+        "kind": "list",
+      },
+    ],
+    "kind": "list",
+  },
+  Object {
+    "items": Array [
+      Object {
+        "kind": "text",
+        "value": "assembled-goal-meaning/0.1",
+      },
+      Object {
+        "kind": "signed",
+        "value": 10n,
+      },
+      Object {
+        "items": Array [
+          Object {
+            "kind": "text",
+            "value": "assembled-goal-meaning/0.1",
+          },
+          Object {
+            "kind": "typedIdentifier",
+            "namespaceId": 1002n,
+            "payload": Object {
+              "kind": "typedIdentifier",
+              "namespaceId": 1037n,
+              "payload": Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1038n,
+                "payload": Object {
+                  "kind": "text",
+                  "value": "character/bridge-subject",
+                },
+              },
+            },
+          },
+          Object {
+            "denominator": 1n,
+            "kind": "rational",
+            "numerator": 30n,
+          },
+          Object {
+            "denominator": 1n,
+            "kind": "rational",
+            "numerator": 31n,
+          },
+          Object {
+            "kind": "unsigned",
+            "value": 1n,
+          },
+          Object {
+            "kind": "unsigned",
+            "value": 1n,
+          },
+          Object {
+            "kind": "unsigned",
+            "value": 101n,
+          },
+          Object {
+            "kind": "text",
+            "value": "Open",
+          },
+          Object {
+            "kind": "unsigned",
+            "value": 1n,
+          },
+        ],
+        "kind": "list",
+      },
+      Object {
+        "items": Array [
+          Object {
+            "kind": "text",
+            "value": "assembled-workspace/0.1",
+          },
+          Object {
+            "kind": "signed",
+            "value": 10n,
+          },
+          Object {
+            "kind": "unsigned",
+            "value": 5n,
+          },
+          Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1128n,
+                "payload": Object {
+                  "kind": "unsigned",
+                  "value": 52n,
+                },
+              },
+              2n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1002n,
+                "payload": Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1037n,
+                  "payload": Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1038n,
+                    "payload": [Object],
+                  },
+                },
+              },
+              3n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1027n,
+                "payload": Object {
+                  "kind": "text",
+                  "value": "definition/task-workspace",
+                },
+              },
+              4n => Object {
+                "items": Array [
+                  Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                  Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                  Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                ],
+                "kind": "list",
+              },
+              5n => Object {
+                "fields": Map {
+                  1n => Object {
+                    "kind": "unsigned",
+                    "value": 1n,
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    [Object],
+                    [Object],
+                  ],
+                  "name": "WorkspaceForecast",
+                  "schemaVersion": 1n,
+                  "typeId": 380n,
+                },
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "WorkspaceOccurrenceId",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "CharacterId",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "AgendaDefinitionId",
+                  "required": true,
+                },
+                Object {
+                  "id": 4n,
+                  "name": "Tasks",
+                  "required": true,
+                },
+                Object {
+                  "id": 5n,
+                  "name": "Forecast",
+                  "required": true,
+                },
+              ],
+              "name": "TaskWorkspace",
+              "schemaVersion": 1n,
+              "typeId": 381n,
+            },
+          },
+          Object {
+            "items": Array [],
+            "kind": "list",
+          },
+        ],
+        "kind": "list",
+      },
+      Object {
+        "items": Array [],
+        "kind": "list",
+      },
+      Object {
+        "items": Array [
+          Object {
+            "items": Array [
+              Object {
+                "kind": "text",
+                "value": "assessment",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                ],
+                "kind": "list",
+              },
+            ],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [
+              Object {
+                "kind": "text",
+                "value": "kind",
+              },
+              Object {
+                "kind": "text",
+                "value": "QualificationUnavailable",
+              },
+            ],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [
+              Object {
+                "kind": "text",
+                "value": "reason",
+              },
+              Object {
+                "kind": "text",
+                "value": "AssessmentUnavailable",
+              },
+            ],
+            "kind": "list",
+          },
+        ],
+        "kind": "list",
+      },
+      Object {
+        "items": Array [
+          Object {
+            "kind": "text",
+            "value": "assembled-body-appraisal/0.1",
+          },
+          Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1129n,
+                "payload": Object {
+                  "kind": "unsigned",
+                  "value": 53n,
+                },
+              },
+              2n => Object {
+                "fields": Map {
+                  1n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1128n,
+                    "payload": [Object],
+                  },
+                  2n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": [Object],
+                  },
+                  3n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1027n,
+                    "payload": [Object],
+                  },
+                  4n => Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                  5n => Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    [Object],
+                    [Object],
+                    [Object],
+                    [Object],
+                    [Object],
+                  ],
+                  "name": "TaskWorkspace",
+                  "schemaVersion": 1n,
+                  "typeId": 381n,
+                },
+              },
+              3n => Object {
+                "items": Array [
+                  Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                  Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                  Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                ],
+                "kind": "list",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "AppraisalOccurrenceId",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "Workspace",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "Assessments",
+                  "required": true,
+                },
+              ],
+              "name": "TaskAppraisal",
+              "schemaVersion": 1n,
+              "typeId": 384n,
+            },
+          },
+          Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1115n,
+                "payload": Object {
+                  "kind": "unsigned",
+                  "value": 47n,
+                },
+              },
+              2n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1000n,
+                "payload": Object {
+                  "kind": "text",
+                  "value": "observer/bridge-subject",
+                },
+              },
+              3n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1005n,
+                "payload": Object {
+                  "kind": "text",
+                  "value": "channel/assembled-body-level",
+                },
+              },
+              4n => Object {
+                "kind": "signed",
+                "value": 10n,
+              },
+              5n => Object {
+                "fields": Map {
+                  1n => Object {
+                    "denominator": 1n,
+                    "kind": "rational",
+                    "numerator": 0n,
+                  },
+                  2n => Object {
+                    "denominator": 1n,
+                    "kind": "rational",
+                    "numerator": 1n,
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    [Object],
+                    [Object],
+                  ],
+                  "name": "FiniteLevelInterval",
+                  "schemaVersion": 1n,
+                  "typeId": 462n,
+                },
+              },
+              6n => Object {
+                "kind": "text",
+                "value": "embodied-level-observation/0.1-candidate",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "ObservationId",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "ObserverId",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "ObservationChannelId",
+                  "required": true,
+                },
+                Object {
+                  "id": 4n,
+                  "name": "OccurredAt",
+                  "required": true,
+                },
+                Object {
+                  "id": 5n,
+                  "name": "FiniteLevelInterval",
+                  "required": true,
+                },
+                Object {
+                  "id": 6n,
+                  "name": "TransformationVersion",
+                  "required": true,
+                },
+              ],
+              "name": "EmbodiedLevelObservation",
+              "schemaVersion": 1n,
+              "typeId": 461n,
+            },
+          },
+          Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1106n,
+                "payload": Object {
+                  "kind": "unsigned",
+                  "value": 48n,
+                },
+              },
+              2n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1000n,
+                "payload": Object {
+                  "kind": "text",
+                  "value": "observer/bridge-subject",
+                },
+              },
+              3n => Object {
+                "kind": "unsigned",
+                "value": 10n,
+              },
+              4n => Object {
+                "items": Array [],
+                "kind": "set",
+              },
+              5n => Object {
+                "items": Array [],
+                "kind": "set",
+              },
+              6n => Object {
+                "items": Array [],
+                "kind": "set",
+              },
+              7n => Object {
+                "items": Array [],
+                "kind": "set",
+              },
+              8n => Object {
+                "items": Array [
+                  Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                ],
+                "kind": "set",
+              },
+              9n => Object {
+                "kind": "text",
+                "value": "semantic-binding/0.1-candidate#SEM-001H",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "ExperienceId",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "ObserverId",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "OccurredAt",
+                  "required": true,
+                },
+                Object {
+                  "id": 4n,
+                  "name": "PerceptualEventReferentIds",
+                  "required": true,
+                },
+                Object {
+                  "id": 5n,
+                  "name": "PerceivedBindings",
+                  "required": true,
+                },
+                Object {
+                  "id": 6n,
+                  "name": "PerceptualClassifications",
+                  "required": true,
+                },
+                Object {
+                  "id": 7n,
+                  "name": "PerceptualEventClassifications",
+                  "required": true,
+                },
+                Object {
+                  "id": 8n,
+                  "name": "SupportingObservationIds",
+                  "required": true,
+                },
+                Object {
+                  "id": 9n,
+                  "name": "TransformationVersion",
+                  "required": true,
+                },
+              ],
+              "name": "PreRecognitionSemanticExperience",
+              "schemaVersion": 1n,
+              "typeId": 227n,
+            },
+          },
+          Object {
+            "items": Array [
+              Object {
+                "items": Array [
+                  Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                  Object {
+                    "kind": "text",
+                    "value": "Unavailable",
+                  },
+                ],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                  Object {
+                    "kind": "text",
+                    "value": "Unavailable",
+                  },
+                ],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                  Object {
+                    "kind": "text",
+                    "value": "Unavailable",
+                  },
+                ],
+                "kind": "list",
+              },
+            ],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [
+              Object {
+                "kind": "text",
+                "value": "assembled-memory-context/0.1",
+              },
+              Object {
+                "kind": "text",
+                "value": "Current",
+              },
+              Object {
+                "items": Array [],
+                "kind": "list",
+              },
+            ],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [
+              Object {
+                "kind": "text",
+                "value": "assembled-social-people/0.1/appraisal",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "kind": "text",
+                    "value": "assembled-social/0.1/appraisal",
+                  },
+                  Object {
+                    "kind": "signed",
+                    "value": 10n,
+                  },
+                  Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": [Object],
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                ],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "kind": "text",
+                    "value": "assembled-social/0.1/appraisal",
+                  },
+                  Object {
+                    "kind": "signed",
+                    "value": 10n,
+                  },
+                  Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": [Object],
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                ],
+                "kind": "list",
+              },
+            ],
+            "kind": "list",
+          },
+        ],
+        "kind": "list",
+      },
+      Object {
+        "items": Array [
+          Object {
+            "kind": "text",
+            "value": "assembled-retained-attribution/0.1",
+          },
+          Object {
+            "kind": "signed",
+            "value": 10n,
+          },
+          Object {
+            "items": Array [],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [
+              Object {
+                "items": Array [
+                  Object {
+                    "kind": "text",
+                    "value": "kind",
+                  },
+                  Object {
+                    "kind": "text",
+                    "value": "NoConsequence",
+                  },
+                ],
+                "kind": "list",
+              },
+            ],
+            "kind": "list",
+          },
+        ],
+        "kind": "list",
+      },
+    ],
+    "kind": "list",
+  },
+  Object {
+    "items": Array [
+      Object {
+        "kind": "text",
+        "value": "assembled-spatial-meaning/0.1",
+      },
+      Object {
+        "kind": "signed",
+        "value": 10n,
+      },
+      Object {
+        "items": Array [
+          Object {
+            "kind": "text",
+            "value": "assembled-spatial-meaning/0.1",
+          },
+          Object {
+            "kind": "typedIdentifier",
+            "namespaceId": 1002n,
+            "payload": Object {
+              "kind": "typedIdentifier",
+              "namespaceId": 1037n,
+              "payload": Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1038n,
+                "payload": Object {
+                  "kind": "text",
+                  "value": "character/bridge-subject",
+                },
+              },
+            },
+          },
+          Object {
+            "denominator": 1n,
+            "kind": "rational",
+            "numerator": 7n,
+          },
+          Object {
+            "denominator": 1n,
+            "kind": "rational",
+            "numerator": 7n,
+          },
+          Object {
+            "kind": "unsigned",
+            "value": 1n,
+          },
+          Object {
+            "kind": "unsigned",
+            "value": 1n,
+          },
+          Object {
+            "kind": "unsigned",
+            "value": 101n,
+          },
+          Object {
+            "kind": "text",
+            "value": "Open",
+          },
+          Object {
+            "kind": "unsigned",
+            "value": 1n,
+          },
+        ],
+        "kind": "list",
+      },
+      Object {
+        "items": Array [
+          Object {
+            "kind": "text",
+            "value": "assembled-workspace/0.1",
+          },
+          Object {
+            "kind": "signed",
+            "value": 10n,
+          },
+          Object {
+            "kind": "unsigned",
+            "value": 5n,
+          },
+          Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1128n,
+                "payload": Object {
+                  "kind": "unsigned",
+                  "value": 52n,
+                },
+              },
+              2n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1002n,
+                "payload": Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1037n,
+                  "payload": Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1038n,
+                    "payload": [Object],
+                  },
+                },
+              },
+              3n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1027n,
+                "payload": Object {
+                  "kind": "text",
+                  "value": "definition/task-workspace",
+                },
+              },
+              4n => Object {
+                "items": Array [
+                  Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                  Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                  Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                ],
+                "kind": "list",
+              },
+              5n => Object {
+                "fields": Map {
+                  1n => Object {
+                    "kind": "unsigned",
+                    "value": 1n,
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    [Object],
+                    [Object],
+                  ],
+                  "name": "WorkspaceForecast",
+                  "schemaVersion": 1n,
+                  "typeId": 380n,
+                },
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "WorkspaceOccurrenceId",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "CharacterId",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "AgendaDefinitionId",
+                  "required": true,
+                },
+                Object {
+                  "id": 4n,
+                  "name": "Tasks",
+                  "required": true,
+                },
+                Object {
+                  "id": 5n,
+                  "name": "Forecast",
+                  "required": true,
+                },
+              ],
+              "name": "TaskWorkspace",
+              "schemaVersion": 1n,
+              "typeId": 381n,
+            },
+          },
+          Object {
+            "items": Array [],
+            "kind": "list",
+          },
+        ],
+        "kind": "list",
+      },
+      Object {
+        "items": Array [],
+        "kind": "list",
+      },
+      Object {
+        "items": Array [
+          Object {
+            "items": Array [
+              Object {
+                "kind": "text",
+                "value": "assessment",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                ],
+                "kind": "list",
+              },
+            ],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [
+              Object {
+                "kind": "text",
+                "value": "kind",
+              },
+              Object {
+                "kind": "text",
+                "value": "QualificationUnavailable",
+              },
+            ],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [
+              Object {
+                "kind": "text",
+                "value": "reason",
+              },
+              Object {
+                "kind": "text",
+                "value": "AssessmentUnavailable",
+              },
+            ],
+            "kind": "list",
+          },
+        ],
+        "kind": "list",
+      },
+      Object {
+        "items": Array [
+          Object {
+            "kind": "text",
+            "value": "assembled-body-appraisal/0.1",
+          },
+          Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1129n,
+                "payload": Object {
+                  "kind": "unsigned",
+                  "value": 53n,
+                },
+              },
+              2n => Object {
+                "fields": Map {
+                  1n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1128n,
+                    "payload": [Object],
+                  },
+                  2n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": [Object],
+                  },
+                  3n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1027n,
+                    "payload": [Object],
+                  },
+                  4n => Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                  5n => Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    [Object],
+                    [Object],
+                    [Object],
+                    [Object],
+                    [Object],
+                  ],
+                  "name": "TaskWorkspace",
+                  "schemaVersion": 1n,
+                  "typeId": 381n,
+                },
+              },
+              3n => Object {
+                "items": Array [
+                  Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                  Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                  Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                ],
+                "kind": "list",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "AppraisalOccurrenceId",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "Workspace",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "Assessments",
+                  "required": true,
+                },
+              ],
+              "name": "TaskAppraisal",
+              "schemaVersion": 1n,
+              "typeId": 384n,
+            },
+          },
+          Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1115n,
+                "payload": Object {
+                  "kind": "unsigned",
+                  "value": 47n,
+                },
+              },
+              2n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1000n,
+                "payload": Object {
+                  "kind": "text",
+                  "value": "observer/bridge-subject",
+                },
+              },
+              3n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1005n,
+                "payload": Object {
+                  "kind": "text",
+                  "value": "channel/assembled-body-level",
+                },
+              },
+              4n => Object {
+                "kind": "signed",
+                "value": 10n,
+              },
+              5n => Object {
+                "fields": Map {
+                  1n => Object {
+                    "denominator": 1n,
+                    "kind": "rational",
+                    "numerator": 0n,
+                  },
+                  2n => Object {
+                    "denominator": 1n,
+                    "kind": "rational",
+                    "numerator": 1n,
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    [Object],
+                    [Object],
+                  ],
+                  "name": "FiniteLevelInterval",
+                  "schemaVersion": 1n,
+                  "typeId": 462n,
+                },
+              },
+              6n => Object {
+                "kind": "text",
+                "value": "embodied-level-observation/0.1-candidate",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "ObservationId",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "ObserverId",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "ObservationChannelId",
+                  "required": true,
+                },
+                Object {
+                  "id": 4n,
+                  "name": "OccurredAt",
+                  "required": true,
+                },
+                Object {
+                  "id": 5n,
+                  "name": "FiniteLevelInterval",
+                  "required": true,
+                },
+                Object {
+                  "id": 6n,
+                  "name": "TransformationVersion",
+                  "required": true,
+                },
+              ],
+              "name": "EmbodiedLevelObservation",
+              "schemaVersion": 1n,
+              "typeId": 461n,
+            },
+          },
+          Object {
+            "fields": Map {
+              1n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1106n,
+                "payload": Object {
+                  "kind": "unsigned",
+                  "value": 48n,
+                },
+              },
+              2n => Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1000n,
+                "payload": Object {
+                  "kind": "text",
+                  "value": "observer/bridge-subject",
+                },
+              },
+              3n => Object {
+                "kind": "unsigned",
+                "value": 10n,
+              },
+              4n => Object {
+                "items": Array [],
+                "kind": "set",
+              },
+              5n => Object {
+                "items": Array [],
+                "kind": "set",
+              },
+              6n => Object {
+                "items": Array [],
+                "kind": "set",
+              },
+              7n => Object {
+                "items": Array [],
+                "kind": "set",
+              },
+              8n => Object {
+                "items": Array [
+                  Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                ],
+                "kind": "set",
+              },
+              9n => Object {
+                "kind": "text",
+                "value": "semantic-binding/0.1-candidate#SEM-001H",
+              },
+            },
+            "kind": "record",
+            "schema": Object {
+              "fields": Array [
+                Object {
+                  "id": 1n,
+                  "name": "ExperienceId",
+                  "required": true,
+                },
+                Object {
+                  "id": 2n,
+                  "name": "ObserverId",
+                  "required": true,
+                },
+                Object {
+                  "id": 3n,
+                  "name": "OccurredAt",
+                  "required": true,
+                },
+                Object {
+                  "id": 4n,
+                  "name": "PerceptualEventReferentIds",
+                  "required": true,
+                },
+                Object {
+                  "id": 5n,
+                  "name": "PerceivedBindings",
+                  "required": true,
+                },
+                Object {
+                  "id": 6n,
+                  "name": "PerceptualClassifications",
+                  "required": true,
+                },
+                Object {
+                  "id": 7n,
+                  "name": "PerceptualEventClassifications",
+                  "required": true,
+                },
+                Object {
+                  "id": 8n,
+                  "name": "SupportingObservationIds",
+                  "required": true,
+                },
+                Object {
+                  "id": 9n,
+                  "name": "TransformationVersion",
+                  "required": true,
+                },
+              ],
+              "name": "PreRecognitionSemanticExperience",
+              "schemaVersion": 1n,
+              "typeId": 227n,
+            },
+          },
+          Object {
+            "items": Array [
+              Object {
+                "items": Array [
+                  Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                  Object {
+                    "kind": "text",
+                    "value": "Unavailable",
+                  },
+                ],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                  Object {
+                    "kind": "text",
+                    "value": "Unavailable",
+                  },
+                ],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                  Object {
+                    "kind": "text",
+                    "value": "Unavailable",
+                  },
+                ],
+                "kind": "list",
+              },
+            ],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [
+              Object {
+                "kind": "text",
+                "value": "assembled-memory-context/0.1",
+              },
+              Object {
+                "kind": "text",
+                "value": "Current",
+              },
+              Object {
+                "items": Array [],
+                "kind": "list",
+              },
+            ],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [
+              Object {
+                "kind": "text",
+                "value": "assembled-social-people/0.1/appraisal",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "kind": "text",
+                    "value": "assembled-social/0.1/appraisal",
+                  },
+                  Object {
+                    "kind": "signed",
+                    "value": 10n,
+                  },
+                  Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": [Object],
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                ],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "kind": "text",
+                    "value": "assembled-social/0.1/appraisal",
+                  },
+                  Object {
+                    "kind": "signed",
+                    "value": 10n,
+                  },
+                  Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": [Object],
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                ],
+                "kind": "list",
+              },
+            ],
+            "kind": "list",
+          },
+        ],
+        "kind": "list",
+      },
+    ],
+    "kind": "list",
+  },
+  Object {
+    "items": Array [
+      Object {
+        "kind": "text",
+        "value": "assembled-action-memory/0.1/forecast",
+      },
+      Object {
+        "kind": "signed",
+        "value": 10n,
+      },
+      Object {
+        "items": Array [],
+        "kind": "list",
+      },
+      Object {
+        "items": Array [
+          Object {
+            "kind": "text",
+            "value": "assembled-spatial-meaning/0.1",
+          },
+          Object {
+            "kind": "signed",
+            "value": 10n,
+          },
+          Object {
+            "items": Array [
+              Object {
+                "kind": "text",
+                "value": "assembled-spatial-meaning/0.1",
+              },
+              Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1002n,
+                "payload": Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1037n,
+                  "payload": Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1038n,
+                    "payload": [Object],
+                  },
+                },
+              },
+              Object {
+                "denominator": 1n,
+                "kind": "rational",
+                "numerator": 7n,
+              },
+              Object {
+                "denominator": 1n,
+                "kind": "rational",
+                "numerator": 7n,
+              },
+              Object {
+                "kind": "unsigned",
+                "value": 1n,
+              },
+              Object {
+                "kind": "unsigned",
+                "value": 1n,
+              },
+              Object {
+                "kind": "unsigned",
+                "value": 101n,
+              },
+              Object {
+                "kind": "text",
+                "value": "Open",
+              },
+              Object {
+                "kind": "unsigned",
+                "value": 1n,
+              },
+            ],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [
+              Object {
+                "kind": "text",
+                "value": "assembled-workspace/0.1",
+              },
+              Object {
+                "kind": "signed",
+                "value": 10n,
+              },
+              Object {
+                "kind": "unsigned",
+                "value": 5n,
+              },
+              Object {
+                "fields": Map {
+                  1n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1128n,
+                    "payload": [Object],
+                  },
+                  2n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": [Object],
+                  },
+                  3n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1027n,
+                    "payload": [Object],
+                  },
+                  4n => Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                  5n => Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    [Object],
+                    [Object],
+                    [Object],
+                    [Object],
+                    [Object],
+                  ],
+                  "name": "TaskWorkspace",
+                  "schemaVersion": 1n,
+                  "typeId": 381n,
+                },
+              },
+              Object {
+                "items": Array [],
+                "kind": "list",
+              },
+            ],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [
+              Object {
+                "items": Array [
+                  Object {
+                    "kind": "text",
+                    "value": "assessment",
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                ],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "kind": "text",
+                    "value": "kind",
+                  },
+                  Object {
+                    "kind": "text",
+                    "value": "QualificationUnavailable",
+                  },
+                ],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "kind": "text",
+                    "value": "reason",
+                  },
+                  Object {
+                    "kind": "text",
+                    "value": "AssessmentUnavailable",
+                  },
+                ],
+                "kind": "list",
+              },
+            ],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [
+              Object {
+                "kind": "text",
+                "value": "assembled-body-appraisal/0.1",
+              },
+              Object {
+                "fields": Map {
+                  1n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1129n,
+                    "payload": [Object],
+                  },
+                  2n => Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                  3n => Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    [Object],
+                    [Object],
+                    [Object],
+                  ],
+                  "name": "TaskAppraisal",
+                  "schemaVersion": 1n,
+                  "typeId": 384n,
+                },
+              },
+              Object {
+                "fields": Map {
+                  1n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1115n,
+                    "payload": [Object],
+                  },
+                  2n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1000n,
+                    "payload": [Object],
+                  },
+                  3n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1005n,
+                    "payload": [Object],
+                  },
+                  4n => Object {
+                    "kind": "signed",
+                    "value": 10n,
+                  },
+                  5n => Object {
+                    "fields": [Map],
+                    "kind": "record",
+                    "schema": [Object],
+                  },
+                  6n => Object {
+                    "kind": "text",
+                    "value": "embodied-level-observation/0.1-candidate",
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    [Object],
+                    [Object],
+                    [Object],
+                    [Object],
+                    [Object],
+                    [Object],
+                  ],
+                  "name": "EmbodiedLevelObservation",
+                  "schemaVersion": 1n,
+                  "typeId": 461n,
+                },
+              },
+              Object {
+                "fields": Map {
+                  1n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1106n,
+                    "payload": [Object],
+                  },
+                  2n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1000n,
+                    "payload": [Object],
+                  },
+                  3n => Object {
+                    "kind": "unsigned",
+                    "value": 10n,
+                  },
+                  4n => Object {
+                    "items": [Array],
+                    "kind": "set",
+                  },
+                  5n => Object {
+                    "items": [Array],
+                    "kind": "set",
+                  },
+                  6n => Object {
+                    "items": [Array],
+                    "kind": "set",
+                  },
+                  7n => Object {
+                    "items": [Array],
+                    "kind": "set",
+                  },
+                  8n => Object {
+                    "items": [Array],
+                    "kind": "set",
+                  },
+                  9n => Object {
+                    "kind": "text",
+                    "value": "semantic-binding/0.1-candidate#SEM-001H",
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    [Object],
+                    [Object],
+                    [Object],
+                    [Object],
+                    [Object],
+                    [Object],
+                    [Object],
+                    [Object],
+                    [Object],
+                  ],
+                  "name": "PreRecognitionSemanticExperience",
+                  "schemaVersion": 1n,
+                  "typeId": 227n,
+                },
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                ],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "kind": "text",
+                    "value": "assembled-memory-context/0.1",
+                  },
+                  Object {
+                    "kind": "text",
+                    "value": "Current",
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                ],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "kind": "text",
+                    "value": "assembled-social-people/0.1/appraisal",
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                ],
+                "kind": "list",
+              },
+            ],
+            "kind": "list",
+          },
+        ],
+        "kind": "list",
+      },
+      Object {
+        "items": Array [
+          Object {
+            "items": Array [
+              Object {
+                "fields": Map {
+                  1n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": [Object],
+                  },
+                  2n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": [Object],
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    [Object],
+                    [Object],
+                  ],
+                  "name": "TaskCommitmentKey",
+                  "schemaVersion": 1n,
+                  "typeId": 371n,
+                },
+              },
+              Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1027n,
+                "payload": Object {
+                  "kind": "text",
+                  "value": "definition/protocol-contact-one",
+                },
+              },
+              Object {
+                "kind": "text",
+                "value": "Unknown",
+              },
+              Object {
+                "items": Array [],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                ],
+                "kind": "list",
+              },
+            ],
+            "kind": "list",
+          },
+          Object {
+            "items": Array [
+              Object {
+                "fields": Map {
+                  1n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": [Object],
+                  },
+                  2n => Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1002n,
+                    "payload": [Object],
+                  },
+                },
+                "kind": "record",
+                "schema": Object {
+                  "fields": Array [
+                    [Object],
+                    [Object],
+                  ],
+                  "name": "TaskCommitmentKey",
+                  "schemaVersion": 1n,
+                  "typeId": 371n,
+                },
+              },
+              Object {
+                "kind": "typedIdentifier",
+                "namespaceId": 1027n,
+                "payload": Object {
+                  "kind": "text",
+                  "value": "definition/protocol-contact-two",
+                },
+              },
+              Object {
+                "kind": "text",
+                "value": "Unknown",
+              },
+              Object {
+                "items": Array [],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [],
+                "kind": "list",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                  Object {
+                    "items": [Array],
+                    "kind": "list",
+                  },
+                ],
+                "kind": "list",
+              },
+            ],
+            "kind": "list",
+          },
+        ],
+        "kind": "list",
+      },
+    ],
+    "kind": "list",
+  },
+]
+
+ ❯ probe src/test/assembledAffectMemoryFinal.test.ts:47:140
+
+ ❯ src/test/assembledAffectMemoryFinal.test.ts:67:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 5 skipped (6)
+   Start at  08:58:07
+   Duration  121.80s (transform 3.06s, setup 0ms, collect 4.59s, tests 116.74s, environment 0ms, prepare 139ms)
+
+
+M176 unknown-factor-diagnostic exit=0 elapsed=72.957s cap=180
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectMemoryFinal.test.ts > diagnostic176 inspect actual unknown factor without changing comparison
+M176 INPUT {"body":{"kind":"list","items":[{"kind":"text","value":"assembled-body/0.1"},{"kind":"rational","numerator":"100","denominator":"1"},{"kind":"rational","numerator":"10","denominator":"1"},{"kind":"rational","numerator":"1","denominator":"1"},{"kind":"rational","numerator":"60","denominator":"1"},true,true]},"affect":{"kind":"list","items":[{"kind":"text","value":"assembled-reappraisal/0.1"},{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}},{"kind":"typedIdentifier","namespaceId":"1027","payload":{"kind":"text","value":"definition/configurable-water"}},{"kind":"text","value":"BenefitRelative"},{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}},{"kind":"rational","numerator":"1","denominator":"2"}]},"encoding":{"kind":"list","items":[{"kind":"text","value":"assembled-encoding/0.7"},{"kind":"unsigned","value":"2"},{"kind":"text","value":"role-calibrated"},{"kind":"text","value":"historical-shared"},{"kind":"text","value":"UnitBudget"}]},"person":{"kind":"list","items":[{"kind":"text","value":"assembled-social-people/0.1"},{"kind":"list","items":[{"kind":"list","items":[{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"content/assembled-social/target"}}}},{"kind":"list","items":[{"kind":"list","items":[{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}},true]},{"kind":"list","items":[{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}},false]}]}]},{"kind":"list","items":[{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"content/recognition/other"}}}},{"kind":"list","items":[{"kind":"list","items":[{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}},true]}]}]}]}]},"sources":[[{"kind":"signed","value":"7"},{"kind":"list","items":[{"kind":"text","value":"assembled-reappraisal/0.1"},{"kind":"unsigned","value":"1"},true,true,true,{"kind":"unsigned","value":"0"},false,false,false,{"kind":"list","items":[{"kind":"unsigned","value":"2"},true]}]}],[{"kind":"signed","value":"1"},{"kind":"list","items":[{"kind":"text","value":"assembled-reappraisal/0.1"},{"kind":"unsigned","value":"0"},false,false,false,{"kind":"unsigned","value":"0"},false,false,false,{"kind":"list","items":[{"kind":"unsigned","value":"0"},false]}]}],[{"kind":"signed","value":"2"},{"kind":"list","items":[{"kind":"text","value":"assembled-reappraisal/0.1"},{"kind":"unsigned","value":"0"},false,false,false,{"kind":"unsigned","value":"0"},false,false,false,{"kind":"list","items":[{"kind":"unsigned","value":"0"},false]}]}],[{"kind":"signed","value":"3"},{"kind":"list","items":[{"kind":"text","value":"assembled-reappraisal/0.1"},{"kind":"unsigned","value":"0"},false,false,false,{"kind":"unsigned","value":"0"},false,false,false,{"kind":"list","items":[{"kind":"unsigned","value":"0"},false]}]}],[{"kind":"signed","value":"4"},{"kind":"list","items":[{"kind":"text","value":"assembled-reappraisal/0.1"},{"kind":"unsigned","value":"0"},false,false,false,{"kind":"unsigned","value":"0"},false,false,false,{"kind":"list","items":[{"kind":"unsigned","value":"0"},false]}]}],[{"kind":"signed","value":"5"},{"kind":"list","items":[{"kind":"text","value":"assembled-reappraisal/0.1"},{"kind":"unsigned","value":"0"},false,false,false,{"kind":"unsigned","value":"0"},false,false,false,{"kind":"list","items":[{"kind":"unsigned","value":"0"},false]}]}],[{"kind":"signed","value":"6"},{"kind":"list","items":[{"kind":"text","value":"assembled-reappraisal/0.1"},{"kind":"unsigned","value":"0"},false,false,false,{"kind":"unsigned","value":"0"},false,false,false,{"kind":"list","items":[{"kind":"unsigned","value":"0"},false]}]}],[{"kind":"signed","value":"8"},{"kind":"list","items":[{"kind":"text","value":"assembled-reappraisal/0.1"},{"kind":"unsigned","value":"0"},false,false,false,{"kind":"unsigned","value":"0"},false,false,false,{"kind":"list","items":[{"kind":"unsigned","value":"0"},false]}]}],[{"kind":"signed","value":"9"},{"kind":"list","items":[{"kind":"text","value":"assembled-reappraisal/0.1"},{"kind":"unsigned","value":"0"},false,false,false,{"kind":"unsigned","value":"0"},false,false,false,{"kind":"list","items":[{"kind":"unsigned","value":"0"},false]}]}]]}
+M176 FACTORS {"status":{"kind":"text","value":"Unavailable"},"coords":{"kind":"list","items":[]},"mitigation":{"kind":"unsigned","value":"2"},"reason":{"kind":"text","value":"ObservedMitigationEfficacy"},"factors":{"kind":"list","items":[{"kind":"rational","numerator":"1","denominator":"1"},{"kind":"list","items":[]},{"kind":"rational","numerator":"99","denominator":"100"},{"kind":"rational","numerator":"0","denominator":"1"}]},"goal":{"kind":"list","items":[{"kind":"record","schema":{"typeId":"372","schemaVersion":"1","name":"TaskCommitmentStatus","fields":[{"id":"1","name":"VariantTag","required":true},{"id":"2","name":"ObservationRef","required":false},{"id":"3","name":"ObservedAt","required":false}]},"fields":{}},{"kind":"rational","numerator":"1","denominator":"2"}]},"body":{"kind":"list","items":[{"kind":"rational","numerator":"100","denominator":"1"},{"kind":"rational","numerator":"1","denominator":"100"},{"kind":"list","items":[{"kind":"text","value":"assembled-memory-context/0.1"},{"kind":"text","value":"Current"},{"kind":"list","items":[]}]}]},"joint":{"kind":"list","items":[{"kind":"list","items":[{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}},{"kind":"text","value":"Unavailable"}]},{"kind":"list","items":[{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}},{"kind":"text","value":"Unavailable"}]},{"kind":"list","items":[{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}},{"kind":"text","value":"Unavailable"}]}]}}
+
+ ✓ src/test/assembledAffectMemoryFinal.test.ts (7 tests | 6 skipped) 67412ms
+   ✓ diagnostic176 inspect actual unknown factor without changing comparison 67411ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  09:01:22
+   Duration  72.40s (transform 3.04s, setup 0ms, collect 4.55s, tests 67.41s, environment 0ms, prepare 142ms)
+
+
+M176 primary-live-inputs exit=1 elapsed=86.617s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectMemoryFinal.test.ts > final176 primary affect changes learned retrieval and actual appraisal
+M176 EARLY [{"kind":"text","value":"Known"},{"kind":"list","items":[{"kind":"rational","numerator":"199","denominator":"400"},{"kind":"rational","numerator":"199","denominator":"400"}]}]
+
+ ❯ src/test/assembledAffectMemoryFinal.test.ts (7 tests | 1 failed | 6 skipped) 81035ms
+   × final176 primary affect changes learned retrieval and actual appraisal 81035ms
+     → expected 3n to be 2n // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledAffectMemoryFinal.test.ts > final176 primary affect changes learned retrieval and actual appraisal
+AssertionError: expected 3n to be 2n // Object.is equality
+
+- Expected
++ Received
+
+- 2n
++ 3n
+
+ ❯ prior src/test/assembledAffectMemoryFinal.test.ts:35:48
+     33|  console.info('M176 EARLY '+json(a!.slice(5,7)));expect(a![5]).toEqual…
+     34|  const decision=outputs(r.snapshot().outputs,409n).find(v=>at(f(v,2n))…
+     35|  expect(uint(f(rec(f(decision!,4n),419n),1n))).toBe(2n);expect(outputs…
+       |                                                ^
+     36|  console.info('M176 PRIOR '+json(a!.slice(5,7)));return a!;
+     37| }
+ ❯ src/test/assembledAffectMemoryFinal.test.ts:64:58
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 6 skipped (7)
+   Start at  09:03:08
+   Duration  86.04s (transform 3.05s, setup 0ms, collect 4.56s, tests 81.04s, environment 0ms, prepare 146ms)
+
+
+M176 primary-isolated-acquisition exit=1 elapsed=132.980s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectMemoryFinal.test.ts > final176 primary affect changes learned retrieval and actual appraisal
+M176 EARLY [{"kind":"text","value":"Known"},{"kind":"list","items":[{"kind":"rational","numerator":"199","denominator":"400"},{"kind":"rational","numerator":"199","denominator":"400"}]}]
+M176 PRIOR [{"kind":"text","value":"Known"},{"kind":"list","items":[{"kind":"rational","numerator":"199","denominator":"400"},{"kind":"rational","numerator":"199","denominator":"400"}]}]
+M176 EARLY [{"kind":"text","value":"Known"},{"kind":"list","items":[{"kind":"rational","numerator":"0","denominator":"1"},{"kind":"rational","numerator":"0","denominator":"1"}]}]
+M176 PRIOR [{"kind":"text","value":"Known"},{"kind":"list","items":[{"kind":"rational","numerator":"0","denominator":"1"},{"kind":"rational","numerator":"0","denominator":"1"}]}]
+M176 EARLY [{"kind":"text","value":"Known"},{"kind":"list","items":[{"kind":"rational","numerator":"199","denominator":"400"},{"kind":"rational","numerator":"199","denominator":"400"}]}]
+M176 PRIOR [{"kind":"text","value":"Known"},{"kind":"list","items":[{"kind":"rational","numerator":"199","denominator":"400"},{"kind":"rational","numerator":"199","denominator":"400"}]}]
+
+ ❯ src/test/assembledAffectMemoryFinal.test.ts (7 tests | 1 failed | 6 skipped) 127360ms
+   × final176 primary affect changes learned retrieval and actual appraisal 127360ms
+     → expected { kind: 'list', items: [] } to deeply equal { kind: 'list', items: [ { …(3) } ] }
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledAffectMemoryFinal.test.ts > final176 primary affect changes learned retrieval and actual appraisal
+AssertionError: expected { kind: 'list', items: [] } to deeply equal { kind: 'list', items: [ { …(3) } ] }
+
+- Expected
++ Received
+
+  Object {
+-   "items": Array [
+-     Object {
+-       "kind": "typedIdentifier",
+-       "namespaceId": 1125n,
+-       "payload": Object {
+-         "kind": "unsigned",
+-         "value": 138n,
+-       },
+-     },
+-   ],
++   "items": Array [],
+    "kind": "list",
+  }
+
+ ❯ probe src/test/assembledAffectMemoryFinal.test.ts:57:86
+
+ ❯ src/test/assembledAffectMemoryFinal.test.ts:67:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 6 skipped (7)
+   Start at  09:05:43
+   Duration  132.40s (transform 3.05s, setup 0ms, collect 4.57s, tests 127.36s, environment 0ms, prepare 146ms)
+
+
+M176 primary-shared-workspace exit=0 elapsed=145.377s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectMemoryFinal.test.ts > final176 primary affect changes learned retrieval and actual appraisal
+M176 EARLY [{"kind":"text","value":"Known"},{"kind":"list","items":[{"kind":"rational","numerator":"199","denominator":"400"},{"kind":"rational","numerator":"199","denominator":"400"}]}]
+M176 PRIOR [{"kind":"text","value":"Known"},{"kind":"list","items":[{"kind":"rational","numerator":"199","denominator":"400"},{"kind":"rational","numerator":"199","denominator":"400"}]}]
+M176 EARLY [{"kind":"text","value":"Known"},{"kind":"list","items":[{"kind":"rational","numerator":"0","denominator":"1"},{"kind":"rational","numerator":"0","denominator":"1"}]}]
+M176 PRIOR [{"kind":"text","value":"Known"},{"kind":"list","items":[{"kind":"rational","numerator":"0","denominator":"1"},{"kind":"rational","numerator":"0","denominator":"1"}]}]
+M176 EARLY [{"kind":"text","value":"Known"},{"kind":"list","items":[{"kind":"rational","numerator":"199","denominator":"400"},{"kind":"rational","numerator":"199","denominator":"400"}]}]
+M176 PRIOR [{"kind":"text","value":"Known"},{"kind":"list","items":[{"kind":"rational","numerator":"199","denominator":"400"},{"kind":"rational","numerator":"199","denominator":"400"}]}]
+M176 RANK {"gain":"599/400","scores":[{"acquisition":"138","base":{"numerator":"1","denominator":"17"},"pull":{"numerator":"64","denominator":"125"},"score":{"numerator":"43857","denominator":"53125"}},{"acquisition":"206","base":{"numerator":"1","denominator":"16"},"pull":{"numerator":"1017","denominator":"2000"},"score":{"numerator":"659183","denominator":"800000"}}],"winner":"10"}
+M176 PROBE {"law":"UncontrolledGain","carry":{"at":10,"status":"Known","exposure":"199/400","uncontrolled":"199/400"},"gain":"599/400","scores":[{"at":"10","base":{"numerator":"1","denominator":"17"},"pull":{"numerator":"64","denominator":"125"},"score":{"numerator":"43857","denominator":"53125"}},{"at":"11","base":{"numerator":"1","denominator":"16"},"pull":{"numerator":"1017","denominator":"2000"},"score":{"numerator":"659183","denominator":"800000"}}],"winner":"10","mean":"1/1"}
+M176 RANK {"gain":"1/1","scores":[{"acquisition":"138","base":{"numerator":"1","denominator":"17"},"pull":{"numerator":"64","denominator":"125"},"score":{"numerator":"1213","denominator":"2125"}},{"acquisition":"206","base":{"numerator":"1","denominator":"16"},"pull":{"numerator":"1017","denominator":"2000"},"score":{"numerator":"571","denominator":"1000"}}],"winner":"11"}
+M176 PROBE {"law":"UncontrolledGain","carry":{"at":10,"status":"Known","exposure":"0/1","uncontrolled":"0/1"},"gain":"1/1","scores":[{"at":"10","base":{"numerator":"1","denominator":"17"},"pull":{"numerator":"64","denominator":"125"},"score":{"numerator":"1213","denominator":"2125"}},{"at":"11","base":{"numerator":"1","denominator":"16"},"pull":{"numerator":"1017","denominator":"2000"},"score":{"numerator":"571","denominator":"1000"}}],"winner":"11","mean":"0/1"}
+M176 RANK {"gain":"1/1","scores":[{"acquisition":"138","base":{"numerator":"1","denominator":"17"},"pull":{"numerator":"64","denominator":"125"},"score":{"numerator":"1213","denominator":"2125"}},{"acquisition":"206","base":{"numerator":"1","denominator":"16"},"pull":{"numerator":"1017","denominator":"2000"},"score":{"numerator":"571","denominator":"1000"}}],"winner":"11"}
+M176 PROBE {"law":"NoFeedback","carry":{"at":10,"status":"Known","exposure":"199/400","uncontrolled":"199/400"},"gain":"1/1","scores":[{"at":"10","base":{"numerator":"1","denominator":"17"},"pull":{"numerator":"64","denominator":"125"},"score":{"numerator":"1213","denominator":"2125"}},{"at":"11","base":{"numerator":"1","denominator":"16"},"pull":{"numerator":"1017","denominator":"2000"},"score":{"numerator":"571","denominator":"1000"}}],"winner":"11","mean":"0/1"}
+M176 PRIMARY PASS matched actual history, acquired graph, prior-only gain, live social/joint appraisal; all queues101
+
+ ✓ src/test/assembledAffectMemoryFinal.test.ts (7 tests | 6 skipped) 139782ms
+   ✓ final176 primary affect changes learned retrieval and actual appraisal 139782ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  09:08:46
+   Duration  144.82s (transform 3.06s, setup 0ms, collect 4.58s, tests 139.78s, environment 0ms, prepare 145ms)
+
+
+M176 source-temporal-controls exit=1 elapsed=121.004s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectMemoryFinal.test.ts > final176 controls distinguish unknown denied and later evidence
+M176 EARLY [{"kind":"text","value":"Unavailable"},{"kind":"list","items":[]}]
+M176 PRIOR [{"kind":"text","value":"Unavailable"},{"kind":"list","items":[]}]
+M176 EARLY [{"kind":"text","value":"Known"},{"kind":"list","items":[{"kind":"rational","numerator":"199","denominator":"400"},{"kind":"rational","numerator":"199","denominator":"400"}]}]
+M176 PRIOR [{"kind":"text","value":"Known"},{"kind":"list","items":[{"kind":"rational","numerator":"199","denominator":"400"},{"kind":"rational","numerator":"199","denominator":"400"}]}]
+M176 EARLY [{"kind":"text","value":"Known"},{"kind":"list","items":[{"kind":"rational","numerator":"199","denominator":"400"},{"kind":"rational","numerator":"199","denominator":"400"}]}]
+M176 PRIOR [{"kind":"text","value":"Known"},{"kind":"list","items":[{"kind":"rational","numerator":"199","denominator":"400"},{"kind":"rational","numerator":"199","denominator":"400"}]}]
+
+ ❯ src/test/assembledAffectMemoryFinal.test.ts (9 tests | 1 failed | 8 skipped) 115401ms
+   × final176 controls distinguish unknown denied and later evidence 115400ms
+     → ContinuesPriorTrack requires a prior continuant-file
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledAffectMemoryFinal.test.ts > final176 controls distinguish unknown denied and later evidence
+SchedulerContractError: ContinuesPriorTrack requires a prior continuant-file
+ ❯ fail src/substrate/scheduler.ts:667:9
+    665| 
+    666| function fail(code: SchedulerFailureCode, message: string): never {
+    667|   throw new SchedulerContractError(code, message);
+       |         ^
+    668| }
+    669| 
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:390:11
+ ❯ Object.settleNextInstant src/assembled/character.ts:45:66
+ ❯ through src/test/assembledAffectMemoryFinal.test.ts:28:112
+ ❯ src/test/assembledAffectMemoryFinal.test.ts:84:112
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  09:11:27
+   Duration  120.43s (transform 3.04s, setup 0ms, collect 4.56s, tests 115.40s, environment 0ms, prepare 145ms)
+
+
+M176 source-temporal-controls-corrected exit=0 elapsed=144.896s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectMemoryFinal.test.ts > final176 controls distinguish unknown denied and later evidence
+M176 EARLY [{"kind":"text","value":"Unavailable"},{"kind":"list","items":[]}]
+M176 PRIOR [{"kind":"text","value":"Unavailable"},{"kind":"list","items":[]}]
+M176 EARLY [{"kind":"text","value":"Known"},{"kind":"list","items":[{"kind":"rational","numerator":"199","denominator":"400"},{"kind":"rational","numerator":"199","denominator":"400"}]}]
+M176 PRIOR [{"kind":"text","value":"Known"},{"kind":"list","items":[{"kind":"rational","numerator":"199","denominator":"400"},{"kind":"rational","numerator":"199","denominator":"400"}]}]
+M176 EARLY [{"kind":"text","value":"Known"},{"kind":"list","items":[{"kind":"rational","numerator":"199","denominator":"400"},{"kind":"rational","numerator":"199","denominator":"400"}]}]
+M176 PRIOR [{"kind":"text","value":"Known"},{"kind":"list","items":[{"kind":"rational","numerator":"199","denominator":"400"},{"kind":"rational","numerator":"199","denominator":"400"}]}]
+M176 RANK {"gain":"1/1","scores":[{"acquisition":"135","base":{"numerator":"1","denominator":"17"},"pull":{"numerator":"64","denominator":"125"},"score":{"numerator":"1213","denominator":"2125"}},{"acquisition":"203","base":{"numerator":"1","denominator":"16"},"pull":{"numerator":"1017","denominator":"2000"},"score":{"numerator":"571","denominator":"1000"}}],"winner":"11"}
+M176 PROBE {"law":"UncontrolledGain","carry":{"at":10,"status":"Unavailable","exposure":null,"uncontrolled":null},"gain":"1/1","scores":[{"at":"10","base":{"numerator":"1","denominator":"17"},"pull":{"numerator":"64","denominator":"125"},"score":{"numerator":"1213","denominator":"2125"}},{"at":"11","base":{"numerator":"1","denominator":"16"},"pull":{"numerator":"1017","denominator":"2000"},"score":{"numerator":"571","denominator":"1000"}}],"winner":"11","mean":"0/1"}
+M176 RANK {"gain":"599/400","scores":[{"acquisition":"138","base":{"numerator":"1","denominator":"17"},"pull":{"numerator":"64","denominator":"125"},"score":{"numerator":"43857","denominator":"53125"}},{"acquisition":"206","base":{"numerator":"1","denominator":"16"},"pull":{"numerator":"1017","denominator":"2000"},"score":{"numerator":"659183","denominator":"800000"}}],"winner":"10"}
+M176 PROBE {"law":"UncontrolledGain","carry":{"at":10,"status":"Known","exposure":"199/400","uncontrolled":"199/400"},"gain":"599/400","scores":[{"at":"10","base":{"numerator":"1","denominator":"17"},"pull":{"numerator":"64","denominator":"125"},"score":{"numerator":"43857","denominator":"53125"}},{"at":"11","base":{"numerator":"1","denominator":"16"},"pull":{"numerator":"1017","denominator":"2000"},"score":{"numerator":"659183","denominator":"800000"}}],"winner":"10","mean":"1/1"}
+M176 CONTROLS PASS unknown != known-zero; source denied gives no social recall26; current changed appraisal cannot rewrite authentic prior10; full queues101
+
+ ✓ src/test/assembledAffectMemoryFinal.test.ts (9 tests | 8 skipped) 139316ms
+   ✓ final176 controls distinguish unknown denied and later evidence 139315ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  09:14:25
+   Duration  144.34s (transform 3.05s, setup 0ms, collect 4.57s, tests 139.32s, environment 0ms, prepare 142ms)
+
+
+M176 privacy-exact-continuation-rollback exit=0 elapsed=222.528s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAffectMemoryFinal.test.ts > final176 exact continuation privacy and post-publication rollback
+M176 RANK {"gain":"599/400","scores":[{"acquisition":"138","base":{"numerator":"1","denominator":"17"},"pull":{"numerator":"64","denominator":"125"},"score":{"numerator":"43857","denominator":"53125"}},{"acquisition":"206","base":{"numerator":"1","denominator":"16"},"pull":{"numerator":"1017","denominator":"2000"},"score":{"numerator":"659183","denominator":"800000"}}],"winner":"10"}
+M176 PROBE {"law":"UncontrolledGain","carry":{"at":10,"status":"Known","exposure":"199/400","uncontrolled":"199/400"},"gain":"599/400","scores":[{"at":"10","base":{"numerator":"1","denominator":"17"},"pull":{"numerator":"64","denominator":"125"},"score":{"numerator":"43857","denominator":"53125"}},{"at":"11","base":{"numerator":"1","denominator":"16"},"pull":{"numerator":"1017","denominator":"2000"},"score":{"numerator":"659183","denominator":"800000"}}],"winner":"10","mean":"1/1"}
+M176 PERSISTENCE PASS every later state/output/trace/save/run byte repeat and public save12 through101; hidden safe state/output equal; actual publication fault rolls back and recovers exactly
+
+ ✓ src/test/assembledAffectMemoryFinal.test.ts (9 tests | 8 skipped) 216873ms
+   ✓ final176 exact continuation privacy and post-publication rollback 216872ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  09:17:03
+   Duration  221.97s (transform 3.06s, setup 0ms, collect 4.59s, tests 216.87s, environment 0ms, prepare 139ms)
+
+
+M176 types-final exit=0 elapsed=20.476s cap=600
+
+M176 closing exit=0 elapsed=6.924s cap=600
+Reference boundary check passed.
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4396}
+M176 PRESERVATION PASS unchanged0.126 production/formal/six frozen trees/all earlier tests, original controls/M17368 receipts/M158/M167 and21/15/132; exactly2 new test paths; register227lines/65306CRLFbytes; evidence2files/155004bytes.
+M176 measured preclosing seconds 1237.558
+
+M176 staged-size-diff exit=1 elapsed=1.228s cap=600
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+docs/planning/ASSEMBLED_CHARACTER_M176_CHECKS.txt:96: trailing whitespace.
++- Expected: 
+docs/planning/ASSEMBLED_CHARACTER_M176_CHECKS.txt:728: trailing whitespace.
+++ Received: 
+docs/planning/ASSEMBLED_CHARACTER_M176_CHECKS.txt:4167: trailing whitespace.
++    665| 
+docs/planning/ASSEMBLED_CHARACTER_M176_CHECKS.txt:4172: trailing whitespace.
++    669| 
+Traceback (most recent call last):
+  File "<string>", line 7, in <module>
+    subprocess.run(['git','diff','--cached','--check'],check=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\scoob\AppData\Local\Python\pythoncore-3.15-64\Lib\subprocess.py", line 692, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command ['git', 'diff', '--cached', '--check'] returned non-zero exit status 2.

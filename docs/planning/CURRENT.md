@@ -1,76 +1,39 @@
-# Current work — M176 active: affect-biased learned recall and memory acceptance
-M175 complete34c02b13,815/1800s. Current memory clauses1..8/10 pass; defining68,
-perceptual, access and actual remembered appraisal remain valid on ba92eef0/0.126.
-Owner self-approval continues until full pinned memory-family acceptance.
-## Card before implementation
-Three capabilities: actual prior affect changes learned-memory retrieval; selected
-experience changes shared social/joint appraisal; source/temporal/privacy/recovery
-controls preserve boundaries. BRIEF-12.3-9; retain all ten clauses and PHEN-MEM:2..11.
-No production/formal edits planned; one runtime/state/scheduler/trace/save.
-At most3 new test/fixture paths;20 evidence files/5MiB. Original M43/M123 controls
-remain unchanged. Current learned graph must be genuinely acquired, not authored.
-## Scenario and comparison, fixed before execution
-Current54-slot composition/currentMemory base; seed0, body30/rate10/width1/cap100.
-Use observed ThreatEvidence trial sources1..9 only (position/reappraisal channels):
-baseline, ineffective mitigation and actual current-cue risk. Safe/denied/hidden
-change only their existing permitted/diagnostic source controls, never belief state.
-Threat task from actual reappraisal declaration has no person dependency; a second
-task depends on the normally recognized passive target. No autonomous character.
-Normal rich voice/appearance establishes continuity; A10 reports true, B11 false,
-silent cue12. One focal Actor and one distinct perceived extra: Actor at10,
-Participant at11. Shared/UnitBudget encoding capacity2 admits both original M123
-units; graph capacity30/870, event/body capacity32, recall K1, delay16.
-No learned starting memory/graph. Current registry/calibration/laws remain fixed.
-Body samples and complete normal context/opportunity frames10/26. All task
-urgencies0 at10 (importance1), closed routes, must give NoCandidates with live affect;
-urgencies1 at26. Routes reopen25. This prevents pre-B execution differences.
-Full queues101, including later automatic recalls. No endpoint truncation.
-Reference UncontrolledGain Risk versus Safe must have identical actual episodes,
-encoding strengths, graph, acquisition/presentation histories and cue geometry before26.
-Affect10 must be Known positive versus Known zero from actual consumed operands.
-Capture that real completed appraisal in the authenticated delayed recall; no authored
-affect payload. Both candidates remain live; original affectRetrievalGain and canonical
-recall kernels consume actual trace operands. Positive gain selects older A, zero
-selects newer B. Labelled NoFeedback Risk control selects B with otherwise same history.
-Old M43 static graph/numerical scores remain controls, not current receiving inputs.
-Original M123 two-unit pulls motivate the discriminating delay, but exact current
-scores must come from actual acquired units/graph; no hardcoded psychological output.
-At26 actual social memory delivery must enter shared workspace and social/joint
-appraisal, giving contextual claim1 versus0 while ordinary person belief remains1/2.
-Assert live consumers first, link actual published IDs and retain immutable sources.
-Body recall may share that instant; identify social query by its actual audit output,
-not by taking the first memory event. No stochastic final-choice claim.
-Controls: denied Motion8 yields unknown likelihood/Unavailable prior, distinct from
-Safe Known zero; both gain1. Hidden trial truth preserves cognition. Denied social
-source10 yields no social recall26 (source-boundary control, not equal-history contrast).
-A later normal safe trial14..16 changes current appraisal26 but cannot rewrite the
-queued appraisal10/gain/winner. All original equations, goals and seeds remain fixed.
-Independent repeat/public original-input save12 compare EVERY later canonical byte;
-actual post-publication failure at26 must restore preinstant state and recover exactly.
-Setup failures retained: late importance adoption67.271s; missing route81.185s;
-bad task/polarity filter and trace join122.393s; factor diagnostic72.957s.
-Restored normal probe1, corrected task filter/trace contribution; Known now live.
-86.617s showed concern can choose at zero urgency. Self-amendment: closed routes1,
-route0 reopens25; NoCandidates/no expression replaces NoReasons. Other gates fixed.
-Card line-limit write failed; next shell mistakenly proceeded. Recorded immediately;
-this card commit follows test edits/start, before comparison outcome. No concealment.
-132.980s: retrieval ran but body recall plus task/forecast focus crowded out social
-recall. Self-amendment: shared workspace6 (from5), for3 tasks+forecast+2 memories;
-retain body channel, both live appraisals and all other gates. No law change.
-121.004s control setup: denying first encounter leaves no prior track. In that
-arm only, encounter11 opens a new normal file instead of claiming continuity.
-## Budget, preservation and done
-Every behavioral gate has actual producer/consumer liveness. Retain all failed
-attempts; diagnose before bounded self-amendments. No seed search or law tuning.
-One validation job;<=600s/command,1800s cumulative including failures. Split before
-overrun; never trim the gate. Test-only snapshot caching invalidates before transitions.
-Types, boundaries/research, six frozen trees/original controls/M173..175/M158/M167,
-doc/evidence budgets and staged Git size. Passing checks ends verification.
-Done iff all declared current comparisons/controls pass and every pinned memory
-clause and PHEN-MEM requirement has current-candidate evidence/classification.
-Then record memory-family acceptance in the one register; remaining14 families and
-whole-character gate stay open. No UI, reduction or universal memory claim.
-MEC004/007/008/009/010/022; RO005/006/007/010/017/019/020/021/022 retain scoped
-dispositions and wider triggers. No new Campaign3 verdict or generic debt closure.
-E62/P44/N13/U13=132;21 mapped/0 accepted families until this gate passes.
+# Current work — memory-family acceptance complete (M176)
+The one assembled character passes every pinned memory-and-recognition clause.
+Current candidate ba92eef0, rules/registry0.126-candidate; no production change.
+[M176 result](ASSEMBLED_CHARACTER_M176_RESULT.md) records current acceptance,
+original comparisons, controls, failed attempts, amendments and scope limits.
+
+## Accepted result
+Family12.3: all10 clauses; PHEN-MEM-001:2..9 current comparisons pass.
+:10/:11 remain standing seam/reopen constraints.
+M173: all68 original defining programs (56 reference/12 comparison), full queues.
+M174: actual familiarity, detail loss, reconstruction, vividness and single credit.
+M175: recency, selective reinforcement, K/tie, retained-but-unselected and
+significant memory consumed in later spatial appraisal.
+M176: prior actual affect changes learned retrieval and live social/joint appraisal;
+ordinary belief stays1/2. Unknown, denied, hidden and later-evidence controls pass.
+Exact independent repeat, original-input save/restore and actual post-publication
+rollback/recovery pass through every remaining settled instant to full queue101.
+One model/state/scheduler/trace/save; one episodic owner; no standalone factory.
+
+## Guardrails and record
+M176 used2 new test/fixture paths,2 evidence files within5MiB.
+Verification1260 rounded-up seconds/1800, all failures included; each command<600s.
+No production/formal or prior test/evidence changes. Original controls, M158 baseline,
+M167 fault save and six frozen trees preserved. Passing checks end verification.
+Failed setup attempts, actual cross-system interactions and self-approved repairs
+are recorded. df14992a also records a failed card write followed by test start:
+that card commit followed edits/start, before result; not presented as pre-code.
+
+## Remaining scope
+Accepted complete families: **1/15 (memory12.3)**.21 members remain mapped.
+Evidence index unchanged: E62/P44/N13/U13=132; not a completion percentage.
+Other14 families and whole-character acceptance remain open. Their E entries
+retain version scope and still require current-candidate comparison/classification.
+No UI, reduction, autonomous peers or new baseline scope authorized.
+Broader autobiographical compression, general guessed-belief authority and wider
+GA/long-horizon claims are not inferred. Conditional obligations retain triggers.
+No active milestone or validation job remains after this closing result.
+
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
