@@ -4,10 +4,10 @@ import {dataItems as items,dataText as txt,dataKey as key,invalidModel} from '..
 import {assertPresentationUpdate} from './affectMemory';
 import type {ScheduledEvent} from '../substrate/scheduler';
 export const MEMORY_USE='assembled-memory-use/0.1',MEMORY_USE_VERSION='assembled-character-memory-use/0.1-candidate';
-export type MemoryUseLaw='SignificanceFirst'|'AgeOnly';
+export type MemoryUseLaw='SignificanceFirst'|'SharedProtection'|'UseOnly'|'AgeOnly';
 export type MemoryUseConsumer=(event:ScheduledEvent,operands:readonly CanonicalValue[],report:CanonicalValue)=>void;
-export function compileMemoryUse(v:CanonicalValue):MemoryUseLaw{
- const a=items(v,'list');if(a.length!==2||txt(a[0])!==MEMORY_USE||!['SignificanceFirst','AgeOnly'].includes(txt(a[1])))invalidModel('memory use requires named retention law');
+export function compileMemoryUse(v:CanonicalValue,comparators=false):MemoryUseLaw{
+ const a=items(v,'list');if(a.length!==2||txt(a[0])!==MEMORY_USE||!(comparators?['SignificanceFirst','SharedProtection','UseOnly','AgeOnly']:['SignificanceFirst','AgeOnly']).includes(txt(a[1])))invalidModel('memory use requires named retention law');
  return txt(a[1]) as MemoryUseLaw;
 }
 /** Called only after the extension authenticates the real consumer and operand. */

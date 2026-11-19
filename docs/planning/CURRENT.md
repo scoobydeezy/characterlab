@@ -1,47 +1,24 @@
-# Current work — M168 retained memory-law comparisons
-Important and used memories must compete under the original named policies in
-the same character. Add SharedProtection/UseOnly alongside the fixed reference
-SignificanceFirst and AgeOnly; no new memory owner or per-phenomenon runtime.
-Owner2026-11-18 self-approval covers this bounded package toward family acceptance.
-Baseline5b45f419; M167 remains complete. F-12.3 P2 stays open until final replay.
+# Current work — M168 complete
+All four retained memory laws are admitted in0.122. SignificanceFirst stays the
+reference. Actual significant but unused old15 survives SharedProtection/reference
+and changes live appraisal4000; UseOnly loses15 and gives SameDistance.
+[Result](ASSEMBLED_CHARACTER_M168_RESULT.md); [checks](ASSEMBLED_CHARACTER_M168_CHECKS.txt).
+Pre-code card/contract96dc974e; baseline5b45f419. Four production files/one test.
+One existing episodic owner/state/scheduler/save, no alternative pipeline.
+Public SharedProtection save17 matches EVERY later state/output/trace/save/identity
+through full queue5001. All three native arms finish5001. Actual B0 metadata checked.
+2048 exact original-kernel comparisons; admission/fresh-credit/capacity negatives.
+Native158 original18 boundary receipt/save6 continuation passes without regeneration.
+Initial wrong tsconfig path and60.165s policy timeout are retained. Same cases pass
+63.372s after bounded180s cap amendment; cumulative1800s unchanged.
+Pre-execution spatial-activeFrom18 in every arm isolates significance from new use17.
+Final types/boundary/research/preservation/staged-size pass.
+Verification 1385.006/1800s, all failures included; no extension.
 
-## Pre-code card
-Capabilities(2): admit all four retained comparison policies in version0.122;
-show actual acquired significance survives SharedProtection and loses under
-UseOnly when unused, with live later appraisal and complete continuation.
-Contracts: ASSEMBLED_RETENTION_LAWS_V0_122 plus unchanged original significance/
-use/recency contracts. MEC004/007/008/009/010/015/019/020/022 retain dispositions.
-Production/test paths(5): model.ts, traceBinding.ts, memoryUse.ts, retention.ts,
-src/test/assembledRetentionLaws.test.ts. No frozen tree or existing fixture edits.
-Compile admission gates two new names to0.122; older bundles remain unchanged.
-One existing episodic346 owner, B0 ranking, immutable content and separate metadata.
-Reference policy stays SignificanceFirst; variants never close a missing reference.
-
-Comparison: unchanged M164 current High physical four trials1..16, body30/rate10,
-seed0, no social task dependencies, no learned S0. Goal significance17; original
-pressure18..30, current positions3998/3999, live spatial appraisal4000, tail5001.
-Promote to0.122 with PresentationFrequency and an empty rehearsal schedule.
-Run SignificanceFirst/SharedProtection/UseOnly separately; all other inputs fixed.
-Predeclare: High grants old15 MovingCloser; Shared and reference retain15, UseOnly
-loses15; actual recalled operands yield MovingFarther vs SameDistance at4000.
-No final-choice claim. Check liveness before interpreting every comparison.
-Compare all four exact tier formulas to original kernels over exhaustive metadata,
-ties, recency and capacities; use actual native retention receipts for B0 evidence.
-This separates policy qualification from full original defining68-case acceptance.
-
-Checks serial: types60s; policy/admission60s; each native arm<=400s; shared public
-save17/repeat and every-boundary continuation<=600s; immutable native158<=200s;
-boundary/research/preservation/size<=40s. Total<=1800s, each<=600s; failures count.
-If measured runs cannot fit, preserve partial result and replan dependency work;
-never omit required assertions or rerun an unchanged blocker to bypass limits.
-Risks: legacy admission leaks, tier tie drift, current credit used as B0, wrong
-law in runtime, missing late appraisal, save losing law identity; original kernels,
-native receipts and exact original-input restore cover these respectively.
-Evidence<=20 files/5MiB; doc caps unchanged. One compact result/check log.
-Done: four policy correspondences, three native arms and exact restore pass;
-negative admission/tier/metadata controls, original receipt, types/boundaries and
-preservation pass. No full-family claim before remaining defining controls/replay.
-Next: missing/unselected/capacity/cue/current-historical controls, then full family
-candidate replay of all ten clauses and pinned member comparisons.
-No UI, reduction, autonomous rehearsal/peers or verification framework.
+Next: acquired-then-lost capacity, retained-but-unselected and missing-cue controls;
+later current assessment versus historical significance; then final family replay.
+Pin each bounded card/contract before code. Owner self-approval continues to full
+memory-family acceptance; preserve laws, meaningful controls and final21/15/132 gate.
+F-12.3 P2 remains open; E61/P45/N13/U13=132;21 mappings,0/15 accepted families.
+No UI, reduction, autonomous rehearsal/peers or new validation framework.
 | Research obligations | **0 active / 18 conditional / 0 unowned** |

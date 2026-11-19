@@ -1128,3 +1128,10 @@ Native shared-recall overlap and full recovery now pass after bounded test-only
 performance repair; prior timeout remains. Actual pre-fault save17 restores every
 later boundary5001. No law/owner/store change, retired control or family acceptance.
 [Bounded result](ASSEMBLED_CHARACTER_M167_RESULT.md).
+
+M168 preserves all four retention policies in the existing episodic346 owner.
+MEC004/007/008/009/010/015/019/020/022 retain their dispositions. Original kernels
+match2048 cases; native significance-only survival changes later appraisal under
+SharedProtection versus UseOnly. Reference SignificanceFirst remains fixed.
+No new state owner, retired comparison or family acceptance.
+[Bounded result](ASSEMBLED_CHARACTER_M168_RESULT.md).
