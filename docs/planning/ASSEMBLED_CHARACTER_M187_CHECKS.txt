@@ -72,3 +72,89 @@ AssertionError: expected 3n to be 1n // Object.is equality
    Start at  18:21:21
    Duration  123.38s (transform 3.15s, setup 0ms, collect 4.70s, tests 118.33s, environment 0ms, prepare 103ms)
 
+
+M187 primary-current-mode-and-consumer-joins exit=0 elapsed=158.913s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReappraisalCurrent.test.ts > M187 connection: chosen completion changes later hypothetical threat and grounded choice
+M187 OPERATION {"mode":"3","probabilities":["2/3","1/3","0/1"],"nuclei":[{"task":"cognition","die":"6","base":"1/2"},{"task":"physical-A","die":"4","base":"1/3"}],"sources":[{"task":"cognition","role":"1","strength":"1/1"},{"task":"cognition","role":"2","strength":"119/400"},{"task":"physical-A","role":"1","strength":"1/2"},{"task":"physical-A","role":"2","strength":"199/600"},{"task":"physical-B","role":"1","strength":"1/2"}]}
+M187 OPERATION {"mode":"3","probabilities":["2/3","1/3","0/1"],"nuclei":[{"task":"cognition","die":"6","base":"1/2"},{"task":"physical-A","die":"4","base":"1/3"}],"sources":[{"task":"cognition","role":"1","strength":"1/1"},{"task":"cognition","role":"2","strength":"119/400"},{"task":"physical-A","role":"1","strength":"1/2"},{"task":"physical-A","role":"2","strength":"199/600"},{"task":"physical-B","role":"1","strength":"1/2"}]}
+M187 DIAGNOSTIC {"changed":36,"cases":"72","counts":["36","72"],"modes":["3","1"],"probabilities":[["1/2","1/2"],["7/9","2/9"]],"nuclei":[[{"roles":["1/2","0/1","0/1"],"die":"6","standing":"0","situation":"0"},{"roles":["1/2","0/1","0/1"],"die":"6","standing":"0","situation":"0"}],[{"roles":["1/2","0/1","199/799"],"die":"6","standing":"0","situation":"2"},{"roles":["1/2","0/1","0/1"],"die":"6","standing":"0","situation":"0"}]]}
+M187 EXACT {"cases":"72","changed":36,"firstCandidateWins":["36","72"],"probabilities":["36/72","72/72"],"scope":"captured actual contexts; paired uniform faces and fair ties; no seed-pair claim"}
+
+stdout | src/test/assembledReappraisalCurrent.test.ts > M187 connection: chosen completion changes later hypothetical threat and grounded choice
+M187 STRESS 0 {"at":"12","level":83}
+M187 STRESS 1 {"at":"12","level":249}
+M187 CONNECTION PASS perceived context means -> chosen operation10 -> frame140 -> later hypothetical appraisal11 -> actual coupled response; stress12 dose0/166; complete101; original conditional semantics agree.
+
+ ✓ src/test/assembledReappraisalCurrent.test.ts (8 tests | 7 skipped) 153297ms
+   ✓ M187 connection: chosen completion changes later hypothetical threat and grounded choice 153297ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  18:24:40
+   Duration  158.36s (transform 3.15s, setup 0ms, collect 4.72s, tests 153.30s, environment 0ms, prepare 104ms)
+
+
+M187 current-reappraisal-controls exit=0 elapsed=191.518s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReappraisalCurrent.test.ts > M187 controls: suppression unknown ineffective and hidden truth
+M187 OPERATION {"mode":"3","probabilities":["2/3","1/3","0/1"],"nuclei":[{"task":"cognition","die":"6","base":"1/2"},{"task":"physical-A","die":"4","base":"1/3"}],"sources":[{"task":"cognition","role":"1","strength":"1/1"},{"task":"cognition","role":"2","strength":"119/400"},{"task":"physical-A","role":"1","strength":"1/2"},{"task":"physical-A","role":"2","strength":"199/600"},{"task":"physical-B","role":"1","strength":"1/2"}]}
+
+stdout | src/test/assembledReappraisalCurrent.test.ts > M187 controls: suppression unknown ineffective and hidden truth
+M187 CONTROLS PASS NoReappraisal/denied alternative/ineffective benefit; full101; invalid bundle and direct frame input reject.
+
+ ✓ src/test/assembledReappraisalCurrent.test.ts (8 tests | 7 skipped) 185908ms
+   ✓ M187 controls: suppression unknown ineffective and hidden truth 185907ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  18:28:20
+   Duration  190.96s (transform 3.14s, setup 0ms, collect 4.69s, tests 185.91s, environment 0ms, prepare 103ms)
+
+
+M187 current-reappraisal-persistence exit=0 elapsed=274.786s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReappraisalCurrent.test.ts > M187 persistence privacy and actual frame-write rollback
+M187 OPERATION {"mode":"3","probabilities":["2/3","1/3","0/1"],"nuclei":[{"task":"cognition","die":"6","base":"1/2"},{"task":"physical-A","die":"4","base":"1/3"}],"sources":[{"task":"cognition","role":"1","strength":"1/1"},{"task":"cognition","role":"2","strength":"119/400"},{"task":"physical-A","role":"1","strength":"1/2"},{"task":"physical-A","role":"2","strength":"199/600"},{"task":"physical-B","role":"1","strength":"1/2"}]}
+M187 PERSISTENCE PASS every full state/output/trace/save/run byte repeat/restore9/recovery9->101; every hidden safe prefix; actual frame patch rollback.
+
+ ✓ src/test/assembledReappraisalCurrent.test.ts (8 tests | 7 skipped) 269146ms
+   ✓ M187 persistence privacy and actual frame-write rollback 269146ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  18:31:43
+   Duration  274.23s (transform 3.15s, setup 0ms, collect 4.70s, tests 269.15s, environment 0ms, prepare 104ms)
+
+
+M187 final-types exit=0 elapsed=20.493s cap=600
+
+M187 preservation-boundary-research exit=0 elapsed=7.461s cap=600
+Reference boundary check passed.
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4407}
+M187 PRESERVATION PASS zero production/formal/prior-test/evidence changes; exactly2 new test paths;21/15/132 unchanged; register238lines/65489CRLFbytes; evidence2files/15149bytes.
+M187 measured preclosing seconds 869.631
+
+M187 staged-size-whitespace exit=1 elapsed=0.320s cap=600
+Traceback (most recent call last):
+  File "<string>", line 5, in <module>
+    staged=set(subprocess.check_output(['git','diff','--cached','--name-only'],text=True).splitlines());assert staged==set(paths),staged
+                                                                                                               ^^^^^^^^^^^^^^^^^^
+AssertionError: {'docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md', 'docs/planning/ASSEMBLED_CHARACTER_M187_RESULT.md', 'docs/planning/RESEARCH_OBLIGATIONS.json', 'docs/planning/CURRENT.md', 'src/test/assembledReappraisalCurrent.test.ts', 'docs/planning/ASSEMBLED_CHARACTER_M187_CHECKS.txt'}
+
+M187 final-staged-size-whitespace exit=0 elapsed=0.803s cap=600
+PASS: Git index contains no files at or above50,000,000 bytes.
+ docs/planning/ASSEMBLED_CHARACTER_M187_CHECKS.txt  |  75 ++++++++++++++
+ docs/planning/ASSEMBLED_CHARACTER_M187_RESULT.md   |  96 +++++++++++++++++
+ .../planning/ASSEMBLED_CHARACTER_RECONCILIATION.md |   9 +-
+ docs/planning/CURRENT.md                           | 114 +++++++++------------
+ docs/planning/RESEARCH_OBLIGATIONS.json            |  16 +++
+ src/test/assembledReappraisalCurrent.test.ts       |  16 +--
+ 6 files changed, 247 insertions(+), 79 deletions(-)
+M187 STAGED PASS exactly6 remaining intended paths (fixture already committed); no production/formal/prior-test edits; size and whitespace pass.

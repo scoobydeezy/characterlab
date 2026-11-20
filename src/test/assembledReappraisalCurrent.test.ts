@@ -27,9 +27,10 @@ import {sid} from '../assembled/skill';
 import {outputs,signedValue,type Run} from './fixtures/assembledComparison';
 import {C} from './fixtures/campaign2Cognitive';
 import {timeDomainVersion,EXTENDED_TIME_LIMIT} from '../assembled/timeDomain';
-import {STRESS,stressAnchor} from '../assembled/regulatoryStress';
+import {STRESS,stressAnchor,stressPath} from '../assembled/regulatoryStress';
 import {dataRecord as metadataRecord} from '../campaign2/canonicalData';
 const INTERPRETED_THREAT_VERSION=timeDomainVersion(GOAL_ABSENCE_VERSION,EXTENDED_TIME_LIMIT);
+const taskLabel=(t:CanonicalValue)=>key(t)===key(taskA)?'physical-A':key(t)===key(taskB)?'physical-B':'cognition';
 const cache=new WeakMap<Run,ReturnType<Run['snapshot']>>();
 const snap=(r:Run)=>{let v=cache.get(r);if(!v){v=r.snapshot();cache.set(r,v);}return v;};
 async function step(r:Run){cache.delete(r);return r.settleNextInstant();}
@@ -45,7 +46,7 @@ const definition=(s:ReturnType<typeof fixture>['s'],name:string)=>f(metadataReco
 function projection(r:Run,live=true){
  const a=reports(r,SHARED_AFFECT_APPRAISAL).find(v=>uint(v[1])===11n)!;expect(a).toBeDefined();
  const provenance=items(a[7],'list');expect(provenance[0]).toEqual(taskA);
- const decision=dec(r);expect(decision).toBeDefined();const data=result(decision),context=rec(f(decision,3n),408n),raw=rec(f(context,2n),403n);
+ const decision=dec(r);expect(decision).toBeDefined();expect(outputs(snap(r).outputs,426n).some(e=>key(f(rec(f(e,2n),425n),2n))===key(decision)),'actual later expression').toBe(true);const data=result(decision),context=rec(f(decision,3n),408n),raw=rec(f(context,2n),403n);
  const signals=items(f(raw,3n),'set').map(v=>rec(v,402n)),ns=items(f(context,3n),'list').map(v=>rec(v,407n));
  const signal=(task:CanonicalValue,role:bigint)=>signals.filter(v=>{const k=rec(f(v,1n),401n);return key(f(k,2n))===key(task)&&uint(f(k,3n))===role;});
  const forTask=(task:CanonicalValue)=>ns.filter(n=>key(f(rec(f(n,1n),404n),3n))===key(f(rec(task,371n),2n)));
@@ -102,7 +103,8 @@ function operation(r:Run,completed:boolean){
  const b=fixture(),slots=items(decode(b.s.registry),'list'),decl=items(slots[28],'list'),d=outputs(snap(r).outputs,409n).find(d=>signedValue(f(d,2n))===10n)!;
  expect(d,'actual chosen cognitive decision10').toBeDefined();const data=result(d);
  expect(f(rec(f(data,1n),395n),2n)).toEqual(decl[2]);
- expect(uint(f(data,8n))).toBe(1n);
+ const expression=outputs(snap(r).outputs,426n).find(e=>key(f(rec(f(e,2n),425n),2n))===key(d));expect(expression,'actual cognitive expression').toBeDefined();
+ const context=rec(f(d,3n),408n),raw=rec(f(context,2n),403n);console.info('M187 OPERATION '+JSON.stringify({mode:String(uint(f(data,8n))),probabilities:items(f(data,2n),'list').map(v=>frac(f(rec(v,421n),2n))),nuclei:items(f(context,3n),'list').map(v=>{const n=rec(v,407n);return {task:taskLabel(cr(371,[C,f(rec(f(n,1n),404n),3n)])),die:String(uint(f(n,4n))),base:frac(f(rec(f(n,2n),406n),1n))};}),sources:items(f(raw,3n),'set').map(v=>{const s=rec(v,402n),k=rec(f(s,1n),401n);return {task:taskLabel(f(k,2n)),role:String(uint(f(k,3n))),strength:frac(f(s,2n))};})}));
  const outcomes=outputs(snap(r).outputs,433n).filter(o=>{const intent=rec(f(rec(f(rec(f(o,2n),432n),2n),431n),2n),425n);return key(f(intent,2n))===key(d);});
  expect(outcomes).toHaveLength(1);expect(uint(f(outcomes[0],3n))>0n).toBe(completed);
  expect(motive(r).slice(3)).toEqual([true,q(1,1),q(1,1),q(1,1)]);
@@ -142,17 +144,17 @@ it('M187 connection: chosen completion changes later hypothetical threat and gro
   expect(rows[4].frameBefore!==null).toBe(frame(native).at>0n);
   expect(rows[4].affect).toEqual(scenario==='SafetyOnly'?['0/1','0/1']:['1/1','1/1']);
  }
- for(const [i,r]of[a,b].entries()){await through(r,12n);const report=reports(r,STRESS+'/applied').find(v=>signedValue(v[1])===12n)!;expect(report,'strictly later stress12').toBeDefined();const packet=items(report[2],'list');expect(signedValue(packet[2])).toBe(11n);expect(packet[4]).toEqual(list(i===0?pa.a:pb.a));expect(uint(report[6])).toBe(i===0?0n:166n);await finish(r);expect(state(r).read(reappraisalPath(C))).toEqual(before);}
+ for(const [i,r]of[a,b].entries()){await through(r,12n);const report=reports(r,STRESS+'/applied').find(v=>signedValue(v[1])===12n)!;expect(report,'strictly later stress12').toBeDefined();const packet=items(report[2],'list');expect(signedValue(packet[2])).toBe(11n);expect(packet[4]).toEqual(list(i===0?pa.a:pb.a));expect(uint(report[6])).toBe(i===0?0n:166n);expect(state(r).read(stressPath(C)).value).toEqual(report[4]);console.info('M187 STRESS '+i+' '+JSON.stringify(stressAnchor(report[4]),(_k,v)=>typeof v==='bigint'?String(v):v));await finish(r);expect(state(r).read(reappraisalPath(C))).toEqual(before);}
  console.info('M187 CONNECTION PASS perceived context means -> chosen operation10 -> frame140 -> later hypothetical appraisal11 -> actual coupled response; stress12 dose0/166; complete101; original conditional semantics agree.');
 },540000);
 it('M187 controls: suppression unknown ineffective and hidden truth',async()=>{
- const no=await create('noFrame',11n);operation(no.r,true);interpreted(no.r,false);
+ const no=await create('noFrame',11n);const completed=operation(no.r,true);interpreted(no.r,false);
  const denied=await create('denied',11n);expect(knowledge(denied.r).means[1]).toBeUndefined();expect(motive(denied.r)[3]).toBe(false);expect(frame(denied.r).at).toBe(0n);expect(txt(appraisal(denied.r,11)[5])).toBe('Known');
  const ineffective=await create('ineffective',11n);expect(knowledge(ineffective.r).means.map(v=>v!.equals(Q.of(1n)))).toEqual([true,true]);expect(motive(ineffective.r)[3]).toBe(true);expect(motive(ineffective.r)[6]).toEqual(q(0,1));expect(frame(ineffective.r).at).toBe(0n);
  
  const F=fixture();await expect(prepareCharacterModel({...F.s,registrySchemaVersion:RESERVE_AFFECT_REGISTRY})).rejects.toThrow('unsupported assembled model version bundle');
- const direct=list([signed(10),u(140),REAPPRAISAL_APPLY,list([text('assembled-reappraisal/0.1/frame'),u(10),typedIdentifier(1141,u(1)),list([])]),list([])]);
- await expect(createCharacterRun(await prepareCharacterModel(F.s),{...F.d,orderedInputs:enc(list([...items(decode(F.d.orderedInputs),'list'),direct]))})).rejects.toThrow();
+ const direct=list([signed(10),u(140),REAPPRAISAL_APPLY,list([text('assembled-reappraisal/0.1/frame'),u(10),f(completed,1n),list(knowledge(no.r).sources)]),list([])]);
+ expect(reappraisalFrame(items(direct,'list')[3]).at).toBe(10n);await expect(createCharacterRun(await prepareCharacterModel(F.s),{...F.d,orderedInputs:enc(list([...items(decode(F.d.orderedInputs),'list'),direct]))})).rejects.toThrow();
  for(const x of[no,denied,ineffective])await finish(x.r);
  console.info('M187 CONTROLS PASS NoReappraisal/denied alternative/ineffective benefit; full101; invalid bundle and direct frame input reject.');
 },540000);
