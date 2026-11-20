@@ -72,8 +72,10 @@ it('M195 second witness rollback and full continuation preserve accumulated hist
  console.info('M195 CONTINUATION PASS repeat11, reached second witness140 rollback, save11 recovery/save12 restoration all later complete bytes through101; prior history retained.');
 },570000);
 
-it('M195 inspect inherited route validity after missing second candidate',()=>{
- const b=fixture();const rows=items(decode(b.d.orderedInputs),'list');
- const summary=rows.flatMap(v=>{const a=items(v,'list'),id=a[2];if(typeof id==='boolean'||id.kind!=='typedIdentifier'||typeof id.payload==='boolean'||id.payload.kind!=='text'||!['event/assembled-strategy-display','event/assembled-priority-display','event/assembled-horizon-display'].includes(id.payload.value))return [];return [{at:signedValue(a[0]).toString(),event:id.payload.value,payload:a[3]}];});
- console.info('M195 SOURCE DIAGNOSTIC',JSON.stringify(summary,(_,v)=>typeof v==='bigint'?v.toString():v));expect(summary.length).toBeGreaterThan(0);
+it('M195 preserves expired setup and changes only latest declared route validity',()=>{
+ const old=fixture({originalExpired:true}),now=fixture();expect(old.s).toEqual(now.s);expect(old.d.initialState).toEqual(now.d.initialState);expect(old.d.runSeed).toEqual(now.d.runSeed);
+ const a=items(decode(old.d.orderedInputs),'list'),b=items(decode(now.d.orderedInputs),'list');expect(a).toHaveLength(b.length);const changed=a.flatMap((v,i)=>eq(v,b[i])?[]:[i]);expect(changed).toHaveLength(1);
+ const x=items(a[changed[0]],'list'),y=items(b[changed[0]],'list');expect(signedValue(x[0])).toBe(8n);expect(x.slice(0,3)).toEqual(y.slice(0,3));expect(x[4]).toEqual(y[4]);const before=items(items(x[3],'list')[1],'list'),after=items(items(y[3],'list')[1],'list');expect(before).toHaveLength(after.length);
+ for(let i=0;i<before.length;i++){const p=items(before[i],'list'),qv=items(after[i],'list');expect(p[5]).toEqual(u(10));expect(qv).toEqual([...p.slice(0,5),u(16),p[6]]);}
+ console.info('M195 AMENDMENT PASS only latest issued8 route validity10->16 changes; original expired fixture remains, all source values/seed/model/initial state otherwise fixed.');
 });

@@ -52,3 +52,37 @@ M195 SOURCE DIAGNOSTIC [{"at":"1","event":"event/assembled-priority-display","pa
    Start at  11:46:27
    Duration  64.54s (transform 3.15s, setup 0ms, collect 4.69s, tests 59.41s, environment 0ms, prepare 127ms)
 
+
+M195 repeated-renewed-routes exit=1 elapsed=114.841s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRepeatedInterference.test.ts > M195 preserves expired setup and changes only latest declared route validity
+M195 AMENDMENT PASS only latest issued8 route validity10->16 changes; original expired fixture remains, all source values/seed/model/initial state otherwise fixed.
+
+ ❯ src/test/assembledRepeatedInterference.test.ts (9 tests | 1 failed | 7 skipped) 109178ms
+   × M195 repeated actual blocks change prior expectation without rewriting intent 108331ms
+     → procedural: execution without current setting
+   ✓ M195 preserves expired setup and changes only latest declared route validity 847ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledRepeatedInterference.test.ts > M195 repeated actual blocks change prior expectation without rewriting intent
+SchedulerContractError: procedural: execution without current setting
+ ❯ fail src/assembled/skillExecution.ts:13:37
+
+ ❯ Object.assess src/assembled/skillExecution.ts:32:121
+ ❯ Object.execute src/assembled/body.ts:97:105
+ ❯ src/assembled/runtime.ts:168:23
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:373:26
+ ❯ Object.settleNextInstant src/assembled/character.ts:45:66
+ ❯ Module.through src/test/fixtures/assembledAffectReceiving.ts:21:107
+ ❯ src/test/assembledRepeatedInterference.test.ts:40:2
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed | 7 skipped (9)
+   Start at  11:48:45
+   Duration  114.30s (transform 3.13s, setup 0ms, collect 4.68s, tests 109.18s, environment 0ms, prepare 131ms)
+
