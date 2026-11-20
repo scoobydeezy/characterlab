@@ -69,3 +69,11 @@ opportunity contexts. It supplies current phase/impairment/difficulty/permission
 not learned competence or an outcome. No other physical consumer requires a
 missing source (habit/communication explicitly permit absence). Retain failure;
 same two-attempt gate, reference laws, seed, fixed values and budget.
+
+Second execution is competent/blocked but has no B outcome; keep this one-episode
+control. Before the retry, a normal display11 makes B/route1 the only usable
+route (other routes unavailable, through16), equally in both arms. No internal
+plan, choice or outcome is supplied. Two real B attempts and 3/4-versus1/2 stay
+mandatory. First choice keeps matched nonempty draws; second must be Auto with
+probability1 and identical empty transcripts/intent in both arms. This changes
+the declared opportunity, not psychology; no seed search or choice-change claim.
