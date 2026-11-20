@@ -1224,3 +1224,11 @@ Original LastClaim/OutcomeOnly remain discriminated controls. MEC004/015/017/019
 retain identity/visibility, addressed dice, frozen meaning and execution distinctions.
 Passive query40 consumes retained knowledge; later-attempt nonrecipient comparison
 and final candidate family replay remain. [Result](ASSEMBLED_CHARACTER_M198_RESULT.md).
+
+M199 transfers M195 actual repetition and agency0.3 later nonrecipient evidence
+to0.134: main AcrossEpisodeMean changes appraisal; passive episodes stay separate;
+A-only reports never alter B's second actual outcome or other owned state.
+MEC004/015/017/019/022 and GroupedMean/LastClaim/OutcomeOnly/LatestEpisode controls
+remain. Admission permits disjoint main/passive reports; real same-main conflicts
+and prior-version guards remain. Defect/failure53bc2e6d preserved; no law change.
+Competence/opportunity transfer and family gate remain. [Result](ASSEMBLED_CHARACTER_M199_RESULT.md).
