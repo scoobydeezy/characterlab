@@ -1,31 +1,59 @@
-# Current work — M189 complete; final AFFECT acceptance next
-The current character preserves all four independently sourced affect factors and
-their actual decision consumers. Identical body history and sensation can yield
-different later stress from learned affect; NoImpulse removes that consequence.
+# Current work — M190 final AFFECT acceptance
+M189 completeec037a49. Owner2026-11-20 delegates full AFFECT completion
+under bounded self-approval. No production change is planned.
 
-[M189 result](ASSEMBLED_CHARACTER_M189_RESULT.md);
-[checks](ASSEMBLED_CHARACTER_M189_CHECKS.txt). Plan211b4ae8; base09a2b5a3.
-Failure/source preservedbdff0f0e. Rules/registry0.129-candidate unchanged.
-Two new test paths; no production/formal/prior-test changes.
+## Bounded card — committed before code
+Capability: known absence of a threat goal remains different from missing external
+evidence; ordinary later goal adoption changes later affect with knowledge retained.
+Then reconcile all eight BRIEF12.5 clauses and PHEN-AFFECT-001:4..13 for family
+acceptance on the unchanged rules/registry0.129 candidate.
+No broader scalar impossibility, general physiology or emotion taxonomy claim.
 
-All16 cells/32 declaration edges and48 original formula comparisons pass.
-Actual appraisal/concern/raw/compiled reason/decision/expression/attempt joins live;
-stress11 doses498/298/0 match the exact independently calculated source.
-Competing bodily concern remains a separately traced interaction.
-Unknown control, every hidden safe prefix and exact repeat/public save9 continuation
-through101 pass. Current M179 risk/safe/NoImpulse yields stress249/0/0 after
-identical complete physical histories and selected sensation through10.
-Full/ScalarThreat and body-only original comparisons remain preserved and scoped.
-Five final gates, types and required checks pass. Verification 829.190 seconds<1800;
-each command<600. One failed trace reader corrected; no budget extension.
+Native source: exact M180 risk/noGoal/noReceipt/denied/noGoalNoReceipt/safe/laterGoal.
+Promote only the version bundle/body schema with bias0; existing stress0 retained.
+Seed0, three tasks, threat nonsocial; other bindings receive normal passive evidence.
+Body30/cap100/rate10/grid1; visual panels1..9, body samples10/26, closed early routes.
+NoGoal removes only actual threat status/instruction/adoption1; danger history stays.
+NoReceipt removes After9, not its Before/Motion. LaterGoal adopts normally at12.
+Same reference laws/calibration; no initial learned belief or alternate pipeline.
+Preserve original0.127 absence defect and original biological source counterparts.
 
-Next bounded package: current goal-absence/receipt/adoption transfer and compact
-eight-clause AFFECT acceptance map. Owner2026-11-20 authorizes full AFFECT
-completion under bounded self-approval. Passing M184–M189 checks stand unless
-a concrete change invalidates them; no unrelated breadth.
-Pinned21/15/132, E64/P42/N13/U13 unchanged. AFFECT remains open pending that map.
-Memory12.3 accepted0.126 only. Wider BIO/stress sensing and final whole-candidate
-replay remain; no UI/reduction/debt closure.
+Predeclared comparisons: actual owned status read absent -> Known0; adopted ->
+U199/400. Whole physical history/current sensation through10 equal, stress11=0/249.
+Missing/denied cue remains Unavailable even without the goal; known-safe is zero.
+Actual source report/event joins authentic strictly later stress receiver.
+Later adoption12 -> live appraisal26/stress27 while earlier outputs/knowledge remain.
+Exact repeat/public save11 continuation at every subsequent instant through101.
+Every native scenario exhausts101. No sampled-choice claim or seed search.
+
+One new test path assembledRegulatorySourcesCurrent; existing source/control
+fixtures read-only. CURRENT/register/obligations and one result/check pair.
+Checks serial, <=600s each /1800s total incl failures:
+types; original/known absence; receipt controls; later adoption/continuation;
+acceptance evidence/source preservation; boundary/research/staged size/whitespace.
+<=20 evidence files/5MiB. No verifier framework or unaffected broad suite rerun.
+Risks: body-version transfer, known-zero/unknown confusion, provenance/timing,
+stale current-candidate claims or unclassified comparator differences.
+Keep failures and diagnose before bounded repair. No laws, scope or gate weakening.
+
+## Acceptance review to perform after the native gates
+Map clauses1..8 to M184–M190 and preserved original qualifications; use one compact
+table in the result and the existing register, not a new catalog.
+Map corpus4..11 behavioral requirements and12/13 preservation/reopen constraints.
+M184 sources/learning/privacy; M185 response/execution; M186 retrieval/NoFeedback;
+M187 chosen reappraisal; M188 embarrassment; M189 factors/regulatory; M190 goal/
+receipt/adoption. Retain original scalar alternatives and failed/null comparisons.
+Classify every used cross-version difference and name current evidence or
+unchanged dependency for carry-forward. Missing required evidence blocks acceptance.
+Keep conditional research debts and broader whole-character dependencies explicit.
+Do not rerun passing M184–M189 witnesses without a concrete invalidation reason.
+
+Done: all native and required checks pass AND no unresolved pinned AFFECT
+requirement; record family12.5 accepted0.129. Otherwise record the exact gap and
+continue bounded work within delegated authority. No blanket assembly acceptance.
+Pinned21/15/132 remains; only clause8 P->E is anticipated if its full map succeeds.
+Memory12.3 accepted0.126 only; wider BIO/stress sensing and final whole-candidate
+replay remain. No UI/reduction/publication.
 
 | Record | Status |
 |---|---|
