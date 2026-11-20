@@ -15,7 +15,7 @@ import {INTERFERENCE,INTERFERENCE_QUERY,INTERFERENCE_SOURCE,INTERFERENCE_CONTEXT
 import {taskB} from './assembledDecisionRegimes';
 export * from './assembledObstruction';
 export {taskB};
-export function fixture(o:{originalExpired?:boolean;secondSeen?:boolean;private?:boolean;blocker?:1|2}={}){
+export function fixture(o:{alternateRetry?:boolean;originalExpired?:boolean;secondSeen?:boolean;private?:boolean;blocker?:1|2}={}){
  const b=prior(o.blocker??1),base=items(decode(b.d.orderedInputs),'list'),at10=base.filter(v=>key(items(v,'list')[0])===key(signed(10)));
  const templates=at10.filter(v=>[sid(1001,'event/deliberation-opportunity'),IDENTITY_CONTEXT,SELF_CONTEXT,VALUES_CONTEXT,BODY_SAMPLE,PRACTICE_SETTING].some(t=>key(t)===key(items(v,'list')[2])));
  if(templates.length!==6)throw Error('M195 complete later-opportunity declarations '+templates.length);
@@ -24,6 +24,7 @@ export function fixture(o:{originalExpired?:boolean;secondSeen?:boolean;private?
  const feedback=at10.find(v=>key(items(v,'list')[2])===key(PERFORMANCE_SETTING));if(!feedback)throw Error('M195 actual outcome channel');
  rows.push(list([signed(12),...items(feedback,'list').slice(1)]));
  rows.push(list([signed(12),u(30),OBSTRUCTION_SOURCE,list([text(OBSTRUCTION_WITNESS),C,list([b.people[(o.blocker??1)-1]]),list(o.private||o.secondSeen===false?[]:[taskB])]),list([])]));
+ if(!o.alternateRetry){const latest=at10.length&&base.find(v=>key(items(v,'list')[0])===key(signed(8))&&key(items(v,'list')[2])===key(DISPLAY));if(!latest)throw Error('M195 latest route display');const p=items(items(latest,'list')[3],'list');rows.push(list([signed(11),u(10),DISPLAY,list([p[0],list(items(p[1],'list').map(v=>{const x=items(v,'list');return list([x[0],x[1],u(key(x[1])===key(u(0))?5:6),key(x[0])===key(taskB)&&key(x[1])===key(u(1)),u(11),u(16),true]);}))]),list([])]));}
  for(const at of[10,12,14,16])rows.push(list([signed(at),u(30),INTERFERENCE_CONTEXT,list([text(INTERFERENCE_QUERY),taskB,u(1),u(1)]),list([])]));
  for(const at of[11,15])rows.push(list([signed(at),u(10),INTERFERENCE_SOURCE,list([text(INTERFERENCE),taskB,u(10),u(1),!o.private,false]),list([])]));
  return {...b,s:{...b.s,rulesVersion:EXECUTION_OPPORTUNITY_RULES,registrySchemaVersion:EXECUTION_OPPORTUNITY_REGISTRY},d:{...b.d,orderedInputs:enc(list(rows))}};

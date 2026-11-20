@@ -121,3 +121,45 @@ AssertionError: actual B observation at12: expected [] to have a length of 1 but
    Start at  11:51:20
    Duration  129.27s (transform 3.15s, setup 0ms, collect 4.70s, tests 124.11s, environment 0ms, prepare 124ms)
 
+
+M195 repeated-visible-retry exit=1 elapsed=120.099s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRepeatedInterference.test.ts > M195 preserves expired setup and changes only latest declared route validity
+M195 AMENDMENT PASS only latest issued8 route validity10->16 changes; original expired fixture remains, all source values/seed/model/initial state otherwise fixed.
+
+stdout | src/test/assembledRepeatedInterference.test.ts > M195 original available alternative remains a one-episode control
+M195 ORIGINAL CONTROL PASS live blocked alternative12 is not a second B episode; B expectation remains1/2. No report or world fact invents missing B outcome; full101.
+
+ ❯ src/test/assembledRepeatedInterference.test.ts (10 tests | 1 failed | 7 skipped) 114370ms
+   × M195 repeated actual blocks change prior expectation without rewriting intent 62932ms
+     → strategy source time/phase/dependencies
+   ✓ M195 preserves expired setup and changes only latest declared route validity 837ms
+   ✓ M195 original available alternative remains a one-episode control 50600ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledRepeatedInterference.test.ts > M195 repeated actual blocks change prior expectation without rewriting intent
+SchedulerContractError: strategy source time/phase/dependencies
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ src/assembled/inputs.ts:78:276
+ ❯ Module.compileCharacterInputs src/assembled/inputs.ts:78:30
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:63
+ ❯ Module.create src/test/fixtures/assembledDecisionCurrent.ts:61:60
+ ❯ Module.create src/test/fixtures/assembledRepeatedInterference.ts:32:61
+ ❯ src/test/assembledRepeatedInterference.test.ts:38:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 2 passed | 7 skipped (10)
+   Start at  11:54:33
+   Duration  119.55s (transform 3.14s, setup 0ms, collect 4.71s, tests 114.37s, environment 0ms, prepare 120ms)
+
