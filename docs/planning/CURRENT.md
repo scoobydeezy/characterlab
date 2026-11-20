@@ -1,37 +1,54 @@
-# Current work — M195 complete: repeated interference changes expectation
-Two actual blocked attempts now have a native witness showing how their evidence
-combines into later appraisal while original intentions remain unchanged.
-[Result](ASSEMBLED_CHARACTER_M195_RESULT.md); [checks](ASSEMBLED_CHARACTER_M195_CHECKS.txt).
-Existing rules/registry0.132-candidate and55 slots; no production changes.
+# Current work — M196: a stakeholder sees only the actual outcome
+Extend the one character's actual execution with a separate passive outcome viewer.
+M195 complete at e8f24ad4; [result](ASSEMBLED_CHARACTER_M195_RESULT.md).
 
-## Completed connection
-TaskB/route1 attempts10/12 are competent and physically blocked in both arms.
-Direct sight10 plus negative report11 gives prior12 expectation1/2.
-Second sight12 yields14 expectation3/4 across two episodes; denied sight keeps1/2.
-Duplicate report15 leaves16 unchanged. Receipt-weighted2/3 is not the reference.
-Earlier intention/expression/outcome/appraisal bytes remain intact through101.
-First choice has matched nonempty draws; visible route display11 makes retry
-Auto with probability1 and empty identical transcripts, without authored intent.
-Original available-alternative case stays a one-episode1/2 control.
-Denied evidence/private-blocker swap preserves all later character projections.
-Repeat/save11/recovery/save12 continuation and reached second140 rollback pass.
-Original416 math comparisons and admission/owner/support negatives pass.
-
-## Preserved corrections
-Expired route windows -> latest issued8 display extended10 to16.
-Missing current physical setting -> unchanged setting10 copied to later attempts.
-Other selected task -> retained null; normal display11 supplies B-only opportunity.
-New display phase10 -> corrected to existing30 admission. Laws/seed/gates unchanged.
-Slow generic snapshot match interrupted; same complete checkpoints rerun using
-exact byte comparisons plus every remaining snapshot metadata field.
-
-## Remaining scope
-12.14-5 gains bounded evidence: E70/P36/N13/U13=132; family12.14 remains open.
-Next: separate stakeholder12.14-7, then family review and final candidate replay.
-This is labelled single-holder evidence; no new mitigation/retry policy or peers.
-21members/15families unchanged; memory accepted0.126, AFFECT/DECISION member0.129.
-UI/Campaign4 stay stopped. One bounded card/job, same self-approval/budget rules.
-
-| Record | Status |
-|---|---|
-| Research obligations | **0 active / 18 conditional / 0 unowned** |
+## Bounded card — before implementation
+- Capability: BRIEF-12.14-7 only. Main character witnesses actual obstruction while
+  an independently identified stakeholder receives failure but no causal evidence.
+- Authority: Brief12.14, agency-public/0.3 observation boundary, Architecture13.3;
+  MEC004/015/017/019/022; C0 ordering/state/trace and C1 evidence boundary.
+- Versioned candidate: rules/registry0.133, same55 slots; execution-stakeholder/0.1.
+  Existing two passive identities in social-witness slot51; no new autonomous peer.
+- Scope: model.ts, inputs.ts, runtime.ts, externalObstruction.ts, new
+  executionStakeholder.ts, one test and its fixture (7 production/test paths).
+  One formal contract, existing register/ledger/obligations, this card/result/log.
+  <=12 production/test,20 evidence/5MiB; CURRENT80/register250lines/64KiB.
+- No new psychological law/state/owner/store. Actual outcome110 -> permitted
+  local observation120 -> evidence130 in same scheduler/trace/save.
+  These are outcome perceptions, not commitment claims or invented causal beliefs.
+  Original GroupedMean on captured outcome-only evidence must remain Unknown.
+- Source: new closed obstruction variant declares an admitted monitored task and
+  two Boolean outcome permissions; reuse existing independently local identities.
+  Main causal sight remains independent. Older versions reject new source.
+- Safe view contains only recipient-local holder/target, visible instant/episode,
+  observed success Boolean and own observation/evidence tags. Exclude private task,
+  action/intent, blocker, competence, run/model IDs, global allocator and trace.
+  Fixed generated evidence path independent of access; no denied markers.
+- Scenario: unchanged M192 nonsocial body30/cap100/rate10/delivery90@9,
+  task B route1 at10, importance3/5 severity1/2 seed0. Retain full calendar101.
+  Main outcome+sight on; passive A outcome on/B off. No authored outcome.
+- Predeclared comparison: blocker1 versus blocker2 changes main witnessed cause,
+  while stakeholder A's complete local view remains identical failure.
+  Same actual decision, nonempty draws, frozen intent/expression and attempt.
+  Swap A/B access; denied recipient stays empty. Main outcome denial must not
+  suppress independently permitted stakeholder observation. No-block exposes success.
+- Liveness: actual chosen B/route1, competent engaged attempt and real physical
+  failure in blocked arms; known positive effect in no-block control.
+  Ensure consumed real performance event, actual120/130 and exact causal parent.
+- Controls: local safe view rejects invalid selector; excluded fields cannot leak;
+  captured original agency outcome-only fold is Unknown; omniscient comparator
+  differs; generated event/child and old-version/foreign-task/bad-permission reject.
+  No new probability/choice-change claim; matched actual draws for same-choice arms.
+- Persistence: independent repeat/save9 recovery, public save10 restore; every
+  later complete snapshot/save/run identity/history/player byte through101.
+  Reached evidence130 fault rolls back whole prior instant; no partial observer output.
+- Serial checks: types; native comparisons and boundaries; continuation/rollback;
+  retained M193 connection on old version (affected runtime); source negatives;
+  boundary/research/pinned preservation/staged-size. One active long job.
+  <=600s/command, <=1800s cumulative, no routine extensions.
+- Keep failed evidence; amend scenario/repair locally before rerun under existing
+  self-approval. Never alter reference laws/seeds/final denominator to get a pass.
+- Done: all above pass, classify only12.14-7 as bounded native evidence.
+  No general recognition, stakeholder causal learning, blame or trust claim.
+  Family review and whole-candidate replay remain;21members/15families/132 fixed.
+  No UI/Campaign4, new family breadth or verification after passing.
