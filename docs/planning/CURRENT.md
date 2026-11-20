@@ -26,7 +26,7 @@ Later adoption12 -> live appraisal26/stress27 while earlier outputs/knowledge re
 Exact repeat/public save11 continuation at every subsequent instant through101.
 Every native scenario exhausts101. No sampled-choice claim or seed search.
 
-One new test path assembledRegulatorySourcesCurrent; existing source/control
+Two new test paths: assembledRegulatorySourcesCurrent and assembledAffectOrphanCurrent; source/control
 fixtures read-only. CURRENT/register/obligations and one result/check pair.
 Checks serial, <=600s each /1800s total incl failures:
 types; original/known absence; receipt controls; later adoption/continuation;
@@ -58,3 +58,11 @@ replay remain. No UI/reduction/publication.
 | Record | Status |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
+
+Self-approved completion amendment: PHEN-AFFECT-001:7 retains M73 positive-affect/
+absent-ground control; current M188 zero-base embarrassment also zeroes its affect.
+Add M189 cell p1/s1/v1/c0 with only A importance1->0 at input1. Keep Open goal,
+U119/200, B importance1, seed0 and all laws. Require actual no A base/modifier/
+nucleus and probability0; detached fear d4 oracle differs using captured B scores.
+Normal arm has two grounds; no-ground public save9 continuation/repeat is exact
+through101. Same total1800s/file/evidence budget; no other comparison changes.
