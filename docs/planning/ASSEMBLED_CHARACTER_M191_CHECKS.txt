@@ -1,0 +1,170 @@
+
+M191 types exit=0 elapsed=21.747s cap=600
+
+M191 regimes-original-alternatives exit=1 elapsed=69.806s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledDecisionCurrent.test.ts (7 tests | 1 failed | 6 skipped) 63309ms
+   × M191 regimes and original alternatives retain exact receiving correspondence on0.129 63308ms
+     → learned association: fixed calibration
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledDecisionCurrent.test.ts > M191 regimes and original alternatives retain exact receiving correspondence on0.129
+SchedulerContractError: learned association: fixed calibration
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ fail src/assembled/learnedAssociation.ts:19:30
+ ❯ require src/assembled/learnedAssociation.ts:20:46
+ ❯ Module.compileAssociation src/assembled/learnedAssociation.ts:25:26
+ ❯ Module.compileAffectMemory src/assembled/affectMemory.ts:20:35
+ ❯ Module.compileCharacterModel src/assembled/model.ts:344:41
+ ❯ Module.prepareCharacterModel src/assembled/character.ts:28:110
+ ❯ Module.create src/test/fixtures/assembledDecisionCurrent.ts:60:85
+ ❯ src/test/assembledDecisionCurrent.test.ts:15:11
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 6 skipped (7)
+   Start at  08:00:38
+   Duration  68.86s (transform 3.28s, setup 0ms, collect 4.89s, tests 63.31s, environment 0ms, prepare 318ms)
+
+
+M191 regimes-after-association-schema-repair exit=0 elapsed=148.480s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDecisionCurrent.test.ts > M191 regimes and original alternatives retain exact receiving correspondence on0.129
+M191 REGIME PASS {"regime":"settled","mode":1,"AProbability":"7/8","uniformCases":32,"AWins":{"1":32,"2":28,"3":32,"4":32,"5":32},"decorativeDifferences":0,"authoritativeDraws":0,"fullCalendar101":true}
+
+stdout | src/test/assembledDecisionCurrent.test.ts > M191 regimes and original alternatives retain exact receiving correspondence on0.129
+M191 REGIME PASS {"regime":"quiet","mode":2,"AProbability":"23/32","uniformCases":32,"AWins":{"1":23,"2":23,"3":32,"4":32},"decorativeDifferences":9,"authoritativeDraws":2,"fullCalendar101":true}
+
+stdout | src/test/assembledDecisionCurrent.test.ts > M191 regimes and original alternatives retain exact receiving correspondence on0.129
+M191 REGIME PASS {"regime":"balanced","mode":3,"AProbability":"1/2","uniformCases":32,"AWins":{"1":16,"2":16,"3":32,"4":32,"5":16},"decorativeDifferences":16,"authoritativeDraws":2,"fullCalendar101":true}
+
+ ✓ src/test/assembledDecisionCurrent.test.ts (7 tests | 6 skipped) 142780ms
+   ✓ M191 regimes and original alternatives retain exact receiving correspondence on0.129 142779ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  08:02:17
+   Duration  147.95s (transform 3.15s, setup 0ms, collect 4.71s, tests 142.78s, environment 0ms, prepare 121ms)
+
+
+M191 coupled-significance exit=1 elapsed=118.146s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledDecisionCurrent.test.ts (7 tests | 1 failed | 6 skipped) 112428ms
+   × M191 significance preserves matched dice and winner while changing presentation mode 112427ms
+     → requires list
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledDecisionCurrent.test.ts > M191 significance preserves matched dice and winner while changing presentation mode
+SchedulerContractError: requires list
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataItems src/campaign2/canonicalData.ts:23:50
+ ❯ src/test/fixtures/assembledDecisionCurrent.ts:43:17
+ ❯ promote src/test/fixtures/assembledDecisionCurrent.ts:42:53
+ ❯ Module.significant src/test/fixtures/assembledDecisionCurrent.ts:59:74
+ ❯ src/test/assembledDecisionCurrent.test.ts:59:25
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 6 skipped (7)
+   Start at  08:04:54
+   Duration  117.59s (transform 3.16s, setup 0ms, collect 4.72s, tests 112.43s, environment 0ms, prepare 132ms)
+
+
+M191 coupled-significance-after-map-header-repair exit=0 elapsed=192.690s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDecisionCurrent.test.ts > M191 significance preserves matched dice and winner while changing presentation mode
+M191 SIGNIFICANCE PASS acquired personal history vs witnessed;standing-2/0;P1/2 both;stake1/3 vs5/7;Quiet/Player;matched2 face draws and winner;no rounding;full calendars101
+
+ ✓ src/test/assembledDecisionCurrent.test.ts (7 tests | 6 skipped) 187000ms
+   ✓ M191 significance preserves matched dice and winner while changing presentation mode 186999ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  08:07:20
+   Duration  192.14s (transform 3.14s, setup 0ms, collect 4.69s, tests 187.00s, environment 0ms, prepare 134ms)
+
+
+M191 permission-history-privacy exit=0 elapsed=201.223s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDecisionCurrentHistory.test.ts > M191 history keeps frozen intent separate from visible and unknown outcomes
+M191 HISTORY PASS all4 permission cells;frozen meaning identical;visible failure differs from unknown;IntentEqualsOutcome fails;hidden entry equal;closure/join negatives;all calendars101
+
+ ✓ src/test/assembledDecisionCurrentHistory.test.ts (9 tests | 8 skipped) 195520ms
+   ✓ M191 history keeps frozen intent separate from visible and unknown outcomes 195519ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  08:10:40
+   Duration  200.70s (transform 3.11s, setup 0ms, collect 4.64s, tests 195.52s, environment 0ms, prepare 133ms)
+
+
+M191 player-continuation-rollback exit=0 elapsed=278.240s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledDecisionCurrentHistory.test.ts > M191 player view exposes authoritative faces without private draw records
+M191 PLAYER PASS exact native0.3 faces/modifiers/contributions/tie;private draw rejected;Auto/Quiet suppressed;read-only;calendar101
+
+stdout | src/test/assembledDecisionCurrentHistory.test.ts > M191 continuation preserves every settled byte and public view after save9
+M191 CONTINUATION PASS9 -> 10,11,12,13,14,20,40,101;state/output/trace/save/identity/history/player exact;exhausted
+
+stdout | src/test/assembledDecisionCurrentHistory.test.ts > M191 current reason draw rolls back atomically and recovers from public save
+M191 ROLLBACK PASS fault after actual reason-face draw at10; public state/output/trace unchanged; public save9 recovery matches independent run through101 including frozen history/player.
+
+ ✓ src/test/assembledDecisionCurrentHistory.test.ts (9 tests | 6 skipped) 272550ms
+   ✓ M191 player view exposes authoritative faces without private draw records 89422ms
+   ✓ M191 continuation preserves every settled byte and public view after save9 126035ms
+   ✓ M191 current reason draw rolls back atomically and recovers from public save 57092ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 6 skipped (9)
+   Start at  08:14:15
+   Duration  277.69s (transform 3.10s, setup 0ms, collect 4.63s, tests 272.55s, environment 0ms, prepare 127ms)
+
+
+M191 final-types exit=0 elapsed=20.333s cap=600
+
+M191 acceptance-preservation-research-staging exit=0 elapsed=8.388s cap=600
+warning: in the working copy of 'docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/planning/CURRENT.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/planning/RESEARCH_OBLIGATIONS.json', LF will be replaced by CRLF the next time Git touches it
+Reference boundary check passed.
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4411}
+warning: in the working copy of 'docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/planning/CURRENT.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/planning/RESEARCH_OBLIGATIONS.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/planning/CURRENT.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/planning/RESEARCH_OBLIGATIONS.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/planning/ASSEMBLED_CHARACTER_M191_RESULT.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/test/assembledDecisionCurrent.test.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/test/assembledDecisionCurrentHistory.test.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/test/fixtures/assembledDecisionCurrent.ts', LF will be replaced by CRLF the next time Git touches it
+PASS: Git index contains no files at or above50,000,000 bytes.
+M191 ACCEPTANCE PASS all10 pinned DECISION keys; 6 native gates/96 exact reference cases; both adapter failures retained; 21/15/132 and family dispositions unchanged; 8 pinned blobs; production/formal/original controls preserved; 3 test paths/8 total paths/2 evidence files; research/boundary/document/evidence/staged-size/whitespace pass.
