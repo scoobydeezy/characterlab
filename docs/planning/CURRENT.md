@@ -1,30 +1,56 @@
-# Current work — M194 complete: opportunity lost after choice
-The character can attempt an action that became physically impossible after it
-chose, then learn the observed failure without rewriting the choice.
-[Result](ASSEMBLED_CHARACTER_M194_RESULT.md); [checks](ASSEMBLED_CHARACTER_M194_CHECKS.txt).
-Rules/registry0.132-candidate; execution-opportunity/0.1; same55-slot model.
+# Current work — M195: repeated interference changes later belief
+Two actual blocked attempts will contribute separate observed episodes to the
+character's later expectation/appraisal without rewriting either intention.
+M194 complete at2a47a5b6; [result](ASSEMBLED_CHARACTER_M194_RESULT.md).
 
-## Completed connection
-Source100 follows frozen intent/expression90 and precedes attempt/execution110.
-Same decision, nonempty addressed draws and intrinsic competence; actual body
-Applied versus Blocked yields observed outcome/learned expectation1 versus0.
-Unselected loss has no effect; denied outcome stays unknown, no invented blocker.
-New delayed effects cannot queue when unavailable; earlier receipts still arrive.
-Admission, repeat, full save/restore continuation and reached110 rollback pass.
-M192 actor blocking and M193 witnessed-cause/later-claim controls pass unchanged.
-Retained failures: local-name type collision; standalone phase assumption.
-Ordering amendment a5877fca corrected source100 before rerun. Laws/seed fixed.
-No new state owner, scheduler, save, RNG or alternative runtime.
-
-## Remaining scope
-12.14-3 gains bounded evidence; E69/P37/N13/U13=132. Family12.14 remains open.
-Next: repeated interference5 and separate stakeholder7, then family review.
-Instant-local physical apparatus is not general affordance discovery.
-Single-holder labelled observation is not autonomous multi-character simulation.
-21members/15families fixed; memory accepted0.126, AFFECT/DECISION member0.129.
-Final whole-candidate replay remains; UI/Campaign4 stay stopped.
-One bounded card/job, same self-approval/preservation/budget rules.
-
-| Record | Status |
-|---|---|
-| Research obligations | **0 active / 18 conditional / 0 unowned** |
+## Bounded card — before code
+- Capability: BRIEF-12.14-5, repeated interference and immutable earlier intent.
+  Prove native execution -> permitted evidence -> shared knowledge -> later appraisal.
+- Existing rules/registry0.132, obstruction-witness/0.1,
+  assembled-character-interference/0.1 and interference-expectation-component/0.1.
+  AcrossEpisodeMean/GroupedMean/SplitExposure unchanged. No new law or version.
+- Authority: Architecture13.3; existing agency/interference contracts;
+  MEC004/015/017/019/022; foundation RNG/order/state/content/observation constraints.
+- Expected scope: two test files, assembledRepeatedInterference and its fixture.
+  No production changes expected. If a defect requires a seam change, record its
+  versioned repair before code; <=12 production/test total, one active package/job.
+  Update existing register/obligations/ledger, this card, one result and raw log.
+- Scenario: M192 nonsocial physical tasks, body30/cap100/rate10/delivery90@9,
+  A/B importance3/5,severity1/2,seed0. Same original calendar through101.
+  Add actual opportunities12/14/16 with unchanged identity/self/Values contexts
+  and normal body samples. Actual performance channels10/12 only, never authored
+  success/failure. Passive blocker10/12, taskB/route1 monitoring; no active peers.
+- Comparison: sight10 in both arms; negative fallible report11 about10/receipt1;
+  second physical block12 in both, causal sight12 present versus denied.
+  Duplicate negative report15 reuses10/receipt1. Query10/12/14/16 route1,goal1.
+  Same source shapes/count/times/laws/seed; prove actual draw equality at both
+  compared attempts, not seed equality. No choice-change/probability claim.
+- Liveness: assert actual competent, engaged B/route1 attempt and authentic blocked
+  outcome at10 AND12 in both arms before expectation comparison. Missing attempt
+  is a scenario failure, not permission to substitute a report or silently drop it.
+  Every new opportunity includes explicit fresh body and declaration contexts.
+- Expected prior timeline:10 Unknown;12=1/2 from10's direct+negative report;
+  14=3/4 (two episodes, each one mean) versus1/2 (one supported episode).
+  Same-instant12 witness must not affect appraisal12. Duplicate15 leaves16 unchanged.
+  Trace must name the consumed knowledge, outcome originals and live appraisal.
+  Earlier intent/expression/outcomes and earlier appraisal remain byte-identical.
+- Comparators on captured native evidence: AcrossEpisodeMean3/4, LatestEpisode1,
+  EpisodeOnly/NoLearning Unknown; flattened receipt mean2/3 must differ.
+  Retain original13 sources x4 laws x8 prefixes=416 semantic comparisons.
+- Controls: denied causal sight/reports with swapped private blocker gives equal
+  character state/safe outputs/history/player through101; no inferred cause.
+  Duplicate receipt counts once; route-mismatch/no-support stays Unknown.
+  Exact repeat/save11/recovery, public save12 continuation every later settled
+  state/output/trace/save/identity/history/player byte; reached second learning140
+  fault rolls back. Existing M36 admission/ownership/original-support negatives.
+- Checks serial: types; native repeated connection; privacy; continuation/rollback;
+  original416 math/admission; boundary/research/preservation/staged-size.
+  <=600s/command, <=1800s cumulative; <=20 evidence files/5MiB. No extension assumed.
+- Risks: second attempt absent/switched; new learning leaks into current appraisal;
+  reports counted as independent episodes; observation becomes hidden truth;
+  old intent recalculated; second-event rollback misses an owner.
+- Done: all declared gates pass; retain/classify failures and bounded self-approved
+  repairs without tuning laws/seeds/thresholds. Only12.14-5 gains evidence.
+  Family12.14-7 and final whole-candidate replay remain;21/15/132 fixed.
+  Frozen controls/production untouched retain their prior byte results.
+  Stop verification on pass; no UI, new store/scheduler or alternate pipeline.
