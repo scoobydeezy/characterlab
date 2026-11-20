@@ -25,7 +25,7 @@ At10 a passive actor blocks the actual competent action; actual outcome visible.
 New source grants/denies causal sight for task B. First assert actual task B
 outcome and live decision/intent/expression/attempt before causal comparisons.
 Add ordinary deliberation/query opportunities12 and14 (copy10's declaration).
-Query the observed route0 at10/12/14. At13 a permitted negative report names the
+Query the observed route1 at10/12/14. At13 a permitted negative report names the
 original ticket10 and receipt1. Reference laws/calibration fixed; no seed search.
 At10 appraisal unknown in both (learning140); at12 witnessed1 versus unknown;
 at14 witnessed+report1/2 versus report-only0, with matching consumed original
@@ -48,6 +48,9 @@ in both arms before rerun. Laws, target, seed, report and gate remain fixed.
 Second attempt reached live choice but had no task-A outcome. A/B are the only
 reported targets. Amend the monitor/query/report to B, retaining A's failed gate.
 B must prove an actual competent failed outcome; seed/laws/thresholds unchanged.
+
+Third attempt confirms B failed competently on route1, not assumed route0.
+Amend query route to observed1; preserve that assertion failure. No model change.
 
 ## Files and limits
 Production <=9 paths: externalObstruction,model,inputs,traceBinding,runtime,
