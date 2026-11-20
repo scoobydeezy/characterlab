@@ -1,37 +1,59 @@
-# Current work — full AFFECT accepted on0.129
-The assembled character now satisfies all eight pinned AFFECT clauses and the
-derived-affect corpus requirements. Perceived evidence and goals shape affect;
-affect influences grounded choices and later cognition without commanding action,
-inventing motives or becoming evidence of danger.
+# Current work — M191: DECISION acceptance on the current character
+The character already resolves decisions and preserves intent through failed
+execution. M191 establishes the full pinned DECISION comparison on0.129 rather
+than relying on the historical0.85 result.
+Owner2026-11-20 delegates DECISION completion with bounded self-approval.
+Basee6e4c63c; one active package. Laws, calibration, scope and final gates unchanged.
 
-[M190 acceptance map](ASSEMBLED_CHARACTER_M190_RESULT.md);
-[checks](ASSEMBLED_CHARACTER_M190_CHECKS.txt). Plan22898b68; amendmentadae0aba.
-Baseec037a49; rules/registry0.129-candidate unchanged.
-Owner2026-11-20 delegated full AFFECT completion under bounded self-approval.
-Two new test paths; no production/formal/prior-test edits.
+## Capability and source correspondence
+PHEN-DECISION-001:2..9: three native regimes; significance changes presentation
+with shared authoritative dice; frozen intent/history survives prevented execution.
+:10/:11 and RO018/020 remain standing constraints, not behavioral counts.
+M105 fixtures and original resolver controls are the sources, unchanged in place.
+Use one0.129 model/runtime. Upgrade admitted schema declarations and input grammar;
+retain original physical history, goals, seed0, cue/support values and permissions.
+Current reference: biography feedback TRUE, L4 self-persistence OFF, rounding0.85,
+SplitExposure and MeanAll. New stress starts0; zero sensing bias; current memory laws.
+Schema-only correspondence is explicit; actual interacting changes are classified
+from consumed state, never corrected by calibration/seed search or hidden switches.
 
-## Final completed controls
-Known absent goal -> Known0; missing/denied receipt -> Unknown, even without goal.
-Identical danger/body history gives stress249 versus0 at11.
-Ordinary later adoption12 changes appraisal26/stress27 without changing knowledge
-or earlier outputs. Repeat/public save11 continuation is exact through101.
-Positive E/U119/200 survives removal of only A's importance; no A base/modifier/
-nucleus is created, probability0. Detached fear die incorrectly gives9/48.
-Actual B decision/expression/attempt and exact no-ground repeat/save9 pass.
-Five final gates and both type checks pass; no failed M190 test.
-Verification 644.570 seconds<1800, each command<600. Evidence and source checks pass.
+## Predeclared comparisons and checks
+1. All three M105 regimes: live actual appraisal/reasons -> distributions -> native
+decision/intent/expression/attempt. Original expected7/8,23/32,1/2 and Auto/Quiet/Player
+are hypotheses. Execute original reference and all four alternative resolvers on
+captured operands; exact finite face/tie enumeration, normalized probabilities,
+addressed transcript correspondence and no diagnostic mutation.
+2. Same personal/witnessed breach sources: identity-only setup maps followed by
+paired seed0; probability agreement, matched reason-face/tie results and winner,
+different significance and Quiet/Player presentation. Complete all calendars101.
+3. Four physical/observed permission cells plus hidden-truth control: frozen
+pre-attempt intent/expression equality; real observed outcomes differ; unknown is
+not failure. IntentEqualsOutcome loses the frozen expression. Closed history/player
+views reject raw dice/private nested values and bad observation joins.
+Independent repeat/public restore9 of visible failure: every later complete
+state/output/trace/save/identity/history/presentation byte through exhaustion101.
+Types, reference boundary, research linkage, pinned sources, original preservation,
+line/evidence/staged-size checks. M103 reached rollback retained if dependencies
+unchanged; a changed relevant dependency requires targeted current rollback.
+No historical test rerun counted as current evidence.
 
-## Accepted scope and next direction
-M184–M190 cover all eight clauses and all corpus4..13 obligations/constraints;
-the result records each mapping, original comparator and numerical interaction.
-Clause8 accepts the pinned body-history insufficiency, not arbitrary scalar impossibility.
-No new reference law, tuning, reduction or separate psychological pipeline.
-E65/P41/N13/U13=132;21 corpus members/15 families unchanged.
-Accepted families:12.3 memory on0.126;12.5 AFFECT on0.129.
-Whole memory transfer, wider BIO/stress sensing and final whole-candidate replay remain.
-All18 conditional debts remain. No UI, publication or whole-assembly acceptance.
-Next planned work is DECISION acceptance under the existing work-order sequence;
-write its bounded card before implementation. No active unfinished AFFECT milestone.
+## Files, risks, budget and done
+At most4 new test/helper paths: fixtures/assembledDecisionCurrent.ts,
+assembledDecisionCurrent.test.ts, assembledDecisionCurrentHistory.test.ts,
+optional assembledDecisionCurrentControls.test.ts, all under src/test.
+Planning: CURRENT, reconciliation, RESEARCH_OBLIGATIONS; one M191 result/check log.
+No production/formal edits planned. If a real defect requires one, record an
+amendment before changing its versioned seam; no old control or baseline edits.
+Risks: grammar migration, new body/learning interactions, significance coupling,
+private projection leakage, stale saved meaning. Precondition each compared row live.
+Verification<=1800s cumulative, <=600s per command, one job; evidence<=20files/5MiB.
+At most12 production/test paths; CURRENT<=80lines, register<=250lines/65536CRLFbytes.
+Failure receipts retained; diagnose and target repairs. Two unchanged blockers stop
+for a concrete decision; no repeated unchanged test or budget reset.
+Done: every pinned DECISION obligation and original comparison has current evidence
+or a supported unchanged-dependency disposition, no unclassified difference/gap.
+Full autonomy/interference family12.14 and whole-candidate replay stay separate.
+Stop validation on pass; record full DECISION acceptance and next required family.
 
 | Record | Status |
 |---|---|
