@@ -1,0 +1,37 @@
+
+M197 types exit=2 elapsed=20.686s cap=120
+src/test/assembledAgencyCompetence.test.ts(17,144): error TS4104: The type 'readonly CanonicalValue[]' is 'readonly' and cannot be assigned to the mutable type 'CanonicalValue[]'.
+src/test/assembledAgencyCompetence.test.ts(17,236): error TS2345: Argument of type '{ snapshot: Readonly<{ clock: SimInstant; status: RunStatus; state: Uint8Array<ArrayBufferLike>; outputs: Uint8Array<ArrayBufferLike>; trace: Uint8Array<...>; }>; state: AuthoritativeState; out: CanonicalValue[]; traces: CanonicalValue[]; } | undefined' is not assignable to parameter of type '{ snapshot: Readonly<{ clock: SimInstant; status: RunStatus; state: Uint8Array<ArrayBufferLike>; outputs: Uint8Array<ArrayBufferLike>; trace: Uint8Array<...>; }>; state: AuthoritativeState; out: CanonicalValue[]; traces: CanonicalValue[]; }'.
+  Type 'undefined' is not assignable to type '{ snapshot: Readonly<{ clock: SimInstant; status: RunStatus; state: Uint8Array<ArrayBufferLike>; outputs: Uint8Array<ArrayBufferLike>; trace: Uint8Array<...>; }>; state: AuthoritativeState; out: CanonicalValue[]; traces: CanonicalValue[]; }'.
+src/test/assembledAgencyCompetence.test.ts(18,39): error TS2345: Argument of type 'CanonicalValue' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+src/test/assembledAgencyCompetence.test.ts(20,53): error TS2532: Object is possibly 'undefined'.
+src/test/assembledAgencyCompetence.test.ts(20,152): error TS2532: Object is possibly 'undefined'.
+src/test/assembledAgencyCompetence.test.ts(21,78): error TS2532: Object is possibly 'undefined'.
+src/test/assembledAgencyCompetence.test.ts(22,39): error TS2532: Object is possibly 'undefined'.
+src/test/assembledAgencyCompetence.test.ts(22,113): error TS2345: Argument of type 'CanonicalValue' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+src/test/assembledAgencyCompetence.test.ts(26,34): error TS2532: Object is possibly 'undefined'.
+src/test/assembledAgencyCompetence.test.ts(26,51): error TS2532: Object is possibly 'undefined'.
+src/test/assembledAgencyCompetence.test.ts(27,374): error TS2532: Object is possibly 'undefined'.
+src/test/assembledAgencyCompetence.test.ts(27,565): error TS2532: Object is possibly 'undefined'.
+src/test/assembledAgencyCompetence.test.ts(34,14): error TS2532: Object is possibly 'undefined'.
+src/test/assembledAgencyCompetence.test.ts(34,112): error TS2345: Argument of type 'CanonicalValue' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+src/test/assembledAgencyCompetence.test.ts(35,156): error TS2532: Object is possibly 'undefined'.
+src/test/assembledAgencyCompetence.test.ts(36,35): error TS2532: Object is possibly 'undefined'.
+src/test/assembledAgencyCompetence.test.ts(40,11): error TS2532: Object is possibly 'undefined'.
+src/test/assembledAgencyCompetence.test.ts(40,39): error TS2345: Argument of type 'CanonicalValue' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+src/test/assembledAgencyCompetence.test.ts(40,127): error TS2345: Argument of type 'CanonicalValue' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+src/test/assembledAgencyCompetence.test.ts(40,157): error TS2532: Object is possibly 'undefined'.
+src/test/assembledAgencyCompetence.test.ts(45,71): error TS2532: Object is possibly 'undefined'.
+src/test/assembledAgencyCompetence.test.ts(45,144): error TS2532: Object is possibly 'undefined'.
+src/test/assembledAgencyCompetence.test.ts(46,23): error TS2532: Object is possibly 'undefined'.
+src/test/assembledAgencyCompetence.test.ts(46,90): error TS2532: Object is possibly 'undefined'.
+src/test/assembledAgencyCompetence.test.ts(55,93): error TS2532: Object is possibly 'undefined'.
+src/test/assembledAgencyCompetence.test.ts(55,207): error TS2532: Object is possibly 'undefined'.
+src/test/assembledAgencyCompetence.test.ts(56,9): error TS2532: Object is possibly 'undefined'.
+src/test/assembledAgencyCompetence.test.ts(60,32): error TS2532: Object is possibly 'undefined'.
+src/test/assembledAgencyCompetence.test.ts(65,9): error TS2532: Object is possibly 'undefined'.
