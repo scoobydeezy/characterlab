@@ -46,14 +46,14 @@ function live(r:Run,mismatch:boolean){
  expect(a[9]).toEqual(list([q(mismatch?3:0,10),q(mismatch?3:0,10)]));
  expect(personHistory(history(r))).toHaveLength(2);expect(personMean(history(r))).toBeUndefined();
  const producer=trace(r).find(t=>txt(f(t,6n))===VERSION&&uint(f(event(t),3n))===50n&&signedValue(f(event(t),2n))===3n)!;
- expect(producer).toBeDefined();expect(f(producer,13n)).toEqual(a);
+ expect(producer).toBeDefined();expect(f(producer,13n)).toEqual(list(a));
  const reads=items(f(producer,11n),'list').map(v=>rec(v,147n));expect(reads.map(v=>f(v,2n))).toContainEqual(statePathValue(personPath(C,target)));
  const config=items(items(decode(fixture().s.registry),'list')[42],'list');
  expect(reads.map(v=>f(v,2n))).toContainEqual(statePathValue(importancePath(config[2])));
  expect(items(f(producer,12n),'list')[0]).toEqual(history(r));
  const receive=trace(r).find(t=>txt(f(t,6n))===VERSION&&uint(f(event(t),3n))===80n&&signedValue(f(event(t),2n))===3n)!;
- expect(receive).toBeDefined();const input=items(f(receive,12n),'list');expect(input[1]).toEqual(a);expect(uint(input[2])).toBe(uint(f(event(producer),1n)));
- const joined=reports(r,EMBARRASSMENT+'/reasons').find(a=>uint(a[1])===3n)!;expect(joined[2]).toEqual(a);
+ expect(receive).toBeDefined();const input=items(f(receive,12n),'list');expect(input[1]).toEqual(list(a));expect(uint(input[2])).toBe(uint(f(event(producer),1n)));
+ const joined=reports(r,EMBARRASSMENT+'/reasons').find(a=>uint(a[1])===3n)!;expect(joined[2]).toEqual(list(a));
  const additions=items(joined[3],'list').map(v=>items(v,'list'));expect(additions).toHaveLength(1);expect(additions[0][2]).toEqual(q(mismatch?3:0,10));
  expect(readQ(additions[0][3])).toEqual(readQ(additions[0][1]).add(readQ(additions[0][2])));
  const d=dec(r);expect(d).toBeDefined();const context=rec(f(d,3n),408n),raw=rec(f(context,2n),403n),ns=items(f(context,3n),'list').map(v=>rec(v,407n)),signals=items(f(raw,3n),'set').map(v=>rec(v,402n));
