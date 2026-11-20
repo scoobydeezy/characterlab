@@ -1,0 +1,47 @@
+
+M188 types exit=1 elapsed=0.096s cap=600
+error TS5058: The specified path does not exist: 'tsconfig.app.json'.
+
+M188 types-correct-config exit=2 elapsed=21.877s cap=600
+src/test/fixtures/assembledEmbarrassmentCurrent.ts(35,215): error TS2304: Cannot find name 'uint'.
+src/test/fixtures/assembledEmbarrassmentCurrent.ts(56,73): error TS2345: Argument of type 'CanonicalValue' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+
+M188 types-reader-repair exit=0 elapsed=21.032s cap=600
+
+M188 primary exit=1 elapsed=120.240s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledEmbarrassmentCurrent.test.ts (8 tests | 1 failed | 7 skipped) 114155ms
+   × M188 primary actual contextual affect reaches grounded choice and execution 114154ms
+     → requires list
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledEmbarrassmentCurrent.test.ts > M188 primary actual contextual affect reaches grounded choice and execution
+SchedulerContractError: requires list
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataItems src/campaign2/canonicalData.ts:23:50
+ ❯ Module.stressAnchor src/assembled/regulatoryStress.ts:29:60
+ ❯ Object.validateState src/assembled/body.ts:54:304
+ ❯ Object.validateState src/assembled/skill.ts:40:178
+ ❯ Object.validateState src/assembled/strategy.ts:41:52
+ ❯ Object.validateState src/assembled/priority.ts:35:52
+ ❯ Object.validateState src/assembled/horizon.ts:24:52
+ ❯ Object.validateState src/assembled/performance.ts:31:52
+ ❯ Object.validateState src/assembled/habit.ts:34:52
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  20:41:33
+   Duration  119.62s (transform 3.34s, setup 0ms, collect 4.99s, tests 114.15s, environment 0ms, prepare 166ms)
+

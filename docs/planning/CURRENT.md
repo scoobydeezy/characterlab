@@ -51,3 +51,11 @@ Two source/test files; <=20 evidence files/5MiB. No verifier framework.
 Next after pass: affected factor transfer and compact AFFECT acceptance map.
 Pinned21/15/132; E64/P42/N13/U13 unchanged. Memory12.3 accepted0.126 only.
 Wider BIO/stress sensing and final whole-candidate replay remain; no UI/reduction.
+
+Validation repair: initial types command named nonexistent tsconfig.app.json;
+use repository tsconfig.json. Failed receipt retained; no model/test change.
+Type repair: import the original unsigned reader and narrow governed task records;
+no source inputs or comparison change. Both earlier command failures retained.
+Native setup repair: reserve adapter overwrote both body455 fields; constrain to
+field1, retaining declared stress0 in field2. Cache immutable source assembly only.
+Failed admission is not a mechanism result; no law/comparison changes.
