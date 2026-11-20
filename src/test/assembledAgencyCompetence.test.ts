@@ -13,9 +13,9 @@ import {restoreAuthoritativeState,statePathValue} from '../substrate/state';
 import {projectAttempt,admitAgencyEvidence,foldAgencyEvidence} from '../campaign3/agencyInterferenceSource';
 import * as traceModule from '../substrate/trace';
 const eq=(a:CanonicalValue,b:CanonicalValue)=>key(a)===key(b);
-const cache=new WeakMap<Run,{snapshot:ReturnType<Run['snapshot']>;state:ReturnType<typeof restoreAuthoritativeState>;out:CanonicalValue[];traces:CanonicalValue[]}>();
+const cache=new WeakMap<Run,{snapshot:ReturnType<Run['snapshot']>;state:ReturnType<typeof restoreAuthoritativeState>;out:readonly CanonicalValue[];traces:ReturnType<typeof outputs>}>();
 function view(r:Run){let v=cache.get(r);if(!v){const snapshot=r.snapshot();v={snapshot,state:restoreAuthoritativeState(decode(snapshot.state)),out:items(decode(snapshot.outputs),'list'),traces:outputs(snapshot.trace,160n)};cache.set(r,v);}return v;}
-const event=(v:CanonicalValue)=>rec(f(v,4n),130n);
+const event=(v:CanonicalValue)=>rec(f(rec(v,160n),4n),130n);
 async function next(r:Run){try{return await r.settleNextInstant();}finally{cache.delete(r);}}
 async function through(r:Run,at:bigint){for(let n=0;view(r).snapshot.clock<at;n++){expect(n).toBeLessThan(64);expect(await next(r)).toBe(true);}expect(view(r).snapshot.clock).toBe(at);}
 async function finish(r:Run){for(let n=0;n<64;n++){if(!await next(r)){expect(view(r).snapshot.clock).toBe(101n);return;}}throw Error('M197 settle cap');}
@@ -44,7 +44,7 @@ it('M197 four real skill and obstruction cells preserve outcome-only privacy',as
  for(const c of cases){const x=await start(c.trained,c.blocked);await through(x.r,14n);const a=actual(x,c.trained,c.blocked);seen.push(a);const initial=a.local;
   for(let n=0;;n++){expect(n).toBeLessThan(64);expect(stakeholderView(view(x.r).out,x.s,0)).toEqual(initial);if(!await next(x.r))break;}expect(view(x.r).snapshot.clock).toBe(101n);
   expect(outputs(list(view(x.r).out),425n)).toContainEqual(a.intent);expect(outputs(list(view(x.r).out),426n)).toContainEqual(a.expression);
-  if(c.blocked||!c.trained){const successAsIntent:CanonicalValue[]=[];expect(successAsIntent).not.toContainEqual(a.expression);}
+  const nativeExpressions=typed(x.r,426n),successAsIntent=nativeExpressions.filter(()=>eq(labelled(x.r,ACTION_BODY)[0][5],text('Applied')));if(c.blocked||!c.trained)expect(successAsIntent).not.toContainEqual(a.expression);else expect(successAsIntent).toContainEqual(a.expression);
  }
  for(const a of seen.slice(1))for(const k of['d','intent','expression','plan','draws'] as const)expect(a[k]).toEqual(seen[0][k]);
  expect(seen[1].local).toEqual(seen[2].local);expect(seen[1].local).toEqual(seen[3].local);expect(seen[0].local).not.toEqual(seen[1].local);

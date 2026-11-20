@@ -35,3 +35,43 @@ src/test/assembledAgencyCompetence.test.ts(55,207): error TS2532: Object is poss
 src/test/assembledAgencyCompetence.test.ts(56,9): error TS2532: Object is possibly 'undefined'.
 src/test/assembledAgencyCompetence.test.ts(60,32): error TS2532: Object is possibly 'undefined'.
 src/test/assembledAgencyCompetence.test.ts(65,9): error TS2532: Object is possibly 'undefined'.
+
+M197 types-repair exit=0 elapsed=20.413s cap=120
+
+M197 four-cell exit=1 elapsed=65.399s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledAgencyCompetence.test.ts (8 tests | 1 failed | 7 skipped) 59851ms
+   × M197 four real skill and obstruction cells preserve outcome-only privacy 59850ms
+     → expected [ …(47) ] to have a length of 46 but got 47
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledAgencyCompetence.test.ts > M197 four real skill and obstruction cells preserve outcome-only privacy
+AssertionError: expected [ …(47) ] to have a length of 46 but got 47
+
+- Expected
++ Received
+
+- 46
++ 47
+
+ ❯ Module.promote src/test/fixtures/assembledDecisionCurrent.ts:25:16
+     23| export function promote(b:ReturnType<typeof prior.fixture>|ReturnType<…
+     24|  const slots=[...items(decode(b.s.registry),'list')],known=items(decod…
+     25|  expect(slots).toHaveLength(46);expect(known).toHaveLength(55);
+       |                ^
+     26|  const body=items(slots[6],'list'),ret=items(slots[8],'list'),access=i…
+     27|  expect(body).toHaveLength(7);expect(ret).toHaveLength(4);expect(acces…
+ ❯ Module.fixture src/test/fixtures/assembledAgencyCompetence.ts:14:17
+ ❯ start src/test/assembledAgencyCompetence.test.ts:27:69
+ ❯ src/test/assembledAgencyCompetence.test.ts:44:38
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  13:13:14
+   Duration  64.86s (transform 3.14s, setup 0ms, collect 4.70s, tests 59.85s, environment 0ms, prepare 104ms)
+

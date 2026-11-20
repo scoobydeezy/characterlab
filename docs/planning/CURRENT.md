@@ -56,3 +56,9 @@ on current0.133. M196 completed at297901fb; family12.14 acceptance remains open.
 - Amend/repair locally with recorded reason and failed evidence; preserve laws,
   fixed seed, denominator and acceptance burden. No UI, autonomous peers or new
   standalone runtime. No family pass from counting eight evidence-marked clauses.
+
+## Transfer repair before rerun
+M119 has47 slots, including its effect-evidence declaration; the M191 adapter
+expects46. Adapt the unchanged46-slot prefix, then restore original slot46 exactly
+in the55-slot result. No original mechanism/declaration is dropped or replaced.
+Preserve the failed transfer and test-reader type receipt; scenario/gates unchanged.
