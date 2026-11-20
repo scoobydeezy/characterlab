@@ -11,7 +11,7 @@ Owner continuation/self-approval applies; laws, scope and acceptance stay fixed.
   Foundation RNG/time/order/state/content/observation constraints remain standing.
 - Version: rules/registry0.132-candidate, execution-opportunity/0.1-candidate;
   same55 slots, existing body owner/scheduler/save. No new psychological law.
-- World source90 follows intent70/expression80, precedes attempt100/body110.
+- World source100 follows intent/expression90, precedes attempt/body110.
   Complete per-action availability; instant-local, private, authenticated originals.
   Body110 gates new effects; committed delayed receipts remain valid.
 - Scope/files: assembled externalObstruction, model, inputs, runtime, body,
@@ -21,7 +21,7 @@ Owner continuation/self-approval applies; laws, scope and acceptance stay fixed.
 - Scenario: unchanged M192 nonsocial tasks; body30/cap100/rate10/delivery90@9,
   importance3/5,severity1/2,seed0; permitted actual performance observations at10.
   Passive roster only. No authored psychological state or causal inference.
-- Comparison: source90@10 all actions available versus unavailable. Same source
+- Comparison: source100@10 all actions available versus unavailable. Same source
   shape/count/time, laws, configuration and addressed dice. First assert live
   choice/intent/expression/attempt and competent intrinsic execution in both.
   Require equal decision/history/expression/attempt/skill and consumed draws;
@@ -44,3 +44,10 @@ Owner continuation/self-approval applies; laws, scope and acceptance stay fixed.
 - Done: all declared gates pass; otherwise preserve/classify failure and repair
   within authorization/budget. Only 12.14-3 can gain bounded evidence, not family
   acceptance. 21members/15families/132clauses unchanged. Stop verification on pass.
+
+## Self-approved ordering repair before rerun
+Initial test imported standalone C3 phase numbers. The assembled task path uses
+arbitration80, intent/expression90, plan100, attempt/execution110 (execution.ts).
+Preserved failure b98087a7 plus raw connection receipt; no weakened gate. Move the
+world source90 to100 so it follows frozen expression and precedes attempt.
+Fix assertions to actual producer phases90/110; laws, seed, effects and scope fixed.

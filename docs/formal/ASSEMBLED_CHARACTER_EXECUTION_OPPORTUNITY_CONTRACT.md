@@ -5,15 +5,15 @@ Architecture13.3 already requires environmental affordances independently of ski
 and external interference. This contract supplies a bounded physical prerequisite
 for the existing action-body apparatus, not a new psychological law or ontology.
 
-An original source at90 is [execution-opportunity/0.1, holder,
+An original source at100 is [execution-opportunity/0.1, holder,
 set([action, availableBoolean], ...)]. Cover exactly the declared action-body
 entries, with no duplicate/foreign action; one holder, <=3 existing actions.
 At most16 sources, one per instant1..timeLimit, empty dependencies. Full source
 bytes/time/phase/order enter the run identity; original source authenticates once.
-The source follows frozen intent70/expression80 and precedes attempt100.
+The source follows frozen intent/expression90 and precedes attempt110.
 No source means all actions physically available. Sources affect only their instant.
 World availability is separate from psychological plan display and static permission.
-An absence introduced at90 is a lost physical opportunity before attempt, not
+An absence introduced at100 is a lost physical opportunity before attempt, not
 foreknowledge available to the choice. An attempt may still occur and fail.
 
 The existing world execution context retains independent actor and opportunity
@@ -44,3 +44,8 @@ MEC015/017/019/022 and original comparisons preserved. This gives bounded eviden
 for12.14-3 only; adaptive autonomy, general affordance discovery and family acceptance
 are not claimed. Source capacity and instant-local apparatus are engineering scope,
 not a verdict-backed law about persistence of real-world opportunities.
+
+M194 ordering correction: standalone C3 decision phases are not the assembled
+task path. The successor preserves its existing arbitration80, intent/expression90,
+plan100 and attempt/execution110. Source100 is original, before generated plan100;
+both follow expression90 and precede attempt110. No existing phase registry changes.
