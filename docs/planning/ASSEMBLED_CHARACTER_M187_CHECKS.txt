@@ -36,3 +36,39 @@ SchedulerContractError: requires list
    Start at  18:18:26
    Duration  78.41s (transform 3.20s, setup 0ms, collect 4.80s, tests 73.27s, environment 0ms, prepare 106ms)
 
+
+M187 primary-after-recognition-repair exit=1 elapsed=123.961s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledReappraisalCurrent.test.ts (8 tests | 1 failed | 7 skipped) 118329ms
+   × M187 connection: chosen completion changes later hypothetical threat and grounded choice 118328ms
+     → expected 3n to be 1n // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledReappraisalCurrent.test.ts > M187 connection: chosen completion changes later hypothetical threat and grounded choice
+AssertionError: expected 3n to be 1n // Object.is equality
+
+- Expected
++ Received
+
+- 1n
++ 3n
+
+ ❯ operation src/test/assembledReappraisalCurrent.test.ts:105:27
+    103|  expect(d,'actual chosen cognitive decision10').toBeDefined();const da…
+    104|  expect(f(rec(f(data,1n),395n),2n)).toEqual(decl[2]);
+    105|  expect(uint(f(data,8n))).toBe(1n);
+       |                           ^
+    106|  const outcomes=outputs(snap(r).outputs,433n).filter(o=>{const intent=…
+    107|  expect(outcomes).toHaveLength(1);expect(uint(f(outcomes[0],3n))>0n).t…
+ ❯ src/test/assembledReappraisalCurrent.test.ts:133:16
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  18:21:21
+   Duration  123.38s (transform 3.15s, setup 0ms, collect 4.70s, tests 118.33s, environment 0ms, prepare 103ms)
+

@@ -10,7 +10,6 @@ src/test/assembledReappraisalCurrent.test.ts. No production/formal/prior-test ed
 Use M72 actual perceived context trials, not M41's superseded report-only evidence.
 Current full model/state from M186; apply original physical/task geometry, nonsocial
 bindings and reappraisal declaration. Keep current reason/identity/owner policies.
-No wholesale old-registry promotion, new mechanism, runtime, authored frame or belief.
 
 ## Declared scenario
 Seed0, one holder/three nonsocial tasks; perceived stand-ins, no autonomous partner.
@@ -70,3 +69,8 @@ Pre-rerun repair: first admission failed on legacy stand-in recognition payload.
 Preserve that source/receipt. Map continuity to four lifecycle flags, person-form
 to its permitted C1 feature, template cues to typed/permitted signals, and append
 empty additional-role list. Report values/permissions and completion contrast stay.
+
+Second result: actual cognitive choice10 is contested, not old M72 Auto. Keep its
+chosen action/meaning gate; remove only that undeclared historical mode assumption.
+Record native grounds/marginals. Add explicit expression and stress-state joins;
+use a valid captured-completion frame for the pending direct-input negative.
