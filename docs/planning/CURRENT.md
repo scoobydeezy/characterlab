@@ -1,48 +1,66 @@
-# Current work — M186 complete; AFFECT cognitive comparisons remain
-Prior affect changes which acquired experience the current character recalls and
-the social appraisal that consumes it. Ordinary person belief and learned danger
-stay unchanged. The same prior affect separately reaches strictly later bodily stress.
+# Current work — M187: current deliberate reappraisal to later affect
+A chosen, completed cognitive operation must change later hypothetical appraisal,
+reasons and response without rewriting learned evidence or claiming physical safety.
+Base09e07b5f; current0.129-candidate; reference laws, calibration0 and arbitration0.85.
 
-[M186 result](ASSEMBLED_CHARACTER_M186_RESULT.md);
-[checks](ASSEMBLED_CHARACTER_M186_CHECKS.txt). Plans e6d71665/90a68d2c; baseb4852ccc.
-Rules/registry0.129-candidate; reference psychology and calibration0 unchanged.
-Two new test/fixture paths, zero production/formal/prior-test changes.
+## Bounded card before implementation
+Owner AFFECT self-approval. BRIEF12.5-7 and PHEN-AFFECT-001:6/:9/:10/:11.
+Two new paths: src/test/fixtures/assembledReappraisalCurrent.ts and
+src/test/assembledReappraisalCurrent.test.ts. No production/formal/prior-test edits.
+Use M72 actual perceived context trials, not M41's superseded report-only evidence.
+Current full model/state from M186; apply original physical/task geometry, nonsocial
+bindings and reappraisal declaration. Keep current reason/identity/owner policies.
+No wholesale old-registry promotion, new mechanism, runtime, authored frame or belief.
 
-## Passed comparison
-Preserved M176 sources: one holder/seed0, body30/cap100/rate10/grid1, stress0/bias0.
-Threat nonsocial; normal passive-target evidence; acquired episodes10/11 and graph.
-Memory32/delay16/K1/workspace6; routes closed1/open25, no early execution.
-Current observation0.2 discloses zero calibration before[0,1] quantization.
-Risk prior199/400 -> gain599/400 -> olderA10; known-zero and labelled NoFeedback
-gain1 -> newerB11. Exact original kernels agree on actual reads, scores and IDs.
-Authentic prior10 -> query26 -> shared workspace -> social/joint appraisal1/0;
-ordinary person belief remains1/2. Stress11=249/0/249 consumes that same prior report.
-NoFeedback is the original retrieval ablation, not a substitute acceptance law.
-Episodes, presentation histories and graph agree before recall. Danger knowledge
-stays fixed after its last evidence through101 despite stress and recall.
+## Declared scenario
+Seed0, one holder/three nonsocial tasks; perceived stand-ins, no autonomous partner.
+Body30/cap100/rate10/grid1/threshold60, stress0, bias0; selected samples9/10/11.
+M72 glyph0 danger trials1..3/7..9 and glyph2 safe4..6; catalogue2/empty mitigation1 at7.
+Governed threat consequence1/3; all importance1, cognition urgent10, physical A/B11.
+Original routes/expiry and full horizon101 retained. Current workspace6.
+Protocol execution enabled and observation hidden in every arm; practice permission
+true, phase4/competence0/difficulty0/impairment0/no practice. No hidden performance
+report is supplied. Ordinary delivery9 amount0 uses current three-field grammar.
+Only reappraisal completion permission10 differs in primary; permission11 stays true.
 
-Denied Motion leaves prior Unavailable/gain1; known zero remains distinct.
-Later evidence changes current appraisal26, not the frozen prior10 or older recall.
-Denied first encounter prevents query26 and preserves only the permitted episode11.
-Hidden diagnostic aliases leave every settled safe state/output identical.
-Independent repeat and public save12 continue with every later full byte equal.
-Actual post-publication26 fault rolls back; public recovery from25 exactly matches.
-All scenarios exhaust101 without diagnostics. No random-choice claim.
+## Three capabilities and exact gates
+1. Prior learned means1/0 -> live eligible BenefitRelative motive1 -> actual chosen
+cognitive intent/expression/attempt10. Same model/initial and safe state/output
+at EVERY settled prefix through9. Identical chosen meaning, success vs interruption.
+Only success installs frame140. Full danger knowledge and body reserve stay equal.
+Both appraisal10 rows Known U199/600; later11 uses hypothetical p0/U0 vs p1/U199/600.
+Actual frame read, provenance, appraisal -> raw source -> positive compiled
+contribution -> native choice/expression/attempt must be joined; no diagnostic proxy.
+Existing positive A/B grounds and distinct actions live before comparison.
+Exact coupled production arbitration on captured actual contexts: semantic keys,
+uniform LCM faces/common ties <=4096 cases; every marginal agrees with native
+effective probabilities including Auto; require a nonzero changed-response count.
+Do not force M72's historical36/72 counts under current0.85/SourceCoverage.
+Original chosen-reappraisal control semantics retained on SafetyOnly/Interrupted.
+Current stress consumes appraisal11 strictly later12; zero vs positive dose follows,
+without knowledge writes. This is no claim that the cognitive frame protects the body.
+2. NoReappraisal completes but installs no frame; denied alternative stays unknown/
+ineligible; equal danger means give zero benefit/no frame. Hidden physical annex:
+every safe state/output instant equal through101. Mixed bundle/direct frame reject.
+3. Independent repeat/public save9: every later full state/output/trace/save/run
+byte through101. Fault after actual frame write10 rolls back the whole instant;
+public recovery from9 then equals clean continuation at every remaining instant.
 
-Three native gates, types, boundary/research, preservation and staged-size checks
-pass. Verification 486.072 seconds<1800, each command<600; one job.
-Two evidence files<5MiB; no failed check or budget extension. The pre-code
-clarification discloses the original physical diagnostic; inputs were preserved.
-
-## Remaining direction
-Next bounded work: current cognitive reappraisal/embarrassment comparisons, then
-compact eight-clause AFFECT map with affected factor transfer explicitly resolved.
-M184 source, M185 response/execution and M186 retrieval current checks are complete;
-do not rerun passing checks without a concrete invalidating change.
-No family/clause promotion here. Pinned21/15/132 and E64/P42/N13/U13 unchanged.
-Memory12.3 accepted0.126; only its affected retrieval transfer is renewed here.
-Wider BIO/stress sensing, final whole-candidate replay and assembly acceptance remain.
-Continue AFFECT bounded self-approval. No UI, new pipeline, reduction or debt closure.
+## Checks, risks, limits and done
+Types; primary/controls; privacy/continuation/rollback; boundary/research; frozen
+source/evidence/baseline preservation; staged size/whitespace. No unchanged suite rerun.
+Risks: old input/declaration grammar, unavailable owner operands, downstream source
+adapters, current calibration/Auto differences, frame authority and queue rollback.
+One long job;600s/command;1800s total including failures;20 evidence files/5MiB.
+At most2 source/test paths; one result/log; CURRENT<=80/register<=250/64KiB.
+Done iff all declared gates pass; stop verification then. Record repairs/amendments
+before targeted reruns; no seed search, reference-law tuning or scope reduction.
+MEC003/004/012..019/022 preserve evidence, cognition, grounded reason and outcome.
+FND4/6; RO003/005/006/007/010/011/012/019/020/021/022 stay scoped.
+Next: current embarrassment, affected factor transfer and compact AFFECT family map.
+No family/clause promotion here:21/15/132 and E64/P42/N13/U13 fixed.
+Memory12.3 remains accepted0.126; wider BIO/stress sensing/final whole-model replay
+remain. No UI, reduction, alternative production pipeline or conditional-debt closure.
 
 | Record | Status |
 |---|---|
