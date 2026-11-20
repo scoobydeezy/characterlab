@@ -12,6 +12,9 @@ export const OBSTRUCTION='external-obstruction/0.1',OBSTRUCTION_VERSION='externa
 export const OBSTRUCTION_SOURCE=bodyId(1001,'event/external-obstruction-source');
 export const OBSTRUCTION_WITNESS='external-obstruction-witness/0.1';
 export const OBSTRUCTION_RESULT='external-obstruction-result/0.1';
+export const OPPORTUNITY='execution-opportunity/0.1',OPPORTUNITY_VERSION='execution-opportunity/0.1-candidate';
+export const OPPORTUNITY_SOURCE=bodyId(1001,'event/execution-opportunity-source');
+export const OPPORTUNITY_RESULT='execution-opportunity-result/0.1';
 const eq=(a:CanonicalValue,b:CanonicalValue)=>key(a)===key(b);
 const fp=(e:ScheduledEvent)=>key(scheduledEventValue(e));
 export function obstructionSource(v:CanonicalValue,C:CanonicalValue,people:readonly CanonicalValue[],tasks?:readonly CanonicalValue[]){
@@ -20,20 +23,29 @@ export function obstructionSource(v:CanonicalValue,C:CanonicalValue,people:reado
  const seen=witness?items(a[3],'list'):[];if(seen.length>1||seen.some(t=>!tasks!.some(x=>eq(x,t))))invalidModel('external obstruction witness task');
  return {blocker:blockers[0],witnessTask:seen[0]};
 }
-export function createExternalObstruction(C:CanonicalValue,people:readonly CanonicalValue[],originals:readonly ScheduledEvent[],model:CanonicalValue,run:CanonicalValue,tasks?:readonly CanonicalValue[]){
- let active=false,at=0n,current:ScheduledEvent|undefined,effectAction:CanonicalValue|undefined;
+export function opportunitySource(v:CanonicalValue,C:CanonicalValue,actions:readonly CanonicalValue[]){
+ const a=items(v,'list');if(a.length!==3||txt(a[0])!==OPPORTUNITY||!eq(a[1],C))invalidModel('execution opportunity holder/grammar');
+ const rows=items(a[2],'set'),seen=new Set<string>();
+ if(!actions.length||actions.length>3||rows.length!==actions.length)invalidModel('execution opportunity complete action coverage');
+ const result=rows.map(v=>{const r=items(v,'list');if(r.length!==2||typeof r[1]!=='boolean'||!actions.some(x=>eq(x,r[0]))||seen.has(key(r[0])))invalidModel('execution opportunity declared action/availability');seen.add(key(r[0]));return {action:r[0],available:r[1] as boolean};});
+ return result;
+}
+export function createExternalObstruction(C:CanonicalValue,people:readonly CanonicalValue[],originals:readonly ScheduledEvent[],model:CanonicalValue,run:CanonicalValue,tasks?:readonly CanonicalValue[],actions?:readonly CanonicalValue[]){
+ let active=false,at=0n,current:ScheduledEvent|undefined,opportunity:ScheduledEvent|undefined,effectAction:CanonicalValue|undefined;
  const used=new Set<bigint>(),assessed=new Set<bigint>();
  const fail=(s:string):never=>{throw new SchedulerContractError('INPUT_NOT_ADMITTED','external obstruction: '+s);};
  return Object.freeze({
-  begin(instant:bigint){if(active)fail('already active');active=true;at=instant;current=undefined;effectAction=undefined;used.clear();assessed.clear();},
-  close(){active=false;current=undefined;effectAction=undefined;used.clear();assessed.clear();},
+  contractVersion:actions?OPPORTUNITY_VERSION:OBSTRUCTION_VERSION,
+  begin(instant:bigint){if(active)fail('already active');active=true;at=instant;current=undefined;opportunity=undefined;effectAction=undefined;used.clear();assessed.clear();},
+  close(){active=false;current=undefined;opportunity=undefined;effectAction=undefined;used.clear();assessed.clear();},
   prepareCommit(){if(!active||originals.some(e=>e.dueAt===at&&!used.has(e.eventId)))fail('unconsumed source');},
   execute(context:EventHandlerContext<AuthoritativeState>){
-   const e=context.event;if(!active||e.dueAt!==at||e.phase!==30n||!eq(e.eventTypeId,OBSTRUCTION_SOURCE)||current||used.has(e.eventId)||!originals.some(x=>fp(x)===fp(e)))fail('unbound source');
-   obstructionSource(e.payload,C,people,tasks);current=structuredClone(e);used.add(e.eventId);
+   const e=context.event,isOpportunity=eq(e.eventTypeId,OPPORTUNITY_SOURCE);
+   if(!active||e.dueAt!==at||e.phase!==(isOpportunity?90n:30n)||!(isOpportunity?actions: eq(e.eventTypeId,OBSTRUCTION_SOURCE))||(isOpportunity?opportunity:current)||used.has(e.eventId)||!originals.some(x=>fp(x)===fp(e)))fail('unbound source');
+   if(isOpportunity){opportunitySource(e.payload,C,actions!);opportunity=structuredClone(e);}else{obstructionSource(e.payload,C,people,tasks);current=structuredClone(e);}used.add(e.eventId);
    return {nextState:context.state,outputs:[],emittedEvents:[],traceContributions:[],traceFactory(children:readonly ScheduledEvent[]){
     if(children.length)fail('source children');
-    return [traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model,runIdentity:run,event:e,seamId:bodyId(1036,'seam/external-obstruction'),seamVersion:items(e.payload,'list')[0]&&txt(items(e.payload,'list')[0])===OBSTRUCTION_WITNESS?'obstruction-witness/0.1-candidate':OBSTRUCTION_VERSION,recordKind:e.eventTypeId,subjectIds:[id(C)],sourceRecordIds:[],registeredReadDomain:[],actualReadRecords:[],inputProjection:e.payload,outputProjection:list([]),randomDrawRecords:[],quantizationOperations:[],statePatch:{operations:[]},structuralMutationDiffs:[],emittedEvents:[],invariantResults:[]})];
+    return [traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model,runIdentity:run,event:e,seamId:bodyId(1036,'seam/external-obstruction'),seamVersion:isOpportunity?OPPORTUNITY_VERSION:items(e.payload,'list')[0]&&txt(items(e.payload,'list')[0])===OBSTRUCTION_WITNESS?'obstruction-witness/0.1-candidate':OBSTRUCTION_VERSION,recordKind:e.eventTypeId,subjectIds:[id(C)],sourceRecordIds:[],registeredReadDomain:[],actualReadRecords:[],inputProjection:e.payload,outputProjection:list([]),randomDrawRecords:[],quantizationOperations:[],statePatch:{operations:[]},structuralMutationDiffs:[],emittedEvents:[],invariantResults:[]})];
    }};
   },
   witness(e:ScheduledEvent){
@@ -43,9 +55,13 @@ export function createExternalObstruction(C:CanonicalValue,people:readonly Canon
   },
   assess(e:ScheduledEvent,effect:ReturnType<typeof selectedBodyEffect>){
    if(!active||e.dueAt!==at||e.phase!==110n||!eq(e.eventTypeId,ACTION_BODY_EVENT)||assessed.has(e.eventId))fail('effect lifecycle');
-   assessed.add(e.eventId);effectAction=effect.action;if(!current)return undefined;
-   const {blocker}=obstructionSource(current.payload,C,people,tasks);
-   return {blocked:!!blocker,report:list([text(OBSTRUCTION_RESULT),u(current.eventId),effect.outcomeId,effect.attemptId,effect.action,list(blocker?[blocker]:[]),!!blocker])};
+   assessed.add(e.eventId);effectAction=effect.action;if(!current&&!opportunity)return undefined;
+   const blocker=current?obstructionSource(current.payload,C,people,tasks).blocker:undefined;
+   const available=opportunity?opportunitySource(opportunity.payload,C,actions!).find(r=>eq(r.action,effect.action))?.available:true;
+   if(available===undefined)fail('selected action absent');
+   return {blocked:!!blocker,unavailable:!available,
+    report:current?list([text(OBSTRUCTION_RESULT),u(current.eventId),effect.outcomeId,effect.attemptId,effect.action,list(blocker?[blocker]:[]),!!blocker]):undefined,
+    opportunityReport:opportunity?list([text(OPPORTUNITY_RESULT),u(opportunity.eventId),effect.outcomeId,effect.attemptId,effect.action,available!]):undefined};
   }
  });
 }

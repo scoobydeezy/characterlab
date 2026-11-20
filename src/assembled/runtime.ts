@@ -14,7 +14,7 @@ import {createActionMemory} from './actionMemory';
 import {createPositionExecution} from './positionExecution';
 import {createGoalMeaning,GOAL_ADOPT,GOAL_EXPIRE} from './goalMeaning';
 import {createReappraisalExecution,REAPPRAISAL_SOURCE} from './reappraisal';
-import {OBSTRUCTION_SOURCE,createExternalObstruction} from './externalObstruction';
+import {OPPORTUNITY_SOURCE,OBSTRUCTION_SOURCE,createExternalObstruction} from './externalObstruction';
 import {INTERFERENCE_SOURCE,INTERFERENCE_CONTEXT} from './interferenceExpectation';
 import {createCausalExecution,CAUSAL_SOURCE,CAUSAL_CONTEXT} from './causalAttribution';
 import {createValuesExecution,VALUES_CONTEXT} from './values';
@@ -84,7 +84,7 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
  const reasonEvidence=model.reasonEvidence?createReasonEvidence(model.reasonEvidence,inputs.reasonEvidenceEvents,modelIdentity,inputs.runIdentity.value,txt(BODY_OBSERVER.payload),model.contextReasons):undefined;
  const position=model.positionEnabled?createPositionExecution(stateModel,inputs.positionEvents,modelIdentity,inputs.runIdentity.value,model.positionMemory,model.mitigationEnabled):undefined;
  const procedure=model.skill?createSkillExecution(component.tasks[0].character,stateModel,inputs.skillEvents,modelIdentity,inputs.runIdentity.value,model.procedures,model.actionBody,model.skillInterference):undefined;
- const obstruction=model.externalObstruction?createExternalObstruction(component.tasks[0].character,model.social!.targets,inputs.obstructionEvents,modelIdentity,inputs.runIdentity.value,model.obstructionWitness?model.strategy!.map(r=>r.task):undefined):undefined;
+ const obstruction=model.externalObstruction?createExternalObstruction(component.tasks[0].character,model.social!.targets,[...inputs.obstructionEvents,...inputs.opportunityEvents],modelIdentity,inputs.runIdentity.value,model.obstructionWitness?model.strategy!.map(r=>r.task):undefined,model.executionOpportunity?model.actionBody!.entries.map(e=>e.action):undefined):undefined;
  const body=model.body?createBodyExecution(model.body,component.tasks[0].character,stateModel,inputs.bodyEvents,modelIdentity,inputs.runIdentity.value,model.actionBody,procedure,model.tolerance,model.retainedAttribution?()=>position!.contextForBody():undefined,obstruction):undefined;
  if(model.affectMemory&&inputs.socialEvents.length>(model.affectMemory.acquisitionPresentation?31:32))throw new SchedulerContractError('INPUT_NOT_ADMITTED','affect memory presentation capacity including acquisition');
  const episodes=model.memory?createEpisodicExtension(component.tasks[0].character,model.body!,stateModel,modelIdentity,inputs.runIdentity.value,model.retention?.recallDelay,model.retrieval,model.workspace,model.socialMemory,model.affectMemory,()=>reappraisal?.completedAffect(),model.encoding,model.memoryUse,model.bodyMemoryUse,model.positionMemory,model.retainedAttribution,model.significanceEnabled,!!model.actionMemory,model.effectEvidence?.proposition,model.familiarity,model.recollection,model.vivid,model.positionUse,model.positionPresentation,model.rehearsal,model.attributionUse):undefined;
@@ -162,7 +162,7 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
   for(const eventType of priority?.eventTypes()??[])registerHandler(key(eventType),context=>priority!.execute(context));
   for(const eventType of strategy?.eventTypes()??[])registerHandler(key(eventType),context=>strategy!.execute(context));
   for(const eventType of episodes?.eventTypes()??[])registerHandler(key(eventType),context=>episodes!.execute(context));
-  if(obstruction)registerHandler(key(OBSTRUCTION_SOURCE),context=>obstruction.execute(context));
+  if(obstruction){registerHandler(key(OBSTRUCTION_SOURCE),context=>obstruction.execute(context));if(model.executionOpportunity)registerHandler(key(OPPORTUNITY_SOURCE),context=>obstruction.execute(context));}
   if(procedure){registerHandler(key(PRACTICE_SETTING),context=>procedure.execute(context));registerHandler(key(PRACTICE),()=>{throw new SchedulerContractError('INPUT_NOT_ADMITTED','practice requires prepared stage');});}
   for(const eventType of body?.eventTypes()??[])registerHandler(key(eventType),context=>{
    const result=body!.execute(context),observed=effects&&key(context.event.eventTypeId)===key(BODY_DELIVERY)?effects.observeDelivery(context.event,result.outputs):undefined;
