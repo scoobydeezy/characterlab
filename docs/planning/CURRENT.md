@@ -62,3 +62,8 @@ M119 has47 slots, including its effect-evidence declaration; the M191 adapter
 expects46. Adapt the unchanged46-slot prefix, then restore original slot46 exactly
 in the55-slot result. No original mechanism/declaration is dropped or replaced.
 Preserve the failed transfer and test-reader type receipt; scenario/gates unchanged.
+
+The rollback test assumed14 immediately follows12; an intervening instant settled.
+Drive the real calendar until the reached14 fault and compare its actual prior
+committed snapshot. Keep save12 and every recovery/continuation checkpoint.
+This repairs the test driver, not the fixture, fault location or rollback gate.
