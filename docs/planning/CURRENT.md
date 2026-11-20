@@ -1,41 +1,55 @@
-# Current work — M188 complete; AFFECT factor transfer next
-Perceived embarrassment changes the current character's withdrawal probability
-from1/3 to2/3, while a competing goal can still prevail. Actual decision,
-expression and attempted execution consume the appraisal.
+# Current work — M189 current factor and regulatory transfer
+M188 complete09a2b5a3. Owner2026-11-20 delegates full AFFECT completion
+under bounded self-approval. This package precedes the final family map.
 
-[M188 result](ASSEMBLED_CHARACTER_M188_RESULT.md);
-[checks](ASSEMBLED_CHARACTER_M188_CHECKS.txt). Base335272bc; planbd8218b9.
-Failed native sources/receipts retainedae307430/68d18971.
-Rules/registry0.129-candidate unchanged; two new test/fixture paths.
-No production/formal/original-control changes; one shared character.
+## Committed bounded card
+Capabilities: (1) four independently sourced appraisal factors retain their current
+decision consumers; (2) equal physical histories permit distinct later stress
+through learned affect, removed by NoImpulse. No production change planned.
+PHEN-AFFECT-001:4/5/7/8/10/11 and BRIEF12.5-1/8; FND4/6.
+Consulted M178/M179/M183/M184, factor0.1 and regulatory-stress0.1 contracts,
+MEC003/004/012..019/022 and P3-001/004/005/008/011. Preserve original candidates.
 
-## Completed receiving comparison
-M59 perceived mismatch contrast, mixed negative/nonnegative reports1/2;
-recognized coat evaluator, three nonsocial tasks, importance3/5 versus1,
-third0/urgency1; body10 unsensed, stress0/bias0, workspace6, seed0.
-Contextual/SplitExposure and current reason/decision laws remain.
-Actual prior person evidence -> appraisal3 U3/10 versus0 -> described source/
-compiled reasons -> native decision/expression/execution attempt.
-Exact production arbitration on captured actual contexts:48 paired cases,
-withdrawal32/48 versus16/48;16 changed winners and16 positive-affect continuations.
-PlayerFacingRoll versus QuietRoll; no reconstructed context or seed search.
-Five original Contextual semantic projections agree; original M59 null retained.
+Factor source: exact M17816 cells/32 adjacent edges, now rules/registry0.129
+with bias0/stress0. One holder/seed0; three nonsocial tasks, A/B importance1,
+third0; body30/cap100/rate10/grid1. Panels1..9; delivery9 amount0/90;
+likelihood0/1, declared severity0/1, vulnerability99/100 or19/100, control0/1.
+Original perception and goals remain; distinct routes open at1/25.
+Reference SplitExposure, original ScalarUncontrolled/HistoricalProduct formulas
+on actual operands. No alternate production psychology or law/calibration tuning.
+All16 cells must finish101, with live appraisal/base reasons/decision/expression/
+attempt. Current concern interactions remain explicit; no sampled-winner claim.
+Same state/output through3; all32 declaration edges vary one field only.
+Unknown control distinct from0; hidden safe prefixes and exact repeat/public
+save9 continuation at every later instant. Current stress consumes actual reports.
 
-Unknown/denied/unrecognized/late reports, correction timing and zero motive pass.
-Hidden truth preserves all safe prefixes. Repeat/public save2/recovery1->2
-match all later state/output/trace/save/run bytes through queue exhaustion18.
-Actual person-write fault rolls back the complete instant; ownership/history/
-bootstrap boundaries pass. All three final native gates and required checks pass.
-Verification 928.932 seconds<1800 including five failed commands; each<600.
-Failures: command config, two type errors, reserve/stress fixture field and trace
-list reader; closing count-table format. Repairs preserve laws, scenarios and gates; no budget extension.
+Regulatory source: exact M179 risk/safe/NoImpulse source on0.129, body30,
+stress0/bias0, threat nonsocial; other bindings retain normal passive evidence.
+Early routes closed; actual no-candidate decision and no execution through10.
+Match whole physical455 history/current selected sensation through10.
+Known U199/400 vs0, authentic strictly later stress11=249 vs0;
+NoImpulse preserves positive affect/removes the stress effect. Finish101.
+This is bounded body-history insufficiency, not arbitrary scalar impossibility.
+M179 Full/ScalarThreat64/64 and body-only failures remain controls, kernels unchanged.
 
-## Remaining direction
-Next: affected factor transfer, then compact AFFECT eight-clause acceptance map.
-M184–M188 checks stand unless a concrete change invalidates them.
-Pinned21/15/132 and E64/P42/N13/U13 unchanged; no family/clause promotion.
-Memory12.3 accepted0.126 only. Wider BIO/stress sensing and final whole-candidate
-replay remain. Bounded AFFECT self-approval continues; no UI/reduction/debt closure.
+At most2 new test paths, optional fixture helper if necessary (<=3 total);
+CURRENT/register/obligations and one result/check pair. No existing tests/formals/
+production edits; source adaptation only adds existing current version/zero bias.
+Checks serial: types; declarations; matrix p0; matrix p1; factor controls/restore;
+current regulatory collision; boundary/research/preservation/staged size.
+Each<=600s, cumulative<=1800s including failures; <=20 evidence files/5MiB.
+Snapshot/source caching permitted without changing bytes or horizons.
+Risks: schema/zero-bias transfer, strength normalization, hidden physics, queued
+stress ordering, stale factor or reason assumptions, incomplete continuation.
+Done only if all declared gates pass with differences classified; preserve failures
+and diagnose before bounded repair. No seed search, weakened gate or scope change.
+Passing ends this package; proceed to compact acceptance map and any exact
+remaining affected requirement, not unrelated breadth.
+
+Pinned21/15/132; E64/P42/N13/U13 unchanged. AFFECT still open; memory12.3 accepted
+0.126 only. Wider BIO/stress sensing and final whole-candidate replay remain.
+No UI/reduction or debt closure.
+
 | Record | Status |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
