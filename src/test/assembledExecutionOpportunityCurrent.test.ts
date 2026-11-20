@@ -1,3 +1,4 @@
+import {SK} from '../assembled/stakeholderKnowledge';
 import {fixture as originalOpportunity} from './fixtures/assembledExecutionOpportunity';
 import {it,expect,vi} from 'vitest';
 import {executionOpportunity as fixture} from './fixtures/assembledAgencyCurrent';
@@ -32,8 +33,8 @@ function live(run:Run,blocked:boolean,visible=true){
  expect(source).toBeDefined();expect(uint(f(rec(f(source,4n),130n),3n))).toBe(100n);expect(f(source,6n)).toEqual(text(OPPORTUNITY_VERSION));expect(items(f(source,11n),'list')).toHaveLength(0);
  const physical=traces.find(t=>eq(f(rec(f(t,4n),130n),5n),ACTION_BODY_EVENT)&&items(f(t,13n),'list').some(o=>eq(o,list(opportunity))))!;
  expect(physical).toBeDefined();expect(uint(f(rec(f(physical,4n),130n),3n))).toBe(110n);
- expect(f(physical,6n)).toEqual(text(OPPORTUNITY_VERSION));
- 
+ expect(f(physical,6n)).toEqual(text(SK+'-candidate'));
+
  const phaseOf=(value:CanonicalValue)=>{const t=traces.find(t=>eq(f(t,13n),value)||(typeof f(t,13n)!=='boolean'&&(f(t,13n) as {kind:string}).kind==='list'&&items(f(t,13n),'list').some(o=>eq(o,value))));expect(t).toBeDefined();return uint(f(rec(f(t!,4n),130n),3n));};
  expect(phaseOf(p.intent)).toBe(90n);expect(phaseOf(p.expression)).toBe(90n);
  const attempt=rec(f(p.execution!,2n),432n);expect(phaseOf(attempt)).toBe(110n);
@@ -55,7 +56,7 @@ it('M200 lost opportunity prevents a competent chosen effect and ordinary outcom
 it('M200 full continuation and reached physical fault preserve atomicity',async()=>{
  const b=fixture(false),a=await create(b,9n),repeat=await create(b,9n),restored=await restoreCharacterRun(b.s,{initialState:b.d.initialState,orderedInputs:b.d.orderedInputs,save:a.run.save()});full(a.run,repeat.run);full(a.run,restored);
  const saved=a.run.save(),before=a.run.snapshot(),original=traceModule.traceRecordValue;let reached=false;
- const spy=vi.spyOn(traceModule,'traceRecordValue').mockImplementation(value=>{const row=original(value);if(value.seamVersion===OPPORTUNITY_VERSION&&eq(value.event.eventTypeId,ACTION_BODY_EVENT)){reached=true;throw Error('M200 after actual lost opportunity');}return row;});
+ const spy=vi.spyOn(traceModule,'traceRecordValue').mockImplementation(value=>{const row=original(value);if(value.seamVersion===SK+'-candidate'&&value.event.dueAt===10n&&eq(value.event.eventTypeId,ACTION_BODY_EVENT)&&labels(value.outputProjection,OPPORTUNITY_RESULT).some(r=>r[5]===false)){reached=true;throw Error('M200 after actual lost opportunity');}return row;});
  try{await expect(a.run.settleNextInstant()).rejects.toThrow('M200 after actual lost opportunity');expect(reached).toBe(true);snapshots({...a.run.snapshot(),status:before.status},before);}finally{spy.mockRestore();}
  const recovered=await restoreCharacterRun(b.s,{initialState:b.d.initialState,orderedInputs:b.d.orderedInputs,save:saved});
  for(let n=0;;n++){expect(n).toBeLessThan(32);const more=await repeat.run.settleNextInstant();for(const r of[restored,recovered]){expect(await r.settleNextInstant()).toBe(more);full(repeat.run,r);}if(!more)break;}

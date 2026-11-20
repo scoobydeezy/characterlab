@@ -1232,3 +1232,11 @@ MEC004/015/017/019/022 and GroupedMean/LastClaim/OutcomeOnly/LatestEpisode contr
 remain. Admission permits disjoint main/passive reports; real same-main conflicts
 and prior-version guards remain. Defect/failure53bc2e6d preserved; no law change.
 Competence/opportunity transfer and family gate remain. [Result](ASSEMBLED_CHARACTER_M199_RESULT.md).
+
+M200 transfers M197 competence/hidden-outcome and M194 opportunity/delay controls
+to0.134 with original sources, laws and full calendars. Actual practice K1/2 versus0,
+blocking and post-choice loss remain distinct from perceived failure and frozen intent.
+Denied outcomes leave passive knowledge absent despite prior-only Unknown queries.
+MEC004/015/017/019/022 and original agency/SuccessAsIntent controls remain preserved.
+All production unchanged; finite12.14 comparison/classification review is next.
+[Result](ASSEMBLED_CHARACTER_M200_RESULT.md).
