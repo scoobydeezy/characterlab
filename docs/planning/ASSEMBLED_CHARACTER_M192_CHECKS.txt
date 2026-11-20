@@ -1,0 +1,38 @@
+
+M192 types exit=0 elapsed=20.301s cap=600
+
+M192 external-obstruction-learning exit=1 elapsed=102.220s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledObstruction.test.ts (9 tests | 1 failed | 8 skipped) 96545ms
+   × M192 external actor prevents a competent chosen effect and ordinary outcome learning follows 96545ms
+     → expected +0 to be 1 // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledObstruction.test.ts > M192 external actor prevents a competent chosen effect and ordinary outcome learning follows
+AssertionError: expected +0 to be 1 // Object.is equality
+
+- Expected
++ Received
+
+- 1
++ 0
+
+ ❯ live src/test/assembledObstruction.test.ts:23:104
+     21|  expect(obstruction).toBeDefined();expect(obstruction[3]).toEqual(effe…
+     22|  const skill=labels(os,SKILL_ACTUAL).find(a=>eq(a[2],effect[1]))!;expe…
+     23|  const observations=labels(os,PERFORMANCE_OBS).filter(a=>uint(a[2])===…
+       |                                                                                                        ^
+     24|  for(const o of observations){
+     25|   expect(o[5]).toEqual(effect[3]);expect(o[6]).toBe(!blocked);expect(o…
+ ❯ src/test/assembledObstruction.test.ts:38:64
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  08:31:34
+   Duration  101.66s (transform 3.12s, setup 0ms, collect 4.65s, tests 96.55s, environment 0ms, prepare 130ms)
+
