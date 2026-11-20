@@ -4,3 +4,36 @@ src/assembled/inputs.ts(107,8): error TS2451: Cannot redeclare block-scoped vari
 src/assembled/inputs.ts(174,8): error TS2451: Cannot redeclare block-scoped variable 'opportunityTimes'.
 src/assembled/inputs.ts(175,388): error TS2345: Argument of type 'bigint' is not assignable to parameter of type 'string'.
 src/assembled/inputs.ts(175,478): error TS2345: Argument of type 'bigint' is not assignable to parameter of type 'string'.
+
+M194 types-name-repair exit=0 elapsed=20.236s cap=600
+
+M194 connection exit=1 elapsed=106.766s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledExecutionOpportunity.test.ts (9 tests | 1 failed | 8 skipped) 100369ms
+   × M194 lost opportunity prevents a competent chosen effect and ordinary outcome learning follows 100369ms
+     → expected 90n to be 70n // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledExecutionOpportunity.test.ts > M194 lost opportunity prevents a competent chosen effect and ordinary outcome learning follows
+AssertionError: expected 90n to be 70n // Object.is equality
+
+- Expected
++ Received
+
+- 70n
++ 90n
+
+ ❯ live src/test/assembledExecutionOpportunity.test.ts:36:28
+
+ ❯ src/test/assembledExecutionOpportunity.test.ts:45:71
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  10:14:18
+   Duration  105.84s (transform 3.21s, setup 0ms, collect 4.81s, tests 100.37s, environment 0ms, prepare 295ms)
+
