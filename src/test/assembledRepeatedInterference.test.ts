@@ -71,3 +71,9 @@ it('M195 second witness rollback and full continuation preserve accumulated hist
  expect(repeat.run.snapshot().clock).toBe(101n);appraisal(repeat.run,16n,q(3,4),2);
  console.info('M195 CONTINUATION PASS repeat11, reached second witness140 rollback, save11 recovery/save12 restoration all later complete bytes through101; prior history retained.');
 },570000);
+
+it('M195 inspect inherited route validity after missing second candidate',()=>{
+ const b=fixture();const rows=items(decode(b.d.orderedInputs),'list');
+ const summary=rows.flatMap(v=>{const a=items(v,'list'),id=a[2];if(typeof id==='boolean'||id.kind!=='typedIdentifier'||typeof id.payload==='boolean'||id.payload.kind!=='text'||!['event/assembled-strategy-display','event/assembled-priority-display','event/assembled-horizon-display'].includes(id.payload.value))return [];return [{at:signedValue(a[0]).toString(),event:id.payload.value,payload:a[3]}];});
+ console.info('M195 SOURCE DIAGNOSTIC',JSON.stringify(summary,(_,v)=>typeof v==='bigint'?v.toString():v));expect(summary.length).toBeGreaterThan(0);
+});
