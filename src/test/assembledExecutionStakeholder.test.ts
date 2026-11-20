@@ -67,6 +67,6 @@ it('M196 admission guards source and generated evidence',async()=>{
  const handler=createExecutionStakeholder(C,compiled.socialWitness!,compiled.modelIdentity.value,compiled.modelIdentity.value);handler.begin(10n);
  const event={eventId:999n,eventSequence:999n,eventTypeId:PERFORMANCE_OBSERVE,dueAt:10n as never,phase:120n,payload:list([text('local-test-action'),false,list([list([taskB,u(1),true,u(0)])]),true]),dependencies:list([]),causalParentEventIds:[]};
  const plan=handler.observe(event,taskB,[true,false]);expect(()=>plan.bind([{...plan.emissions[0],eventId:1000n,eventSequence:1000n,causalParentEventIds:[998n]}])).toThrow('child binding');
- expect(()=>handler.execute({event:{...event,phase:130n,eventTypeId:STAKEHOLDER_EVIDENCE,payload:list([list([]),list([])])},state:state(await create(b,9n))} as never)).toThrow('unbound generated');expect(()=>handler.prepareCommit()).toThrow('unfinished');handler.close();
+ expect(()=>handler.execute({event:{...event,phase:130n,eventTypeId:STAKEHOLDER_EVIDENCE,payload:list([list([]),list([])])},state:restoreAuthoritativeState(decode(b.d.initialState))} as never)).toThrow('unbound generated');expect(()=>handler.prepareCommit()).toThrow('unfinished');handler.close();
  console.info('M196 ADMISSION PASS old version, foreign task, malformed Boolean permissions/shape, forged external evidence and generated parent reject.');
 },570000);

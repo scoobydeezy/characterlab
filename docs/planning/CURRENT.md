@@ -10,7 +10,7 @@ M195 complete at e8f24ad4; [result](ASSEMBLED_CHARACTER_M195_RESULT.md).
 - Versioned candidate: rules/registry0.133, same55 slots; execution-stakeholder/0.1.
   Existing two passive identities in social-witness slot51; no new autonomous peer.
 - Scope: model.ts, inputs.ts, runtime.ts, externalObstruction.ts, new
-  executionStakeholder.ts, one test and its fixture (7 production/test paths).
+  executionStakeholder.ts, traceBinding.ts, one test/fixture (8 production/test).
   One formal contract, existing register/ledger/obligations, this card/result/log.
   <=12 production/test,20 evidence/5MiB; CURRENT80/register250lines/64KiB.
 - No new psychological law/state/owner/store. Actual outcome110 -> permitted
@@ -52,3 +52,8 @@ M195 complete at e8f24ad4; [result](ASSEMBLED_CHARACTER_M195_RESULT.md).
   No general recognition, stakeholder causal learning, blame or trust claim.
   Family review and whole-candidate replay remain;21members/15families/132 fixed.
   No UI/Campaign4, new family breadth or verification after passing.
+
+## Repair before rerun
+Native startup rejected0.133 because traceBinding version admission was omitted.
+Add0.133 to the existing exact model/run gate; no relaxation of identity equality,
+scenario change or new semantics. Preserve failure and the earlier test type error.

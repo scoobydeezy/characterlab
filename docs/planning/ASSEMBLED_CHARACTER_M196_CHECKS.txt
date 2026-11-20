@@ -3,3 +3,33 @@ M196 types exit=2 elapsed=21.087s cap=120
 src/test/assembledExecutionStakeholder.test.ts(70,137): error TS1308: 'await' expressions are only allowed within async functions and at the top levels of modules.
 src/test/assembledExecutionStakeholder.test.ts(70,137): error TS2345: Argument of type '{ b: { s: { rulesVersion: string; registrySchemaVersion: string; registry: Uint8Array<ArrayBufferLike>; contentSchemaVersion: string; parameterSchemaVersion: string; numericProfileVersion: string; randomAlgorithmVersion: string; content: Uint8Array; parameters: Uint8Array; }; d: { ...; } | ... 2 more ... | { ...; };...' is not assignable to parameter of type 'Readonly<{ settleNextInstant(): Promise<boolean>; snapshot(): Readonly<{ clock: SimInstant; status: RunStatus; state: Uint8Array<ArrayBufferLike>; outputs: Uint8Array<...>; trace: Uint8Array<...>; }>; ... 4 more ...; diagnostic(): Uint8Array<...> | undefined; }>'.
   Type '{ b: { s: { rulesVersion: string; registrySchemaVersion: string; registry: Uint8Array<ArrayBufferLike>; contentSchemaVersion: string; parameterSchemaVersion: string; numericProfileVersion: string; randomAlgorithmVersion: string; content: Uint8Array<...>; parameters: Uint8Array<...>; }; d: { ...; } | ... 2 more ... |...' is missing the following properties from type 'Readonly<{ settleNextInstant(): Promise<boolean>; snapshot(): Readonly<{ clock: SimInstant; status: RunStatus; state: Uint8Array<ArrayBufferLike>; outputs: Uint8Array<...>; trace: Uint8Array<...>; }>; ... 4 more ...; diagnostic(): Uint8Array<...> | undefined; }>': settleNextInstant, snapshot, decisionHistory, decisionPresentation, and 3 more.
+
+M196 types-repair exit=0 elapsed=20.457s cap=120
+
+M196 native-connection exit=1 elapsed=66.504s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledExecutionStakeholder.test.ts (9 tests | 1 failed | 8 skipped) 60850ms
+   × M196 actual failure reaches only permitted stakeholder without private cause 60849ms
+     → assembled trace requires exact model/run binding
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledExecutionStakeholder.test.ts > M196 actual failure reaches only permitted stakeholder without private cause
+SchedulerContractError: assembled trace requires exact model/run binding
+ ❯ Module.compileCharacterTraceBinding src/assembled/traceBinding.ts:34:2549
+
+ ❯ Module.createCharacterRuntime src/assembled/runtime.ts:122:14
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:122
+ ❯ Module.create src/test/fixtures/assembledDecisionCurrent.ts:61:60
+ ❯ Module.create src/test/fixtures/assembledExecutionStakeholder.ts:13:61
+ ❯ src/test/assembledExecutionStakeholder.test.ts:29:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  12:50:44
+   Duration  65.94s (transform 3.18s, setup 0ms, collect 4.75s, tests 60.85s, environment 0ms, prepare 104ms)
+
