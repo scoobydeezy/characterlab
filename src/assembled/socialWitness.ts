@@ -18,11 +18,14 @@ export const SW_SOURCE=sid(1001,'event/assembled-social-witness-source'),SW_MESS
 const kinds=[SW_SOURCE,SW_QUERY,SW_MESSAGE,SW_OBSERVE,SW_EVIDENCE,SW_LEARN],eq=(a:CanonicalValue,b:CanonicalValue)=>key(a)===key(b),fp=(e:ScheduledEvent)=>key(scheduledEventValue(e));
 const require=(b:boolean,s:string)=>{if(!b)invalidModel('social witness '+s);};
 const fail=(s:string):never=>{throw new SchedulerContractError('INPUT_NOT_ADMITTED','social witness: '+s);};
-export function compileSocialWitness(v:CanonicalValue,recipients:readonly CanonicalValue[],tasks:readonly CanonicalValue[]){
+export function compileSocialWitness(v:CanonicalValue,recipients:readonly CanonicalValue[],tasks:readonly CanonicalValue[],people?:readonly CanonicalValue[]){
  const a=items(v,'list');require(a.length===4&&txt(a[0])===SW&&tasks.some(t=>eq(t,a[1]))&&typeof a[2]==='boolean','declaration/task');
- const observers=items(a[3],'list').map((v,i)=>{const x=items(v,'list');require(x.length===3&&!!recipients[i]&&eq(x[0],recipients[i]),'observer mapping');validateSemanticReferent(x[1]);validateSemanticReferent(x[2]);return {observer:x[0],holder:x[1],target:x[2]};});
+ const observers=items(a[3],'list').map((v,i)=>{const x=items(v,'list');require(x.length===(people?4:3)&&!!recipients[i]&&eq(x[0],recipients[i]),'observer mapping');validateSemanticReferent(x[1]);validateSemanticReferent(x[2]);const actors=people?items(x[3],'list').map(v=>{const p=items(v,'list');require(p.length===2&&people.some(t=>eq(t,p[0])),'actor mapping');validateSemanticReferent(p[1]);return {world:p[0],local:p[1]};}):undefined;
+ if(actors)require(actors.length===people!.length&&new Set(actors.map(a=>key(a.world))).size===people!.length,'actor coverage');
+ return {observer:x[0],holder:x[1],target:x[2],...(actors?{actors}: {})};});
  require(observers.length===2&&new Set(observers.flatMap(o=>[key(o.holder),key(o.target)])).size===4,'distinct local identities');
  const main=f(rec(a[1],371n),1n);require(observers.every(o=>!eq(o.holder,main)&&!eq(o.target,main)),'private target identity');
+ if(people){const locals=observers.flatMap(o=>[o.holder,o.target,...o.actors!.map(p=>p.local)]);require(new Set(locals.map(key)).size===locals.length&&locals.every(v=>!eq(v,main)&&!people.some(p=>eq(v,p))),'private actor identities');}
  return {task:a[1],reverse:a[2]===true,observers};
 }
 export type SocialWitness=ReturnType<typeof compileSocialWitness>;

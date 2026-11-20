@@ -1216,3 +1216,11 @@ and original agency projectAttempt/SuccessAsIntent distinctions remain.
 No production/owner/law changes. Family review identifies passive causal belief/
 report correction and later nonrecipient comparisons still requiring integration;
 main-holder witnessing is not a replacement. [Result](ASSEMBLED_CHARACTER_M197_RESULT.md).
+
+M198 ports agency0.3 GroupedMean into existing KNOWLEDGE_OWNER root1000/9 on0.134.
+Own actual outcome/cause120 -> evidence130 -> common140; later fallible reports
+correct only recipients, with local actor maps and unique receipt support.
+Original LastClaim/OutcomeOnly remain discriminated controls. MEC004/015/017/019/022
+retain identity/visibility, addressed dice, frozen meaning and execution distinctions.
+Passive query40 consumes retained knowledge; later-attempt nonrecipient comparison
+and final candidate family replay remain. [Result](ASSEMBLED_CHARACTER_M198_RESULT.md).

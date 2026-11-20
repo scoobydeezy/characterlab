@@ -103,7 +103,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  const planned=model.strategy?withStrategyState(procedural,C,model.strategy,model.timeLimit):procedural;
  const prioritized=model.priority?withPriorityState(planned,tasks.map(t=>t.key),model.goalMeaning?{C,settings:model.goalMeaning}:undefined,model.spatialMeaning?{C,settings:model.spatialMeaning}:undefined,model.commitmentAdoption,model.timeLimit):planned;
  const forecasted=model.horizon?withHorizonState(prioritized,tasks.map(t=>t.key),model.timeLimit):prioritized;
- const monitored=model.performance?withPerformanceState(forecasted,model.strategy!,model.expectationEnabled,model.selfBeliefEnabled?C:undefined,model.values,model.causalEnabled,model.interferenceEnabled,model.timeLimit,model.obstructionWitness?model.social!.targets:undefined):forecasted;
+ const monitored=model.performance?withPerformanceState(forecasted,model.strategy!,model.expectationEnabled,model.selfBeliefEnabled?C:undefined,model.values,model.causalEnabled,model.interferenceEnabled,model.timeLimit,model.obstructionWitness?model.social!.targets:undefined,model.stakeholderKnowledge?model.socialWitness:undefined):forecasted;
  const habitual=model.habit?withHabitState(monitored,C,model.timeLimit):monitored;
  const controlled=model.control?withControlState(habitual,C,model.mitigationEnabled?3:model.sharedAffectSources?2:model.reappraisal!==undefined,model.fatigue!==undefined,model.rumination,model.timeLimit):habitual;
  const communicating=model.communication?withCommunicationState(controlled,[...(model.communication.topic?[]:[C]),...model.communication.recipients],model.communication.topic,model.communication.expectation,model.commitmentWitness?tasks.map(t=>t.key):[],model.timeLimit):controlled;
