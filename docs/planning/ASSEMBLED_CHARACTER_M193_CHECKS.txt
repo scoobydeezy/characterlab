@@ -64,3 +64,34 @@ AssertionError: actual compared task outcome: expected [] to have a length of 1 
    Start at  09:15:45
    Duration  104.50s (transform 3.10s, setup 0ms, collect 4.63s, tests 99.40s, environment 0ms, prepare 143ms)
 
+
+M193 witness-explanation-task-B exit=1 elapsed=103.717s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledObstructionWitness.test.ts (10 tests | 1 failed | 9 skipped) 98061ms
+   × M193 witnessed blocking and later contrary explanation revise actual prior appraisal 98061ms
+     → expected 1n to be 0n // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledObstructionWitness.test.ts > M193 witnessed blocking and later contrary explanation revise actual prior appraisal
+AssertionError: expected 1n to be 0n // Object.is equality
+
+- Expected
++ Received
+
+- 0n
++ 1n
+
+ ❯ live src/test/assembledObstructionWitness.test.ts:22:249
+
+ ❯ src/test/assembledObstructionWitness.test.ts:25:74
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 9 skipped (10)
+   Start at  09:18:08
+   Duration  103.16s (transform 3.10s, setup 0ms, collect 4.65s, tests 98.06s, environment 0ms, prepare 139ms)
+
