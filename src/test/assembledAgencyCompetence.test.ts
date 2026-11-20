@@ -57,9 +57,9 @@ it('M197 denied success and failure do not become observer knowledge',async()=>{
 },570000);
 it('M197 current acquired-skill continuation and stakeholder rollback',async()=>{
  const a=await start(),repeat=await createCharacterRun(a.m,a.b.d);await through(repeat,12n);exact(a.r,repeat);
- const saved=a.r.save(),before=view(a.r).snapshot,original=traceModule.traceRecordValue;let reached=false;
+ const saved=a.r.save(),original=traceModule.traceRecordValue;let reached=false;
  const spy=vi.spyOn(traceModule,'traceRecordValue').mockImplementation(v=>{const row=original(v);if(v.event.dueAt===14n&&eq(v.event.eventTypeId,STAKEHOLDER_EVIDENCE)){reached=true;throw Error('M197 evidence14');}return row;});
- try{await expect(next(a.r)).rejects.toThrow('M197 evidence14');expect(reached).toBe(true);snap({...a.r.snapshot(),status:before.status},before);}finally{spy.mockRestore();}
+ try{for(let n=0;!reached;n++){expect(n).toBeLessThan(64);const before=view(a.r).snapshot;try{expect(await next(a.r)).toBe(true);expect(view(a.r).snapshot.clock).toBeLessThan(14n);}catch(error){expect(reached).toBe(true);expect(String(error)).toContain('M197 evidence14');snap({...a.r.snapshot(),status:before.status},before);}}expect(reached).toBe(true);}finally{spy.mockRestore();}
  const recovered=await restoreCharacterRun(a.b.s,{initialState:a.b.d.initialState,orderedInputs:a.b.d.orderedInputs,save:saved});exact(repeat,recovered);
  for(let n=0;;n++){expect(n).toBeLessThan(64);const more=await next(repeat);expect(await next(recovered)).toBe(more);exact(repeat,recovered);if(!more)break;}
  expect(view(repeat).snapshot.clock).toBe(101n);actual({...a,r:repeat},true,true);console.info('M197 CONTINUATION PASS acquired skill repeat12, reached14 evidence rollback, public save12 recovery every later full byte through101.');

@@ -1208,3 +1208,11 @@ Outcome-only evidence is not commitment, competence or causal knowledge;
 original GroupedMean/LastClaim stay Unknown on captured outcome-only evidence.
 No new psychological store/owner/law or autonomous peer; no retired mechanism.
 [Bounded result](ASSEMBLED_CHARACTER_M196_RESULT.md).
+
+M197 compares actual acquired K1/2 and untrained K0 at fixed difficulty/belief,
+with/without external blocking on0.133. Same choice/intent; outcome-only
+stakeholders cannot distinguish the three failure cells. MEC004/015/017/019/022
+and original agency projectAttempt/SuccessAsIntent distinctions remain.
+No production/owner/law changes. Family review identifies passive causal belief/
+report correction and later nonrecipient comparisons still requiring integration;
+main-holder witnessing is not a replacement. [Result](ASSEMBLED_CHARACTER_M197_RESULT.md).
