@@ -36,6 +36,14 @@ fault after actual obstruction evaluation rolls back, and restore recovers exact
 Existing M191 native regimes/history protect0.129; affected M190 orphan-motive
 reference control protects AFFECT. Retain frozen C2 closure if byte-unchanged.
 
+## Recorded setup repair and affected branch check
+First native attempt stopped: inherited performance-report targets were absent.
+Checkpointed failure/code; explicitly request actual mode0 for compared A/B tasks
+in both arms. No law/seed/calibration or completion gate changes.
+Before final acceptance, test fixed delay2: a block prevents queuing at10; a later
+block at12 must not cancel an already queued10 receipt. This checks the new physical
+gate against the existing delayed branch within the same budgets.
+
 ## Files, budget and stop
 Production planned: externalObstruction.ts(new), model.ts, inputs.ts, runtime.ts,
 body.ts, traceBinding.ts in src/assembled. Tests: fixtures/assembledObstruction.ts,
