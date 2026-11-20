@@ -65,3 +65,8 @@ remain. No UI, reduction, alternative production pipeline or conditional-debt cl
 | Record | Status |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
+
+Pre-rerun repair: first admission failed on legacy stand-in recognition payload.
+Preserve that source/receipt. Map continuity to four lifecycle flags, person-form
+to its permitted C1 feature, template cues to typed/permitted signals, and append
+empty additional-role list. Report values/permissions and completion contrast stay.

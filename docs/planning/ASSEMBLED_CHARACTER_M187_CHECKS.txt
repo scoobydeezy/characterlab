@@ -1,0 +1,38 @@
+
+M187 types exit=0 elapsed=20.963s cap=600
+
+M187 current-reappraisal-primary exit=1 elapsed=78.997s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledReappraisalCurrent.test.ts (8 tests | 1 failed | 7 skipped) 73270ms
+   × M187 connection: chosen completion changes later hypothetical threat and grounded choice 73269ms
+     → requires list
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledReappraisalCurrent.test.ts > M187 connection: chosen completion changes later hypothetical threat and grounded choice
+SchedulerContractError: requires list
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataItems src/campaign2/canonicalData.ts:23:50
+ ❯ Module.lifecycleSource src/assembled/semanticLifecycle.ts:7:59
+ ❯ Module.recognitionSource src/assembled/recognition.ts:43:183
+ ❯ Module.encounterSource src/assembled/encounter.ts:12:13
+ ❯ src/assembled/inputs.ts:98:720
+ ❯ Module.compileCharacterInputs src/assembled/inputs.ts:98:27
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:63
+ ❯ src/test/assembledReappraisalCurrent.test.ts:130:45
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  18:18:26
+   Duration  78.41s (transform 3.20s, setup 0ms, collect 4.80s, tests 73.27s, environment 0ms, prepare 106ms)
+
