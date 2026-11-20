@@ -59,3 +59,5 @@ no source inputs or comparison change. Both earlier command failures retained.
 Native setup repair: reserve adapter overwrote both body455 fields; constrain to
 field1, retaining declared stress0 in field2. Cache immutable source assembly only.
 Failed admission is not a mechanism result; no law/comparison changes.
+Reader repair: trace appraisals are canonical list values, while app() returns
+items. Compare list(a) at producer/input/reasons joins; values already agree.

@@ -45,3 +45,246 @@ SchedulerContractError: requires list
    Start at  20:41:33
    Duration  119.62s (transform 3.34s, setup 0ms, collect 4.99s, tests 114.15s, environment 0ms, prepare 166ms)
 
+
+M188 primary-reserve-repair exit=1 elapsed=129.670s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledEmbarrassmentCurrent.test.ts (8 tests | 1 failed | 7 skipped) 122963ms
+   × M188 primary actual contextual affect reaches grounded choice and execution 122963ms
+     → expected { kind: 'list', …(1) } to deeply equal [ { kind: 'text', …(1) }, …(10) ]
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledEmbarrassmentCurrent.test.ts > M188 primary actual contextual affect reaches grounded choice and execution
+AssertionError: expected { kind: 'list', …(1) } to deeply equal [ { kind: 'text', …(1) }, …(10) ]
+
+- Expected: 
+Array [
+  Object {
+    "kind": "text",
+    "value": "assembled-embarrassment/0.1/appraisal",
+  },
+  Object {
+    "kind": "unsigned",
+    "value": 3n,
+  },
+  Object {
+    "kind": "typedIdentifier",
+    "namespaceId": 1002n,
+    "payload": Object {
+      "kind": "typedIdentifier",
+      "namespaceId": 1037n,
+      "payload": Object {
+        "kind": "typedIdentifier",
+        "namespaceId": 1038n,
+        "payload": Object {
+          "kind": "text",
+          "value": "content/assembled-social/target",
+        },
+      },
+    },
+  },
+  Object {
+    "items": Array [
+      true,
+    ],
+    "kind": "list",
+  },
+  Object {
+    "items": Array [
+      true,
+    ],
+    "kind": "list",
+  },
+  Object {
+    "items": Array [
+      Object {
+        "denominator": 2n,
+        "kind": "rational",
+        "numerator": 1n,
+      },
+    ],
+    "kind": "list",
+  },
+  Object {
+    "items": Array [
+      Object {
+        "denominator": 2n,
+        "kind": "rational",
+        "numerator": 1n,
+      },
+    ],
+    "kind": "list",
+  },
+  Object {
+    "denominator": 5n,
+    "kind": "rational",
+    "numerator": 3n,
+  },
+  Object {
+    "kind": "text",
+    "value": "Known",
+  },
+  Object {
+    "items": Array [
+      Object {
+        "denominator": 10n,
+        "kind": "rational",
+        "numerator": 3n,
+      },
+      Object {
+        "denominator": 10n,
+        "kind": "rational",
+        "numerator": 3n,
+      },
+    ],
+    "kind": "list",
+  },
+  Object {
+    "items": Array [
+      Object {
+        "kind": "typedIdentifier",
+        "namespaceId": 1115n,
+        "payload": Object {
+          "kind": "unsigned",
+          "value": 59n,
+        },
+      },
+      Object {
+        "kind": "typedIdentifier",
+        "namespaceId": 1115n,
+        "payload": Object {
+          "kind": "unsigned",
+          "value": 17n,
+        },
+      },
+    ],
+    "kind": "list",
+  },
+]
+
++ Received: 
+Object {
+  "items": Array [
+    Object {
+      "kind": "text",
+      "value": "assembled-embarrassment/0.1/appraisal",
+    },
+    Object {
+      "kind": "unsigned",
+      "value": 3n,
+    },
+    Object {
+      "kind": "typedIdentifier",
+      "namespaceId": 1002n,
+      "payload": Object {
+        "kind": "typedIdentifier",
+        "namespaceId": 1037n,
+        "payload": Object {
+          "kind": "typedIdentifier",
+          "namespaceId": 1038n,
+          "payload": Object {
+            "kind": "text",
+            "value": "content/assembled-social/target",
+          },
+        },
+      },
+    },
+    Object {
+      "items": Array [
+        true,
+      ],
+      "kind": "list",
+    },
+    Object {
+      "items": Array [
+        true,
+      ],
+      "kind": "list",
+    },
+    Object {
+      "items": Array [
+        Object {
+          "denominator": 2n,
+          "kind": "rational",
+          "numerator": 1n,
+        },
+      ],
+      "kind": "list",
+    },
+    Object {
+      "items": Array [
+        Object {
+          "denominator": 2n,
+          "kind": "rational",
+          "numerator": 1n,
+        },
+      ],
+      "kind": "list",
+    },
+    Object {
+      "denominator": 5n,
+      "kind": "rational",
+      "numerator": 3n,
+    },
+    Object {
+      "kind": "text",
+      "value": "Known",
+    },
+    Object {
+      "items": Array [
+        Object {
+          "denominator": 10n,
+          "kind": "rational",
+          "numerator": 3n,
+        },
+        Object {
+          "denominator": 10n,
+          "kind": "rational",
+          "numerator": 3n,
+        },
+      ],
+      "kind": "list",
+    },
+    Object {
+      "items": Array [
+        Object {
+          "kind": "typedIdentifier",
+          "namespaceId": 1115n,
+          "payload": Object {
+            "kind": "unsigned",
+            "value": 59n,
+          },
+        },
+        Object {
+          "kind": "typedIdentifier",
+          "namespaceId": 1115n,
+          "payload": Object {
+            "kind": "unsigned",
+            "value": 17n,
+          },
+        },
+      ],
+      "kind": "list",
+    },
+  ],
+  "kind": "list",
+}
+
+ ❯ live src/test/assembledEmbarrassmentCurrent.test.ts:49:57
+     47|  expect(personHistory(history(r))).toHaveLength(2);expect(personMean(h…
+     48|  const producer=trace(r).find(t=>txt(f(t,6n))===VERSION&&uint(f(event(…
+     49|  expect(producer).toBeDefined();expect(f(producer,13n)).toEqual(a);
+       |                                                         ^
+     50|  const reads=items(f(producer,11n),'list').map(v=>rec(v,147n));expect(…
+     51|  const config=items(items(decode(fixture().s.registry),'list')[42],'li…
+ ❯ src/test/assembledEmbarrassmentCurrent.test.ts:100:51
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  20:44:07
+   Duration  129.02s (transform 3.69s, setup 0ms, collect 5.48s, tests 122.96s, environment 0ms, prepare 146ms)
+

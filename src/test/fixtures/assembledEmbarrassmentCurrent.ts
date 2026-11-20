@@ -43,8 +43,9 @@ function original(o:Opt={},seed=0){
  b.d={...b.d,runSeed:new Uint8Array(32).fill(seed),orderedInputs:enc(list(rows))};return b;
 }
 
+let modern:ReturnType<typeof current>|undefined;
 export function fixture(o:Opt={}){
- const old=original({mixed:true,competing:true,...o}),b=current(),slots=[...items(decode(b.s.registry),'list')],prior=items(decode(old.s.registry),'list');
+ const old=original({mixed:true,competing:true,...o}),b=structuredClone(modern??(modern=current())),slots=[...items(decode(b.s.registry),'list')],prior=items(decode(old.s.registry),'list');
  if(slots.length!==55||prior.length!==43)throw Error('M188 explicit current/prior schema');
  slots[6]=list([text('assembled-body/0.2'),...items(prior[6],'list').slice(1),signed(0)]);
  for(const i of [12,19,42])slots[i]=prior[i];
@@ -70,7 +71,7 @@ export function fixture(o:Opt={}){
   return list(a);
  });
  const state=restoreAuthoritativeState(decode(b.d.initialState));
- return {s,d:{...b.d,orderedInputs:enc(list(rows)),runSeed:new Uint8Array(32),initialState:enc(new AuthoritativeState(state.entries().map(e=>e.path.rootStateTypeId===455n?{...e,value:embodiedRecord(454,[q(10,1),signed(0)])}:e)).canonicalValue())}};
+ return {s,d:{...b.d,orderedInputs:enc(list(rows)),runSeed:new Uint8Array(32),initialState:enc(new AuthoritativeState(state.entries().map(e=>e.path.rootStateTypeId===455n&&e.path.fieldId===1n?{...e,value:embodiedRecord(454,[q(10,1),signed(0)])}:e)).canonicalValue())}};
 }
 export {decode,items,key,enc,target,actionA,actionB};
 export type {Opt};
