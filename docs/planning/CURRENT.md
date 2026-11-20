@@ -55,25 +55,18 @@ M194 complete at2a47a5b6; [result](ASSEMBLED_CHARACTER_M194_RESULT.md).
   Frozen controls/production untouched retain their prior byte results.
   Stop verification on pass; no UI, new store/scheduler or alternate pipeline.
 
-## Self-approved scenario amendment before rerun
-First comparison failed at12 with NoCandidates (28996705), not a belief failure.
-Declaration inspection confirms both strategy displays expire at10; the latest
-was issued8. Extend only that latest display valid-until10 to16 in both arms so
-routes remain visibly available at the added opportunities. Original expired
-fixture/failure stays preserved. No goal/importance, polarity, physical effect,
-seed, law, required two attempts, 3/4-versus1/2 gate or budget changes.
+## Recorded bounded amendments
+c9f2c556: latest display issued8 valid-until10 ->16; preserve expired null.
+9eecf302: copy unchanged physical setting10 to opportunities12/14/16.
+ba320f6c: normal display11 makes only B/route1 usable; preserve other-action null.
+First choice keeps matched nonempty draws; retry must be Auto/probability1 with
+identical empty transcripts. Fix display input phase to its existing30 contract.
+No laws/seed/required two B attempts/3/4-versus1/2 gate changed.
 
-The renewed route reaches execution12, exposing an omitted physical setting.
-Copy the unchanged PRACTICE_SETTING from10 into12/14/16, alongside the existing
-opportunity contexts. It supplies current phase/impairment/difficulty/permission,
-not learned competence or an outcome. No other physical consumer requires a
-missing source (habit/communication explicitly permit absence). Retain failure;
-same two-attempt gate, reference laws, seed, fixed values and budget.
-
-Second execution is competent/blocked but has no B outcome; keep this one-episode
-control. Before the retry, a normal display11 makes B/route1 the only usable
-route (other routes unavailable, through16), equally in both arms. No internal
-plan, choice or outcome is supplied. Two real B attempts and 3/4-versus1/2 stay
-mandatory. First choice keeps matched nonempty draws; second must be Auto with
-probability1 and identical empty transcripts/intent in both arms. This changes
-the declared opportunity, not psychology; no seed search or choice-change claim.
+## Verification implementation repair
+Generic deep byte-array snapshot matching was interrupted after364.587s to
+preserve the1800s budget. Use the existing exact byte comparator for state/output/
+trace; compare ALL remaining snapshot metadata exactly. Same saves, identity,
+history, presentation, checkpoints and reached140 fault; no assertion removed.
+Repeat the entire interrupted check. Main/privacy/retained controls stay valid:
+they do not use this helper. No production or source/acceptance changes.
