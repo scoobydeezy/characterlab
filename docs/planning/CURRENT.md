@@ -22,7 +22,7 @@ SuccessAsIntent remain. No new state owner, RNG, scheduler or alternate runtime.
 M192 quiet fixture: nonsocial tasks; body30/cap100/rate10/delivery90@9;
 A/B importance3/5,severity1/2,seed0. All original calendar events through101.
 At10 a passive actor blocks the actual competent action; actual outcome visible.
-New source grants/denies causal sight for task A. First assert actual task A
+New source grants/denies causal sight for task B. First assert actual task B
 outcome and live decision/intent/expression/attempt before causal comparisons.
 Add ordinary deliberation/query opportunities12 and14 (copy10's declaration).
 Query the observed route0 at10/12/14. At13 a permitted negative report names the
@@ -44,6 +44,10 @@ learned-state and altered actor/support records reject. No hidden-state consumer
 First comparison rejected missing identity contexts at added opportunities.
 Copy10's identity/self/Values declarations unchanged to12/14(and16 duplicate control)
 in both arms before rerun. Laws, target, seed, report and gate remain fixed.
+
+Second attempt reached live choice but had no task-A outcome. A/B are the only
+reported targets. Amend the monitor/query/report to B, retaining A's failed gate.
+B must prove an actual competent failed outcome; seed/laws/thresholds unchanged.
 
 ## Files and limits
 Production <=9 paths: externalObstruction,model,inputs,traceBinding,runtime,
