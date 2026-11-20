@@ -40,6 +40,11 @@ Repeat/public save10 and restore all later settled bytes; reached140 fault rollb
 Negative source version/task/payload, same-instant competing report, forged child/
 learned-state and altered actor/support records reject. No hidden-state consumer.
 
+## Recorded scenario repair
+First comparison rejected missing identity contexts at added opportunities.
+Copy10's identity/self/Values declarations unchanged to12/14(and16 duplicate control)
+in both arms before rerun. Laws, target, seed, report and gate remain fixed.
+
 ## Files and limits
 Production <=9 paths: externalObstruction,model,inputs,traceBinding,runtime,
 causalAttribution,interferenceExpectation,performance,state under src/assembled.
