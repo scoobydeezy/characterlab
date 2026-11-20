@@ -1,3 +1,4 @@
+import {STAKEHOLDER_EVIDENCE} from './executionStakeholder';
 import {createStressExecution} from './regulatoryStress';
 import {createReportedMeaning,REPORT_SOURCE} from './reportedMeaning';
 import {createSocialWitness,SW_SOURCE} from './socialWitness';
@@ -84,7 +85,7 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
  const reasonEvidence=model.reasonEvidence?createReasonEvidence(model.reasonEvidence,inputs.reasonEvidenceEvents,modelIdentity,inputs.runIdentity.value,txt(BODY_OBSERVER.payload),model.contextReasons):undefined;
  const position=model.positionEnabled?createPositionExecution(stateModel,inputs.positionEvents,modelIdentity,inputs.runIdentity.value,model.positionMemory,model.mitigationEnabled):undefined;
  const procedure=model.skill?createSkillExecution(component.tasks[0].character,stateModel,inputs.skillEvents,modelIdentity,inputs.runIdentity.value,model.procedures,model.actionBody,model.skillInterference):undefined;
- const obstruction=model.externalObstruction?createExternalObstruction(component.tasks[0].character,model.social!.targets,[...inputs.obstructionEvents,...inputs.opportunityEvents],modelIdentity,inputs.runIdentity.value,model.obstructionWitness?model.strategy!.map(r=>r.task):undefined,model.executionOpportunity?model.actionBody!.entries.map(e=>e.action):undefined):undefined;
+ const obstruction=model.externalObstruction?createExternalObstruction(component.tasks[0].character,model.social!.targets,[...inputs.obstructionEvents,...inputs.opportunityEvents],modelIdentity,inputs.runIdentity.value,model.obstructionWitness?model.strategy!.map(r=>r.task):undefined,model.executionOpportunity?model.actionBody!.entries.map(e=>e.action):undefined,model.stakeholderWitness?model.socialWitness:undefined):undefined;
  const body=model.body?createBodyExecution(model.body,component.tasks[0].character,stateModel,inputs.bodyEvents,modelIdentity,inputs.runIdentity.value,model.actionBody,procedure,model.tolerance,model.retainedAttribution?()=>position!.contextForBody():undefined,obstruction):undefined;
  if(model.affectMemory&&inputs.socialEvents.length>(model.affectMemory.acquisitionPresentation?31:32))throw new SchedulerContractError('INPUT_NOT_ADMITTED','affect memory presentation capacity including acquisition');
  const episodes=model.memory?createEpisodicExtension(component.tasks[0].character,model.body!,stateModel,modelIdentity,inputs.runIdentity.value,model.retention?.recallDelay,model.retrieval,model.workspace,model.socialMemory,model.affectMemory,()=>reappraisal?.completedAffect(),model.encoding,model.memoryUse,model.bodyMemoryUse,model.positionMemory,model.retainedAttribution,model.significanceEnabled,!!model.actionMemory,model.effectEvidence?.proposition,model.familiarity,model.recollection,model.vivid,model.positionUse,model.positionPresentation,model.rehearsal,model.attributionUse):undefined;
@@ -155,14 +156,15 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
   for(const eventType of habit?.eventTypes()??[])registerHandler(key(eventType),context=>habit!.execute(context));
   for(const eventType of performance?.eventTypes()??[])registerHandler(key(eventType),context=>{
    const result=performance!.execute(context),witness=model.obstructionWitness&&key(context.event.eventTypeId)===key(PERFORMANCE_OBSERVE)?causal!.observeObstruction(context.event,result.outputs,obstruction!.witness(context.event)):undefined;
-   if(!witness)return result;const own=result.emittedEvents.length;
-   return {...result,outputs:[...result.outputs,...witness.outputs],emittedEvents:[...result.emittedEvents,...witness.emissions],traceFactory(children:readonly ScheduledEvent[]){const extra=children.slice(own);witness.bind(extra);return [...result.traceFactory(children.slice(0,own)),witness.trace(extra)];}};
+   const stakeholder=model.stakeholderWitness&&key(context.event.eventTypeId)===key(PERFORMANCE_OBSERVE)?obstruction!.observeStakeholders(context.event):undefined;
+   if(!witness&&!stakeholder)return result;const own=result.emittedEvents.length,plans=[...(witness?[witness]:[]),...(stakeholder?[stakeholder]:[])];
+   return {...result,outputs:[...result.outputs,...plans.flatMap(p=>p.outputs)],emittedEvents:[...result.emittedEvents,...plans.flatMap(p=>p.emissions)],traceFactory(children:readonly ScheduledEvent[]){let offset=own;const rows=result.traceFactory(children.slice(0,own));for(const p of plans){const extra=children.slice(offset,offset+p.emissions.length);offset+=p.emissions.length;p.bind(extra);rows.push(p.trace(extra));}return rows;}};
   });
   for(const eventType of horizon?.eventTypes()??[])registerHandler(key(eventType),context=>horizon!.execute(context));
   for(const eventType of priority?.eventTypes()??[])registerHandler(key(eventType),context=>priority!.execute(context));
   for(const eventType of strategy?.eventTypes()??[])registerHandler(key(eventType),context=>strategy!.execute(context));
   for(const eventType of episodes?.eventTypes()??[])registerHandler(key(eventType),context=>episodes!.execute(context));
-  if(obstruction){registerHandler(key(OBSTRUCTION_SOURCE),context=>obstruction.execute(context));if(model.executionOpportunity)registerHandler(key(OPPORTUNITY_SOURCE),context=>obstruction.execute(context));}
+  if(obstruction){if(model.stakeholderWitness)registerHandler(key(STAKEHOLDER_EVIDENCE),context=>obstruction.execute(context));registerHandler(key(OBSTRUCTION_SOURCE),context=>obstruction.execute(context));if(model.executionOpportunity)registerHandler(key(OPPORTUNITY_SOURCE),context=>obstruction.execute(context));}
   if(procedure){registerHandler(key(PRACTICE_SETTING),context=>procedure.execute(context));registerHandler(key(PRACTICE),()=>{throw new SchedulerContractError('INPUT_NOT_ADMITTED','practice requires prepared stage');});}
   for(const eventType of body?.eventTypes()??[])registerHandler(key(eventType),context=>{
    const result=body!.execute(context),observed=effects&&key(context.event.eventTypeId)===key(BODY_DELIVERY)?effects.observeDelivery(context.event,result.outputs):undefined;
