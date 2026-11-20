@@ -51,3 +51,12 @@ query-before-learning, nonrecipient stability, source/state/owner boundaries,
 exact continuation and rollback. Original alternative laws remain controls.
 No general source-trust, actor recognition, autonomous peer, full family
 acceptance or whole-character acceptance follows from this bounded port.
+
+## M199 admission correction (0.134 candidate)
+A report-only passive source may share an instant with a main-holder causal report:
+it emits no main-holder witness and writes a different holder-qualified leaf.
+The blanket source-time exclusion inherited from0.131 is an admission defect in
+this combination. On0.134 reject the overlap only when that world source declares
+both an actual blocker and main witness task. Prior versions retain their original
+gate. No supported observation, transition, schema or law changes. Preserve the
+pre-correction rejection; test admitted disjoint reports and rejected genuine overlap.
