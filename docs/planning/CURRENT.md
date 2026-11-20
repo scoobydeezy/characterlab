@@ -62,3 +62,10 @@ was issued8. Extend only that latest display valid-until10 to16 in both arms so
 routes remain visibly available at the added opportunities. Original expired
 fixture/failure stays preserved. No goal/importance, polarity, physical effect,
 seed, law, required two attempts, 3/4-versus1/2 gate or budget changes.
+
+The renewed route reaches execution12, exposing an omitted physical setting.
+Copy the unchanged PRACTICE_SETTING from10 into12/14/16, alongside the existing
+opportunity contexts. It supplies current phase/impairment/difficulty/permission,
+not learned competence or an outcome. No other physical consumer requires a
+missing source (habit/communication explicitly permit absence). Retain failure;
+same two-attempt gate, reference laws, seed, fixed values and budget.
