@@ -1199,3 +1199,12 @@ perceived route display makes the retry deterministic. Old intentions stay froze
 LatestEpisode/EpisodeOnly/NoLearning and receipt-counting controls remain distinct;
 the available-alternative one-episode null is preserved, not patched.
 [Bounded result](ASSEMBLED_CHARACTER_M195_RESULT.md).
+
+M196 extends the actual execution/performance path with separately permitted
+passive stakeholder outcome observation120/evidence130 (rules0.133,
+execution-stakeholder/0.1). MEC004/015/017/019/022 retain PORT/CONTRACT/CORPUS:
+local observer evidence, matched actual dice, frozen intention and actual failure.
+Outcome-only evidence is not commitment, competence or causal knowledge;
+original GroupedMean/LastClaim stay Unknown on captured outcome-only evidence.
+No new psychological store/owner/law or autonomous peer; no retired mechanism.
+[Bounded result](ASSEMBLED_CHARACTER_M196_RESULT.md).

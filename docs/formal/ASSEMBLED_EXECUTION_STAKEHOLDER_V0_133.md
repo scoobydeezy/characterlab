@@ -14,7 +14,9 @@ Existing source limits, phase30 and competing-report restrictions remain.
 The single actual execution110 and authenticated performance120 event supply the
 selected task/action and physical success. Never copy an authored outcome or the
 main character's possibly false/denied report. A matching selected monitored task
-is necessary; absence of an attempt supplies no observation. Main outcome visibility,
+is necessary; absence of an attempt supplies no observation. Success follows the
+existing performance flag: Applied or admitted Queued, not eventual delivery.
+Main outcome visibility,
 main causal sight and each stakeholder's outcome permission are independent.
 
 At120 emit permitted local observations [observation tag, local holder, local target,

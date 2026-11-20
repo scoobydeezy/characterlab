@@ -1,59 +1,31 @@
-# Current work — M196: a stakeholder sees only the actual outcome
-Extend the one character's actual execution with a separate passive outcome viewer.
-M195 complete at e8f24ad4; [result](ASSEMBLED_CHARACTER_M195_RESULT.md).
+# Current work — M196 complete: stakeholder sees actual outcome
+The character can witness who blocked its action while a separate passive
+stakeholder sees only the failure. Their permitted evidence remains distinct.
+[Result](ASSEMBLED_CHARACTER_M196_RESULT.md); [checks](ASSEMBLED_CHARACTER_M196_CHECKS.txt).
+Rules/registry0.133-candidate, execution-stakeholder/0.1; same55 slots.
 
-## Bounded card — before implementation
-- Capability: BRIEF-12.14-7 only. Main character witnesses actual obstruction while
-  an independently identified stakeholder receives failure but no causal evidence.
-- Authority: Brief12.14, agency-public/0.3 observation boundary, Architecture13.3;
-  MEC004/015/017/019/022; C0 ordering/state/trace and C1 evidence boundary.
-- Versioned candidate: rules/registry0.133, same55 slots; execution-stakeholder/0.1.
-  Existing two passive identities in social-witness slot51; no new autonomous peer.
-- Scope: model.ts, inputs.ts, runtime.ts, externalObstruction.ts, new
-  executionStakeholder.ts, traceBinding.ts, one test/fixture (8 production/test).
-  One formal contract, existing register/ledger/obligations, this card/result/log.
-  <=12 production/test,20 evidence/5MiB; CURRENT80/register250lines/64KiB.
-- No new psychological law/state/owner/store. Actual outcome110 -> permitted
-  local observation120 -> evidence130 in same scheduler/trace/save.
-  These are outcome perceptions, not commitment claims or invented causal beliefs.
-  Original GroupedMean on captured outcome-only evidence must remain Unknown.
-- Source: new closed obstruction variant declares an admitted monitored task and
-  two Boolean outcome permissions; reuse existing independently local identities.
-  Main causal sight remains independent. Older versions reject new source.
-- Safe view contains only recipient-local holder/target, visible instant/episode,
-  observed success Boolean and own observation/evidence tags. Exclude private task,
-  action/intent, blocker, competence, run/model IDs, global allocator and trace.
-  Fixed generated evidence path independent of access; no denied markers.
-- Scenario: unchanged M192 nonsocial body30/cap100/rate10/delivery90@9,
-  task B route1 at10, importance3/5 severity1/2 seed0. Retain full calendar101.
-  Main outcome+sight on; passive A outcome on/B off. No authored outcome.
-- Predeclared comparison: blocker1 versus blocker2 changes main witnessed cause,
-  while stakeholder A's complete local view remains identical failure.
-  Same actual decision, nonempty draws, frozen intent/expression and attempt.
-  Swap A/B access; denied recipient stays empty. Main outcome denial must not
-  suppress independently permitted stakeholder observation. No-block exposes success.
-- Liveness: actual chosen B/route1, competent engaged attempt and real physical
-  failure in blocked arms; known positive effect in no-block control.
-  Ensure consumed real performance event, actual120/130 and exact causal parent.
-- Controls: local safe view rejects invalid selector; excluded fields cannot leak;
-  captured original agency outcome-only fold is Unknown; omniscient comparator
-  differs; generated event/child and old-version/foreign-task/bad-permission reject.
-  No new probability/choice-change claim; matched actual draws for same-choice arms.
-- Persistence: independent repeat/save9 recovery, public save10 restore; every
-  later complete snapshot/save/run identity/history/player byte through101.
-  Reached evidence130 fault rolls back whole prior instant; no partial observer output.
-- Serial checks: types; native comparisons and boundaries; continuation/rollback;
-  retained M193 connection on old version (affected runtime); source negatives;
-  boundary/research/pinned preservation/staged-size. One active long job.
-  <=600s/command, <=1800s cumulative, no routine extensions.
-- Keep failed evidence; amend scenario/repair locally before rerun under existing
-  self-approval. Never alter reference laws/seeds/final denominator to get a pass.
-- Done: all above pass, classify only12.14-7 as bounded native evidence.
-  No general recognition, stakeholder causal learning, blame or trust claim.
-  Family review and whole-candidate replay remain;21members/15families/132 fixed.
-  No UI/Campaign4, new family breadth or verification after passing.
+## Completed connection
+Actual task B/route1 execution110 -> local stakeholder observation120 -> evidence130.
+Changing private blocker changes main causal evidence, not the stakeholder's view.
+Both arms retain identical actual nonempty draws, intent, expression and execution.
+Denied and swapped recipients, independent main/passive visibility and actual
+no-block success pass. Outcome alone supplies no causal belief or competence claim.
+Generated evidence binds its full event and parent; old source versions reject.
+Repeat/save9/recovery and public save10 continue all later complete bytes through101.
+A reached evidence130 failure rolls back the whole instant. Old M193 connection passes.
+A test-helper type error and omitted trace-version admission are retained and fixed.
+No law/seed/scenario amendment was needed.
 
-## Repair before rerun
-Native startup rejected0.133 because traceBinding version admission was omitted.
-Add0.133 to the existing exact model/run gate; no relaxation of identity equality,
-scenario change or new semantics. Preserve failure and the earlier test type error.
+## Remaining scope
+BRIEF-12.14-7 gains bounded evidence: E71/P35/N13/U13=132.
+All eight12.14 clauses now have evidence, but family acceptance is still open.
+Next: reconcile the complete12.14 family and required original comparisons;
+final whole-candidate replay remains. No automatic acceptance from the index.
+This is a labelled passive perception path, not autonomous partners, natural
+recognition or learned stakeholder attribution. No new state owner/store/law.
+21members/15families unchanged; memory accepted0.126, AFFECT/DECISION member0.129.
+UI/Campaign4 remain stopped. Same self-approval and bounded card/job rules.
+
+| Record | Status |
+|---|---|
+| Research obligations | **0 active / 18 conditional / 0 unowned** |
