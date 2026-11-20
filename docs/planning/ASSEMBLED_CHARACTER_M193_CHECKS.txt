@@ -33,3 +33,34 @@ SchedulerContractError: identity context missing for opportunity
    Start at  09:13:38
    Duration  66.42s (transform 3.21s, setup 0ms, collect 4.78s, tests 61.22s, environment 0ms, prepare 134ms)
 
+
+M193 witness-explanation-context-repair exit=1 elapsed=105.065s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledObstructionWitness.test.ts (10 tests | 1 failed | 9 skipped) 99401ms
+   × M193 witnessed blocking and later contrary explanation revise actual prior appraisal 99400ms
+     → actual compared task outcome: expected [] to have a length of 1 but got +0
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledObstructionWitness.test.ts > M193 witnessed blocking and later contrary explanation revise actual prior appraisal
+AssertionError: actual compared task outcome: expected [] to have a length of 1 but got +0
+
+- Expected
++ Received
+
+- 1
++ 0
+
+ ❯ live src/test/assembledObstructionWitness.test.ts:22:156
+
+ ❯ src/test/assembledObstructionWitness.test.ts:25:74
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 9 skipped (10)
+   Start at  09:15:45
+   Duration  104.50s (transform 3.10s, setup 0ms, collect 4.63s, tests 99.40s, environment 0ms, prepare 143ms)
+

@@ -51,9 +51,11 @@ it('M193 witness knowledge continuation and reached common140 rollback',async()=
  const spy=vi.spyOn(traceModule,'traceRecordValue').mockImplementation(v=>{const row=original(v);if(eq(v.event.eventTypeId,INTERFERENCE_LEARN)&&v.event.dueAt===10n){reached=true;throw Error('M193 reached witness140');}return row;});
  try{await expect(failed.run.settleNextInstant()).rejects.toThrow('M193 reached witness140');expect(reached).toBe(true);expect({...failed.run.snapshot(),status:before.status}).toEqual(before);}finally{spy.mockRestore();}
  const recovered=await restoreCharacterRun(b.s,{initialState:b.d.initialState,orderedInputs:b.d.orderedInputs,save:saved});await through(repeat.run,10n);await through(recovered,10n);live(repeat.run);full(repeat.run,recovered);
+ const direct=journal(repeat.run,b.people)[0],traces=outputs(repeat.run.snapshot().trace,160n),observation=traces.find(t=>eq(f(t,13n),list([direct])))!;expect(observation).toBeDefined();expect(uint(f(rec(f(observation,4n),130n),3n))).toBe(120n);
+ const learned=traces.find(t=>eq(f(rec(f(t,4n),130n),5n),INTERFERENCE_LEARN))!;expect(learned).toBeDefined();expect(uint(f(rec(f(learned,4n),130n),3n))).toBe(140n);
  const restored=await restoreCharacterRun(b.s,{initialState:b.d.initialState,orderedInputs:b.d.orderedInputs,save:repeat.run.save()});full(repeat.run,restored);
  for(let n=0;;n++){expect(n).toBeLessThan(32);const more=await repeat.run.settleNextInstant();for(const r of[recovered,restored]){expect(await r.settleNextInstant()).toBe(more);full(repeat.run,r);}if(!more)break;}
- expect(repeat.run.snapshot().clock).toBe(101n);console.info('M193 CONTINUATION PASS reached witness140 rollback; recovery/public save10 exact all later state/output/trace/save/identity/history/player through101.');
+ expect(repeat.run.snapshot().clock).toBe(101n);const pa=estimate(repeat.run,14n,q(1,2)),appraisalTrace=outputs(repeat.run.snapshot().trace,160n).find(t=>eq(f(t,13n),list(pa)))!;expect(appraisalTrace).toBeDefined();expect(items(f(appraisalTrace,11n),'list')).toHaveLength(1);expect(uint(f(rec(f(appraisalTrace,4n),130n),3n))).toBe(50n);console.info('M193 CONTINUATION PASS reached witness140 rollback; recovery/public save10 exact all later state/output/trace/save/identity/history/player through101.');
 },570000);
 it('M193 source and witness grammar reject foreign or manufactured evidence',async()=>{
  const b=fixture(),model=await prepareCharacterModel(b.s),rows=items(decode(b.d.orderedInputs),'list'),source=rows.find(v=>eq(items(v,'list')[2],OBSTRUCTION_SOURCE))!;
