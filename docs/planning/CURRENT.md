@@ -53,3 +53,7 @@ No UI/reduction or debt closure.
 | Record | Status |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
+
+Reader repair: one event has several seam records; match stress producer by
+event ID AND exact completed appraisal payload, then assert phase50. Preserve
+failed receipt/source; declarations passed and will not rerun unchanged.
