@@ -1164,3 +1164,12 @@ MEC004/007/008/009/010/015/019/020/022 stay distinct: early significance, actual
 use, immutable acquisition, publication frequency, retention and current judgment.
 Original35/139 map to actual3/15; all16 consumed records receive use. No source
 factory, owner, law or original control is replaced. Full defining replay remains.
+
+M192 ports agency0.3's external physical obstruction into the existing body owner
+under external-obstruction/0.1 and rules0.130. MEC015/017/019/022 retain their
+PORT/CONTRACT/CORPUS dispositions: actual arbitration, frozen expression, competent
+attempt versus blocked outcome, immutable historical meaning. Existing performance
+observation learns actual outcome; source identity stays private world truth.
+Original GroupedMean/LastClaim/OutcomeOnly/OmniscientCause/SuccessAsIntent and M35/36
+causal controls remain CONTROL+CORPUS; cause witnessing/explanation is still pending.
+No mechanism retired, new owner or autonomous partner. [Result](ASSEMBLED_CHARACTER_M192_RESULT.md).

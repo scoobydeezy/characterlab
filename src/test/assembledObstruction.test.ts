@@ -1,7 +1,7 @@
 import {it,expect,vi} from 'vitest';
-import {fixture,create,capture,decode,items,key,enc,list,text,signed,u,q,rec,f,uint,outputs,bytes,through,finish,C,type Run,type CanonicalValue} from './fixtures/assembledObstruction';
+import {fixture,create,capture,decode,items,key,enc,list,set,text,signed,u,q,rec,f,uint,outputs,bytes,through,finish,C,type Run,type CanonicalValue} from './fixtures/assembledObstruction';
 import {OBSTRUCTION,OBSTRUCTION_SOURCE,OBSTRUCTION_RESULT,OBSTRUCTION_VERSION,obstructionSource,createExternalObstruction} from '../assembled/externalObstruction';
-import {ACTION_BODY,ACTION_BODY_EVENT} from '../assembled/actionBody';
+import {ACTION_BODY,ACTION_BODY_EVENT,ACTION_BODY_RECEIPT} from '../assembled/actionBody';
 import {SKILL_ACTUAL} from '../assembled/skill';
 import {PERFORMANCE_OBS,outcomePath} from '../assembled/performance';
 import {expectationPath,expectationValue} from '../assembled/performanceExpectation';
@@ -75,4 +75,20 @@ it('M192 admission source authentication and no-source compatibility',async()=>{
  const x=capture(a.run),y=capture(c.run);expect(y.d).toEqual(x.d);expect(y.intent).toEqual(x.intent);expect(y.expression).toEqual(x.expression);bytes(a.run.snapshot().state,c.run.snapshot().state);
  await finish(a.run);await finish(c.run);
  console.info('M192 ADMISSION PASS phase/time/holder/participant/duplicate/old-version/source tampering reject; no-source0.129/0.130 same decision/intent/expression/state; full101.');
+},570000);
+
+it('M192 obstruction blocks queue creation but not a prior committed delayed receipt',async()=>{
+ const delayed=(blocked:0|1)=>{const b=fixture(blocked),slots=[...items(decode(b.s.registry),'list')],actuator=items(slots[10],'list');
+  slots[10]=list([actuator[0],actuator[1],set(items(actuator[2],'set').map(v=>{const a=items(v,'list');return list([a[0],a[1],u(2)]);}))]);
+  const rows=items(decode(b.d.orderedInputs),'list');return {...b,s:{...b.s,registry:enc(list(slots))},d:{...b.d,orderedInputs:enc(list([...rows,list([signed(12),u(30),OBSTRUCTION_SOURCE,list([text(OBSTRUCTION),C,list([b.people[0]])]),list([])])]))}};};
+ const a=await create(delayed(0)),b=await create(delayed(1)),x=capture(a.run),y=capture(b.run);expect(x.d).toEqual(y.d);expect(x.intent).toEqual(y.intent);expect(x.expression).toEqual(y.expression);
+ const effect=(run:Run,p:ReturnType<typeof capture>)=>labels(decode(run.snapshot().outputs),ACTION_BODY).find(r=>eq(r[1],f(rec(p.execution!,433n),1n)))!;
+ const queued=effect(a.run,x),blocked=effect(b.run,y);expect(queued[5]).toEqual(text('Queued'));expect(blocked[5]).toEqual(text('Blocked'));
+ await through(a.run,12n);await through(b.run,12n);
+ expect(labels(decode(a.run.snapshot().outputs),ACTION_BODY_RECEIPT).filter(r=>eq(r[1],queued[1]))).toHaveLength(1);
+ expect(labels(decode(b.run.snapshot().outputs),ACTION_BODY_RECEIPT).filter(r=>eq(r[1],blocked[1]))).toHaveLength(0);
+ for(const r of[a.run,b.run])await finish(r);
+ expect(labels(decode(a.run.snapshot().outputs),ACTION_BODY_RECEIPT).filter(r=>eq(r[1],queued[1]))).toHaveLength(1);
+ expect(labels(decode(b.run.snapshot().outputs),ACTION_BODY_RECEIPT).filter(r=>eq(r[1],blocked[1]))).toHaveLength(0);
+ console.info('M192 DELAY PASS fixed delay2: blocked10 never queues/receives; unblocked10 receipt still arrives12 despite a new blocker12. Same original choice, full101.');
 },570000);
