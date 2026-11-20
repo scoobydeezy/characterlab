@@ -1,0 +1,37 @@
+
+M199 pre-correction-admission exit=1 elapsed=67.072s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledRepeatedStakeholder.test.ts (9 tests | 1 failed | 8 skipped) 61220ms
+   × M199 admission allows disjoint reports and rejects actual main witness conflicts 61219ms
+     → promise rejected "SchedulerContractError: external obstruct… { …(2) }" instead of resolving
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledRepeatedStakeholder.test.ts > M199 admission allows disjoint reports and rejects actual main witness conflicts
+AssertionError: promise rejected "SchedulerContractError: external obstruct… { …(2) }" instead of resolving
+ ❯ src/test/assembledRepeatedStakeholder.test.ts:64:93
+     62| }
+     63| it('M199 admission allows disjoint reports and rejects actual main wit…
+     64|  const b=fixture(),m=await prepareCharacterModel(b.s);await expect(cre…
+       |                                                                                             ^
+     65|  const rows=items(decode(b.d.orderedInputs),'list'),source=rows.find(v…
+     66|  const a=[...items(source,'list')],p=[...items(a[3],'list')];p[2]=list…
+
+Caused by: SchedulerContractError: external obstruction competing causal report
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+ ❯ src/assembled/inputs.ts:172:736
+ ❯ Module.compileCharacterInputs src/assembled/inputs.ts:172:42
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:63
+ ❯ src/test/assembledRepeatedStakeholder.test.ts:64:55
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  15:18:35
+   Duration  66.49s (transform 3.33s, setup 0ms, collect 4.94s, tests 61.22s, environment 0ms, prepare 106ms)
+
