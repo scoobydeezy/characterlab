@@ -1181,3 +1181,12 @@ attempt/outcome and historical meaning. Direct0 and report1..16 stay distinct.
 GroupedMean matches captured supports; LastClaim/OutcomeOnly remain controls.
 No new owner or retired mechanism; natural recognition, source trust and full
 agency/stakeholder scope remain. [Result](ASSEMBLED_CHARACTER_M193_RESULT.md).
+
+M194 implements the post-choice physical opportunity boundary in the same body
+path under execution-opportunity/0.1, rules0.132. MEC015/017/019/022 retain
+PORT/CONTRACT/CORPUS: same actual dice/frozen choice/competence, distinct world
+availability and observed failure, immutable history. Source100 follows assembled
+expression90 and precedes attempt110; standalone phase numbers are not reused.
+No new owner, psychological law or retired alternative. Instant-local apparatus
+only; general affordance discovery remains outside this claim.
+[Bounded result](ASSEMBLED_CHARACTER_M194_RESULT.md).

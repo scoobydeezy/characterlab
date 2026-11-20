@@ -1,53 +1,30 @@
-# Current work — M194: opportunity lost after choice
-The character will attempt its chosen action after a world prerequisite disappears.
-Observed failure must reach existing outcome learning without rewriting its choice.
-M193 complete at e04cb738; [result](ASSEMBLED_CHARACTER_M193_RESULT.md).
-Owner continuation/self-approval applies; laws, scope and acceptance stay fixed.
+# Current work — M194 complete: opportunity lost after choice
+The character can attempt an action that became physically impossible after it
+chose, then learn the observed failure without rewriting the choice.
+[Result](ASSEMBLED_CHARACTER_M194_RESULT.md); [checks](ASSEMBLED_CHARACTER_M194_CHECKS.txt).
+Rules/registry0.132-candidate; execution-opportunity/0.1; same55-slot model.
 
-## Bounded card — before implementation
-- Capability: post-choice/pre-attempt loss of physical opportunity, BRIEF-12.14-3.
-  Keep incompetence, external actor blocking, attempt and actual outcome distinct.
-- Authority: Architecture13.3; agency/decision public contracts; MEC015/017/019/022.
-  Foundation RNG/time/order/state/content/observation constraints remain standing.
-- Version: rules/registry0.132-candidate, execution-opportunity/0.1-candidate;
-  same55 slots, existing body owner/scheduler/save. No new psychological law.
-- World source100 follows intent/expression90, precedes attempt/body110.
-  Complete per-action availability; instant-local, private, authenticated originals.
-  Body110 gates new effects; committed delayed receipts remain valid.
-- Scope/files: assembled externalObstruction, model, inputs, runtime, body,
-  traceBinding; test assembledExecutionOpportunity and its fixture (8 planned,
-  <=12 production/test). Formal contract, this card, existing ledger/register,
-  obligations and one result/check log. No UI, alternate runtime or source copies.
-- Scenario: unchanged M192 nonsocial tasks; body30/cap100/rate10/delivery90@9,
-  importance3/5,severity1/2,seed0; permitted actual performance observations at10.
-  Passive roster only. No authored psychological state or causal inference.
-- Comparison: source100@10 all actions available versus unavailable. Same source
-  shape/count/time, laws, configuration and addressed dice. First assert live
-  choice/intent/expression/attempt and competent intrinsic execution in both.
-  Require equal decision/history/expression/attempt/skill and consumed draws;
-  actual Applied versus Blocked, observed outcome and learned mean1 versus0.
-  Private result identifies environmental absence separately from actor blockage.
-- Controls: phase/order/authentication/admission negatives; nonchosen-action
-  absence cannot block chosen action; hidden outcome stays unknown/no actor
-  witness; delayed queue blocked at creation, prior receipt survives later loss.
-  Repeat and public save9 restore: all later settled bytes through full101;
-  reached110 fault must roll back atomically. No final-action chance claim.
-- Checks serial: types; new connection, boundary/privacy, persistence, delayed
-  tests; affected M193 main witness and M192 physical obstruction regression;
-  boundary/research/preservation/size. One command <=600s, total <=1800s;
-  <=20 evidence files/5MiB. No budget extension assumed.
-- Risks: private world fact leaks to cognition; source runs before choice;
-  unavailable action mistaken for incompetence/actor; receipt cancellation;
-  source authentication/rollback loss; old-version behavior changes.
-- Frozen control dependencies untouched: retain byte results; compare this
-  successor semantically. Final full-candidate replay remains required.
-- Done: all declared gates pass; otherwise preserve/classify failure and repair
-  within authorization/budget. Only 12.14-3 can gain bounded evidence, not family
-  acceptance. 21members/15families/132clauses unchanged. Stop verification on pass.
+## Completed connection
+Source100 follows frozen intent/expression90 and precedes attempt/execution110.
+Same decision, nonempty addressed draws and intrinsic competence; actual body
+Applied versus Blocked yields observed outcome/learned expectation1 versus0.
+Unselected loss has no effect; denied outcome stays unknown, no invented blocker.
+New delayed effects cannot queue when unavailable; earlier receipts still arrive.
+Admission, repeat, full save/restore continuation and reached110 rollback pass.
+M192 actor blocking and M193 witnessed-cause/later-claim controls pass unchanged.
+Retained failures: local-name type collision; standalone phase assumption.
+Ordering amendment a5877fca corrected source100 before rerun. Laws/seed fixed.
+No new state owner, scheduler, save, RNG or alternative runtime.
 
-## Self-approved ordering repair before rerun
-Initial test imported standalone C3 phase numbers. The assembled task path uses
-arbitration80, intent/expression90, plan100, attempt/execution110 (execution.ts).
-Preserved failure b98087a7 plus raw connection receipt; no weakened gate. Move the
-world source90 to100 so it follows frozen expression and precedes attempt.
-Fix assertions to actual producer phases90/110; laws, seed, effects and scope fixed.
+## Remaining scope
+12.14-3 gains bounded evidence; E69/P37/N13/U13=132. Family12.14 remains open.
+Next: repeated interference5 and separate stakeholder7, then family review.
+Instant-local physical apparatus is not general affordance discovery.
+Single-holder labelled observation is not autonomous multi-character simulation.
+21members/15families fixed; memory accepted0.126, AFFECT/DECISION member0.129.
+Final whole-candidate replay remains; UI/Campaign4 stay stopped.
+One bounded card/job, same self-approval/preservation/budget rules.
+
+| Record | Status |
+|---|---|
+| Research obligations | **0 active / 18 conditional / 0 unowned** |

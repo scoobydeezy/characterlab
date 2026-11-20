@@ -41,7 +41,7 @@ export function createExternalObstruction(C:CanonicalValue,people:readonly Canon
   prepareCommit(){if(!active||originals.some(e=>e.dueAt===at&&!used.has(e.eventId)))fail('unconsumed source');},
   execute(context:EventHandlerContext<AuthoritativeState>){
    const e=context.event,isOpportunity=eq(e.eventTypeId,OPPORTUNITY_SOURCE);
-   if(!active||e.dueAt!==at||e.phase!==(isOpportunity?90n:30n)||!(isOpportunity?actions: eq(e.eventTypeId,OBSTRUCTION_SOURCE))||(isOpportunity?opportunity:current)||used.has(e.eventId)||!originals.some(x=>fp(x)===fp(e)))fail('unbound source');
+   if(!active||e.dueAt!==at||e.phase!==(isOpportunity?100n:30n)||!(isOpportunity?actions: eq(e.eventTypeId,OBSTRUCTION_SOURCE))||(isOpportunity?opportunity:current)||used.has(e.eventId)||!originals.some(x=>fp(x)===fp(e)))fail('unbound source');
    if(isOpportunity){opportunitySource(e.payload,C,actions!);opportunity=structuredClone(e);}else{obstructionSource(e.payload,C,people,tasks);current=structuredClone(e);}used.add(e.eventId);
    return {nextState:context.state,outputs:[],emittedEvents:[],traceContributions:[],traceFactory(children:readonly ScheduledEvent[]){
     if(children.length)fail('source children');

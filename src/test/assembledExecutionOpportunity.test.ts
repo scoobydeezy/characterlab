@@ -27,14 +27,14 @@ function live(run:Run,blocked:boolean,visible=true){
   const belief=expectationValue(state.read(expectationPath(o[3],uint(o[4]))).value);expect([belief.mean?.numerator,belief.mean?.denominator]).toEqual([blocked?0n:1n,1n]);expect(belief.supports.length).toBeGreaterThan(0);
  }
  const traces=outputs(snapshot.trace,160n),source=traces.find(t=>eq(f(rec(f(t,4n),130n),1n),opportunity[1]))!;
- expect(source).toBeDefined();expect(uint(f(rec(f(source,4n),130n),3n))).toBe(90n);expect(f(source,6n)).toEqual(text(OPPORTUNITY_VERSION));expect(items(f(source,11n),'list')).toHaveLength(0);
+ expect(source).toBeDefined();expect(uint(f(rec(f(source,4n),130n),3n))).toBe(100n);expect(f(source,6n)).toEqual(text(OPPORTUNITY_VERSION));expect(items(f(source,11n),'list')).toHaveLength(0);
  const physical=traces.find(t=>eq(f(rec(f(t,4n),130n),5n),ACTION_BODY_EVENT)&&items(f(t,13n),'list').some(o=>eq(o,list(opportunity))))!;
  expect(physical).toBeDefined();expect(uint(f(rec(f(physical,4n),130n),3n))).toBe(110n);
  expect(f(physical,6n)).toEqual(text(OPPORTUNITY_VERSION));
  
  const phaseOf=(value:CanonicalValue)=>{const t=traces.find(t=>eq(f(t,13n),value)||(typeof f(t,13n)!=='boolean'&&(f(t,13n) as {kind:string}).kind==='list'&&items(f(t,13n),'list').some(o=>eq(o,value))));expect(t).toBeDefined();return uint(f(rec(f(t!,4n),130n),3n));};
- expect(phaseOf(p.intent)).toBe(70n);expect(phaseOf(p.expression)).toBe(80n);
- const attempt=rec(f(p.execution!,2n),432n);expect(phaseOf(attempt)).toBe(100n);
+ expect(phaseOf(p.intent)).toBe(90n);expect(phaseOf(p.expression)).toBe(90n);
+ const attempt=rec(f(p.execution!,2n),432n);expect(phaseOf(attempt)).toBe(110n);
  expect(p.transcript.length).toBeGreaterThan(0);
  expect(state.entries().filter(e=>e.path.rootStateTypeId===1000n&&e.path.fieldId===7n)).toHaveLength(0);
  return {p,state,os,snapshot,effect,opportunity,skill,observations};
@@ -47,7 +47,7 @@ it('M194 lost opportunity prevents a competent chosen effect and ordinary outcom
  expect(x.p.transcript).toEqual(y.p.transcript);expect(x.skill).toEqual(y.skill);expect(x.state.entries().filter(e=>e.path.rootStateTypeId===785n)).toEqual(y.state.entries().filter(e=>e.path.rootStateTypeId===785n));
  expect(x.state.entries().filter(e=>e.path.rootStateTypeId===455n)).not.toEqual(y.state.entries().filter(e=>e.path.rootStateTypeId===455n));
  const intent=x.p.intent,expression=x.p.expression;for(const r of[a.run,b.run]){await finish(r);expect(outputs(r.snapshot().outputs,425n)).toContainEqual(intent);expect(outputs(r.snapshot().outputs,426n)).toContainEqual(expression);}
- console.info('M194 CONNECTION PASS same actual decision/intent/expression/plan/attempt/protocol acknowledgement/intrinsic skill; world source90 after frozen choice changes body Applied->Blocked and authentic performance observation/learning1->0; full101.');
+ console.info('M194 CONNECTION PASS same actual decision/intent/expression/plan/attempt/protocol acknowledgement/intrinsic skill; world source100 after frozen choice changes body Applied->Blocked and authentic performance observation/learning1->0; full101.');
 },570000);
 it('M194 full continuation and reached physical fault preserve atomicity',async()=>{
  const b=fixture(false),a=await create(b,9n),repeat=await create(b,9n),restored=await restoreCharacterRun(b.s,{initialState:b.d.initialState,orderedInputs:b.d.orderedInputs,save:a.run.save()});full(a.run,repeat.run);full(a.run,restored);
@@ -64,7 +64,7 @@ it('M194 admission privacy selected-action scope and old-version compatibility',
  const b=fixture(),m=await prepareCharacterModel(b.s),rows=items(decode(b.d.orderedInputs),'list'),source=rows.at(-1)!;
  const altered=(change:(a:CanonicalValue[])=>void)=>{const a=[...items(source,'list')];change(a);return {...b.d,orderedInputs:enc(list([...rows.slice(0,-1),list(a)]))};};
  for(const d of[
-  ...[30,100,110].map(phase=>altered(a=>{a[1]=u(phase);})),altered(a=>{a[0]=signed(0);}),
+  ...[30,90,110].map(phase=>altered(a=>{a[1]=u(phase);})),altered(a=>{a[0]=signed(0);}),
   altered(a=>{a[3]=list([text(OPPORTUNITY),b.people[0],items(a[3],'list')[2]]);}),
   altered(a=>{a[3]=list([text(OPPORTUNITY),C,set([])]);}),
   altered(a=>{a[3]=list([text(OPPORTUNITY),C,set(b.actions.map(x=>list([x,text('true')])))]);}),
@@ -73,7 +73,7 @@ it('M194 admission privacy selected-action scope and old-version compatibility',
  await expect(createCharacterRun(await prepareCharacterModel({...b.s,rulesVersion:OBSTRUCTION_WITNESS_RULES,registrySchemaVersion:OBSTRUCTION_WITNESS_REGISTRY}),b.d)).rejects.toThrow('execution opportunity version');
  for(const covered of[set([list([text('foreign'),true])]),set(b.actions.map(()=>list([b.actions[0],true])))])
   expect(()=>opportunitySource(list([text(OPPORTUNITY),C,covered]),C,b.actions)).toThrow('execution opportunity');
- const event={eventId:1n,eventSequence:1n,eventTypeId:OPPORTUNITY_SOURCE,dueAt:simInstant(10n),phase:90n,payload:items(source,'list')[3],dependencies:list([]),causalParentEventIds:[]};
+ const event={eventId:1n,eventSequence:1n,eventTypeId:OPPORTUNITY_SOURCE,dueAt:simInstant(10n),phase:100n,payload:items(source,'list')[3],dependencies:list([]),causalParentEventIds:[]};
  const h=createExternalObstruction(C,b.people,[event],C,C,undefined,b.actions);h.begin(10n);
  expect(()=>h.execute({event:{...event,payload:list([text(OPPORTUNITY),C,set(b.actions.map(x=>list([x,false])))])}} as never)).toThrow('unbound source');
  expect(()=>h.prepareCommit()).toThrow('unconsumed');h.close();
@@ -92,7 +92,7 @@ it('M194 admission privacy selected-action scope and old-version compatibility',
 it('M194 opportunity loss blocks queue creation but not a prior committed delayed receipt',async()=>{
  const delayed=(blocked:0|1)=>{const b=fixture(!blocked),slots=[...items(decode(b.s.registry),'list')],actuator=items(slots[10],'list');
   slots[10]=list([actuator[0],actuator[1],set(items(actuator[2],'set').map(v=>{const a=items(v,'list');return list([a[0],a[1],u(2)]);}))]);
-  const rows=items(decode(b.d.orderedInputs),'list');return {...b,s:{...b.s,registry:enc(list(slots))},d:{...b.d,orderedInputs:enc(list([...rows,list([signed(12),u(90),OPPORTUNITY_SOURCE,list([text(OPPORTUNITY),C,set(b.actions.map(action=>list([action,false])))]),list([])])]))}};};
+  const rows=items(decode(b.d.orderedInputs),'list');return {...b,s:{...b.s,registry:enc(list(slots))},d:{...b.d,orderedInputs:enc(list([...rows,list([signed(12),u(100),OPPORTUNITY_SOURCE,list([text(OPPORTUNITY),C,set(b.actions.map(action=>list([action,false])))]),list([])])]))}};};
  const a=await create(delayed(0)),b=await create(delayed(1)),x=capture(a.run),y=capture(b.run);expect(x.d).toEqual(y.d);expect(x.intent).toEqual(y.intent);expect(x.expression).toEqual(y.expression);
  const effect=(run:Run,p:ReturnType<typeof capture>)=>labels(decode(run.snapshot().outputs),ACTION_BODY).find(r=>eq(r[1],f(rec(p.execution!,433n),1n)))!;
  const queued=effect(a.run,x),blocked=effect(b.run,y);expect(queued[5]).toEqual(text('Queued'));expect(blocked[5]).toEqual(text('Blocked'));
