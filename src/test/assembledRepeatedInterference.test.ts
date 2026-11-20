@@ -33,7 +33,8 @@ function live(r:Run,at:bigint){
  const trace=outputs(r.snapshot().trace,160n).find(t=>eq(f(t,13n),d))!;expect(trace).toBeDefined();const draws=f(trace,14n);if(at===10n)expect(items(draws,'list').length).toBeGreaterThan(0);else{expect(items(draws,'list')).toHaveLength(0);const choice=rec(f(status,2n),420n);expect(f(choice,8n)).toEqual(u(1));const probabilities=items(f(choice,2n),'list');expect(probabilities).toHaveLength(1);expect(f(rec(probabilities[0],421n),2n)).toEqual(q(1,1));}
  return {d,intent,expression,execution,effect,skill,observation:list(obs[0]),draws};
 }
-function full(a:Run,b:Run){expect(a.snapshot()).toEqual(b.snapshot());bytes(a.save(),b.save());bytes(a.runIdentity(),b.runIdentity());bytes(a.decisionHistory(),b.decisionHistory());bytes(a.decisionPresentation(),b.decisionPresentation());}
+function snapshots(x:ReturnType<Run['snapshot']>,y:ReturnType<Run['snapshot']>){const {state:xs,outputs:xo,trace:xt,...xm}=x,{state:ys,outputs:yo,trace:yt,...ym}=y;expect(xm).toEqual(ym);bytes(xs,ys);bytes(xo,yo);bytes(xt,yt);}
+function full(a:Run,b:Run){snapshots(a.snapshot(),b.snapshot());bytes(a.save(),b.save());bytes(a.runIdentity(),b.runIdentity());bytes(a.decisionHistory(),b.decisionHistory());bytes(a.decisionPresentation(),b.decisionPresentation());}
 it('M195 repeated actual blocks change prior expectation without rewriting intent',async()=>{
  const a=await create(fixture()),b=await create(fixture({secondSeen:false})),first=live(a.run,10n),other=live(b.run,10n);expect(first).toEqual(other);
  const early=appraisal(a.run,10n,list([]),0);appraisal(b.run,10n,list([]),0);
@@ -64,7 +65,7 @@ it('M195 second witness rollback and full continuation preserve accumulated hist
  const b=fixture(),failed=await create(b,11n),repeat=await create(b,11n);full(failed.run,repeat.run);
  const saved=failed.run.save(),before=failed.run.snapshot(),original=traceModule.traceRecordValue;let reached=false;
  const spy=vi.spyOn(traceModule,'traceRecordValue').mockImplementation(v=>{const row=original(v);if(eq(v.event.eventTypeId,INTERFERENCE_LEARN)&&v.event.dueAt===12n){reached=true;throw Error('M195 second witness140');}return row;});
- try{await expect(failed.run.settleNextInstant()).rejects.toThrow('M195 second witness140');expect(reached).toBe(true);expect({...failed.run.snapshot(),status:before.status}).toEqual(before);}finally{spy.mockRestore();}
+ try{await expect(failed.run.settleNextInstant()).rejects.toThrow('M195 second witness140');expect(reached).toBe(true);snapshots({...failed.run.snapshot(),status:before.status},before);}finally{spy.mockRestore();}
  const recovered=await restoreCharacterRun(b.s,{initialState:b.d.initialState,orderedInputs:b.d.orderedInputs,save:saved});await through(repeat.run,12n);await through(recovered,12n);live(repeat.run,12n);full(repeat.run,recovered);
  const restored=await restoreCharacterRun(b.s,{initialState:b.d.initialState,orderedInputs:b.d.orderedInputs,save:repeat.run.save()});full(repeat.run,restored);
  for(let n=0;;n++){expect(n).toBeLessThan(32);const more=await repeat.run.settleNextInstant();for(const r of[recovered,restored]){expect(await r.settleNextInstant()).toBe(more);full(repeat.run,r);}if(!more)break;}

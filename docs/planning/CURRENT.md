@@ -1,72 +1,37 @@
-# Current work — M195: repeated interference changes later belief
-Two actual blocked attempts will contribute separate observed episodes to the
-character's later expectation/appraisal without rewriting either intention.
-M194 complete at2a47a5b6; [result](ASSEMBLED_CHARACTER_M194_RESULT.md).
+# Current work — M195 complete: repeated interference changes expectation
+Two actual blocked attempts now have a native witness showing how their evidence
+combines into later appraisal while original intentions remain unchanged.
+[Result](ASSEMBLED_CHARACTER_M195_RESULT.md); [checks](ASSEMBLED_CHARACTER_M195_CHECKS.txt).
+Existing rules/registry0.132-candidate and55 slots; no production changes.
 
-## Bounded card — before code
-- Capability: BRIEF-12.14-5, repeated interference and immutable earlier intent.
-  Prove native execution -> permitted evidence -> shared knowledge -> later appraisal.
-- Existing rules/registry0.132, obstruction-witness/0.1,
-  assembled-character-interference/0.1 and interference-expectation-component/0.1.
-  AcrossEpisodeMean/GroupedMean/SplitExposure unchanged. No new law or version.
-- Authority: Architecture13.3; existing agency/interference contracts;
-  MEC004/015/017/019/022; foundation RNG/order/state/content/observation constraints.
-- Expected scope: two test files, assembledRepeatedInterference and its fixture.
-  No production changes expected. If a defect requires a seam change, record its
-  versioned repair before code; <=12 production/test total, one active package/job.
-  Update existing register/obligations/ledger, this card, one result and raw log.
-- Scenario: M192 nonsocial physical tasks, body30/cap100/rate10/delivery90@9,
-  A/B importance3/5,severity1/2,seed0. Same original calendar through101.
-  Add actual opportunities12/14/16 with unchanged identity/self/Values contexts
-  and normal body samples. Actual performance channels10/12 only, never authored
-  success/failure. Passive blocker10/12, taskB/route1 monitoring; no active peers.
-- Comparison: sight10 in both arms; negative fallible report11 about10/receipt1;
-  second physical block12 in both, causal sight12 present versus denied.
-  Duplicate negative report15 reuses10/receipt1. Query10/12/14/16 route1,goal1.
-  Same source shapes/count/times/laws/seed; prove actual draw equality at both
-  compared attempts, not seed equality. No choice-change/probability claim.
-- Liveness: assert actual competent, engaged B/route1 attempt and authentic blocked
-  outcome at10 AND12 in both arms before expectation comparison. Missing attempt
-  is a scenario failure, not permission to substitute a report or silently drop it.
-  Every new opportunity includes explicit fresh body and declaration contexts.
-- Expected prior timeline:10 Unknown;12=1/2 from10's direct+negative report;
-  14=3/4 (two episodes, each one mean) versus1/2 (one supported episode).
-  Same-instant12 witness must not affect appraisal12. Duplicate15 leaves16 unchanged.
-  Trace must name the consumed knowledge, outcome originals and live appraisal.
-  Earlier intent/expression/outcomes and earlier appraisal remain byte-identical.
-- Comparators on captured native evidence: AcrossEpisodeMean3/4, LatestEpisode1,
-  EpisodeOnly/NoLearning Unknown; flattened receipt mean2/3 must differ.
-  Retain original13 sources x4 laws x8 prefixes=416 semantic comparisons.
-- Controls: denied causal sight/reports with swapped private blocker gives equal
-  character state/safe outputs/history/player through101; no inferred cause.
-  Duplicate receipt counts once; route-mismatch/no-support stays Unknown.
-  Exact repeat/save11/recovery, public save12 continuation every later settled
-  state/output/trace/save/identity/history/player byte; reached second learning140
-  fault rolls back. Existing M36 admission/ownership/original-support negatives.
-- Checks serial: types; native repeated connection; privacy; continuation/rollback;
-  original416 math/admission; boundary/research/preservation/staged-size.
-  <=600s/command, <=1800s cumulative; <=20 evidence files/5MiB. No extension assumed.
-- Risks: second attempt absent/switched; new learning leaks into current appraisal;
-  reports counted as independent episodes; observation becomes hidden truth;
-  old intent recalculated; second-event rollback misses an owner.
-- Done: all declared gates pass; retain/classify failures and bounded self-approved
-  repairs without tuning laws/seeds/thresholds. Only12.14-5 gains evidence.
-  Family12.14-7 and final whole-candidate replay remain;21/15/132 fixed.
-  Frozen controls/production untouched retain their prior byte results.
-  Stop verification on pass; no UI, new store/scheduler or alternate pipeline.
+## Completed connection
+TaskB/route1 attempts10/12 are competent and physically blocked in both arms.
+Direct sight10 plus negative report11 gives prior12 expectation1/2.
+Second sight12 yields14 expectation3/4 across two episodes; denied sight keeps1/2.
+Duplicate report15 leaves16 unchanged. Receipt-weighted2/3 is not the reference.
+Earlier intention/expression/outcome/appraisal bytes remain intact through101.
+First choice has matched nonempty draws; visible route display11 makes retry
+Auto with probability1 and empty identical transcripts, without authored intent.
+Original available-alternative case stays a one-episode1/2 control.
+Denied evidence/private-blocker swap preserves all later character projections.
+Repeat/save11/recovery/save12 continuation and reached second140 rollback pass.
+Original416 math comparisons and admission/owner/support negatives pass.
 
-## Recorded bounded amendments
-c9f2c556: latest display issued8 valid-until10 ->16; preserve expired null.
-9eecf302: copy unchanged physical setting10 to opportunities12/14/16.
-ba320f6c: normal display11 makes only B/route1 usable; preserve other-action null.
-First choice keeps matched nonempty draws; retry must be Auto/probability1 with
-identical empty transcripts. Fix display input phase to its existing30 contract.
-No laws/seed/required two B attempts/3/4-versus1/2 gate changed.
+## Preserved corrections
+Expired route windows -> latest issued8 display extended10 to16.
+Missing current physical setting -> unchanged setting10 copied to later attempts.
+Other selected task -> retained null; normal display11 supplies B-only opportunity.
+New display phase10 -> corrected to existing30 admission. Laws/seed/gates unchanged.
+Slow generic snapshot match interrupted; same complete checkpoints rerun using
+exact byte comparisons plus every remaining snapshot metadata field.
 
-## Verification implementation repair
-Generic deep byte-array snapshot matching was interrupted after364.587s to
-preserve the1800s budget. Use the existing exact byte comparator for state/output/
-trace; compare ALL remaining snapshot metadata exactly. Same saves, identity,
-history, presentation, checkpoints and reached140 fault; no assertion removed.
-Repeat the entire interrupted check. Main/privacy/retained controls stay valid:
-they do not use this helper. No production or source/acceptance changes.
+## Remaining scope
+12.14-5 gains bounded evidence: E70/P36/N13/U13=132; family12.14 remains open.
+Next: separate stakeholder12.14-7, then family review and final candidate replay.
+This is labelled single-holder evidence; no new mitigation/retry policy or peers.
+21members/15families unchanged; memory accepted0.126, AFFECT/DECISION member0.129.
+UI/Campaign4 stay stopped. One bounded card/job, same self-approval/budget rules.
+
+| Record | Status |
+|---|---|
+| Research obligations | **0 active / 18 conditional / 0 unowned** |

@@ -1190,3 +1190,12 @@ expression90 and precedes attempt110; standalone phase numbers are not reused.
 No new owner, psychological law or retired alternative. Instant-local apparatus
 only; general affordance discovery remains outside this claim.
 [Bounded result](ASSEMBLED_CHARACTER_M194_RESULT.md).
+
+M195 exercises existing obstruction witnessing and AcrossEpisodeMean in one
+continuing0.132 character: two actual blocked attempts -> distinct supported
+episodes -> later appraisal, without changing production. MEC004/015/017/019/022
+remain PORT/CONTRACT/CORPUS. First choice uses matched actual draws; a normally
+perceived route display makes the retry deterministic. Old intentions stay frozen.
+LatestEpisode/EpisodeOnly/NoLearning and receipt-counting controls remain distinct;
+the available-alternative one-episode null is preserved, not patched.
+[Bounded result](ASSEMBLED_CHARACTER_M195_RESULT.md).
