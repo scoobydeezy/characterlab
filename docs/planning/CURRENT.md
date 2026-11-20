@@ -1,29 +1,55 @@
-# Current work — M192 complete: externally blocked action learns actual outcome
-The character can choose and competently attempt an action, have it physically
-blocked by a passive participant, then learn failure through ordinary perception.
-Its intent stays intact; an unobserved outcome and hidden cause remain unknown.
-[Result](ASSEMBLED_CHARACTER_M192_RESULT.md); [checks](ASSEMBLED_CHARACTER_M192_CHECKS.txt).
-Rules/registry0.130-candidate; external-obstruction/0.1-candidate; same55-slot model.
+# Current work — M193: witnessed interference and later explanation
+The character must distinguish observed failure from witnessed blocking, then
+revise its attribution when it receives a contrary report. One knowledge owner.
+Owner continuation/self-approval; base73ac9300. No autonomous partner or UI.
 
-## Completed connection
-Same live decision/intent/expression/plan/attempt/competence; Applied versus Blocked
-changes observed performance knowledge1 versus0. Swapped hidden blockers preserve
-state and public history through101. Denied outcome supplies no known failure.
-Exact repeat/save9/restore/reached rollback pass. Delay2 blocks queue creation,
-but later obstruction does not cancel an already queued receipt.
-Original M191 regimes/history and M190 orphan-motive controls pass on0.129.
-First missing-report-target failure remains; symmetric actual-report repair was
-recorded before rerun. No law, seed, calibration, acceptance or budget change.
+## Scope and contract before code
+Rules/registry0.131-candidate; obstruction-witness/0.1-candidate; same55 slots.
+Extend the existing outcome observer120 with an independently permitted, labelled
+task/person obstruction channel. This is the bounded agency0.3 observation
+apparatus, not general natural recognition or a new psychological law.
+Existing knowledge1000/7 stores direct and later reported causal evidence.
+Direct observation is generated from actual blocked execution, never authored.
+The existing AcrossEpisodeMean includes GroupedMean within each observed episode.
+A later distinct negative report revises that episode; no truth check repairs it.
+Appraisal50 reads prior committed evidence. Frozen choice/outcome never rewritten.
+FND3/4/5/6: same-instant outcome/causal consolidation, closed source/authentication,
+ownership, privacy, order and rollback must pass. Original contracts stay frozen.
+MEC004/015/017/019/022, GroupedMean/LastClaim/OutcomeOnly/OmniscientCause and
+SuccessAsIntent remain. No new state owner, RNG, scheduler or alternate runtime.
 
-## Scope and next connection
-Only12.14-4 gains bounded evidence: E66/P40/N13/U13=132.
-21 members/15 families fixed. DECISION member and AFFECT family accepted0.129;
-memory family accepted0.126. Final whole-candidate replay remains required.
-Next: permitted observation of actual obstruction and later causal explanation.
-Repeated interference, post-choice impossibility and broader family gates remain.
-No new psychological owner, scheduler, RNG, alternate runtime, autonomous peer or UI.
-Keep one bounded card before implementation; same self-approval and preservation rules.
+## Predeclared comparison
+M192 quiet fixture: nonsocial tasks; body30/cap100/rate10/delivery90@9;
+A/B importance3/5,severity1/2,seed0. All original calendar events through101.
+At10 a passive actor blocks the actual competent action; actual outcome visible.
+New source grants/denies causal sight for task A. First assert actual task A
+outcome and live decision/intent/expression/attempt before causal comparisons.
+Add ordinary deliberation/query opportunities12 and14 (copy10's declaration).
+Query the observed route0 at10/12/14. At13 a permitted negative report names the
+original ticket10 and receipt1. Reference laws/calibration fixed; no seed search.
+At10 appraisal unknown in both (learning140); at12 witnessed1 versus unknown;
+at14 witnessed+report1/2 versus report-only0, with matching consumed original
+outcomes and immutable10 expression/history. This is an appraisal/attribution
+claim, not a changed-choice or coupled-choice claim.
+Compare captured supports with original GroupedMean/LastClaim and OutcomeOnly.
+Distinct source IDs: direct receipt0 versus reports1..16; repeated report1 cannot
+gain weight. Missing outcome leaves direct evidence unbound, not retroactively joined.
+Private blocker swap with causal sight denied preserves cognition; no-block yields
+no positive witness. Outcome-only, denied report and same-instant controls retained.
+Repeat/public save10 and restore all later settled bytes; reached140 fault rollback.
+Negative source version/task/payload, same-instant competing report, forged child/
+learned-state and altered actor/support records reject. No hidden-state consumer.
 
-| Record | Status |
-|---|---|
-| Research obligations | **0 active / 18 conditional / 0 unowned** |
+## Files and limits
+Production <=9 paths: externalObstruction,model,inputs,traceBinding,runtime,
+causalAttribution,interferenceExpectation,performance,state under src/assembled.
+Two new test/helper files; <=12 production/test paths. Formal witness contract.
+Planning CURRENT, register, mechanism ledger, obligations; one M193 result/raw log.
+One job; <=600s/command, <=1800s cumulative including failures;20 evidence/5MiB.
+CURRENT<=80; register<=250lines/65536CRLFbytes. Preserve original baseline/control bytes.
+Types; native connection/privacy/repeat/rollback/admission; M192 connection and
+M36 interference math/admission as affected regressions; boundary/research/size.
+No frozen C2 rerun without changed dependencies. No breadth between this connection.
+Done: actual permitted witness and later explanation change same-character causal
+appraisal, with safe unknowns and exact continuation. Only bounded12.14-6/8 evidence
+may advance; stakeholder7, repeated interference5 and full-family/final replay remain.
