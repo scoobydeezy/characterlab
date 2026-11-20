@@ -100,7 +100,7 @@ function projection(r:Run,cell:Cell,denied=false){
 function stressConsumer(r:Run,a:readonly CanonicalValue[],U:Q){
  const out=reports(r,STRESS+'/applied').find(v=>at(v[1])===11n)!;expect(out,'actual strictly later stress').toBeDefined();
  const packet=items(out[2],'list');expect(packet[4]).toEqual(list(a));expect(at(packet[2])).toBe(10n);
- const producer=outputs(r.snapshot().trace,160n).find(t=>uint(f(event(t),1n))===uint(packet[3]))!;expect(f(producer,13n)).toEqual(list(a));expect(uint(f(event(producer),3n))).toBe(50n);
+ const producer=outputs(r.snapshot().trace,160n).find(t=>uint(f(event(t),1n))===uint(packet[3])&&key(f(t,13n))===key(list(a)))!;expect(producer,'exact completed appraisal producer').toBeDefined();expect(uint(f(event(producer),3n))).toBe(50n);
  const dose=roundEven(roundEven(U.numerator*1000n,U.denominator),2n);expect(uint(out[6])).toBe(dose);expect(stressAnchor(out[4])).toEqual({at:11n,level:Number(dose)});expect(state(r).read(stressPath(C)).value).toEqual(out[4]);
 }
 it('current189 declarations preserve all32 single-factor edges',()=>{
