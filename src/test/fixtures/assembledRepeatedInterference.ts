@@ -7,6 +7,7 @@ import {IDENTITY_CONTEXT} from '../../assembled/identityEligibility';
 import {SELF_CONTEXT} from '../../assembled/selfBelief';
 import {VALUES_CONTEXT} from '../../assembled/values';
 import {DISPLAY} from '../../assembled/strategy';
+import {PRACTICE_SETTING} from '../../assembled/skill';
 import {BODY_SAMPLE} from '../../assembled/body';
 import {PERFORMANCE_SETTING} from '../../assembled/performance';
 import {OBSTRUCTION_SOURCE,OBSTRUCTION_WITNESS} from '../../assembled/externalObstruction';
@@ -16,8 +17,8 @@ export * from './assembledObstruction';
 export {taskB};
 export function fixture(o:{originalExpired?:boolean;secondSeen?:boolean;private?:boolean;blocker?:1|2}={}){
  const b=prior(o.blocker??1),base=items(decode(b.d.orderedInputs),'list'),at10=base.filter(v=>key(items(v,'list')[0])===key(signed(10)));
- const templates=at10.filter(v=>[sid(1001,'event/deliberation-opportunity'),IDENTITY_CONTEXT,SELF_CONTEXT,VALUES_CONTEXT,BODY_SAMPLE].some(t=>key(t)===key(items(v,'list')[2])));
- if(templates.length!==5)throw Error('M195 complete later-opportunity declarations '+templates.length);
+ const templates=at10.filter(v=>[sid(1001,'event/deliberation-opportunity'),IDENTITY_CONTEXT,SELF_CONTEXT,VALUES_CONTEXT,BODY_SAMPLE,PRACTICE_SETTING].some(t=>key(t)===key(items(v,'list')[2])));
+ if(templates.length!==6)throw Error('M195 complete later-opportunity declarations '+templates.length);
  const rows=base.map(v=>{const a=[...items(v,'list')];if(key(a[2])===key(OBSTRUCTION_SOURCE)){const p=items(a[3],'list');a[3]=list([text(OBSTRUCTION_WITNESS),p[1],p[2],list(o.private?[]:[taskB])]);}if(!o.originalExpired&&key(a[0])===key(signed(8))&&key(a[2])===key(DISPLAY)){const p=items(a[3],'list');a[3]=list([p[0],list(items(p[1],'list').map(v=>{const x=[...items(v,'list')];if(key(x[5])!==key(u(10)))throw Error('M195 original route window');x[5]=u(16);return list(x);}))]);}return list(a);});
  for(const at of[12,14,16])for(const v of templates){const a=[...items(v,'list')];a[0]=signed(at);rows.push(list(a));}
  const feedback=at10.find(v=>key(items(v,'list')[2])===key(PERFORMANCE_SETTING));if(!feedback)throw Error('M195 actual outcome channel');

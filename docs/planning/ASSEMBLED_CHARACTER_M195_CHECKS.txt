@@ -86,3 +86,38 @@ SchedulerContractError: procedural: execution without current setting
    Start at  11:48:45
    Duration  114.30s (transform 3.13s, setup 0ms, collect 4.68s, tests 109.18s, environment 0ms, prepare 131ms)
 
+
+M195 repeated-current-settings exit=1 elapsed=129.823s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRepeatedInterference.test.ts > M195 preserves expired setup and changes only latest declared route validity
+M195 AMENDMENT PASS only latest issued8 route validity10->16 changes; original expired fixture remains, all source values/seed/model/initial state otherwise fixed.
+
+ ❯ src/test/assembledRepeatedInterference.test.ts (9 tests | 1 failed | 7 skipped) 124115ms
+   × M195 repeated actual blocks change prior expectation without rewriting intent 123295ms
+     → actual B observation at12: expected [] to have a length of 1 but got +0
+   ✓ M195 preserves expired setup and changes only latest declared route validity 820ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledRepeatedInterference.test.ts > M195 repeated actual blocks change prior expectation without rewriting intent
+AssertionError: actual B observation at12: expected [] to have a length of 1 but got +0
+
+- Expected
++ Received
+
+- 1
++ 0
+
+ ❯ live src/test/assembledRepeatedInterference.test.ts:32:124
+
+ ❯ src/test/assembledRepeatedInterference.test.ts:40:65
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed | 7 skipped (9)
+   Start at  11:51:20
+   Duration  129.27s (transform 3.15s, setup 0ms, collect 4.70s, tests 124.11s, environment 0ms, prepare 124ms)
+
