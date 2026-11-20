@@ -1173,3 +1173,11 @@ observation learns actual outcome; source identity stays private world truth.
 Original GroupedMean/LastClaim/OutcomeOnly/OmniscientCause/SuccessAsIntent and M35/36
 causal controls remain CONTROL+CORPUS; cause witnessing/explanation is still pending.
 No mechanism retired, new owner or autonomous partner. [Result](ASSEMBLED_CHARACTER_M192_RESULT.md).
+
+M193 connects agency0.3's permitted obstruction witness and later report to existing
+knowledge1000/7 under obstruction-witness/0.1, rules0.131. MEC004/015/017/019/022
+retain PORT/CONTRACT/CORPUS: labelled observation, actual arbitration, frozen intent,
+attempt/outcome and historical meaning. Direct0 and report1..16 stay distinct.
+GroupedMean matches captured supports; LastClaim/OutcomeOnly remain controls.
+No new owner or retired mechanism; natural recognition, source trust and full
+agency/stakeholder scope remain. [Result](ASSEMBLED_CHARACTER_M193_RESULT.md).

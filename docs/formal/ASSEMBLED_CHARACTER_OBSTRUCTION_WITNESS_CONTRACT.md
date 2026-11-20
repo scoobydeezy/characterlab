@@ -14,6 +14,8 @@ This declares one labelled observer apparatus, not an authored observation.
 New grammar rejects on older versions. At most16/one instant as before.
 A fallible later report at that same instant is rejected to preserve the existing
 one causal observation per task/instant domain. Report-only later instants remain.
+Per task, visible reports plus potentially witnessed blocked sources total at most16,
+the existing journal capacity; denied reports and absent blockers consume no bound.
 
 Physical110 alone evaluates the source. The actual performance observer120 then
 projects blocking only if a matching actual task/action is monitored, a blocker
@@ -40,7 +42,7 @@ unbound permanently; it cannot acquire a later retroactive support join.
 At later50 appraisal the unchanged episode fold counts direct0 once alongside
 unique report receipts, then applies unchanged AcrossEpisodeMean/SplitExposure.
 Positive direct evidence followed by a distinct negative claim yields1/2;
-LastClaim yields0; OutcomeOnly stays unknown until causal evidence is admitted.
+LastClaim yields0; OutcomeOnly discards causal evidence and stays unknown.
 Reports are not corrected using world truth. Their absence is not negative.
 Original latent JointDiagnostics1000/6 remains a distinct operation.
 

@@ -19,7 +19,7 @@ const state=(r:Run)=>restoreAuthoritativeState(decode(r.snapshot().state));
 const journal=(r:Run,people:CanonicalValue[])=>interferenceJournal(state(r).read(interferencePath(taskB)).value,taskB,EXTENDED_TIME_LIMIT,people);
 function appraisal(r:Run,at:bigint,value:CanonicalValue){const rows=labelled(r,INTERFERENCE_APPRAISAL).filter(a=>uint(a[1])===at);expect(rows).toHaveLength(1);expect(rows[0][2]).toEqual(taskB);expect(rows[0][6]).toEqual(value);if(items(value,'list').length===0)expect(rows[0][7]).toEqual(list([]));return rows[0];}
 function estimate(r:Run,at:bigint,value:CanonicalValue){const rows=labelled(r,INTERFERENCE_APPRAISAL).filter(a=>uint(a[1])===at);expect(rows).toHaveLength(1);expect(rows[0][2]).toEqual(taskB);expect(rows[0][6]).toEqual(value);expect(rows[0][7]).not.toEqual(list([]));return rows[0];}
-function live(r:Run){const p=capture(r),o=labelled(r,PERFORMANCE_OBS).filter(a=>uint(a[2])===10n&&eq(a[3],taskB));expect(o,'actual compared task outcome').toHaveLength(1);expect(o[0][6]).toBe(false);expect(o[0][7]).toBe(true);expect(uint(o[0][4])).toBe(0n);const body=labelled(r,ACTION_BODY).find(a=>eq(a[1],f(rec(p.execution!,433n),1n)))!;expect(body[5]).toEqual(text('Blocked'));return {p,o:o[0]};}
+function live(r:Run){const p=capture(r),o=labelled(r,PERFORMANCE_OBS).filter(a=>uint(a[2])===10n&&eq(a[3],taskB));expect(o,'actual compared task outcome').toHaveLength(1);expect(o[0][6]).toBe(false);expect(o[0][7]).toBe(true);expect(uint(o[0][4])).toBe(1n);const body=labelled(r,ACTION_BODY).find(a=>eq(a[1],f(rec(p.execution!,433n),1n)))!;expect(body[5]).toEqual(text('Blocked'));return {p,o:o[0]};}
 function full(a:Run,b:Run){expect(a.snapshot()).toEqual(b.snapshot());bytes(a.save(),b.save());bytes(a.runIdentity(),b.runIdentity());bytes(a.decisionHistory(),b.decisionHistory());bytes(a.decisionPresentation(),b.decisionPresentation());}
 it('M193 witnessed blocking and later contrary explanation revise actual prior appraisal',async()=>{
  const a=await create(fixture()),b=await create(fixture({seen:false})),x=live(a.run),y=live(b.run);expect(x.p.d).toEqual(y.p.d);expect(x.p.intent).toEqual(y.p.intent);expect(x.p.expression).toEqual(y.p.expression);expect(x.o).toEqual(y.o);
@@ -64,6 +64,9 @@ it('M193 source and witness grammar reject foreign or manufactured evidence',asy
  await expect(createCharacterRun(model,alter(a=>{const s=items(a[3],'list');a[3]=list([...s.slice(0,3),list([text('foreign task')])]);}))).rejects.toThrow('witness task');
  const report=rows.find(v=>eq(items(v,'list')[2],INTERFERENCE_SOURCE))!,same=[...items(report,'list')];same[0]=signed(10);const payload=[...items(same[3],'list')];payload[2]=u(9);same[3]=list(payload);
  await expect(createCharacterRun(model,{...b.d,orderedInputs:enc(list([...rows,list(same)]))})).rejects.toThrow('competing causal report');
+ const excess=(visible:boolean)=>Array.from({length:15},(_,i)=>{const a=[...items(report,'list')],p=[...items(a[3],'list')];a[0]=signed(15+i);p[4]=visible;a[3]=list(p);return list(a);});
+ await expect(createCharacterRun(model,{...b.d,orderedInputs:enc(list([...rows,...excess(true)]))})).rejects.toThrow('witness journal capacity16');
+ await expect(createCharacterRun(model,{...b.d,orderedInputs:enc(list([...rows,...excess(false)]))})).resolves.toBeDefined();
  const v=list([text(INTERFERENCE_WITNESS),u(10),taskB,u(10),u(0),true,list([]),b.people[0]]);
  expect(()=>interferenceObservation(v,taskB)).toThrow('observation');
  for(const change of[(a:CanonicalValue[])=>{a[7]=text('foreign actor');},(a:CanonicalValue[])=>{a[4]=u(1);},(a:CanonicalValue[])=>{a[3]=u(9);},(a:CanonicalValue[])=>{a[5]=false;}]){const a=[...items(v,'list')];change(a);expect(()=>interferenceObservation(list(a),taskB,EXTENDED_TIME_LIMIT,b.people)).toThrow('observation');}
@@ -76,5 +79,5 @@ it('M193 source and witness grammar reject foreign or manufactured evidence',asy
  const parent={eventId:999n,eventSequence:999n,eventTypeId:sid(1001,'event/assembled-performance-observe'),dueAt:10n as never,phase:120n,payload:list([action,false,list([list([taskB,u(0),true,u(0)])]),true]),dependencies:list([]),causalParentEventIds:[]};
  const plan=handler.observeObstruction(parent,[fake],{task:taskB,blocker:b.people[0]})!;expect(()=>plan.bind([{...plan.emissions[0],phase:140n,eventId:1000n,eventSequence:1000n,causalParentEventIds:[999n]}])).toThrow('witness child association');
  expect(()=>handler.prepare([{...parent,phase:140n,eventTypeId:INTERFERENCE_LEARN,payload:v}],initial)).toThrow('unbound generated');handler.close();
- console.info('M193 ADMISSION PASS old source version, foreign task/actor, same-instant competing report, direct source identity/time/polarity, generated child, learned S0, sole owner and fabricated support reject.');
+ console.info('M193 ADMISSION PASS old source version, foreign task/actor, same-instant competing report, combined capacity/denied capacity, direct source identity/time/polarity, generated child, learned S0, sole owner and fabricated support reject.');
 },570000);
