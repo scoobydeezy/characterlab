@@ -54,3 +54,11 @@ M194 complete at2a47a5b6; [result](ASSEMBLED_CHARACTER_M194_RESULT.md).
   Family12.14-7 and final whole-candidate replay remain;21/15/132 fixed.
   Frozen controls/production untouched retain their prior byte results.
   Stop verification on pass; no UI, new store/scheduler or alternate pipeline.
+
+## Self-approved scenario amendment before rerun
+First comparison failed at12 with NoCandidates (28996705), not a belief failure.
+Declaration inspection confirms both strategy displays expire at10; the latest
+was issued8. Extend only that latest display valid-until10 to16 in both arms so
+routes remain visibly available at the added opportunities. Original expired
+fixture/failure stays preserved. No goal/importance, polarity, physical effect,
+seed, law, required two attempts, 3/4-versus1/2 gate or budget changes.
