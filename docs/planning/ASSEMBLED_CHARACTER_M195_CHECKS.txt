@@ -1,0 +1,38 @@
+
+M195 types exit=0 elapsed=21.112s cap=600
+
+M195 repeated-connection exit=1 elapsed=119.980s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledRepeatedInterference.test.ts (8 tests | 1 failed | 7 skipped) 114211ms
+   × M195 repeated actual blocks change prior expectation without rewriting intent 114211ms
+     → chosen at12: expected 1n to be 3n // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledRepeatedInterference.test.ts > M195 repeated actual blocks change prior expectation without rewriting intent
+AssertionError: chosen at12: expected 1n to be 3n // Object.is equality
+
+- Expected
++ Received
+
+- 3n
++ 1n
+
+ ❯ live src/test/assembledRepeatedInterference.test.ts:26:75
+     24| function live(r:Run,at:bigint){
+     25|  const os=r.snapshot().outputs,d=outputs(os,409n).find(v=>signedValue(…
+     26|  const status=rec(f(d,4n),419n);expect(uint(f(status,1n)),'chosen at'+…
+       |                                                                           ^
+     27|  const intent=outputs(os,425n).find(v=>eq(f(v,2n),d))!,expression=outp…
+     28|  expect(intent).toBeDefined();expect(expression).toBeDefined();
+ ❯ src/test/assembledRepeatedInterference.test.ts:40:65
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  11:43:37
+   Duration  119.42s (transform 3.19s, setup 0ms, collect 4.76s, tests 114.21s, environment 0ms, prepare 133ms)
+
