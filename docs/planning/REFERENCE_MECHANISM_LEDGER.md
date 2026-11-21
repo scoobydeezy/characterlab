@@ -1268,3 +1268,11 @@ privacy and atomic continuation pass. Earlier versions/controls remain unchanged
 MEC004/015/017/019/022 stay PORT/CONTRACT/CORPUS; original four laws retained.
 Family gate and remaining terminal/current-version comparisons stay open.
 [Result](ASSEMBLED_CHARACTER_M204_RESULT.md).
+
+M205 transfers the remaining primary/successor receipt and evidence histories to
+0.135 without production changes. Terminal learning cannot revise prior appraisal;
+later unique receipts preserve three-episode weighting, and correction changes
+later2/3 to1/2. Hidden/denied privacy, unbound opportunity and exact continuation pass.
+MEC004/015/017/019/022 and original four laws retain their roles. M204/M205 now map
+all13+2 interference histories; M201's19 agency mappings retain version scope.
+Family acceptance remains open. [Result](ASSEMBLED_CHARACTER_M205_RESULT.md).
