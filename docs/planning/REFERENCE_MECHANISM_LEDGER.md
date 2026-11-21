@@ -1246,3 +1246,10 @@ M199's duplicate is not the original new-source/post-report denominator control;
 three-episode correction and current boundary-history transfers remain required.
 MEC004/015/017/019/022 retain their dispositions. No mechanism/code/law change
 or family acceptance. [Review and finite next work](ASSEMBLED_CHARACTER_M201_RESULT.md).
+
+M202 transfers three real attempts and positive/positive/negative causal reports
+into the0.134 native consumer. Duplicate/new same-polarity report preserves2/3;
+older-episode correction changes later appraisal to1/2 without rewriting intent.
+MEC004/015/017/019/022 remain; original four laws diagnose captured own evidence.
+No production/law change or family acceptance; M201 boundary histories remain.
+[Result](ASSEMBLED_CHARACTER_M202_RESULT.md).

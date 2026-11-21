@@ -8,6 +8,7 @@ import {SKILL_ACTUAL} from '../assembled/skill';
 import {EXTENDED_TIME_LIMIT} from '../assembled/timeDomain';
 import {restoreAuthoritativeState,statePathValue} from '../substrate/state';
 import {agencyRecord,decodeAgency} from '../campaign3/agencyCodecs';
+import {typedIdentifier} from '../substrate/canonicalEncoding';
 import {OBSERVERS} from '../campaign3/agencyModel';
 import {createInterferenceExpectationRun,LAWS,type Frame} from '../campaign3/interferenceExpectation';
 import {interferenceSources} from './interferenceExpectationFixtures';
@@ -43,10 +44,10 @@ function frame(r:Run):Frame{
  const rows:CanonicalValue[]=[];
  for(const a of labelled(r,PERFORMANCE_OBS).filter(a=>eq(a[3],taskB))){
   const ticket=uint(a[2]);expect([10n,12n,14n]).toContain(ticket);
-  rows.push(agencyRecord(975,[a[1],OBSERVERS[0],signed(ticket-9n),text('episode/'+ticket),u(1),a[6],text('outcome/'+ticket),list([])]));
+  rows.push(agencyRecord(975,[typedIdentifier(1163,u(ticket*2n)),OBSERVERS[0],signed(ticket-9n),sid(1027,'episode/'+ticket),u(1),a[6],sid(1027,'outcome/'+ticket),list([])]));
  }
  for(const v of history(r)){const o=interferenceObservation(v,taskB,EXTENDED_TIME_LIMIT);expect(o.outcome).toBeDefined();expect(o.route).toBe(1n);
-  rows.push(agencyRecord(975,[text('report/'+o.at),OBSERVERS[0],signed(o.at-9n),text('episode/'+o.ticket),u(3),o.positive,text('receipt/'+o.receipt),list([])]));
+  rows.push(agencyRecord(975,[typedIdentifier(1163,u(o.at*2n+1n)),OBSERVERS[0],signed(o.at-9n),sid(1027,'episode/'+o.ticket),u(3),o.positive,sid(1027,'receipt/'+o.receipt),list([])]));
  }
  return {view:enc(list(rows)),context:'A',goal:1};
 }
