@@ -26,14 +26,14 @@ export function protectiveExpression(expression:CanonicalValue){
  if([...meanings.values()].some(v=>!v.equals(ZERO)))channels.push(r(427,[PROTECTION_CHANNEL,qValue(choiceAlignment(f(data,1n),meanings))],2));
  return r(426,[f(e,1n),f(e,2n),list(channels),f(e,4n)],2);
 }
-export function protectiveRaw(settings:ReturnType<typeof compileProtection>,input:CanonicalValue,state:AuthoritativeState,stateModel:ReturnType<typeof compileCampaign2StateModel>,timeLimit:TimeLimit,feedback=true){
+export function protectiveRaw(settings:ReturnType<typeof compileProtection>,input:CanonicalValue,state:AuthoritativeState,stateModel:ReturnType<typeof compileCampaign2StateModel>,timeLimit:TimeLimit,feedback=true,currentGoal?:{active:boolean;receipt:CanonicalValue}){
  const raw=rec(input,403n);if(raw.schema.schemaVersion!==3n)invalidModel('protective described raw required');const C=f(rec(settings.task,371n),1n),reads:ActualReadRecord[]=[];
  const get=(path:ReturnType<typeof formationPath>)=>{const v=stateModel.read(state,path);reads.push({accessorId:sid(1028,'accessor/protective-meaning'),path,presence:v.presence,value:v.value,derivedSources:[]});return v.value;};
  const goal=controlValue(get(controlGoalPath(C)),true,timeLimit),maintained=controlValue(get(maintenancePath(C)),false,timeLimit),prior=formationValue(get(formationPath(C,PROTECTION_CHANNEL)),timeLimit);
- const descriptions=[...items(f(raw,6n),'list')],signals=[...items(f(raw,3n),'set')],options=items(f(rec(f(raw,2n),398n),3n),'list').map(v=>f(rec(v,397n),1n)),candidate=r(395,[C,settings.action]),live=goal.active&&maintained.maintained&&options.some(c=>eq(c,candidate));
+ const descriptions=[...items(f(raw,6n),'list')],signals=[...items(f(raw,3n),'set')],options=items(f(rec(f(raw,2n),398n),3n),'list').map(v=>f(rec(v,397n),1n)),candidate=r(395,[C,settings.action]),live=(currentGoal?.active??goal.active)&&maintained.maintained&&options.some(c=>eq(c,candidate));
  const emit=(label:string,role:number,strength:ReturnType<typeof readQ>,basis:CanonicalValue)=>{if(strength.equals(ZERO))return;const s=r(402,[r(401,[candidate,settings.task,u(role)]),qValue(strength),basis]);signals.push(s);descriptions.push(list([text(label),sid(1040,'Commitment'),s]));};
  if(live)emit(PROTECTION_GOAL,1,settings.importance,r(400,[map([])]));
  const staged=r(403,[f(raw,1n),f(raw,2n),set(signals),f(raw,4n),f(raw,5n),list(descriptions)],3),meanings=protectionMeanings(staged),alignment=live?choiceAlignment(candidate,meanings):ZERO,strength=live&&feedback?prior.P.multiply(alignment):ZERO;
  const basis=r(400,[map(prior.entries.map(e=>[named(399,{VariantTag:u(2),QualificationOccurrenceId:items(e,'list')[0]}),qValue(ONE)]))]);emit(PROTECTION_STANDING,3,strength,basis);
- return {output:r(403,[f(raw,1n),f(raw,2n),set(signals),f(raw,4n),f(raw,5n),list(descriptions)],3),reads,report:list([text(PROTECTION),live,settings.task,candidate,qValue(live?settings.importance:ZERO),qValue(prior.P),qValue(alignment),qValue(strength),list(prior.entries.map(e=>items(e,'list')[0]))])};
+ return {output:r(403,[f(raw,1n),f(raw,2n),set(signals),f(raw,4n),f(raw,5n),list(descriptions)],3),reads,report:list([text(PROTECTION),live,settings.task,candidate,qValue(live?settings.importance:ZERO),qValue(prior.P),qValue(alignment),qValue(strength),list(prior.entries.map(e=>items(e,'list')[0])),...(currentGoal?[currentGoal.receipt]:[])])};
 }

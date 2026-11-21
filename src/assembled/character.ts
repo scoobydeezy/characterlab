@@ -53,6 +53,13 @@ export async function restoreCharacterRun(source:Campaign2ModelSource,input:{ini
  // Snapshot caller data before the first await, including model bytes inside its
  // compiler. The replay constructor is the same fixed production constructor.
  const data=copies(input,['initialState','orderedInputs','save']),handle=await prepareCharacterModel(source);
+ return restorePreparedData(handle,data);
+}
+/** Reuse only an already validated private model; restore still executes the whole prefix. */
+export function restorePreparedCharacterRun(handle:CharacterModel,input:{initialState:Uint8Array;orderedInputs:Uint8Array;save:Uint8Array}){
+ facts(handle);const data=copies(input,['initialState','orderedInputs','save']);return restorePreparedData(handle,data);
+}
+async function restorePreparedData(handle:CharacterModel,data:{initialState:Uint8Array;orderedInputs:Uint8Array;save:Uint8Array}){
  const save=rec(decodeCognitive(data.save),132n),runIdentity=await restoreRunIdentity(f(save,3n)),seed=f(rec(runIdentity.value,104n),4n);
  if(typeof seed==='boolean'||seed.kind!=='bytes')throw new SaveContractError('saved seed required');
  const replay=await createCharacterRun(handle,{initialState:data.initialState,orderedInputs:data.orderedInputs,runSeed:seed.value});

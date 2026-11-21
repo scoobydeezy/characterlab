@@ -15,6 +15,7 @@ import {stressPath,stressAnchor,stressTransition,type StressDeclaration} from '.
 import {pattern} from './skill';
 import type {compileCampaign2StateModel} from '../campaign2/stateModel';
 export const SLEEP='assembled-sleep-control/0.1',SLEEP_VERSION=SLEEP+'-candidate',SLEEP_SAMPLE=SLEEP+'/sample',SLEEP_RECEIPT=SLEEP+'/receipt',READINESS=SLEEP+'/readiness';
+export const SLEEP_ACQUISITION='assembled-sleep-control/0.3',SLEEP_ACQUISITION_VERSION=SLEEP_ACQUISITION+'-candidate';
 export const SLEEP_LOAD='assembled-sleep-control/0.2',SLEEP_LOAD_VERSION=SLEEP_LOAD+'-candidate';
 export const SLEEP_SOURCE=bodyId(1001,'event/assembled-sleep-source');
 const phases=[11n,12n,13n,14n,20n,120n],internal=phases.map(p=>bodyId(1001,'event/assembled-sleep-'+p));
@@ -22,10 +23,10 @@ const fail=(s:string):never=>{throw new SchedulerContractError('INPUT_NOT_ADMITT
 const bounded=(v:CanonicalValue,max=1000n)=>{const n=uint(v);if(n>max)fail('integer domain');return Number(n);};
 const time=(v:CanonicalValue)=>{if(typeof v==='boolean'||v.kind!=='signed'||v.value<0n||v.value>1000001n)fail('anchor time');return (v as {value:bigint}).value;};
 const clamp=(n:number)=>Math.max(0,Math.min(1000,n)),fp=(e:ScheduledEvent)=>key(scheduledEventValue(e));
-export function compileSleep(value:CanonicalValue,loadEnabled=false){
- const a=items(value,'list');if(a.length!==7||txt(a[0])!==(loadEnabled?SLEEP_LOAD:SLEEP)||typeof a[1]!=='boolean')fail('declaration');
- const [accumulation,recovery,nightDrive,threshold,resolution]=a.slice(2).map(v=>bounded(v));if(!resolution)fail('resolution');
- return Object.freeze({loadEnabled,enabled:a[1] as boolean,accumulation,recovery,nightDrive,threshold,resolution});
+export function compileSleep(value:CanonicalValue,loadEnabled=false,immediateAdoption=false){
+ const a=items(value,'list');if(a.length!==(immediateAdoption?8:7)||txt(a[0])!==(immediateAdoption?SLEEP_ACQUISITION:loadEnabled?SLEEP_LOAD:SLEEP)||typeof a[1]!=='boolean'||immediateAdoption&&typeof a[7]!=='boolean')fail('declaration');
+ const [accumulation,recovery,nightDrive,threshold,resolution]=a.slice(2,7).map(v=>bounded(v));if(!resolution)fail('resolution');
+ return Object.freeze({immediateAdoption,controlEnabled:immediateAdoption?a[7]===true:true,loadEnabled,enabled:a[1] as boolean,accumulation,recovery,nightDrive,threshold,resolution});
 }
 export type SleepDeclaration=ReturnType<typeof compileSleep>;
 export const sleepPath=(C:CanonicalValue):StatePath=>({rootStateTypeId:455n,fieldId:3n,selectors:[{kind:'mapKey',key:C}]});

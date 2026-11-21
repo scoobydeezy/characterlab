@@ -1330,3 +1330,11 @@ original sleep probes remain controls. Old channel schemas stay closed. Full sle
 20/52 and reward prelude remain; no clause closure or reduction. MEC001/003/011..019/022
 retain original roles and D3 versus BIO feedback disposition.
 [Result](ASSEMBLED_CHARACTER_M212_RESULT.md).
+
+M213 lets current protective adoption/cancellation participate in shared control
+and meaning before the same goal owner's140 commit, with receipt provenance.
+NoControl now removes inhibition itself, retaining readiness/goal/maintenance.
+Prepared-model restore keeps full replay and exact complete-save equality.
+MEC001/003/011..019/022 retain original roles; M212 unchanged control passes.
+Original sleep20/52 and numeric reward acquisition still pending; no reduction.
+[Result](ASSEMBLED_CHARACTER_M213_RESULT.md).

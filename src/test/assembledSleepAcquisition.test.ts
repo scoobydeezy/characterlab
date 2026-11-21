@@ -1,0 +1,33 @@
+import {it,expect} from 'vitest';
+import {fixture,start,state,labels,through,at,decode,items,key,enc,list,text,u,C,rec,f,uint,outputs,exact,type Run} from './fixtures/assembledSleepAcquisition';
+import {restorePreparedCharacterRun,type CharacterModel} from '../assembled/character';
+import {cachedMemory} from './fixtures/assembledMemoryFinal';
+import {CONTROL_VIEW,CONTROL_OPTIONS,CONTROL_SOURCE,controlGoalPath,maintenancePath} from '../assembled/control';
+import {READINESS,SLEEP_ACQUISITION,compileSleep} from '../assembled/sleepControl';
+import {PROTECTION,PROTECTION_CHANNEL} from '../assembled/protectiveIdentity';
+import {identityJournal,journalPath,qualificationParts} from '../assembled/identityEligibility';
+import {cognitiveRecord as r} from '../assembled/codecs';
+import {sid} from '../assembled/skill';
+const jp=journalPath(r(412,[C,PROTECTION_CHANNEL],2));
+const view=(run:Run,t:bigint)=>labels(run,CONTROL_VIEW).find(v=>uint(v[1])===t)!;
+const meaning=(run:Run,t:bigint)=>outputs(run.snapshot().trace,160n).filter(v=>at(f(rec(f(v,4n),130n),2n))===t&&key(f(v,5n))===key(sid(1036,'seam/assembled-protective-meaning'))).map(v=>items(f(v,13n),'list')).map(v=>items(v[1],'list'))[0];
+const candidates=(run:Run,t:bigint)=>{const d=outputs(run.snapshot().outputs,409n).find(v=>at(f(v,2n))===t)!;expect(d).toBeDefined();return items(f(rec(f(rec(f(rec(f(d,3n),408n),2n),403n),2n),398n),3n),'list');};
+it('native213 immediate adoption and genuine NoControl retain one owner and exact prepared restore',async()=>{
+ const a=await start(),b=await start(fixture(false)),cancel=await start(fixture(true,true)),repeat=await start();
+ for(const x of [a,b,cancel,repeat])await through(x.run,12n);exact(a.run,repeat.run);expect(state(a.run).read(controlGoalPath(C)).presence).toBe(false);
+ const input={initialState:a.b.d.initialState,orderedInputs:a.b.d.orderedInputs,save:a.run.save()};
+ expect(()=>restorePreparedCharacterRun({} as CharacterModel,input)).toThrow('prepared');
+ const bad=fixture().d,rows=items(decode(bad.orderedInputs),'list').map(v=>{const x=[...items(v,'list')];if(key(x[2])===key(CONTROL_SOURCE)&&(x[0] as {value:bigint}).value===16n){const p=[...items(x[3],'list')];p[6]=u(1);x[3]=list(p);}return list(x);});
+ await expect(restorePreparedCharacterRun(a.handle,{...input,orderedInputs:enc(list(rows))})).rejects.toThrow('commitments differ');
+ const corrupt=input.save.slice(0,-1);await expect(restorePreparedCharacterRun(a.handle,{...input,save:corrupt})).rejects.toThrow();
+ const restored=cachedMemory(await restorePreparedCharacterRun(a.handle,input));exact(a.run,restored);
+ for(const x of [a.run,b.run,cancel.run,restored])await through(x,14n);exact(a.run,restored);
+ for(const x of [a.run,b.run,cancel.run]){const v=view(x,14n);expect(v).toBeDefined();expect(v[2]).toBe(true);expect(v[3]).toBe(true);expect(v[9]).toBe(false);expect(candidates(x,14n)).toHaveLength(2);const m=meaning(x,14n);expect(m[1]).toBe(true);expect(items(m[9],'list')).not.toHaveLength(0);const journal=identityJournal(state(x).read(jp).value);expect(journal).toHaveLength(1);expect(qualificationParts(journal[0]).accepted).toBe(true);}
+ expect(state(a.run).read(controlGoalPath(C))).toEqual(state(b.run).read(controlGoalPath(C)));expect(state(a.run).read(maintenancePath(C))).toEqual(state(b.run).read(maintenancePath(C)));
+ const before=state(a.run).read(jp);for(const x of [a.run,b.run,cancel.run,restored])await through(x,16n);exact(a.run,restored);
+ const av=view(a.run,16n),bv=view(b.run,16n),cv=view(cancel.run,16n);for(const v of [av,bv]){expect(v[2]).toBe(true);expect(v[3]).toBe(true);}expect(av[9]).toBe(true);expect(bv[9]).toBe(false);expect(candidates(a.run,16n)).toHaveLength(1);expect(candidates(b.run,16n)).toHaveLength(2);expect(cv[2]).toBe(false);expect(cv[3]).toBe(false);expect(meaning(cancel.run,16n)[1]).toBe(false);
+ expect(state(a.run).read(jp)).toEqual(before);const readiness=(v:readonly unknown[])=>v.filter(x=>typeof x==='object'&&x!==null&&'kind'in x&&(x as {kind:string}).kind==='list').map(x=>items(x as never,'list')).find(x=>x.length&&key(x[0])===key(text(READINESS)));expect(readiness(av)).toEqual(readiness(bv));
+ const updates=outputs(a.run.snapshot().trace,160n).filter(v=>at(f(rec(f(v,4n),130n),2n))===14n&&key(f(rec(f(v,4n),130n),5n))===key(sid(1001,'event/assembled-control-update')));expect(updates).toHaveLength(1);expect(uint(f(rec(f(updates[0],4n),130n),3n))).toBe(140n);
+ console.info('M213 PASS acquisition14 is live before sole goal commit140; load800 prevents inhibition;16 Full inhibits and NoControl retains both with equal readiness/goal/maintenance; cancellation removes meaning; learning withheld16; repeat and complete prepared restore12->14->16; forged handle/input/save rejected');
+},600000);
+it('admission213 control intervention belongs only to the versioned declaration',()=>{const v=list([text(SLEEP_ACQUISITION),true,u(100),u(1000),u(0),u(800),u(10),false]);expect(compileSleep(v,true,true)).toMatchObject({controlEnabled:false,immediateAdoption:true,enabled:true});expect(()=>compileSleep(v,true)).toThrow();expect(()=>compileSleep(list([...items(v,'list').slice(0,7),u(0)]),true,true)).toThrow();});
