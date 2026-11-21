@@ -7,7 +7,7 @@ import {ACTION_BODY} from '../assembled/actionBody';
 import {SKILL_ACTUAL} from '../assembled/skill';
 import {EXTENDED_TIME_LIMIT} from '../assembled/timeDomain';
 import {restoreAuthoritativeState,statePathValue} from '../substrate/state';
-import {agencyRecord} from '../campaign3/agencyCodecs';
+import {agencyRecord,decodeAgency} from '../campaign3/agencyCodecs';
 import {OBSERVERS} from '../campaign3/agencyModel';
 import {createInterferenceExpectationRun,LAWS,type Frame} from '../campaign3/interferenceExpectation';
 import {interferenceSources} from './interferenceExpectationFixtures';
@@ -59,7 +59,7 @@ async function original(frames:Frame[],variant:Variant){
 }
 function correspondence(variant:Variant){
  const b=fixture(variant),source=variant==='duplicate'||variant==='repeat'?successorSource(variant==='repeat'):interferenceSources()[variant].orderedInputs;
- const old=items(decode(source),'list').map(v=>rec(v,973n)),rows=items(decode(b.d.orderedInputs),'list').map(v=>items(v,'list'));
+ const old=items(decodeAgency(source),'list').map(v=>rec(v,973n)),rows=items(decode(b.d.orderedInputs),'list').map(v=>items(v,'list'));
  for(const v of old){const t=Number((f(v,1n) as {value:bigint}).value),kind=uint(f(v,2n));
   if(kind===1n){expect(f(v,4n)).toBe(false);expect(f(v,6n)).toEqual({kind:'set',items:[u(1)]});}
   if(kind===2n){const a=rows.find(a=>eq(a[0],signed(t+9))&&eq(a[2],INTERFERENCE_SOURCE))!,p=items(a[3],'list');expect(p[2]).toEqual(u(8n+2n*uint(f(v,3n))));expect(p[3]).toEqual(f(v,8n));expect(p[4]).toBe(true);expect(p[5]).toEqual(f(v,9n));}

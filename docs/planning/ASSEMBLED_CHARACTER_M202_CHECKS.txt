@@ -40,3 +40,38 @@ CanonicalEncodingError: unknown record schema 973/1
    Start at  19:21:43
    Duration  64.44s (transform 3.33s, setup 0ms, collect 4.95s, tests 59.17s, environment 0ms, prepare 105ms)
 
+
+M202 main-duplicate-decoder-repair exit=1 elapsed=85.502s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledInterferenceHistory.test.ts (8 tests | 1 failed | 7 skipped) 79724ms
+   × M202 main and duplicate preserve three native episode samples 79723ms
+     → AGENCY_CODEC: id:1163
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledInterferenceHistory.test.ts > M202 main and duplicate preserve three native episode samples
+Error: AGENCY_CODEC: id:1163
+ ❯ fail src/campaign3/agencyCodecs.ts:10:39
+      8| const added:RecordSchema[]=allocation.records.map(d=>({typeId:BigInt(d…
+      9| const schemas=[...commitSupportedSchemas(),...added],registry=new Reco…
+     10| const fail=(why:string):never=>{throw Error('AGENCY_CODEC: '+why);};
+       |                                       ^
+     11| function envelope(v:CanonicalValue):CanonicalValue {
+     12|  if(typeof v==='boolean')return v;
+ ❯ typed src/campaign3/agencyCodecs.ts:46:99
+ ❯ validate src/campaign3/agencyCodecs.ts:61:98
+ ❯ decodeAgency src/campaign3/agencyCodecs.ts:64:108
+ ❯ Module.agencyRecord src/campaign3/agencyCodecs.ts:66:128
+ ❯ frame src/test/assembledInterferenceHistory.test.ts:46:13
+ ❯ scenario src/test/assembledInterferenceHistory.test.ts:76:15
+ ❯ src/test/assembledInterferenceHistory.test.ts:87:86
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  19:23:08
+   Duration  84.93s (transform 3.26s, setup 0ms, collect 4.87s, tests 79.72s, environment 0ms, prepare 104ms)
+
