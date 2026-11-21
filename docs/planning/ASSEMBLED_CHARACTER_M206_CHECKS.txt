@@ -97,3 +97,44 @@ Error: repeated outputs at13 row353 old=07080527617373656d626c65642d726567756c61
    Start at  07:47:24
    Duration  174.76s (transform 3.22s, setup 0ms, collect 4.79s, tests 169.60s, environment 0ms, prepare 102ms)
 
+
+M206 types-final exit=0 elapsed=20.765s cap=120
+
+M206 repeated-bound-events exit=1 elapsed=271.658s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAgencyVersionCarry.test.ts > M206 repeated pair and current continuation
+M206 CARRY repeated settled 21 acquisitions 2 draws 2 exact restore true
+
+ ❯ src/test/assembledAgencyVersionCarry.test.ts (11 tests | 1 failed | 10 skipped) 265907ms
+   × M206 repeated pair and current continuation 265906ms
+     → expected [ …(2) ] to have a length of 1 but got 2
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledAgencyVersionCarry.test.ts > M206 repeated pair and current continuation
+AssertionError: expected [ …(2) ] to have a length of 1 but got 2
+
+- Expected
++ Received
+
+- 1
++ 2
+
+ ❯ physical src/test/assembledAgencyVersionCarry.test.ts:14:45
+     12|  const rows=traces.flatMap(t=>{const p=f(t,13n);return typeof p!=='boo…
+     13|  const labelled=(tag:string)=>rows.filter(v=>typeof v!=='boolean'&&v.k…
+     14|  const sk=labelled(SKILL_ACTUAL);expect(sk).toHaveLength(1);expect(sk[…
+       |                                             ^
+     15|  const effect=labelled(ACTION_BODY);expect(effect).toHaveLength(1);exp…
+     16|  expect(outputs(list(rows),425n)).toHaveLength(1);expect(outputs(list(…
+ ❯ src/test/assembledAgencyVersionCarry.test.ts:19:38
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 10 skipped (11)
+   Start at  07:52:03
+   Duration  271.11s (transform 3.22s, setup 0ms, collect 4.81s, tests 265.91s, environment 0ms, prepare 103ms)
+

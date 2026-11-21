@@ -32,12 +32,19 @@ function stateProjection(r:Run){return new AuthoritativeState(view(r).state.entr
  const a=items(e.value,'list');expect(a[0]).toEqual(text(INTERFERENCE));const rows=supports(items(a[1],'list'));
  return rows.length?[{...e,value:list([a[0],list(rows)])}]:[];
 })).canonicalValue();}
+function eventCoordinates(r:Run,id:CanonicalValue){
+ const events=view(r).trace.map(t=>rec(f(t,4n),130n)).filter(e=>eq(f(e,1n),id));
+ expect(events.length,'event binding').toBeGreaterThan(0);
+ const coordinates=events.map(e=>list([f(e,2n),f(e,3n),f(e,5n),f(e,6n),f(e,7n)]));
+ expect(new Set(coordinates.map(key)).size,'unique event').toBe(1);return coordinates[0];
+}
 function outputProjection(r:Run){return list(supports(view(r).out).map(v=>{
- if(tagged(v,SKILL_ACTUAL)){
-  const a=[...items(v,'list')],events=view(r).trace.map(t=>rec(f(t,4n),130n)).filter(e=>eq(f(e,1n),a[1]));
-  expect(events.length,'skill event binding').toBeGreaterThan(0);
-  const coordinates=events.map(e=>list([f(e,2n),f(e,3n),f(e,5n),f(e,6n),f(e,7n)]));
-  expect(new Set(coordinates.map(key)).size,'unique skill event').toBe(1);a[1]=coordinates[0];return list(a);
+ if(tagged(v,SKILL_ACTUAL)){const a=[...items(v,'list')];a[1]=eventCoordinates(r,a[1]);return list(a);}
+ if(tagged(v,'assembled-regulatory-stress/0.1/applied')){
+  const a=[...items(v,'list')],packet=[...items(a[2],'list')],id=packet[3];
+  const trace=view(r).trace.find(t=>eq(f(rec(f(t,4n),130n),1n),id)&&eq(f(t,13n),packet[4]));
+  expect(trace,'stress appraisal producer').toBeDefined();expect(f(rec(f(trace!,4n),130n),3n)).toEqual(u(50));
+  packet[3]=eventCoordinates(r,id);a[2]=list(packet);return list(a);
  }
  if(!tagged(v,INTERFERENCE_APPRAISAL))return v;const a=[...items(v,'list')];a[8]=list(supports(items(a[8],'list')));return list(a);
 }));}
