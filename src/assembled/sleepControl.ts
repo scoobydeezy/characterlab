@@ -15,16 +15,17 @@ import {stressPath,stressAnchor,stressTransition,type StressDeclaration} from '.
 import {pattern} from './skill';
 import type {compileCampaign2StateModel} from '../campaign2/stateModel';
 export const SLEEP='assembled-sleep-control/0.1',SLEEP_VERSION=SLEEP+'-candidate',SLEEP_SAMPLE=SLEEP+'/sample',SLEEP_RECEIPT=SLEEP+'/receipt',READINESS=SLEEP+'/readiness';
+export const SLEEP_LOAD='assembled-sleep-control/0.2',SLEEP_LOAD_VERSION=SLEEP_LOAD+'-candidate';
 export const SLEEP_SOURCE=bodyId(1001,'event/assembled-sleep-source');
 const phases=[11n,12n,13n,14n,20n,120n],internal=phases.map(p=>bodyId(1001,'event/assembled-sleep-'+p));
 const fail=(s:string):never=>{throw new SchedulerContractError('INPUT_NOT_ADMITTED','sleep: '+s);};
 const bounded=(v:CanonicalValue,max=1000n)=>{const n=uint(v);if(n>max)fail('integer domain');return Number(n);};
 const time=(v:CanonicalValue)=>{if(typeof v==='boolean'||v.kind!=='signed'||v.value<0n||v.value>1000001n)fail('anchor time');return (v as {value:bigint}).value;};
 const clamp=(n:number)=>Math.max(0,Math.min(1000,n)),fp=(e:ScheduledEvent)=>key(scheduledEventValue(e));
-export function compileSleep(value:CanonicalValue){
- const a=items(value,'list');if(a.length!==7||txt(a[0])!==SLEEP||typeof a[1]!=='boolean')fail('declaration');
+export function compileSleep(value:CanonicalValue,loadEnabled=false){
+ const a=items(value,'list');if(a.length!==7||txt(a[0])!==(loadEnabled?SLEEP_LOAD:SLEEP)||typeof a[1]!=='boolean')fail('declaration');
  const [accumulation,recovery,nightDrive,threshold,resolution]=a.slice(2).map(v=>bounded(v));if(!resolution)fail('resolution');
- return Object.freeze({enabled:a[1] as boolean,accumulation,recovery,nightDrive,threshold,resolution});
+ return Object.freeze({loadEnabled,enabled:a[1] as boolean,accumulation,recovery,nightDrive,threshold,resolution});
 }
 export type SleepDeclaration=ReturnType<typeof compileSleep>;
 export const sleepPath=(C:CanonicalValue):StatePath=>({rootStateTypeId:455n,fieldId:3n,selectors:[{kind:'mapKey',key:C}]});
@@ -42,11 +43,12 @@ export function sleepSource(value:CanonicalValue){
  const offsets=bias.map(v=>{if(typeof v==='boolean'||v.kind!=='signed'||v.value< -1000n||v.value>1000n)fail('sensor bias');return Number((v as {value:bigint}).value);});
  return {asleep:a[1] as boolean,permitted:permitted as readonly boolean[],bias:offsets};
 }
-export function readiness(values:readonly (number|undefined)[],d:SleepDeclaration){
- if(values.length!==4)fail('readiness operands');const known=values.every(v=>v!==undefined);
+export function readiness(values:readonly (number|undefined)[],d:SleepDeclaration,load:number|undefined=d.loadEnabled?undefined:0){
+ if(values.length!==4)fail('readiness operands');const known=values.every(v=>v!==undefined)&&load!==undefined;
+ if(load!==undefined&&(!Number.isInteger(load)||load<0||load>1000))fail('readiness load domain');
  for(const v of values)if(v!==undefined&&(!Number.isInteger(v)||v<0||v>1000))fail('readiness domain');
  const sum=known?BigInt(values[0]!+values[1]!+values[2]!+Math.abs(values[3]!-500)):undefined;
- const penalty=sum===undefined?undefined:roundEven(sum,2n),capacity=penalty===undefined?undefined:clamp(1000-Number(penalty));
+ const penalty=sum===undefined?undefined:roundEven(sum,2n),capacity=penalty===undefined?undefined:clamp(1000-Number(penalty)-load!);
  return {known,capacity,allowed:!d.enabled||capacity!==undefined&&capacity>=d.threshold,
   quant:sum===undefined?[]:[list([text('ties-even'),signed(sum),u(2),signed(penalty!)])]};
 }

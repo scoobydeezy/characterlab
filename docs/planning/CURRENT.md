@@ -1,4 +1,4 @@
-# Current work — M210: observed demand joins sleep readiness
+# Current work — M210 complete: demand changes action
 Base19003af4. Complete the missing nonzero-load connection toward BRIEF-12.1-6.
 One capability: current observed task demand changes the existing inhibition and
 actual action while sleep, acquired skill and workspace occupancy stay fixed.
@@ -29,7 +29,8 @@ Capture actual consumed receipt/causal parents and prove no physical-truth reads
 No dice expected at these automatic choices; assert that before a choice claim.
 Exact repeat12 and save12->14->16 equality of state/outputs/trace/save.
 Controls: invisible800 and absent14 receipt leave load unavailable (not0);
-a later visible0 recovers. Original0.136 M209 native witness remains unchanged.
+a later visible0 recovers. Invisible/absent instruction also removes its reminder;
+these are missing-evidence controls, not isolated action-cause proofs. Original0.136 M209 native witness remains unchanged.
 Math oracle uses original biology appraise at loads0/1/199/200/800/1000, including
 rounding/clamp/equality/missing operands. Invalid loads/version/source arity reject.
 No seed search, coefficient tuning, new identity interpretation or cohort closure.
@@ -47,6 +48,20 @@ no changes to physical handler, state writes or child emission.
 No C2/C3/substrate/OBS/SEM changes; frozen-control suite not invalidated.
 MEC001/003/011..019/022 retain ports/controls/corpus/comparators; no reduction.
 RO008/009/012/013/020 conditional; historical019/021 remain closed.
+Repair: Vitest star re-export selected the predecessor fixture (0.136/six fields).
+Explicit named helper exports preserve the local0.137 fixture; two failures retained.
+Native action assertions passed; trace lookup omitted the existing time-domain
+suffix. Correct the expected version; retain failure, inputs and laws unchanged.
+Second trace-reader correction: workspace is an original event; observation parents
+join its emitted child. Assert consumed source ID plus executed child causal join.
 Done: causal action gate, missing/private evidence, exact continuation, legacy
 witness, types/preservation/research/size PASS. Stop verification on pass.
 21/15/132; E71/P36/N12/U13;3 accepted families retain their original versions.
+Result: ASSEMBLED_CHARACTER_M210_RESULT.md; all declared functional checks PASS.
+Next: acquired protective identity and explicit withholding, then original sleep
+cohort20 runs/52 prefixes. Acquisition timing/dice/history remain required.
+No new acceptance; no intoxication implementation before motor reconciliation.
+| Status | Count |
+|---|---|
+| Research obligations | **0 active / 18 conditional / 0 unowned** |
+Verification1133.117/1800s; no extension. Preservation PASS; stop verification.

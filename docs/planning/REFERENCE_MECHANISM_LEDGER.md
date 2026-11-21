@@ -1307,3 +1307,11 @@ choice/recovery and privacy controls are partial12.1-6 evidence, not original-co
 closure. M208 sleep/intoxication comparators, identity/dice and strict motor boundary
 remain. MEC001/003/011..019/022 retain ports/controls/corpus/comparators; no reduction.
 [Result](ASSEMBLED_CHARACTER_M209_RESULT.md).
+
+M210 restores the original nonzero load operand through current observed demand
+on0.137; same physiological equation, no slot conversion or second capacity owner.
+Native demand0/800 changes actual action with fixed acquired skill/body/workspace;
+missing current demand stays unknown. This is still partial12.1-6: protective
+identity is not CommitmentFidelity, and explicit withhold/acquisition/full cohort
+remain. MEC001/003/011..019/022 and original comparators retain roles; no reduction.
+[Result](ASSEMBLED_CHARACTER_M210_RESULT.md).

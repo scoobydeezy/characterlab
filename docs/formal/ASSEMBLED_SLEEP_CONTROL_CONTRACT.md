@@ -73,7 +73,8 @@ Capacity=clamp(1000-roundEven((sleep+stress+burden+abs(arousal-500))/2)-demand).
 The original biological integration load operand is preserved numerically.
 All five operands must be known; enabled=false still ablates readiness only.
 Existing maintained-goal, spare-slot and remembered-fatigue predicates remain.
-Control input/output traces retain the consumed demand receipt and delivery parent.
+Control input/output traces retain the consumed demand receipt/source ID; the
+workspace original event joins the observation parent on its emitted child.
 A later visible demand changes only that later decision. Missing current demand
 never inherits an earlier value. Model identity distinguishes this input contract.
 

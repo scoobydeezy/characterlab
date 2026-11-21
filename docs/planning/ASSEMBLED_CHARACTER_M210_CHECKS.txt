@@ -1,0 +1,216 @@
+
+M210 types exit=0 elapsed=21.338s cap=120
+
+M210 math-admission exit=1 elapsed=67.965s cap=180
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledSleepDemand.test.ts (8 tests | 1 failed | 7 skipped) 62126ms
+   × math210 original load equation and versioned admission 62125ms
+     → expected [Function] to throw an error
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSleepDemand.test.ts > math210 original load equation and versioned admission
+AssertionError: expected [Function] to throw an error
+ ❯ src/test/assembledSleepDemand.test.ts:44:38
+     42|  const b=fixture(),m=await compileCharacterModel(b.s),c=await compileC…
+     43|  const row=items(decode(b.d.orderedInputs),'list').find(v=>key(items(v…
+     44|  expect(()=>controlSetting(list(p))).toThrow();expect(()=>controlSetti…
+       |                                      ^
+     45|  await expect(compileCharacterModel({...b.s,rulesVersion:SLEEP_RULES,r…
+     46|  console.info('M210 MATH/ADMISSION PASS '+cases+' original load cases;…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  13:14:51
+   Duration  67.41s (transform 3.34s, setup 0ms, collect 4.97s, tests 62.13s, environment 0ms, prepare 105ms)
+
+
+M210 fixture-diagnosis exit=1 elapsed=66.412s cap=180
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSleepDemand.test.ts > math210 original load equation and versioned admission
+M210 fixture bundle rules/assembled-character/0.136-candidate
+M210 source arity 6
+
+ ❯ src/test/assembledSleepDemand.test.ts (8 tests | 1 failed | 7 skipped) 60707ms
+   × math210 original load equation and versioned admission 60706ms
+     → expected 'rules/assembled-character/0.136-candi…' to be 'rules/assembled-character/0.137-candi…' // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSleepDemand.test.ts > math210 original load equation and versioned admission
+AssertionError: expected 'rules/assembled-character/0.136-candi…' to be 'rules/assembled-character/0.137-candi…' // Object.is equality
+
+Expected: "rules/assembled-character/0.137-candidate"
+Received: "rules/assembled-character/0.136-candidate"
+
+ ❯ src/test/assembledSleepDemand.test.ts:44:71
+     42|  const b=fixture();console.info('M210 fixture bundle '+b.s.rulesVersio…
+     43|  const row=items(decode(b.d.orderedInputs),'list').find(v=>key(items(v…
+     44|  console.info('M210 source arity '+p.length);expect(b.s.rulesVersion).…
+       |                                                                       ^
+     45|  expect(()=>controlSetting(list(p))).toThrow();expect(()=>controlSetti…
+     46|  const m=await compileCharacterModel(b.s),c=await compileCharacterStat…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  13:16:36
+   Duration  65.86s (transform 3.25s, setup 0ms, collect 4.85s, tests 60.71s, environment 0ms, prepare 102ms)
+
+
+M210 math-native exit=1 elapsed=198.225s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSleepDemand.test.ts > math210 original load equation and versioned admission
+M210 fixture bundle rules/assembled-character/0.137-candidate
+M210 source arity 7
+
+stdout | src/test/assembledSleepDemand.test.ts > math210 original load equation and versioned admission
+M210 MATH/ADMISSION PASS 54 original load cases; absent operands unknown; invalid loads/arity/version rejected
+
+ ❯ src/test/assembledSleepDemand.test.ts (8 tests | 1 failed | 6 skipped) 192397ms
+   ✓ math210 original load equation and versioned admission 61413ms
+   × native210 observed load changes actual action and later relief restores inhibition 130983ms
+     → expected undefined to be defined
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSleepDemand.test.ts > native210 observed load changes actual action and later relief restores inhibition
+AssertionError: expected undefined to be defined
+ ❯ src/test/assembledSleepDemand.test.ts:63:16
+     61|  expect(cv(low.run,14)[9]).toBe(true);expect(cv(high.run,14)[9]).toBe(…
+     62|  const trace=outputs(high.run.snapshot().trace,160n).find(t=>at(f(rec(…
+     63|  expect(trace).toBeDefined();const receipt=cv(high.run,14)[10];expect(…
+       |                ^
+     64|  const observed=outputs(high.run.snapshot().trace,160n).find(t=>at(f(r…
+     65|  expect(observed).toBeDefined();expect(items(f(rec(f(trace,4n),130n),8…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed | 6 skipped (8)
+   Start at  13:17:58
+   Duration  197.67s (transform 3.28s, setup 0ms, collect 4.90s, tests 192.40s, environment 0ms, prepare 105ms)
+
+
+M210 native-privacy exit=1 elapsed=268.028s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSleepDemand.test.ts > privacy210 hidden and missing current demand stay unknown without stale carry
+M210 PRIVACY PASS hidden/absent current demand unavailable; no fallback to prior13 zero; visible16 zero restores readiness
+
+ ❯ src/test/assembledSleepDemand.test.ts (8 tests | 1 failed | 6 skipped) 262212ms
+   × native210 observed load changes actual action and later relief restores inhibition 190645ms
+     → expected [] to deep equally contain { kind: 'unsigned', value: 357n }
+   ✓ privacy210 hidden and missing current demand stay unknown without stale carry 71566ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSleepDemand.test.ts > native210 observed load changes actual action and later relief restores inhibition
+AssertionError: expected [] to deep equally contain { kind: 'unsigned', value: 357n }
+
+- Expected: 
+Object {
+  "kind": "unsigned",
+  "value": 357n,
+}
+
++ Received: 
+Array []
+
+ ❯ src/test/assembledSleepDemand.test.ts:66:83
+     64|  expect(trace).toBeDefined();const receipt=cv(high.run,14)[10];expect(…
+     65|  const observed=outputs(high.run.snapshot().trace,160n).find(t=>at(f(r…
+     66|  expect(observed).toBeDefined();expect(items(f(rec(f(trace,4n),130n),8…
+       |                                                                                   ^
+     67|  for(const x of [low,high])await through(x.run,16n);await through(rest…
+     68|  for(const x of [low,high]){live(x.run,16,target);expect(uint(items(rd…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed | 6 skipped (8)
+   Start at  13:21:50
+   Duration  267.47s (transform 3.27s, setup 0ms, collect 4.88s, tests 262.21s, environment 0ms, prepare 103ms)
+
+
+M210 native-final exit=0 elapsed=216.191s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSleepDemand.test.ts > native210 observed load changes actual action and later relief restores inhibition
+M210 NATIVE PASS load0/800 yields950/150; actual action differs with no dice; same acquired skill/physical sleep/workspace; demand0 at16 restores inhibition; traced receipt/parent; repeat12 and exact restore12->14->16
+
+ ✓ src/test/assembledSleepDemand.test.ts (8 tests | 7 skipped) 210426ms
+   ✓ native210 observed load changes actual action and later relief restores inhibition 210425ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  13:27:20
+   Duration  215.66s (transform 3.25s, setup 0ms, collect 4.86s, tests 210.43s, environment 0ms, prepare 104ms)
+
+
+M210 register-budget exit=1 elapsed=0.341s cap=1
+Pre-write guard rejected proposed register65549 CRLF bytes >65536; no file written. Compact equivalent prose, preserve all clause classes and scope.
+
+M210 legacy-native exit=0 elapsed=257.815s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSleepControl.test.ts > native209 learned practice plus current sleep changes actual inhibition and action
+M209 NATIVE PASS shared acquired skill/history; actual target14 in deprived/recovered vs inhibited rested; recovery14 changes16 only; no dice at compared choices; repeat12 and exact save12->16
+
+ ✓ src/test/assembledSleepControl.test.ts (10 tests | 9 skipped) 252038ms
+   ✓ native209 learned practice plus current sleep changes actual inhibition and action 252037ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 9 skipped (10)
+   Start at  13:31:16
+   Duration  257.29s (transform 3.26s, setup 0ms, collect 4.86s, tests 252.04s, environment 0ms, prepare 103ms)
+
+
+M210 final-types exit=0 elapsed=20.966s cap=120
+
+M210 preservation exit=1 elapsed=7.189s cap=120
+Reference boundary check passed.
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: CURRENT obligation counts are stale
+    at file:///C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/scripts/check-research-obligations.mjs:75:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.20.0
+Traceback (most recent call last):
+  File "<string>", line 35, in <module>
+    r=subprocess.run(cmd);assert r.returncode==0
+                                 ^^^^^^^^^^^^^^^
+AssertionError
+
+M210 preservation-final exit=0 elapsed=7.332s cap=120
+Reference boundary check passed.
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4430}
+PASS: Git index contains no files at or above50,000,000 bytes.
+M210 PRESERVATION PASS eight implementation/test files; frozen sources and evidence unchanged; obligations append-only; unchanged clause classes/21-15-132 scope; document/evidence limits; boundaries/research/size
+
+M210 final-staging exit=0 elapsed=1.315s cap=30
+Intended files staged; source/doc whitespace and raw-log whitespace policy PASS; Git size PASS.
