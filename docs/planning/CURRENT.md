@@ -1,45 +1,59 @@
-# Current work — M208 complete: next sleep-to-control connection
-Base08470f45; plan51988b37. Completed source/receiving reconciliation before new
-physiology is implemented. No new character behavior or family acceptance claimed.
-The0.135 character has reserve/stress and experienced-fatigue control; it has no
-native sleep-debt/intoxicant trajectory. Grade substitution is not a valid port.
+# Current work — M209: native sleep changes inhibition
+Base621842a4. Build sleep -> current permitted evidence -> existing control/choice.
+Three capabilities: body-owned sleep kinetics; C1 current readiness evidence;
+actual candidate inhibition while retained learned history remains available.
+This is a bounded connection toward BRIEF-12.1-6, not full sleep/family acceptance.
+M208 retains all20 original sleep cases/52 prefixes and intoxication obligations.
 
-## Bounded comparison and deliverable
-Two capabilities of this review: exact original comparison map; successor owner/
-consumer boundary with explicit unresolved semantics. No simulation implementation.
-Map BRIEF-12.1-6/7 to accepted sleep-control/intoxication-control0.1 experiments:
-20 original runs each, all seeds/control laws and52/55 selected prefixes retained.
-Read source fixtures, contracts, frozen plans/results and existing assembled
-body/control/skill paths. Distinguish physical truth, sensed readiness, retained
-fatigue, workspace maintenance, inhibition, procedural skill and motor execution.
-Check exact boundaries: sleep recovery after8 affects9; intoxication exposure
-after7 affects8, execution recovers10 and inhibition11 in slow clearance.
-Do not collapse strict BIO execution into inclusive SKILL or convert0..1000
-biological load into0..32 workspace slots without a justified correspondence.
-No new gates, clinical interpretation, native acceptance or variant-only closure.
+## Receiving contract before code
+assembled-sleep-control/0.1; rules/registry0.136-candidate.
+BODY_OWNER gains455/3: time, sleep debt, circadian phase, stationary burden/arousal.
+Stationary physical operands are explicit initial body values, sensed normally;
+no exposure/arousal kinetics or motor claim. Existing455/2 stress is materialized
+from its accepted decay, read only by the sensor; no second stress authority.
+Full biology sleep accumulation/recovery/circadian law; exact integer domains.
+Current capacity uses original biological formula at load0. No workspace exchange
+rate: native occupied slots keep the existing maintenance/spare-slot predicate.
+Conjoin readiness with existing maintenance, spare slot and remembered-fatigue
+checks. Missing current readiness makes the inhibition condition unavailable.
+NoReadiness removes only this new condition; it is not original NoControl.
+Original load800 acquisition correspondence and full cohort remain pending.
+Versioned contract: docs/formal/ASSEMBLED_SLEEP_CONTROL_CONTRACT.md.
 
-## Files, checks and limits
-CURRENT, existing reconciliation and mechanism ledger, obligations review link;
-one compact M208 result and raw source/preservation check (2 files/5MiB).
-Zero production/test/formal changes; no new tests, source copies or framework.
-Analysis<=90min; one serial source/preservation/research/reference/pin/size check
-<=60s, cumulative<=120s including repairs. No old native cohort rerun: its code
-and dependencies are unchanged and this is mapping, not new behavioral evidence.
-CURRENT80/register250 lines and65536 CRLF bytes/work order250.
-Mapped both complete original cohorts and exact receiving gaps; next sleep
-connection bounded, intoxication execution boundary explicitly unresolved before
-implementation. No closure from a count; no further audit chain.
-Result: ASSEMBLED_CHARACTER_M208_RESULT.md. Corrected checks PASS in12.706s
-including failed CRLF hash check and diagnosis; original Git hashes match exactly.
-Next: body-owned sleep -> permitted current evidence -> consumed inhibition;
-version the readiness/workspace/fatigue correspondence first. No motor-law change.
+## Native comparison declared
+Use current M200 trained/free physical scenario (actual practice12, seed0).
+Three nonsocial tasks; original reserve10/rate0, A-only route, difficulty1/2.
+No learned S0; only existing permitted outcomes teach. Workspace6.
+Add goal adoption13, reminders14/16. Sleep sources every integer1..16,
+accumulation100/recovery1000/nightDrive0, threshold800/resolution10.
+All arms sleep through8; Rested continues; Deprived wakes9 onward;
+Recovered sleeps again at consequence14. Thus14 readiness950/700/700,
+recovery does not revise14; at16 Rested/Recovered inhibit, Deprived does not.
+Assert actual acquired skill and original shared history equal through12,
+live maintained goal/spare slot/target candidate in each compared arm.
+Require target choice versus withheld target, or exact actual-input probability
+difference; sampled-choice claims only with no dice or proven coupled actual draws.
+Retain private physical differences with denied evidence, biased sleep signal,
+NoReadiness and lost-maintenance controls. Retained fatigue stays separate.
+Exact save12 ->16 continuation; repeat determinism through12.
+No post-result law/seed tuning; ordinary setup repairs recorded before rerun.
 
-## Preserved authority
-R3 Full biology remains the first-use reference, engineering default not superiority.
-MEC001/003/011..019/022 retain original roles. FND1..6 unchanged (no code).
-RO008/009/012/013/020 conditional; RO019/021 historical closures remain.
-21 members/15 families/132 clauses; E71/P35/N13/U13 and3/15 accepted unchanged.
-No UI/autonomous peer work, reduction or alternative runtime.
+## Files, checks, budgets
+<=9 production/test files: sleepControl.ts, body.ts, model.ts, state.ts, inputs.ts,
+runtime.ts, controlExecution.ts; one fixture and one test. No C2/C3 source changes.
+Formal contract plus CURRENT/register/ledger/obligation link/result/raw log.
+Types<=120s; focused math/admission/ownership/C1/rollback<=300s;
+native witness/restore and controls serial, each<=600s; total<=1800s including
+failures/diagnoses. <=20 evidence files/5MiB. Plan committed before implementation.
+Check preserved M55 fatigue witness and affected stress test only if dependency
+changes invalidate them; legacy version path unchanged, full frozen C2 not rerun.
+FND1–6: exact arithmetic, phase/atomicity/read-write trace, governed admission and
+hidden-truth controls affected. No UI/peer work, new scheduler or second save.
+R3 engineering default, no superiority. MEC001/003/011..019/022 retained.
+RO008/009/012/013/020 conditional; historical019/021 remain closed.
+Done: live native causal comparison, boundary/privacy/restore/types/preservation
+pass, bounded limits reported. Stop after passing, no follow-on verifier.
+21/15/132; E71/P35/N13/U13;3 accepted families remain until mapped gate review.
 | Status | Count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
