@@ -1,5 +1,5 @@
-# Current work — M208: pin sleep/intoxication receiving boundaries
-Base08470f45. Complete the required source/receiving reconciliation before new
+# Current work — M208 complete: next sleep-to-control connection
+Base08470f45; plan51988b37. Completed source/receiving reconciliation before new
 physiology is implemented. No new character behavior or family acceptance claimed.
 The0.135 character has reserve/stress and experienced-fatigue control; it has no
 native sleep-debt/intoxicant trajectory. Grade substitution is not a valid port.
@@ -26,9 +26,13 @@ Analysis<=90min; one serial source/preservation/research/reference/pin/size chec
 <=60s, cumulative<=120s including repairs. No old native cohort rerun: its code
 and dependencies are unchanged and this is mapping, not new behavioral evidence.
 CURRENT80/register250 lines and65536 CRLF bytes/work order250.
-Done: both complete original cohorts and exact receiving gaps mapped, next sleep
+Mapped both complete original cohorts and exact receiving gaps; next sleep
 connection bounded, intoxication execution boundary explicitly unresolved before
-implementation. No closure from a count. Stop this review; no further audit chain.
+implementation. No closure from a count; no further audit chain.
+Result: ASSEMBLED_CHARACTER_M208_RESULT.md. Corrected checks PASS in12.706s
+including failed CRLF hash check and diagnosis; original Git hashes match exactly.
+Next: body-owned sleep -> permitted current evidence -> consumed inhibition;
+version the readiness/workspace/fatigue correspondence first. No motor-law change.
 
 ## Preserved authority
 R3 Full biology remains the first-use reference, engineering default not superiority.

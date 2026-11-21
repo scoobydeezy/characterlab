@@ -1290,3 +1290,12 @@ family12.14 accepted0.135. M206 failures/timeout and historical controls retaine
 No production change, law superiority or reduction; MEC004/015/017/019/022 keep
 port/contract/corpus/comparator roles and conditional debts remain conditional.
 [Result](ASSEMBLED_CHARACTER_M207_RESULT.md).
+
+M208 maps original sleep/intoxication-control0.1:20+20 runs,52+55 selected prefixes.
+No native sleep debt/burden exists yet; retained fatigue is not current readiness.
+Keep BIO strict motor success distinct from inclusive SKILL and biological load
+from workspace occupancy; receiving correspondences must precede implementation.
+MEC001/003/011..019/022 retain port/control/corpus/comparator roles; no reduction,
+new acceptance or superseded historical mechanism. Next is sleep-to-control,
+then intoxication after explicit motor reconciliation.
+[Result](ASSEMBLED_CHARACTER_M208_RESULT.md).

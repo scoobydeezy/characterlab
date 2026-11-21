@@ -1,0 +1,32 @@
+M208 original source receipt and preservation checks; no simulation rerun.
+
+M208 source-preservation exit=1 elapsed=0.903s cap=60
+Traceback (most recent call last):
+  File "<string>", line 36, in <module>
+    assert result['planSha256']==sha(planpath)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+M208 hash-diagnosis exit=0 elapsed=0.367s cap=60
+Tool-reported command wall time; original Git bytes match both stored plan hashes.
+SLEEP expected/Git:219fca1bff9ecc47bd8c9b1db9ff1cc11d225ee4038e52e84d6fb8f596f7010d
+SLEEP worktree:a420e10c6ff3701354cd246c3511877a2a24afbf38b70d08a6b7cf36500e24e8
+INTOXICATION expected/Git:e28929f8bed761a1816cd8c6d51cb5a35287318db5d79e978cbab6e224f2dfec
+INTOXICATION worktree:ba30f498c85d449f8fc050e48d8af86a05b90338e221331dab1420e5584d892c
+Both checkout files equal Git originals after CRLF-to-LF only. No files rewritten.
+
+M208 source-preservation-corrected exit=0 elapsed=10.169s cap=60
+SLEEP original roster/receipt hashes/identities/prefixes/history/recovery and safe evidence boundaries PASS
+INTOXICATION original roster/receipt hashes/identities/prefixes/history/recovery and safe evidence boundaries PASS
+Reference boundary check passed.
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4428}
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+M208 PRESERVATION PASS: original40 runs/107 selected prefixes mapped; no code/formal/test changes; no native coverage promotion; frozen pins,21/15/132,E71/P35/N13/U13,3/15 accepted and obligation statuses unchanged. Research/boundary/document/evidence/size/staged checks pass.
+
+M208 final-staging exit=0 elapsed=1.267s cap=60
+Tool-reported command wall time. Six intended files staged; Git size and scoped whitespace checks PASS.
+Cumulative12.706/120 seconds; no native simulation runs.
