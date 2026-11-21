@@ -1,35 +1,45 @@
-# Current work — M202 complete: reports revise expectation without extra episodes
-Three actual failed attempts teach expectation2/3. A duplicate adds no support;
-a new negative report about episode3 adds support but leaves three episodes/2/3.
-A contrary report about episode1 changes later appraisal to1/2.
-[Result](ASSEMBLED_CHARACTER_M202_RESULT.md); [checks](ASSEMBLED_CHARACTER_M202_CHECKS.txt).
+# Current work — M203 evidence boundaries across three actual attempts
+Baseaa7fa8df; rules/registry0.134-candidate. Before code.
+Three related capabilities: distinguish known clear/blocked from Unknown;
+keep changed hidden causes/denied reports outside cognition; exclude reports
+without observed opportunities from prospective expectation. BRIEF-12.14-5/6/7/8.
+Original interferenceSources main/clear/blocked/hidden/withheld/withheldChanged/
+noOpportunity; use original case definitions, not hand-authored expected evidence.
+M201 route-context/goal-zero and terminal-case correspondence remain next, not waived.
 
-## Completed connection
-Current0.134, one shared state/scheduler; no production/formal/law change.
-Actual attempts10/12/14 at K0,difficulty1; original positive/positive/negative
-report sequence11/13/15. Late report16 affects appraisal17, not prior appraisal16.
-All four original laws consume captured native evidence diagnostically.
-Matched pre-report state/output/history/draws; retained prior choices; full101.
-Repeat/save15/reached late140 rollback/save16 continuation preserve complete bytes.
-Three test adapter/declaration failures retained; no scenario retuning.
+## Comparison and scene
+Reuse M202 three nonsocial taskB/route1 actual attempts10/12/14 and full101.
+Body30/cap100/rate10/delivery90@9, importance3/5,severity1/2, K0/difficulty1,
+no practice, seed0 and current55-slot model. Only original case permissions,
+blockers and report polarities differ. Same laws/calibration throughout.
+Original1..8 -> native10..17; original episode1/2/3 -> tickets10/12/14.
+Main reports +,+,- yield2/3. Clear -,-,- yields known0; blocked +,+,+ known1.
+Hidden changes blockers to0 with identical failures/reports: all safe state,
+outputs, histories/presentation and actual draws must match main at each settled
+instant. Withheld/withheldChanged alter denied report polarity but produce equal
+Unknown/no causal support; outcome failures alone cannot supply a cause.
+NoOpportunity denies main outcome observations while reports are received:
+all three physical attempts still occur; reports remain unbound/Unknown,
+no eligible episodes or invented outcome, including the later17 consumer.
+Passive channels retain their declared permissions, distinct from the main holder.
+Liveness: every compared appraisal row exists, every physical attempt is actual;
+Known versus explicit Unknown is the property, not a missing-row comparison.
+Capture admitted records only for original four-law diagnostics. Preserve old
+intents/expressions and source bytes. No cross-version RNG-coupling claim.
 
-## Next bounded family work
-M201 retains the complete original13+2 history inventory and19 agency run map.
-M202 supplies main/correction and duplicate/new-source successor comparisons.
-Next transfer the remaining boundary histories: clear/blocked, hidden/withheld
-and changed-denied reports, no observed opportunity, absent/mixed route context,
-and goal-zero appraisal with unchanged evidence. Preserve original terminal cases.
-Use current native source/evidence joins and later appraisal consumption;
-do not count a pure-kernel pass or an absent query as missing acquisition context.
-Plan at most3 capabilities/12 code paths per package,600s/check,1800s total;
-split before running if necessary. No unrelated breadth, seed search or new law.
-Keep original source IDs and competitors. Missing mappings block12.14 acceptance.
-No extra choice-change gate beyond the pinned actual-appraisal requirement.
-
-E71/P35/N13/U13=132;21members/15families; accepted families2/15 unchanged.
-Memory0.126, AFFECT0.129 and DECISION member0.129 retain scoped acceptance.
-Final whole-candidate replay remains separate. No UI or autonomous peer.
-
-| Record | Status |
-|---|---|
-| Research obligations | **0 active / 18 conditional / 0 unowned** |
+## Files and budgets
+Two new paths: fixtures/assembledInterferenceBoundaries.ts and
+assembledInterferenceBoundaries.test.ts; no production/formal/prior-test edits.
+Pair checks clear/blocked, main/hidden, withheld/changed; one noOpportunity
+connection with repeat/save12 and reached report13 learning rollback/continuation.
+Each <=600s; <=1800s cumulative including failures, one job. Types plus final
+boundary/research/preservation checks. At most2 evidence files/5MiB.
+Existing complete M202 positive continuation is retained; new negative acquisition
+path gets full state/output/trace/save/identity/history/presentation checks101.
+Boundary correspondence assertions catch accidental extra fixture changes.
+No kernel/full frozen rerun absent changed production dependencies.
+Done: seven declared histories, live consumer/observer boundaries and exact
+negative continuation pass; otherwise preserve/report the specific gap.
+No broader family acceptance. MEC004/015/017/019/022; RO010/011/013/014/019/020/021.
+21/15/132; E71/P35/N13/U13;2/15 accepted families remain.
+Research obligations:0 active/18 conditional/0 unowned.
