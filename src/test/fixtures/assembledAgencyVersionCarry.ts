@@ -51,8 +51,8 @@ export async function pair(name:Case,continuation=false){
  for(;;){
   const at=view(old).s.clock;expect(view(current).s.clock).toBe(at);
   expect(key(stateProjection(current)),name+' state at'+at).toBe(key(stateProjection(old)));
-  const a=items(outputProjection(current),'list'),b=items(outputProjection(old),'list');expect(a.length).toBe(b.length);
-  a.forEach((row,i)=>{if(!eq(row,b[i]))throw Error(name+' outputs at'+at+' row'+i+' old='+key(b[i])+' new='+key(row));});
+  const currentRows=items(outputProjection(current),'list'),oldRows=items(outputProjection(old),'list');expect(currentRows.length).toBe(oldRows.length);
+  currentRows.forEach((row,i)=>{if(!eq(row,oldRows[i]))throw Error(name+' outputs at'+at+' row'+i+' old='+key(oldRows[i])+' new='+key(row));});
   bytes(old.decisionHistory(),current.decisionHistory());bytes(old.decisionPresentation(),current.decisionPresentation());
   expect(draws(current),name+' addressed draws at'+at).toEqual(draws(old));
   if(continuation&&at===11n&&!restored){restored=await restoreCharacterRun(s,{initialState:b.d.initialState,orderedInputs:b.d.orderedInputs,save:current.save()});exact(current,restored);}
