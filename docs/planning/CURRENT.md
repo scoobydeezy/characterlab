@@ -1,36 +1,46 @@
-# Current work — M201 review complete; agency family remains open
-The character preserves intention across skill failure and outside prevention,
-and observers learn only their own permitted explanations. The acceptance review
-found missing current native comparisons for repeated-interference learning.
-[Result](ASSEMBLED_CHARACTER_M201_RESULT.md); [checks](ASSEMBLED_CHARACTER_M201_CHECKS.txt).
+# Current work — M202 three-episode reports and later appraisal
+Baseb8ebc2f5; rules/registry0.134-candidate. Before test code.
+Capability: three real observed attempts teach route expectation; a new report
+about an existing episode changes its support, not the episode denominator;
+later correction revises expectation without rewriting earlier intentions.
+BRIEF-12.14-5; M201 main/correction and two post-report successor gaps only.
+No whole-family acceptance; remaining boundary histories retain M201 dispositions.
 
-## Concrete remaining gate
-All eight12.14 clauses and all19 original agency runs now have explicit dispositions.
-M199's two-episode witness is valid; its duplicate receipt does not prove the original
-new independent report about an existing episode, or correction after three attempts.
-The original13 history cases and two successor controls are mapped individually
-in M201. M36/M195's416 arithmetic comparisons are preserved, not full native replay.
-No new defect or law conflict is inferred. Family acceptance remains withheld.
+## Predeclared comparison
+Original interferenceSources main/correction and successorSource(false/true):
+episode1/2/3 at original1/3/5 -> native10/12/14; reports2/4/6 ->11/13/15;
+late report/probes7/8 ->16/17. Original routeA -> native taskB/route1.
+Same permitted outcome then positive/positive/negative report supports.
+M199 nonsocial scene: body30/cap100/rate10/delivery90@9, importance3/5,
+severity1/2, seed0, current55-slot declarations. Passive causes denied.
+Use actual failed execution at difficulty1, no practice; K<1 required live.
+No authored outcomes/learned S0. First two blocks present, third absent, as original.
+B-only perceived route display covers three attempts; main reports reach normal
+source10/observe14/evidence130/common140. Prior query16 precedes late learning.
+Four reference arms: main(no late admitted report), duplicate receipt3, new
+negative receipt4 about episode3, correction negative receipt4 about episode1.
+At16 all have three eligible episodes/mean2/3. At17 main/duplicate/new=2/3,
+correction=1/2. New-source support count4, episodes3; pooled alternative2/4.
+Compare captured supports to original four laws; no whole-alternative runtime
+or cross-version random-coupling claim. Earlier actual decisions/intents retained.
+No retuning or seed search. Failed fixture/implementation repairs recorded first.
 
-## Next bounded implementation
-Transfer original three-episode positive/positive/negative history, duplicate/new
-receipt successors and older-episode correction through the0.134 shared runtime.
-Require actual observed opportunities and later appraisal:2/3, correction1/2;
-a new negative source stays within episode3, not source-pooled2/4.
-Capture native supports for all four original laws. Preserve intent and exact
-continuation after the report. Declare episode/time/route correspondence first.
-Keep original no-opportunity/context, mixed-route, goal-zero and privacy controls
-in the finite remaining list; no unrelated breadth before their reconciliation.
-At most3 capabilities/12 production-test files,600s/check,1800s cumulative,
-20 evidence files/5MiB. Split packages before running if necessary.
-No seed search, learned S0, substituted psychology, new law or reduced denominator.
-No new choice-change gate beyond the pinned later-appraisal requirement.
-
-Review changed documentation only; existing passed checks were not rerun.
-E71/P35/N13/U13=132;21members/15families; accepted families2/15 unchanged.
-Memory0.126, AFFECT0.129 and DECISION member0.129 retain their scoped acceptance.
-Whole-character replay remains separate. No UI or autonomous peer.
-
-| Record | Status |
-|---|---|
-| Research obligations | **0 active / 18 conditional / 0 unowned** |
+## Files and verification
+Two new test/helper paths: fixtures/assembledInterferenceHistory.ts and
+assembledInterferenceHistory.test.ts. No production/formal edits planned.
+One connection check per pair (main/duplicate, new/correction), max600s each.
+One exact repeat/save15 continuation and reached late140 rollback check,max600s.
+Types plus boundary/research/preservation. Cumulative verification <=1800s,
+including failures; one job at a time. Two evidence files<=5MiB; <=12 code paths.
+Liveness: all three observed attempts, actual failure/route/owned outcome joins,
+prior appraisal and trace read of knowledge in every arm before comparing.
+Full native calendar through101; no trimmed tail. Restore compares complete
+state/output/trace/save/run identity/history/presentation bytes.
+Admission/source correspondence assertions catch accidental inherited differences.
+Original kernels and source fixtures unchanged; existing passed checks retained
+unless a specific changed dependency invalidates them. No broad frozen rerun.
+Done: all four declared histories, actual later consumers, preservation and
+continuation pass, or explicit unresolved failure retained; no scope shrinking.
+MEC004/015/017/019/022; RO010/011/013/014/019/020/021 retained.
+21/15/132; E71/P35/N13/U13;2/15 accepted families unchanged.
+Research obligations:0 active/18 conditional/0 unowned.
