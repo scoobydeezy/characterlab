@@ -5,3 +5,34 @@ npm error
 npm error To see a list of scripts, run:
 npm error   npm run
 npm error A complete log of this run can be found in: C:\Users\scoob\AppData\Local\npm-cache\_logs\2026-11-21T03_14_53_678Z-debug-0.log
+
+M204 types-direct exit=0 elapsed=20.798s cap=120
+
+M204 test-types exit=0 elapsed=20.807s cap=120
+
+M204 native-scope-goal exit=1 elapsed=67.714s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledInterferenceAcquisition.test.ts (8 tests | 1 failed | 7 skipped) 61936ms
+   × M204 native scope filtering and goal separation 61936ms
+     → assembled trace requires exact model/run binding
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledInterferenceAcquisition.test.ts > M204 native scope filtering and goal separation
+SchedulerContractError: assembled trace requires exact model/run binding
+ ❯ Module.compileCharacterTraceBinding src/assembled/traceBinding.ts:34:2595
+
+ ❯ Module.createCharacterRuntime src/assembled/runtime.ts:123:14
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:122
+ ❯ group src/test/assembledInterferenceAcquisition.test.ts:72:164
+ ❯ src/test/assembledInterferenceAcquisition.test.ts:92:25
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  21:18:36
+   Duration  67.16s (transform 3.28s, setup 0ms, collect 4.91s, tests 61.94s, environment 0ms, prepare 105ms)
+

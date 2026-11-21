@@ -26,7 +26,7 @@ current admitted context at120; common knowledge140 appends existing1000/7.
 Acquisitions carry no causal polarity. Reports/witnesses supply support as before.
 One state/scheduler/save; acquisition and same-instant witness coexist atomically.
 Journal limit retains16 supports plus at most8 original outcomes; no side store.
-Production: model, state, runtime, inputs, performance, causalAttribution,
+Production: model, state, runtime, traceBinding, performance, causalAttribution,
 interferenceExpectation (7). Tests: new fixture and test (2); max12 code paths.
 Formal: ASSEMBLED_INTERFERENCE_ACQUISITION_CONTRACT.md.
 Planning: CURRENT, register, mechanism ledger, obligation report review, result/log.
@@ -49,3 +49,8 @@ Done only with observed scope affecting actual later appraisal, negative control
 and exact continuation passing; retain any failures and bounded repairs.
 E71/P35/N13/U13;21/15/132; accepted families2/15 unchanged. Family12.14 stays
 UNRESOLVED pending terminal timing and finite reconciliation. No UI or peer.
+
+Local repair: first native run rejected0.135 before simulation; trace identity
+allowlist omitted new version. Add exact version; inputs.ts needs no change.
+Preserve failure; no comparison/law/budget change. Tighten foreign-owner test
+to use a valid append so prefix validation cannot mask the authority check.
