@@ -1,67 +1,24 @@
-# Current work — M214 package A checkpoint; package B active
-M213 complete64688c81;0.140. Full sleep remains P. Owner delegates completion.
+# Current work — M214 complete; full sleep cohort next
+The character learns actual pleasure and uses its retained expectation in a later
+shared decision alongside genuinely acquired protection. Denied/zero remain distinct.
+Model0.141-candidate. Result: [M214](ASSEMBLED_CHARACTER_M214_RESULT.md).
 
-## Bounded card (before implementation)
-Three connected capabilities: (1) actual executed reward changes the distinct body
-reward regulator and produces permitted C1 current/consequence evidence; (2) the
-existing habit/reward owners retain numeric experienced pleasure and MeanHistory
-expectation; (3) that expectation enters shared reasons, competing with genuine
-protection. Explicit available withholding stays an option without an ordinary task
-motive; instructed practice is an admitted instruction, not fabricated reward.
-BRIEF12.1-6 and original sleep-control0.1 chronology; no intoxication/family claim.
-Version assembled-reward-experience/0.1-candidate; model0.141-candidate,58 slots.
+Plan39bf0d5a; package A checkpoint63b9511b; A12/B6 files,14 distinct. One1800s
+verification budget across both, 912.428s including final preservation. All functional,
+owner/codec/denied/zero/repeat/prepared-restore, unchanged M213 and type checks pass.
+Failed fixture/admission/disclosure/cycle checks remain in M214_CHECKS.txt.
 
-Authority: original biological-dynamics0.1 Full reward channel with adaptation
-coefficients zero and no coupling, baseline/decay/saturation retained; original
-biology-public0.1 experienced pleasure and MeanHistory. Existing binary latest
-expectation stays a distinct operand. No new alternate law or truth-to-belief write.
-Body leaf455/4 uses BODY_OWNER. Numeric receipt extends821/823 existing owners.
-Threshold/Ramp,0.85 calibration, feedback TRUE unchanged. Learning admission is an
-explicit experiment intervention, separate from safe evidence and natural eligibility.
+Next authorized work: original sleep/control20 runs/52 prefixes (32 advancing,
+20 terminal); bounded card before coding. Numeric reward acquisition and genuine
+protective identity no longer prerequisites. Preserve source chronology and fixed
+seeds0..3, laws/calibration, unavailable evidence, controls and complete saves.
+Verify actual terminal queue closure after the12 research instants; don't call a
+live future-deadline queue terminal. One model/runtime/state/scheduler continues.
 
-Package A:12 production/test files (checkpoint, not accepted): rewardExperience.ts(new), body.ts, state.ts,
-model.ts, traceBinding.ts, runtime.ts, inputs.ts, habit.ts, habitExecution.ts,
-execution.ts, controlExecution.ts, one test file containing its bounded fixture.
-Formal successor, CURRENT, one result/check log, ledger/register/obligation review.
-Package B before further code: repair decisionView.ts receipt399/2 disclosure;
-finish rewardExperience.ts/habitExecution.ts trace rounding/read provenance,
-model.ts reserved-label admission and this same test file's owner/S0/codec controls.
-Five production/test files maximum in B. Same observable capabilities/comparisons,
-same cumulative1800s budget across A+B; no restart or extra acceptance document.
-A reached actual receipt600/mean3/5, then the established disclosure boundary
-rejected399/2. Preserve that failure and incomplete behavioral gate.
-No framework, new factory, scheduler, source copies or historical edits.
-
-Predeclared receiving chronology: native1 is perception-only setup for admitted
-future availability, with no reward/identity history. Logical original1..12 map
-native2..13. Native1 has original S0 debt0/phase8/reward baseline; native0 remains
-pristine, and all restores replay from it. Original S0/S2/S7/S8/S9/S12 thus map
-native1/3/8/9/10/13 in the later52-prefix gate; no prefix or original case is dropped.
-The extra setup is required by existing observed-affordance consolidation140.
-Repair: inherited task activation8 yielded empty workspace/NoChoice at2; explicitly
-set windows1..25 to implement this chronology. Preserve null and diagnostic.
-Nonsocial tasks; self observation off, Values link off; ordinary task importance0,
-reserve10/rate0, all task windows1..25, reward baseline300,
-decay500, dose600, resolution10. No authored learned starting state. Practice2
-executes an unchallenged positive request; skill learning off, no interference.
-The original competence850 and native unchallenged execution have equal success
-in this domain only; do not claim numeric competence identity or change motor law.
-Protection3/5 adopted3, load800; identity admitted only3. Reward learning only2.
-Original1 reward has no sleep relief; sleep consequence3 follows expression.
-
-Checks: live numeric receipt600 -> mean3/5 -> actual reason/decision; denied first
-receipt leaves unknown expectation and no fabricated habit, dose0 stays known0.
-Fixed seed0, no tuning/search. Full vs disabled learning proves later probability
-change on actual inputs (sampled choice change unnecessary). Exact repeat/setup and
-prepared continuation2->3->4; physical kernel comparison, C1 privacy/order,
-owner/S0/admission negatives; unchanged M213 native; final types/research/size.
-One job, <=600s/command, <=1800s total including failures, <=20 evidence files/5MiB.
-Split a package before exceeding12 files; no scope shrink. Done=all checks pass,
-then execute original full20/52 cohort without unrelated breadth. Risks: raw truth
-leak, body reserve renamed pleasure, double reward credit, current input bypass,
-reward learning during held probes, candidate absence or automatic acquisition.
-
-21 members/15 families/132 clauses; E71/P36/N12/U13; accepted version scopes unchanged.
+21 members/15 families/132 clauses; E71/P36/N12/U13. BRIEF12.1-6 P,12.1-7 N.
+Accepted families retain12.3@0.126,12.5@0.129,12.14@0.135. No intoxication,
+whole-family12.1, final assembly or UI acceptance. Self-approval continues for the
+full sleep gate; original frozen C0-C3/reference controls remain unchanged.
 | Status | Count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |

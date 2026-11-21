@@ -130,3 +130,140 @@ Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: unde
    Start at  16:27:38
    Duration  98.45s (transform 3.23s, setup 0ms, collect 4.84s, tests 93.17s, environment 0ms, prepare 126ms)
 
+
+M214 types-package-b exit=2 elapsed=20.629s cap=120
+src/test/assembledRewardExperience.test.ts(80,422): error TS2345: Argument of type '{ typeId: bigint; schemaVersion: bigint; }' is not assignable to parameter of type 'RecordSchema'.
+  Type '{ typeId: bigint; schemaVersion: bigint; }' is missing the following properties from type 'RecordSchema': name, fields
+
+M214 native-disclosure-owner exit=1 elapsed=3.217s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledRewardExperience.test.ts [ src/test/assembledRewardExperience.test.ts ]
+TypeError: bodyId is not a function
+ ❯ src/assembled/memory.ts:41:29
+
+ ❯ src/assembled/mitigation.ts:6:31
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  no tests
+   Start at  16:33:20
+   Duration  2.67s (transform 1.48s, setup 0ms, collect 0ms, tests 0ms, environment 0ms, prepare 122ms)
+
+
+M214 native-disclosure-cycle-fixed exit=1 elapsed=102.832s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRewardExperience.test.ts > native214 performed pleasure learns once and changes a later real decision
+M214 prelude 1 600
+
+ × src/test/assembledRewardExperience.test.ts > native214 performed pleasure learns once and changes a later real decision 94706ms
+   → cognitive record grammar: unsupported receiving record version
+ × src/test/assembledRewardExperience.test.ts > codec214 receipt disclosure remains closed to private and malformed record trees
+   → expected [Function] to not throw an error but 'SchedulerContractError: cognitive rec…' was thrown
+ ✓ src/test/assembledRewardExperience.test.ts > owner214 reward history cannot be initialized and body leaf retains its single authority 2191ms
+stdout | src/test/assembledRewardExperience.test.ts > owner214 reward history cannot be initialized and body leaf retains its single authority
+M214 OWNER PASS no learned S0 or altered physical baseline; wrong writer, scope and foreign holder reject
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledRewardExperience.test.ts > native214 performed pleasure learns once and changes a later real decision
+SchedulerContractError: cognitive record grammar: unsupported receiving record version
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ fail src/assembled/codecs.ts:36:36
+ ❯ Module.receivingRecord src/assembled/codecs.ts:200:271
+ ❯ validateDecisionView src/assembled/decisionView.ts:18:100
+ ❯ src/assembled/decisionView.ts:23:61
+ ❯ validateDecisionView src/assembled/decisionView.ts:23:43
+ ❯ validateDecisionView src/assembled/decisionView.ts:20:40
+ ❯ validateDecisionView src/assembled/decisionView.ts:22:62
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  src/test/assembledRewardExperience.test.ts > codec214 receipt disclosure remains closed to private and malformed record trees
+AssertionError: expected [Function] to not throw an error but 'SchedulerContractError: cognitive rec…' was thrown
+
+- Expected: 
+undefined
+
++ Received: 
+"SchedulerContractError: cognitive record grammar: unsupported receiving record version"
+
+ ❯ src/test/assembledRewardExperience.test.ts:81:197
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+ Test Files  1 failed (1)
+      Tests  2 failed | 1 passed | 8 skipped (11)
+   Start at  16:34:12
+   Duration  102.28s (transform 3.32s, setup 0ms, collect 4.94s, tests 96.90s, environment 0ms, prepare 125ms)
+
+
+M214 receipt-reader-boundaries exit=0 elapsed=128.895s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRewardExperience.test.ts > kernel214 reward projection equals original zero-adaptation Full and denied sensors stay unknown
+M214 KERNEL PASS 108 exact physical projections; denied signal unknown
+
+ ✓ src/test/assembledRewardExperience.test.ts > kernel214 reward projection equals original zero-adaptation Full and denied sensors stay unknown
+stdout | src/test/assembledRewardExperience.test.ts > native214 performed pleasure learns once and changes a later real decision
+M214 prelude 1 600
+
+stdout | src/test/assembledRewardExperience.test.ts > native214 performed pleasure learns once and changes a later real decision
+M214 NATIVE PASS actual600 pleasure, mean3/5, live later shared reason and changed exact probability; protective acquisition3; held history4; repeat2/restore2->3->4
+
+ ✓ src/test/assembledRewardExperience.test.ts > native214 performed pleasure learns once and changes a later real decision 103941ms
+stdout | src/test/assembledRewardExperience.test.ts > boundary214 denied and zero first receipts do not invent positive reward
+M214 BOUNDARY PASS denied unknown vs experienced zero; neither produces learned pleasure
+
+stdout | src/test/assembledRewardExperience.test.ts > codec214 receipt disclosure remains closed to private and malformed record trees
+M214 CODEC PASS exact receipt399/2 accepted; malformed ordinal and private record/identifier smuggling rejected
+
+ ✓ src/test/assembledRewardExperience.test.ts > boundary214 denied and zero first receipts do not invent positive reward 18951ms
+ ✓ src/test/assembledRewardExperience.test.ts > codec214 receipt disclosure remains closed to private and malformed record trees
+
+ Test Files  1 passed (1)
+      Tests  4 passed | 7 skipped (11)
+   Start at  16:39:19
+   Duration  128.36s (transform 3.34s, setup 0ms, collect 4.98s, tests 122.93s, environment 0ms, prepare 119ms)
+
+
+M214 retained-acquisition exit=0 elapsed=269.613s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSleepAcquisition.test.ts > native213 immediate adoption and genuine NoControl retain one owner and exact prepared restore
+M213 PASS acquisition14 is live before sole goal commit140; load800 prevents inhibition;16 Full inhibits and NoControl retains both with equal readiness/goal/maintenance; cancellation removes meaning; learning withheld16; repeat and complete prepared restore12->14->16; forged handle/input/save rejected
+
+ ✓ src/test/assembledSleepAcquisition.test.ts > native213 immediate adoption and genuine NoControl retain one owner and exact prepared restore 263655ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  16:41:46
+   Duration  269.07s (transform 3.30s, setup 0ms, collect 4.92s, tests 263.66s, environment 0ms, prepare 126ms)
+
+
+M214 final-types exit=0 elapsed=21.122s cap=120
+
+M214 preservation exit=0 elapsed=7.456s cap=60
+Reference boundary check passed.
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4434}
+PASS: Git index contains no files at or above50,000,000 bytes.
+M214 PRESERVATION PASS A12/B6 files; frozen controls unchanged; append-only reviews; unchanged132/21/15 and prior accepted scopes; document/evidence/reference/research/size limits

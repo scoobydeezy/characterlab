@@ -1338,3 +1338,9 @@ Prepared-model restore keeps full replay and exact complete-save equality.
 MEC001/003/011..019/022 retain original roles; M212 unchanged control passes.
 Original sleep20/52 and numeric reward acquisition still pending; no reduction.
 [Result](ASSEMBLED_CHARACTER_M213_RESULT.md).
+
+M214 joins actual reward kinetics -> permitted C1 pleasure -> existing821/823
+history/MeanHistory -> shared decision alongside genuine protection. Full zero-
+adaptation reward projection108 cases; no reserve/pleasure conflation. Original
+sleep20/52 remains pending. MEC001/003/011..019/022 retain original roles; no reduction.
+[Result](ASSEMBLED_CHARACTER_M214_RESULT.md).

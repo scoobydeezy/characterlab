@@ -50,3 +50,11 @@ probability identity is promised across those laws. Preserve every failed case.
 MEC001/003/011..019/022 retain controls/ports/corpus/comparators. RO008/009/012/013/
 020 conditional and historical019/021 dispositions unchanged. No reduction,
 intoxication acceptance, whole-family acceptance or clinical claim.
+
+Disclosure repair (package B): decision-history/0.4 admits only the already accepted
+receipt atom399/2 (tag3, positive1164 ordinal). The closed tree still rejects world
+records, unsupported schemas and identifier-payload smuggling. Earlier views with
+no receipt atom retain their existing version/bytes. Physical decay/sensor and
+MeanHistory quantization are explicit trace operations; numeric belief updates
+name both history and prior belief reads. These are foundation defects repaired
+within the same comparison, not relaxed acceptance.
