@@ -40,14 +40,16 @@ pair whole safe stream equality despite unequal physical debt; biased0 ->1000;
 lost support keeps adopted goal and cannot recover maintenance; execution control
 preserves intent and safe stream when withheld action is inert. Exact probabilities
 from actual native decision records; actual sampled claims require matched draws.
-Safe stream includes ALL output records except declared physical effect/assessment/
+Safe stream includes ALL output records except declared reward physical/effect/assessment/
 execution diagnostics, plus public decision views; C1 evidence is never excluded.
 Compare source semantics with frozen original receipts; classify D3/arbitration/
 setup/explicit-zero-action differences. Required phenomena may not be waived.
 
-Verification split BEFORE execution for finite replay cost: A=12 main runs/36
-prefixes, <=1800s cumulative including failures; B=8 controls/16 prefixes plus
-cross-cohort/static/preservation checks, <=1800s including failures. Each command
+Measured first full case:326.167s, six prefixes, terminal101/save6.7MiB. Self-approved
+finite verification split before remaining runs: A1=main seed0 triplet/18 prefixes
+(1800s including existing A attempts); A2=other9 main runs/18 prefixes (1800s);
+B=8 controls/16 prefixes plus final checks (1800s). No added cases or reset of spent
+time; shared family ceiling5400s. Each command
 <=600s, one job; <=20 evidence files/5MiB for entire milestone. At limit checkpoint
 and repair cause; no unbounded extension, dropped prefix or rerun of passing cases.
 Use prepared model restore/full bytes, avoid duplicate snapshot/hex serialization.

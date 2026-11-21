@@ -1,0 +1,30 @@
+
+M215 A-types exit=2 elapsed=20.519s cap=120
+src/test/assembledSleepCohort.test.ts(2,26): error TS2307: Cannot find module 'node:crypto' or its corresponding type declarations.
+src/test/assembledSleepCohort.test.ts(3,53): error TS2307: Cannot find module 'node:fs' or its corresponding type declarations.
+src/test/assembledSleepCohort.test.ts(20,84): error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+src/test/assembledSleepCohort.test.ts(20,106): error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+
+M215 A-rested0 exit=0 elapsed=326.167s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSleepCohort.test.ts > cohort215 Full/Rested/0
+M215 START Full/Rested/0
+
+stdout | src/test/assembledSleepCohort.test.ts > cohort215 Full/Rested/0
+M215 PASS Full/Rested/0 6 prefixes; safe bytes 763763 seconds 259.887 probe8 {"logical":8,"sleep":[100,0,0,500],"capacity":950,"inhibited":true,"active":true,"maintained":true,"spare":2,"options":["withhold"],"chosen":"withhold","probabilities":[{"action":"withhold","p":"1/1"}],"draws":"0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd","drawCount":0,"journal":"b28e4f495aa71120d2a3a144d49b9c4635819f885fd094d9392b36640c28568a","journalCount":1,"identity":"15/224","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","learned":"a62e83097e8c165cf75a50e5b3f1fa2f88538f905375f3b5388ec6ae955593e8","mean":600,"physicalDebt":0,"goal":"3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32","maintenance":"04ba6dc45b812689703a1a1b98b7aaac57a15d093ab868bfc4cbbabf90ded61f","rewardReason":"3/5"}
+
+ ✓ src/test/assembledSleepCohort.test.ts > cohort215 Full/Rested/0 259890ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 31 skipped (32)
+   Start at  16:52:11
+   Duration  325.64s (transform 3.27s, setup 0ms, collect 65.22s, tests 259.89s, environment 0ms, prepare 122ms)
+
+
+M215 pre-control projection review: exclude reward/physical world diagnostic explicitly;
+first Rested non-comparator hash relabelled diagnostic superset, original hash retained.
+Actual comparator streams will be losslessly deflated and compared byte-for-byte.
+Measured full case326.167s; finite pre-execution split A1/A2/B,1800s each,5400s total.
+No reset of first20.519+326.167s, no added scenarios or relaxed checkpoint gate.
