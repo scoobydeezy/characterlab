@@ -1322,3 +1322,11 @@ no body effect, practice or invented performance failure. C1 observes actual0 vi
 a bounded assembled extension; frozen C2 observer/control unchanged. Protective
 identity and full sleep20/52 remain. MEC001/003/011..019/022 keep original roles.
 [Result](ASSEMBLED_CHARACTER_M211_RESULT.md).
+
+M212 adds protective meaning -> shared reasons -> distinct earned identity ->
+D3 formation -> later shared standing on0.139. Same415/1503 owners, one schedule
+and save. Explicit experimental learning admission does not enter safe cognition;
+original sleep probes remain controls. Old channel schemas stay closed. Full sleep
+20/52 and reward prelude remain; no clause closure or reduction. MEC001/003/011..019/022
+retain original roles and D3 versus BIO feedback disposition.
+[Result](ASSEMBLED_CHARACTER_M212_RESULT.md).

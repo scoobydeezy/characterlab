@@ -1,0 +1,356 @@
+
+M212 types exit=0 elapsed=20.777s cap=120
+
+M212 native-and-admission exit=1 elapsed=5.926s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledProtectiveIdentity.test.ts (0 test)
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledProtectiveIdentity.test.ts [ src/test/assembledProtectiveIdentity.test.ts ]
+SchedulerContractError: cognitive record grammar: member outside cognitive vocabulary
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ fail src/campaign2/cognitiveCodecs.ts:18:36
+ ❯ checkType src/campaign2/cognitiveCodecs.ts:39:183
+ ❯ visit src/campaign2/cognitiveCodecs.ts:76:164
+ ❯ validate src/campaign2/cognitiveCodecs.ts:86:2
+ ❯ Module.decodeCognitive src/campaign2/cognitiveCodecs.ts:93:111
+ ❯ visit src/campaign3/embodiedCodecs.ts:71:20
+ ❯ validate src/campaign3/embodiedCodecs.ts:75:2
+ ❯ Module.decodeEmbodied src/campaign3/embodiedCodecs.ts:79:110
+ ❯ visit src/assembled/codecs.ts:105:29
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  no tests
+   Start at  15:07:37
+   Duration  5.37s (transform 3.30s, setup 0ms, collect 0ms, tests 0ms, environment 0ms, prepare 132ms)
+
+
+M212 versioned-native exit=124 elapsed=600.151s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledProtectiveIdentity.test.ts > witness: significant action episode reaches exact competing choice
+M61_TARGET17 true 9 [ 'MovingCloser' ] 3
+
+stdout | src/test/assembledProtectiveIdentity.test.ts > witness: significant action episode reaches exact competing choice
+M61_FORECAST [
+  {
+    action: 'definition/protocol-contact-one',
+    status: 'Known',
+    mean: '060202',
+    progress: '060214',
+    ages: [ 29, 15 ]
+  },
+  {
+    action: 'definition/protocol-contact-two',
+    status: 'Known',
+    mean: '060201',
+    progress: '06020a',
+    ages: [ 31 ]
+  }
+]
+M61_TARGET17 false 9 [] 3
+
+stdout | src/test/assembledProtectiveIdentity.test.ts > witness: significant action episode reaches exact competing choice
+M61_FORECAST [
+  {
+    action: 'definition/protocol-contact-one',
+    status: 'Known',
+    mean: '060001',
+    progress: '060001',
+    ages: [ 29 ]
+  },
+  {
+    action: 'definition/protocol-contact-two',
+    status: 'Known',
+    mean: '060201',
+    progress: '06020a',
+    ages: [ 31 ]
+  }
+]
+M61_EXACT {"cases":"72","changed":0,"winnersA":["36","36"],"scope":"actual captured contexts, paired uniform faces and tie choices; no reconstructed reasons"}
+
+
+M212 selected-native exit=1 elapsed=68.111s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledProtectiveIdentity.test.ts > admission212 old context and model reject experiment while successor remains explicit
+M212 ADMISSION PASS versioned experiment separate from safe context, declared zero action and bounded importance
+
+ ❯ src/test/assembledProtectiveIdentity.test.ts (7 tests | 1 failed | 5 skipped) 62222ms
+   × native212 protective history has a live later reason consumer and explicit intervention control 61700ms
+     → cognitive record grammar: unavailable schema
+   ✓ admission212 old context and model reject experiment while successor remains explicit 521ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledProtectiveIdentity.test.ts > native212 protective history has a live later reason consumer and explicit intervention control
+SchedulerContractError: cognitive record grammar: unavailable schema
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ fail src/campaign2/cognitiveCodecs.ts:18:36
+ ❯ cognitiveSchemaByType src/campaign2/cognitiveCodecs.ts:91:20
+ ❯ Module.cognitiveRecord src/campaign2/cognitiveCodecs.ts:98:15
+ ❯ Module.compileCharacterState src/assembled/state.ts:116:173
+ ❯ Module.prepareCharacterModel src/assembled/character.ts:28:156
+ ❯ Module.start src/test/fixtures/assembledSleepControl.ts:33:199
+ ❯ src/test/assembledProtectiveIdentity.test.ts:23:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed | 5 skipped (7)
+   Start at  15:19:34
+   Duration  67.56s (transform 3.29s, setup 0ms, collect 4.91s, tests 62.22s, environment 0ms, prepare 127ms)
+
+
+M212 state-constructor-native exit=1 elapsed=82.729s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledProtectiveIdentity.test.ts (7 tests | 1 failed | 6 skipped) 76869ms
+   × native212 protective history has a live later reason consumer and explicit intervention control 76868ms
+     → chosen candidate missing from meaning map
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledProtectiveIdentity.test.ts > native212 protective history has a live later reason consumer and explicit intervention control
+SchedulerContractError: chosen candidate missing from meaning map
+ ❯ bad src/campaign2/cognitiveMath.ts:17:43
+
+ ❯ Module.choiceAlignment src/campaign2/cognitiveMath.ts:87:134
+ ❯ Module.protectiveRaw src/assembled/protectiveIdentity.ts:36:144
+ ❯ Object.execute src/assembled/execution.ts:272:55
+ ❯ src/assembled/runtime.ts:265:33
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:373:26
+ ❯ Object.settleNextInstant src/assembled/character.ts:45:66
+ ❯ Module.through src/test/fixtures/assembledSleepControl.ts:38:95
+ ❯ src/test/assembledProtectiveIdentity.test.ts:24:30
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 6 skipped (7)
+   Start at  15:21:00
+   Duration  82.17s (transform 3.26s, setup 0ms, collect 4.87s, tests 76.87s, environment 0ms, prepare 124ms)
+
+
+M212 live-candidate-native exit=1 elapsed=84.475s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledProtectiveIdentity.test.ts (7 tests | 1 failed | 6 skipped) 78604ms
+   × native212 protective history has a live later reason consumer and explicit intervention control 78603ms
+     → RegisteredReadDomain must be duplicate-free
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledProtectiveIdentity.test.ts > native212 protective history has a live later reason consumer and explicit intervention control
+SchedulerContractError: RegisteredReadDomain must be duplicate-free
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:470:11
+    468|       const contractError = error instanceof SchedulerContractError
+    469|         ? error
+    470|         : new SchedulerContractError('TRANSITION_FAILURE', errorMessag…
+       |           ^
+    471|       this.#status = 'Failed';
+    472|       this.#diagnostic = {
+ ❯ Object.settleNextInstant src/assembled/character.ts:45:66
+ ❯ Module.through src/test/fixtures/assembledSleepControl.ts:38:95
+ ❯ src/test/assembledProtectiveIdentity.test.ts:25:30
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 6 skipped (7)
+   Start at  15:23:25
+   Duration  83.92s (transform 3.27s, setup 0ms, collect 4.89s, tests 78.60s, environment 0ms, prepare 129ms)
+
+
+M212 single-phase-read-native exit=1 elapsed=138.745s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledProtectiveIdentity.test.ts (7 tests | 1 failed | 6 skipped) 132839ms
+   × native212 protective history has a live later reason consumer and explicit intervention control 132838ms
+     → cognitive record grammar: coupled draw in unrelated record
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledProtectiveIdentity.test.ts > native212 protective history has a live later reason consumer and explicit intervention control
+SchedulerContractError: cognitive record grammar: coupled draw in unrelated record
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ fail src/assembled/codecs.ts:36:36
+ ❯ visit src/assembled/codecs.ts:126:90
+ ❯ visit src/assembled/codecs.ts:158:52
+ ❯ visit src/assembled/codecs.ts:157:41
+ ❯ visit src/assembled/codecs.ts:158:52
+ ❯ validate src/assembled/codecs.ts:162:2
+ ❯ Module.decodeCognitive src/assembled/codecs.ts:169:111
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 6 skipped (7)
+   Start at  15:25:39
+   Duration  138.18s (transform 3.27s, setup 0ms, collect 4.89s, tests 132.84s, environment 0ms, prepare 128ms)
+
+
+M212 path-codec exit=0 elapsed=6.001s cap=60
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledProtectiveIdentity.test.ts > codec212 only the successor receives Protection keys inside state and trace paths
+M212 CODEC PASS Protection412/2 and formation keys in state/path/pattern; old412/427 and unrelated typed-entity metadata reject
+
+ ✓ src/test/assembledProtectiveIdentity.test.ts (8 tests | 7 skipped) 6ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  15:29:37
+   Duration  5.46s (transform 3.39s, setup 0ms, collect 5.05s, tests 6ms, environment 0ms, prepare 129ms)
+
+
+M212 path-receiving-native exit=1 elapsed=202.819s cap=540
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledProtectiveIdentity.test.ts > native212 protective history has a live later reason consumer and explicit intervention control
+M212 acquisition {"authorship":"061415","natural":{"kind":"text","value":"Accepted"},"effective":{"kind":"text","value":"Accepted"},"withheld":{"kind":"text","value":"ExperimentWithheld"},"channels":2}
+
+stdout | src/test/assembledProtectiveIdentity.test.ts > native212 protective history has a live later reason consumer and explicit intervention control
+M212 eligibility/owner controls 9 contexts; history rewrite and forged contribution rejected; first dice and fidelity numeric/formation held fixed
+
+ ❯ src/test/assembledProtectiveIdentity.test.ts (8 tests | 1 failed | 7 skipped) 196837ms
+   × native212 protective history has a live later reason consumer and explicit intervention control 196836ms
+     → cognitive record grammar: wrong nested record schema
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledProtectiveIdentity.test.ts > native212 protective history has a live later reason consumer and explicit intervention control
+SchedulerContractError: cognitive record grammar: wrong nested record schema
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ fail src/campaign2/cognitiveCodecs.ts:18:36
+ ❯ checkType src/campaign2/cognitiveCodecs.ts:33:120
+ ❯ visit src/campaign2/cognitiveCodecs.ts:76:164
+ ❯ validate src/campaign2/cognitiveCodecs.ts:86:2
+ ❯ Module.decodeCognitive src/campaign2/cognitiveCodecs.ts:93:111
+ ❯ visit src/campaign3/embodiedCodecs.ts:71:20
+ ❯ validate src/campaign3/embodiedCodecs.ts:75:2
+ ❯ Module.decodeEmbodied src/campaign3/embodiedCodecs.ts:79:110
+ ❯ visit src/assembled/codecs.ts:107:29
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  15:29:55
+   Duration  202.27s (transform 3.32s, setup 0ms, collect 4.95s, tests 196.84s, environment 0ms, prepare 138ms)
+
+
+M212 qualification-basis-native exit=0 elapsed=226.001s cap=360
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledProtectiveIdentity.test.ts > native212 protective history has a live later reason consumer and explicit intervention control
+M212 acquisition {"authorship":"061415","natural":{"kind":"text","value":"Accepted"},"effective":{"kind":"text","value":"Accepted"},"withheld":{"kind":"text","value":"ExperimentWithheld"},"channels":2}
+
+stdout | src/test/assembledProtectiveIdentity.test.ts > native212 protective history has a live later reason consumer and explicit intervention control
+M212 eligibility/owner controls 9 contexts; history rewrite and forged contribution rejected; first dice and fidelity numeric/formation held fixed
+
+stdout | src/test/assembledProtectiveIdentity.test.ts > native212 protective history has a live later reason consumer and explicit intervention control
+M212 exact probabilities [
+  '35827815714586907473/110680464442257309696',
+  '74852648727670402223/110680464442257309696'
+] [
+  '36888177525841950769/110680464442257309696',
+  '73792286916415358927/110680464442257309696'
+]
+M212 NATIVE PASS live protection, identical first decision/draws under experimental withholding, distinct channel/journal and single D3 formation; actual later standing/reason consumer; repeat12 and exact restore12->14->16; state ownership/S0/foreign/pair guards
+
+ ✓ src/test/assembledProtectiveIdentity.test.ts (8 tests | 7 skipped) 219960ms
+   ✓ native212 protective history has a live later reason consumer and explicit intervention control 219959ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  15:34:05
+   Duration  225.46s (transform 3.34s, setup 0ms, collect 4.99s, tests 219.96s, environment 0ms, prepare 130ms)
+
+
+M212 final-types exit=0 elapsed=21.192s cap=90
+
+M212 legacy-withholding exit=0 elapsed=174.757s cap=300
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledWithholding.test.ts > native211 explicit withholding survives continuation without movement learning
+M211 NATIVE PASS actual chosen zero request, full intent/plan/attempt/execution/C1 consequence, no physical effect or practice; failed positive request distinct; repeat12 and exact continuation12->14->16
+
+ ✓ src/test/assembledWithholding.test.ts (8 tests | 7 skipped) 168771ms
+   ✓ native211 explicit withholding survives continuation without movement learning 168770ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  15:40:01
+   Duration  174.22s (transform 3.34s, setup 0ms, collect 4.97s, tests 168.77s, environment 0ms, prepare 136ms)
+
+
+M212 preservation exit=1 elapsed=7.162s cap=60
+Reference boundary check passed.
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: CURRENT obligation counts are stale
+    at file:///C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/scripts/check-research-obligations.mjs:75:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.20.0
+Traceback (most recent call last):
+  File "<string>", line 33, in <module>
+    r=subprocess.run(cmd);assert r.returncode==0
+                                 ^^^^^^^^^^^^^^^
+AssertionError
+
+M212 preservation-fixed exit=0 elapsed=7.302s cap=60
+Reference boundary check passed.
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4432}
+PASS: Git index contains no files at or above50,000,000 bytes.
+M212 PRESERVATION PASS12 implementation/test files; frozen sources/evidence unchanged; append-only reviews; unchanged132 clauses/21 members/15 families;3 accepted original versions; document/evidence/reference/research/size limits

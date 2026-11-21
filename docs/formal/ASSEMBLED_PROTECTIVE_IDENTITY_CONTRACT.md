@@ -72,3 +72,18 @@ Full original sleep cohort, actual reward prelude and exact temporal mapping rem
 required before BRIEF12.1-6 acceptance. D3 formation versus original BIO feedback
 requires a documented receiving classification; no automatic equivalence claim.
 All original controls, variants, obligations and21/15/132 remain.
+
+## Codec boundary correction before native execution
+First collection rejected Protection in the closed predecessor vocabulary.
+Use exact412/2 key,426/2 expression,427/2 Protection value; old schema1 retains
+CommitmentFidelity only. Model0.139 alone admits new record roles. This is the
+12th planned implementation file, not a widening of frozen C2 decoding.
+
+## Isolation amendment before behavioral comparison
+The experiment gate accepts either one Boolean for all channels or an explicit
+[fidelityAllowed,protectionAllowed] Boolean pair. Both are protocol metadata.
+The M212 contrast holds fidelityAllowed=true and changes only protectionAllowed14;
+otherwise later fidelity formation could confound the protective feedback contrast.
+Original sleep uses both false after acquisition, retaining its original intervention.
+The first600s native command accidentally selected imported historical tests, not
+M212: retained raw output names M61. Rerun only native212/admission212.

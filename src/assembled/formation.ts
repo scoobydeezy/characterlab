@@ -9,7 +9,7 @@ import {developmentalGain} from '../campaign3/developmentComponent';
 import {cognitiveRecord as r,cognitiveNamed as named} from './codecs';
 export const FORMATION='assembled-formation/0.1',FORMATION_UPDATE=FORMATION+'/update',FORMATION_REASONS=FORMATION+'/reasons',FORMATION_VERSION='assembled-character-formation/0.1-candidate';
 export const FORMATION_OWNER=typedIdentifier(1025,text('authority/dispositional-formation'));
-export const formationPath=(C:CanonicalValue):StatePath=>({rootStateTypeId:1503n,fieldId:1n,selectors:[{kind:'mapKey',key:C}]});
+export const formationPath=(C:CanonicalValue,channel?:CanonicalValue):StatePath=>({rootStateTypeId:1503n,fieldId:1n,selectors:[{kind:'mapKey',key:channel?list([C,channel]):C}]});
 const require=(b:boolean,s:string)=>{if(!b)invalidModel('formation '+s);};
 export function compileFormation(v:CanonicalValue){const a=items(v,'list');require(a.length===1&&txt(a[0])===FORMATION,'declaration');}
 export function formDisposition(prior:Q,c:Q,phase:number){require(prior.compare(Q.of(-1n,2n))>=0&&prior.compare(Q.of(1n,2n))<=0&&c.compare(Q.of(-1n))>=0&&c.compare(ONE)<=0,'value domain');const gain=developmentalGain('Ramp',phase),candidate=prior.add(c.multiply(gain).divide(Q.of(4n))),after=candidate.compare(Q.of(1n,2n))>0?Q.of(1n,2n):candidate.compare(Q.of(-1n,2n))<0?Q.of(-1n,2n):candidate;return {gain,after,delta:after.subtract(prior)};}

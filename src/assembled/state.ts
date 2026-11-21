@@ -1,6 +1,7 @@
+import {PROTECTION_CHANNEL} from './protectiveIdentity';
 import {sleepAnchor} from './sleepControl';
 import {stressAnchor} from './regulatoryStress';
-import {decodeCognitive as decodeSuccessor} from './codecs';
+import {decodeCognitive as decodeSuccessor,cognitiveRecord as r} from './codecs';
 import {restoreAuthoritativeState} from '../substrate/state';
 import {withWorkMaintenanceState} from './workMaintenance';
 import {withAssociationState} from './learnedAssociation';
@@ -17,7 +18,7 @@ import {AuthoritativeState,StateAuthorityRegistry,applyStatePatch,statePathValue
 import {semanticReferentFromAuthoredContent} from '../substrate/referentOrigin';
 import {compilePredictionModel} from '../campaign2/predictionModel';
 import {predictionModelReviewSource} from '../campaign2/predictionModelReview';
-import {decodeCognitive,cognitiveRecord as r} from '../campaign2/cognitiveCodecs';
+import {decodeCognitive} from '../campaign2/cognitiveCodecs';
 import {validateIdentityHistory,readQ} from '../campaign2/cognitiveMath';
 import {dataRecord as rec,dataField as f,dataIdentity as id,dataItems as items,dataKey as key,dataText as txt,dataUnsigned as u,invalidModel} from '../campaign2/canonicalData';
 import {withRelationshipState} from './relationship';
@@ -100,7 +101,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  const episodes=model.memory?withEpisodicState(inheritedState,C,model.body!,!!model.affectMemory,model.encoding,!!model.memoryUse,model.bodyMemoryUse,model.positionMemory,model.retainedAttribution,model.significanceEnabled,model.actionMemory,model.effectEvidence?.proposition,model.social?.beliefTrials?32n:8n,model.familiarity,model.recollection,model.vivid,model.positionUse,model.positionPresentation):inheritedState;
  const embodied=model.body?withBodyState(episodes,C,model.body):episodes;
  const retained=model.retention?withRetentionState(embodied,C):embodied;
- const procedural=model.skill?withSkillState(retained,C,model.procedures,model.formationEnabled,model.skillInterference,model.timeLimit):retained;
+ const procedural=model.skill?withSkillState(retained,C,model.procedures,model.formationEnabled,model.skillInterference,model.timeLimit,model.protection?PROTECTION_CHANNEL:undefined):retained;
  const planned=model.strategy?withStrategyState(procedural,C,model.strategy,model.timeLimit):procedural;
  const prioritized=model.priority?withPriorityState(planned,tasks.map(t=>t.key),model.goalMeaning?{C,settings:model.goalMeaning}:undefined,model.spatialMeaning?{C,settings:model.spatialMeaning}:undefined,model.commitmentAdoption,model.timeLimit):planned;
  const forecasted=model.horizon?withHorizonState(prioritized,tasks.map(t=>t.key),model.timeLimit):prioritized;
@@ -112,7 +113,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  const related=model.relationship?withRelationshipState(socialized,C,model.relationship.target,model.relationship.bindings.map(b=>b.target),model.attachment,model.timeLimit):socialized;
  const recognized=model.recognition?withRecognitionState(related,model.recognition,!!model.encoding,model.positionEnabled):related;
  const identityRegistration=rec(f(rows.find(v=>key(f(v,1n))===key(typedIdentifier(1009,text('TaskIdentityApplicationTransition'))))!,4n),450n);
- const qualified=model.eligibilityEnabled?withQualifiedIdentityState(recognized,identityKey,id(f(rec(f(identityRegistration,6n),322n),2n)),model.timeLimit):recognized;
+ const qualified=model.eligibilityEnabled?withQualifiedIdentityState(recognized,identityKey,id(f(rec(f(identityRegistration,6n),322n),2n)),model.timeLimit,model.protection?r(412,[C,PROTECTION_CHANNEL],2):undefined):recognized;
  const believed=model.effectEvidence?withEffectBelief(qualified,C,model.effectEvidence):qualified;
  const associated=model.affectMemory?.learned?withAssociationState(believed,C,model.affectMemory.learned):believed;
  const ownedState=model.workMaintenance?withWorkMaintenanceState(associated,C,model.workMaintenance,tasks.length,model.timeLimit):associated;
