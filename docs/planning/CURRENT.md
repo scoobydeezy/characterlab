@@ -56,3 +56,7 @@ Self-approved representation amendment after c3fd4c87: repeated12 differs only
 in SKILL_ACTUAL[1], scheduler event310->312. Compare that field through its
 unique traced event time/phase/type/payload/dependencies, preserving every other
 field. No generic ID erasure; fail on absent/ambiguous event. Failed raw retained.
+Second representation finding: stress applied13 embeds appraisal event292->294
+in packet[3]; all state, threat, dose and arithmetic equal. Apply the same traced
+event correspondence only there; require source50 and its exact appraisal output.
+Helper shadowing failure is repaired separately; all failed receipts count.
