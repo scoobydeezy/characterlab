@@ -1,5 +1,6 @@
 # Current work — M215 full sleep/control qualification
-M214 complete3ad48d33; model0.141. Owner delegates full sleep gate/self-acceptance.
+M214 complete3ad48d33;0.141. A1 passed3 main seed0 runs/18 prefixes,1020.288s.
+A2 active: remaining9 main runs/18 prefixes. Owner delegates full sleep acceptance.
 ## Bounded card — before implementation
 Observable capability: genuinely learned pleasure and protective identity persist
 while prior wake/recovery changes sensed control, inhibition and actual decision
@@ -55,8 +56,12 @@ and repair cause; no unbounded extension, dropped prefix or rerun of passing cas
 Use prepared model restore/full bytes, avoid duplicate snapshot/hex serialization.
 Done only when all20/52 and original comparisons pass/classified: accept12.1-6;
 otherwise keep P. Then stop this gate; no whole12.1, intoxication or UI acceptance.
-Risks: safe-view truth leakage, stale history, automatic acquisition, unmatched RNG,
-missed candidate liveness, physical blocking mislabeled cognition, truncated saves.
+Receiving amendment before execution controls: seed0 deprived chose reward at8 under
+adopted shared dice/D3 (original withheld). Preserve original FailedExecution run;
+require equal decisions with reward-sensing differences attributable to blocked effect.
+Supplement with fixed Rested0 vs world-blocked Rested0 through13 (two runs, no extra
+prefix claim) to preserve whole-safe equality under inert withholding. Same laws,
+seeds and sources except phase100 opportunity; B1800s unchanged. No seed search.
 
 21/15/132; E71/P36/N12/U13 until pass; prior family scopes unchanged.
 | Status | Count |

@@ -72,3 +72,13 @@ report records blocking without inventing a failed positive impulse. Original in
 catalog alternatives are undeclared here; every offered original action is retained.
 Shared D3 formation/decision laws retain their existing dispositions; quantities are
 compared exactly within the receiving model, phenomena against frozen original cases.
+
+M215 execution-control receiving amendment: shared reference seed0 at original8
+chooses reward (actual probability32886777347/68719476736), unlike the original
+inert-withholding sample. Preserve the original FailedExecution case; require its
+same intended choices and unchanged acquired history, with admitted reward differences
+caused by actual blocked positive execution. Full sensory equality is not expected
+when a real reward fails. Preserve the original inert-boundary phenomenon separately
+with fixed Rested0 versus Rested0 with closed world opportunity at the three probes;
+whole safe bytes must match. These two supplementary runs add no selected-prefix
+or seed-search claim; original20/52 remain mandatory and B's1800s cap unchanged.

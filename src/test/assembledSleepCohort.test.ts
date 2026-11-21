@@ -8,6 +8,9 @@ import {readFileSync,writeFileSync,existsSync} from 'node:fs';
 import {fixture,start,cases,caseKey,main,state,decode,items,key,enc,list,text,u,C,rec,f,uint,at,type Case,type Run} from './fixtures/assembledSleepCohort';
 import {restorePreparedCharacterRun,characterModelIdentity} from '../assembled/character';
 import {cachedMemory} from './fixtures/assembledMemoryFinal';
+import {SKILL_ACTUAL,SKILL_UPDATE} from '../assembled/skill';
+import {OPPORTUNITY_RESULT} from '../assembled/externalObstruction';
+import {ACTION_BODY} from '../assembled/actionBody';
 import {sleepAnchor,sleepPath,SLEEP_SAMPLE,SLEEP_RECEIPT,READINESS} from '../assembled/sleepControl';
 import {CONTROL_VIEW,controlGoalPath,maintenancePath} from '../assembled/control';
 import {habitJournal,habitPath,rewardPath,rewardValue,NUMERIC_REWARD} from '../assembled/habit';
@@ -29,7 +32,7 @@ const rational=(v:CanonicalValue)=>{const a=readQ(v);return a.numerator+'/'+a.de
 const positive=key(items(items(decode(fixture(cases[0]).s.registry),'list')[57],'list')[1]);
 const action=(v:CanonicalValue)=>key(f(rec(v,395n),2n))===positive?'drug':'withhold';
 const jp=journalPath(r(412,[C,PROTECTION_CHANNEL],2));
-const privateTags=new Set(['assembled-reward-experience/0.1/physical','assembled-action-body/0.1','assembled-action-body-receipt/0.1','assembled-skill-actual/0.1','assembled-skill-update/0.1','execution-opportunity-result/0.1','external-obstruction-result/0.1','assembled-regulatory-stress/0.1/applied']);
+const privateTags=new Set(['assembled-reward-experience/0.1/physical','assembled-action-body/0.1','assembled-action-body-receipt/0.1',SKILL_ACTUAL,SKILL_UPDATE,'execution-opportunity-result/0.1','external-obstruction-result/0.1','assembled-regulatory-stress/0.1/applied']);
 function safe(run:Run,out:readonly CanonicalValue[]){return enc(list([list(out.filter(v=>!privateTags.has(tag(v)??'')&&!(typeof v!=='boolean'&&v.kind==='record'&&[433n,454n,457n].includes(v.schema.typeId)))),decode(run.decisionHistory()),decode(run.decisionPresentation())]));}
 function capture(run:Run,logical:number){
  const snap=run.snapshot(),out=items(decode(snap.outputs),'list'),now=BigInt(logical+1),s=state(run),cv=tagged(out,CONTROL_VIEW).find(a=>uint(a[1])===now)!;
@@ -53,11 +56,15 @@ async function runCase(c:Case){
   if(prefixes.includes(native-1)){const save=x.run.save();pending=cachedMemory(await restorePreparedCharacterRun(x.handle,{initialState:x.b.d.initialState,orderedInputs:x.b.d.orderedInputs,save}));eqbytes(save,pending.save());pendingRow={logical:native-1,native,bytes:save.length,save:hash(save),terminal:false};checks.push(pendingRow);}
  }
  expect(pending).toBeUndefined();const out=items(decode(x.run.snapshot().outputs),'list'),safeBytes=safe(x.run,out);
+ const physical=tagged(out,OPPORTUNITY_RESULT).map(p=>{const outcome=records(out,433n).find(o=>key(f(o,1n))===key(p[2]))!;expect(outcome).toBeDefined();const attempt=rec(f(outcome,2n),432n),plan=rec(f(attempt,2n),431n),intent=rec(f(plan,2n),425n),d=rec(f(intent,2n),409n),logical=Number(at(f(d,2n)))-1,body=tagged(out,ACTION_BODY).find(b=>key(b[1])===key(p[2]))!;expect(body).toBeDefined();expect(p[5]).toBe(c.scenario!=='FailedExecution');return {logical,available:p[5],status:(body[5] as {value:string}).value,chosen:action(f(rec(f(rec(f(d,4n),419n),2n),420n),1n))};});
+ expect(physical.map(p=>p.logical)).toEqual([8,9,12]);for(const p of physical)expect(p.status).toBe(p.chosen==='drug'?(c.scenario==='FailedExecution'?'Blocked':'Applied'):'Withheld');
+ for(const a of tagged(out,SKILL_ACTUAL)){expect(rational(a[4])).toBe('0/1');expect(rational(a[5])).toBe('0/1');expect(a[8]).toBe(false);}
+
  for(const logical of [8,9,12]){const v=rows[logical-1];expect(v.active).toBe(true);expect(v.spare).toBeGreaterThanOrEqual(1);expect(v.mean).toBe(600);}
  let closure=0;while(await x.run.settleNextInstant()){expect(++closure).toBeLessThanOrEqual(4);expect(x.run.snapshot().clock).toBeLessThanOrEqual(101n);}
  const save=x.run.save(),restored=await restorePreparedCharacterRun(x.handle,{initialState:x.b.d.initialState,orderedInputs:x.b.d.orderedInputs,save});eqbytes(save,restored.save());expect(await restored.settleNextInstant()).toBe(false);eqbytes(save,restored.save());
  checks.push({logical:12,native:Number(x.run.snapshot().clock),bytes:save.length,save:hash(save),next:hash(save),terminal:true});
- const result={...c,key:caseKey(c),model:hash(characterModelIdentity(x.handle)),input:hash(x.b.d.orderedInputs),initial:hash(x.b.d.initialState),run:hash(x.run.runIdentity()),rows,prefixes:checks,safe:hash(safeBytes),safeBytes:safeBytes.length,safeCompressed:['Recovered','BlindRested','BlindDeprived','FailedExecution'].includes(c.scenario)&&c.seed===0&&c.law==='Full'?deflateSync(safeBytes).toString('base64'):undefined,closureInstants:closure,terminalClock:Number(x.run.snapshot().clock),elapsed:(performance.now()-began)/1000};
+ const result={...c,key:caseKey(c),model:hash(characterModelIdentity(x.handle)),input:hash(x.b.d.orderedInputs),initial:hash(x.b.d.initialState),run:hash(x.run.runIdentity()),rows,physical,decisions:hash(x.run.decisionHistory()),presentation:hash(x.run.decisionPresentation()),prefixes:checks,safe:hash(safeBytes),safeBytes:safeBytes.length,safeCompressed:['Recovered','BlindRested','BlindDeprived','FailedExecution'].includes(c.scenario)&&c.seed===0&&c.law==='Full'?deflateSync(safeBytes).toString('base64'):undefined,closureInstants:closure,terminalClock:Number(x.run.snapshot().clock),elapsed:(performance.now()-began)/1000};
  const data=existsSync(file)?JSON.parse(readFileSync(file,'utf8')):{contract:'assembled-sleep-cohort/0.1',candidate:'0.141',runs:{}};expect(data.runs[result.key],'do not silently overwrite a passing cohort case').toBeUndefined();data.runs[result.key]=result;writeFileSync(file,JSON.stringify(data,null,2)+'\n');
  console.info('M215 PASS',result.key,checks.length,'prefixes; safe bytes',safeBytes.length,'seconds',result.elapsed.toFixed(3),'probe8',JSON.stringify(rows[7]));return result;
 }
@@ -73,8 +80,15 @@ it('compare215 full frozen twenty-case gate',()=>{
  }
  const stream=(name:string)=>inflateSync(Uint8Array.from(atob(get(name).safeCompressed!),c=>c.charCodeAt(0)));eqbytes(stream('BlindRested'),stream('BlindDeprived'));expect(get('BlindRested').safe).toBe(get('BlindDeprived').safe);expect(row('BlindRested',8).physicalDebt).not.toBe(row('BlindDeprived',8).physicalDebt);expect(row('BlindRested',8).capacity).toBeNull();expect(row('BlindDeprived',8).capacity).toBeNull();
  const falseRested=row('FalseRested',8);expect(falseRested.physicalDebt).toBe(600);expect(falseRested.sleep[0]).toBe(0);expect(falseRested.capacity).toBe(1000);expect(falseRested.inhibited).toBe(true);
- eqbytes(stream('FailedExecution'),stream('Recovered'));expect(get('FailedExecution').safe).toBe(get('Recovered').safe);
+ expect(get('FailedExecution').decisions).toBe(get('Recovered').decisions);expect(get('FailedExecution').presentation).toBe(get('Recovered').presentation);expect(get('FailedExecution').safe).not.toBe(get('Recovered').safe);expect(get('FailedExecution').physical[0]).toMatchObject({logical:8,available:false,status:'Blocked',chosen:'drug'});expect(get('Recovered').physical[0]).toMatchObject({logical:8,available:true,status:'Applied',chosen:'drug'});const failedSafe=items(decode(stream('FailedExecution')),'list'),recoveredSafe=items(decode(stream('Recovered')),'list'),fo=items(failedSafe[0],'list'),ro=items(recoveredSafe[0],'list');expect(fo.length).toBe(ro.length);const differences:string[]=[];for(let i=0;i<fo.length;i++)if(key(fo[i])!==key(ro[i])){const a=tag(fo[i]),b=tag(ro[i]);expect(a).toBe(b);expect(a?.startsWith('assembled-reward-experience/0.1')||a?.startsWith('assembled-numeric-reward/0.1')).toBe(true);differences.push(a!);}expect(differences.length).toBeGreaterThan(0);expect(failedSafe.slice(1)).toEqual(recoveredSafe.slice(1));console.info('M215 execution sensory interaction',JSON.stringify([...new Set(differences)]));const whole=JSON.parse(readFileSync(file,'utf8'));expect(whole.inertExecution?.pass).toBe(true);
  const unmaintained=row('Unmaintained',9);expect(unmaintained.active).toBe(true);expect(unmaintained.maintained).toBe(false);expect(unmaintained.inhibited).toBe(false);expect(unmaintained.capacity).toBe(950);
  for(const name of main){const a=row(name,8,0,'NoControl');expect(a.inhibited).toBe(false);expect(a.probabilities).toEqual(row('Rested',8,0,'NoControl').probabilities);expect(a.chosen).toEqual(row('Rested',8,0,'NoControl').chosen);expect(a.draws).toBe(row('Rested',8,0,'NoControl').draws);expect(row(name,2,0,'NoControl').journal).toBe(row(name,2).journal);}expect(row('Rested',8,0,'NoControl').capacity).not.toBe(row('Deprived',8,0,'NoControl').capacity);
  console.info('M215 COMPLETE20/52: all original main, hidden/biased sensing, execution, maintenance and NoControl comparisons; held acquired histories; actual probability differences;32 advancing/20 true terminal saves');
 });
+
+it('inert215 fixed rested withheld execution boundary',async()=>{
+ const c:Case={scenario:'Rested',law:'Full',seed:0},a=await start(fixture(c)),b=await start(fixture(c,true));for(let t=1;t<=13;t++){expect(await a.run.settleNextInstant()).toBe(true);expect(await b.run.settleNextInstant()).toBe(true);}
+ const ao=items(decode(a.run.snapshot().outputs),'list'),bo=items(decode(b.run.snapshot().outputs),'list'),as=safe(a.run,ao),bs=safe(b.run,bo);eqbytes(as,bs);const ap=tagged(ao,OPPORTUNITY_RESULT),bp=tagged(bo,OPPORTUNITY_RESULT);expect(ap).toHaveLength(3);expect(bp).toHaveLength(3);expect(ap.map(p=>p[5])).toEqual([true,true,true]);expect(bp.map(p=>p[5])).toEqual([false,false,false]);
+ for(const p of [...ap,...bp])expect(key(p[4])).not.toBe(positive);
+ const data=JSON.parse(readFileSync(file,'utf8'));expect(data.inertExecution).toBeUndefined();data.inertExecution={pass:true,seed:0,scenario:'Rested',throughNative:13,safe:hash(as),safeBytes:as.length,safeCompressed:deflateSync(as).toString('base64'),inputs:[hash(a.b.d.orderedInputs),hash(b.b.d.orderedInputs)],runs:[hash(a.run.runIdentity()),hash(b.run.runIdentity())],opportunities:[ap.map(p=>p[5]),bp.map(p=>p[5])]};writeFileSync(file,JSON.stringify(data,null,2)+'\n');console.info('M215 INERT PASS fixed rested seed0, three blocked withholding attempts; entire safe stream byte-equal, no positive reward failure hidden');
+},600000);
