@@ -1240,3 +1240,9 @@ Denied outcomes leave passive knowledge absent despite prior-only Unknown querie
 MEC004/015/017/019/022 and original agency/SuccessAsIntent controls remain preserved.
 All production unchanged; finite12.14 comparison/classification review is next.
 [Result](ASSEMBLED_CHARACTER_M200_RESULT.md).
+
+M201 maps all eight12.14 clauses,19 agency runs and13+2 expectation histories.
+M199's duplicate is not the original new-source/post-report denominator control;
+three-episode correction and current boundary-history transfers remain required.
+MEC004/015/017/019/022 retain their dispositions. No mechanism/code/law change
+or family acceptance. [Review and finite next work](ASSEMBLED_CHARACTER_M201_RESULT.md).
