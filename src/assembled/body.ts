@@ -1,3 +1,4 @@
+import {sleepPath,sleepAnchor,type SleepDeclaration} from './sleepControl';
 import {type createExternalObstruction} from './externalObstruction';
 import {stressPath,stressAnchor,type StressDeclaration} from './regulatoryStress';
 import {bodyId,BODY_SAMPLE,BODY_DELIVERY,BODY_SELECTION,BODY_SELECTION_REPORT,BODY_OWNER,BODY_OBSERVER,BODY_CHANNEL,BODY_DEFINITION} from './bodyIdentifiers';
@@ -40,23 +41,24 @@ export function compileBodyDeclaration(value:CanonicalValue,calibrated=false){
  if(capacity.compare(zero)<=0||rate.compare(zero)<0||width.compare(zero)<=0||width.compare(capacity)>0||capacity.divide(width).denominator!==1n||threshold.compare(zero)<=0||threshold.compare(capacity)>0)invalidModel('body capacity/rate/grid/threshold domain');
  return Object.freeze({capacity,rate,width,threshold,calibration,permitted:a[5] as boolean,available:a[6] as boolean});
 }
-export type BodyDeclaration=ReturnType<typeof compileBodyDeclaration>&{readonly selectionCapacity?:number;readonly effectEvidence?:boolean;readonly stress?:StressDeclaration};
+export type BodyDeclaration=ReturnType<typeof compileBodyDeclaration>&{readonly selectionCapacity?:number;readonly effectEvidence?:boolean;readonly stress?:StressDeclaration;readonly sleep?:SleepDeclaration};
 export const bodyPath=(C:CanonicalValue):StatePath=>({rootStateTypeId:455n,fieldId:1n,selectors:[{kind:'mapKey',key:C}]});
 const exactPattern=(path:StatePath):StatePathPattern=>({...path,selectors:path.selectors.map(selector=>({kind:'exact',selector}))});
 /** Extend the single authoritative state, preserving the inherited validator/owners. */
 export function withBodyState(base:ReturnType<typeof compileCampaign2StateModel>,C:CanonicalValue,d:BodyDeclaration){
  const path=bodyPath(C),pattern=exactPattern(path),pathKey=key(statePathValue(path));
  const stress=d.stress?stressPath(C):undefined,stressKey=stress?key(statePathValue(stress)):undefined;
- const checkPath=(p:StatePath)=>{if(key(statePathValue(p))!==pathKey&&key(statePathValue(p))!==stressKey)fail('body path is not the declared holder');};
+ const sleep=d.sleep?sleepPath(C):undefined,sleepKey=sleep?key(statePathValue(sleep)):undefined;
+ const checkPath=(p:StatePath)=>{if(key(statePathValue(p))!==pathKey&&key(statePathValue(p))!==stressKey&&key(statePathValue(p))!==sleepKey)fail('body path is not the declared holder');};
  const checkValue=(v:CanonicalValue)=>{const a=rec(decode(enc(v)),454n),at=f(a,2n);if(typeof at==='boolean'||at.kind!=='signed'||at.value<0n)fail('body anchor instant');materializeReserve(exact(f(a,1n)),(at as {value:bigint}).value,d.capacity,d.rate,(at as {value:bigint}).value);};
- const stressPattern=stress?exactPattern(stress):undefined;
- const authority=new StateAuthorityRegistry([{pattern,validateValue:checkValue,removalAllowed:false},...(stressPattern?[{pattern:stressPattern,validateValue:(v:CanonicalValue)=>{stressAnchor(v);},removalAllowed:false}]:[])],[{mutationAuthorityId:BODY_OWNER,patterns:[pattern,...(stressPattern?[stressPattern]:[])]}]);
+ const stressPattern=stress?exactPattern(stress):undefined,sleepPattern=sleep?exactPattern(sleep):undefined;
+ const authority=new StateAuthorityRegistry([{pattern,validateValue:checkValue,removalAllowed:false},...(stressPattern?[{pattern:stressPattern,validateValue:(v:CanonicalValue)=>{stressAnchor(v);},removalAllowed:false}]:[]),...(sleepPattern?[{pattern:sleepPattern,validateValue:(v:CanonicalValue)=>{sleepAnchor(v);},removalAllowed:false}]:[])],[{mutationAuthorityId:BODY_OWNER,patterns:[pattern,...(stressPattern?[stressPattern]:[]),...(sleepPattern?[sleepPattern]:[])]}]);
  const without=(s:AuthoritativeState)=>new AuthoritativeState(s.entries().filter(e=>e.path.rootStateTypeId!==455n));
- function validateState(s:AuthoritativeState){base.validateState(without(s));const bodies=s.entries().filter(e=>e.path.rootStateTypeId===455n);if(bodies.length!==(stress?2:1))fail(stress?'required body anchors':'one required body anchor');for(const e of bodies){checkPath(e.path);if(e.path.fieldId===2n)stressAnchor(e.value);else checkValue(e.value);}}
+ function validateState(s:AuthoritativeState){base.validateState(without(s));const bodies=s.entries().filter(e=>e.path.rootStateTypeId===455n);if(bodies.length!==1+Number(!!stress)+Number(!!sleep))fail(stress?'required body anchors':'one required body anchor');for(const e of bodies){checkPath(e.path);if(e.path.fieldId===3n)sleepAnchor(e.value);else if(e.path.fieldId===2n)stressAnchor(e.value);else checkValue(e.value);}}
  return Object.freeze({...base,validateState,
   validatePath(p:StatePath){if(p.rootStateTypeId===455n)checkPath(p);else base.validatePath(p);},
   restoreState(bytes:Uint8Array){const s=restoreAuthoritativeState(decode(bytes));validateState(s);return s;},
-  read(s:AuthoritativeState,p:StatePath){if(p.rootStateTypeId!==455n)return base.read(s,p);checkPath(p);const v=s.read(p);if(v.presence){if(p.fieldId===2n)stressAnchor(v.value!);else checkValue(v.value!);}return v;},
+  read(s:AuthoritativeState,p:StatePath){if(p.rootStateTypeId!==455n)return base.read(s,p);checkPath(p);const v=s.read(p);if(v.presence){if(p.fieldId===3n)sleepAnchor(v.value!);else if(p.fieldId===2n)stressAnchor(v.value!);else checkValue(v.value!);}return v;},
   applyPatch(s:AuthoritativeState,p:StatePatch,owner:Parameters<typeof base.applyPatch>[2],scope?:Parameters<typeof base.applyPatch>[3]){
    const body=p.operations.filter(o=>o.path.rootStateTypeId===455n);if(body.length&&body.length!==p.operations.length)fail('body writer cannot cross owner families');
    if(body.length){for(const o of body){checkPath(o.path);if(scope&&(!scope.writableRoots.includes(455n)||!scope.targetPaths.some(x=>key(statePathValue(x))===key(statePathValue(o.path)))))fail('body write scope');}const result=applyStatePatch(s,p,owner,authority);validateState(result.state);return result;}

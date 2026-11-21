@@ -1,4 +1,4 @@
-# Current work — M209: native sleep changes inhibition
+# Current work — M209 complete: sleep loss changes action
 Base621842a4. Build sleep -> current permitted evidence -> existing control/choice.
 Three capabilities: body-owned sleep kinetics; C1 current readiness evidence;
 actual candidate inhibition while retained learned history remains available.
@@ -34,26 +34,38 @@ live maintained goal/spare slot/target candidate in each compared arm.
 Require target choice versus withheld target, or exact actual-input probability
 difference; sampled-choice claims only with no dice or proven coupled actual draws.
 Retain private physical differences with denied evidence, biased sleep signal,
-NoReadiness and lost-maintenance controls. Retained fatigue stays separate.
+NoReadiness and lost-maintenance controls. Rested plus retained grade2 fatigue must still impair control.
 Exact save12 ->16 continuation; repeat determinism through12.
 No post-result law/seed tuning; ordinary setup repairs recorded before rerun.
 
 ## Files, checks, budgets
-<=9 production/test files: sleepControl.ts, body.ts, model.ts, state.ts, inputs.ts,
-runtime.ts, controlExecution.ts; one fixture and one test. No C2/C3 source changes.
+<=10 production/test files (within12): sleepControl.ts, body.ts, model.ts, state.ts, inputs.ts,
+runtime.ts, controlExecution.ts, traceBinding.ts; one fixture and one test. No C2/C3 source changes.
 Formal contract plus CURRENT/register/ledger/obligation link/result/raw log.
 Types<=120s; focused math/admission/ownership/C1/rollback<=300s;
 native witness/restore and controls serial, each<=600s; total<=1800s including
 failures/diagnoses. <=20 evidence files/5MiB. Plan committed before implementation.
+Repair: add0.136 to existing exact trace binding admission; first boundary run
+rejected the omitted version. Native inspection then hit an obsolete test decoder;
+use the existing assembled decoder. Retain failures; no law/comparison change.
+Input-only source added to scheduler rejection guard. Review also requires an
+explicit existing BODY_OBSERVER-to-holder read before sensing (C1 boundary).
+Rerun affected native/continuation after that guard; no fixture/law amendment.
+Second native inspection used list access on a record-shaped trace projection.
+Repair the reader; one deprived-arm diagnostic checks it before the full rerun.
 Check preserved M55 fatigue witness and affected stress test only if dependency
 changes invalidate them; legacy version path unchanged, full frozen C2 not rerun.
 FND1–6: exact arithmetic, phase/atomicity/read-write trace, governed admission and
 hidden-truth controls affected. No UI/peer work, new scheduler or second save.
 R3 engineering default, no superiority. MEC001/003/011..019/022 retained.
 RO008/009/012/013/020 conditional; historical019/021 remain closed.
-Done: live native causal comparison, boundary/privacy/restore/types/preservation
-pass, bounded limits reported. Stop after passing, no follow-on verifier.
-21/15/132; E71/P35/N13/U13;3 accepted families remain until mapped gate review.
+Done: native causal comparison, boundary/privacy/restore/types/preservation PASS.
+Verification1549.184/1800s including failures; no timeout/extension.
+Result: ASSEMBLED_CHARACTER_M209_RESULT.md. Stop verification.
+Next: original sleep cohort, protective identity and acquisition-load correspondence;
+intoxication follows its explicit motor-boundary reconciliation.
+12.1-6 is now PARTIAL (native connection; original cohort pending).
+21/15/132; E71/P36/N12/U13;3 accepted families, original version scopes.
 | Status | Count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |

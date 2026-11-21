@@ -1,0 +1,215 @@
+
+M209 types-initial exit=2 elapsed=21.794s cap=120
+src/test/fixtures/assembledSleepControl.ts(5,9): error TS2459: Module '"./assembledAgencyVersionCarry"' declares 'decode' locally, but it is not exported.
+
+M209 types-tests exit=0 elapsed=20.884s cap=120
+
+M209 math-boundaries exit=1 elapsed=70.513s cap=300
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSleepControl.test.ts > math209 exact original sleep phases and readiness boundaries
+M209 MATH PASS 24 original elapsed/consequence steps;81 capacity/threshold cases; current missing operands stay unavailable
+
+ ❯ src/test/assembledSleepControl.test.ts (9 tests | 1 failed | 7 skipped) 64053ms
+   × boundaries209 version admission body authority child binding and late rollback 64019ms
+     → assembled trace requires exact model/run binding
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSleepControl.test.ts > boundaries209 version admission body authority child binding and late rollback
+SchedulerContractError: assembled trace requires exact model/run binding
+ ❯ Module.compileCharacterTraceBinding src/assembled/traceBinding.ts:34:2626
+
+ ❯ Module.createCharacterRuntime src/assembled/runtime.ts:125:14
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:122
+ ❯ Module.start src/test/fixtures/assembledSleepControl.ts:29:69
+ ❯ src/test/assembledSleepControl.test.ts:58:14
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed | 7 skipped (9)
+   Start at  11:54:26
+   Duration  69.56s (transform 3.33s, setup 0ms, collect 4.99s, tests 64.05s, environment 0ms, prepare 298ms)
+
+
+M209 boundaries-trace-repair exit=0 elapsed=69.636s cap=300
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSleepControl.test.ts > boundaries209 version admission body authority child binding and late rollback
+M209 BOUNDARIES PASS domains/version/unique BODY_OWNER/authenticated children/C1 pipeline and late120 whole-instant rollback
+
+ ✓ src/test/assembledSleepControl.test.ts (9 tests | 8 skipped) 63950ms
+   ✓ boundaries209 version admission body authority child binding and late rollback 63950ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  11:56:25
+   Duration  69.11s (transform 3.24s, setup 0ms, collect 4.84s, tests 63.95s, environment 0ms, prepare 102ms)
+
+
+M209 native-witness exit=1 elapsed=220.817s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledSleepControl.test.ts (9 tests | 1 failed | 8 skipped) 215006ms
+   × native209 learned practice plus current sleep changes actual inhibition and action 215005ms
+     → unknown record schema 906/1
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSleepControl.test.ts > native209 learned practice plus current sleep changes actual inhibition and action
+CanonicalEncodingError: unknown record schema 906/1
+ ❯ fail src/substrate/canonicalEncoding.ts:430:9
+    428| 
+    429| function fail(message: string): never {
+    430|   throw new CanonicalEncodingError(message);
+       |         ^
+    431| }
+    432| 
+ ❯ Reader.readRecord src/substrate/canonicalEncoding.ts:348:18
+ ❯ Reader.readValue src/substrate/canonicalEncoding.ts:257:36
+ ❯ src/substrate/canonicalEncoding.ts:254:90
+ ❯ Reader.readMany src/substrate/canonicalEncoding.ts:367:64
+ ❯ Reader.readValue src/substrate/canonicalEncoding.ts:254:39
+ ❯ Module.canonicalDecode src/substrate/canonicalEncoding.ts:107:24
+ ❯ Module.decodeEmbodied src/campaign3/embodiedCodecs.ts:79:78
+ ❯ Module.labels src/test/fixtures/assembledSleepControl.ts:36:47
+ ❯ cv src/test/assembledSleepControl.test.ts:18:28
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  11:58:04
+   Duration  220.26s (transform 3.26s, setup 0ms, collect 4.88s, tests 215.01s, environment 0ms, prepare 103ms)
+
+
+M209 native-decoder-repair exit=1 elapsed=222.047s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledSleepControl.test.ts (9 tests | 1 failed | 8 skipped) 216236ms
+   × native209 learned practice plus current sleep changes actual inhibition and action 216235ms
+     → requires list
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSleepControl.test.ts > native209 learned practice plus current sleep changes actual inhibition and action
+SchedulerContractError: requires list
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataItems src/campaign2/canonicalData.ts:23:50
+ ❯ src/test/assembledSleepControl.test.ts:24:147
+ ❯ live src/test/assembledSleepControl.test.ts:24:61
+ ❯ src/test/assembledSleepControl.test.ts:72:24
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  12:03:17
+   Duration  221.50s (transform 3.27s, setup 0ms, collect 4.88s, tests 216.24s, environment 0ms, prepare 102ms)
+
+
+M209 consumer-reader-diagnostic exit=0 elapsed=101.536s cap=300
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSleepControl.test.ts > diagnostic209 current consumer reader and live deprived choice
+M209 DIAGNOSTIC PASS current producer/consumer/choice readers; native deprived700 with actual target
+
+ ✓ src/test/assembledSleepControl.test.ts (10 tests | 9 skipped) 95816ms
+   ✓ diagnostic209 current consumer reader and live deprived choice 95815ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 9 skipped (10)
+   Start at  12:07:40
+   Duration  101.01s (transform 3.27s, setup 0ms, collect 4.87s, tests 95.82s, environment 0ms, prepare 101ms)
+
+
+M209 native-final exit=0 elapsed=255.629s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSleepControl.test.ts > native209 learned practice plus current sleep changes actual inhibition and action
+M209 NATIVE PASS shared acquired skill/history; actual target14 in deprived/recovered vs inhibited rested; recovery14 changes16 only; no dice at compared choices; repeat12 and exact save12->16
+
+ ✓ src/test/assembledSleepControl.test.ts (10 tests | 9 skipped) 249815ms
+   ✓ native209 learned practice plus current sleep changes actual inhibition and action 249814ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 9 skipped (10)
+   Start at  12:10:10
+   Duration  255.09s (transform 3.27s, setup 0ms, collect 4.88s, tests 249.81s, environment 0ms, prepare 102ms)
+
+
+M209 privacy-and-joint-controls exit=0 elapsed=256.174s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSleepControl.test.ts > controls209 denied truth biased sensing ablation and maintained-goal boundary
+M209 CONTROLS PASS unequal hidden debt/equal admitted sleep and decisions; biased perception controls inhibition; NoReadiness removes only physiological restriction; absent maintenance or retained severe fatigue still prevents inhibition
+
+ ✓ src/test/assembledSleepControl.test.ts (10 tests | 9 skipped) 250378ms
+   ✓ controls209 denied truth biased sensing ablation and maintained-goal boundary 250377ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 9 skipped (10)
+   Start at  12:14:51
+   Duration  255.63s (transform 3.27s, setup 0ms, collect 4.89s, tests 250.38s, environment 0ms, prepare 104ms)
+
+
+M209 final-boundaries-and-retained-controls exit=0 elapsed=278.957s cap=300
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledFatigue.test.ts > witness: experienced fatigue impairs live inhibition and observed recovery restores it
+M55 LIVE 5 maintained/spare/offered target/no dice in both arms
+M55 LIVE 7 maintained/spare/offered target/no dice in both arms
+M55 WITNESS severe permits actual target5/7; rested withholds; both withhold9 after recovery. Original acquired habit retained.
+
+stdout | src/test/assembledFatigue.test.ts > witness: experienced fatigue impairs live inhibition and observed recovery restores it
+M55 CONTINUATION save4 ->9 state/output/trace/save exact
+
+ ✓ src/test/assembledFatigue.test.ts (4 tests | 3 skipped) 144141ms
+   ✓ witness: experienced fatigue impairs live inhibition and observed recovery restores it 144141ms
+stdout | src/test/assembledRegulatoryStress.test.ts > final179 admission ownership and generated-child rejection
+M179 ADMISSION PASS version/domain/required anchor/internal-source/foreign owner/forged child rejection.
+
+ ✓ src/test/assembledRegulatoryStress.test.ts (9 tests | 8 skipped) 62249ms
+   ✓ final179 admission ownership and generated-child rejection 62248ms
+stdout | src/test/assembledSleepControl.test.ts > boundaries209 version admission body authority child binding and late rollback
+M209 BOUNDARIES PASS domains/version/unique BODY_OWNER/authenticated children/C1 pipeline and late120 whole-instant rollback
+
+ ✓ src/test/assembledSleepControl.test.ts (10 tests | 9 skipped) 64030ms
+   ✓ boundaries209 version admission body authority child binding and late rollback 64029ms
+
+ Test Files  3 passed (3)
+      Tests  3 passed | 20 skipped (23)
+   Start at  12:19:29
+   Duration  278.42s (transform 3.42s, setup 0ms, collect 7.11s, tests 270.42s, environment 1ms, prepare 299ms)
+
+
+M209 types-final exit=0 elapsed=20.914s cap=120
+
+M209 preservation exit=0 elapsed=8.980s cap=60
+Reference boundary check passed.
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4429}
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+M209 PRESERVATION PASS:10 production/test files; one new shared body/perception adapter; original controls/pins/obligation statuses unchanged;21/15/132 and3/15 accepted preserved.12.1-6 partial,E71/P36/N12/U13. Four failed commands retained. Research/reference/docs/evidence/staged size/whitespace checks pass.
+
+M209 final-staging exit=0 elapsed=1.303s cap=60
+Tool-reported command wall time:17 intended files; Git size and scoped whitespace PASS.
+Total1549.184/1800 seconds, including all four failed commands and repairs.

@@ -22,7 +22,8 @@ Source payload [tag,asleep,permitted4,bias4], ordered sleepiness/stress/burden/a
 Bias integers-1000..1000; permitted booleans. No source supplies perceived capacity.
 
 ## Perception and consumption
-Phase10 sensor materializes sleepiness=clamp(debt+(phase<6?nightDrive:0)),
+Phase10 first resolves the existing BODY_OBSERVER roster to the declared holder;
+a foreign/missing observer binding is rejected and the read is traced. It then materializes sleepiness=clamp(debt+(phase<6?nightDrive:0)),
 existing stress at current instant through accepted stressTransition with no impulse,
 and stationary burden/arousal. Each permitted value is floor(clamp(truth+bias)/
 resolution)*resolution; denied values remain absent. Physical reads appear only on

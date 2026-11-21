@@ -1,3 +1,4 @@
+import {sleepAnchor} from './sleepControl';
 import {stressAnchor} from './regulatoryStress';
 import {decodeCognitive as decodeSuccessor} from './codecs';
 import {restoreAuthoritativeState} from '../substrate/state';
@@ -135,6 +136,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
    if(model.values&&e.path.rootStateTypeId===1516n)invalidModel('initial values must be absent');
    if(model.formationEnabled&&e.path.rootStateTypeId===1503n)invalidModel('initial formation must be absent');
    if(model.skill&&[785n,1500n].includes(e.path.rootStateTypeId))invalidModel('initial skill/development must be absent');
+   if(e.path.rootStateTypeId===455n&&e.path.fieldId===3n&&sleepAnchor(e.value).at!==0n)invalidModel('initial sleep anchor must be at0');
    if(e.path.rootStateTypeId===455n&&e.path.fieldId===2n){if(stressAnchor(e.value).at!==0n)invalidModel('initial stress anchor must be at0');}
    if(e.path.rootStateTypeId===455n&&e.path.fieldId===1n){const at=f(rec(e.value,454n),2n);if(typeof at==='boolean'||at.kind!=='signed'||at.value!==0n)invalidModel('initial body anchor must be at0');}
    if([346n,362n,415n].includes(e.path.rootStateTypeId))invalidModel('initial learned memory, prediction and identity must be empty');

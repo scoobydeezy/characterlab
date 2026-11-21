@@ -1299,3 +1299,11 @@ MEC001/003/011..019/022 retain port/control/corpus/comparator roles; no reductio
 new acceptance or superseded historical mechanism. Next is sleep-to-control,
 then intoxication after explicit motor reconciliation.
 [Result](ASSEMBLED_CHARACTER_M208_RESULT.md).
+
+M209 ports Full sleep kinetics into BODY_OWNER455/3 and C1 current evidence into
+shared inhibition on0.136. Retained fatigue/workspace/skill remain distinct;
+biological load0 only, no slot conversion or motor-law change. Native acquired-skill
+choice/recovery and privacy controls are partial12.1-6 evidence, not original-cohort
+closure. M208 sleep/intoxication comparators, identity/dice and strict motor boundary
+remain. MEC001/003/011..019/022 retain ports/controls/corpus/comparators; no reduction.
+[Result](ASSEMBLED_CHARACTER_M209_RESULT.md).
