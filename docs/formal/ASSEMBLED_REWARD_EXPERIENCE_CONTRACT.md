@@ -58,3 +58,17 @@ no receipt atom retain their existing version/bytes. Physical decay/sensor and
 MeanHistory quantization are explicit trace operations; numeric belief updates
 name both history and prior belief reads. These are foundation defects repaired
 within the same comparison, not relaxed acceptance.
+
+## M215 finite cohort receiving correspondence (before replay)
+M214's native13 is original final behavior, not guaranteed queue exhaustion.
+Original S12 terminal checkpoints include the subsequent declared task/goal closure
+through at most101, with no extra experimental source or deliberation. No truncation:
+whole-save restore and terminal next-step no-op remain required. Earlier selected
+prefixes map1/3/8/9/10 and advance exactly one original step.52 total remains fixed.
+Original failed-execution control maps to the existing world-only phase100 opportunity
+gate at all three probes (source rows in every arm). A zero-request withholding is
+still explicitly Withheld even when opportunity is closed; the independent opportunity
+report records blocking without inventing a failed positive impulse. Original inactive
+catalog alternatives are undeclared here; every offered original action is retained.
+Shared D3 formation/decision laws retain their existing dispositions; quantities are
+compared exactly within the receiving model, phenomena against frozen original cases.
