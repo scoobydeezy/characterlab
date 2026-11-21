@@ -51,3 +51,8 @@ MEC004/015/017/019/022 retained. RO010/011/013/014/020 conditional;
 RO018/019/021 historical closures unchanged. No new verdict or reduction.
 21/15/132 and E71/P35/N13/U13 fixed; only family12.14 acceptance may change.
 No UI, autonomous characters or whole-assembly acceptance.
+
+Self-approved representation amendment after c3fd4c87: repeated12 differs only
+in SKILL_ACTUAL[1], scheduler event310->312. Compare that field through its
+unique traced event time/phase/type/payload/dependencies, preserving every other
+field. No generic ID erasure; fail on absent/ambiguous event. Failed raw retained.
