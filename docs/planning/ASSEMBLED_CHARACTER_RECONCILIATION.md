@@ -1,5 +1,5 @@
 # Assembled Character — reconciliation and requirement evidence
-D1–D5 adopted2026-10-25; D2 below. Candidate0.135; feedback TRUE.21 mapped;12.3 accepted0.126,12.5 accepted0.129; final replay pending.
+D1–D5 adopted2026-10-25; D2 below. Candidate0.135; feedback TRUE.21 mapped;12.3 accepted0.126,12.5 accepted0.129,12.14 accepted0.135; final replay pending.
 ## Decision sheet — adopted 2026-10-25
 1. **D1 YES:** S1–S4/A1–A3; release bounded M2a, preserve the frozen control.
 2. **D2 YES WITH CONDITION:** one reference policy; alternatives cannot close a
@@ -16,23 +16,22 @@ No law victory, closure or reduction.
 One register <=250 lines/65,536 CRLF bytes. M2: db0ca7a8/abe7a3ce; M1:60b8fd2b.
 Basenames: src/campaign3. C=members; F=all pinned clauses.
 Historical controls alone never count.
-Owner directions: required gaps block acceptance; broader research adds no gate without
-authority. Limits name IDs/evidence/impact; preserve competitors/factorials, no reduction.
+Required gaps block acceptance; new gates require authority. Limits name IDs/evidence/
+impact; retain competitors/factorials, no reduction.
 Calibration/reference rulings through M152 retained; no tuning here. Perceived
 stand-ins/recipient learning allowed; autonomous partners out of scope.
 
-F-row suffixes expand to BRIEF-<family>-<suffix>; each clause appears once.
+F suffixes = BRIEF-<family>-<suffix>; each clause appears once.
 **E** = cited integrated witness demonstrates the behavior.
 **P** = connection exists; part lacks evidence.
 **N** = no assembled witness found through M152; not impossibility.
-**U** = not yet assessed sufficiently to distinguish missing work from existing evidence.
-E is version-scoped evidence, NOT clause acceptance or a current-model rerun. Preserve
-all cited result limits; P/N/U remain open. Final candidate replay/classification is
-required even for E. This index promotes no historical result to a broader claim.
+**U** = assessment cannot yet distinguish missing work from existing evidence.
+E is version-scoped evidence, not acceptance or a current rerun. Cited limits and
+P/N/U remain. Final replay/classification includes E; historical claims do not broaden.
 Evidence index: E71/P35/N13/U13 =132. Not a completion percentage. Mapped members:
-21/21; accepted families:2/15 (12.3 on0.126 [M176];12.5 on0.129 [M190]). Denominator unchanged.
+21/21; accepted families:3/15 (12.3@0.126 [M176];12.5@0.129 [M190];12.14@0.135 [M207]). Scope unchanged.
 [M153] audits15 rows; [M154]–[M156] add bounded memory1/3/6/7/8/10 evidence. Other126 retained.
-Memory0.126: M173–M176; AFFECT0.129: M184–M190. Other13 family gates open.
+Memory0.126: M173–M176; AFFECT0.129: M184–M190. Other12 family gates open.
 
 | Classification | ID / area or decision | Existing sources / authority | Shared ownership / proposed disposition | Required comparison, risk or unresolved gate |
 |---|---|---|---|---|
@@ -132,12 +131,12 @@ Memory0.126: M173–M176; AFFECT0.129: M184–M190. Other13 family gates open.
 | UNRESOLVED | F-12.11 — Relationships and attachment | [clauses](campaign3-hq012-exit-review-rev1/families.json#/families/10/clauses); [M20], [M23](ASSEMBLED_CHARACTER_M23_RESULT.md), [M25], [M57], [M58]. [M100]. [M153]. | E:5; P:6,8,9,10; N:none; U:1,2,3,4,7. | M151 own history changes response at equal person belief; explanation does not erase rupture, later cooperation repairs it. No general betrayal/grief/dyadic-dimension or corrected-attribution closure. Reliance-from-commitment remains partial. |
 | UNRESOLVED | F-12.12 — Identity and disposition | [clauses](campaign3-hq012-exit-review-rev1/families.json#/families/11/clauses); [M30](ASSEMBLED_CHARACTER_M30_RESULT.md), [M31], [M32]. [M94](ASSEMBLED_CHARACTER_M94_RESULT.md). [M153]. | E:2,3,7,8; P:1,4,5,6; N:none; U:none. | M106–112 acquired biography changes live odds; one contrary act weakens and repeated contrary acts reverse disposition. This is not identity-belief persistence or self-concept motivation. Cross-context/observer-self gaps remain. |
 | UNRESOLVED | F-12.13 — Communication | [clauses](campaign3-hq012-exit-review-rev1/families.json#/families/12/clauses); [M18], [M26], [M28](ASSEMBLED_CHARACTER_M28_RESULT.md), [M60]. [M100]. [M153]. | E:1,2,4,8,9; P:3; N:5,6; U:7. | M149 actual private commitment, fallible expression and selective observer corrections strengthen8/9. Literal correction does not establish misunderstanding; contrary-content setup is not discovered deception. Masking/leakage remain missing. |
-| UNRESOLVED | F-12.14 — Autonomy, interference and execution | [clauses](campaign3-hq012-exit-review-rev1/families.json#/families/13/clauses); [M27], [M35], [M36], [M60], [M79], [M83], [M153], [M192]–[M206]. | E:1,2,3,4,5,6,7,8; P:none; N:none; U:none. | M206:5 carries; lost opportunity/available physical proof pending timeout. Gate open. |
+| EQUIVALENT (accepted0.135) | F-12.14 — Autonomy, interference and execution | [clauses](campaign3-hq012-exit-review-rev1/families.json#/families/13/clauses); [M27], [M35], [M36], [M60], [M79], [M83], [M153], [M192]–[M207]. | E:1,2,3,4,5,6,7,8; P:none; N:none; U:none. | M207 finite acceptance:8 clauses,19 agency/13+2 interference mappings; version carry complete. Final replay open. |
 | UNRESOLVED | F-12.15 — Longitudinal personhood | [clauses](campaign3-hq012-exit-review-rev1/families.json#/families/14/clauses); [M11], [M14], [M20], [M29], [M32], [M40], [M54], [M57], [M58], [M61]. [M153]. | E:none; P:1,3,4,5,6,7,8,9,11,12; N:none; U:2,10. | M152 joins BIO/skill/REL through episode loss and relearning; M112 repeated biography adds adaptation. This is not the combined twelve-ingredient trajectory. Routines and episode/summary consolidation remain unassessed. |
 | DISTINCT OPERATION | LIMIT-MEM — accepted scope and reopen limits | [M173]–[M176]; C-MEM; F-12.3. | One episodic owner; all68 defining programs, current perceptual/access/affect comparisons; original competitors preserved. | Accepted0.126;0.129 memory/dice transfer needs affected replay. Claim reconstruction, guessed-belief authority and lifelong compression remain wider claims; GA debts conditional. |
 | DISTINCT OPERATION | LIMIT-AFFECT — accepted scope | [M184]–[M190]; C-AFFECT; F-12.5. | Accepted0.129; comparisons/interactions mapped. | Whole BIO/stress sensing/final replay remain; NoImpulse/ScalarThreat/body-only/L4/RO011 preserved. No arbitrary-scalar impossibility. |
-| DISTINCT OPERATION | LIMIT-DECISION — accepted member scope | [M191]; C-DECISION; RO020. | Accepted0.129: native Auto7/8 vs original31/32, player1/2 vs3/4; actual standing significance. | Captured original kernels are not alternative native continuations or general significance/grammar proof. M103/104 rounding ruling retained; full12.14/final replay open. |
-| DISTINCT OPERATION | LIMIT-PEERS — controlled recipients | [M18], [M100], [M153]; F-12.10/13/14. | M149 now proves two observer-local learned person models; M100 status-only limit remains historical. Rich interpretation and interference still need their own witnesses. | Missing required comparisons block acceptance. Perceived stand-ins/passive recipients allowed; autonomous peers excluded. No clause currently shown to require autonomous partners; any such finding needs explicit scope disposition. |
+| DISTINCT OPERATION | LIMIT-DECISION — accepted member scope | [M191]; C-DECISION; RO020. | Accepted0.129: native Auto7/8 vs original31/32, player1/2 vs3/4; actual standing significance. | Captured original kernels are not alternative native continuations or general significance/grammar proof. M103/104 rounding retained;12.14 accepted0.135 [M207]; final replay open. |
+| DISTINCT OPERATION | LIMIT-PEERS — controlled recipients | [M18], [M100], [M153]; F-12.10/13/14. | M149 now proves two observer-local learned person models; M100 status-only limit remains historical. M198–M207 qualify bounded interference; rich interpretation remains open. | Missing required comparisons block acceptance. Perceived stand-ins/passive recipients allowed; autonomous peers excluded. No clause currently shown to require autonomous partners; any such finding needs explicit scope disposition. |
 | DISTINCT OPERATION | LIMIT-REASON — receiving limits | [M95][ref31], [M153]; C-REASON; F-12.2/12.12. | SourceCoverage0.5 global; governed descriptions not semantic discovery. M103/106–112 now show acquired biography changes live probabilities; M89 zero-modifier and M94 Auto null remain controls. | No arbitrary-renaming, correlation or alternative-runtime qualification; D3/rounding differences retained. Self-concept is not acquired standing. Required F gaps/final replay remain; wider claims trigger RO001. |
 | DISTINCT OPERATION | LIMIT-COMMIT — lifecycle limits | [M101], [M153]; C-COMMIT; F-12.7/11/12/13. | M101 controlled adoption/cancellation/recurrence and small-P mapping retained. M112 adds biography; M128 adds working-access loss/reminders, not episodic instruction forgetting. | Procrastination, commitment-history Reliance and natural interpretation still lack full evidence. Component counterfactuals are not alternate native histories. Wider fulfillment/delegation/series remain conditional RO014/020; final replay required. |
 | GENUINE ALTERNATIVE | CAL — standing receiver | [M103](ASSEMBLED_CHARACTER_M103_RESULT.md); [M104](ASSEMBLED_CHARACTER_M104_RESULT.md). | Owner adopts0.85 engineering reference;0.84 control. D3/unit/cap/base dice fixed. | M103 fractional probability/sampler/coupling/continuation passes; M104 native integer relationship preserves coupled scores/winner, no rounding draws. Failed controls retained;009/020 conditional. |
@@ -248,3 +247,4 @@ Memory0.126: M173–M176; AFFECT0.129: M184–M190. Other13 family gates open.
 [M204]: ASSEMBLED_CHARACTER_M204_RESULT.md
 [M205]: ASSEMBLED_CHARACTER_M205_RESULT.md
 [M206]: ASSEMBLED_CHARACTER_M206_RESULT.md
+[M207]: ASSEMBLED_CHARACTER_M207_RESULT.md

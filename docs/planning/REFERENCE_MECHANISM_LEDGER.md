@@ -1283,3 +1283,10 @@ physical assertion repairs retained. Lost-opportunity completion and available
 physical assertion remain after timeout; family gate stays open. No production
 change or reduction; MEC004/015/017/019/022 and all comparator roles retained.
 [Result](ASSEMBLED_CHARACTER_M206_RESULT.md).
+
+M207 completes lost-opportunity version carry and the available physical assertion.
+M201/M204–M207 now resolve the finite8-clause/19-agency/13+2-interference gate:
+family12.14 accepted0.135. M206 failures/timeout and historical controls retained.
+No production change, law superiority or reduction; MEC004/015/017/019/022 keep
+port/contract/corpus/comparator roles and conditional debts remain conditional.
+[Result](ASSEMBLED_CHARACTER_M207_RESULT.md).

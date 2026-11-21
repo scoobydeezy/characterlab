@@ -44,3 +44,12 @@ it('M206 repaired competence physical claims',async()=>{
   console.info('M206 REPAIRED competence',name,'PASS actual task-specific observation/skill/intent/execution; unchanged full carry retained.');
  }
 },570000);
+
+/** M207: only the available physical assertion left open by M206's timeout.
+ * Same nonsocial tasks/body/seed/outcome channel; retained full carry is not rerun. */
+it('M207 available current physical completion',async()=>{
+ const b=fixture('available'),s={...b.s,rulesVersion:INTERFERENCE_ACQUISITION_RULES,registrySchemaVersion:INTERFERENCE_ACQUISITION_REGISTRY},current=await createCharacterRun(await prepareCharacterModel(s),b.d);
+ for(let n=0;view(current).s.clock<10n;n++){expect(n).toBeLessThan(64);expect(await next(current)).toBe(true);}
+ expect(view(current).s.clock).toBe(10n);physical({current},10n,true,true);
+ console.info('M207 AVAILABLE PASS live actual choice/intent/expression/execution, competent Applied effect and permitted successful outcome; M206 full carry retained.');
+},170000);

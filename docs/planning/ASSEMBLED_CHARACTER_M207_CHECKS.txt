@@ -1,0 +1,44 @@
+
+M207 types exit=0 elapsed=21.229s cap=60
+
+M207 lost-opportunity exit=0 elapsed=133.366s cap=300
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAgencyVersionCarry.test.ts > M206 physical lost
+M206 CARRY lost settled 18 acquisitions 1 draws 2 exact restore false
+
+ ✓ src/test/assembledAgencyVersionCarry.test.ts (14 tests | 13 skipped) 127586ms
+   ✓ M206 physical lost 127585ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 13 skipped (14)
+   Start at  08:49:39
+   Duration  132.83s (transform 3.29s, setup 0ms, collect 4.89s, tests 127.59s, environment 0ms, prepare 113ms)
+
+
+M207 available-physical exit=0 elapsed=86.713s cap=180
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledAgencyVersionCarry.test.ts > M207 available current physical completion
+M207 AVAILABLE PASS live actual choice/intent/expression/execution, competent Applied effect and permitted successful outcome; M206 full carry retained.
+
+ ✓ src/test/assembledAgencyVersionCarry.test.ts (14 tests | 13 skipped) 81015ms
+   ✓ M207 available current physical completion 81015ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 13 skipped (14)
+   Start at  08:52:02
+   Duration  86.17s (transform 3.23s, setup 0ms, collect 4.83s, tests 81.02s, environment 0ms, prepare 103ms)
+
+
+M207 preservation exit=0 elapsed=8.475s cap=60
+Reference boundary check passed.
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4427}
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+M207 PRESERVATION PASS remaining opportunity proofs complete; family12.14 accepted0.135 (3/15); all other C/F rows, original evidence, obligations,21/15/132 and E71/P35/N13/U13 preserved. One append-only test path, two evidence files; production/formal/helper/fixtures/frozen code unchanged. Pins/research/boundary/size/staged checks pass.
