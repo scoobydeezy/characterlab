@@ -1,4 +1,4 @@
-# Current work — M214 active: actual pleasure -> learned expectation -> choice
+# Current work — M214 package A checkpoint; package B active
 M213 complete64688c81;0.140. Full sleep remains P. Owner delegates completion.
 
 ## Bounded card (before implementation)
@@ -19,10 +19,17 @@ Body leaf455/4 uses BODY_OWNER. Numeric receipt extends821/823 existing owners.
 Threshold/Ramp,0.85 calibration, feedback TRUE unchanged. Learning admission is an
 explicit experiment intervention, separate from safe evidence and natural eligibility.
 
-Maximum12 production/test files: rewardExperience.ts(new), body.ts, state.ts,
+Package A:12 production/test files (checkpoint, not accepted): rewardExperience.ts(new), body.ts, state.ts,
 model.ts, traceBinding.ts, runtime.ts, inputs.ts, habit.ts, habitExecution.ts,
 execution.ts, controlExecution.ts, one test file containing its bounded fixture.
 Formal successor, CURRENT, one result/check log, ledger/register/obligation review.
+Package B before further code: repair decisionView.ts receipt399/2 disclosure;
+finish rewardExperience.ts/habitExecution.ts trace rounding/read provenance,
+model.ts reserved-label admission and this same test file's owner/S0/codec controls.
+Five production/test files maximum in B. Same observable capabilities/comparisons,
+same cumulative1800s budget across A+B; no restart or extra acceptance document.
+A reached actual receipt600/mean3/5, then the established disclosure boundary
+rejected399/2. Preserve that failure and incomplete behavioral gate.
 No framework, new factory, scheduler, source copies or historical edits.
 
 Predeclared receiving chronology: native1 is perception-only setup for admitted
@@ -31,7 +38,10 @@ native2..13. Native1 has original S0 debt0/phase8/reward baseline; native0 remai
 pristine, and all restores replay from it. Original S0/S2/S7/S8/S9/S12 thus map
 native1/3/8/9/10/13 in the later52-prefix gate; no prefix or original case is dropped.
 The extra setup is required by existing observed-affordance consolidation140.
-Nonsocial tasks, ordinary task importance0, reserve10/rate0, reward baseline300,
+Repair: inherited task activation8 yielded empty workspace/NoChoice at2; explicitly
+set windows1..25 to implement this chronology. Preserve null and diagnostic.
+Nonsocial tasks; self observation off, Values link off; ordinary task importance0,
+reserve10/rate0, all task windows1..25, reward baseline300,
 decay500, dose600, resolution10. No authored learned starting state. Practice2
 executes an unchallenged positive request; skill learning off, no interference.
 The original competence850 and native unchallenged execution have equal success

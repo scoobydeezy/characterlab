@@ -1,3 +1,4 @@
+import {rewardAnchor} from './rewardExperience';
 import {PROTECTION_CHANNEL} from './protectiveIdentity';
 import {sleepAnchor} from './sleepControl';
 import {stressAnchor} from './regulatoryStress';
@@ -106,7 +107,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  const prioritized=model.priority?withPriorityState(planned,tasks.map(t=>t.key),model.goalMeaning?{C,settings:model.goalMeaning}:undefined,model.spatialMeaning?{C,settings:model.spatialMeaning}:undefined,model.commitmentAdoption,model.timeLimit):planned;
  const forecasted=model.horizon?withHorizonState(prioritized,tasks.map(t=>t.key),model.timeLimit):prioritized;
  const monitored=model.performance?withPerformanceState(forecasted,model.strategy!,model.expectationEnabled,model.selfBeliefEnabled?C:undefined,model.values,model.causalEnabled,model.interferenceEnabled,model.timeLimit,model.obstructionWitness?model.social!.targets:undefined,model.stakeholderKnowledge?model.socialWitness:undefined,model.interferenceAcquisition):forecasted;
- const habitual=model.habit?withHabitState(monitored,C,model.timeLimit):monitored;
+ const habitual=model.habit?withHabitState(monitored,C,model.timeLimit,!!model.body?.reward):monitored;
  const controlled=model.control?withControlState(habitual,C,model.mitigationEnabled?3:model.sharedAffectSources?2:model.reappraisal!==undefined,model.fatigue!==undefined,model.rumination,model.timeLimit):habitual;
  const communicating=model.communication?withCommunicationState(controlled,[...(model.communication.topic?[]:[C]),...model.communication.recipients],model.communication.topic,model.communication.expectation,model.commitmentWitness?tasks.map(t=>t.key):[],model.timeLimit):controlled;
  const socialized=model.social?withSocialState(communicating,C,model.social.target,model.social.targets,!!model.loss,!!model.embarrassment,model.social.beliefTrials,model.socialWitness?.observers,model.timeLimit):communicating;
@@ -137,6 +138,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
    if(model.values&&e.path.rootStateTypeId===1516n)invalidModel('initial values must be absent');
    if(model.formationEnabled&&e.path.rootStateTypeId===1503n)invalidModel('initial formation must be absent');
    if(model.skill&&[785n,1500n].includes(e.path.rootStateTypeId))invalidModel('initial skill/development must be absent');
+   if(e.path.rootStateTypeId===455n&&e.path.fieldId===4n){const a=rewardAnchor(e.value);if(a.at!==0n||a.level!==model.body!.reward!.baseline)invalidModel('initial reward baseline only');}
    if(e.path.rootStateTypeId===455n&&e.path.fieldId===3n&&sleepAnchor(e.value).at!==0n)invalidModel('initial sleep anchor must be at0');
    if(e.path.rootStateTypeId===455n&&e.path.fieldId===2n){if(stressAnchor(e.value).at!==0n)invalidModel('initial stress anchor must be at0');}
    if(e.path.rootStateTypeId===455n&&e.path.fieldId===1n){const at=f(rec(e.value,454n),2n);if(typeof at==='boolean'||at.kind!=='signed'||at.value!==0n)invalidModel('initial body anchor must be at0');}
