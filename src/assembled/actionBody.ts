@@ -8,13 +8,13 @@ export const DELAYED_BODY_VERSION='assembled-character-delayed-body/0.1-candidat
 export const DELAYED_ACTION_BODY='assembled-action-body/0.2',ACTION_BODY_RECEIPT='assembled-action-body-receipt/0.1';
 export const ACTION_BODY_RECEIPT_EVENT=typedIdentifier(1001,text('event/assembled-action-body-receipt'));
 export const ACTION_BODY_EVENT=typedIdentifier(1001,text('event/assembled-action-body-effect'));
-export function compileActionBody(value:CanonicalValue,capacity:Q,definitions:readonly {action:CanonicalValue;definition:CanonicalValue}[],delayed=false){
+export function compileActionBody(value:CanonicalValue,capacity:Q,definitions:readonly {action:CanonicalValue;definition:CanonicalValue}[],delayed=false,withholding=false){
  const a=items(value,'list');if(a.length!==3||txt(a[0])!==(delayed?DELAYED_ACTION_BODY:ACTION_BODY)||typeof a[1]!=='boolean')invalidModel('action body declaration');
  const rows=items(a[2],'set'),seen=new Set<string>();if(definitions.length<1||definitions.length>3||rows.length!==definitions.length)invalidModel('action body requires complete declared action coverage');
  const entries=rows.map(value=>{const pair=items(value,'list');if(pair.length!==(delayed?3:2))invalidModel('action body pair');const action=id(pair[0]),k=key(action),definition=definitions.find(d=>key(d.action)===k);
   if(action.namespaceId!==1027n||!definition||seen.has(k))invalidModel('action body duplicate/foreign action');seen.add(k);const amount=exact(pair[1]),count=uint(f(rec(definition.definition,391n),1n));
-  if(amount.compare(Q.of(0n))<0||amount.compare(capacity)>0||![1n,2n].includes(count))invalidModel('action body amount/count domain');
-  const delay=delayed?uint(pair[2]):0n;if(delay>4n)invalidModel('action body delay domain');
+  if(amount.compare(Q.of(0n))<0||amount.compare(capacity)>0||!([1n,2n].includes(count)||withholding&&count===0n))invalidModel('action body amount/count domain');
+  const delay=delayed?uint(pair[2]):0n;if(delay>4n)invalidModel('action body delay domain');if(count===0n&&(!amount.equals(Q.of(0n))||delay!==0n))invalidModel('withholding action requires zero amount/delay');
   return Object.freeze({action:structuredClone(action),amount,count,delay});
  });
  return Object.freeze({delayed,permitted:a[1] as boolean,entries:Object.freeze(entries)});
@@ -27,5 +27,5 @@ export function selectedBodyEffect(outcome:CanonicalValue,holder:CanonicalValue,
  const option=rec(f(rec(f(result,2n),420n),1n),395n),action=f(option,2n),entry=settings.entries.find(e=>key(e.action)===key(action));
  if(key(f(option,1n))!==key(holder)||!entry)invalidModel('action body foreign holder/action');
  const count=uint(f(o,3n));if(uint(f(plan,3n))!==entry.count||(count!==0n&&count!==entry.count))invalidModel('action body protocol count association');
- return {outcomeId:f(o,1n),attempt:f(o,2n),attemptId:f(attempt,1n),action,requested:entry.amount,delay:entry.delay,applied:settings.permitted&&count!==0n};
+ return {outcomeId:f(o,1n),attempt:f(o,2n),attemptId:f(attempt,1n),action,withheld:entry.count===0n,requested:entry.amount,delay:entry.delay,applied:settings.permitted&&count!==0n};
 }

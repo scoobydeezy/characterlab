@@ -1,11 +1,12 @@
 /** assembled-character-comparison/0.1: exact predecessor port; receiving codec successor only. */
 /** protocol-consequence-observation/0.1-candidate. Five real SEM consequence stages
  * with execution-owned truth and conditional, unpadded observer emission. */
-import {list,text,typedIdentifier,unsigned,type CanonicalValue} from '../substrate/canonicalEncoding';
+import {list,record,text,typedIdentifier,unsigned,type CanonicalValue,type TypedIdentifierValue} from '../substrate/canonicalEncoding';
+import type {SimInstant} from '../substrate/time';
 import {ExactRational as Q} from '../substrate/exactMath';
 import {SchedulerContractError,type ScheduledEvent,type EventEmission} from '../substrate/scheduler';
 import {scheduledEventValue} from '../substrate/persistence';
-import {boundedEffectTruthValue,restoreObservationChannel} from '../observation/observation';
+import {boundedEffectTruthValue,restoreObservationChannel,compilePermittedEvidence,permittedEvidenceValue,validatePermittedEvidenceRecordClosure,PROTOCOL_OBSERVATION_VERSION,type ObservationChannel} from '../observation/observation';
 import {assemblePreRecognitionExperience} from '../semanticBinding/perceptualEventFiles';
 import {supportingObservationIdValue} from '../semanticBinding/semanticCodecs';
 import {preRecognitionSemanticExperienceValue} from '../semanticBinding/semanticEvidenceCodecs';
@@ -17,7 +18,16 @@ import {dataRecord as rec,dataField as f,dataUnsigned as u,dataIdentity as id,da
 const eventType=(name:string)=>typedIdentifier(1001,text('event/protocol-'+name));
 const names=['observation','tracking','bindings','classification','experience'];
 function fail(message:string):never{throw new SchedulerContractError('TRANSITION_INGRESS_VIOLATION',message);}
-export function compileProtocolBridge(definition:CanonicalValue){
+/** M211 zero-request extension; the existing observer sees actual issued0 only. */
+export function compileWithheldObservation(outcome:CanonicalValue,channel:ObservationChannel,observationId:TypedIdentifierValue,at:SimInstant){
+ const execution=rec(outcome,433n),attempt=rec(f(execution,2n),432n),plan=rec(f(attempt,2n),431n),truthId=id(f(execution,1n));
+ if(u(f(plan,3n))!==0n||u(f(execution,3n))!==0n||truthId.namespaceId!==1141n||typeof truthId.payload==='boolean'||truthId.payload.kind!=='unsigned')invalidModel('withholding observation source');
+ if(channel.polarityId!==1n||channel.measurementModeId!==1n||channel.missingnessRuleId!==1n||!channel.precision.equals(Q.of(1n))||channel.visibleProvenanceSlotIds.length||channel.experimentalControlId!==undefined||channel.unitId.namespaceId!==1039n||key(channel.unitId.payload)!==key(text('unit/fixture-pulse')))invalidModel('protocol channel outside fixed profile');
+ const raw=compilePermittedEvidence({before:Q.of(0n),potentialEffect:Q.of(0n),applied:Q.of(0n),overflow:Q.of(0n),after:Q.of(0n),minimum:Q.of(0n),maximum:Q.of(2n),provenance:{slots:new Map()},truthRecordId:truthId},channel,observationId,at);
+ if(raw.kind!=='present'||raw.safeSourceReferences.length!==1||key(raw.safeSourceReferences[0])!==key(truthId)||raw.perceivedConceptTokens.length||!raw.measurementInterval.lower?.equals(Q.of(0n))||!raw.measurementInterval.upper?.equals(Q.of(0n)))invalidModel('unexpected withheld observation');
+ const candidate=rec(permittedEvidenceValue(raw),203n),fields=new Map(candidate.fields);fields.set(10n,list([]));fields.set(11n,text(PROTOCOL_OBSERVATION_VERSION));const safe=record(candidate.schema,fields);validatePermittedEvidenceRecordClosure(safe);return safe;
+}
+export function compileProtocolBridge(definition:CanonicalValue,withholding=false){
  const d=rec(cloneCognitive(definition),451n),channelValue=f(d,3n),channel=restoreObservationChannel(channelValue),permitted=f(d,4n);
  if(typeof permitted!=='boolean')invalidModel('protocol observer permission');
  return Object.freeze({eventTypes:()=>names.map(eventType),begin(instant:bigint){
@@ -51,7 +61,7 @@ export function compileProtocolBridge(definition:CanonicalValue){
     const index=Number(event.phase-120n);if(index<0||index>4)fail('protocol phase');const observer=txt(channel.observerId.payload),outputs:CanonicalValue[]=[];
     if(index===0){
      assertTruthAvailableAtLaneEntry('Consequence',110n);assertLaneOperationPhase('Consequence','Observation',event.phase);
-     const ordinal=allocator.allocateRuntimeId();outputs.push(compileProtocolObservation(relation.data.outcome!,channel,typedIdentifier(1115,unsigned(ordinal)),event.dueAt));
+     const ordinal=allocator.allocateRuntimeId(),outcome=relation.data.outcome!,requested=u(f(rec(f(rec(f(rec(outcome,433n),2n),432n),2n),431n),3n));outputs.push((withholding&&requested===0n?compileWithheldObservation:compileProtocolObservation)(outcome,channel,typedIdentifier(1115,unsigned(ordinal)),event.dueAt));
      relation.data.reservation=admitObservationLane({observerId:observer,lane:'Consequence',dueAt:event.dueAt,emitsCharacterAccessibleEvidence:true},()=>allocator.allocateRuntimeId()).reservation!;
      reservations.push(relation.data.reservation);relation.data.support=supportingObservationIdValue(observer,ordinal);delete relation.data.outcome;
     }else {

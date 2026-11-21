@@ -15,12 +15,22 @@ NoChoice has no plan; failed positive-count action has a positive requested coun
 and zero issued count. Those three cases must remain distinguishable.
 
 Every count0 action has immutable body amount0/delay0; reject nonzero values.
-The existing actuator reports no applied physical effect and no engaged practice.
+The existing actuator reports Withheld (not Blocked), no applied physical effect
+and no engaged practice. Performance learning receives no attempted-movement
+outcome from zero requests; no failure observation is synthesized.
 No new skill, physiology, reward, belief or identity value is injected. Existing
 consequence observation may truthfully report0 and follows the C1 consequence lane.
 A zero request is not a successful physical motor act. Existing body/control and
 skill laws remain unchanged. Planning/execution trace identifies the receiving
 contract. Physical traces retain their existing semantics and exact model identity.
+
+The assembled protocol bridge admits authenticated requested0/completed0 outcomes
+under this contract. It uses the existing generic permitted-evidence compiler,
+unchanged fixed pulse channel and0..2 observation domain, strips truth references
+as before, and validates closure. Observed0 retains the existing protocol observation
+profile because that safe measurement already exists for failed positive requests.
+This does not fabricate a positive requested count to bypass the frozen adapter.
+C2 remains unchanged; positive requests continue through its existing adapter.
 
 No protective-identity mapping follows from this execution extension. Current
 CommitmentFidelity and the original biological protective channel are distinct.

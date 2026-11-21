@@ -1315,3 +1315,10 @@ missing current demand stays unknown. This is still partial12.1-6: protective
 identity is not CommitmentFidelity, and explicit withhold/acquisition/full cohort
 remain. MEC001/003/011..019/022 and original comparators retain roles; no reduction.
 [Result](ASSEMBLED_CHARACTER_M210_RESULT.md).
+
+M211 adds governed explicit withholding on0.138 through the same decision and
+execution owners. Requested0 is distinct from NoChoice and failed positive request;
+no body effect, practice or invented performance failure. C1 observes actual0 via
+a bounded assembled extension; frozen C2 observer/control unchanged. Protective
+identity and full sleep20/52 remain. MEC001/003/011..019/022 keep original roles.
+[Result](ASSEMBLED_CHARACTER_M211_RESULT.md).

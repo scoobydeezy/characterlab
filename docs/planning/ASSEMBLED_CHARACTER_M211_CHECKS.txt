@@ -1,0 +1,156 @@
+
+M211 types exit=2 elapsed=21.009s cap=120
+src/test/assembledWithholding.test.ts(35,337): error TS2345: Argument of type 'CanonicalValue' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+src/test/assembledWithholding.test.ts(35,393): error TS2345: Argument of type 'CanonicalValue' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+
+M211 native-gates exit=1 elapsed=184.559s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledWithholding.test.ts > admission211 zero action is versioned and cannot produce body effects
+M211 ADMISSION PASS current zero/no-effect action admitted; prior version and nonzero actuator/delay rejected
+
+stdout | src/test/assembledWithholding.test.ts > absent211 inhibition does not invent a withholding option
+M211 ABSENT PASS both declared routes unavailable for B; A inhibited; no chosen action, no synthetic withhold
+
+ ❯ src/test/assembledWithholding.test.ts (8 tests | 1 failed | 5 skipped) 178686ms
+   ✓ admission211 zero action is versioned and cannot produce body effects 61458ms
+   × native211 explicit withholding survives continuation without movement learning 90937ms
+     → expected false to be true // Object.is equality
+   ✓ absent211 inhibition does not invent a withholding option 26290ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledWithholding.test.ts > native211 explicit withholding survives continuation without movement learning
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ src/test/assembledWithholding.test.ts:34:100
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 2 passed | 5 skipped (8)
+   Start at  14:35:39
+   Duration  184.00s (transform 3.33s, setup 0ms, collect 4.96s, tests 178.69s, environment 0ms, prepare 104ms)
+
+
+M211 observed-native exit=1 elapsed=96.599s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledWithholding.test.ts > absent211 inhibition does not invent a withholding option
+M211 ABSENT PASS both declared routes unavailable for B; A inhibited; no chosen action, no synthetic withhold
+
+ ❯ src/test/assembledWithholding.test.ts (8 tests | 1 failed | 6 skipped) 90847ms
+   × native211 explicit withholding survives continuation without movement learning 60373ms
+     → cognitive record grammar: unsupported receiving record version
+   ✓ absent211 inhibition does not invent a withholding option 30473ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledWithholding.test.ts > native211 explicit withholding survives continuation without movement learning
+SchedulerContractError: cognitive record grammar: unsupported receiving record version
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ fail src/assembled/codecs.ts:34:36
+ ❯ Module.receivingRecord src/assembled/codecs.ts:195:252
+ ❯ src/test/assembledWithholding.test.ts:26:93
+ ❯ src/test/assembledWithholding.test.ts:26:86
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed | 6 skipped (8)
+   Start at  14:40:13
+   Duration  96.05s (transform 3.28s, setup 0ms, collect 4.88s, tests 90.85s, environment 0ms, prepare 103ms)
+
+
+M211 native-final exit=1 elapsed=147.423s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledWithholding.test.ts (8 tests | 1 failed | 7 skipped) 141617ms
+   × native211 explicit withholding survives continuation without movement learning 141616ms
+     → protocol execution view source
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledWithholding.test.ts > native211 explicit withholding survives continuation without movement learning
+SchedulerContractError: protocol execution view source
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.compileProtocolObservation src/campaign2/protocolObservation.ts:11:179
+ ❯ Object.execute src/assembled/protocolBridge.ts:54:63
+ ❯ Object.executeProtocol src/assembled/execution.ts:128:199
+ ❯ src/assembled/runtime.ts:279:27
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:373:26
+ ❯ Object.settleNextInstant src/assembled/character.ts:45:66
+ ❯ Module.through src/test/fixtures/assembledSleepControl.ts:38:95
+ ❯ src/test/assembledWithholding.test.ts:28:34
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  14:42:15
+   Duration  146.87s (transform 3.28s, setup 0ms, collect 4.89s, tests 141.62s, environment 0ms, prepare 103ms)
+
+
+M211 native-observer-fixed exit=0 elapsed=174.817s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledWithholding.test.ts > native211 explicit withholding survives continuation without movement learning
+M211 NATIVE PASS actual chosen zero request, full intent/plan/attempt/execution/C1 consequence, no physical effect or practice; failed positive request distinct; repeat12 and exact continuation12->14->16
+
+ ✓ src/test/assembledWithholding.test.ts (8 tests | 7 skipped) 169014ms
+   ✓ native211 explicit withholding survives continuation without movement learning 169013ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  14:45:52
+   Duration  174.29s (transform 3.29s, setup 0ms, collect 4.90s, tests 169.01s, environment 0ms, prepare 105ms)
+
+
+M211 legacy-native exit=0 elapsed=216.393s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSleepDemand.test.ts > native210 observed load changes actual action and later relief restores inhibition
+M210 NATIVE PASS load0/800 yields950/150; actual action differs with no dice; same acquired skill/physical sleep/workspace; demand0 at16 restores inhibition; traced receipt/parent; repeat12 and exact restore12->14->16
+
+ ✓ src/test/assembledSleepDemand.test.ts (8 tests | 7 skipped) 210617ms
+   ✓ native210 observed load changes actual action and later relief restores inhibition 210616ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  14:48:55
+   Duration  215.86s (transform 3.26s, setup 0ms, collect 4.88s, tests 210.62s, environment 0ms, prepare 103ms)
+
+
+M211 final-types exit=0 elapsed=20.999s cap=120
+
+M211 preservation exit=0 elapsed=7.448s cap=120
+Reference boundary check passed.
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4431}
+PASS: Git index contains no files at or above50,000,000 bytes.
+M211 PRESERVATION PASS11 implementation/test files; frozen sources/evidence unchanged; append-only reviews; unchanged132 clauses/21 members/15 families;3 accepted original versions; document/evidence/reference/research/size limits

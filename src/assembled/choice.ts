@@ -25,11 +25,11 @@ export function qualificationOutput(occurrence:CanonicalValue,expression:Canonic
 }
 
 /** bounded-protocol-execution/0.1-candidate. Selected definition only, no registry lookup. */
-export function planOutput(occurrence:CanonicalValue,intent:CanonicalValue,selectedDefinition:CanonicalValue){
- chosenData(f(rec(intent,425n),2n));const count=uint(f(rec(selectedDefinition,391n),1n));if(count!==1n&&count!==2n)invalidModel('protocol count outside fixed action vocabulary');return r(431,[occurrence,intent,u(count)]);
+export function planOutput(occurrence:CanonicalValue,intent:CanonicalValue,selectedDefinition:CanonicalValue,withholding=false){
+ chosenData(f(rec(intent,425n),2n));const count=uint(f(rec(selectedDefinition,391n),1n));if(count!==1n&&count!==2n&&!(withholding&&count===0n))invalidModel('protocol count outside fixed action vocabulary');return r(431,[occurrence,intent,u(count)]);
 }
 export function attemptOutput(occurrence:CanonicalValue,plan:CanonicalValue){rec(plan,431n);return r(432,[occurrence,plan]);}
 /** World adapter alone receives the permission operand. */
-export function executionOutput(occurrence:CanonicalValue,attempt:CanonicalValue,permitted:boolean){
- const plan=rec(f(rec(attempt,432n),2n),431n),count=uint(f(plan,3n));if(count!==1n&&count!==2n)invalidModel('protocol request count');return r(433,[occurrence,attempt,u(permitted?count:0n)]);
+export function executionOutput(occurrence:CanonicalValue,attempt:CanonicalValue,permitted:boolean,withholding=false){
+ const plan=rec(f(rec(attempt,432n),2n),431n),count=uint(f(plan,3n));if(count!==1n&&count!==2n&&!(withholding&&count===0n))invalidModel('protocol request count');return r(433,[occurrence,attempt,u(permitted?count:0n)]);
 }

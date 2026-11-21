@@ -20,7 +20,7 @@ const referenceFields:Readonly<Record<string,number>>={
  '442/2':435,'443/2':436,'444/2':437,'445/2':440,'446/2':434,
 };
 
-export async function compileCognitiveDeclarations(contentBytes:Uint8Array,registryBytes:Uint8Array,taskLimit=3){
+export async function compileCognitiveDeclarations(contentBytes:Uint8Array,registryBytes:Uint8Array,taskLimit=3,withholding=false){
  const content=await compileTaskContentDeclarations(contentBytes,registryBytes,'cognitive',taskLimit);
  const slots=items(decodeCognitive(registryBytes),'list');
  const rows=items(slots[0],'set').filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n).map(v=>rec(v,171n));
@@ -35,7 +35,7 @@ export async function compileCognitiveDeclarations(contentBytes:Uint8Array,regis
  const actions=rows.filter(r=>key(f(r,2n))===key(ident(1023,'registry/protocol-action'))),instructions=rows.filter(r=>key(f(r,2n))===key(ident(1023,'registry/task-instruction')));
  if(actions.length<1||actions.length>3||instructions.length<1||instructions.length>6)invalidModel('configuration action/instruction cardinality');
  for(const row of [...specs,...actions,...instructions]){const stable=id(f(row,1n));if(stable.namespaceId!==1027n||!txt(stable.payload).length)invalidModel('configuration definition stable identity');}
- for(const row of actions){if(txt(f(row,3n))!=='bounded-protocol-execution/0.1-candidate'||![1n,2n].includes(u(f(rec(f(row,4n),391n),1n))))invalidModel('configuration action domain/version');}
+ for(const row of actions){const count=u(f(rec(f(row,4n),391n),1n)),zero=withholding&&count===0n;if(txt(f(row,3n))!==(zero?'bounded-protocol-execution/0.2-candidate':'bounded-protocol-execution/0.1-candidate')||!([1n,2n].includes(count)||zero))invalidModel('configuration action domain/version');}
  for(const row of instructions){const action=f(rec(f(row,4n),389n),1n);if(txt(f(row,3n))!=='task-plan-context/0.1-candidate'||!actions.some(a=>key(f(a,1n))===key(action)))invalidModel('configuration instruction action/version');}
  // Every scalar role is mandatory even when its record has no runtime witness yet.
  for(const expected of allocation.roles){
